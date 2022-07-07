@@ -217,6 +217,13 @@ function GatherSearchParameters()
 	return rgRawParameters;
 }
 
+function ReplaceTerm( term )
+{
+	$J( "#realterm" ).val( term );
+	$J( "#term" ).val( term );
+	AjaxSearchResults();
+}
+
 var g_ajaxInFlight;
 var g_rgDesiredParameters = null;
 var g_rgCurrentParameters = null;

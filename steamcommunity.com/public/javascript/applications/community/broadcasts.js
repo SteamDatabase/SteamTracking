@@ -691,7 +691,7 @@
                         );
                   },
                 },
-                r.a.createElement(Z.B, null)
+                r.a.createElement(Z.D, null)
               ),
             r.a.createElement(
               h.e,
@@ -703,7 +703,7 @@
                     "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
                   ),
               },
-              r.a.createElement(Z.F, null)
+              r.a.createElement(Z.I, null)
             )
           );
         }),

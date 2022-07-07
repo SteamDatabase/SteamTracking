@@ -45,7 +45,7 @@
           const { mode: e } = this.props;
           if ("view" === e) {
             let e = d.c.GetEditModel().GetEventModel(),
-              t = Object(i.d)(s.c.LANGUAGE);
+              t = Object(i.f)(s.c.LANGUAGE);
             return e.BHasSaleEnabled()
               ? o.createElement(
                   E.a,
@@ -459,7 +459,7 @@
           s.a.createElement(
             "div",
             { className: j.LatestUpdateIcon },
-            s.a.createElement(U.tb, null)
+            s.a.createElement(U.wb, null)
           ),
           s.a.createElement(
             g.e,

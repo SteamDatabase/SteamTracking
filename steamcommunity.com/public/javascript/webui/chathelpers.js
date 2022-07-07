@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7355465";
+var CLSTAMP = "7368079";
 !(function (e) {
   function t(t) {
     for (
@@ -135,8 +135,8 @@ var CLSTAMP = "7355465";
                 22: "c954e80e0c74becb5db0",
                 23: "28cb6fd0979d5e3994f1",
                 24: "c6836e24e4f5af434b07",
-                25: "10d27ba1a50b137facdd",
-                26: "114a09baf5ebc8ef0ccf",
+                25: "da136aef3ae77124f922",
+                26: "51041b6ce0b3028a129a",
                 27: "8c3247e842b8f2a0f0ec",
                 28: "d5c01c003e6afa1ef527",
                 29: "f4b7d71b7d80031ffc11",
@@ -149,35 +149,35 @@ var CLSTAMP = "7355465";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "785801b80acfb50fb97e",
-                40: "9758f510c0e61e3a4375",
-                41: "52b86f5ec4dd6cd8b534",
-                42: "57525cc338f4b451c04e",
-                43: "fef110573bde645b79c4",
-                44: "1a208d7950dafc57ad69",
-                45: "dd22fdb33aa53833bc8d",
-                46: "3111b113b41f826e8277",
-                47: "322d4d18c01ba7dbd738",
-                48: "ffdabb0de3c026258bf8",
-                49: "12b3b28ec7b811c6be06",
-                50: "9c643754c62da4cc4902",
-                51: "40d8c7cad1ef91a54aa7",
-                52: "b60aabc980a1f926b802",
-                53: "7353372041e64fdd0b8d",
-                54: "92be79245fb3840c6067",
-                55: "56b168669b30d9db1775",
-                56: "d23a4ff135cebb101626",
-                57: "d56f633ecfd45ba7d750",
-                58: "e52c78871f93154e339c",
+                39: "0f5fcf876bfba22f265e",
+                40: "bb588704e7b4b8673fb1",
+                41: "604deea2bad6b4dff45d",
+                42: "f940e69773c17d323017",
+                43: "55a37144dcad37af0401",
+                44: "0e325baf95c791fd291e",
+                45: "c37bcb3ca81ce2ece8fb",
+                46: "ec4219f83f7a9bacc00c",
+                47: "b61b6bbee6e845bd43f5",
+                48: "ba4bab1c12234adf018a",
+                49: "0fb4e488582c7cef851d",
+                50: "6cd6e073f84a97de2571",
+                51: "a1d132fef93ca5ea88f5",
+                52: "6b13d6c184ef4cc92f3c",
+                53: "ca044cc29116ba857e4c",
+                54: "9334deeba3aa60c68027",
+                55: "2c65d54e411adcf6553b",
+                56: "ec0d21d04f1045a97e8d",
+                57: "a1546e4fc27c31ce7cae",
+                58: "fef32d53f84e74d4349a",
                 59: "eae17d6c18038567cb04",
-                60: "a7506e0095060fb1f95e",
-                61: "f4c8f3cfbbe95aa68958",
-                62: "4096fe0c0e6f9550a697",
-                63: "3f9e6364a1d30ac89600",
-                64: "20cbcae533f9a6b20cb7",
-                65: "cef34e87f2756994d6e2",
-                66: "a6910f814f7cc9e3d1c0",
-                67: "00fc56b56361d85e3909",
+                60: "146d8c3b1f5a8d305e44",
+                61: "96e41bb6c4dd50185eac",
+                62: "86d8a7648519dc52f792",
+                63: "d62f2cf347bf5588f123",
+                64: "60badfe970f895c21380",
+                65: "c35742fbd57df728e83f",
+                66: "b73499d22dac3216f018",
+                67: "7904b29d52662b31fb6f",
               }[e]
             );
           })(e));
@@ -775,10 +775,10 @@ var CLSTAMP = "7355465";
         IN_CHROMEOS: !1,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
-        COMMUNITY_WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
         PAGE_TIMESTAMP: 0,
+        FROM_WEB: !1,
         get SESSIONID() {
           return (function () {
             if (!Object(i.a)()) return l || (l = d()), l;
@@ -1025,7 +1025,7 @@ var CLSTAMP = "7355465";
             }, []),
             l = r.useCallback(() => {
               s(!1), u(), (a.current = window.setTimeout(c, e));
-            }, [u, e, t, c]),
+            }, [u, e, c]),
             d = r.useCallback(() => {
               n && l();
             }, [n, l]);
@@ -1896,6 +1896,7 @@ var CLSTAMP = "7355465";
         (e[(e.Ago = 1)] = "Ago"),
         (e[(e.Remaining = 2)] = "Remaining");
     })(r || (r = {}));
+    new Map();
     const l = new Map();
     function d(e, t) {
       const n = new Date(1e3 * e),

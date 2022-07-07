@@ -292,7 +292,7 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  i.a.createElement(g.L, null)
+                  i.a.createElement(g.O, null)
                 )
               )
             )

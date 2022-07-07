@@ -325,35 +325,37 @@
         GetSteamID() {
           return this.m_steamid;
         }
-        SendSteamGuardCode(e) {
+        SendSteamGuardCode(e, t = !0) {
           return Object(a.a)(this, void 0, void 0, function* () {
             try {
-              const t = 3 === this.m_eStatus || 7 === this.m_eStatus,
-                n = l.b.Init(C.f);
-              n.Body().set_client_id(this.m_strClientID),
-                n.Body().set_steamid(this.m_steamid),
-                n.Body().set_code(e),
-                n.Body().set_code_type(t ? 2 : 3);
-              const a = (yield C.a.UpdateAuthSessionWithSteamGuardCode(
+              const n = 3 === this.m_eStatus || 7 === this.m_eStatus,
+                a = l.b.Init(C.f);
+              a.Body().set_client_id(this.m_strClientID),
+                a.Body().set_steamid(this.m_steamid),
+                a.Body().set_code(e),
+                a.Body().set_code_type(n ? 2 : 3);
+              const o = (yield C.a.UpdateAuthSessionWithSteamGuardCode(
                 this.m_transport,
-                n
+                a
               )).GetEResult();
-              if (1 !== a)
-                switch (a) {
+              if (1 !== o) {
+                if (!t) return o;
+                switch (o) {
                   case 65:
                   case 88:
-                    return (this.m_eStatus = t ? 7 : 8), a;
+                    return (this.m_eStatus = n ? 7 : 8), o;
                   default:
                     return (
                       console.error(
-                        `Failed to update auth session with SG code. Result: ${a}`
+                        `Failed to update auth session with SG code. Result: ${o}`
                       ),
                       (this.m_eFailureState = m.b.Generic),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      a
+                      o
                     );
                 }
-              return (this.m_eStatus = 9), this.StartPolling(), a;
+              }
+              return (this.m_eStatus = 9), this.StartPolling(), o;
             } catch (e) {
               return (
                 console.error(
@@ -425,13 +427,13 @@
       function p(e) {
         return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= 5;
       }
-      var b = n("SEa3"),
-        h = n("WTXQ"),
-        f = n.n(h),
+      var h = n("SEa3"),
+        b = n("WTXQ"),
+        f = n.n(b),
         S = n("k/Wh"),
         v = n("Kd3+"),
-        L = n.n(v);
-      function w(e) {
+        w = n.n(v);
+      function L(e) {
         const {
             transport: t,
             onComplete: n,
@@ -442,7 +444,7 @@
             eStatus: s,
             strChallengeURL: m,
             reset: u,
-          } = Object(b.a)({ transport: t, onComplete: n, ePlatformType: l });
+          } = Object(h.a)({ transport: t, onComplete: n, ePlatformType: l });
         Object(o.useEffect)(() => a && a(s), [a, s]);
         const d = 2 === s ? m : r.c.STORE_BASE_URL,
           g = 0 === s || 1 === s,
@@ -451,25 +453,25 @@
           E = g || C || _;
         return i.a.createElement(
           "div",
-          { className: L.a.Column },
+          { className: w.a.Column },
           i.a.createElement(
             "div",
-            { className: L.a.LoginQR },
+            { className: w.a.LoginQR },
             i.a.createElement(
               S.b,
               {
                 quality: y(d),
-                className: Object(c.a)(L.a.LoginQR, E && L.a.Blur),
+                className: Object(c.a)(w.a.LoginQR, E && w.a.Blur),
               },
               d
             ),
             E &&
               i.a.createElement(
                 "div",
-                { className: L.a.Overlay },
+                { className: w.a.Overlay },
                 i.a.createElement(
                   "div",
-                  { className: L.a.Box },
+                  { className: w.a.Box },
                   g && i.a.createElement(O, { size: "small" }),
                   C && i.a.createElement(j, { reset: u }),
                   _ && i.a.createElement(A, null)
@@ -485,10 +487,10 @@
         const { size: t } = e;
         return i.a.createElement("div", {
           className: Object(c.a)(
-            L.a.Loading,
-            "small" == t && L.a.Small,
-            ("medium" == t || !t) && L.a.Medium,
-            "large" == t && L.a.Large
+            w.a.Loading,
+            "small" == t && w.a.Small,
+            ("medium" == t || !t) && w.a.Medium,
+            "large" == t && w.a.Large
           ),
         });
       }
@@ -546,8 +548,8 @@
           })
         );
       }
-      var N = n("GXif"),
-        k = n("kWcV");
+      var k = n("GXif"),
+        N = n("kWcV");
       n("vDqi");
       const x = Object(o.createContext)(!1),
         F = () => Object(o.useContext)(x);
@@ -581,11 +583,11 @@
           eFailureState: C,
           strConfirmationAssociatedMessage: E,
           strAccountName: p,
-          start: b,
-          reset: h,
+          start: h,
+          reset: b,
           addCode: S,
           goBack: v,
-          useCodeOverride: L,
+          useCodeOverride: w,
         } = (function (e) {
           const [t, n] = Object(o.useState)(new _(e));
           return Object(u.d)(() => ({
@@ -605,7 +607,7 @@
         })({ transport: t, onComplete: d, ePlatformType: a });
         const [y, O] = Object(o.useState)(0),
           j = F(),
-          A = ({ strAccountName: e, strPassword: t }) => b(e, t);
+          A = ({ strAccountName: e, strPassword: t }) => h(e, t);
         if (!!(0 === g || 1 === g || 2 === g)) {
           const e = i.a.createElement(
             "div",
@@ -618,12 +620,12 @@
                 i.a.createElement(
                   T,
                   { highlight: !0 },
-                  Object(N.g)("#Login_SignIn_OrWithQRCode")
+                  Object(k.g)("#Login_SignIn_OrWithQRCode")
                 ),
                 i.a.createElement(
                   "div",
                   { className: f.a.QR },
-                  i.a.createElement(w, {
+                  i.a.createElement(L, {
                     onStatusChange: O,
                     transport: t,
                     onComplete: d,
@@ -633,7 +635,7 @@
                 i.a.createElement(
                   ne,
                   { href: `${r.c.STORE_BASE_URL}mobile`, align: "center" },
-                  Object(N.g)("#Login_GetMobileApp_Link")
+                  Object(k.g)("#Login_GetMobileApp_Link")
                 )
               )
           );
@@ -641,6 +643,13 @@
             return i.a.createElement(
               oe,
               { gap: 36, className: f.a.EmbeddedRoot },
+              i.a.createElement(
+                "div",
+                {
+                  style: { fontSize: "14px", color: "#d8d632", width: "380px" },
+                },
+                "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+              ),
               i.a.createElement(me, { className: f.a.HeaderLogo }),
               i.a.createElement(B, null),
               e,
@@ -656,7 +665,7 @@
                       document.location.href
                     )}`,
                   },
-                  Object(N.g)("#Login_Help_SignIn")
+                  Object(k.g)("#Login_Help_SignIn")
                 ),
                 i.a.createElement(
                   "div",
@@ -664,12 +673,12 @@
                   i.a.createElement(
                     "span",
                     { className: f.a.AccountCreationPrompt },
-                    Object(N.g)("#Login_NoSteamAccount")
+                    Object(k.g)("#Login_NoSteamAccount")
                   ),
                   i.a.createElement(
                     ne,
                     { inline: !0, href: `${r.c.STORE_BASE_URL}join/` },
-                    Object(N.g)("#Login_CreateAccount")
+                    Object(k.g)("#Login_CreateAccount")
                   )
                 )
               ),
@@ -680,8 +689,13 @@
             { style: { display: "flex", flexDirection: "column", gap: "8px" } },
             i.a.createElement(
               "div",
+              { style: { fontSize: "14px", color: "#d8d632", width: "380px" } },
+              "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
+            ),
+            i.a.createElement(
+              "div",
               { className: f.a.PrimaryHeader },
-              Object(N.g)("#Login_SignIn")
+              Object(k.g)("#Login_SignIn")
             ),
             i.a.createElement(B, null)
           );
@@ -710,18 +724,18 @@
             return i.a.createElement(te, {
               type: t ? "mobile" : "email",
               accountName: p,
-              onUseCodeOverride: L,
+              onUseCodeOverride: w,
             });
           case 12:
-            return i.a.createElement($, { reset: h });
+            return i.a.createElement($, { reset: b });
           case 11:
-            return i.a.createElement(Q, { reset: h, failure: C });
+            return i.a.createElement(Q, { reset: b, failure: C });
           case 10:
             return i.a.createElement(se, { compact: !0 }, s());
           default:
             return (
               console.error(`Unknown Phase: ${g}`),
-              i.a.createElement(Q, { reset: h, failure: m.b.Generic })
+              i.a.createElement(Q, { reset: b, failure: m.b.Generic })
             );
         }
       }
@@ -731,7 +745,7 @@
           : window.location.href + "?oldauth=1";
         return i.a.createElement(
           "div",
-          null,
+          { style: { fontSize: "12px" } },
           "Having trouble with new login? ",
           i.a.createElement(
             "a",
@@ -750,7 +764,7 @@
           _ = F(),
           E = 2 === n && !g,
           p = E
-            ? i.a.createElement(U, null, Object(N.g)("#Login_CheckCredentials"))
+            ? i.a.createElement(U, null, Object(k.g)("#Login_CheckCredentials"))
             : i.a.createElement(U, null, " ");
         return i.a.createElement(
           ae,
@@ -768,7 +782,7 @@
             label: i.a.createElement(
               T,
               { highlight: !0 },
-              Object(N.g)("#Login_SignIn_WithAccountName")
+              Object(k.g)("#Login_SignIn_WithAccountName")
             ),
             value: l,
             onChange: (e) => {
@@ -778,7 +792,7 @@
           }),
           i.a.createElement(R, {
             tone: E ? "danger" : void 0,
-            label: i.a.createElement(T, null, Object(N.g)("#Login_Password")),
+            label: i.a.createElement(T, null, Object(k.g)("#Login_Password")),
             value: s,
             onChange: (e) => {
               C(!0), m(e);
@@ -798,7 +812,7 @@
                 )}`,
                 align: "center",
               },
-              Object(N.g)("#Login_Help_SignIn")
+              Object(k.g)("#Login_Help_SignIn")
             )
         );
       }
@@ -855,7 +869,7 @@
         return i.a.createElement(
           "div",
           { className: f.a.SignInButtonContainer },
-          i.a.createElement(Z, null, Object(N.g)("#Login_SignIn"))
+          i.a.createElement(Z, null, Object(k.g)("#Login_SignIn"))
         );
       }
       function Z(e) {
@@ -878,7 +892,7 @@
           i.a.createElement(
             oe,
             { alignItems: "center" },
-            i.a.createElement(k.a, null)
+            i.a.createElement(N.a, null)
           )
         );
       }
@@ -890,14 +904,14 @@
                 return { title: "", description: "" };
               case m.b.Expired:
                 return {
-                  title: Object(N.g)("#Login_Error_Expired_Title"),
-                  description: Object(N.g)("#Login_Error_Expired_Description"),
+                  title: Object(k.g)("#Login_Error_Expired_Title"),
+                  description: Object(k.g)("#Login_Error_Expired_Description"),
                 };
               case m.b.Generic:
               default:
                 return {
-                  title: Object(N.g)("#Error_Generic"),
-                  description: Object(N.g)("#Login_Error_Default_Description"),
+                  title: Object(k.g)("#Error_Generic"),
+                  description: Object(k.g)("#Login_Error_Default_Description"),
                 };
             }
           })(n);
@@ -909,7 +923,7 @@
             { alignItems: "center", gap: 12 },
             i.a.createElement("div", { className: f.a.FailureTitle }, a),
             i.a.createElement("div", { className: f.a.FailureDescription }, o),
-            i.a.createElement(D, { onClick: t }, Object(N.g)("#Button_Back"))
+            i.a.createElement(D, { onClick: t }, Object(k.g)("#Button_Back"))
           )
         );
       }
@@ -935,14 +949,14 @@
           [d, g] = Object(o.useState)(!1),
           [C, _] = Object(o.useState)(!1),
           E = m.join(""),
-          b = (function (e) {
+          h = (function (e) {
             return p(e) && 5 === e.length;
           })(E),
-          h = () => {
-            b && n(E).then(() => g(!1));
+          b = () => {
+            h && n(E).then(() => g(!1));
           };
         Object(o.useEffect)(() => {
-          C && (_(!1), h());
+          C && (_(!1), b());
         }, [C]);
         const f = !d && (8 === a || 7 === a),
           S = i.a.createElement(
@@ -951,22 +965,22 @@
               href: `${r.c.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`,
               align: "center",
             },
-            Object(N.g)("#Login_Help_AccessMobileApp")
+            Object(k.g)("#Login_Help_AccessMobileApp")
           );
         return i.a.createElement(
           se,
           {
-            title: Object(N.g)("#Login_Title_SteamGuard"),
+            title: Object(k.g)("#Login_Title_SteamGuard"),
             bottom: S,
             compact: !0,
           },
           i.a.createElement(
             ae,
-            { onSubmit: h },
+            { onSubmit: b },
             i.a.createElement(
               oe,
               { alignItems: "center", gap: 20 },
-              i.a.createElement(z, { type: t, accountName: l }),
+              i.a.createElement(K, { type: t, accountName: l }),
               i.a.createElement(
                 oe,
                 { gap: 12, alignItems: "center" },
@@ -977,7 +991,7 @@
                     i.a.createElement(
                       U,
                       null,
-                      Object(N.g)("#Login_IncorrectSteamGuard")
+                      Object(k.g)("#Login_IncorrectSteamGuard")
                     ),
                   i.a.createElement(re, {
                     value: m,
@@ -992,18 +1006,18 @@
                 ),
                 i.a.createElement(
                   Z,
-                  { disabled: !b },
-                  Object(N.g)("#Button_Go")
+                  { disabled: !h },
+                  Object(k.g)("#Button_Go")
                 )
               ),
               "mobile" === t
-                ? i.a.createElement(J, null)
-                : i.a.createElement(K, { emailAddress: c })
+                ? i.a.createElement(z, null)
+                : i.a.createElement(J, { emailAddress: c })
             )
           )
         );
       }
-      function J() {
+      function z() {
         return i.a.createElement(
           ie,
           {
@@ -1014,12 +1028,12 @@
           i.a.createElement(
             "div",
             { className: f.a.EnterCodeFromMobile },
-            Object(N.g)("#Login_EnterMobileCode")
+            Object(k.g)("#Login_EnterMobileCode")
           ),
           i.a.createElement(Y, { className: f.a.AwaitingMobileConfIcon })
         );
       }
-      function K(e) {
+      function J(e) {
         return i.a.createElement(
           ie,
           {
@@ -1033,7 +1047,7 @@
             i.a.createElement(
               "div",
               { className: f.a.EnterCodeFromEmail },
-              Object(N.q)(
+              Object(k.q)(
                 "#Login_EnterEmailCode",
                 i.a.createElement(
                   "span",
@@ -1046,12 +1060,12 @@
           i.a.createElement(ee, { className: f.a.AwaitingMobileConfIcon })
         );
       }
-      function z(e) {
+      function K(e) {
         const { accountName: t, type: n } = e,
           a =
             "mobile" === n
-              ? Object(N.g)("#Login_MobileProtectingAccount")
-              : Object(N.g)("#Login_EmailProtectingAccount"),
+              ? Object(k.g)("#Login_MobileProtectingAccount")
+              : Object(k.g)("#Login_EmailProtectingAccount"),
           o = F();
         return i.a.createElement(
           "div",
@@ -1059,7 +1073,7 @@
           i.a.createElement(
             "div",
             { className: f.a.Label },
-            Object(N.q)(
+            Object(k.q)(
               "#Login_ActiveAccountName",
               i.a.createElement("span", { className: f.a.AccountName }, t)
             )
@@ -1074,7 +1088,7 @@
           i.a.createElement(
             "div",
             { className: f.a.AwaitingMobileConfText },
-            Object(N.g)("#Login_AwaitingMobileConfirmation")
+            Object(k.g)("#Login_AwaitingMobileConfirmation")
           ),
           i.a.createElement(Y, { className: f.a.AwaitingMobileConfIcon })
         );
@@ -1108,7 +1122,7 @@
               align: "center",
               href: `${r.c.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`,
             },
-            Object(N.g)("#Login_Help_AccessMobileApp")
+            Object(k.g)("#Login_Help_AccessMobileApp")
           ),
           c = o
             ? i.a.createElement(
@@ -1117,25 +1131,25 @@
                 i.a.createElement(
                   ne,
                   { align: "center", onClick: a },
-                  Object(N.g)("#Login_EnterCodeInstead")
+                  Object(k.g)("#Login_EnterCodeInstead")
                 )
               )
             : i.a.createElement(
                 "div",
                 { onClick: a, className: f.a.EnterCodeInsteadLink },
-                Object(N.g)("#Login_EnterCodeInstead")
+                Object(k.g)("#Login_EnterCodeInstead")
               );
         return i.a.createElement(
           se,
           {
-            title: Object(N.g)("#Login_Title_SteamGuard"),
+            title: Object(k.g)("#Login_Title_SteamGuard"),
             bottom: l,
             compact: !0,
           },
           i.a.createElement(
             oe,
             { gap: 40 },
-            i.a.createElement(z, { type: t, accountName: n }),
+            i.a.createElement(K, { type: t, accountName: n }),
             i.a.createElement(X, null),
             c
           )
@@ -1374,7 +1388,7 @@
         return i.a.createElement(
           oe,
           { alignItems: "center", justifyContent: "center" },
-          i.a.createElement(k.a, null)
+          i.a.createElement(N.a, null)
         );
       }
       n("9l+M");

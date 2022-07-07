@@ -244,6 +244,12 @@ html.tablet .search_results_count {
 	color: var(--gpStoreLighterGrey);
 }
 
+html.tablet .search_results_spellcheck_suggestion {
+	padding: 8px 0px 8px 0px;
+	background-color: unset;
+	/* border-top: 1px solid var(--gpBackground-LightSoft); */
+	color: var(--gpStoreLighterGrey);
+}
 
 
 

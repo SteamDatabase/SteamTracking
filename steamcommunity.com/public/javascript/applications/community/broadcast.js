@@ -193,8 +193,8 @@
           )
         );
       });
-      var K;
-      const q = {
+      var z;
+      const K = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -221,7 +221,7 @@
           },
         ],
       };
-      let z = (K = class extends l.a.Component {
+      let q = (z = class extends l.a.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = n.a.CancelToken.source()),
@@ -248,7 +248,7 @@
         }
         componentDidMount() {
           return Object(r.a)(this, void 0, void 0, function* () {
-            K.IsBroadcastAllowed() &&
+            z.IsBroadcastAllowed() &&
               (Object(G.a)(null),
               yield y.a
                 .Get()
@@ -407,7 +407,7 @@
             Object(N.a)() && Object(N.a)().AddEvent(1004));
         }
         render() {
-          if (!K.IsBroadcastAllowed() || this.state.bLoadingPreference)
+          if (!z.IsBroadcastAllowed() || this.state.bLoadingPreference)
             return null;
           let e = y.a.Get().GetPlayReadyStream(this.props);
           if (e) {
@@ -422,14 +422,14 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: a.GetImageURL(
                   "broadcast_left",
-                  r || Object(C.d)(v.c.LANGUAGE)
+                  r || Object(C.f)(v.c.LANGUAGE)
                 ),
                 right_panel: a.GetImageURL(
                   "broadcast_right",
-                  r || Object(C.d)(v.c.LANGUAGE)
+                  r || Object(C.f)(v.c.LANGUAGE)
                 ),
                 store_title: a.GetBroadcastTitle(
-                  r || Object(C.d)(v.c.LANGUAGE)
+                  r || Object(C.f)(v.c.LANGUAGE)
                 ),
                 broadcast_chat_visibility: a.GetBroadcastChatVisibility(),
               }));
@@ -550,12 +550,12 @@
           });
         }
       });
-      Object(r.b)([W.b], z.prototype, "ToggleBroadcastExpandShrink", null),
-        Object(r.b)([W.b], z.prototype, "OnShrinkTransitionEnd", null),
-        Object(r.b)([W.b], z.prototype, "onStreamSelect", null),
-        Object(r.b)([W.b], z.prototype, "PlayTopNonVOD", null),
-        (z = K = Object(r.b)([o.a], z));
-      t.default = z;
+      Object(r.b)([W.b], q.prototype, "ToggleBroadcastExpandShrink", null),
+        Object(r.b)([W.b], q.prototype, "OnShrinkTransitionEnd", null),
+        Object(r.b)([W.b], q.prototype, "onStreamSelect", null),
+        Object(r.b)([W.b], q.prototype, "PlayTopNonVOD", null),
+        (q = z = Object(r.b)([o.a], q));
+      t.default = q;
       class Q extends l.a.Component {
         constructor(e) {
           super(e),
@@ -640,7 +640,7 @@
           const t = P.a.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
-          let a = q.list.find(
+          let a = K.list.find(
             (a) =>
               a.appid == t &&
               (!a.broadcasterAccountID || a.broadcasterAccountID == e.accountid)
@@ -672,7 +672,7 @@
                   "#BroadcastWatch_View_Broadcast_Page"
                 ),
               },
-              l.a.createElement(T.z, null)
+              l.a.createElement(T.B, null)
             );
           }
         }
@@ -709,7 +709,7 @@
             l.a.createElement(
               "div",
               { className: Object(E.a)(H.a.viewer_count, "viewer_count") },
-              l.a.createElement(T.wb, null),
+              l.a.createElement(T.zb, null),
               Object(R.a)(r)
             ),
             l.a.createElement(
@@ -761,7 +761,7 @@
                     "#StoreBroadcast_Change_store_Broadcast_settings"
                   ),
                 },
-                l.a.createElement(T.bb, null)
+                l.a.createElement(T.eb, null)
               ),
               e
             )
@@ -813,7 +813,7 @@
               ),
               onClick: e.OnPreventPopup,
             },
-            l.a.createElement(T.Ab, null)
+            l.a.createElement(T.Db, null)
           )
         );
       });
@@ -945,7 +945,7 @@
               ? l.a.createElement(
                   l.a.Fragment,
                   null,
-                  l.a.createElement(T.wb, null),
+                  l.a.createElement(T.zb, null),
                   " ",
                   Object(R.a)(m)
                 )

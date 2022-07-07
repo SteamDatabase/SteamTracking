@@ -78,7 +78,7 @@
           const { mode: e } = this.props;
           if ("view" === e) {
             let e = d.c.GetEditModel().GetEventModel(),
-              t = Object(o.d)(r.c.LANGUAGE);
+              t = Object(o.f)(r.c.LANGUAGE);
             return e.BHasSaleEnabled()
               ? i.createElement(
                   _.a,
@@ -186,8 +186,8 @@
         D = a("ka0M"),
         C = a("0OaU"),
         j = a("r64O"),
-        y = a("exH9"),
-        f = a("TLQK"),
+        f = a("exH9"),
+        y = a("TLQK"),
         T = a("OS6B"),
         I = a("opsS"),
         M = a("lkRc"),
@@ -259,7 +259,7 @@
                     this.state.redirectTarget
                 );
             }
-          let s = Object(P.d)(M.c.LANGUAGE);
+          let s = Object(P.f)(M.c.LANGUAGE);
           t.BIsLanguageValidForRealms(s) || (s = t.BInRealmGlobal() ? 0 : 29);
           let c,
             m,
@@ -277,14 +277,14 @@
                   ? d.createElement(
                       "div",
                       { className: K.TileTextStartsIn },
-                      Object(f.f)(
+                      Object(y.f)(
                         "#EventEditor_Status_WillBeVisible_EventStart"
                       )
                     )
                   : d.createElement(
                       "div",
                       { className: K.TileTextStartsIn },
-                      Object(f.o)(
+                      Object(y.o)(
                         "#EventEditor_Status_WillBeVisible_At",
                         d.createElement(z.a, {
                           dateAndTime:
@@ -300,19 +300,19 @@
               ? (m = d.createElement(
                   "span",
                   { className: K.EventStateUpcoming },
-                  Object(f.f)("#EventDisplay_Upcoming")
+                  Object(y.f)("#EventDisplay_Upcoming")
                 ))
               : Object(J.a)(t.type) && t.GetEndTimeAndDateUnixSeconds() > e
               ? (m = d.createElement(
                   "span",
                   { className: K.EventStateActive },
-                  Object(f.f)("#EventDisplay_Active")
+                  Object(y.f)("#EventDisplay_Active")
                 ))
               : t.GetStartTimeAndDateUnixSeconds() > e + 3600 &&
                 (m = d.createElement(
                   "span",
                   { className: K.EventStateRecent },
-                  Object(f.f)("#EventDisplay_RecentlyActive")
+                  Object(y.f)("#EventDisplay_RecentlyActive")
                 ));
           }
           i &&
@@ -339,7 +339,7 @@
             d.createElement(
               "div",
               {
-                className: Object(y.a)({
+                className: Object(f.a)({
                   [K.TileContainer]: !0,
                   [K.TileAgeAppropriate]: true,
                   [K.TileAgeNotAppropriate]: !1,
@@ -376,7 +376,7 @@
                           "span",
                           { className: K.TileHasSale },
                           " | ",
-                          Object(f.f)("#EventEditor_Status_HasSale")
+                          Object(y.f)("#EventEditor_Status_HasSale")
                         )
                     )
                   ),
@@ -406,7 +406,7 @@
                                 t.clanSteamID.GetAccountID() +
                                 "/admin/manage_rss/",
                             },
-                            " " + Object(f.f)("#EventEditor_Status_FromRSSFeed")
+                            " " + Object(y.f)("#EventEditor_Status_FromRSSFeed")
                           )
                         ),
                       d.createElement(Y.b, { eventModel: t, bAllowUpdate: !1 })
@@ -415,7 +415,7 @@
                       d.createElement(
                         "div",
                         { className: K.TileStats },
-                        Object(f.o)(
+                        Object(y.o)(
                           "#EventDashBoard_Summary_Tile_Impressions",
                           d.createElement(
                             "span",
@@ -424,7 +424,7 @@
                           )
                         ),
                         d.createElement("br", null),
-                        Object(f.o)(
+                        Object(y.o)(
                           "#EventDashBoard_Summary_Tile_Read",
                           d.createElement(
                             "span",
@@ -445,18 +445,18 @@
                         d.createElement(
                           "div",
                           null,
-                          Object(f.f)(
+                          Object(y.f)(
                             "#EventEditor_DataFromConnectAnnouncement"
                           )
                         ),
                         d.createElement(
                           F.c,
                           {
-                            className: Object(y.a)(K.ManageButton, K.Edit),
+                            className: Object(f.a)(K.ManageButton, K.Edit),
                             eventModel: t,
                             route: F.a.k_eView,
                           },
-                          Object(f.f)("#Button_ViewPage")
+                          Object(y.f)("#Button_ViewPage")
                         )
                       )
                     : d.createElement(
@@ -496,8 +496,8 @@
                 a = t.GetLanguagesWithTokens();
               a.length > 1
                 ? (a.sort((e, t) =>
-                    Object(f.f)("#Language_" + Object(P.a)(e)).localeCompare(
-                      Object(f.f)("#Language_" + Object(P.a)(t))
+                    Object(y.f)("#Language_" + Object(P.c)(e)).localeCompare(
+                      Object(y.f)("#Language_" + Object(P.c)(t))
                     )
                   ),
                   Object(D.d)(
@@ -514,16 +514,16 @@
               let t = Object(T.a)(e);
               Object(D.d)(
                 d.createElement(O.g, {
-                  strTitle: Object(f.f)("#EventEditor_CloneError"),
+                  strTitle: Object(y.f)("#EventEditor_CloneError"),
                   bAlertDialog: !0,
                   bDestructiveWarning: !0,
-                  strDescription: Object(f.f)(
+                  strDescription: Object(y.f)(
                     "#EventEditor_CloneError_Desc",
                     t.strErrorMsg
                   ),
                 }),
                 window,
-                { strTitle: Object(f.f)("#EventEditor_CloneError") }
+                { strTitle: Object(y.f)("#EventEditor_CloneError") }
               );
             });
         }
@@ -533,7 +533,7 @@
             t.length > 0 &&
             (e.ClearLanguagesTokens(t),
             (a.GetEventModel().jsondata.bSaleEnabled = !0),
-            Object(Z.b)(a, e, f.b.GetLanguageListForRealms([M.c.EREALM])),
+            Object(Z.b)(a, e, y.b.GetLanguageListForRealms([M.c.EREALM])),
             (a.GetEventModel().jsondata.bSaleEnabled = !1)),
             this.props.fnOnGotoPage(null, "clone");
         }
@@ -555,16 +555,16 @@
               let t = Object(T.a)(e);
               Object(D.d)(
                 d.createElement(O.g, {
-                  strTitle: Object(f.f)("#EventEditor_PublishingError"),
+                  strTitle: Object(y.f)("#EventEditor_PublishingError"),
                   bAlertDialog: !0,
                   bDestructiveWarning: !0,
-                  strDescription: Object(f.f)(
+                  strDescription: Object(y.f)(
                     "#EventEditor_PublishingError_Desc",
                     t.strErrorMsg
                   ),
                 }),
                 window,
-                { strTitle: Object(f.f)("#EventEditor_PublishingError") }
+                { strTitle: Object(y.f)("#EventEditor_PublishingError") }
               );
             });
         }
@@ -599,82 +599,82 @@
               d.createElement(
                 F.c,
                 {
-                  className: Object(y.a)(K.ManageButton, K.Edit),
+                  className: Object(f.a)(K.ManageButton, K.Edit),
                   eventModel: e,
                   route: F.a.k_eCommunityEdit,
                   onClick: this.StopPropagation,
                 },
-                Object(f.f)("#Button_Edit")
+                Object(y.f)("#Button_Edit")
               ),
             a &&
               d.createElement(
                 F.c,
                 {
-                  className: Object(y.a)(K.ManageButton, K.Edit),
-                  "data-tooltip-text": Object(f.f)(
+                  className: Object(f.a)(K.ManageButton, K.Edit),
+                  "data-tooltip-text": Object(y.f)(
                     "#EventEditor_Button_MigrateAndEdit_Announcement_ttip"
                   ),
                   eventModel: e,
                   route: F.a.k_eCommunityMigrate,
                   onClick: this.StopPropagation,
                 },
-                Object(f.f)("#EventEditor_Button_MigrateAndEdit")
+                Object(y.f)("#EventEditor_Button_MigrateAndEdit")
               ),
             n &&
               d.createElement(
                 F.c,
                 {
-                  className: Object(y.a)(K.ManageButton, K.View),
-                  "data-tooltip-text": Object(f.f)(
+                  className: Object(f.a)(K.ManageButton, K.View),
+                  "data-tooltip-text": Object(y.f)(
                     "#EventEditor_Button_PreviewButton_ttip"
                   ),
                   eventModel: e,
                   route: F.a.k_eCommunityPreview,
                   onClick: this.StopPropagation,
                 },
-                Object(f.f)("#EventDisplay_Preview")
+                Object(y.f)("#EventDisplay_Preview")
               ),
             !n &&
               d.createElement(
                 F.c,
                 {
-                  className: Object(y.a)(K.ManageButton, K.View),
+                  className: Object(f.a)(K.ManageButton, K.View),
                   eventModel: e,
                   route: F.a.k_eView,
                   onClick: this.StopPropagation,
                 },
-                Object(f.f)("#EventDisplay_View")
+                Object(y.f)("#EventDisplay_View")
               ),
             !i &&
               !a &&
               d.createElement(
                 "div",
                 {
-                  className: Object(y.a)(K.ManageButton, K.Publish),
+                  className: Object(f.a)(K.ManageButton, K.Publish),
                   onClick: this.OnPublishEvent,
                 },
-                Object(f.f)("#EventDisplay_Publish")
+                Object(y.f)("#EventDisplay_Publish")
               ),
             d.createElement("div", { className: K.Spacer }, " "),
             !a &&
               d.createElement(
                 "div",
                 {
-                  className: Object(y.a)(K.ManageButton, K.Clone),
+                  className: Object(f.a)(K.ManageButton, K.Clone),
                   onClick: this.OnClone,
                 },
-                Object(f.f)("#Button_Clone")
+                Object(y.f)("#Button_Clone")
               ),
             d.createElement(
               "div",
               {
-                className: Object(y.a)(K.ManageButton, K.Delete),
-                "data-tooltip-text": Object(f.f)(
+                className: Object(f.a)(K.ManageButton, K.Delete),
+                "data-tooltip-text": Object(y.f)(
                   "#EventEditor_Button_DeleteButton_ttip"
                 ),
                 onClick: this.OnDeleteClickAndVerify,
               },
-              Object(f.f)("#Button_Delete")
+              Object(y.f)("#Button_Delete")
             )
           );
         }
@@ -745,20 +745,20 @@
       };
       function te(e) {
         const { langs: t, locData: a, fnDoCloneAction: n, closeModal: i } = e,
-          l = Object(P.d)(M.c.LANGUAGE),
+          l = Object(P.f)(M.c.LANGUAGE),
           [r, o] = d.useState(new Set(t.filter((e) => e != l)));
         return d.createElement(
           O.e,
           {
-            strTitle: Object(f.f)("#Button_Clone"),
+            strTitle: Object(y.f)("#Button_Clone"),
             onOK: () => n(a, Array.from(r)),
-            strDescription: Object(f.f)("#EventEditor_Clone_MultiLanguages"),
+            strDescription: Object(y.f)("#EventEditor_Clone_MultiLanguages"),
             closeModal: i,
           },
           d.createElement(
             "div",
             { className: K.CloneLangAlert },
-            Object(f.f)("#EventEditor_Clone_Alert")
+            Object(y.f)("#EventEditor_Clone_Alert")
           ),
           d.createElement(
             "div",
@@ -771,7 +771,7 @@
                   const a = new Set(r);
                   t ? a.delete(e) : a.add(e), o(a);
                 },
-                label: Object(f.f)("#Language_" + Object(P.a)(e)),
+                label: Object(y.f)("#Language_" + Object(P.c)(e)),
                 checked: !r.has(e),
               })
             )
@@ -779,12 +779,12 @@
           d.createElement(
             U.e,
             { onClick: () => o(new Set()) },
-            Object(f.f)("#EventEditor_Clone_SelectAll")
+            Object(y.f)("#EventEditor_Clone_SelectAll")
           ),
           d.createElement(
             U.e,
             { onClick: () => o(new Set(t)) },
-            Object(f.f)("#EventEditor_Clone_DeSelectAll")
+            Object(y.f)("#EventEditor_Clone_DeSelectAll")
           )
         );
       }
@@ -805,7 +805,7 @@
             },
             Boolean(null == a)
               ? d.createElement(C.a, {
-                  string: Object(f.f)("#Loading"),
+                  string: Object(y.f)("#Loading"),
                   position: "center",
                   size: "medium",
                 })
@@ -869,8 +869,8 @@
         return d.createElement(
           O.e,
           {
-            strTitle: Object(f.f)("#EventDashboard_Stats_title"),
-            strDescription: Object(f.f)("#EventDashboard_Stats_desc"),
+            strTitle: Object(y.f)("#EventDashboard_Stats_title"),
+            strDescription: Object(y.f)("#EventDashboard_Stats_desc"),
             closeModal: a,
             bDisableBackgroundDismiss: !0,
             bOKDisabled: S,
@@ -885,7 +885,7 @@
                   let c,
                     d = 0,
                     m = new Array();
-                  const E = Object(P.d)(M.c.LANGUAGE);
+                  const E = Object(P.f)(M.c.LANGUAGE);
                   do {
                     if (
                       ((d += 1),
@@ -943,13 +943,13 @@
             d.createElement(
               "div",
               { className: "DialogLabel" },
-              Object(f.f)("#EventDashboard_Stats_Oldest_Title")
+              Object(y.f)("#EventDashboard_Stats_Oldest_Title")
             ),
             d.createElement(
               "div",
               { className: "_DialogInputContainer _DialogLayout" },
               d.createElement(U.f, {
-                label: Object(f.f)("#EventDashboard_Stats_Oldest"),
+                label: Object(y.f)("#EventDashboard_Stats_Oldest"),
                 onChange: i,
                 checked: n,
                 disabled: S,
@@ -958,7 +958,7 @@
                 d.createElement(
                   "div",
                   null,
-                  Object(f.f)("#EventDashboard_Stats_Oldest_Override"),
+                  Object(y.f)("#EventDashboard_Stats_Oldest_Override"),
                   d.createElement(oe.a, {
                     nEarliestTime: c,
                     nLatestTime: l ? void 0 : v,
@@ -972,13 +972,13 @@
             d.createElement(
               "div",
               { className: "DialogLabel" },
-              Object(f.f)("#EventDashboard_Stats_Newest_Title")
+              Object(y.f)("#EventDashboard_Stats_Newest_Title")
             ),
             d.createElement(
               "div",
               { className: "_DialogInputContainer _DialogLayout" },
               d.createElement(U.f, {
-                label: Object(f.f)("#EventDashboard_Stats_Newest"),
+                label: Object(y.f)("#EventDashboard_Stats_Newest"),
                 onChange: o,
                 checked: l,
                 disabled: S,
@@ -987,7 +987,7 @@
                 d.createElement(
                   "div",
                   null,
-                  Object(f.f)("#EventDashboard_Stats_Newest_Override"),
+                  Object(y.f)("#EventDashboard_Stats_Newest_Override"),
                   d.createElement(oe.a, {
                     nEarliestTime: n ? c : E,
                     bShowTimeZone: !0,
@@ -1001,7 +1001,7 @@
               d.createElement(C.a, {
                 position: "center",
                 size: "medium",
-                string: Object(f.f)("#EventDashboard_Stats_Progress", h),
+                string: Object(y.f)("#EventDashboard_Stats_Progress", h),
               })
           )
         );
@@ -1055,7 +1055,7 @@
             d.createElement(
               O.g,
               null,
-              Object(f.f)("#Error_Description", t.errorCode, t.strErrorMsg)
+              Object(y.f)("#Error_Description", t.errorCode, t.strErrorMsg)
             ),
             window
           );
@@ -1209,7 +1209,7 @@
             d.createElement(k.e, null),
             d.createElement(
               "div",
-              { className: Object(y.a)("maincontent", w.a.EventDashboardCtn) },
+              { className: Object(f.a)("maincontent", w.a.EventDashboardCtn) },
               d.createElement(ve, {
                 appid_or_vanity_str:
                   this.props.match.params.appid_or_vanity_str,
@@ -1220,7 +1220,7 @@
                 d.createElement(
                   "div",
                   {
-                    className: Object(y.a)(
+                    className: Object(f.a)(
                       "maincontent",
                       w.a.EventDashboardCtn,
                       w.a.EventDashAdminToolsCtn,
@@ -1252,11 +1252,11 @@
               t.length > 0 &&
                 d.createElement(
                   "div",
-                  { className: Object(y.a)(w.a.Section, w.a.Unpublished) },
+                  { className: Object(f.a)(w.a.Section, w.a.Unpublished) },
                   d.createElement(
                     "div",
                     {
-                      className: Object(y.a)(
+                      className: Object(f.a)(
                         "maincontent",
                         "eventlist",
                         w.a.EventDashboardCtn
@@ -1265,12 +1265,12 @@
                     d.createElement(
                       "div",
                       { className: w.a.DisplaySectionHeader },
-                      Object(f.f)("#EventDisplay_Unpublished_Title"),
+                      Object(y.f)("#EventDisplay_Unpublished_Title"),
                       " ",
                       d.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(f.f)(
+                          "data-tooltip-text": Object(y.f)(
                             "#EventDisplay_Unpublished_SubTitle"
                           ),
                         },
@@ -1283,11 +1283,11 @@
               a.length > 0 &&
                 d.createElement(
                   "div",
-                  { className: Object(y.a)(w.a.Section, w.a.Staged) },
+                  { className: Object(f.a)(w.a.Section, w.a.Staged) },
                   d.createElement(
                     "div",
                     {
-                      className: Object(y.a)(
+                      className: Object(f.a)(
                         "maincontent",
                         "eventlist",
                         w.a.EventDashboardCtn
@@ -1296,12 +1296,12 @@
                     d.createElement(
                       "div",
                       { className: w.a.DisplaySectionHeader },
-                      Object(f.f)("#EventDisplay_Stage_Title"),
+                      Object(y.f)("#EventDisplay_Stage_Title"),
                       " ",
                       d.createElement(
                         "span",
                         {
-                          "data-tooltip-text": Object(f.f)(
+                          "data-tooltip-text": Object(y.f)(
                             "#EventDisplay_Stage_SubTitle"
                           ),
                         },
@@ -1314,7 +1314,7 @@
               d.createElement(
                 "div",
                 {
-                  className: Object(y.a)(
+                  className: Object(f.a)(
                     w.a.Section,
                     w.a.DisplaySectionHeaderContainer,
                     w.a.Visible
@@ -1323,7 +1323,7 @@
                 d.createElement(
                   "div",
                   {
-                    className: Object(y.a)(
+                    className: Object(f.a)(
                       "maincontent",
                       "eventlist",
                       w.a.EventDashboardCtn
@@ -1332,12 +1332,12 @@
                   d.createElement(
                     "div",
                     { className: w.a.DisplaySectionHeader },
-                    Object(f.f)("#EventDisplay_Visible_Title")
+                    Object(y.f)("#EventDisplay_Visible_Title")
                   ),
                   d.createElement(
                     "div",
                     { className: w.a.DisplaySectionSubHeader },
-                    Object(f.f)("#EventDisplay_Visible_Title_WithRange")
+                    Object(y.f)("#EventDisplay_Visible_Title_WithRange")
                   ),
                   n && n,
                   !i &&
@@ -1345,24 +1345,24 @@
                     d.createElement(
                       "div",
                       null,
-                      Object(f.f)("#EventDisplay_NoPublic")
+                      Object(y.f)("#EventDisplay_NoPublic")
                     ),
                   i &&
                     d.createElement(C.a, {
                       position: "center",
-                      string: Object(f.f)("#Loading"),
+                      string: Object(y.f)("#Loading"),
                     }),
                   this.state.bExhaustedEventList &&
                     d.createElement(
                       "div",
                       null,
-                      Object(f.f)("#EventDisplay_AllPublicShown")
+                      Object(y.f)("#EventDisplay_AllPublicShown")
                     ),
                   this.state.bErrorOnInfiniteScrollRequest &&
                     d.createElement(
                       "div",
                       null,
-                      Object(f.f)("#EventDisplay_HitErrorInfiniteScroll")
+                      Object(y.f)("#EventDisplay_HitErrorInfiniteScroll")
                     )
                 )
               )
@@ -1390,11 +1390,11 @@
               d.createElement(
                 "div",
                 { className: S.a.maintitle },
-                Object(f.f)("#EventDisplay_Events"),
+                Object(y.f)("#EventDisplay_Events"),
                 d.createElement(
                   "div",
                   { className: S.a.subtitle },
-                  Object(f.f)("#EventDisplay_Edit_Desc")
+                  Object(y.f)("#EventDisplay_Edit_Desc")
                 )
               ),
               d.createElement(
@@ -1403,11 +1403,11 @@
                 d.createElement(
                   E.b,
                   {
-                    className: Object(y.a)(S.a.Button, S.a.Primary),
+                    className: Object(f.a)(S.a.Button, S.a.Primary),
                     to: n.a.Create(l),
                     onClick: () => i.c.ResetModel(),
                   },
-                  Object(f.f)("#EventDisplay_CreateNewEvent")
+                  Object(y.f)("#EventDisplay_CreateNewEvent")
                 ),
                 d.createElement(
                   U.e,
@@ -1418,7 +1418,7 @@
                         Object(q.o)(e)
                       ),
                   },
-                  Object(f.f)("#EventDashboard_Stats_export")
+                  Object(y.f)("#EventDashboard_Stats_export")
                 )
               )
             ),
@@ -1457,7 +1457,7 @@
             ? m.a.createElement(C.a, {
                 position: "center",
                 size: "medium",
-                string: Object(f.f)("#Loading"),
+                string: Object(y.f)("#Loading"),
               })
             : m.a.createElement(
                 F.d.Provider,

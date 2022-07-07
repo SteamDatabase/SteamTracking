@@ -1159,6 +1159,23 @@ function LocUpdateLangThatHaveText( id )
 }
 
 
+function OnAdditionalLanguageSelect( id )
+{
+	var select = $( id + '_select' );
+
+	if ( select.value == '_none_' )
+		return;
+
+	var langContainer = $( 'additional_language_' + select.value );
+	langContainer.style.display = 'block';
+
+	var option = $( id + '_option_' + select.value );
+	option.style.display = 'none';
+
+	select.value = "_none_";
+}
+
+
 function InferBBCodeInTextArea( id )
 {
 	// find text area

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [21],
+  [22],
   {
     "/HXi": function (e, t, n) {
       "use strict";
@@ -567,7 +567,7 @@
     "55de": function (e, t, n) {
       "use strict";
       n.d(t, "b", function () {
-        return M;
+        return D;
       }),
         n.d(t, "a", function () {
           return U;
@@ -749,15 +749,15 @@
             O,
             null,
             a.a.createElement(
-              B,
+              j,
               { title: t },
               a.a.createElement(I, Object.assign({}, s))
             )
           ),
-          a.a.createElement(j, { value: r, onChange: n, onSubmit: i })
+          a.a.createElement(w, { value: r, onChange: n, onSubmit: i })
         );
       }
-      function w(e) {
+      function x(e) {
         const { onFilterChange: t, filter: n, sections: r, title: i } = e;
         return a.a.createElement(
           a.a.Fragment,
@@ -771,16 +771,16 @@
               var { title: t } = e,
                 n = Object(o.c)(e, ["title"]);
               return a.a.createElement(
-                B,
+                j,
                 { title: t, key: t },
                 a.a.createElement(I, Object.assign({}, n))
               );
             })
           ),
-          a.a.createElement(j, { value: n, onChange: t })
+          a.a.createElement(w, { value: n, onChange: t })
         );
       }
-      function B(e) {
+      function j(e) {
         return a.a.createElement(
           "div",
           { className: k.Section },
@@ -788,7 +788,7 @@
           a.a.createElement("div", { className: k.SectionContent }, e.children)
         );
       }
-      function j(e) {
+      function w(e) {
         const { value: t, onChange: n, onSubmit: o } = e;
         return a.a.createElement(
           "div",
@@ -803,7 +803,7 @@
           })
         );
       }
-      function x(e) {
+      function B(e) {
         const { className: t } = e,
           n = Object(o.c)(e, ["className"]);
         return a.a.createElement(
@@ -813,8 +813,8 @@
       }
       var A = n("CfZL"),
         y = n.n(A),
-        D = n("tQrp");
-      class M extends a.a.PureComponent {
+        M = n("tQrp");
+      class D extends a.a.PureComponent {
         constructor() {
           super(...arguments),
             (this.state = { showHover: !1 }),
@@ -854,8 +854,8 @@
           );
         }
       }
-      Object(o.b)([E.b], M.prototype, "OnMouseEnter", null),
-        Object(o.b)([E.b], M.prototype, "OnMouseLeave", null);
+      Object(o.b)([E.b], D.prototype, "OnMouseEnter", null),
+        Object(o.b)([E.b], D.prototype, "OnMouseLeave", null);
       const N = Object(i.a)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             r = n.Get(o);
@@ -866,7 +866,7 @@
               title: `:${o}:`,
               subtitle: r && r.app_name ? r.app_name : void 0,
             },
-            a.a.createElement(M, {
+            a.a.createElement(D, {
               emoticon: o,
               emoticonHoverStore: n,
               large: !0,
@@ -1238,7 +1238,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   a.a.createElement(
-                    x,
+                    B,
                     null,
                     r
                       ? Object(g.g)("#AddonPicker_NoResults")
@@ -1257,7 +1257,7 @@
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   a.a.createElement(
-                    x,
+                    B,
                     null,
                     r
                       ? Object(g.g)("#AddonPicker_NoResults")
@@ -1267,7 +1267,7 @@
                         )
                   ),
               }),
-            a.a.createElement(w, {
+            a.a.createElement(x, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: i,
@@ -1302,7 +1302,7 @@
             renderEmpty: () =>
               r
                 ? a.a.createElement(
-                    x,
+                    B,
                     null,
                     Object(g.g)("#AddonPicker_NoResults")
                   )
@@ -1315,7 +1315,7 @@
           a.a.Fragment,
           null,
           a.a.createElement(
-            x,
+            B,
             null,
             Object(g.g)(
               "#AddonPicker_NoneOwned",
@@ -1323,17 +1323,17 @@
             )
           ),
           a.a.createElement(
-            x,
+            B,
             null,
             Object(g.p)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               a.a.createElement(
-                D.b,
+                M.b,
                 { href: `${f.d.STORE_BASE_URL}points/shop/c/emoticons` },
                 Object(g.g)("#AddonPicker_AcquireAtPointsShop_Link")
               ),
               a.a.createElement(
-                D.b,
+                M.b,
                 { href: `${f.d.COMMUNITY_BASE_URL}market` },
                 Object(g.g)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
               )
@@ -1361,7 +1361,7 @@
             renderEmpty: () =>
               n
                 ? a.a.createElement(
-                    x,
+                    B,
                     null,
                     Object(g.g)("#AddonPicker_NoResults")
                   )
@@ -1369,7 +1369,7 @@
                     a.a.Fragment,
                     null,
                     a.a.createElement(
-                      x,
+                      B,
                       null,
                       Object(g.g)(
                         "#AddonPicker_NoneOwned",
@@ -1377,12 +1377,12 @@
                       )
                     ),
                     a.a.createElement(
-                      x,
+                      B,
                       null,
                       Object(g.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
-                          D.b,
+                          M.b,
                           {
                             href: `${f.d.STORE_BASE_URL}points/shop/c/stickers`,
                           },
@@ -1415,7 +1415,7 @@
             renderEmpty: () =>
               o
                 ? a.a.createElement(
-                    x,
+                    B,
                     null,
                     Object(g.g)("#AddonPicker_NoResults")
                   )
@@ -1423,7 +1423,7 @@
                     a.a.Fragment,
                     null,
                     a.a.createElement(
-                      x,
+                      B,
                       null,
                       Object(g.g)(
                         "#AddonPicker_NoneOwned",
@@ -1431,12 +1431,12 @@
                       )
                     ),
                     a.a.createElement(
-                      x,
+                      B,
                       null,
                       Object(g.p)(
                         "#AddonPicker_AcquireAtPointsShop",
                         a.a.createElement(
-                          D.b,
+                          M.b,
                           {
                             href: `${f.d.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
@@ -1472,7 +1472,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   a.a.createElement(
-                    x,
+                    B,
                     null,
                     r
                       ? Object(g.g)("#AddonPicker_NoResults")
@@ -1482,7 +1482,7 @@
                         )
                   ),
               }),
-            a.a.createElement(w, {
+            a.a.createElement(x, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: [
@@ -1500,7 +1500,7 @@
                   renderEmpty: () =>
                     r
                       ? a.a.createElement(
-                          x,
+                          B,
                           null,
                           Object(g.g)("#AddonPicker_NoResults")
                         )
@@ -1524,7 +1524,7 @@
               flairGroupID: o,
             } = this.props,
             { filter: r } = this.state;
-          return a.a.createElement(w, {
+          return a.a.createElement(x, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: r,
             sections: [
@@ -1538,7 +1538,7 @@
                 renderEmpty: () =>
                   r
                     ? a.a.createElement(
-                        x,
+                        B,
                         null,
                         Object(g.g)("#AddonPicker_NoResults")
                       )
@@ -1555,7 +1555,7 @@
         return a.a.createElement(
           "div",
           { className: y.a.EmoticonItem },
-          a.a.createElement(M, {
+          a.a.createElement(D, {
             emoticon: t.name,
             emoticonHoverStore: n,
             large: o,
@@ -1699,7 +1699,7 @@
                 onClick: this.props.onClick,
               },
               this.state.visible &&
-                a.a.createElement(M, {
+                a.a.createElement(D, {
                   emoticonHoverStore: this.props.emoticonHoverStore,
                   emoticon: e.name,
                   large: !0,
@@ -1870,66 +1870,6 @@
         );
       }
       Object(o.b)([E.b], ie.prototype, "SetVisible", null);
-    },
-    C1a2: function (e, t, n) {
-      "use strict";
-      n.d(t, "c", function () {
-        return d;
-      }),
-        n.d(t, "a", function () {
-          return p;
-        }),
-        n.d(t, "b", function () {
-          return h;
-        });
-      var o = n("mrSG"),
-        r = n("/cMS"),
-        i = n("q1tI"),
-        s = n("rmVU"),
-        a = n("Ys0h"),
-        c = n("2VXD"),
-        l = n("f5iL"),
-        m = n("/Q1a");
-      function d() {
-        const e = Object(c.a)("usePartnerStoreBrowseAPI"),
-          [t, n] = Object(i.useState)(!1);
-        return (
-          Object(i.useEffect)(() => {
-            (function (e = !1) {
-              return Object(o.a)(this, void 0, void 0, function* () {
-                if (e && a.a.BIsInitialized()) return;
-                const t = Object(m.h)(
-                  "partnerbrowse_webapi_token",
-                  "application_config"
-                );
-                Object(l.a)(Boolean(t), "require partnerbrowse_webapi_token");
-                const n = new s.a(m.d.WEBAPI_BASE_URL, t);
-                return (
-                  ("dev" != m.d.WEB_UNIVERSE && "beta" != m.d.WEB_UNIVERSE) ||
-                    console.log(
-                      "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                      t
-                    ),
-                  p(t),
-                  a.a.Initialize(n, m.l.is_partner_member)
-                );
-              });
-            })().then(() => {
-              var t;
-              (null === (t = null == e ? void 0 : e.token) || void 0 === t
-                ? void 0
-                : t.reason) || n(!0);
-            });
-          }, []),
-          t
-        );
-      }
-      function p(e) {
-        r.a.BIsInitialized() || r.a.Initialize(new s.a(m.d.WEBAPI_BASE_URL, e));
-      }
-      function h(e) {
-        return r.a.BIsInitialized() || p(e || null), !0;
-      }
     },
     CfZL: function (e, t, n) {
       e.exports = {

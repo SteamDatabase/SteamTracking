@@ -2127,6 +2127,12 @@ function ImageUploadCallback(jsonResponse)
 				id = "appLogoSmall";
 				break;
 			case "icon":
+				id = "appIconFull";
+				break;
+			case "icon_medium":
+				id = "appIconMedium";
+				break;
+			case "icon_small":
 				id = "appIcon";
 				break;
 			case "clienticon":
@@ -3626,7 +3632,7 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 
 	var progressMessages = $J( '#ProgressMessagesContainer' );
 	progressMessages.append( '<div class="add_dlc_msg parent">' + 'Requesting AppID For: ' + appName + '</div>' );
-	
+
 	// add initial one to create the range
 	$J.post( 'https://partner.steamgames.com/apps/ajaxcreatenewapp/',
 		{

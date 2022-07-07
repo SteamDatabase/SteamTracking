@@ -20,7 +20,7 @@ body.v6.labs {
 }
 body .responsive_page_content {
     /* background: #292a2e; */
-    background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/background.jpg' );
+    /* background: url( 'https://cdn.cloudflare.steamstatic.com/store/labs/background.jpg' ); */
     background-size: 1920px 1080px;
 }
 
@@ -108,6 +108,10 @@ color: #fff;
 	padding-bottom: 25px;
 }
 
+.right-column h1 {
+    padding-left: 20px;
+}
+
 /* Right hand column's list of experiment links. */
 .active-experiments-icon {
 	float: left;
@@ -138,7 +142,7 @@ color: #fff;
 
 /* Single capsule for a single experiment. */
 .capsule {
-    background-image: radial-gradient(ellipse at top left, #2f374d, #18264a);
+    background-image: radial-gradient(ellipse at top left, #515f85, #18264a);
     border-radius: 4px;
 	margin: 0px 0px 30px 0px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -185,8 +189,15 @@ body.v6 .capsule h2 {
 
 
 /* Centered "try experiment" button (or, later, buttons) go here. */
+.experiment-button-placeholder {
+    width: 50%;
+    height: 33px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
 .experiment-buttons {
 	text-align: left;
+    min-height: 43px;
 }
 
 .experiment-button {
@@ -195,18 +206,25 @@ body.v6 .capsule h2 {
 	vertical-align: middle;
 	padding: 5px 15px 5px 15px;
 	margin: 5px auto;
-	background-color: #28429b;
-		font-family: "Motiva Sans", Sans-serif;
+	background-color: #edeef3;
+    		font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
 			font-size: 16px;
 	font-weight: 400;
-  border-radius: 3px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    user-select: none;
 }
 .experiment-button:hover {
 	background-color: #2d6bcd;
 	color: #fff;
+}
+
+a.experiment-button,
+a.experiment-button:visited {
+    color: #181d3a;
 }
 
 span.experiment-name {

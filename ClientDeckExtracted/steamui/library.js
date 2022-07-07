@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7357304";
+var CLSTAMP = "7367996";
 !(function (e) {
   function t(t) {
     for (
@@ -288,7 +288,6 @@ var CLSTAMP = "7357304";
         IN_CHROMEOS: !1,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
-        COMMUNITY_WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
         PAGE_TIMESTAMP: 0,
@@ -367,9 +366,9 @@ var CLSTAMP = "7357304";
             ? !Object({
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 30 2022 : 13:19:19",
-                BUILD_TIME_UTC: "Jun 30 2022 : 20:19:19",
-                BUILD_RTIME_UTC: 1656620359,
+                BUILD_TIME_LOCAL: "Jul 7 2022 : 15:12:03",
+                BUILD_TIME_UTC: "Jul 7 2022 : 22:12:03",
+                BUILD_RTIME_UTC: 1657231923,
               }).MOBILE_BUILD && document.getElementById(t)
             : t),
         n)
@@ -2582,9 +2581,9 @@ var CLSTAMP = "7357304";
     Object(n.b)([h.k], L.prototype, "OnLogonInfoChanged", null);
     var T = r("16wW"),
       O = r("vDqi"),
-      I = r.n(O);
+      F = r.n(O);
     r("uWhj");
-    class F {
+    class I {
       constructor() {
         this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
       }
@@ -2792,12 +2791,12 @@ var CLSTAMP = "7357304";
         return Object(n.a)(this, void 0, void 0, function* () {
           let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
             r = performance.now();
-          const n = I.a.CancelToken.source();
+          const n = F.a.CancelToken.source();
           let i = window.setTimeout(() => {
             e.strHost, n.cancel();
           }, 1e3);
           try {
-            let s = yield I.a.head(t, { cancelToken: n.token });
+            let s = yield F.a.head(t, { cancelToken: n.token });
             e.strHost, window.clearTimeout(i);
             let a = performance.now() - r,
               o = s.headers["x-steam-cmload"]
@@ -2805,7 +2804,7 @@ var CLSTAMP = "7357304";
                 : void 0;
             e.strHost, (e.msPing = a), (e.nCMLoad = o);
           } catch (t) {
-            I.a.isCancel(t) ? e.strHost : window.clearTimeout(i),
+            F.a.isCancel(t) ? e.strHost : window.clearTimeout(i),
               (e.msPing = 1e4),
               (e.nCMLoad = 0);
           }
@@ -2817,7 +2816,7 @@ var CLSTAMP = "7357304";
       return Object(n.a)(this, void 0, void 0, function* () {
         const e =
             o.c.WEBAPI_BASE_URL + "ISteamDirectory/GetCMList/v1/?cellid=0",
-          t = (yield I.a.get(e)).data,
+          t = (yield F.a.get(e)).data,
           r = (t && t.response && t.response.serverlist_websockets) || [];
         return r.length, r.map((e, t) => ({ strHost: e, nPriority: t }));
       });
@@ -2840,7 +2839,7 @@ var CLSTAMP = "7357304";
             (this.m_bLoadingCMList = !1),
             (this.m_iCallSeq = 1),
             (this.m_mapWaitingCallbacks = new Map()),
-            (this.m_CMList = new F()),
+            (this.m_CMList = new I()),
             (this.LogOnResponseHandler = Object(i.a)(751, B, (e) => {
               let t = e.Body().eresult();
               (this.m_Session.m_bWaitingForLogonResponse = !1),
@@ -4503,10 +4502,10 @@ var CLSTAMP = "7357304";
         return O;
       }),
       r.d(t, "M", function () {
-        return I;
+        return F;
       }),
       r.d(t, "L", function () {
-        return F;
+        return I;
       });
     var n = r("msu0");
     const i = 4294967295;
@@ -4846,10 +4845,10 @@ var CLSTAMP = "7357304";
         "advertising" === e
       );
     }
-    function I(e) {
+    function F(e) {
       return e;
     }
-    function F(e) {
+    function I(e) {
       return e;
     }
     var W, U;
@@ -4939,10 +4938,10 @@ var CLSTAMP = "7357304";
         return O;
       }),
       r.d(t, "d", function () {
-        return I;
+        return F;
       }),
       r.d(t, "r", function () {
-        return F;
+        return I;
       }),
       r.d(t, "v", function () {
         return W;
@@ -5101,10 +5100,10 @@ var CLSTAMP = "7357304";
         return Oe;
       }),
       r.d(t, "Db", function () {
-        return Ie;
+        return Fe;
       }),
       r.d(t, "Cb", function () {
-        return Fe;
+        return Ie;
       }),
       r.d(t, "jb", function () {
         return We;
@@ -6082,7 +6081,7 @@ var CLSTAMP = "7357304";
             })
           );
     }
-    function I(e) {
+    function F(e) {
       return i.createElement(
         "svg",
         {
@@ -6117,7 +6116,7 @@ var CLSTAMP = "7357304";
         })
       );
     }
-    function F() {
+    function I() {
       return i.createElement(
         "svg",
         {
@@ -7765,7 +7764,7 @@ var CLSTAMP = "7357304";
         })
       );
     }
-    function Ie(e) {
+    function Fe(e) {
       return i.createElement(
         "svg",
         {
@@ -7784,7 +7783,7 @@ var CLSTAMP = "7357304";
         })
       );
     }
-    function Fe(e) {
+    function Ie(e) {
       return i.createElement(
         "svg",
         {
@@ -10882,7 +10881,7 @@ var CLSTAMP = "7357304";
         }, []),
         u = n.useCallback(() => {
           a(!1), l(), (o.current = window.setTimeout(c, e));
-        }, [l, e, t, c]),
+        }, [l, e, c]),
         d = n.useCallback(() => {
           r && u();
         }, [r, u]);
@@ -11260,7 +11259,7 @@ var CLSTAMP = "7357304";
         return T;
       }),
       r.d(t, "e", function () {
-        return F;
+        return I;
       });
     var n = r("hRO2"),
       i = r("3dpo");
@@ -13098,7 +13097,7 @@ var CLSTAMP = "7357304";
           O.sm_m ||
             (O.sm_m = {
               proto: O,
-              fields: { categories: { n: 1, c: I, r: !0, q: !0 } },
+              fields: { categories: { n: 1, c: F, r: !0, q: !0 } },
             }),
           O.sm_m
         );
@@ -13138,17 +13137,17 @@ var CLSTAMP = "7357304";
         return "CStoreBrowse_GetStoreCategories_Response";
       }
     }
-    class I extends s {
+    class F extends s {
       constructor(e = null) {
         super(),
-          I.prototype.categoryid || i.a(I.M()),
+          F.prototype.categoryid || i.a(F.M()),
           s.initialize(this, e, 0, -1, void 0, null);
       }
       static M() {
         return (
-          I.sm_m ||
-            (I.sm_m = {
-              proto: I,
+          F.sm_m ||
+            (F.sm_m = {
+              proto: F,
               fields: {
                 categoryid: { n: 1, br: i.d.readUint32, bw: i.h.writeUint32 },
                 type: { n: 2, br: i.d.readEnum, bw: i.h.writeEnum },
@@ -13162,45 +13161,45 @@ var CLSTAMP = "7357304";
                 show_in_search: { n: 6, br: i.d.readBool, bw: i.h.writeBool },
               },
             }),
-          I.sm_m
+          F.sm_m
         );
       }
       static MBF() {
-        return I.sm_mbf || (I.sm_mbf = i.e(I.M())), I.sm_mbf;
+        return F.sm_mbf || (F.sm_mbf = i.e(F.M())), F.sm_mbf;
       }
       toObject(e = !1) {
-        return I.toObject(e, this);
+        return F.toObject(e, this);
       }
       static toObject(e, t) {
-        return i.g(I.M(), e, t);
+        return i.g(F.M(), e, t);
       }
       static fromObject(e) {
-        return i.c(I.M(), e);
+        return i.c(F.M(), e);
       }
       static deserializeBinary(e) {
         let t = new n.BinaryReader(e),
-          r = new I();
-        return I.deserializeBinaryFromReader(r, t);
+          r = new F();
+        return F.deserializeBinaryFromReader(r, t);
       }
       static deserializeBinaryFromReader(e, t) {
-        return i.b(I.MBF(), e, t);
+        return i.b(F.MBF(), e, t);
       }
       serializeBinary() {
         var e = new n.BinaryWriter();
-        return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
       }
       static serializeBinaryToWriter(e, t) {
-        i.f(I.M(), e, t);
+        i.f(F.M(), e, t);
       }
       serializeBase64String() {
         var e = new n.BinaryWriter();
-        return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
       }
       getClassName() {
         return "CStoreBrowse_GetStoreCategories_Response_Category";
       }
     }
-    var F;
+    var I;
     !(function (e) {
       (e.GetItems = function (e, t) {
         return e.SendMsg("StoreBrowse.GetItems#1", t, T, {
@@ -13216,7 +13215,7 @@ var CLSTAMP = "7357304";
             eWebAPIKeyRequirement: 1,
           });
         });
-    })(F || (F = {}));
+    })(I || (I = {}));
   },
 });
 //# sourceMappingURL=library.js.map

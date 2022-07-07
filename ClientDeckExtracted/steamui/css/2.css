@@ -1676,11 +1676,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   justify-content: space-between;
 }
 .gamepadslider_SliderNotch_3x6ve {
+  width: 24px;
+  min-width: 24px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   align-items: center;
-  min-width: 24px;
+}
+.gamepadslider_SliderNotch_3x6ve.gamepadslider_AlignToEnds_2SgU_ {
+  flex-grow: 1;
 }
 .gamepadslider_SliderNotchLabel_u_sH1 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -1692,6 +1696,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   padding-top: 5px;
   width: fit-content;
   text-align: center;
+}
+.gamepadslider_SliderNotchLabel_u_sH1.gamepadslider_AlignToLeft_3CtMn {
+  text-align: left;
+  margin-right: auto;
+}
+.gamepadslider_SliderNotchLabel_u_sH1.gamepadslider_AlignToRight__eiEP {
+  text-align: right;
+  margin-left: auto;
 }
 .gamepadslider_SliderNotchTick_Fv1Ht {
   width: 4px;
@@ -13690,52 +13702,6 @@ html.tablet .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3FwA4 {
   grid-gap: 12px;
   padding-bottom: 12px;
 }
-.partnersaledisplay_ShowContentsContainer_J6xi7 {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
-}
-.partnersaledisplay_ShowContentsContainer_J6xi7
-  .partnersaledisplay_ShowContentsButton_3JcBK {
-  border-radius: 2px;
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  cursor: pointer;
-  color: #222;
-  background: rgba(255, 255, 255, 0.7);
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_J6xi7
-  .partnersaledisplay_ShowContentsButton_3JcBK {
-  background: unset;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.12);
-  transition: background-color 0.2s ease;
-  font: var(--gpText-BodyLarge);
-  padding: 10px 20px;
-  min-width: 32%;
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_J6xi7
-  .partnersaledisplay_ShowContentsButton_3JcBK.gpfocus {
-  color: #000;
-  background-color: #fff;
-  border-radius: 0px;
-}
-.partnersaledisplay_ShowContentsContainer_J6xi7
-  .partnersaledisplay_ShowContentsButton_3JcBK:hover {
-  color: #222;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_J6xi7
-  .partnersaledisplay_ShowContentsButton_3JcBK:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.24);
-  box-shadow: unset;
-}
 span.partnersaledisplay_vr_supported_2m9mT,
 span.partnersaledisplay_vr_required_1KRF9 {
   vertical-align: top;
@@ -14048,38 +14014,11 @@ html.responsive.touch
   font-weight: bold;
   color: #fff;
 }
-.partnersaledisplay_FacetedBrowseLoadThrobber_82-AT {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .BasicUI .partnersaledisplay_DefaultCreatorCtn_1TAEj {
   display: none;
 }
 .BasicUI .SaleSectionCtn.curator {
   display: none;
-}
-.partnersaledisplay_SalePageLogoCtn_1S49a {
-  max-width: 940px;
-  margin: 0 auto;
-  margin-bottom: 32px;
-}
-.BasicUI .partnersaledisplay_SalePageLogoCtn_1S49a {
-  max-height: 230px;
-  margin-bottom: 0px;
-}
-.partnersaledisplay_SalePageLogoCtn_1S49a img {
-  width: 100%;
-}
-.BasicUI .partnersaledisplay_SalePageLogoCtn_1S49a img {
-  max-height: 230px;
-  width: auto;
-}
-@media screen and (max-width: 768px) {
-  .partnersaledisplay_SalePageLogoCtn_1S49a {
-    margin-bottom: 0px;
-  }
 }
 .partnersaledisplay_EventSectionViewAllCtn_3RuY2 {
   display: flex;
@@ -23884,31 +23823,6 @@ html.responsive.touch
 .contenthubmaincarousel_ReducedMotionToggleCtn_2Ykob {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
-  width: 100%;
-  display: flex;
-  background: rgba(0, 0, 0, 0.5);
-}
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ:nth-child(even) {
-  background: rgba(0, 0, 0, 0.25);
-}
-.debugmatchesdialog_DiscrepancyDialogHeaderRow_2W2_r {
-  width: 100%;
-  display: flex;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.debugmatchesdialog_DiscrepancyDialogCell_LWAHl {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  text-align: left;
-  padding: 4px;
-}
-.debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
-  z-index: 2000;
-}
 .partnereventdialog_ErrorStyles_2TszC,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA {
   color: #c44848;
@@ -25464,6 +25378,1759 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     opacity: 1;
   }
 }
+.salebadgeprogressdisplay_OuterCtn_3yY4b {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS {
+  width: 140px;
+  margin-left: -15px;
+  position: relative;
+  margin-right: 50px;
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img:first-child {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img:last-child {
+  position: absolute;
+  opacity: 0.5;
+  filter: saturate(0.4);
+  left: 34px;
+  z-index: 1;
+}
+.salebadgeprogressdisplay_Title_1gx7w {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  min-width: 125px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
+  .salebadgeprogressdisplay_BadgeDesc_2OhKt {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
+  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4:last-child
+  img {
+  opacity: 0.5;
+  filter: saturate(0.5);
+  border: 1px dashed;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ img {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ svg {
+  height: 60px;
+}
+.salebadgeprogressdisplay_FinalBadge_t2T3x {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+.salebadgeprogressdisplay_FinalBadge_t2T3x
+  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
+  margin-top: 4px;
+}
+@media screen and (max-width: 940px) {
+  .salebadgeprogressdisplay_OuterCtn_3yY4b {
+    flex-direction: column;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  backdrop-filter: blur(6px);
+  color: #dcdedf;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
+  .discoveryqueuewizard_TextLink_1hQVC {
+  color: #1a9fff;
+  cursor: pointer;
+  transition: color 0.1s ease;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
+  .discoveryqueuewizard_TextLink_1hQVC:hover {
+  color: #fff;
+}
+.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 ::-webkit-scrollbar {
+  display: none;
+}
+.BasicUI .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
+  height: calc(100vh - 40px);
+}
+.discoveryqueuewizard_DiscoveryQueueCarousel_2swWH {
+  height: 100%;
+  width: 100%;
+}
+.discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
+  background: var(--gpGradient-StoreBackground);
+  display: flex;
+  scroll-snap-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: transform ease;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 960px) {
+  .discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
+    transform: scale(0.92);
+  }
+}
+.discoveryqueuewizard_DiscoveryQueueApp_2o_YH.discoveryqueuewizard_Focused_2Xpm2 {
+  transition-duration: 0.6s;
+  transform: scale(1);
+}
+.discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
+  position: relative;
+  margin: auto 0px;
+  animation-name: discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  animation-delay: 0s;
+}
+.BasicUI .discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
+  max-width: initial;
+}
+@keyframes discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5 {
+  position: relative;
+  width: 70%;
+  min-width: 70%;
+  height: 100%;
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_WishlistBadge_2vb6r {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 2px;
+  z-index: 1;
+  background-color: #99d4ff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2px 6px;
+  opacity: 0;
+  transform: translateX(calc(-100% - 8px));
+  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
+    transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_WishlistBadge_2vb6r.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 0.1s ease, transform 0.2s ease;
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppVideo_ah1w3 {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+}
+.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppMainCap_24yvt {
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.6s ease 1s;
+  opacity: 1;
+}
+.discoveryqueuewizard_AppDetailsCtn_2E1O4 {
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: default;
+}
+.discoveryqueuewizard_AppDetailsCtn_2E1O4
+  .discoveryqueuewizard_AppDetailsCtnTop_3LnWP {
+  padding: calc(8px + 0.6vw);
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 8px;
+  overflow: scroll;
+  -webkit-mask-image: linear-gradient(black 94%, transparent);
+}
+.BasicUI .discoveryqueuewizard_AppDetailsCtn_2E1O4 {
+  padding: 12px;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x {
+  color: #fff;
+  display: flex;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_AppLibraryHero_1TDRh {
+  width: calc(20px + 3vw);
+  height: calc(30px + 4.5vw);
+  margin-right: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_1Qn-x
+    .discoveryqueuewizard_AppLibraryHero_1TDRh {
+    display: none;
+  }
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_RightColumn_35mWv {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.discoveryqueuewizard_AppDetailsHeader_1Qn-x
+  .discoveryqueuewizard_RightColumn_35mWv
+  .discoveryqueuewizard_AppName_3KC4W {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_1Qn-x
+    .discoveryqueuewizard_RightColumn_35mWv {
+    font-size: 15px;
+  }
+}
+.discoveryqueuewizard_AppTagsCtn_1t4JV {
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  overflow: hidden;
+  min-height: 21px;
+}
+.BasicUI .discoveryqueuewizard_AppTagsCtn_1t4JV {
+  margin-right: -12px;
+}
+.discoveryqueuewizard_AppTagsCtn_1t4JV .discoveryqueuewizard_TagEntry_UNDKT {
+  background: rgba(14, 20, 27, 0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 4px;
+  padding: 2px 6px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: unset;
+}
+.BasicUI .discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+  font-size: 14px;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
+    font-size: 12px;
+  }
+}
+.discoveryqueuewizard_RelevantCtn_FGuCn {
+  padding: 8px 0px;
+  border-top: 1px solid #acb2c924;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black calc(100% - 8px),
+    transparent calc(100% - 0px)
+  );
+}
+.discoveryqueuewizard_RelevantColumn_1HcOX {
+  flex-grow: 1;
+}
+.discoveryqueuewizard_RelevantItem_3I77j {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  margin-top: 10px;
+  display: flex;
+}
+.discoveryqueuewizard_RelevantCheck_qKF9P {
+  align-self: flex-start;
+}
+.discoveryqueuewizard_RelevantCheck_qKF9P svg {
+  width: 12px;
+  fill: var(--gpStoreLighterGrey);
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.discoveryqueuewizard_IgnoreLink_2OinP {
+  font-size: 12px;
+  margin-bottom: -8px;
+}
+.BasicUI .discoveryqueuewizard_IgnoreLink_2OinP {
+  display: none;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: calc(8px + 0.6vw);
+  padding-top: 0px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf
+  .discoveryqueuewizard_AppActionJustButtonsCtn_10l0M {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_2bIsf
+  .discoveryqueuewizard_AppActionJustButtonsCtn_10l0M
+  .discoveryqueuewizard_QueueButton_19cHb {
+  flex-grow: 1;
+}
+.discoveryqueuewizard_MainCapBlur_2TOx2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+.discoveryqueuewizard_MainCapBlur_2TOx2::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(64px);
+}
+.discoveryqueuewizard_DiscoveryQueuePlaceholder_3ZUUI {
+  width: 100%;
+  height: 100%;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: rgba(33, 52, 71, 0.6);
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity 0.2s ease 0.1s;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  backdrop-filter: blur(40px);
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o .discoveryqueuewizard_IgnoredInfo_130E6 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  position: absolute;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_IgnoredTitle_1QXC5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_IgnoredDescription_3RVP5 {
+  font-size: 14px;
+  opacity: 0.8;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #acb2c924;
+  width: 50%;
+  text-align: center;
+}
+.BasicUI
+  .discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6
+  .discoveryqueuewizard_UndoIgnoreButton_wC564 {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: unset;
+}
+.discoveryqueuewizard_IgnoredCtn_2e3_o
+  .discoveryqueuewizard_IgnoredInfo_130E6.discoveryqueuewizard_Active_2EDE0 {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+.discoveryqueuewizard_AppDesc_3bAqJ {
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.discoveryqueuewizard_YGlyph_1SpsG {
+  vertical-align: text-top;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o {
+  display: flex;
+  flex-direction: column;
+  color: var(--gpStoreLighterGrey);
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
+  user-select: none;
+  flex: auto;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryTitle_W4ekX {
+  font-size: calc(12px + 0.8vw);
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_YourStats_8PO3T {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  max-width: 720px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab:nth-child(2) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  padding-bottom: 0px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridTitle_1vnt8 {
+  font-weight: 700;
+  font-size: 12px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridNumber_-Q4Ax {
+  font-size: calc(22px + 0.4vw);
+  color: #fff;
+  font-weight: 800;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryGrid_1b0jZ
+  .discoveryqueuewizard_GridItem_12Sab
+  .discoveryqueuewizard_GridSubTitle_1FQzN {
+  font-size: 14px;
+}
+.discoveryqueuewizard_SummaryContentCtn_M522o
+  .discoveryqueuewizard_SummaryActionButtonsCtn_1hRNc {
+  display: flex;
+  column-gap: 8px;
+  margin-top: 1vw;
+}
+.discoveryqueuewizard_TopBarCtn_24gmm {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  padding-left: 16px;
+  align-items: center;
+  align-self: normal;
+  animation-name: discoveryqueuewizard_revealTopBarCtn_2Gt6G;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+.BasicUI .discoveryqueuewizard_TopBarCtn_24gmm {
+  margin-top: 40px;
+}
+@keyframes discoveryqueuewizard_revealTopBarCtn_2Gt6G {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ {
+  display: inline-block;
+  color: #1a9fff;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color 0.1s ease, background-color 0.1s ease;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
+  color: #fff;
+  background-color: #acb2c924;
+  border-radius: 2px;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ:visited {
+  color: #1a9fff;
+}
+.discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
+  color: #fff;
+  background-color: #acb2c924;
+}
+.discoveryqueuewizard_ControlsCtn_3UbRl {
+  display: flex;
+  column-gap: 8px;
+}
+.discoveryqueuewizard_QueueButton_19cHb {
+  min-width: 10px;
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #acb2c924;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px 16px;
+  transition: background-color 0.1s ease, border-radius 0.1s ease;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Disabled_1yh4o {
+  opacity: 0.4;
+  cursor: default;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE {
+  background-color: #1a9fff;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+  background-color: #0bf;
+}
+.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Wide_SD-xU {
+  padding: 12px 40px;
+}
+.discoveryqueuewizard_QueueButton_19cHb svg {
+  width: 16px;
+  transition: fill 0.1s ease;
+}
+.discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
+  background-color: #acb2c947;
+}
+.discoveryqueuewizard_QueueButton_19cHb.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+}
+.discoveryqueuewizard_QueueButton_19cHb.gpfocus svg {
+  fill: #0e141b;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_QueueButton_19cHb {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%) scale(0.92);
+  border-radius: 50%;
+  display: none;
+  background-color: rgba(103, 112, 123, 0.6);
+  backdrop-filter: blur(24px);
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: background-color ease, box-shadow ease, transform ease,
+    opacity ease;
+  transition-duration: 0.3s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  transition: color ease;
+  transition-duration: 0.3s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:hover {
+  background-color: #fff;
+  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%) scale(1);
+  transition-duration: 0.06s;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:hover svg {
+  transition-duration: 0.06s;
+  color: #0e141b;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_Enable_1hqwM {
+  display: flex;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo:active {
+  opacity: 0.9;
+  transform: translateY(-50%) scale(0.96);
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC {
+  right: 2vw;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC
+  svg {
+  margin: 20px 18px 20px 22px;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd {
+  left: 2vw;
+}
+.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd
+  svg {
+  margin: 20px 22px 20px 18px;
+}
+.BasicUI .discoveryqueuewizard_QueueNavArrow_1kgdo {
+  display: none;
+}
+.discoveryqueuewizard_ReleventSimilarAppsCtn_3wqiW {
+  display: flex;
+  margin: 4px 0px 0px 0px;
+  column-gap: 4px;
+}
+.discoveryqueuewizard_WhyRelevant_WBWfZ {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.discoveryqueuewizard_SimilarAppCtn_2oeoS {
+  display: flex;
+}
+.discoveryqueuewizard_SimilarAppImg_2eNyY {
+  width: 80px;
+  box-shadow: var(--gpShadow-Small);
+  margin-right: 5px;
+  display: block;
+}
+.discoveryqueuewizard_SimilarAppText_3MS2G {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+}
+.discoveryqueuewizard_FriendAvatarsCtn_kOfo- {
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  margin-top: 2px;
+}
+.discoveryqueuewizard_RelevantTextBold_2FiP4 {
+  font-weight: bold;
+}
+.discoveryqueuewizard_AppDescription_Kzj5I {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  padding: 8px 0;
+  border-top: 1px solid #acb2c924;
+  line-height: 18px;
+}
+.discoveryqueuewizard_TradingCardCtn_36Qbj {
+  display: flex;
+  background: #83beec1f;
+  padding: 16px 1vw;
+  align-items: center;
+  color: var(--gpStoreLighterGrey);
+  width: 28%;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.discoveryqueuewizard_TradingCardCtn_36Qbj
+  .discoveryqueuewizard_TradingCardImage_3wa0d {
+  transform: rotate(-10deg);
+  filter: drop-shadow(0px 8px 6px #00000022);
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_36Qbj
+    .discoveryqueuewizard_TradingCardImage_3wa0d {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_36Qbj {
+    font-size: 14px;
+  }
+}
+.discoveryqueuewizard_Bold_1SxI5 {
+  font-weight: 700;
+}
+.discoveryqueuewizard_FriendBlockCtn_2a8Fg {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 3px 20px 3px 3px;
+}
+.discoveryqueuewizard_FriendBlockCtn_2a8Fg
+  .discoveryqueuewizard_PersonaStatus_3HMhz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.personanameandstatus_statusAndName_3n8q8 {
+  display: flex;
+}
+.personanameandstatus_statusAndName_3n8q8.personanameandstatus_threeLines_3ms2P {
+  margin-top: -2px;
+}
+.personanameandstatus_statusAndName_3n8q8.GamepadMode,
+.GamepadMode .personanameandstatus_statusAndName_3n8q8 {
+  align-items: center;
+}
+.personanameandstatus_statusAndName_3n8q8.GamepadMode.personanameandstatus_threeLines_3ms2P,
+.GamepadMode
+  .personanameandstatus_statusAndName_3n8q8.personanameandstatus_threeLines_3ms2P {
+  margin-top: 0;
+}
+.personanameandstatus_blocked_3_oRk
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: rgba(195, 74, 72, 0.75);
+}
+.personanameandstatus_playerName_r62qz,
+.personanameandstatus_playerNickname_3T-9P {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear;
+}
+.personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_r62qz,
+.personanameandstatus_playerNickname_3T-9P.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_3T-9P {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 15px;
+}
+.BasicUI .personanameandstatus_playerName_r62qz,
+.BasicUI .personanameandstatus_playerNickname_3T-9P {
+  text-overflow: ellipsis;
+}
+.personanameandstatus_playerNickname_3T-9P {
+  padding-left: 5px;
+  color: #666;
+}
+.personanameandstatus_playerNickname_3T-9P.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_3T-9P {
+  color: #67707b;
+}
+.personanameandstatus_playerName_r62qz {
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+.personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_r62qz {
+  -webkit-mask: none;
+  mask: none;
+  padding-right: 2px;
+  margin-right: 0px;
+}
+.personanameandstatus_playerNicknameBracket_2aXev {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px;
+}
+.personanameandstatus_richPresenceContainer_2nrSd {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 30px);
+}
+.personanameandstatus_richPresenceContainer_2nrSd.GamepadMode
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P,
+.GamepadMode
+  .personanameandstatus_richPresenceContainer_2nrSd
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P {
+  line-height: 15px;
+  margin-top: -2px;
+}
+.FriendPicker_Suggestions .personanameandstatus_richPresenceContainer_2nrSd {
+  display: none;
+}
+.personanameandstatus_richPresenceLabel_1k82N {
+  display: flex;
+  flex-direction: row;
+  line-height: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  margin-right: -24px;
+}
+.BasicUI .personanameandstatus_richPresenceLabel_1k82N {
+  display: block;
+  text-overflow: ellipsis;
+}
+.personanameandstatus_NoMask_2J0IS
+  .personanameandstatus_richPresenceLabel_1k82N {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  line-height: 18px;
+  font-size: 12px;
+}
+.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  line-height: 15px;
+  height: 20px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_27M2G.GamepadMode
+  .personanameandstatus_statusAndName_3n8q8,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_statusAndName_3n8q8 {
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_27M2G.GamepadMode
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  height: 25px;
+}
+.personanameandstatus_DNDContainer_12iWK {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+.personanameandstatus_partyBeaconJoin_1K_OI {
+  font-weight: 800;
+}
+.ingame .personanameandstatus_playerName_r62qz {
+  color: #e3ffc2;
+}
+.ingame .personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_playerName_r62qz {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  color: #c2ffb3;
+  font-weight: 400;
+}
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited,
+.ingame.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #91c257;
+}
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited,
+.ingame.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode
+  .ingame.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #59bf40;
+}
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 12px;
+}
+.ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #59bf40;
+}
+.VoiceChannelParticipants .ingame .personanameandstatus_playerName_r62qz {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_playerName_r62qz {
+  font-size: 14px;
+  margin-top: 0px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N,
+.ingame .personanameandstatus_richPresenceLabel_1k82N,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:hover,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:active,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:visited {
+  color: #62813b;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode .ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N,
+.ingame .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:hover.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:hover,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:active.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:active,
+.ingame .personanameandstatus_richPresenceLabel_1k82N a:visited.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:visited {
+  color: #3e862d;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.friend.gpfocus .labelHolder.GamepadMode .personanameandstatus_playerName_r62qz,
+.friend.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder
+  .personanameandstatus_richPresenceLabel_1k82N,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_playerName_r62qz,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder
+  .personanameandstatus_richPresenceLabel_1k82N {
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.offline
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.offline
+  .personanameandstatus_richPresenceLabel_1k82N,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.offline
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.offline
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #8b929a;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_1k82N,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #4cb4ff;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.friend.gpfocus
+  .labelHolder.GamepadMode.ingame
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.ingame
+  .personanameandstatus_richPresenceLabel_1k82N,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame
+  .personanameandstatus_richPresenceLabel_1k82N,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .personanameandstatus_playerName_r62qz,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #59bf40;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.awayOrSnooze .personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .awayOrSnooze .personanameandstatus_playerName_r62qz {
+  color: #59bf40;
+}
+.watchingbroadcast .personanameandstatus_playerName_r62qz {
+  color: #c9bdf7;
+}
+.watchingbroadcast .personanameandstatus_richPresenceLabel_1k82N,
+.watchingbroadcast
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.watchingbroadcast
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.watchingbroadcast
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.watchingbroadcast
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited {
+  color: #8277b1;
+}
+.awayOrSnooze.online .personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .awayOrSnooze.online .personanameandstatus_playerName_r62qz {
+  color: #4cb4ff;
+}
+.awayOrSnooze.online .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode .awayOrSnooze.online .personanameandstatus_richPresenceLabel_1k82N,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited {
+  color: #4cb4ff;
+}
+.online .personanameandstatus_playerName_r62qz {
+  color: #ccccd5;
+  color: #6dcff6;
+}
+.online .personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .online .personanameandstatus_playerName_r62qz {
+  color: #b3dfff;
+}
+.online .personanameandstatus_richPresenceLabel_1k82N,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited {
+  color: #4c91ac;
+}
+.online .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
+.GamepadMode .online .personanameandstatus_richPresenceLabel_1k82N,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited {
+  color: #4cb4ff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .personanameandstatus_playerName_r62qz {
+  color: #a0a0a0;
+}
+.offline .personanameandstatus_playerName_r62qz.GamepadMode,
+.GamepadMode .offline .personanameandstatus_playerName_r62qz {
+  color: #b8bcbf;
+}
+.offline .personanameandstatus_richPresenceLabel_1k82N,
+.offline
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a,
+.offline
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:hover,
+.offline
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:active,
+.offline
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
+  a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .personanameandstatus_DNDContainer_12iWK {
+  display: none;
+}
+.FriendVoiceChatContainer .personanameandstatus_playerName_r62qz {
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+}
+.personanameandstatus_hidePersona_3meBu
+  .personanameandstatus_statusAndName_3n8q8 {
+  height: 100%;
+  align-items: center;
+  margin-top: 0px;
+}
+.personanameandstatus_compactView_34CCB.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 10px;
+  margin-top: 1px;
+}
+.personanameandstatus_compactView_34CCB
+  .personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 10px;
+  line-height: 11px;
+}
+.personanameandstatus_compactView_34CCB
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 10px;
+  line-height: 14px;
+}
+.personanameandstatus_compactView_34CCB
+  .speaking
+  .personanameandstatus_playerName_r62qz {
+  filter: brightness(1.5);
+}
+.personanameandstatus_compactView_34CCB .personanameandstatus_playerName_r62qz,
+.personanameandstatus_compactView_34CCB
+  .personanameandstatus_playerNickname_3T-9P {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.personanameandstatus_compactView_34CCB
+  .personanameandstatus_noContextMenu_2317W
+  .personanameandstatus_playerName_r62qz,
+.personanameandstatus_compactView_34CCB
+  .personanameandstatus_noContextMenu_2317W
+  .personanameandstatus_playerNickname_3T-9P {
+  margin-bottom: -2px;
+}
+.currentUserContainer .personanameandstatus_playerName_r62qz {
+  font-size: 15px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 4px #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.currentUserContainer .personanameandstatus_statusAndName_3n8q8 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 13px;
+}
+.currentUserContainer .personanameandstatus_richPresenceLabel_1k82N {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .personanameandstatus_richPresenceContainer_2nrSd {
+  margin-top: 2px;
+  align-self: stretch;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_playerName_r62qz {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_richPresenceLabel_1k82N {
+  line-height: initial;
+}
+.currentUserContainer
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 12px;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_playerName_r62qz,
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_playerNickname_3T-9P {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_playerNickname_3T-9P {
+  color: #a2a6ac;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_richPresenceLabel_1k82N {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB:not(.personanameandstatus_twoLine_27M2G)
+  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  display: none;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .offline
+  .personanameandstatus_statusAndName_3n8q8 {
+  color: #ccc;
+}
+.ChatTabs
+  .personanameandstatus_compactView_34CCB
+  .offline
+  .personanameandstatus_richPresenceLabel_1k82N {
+  color: #888;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_1k82N {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  display: inline-block;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 3px #000;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_34CCB
+  .personanameandstatus_richPresenceLabel_1k82N {
+  margin-top: -4px;
+  margin-bottom: -2px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  margin-top: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_34CCB.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  margin-top: -4px;
+  margin-bottom: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
+  font-size: 10px;
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+.singlewindow .currentUserContainer .personanameandstatus_statusAndName_3n8q8 {
+  margin-right: 4px;
+}
+.singlewindow
+  .currentUserContainer
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_statusAndName_3n8q8,
+.singlewindow .currentUserContainer .personanameandstatus_twoLine_27M2G {
+  width: 100%;
+}
+.needsUpdate
+  .currentUserContainer
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_statusAndName_3n8q8 {
+  margin-right: 48px;
+}
+.friendRequests .bright .moMutualFriends .personanameandstatus_playerName_r62qz,
+.friendRequests .personanameandstatus_playerName_r62qz {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+.friendRequests .noMutualFriends .personanameandstatus_playerName_r62qz {
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
+}
+.MemberListColumn
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_richPresenceLabel_1k82N,
+.MemberListColumn
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_playerNickname_3T-9P,
+.MemberListColumn
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_playerName_r62qz {
+  text-overflow: clip;
+  transition-delay: 0.4s;
+}
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_richPresenceLabel_1k82N,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_playerNickname_3T-9P,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_3n8q8
+  .personanameandstatus_playerName_r62qz {
+  text-overflow: clip;
+  transition-delay: 0s;
+}
+.groupMemberList .personanameandstatus_playerName_r62qz,
+.groupMemberList .personanameandstatus_playerNickname_3T-9P {
+  font-size: 13px;
+}
+.groupMemberList
+  .ingame
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.groupMemberList
+  .ingame.personanameandstatus_twoLine_27M2G
+  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 12px;
+  margin-top: -1px;
+}
+.groupMemberList
+  .personanameandstatus_twoLine_27M2G
+  .personanameandstatus_richPresenceLabel_1k82N {
+  font-size: 12px;
+}
+.groupMemberList .personanameandstatus_richPresenceLabel_1k82N {
+  line-height: 13px;
+}
+.Dialog_RemotePlay .awayOrSnooze .personanameandstatus_statusAndName_3n8q8 {
+  margin-bottom: -10px;
+}
+.Dialog_RemotePlay .ingame .personanameandstatus_playerName_r62qz,
+.Dialog_RemotePlay .ingame .personanameandstatus_playerNickname_3T-9P {
+  margin-top: 0px;
+  width: 175px;
+}
+.Dialog_RemotePlay .personanameandstatus_twoLine_27M2G {
+  margin-top: -44px;
+  width: 175px;
+}
+.Dialog_RemotePlay .ingame .personanameandstatus_richPresenceLabel_1k82N {
+  margin-top: -15px;
+  width: 175px;
+  visibility: collapse;
+}
+.personanameandstatus_gameIsPrivateIcon_1FPaN {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block;
+}
+.personanameandstatus_gameIsPrivateIcon_1FPaN svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
+}
+.personanameandstatus_gameIsPrivateIcon_1FPaN svg line,
+.personanameandstatus_gameIsPrivateIcon_1FPaN svg path {
+  stroke: #6e8d50;
+}
+.personanameandstatus_PendingPersona_ifetn {
+  margin-top: -6px;
+  margin-left: 4px;
+  display: inline-block;
+}
+.personanameandstatus_PendingPersona_ifetn svg {
+  height: 12px;
+  width: 12px;
+}
+.salequestdisplay_description_22ryq {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
+}
+.salequestdisplay_description2_xidiW {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequestdisplay_questCtn_14UQz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 2em 1em 2em;
+  color: #fff;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salerewardshelfdisplay_RewardContainer_10sVo {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_2kLRR {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR {
+  max-height: 230px;
+  margin-bottom: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_2kLRR img {
+  width: 100%;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR img {
+  max-height: 230px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .saledisplaylogo_SalePageLogoCtn_2kLRR {
+    margin-bottom: 0px;
+  }
+}
+.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_2W2_r {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.debugmatchesdialog_DiscrepancyDialogCell_LWAHl {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+.debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
+  z-index: 2000;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -25816,807 +27483,59 @@ html.responsive.touch
   box-shadow: 4px 4px 0px #0097c9;
   color: #0097c9;
 }
-.salebadgeprogressdisplay_OuterCtn_3yY4b {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS {
-  width: 140px;
-  margin-left: -15px;
-  position: relative;
-  margin-right: 50px;
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS img:first-child {
-  position: relative;
-  z-index: 2;
-  transform: rotate(-25deg);
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS img:last-child {
-  position: absolute;
-  opacity: 0.5;
-  filter: saturate(0.4);
-  left: 34px;
-  z-index: 1;
-}
-.salebadgeprogressdisplay_Title_1gx7w {
-  font-size: 21px;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 125px;
-  min-width: 125px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
-  .salebadgeprogressdisplay_BadgeDesc_2OhKt {
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
-  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.7);
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4:last-child
-  img {
-  opacity: 0.5;
-  filter: saturate(0.5);
-  border: 1px dashed;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ img {
-  width: 100px;
-  height: 100px;
-  margin-top: 6px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ svg {
-  height: 60px;
-}
-.salebadgeprogressdisplay_FinalBadge_t2T3x {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 16px;
-}
-.salebadgeprogressdisplay_FinalBadge_t2T3x
-  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
-  margin-top: 4px;
-}
-@media screen and (max-width: 940px) {
-  .salebadgeprogressdisplay_OuterCtn_3yY4b {
-    flex-direction: column;
-  }
-}
 :root {
   --basicui-header-height: 0px;
 }
-.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
-  flex-direction: column;
+.salesection_ShowContentsContainer_14g7C {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  backdrop-filter: blur(6px);
-  color: #dcdedf;
+  margin-top: 14px;
 }
-.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
-  .discoveryqueuewizard_TextLink_1hQVC {
-  color: #1a9fff;
+.salesection_ShowContentsContainer_14g7C .salesection_ShowContentsButton_p8mU9 {
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  display: inline-block;
   cursor: pointer;
-  transition: color 0.1s ease;
-}
-.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
-  .discoveryqueuewizard_TextLink_1hQVC:hover {
-  color: #fff;
-}
-.discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 ::-webkit-scrollbar {
-  display: none;
-}
-.BasicUI .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6 {
-  height: calc(100vh - 40px);
-}
-.discoveryqueuewizard_DiscoveryQueueCarousel_2swWH {
-  height: 100%;
-  width: 100%;
-}
-.discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
-  background: var(--gpGradient-StoreBackground);
-  display: flex;
-  scroll-snap-align: center;
-  overflow: hidden;
-  margin: 0 auto;
-  transition: transform ease;
-  transition-duration: 0.5s;
-}
-@media screen and (min-width: 960px) {
-  .discoveryqueuewizard_DiscoveryQueueApp_2o_YH {
-    transform: scale(0.92);
-  }
-}
-.discoveryqueuewizard_DiscoveryQueueApp_2o_YH.discoveryqueuewizard_Focused_2Xpm2 {
-  transition-duration: 0.6s;
-  transform: scale(1);
-}
-.discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
-  position: relative;
-  margin: auto 0px;
-  animation-name: discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK;
-  animation-duration: 0.4s;
-  animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-  animation-delay: 0s;
-}
-.BasicUI .discoveryqueuewizard_DiscoveryQueueWrapper_1s3BJ {
-  max-width: initial;
-}
-@keyframes discoveryqueuewizard_revealDiscoveryQueueWrapper_308QK {
-  from {
-    transform: translateY(60px);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5 {
-  position: relative;
-  width: 70%;
-  min-width: 70%;
-  height: 100%;
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5
-  .discoveryqueuewizard_WishlistBadge_2vb6r {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  color: #000;
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  border-radius: 2px;
-  z-index: 1;
-  background-color: #99d4ff;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2px 6px;
-  opacity: 0;
-  transform: translateX(calc(-100% - 8px));
-  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
-    transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5
-  .discoveryqueuewizard_WishlistBadge_2vb6r.discoveryqueuewizard_Active_2EDE0 {
-  opacity: 1;
-  transform: translateX(0px);
-  transition: opacity 0.1s ease, transform 0.2s ease;
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppVideo_ah1w3 {
-  object-fit: fill;
-  height: 100%;
-  width: 100%;
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppMainCap_24yvt {
-  height: 100%;
-  width: 100%;
-  transition: opacity 0.6s ease 1s;
-  opacity: 1;
-}
-.discoveryqueuewizard_AppDetailsCtn_2E1O4 {
-  color: #fff;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  cursor: default;
-}
-.discoveryqueuewizard_AppDetailsCtn_2E1O4
-  .discoveryqueuewizard_AppDetailsCtnTop_3LnWP {
-  padding: calc(8px + 0.6vw);
-  padding-bottom: 8px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  row-gap: 8px;
-  overflow: scroll;
-  -webkit-mask-image: linear-gradient(black 94%, transparent);
-}
-.BasicUI .discoveryqueuewizard_AppDetailsCtn_2E1O4 {
-  padding: 12px;
-}
-.discoveryqueuewizard_AppDetailsHeader_1Qn-x {
-  color: #fff;
-  display: flex;
-}
-.discoveryqueuewizard_AppDetailsHeader_1Qn-x
-  .discoveryqueuewizard_AppLibraryHero_1TDRh {
-  width: calc(20px + 3vw);
-  height: calc(30px + 4.5vw);
-  margin-right: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
-}
-@media screen and (max-width: 1200px) {
-  .discoveryqueuewizard_AppDetailsHeader_1Qn-x
-    .discoveryqueuewizard_AppLibraryHero_1TDRh {
-    display: none;
-  }
-}
-.discoveryqueuewizard_AppDetailsHeader_1Qn-x
-  .discoveryqueuewizard_RightColumn_35mWv {
-  font-size: 14px;
-}
-.discoveryqueuewizard_AppDetailsHeader_1Qn-x
-  .discoveryqueuewizard_RightColumn_35mWv
-  .discoveryqueuewizard_AppName_3KC4W {
-  font-size: 18px;
-  line-height: 1.3;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 6px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-.discoveryqueuewizard_AppTagsCtn_1t4JV {
-  display: flex;
-  white-space: nowrap;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black calc(100% - 32px),
-    transparent calc(100% - 8px)
-  );
-  margin-right: -16px;
-  overflow: hidden;
-  min-height: 21px;
-}
-.BasicUI .discoveryqueuewizard_AppTagsCtn_1t4JV {
-  margin-right: -12px;
-}
-.discoveryqueuewizard_AppTagsCtn_1t4JV .discoveryqueuewizard_TagEntry_UNDKT {
-  background: rgba(14, 20, 27, 0.3);
-  border-radius: 2px;
-  font-size: 12px;
-  margin-right: 4px;
-  padding: 2px 6px;
-  color: var(--gpStoreLighterGrey);
-}
-.discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
-  padding: unset;
-}
-.BasicUI .discoveryqueuewizard_AppReviews_2lVXS .ReviewScore {
-  font-size: 14px;
-}
-.discoveryqueuewizard_RelevantCtn_FGuCn {
-  padding: 8px 0px;
-  border-top: 1px solid #acb2c924;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black calc(100% - 8px),
-    transparent calc(100% - 0px)
-  );
-}
-.discoveryqueuewizard_RelevantItem_3I77j {
-  font-size: 12px;
-  color: var(--gpStoreLighterGrey);
-  margin-bottom: 2px;
-  display: flex;
-}
-.discoveryqueuewizard_RelevantCheck_qKF9P {
-  align-self: flex-start;
-}
-.discoveryqueuewizard_RelevantCheck_qKF9P svg {
-  width: 12px;
-  fill: var(--gpStoreLighterGrey);
-  vertical-align: text-top;
-  margin-right: 5px;
-}
-.discoveryqueuewizard_IgnoreLink_2OinP {
-  font-size: 12px;
-  margin-bottom: -8px;
-}
-.BasicUI .discoveryqueuewizard_IgnoreLink_2OinP {
-  display: none;
-}
-.discoveryqueuewizard_AppActionButtonsCtn_2bIsf {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-  padding: calc(8px + 0.6vw);
-  padding-top: 0px;
-}
-.discoveryqueuewizard_MainCapBlur_2TOx2 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  z-index: -1;
-}
-.discoveryqueuewizard_MainCapBlur_2TOx2::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(64px);
-}
-.discoveryqueuewizard_DiscoveryQueuePlaceholder_3ZUUI {
-  width: 100%;
-  height: 100%;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o {
-  position: absolute;
-  top: 0;
-  width: inherit;
-  height: inherit;
-  z-index: 0;
-  display: flex;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 16px;
-  background-color: rgba(33, 52, 71, 0.6);
-  opacity: 0;
-  backdrop-filter: blur(0px);
-  transition: opacity 0.2s ease 0.1s;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o.discoveryqueuewizard_Active_2EDE0 {
-  opacity: 1;
-  backdrop-filter: blur(40px);
-  transition: opacity 0.2s ease;
-  z-index: 100;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o .discoveryqueuewizard_IgnoredInfo_130E6 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 16px;
-  position: absolute;
-  width: 100%;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o
-  .discoveryqueuewizard_IgnoredInfo_130E6
-  .discoveryqueuewizard_IgnoredTitle_1QXC5 {
-  font-size: 20px;
-  font-weight: 500;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o
-  .discoveryqueuewizard_IgnoredInfo_130E6
-  .discoveryqueuewizard_IgnoredDescription_3RVP5 {
-  font-size: 14px;
-  opacity: 0.8;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #acb2c924;
-  width: 50%;
-  text-align: center;
+  color: #222;
+  background: rgba(255, 255, 255, 0.7);
 }
 .BasicUI
-  .discoveryqueuewizard_IgnoredCtn_2e3_o
-  .discoveryqueuewizard_IgnoredInfo_130E6
-  .discoveryqueuewizard_UndoIgnoreButton_wC564 {
-  font-size: 12px;
-  line-height: 1.2;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: unset;
-}
-.discoveryqueuewizard_IgnoredCtn_2e3_o
-  .discoveryqueuewizard_IgnoredInfo_130E6.discoveryqueuewizard_Active_2EDE0 {
-  opacity: 1;
-  transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.4s ease;
-}
-.discoveryqueuewizard_AppDesc_3bAqJ {
-  font-size: 12px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.discoveryqueuewizard_YGlyph_1SpsG {
-  vertical-align: text-top;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9 {
-  flex-direction: column;
-  color: var(--gpStoreLighterGrey);
-  justify-content: center;
-  align-items: center;
-  row-gap: 12px;
-  user-select: none;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryTitle_W4ekX {
-  font-size: calc(14px + 0.4vw);
-  text-align: center;
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9 {
+  background: unset;
   color: #fff;
-  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
 }
-.discoveryqueuewizard_SummaryCtn_2g8c9 .discoveryqueuewizard_YourStats_8PO3T {
-  text-align: center;
-  font-weight: 700;
-  font-size: 12px;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9 .discoveryqueuewizard_SummaryGrid_1b0jZ {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 60%;
-  max-width: 600px;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryGrid_1b0jZ
-  .discoveryqueuewizard_GridItem_12Sab:nth-child(2) {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryGrid_1b0jZ
-  .discoveryqueuewizard_GridItem_12Sab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  padding-bottom: 0px;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryGrid_1b0jZ
-  .discoveryqueuewizard_GridItem_12Sab
-  .discoveryqueuewizard_GridTitle_1vnt8 {
-  font-weight: 700;
-  font-size: 12px;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryGrid_1b0jZ
-  .discoveryqueuewizard_GridItem_12Sab
-  .discoveryqueuewizard_GridNumber_-Q4Ax {
-  font-size: calc(22px + 0.4vw);
-  color: #fff;
-  font-weight: 800;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryGrid_1b0jZ
-  .discoveryqueuewizard_GridItem_12Sab
-  .discoveryqueuewizard_GridSubTitle_1FQzN {
-  font-size: 14px;
-}
-.discoveryqueuewizard_SummaryCtn_2g8c9
-  .discoveryqueuewizard_SummaryActionButtonsCtn_1hRNc {
-  display: flex;
-  column-gap: 8px;
-  margin-top: 1vw;
-}
-.discoveryqueuewizard_GridLink_2y4G6 {
-  font-size: 14px;
-  color: #1a9fff;
-  cursor: pointer;
-  display: inline-block;
-}
-.discoveryqueuewizard_GridLink_2y4G6:hover {
-  color: #fff;
-}
-.discoveryqueuewizard_TopBarCtn_24gmm {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-  padding-left: 16px;
-  align-items: center;
-  align-self: normal;
-  animation-name: discoveryqueuewizard_revealTopBarCtn_2Gt6G;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-}
-.BasicUI .discoveryqueuewizard_TopBarCtn_24gmm {
-  margin-top: 40px;
-}
-@keyframes discoveryqueuewizard_revealTopBarCtn_2Gt6G {
-  from {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
-.discoveryqueuewizard_LearnMoreLink_3bCDZ {
-  display: inline-block;
-  color: #1a9fff;
-  cursor: pointer;
-  padding: 2px 4px;
-  transition: color 0.1s ease, background-color 0.1s ease;
-}
-.discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
-  color: #fff;
-  background-color: #acb2c924;
-  border-radius: 2px;
-}
-.discoveryqueuewizard_LearnMoreLink_3bCDZ.gpfocus {
-  color: #fff;
-  background-color: #acb2c924;
-}
-.discoveryqueuewizard_ControlsCtn_3UbRl {
-  display: flex;
-  column-gap: 8px;
-}
-.discoveryqueuewizard_QueueButton_19cHb {
-  min-width: 10px;
-  color: #dcdedf;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 2px;
-  box-shadow: none;
-  box-sizing: border-box;
-  position: relative;
-  background-color: #acb2c924;
-  cursor: pointer;
-  text-align: center;
-  user-select: none;
-  -webkit-user-select: none;
-  padding: 8px 16px;
-  transition: background-color 0.1s ease, border-radius 0.1s ease;
-}
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Disabled_1yh4o {
-  opacity: 0.4;
-  cursor: default;
-}
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE {
-  background-color: #1a9fff;
-  color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
-}
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Primary_1ZYKE:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
-  background-color: #0bf;
-}
-.discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Wide_SD-xU {
-  padding: 12px 40px;
-}
-.discoveryqueuewizard_QueueButton_19cHb svg {
-  width: 16px;
-  transition: fill 0.1s ease;
-}
-.discoveryqueuewizard_QueueButton_19cHb:hover:not(.discoveryqueuewizard_Disabled_1yh4o) {
-  background-color: #acb2c947;
-}
-.discoveryqueuewizard_QueueButton_19cHb.gpfocus {
+.BasicUI
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9.gpfocus {
+  color: #000;
   background-color: #fff;
   border-radius: 0px;
 }
-.discoveryqueuewizard_QueueButton_19cHb.gpfocus svg {
-  fill: #0e141b;
+.salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9:hover {
+  color: #222;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-.discoveryqueuewizard_QueueNavArrow_1kgdo {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  transform: translateY(-50%) scale(0.92);
-  border-radius: 50%;
-  display: none;
-  background-color: rgba(103, 112, 123, 0.6);
-  backdrop-filter: blur(24px);
-  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transition: background-color ease, box-shadow ease, transform ease,
-    opacity ease;
-  transition-duration: 0.3s;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo svg {
-  width: 32px;
-  height: 32px;
+.BasicUI
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9:hover {
   color: #fff;
-  transition: color ease;
-  transition-duration: 0.3s;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: unset;
 }
-.discoveryqueuewizard_QueueNavArrow_1kgdo:hover {
-  background-color: #fff;
-  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transform: translateY(-50%) scale(1);
-  transition-duration: 0.06s;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo:hover svg {
-  transition-duration: 0.06s;
-  color: #0e141b;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_Enable_1hqwM {
+.salesection_FacetedBrowseLoadThrobber_1hNUt {
+  width: 100%;
   display: flex;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo:active {
-  opacity: 0.9;
-  transform: translateY(-50%) scale(0.96);
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC {
-  right: 2vw;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_RightArrow_1ZHCC
-  svg {
-  margin: 20px 18px 20px 22px;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd {
-  left: 2vw;
-}
-.discoveryqueuewizard_QueueNavArrow_1kgdo.discoveryqueuewizard_LeftArrow_3Bctd
-  svg {
-  margin: 20px 22px 20px 18px;
-}
-.BasicUI .discoveryqueuewizard_QueueNavArrow_1kgdo {
-  display: none;
-}
-.discoveryqueuewizard_ReleventSimilarAppsCtn_3wqiW {
-  display: flex;
-  margin: 4px 0px;
-  column-gap: 4px;
-}
-.discoveryqueuewizard_WhyRelevant_WBWfZ {
-  font-size: 12px;
-  color: var(--gpStoreLighterGrey);
-  margin-bottom: 2px;
-  font-weight: 700;
-}
-.discoveryqueuewizard_SimilarAppCtn_2oeoS {
-  display: flex;
-}
-.discoveryqueuewizard_SimilarAppImg_2eNyY {
-  width: 80px;
-  box-shadow: var(--gpShadow-Small);
-}
-.discoveryqueuewizard_SimilarAppText_3MS2G {
-  font-size: 12px;
-  color: var(--gpStoreLighterGrey);
-}
-.discoveryqueuewizard_FriendAvatarsCtn_kOfo- {
-  display: flex;
-  white-space: nowrap;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black calc(100% - 32px),
-    transparent calc(100% - 8px)
-  );
-  margin-right: -16px;
-  margin-top: 5px;
-}
-@media screen and (max-width: 1920px) {
-  .discoveryqueuewizard_FriendAvatarsCtn_kOfo- {
-    display: none;
-  }
-}
-.discoveryqueuewizard_RelevantTextBold_2FiP4 {
-  font-weight: bold;
-}
-.discoveryqueuewizard_AppDescription_Kzj5I {
-  font-size: 12px;
-  color: var(--gpStoreLighterGrey);
-  padding: 8px 0;
-  border-top: 1px solid #acb2c924;
-  line-height: 18px;
-}
-.discoveryqueuewizard_TradingCardCtn_36Qbj {
-  display: flex;
-  background: #2a475e;
-  padding: 15px;
-  margin: 15px auto;
-  font-weight: 700;
   align-items: center;
-  color: var(--gpStoreLighterGrey);
-}
-.discoveryqueuewizard_TradingCardCtn_36Qbj
-  .discoveryqueuewizard_TradingCardImage_3wa0d {
-  margin-right: 15px;
-  transform: rotate(-10deg);
-}
-@media screen and (max-width: 1400px) {
-  .discoveryqueuewizard_TradingCardCtn_36Qbj
-    .discoveryqueuewizard_TradingCardImage_3wa0d {
-    width: 60px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .discoveryqueuewizard_TradingCardCtn_36Qbj {
-    padding: 5px;
-    margin: 0;
-    font-size: 12px;
-  }
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.discoveryqueueappwidget_DiscoveryQueueWidgetCtn_pdgoG {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 8px;
-  background: #1b2838;
-  border: 1px solid #2a475e;
-  border-radius: 4px;
-  width: fit-content;
-  z-index: 1000;
-}
-.discoveryqueueappwidget_DiscoveryQueueWidgetCtn_pdgoG:hover {
-  border: 1px solid #fff;
-}
-.discoveryqueueappwidget_WidgetText_2R5wI {
-  color: #1a9fff;
-  cursor: pointer;
-  transition: color 0.1s ease;
-  font-size: 14px;
-  margin: 0 15px;
-}
-.salequestdisplay_description_22ryq {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0em;
-  color: #fff;
-}
-.salequestdisplay_description2_xidiW {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salequestdisplay_questCtn_14UQz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 2em 1em 2em;
-  color: #fff;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salerewardshelfdisplay_RewardContainer_10sVo {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 1em;
 }
 .saleeventbbcodeparser_ErrorDiv_1Vj6H {
   background-color: hotpink;
@@ -60226,882 +61145,6 @@ div.NarrowRightPanel
   .appactionbutton_StreamingCalloutMessage_2_ScL {
   width: fit-content;
 }
-:root {
-  --basicui-header-height: 0px;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.personanameandstatus_statusAndName_3n8q8 {
-  display: flex;
-}
-.personanameandstatus_statusAndName_3n8q8.personanameandstatus_threeLines_3ms2P {
-  margin-top: -2px;
-}
-.personanameandstatus_statusAndName_3n8q8.GamepadMode,
-.GamepadMode .personanameandstatus_statusAndName_3n8q8 {
-  align-items: center;
-}
-.personanameandstatus_statusAndName_3n8q8.GamepadMode.personanameandstatus_threeLines_3ms2P,
-.GamepadMode
-  .personanameandstatus_statusAndName_3n8q8.personanameandstatus_threeLines_3ms2P {
-  margin-top: 0;
-}
-.personanameandstatus_blocked_3_oRk
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: rgba(195, 74, 72, 0.75);
-}
-.personanameandstatus_playerName_r62qz,
-.personanameandstatus_playerNickname_3T-9P {
-  flex: 1;
-  line-height: 16px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: clip;
-  font-size: 14px;
-  transition: text-overflow 0s linear;
-}
-.personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .personanameandstatus_playerName_r62qz,
-.personanameandstatus_playerNickname_3T-9P.GamepadMode,
-.GamepadMode .personanameandstatus_playerNickname_3T-9P {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 15px;
-}
-.BasicUI .personanameandstatus_playerName_r62qz,
-.BasicUI .personanameandstatus_playerNickname_3T-9P {
-  text-overflow: ellipsis;
-}
-.personanameandstatus_playerNickname_3T-9P {
-  padding-left: 5px;
-  color: #666;
-}
-.personanameandstatus_playerNickname_3T-9P.GamepadMode,
-.GamepadMode .personanameandstatus_playerNickname_3T-9P {
-  color: #67707b;
-}
-.personanameandstatus_playerName_r62qz {
-  -webkit-mask: linear-gradient(
-    to right,
-    black calc(100% - 6px),
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  mask: linear-gradient(
-    to right,
-    black calc(100% - 6px),
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  flex: initial;
-  padding-right: 6px;
-  margin-right: -6px;
-}
-.personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .personanameandstatus_playerName_r62qz {
-  -webkit-mask: none;
-  mask: none;
-  padding-right: 2px;
-  margin-right: 0px;
-}
-.personanameandstatus_playerNicknameBracket_2aXev {
-  color: #999;
-  font-size: 18px;
-  display: inline-block;
-  margin-left: 1px;
-  opacity: 0.5;
-  line-height: 16px;
-}
-.personanameandstatus_richPresenceContainer_2nrSd {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 30px);
-}
-.personanameandstatus_richPresenceContainer_2nrSd.GamepadMode
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P,
-.GamepadMode
-  .personanameandstatus_richPresenceContainer_2nrSd
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.personanameandstatus_threeLines_3ms2P {
-  line-height: 15px;
-  margin-top: -2px;
-}
-.FriendPicker_Suggestions .personanameandstatus_richPresenceContainer_2nrSd {
-  display: none;
-}
-.personanameandstatus_richPresenceLabel_1k82N {
-  display: flex;
-  flex-direction: row;
-  line-height: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 10px;
-  margin-top: -1px;
-  -webkit-mask: linear-gradient(
-    to right,
-    black calc(100% - 8px),
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  mask: linear-gradient(
-    to right,
-    black calc(100% - 8px),
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  margin-right: -24px;
-}
-.BasicUI .personanameandstatus_richPresenceLabel_1k82N {
-  display: block;
-  text-overflow: ellipsis;
-}
-.personanameandstatus_NoMask_2J0IS
-  .personanameandstatus_richPresenceLabel_1k82N {
-  -webkit-mask-image: none;
-  mask-image: none;
-}
-.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  line-height: 18px;
-  font-size: 12px;
-}
-.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  line-height: 15px;
-  height: 20px;
-}
-.RecentMessagesTabList.FriendsListTabPanel
-  .personanameandstatus_twoLine_27M2G.GamepadMode
-  .personanameandstatus_statusAndName_3n8q8,
-.GamepadMode
-  .RecentMessagesTabList.FriendsListTabPanel
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_statusAndName_3n8q8 {
-  align-items: center;
-  margin-top: -2px;
-  margin-bottom: 1px;
-}
-.RecentMessagesTabList.FriendsListTabPanel
-  .personanameandstatus_twoLine_27M2G.GamepadMode
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .RecentMessagesTabList.FriendsListTabPanel
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  height: 25px;
-}
-.personanameandstatus_DNDContainer_12iWK {
-  width: 12px;
-  height: 12px;
-  margin-top: -3px;
-  margin-left: 3px;
-}
-.personanameandstatus_partyBeaconJoin_1K_OI {
-  font-weight: 800;
-}
-.ingame .personanameandstatus_playerName_r62qz {
-  color: #e3ffc2;
-}
-.ingame .personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_playerName_r62qz {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  color: #c2ffb3;
-  font-weight: 400;
-}
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited,
-.ingame.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #91c257;
-}
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited,
-.ingame.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode
-  .ingame.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #59bf40;
-}
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 12px;
-}
-.ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  color: #59bf40;
-}
-.VoiceChannelParticipants .ingame .personanameandstatus_playerName_r62qz {
-  font-size: 11px;
-  margin-bottom: -2px;
-  margin-top: -2px;
-}
-.VoiceChannelParticipants
-  .ingame
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_playerName_r62qz {
-  font-size: 14px;
-  margin-top: 0px;
-}
-.VoiceChannelParticipants
-  .ingame
-  .personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 10px;
-  margin-top: -6px;
-  margin-bottom: 3px;
-}
-.VoiceChannelParticipants
-  .ingame
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 12px;
-  margin-top: 0px;
-}
-.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N,
-.ingame .personanameandstatus_richPresenceLabel_1k82N,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:hover,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:active,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:visited {
-  color: #62813b;
-}
-.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode .ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_1k82N,
-.ingame .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:hover.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:hover,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:active.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:active,
-.ingame .personanameandstatus_richPresenceLabel_1k82N a:visited.GamepadMode,
-.GamepadMode .ingame .personanameandstatus_richPresenceLabel_1k82N a:visited {
-  color: #3e862d;
-}
-.ingame .SVGIcon_DoNotDisturb circle,
-.ingame .SVGIcon_DoNotDisturb line {
-  stroke: #cf7f67;
-}
-.friend.gpfocus .labelHolder.GamepadMode .personanameandstatus_playerName_r62qz,
-.friend.gpfocus
-  .labelHolder.GamepadMode
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder
-  .personanameandstatus_richPresenceLabel_1k82N,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode
-  .personanameandstatus_playerName_r62qz,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder
-  .personanameandstatus_richPresenceLabel_1k82N {
-  text-shadow: 1px 1px 0 #0e141b;
-}
-.friend.gpfocus
-  .labelHolder.GamepadMode.offline
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder.offline
-  .personanameandstatus_richPresenceLabel_1k82N,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.offline
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder.offline
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #8b929a;
-  text-shadow: 1px 1px 0 #0e141b;
-}
-.friend.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.friend.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder.online.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder.online.awayOrSnooze
-  .personanameandstatus_richPresenceLabel_1k82N,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.online.awayOrSnooze
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder.online.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder.online.awayOrSnooze
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #4cb4ff;
-  text-shadow: 1px 1px 0 #0e141b;
-}
-.friend.gpfocus
-  .labelHolder.GamepadMode.ingame.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.friend.gpfocus
-  .labelHolder.GamepadMode.ingame
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder.ingame.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .friend.gpfocus
-  .labelHolder.ingame
-  .personanameandstatus_richPresenceLabel_1k82N,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.ingame.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.favoriteElement.gpfocus
-  .labelHolder.GamepadMode.ingame
-  .personanameandstatus_richPresenceLabel_1k82N,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder.ingame.awayOrSnooze
-  .personanameandstatus_playerName_r62qz,
-.GamepadMode
-  .favoriteElement.gpfocus
-  .labelHolder.ingame
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #59bf40;
-  text-shadow: 1px 1px 0 #0e141b;
-}
-.awayOrSnooze .personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .awayOrSnooze .personanameandstatus_playerName_r62qz {
-  color: #59bf40;
-}
-.watchingbroadcast .personanameandstatus_playerName_r62qz {
-  color: #c9bdf7;
-}
-.watchingbroadcast .personanameandstatus_richPresenceLabel_1k82N,
-.watchingbroadcast
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.watchingbroadcast
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.watchingbroadcast
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.watchingbroadcast
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited {
-  color: #8277b1;
-}
-.awayOrSnooze.online .personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .awayOrSnooze.online .personanameandstatus_playerName_r62qz {
-  color: #4cb4ff;
-}
-.awayOrSnooze.online .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode .awayOrSnooze.online .personanameandstatus_richPresenceLabel_1k82N,
-.awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a.GamepadMode,
-.GamepadMode
-  .awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover.GamepadMode,
-.GamepadMode
-  .awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active.GamepadMode,
-.GamepadMode
-  .awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited.GamepadMode,
-.GamepadMode
-  .awayOrSnooze.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited {
-  color: #4cb4ff;
-}
-.online .personanameandstatus_playerName_r62qz {
-  color: #ccccd5;
-  color: #6dcff6;
-}
-.online .personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .online .personanameandstatus_playerName_r62qz {
-  color: #b3dfff;
-}
-.online .personanameandstatus_richPresenceLabel_1k82N,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited {
-  color: #4c91ac;
-}
-.online .personanameandstatus_richPresenceLabel_1k82N.GamepadMode,
-.GamepadMode .online .personanameandstatus_richPresenceLabel_1k82N,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a.GamepadMode,
-.GamepadMode
-  .online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover.GamepadMode,
-.GamepadMode
-  .online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active.GamepadMode,
-.GamepadMode
-  .online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited.GamepadMode,
-.GamepadMode
-  .online
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited {
-  color: #4cb4ff;
-}
-.online .SVGIcon_DoNotDisturb circle,
-.online .SVGIcon_DoNotDisturb line {
-  stroke: #a0545a;
-}
-.offline .personanameandstatus_playerName_r62qz {
-  color: #a0a0a0;
-}
-.offline .personanameandstatus_playerName_r62qz.GamepadMode,
-.GamepadMode .offline .personanameandstatus_playerName_r62qz {
-  color: #b8bcbf;
-}
-.offline .personanameandstatus_richPresenceLabel_1k82N,
-.offline
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a,
-.offline
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:hover,
-.offline
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:active,
-.offline
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N
-  a:visited {
-  color: #6e6e6e;
-}
-.offline .SVGIcon_DoNotDisturb circle,
-.offline .SVGIcon_DoNotDisturb line {
-  stroke: #cf7f67;
-}
-.offline .personanameandstatus_DNDContainer_12iWK {
-  display: none;
-}
-.FriendVoiceChatContainer .personanameandstatus_playerName_r62qz {
-  font-size: 20px;
-  line-height: 24px;
-  width: 100%;
-}
-.personanameandstatus_hidePersona_3meBu
-  .personanameandstatus_statusAndName_3n8q8 {
-  height: 100%;
-  align-items: center;
-  margin-top: 0px;
-}
-.personanameandstatus_compactView_34CCB.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 10px;
-  margin-top: 1px;
-}
-.personanameandstatus_compactView_34CCB
-  .personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 10px;
-  line-height: 11px;
-}
-.personanameandstatus_compactView_34CCB
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 10px;
-  line-height: 14px;
-}
-.personanameandstatus_compactView_34CCB
-  .speaking
-  .personanameandstatus_playerName_r62qz {
-  filter: brightness(1.5);
-}
-.personanameandstatus_compactView_34CCB .personanameandstatus_playerName_r62qz,
-.personanameandstatus_compactView_34CCB
-  .personanameandstatus_playerNickname_3T-9P {
-  margin-bottom: -6px;
-  font-size: 12px;
-}
-.personanameandstatus_compactView_34CCB
-  .personanameandstatus_noContextMenu_2317W
-  .personanameandstatus_playerName_r62qz,
-.personanameandstatus_compactView_34CCB
-  .personanameandstatus_noContextMenu_2317W
-  .personanameandstatus_playerNickname_3T-9P {
-  margin-bottom: -2px;
-}
-.currentUserContainer .personanameandstatus_playerName_r62qz {
-  font-size: 15px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  transition: color 0.94s ease-in-out;
-  text-shadow: 1px 1px 4px #000;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  min-width: 0;
-}
-.currentUserContainer .personanameandstatus_statusAndName_3n8q8 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: -4px;
-  -webkit-app-region: no-drag;
-}
-.currentUserContainer
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 13px;
-}
-.currentUserContainer .personanameandstatus_richPresenceLabel_1k82N {
-  -webkit-app-region: no-drag;
-}
-.currentUserContainer .personanameandstatus_richPresenceContainer_2nrSd {
-  margin-top: 2px;
-  align-self: stretch;
-}
-.currentUserContainer
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_playerName_r62qz {
-  font-size: 14px;
-  margin-bottom: 0px;
-}
-.currentUserContainer
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_richPresenceLabel_1k82N {
-  line-height: initial;
-}
-.currentUserContainer
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 12px;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_playerName_r62qz,
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_playerNickname_3T-9P {
-  font-size: 12px;
-  margin-bottom: 0px;
-  text-overflow: clip;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_playerNickname_3T-9P {
-  color: #a2a6ac;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_richPresenceLabel_1k82N {
-  line-height: 11px;
-  font-size: 10px;
-  margin-top: -1px;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB:not(.personanameandstatus_twoLine_27M2G)
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
-  display: none;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .offline
-  .personanameandstatus_statusAndName_3n8q8 {
-  color: #ccc;
-}
-.ChatTabs
-  .personanameandstatus_compactView_34CCB
-  .offline
-  .personanameandstatus_richPresenceLabel_1k82N {
-  color: #888;
-}
-.titleBarContainer
-  .currentUserContainer
-  .personanameandstatus_richPresenceLabel_1k82N {
-  margin-top: -1px;
-  margin-bottom: 1px;
-  font-size: 12px;
-  display: inline-block;
-  transition: color 0.94s ease-in-out;
-  text-shadow: 1px 1px 3px #000;
-}
-.titleBarContainer
-  .currentUserContainer
-  .personanameandstatus_compactView_34CCB
-  .personanameandstatus_richPresenceLabel_1k82N {
-  margin-top: -4px;
-  margin-bottom: -2px;
-}
-.titleBarContainer
-  .currentUserContainer
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  margin-top: 0px;
-}
-.titleBarContainer
-  .currentUserContainer
-  .personanameandstatus_compactView_34CCB.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  margin-top: -4px;
-  margin-bottom: 0px;
-}
-.titleBarContainer
-  .currentUserContainer
-  .personanameandstatus_richPresenceLabel_1k82N:not(.personanameandstatus_gameName_2wpap) {
-  font-size: 10px;
-  margin-top: -1px;
-  margin-bottom: 1px;
-}
-.titleBarContainer .currentUserContainer .ContextMenuButton {
-  margin-top: -4px;
-  margin-bottom: 4px;
-}
-.singlewindow .currentUserContainer .personanameandstatus_statusAndName_3n8q8 {
-  margin-right: 4px;
-}
-.singlewindow
-  .currentUserContainer
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_statusAndName_3n8q8,
-.singlewindow .currentUserContainer .personanameandstatus_twoLine_27M2G {
-  width: 100%;
-}
-.needsUpdate
-  .currentUserContainer
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_statusAndName_3n8q8 {
-  margin-right: 48px;
-}
-.friendRequests .bright .moMutualFriends .personanameandstatus_playerName_r62qz,
-.friendRequests .personanameandstatus_playerName_r62qz {
-  color: #fff;
-  transition: color 0.2s ease-in-out;
-}
-.friendRequests .noMutualFriends .personanameandstatus_playerName_r62qz {
-  color: #aaa;
-  transition: color 0.2s ease-in-out;
-}
-.MemberListColumn
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_richPresenceLabel_1k82N,
-.MemberListColumn
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_playerNickname_3T-9P,
-.MemberListColumn
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_playerName_r62qz {
-  text-overflow: clip;
-  transition-delay: 0.4s;
-}
-.MemberListColumn.MemberListViewCompact
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_richPresenceLabel_1k82N,
-.MemberListColumn.MemberListViewCompact
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_playerNickname_3T-9P,
-.MemberListColumn.MemberListViewCompact
-  .personanameandstatus_statusAndName_3n8q8
-  .personanameandstatus_playerName_r62qz {
-  text-overflow: clip;
-  transition-delay: 0s;
-}
-.groupMemberList .personanameandstatus_playerName_r62qz,
-.groupMemberList .personanameandstatus_playerNickname_3T-9P {
-  font-size: 13px;
-}
-.groupMemberList
-  .ingame
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 10px;
-  margin-top: -3px;
-  margin-bottom: -3px;
-}
-.groupMemberList
-  .ingame.personanameandstatus_twoLine_27M2G
-  .personanameandstatus_gameName_2wpap.personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 12px;
-  margin-top: -1px;
-}
-.groupMemberList
-  .personanameandstatus_twoLine_27M2G
-  .personanameandstatus_richPresenceLabel_1k82N {
-  font-size: 12px;
-}
-.groupMemberList .personanameandstatus_richPresenceLabel_1k82N {
-  line-height: 13px;
-}
-.Dialog_RemotePlay .awayOrSnooze .personanameandstatus_statusAndName_3n8q8 {
-  margin-bottom: -10px;
-}
-.Dialog_RemotePlay .ingame .personanameandstatus_playerName_r62qz,
-.Dialog_RemotePlay .ingame .personanameandstatus_playerNickname_3T-9P {
-  margin-top: 0px;
-  width: 175px;
-}
-.Dialog_RemotePlay .personanameandstatus_twoLine_27M2G {
-  margin-top: -44px;
-  width: 175px;
-}
-.Dialog_RemotePlay .ingame .personanameandstatus_richPresenceLabel_1k82N {
-  margin-top: -15px;
-  width: 175px;
-  visibility: collapse;
-}
-.personanameandstatus_gameIsPrivateIcon_1FPaN {
-  width: 28px;
-  height: 20px;
-  margin-top: -3px;
-  margin-left: 0px;
-  display: inline-block;
-}
-.personanameandstatus_gameIsPrivateIcon_1FPaN svg {
-  width: 24px;
-  height: 24px;
-  margin-bottom: -8px;
-}
-.personanameandstatus_gameIsPrivateIcon_1FPaN svg line,
-.personanameandstatus_gameIsPrivateIcon_1FPaN svg path {
-  stroke: #6e8d50;
-}
-.personanameandstatus_PendingPersona_ifetn {
-  margin-top: -6px;
-  margin-left: 4px;
-  display: inline-block;
-}
-.personanameandstatus_PendingPersona_ifetn svg {
-  height: 12px;
-  width: 12px;
-}
 .overflowbox_OverflowBox_rgZGV {
   opacity: 1;
 }
@@ -79672,6 +79715,269 @@ button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled:ac
   box-shadow: 0 1px 3px 0px #000;
   border-radius: 1px;
 }
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey-nocolor_hIQRp {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey_2FgPG {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkGrey_3JSgm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-grey_1QB3w {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnimBorder-darkGrey_17zTL {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-green_ZSRT7 {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_focusAnimation_341ql {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_hoverAnimation_3-jH6 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_VirtualMenuContainer_3J5J3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6 {
+  position: absolute;
+  width: 100px;
+  height: 125px;
+  background-color: #202020;
+  border-radius: 8px;
+  transform-origin: top left;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 100px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd {
+  height: calc(30px + 30px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 30px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
+  width: 150px;
+  height: 175px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #22222277;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_NoDescription_3qM0b {
+  height: 150px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuHoverKeyDescription_1DhbM {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: calc(50% - 50px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  margin-top: 26px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  height: 30px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 3px solid #202020;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKey_2e5vF {
+  background-color: #404040;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKeyDisabled_2mVK7 {
+  background-color: #40404090;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  background-color: #256180;
+  border-color: #ffffff88;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 16px;
+  text-align: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 8px;
+  text-align: left;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: none;
+  background: none;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56 {
+  border: none;
+  border-radius: 50%;
+  background-color: #20202088;
+  width: 66px;
+  height: 66px;
+  top: calc(50% - 33px);
+  left: calc(50% - 33px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+  width: 66px;
+  height: 66px;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  background-color: #222;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 12px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 8px;
+  left: 20%;
+  top: 5%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  transform: scale(0.75);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6
+  .gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9 {
+  width: 100px;
+  height: 100px;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  opacity: 0.35;
+  position: absolute;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j {
+  position: absolute;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j
+  .gamepaduiappoverlayvirtualmenucontainer_CircleSegment_1OuT2 {
+  position: absolute;
+  opacity: 0.5;
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j
+  .gamepaduiappoverlayvirtualmenucontainer_CircleSegment_1OuT2.gamepaduiappoverlayvirtualmenucontainer_Selected_1RB3u {
+  opacity: 1;
+}
 @keyframes controllerconfiguratorvirtualmenus_ItemFocusAnim-darkerGrey-nocolor_3Bl5f {
   from {
     background: #3d4450;
@@ -82113,6 +82419,13 @@ svg.reorderablelist_ReorderArrow_2gZry {
   align-items: center;
   gap: 5px;
   padding: 4px 0px;
+}
+.basicpartnereventspage_ChannelIndicator_7kr7k {
+  text-transform: uppercase;
+  font-size: 10px;
+  flex-grow: 1;
+  text-align: end;
+  color: #fff;
 }
 @font-face {
   font-family: "Motiva Sans";

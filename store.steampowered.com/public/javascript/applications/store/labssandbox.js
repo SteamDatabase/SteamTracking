@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [35, 31],
+  [36],
   {
     "1TsT": function (e, t, a) {
       "use strict";
@@ -1911,8 +1911,8 @@
         constructor(e, t, a, r, i) {
           this.m_callbacksLoaded = new x.a();
           const s = T.b.Init(H);
-          Object(V.a)(s),
-            i && Object(V.b)(s, i),
+          Object(V.b)(s),
+            i && Object(V.c)(s, i),
             s.Body().set_steamid(t || o.l.steamid),
             r && s.Body().set_clusters_to_return(r),
             s.Body().set_sort(a),

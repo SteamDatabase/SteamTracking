@@ -434,6 +434,7 @@
                     br: n.d.readUint64String,
                     bw: n.h.writeUint64String,
                   },
+                  weak_token: { n: 6, br: n.d.readString, bw: n.h.writeString },
                 },
               }),
             d.sm_m

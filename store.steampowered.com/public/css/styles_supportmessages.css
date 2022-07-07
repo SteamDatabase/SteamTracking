@@ -216,15 +216,15 @@ a.btn_contact_support > span {
 }
 
 .steam_deck_reservations {
-	background-color: #000000;
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr );
+	row-gap: 2px;
+}
+.steam_deck_reservations > div {
 	padding: 10px;
+	background-color: #000000;
 }
 
-.steam_deck_reservation {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
 
 .steam_deck_purchase_btn {
 	margin-top: 30px;

@@ -1228,7 +1228,6 @@ input[type="text"]:disabled {
 
 .fancyCheckboxLabel {
 	margin-left: 5px;
-	vertical-align: top;
 }
 
 div + #landingFooter {

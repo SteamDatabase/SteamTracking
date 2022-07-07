@@ -8514,12 +8514,12 @@
               0 == s && l > 0.95 && l < 1.05
                 ? (i[e] = "good")
                 : s > 0
-                ? (console.log(Object(h.a)(e), v, s, "unrendered"),
+                ? (console.log(Object(h.c)(e), v, s, "unrendered"),
                   (i[e] = "badimport"))
                 : l > 0.6 && l < 1.5
-                ? (console.log(Object(h.a)(e), v, "tag ratio:", l),
+                ? (console.log(Object(h.c)(e), v, "tag ratio:", l),
                   (i[e] = "suspicious"))
-                : (console.log(Object(h.a)(e), v, "tag ratio (BAD):", l),
+                : (console.log(Object(h.c)(e), v, "tag ratio (BAD):", l),
                   (i[e] = "bad"));
             } else i[e] = "missing";
           }
@@ -8559,8 +8559,8 @@
             );
           p[C[e]] = r.a.createElement(
             "a",
-            { key: "loc-" + e, className: o, href: l + "?l=" + Object(h.a)(e) },
-            Object(h.b)(e)
+            { key: "loc-" + e, className: o, href: l + "?l=" + Object(h.c)(e) },
+            Object(h.d)(e)
           );
         }
         return r.a.createElement(
@@ -8897,7 +8897,7 @@
               n.createElement(
                 "div",
                 { className: Q.Language },
-                Object(z.f)("#Language_" + Object(h.a)(o))
+                Object(z.f)("#Language_" + Object(h.c)(o))
               ),
               n.createElement("div", { className: Q.Timestamp }, c)
             );
@@ -8989,7 +8989,7 @@
                               console.log(
                                 "Going to publish FAQ",
                                 a.faq_id,
-                                g.current[e].map((e) => Object(h.a)(e))
+                                g.current[e].map((e) => Object(h.c)(e))
                               ))
                             : console.log(
                                 "No live english version for:",
@@ -9058,7 +9058,7 @@
           t.map((e, t) => {
             const o = a[t];
             if (0 == e.length) return null;
-            const i = e.map((e) => Object(h.b)(e)).join(",");
+            const i = e.map((e) => Object(h.d)(e)).join(",");
             return n.createElement(
               "div",
               { key: o.faq_id },
@@ -9372,7 +9372,7 @@
             r.a.createElement(
               "div",
               { className: W.a.DownArrow },
-              r.a.createElement(q.s, null)
+              r.a.createElement(q.u, null)
             )
           );
         },
@@ -10051,7 +10051,7 @@
             r.a.createElement(
               "td",
               null,
-              Object(z.f)("#Language_" + Object(h.a)(t.language))
+              Object(z.f)("#Language_" + Object(h.c)(t.language))
             ),
             r.a.createElement(
               "td",
@@ -10691,7 +10691,7 @@
               r.a.createElement(
                 "div",
                 { className: ut.LeftCol },
-                r.a.createElement(q.E, null)
+                r.a.createElement(q.G, null)
               ),
               r.a.createElement(
                 "div",
@@ -10758,7 +10758,7 @@
         bt = a.n(yt);
       const wt = (e) => {
           const { faqid: t } = e,
-            [a, o] = Object(c.h)(t, Object(h.d)(f.c.LANGUAGE));
+            [a, o] = Object(c.h)(t, Object(h.f)(f.c.LANGUAGE));
           return o
             ? a
               ? r.a.createElement(lt, {

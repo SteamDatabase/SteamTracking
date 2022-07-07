@@ -1,3 +1,719 @@
+.miniprofile_miniProfile_2QPdq {
+  width: fit-content;
+  margin: 11px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  overflow: hidden;
+}
+.miniprofile_miniProfileContent_1xTAT {
+  width: 328px;
+  position: relative;
+  z-index: 0;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileHeader_3CZcH {
+  height: 62px;
+  z-index: 1;
+  padding: 16px;
+  background: none;
+  border: none;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A {
+  display: flex;
+  flex-direction: row;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A
+  .miniprofile_playerContent_2-pwJ {
+  padding-left: 16px;
+  margin-bottom: 30px;
+  margin-top: auto;
+}
+.miniprofile_miniProfileBackground_3HzZh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -3;
+  background: radial-gradient(
+    ellipse farthest-corner at 20% 30%,
+    #4c505b 0%,
+    #34373f 50%,
+    #282c32 100%
+  );
+}
+.miniprofile_miniProfileBackgroundBlur_xUosY {
+  width: 380px;
+  height: 380px;
+  filter: blur(10px) saturate(2);
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  opacity: 0.4;
+  -webkit-mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mix-blend-mode: screen;
+}
+.miniprofile_miniProfileVideoBackground_2Zqfb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top right;
+}
+.miniprofile_miniProfileVideoBackgroundContainer_3MrYv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  background-color: #1b1c20;
+}
+.miniprofile_miniProfileBackdropBlur_1QhpY {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBlocked_39Jef,
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileNotFriends_3Ea91 {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(184, 156, 80, 0.75);
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBlocked_39Jef {
+  color: rgba(195, 74, 72, 0.75);
+}
+.miniprofile_miniProfileContent_1xTAT.miniprofile_notFriends_2zgR7
+  .miniprofile_miniProfileBlocked_39Jef {
+  top: 18px;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_SnoozeContainer_1cAsx {
+  position: absolute;
+  overflow: visible;
+  z-index: 3;
+  left: 4px;
+  top: 8px;
+}
+.miniprofile_miniProfileHover_2AWay
+  .miniprofile_miniprofile_arrow_1YsNo.miniprofile_left_1qS_b {
+  border-right: 8px solid #41444e;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg {
+  width: 90px;
+  height: 92px;
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65);
+  transform: scale(1);
+  z-index: 1;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerAvatar_36eQg
+  .miniprofile_Frame_2nPON {
+  position: absolute;
+  left: -9px;
+  top: -9px;
+  width: calc(100% + 18px);
+  height: calc(100% + 18px);
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
+  width: 100%;
+  height: 2px;
+  z-index: 2;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.online
+  .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
+  background: #6dcff6;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.in-game
+  .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
+  background: #bff02b;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
+  .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
+  background: #9c8fd4;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_personaName_qiP8a {
+  text-shadow: 1px 1px 4px #000;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  display: flex;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.in-game
+  .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS)
+  .miniprofile_personaNameLabel_2VUw8,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.in-game
+  .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5
+  .miniprofile_personaNameLabel_2VUw8 {
+  color: #e3ffc2;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
+  .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS)
+  .miniprofile_personaNameLabel_2VUw8,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
+  .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5
+  .miniprofile_personaNameLabel_2VUw8 {
+  color: #c9bdf7;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_persona_3c5GO
+  .miniprofile_personaName_qiP8a.miniprofile_hasNickname_2TAWS {
+  color: #888;
+  font-size: 14px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_persona_3c5GO
+  .miniprofile_personaName_qiP8a.miniprofile_hasNickname_2TAWS
+  .miniprofile_personaNameLabel_2VUw8 {
+  color: #bbb;
+  max-width: 154px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.miniprofile_personaAndIcons_1p9kf {
+  display: flex;
+  flex-direction: row;
+}
+.miniprofile_persona_3c5GO {
+  display: flex;
+  flex-direction: column;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  color: #999;
+  max-width: 154px;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5
+  .miniprofile_personaNameLabel_2VUw8,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS)
+  .miniprofile_personaNameLabel_2VUw8 {
+  max-width: 160px;
+  text-overflow: ellipsis;
+  max-height: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.online
+  .miniprofile_nickname_1SWhp,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.online
+  .miniprofile_persona_3c5GO {
+  color: #6dcff6;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.offline
+  .miniprofile_nickname_1SWhp,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.offline
+  .miniprofile_persona_3c5GO {
+  color: #bbb;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_playerNicknameBracket_3qa8c {
+  color: #bbb;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg img {
+  width: 90px;
+  height: 90px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.miniprofile_miniProfileContent_1xTAT.miniprofile_notInOrWatchingGame_1NkB7
+  .miniprofile_miniProfileBottom_26ga2,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j {
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 26, 30, 0.7) 5%,
+    rgba(24, 26, 30, 0.4) 95%
+  );
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j {
+  z-index: -1;
+  border: none;
+  min-height: 64px;
+  position: relative;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_gameLogo_A0XYr {
+  width: 90px;
+  height: 34px;
+  top: 18px;
+  left: 16px;
+  position: absolute;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_ingame_24oQz {
+  color: #90ba3c;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_ingame_24oQz
+  .miniprofile_richPresence_39T3E,
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_ingame_24oQz
+  .miniprofile_gameState_3Hxc3 {
+  font-size: 12px;
+  color: #62813b;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_watchingbroadcast_3hSAG
+  .miniprofile_gameState_3Hxc3 {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #8277b1;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_watchingbroadcast_3hSAG
+  .miniprofile_richPresence_39T3E {
+  font-size: 14px;
+  color: #c9bdf7;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_watchingbroadcast_3hSAG
+  .miniprofile_watchingbroadcastThumbnail_FmBWy {
+  width: 200px;
+  height: 110px;
+  margin-top: 8px;
+  position: relative;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileGameContainer_7-U6j
+  .miniprofile_gameContent_3YwnZ {
+  padding: 8px 8px 8px 122px;
+  font-size: 14px;
+}
+.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileBottom_26ga2 {
+  padding: 16px 16px 8px 16px;
+}
+.miniprofile_miniProfileContent_1xTAT.miniprofile_notInOrWatchingGame_1NkB7
+  .miniprofile_miniProfileBottom_26ga2 {
+  padding-top: 26px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileFeaturedContainer_1KDhd {
+  position: relative;
+  height: 34px;
+  display: flex;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileFeaturedContainer_1KDhd
+  .miniprofile_favoriteBadgeIcon_qP4hs {
+  width: 34px;
+  height: 34px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileFeaturedContainer_1KDhd
+  .miniprofile_badgeIcon_1oWOa {
+  width: 100%;
+  height: 100%;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileBottom_26ga2
+  .miniprofile_featuredLabels_39har {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 12px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileBottom_26ga2
+  .friendPlayerLevel
+  .miniprofile_friendPlayerLevelNum_3vvwM {
+  font-size: 14px;
+  color: #e5e5e5;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileBottom_26ga2
+  .miniprofile_featuredLabels_39har
+  .miniprofile_featuredTitle_2mCgt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b1b1b1;
+}
+.miniprofile_mutualFriends_3AWk3 {
+  background-color: #000a;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfileBottom_26ga2
+  .miniprofile_featuredLabels_39har
+  .miniprofile_featuredSubTitle_3DelZ {
+  color: #6b6a6a;
+  font-size: 12px;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.in-game
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  color: #91c257;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.offline
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  color: #8277b1;
+}
+.miniprofile_miniProfileContent_1xTAT
+  .miniprofile_miniProfilePlayer_2jZ0A.online
+  .miniprofile_playerContent_2-pwJ
+  .miniprofile_awayStatusLabel_1FgWI {
+  color: #4c91ac;
+}
+.friendPlayerLevel {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  border: solid #fff 2px;
+  height: 28px;
+  width: 28px;
+  line-height: 26px;
+  text-align: center;
+  cursor: default;
+  margin-top: 2px;
+}
+.friendPlayerLevel.lvl_0 {
+  border-color: #9b9b9b;
+}
+.friendPlayerLevel.lvl_10 {
+  border-color: #c02942;
+}
+.friendPlayerLevel.lvl_20 {
+  border-color: #d95b43;
+}
+.friendPlayerLevel.lvl_30 {
+  border-color: #fecc23;
+}
+.friendPlayerLevel.lvl_40 {
+  border-color: #467a3c;
+}
+.friendPlayerLevel.lvl_50 {
+  border-color: #4e8ddb;
+}
+.friendPlayerLevel.lvl_60 {
+  border-color: #7652c9;
+}
+.friendPlayerLevel.lvl_70 {
+  border-color: #c252c9;
+}
+.friendPlayerLevel.lvl_80 {
+  border-color: #542437;
+}
+.friendPlayerLevel.lvl_90 {
+  border-color: #997c52;
+}
+.friendPlayerLevel.lvl_100,
+.friendPlayerLevel.lvl_200,
+.friendPlayerLevel.lvl_300,
+.friendPlayerLevel.lvl_400,
+.friendPlayerLevel.lvl_500,
+.friendPlayerLevel.lvl_600,
+.friendPlayerLevel.lvl_700,
+.friendPlayerLevel.lvl_800,
+.friendPlayerLevel.lvl_900,
+.friendPlayerLevel.lvl_1000,
+.friendPlayerLevel.lvl_1100,
+.friendPlayerLevel.lvl_1200,
+.friendPlayerLevel.lvl_1300,
+.friendPlayerLevel.lvl_1400,
+.friendPlayerLevel.lvl_1500,
+.friendPlayerLevel.lvl_1600,
+.friendPlayerLevel.lvl_1700,
+.friendPlayerLevel.lvl_1800,
+.friendPlayerLevel.lvl_1900,
+.friendPlayerLevel.lvl_2000,
+.friendPlayerLevel.lvl_2100,
+.friendPlayerLevel.lvl_2200,
+.friendPlayerLevel.lvl_2300,
+.friendPlayerLevel.lvl_2400,
+.friendPlayerLevel.lvl_2500,
+.friendPlayerLevel.lvl_2600,
+.friendPlayerLevel.lvl_2700,
+.friendPlayerLevel.lvl_2800,
+.friendPlayerLevel.lvl_2900,
+.friendPlayerLevel.lvl_3000,
+.friendPlayerLevel.lvl_3100,
+.friendPlayerLevel.lvl_3200,
+.friendPlayerLevel.lvl_3300,
+.friendPlayerLevel.lvl_3400,
+.friendPlayerLevel.lvl_3500,
+.friendPlayerLevel.lvl_3600,
+.friendPlayerLevel.lvl_3700,
+.friendPlayerLevel.lvl_3800,
+.friendPlayerLevel.lvl_3900,
+.friendPlayerLevel.lvl_4000,
+.friendPlayerLevel.lvl_4100,
+.friendPlayerLevel.lvl_4200,
+.friendPlayerLevel.lvl_4300,
+.friendPlayerLevel.lvl_4400,
+.friendPlayerLevel.lvl_4500,
+.friendPlayerLevel.lvl_4600,
+.friendPlayerLevel.lvl_4700,
+.friendPlayerLevel.lvl_4800,
+.friendPlayerLevel.lvl_4900,
+.friendPlayerLevel.lvl_5000,
+.friendPlayerLevel.lvl_5100,
+.friendPlayerLevel.lvl_5200 {
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 14px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-shadow: 1px 1px #1a1a1a;
+}
+.friendPlayerLevel.lvl_100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png");
+}
+.friendPlayerLevel.lvl_200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png");
+}
+.friendPlayerLevel.lvl_300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png");
+}
+.friendPlayerLevel.lvl_400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png");
+}
+.friendPlayerLevel.lvl_500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png");
+}
+.friendPlayerLevel.lvl_600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png");
+}
+.friendPlayerLevel.lvl_700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png");
+}
+.friendPlayerLevel.lvl_800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png");
+}
+.friendPlayerLevel.lvl_900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png");
+}
+.friendPlayerLevel.lvl_1000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png");
+}
+.friendPlayerLevel.lvl_1100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png");
+}
+.friendPlayerLevel.lvl_1200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png");
+}
+.friendPlayerLevel.lvl_1300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png");
+}
+.friendPlayerLevel.lvl_1400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png");
+}
+.friendPlayerLevel.lvl_1500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png");
+}
+.friendPlayerLevel.lvl_1600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png");
+}
+.friendPlayerLevel.lvl_1700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png");
+}
+.friendPlayerLevel.lvl_1800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png");
+}
+.friendPlayerLevel.lvl_1900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png");
+}
+.friendPlayerLevel.lvl_2000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png?v=2");
+}
+.friendPlayerLevel.lvl_2100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png?v=2");
+}
+.friendPlayerLevel.lvl_2200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png?v=2");
+}
+.friendPlayerLevel.lvl_2300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png?v=2");
+}
+.friendPlayerLevel.lvl_2400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png?v=2");
+}
+.friendPlayerLevel.lvl_2500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png?v=2");
+}
+.friendPlayerLevel.lvl_2600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png?v=2");
+}
+.friendPlayerLevel.lvl_2700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png?v=2");
+}
+.friendPlayerLevel.lvl_2800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png?v=2");
+}
+.friendPlayerLevel.lvl_2900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png?v=2");
+}
+.friendPlayerLevel.lvl_3000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_1-2.png?v=2");
+}
+.friendPlayerLevel.lvl_3100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_3-4.png?v=2");
+}
+.friendPlayerLevel.lvl_3200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_5-6.png?v=2");
+}
+.friendPlayerLevel.lvl_3300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_7-8.png?v=2");
+}
+.friendPlayerLevel.lvl_3400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_9-10.png?v=2");
+}
+.friendPlayerLevel.lvl_3500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_1-2.png?v=2");
+}
+.friendPlayerLevel.lvl_3600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_3-4.png?v=2");
+}
+.friendPlayerLevel.lvl_3700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_5-6.png?v=2");
+}
+.friendPlayerLevel.lvl_3800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_7-8.png?v=2");
+}
+.friendPlayerLevel.lvl_3900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_9-10.png?v=2");
+}
+.friendPlayerLevel.lvl_4000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_1.png?v=2");
+}
+.friendPlayerLevel.lvl_4100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_2.png?v=2");
+}
+.friendPlayerLevel.lvl_4200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_3.png?v=2");
+}
+.friendPlayerLevel.lvl_4300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_4.png?v=2");
+}
+.friendPlayerLevel.lvl_4400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_5.png?v=2");
+}
+.friendPlayerLevel.lvl_4500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_1.png?v=2");
+}
+.friendPlayerLevel.lvl_4600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_2.png?v=2");
+}
+.friendPlayerLevel.lvl_4700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_3.png?v=2");
+}
+.friendPlayerLevel.lvl_4800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_4.png?v=2");
+}
+.friendPlayerLevel.lvl_4900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2");
+}
+.friendPlayerLevel.lvl_5000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_1.png?v=2");
+}
+.friendPlayerLevel.lvl_5100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_2.png?v=2");
+}
+.friendPlayerLevel.lvl_5200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_3.png?v=2");
+}
+.friendPlayerLevel.lvl_plus_10 {
+  background-position: 0 -32px;
+}
+.friendPlayerLevel.lvl_plus_20 {
+  background-position: 0 -64px;
+}
+.friendPlayerLevel.lvl_plus_30 {
+  background-position: 0 -96px;
+}
+.friendPlayerLevel.lvl_plus_40 {
+  background-position: 0 -128px;
+}
+.friendPlayerLevel.lvl_plus_50 {
+  background-position: 0 -160px;
+}
+.friendPlayerLevel.lvl_plus_60 {
+  background-position: 0 -192px;
+}
+.friendPlayerLevel.lvl_plus_70 {
+  background-position: 0 -224px;
+}
+.friendPlayerLevel.lvl_plus_80 {
+  background-position: 0 -256px;
+}
+.friendPlayerLevel.lvl_plus_90 {
+  background-position: 0 -288px;
+}
 .avatar_AvatarRow_2_WvK {
   display: flex;
   flex-direction: row;

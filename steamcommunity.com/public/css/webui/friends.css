@@ -954,6 +954,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   overflow-y: overlay;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_14LgX {
   white-space: normal;
@@ -978,6 +980,9 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .pagedsettings_PagedSettingsDialog_PageListItem_14LgX.pagedsettings_Active_3cnaw {
   color: #fff;
   cursor: default;
+}
+.pagedsettings_PageListSpacer_hBiLz {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
@@ -2161,11 +2166,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   justify-content: space-between;
 }
 .gamepadslider_SliderNotch_3nRP2 {
+  width: 24px;
+  min-width: 24px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   align-items: center;
-  min-width: 24px;
+}
+.gamepadslider_SliderNotch_3nRP2.gamepadslider_AlignToEnds_27XyH {
+  flex-grow: 1;
 }
 .gamepadslider_SliderNotchLabel_24Wg3 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2177,6 +2186,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   padding-top: 5px;
   width: fit-content;
   text-align: center;
+}
+.gamepadslider_SliderNotchLabel_24Wg3.gamepadslider_AlignToLeft_2tbY8 {
+  text-align: left;
+  margin-right: auto;
+}
+.gamepadslider_SliderNotchLabel_24Wg3.gamepadslider_AlignToRight_2_SX4 {
+  text-align: right;
+  margin-left: auto;
 }
 .gamepadslider_SliderNotchTick_1OE-I {
   width: 4px;
@@ -2622,10 +2639,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3UDtf {
   line-height: 16px;
   white-space: nowrap;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
 }
@@ -2698,6 +2718,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   height: 1px;
   background: #3d4450;
   margin: 8px calc(12px + 1.4vw);
+  flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_pOJXw {
   background: #0e141b;
@@ -8996,6 +9017,7 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
 .eventbbcodeparser_SaleSectionCtn_36_f6 img {
   max-width: 100%;
   height: auto;
+  width: -webkit-fill-available;
 }
 .eventbbcodeparser_SaleSectionCtn_36_f6 .eventbbcodeparser_Link_35HFF {
   color: #fff;
@@ -26996,21 +27018,24 @@ svg.reorderablelist_ReorderArrow_3Npdp {
   line-height: 10px;
   position: absolute;
 }
+:root {
+  --scroll-fade-size: 20px;
+}
 .scrollfade_ScrollFade_19Qmq {
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    black 20px,
-    black calc(100% - 20px),
+    black var(--scroll-fade-size),
+    black calc(100% - var(--scroll-fade-size)),
     transparent 100%
   );
-  scroll-padding: 20px 0px;
+  scroll-padding: var(--scroll-fade-size) 0px;
 }
 .scrollfade_ScrollFade_19Qmq.scrollfade_ScrolledToTop_2iwtO {
   -webkit-mask-image: linear-gradient(
     to bottom,
     black 0%,
-    black calc(100% - 20px),
+    black calc(100% - var(--scroll-fade-size)),
     transparent 100%
   );
 }
@@ -27018,7 +27043,7 @@ svg.reorderablelist_ReorderArrow_3Npdp {
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    black 20px,
+    black var(--scroll-fade-size),
     black 100%
   );
 }

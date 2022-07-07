@@ -27391,7 +27391,7 @@ function TestLocalizeCalendarTime()
               fnOnTimeout,
               nCountdownMs
             );
-          }, [fnStopTimer, nCountdownMs, fnOnComplete, fnOnTimeout]);
+          }, [fnStopTimer, nCountdownMs, fnOnTimeout]);
           const fnOnMount = react__WEBPACK_IMPORTED_MODULE_0__[
             "useCallback"
           ](() => {
@@ -28479,7 +28479,6 @@ function TestLocalizeCalendarTime()
           LOCAL_HOSTNAME: "",
           // web-only parameters:
           WEBAPI_BASE_URL: "",
-          COMMUNITY_WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,

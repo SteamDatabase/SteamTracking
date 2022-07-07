@@ -220,7 +220,7 @@
               u.a.createElement(
                 h.e,
                 { onClick: () => r(!o) },
-                o ? u.a.createElement(_.M, null) : u.a.createElement(_.P, null)
+                o ? u.a.createElement(_.P, null) : u.a.createElement(_.S, null)
               )
             ),
             u.a.createElement("hr", null),

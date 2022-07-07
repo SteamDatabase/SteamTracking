@@ -96,7 +96,7 @@
         i = (n("ECFo"), n("N2vu")),
         m = n("qiKp"),
         d = n("lkRc");
-      class u {
+      class f {
         constructor() {
           (this.m_mapConferences = new Map()),
             (this.m_mapConferenceCallback = new Map());
@@ -106,18 +106,18 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              u.s_Singleton.Init(),
+            f.s_Singleton ||
+              ((f.s_Singleton = new f()),
+              f.s_Singleton.Init(),
               "dev" == d.c.WEB_UNIVERSE &&
-                (window.g_ConferenceStore = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_ConferenceStore = f.s_Singleton)),
+            f.s_Singleton
           );
         }
         Init() {
           let e = Object(d.g)("conferenceinfo", "application_config");
           if (this.ValidateStoreDefault(e)) {
-            const t = Object(r.d)(d.c.LANGUAGE),
+            const t = Object(r.f)(d.c.LANGUAGE),
               n = Object(i.c)(e.clan_faq_about_page),
               a = i.a.Get().GetFAQPublishedContent(n, t),
               c = Object(l.d)(
@@ -156,7 +156,7 @@
           );
         }
       }
-      var f = n("5izx"),
+      var u = n("5izx"),
         b = n("IjL/"),
         E = n("YLyR"),
         C = n("UxvL"),
@@ -285,27 +285,27 @@
       }
       n("5bld"), n("MUT6");
       var U = n("1BdX"),
-        V = (n("3+zv"), n("6oCP")),
-        x = n("Mgs7"),
+        x = (n("3+zv"), n("6oCP")),
+        V = n("Mgs7"),
         q = n("T27q"),
         F = n("fA8f"),
         W = n("cGQe"),
         z = n("r3N9"),
         J = n("GiuM"),
-        K = n("opsS");
-      function Y(e) {
+        Y = n("opsS");
+      function K(e) {
         const { displayLocation: t, fnChangeModalEvent: n } = e,
           [c, o] = a.useState(null),
           [l, r] = Object(J.d)("emgid", null),
           [i, m] = Object(J.d)("emclan", null);
         return (
-          Object(K.e)(n, (e, t) => {
+          Object(Y.e)(n, (e, t) => {
             r(e), m(s.a.InitFromClanID(t).ConvertTo64BitString());
           }),
           a.useEffect(() => {
             if (null != l && null != i) {
               const e = new s.a(i);
-              V.b
+              x.b
                 .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, l, 0)
                 .then(o);
             }
@@ -315,7 +315,7 @@
                 appid: c.appid,
                 trackingLocation: t,
                 announcementGID: c.GetAnnouncementGID(),
-                partnerEventStore: V.b,
+                partnerEventStore: x.b,
                 eventModel: c,
                 showAppHeader: !0,
                 closeModal: () => {
@@ -335,11 +335,11 @@
         ce = n("JsZI");
       function oe(e) {
         const t = Object(H.b)(),
-          n = Object(f.c)(10),
+          n = Object(u.c)(10),
           c = t.GetActiveEventsAt(n) || [],
           [o] = a.useState(new m.a()),
           l = a.useCallback(
-            (e, t) => Object(q.a)(V.b.GetClanEventModel(e), window),
+            (e, t) => Object(q.a)(x.b.GetClanEventModel(e), window),
             []
           );
         return 0 == t.GetNumEventsLoaded()
@@ -351,7 +351,7 @@
           : a.createElement(
               "div",
               { className: ce.EventsScheduleCtn },
-              a.createElement(Y, { displayLocation: 6, fnChangeModalEvent: o }),
+              a.createElement(K, { displayLocation: 6, fnChangeModalEvent: o }),
               a.createElement(ie, {
                 rgActiveEvents: c,
                 fnDisplayModalEvent: l,
@@ -364,10 +364,10 @@
               a.createElement("br", null),
               a.createElement("br", null),
               a.createElement(
-                x.e,
+                V.e,
                 {
                   onClick: (e) =>
-                    Object($.d)(a.createElement(fe, null), Object(ne.o)(e)),
+                    Object($.d)(a.createElement(ue, null), Object(ne.o)(e)),
                 },
                 Object(v.f)("#Conference_NeedHelp")
               )
@@ -375,7 +375,7 @@
       }
       function le(e) {
         return a.createElement(
-          ue,
+          fe,
           Object.assign({}, e),
           a.createElement(oe, Object.assign({}, e))
         );
@@ -422,8 +422,8 @@
             fnDisplayModalEvent: c,
             rtNow: o,
           } = e,
-          l = V.b.GetClanEventModel(t.unique_id),
-          s = Object(r.d)(d.c.LANGUAGE),
+          l = x.b.GetClanEventModel(t.unique_id),
+          s = Object(r.f)(d.c.LANGUAGE),
           i = l.GetStartTimeAndDateUnixSeconds(),
           m = Object(B.b)(new Date(1e3 * o), new Date(1e3 * i));
         return a.createElement(
@@ -472,7 +472,7 @@
         const { rgActiveEvents: t, fnDisplayModalEvent: n } = e;
         if (!t || 0 == t.length) return null;
         const c = t[0],
-          o = Object(r.d)(d.c.LANGUAGE),
+          o = Object(r.f)(d.c.LANGUAGE),
           l = U.a.ParseEventModelPresenters(c, o);
         return a.createElement(
           "div",
@@ -521,7 +521,7 @@
       function me(e) {
         const { conferenceInfo: t } = e,
           n = Object(H.b)(),
-          c = Object(f.c)(10),
+          c = Object(u.c)(10),
           o = n.GetActiveEventsAt(c) || [],
           [l] = a.useState(new m.a()),
           r = n
@@ -539,9 +539,9 @@
           : a.createElement(
               "div",
               { className: ce.PastEventsCtn },
-              a.createElement(Y, { displayLocation: 6, fnChangeModalEvent: l }),
+              a.createElement(K, { displayLocation: 6, fnChangeModalEvent: l }),
               r.map((e) => {
-                const t = V.b.GetClanEventModel(e.unique_id);
+                const t = x.b.GetClanEventModel(e.unique_id);
                 return a.createElement(F.a, {
                   key: "row" + e.unique_id,
                   eventModel: t,
@@ -556,12 +556,12 @@
       }
       function de(e) {
         return a.createElement(
-          ue,
+          fe,
           Object.assign({}, e),
           a.createElement(me, Object.assign({}, e))
         );
       }
-      function ue(e) {
+      function fe(e) {
         const { conferenceInfo: t } = e,
           n = Object(te.a)("WithCalendarStore"),
           [c, o] = Object(a.useState)(!0);
@@ -579,7 +579,7 @@
             : a.createElement(a.Fragment, null, e.children)
         );
       }
-      function fe(e) {
+      function ue(e) {
         const { closeModal: t } = e;
         return a.createElement(
           X.e,
@@ -672,7 +672,7 @@
       function _e(e) {
         const { conferenceInfo: t, bShowYouTube: n } = e,
           [c, o] = a.useState(!1),
-          l = Object(f.c)(B.f.PerMinute) < t.rtStartTime - 30 * B.f.PerMinute;
+          l = Object(u.c)(B.f.PerMinute) < t.rtStartTime - 30 * B.f.PerMinute;
         return a.createElement(
           "div",
           { className: be.ConferenceHome },
@@ -697,7 +697,7 @@
                   a.createElement(
                     "div",
                     { className: be.CollapseBtn },
-                    a.createElement(M.r, { angle: 0 })
+                    a.createElement(M.t, { angle: 0 })
                   )
                 ),
                 a.createElement(
@@ -787,7 +787,7 @@
                 a.createElement(
                   "a",
                   { className: be.Popout, href: r, target: "_blank" },
-                  a.createElement(M.V, null)
+                  a.createElement(M.Y, null)
                 )
               )
             ),
@@ -816,7 +816,7 @@
                 a.createElement(
                   "a",
                   { className: be.Popout, href: s, target: "_blank" },
-                  a.createElement(M.V, null)
+                  a.createElement(M.Y, null)
                 )
               )
             ),
@@ -831,7 +831,7 @@
                     c(!0), l(!0);
                   },
                 },
-                a.createElement(M.db, null)
+                a.createElement(M.gb, null)
               )
             )
           ),
@@ -886,7 +886,7 @@
       var he = n("PpkI");
       function Ie(e) {
         const { strVanity: t } = e,
-          n = u.Get().GetConferenceInfo(t);
+          n = f.Get().GetConferenceInfo(t);
         return n
           ? a.createElement(
               b.a,
@@ -907,7 +907,7 @@
               `?tab=${e.key}`
             ),
           c = [],
-          o = Object(f.b)();
+          o = Object(u.b)();
         return (
           o < t.rtEndTime &&
             c.push({
@@ -1024,7 +1024,7 @@
     fbnN: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return f;
+        return u;
       });
       var a = n("q1tI"),
         c = n("EC67"),
@@ -1035,7 +1035,7 @@
         i = n.n(s),
         m = n("5E+2"),
         d = n("+d9t");
-      class u extends a.Component {
+      class f extends a.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
         }
@@ -1136,7 +1136,7 @@
           );
         }
       }
-      const f = Object(c.j)(u);
+      const u = Object(c.j)(f);
     },
   },
 ]);

@@ -1383,6 +1383,8 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   overflow-y: overlay;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
   white-space: normal;
@@ -1407,6 +1409,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
   color: #fff;
   cursor: default;
+}
+.pagedsettings_PageListSpacer_1uU8O {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
@@ -2590,11 +2595,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   justify-content: space-between;
 }
 .gamepadslider_SliderNotch_3Lp8H {
+  width: 24px;
+  min-width: 24px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   align-items: center;
-  min-width: 24px;
+}
+.gamepadslider_SliderNotch_3Lp8H.gamepadslider_AlignToEnds_3lZ1i {
+  flex-grow: 1;
 }
 .gamepadslider_SliderNotchLabel_1O0FK {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2606,6 +2615,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   padding-top: 5px;
   width: fit-content;
   text-align: center;
+}
+.gamepadslider_SliderNotchLabel_1O0FK.gamepadslider_AlignToLeft_nYcbu {
+  text-align: left;
+  margin-right: auto;
+}
+.gamepadslider_SliderNotchLabel_1O0FK.gamepadslider_AlignToRight_1bxes {
+  text-align: right;
+  margin-left: auto;
 }
 .gamepadslider_SliderNotchTick_1j-G1 {
   width: 4px;
@@ -3104,10 +3121,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_ {
   line-height: 16px;
   white-space: nowrap;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
 }
@@ -3180,6 +3200,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   height: 1px;
   background: #3d4450;
   margin: 8px calc(12px + 1.4vw);
+  flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_3nGJH {
   background: #0e141b;
@@ -6133,6 +6154,7 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
 .eventbbcodeparser_SaleSectionCtn_3gzGa img {
   max-width: 100%;
   height: auto;
+  width: -webkit-fill-available;
 }
 .eventbbcodeparser_SaleSectionCtn_3gzGa .eventbbcodeparser_Link_3NcRW {
   color: #fff;
@@ -9275,13 +9297,21 @@ div.creatorhomeembed_SocialContainer_25404 {
   width: 150%;
   height: 150%;
   opacity: 0.3;
+  filter: blur(60px);
 }
-.salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+.BasicUI
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
+  .salepreviewwidgets_StoreSaleWidgetBgTint_3UvN8
+  img {
+  filter: none;
+}
+.BasicUI
+  .salepreviewwidgets_StoreSaleWidgetRight_2e3GD
   .salepreviewwidgets_StoreSaleWidgetBgTint_3UvN8::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 101%;
   top: 0px;
   backdrop-filter: blur(60px);
 }
@@ -12047,52 +12077,6 @@ html.tablet .ContentHubSalePage .partnersaledisplay_SaleOuterContainer_3ZZvZ {
   grid-gap: 12px;
   padding-bottom: 12px;
 }
-.partnersaledisplay_ShowContentsContainer_39lsr {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
-}
-.partnersaledisplay_ShowContentsContainer_39lsr
-  .partnersaledisplay_ShowContentsButton_1licp {
-  border-radius: 2px;
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  cursor: pointer;
-  color: #222;
-  background: rgba(255, 255, 255, 0.7);
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_39lsr
-  .partnersaledisplay_ShowContentsButton_1licp {
-  background: unset;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.12);
-  transition: background-color 0.2s ease;
-  font: var(--gpText-BodyLarge);
-  padding: 10px 20px;
-  min-width: 32%;
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_39lsr
-  .partnersaledisplay_ShowContentsButton_1licp.gpfocus {
-  color: #000;
-  background-color: #fff;
-  border-radius: 0px;
-}
-.partnersaledisplay_ShowContentsContainer_39lsr
-  .partnersaledisplay_ShowContentsButton_1licp:hover {
-  color: #222;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-.BasicUI
-  .partnersaledisplay_ShowContentsContainer_39lsr
-  .partnersaledisplay_ShowContentsButton_1licp:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.24);
-  box-shadow: unset;
-}
 span.partnersaledisplay_vr_supported_25W9s,
 span.partnersaledisplay_vr_required_fQ_ZQ {
   vertical-align: top;
@@ -12405,38 +12389,11 @@ html.responsive.touch
   font-weight: bold;
   color: #fff;
 }
-.partnersaledisplay_FacetedBrowseLoadThrobber_UoWro {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .BasicUI .partnersaledisplay_DefaultCreatorCtn_23ZCI {
   display: none;
 }
 .BasicUI .SaleSectionCtn.curator {
   display: none;
-}
-.partnersaledisplay_SalePageLogoCtn_33BfR {
-  max-width: 940px;
-  margin: 0 auto;
-  margin-bottom: 32px;
-}
-.BasicUI .partnersaledisplay_SalePageLogoCtn_33BfR {
-  max-height: 230px;
-  margin-bottom: 0px;
-}
-.partnersaledisplay_SalePageLogoCtn_33BfR img {
-  width: 100%;
-}
-.BasicUI .partnersaledisplay_SalePageLogoCtn_33BfR img {
-  max-height: 230px;
-  width: auto;
-}
-@media screen and (max-width: 768px) {
-  .partnersaledisplay_SalePageLogoCtn_33BfR {
-    margin-bottom: 0px;
-  }
 }
 .partnersaledisplay_EventSectionViewAllCtn_2lWIR {
   display: flex;
@@ -19415,7 +19372,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 205px;
+  padding-top: 30px;
   max-width: 920px;
   width: 100%;
   box-sizing: border-box;
@@ -19479,6 +19436,9 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_3_C-j a img {
   height: 40px;
   width: 90%;
   animation-delay: 0.23s;
+}
+.saleghostsections_GhostCtn_30BKz .saleghostsections_MainCapRowExpanded_3MnuD {
+  padding-top: 205px;
 }
 @keyframes saleghostsections_GhostShine_KVBt8 {
   0% {
@@ -19675,6 +19635,7 @@ html.responsive.touch .contenthubmaincarousel_ContentHubTitle_3Xj5I {
   font-weight: bold;
 }
 .contenthubmaincarousel_ContentHubLabsWidget_3HwW9 {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -19774,31 +19735,6 @@ html.responsive.touch
 }
 .contenthubmaincarousel_ReducedMotionToggleCtn_1yGL7 {
   background-color: rgba(0, 0, 0, 0.5);
-}
-.debugmatchesdialog_DiscrepancyDialogRow_TDPfu {
-  width: 100%;
-  display: flex;
-  background: rgba(0, 0, 0, 0.5);
-}
-.debugmatchesdialog_DiscrepancyDialogRow_TDPfu:nth-child(even) {
-  background: rgba(0, 0, 0, 0.25);
-}
-.debugmatchesdialog_DiscrepancyDialogHeaderRow_1862u {
-  width: 100%;
-  display: flex;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.debugmatchesdialog_DiscrepancyDialogCell_2qHMu {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  text-align: left;
-  padding: 4px;
-}
-.debugmatchesdialog_DiscrepancyDialogTooltip_1-9nG {
-  z-index: 2000;
 }
 .partnereventdialog_ErrorStyles_3Hw9h,
 .partnereventdialog_ErrorStylesWithIcon_jEJTF {
@@ -21257,308 +21193,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
     padding-right: 1em;
   }
 }
-:root {
-  --basicui-header-height: 0px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX {
-  display: flex;
-  flex-direction: column;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU {
-  overflow-x: auto;
-  margin: 0 -16px 6px;
-  padding: 0 0 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  -webkit-mask-image: linear-gradient(
-      to left,
-      transparent 2px,
-      black 16px,
-      black 50%,
-      transparent 51%
-    ),
-    linear-gradient(
-      to right,
-      transparent 2px,
-      black 16px,
-      black 50%,
-      transparent 51%
-    );
-  mask-image: linear-gradient(
-      to left,
-      transparent 2px,
-      black 16px,
-      black 50%,
-      transparent 51%
-    ),
-    linear-gradient(
-      to right,
-      transparent 2px,
-      black 16px,
-      black 50%,
-      transparent 51%
-    );
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff {
-  display: flex;
-  padding: 4px 16px;
-  width: 100%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-}
-html.responsive.touch
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff {
-  flex-wrap: nowrap;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop)
-    .saleitembrowser_SaleItemBrowserContainer_3KuFX
-    .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-    .saleitembrowser_SaleItemBrowserHeader_yupff {
-    flex-wrap: nowrap;
-  }
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff {
-  column-gap: 6px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc {
-  margin: 0 8px 4px;
-  padding: 4px;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 13px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc:first-child {
-  margin-left: 0;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc:last-child {
-  margin-right: 0;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc.saleitembrowser_SelectedFlavor_iGDdY {
-  color: #fff;
-  border-bottom: 2px solid #fff;
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc.saleitembrowser_SelectedFlavor_iGDdY {
-  border-bottom: unset;
-  background-color: rgba(255, 255, 255, 0.32);
-  box-shadow: var(--gpShadow-Medium);
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc:hover {
-  background-color: rgba(255, 255, 255, 0.24);
-}
-html.responsive.touch
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc {
-  margin: inherit 3px inherit;
-  letter-spacing: 0;
-  text-transform: initial;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop)
-    .saleitembrowser_SaleItemBrowserContainer_3KuFX
-    .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-    .saleitembrowser_SaleItemBrowserHeader_yupff
-    .saleitembrowser_FlavorLabel_1qNQc {
-    margin: inherit 3px inherit;
-    letter-spacing: 0;
-    text-transform: initial;
-  }
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc {
-  font: var(--gpText-BodyLarge);
-  color: #fff;
-  padding: 10px 16px;
-  background-color: rgba(255, 255, 255, 0.12);
-  border-radius: var(--gpCorner-Medium);
-  margin: unset;
-  height: fit-content;
-  transition: all 0.2s ease;
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_FlavorLabel_1qNQc.gpfocus {
-  color: #000;
-  background-color: #fff;
-  box-shadow: var(--gpShadow-Medium);
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_SuggestContainer_M0w-C {
-  height: 24px;
-  margin-left: auto;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_SuggestContainer_M0w-C
-  svg {
-  height: 24px;
-  margin: 0;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_SuggestContainer_M0w-C
-  .DialogInput {
-  padding: 2px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_Debug_nMmPS {
-  text-align: right;
-  margin-left: auto;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_Debug_nMmPS
-  svg {
-  height: 22px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
-  .saleitembrowser_SaleItemBrowserHeader_yupff
-  .saleitembrowser_SuggestContainer_M0w-C
-  + .saleitembrowser_Debug_nMmPS {
-  margin-left: 8px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_EmptyResults_5dSsV {
-  text-align: center;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2 {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2.saleitembrowser_Loading_2qtMZ {
-  min-height: 500px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2
-  .saleitembrowser_ShowContentsButton_15fEf {
-  border: none;
-  line-height: 32px;
-  color: #dfe3e6;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  min-width: 40%;
-  white-space: nowrap;
-  padding: 0 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2
-  .saleitembrowser_ShowContentsButton_15fEf {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.12);
-  box-shadow: unset;
-  border-radius: var(--gpCorner-Medium);
-  transition: background-color 0.2s ease;
-  font: var(--gpText-BodyLarge);
-  padding: 10px 20px;
-  min-width: 32%;
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2
-  .saleitembrowser_ShowContentsButton_15fEf.gpfocus {
-  color: #000;
-  background-color: #fff;
-  border-radius: 0px;
-}
-.saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2
-  .saleitembrowser_ShowContentsButton_15fEf:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-.BasicUI
-  .saleitembrowser_SaleItemBrowserContainer_3KuFX
-  .saleitembrowser_ShowContentsContainer_3J8f2
-  .saleitembrowser_ShowContentsButton_15fEf:hover {
-  background-color: rgba(255, 255, 255, 0.24);
-}
-.saleitembrowser_SuggestContainer_M0w-C {
-  display: flex;
-  flex-direction: row;
-}
-.saleitembrowser_SuggestContainer_M0w-C ._DialogLayout {
-  margin-bottom: 2px;
-}
-.saleitembrowser_SuggestContainer_M0w-C ._DialogLayout input {
-  font-size: 16px;
-}
-.saleitembrowser_SuggestContainer_M0w-C svg {
-  width: 30px;
-  height: 30px;
-  margin: 8px;
-}
-.BasicUI .saleitembrowser_SuggestContainer_M0w-C {
-  display: none;
-}
-.saleminigames_Ctn_2ioY9 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1em;
-}
-.saleminigames_DetailText_2YbOR {
-  font-weight: 600;
-  padding-bottom: 1em;
-}
-.saleminigames_ImgFullBagde_1cZOq {
-  width: 80px;
-  height: 80px;
-}
 .salequiz_description_2KaV6 {
   padding-left: 5em;
   padding-right: 5em;
@@ -22772,13 +22406,14 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   align-items: center;
   margin-right: 16px;
 }
-.salebadgeprogressdisplay_FinalBadge_3YHV9 img {
-  width: 120px;
-  height: 120px;
-}
 .salebadgeprogressdisplay_FinalBadge_3YHV9
   .salebadgeprogressdisplay_BadgeLevel_2AZcl {
   margin-top: 4px;
+}
+@media screen and (max-width: 940px) {
+  .salebadgeprogressdisplay_OuterCtn_2DBYM {
+    flex-direction: column;
+  }
 }
 :root {
   --basicui-header-height: 0px;
@@ -22940,6 +22575,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .discoveryqueuewizard_AppDetailsHeader_2Lk4O
   .discoveryqueuewizard_RightColumn_2ZQMR {
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .discoveryqueuewizard_AppDetailsHeader_2Lk4O
   .discoveryqueuewizard_RightColumn_2ZQMR
@@ -22948,11 +22586,16 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   line-height: 1.3;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 6px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppDetailsHeader_2Lk4O
+    .discoveryqueuewizard_RightColumn_2ZQMR {
+    font-size: 15px;
+  }
 }
 .discoveryqueuewizard_AppTagsCtn_1eT39 {
   display: flex;
@@ -22986,6 +22629,11 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .BasicUI .discoveryqueuewizard_AppReviews_3Y-85 .ReviewScore {
   font-size: 14px;
 }
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_AppReviews_3Y-85 .ReviewScore {
+    font-size: 12px;
+  }
+}
 .discoveryqueuewizard_RelevantCtn_e6bCR {
   padding: 8px 0px;
   border-top: 1px solid #acb2c924;
@@ -22996,10 +22644,14 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     transparent calc(100% - 0px)
   );
 }
+.discoveryqueuewizard_RelevantColumn_1Lg0R {
+  flex-grow: 1;
+}
 .discoveryqueuewizard_RelevantItem_3_jGk {
   font-size: 12px;
   color: var(--gpStoreLighterGrey);
   margin-bottom: 2px;
+  margin-top: 10px;
   display: flex;
 }
 .discoveryqueuewizard_RelevantCheck_RuoEP {
@@ -23025,6 +22677,17 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   row-gap: 8px;
   padding: calc(8px + 0.6vw);
   padding-top: 0px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_3EeQV
+  .discoveryqueuewizard_AppActionJustButtonsCtn_2BG_t {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.discoveryqueuewizard_AppActionButtonsCtn_3EeQV
+  .discoveryqueuewizard_AppActionJustButtonsCtn_2BG_t
+  .discoveryqueuewizard_QueueButton_2tLc9 {
+  flex-grow: 1;
 }
 .discoveryqueuewizard_MainCapBlur_34geg {
   position: absolute;
@@ -23130,39 +22793,43 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .discoveryqueuewizard_YGlyph_MKmAg {
   vertical-align: text-top;
 }
-.discoveryqueuewizard_SummaryCtn_2284V {
+.discoveryqueuewizard_SummaryContentCtn_3jjDf {
+  display: flex;
   flex-direction: column;
   color: var(--gpStoreLighterGrey);
   justify-content: center;
   align-items: center;
   row-gap: 12px;
   user-select: none;
+  flex: auto;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryTitle_3ie5C {
-  font-size: calc(14px + 0.6vw);
+  font-size: calc(12px + 0.8vw);
   text-align: center;
   color: #fff;
   font-weight: 700;
 }
-.discoveryqueuewizard_SummaryCtn_2284V .discoveryqueuewizard_YourStats_2JwAg {
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
+  .discoveryqueuewizard_YourStats_2JwAg {
   text-align: center;
   font-weight: 700;
   font-size: 12px;
 }
-.discoveryqueuewizard_SummaryCtn_2284V .discoveryqueuewizard_SummaryGrid_2AtLb {
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
+  .discoveryqueuewizard_SummaryGrid_2AtLb {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 60%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 720px;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR:nth-child(2) {
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR {
   display: flex;
@@ -23172,42 +22839,28 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding: 12px;
   padding-bottom: 0px;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR
   .discoveryqueuewizard_GridTitle_jlYiy {
   font-weight: 700;
   font-size: 12px;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR
   .discoveryqueuewizard_GridNumber_2wKLJ {
-  font-size: 28px;
+  font-size: calc(22px + 0.4vw);
   color: #fff;
   font-weight: 800;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryGrid_2AtLb
   .discoveryqueuewizard_GridItem_B3aMR
   .discoveryqueuewizard_GridSubTitle_196aX {
   font-size: 14px;
 }
-.discoveryqueuewizard_SummaryCtn_2284V
-  .discoveryqueuewizard_SummaryGrid_2AtLb
-  .discoveryqueuewizard_GridItem_B3aMR
-  .discoveryqueuewizard_GridLink_2S-C8 {
-  font-size: 14px;
-  color: #1a9fff;
-  cursor: pointer;
-}
-.discoveryqueuewizard_SummaryCtn_2284V
-  .discoveryqueuewizard_SummaryGrid_2AtLb
-  .discoveryqueuewizard_GridItem_B3aMR
-  .discoveryqueuewizard_GridLink_2S-C8:hover {
-  color: #fff;
-}
-.discoveryqueuewizard_SummaryCtn_2284V
+.discoveryqueuewizard_SummaryContentCtn_3jjDf
   .discoveryqueuewizard_SummaryActionButtonsCtn_jAc9l {
   display: flex;
   column-gap: 8px;
@@ -23248,6 +22901,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   background-color: #acb2c924;
   border-radius: 2px;
+}
+.discoveryqueuewizard_LearnMoreLink_3TrpB:visited {
+  color: #1a9fff;
 }
 .discoveryqueuewizard_LearnMoreLink_3TrpB.gpfocus {
   color: #fff;
@@ -23302,6 +22958,12 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_QueueButton_2tLc9.gpfocus svg {
   fill: #0e141b;
+}
+@media screen and (max-width: 1200px) {
+  .discoveryqueuewizard_QueueButton_2tLc9 {
+    font-size: 13px;
+    line-height: 15px;
+  }
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd {
   cursor: pointer;
@@ -23363,7 +23025,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_ReleventSimilarAppsCtn_1U2BE {
   display: flex;
-  margin: 4px 0px;
+  margin: 4px 0px 0px 0px;
   column-gap: 4px;
 }
 .discoveryqueuewizard_WhyRelevant_29gh6 {
@@ -23378,6 +23040,8 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .discoveryqueuewizard_SimilarAppImg_2oDnq {
   width: 80px;
   box-shadow: var(--gpShadow-Small);
+  margin-right: 5px;
+  display: block;
 }
 .discoveryqueuewizard_SimilarAppText_3q4A- {
   font-size: 12px;
@@ -23392,12 +23056,7 @@ a.storywidget_BadgeFooter_24Cq8:hover {
     transparent calc(100% - 8px)
   );
   margin-right: -16px;
-  margin-top: 5px;
-}
-@media screen and (max-width: 1920px) {
-  .discoveryqueuewizard_FriendAvatarsCtn_3u3Ff {
-    display: none;
-  }
+  margin-top: 2px;
 }
 .discoveryqueuewizard_RelevantTextBold_1aHTx {
   font-weight: bold;
@@ -23409,126 +23068,53 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   border-top: 1px solid #acb2c924;
   line-height: 18px;
 }
-.friendsnooze_SnoozeContainer_sR1O9 {
-  position: relative;
-  overflow: hidden;
+.discoveryqueuewizard_TradingCardCtn_3RVkE {
   display: flex;
-  flex-direction: row-reverse;
+  background: #83beec1f;
+  padding: 16px 1vw;
+  align-items: center;
+  color: var(--gpStoreLighterGrey);
+  width: 28%;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.discoveryqueuewizard_TradingCardCtn_3RVkE
+  .discoveryqueuewizard_TradingCardImage_2A40F {
+  transform: rotate(-10deg);
+  filter: drop-shadow(0px 8px 6px #00000022);
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_3RVkE
+    .discoveryqueuewizard_TradingCardImage_2A40F {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .discoveryqueuewizard_TradingCardCtn_3RVkE {
+    font-size: 14px;
+  }
+}
+.discoveryqueuewizard_Bold_1g7AL {
+  font-weight: 700;
+}
+.discoveryqueuewizard_FriendBlockCtn_3yI4k {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 3px 20px 3px 3px;
+}
+.discoveryqueuewizard_FriendBlockCtn_3yI4k
+  .discoveryqueuewizard_PersonaStatus_2_v__ {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 4px;
-  flex-shrink: 0;
-}
-.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97 {
-  font-size: 6px;
-  animation-name: friendsnooze_none_2g4kW;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode .friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97 {
-  font-size: 8px;
-  font-weight: bold;
-}
-.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Medium_vXZ1l
-  .friendsnooze_SnoozeZ_3hM97 {
-  font-size: 8px;
-}
-.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Large_E-LFg
-  .friendsnooze_SnoozeZ_3hM97 {
-  font-size: 14px;
-  font-weight: 500;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
-    1px 1px 2px #000;
-}
-.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97 {
-  filter: brightness(0.75);
-}
-.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z1_1iU56 {
-  animation-delay: 0s;
-  margin-top: 0px;
-  z-index: 1;
-}
-.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z2_2vxUQ {
-  animation-delay: 0.2s;
-  margin-top: 2px;
-  z-index: 2;
-}
-.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z3_DwdaT {
-  animation-delay: 0.4s;
-  margin-top: 4px;
-  z-index: 3;
-}
-.friendsnooze_SnoozeContainer_sR1O9.online .friendsnooze_SnoozeZ_3hM97 {
-  color: #4c91ac;
-}
-.friendsnooze_SnoozeContainer_sR1O9.online
-  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_sR1O9.online
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #4cb4ff;
-}
-.friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #c9bdf7;
-}
-.friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
-  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #5340a6;
-}
-.friendsnooze_SnoozeContainer_sR1O9.in-game .friendsnooze_SnoozeZ_3hM97 {
-  color: #91c257;
-}
-.friendsnooze_SnoozeContainer_sR1O9.in-game
-  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_sR1O9.in-game
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #3e862d;
-}
-.friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #6dcff6;
-}
-.friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #4cb4ff;
-}
-.friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #a1f410;
-}
-.friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
-.GamepadMode
-  .friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
-  .friendsnooze_SnoozeZ_3hM97 {
-  color: #3e862d;
-}
-.friend.gpfocus .friendsnooze_SnoozeZ_3hM97,
-.friendsnooze_hoverParent_1dNyr.gpfocus .friendsnooze_SnoozeZ_3hM97,
-.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_animating_2zkiD
-  .friendsnooze_SnoozeZ_3hM97,
-.friendsnooze_hoverParent_1dNyr:hover * .friendsnooze_SnoozeZ_3hM97 {
-  animation-name: friendsnooze_Snoring_1JBGx;
-}
-@keyframes friendsnooze_Snoring_1JBGx {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 .steamavatar_avatarHolder_ygORr {
   height: 36px;
@@ -23686,6 +23272,127 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 .steamavatar_avatarHolder_ygORr .steamavatar_avatarFrame_RA6JJ {
   transform: scale(1.2);
 }
+.friendsnooze_SnoozeContainer_sR1O9 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97 {
+  font-size: 6px;
+  animation-name: friendsnooze_none_2g4kW;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode .friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_SnoozeZ_3hM97 {
+  font-size: 8px;
+  font-weight: bold;
+}
+.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Medium_vXZ1l
+  .friendsnooze_SnoozeZ_3hM97 {
+  font-size: 8px;
+}
+.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Large_E-LFg
+  .friendsnooze_SnoozeZ_3hM97 {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97 {
+  filter: brightness(0.75);
+}
+.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z1_1iU56 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z2_2vxUQ {
+  animation-delay: 0.2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.friendsnooze_SnoozeContainer_sR1O9 .friendsnooze_Z3_DwdaT {
+  animation-delay: 0.4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.friendsnooze_SnoozeContainer_sR1O9.online .friendsnooze_SnoozeZ_3hM97 {
+  color: #4c91ac;
+}
+.friendsnooze_SnoozeContainer_sR1O9.online
+  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_sR1O9.online
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #c9bdf7;
+}
+.friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
+  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_sR1O9.watchingbroadcast
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #5340a6;
+}
+.friendsnooze_SnoozeContainer_sR1O9.in-game .friendsnooze_SnoozeZ_3hM97 {
+  color: #91c257;
+}
+.friendsnooze_SnoozeContainer_sR1O9.in-game
+  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_sR1O9.in-game
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #3e862d;
+}
+.friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #6dcff6;
+}
+.friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_sR1O9.online.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #a1f410;
+}
+.friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_sR1O9.in-game.friendsnooze_Dim_2IdZn
+  .friendsnooze_SnoozeZ_3hM97 {
+  color: #3e862d;
+}
+.friend.gpfocus .friendsnooze_SnoozeZ_3hM97,
+.friendsnooze_hoverParent_1dNyr.gpfocus .friendsnooze_SnoozeZ_3hM97,
+.friendsnooze_SnoozeContainer_sR1O9.friendsnooze_animating_2zkiD
+  .friendsnooze_SnoozeZ_3hM97,
+.friendsnooze_hoverParent_1dNyr:hover * .friendsnooze_SnoozeZ_3hM97 {
+  animation-name: friendsnooze_Snoring_1JBGx;
+}
+@keyframes friendsnooze_Snoring_1JBGx {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -23772,721 +23479,881 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   path {
   fill: #4cb4ff;
 }
-.miniprofile_miniProfile_30bMP {
-  width: fit-content;
-  margin: 11px;
-  box-shadow: 0 10px 32px 0px #000000ab;
-  overflow: hidden;
+:root {
+  --basicui-header-height: 0px;
 }
-.miniprofile_miniProfileContent_3v4Ye {
-  width: 328px;
-  position: relative;
-  z-index: 0;
+:root {
+  --basicui-header-height: 0px;
 }
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfileHeader_IMZK0 {
-  height: 62px;
-  z-index: 1;
-  padding: 16px;
-  background: none;
-  border: none;
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfilePlayer_JcAKM {
+.personanameandstatus_statusAndName_tU62t {
   display: flex;
-  flex-direction: row;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM
-  .miniprofile_playerContent_387Sx {
-  padding-left: 16px;
-  margin-bottom: 30px;
-  margin-top: auto;
+.personanameandstatus_statusAndName_tU62t.personanameandstatus_threeLines_2LLIQ {
+  margin-top: -2px;
 }
-.miniprofile_miniProfileBackground_1h54J {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -3;
-  background: radial-gradient(
-    ellipse farthest-corner at 20% 30%,
-    #4c505b 0%,
-    #34373f 50%,
-    #282c32 100%
-  );
+.personanameandstatus_statusAndName_tU62t.GamepadMode,
+.GamepadMode .personanameandstatus_statusAndName_tU62t {
+  align-items: center;
 }
-.miniprofile_miniProfileBackgroundBlur_3WbJR {
-  width: 380px;
-  height: 380px;
-  filter: blur(10px) saturate(2);
-  position: absolute;
-  left: -60px;
-  top: -60px;
-  opacity: 0.4;
-  -webkit-mask: radial-gradient(
-    ellipse farthest-corner at 150px 150px,
-    black 0%,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.3) 34%,
-    rgba(0, 0, 0, 0) 64%
-  );
-  mask: radial-gradient(
-    ellipse farthest-corner at 150px 150px,
-    black 0%,
-    rgba(0, 0, 0, 0.6) 20%,
-    rgba(0, 0, 0, 0.3) 34%,
-    rgba(0, 0, 0, 0) 64%
-  );
-  mix-blend-mode: screen;
+.personanameandstatus_statusAndName_tU62t.GamepadMode.personanameandstatus_threeLines_2LLIQ,
+.GamepadMode
+  .personanameandstatus_statusAndName_tU62t.personanameandstatus_threeLines_2LLIQ {
+  margin-top: 0;
 }
-.miniprofile_miniProfileVideoBackground_4D1VV {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top right;
-}
-.miniprofile_miniProfileVideoBackgroundContainer_BREWY {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -3;
-  background-color: #1b1c20;
-}
-.miniprofile_miniProfileBackdropBlur_1CSoz {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfileBlocked_1hzUs,
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfileNotFriends_39si7 {
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(184, 156, 80, 0.75);
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfileBlocked_1hzUs {
+.personanameandstatus_blocked_3ZrgL
+  .personanameandstatus_richPresenceLabel_3JW4b {
   color: rgba(195, 74, 72, 0.75);
 }
-.miniprofile_miniProfileContent_3v4Ye.miniprofile_notFriends_mAvyq
-  .miniprofile_miniProfileBlocked_1hzUs {
-  top: 18px;
+.personanameandstatus_playerName_26Ivx,
+.personanameandstatus_playerNickname_1jHdU {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear;
 }
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_SnoozeContainer_3mUKS {
-  position: absolute;
-  overflow: visible;
-  z-index: 3;
-  left: 4px;
-  top: 8px;
+.personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_26Ivx,
+.personanameandstatus_playerNickname_1jHdU.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_1jHdU {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 15px;
 }
-.miniprofile_miniProfileHover_2o4o6
-  .miniprofile_miniprofile_arrow_1U4zO.miniprofile_left_1M1VJ {
-  border-right: 8px solid #41444e;
+.BasicUI .personanameandstatus_playerName_26Ivx,
+.BasicUI .personanameandstatus_playerNickname_1jHdU {
+  text-overflow: ellipsis;
 }
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_playerAvatar_1sgae {
-  width: 90px;
-  height: 92px;
-  position: relative;
-  margin: 0;
-  border: none;
-  padding: 0;
+.personanameandstatus_playerNickname_1jHdU {
+  padding-left: 5px;
+  color: #666;
+}
+.personanameandstatus_playerNickname_1jHdU.GamepadMode,
+.GamepadMode .personanameandstatus_playerNickname_1jHdU {
+  color: #67707b;
+}
+.personanameandstatus_playerName_26Ivx {
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+.personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .personanameandstatus_playerName_26Ivx {
+  -webkit-mask: none;
+  mask: none;
+  padding-right: 2px;
+  margin-right: 0px;
+}
+.personanameandstatus_playerNicknameBracket_27gBt {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px;
+}
+.personanameandstatus_richPresenceContainer_1MA86 {
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65);
-  transform: scale(1);
-  z-index: 1;
+  width: calc(100% - 30px);
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerAvatar_1sgae
-  .miniprofile_Frame_2Advi {
-  position: absolute;
-  left: -9px;
-  top: -9px;
-  width: calc(100% + 18px);
-  height: calc(100% + 18px);
+.personanameandstatus_richPresenceContainer_1MA86.GamepadMode
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b.personanameandstatus_threeLines_2LLIQ,
+.GamepadMode
+  .personanameandstatus_richPresenceContainer_1MA86
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b.personanameandstatus_threeLines_2LLIQ {
+  line-height: 15px;
+  margin-top: -2px;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_avatarStatus_W86mX.miniprofile_miniProfileAvatarStatus_2xRLG {
-  width: 100%;
-  height: 2px;
-  z-index: 2;
+.FriendPicker_Suggestions .personanameandstatus_richPresenceContainer_1MA86 {
+  display: none;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.online
-  .miniprofile_avatarStatus_W86mX.miniprofile_miniProfileAvatarStatus_2xRLG {
-  background: #6dcff6;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.in-game
-  .miniprofile_avatarStatus_W86mX.miniprofile_miniProfileAvatarStatus_2xRLG {
-  background: #bff02b;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.watchingbroadcast
-  .miniprofile_avatarStatus_W86mX.miniprofile_miniProfileAvatarStatus_2xRLG {
-  background: #9c8fd4;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_personaName_3IZFU {
-  text-shadow: 1px 1px 4px #000;
-  font-size: 20px;
-  letter-spacing: 1px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  display: flex;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.in-game
-  .miniprofile_personaName_3IZFU:not(.miniprofile_hasNickname_2N9nN)
-  .miniprofile_personaNameLabel_GCjZ_,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.in-game
-  .miniprofile_personaName_3IZFU.miniprofile_nickName_BkC5H
-  .miniprofile_personaNameLabel_GCjZ_ {
-  color: #e3ffc2;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.watchingbroadcast
-  .miniprofile_personaName_3IZFU:not(.miniprofile_hasNickname_2N9nN)
-  .miniprofile_personaNameLabel_GCjZ_,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.watchingbroadcast
-  .miniprofile_personaName_3IZFU.miniprofile_nickName_BkC5H
-  .miniprofile_personaNameLabel_GCjZ_ {
-  color: #c9bdf7;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_persona_3YE3R
-  .miniprofile_personaName_3IZFU.miniprofile_hasNickname_2N9nN {
-  color: #888;
-  font-size: 14px;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_persona_3YE3R
-  .miniprofile_personaName_3IZFU.miniprofile_hasNickname_2N9nN
-  .miniprofile_personaNameLabel_GCjZ_ {
-  color: #bbb;
-  max-width: 154px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.miniprofile_personaAndIcons_1EdAU {
+.personanameandstatus_richPresenceLabel_3JW4b {
   display: flex;
   flex-direction: row;
-}
-.miniprofile_persona_3YE3R {
-  display: flex;
-  flex-direction: column;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_awayStatusLabel_16dO9 {
-  color: #999;
-  max-width: 154px;
-  text-shadow: 1px 1px 4px #000;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_personaName_3IZFU.miniprofile_nickName_BkC5H
-  .miniprofile_personaNameLabel_GCjZ_,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_playerContent_387Sx
-  .miniprofile_personaName_3IZFU:not(.miniprofile_hasNickname_2N9nN)
-  .miniprofile_personaNameLabel_GCjZ_ {
-  max-width: 160px;
-  text-overflow: ellipsis;
-  max-height: 48px;
-  overflow: hidden;
+  line-height: 12px;
   white-space: nowrap;
-  word-wrap: break-word;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.online
-  .miniprofile_nickname_L3FAw,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.online
-  .miniprofile_persona_3YE3R {
-  color: #6dcff6;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.offline
-  .miniprofile_nickname_L3FAw,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.offline
-  .miniprofile_persona_3YE3R {
-  color: #bbb;
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_playerNicknameBracket_eIFS1 {
-  color: #bbb;
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_playerAvatar_1sgae img {
-  width: 90px;
-  height: 90px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  background: none;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.miniprofile_miniProfileContent_3v4Ye.miniprofile_notInOrWatchingGame_qu1rD
-  .miniprofile_miniProfileBottom_1swTz,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac {
-  background: linear-gradient(
-    to bottom,
-    rgba(24, 26, 30, 0.7) 5%,
-    rgba(24, 26, 30, 0.4) 95%
+  overflow: hidden;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
   );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  margin-right: -24px;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac {
-  z-index: -1;
-  border: none;
-  min-height: 64px;
-  position: relative;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_gameLogo_3D2tT {
-  width: 90px;
-  height: 34px;
-  top: 18px;
-  left: 16px;
-  position: absolute;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_ingame_2TkJS {
-  color: #90ba3c;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_ingame_2TkJS
-  .miniprofile_richPresence_3hMFM,
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_ingame_2TkJS
-  .miniprofile_gameState_1y9zo {
-  font-size: 12px;
-  color: #62813b;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_watchingbroadcast_2AI5D
-  .miniprofile_gameState_1y9zo {
-  padding-top: 6px;
-  font-size: 12px;
-  color: #8277b1;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_watchingbroadcast_2AI5D
-  .miniprofile_richPresence_3hMFM {
-  font-size: 14px;
-  color: #c9bdf7;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_watchingbroadcast_2AI5D
-  .miniprofile_watchingbroadcastThumbnail_30sV9 {
-  width: 200px;
-  height: 110px;
-  margin-top: 8px;
-  position: relative;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileGameContainer__OWac
-  .miniprofile_gameContent_334BF {
-  padding: 8px 8px 8px 122px;
-  font-size: 14px;
-}
-.miniprofile_miniProfileContent_3v4Ye .miniprofile_miniProfileBottom_1swTz {
-  padding: 16px 16px 8px 16px;
-}
-.miniprofile_miniProfileContent_3v4Ye.miniprofile_notInOrWatchingGame_qu1rD
-  .miniprofile_miniProfileBottom_1swTz {
-  padding-top: 26px;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileFeaturedContainer_1WAgQ {
-  position: relative;
-  height: 34px;
-  display: flex;
-  padding-left: 16px;
-  margin-bottom: 8px;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileFeaturedContainer_1WAgQ
-  .miniprofile_favoriteBadgeIcon_1RPbd {
-  width: 34px;
-  height: 34px;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileFeaturedContainer_1WAgQ
-  .miniprofile_badgeIcon_2BAyi {
-  width: 100%;
-  height: 100%;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileBottom_1swTz
-  .miniprofile_featuredLabels_1TvEq {
-  font-size: 14px;
-  overflow: hidden;
-  white-space: nowrap;
-  justify-content: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 12px;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileBottom_1swTz
-  .friendPlayerLevel
-  .miniprofile_friendPlayerLevelNum_3Syn4 {
-  font-size: 14px;
-  color: #e5e5e5;
-}
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileBottom_1swTz
-  .miniprofile_featuredLabels_1TvEq
-  .miniprofile_featuredTitle_2v9FE {
-  overflow: hidden;
+.BasicUI .personanameandstatus_richPresenceLabel_3JW4b {
+  display: block;
   text-overflow: ellipsis;
-  color: #b1b1b1;
 }
-.miniprofile_mutualFriends_3rcVY {
-  background-color: #000a;
+.personanameandstatus_NoMask_19UOT
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  -webkit-mask-image: none;
+  mask-image: none;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfileBottom_1swTz
-  .miniprofile_featuredLabels_1TvEq
-  .miniprofile_featuredSubTitle__b7WF {
-  color: #6b6a6a;
+.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  line-height: 18px;
   font-size: 12px;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.in-game
-  .miniprofile_playerContent_387Sx
-  .miniprofile_awayStatusLabel_16dO9 {
+.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  line-height: 15px;
+  height: 20px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_2QEKA.GamepadMode
+  .personanameandstatus_statusAndName_tU62t,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_statusAndName_tU62t {
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_2QEKA.GamepadMode
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  height: 25px;
+}
+.personanameandstatus_DNDContainer_2e_2a {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+.personanameandstatus_partyBeaconJoin_2jMzG {
+  font-weight: 800;
+}
+.ingame .personanameandstatus_playerName_26Ivx {
+  color: #e3ffc2;
+}
+.ingame .personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_playerName_26Ivx {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  color: #c2ffb3;
+  font-weight: 400;
+}
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited,
+.ingame.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
   color: #91c257;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.offline
-  .miniprofile_playerContent_387Sx
-  .miniprofile_awayStatusLabel_16dO9 {
-  font-size: 10px;
-  letter-spacing: 0;
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited,
+.ingame.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode
+  .ingame.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  color: #59bf40;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.watchingbroadcast
-  .miniprofile_playerContent_387Sx
-  .miniprofile_awayStatusLabel_16dO9 {
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 12px;
+}
+.ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #59bf40;
+}
+.VoiceChannelParticipants .ingame .personanameandstatus_playerName_26Ivx {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_playerName_26Ivx {
+  font-size: 14px;
+  margin-top: 0px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_3JW4b,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:hover,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:active,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:visited {
+  color: #62813b;
+}
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode .ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_3JW4b,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_3JW4b,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_3JW4b a,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:hover.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_3JW4b a:hover,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:active.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_3JW4b a:active,
+.ingame .personanameandstatus_richPresenceLabel_3JW4b a:visited.GamepadMode,
+.GamepadMode .ingame .personanameandstatus_richPresenceLabel_3JW4b a:visited {
+  color: #3e862d;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.friend.gpfocus .labelHolder.GamepadMode .personanameandstatus_playerName_26Ivx,
+.friend.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_playerName_26Ivx,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.offline
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.offline
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.offline
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.offline
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  color: #8b929a;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  color: #4cb4ff;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.friend.gpfocus
+  .labelHolder.GamepadMode.ingame
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.ingame
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .personanameandstatus_playerName_26Ivx,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  color: #59bf40;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.awayOrSnooze .personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .awayOrSnooze .personanameandstatus_playerName_26Ivx {
+  color: #59bf40;
+}
+.watchingbroadcast .personanameandstatus_playerName_26Ivx {
+  color: #c9bdf7;
+}
+.watchingbroadcast .personanameandstatus_richPresenceLabel_3JW4b,
+.watchingbroadcast
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.watchingbroadcast
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.watchingbroadcast
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.watchingbroadcast
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited {
   color: #8277b1;
 }
-.miniprofile_miniProfileContent_3v4Ye
-  .miniprofile_miniProfilePlayer_JcAKM.online
-  .miniprofile_playerContent_387Sx
-  .miniprofile_awayStatusLabel_16dO9 {
+.awayOrSnooze.online .personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .awayOrSnooze.online .personanameandstatus_playerName_26Ivx {
+  color: #4cb4ff;
+}
+.awayOrSnooze.online .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode .awayOrSnooze.online .personanameandstatus_richPresenceLabel_3JW4b,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited {
+  color: #4cb4ff;
+}
+.online .personanameandstatus_playerName_26Ivx {
+  color: #ccccd5;
+  color: #6dcff6;
+}
+.online .personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .online .personanameandstatus_playerName_26Ivx {
+  color: #b3dfff;
+}
+.online .personanameandstatus_richPresenceLabel_3JW4b,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited {
   color: #4c91ac;
 }
-.friendPlayerLevel {
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 50%;
-  border: solid #fff 2px;
-  height: 28px;
-  width: 28px;
-  line-height: 26px;
-  text-align: center;
-  cursor: default;
+.online .personanameandstatus_richPresenceLabel_3JW4b.GamepadMode,
+.GamepadMode .online .personanameandstatus_richPresenceLabel_3JW4b,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited.GamepadMode,
+.GamepadMode
+  .online
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited {
+  color: #4cb4ff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .personanameandstatus_playerName_26Ivx {
+  color: #a0a0a0;
+}
+.offline .personanameandstatus_playerName_26Ivx.GamepadMode,
+.GamepadMode .offline .personanameandstatus_playerName_26Ivx {
+  color: #b8bcbf;
+}
+.offline .personanameandstatus_richPresenceLabel_3JW4b,
+.offline
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a,
+.offline
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:hover,
+.offline
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:active,
+.offline
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b
+  a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .personanameandstatus_DNDContainer_2e_2a {
+  display: none;
+}
+.FriendVoiceChatContainer .personanameandstatus_playerName_26Ivx {
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+}
+.personanameandstatus_hidePersona_3C6Zm
+  .personanameandstatus_statusAndName_tU62t {
+  height: 100%;
+  align-items: center;
+  margin-top: 0px;
+}
+.personanameandstatus_compactView_7gBr-.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 10px;
+  margin-top: 1px;
+}
+.personanameandstatus_compactView_7gBr-
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 10px;
+  line-height: 11px;
+}
+.personanameandstatus_compactView_7gBr-
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 10px;
+  line-height: 14px;
+}
+.personanameandstatus_compactView_7gBr-
+  .speaking
+  .personanameandstatus_playerName_26Ivx {
+  filter: brightness(1.5);
+}
+.personanameandstatus_compactView_7gBr- .personanameandstatus_playerName_26Ivx,
+.personanameandstatus_compactView_7gBr-
+  .personanameandstatus_playerNickname_1jHdU {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.personanameandstatus_compactView_7gBr-
+  .personanameandstatus_noContextMenu_15T6l
+  .personanameandstatus_playerName_26Ivx,
+.personanameandstatus_compactView_7gBr-
+  .personanameandstatus_noContextMenu_15T6l
+  .personanameandstatus_playerNickname_1jHdU {
+  margin-bottom: -2px;
+}
+.currentUserContainer .personanameandstatus_playerName_26Ivx {
+  font-size: 15px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 4px #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.currentUserContainer .personanameandstatus_statusAndName_tU62t {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 13px;
+}
+.currentUserContainer .personanameandstatus_richPresenceLabel_3JW4b {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .personanameandstatus_richPresenceContainer_1MA86 {
   margin-top: 2px;
+  align-self: stretch;
 }
-.friendPlayerLevel.lvl_0 {
-  border-color: #9b9b9b;
-}
-.friendPlayerLevel.lvl_10 {
-  border-color: #c02942;
-}
-.friendPlayerLevel.lvl_20 {
-  border-color: #d95b43;
-}
-.friendPlayerLevel.lvl_30 {
-  border-color: #fecc23;
-}
-.friendPlayerLevel.lvl_40 {
-  border-color: #467a3c;
-}
-.friendPlayerLevel.lvl_50 {
-  border-color: #4e8ddb;
-}
-.friendPlayerLevel.lvl_60 {
-  border-color: #7652c9;
-}
-.friendPlayerLevel.lvl_70 {
-  border-color: #c252c9;
-}
-.friendPlayerLevel.lvl_80 {
-  border-color: #542437;
-}
-.friendPlayerLevel.lvl_90 {
-  border-color: #997c52;
-}
-.friendPlayerLevel.lvl_100,
-.friendPlayerLevel.lvl_200,
-.friendPlayerLevel.lvl_300,
-.friendPlayerLevel.lvl_400,
-.friendPlayerLevel.lvl_500,
-.friendPlayerLevel.lvl_600,
-.friendPlayerLevel.lvl_700,
-.friendPlayerLevel.lvl_800,
-.friendPlayerLevel.lvl_900,
-.friendPlayerLevel.lvl_1000,
-.friendPlayerLevel.lvl_1100,
-.friendPlayerLevel.lvl_1200,
-.friendPlayerLevel.lvl_1300,
-.friendPlayerLevel.lvl_1400,
-.friendPlayerLevel.lvl_1500,
-.friendPlayerLevel.lvl_1600,
-.friendPlayerLevel.lvl_1700,
-.friendPlayerLevel.lvl_1800,
-.friendPlayerLevel.lvl_1900,
-.friendPlayerLevel.lvl_2000,
-.friendPlayerLevel.lvl_2100,
-.friendPlayerLevel.lvl_2200,
-.friendPlayerLevel.lvl_2300,
-.friendPlayerLevel.lvl_2400,
-.friendPlayerLevel.lvl_2500,
-.friendPlayerLevel.lvl_2600,
-.friendPlayerLevel.lvl_2700,
-.friendPlayerLevel.lvl_2800,
-.friendPlayerLevel.lvl_2900,
-.friendPlayerLevel.lvl_3000,
-.friendPlayerLevel.lvl_3100,
-.friendPlayerLevel.lvl_3200,
-.friendPlayerLevel.lvl_3300,
-.friendPlayerLevel.lvl_3400,
-.friendPlayerLevel.lvl_3500,
-.friendPlayerLevel.lvl_3600,
-.friendPlayerLevel.lvl_3700,
-.friendPlayerLevel.lvl_3800,
-.friendPlayerLevel.lvl_3900,
-.friendPlayerLevel.lvl_4000,
-.friendPlayerLevel.lvl_4100,
-.friendPlayerLevel.lvl_4200,
-.friendPlayerLevel.lvl_4300,
-.friendPlayerLevel.lvl_4400,
-.friendPlayerLevel.lvl_4500,
-.friendPlayerLevel.lvl_4600,
-.friendPlayerLevel.lvl_4700,
-.friendPlayerLevel.lvl_4800,
-.friendPlayerLevel.lvl_4900,
-.friendPlayerLevel.lvl_5000,
-.friendPlayerLevel.lvl_5100,
-.friendPlayerLevel.lvl_5200 {
-  border: none;
-  border-radius: 0;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.currentUserContainer
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_playerName_26Ivx {
   font-size: 14px;
-  height: 32px;
-  width: 32px;
-  line-height: 32px;
-  text-shadow: 1px 1px #1a1a1a;
+  margin-bottom: 0px;
 }
-.friendPlayerLevel.lvl_100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png");
+.currentUserContainer
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  line-height: initial;
 }
-.friendPlayerLevel.lvl_200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png");
+.currentUserContainer
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 12px;
 }
-.friendPlayerLevel.lvl_300 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_playerName_26Ivx,
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_playerNickname_1jHdU {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip;
 }
-.friendPlayerLevel.lvl_400 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_playerNickname_1jHdU {
+  color: #a2a6ac;
 }
-.friendPlayerLevel.lvl_500 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px;
 }
-.friendPlayerLevel.lvl_600 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-:not(.personanameandstatus_twoLine_2QEKA)
+  .personanameandstatus_richPresenceLabel_3JW4b:not(.personanameandstatus_gameName_14jAW) {
+  display: none;
 }
-.friendPlayerLevel.lvl_700 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .offline
+  .personanameandstatus_statusAndName_tU62t {
+  color: #ccc;
 }
-.friendPlayerLevel.lvl_800 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png");
+.ChatTabs
+  .personanameandstatus_compactView_7gBr-
+  .offline
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  color: #888;
 }
-.friendPlayerLevel.lvl_900 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png");
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  display: inline-block;
+  transition: color 0.94s ease-in-out;
+  text-shadow: 1px 1px 3px #000;
 }
-.friendPlayerLevel.lvl_1000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png");
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_7gBr-
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  margin-top: -4px;
+  margin-bottom: -2px;
 }
-.friendPlayerLevel.lvl_1100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png");
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  margin-top: 0px;
 }
-.friendPlayerLevel.lvl_1200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png");
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_compactView_7gBr-.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  margin-top: -4px;
+  margin-bottom: 0px;
 }
-.friendPlayerLevel.lvl_1300 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png");
+.titleBarContainer
+  .currentUserContainer
+  .personanameandstatus_richPresenceLabel_3JW4b:not(.personanameandstatus_gameName_14jAW) {
+  font-size: 10px;
+  margin-top: -1px;
+  margin-bottom: 1px;
 }
-.friendPlayerLevel.lvl_1400 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png");
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
 }
-.friendPlayerLevel.lvl_1500 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png");
+.singlewindow .currentUserContainer .personanameandstatus_statusAndName_tU62t {
+  margin-right: 4px;
 }
-.friendPlayerLevel.lvl_1600 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png");
+.singlewindow
+  .currentUserContainer
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_statusAndName_tU62t,
+.singlewindow .currentUserContainer .personanameandstatus_twoLine_2QEKA {
+  width: 100%;
 }
-.friendPlayerLevel.lvl_1700 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png");
+.needsUpdate
+  .currentUserContainer
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_statusAndName_tU62t {
+  margin-right: 48px;
 }
-.friendPlayerLevel.lvl_1800 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png");
+.friendRequests .bright .moMutualFriends .personanameandstatus_playerName_26Ivx,
+.friendRequests .personanameandstatus_playerName_26Ivx {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
 }
-.friendPlayerLevel.lvl_1900 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png");
+.friendRequests .noMutualFriends .personanameandstatus_playerName_26Ivx {
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
 }
-.friendPlayerLevel.lvl_2000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png?v=2");
+.MemberListColumn
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.MemberListColumn
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_playerNickname_1jHdU,
+.MemberListColumn
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_playerName_26Ivx {
+  text-overflow: clip;
+  transition-delay: 0.4s;
 }
-.friendPlayerLevel.lvl_2100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png?v=2");
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_richPresenceLabel_3JW4b,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_playerNickname_1jHdU,
+.MemberListColumn.MemberListViewCompact
+  .personanameandstatus_statusAndName_tU62t
+  .personanameandstatus_playerName_26Ivx {
+  text-overflow: clip;
+  transition-delay: 0s;
 }
-.friendPlayerLevel.lvl_2200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png?v=2");
+.groupMemberList .personanameandstatus_playerName_26Ivx,
+.groupMemberList .personanameandstatus_playerNickname_1jHdU {
+  font-size: 13px;
 }
-.friendPlayerLevel.lvl_2300 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png?v=2");
+.groupMemberList
+  .ingame
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px;
 }
-.friendPlayerLevel.lvl_2400 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png?v=2");
+.groupMemberList
+  .ingame.personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_gameName_14jAW.personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 12px;
+  margin-top: -1px;
 }
-.friendPlayerLevel.lvl_2500 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png?v=2");
+.groupMemberList
+  .personanameandstatus_twoLine_2QEKA
+  .personanameandstatus_richPresenceLabel_3JW4b {
+  font-size: 12px;
 }
-.friendPlayerLevel.lvl_2600 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png?v=2");
+.groupMemberList .personanameandstatus_richPresenceLabel_3JW4b {
+  line-height: 13px;
 }
-.friendPlayerLevel.lvl_2700 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png?v=2");
+.Dialog_RemotePlay .awayOrSnooze .personanameandstatus_statusAndName_tU62t {
+  margin-bottom: -10px;
 }
-.friendPlayerLevel.lvl_2800 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png?v=2");
+.Dialog_RemotePlay .ingame .personanameandstatus_playerName_26Ivx,
+.Dialog_RemotePlay .ingame .personanameandstatus_playerNickname_1jHdU {
+  margin-top: 0px;
+  width: 175px;
 }
-.friendPlayerLevel.lvl_2900 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png?v=2");
+.Dialog_RemotePlay .personanameandstatus_twoLine_2QEKA {
+  margin-top: -44px;
+  width: 175px;
 }
-.friendPlayerLevel.lvl_3000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_1-2.png?v=2");
+.Dialog_RemotePlay .ingame .personanameandstatus_richPresenceLabel_3JW4b {
+  margin-top: -15px;
+  width: 175px;
+  visibility: collapse;
 }
-.friendPlayerLevel.lvl_3100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_3-4.png?v=2");
+.personanameandstatus_gameIsPrivateIcon_2pNLD {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block;
 }
-.friendPlayerLevel.lvl_3200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_5-6.png?v=2");
+.personanameandstatus_gameIsPrivateIcon_2pNLD svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
 }
-.friendPlayerLevel.lvl_3300 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_7-8.png?v=2");
+.personanameandstatus_gameIsPrivateIcon_2pNLD svg line,
+.personanameandstatus_gameIsPrivateIcon_2pNLD svg path {
+  stroke: #6e8d50;
 }
-.friendPlayerLevel.lvl_3400 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_9-10.png?v=2");
+.personanameandstatus_PendingPersona_2Dg0A {
+  margin-top: -6px;
+  margin-left: 4px;
+  display: inline-block;
 }
-.friendPlayerLevel.lvl_3500 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_1-2.png?v=2");
-}
-.friendPlayerLevel.lvl_3600 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_3-4.png?v=2");
-}
-.friendPlayerLevel.lvl_3700 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_5-6.png?v=2");
-}
-.friendPlayerLevel.lvl_3800 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_7-8.png?v=2");
-}
-.friendPlayerLevel.lvl_3900 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_9-10.png?v=2");
-}
-.friendPlayerLevel.lvl_4000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_1.png?v=2");
-}
-.friendPlayerLevel.lvl_4100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_2.png?v=2");
-}
-.friendPlayerLevel.lvl_4200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_3.png?v=2");
-}
-.friendPlayerLevel.lvl_4300 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_4.png?v=2");
-}
-.friendPlayerLevel.lvl_4400 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_5.png?v=2");
-}
-.friendPlayerLevel.lvl_4500 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_1.png?v=2");
-}
-.friendPlayerLevel.lvl_4600 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_2.png?v=2");
-}
-.friendPlayerLevel.lvl_4700 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_3.png?v=2");
-}
-.friendPlayerLevel.lvl_4800 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_4.png?v=2");
-}
-.friendPlayerLevel.lvl_4900 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2");
-}
-.friendPlayerLevel.lvl_5000 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_1.png?v=2");
-}
-.friendPlayerLevel.lvl_5100 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_2.png?v=2");
-}
-.friendPlayerLevel.lvl_5200 {
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_halftone_3.png?v=2");
-}
-.friendPlayerLevel.lvl_plus_10 {
-  background-position: 0 -32px;
-}
-.friendPlayerLevel.lvl_plus_20 {
-  background-position: 0 -64px;
-}
-.friendPlayerLevel.lvl_plus_30 {
-  background-position: 0 -96px;
-}
-.friendPlayerLevel.lvl_plus_40 {
-  background-position: 0 -128px;
-}
-.friendPlayerLevel.lvl_plus_50 {
-  background-position: 0 -160px;
-}
-.friendPlayerLevel.lvl_plus_60 {
-  background-position: 0 -192px;
-}
-.friendPlayerLevel.lvl_plus_70 {
-  background-position: 0 -224px;
-}
-.friendPlayerLevel.lvl_plus_80 {
-  background-position: 0 -256px;
-}
-.friendPlayerLevel.lvl_plus_90 {
-  background-position: 0 -288px;
+.personanameandstatus_PendingPersona_2Dg0A svg {
+  height: 12px;
+  width: 12px;
 }
 .salequestdisplay_description_FbyVd {
   padding-left: 5em;
@@ -24508,15 +24375,477 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 3.5em 1em 3.5em;
+  padding: 1em 2em 1em 2em;
   color: #fff;
-  max-width: 670px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 .salerewardshelfdisplay_RewardContainer_31FTL {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2-ecD {
+  display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_16OLl {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_16OLl {
+  max-height: 230px;
+  margin-bottom: 0px;
+}
+.saledisplaylogo_SalePageLogoCtn_16OLl img {
+  width: 100%;
+}
+.BasicUI .saledisplaylogo_SalePageLogoCtn_16OLl img {
+  max-height: 230px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  .saledisplaylogo_SalePageLogoCtn_16OLl {
+    margin-bottom: 0px;
+  }
+}
+.debugmatchesdialog_DiscrepancyDialogRow_TDPfu {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+.debugmatchesdialog_DiscrepancyDialogRow_TDPfu:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_1862u {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.debugmatchesdialog_DiscrepancyDialogCell_2qHMu {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+.debugmatchesdialog_DiscrepancyDialogTooltip_1-9nG {
+  z-index: 2000;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX {
+  display: flex;
+  flex-direction: column;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU {
+  overflow-x: auto;
+  margin: 0 -16px 6px;
+  padding: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  -webkit-mask-image: linear-gradient(
+      to left,
+      transparent 2px,
+      black 16px,
+      black 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      to right,
+      transparent 2px,
+      black 16px,
+      black 50%,
+      transparent 51%
+    );
+  mask-image: linear-gradient(
+      to left,
+      transparent 2px,
+      black 16px,
+      black 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      to right,
+      transparent 2px,
+      black 16px,
+      black 50%,
+      transparent 51%
+    );
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff {
+  display: flex;
+  padding: 4px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+}
+html.responsive.touch
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff {
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop)
+    .saleitembrowser_SaleItemBrowserContainer_3KuFX
+    .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+    .saleitembrowser_SaleItemBrowserHeader_yupff {
+    flex-wrap: nowrap;
+  }
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff {
+  column-gap: 6px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc {
+  margin: 0 8px 4px;
+  padding: 4px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 13px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc:first-child {
+  margin-left: 0;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc:last-child {
+  margin-right: 0;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc.saleitembrowser_SelectedFlavor_iGDdY {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc.saleitembrowser_SelectedFlavor_iGDdY {
+  border-bottom: unset;
+  background-color: rgba(255, 255, 255, 0.32);
+  box-shadow: var(--gpShadow-Medium);
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+html.responsive.touch
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc {
+  margin: inherit 3px inherit;
+  letter-spacing: 0;
+  text-transform: initial;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop)
+    .saleitembrowser_SaleItemBrowserContainer_3KuFX
+    .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+    .saleitembrowser_SaleItemBrowserHeader_yupff
+    .saleitembrowser_FlavorLabel_1qNQc {
+    margin: inherit 3px inherit;
+    letter-spacing: 0;
+    text-transform: initial;
+  }
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc {
+  font: var(--gpText-BodyLarge);
+  color: #fff;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: var(--gpCorner-Medium);
+  margin: unset;
+  height: fit-content;
+  transition: all 0.2s ease;
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_FlavorLabel_1qNQc.gpfocus {
+  color: #000;
+  background-color: #fff;
+  box-shadow: var(--gpShadow-Medium);
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C {
+  height: 24px;
+  margin-left: auto;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  svg {
+  height: 24px;
+  margin: 0;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  .DialogInput {
+  padding: 2px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_Debug_nMmPS {
+  text-align: right;
+  margin-left: auto;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_Debug_nMmPS
+  svg {
+  height: 22px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_SaleItemBrowserHeaderContainer_17soU
+  .saleitembrowser_SaleItemBrowserHeader_yupff
+  .saleitembrowser_SuggestContainer_M0w-C
+  + .saleitembrowser_Debug_nMmPS {
+  margin-left: 8px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_EmptyResults_5dSsV {
+  text-align: center;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2.saleitembrowser_Loading_2qtMZ {
+  min-height: 500px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf {
+  border: none;
+  line-height: 32px;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 40%;
+  white-space: nowrap;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: unset;
+  border-radius: var(--gpCorner-Medium);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+}
+.saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_3KuFX
+  .saleitembrowser_ShowContentsContainer_3J8f2
+  .saleitembrowser_ShowContentsButton_15fEf:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.saleitembrowser_SuggestContainer_M0w-C {
+  display: flex;
+  flex-direction: row;
+}
+.saleitembrowser_SuggestContainer_M0w-C ._DialogLayout {
+  margin-bottom: 2px;
+}
+.saleitembrowser_SuggestContainer_M0w-C ._DialogLayout input {
+  font-size: 16px;
+}
+.saleitembrowser_SuggestContainer_M0w-C svg {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+}
+.BasicUI .saleitembrowser_SuggestContainer_M0w-C {
+  display: none;
+}
+.saleminigames_Ctn_2ioY9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+.saleminigames_DetailText_2YbOR {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #e6c32c;
+}
+.saleminigames_RewardText_1FpR6 {
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 0.8em;
+  color: #e6c32c;
+}
+.saleminigames_PostText_3ex1_ {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 0.8em;
+  color: #e6c32c;
+}
+.saleminigames_ImgFullBagde_1cZOq {
+  width: 80px;
+  height: 80px;
+}
+.SummerSale2022 .ModalPosition_TopBar {
+  height: 4px;
+  background: #fb5034;
+}
+.SummerSale2022 .DialogContent {
+  background: #2d3194;
+  box-shadow: 4px 4px 0px #2be742;
+}
+.SummerSale2022 .DialogContent .DialogHeader {
+  background: #fb5034;
+  color: #e7c42b;
+  box-shadow: 4px 4px 0px #e7c42b;
+  padding-left: 6px;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+.SummerSale2022 .DialogContent ._DialogColLayout {
+  padding-bottom: 4px;
+}
+.SummerSale2022 .DialogContent button.DialogButton {
+  background: #4247b4;
+  color: #dadee5;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.SummerSale2022 .DialogContent button.DialogButton.Primary {
+  background: #2be742;
+  color: #2d3194;
+  box-shadow: 4px 2px 0px #0097c9;
+  border-radius: 0px;
+}
+.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:hover,
+.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:active {
+  background: #2be742;
+  box-shadow: 4px 4px 0px #0097c9;
+  color: #0097c9;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.salesection_ShowContentsContainer_F0Ae3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+.salesection_ShowContentsContainer_F0Ae3 .salesection_ShowContentsButton_1CYNr {
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #222;
+  background: rgba(255, 255, 255, 0.7);
+}
+.BasicUI
+  .salesection_ShowContentsContainer_F0Ae3
+  .salesection_ShowContentsButton_1CYNr {
+  background: unset;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
+}
+.BasicUI
+  .salesection_ShowContentsContainer_F0Ae3
+  .salesection_ShowContentsButton_1CYNr.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+}
+.salesection_ShowContentsContainer_F0Ae3
+  .salesection_ShowContentsButton_1CYNr:hover {
+  color: #222;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.BasicUI
+  .salesection_ShowContentsContainer_F0Ae3
+  .salesection_ShowContentsButton_1CYNr:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: unset;
+}
+.salesection_FacetedBrowseLoadThrobber_3lO-5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .saleeventbbcodeparser_ErrorDiv_1RPzC {
   background-color: hotpink;
@@ -25801,6 +26130,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
 }
 .optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_MainCol_1Plts {
   width: 800px;
+  margin-bottom: 100px;
 }
 .optin_admin_editor_MainBody_3Qmgl .optin_admin_editor_RightCol_1hPMJ {
   width: 376px;
@@ -25850,7 +26180,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   max-width: 200px;
 }
 .optin_admin_editor_EditorInputPaneContents_1EuN8 {
-  width: 1200px;
+  width: 100%;
+  max-width: 1294px;
   margin: 0 auto;
   flex-grow: 2;
   padding-top: 20px;
@@ -27182,21 +27513,10 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_2EnQe {
   color: #9499a4;
   font-weight: normal;
 }
-.pricinggrid_CurrencyHeader_1kvIF .pricinggrid_Grabber_2IDjQ {
+.pricinggrid_CurrencyHeader_1kvIF .pricinggrid_CurrencyMore_MltPJ {
   position: absolute;
   top: 6px;
   right: 4px;
-  width: 20px;
-  transform: rotate(90deg);
-  fill: #9499a4;
-  display: none;
-}
-.pricinggrid_CurrencyHeader_1kvIF .pricinggrid_Grabber_2IDjQ:hover {
-  fill: #fff;
-  cursor: grab;
-}
-.pricinggrid_CurrencyHeader_1kvIF:hover .pricinggrid_Grabber_2IDjQ {
-  display: block;
 }
 .CompactMode .pricinggrid_CurrencyHeader_1kvIF .pricinggrid_CurrencyName_3ffEW {
   display: none;
@@ -27316,50 +27636,8 @@ div.pricinggrid_HoverToolTip_1OS2v {
   .DialogButton:hover {
   background: linear-gradient(to bottom right, #a4d007 0%, #8cb106 60%);
 }
-.guidelinespicker_PriceGuidelinesPicker_4Xo2k {
-  background-color: #515661;
-  height: 26px;
-  width: 22px;
-  box-sizing: border-box;
-  padding: 4px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-.guidelinespicker_PriceGuidelinesPicker_4Xo2k:hover {
-  background-color: #d3d3d3;
-}
-.CompactMode .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
-  width: 18px;
-  padding: 4px 2px;
-}
-.guidelinespicker_GuidelinesPanel_1vwM_ {
-  background-color: #34373d;
-  width: 350px;
-}
-.guidelinespicker_GuidelinesDescription_1tfKP {
-  padding: 8px 16px;
-}
-.guidelinespicker_GuidelinesGrid_3fwDv {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding: 4px;
-  gap: 4px;
-}
-.guidelinespicker_GridElement_2x-S8 {
-  box-sizing: border-box;
-  padding: 3px 6px;
-  width: 100%;
-  text-align: right;
-  background-color: #444850;
-}
-.guidelinespicker_GridElement_2x-S8.guidelinespicker_CurrentPrice_2Addn {
-  color: #fff;
-  background-color: #222;
-}
-.guidelinespicker_GridElement_2x-S8:hover {
-  background-color: #656b76;
-  color: #fff;
-  cursor: pointer;
+.pricinggrid_ProposalState_2YxpI .pricinggrid_PackageMore_2lozM {
+  margin-left: auto;
 }
 .pricinggridcell_PriceCell_1sKIc {
   display: flex;
@@ -27538,6 +27816,62 @@ div.pricinggrid_HoverToolTip_1OS2v {
 div.pricinggridcell_HoverToolTip_36qS7 {
   z-index: 2000;
 }
+.guidelinespicker_PriceGuidelinesPicker_4Xo2k {
+  background-color: #515661;
+  height: 26px;
+  width: 22px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.guidelinespicker_PriceGuidelinesPicker_4Xo2k:hover {
+  background-color: #d3d3d3;
+}
+.CompactMode .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
+  width: 18px;
+  padding: 4px 2px;
+}
+.guidelinespicker_GuidelinesPanel_1vwM_ {
+  background-color: #34373d;
+  width: 350px;
+}
+.guidelinespicker_GuidelinesDescription_1tfKP {
+  padding: 8px 16px;
+}
+.guidelinespicker_GuidelinesGrid_3fwDv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 4px;
+  gap: 4px;
+}
+.guidelinespicker_GridElement_2x-S8 {
+  box-sizing: border-box;
+  padding: 3px 6px;
+  width: 100%;
+  text-align: right;
+  background-color: #444850;
+}
+.guidelinespicker_GridElement_2x-S8.guidelinespicker_CurrentPrice_2Addn {
+  color: #fff;
+  background-color: #222;
+}
+.guidelinespicker_GridElement_2x-S8:hover {
+  background-color: #656b76;
+  color: #fff;
+  cursor: pointer;
+}
+.pricingcomponents_MoreDots_2YpW8 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4b505c;
+  fill: #9499a4;
+}
+.pricingcomponents_MoreDots_2YpW8:hover {
+  fill: #fff;
+  cursor: pointer;
+}
 .saveprices_ToolbarCtn_3lAEz {
   position: fixed;
   bottom: 0;
@@ -27683,7 +28017,13 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   margin-bottom: 0;
 }
 .saveprices_AutoPublishCheckBox_2tKL7 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   padding-top: 16px;
+}
+.saveprices_RadioButtons_3lsh2 {
+  line-height: 24px;
 }
 .saveprices_PublishError_k_qc0 {
   padding: 16px 0px;
@@ -27691,10 +28031,28 @@ div.pricinggridcell_HoverToolTip_36qS7 {
 }
 .saveprices_PublishWarning_3uUgr {
   padding: 16px;
-  color: #ff9100;
+  color: #ff9110;
 }
 div.saveprices_HoverToolTip_1yXHp {
   z-index: 2000;
+}
+.saveprices_PriceChangeSaveWarning_2lTJ7 {
+  display: flex;
+  margin-top: 10px;
+  color: #ff9110;
+  font-size: 12px;
+}
+.saveprices_PriceChangeSaveWarning_2lTJ7
+  .saveprices_PriceChangeSaveWarningArrow_B3-IB {
+  width: 25px;
+  margin-right: 4px;
+  align-self: center;
+}
+.saveprices_PriceChangeSaveWarning_2lTJ7
+  .saveprices_PriceChangeSaveWarningArrow_B3-IB
+  svg
+  polyline {
+  stroke: #ff9110;
 }
 .pricingimportexport_Instructions_2A9me {
   padding-top: 8px;

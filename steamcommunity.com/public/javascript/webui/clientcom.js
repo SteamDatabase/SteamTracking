@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7355465";
+var CLSTAMP = "7368079";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -124,10 +124,10 @@ var CLSTAMP = "7355465";
         return S;
       }),
       n.d(t, "g", function () {
-        return E;
+        return p;
       }),
       n.d(t, "i", function () {
-        return p;
+        return E;
       }),
       n.d(t, "h", function () {
         return m;
@@ -153,8 +153,8 @@ var CLSTAMP = "7355465";
       l = 330050,
       d = 358510,
       S = 366490,
-      E = "18446744073709551615",
-      p = 0,
+      p = "18446744073709551615",
+      E = 0,
       m = 2147483647;
     function f(e, t = "en") {
       switch (e) {
@@ -356,7 +356,7 @@ var CLSTAMP = "7355465";
           return t;
       }
     }
-    var C, R, T, k, b, N, O;
+    var C, R, k, T, b, N, O;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -400,7 +400,7 @@ var CLSTAMP = "7355465";
             "k_ESuspendResumeProgressState_WaitingForApp"),
           (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
             "k_ESuspendResumeProgressState_Working");
-      })(T || (T = {})),
+      })(k || (k = {})),
       (function (e) {
         (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
           "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -410,7 +410,7 @@ var CLSTAMP = "7355465";
             "k_EFloatingGamepadTextInputModeModeEmail"),
           (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
             "k_EFloatingGamepadTextInputModeModeNumeric");
-      })(k || (k = {})),
+      })(T || (T = {})),
       (function (e) {
         (e[(e.k_EAppUpdateContentType_Content = 0)] =
           "k_EAppUpdateContentType_Content"),
@@ -459,7 +459,7 @@ var CLSTAMP = "7355465";
         return S;
       }),
       n.d(t, "h", function () {
-        return p;
+        return E;
       }),
       n.d(t, "i", function () {
         return m;
@@ -510,10 +510,10 @@ var CLSTAMP = "7355465";
         IN_CHROMEOS: !1,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
-        COMMUNITY_WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
         PAGE_TIMESTAMP: 0,
+        FROM_WEB: !1,
         get SESSIONID() {
           return (function () {
             if (!Object(o.a)()) return _ || (_ = l()), _;
@@ -583,21 +583,21 @@ var CLSTAMP = "7355465";
     }
     function S(e = "webui_config") {
       const t = {},
-        n = p("config", e);
+        n = E("config", e);
       n && (delete n.SESSIONID, Object.assign(i, n), (t.config = !0));
-      const r = p("userinfo", e);
+      const r = E("userinfo", e);
       r &&
         (Object.assign(s, r),
         (t.userConfig = !0),
         s.is_support && d() && (s.is_support = !1));
-      const o = p("broadcast", e);
+      const o = E("broadcast", e);
       o && (Object.assign(a, o), (t.broadcastConfig = !0));
-      const _ = p("community", e);
+      const _ = E("community", e);
       _ && (Object.assign(c, _), (t.communityConfig = !0));
-      const l = p("event", e);
+      const l = E("event", e);
       return l && (Object.assign(u, l), (t.eventConfig = !0)), t;
     }
-    function E(e, t = "webui_config", n) {
+    function p(e, t = "webui_config", n) {
       let r;
       if (
         ((r =
@@ -620,11 +620,11 @@ var CLSTAMP = "7355465";
         }
       else n && console.error("Missing config element #", t);
     }
-    function p(e, t = "webui_config") {
-      return E(e, t, !0);
+    function E(e, t = "webui_config") {
+      return p(e, t, !0);
     }
     function m(e, t = "webui_config") {
-      return E(e, t, !1);
+      return p(e, t, !1);
     }
     function f(e, t) {
       return 0 != t.length && e.startsWith(t);

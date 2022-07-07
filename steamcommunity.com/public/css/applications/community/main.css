@@ -954,6 +954,8 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   overflow-y: overlay;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   white-space: normal;
@@ -978,6 +980,9 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_Active_2DpXj {
   color: #fff;
   cursor: default;
+}
+.pagedsettings_PageListSpacer_3HW2U {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
@@ -2161,11 +2166,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   justify-content: space-between;
 }
 .gamepadslider_SliderNotch_LYPXt {
+  width: 24px;
+  min-width: 24px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   align-items: center;
-  min-width: 24px;
+}
+.gamepadslider_SliderNotch_LYPXt.gamepadslider_AlignToEnds_VvfcC {
+  flex-grow: 1;
 }
 .gamepadslider_SliderNotchLabel_dbACW {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2177,6 +2186,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   padding-top: 5px;
   width: fit-content;
   text-align: center;
+}
+.gamepadslider_SliderNotchLabel_dbACW.gamepadslider_AlignToLeft_3jR_d {
+  text-align: left;
+  margin-right: auto;
+}
+.gamepadslider_SliderNotchLabel_dbACW.gamepadslider_AlignToRight_OBP79 {
+  text-align: right;
+  margin-left: auto;
 }
 .gamepadslider_SliderNotchTick_u8QEa {
   width: 4px;
@@ -2622,10 +2639,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz {
   line-height: 16px;
   white-space: nowrap;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
 }
@@ -2698,6 +2718,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 1px;
   background: #3d4450;
   margin: 8px calc(12px + 1.4vw);
+  flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_ZjHHX {
   background: #0e141b;

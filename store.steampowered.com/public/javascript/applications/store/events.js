@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [33],
+  [34],
   {
     "2+/j": function (e, t, a) {
       e.exports = {
@@ -662,22 +662,22 @@
           Promise.all([
             a.e(1),
             a.e(13),
-            a.e(18),
+            a.e(20),
             a.e(0),
             a.e(2),
             a.e(3),
-            a.e(5),
-            a.e(6),
             a.e(4),
-            a.e(7),
+            a.e(6),
+            a.e(5),
             a.e(10),
             a.e(9),
+            a.e(7),
             a.e(8),
-            a.e(11),
             a.e(12),
+            a.e(11),
             a.e(14),
-            a.e(16),
-            a.e(21),
+            a.e(17),
+            a.e(22),
             a.e(28),
           ]).then(a.bind(null, "3fR/"))
         ),
@@ -696,16 +696,16 @@
             } = e,
             _ = t.appid,
             p = t.clanSteamID.GetAccountID(),
-            [v] = Object(B.b)(_, {
+            [v, b] = Object(B.b)(_, {
               include_assets: !0,
               include_platforms: !0,
               include_basic_info: !0,
               include_release: !0,
             }),
-            [b, g] = Object(E.b)(p);
+            [g, S] = Object(E.b)(p);
           if (
             (r.useEffect(() => window.scrollTo(0, 0), [_, p]),
-            !t.bLoaded || !g || (_ && !v))
+            !t.bLoaded || !S || (_ && !v && 2 !== b))
           )
             return r.createElement(
               "div",
@@ -715,8 +715,8 @@
                 string: Object(Q.g)("#Loading"),
               })
             );
-          let S = t.GetDescriptionWithFallback(a);
-          const w = Object(y.d)(t, y.a.k_eStoreNewsHub, "allowRelative");
+          let w = t.GetDescriptionWithFallback(a);
+          const O = Object(y.d)(t, y.a.k_eStoreNewsHub, "allowRelative");
           return r.createElement(_e, {
             event: t,
             lang: a,
@@ -740,9 +740,9 @@
                     {
                       name: Object(Q.g)(
                         "#BreadCrumbs_GameEvents",
-                        (null == v ? void 0 : v.GetName()) || g.group_name
+                        (null == v ? void 0 : v.GetName()) || S.group_name
                       ),
-                      url: w,
+                      url: O,
                     },
                   ],
                 }),
@@ -806,7 +806,7 @@
                         ),
                       },
                       r.createElement(U.a, {
-                        text: S || "",
+                        text: w || "",
                         partnerEventStore: n,
                         showErrorInfo: c,
                         event: t,
