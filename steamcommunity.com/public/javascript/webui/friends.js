@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7374450";
+var CLSTAMP = "7376023";
 !(function (e) {
   function t(t) {
     for (
@@ -42192,21 +42192,24 @@ var CLSTAMP = "7374450";
           ),
           this.m_mapChatBrowserContexts.delete(e.m_unPID));
       }
+      get SuppressBrowserContextBroadcasting() {
+        return !!i.a.IN_CHROMEOS || this.m_bSuppressBrowserContextBroadcasting;
+      }
       SetSuppressBrowserContextBroadcasting(e) {
         this.m_bSuppressBrowserContextBroadcasting = e;
       }
       BroadcastNewTabToAllBrowserContexts(e, t) {
-        this.m_bSuppressBrowserContextBroadcasting ||
-          ((this.m_bSuppressBrowserContextBroadcasting = !0),
+        this.SuppressBrowserContextBroadcasting ||
+          (this.SetSuppressBrowserContextBroadcasting(!0),
           this.m_mapChatBrowserContexts.forEach((n) => {
             if (Object(s.b)(n.browser_context, e)) return;
             let a = n.browser_context != s.a;
             this.ShowAndOrActivateTabByID(n.browser_context, t, a);
           }),
-          (this.m_bSuppressBrowserContextBroadcasting = !1));
+          this.SetSuppressBrowserContextBroadcasting(!1));
       }
       BroadcastCloseTabToAllBrowserContexts(e, t) {
-        if (this.m_bSuppressBrowserContextBroadcasting) return;
+        if (this.SuppressBrowserContextBroadcasting) return;
         if (Object(s.b)(e, s.a))
           return void this.BroadcastCloseTabToAllBrowserContexts_Internal(e, t);
         let n = this.m_mapChatBrowserContexts.get(e.m_unPID);
@@ -42215,13 +42218,13 @@ var CLSTAMP = "7374450";
           this.BroadcastCloseTabToAllBrowserContexts_Internal(e, t);
       }
       BroadcastCloseTabToAllBrowserContexts_Internal(e, t) {
-        this.m_bSuppressBrowserContextBroadcasting ||
-          ((this.m_bSuppressBrowserContextBroadcasting = !0),
+        this.SuppressBrowserContextBroadcasting ||
+          (this.SetSuppressBrowserContextBroadcasting(!0),
           this.m_mapChatBrowserContexts.forEach((n) => {
             Object(s.b)(n.browser_context, e) ||
               this.CloseTabByIDInContext(n.browser_context, t);
           }),
-          (this.m_bSuppressBrowserContextBroadcasting = !1));
+          this.SetSuppressBrowserContextBroadcasting(!1));
       }
       CreateNewTabFromUniqueID(e, t, n, a = !1) {
         let i = s.f.CreateNewTabFromUniqueID(e, t, this.m_bRestoringPopups, a);
