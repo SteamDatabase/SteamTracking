@@ -528,7 +528,7 @@
     "PackageGrid_PackageTypeFilterInputPrompt": "ALL",
     "PricingDashboard_Title": "Pricing Tool",
     "PricingDashboard_LoadingPackagesWithCount": "Loading %1$s packages",
-    "PricingDashboard_Error_CouldNotLoadPackages": "ERROR: Could not load packages and apps",
+    "PricingDashboard_Error_NoPackages": "We couldn't find any packages for your publisher that you have the permission to edit",
     "PricingDashboard_DocumentationButton": "Documentation",
     "PricingDashboard_ContactUsButton": "Contact Us",
     "PricingDashboard_ApplyGuidelinesDialog_Button": "Recommended Prices...",

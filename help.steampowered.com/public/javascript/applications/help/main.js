@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7368019";
+var CLSTAMP = "7374415";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [60],
   {
@@ -38559,6 +38559,12 @@ var CLSTAMP = "7368019";
                   },
                   remember_login: { n: 5, br: b.d.readBool, bw: b.h.writeBool },
                   platform_type: { n: 6, br: b.d.readEnum, bw: b.h.writeEnum },
+                  persistence: {
+                    n: 7,
+                    d: 1,
+                    br: b.d.readEnum,
+                    bw: b.h.writeEnum,
+                  },
                 },
               }),
             su.sm_m
@@ -39668,7 +39674,8 @@ var CLSTAMP = "7368019";
                 r.Body().set_encryption_timestamp(e.timestamp),
                 r.Body().set_remember_login(!!i),
                 r.Body().set_platform_type(this.m_ePlatformType),
-                r.Body().set_device_friendly_name(window.navigator.userAgent);
+                r.Body().set_device_friendly_name(window.navigator.userAgent),
+                r.Body().set_persistence(i ? 1 : 0);
               const c = yield Kd.BeginAuthSessionViaCredentials(
                 this.m_transport,
                 r
@@ -40146,7 +40153,7 @@ var CLSTAMP = "7368019";
           platform: r,
           disableQR: i,
           autoFocus: a,
-          renderSuccess: s = () => f.a.createElement(gm, null),
+          renderSuccess: s = () => f.a.createElement(fm, null),
         } = e;
         var o = ({ bSuccess: e, strRefreshToken: t, strAccessToken: r }) => {
           e && n({ strRefreshToken: t, strAccessToken: r });
@@ -40185,7 +40192,11 @@ var CLSTAMP = "7368019";
             "div",
             { className: zu.a.SideBySide },
             f.a.createElement(Gu, {
-              onSubmit: ({ strAccountName: e, strPassword: t }) => m(e, t),
+              onSubmit: ({
+                strAccountName: e,
+                strPassword: t,
+                bRememberMe: r,
+              }) => m(e, t, r),
               status: c,
               autoFocus: a,
             }),
@@ -40209,7 +40220,7 @@ var CLSTAMP = "7368019";
                   })
                 ),
                 f.a.createElement(
-                  cm,
+                  dm,
                   { href: `${M.c.STORE_BASE_URL}mobile`, align: "center" },
                   Object(Rr.e)("#Login_GetMobileApp_Link")
                 )
@@ -40217,7 +40228,7 @@ var CLSTAMP = "7368019";
           );
           if (e)
             return f.a.createElement(
-              dm,
+              mm,
               { gap: 36, className: zu.a.EmbeddedRoot },
               f.a.createElement(
                 "div",
@@ -40226,14 +40237,14 @@ var CLSTAMP = "7368019";
                 },
                 "QR code functionality is currently limited to play testers with the updated app. Inquire in the mobile slack channel."
               ),
-              f.a.createElement(_m, { className: zu.a.HeaderLogo }),
+              f.a.createElement(Mm, { className: zu.a.HeaderLogo }),
               f.a.createElement(Pu, null),
               o,
               f.a.createElement(
                 "div",
                 { className: zu.a.EmbeddedRootFooter },
                 f.a.createElement(
-                  cm,
+                  dm,
                   {
                     href: `${
                       M.c.HELP_BASE_URL
@@ -40252,7 +40263,7 @@ var CLSTAMP = "7368019";
                     Object(Rr.e)("#Login_NoSteamAccount")
                   ),
                   f.a.createElement(
-                    cm,
+                    dm,
                     { inline: !0, href: `${M.c.STORE_BASE_URL}join/` },
                     Object(Rr.e)("#Login_CreateAccount")
                   )
@@ -40275,17 +40286,17 @@ var CLSTAMP = "7368019";
             ),
             f.a.createElement(Pu, null)
           );
-          return f.a.createElement(bm, { title: e }, o, !1);
+          return f.a.createElement(gm, { title: e }, o, !1);
         }
         switch (c) {
           case 1:
           case 9:
-            return f.a.createElement($u, null);
+            return f.a.createElement(Zu, null);
           case 5:
           case 8:
           case 3:
           case 7:
-            return f.a.createElement(em, {
+            return f.a.createElement(rm, {
               type: 5 === c || 8 === c ? "mobile" : "email",
               onSubmitCode: h,
               status: c,
@@ -40295,21 +40306,21 @@ var CLSTAMP = "7368019";
             });
           case 6:
           case 4:
-            return f.a.createElement(om, {
+            return f.a.createElement(lm, {
               type: 6 === c ? "mobile" : "email",
               accountName: u,
               onUseCodeOverride: _,
             });
           case 12:
-            return f.a.createElement(Zu, { reset: p });
+            return f.a.createElement(tm, { reset: p });
           case 11:
-            return f.a.createElement(Ju, { reset: p, failure: l });
+            return f.a.createElement(em, { reset: p, failure: l });
           case 10:
-            return f.a.createElement(bm, { compact: !0 }, s());
+            return f.a.createElement(gm, { compact: !0 }, s());
           default:
             return (
               console.error(`Unknown Phase: ${c}`),
-              f.a.createElement(Ju, { reset: p, failure: Qd.Generic })
+              f.a.createElement(em, { reset: p, failure: Qd.Generic })
             );
         }
       }
@@ -40333,30 +40344,30 @@ var CLSTAMP = "7368019";
         const { onSubmit: t, status: r, autoFocus: n } = e,
           [i, a] = Object(y.useState)(""),
           [s, o] = Object(y.useState)(""),
-          [c] = Object(y.useState)(!1),
-          [l, d] = Object(y.useState)(!1);
-        var u = Fu(),
-          m = 2 === r && !l,
-          e = m
+          [c, l] = Object(y.useState)(!1),
+          [d, u] = Object(y.useState)(!1);
+        var m = Fu(),
+          p = 2 === r && !d,
+          e = p
             ? f.a.createElement(
-                Yu,
+                Ju,
                 null,
                 Object(Rr.e)("#Login_CheckCredentials")
               )
-            : f.a.createElement(Yu, null, " ");
+            : f.a.createElement(Ju, null, " ");
         return f.a.createElement(
-          lm,
+          um,
           {
             onSubmit: () => {
-              l &&
+              d &&
                 t({ strAccountName: i, strPassword: s, bRememberMe: c }).then(
-                  () => d(!1)
+                  () => u(!1)
                 );
             },
             className: zu.a.LoginForm,
           },
           f.a.createElement(xu, {
-            tone: m ? "danger" : void 0,
+            tone: p ? "danger" : void 0,
             label: f.a.createElement(
               Uu,
               { highlight: !0 },
@@ -40364,24 +40375,29 @@ var CLSTAMP = "7368019";
             ),
             value: i,
             onChange: (e) => {
-              d(!0), a(e);
+              u(!0), a(e);
             },
             autoFocus: n,
           }),
           f.a.createElement(xu, {
-            tone: m ? "danger" : void 0,
+            tone: p ? "danger" : void 0,
             label: f.a.createElement(Uu, null, Object(Rr.e)("#Login_Password")),
             value: s,
             onChange: (e) => {
-              d(!0), o(e);
+              u(!0), o(e);
             },
             type: "password",
           }),
-          f.a.createElement(Vu, null),
+          f.a.createElement(Vu, {
+            label: Object(Rr.e)("#Login_RememberMe_Short"),
+            value: c,
+            onChange: l,
+          }),
+          f.a.createElement(Qu, null),
           e,
-          !u &&
+          !m &&
             f.a.createElement(
-              cm,
+              dm,
               {
                 href: `${
                   M.c.HELP_BASE_URL
@@ -40439,38 +40455,55 @@ var CLSTAMP = "7368019";
           t
         );
       }
-      function Vu() {
+      function Vu(e) {
+        const { label: t, onChange: r, value: n } = e;
         return f.a.createElement(
           "div",
-          { className: zu.a.SignInButtonContainer },
-          f.a.createElement(Ku, null, Object(Rr.e)("#Login_SignIn"))
+          { className: zu.a.CheckboxField, onClick: () => r(!n) },
+          f.a.createElement(Ku, { value: n }),
+          f.a.createElement("div", { className: zu.a.CheckboxFieldLabel }, t)
         );
       }
       function Ku(e) {
-        return f.a.createElement(Qu, Object.assign({ type: "submit" }, e));
+        const { value: t, onChange: r } = e;
+        return f.a.createElement(
+          "div",
+          { className: zu.a.Checkbox, onClick: () => r && r(!t) },
+          t && f.a.createElement("div", { className: zu.a.Check })
+        );
       }
-      function Qu(e) {
+      function Qu() {
+        return f.a.createElement(
+          "div",
+          { className: zu.a.SignInButtonContainer },
+          f.a.createElement(Yu, null, Object(Rr.e)("#Login_SignIn"))
+        );
+      }
+      function Yu(e) {
+        return f.a.createElement($u, Object.assign({ type: "submit" }, e));
+      }
+      function $u(e) {
         return f.a.createElement(
           "button",
           Object.assign({ className: zu.a.SubmitButton }, e)
         );
       }
-      function Yu(e) {
+      function Ju(e) {
         e = e.children || " ";
         return f.a.createElement("div", { className: zu.a.FormError }, e);
       }
-      function $u() {
+      function Zu() {
         return f.a.createElement(
-          bm,
+          gm,
           { compact: !0 },
           f.a.createElement(
-            dm,
+            mm,
             { alignItems: "center" },
             f.a.createElement(rc, null)
           )
         );
       }
-      function Ju(e) {
+      function em(e) {
         var { reset: t, failure: r } = e,
           { title: e, description: r } = (function (e) {
             switch (e) {
@@ -40490,18 +40523,18 @@ var CLSTAMP = "7368019";
             }
           })(r);
         return f.a.createElement(
-          bm,
+          gm,
           { compact: !0 },
           f.a.createElement(
-            dm,
+            mm,
             { alignItems: "center", gap: 12 },
             f.a.createElement("div", { className: zu.a.FailureTitle }, e),
             f.a.createElement("div", { className: zu.a.FailureDescription }, r),
-            f.a.createElement(Qu, { onClick: t }, Object(Rr.e)("#Button_Back"))
+            f.a.createElement($u, { onClick: t }, Object(Rr.e)("#Button_Back"))
           )
         );
       }
-      function Zu(e) {
+      function tm(e) {
         var e = e["reset"];
         return f.a.createElement(
           f.a.Fragment,
@@ -40510,7 +40543,7 @@ var CLSTAMP = "7368019";
           f.a.createElement("button", { onClick: e }, "Reset")
         );
       }
-      function em(e) {
+      function rm(e) {
         const {
             type: t,
             onSubmitCode: r,
@@ -40531,7 +40564,7 @@ var CLSTAMP = "7368019";
         }, [d]);
         var e = !c && (8 === n || 7 === n),
           b = f.a.createElement(
-            cm,
+            dm,
             {
               href: `${M.c.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`,
               align: "center",
@@ -40539,32 +40572,32 @@ var CLSTAMP = "7368019";
             Object(Rr.e)("#Login_Help_AccessMobileApp")
           );
         return f.a.createElement(
-          bm,
+          gm,
           {
             title: Object(Rr.e)("#Login_Title_SteamGuard"),
             bottom: b,
             compact: !0,
           },
           f.a.createElement(
-            lm,
+            um,
             { onSubmit: h },
             f.a.createElement(
-              dm,
+              mm,
               { alignItems: "center", gap: 20 },
-              f.a.createElement(nm, { type: t, accountName: i }),
+              f.a.createElement(am, { type: t, accountName: i }),
               f.a.createElement(
-                dm,
+                mm,
                 { gap: 12, alignItems: "center" },
                 f.a.createElement(
-                  dm,
+                  mm,
                   { alignItems: "center", gap: 2 },
                   e &&
                     f.a.createElement(
-                      Yu,
+                      Ju,
                       null,
                       Object(Rr.e)("#Login_IncorrectSteamGuard")
                     ),
-                  f.a.createElement(mm, {
+                  f.a.createElement(hm, {
                     value: s,
                     onChange: (e) => {
                       c || l(!0), o(e);
@@ -40576,21 +40609,21 @@ var CLSTAMP = "7368019";
                   })
                 ),
                 f.a.createElement(
-                  Ku,
+                  Yu,
                   { disabled: !p },
                   Object(Rr.e)("#Button_Go")
                 )
               ),
               "mobile" === t
-                ? f.a.createElement(tm, null)
-                : f.a.createElement(rm, { emailAddress: a })
+                ? f.a.createElement(nm, null)
+                : f.a.createElement(im, { emailAddress: a })
             )
           )
         );
       }
-      function tm() {
+      function nm() {
         return f.a.createElement(
-          um,
+          pm,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
@@ -40601,19 +40634,19 @@ var CLSTAMP = "7368019";
             { className: zu.a.EnterCodeFromMobile },
             Object(Rr.e)("#Login_EnterMobileCode")
           ),
-          f.a.createElement(am, { className: zu.a.AwaitingMobileConfIcon })
+          f.a.createElement(om, { className: zu.a.AwaitingMobileConfIcon })
         );
       }
-      function rm(e) {
+      function im(e) {
         return f.a.createElement(
-          um,
+          pm,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
             className: zu.a.EnterCodeFromEmailContainer,
           },
           f.a.createElement(
-            hm,
+            _m,
             { align: "center", spacing: 6 },
             f.a.createElement(
               "div",
@@ -40628,10 +40661,10 @@ var CLSTAMP = "7368019";
               )
             )
           ),
-          f.a.createElement(sm, { className: zu.a.AwaitingMobileConfIcon })
+          f.a.createElement(cm, { className: zu.a.AwaitingMobileConfIcon })
         );
       }
-      function nm(e) {
+      function am(e) {
         var { accountName: t, type: r } = e,
           e =
             "mobile" === r
@@ -40652,19 +40685,19 @@ var CLSTAMP = "7368019";
           !r && f.a.createElement("div", { className: zu.a.Description }, e)
         );
       }
-      function im() {
+      function sm() {
         return f.a.createElement(
-          dm,
+          mm,
           { gap: 10, alignItems: "center" },
           f.a.createElement(
             "div",
             { className: zu.a.AwaitingMobileConfText },
             Object(Rr.e)("#Login_AwaitingMobileConfirmation")
           ),
-          f.a.createElement(am, { className: zu.a.AwaitingMobileConfIcon })
+          f.a.createElement(om, { className: zu.a.AwaitingMobileConfIcon })
         );
       }
-      function am(e) {
+      function om(e) {
         return f.a.createElement(
           "svg",
           { viewBox: "0 0 55 49", fill: "none", className: e.className },
@@ -40674,7 +40707,7 @@ var CLSTAMP = "7368019";
           })
         );
       }
-      function sm(e) {
+      function cm(e) {
         return f.a.createElement(
           "svg",
           { viewBox: "0 0 58 56", fill: "none", className: e.className },
@@ -40684,11 +40717,11 @@ var CLSTAMP = "7368019";
           })
         );
       }
-      function om(e) {
+      function lm(e) {
         var { type: t, accountName: r, onUseCodeOverride: n } = e,
           i = Fu(),
           e = f.a.createElement(
-            cm,
+            dm,
             {
               align: "center",
               href: `${M.c.HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402`,
@@ -40700,7 +40733,7 @@ var CLSTAMP = "7368019";
                 "div",
                 { style: { paddingBottom: "20px" } },
                 f.a.createElement(
-                  cm,
+                  dm,
                   { align: "center", onClick: n },
                   Object(Rr.e)("#Login_EnterCodeInstead")
                 )
@@ -40711,22 +40744,22 @@ var CLSTAMP = "7368019";
                 Object(Rr.e)("#Login_EnterCodeInstead")
               );
         return f.a.createElement(
-          bm,
+          gm,
           {
             title: Object(Rr.e)("#Login_Title_SteamGuard"),
             bottom: e,
             compact: !0,
           },
           f.a.createElement(
-            dm,
+            mm,
             { gap: 40 },
-            f.a.createElement(nm, { type: t, accountName: r }),
-            f.a.createElement(im, null),
+            f.a.createElement(am, { type: t, accountName: r }),
+            f.a.createElement(sm, null),
             n
           )
         );
       }
-      function cm(e) {
+      function dm(e) {
         var { children: t, align: r, inline: n } = e,
           r = me(zu.a.TextLink, "center" === r && zu.a.TextAlignCenter);
         return "href" in e
@@ -40737,7 +40770,7 @@ var CLSTAMP = "7368019";
               t
             );
       }
-      function lm(e) {
+      function um(e) {
         const { onSubmit: t, children: r, className: n } = e;
         return f.a.createElement(
           "form",
@@ -40745,7 +40778,7 @@ var CLSTAMP = "7368019";
           r
         );
       }
-      function dm(e) {
+      function mm(e) {
         var {
             alignItems: t,
             justifyContent: r,
@@ -40768,7 +40801,7 @@ var CLSTAMP = "7368019";
           e
         );
       }
-      function um(e) {
+      function pm(e) {
         var { children: t, justifyContent: r, alignItems: n, className: e } = e;
         return f.a.createElement(
           "div",
@@ -40784,9 +40817,9 @@ var CLSTAMP = "7368019";
           t
         );
       }
-      function mm(e) {
+      function hm(e) {
         const { value: t, onChange: r, onPaste: n, tone: i } = e;
-        return f.a.createElement(pm, {
+        return f.a.createElement(bm, {
           length: 5,
           value: t,
           onChange: (e) => {
@@ -40797,7 +40830,7 @@ var CLSTAMP = "7368019";
           autoFocus: !0,
         });
       }
-      function pm(e) {
+      function bm(e) {
         const {
             length: r,
             value: n,
@@ -40880,10 +40913,10 @@ var CLSTAMP = "7368019";
           p
         );
       }
-      function hm(e) {
+      function _m(e) {
         const { children: t, spacing: r = 0, align: n } = e;
         return f.a.createElement(
-          dm,
+          mm,
           { alignItems: n },
           f.a.Children.map(t, (e, t) =>
             e
@@ -40896,11 +40929,11 @@ var CLSTAMP = "7368019";
           ).filter(Boolean)
         );
       }
-      function bm(e) {
+      function gm(e) {
         var { title: t, children: r, bottom: n, compact: i } = e,
           e = Fu();
         return f.a.createElement(
-          dm,
+          mm,
           {
             gap: 32,
             className: me(
@@ -40916,7 +40949,7 @@ var CLSTAMP = "7368019";
           n
         );
       }
-      function _m(e) {
+      function Mm(e) {
         return f.a.createElement(
           "svg",
           {
@@ -40963,14 +40996,14 @@ var CLSTAMP = "7368019";
           })
         );
       }
-      function gm() {
+      function fm() {
         return f.a.createElement(
-          dm,
+          mm,
           { alignItems: "center", justifyContent: "center" },
           f.a.createElement(rc, null)
         );
       }
-      function Mm(e) {
+      function vm(e) {
         const { redirectUrl: t = M.c.HELP_BASE_URL } = e;
         var [e] = Object(y.useState)(
           new ae(M.c.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -40983,7 +41016,7 @@ var CLSTAMP = "7368019";
           redirectUrl: t,
         });
       }
-      const fm = (e) =>
+      const Am = (e) =>
         f.a.createElement(
           i.a,
           {
@@ -41045,17 +41078,17 @@ var CLSTAMP = "7368019";
                   { path: n.Login() },
                   f.a.createElement(Y0, {
                     config: {
-                      login: (e) => f.a.createElement(Mm, Object.assign({}, e)),
+                      login: (e) => f.a.createElement(vm, Object.assign({}, e)),
                     },
                   })
                 ),
-                f.a.createElement(c.b, { component: vm })
+                f.a.createElement(c.b, { component: Bm })
               ),
               f.a.createElement(F0, { ModalManager: R0(window) })
             )
           )
         );
-      function vm(e) {
+      function Bm(e) {
         if ("dev" === M.c.WEB_UNIVERSE)
           return f.a.createElement(
             "div",
@@ -41066,15 +41099,15 @@ var CLSTAMP = "7368019";
           t = "/" + Object(p.b)(t);
         return f.a.createElement(c.a, { push: !0, to: t });
       }
-      var Am = s("uobO");
-      var Bm;
+      var ym = s("uobO");
+      var Sm;
       s("xnZ7"), s("idvb");
-      (Bm = () =>
+      (Sm = () =>
         Object(O.a)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
             ? Object(M.h)("application_config")
             : Object(M.h)(),
-            Object(Am.a)().Init(
+            Object(ym.a)().Init(
               "Help",
               CLSTAMP,
               new ae(M.c.WEBAPI_BASE_URL).GetServiceTransport()
@@ -41094,20 +41127,20 @@ var CLSTAMP = "7368019";
                       : s("AvbV")(`./main_${e}.json`).then((e) => e.default),
                   ]);
                 Rr.d.InitFromObjects(n, e, r, t);
-                for (const i of ym) Rr.d.AddTokens(i);
-                ym = void 0;
+                for (const i of Om) Rr.d.AddTokens(i);
+                Om = void 0;
               });
             })(M.c.LANGUAGE),
             document.getElementById("application_root") &&
               r.a.render(
-                f.a.createElement(fm, {}),
+                f.a.createElement(Am, {}),
                 document.getElementById("application_root")
               );
         })),
         "loading" == document.readyState
-          ? document.addEventListener("DOMContentLoaded", Bm)
-          : Bm();
-      let ym = [];
+          ? document.addEventListener("DOMContentLoaded", Sm)
+          : Sm();
+      let Om = [];
     },
     hYhl: function (e, t, r) {
       "use strict";

@@ -23912,9 +23912,11 @@
                         document.location.href
                       )}`;
                     },
-                    strOKButtonText: Object(k.g)("#LoginButton"),
+                    strOKButtonText: Object(k.g)(
+                      "#DiscoveryQueue_Error_Login_Title"
+                    ),
                     strDescription: Object(k.g)("#DiscoveryQueue_Error_Login"),
-                    strTitle: Object(k.g)("#DiscoveryQueue_Error_Title"),
+                    strTitle: Object(k.g)("#DiscoveryQueue_Error_Login_Title"),
                   }),
                   window
                 );

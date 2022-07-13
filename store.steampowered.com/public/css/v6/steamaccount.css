@@ -147,7 +147,7 @@
 }
 
 .addfunds_cafe_selection_text {
-	padding-bottom: 30px;	
+	padding-bottom: 30px;
 }
 
 .addfunds_cafe_selection_buttons {
@@ -248,6 +248,46 @@ p.currency_change_confirm_dialog_footer {
 	vertical-align: top;
 	margin-left: 11px;
 	overflow: hidden;
+}
+
+@media screen and (max-width: 500px)
+{
+		html.responsive.mobile_client .two_column.left {
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+			overflow: scroll;
+			margin: 0 -2vw;
+		}
+
+		html.responsive.mobile_client .two_column .nav_item.active {
+			background-color: transparent;
+			font-weight: 600;
+		}
+
+		html.responsive.mobile_client .two_column .nav_item:hover {
+			background-color: transparent;
+		}
+
+		html.responsive.mobile_client .two_column.left::-webkit-scrollbar {
+			display: none;
+		}
+
+		html.responsive.mobile_client .nav_item {
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 12px;
+			font-weight: 400;
+			padding: 10px 0px;
+			margin: 15px 10px;
+			flex: auto;
+    		flex-shrink: 0;
+		}
+
+		html.responsive.mobile_client .nav_item.active {
+			border-bottom: 3px solid #07bfff;
+			color: #07bfff;
+		}
 }
 
 @media screen and (max-width: 910px)
