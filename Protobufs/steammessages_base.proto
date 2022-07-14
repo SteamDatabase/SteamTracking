@@ -112,6 +112,7 @@ message CMsgProtoBufHeader {
 	optional uint32 realm = 32 [default = 0];
 	optional int32 timeout_ms = 33 [default = -1];
 	optional string debug_source = 34;
+	optional uint32 debug_source_string_index = 35;
 
 	oneof ip_addr {
 		uint32 ip = 15;

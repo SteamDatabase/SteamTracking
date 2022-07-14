@@ -1079,6 +1079,7 @@ wt
 -gamepadui
 -steamdeck
 -steamos3
+-chromeos
 "
 --proxy-server="%s"
 -html-perf-monitor
@@ -2315,6 +2316,7 @@ sc_schinese
 
 @
 @
+3
 
 
 
@@ -2325,10 +2327,12 @@ sc_schinese
 
 
 @
+]
 E
-H
+A
 #
-
+T
+3
 
 
 
@@ -2385,6 +2389,7 @@ V
 M9e
 @
 @
+l
 ?
 ?
 ?

@@ -113,6 +113,7 @@ ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
+${COMMUNITY_BASE_URL}actions/ajaxgetbadgeinfo
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
@@ -193,6 +194,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}my
+${COMMUNITY_BASE_URL}my/badges
 ${COMMUNITY_BASE_URL}my/edit/avatar
 ${COMMUNITY_BASE_URL}my/edit/background
 ${COMMUNITY_BASE_URL}my/edit/favoritebadge
@@ -216,7 +218,9 @@ ${COMMUNITY_BASE_URL}profiles/${steamid}/friendscommon
 ${COMMUNITY_BASE_URL}profiles/${steamid}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}
 ${COMMUNITY_BASE_URL}profiles/${}/ajaxpostuserstatus
+${COMMUNITY_BASE_URL}profiles/${}/commentnotifications
 ${COMMUNITY_BASE_URL}profiles/${}/home
+${COMMUNITY_BASE_URL}profiles/${}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/appid/${}/achievements
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
@@ -253,6 +257,7 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
+${COMMUNITY_CDN_URL}public/images/badges/generic/RacingSale2022_80.png
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
@@ -1044,8 +1049,6 @@ ${baseURL}/userreviews/setdeveloperresponse/${recommendationID}
 ${baseURL}/userreviews/update/${recommendationID}
 ${baseURL}/userreviews/votetag/${recommendationID}
 ${baseURL}account/preferences
-${baseUrl}ajaxgetconfig
-${baseUrl}ajaxgetuserconfig
 ${cdnURL}/labs/diving_bell/back.svg
 ${cdnURL}/labs/diving_bell/openinnewtab_icon.svg
 ${cdnURL}/labs/diving_bell/refresh.svg
@@ -1250,7 +1253,6 @@ ${strClanURL}/uploadimage
 ${strPreviewURL}${strRssURL}
 ${strProfileURL}ajaxgroupinvite?new_profile=1${bBulkFriendInvite ? '&bulk=1' : ''}
 ${strRedirectURL}/info
-${strRelativeURL}${strChanged}
 ${strRssURL}${}
 ${strSearchBaseURL}${strQuery}
 ${strSearchBaseURL}Home
@@ -1586,15 +1588,7 @@ https://confluence.valve.org/display/etc...
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
-https://fb.me/react-controlled-components
-https://fb.me/react-devtools
-https://fb.me/react-devtools-faq
-https://fb.me/react-strict-mode-find-node%s
-https://fb.me/react-strict-mode-string-ref%s
-https://fb.me/react-unsafe-component-lifecycles
-https://fb.me/rules-of-hooks
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
-https://github.com/facebook/react/issues/3236).
 https://help.steampowered.com
 https://help.steampowered.com/
 https://help.steampowered.com/#HelpWithEconTrading

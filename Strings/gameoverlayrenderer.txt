@@ -256,7 +256,7 @@ QRPS
 ^_[]
 ^_[]
 ^_[]
-,^_[]
+\^_[]
 ^_[]
 PWVQ
 ^_[]
@@ -266,6 +266,8 @@ PWVQ
 ^_[]
 ^_[]
 L^_[]
+^_[]
+^_[]
 ^_[]
 tQF9
 ^_[]
@@ -953,8 +955,10 @@ zone
 present
 presentAtTime:
 @"<MTLDrawable>"8@?0@"CAMetalLayer"4
-v8@?0@"<MTLCommandBuffer>"4
 steamoverlay_commit
+v8@?0@"<MTLCommandBuffer>"4
+steamoverlay_addScheduledHandler:
+v12@?0@"<MTLCommandBuffer>"4@?<v@?@"<MTLCommandBuffer>">8
 newCommandQueue
 commandBuffer
 CAMetalLayer
@@ -1336,9 +1340,9 @@ zPLR
 zPLR
 ASAXAXA`
 A^A[A^A\A`
-RCRBp
+RCRB
 RCRBSASA`
-UATBTASFp
+RASATBTASFp
 p RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRFp
 SBWATBTBYEZFZHVFRB
 R0@RCRARDp
@@ -1842,37 +1846,49 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-_W[A
-W|k\i
-v0-2
-t7ame
-CogR.4FM
-gM#0
-z7`|
+8hYL>
+J6:@v
+6L@*
+Uq{I
+gw\#E
+sGWol
+28R$
+i0C%`RZIac
+7>p_s7Z
+q3?0\,
+QYpvC
+PN?n
+c9|LF
+$I*P
+i|b@gn
+/u:'U
+[a|*
+EQ"Q
+5$?H
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-uDy[
-MOS3
-nX#T
->/;*u.
-0[)R1
-H) kR
-pN.-
-_sDf
-^&Tp
-p0CPz
-kv!{7
-1A4X
-9\)>
-]{k^}
-1vp4
-41!p2
-O~ Kr
-K#irCJ
-gPz/4
-!CFd
+5Gw	
+hD}H
+@qJj
+q!5gKy4
+"H,3
+fX^v
+Em]I
+7@(P|0D
+F(Nb
+2o$n7
+Jm"s
+3>eO
+A$Jf
+Cx1@
+_/ 7
+d	dH
+%*!5
+Kx4})
+6hEx,d%
+:3m#
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1928,10 +1944,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205749Z0/
-d&&0[
-S1=<
-kq0-
+220714050542Z0/
+ del4
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1939,36 +1953,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		bVGKUzE9PAcVY+BmR0cQoGD9a3E=
+		RE1kn9Cu2X91X7r4VC3xWSLgXBs=
 		</data>
 		<data>
-		fG/D1NbwF2oYE8ZapJ3sHpyfySg=
+		ZGVsNOu8fH8sLP4o51YVNsFxtGM=
 		</data>
 	</array>
 </dict>
 </plist>
-	HAt
-GzS`
-{+cz$
-20220627205905Z0
+[>}HE-
+,I"q
+20220714050551Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220607165002Z
-220719165001Z0B1
-Timestamp Signer NWK11
+220705163502Z
+220816163501Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-hR5=l}
-M00Y]
- 	$#]
+e\{v{Pb7
+te:!
+iE3Z]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-*M(:?
-Od'L
-`$5~
+!Ub%c
+@+5$
+)u30/
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2007,15 +2020,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205905Z0#
-%9PN
-9,Vy
-Jrge
-`HxV
-?8Cv
-CGd$O
-|$Nv]
-C-3?
+220714050551Z0#
+}jag
+G"7'
 __TEXT
 __text
 __TEXT
@@ -2321,13 +2328,11 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y-U{
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-(%zw
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2372,8 +2377,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%u^
-(%-^
+(%]_
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2409,7 +2413,7 @@ K H9
 AWAVSPI
 [A^A_]
 AWAVAUATSH
-([A\A]A^A_]
+x[A\A]A^A_]
 AWAVATSH
 [A\A^A_]
 AWAVAUATSH
@@ -2428,9 +2432,13 @@ AWAVSPH
 [A^A_]
 AWAVAUATSH
 x[A\A]A^A_]
+AVSI
+[A^]
 AWAVAUATSPH
 [A\A]A^A_]
 [A\A]A^A_]
+AWAVATSI
+[A\A^A_]
 AWAVAUATSH
 )C0f
 )C f
@@ -2490,7 +2498,6 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=)
 [A^]
 H9GHt.H
 AWAVATSH
@@ -2539,8 +2546,6 @@ h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
 t9L9
-D8=*
-D8=	
 |$$I
 E;u,s*H
 P0E;u4s
@@ -2580,12 +2585,12 @@ AVS1
 AWAVSH
 H92u
 ([A^A_]
-H9=Rb
 AWAVSPI
 [A^A_]
 AWAVSP
 [A^A_]
 AWAVAUATSH
+D8-Wj
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2891,6 +2896,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
+D95W
 UAWAVAUATSH
 D$`H
 D$8H
@@ -3257,6 +3263,7 @@ layer
 T@"CAMetalLayer",R
 @"<MTLDrawable>"16@?0@"CAMetalLayer"8
 v16@?0@"<MTLCommandBuffer>"8
+v24@?0@"<MTLCommandBuffer>"8@?<v@?@"<MTLCommandBuffer>">16
 CAMetalLayer
 device
 T@"<MTLDevice>",R
@@ -3573,6 +3580,7 @@ drawableID
 texture
 layer
 steamoverlay_commit
+steamoverlay_addScheduledHandler:
 newCommandQueue
 commandBuffer
 nextDrawable
@@ -3799,7 +3807,7 @@ zPLR
 !(RI`
 ASAXAXA`
 A^A[A^A\A`
-RBRBp
+RBRB
 RBRBSASA`
 RBUDTDTASDp
 p RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARF
@@ -4341,36 +4349,42 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-%Q0]l>
-H0f?
-Sh-8;
-%4KE;
-*1'b>
-KM Y
-zQXc
-rH@Y./d
-sb2v
-98qB
-o6,m
-f(_s
-4;FZ
++m(n
+>#'Qsp
+SchT
+o^MS'?
+-f@+
+(3|V
+|NW*
++[}%
+_%@F
+@n1V
+O0s7
+kr`|f
+=@{>
+;3}0
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-x>Hq
-`GACa
-@#+I
-G--@*V
-h=H/
-5?jK
-"y|e
-:K}r
-+k7f/
--{-1
-0%G 
-L]]OS
-V{Rfa
+ABP{
+Z|u\
+B3eH
+QF~[
+pXsq
+u>70
+	vvq
+}M+`'
+]D\<nj
+4_Gk
+hDQP
+ZY}{2
++hDU!c
+rc%9
+RL} 
+J*_H
+<])	
+g*/q
 ai)=k1
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4427,8 +4441,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205749Z0/
-	Hw0
+220714050542Z0/
+y.EF
+>!0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4436,32 +4451,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		XN/ch8NBrR1d4tXdMVaerfE1P6g=
+		YaS6DoQO+imN5Cko8/BgYLudEMA=
 		</data>
 		<data>
-		mhRPSrdnxfdPlTqh5D1HBIjPwFg=
+		zeJaT+vMEeLuY54R2DMogpumhFU=
 		</data>
 	</array>
 </dict>
 </plist>
-X R	Gd
-("5N
-20220627205905Z0
+#i?~OK
+TS,d4D
+@	n2Exl
+D"B?
+ s~<t
+20220714050551Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220607164002Z
-220719164001Z0B1
+220705163502Z
+220816163501Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-xNbo
-_mb.
-V~r4=
+e\{v{Pb7
+te:!
+iE3Z]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+!Ub%c
+@+5$
+)u30/
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4500,9 +4521,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205905Z0#
-71:p
-1#l~
+220714050551Z0#
+iPj;
 __TEXT
 __text
 __TEXT
@@ -4563,6 +4583,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+_0r1
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4606,9 +4627,11 @@ h2E9
 $E9H
 &E9h
 h&A)
+(	29
+4UG	0
 jh8)	
-@)H(
-19:#	
+29:3	
+@9-B
 h"@9
 Th*@
 Th.@
@@ -4619,22 +4642,18 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9FA
-[)mA
-tT	p
-vT	p
+C9a"C9b&C9c*C9
 aBA9
-aP	P
 h&D)
 i"@9
+<*2	p
++1	p
 9h2@
 	)h"@
 )hBB
 yh:@
 <h"@9
-T &	0
-@v	p
-4`e	
+T`/	0
 bD9h
 Th#@
 hbN9
@@ -4666,6 +4685,7 @@ Z-x-
 Z-x+
 Z+x+
 Z+x)
+T(#D
 hbD9
 T	%A
 X`2A
@@ -4701,7 +4721,7 @@ X`jB
 hjA9h
 4h.@
 4b.@
-Mm`n@
+Mm`z@
 NH `
 m@)h
 nA8!
@@ -4712,6 +4732,7 @@ WA)9
 	@q"
 	K?U
 @z`:@z`
+	)D9)
 o"E@
 !~"8"
 T( @
@@ -4729,6 +4750,7 @@ T`*@
 T`*@
 +ih8J	
 hnA9h/
+	)D9)
 T`*@
 hjA9(
 7`*@
@@ -4737,34 +4759,37 @@ hjA9(
 i"V)
 Ci8}
 hfA9
-He	X
-He	X
-&D9?
-&D9(
+	%D9?
+))D9)
 	*h&@
 5hrA9
-	)D9i
 9h.@
 Th&@
 Th&@
 Rh:@
--	XA
+TV6	
+ 3	X
+A1	XA
 T`*@
 4a*@
 4hrA9
 9`&@
 RivA9
 Th&@
-Tl%A
+T*+A
+Qf9h
+	aE9?
+	Qf9
+Tl=A
 hBD9H
 hrD9h
-)QBy
 hrD9
 hBD9
 hBD9h
-)J9(
+iJ9(
 !IzH
 +ih8J	
+	1G9
 12CIMENullImpl
 4IIME
 24CGameStreamBaseMemStream
@@ -5116,6 +5141,7 @@ layer
 T@"CAMetalLayer",R
 @"<MTLDrawable>"16@?0@"CAMetalLayer"8
 v16@?0@"<MTLCommandBuffer>"8
+v24@?0@"<MTLCommandBuffer>"8@?<v@?@"<MTLCommandBuffer>">16
 CAMetalLayer
 device
 T@"<MTLDevice>",R
@@ -5351,6 +5377,7 @@ drawableID
 texture
 layer
 steamoverlay_commit
+steamoverlay_addScheduledHandler:
 newCommandQueue
 commandBuffer
 nextDrawable
@@ -5565,7 +5592,7 @@ RARAXARARAVAp
 RAYAp
 RAYARA`
 ARA`
-RBRBp
+RBRB
 RBRBSBRAUBSFSCRDp
 RBRB
 Ap@p0SASASASASASASB^CRAp
@@ -6092,32 +6119,48 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-1wO%
-;$RP
-2R!9
-"&03
-m%0z)
-DN#b
-{e~p,X
+?6CA
+^ZJk
+FQf%
+P"fEy
+jAiM
+A24V
+_lIc
+'H|r!
+Ijvh
+-_<K
+7BRc
+c>tBU
+bP#i
+,5ZV
+N!xl
+G}`1
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
- &lX
-F6It
-::GZ
-B5tm
-ENt;SE
-X^NS
-j&1w
-OFG=)
-U`:B
-kj$1@
-POzW
-g4%s
-q5(x
-B#jpx"
-R,Wa
+F3)H
+;1f1:
+)`3"
+&rj5i
+p*vS
+LH,2~E!5K
+#`I	
+#jfR*#
+sm]	
+ghQW
+d19~Y
+sN)p
+<hD*)
+[\,h
+Sy7:=
+OblI
+[rU+N
+`hSQ
+Sg!y
+m&]Z
+<'~-
+Frm}=sF
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6173,7 +6216,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205749Z0/
+220714050542Z0/
+ t}n+;
+ VdXH
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6181,37 +6226,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		fH41gAk+/LpsZGcZhhTSgtsTy0A=
+		GMBp2L7is0wOh6W+07hwacag8Jw=
 		</data>
 		<data>
-		16sCs9E+r3+RlhxuzbHdi06r/4Q=
+		lCGuk7sKuxBC+z/yGNWzng5fbNg=
 		</data>
 	</array>
 </dict>
 </plist>
-K_ i
-6Fl~~
-^GTNG
-rLeo
-20220627205905Z0
+"m"Fs
+K)b2
+20220714050551Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220607165002Z
-220719165001Z0B1
-Timestamp Signer NWK11
+220705163502Z
+220816163501Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-hR5=l}
-M00Y]
- 	$#]
+e\{v{Pb7
+te:!
+iE3Z]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-*M(:?
-Od'L
-`$5~
+!Ub%c
+@+5$
+)u30/
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6250,6 +6293,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220627205905Z0#
-2[X :
-&qTB
+220714050551Z0#
+! KV`0+
+-Vhq1
+0PSw
+@dv2
+`P1!
+CN1A
+Le_uBJ

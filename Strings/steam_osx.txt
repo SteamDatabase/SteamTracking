@@ -11,6 +11,8 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
+@ 3
+@ 3
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -132,6 +134,13 @@ Hi
 Hi
 (
 &
+6
+6
+6
+6
+6
+6
+6
 H'
 '
 
@@ -1644,9 +1653,9 @@ X
 p
 m
 t
-x
 |
 8
+x
 
 
 <
@@ -1739,16 +1748,16 @@ $
 4
 8
 (
-2
-M
-T
-(
+3
+O
 V
-\
-]
-i
+(
+X
+^
+_
+k
 @
-p
+r
 H
 0
 `
@@ -2185,7 +2194,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Jun 27 2022 13:59:47
+Startup - updater built Jul 13 2022 22:07:50
 Shutdown
 no hosts found
 Failed to load cached hosts file (%s), using defaults
@@ -2471,8 +2480,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun 27 2022
-13:59:47
+Jul 13 2022
+22:07:51
 crashhandler003
 steam
 Steam Executable Crash
@@ -2569,7 +2578,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-13:59:46
+22:07:49
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -3390,6 +3399,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -10326,7 +10337,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-13:57:41
+22:05:33
 Jan
 Feb
 Mar
@@ -12688,19 +12699,13 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-%$7
 
-@$7
-R$7
-ZO7
-.O7
-EO7
+&7
 
-PO7
-dO7
-mO7
+$Q7
+-Q7
 0
-mE:
+mG:
 :(
 "(
 (
@@ -12724,6 +12729,13 @@ Hi
 Hi
 (
 &
+6
+6
+6
+6
+6
+6
+6
 H'
 '
 
@@ -12731,7 +12743,7 @@ H'
 '
 &
 &
-0
+^5
 8
 &
 &
@@ -12741,14 +12753,15 @@ H'
 0
 5
 5
-5
 &
 5
 &
-;7
+=7
+'/
 
-0
 /
+/
+0
 Ic
 0
 0
@@ -12760,8 +12773,6 @@ AT=
 D
 @
 @
-0
-0
 4
 4
 @
@@ -12797,60 +12808,72 @@ IcE
 @
 .
 3
+3
+3
 V
--
+\2
 =
-z,
-2
+q,
+Y,
+,
+,
 =
-c+
+t1
+m+
+g+
 1
 1
+M+
 1
+F+
+#3
 1
-1
-!3
 +
-"0
-0
-0
-0
-0
-0
++
++
++
++
+E0
 0
 @
 U"
 *
+x)
+@
+)
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
 *
-@
-7/
-c
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-=.
-](
-.
+*
+;.
 (
-g-
-K-
-S&
-9,
+L-
+,-
+'
+'
+'
+<(
+r&
 @
+&
+&
+&
+&
 M9e
 @
 @
@@ -12866,7 +12889,6 @@ M9e
 ?
 ?
 :
-U%
 ?
 ?
 ?
@@ -12879,11 +12901,10 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
 (.
 %
-(*
+,
 `
 `
 @
-,
 j
 j
 Pj
@@ -12893,8 +12914,8 @@ j
 0
 IcU
 E;e
-<)
-3)
+>)
+5)
 M)u
 =
 =
@@ -12902,9 +12923,6 @@ M)u
 @
 =
 
-(
-(
-(
 =
 %
 =
@@ -13210,9 +13228,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 
 
-3
 H=
-&
 &
 Ic]
 j
@@ -13222,11 +13238,11 @@ j
 j
 j
 
-$
-$
-$
-$
+@!
 t$I;M
+$
+$
+$
 e
 W
 ,7~5d
@@ -13379,8 +13395,6 @@ H=
 @
 @
 =
-
-
 @
 |r=
 %
@@ -13477,15 +13491,13 @@ to=
 @
 H=
 =
-O
+Q
 
 =
 @
 =
 @
 =*.*
-
-
 @
 @
 @
@@ -13512,8 +13524,6 @@ O
 0
 0
 H=
-
-
 0
 &
 E
@@ -13539,7 +13549,6 @@ E
 0
 Hc
 0
-
 0
 @
 @
@@ -13558,18 +13567,14 @@ P
 
 @
 @
-w
+`
 0
-;
+c
 
-
->
-0
-4
 =a
+
 0
 Hi
 $
 $
 $
-

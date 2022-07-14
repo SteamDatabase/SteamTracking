@@ -2,34 +2,34 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [3],
   {
-    Jbdm: function (n, t, o) {
+    "5Css": function (n, t, o) {
       n.exports = {
-        IconContainer: "awardicon_IconContainer__6f_B",
-        ButtonContainer: "awardicon_ButtonContainer_1ShXa",
-        InfoContainer: "awardicon_InfoContainer_20mER",
-        IconImg: "awardicon_IconImg_RP1Up",
-        ReactionCount: "awardicon_ReactionCount_18GX_",
-        IconList: "awardicon_IconList_2cI0L",
+        IconContainer: "awardicon_IconContainer_6TbQg",
+        ButtonContainer: "awardicon_ButtonContainer_kaquA",
+        InfoContainer: "awardicon_InfoContainer_2ydoR",
+        IconImg: "awardicon_IconImg_2xJ_L",
+        ReactionCount: "awardicon_ReactionCount_22PNg",
+        IconList: "awardicon_IconList_1NEGw",
       };
     },
-    RsgW: function (n, t, o) {
+    BCmL: function (n, t, o) {
       "use strict";
       o.r(t),
         o.d(t, "AwardIcon", function () {
-          return u;
+          return d;
         }),
         o.d(t, "AwardIconList", function () {
           return I;
         });
       var e = o("q1tI"),
         a = o.n(e),
-        c = (o("+z9g"), o("ascj")),
-        r = o("5E+2"),
-        i = o("Jbdm"),
+        c = (o("+3M9"), o("N+Bh")),
+        r = o("xoHR"),
+        i = o("5Css"),
         s = o.n(i),
-        p = o("TLQK"),
-        d = o("exH9");
-      class u extends a.a.PureComponent {
+        p = o("GXif"),
+        u = o("GbHM");
+      class d extends a.a.PureComponent {
         render() {
           const n = Object(p.o)(
             "#RewardsReaction_Tooltip",
@@ -39,7 +39,7 @@
           return a.a.createElement(
             r.d,
             {
-              className: Object(d.a)(s.a.InfoContainer, s.a.IconContainer),
+              className: Object(u.a)(s.a.InfoContainer, s.a.IconContainer),
               toolTipContent: n,
             },
             a.a.createElement("img", {
@@ -59,7 +59,7 @@
         render() {
           let n = [];
           for (const t of this.props.reactions)
-            n.push(a.a.createElement(u, { key: t.reaction_type, reaction: t }));
+            n.push(a.a.createElement(d, { key: t.reaction_type, reaction: t }));
           return a.a.createElement("div", { className: s.a.IconList }, n);
         }
       }

@@ -1,4 +1,4 @@
-.awardicon_IconContainer__6f_B {
+.awardicon_IconContainer_6TbQg {
   display: flex;
   flex-flow: row nowrap;
   border-radius: 5px;
@@ -8,31 +8,31 @@
   transition: background-color;
   transition-duration: 0.13s;
 }
-.awardicon_ButtonContainer_1ShXa {
+.awardicon_ButtonContainer_kaquA {
   cursor: pointer;
 }
-.awardicon_ButtonContainer_1ShXa:hover {
+.awardicon_ButtonContainer_kaquA:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.awardicon_InfoContainer_20mER {
+.awardicon_InfoContainer_2ydoR {
   cursor: unset;
 }
-.awardicon_InfoContainer_20mER:hover {
+.awardicon_InfoContainer_2ydoR:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.awardicon_IconImg_RP1Up {
+.awardicon_IconImg_2xJ_L {
   width: 20px;
   height: 20px;
   vertical-align: middle;
 }
-.awardicon_ReactionCount_18GX_ {
+.awardicon_ReactionCount_22PNg {
   color: #66c0f4;
   font-size: 13px;
   vertical-align: middle;
   font-weight: bold;
   padding: 3px;
 }
-.awardicon_IconList_2cI0L {
+.awardicon_IconList_1NEGw {
   display: flex;
   flex-flow: row nowrap;
   padding-top: 5px;

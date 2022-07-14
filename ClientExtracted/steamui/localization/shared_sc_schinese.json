@@ -87,7 +87,7 @@
     "Login_Title_SteamGuard": "蒸汽平台令牌",
     "ConnectionTrouble_FailedToConnect": "连接蒸汽平台失败",
     "BroadcastWatch_ServerLoad": "蒸汽平台目前直播载入量过高，无法预留服务器空间开始此直播。请过几分钟后再试。",
-    "BroadcastWatch_SystemNotSupported": "此主播的系统目前不支持蒸汽平台实况直播",
+    "BroadcastWatch_SystemNotSupported": "此主播的系统目前不支持蒸汽平台直播",
     "BroadcastWatch_UserRestricted": "此主播目前被禁止在蒸汽平台上进行实况直播",
     "BroadcastWatch_PoorUploadQuality": "此主播目前无法与蒸汽平台进行稳定的连接",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
@@ -121,8 +121,9 @@
     "FAQViewer_SideBar_ProblemWithSteam_Desc": "使用蒸汽平台帮助向导缩小提问范围并获取所需帮助。",
     "FAQViewer_SideBar_CommunityHelp_Desc": "在蒸汽平台讨论区发布问题，或搜索问题的答案。",
     "FAQViewer_SideBar_CommunityHelp_Link": "访问蒸汽平台讨论区",
-    "StreamLaunch_Broadcasting": "远程计算机目前正在使用蒸汽平台实况直播，因此无法开始远程畅玩会话。",
+    "StreamLaunch_Broadcasting": "远程计算机目前正在使用蒸汽平台直播，因此无法开始远程畅玩会话。",
     "StreamLaunch_InstallDrivers": "流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的蒸汽平台提示进行操作。",
     "SteamDeckVerified_SeeAll": "查看蒸汽平台上所有“通过验证”的游戏",
-    "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台界面手动退出。"
+    "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台界面手动退出。",
+    "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台界面手动聚焦到正确窗口。"
 }
