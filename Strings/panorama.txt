@@ -5364,8 +5364,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jul 13 2022
-22:09:01
+Jul 18 2022
+09:58:30
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8319,7 +8319,6 @@ Ic
 [*
 M,
 ]-
-{4
 @
 @
 @
@@ -8457,9 +8456,9 @@ R'
 )
 )
 '
-1
 @
 =
+]1
 %
 @
 @
@@ -8539,8 +8538,6 @@ N#
 )
 }
 "
-t(
-E(
 @
 '
 J%
@@ -8855,8 +8852,6 @@ IcE
 @
 @
 @
-|
-f
 ;!
 @
 j
