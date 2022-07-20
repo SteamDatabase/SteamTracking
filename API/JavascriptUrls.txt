@@ -704,6 +704,7 @@ ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
+${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
@@ -806,6 +807,7 @@ ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${id}
 ${STORE_BASE_URL}app/${id}/#app_reviews_hash
 ${STORE_BASE_URL}app/${m_strAppId}
+${STORE_BASE_URL}app/${takeoverAppID}
 ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
 ${STORE_BASE_URL}app/${}/?beta=1
@@ -900,6 +902,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
+${STORE_BASE_URL}login/checkdevice
 ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
@@ -1760,6 +1763,7 @@ https://partner.steamgames.com/doc/sitelicense/licensees/signup
 https://partner.steamgames.com/doc/store/assets/promos
 https://partner.steamgames.com/doc/store/localization#supported_languages
 https://partner.steamgames.com/doc/store/news/rss
+https://partner.steamgames.com/doc/store/pricing
 https://partner.steamgames.com/docadmin/${method}/${}
 https://partner.steamgames.com/externalapptesting/${bPass ? 'forcepassapp/' : 'forcefailapp/'}
 https://partner.steamgames.com/externalapptesting/ajaxclosetestingrequest/${appid}
@@ -2113,6 +2117,7 @@ https://store.steam
 https://store.steamchina.com/
 https://store.steampowered.com
 https://store.steampowered.com/
+https://store.steampowered.com/${strSalePageURL}
 https://store.steampowered.com/${strURL}
 https://store.steampowered.com/${strUrlTarget}
 https://store.steampowered.com//account/preferences/#CommunityContentPreferences
@@ -2161,6 +2166,7 @@ https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
 https://store.steampowered.com/cart/getcartstate
+https://store.steampowered.com/categories/image/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
 https://store.steampowered.com/checkout/addfreebundle/${bundleid}
 https://store.steampowered.com/checkout/addfreelicense/${subid}

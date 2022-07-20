@@ -794,10 +794,23 @@ a#store_search_link img {
 	color: #ffffff;
 }
 
+.search_suggest .match .debug_spell_corrected {
+	color: #34eb6e !important;
+}
+
 .search_suggest .match .match_price {
 	position: absolute;
 	left: 134px;
 	top: 30px;
+}
+
+.search_suggest .match .debug_spell_correct_info {
+	position: absolute;
+	left: 200px;
+	top: 30px;
+	width: 186px;
+
+	text-align: right;
 }
 
 .search_suggest .match .ds_flag {

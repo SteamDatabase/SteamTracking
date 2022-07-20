@@ -92,6 +92,9 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover {
   background-color: #393c44;
 }
+.newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:focus {
+  outline: 1px #06bfff solid;
+}
 .newlogindialog_Login_ZOBYq
   .newlogindialog_CheckboxField_2QWD5:hover
   .newlogindialog_Checkbox_3tTFg {
@@ -126,6 +129,10 @@
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:disabled {
   opacity: 0.5;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:focus {
+  outline: solid #06bfff;
+  outline-width: 1px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_Text_3omtv {
   color: #afafaf;

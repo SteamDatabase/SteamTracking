@@ -57,6 +57,8 @@ GHomepage = {
 
 	MainCapCluster: null,
 
+	rgContentHubs: [],
+
 	InitLayout: function()
 	{
 		var $Ctn = $J('.home_page_body_ctn');
@@ -231,6 +233,7 @@ GHomepage = {
 	{
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
+			GHomepage.rgContentHubs = rgParams.rgContentHubs || [];
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
@@ -354,6 +357,10 @@ GHomepage = {
 		try {
 			GHomepage.RenderTopNewReleases();
 		} catch ( e ) { OnHomepageException(e); }
+
+		try {
+			GHomepage.RenderContentHubCarousel();
+		} catch ( e ) { OnHomepageException( e ); }
 
 		// Logged in
 		// Recommended by Steam Labs
@@ -1554,6 +1561,79 @@ GHomepage = {
 		);
 	},
 
+	RenderContentHubCarousel: function()
+	{
+		var $contentHubCarousel = $J( '.content_hub_carousel' );
+
+		if ( !$contentHubCarousel.length || !GHomepage.rgContentHubs.length )
+			return;
+
+		// We'll cycle through these colors for the gradients.
+		var rgColors = [
+			'rgb(139,0,0)',
+			'rgb(0,0,139)',
+			'rgb(184,134,11)',
+			'rgb(0,100,0)',
+			'rgb(0,139,139)',
+			'rgb(139,0,139)',
+			'rgb(233,140,0)',
+		];
+
+		var iColor = 0;
+
+		GHomepage.FillPagedCapsuleCarousel( GHomepage.rgContentHubs, $contentHubCarousel,
+			function( item, strFeature, rgOptions, nDepth )
+			{
+				var cc = "us";
+				var l = "english";
+
+				var $capsule = $J( '<a/>', {
+					"class": "content_hub_capsule_ctn",
+					"href": "https://store.steampowered.com/" + item.strSalePageURL
+				} );
+
+				var strImageURL = item.strSalePageURL;
+				if ( item.strID == 'f2p' )
+				{
+					// The f2p hub is at /genre/Free To Play, but the image will be at /categories/image/freetoplay.
+					strImageURL = 'freetoplay';
+				}
+				else if ( item.strSalePageURL.startsWith( 'tags/' ) && item.rgTagIDs.length > 0 )
+				{
+					// Tag hubs are at /tags/(language)/(tag name), but the image will be at /categories/image/tags/(tagid).
+					strImageURL = 'tags/' + item.rgTagIDs[0];
+				}
+
+				var $image = $J( '<img/>', {
+					"src": "https://store.steampowered.com/" + "categories/image/" + strImageURL + "?cc=" + cc + "&l=" + l,
+				} );
+				$capsule.append( $image );
+
+				var $gradient = $J( '<div/>', {
+					"class": "gradient",
+					"style": "background: linear-gradient(rgba(0,0,0,0), " + rgColors[iColor] + " 100%"
+				} );
+				$capsule.append( $gradient );
+
+				iColor = ( iColor + 1 ) % rgColors.length;
+
+				var $labelCtn = $J( '<div/>', {
+					"class": "label_ctn"
+				} );
+				$capsule.append( $labelCtn );
+
+				var $label = $J( '<span/>', {
+					"class": "label"
+				} );
+				$labelCtn.append( $label );
+
+				$label.append( item.strLocToken );
+
+				return $capsule;
+			}, 'content_hub_carousel', 4
+		);
+	},
+
 	RenderRecentlyUpdatedV2: function()
 	{
 		var $RecentlyUpdated =  $J('.recently_updated_block' );
@@ -2413,10 +2493,8 @@ CHomeSettings.prototype.DismissPopup = function()
 
 function GetAvatarURL( strAvatarHash, sizeStr )
 {
-	
     return 'https://avatars.cloudflare.steamstatic.com/' + strAvatarHash + ( sizeStr || '' ) + '.jpg';
-
-	}
+}
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {

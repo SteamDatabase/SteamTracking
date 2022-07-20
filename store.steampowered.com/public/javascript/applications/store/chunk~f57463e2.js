@@ -1344,63 +1344,6 @@
         );
       }
     },
-    "71ll": function (e, t, a) {
-      "use strict";
-      a.d(t, "a", function () {
-        return s;
-      }),
-        a.d(t, "b", function () {
-          return c;
-        }),
-        a.d(t, "d", function () {
-          return d;
-        }),
-        a.d(t, "c", function () {
-          return u;
-        });
-      var n = a("s4NR"),
-        r = a.n(n),
-        o = a("q1tI"),
-        i = a("EC67");
-      function s(e, t) {
-        const a = "location" in e ? e.location : e,
-          n = "search" in a ? a.search : a,
-          o = r.a.parse(n.substring(1))[t];
-        return o && Array.isArray(o) ? o[o.length - 1] : o;
-      }
-      const l = (e) => null != e;
-      function c(e, t, a) {
-        const n = r.a.parse(e.location.search.substring(1));
-        l(a) ? (n[t] = a) : delete n[t], e.push(`?${r.a.stringify(n)}`);
-      }
-      function d(e, t) {
-        const a = Object(i.g)();
-        let n = t;
-        const r = s(location, e);
-        l(r) &&
-          (n = l(t)
-            ? "boolean" == typeof t
-              ? t.constructor("false" !== r)
-              : t.constructor(r)
-            : r);
-        const [d, u] = Object(o.useState)(n);
-        return [
-          d,
-          (t) => {
-            c(a, e, l(t) ? String(t) : null), u(t);
-          },
-        ];
-      }
-      function u(e, t) {
-        const a = r.a.parse(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const n = t[e];
-            null == n ? delete a[e] : (a[e] = n);
-          }
-        e.push(`?${r.a.stringify(a)}`);
-      }
-    },
     "7Dzr": function (e, t, a) {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -11898,22 +11841,22 @@
         Promise.all([
           a.e(1),
           a.e(13),
-          a.e(20),
+          a.e(18),
           a.e(0),
           a.e(2),
           a.e(3),
-          a.e(4),
-          a.e(6),
           a.e(5),
+          a.e(6),
+          a.e(4),
+          a.e(7),
           a.e(10),
           a.e(9),
-          a.e(7),
           a.e(8),
-          a.e(12),
           a.e(11),
+          a.e(12),
           a.e(14),
-          a.e(17),
-          a.e(22),
+          a.e(16),
+          a.e(21),
           a.e(28),
         ]).then(a.bind(null, "3fR/"))
       );
@@ -14307,22 +14250,22 @@
           Promise.all([
             a.e(1),
             a.e(13),
-            a.e(20),
+            a.e(18),
             a.e(0),
             a.e(2),
             a.e(3),
-            a.e(4),
-            a.e(6),
             a.e(5),
+            a.e(6),
+            a.e(4),
+            a.e(7),
             a.e(10),
             a.e(9),
-            a.e(7),
             a.e(8),
-            a.e(12),
             a.e(11),
+            a.e(12),
             a.e(14),
-            a.e(17),
-            a.e(22),
+            a.e(16),
+            a.e(21),
             a.e(28),
           ]).then(a.bind(null, "y+i+"))
         ),
@@ -16055,10 +15998,10 @@
     uZKR: function (e, t, a) {
       "use strict";
       a.d(t, "b", function () {
-        return wo;
+        return Do;
       }),
         a.d(t, "a", function () {
-          return Do;
+          return jo;
         });
       var n = a("q1tI"),
         r = a.n(n),
@@ -17391,7 +17334,8 @@
             optin_tagid: l,
             optin_prune_tagid: d,
           } = e,
-          { bLoading: u, partnerTakeoverData: p } = (function (
+          u = Object(O.c)(),
+          { bLoading: p, partnerTakeoverData: _ } = (function (
             e,
             t,
             a,
@@ -17415,43 +17359,53 @@
               }
             );
           })(t, a, o, i, s, l, d);
-        if (u || !p || !p.strPageBackgroundURL) return null;
-        let _ = p.strPageBackgroundTarget;
-        const g = Object(te.a)()
-            ? p.nPageBackgroundOffsetHeightMobile
-            : p.nPageBackgroundOffsetHeight,
-          h = p.strPageBackgroundColorLeft,
-          b = p.strPageBackgroundColorRight;
-        (_ = _.replace("http://", "https://")),
+        if (p || !_ || !_.strPageBackgroundURL) return null;
+        let g = _.strPageBackgroundTarget;
+        null == g && (g = `${w.d.STORE_BASE_URL}app/${_.takeoverAppID}`);
+        const h = Object(te.a)()
+            ? _.nPageBackgroundOffsetHeightMobile
+            : _.nPageBackgroundOffsetHeight,
+          b = _.strPageBackgroundColorLeft,
+          v = _.strPageBackgroundColorRight;
+        (g = null == g ? void 0 : g.replace("http://", "https://")),
           "dev" == w.d.WEB_UNIVERSE &&
-            _.startsWith("https://store.steam") &&
-            ((_ = _.replace(
-              "https://store.steampowered.com/",
-              w.d.STORE_BASE_URL
-            )),
-            (_ = _.replace(
-              "https://store.steamchina.com/",
-              w.d.STORE_BASE_URL
-            ))),
-          (_ = Object(m.a)(_, "promo-takeover"));
-        const v = { height: (g || 0) + "px" },
-          S = {
+            (null == g ? void 0 : g.startsWith("https://store.steam")) &&
+            ((g =
+              null == g
+                ? void 0
+                : g.replace(
+                    "https://store.steampowered.com/",
+                    w.d.STORE_BASE_URL
+                  )),
+            (g =
+              null == g
+                ? void 0
+                : g.replace(
+                    "https://store.steamchina.com/",
+                    w.d.STORE_BASE_URL
+                  ))),
+          (g = Object(m.a)(
+            g,
+            Object.assign(Object.assign({}, u), { feature: "promo-takeover" })
+          ));
+        const S = { height: (h || 0) + "px" },
+          E = {
             background:
-              Boolean(h) &&
               Boolean(b) &&
-              "linear-gradient(to right, rgb(" + h + "), rgb(" + b + "))",
+              Boolean(v) &&
+              "linear-gradient(to right, rgb(" + b + "), rgb(" + v + "))",
           };
         return r.a.createElement(
           r.a.Fragment,
           null,
-          r.a.createElement(ie, { partnerTakeoverData: p }),
+          r.a.createElement(ie, { partnerTakeoverData: _ }),
           r.a.createElement(
             ae.a,
-            { className: Y.ContentHubTakeoverCtn, style: v, autoFocus: !0 },
+            { className: Y.ContentHubTakeoverCtn, style: S, autoFocus: !0 },
             r.a.createElement(
               ee.c,
-              { href: _, style: S, autoFocus: !0 },
-              r.a.createElement(oe, { partnerTakeoverData: p })
+              { href: g, style: E, autoFocus: !0 },
+              r.a.createElement(oe, { partnerTakeoverData: _ })
             )
           )
         );
@@ -18894,22 +18848,22 @@
           Promise.all([
             a.e(1),
             a.e(13),
-            a.e(20),
+            a.e(18),
             a.e(0),
             a.e(2),
             a.e(3),
-            a.e(4),
-            a.e(6),
             a.e(5),
+            a.e(6),
+            a.e(4),
+            a.e(7),
             a.e(10),
             a.e(9),
-            a.e(7),
             a.e(8),
-            a.e(12),
             a.e(11),
+            a.e(12),
             a.e(14),
-            a.e(17),
-            a.e(22),
+            a.e(16),
+            a.e(21),
             a.e(28),
           ]).then(a.bind(null, "3fR/"))
         ),
@@ -25050,8 +25004,409 @@
           )
         );
       }
-      const Qr = 12;
-      let Kr = class extends r.a.Component {
+      var Qr = a("jALh");
+      class Kr {
+        constructor() {
+          (this.m_mapSectionToExistingCapsules = new Map()),
+            (this.m_mapSectionToExistingClanEventGIDs = new Map()),
+            (this.m_mapSectionToNewCapsules = new Map()),
+            (this.m_mapSectionToNewEvents = new Map()),
+            (this.m_clanSteamID = null),
+            (this.m_gidClanEvent = null),
+            (this.m_nActiveSectionCount = 0),
+            (this.m_timer = new za.b()),
+            (this.m_nTimeStartedMS = 0),
+            (this.m_nExpirationTime = 45),
+            (this.m_rtimeLastServiceCallStarted = 0),
+            (this.m_rtimeLastServiceCallComplete = 0),
+            (this.m_promise = null),
+            (this.m_bTestMode = new Map()),
+            (this.m_bPreviewMode = !1);
+        }
+        GetTimerSecondsLeft() {
+          const e = Math.floor(
+            (this.m_nTimeStartedMS +
+              1e3 * this.m_nExpirationTime -
+              Date.now()) /
+              1e3
+          );
+          return this.m_timer.IsScheduled() && e >= 0 ? e : void 0;
+        }
+        GetNewEventGIDs(e) {
+          return this.m_mapSectionToNewEvents.get(e);
+        }
+        GetNewCapsules(e) {
+          return this.m_mapSectionToNewCapsules.get(e);
+        }
+        GetTimerWaitTimeMS() {
+          const e = Math.floor(20 * Math.random());
+          return 1e3 * (this.m_nExpirationTime + e);
+        }
+        IncrementalSectionNeedingReveal(e, t, a) {
+          Object(Sa.a)(
+            !this.m_clanSteamID ||
+              this.m_clanSteamID.GetAccountID() == e.GetAccountID(),
+            "mismatch clan steam id"
+          ),
+            Object(Sa.a)(
+              !this.m_gidClanEvent || this.m_gidClanEvent == t,
+              "Mismatch clan event gid"
+            ),
+            (this.m_clanSteamID = e),
+            (this.m_gidClanEvent = t),
+            (this.m_bPreviewMode = a),
+            (this.m_nActiveSectionCount += 1),
+            this.m_nActiveSectionCount > 0 &&
+              !this.m_timer.IsScheduled() &&
+              ((this.m_nTimeStartedMS = Date.now()),
+              this.m_timer.Schedule(
+                this.GetTimerWaitTimeMS(),
+                this.TimerAction
+              ));
+        }
+        DecrementSectionNeedingReveal() {
+          (this.m_nActiveSectionCount -= 1),
+            this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel();
+        }
+        AddSaleCapsules(e, t) {
+          let a = this.m_mapSectionToExistingCapsules.has(e)
+            ? this.m_mapSectionToExistingCapsules.get(e)
+            : [];
+          null == t ||
+            t.forEach((e) => {
+              a.findIndex((t) => e.id == t.id && e.type == t.type) < 0 &&
+                !Object(E.d)(e) &&
+                a.push(e);
+            }),
+            this.m_mapSectionToExistingCapsules.has(e) ||
+              this.m_mapSectionToExistingCapsules.set(e, a);
+        }
+        AddEvents(e, t) {
+          let a = this.m_mapSectionToExistingClanEventGIDs.has(e)
+            ? this.m_mapSectionToExistingClanEventGIDs.get(e)
+            : [];
+          null == t ||
+            t.forEach((e) => {
+              !a.includes(e) && kt.b.BHasClanEventModel(e) && a.push(e);
+            }),
+            this.m_mapSectionToExistingClanEventGIDs.has(e) ||
+              this.m_mapSectionToExistingClanEventGIDs.set(e, a);
+        }
+        SetTestMode(e, t) {
+          "dev" == w.d.WEBAPI_BASE_URL &&
+            console.log(
+              `CDynamicRevealStore Test Mode Cur ${this.m_bTestMode.get(
+                e
+              )} setting to ${t}`
+            ),
+            this.m_bTestMode.set(e, t),
+            this.m_mapSectionToExistingCapsules.has(e) &&
+              this.m_mapSectionToExistingCapsules.set(e, []),
+            this.m_mapSectionToExistingClanEventGIDs.has(e) &&
+              this.m_mapSectionToExistingClanEventGIDs.set(e, []);
+        }
+        BIsInTestMode(e) {
+          return this.m_bTestMode.get(e);
+        }
+        FireRequestNow() {
+          Object(Sa.a)(
+            this.m_bTestMode,
+            "We should only use CDynamicRevealStore::FireRequestNow in test mode"
+          ),
+            this.TimerAction();
+        }
+        TimerAction() {
+          this.m_nActiveSectionCount > 0 &&
+            (this.m_timer.Cancel(),
+            (this.m_promise = this.LoadRevealedItems(
+              this.m_clanSteamID,
+              this.m_gidClanEvent
+            )),
+            this.m_promise
+              .then((e) => {
+                e.forEach((e) => {
+                  var t, a, n, r;
+                  if (
+                    "events" == e.section_type &&
+                    (null === (t = e.events) || void 0 === t
+                      ? void 0
+                      : t.length) > 0
+                  ) {
+                    const t =
+                        this.m_mapSectionToExistingClanEventGIDs.get(
+                          e.unique_id
+                        ) || [],
+                      a = e.events
+                        .filter((e) => !t.includes(e.event_gid))
+                        .map((e) => e.event_gid);
+                    kt.b
+                      .LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
+                        a,
+                        null
+                      )
+                      .then((t) => {
+                        const a = t
+                          .map((e) => e.appid)
+                          .filter((e) => Boolean(e))
+                          .map((e) => ({ id: e, type: "game" }));
+                        Object(E.g)(a, u.e).then(() => {
+                          const a = t
+                            .filter(
+                              (e) =>
+                                Boolean(e.appid) &&
+                                !Object(E.d)({ id: e.appid, type: "game" })
+                            )
+                            .map((e) => e.GID);
+                          this.m_mapSectionToNewEvents.set(e.unique_id, a);
+                        });
+                      });
+                  }
+                  if (
+                    "items" == e.section_type &&
+                    ((null === (a = e.appids) || void 0 === a
+                      ? void 0
+                      : a.length) > 0 ||
+                      (null === (n = e.packageids) || void 0 === n
+                        ? void 0
+                        : n.length) > 0 ||
+                      (null === (r = e.bundledid) || void 0 === r
+                        ? void 0
+                        : r.length) > 0)
+                  ) {
+                    const t = Object(E.f)(e.appids, e.packageids, e.bundledid),
+                      a =
+                        this.m_mapSectionToExistingCapsules.get(e.unique_id) ||
+                        [],
+                      n = t.filter(
+                        (e) =>
+                          a.findIndex((t) => t.id == e.id && t.type == e.type) <
+                          0
+                      );
+                    Object(E.g)(n, u.e).then(() => {
+                      const t = new Array();
+                      n.forEach((e) => {
+                        Object(E.d)(e) || t.push(e);
+                      }),
+                        this.m_mapSectionToNewCapsules.set(e.unique_id, t);
+                    });
+                  }
+                });
+              })
+              .finally(() => {
+                (this.m_nTimeStartedMS = Date.now()),
+                  this.m_timer.Schedule(
+                    this.GetTimerWaitTimeMS(),
+                    this.TimerAction
+                  );
+              }));
+        }
+        LoadRevealedItems(e, t) {
+          var a;
+          return Object(D.a)(this, void 0, void 0, function* () {
+            this.m_rtimeLastServiceCallStarted = Date.now();
+            try {
+              const n = {
+                  clan_event_gid: t,
+                  clan_account_id: e.GetAccountID(),
+                  origin: self.origin,
+                  testmode: Array.from(this.m_bTestMode.values()).some(
+                    (e) => e
+                  ),
+                  sessionid: this.m_bPreviewMode ? w.d.SESSIONID : void 0,
+                  authwgtoken: this.m_bPreviewMode ? w.l.authwgtoken : void 0,
+                },
+                r = this.m_bPreviewMode
+                  ? w.d.STORE_BASE_URL +
+                    "saleaction/ajaxgetdynamicrevealspreview"
+                  : w.d.STORE_BASE_URL + "saleaction/ajaxgetdynamicreveals",
+                o = yield T.a.get(r, { params: n });
+              if (
+                200 == (null == o ? void 0 : o.status) &&
+                1 ==
+                  (null === (a = null == o ? void 0 : o.data) || void 0 === a
+                    ? void 0
+                    : a.success)
+              )
+                return (
+                  (this.m_nExpirationTime = Math.max(
+                    o.data.expiration_time || 45,
+                    10
+                  )),
+                  o.data.dynamic_data
+                );
+            } catch (e) {
+              const t = Object(H.a)(e);
+              console.error(
+                "CDynamicRevealStore.LoadRevealedItems: failed with " +
+                  t.strErrorMsg,
+                t
+              );
+            } finally {
+              (this.m_rtimeLastServiceCallComplete = Date.now()),
+                "dev" == w.d.WEB_UNIVERSE &&
+                  console.log(
+                    `LoadRevealedItems: started ${Math.floor(
+                      this.m_rtimeLastServiceCallStarted / 1e3
+                    )} and completed ${Math.floor(
+                      this.m_rtimeLastServiceCallComplete / 1e3
+                    )} taking ${
+                      this.m_rtimeLastServiceCallComplete -
+                      this.m_rtimeLastServiceCallStarted
+                    } MS`
+                  );
+            }
+            return [];
+          });
+        }
+        static Get() {
+          return (
+            Kr.s_Singleton ||
+              ((Kr.s_Singleton = new Kr()),
+              ("dev" != w.d.WEB_UNIVERSE && "beta" != w.d.WEB_UNIVERSE) ||
+                (window.g_DynamicRevealStore = Kr.s_Singleton)),
+            Kr.s_Singleton
+          );
+        }
+      }
+      Object(D.b)([Tt.C], Kr.prototype, "m_mapSectionToNewCapsules", void 0),
+        Object(D.b)([Tt.C], Kr.prototype, "m_mapSectionToNewEvents", void 0),
+        Object(D.b)([Nt.a], Kr.prototype, "FireRequestNow", null),
+        Object(D.b)([Nt.a], Kr.prototype, "TimerAction", null);
+      var Zr = a("3idx");
+      function Jr(e, t = null) {
+        var a, n;
+        if (!e || Object(E.e)(e)) return !0;
+        if (t.BUsesContentHubForItemSource()) {
+          if (
+            null ===
+              (n =
+                null === (a = Qr.a.Get()) || void 0 === a
+                  ? void 0
+                  : a.GetHomeView()) || void 0 === n
+              ? void 0
+              : n.games_already_in_library
+          )
+            switch (e.GetStoreItemType()) {
+              case 0:
+                if (P.a.Get().BIsGameOwned(e.GetAppID())) return !0;
+                break;
+              case 1:
+              case 2:
+                if (
+                  e.GetIncludedAppIDs().every((e) => P.a.Get().BIsGameOwned(e))
+                )
+                  return !0;
+            }
+          if (
+            0 === e.GetStoreItemType() &&
+            1 === e.GetAppType() &&
+            P.a.Get().BIsGameOwned(e.GetParentAppID())
+          )
+            return !0;
+        }
+        return !1;
+      }
+      function Xr(e, t, a) {
+        let n = a,
+          r = 0;
+        for (r = 0; r < t; r++) {
+          const t = e[r % e.length];
+          if (n < t) break;
+          n -= t;
+        }
+        return r;
+      }
+      function $r(e, t) {
+        if (e.show_as_carousel) return 0;
+        const a = Object(s.r)(e);
+        return a <= 0 ? 0 : a + t;
+      }
+      function eo(e, t) {
+        if (e.dynamic_reveal) {
+          const a = Kr.Get().GetNewEventGIDs(e.unique_id);
+          if ((null == a ? void 0 : a.length) > 0) {
+            return [
+              ...a
+                .map((e) => kt.b.GetClanEventModel(e))
+                .filter(
+                  (e) => Boolean(e) && t.findIndex((t) => t.GID == e.GID) < 0
+                ),
+              ...t,
+            ];
+          }
+        }
+        return t;
+      }
+      function to(e, t) {
+        if (e.dynamic_reveal) {
+          const a = Kr.Get().GetNewCapsules(e.unique_id);
+          if ((null == a ? void 0 : a.length) > 0) {
+            return [
+              ...a.filter(
+                (e) => t.findIndex((t) => t.id == e.id && t.type == e.type) < 0
+              ),
+              ...t,
+            ];
+          }
+        }
+        return t;
+      }
+      function ao(e) {
+        const {
+            event: t,
+            section: a,
+            activeTab: n,
+            nSaleDayIndex: o,
+            capsules: i,
+            facetFilterState: s,
+          } = e,
+          l = (e) => {
+            e.preventDefault();
+            let l = Object(U.f)(a.facets);
+            (l = l.filter((e) => n.ShouldShowCapsule(e))),
+              (l = Object(V.b)(l, o));
+            const c = s.FilterCapsules(l);
+            Object(Xt.d)(
+              r.a.createElement(Ur, {
+                event: t,
+                actualMatches: i,
+                expectedMatches: c,
+                saleCapsules: Object(U.f)(a.facets),
+              }),
+              Object(Kt.o)(e)
+            );
+          };
+        return w.l.is_support &&
+          a.smart_section &&
+          a.enable_faceted_browsing &&
+          Object(U.c)(a) &&
+          !Object(U.b)(t, a)
+          ? r.a.createElement(
+              "div",
+              null,
+              r.a.createElement("a", { href: "", onClick: l }, "Debug Matches")
+            )
+          : null;
+      }
+      function no(e, t, a, n, r) {
+        let o =
+          "section_" +
+          n +
+          "_" +
+          e.GID +
+          (r || 0) +
+          Object(Zr.b)(
+            t.unique_id ? t.unique_id.toString() : JSON.stringify(t)
+          ).toString();
+        return (
+          a &&
+            e.rtime32_last_local_modification &&
+            (o += "_" + e.rtime32_last_local_modification),
+          o
+        );
+      }
+      const ro = 12;
+      let oo = class extends r.a.Component {
         constructor(e) {
           var t;
           super(e),
@@ -25059,7 +25414,7 @@
               currentFlavor: this.GetDefaultTab(),
               bInitialLoadComplete: !1,
               rgCapsules: [],
-              nVisibleRows: Qr,
+              nVisibleRows: ro,
               nNumRequestedLastTime: 0,
               bIsMoreAvailable: !1,
               bAwaitingMoreRowsLoading: !1,
@@ -25087,7 +25442,7 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize),
-            this.LoadCapsules(Qr);
+            this.LoadCapsules(ro);
           const { section: e, activeTab: t } = this.props;
           this.setState({
             fnUnregisterCallback: Object(zr.d)(
@@ -25151,7 +25506,7 @@
                 {
                   bInitialLoadComplete: !1,
                   rgCapsules: [],
-                  nVisibleRows: Qr,
+                  nVisibleRows: ro,
                   nNumRequestedLastTime: 0,
                   bIsMoreAvailable: !0,
                   bAwaitingMoreRowsLoading: !0,
@@ -25159,7 +25514,7 @@
                   currentFlavor: s,
                   fnUnregisterCallback: n,
                 },
-                () => this.LoadCapsules(Qr)
+                () => this.LoadCapsules(ro)
               );
           }
         }
@@ -25282,7 +25637,8 @@
                 const e = p;
                 m.UpdateMatchCount(e, i.length);
               }
-              (i = yield Object(E.a)(i, !1, g)), (c = g.length);
+              (i = yield Object(E.a)(i, !1, g, (e) => Jr(e, t))),
+                (c = g.length);
             }
             if (this.m_cancelSignal.token.reason) return;
             const g = Object(zr.e)(
@@ -25342,13 +25698,13 @@
               {
                 bInitialLoadComplete: !1,
                 rgCapsules: [],
-                nVisibleRows: Qr,
+                nVisibleRows: ro,
                 nNumRequestedLastTime: 0,
                 bIsMoreAvailable: !0,
                 bAwaitingMoreRowsLoading: !0,
                 strSearchQuery: e,
               },
-              () => this.LoadCapsules(Qr)
+              () => this.LoadCapsules(ro)
             );
         }
         OnUpdateSearch(e) {
@@ -25607,7 +25963,7 @@
           );
         }
       };
-      function Zr(e) {
+      function io(e) {
         const { section: t, activeTab: a, event: r, history: o } = e,
           i = n.useRef();
         n.useEffect(() => {
@@ -25645,17 +26001,17 @@
           n.Fragment,
           null,
           n.createElement("div", { ref: i }),
-          n.createElement(Jr, Object.assign({}, e, { activeTab: s }))
+          n.createElement(so, Object.assign({}, e, { activeTab: s }))
         );
       }
-      Object(D.b)([Rt.b], Kr.prototype, "OnDynamicCapsuleInsert", null),
-        Object(D.b)([Rt.b], Kr.prototype, "ShowMoreRows", null),
-        Object(D.b)([Rt.b], Kr.prototype, "OnUpdateSearch", null),
-        Object(D.b)([Rt.b], Kr.prototype, "OnUpdateFacetFilter", null),
-        Object(D.b)([Rt.b], Kr.prototype, "OnResize", null),
-        Object(D.b)([Rt.b], Kr.prototype, "DebugMatches", null),
-        (Kr = Object(D.b)([mt.a], Kr));
-      const Jr = Object(mt.a)((e) => {
+      Object(D.b)([Rt.b], oo.prototype, "OnDynamicCapsuleInsert", null),
+        Object(D.b)([Rt.b], oo.prototype, "ShowMoreRows", null),
+        Object(D.b)([Rt.b], oo.prototype, "OnUpdateSearch", null),
+        Object(D.b)([Rt.b], oo.prototype, "OnUpdateFacetFilter", null),
+        Object(D.b)([Rt.b], oo.prototype, "OnResize", null),
+        Object(D.b)([Rt.b], oo.prototype, "DebugMatches", null),
+        (oo = Object(D.b)([mt.a], oo));
+      const so = Object(mt.a)((e) => {
         const { section: t, event: a, activeTab: r } = e,
           o =
             "saleitembrowser_" +
@@ -25676,7 +26032,7 @@
             onRender: () => ue.a.Get().AddInteraction(t.unique_id, 0),
           },
           n.createElement(
-            Kr,
+            oo,
             Object.assign(
               { key: o, browseInfo: t.item_browse_section_data, section: t },
               e
@@ -25684,7 +26040,7 @@
           )
         );
       });
-      function Xr(e) {
+      function lo(e) {
         const {
             section: t,
             selectedTabs: a,
@@ -25750,7 +26106,7 @@
         }
         return null;
       }
-      function $r(e) {
+      function co(e) {
         const { section: t, event: a } = e;
         return n.createElement(
           "div",
@@ -25767,276 +26123,9 @@
           n.createElement("div", null, Object(k.g)("#Sale_SectionDisabled"))
         );
       }
-      class eo {
-        constructor() {
-          (this.m_mapSectionToExistingCapsules = new Map()),
-            (this.m_mapSectionToExistingClanEventGIDs = new Map()),
-            (this.m_mapSectionToNewCapsules = new Map()),
-            (this.m_mapSectionToNewEvents = new Map()),
-            (this.m_clanSteamID = null),
-            (this.m_gidClanEvent = null),
-            (this.m_nActiveSectionCount = 0),
-            (this.m_timer = new za.b()),
-            (this.m_nTimeStartedMS = 0),
-            (this.m_nExpirationTime = 45),
-            (this.m_rtimeLastServiceCallStarted = 0),
-            (this.m_rtimeLastServiceCallComplete = 0),
-            (this.m_promise = null),
-            (this.m_bTestMode = new Map()),
-            (this.m_bPreviewMode = !1);
-        }
-        GetTimerSecondsLeft() {
-          const e = Math.floor(
-            (this.m_nTimeStartedMS +
-              1e3 * this.m_nExpirationTime -
-              Date.now()) /
-              1e3
-          );
-          return this.m_timer.IsScheduled() && e >= 0 ? e : void 0;
-        }
-        GetNewEventGIDs(e) {
-          return this.m_mapSectionToNewEvents.get(e);
-        }
-        GetNewCapsules(e) {
-          return this.m_mapSectionToNewCapsules.get(e);
-        }
-        GetTimerWaitTimeMS() {
-          const e = Math.floor(20 * Math.random());
-          return 1e3 * (this.m_nExpirationTime + e);
-        }
-        IncrementalSectionNeedingReveal(e, t, a) {
-          Object(Sa.a)(
-            !this.m_clanSteamID ||
-              this.m_clanSteamID.GetAccountID() == e.GetAccountID(),
-            "mismatch clan steam id"
-          ),
-            Object(Sa.a)(
-              !this.m_gidClanEvent || this.m_gidClanEvent == t,
-              "Mismatch clan event gid"
-            ),
-            (this.m_clanSteamID = e),
-            (this.m_gidClanEvent = t),
-            (this.m_bPreviewMode = a),
-            (this.m_nActiveSectionCount += 1),
-            this.m_nActiveSectionCount > 0 &&
-              !this.m_timer.IsScheduled() &&
-              ((this.m_nTimeStartedMS = Date.now()),
-              this.m_timer.Schedule(
-                this.GetTimerWaitTimeMS(),
-                this.TimerAction
-              ));
-        }
-        DecrementSectionNeedingReveal() {
-          (this.m_nActiveSectionCount -= 1),
-            this.m_nActiveSectionCount <= 0 && this.m_timer.Cancel();
-        }
-        AddSaleCapsules(e, t) {
-          let a = this.m_mapSectionToExistingCapsules.has(e)
-            ? this.m_mapSectionToExistingCapsules.get(e)
-            : [];
-          null == t ||
-            t.forEach((e) => {
-              a.findIndex((t) => e.id == t.id && e.type == t.type) < 0 &&
-                !Object(E.d)(e) &&
-                a.push(e);
-            }),
-            this.m_mapSectionToExistingCapsules.has(e) ||
-              this.m_mapSectionToExistingCapsules.set(e, a);
-        }
-        AddEvents(e, t) {
-          let a = this.m_mapSectionToExistingClanEventGIDs.has(e)
-            ? this.m_mapSectionToExistingClanEventGIDs.get(e)
-            : [];
-          null == t ||
-            t.forEach((e) => {
-              !a.includes(e) && kt.b.BHasClanEventModel(e) && a.push(e);
-            }),
-            this.m_mapSectionToExistingClanEventGIDs.has(e) ||
-              this.m_mapSectionToExistingClanEventGIDs.set(e, a);
-        }
-        SetTestMode(e, t) {
-          "dev" == w.d.WEBAPI_BASE_URL &&
-            console.log(
-              `CDynamicRevealStore Test Mode Cur ${this.m_bTestMode.get(
-                e
-              )} setting to ${t}`
-            ),
-            this.m_bTestMode.set(e, t),
-            this.m_mapSectionToExistingCapsules.has(e) &&
-              this.m_mapSectionToExistingCapsules.set(e, []),
-            this.m_mapSectionToExistingClanEventGIDs.has(e) &&
-              this.m_mapSectionToExistingClanEventGIDs.set(e, []);
-        }
-        BIsInTestMode(e) {
-          return this.m_bTestMode.get(e);
-        }
-        FireRequestNow() {
-          Object(Sa.a)(
-            this.m_bTestMode,
-            "We should only use CDynamicRevealStore::FireRequestNow in test mode"
-          ),
-            this.TimerAction();
-        }
-        TimerAction() {
-          this.m_nActiveSectionCount > 0 &&
-            (this.m_timer.Cancel(),
-            (this.m_promise = this.LoadRevealedItems(
-              this.m_clanSteamID,
-              this.m_gidClanEvent
-            )),
-            this.m_promise
-              .then((e) => {
-                e.forEach((e) => {
-                  var t, a, n, r;
-                  if (
-                    "events" == e.section_type &&
-                    (null === (t = e.events) || void 0 === t
-                      ? void 0
-                      : t.length) > 0
-                  ) {
-                    const t =
-                        this.m_mapSectionToExistingClanEventGIDs.get(
-                          e.unique_id
-                        ) || [],
-                      a = e.events
-                        .filter((e) => !t.includes(e.event_gid))
-                        .map((e) => e.event_gid);
-                    kt.b
-                      .LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                        a,
-                        null
-                      )
-                      .then((t) => {
-                        const a = t
-                          .map((e) => e.appid)
-                          .filter((e) => Boolean(e))
-                          .map((e) => ({ id: e, type: "game" }));
-                        Object(E.g)(a, u.e).then(() => {
-                          const a = t
-                            .filter(
-                              (e) =>
-                                Boolean(e.appid) &&
-                                !Object(E.d)({ id: e.appid, type: "game" })
-                            )
-                            .map((e) => e.GID);
-                          this.m_mapSectionToNewEvents.set(e.unique_id, a);
-                        });
-                      });
-                  }
-                  if (
-                    "items" == e.section_type &&
-                    ((null === (a = e.appids) || void 0 === a
-                      ? void 0
-                      : a.length) > 0 ||
-                      (null === (n = e.packageids) || void 0 === n
-                        ? void 0
-                        : n.length) > 0 ||
-                      (null === (r = e.bundledid) || void 0 === r
-                        ? void 0
-                        : r.length) > 0)
-                  ) {
-                    const t = Object(E.f)(e.appids, e.packageids, e.bundledid),
-                      a =
-                        this.m_mapSectionToExistingCapsules.get(e.unique_id) ||
-                        [],
-                      n = t.filter(
-                        (e) =>
-                          a.findIndex((t) => t.id == e.id && t.type == e.type) <
-                          0
-                      );
-                    Object(E.g)(n, u.e).then(() => {
-                      const t = new Array();
-                      n.forEach((e) => {
-                        Object(E.d)(e) || t.push(e);
-                      }),
-                        this.m_mapSectionToNewCapsules.set(e.unique_id, t);
-                    });
-                  }
-                });
-              })
-              .finally(() => {
-                (this.m_nTimeStartedMS = Date.now()),
-                  this.m_timer.Schedule(
-                    this.GetTimerWaitTimeMS(),
-                    this.TimerAction
-                  );
-              }));
-        }
-        LoadRevealedItems(e, t) {
-          var a;
-          return Object(D.a)(this, void 0, void 0, function* () {
-            this.m_rtimeLastServiceCallStarted = Date.now();
-            try {
-              const n = {
-                  clan_event_gid: t,
-                  clan_account_id: e.GetAccountID(),
-                  origin: self.origin,
-                  testmode: Array.from(this.m_bTestMode.values()).some(
-                    (e) => e
-                  ),
-                  sessionid: this.m_bPreviewMode ? w.d.SESSIONID : void 0,
-                  authwgtoken: this.m_bPreviewMode ? w.l.authwgtoken : void 0,
-                },
-                r = this.m_bPreviewMode
-                  ? w.d.STORE_BASE_URL +
-                    "saleaction/ajaxgetdynamicrevealspreview"
-                  : w.d.STORE_BASE_URL + "saleaction/ajaxgetdynamicreveals",
-                o = yield T.a.get(r, { params: n });
-              if (
-                200 == (null == o ? void 0 : o.status) &&
-                1 ==
-                  (null === (a = null == o ? void 0 : o.data) || void 0 === a
-                    ? void 0
-                    : a.success)
-              )
-                return (
-                  (this.m_nExpirationTime = Math.max(
-                    o.data.expiration_time || 45,
-                    10
-                  )),
-                  o.data.dynamic_data
-                );
-            } catch (e) {
-              const t = Object(H.a)(e);
-              console.error(
-                "CDynamicRevealStore.LoadRevealedItems: failed with " +
-                  t.strErrorMsg,
-                t
-              );
-            } finally {
-              (this.m_rtimeLastServiceCallComplete = Date.now()),
-                "dev" == w.d.WEB_UNIVERSE &&
-                  console.log(
-                    `LoadRevealedItems: started ${Math.floor(
-                      this.m_rtimeLastServiceCallStarted / 1e3
-                    )} and completed ${Math.floor(
-                      this.m_rtimeLastServiceCallComplete / 1e3
-                    )} taking ${
-                      this.m_rtimeLastServiceCallComplete -
-                      this.m_rtimeLastServiceCallStarted
-                    } MS`
-                  );
-            }
-            return [];
-          });
-        }
-        static Get() {
-          return (
-            eo.s_Singleton ||
-              ((eo.s_Singleton = new eo()),
-              ("dev" != w.d.WEB_UNIVERSE && "beta" != w.d.WEB_UNIVERSE) ||
-                (window.g_DynamicRevealStore = eo.s_Singleton)),
-            eo.s_Singleton
-          );
-        }
-      }
-      Object(D.b)([Tt.C], eo.prototype, "m_mapSectionToNewCapsules", void 0),
-        Object(D.b)([Tt.C], eo.prototype, "m_mapSectionToNewEvents", void 0),
-        Object(D.b)([Nt.a], eo.prototype, "FireRequestNow", null),
-        Object(D.b)([Nt.a], eo.prototype, "TimerAction", null);
-      var to = a("DHLj"),
-        ao = a.n(to);
-      const no = Object(mt.a)((e) => {
+      var uo = a("DHLj"),
+        mo = a.n(uo);
+      const po = Object(mt.a)((e) => {
         const {
             section: t,
             fnGetCapsules: a,
@@ -26049,7 +26138,7 @@
           [u, m] = n.useState(null);
         return s
           ? null
-          : eo.Get().BIsInTestMode(t.unique_id)
+          : Kr.Get().BIsInTestMode(t.unique_id)
           ? (Object(La.b)(1e3),
             n.createElement(
               "div",
@@ -26064,12 +26153,12 @@
                 null,
                 Object(k.g)(
                   "#Sale_DynamicReview_Preview_active_desc",
-                  eo.Get().GetTimerSecondsLeft() || Object(k.g)("#Updating")
+                  Kr.Get().GetTimerSecondsLeft() || Object(k.g)("#Updating")
                 )
               ),
               n.createElement(
                 We.e,
-                { onClick: () => eo.Get().FireRequestNow() },
+                { onClick: () => Kr.Get().FireRequestNow() },
                 Object(k.g)("#Sale_DynamicReview_Preview_action")
               )
             ))
@@ -26094,7 +26183,7 @@
                       m(o() || []),
                       r([]),
                       i([]),
-                      eo.Get().SetTestMode(t.unique_id, !0);
+                      Kr.Get().SetTestMode(t.unique_id, !0);
                   },
                 },
                 Object(k.g)("#Sale_DynamicReview_Preview_start")
@@ -26106,108 +26195,7 @@
               )
             );
       });
-      var ro = a("jALh"),
-        oo = a("3idx");
-      function io(e, t, a) {
-        let n = a,
-          r = 0;
-        for (r = 0; r < t; r++) {
-          const t = e[r % e.length];
-          if (n < t) break;
-          n -= t;
-        }
-        return r;
-      }
-      function so(e, t) {
-        if (e.show_as_carousel) return 0;
-        const a = Object(s.r)(e);
-        return a <= 0 ? 0 : a + t;
-      }
-      function lo(e, t) {
-        if (e.dynamic_reveal) {
-          const a = eo.Get().GetNewEventGIDs(e.unique_id);
-          if ((null == a ? void 0 : a.length) > 0) {
-            return [
-              ...a
-                .map((e) => kt.b.GetClanEventModel(e))
-                .filter(
-                  (e) => Boolean(e) && t.findIndex((t) => t.GID == e.GID) < 0
-                ),
-              ...t,
-            ];
-          }
-        }
-        return t;
-      }
-      function co(e, t) {
-        if (e.dynamic_reveal) {
-          const a = eo.Get().GetNewCapsules(e.unique_id);
-          if ((null == a ? void 0 : a.length) > 0) {
-            return [
-              ...a.filter(
-                (e) => t.findIndex((t) => t.id == e.id && t.type == e.type) < 0
-              ),
-              ...t,
-            ];
-          }
-        }
-        return t;
-      }
-      function uo(e) {
-        const {
-            event: t,
-            section: a,
-            activeTab: n,
-            nSaleDayIndex: o,
-            capsules: i,
-            facetFilterState: s,
-          } = e,
-          l = (e) => {
-            e.preventDefault();
-            let l = Object(U.f)(a.facets);
-            (l = l.filter((e) => n.ShouldShowCapsule(e))),
-              (l = Object(V.b)(l, o));
-            const c = s.FilterCapsules(l);
-            Object(Xt.d)(
-              r.a.createElement(Ur, {
-                event: t,
-                actualMatches: i,
-                expectedMatches: c,
-                saleCapsules: Object(U.f)(a.facets),
-              }),
-              Object(Kt.o)(e)
-            );
-          };
-        return w.l.is_support &&
-          a.smart_section &&
-          a.enable_faceted_browsing &&
-          Object(U.c)(a) &&
-          !Object(U.b)(t, a)
-          ? r.a.createElement(
-              "div",
-              null,
-              r.a.createElement("a", { href: "", onClick: l }, "Debug Matches")
-            )
-          : null;
-      }
-      function mo(e, t, a, n, r) {
-        let o =
-          "section_" +
-          n +
-          "_" +
-          e.GID +
-          (r || 0) +
-          Object(oo.b)(
-            t.unique_id ? t.unique_id.toString() : JSON.stringify(t)
-          ).toString();
-        return (
-          a &&
-            e.rtime32_last_local_modification &&
-            (o += "_" + e.rtime32_last_local_modification),
-          o
-        );
-      }
-      class po {
+      class _o {
         constructor(e) {
           (this.m_nMaxTiers = 0),
             (this.m_nDefaultTier = 0),
@@ -26243,12 +26231,12 @@
           for (const t of a) Object(Ht.f)(t), e.push(...t);
         }
       }
-      function _o(e, t) {
-        new po(e).RandomizeCapsules(t);
+      function go(e, t) {
+        new _o(e).RandomizeCapsules(t);
       }
-      function go(e, t, a, n, r, o, i) {
+      function ho(e, t, a, n, r, o, i) {
         if (t.use_random_order && o.length > 1) {
-          const s = mo(
+          const s = no(
             e,
             t,
             a,
@@ -26282,10 +26270,10 @@
         }
         return o;
       }
-      function ho(e, t, a, n) {
+      function bo(e, t, a, n) {
         var r;
         if (t.use_random_order) {
-          const o = mo(e, t, a, "section");
+          const o = no(e, t, a, "section");
           if (window.sessionStorage) {
             const a = window.sessionStorage.getItem(o);
             if (a) {
@@ -26293,7 +26281,7 @@
               if (t.rtime32_last_modified == e.rtime32_last_modified) return t;
             }
             n ||
-              (_o(e, t.capsules),
+              (go(e, t.capsules),
               Object(Ht.f)(t.links),
               Object(Ht.f)(
                 null === (r = t.events) || void 0 === r
@@ -26307,23 +26295,23 @@
         }
         return t;
       }
-      const bo = ["recent_events", "recent_tagged_events"];
-      class vo {
+      const vo = ["recent_events", "recent_tagged_events"];
+      class So {
         constructor() {
           this.m_rgRecentEvent = new Map();
         }
         static Get() {
           return (
-            vo.s_Singleton ||
-              ((vo.s_Singleton = new vo()),
-              vo.s_Singleton.Init(),
+            So.s_Singleton ||
+              ((So.s_Singleton = new So()),
+              So.s_Singleton.Init(),
               "dev" == w.d.WEB_UNIVERSE &&
-                (window.g_EventListSaleStore = vo.s_Singleton)),
-            vo.s_Singleton
+                (window.g_EventListSaleStore = So.s_Singleton)),
+            So.s_Singleton
           );
         }
         Init() {
-          bo.forEach((e) => {
+          vo.forEach((e) => {
             let t = Object(w.h)(e, "application_config");
             this.ValidateStoreDefault(t) && this.AddAllRecentEvents(e, t);
           });
@@ -26467,21 +26455,21 @@
           });
         }
       }
-      Object(D.b)([Tt.C], vo.prototype, "m_rgRecentEvent", void 0),
-        Object(D.b)([Tt.k], vo.prototype, "Init", null),
-        Object(D.b)([Tt.k], vo.prototype, "AddAllRecentEvents", null);
-      var So = a("K/M2");
-      class Eo {
+      Object(D.b)([Tt.C], So.prototype, "m_rgRecentEvent", void 0),
+        Object(D.b)([Tt.k], So.prototype, "Init", null),
+        Object(D.b)([Tt.k], So.prototype, "AddAllRecentEvents", null);
+      var Eo = a("K/M2");
+      class fo {
         constructor() {
           this.m_mapMasterAppToBenefitApps = new Map();
         }
         static Get() {
           return (
-            Eo.s_SubscriptStore ||
-              ((Eo.s_SubscriptStore = new Eo()),
-              Eo.s_SubscriptStore.Init(),
-              (window.g_SubscriptionStore = Eo.s_SubscriptStore)),
-            Eo.s_SubscriptStore
+            fo.s_SubscriptStore ||
+              ((fo.s_SubscriptStore = new fo()),
+              fo.s_SubscriptStore.Init(),
+              (window.g_SubscriptionStore = fo.s_SubscriptStore)),
+            fo.s_SubscriptStore
           );
         }
         Init() {
@@ -26544,10 +26532,10 @@
           });
         }
       }
-      function fo(e, t) {
+      function Co(e, t) {
         return e ? t.filter((t) => e.ShouldShowOnTab(t)) : t;
       }
-      function Co(e, t, a, n, r, o, i) {
+      function Oo(e, t, a, n, r, o, i) {
         var l;
         return Object(D.a)(this, void 0, void 0, function* () {
           const {
@@ -26560,7 +26548,7 @@
             _ = d || 24;
           if ("tag" === c) {
             return {
-              capsules: fo(
+              capsules: Co(
                 t,
                 (yield z
                   .Get()
@@ -26576,7 +26564,7 @@
           }
           if ("category" === c) {
             return {
-              capsules: fo(
+              capsules: Co(
                 t,
                 (yield z
                   .Get()
@@ -26592,7 +26580,7 @@
           }
           if ("top_n" === c) {
             return {
-              capsules: fo(t, yield z.Get().GetTopN(r, _)).map((e) => ({
+              capsules: Co(t, yield z.Get().GetTopN(r, _)).map((e) => ({
                 id: e,
                 type: "game",
               })),
@@ -26611,7 +26599,7 @@
                   : l.store_filter
               );
             return {
-              capsules: fo(t, e.rgAppIDs).map((e) => ({ id: e, type: "game" })),
+              capsules: Co(t, e.rgAppIDs).map((e) => ({ id: e, type: "game" })),
               bMoreRemaining: !1,
               facetCounts: e.rgSolrFacetCounts,
               nMatchCount: e.nMatchCount,
@@ -26636,7 +26624,7 @@
               return (
                 (r = a.BUsesContentHubForItemSource()
                   ? d.appids
-                  : fo(t, d.appids)),
+                  : Co(t, d.appids)),
                 {
                   capsules: r.map((e) => ({ id: e, type: "game" })),
                   bMoreRemaining: d.bHasPossibleMoreResults,
@@ -26697,7 +26685,7 @@
                   "wishlist" === c
                     ? P.a.Get().GetWishlistGamesInUserOrder()
                     : P.a.Get().GetRecommendedGamesInIRPriorityOrder(),
-                l = fo(t, o);
+                l = Co(t, o);
               for (const t of l)
                 if (
                   e.has(t) &&
@@ -26762,7 +26750,7 @@
                 case "ir_subscription":
                   r = "game";
                   const s = 402931,
-                    l = Eo.Get();
+                    l = fo.Get();
                   yield l.LoadSubscriptionInfo(s);
                   const c = l.GetAllAppForMaster(s);
                   o = Array.from(c).filter((e) =>
@@ -26772,11 +26760,11 @@
                 case "deck_compatibility":
                   r = "game";
                   const d = n.smart_section_data_source || "library";
-                  yield So.a.Get().LoadCompatabilityAppList(d);
+                  yield Eo.a.Get().LoadCompatabilityAppList(d);
                   const u =
                     "library" == d
-                      ? So.a.Get().GetUserLibraryCompatList()
-                      : So.a.Get().GetUserWishlistCompatList();
+                      ? Eo.a.Get().GetUserLibraryCompatList()
+                      : Eo.a.Get().GetUserWishlistCompatList();
                   let m = n.smart_section_deck_compatibility;
                   switch (((null != m && null != m) || (m = 3), m)) {
                     case 3:
@@ -26800,7 +26788,7 @@
                   }
               }
               return (
-                (o = fo(t, o)),
+                (o = Co(t, o)),
                 {
                   capsules: o.slice(0, _).map((e) => ({ id: e, type: r })),
                   bMoreRemaining: !1,
@@ -26814,9 +26802,9 @@
           );
         });
       }
-      function Oo(e, t, a, n, r, o, i, l, c, d, m, p, _, g, h, b = 0, v = !1) {
+      function yo(e, t, a, n, r, o, i, l, c, d, m, p, _, g, h, b = 0, v = !1) {
         return Object(D.a)(this, void 0, void 0, function* () {
-          const f = ho(e, t, a);
+          const f = bo(e, t, a);
           if (f.enable_faceted_browsing && v) {
             yield P.a.Get().HintLoad();
             let e = Object(U.f)(f.facets);
@@ -26832,7 +26820,7 @@
             yield P.a.Get().HintLoad();
             let p = !1;
             if (f.smart_section) {
-              const t = yield Co(
+              const t = yield Oo(
                 a,
                 n,
                 e,
@@ -26846,11 +26834,11 @@
               (m = t.capsules),
                 (p = t.bMoreRemaining && m.length < f.smart_section_max_apps),
                 f.enable_faceted_browsing ||
-                  (m = go(e, f, a, n, "capsules", m, _o)),
+                  (m = ho(e, f, a, n, "capsules", m, go)),
                 f.enable_faceted_browsing &&
                   (o.SetFacetCounts(t.facetCounts),
                   o.SetSolrMatchCount(t.nMatchCount));
-            } else (m = f.capsules), (m = go(e, f, a, n, "capsules", m, _o));
+            } else (m = f.capsules), (m = ho(e, f, a, n, "capsules", m, go));
             e.BUsesContentHubForItemSource() ||
               (m = m.filter((e) => n.ShouldShowCapsule(e))),
               (m = Object(V.b)(m, r)),
@@ -26864,7 +26852,7 @@
             );
             v && qr(v, m, a);
             let C = !1;
-            const O = so(f, b),
+            const O = $r(f, b),
               y = Br(f, O);
             {
               let t = m.length;
@@ -26894,36 +26882,7 @@
               const e = C || p;
               o.UpdateMatchCount(e, m.length);
             }
-            D = yield Object(E.a)(m, I, j, (t) =>
-              (function (e, t = null) {
-                var a, n;
-                if (!e || Object(E.e)(e)) return !0;
-                if (
-                  t.BUsesContentHubForItemSource() &&
-                  (null ===
-                    (n =
-                      null === (a = ro.a.Get()) || void 0 === a
-                        ? void 0
-                        : a.GetHomeView()) || void 0 === n
-                    ? void 0
-                    : n.games_already_in_library)
-                )
-                  switch (e.GetStoreItemType()) {
-                    case 0:
-                      if (P.a.Get().BIsGameOwned(e.GetAppID())) return !0;
-                      break;
-                    case 1:
-                    case 2:
-                      if (
-                        e
-                          .GetIncludedAppIDs()
-                          .every((e) => P.a.Get().BIsGameOwned(e))
-                      )
-                        return !0;
-                  }
-                return !1;
-              })(t, e)
-            );
+            D = yield Object(E.a)(m, I, j, (t) => Jr(t, e));
             const T = j.length;
             if (f.prioritize_discounts) {
               const e = [],
@@ -26951,10 +26910,12 @@
               h(N),
               f.dynamic_reveal &&
                 !f.smart_section_type &&
-                (eo.Get().AddSaleCapsules(f.unique_id, f.capsules),
-                eo
-                  .Get()
-                  .IncrementalSectionNeedingReveal(e.clanSteamID, e.GID, a));
+                (Kr.Get().AddSaleCapsules(f.unique_id, f.capsules),
+                Kr.Get().IncrementalSectionNeedingReveal(
+                  e.clanSteamID,
+                  e.GID,
+                  a
+                ));
           } else if ("events" === f.section_type) {
             let t;
             if (
@@ -26972,14 +26933,12 @@
             else {
               const a =
                 "recent_events" === f.smart_section_type
-                  ? yield vo
-                      .Get()
-                      .GetRecentEventsForSalesPage(
-                        e,
-                        f,
-                        null == n ? void 0 : n.GetActiveTabUniqueID()
-                      )
-                  : yield vo.Get().GetRecentTaggedEventsForSalesPage(e, f);
+                  ? yield So.Get().GetRecentEventsForSalesPage(
+                      e,
+                      f,
+                      null == n ? void 0 : n.GetActiveTabUniqueID()
+                    )
+                  : yield So.Get().GetRecentTaggedEventsForSalesPage(e, f);
               t =
                 yield kt.b.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   a.map((e) => e.gid),
@@ -26987,7 +26946,7 @@
                 );
             }
             let r = t.map((e) => e.GID);
-            (r = go(e, f, a, n, "events2", r, (e, t) => Object(Ht.f)(t))),
+            (r = ho(e, f, a, n, "events2", r, (e, t) => Object(Ht.f)(t))),
               (t = r.map((e) => kt.b.GetClanEventModel(e)));
             let o = t.filter((e) => !!e && n.ShouldShowEvent(e));
             yield N.a
@@ -27007,10 +26966,12 @@
               !f.dynamic_reveal ||
                 (f.smart_section_type &&
                   "recent_tagged_events" !== f.smart_section_type) ||
-                (eo.Get().AddEvents(f.unique_id, r),
-                eo
-                  .Get()
-                  .IncrementalSectionNeedingReveal(e.clanSteamID, e.GID, a));
+                (Kr.Get().AddEvents(f.unique_id, r),
+                Kr.Get().IncrementalSectionNeedingReveal(
+                  e.clanSteamID,
+                  e.GID,
+                  a
+                ));
           } else if (
             "links" === f.section_type ||
             "sale_tabhub" === f.smart_section_type
@@ -27022,13 +26983,13 @@
                 localized_link_capsule: void 0,
                 materialized_link_capsule: e.square,
               }))),
-                (t = go(e, f, a, n, "links", t, (e, t) => Object(Ht.f)(t)));
+                (t = ho(e, f, a, n, "links", t, (e, t) => Object(Ht.f)(t)));
             }
             p(t), g(!0);
           }
         });
       }
-      function yo(e, t, a) {
+      function Io(e, t, a) {
         const [r] = Object(n.useState)(
             (function (e, t, a) {
               if (t.enable_faceted_browsing) {
@@ -27049,7 +27010,7 @@
           r
         );
       }
-      function Io(e) {
+      function wo(e) {
         var t;
         const {
             event: a,
@@ -27068,7 +27029,7 @@
           [B, A] = Object(n.useState)([]),
           [G, L] = Object(n.useState)(void 0),
           [M, R] = Object(n.useState)([]),
-          F = yo(a, e.section, i),
+          F = Io(a, e.section, i),
           { nMaxCapsulesPerRow: x, bScreenIsWide: P } = Object(l.e)(
             e.section.section_type
           );
@@ -27094,7 +27055,7 @@
         ),
           Object(n.useEffect)(() => {
             const t = e.section.enable_faceted_browsing && !m;
-            Oo(a, e.section, s, c, d, F, u, o, N, A, R, L, C, p, j, _, t);
+            yo(a, e.section, s, c, d, F, u, o, N, A, R, L, C, p, j, _, t);
           }, [
             c,
             o,
@@ -27112,7 +27073,7 @@
             () => () => {
               e.appVisibilityTracker.MarkAllAppsNotVisible(e.section.unique_id),
                 e.section.dynamic_reveal &&
-                  eo.Get().DecrementSectionNeedingReveal();
+                  Kr.Get().DecrementSectionNeedingReveal();
             },
             [
               e.appVisibilityTracker,
@@ -27134,28 +27095,28 @@
                   ) + 1;
               ue.a.Get().AddInteraction(z.unique_id, t), b(e);
             }),
-          z = ho(a, e.section, s, !0),
+          z = bo(a, e.section, s, !0),
           W = Object(h.a)(z, a).background;
         let q = null;
         if (m) {
           const e = {
               saleEvent: a,
               section: z,
-              capsules: co(z, B),
+              capsules: to(z, B),
               links: G,
-              events: lo(z, M),
+              events: eo(z, M),
               language: i,
               nMaxCapsulesPerRow: x,
               bScreenIsWide: P,
               nShowAdditionalRows: _ - 1,
             },
-            t = so(z, e.nShowAdditionalRows),
-            n = io(Object(S.c)(z), t, e.capsules.length);
+            t = $r(z, e.nShowAdditionalRows),
+            n = Xr(Object(S.c)(z), t, e.capsules.length);
           n < t && (e.nShowAdditionalRows -= t - n);
           let { content: o, bAdditionalContent: l } = Object(S.d)(e);
           if (((q = o), (q && l) || E)) {
-            const t = so(z, _),
-              a = io(Object(S.c)(z), t, e.capsules.length) < t;
+            const t = $r(z, _),
+              a = Xr(Object(S.c)(z), t, e.capsules.length) < t;
             q = r.a.createElement(
               r.a.Fragment,
               null,
@@ -27164,7 +27125,7 @@
                 "div",
                 {
                   className: Object(I.a)(
-                    ao.a.ShowContentsContainer,
+                    mo.a.ShowContentsContainer,
                     "ShowContentsContainer"
                   ),
                 },
@@ -27179,7 +27140,7 @@
                         {
                           onClick: H,
                           className: Object(I.a)(
-                            ao.a.ShowContentsButton,
+                            mo.a.ShowContentsButton,
                             "ShowContentsButton"
                           ),
                         },
@@ -27210,7 +27171,7 @@
           q = z.enable_faceted_browsing
             ? r.a.createElement(
                 "div",
-                { className: ao.a.FacetedBrowseLoadThrobber },
+                { className: mo.a.FacetedBrowseLoadThrobber },
                 r.a.createElement(y.a, null)
               )
             : r.a.createElement(J, {
@@ -27247,7 +27208,7 @@
           O.b,
           { feature: Y, depth: K },
           Boolean(z.dynamic_reveal && s) &&
-            r.a.createElement(no, {
+            r.a.createElement(po, {
               section: z,
               fnGetCapsules: () => B,
               fnSetCapsules: A,
@@ -27266,7 +27227,7 @@
                       for (; t > 0; ) (t -= a[n % a.length]), n++;
                       return n;
                     })(e, B.length),
-                    so(e, 0)
+                    $r(e, 0)
                   );
                   return 250 * Math.max(1, t);
                 })(z) + "px",
@@ -27288,7 +27249,7 @@
                 Object.assign({}, e, { nHiddenCapsules: T })
               ),
               r.a.createElement(kr, { event: a, section: z }),
-              r.a.createElement(uo, {
+              r.a.createElement(ao, {
                 event: a,
                 section: z,
                 activeTab: c,
@@ -27321,7 +27282,7 @@
           )
         );
       }
-      function wo(e) {
+      function Do(e) {
         const {
             promotionName: t,
             eventModel: a,
@@ -27399,7 +27360,7 @@
                   },
                   n.createElement(Mr, { eventModel: a, language: o }),
                   n.createElement(Ot, { event: a, broadcastEmbedContext: e }),
-                  n.createElement(jo, {
+                  n.createElement(To, {
                     bIsPreview: r,
                     event: a,
                     language: o,
@@ -27428,14 +27389,14 @@
           })
         );
       }
-      function Do(e) {
+      function jo(e) {
         var t;
         const { event: a, section: r, activeTab: o, language: i } = e;
         switch (r.section_type) {
           case "items":
           case "events":
           case "links":
-            return n.createElement(Io, Object.assign({}, e));
+            return n.createElement(wo, Object.assign({}, e));
           case "itemdef":
             return n.createElement(_a.b, Object.assign({}, e));
           case "broadcast":
@@ -27465,7 +27426,7 @@
             return n.createElement(Fr, Object.assign({}, e));
           case "tabs":
           case "tab_buttons":
-            return n.createElement(Xr, Object.assign({}, e));
+            return n.createElement(lo, Object.assign({}, e));
           case "curator":
             return r.curator_clan_id
               ? n.createElement(
@@ -27533,7 +27494,7 @@
               }
             return null;
           case "sale_item_browser":
-            return n.createElement(Zr, Object.assign({}, e));
+            return n.createElement(io, Object.assign({}, e));
           case "contenthubtitle":
             return n.createElement(
               $e,
@@ -27651,8 +27612,8 @@
         }
         return null;
       }
-      Object(D.b)([Tt.C], Eo.prototype, "m_mapMasterAppToBenefitApps", void 0);
-      const jo = Object(o.j)(function (e) {
+      Object(D.b)([Tt.C], fo.prototype, "m_mapMasterAppToBenefitApps", void 0);
+      const To = Object(o.j)(function (e) {
         const { event: t, language: a, nSaleDayIndex: r } = e,
           [o, i] = n.useState(Object(l.a)()),
           s = n.useMemo(() => new de.a(), []),
@@ -27696,7 +27657,7 @@
             b = o && !h && !Boolean(t.jsondata.content_hub_restricted_width);
           let v = null;
           if (r.disable_section)
-            v = n.createElement($r, { section: r, event: t, language: a });
+            v = n.createElement(co, { section: r, event: t, language: a });
           else if (
             (function (e) {
               return (
@@ -27730,7 +27691,7 @@
               g.push({ activeTab: e, elements: [] });
             }
             v = n.createElement(
-              Do,
+              jo,
               Object.assign({}, e, {
                 section: r,
                 activeTab: t,

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7374450";
+var CLSTAMP = "7385738";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [114],
   {
@@ -4573,6 +4573,7 @@ var CLSTAMP = "7374450";
             h = o || Object(A.f)("#Button_Close");
           let m = r.createElement(i.E, {
             bOKDisabled: this.props.bOKDisabled,
+            bCancelDisabled: this.props.bCancelDisabled,
             strOKText: o,
             onCancel: this.Cancel,
             strCancelText: s,
@@ -4583,6 +4584,7 @@ var CLSTAMP = "7374450";
               : l &&
                 (m = r.createElement(i.F, {
                   bOKDisabled: this.props.bOKDisabled,
+                  bCancelDisabled: this.props.bCancelDisabled,
                   strOKText: o,
                   onCancel: this.Cancel,
                   strCancelText: s,
@@ -7449,7 +7451,11 @@ var CLSTAMP = "7374450";
           ),
           i.createElement(
             F,
-            { onClick: e.onCancel, autoFocus: "secondary" == e.focusButton },
+            {
+              onClick: e.onCancel,
+              disabled: e.bCancelDisabled,
+              autoFocus: "secondary" == e.focusButton,
+            },
             e.strCancelText || Object(u.f)("#Button_Cancel")
           )
         );
@@ -7472,7 +7478,7 @@ var CLSTAMP = "7374450";
           ),
           i.createElement(
             F,
-            { onClick: e.onCancel },
+            { onClick: e.onCancel, disabled: e.bCancelDisabled },
             e.strCancelText || Object(u.f)("#Button_Cancel")
           )
         );
@@ -16728,55 +16734,55 @@ var CLSTAMP = "7374450";
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
                 ),
             (function (e, t) {
-              var n, r, i, o;
-              const s = e.Element;
-              let a = e,
-                l =
-                  null === (n = e.m_Properties) || void 0 === n
-                    ? void 0
-                    : n.scrollIntoViewType;
+              var n, r, i;
+              const o = e.Element;
+              if (!o) return;
+              let s = [e];
               for (let t = e.Parent; t; t = t.Parent)
-                (null === (r = t.m_Properties) || void 0 === r
+                (null === (n = t.m_Properties) || void 0 === n
                   ? void 0
-                  : r.scrollIntoViewWhenChildFocused) && (a = t),
-                  void 0 === l &&
-                    (l =
-                      null === (i = t.m_Properties) || void 0 === i
-                        ? void 0
-                        : i.scrollIntoViewType);
-              if ((void 0 === l && (l = w ? A.NoTransform : A.Standard), !s))
-                return;
-              if (
-                (null === (o = a.m_Properties) || void 0 === o
-                  ? void 0
-                  : o.fnScrollIntoViewHandler) &&
-                !1 !== a.m_Properties.fnScrollIntoViewHandler(e, t, a)
-              )
-                return;
-              const c = a.m_element,
-                u = l == A.NoTransform || l == A.NoTransformSparseContent;
-              if (t) {
-                const t = u ? S(c) : c.getBoundingClientRect();
-                let n = !1;
-                const r = Math.max(1.4 * (t.bottom - t.top), 40);
-                ((C && performance.now() - C < 500) ||
-                  t.bottom < -r ||
-                  t.top > window.innerHeight + r) &&
-                  (n = !0);
-                let i = n ? "auto" : "smooth";
-                n && (C = performance.now()),
-                  e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
-                  u
-                    ? R(0, c, i)
-                    : c.scrollIntoView({ behavior: i, block: "nearest" });
-              } else
-                u
-                  ? R(0, c, "auto")
-                  : c.scrollIntoView({
-                      behavior: "auto",
-                      block: "nearest",
-                      inline: "nearest",
-                    });
+                  : n.scrollIntoViewWhenChildFocused) && s.push(t);
+              for (; s.length; ) {
+                let n = s.pop(),
+                  o = 0 == s.length,
+                  a =
+                    null === (r = n.m_Properties) || void 0 === r
+                      ? void 0
+                      : r.scrollIntoViewType;
+                if (
+                  (void 0 === a && (a = w ? A.NoTransform : A.Standard),
+                  (null === (i = n.m_Properties) || void 0 === i
+                    ? void 0
+                    : i.fnScrollIntoViewHandler) &&
+                    !1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
+                )
+                  continue;
+                const l = n.m_element,
+                  c =
+                    a == A.NoTransform || a == A.NoTransformSparseContent || !o;
+                if (t) {
+                  const t = c ? S(l) : l.getBoundingClientRect();
+                  let n = !1;
+                  const r = Math.max(1.4 * (t.bottom - t.top), 40);
+                  ((C && performance.now() - C < 500) ||
+                    t.bottom < -r ||
+                    t.top > window.innerHeight + r) &&
+                    (n = !0);
+                  let i = n ? "auto" : "smooth";
+                  n && (C = performance.now()),
+                    e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
+                    c
+                      ? R(0, l, i)
+                      : l.scrollIntoView({ behavior: i, block: "nearest" });
+                } else
+                  c
+                    ? R(0, l, "auto")
+                    : l.scrollIntoView({
+                        behavior: "auto",
+                        block: "nearest",
+                        inline: "nearest",
+                      });
+              }
             })(this, t),
             this.m_Tree.OnChildActivated(e);
         }

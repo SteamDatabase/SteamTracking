@@ -2521,55 +2521,57 @@
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
                 ),
             (function (t, e) {
-              var n, i, o, s;
-              const r = t.Element;
-              let a = t,
-                c =
-                  null === (n = t.m_Properties) || void 0 === n
-                    ? void 0
-                    : n.scrollIntoViewType;
+              var n, i, o;
+              const s = t.Element;
+              if (!s) return;
+              let r = [t];
               for (let e = t.Parent; e; e = e.Parent)
-                (null === (i = e.m_Properties) || void 0 === i
+                (null === (n = e.m_Properties) || void 0 === n
                   ? void 0
-                  : i.scrollIntoViewWhenChildFocused) && (a = e),
-                  void 0 === c &&
-                    (c =
-                      null === (o = e.m_Properties) || void 0 === o
-                        ? void 0
-                        : o.scrollIntoViewType);
-              if ((void 0 === c && (c = et ? bt.NoTransform : bt.Standard), !r))
-                return;
-              if (
-                (null === (s = a.m_Properties) || void 0 === s
-                  ? void 0
-                  : s.fnScrollIntoViewHandler) &&
-                !1 !== a.m_Properties.fnScrollIntoViewHandler(t, e, a)
-              )
-                return;
-              const l = a.m_element,
-                u = c == bt.NoTransform || c == bt.NoTransformSparseContent;
-              if (e) {
-                const e = u ? it(l) : l.getBoundingClientRect();
-                let n = !1;
-                const i = Math.max(1.4 * (e.bottom - e.top), 40);
-                ((nt && performance.now() - nt < 500) ||
-                  e.bottom < -i ||
-                  e.top > window.innerHeight + i) &&
-                  (n = !0);
-                let o = n ? "auto" : "smooth";
-                n && (nt = performance.now()),
-                  t.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
-                  u
-                    ? ut(0, l, o)
-                    : l.scrollIntoView({ behavior: o, block: "nearest" });
-              } else
-                u
-                  ? ut(0, l, "auto")
-                  : l.scrollIntoView({
-                      behavior: "auto",
-                      block: "nearest",
-                      inline: "nearest",
-                    });
+                  : n.scrollIntoViewWhenChildFocused) && r.push(e);
+              for (; r.length; ) {
+                let n = r.pop(),
+                  s = 0 == r.length,
+                  a =
+                    null === (i = n.m_Properties) || void 0 === i
+                      ? void 0
+                      : i.scrollIntoViewType;
+                if (
+                  (void 0 === a && (a = et ? bt.NoTransform : bt.Standard),
+                  (null === (o = n.m_Properties) || void 0 === o
+                    ? void 0
+                    : o.fnScrollIntoViewHandler) &&
+                    !1 !== n.m_Properties.fnScrollIntoViewHandler(t, e, n))
+                )
+                  continue;
+                const c = n.m_element,
+                  l =
+                    a == bt.NoTransform ||
+                    a == bt.NoTransformSparseContent ||
+                    !s;
+                if (e) {
+                  const e = l ? it(c) : c.getBoundingClientRect();
+                  let n = !1;
+                  const i = Math.max(1.4 * (e.bottom - e.top), 40);
+                  ((nt && performance.now() - nt < 500) ||
+                    e.bottom < -i ||
+                    e.top > window.innerHeight + i) &&
+                    (n = !0);
+                  let o = n ? "auto" : "smooth";
+                  n && (nt = performance.now()),
+                    t.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
+                    l
+                      ? ut(0, c, o)
+                      : c.scrollIntoView({ behavior: o, block: "nearest" });
+                } else
+                  l
+                    ? ut(0, c, "auto")
+                    : c.scrollIntoView({
+                        behavior: "auto",
+                        block: "nearest",
+                        inline: "nearest",
+                      });
+              }
             })(this, e),
             this.m_Tree.OnChildActivated(t);
         }

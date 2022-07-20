@@ -25520,6 +25520,9 @@ html.responsive.touch
 .newlogindialog_Login_1sORI .newlogindialog_Checkbox_2Tm6x:hover {
   background-color: #393c44;
 }
+.newlogindialog_Login_1sORI .newlogindialog_Checkbox_2Tm6x:focus {
+  outline: 1px #06bfff solid;
+}
 .newlogindialog_Login_1sORI
   .newlogindialog_CheckboxField_1KTan:hover
   .newlogindialog_Checkbox_2Tm6x {
@@ -25554,6 +25557,10 @@ html.responsive.touch
 }
 .newlogindialog_Login_1sORI .newlogindialog_SubmitButton_1fgOu:disabled {
   opacity: 0.5;
+}
+.newlogindialog_Login_1sORI .newlogindialog_SubmitButton_1fgOu:focus {
+  outline: solid #06bfff;
+  outline-width: 1px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_Text_3EW_V {
   color: #afafaf;
@@ -28054,6 +28061,12 @@ div.pricinggridcell_HoverToolTip_36qS7 {
 .saveprices_PublishWarning_3uUgr {
   padding: 16px;
   color: #ff9110;
+}
+.saveprices_PublishErrorDialog_381pE {
+  margin-top: 12px;
+}
+.saveprices_PublishErrorDialog_381pE div:first-child {
+  padding-bottom: 12px;
 }
 div.saveprices_HoverToolTip_1yXHp {
   z-index: 2000;

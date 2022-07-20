@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7376023";
+var CLSTAMP = "7385738";
 !(function (e) {
   function t(t) {
     for (
@@ -292,14 +292,14 @@ var CLSTAMP = "7376023";
               {
                 3: "e7f0aeede2004fd9ecd7",
                 8: "7f48182463765343374f",
-                9: "0c56960e0ae63b14be95",
+                9: "3d384cd4ee5035b17193",
                 10: "cfe1517f78a25579b8aa",
                 11: "0dd2112ea1028866372c",
                 12: "a5090d3fd3ef9f45671a",
                 13: "1080824877e355c09249",
                 14: "9e0c6e9165c568bcf19f",
                 15: "736c8e547374be567d5e",
-                16: "854646e51773b7eaa34e",
+                16: "294bd4ca2c11cd6dd97c",
                 17: "8c76dfc1d2b58ed14bf9",
                 18: "20242ef0956612166d3c",
                 19: "753a67079830eff42b31",
@@ -309,7 +309,7 @@ var CLSTAMP = "7376023";
                 23: "28cb6fd0979d5e3994f1",
                 24: "c6836e24e4f5af434b07",
                 25: "da136aef3ae77124f922",
-                26: "51041b6ce0b3028a129a",
+                26: "ddd7bd23d8380f3e5c1a",
                 27: "8c3247e842b8f2a0f0ec",
                 28: "d5c01c003e6afa1ef527",
                 29: "f4b7d71b7d80031ffc11",
@@ -322,35 +322,35 @@ var CLSTAMP = "7376023";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "0f5fcf876bfba22f265e",
-                40: "d13ff3da70e2dbd9bdc4",
-                41: "477179785ab45bffb3b2",
-                42: "8e603da55ce5ee1573b9",
-                43: "55a37144dcad37af0401",
+                39: "21f58d182c6de3966fc6",
+                40: "7509ee8a37144b1d5a32",
+                41: "efaaeba81a6c1ddf4bc6",
+                42: "c5fed291871bc4f3a846",
+                43: "ea1f86da59d212036cdc",
                 44: "ddc09c0099dc1d6e65b0",
-                45: "c37bcb3ca81ce2ece8fb",
-                46: "b358408736c7a71c67ea",
-                47: "b61b6bbee6e845bd43f5",
-                48: "75016a2cdbc889b0f336",
-                49: "4c0ba3135df944ca997c",
-                50: "6cd6e073f84a97de2571",
-                51: "85ff3f0bb4c4bd7dc308",
-                52: "1fa2c4c4766213f66c39",
-                53: "ca044cc29116ba857e4c",
-                54: "0fa75d3d8e8cd43ed1b0",
-                55: "4c1c3acda4f3d38072b0",
-                56: "ec0d21d04f1045a97e8d",
-                57: "a1546e4fc27c31ce7cae",
-                58: "fef32d53f84e74d4349a",
+                45: "652e2c12aceb59ea24ba",
+                46: "7405c1f4611e3016323e",
+                47: "71c5e2e53822a9cf50f9",
+                48: "02b5c43d86dc4d591cfa",
+                49: "f35e06e6f1db289ee33b",
+                50: "c22d062385fddd2caac7",
+                51: "8d151c72ae9035961bf4",
+                52: "dac9bc45ac40109ee50c",
+                53: "6516a37dfaacda33cd0c",
+                54: "900eaf29aa12de1da4aa",
+                55: "b51fa50470f4b1c2d7d4",
+                56: "1b3a13f2ed6f6705542d",
+                57: "fab284c97ffbfc664fc2",
+                58: "fc95eeae29733fd896d4",
                 59: "eae17d6c18038567cb04",
-                60: "ceb3a0b589acafc55805",
-                61: "e8c80cb7b047b118694f",
-                62: "a8085193f0fd6a514b35",
-                63: "528aee1ef8c801b59480",
-                64: "b3bb6b24ea7fd0f11dfc",
-                65: "c35742fbd57df728e83f",
-                66: "ba2ef1d8c609de3f8a7d",
-                67: "1e639dd9b8397f55eb36",
+                60: "10171c027d6a91f73813",
+                61: "812675bf373f0b1508af",
+                62: "7a5633f7df14b8507352",
+                63: "db4d48943ec166e383e9",
+                64: "480990d4eff0d8cc4fdf",
+                65: "1e0d515a5c390e06cc71",
+                66: "bdc63186114e6bc803b0",
+                67: "ba0f751f00836fa9be97",
                 68: "af1febcb4be4094316a9",
               }[e]
             );
@@ -2695,6 +2695,7 @@ var CLSTAMP = "7376023";
           h = o || Object(x.f)("#Button_Close");
         let u = a.createElement(i.M, {
           bOKDisabled: this.props.bOKDisabled,
+          bCancelDisabled: this.props.bCancelDisabled,
           strOKText: o,
           onCancel: this.Cancel,
           strCancelText: r,
@@ -2705,6 +2706,7 @@ var CLSTAMP = "7376023";
             : c &&
               (u = a.createElement(i.N, {
                 bOKDisabled: this.props.bOKDisabled,
+                bCancelDisabled: this.props.bCancelDisabled,
                 strOKText: o,
                 onCancel: this.Cancel,
                 strCancelText: r,
@@ -2784,28 +2786,35 @@ var CLSTAMP = "7376023";
   },
   "+mma": function (e, t, n) {
     "use strict";
-    n.d(t, "d", function () {
+    n.d(t, "e", function () {
       return c;
     }),
-      n.d(t, "a", function () {
+      n.d(t, "f", function () {
         return l;
       }),
-      n.d(t, "c", function () {
+      n.d(t, "a", function () {
         return d;
       }),
-      n.d(t, "b", function () {
+      n.d(t, "c", function () {
         return m;
+      }),
+      n.d(t, "d", function () {
+        return h;
+      }),
+      n.d(t, "b", function () {
+        return u;
       });
     var a = n("Hi0u"),
       i = n("hReu"),
       o = n("LAqV"),
       r = (n("cDcd"), n("faye"), n("+M9t"), n("7ERL"), n("bbBM"), n("oh5H")),
       s = (n("tkkQ"), n("+RPw"));
-    function c(e, t, n, o, c = Object(r.f)("#Button_Cancel"), l, d) {
+    n("JtU4");
+    function c(e, t, n, o, c = Object(r.f)("#Button_Cancel"), l, d, m) {
       return Object(s.l)(
         (n) => {
-          let o = m(e, t);
-          Object(a.c)(n, e, "alertdialog", o, Object(i.g)(e));
+          let o = u(e, t, m);
+          Object(a.c)(n, e, "alertdialog", o, m || Object(i.g)(e));
         },
         t,
         n,
@@ -2815,16 +2824,20 @@ var CLSTAMP = "7376023";
         d
       );
     }
-    function l(e, t, n, a, i = Object(r.f)("#Button_Cancel"), o, s) {
+    function l(e, t, n, a = Object(r.f)("#Button_Cancel"), i, s) {
+      const l = o.f.GetDefaultBrowserContext();
+      return c(window, e, t, n, a, i, s, l);
+    }
+    function d(e, t, n, a, i = Object(r.f)("#Button_Cancel"), o, s) {
       return c(e, t, n, a, i, o, s)
         .then(() => Promise.resolve(!0))
         .catch(() => Promise.resolve(!1));
     }
-    function d(e, t, n, o = Object(r.f)("#Button_OK"), c) {
+    function m(e, t, n, o = Object(r.f)("#Button_OK"), c, l) {
       return Object(s.k)(
         (n) => {
-          let o = m(e, t);
-          Object(a.c)(n, e, "alertdialog", o, Object(i.g)(e));
+          let o = u(e, t, l);
+          Object(a.c)(n, e, "alertdialog", o, l || Object(i.g)(e));
         },
         t,
         n,
@@ -2832,9 +2845,14 @@ var CLSTAMP = "7376023";
         c
       );
     }
-    function m(e, t) {
-      return o.f.UIStore.GetPerContextChatData(Object(i.f)(e)).BUsePopups() &&
-        e.innerWidth < 600
+    function h(e, t, n = Object(r.f)("#Button_OK"), a) {
+      const i = o.f.GetDefaultBrowserContext();
+      return m(window, e, t, n, a, i);
+    }
+    function u(e, t, n) {
+      return o.f.UIStore.GetPerContextChatData(
+        n || Object(i.f)(e)
+      ).BUsePopups() && e.innerWidth < 600
         ? { strTitle: t, popupWidth: 638, popupHeight: 300 }
         : null;
     }
@@ -10197,7 +10215,11 @@ var CLSTAMP = "7376023";
                     t.group_summary(),
                     t.user_chat_group_state()
                   );
-                  r.f.UIStore.ShowAndOrActivateChatRoomGroup(r.a, e, !1);
+                  r.f.UIStore.ShowAndOrActivateChatRoomGroup(
+                    r.f.GetDefaultBrowserContext(),
+                    e,
+                    !1
+                  );
                   break;
                 }
                 case 2:
@@ -19839,7 +19861,7 @@ var CLSTAMP = "7376023";
             : a.BIsAccountIDOwner(l.f.CMInterface.steamid.GetAccountID())
             ? "#Chat_Actions_OwnerLeaveChatRoomGroup_Confirm"
             : "#Chat_Actions_LeaveChatRoomGroup_Confirm";
-        Object(h.d)(
+        Object(h.e)(
           t,
           Object(E.f)("#GroupSettings_Leave_Section"),
           Object(E.f)(i, a.name),
@@ -20147,12 +20169,12 @@ var CLSTAMP = "7376023";
             1 == e.data.success &&
               n.SetChatRoomGroupAvatar(e.data.sha).catch((e) => {
                 let t = this.SetChatRoomGroupAvatarEResultToString(e);
-                Object(h.c)(window, Object(E.f)("#Generic_Error"), t);
+                Object(h.d)(Object(E.f)("#Generic_Error"), t);
               });
           })
           .catch((e) => {
             let t = this.AvatarUploadEResultToString(e.response.data.success);
-            Object(h.c)(window, Object(E.f)("#Generic_Error"), t),
+            Object(h.d)(Object(E.f)("#Generic_Error"), t),
               console.log(e.response);
           });
       }
@@ -20340,7 +20362,7 @@ var CLSTAMP = "7376023";
               )
             ? "#Chat_Actions_OwnerLeaveChatRoomGroup_Confirm"
             : "#Chat_Actions_LeaveChatRoomGroup_Confirm";
-        Object(h.d)(
+        Object(h.e)(
           t,
           Object(E.f)("#GroupSettings_Leave_Section"),
           Object(E.f)(a, this.props.group.name),
@@ -20450,7 +20472,7 @@ var CLSTAMP = "7376023";
       }
       OnDeleteChannel(e, t) {
         let n = e.currentTarget.ownerDocument.defaultView;
-        Object(h.d)(
+        Object(h.e)(
           n,
           Object(E.f)("#GroupSettings_Channels_DeleteChannel"),
           Object(E.f)("#GroupSettings_Channels_DeleteConfirm"),
@@ -20962,8 +20984,8 @@ var CLSTAMP = "7376023";
             { style: { marginTop: "8px", color: "white" } },
             a
           );
-        Object(h.d)(
-          window,
+        Object(h.e)(
+          n,
           Object(E.f)("#GroupSettings_Permissions_ConfirmDeleteTitle"),
           Object(E.f)("#GroupSettings_Permissions_ConfirmDelete"),
           Object(E.f)("#GroupSettings_Permissions_ConfirmDeleteButton"),
@@ -21202,8 +21224,7 @@ var CLSTAMP = "7376023";
             { style: { marginTop: "5px", color: "#dee2e5" } },
             Object(D.a)(e.invite_code())
           );
-        Object(h.d)(
-          window,
+        Object(h.f)(
           Object(E.f)("#GroupSettings_Invite_ConfirmDeleteTitle"),
           Object(E.f)("#GroupSettings_Invite_ConfirmDelete"),
           Object(E.f)("#GroupSettings_Invite_ConfirmDeleteButton"),
@@ -21399,8 +21420,8 @@ var CLSTAMP = "7376023";
             context: null,
             disableContextMenu: !0,
           });
-        Object(h.d)(
-          window,
+        Object(h.e)(
+          a,
           Object(E.f)("#GroupSettings_InvitedUsers_RevokeTitle"),
           Object(E.f)("#GroupSettings_InvitedUsers_RevokeBody"),
           Object(E.f)("#GroupSettings_InvitedUsers_RevokeConfirm"),
@@ -21569,8 +21590,8 @@ var CLSTAMP = "7376023";
             context: null,
             disableContextMenu: !0,
           });
-        Object(h.d)(
-          window,
+        Object(h.e)(
+          a,
           Object(E.f)("#GroupSettings_Bans_UnbanTitle"),
           Object(E.f)("#GroupSettings_Bans_UnbanBody", n.display_name),
           Object(E.f)("#GroupSettings_Bans_UnbanConfirm"),
@@ -27021,7 +27042,7 @@ var CLSTAMP = "7376023";
               ? "#Friend_CancelInvitation_Error"
               : "#Friend_RemoveFromFriendsList_Error"
           );
-        Object(M.d)(
+        Object(M.e)(
           this.props.ownerWindow,
           t,
           n,
@@ -27037,7 +27058,7 @@ var CLSTAMP = "7376023";
           .catch(() => {});
       }
       BlockFriend() {
-        Object(M.d)(
+        Object(M.e)(
           this.props.ownerWindow,
           Object(h.f)("#Friend_Menu_BlockAllCommunication"),
           Object(h.f)("#Friend_Block_Confirm", this.props.friend.display_name),
@@ -27049,7 +27070,7 @@ var CLSTAMP = "7376023";
           .catch(() => {});
       }
       UnblockFriend() {
-        Object(M.d)(
+        Object(M.e)(
           this.props.ownerWindow,
           Object(h.f)("#Friend_Menu_UnblockAllCommunication"),
           Object(h.f)(
@@ -35554,56 +35575,55 @@ var CLSTAMP = "7376023";
                 `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
               ),
           (function (e, t) {
-            var n, a, i, o;
-            const r = e.Element;
-            let s = e,
-              c =
-                null === (n = e.m_Properties) || void 0 === n
-                  ? void 0
-                  : n.scrollIntoViewType;
+            var n, a, i;
+            const o = e.Element;
+            if (!o) return;
+            let r = [e];
             for (let t = e.Parent; t; t = t.Parent)
-              (null === (a = t.m_Properties) || void 0 === a
+              (null === (n = t.m_Properties) || void 0 === n
                 ? void 0
-                : a.scrollIntoViewWhenChildFocused) && (s = t),
-                void 0 === c &&
-                  (c =
-                    null === (i = t.m_Properties) || void 0 === i
-                      ? void 0
-                      : i.scrollIntoViewType);
-            if ((void 0 === c && (c = S ? j.NoTransform : j.Standard), !r))
-              return;
-            if (
-              null === (o = s.m_Properties) || void 0 === o
-                ? void 0
-                : o.fnScrollIntoViewHandler
-            ) {
-              if (!1 !== s.m_Properties.fnScrollIntoViewHandler(e, t, s))
-                return;
-            }
-            const l = s.m_element,
-              d = c == j.NoTransform || c == j.NoTransformSparseContent;
-            if (t) {
-              const t = d ? I(l) : l.getBoundingClientRect();
-              let n = !1;
-              const a = Math.max(1.4 * (t.bottom - t.top), 40);
-              ((v && performance.now() - v < 500) ||
-                t.bottom < -a ||
-                t.top > window.innerHeight + a) &&
-                (n = !0);
-              let i = n ? "auto" : "smooth";
-              n && (v = performance.now()),
-                e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
+                : n.scrollIntoViewWhenChildFocused) && r.push(t);
+            for (; r.length; ) {
+              let n = r.pop(),
+                s = 0 == r.length,
+                c =
+                  null === (a = n.m_Properties) || void 0 === a
+                    ? void 0
+                    : a.scrollIntoViewType;
+              if (
+                (void 0 === c && (c = S ? j.NoTransform : j.Standard),
+                null === (i = n.m_Properties) || void 0 === i
+                  ? void 0
+                  : i.fnScrollIntoViewHandler)
+              ) {
+                if (!1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
+                  continue;
+              }
+              const l = n.m_element,
+                d = c == j.NoTransform || c == j.NoTransformSparseContent || !s;
+              if (t) {
+                const t = d ? I(l) : l.getBoundingClientRect();
+                let n = !1;
+                const a = Math.max(1.4 * (t.bottom - t.top), 40);
+                ((v && performance.now() - v < 500) ||
+                  t.bottom < -a ||
+                  t.top > window.innerHeight + a) &&
+                  (n = !0);
+                let i = n ? "auto" : "smooth";
+                n && (v = performance.now()),
+                  e.Tree.Controller.BIsRestoringHistory() && (i = "auto"),
+                  d
+                    ? k(o, l, i)
+                    : l.scrollIntoView({ behavior: i, block: "nearest" });
+              } else
                 d
-                  ? k(r, l, i)
-                  : l.scrollIntoView({ behavior: i, block: "nearest" });
-            } else
-              d
-                ? k(r, l, "auto")
-                : l.scrollIntoView({
-                    behavior: "auto",
-                    block: "nearest",
-                    inline: "nearest",
-                  });
+                  ? k(o, l, "auto")
+                  : l.scrollIntoView({
+                      behavior: "auto",
+                      block: "nearest",
+                      inline: "nearest",
+                    });
+            }
           })(this, t),
           this.m_Tree.OnChildActivated(e);
       }
@@ -44785,7 +44805,11 @@ var CLSTAMP = "7376023";
         ),
         i.createElement(
           M,
-          { onClick: e.onCancel, autoFocus: "secondary" == e.focusButton },
+          {
+            onClick: e.onCancel,
+            disabled: e.bCancelDisabled,
+            autoFocus: "secondary" == e.focusButton,
+          },
           e.strCancelText || Object(l.f)("#Button_Cancel")
         )
       );
@@ -44808,7 +44832,7 @@ var CLSTAMP = "7376023";
         ),
         i.createElement(
           M,
-          { onClick: e.onCancel },
+          { onClick: e.onCancel, disabled: e.bCancelDisabled },
           e.strCancelText || Object(l.f)("#Button_Cancel")
         )
       );
@@ -56142,13 +56166,14 @@ var CLSTAMP = "7376023";
       OnRemoveBroadcast(e) {
         e.stopPropagation();
         const t = this.props.groupView.GetGroup();
-        t.BCanIAssociateBroadcast() &&
-          Object(h.d)(
-            window,
-            Object(g.f)("#Broadcast_EndWatchParty"),
-            Object(g.f)("#Broadcast_EndWatchPartyPrompt"),
-            Object(g.f)("#Broadcast_EndWatchParty")
-          ).then(() => t.SetChatRoomGroupWatchingBroadcast(void 0));
+        if (!t.BCanIAssociateBroadcast()) return;
+        const n = Object(s.r)(e);
+        Object(h.e)(
+          n,
+          Object(g.f)("#Broadcast_EndWatchParty"),
+          Object(g.f)("#Broadcast_EndWatchPartyPrompt"),
+          Object(g.f)("#Broadcast_EndWatchParty")
+        ).then(() => t.SetChatRoomGroupWatchingBroadcast(void 0));
       }
       OnToggleBroadcast(e) {
         let t = this.props.groupView;
@@ -61134,7 +61159,7 @@ var CLSTAMP = "7376023";
         let t = e.currentTarget.ownerDocument.defaultView,
           n = d.i.GetSecondsOutOfDate(),
           a = Object(k.o)(n, !0);
-        Object(u.d)(
+        Object(u.e)(
           t,
           Object(k.f)("#Friends_ConfirmUpdate_Title"),
           Object(k.f)("#Friends_ConfirmUpdate_Body", a),
@@ -62764,7 +62789,7 @@ var CLSTAMP = "7376023";
           "ignore all invites on non-invite group"
         );
         let t = e.currentTarget.ownerDocument.defaultView;
-        Object(u.d)(
+        Object(u.e)(
           t,
           Object(k.f)("#FriendGroup_ConfirmAllIgnore_Title"),
           Object(k.f)("#FriendGroup_ConfirmAllIgnore_Body"),
@@ -79801,7 +79826,7 @@ var CLSTAMP = "7376023";
           );
       }
       RemoveRoom() {
-        Object(l.d)(
+        Object(l.e)(
           this.props.ownerWindow,
           Object(f.f)("#Chat_Actions_RemoveRoom"),
           Object(f.f)("#Chat_Actions_RemoveRoom_Confirm"),
@@ -86090,7 +86115,7 @@ var CLSTAMP = "7376023";
             default:
               e = "#RemotePlay_ErrorInviteFailed_Failed";
           }
-          Object($.c)(window, Object(V.f)("#RemotePlay_Error"), Object(V.f)(e));
+          this.ShowAlert(Object(V.f)("#RemotePlay_Error"), Object(V.f)(e));
         }
       }
       RemoteClientLaunchFailed(e) {
@@ -86130,11 +86155,11 @@ var CLSTAMP = "7376023";
             default:
               t = "#RemotePlay_ErrorInviteFailed_Failed";
           }
-          Object($.c)(window, Object(V.f)("#RemotePlay_Error"), Object(V.f)(t));
+          this.ShowAlert(Object(V.f)("#RemotePlay_Error"), Object(V.f)(t));
         }
       }
       ShowAlert(e, t, n) {
-        return Object($.c)(window, e, t, n);
+        return Object($.d)(e, t, n);
       }
       OpenURLInBrowser(e, t) {
         o.a.IN_CLIENT
@@ -89879,7 +89904,7 @@ var CLSTAMP = "7376023";
               onOKActionDescription: Object(d.f)("#VoiceChat_ViewQuickChat"),
               onSecondaryButton: a
                 ? (t) => {
-                    Object(I.d)(
+                    Object(I.e)(
                       Object(O.r)(t),
                       Object(d.f)("#Chat_Actions_RemoveRoom"),
                       Object(d.f)("#Chat_Actions_RemoveRoom_Confirm"),

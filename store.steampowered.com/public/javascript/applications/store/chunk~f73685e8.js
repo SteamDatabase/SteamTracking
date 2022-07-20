@@ -5,29 +5,33 @@
   {
     FQoL: function (e, t, r) {
       "use strict";
-      r.d(t, "a", function () {
+      r.d(t, "b", function () {
         return a;
       }),
-        r.d(t, "b", function () {
+        r.d(t, "a", function () {
           return o;
+        }),
+        r.d(t, "c", function () {
+          return l;
         });
       var i = r("yfxr"),
         s = r("/Q1a"),
         n = (r("hRO2"), r("9XWO"), r("Zdsb"));
       r("qisX");
       function a(e, t) {
-        e.Body().set_context(
-          (function (e) {
-            let t = new i.c();
-            e || t.set_country_code(s.d.COUNTRY);
-            t.set_language(s.d.LANGUAGE),
-              s.d.EREALM != n.h.k_ESteamRealmUnknown &&
-                t.set_steam_realm(s.d.EREALM);
-            return t;
-          })(t)
+        e.Body().set_context(o(t));
+      }
+      function o(e) {
+        let t = new i.c();
+        return (
+          e || t.set_country_code(s.d.COUNTRY),
+          t.set_language(s.d.LANGUAGE),
+          s.d.EREALM != n.h.k_ESteamRealmUnknown &&
+            t.set_steam_realm(s.d.EREALM),
+          t
         );
       }
-      function o(e, t) {
+      function l(e, t) {
         e.Body().set_data_request(i.d.fromObject(t));
       }
     },
@@ -1094,28 +1098,87 @@
     Ys0h: function (e, t, r) {
       "use strict";
       r.d(t, "a", function () {
-        return f;
+        return y;
       });
       var i = r("mrSG"),
         s = r("2vnA"),
         n = (r("msu0"), r("Zdsb"), r("9XWO")),
         a = r("rmVU"),
         o = (r("XThB"), r("hRO2")),
-        l = (r("3dpo"), r("yfxr"));
-      o.Message;
-      var u;
-      (u || (u = {})).GetItems = function (e, t) {
-        return e.SendMsg("PartnerStoreBrowse.GetItems#1", t, l.b, {
+        l = r("3dpo"),
+        u = r("yfxr");
+      const c = o.Message;
+      class d extends c {
+        constructor(e = null) {
+          super(),
+            d.prototype.request || l.a(d.M()),
+            c.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
+                fields: {
+                  request: { n: 1, c: u.a },
+                  include_unpublished: {
+                    n: 2,
+                    br: l.d.readBool,
+                    bw: l.h.writeBool,
+                  },
+                },
+              }),
+            d.sm_m
+          );
+        }
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = l.e(d.M())), d.sm_mbf;
+        }
+        toObject(e = !1) {
+          return d.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.g(d.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.c(d.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new o.BinaryReader(e),
+            r = new d();
+          return d.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.b(d.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new o.BinaryWriter();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.f(d.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new o.BinaryWriter();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerStoreBrowse_GetItems_Request";
+        }
+      }
+      var _;
+      (_ || (_ = {})).GetItems = function (e, t) {
+        return e.SendMsg("PartnerStoreBrowse.GetItems#1", t, u.b, {
           bConstMethod: !0,
           ePrivilege: 1,
         });
       };
-      var c = r("f5iL"),
-        d = r("TqgT"),
-        _ = r("/Q1a"),
-        m = r("FQoL"),
-        h = r("X/lQ");
-      function p(e, t) {
+      var m = r("f5iL"),
+        h = r("TqgT"),
+        p = r("/Q1a"),
+        g = r("FQoL"),
+        f = r("X/lQ");
+      function b(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -1137,14 +1200,14 @@
             e.include_supported_languages || t.include_supported_languages,
         };
       }
-      function g(e, t) {
+      function B(e, t) {
         return Object(i.a)(this, void 0, void 0, function* () {
           const r = yield e,
             i = yield t;
           return 1 != r ? r : i;
         });
       }
-      class f {
+      class y {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 5),
             (this.k_nMaxBatchSize = 250),
@@ -1170,25 +1233,25 @@
         }
         static Get() {
           return (
-            f.sm_instance ||
-              ((f.sm_instance = new f()),
-              (window.StoreItemCache = f.sm_instance)),
-            f.sm_instance
+            y.sm_instance ||
+              ((y.sm_instance = new y()),
+              (window.StoreItemCache = y.sm_instance)),
+            y.sm_instance
           );
         }
         static Initialize(e, t) {
           return Object(i.a)(this, void 0, void 0, function* () {
-            Object(c.a)(
-              !f.Get().m_bInitialized,
+            Object(m.a)(
+              !y.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once."
             ),
-              (f.Get().m_SteamInterface = e),
-              (f.Get().m_bUsePartnerAPI = !!t),
-              (f.Get().m_bInitialized = !0);
+              (y.Get().m_SteamInterface = e),
+              (y.Get().m_bUsePartnerAPI = !!t),
+              (y.Get().m_bInitialized = !0);
           });
         }
         static BIsInitialized() {
-          return f.Get().m_bInitialized;
+          return y.Get().m_bInitialized;
         }
         QueueAppRequest(e, t) {
           return Object(i.a)(this, void 0, void 0, function* () {
@@ -1256,14 +1319,14 @@
         QueueStoreItemRequest(e, t, r) {
           return Object(i.a)(this, void 0, void 0, function* () {
             if (
-              (Object(c.a)(
-                f.ValidateDataRequest(r),
+              (Object(m.a)(
+                y.ValidateDataRequest(r),
                 "Invalid Data Request: " + JSON.stringify(r)
               ),
               !e)
             )
               return (
-                Object(c.a)(
+                Object(m.a)(
                   !e,
                   `unexpected id ${e} of zero or undefined for type ${t}`
                 ),
@@ -1280,7 +1343,7 @@
                   () => this.FlushPendingInfo(),
                   this.k_QueueWaitUntilRequestMS
                 ))),
-              (this.m_setPendingDataRequest = p(
+              (this.m_setPendingDataRequest = b(
                 this.m_setPendingDataRequest,
                 r
               )),
@@ -1296,7 +1359,7 @@
                 this.m_setPendingPackageInfo.add(e);
                 break;
               default:
-                Object(c.a)(!1, `Unexpected Type ${t}`);
+                Object(m.a)(!1, `Unexpected Type ${t}`);
             }
             const s = this.m_PendingInfoPromise;
             return (
@@ -1357,7 +1420,7 @@
             case 2:
               i = this.m_mapBundleInFlight.get(e);
           }
-          return i && h.a.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
+          return i && f.a.BDataRequestContainsOtherDataRequest(i.dataRequest, r)
             ? i.promise
             : null;
         }
@@ -1366,48 +1429,48 @@
             let i = null;
             const a = new Promise((e) => (i = e));
             let o = [],
-              u = [];
+              l = [];
             (t || []).forEach((e) => {
               const t = this.GetPreviousSupersetLoadPromise(e, 0, n);
-              if (t) u.push(t);
+              if (t) l.push(t);
               else {
-                o.push(l.g.fromObject({ appid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 0), n);
+                o.push(u.g.fromObject({ appid: e }));
+                let t = b(this.GetStoreItemDataRequest(e, 0), n);
                 const r = this.m_mapAppsInFlight.get(e);
-                (t = p(null == r ? void 0 : r.dataRequest, t)),
-                  r && u.push(r.promise),
+                (t = b(null == r ? void 0 : r.dataRequest, t)),
+                  r && l.push(r.promise),
                   this.m_mapAppsInFlight.set(e, {
-                    promise: r ? g(r.promise, a) : a,
+                    promise: r ? B(r.promise, a) : a,
                     dataRequest: t,
                   });
               }
             }),
               (r || []).forEach((e) => {
                 const t = this.GetPreviousSupersetLoadPromise(e, 1, n);
-                if (t) u.push(t);
+                if (t) l.push(t);
                 else {
-                  o.push(l.g.fromObject({ packageid: e }));
-                  let t = p(this.GetStoreItemDataRequest(e, 1), n);
+                  o.push(u.g.fromObject({ packageid: e }));
+                  let t = b(this.GetStoreItemDataRequest(e, 1), n);
                   const r = this.m_mapPackageInFlight.get(e);
-                  (t = p(null == r ? void 0 : r.dataRequest, t)),
-                    r && u.push(r.promise),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                    r && l.push(r.promise),
                     this.m_mapPackageInFlight.set(e, {
-                      promise: r ? g(r.promise, a) : a,
+                      promise: r ? B(r.promise, a) : a,
                       dataRequest: t,
                     });
                 }
               }),
               (s || []).forEach((e) => {
                 const t = this.GetPreviousSupersetLoadPromise(e, 2, n);
-                if (t) u.push(t);
+                if (t) l.push(t);
                 else {
-                  o.push(l.g.fromObject({ bundleid: e }));
-                  let t = p(this.GetStoreItemDataRequest(e, 2), n);
+                  o.push(u.g.fromObject({ bundleid: e }));
+                  let t = b(this.GetStoreItemDataRequest(e, 2), n);
                   const r = this.m_mapBundleInFlight.get(e);
-                  (t = p(null == r ? void 0 : r.dataRequest, t)),
-                    r && u.push(r.promise),
+                  (t = b(null == r ? void 0 : r.dataRequest, t)),
+                    r && l.push(r.promise),
                     this.m_mapBundleInFlight.set(e, {
-                      promise: r ? g(r.promise, a) : a,
+                      promise: r ? B(r.promise, a) : a,
                       dataRequest: t,
                     });
                 }
@@ -1417,9 +1480,9 @@
               (o.length > 0 &&
                 (c = yield this.InternalHandleLoadStoreItems(e, o, n)),
               i(c),
-              u.length > 0)
+              l.length > 0)
             ) {
-              const e = yield Promise.all(u);
+              const e = yield Promise.all(l);
               for (const t of e) 1 != t && 1 == c && (c = t);
             }
             return (
@@ -1466,23 +1529,29 @@
             let i = 1;
             e ||
               (this.m_SteamInterface ||
-                (this.m_SteamInterface = new a.a(
-                  _.d.COMMUNITY_WEBAPI_BASE_URL
-                )),
+                (this.m_SteamInterface = new a.a(p.d.WEBAPI_BASE_URL)),
               (e = this.m_SteamInterface)),
               (t = this.SortStoreItems(t));
             const o = new Array();
             try {
               const a = [];
               for (; t.length > 0; ) {
-                const i = n.b.Init(l.a);
-                Object(m.a)(i, this.m_bUsePartnerAPI), Object(m.b)(i, r);
-                const s = t.splice(0, this.k_nMaxBatchSize);
-                o.push(s),
-                  i.Body().set_ids(s),
-                  this.m_bUsePartnerAPI
-                    ? a.push(u.GetItems(e.GetServiceTransport(), i))
-                    : a.push(l.e.GetItems(e.GetAnonymousServiceTransport(), i));
+                const i = t.splice(0, this.k_nMaxBatchSize);
+                if ((o.push(i), this.m_bUsePartnerAPI)) {
+                  const t = n.b.Init(d);
+                  t.Body().set_include_unpublished(!1);
+                  const s = t.Body().request(!0);
+                  s.set_context(Object(g.a)(this.m_bUsePartnerAPI)),
+                    s.set_data_request(u.d.fromObject(r)),
+                    s.set_ids(i),
+                    a.push(_.GetItems(e.GetServiceTransport(), t));
+                } else {
+                  const t = n.b.Init(u.a);
+                  Object(g.b)(t, this.m_bUsePartnerAPI),
+                    Object(g.c)(t, r),
+                    t.Body().set_ids(i),
+                    a.push(u.e.GetItems(e.GetAnonymousServiceTransport(), t));
+                }
               }
               (yield Promise.all(a)).forEach((e, n) => {
                 1 == e.GetEResult()
@@ -1494,7 +1563,7 @@
                           i = e.item_type();
                         if (1 != e.success() || this.BIsStoreItemMissing(t, i))
                           switch (
-                            ("dev" == _.d.WEB_UNIVERSE &&
+                            ("dev" == p.d.WEB_UNIVERSE &&
                               console.warn(
                                 `Failed to load ${t} type ${i} with error ${e.success()}`,
                                 e
@@ -1530,12 +1599,12 @@
                         e.Hdr().error_message(),
                       Object(s.I)(t)
                     ),
-                    (1 == e.Hdr().transport_error() || _.d.FROM_WEB) &&
+                    (1 == e.Hdr().transport_error() || p.d.FROM_WEB) &&
                       this.MarkStoreItemIDUnavailable(o[n]),
                     1 == i && (i = e.GetEResult()));
               });
             } catch (e) {
-              const t = Object(d.a)(e);
+              const t = Object(h.a)(e);
               return (
                 console.error(
                   "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
@@ -1651,14 +1720,14 @@
           }
           let s = i.get(e.id());
           return (
-            s ? s.MergeData(e, t) : ((s = new h.a(e, t)), i.set(e.id(), s)), s
+            s ? s.MergeData(e, t) : ((s = new f.a(e, t)), i.set(e.id(), s)), s
           );
         }
       }
-      (f.k_DataRequest_CommonOnly = {}),
-        (f.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
-        (f.k_DataRequest_Assets = { include_assets: !0 }),
-        (f.k_DataRequest_IncludeAll = {
+      (y.k_DataRequest_CommonOnly = {}),
+        (y.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
+        (y.k_DataRequest_Assets = { include_assets: !0 }),
+        (y.k_DataRequest_IncludeAll = {
           include_assets: !0,
           include_release: !0,
           include_platforms: !0,
@@ -2602,10 +2671,10 @@
           return c;
         }),
         r.d(t, "c", function () {
-          return _;
+          return m;
         }),
         r.d(t, "d", function () {
-          return p;
+          return g;
         });
       var i = r("hRO2"),
         s = r("3dpo"),
@@ -2914,7 +2983,7 @@
       class d extends a {
         constructor(e = null) {
           super(),
-            d.prototype.total_matching_records || s.a(d.M()),
+            d.prototype.id || s.a(d.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -2923,13 +2992,8 @@
               (d.sm_m = {
                 proto: d,
                 fields: {
-                  total_matching_records: {
-                    n: 1,
-                    br: s.d.readInt32,
-                    bw: s.h.writeInt32,
-                  },
-                  start: { n: 2, br: s.d.readInt32, bw: s.h.writeInt32 },
-                  count: { n: 3, br: s.d.readInt32, bw: s.h.writeInt32 },
+                  id: { n: 1, c: n.g },
+                  score: { n: 2, br: s.d.readDouble, bw: s.h.writeDouble },
                 },
               }),
             d.sm_m
@@ -2967,14 +3031,14 @@
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQueryResultMetadata";
+          return "CStoreQueryPerResultMetadata";
         }
       }
       class _ extends a {
         constructor(e = null) {
           super(),
-            _.prototype.query_name || s.a(_.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            _.prototype.total_matching_records || s.a(_.M()),
+            a.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -2982,15 +3046,14 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  query_name: { n: 1, br: s.d.readString, bw: s.h.writeString },
-                  query: { n: 2, c: c },
-                  context: { n: 3, c: n.c },
-                  data_request: { n: 4, c: n.d },
-                  override_country_code: {
-                    n: 5,
-                    br: s.d.readString,
-                    bw: s.h.writeString,
+                  total_matching_records: {
+                    n: 1,
+                    br: s.d.readInt32,
+                    bw: s.h.writeInt32,
                   },
+                  start: { n: 2, br: s.d.readInt32, bw: s.h.writeInt32 },
+                  count: { n: 3, br: s.d.readInt32, bw: s.h.writeInt32 },
+                  per_result_metadata: { n: 4, c: d, r: !0, q: !0 },
                 },
               }),
             _.sm_m
@@ -3028,14 +3091,14 @@
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_Query_Request";
+          return "CStoreQueryResultMetadata";
         }
       }
       class m extends a {
         constructor(e = null) {
           super(),
-            m.prototype.metadata || s.a(m.M()),
-            a.initialize(this, e, 0, -1, [2, 3], null);
+            m.prototype.query_name || s.a(m.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -3043,9 +3106,15 @@
               (m.sm_m = {
                 proto: m,
                 fields: {
-                  metadata: { n: 1, c: d },
-                  ids: { n: 2, c: n.g, r: !0, q: !0 },
-                  store_items: { n: 3, c: n.f, r: !0, q: !0 },
+                  query_name: { n: 1, br: s.d.readString, bw: s.h.writeString },
+                  query: { n: 2, c: c },
+                  context: { n: 3, c: n.c },
+                  data_request: { n: 4, c: n.d },
+                  override_country_code: {
+                    n: 5,
+                    br: s.d.readString,
+                    bw: s.h.writeString,
+                  },
                 },
               }),
             m.sm_m
@@ -3083,7 +3152,7 @@
           return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreQuery_Query_Response";
+          return "CStoreQuery_Query_Request";
         }
       }
       class h extends a {
@@ -3098,7 +3167,7 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  metadata: { n: 1, c: d },
+                  metadata: { n: 1, c: _ },
                   ids: { n: 2, c: n.g, r: !0, q: !0 },
                   store_items: { n: 3, c: n.f, r: !0, q: !0 },
                 },
@@ -3138,26 +3207,81 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreQuery_Query_Response";
+        }
+      }
+      class p extends a {
+        constructor(e = null) {
+          super(),
+            p.prototype.metadata || s.a(p.M()),
+            a.initialize(this, e, 0, -1, [2, 3], null);
+        }
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  metadata: { n: 1, c: _ },
+                  ids: { n: 2, c: n.g, r: !0, q: !0 },
+                  store_items: { n: 3, c: n.f, r: !0, q: !0 },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = s.e(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.g(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.c(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.b(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.f(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreQuery_SearchSuggestions_Response";
         }
       }
-      var p;
+      var g;
       !(function (e) {
         (e.Query = function (e, t) {
-          return e.SendMsg("StoreQuery.Query#1", t, m, {
+          return e.SendMsg("StoreQuery.Query#1", t, h, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
           (e.SearchSuggestions = function (e, t) {
-            return e.SendMsg("StoreQuery.SearchSuggestions#1", t, h, {
+            return e.SendMsg("StoreQuery.SearchSuggestions#1", t, p, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(p || (p = {}));
+      })(g || (g = {}));
     },
     t3nn: function (e, t, r) {
       "use strict";

@@ -7791,8 +7791,8 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   font-weight: 400;
 }
 .achievementspage_AchievementTabs_gxNvE {
-  min-height: calc(100vh - 40px - 40px);
-  height: 454px;
+  height: calc(100vh - 40px - 40px);
+  min-height: 454px;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -11328,6 +11328,20 @@ body {
   height: 72px;
   object-fit: contain;
   margin: 10px 20px;
+}
+.mainmenuapprunning_OverlayAchievements_2Qced {
+  position: relative;
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  width: 100%;
+}
+.mainmenuapprunning_OverlayAchievements_2Qced
+  .mainmenuapprunning_Container_3Shkl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
 }
 @keyframes quickaccessmenu_ItemFocusAnim-darkerGrey-nocolor_2YeD3 {
   from {

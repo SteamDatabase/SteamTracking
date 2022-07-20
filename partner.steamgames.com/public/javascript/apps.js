@@ -1845,9 +1845,9 @@ function EditStat( appid, stat )
 		item = $J( "<input>" );
 		item.attr( 'type', "checkbox" );
 		item.attr( 'id', id + "_aggregated" );
-		if ( "aggregated" in stat && stat[ "aggregated" ] != 0 )
+		if ( "aggregated" in stat && stat[ "aggregated" ] === "1" )
 		{
-			item.checked = true;
+			item.attr( 'checked', true );
 		}
 		item.click( DirtyRowClosure( row ) );
 		addCell( row, item );

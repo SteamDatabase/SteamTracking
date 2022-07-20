@@ -406,10 +406,8 @@ function GetCurrencyCode( currencyId )
 
 function GetAvatarURLFromHash( hash, size )
 {
-	
     var strURL = 'https://avatars.cloudflare.steamstatic.com/' + hash;
 
-	
 	if ( size == 'full' )
 		strURL += '_full.jpg';
 	else if ( size == 'medium' )
@@ -419,8 +417,6 @@ function GetAvatarURLFromHash( hash, size )
 
 	return strURL;
 }
-
-
 
 
 

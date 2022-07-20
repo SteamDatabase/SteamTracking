@@ -5389,6 +5389,59 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
     opacity: 0.5;
 }
 
+.content_hub_carousel_ctn {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    position: relative;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.content_hub_carousel_ctn .title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.content_hub_carousel_ctn .carousel_items > div {
+	justify-content: space-between;
+}
+
+.content_hub_carousel_ctn .content_hub_capsule_ctn {
+	width: 24%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.content_hub_carousel_ctn .content_hub_capsule_ctn img {
+	width: 100%;
+}
+
+.content_hub_capsule_ctn .gradient {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.content_hub_capsule_ctn .label_ctn {
+	position: absolute;
+	bottom: 16px;
+	text-align: center;
+	width: 100%;
+}
+
+.content_hub_capsule_ctn .label {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.1ch;
+	color: white;
+	text-shadow: 1px 2px 1px black;
+}
+
 .top_new_releases_banner_ctn
 {
 		font-family: "Motiva Sans", Sans-serif;

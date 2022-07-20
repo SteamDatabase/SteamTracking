@@ -586,7 +586,11 @@
     "PricingDashboard_PriceProposal_Publish_Explanation": "Publishing will make this price change visible on the store.",
     "PricingDashboard_PriceProposal_Publish_Explanation_Plural": "Publishing will make these %1$s price changes visible on the store.",
     "PricingDashboard_PriceProposal_Publish_CooldownWarning": "Remember: It will not be possible to run a discount for this package within 28 days of publishing price increases in any currency.",
-    "PricingDashboard_PriceProposal_Publish_CooldownError": "These price changes cannot be published right now because some prices have increased, and there is an active discount or a discount scheduled within the next 28 days.",
+    "PricingDashboard_PriceProposal_Publish_CooldownError1": "This package has a discount scheduled within the next 28 days and your price changes include an increase in one or more currencies.",
+    "PricingDashboard_PriceProposal_Publish_CooldownError2": "Please see <1>Pricing Rules</1> documentation for more details on cooldowns following a price increase.",
+    "PricingDashboard_PriceProposal_Publish_CantPublishTitle": "CANNOT PUBLISH RIGHT NOW",
+    "PricingDashboard_PriceProposal_Publish_FailedToLoad": "<1>An error occurred while preparing to publish this price change.</1><2>Please try again and contact Valve if you continue experiencing this issue.</2>",
+    "PricingDashboard_PriceProposal_Publish_FailedToPublish": "<1>An error occurred while trying to publish this price change.</1><2>Please try again and contact Valve if you continue experiencing this issue.</2>",
     "PricingDashboard_ShowCompactModeCheckBoxLabel": "compact view",
     "PricingDashboard_GuidelinesPickerDescription": "Select a price below to set that price for USD and apply recommended converted prices to all other currencies.",
     "PricingDashboard_PriceIncreaseDisallowed": "You cannot raise the price of a subscription. Please contact Steam if you need to do this.",
@@ -611,5 +615,6 @@
     "PricingDashboard_UseThisOldPrice_ttip": "Click to go back to the published price.",
     "PricingDashboard_RevertAllCurrency": "Revert all unsaved %1$s changes",
     "PricingDashboard_RevertAllPackage": "Revert all unsaved changes for this package",
+    "PricingDashboard_CancelPriceProposal": "Cancel proposed price change",
     "dummy": "dummy"
 }

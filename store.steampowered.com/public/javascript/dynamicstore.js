@@ -2610,10 +2610,8 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 
 function GetAvatarURL( strHash, strSize )
 {
-	
 	return "https:\/\/avatars.cloudflare.steamstatic.com\/" + strHash + strSize + '.jpg';
-
-	}
+}
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
