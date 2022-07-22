@@ -2001,7 +2001,7 @@
     "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "This game uses multiple windows and may require you to focus the appropriate windows manually via the Steam overlay",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport": "Valve is still working on adding support for this game on Steam Deck",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR": "Steam Deck does not support VR games",
-    "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software": "Steam Deck does not support this Software title",
+    "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software": "This is a Software title and is not supported on Steam Deck",
     "SteamDeckVerified_TestResult_UnsupportedAntiCheat_Other": "This game is unsupported on Steam Deck due to use of an unsupported anti-cheat",
     "SteamDeckVerified_TestResult_UnsupportedAntiCheatConfiguration": "This game's anti-cheat is not configured to support Steam Deck",
     "SteamDeckVerified_TestResult_UnsupportedGraphicsPerformance": "This game's graphics settings cannot be configured to run well on Steam Deck",
