@@ -306,6 +306,30 @@
             ]
         },
         {
+            "name": "Vote",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "User wants to vote on the item",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "vote_up",
+                    "type": "bool",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "UpdateBanStatus",
             "version": 1,
             "httpmethod": "POST",
@@ -409,6 +433,41 @@
                     "name": "appid",
                     "type": "uint32",
                     "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetSubSectionData",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get sub section data (for table of contents, a specific section, or all)",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "for_table_of_contents",
+                    "type": "bool",
+                    "optional": false
+                },
+                {
+                    "name": "specific_sectionid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return the data for the specified revision."
                 }
             ]
         },
