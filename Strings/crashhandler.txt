@@ -46,6 +46,8 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
+B&7f
+?^*$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -528,8 +530,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jul 25 2022
-15:26:29
+Jul 26 2022
+11:52:02
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -936,11 +938,12 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+gYo	
+OF1!y
 Q~)+
 jvLo
 xZYZ9
 [/'r5
-&5D%J
 E I%{
 #bG|
 Apple Inc.1&0$
@@ -998,9 +1001,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222656Z0/
-RE-i
- qz%g
+220726185226Z0/
+E"R.
+[l/t
+l9_+
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1008,35 +1012,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		FuQ6i9QXUkUtaZc27Rbf4ivnJRQ=
+		RSJSLut/cuSor00oI/OGDuiniAQ=
 		</data>
 		<data>
-		cXolZ4PejPKKFl1bT/MBLxUeqeo=
+		x9AL/BJ0SRhbbC90rGmgtfdMde4=
 		</data>
 	</array>
 </dict>
 </plist>
-dq	v
-vKq6
-20220725222813Z0
+QEL 
++N`w\lS
+20220726185348Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220705163502Z
-220816163501Z0B1
-Timestamp Signer NWK21
+220705164502Z
+220816164501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-e\{v{Pb7
-te:!
-iE3Z]
+r{\]
+n_{l3:
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!Ub%c
-@+5$
-)u30/
+xA8mk+
+nD	]1KS
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1075,14 +1077,13 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222813Z0#
-X34Y
-3#Iz
-E?rU
-;CC"
-(zWj
-Gjg6
-g|\L
+220726185348Z0#
+wV34J
+,-*f
+1-`1
+OnZs
+Glj(1
+k"cC
 __TEXT
 __text
 __TEXT
@@ -1807,8 +1808,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jul 25 2022
-15:26:30
+Jul 26 2022
+11:52:05
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2319,9 +2320,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222656Z0/
- lS=K
-]]uk
+220726185226Z0/
+_.yb
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2329,38 +2329,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mYQhiFjegIzl43L3Y0BO9nwDmaE=
+		9FTVLB7mQZ/MJJGf7gmdH/PkDjw=
 		</data>
 		<data>
-		bFM9S9ddXXVrrD8Fl5rwwSPeGAA=
+		90qqsYd/r97eyC2ajv/cGS3nXy4=
 		</data>
 	</array>
 </dict>
 </plist>
-E1\*P
-:`o6
-dW5h
-*^@I
-!-UG
-wJ/Cm
-EymY
-20220725222813Z0
+8zoxAl
+ag,<
+x_,'
+Aric1
+b)(Gf
+&c&V
+20220726185348Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220705164502Z
-220816164501Z0B1
-Timestamp Signer NWK11
+220705163502Z
+220816163501Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-r{\]
-n_{l3:
+e\{v{Pb7
+te:!
+iE3Z]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-xA8mk+
-nD	]1KS
+!Ub%c
+@+5$
+)u30/
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2399,12 +2400,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222813Z0#
-^eV\8LI
-l80+
-_g^ `_
-rx8C@
- t$msn
+220726185348Z0#
+&!sW
+{z}O
 __TEXT
 __text
 __TEXT
@@ -2707,8 +2705,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Jul 25 2022
-15:26:34
+Jul 26 2022
+11:52:08
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3136,10 +3134,10 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
--jbC-nB
 CT\J!~
 {BB"
 H0J+
+3!vs
 8;l7
 subject.OU
 MXGJJ98X76
@@ -3152,6 +3150,7 @@ EN@r]
 qa:-y
 2		e
 (s8*K'
+RMbEd
  n }e
 eF1]
 Apple Inc.1&0$
@@ -3209,8 +3208,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222656Z0/
- 8qS
+220726185226Z0/
+fi:Y=
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3218,35 +3217,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		IcSO9o8wveELmsAwSOkvRukhppk=
+		s0PYTBcNX5beNTsC8PSwuoQL8C8=
 		</data>
 		<data>
-		OHFT4oRGcVjGvINOxwEKQsLGTmA=
+		sS64g/3OD2ZpOlk9lkspMNaMO2E=
 		</data>
 	</array>
 </dict>
 </plist>
-l$mP
-Lr[t;
-20220725222813Z0
+,l:{#
+Zo}l
+{cN|
+c-4p
+*LQ/}t
+9r*"Q
+20220726185348Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220705163502Z
-220816163501Z0B1
-Timestamp Signer NWK21
+220705164502Z
+220816164501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-e\{v{Pb7
-te:!
-iE3Z]
+r{\]
+n_{l3:
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-!Ub%c
-@+5$
-)u30/
+xA8mk+
+nD	]1KS
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3285,9 +3286,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220725222813Z0#
-Yx0+
-N2)K
-88l}Ye
-SR;F
-qoe>
+220726185348Z0#
+JaOk
+YniE--
+q{3p
