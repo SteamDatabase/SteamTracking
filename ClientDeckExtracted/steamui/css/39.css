@@ -742,6 +742,59 @@
   flex-grow: 1;
   text-align: right;
 }
+.notificationcontent_BatteryTemperature_3sU3N {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: #0e141b;
+  display: flex;
+  flex-direction: row;
+  padding: 4px 8px;
+}
+.notificationcontent_BatteryTemperature_3sU3N.notificationcontent_Warning_xTukS {
+  background-color: #ffc82c;
+  color: #000;
+}
+.notificationcontent_BatteryTemperature_3sU3N.notificationcontent_Warning_xTukS
+  .notificationcontent_Title_3CsWl {
+  color: #000;
+}
+.notificationcontent_BatteryTemperature_3sU3N .notificationcontent_Icon_2eliP {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.notificationcontent_BatteryTemperature_3sU3N
+  .notificationcontent_Content_22NY9 {
+  display: flex;
+  flex-direction: column;
+}
+.notificationcontent_BatteryTemperature_3sU3N .notificationcontent_Title_3CsWl {
+  flex-shrink: 0;
+}
+.notificationcontent_BatteryTemperature_3sU3N
+  .notificationcontent_Description_fZ5QH {
+  text-transform: none;
+  white-space: normal;
+  text-overflow: clip;
+  min-height: 0px;
+  line-height: 14px;
+}
 .notificationcontent_MessageBody_2LUgM {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -7750,16 +7803,15 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
 .achievementspage_Page_3FQHg {
   position: relative;
   flex: 1;
+  flex-direction: column;
   background-color: #0e141b;
   display: flex;
   min-height: 0;
 }
 .achievementspage_Page_3FQHg .achievementspage_Container_11Z-t {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-top: 64px;
   z-index: 1;
+  padding-top: 64px;
 }
 .achievementspage_Page_3FQHg .achievementspage_Nav_15Sq7 {
   display: flex;
@@ -7791,8 +7843,7 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   font-weight: 400;
 }
 .achievementspage_AchievementTabs_gxNvE {
-  height: calc(100vh - 40px - 40px);
-  min-height: 454px;
+  height: 454px;
 }
 .achievementspage_Background_ODpLj {
   position: absolute;
@@ -11319,6 +11370,17 @@ body {
 .mainmenuapprunning_AppColumn_3FAI9.mainmenuapprunning_FocusedColumn_lz9Db {
   background-color: rgba(14, 20, 27, 0.8);
 }
+.mainmenuapprunning_AppColumn_3FAI9 .mainmenuapprunning_AppColumnContent_2P4E7 {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  min-height: 0;
+}
+.mainmenuapprunning_AppColumn_3FAI9
+  .mainmenuapprunning_AppColumnContent_2P4E7.mainmenuapprunning_ActiveContent_3cU2E {
+  display: flex;
+  flex: 1;
+}
 .mainmenuapprunning_CurrentGameBackground_2Jbd_ {
   object-fit: cover;
   height: 100%;
@@ -11332,6 +11394,7 @@ body {
 .mainmenuapprunning_OverlayAchievements_2Qced {
   position: relative;
   flex: 1;
+  flex-direction: column;
   display: flex;
   min-height: 0;
   width: 100%;
@@ -11339,9 +11402,360 @@ body {
 .mainmenuapprunning_OverlayAchievements_2Qced
   .mainmenuapprunning_Container_3Shkl {
   flex: 1;
+  padding-top: 24px;
+}
+.mainmenuapprunning_OverlayGuides_bqMkR {
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  min-height: 0;
+  width: 100%;
+}
+.overlayguides_OverlayGuides_3PT17 {
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
+  min-height: 0;
+  flex: 1;
+}
+.overlayguides_OverlayGuidesHome_1Biyy {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.overlayguides_OverlayGuidesHome_1Biyy .overlayguides_GuidesHomeHeader_1K5yV {
+  padding: 8px 8px 10px 8px;
+}
+.overlayguides_OverlayGuidesHome_1Biyy
+  .overlayguides_GuidesHomeHeader_1K5yV
+  .overlayguides_AppName_3LiqH {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  white-space: nowrap;
+}
+.overlayguides_OverlayGuidesHome_1Biyy
+  .overlayguides_GuidesHomeHeader_1K5yV
+  .overlayguides_GuidesHomeHeaderDesc_14LPc {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.overlayguides_GuideList_3p2SR {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  background-color: #0e141b;
+}
+.overlayguides_GuideList_3p2SR .overlayguides_Header_3tFhD {
+  display: flex;
+  justify-content: space-between;
+}
+.overlayguides_GuideList_3p2SR .overlayguides_PagingControls_1VBf9 {
+  display: flex;
+  align-items: center;
+}
+.overlayguides_GuideList_3p2SR
+  .overlayguides_PagingControls_1VBf9.overlayguides_Hidden_3wN_u {
+  display: none;
+}
+.overlayguides_GuideList_3p2SR
+  .overlayguides_PagingControls_1VBf9
+  .overlayguides_PageNumber_19Jds {
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+.overlayguides_GuideList_3p2SR
+  .overlayguides_PagingControls_1VBf9
+  .overlayguides_PagingButton_5M5Li {
+  min-width: unset;
+}
+.overlayguides_GuideList_3p2SR .overlayguides_LoadingGuidesError_1vxns {
+  padding: 10px;
+  text-align: center;
+}
+.overlayguides_GuideList_3p2SR .overlayguides_NoGuides_1vQ-f {
+  padding: 10px;
+  text-align: center;
+}
+.overlayguides_ListTitle_1qkU5 {
+  color: #dcdedf;
+  font-size: 16px;
+  font-weight: 500;
+}
+.overlayguides_GuideListItemBase_1etIu {
+  display: flex;
+  flex-direction: column;
+  background-color: #23262e;
+}
+.overlayguides_GuideListItemBase_1etIu .overlayguides_Container_3UCfp {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.overlayguides_GuideListItemBase_1etIu
+  .overlayguides_Container_3UCfp
+  .overlayguides_Media_LH7w0 {
+  width: 64px;
+  height: 64px;
+}
+.overlayguides_GuideListItemBase_1etIu
+  .overlayguides_Container_3UCfp
+  .overlayguides_Content_9WZ60 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.overlayguides_GuideListItemBase_1etIu
+  .overlayguides_Container_3UCfp
+  .overlayguides_Right_2xjb_ {
+  align-self: center;
+}
+.overlayguides_GuideListItemBase_1etIu .overlayguides_Footer_2KMLM {
+  padding: 8px;
+  background-color: rgba(103, 112, 123, 0.2);
+}
+.overlayguides_GuideTitle_35sEZ {
+  font-size: 16px;
+  font-weight: 500;
+  color: #dcdedf;
+}
+.overlayguides_GuideAuthor_28tAd {
+  font-size: 14px;
+  font-weight: 500;
+  color: #dcdedf;
+}
+.overlayguides_GuideDescription_DpdGp {
+  font-size: 12px;
+  color: #b8bcbf;
+}
+.overlayguides_VerticalContent_10SJe {
+  display: flex;
+  flex-direction: column;
+}
+.overlayguides_GuideImage_38lL7 {
+  width: 64px;
+  height: 64px;
+}
+.overlayguides_AlignEnd_3y-z5 {
+  align-items: flex-end;
+}
+.overlayguides_GuideContent_2-nTI {
+  flex: 1;
+}
+.overlayguides_GuideDetails_1AjME {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px 5px 20px;
+  min-height: 0;
+  flex: 1;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_GuideDetailsHeader_2_Ivx {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px #61696d dotted;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_GuideDetailsTitle_d2OwZ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  word-wrap: break-word;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_GuideDetailsDesc_1wBkh {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  word-wrap: break-word;
+  margin-top: 10px;
+  line-height: 22px;
+  padding-bottom: 16px;
+  padding-right: 8px;
+  overflow: hidden;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_GuideDetailsContainer_3CGnF {
+  display: flex;
+  flex-direction: row;
+  min-height: 0;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_GuideSubSections_2gRAL {
+  min-height: 0;
+  max-width: 636px;
+  padding-right: 8px;
+}
+.overlayguides_GuideDetails_1AjME
+  .overlayguides_GuideSubSections_2gRAL
+  .overlayguides_SubSection_1CymH {
+  padding-bottom: 10px;
+  word-wrap: break-word;
+}
+.overlayguides_GuideDetails_1AjME
+  .overlayguides_GuideSubSections_2gRAL
+  .overlayguides_SubSectionTitle_vJoi8 {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  color: #66c0f4;
+  font-size: 18px;
+}
+.overlayguides_GuideDetails_1AjME
+  .overlayguides_GuideSubSections_2gRAL
+  .overlayguides_SubSectionDesc_3qm_0 {
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.overlayguides_GuideDetails_1AjME
+  .overlayguides_GuideSubSections_2gRAL
+  .overlayguides_SubSectionDesc_3qm_0
+  br {
+  content: "";
+  display: block;
+  height: 17px;
+}
+.overlayguides_GuideDetails_1AjME .overlayguides_TableOfContents_CwN4g {
+  width: 200px;
+  padding: 8px;
+  border-left: 1px solid #3d4450;
+}
+.overlayguides_GuideDetails_1AjME
+  .overlayguides_TableOfContents_CwN4g
+  .overlayguides_TOCEntry_2bjWQ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
+  background-color: #23262e;
+  margin-bottom: 2px;
+}
+.overlayguides_UGCControls_2Mna7 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 2px;
+  padding: 5px 0px 5px 0px;
+}
+.overlayguides_UGCControls_2Mna7 .overlayguides_UGCButton_Ejrl6 {
+  flex: 0;
+  min-width: unset;
+}
+.overlayguides_UGCControls_2Mna7
+  .overlayguides_UGCButton_Ejrl6.overlayguides_VotingButton_3BZvR {
+  min-width: 64px;
+}
+.overlayguides_UGCControls_2Mna7 .overlayguides_VoteIcon_2yfF2 {
+  height: 16px;
+}
+.overlayguides_UGCControls_2Mna7
+  .overlayguides_VoteIcon_2yfF2.overlayguides_ThumbsUpColor_3v3hT {
+  color: #61b6e8;
+}
+.overlayguides_UGCControls_2Mna7
+  .overlayguides_VoteIcon_2yfF2.overlayguides_ThumbsDownColor_1TqtH {
+  color: #ec666d;
+}
+.overlayguides_SharedFilePreviewImage_24wYq {
+  max-width: 100%;
+}
+.overlayguides_SharedFilePreviewImage_24wYq.overlayguides_SizeThumb_3tD34 {
+  max-width: 311px;
+}
+.overlayguides_SharedFilePreviewImage_24wYq.overlayguides_SizeFull_18gwf {
+  width: 100%;
+}
+.overlayguides_SharedFilePreviewImage_24wYq.overlayguides_SizeOriginal_217Lw {
+  width: initial;
+}
+.overlayguides_SharedFilePreviewImage_24wYq.overlayguides_FloatLeft_1InKY {
+  float: left;
+  margin-right: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.overlayguides_SharedFilePreviewImage_24wYq.overlayguides_FloatRight_3WuCI {
+  float: right;
+  margin-left: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.overlayguides_UGCRating_oTb9Y .overlayguides_UGCRatingStars_1lO3n {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  min-height: 16px;
+}
+.overlayguides_UGCRating_oTb9Y
+  .overlayguides_UGCRatingStars_1lO3n
+  .overlayguides_UGCRatingStar_3ny3u {
+  height: 16px;
+  width: 16px;
+}
+.overlayguides_UGCRating_oTb9Y .overlayguides_UGCTotalRatings_1RTRU {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
 }
 @keyframes quickaccessmenu_ItemFocusAnim-darkerGrey-nocolor_2YeD3 {
   from {

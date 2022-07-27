@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7384800";
+var CLSTAMP = "7401371";
 !(function (e) {
   function t(t) {
     for (
@@ -366,9 +366,9 @@ var CLSTAMP = "7384800";
             ? !Object({
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 19 2022 : 11:30:59",
-                BUILD_TIME_UTC: "Jul 19 2022 : 18:30:59",
-                BUILD_RTIME_UTC: 1658255459,
+                BUILD_TIME_LOCAL: "Jul 27 2022 : 14:24:53",
+                BUILD_TIME_UTC: "Jul 27 2022 : 21:24:53",
+                BUILD_RTIME_UTC: 1658957093,
               }).MOBILE_BUILD && document.getElementById(t)
             : t),
         n)

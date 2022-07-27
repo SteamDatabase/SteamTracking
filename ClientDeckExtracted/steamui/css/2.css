@@ -45861,7 +45861,6 @@ html.responsive.touch
   right: 0;
   background: #1214121a;
   opacity: 0;
-  z-index: 2;
   mix-blend-mode: screen;
 }
 .Digital .virtualkeyboard_KeyboardKey_2KhPX::before {
@@ -45874,7 +45873,6 @@ html.responsive.touch
   right: 0;
   background: linear-gradient(#16111100 20%, #0a060611 50%),
     linear-gradient(90deg, #ff000011, #00ff000a, #0099ff07);
-  z-index: 2;
   background-size: 100% 2px, 3px 100%;
   opacity: 0.8;
   mix-blend-mode: screen;
@@ -46462,9 +46460,6 @@ html.responsive.touch
   .virtualkeyboard_KeyboardKey_2KhPX
   .virtualkeyboard_AltGrLabel_21WhT.virtualkeyboard_ShiftActive_3fZNQ {
   bottom: 6px;
-}
-.DEX .virtualkeyboard_KeyboardExtendedKey_394j7 {
-  z-index: 2;
 }
 .DEX .virtualkeyboard_KeyboardEmojiHeader_Qihxj img {
   filter: brightness(0) saturate(100%) invert(92%) sepia(17%) saturate(169%)
@@ -51852,6 +51847,7 @@ html.responsive.touch
   pointer-events: none;
 }
 .virtualkeyboard_KeyboardImeLutNav_3FYae div svg {
+  z-index: 2;
   margin: 0 -4px 0 -4px;
 }
 .virtualkeyboard_KeyboardImeLutActionGlyph_31G6_ {
@@ -52063,7 +52059,7 @@ html.responsive.touch
   height: 44px;
   width: max-content;
   top: -44px;
-  z-index: 1;
+  z-index: 3;
 }
 .virtualkeyboard_KeyboardExtendedRow_21EW_.virtualkeyboard_Right_202u0 {
   left: 5px;
