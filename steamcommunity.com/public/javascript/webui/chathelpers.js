@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7390038";
+var CLSTAMP = "7398832";
 !(function (e) {
   function t(t) {
     for (
@@ -119,7 +119,7 @@ var CLSTAMP = "7390038";
               ".js?contenthash=" +
               {
                 8: "7f48182463765343374f",
-                9: "3d384cd4ee5035b17193",
+                9: "c1f51dd62d136b3c4a02",
                 10: "cfe1517f78a25579b8aa",
                 11: "0dd2112ea1028866372c",
                 12: "a5090d3fd3ef9f45671a",
@@ -141,7 +141,7 @@ var CLSTAMP = "7390038";
                 28: "d5c01c003e6afa1ef527",
                 29: "f4b7d71b7d80031ffc11",
                 30: "1aa5cc408049bf6d3314",
-                31: "4c44bd421f8d0c296f3a",
+                31: "8b7efe509adf668630fd",
                 32: "ad9dce3ca2f810e18ece",
                 33: "76bc4d3b486a79e48c60",
                 34: "9ac2910b4db4493a29ed",
@@ -149,35 +149,35 @@ var CLSTAMP = "7390038";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "21f58d182c6de3966fc6",
-                40: "7509ee8a37144b1d5a32",
-                41: "efaaeba81a6c1ddf4bc6",
-                42: "c5fed291871bc4f3a846",
-                43: "ea1f86da59d212036cdc",
-                44: "ddc09c0099dc1d6e65b0",
-                45: "652e2c12aceb59ea24ba",
-                46: "7405c1f4611e3016323e",
-                47: "71c5e2e53822a9cf50f9",
-                48: "02b5c43d86dc4d591cfa",
-                49: "f35e06e6f1db289ee33b",
-                50: "c22d062385fddd2caac7",
-                51: "8d151c72ae9035961bf4",
-                52: "dac9bc45ac40109ee50c",
-                53: "6516a37dfaacda33cd0c",
-                54: "900eaf29aa12de1da4aa",
-                55: "b51fa50470f4b1c2d7d4",
-                56: "1b3a13f2ed6f6705542d",
-                57: "fab284c97ffbfc664fc2",
-                58: "fc95eeae29733fd896d4",
+                39: "852e1791e789071ff0f8",
+                40: "b12e9e9db440457ae048",
+                41: "677a9bcc13329f28e0e5",
+                42: "7de544fd0729f9cd9f75",
+                43: "fda9cc12b350f738e3b5",
+                44: "77a80687a2e458385e54",
+                45: "f2399229f171563c777c",
+                46: "c983edf320ca274ec2e2",
+                47: "ef8c546d1d563692c505",
+                48: "16d3fc6669481377796e",
+                49: "0e89446d2f50b7d9cd2b",
+                50: "42a0d6fa61bc2626f96f",
+                51: "7e11f6b0a7cb18bad746",
+                52: "325809b6b18a622797d6",
+                53: "f94ed7a2a451d1b966a2",
+                54: "f472367936974a1f49e6",
+                55: "64213d27242350e0b580",
+                56: "6d01b8532f2dec24e5d9",
+                57: "b16bf79f382c3a863210",
+                58: "60c73f35de5d751e0e4b",
                 59: "eae17d6c18038567cb04",
-                60: "10171c027d6a91f73813",
-                61: "812675bf373f0b1508af",
-                62: "7a5633f7df14b8507352",
-                63: "db4d48943ec166e383e9",
-                64: "480990d4eff0d8cc4fdf",
-                65: "1e0d515a5c390e06cc71",
-                66: "bdc63186114e6bc803b0",
-                67: "ba0f751f00836fa9be97",
+                60: "ba23a3aa29af67ea1fcd",
+                61: "51f858f49901eb468cd3",
+                62: "ff07b461965c8db70c34",
+                63: "263e2606ce3345b34f74",
+                64: "9270cc355f62549c1bf6",
+                65: "76d98f18031fb5762d5a",
+                66: "d3ca23b14ad670f26ec5",
+                67: "49228b6cf128fbe0f54f",
               }[e]
             );
           })(e));
@@ -920,18 +920,17 @@ var CLSTAMP = "7390038";
     }
     function E() {
       const e = window.location.href;
-      return e.startsWith(o.STORE_BASE_URL)
+      return b(e, o.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(o.COMMUNITY_BASE_URL)
+        : b(e, o.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(o.PARTNER_BASE_URL)
+        : b(e, o.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(o.HELP_BASE_URL)
+        : b(e, o.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(o.STEAMTV_BASE_URL)
+        : b(e, o.STEAMTV_BASE_URL)
         ? "steamtv"
-        : e.startsWith(o.STATS_BASE_URL) ||
-          e.startsWith(o.INTERNAL_STATS_BASE_URL)
+        : b(e, o.STATS_BASE_URL) || b(e, o.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }

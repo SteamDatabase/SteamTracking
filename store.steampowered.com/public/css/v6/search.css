@@ -42,28 +42,6 @@
 	background: transparent;
 }
 
-/* styles only for the react native mobile client because we don't show the search text input or button when the page is being viewed in that app. */
-.page_header_ctn.search.rnmobileclient {
-	padding-bottom: 40px;
-	background: transparent;
-}
-.page_header_ctn.search.rnmobileclient .breadcrumbs {
-	padding-top: 0px;
-}
-.page_content_ctn.rnmobileclient .searchbar {
-	padding-top: 10px;
-}
-.page_content_ctn.rnmobileclient .searchbar_left {
-	margin-top: 2px;
-}
-.page_content_ctn.rnmobileclient .searchbar_left {
-	margin-top: 2px;
-}
-.page_content_ctn.rnmobileclient .sortbox {
-	margin-top: 0px;
-}
-
-
 .searchbar {
 	margin-bottom: 4px;
 	position: relative;
@@ -100,23 +78,6 @@
 		font-size: 14px;
 		line-height: 19px;
 		padding: 6px;
-	}
-	html.responsive div.dselect_container {
-		font-size: 14px;
-	}
-	html.responsive .page_header_ctn .searchtag {
-		font-size: 16px;
-	}
-	html.responsive .page_content_ctn .sortbox .label {
-		vertical-align: middle;
-		font-size: 16px;
-	}
-	html.responsive .page_content_ctn #sort_by_trigger {
-		line-height: 26px;
-		font-size: 16px;
-	}
-	html.responsive .page_content_ctn .sortbox .dselect_container {
-		width: 200px;
 	}
 }
 

@@ -17,10 +17,6 @@
   margin-bottom: 10px;
 }
 .partnereventdashboard_DisplaySectionEmpty_2BmSN {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.partnereventdashboard_DisplaySectionEmpty_2BmSN {
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
   clear: both;
@@ -35,6 +31,9 @@
   clear: both;
   display: inline-block;
   text-align: center;
+  margin-top: 20px;
+  height: 100px;
+  padding-top: 100px;
 }
 .partnereventdashboard_LoadMoreEventsCtn_2asU2 {
   display: flex;
@@ -50,11 +49,6 @@
 .partnereventdashboard_EventDashAdminToolsCtn_1OMO4 button.DialogButton {
   width: fit-content;
   padding: 4px 12px;
-}
-.partnereventdashboard_EventDashboardDataCtn_1uPNG {
-  margin-top: 20px;
-  height: 100px;
-  padding-top: 100px;
 }
 .partnereventdashboard_MainLists_2Yhqn {
   clear: both;
@@ -289,4 +283,69 @@
 }
 .rdtPicker {
   color: #000;
+}
+.giveawaynextdraw_countdownCtn_GWWac {
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
+  padding: 16px;
+  border-radius: 4px;
+}
+.giveawaynextdraw_Closed_ATX_x {
+  position: relative;
+}
+.giveawaynextdraw_CountDownCtn_11RwP {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 11px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownTime_eh0pM {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownText_3VKQ3 {
+  font-size: 16px;
+  display: inline;
+  margin-left: 8px;
+}
+.giveawaynextdraw_LearnMore_1q98m {
+  position: relative;
+}
+.giveawaynextdraw_Throbber_bEkRt {
+  display: flex;
+  color: #80caff;
+  line-height: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2LTFl {
+  display: inline;
+  margin-right: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerCount_Z7ScP {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerText_chkuq {
+  display: inline;
+  margin-left: 8px;
+}
+.saleeventbbcodeparser_ErrorDiv_XeZEx {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
 }

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7390038";
+var CLSTAMP = "7398832";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -103,10 +103,10 @@ var CLSTAMP = "7390038";
         return s;
       }),
       n.d(t, "p", function () {
-        return a;
+        return c;
       }),
       n.d(t, "j", function () {
-        return c;
+        return a;
       }),
       n.d(t, "k", function () {
         return u;
@@ -146,8 +146,8 @@ var CLSTAMP = "7390038";
       });
     const i = 1,
       s = 4,
-      a = 7,
-      c = 750,
+      c = 7,
+      a = 750,
       u = 799,
       _ = 250820,
       l = 330050,
@@ -444,10 +444,10 @@ var CLSTAMP = "7390038";
         return s;
       }),
       n.d(t, "b", function () {
-        return a;
+        return c;
       }),
       n.d(t, "c", function () {
-        return c;
+        return a;
       }),
       n.d(t, "g", function () {
         return l;
@@ -546,8 +546,8 @@ var CLSTAMP = "7390038";
         short_url: "",
         country_code: "",
       },
-      a = { steamid: "", clanid: 0, listid: 0 },
-      c = {
+      c = { steamid: "", clanid: 0, listid: 0 },
+      a = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         APPID: 0,
@@ -591,9 +591,9 @@ var CLSTAMP = "7390038";
         (t.userConfig = !0),
         s.is_support && d() && (s.is_support = !1));
       const o = E("broadcast", e);
-      o && (Object.assign(a, o), (t.broadcastConfig = !0));
+      o && (Object.assign(c, o), (t.broadcastConfig = !0));
       const _ = E("community", e);
-      _ && (Object.assign(c, _), (t.communityConfig = !0));
+      _ && (Object.assign(a, _), (t.communityConfig = !0));
       const l = E("event", e);
       return l && (Object.assign(u, l), (t.eventConfig = !0)), t;
     }
@@ -655,18 +655,17 @@ var CLSTAMP = "7390038";
     }
     function A() {
       const e = window.location.href;
-      return e.startsWith(i.STORE_BASE_URL)
+      return f(e, i.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(i.COMMUNITY_BASE_URL)
+        : f(e, i.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(i.PARTNER_BASE_URL)
+        : f(e, i.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(i.HELP_BASE_URL)
+        : f(e, i.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(i.STEAMTV_BASE_URL)
+        : f(e, i.STEAMTV_BASE_URL)
         ? "steamtv"
-        : e.startsWith(i.STATS_BASE_URL) ||
-          e.startsWith(i.INTERNAL_STATS_BASE_URL)
+        : f(e, i.STATS_BASE_URL) || f(e, i.INTERNAL_STATS_BASE_URL)
         ? "stats"
         : "";
     }
@@ -677,7 +676,7 @@ var CLSTAMP = "7390038";
       return i;
     }),
       n.d(t, "b", function () {
-        return a;
+        return c;
       });
     n("0N1H");
     var r = n("1n9R");
@@ -883,8 +882,8 @@ var CLSTAMP = "7390038";
         );
       }
     }
-    let a = new i();
-    window.ClientConnectionAPI = a;
+    let c = new i();
+    window.ClientConnectionAPI = c;
   },
   YlSc: function (e, t, n) {
     "use strict";
@@ -956,8 +955,8 @@ var CLSTAMP = "7390038";
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         s = Reflect.decorate(e, t, n, r);
       else
-        for (var a = e.length - 1; a >= 0; a--)
-          (o = e[a]) &&
+        for (var c = e.length - 1; c >= 0; c--)
+          (o = e[c]) &&
             (s = (i < 3 ? o(s) : i > 3 ? o(t, n, s) : o(t, n)) || s);
       return i > 3 && s && Object.defineProperty(t, n, s), s;
     }
@@ -965,19 +964,19 @@ var CLSTAMP = "7390038";
       return new (n || (n = Promise))(function (o, i) {
         function s(e) {
           try {
-            c(r.next(e));
-          } catch (e) {
-            i(e);
-          }
-        }
-        function a(e) {
-          try {
-            c(r.throw(e));
+            a(r.next(e));
           } catch (e) {
             i(e);
           }
         }
         function c(e) {
+          try {
+            a(r.throw(e));
+          } catch (e) {
+            i(e);
+          }
+        }
+        function a(e) {
           var t;
           e.done
             ? o(e.value)
@@ -986,9 +985,9 @@ var CLSTAMP = "7390038";
                 ? t
                 : new n(function (e) {
                     e(t);
-                  })).then(s, a);
+                  })).then(s, c);
         }
-        c((r = r.apply(e, t || [])).next());
+        a((r = r.apply(e, t || [])).next());
       });
     }
   },

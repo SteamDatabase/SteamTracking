@@ -289,14 +289,14 @@ class CreatorHome {
 
 		ShowAppIDList( strLinkName, bLinked )
 	{
-		var strDesc = 'These are the games under %1$s that currently have developer or publisher of franchise fields set to \'%2$s\'. Select a title below if you wish to go edit that particular titles.'.replace('%1$s', this.m_strPartnerName).replace('%2$s', strLinkName);
+		var strDesc = 'These are the games under %1$s that currently have developer or publisher of franchise fields set to \'%2$s\'. Select a title below if you wish to go edit that particular title.'.replace('%1$s', this.m_strPartnerName).replace('%2$s', strLinkName);
 		var appIDs = (bLinked) ? this.m_linkedUniqueNamesToAppID[strLinkName] : this.m_unlinkedUniqueNamesToAppID[strLinkName];
 		this.InternalShowAppIDList( strDesc, appIDs );
 	}
 
 		ShowAppIDListUniqueName( uniqueName )
 	{
-		var strDesc = 'These are the games under %1$s that currently have developer or publisher of franchise fields set to \'%2$s\'. Select a title below if you wish to go edit that particular titles.'.replace('%1$s', this.m_strPartnerName).replace('%2$s', uniqueName);
+		var strDesc = 'These are the games under %1$s that currently have developer or publisher of franchise fields set to \'%2$s\'. Select a title below if you wish to go edit that particular title.'.replace('%1$s', this.m_strPartnerName).replace('%2$s', uniqueName);
 		var appIDs = this.m_rgUniqueNamesToAppIds[ uniqueName ];
 		this.InternalShowAppIDList( strDesc, Object.keys( appIDs ) );
 	}
@@ -406,7 +406,7 @@ class CreatorHome {
 		var uniqueName = this.UniqifyLinknameAndClan( clan_steamid, linkname );
 		var appids = this.m_linkedUniqueNamesToAppID[ uniqueName ];
 
-		var strDesc = 'Are you sure you want to unlink the identifier \'%1$s\' from the group <a href=\'%2$s\' target=\'_blank\'>\'%3$s\'</a>? This will effects %4$s apps.'.replace( '%1$s', linkname )
+		var strDesc = 'Are you sure you want to unlink the identifier \'%1$s\' from the group <a href=\'%2$s\' target=\'_blank\'>\'%3$s\'</a>? This will affect %4$s apps.'.replace( '%1$s', linkname )
 			.replace( '%2$s', clanurl ).replace( '%3$s', clanname ).replace( '%4$s', appids.length );
 		var divDialog = $J( '<div>').addClass('creatorhome_dialog_desc').html( strDesc )
 		var dialog = ShowConfirmDialog( 'Unlink', divDialog );

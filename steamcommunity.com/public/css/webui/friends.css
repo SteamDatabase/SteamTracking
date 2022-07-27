@@ -8982,44 +8982,48 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
   font-size: 11px;
   line-height: 11px;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section {
   color: #c3c4d9;
   font-size: 14px;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 .eventbbcodeparser_ReminderCtn_2wh6z {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+  .eventbbcodeparser_ReminderCtn_2wh6z {
   width: 300px;
   margin: 6px 0;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 .eventbbcodeparser_BlockQuote_EIjUK {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+  .eventbbcodeparser_BlockQuote_EIjUK {
   border: none;
   width: 60%;
   max-width: 640px;
   margin: 0 auto;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6 .eventbbcodeparser_BlockQuote_EIjUK {
+  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+    .eventbbcodeparser_BlockQuote_EIjUK {
     width: 100%;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 .BB_TableData {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
   font-size: 18px;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6 .BB_TableData {
+  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6 .BB_TableData {
+  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
     font-size: 13px;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 img {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section img {
   max-width: 100%;
   height: auto;
   width: -webkit-fill-available;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6 .eventbbcodeparser_Link_35HFF {
+.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+  .eventbbcodeparser_Link_35HFF {
   color: #fff;
 }
 .eventbbcodeparser_SocialLink_3rUr0 {

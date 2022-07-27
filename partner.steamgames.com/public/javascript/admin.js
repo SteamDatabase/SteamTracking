@@ -1413,7 +1413,7 @@ function RemoveGiveawayAdmin( giveawayname, giveawayid )
 // Set the giveaway to a delete state, we are are permitted
 function SetGiveawayToDeletedState( giveawayname, giveawayid )
 {
-	var dialog = ShowConfirmDialog( "Are you sure?", "Delete the giveaway '%1$s'. Allowed before prizes have been awarded. Once deleted it is no longer visible in the partner site (its gone forever)".replace('%1$s', giveawayname ) );
+	var dialog = ShowConfirmDialog( "Are you sure?", "Delete the giveaway '%1$s'. Allowed before prizes have been awarded. Once deleted it is no longer visible in the partner site (it's gone forever)".replace('%1$s', giveawayname ) );
 	dialog.done( function() {
 		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Removing giveaway..." );
 

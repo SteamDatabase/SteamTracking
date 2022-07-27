@@ -1,4 +1,6 @@
 
+const k_rgClientSideFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
+
 function DisplayAdvancedSearch()
 {
 	new Effect.BlindUp( 'advanced_search_toggle', {duration: 0.25}  );
@@ -217,6 +219,67 @@ function GatherSearchParameters()
 	return rgRawParameters;
 }
 
+/**
+ * Return the number of active search and client side filters
+ */
+function GetNumActiveSearchFilters()
+{
+	const k_rgNonFilterKeys = [ 'displayterm', 'sort_by', 'force_infinite', 'snr', 'page' ];
+	var numActive = 0;
+
+	var rgRawParameters = $( 'advsearchform' ).serialize( true );
+	for ( var key in rgRawParameters )
+	{
+		if ( rgRawParameters[ key ] && !k_rgNonFilterKeys.includes( key ) )
+			numActive += rgRawParameters[key].split(',').length;
+	}
+
+	for ( var strFilter of k_rgClientSideFilterNames )
+	{
+		var $Control = $J( "span[data-param='hide'][data-value='" + strFilter + "']" );
+		if ( $Control.length > 0 && $Control.hasClass( 'checked' ) )
+			numActive++;
+	}
+
+	return numActive;
+}
+
+/**
+ * If page includes a num_active_filters element, update the innerhtml to the current count
+ */
+function UpdateFilterButtonText()
+{
+	var $elemNumActiveFilters = $J( '.num_active_filters' );
+	if ( $elemNumActiveFilters.length > 0 )
+	{
+		$numFilters = GetNumActiveSearchFilters();
+		$numFiltersString = $numFilters > 0 ? ' (' + $numFilters + ')' : '';
+
+		$filterText = "Filters";
+
+		$elemNumActiveFilters[0].innerHTML = $filterText + $numFiltersString;
+	}
+}
+
+/**
+ * Clear all selected filters
+ */
+function ResetFilters()
+{
+	// clear active filters
+	var $Controls = $J( 'span.checked' );
+	$Controls.each( function( i, element) {
+		element.click();
+	});
+
+	// reset slider to 'Any Price'
+	if ( typeof UpdatePriceRangeControl !== 'undefined' )
+		UpdatePriceRangeControl();
+
+	// clear search term and update results
+	ReplaceTerm("");
+}
+
 function ReplaceTerm( term )
 {
 	$J( "#realterm" ).val( term );
@@ -358,6 +421,8 @@ function SearchCompleted( parameters, transport )
 
 	if (typeof(GDynamicStore) !== 'undefined')
 		GDynamicStore.DecorateDynamicItems();
+
+	UpdateFilterButtonText();
 
 	InitInfiniteScroll( parameters );
 }
@@ -856,7 +921,6 @@ function UpdateTags()
 
 function EnableClientSideFilters( CUserPreferences )
 {
-	var rgFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
 	var oFilters = {};
 	var results_container = $J("#search_results");
 
@@ -865,7 +929,7 @@ function EnableClientSideFilters( CUserPreferences )
 	if ( GDynamicStore )
 		results_container.addClass('results_loading');
 
-	for ( var strFilter of rgFilterNames )
+	for ( var strFilter of k_rgClientSideFilterNames )
 	{
 		// Find our control widget for this filter.
 		var $Control = $J("span[data-param='hide'][data-value='" + strFilter + "']");
@@ -937,6 +1001,8 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 			'https://store.steampowered.com/account/savesearchpreferences',
 			oPrefs
 		);
+
+		UpdateFilterButtonText();
     };
 }
 

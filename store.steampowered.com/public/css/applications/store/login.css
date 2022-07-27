@@ -14,8 +14,9 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
   .newlogindialog_QR_1d6FZ {
+  aspect-ratio: 1;
   background-color: #32353c;
-  padding: 16px;
+  padding: 12px;
   border-radius: 2px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK {
@@ -351,14 +352,22 @@
   background: transparent;
 }
 .newlogindialog_Login_ZOBYq
-  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB {
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
+  .newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(.IN_CLIENT) {
   background: linear-gradient(321.58deg, #212629 47.91%, #333841 91.08%);
   width: 500px;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.newlogindialog_Compact_9CHmB
+  .newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc:not(.IN_CLIENT)
   .newlogindialog_FormContainer_3jLIH {
   background: #21232880;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc.IN_CLIENT {
+  min-height: 448px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_HeaderLogo_1rtyT {
   height: 46px;
@@ -409,7 +418,7 @@
 .qrcode_QRBits_3FhhK {
   display: grid;
 }
-.qrcode_Bit_2Yuvr.qrcode_Active_274P1 {
+.qrcode_Bit_2Yuvr:not(.qrcode_Active_274P1) {
   background-color: #1999ff;
 }
 .qrlogin_LoginQR_1wtS3 {

@@ -1,47 +1,40 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [103],
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [8776],
   {
-    "7v2d": function (e, t, a) {
-      e.exports =
-        a.p +
-        "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching";
-    },
-    cix0: function (e, t, a) {
+    76926: (e) => {
       e.exports = {
         ProfileShowcaseHeaderImage:
           "profileshowcases_ProfileShowcaseHeaderImage_2tjUy",
         ShowcaseSubhead: "profileshowcases_ShowcaseSubhead_2BmNv",
       };
     },
-    yDev: function (e, t, a) {
+    8672: (e, t, s) => {
       "use strict";
-      a.r(t),
-        a.d(t, "ProfileShowcasesPage", function () {
-          return C;
-        });
-      var s = a("mrSG"),
-        c = a("q1tI"),
-        o = a.n(c),
-        r = a("TyAF"),
-        l = a("li8c"),
-        n = a("cix0"),
-        i = a("RV7a"),
-        p = a("nXE5"),
-        u = a("GXif"),
-        m = a("prdU"),
-        h = a("+9fn"),
-        d = a("ehaW"),
-        _ = a("+j4l"),
-        g = (a("Nr4G"), a("ztGc"), a("7v2d")),
-        b = a.n(g);
-      const f = (e) =>
-          o.a.createElement(
-            d.d,
+      s.r(t), s.d(t, { ProfileShowcasesPage: () => S, default: () => C });
+      var a = s(70655),
+        r = s(67294),
+        o = s(29323),
+        l = s(54831),
+        c = s(76926),
+        n = s(41368),
+        i = s(25381),
+        p = s(41311),
+        h = s(25251),
+        m = s(49533),
+        u = s(48828),
+        _ = s(52286);
+      s(21205), s(18330);
+      const d =
+          s.p +
+          "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",
+        g = (e) =>
+          r.createElement(
+            u.oY,
             Object.assign({}, e, {
               onClick: (t) =>
-                Object(_.d)(
+                (0, _.hY)(
                   t,
                   e.customization_type,
                   e.current_level,
@@ -49,12 +42,12 @@
                 ),
             })
           ),
-        w = (e) =>
-          o.a.createElement(
-            d.c,
+        f = (e) =>
+          r.createElement(
+            u.MB,
             Object.assign({}, e, {
               onClick: (t) =>
-                Object(_.c)(
+                (0, _._J)(
                   t,
                   e.customization_type,
                   e.purchased_count,
@@ -62,9 +55,9 @@
                 ),
             })
           ),
-        P = (e) =>
-          o.a.createElement(
-            i.a,
+        w = (e) =>
+          r.createElement(
+            n.xu,
             {
               display: "flex",
               flexDirection: "row",
@@ -73,142 +66,143 @@
               paddingTop: "small",
               className: l.PageContainer,
             },
-            o.a.createElement("img", {
-              src: b.a,
-              className: n.ProfileShowcaseHeaderImage,
+            r.createElement("img", {
+              src: d,
+              className: c.ProfileShowcaseHeaderImage,
             })
           ),
-        S = (e) => {
+        P = (e) => {
           const {
             point_cost: t,
-            upgradable_showcases: a,
-            purchased_upgrades: s,
+            upgradable_showcases: s,
+            purchased_upgrades: a,
           } = e;
-          let c = new Map();
-          a.forEach((e) => {
-            c.set(e, 1);
+          let o = new Map();
+          s.forEach((e) => {
+            o.set(e, 1);
           }),
-            s &&
-              s.forEach((e) => {
-                c.set(e.customization_type, e.level);
+            a &&
+              a.forEach((e) => {
+                o.set(e.customization_type, e.level);
               });
-          let r = a.map((e) => {
-            const a = c.get(e),
-              s = a + 1;
-            return o.a.createElement(f, {
+          let c = s.map((e) => {
+            const s = o.get(e),
+              a = s + 1;
+            return r.createElement(g, {
               key: e,
               point_cost: t,
               customization_type: e,
-              current_level: a,
-              desired_level: s,
+              current_level: s,
+              desired_level: a,
             });
           });
-          return o.a.createElement(
-            i.f,
+          return r.createElement(
+            n.Kq,
             {
               className: l.PageItemsContainer,
               itemClassName: l.PageItemsContainerChildren,
               spacing: "xlarge",
             },
-            o.a.createElement(
-              h.b,
+            r.createElement(
+              m.iS,
               {
-                title: Object(u.g)("#ProfileShowcases_Upgrades_Title"),
-                subtitle: Object(u.g)("#ProfileShowcases_Upgrades_Subtitle"),
+                title: (0, p.Xx)("#ProfileShowcases_Upgrades_Title"),
+                subtitle: (0, p.Xx)("#ProfileShowcases_Upgrades_Subtitle"),
               },
-              r
+              c
             )
           );
         },
-        E = (e) => {
+        b = (e) => {
           const {
             point_cost: t,
-            purchasable_showcases: a,
-            purchased_showcases: s,
-            purchased_upgrades: c,
+            purchasable_showcases: s,
+            purchased_showcases: a,
+            purchased_upgrades: o,
           } = e;
-          let r = new Map(),
-            n = new Map();
-          a.forEach((e) => {
-            r.set(e, 0), n.set(e, 1);
+          let c = new Map(),
+            i = new Map();
+          s.forEach((e) => {
+            c.set(e, 0), i.set(e, 1);
           }),
-            s &&
-              s.forEach((e) => {
-                r.set(e.customization_type, e.count);
+            a &&
+              a.forEach((e) => {
+                c.set(e.customization_type, e.count);
               }),
-            c &&
-              c.forEach((e) => {
-                n.set(e.customization_type, e.level);
+            o &&
+              o.forEach((e) => {
+                i.set(e.customization_type, e.level);
               });
-          let p = a.map((e) =>
-            o.a.createElement(w, {
+          let h = s.map((e) =>
+            r.createElement(f, {
               key: e,
               point_cost: t,
-              current_level: n.get(e),
+              current_level: i.get(e),
               customization_type: e,
-              purchased_count: r.get(e),
+              purchased_count: c.get(e),
             })
           );
-          return o.a.createElement(
-            i.f,
+          return r.createElement(
+            n.Kq,
             {
               className: l.PageItemsContainer,
               itemClassName: l.PageItemsContainerChildren,
               spacing: "xlarge",
             },
-            o.a.createElement(
-              h.b,
+            r.createElement(
+              m.iS,
               {
-                title: Object(u.g)("#ProfileShowcases_Slots_Title"),
-                subtitle: Object(u.g)("#ProfileShowcases_Slots_Subtitle"),
+                title: (0, p.Xx)("#ProfileShowcases_Slots_Title"),
+                subtitle: (0, p.Xx)("#ProfileShowcases_Slots_Subtitle"),
               },
-              p
+              h
             )
           );
         };
-      let C = class extends o.a.Component {
+      let S = class extends r.Component {
         render() {
-          let e = m.b.Get().GetUpgradableProfileShowcaseCost(),
-            t = m.b.Get().GetUpgradableProfileShowcases(),
-            a = m.b.Get().GetUpgradedProfileCustomizations(),
-            s = m.b.Get().GetPurchasableProfileShowcaseSlotCost(),
-            c = m.b.Get().GetPurchasableProfileShowcaseSlots(),
-            r = m.b.Get().GetPurchasedProfileCustomizations();
-          return o.a.createElement(
-            p.e,
+          let e = h.Vb.Get().GetUpgradableProfileShowcaseCost(),
+            t = h.Vb.Get().GetUpgradableProfileShowcases(),
+            s = h.Vb.Get().GetUpgradedProfileCustomizations(),
+            a = h.Vb.Get().GetPurchasableProfileShowcaseSlotCost(),
+            o = h.Vb.Get().GetPurchasableProfileShowcaseSlots(),
+            c = h.Vb.Get().GetPurchasedProfileCustomizations();
+          return r.createElement(
+            i.OC,
             null,
-            o.a.createElement(
-              i.f,
+            r.createElement(
+              n.Kq,
               {
                 className: l.PageItemsContainer,
                 itemClassName: l.PageItemsContainerChildren,
                 spacing: "xlarge",
               },
-              o.a.createElement(
+              r.createElement(
                 "div",
                 null,
-                o.a.createElement(p.f, {
-                  title: Object(u.g)("#ShopPageTitle_ProfileShowcases"),
+                r.createElement(i._f, {
+                  title: (0, p.Xx)("#ShopPageTitle_ProfileShowcases"),
                 })
               ),
-              o.a.createElement(P, null),
-              o.a.createElement(S, {
+              r.createElement(w, null),
+              r.createElement(P, {
                 point_cost: e,
                 upgradable_showcases: t,
-                purchased_upgrades: a,
+                purchased_upgrades: s,
               }),
-              o.a.createElement(E, {
-                point_cost: s,
-                purchasable_showcases: c,
-                purchased_showcases: r,
-                purchased_upgrades: a,
+              r.createElement(b, {
+                point_cost: a,
+                purchasable_showcases: o,
+                purchased_showcases: c,
+                purchased_upgrades: s,
               }),
               this.props.children
             )
           );
         }
       };
-      (C = Object(s.b)([r.a], C)), (t.default = C);
+      S = (0, a.gn)([o.Pi], S);
+      const C = S;
     },
   },
 ]);

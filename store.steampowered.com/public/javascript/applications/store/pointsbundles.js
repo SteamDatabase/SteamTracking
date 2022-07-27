@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [102],
+(self.webpackChunkstore = self.webpackChunkstore || []).push([
+  [3413],
   {
-    "3xXb": function (e, n, t) {
+    88586: (e) => {
       e.exports = {
         Discount: "bundle_Discount_3f4n8",
         Shell: "bundle_Shell_2Zfec",
@@ -31,92 +31,91 @@
         AlreadyOwnedText: "bundle_AlreadyOwnedText_1E4uc",
       };
     },
-    f4w8: function (e, n, t) {
+    99332: (e, n, t) => {
       "use strict";
-      t.r(n);
-      var l = t("q1tI"),
-        a = t.n(l),
-        r = t("EC67"),
-        d = t("1fPh"),
-        c = (t("1udA"), t("TyAF")),
-        o = t("prdU"),
-        i = t("nXE5"),
-        u = t("+j4l"),
-        s = t("RV7a"),
-        b = t("GXif"),
-        _ = t("2Ido"),
-        m = t("+9fn"),
-        p = t("t0PL"),
-        f = t("ehaW"),
-        O = t("3xXb"),
-        w = t("GbHM"),
-        C = t("cOvF");
-      n.default = Object(c.a)((e) => {
-        const { bundleid: n } = e.match.params,
-          t = parseInt(n),
-          l = a.a.createElement(r.a, { to: d.b.LoyaltyStore() });
-        if (isNaN(t)) return l;
-        const [c] = o.b.Get().GetRewardDefinitions(t);
-        return c
-          ? 5 !== c.type && 6 !== c.type
-            ? l
-            : a.a.createElement(h, { bundle: c })
-          : null;
-      });
-      const h = Object(c.a)((e) => {
+      t.r(n), t.d(n, { default: () => B });
+      var l = t(67294),
+        r = t(78587),
+        a = t(9355),
+        d = (t(14974), t(29323)),
+        i = t(25251),
+        o = t(25381),
+        c = t(52286),
+        u = t(41368),
+        s = t(41311),
+        _ = t(23327),
+        m = t(49533),
+        b = t(75057),
+        p = t(48828),
+        f = t(88586),
+        C = t(7573),
+        h = t(46347);
+      const B = (0, d.Pi)((e) => {
+          const { bundleid: n } = e.match.params,
+            t = parseInt(n),
+            d = l.createElement(r.l_, { to: a.Z.LoyaltyStore() });
+          if (isNaN(t)) return d;
+          const [o] = i.Vb.Get().GetRewardDefinitions(t);
+          return o
+            ? 5 !== o.type && 6 !== o.type
+              ? d
+              : l.createElement(I, { bundle: o })
+            : null;
+        }),
+        I = (0, d.Pi)((e) => {
           const { bundle: n } = e,
-            t = o.b.Get().GetBundleOfferForUser(n);
-          return a.a.createElement(
-            i.e,
+            t = i.Vb.Get().GetBundleOfferForUser(n);
+          return l.createElement(
+            o.OC,
             null,
-            a.a.createElement(
-              s.a,
+            l.createElement(
+              u.xu,
               {
                 paddingY: "xlarge",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
               },
-              a.a.createElement(I, { bundle: n, offer: t }),
+              l.createElement(E, { bundle: n, offer: t }),
               0 === t.point_cost
-                ? a.a.createElement(E, { className: O.PrimaryRedeemButton })
-                : a.a.createElement(u.a, {
+                ? l.createElement(P, { className: f.PrimaryRedeemButton })
+                : l.createElement(c.D9, {
                     cost: t.point_cost,
                     discount: t.discount,
                     originalCost: t.original_point_cost,
-                    className: O.PrimaryRedeemButton,
-                    onClick: (e) => Object(u.e)(e, n),
+                    className: f.PrimaryRedeemButton,
+                    onClick: (e) => (0, c.s1)(e, n),
                   }),
-              a.a.createElement(B, { offer: t })
+              l.createElement(w, { offer: t })
             )
           );
         }),
-        I = Object(c.a)(({ bundle: e, offer: n }) => {
-          const t = Object(_.b)(e),
-            l = Object(b.g)("#RewardBundle_OfferDescription", n.discount);
-          return a.a.createElement(
-            s.a,
+        E = (0, d.Pi)(({ bundle: e, offer: n }) => {
+          const t = (0, _.h)(e),
+            r = (0, s.Xx)("#RewardBundle_OfferDescription", n.discount);
+          return l.createElement(
+            u.xu,
             { paddingBottom: "xlarge" },
-            a.a.createElement(i.f, { title: t, subtitle: l })
+            l.createElement(o._f, { title: t, subtitle: r })
           );
         }),
-        E = ({ className: e }) =>
-          a.a.createElement(
+        P = ({ className: e }) =>
+          l.createElement(
             "div",
-            { className: Object(w.a)(e, O.AlreadyOwned) },
-            a.a.createElement(C.j, { className: O.CheckmarkCircle }),
-            a.a.createElement(
+            { className: (0, C.Z)(e, f.AlreadyOwned) },
+            l.createElement(h.Zg, { className: f.CheckmarkCircle }),
+            l.createElement(
               "span",
-              { className: O.AlreadyOwnedText },
-              Object(b.g)("#Redeem_BundleItemOwned")
+              { className: f.AlreadyOwnedText },
+              (0, s.Xx)("#Redeem_BundleItemOwned")
             )
           ),
-        B = Object(c.a)((e) => {
+        w = (0, d.Pi)((e) => {
           const { offer: n } = e;
-          return a.a.createElement(
-            m.b,
-            { title: Object(b.g)("#RewardBundle_BundleContentsSection_Title") },
-            a.a.createElement(p.a, {
+          return l.createElement(
+            m.iS,
+            { title: (0, s.Xx)("#RewardBundle_BundleContentsSection_Title") },
+            l.createElement(b.c, {
               getItems: (e, t) => ({
                 rewards: n.items.slice(e, t),
                 bLoadingMore: !1,
@@ -124,11 +123,11 @@
                 cMaxToReturn: n.items.length,
               }),
               renderItem: (e) =>
-                a.a.createElement(f.e, {
+                l.createElement(p.h_, {
                   key: e.defid,
                   definition: e,
                   purchaseable: !1,
-                  onClick: (n) => Object(u.b)(n, e),
+                  onClick: (n) => (0, c.u4)(n, e),
                 }),
             })
           );

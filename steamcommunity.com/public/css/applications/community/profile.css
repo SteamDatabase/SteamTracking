@@ -1,3 +1,210 @@
+.friendsnooze_SnoozeContainer_1Dsum {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 6px;
+  animation-name: friendsnooze_none_T3Fb5;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode .friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+  font-weight: bold;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Medium_1iYPl
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 8px;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Large_3BESV
+  .friendsnooze_SnoozeZ_2n0Ei {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+    1px 1px 2px #000;
+}
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  filter: brightness(0.75);
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z1_2hnF3 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z2_VmQTO {
+  animation-delay: 0.2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.friendsnooze_SnoozeContainer_1Dsum .friendsnooze_Z3_29mta {
+  animation-delay: 0.4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4c91ac;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #c9bdf7;
+}
+.friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #5340a6;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
+  color: #91c257;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #6dcff6;
+}
+.friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.online.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #4cb4ff;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #a1f410;
+}
+.friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei.GamepadMode,
+.GamepadMode
+  .friendsnooze_SnoozeContainer_1Dsum.in-game.friendsnooze_Dim_rpZ9b
+  .friendsnooze_SnoozeZ_2n0Ei {
+  color: #3e862d;
+}
+.friend.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB.gpfocus .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_SnoozeContainer_1Dsum.friendsnooze_animating_2rXc7
+  .friendsnooze_SnoozeZ_2n0Ei,
+.friendsnooze_hoverParent_3-8cB:hover * .friendsnooze_SnoozeZ_2n0Ei {
+  animation-name: friendsnooze_Snoring_38wIV;
+}
+@keyframes friendsnooze_Snoring_38wIV {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_ {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.GamepadMode,
+.GamepadMode .personastatusicons_PersonaStatusIcon_KxAI_ {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BasicUI
+  .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
+  display: block;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_BigPicture
+  path {
+  fill: #59bf40;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_BigPicture path {
+  fill: #4c91ac;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_VR
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_MobilePhone
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_BigPicture
+  path {
+  fill: #4cb4ff;
+}
 .miniprofile_miniProfile_2QPdq {
   width: fit-content;
   margin: 11px;
@@ -1017,7 +1224,7 @@ body {
   line-height: normal;
 }
 input.DialogTextInputBase,
-input.DialogTextInputBase:not(disabled):hover,
+input.DialogTextInputBase:not(:disabled):hover,
 input.DialogTextInputBase:disabled:hover,
 input.DialogTextInputBase:focus {
   box-shadow: inset 1px 1px 0px #000a;
@@ -2054,7 +2261,6 @@ body.profilethemecolors_SteamDeckTheme_2aDQK {
   .profileeditshell_Navigation_33Kl1
   .profileeditshell_ExternalLink_1xCAN {
   border: 1px solid #78a9e2;
-  border-radius: 3px;
   font-size: 12px;
   padding: 8px 8px;
   color: #78a9e2;

@@ -478,6 +478,359 @@ body.v6.rewards .ModalPosition_Content {
   color: #fff;
   background-position: 0 0;
 }
+.login_LoginDialog_2y6W_ {
+  background-color: #101114;
+  background-image: linear-gradient(to bottom, #101114, #1f2127);
+  min-height: 512px;
+  position: relative;
+}
+.login_AccountPasswordPanel_3hiT2
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  color: #969696;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.login_LoginPanelBackground_3rFou {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.login_LoginPanelBackground_3rFou .SVGIcon_SteamLogo {
+  pointer-events: none;
+  position: absolute;
+  bottom: -128px;
+  left: -64px;
+  opacity: 0.02;
+  width: 800px;
+  height: 800px;
+  max-width: 500px;
+  max-height: 500px;
+}
+.login_LoginPanelContent_1dgRm {
+  padding: 32px;
+}
+.login_ErrorMessage_Xp7bS {
+  user-select: none;
+  color: #ff9696;
+  font-size: 12px;
+  margin: 0px;
+}
+.login_AccountPasswordForm_3M0na {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.login_AccountPasswordForm_3M0na .DialogInputLabelGroup {
+  margin-bottom: 16px;
+}
+.login_AccountPasswordForm_3M0na .DialogTextInputBase {
+  font-size: 24px;
+  height: 24px;
+  width: 100%;
+  max-width: 398px;
+  color: #bfc6d4;
+  box-sizing: content-box;
+  background: #32353c;
+}
+@media screen and (max-width: 700px) {
+  .login_AccountPasswordForm_3M0na .DialogTextInputBase {
+    font-size: 18px;
+    height: 20px;
+    width: 70vw;
+  }
+}
+.login_AuthenticationPanel_1mvos
+  .login_AccountPasswordForm_3M0na
+  .DialogTextInputBase {
+  text-transform: uppercase;
+}
+.login_AccountPasswordForm_3M0na .DialogTextInputBase:hover {
+  background: #3a3e46;
+}
+.login_AccountPasswordForm_3M0na .DialogTextInputBase:focus {
+  background: #464a53;
+}
+.login_AccountPasswordForm_3M0na
+  .login_AccountNameLabel_2mGS5.login_MedName_2J9dc {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login_AccountPasswordForm_3M0na
+  .login_AccountNameLabel_2mGS5.login_LargeName_26ejp {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY {
+  font-size: 36px;
+  font-family: monospace;
+}
+.login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY.login_MedPass_3dfHR {
+  font-size: 32px;
+}
+.login_AccountPasswordForm_3M0na
+  .login_PasswordDots_2hvaY.login_LargePass_3iXGb {
+  font-size: 19px;
+}
+@media screen and (max-width: 700px) {
+  .login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY,
+  .login_AccountPasswordForm_3M0na
+    .login_PasswordDots_2hvaY.login_MedPass_3dfHR,
+  .login_AccountPasswordForm_3M0na
+    .login_PasswordDots_2hvaY.login_LargePass_3iXGb {
+    font-size: 19px;
+  }
+}
+.login_AccountPasswordForm_3M0na input:-webkit-autofill,
+.login_AccountPasswordForm_3M0na input:-webkit-autofill:hover,
+.login_AccountPasswordForm_3M0na
+  input:-webkit-autofill:focus
+  textarea:-webkit-autofill,
+.login_AccountPasswordForm_3M0na
+  textarea:-webkit-autofill:hover
+  textarea:-webkit-autofill:focus,
+.login_AccountPasswordForm_3M0na select:-webkit-autofill,
+.login_AccountPasswordForm_3M0na select:-webkit-autofill:hover,
+.login_AccountPasswordForm_3M0na select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #d3eaeb;
+  -webkit-box-shadow: 0 0 0px 100px #53523f inset;
+  box-shadow: 0 0 0px 100px #53523f inset;
+}
+.login_AccountPasswordForm_3M0na .DialogButton.Primary {
+  height: 44px;
+  width: 50%;
+  align-self: flex-end;
+}
+.login_AccountFieldHeader_ItWep {
+  margin-top: 10px;
+}
+.login_PasswordFieldHeader_2GJed {
+  margin-top: 10px;
+}
+.login_NeedHelpLink_3nqR4 {
+  color: #969696;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+  transition: all 0.21s ease-in-out;
+}
+.login_NeedHelpLink_3nqR4.login_NeedHelpHighlight_25N0C {
+  color: #ff7300;
+  text-decoration-color: #8f5100;
+}
+.login_NeedHelpLink_3nqR4:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
+}
+.login_NeedHelpLink_3nqR4:visited {
+  color: #969696;
+}
+.login_CreateAccountLink_r1OCj a {
+  color: #bfc6d4;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+}
+.login_CreateAccountLink_r1OCj a:visited {
+  color: #bfc6d4;
+}
+.login_CreateAccountLink_r1OCj a:hover {
+  color: #fff;
+  text-decoration-color: #b6b6b6;
+}
+.login_LoginCreateSeperator_25iPN {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 16px;
+  height: 24px;
+}
+.login_RefreshCaptchaText_28Gin {
+  color: #67c1f5;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.login_RefreshCaptchaText_28Gin:visited {
+  color: #67c1f5;
+}
+.login_SigningInAccountName_2Bjab,
+.login_SigninTitle_Pk26- {
+  user-select: none;
+  font-size: 28px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #bfc6d4;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 700px) {
+  .login_SigningInAccountName_2Bjab,
+  .login_SigninTitle_Pk26- {
+    margin-top: 0px;
+  }
+}
+.login_RememberMeCheck_zkf30 {
+  margin-top: -8px;
+}
+.login_RememberMeCheck_zkf30._DialogLayout {
+  padding-left: 0px;
+}
+.login_RememberMeCheck_zkf30._DialogLayout .DialogCheckbox {
+  background: #32353c;
+}
+.login_RememberMeCheck_zkf30._DialogLayout:hover
+  > .DialogCheckbox:not(.Disabled),
+.login_RememberMeCheck_zkf30._DialogLayout:focus
+  > .DialogCheckbox:not(.Disabled) {
+  background: #3a3e46;
+}
+.login_SteamUpsellContainer_1bNqn {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login_SteamUpsellContainer_1bNqn div {
+  width: fit-content;
+  align-self: center;
+}
+.login_SteamUpsell_3MQ_K {
+  color: #969696;
+  font-size: 12px;
+}
+.login_CaptchaContainer_2nqhJ .login_CaptchaBlock_1iLPO {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid dotted;
+}
+.login_CaptchaContainer_2nqhJ
+  .login_CaptchaBlock_1iLPO
+  .login_CaptchaImageAndInput_2Frvv {
+  display: flex;
+  flex-direction: column;
+}
+.login_CaptchaContainer_2nqhJ
+  .login_CaptchaBlock_1iLPO
+  .login_ErrorMessage_Xp7bS {
+  position: relative;
+  padding-left: 16px;
+  margin: 0;
+}
+.login_CaptchaContainer_2nqhJ .login_CaptchaImageBox_uMoA_ {
+  border: 1px solid #000;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  width: 203px;
+  height: 37px;
+}
+.login_CaptchaContainer_2nqhJ .login_CaptchaImage_2tJ2w {
+  margin-top: -2px;
+  margin-left: -2px;
+}
+.login_CaptchaContainer_2nqhJ .login_CaptchaInput_1hrke {
+  text-transform: uppercase;
+  color: #6dc7fb;
+  letter-spacing: 10px;
+  max-width: 159px;
+  background-color: #2a3649;
+  padding: 6px 14px 6px 30px;
+  font-family: monospace;
+  font-size: 28px;
+  border: 1px solid #000;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-width: 0px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.75) inset;
+}
+.login_CaptchaContainer_2nqhJ .login_CaptchaInput_1hrke:focus {
+  padding: 6px 14px 6px 30px;
+}
+.login_AuthenticationPanel_1mvos .DialogLabel {
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+.login_AuthenticationPanel_1mvos .DialogBodyText {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.login_AuthenticationPanel_1mvos .DialogBodyText .SVGIcon_Caution {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -5px;
+}
+.login_AuthenticationPanel_1mvos
+  .DialogBodyText
+  .SVGIcon_Caution
+  .triangle
+  path {
+  fill: #bd6500;
+}
+.login_AuthenticationPanel_1mvos .login_NeedHelpLink_3nqR4 {
+  margin-top: 32px;
+  display: block;
+}
+.login_AuthenticatorInputcontainer_2YRk7 {
+  position: relative;
+  height: 180px;
+}
+.login_AuthenticatorInputcontainer_2YRk7 .SVGIcon_LargeMobilePhone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 180px;
+  width: 90px;
+  filter: brightness(0.6);
+}
+.login_AuthenticatorInputcontainer_2YRk7 .SVGIcon_Envelope {
+  position: absolute;
+  top: -22px;
+  left: 0px;
+  height: 92px;
+  width: 92px;
+  filter: brightness(0.6);
+}
+.login_AuthenticatorInputcontainer_2YRk7 .login_AccountPasswordForm_3M0na {
+  z-index: 2;
+  position: relative;
+  margin-left: 24px;
+  margin-bottom: 0px;
+  height: 100%;
+}
+.login_AuthenticatorInputcontainer_2YRk7
+  .login_AccountPasswordForm_3M0na
+  .DialogButton.Primary {
+  width: calc(50% + 12px);
+  position: absolute;
+  bottom: 0px;
+}
+.login_AuthenticatorInputcontainer_2YRk7 .DialogInputLabelGroup {
+  margin-top: 10px;
+}
+.login_SigningInAccountName_2Bjab {
+  text-transform: none;
+  color: #3ea5f1;
+  margin-top: -6px;
+  letter-spacing: 1px;
+}
+.login_Highlight_1Ea3M {
+  color: #dde1e4;
+  font-style: italic;
+}
+.login_LoginComplete_KmQja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .layout_InlineContainer_3nHer {
   display: flex;
   justify-content: flex-start;
@@ -4427,7 +4780,7 @@ body.v6.rewards .ModalPosition_Content {
   font-size: 14px;
   font-family: "Motiva Sans", Sans-serif;
   padding: 20px 40px;
-  background: url(../../../images/applications/store/diamonds_tile.png?v=valveisgoodatcaching)
+  background: url(../../..images/applications/store/diamonds_tile.png?v=valveisgoodatcaching)
       no-repeat,
     radial-gradient(100% 1000px at 20% 0px, #182333 5%, #171c22 100%);
   background-size: auto 100%;
@@ -4590,7 +4943,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .redeempointsmodal_ItemPreviewContainer_11o78
   .redeempointsmodal_PurchasedCheck_1clLM {
-  background-image: url(../../../images/applications/store/purchased_check.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/purchased_check.png?v=valveisgoodatcaching);
 }
 .redeempointsmodal_ItemButtonsContainer_drMXI {
   margin-top: 20px;
@@ -4731,7 +5084,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .redeempointsmodal_ChatPreviewContainer_1Jkzx
   .redeempointsmodal_PreviewChat_2ZTyD {
-  background-image: url(../../../images/applications/store/chat_preview.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/chat_preview.png?v=valveisgoodatcaching);
   filter: drop-shadow(2px 4px 4px black);
   background-repeat: no-repeat;
   background-position: center;
@@ -4744,7 +5097,7 @@ body.v6.rewards .ModalPosition_Content {
   margin: 0 auto;
 }
 .redeempointsmodal_ChatPickerContainer_PtQg3 {
-  background-image: url(../../../images/applications/store/chat_picker.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/chat_picker.png?v=valveisgoodatcaching);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -4836,7 +5189,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .redeempointsmodal_BackgroundPreviewContainer_2SDKf
   .redeempointsmodal_PreviewBackground_Yytmx {
-  background-image: url(../../../images/applications/store/background_preview.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/background_preview.png?v=valveisgoodatcaching);
   filter: drop-shadow(2px 4px 4px black);
   background-repeat: no-repeat;
   background-position: center;
@@ -4879,7 +5232,7 @@ body.v6.rewards .ModalPosition_Content {
   width: 100%;
   max-width: 384px;
   position: relative;
-  background-image: url(../../../images/applications/store/miniprofile_preview.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/miniprofile_preview.png?v=valveisgoodatcaching);
   filter: drop-shadow(2px 4px 4px black);
   background-repeat: no-repeat;
   background-position: center;
@@ -4901,7 +5254,7 @@ body.v6.rewards .ModalPosition_Content {
 .redeempointsmodal_MiniProfilePreviewContainer_1DUfr
   .redeempointsmodal_PreviewBackgroundContainer_YXQsb
   .redeempointsmodal_ProfileImage_ej4e9 {
-  background-image: url(../../../images/applications/store/miniprofile.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/miniprofile.png?v=valveisgoodatcaching);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -4955,11 +5308,11 @@ body.v6.rewards .ModalPosition_Content {
 }
 .redeempointsmodal_AvatarPreviewContainer_2UIGV
   .redeempointsmodal_PreviewBackgroundContainer_YXQsb.redeempointsmodal_Animated_28cJO {
-  background-image: url(../../../images/applications/store/animatedavatar_preview.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/animatedavatar_preview.png?v=valveisgoodatcaching);
 }
 .redeempointsmodal_AvatarPreviewContainer_2UIGV
   .redeempointsmodal_PreviewBackgroundContainer_YXQsb.redeempointsmodal_Frame_2SOYA {
-  background-image: url(../../../images/applications/store/avatarframes_preview.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/avatarframes_preview.png?v=valveisgoodatcaching);
 }
 .redeempointsmodal_AvatarPreviewContainer_2UIGV
   .redeempointsmodal_PreviewBackgroundContainer_YXQsb
@@ -5197,7 +5550,7 @@ body.v6.rewards .ModalPosition_Content {
   .redeempointsmodal_GoldenProfilePreviewContainer_17ShO
   .redeempointsmodal_AvatarContainer_31Oas
   .redeempointsmodal_GoldenFrame_1_ANO {
-  background-image: url(../../../images/applications/store/golden_frame_anim.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/golden_frame_anim.png?v=valveisgoodatcaching);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -9622,7 +9975,7 @@ body.v6.rewards .ModalPosition_Content {
   margin-bottom: 20px;
 }
 .goldenprofile_PersonaPreviewContainer_2eBHX {
-  background: url(../../../images/applications/store/goldenpersona_preview.png?v=valveisgoodatcaching)
+  background: url(../../..images/applications/store/goldenpersona_preview.png?v=valveisgoodatcaching)
     center no-repeat;
   max-width: 380px;
   height: 285px;
@@ -9845,7 +10198,7 @@ body.v6.rewards .ModalPosition_Content {
   background-repeat: repeat;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  background-image: url(../../../images/applications/store/lunar2022_bg_tile.png?v=valveisgoodatcaching);
+  background-image: url(../../..images/applications/store/lunar2022_bg_tile.png?v=valveisgoodatcaching);
   width: 100%;
   padding: 0 20px 20px 20px;
 }

@@ -5431,15 +5431,30 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	position: absolute;
 	bottom: 16px;
 	text-align: center;
-	width: 100%;
+	width: 90%;
+	padding: 1em;
 }
 
 .content_hub_capsule_ctn .label {
 	font-size: 16px;
-	font-weight: bold;
-	letter-spacing: 0.1ch;
-	color: white;
-	text-shadow: 1px 2px 1px black;
+    font-weight: bold;
+    letter-spacing: 0.1ch;
+    color: white;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+    text-transform: uppercase;
+}
+
+.content_hub_capsule_ctn:hover {
+	transform: scale(1.05);
+	transition: all .2s;
+}
+
+.content_hub_capsule_ctn .gradient:hover {
+	filter: brightness(1.25);
+}
+
+.content_hub_carousel_ctn .arrow.left, .content_hub_carousel_ctn .arrow.right {
+	top: 25%;
 }
 
 .top_new_releases_banner_ctn

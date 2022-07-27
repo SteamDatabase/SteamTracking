@@ -558,7 +558,8 @@
         }
         OnDeactivate(t) {
           this.m_onDeactivateCallbacks.Dispatch(this, t),
-            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this);
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
+            (this.m_bWasActiveForLastFocusChange = !1);
         }
         IsActiveFocusNavTree() {
           return this.m_Controller.IsActiveFocusNavTree(this);

@@ -3424,7 +3424,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 /* videos */
 .sharedFilePreviewYouTubeVideo
 {
-	/* recommended YouTube diemnsion is 640x385 for 16:9 content */
+	/* recommended YouTube dimension is 640x385 for 16:9 content */
 	display: block;
 	width: 638px;
 	max-width: 100%;

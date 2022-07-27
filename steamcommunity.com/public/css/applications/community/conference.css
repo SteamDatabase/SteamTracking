@@ -60,6 +60,10 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
 .conferencebroadcast_BroadcastChatCtn_28b1v .ChatEntry {
   padding: 6px;
 }
+.conferenceevents_UpcomingEventsCtn_2bWup {
+  width: 100%;
+  height: 100%;
+}
 .conferenceevents_UpcomingEventsCtn_2bWup .conferenceevents_SectionTitle_7MpRs {
   color: #a1a1a1;
   text-transform: uppercase;
@@ -206,10 +210,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_3lJb_ {
   .Hidden .conferenceevents_EventsScheduleCtn_33-47 {
     display: none;
   }
-}
-.conferenceevents_UpcomingEventsCtn_2bWup {
-  width: 100%;
-  height: 100%;
 }
 .conferenceevents_ReminderContainer_2vLZT {
   padding-top: 12px;
@@ -606,6 +606,11 @@ html.responsive.touch .conferencepages_TabControlsCtn_1HJDD {
   grid-area: qa;
 }
 .conferencepages_TabControlsCtn_1HJDD .conferencepages_ShowBothTabs_fZBE8 {
+  opacity: 0.3;
+  flex: 1 0;
+  flex-shrink: 0;
+  max-width: 34px;
+  min-width: 34px;
   grid-area: both;
 }
 html.responsive.touch
@@ -672,13 +677,6 @@ html.responsive.touch
 .conferencepages_TabControlsCtn_1HJDD
   .conferencepages_InnerChatTab_1g3oa.conferencepages_Active_3PSCm {
   background-color: #393e45;
-}
-.conferencepages_TabControlsCtn_1HJDD .conferencepages_ShowBothTabs_fZBE8 {
-  opacity: 0.3;
-  flex: 1 0;
-  flex-shrink: 0;
-  max-width: 34px;
-  min-width: 34px;
 }
 .conferencepages_ChatStack_1ogmv {
   display: flex;

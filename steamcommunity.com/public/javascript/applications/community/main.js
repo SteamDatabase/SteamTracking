@@ -1,8 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7390038";
+var CLSTAMP = "7398832";
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [114],
+  [118],
   {
     "+B6I": function (e, t, n) {
       "use strict";
@@ -4874,35 +4874,35 @@ var CLSTAMP = "7390038";
     },
     AvbV: function (e, t, n) {
       var r = {
-        "./main_brazilian.json": ["TFAN", 25],
-        "./main_bulgarian.json": ["c2SO", 26],
-        "./main_czech.json": ["peP3", 27],
-        "./main_danish.json": ["0bnV", 28],
-        "./main_dutch.json": ["wcLc", 29],
-        "./main_english.json": ["/rNK", 30],
-        "./main_finnish.json": ["iywU", 31],
-        "./main_french.json": ["Xnpc", 32],
-        "./main_german.json": ["pmKi", 33],
-        "./main_greek.json": ["mTRv", 34],
-        "./main_hungarian.json": ["WkHb", 35],
-        "./main_italian.json": ["Jz5U", 36],
-        "./main_japanese.json": ["3Dk9", 37],
-        "./main_koreana.json": ["neQD", 38],
-        "./main_latam.json": ["6oHD", 39],
-        "./main_norwegian.json": ["2OvS", 40],
-        "./main_polish.json": ["3pwE", 41],
-        "./main_portuguese.json": ["hY40", 42],
-        "./main_romanian.json": ["Q95+", 43],
-        "./main_russian.json": ["bsPT", 44],
-        "./main_sc_schinese.json": ["GOaQ", 45],
-        "./main_schinese.json": ["B/Zz", 46],
-        "./main_spanish.json": ["U6iL", 47],
-        "./main_swedish.json": ["4uPU", 48],
-        "./main_tchinese.json": ["rgC9", 49],
-        "./main_thai.json": ["87dp", 50],
-        "./main_turkish.json": ["yMpO", 51],
-        "./main_ukrainian.json": ["zTWm", 52],
-        "./main_vietnamese.json": ["wqiy", 53],
+        "./main_brazilian.json": ["TFAN", 29],
+        "./main_bulgarian.json": ["c2SO", 30],
+        "./main_czech.json": ["peP3", 31],
+        "./main_danish.json": ["0bnV", 32],
+        "./main_dutch.json": ["wcLc", 33],
+        "./main_english.json": ["/rNK", 34],
+        "./main_finnish.json": ["iywU", 35],
+        "./main_french.json": ["Xnpc", 36],
+        "./main_german.json": ["pmKi", 37],
+        "./main_greek.json": ["mTRv", 38],
+        "./main_hungarian.json": ["WkHb", 39],
+        "./main_italian.json": ["Jz5U", 40],
+        "./main_japanese.json": ["3Dk9", 41],
+        "./main_koreana.json": ["neQD", 42],
+        "./main_latam.json": ["6oHD", 43],
+        "./main_norwegian.json": ["2OvS", 44],
+        "./main_polish.json": ["3pwE", 45],
+        "./main_portuguese.json": ["hY40", 46],
+        "./main_romanian.json": ["Q95+", 47],
+        "./main_russian.json": ["bsPT", 48],
+        "./main_sc_schinese.json": ["GOaQ", 49],
+        "./main_schinese.json": ["B/Zz", 50],
+        "./main_spanish.json": ["U6iL", 51],
+        "./main_swedish.json": ["4uPU", 52],
+        "./main_tchinese.json": ["rgC9", 53],
+        "./main_thai.json": ["87dp", 54],
+        "./main_turkish.json": ["yMpO", 55],
+        "./main_ukrainian.json": ["zTWm", 56],
+        "./main_vietnamese.json": ["wqiy", 57],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -6785,7 +6785,20 @@ var CLSTAMP = "7390038";
           (e, t) =>
             o.a.createElement(f, Object.assign({}, a, { onScroll: e, ref: t }))
         );
-      });
+      }),
+        o.a.forwardRef(function (e, t) {
+          const { name: n, msScrollRestoreDelay: i, onScroll: s } = e,
+            a = Object(r.c)(e, ["name", "msScrollRestoreDelay", "onScroll"]);
+          return o.a.createElement(
+            b,
+            { name: n, msScrollRestoreDelay: i, parentOnScroll: s, refDiv: t },
+            (e, t) =>
+              o.a.createElement(
+                _,
+                Object.assign({}, a, { onScroll: e, ref: t })
+              )
+          );
+        });
       function b(e) {
         const {
             name: t,
@@ -9748,16 +9761,18 @@ var CLSTAMP = "7390038";
             layout: a,
             bottomSeparator: l,
             highlightOnFocus: c,
+            childrenContainerWidth: u,
           } = e,
-          u = Object(r.c)(e, [
+          d = Object(r.c)(e, [
             "label",
             "description",
             "icon",
             "layout",
             "bottomSeparator",
             "highlightOnFocus",
+            "childrenContainerWidth",
           ]),
-          { refWithValue: d, refForElement: h } = Object(K.h)(t);
+          { refWithValue: h, refForElement: m } = Object(K.h)(t);
         return i.createElement(
           it,
           {
@@ -9767,14 +9782,14 @@ var CLSTAMP = "7390038";
             bottomSeparator: l,
             highlightOnFocus: c,
             childrenLayout: null != a ? a : "inline",
-            childrenContainerWidth: "min",
+            childrenContainerWidth: null != u ? u : "min",
             onMouseDown: (e) => {
               var t;
-              null === (t = d.current) || void 0 === t || t.focus(),
+              null === (t = h.current) || void 0 === t || t.focus(),
                 e.preventDefault();
             },
           },
-          i.createElement(F, Object.assign({}, u, { ref: h }))
+          i.createElement(F, Object.assign({}, d, { ref: m }))
         );
       });
       const ot = i.forwardRef(function (e, t) {
@@ -11345,6 +11360,7 @@ var CLSTAMP = "7390038";
           (n) => {
             var i, o;
             if (r && !r(n)) return !1;
+            if (n.defaultPrevented) return !1;
             const {
                 scrollTop: h,
                 scrollHeight: m,
@@ -12354,35 +12370,35 @@ var CLSTAMP = "7390038";
     },
     RMhI: function (e, t, n) {
       var r = {
-        "./sales_brazilian.json": ["8W/b", 54],
-        "./sales_bulgarian.json": ["CF5q", 55],
-        "./sales_czech.json": ["O2WS", 56],
-        "./sales_danish.json": ["XnEN", 57],
-        "./sales_dutch.json": ["amMP", 58],
-        "./sales_english.json": ["3u+3", 59],
-        "./sales_finnish.json": ["4mLc", 60],
-        "./sales_french.json": ["fJyv", 61],
-        "./sales_german.json": ["LcuH", 62],
-        "./sales_greek.json": ["7l8b", 63],
-        "./sales_hungarian.json": ["L9+e", 64],
-        "./sales_italian.json": ["EnBf", 65],
-        "./sales_japanese.json": ["O9QH", 66],
-        "./sales_koreana.json": ["hPCV", 67],
-        "./sales_latam.json": ["mkfq", 68],
-        "./sales_norwegian.json": ["Xzk6", 69],
-        "./sales_polish.json": ["Mfbu", 70],
-        "./sales_portuguese.json": ["EQQ2", 71],
-        "./sales_romanian.json": ["oXR9", 72],
-        "./sales_russian.json": ["kQHt", 73],
-        "./sales_sc_schinese.json": ["VTAw", 74],
-        "./sales_schinese.json": ["AVwL", 75],
-        "./sales_spanish.json": ["lRrx", 76],
-        "./sales_swedish.json": ["7tPl", 77],
-        "./sales_tchinese.json": ["mQlZ", 78],
-        "./sales_thai.json": ["yDdk", 79],
-        "./sales_turkish.json": ["mjwq", 80],
-        "./sales_ukrainian.json": ["gWvs", 81],
-        "./sales_vietnamese.json": ["VsX2", 82],
+        "./sales_brazilian.json": ["8W/b", 58],
+        "./sales_bulgarian.json": ["CF5q", 59],
+        "./sales_czech.json": ["O2WS", 60],
+        "./sales_danish.json": ["XnEN", 61],
+        "./sales_dutch.json": ["amMP", 62],
+        "./sales_english.json": ["3u+3", 63],
+        "./sales_finnish.json": ["4mLc", 64],
+        "./sales_french.json": ["fJyv", 65],
+        "./sales_german.json": ["LcuH", 66],
+        "./sales_greek.json": ["7l8b", 67],
+        "./sales_hungarian.json": ["L9+e", 68],
+        "./sales_italian.json": ["EnBf", 69],
+        "./sales_japanese.json": ["O9QH", 70],
+        "./sales_koreana.json": ["hPCV", 71],
+        "./sales_latam.json": ["mkfq", 72],
+        "./sales_norwegian.json": ["Xzk6", 73],
+        "./sales_polish.json": ["Mfbu", 74],
+        "./sales_portuguese.json": ["EQQ2", 75],
+        "./sales_romanian.json": ["oXR9", 76],
+        "./sales_russian.json": ["kQHt", 77],
+        "./sales_sc_schinese.json": ["VTAw", 78],
+        "./sales_schinese.json": ["AVwL", 79],
+        "./sales_spanish.json": ["lRrx", 80],
+        "./sales_swedish.json": ["7tPl", 81],
+        "./sales_tchinese.json": ["mQlZ", 82],
+        "./sales_thai.json": ["yDdk", 83],
+        "./sales_turkish.json": ["mjwq", 84],
+        "./sales_ukrainian.json": ["gWvs", 85],
+        "./sales_vietnamese.json": ["VsX2", 86],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -13143,6 +13159,9 @@ var CLSTAMP = "7390038";
             d = {
               responseType: this.m_bJsonMode ? "json" : "arraybuffer",
               params: {},
+              headers: r.bConstMethod
+                ? {}
+                : { "Content-Type": "multipart/form-data" },
             };
           if (
             (e.bSendAuth ||
@@ -16984,7 +17003,8 @@ var CLSTAMP = "7390038";
         }
         OnDeactivate(e) {
           this.m_onDeactivateCallbacks.Dispatch(this, e),
-            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this);
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
+            (this.m_bWasActiveForLastFocusChange = !1);
         }
         IsActiveFocusNavTree() {
           return this.m_Controller.IsActiveFocusNavTree(this);
@@ -17850,18 +17870,17 @@ var CLSTAMP = "7390038";
       }
       function v() {
         const e = window.location.href;
-        return e.startsWith(o.STORE_BASE_URL)
+        return _(e, o.STORE_BASE_URL)
           ? "store"
-          : e.startsWith(o.COMMUNITY_BASE_URL)
+          : _(e, o.COMMUNITY_BASE_URL)
           ? "community"
-          : e.startsWith(o.PARTNER_BASE_URL)
+          : _(e, o.PARTNER_BASE_URL)
           ? "partnerweb"
-          : e.startsWith(o.HELP_BASE_URL)
+          : _(e, o.HELP_BASE_URL)
           ? "help"
-          : e.startsWith(o.STEAMTV_BASE_URL)
+          : _(e, o.STEAMTV_BASE_URL)
           ? "steamtv"
-          : e.startsWith(o.STATS_BASE_URL) ||
-            e.startsWith(o.INTERNAL_STATS_BASE_URL)
+          : _(e, o.STATS_BASE_URL) || _(e, o.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -18352,112 +18371,124 @@ var CLSTAMP = "7390038";
         b = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
-            n.e(14),
+            n.e(17),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
-            n.e(13),
-            n.e(117),
+            n.e(7),
+            n.e(16),
+            n.e(121),
           ]).then(n.bind(null, "GEPe"))
         ),
         v = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
-            n.e(7),
+            n.e(9),
+            n.e(12),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
+            n.e(5),
             n.e(6),
-            n.e(9),
-            n.e(22),
+            n.e(7),
+            n.e(8),
+            n.e(11),
+            n.e(26),
           ]).then(n.bind(null, "IY+y"))
         ),
         w = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
-            n.e(7),
+            n.e(9),
+            n.e(12),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
+            n.e(5),
             n.e(6),
-            n.e(9),
-            n.e(20),
+            n.e(7),
+            n.e(8),
+            n.e(11),
+            n.e(24),
           ]).then(n.bind(null, "FwLc"))
         ),
         C = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
-            n.e(7),
+            n.e(9),
+            n.e(12),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
+            n.e(5),
             n.e(6),
-            n.e(9),
-            n.e(21),
+            n.e(7),
+            n.e(8),
+            n.e(11),
+            n.e(25),
           ]).then(n.bind(null, "75vZ"))
         ),
         S = i.a.lazy(() =>
-          Promise.all([n.e(14), n.e(1), n.e(13), n.e(17)]).then(
+          Promise.all([n.e(17), n.e(1), n.e(16), n.e(21)]).then(
             n.bind(null, "/u7D")
           )
         ),
         y = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
-            n.e(8),
-            n.e(16),
+            n.e(5),
+            n.e(7),
+            n.e(10),
+            n.e(20),
           ]).then(n.bind(null, "8zUZ"))
         ),
-        E = i.a.lazy(() => n.e(115).then(n.bind(null, "rt5e"))),
+        E = i.a.lazy(() => n.e(119).then(n.bind(null, "rt5e"))),
         O = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
-            n.e(7),
+            n.e(9),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
+            n.e(5),
             n.e(6),
-            n.e(12),
-            n.e(18),
+            n.e(8),
+            n.e(15),
+            n.e(22),
           ]).then(n.bind(null, "JZ7q"))
         ),
         D = i.a.lazy(() =>
           Promise.all([
             n.e(3),
-            n.e(5),
             n.e(0),
             n.e(1),
             n.e(2),
             n.e(4),
-            n.e(8),
-            n.e(12),
-            n.e(11),
+            n.e(5),
+            n.e(6),
             n.e(10),
-            n.e(19),
+            n.e(15),
+            n.e(14),
+            n.e(13),
+            n.e(23),
           ]).then(n.bind(null, "erIC"))
         ),
         M = i.a.lazy(() =>
-          Promise.all([n.e(3), n.e(0), n.e(2), n.e(11), n.e(118)]).then(
+          Promise.all([n.e(3), n.e(0), n.e(2), n.e(14), n.e(122)]).then(
             n.bind(null, "KVeB")
           )
         ),
         B = i.a.lazy(() =>
-          Promise.all([n.e(0), n.e(113)]).then(n.bind(null, "KvFF"))
+          Promise.all([n.e(0), n.e(117)]).then(n.bind(null, "KvFF"))
         ),
         R = () => (h.b.IS_OGG ? "games" : "groups"),
         T = () => "/:anything*/diagdata",
@@ -19170,36 +19201,36 @@ var CLSTAMP = "7390038";
     },
     rCDf: function (e, t, n) {
       var r = {
-        "./shared_arabic.json": ["d1TB", 83],
-        "./shared_brazilian.json": ["Pg9r", 84],
-        "./shared_bulgarian.json": ["ENge", 85],
-        "./shared_czech.json": ["Ts6V", 86],
-        "./shared_danish.json": ["9oiU", 87],
-        "./shared_dutch.json": ["nxN4", 88],
-        "./shared_english.json": ["TYjx", 89],
-        "./shared_finnish.json": ["NuB8", 90],
-        "./shared_french.json": ["bOPj", 91],
-        "./shared_german.json": ["svuF", 92],
-        "./shared_greek.json": ["eJKB", 93],
-        "./shared_hungarian.json": ["T7i2", 94],
-        "./shared_italian.json": ["w96W", 95],
-        "./shared_japanese.json": ["XQ4S", 96],
-        "./shared_koreana.json": ["4hyI", 97],
-        "./shared_latam.json": ["3qrw", 98],
-        "./shared_norwegian.json": ["XA4Q", 99],
-        "./shared_polish.json": ["TpXn", 100],
-        "./shared_portuguese.json": ["Q8UV", 101],
-        "./shared_romanian.json": ["Eme1", 102],
-        "./shared_russian.json": ["BUiO", 103],
-        "./shared_sc_schinese.json": ["O0N/", 104],
-        "./shared_schinese.json": ["3UpY", 105],
-        "./shared_spanish.json": ["4Fxc", 106],
-        "./shared_swedish.json": ["0JhB", 107],
-        "./shared_tchinese.json": ["OYRc", 108],
-        "./shared_thai.json": ["lhAZ", 109],
-        "./shared_turkish.json": ["RSoU", 110],
-        "./shared_ukrainian.json": ["lNXI", 111],
-        "./shared_vietnamese.json": ["RSmC", 112],
+        "./shared_arabic.json": ["d1TB", 87],
+        "./shared_brazilian.json": ["Pg9r", 88],
+        "./shared_bulgarian.json": ["ENge", 89],
+        "./shared_czech.json": ["Ts6V", 90],
+        "./shared_danish.json": ["9oiU", 91],
+        "./shared_dutch.json": ["nxN4", 92],
+        "./shared_english.json": ["TYjx", 93],
+        "./shared_finnish.json": ["NuB8", 94],
+        "./shared_french.json": ["bOPj", 95],
+        "./shared_german.json": ["svuF", 96],
+        "./shared_greek.json": ["eJKB", 97],
+        "./shared_hungarian.json": ["T7i2", 98],
+        "./shared_italian.json": ["w96W", 99],
+        "./shared_japanese.json": ["XQ4S", 100],
+        "./shared_koreana.json": ["4hyI", 101],
+        "./shared_latam.json": ["3qrw", 102],
+        "./shared_norwegian.json": ["XA4Q", 103],
+        "./shared_polish.json": ["TpXn", 104],
+        "./shared_portuguese.json": ["Q8UV", 105],
+        "./shared_romanian.json": ["Eme1", 106],
+        "./shared_russian.json": ["BUiO", 107],
+        "./shared_sc_schinese.json": ["O0N/", 108],
+        "./shared_schinese.json": ["3UpY", 109],
+        "./shared_spanish.json": ["4Fxc", 110],
+        "./shared_swedish.json": ["0JhB", 111],
+        "./shared_tchinese.json": ["OYRc", 112],
+        "./shared_thai.json": ["lhAZ", 113],
+        "./shared_turkish.json": ["RSoU", 114],
+        "./shared_ukrainian.json": ["lNXI", 115],
+        "./shared_vietnamese.json": ["RSmC", 116],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -21869,13 +21900,12 @@ var CLSTAMP = "7390038";
     x6bg: function (e, t, n) {
       "use strict";
       n.d(t, "a", function () {
-        return c;
+        return l;
       });
       var r,
         i,
-        o = n("9lTW"),
-        s = n.n(o),
-        a = n("gQFo");
+        o = n("r64O"),
+        s = n("gQFo");
       !(function (e) {
         let t;
         (e.k_nVersion = 1),
@@ -21895,10 +21925,10 @@ var CLSTAMP = "7390038";
         e.Adapter = class {
           constructor(t) {
             (this.k_nVersion = e.k_nVersion),
-              s()(t, "IGamepadUI implementation is null"),
-              s()(
+              Object(o.a)(t, "IGamepadUI implementation is null"),
+              Object(o.a)(
                 t.k_nVersion == e.k_nVersion,
-                `IGamepadUI version is ${t.k_nVersion} but we can only adapt to version ${u.k_nVersion}. Is GamepadUI newer than FriendsUI?`
+                `IGamepadUI version is ${t.k_nVersion} but we can only adapt to version ${c.k_nVersion}. Is GamepadUI newer than FriendsUI?`
               ),
               (this.m_impl = t);
           }
@@ -21926,31 +21956,31 @@ var CLSTAMP = "7390038";
             ReopenPreModalSideMenu() {}
           };
         })(i || (i = {}));
-      class l {
+      class a {
         constructor() {
           (this.m_bAdaptedInstance = void 0), (this.m_bAdapted = !1);
         }
         Get() {
           return (
             this.m_bAdapted ||
-              null == l.g_GamepadUIStoreRef.current ||
+              null == a.g_GamepadUIStoreRef.current ||
               ((this.m_bAdaptedInstance = this.AdaptGamepadUIStore(
-                l.g_GamepadUIStoreRef.current
+                a.g_GamepadUIStoreRef.current
               )),
               (this.m_bAdapted = !0)),
             this.m_bAdaptedInstance
           );
         }
         Set(e) {
-          (l.g_GamepadUIStoreRef.current = e),
+          (a.g_GamepadUIStoreRef.current = e),
             (this.m_bAdaptedInstance = e),
             (this.m_bAdapted = !0);
         }
         AdaptGamepadUIStore(e) {
           if (null == e) return null;
-          if (e.k_nVersion == u.k_nVersion) return e;
+          if (e.k_nVersion == c.k_nVersion) return e;
           try {
-            return new u.Adapter(e);
+            return new c.Adapter(e);
           } catch (e) {
             return (
               console.error(
@@ -21962,12 +21992,12 @@ var CLSTAMP = "7390038";
           }
         }
       }
-      l.g_GamepadUIStoreRef = Object(a.a)("GamepadUIStore", () => ({
+      a.g_GamepadUIStoreRef = Object(s.a)("GamepadUIStore", () => ({
         current: null,
       }));
-      const c = new l();
-      var u = i;
-      u.ExportedTypes.EQuickAccessTab;
+      const l = new a();
+      var c = i;
+      c.ExportedTypes.EQuickAccessTab;
     },
     xnZ7: function (e, t, n) {
       e.exports = {
@@ -23048,5 +23078,5 @@ var CLSTAMP = "7390038";
       };
     },
   },
-  [["gfbn", 116, 24]],
+  [["gfbn", 120, 28]],
 ]);

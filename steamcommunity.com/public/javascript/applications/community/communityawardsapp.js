@@ -1,144 +1,80 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [17],
+  [21],
   {
-    "/u7D": function (e, t, r) {
+    "/u7D": function (e, s, r) {
       "use strict";
-      r.r(t),
-        r.d(t, "default", function () {
-          return a;
+      r.r(s),
+        r.d(s, "default", function () {
+          return i;
         });
-      var s = r("q1tI"),
-        o = r("tPo2");
+      var a = r("q1tI"),
+        t = r("tPo2");
       r("OU48");
-      function a(e) {
-        return s.createElement("div", null, s.createElement(o.a, null));
+      function i(e) {
+        return a.createElement("div", null, a.createElement(t.a, null));
       }
     },
-    "0OaU": function (e, t, r) {
+    "0OaU": function (e, s, r) {
       "use strict";
-      r.d(t, "a", function () {
-        return i;
+      r.d(s, "a", function () {
+        return p;
       });
-      var s = r("q1tI"),
-        o = r.n(s),
-        a = r("6Y59"),
+      var a = r("q1tI"),
+        t = r.n(a),
+        i = r("6Y59"),
         n = r("2i24"),
-        p = r.n(n);
-      class i extends o.a.PureComponent {
+        o = r.n(n);
+      class p extends t.a.PureComponent {
         constructor(e) {
           super(e);
         }
         AddSizeClass(e) {
           "small" == this.props.size
-            ? e.push(p.a.throbber_small)
+            ? e.push(o.a.throbber_small)
             : "medium" == this.props.size
-            ? e.push(p.a.throbber_medium)
+            ? e.push(o.a.throbber_medium)
             : "xlarge" == this.props.size
-            ? e.push(p.a.throbber_xlarge)
+            ? e.push(o.a.throbber_xlarge)
             : "xxlarge" == this.props.size
-            ? e.push(p.a.throbber_xxlarge)
-            : e.push(p.a.throbber_large);
+            ? e.push(o.a.throbber_xxlarge)
+            : e.push(o.a.throbber_large);
         }
         render() {
-          let e = [p.a.LoadingWrapper, "SteamLogoThrobber"];
+          let e = [o.a.LoadingWrapper, "SteamLogoThrobber"];
           this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(p.a.noString),
+            void 0 === this.props.string && e.push(o.a.noString),
             this.props.className && e.push(this.props.className),
-            this.props.static && e.push(p.a.Static);
-          let t = o.a.createElement(
+            this.props.static && e.push(o.a.Static);
+          let s = t.a.createElement(
             "div",
             { className: e.join(" ") },
-            o.a.createElement(
+            t.a.createElement(
               "div",
-              { className: p.a.Throbber },
-              o.a.createElement(a.rb, { className: p.a.base }),
-              o.a.createElement(a.rb, { className: p.a.blur })
+              { className: o.a.Throbber },
+              t.a.createElement(i.rb, { className: o.a.base }),
+              t.a.createElement(i.rb, { className: o.a.blur })
             )
           );
-          return o.a.createElement(
+          return t.a.createElement(
             "div",
             {
               className:
                 "center" == this.props.position
-                  ? p.a.throbber_center_wrapper
+                  ? o.a.throbber_center_wrapper
                   : "",
             },
-            t,
+            s,
             Boolean(this.props.string) &&
-              o.a.createElement(
+              t.a.createElement(
                 "div",
-                { className: p.a.ThrobberText },
+                { className: o.a.ThrobberText },
                 this.props.string
               )
           );
         }
       }
-    },
-    "8OQS": function (e, t) {
-      (e.exports = function (e, t) {
-        if (null == e) return {};
-        var r,
-          s,
-          o = {},
-          a = Object.keys(e);
-        for (s = 0; s < a.length; s++)
-          (r = a[s]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-        return o;
-      }),
-        (e.exports.default = e.exports),
-        (e.exports.__esModule = !0);
-    },
-    PJYZ: function (e, t) {
-      (e.exports = function (e) {
-        if (void 0 === e)
-          throw new ReferenceError(
-            "this hasn't been initialised - super() hasn't been called"
-          );
-        return e;
-      }),
-        (e.exports.default = e.exports),
-        (e.exports.__esModule = !0);
-    },
-    SksO: function (e, t) {
-      function r(t, s) {
-        return (
-          (e.exports = r =
-            Object.setPrototypeOf ||
-            function (e, t) {
-              return (e.__proto__ = t), e;
-            }),
-          (e.exports.default = e.exports),
-          (e.exports.__esModule = !0),
-          r(t, s)
-        );
-      }
-      (e.exports = r),
-        (e.exports.default = e.exports),
-        (e.exports.__esModule = !0);
-    },
-    pVnL: function (e, t) {
-      function r() {
-        return (
-          (e.exports = r =
-            Object.assign ||
-            function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                var r = arguments[t];
-                for (var s in r)
-                  Object.prototype.hasOwnProperty.call(r, s) && (e[s] = r[s]);
-              }
-              return e;
-            }),
-          (e.exports.default = e.exports),
-          (e.exports.__esModule = !0),
-          r.apply(this, arguments)
-        );
-      }
-      (e.exports = r),
-        (e.exports.default = e.exports),
-        (e.exports.__esModule = !0);
     },
   },
 ]);
