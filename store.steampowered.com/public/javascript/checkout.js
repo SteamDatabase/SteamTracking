@@ -3323,9 +3323,9 @@ function UpdatePaymentInfoForm()
 			}
 			else
 			{
-				$('payment_header').innerHTML = 'Update cached payment method';
+				$('payment_header').innerHTML = 'Update saved payment method';
 			}
-			$('payment_info_method_label').innerHTML = 'Select your existing cached payment method or enter a new payment method for future purchases and subscription renewals.';
+			$('payment_info_method_label').innerHTML = 'Select your existing saved payment method or enter a new payment method for future purchases and subscription renewals.';
 		}
 		else if ( g_bPurchaseContainsSubscription )
 		{
