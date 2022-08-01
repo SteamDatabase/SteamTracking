@@ -749,6 +749,8 @@
     "Bbcode_Expand_Spoiler_Expanded": "Hide Spoilers",
     "Bbcode_Expand_Details_Collapsed": "Show Details",
     "Bbcode_Expand_Details_Expanded": "Hide Details",
+    "Bbcode_Spoiler_Hide": "Hide Spoiler",
+    "Bbcode_Spoiler_Show": "Show Spoiler",
     "Editor_Bold": "Bold",
     "Editor_Underline": "Underline",
     "Editor_Italics": "Italics",

@@ -6414,15 +6414,17 @@ html:not(.touch)
   background-color: #000;
   padding: 0px 8px;
 }
-.bbcodes_Spoiler_3Caxn:hover {
+.bbcodes_Spoiler_3Caxn:hover,
+.bbcodes_Spoiler_3Caxn.bbcodes_Revealed_35II0 {
   color: #fff;
 }
-.bbcodes_Spoiler_3Caxn:hover > .bbcodes_SpoilerText_1owPz {
+.bbcodes_Spoiler_3Caxn:hover .bbcodes_SpoilerText_1owPz,
+.bbcodes_Spoiler_3Caxn.bbcodes_Revealed_35II0 .bbcodes_SpoilerText_1owPz {
   visibility: visible;
   transition-delay: 80ms;
   transition-duration: 120ms;
 }
-.bbcodes_SpoilerText_1owPz {
+.bbcodes_Spoiler_3Caxn .bbcodes_SpoilerText_1owPz {
   visibility: hidden;
   transition-delay: 80ms;
   transition-duration: 120ms;

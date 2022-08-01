@@ -9335,6 +9335,38 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
     transform: translateY(0px);
   }
 }
+.displayscaledialog_Dialog_25KHn {
+  max-width: 560px;
+}
+.displayscaledialog_YouCanChangeThisLater_LDYUg {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b8bcbf;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.displayscaledialog_YouCanChangeThisLater_LDYUg
+  .displayscaledialog_Glyph_106Kh {
+  height: 1em;
+  margin-left: 0.5ch;
+}
+.displayscaledialog_YouCanChangeThisLater_LDYUg strong {
+  color: #fff;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -11018,7 +11050,7 @@ body {
   margin-left: 16px;
   color: #b8bcbf;
   white-space: nowrap;
-  max-width: 168px;
+  max-width: 160px;
 }
 .mainmenu_Blocked_1OasT .mainmenu_ItemLabel_3x-ZK {
   color: #3d4450;
