@@ -718,6 +718,8 @@
   overflow-y: overlay;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi {
   white-space: normal;
@@ -742,6 +744,9 @@
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
   color: #fff;
   cursor: default;
+}
+.pagedsettings_PageListSpacer_1uU8O {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
@@ -1765,6 +1770,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   display: flex;
   gap: 10px;
 }
+.gamepadinput_PinDigit_1OYU3 {
+  text-align: center;
+}
 .gamepadslider_SliderControlPanelGroup_2FiKP {
   flex-grow: 1;
 }
@@ -1925,11 +1933,15 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   justify-content: space-between;
 }
 .gamepadslider_SliderNotch_3Lp8H {
+  width: 24px;
+  min-width: 24px;
   display: flex;
   flex-direction: column;
   flex-basis: 0;
   align-items: center;
-  min-width: 24px;
+}
+.gamepadslider_SliderNotch_3Lp8H.gamepadslider_AlignToEnds_3lZ1i {
+  flex-grow: 1;
 }
 .gamepadslider_SliderNotchLabel_1O0FK {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -1941,6 +1953,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   padding-top: 5px;
   width: fit-content;
   text-align: center;
+}
+.gamepadslider_SliderNotchLabel_1O0FK.gamepadslider_AlignToLeft_nYcbu {
+  text-align: left;
+  margin-right: auto;
+}
+.gamepadslider_SliderNotchLabel_1O0FK.gamepadslider_AlignToRight_1bxes {
+  text-align: right;
+  margin-left: auto;
 }
 .gamepadslider_SliderNotchTick_1j-G1 {
   width: 4px;
@@ -2439,10 +2459,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_1zky_ {
   line-height: 16px;
   white-space: nowrap;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 16px 0px;
   flex-shrink: 1;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
 }
@@ -2515,6 +2538,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   height: 1px;
   background: #3d4450;
   margin: 8px calc(12px + 1.4vw);
+  flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_3nGJH {
   background: #0e141b;
@@ -9849,6 +9873,156 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.buttonBack___1mlaL,
+.buttonFirst___2rhFr,
+.buttonLast___2yuh0,
+.buttonNext___2mOCa,
+.buttonNext___3Lm3s,
+.dot___3c3SI {
+  cursor: pointer;
+}
+.image___xtQGH {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.spinner___27VUp {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  animation-name: spin___S3UuE;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border: 4px solid #a9a9a9;
+  border-top-color: #000;
+  border-radius: 30px;
+}
+@keyframes spin___S3UuE {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.container___2O72F {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.overlay___IV4qY {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: zoom-in;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.hover___MYy31,
+.loading___1pvNI,
+.zoom___3kqYk {
+  opacity: 1;
+}
+.imageLoadingSpinnerContainer___3UIPD {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+.slide___3-Nqo {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.slide___3-Nqo:focus {
+  outline: none !important;
+}
+.slideHorizontal___1NzNV {
+  float: left;
+}
+[dir="rtl"] .slideHorizontal___1NzNV {
+  direction: rtl;
+  transform: scaleX(-1);
+}
+.slideInner___2mfX9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.focusRing___1airF {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  pointer-events: none;
+  outline-width: 5px;
+  outline-style: solid;
+  outline-color: Highlight;
+}
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .focusRing___1airF {
+    outline-style: auto;
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+.horizontalSlider___281Ls {
+  position: relative;
+  overflow: hidden;
+}
+[dir="rtl"] .horizontalSlider___281Ls {
+  direction: ltr;
+  transform: scaleX(-1);
+}
+.horizontalSliderTray___1L-0W {
+  overflow: hidden;
+  width: 100%;
+}
+.verticalSlider___34ZFD {
+  position: relative;
+  overflow: hidden;
+}
+.verticalSliderTray___267D8 {
+  overflow: hidden;
+}
+.verticalTray___12Key {
+  float: left;
+}
+.verticalSlideTrayWrap___2nO7o {
+  overflow: hidden;
+}
+.sliderTray___-vHFQ {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sliderAnimation___300FY {
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: transform;
+}
+.masterSpinnerContainer___1Z6hB {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
 }
 * {
   box-sizing: border-box;
@@ -36612,6 +36786,1776 @@ a {
 .__react_component_tooltip.show {
   opacity: 1 !important;
 }
+.majorsregistrationautographspage_Tooltip_3ubS- {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.majorsregistrationautographspage_CarouselFade_21G8m {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.majorsregistrationautographspage_StandardButton_2zccE {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.majorsregistrationautographspage_StandardButton_2zccE:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.majorsregistrationautographspage_StandardButton_2zccE
+  .majorsregistrationautographspage_ButtonText_aBx8W {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.majorsregistrationautographspage_StandardButton_2zccE
+  .majorsregistrationautographspage_SteamLogo_3MV7Q {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.majorsregistrationautographspage_ToolTip_3Dr-T {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr {
+  width: 100%;
+  min-width: 320px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10 {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 40px 100px 40px 100px;
+  background-color: #0a1010;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/generic/bg_notile.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3 {
+  margin: 40 auto;
+  width: 100%;
+  min-width: 1200px;
+  min-height: 216px;
+  position: relative;
+  line-height: 19px;
+  background: rgba(5, 6, 6, 0.7);
+  border: 1px solid #303030;
+  font-size: 16px;
+  font-weight: normal;
+  color: #d2d2d2;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_NeedToLogin_2tEQd {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_NeedToLogin_2tEQd
+  .majorsregistrationautographspage_SignInMessage_3Ll3b {
+  color: #fff;
+  padding: 0px 20%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_NeedToLogin_2tEQd
+  .majorsregistrationautographspage_SignInButton_1oTEE {
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_NeedToLogin_2tEQd
+  .majorsregistrationautographspage_SignInButton_1oTEE:hover {
+  filter: brightness(1.3);
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f {
+  width: 600px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_Title_1GOoD {
+  color: #ddd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin: 20px 0px;
+  line-height: normal;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n {
+  font-family: "Radiance", "arial", sans-serif;
+  color: #888;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  a {
+  color: #257ed4;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_SmoothLine_2MSsH {
+  background-color: #2b2b2b;
+  width: 600px;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 10px auto;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_ImageUploadHeader_26J_D {
+  color: #ccc;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_Requirements_V8XLp {
+  margin-bottom: -5px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_Notes_3G4QD {
+  margin-bottom: -5px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_FileInput_WKCOz {
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Radiance", sans-serif;
+  color: #ccc;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_FileErrors_18YwG {
+  margin-left: 20px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_SubmitButton_3eW-U {
+  height: 30px;
+  padding: 0px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  user-select: none;
+  color: #000;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #a4d007 5%, #536904 95%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  filter: saturate(1) brightness(1);
+  cursor: pointer;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SubmitAutographs_32W8n
+  .majorsregistrationautographspage_SubmitButton_3eW-U:hover {
+  filter: saturate(1) brightness(1.3);
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_PageTop_20c6f
+  .majorsregistrationautographspage_SmoothLine_2MSsH {
+  background-color: #2b2b2b;
+  width: 600px;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 10px auto;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx {
+  color: #888;
+  min-width: 1200px;
+  align-items: center;
+  margin: auto 10px;
+  align-content: center;
+  text-align: center;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamName_11vTe {
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 4px #000;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 60px;
+  min-width: 1200px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_NoZoom_1kBIG
+  input[type="checkbox"] {
+  display: none;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_ClickZoom_2JrLc
+  input[type="checkbox"] {
+  display: none;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_ClickZoom_2JrLc
+  img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_ClickZoom_2JrLc
+  input[type="checkbox"]:checked
+  ~ img {
+  transform: scale(2);
+  cursor: zoom-out;
+  z-index: 1;
+  position: relative;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV {
+  vertical-align: top;
+  text-align: center;
+  min-width: 240px;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV
+  .majorsregistrationautographspage_Checkered_352sq {
+  width: 90%;
+  height: 90%;
+  background: -webkit-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent
+          75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0),
+    #fff;
+  background: -moz-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.0980392) 25%, transparent 25%, transparent
+          75%, rgba(0, 0, 0, 0.0980392) 75%, rgba(0, 0, 0, 0.0980392) 0),
+    #fff;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.0980392) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.0980392) 75%,
+      rgba(0, 0, 0, 0.0980392) 0
+    ),
+    #fff;
+  background-repeat: repeat, repeat;
+  background-position: 0px 0, 5px 5px;
+  -webkit-background-origin: padding-box, padding-box;
+  background-origin: padding-box, padding-box;
+  -webkit-background-clip: border-box, border-box;
+  background-clip: border-box, border-box;
+  -webkit-background-size: 10px 10px, 10px 10px;
+  background-size: 10px 10px, 10px 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+  transform: scaleX(1) scaleY(1) scaleZ(1);
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV
+  .majorsregistrationautographspage_AutographImage_2H0Ei {
+  width: 90%;
+  height: 90%;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV
+  .majorsregistrationautographspage_AutographImagePlaceholder_wVgO6 {
+  width: 45%;
+  height: 95%;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV
+  .majorsregistrationautographspage_PlayerProName_3bOKe {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px;
+  text-shadow: 0px 0px 4px #000;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Background_28u10
+  .majorsregistrationautographspage_ContentFrame_BVET3
+  .majorsregistrationautographspage_ViewAutographs_1SyGx
+  .majorsregistrationautographspage_TeamAutographRow_3GoXH
+  .majorsregistrationautographspage_PlayerAutographContainer_39oPV
+  .majorsregistrationautographspage_PlayerAccountId_3FLwv {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Reaver", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 4px;
+  text-shadow: 0px 0px 4px #000;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_CheckmarkIcon_2ySNm {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.5) translateX(3px) translateY(2px);
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_XIcon__YHqA {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.5) translateX(3px) translateY(2px);
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  .majorsregistrationautographspage_Header_3-oqC {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #4a7080;
+}
+.majorsregistrationautographspage_MajorsRegistrationAutographsPage_3p-tr
+  *:link {
+  text-decoration: underline;
+  color: #0645ad;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.autographguidelines_Tooltip_2lsD_ {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.autographguidelines_CarouselFade_1WzMr {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.autographguidelines_StandardButton_2_eVW {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.autographguidelines_StandardButton_2_eVW:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.autographguidelines_StandardButton_2_eVW
+  .autographguidelines_ButtonText_2I653 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.autographguidelines_StandardButton_2_eVW .autographguidelines_SteamLogo_1yKNX {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.autographguidelines_ToolTip_1hCeO {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.autographguidelines_AutographGuidelines_fe1EM {
+  width: 100%;
+  min-width: 320px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 40px 100px 40px 100px;
+  background-color: #0a1010;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/generic/bg_notile.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV {
+  margin: 40px auto;
+  width: 1000px;
+  min-height: 216px;
+  position: relative;
+  line-height: 19px;
+  background: #0f1418;
+  border: 1px solid #303030;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: #d2d2d2;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc {
+  width: 850px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: left;
+  color: #768a89;
+  font-size: 18px;
+  line-height: normal;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_DPCLogo_xpmHE {
+  width: 150px;
+  margin-bottom: 40px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_Header_1wCES {
+  font-size: 24px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SmoothLine_2IUEX {
+  background-color: #383b3e;
+  width: 850px;
+  height: 2px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 15px auto;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_Subheader_2tslj {
+  color: #ccc;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ExamplesRow_Dtfh3 {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ExamplesRow_Dtfh3
+  .autographguidelines_ExamplesImage_28fjL {
+  width: 415px;
+  margin-right: 20px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ExamplesRow_Dtfh3
+  .autographguidelines_CheckMarkLeft_iMksC {
+  position: absolute;
+  top: -50px;
+  right: 51%;
+  width: 10%;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ExamplesRow_Dtfh3
+  .autographguidelines_CheckMarkRight_1MZ_c {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 10%;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ExamplesDescription_3ku_y {
+  margin-bottom: 5px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SignatureCreationRules_1O2IW {
+  display: flex;
+  flex-direction: row;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SignatureCreationRules_1O2IW
+  .autographguidelines_SignatureRulesContainer_16Sz- {
+  width: 270px;
+  margin-right: 20px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SignatureCreationRules_1O2IW
+  .autographguidelines_SignatureRulesContainer_16Sz-
+  .autographguidelines_SignatureRulesImage_3KEAG {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SignatureCreationRules_1O2IW
+  .autographguidelines_SignatureRulesContainerLast_3tCX7 {
+  width: 270px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_SignatureCreationRules_1O2IW
+  .autographguidelines_SignatureRulesContainerLast_3tCX7
+  .autographguidelines_SignatureRulesImage_3KEAG {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ClickZoom_2-a-7 {
+  width: 45%;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ClickZoom_2-a-7
+  input[type="checkbox"] {
+  display: none;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ClickZoom_2-a-7
+  img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  width: 100%;
+  border-radius: 4px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ClickZoom_2-a-7
+  input[type="checkbox"]:checked
+  ~ img {
+  transform: scale(2);
+  cursor: zoom-out;
+  z-index: 1;
+  position: relative;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ImagePreparationDetails_2eN5u {
+  width: 55%;
+  margin: auto auto auto 10px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ImagePreparationDetails_2eN5u
+  .autographguidelines_ImagePreparationHeader_2HMK2 {
+  color: #b8c8c5;
+  font-weight: 700;
+  margin-bottom: -5px;
+}
+.autographguidelines_AutographGuidelines_fe1EM
+  .autographguidelines_Background_3BKNm
+  .autographguidelines_ContentFrame_2NWsV
+  .autographguidelines_Page_3Iuyc
+  .autographguidelines_ImagePreparationContainer_2Deg3
+  .autographguidelines_ImagePreparationDetails_2eN5u
+  .autographguidelines_ImagePreparationBulletText_1ioYA {
+  margin-left: 5px;
+  line-height: 24px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
 .controllerfaqpage_Tooltip_2Cbrm {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -40003,43 +41947,48 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
   font-size: 11px;
   line-height: 11px;
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section {
   color: #c3c4d9;
   font-size: 14px;
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa .eventbbcodeparser_ReminderCtn_1bSdg {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section
+  .eventbbcodeparser_ReminderCtn_1bSdg {
   width: 300px;
   margin: 6px 0;
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa .eventbbcodeparser_BlockQuote_3EN2v {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section
+  .eventbbcodeparser_BlockQuote_3EN2v {
   border: none;
   width: 60%;
   max-width: 640px;
   margin: 0 auto;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_3gzGa .eventbbcodeparser_BlockQuote_3EN2v {
+  .eventbbcodeparser_SaleSectionCtn_3gzGa.text_section
+    .eventbbcodeparser_BlockQuote_3EN2v {
     width: 100%;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa .BB_TableData {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section .BB_TableData {
   font-size: 18px;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_3gzGa .BB_TableData {
+  .eventbbcodeparser_SaleSectionCtn_3gzGa.text_section .BB_TableData {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
-  .eventbbcodeparser_SaleSectionCtn_3gzGa .BB_TableData {
+  .eventbbcodeparser_SaleSectionCtn_3gzGa.text_section .BB_TableData {
     font-size: 13px;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa img {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section img {
   max-width: 100%;
   height: auto;
+  width: -webkit-fill-available;
 }
-.eventbbcodeparser_SaleSectionCtn_3gzGa .eventbbcodeparser_Link_3NcRW {
+.eventbbcodeparser_SaleSectionCtn_3gzGa.text_section
+  .eventbbcodeparser_Link_3NcRW {
   color: #fff;
 }
 .eventbbcodeparser_SocialLink_2A_sW {
@@ -40050,6 +41999,9 @@ iframe.eventbbcodeparser_MedalTVWidget_3pE8b {
   width: 1em;
   display: inline-block;
   margin-right: 8px;
+}
+.eventbbcodeparser_LocalizeBlock_1Bebk {
+  white-space: pre-wrap;
 }
 .eventreminder_FlexColumnContainer_1y5Hb {
   display: flex;
@@ -40958,6 +42910,9 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
 .partnereventshared_SaleSectionHeader_3QqpI img {
   max-width: 100%;
 }
+.partnereventshared_SaleSectionHeader_3QqpI span {
+  color: #969696;
+}
 .partnereventshared_SaleSectionContainer_1In5l {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
 }
@@ -41447,15 +43402,17 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   background-color: #000;
   padding: 0px 8px;
 }
-.bbcodes_Spoiler_29sJ0:hover {
+.bbcodes_Spoiler_29sJ0:hover,
+.bbcodes_Spoiler_29sJ0.bbcodes_Revealed_1oNwd {
   color: #fff;
 }
-.bbcodes_Spoiler_29sJ0:hover > .bbcodes_SpoilerText_2at_a {
+.bbcodes_Spoiler_29sJ0:hover .bbcodes_SpoilerText_2at_a,
+.bbcodes_Spoiler_29sJ0.bbcodes_Revealed_1oNwd .bbcodes_SpoilerText_2at_a {
   visibility: visible;
   transition-delay: 80ms;
   transition-duration: 120ms;
 }
-.bbcodes_SpoilerText_2at_a {
+.bbcodes_Spoiler_29sJ0 .bbcodes_SpoilerText_2at_a {
   visibility: hidden;
   transition-delay: 80ms;
   transition-duration: 120ms;

@@ -351,6 +351,14 @@ ${IMG_URL}cityscene_moon.png
 ${IMG_URL}cityscene_sky.jpg
 ${IMG_URL}close.png
 ${IMG_URL}currency_icon_small.png
+${IMG_URL}dpc/autograph_guidelines/${imageName}
+${IMG_URL}dpc/autograph_guidelines/check-mark.png
+${IMG_URL}dpc/autograph_guidelines/example-signature-1.jpg
+${IMG_URL}dpc/autograph_guidelines/example-signature-2.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg
+${IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg
+${IMG_URL}dpc/dpc_logo.png
 ${IMG_URL}enno/build1_poster.jpg
 ${IMG_URL}enno/build2_poster.jpg
 ${IMG_URL}enno/enno-attack.png
@@ -1305,6 +1313,7 @@ https://avatars.cloudflare.steamstatic.com/${hash}
 https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
 https://calendar.google.com/calendar/r/eventedit?text=
+https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${filename}
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${}
