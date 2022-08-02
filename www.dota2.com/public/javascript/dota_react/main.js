@@ -32467,7 +32467,7 @@
                 s = !a;
               s
                 ? (t = g.Y.IMG_URL + "teams_override/team_unknown_web.png")
-                : (t =
+                : ((t =
                     ("dev" === g.Y.WEB_UNIVERSE
                       ? "https://cdn.beta.steampowered.com/"
                       : g.Y.CDN_URL) +
@@ -32478,7 +32478,15 @@
                     "/" +
                     a +
                     ".png?v=" +
-                    i);
+                    i),
+                  "public" === g.Y.WEB_UNIVERSE &&
+                    (t =
+                      "https://cdn.dota2.com/apps/dota2/teamautographs/" +
+                      g.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON +
+                      "/" +
+                      a +
+                      ".png?v=" +
+                      i));
               return o.createElement(
                 "div",
                 { className: Eo().PlayerAutographContainer },

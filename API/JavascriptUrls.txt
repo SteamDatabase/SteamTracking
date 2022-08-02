@@ -1541,6 +1541,7 @@ https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_boost_defau
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/button_setback_attack.png
 https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/random_drop_attack.png
 https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif
+https://cdn.dota2.com/apps/dota2/teamautographs/${DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON}/${}.png?v=${}
 https://community.cloudflare.steamstatic.com/${m_strURL}
 https://community.cloudflare.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2
 https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=english
