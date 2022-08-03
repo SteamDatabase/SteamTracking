@@ -280,7 +280,7 @@ textarea.gray {
 .formlabel {
 	min-width: 12em;
 	float: left;
-	line-height: 15px;
+	line-height: 24px;
 }
 
 /* need more room for the external link labels */
@@ -368,6 +368,12 @@ select.yearselect,  select.monthselect, select.dayselect {
 select.hourselect,  select.minuteselect {
 	width: 4em;
 	margin-right: 4px;
+}
+
+.active_override_ctn {
+    border-left: 2px solid #a4d007;
+    color: #a4d007;
+    font-size: 16px;
 }
 
 /* clearfix */
@@ -2461,7 +2467,15 @@ html, body { height:100%; }
 	padding-right: 10px;
 	min-width: 131px;
 }
-.instructions em {
+.instructions_table p.overview {
+    font-weight: 300;
+    color: #d4d4d4;
+    font-size: 16px;
+}
+
+.instructions em,
+.section em,
+.section em a {
     color: #ffa558;
 }
 .instructions .formrow.text {
@@ -3423,7 +3437,6 @@ h2.giveawayFilter_titleArea {
 span.new {
 	color: #A4D007;
 	font-weight: 600;
-	margin-left: 8px;
 }
 
 .override_invalid_image {

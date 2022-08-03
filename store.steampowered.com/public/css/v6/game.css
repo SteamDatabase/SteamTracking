@@ -2402,11 +2402,6 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	display: none;
 }
 
-.discoveryqueue_appwidget {
-    float: right;
-    margin-bottom: 4px;
-}
-
 /* DLC list page */
 
 .dlc_header .breadcrumbs .blockbg {
@@ -4689,6 +4684,11 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 		height: auto;
 	}
 
+    html.responsive .discoveryqueue_appwidget {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
 
 }
 
@@ -4702,6 +4702,11 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 		width: auto;
 		height: auto;
 	}
+
+    html.responsive.tablet .discoveryqueue_appwidget {
+        height: 50px;
+        margin-bottom: 10px;
+    }
 
 
 @media screen and (max-width: 910px)

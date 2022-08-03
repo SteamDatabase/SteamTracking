@@ -2006,6 +2006,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   display: flex;
   gap: 10px;
 }
+.gamepadinput_PinDigit_3O34M {
+  text-align: center;
+}
 .gamepadslider_SliderControlPanelGroup_39104 {
   flex-grow: 1;
 }
@@ -9416,15 +9419,17 @@ html:not(.touch)
   background-color: #000;
   padding: 0px 8px;
 }
-.bbcodes_Spoiler_eDaiW:hover {
+.bbcodes_Spoiler_eDaiW:hover,
+.bbcodes_Spoiler_eDaiW.bbcodes_Revealed_1QxV- {
   color: #fff;
 }
-.bbcodes_Spoiler_eDaiW:hover > .bbcodes_SpoilerText_2A6Tf {
+.bbcodes_Spoiler_eDaiW:hover .bbcodes_SpoilerText_2A6Tf,
+.bbcodes_Spoiler_eDaiW.bbcodes_Revealed_1QxV- .bbcodes_SpoilerText_2A6Tf {
   visibility: visible;
   transition-delay: 80ms;
   transition-duration: 120ms;
 }
-.bbcodes_SpoilerText_2A6Tf {
+.bbcodes_Spoiler_eDaiW .bbcodes_SpoilerText_2A6Tf {
   visibility: hidden;
   transition-delay: 80ms;
   transition-duration: 120ms;

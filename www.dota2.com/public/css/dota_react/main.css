@@ -37095,6 +37095,641 @@ a {
 .__react_component_tooltip.show {
   opacity: 1 !important;
 }
+.requestforproposalpage_Tooltip_2BPN6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.requestforproposalpage_CarouselFade_29yCU {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.requestforproposalpage_StandardButton_2Dn39 {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.requestforproposalpage_StandardButton_2Dn39:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.requestforproposalpage_StandardButton_2Dn39
+  .requestforproposalpage_ButtonText_PMdkX {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.requestforproposalpage_StandardButton_2Dn39
+  .requestforproposalpage_SteamLogo_1drrD {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.requestforproposalpage_ToolTip_EemRm {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi {
+  width: 100%;
+  min-width: 320px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 40px 100px 40px 100px;
+  background-color: #0a1010;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/generic/bg_notile.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg {
+  margin: 40px auto;
+  width: 800px;
+  min-height: 216px;
+  position: relative;
+  line-height: 19px;
+  background: rgba(5, 6, 6, 0.7);
+  border: 1px solid #303030;
+  font-size: 16px;
+  font-weight: normal;
+  color: #d2d2d2;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4 {
+  width: 600px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4
+  .requestforproposalpage_Title_1hbhy {
+  color: #ddd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin: 20px 0px;
+  line-height: normal;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4
+  .requestforproposalpage_TextBody_24dgM {
+  font-family: "Radiance", "arial", sans-serif;
+  color: #888;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4
+  .requestforproposalpage_TextBody_24dgM
+  a {
+  color: #257ed4;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4
+  .requestforproposalpage_TextBody_24dgM
+  .requestforproposalpage_SmoothLine_36jGa {
+  background-color: #2b2b2b;
+  width: 600px;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 10px auto;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Background_1rEav
+  .requestforproposalpage_ContentFrame_ftoJg
+  .requestforproposalpage_PageTop_2Mmn4
+  .requestforproposalpage_SmoothLine_36jGa {
+  background-color: #2b2b2b;
+  width: 600px;
+  height: 1px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 10px auto;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi
+  .requestforproposalpage_Header_ZXQpZ {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #4a7080;
+}
+.requestforproposalpage_RequestForProposalPage_3Pkqi *:link {
+  text-decoration: underline;
+  color: #0645ad;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
 .majorsregistrationautographspage_Tooltip_3ubS- {
   text-transform: uppercase;
   letter-spacing: 1px;

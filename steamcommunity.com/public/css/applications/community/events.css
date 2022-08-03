@@ -1,10 +1,10 @@
 :root {
   --basicui-header-height: 0px;
 }
-.partnereventwebrowembed_Container_2Jd3M {
+.partnereventwebrowembed_Container_3DZHU {
   padding-top: 5px;
 }
-.partnereventwebrowembed_Container_2Jd3M h2 {
+.partnereventwebrowembed_Container_3DZHU h2 {
   font-family: "Motiva Sans", Arial, Sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -15,17 +15,17 @@
   padding-top: 2px;
 }
 @media screen and (max-width: 910px) {
-  .partnereventwebrowembed_StoreHeaderAdjust_3YyCp {
+  .partnereventwebrowembed_StoreHeaderAdjust_1BdU3 {
     margin-top: 58px;
   }
 }
-.partnereventwebrowembed_SectionButtonCtn_1HP0y {
+.partnereventwebrowembed_SectionButtonCtn_1GTuE {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: -21px;
   margin-top: -5px;
 }
-.partnereventwebrowembed_SectionButton_3n8sw {
+.partnereventwebrowembed_SectionButton_1-yPT {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
@@ -38,36 +38,36 @@
   position: relative;
   bottom: 30px;
 }
-.partnereventwebrowembed_SectionButton_3n8sw:hover {
+.partnereventwebrowembed_SectionButton_1-yPT:hover {
   border: 1px solid #fff;
 }
-.partnereventwebrowembed_EventsSummariesCtn_1snIw {
+.partnereventwebrowembed_EventsSummariesCtn_2UHto {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
   margin-bottom: 5px;
   margin-top: 5px;
   overflow-x: auto;
 }
-.BasicUI .partnereventwebrowembed_EventsSummariesCtn_1snIw {
+.BasicUI .partnereventwebrowembed_EventsSummariesCtn_2UHto {
   margin: unset;
   gap: var(--gpSpace-Gap);
 }
-.partnereventwebrowembed_LatestUpdateButtonCtn_2vEwZ {
+.partnereventwebrowembed_LatestUpdateButtonCtn_fKrIt {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.partnereventwebrowembed_LatestUpdateIcon_mq3RO {
+.partnereventwebrowembed_LatestUpdateIcon_zbw9b {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.partnereventwebrowembed_LatestUpdateIcon_mq3RO svg {
+.partnereventwebrowembed_LatestUpdateIcon_zbw9b svg {
   height: 20px;
   width: 20px;
   fill: #fff;
 }
-.partnereventwebrowembed_LatestUpdateButton_1TRFt {
+.partnereventwebrowembed_LatestUpdateButton_3F6YM {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -79,6 +79,6 @@
   width: fit-content;
   cursor: pointer;
 }
-.partnereventwebrowembed_LatestUpdateButton_1TRFt:hover {
+.partnereventwebrowembed_LatestUpdateButton_3F6YM:hover {
   border: 1px solid #fff;
 }

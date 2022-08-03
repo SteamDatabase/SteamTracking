@@ -1,7 +1,7 @@
 :root {
   --basicui-header-height: 0px;
 }
-.managefriends_Heading_3kTQI {
+.managefriends_Heading_1lIY_ {
   font-size: 17px;
   font-weight: normal;
   line-height: 20px;
@@ -9,14 +9,14 @@
   margin-bottom: -7px;
   max-width: 620px;
 }
-.BasicUI .managefriends_Heading_3kTQI {
+.BasicUI .managefriends_Heading_1lIY_ {
   letter-spacing: unset;
   text-transform: unset;
   margin: unset;
   font: var(--gpText-HeadingSmall);
   font-weight: 500;
 }
-.managefriends_Body_2s393 {
+.managefriends_Body_1JDe7 {
   margin-top: 10px;
   margin-bottom: 15px;
   font-size: 14px;
@@ -26,14 +26,14 @@
   letter-spacing: 0.02em;
   max-width: 620px;
 }
-.BasicUI .managefriends_Body_2s393 {
+.BasicUI .managefriends_Body_1JDe7 {
   letter-spacing: unset;
   text-transform: unset;
   margin: 8px 0px;
   font: var(--gpText-BodyMedium);
   color: var(--gpStoreLightestGrey);
 }
-.managefriends_HeaderBlock_X9bYN {
+.managefriends_HeaderBlock_3n-KU {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
@@ -43,34 +43,34 @@
   background-color: #015e80;
   padding: 10px 20px 10px 20px;
 }
-.BasicUI .managefriends_HeaderBlock_X9bYN {
+.BasicUI .managefriends_HeaderBlock_3n-KU {
   letter-spacing: unset;
   background-color: unset;
   padding: unset;
   text-transform: unset;
   font: var(--gpText-HeadingLarge);
 }
-.managefriends_Background_1xwi0 {
+.managefriends_Background_OtPIj {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 20px 20px 20px;
 }
-.BasicUI .managefriends_Background_1xwi0 {
+.BasicUI .managefriends_Background_OtPIj {
   background-color: unset;
   padding: 16px 0px;
 }
-.managefriends_DimBackground_2N55H {
+.managefriends_DimBackground_2kSJm {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
 }
-.BasicUI .managefriends_DimBackground_2N55H {
+.BasicUI .managefriends_DimBackground_2kSJm {
   background-color: unset;
   padding: 16px 0px;
   border-top: 1px solid var(--gpBackground-LightMedium);
 }
-.managefriends_Input_1BUty {
+.managefriends_Input_BRkPz {
   max-width: 598px;
 }
-.managefriends_CopyContainer_1HjkZ {
+.managefriends_CopyContainer_2r_KS {
   background-color: rgba(144, 144, 144, 0.1);
   border-radius: 4px;
   display: flex;
@@ -80,14 +80,14 @@
   min-width: 320px;
   max-width: 620px;
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ {
+.BasicUI .managefriends_CopyContainer_2r_KS {
   background-color: var(--gpBackground-DarkSoft);
   border-radius: unset;
   padding: 12px 16px;
   display: flex;
   justify-content: space-between;
 }
-.managefriends_CopyContainer_1HjkZ .managefriends_Text_1ehqR {
+.managefriends_CopyContainer_2r_KS .managefriends_Text_3NGNC {
   font-size: 32px;
   line-height: 30px;
   font-weight: normal;
@@ -95,10 +95,10 @@
   letter-spacing: 0.02em;
   padding: 14px;
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Text_1ehqR {
+.BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Text_3NGNC {
   padding: unset;
 }
-.managefriends_CopyContainer_1HjkZ .managefriends_Link_18Sc0 {
+.managefriends_CopyContainer_2r_KS .managefriends_Link_3RoxO {
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -108,10 +108,10 @@
   overflow-wrap: break-word;
   overflow: hidden;
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Link_18Sc0 {
+.BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Link_3RoxO {
   padding: unset;
 }
-.managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E {
+.managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ {
   background-color: rgba(144, 144, 144, 0.2);
   border-radius: 3px;
   font-size: 14px;
@@ -124,7 +124,7 @@
   text-transform: uppercase;
   width: fit-content;
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E {
+.BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ {
   font: var(--gpText-BodyLarge);
   background: var(--gpColor-Blue);
   border-radius: var(--gpCorner-Medium);
@@ -135,61 +135,61 @@
   margin: unset;
   color: #fff;
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E:hover {
+.BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ:hover {
   background: var(--gpColor-BlueHi);
 }
-.BasicUI .managefriends_CopyContainer_1HjkZ .managefriends_Button_2772E:active {
+.BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ:active {
   background: var(--gpColor-Blue) !important;
   color: #fff !important;
 }
 .BasicUI
-  .managefriends_CopyContainer_1HjkZ
-  .managefriends_Button_2772E.gpfocus {
+  .managefriends_CopyContainer_2r_KS
+  .managefriends_Button_1ARlQ.gpfocus {
   color: #000;
   background: #fff;
   border-radius: unset;
 }
-.managefriends_GenerateLinkButton_T52tU {
+.managefriends_GenerateLinkButton_1TX0d {
   width: fit-content !important;
   padding: 0px 16px !important;
 }
-.BasicUI .managefriends_GenerateLinkButton_T52tU {
+.BasicUI .managefriends_GenerateLinkButton_1TX0d {
   background: var(--gpBackground-LightSoft);
   box-shadow: unset;
 }
-.BasicUI .managefriends_GenerateLinkButton_T52tU:hover {
+.BasicUI .managefriends_GenerateLinkButton_1TX0d:hover {
   background: var(--gpBackground-LightMedium);
   box-shadow: unset;
 }
-.BasicUI .managefriends_GenerateLinkButton_T52tU.gpfocus {
+.BasicUI .managefriends_GenerateLinkButton_1TX0d.gpfocus {
   color: #000;
   background: #fff;
   border-radius: unset;
   box-shadow: var(--gpShadow-Medium);
 }
-.managefriends_ProfileCard_28a_C {
+.managefriends_ProfileCard_2a7rs {
   background: #2c3842;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   padding: 15px;
   border-radius: 4px;
   max-width: 590px;
 }
-.managefriends_ProfileCard_28a_C .managefriends_UserContainer_29w-2 {
+.managefriends_ProfileCard_2a7rs .managefriends_UserContainer_vSokQ {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
 }
-.managefriends_ProfileCard_28a_C .managefriends_Image_1n4lD {
+.managefriends_ProfileCard_2a7rs .managefriends_Image_vQTKB {
   width: 80px;
   height: 80px;
   border-radius: 2px;
   min-width: 80px;
 }
-.managefriends_ProfileCard_28a_C .managefriends_ProfileContent_1qz9x {
+.managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
   margin-left: 20px;
 }
-.managefriends_ProfileLink_1tEt0 {
+.managefriends_ProfileLink_14jbp {
   margin-top: 10px;
   font-size: 14px;
   line-height: 20px;
@@ -197,13 +197,13 @@
   letter-spacing: 0.02em;
   color: #fff;
 }
-.managefriends_ProfileLink_1tEt0 a {
+.managefriends_ProfileLink_14jbp a {
   color: #09b9ff;
 }
-.managefriends_ProfileLink_1tEt0 .managefriends_Failure_UoMCo {
+.managefriends_ProfileLink_14jbp .managefriends_Failure_30nEP {
   color: #c44848;
 }
-.managefriends_ProfileLink_1tEt0 .managefriends_Success_zNkyw {
+.managefriends_ProfileLink_14jbp .managefriends_Success_1NPlB {
   color: #95d83b;
 }
 .friends_nav .SVGIcon_Button {
