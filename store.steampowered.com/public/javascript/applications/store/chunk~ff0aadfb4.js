@@ -34,6 +34,9 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
+    29181: (e) => {
+      e.exports = { strMaxMobileWidth: "700px" };
+    },
     47784: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
@@ -48,14 +51,14 @@
         N: () => P,
         P4: () => I,
         mb: () => E,
-        yS: () => L,
+        yS: () => w,
       });
       var n = a(70655),
         o = a(9669),
         r = a.n(o),
         i = a(22188),
         s = a(67294),
-        l = (a(26149), a(37301), a(37662), a(3389)),
+        l = (a(26149), a(92398), a(37662), a(3389)),
         u = a(76776),
         c = a(39388),
         d = a(77636),
@@ -358,7 +361,7 @@
           Boolean(null == e ? void 0 : e.sale_clan_steamid)
         );
       }
-      function L(e) {
+      function w(e) {
         const t = (0, v.NW)(),
           a = S(e) ? e.sale_clan_event_gid : null,
           o = a && p.j1.GetClanEventModel(a);
@@ -396,11 +399,11 @@
         s = a(39746),
         l = (a(37662), a(67833)),
         u = (a(990), a(77636)),
-        c = a(73285),
+        c = a(48116),
         d = a(52114),
         p = a(36567),
         m = a(67777),
-        _ = a(54104),
+        _ = a(85732),
         h = a(88335),
         y = a.n(h),
         v = a(88592),
@@ -412,8 +415,8 @@
         P = a(65160),
         I = a(65924),
         S = a(7573),
-        L = a(41311),
-        w = a(90666);
+        w = a(41311),
+        L = a(90666);
       const D = "capsule_index_";
       function A(e) {
         const {
@@ -454,7 +457,7 @@
                 bHidePrice: e.bHidePrice,
                 bUseSubscriptionLayout: e.bUseSubscriptionLayout,
                 strExtraParams: e.strExtraParams,
-                fnOnHoverStateChange: !w.De.IN_GAMEPADUI && g,
+                fnOnHoverStateChange: !L.De.IN_GAMEPADUI && g,
                 nCreatorAccountID: e.creatorAccountID,
               },
               n.createElement(
@@ -481,7 +484,7 @@
                 n.createElement(
                   "div",
                   { className: y().ParentType },
-                  (0, L.Xx)(
+                  (0, w.Xx)(
                     11 == b.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
@@ -524,7 +527,7 @@
             elElementToAppendToHover: f,
             bHidePrice: C,
             bHidePlatforms: S,
-            creatorAccountID: L,
+            creatorAccountID: w,
             bIsHovered: D,
           } = e,
           [A] = (0, d.jk)(a.id, (0, c.TM)(a.type), { include_platforms: !0 }),
@@ -544,7 +547,7 @@
         if (!A) return null;
         const N = k && !i,
           R = (0, l.Hf)(
-            `${w.De.STORE_BASE_URL}${G}/${a.id}${s ? `?${s}` : ""}`,
+            `${L.De.STORE_BASE_URL}${G}/${a.id}${s ? `?${s}` : ""}`,
             T
           );
         let z,
@@ -561,7 +564,7 @@
             bHidePrice: C,
             bShowInLibraryInsteadOfPrice: e,
             bHidePlatforms: S,
-            creatorAccountID: L,
+            creatorAccountID: w,
           });
         }
         return (
@@ -593,6 +596,15 @@
             B
           )
         );
+      }
+    },
+    6092: (e, t, a) => {
+      "use strict";
+      a.d(t, { p: () => r });
+      var n = a(29181),
+        o = a.n(n);
+      function r() {
+        return window.innerWidth < parseInt(o().strMaxMobileWidth);
       }
     },
     13308: (e, t, a) => {

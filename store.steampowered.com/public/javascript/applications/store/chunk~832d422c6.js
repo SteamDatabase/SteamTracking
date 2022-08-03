@@ -169,17 +169,17 @@
         a.d(t, {
           ConfirmOverwriteVoteOrNominationDialog: () => B,
           EventDisplaySteamAwardNomination: () => L,
-          EventDisplaySteamAwardVote: () => I,
+          EventDisplaySteamAwardVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => x,
-          default: () => V,
+          default: () => I,
         });
       var n = a(70655),
-        i = a(9669),
-        r = a.n(i),
+        r = a(9669),
+        i = a.n(r),
         o = a(22188),
         s = a(29323),
         l = a(67294),
-        d = (a(26149), a(37301), a(37662), a(12453), a(159)),
+        d = (a(26149), a(92398), a(37662), a(12453), a(159)),
         p = a(48341),
         m = a(34133),
         v = a.n(m),
@@ -223,13 +223,13 @@
             !1);
       }
       function f(e, t) {
-        var a, i;
+        var a, r;
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n =
               u.De.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
             o = { rgCategories: e };
           try {
-            const e = yield r().get(n, {
+            const e = yield i().get(n, {
               params: o,
               withCredentials: !1,
               cancelToken: t.token,
@@ -240,9 +240,9 @@
                 (null === (a = null == e ? void 0 : e.data) || void 0 === a
                   ? void 0
                   : a.success) &&
-              (null === (i = null == e ? void 0 : e.data) || void 0 === i
+              (null === (r = null == e ? void 0 : e.data) || void 0 === r
                 ? void 0
-                : i.event_details)
+                : r.event_details)
             )
               return e.data.event_details;
           } catch (e) {
@@ -260,7 +260,7 @@
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
             (this.m_strPreviousNomineeTitle = null),
-            (this.m_cancelSignal = r().CancelToken.source()),
+            (this.m_cancelSignal = i().CancelToken.source()),
             (this.m_refCheckbox = l.createRef()),
             (this.m_nominationEventDetails = null);
         }
@@ -293,22 +293,20 @@
                 nomineeAppID: null,
               });
             const t =
-                u.De.STORE_BASE_URL + "steamawards/ajaxgetusernominations",
-              a = { sessionid: u.De.SESSIONID, authwgtoken: u.L7.authwgtoken };
+              u.De.STORE_BASE_URL + "steamawards/ajaxgetusernominations";
             if (u.L7.logged_in)
               try {
-                const n = yield r().get(t, {
-                  params: a,
+                const a = yield i().get(t, {
                   withCredentials: !0,
                   cancelToken: this.m_cancelSignal.token,
                 });
                 if (this.m_cancelSignal.token.reason) return;
                 1 ==
-                  (null === (e = null == n ? void 0 : n.data) || void 0 === e
+                  (null === (e = null == a ? void 0 : a.data) || void 0 === e
                     ? void 0
                     : e.success) &&
-                  n.data.nominations &&
-                  this.ProcessNominations(n.data.nominations);
+                  a.data.nominations &&
+                  this.ProcessNominations(a.data.nominations);
               } catch (e) {
                 const t = (0, _.l)(e);
                 console.error(
@@ -324,19 +322,19 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             const a = this.props.event.GetSteamAwardCategory(),
               n = e[a],
-              i = n && n.appid;
+              r = n && n.appid;
             if (
-              (this.setState({ eCategoryLoaded: a, nomineeAppID: i }),
-              i && i != this.props.event.appid)
+              (this.setState({ eCategoryLoaded: a, nomineeAppID: r }),
+              r && r != this.props.event.appid)
             ) {
               if (
-                (yield d.Z.Get().QueueAppRequest(i, {}),
+                (yield d.Z.Get().QueueAppRequest(r, {}),
                 this.m_cancelSignal.token.reason)
               )
                 return;
               this.props.event.GetSteamAwardCategory() == a &&
                 (this.m_strPreviousNomineeTitle =
-                  null === (t = d.Z.Get().GetApp(i)) || void 0 === t
+                  null === (t = d.Z.Get().GetApp(r)) || void 0 === t
                     ? void 0
                     : t.GetName());
             }
@@ -379,15 +377,15 @@
             )
               return;
             const n = u.De.STORE_BASE_URL + "steamawards/ajaxnominategame",
-              i = new URLSearchParams();
-            i.append("sessionid", u.De.SESSIONID),
-              i.append("authwgtoken", u.L7.authwgtoken),
-              i.append("categoryid", e.toString()),
-              i.append("nominatedid", t.toString()),
-              i.append("rescind", a ? "0" : "1"),
-              i.append("source", "4");
+              r = new URLSearchParams();
+            r.append("sessionid", u.De.SESSIONID),
+              r.append("authwgtoken", u.L7.authwgtoken),
+              r.append("categoryid", e.toString()),
+              r.append("nominatedid", t.toString()),
+              r.append("rescind", a ? "0" : "1"),
+              r.append("source", "4");
             try {
-              const e = yield r().post(n, i, {
+              const e = yield i().post(n, r, {
                 withCredentials: !0,
                 cancelToken: this.m_cancelSignal.token,
               });
@@ -430,16 +428,16 @@
             this.m_nominationEventDetails.strBackgroundImage.length &&
               (a.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
           const n = this.props.event.GetSteamAwardCategory(),
-            i =
+            r =
               n >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
               n < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
-            r =
+            i =
               this.state.eCategoryLoaded == n &&
               this.state.nomineeAppID == this.props.event.appid,
             o =
               this.props.event.BIsEventActionEnabled() ||
               t < this.props.event.GetStartTimeAndDateUnixSeconds(),
-            s = i && (o || r),
+            s = r && (o || i),
             d = new Date().getFullYear();
           return l.createElement(
             "div",
@@ -489,7 +487,7 @@
                   "div",
                   { className: w().SteamAwardHeaderText },
                   o
-                    ? i
+                    ? r
                       ? (0, g.Xx)(
                           "#SteamAwards_EventNominateGamePrompt_Long",
                           this.props.event.GetGameTitle(this.props.lang)
@@ -520,7 +518,7 @@
                   l.createElement(p.ji, {
                     ref: this.m_refCheckbox,
                     className: w().SteamAwardVoteCheckBox,
-                    checked: r,
+                    checked: i,
                     onChange: this.OnNominateClick,
                     disabled: !o,
                     color: "#FFFFFF",
@@ -614,12 +612,12 @@
       (0, n.gn)([S.ak], B.prototype, "OnConfirm", null),
         (0, n.gn)([S.ak], B.prototype, "OnCancel", null),
         (B = (0, n.gn)([s.Pi], B));
-      let I = class extends l.Component {
+      let V = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, votedForAppID: null }),
             (this.m_strPreviousVotedForAppTitle = null),
-            (this.m_cancelSignal = r().CancelToken.source());
+            (this.m_cancelSignal = i().CancelToken.source());
         }
         componentDidMount() {
           this.FetchVoteState();
@@ -636,22 +634,20 @@
         FetchVoteState() {
           var e;
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = u.De.STORE_BASE_URL + "steamawards/ajaxgetuservotes",
-              a = { sessionid: u.De.SESSIONID, authwgtoken: u.L7.authwgtoken };
+            const t = u.De.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
             if (u.L7.logged_in)
               try {
-                const n = yield r().get(t, {
-                  params: a,
+                const a = yield i().get(t, {
                   withCredentials: !0,
                   cancelToken: this.m_cancelSignal.token,
                 });
                 if (this.m_cancelSignal.token.reason) return;
                 1 ==
-                  (null === (e = null == n ? void 0 : n.data) || void 0 === e
+                  (null === (e = null == a ? void 0 : a.data) || void 0 === e
                     ? void 0
                     : e.success) &&
-                  n.data.votes &&
-                  this.UpdateVoteState(n.data.votes);
+                  a.data.votes &&
+                  this.UpdateVoteState(a.data.votes);
               } catch (e) {
                 const t = (0, _.l)(e);
                 console.error(
@@ -722,7 +718,7 @@
               n.append("categoryid", e.toString()),
               n.append("appid", t.toString());
             try {
-              const e = yield r().post(a, n, {
+              const e = yield i().post(a, n, {
                 withCredentials: !0,
                 cancelToken: this.m_cancelSignal.token,
               });
@@ -791,11 +787,11 @@
             : null;
         }
       };
-      (0, n.gn)([o.LO], I.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, n.gn)([S.ak], I.prototype, "OnVoteClick", null),
-        (0, n.gn)([S.ak], I.prototype, "SaveVote", null),
-        (I = (0, n.gn)([s.Pi], I));
-      class V extends l.Component {
+      (0, n.gn)([o.LO], V.prototype, "m_strPreviousVotedForAppTitle", void 0),
+        (0, n.gn)([S.ak], V.prototype, "OnVoteClick", null),
+        (0, n.gn)([S.ak], V.prototype, "SaveVote", null),
+        (V = (0, n.gn)([s.Pi], V));
+      class I extends l.Component {
         constructor(e) {
           super(e);
           let t = (0, u.kQ)("steamwawards", "application_config");
@@ -818,7 +814,7 @@
       let x = class extends l.Component {
         constructor(e) {
           super(e),
-            (this.m_cancelSignal = r().CancelToken.source()),
+            (this.m_cancelSignal = i().CancelToken.source()),
             (this.m_awardEventDetails = null),
             (this.state = { bAppInfoLoaded: !1 });
         }
@@ -847,7 +843,7 @@
               e.forEach((e) => {
                 t.push(
                   l.createElement(
-                    I,
+                    V,
                     Object.assign(
                       {
                         key: e.eSteamAwardCategoryID,

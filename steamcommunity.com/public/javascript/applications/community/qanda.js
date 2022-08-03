@@ -1,211 +1,56 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [122],
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [908],
   {
-    "3USw": function (e, t, n) {
+    82860: (e) => {
       e.exports = {
-        SectionTitleHeader: "collapseablesection_SectionTitleHeader_2g5oN",
-        required_title: "collapseablesection_required_title_3yDPZ",
+        SectionTitleHeader: "collapseablesection_SectionTitleHeader_1K5gA",
+        required_title: "collapseablesection_required_title_29VCz",
       };
     },
-    DisI: function (e, t, n) {
+    2388: (e, t, i) => {
       "use strict";
-      n.d(t, "c", function () {
-        return d;
-      }),
-        n.d(t, "d", function () {
-          return f;
-        }),
-        n.d(t, "a", function () {
-          return p;
-        }),
-        n.d(t, "b", function () {
-          return _;
-        });
-      var i = n("Mgs7"),
-        r = n("TLQK"),
-        a = n("6Y59"),
-        o = n("q1tI"),
-        s = n("exH9"),
-        l = n("fpVW"),
-        c = n("IjL/"),
-        u = n("TyAF"),
-        m = n("3USw");
-      const d = Object(u.a)((e) =>
-        o.createElement(
-          o.Fragment,
-          null,
-          o.createElement(
-            "div",
-            {
-              className: Object(s.a)(
-                e.className ? e.className : m.SectionTitleHeader,
-                m.required_title
-              ),
-            },
-            o.createElement(
-              "div",
-              {
-                className: Object(s.a)(
-                  l.EventEditorTextTitle,
-                  "EventEditorTextTitle"
-                ),
-              },
-              e.title,
-              Boolean(e.tooltip) && o.createElement(_, { tooltip: e.tooltip })
-            ),
-            o.createElement(p, {
-              bIsMinimized: e.getMinimized(),
-              fnToggleMinimize: e.toggleMinimized,
-            })
-          ),
-          !e.getMinimized() && o.createElement(c.a, null, e.children)
-        )
-      );
-      function f(e) {
-        const [t, n] = o.useState(Boolean(e.bStartMinimized));
-        return o.createElement(
-          d,
-          Object.assign({}, e, {
-            getMinimized: () => t,
-            toggleMinimized: () => n(!t),
-          }),
-          e.children
-        );
-      }
-      function p(e) {
-        const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          s = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return o.createElement(
-          i.e,
-          { "data-tooltip-text": Object(r.f)(s), onClick: n },
-          e.bIsMinimized
-            ? o.createElement(a.P, null)
-            : o.createElement(a.S, null)
-        );
-      }
-      function _(e) {
-        return o.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: Object(s.a)(l.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          o.createElement(a.G, null)
-        );
-      }
-    },
-    KVeB: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, "QAndARoutes", function () {
-          return l;
-        });
-      var i = n("JCps"),
-        r = n("q1tI"),
-        a = n("EC67"),
-        o = n("WplJ"),
-        s = n("lkRc");
-      const l = {
-        Dashboard: (e) => `/questions/${e}/dashboard`,
-        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
-      };
-      function c(e) {
-        return "dev" !== s.c.WEB_UNIVERSE
-          ? r.createElement(a.b, { to: "/" })
-          : r.createElement(
-              "div",
-              null,
-              "Unknown Route - Check ui/routes/questions.tsx to see if this page has been added to the list of routes."
-            );
-      }
-      t.default = function (e) {
-        return r.createElement(
-          a.e,
-          null,
-          r.createElement(a.c, {
-            path: l.Dashboard(":vanity_str"),
-            render: (e) =>
-              r.createElement(o.a, {
-                config: {
-                  "qanda-root": () => {
-                    const { vanity_str: t } = e.match.params;
-                    return r.createElement(i.a, { vanity_str: t });
-                  },
-                },
-              }),
-          }),
-          r.createElement(a.c, {
-            path: l.FullPageView(":vanity_str", ":session_gid"),
-            render: (e) =>
-              r.createElement(o.a, {
-                config: {
-                  "qanda-root": () => {
-                    const { vanity_str: t, session_gid: n } = e.match.params;
-                    return r.createElement(i.b, { gidSession: n });
-                  },
-                },
-              }),
-          }),
-          r.createElement(a.c, { component: c })
-        );
-      };
-    },
-    Qcoi: function (e, t, n) {
-      "use strict";
-      n.d(t, "a", function () {
-        return _;
-      }),
-        n.d(t, "b", function () {
-          return g;
-        }),
-        n.d(t, "c", function () {
-          return h;
-        });
-      var i = n("mrSG"),
-        r = n("vDqi"),
-        a = n.n(r),
-        o = n("2vnA"),
-        s = n("q1tI"),
-        l = n.n(s),
-        c = (n("mgoM"), n("65aj"), n("8H1D")),
-        u = n("kLLr"),
-        m = (n("AiWL"), n("r64O")),
-        d = n("OS6B"),
-        f = n("lkRc");
-      class p {
+      i.d(t, { Gr: () => p, Jq: () => g, y$: () => _ });
+      var r = i(70655),
+        n = i(9669),
+        o = i.n(n),
+        a = i(22188),
+        s = i(67294),
+        l = (i(26149), i(92398), i(43359)),
+        m = i(3389),
+        c = (i(82946), i(77520)),
+        u = i(93976),
+        d = i(90666);
+      class f {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
         LoadProfiles(e, t) {
-          return Object(i.a)(this, void 0, void 0, function* () {
-            Object(m.a)(
-              e.length <= 500,
-              "Check LoadProfiles, requesting too many steam IDs"
-            );
-            let n = e.filter(
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            (0,
+            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let i = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
-            if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let i = f.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              r = a.a.get(i, {
-                params: { steamids: n.join(",") },
+            if (0 == i.length) return this.m_mapProfilesLoading.get(e[0]);
+            let r = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              n = o().get(r, {
+                params: { steamids: i.join(",") },
                 withCredentials: !0,
                 cancelToken: null == t ? void 0 : t.token,
               });
-            n.forEach((e) => this.m_mapProfilesLoading.set(e, r));
-            let o = yield r;
-            o.data &&
-              200 == o.status &&
-              o.data.forEach((e) => {
+            i.forEach((e) => this.m_mapProfilesLoading.set(e, n));
+            let a = yield n;
+            a.data &&
+              200 == a.status &&
+              a.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = Object(c.a)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = Object(c.a)(e.avatar_url, "full")),
-                  (e.avatar_url = Object(c.a)(e.avatar_url)),
+                  (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
+                  (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
+                  (e.avatar_url = (0, l.U)(e.avatar_url)),
                   this.m_mapProfiles.set(e.steamid, e),
                   this.m_mapProfilesLoading.delete(e.steamid);
               });
@@ -216,7 +61,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            u.a.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(e) {
@@ -227,7 +72,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            u.a.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(e) {
@@ -236,50 +81,180 @@
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
-            ? f.c.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : f.c.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+            ? d.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : d.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      Object(i.b)([o.C], p.prototype, "m_mapProfiles", void 0);
-      const _ = new p();
-      function g(e) {
-        const t = l.a.useMemo(
-            () => (e ? ("string" == typeof e ? new u.a(e) : e) : null),
+      (0, r.gn)([a.LO], f.prototype, "m_mapProfiles", void 0);
+      const _ = new f();
+      function p(e) {
+        const t = s.useMemo(
+            () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
             [e]
           ),
-          [n, i] = Object(s.useState)(!!t && !_.BHasProfileBySteamID(t));
-        Object(s.useEffect)(() => {
-          const e = a.a.CancelToken.source();
+          [i, r] = (0, s.useState)(!!t && !_.BHasProfileBySteamID(t));
+        (0, s.useEffect)(() => {
+          const e = o().CancelToken.source();
           return (
             t &&
               !_.BHasProfileBySteamID(t) &&
               _.LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const n = Object(d.a)(e);
+                  const i = (0, u.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       t.ConvertTo64BitString() +
                       ": " +
-                      n.strErrorMsg,
-                    n
+                      i.strErrorMsg,
+                    i
                   );
                 })
                 .finally(() => {
-                  e.token.reason || i(!1);
+                  e.token.reason || r(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [n, !!t && _.GetProfileBySteamID(t)];
+        return [i, !!t && _.GetProfileBySteamID(t)];
       }
-      function h(e) {
-        return g(l.a.useMemo(() => u.a.InitFromAccountID(e), [e]));
+      function g(e) {
+        return p(s.useMemo(() => m.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = _;
+    },
+    98300: (e, t, i) => {
+      "use strict";
+      i.d(t, { bC: () => p, fU: () => _, mY: () => d, ug: () => f });
+      var r = i(48341),
+        n = i(41311),
+        o = i(95598),
+        a = i(67294),
+        s = i(7573),
+        l = i(34133),
+        m = i(32548),
+        c = i(29323),
+        u = i(82860);
+      const d = (0, c.Pi)((e) =>
+        a.createElement(
+          a.Fragment,
+          null,
+          a.createElement(
+            "div",
+            {
+              className: (0, s.Z)(
+                e.className ? e.className : u.SectionTitleHeader,
+                u.required_title
+              ),
+            },
+            a.createElement(
+              "div",
+              {
+                className: (0, s.Z)(
+                  l.EventEditorTextTitle,
+                  "EventEditorTextTitle"
+                ),
+              },
+              e.title,
+              Boolean(e.tooltip) && a.createElement(p, { tooltip: e.tooltip })
+            ),
+            a.createElement(_, {
+              bIsMinimized: e.getMinimized(),
+              fnToggleMinimize: e.toggleMinimized,
+            })
+          ),
+          !e.getMinimized() && a.createElement(m.S, null, e.children)
+        )
+      );
+      function f(e) {
+        const [t, i] = a.useState(Boolean(e.bStartMinimized));
+        return a.createElement(
+          d,
+          Object.assign({}, e, {
+            getMinimized: () => t,
+            toggleMinimized: () => i(!t),
+          }),
+          e.children
+        );
+      }
+      function _(e) {
+        const { bIsMinimized: t, fnToggleMinimize: i } = e,
+          s = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return a.createElement(
+          r.zx,
+          { "data-tooltip-text": (0, n.Xx)(s), onClick: i },
+          e.bIsMinimized
+            ? a.createElement(o.YqJ, null)
+            : a.createElement(o.gR, null)
+        );
+      }
+      function p(e) {
+        return a.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: (0, s.Z)(l.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          a.createElement(o.WWB, null)
+        );
+      }
+    },
+    69761: (e, t, i) => {
+      "use strict";
+      i.r(t), i.d(t, { QAndARoutes: () => l, default: () => m });
+      var r = i(69382),
+        n = i(67294),
+        o = i(78587),
+        a = i(74091),
+        s = i(90666);
+      const l = {
+        Dashboard: (e) => `/questions/${e}/dashboard`,
+        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
+      };
+      const m = function (e) {
+        return n.createElement(
+          o.rs,
+          null,
+          n.createElement(o.AW, {
+            path: l.Dashboard(":vanity_str"),
+            render: (e) =>
+              n.createElement(a.d, {
+                config: {
+                  "qanda-root": () => {
+                    const { vanity_str: t } = e.match.params;
+                    return n.createElement(r.A, { vanity_str: t });
+                  },
+                },
+              }),
+          }),
+          n.createElement(o.AW, {
+            path: l.FullPageView(":vanity_str", ":session_gid"),
+            render: (e) =>
+              n.createElement(a.d, {
+                config: {
+                  "qanda-root": () => {
+                    const { vanity_str: t, session_gid: i } = e.match.params;
+                    return n.createElement(r.EI, { gidSession: i });
+                  },
+                },
+              }),
+          }),
+          n.createElement(o.AW, { component: c })
+        );
+      };
+      function c(e) {
+        return "dev" !== s.De.WEB_UNIVERSE
+          ? n.createElement(o.l_, { to: "/" })
+          : n.createElement(
+              "div",
+              null,
+              "Unknown Route - Check ui/routes/questions.tsx to see if this page has been added to the list of routes."
+            );
+      }
     },
   },
 ]);

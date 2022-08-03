@@ -16,6 +16,7 @@
         Underline: "bbcodes_Underline_3vpZi",
         Strike: "bbcodes_Strike_3dQvq",
         Spoiler: "bbcodes_Spoiler_3Caxn",
+        Revealed: "bbcodes_Revealed_35II0",
         SpoilerText: "bbcodes_SpoilerText_1owPz",
         DisabledMouseEvents: "bbcodes_DisabledMouseEvents_3QOEi",
         BlockQuote: "bbcodes_BlockQuote_2sfht",
@@ -125,51 +126,52 @@
     63473: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ah: () => T,
-        BB: () => B,
-        Be: () => S,
-        GS: () => M,
-        HC: () => O,
+        Ah: () => N,
+        BB: () => w,
+        Be: () => C,
+        GS: () => O,
+        HC: () => F,
         LW: () => L,
-        MJ: () => F,
-        R6: () => k,
-        YC: () => V,
-        aV: () => A,
-        im: () => N,
-        jj: () => G,
-        pu: () => x,
-        qy: () => P,
-        vZ: () => C,
-        zV: () => I,
+        MJ: () => H,
+        R6: () => I,
+        YC: () => U,
+        aV: () => M,
+        im: () => R,
+        jj: () => P,
+        pu: () => A,
+        qy: () => V,
+        vZ: () => T,
+        zV: () => B,
       });
       var a = n(70655),
         i = n(67294),
         o = n(26149),
-        r = n(37301),
+        r = n(92398),
         s = n(7707),
-        l = (n(37662), n(67833)),
-        d = n(24399),
-        c = n(77765),
-        m = n(8456),
-        u = n(50949),
-        _ = n(35841),
-        p = n(95598),
-        h = n(65924),
-        E = n(7573),
-        b = n(41311),
-        v = n(35092),
-        g = n(90666),
-        f = n(49727),
-        D = n(10126),
-        y = n.n(D);
-      const S = new Map([
+        l = n(35921),
+        d = (n(37662), n(67833)),
+        c = n(24399),
+        m = n(77765),
+        u = n(8456),
+        _ = n(50949),
+        p = n(35841),
+        h = n(95598),
+        E = n(65924),
+        b = n(7573),
+        v = n(41311),
+        g = n(35092),
+        f = n(90666),
+        D = n(49727),
+        y = n(10126),
+        S = n.n(y);
+      const C = new Map([
         [
           "b",
           {
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Bold },
+                { className: S().Bold },
                 e.children
               );
             },
@@ -182,21 +184,21 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: (0, E.Z)(y().Italic, "BB_Italic") },
+                { className: (0, b.Z)(S().Italic, "BB_Italic") },
                 e.children
               );
             },
             autocloses: !1,
           },
         ],
-        ["h1", { Constructor: k, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h2", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h1", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h2", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h3", { Constructor: w, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
             Constructor: function (e) {
-              return R(e, (0, E.Z)(y().Header4, "BB_Header4"));
+              return k(e, (0, b.Z)(S().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -206,7 +208,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return R(e, (0, E.Z)(y().Header5, "BB_Header5"));
+              return k(e, (0, b.Z)(S().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -216,7 +218,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return R(e, (0, E.Z)(y().SmallText, "BB_SmallText"));
+              return k(e, (0, b.Z)(S().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -228,7 +230,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Underline },
+                { className: S().Underline },
                 e.children
               );
             },
@@ -241,7 +243,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Strike },
+                { className: S().Strike },
                 e.children
               );
             },
@@ -252,12 +254,23 @@
           "spoiler",
           {
             Constructor: function (e) {
+              let [t, n] = i.useState(!1),
+                a = i.useCallback(() => {
+                  n(!t);
+                }, [t]);
               return i.createElement(
-                "span",
-                { className: y().Spoiler },
+                l.s,
+                {
+                  className: (0, b.Z)(S().Spoiler, t && S().Revealed),
+                  focusable: !0,
+                  onActivate: a,
+                  onOKActionDescription: (0, v.Xx)(
+                    t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show"
+                  ),
+                },
                 i.createElement(
                   "span",
-                  { className: y().SpoilerText },
+                  { className: S().SpoilerText },
                   e.children
                 )
               );
@@ -269,7 +282,7 @@
           "hr",
           {
             Constructor: function (e) {
-              return i.createElement("div", { className: y().HR });
+              return i.createElement("div", { className: S().HR });
             },
             autocloses: !1,
           },
@@ -287,9 +300,9 @@
           "url",
           {
             Constructor: function (e) {
-              const t = N(e.args),
-                n = "button" == N(e.args, "style") ? y().LinkButton : null;
-              let a = N(e.args, "id");
+              const t = R(e.args),
+                n = "button" == R(e.args, "style") ? S().LinkButton : null;
+              let a = R(e.args, "id");
               a &&
                 "string" == typeof a &&
                 a.length > 0 &&
@@ -306,7 +319,7 @@
                   e.children
                 );
               return i.createElement(
-                w,
+                x,
                 { className: n, href: t, id: a },
                 e.children
               );
@@ -314,14 +327,14 @@
             autocloses: !1,
           },
         ],
-        ["quote", { Constructor: x, autocloses: !1 }],
+        ["quote", { Constructor: A, autocloses: !1 }],
         [
           "pullquote",
           {
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().PullQuote },
+                { className: S().PullQuote },
                 e.children
               );
             },
@@ -334,30 +347,30 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().Code },
+                { className: S().Code },
                 e.children
               );
             },
             autocloses: !1,
           },
         ],
-        ["list", { Constructor: A, autocloses: !1, skipInternalNewline: !0 }],
-        ["olist", { Constructor: M, autocloses: !1, skipInternalNewline: !0 }],
-        ["*", { Constructor: O, autocloses: !0, skipInternalNewline: !0 }],
+        ["list", { Constructor: M, autocloses: !1, skipInternalNewline: !0 }],
+        ["olist", { Constructor: O, autocloses: !1, skipInternalNewline: !0 }],
+        ["*", { Constructor: F, autocloses: !0, skipInternalNewline: !0 }],
         [
           "table",
           {
             Constructor: function (e) {
-              const t = N(e.args, "noborder"),
-                n = N(e.args, "equalcells");
+              const t = R(e.args, "noborder"),
+                n = R(e.args, "equalcells");
               return i.createElement(
                 "div",
                 {
-                  className: (0, E.Z)(
-                    y().Table,
+                  className: (0, b.Z)(
+                    S().Table,
                     "BB_Table",
-                    t && y().NoBorder,
-                    n && y().EqualCells
+                    t && S().NoBorder,
+                    n && S().EqualCells
                   ),
                 },
                 e.children
@@ -373,7 +386,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: (0, E.Z)(y().TableRow, "BB_TableRow") },
+                { className: (0, b.Z)(S().TableRow, "BB_TableRow") },
                 e.children
               );
             },
@@ -388,7 +401,7 @@
             Constructor: function (e) {
               return i.createElement(
                 "div",
-                { className: y().TableHeader },
+                { className: S().TableHeader },
                 e.children
               );
             },
@@ -401,11 +414,11 @@
           "td",
           {
             Constructor: function (e) {
-              const t = N(e.args, "width");
+              const t = R(e.args, "width");
               return i.createElement(
                 "div",
                 {
-                  className: (0, E.Z)(y().TableData, "BB_TableData"),
+                  className: (0, b.Z)(S().TableData, "BB_TableData"),
                   style: t && { width: t },
                 },
                 e.children
@@ -420,7 +433,7 @@
           "expand",
           {
             Constructor: function (e) {
-              const t = Boolean(N(e.args, "expanded")),
+              const t = Boolean(R(e.args, "expanded")),
                 [n, a] = i.useState(t),
                 o = (function (e, t) {
                   switch (e) {
@@ -428,51 +441,51 @@
                       return {
                         collapsed: "#Bbcode_Expand_Details_Collapsed",
                         expanded: "#Bbcode_Expand_Details_Expanded",
-                        style: y().ExpandSection_Details,
+                        style: S().ExpandSection_Details,
                       };
                     case "spoiler":
                       return {
                         collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
                         expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                        style: y().ExpandSection_Spoiler,
+                        style: S().ExpandSection_Spoiler,
                       };
                     case "title":
                       return {
                         collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
                         expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                        style: y().ExpandSection_WithTitle,
+                        style: S().ExpandSection_WithTitle,
                       };
                     default:
                       return {
                         collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
                         expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                        style: y().ExpandSection_ShowMore,
+                        style: S().ExpandSection_ShowMore,
                       };
                   }
-                })(N(e.args, "type"), N(e.args, "title"));
+                })(R(e.args, "type"), R(e.args, "title"));
               return i.createElement(
                 "div",
                 {
-                  className: (0, E.Z)(
-                    y().ExpandSectionBlock,
+                  className: (0, b.Z)(
+                    S().ExpandSectionBlock,
                     o.style,
-                    n ? y().ExpandSectionExpanded : y().ExpandSectionCollapsed
+                    n ? S().ExpandSectionExpanded : S().ExpandSectionCollapsed
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: y().ExpandSectionHeader, onClick: () => a(!n) },
-                  (0, b.Xx)(n ? o.expanded : o.collapsed),
+                  { className: S().ExpandSectionHeader, onClick: () => a(!n) },
+                  (0, v.Xx)(n ? o.expanded : o.collapsed),
                   i.createElement(
                     "div",
-                    { className: y().EmbedArrow },
-                    i.createElement(p.ret, { angle: n ? 180 : 0 })
+                    { className: S().EmbedArrow },
+                    i.createElement(h.ret, { angle: n ? 180 : 0 })
                   )
                 ),
                 n &&
                   i.createElement(
                     "div",
-                    { className: y().ExpandSectionBody },
+                    { className: S().ExpandSectionBody },
                     e.children
                   )
               );
@@ -487,11 +500,11 @@
           {
             Constructor: function (e) {
               const { event: t } = e.context,
-                n = N(e.args);
-              if (n) return i.createElement(u.C, { eventGID: n });
+                n = R(e.args);
+              if (n) return i.createElement(_.C, { eventGID: n });
               if (t) {
-                const e = (0, o.jM)(g.De.LANGUAGE);
-                return i.createElement(u.m, { eventModel: t, lang: e });
+                const e = (0, o.jM)(f.De.LANGUAGE);
+                return i.createElement(_.m, { eventModel: t, lang: e });
               }
               return null;
             },
@@ -502,11 +515,11 @@
           "doclink",
           {
             Constructor: function (e) {
-              const t = N(e.args),
-                n = "button" == N(e.args, "style") ? y().LinkButton : null;
+              const t = R(e.args),
+                n = "button" == R(e.args, "style") ? S().LinkButton : null;
               return i.createElement(
-                w,
-                { className: n, href: `${g.De.PARTNER_BASE_URL}doc/${t}` },
+                x,
+                { className: n, href: `${f.De.PARTNER_BASE_URL}doc/${t}` },
                 e.children
               );
             },
@@ -515,20 +528,20 @@
         ],
       ]);
       new Map([
-        ["looping_media", { Constructor: G, autocloses: !1 }],
-        ["video", { Constructor: P, autocloses: !1 }],
-        ["youtubeorvideo", { Constructor: V, autocloses: !1 }],
-        ["previewyoutube", { Constructor: F, autocloses: !1 }],
+        ["looping_media", { Constructor: P, autocloses: !1 }],
+        ["video", { Constructor: V, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: U, autocloses: !1 }],
+        ["previewyoutube", { Constructor: H, autocloses: !1 }],
       ]);
-      function C(e, t, n = 0) {
-        const a = g.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
-        if (void 0 !== e && e.startsWith(f.A1))
-          return a + e.substring(f.A1.length + 1);
-        if (void 0 !== e && e.startsWith(f.UC)) {
+      function T(e, t, n = 0) {
+        const a = f.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
+        if (void 0 !== e && e.startsWith(D.A1))
+          return a + e.substring(D.A1.length + 1);
+        if (void 0 !== e && e.startsWith(D.UC)) {
           const i = new Array(),
-            o = e.substr(f.UC.length + 1),
-            s = d.aN.GetHashFromHashAndExt(o),
-            l = d.aN.GetExtensionStringFromHashAndExt(o);
+            o = e.substr(D.UC.length + 1),
+            s = c.aN.GetHashFromHashAndExt(o),
+            l = c.aN.GetExtensionStringFromHashAndExt(o);
           if (null != t) {
             let e = (0, r.j_)(t);
             i.push(a + s + "/" + e + l + "?t=" + n),
@@ -540,14 +553,14 @@
         }
         return e;
       }
-      function T(e, t) {
+      function N(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
-        const n = (0, v.FM)(e).toLowerCase(),
-          a = (0, v.FM)(g.De.COMMUNITY_BASE_URL).toLowerCase(),
-          i = (0, v.FM)(g.De.STORE_BASE_URL).toLowerCase(),
-          o = (0, v.FM)(g.De.HELP_BASE_URL).toLowerCase(),
-          r = (0, v.FM)(g.De.PARTNER_BASE_URL || "").toLowerCase();
+        const n = (0, g.FM)(e).toLowerCase(),
+          a = (0, g.FM)(f.De.COMMUNITY_BASE_URL).toLowerCase(),
+          i = (0, g.FM)(f.De.STORE_BASE_URL).toLowerCase(),
+          o = (0, g.FM)(f.De.HELP_BASE_URL).toLowerCase(),
+          r = (0, g.FM)(f.De.PARTNER_BASE_URL || "").toLowerCase();
         return (
           n !== a &&
           n !== i &&
@@ -557,19 +570,19 @@
           (!t || 0 == t.filter((e) => n == e).length)
         );
       }
-      function N(e, t) {
+      function R(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
       function L(e, t) {
         return (n) =>
           e(
             Object.assign(Object.assign({}, n), {
-              className: (0, E.Z)(n.className, t),
+              className: (0, b.Z)(n.className, t),
             })
           );
       }
-      function R(e, t) {
-        let n = N(e.args, "id");
+      function k(e, t) {
+        let n = R(e.args, "id");
         return (
           n &&
             "string" == typeof n &&
@@ -578,74 +591,74 @@
             (n = n.substring(1)),
           i.createElement(
             "div",
-            { id: n || void 0, className: (0, E.Z)(t, e.className) },
+            { id: n || void 0, className: (0, b.Z)(t, e.className) },
             e.children
           )
         );
       }
-      function k(e) {
-        return R(e, (0, E.Z)(y().Header1, "BB_Header1"));
-      }
       function I(e) {
-        return R(e, (0, E.Z)(y().Header2, "BB_Header2"));
+        return k(e, (0, b.Z)(S().Header1, "BB_Header1"));
       }
       function B(e) {
-        return R(e, (0, E.Z)(y().Header3, "BB_Header3"));
+        return k(e, (0, b.Z)(S().Header2, "BB_Header2"));
       }
-      const w = (e) => {
+      function w(e) {
+        return k(e, (0, b.Z)(S().Header3, "BB_Header3"));
+      }
+      const x = (e) => {
         const { href: t } = e,
           n = (0, a._T)(e, ["href"]),
-          o = (0, h.bJ)();
+          o = (0, E.bJ)();
         let r,
-          d = (0, l.B1)(t, o);
-        T(d) &&
-          ((d =
-            (g.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-            g.De.COMMUNITY_BASE_URL +
+          l = (0, d.B1)(t, o);
+        N(l) &&
+          ((l =
+            (f.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+            f.De.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
-            d),
+            l),
           (r = "noopener nofollow"));
         const c =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, v.XW)(t)
+            ? (0, g.XW)(t)
             : void 0;
         return i.createElement(
           s.IS,
-          Object.assign({}, n, { href: d, rel: r }),
+          Object.assign({}, n, { href: l, rel: r }),
           i.createElement("span", { "data-tooltip-text": c }, e.children)
         );
       };
-      function x(e) {
-        const t = N(e.args, "author");
+      function A(e) {
+        const t = R(e.args, "author");
         return i.createElement(
           "blockquote",
-          { className: (0, E.Z)(y().BlockQuote, e.className) },
+          { className: (0, b.Z)(S().BlockQuote, e.className) },
           !!t &&
             i.createElement(
               "div",
-              { className: y().QuoteAuthor },
-              (0, b.Xx)("#Bbcode_Originally_Posted_By") + " ",
+              { className: S().QuoteAuthor },
+              (0, v.Xx)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               i.createElement("b", null, t + ":")
             ),
           e.children
         );
       }
-      function A(e) {
-        return i.createElement("ul", { className: y().List }, e.children);
-      }
       function M(e) {
+        return i.createElement("ul", { className: S().List }, e.children);
+      }
+      function O(e) {
         return i.createElement(
           "ol",
-          { className: y().OrderedList },
+          { className: S().OrderedList },
           e.children
         );
       }
-      function O(e) {
-        let t = N(e.args, "id");
+      function F(e) {
+        let t = R(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -654,27 +667,27 @@
             (t = t.substring(1)),
           i.createElement(
             "li",
-            { className: y().ListItem, id: t || void 0 },
+            { className: S().ListItem, id: t || void 0 },
             e.children
           )
         );
       }
-      function F(e) {
-        if (g.De.EREALM === r.IN.k_ESteamRealmChina) return null;
-        let t = N(e.args);
+      function H(e) {
+        if (f.De.EREALM === r.IN.k_ESteamRealmChina) return null;
+        let t = R(e.args);
         if (t) {
           let e = t.split(";");
           if (2 == e.length) {
             let t = e[0],
               n = e[1].toLocaleLowerCase(),
-              a = "full" == n ? m.sizeFull : m.sizeThumb,
+              a = "full" == n ? u.sizeFull : u.sizeThumb,
               o =
                 "full" == n
                   ? ""
                   : "leftthumb" == n
-                  ? m.floatLeft
-                  : m.floatRight;
-            return i.createElement(c.O, {
+                  ? u.floatLeft
+                  : u.floatRight;
+            return i.createElement(m.O, {
               videoID: t,
               classNameAlign: o,
               classNameSize: a,
@@ -684,32 +697,32 @@
         }
         return i.createElement(i.Fragment, null);
       }
-      function H(e) {
-        let t = N(e.args, "poster");
-        t && (t = (0, v.et)(t));
+      function G(e) {
+        let t = R(e.args, "poster");
+        t && (t = (0, g.et)(t));
         const n = new Array();
         {
-          const t = N(e.args, "mp4");
-          t && n.push({ sURL: (0, v.et)(t), sFormat: "video/mp4" });
-          const a = N(e.args, "webm");
-          a && n.push({ sURL: (0, v.et)(a), sFormat: "video/webm" });
+          const t = R(e.args, "mp4");
+          t && n.push({ sURL: (0, g.et)(t), sFormat: "video/mp4" });
+          const a = R(e.args, "webm");
+          a && n.push({ sURL: (0, g.et)(a), sFormat: "video/webm" });
         }
-        const a = (0, o.jM)(g.De.LANGUAGE),
+        const a = (0, o.jM)(f.De.LANGUAGE),
           i = 0 != a,
           s = new Array();
         for (let t = 0; t < 30; t++) {
-          const n = N(e.args, "sub_" + (0, r.dt)(t));
+          const n = R(e.args, "sub_" + (0, r.dt)(t));
           n &&
             s.push({
-              sURL: (0, v.et)(n),
+              sURL: (0, g.et)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: i && t == a,
             });
-          const o = N(e.args, "cap_" + (0, r.dt)(t));
+          const o = R(e.args, "cap_" + (0, r.dt)(t));
           o &&
             s.push({
-              sURL: (0, v.et)(o),
+              sURL: (0, g.et)(o),
               eLanguage: t,
               sKind: "captions",
               bDefault: i && t == a,
@@ -717,44 +730,44 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function G(e) {
-        const t = H(e);
-        return i.createElement(_.Y, {
+      function P(e) {
+        const t = G(e);
+        return i.createElement(p.Y, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
           bLoop: !0,
         });
       }
-      function P(e) {
-        const t = H(e),
+      function V(e) {
+        const t = G(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, v.et)(n), sFormat: "video/webm" });
-        const a = N(e.args, "autoplay"),
+          t.rgVideoSources.push({ sURL: (0, g.et)(n), sFormat: "video/webm" });
+        const a = R(e.args, "autoplay"),
           o = "0" !== a && "off" !== a && "false" !== a,
-          r = N(e.args, "controls"),
+          r = R(e.args, "controls"),
           s = "0" !== r && "off" !== r && "false" !== r;
-        return i.createElement(_.Y, {
+        return i.createElement(p.Y, {
           video: t,
           bAutoPlay: o,
           bControls: s,
           bLoop: o,
         });
       }
-      function V(e) {
+      function U(e) {
         if (
-          g.De.EREALM === r.IN.k_ESteamRealmChina ||
-          "CN" == g.De.COUNTRY.toLocaleUpperCase()
+          f.De.EREALM === r.IN.k_ESteamRealmChina ||
+          "CN" == f.De.COUNTRY.toLocaleUpperCase()
         )
-          return P(e);
-        const t = N(e.args, "youtubeid"),
-          n = N(e.args, "size"),
-          a = N(e.args, "seconds");
-        let o = "full" == n ? m.sizeFull : m.sizeThumb,
-          s = "full" == n ? "" : "leftthumb" == n ? m.floatLeft : m.floatRight;
-        return i.createElement(c.O, {
+          return V(e);
+        const t = R(e.args, "youtubeid"),
+          n = R(e.args, "size"),
+          a = R(e.args, "seconds");
+        let o = "full" == n ? u.sizeFull : u.sizeThumb,
+          s = "full" == n ? "" : "leftthumb" == n ? u.floatLeft : u.floatRight;
+        return i.createElement(m.O, {
           videoID: t,
           nStartSeconds: a ? Number.parseInt(a) : void 0,
           classNameAlign: s,
@@ -767,7 +780,7 @@
       "use strict";
       n.d(t, { Mx: () => l, XC: () => s });
       var a = n(67294),
-        i = (n(37301), n(37662), n(7200)),
+        i = (n(92398), n(37662), n(7200)),
         o = n(74163),
         r = n(3389);
       function s(e) {
@@ -1032,7 +1045,7 @@
         o = n(30381),
         r = n(67294),
         s = n(26149),
-        l = (n(37301), n(35562)),
+        l = (n(92398), n(35562)),
         d = n(80315),
         c = n(50153),
         m = (n(37662), n(76776)),
@@ -1094,16 +1107,15 @@
         InternalLoad() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             const e = E.De.STORE_BASE_URL + "notification/ajaxusersettings",
-              t = { authwgtoken: E.L7.authwgtoken },
-              n = yield v().get(e, { params: t, withCredentials: !0 });
+              t = yield v().get(e, { withCredentials: !0 });
             return (
-              1 == n.data.success &&
+              1 == t.data.success &&
                 (0, h.z)(() => {
                   (this.m_bIsLoaded = !0),
-                    (this.m_bValidatedEmail = n.data.email_validated),
-                    (this.m_nMobileDeviceCount = n.data.mobile_device_count);
+                    (this.m_bValidatedEmail = t.data.email_validated),
+                    (this.m_nMobileDeviceCount = t.data.mobile_device_count);
                 }),
-              n.data.success
+              t.data.success
             );
           });
         }
@@ -1117,8 +1129,8 @@
         C = n(84351),
         T = n(59650),
         N = n(95598),
-        L = n(13596),
-        R = n(28268),
+        R = n(13596),
+        L = n(28268),
         k = n(93976),
         I = n(7573),
         B = n(41311),
@@ -1457,7 +1469,7 @@
                 ),
               },
               this.state.bIsRequestInFlight &&
-                r.createElement(L.V, {
+                r.createElement(R.V, {
                   className: H.RpcThrobber,
                   size: "xlarge",
                   position: "center",
@@ -1487,7 +1499,7 @@
                 "div",
                 { className: (0, I.Z)(H.ReminderOption, !s && H.Unverified) },
                 r.createElement(
-                  R.HP,
+                  L.HP,
                   {
                     className: H.CheckboxWrapper,
                     strTooltipClassname: H.ReminderOptionTooltip,
@@ -1532,7 +1544,7 @@
                 "div",
                 { className: (0, I.Z)(H.ReminderOption, !l && H.Unverified) },
                 r.createElement(
-                  R.HP,
+                  L.HP,
                   {
                     className: H.CheckboxWrapper,
                     strTooltipClassname: H.ReminderOptionTooltip,
@@ -1633,7 +1645,7 @@
       var a = n(70655),
         i = n(67294),
         o = n(26149),
-        r = n(37301),
+        r = n(92398),
         s = n(41311),
         l = n(35092),
         d = n(90666),

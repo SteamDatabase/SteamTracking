@@ -3223,7 +3223,7 @@
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(n || (n = {}));
     },
-    37301: (e, t, r) => {
+    92398: (e, t, r) => {
       "use strict";
       r.d(t, {
         Yd: () => B,
@@ -7816,7 +7816,7 @@
       var n = r(70655),
         i = r(9669),
         s = r.n(i),
-        a = (r(22188), r(26149), r(37301), r(58114)),
+        a = (r(22188), r(26149), r(92398), r(58114)),
         o = r(65902),
         l = r(78913),
         c = (r(82946), r(93976)),
@@ -11660,7 +11660,7 @@
       });
       var n = r(67294),
         i = r(26149),
-        s = r(37301),
+        s = r(92398),
         a = r(90666),
         o = r(48780),
         l = r(99533),
@@ -12584,6 +12584,7 @@
           IN_CLIENT: !1,
           USE_POPUPS: !1,
           IN_MOBILE: !1,
+          IN_MOBILE_WEBVIEW: !1,
           IN_TENFOOT: !1,
           PLATFORM: "",
           SNR: "",
@@ -12804,127 +12805,140 @@
                               Object.assign(
                                 Object.assign(
                                   Object.assign(
+                                    Object.assign(
+                                      Object.assign(
+                                        {
+                                          Home: () => "/",
+                                          Login: () => "/login",
+                                          AppStorePage: () =>
+                                            "/app/:appid(\\d+)/:gamename?",
+                                          PackageStorePage: () =>
+                                            "/sub/:subid(\\d+)/:packagename?",
+                                          BundleStorePage: () =>
+                                            "/bundle/:bundleid(\\d+)/:bundlename?",
+                                          SaleLandingPage: () =>
+                                            "/sale/:salePageName",
+                                          RemotePlay: () => "/remoteplay_hub/",
+                                          VRHardware: () => "/vrhardware/",
+                                          RemotePlayTogether: () =>
+                                            "/together/",
+                                          SteamDeck: () => "/steamdeck/",
+                                          CreatorSaleLandingPage: () =>
+                                            "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
+                                          SubscriptionPlanLandingPage: () =>
+                                            "/subscriptions/:salePageName",
+                                          CuratorHomePage: () => [
+                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
+                                            "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
+                                          ],
+                                          CuratorListPage: () => [
+                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                            "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                          ],
+                                          CuratorAdminPage: () =>
+                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
+                                        },
+                                        {
+                                          NewsHub: () =>
+                                            "/:prefix(news|newshub|events)",
+                                          NewsHubApp: (e, t) =>
+                                            `/:prefix(news|newshub|events)/app/${e}/${t}`,
+                                          NewsHubGroup: (e, t) =>
+                                            `/:prefix(news|newshub|events)/group/${e}/${t}`,
+                                          NewsHubCollection: (e, t) =>
+                                            `/:prefix(news|newshub|events)/collection/${e}/${t}`,
+                                          NewsHubSale: (e, t) =>
+                                            `/:prefix(news|newshub|events)/sale/${e}/${t}`,
+                                          NewsHubContentHub: (e, t, r) =>
+                                            `/:prefix(news|newshub|events)/${e}/${t}/${r}`,
+                                          EventViewByApp: (e, t, r) =>
+                                            `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${r}`,
+                                          EventViewByGroup: (e, t, r) =>
+                                            `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${r}`,
+                                          OldAnnouncementViewByApp: (e, t, r) =>
+                                            `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                          OldAnnouncementViewByGroup: (
+                                            e,
+                                            t,
+                                            r
+                                          ) =>
+                                            `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                        }
+                                      ),
+                                      {
+                                        EventAdmin: () => "/events_admin",
+                                        EventModeration: () =>
+                                          "/events_admin/(moderate)?/:appid(\\d+)?/",
+                                        EventBackfill: () =>
+                                          "/events_admin/backfill/",
+                                      }
+                                    ),
                                     {
-                                      Home: () => "/",
-                                      Login: () => "/login",
-                                      AppStorePage: () =>
-                                        "/app/:appid(\\d+)/:gamename?",
-                                      PackageStorePage: () =>
-                                        "/sub/:subid(\\d+)/:packagename?",
-                                      BundleStorePage: () =>
-                                        "/bundle/:bundleid(\\d+)/:bundlename?",
-                                      SaleLandingPage: () =>
-                                        "/sale/:salePageName",
-                                      RemotePlay: () => "/remoteplay_hub/",
-                                      VRHardware: () => "/vrhardware/",
-                                      RemotePlayTogether: () => "/together/",
-                                      SteamDeck: () => "/steamdeck/",
-                                      CreatorSaleLandingPage: () =>
-                                        "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
-                                      SubscriptionPlanLandingPage: () =>
-                                        "/subscriptions/:salePageName",
-                                      CuratorHomePage: () => [
-                                        "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
-                                        "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
-                                      ],
-                                      CuratorListPage: () => [
-                                        "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                        "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                      ],
-                                      CuratorAdminPage: () =>
-                                        "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
-                                    },
-                                    {
-                                      NewsHub: () =>
-                                        "/:prefix(news|newshub|events)",
-                                      NewsHubApp: (e, t) =>
-                                        `/:prefix(news|newshub|events)/app/${e}/${t}`,
-                                      NewsHubGroup: (e, t) =>
-                                        `/:prefix(news|newshub|events)/group/${e}/${t}`,
-                                      NewsHubCollection: (e, t) =>
-                                        `/:prefix(news|newshub|events)/collection/${e}/${t}`,
-                                      NewsHubSale: (e, t) =>
-                                        `/:prefix(news|newshub|events)/sale/${e}/${t}`,
-                                      NewsHubContentHub: (e, t, r) =>
-                                        `/:prefix(news|newshub|events)/${e}/${t}/${r}`,
-                                      EventViewByApp: (e, t, r) =>
-                                        `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${r}`,
-                                      EventViewByGroup: (e, t, r) =>
-                                        `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${r}`,
-                                      OldAnnouncementViewByApp: (e, t, r) =>
-                                        `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
-                                      OldAnnouncementViewByGroup: (e, t, r) =>
-                                        `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                      EventModeration: () =>
+                                        "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
+                                      EventBackfill: () =>
+                                        "/events_admin/backfill/",
+                                      EventGameFestivalDebug: () =>
+                                        "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
+                                      EventRSSModeration: () =>
+                                        "/events_admin/rss_admin/",
+                                      InteractiveRecommender: () =>
+                                        "/recommender/:steamid(\\d+)?/",
+                                      LabsSandbox: () => "/labs/sandbox",
+                                      LabsHome: () => "/labs",
+                                      AccountPreferences: () => "/account/",
                                     }
                                   ),
-                                  {
-                                    EventAdmin: () => "/events_admin",
-                                    EventModeration: () =>
-                                      "/events_admin/(moderate)?/:appid(\\d+)?/",
-                                    EventBackfill: () =>
-                                      "/events_admin/backfill/",
-                                  }
+                                  l
                                 ),
                                 {
-                                  EventModeration: () =>
-                                    "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
-                                  EventBackfill: () =>
-                                    "/events_admin/backfill/",
-                                  EventGameFestivalDebug: () =>
-                                    "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
-                                  EventRSSModeration: () =>
-                                    "/events_admin/rss_admin/",
-                                  InteractiveRecommender: () =>
-                                    "/recommender/:steamid(\\d+)?/",
-                                  LabsSandbox: () => "/labs/sandbox",
-                                  LabsHome: () => "/labs",
-                                  AccountPreferences: () => "/account/",
+                                  Loyalty: () => "/points",
+                                  LoyaltyStore: () => "/points/shop",
+                                  LoyaltyGetPoints: () => "/points/getpoints",
+                                  LoyaltyHowItWorks: () => "/points/howitworks",
+                                  LoyaltyStickers: () =>
+                                    "/points/shop/c/stickers",
+                                  LoyaltyEmoticons: () =>
+                                    "/points/shop/c/emoticons",
+                                  LoyaltyChatEffects: () =>
+                                    "/points/shop/c/chateffects",
+                                  LoyaltyBackgrounds: () =>
+                                    "/points/shop/c/backgrounds",
+                                  LoyaltyProfile: () =>
+                                    "/points/shop/c/profile",
+                                  LoyaltyAvatar: () => "/points/shop/c/avatar",
+                                  LoyaltyByGame: () => "/points/shop/c/games",
+                                  LoyaltyGiveawayRules: () =>
+                                    "/points/giveawayrules",
                                 }
                               ),
-                              l
+                              s
                             ),
-                            {
-                              Loyalty: () => "/points",
-                              LoyaltyStore: () => "/points/shop",
-                              LoyaltyGetPoints: () => "/points/getpoints",
-                              LoyaltyHowItWorks: () => "/points/howitworks",
-                              LoyaltyStickers: () => "/points/shop/c/stickers",
-                              LoyaltyEmoticons: () =>
-                                "/points/shop/c/emoticons",
-                              LoyaltyChatEffects: () =>
-                                "/points/shop/c/chateffects",
-                              LoyaltyBackgrounds: () =>
-                                "/points/shop/c/backgrounds",
-                              LoyaltyProfile: () => "/points/shop/c/profile",
-                              LoyaltyAvatar: () => "/points/shop/c/avatar",
-                              LoyaltyByGame: () => "/points/shop/c/games",
-                              LoyaltyGiveawayRules: () =>
-                                "/points/giveawayrules",
-                            }
+                            i
                           ),
-                          s
+                          a
                         ),
-                        i
+                        o
                       ),
-                      a
+                      {
+                        LoyaltyProfileBundles: () =>
+                          "/points/shop/c/profilebundles",
+                        LoyaltyArtistProfiles: () =>
+                          "/points/shop/c/artistprofiles",
+                      }
                     ),
-                    o
+                    {
+                      ContentHubHome: () =>
+                        "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller)",
+                    }
                   ),
-                  {
-                    LoyaltyProfileBundles: () =>
-                      "/points/shop/c/profilebundles",
-                    LoyaltyArtistProfiles: () =>
-                      "/points/shop/c/artistprofiles",
-                  }
+                  { Categories: () => "/categories/" }
                 ),
-                {
-                  ContentHubHome: () =>
-                    "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller)",
-                }
+                { SummerSale2021Story: () => "/forgeyourfate" }
               ),
-              { Categories: () => "/categories/" }
+              { MarketingMessages: () => "/marketingmessages/" }
             ),
-            { SummerSale2021Story: () => "/forgeyourfate" }
+            { YearInReview: () => "/yearinreview/" }
           ),
           { DiagData: () => "/:anything*/diagdata" }
         );
@@ -12950,7 +12964,7 @@
         u = r.n(d),
         h = r(73727),
         _ = r(78587),
-        p = r(37301);
+        p = r(92398);
       class g extends s.Component {
         render() {
           if ("dev" !== l.De.WEB_UNIVERSE) return null;
@@ -13379,20 +13393,21 @@
           return (
             n ||
             (Promise.all([
-              r.e(8769),
+              r.e(1164),
               r.e(8511),
               r.e(1320),
               r.e(8535),
               r.e(9177),
               r.e(3661),
-              r.e(8346),
+              r.e(7804),
               r.e(4030),
+              r.e(9886),
               r.e(166),
+              r.e(7751),
               r.e(2301),
               r.e(7131),
               r.e(3456),
               r.e(6431),
-              r.e(9698),
               r.e(6614),
               r.e(7599),
               r.e(930),
@@ -13401,8 +13416,8 @@
               r.e(4466),
               r.e(9332),
               r.e(6720),
-              r.e(1979),
               r.e(3238),
+              r.e(1979),
               r.e(2420),
               r.e(9211),
               r.e(477),
@@ -13434,10 +13449,10 @@
         }),
         J = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(7200),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
             r.e(166),
             r.e(3456),
@@ -13446,9 +13461,9 @@
         ),
         Q = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(7400),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
             r.e(166),
             r.e(2301),
@@ -13464,9 +13479,9 @@
         ),
         ee = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(7400),
-            r.e(8346),
+            r.e(7804),
             r.e(4466),
             r.e(6571),
             r.e(988),
@@ -13474,18 +13489,19 @@
         ),
         te = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13498,27 +13514,29 @@
         ),
         re = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
-            r.e(9698),
             r.e(2814),
           ]).then(r.bind(r, 93609))
         ),
         ne = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(1320),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13526,7 +13544,7 @@
           ]).then(r.bind(r, 63543))
         ),
         ie = s.lazy(() =>
-          Promise.all([r.e(8769), r.e(8346), r.e(5821)]).then(r.bind(r, 86531))
+          Promise.all([r.e(1164), r.e(7804), r.e(5821)]).then(r.bind(r, 86531))
         ),
         se = s.lazy(() =>
           Promise.all([r.e(7131), r.e(6431), r.e(477), r.e(1918)]).then(
@@ -13535,18 +13553,19 @@
         ),
         ae = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13559,8 +13578,8 @@
         ),
         oe = s.lazy(() =>
           Promise.all([
-            r.e(8769),
-            r.e(8346),
+            r.e(1164),
+            r.e(7804),
             r.e(6614),
             r.e(5136),
             r.e(1825),
@@ -13568,20 +13587,21 @@
         ),
         le = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13590,8 +13610,8 @@
             r.e(4466),
             r.e(9332),
             r.e(6720),
-            r.e(1979),
             r.e(3238),
+            r.e(1979),
             r.e(2420),
             r.e(9211),
             r.e(477),
@@ -13601,21 +13621,22 @@
         ),
         ce = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(9177),
             r.e(3661),
             r.e(3321),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13624,8 +13645,8 @@
             r.e(4466),
             r.e(9332),
             r.e(6720),
-            r.e(1979),
             r.e(3238),
+            r.e(1979),
             r.e(2420),
             r.e(9211),
             r.e(477),
@@ -13635,21 +13656,22 @@
         ),
         me = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(9177),
             r.e(3661),
             r.e(3321),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13658,8 +13680,8 @@
             r.e(4466),
             r.e(9332),
             r.e(6720),
-            r.e(1979),
             r.e(3238),
+            r.e(1979),
             r.e(2420),
             r.e(9211),
             r.e(477),
@@ -13669,20 +13691,21 @@
         ),
         de = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13691,8 +13714,8 @@
             r.e(4466),
             r.e(9332),
             r.e(6720),
-            r.e(1979),
             r.e(3238),
+            r.e(1979),
             r.e(2420),
             r.e(9211),
             r.e(477),
@@ -13702,20 +13725,21 @@
         ),
         ue = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13724,8 +13748,8 @@
             r.e(4466),
             r.e(9332),
             r.e(6720),
-            r.e(1979),
             r.e(3238),
+            r.e(1979),
             r.e(2420),
             r.e(9211),
             r.e(477),
@@ -13738,18 +13762,19 @@
         ),
         _e = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(9177),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13762,18 +13787,19 @@
         ),
         pe = s.lazy(() =>
           Promise.all([
-            r.e(8769),
+            r.e(1164),
             r.e(8511),
             r.e(1320),
             r.e(9177),
-            r.e(8346),
+            r.e(7804),
             r.e(4030),
+            r.e(9886),
             r.e(166),
+            r.e(7751),
             r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
             r.e(930),
@@ -13783,8 +13809,16 @@
             r.e(3238),
             r.e(556),
           ]).then(r.bind(r, 95664))
+        ),
+        ge = s.lazy(() =>
+          Promise.all([r.e(1164), r.e(7804), r.e(9886), r.e(4158)]).then(
+            r.bind(r, 71034)
+          )
+        ),
+        fe = s.lazy(() =>
+          Promise.all([r.e(9886), r.e(7751), r.e(8087)]).then(r.bind(r, 69617))
         );
-      class ge extends s.Component {
+      class be extends s.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -13799,7 +13833,7 @@
               "div",
               { className: u().App },
               s.createElement(
-                fe,
+                we,
                 null,
                 s.createElement(
                   s.Suspense,
@@ -14139,6 +14173,14 @@
                           },
                         }),
                     }),
+                    s.createElement(_.AW, {
+                      path: m.Z.MarketingMessages(),
+                      render: (e) => s.createElement(ge, Object.assign({}, e)),
+                    }),
+                    s.createElement(_.AW, {
+                      path: m.Z.YearInReview(),
+                      render: (e) => s.createElement(fe, Object.assign({}, e)),
+                    }),
                     s.createElement(_.AW, null, !1)
                   )
                 )
@@ -14147,32 +14189,32 @@
           );
         }
       }
-      function fe(e) {
+      function we(e) {
         const { children: t } = e;
         return s.createElement(
           b.u.Provider,
           { value: { bCanUseLink: !0 } },
-          s.createElement(Y, null, t, s.createElement(be, null))
+          s.createElement(Y, null, t, s.createElement(ye, null))
         );
       }
-      const be = (e) => {
+      const ye = (e) => {
         const t = s.createElement(w.t, { ModalManager: (0, y.BL)(window) });
         return i.createPortal(t, document.body);
       };
-      var we = r(65902),
-        ye = r(75362),
-        Se = r(53622);
+      var Se = r(65902),
+        Be = r(75362),
+        ve = r(53622);
       r(69491);
-      Se.Dj(function () {
+      ve.Dj(function () {
         return (0, n.mG)(this, void 0, void 0, function* () {
           (0, l.Ek)("application_config").userConfig ||
             (yield (0, l.x)(o(), l.De.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, ye.Uh)().Init(
+            (0, Be.Uh)().Init(
               "Store",
               CLSTAMP,
-              new we.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new Se.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, n.mG)(this, void 0, void 0, function* () {
@@ -14202,7 +14244,7 @@
             })(l.De.LANGUAGE),
             document.getElementById("application_root")
               ? i.render(
-                  s.createElement(ge),
+                  s.createElement(be),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -14314,7 +14356,7 @@
         "./sales_japanese.json": [33855, 7094],
         "./sales_koreana.json": [38127, 584],
         "./sales_latam.json": [4335, 4682],
-        "./sales_norwegian.json": [30166, 1164],
+        "./sales_norwegian.json": [30166, 4550],
         "./sales_polish.json": [12369, 4248],
         "./sales_portuguese.json": [87577, 5414],
         "./sales_romanian.json": [91478, 1012],
@@ -14358,7 +14400,7 @@
         "./sales_japanese.json": [33855, 7094],
         "./sales_koreana.json": [38127, 584],
         "./sales_latam.json": [4335, 4682],
-        "./sales_norwegian.json": [30166, 1164],
+        "./sales_norwegian.json": [30166, 4550],
         "./sales_polish.json": [12369, 4248],
         "./sales_portuguese.json": [87577, 5414],
         "./sales_romanian.json": [91478, 1012],

@@ -1,86 +1,189 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [119],
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [8647],
   {
-    "8H1D": function (e, t, n) {
+    76778: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        Heading: "managefriends_Heading_1lIY_",
+        Body: "managefriends_Body_1JDe7",
+        HeaderBlock: "managefriends_HeaderBlock_3n-KU",
+        Background: "managefriends_Background_OtPIj",
+        DimBackground: "managefriends_DimBackground_2kSJm",
+        Input: "managefriends_Input_BRkPz",
+        CopyContainer: "managefriends_CopyContainer_2r_KS",
+        Text: "managefriends_Text_3NGNC",
+        Link: "managefriends_Link_3RoxO",
+        Button: "managefriends_Button_1ARlQ",
+        GenerateLinkButton: "managefriends_GenerateLinkButton_1TX0d",
+        ProfileCard: "managefriends_ProfileCard_2a7rs",
+        UserContainer: "managefriends_UserContainer_vSokQ",
+        Image: "managefriends_Image_vQTKB",
+        ProfileContent: "managefriends_ProfileContent_29EO2",
+        ProfileLink: "managefriends_ProfileLink_14jbp",
+        Failure: "managefriends_Failure_30nEP",
+        Success: "managefriends_Success_1NPlB",
+      };
+    },
+    43359: (e, t, n) => {
       "use strict";
-      n.d(t, "b", function () {
-        return r;
-      }),
-        n.d(t, "a", function () {
-          return i;
-        });
-      var a = n("lkRc");
-      const r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function i(e, t) {
+      n.d(t, { U: () => a, W: () => s });
+      var r = n(90666);
+      const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function a(e, t) {
         let n = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = r),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = s),
           44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-        let i = a.c.AVATAR_BASE_URL;
+        let a = r.De.AVATAR_BASE_URL;
         return (
-          i ||
-            ((i = a.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (i += e.substr(0, 2) + "/")),
-          (i += e),
-          t && "small" != t && (i += "_" + t),
-          (i += n),
-          i
+          a ||
+            ((a = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (a += e.substr(0, 2) + "/")),
+          (a += e),
+          t && "small" != t && (a += "_" + t),
+          (a += n),
+          a
         );
       }
     },
-    AiWL: function (e, t, n) {
+    2388: (e, t, n) => {
       "use strict";
-      n("mgoM");
+      n.d(t, { Gr: () => f, Jq: () => h, y$: () => p });
+      var r = n(70655),
+        s = n(9669),
+        a = n.n(s),
+        i = n(22188),
+        o = n(67294),
+        l = (n(26149), n(92398), n(43359)),
+        d = n(3389),
+        c = (n(82946), n(77520)),
+        u = n(93976),
+        m = n(90666);
+      class _ {
+        constructor() {
+          (this.m_mapProfiles = new Map()),
+            (this.m_mapProfilesLoading = new Map());
+        }
+        LoadProfiles(e, t) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            (0,
+            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let n = e.filter(
+              (e) =>
+                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
+            );
+            if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
+            let r = m.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              s = a().get(r, {
+                params: { steamids: n.join(",") },
+                withCredentials: !0,
+                cancelToken: null == t ? void 0 : t.token,
+              });
+            n.forEach((e) => this.m_mapProfilesLoading.set(e, s));
+            let i = yield s;
+            i.data &&
+              200 == i.status &&
+              i.data.forEach((e) => {
+                (e.avatar_hash = e.avatar_url),
+                  (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
+                  (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
+                  (e.avatar_url = (0, l.U)(e.avatar_url)),
+                  this.m_mapProfiles.set(e.steamid, e),
+                  this.m_mapProfilesLoading.delete(e.steamid);
+              });
+          });
+        }
+        GetProfile(e) {
+          return this.m_mapProfiles.get(e);
+        }
+        GetProfileByAccountID(e) {
+          return this.m_mapProfiles.get(
+            d.K.InitFromAccountID(e).ConvertTo64BitString()
+          );
+        }
+        GetProfileBySteamID(e) {
+          return this.m_mapProfiles.get(e.ConvertTo64BitString());
+        }
+        BHasProfile(e) {
+          return this.m_mapProfiles.has(e);
+        }
+        BHasProfileByAccountID(e) {
+          return this.m_mapProfiles.has(
+            d.K.InitFromAccountID(e).ConvertTo64BitString()
+          );
+        }
+        BHasProfileBySteamID(e) {
+          return this.m_mapProfiles.has(e.ConvertTo64BitString());
+        }
+        GetProfileURLBySteamID(e) {
+          const t = this.GetProfileBySteamID(e);
+          return t && t.profile_url
+            ? m.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : m.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+        }
+        GetPersonaNameBySteamID(e) {
+          const t = this.GetProfileBySteamID(e);
+          return t && t.persona_name ? t.persona_name : "";
+        }
+      }
+      (0, r.gn)([i.LO], _.prototype, "m_mapProfiles", void 0);
+      const p = new _();
+      function f(e) {
+        const t = o.useMemo(
+            () => (e ? ("string" == typeof e ? new d.K(e) : e) : null),
+            [e]
+          ),
+          [n, r] = (0, o.useState)(!!t && !p.BHasProfileBySteamID(t));
+        (0, o.useEffect)(() => {
+          const e = a().CancelToken.source();
+          return (
+            t &&
+              !p.BHasProfileBySteamID(t) &&
+              p
+                .LoadProfiles([t.ConvertTo64BitString()])
+                .catch((e) => {
+                  const n = (0, u.l)(e);
+                  console.error(
+                    "useUserProfile failed to load profile for " +
+                      t.ConvertTo64BitString() +
+                      ": " +
+                      n.strErrorMsg,
+                    n
+                  );
+                })
+                .finally(() => {
+                  e.token.reason || r(!1);
+                }),
+            () => e.cancel("unmounting useUserProfile")
+          );
+        }, [e]);
+        return [n, !!t && p.GetProfileBySteamID(t)];
+      }
+      function h(e) {
+        return f(o.useMemo(() => d.K.InitFromAccountID(e), [e]));
+      }
+      window.g_ProfileStore = p;
     },
-    IASz: function (e, t, n) {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        Heading: "managefriends_Heading_3kTQI",
-        Body: "managefriends_Body_2s393",
-        HeaderBlock: "managefriends_HeaderBlock_X9bYN",
-        Background: "managefriends_Background_1xwi0",
-        DimBackground: "managefriends_DimBackground_2N55H",
-        Input: "managefriends_Input_1BUty",
-        CopyContainer: "managefriends_CopyContainer_1HjkZ",
-        Text: "managefriends_Text_1ehqR",
-        Link: "managefriends_Link_18Sc0",
-        Button: "managefriends_Button_2772E",
-        GenerateLinkButton: "managefriends_GenerateLinkButton_T52tU",
-        ProfileCard: "managefriends_ProfileCard_28a_C",
-        UserContainer: "managefriends_UserContainer_29w-2",
-        Image: "managefriends_Image_1n4lD",
-        ProfileContent: "managefriends_ProfileContent_1qz9x",
-        ProfileLink: "managefriends_ProfileLink_1tEt0",
-        Failure: "managefriends_Failure_UoMCo",
-        Success: "managefriends_Success_zNkyw",
-      };
-    },
-    McqU: function (e, t, n) {
+    37757: (e, t, n) => {
       "use strict";
-      n.d(t, "b", function () {
-        return b;
-      }),
-        n.d(t, "a", function () {
-          return C;
-        });
-      var a = n("mrSG"),
-        r = n("q1tI"),
-        i = n.n(r),
-        s = n("opsS"),
-        o = n("vDqi"),
-        c = n.n(o),
-        l = n("Mgs7"),
-        d = n("TLQK"),
-        u = n("IASz"),
-        m = n.n(u),
-        _ = n("lkRc"),
-        f = n("kLLr"),
-        p = n("X3Ds"),
-        h = n("Qcoi"),
-        g = (n("mgoM"), n("6Y59")),
-        v = (n("5h11"), n("av+R"));
-      class b extends i.a.Component {
+      n.d(t, { aX: () => C, gu: () => v });
+      var r = n(70655),
+        s = n(67294),
+        a = n(22975),
+        i = n(9669),
+        o = n.n(i),
+        l = n(48341),
+        d = n(41311),
+        c = n(76778),
+        u = n.n(c),
+        m = n(90666),
+        _ = n(3389),
+        p = n(53622),
+        f = n(2388),
+        h = (n(26149), n(95598)),
+        g = n(7707);
+      class v extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -91,10 +194,10 @@
             });
         }
         componentDidMount() {
-          return Object(a.a)(this, void 0, void 0, function* () {
-            const e = yield c.a.get(
-              _.c.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-              { params: { sessionid: _.c.SESSIONID } }
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            const e = yield o().get(
+              m.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
+              { params: { sessionid: m.De.SESSIONID } }
             );
             if (e && e.data && e.data.tokens) {
               const t = e.data.tokens.filter((e) => e.valid);
@@ -105,13 +208,13 @@
           });
         }
         OnCreateInviteLink() {
-          return Object(a.a)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             const e = new FormData();
-            e.append("sessionid", _.c.SESSIONID),
-              e.append("steamid_user", _.j.steamid),
+            e.append("sessionid", m.De.SESSIONID),
+              e.append("steamid_user", m.L7.steamid),
               e.append("duration", (2592e3).toString());
-            const t = yield c.a.post(
-              _.c.COMMUNITY_BASE_URL + "invites/ajaxcreate",
+            const t = yield o().post(
+              m.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
               e
             );
             t &&
@@ -127,17 +230,17 @@
             "invite" === e &&
               (this.setState({ invite_copied: !0 }),
               setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-            Object(p.i)(t);
+            (0, p.Ei)(t);
         }
         OnAddFriend(e) {
-          return Object(a.a)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             const t = new FormData();
-            t.append("sessionID", _.c.SESSIONID),
+            t.append("sessionID", m.De.SESSIONID),
               t.append("steamid", e),
               t.append("accept_invite", "0");
             try {
-              const e = yield c.a.post(
-                _.c.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
+              const e = yield o().post(
+                m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
                 t
               );
               return e && e.data && 1 == e.data.success;
@@ -154,113 +257,113 @@
         }
         OnSearchSubmit() {
           window.open(
-            _.c.COMMUNITY_BASE_URL +
+            m.De.COMMUNITY_BASE_URL +
               "search/users/#text=" +
               encodeURIComponent(this.state.input_search),
             "_self"
           );
         }
         render() {
-          const e = _.j.short_url + "/" + this.state.invite_token;
-          return i.a.createElement(
+          const e = m.L7.short_url + "/" + this.state.invite_token;
+          return s.createElement(
             "div",
             null,
-            i.a.createElement(
+            s.createElement(
               "div",
-              { className: m.a.HeaderBlock },
-              Object(d.f)("#ManageFriends_AddAFriend")
+              { className: u().HeaderBlock },
+              (0, d.Xx)("#ManageFriends_AddAFriend")
             ),
-            i.a.createElement(
+            s.createElement(
               "div",
-              { className: m.a.Background },
-              i.a.createElement(
+              { className: u().Background },
+              s.createElement(
                 "h1",
-                { className: m.a.Heading },
-                Object(d.f)("#ManageFriends_YourFriendCode")
+                { className: u().Heading },
+                (0, d.Xx)("#ManageFriends_YourFriendCode")
               ),
-              i.a.createElement(
+              s.createElement(
                 "div",
-                { className: m.a.CopyContainer },
-                i.a.createElement("h1", { className: m.a.Text }, _.j.accountid),
-                i.a.createElement(
-                  l.G,
+                { className: u().CopyContainer },
+                s.createElement("h1", { className: u().Text }, m.L7.accountid),
+                s.createElement(
+                  l.KM,
                   {
                     autoFocus: !0,
-                    className: m.a.Button,
+                    className: u().Button,
                     onClick: () =>
-                      this.OnCopy("friend_code", String(_.j.accountid)),
+                      this.OnCopy("friend_code", String(m.L7.accountid)),
                   },
                   this.state.friend_code_copied
-                    ? Object(d.f)("#ManageFriends_Copied")
-                    : Object(d.f)("#ManageFriends_Copy")
+                    ? (0, d.Xx)("#ManageFriends_Copied")
+                    : (0, d.Xx)("#ManageFriends_Copy")
                 )
               ),
-              i.a.createElement(
+              s.createElement(
                 "p",
-                { className: m.a.Body },
-                Object(d.f)("#ManageFriends_EnterFriendCode")
+                { className: u().Body },
+                (0, d.Xx)("#ManageFriends_EnterFriendCode")
               ),
-              i.a.createElement(C, {
+              s.createElement(C, {
                 onButtonClick: this.OnAddFriend,
-                buttonText: Object(d.f)("#ManageFriends_SendInvite"),
+                buttonText: (0, d.Xx)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
                 bDisableForFriends: !0,
                 bShowStatus: !0,
               })
             ),
-            i.a.createElement(
+            s.createElement(
               "div",
-              { className: m.a.DimBackground },
-              i.a.createElement(
+              { className: u().DimBackground },
+              s.createElement(
                 "h1",
-                { className: m.a.Heading },
-                Object(d.f)("#ManageFriends_OrSendQuickInvite")
+                { className: u().Heading },
+                (0, d.Xx)("#ManageFriends_OrSendQuickInvite")
               ),
-              i.a.createElement(
+              s.createElement(
                 "p",
-                { className: m.a.Body },
-                Object(d.f)("#ManageFriends_QuickInviteDescription")
+                { className: u().Body },
+                (0, d.Xx)("#ManageFriends_QuickInviteDescription")
               ),
-              i.a.createElement(
+              s.createElement(
                 "p",
-                { className: m.a.Body },
-                Object(d.f)("#ManageFriends_QuickInviteNote")
+                { className: u().Body },
+                (0, d.Xx)("#ManageFriends_QuickInviteNote")
               ),
-              i.a.createElement(
+              s.createElement(
                 "div",
-                { className: m.a.CopyContainer },
+                { className: u().CopyContainer },
                 Boolean(this.state.invite_token) &&
-                  i.a.createElement("div", { className: m.a.Link }, e),
-                i.a.createElement(
-                  l.G,
+                  s.createElement("div", { className: u().Link }, e),
+                s.createElement(
+                  l.KM,
                   {
-                    className: m.a.Button,
+                    className: u().Button,
                     onClick: () => this.OnCopy("invite", e),
                   },
                   this.state.invite_copied
-                    ? Object(d.f)("#ManageFriends_Copied")
-                    : Object(d.f)("#ManageFriends_Copy")
+                    ? (0, d.Xx)("#ManageFriends_Copied")
+                    : (0, d.Xx)("#ManageFriends_Copy")
                 )
               ),
-              i.a.createElement(
-                l.e,
+              s.createElement(
+                l.zx,
                 {
-                  className: m.a.GenerateLinkButton,
+                  className: u().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
-                Object(d.f)("#ManageFriends_CreateInviteLink")
+                (0, d.Xx)("#ManageFriends_CreateInviteLink")
               )
             ),
-            i.a.createElement(
+            s.createElement(
               "div",
-              { className: m.a.Background },
-              i.a.createElement(
+              { className: u().Background },
+              s.createElement(
                 "h1",
-                { className: m.a.Heading },
-                Object(d.f)("#ManageFriends_OrSearch")
+                { className: u().Heading },
+                (0, d.Xx)("#ManageFriends_OrSearch")
               ),
-              i.a.createElement("br", null),
-              i.a.createElement(
+              s.createElement("br", null),
+              s.createElement(
                 "div",
                 {
                   style: {
@@ -270,18 +373,18 @@
                     position: "relative",
                   },
                 },
-                i.a.createElement(
+                s.createElement(
                   "div",
                   { style: { width: "100%" } },
-                  i.a.createElement(l.A, {
-                    className: m.a.Input,
+                  s.createElement(l.II, {
+                    className: u().Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
-                    placeholder: Object(d.f)("#ManageFriends_EnterProfileName"),
+                    placeholder: (0, d.Xx)("#ManageFriends_EnterProfileName"),
                   })
                 ),
-                i.a.createElement(
+                s.createElement(
                   "div",
                   {
                     id: "searchIcon",
@@ -292,20 +395,20 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  i.a.createElement(g.O, null)
+                  s.createElement(h.YtI, null)
                 )
               )
             )
           );
         }
       }
-      Object(a.b)([s.b], b.prototype, "OnCreateInviteLink", null),
-        Object(a.b)([s.b], b.prototype, "OnCopy", null),
-        Object(a.b)([s.b], b.prototype, "OnAddFriend", null),
-        Object(a.b)([s.b], b.prototype, "OnSearchChange", null),
-        Object(a.b)([s.b], b.prototype, "OnSearchKeyDown", null),
-        Object(a.b)([s.b], b.prototype, "OnSearchSubmit", null);
-      class C extends i.a.Component {
+      (0, r.gn)([a.ak], v.prototype, "OnCreateInviteLink", null),
+        (0, r.gn)([a.ak], v.prototype, "OnCopy", null),
+        (0, r.gn)([a.ak], v.prototype, "OnAddFriend", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchChange", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchKeyDown", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchSubmit", null);
+      class C extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -317,7 +420,7 @@
             (this.m_currentRequest = 0);
         }
         OnFriendCodeChange(e) {
-          return Object(a.a)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             const t = e.target.value.split(",")[0];
             this.setState({ input_friend_code: t, invite_status: "pending" }),
               window.clearTimeout(this.m_currentRequest),
@@ -328,27 +431,28 @@
           });
         }
         LoadProfile(e) {
-          return Object(a.a)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             if (e) {
-              const t = f.a.InitFromAccountID(Number(e));
-              yield h.a.LoadProfiles([t.ConvertTo64BitString()]);
-              const n = h.a.GetProfile(t.ConvertTo64BitString());
+              const t = _.K.InitFromAccountID(Number(e));
+              yield f.y$.LoadProfiles([t.ConvertTo64BitString()]);
+              const n = f.y$.GetProfile(t.ConvertTo64BitString());
               n
                 ? this.setState({
                     searchResult: n,
                     disable_send_invite:
-                      _.j.is_limited ||
+                      m.L7.is_limited ||
                       (this.props.bDisableForFriends && n.is_friend) ||
-                      (this.props.bDisableForSelf && n.steamid === _.j.steamid),
+                      (this.props.bDisableForSelf &&
+                        n.steamid === m.L7.steamid),
                   })
                 : this.setState({ searchResult: null });
             } else this.setState({ searchResult: null });
           });
         }
         OnActionClick(e) {
-          return Object(a.a)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             const t = new FormData();
-            t.append("sessionID", _.c.SESSIONID),
+            t.append("sessionID", m.De.SESSIONID),
               t.append("steamid", e),
               t.append("accept_invite", "0"),
               this.setState({ disable_send_invite: !0 });
@@ -365,26 +469,26 @@
           });
         }
         render() {
-          return i.a.createElement(
+          return s.createElement(
             "div",
             null,
-            i.a.createElement(l.A, {
-              className: m.a.Input,
+            s.createElement(l.II, {
+              className: u().Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
-              placeholder: Object(d.f)(
+              placeholder: (0, d.Xx)(
                 "#ManageFriends_EnterFriendCodePlaceholder"
               ),
             }),
-            i.a.createElement(
+            s.createElement(
               S,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
               },
-              i.a.createElement(
-                l.G,
+              s.createElement(
+                l.KM,
                 {
                   onClick: () =>
                     this.OnActionClick(this.state.searchResult.steamid),
@@ -402,128 +506,130 @@
           );
         }
       }
-      Object(a.b)([s.b], C.prototype, "OnFriendCodeChange", null),
-        Object(a.b)([s.b], C.prototype, "LoadProfile", null),
-        Object(a.b)([s.b], C.prototype, "OnActionClick", null);
+      (0, r.gn)([a.ak], C.prototype, "OnFriendCodeChange", null),
+        (0, r.gn)([a.ak], C.prototype, "LoadProfile", null),
+        (0, r.gn)([a.ak], C.prototype, "OnActionClick", null);
       const S = (e) => {
         const {
           searchResult: t,
           invite_status: n,
-          bShowStatus: a,
-          children: r,
+          bShowStatus: r,
+          children: a,
         } = e;
         return Boolean(t)
-          ? i.a.createElement(
+          ? s.createElement(
               "div",
-              { className: m.a.ProfileCard },
-              i.a.createElement(
+              { className: u().ProfileCard },
+              s.createElement(
                 "div",
-                { className: m.a.UserContainer },
-                i.a.createElement(
+                { className: u().UserContainer },
+                s.createElement(
                   "div",
-                  { className: m.a.Image },
-                  i.a.createElement("img", {
+                  { className: u().Image },
+                  s.createElement("img", {
                     style: { width: "100%", height: "100%" },
                     src: t.avatar_url_full,
                   })
                 ),
-                i.a.createElement(
+                s.createElement(
                   "div",
-                  { className: m.a.ProfileContent },
-                  i.a.createElement(
+                  { className: u().ProfileContent },
+                  s.createElement(
                     "h1",
-                    { className: m.a.Heading },
+                    { className: u().Heading },
                     t.persona_name
                   ),
-                  i.a.createElement(
+                  s.createElement(
                     "div",
-                    { className: m.a.ProfileLink },
-                    i.a.createElement(
-                      v.c,
+                    { className: u().ProfileLink },
+                    s.createElement(
+                      g.IS,
                       {
-                        target: _.c.IN_GAMEPADUI ? void 0 : "_blank",
-                        href: _.c.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
+                        target: m.De.IN_GAMEPADUI ? void 0 : "_blank",
+                        href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
-                      Object(d.f)("#ManageFriends_ProfileLink")
+                      (0, d.Xx)("#ManageFriends_ProfileLink")
                     ),
-                    i.a.createElement("br", null),
-                    i.a.createElement(
+                    s.createElement("br", null),
+                    s.createElement(
                       "span",
-                      { className: m.a.Body },
+                      { className: u().Body },
                       t.real_name,
-                      i.a.createElement("br", null),
+                      s.createElement("br", null),
                       `${t.city}${t.city ? "," : ""} ${t.state}${
                         t.state ? "," : ""
                       } ${t.country}`
                     )
                   )
                 ),
-                r
+                a
               ),
-              i.a.createElement(
+              s.createElement(
                 "div",
-                { className: m.a.ProfileLink },
+                { className: u().ProfileLink },
                 t.is_friend &&
-                  i.a.createElement(
+                  s.createElement(
                     "div",
                     null,
-                    Object(d.f)("#ManageFriends_IsFriend")
+                    (0, d.Xx)("#ManageFriends_IsFriend")
                   ),
                 0 != t.friends_in_common &&
-                  i.a.createElement(
+                  s.createElement(
                     "div",
                     null,
-                    i.a.createElement(
-                      v.c,
+                    s.createElement(
+                      g.IS,
                       {
-                        target: _.c.IN_GAMEPADUI ? void 0 : "_blank",
+                        target: m.De.IN_GAMEPADUI ? void 0 : "_blank",
                         href:
-                          _.c.COMMUNITY_BASE_URL +
+                          m.De.COMMUNITY_BASE_URL +
                           "profiles/" +
                           t.steamid +
                           "/friendscommon",
                       },
                       1 === t.friends_in_common
-                        ? Object(d.f)(
+                        ? (0, d.Xx)(
                             "#ManageFriends_FriendsInCommonSingular",
                             t.friends_in_common
                           )
-                        : Object(d.f)(
+                        : (0, d.Xx)(
                             "#ManageFriends_FriendsInCommon",
                             t.friends_in_common
                           )
                     )
                   ),
-                a &&
+                r &&
                   "failure" === n &&
-                  i.a.createElement(
+                  s.createElement(
                     "div",
-                    { className: m.a.Failure },
-                    Object(d.f)("#ManageFriends_InviteFailure")
+                    { className: u().Failure },
+                    (0, d.Xx)("#ManageFriends_InviteFailure")
                   ),
-                a &&
+                r &&
                   "success" === n &&
-                  i.a.createElement(
+                  s.createElement(
                     "div",
-                    { className: m.a.Success },
-                    Object(d.f)("#ManageFriends_InviteSuccess", t.persona_name)
+                    { className: u().Success },
+                    (0, d.Xx)("#ManageFriends_InviteSuccess", t.persona_name)
                   )
               )
             )
           : null;
       };
     },
-    OS6B: function (e, t, n) {
+    82946: (e, t, n) => {
       "use strict";
-      n.d(t, "a", function () {
-        return s;
-      });
-      n("mgoM");
-      var a = n("vDqi"),
-        r = n.n(a),
-        i = n("bxBv");
-      function s(e) {
-        if (r.a.isCancel(e))
+      n(26149);
+    },
+    93976: (e, t, n) => {
+      "use strict";
+      n.d(t, { l: () => i });
+      n(26149);
+      var r = n(9669),
+        s = n.n(r),
+        a = n(58114);
+      function i(e) {
+        if (s().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -559,7 +665,7 @@
               console.error(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof i.b)
+            if ("object" == typeof e && e instanceof a.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -575,146 +681,13 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    Qcoi: function (e, t, n) {
+    28064: (e, t, n) => {
       "use strict";
-      n.d(t, "a", function () {
-        return p;
-      }),
-        n.d(t, "b", function () {
-          return h;
-        }),
-        n.d(t, "c", function () {
-          return g;
-        });
-      var a = n("mrSG"),
-        r = n("vDqi"),
-        i = n.n(r),
-        s = n("2vnA"),
-        o = n("q1tI"),
-        c = n.n(o),
-        l = (n("mgoM"), n("65aj"), n("8H1D")),
-        d = n("kLLr"),
-        u = (n("AiWL"), n("r64O")),
-        m = n("OS6B"),
-        _ = n("lkRc");
-      class f {
-        constructor() {
-          (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
-        }
-        LoadProfiles(e, t) {
-          return Object(a.a)(this, void 0, void 0, function* () {
-            Object(u.a)(
-              e.length <= 500,
-              "Check LoadProfiles, requesting too many steam IDs"
-            );
-            let n = e.filter(
-              (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
-            );
-            if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let a = _.c.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              r = i.a.get(a, {
-                params: { steamids: n.join(",") },
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-            n.forEach((e) => this.m_mapProfilesLoading.set(e, r));
-            let s = yield r;
-            s.data &&
-              200 == s.status &&
-              s.data.forEach((e) => {
-                (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = Object(l.a)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = Object(l.a)(e.avatar_url, "full")),
-                  (e.avatar_url = Object(l.a)(e.avatar_url)),
-                  this.m_mapProfiles.set(e.steamid, e),
-                  this.m_mapProfilesLoading.delete(e.steamid);
-              });
-          });
-        }
-        GetProfile(e) {
-          return this.m_mapProfiles.get(e);
-        }
-        GetProfileByAccountID(e) {
-          return this.m_mapProfiles.get(
-            d.a.InitFromAccountID(e).ConvertTo64BitString()
-          );
-        }
-        GetProfileBySteamID(e) {
-          return this.m_mapProfiles.get(e.ConvertTo64BitString());
-        }
-        BHasProfile(e) {
-          return this.m_mapProfiles.has(e);
-        }
-        BHasProfileByAccountID(e) {
-          return this.m_mapProfiles.has(
-            d.a.InitFromAccountID(e).ConvertTo64BitString()
-          );
-        }
-        BHasProfileBySteamID(e) {
-          return this.m_mapProfiles.has(e.ConvertTo64BitString());
-        }
-        GetProfileURLBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.profile_url
-            ? _.c.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : _.c.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
-        }
-        GetPersonaNameBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.persona_name ? t.persona_name : "";
-        }
-      }
-      Object(a.b)([s.C], f.prototype, "m_mapProfiles", void 0);
-      const p = new f();
-      function h(e) {
-        const t = c.a.useMemo(
-            () => (e ? ("string" == typeof e ? new d.a(e) : e) : null),
-            [e]
-          ),
-          [n, a] = Object(o.useState)(!!t && !p.BHasProfileBySteamID(t));
-        Object(o.useEffect)(() => {
-          const e = i.a.CancelToken.source();
-          return (
-            t &&
-              !p.BHasProfileBySteamID(t) &&
-              p
-                .LoadProfiles([t.ConvertTo64BitString()])
-                .catch((e) => {
-                  const n = Object(m.a)(e);
-                  console.error(
-                    "useUserProfile failed to load profile for " +
-                      t.ConvertTo64BitString() +
-                      ": " +
-                      n.strErrorMsg,
-                    n
-                  );
-                })
-                .finally(() => {
-                  e.token.reason || a(!1);
-                }),
-            () => e.cancel("unmounting useUserProfile")
-          );
-        }, [e]);
-        return [n, !!t && p.GetProfileBySteamID(t)];
-      }
-      function g(e) {
-        return h(c.a.useMemo(() => d.a.InitFromAccountID(e), [e]));
-      }
-      window.g_ProfileStore = p;
-    },
-    rt5e: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, "default", function () {
-          return s;
-        });
-      var a = n("q1tI"),
-        r = n.n(a),
-        i = n("McqU");
-      function s() {
-        return r.a.createElement(i.b, null);
+      n.r(t), n.d(t, { default: () => a });
+      var r = n(67294),
+        s = n(37757);
+      function a() {
+        return r.createElement(s.gu, null);
       }
     },
   },

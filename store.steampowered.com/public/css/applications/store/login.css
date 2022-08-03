@@ -15,8 +15,6 @@
   .newlogindialog_QRSection_2ZDyS
   .newlogindialog_QR_1d6FZ {
   aspect-ratio: 1;
-  background-color: #32353c;
-  padding: 12px;
   border-radius: 2px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK {
@@ -101,11 +99,40 @@
   .newlogindialog_Checkbox_3tTFg {
   background-color: #393c44;
 }
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshButtonContainer_2SbbR {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  gap: 15px;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_RefreshButtonContainer_2SbbR
+  button {
+  width: 50%;
+}
 .newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 12px;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn button {
+  width: 270px;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb {
+  background: gray;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: 50%;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:hover {
+  background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:active {
+  background: linear-gradient(90deg, #06bfff 50%, #2d73ff 100%);
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE {
   background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
@@ -120,7 +147,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
-  width: 270px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE:hover {
   background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
@@ -319,6 +345,18 @@
   font-family: inherit;
   font-weight: 500;
   text-align: center;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshTitle_2IXDr {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: -36px;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshReason_3jz0o {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh {
   width: 700px;

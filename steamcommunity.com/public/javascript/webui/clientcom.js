@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7398832";
+var CLSTAMP = "7413055";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -121,13 +121,13 @@ var CLSTAMP = "7398832";
         return d;
       }),
       n.d(t, "n", function () {
-        return S;
+        return E;
       }),
       n.d(t, "g", function () {
-        return p;
+        return S;
       }),
       n.d(t, "i", function () {
-        return E;
+        return p;
       }),
       n.d(t, "h", function () {
         return m;
@@ -152,9 +152,9 @@ var CLSTAMP = "7398832";
       _ = 250820,
       l = 330050,
       d = 358510,
-      S = 366490,
-      p = "18446744073709551615",
-      E = 0,
+      E = 366490,
+      S = "18446744073709551615",
+      p = 0,
       m = 2147483647;
     function f(e, t = "en") {
       switch (e) {
@@ -456,10 +456,10 @@ var CLSTAMP = "7398832";
         return d;
       }),
       n.d(t, "j", function () {
-        return S;
+        return E;
       }),
       n.d(t, "h", function () {
-        return E;
+        return p;
       }),
       n.d(t, "i", function () {
         return m;
@@ -502,6 +502,7 @@ var CLSTAMP = "7398832";
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
+        IN_MOBILE_WEBVIEW: !1,
         IN_TENFOOT: !1,
         PLATFORM: "",
         SNR: "",
@@ -581,23 +582,23 @@ var CLSTAMP = "7398832";
         Boolean(e && 1 === Number.parseInt(e))
       );
     }
-    function S(e = "webui_config") {
+    function E(e = "webui_config") {
       const t = {},
-        n = E("config", e);
+        n = p("config", e);
       n && (delete n.SESSIONID, Object.assign(i, n), (t.config = !0));
-      const r = E("userinfo", e);
+      const r = p("userinfo", e);
       r &&
         (Object.assign(s, r),
         (t.userConfig = !0),
         s.is_support && d() && (s.is_support = !1));
-      const o = E("broadcast", e);
+      const o = p("broadcast", e);
       o && (Object.assign(c, o), (t.broadcastConfig = !0));
-      const _ = E("community", e);
+      const _ = p("community", e);
       _ && (Object.assign(a, _), (t.communityConfig = !0));
-      const l = E("event", e);
+      const l = p("event", e);
       return l && (Object.assign(u, l), (t.eventConfig = !0)), t;
     }
-    function p(e, t = "webui_config", n) {
+    function S(e, t = "webui_config", n) {
       let r;
       if (
         ((r =
@@ -620,11 +621,11 @@ var CLSTAMP = "7398832";
         }
       else n && console.error("Missing config element #", t);
     }
-    function E(e, t = "webui_config") {
-      return p(e, t, !0);
+    function p(e, t = "webui_config") {
+      return S(e, t, !0);
     }
     function m(e, t = "webui_config") {
-      return p(e, t, !1);
+      return S(e, t, !1);
     }
     function f(e, t) {
       return 0 != t.length && e.startsWith(t);

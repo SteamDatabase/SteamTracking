@@ -33064,7 +33064,7 @@
                       o.createElement("img", {
                         src:
                           g.Y.IMG_URL +
-                          "dpc/autograph_guidelines/guidelines-imagery.jpg",
+                          "dpc/autograph_guidelines/guidelines-thickness.jpg",
                         className: So().SignatureRulesImage,
                       }),
                       o.createElement(
@@ -33079,7 +33079,7 @@
                       o.createElement("img", {
                         src:
                           g.Y.IMG_URL +
-                          "dpc/autograph_guidelines/guidelines-thickness.jpg",
+                          "dpc/autograph_guidelines/guidelines-imagery.jpg",
                         className: So().SignatureRulesImage,
                       }),
                       o.createElement(

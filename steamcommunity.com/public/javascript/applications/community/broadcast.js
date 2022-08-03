@@ -1,50 +1,48 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [19],
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [4601],
   {
-    FdXL: function (t, e, i) {
+    35944: (t) => {
       t.exports = {
-        LinkRegionDragBox: "linkregionbox_LinkRegionDragBox_Rtlc-",
-        EdgeDown: "linkregionbox_EdgeDown_i9zrH",
-        LinkRegionGridBox: "linkregionbox_LinkRegionGridBox_1Ob4A",
-        LinkRegionEdge: "linkregionbox_LinkRegionEdge_2stP4",
-        TopLeft: "linkregionbox_TopLeft_Clgi-",
-        Top: "linkregionbox_Top_2Z9Vy",
-        TopRight: "linkregionbox_TopRight_2-8Db",
-        Left: "linkregionbox_Left_3ZwUw",
-        Middle: "linkregionbox_Middle_1Heco",
-        LinkRegionDelete: "linkregionbox_LinkRegionDelete_3Hb3w",
-        LinkRegionSettings: "linkregionbox_LinkRegionSettings_VazMl",
-        Right: "linkregionbox_Right_3h5fK",
-        BottomLeft: "linkregionbox_BottomLeft_2CQe0",
-        Bottom: "linkregionbox_Bottom_sIHlK",
-        BottomRight: "linkregionbox_BottomRight_3lnwj",
-        topleft: "linkregionbox_topleft_3W096",
-        top: "linkregionbox_top_1iRW1",
-        topright: "linkregionbox_topright_1Yrl7",
-        left: "linkregionbox_left_2iBrm",
-        right: "linkregionbox_right_15t6A",
-        bottomleft: "linkregionbox_bottomleft_3SdBc",
-        bottom: "linkregionbox_bottom_2kzZ9",
-        bottomright: "linkregionbox_bottomright_2AKXk",
-        middle: "linkregionbox_middle_1CS75",
+        LinkRegionDragBox: "linkregionbox_LinkRegionDragBox_3riG1",
+        EdgeDown: "linkregionbox_EdgeDown_x0k8J",
+        LinkRegionGridBox: "linkregionbox_LinkRegionGridBox_WNpt6",
+        LinkRegionEdge: "linkregionbox_LinkRegionEdge_Cl8g8",
+        TopLeft: "linkregionbox_TopLeft_3Or-w",
+        Top: "linkregionbox_Top_3Flcs",
+        TopRight: "linkregionbox_TopRight_3nljJ",
+        Left: "linkregionbox_Left_2P2d4",
+        Middle: "linkregionbox_Middle_2Hdpb",
+        LinkRegionDelete: "linkregionbox_LinkRegionDelete_1MGOz",
+        LinkRegionSettings: "linkregionbox_LinkRegionSettings_1Ko6I",
+        Right: "linkregionbox_Right_1F5bN",
+        BottomLeft: "linkregionbox_BottomLeft_lZCSb",
+        Bottom: "linkregionbox_Bottom_1SsR1",
+        BottomRight: "linkregionbox_BottomRight_234Xs",
+        topleft: "linkregionbox_topleft_2M_mJ",
+        top: "linkregionbox_top_3ILUb",
+        topright: "linkregionbox_topright_e-0z6",
+        left: "linkregionbox_left_2heDA",
+        right: "linkregionbox_right_3zE2w",
+        bottomleft: "linkregionbox_bottomleft_bKyXt",
+        bottom: "linkregionbox_bottom__wmyV",
+        bottomright: "linkregionbox_bottomright_2SGw-",
+        middle: "linkregionbox_middle_AlgGp",
         LinkRegionButtonContainer:
-          "linkregionbox_LinkRegionButtonContainer_1ZJ42",
-        DialogButton: "linkregionbox_DialogButton_nN2Q1",
-        LinkRegionInfo: "linkregionbox_LinkRegionInfo_3TiV7",
-        LinkText: "linkregionbox_LinkText_2TAc2",
+          "linkregionbox_LinkRegionButtonContainer_3a5Ll",
+        DialogButton: "linkregionbox_DialogButton_3c_7t",
+        LinkRegionInfo: "linkregionbox_LinkRegionInfo_5q1Dz",
+        LinkText: "linkregionbox_LinkText_27FTj",
       };
     },
-    MnIK: function (t, e, i) {
+    15396: (t, e, i) => {
       "use strict";
-      i.d(e, "a", function () {
-        return c;
-      });
-      var o = i("mrSG"),
-        n = i("q1tI"),
-        s = i("opsS"),
-        r = i("lypr");
+      i.d(e, { Y: () => c });
+      var o = i(70655),
+        n = i(67294),
+        s = i(22975),
+        r = i(54452);
       class c extends n.Component {
         constructor() {
           super(...arguments),
@@ -84,16 +82,16 @@
               style: c,
               mode: l,
             } = t,
-            a = Object(o.c)(t, [
+            h = (0, o._T)(t, [
               "placeholderWidth",
               "placeholderHeight",
               "onRender",
               "style",
               "mode",
             ]),
-            h = this.state.bRenderChildren;
+            a = this.state.bRenderChildren;
           let g = c;
-          if (!h) {
+          if (!a) {
             const t = this.state.nPrevRenderWidth || e,
               o = this.state.nPrevRenderHeight || i;
             (void 0 === o && void 0 === t) ||
@@ -104,34 +102,32 @@
           }
           const d = this.BLoadAndUnload() ? "repeated" : "once";
           return n.createElement(
-            r.a,
-            Object.assign({ ref: this.m_refContainer, style: g }, a, {
+            r.U,
+            Object.assign({ ref: this.m_refContainer, style: g }, h, {
               onVisibilityChange: this.OnVisibilityChange,
               trigger: d,
             }),
-            h && this.props.children
+            a && this.props.children
           );
         }
       }
-      Object(o.b)([s.b], c.prototype, "OnVisibilityChange", null);
+      (0, o.gn)([s.ak], c.prototype, "OnVisibilityChange", null);
     },
-    XOvi: function (t, e, i) {
+    57148: (t, e, i) => {
       "use strict";
-      i.d(e, "a", function () {
-        return m;
-      });
+      i.d(e, { l: () => m });
       var o,
-        n = i("mrSG"),
-        s = i("q1tI"),
-        r = i("opsS"),
-        c = i("TyAF"),
-        l = i("qiKp"),
-        a = i("TLQK"),
-        h = i("Mgs7"),
-        g = i("6Y59"),
-        d = i("FdXL"),
+        n = i(70655),
+        s = i(67294),
+        r = i(22975),
+        c = i(29323),
+        l = i(99533),
+        h = i(41311),
+        a = i(48341),
+        g = i(95598),
+        d = i(35944),
         p = i.n(d),
-        u = i("YyVH");
+        u = i(48899);
       !(function (t) {
         (t.topleft = "topleft"),
           (t.top = "top"),
@@ -148,7 +144,7 @@
           super(t),
             (this.m_fnMouseUp = null),
             (this.m_fnMouseMove = null),
-            (this.m_listeners = new l.c()),
+            (this.m_listeners = new l.G_()),
             (this.m_strDescription = ""),
             (this.m_aspectRatio = 1),
             (this.state = {
@@ -256,13 +252,13 @@
                 });
                 break;
               case o.middle: {
-                const e = Object(u.a)(
+                const e = (0, u.Lh)(
                     this.CalcLeftEdge(t.clientX),
                     0,
                     100 - this.state.curWidthPct
                   ),
                   i = 100 - (e + this.state.curWidthPct),
-                  o = Object(u.a)(
+                  o = (0, u.Lh)(
                     this.CalcTopEdge(t.clientY),
                     0,
                     100 - this.state.curHeightPct
@@ -300,12 +296,12 @@
               void 0 !== t.curRightPosPct
                 ? t.curRightPosPct
                 : this.state.curRightPosPct,
-            s = Object(u.a)(
+            s = (0, u.Lh)(
               100 - n - o,
               this.props.widthMinPct || 0,
               this.props.widthMaxPct || 100
             ),
-            r = Object(u.a)(
+            r = (0, u.Lh)(
               100 - i - e,
               this.props.heightMinPct || 0,
               this.props.heightMaxPct || 100
@@ -350,20 +346,20 @@
           );
         }
         CalcLeftEdge(t) {
-          return Object(u.a)(this.GetXPercent(t), 0, 100);
+          return (0, u.Lh)(this.GetXPercent(t), 0, 100);
         }
         CalcRightEdge(t) {
-          return Object(u.a)(
+          return (0, u.Lh)(
             100 - (this.GetXPercent(t) + this.state.curWidthPct),
             0,
             100
           );
         }
         CalcTopEdge(t) {
-          return Object(u.a)(this.GetYPercent(t), 0, 100);
+          return (0, u.Lh)(this.GetYPercent(t), 0, 100);
         }
         CalcBottomEdge(t) {
-          return Object(u.a)(
+          return (0, u.Lh)(
             100 - (this.GetYPercent(t) + this.state.curHeightPct),
             0,
             100
@@ -390,7 +386,7 @@
             this.m_listeners.Unregister();
         }
         HandleDelete() {
-          return Object(n.a)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             this.props.deleteFn && this.props.deleteFn(this.props.index);
           });
         }
@@ -430,10 +426,10 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%",
             },
-            e = p.a.LinkRegionDragBox;
+            e = p().LinkRegionDragBox;
           return (
             null !== this.state.EdgeDown &&
-              (e += ` ${p.a.EdgeDown} ` + p.a[this.state.EdgeDown]),
+              (e += ` ${p().EdgeDown} ` + p()[this.state.EdgeDown]),
             s.createElement(
               "div",
               {
@@ -444,29 +440,29 @@
               },
               s.createElement(
                 "div",
-                { className: p.a.LinkRegionGridBox },
+                { className: p().LinkRegionGridBox },
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.TopLeft}`,
+                  className: `${p().LinkRegionEdge} ${p().TopLeft}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.topleft);
                   },
                   draggable: !1,
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.Top}`,
+                  className: `${p().LinkRegionEdge} ${p().Top}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.top);
                   },
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.TopRight}`,
+                  className: `${p().LinkRegionEdge} ${p().TopRight}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.topright);
                   },
                   draggable: !1,
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.Left}`,
+                  className: `${p().LinkRegionEdge} ${p().Left}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.left);
                   },
@@ -475,7 +471,7 @@
                 s.createElement(
                   "div",
                   {
-                    className: `${p.a.LinkRegionEdge} ${p.a.Middle}`,
+                    className: `${p().LinkRegionEdge} ${p().Middle}`,
                     onMouseDown: (t) => {
                       this.OnMouseDown(t, o.middle);
                     },
@@ -485,51 +481,51 @@
                     s.createElement(
                       "div",
                       {
-                        className: p.a.LinkRegionDelete,
+                        className: p().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      s.createElement(g.Eb, null)
+                      s.createElement(g.pVO, null)
                     ),
                   !this.props.bDisableLink &&
                     s.createElement(
                       "div",
                       {
-                        className: p.a.LinkRegionSettings,
+                        className: p().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      s.createElement(g.U, null)
+                      s.createElement(g.pkz, null)
                     ),
                   s.createElement(
                     "div",
-                    { className: p.a.LinkText },
+                    { className: p().LinkText },
                     " ",
                     this.m_strDescription,
                     " "
                   )
                 ),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.Right}`,
+                  className: `${p().LinkRegionEdge} ${p().Right}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.right);
                   },
                   draggable: !1,
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.BottomLeft}`,
+                  className: `${p().LinkRegionEdge} ${p().BottomLeft}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.bottomleft);
                   },
                   draggable: !1,
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.Bottom}`,
+                  className: `${p().LinkRegionEdge} ${p().Bottom}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.bottom);
                   },
                   draggable: !1,
                 }),
                 s.createElement("div", {
-                  className: `${p.a.LinkRegionEdge} ${p.a.BottomRight}`,
+                  className: `${p().LinkRegionEdge} ${p().BottomRight}`,
                   onMouseDown: (t) => {
                     this.OnMouseDown(t, o.bottomright);
                   },
@@ -539,46 +535,46 @@
               this.state.bEditingLink &&
                 s.createElement(
                   "div",
-                  { className: p.a.LinkRegionInfo },
-                  s.createElement(h.A, {
-                    className: p.a.LinkRegionInput,
+                  { className: p().LinkRegionInfo },
+                  s.createElement(a.II, {
+                    className: p().LinkRegionInput,
                     type: "text",
                     name: "link_url",
                     value: this.state.text_link_url,
-                    label: Object(a.f)("#SteamTV_LinkURL"),
+                    label: (0, h.Xx)("#SteamTV_LinkURL"),
                     placeholder: "https://www.example.com",
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
                   }),
-                  s.createElement(h.A, {
-                    className: p.a.LinkRegionInput,
+                  s.createElement(a.II, {
+                    className: p().LinkRegionInput,
                     type: "text",
                     name: "link_description",
                     value: this.state.text_link_description,
-                    label: Object(a.f)("#SteamTV_LinkDescription"),
-                    placeholder: Object(a.f)(
+                    label: (0, h.Xx)("#SteamTV_LinkDescription"),
+                    placeholder: (0, h.Xx)(
                       "#SteamTV_LinkDescription_Placeholder"
                     ),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
                   s.createElement(
                     "div",
-                    { className: p.a.LinkRegionButtonContainer },
+                    { className: p().LinkRegionButtonContainer },
                     s.createElement(
-                      h.e,
+                      a.zx,
                       {
                         disabled: !this.state.valid_link,
                         onClick: this.OnSaveLink,
                       },
                       " ",
-                      Object(a.f)("#Button_OK"),
+                      (0, h.Xx)("#Button_OK"),
                       " "
                     ),
                     s.createElement(
-                      h.e,
+                      a.zx,
                       { onClick: this.OnEditLink },
                       " ",
-                      Object(a.f)("#Button_Cancel")
+                      (0, h.Xx)("#Button_Cancel")
                     )
                   )
                 )
@@ -586,26 +582,24 @@
           );
         }
       };
-      Object(n.b)([r.b], m.prototype, "LinkRegionBoxRef", null),
-        Object(n.b)([r.b], m.prototype, "OnMouseDown", null),
-        Object(n.b)([r.b], m.prototype, "OnMouseMove", null),
-        Object(n.b)([r.b], m.prototype, "OnMouseUp", null),
-        Object(n.b)([r.b], m.prototype, "HandleDelete", null),
-        Object(n.b)([r.b], m.prototype, "OnSetLinkURLChange", null),
-        Object(n.b)([r.b], m.prototype, "OnSetLinkDescriptionChange", null),
-        Object(n.b)([r.b], m.prototype, "OnSaveLink", null),
-        Object(n.b)([r.b], m.prototype, "OnEditLink", null),
-        (m = Object(n.b)([c.a], m));
+      (0, n.gn)([r.ak], m.prototype, "LinkRegionBoxRef", null),
+        (0, n.gn)([r.ak], m.prototype, "OnMouseDown", null),
+        (0, n.gn)([r.ak], m.prototype, "OnMouseMove", null),
+        (0, n.gn)([r.ak], m.prototype, "OnMouseUp", null),
+        (0, n.gn)([r.ak], m.prototype, "HandleDelete", null),
+        (0, n.gn)([r.ak], m.prototype, "OnSetLinkURLChange", null),
+        (0, n.gn)([r.ak], m.prototype, "OnSetLinkDescriptionChange", null),
+        (0, n.gn)([r.ak], m.prototype, "OnSaveLink", null),
+        (0, n.gn)([r.ak], m.prototype, "OnEditLink", null),
+        (m = (0, n.gn)([c.Pi], m));
     },
-    lypr: function (t, e, i) {
+    54452: (t, e, i) => {
       "use strict";
-      i.d(e, "a", function () {
-        return c;
-      });
-      var o = i("mrSG"),
-        n = i("q1tI"),
-        s = i("X3Ds"),
-        r = i("opsS");
+      i.d(e, { U: () => c });
+      var o = i(70655),
+        n = i(67294),
+        s = i(53622),
+        r = i(22975);
       class c extends n.Component {
         constructor() {
           super(...arguments),
@@ -667,7 +661,7 @@
             (this.m_observer.observe(e), (this.m_elTracked = e));
         }
         FindScrollableAncestor(t) {
-          return s.l(t, (t) => {
+          return s.Jk(t, (t) => {
             const e = this.props.bHorizontal
               ? window.getComputedStyle(t).overflowX
               : window.getComputedStyle(t).overflowY;
@@ -698,7 +692,7 @@
               trigger: s,
               bHorizontal: r,
             } = t,
-            c = Object(o.c)(t, [
+            c = (0, o._T)(t, [
               "onVisibilityChange",
               "rootMargin",
               "trigger",
@@ -711,7 +705,7 @@
           );
         }
       }
-      Object(o.b)([r.b], c.prototype, "OnIntersection", null);
+      (0, o.gn)([r.ak], c.prototype, "OnIntersection", null);
     },
   },
 ]);

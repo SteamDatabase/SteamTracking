@@ -1190,7 +1190,7 @@
         xL: () => m,
       });
       var i = t(90666);
-      t(37301);
+      t(92398);
       function n(e) {
         let r = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",

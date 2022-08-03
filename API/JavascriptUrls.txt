@@ -610,6 +610,7 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
+${LOGIN_BASE_URL}jwt/checkdevice
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}

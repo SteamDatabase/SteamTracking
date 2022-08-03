@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7398832";
+var CLSTAMP = "7413055";
 !(function (e) {
   function t(t) {
     for (
@@ -149,35 +149,35 @@ var CLSTAMP = "7398832";
                 36: "9777a68ecddfc269d5bb",
                 37: "04ba25c68c3b0df5a784",
                 38: "22a5a4c7e4378bd531f5",
-                39: "852e1791e789071ff0f8",
-                40: "b12e9e9db440457ae048",
-                41: "677a9bcc13329f28e0e5",
-                42: "7de544fd0729f9cd9f75",
-                43: "fda9cc12b350f738e3b5",
-                44: "77a80687a2e458385e54",
-                45: "f2399229f171563c777c",
-                46: "c983edf320ca274ec2e2",
-                47: "ef8c546d1d563692c505",
-                48: "16d3fc6669481377796e",
-                49: "0e89446d2f50b7d9cd2b",
-                50: "42a0d6fa61bc2626f96f",
-                51: "7e11f6b0a7cb18bad746",
-                52: "325809b6b18a622797d6",
-                53: "f94ed7a2a451d1b966a2",
-                54: "f472367936974a1f49e6",
-                55: "64213d27242350e0b580",
-                56: "6d01b8532f2dec24e5d9",
-                57: "b16bf79f382c3a863210",
-                58: "60c73f35de5d751e0e4b",
-                59: "eae17d6c18038567cb04",
-                60: "ba23a3aa29af67ea1fcd",
-                61: "51f858f49901eb468cd3",
-                62: "ff07b461965c8db70c34",
-                63: "263e2606ce3345b34f74",
-                64: "9270cc355f62549c1bf6",
-                65: "76d98f18031fb5762d5a",
-                66: "d3ca23b14ad670f26ec5",
-                67: "49228b6cf128fbe0f54f",
+                39: "3b7180019d5cf3ff0928",
+                40: "e06672aa4acffc6766e8",
+                41: "515092c0a14cad5f64f0",
+                42: "8ea4dc452c6bb362ed9a",
+                43: "901a5cfb7ce4baba67f5",
+                44: "6d21737f19baaf550816",
+                45: "2268240d44d553a0bbdf",
+                46: "0423bb5649c9e1793569",
+                47: "281fc74c0d8cfcde3708",
+                48: "eef305c6c94429dd7476",
+                49: "b39e684d89d0cb725070",
+                50: "a33387268e78cf5218b7",
+                51: "12bcd0bbc706ca5d2394",
+                52: "fc60291394a87b3e9b9f",
+                53: "460faaa5afb83cf53dd1",
+                54: "7a969ff6c520a03215bf",
+                55: "fe0b5b12724c75b3ebd2",
+                56: "d927d4e7399b27ecdfee",
+                57: "6107e4f4897086b7fd48",
+                58: "f35cc35b35d8dda8e2da",
+                59: "562359308819fd32cf1f",
+                60: "12f7b45b4037c273a56c",
+                61: "26d3c75b75a4db718793",
+                62: "aec69bf114a78901fd92",
+                63: "e77d46d4e889ea754e3a",
+                64: "d780679896fdc594f1f5",
+                65: "3c7c1315f4e688fa9171",
+                66: "5a0d9c0df2c0f0217063",
+                67: "52e3e0c429271269351b",
               }[e]
             );
           })(e));
@@ -767,6 +767,7 @@ var CLSTAMP = "7398832";
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
+        IN_MOBILE_WEBVIEW: !1,
         IN_TENFOOT: !1,
         PLATFORM: "",
         SNR: "",
@@ -2071,7 +2072,7 @@ var CLSTAMP = "7398832";
       n.d(t, "PchLanguageToELanguage", function () {
         return r.f;
       });
-    n("B5xR"), n("CqEE");
+    n("B5xR"), n("CqEE"), n("igqQ");
     var i = n("bbDT");
     n.d(t, "BIsChinaRealm", function () {
       return i.a;
@@ -2465,6 +2466,10 @@ var CLSTAMP = "7398832";
         featuresEnabled: {},
       };
     }
+  },
+  igqQ: function (e, t, n) {
+    "use strict";
+    n("0N1H");
   },
   l4ti: function (e, t, n) {
     "use strict";

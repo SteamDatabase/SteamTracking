@@ -1,79 +1,72 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(window.webpackJsonp = window.webpackJsonp || []).push([
-  [21],
+"use strict";
+(self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
+  [238],
   {
-    "/u7D": function (e, s, r) {
-      "use strict";
-      r.r(s),
-        r.d(s, "default", function () {
-          return i;
-        });
-      var a = r("q1tI"),
-        t = r("tPo2");
-      r("OU48");
-      function i(e) {
-        return a.createElement("div", null, a.createElement(t.a, null));
-      }
-    },
-    "0OaU": function (e, s, r) {
-      "use strict";
-      r.d(s, "a", function () {
-        return p;
-      });
-      var a = r("q1tI"),
-        t = r.n(a),
-        i = r("6Y59"),
-        n = r("2i24"),
-        o = r.n(n);
-      class p extends t.a.PureComponent {
+    13596: (e, s, r) => {
+      r.d(s, { V: () => l });
+      var t = r(67294),
+        a = r(95598),
+        i = r(50732),
+        p = r.n(i);
+      class l extends t.PureComponent {
         constructor(e) {
           super(e);
         }
         AddSizeClass(e) {
           "small" == this.props.size
-            ? e.push(o.a.throbber_small)
+            ? e.push(p().throbber_small)
             : "medium" == this.props.size
-            ? e.push(o.a.throbber_medium)
+            ? e.push(p().throbber_medium)
             : "xlarge" == this.props.size
-            ? e.push(o.a.throbber_xlarge)
+            ? e.push(p().throbber_xlarge)
             : "xxlarge" == this.props.size
-            ? e.push(o.a.throbber_xxlarge)
-            : e.push(o.a.throbber_large);
+            ? e.push(p().throbber_xxlarge)
+            : e.push(p().throbber_large);
         }
         render() {
-          let e = [o.a.LoadingWrapper, "SteamLogoThrobber"];
+          let e = [p().LoadingWrapper, "SteamLogoThrobber"];
           this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(o.a.noString),
+            void 0 === this.props.string && e.push(p().noString),
             this.props.className && e.push(this.props.className),
-            this.props.static && e.push(o.a.Static);
-          let s = t.a.createElement(
+            this.props.static && e.push(p().Static);
+          let s = t.createElement(
             "div",
             { className: e.join(" ") },
-            t.a.createElement(
+            t.createElement(
               "div",
-              { className: o.a.Throbber },
-              t.a.createElement(i.rb, { className: o.a.base }),
-              t.a.createElement(i.rb, { className: o.a.blur })
+              { className: p().Throbber },
+              t.createElement(a.wUs, { className: p().base }),
+              t.createElement(a.wUs, { className: p().blur })
             )
           );
-          return t.a.createElement(
+          return t.createElement(
             "div",
             {
               className:
                 "center" == this.props.position
-                  ? o.a.throbber_center_wrapper
+                  ? p().throbber_center_wrapper
                   : "",
             },
             s,
             Boolean(this.props.string) &&
-              t.a.createElement(
+              t.createElement(
                 "div",
-                { className: o.a.ThrobberText },
+                { className: p().ThrobberText },
                 this.props.string
               )
           );
         }
+      }
+    },
+    21668: (e, s, r) => {
+      r.r(s), r.d(s, { default: () => i });
+      var t = r(67294),
+        a = r(77817);
+      r(14974);
+      function i(e) {
+        return t.createElement("div", null, t.createElement(a.ZP, null));
       }
     },
   },
