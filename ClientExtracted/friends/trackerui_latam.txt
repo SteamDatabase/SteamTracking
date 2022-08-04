@@ -590,7 +590,7 @@
 "friends_ignoregrouprequest" "Ignorar"
 "friends_tooltip_voicesettings" "Ver opciones de voz"
 "Friends_ViewGameStorePage"		"Ver página del juego en la tienda"
-"Friends_ViewGameHub"		"Ver punto de encuentro"
+"Friends_ViewGameHub"		"Ver centro de contenido"
 "Friends_WatchGame"			"Ver partida"
 
 "friends_game_invite"		"%friend% te ha invitado a jugar"

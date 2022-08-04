@@ -2380,6 +2380,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_status_decrypting"			"Puretaan salausta: "
 "Steam_status_validating"			"Vahvistetaan: "
 "Steam_status_verifying"			"Vahvistetaan: "
+"Steam_status_finalizing"			"Viimeistellään"
 
 "steam_status_launching"				"Käynnistetään"
 "steam_status_launching_progress"		"Käynnistetään: "
@@ -4521,6 +4522,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_SettingsControllerDesktopConfig"		"Työpöydän asetukset"
 "Steam_SettingsControllerGuideConfig"		"Opas-pikanäppäinten asetukset"
 "Steam_SteamInputDisableNotifications"		"Poista ohjaimiin liittyvät ilmoitukset käytöstä työpöydän asiakasohjelmasta."
+"Steam_SteamInputDisableDualSenseUpdates"	"Poista DualSense-ohjainten ohjelmistopäivitysten ilmoitukset käytöstä työpöydän asiakasohjelmasta."
 
 "Steam_Settings_ShaderCache"			"Varjostimen välimuisti"
 "Steam_Settings_ShaderCache_Info"		"Varjostimen esivälimuistiin tallentamalla Steam voi ladata esikäännettyjä grafiikkasuorittimen varjostimia, jotka sopivat järjestelmäsi kokoonpanoon. Tämä mahdollistaa Vulkan- ja OpenGL-pelien nopeammat lataukset ja parantaa pelinaikaisen ruudunpäivitysnopeuden vakautta.\n\nJos käytössä, Steam kerää tarvittaessa varjostimet järjestelmästäsi. Ominaisuuden käyttö saattaa lisätä massamuistiin tehtyjen kirjoitusten määrää ja kaistan käyttöä."
@@ -4810,6 +4812,10 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_XboxDriverInstall_Success"	"Ajuri päivitetty ja käytössä, kun tietokone käynnistetään uudelleen."
 "Steam_XboxDriverInstall_ServiceFailure"	"Ajurin päivitys epäonnistui. Käytätkö Steamiä normaalina käyttäjänä? Onko Steam-palvelu käytössä ja ajan tasalla?"
 "Steam_XboxDriverInstall_Failure"	"Ajurin päivitys epäonnistui. Virhe: %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Uusi ohjainohjelmisto saatavilla"
+"Steam_DualSense_FirmwareUpdate_Text"	"Uusi ohjainohjelmisto on saatavilla langattomalle DualSense™-ohjaimelle. Klikkaa alla olevaa linkkiä päästäksesi Sonyn ohjelmistopäivitysten sivulle:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Älä näytä tätä uudelleen"
 
 "DownloadRegion_default"				 "Tuntematon"
 "DownloadRegion_us_chicago"			"Yhdysvallat – Chicago"

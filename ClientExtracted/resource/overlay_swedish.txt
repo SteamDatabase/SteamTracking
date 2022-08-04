@@ -142,7 +142,7 @@
 "Overlay_FriendChangeConfirmation_Button_Add"				"Lägg till vän"
 "Overlay_FriendChangeConfirmation_Reason_Remove"			"Vill du verkligen ta bort %persona% från din kompislista?"
 "Overlay_FriendChangeConfirmation_Button_Remove"			"Ta bort vän"
-"Overlay_FriendChangeConfirmation_Reason_RequestAccept"		"Vill du bekräfta vänförfrågan från %persona% och lägga till denne på din kompislista?"
+"Overlay_FriendChangeConfirmation_Reason_RequestAccept"		"Vill du acceptera vänförfrågan från %persona% och lägga till hen på din vänlista?"
 "Overlay_FriendChangeConfirmation_Button_RequestAccept"		"Bekräfta förfrågan"
 "Overlay_FriendChangeConfirmation_Reason_RequestIgnore"		"Vill du ignorera vänförfrågningar från %persona%?"
 "Overlay_FriendChangeConfirmation_Button_RequestIgnore"		"Ignorera förfrågan"

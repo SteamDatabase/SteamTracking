@@ -22,6 +22,13 @@ enum EStoreDiscoveryQueueType {
 	k_EStoreDiscoveryQueueTypeMAX = 15;
 }
 
+enum EPlaytestStatus {
+	k_ETesterStatusNone = 0;
+	k_ETesterStatusPending = 1;
+	k_ETesterStatusInvited = 2;
+	k_ETesterStatusGranted = 3;
+}
+
 enum EUserReviewScorePreference {
 	k_EUserReviewScorePreference_Unset = 0;
 	k_EUserReviewScorePreference_IncludeAll = 1;
@@ -151,6 +158,35 @@ message CStore_SkipDiscoveryQueueItem_Request {
 message CStore_SkipDiscoveryQueueItem_Response {
 }
 
+message CStore_GetUserGameInterestState_Request {
+	optional uint32 appid = 1;
+	optional uint32 store_appid = 2;
+	optional uint32 beta_appid = 3;
+}
+
+message CStore_GetUserGameInterestState_Response {
+	message InQueue {
+		optional .EStoreDiscoveryQueueType type = 1 [default = k_EStoreDiscoveryQueueTypeNew];
+		optional bool skipped = 2;
+		optional int32 items_remaining = 3;
+		optional uint32 next_appid = 4;
+		optional uint32 experimental_cohort = 5;
+	}
+
+	optional bool owned = 1;
+	optional bool wishlist = 2;
+	optional bool ignored = 3;
+	optional bool following = 4;
+	repeated .EStoreDiscoveryQueueType in_queues = 5;
+	repeated .EStoreDiscoveryQueueType queues_with_skip = 6 [(description) = "Discovery queue types where the user has skipped this game."];
+	repeated int32 queue_items_remaining = 7 [(description) = "# of items remaining in the discovery queue - matches the same order as in_queues"];
+	repeated uint32 queue_items_next_appid = 8 [(description) = "the next appid in the queue - matches the same order as in_queues"];
+	optional bool temporarily_owned = 9 [(description) = "The user owns the game temporarily, eg a rental or free weekend"];
+	repeated .CStore_GetUserGameInterestState_Response.InQueue queues = 10;
+	optional int32 ignored_reason = 11 [(description) = "The ERecommendationIgnoreReason why the user ignored the app"];
+	optional .EPlaytestStatus beta_status = 12 [default = k_ETesterStatusNone, (description) = "User interest or membership in the playtest for this app if any"];
+}
+
 message CStore_GetStorePreferences_Request {
 }
 
@@ -258,6 +294,10 @@ service Store {
 
 	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response) {
 		option (method_description) = "Skip an item in the user's queue.";
+	}
+
+	rpc GetUserGameInterestState (.CStore_GetUserGameInterestState_Request) returns (.CStore_GetUserGameInterestState_Response) {
+		option (method_description) = "Get information about a user's relationship to a game - ownership, wishlist, discovery queue state, etc.";
 	}
 
 	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response) {

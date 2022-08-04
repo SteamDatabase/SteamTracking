@@ -113,7 +113,6 @@ ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
-${COMMUNITY_BASE_URL}actions/ajaxgetbadgeinfo
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
@@ -194,7 +193,6 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}my
-${COMMUNITY_BASE_URL}my/badges
 ${COMMUNITY_BASE_URL}my/edit/avatar
 ${COMMUNITY_BASE_URL}my/edit/background
 ${COMMUNITY_BASE_URL}my/edit/favoritebadge
@@ -257,7 +255,6 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
-${COMMUNITY_CDN_URL}public/images/badges/generic/RacingSale2022_80.png
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
 ${COMMUNITY_CDN_URL}public/images/sharedfiles/guides/
@@ -1245,6 +1242,7 @@ ${m_strWebAPIBaseURL}I${}Service/${}/v${}
 ${override_url}${}
 ${page_url}${m_sCurrentPage}
 ${page_url}?activetab=${id}
+${preview_url}${}
 ${processURL}?action=kick&memberId=${steamId}
 ${processURL}?action=leaveGroup&groupId=${groupId}&sessionID=${}
 ${profileUrl}/ajaxcraftbadge/

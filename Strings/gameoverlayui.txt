@@ -1,20 +1,18 @@
 "
 __TEXT
-.
-.
+@.
+@.
 __text
 __TEXT
-@p
-@p
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
+P"'
+P"'
 __gcc_except_tab__TEXT
-8)
-8)
 __const
 __TEXT
 __objc_methname
@@ -25,19 +23,21 @@ __TEXT
 (
 __unwind_info
 __TEXT
+<;-
+<;-
 __eh_frame
 __TEXT
+00.
+00.
 __DATA
-.
-.
+@.
+@.
 __nl_symbol_ptr
 __DATA
-.
-.
+@.
+@.
 __got
 __DATA
-.
-.
 __la_symbol_ptr
 __DATA
 
@@ -48,23 +48,13 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-nB
-nB
 __objc_imageinfo__DATA
-(nB
-(nB
 __objc_const
 __DATA
-0nB
-0nB
 __objc_selrefs
 __DATA
-PoB
-PoB
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-xrB
-xrB
 __objc_ivar
 __DATA
 __objc_data
@@ -85,12 +75,16 @@ __bss
 __DATA
 __common
 __DATA
+`^C
 H
 __LINKEDIT
+C
 
 @
 @loader_path/gameoverlayui.dylib
 "
+C
+6C
 P
 k
 l
@@ -139,9 +133,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-:C
-@G
+zC
+HG
 )
+`?D
 C
 23IClientParentalSettings
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
@@ -8121,6 +8116,13 @@ N4vgui9WrapPanelE
 _
 14ConCommandBase
 6ConVar
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+7CUtlMapIybi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+7CUtlMapI10CUtlStringbi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CDirWatcher
 19CDirContentsWatcher
 11CPathString
@@ -8218,6 +8220,8 @@ ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -8355,6 +8359,7 @@ public/RefreshLoginDialog.res
 #Steam_RefreshEnterTwoFactorCode
 #Steam_RefreshLogin_RateLimited
 #Steam_RefreshLogin_InvalidPassword
+#Steam_RefreshLogin_PurchaseSecurity
 OnLogonFailure: %u
 #Steam_Login_NeedTwoFactorTitle
 #Steam_ErrorLoginNeedTwoFactor
@@ -9850,8 +9855,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jul 26 2022
-11:54:29
+Aug  4 2022
+12:59:10
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13192,8 +13197,15 @@ m_vecCallbacks.Count() == 0
 pDefaultValue
 console
 Attempted to change replicated CVar when you are not the GM
+ConVar
+m_configOverride
+m_pVecUlValue
+m_pVecStringValue
+m_vecCallbacks
 ConCommand '%s' not currently supported in config file
 ,
+m_p
+Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
@@ -13826,13 +13838,10 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+b%
+`&
 0
-'B
-$B
-g-
-B
-B
-B
+2B
 Ic
 &
 p
@@ -13840,10 +13849,8 @@ p
 0
 p
 0
-NA
-7-
-Z%
-A%
+&
+V%
 j
 j
 j
@@ -13853,15 +13860,14 @@ j
 j
 j
 j
+&
 0
 %
 %
-$
-$
-/%
 p
 0
-t@
+j
+j
 j
 j
 j
@@ -13869,13 +13875,7 @@ j
 j
 j
 %
-%
-j
-j
-#
-#
-#
-G$
+o$
 #
 j
 j
@@ -13925,16 +13925,12 @@ j
 j
 j
 j
-@
-@
-@
+$
 $
 j
 j
 j
 j
-8$
-1$
 j
 j
 j
@@ -13954,14 +13950,16 @@ j
 j
 j
 j
-.
+$
+$
+$
+$
+j#
 0
-I"
+T#
+.
 A9]
-#
 d
-#
-#
 j
 j
 j
@@ -13974,17 +13972,19 @@ j
 j
 j
 j
-#
-*
 
 
+?
+?
+?
+?
 
 
 
 @
 
 0
-*#
+.
 .
 p
 0
@@ -14007,18 +14007,20 @@ p
 p
 p
 p
-U"
-U"
-R"
-\!
+#
+A"
+k)
 @
 =
 "
 
 )
+s)
+i.
 0
 0
 \
+J"
 j
 j
 j
@@ -14048,24 +14050,32 @@ j
 j
 j
 j
+)
 "
 "
 "
 "
-<!
-8/
-?(
-=
+"
+5!
+<0
 Hi
+=
+=
+=
+=
 !
 !
 !
-*(
+!
+J
 j
 j
 j
 j
 j
+!
+!
+R<
 j
 j
 j
@@ -14080,16 +14090,15 @@ j
 j
 j
 0
->
+!
+!
 p
 0
-*
-&
-1
-1
+!
 #
 "
 #
+'
 #
 j
 j
@@ -14115,6 +14124,7 @@ j
 j
 j
 j
+<
 0
 0
 AT=
@@ -14125,8 +14135,7 @@ AT=
 D
 @
 @
-1
-#
+b
 @
 Hc
 Hc
@@ -14162,7 +14171,7 @@ V
 =
 =
 @
-)
+U5
 @
 M9e
 @
@@ -14359,13 +14368,13 @@ P
 @
 @
 "
-!
-!
+A
 
-~(
-Q(
 d
-j
+m
+F
+'
+
 
 
 
@@ -14373,11 +14382,8 @@ j
 
 
 A+M
-t7f9Ge'
-t7f9*]'
-'
-'
-'
+t7f9gk'
+t7f9Jc'
 j
 j
 j
@@ -14386,20 +14392,19 @@ j
 j
 =
 0
-0
-)
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+J
 j
 
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 
 K
 
@@ -14421,7 +14426,6 @@ j
 j
 j
 
-u%
 d
 &
 &
@@ -14432,6 +14436,7 @@ A+4$A+u
 =
 =
 =
+
 @
 j
 j
@@ -14493,9 +14498,6 @@ j
 j
 j
 j
-!
-!
-!
 j
 j
 j
@@ -14556,6 +14558,7 @@ j
 j
 j
 j
+J
 @
 @
 &
@@ -14629,6 +14632,7 @@ d
 =*.*
 =
 @
+i
 @
 @
 @

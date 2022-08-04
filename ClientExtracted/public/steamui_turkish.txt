@@ -130,7 +130,7 @@ Bu işlem bir dakikadan az sürer."
 
 "Steam_Login_Title"		"Steam Girişi"
 "Steam_Login_CreateNewAccount"	"YENİ HESAP OLUŞTUR..."
-"Steam_Login_RetrievePassword"	"Giriş yapamıyorum..."
+"Steam_Login_RetrievePassword"	"GİRİŞ YAPAMIYORUM..."
 "Steam_Login_NoAccount"		"Steam hesabınız yok mu?"
 "Steam_Login_ForgotPassword"	"Giriş yaparken yardım mı lazım?"
 "Steam_Login_CapsLockWarning"	"Caps Lock Açık"
@@ -1745,7 +1745,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "steam_menu_account_view_profile" "Profilimi görüntüle"
 "steam_menu_account_preferences" "Mağaza tercihleri"
 "steam_menu_account_wallet" "Cüzdanımı görüntüle"
-"steam_menu_account_logout" "Hesaptan çıkış yap:"
+"steam_menu_account_logout" "Oturumu kapat:"
 
 
 "steam_store"		"Mağaza"
@@ -2383,6 +2383,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_status_decrypting"			"Çözülüyor:"
 "Steam_status_validating"			"Doğrulanıyor: "
 "Steam_status_verifying"			"Onaylanıyor: "
+"Steam_status_finalizing"			"Bitiriliyor"
 
 "steam_status_launching"				"Başlatılıyor"
 "steam_status_launching_progress"		"Başlatılıyor: "
@@ -3570,7 +3571,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 
 "Steam_GetTwoFactorCode_Title" "Steam Guard - Bilgisayar Yetkilendirmesi Gerekiyor"
 "Steam_GetTwoFactorCode_EnterCode" "Steam Guard kodum:"
-"Steam_GetTwoFactorCode_EnterCodeDetails" "Ek bir güvenlik önlemi olarak, telefonunuzdaki Steam Mobil Kimlik Doğrulayıcısından mevcut Steam Guard kodunu girmeniz gerekecektir."
+"Steam_GetTwoFactorCode_EnterCodeDetails" "Ek bir güvenlik önlemi olarak, telefonunuzdaki Steam mobil kimlik doğrulayıcısından mevcut Steam Guard kodunu girmeniz gereklidir."
 "Steam_GetTwoFactorCode_WrongCode" "Üzgünüz, bu doğru değil."
 "Steam_GetTwoFactorCode_WrongCodeDetails" "Lütfen mobil uygulamadan yeni bir kod girin."
 "Steam_GetTwoFactorCode_ResultFailure" "Steam sunucularıyla bağlantı kurulamadı."
@@ -4180,7 +4181,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_subnav_featured"		"Öne Çıkanlar"
 "steam_subnav_news"			"Haberler"
 "steam_subnav_recommended"	"Tavsiyeler"
-"steam_subnav_discovery_queue"		"Keşif Kuyruğu"
+"steam_subnav_discovery_queue"		"KEŞİF KUYRUĞU"
 "steam_subnav_points_shop"		"Puan Dükkânı"
 "steam_subnav_wishlist"		"İSTEK LİSTESİ"
 "steam_subnav_stats"		"İSTATİSTİKLER"
@@ -4523,6 +4524,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_SettingsControllerDesktopConfig"		"Masaüstü Yapılandırması"
 "Steam_SettingsControllerGuideConfig"		"KILAVUZ BUTONU KISAYOL YAPILANDIRMASI"
 "Steam_SteamInputDisableNotifications"		"Masaüstü istemcisindeki \"Kontrolcü Bağlandı\" bildirimleri devre dışı bırakılsın."
+"Steam_SteamInputDisableDualSenseUpdates"	"Masaüstü istemcisindeki DualSense yazılım güncellemesi bildirimleri devre dışı bırakılsın."
 
 "Steam_Settings_ShaderCache"			"Gölgelendirici Önbellekleme"
 "Steam_Settings_ShaderCache_Info"		"Gölgelendirici Önbellekleme, Steam'in sistem yapılandırmanıza uyan önceden derlenmiş GPU gölgelendiricilerini indirmesini sağlar. Bu, Vulkan ve OpenGL oyunlarının daha hızlı yüklenmesini sağlar ve oyun sırasında kare hızını artırır.\n\nEğer etkinleştirilirse, Steam gerektiğinde sisteminizden gölgelendiricileri toplayacaktır. Bu özelliği etkinleştirmek, disk ve bant genişliği kullanımı biraz artırabilir."
@@ -4813,6 +4815,10 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_XboxDriverInstall_Success"	"Sürücü başarıyla güncellendi, bilgisayarınızı yeniden başlattığınızda etkinleşecek."
 "Steam_XboxDriverInstall_ServiceFailure"	"Sürücü güncellemesi başarısız oldu. Steam normal kullanıcı hesabıyla mı açık ve Steam hizmeti çalışır durumda ve güncel mi?"
 "Steam_XboxDriverInstall_Failure"	"Sürücü güncelleme başarısız, hata = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Yeni Kontrolcü Yazılımı Mevcut"
+"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ kablosuz kontrolcünüz için kullanılabilir yeni bir yazılım var. Sony aygıt yazılımı güncelleme sayfasına gitmek için aşağıdaki bağlantıya tıklayın:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Bunu tekrar gösterme"
 
 "DownloadRegion_default"				 "Bilinmiyor"
 "DownloadRegion_us_chicago"			"ABD - Şikago"

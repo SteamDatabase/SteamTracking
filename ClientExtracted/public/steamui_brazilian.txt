@@ -2379,6 +2379,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_status_decrypting"			"Descriptografando: "
 "Steam_status_validating"			"Validando:"
 "Steam_status_verifying"			"Verificando: "
+"Steam_status_finalizing"			"Finalizando"
 
 "steam_status_launching"				"Iniciando"
 "steam_status_launching_progress"		"Iniciando:"
@@ -2624,7 +2625,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Country_YT"		"Mayotte"
 "Steam_Country_MX"		"México"
 "Steam_Country_FM"		"Estados Federados da Micronésia"
-"Steam_Country_MD"		"Moldávia, República da"
+"Steam_Country_MD"		"Moldávia"
 "Steam_Country_MC"		"Mônaco"
 "Steam_Country_MN"		"Mongólia"
 "Steam_Country_MS"		"Monserrate"
@@ -3453,7 +3454,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_VerifyEmail_Verified" " | Verificado"
 "SteamUI_VerifyEmail_Unverified" " | Não verificado"
 
-"SteamUI_ManageSecurityButton" "Gerenciar segurança de conta Steam Guard..."
+"SteamUI_ManageSecurityButton" "Gerenciar segurança da conta (Steam Guard)..."
 "SteamUI_ManageSecurity_Title" "Gerenciar Steam Guard"
 
 "SteamUI_Settings_Security_Status_Label" "Estado da segurança:"
@@ -3475,7 +3476,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_ManageSecurity_DoNothing2" "Para a sua segurança, certifique-se de que as senhas da sua conta Steam e da sua conta de e-mail são diferentes."
 
 "SteamUI_ManageSecurity_UnlockAccount_Success" "Qualquer computador ou navegador agora pode ter acesso à sua conta Steam, dados seu nome de usuário e senha."
-"SteamUI_ManageSecurity_Reenable" "Para reativar o Steam Guard, clique em \"Gerenciar segurança de conta Steam Guard\" nas configurações do Steam."
+"SteamUI_ManageSecurity_Reenable" "Para reativar o Steam Guard, clique em \"Gerenciar segurança da conta (Steam Guard)\" nas configurações do Steam."
 
 "SteamUI_ManageSecurity_CodeSent" "Uma mensagem com um código foi enviada ao seu endereço de e-mail.\nUse esse código quando iniciar a sessão em um novo computador."
 "SteamUI_ManageSecurity_OtherComputersDenied" "Todos os outros computadores não mais estão autorizados a acessar esta conta Steam sem o seu prévio consentimento via e-mail."
@@ -3483,7 +3484,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_ManageSecurity_Working" "Contatando Servidores Steam para efetuar pedido..."
 
-"SteamUI_ManageSecurity_InfoLabel" "Sua conta Steam agora está protegida pelo Steam Guard, para evitar que ela caia em mãos erradas."
+"SteamUI_ManageSecurity_InfoLabel" "Agora, a sua conta Steam está protegida pelo Steam Guard, ajudando a evitar que ela caia em mãos erradas."
 "SteamUI_ManageSecurity_InfoLabel2" "Isso significa que você precisará ter acesso a sua conta de e-mail para acessar sua conta Steam de um computador ou navegador desconhecidos."
 "SteamUI_ManageSecurity_InfoLabel3" "O Steam enviará uma mensagem ao seu endereço de e-mail na primeira vez que tentar acessar a sua conta Steam de um computador ou navegador desconhecido. Essa mensagem incluirá um código especial de acesso, que é necessário para acessar a sua conta Steam."
 "SteamUI_ManageSecurity_NothingRadio" "Manter a minha conta protegida pelo Steam Guard"
@@ -3492,7 +3493,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Desautorizar todos os outros computadores agora"
 
-"SteamUI_ManageSecurity_NotLockedInfo" "Sua conta Steam agora está protegida pelo Steam Guard, para evitar que ela caia em mãos erradas."
+"SteamUI_ManageSecurity_NotLockedInfo" "Agora, a sua conta Steam está protegida pelo Steam Guard, ajudando a evitar que ela caia em mãos erradas."
 "SteamUI_ManageSecurity_NotLockedInfo2" "Com o Steam Guard, o Steam enviará uma mensagem ao seu endereço de e-mail na primeira vez que tentar acessar a sua conta Steam de um computador ou navegador desconhecido. Essa mensagem incluirá um código especial de acesso, que é necessário para acessar a sua conta Steam."
 "SteamUI_LockAccountButton" "Proteger minha conta com o Steam Guard (Recomendado)"
 
@@ -4516,6 +4517,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_SettingsControllerDesktopConfig"		"Configuração para área de trabalho"
 "Steam_SettingsControllerGuideConfig"		"Config. de atalhos do botão central"
 "Steam_SteamInputDisableNotifications"		"Não exibir notificações de controle conectado fora do modo Big Picture."
+"Steam_SteamInputDisableDualSenseUpdates"	"Não exibir notificações de atualizações de firmware para DualSense fora do modo Big Picture."
 
 "Steam_Settings_ShaderCache"			"Sombreadores"
 "Steam_Settings_ShaderCache_Info"		"Esta opção permite que o Steam baixe sombreadores (shaders) pré-compilados da placa de vídeo previamente de acordo com as especificações do sistema, fazendo com que jogos que usem as tecnologias Vulkan e OpenGL carreguem mais rápido e tenham melhores taxas de quadros por segundo.\n\nCaso a opção seja ativada, o Steam coletará sombreadores para o seu sistema quando for necessário. Este recurso pode aumentar ligeiramente o uso de disco e da rede."
@@ -4790,8 +4792,8 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_IncorrectVRSDKWarning_Title" "Aviso"
 "Steam_IncorrectVRSDKWarning_Desc" "%launching_app% não é compatível com o headset atual. Pressione OK para iniciar mesmo assim."
 
-"Steam_VacBanOnAccount"		"Banimento(s) VAC na conta"
-"Steam_NoVacBanOnAccount"	"Sem banimentos VAC na conta"
+"Steam_VacBanOnAccount"		"banimento(s) VAC na conta"
+"Steam_NoVacBanOnAccount"	"sem banimentos VAC na conta"
 
 "Steam_NeedToRestart"		"Reinicialização necessária"
 "Steam_NeedToRestartDifferentClientLauncher" "Outra versão do Steam instalada neste computador tentou ser inicializada.\n\nPara tal, feche esta versão do Steam primeiro."
@@ -4805,6 +4807,10 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_XboxDriverInstall_Success"	"Driver atualizado com sucesso; ele será ativado após reiniciar o computador."
 "Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. O Steam está rodando sem privilégios de administrador e o serviço do Steam está rodando e atualizado?"
 "Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Novo firmware disponível para o controle"
+"Steam_DualSense_FirmwareUpdate_Text"	"Novo firmware disponível para o seu controle sem fio DualSense™. Clique no link abaixo para acessar a página de atualização de firmware da Sony:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Não exibir isso novamente"
 
 "DownloadRegion_default"				 "Desconhecida"
 "DownloadRegion_us_chicago"			"EUA — Chicago"

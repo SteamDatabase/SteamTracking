@@ -48,7 +48,6 @@
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL
- OSTypesAreCompatible
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath

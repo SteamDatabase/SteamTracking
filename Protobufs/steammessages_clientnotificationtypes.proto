@@ -25,6 +25,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_ItemAnnouncement = 20;
 	k_EClientNotificationType_HardwareSurvey = 21;
 	k_EClientNotificationType_LowDiskSpace = 22;
+	k_EClientNotificationType_BatteryTemperature = 23;
 }
 
 enum ESystemUpdateNotificationType {
@@ -138,6 +139,7 @@ message CClientNotificationGiftReceived {
 
 message CClientNotificationItemAnnouncement {
 	optional uint32 new_item_count = 1;
+	optional bool new_backpack_items = 2;
 }
 
 message CClientNotificationInboxStats {
@@ -150,4 +152,9 @@ message CClientNotificationHardwareSurveyPending {
 
 message CClientNotificationLowDiskSpace {
 	optional uint32 folder_index = 1;
+}
+
+message CClientNotificationBatteryTemperature {
+	optional uint32 temperature = 1;
+	optional string notification_type = 2;
 }

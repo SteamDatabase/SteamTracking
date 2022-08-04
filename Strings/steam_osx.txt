@@ -1,16 +1,24 @@
 H
 __PAGEZERO
 __TEXT
+<
+<
 
 __text
 __TEXT
+P
+P
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+p#2
+p#2
 __const
 __TEXT
+]3
+]3
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -22,10 +30,16 @@ __TEXT
 __unwind_info
 __TEXT
 __DATA
+<
+<
 __nl_symbol_ptr
 __DATA
+<
+<
 __got
 __DATA
+<
+<
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -35,11 +49,19 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
+0=?
+0=?
 __objc_imageinfo__DATA
+@=?
+@=?
 __objc_const
 __DATA
+H=?
+H=?
 __objc_selrefs
 __DATA
+H??
+H??
 __objc_classrefs__DATA
 __objc_superrefs__DATA
 __objc_ivar
@@ -60,14 +82,17 @@ __bss
 __DATA
 __common
 __DATA
-`,A
+{A
 H
 __LINKEDIT
-B
+@B
+@
 "
+@
+x0@
+p2@
 h%
 h
-`f@
 80
 P
 /usr/lib/dyld
@@ -106,14 +131,13 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@%@
+@e@
+:
 )
-0_@
-:(
-"(
-(
-(
+`A
+s'
 0
+C(
 (
 (
 (
@@ -121,37 +145,22 @@ h
 0
 @
 @
-?
-_6
-Q6
-@
-@
-@
-@
-$
-g.
-b.
-Hi
-Hi
-Hi
 (
+@
+@
+@
+@
+1
+1
+1
+$
+9
+Hi
+Hi
+Hi
 &
-6
-6
-6
-6
-6
-!.
-6
-6
-6
--'
-V&
-)
 '
 '
-
-%
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -1408,6 +1417,13 @@ N11SteamStdLib12ICommandLineE
 16IKeyValuesSystem
 20IUniformRandomStream
 6ConVar
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+7CUtlMapIybi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+7CUtlMapI10CUtlStringbi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CPathString
 17CFileWriterThread
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
@@ -1571,7 +1587,6 @@ N10OSXHelpers13CCompatThreadE
 12CIPRangeList
 10CUtlVectorI9IPRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI8CNetMask10CUtlMemoryIS0_EE
-14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 kvsignatures
 kvsign2
 Logger
@@ -1755,16 +1770,16 @@ $
 4
 8
 (
-3
-O
-V
-(
+4
+Q
 X
-^
-_
-k
+(
+Z
+`
+a
+m
 @
-r
+t
 H
 0
 `
@@ -2159,6 +2174,8 @@ Documents/Steam%s Content
 -steamdeck
 -chromeos
 -chromeosdiskmanagement
+-reactlogin
+-noreactlogin
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2201,7 +2218,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Jul 26 2022 11:54:15
+Startup - updater built Aug  4 2022 12:58:59
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2488,8 +2505,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jul 26 2022
-11:54:16
+Aug  4 2022
+12:59:00
 crashhandler003
 steam
 Steam Executable Crash
@@ -2586,7 +2603,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-11:54:14
+12:58:58
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -8087,6 +8104,7 @@ X509_NAME_ENTRY
 X509_NAME
 crypto/x509/x_name.c
 X509_NAME_INTERNAL
+Name
 X509_NAME_ENTRIES
 RDNS
 X509_PUBKEY
@@ -10101,6 +10119,11 @@ Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do
 m_vecCallbacks.Count() == 0
 pDefaultValue
 Attempted to change replicated CVar when you are not the GM
+ConVar
+m_configOverride
+m_pVecUlValue
+m_pVecStringValue
+m_vecCallbacks
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
@@ -10345,7 +10368,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-11:52:05
+12:56:46
 Jan
 Feb
 Mar
@@ -11434,11 +11457,19 @@ KQ: Error reading KQ:%s
 nPollRetVal > 0
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
+@nJobInteryieldMillisecondsAlertThreshold
+200
+@nJobInteryieldMillisecondsLogThreshold
+100
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
+Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
+Long interyield runtime - %s job ran for %lu milliseconds without yielding:
+UnknownJob
 this == g_pJobCur
 m_STimeSwitched.LTime() == CSTime::LServerTimeCur()
+k_EMsgServiceMethodResponse
 CJob::Heartbeat
 active
 not started
@@ -11454,14 +11485,12 @@ shared resource high pri
 shared resource
 generic context
 @cMinimumJobTimeoutsToCheckPerFrame
-100
 @bEnableNetworkJobsOwnStartList
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Job yielding despite declaring a Do Not Yield block at %s
 name
-Name
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keyvaluesignature.cpp
 nSubkeys == 0
 unexpected type %d in KeyValues being signed
@@ -11525,52 +11554,6 @@ m_memNodes
 m_bitsMigratedBuckets
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-m_stringDimensions
-m_symbolDimensions
-m_intDimensions
-m_doubleMeasurements
-m_intMeasurements
-totaltime
-CMetrics::Dimension_pch
-CMetrics::Dimension_int
-CMetrics::Dimension_bool
-CMetrics::SetMeasurement_int
-CMetrics::Increment_int
-m_pMetricsPayload
-m_totalTime
-double
-":
-@bMetricsEnabled
-Enabling allows jobs to collect and report metrics through IMetricsReporters.
-@metricsEnabledCatalogs
-Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
-@metricsEnabledOperations
-CInfluxClient::SendCurrentBatchAsync
-Comma separated list of metrics operations - enable list
-@metricsDisabledOperations
-Comma separated list of metrics operations - disable list
-@influxBlacklistedTags
-steamid
-Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
-@metricsLegacyJobMetrics
-CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
-Comma separated list of Operation names that predate preaggregated job metrics.
-FCVAR_NEVER_AS_STRING
-null catalog
-null program
-null operation
-@bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
-EMsg %d registered multiple times.
-EMsg_IsValid( oldMsgInfo.eMsg )
-*oldMsgInfo.pchMsgName
-More than one message with ID 0x%x
-More than one message named '%s'
-( id & k_nMessageTypeID_Mask ) == k_nMessageTypeID_EMsg
-Sent message: %s - %u bytes
-GetMessageFlags
-Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
-Bad packet received: EMsg would be %u
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientServerTimestampRequest
@@ -11683,7 +11666,6 @@ k_EMsgFileXferEnd
 k_EMsgFileXferDataAck
 k_EMsgDestJobFailed
 k_EMsgServiceMethod
-k_EMsgServiceMethodResponse
 k_EMsgHubConnect
 k_EMsgServiceMethodCallFromClient
 k_EMsgServiceMethodCallFromClientNonAuthed
@@ -12042,6 +12024,53 @@ k_EMsgClientSiteLicenseGetAvailableSeats
 k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
+m_stringDimensions
+m_symbolDimensions
+m_intDimensions
+m_doubleMeasurements
+m_intMeasurements
+totaltime
+CMetrics::Dimension_pch
+CMetrics::Dimension_int
+CMetrics::Dimension_bool
+CMetrics::SetMeasurement_int
+CMetrics::Increment_int
+m_pMetricsPayload
+m_totalTime
+double
+":
+@bMetricsEnabled
+Enabling allows jobs to collect and report metrics through IMetricsReporters.
+@metricsEnabledCatalogs
+Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
+@metricsEnabledOperations
+CInfluxClient::SendCurrentBatchAsync
+Comma separated list of metrics operations - enable list
+@metricsDisabledOperations
+Comma separated list of metrics operations - disable list
+@influxBlacklistedTags
+steamid
+Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
+@metricsLegacyJobMetrics
+CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
+Comma separated list of Operation names that predate preaggregated job metrics.
+FCVAR_NEVER_AS_STRING
+null catalog
+null program
+null operation
+m_p
+@bMsgErrorDump
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
+EMsg %d registered multiple times.
+EMsg_IsValid( pOldMsgInfo->eMsg )
+*pOldMsgInfo->pchMsgName
+More than one message with ID 0x%x
+More than one message named '%s'
+( id & k_nMessageTypeID_Mask ) == k_nMessageTypeID_EMsg
+Sent message: %s - %u bytes
+GetMessageFlags
+Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
+Bad packet received: EMsg would be %u
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
@@ -12707,21 +12736,16 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-3
-7
-e&7
+#>7
+od7
 
-hQ7
-D!7
-nQ7
+4_7
 
+T:
 0
-H:
-:(
-"(
-(
-(
+s'
 0
+C(
 (
 (
 (
@@ -12729,75 +12753,72 @@ H:
 0
 @
 @
-?
-_6
-Q6
-@
-@
-@
-@
-$
-g.
-b.
-Hi
-Hi
-Hi
 (
+@
+@
+@
+@
+1
+1
+1
+$
+9
+Hi
+Hi
+Hi
 &
-6
-6
-6
-6
-6
-!.
-6
-6
-6
--'
-V&
-)
 '
 '
 
 %
+'
+'
+&
+&
+&
+&
+&
 &
 0
-8
-&
-&
-&
-'
-{'
+0
+0
 
+,&
 0
 5
 5
 5
 5
-'
-09
-=7
+5
+5
+5
+@9
+&
+&
+&
+o<
 
-Z$
-/
-/
-/
 0
 Ic
+/
+7
 0
 0
 AT=
 AT5
 AT5
 AT=
+9
 ?
 D
 @
 @
 0
+*4
 4
 4
-W8
+4
+4
 @
 Hc
 Hc
@@ -12829,71 +12850,49 @@ IcE
 IcE
 @
 @
-3
-3
+.
+.
+.
+.
+.
 3
 V
 -
-\2
+-
 =
-6
+g,
+j6
 ,
 ,
+,
+,
+,
 =
-t1
-1
-1
-1
-#3
+9
 1
 +
 +
 +
 +
-+
-E0
-0
+R0
 @
-"
+Z"
 @
+c
 )
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-3
-*
-h(
-;.
+)
+7'
+G.
+B.
 (
-(
-L-
-,-
+Y'
+6'
 '
 '
-'
-R&
-N&
+K(
 @
-&
 M9e
+&
 @
 @
 ?
@@ -12912,6 +12911,8 @@ M9e
 ?
 ?
 
+'
+'
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
@@ -12919,10 +12920,13 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
 %
+&
 `
 `
 @
 
+*
+*
 j
 j
 Pj
@@ -12937,6 +12941,8 @@ M)u
 =
 @
 =
+_(
+"
 =
 %
 =
@@ -13230,43 +13236,47 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-+
-+
-3
+6
 =
 @
 
-P.
 @
 @
 @
 0
-
-
+*
+*
 H=
-&
-&
 Ic]
 j
 j
 j
 j
+&
+&
 j
 j
 
-:!
-$
+!
+O!
+b$
 t$I;M
 $
 $
-$
-(
 e
 W
 ,7~5d
-)
+#m8)
+#5)
+#M+)
+#-+)
+#M()
 H
 0
+#
+#
+#
+#
 
 
 
@@ -13278,14 +13288,13 @@ H
 
 
 Hc
-L)5{^$
-L95pZ$
+L)5;}$
+L950y$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-#%
 @
 ,
 *
@@ -13293,6 +13302,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+#
 0
 0
 N
@@ -13512,11 +13522,12 @@ H=
 
 =
 @
--
-+
 =
 @
 =*.*
+
+
+
 @
 @
 @
@@ -13541,6 +13552,7 @@ H=
 0
 0
 0
+9
 0
 H=
 0
@@ -13566,10 +13578,12 @@ E
 @
 0
 0
-m
+
+i
 Hc
 0
 0
+@
 @
 @
 &
@@ -13588,9 +13602,8 @@ P
 @
 @
 0
-8
+g
 =a
-
 
 0
 Hi

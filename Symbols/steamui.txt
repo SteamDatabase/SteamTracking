@@ -1535,7 +1535,6 @@
  rand
  read
  readdir$INODE64
- readlink
  realloc
  reallocf
  realpath$DARWIN_EXTSN
@@ -1664,7 +1663,6 @@
  strtoull
  strtouq
  swprintf
- symlink
  sysctl
  sysctlbyname
  thread_info

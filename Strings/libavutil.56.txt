@@ -26,6 +26,7 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libavutil.56.dylib
+$Y#z
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
@@ -42,24 +43,24 @@ D$l
 D$,9
 |$@2
 t$42
-716'
+7a8'
 t$42
-716'
+7a8'
 Ffffff.
 (fff.
 \$8C
 |$D;|$,
-;16'
-316'
-+16'
-;16'
-+16'
-;16'
-316'
-016'
-816'
+;a8'
+3a8'
++a8'
+;a8'
++a8'
+;a8'
+3a8'
+0a8'
+8a8'
 \$<3
-(16'
+(a8'
 L7`f
 ^_[]
 USWV
@@ -1202,6 +1203,8 @@ ffffff.
 fff.
 D$$9
 fff.
+D$$9
+fff.
 USWV
 ^_[]
  ^_[
@@ -1209,11 +1212,12 @@ fffff.
 USWV
 ^_[]
  ^_[
+USWV
+^_[]
+USWV
+^_[]
+ ^_[
 ffff.
-USWV
-^_[]
-USWV
-^_[]
 USWV
 l$01
 ^_[]
@@ -1241,9 +1245,8 @@ fff.
 USWV
 D$ 99s-
 ,^_[]
-USWV
-D$$97s.
-,^_[]
+97s-
+ ^_[
 ffffff.
 USWV
 3L$0
@@ -1418,14 +1421,21 @@ hffff.
 ^_[]
 gfff
 USWV
-l$,i
-l$ C1
-gfff
-L$ 1
+L$(i
+fff.
+t$(s
+.uXE1
+gffffff.
 )D$`
 )D$P
-kD$X<
+D$,E1
+L$,kT$X<
 gfff
+L$$1
+;D$,
+;T$$
+9D$,
+9T$$
 ^_[]
 USWV
 =uQfff.
@@ -2192,8 +2202,8 @@ ffffff.
 USWV
 D$@t
 D$<)
-iL$H
 L^_[]
+ffff.
 USWV
 ,^_[]
 fff.
@@ -3151,7 +3161,7 @@ MCi).
 lCu7&
 >id*
 6BJ^
-?FFmpeg version 4.3.2
+?FFmpeg version 4.3.4
 IPBSipb
 <fBBf<
 x<fff<
@@ -3587,7 +3597,6 @@ in_ts != ((int64_t)(0x8000000000000000ULL))
 libavutil/mathematics.c
 duration >= 0
 libavutil/md5.c
-libavutil/mem.c
 val || !min_size
 libavutil/mem_internal.h
 libavutil/murmur3.c
@@ -4180,9 +4189,9 @@ libavutil/twofish.c
 libavutil/tx.c
 Unsupported transform size: n = %i, m = %i, residual = %i!
 libavutil/tx_template.c
-4.3.2
+4.3.4
 Libavutil has been linked to a broken llrint()
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavutil license: LGPL version 2.1 or later
 video
 audio
@@ -4198,7 +4207,6 @@ libavutil/video_enc_params.c
 AuthenticAMD
 GenuineIntel
 libavutil/xtea.c
-!	@Hq
 `$0X`
 JRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJp0SHp(RJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJp0SIRARARARARARARARARARARARARARARARARARARARARARARARARARARATI
 RIRLRBUC`
@@ -4322,10 +4330,10 @@ I`5A`
 priv_
 util_
 4opt_
-9write_image_line
+:write_image_line
 Anearer_q
 Fq2intfloat
-Fxtea_
+Gxtea_
 udio_fifo_
 ppend_path_component
 ler32_update
@@ -4350,7 +4358,7 @@ lloc
 pace
 scanf
 0mall_strptime
-@ample
+Aample
 Hpherical_
 ereo3d_
 start
@@ -4518,9 +4526,9 @@ read
 write
 peek
 unmap
-@hread_message_
+Ahread_message_
 Lree_
-Owofish_
+Pwofish_
 mpfile
 calarproduct_float_c
 et_systematic_pal2
@@ -4663,10 +4671,10 @@ ntent_light_metadata_
 alloc
 4create_side_data
 4c4_
-Fipemd_
+Gipemd_
 scale
 5gister_malloc
-6duce
+7duce
 5delta
 _rnd
 5mod
@@ -4683,7 +4691,7 @@ tracked
 7array
 _array
 array
-7tracked
+8tracked
 8cpy_backptr
 _add
 82_add
@@ -4693,37 +4701,37 @@ realloc
 alloc
 9init
 9update
-9final
+:final
 _seeded
 	next
-:eval_
+;eval_
 ;get
 ?ptr
-?query_ranges
+@query_ranges
 @is_set_to_default
 :how2
-:rialize
+;rialize
 ;lag_is_set
->ree
+?ree
 ;int
 ;double
 ;oat
-<bin
-<video_rate
+=bin
+=video_rate
 =pixel_fmt
 =sample_fmt
 =channel_layout
 =from_string
 <mage_size
 ouble
-<ict
+=ict
 =efaults
 _val
 >video_rate
 >pixel_fmt
 >sample_fmt
 >channel_layout
->key_value
+?key_value
 >mage_size
 ouble
 >ict_val
@@ -4731,23 +4739,23 @@ p_ranges
 hild_
 ?opy
 class_next
-?next
+@next
 _default
 _by_name
 size
 @rate
-@code_
+Acode_
 info_tag
 Abest_pix_fmt_of_2
 Dnearest_q_idx
-Blanar_sample_fmt
+Clanar_sample_fmt
 x_fmt
 Bcture_type_char
 name
 Bstring
 Closs
 its_per_pixel
-Bytes_per_sample
+Cytes_per_sample
 dded_bits_per_pixel
 Ccked_sample_fmt
 _fmt_
@@ -4768,7 +4776,7 @@ Efrom_name
 name
 Efrom_name
 name
-Efrom_name
+Ffrom_name
 name
 Ffrom_name
 alloc
@@ -4780,7 +4788,7 @@ Gupdate
 Gfinal
 Gsize
 name
-Gstring
+Hstring
 _fmt_is_planar
 get_buffer_size
 Ifill_arrays
@@ -4790,9 +4798,9 @@ Icopy
 _array_and_samples
 I512_
 alloc
-Iinit
-Iupdate
-Ifinal
+Jinit
+Jupdate
+Jfinal
 Jsize
 alloc
 Jinit
@@ -4800,15 +4808,15 @@ Jupdate
 Jfinal
 Jsize
 create
-Jfree
-Jexecute
+Kfree
+Kexecute
 alloc
 Ktile_bounds
 Kprojection_name
 Kfrom_name
 alloc
-Kcreate_side_data
-Ktype_name
+Lcreate_side_data
+Ltype_name
 Lfrom_name
 alloc
 Linit
@@ -4827,9 +4835,9 @@ Mrecv
 _relative
 _is_monotonic
 adjust_ntsc_framenum2
-Nget_smpte_from_framenum
-Nmake_
-Ncheck_frame_rate
+Oget_smpte_from_framenum
+Omake_
+Ocheck_frame_rate
 Oinit
 Ompeg_tc_string
 tring
@@ -4844,8 +4852,8 @@ alloc
 Psize
 alloc
 Pinit
-Pcrypt
-Psize
+Qcrypt
+Qsize
 uninit
 Qinit
 version
@@ -5189,8 +5197,10 @@ _av_log_set_callback
 _av_log_set_flags
 _av_log_set_level
 _av_lzo1x_decode
+_av_malloc
 _av_malloc_array
 _av_malloc_tracked
+_av_mallocz
 _av_mallocz_array
 _av_mallocz_tracked
 _av_map_videotoolbox_format_from_pixfmt
@@ -5287,6 +5297,7 @@ _av_rc4_crypt
 _av_rc4_init
 _av_read_image_line
 _av_read_image_line2
+_av_realloc
 _av_realloc_array
 _av_realloc_f
 _av_realloc_tracked
@@ -7030,16 +7041,19 @@ D$TA
 D$PA
 $H;D$`u
 h[A\A^A_
-AVSPH
-uFL9
 ffff.
+AVSPH
+uCL9
+fff.
+ffff.
+H95t
 fffff.
 AVSH
-u	H95
-ffffff.
+u	H95n
 AWAVATSPH
-u@H95
+u=H95
 [A\A^A_
+AVSH
 AWAVSI
 [A^A_
 AWAVSI
@@ -7047,12 +7061,12 @@ AWAVSI
 AWAVSH
 [A^A_
 UAWAVATSH
-w_Hc
+w\Hc
 [A\A^A_]
+fff.
 AWAVATSH
-wZLc
+wWLc
 [A\A^A_
-fffff.
 AWAVAUATSH
 [A\A]A^A_
 AWAVATSPA
@@ -7067,6 +7081,7 @@ t7 A
 AVSPH
 AWAVATSH
 [A\A^A_
+ffff.
 AWAVSH
 [A^A_
 UAWAVAUATSPA
@@ -7352,6 +7367,7 @@ TuwL
 gfffL
 UAWAVAUATSH
 l$ A
+D$(H
 D$,A
 l$ I
 .unI
@@ -7365,9 +7381,9 @@ su)Ic
 kD$8<
 t$xE
 gfffH
-L$ H
 [A\A]A^A_]
-ffff.
+L$ H
+fffff.
 UAWAVAUATSH
 =w$I
 =u&H
@@ -8027,10 +8043,10 @@ ffff.
 ffff.
 AVSA
 gfffH
-UAVSH
+AVSH
 D$ D
-0[A^]
-ffffff.
+([A^
+fff.
 AVSH
 ([A^
 AVSH
@@ -9276,7 +9292,7 @@ MCi).
 lCu7&
 >id*
 6BJ^
-FFmpeg version 4.3.2
+FFmpeg version 4.3.4
 <fBBf<
 x<fff<
 ?3?00p
@@ -9710,7 +9726,6 @@ in_ts != ((int64_t)(0x8000000000000000ULL))
 libavutil/mathematics.c
 duration >= 0
 libavutil/md5.c
-libavutil/mem.c
 val || !min_size
 libavutil/mem_internal.h
 libavutil/murmur3.c
@@ -10303,9 +10318,9 @@ libavutil/twofish.c
 libavutil/tx.c
 Unsupported transform size: n = %i, m = %i, residual = %i!
 libavutil/tx_template.c
-4.3.2
+4.3.4
 Libavutil has been linked to a broken llrint()
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavutil license: LGPL version 2.1 or later
 video
 audio
@@ -10321,7 +10336,7 @@ libavutil/video_enc_params.c
 AuthenticAMD
 GenuineIntel
 libavutil/xtea.c
-!	@u
+!	@e
 FRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFp@SGp0RFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFp@SHRARARARARARARARARARARARARARARARARARARARARARARARARARARATH
 RHRHRBUA`
 ]HRIREp0TDRI
@@ -10440,10 +10455,10 @@ AWASAXA`
 priv_
 util_
 4opt_
-9write_image_line
+:write_image_line
 Anearer_q
 Fq2intfloat
-Fxtea_
+Gxtea_
 udio_fifo_
 ppend_path_component
 ler32_update
@@ -10468,7 +10483,7 @@ lloc
 pace
 scanf
 0mall_strptime
-@ample
+Aample
 Hpherical_
 ereo3d_
 start
@@ -10636,9 +10651,9 @@ read
 write
 peek
 unmap
-@hread_message_
+Ahread_message_
 Lree_
-Owofish_
+Pwofish_
 mpfile
 calarproduct_float_c
 et_systematic_pal2
@@ -10781,10 +10796,10 @@ ntent_light_metadata_
 alloc
 4create_side_data
 4c4_
-Fipemd_
+Gipemd_
 scale
 5gister_malloc
-6duce
+7duce
 5delta
 _rnd
 5mod
@@ -10801,7 +10816,7 @@ tracked
 7array
 _array
 array
-7tracked
+8tracked
 8cpy_backptr
 _add
 82_add
@@ -10811,37 +10826,37 @@ realloc
 alloc
 9init
 9update
-9final
+:final
 _seeded
 	next
-:eval_
+;eval_
 ;get
 ?ptr
-?query_ranges
+@query_ranges
 @is_set_to_default
 :how2
-:rialize
+;rialize
 ;lag_is_set
->ree
+?ree
 ;int
 ;double
 ;oat
-<bin
-<video_rate
+=bin
+=video_rate
 =pixel_fmt
 =sample_fmt
 =channel_layout
 =from_string
 <mage_size
 ouble
-<ict
+=ict
 =efaults
 _val
 >video_rate
 >pixel_fmt
 >sample_fmt
 >channel_layout
->key_value
+?key_value
 >mage_size
 ouble
 >ict_val
@@ -10849,23 +10864,23 @@ p_ranges
 hild_
 ?opy
 class_next
-?next
+@next
 _default
 _by_name
 size
 @rate
-@code_
+Acode_
 info_tag
 Abest_pix_fmt_of_2
 Dnearest_q_idx
-Blanar_sample_fmt
+Clanar_sample_fmt
 x_fmt
 Bcture_type_char
 name
 Bstring
 Closs
 its_per_pixel
-Bytes_per_sample
+Cytes_per_sample
 dded_bits_per_pixel
 Ccked_sample_fmt
 _fmt_
@@ -10886,7 +10901,7 @@ Efrom_name
 name
 Efrom_name
 name
-Efrom_name
+Ffrom_name
 name
 Ffrom_name
 alloc
@@ -10898,7 +10913,7 @@ Gupdate
 Gfinal
 Gsize
 name
-Gstring
+Hstring
 _fmt_is_planar
 get_buffer_size
 Ifill_arrays
@@ -10908,9 +10923,9 @@ Icopy
 _array_and_samples
 I512_
 alloc
-Iinit
-Iupdate
-Ifinal
+Jinit
+Jupdate
+Jfinal
 Jsize
 alloc
 Jinit
@@ -10918,15 +10933,15 @@ Jupdate
 Jfinal
 Jsize
 create
-Jfree
-Jexecute
+Kfree
+Kexecute
 alloc
 Ktile_bounds
 Kprojection_name
 Kfrom_name
 alloc
-Kcreate_side_data
-Ktype_name
+Lcreate_side_data
+Ltype_name
 Lfrom_name
 alloc
 Linit
@@ -10945,9 +10960,9 @@ Mrecv
 _relative
 _is_monotonic
 adjust_ntsc_framenum2
-Nget_smpte_from_framenum
-Nmake_
-Ncheck_frame_rate
+Oget_smpte_from_framenum
+Omake_
+Ocheck_frame_rate
 Oinit
 Ompeg_tc_string
 tring
@@ -10962,8 +10977,8 @@ alloc
 Psize
 alloc
 Pinit
-Pcrypt
-Psize
+Qcrypt
+Qsize
 uninit
 Qinit
 version
@@ -11309,8 +11324,10 @@ _av_log_set_callback
 _av_log_set_flags
 _av_log_set_level
 _av_lzo1x_decode
+_av_malloc
 _av_malloc_array
 _av_malloc_tracked
+_av_mallocz
 _av_mallocz_array
 _av_mallocz_tracked
 _av_map_videotoolbox_format_from_pixfmt
@@ -11407,6 +11424,7 @@ _av_rc4_crypt
 _av_rc4_init
 _av_read_image_line
 _av_read_image_line2
+_av_realloc
 _av_realloc_array
 _av_realloc_f
 _av_realloc_tracked

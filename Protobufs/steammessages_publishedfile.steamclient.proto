@@ -21,6 +21,14 @@ enum EPublishedFileForSaleStatus {
 	k_PFFSS_TentativeApproval = 5;
 }
 
+message CPublishedFile_Vote_Request {
+	optional uint64 publishedfileid = 1;
+	optional bool vote_up = 2;
+}
+
+message CPublishedFile_Vote_Response {
+}
+
 message CPublishedFile_Subscribe_Request {
 	optional uint64 publishedfileid = 1;
 	optional uint32 list_type = 2;
@@ -47,6 +55,24 @@ message CPublishedFile_CanSubscribe_Request {
 
 message CPublishedFile_CanSubscribe_Response {
 	optional bool can_subscribe = 1;
+}
+
+message CPublishedFile_GetSubSectionData_Request {
+	optional uint64 publishedfileid = 1;
+	optional bool for_table_of_contents = 2;
+	optional uint64 specific_sectionid = 3;
+	optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
+}
+
+message PublishedFileSubSection {
+	optional uint64 sectionid = 1;
+	optional string title = 2;
+	optional string description_text = 3;
+	optional uint32 sort_order = 4;
+}
+
+message CPublishedFile_GetSubSectionData_Response {
+	repeated .PublishedFileSubSection sub_sections = 1;
 }
 
 message CPublishedFile_Publish_Request {
@@ -286,6 +312,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional bool return_reactions = 35 [default = false, (description) = "If true, then reactions to items will be returned."];
 	optional uint32 startindex_override = 25 [(description) = "Backwards compatible for the client."];
 	optional .EPublishedFileRevision desired_revision = 33 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
+	optional bool return_apps = 36 [(description) = "Return list of apps the items belong to"];
 }
 
 message CPublishedFile_GetUserFiles_Response {
@@ -591,6 +618,10 @@ message CPublishedFile_FileDeleted_Client_Notification {
 service PublishedFile {
 	option (service_description) = "A service to access published file data";
 
+	rpc Vote (.CPublishedFile_Vote_Request) returns (.CPublishedFile_Vote_Response) {
+		option (method_description) = "User wants to vote on the item";
+	}
+
 	rpc Subscribe (.CPublishedFile_Subscribe_Request) returns (.CPublishedFile_Subscribe_Response) {
 		option (method_description) = "Subscribes the user to the published file";
 	}
@@ -601,6 +632,10 @@ service PublishedFile {
 
 	rpc CanSubscribe (.CPublishedFile_CanSubscribe_Request) returns (.CPublishedFile_CanSubscribe_Response) {
 		option (method_description) = "Check if the user can subscribe to the published file";
+	}
+
+	rpc GetSubSectionData (.CPublishedFile_GetSubSectionData_Request) returns (.CPublishedFile_GetSubSectionData_Response) {
+		option (method_description) = "Get sub section data (for table of contents, a specific section, or all)";
 	}
 
 	rpc Publish (.CPublishedFile_Publish_Request) returns (.CPublishedFile_Publish_Response) {

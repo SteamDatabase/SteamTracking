@@ -93,6 +93,7 @@
  I av_hmac_init
  I av_hmac_update
  I av_image_check_sar
+ I av_image_check_size
  I av_init_packet
  I av_lfg_init
  I av_log
@@ -494,6 +495,7 @@
  av_hmac_init
  av_hmac_update
  av_image_check_sar
+ av_image_check_size
  av_init_packet
  av_lfg_init
  av_log
@@ -629,6 +631,7 @@
  fcntl$UNIX2003
  fprintf
  fputc
+ free
  freeaddrinfo
  fstat$INODE64
  fwrite
@@ -639,9 +642,6 @@
  getsockopt
  gmtime_r
  hypot
- inflate
- inflateEnd
- inflateInit_
  listen
  listen$UNIX2003
  llrint
@@ -649,6 +649,7 @@
  lrintf
  lseek
  lstat$INODE64
+ malloc
  memchr
  memcmp
  memcpy
@@ -690,7 +691,6 @@
  strtod
  strtod$UNIX2003
  strtol
- uncompress
  unlink
  write
  write$UNIX2003

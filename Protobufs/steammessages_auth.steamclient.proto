@@ -1,5 +1,6 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -17,6 +18,7 @@ enum EAuthSessionGuardType {
 	k_EAuthSessionGuardType_DeviceCode = 3;
 	k_EAuthSessionGuardType_DeviceConfirmation = 4;
 	k_EAuthSessionGuardType_EmailConfirmation = 5;
+	k_EAuthSessionGuardType_MachineToken = 6;
 }
 
 enum EAuthSessionSecurityHistory {
@@ -59,8 +61,9 @@ message CAuthentication_BeginAuthSessionViaCredentials_Request {
 	optional string account_name = 2;
 	optional string encrypted_password = 3 [(description) = "password, RSA encrypted client side"];
 	optional uint64 encryption_timestamp = 4 [(description) = "timestamp to map to a key - STime"];
-	optional bool remember_login = 5;
+	optional bool remember_login = 5 [(description) = "deprecated"];
 	optional .EAuthTokenPlatformType platform_type = 6 [default = k_EAuthTokenPlatformType_Unknown];
+	optional .ESessionPersistence persistence = 7 [default = k_ESessionPersistence_Persistent, (description) = "whether we are requesting a persistent or an ephemeral session"];
 }
 
 message CAuthentication_BeginAuthSessionViaCredentials_Response {
@@ -69,6 +72,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Response {
 	optional float interval = 3 [(description) = "refresh interval with which requestor should call PollAuthSessionStatus"];
 	repeated .CAuthentication_AllowedConfirmation allowed_confirmations = 4 [(description) = "the confirmation types that will be able to confirm the request"];
 	optional uint64 steamid = 5 [(description) = "steamid of the account logging in - will only be included if the credentials were correct"];
+	optional string weak_token = 6 [(description) = "partial-authentication token - limited lifetime and scope, included only if credentials were valid"];
 }
 
 message CAuthentication_PollAuthSessionStatus_Request {
@@ -81,6 +85,8 @@ message CAuthentication_PollAuthSessionStatus_Response {
 	optional string new_challenge_url = 2 [(description) = "if challenge is old, this is the new challenge ID to re-render for mobile confirmation"];
 	optional string refresh_token = 3 [(description) = "if login has been confirmed, this is the requestor's new refresh token"];
 	optional string access_token = 4 [(description) = "if login has been confirmed, this is a new token subordinate to refresh_token"];
+	optional bool had_remote_interaction = 5 [(description) = "whether or not the auth session appears to have had remote interaction from a potential confirmer"];
+	optional string account_name = 6 [(description) = "account name of authenticating account, for use by UI layer"];
 }
 
 message CAuthentication_GetAuthSessionInfo_Request {
@@ -99,6 +105,7 @@ message CAuthentication_GetAuthSessionInfo_Response {
 	optional .EAuthSessionSecurityHistory login_history = 9 [default = k_EAuthSessionSecurityHistory_Invalid, (description) = "whether the ip has previuously been used on the account successfully"];
 	optional bool requestor_location_mismatch = 10 [(description) = "whether the requestor location matches this requests location"];
 	optional bool high_usage_login = 11 [(description) = "whether this login has seen high usage recently"];
+	optional .ESessionPersistence requested_persistence = 12 [default = k_ESessionPersistence_Invalid, (description) = "session persistence requestor has indicated they want"];
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
@@ -107,6 +114,7 @@ message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request {
 	optional fixed64 steamid = 3 [(description) = "user who wants to login"];
 	optional bytes signature = 4 [(description) = "HMAC digest over {version,client_id,steamid} via user's private key"];
 	optional bool confirm = 5 [default = false, (description) = "Whether to confirm the login (true) or deny the login (false)"];
+	optional .ESessionPersistence persistence = 6 [default = k_ESessionPersistence_Persistent, (description) = "whether we are requesting a persistent or an ephemeral session"];
 }
 
 message CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response {

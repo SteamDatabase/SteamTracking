@@ -133,6 +133,7 @@
  SDL_GameControllerGetButton
  SDL_GameControllerGetJoystick
  SDL_GameControllerName
+ SDL_GameControllerRumble
  SDL_GetClipboardText
  SDL_GetDisplayBounds
  SDL_GetModState
@@ -144,12 +145,6 @@
  SDL_GetWindowPosition
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
- SDL_HapticClose
- SDL_HapticOpenFromJoystick
- SDL_HapticRumbleInit
- SDL_HapticRumblePlay
- SDL_HapticRumbleStop
- SDL_HapticRumbleSupported
  SDL_HideWindow
  SDL_Init
  SDL_InitSubSystem

@@ -1494,7 +1494,7 @@
 "Steam_CloudInfo"					"Steam Cloud хранит ваши данные продукта, чтобы они совпадали на любом ПК."
 "Steam_EnableCloud"					"Включить синхронизацию со Steam Cloud для поддерживаемых приложений"
 "Steam_EnableCloudForApp"			"Включить синхронизацию со Steam Cloud для %game%"
-"Steam_EnableCloudScreenshots"		"Открывать окно загрузки скриншотов после выхода из игры, если были сделаны новые"
+"Steam_EnableCloudScreenshots"		"Открывать окно загрузки скриншотов после выхода из игры, если скриншоты были сделаны"
 "Steam_CloudUsage"					"Используется: %used%  / Доступно: %available%"
 "Steam_CloudEnableLink"				"Зайдите в Настройки / Загрузка + Cloud"
 "Steam_CloudEnableLinkContinued"	"чтобы заново включить Steam Cloud на вашем аккаунте."
@@ -2376,6 +2376,7 @@
 "Steam_status_decrypting"			"Расшифровка: "
 "Steam_status_validating"			"Проверка: "
 "Steam_status_verifying"			"Проверка: "
+"Steam_status_finalizing"			"Завершение"
 
 "steam_status_launching"				"Запуск"
 "steam_status_launching_progress"		"Запуск: "
@@ -4514,6 +4515,7 @@
 "Steam_SettingsControllerDesktopConfig"		"Настройки для ПК"
 "Steam_SettingsControllerGuideConfig"		"Настройки при зажатой кнопке Steam"
 "Steam_SteamInputDisableNotifications"		"Не отображать в клиенте уведомления о подключении контроллера."
+"Steam_SteamInputDisableDualSenseUpdates"	"Не отображать в клиенте уведомления об обновлении прошивки DualSense."
 
 "Steam_Settings_ShaderCache"			"Кэш шейдеров"
 "Steam_Settings_ShaderCache_Info"		"Предварительное кэширование позволяет Steam загружать заранее скомпилированные графические шейдеры для вашего компьютера. Благодаря этому игры, использующие Vulkan или OpenGL, будут загружаться быстрее, а стабильность частоты кадров возрастёт.\n\nЕсли включить эту настройку, Steam будет при необходимости собирать информацию о шейдерах в вашей системе, а нагрузка на сеть и дисковое пространство может незначительно возрасти."
@@ -4803,6 +4805,10 @@
 "Steam_XboxDriverInstall_Success"	"Драйвер обновлён и будет активен после перезагрузки компьютера."
 "Steam_XboxDriverInstall_ServiceFailure"	"Не удалось обновить драйвер. Проверьте, запущен ли Steam от имени обычного пользователя, а также запущена и обновлена ли служба Steam."
 "Steam_XboxDriverInstall_Failure"	"Не удалось обновить драйвер. Ошибка: %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Доступна новая прошивка контроллера"
+"Steam_DualSense_FirmwareUpdate_Text"	"Для беспроводного контроллера DualSense™ доступно обновление прошивки. Нажмите на ссылку ниже, чтобы перейти на страницу обновления на сайте Sony:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Больше не показывать"
 
 "DownloadRegion_default"				 "Неизвестно"
 "DownloadRegion_us_chicago"			"США — Чикаго"

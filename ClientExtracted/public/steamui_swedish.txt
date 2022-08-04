@@ -2387,6 +2387,7 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "Steam_status_decrypting"			"Avkrypterar: "
 "Steam_status_validating"			"Validerar: "
 "Steam_status_verifying"			"Verifierar: "
+"Steam_status_finalizing"			"Slutför"
 
 "steam_status_launching"				"Startar"
 "steam_status_launching_progress"		"Startar: "
@@ -4525,6 +4526,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_SettingsControllerDesktopConfig"		"Skrivbordskonfiguration"
 "Steam_SettingsControllerGuideConfig"		"Guideknappskonfiguration"
 "Steam_SteamInputDisableNotifications"		"Inaktivera meddelanden för ansluten handkontroll i skrivbordsklienten."
+"Steam_SteamInputDisableDualSenseUpdates"	"Inaktivera meddelanden om uppdateringar av inbyggd programvara till DualSense i skrivbordsklienten."
 
 "Steam_Settings_ShaderCache"			"Shadercache"
 "Steam_Settings_ShaderCache_Info"		"Förhandscachning av shaders tillåter Steam att ladda ner förkompilerade GPU-shaders som matchar din systemkonfiguration. Detta tillåter att Vulkan- och OpenGL-spel laddar snabbare och förbättrar bilfrekvensens stabilitet när du spelar.\n\nOm aktiverat kommer Steam att samla in shaders från ditt system vid behov. Aktivering av denna funktion kan öka disk- och bandbreddsanvändningen en aning."
@@ -4814,6 +4816,10 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_XboxDriverInstall_Success"	"Drivrutinen har uppdaterats och blir aktiv när du startar om datorn."
 "Steam_XboxDriverInstall_ServiceFailure"	"Kunde inte uppdatera drivrutinen. Kör du Steam som en vanlig användare? Är Steam-tjänsten igång och uppdaterad?"
 "Steam_XboxDriverInstall_Failure"	"Kunde inte uppdatera drivrutin. Felmeddelande = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Ny kontrollprogramvara tillgänglig"
+"Steam_DualSense_FirmwareUpdate_Text"	"Det finns ny inbyggd programvara till din trådlösa DualSense™-handkontroll. Klicka på länken nedan för att gå till Sonys sida för programvaruuppdateringar:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Visa inte detta igen"
 
 "DownloadRegion_default"				 "Okänd"
 "DownloadRegion_us_chicago"			"USA – Chicago"

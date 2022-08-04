@@ -2380,6 +2380,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_status_decrypting"			"Đang giải mã: "
 "Steam_status_validating"			"Đang xác nhận:"
 "Steam_status_verifying"			"Đang xác thực: "
+"Steam_status_finalizing"			"Đang hoàn tất"
 
 "steam_status_launching"				"Đang khởi động"
 "steam_status_launching_progress"		"Đang khởi động:"
@@ -4521,6 +4522,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_SettingsControllerDesktopConfig"		"Thiết lập desktop"
 "Steam_SettingsControllerGuideConfig"		"Hướng dẫn thiết lập hợp phím Steam"
 "Steam_SteamInputDisableNotifications"		"Tắt thông báo tay cầm đã được kết nối cho phần mềm phiên bản desktop."
+"Steam_SteamInputDisableDualSenseUpdates"	"Tắt thông báo cập nhật firmware DualSense trên phần mềm phiên bản desktop."
 
 "Steam_Settings_ShaderCache"			"Lưu trước Shader"
 "Steam_Settings_ShaderCache_Info"		"Lưu trước Shader (Shader Pre-Caching) cho phép Steam tải trước các GPU shader đã dựng sẵn tương ứng với thiết lập hệ thống của bạn. Tính năng này cho phép các trò chơi hỗ trợ Vulkan và OpenGL nạp nhanh hơn và khung hình khi chơi được cải thiện và ổn định hơn.\n\nNếu bật, Steam sẽ thu thập shader từ máy tính của bạn khi cần thiết. Bật tính năng này có thể tăng dung lượng ổ cứng và băng thông sử dụng."
@@ -4810,6 +4812,10 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_XboxDriverInstall_Success"	"Cập nhật driver thành công, và sẽ kích hoạt sau khi bạn khởi động lại máy tính."
 "Steam_XboxDriverInstall_ServiceFailure"	"Cập nhật driver không thành công, Steam có đang được chạy dưới quyền người dùng bình thường và dịch vụ Steam có đang chạy với cập nhật hiện hành?"
 "Steam_XboxDriverInstall_Failure"	"Không thể cập nhật driver, lỗi = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Bản cập nhật firmware mới cho tay cầm đã sẵn sàng"
+"Steam_DualSense_FirmwareUpdate_Text"	"Đã có firmware mới cho tay cầm không dây DualSense™. Nhấp vào liên kết bên dưới để đến trang cập nhật firmware của Sony:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Không hiện lần sau"
 
 "DownloadRegion_default"				 "Không rõ"
 "DownloadRegion_us_chicago"			"Mỹ - Chicago"

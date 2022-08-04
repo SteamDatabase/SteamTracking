@@ -2379,6 +2379,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_status_decrypting"			"暗号化解除中: "
 "Steam_status_validating"			"確認中： "
 "Steam_status_verifying"			"確認中: "
+"Steam_status_finalizing"			"完了中"
 
 "steam_status_launching"				"起動中"
 "steam_status_launching_progress"		"起動中： "
@@ -3446,7 +3447,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steamハードディスク使用量：%s1MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"システム情報を収集しています..."
 
-"SteamUI_ValidateEmailDescriptionAlt" "メールアドレスが確認証されていません。\n ［次へ］をクリックして、Steam用のメールアドレスを認証してください。\n 本人以外のユーザが秘密の質問とパスワードを変更できないようにするため、認証済みアドレスはSteamアカウント資格の変更情報を送信する際に使用されます。"
+"SteamUI_ValidateEmailDescriptionAlt" "メールアドレスが確認されていません。\n 「次へ」をクリックして、Steam用のメールアドレスを確認してください。\n 本人以外のユーザーが秘密の質問とパスワードを変更できないようにするため、確認済みアドレスはSteamアカウント資格の変更情報を送信する際に使用されます。"
 "SteamUI_ValidateEmailDescription" "［次へ］をクリックして、Steam 用のメールアドレスを確認してください。\n本人以外のユーザが秘密の質問とパスワードを変更できないようにするため、確認済みアドレスは Steam アカウント資格の変更情報を送信する際に使用されます。"
 "SteamUI_ValidateEmailSent" "%s1にメッセージが送信されました。\n受信メールでお知らせしたリンクをクリックして、Steam用メールアドレスの確認作業を完了してください。"
 "SteamUI_ValidateEmailNotReceived" "メッセージを受信していない場合"
@@ -4521,6 +4522,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_SettingsControllerDesktopConfig"		"デスクトップ設定"
 "Steam_SettingsControllerGuideConfig"		"ガイドボタンコード設定"
 "Steam_SteamInputDisableNotifications"		"デスクトップクライアントのコントローラ接続通知を無効にする。"
+"Steam_SteamInputDisableDualSenseUpdates"	"デスクトップクライアントのDualSenseファームウェアアップデート通知を無効にする。"
 
 "Steam_Settings_ShaderCache"			"シェーダープリキャッシュ"
 "Steam_Settings_ShaderCache_Info"		"シェーダーのプリキャッシュ機能を使用すると、Steamはシステム構成に対応したプリコンパイル済みGPUシェーダーをダウンロードできます。 これにより、VulkanおよびOpenGLゲームの読み込み速度が向上し、ゲームプレイ中のフレームレートの安定性が向上します。\n\nこの機能を有効にすると、Steamは必要に応じてシステムからシェーダーを収集します。この機能を有効にすると、ディスクと帯域幅の使用量にわずかな増加が見られる場合があります。"
@@ -4811,6 +4813,10 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_XboxDriverInstall_Success"	"ドライバーが正常に更新されました。コンピューターを再起動すると有効になります。"
 "Steam_XboxDriverInstall_ServiceFailure"	"ドライバーの更新に失敗しました。最新のSteamを通常のユーザーとして実行中ですか？"
 "Steam_XboxDriverInstall_Failure"	"ドライバーの更新に失敗しました。エラー = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"コントローラの新しいファームウェアが利用可能"
+"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ワイヤレスコントローラーの新しいファームウェアが利用できます。以下のリンクをクリックして、Sonyファームウェアアップデートページへ移動してください："
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"次から表示しない"
 
 "DownloadRegion_default"				 "不明"
 "DownloadRegion_us_chicago"			"アメリカ－シカゴ"

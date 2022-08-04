@@ -28,7 +28,6 @@ __LINKEDIT
 @loader_path/libavutil.56.dylib
 /usr/lib/libSystem.B.dylib
 /usr/lib/libbz2.1.0.dylib
-/usr/lib/libz.1.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
@@ -61,6 +60,34 @@ USWV
 Iffff.
 fffff.
 ,^_[]
+USWV
+IDAT
+acTLuM
+IHDR
+^_[]
+ffffff.
+USWV
+=IHDR
+IHDR
+=fcTL
+=acTL
+,^_[]
+=acTL
+=fcTL
+USWV
+IENDuV
+fcTL
+T$H;P4
+)D$p
+)D$`
++L$L
+@4+D$D
+9D$H
+=IDATt
+=fdAT
+^_[]
+=IEND
+=fcTL
 USWV
 ffff.
 fffff.
@@ -118,6 +145,7 @@ file
 \$$1
 ^_[]
 USWV
+|$$t@
 ,^_[]
 USWV
 ^_[]
@@ -384,34 +412,44 @@ D$ ffffff.
 ,^_[]
 USWV
 ^_[]
+fff.
 USWV
-;T$P
-D$@1
-;D$P
-;T$H
-G;|$Dr
-;D$4
-;L$0
-l$@9
-D$@9D$<u/
-D$<i@
-D$<iD
-;T$P
-YD$X
-YD$X
-YD$X
-,l$X
-L$Xf
-,D$P
+;T$h
+D$X1
+;D$h
+;T$`
+G;|$\r
+9D$0
+;D$L
+;L$H
+D$(f
+D$(f
+l$X9
+;D$L
+;L$H
+D$0f
+D$0f
+D$0f
+D$0f
+l$X9
+D$X9D$Tu/
+D$Ti@
+D$TiD
+;T$h
+YD$p
+YD$p
+YD$p
+,l$p
+L$pf
+,D$h
 ^_[]
 w,u.
-,l$X
-,D$X
-D$h9B
-,D$X
-XD$X
-,D$X
-,D$X
+,l$p
+,D$p
+,D$p
+XD$p
+,D$p
+,D$p
 USWV
 fff.
 ^_[]
@@ -488,16 +526,13 @@ fffff.
 ffffff.
 ffff.
 USWV
-Hff.
 USLT
-D$pt2
+D$|t2
 D$8t(
 USLT
-EL$L
-ffff.
-fffff.
+EL$\
+ffffff.
 ^_[]
-fff.
 USWV
 1;2t
 -ffff.
@@ -569,13 +604,13 @@ fff.
 ffffff.
 USWV
 ^_[]
-D/`f
-D/h#D/l
-D/p#D/t
+F\t{
+Fdts
+D=`f
+D=h#D=l
+D=p#D=t
 VUUU
-|0 (
-|0  
-=sowtt\=twostU
+=sowttg=twost`
 twos
 twos
 SMI 
@@ -584,12 +619,12 @@ SVQ3
 SVQ3
 raw 
 raw 
+S=(P
 alac
 TTA1f
-3D$$	
-)l; 
-fffff.
-.Cxsxf
+3D$4
+)D= 
+fff.
 USWV
 ^_[]
 USWV
@@ -597,25 +632,29 @@ fff.
 ^_[]
 ffffff.
 USWV
+fff.
 ,^_[]
 USWV
 ^_[]
-D$Tk
-t$X;
-L$d#L$`
-|{ffffff.
-+T$\
-+L$d
-L$Hf
-Yl$h
-\T$H
-XT$x
-Yl$h
-XT$x
-\T$H
-XL$x
-|yffff.
-D$T@;
+D$|1
+l$|ffffff.
+t$P;
+L$\#L$X
+\$x+
++D$T
++L$\
+t$|||ff.
+L$x!
+YT$`
+\T$0
+XT$h
+L$x+
+YT$`
+XT$h
+\T$0
+Xl$h
+D$L@;
+ffff.
 USWV
 3l$8
 fffff.
@@ -666,13 +705,11 @@ Offffff.
 USWV
 )D$p
 )D$`
+l$d1
 )D$P
-l$T1
-fffff.
 )D$@
 )D$0
-)D$ 
-l$$1
+l$41
 fffff.
 ^_[]
 USWV
@@ -685,7 +722,7 @@ u3ff.
 3l$4	
 ^_[]
 USWV
-,^_[]
+^_[]
 USWV
 |$(f
 T$4ffffff.
@@ -744,41 +781,44 @@ D$t@
 D$t;
 ffff.
 ^_[]
-ffffff.
 mp4s
 USWV
-\$p1
-D$H1
-=freeuP
+l$h1
+D$@1
+D$p=freeu3
 =hoov
 mvhdt
-cmovu9
-moovfff.
-root
-t$xt/
-moovt"
-=trak
+cmovu/
+D$pmoovfff.
+roott3
+moovt&
+D$p=trak
 =mdat
-;l$|
 fff.
-D$P+D$t
-+T$t
-t$x9
-t$Xf.
+D$xuQ
+9L$h
+;l$l
+D$h)
+T$h+T$d
+t$`9
+t$Hf
 udta
-\$\to
+\$Lt_
 ilst
-\$\t^
+\$LtN
 metau
 keysu
-\$Dt+
-|$xu
-ffff.
-;T$h
-;|$d
-|$x9
-9|$|
+\$<t
+fff.
+L$\9
+|$x;T$X
+;|$T
+9L$h
+9|$l
+t$Du7
+L$h)
 ^_[]
+fff.
 USWV
 t$@1
 L$ 1
@@ -1040,7 +1080,6 @@ YD$p
 YD$p
 YD$p
 D$dt$
-fff.
 USWV
 =mdtat
 D$(9
@@ -1072,27 +1111,26 @@ fffff.
 G;|$,}
 ^_[]
 USWV
-=stcouQ1
 ^_[]
-=co64u
-fff.
+=stcou01
+=co64
 USWV
 <^_[]
 USWV
 |$Tf.
 <^_[]
 USWV
-kl$Ll
-/=alis
-l$4f
-ffff.
-;D$`
-;T$\
-ffff.
-D$@9
-D$@)
-t$DN
-l$LM
+t$Dk
+>=alis
+|$4f
+;D$d
+L$`9
+ffffff.
+D$L9
+D$L)
+l$Tf
+t$HN
+|$DO
 l^_[]
 USWV
 l$`1
@@ -1114,13 +1152,12 @@ D$S1
 USWV
 ,^_[]
 USWV
-fielu
-3t$<
-t$@u
-^_[]
-|$8hvcCu
+|$ fiel
+,^_[]
+|$HhvcCu
 dvh1u
-^_[]
+,^_[]
+fff.
 USWV
 )D$P
 )D$@
@@ -1170,23 +1207,32 @@ USWV
 ,^_[]
 ffffff.
 USWV
+fff.
+D$H9G
 L^_[]
+D$D1
 L$`9
-D$@@;D$,
-3T$D3D$H	
-D$@1
-D$Hk
-D$H@9
+T$H9U
+ffffff.
+D$<@;D$,
+L$D1
+L$@1
+ffffff.
+|$`1
+T$HB9
 USWV
 ^_[]
 USWV
 ^_[]
 ffff.
 USWV
+l$ 1
+l$Df
 ;|$$r
 T$(~
 ffff.
 T$(t%
+L$ t&
 ,^_[]
 USWV
 ,^_[]
@@ -1235,31 +1281,32 @@ T$0;
 |$0t
 USWV
 V89D
-;49t
+.fffff.
 F(;Fd
 F(;Fdr
-t;;~\s6
-D$t;
-|$@1
-D$<;D$4v
-D$49D$<
-FD$4
-L$@+
-D$\;
-L$L;L$|
-D$\9
-L$L9
-D$D9
-D$@t
-D$D+t
-+t$\
-L$L9
-L$X;
-L$h)
-L$4+|
-kT$<
-;L$|
-D$t;
+[8;L3
+t1;~\s,
+D$x;
+|$D1
+D$@;D$8v
+D$@;D$8
+FD$8
+L$D+
+D$`;
+L$P;
+D$`9
+L$P9
+D$L;L$D
+D$Ht
+T$<+D
+D$<u
++|$`
+L$P9
+L$\;
+L$l)
+T$8+D
+kT$@
+D$x;
 =`ivx
 =`i52
  =ai12
@@ -1279,34 +1326,35 @@ u=ai16
 =@Vin
 .=ai56
 =`i1p
-.=AVintg
+1=AVintq
 =`i5p
-$=ai1pt2
++=ai1pt9
 =ai5pt
 =ai1qt
 =ai5qu
-Fx;Chu
+@x;Fhu
 ^_[]
+fffff.
 USWV
-|$$1
+t$$1
 ^_[]
-ffff.
 fff.
 USWV
 fff.
 t.G9
-;VXt
+;UXt
+ffff.
 ^_[]
-+D$t
-|$tk
-D$tt
-L$dk
-9|$`
-9t$\
-l$pu7
-L$t9
-D$L;
-T$H;T
+t$|)
+l$l~
+D$x1
+L$`;
+9|$\
+|$ptD
+T$|k
+9D$|}")
+D$D;
+T$@;T
 USWV
 l$Ls
 amrfuR
@@ -1366,6 +1414,7 @@ encvuD
 ^_[]
 USWV
 D$(1
+D$,y
 |$(t
 <^_[]
 ffff.
@@ -1423,13 +1472,13 @@ USWV
 \^_[]
 USWV
 ^_[]
-ffff.
 USWV
 ^_[]
 USWV
 ^_[]
 USWV
 ^_[]
+fff.
 USWV
 <^_[]
 USWV
@@ -2083,28 +2132,33 @@ ffff.
 ,^_[]
 ffffff.
 USWV
-L$<9
-|$@)
-|$Dt
-T$t9
-9\$xu
-L$|9
-L$H;|$L
-l$D9
-l$(9
-t$@)
-/t9 
-9t$0v8
-&9t$0
-l$<9
-T$D)
-T$ 9T$Lu;
-T$0t$
-x6;T$@
+T$`r
+|$p9
+L$L)
+L$\9
+;L$\t
+t$D)
+;L$X
+L$@)
+T$H9
+9L$D
+T$L)
+|$$v)
+;T$\
+|$HvE
+|$H;|$D
+|$<9
+T$H)
+L$,)
+L$(9L$Xu(
+T$Lt&
+x09T$0
 ^_[]
-D$,)
-|$4)
-D$,)
+D$@)
+\$$9
+|$4+|$0
+L$@)
+fffff.
 USWV
 fffff.
 ffff.
@@ -2415,24 +2469,30 @@ t$xF9
 ^_[]
 fffff.
 USWV
-fffff.
+\$xu~
+D$x@KL
+D$x@KL
 ffff.
 mp4vtB
 ffffff.
 -ffff.
-D$L9
-D$Ht
-9D$D
-9T$H
+D$@9
+D$<t
+9D$8
+9T$<
 F@u*
-t$P9
-D$`t
-t$h9
+t$D9
+D$Xt
+D$t9
+t$d9
+ffffff.
 fff.
-;Clu
+ffffff.
+<fff.
+T$Pfff.
+;Glu
 ffff.
-d$h1
-ffff.
+d$X1
 fffff.
 fffff.
 fffff.
@@ -2442,7 +2502,8 @@ ffffff.
 fffff.
 G F;u
 fff.
-fffff.
++L$x
+t$tu
 H uQ
 G F;u
 fffff.
@@ -2458,9 +2519,10 @@ USWV
 uxfffff.
 ^_[]
 USWV
-fff.
+ffffff.
 L$$1
 ^_[]
+fff.
 USWV
 ^_[]
 fffff.
@@ -2524,7 +2586,6 @@ USWV
 ^_[]
 fffff.
 USWV
-tcf.
 ^_[]
 9N\t
 ffff.
@@ -2653,32 +2714,40 @@ L$ 9
 ,^_[]
 ffffff.
 USWV
-D$pt
-)D$@
-D$4f
-(D$@
-u7f.
-t$xu/
-|$p)
+)D$P
+(D$P
+u6ff.
+L$|)
 ^_[]
-ffffff.
+ffff.
 USWV
-T$|	
-L$`)
-t$X9
-9\$\
-l$X;
-l$P9l$\
-l$`)
-\$p"\$l
-|$pf
-+T$d
-L$X1
-|$D1
+l$x9
+|$lth
+D$t0
+9D$h
+D$X9\$d
+L$h)
+;t$\
+9l$X
+D$l D$p
+L$Df.
+D$p9B
+)D$h
+L$h)
+3|$@
+D$D1
+D$<)
+L$p9H
+t$h;t$@
+L$\9L$D
+3T$<	
+L$p9H
 t$p)
-	D$Ht
-;T$||
-\$xu
+t$pu>
+	L$Ht
+T$xu
+;T$x|
+L$|t
 |$Tt
 ^_[]
 USWV
@@ -2742,11 +2811,61 @@ fmt
 y  u'
 9Qlu'
 USWV
+fff.
 datau
 <^_[]
 ffffff.
 USWV
 ,^_[]
+ffff.
+^_[]
+^_[]
+^_[]
+ffffff.
+fffff.
+^_[]
+fffff.
+fffff.
+t/ffff.
+fffff.
+fffff.
+^_[]
+u=ff.
+ffffff.
+fff.
+fffff.
+0ff.
+sb;u
+^_[]
+^_[]
+9~(t
+^_[]
+ffffff.
+^_[]
+^_[]
+Gl;G`
+Gl;G`r
+L_t)E
+ID;H s
+ID;H(s
+tA9u
+C,9}
+^_[]
+fff.
+^_[]
+ffffff.
+t?92u;
+^_[]
+^_[]
+^_[]
+fff.
+ffff.
+fff.
+uCOu
+fffff.
+^_[]
+ffffff.
+\^_[]
 raw ADTS AAC (Advanced Audio Coding)
 audio/aac,audio/aacp,audio/x-aac
 APETAGEX
@@ -2761,10 +2880,27 @@ APE tag size too large.
 Skipping binary tag '%s'.
 Error reading cover art.
 libavformat/apetag.c
+apng
+Animated Portable Network Graphics
+In-stream tag=%s (0x%08X) len=%u
+%s: sequence_number: %d, width: %u, height: %u, x_offset: %u, y_offset: %u, delay_num: %hu, delay_den: %hu, dispose_op: %d, blend_op: %d
+decode_fctl_chunk
+Could not ensure seekback, will not loop
+num_frames: %u, num_play: %u
+libavformat/apngdec.c
+Assertion %s failed at %s:%d
+buf_size >= 0
+./libavcodec/bytestream.h
+APNG demuxer
+ignore_loop
+ignore loop setting
+max_fps
+maximum framerate (0 is no limit)
+default_fps
+default framerate (0 is as fast as possible)
 libavformat/avc.c
 URLContext
 protocol_whitelist
-Assertion %s failed at %s:%d
 !(e=av_dict_get(*options, "protocol_whitelist", ((void*)0), 0)) || (uc->protocol_whitelist && !strcmp(uc->protocol_whitelist, e->value))
 libavformat/avio.c
 protocol_blacklist
@@ -3100,7 +3236,6 @@ max_gif_delay
 maximum valid delay between frames (in hundredths of seconds)
 default_delay
 default delay between frames (in hundredths of second)
-ignore_loop
 ignore loop setting (netscape extension)
 Blues
 Classic Rock
@@ -3461,7 +3596,7 @@ Corrupt int4 RM-style audio packet size
 Corrupt sipr RM-style audio packet size
 Corrupt generic RM-style audio packet size
 Compression size but no data in headerstrip
-1.2.5
+1.2.11
 Invalid track number %llu
 File ended prematurely at pos. %llu (0x%llx)
 Unknown entry 0x%X at pos. %lld
@@ -3531,8 +3666,6 @@ Invalid bounding rectangle coordinates %u,%u,%u,%u
 Missing projection private properties
 Unknown spherical cubemap layout %u
 Unknown spherical metadata type %llu
-buf_size >= 0
-./libavcodec/bytestream.h
 Lavf%d.%d.%d
 Invalid FLAC private data
 MAIN
@@ -3544,6 +3677,7 @@ libavformat/mov.c
 invalid size %lld in stsd
 size=%lld 4CC=%s codec_type=%d
 Invalid sample rate %d
+Invalid channels %d
 reached eof, corrupted STSD atom
 mov,mp4,m4a,3gp,3g2,mj2
 QuickTime / MOV
@@ -3674,11 +3808,13 @@ loci too short (%u bytes left, need at least %d)
 %d/%d
 DOVI in dvcC/dvvC box, version: %d.%d, profile: %d, level: %d, rpu flag: %d, el flag: %d, bl flag: %d, compatibility id: %d
 Empty Content Light Level Info box
+Ignoring duplicate CLLI/COLL
 Invalid Mastering Display Color Volume box
 Empty VP Codec Configuration box
 Unsupported VP Codec Configuration box version %d
 Empty Content Light Level box
 Unsupported Content Light Level box version %d
+Ignoring duplicate COLL
 Empty Mastering Display Metadata box
 Unsupported Mastering Display Metadata box version %d
 unsupported OpusSpecificBox version
@@ -3771,6 +3907,7 @@ Reference with mismatching origin, %s not tried for security reasons, set demuxe
 Using absolute path on user request, this is a possible security issue
 Absolute path %s not tried for security reasons, set demuxer option use_absolute_path to allow absolute paths
 multiple edit list entries, Use -advanced_editlist to correctly decode otherwise a/v desync might occur
+start_time - empty_duration is not representable
 STSZ sample size %d invalid (too large), ignoring
 STSZ sample size %d invalid (too small), ignoring
 wrong sample count
@@ -3821,7 +3958,7 @@ reached eof, corrupted STSS atom
 invalid STSD entries %d
 Duplicate stsd found in this track.
 track[%u].stsc.entries = %u
-Duplicated STSC atom
+Ignoring duplicated STSC atom
 STSC entry %d is invalid (first=%d count=%d id=%d)
 sc->stsc_data[i+1].first >= 2
 reached eof, corrupted STSC atom
@@ -3893,7 +4030,7 @@ unsupported color_parameter_type %s
 %s: pri %d trc %d matrix %d
  full %hhu
 STCO outside TRAK
-Duplicated STCO atom
+Ignoring duplicated STCO atom
 reached eof, corrupted STCO atom
 Empty AV1 Codec Configuration Box
 ignored unknown aclr value (%d)
@@ -4462,7 +4599,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
@@ -4639,7 +4776,34 @@ ds64
 WAV demuxer
 ignore_length
 Ignore length
+incorrect header check
+unknown compression method
+invalid window size
+unknown header flags set
+header crc mismatch
+invalid block type
+invalid stored block lengths
+too many length or distance symbols
+invalid code lengths set
+invalid bit length repeat
+invalid code -- missing end-of-block
+invalid literal/lengths set
+invalid distances set
+invalid literal/length code
+invalid distance code
+invalid distance too far back
+incorrect data check
+incorrect length check
+need dictionary
+stream end
+file error
+stream error
+data error
+insufficient memory
+buffer error
+incompatible version
 MbP?
+Mb@C
 GIF87aGIF89a
 																
         
@@ -5463,7 +5627,7 @@ Genuine Adobe Flash Player 001
 Mb@?
 @j@ffffff
 Mb`?
-5FFmpeg version 4.3.2
+5FFmpeg version 4.3.4
 =}~O
 :Feje$
 $iH0@.
@@ -5474,47 +5638,118 @@ VNna
 @Tf;
 VNo7
  @333333
-ACLR0
+ n;^
+Qkkbal
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+Z* ,	
+H$6t
+52F*
+	#jT$
+^6o}
+[-&LMb#{'
+w+OQvr
+R1h58
+SKyu
+)\ZEo^m/
+ru&o
+i8P/
+?(3w
+H*0"ZOW
+{kHw
+)T`D
+!AxU
+l!;b	F
+:1X:
+y9*O
+kM`~
+Vc0a
+dQy/
+lDa>
+7~8A
+C-Yn
+gqr<
+$/o|
+f-=v
+mj>zjZ
+l6qnk
+IiGM>nw
+1A26b
+i91k
+ewh/?y
+*5KS
+6~_'
+F*.f
+1wsHp
+M8MF
+Pe6^
+#bML"
+`F(>
+vQO+t
+[h1R
+XsBI
+hPU3
+^oEZ_
+2%k_
+w3Xc
+/P8i
+OZw3(?
+Z"0*
+fP~V
+^GP~
+b;!l
+V_:X1:
+NJ2"v
+O*9y]
+fu`z
+/yQA
+&]|v
+ inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ACLRp
 APRG
 AALP
-ARES0
-avss
-av1C0
-chpl
+ARESp
+avss0
+av1Cp
+chpl@
 co64
-colr@
-ctts
-dinf`]
-DpxE0
-drefp
-edts`]
-elst
-enda
-fiel
-adrm
-ftyp`
-glbl
-hdlr0
-ilst 
-jp2hp
-mdat
-mdhd
-mdia`]
-metaP
-minf`]
+colr
+cttsP
+dinfPr
+DpxEp
+dref
+edtsPr
+elst0
+endap
+fiel0
+adrm 
+ftyp
+glbl`
+hdlr
+ilst
+jp2h
+mdatP
+mdhdp
+mdiaPr
+meta
+minfPr
 moof
 moov
-mvex`]
-mvhd
-SMI p
-alac
-avcC
+mvexPr
+mvhd0
+SMI 
+alacP
+avcC`
 pasp
-sidx
-stbl`]
+sidxp
+stblPr
 stco
 stps
-strf 
+strf
 stsc
 stsd`
 stss0
@@ -5525,52 +5760,52 @@ sdtpP
 tkhd
 tfdt
 tfhd
-trak`
-traf`]
-tref`]
-tmcd@J
-chap
+trak`(
+trafPr
+trefPr
+tmcd
+chap@a
 trex
 trun
-udta`]
+udtaPr
 wave
-esds
-dac3
-dec3@`
-ddts@a
-wide c
+esds0v
+dac3Pv
+dec3
+ddts
+wide
 wfex
-cmov0d
-chan
+cmov
+chanp}
 dvc1
-sbgp`g
-hvcC
-uuid
-free
-----
-sinf`]
-frma
-senc
+sbgp
+hvcC`
+uuid 
+freep
+----@
+sinfPr
+frma`
+senc0
 saiz
 saio
-pssh
+psshP
 schm
-schi`]
-tenc`
+schiPr
+tenc
 dfLa
-st3d
-sv3d
+st3d`
+sv3dP
 dOps
-dmlp@
-SmDm
+dmlp
+SmDm`
 CoLL
 vpcC
-mdcv
-clliP
+mdcv0
+clli
 dvcC
 dvvC
-ZAZBYA^A`
-AYASCRCRJRJR0Xp
+[AZBYA^A`
+p RJRJR0XSCRCRJRJR0Xp
 RCR0Xp
 p RCTBp
 YJRJRJR0Xp
@@ -5600,8 +5835,9 @@ RASEp p
 RASEp RJRJRJRJRJRISISISISJRJRJRJRJRJRJRJRISISIp0p
 p RAp
 RAp RJRJRJRJRJRJR0XTB
-p XBR0XRAp
-S0XRAp
+p XBR0X\Ap
+S0XRCp
+SIRAp
 SARFRAp
 UGRAp
 UGRAp
@@ -5665,6 +5901,7 @@ V0DRBRDSAQ
 @_av_get_picture_type_char
 @_av_grow_packet
 @_av_image_check_sar
+@_av_image_check_size
 @_av_init_packet
 @_av_log
 @_av_malloc_array
@@ -5849,6 +6086,7 @@ V0DRBRDSAQ
 @_fcntl$UNIX2003
 @_fprintf
 @_fputc
+@_free
 @_freeaddrinfo
 @_fstat$INODE64
 @_fwrite$UNIX2003
@@ -5864,6 +6102,7 @@ V0DRBRDSAQ
 @_lrintf
 @_lseek
 @_lstat$INODE64
+@_malloc
 @_memchr
 @_memcmp
 @_memcpy
@@ -5903,10 +6142,6 @@ V0DRBRDSAQ
 @_BZ2_bzDecompress
 @_BZ2_bzDecompressEnd
 @_BZ2_bzDecompressInit
-@_inflate
-@_inflateEnd
-@_inflateInit_
-@_uncompress
 subtitle_free
 Apriv_
 codec_
@@ -5966,18 +6201,16 @@ create
 default_free
 unref
 alloc
-	receive_frame
+receive_frame
 open2
 is_open
 get_name
 alloc_context3
-end_packet
-	tring
 dec_
-lor_
+	lor_
 mpare_
 ntent_light_metadata_alloc
-get_
+	get_
 s_decoder
 terate
 primaries_name
@@ -5989,6 +6222,8 @@ ynarray_add
 ump_format
 fault_item_name
 muxer_
+ix_fmt_to_codec_tag
+arameters_
 a_freq_tab
 audio_decode_header
 4audio_
@@ -6012,17 +6247,15 @@ ast_
 mt_ctx_get_duration_estimation_method
 malloc
 realloc
-ix_fmt_to_codec_tag
-arameters_
+to_context
+copy
+alloc
 lename_number_test
 default_stream_index
 9program_from_stream
 :best_stream
 fo_tag
 put_format
-to_context
-copy
-alloc
 om_context
 ree_context
 ind_decoder
@@ -6049,24 +6282,20 @@ output_timestamp
 1frame_filename
 layout_nb_channels
 name
+tring
+end_packet
 orbis_parse_
 bprintf
 reset
 init
+ame_flags
 icture_type_char
 acket
 _relative
-ame_flags
 sleep
 rl_split
 make_string
 init
-mac_
-ex_dump
-alloc
-init
-update
-inal
 pherical_
 #dp_create
 2eek_frame
@@ -6074,9 +6303,15 @@ ereo3d_
 start
 istr
 "casecmp
-mage_check_sar
-format_next
+mac_
+ex_dump
+alloc
+init
+update
+inal
 casecmp
+mage_check_s
+format_next
 it_packet
 terleaved_write_
 1dex_search_timestamp
@@ -6111,14 +6346,15 @@ _val
 ix_fmt_desc_get
 "kt_dump
 cket_
+ rse
  copy_props
- free
+!free
 !get_side_data
 !new_side_data
 !pack_dictionary
 !unref
 dd_side_data
- lloc
+!lloc
 ake_refcounted
 !ove_ref
 !scale_ts
@@ -6129,8 +6365,8 @@ close
 type_name
 "alloc
 tile_bounds
-"projection_name
-"alloc
+#projection_name
+#alloc
 rink_packet
 update
 #init
@@ -6149,7 +6385,7 @@ iterate
 %input_format
 %output_format
 &open
-)get_
+*get_
 +handshake
 ,enum_protocols
 ind_protocol_name
@@ -6180,9 +6416,9 @@ ut_str
 _log
 -_log2
 -codec
--sample_aspect_ratio
+.sample_aspect_ratio
 ormat
--rame_rate
+.rame_rate
 be_input_
 .gram_add_stream_index
 format
@@ -6193,9 +6429,9 @@ get_
 1write_header
 1version
 2license
-2que
+3que
 8open_input
-8seek_file
+9seek_file
 :match_stream_specifier
 ;transfer_internal_stream_timing_info
 mov_
@@ -6214,7 +6450,7 @@ _query
 video_tags
 2audio_tags
 onfiguration
-2lose_input
+3lose_input
 get_
 3set_r
 4add_side_data
@@ -6237,7 +6473,7 @@ video_codec
 7data_codec
 7metadata_header_padding
 7control_message_cb
-7probe_score
+8probe_score
 video_codec
 7audio_codec
 7subtitle_codec
@@ -6247,7 +6483,7 @@ video_codec
 aque
 7en_cb
 aque
-7en_cb
+8en_cb
 ue_attached_pictures
 8ry_codec
 ree_context
@@ -6266,6 +6502,7 @@ init
 0 0`
 P `p
     
+PPpP
 _av_add_index_entry
 _av_add_stable
 _av_add_stable
@@ -6493,6 +6730,8 @@ _av_hmac_update
 _av_iformat_next
 _av_image_check_sar
 _av_image_check_sar
+_av_image_check_size
+_av_image_check_size
 _av_index_search_timestamp
 _av_init_packet
 _av_init_packet
@@ -6973,6 +7212,7 @@ _av_hmac_free
 _av_hmac_init
 _av_hmac_update
 _av_image_check_sar
+_av_image_check_size
 _av_init_packet
 _av_lfg_init
 _av_log
@@ -7102,6 +7342,7 @@ _connect$UNIX2003
 _fcntl$UNIX2003
 _fprintf
 _fputc
+_free
 _freeaddrinfo
 _fstat$INODE64
 _fwrite$UNIX2003
@@ -7111,15 +7352,13 @@ _getnameinfo
 _getsockopt
 _gmtime_r
 _hypot
-_inflate
-_inflateEnd
-_inflateInit_
 _listen$UNIX2003
 _llrint
 _localtime_r
 _lrintf
 _lseek
 _lstat$INODE64
+_malloc
 _memchr
 _memcmp
 _memcpy
@@ -7154,7 +7393,6 @@ _strspn
 _strstr
 _strtod$UNIX2003
 _strtol
-_uncompress
 _unlink
 _write$UNIX2003
 dyld_stub_binder
@@ -7189,11 +7427,11 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libavformat.58.dylib
+J1'4
 @loader_path/libavcodec.58.dylib
 @loader_path/libavutil.56.dylib
 /usr/lib/libSystem.B.dylib
 /usr/lib/libbz2.1.0.dylib
-/usr/lib/libz.1.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
 /System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
@@ -7217,10 +7455,12 @@ fffff.
 [A^]
 ffffff.
 fffff.
+t-f.
 ffff.
 ffff.
 ffff.
 AWAVSI
+t-f.
 [A^A_
 UAWAVAUATSH
 [A\A]A^A_]
@@ -7231,6 +7471,43 @@ D$$M
 L$(9
 UAWAVAUATSH
 fff.
+[A\A]A^A_]
+UAWAVAUATSPLcw
+IDAT
+acTLuJ
+IHDR
+[A\A]A^A_]
+UAWAVAUATSPI
+<$=IHDR
+IHDRI
+=fcTL
+=acTL
+[A\A]A^A_]
+=acTL
+=fcTL
+UAWAVAUATSH
+t$XI
+IENDu>A
+fcTL
+D$PI
+D$HI
+D$LI
+D$TI
+D$DI
+D$@I
+\$PA
+d$HE
+H8A9
+)D$p
+)D$`
++L$TH
+@<+D$D
+=IDATt
+=fdAT
+t$XD
+=IEND
+=fcTL
+t$XD
 [A\A]A^A_]
 tgffff.
 UAWAVAUATSPI
@@ -7320,6 +7597,7 @@ UAWAVATSH
 t$HH
 \$@H
 [A\A^A_]
+fff.
 UAWAVSPI
 [A^A_]
 fffff.
@@ -7792,107 +8070,107 @@ L$0L
 [A\A]A^A_]
 [A\A]A^A_]
 UAWAVAUATSPA
-tjHc
-t&Hc
+tmHc
+t(Hc
 [A\A]A^A_]
-fff.
 UAWAVAUATSH
-t$XH
-T$PH
-L$`H
-D$HH
-|$hL
-D$@H
-\$$H
-\$`H
-l$hL
-D$8A
-D$0A
-H;D$8
-|$hH
-t$XH
-T$PH
-\$$I
-D$8A
-D$(1
-H;D$8}21
-|$hM
-;\$0r
-D$8L
-L$8I
-D$01
-D$(1
-D$pH
-L$(H
+t$hH
+T$`H
 L$pH
-$tY1
-H;D$
-D$0H
-L$(9
-|$hH
-D$pHi
-T$pHiT
-D$pH
-D$pH
-\$`L
-\$`I
-D$8A
-D$0A
-H;D$8
-|UHc
-|$hH
-t$XH
-T$PH
-D$8A
-L$XH
+D$XH
+|$xL
 D$PH
-\$0I
-l$`H
-YD$@
-L$HH
-YD$@
-L$HH
-YD$@
+\$4H
+\$pH
+l$xL
+D$HA
+D$@A
+H;D$H
+|$xH
+t$hH
+T$`H
+\$4I
+D$HA
+D$81
+H;D$H}21
+|$xM
+;\$@r
+D$HL
+T$(H
+L$HI
+D$ 1
+D$@1
+D$81
+D$@H
+L$8H
+H9D$
+H;D$ 
+H;D$ 
+D$@H
+L$89
+|$xH
+L$(H
+D$(H
+t$(H
+L$(H
+\$pL
+\$pI
+D$HA
+D$@A
+H;D$H
+|UHc
+|$xH
+t$hH
+T$`H
+D$HA
 L$hH
-l$`H
-l$`H
-T$(L
-,l$@H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-|$`H
-L$@f
-,D$8H
-|$pL
-t$`L
+D$`H
+\$@I
+l$pH
+YD$P
+L$XH
+YD$P
+L$XH
+YD$P
+L$xH
+l$pH
+l$pH
+T$8L
+,l$PH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+|$pH
+L$Pf
+,D$HH
+t$pL
 [A\A]A^A_]
-|$hH
-D$X1
+|$xH
+D$h1
 w1u3H
-L$HH
-,\$@
-,D$@H
+L$XH
+,\$P
+,D$PH
 E9l$
-|$hH
-|$`H
-,D$@H
-|$`H
-XD$@
-|$`H
-,D$@H
-|$`H
-,D$@H
+|$xH
+|$pH
+,D$PH
+|$pH
+XD$P
+|$pH
+,D$PH
+|$pH
+,D$PH
 puqH
-|$hH
+|$xH
 AWAVATSPI
 t$ H
 ffffff.
@@ -8077,35 +8355,30 @@ T$~H
 [A\A^A_
 ffff.
 UAWAVAUATSH
-t$hH
-L$xL
-D$P1
-xUHc
--ffff.
+D$XH
+t$p1
+xIHc
+l$dL
+l$hD;
+D$01
+D$@L
+D$@H
+l$81
+D$,L
+USLT
+D$,t'D
+L$pI
+USLTt9H
 D$XD
-l$pD;
-D$81
-D$HL
-D$HH
-t$@1
-D$0L
-USLTH
-t$(H
-D$0t&
-D$(L
-T$(L
-L$hu
-USLTtBH
-D$PD
-L$`A
-\$0H
-|$hH
-|$hH
-ffffff.
-\$HH
-\$H1
-l$pH
-t$hL
+L$PA
+l$8D
+|$pH
+l$8H
+|$pH
+\$@H
+\$@1
+t$xH
+t$pL
 [A\A]A^A_]
 fff.
 AWAVATSPI
@@ -8209,73 +8482,97 @@ D$ H
 UAWAVAUATSH
 [A\A]A^A_]
 ffffff.
-t5fH
-l$HH
-D$|I
+l$`H
+d$pH
 D$P1
-!wbH
-Su7I
-t$pf
-t$pH
-l$hA
+Su>I
+l$xL
 VUUUH
-T$PA
-L$@H
-\$|H
-|+((|vH
-D+8H
-t+8H
-d+(H
-|+( 
-|$pH
-=sowttg=twost`H
+T$hL
+D$hH
+D$hL;8A
+D$hH
+=sowttd=twost]H
 twos
 twosH
-|$pH
+\$pH
+\$pH
 SMI 
-SVQ3A
+SVQ3
 SVQ3
 SVQ3H
-L$h1
-d$dA
+L$pH
+L$pH
+L$pH
 raw 
 raw H
+\$pH
 L$hH
-9=(P
-D$LH
+T$pH
+|$pL
+|$pL
+ twH
+T$pH
+D$pH
+|$pL
+L$XH
+A=(P
+|$pL
+|$pL
+|$pL
+|$pH
 alac
-D$hH
-D$h1
-D$pL
-C)D>(
-D>PH
-\>HH
-l$XK
-D$pt
-J8@H
-D>8I
-0HcU
-|>pH
-D=(H
-|$pA
-TTA1fA
-D$h1
-Lc@<H
-Hc@8I
-HcCPHcKTHi
-|$XH
-|$XH
-D$@H
+D$XH
+\$pL
+D#(H
+T$pH
+\$pH
+T$pH
+TTA1f
+D$X1
+|$pL
+D$xA
+D$xf
+|$pH
+|$pL
+T$pH
+T$pL
+T$pH
+L$XA
+D$xu
+|$p1
+D$X1
+D$xL
+d$pL
+C)D<(
+D<PH
+l<HH
+L$xt
+K8@H
+D<8H
+D$pH
+|<pH
+D$X)
+D$pH
+w%Hc
+T$pH
+LcO<H
+\$pL
+D$pH
+HcEPHcMTHi
+D$pH
+D$pH
+D$pH
+D$pH
 t$PH;
-|$@L
-.Chshf
-.CpH
-.CxsjH
-D$pA
-D$pf
-|$@L
-L$hA
-D$hD)
+E;4$
+D$pH
+D$pH
+.EhsY
+.EpsT
+.ExsO
+T$pH
+!wbH
 x%E1
 0HcU
 UAWAVATSI
@@ -8286,61 +8583,73 @@ UAVSL
 [A^]
 UAWAVAUATSH
 D$0Hc
+ffff.
+ffffff.
 [A\A]A^A_]
 UAWAVAUATSH
 [A\A]A^A_]
-\$hM
-fff.
-t$0I
-|$xk
-t$0umH
-\$pA
-\$pI
-H;\$h
 \$pL
-L$(L
-d$`E
-L$XD
-T$(L
-T$pI
+d$@I
+D$hHc
+t$hI
+|$xk
+t$hH
+T$`H
+T$`H
+T$`L
+t$@I
+L;T$p
+L$ H
+T$pH
+L$PE
+d$hL
+T$pH
+l$pH
+T$ H
+L$pN
 l$8H
-|-f.
-t$pt
+|$0A
+l$pH
+t$`t
+\$pL
+t$M9
 l$8H
-L$hH
-\$@L
-H+L$H
-l$@|#H
-T$pt
-L+t$8
-\$@I9
-H;|$h|
-T$pt
-H;|$h}i
-l$p|#H
 L$XH
-t$0H
-D$ 1
-d$`H
-\$HL
-t$0H
-D$XH
-D$pH
+\$(H
+L$8I)
+H+L$0
+l$(I9
+|$pL
+|$hL
+T$pH
+\$(I9
+H;|$X|
+d$hL
+|$pL
+|$hL
+T$pH
+H;|$X}f
+d$hL
+d$hL
+|$pH
+|$pL
+L$HH
+l$XH
+D$`I
+D$pI
 D$hI
-\$pu
-\$pA
-t$XH
-t$`x
-\$ D
-t$0H
-\$HH
-\$ L
-t$0H
-\$HH
-t$0E1
-L$0H
-t$0H
-t$0Ic
+|$pH
+D$pH
+t$`H
+l$Xx	1
+D$`A
+\$Pt
+L$`H)
+D$`I
+\$@H
+D$pH
+L$@H
+d$@Ic
 UAWAVAUATSH
 D$$H
 ([A\A]A^A_]
@@ -8478,10 +8787,10 @@ ffff.
 UAWAVAUATSH
 Lc&I
 )D$p
-)D$`H
+)D$`
 l$`D
-d$h1
-|$`f
+d$hE1
+|$`f.
 Dd@Hc
 D$x1
 L@LD
@@ -8494,17 +8803,17 @@ D$4D
 L$0H
 D$(L
 |$4H
-H(t%H
-D%@Hc
-u]Ic
+H(t$H
+D&@Hc
 [A\A]A^A_]
+fff.
 u	H9
 u*f.
 u	H9
-UAWAVATSI
+UAWAVAUATSPH
 x E1
-uvHc
-[A\A^A_]
+uxIc
+[A\A]A^A_]
 UAWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
@@ -8532,80 +8841,84 @@ D$0H
 A;\$,r
 [A\A^A_
 UAWAVAUATSH
-T$,H
-t$8H
+T$<H
+l$PH
+|$@H
+|$HL
 |$0H
-l$PI
 D$ 1
-D$@L
-|$XL
+fff.
+D$XH
+l$hH
+D$HH
 AV1xu	A
-AVupt{H
-L$@H
-T$XH
+AVuptwH
+L$XH
+T$hH
 `pcn
 apchu
-apcntJA
-dvcptAA
-dvppt8H
-L$0H
+apcntIA
+dvcpt@A
+dvppt7H
+L$@H
 jpeg
-ffffff.
-d$0I
-)D$p
-)D$`
-|$`D
-L$XI
-\$8H
-L$Pf
-ffff.
-d$8L
-ffffff.
-ffff.
-l$@u$I
-I420I
-H263u2
 fffff.
+l$HI
+D$`A
+d$@I
+)D$p
+|$pD
+L$hI
+t$PL
+\$0f
+D$(L
 ffffff.
-d$8L
-l$@I)
-D$XI
-=mp4sH
-\$Pt
-|$0L
-|$PA
-lpcmu)
+ffff.
+\$Xu$I
+I420I
+H263u-
+fff.
+l$(H
+fffff.
+l$XH)
+l$hI
+=mp4sM
+|$@L
+lpcmu0
+fff.
 twos
-=tmcd
-D$0H
-l$@I
-d$8I
+=tmcdM
+L$@H
+D$HL
+\$XI
+l$HH
 eman
 raw L
-k@p"
-|$8L
-l$XH
-stsdH
-|$0L
 ffffff.
-l$PH
+k@p"
+|$PH
+HczpH
+\$hH
+stsdH
+|$@L
+ffff.
 C@Hc
-L$HH
-D$,9
-t$8|6
-L$PH
-D$0H
+L$`H
+D$<9
+l$P|4
+D$@H
+D$@H
+D$@H
+D$@H
 [A\A]A^A_]
-D$0H
-D$0H
 AVSP
 mp4s
 UAWAVAUATSH
 T$<I
-|$0E1
-D$ 1
+d$0I
+l$ E1
 D$HL
-D$@=freeu+A
+D$@=freeu
 =hoov
 mvhdt
 cmovu!I
@@ -8614,35 +8927,29 @@ D$@moovf
 |$<moovt
 D$@=trak
 =mdat
-H;\$0
-D$Hf
 )D$p
 t$@H
 )D$`
 )D$P
-L$HH
-D$0H
+L$HL
 D$HH
-D$ L)
 D$HH
-D$HM
-t$0L)
+d$0H
+fffff.
 fff.
 |$<udtaH
 |$<ilstH
 |$<metau
 =keysu
-fffff.
 T$@H
 L$HL
 \$HH
-fffff.
 l$H1
-|$0y6I
+l$ y3I
 t$HL;t$(L
-|$0L
 [A\A]A^A_]
 d$HM
+fff.
 AWAVS1
 ffff.
 ffff.
@@ -8842,64 +9149,37 @@ rootL
 fff.
 UAWAVAUATSH
 T$`H
-t$0H
 `kID
-t$0H
 jeyw
 lanu
 ocst
 bprt
 `pID
 akID
-t$0H
-t$0H
-t$0H
-t$0H
-t$0H
 keyw
-t$0H
-manu
-t$0H
-autu~
-t$0H
-hstugH
-pcstu-H
-t$0H
-t$0H
-t$0H
+manuuz
+autug
+hstuTH
+pcstu=H
 cprtu
-|$(A
-l$0H
+l$ H
+D$(M
+D$ H
 =data
 H;D$h
 covr
-D$ I
-|$0H
-t$xD
-Nt*H
-D$ I
+l$(L
 L$hH)
 L$hH
-l$0H
 H;D$h
-t$TD
-D$(H
-G0E1
-G8D9
-|$[H
-L$ H
-D$ M
-|$(H
-t$0D
-D$ H
-D$ H
+l$(I
+D$0H
+D$8D9
+l$(E1
+D$0H
 [A\A]A^A_]
-t$(L
-t$(L
-t$(L
-|$0L
-t$(L
-D$ H
+u+E1
+D$0H
 T$H1
 \$TH
 T$H1
@@ -8920,9 +9200,6 @@ GMMT
 @PRQ
 `ART
 HMMT
-D$ A9
-L$(H
-T$ E1
 sves
 kdes
 roar
@@ -8967,7 +9244,6 @@ soal
 disk
 stik
 loci
-D$(H
 tvsh
 catg
 rtng
@@ -8978,14 +9254,10 @@ egid
 desc
 soaa
 XMP_
-l$0H
+D$0H
 D$(H
-D$(H
-D$ H
-D$0t%
+D$ t%
 \$tH
-D$(H
-L$(H
 UAWAVAUATSPH
 |$8H
 D$0H
@@ -9027,9 +9299,9 @@ xLIc
 D;l$
 [A\A]A^A_]
 UAWAVAUATSPA
-stcouM1
 [A\A]A^A_]
-co64u
+stcou+1
+co64
 UAWAVAUATSH
 ([A\A]A^A_]
 UAWAVAUATSH
@@ -9045,34 +9317,30 @@ D$ H
 ([A\A]A^A_]
 fff.
 UAWAVAUATSH
-|$PH
+|$@H
 H,E1
-l$4E1
-d$(M
-d$(Ic
-D$@L
+l$,I
+d$ M
+d$ Ic
+L$0L
 alis
-D$ K
-D$HA
-D$PH
-D$HA
-\$PH
+D$8A
+D$@H
+D$8A
+\$@H
 D'vL
 D'tH
 L'vD
-D$8O
-H;D$@
-t$HH
-D$PH
-D$PH
-\$8H
-T$ A9
-D$ A)
-D$PH
-l$4D
-D$PH
-l$4E1
-X[A\A]A^A_]
+H;D$0
+l$8H
+D$@H
+D$@H
+D$@H
+l$,D
+D$@H
+l$,E1
+H[A\A]A^A_]
+ffffff.
 UAWAVAUATSH
 fff.
 [A\A]A^A_]
@@ -9094,7 +9362,7 @@ UAWAVAUATSH
 [A\A]A^A_]
 ffffff.
 UAWAVAUATSPI
-fielu$L9
+<$fielu$L9
 [A\A]A^A_]
 hvcCu
 dvh1u
@@ -9148,29 +9416,27 @@ UAVSH
 t/Ic
 [A^]
 UAWAVAUATSH
-fff.
 H[A\A]A^A_]
 D$@H
-t$(H
-l$8L
-l$(L
-D$4L
-|$@H
+d$(L
+D$$A
+l$8I
+l$(H
+D$4H
+|$@L
 L$@9
-~YHc
+~VHc
 D$@H
 |$8H
-D$4H
-l$8H
+l$4H
+l$8A
 D;t$$
 D$@D
 T$@M
-fffff.
 D$@H
 D$@H
 ;X,r
 D$@H
-ffff.
 UAWAVAUATSPH
 H,E1
 tSE1
@@ -9178,17 +9444,11 @@ tSE1
 AWAVATSPH
 [A\A^A_
 UAWAVAUATSH
-l$PI
-D$XH
-D$X1
-D$XH
-L$P9
-D$Xs<B
-D$XB
-D$XB
-D$XI
+2ff.
+MPA9
+EXsIL
+ffffff.
 [A\A]A^A_]
-fff.
 UAWAVAUATSH
 fffff.
 vsE1
@@ -9257,78 +9517,77 @@ fffff.
 ffffff.
 UAWAVAUATSH
 ffffff.
-T$xE
+T$pE
 <RD;
-L$pL
-<RD;
+L$xL
+<RD;$
 RHcT
-T$xM
-T$xA
 tRA;
 l$hH
 rhE1
-tJA;
+tDA;
 t$H9
 A;J s"H
+l$hA
 ~"Ic
-T$xM
+T$pM
 u>Hc
-D$pH
+D$xH
 D$h1
+D$8H
+D$xH
 D$@H
-D$pH
-D$HH
-D$pH;
-L$HH
+D$xH;
+L$@H
 I H)
-D$HH
-L$`H
-L$XHc
-L$PM
-D$8H
-L$PL
-D$PH
-D$8H
-D$PH
-T$(H
-T$4H
-T$()
-D$XH
-D$PH;
-D$PH9
-D$8H
-H+D$PH
-D$`H
-L$PH
-D$8A
-D$@tlA
 D$@H
-L$8L
-L$8H
-L$hHc
-T$`H
-D$`A
-D$8H
-D$hH
-D$HH
-L$8H
-D$HL
+L$XH
+L$PHc
+L$HM
+D$0H
 L$HL
-t$8H
-L$`H
-T$PH
-D$pH;
-t$4H
+D$HH
+D$0H
+D$HH
+T$ H
+T$,H
+T$ )
+D$PH
+D$HH;
+D$HH9
+D$0H
+H+D$HH
+D$XH
+L$HH
+D$0A
+D$8tlA
+D$8H
+L$0L
+L$0H
+L$hHc
+T$XH
+D$XA
+D$0H
+D$hH
+D$@H
+L$0H
+D$@L
+L$@L
+t$0H
+L$XH
+T$HH
+D$xH;
+t$,H
 D$ I
 D$(H
 L$(A
-T$xH
+T$pH
 I9A u9
 E;~@
 ~HJc\
 FHB;4
-D.4H
-t.vA
+D74I
+t7vA
 =`ivx
 =`i52
  =ai12
@@ -9360,50 +9619,45 @@ I;A0~
 ffffff.
 UAWAVAUATSPI
 [A\A]A^A_]
-fffff.
 AWAVATSPI
 [A\A^A_
 UAWAVAUATSH
-A9L$
-A;Uxt
-fff.
+;Sxt
 xKD9
-D$0A
+D$`A
 [A\A]A^A_]
-D$0A
-xh;T
-L$ tLH
+D$`A
+xg;T
+L$(tKH
 L8 H9
-D$ H
-uDH)
-l$0)
-l$0H
-|$`L
-D$XL
+D$(H
+qDH)
+l$`)
+|$hH
+l$`A
+|$hM
+|$X~
 L$L%
 L$@H
 D$81
-t$xL
-H9l$XA
-L$xH
-\$pL
-T$@H
-T$8F
-D$lE
-D$`9
-t$xL
-t$ H
-t$`A)
-T$0Hc
+T$hH
+trMc
+L9l$X
+l$xL
+t$@H
+t$8D
+L$h9
+t$`L
+T$hH
+L$`H
+t$(H
+T$`Hc
 A)A@A
-T$0L
-D$`A
-}2Hc
-M\Ic
-D$xI
-M9T$(
-D$(H
-ffff.
+}0Hc
+K\Ic
+ffffff.
+I9G(
+D$0H
 UAWAVAUATSPH
 w>H=amrfu6L
 #t-H
@@ -9477,9 +9731,8 @@ t#A9
 UAWAVAUATSH
 t$0H
 |$0A
-L$(H
+D$(H
 8[A\A]A^A_]
-fffff.
 UAWAVAUATSH
 t$(H
 |$(A
@@ -9545,17 +9798,16 @@ UAWAVAUATSH
 [A\A]A^A_]
 UAWAVSPI
 [A^A_]
-fff.
+fffff.
 UAWAVSPI
 [A^A_]
-fffff.
 UAWAVAUATSPI
 [A\A]A^A_]
 fff.
-UAWAVSPI
-[A^A_]
-UAVSI
-[A^]
+UAWAVATSH
+[A\A^A_]
+AWAVSI
+[A^A_
 UAWAVAUATSH
 8[A\A]A^A_]
 fffff.
@@ -10191,7 +10443,9 @@ McD?@D
 [A\A]A^A_]
 fff.
 AWAVAUATSI
+o%>3
 T2tfffff.
+o%(2
 tfffff.
 pA;D
 [A\A]A^A_
@@ -10760,55 +11014,57 @@ ffff.
 [A\A]A^A_]
 fffff.
 UAWAVAUATSH
-d$`Hc
-|$h1
-l$XH
-l$hL
-\$xM9
-D$XH
-l$XM
-|$(D
-T$4L
-\$8H
-l$ L
-|$HH
-L$@M
-D$XI
-l$PL
-|$`H
-l$XM
-|$`H
-T$@L
-\$HL)
-/u&H
-t$pH
-u-M9
-t$pH
-t$pH
-l$8H9
-u:H9
-D$PH
-l$XM
-H9T$(u&H
-l$XM
-l$XM
-|$`E
-l$Xt$H
-T$`L
-t$PI
-x/M9
-T$`L
-t$PL
+l$pLc
+\t'H
+|$x1
+t$`M
+l$xL
+D$Xu
+|$hH
+L$ H
+\$PD
+\$,L
+T$0H
+d$@L
+l$HM
+D$hI
+d$8L
+|$pL
+\$XH9
+|$XH
+|$pH
+H9t$P
+D$HL
+L$@L)
+l$PvMI
+D$HL
+L$@H
+t$0H9
+uTI9
+D$8H)
+l$Xw6L
+|$pL
+|$hL
+D$HI
+'L9|$ uWL
+l$XL
+|$hL
+l$XL
+|$hL
+D$8H)
+\$pI
+l$XK
+\$pE
+|$ht%H
+T$pH
+t$8L
+xeM9
+T$pH
+t$8L
+\$pH
+D$8H)
 [A\A]A^A_]
-l$XM
-D$`H
-\$HH
-D$PH)
-\$`M
-\$ L)
-|$`H
-D$PL)
-D$`A
+ffff.
 UAWAVAUATSH
 l$ H
 ffff.
@@ -11271,19 +11527,14 @@ T$HH
 t$8L
 D$0H
 D$xH
-ffffff.
-D$0J
-tKD;
-[ff.
-,fff.
+D$0M
 E;l$,
 D$xL
 D$0N
 fff.
 t+Hc
-ufHcUhMcF
-Hc]dHcMl
-ffff.
+uVHcUhIcF
+HcudHcMlH
 E;|$,
 fff.
 D$0H
@@ -11361,10 +11612,10 @@ UAWAVAUATSH
 usfff.
 [A\A]A^A_]
 UAWAVAUATSH
-L$0L
-A9o$uZI
-~)ffff.
+A9l$$u[I
+\$XH
 [A\A]A^A_]
+fff.
 fffff.
 fffff.
 UAWAVAUATSH
@@ -11449,7 +11700,8 @@ ffff.
 AWAVAUATSI
 [A\A]A^A_
 UAWAVAUATSH
-HcT$
+HcL$
+fff.
 ffffff.
 ffffff.
 \t(H
@@ -11542,28 +11794,30 @@ o8L9
 ffffff.
 tQL)
 UAWAVAUATSH
-L$4I
-l$@ffff.
-L$8M
-T$XH
-L$`I
-T$XI;V
-\$0L
-\$0L
-D$@A
-D$pA
-D$xI
-D$dI
-D$HI
-D$PI
-D$hA
-u1fff.
-D$hI
-D$hI
+L$,H
+\$0H
+|$8Hc
+|$8L
 ffff.
-D$(H
+L$XH
+T$PI
+T$xH
+D$xH;C
+l$DL
+d$HH
+l$DL
+D$`A
+d$`t
+D$hI
+D$pI
+ffff.
+l$8H
+D$PL
+l$,L
+l$DA
+L$@D)
+\$0H
 [A\A]A^A_]
-ffffff.
 UAWAVAUATSH
 T$pI
 L$0L
@@ -11572,7 +11826,6 @@ t$[A
 t$[|
 T$hH
 l$`H
-T$hH
 l$`I
 u|H9
 t$[M
@@ -11593,7 +11846,12 @@ D$HH
 t$\M
 t$\M
 9E$u%H
-9G$uaH
+t$\H
+9A$usH
+t	H9
+t	L9
+4*I9
+9A$u[H
 t	H9
 t	L9
 t$\H
@@ -11718,13 +11976,114 @@ y( u*
 [A\A]A^A_]
 UAWAVAUATSH
 fff.
-C(Hc
+HcC(Hcs H
+fff.
 datau
 [A\A]A^A_]
 fff.
 UAWAVAUATSPA
 Hcu$H
 [A\A]A^A_]
+[A\A]A^A_]
+t ffffff.
+AVS1
+C3\2
+C3D2
+C3\2
+C3D2
+C3\2
+C3D2
+C3\2
+L3 H
+fffff.
+[A^]
+AVSH
+ffff.
+ffff.
+L31H
+fff.
+t ff.
+H39I
+[A^]
+fffff.
+AWAVAUATSH
+T$<H
+t$DH
+T$HL
+L$xA
+L$|A
+t$PE
+L$XM
+l$hI
+L$pM
+t1A9
+uAf.
+ffff.
+ffff.
+ffff.
+"fffff.
+X[A\A]A^A_]
+AWAVATSA
+tII9
+[A\A^A_]
+E9w8t
+[A\A^A_]
+AWAVSPA
+[A^A_]
+AWAVATSH
+tZI9
+t$HH
+[A\A^A_]
+fff.
+tZI98uU
+ffffff.
+AWAVAUATSH
+A)[\L
+A;K@vKA
+K\;H0s
+K\;H@s
+K H9
+I;S 
+I#C(H9
+@t<H
+t5E9
+GXD9e
+[A\A]A^A_]
+AWAVAUATSPA
+M<E1
+E@E1
+[A\A]A^A_]
+t<H9
+AWAVSPI
+tWI9?uR
+WDH)
+[A^A_]
+ffff.
+AWAVATSA
+I;L$ u3D
+[A\A^A_]
+t%H99u 
+AWAVATSH
+[A\A^A_]
+t)H99u$
+AWAVAUATSPI
+VpH)
+|$81
+[A\A]A^A_]
+t!H99u
+t'H99u"
+tCH99u>
+w0Hc
+t'H99u"
+AWAVAUATSH
+ffffff.
+fffff.
+1ff.
+fffff.
+u A9
+<AD;}
+[A\A]A^A_]
+AWAVAUATSH
 [A\A]A^A_]
 raw ADTS AAC (Advanced Audio Coding)
 audio/aac,audio/aacp,audio/x-aac
@@ -11740,10 +12099,27 @@ APE tag size too large.
 Skipping binary tag '%s'.
 Error reading cover art.
 libavformat/apetag.c
+apng
+Animated Portable Network Graphics
+In-stream tag=%s (0x%08X) len=%u
+%s: sequence_number: %d, width: %u, height: %u, x_offset: %u, y_offset: %u, delay_num: %hu, delay_den: %hu, dispose_op: %d, blend_op: %d
+decode_fctl_chunk
+Could not ensure seekback, will not loop
+num_frames: %u, num_play: %u
+libavformat/apngdec.c
+Assertion %s failed at %s:%d
+buf_size >= 0
+./libavcodec/bytestream.h
+APNG demuxer
+ignore_loop
+ignore loop setting
+max_fps
+maximum framerate (0 is no limit)
+default_fps
+default framerate (0 is as fast as possible)
 libavformat/avc.c
 URLContext
 protocol_whitelist
-Assertion %s failed at %s:%d
 !(e=av_dict_get(*options, "protocol_whitelist", ((void*)0), 0)) || (uc->protocol_whitelist && !strcmp(uc->protocol_whitelist, e->value))
 libavformat/avio.c
 protocol_blacklist
@@ -12079,7 +12455,6 @@ max_gif_delay
 maximum valid delay between frames (in hundredths of seconds)
 default_delay
 default delay between frames (in hundredths of second)
-ignore_loop
 ignore loop setting (netscape extension)
 Blues
 Classic Rock
@@ -12440,7 +12815,7 @@ Corrupt int4 RM-style audio packet size
 Corrupt sipr RM-style audio packet size
 Corrupt generic RM-style audio packet size
 Compression size but no data in headerstrip
-1.2.5
+1.2.11
 Invalid track number %llu
 File ended prematurely at pos. %llu (0x%llx)
 Unknown entry 0x%X at pos. %lld
@@ -12510,8 +12885,6 @@ Invalid bounding rectangle coordinates %u,%u,%u,%u
 Missing projection private properties
 Unknown spherical cubemap layout %u
 Unknown spherical metadata type %llu
-buf_size >= 0
-./libavcodec/bytestream.h
 Lavf%d.%d.%d
 Invalid FLAC private data
 MAIN
@@ -12523,6 +12896,7 @@ libavformat/mov.c
 invalid size %lld in stsd
 size=%lld 4CC=%s codec_type=%d
 Invalid sample rate %d
+Invalid channels %d
 reached eof, corrupted STSD atom
 mov,mp4,m4a,3gp,3g2,mj2
 QuickTime / MOV
@@ -12653,11 +13027,13 @@ loci too short (%u bytes left, need at least %d)
 %d/%d
 DOVI in dvcC/dvvC box, version: %d.%d, profile: %d, level: %d, rpu flag: %d, el flag: %d, bl flag: %d, compatibility id: %d
 Empty Content Light Level Info box
+Ignoring duplicate CLLI/COLL
 Invalid Mastering Display Color Volume box
 Empty VP Codec Configuration box
 Unsupported VP Codec Configuration box version %d
 Empty Content Light Level box
 Unsupported Content Light Level box version %d
+Ignoring duplicate COLL
 Empty Mastering Display Metadata box
 Unsupported Mastering Display Metadata box version %d
 unsupported OpusSpecificBox version
@@ -12750,6 +13126,7 @@ Reference with mismatching origin, %s not tried for security reasons, set demuxe
 Using absolute path on user request, this is a possible security issue
 Absolute path %s not tried for security reasons, set demuxer option use_absolute_path to allow absolute paths
 multiple edit list entries, Use -advanced_editlist to correctly decode otherwise a/v desync might occur
+start_time - empty_duration is not representable
 STSZ sample size %d invalid (too large), ignoring
 STSZ sample size %d invalid (too small), ignoring
 wrong sample count
@@ -12800,7 +13177,7 @@ reached eof, corrupted STSS atom
 invalid STSD entries %d
 Duplicate stsd found in this track.
 track[%u].stsc.entries = %u
-Duplicated STSC atom
+Ignoring duplicated STSC atom
 STSC entry %d is invalid (first=%d count=%d id=%d)
 sc->stsc_data[i+1].first >= 2
 reached eof, corrupted STSC atom
@@ -12872,7 +13249,7 @@ unsupported color_parameter_type %s
 %s: pri %d trc %d matrix %d
  full %hhu
 STCO outside TRAK
-Duplicated STCO atom
+Ignoring duplicated STCO atom
 reached eof, corrupted STCO atom
 Empty AV1 Codec Configuration Box
 ignored unknown aclr value (%d)
@@ -13441,7 +13818,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,libvpx_vp8,libvpx_vp9' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser=h264 --enable-decoder='aac,h264,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder=h264_vaapi --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,hevc,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
@@ -13618,7 +13995,34 @@ ds64
 WAV demuxer
 ignore_length
 Ignore length
+incorrect header check
+unknown compression method
+invalid window size
+unknown header flags set
+header crc mismatch
+invalid block type
+invalid stored block lengths
+too many length or distance symbols
+invalid code lengths set
+invalid bit length repeat
+invalid code -- missing end-of-block
+invalid literal/lengths set
+invalid distances set
+invalid literal/length code
+invalid distance code
+invalid distance too far back
+incorrect data check
+incorrect length check
+need dictionary
+stream end
+file error
+stream error
+data error
+insufficient memory
+buffer error
+incompatible version
 MbP?
+Mb@C
 GIF87aGIF89a
 																
         
@@ -14438,7 +14842,7 @@ H265
 2 F!\#J&U(8*W+A-;0O1]3Y7_=LCSMP
 Genuine Adobe Flash Media Server 001
 Genuine Adobe Flash Player 001
-FFmpeg version 4.3.2
+FFmpeg version 4.3.4
 0123456789ABCDEF0123456789abcdef
 =}~O
 :Feje$
@@ -14453,6 +14857,77 @@ Mb@?
 @j@ffffff
 Mb`?
  @333333
+ n;^
+Qkkbal
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+Z* ,	
+H$6t
+52F*
+	#jT$
+^6o}
+[-&LMb#{'
+w+OQvr
+R1h58
+SKyu
+)\ZEo^m/
+ru&o
+i8P/
+?(3w
+H*0"ZOW
+{kHw
+)T`D
+!AxU
+l!;b	F
+:1X:
+y9*O
+kM`~
+Vc0a
+dQy/
+lDa>
+7~8A
+C-Yn
+gqr<
+$/o|
+f-=v
+mj>zjZ
+l6qnk
+IiGM>nw
+1A26b
+i91k
+ewh/?y
+*5KS
+6~_'
+F*.f
+1wsHp
+M8MF
+Pe6^
+#bML"
+`F(>
+vQO+t
+[h1R
+XsBI
+hPU3
+^oEZ_
+2%k_
+w3Xc
+/P8i
+OZw3(?
+Z"0*
+fP~V
+^GP~
+b;!l
+V_:X1:
+NJ2"v
+O*9y]
+fu`z
+/yQA
+&]|v
+ inflate 1.2.11 Copyright 1995-2017 Mark Adler 
 ACLR
 APRG
 AALP
@@ -14549,7 +15024,7 @@ clli
 dvcC
 dvvC
 !(SB`
-AYASBRCRFRFRNp
+p8RFRFRNSBRCRFRFRNp
 RCRNp
 p8RCTBp p
 WARFRFRFRNp
@@ -14574,7 +15049,8 @@ RASEp@p
 RASEp@RFRFRFRFRFRESESESESFRFRFRFRFRFRFRFRESESEp@p
 p8RAp
 RApHRFRFRFRFRFRFRNSA
-p8XBRNRAp
+p8XBRN\Ap
+SIRAp
 SARFRAp
 UGRAp
 UGRAp
@@ -14637,6 +15113,7 @@ SAp8RAp(VNRBRCSAQ
 @_av_get_picture_type_char
 @_av_grow_packet
 @_av_image_check_sar
+@_av_image_check_size
 @_av_init_packet
 @_av_log
 @_av_malloc_array
@@ -14816,6 +15293,7 @@ SAp8RAp(VNRBRCSAQ
 @_fcntl
 @_fprintf
 @_fputc
+@_free
 @_freeaddrinfo
 @_fstat$INODE64
 @_fwrite
@@ -14831,6 +15309,7 @@ SAp8RAp(VNRBRCSAQ
 @_lrintf
 @_lseek
 @_lstat$INODE64
+@_malloc
 @_memchr
 @_memcmp
 @_memcpy
@@ -14870,10 +15349,6 @@ SAp8RAp(VNRBRCSAQ
 @_BZ2_bzDecompress
 @_BZ2_bzDecompressEnd
 @_BZ2_bzDecompressInit
-@_inflate
-@_inflateEnd
-@_inflateInit_
-@_uncompress
 subtitle_free
 Apriv_
 codec_
@@ -14933,18 +15408,16 @@ create
 default_free
 unref
 alloc
-	receive_frame
+receive_frame
 open2
 is_open
 get_name
 alloc_context3
-end_packet
-	tring
 dec_
-lor_
+	lor_
 mpare_
 ntent_light_metadata_alloc
-get_
+	get_
 s_decoder
 terate
 primaries_name
@@ -14956,6 +15429,8 @@ ynarray_add
 ump_format
 fault_item_name
 muxer_
+ix_fmt_to_codec_tag
+arameters_
 a_freq_tab
 audio_decode_header
 4audio_
@@ -14979,17 +15454,15 @@ ast_
 mt_ctx_get_duration_estimation_method
 malloc
 realloc
-ix_fmt_to_codec_tag
-arameters_
+to_context
+copy
+alloc
 lename_number_test
 default_stream_index
 9program_from_stream
 :best_stream
 fo_tag
 put_format
-to_context
-copy
-alloc
 om_context
 ree_context
 ind_decoder
@@ -15016,24 +15489,20 @@ output_timestamp
 1frame_filename
 layout_nb_channels
 name
+tring
+end_packet
 orbis_parse_
 bprintf
 reset
 init
+ame_flags
 icture_type_char
 acket
 _relative
-ame_flags
 sleep
 rl_split
 make_string
 init
-mac_
-ex_dump
-alloc
-init
-update
-inal
 pherical_
 #dp_create
 2eek_frame
@@ -15041,9 +15510,15 @@ ereo3d_
 start
 istr
 "casecmp
-mage_check_sar
-format_next
+mac_
+ex_dump
+alloc
+init
+update
+inal
 casecmp
+mage_check_s
+format_next
 it_packet
 terleaved_write_
 1dex_search_timestamp
@@ -15078,14 +15553,15 @@ _val
 ix_fmt_desc_get
 "kt_dump
 cket_
+ rse
  copy_props
- free
+!free
 !get_side_data
 !new_side_data
 !pack_dictionary
 !unref
 dd_side_data
- lloc
+!lloc
 ake_refcounted
 !ove_ref
 !scale_ts
@@ -15096,8 +15572,8 @@ close
 type_name
 "alloc
 tile_bounds
-"projection_name
-"alloc
+#projection_name
+#alloc
 rink_packet
 update
 #init
@@ -15116,7 +15592,7 @@ iterate
 %input_format
 %output_format
 &open
-)get_
+*get_
 +handshake
 ,enum_protocols
 ind_protocol_name
@@ -15147,9 +15623,9 @@ ut_str
 _log
 -_log2
 -codec
--sample_aspect_ratio
+.sample_aspect_ratio
 ormat
--rame_rate
+.rame_rate
 be_input_
 .gram_add_stream_index
 format
@@ -15160,9 +15636,9 @@ get_
 1write_header
 1version
 2license
-2que
+3que
 8open_input
-8seek_file
+9seek_file
 :match_stream_specifier
 ;transfer_internal_stream_timing_info
 mov_
@@ -15181,7 +15657,7 @@ _query
 video_tags
 2audio_tags
 onfiguration
-2lose_input
+3lose_input
 get_
 3set_r
 4add_side_data
@@ -15204,7 +15680,7 @@ video_codec
 7data_codec
 7metadata_header_padding
 7control_message_cb
-7probe_score
+8probe_score
 video_codec
 7audio_codec
 7subtitle_codec
@@ -15214,7 +15690,7 @@ video_codec
 aque
 7en_cb
 aque
-7en_cb
+8en_cb
 ue_attached_pictures
 8ry_codec
 ree_context
@@ -15233,6 +15709,7 @@ init
 6P p@
 0 0`
 ` ``
+PPpP
 _av_add_index_entry
 _av_add_stable
 _av_add_stable
@@ -15460,6 +15937,8 @@ _av_hmac_update
 _av_iformat_next
 _av_image_check_sar
 _av_image_check_sar
+_av_image_check_size
+_av_image_check_size
 _av_index_search_timestamp
 _av_init_packet
 _av_init_packet
@@ -15935,6 +16414,7 @@ _av_hmac_free
 _av_hmac_init
 _av_hmac_update
 _av_image_check_sar
+_av_image_check_size
 _av_init_packet
 _av_lfg_init
 _av_log
@@ -16064,6 +16544,7 @@ _connect
 _fcntl
 _fprintf
 _fputc
+_free
 _freeaddrinfo
 _fstat$INODE64
 _fwrite
@@ -16073,15 +16554,13 @@ _getnameinfo
 _getsockopt
 _gmtime_r
 _hypot
-_inflate
-_inflateEnd
-_inflateInit_
 _listen
 _llrint
 _localtime_r
 _lrintf
 _lseek
 _lstat$INODE64
+_malloc
 _memchr
 _memcmp
 _memcpy
@@ -16116,7 +16595,6 @@ _strspn
 _strstr
 _strtod
 _strtol
-_uncompress
 _unlink
 _write
 dyld_stub_binder

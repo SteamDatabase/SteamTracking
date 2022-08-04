@@ -38,8 +38,6 @@ HB;
 HB;
 __mod_init_func
 __DATA
-8Y;
-8Y;
 __const
 __DATA
 __cfstring
@@ -80,6 +78,8 @@ __LINKEDIT
 "
 >
 8'>
+0\
+(Y
 P
 
 *
@@ -150,13 +150,23 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-(W
+0W
 )
 HB
-$4
+1
+1
+1
 *
-4
 0
+1
+1
+1
+1
+1
+1
+1
+1
+1
 1
 1
 1
@@ -171,7 +181,7 @@ $4
 
 @
 
-%
+:
 @
 @
 @
@@ -2520,6 +2530,11 @@ l
 14ConCommandBase
 10ConCommand
 6ConVar
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+7CUtlMapI10CUtlStringbi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CDirWatcher
 11CPathString
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
@@ -2672,16 +2687,16 @@ $
 4
 8
 (
-3
-O
-V
-(
+4
+Q
 X
-^
-_
-k
+(
+Z
+`
+a
+m
 @
-r
+t
 H
 0
 `
@@ -2889,6 +2904,8 @@ ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -5364,8 +5381,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Jul 26 2022
-11:55:28
+Aug  4 2022
+13:00:11
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7433,7 +7450,13 @@ Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do
 m_vecCallbacks.Count() == 0
 pDefaultValue
 Attempted to change replicated CVar when you are not the GM
+ConVar
+m_configOverride
+m_pVecUlValue
+m_pVecStringValue
 FCVAR_NEVER_AS_STRING
+m_p
+Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
@@ -7774,8 +7797,10 @@ KQ: Error reading KQ:%s
 nPollRetVal > 0
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
-@cMinimumJobTimeoutsToCheckPerFrame
+@nJobInteryieldMillisecondsAlertThreshold
+@nJobInteryieldMillisecondsLogThreshold
 100
+@cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
@@ -8246,9 +8271,10 @@ SSE is required.
 src.IsValid()
 
 HB
-$4
+1
+1
+1
 *
-4
 0
 1
 1
@@ -8257,6 +8283,15 @@ $4
 1
 1
 1
+1
+1
+1
+1
+1
+1
+1
+1
+1
 
 
 
@@ -8264,40 +8299,48 @@ $4
 
 @
 
-%
+:
 @
 @
-g'
-0
 /
-I&
+'
+&
+<$
+l/
+S/
+!.
 /
+/
+/
+9
+&
+#
+&
+#
+["
+T"
 %
-.
-%
-7
-"%
-^#
+"
+w,
 -
-},
-p,
-Q,
-C,
-*,
-8)
-)
+7
+7
+7
+7
+),
 .
 ,
-8
-8
-8
-8
-8
-8
+,
+,
 j
-(5
-2
-2
+6
+6
+"
+"
+z+
+,
+,
+,
 ,
 ?
 )
@@ -8309,16 +8352,15 @@ F
 +
 !
 &
-++
+`+
+-
+1
 +
 +
 +
-'
+)5
 j
 Ic
-[*
-M,
-]-
 @
 @
 @
@@ -8333,8 +8375,13 @@ M,
 @
 @
 @
-1'
-,6
+4'
+@
+@
+@
+@
+@
+@
 @
 @
 @
@@ -8357,14 +8404,6 @@ M,
 @
 *
 *
-*
-@
-@
-@
-@
-@
-@
-*
 @
 @
 @
@@ -8373,11 +8412,12 @@ M,
 @
 @
 @
+-
+-
+-
 d
 Uk/
 K
-o*
-l*
 @
 @
 @
@@ -8385,7 +8425,6 @@ l*
 @
 @
 '
-'
 @
 @
 @
@@ -8409,73 +8448,68 @@ l*
 @
 @
 0
-4
-4
-4
 @
 @
-3
-m&
-&)
-)
-)
+p&
 &
 &
-h,
+&
+P)
 @
 @
 @
 @
-2
 @
 @
 @
 @
 0
-,)
 @
 @
 0
 0
-)
+M(
+?(
 =
 @
 @
-(
-(
-(
-|4
+!(
 H=
 1
-|'
-$
+k$
 (
 (
-h$
-R'
+(
+(
 )
 )
+-
 '
+$
+#
+1
+1
 @
+02
 =
-]1
-%
 @
 @
 %
-/
-V$
+$
+$
+0
 @
 @
 ?
-^
-.
 #
+^
 #
 #
 #
 #
 @
+#
+&
 P
 0
 (
@@ -8483,26 +8517,21 @@ P
 P
 j
 ,
+t0
 A
 A
 A
 A
 (
-.
-.
-.
-$
-$
-$
-.
+R#
+U"
+#
+#
 @
 E9u
 "
-"
-"
-"
-"
 E9u
+"
 @
 A
 A
@@ -8512,46 +8541,52 @@ A
 A
 A
 A
-$!
-!
++
+u"
+%
+7/
+3/
 "
+$
 !
-<"
-p!
 *
-M-
-I-
-G-
-F-
-T#
-v!
-N#
-?
+*
+d.
+}
+'
+%,
 
 @
-4"
 -
++
++
 (
-)
-)
-)
-)
+,
+!
+!
+!
+!
+v
 }
+)
 "
+&
 @
-'
-J%
-$
+,(
+(
+(
+(
+(
 Hi
 (
+$
+$
 @
 @
 0
 0
 
 
-&
-&
 
 
 
@@ -8599,6 +8634,7 @@ IcE
 @
 @
 @
+k#
 @
 @
 @
@@ -8715,7 +8751,6 @@ IcE
 @
 @
 @
-#
 @
 @
 @
@@ -8852,7 +8887,6 @@ IcE
 @
 @
 @
-;!
 @
 j
 @
@@ -8954,13 +8988,15 @@ V
 
 
 
+
+
 @
 
 
 
+o
+6
 
-
-&
 
 @
 M9e
@@ -9076,6 +9112,7 @@ E
 @
 @
 @
+
 @
 
 
@@ -9084,3 +9121,5 @@ E
 @
 0
 0
+[
+L

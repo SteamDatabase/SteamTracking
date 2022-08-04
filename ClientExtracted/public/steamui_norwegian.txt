@@ -2386,6 +2386,7 @@ Du må logge av macOS for at endringen skal tre i kraft."
 "Steam_status_decrypting"			"Dekrypterer:"
 "Steam_status_validating"			"Validerer: "
 "Steam_status_verifying"			"Bekrefter: "
+"Steam_status_finalizing"			"Ferdigstiller"
 
 "steam_status_launching"				"Starter"
 "steam_status_launching_progress"		"Starter: "
@@ -4524,6 +4525,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_SettingsControllerDesktopConfig"		"Skrivebord"
 "Steam_SettingsControllerGuideConfig"		"Kombinasjonsknapp"
 "Steam_SteamInputDisableNotifications"		"Slå av varsel om tilkoblet kontroller i skrivebordsklienten."
+"Steam_SteamInputDisableDualSenseUpdates"	"Slå av varsler om fastvareoppdateringer til DualSense i skrivebordsklienten."
 
 "Steam_Settings_ShaderCache"			"Shader-bufring"
 "Steam_Settings_ShaderCache_Info"		"Forhåndsbufring av shadere lar Steam laste ned forhåndskompilerte GPU-shadere som passer systemoppsettet ditt. Dette gjør at spill i Vulkan og OpenGL kan lastes raskere, og forbedrer bildefrekvensens stabilitet under spilling.\n\nHvis den er slått på, samler Steam inn shadere fra systemet ditt når de trengs. Denne funksjonen kan øke disk- og båndbreddebruk noe."
@@ -4813,6 +4815,10 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_XboxDriverInstall_Success"	"Driveren ble oppdatert og blir tatt i bruk når du starter datamaskinen på nytt."
 "Steam_XboxDriverInstall_ServiceFailure"	"Kunne ikke oppdatere driver. Kjører du Steam som en vanlig bruker, og er Steam-tjenesten oppdatert?"
 "Steam_XboxDriverInstall_Failure"	"Kunne ikke oppdatere driver. Feil: %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Ny kontrollerfastvare tilgjengelig"
+"Steam_DualSense_FirmwareUpdate_Text"	"Det finnes ny fastvare tilgjengelig for trådløs DualSense™-kontroller. Trykk på lenken nedenfor for å gå til oppdateringssiden for fastvare fra Sony:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Ikke vis dette igjen"
 
 "DownloadRegion_default"				 "Ukjent"
 "DownloadRegion_us_chicago"			"USA – Chicago"

@@ -102,8 +102,8 @@
 
 "Friends_ConnectedButOffline"					"Du er satt til å vises som frakoblet for alle vennene dine."
 "Friends_NoFriendsInList"						"Du har ikke lagt til noen i Venner-listen din ennå."
-"Friends_GoOnline"							"Logg på"
-"Friends_SignIn_RefreshPassword"				"Logg på …"
+"Friends_GoOnline"							"Logg inn"
+"Friends_SignIn_RefreshPassword"				"Logg inn …"
 "Friends_SignIn_ActivateFriends"				"Bli med i venners betaversjon …"
 "Friends_ConnectingToFriendsNetwork"			"Kobler til venners nettverk …"
 "Friends_ScanningForFriends"					"Laster ned venneliste …"

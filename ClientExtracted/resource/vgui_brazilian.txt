@@ -97,7 +97,7 @@
 "SMPEvent_JumpTo"		"Pular para"
 "SMPEvent_StepFwd"		"Avançar"
 "SMPEvent_StepBack"		"Retroceder"
-"SMPEvent_JumpFwd"		"Pular para frente"
+"SMPEvent_JumpFwd"		"Pular para a frente"
 "SMPEvent_JumpBack"		"Pular para trás"
 "SMPEvent_Repeat"		"Repetir"
 "SMPEvent_Maximize"		"Maximizar"

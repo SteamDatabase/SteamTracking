@@ -110,7 +110,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0
+
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -748,13 +748,6 @@ N4vgui6IPanelE
 &z
 0u
 UUUUUUUUUUUUUUUU0123456789ABCDEF
-13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
-7CUtlMapIybi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-7CUtlMapI10CUtlStringbi8CDefLessE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CDirWatcher
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
@@ -1847,12 +1840,6 @@ GetInts()
 CVariableBitStringBase
 {}()':
 Convars
-ConVar
-m_configOverride
-m_pVecUlValue
-m_pVecStringValue
-m_vecCallbacks
-m_p
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
@@ -2284,7 +2271,7 @@ P
 
 =
 @
-2
+'
 @
 @
 0

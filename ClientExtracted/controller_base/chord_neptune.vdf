@@ -49,7 +49,7 @@
 			{
 				"activators"
 				{
-					"Full_Press"
+					"release"
 					{
 						"bindings"
 						{

@@ -2382,6 +2382,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_status_decrypting"			"Dešifrování:"
 "Steam_status_validating"			"Ověřování: "
 "Steam_status_verifying"			"Ověřování: "
+"Steam_status_finalizing"			"Dokončování"
 
 "steam_status_launching"				"Spouštění"
 "steam_status_launching_progress"		"Spouštění: "
@@ -4525,6 +4526,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_SettingsControllerDesktopConfig"		"Nastavení pro plochu systému"
 "Steam_SettingsControllerGuideConfig"		"Nastavení propojení tlačítka Guide"
 "Steam_SteamInputDisableNotifications"		"Zakázat v desktopovém klientu upozornění na připojení ovladače"
+"Steam_SteamInputDisableDualSenseUpdates"	"Zakázat v desktopovém klientu upozornění na nový firmware ovladače DualSense"
 
 "Steam_Settings_ShaderCache"			"Přednačítání shaderů"
 "Steam_Settings_ShaderCache_Info"		"Přednačítání shaderů umožňuje klientu služby Steam stáhnout předem zkompilované shadery odpovídající konfiguraci Vašeho zařízení. Hry poháněné technologií Vulkan nebo OpenGL se díky tomu budou rychleji načítat a obecně bude zlepšena stabilita počtu snímků za sekundu.\n\nPokud je tato možnost povolena, bude klient služby Steam v případě potřeby vyžadovat shadery od Vašeho systému. Záporem je o trochu větší využití disku a sítě."
@@ -4814,6 +4816,10 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_XboxDriverInstall_Success"	"Rozšíření bylo úspěšně aktualizováno a bude aktivní po restartu počítače."
 "Steam_XboxDriverInstall_ServiceFailure"	"Aktualizace rozšíření se nezdařila. Instalace rozšíření se nezdařila. Je spuštěn aktualizovaný klient služby Steam a jste v něm přihlášeni?"
 "Steam_XboxDriverInstall_Failure"	"Aktualizace rozšíření se nezdařila, chyba = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Pro ovladač je dostupný nový firmware"
+"Steam_DualSense_FirmwareUpdate_Text"	"Pro Váš bezdrátový ovladač DualSense™ je k dispozici nový firmware. Kliknutím na odkaz níže přejdete na stránky společnosti Sony:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Znovu nezobrazovat"
 
 "DownloadRegion_default"				 "Neznámý"
 "DownloadRegion_us_chicago"			"USA – Chicago"

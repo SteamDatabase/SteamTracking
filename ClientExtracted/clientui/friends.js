@@ -4715,7 +4715,7 @@ object-assign
   },
   NMF7: function (e, t, r) {
     "use strict";
-    r("0N1H"), r("B5xR"), r("CqEE");
+    r("0N1H"), r("B5xR"), r("CqEE"), r("igqQ");
     var n = r("bbDT"),
       o =
         (r.d(t, "ESteamRealm", function () {
@@ -5055,6 +5055,7 @@ object-assign
       IN_CLIENT: !1,
       USE_POPUPS: !1,
       IN_MOBILE: !1,
+      IN_MOBILE_WEBVIEW: !1,
       IN_TENFOOT: !1,
       PLATFORM: "",
       SNR: "",
@@ -5066,6 +5067,7 @@ object-assign
       TOKEN_URL: "",
       BUILD_TIMESTAMP: 0,
       PAGE_TIMESTAMP: 0,
+      FROM_WEB: !1,
       get SESSIONID() {
         {
           if (!G()) return (q = q || Y());
@@ -5170,6 +5172,7 @@ object-assign
     ((e = b = b || {})[(e.None = 0)] = "None"),
       (e[(e.Ago = 1)] = "Ago"),
       (e[(e.Remaining = 2)] = "Remaining");
+    new Map();
     new Map();
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map(), new Map();
@@ -16539,6 +16542,10 @@ object-assign
       (e.exports = r("yl30"));
   },
   iE8r: function (e, t, r) {},
+  igqQ: function (e, t, r) {
+    "use strict";
+    r("0N1H");
+  },
   "jfS+": function (e, t, r) {
     "use strict";
     var n = r("endd");

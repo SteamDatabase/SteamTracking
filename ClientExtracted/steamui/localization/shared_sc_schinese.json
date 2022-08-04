@@ -125,5 +125,9 @@
     "StreamLaunch_InstallDrivers": "流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的蒸汽平台提示进行操作。",
     "SteamDeckVerified_SeeAll": "查看蒸汽平台上所有“通过验证”的游戏",
     "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台界面手动退出。",
-    "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台界面手动聚焦到正确窗口。"
+    "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台界面手动聚焦到正确窗口。",
+    "DiscoveryQueue_Error_Login": "您必须登录至蒸汽平台才能打开新探索队列。",
+    "DiscoveryQueue_LabsHeader": "<1>蒸汽平台实验室</1> <2>留下反馈</2>",
+    "DiscoveryQueue_WidgetHeader": "全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
+    "DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将蒸汽平台上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。"
 }

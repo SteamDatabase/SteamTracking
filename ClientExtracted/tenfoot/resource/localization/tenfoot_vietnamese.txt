@@ -668,7 +668,7 @@
 	"Settings_Downloads"		"Tải xuống"
 	"Settings_Cloud"				"Tải về & Đám mây"
 	"Settings_RemoteClients"		"Remote Play"
-	"Settings_Keyboard"			"Bàn phím trên màn hình"
+	"Settings_Keyboard"			"Bàn phím ảo"
 	"Settings_AddLibraryShortcut" "Thêm lối tắt thư viện"
 	"Settings_Parental"				"Chế độ gia đình"
 	"Settings_GameController"		"Thiết lập tay cầm"
@@ -700,7 +700,7 @@
 	"SettingsControllerCfg_ConfigGuideChord_Desc" "Thiết lập nút hợp phím Steam được thiết kế bởi Valve, dùng cho Steam Controller."
 	"SettingsControllerCfg_DesktopNote"		"Lưu ý rằng các thiết lập sử dụng trên Desktop sẽ không thể dùng nếu Steam không chạy."
 	"SettingsControllerCfg_ComingSoon"		" - sắp ra mắt"
-	"SettingsControllerCfg_BigPictureNote"	"Thiết lập Big Picture sẽ ứng dụng cho nhiều tương tác bên trong chế độ Big Picture, lướt web, và bàn phím trên màn hình."
+	"SettingsControllerCfg_BigPictureNote"	"Thiết lập Big Picture sẽ ứng dụng cho nhiều tương tác bên trong chế độ Big Picture, lướt web, và bàn phím ảo."
 	"SettingsControllerCfg_ChordNote"		"Thiết lập nút hợp phím Steam được kích hoạt khi bạn giữ nút Steam. Cho phép bạn điều khiển tính năng hệ thống mọi lúc mọi nơi cho dù đang trong trò chơi hay ứng dụng."
 
 	"SettingsAbout_SteamClient"			"Phần mềm Steam"
@@ -947,10 +947,10 @@
 	"SettingsVoice_NoneDetected"			"(Không phát hiện thấy)"
 
 	// Settings, Keyboard input
-	"SettingsKeyboard_Description1"	"Chọn cách nhập liệu là bàn phím mặc định trên màn hình để sử dụng"
-	"SettingsKeyboard_Description2"	"Chọn ngôn ngữ nhập liệu mặc định cho bàn phím trên màn hình"
-	"SettingsKeyboard_UseDualTouch" "Sử dụng bàn phím trên màn hình dạng chuẩn"
-	"SettingsKeyboard_UseDaisyWheel" "Sử dụng bàn phím trên màn hình dạng vòng chữ"
+	"SettingsKeyboard_Description1"	"Chọn cách nhập liệu là bàn phím ảo mặc định trên màn hình để sử dụng"
+	"SettingsKeyboard_Description2"	"Chọn ngôn ngữ nhập liệu mặc định cho bàn phím ảo"
+	"SettingsKeyboard_UseDualTouch" "Sử dụng bàn phím ảo dạng chuẩn"
+	"SettingsKeyboard_UseDaisyWheel" "Sử dụng bàn phím ảo dạng vòng chữ"
 	"SettingsKeyboard_UILanguage"	"Sử dụng ngôn ngữ nhập liệu tùy chỉnh"
 
 	// Web
@@ -2548,6 +2548,7 @@
 	"Library_Controller_Property_Value_Trigger_LongPressMedium"		"Hai ngưỡng - Bình thường"
 	"Library_Controller_Property_Value_Trigger_LongPressLong"		"Hai ngưỡng - Thoải mái"
 	"Library_Controller_Property_Value_Trigger_LongPressExclusive"	"Hai ngưỡng - Độc lập"
+	"Library_Controller_Property_Value_TouchMenu_ButtonBindings"		"Sử dụng số lượng lệnh cho số lượng nút"
 	"Library_Controller_Property_Value_TouchMenu_Button2"		"2 nút"
 	"Library_Controller_Property_Value_TouchMenu_Button4"		"4 nút"
 	"Library_Controller_Property_Value_TouchMenu_Button5"		"5 nút"
@@ -4911,7 +4912,8 @@
 	"TimeZoneRegion_MountainArizona"	"Giờ tiêu chuẩn vùng núi (Arizona)"
 	"TimeZoneCities_MountainArizona"	"Arizona"
 	"TimeZoneRegion_Central"			"Giờ tiêu chuẩn miền Trung"
-	"TimeZoneCities_Central"			"Chicago, Dallas, Mexico City, Saskatchewan"
+	"TimeZoneCities_Central"			"Chicago, Dallas, Mexico City"
+	"TimeZoneCities_Saskatchewan"		"Saskatchewan"
 	"TimeZoneRegion_China"				"Giờ tiêu chuẩn Trung Quốc"
 	"TimeZoneCities_China"				"Bắc Kinh, Hồng Kông"
 	"TimeZoneRegion_Singapore"			"Giờ tiêu chuẩn Singapore"
@@ -7489,7 +7491,7 @@
 
 	"ContentFrame_Header_Store" "Cửa hàng"
 
-	"SettingsKeyboard_DualtouchSuggestions"					"Chọn cách mà các từ gợi ý sẽ hoạt động như thế nào khi dùng chức năng bàn phím tiêu chuẩn trên màn hình"
+	"SettingsKeyboard_DualtouchSuggestions"					"Chọn cách mà các từ gợi ý sẽ hoạt động như thế nào khi dùng chức năng bàn phím ảo tiêu chuẩn trên màn hình"
 	"SettingsKeyboard_DTSuggest_SuggestTypoCorrection"		"Bao gồm gợi ý dựa trên các từ khóa lân cận"
 	"SettingsKeyboard_DTSuggest_SuggestNoTypoCorrection"	"Chỉ hiện các gợi ý dựa trên các từ khóa đã được đánh trực tiếp vào"
 	"SettingsKeyboard_DTSuggest_NoSuggestions"				"Không hiển thị chỉ dẫn"

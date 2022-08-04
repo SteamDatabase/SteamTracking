@@ -226,7 +226,7 @@
 "Overlay_Guides_Panel_NumGuides" "%num_guides% disponible(s)"
 
 "Overlay_CommunityHub_Panel_Title" "Punto de encuentro"
-"Overlay_View_CommunityHub" "Ver punto de encuentro"
+"Overlay_View_CommunityHub" "Ver centro de contenido"
 "Overlay_CommunityHub_Panel_NumContributions" "%num_contributions% contribución(es) de la Comunidad"
 
 "Overlay_CommunityDiscussions_Panel_Title" "Discusiones"

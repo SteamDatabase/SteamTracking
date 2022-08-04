@@ -113,6 +113,7 @@ message CMsgProtoBufHeader {
 	optional int32 timeout_ms = 33 [default = -1];
 	optional string debug_source = 34;
 	optional uint32 debug_source_string_index = 35;
+	optional uint64 token_id = 36;
 
 	oneof ip_addr {
 		uint32 ip = 15;

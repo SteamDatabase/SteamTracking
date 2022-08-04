@@ -119,6 +119,13 @@ enum ESystemFanControlMode {
 	k_SystemFanControlMode_Default = 2;
 }
 
+enum EColorProfile {
+	k_EColorProfile_Invalid = 0;
+	k_EColorProfile_Native = 1;
+	k_EColorProfile_Standard = 2;
+	k_EColorProfile_Vivid = 3;
+}
+
 enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Invalid = 0;
 	k_BluetoothDeviceType_Unknown = 1;
@@ -132,6 +139,39 @@ enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Joystick = 9;
 	k_BluetoothDeviceType_Gamepad = 10;
 	k_BluetoothDeviceType_Keyboard = 11;
+}
+
+enum ESystemAudioDirection {
+	k_SystemAudioDirection_Invalid = 0;
+	k_SystemAudioDirection_Input = 1;
+	k_SystemAudioDirection_Output = 2;
+}
+
+enum ESystemAudioChannel {
+	k_SystemAudioChannel_Invalid = 0;
+	k_SystemAudioChannel_Aggregated = 1;
+	k_SystemAudioChannel_FrontLeft = 2;
+	k_SystemAudioChannel_FrontRight = 3;
+	k_SystemAudioChannel_LFE = 4;
+	k_SystemAudioChannel_BackLeft = 5;
+	k_SystemAudioChannel_BackRight = 6;
+	k_SystemAudioChannel_FrontCenter = 7;
+	k_SystemAudioChannel_Unknown = 8;
+	k_SystemAudioChannel_Mono = 9;
+}
+
+enum ESystemAudioPortType {
+	k_SystemAudioPortType_Invalid = 0;
+	k_SystemAudioPortType_Unknown = 1;
+	k_SystemAudioPortType_Audio32f = 2;
+	k_SystemAudioPortType_Midi8b = 3;
+	k_SystemAudioPortType_Video32RGBA = 4;
+}
+
+enum ESystemAudioPortDirection {
+	k_SystemAudioPortDirection_Invalid = 0;
+	k_SystemAudioPortDirection_Input = 1;
+	k_SystemAudioPortDirection_Output = 2;
 }
 
 enum ESystemServiceState {
@@ -295,4 +335,10 @@ enum ETouchGesture {
 	k_ETouchGesturePinchEnd = 11;
 	k_ETouchGestureFlingStart = 12;
 	k_ETouchGestureFlingCancelled = 13;
+}
+
+enum ESessionPersistence {
+	k_ESessionPersistence_Invalid = -1;
+	k_ESessionPersistence_Ephemeral = 0;
+	k_ESessionPersistence_Persistent = 1;
 }

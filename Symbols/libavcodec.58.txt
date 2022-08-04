@@ -23,6 +23,7 @@
  CVPixelBufferRetain
  I av_bprint_clear
  I av_bprint_finalize
+ I av_bprint_get_buffer
  I av_bprint_init
  I av_bprintf
  I av_buffer_alloc
@@ -119,6 +120,7 @@
  I av_mallocz_tracked
  I av_map_videotoolbox_format_from_pixfmt2
  I av_map_videotoolbox_format_to_pixfmt
+ I av_mastering_display_metadata_create_side_data
  I av_match_list
  I av_memcpy_backptr
  I av_mul_q
@@ -407,6 +409,7 @@
  atanf
  av_bprint_clear
  av_bprint_finalize
+ av_bprint_get_buffer
  av_bprint_init
  av_bprintf
  av_buffer_alloc
@@ -503,6 +506,7 @@
  av_mallocz_tracked
  av_map_videotoolbox_format_from_pixfmt2
  av_map_videotoolbox_format_to_pixfmt
+ av_mastering_display_metadata_create_side_data
  av_match_list
  av_memcpy_backptr
  av_mul_q
@@ -586,6 +590,7 @@
  lrintf
  mach_task_self_
  malloc
+ memchr
  memcmp
  memcpy
  memmove

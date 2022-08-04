@@ -112,6 +112,7 @@ message CMsgClientLogonResponse {
 	optional uint64 client_instance_id = 27;
 	optional bool force_client_update_check = 28;
 	optional string agreement_session_url = 29;
+	optional uint64 token_id = 30;
 }
 
 message CMsgClientRequestWebAPIAuthenticateUserNonce {

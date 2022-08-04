@@ -47,7 +47,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-2.
+B.
 __common
 __DATA
 H
@@ -1210,6 +1210,8 @@ ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -3864,7 +3866,8 @@ j
 j
 j
 j
-2%
+u%
+4%
 0
 0
 AT=
@@ -3932,10 +3935,13 @@ M9e
 @
 @
 
+j
 
 
 d
+J
 A+M
+
 
 j
 j
@@ -4181,11 +4187,13 @@ d
 @
 @
 @
+V
 @
 @
 @
 @
 @
 @
+,
 @
 @

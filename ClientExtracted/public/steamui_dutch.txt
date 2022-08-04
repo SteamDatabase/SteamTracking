@@ -2383,6 +2383,7 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_status_decrypting"			"Bezig met decoderen:"
 "Steam_status_validating"			"Bezig met valideren: "
 "Steam_status_verifying"			"Verifiëren: "
+"Steam_status_finalizing"			"Afronden"
 
 "steam_status_launching"				"Wordt gestart ..."
 "steam_status_launching_progress"		"Wordt gestart: "
@@ -4525,6 +4526,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_SettingsControllerDesktopConfig"		"Bureaubladconfiguratie"
 "Steam_SettingsControllerGuideConfig"		"Sneltoetsconfiguratie Guide-knop"
 "Steam_SteamInputDisableNotifications"		"Meldingen over verbonden controllers in de desktopclient uitschakelen"
+"Steam_SteamInputDisableDualSenseUpdates"	"Meldingen over updates voor DualSense-firmware in de desktopclient uitschakelen."
 
 "Steam_Settings_ShaderCache"			"Shader pre-caching"
 "Steam_Settings_ShaderCache_Info"		"Met shader pre-caching downloadt Steam voorgecompileerde GPU-shaders die overeenkomen met jouw configuratie. Hierdoor kunnen Vulkan- en OpenGL-spellen sneller laden en verbeterde frameratestabiliteit bieden tijdens het spelen.\n\nAls dit is ingeschakeld verzamelt Steam shaders van je systeem als dat nodig is. Hierdoor wordt het schijf- en bandbreedteverbruik mogelijk wat hoger."
@@ -4814,6 +4816,10 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_XboxDriverInstall_Success"	"Stuurprogramma is met succes geüpdated. Het wordt actief nadat je je computer opnieuw hebt opgestart."
 "Steam_XboxDriverInstall_ServiceFailure"	"Updaten van het stuurprogramma is mislukt. Gebruik je Steam als een gewone gebruiker en is Steam-service nog actief en up-to-date?"
 "Steam_XboxDriverInstall_Failure"	"Update van het stuurprogramma is mislukt, fout = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Nieuwe controllerfirmware beschikbaar"
+"Steam_DualSense_FirmwareUpdate_Text"	"Er is nieuwe firmware beschikbaar voor je draadloze DualSense™-controller. Klik op onderstaande link om naar de Sony-firmwarepagina te gaan om de update te downloaden:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Niet meer weergeven"
 
 "DownloadRegion_default"				 "Onbekend"
 "DownloadRegion_us_chicago"			"VS – Chicago"

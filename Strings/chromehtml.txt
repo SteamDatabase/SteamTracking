@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+
+
 __stubs
 __TEXT
 __stub_helper
@@ -1032,6 +1034,10 @@ disables high-DPI support in CEF
 -dev
 -cef-verbose-logging
 enables verbose logging from CEF
+-cef-disable-js-logging
+disables console and log file logging of JS console events
+-cef-verbose-js-logging
+enables verbose logging of JS console events
 -enable-keyring
 enables CEF usage of the Chromium keyring
 -cef-single-process
@@ -1058,6 +1064,8 @@ allow self-signed certificates
 Don't use ANGLE for rendering backend on Linux
 -cef-enable-gpu-debugging
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
+-cef-disable-gpu
+Disable GPU usage in CEF (force software rendering/compositing)
 -store
 -community
 -clientui
@@ -1120,6 +1128,8 @@ clientui
 --single-process
 --in-process-gpu
 --disable-d3d11
+-disablejslogging
+-verbosejslogging
 --enable-logging
 --v=%s
 --v=1
@@ -2316,23 +2326,14 @@ sc_schinese
 
 @
 @
-3
-
-
-
-
-
-
-
 
 
 @
-]
 E
-A
-#
-T
-3
+S
+8
+
+
 
 
 
@@ -2382,6 +2383,7 @@ IcE
 @
 @
 V
+H;52w
 =
 =
 @
@@ -2389,7 +2391,6 @@ V
 M9e
 @
 @
-l
 ?
 ?
 ?
@@ -2406,6 +2407,7 @@ l
 ?
 ?
 
+6
 Ic
 @
 @

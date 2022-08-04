@@ -1,4 +1,3 @@
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/../common/hiddevicesdl.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ClientJobRemoteStorageSync.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.h

@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"Steam poate rămâne activ în timp ce folosești o aplicație pentru a-ți prezenta atât noutățile din Comunitatea Steam, cât și o interfață completă pentru a vorbi cu prietenii tăi direct din aplicația folosită."
 "Overlay_SettingsEnable"	"Activează interfața Steam în timpul jocurilor"
 "Overlay_SettingsEnableApp"	"Activează Interfața suplimentară Steam în aplicații"
-"Overlay_SettingsSCTenfootEnable"	"Folosește interfața Big Picture atunci când folosești un controller compatibil cu Steam Input pe desktop"
+"Overlay_SettingsSCTenfootEnable"	"Folosește interfața Big Picture atunci când utilizezi un controler compatibil cu Steam Input în modul Desktop."
 "Overlay_SettingsHotKeyLabel"	"Asociere de taste pentru interfața suplimentară:"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Taste rapide captură ecran:"
 "Overlay_SettingsScreenshotActionLabel" "Când este salvată o imagine"

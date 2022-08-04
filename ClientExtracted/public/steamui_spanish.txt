@@ -2375,6 +2375,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_status_decrypting"			"Descifrando: "
 "Steam_status_validating"			"Validando: "
 "Steam_status_verifying"			"Verificando: "
+"Steam_status_finalizing"			"Finalizando"
 
 "steam_status_launching"				"Iniciando"
 "steam_status_launching_progress"		"Iniciando: "
@@ -4516,6 +4517,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_SettingsControllerDesktopConfig"		"Configuración de escritorio"
 "Steam_SettingsControllerGuideConfig"		"Config. de secuencias del botón Guía"
 "Steam_SteamInputDisableNotifications"		"Desactivar las notificaciones sobre la conexión de mandos en el cliente de escritorio"
+"Steam_SteamInputDisableDualSenseUpdates"	"Desactivar las notificaciones de actualización del firmware DualSense en el cliente de escritorio."
 
 "Steam_Settings_ShaderCache"			"Precarga sombreadores"
 "Steam_Settings_ShaderCache_Info"		"La precarga en caché de sombreadores permite a Steam descargar sombreadores precompilados adecuados para la configuración de tu sistema. Esto posibilita que los juegos que usan Vulkan y OpenGL carguen más rápido y mejora la estabilidad de la velocidad de fotogramas durante el juego.\n\nSi se activa, Steam recopilará sombreadores de tu sistema cuando sea necesario. La activación de esta característica puede aumentar ligeramente el uso del disco y del ancho de banda."
@@ -4805,6 +4807,10 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_XboxDriverInstall_Success"	"El controlador se actualizó correctamente y estará activo después de que reinicies tu ordenador."
 "Steam_XboxDriverInstall_ServiceFailure"	"La actualización del controlador ha fallado. ¿Se está ejecutando Steam como usuario normal y el servicio de Steam está en funcionamiento y actualizado?"
 "Steam_XboxDriverInstall_Failure"	"No se ha podido actualizar el controlador. Error: %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Nuevo firmware del mando disponible"
+"Steam_DualSense_FirmwareUpdate_Text"	"Hay nuevo firmware disponible para tu mando inalámbrico DualSense™. Haz clic en el enlace de abajo para ir la página de la actualización del firmware de Sony."
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"No mostrar esto de nuevo"
 
 "DownloadRegion_default"				 "Desconocida"
 "DownloadRegion_us_chicago"			"EE. UU. - Chicago"

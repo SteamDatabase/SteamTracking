@@ -231,7 +231,7 @@
 
 "Overlay_CommunityDiscussions_Panel_Title" "กระดานสนทนา"
 "Overlay_View_CommunityDiscussions" "ดูกระดานสนทนา"
-"Overlay_CommunityDiscussions_Panel_NumDiscussions" "%num_discussions% ผู้สนทนา"
+"Overlay_CommunityDiscussions_Panel_NumDiscussions" "ขณะนี้มี %num_discussions% กระดานสนทนาที่ใช้งานอยู่"
 
 "Overlay_SaveUncompressed" "บันทึกสำเนาที่ยังไม่บีบอัด"
 "Overlay_SetScreenshotFolder" "เลือกโฟลเดอร์ภาพหน้าจอภายนอก"

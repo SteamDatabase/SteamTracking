@@ -2371,6 +2371,7 @@
 "Steam_status_decrypting"			"Dekódolás: "
 "Steam_status_validating"			"Ellenőrzés:"
 "Steam_status_verifying"			"Ellenőrzés: "
+"Steam_status_finalizing"			"Véglegesítés"
 
 "steam_status_launching"				"Indítás"
 "steam_status_launching_progress"		"Indítás: "
@@ -4497,6 +4498,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_SettingsControllerDesktopConfig"		"Asztali konfiguráció"
 "Steam_SettingsControllerGuideConfig"		"Guide gomb akkordkonfiguráció"
 "Steam_SteamInputDisableNotifications"		"„Játékvezérlő csatlakoztatva” értesítések kikapcsolása az asztali kliensben."
+"Steam_SteamInputDisableDualSenseUpdates"	"DualSense firmware-frissítési értesítések kikapcsolása az asztali kliensben."
 
 "Steam_Settings_ShaderCache"			"Shader előtöltés"
 "Steam_Settings_ShaderCache_Info"		"A shader előtöltés lehetővé teszi a Steamnek a rendszeredhez illő előfordított GPU-shaderek letöltését. Ez lehetővé teszi a Vulkan és OpenGL alapú játékok gyorsabb betöltését, valamint javítja a képfrissítési stabilitást játék közben.\n\nHa be van kapcsolva, a Steam szükség esetén shadereket gyűjt a gépedről. E funkció bekapcsolása némileg növelheti a merevlemez- és sávszélesség-használatot."
@@ -4786,6 +4788,10 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_XboxDriverInstall_Success"	"Az illesztőprogram sikeresen frissült, és a számítógéped újraindítása után aktív lesz."
 "Steam_XboxDriverInstall_ServiceFailure"	"Az illesztőprogram frissítése sikertelen. A Steam normál felhasználóként van futtatva és a Steam szolgáltatás fut és frissítve van?"
 "Steam_XboxDriverInstall_Failure"	"Sikertelen illesztőprogram-frissítés, hiba = %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Új játékvezérlő firmware érhető el"
+"Steam_DualSense_FirmwareUpdate_Text"	"Új firmware érhető el a DualSense™ vezeték nélküli játékvezérlődhöz. Kattints az alábbi hivatkozásra a Sony firmware-frissítési oldalának felkereséséhez:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Ezt ne mutassa többször"
 
 "DownloadRegion_default"				 "Ismeretlen"
 "DownloadRegion_us_chicago"			"USA - Chicago"

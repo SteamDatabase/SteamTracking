@@ -10,6 +10,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+l"
 __objc_methname
 __TEXT
 __unwind_info
@@ -49,6 +50,7 @@ __LINKEDIT
 @loader_path/steamconsole.dylib
 "
 P
+$
 
 *
 8
@@ -72,6 +74,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+PX
 public
 local
 anonymous
@@ -125,6 +128,13 @@ _convar_
 10ConCommand
 6ConVar
 NSt3__117bad_function_callE
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+7CUtlMapIybi8CDefLessE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+7CUtlMapI10CUtlStringbi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CPathString
 17CFileWriterThread
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
@@ -217,6 +227,8 @@ ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -797,8 +809,15 @@ m_vecCallbacks.Count() == 0
 %llu
 pDefaultValue
 Attempted to change replicated CVar when you are not the GM
+ConVar
+m_configOverride
+m_pVecUlValue
+m_pVecStringValue
+m_vecCallbacks
 ConCommand '%s' not currently supported in config file
 !pszString || pszString[nChars] == '\0'
+m_p
+Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
@@ -850,6 +869,7 @@ pFile
 cubData < FIO_MAX_IO_BYTES
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
 m_vecRegisteredWriters.HasElement( pFile )
+m_Tree
 CPathString
 .dylib
 %s/%s%s
@@ -1274,7 +1294,7 @@ j
 @
 0
 Ic
-r
+0
 0
 
 =
@@ -1282,7 +1302,6 @@ r
 =*.*
 @
 @
-D
 0
 @
 @

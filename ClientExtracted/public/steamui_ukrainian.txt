@@ -456,7 +456,7 @@
 
 "Steam_DPIScaling_Option_Windows"		"Текст та піктограми до налаштувань монітора (вимагає перезапуску)"
 "Steam_DPIScaling_Option"				"Узгодити текст та піктограми з розміром екрану (вимагає перезапуску)"
-"Steam_LaunchSteamOnStartup_Option"		"Запускати Steam при вмиканні комп’ютера"
+"Steam_LaunchSteamOnStartup_Option"		"Запускати Steam з вмиканням комп’ютера"
 "Steam_BPMOnStartup_Option"				"Запускати Steam у режимі Big Picture"
 "Steam_ShowUrlBar_Option"				"За можливості показувати рядки вебадреси"
 "Steam_UseDirectWrite_Option"			"Увімкнути DirectWrite для кращого згладжування шрифтів і кернінгу"
@@ -2380,6 +2380,7 @@
 "Steam_status_decrypting"			"Розшифрування:"
 "Steam_status_validating"			"Перевірка: "
 "Steam_status_verifying"			"Перевірка: "
+"Steam_status_finalizing"			"Завершення"
 
 "steam_status_launching"				"Триває запуск"
 "steam_status_launching_progress"		"Триває запуск:"
@@ -4263,7 +4264,7 @@
 "Steam_DeviceAuth_Deauthorized_Notification" "%owner% забрав дозвіл для цього комп’ютерова, тому деякі ігри можуть бути недоступними."
 "Steam_DeviceAuth_StopPlaying_Notification" "Агов, %owner% бажає забрати позичені ігри! Вам ще залишилося грати %minutes% хв.…"
 
-"Steam_DeviceAuth_Shared_Library_Now_Available" "Ура, тепер ви можете грати в ігри, які позичив %owner%…"
+"Steam_DeviceAuth_Shared_Library_Now_Available" "Ура! Тепер ви можете грати в ігри користувача %owner%…"
 
 "Steam_TimedTrial_EndSoon" "Ваша пробна версія скоро завершиться"
 "Steam_TimedTrial_CloseSoon" "Гра закриється через %minutes% хв."
@@ -4517,6 +4518,7 @@
 "Steam_SettingsControllerDesktopConfig"		"Конфігурація настільного ПК"
 "Steam_SettingsControllerGuideConfig"		"Акордна конфігурація кнопки Гід"
 "Steam_SteamInputDisableNotifications"		"Вимкнути сповіщення про підключення контролера в настільному клієнті."
+"Steam_SteamInputDisableDualSenseUpdates"	"Вимкнути сповіщення про оновлення мікропрограми для контролера DualSense™ в настільному клієнті."
 
 "Steam_Settings_ShaderCache"			"Передкеш. шейдерів"
 "Steam_Settings_ShaderCache_Info"		"Передкешування шейдерів дозволяє Steam завантажувати попередньо скомпільовані шейдери графічного процесора, що збігаються з конфігурацією вашої системи. Ця функція дозволяє іграм, що використовують Vulkan та OpenGL, завантажуватися швидше та покращує стабільність частоти кадрів під час ігрового процесу.\n\nЯкщо ввімкнено, Steam збиратиме шейдери вашої системи в разі потреби. Увімкнення цієї функції може трохи збільшити використання диска та мережі."
@@ -4806,6 +4808,10 @@
 "Steam_XboxDriverInstall_Success"	"Драйвер успішно оновлено й буде активовано після перезавантаження комп’ютера."
 "Steam_XboxDriverInstall_ServiceFailure"	"Не вдалося оновити драйвер. Перевірте, чи запущено Steam у режимі звичайного користувача, а також чи використовується остання версія служби Steam і чи працює вона."
 "Steam_XboxDriverInstall_Failure"	"Не вдалося оновити драйвер, помилка: %error%"
+
+"Steam_DualSense_FirmwareUpdate_Title"	"Доступна нова мікропрограма для контролера"
+"Steam_DualSense_FirmwareUpdate_Text"	"Доступна нова мікропрограма для вашого бездротового контролера DualSense™. Натисніть на посилання нижче, щоб перейти на сайт Sony для оновлення мікропрограми:"
+"Steam_DualSense_FirmwareUpdate_DisableNotification"	"Більше не показувати"
 
 "DownloadRegion_default"				 "Невідомо"
 "DownloadRegion_us_chicago"			"США — Чикаго"

@@ -352,7 +352,7 @@
 "Friends_ViewGroupSteamID"			"Näytä ryhmän profiili"
 "Friends_JoinGroupChatRoom"			"Liity ryhmän keskusteluun"
 "Friends_OpenAdministerGroupPage"		"Ryhmän hallinta"
-"Friends_LeaveThisGroup"				"Lähde ryhmästä"
+"Friends_LeaveThisGroup"				"Poistu ryhmästä"
 
 "Friends_SteamIDLink"					"Näytä profiili"
 "Friends_EditAlias"						"Muokkaa aliasta..."
