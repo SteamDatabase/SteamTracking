@@ -2110,6 +2110,7 @@ https://steamcommunity.com/userreviews/ajaxgetvotes/
 https://steamcommunity.com/userreviews/clearcontentcheckresults/${id}
 https://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=${}
 https://steamcommunity.com/workshop/ajaxmanagesuggestedserviceproviders
+https://steamdeck.komodo.jp
 https://steamloopback.host
 https://steamloopback.host/
 https://steamloopback.host/${strUrl}
