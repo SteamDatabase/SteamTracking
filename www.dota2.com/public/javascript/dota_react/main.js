@@ -1860,6 +1860,41 @@
         InfoBlockIcon: "patchnotespage_InfoBlockIcon_1WQgr",
       };
     },
+    11259: (e) => {
+      e.exports = {
+        Tooltip: "portraitguidelines_Tooltip_xzMRt",
+        CarouselFade: "portraitguidelines_CarouselFade_16dGb",
+        StandardButton: "portraitguidelines_StandardButton_3CCXp",
+        ButtonText: "portraitguidelines_ButtonText_1hseP",
+        SteamLogo: "portraitguidelines_SteamLogo_3eORD",
+        ToolTip: "portraitguidelines_ToolTip_3RN-L",
+        PortraitGuidelines: "portraitguidelines_PortraitGuidelines_1U0jN",
+        Background: "portraitguidelines_Background_1-I4I",
+        ContentFrame: "portraitguidelines_ContentFrame_203cd",
+        Page: "portraitguidelines_Page_3khIs",
+        DPCLogo: "portraitguidelines_DPCLogo_1SoVI",
+        Header: "portraitguidelines_Header_1_oeZ",
+        SmoothLine: "portraitguidelines_SmoothLine_1qT59",
+        Subheader: "portraitguidelines_Subheader_3o0CS",
+        ExamplesRow: "portraitguidelines_ExamplesRow_1GNV6",
+        ExamplesImage: "portraitguidelines_ExamplesImage_2MC49",
+        CheckMarkLeft: "portraitguidelines_CheckMarkLeft_3vJNg",
+        CheckMarkRight: "portraitguidelines_CheckMarkRight_2hcpZ",
+        ExamplesDescription: "portraitguidelines_ExamplesDescription_LBV4e",
+        PortraitCreationRules: "portraitguidelines_PortraitCreationRules_38fmS",
+        PortraitRulesContainer:
+          "portraitguidelines_PortraitRulesContainer_8PvuQ",
+        PortraitRulesImage: "portraitguidelines_PortraitRulesImage_2lUdm",
+        PortraitRulesContainerLast:
+          "portraitguidelines_PortraitRulesContainerLast_2Isda",
+        PortraitGuidelineContainer:
+          "portraitguidelines_PortraitGuidelineContainer_3eSqR",
+        ClickZoom: "portraitguidelines_ClickZoom_71YEO",
+        GuidelinesDetails: "portraitguidelines_GuidelinesDetails_3FUbx",
+        GuidelinesHeader: "portraitguidelines_GuidelinesHeader_1FScJ",
+        GuidelinesBulletText: "portraitguidelines_GuidelinesBulletText_TsK9r",
+      };
+    },
     68298: (e) => {
       e.exports = {
         Tooltip: "requestforproposalpage_Tooltip_2BPN6",
@@ -2956,9 +2991,9 @@
         e && Object.assign(a, e);
       }
     },
-    32914: (e, t, n) => {
+    23220: (e, t, n) => {
       "use strict";
-      n.d(t, { P: () => yc });
+      n.d(t, { P: () => Cc });
       var r,
         a = n(70655),
         i = (n(99543), n(73935)),
@@ -4196,7 +4231,7 @@
           }),
           (t.prototype.render = function () {
             var e = this,
-              t = yc.getPrizePool();
+              t = Cc.getPrizePool();
             return o.createElement(
               "div",
               { className: v().BattlepassPage },
@@ -29505,7 +29540,7 @@
                               top: document.body.scrollHeight,
                               behavior: "smooth",
                             }),
-                              yc.setSelectedAbilityIndex(n);
+                              Cc.setSelectedAbilityIndex(n);
                           },
                         },
                         o.createElement("img", {
@@ -29906,7 +29941,7 @@
             r = n[0],
             a = n[1];
           if (!t) return null;
-          var i = yc.getSelectedAbilityIndex(),
+          var i = Cc.getSelectedAbilityIndex(),
             s =
               t.abilities.filter(function (e) {
                 return e.ability_is_granted_by_shard;
@@ -30036,7 +30071,7 @@
           u && !c.ability_is_granted_by_shard && (I = S),
             d && !c.ability_is_granted_by_scepter && (I = y);
           var N = function (e) {
-              yc.setSelectedAbilityIndex(e), a(!0);
+              Cc.setSelectedAbilityIndex(e), a(!0);
             },
             C = d && c.ability_has_scepter && !c.ability_is_granted_by_scepter,
             D = u && c.ability_has_shard && !c.ability_is_granted_by_shard,
@@ -30627,7 +30662,7 @@
           return (
             (0, o.useEffect)(
               function () {
-                return yc.setSelectedAbilityIndex(0);
+                return Cc.setSelectedAbilityIndex(0);
               },
               [d.pathname]
             ),
@@ -33206,13 +33241,171 @@
             o.createElement(N.U, null)
           );
         },
-        Lo = n(38273),
+        Lo = n(11259),
         Ro = n.n(Lo),
-        Ao = (0, d.Pi)(function (e) {
+        Ao = [
+          {
+            imageName: "example-player-silhouette.jpg",
+            locIdentifier: "general_guidelines",
+            bullets: 6,
+          },
+        ],
+        Go = [
+          {
+            imageName: "photography-lighting-setup.png",
+            locIdentifier: "lighting_guidelines",
+            bullets: 4,
+          },
+        ],
+        Mo = function (e) {
+          var t = e.rowInfo;
+          return o.createElement(
+            "div",
+            { className: Ro().PortraitGuidelineContainer },
+            o.createElement(
+              "div",
+              { className: Ro().ClickZoom },
+              o.createElement(
+                "label",
+                null,
+                o.createElement("input", { type: "checkbox" }),
+                o.createElement("img", {
+                  src: g.Y.IMG_URL + "dpc/portrait_guidelines/" + t.imageName,
+                  className: Ro().GuidelinesImage,
+                })
+              )
+            ),
+            o.createElement(
+              "div",
+              { className: Ro().GuidelinesDetails },
+              o.createElement(
+                "ul",
+                null,
+                (function (e, t) {
+                  for (var n = [], r = 1; r <= t; r++)
+                    n.push(
+                      o.createElement(
+                        "li",
+                        {
+                          key: e + "-" + r,
+                          className: Ro().GuidelinesBulletText,
+                        },
+                        (0, b.Jr)("#portrait_" + e + "_bullet_" + r)
+                      )
+                    );
+                  return n;
+                })(t.locIdentifier, t.bullets)
+              )
+            )
+          );
+        },
+        ko = function () {
+          return o.createElement(
+            "div",
+            { className: Ro().PortraitGuidelines },
+            o.createElement(se.j, { bOverlapping: !1 }),
+            o.createElement(
+              R.q,
+              null,
+              o.createElement(
+                "title",
+                null,
+                (0, b.Jr)("#portrait_guidelines_title")
+              )
+            ),
+            o.createElement(wn.Z, null),
+            o.createElement(
+              "div",
+              { className: Ro().Background },
+              o.createElement(
+                "div",
+                { className: Ro().ContentFrame },
+                o.createElement(
+                  "div",
+                  { className: Ro().Page },
+                  o.createElement("img", {
+                    src: g.Y.IMG_URL + "dpc/dpc_logo.png",
+                    className: Ro().DPCLogo,
+                  }),
+                  o.createElement(
+                    "div",
+                    { className: Ro().Header },
+                    (0, b.Jr)("#portrait_guidelines_top_header")
+                  ),
+                  o.createElement("div", { className: Ro().SmoothLine }),
+                  o.createElement(
+                    "div",
+                    { className: Ro().Subheader },
+                    (0, b.Jr)("#portrait_examples_header")
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ro().ExamplesRow },
+                    o.createElement("img", {
+                      src:
+                        g.Y.IMG_URL +
+                        "dpc/portrait_guidelines/example-player-1.jpg",
+                      className: Ro().ExamplesImage,
+                    }),
+                    o.createElement("img", {
+                      src:
+                        g.Y.IMG_URL + "dpc/autograph_guidelines/check-mark.png",
+                      className: Ro().CheckMarkLeft,
+                    }),
+                    o.createElement("img", {
+                      src:
+                        g.Y.IMG_URL +
+                        "dpc/portrait_guidelines/example-player-2.jpg",
+                      className: Ro().ExamplesImage,
+                    }),
+                    o.createElement("img", {
+                      src:
+                        g.Y.IMG_URL + "dpc/autograph_guidelines/check-mark.png",
+                      className: Ro().CheckMarkRight,
+                    })
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ro().ExamplesDescription },
+                    (0, b.Jr)("#portrait_examples_description")
+                  ),
+                  o.createElement("div", { className: Ro().SmoothLine }),
+                  o.createElement(
+                    "div",
+                    { className: Ro().Subheader },
+                    (0, b.Jr)("#portrait_general_guidelines_header")
+                  ),
+                  Ao.map(function (e, t) {
+                    return o.createElement(Mo, {
+                      key: "PortraitGuidelineContainerTop" + t,
+                      rowInfo: e,
+                    });
+                  }),
+                  o.createElement("div", { className: Ro().SmoothLine }),
+                  o.createElement(
+                    "div",
+                    { className: Ro().Subheader },
+                    (0, b.Jr)("#portrait_lighting_guidelines_header")
+                  ),
+                  Go.map(function (e, t) {
+                    return o.createElement(Mo, {
+                      key: "PortraitGuidelineContaineBottomr" + t,
+                      rowInfo: e,
+                    });
+                  })
+                )
+              )
+            ),
+            o.createElement(N.U, null)
+          );
+        },
+        Oo = n(38273),
+        Po = n.n(Oo),
+        Fo = (0, d.Pi)(function (e) {
           return o.createElement(
             "div",
             {
-              className: Ro().ControllerFAQPage,
+              className: Po().ControllerFAQPage,
               style: {
                 backgroundImage:
                   "url( " + g.Y.IMG_URL + "backgrounds/slate_bg_01.jpg )",
@@ -33225,7 +33418,7 @@
               o.createElement("title", null, (0, b.Jr)("#controller_faq_title"))
             ),
             o.createElement("div", {
-              className: Ro().HeaderImage,
+              className: Po().HeaderImage,
               style: {
                 backgroundImage:
                   "url( " +
@@ -33235,78 +33428,78 @@
             }),
             o.createElement(
               "div",
-              { className: Ro().Body },
+              { className: Po().Body },
               o.createElement(
                 "div",
-                { className: Ro().TopHeader },
+                { className: Po().TopHeader },
                 (0, b.Jr)("#controller_faq_title")
               ),
               o.createElement(
                 "div",
-                { className: Ro().TopBody },
+                { className: Po().TopBody },
                 (0, b.Jr)("#controller_faq_body")
               ),
               o.createElement(
                 "div",
-                { className: Ro().FAQ },
+                { className: Po().FAQ },
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQQuestion },
+                  { className: Po().FAQQuestion },
                   (0, b.Jr)("#controller_faq_q_6")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ro().FAQAnswer },
+                  { className: Po().FAQAnswer },
                   (0, b.Jr)("#controller_faq_a_6")
                 )
               )
@@ -33314,9 +33507,9 @@
             o.createElement(N.U, null)
           );
         }),
-        Go = n(60597),
-        Mo = n.n(Go);
-      const ko = (function (e) {
+        Uo = n(60597),
+        xo = n.n(Uo);
+      const Ho = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -33326,7 +33519,7 @@
             return o.createElement(
               "div",
               {
-                className: Mo().PastUpdates,
+                className: xo().PastUpdates,
                 style: {
                   backgroundImage:
                     "url( " + g.Y.IMG_URL + "backgrounds/greyfade.jpg )",
@@ -33344,16 +33537,16 @@
               ),
               o.createElement(
                 "div",
-                { className: Mo().HeaderSection },
+                { className: xo().HeaderSection },
                 o.createElement(
                   "div",
-                  { className: Mo().Headline },
+                  { className: xo().Headline },
                   (0, b.Jr)("#header_previous_updates")
                 )
               ),
               o.createElement(
                 "div",
-                { className: Mo().UpdatesContainer },
+                { className: xo().UpdatesContainer },
                 o.createElement(
                   "a",
                   {
@@ -33361,7 +33554,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33376,7 +33569,7 @@
                   "a",
                   { href: "https://www.dota2.com/labyrinth", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33391,7 +33584,7 @@
                   "a",
                   { href: "https://www.dota2.com/marci", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33406,7 +33599,7 @@
                   "a",
                   { href: "https://www.dota2.com/nemestice", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33424,7 +33617,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33439,7 +33632,7 @@
                   "a",
                   { href: "https://www.dota2.com/mistwoods", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33454,7 +33647,7 @@
                   "a",
                   { href: "https://www.dota2.com/diretide", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33472,7 +33665,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/wr_social.png )",
@@ -33485,7 +33678,7 @@
                   "a",
                   { href: "https://www.dota2.com/aghanim", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/aghs_share.png )",
@@ -33501,7 +33694,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/am_social.png )",
@@ -33517,7 +33710,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33535,7 +33728,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/wk_social.jpg )",
@@ -33551,7 +33744,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33569,7 +33762,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33587,7 +33780,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33605,7 +33798,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33623,7 +33816,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33641,7 +33834,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti9_social.jpg )",
@@ -33654,7 +33847,7 @@
                   "a",
                   { href: "https://www.dota2.com/mars", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33669,7 +33862,7 @@
                   "a",
                   { href: "http://www.dota2.com/frosthaven", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33684,7 +33877,7 @@
                   "a",
                   { href: "https://www.dota2.com/720", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/720_social.jpg )",
@@ -33700,7 +33893,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33718,7 +33911,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti8_social.jpg )",
@@ -33734,7 +33927,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33749,7 +33942,7 @@
                   "a",
                   { href: "http://www.dota2.com/plus", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33767,7 +33960,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33785,7 +33978,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti7_social.jpg )",
@@ -33801,7 +33994,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33816,7 +34009,7 @@
                   "a",
                   { href: "http://www.dota2.com/700", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/700_social.jpg )",
@@ -33829,7 +34022,7 @@
                   "a",
                   { href: "http://www.dota2.com/darkrift", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33847,7 +34040,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti6_social.jpg )",
@@ -33863,7 +34056,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33878,7 +34071,7 @@
                   "a",
                   { href: "http://www.dota2.com/winter2016", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33896,7 +34089,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33911,7 +34104,7 @@
                   "a",
                   { href: "http://www.dota2.com/reborn", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33929,7 +34122,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti5_social.jpg )",
@@ -33945,7 +34138,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33963,7 +34156,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33981,7 +34174,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -33999,7 +34192,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34017,7 +34210,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34032,7 +34225,7 @@
                   "a",
                   { href: "http://www.dota2.com/techies/", target: "_blank" },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34050,7 +34243,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti4_social.jpg )",
@@ -34066,7 +34259,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34084,7 +34277,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34102,7 +34295,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34120,7 +34313,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34138,7 +34331,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34156,7 +34349,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34174,7 +34367,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " + g.Y.IMG_URL + "/pastupdates/ti3_social.jpg )",
@@ -34190,7 +34383,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34208,7 +34401,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34226,7 +34419,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34244,7 +34437,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34262,7 +34455,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: Mo().UpdateBlock,
+                    className: xo().UpdateBlock,
                     style: {
                       backgroundImage:
                         "url( " +
@@ -34280,18 +34473,18 @@
           t
         );
       })(o.Component);
-      var Oo = n(15705),
-        Po = n(77970),
-        Fo = n.n(Po),
-        Uo = function () {
+      var zo = n(15705),
+        Wo = n(77970),
+        jo = n.n(Wo),
+        Vo = function () {
           return o.createElement("div", {
-            className: Fo().RightArrow,
+            className: jo().RightArrow,
             style: {
               backgroundImage: "url( " + g.Y.IMG_URL + "/arrow_left.png )",
             },
           });
         },
-        xo = function (e) {
+        Jo = function (e) {
           var t = e.shouldShow,
             n = e.showFunc,
             r = e.className,
@@ -34301,8 +34494,8 @@
             "div",
             {
               className: (0, E.Z)(
-                Fo().PopupPanelContainer,
-                t && Fo().ShowPopupPanel
+                jo().PopupPanelContainer,
+                t && jo().ShowPopupPanel
               ),
               onClick: function () {
                 return n(!1);
@@ -34311,7 +34504,7 @@
             o.createElement(
               "div",
               {
-                className: (0, E.Z)(Fo().PopupPanel, r),
+                className: (0, E.Z)(jo().PopupPanel, r),
                 onClick: function (e) {
                   return e.stopPropagation();
                 },
@@ -34320,7 +34513,7 @@
                 o.createElement(
                   "div",
                   {
-                    className: Fo().CloseButton,
+                    className: jo().CloseButton,
                     onClick: function () {
                       return n(!1);
                     },
@@ -34331,12 +34524,12 @@
             )
           );
         };
-      const Ho = (function (e) {
+      const Yo = (function (e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
             (n.handleClick = function (e) {
-              if (yc.getShortFilmOwnership()) {
+              if (Cc.getShortFilmOwnership()) {
                 var t =
                   g.Y.BASE_URL +
                   u._.shortfilm() +
@@ -34345,7 +34538,7 @@
               } else n.setState({ bPopupVisible: e });
             }),
             (n.handleAccepted = function () {
-              yc.grantShortFilmAppIDOwnership();
+              Cc.grantShortFilmAppIDOwnership();
               var e =
                 g.Y.BASE_URL +
                 u._.shortfilm() +
@@ -34353,7 +34546,7 @@
               history.pushState("", "", e), history.go();
             }),
             (n.BGetOwnsApp = function () {
-              return yc.getShortFilmOwnership();
+              return Cc.getShortFilmOwnership();
             }),
             (n.state = { bPopupVisible: !1 }),
             n
@@ -34367,7 +34560,7 @@
               this.BGetOwnsApp(),
               o.createElement(
                 "div",
-                { className: Fo().HomePage },
+                { className: jo().HomePage },
                 o.createElement(se.j, { bOverlapping: !0 }),
                 o.createElement(
                   R.q,
@@ -34380,14 +34573,14 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Fo().HeaderSection },
+                  { className: jo().HeaderSection },
                   o.createElement(
                     "div",
-                    { className: Fo().BackgroundVideoContainer },
+                    { className: jo().BackgroundVideoContainer },
                     o.createElement(
                       "video",
                       {
-                        className: Fo().BackgroundVideo,
+                        className: jo().BackgroundVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -34413,14 +34606,14 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: Fo().TitleContainer },
+                    { className: jo().TitleContainer },
                     o.createElement(
                       "div",
-                      { className: Fo().TopRow },
+                      { className: jo().TopRow },
                       o.createElement(
                         "video",
                         {
-                          className: Fo().HeroLogo,
+                          className: jo().HeroLogo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
@@ -34439,10 +34632,10 @@
                       ),
                       o.createElement(
                         "div",
-                        { className: Fo().ButtonRow },
+                        { className: jo().ButtonRow },
                         o.createElement(
                           "div",
-                          { className: Fo().CommunityDesc },
+                          { className: jo().CommunityDesc },
                           (0, b.Jr)("#filmcontest_submit_label")
                         ),
                         0 == g.Y.ACCOUNT_ID &&
@@ -34459,17 +34652,17 @@
                               "div",
                               {
                                 className: (0, E.Z)(
-                                  Fo().FilmButton,
-                                  Fo().SteamButton
+                                  jo().FilmButton,
+                                  jo().SteamButton
                                 ),
                               },
                               o.createElement(
                                 "div",
-                                { className: Fo().ButtonText },
+                                { className: jo().ButtonText },
                                 (0, b.Jr)("#filmcontest_login_steam")
                               ),
                               o.createElement("div", {
-                                className: Fo().SteamLogo,
+                                className: jo().SteamLogo,
                               })
                             )
                           ),
@@ -34481,20 +34674,20 @@
                                 return e.handleClick(!0);
                               },
                               className: (0, E.Z)(
-                                Fo().FilmButton,
-                                Fo().SteamButton
+                                jo().FilmButton,
+                                jo().SteamButton
                               ),
                             },
                             o.createElement(
                               "div",
-                              { className: Fo().ButtonText },
+                              { className: jo().ButtonText },
                               (0, b.Jr)("#filmcontest_button_submit")
                             ),
-                            o.createElement(Uo, null)
+                            o.createElement(Vo, null)
                           ),
                         o.createElement(
                           "div",
-                          { className: Fo().CommunityDesc },
+                          { className: jo().CommunityDesc },
                           (0, b.Jr)("#filmcontest_community")
                         ),
                         o.createElement(
@@ -34504,102 +34697,102 @@
                           },
                           o.createElement(
                             "div",
-                            { className: Fo().FilmButton },
+                            { className: jo().FilmButton },
                             o.createElement(
                               "div",
-                              { className: Fo().ButtonText },
+                              { className: jo().ButtonText },
                               (0, b.Jr)("#filmcontest_submissions")
                             ),
-                            o.createElement(Uo, null)
+                            o.createElement(Vo, null)
                           )
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Fo().Introduction },
+                      { className: jo().Introduction },
                       (0, b.Jr)("#filmcontest22_intro")
                     ),
                     o.createElement(
                       "div",
-                      { className: Fo().Prizes },
+                      { className: jo().Prizes },
                       o.createElement(
                         "div",
-                        { className: (0, E.Z)(Fo().Prize, Fo().Prize1) },
+                        { className: (0, E.Z)(jo().Prize, jo().Prize1) },
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeAmount },
+                          { className: jo().PrizeAmount },
                           (0, b.Jr)("#filmcontest_prize1_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeLabel },
+                          { className: jo().PrizeLabel },
                           (0, b.Jr)("#filmcontest_prize1_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, E.Z)(Fo().Prize, Fo().Prize2) },
+                        { className: (0, E.Z)(jo().Prize, jo().Prize2) },
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeAmount },
+                          { className: jo().PrizeAmount },
                           (0, b.Jr)("#filmcontest_prize2_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeLabel },
+                          { className: jo().PrizeLabel },
                           (0, b.Jr)("#filmcontest_prize2_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, E.Z)(Fo().Prize, Fo().Prize3) },
+                        { className: (0, E.Z)(jo().Prize, jo().Prize3) },
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeAmount },
+                          { className: jo().PrizeAmount },
                           (0, b.Jr)("#filmcontest_prize3_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeLabel },
+                          { className: jo().PrizeLabel },
                           (0, b.Jr)("#filmcontest_prize3_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, E.Z)(Fo().Prize, Fo().Prize4) },
+                        { className: (0, E.Z)(jo().Prize, jo().Prize4) },
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeAmount },
+                          { className: jo().PrizeAmount },
                           (0, b.Jr)("#filmcontest_prize4_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: Fo().PrizeLabel },
+                          { className: jo().PrizeLabel },
                           (0, b.Jr)("#filmcontest_prize4_label")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Fo().PrizeDesc },
+                      { className: jo().PrizeDesc },
                       (0, b.Jr)("#filmcontest22_prize_desc")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Fo().WallpaperSection },
+                  { className: jo().WallpaperSection },
                   o.createElement(
                     "div",
-                    { className: Fo().WallpaperTitle },
+                    { className: jo().WallpaperTitle },
                     (0, b.Jr)("#filmcontest_previous_winners")
                   ),
                   o.createElement(
                     "div",
-                    { className: Fo().Wallpapers },
+                    { className: jo().Wallpapers },
                     o.createElement("iframe", {
-                      className: Fo().PreviousWinnerVideo,
+                      className: jo().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/FUYAopUzThc",
@@ -34610,7 +34803,7 @@
                       allowFullScreen: !0,
                     }),
                     o.createElement("iframe", {
-                      className: Fo().PreviousWinnerVideo,
+                      className: jo().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/X66DnoOo1S8",
@@ -34621,7 +34814,7 @@
                       allowFullScreen: !0,
                     }),
                     o.createElement("iframe", {
-                      className: Fo().PreviousWinnerVideo,
+                      className: jo().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/tIprXeR23U8",
@@ -34635,20 +34828,20 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Fo().GuidelinesSection },
-                  o.createElement("div", { className: Fo().Divider }),
-                  o.createElement("div", { className: Fo().DividerBottom }),
+                  { className: jo().GuidelinesSection },
+                  o.createElement("div", { className: jo().Divider }),
+                  o.createElement("div", { className: jo().DividerBottom }),
                   o.createElement(
                     "div",
-                    { className: Fo().Quote },
+                    { className: jo().Quote },
                     o.createElement(
                       "div",
-                      { className: Fo().GuidelinesTitle },
+                      { className: jo().GuidelinesTitle },
                       (0, b.Jr)("#filmcontest_guidelines")
                     ),
                     o.createElement(
                       "div",
-                      { className: Fo().GuidelinesList },
+                      { className: jo().GuidelinesList },
                       o.createElement(
                         "ul",
                         null,
@@ -34718,10 +34911,10 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Fo().EndRow },
+                  { className: jo().EndRow },
                   o.createElement(
                     "div",
-                    { className: Fo().EndRowText },
+                    { className: jo().EndRowText },
                     (0, b.Jr)("#filmcontest22_intro"),
                     0 == g.Y.ACCOUNT_ID &&
                       o.createElement(
@@ -34737,16 +34930,16 @@
                           "div",
                           {
                             className: (0, E.Z)(
-                              Fo().FilmButton,
-                              Fo().SteamButton
+                              jo().FilmButton,
+                              jo().SteamButton
                             ),
                           },
                           o.createElement(
                             "div",
-                            { className: Fo().ButtonText },
+                            { className: jo().ButtonText },
                             (0, b.Jr)("#filmcontest_login_steam")
                           ),
-                          o.createElement("div", { className: Fo().SteamLogo })
+                          o.createElement("div", { className: jo().SteamLogo })
                         )
                       ),
                     0 != g.Y.ACCOUNT_ID &&
@@ -34757,28 +34950,28 @@
                             return e.handleClick(!0);
                           },
                           className: (0, E.Z)(
-                            Fo().FilmButton,
-                            Fo().SteamButton
+                            jo().FilmButton,
+                            jo().SteamButton
                           ),
                         },
                         o.createElement(
                           "div",
-                          { className: Fo().ButtonText },
+                          { className: jo().ButtonText },
                           (0, b.Jr)("#filmcontest_button_submit")
                         ),
-                        o.createElement(Uo, null)
+                        o.createElement(Vo, null)
                       )
                   ),
                   o.createElement("img", {
-                    className: Fo().EndRowImage,
+                    className: jo().EndRowImage,
                     src: g.Y.IMG_URL + "shortfilmcontest2022/clapper_2022.png",
                   })
                 ),
                 o.createElement(N.U, null),
                 o.createElement(
-                  xo,
+                  Jo,
                   {
-                    className: Fo().ShortFilmPopup,
+                    className: jo().ShortFilmPopup,
                     hasCloseButton: !0,
                     shouldShow: this.state.bPopupVisible,
                     showFunc: function (t) {
@@ -34792,7 +34985,7 @@
                       onClick: function () {
                         return e.handleAccepted();
                       },
-                      className: (0, E.Z)(Fo().FilmButton, Fo().SteamButton),
+                      className: (0, E.Z)(jo().FilmButton, jo().SteamButton),
                     },
                     (0, b.Jr)("#filmcontest_i_agree")
                   ),
@@ -34804,25 +34997,25 @@
           t
         );
       })(o.Component);
-      var zo = o.lazy(function () {
+      var Xo = o.lazy(function () {
           return n.e(3009).then(n.bind(n, 53009));
         }),
-        Wo = o.lazy(function () {
+        Zo = o.lazy(function () {
           return Promise.all([n.e(347), n.e(6231)]).then(n.bind(n, 6231));
         }),
-        jo = o.lazy(function () {
+        qo = o.lazy(function () {
           return n.e(534).then(n.bind(n, 50534));
         }),
-        Vo = o.lazy(function () {
+        Ko = o.lazy(function () {
           return Promise.all([n.e(347), n.e(4674)]).then(n.bind(n, 24674));
         }),
-        Jo = o.lazy(function () {
+        Qo = o.lazy(function () {
           return n.e(6990).then(n.bind(n, 16990));
         }),
-        Yo = o.lazy(function () {
+        $o = o.lazy(function () {
           return n.e(5232).then(n.bind(n, 25232));
         });
-      const Xo = (function (e) {
+      const es = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -34898,6 +35091,10 @@
                       component: Bo,
                     }),
                     o.createElement(cr, {
+                      path: u._.portraitguidelines(),
+                      component: ko,
+                    }),
+                    o.createElement(cr, {
                       path: u._.hero(":id"),
                       component: Ki,
                     }),
@@ -34907,11 +35104,11 @@
                     }),
                     o.createElement(cr, {
                       path: u._.pastupdates(),
-                      component: ko,
+                      component: Ho,
                     }),
                     o.createElement(cr, {
                       path: u._.controllerfaq(),
-                      component: Ao,
+                      component: Fo,
                     }),
                     o.createElement(cr, {
                       path: u._.dpc_event_root(":strEvent?"),
@@ -34919,24 +35116,24 @@
                     }),
                     o.createElement(cr, {
                       path: u._.patchnotes(":version?"),
-                      component: Oo.Fq,
+                      component: zo.Fq,
                     }),
                     o.createElement(cr, {
                       path: u._.dawnbreaker(),
-                      component: zo,
+                      component: Xo,
                     }),
-                    o.createElement(cr, { path: u._.marci(), component: jo }),
+                    o.createElement(cr, { path: u._.marci(), component: qo }),
                     o.createElement(cr, {
                       path: u._.labyrinth(),
-                      component: Vo,
+                      component: Ko,
                     }),
                     o.createElement(cr, {
                       path: u._.shortfilm(),
-                      component: Ho,
+                      component: Yo,
                     }),
                     o.createElement(cr, {
                       path: u._.nemestice(),
-                      component: Wo,
+                      component: Zo,
                     }),
                     o.createElement(cr, {
                       path: u._.springcleaning(),
@@ -34944,11 +35141,11 @@
                     }),
                     o.createElement(cr, {
                       path: u._.primalbeast(),
-                      component: Jo,
+                      component: Qo,
                     }),
                     o.createElement(cr, {
                       path: u._.battlereport(),
-                      component: Yo,
+                      component: $o,
                     }),
                     o.createElement(cr, {
                       path: u._.other(":page"),
@@ -34964,10 +35161,10 @@
           (t = (0, a.gn)([d.Pi], t))
         );
       })(o.Component);
-      var Zo = n(34249),
-        qo = n(76835),
-        Ko = n(93898);
-      function Qo(e) {
+      var ts = n(34249),
+        ns = n(76835),
+        rs = n(93898);
+      function as(e) {
         var t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -34975,8 +35172,8 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      var $o = /^(steam|ftp|https?):\/\//;
-      function es(e) {
+      var is = /^(steam|ftp|https?):\/\//;
+      function os(e) {
         return e
           ? 1 != ge.De.EUNIVERSE
             ? e
@@ -35027,15 +35224,15 @@
               )))
           : e;
       }
-      function ts(e) {
+      function ss(e) {
         if (!e) return !0;
-        var t = Qo(e).toLocaleLowerCase();
+        var t = as(e).toLocaleLowerCase();
         return (
           [
-            Qo(ge.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            Qo(ge.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            Qo(ge.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            Qo(ge.De.STORE_CDN_URL).toLocaleLowerCase(),
+            as(ge.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            as(ge.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            as(ge.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            as(ge.De.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -35043,27 +35240,27 @@
           ].indexOf(t) >= 0
         );
       }
-      const ns = JSON.parse(
+      const ls = JSON.parse(
         '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201}'
       );
-      function rs(e, t, n) {
+      function cs(e, t, n) {
         void 0 === n && (n = null);
-        var r = Qo(e).toLowerCase(),
-          a = Qo(ge.De.COMMUNITY_BASE_URL).toLowerCase(),
-          i = Qo(ge.De.STORE_BASE_URL).toLowerCase();
+        var r = as(e).toLowerCase(),
+          a = as(ge.De.COMMUNITY_BASE_URL).toLowerCase(),
+          i = as(ge.De.STORE_BASE_URL).toLowerCase();
         return r === a || r === i
           ? (function (e, t, n) {
               void 0 === n && (n = null);
               var r = (function (e, t) {
                 void 0 === t && (t = null);
                 if (!(null == e ? void 0 : e.domain)) return ge.De.SNR;
-                return as.GetLinkParam(e, t);
+                return us.GetLinkParam(e, t);
               })(t, n);
-              return as.AddNavParamToURL(e, r);
+              return us.AddNavParamToURL(e, r);
             })(e, t, n)
           : e;
       }
-      var as = (function () {
+      var us = (function () {
         function e() {}
         return (
           (e.SetNavEventParams = function (t, n, r, a) {
@@ -35127,7 +35324,7 @@
             try {
               var n = new URL(
                   (function (e) {
-                    return $o.test(e) ? e : "https://" + e;
+                    return is.test(e) ? e : "https://" + e;
                   })(e)
                 ),
                 r = new URLSearchParams(n.search);
@@ -35168,15 +35365,15 @@
           }),
           (e.EncodeEventComponent = function (e) {
             if (!e) return "";
-            return e in ns
-              ? "" + ns[e]
+            return e in ls
+              ? "" + ls[e]
               : (e.match(/^[0-9]+$/) || (e = e.replace(/^[0-9]+/, "")),
                 e.replace(/[^a-zA-Z0-9\- ]+/g, ""));
           }),
           e
         );
       })();
-      var is = new ((function () {
+      var ds = new ((function () {
           function e() {
             (this.m_mapYouTubeVideo = new Map()),
               (this.m_mapSharedFile = new Map());
@@ -35282,12 +35479,12 @@
             e
           );
         })())(),
-        os = n(41411),
-        ss = n(99957),
-        ls = n(63826),
-        cs = n.n(ls);
-      var us,
-        ds = (function (e) {
+        ms = n(41411),
+        ps = n(99957),
+        _s = n(63826),
+        hs = n.n(_s);
+      var gs,
+        fs = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             n.m_cancelSignal = pe().CancelToken.source();
@@ -35320,7 +35517,7 @@
                 var e = this;
                 return (0, a.Jh)(this, function (t) {
                   return (
-                    is
+                    ds
                       .LoadYouTubeDynamicData(
                         [this.props.videoID],
                         this.m_cancelSignal
@@ -35352,22 +35549,22 @@
                   a = this.m_youtubeInfo.description;
                 return o.createElement(
                   "div",
-                  { className: cs().DynamicLinkBox, onClick: this.OnClick },
+                  { className: hs().DynamicLinkBox, onClick: this.OnClick },
                   o.createElement("img", {
-                    className: cs().DynamicLink_Preview,
+                    className: hs().DynamicLink_Preview,
                     src: "https://img.youtube.com/vi/" + e + "/0.jpg",
                   }),
                   o.createElement(
                     "div",
-                    { className: cs().DynamicLink_Content },
+                    { className: hs().DynamicLink_Content },
                     o.createElement(
                       "div",
-                      { className: cs().DynamicLink_Name },
+                      { className: hs().DynamicLink_Name },
                       (0, Ut.Xx)("#EventEditor_YouTubeVideoTitle", t)
                     ),
                     o.createElement(
                       "div",
-                      { className: cs().DynamicLink_YoutubeViews },
+                      { className: hs().DynamicLink_YoutubeViews },
                       (0, Ut.Xx)(
                         "#EventEditor_YouTubeVideoViews",
                         Number(r).toLocaleString(Ut.Yt.GetPreferredLocales())
@@ -35375,9 +35572,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: cs().Dynamiclink_Content },
+                      { className: hs().Dynamiclink_Content },
                       this.state.bLoadedMetaData && a,
-                      !this.state.bLoadedMetaData && o.createElement(os.V, null)
+                      !this.state.bLoadedMetaData && o.createElement(ms.V, null)
                     )
                   )
                 );
@@ -35394,14 +35591,14 @@
                     : "");
               return o.createElement(
                 "div",
-                { className: (0, E.Z)(cs().PreviewYouTubeVideo, i, s), id: e },
+                { className: (0, E.Z)(hs().PreviewYouTubeVideo, i, s), id: e },
                 o.createElement("img", {
                   src:
                     ge.De.COMMUNITY_CDN_URL +
                     "public/shared/images/responsive/youtube_16x9_placeholder.gif",
                 }),
                 o.createElement("iframe", {
-                  className: (0, E.Z)(cs().PreviewYouTubeVideo, i, s),
+                  className: (0, E.Z)(hs().PreviewYouTubeVideo, i, s),
                   src: l,
                   allowFullScreen: !0,
                   frameBorder: 0,
@@ -35410,11 +35607,11 @@
             }),
             (t.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0"),
             (0, a.gn)([_e.LO], t.prototype, "m_youtubeInfo", void 0),
-            (0, a.gn)([ss.ak], t.prototype, "OnClick", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnClick", null),
             (t = n = (0, a.gn)([d.Pi], t))
           );
         })(o.Component),
-        ms = n(83019);
+        vs = n(83019);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
           (e[(e.k_eWishlist = 2)] = "k_eWishlist"),
@@ -35425,9 +35622,9 @@
           (e[(e.k_eFeatured = 64)] = "k_eFeatured"),
           (e[(e.k_eCurator = 128)] = "k_eCurator"),
           (e[(e.k_eReposted = 256)] = "k_eReposted");
-      })(us || (us = {}));
-      var ps,
-        _s = (function () {
+      })(gs || (gs = {}));
+      var Es,
+        bs = (function () {
           function e() {}
           return (
             (e.prototype.GetSource = function () {
@@ -35499,7 +35696,7 @@
             e
           );
         })();
-      function hs(e) {
+      function ys(e) {
         var t,
           n,
           r = (0, o.useState)(hn.GetClanEventModel(e)),
@@ -35550,18 +35747,18 @@
           (e.k_ESteam = "steam"),
           (e.k_EFeatured = "featured"),
           (e.k_ECurator = "curator");
-      })(ps || (ps = {}));
-      var gs,
-        fs = [
-          ps.k_ELibrary,
-          ps.k_EWishlist,
-          ps.k_EFollowing,
-          ps.k_ERecommended,
-          ps.k_ESteam,
-          ps.k_ECurator,
+      })(Es || (Es = {}));
+      var Ss,
+        Ts = [
+          Es.k_ELibrary,
+          Es.k_EWishlist,
+          Es.k_EFollowing,
+          Es.k_ERecommended,
+          Es.k_ESteam,
+          Es.k_ECurator,
         ],
-        vs = (0, a.pr)(fs, [ps.k_EFeatured]),
-        Es = [ps.k_EFeatured];
+        ws = (0, a.pr)(Ts, [Es.k_EFeatured]),
+        Is = [Es.k_EFeatured];
       !(function (e) {
         (e.k_ENews = "news"),
           (e.k_EEvents = "events"),
@@ -35569,31 +35766,31 @@
           (e.k_EUpdates = "updates"),
           (e.k_EReleases = "releases"),
           (e.k_ESales = "sales");
-      })(gs || (gs = {}));
-      var bs = [
-          gs.k_ENews,
-          gs.k_EEvents,
-          gs.k_EStreaming,
-          gs.k_EUpdates,
-          gs.k_EReleases,
-          gs.k_ESales,
+      })(Ss || (Ss = {}));
+      var Ns = [
+          Ss.k_ENews,
+          Ss.k_EEvents,
+          Ss.k_EStreaming,
+          Ss.k_EUpdates,
+          Ss.k_EReleases,
+          Ss.k_ESales,
         ],
-        ys = new Map([
-          [gs.k_ENews, [28]],
-          [gs.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
-          [gs.k_EStreaming, [11]],
-          [gs.k_EUpdates, [12, 13, 14]],
-          [gs.k_EReleases, [10, 29, 16, 15, 32]],
-          [gs.k_ESales, [20, 21, 31, 34]],
+        Cs = new Map([
+          [Ss.k_ENews, [28]],
+          [Ss.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [Ss.k_EStreaming, [11]],
+          [Ss.k_EUpdates, [12, 13, 14]],
+          [Ss.k_EReleases, [10, 29, 16, 15, 32]],
+          [Ss.k_ESales, [20, 21, 31, 34]],
         ]);
-      function Ss(e) {
+      function Ds(e) {
         return new Map(
           e.map(function (e) {
             return [e, !0];
           })
         );
       }
-      var Ts;
+      var Bs;
       !(function () {
         function e() {
           (this.m_mapEventTypeGroupsAllowed = new Map()),
@@ -35624,7 +35821,7 @@
                 t++
               ) {
                 var r = n[t];
-                ys.get(r).forEach(function (t) {
+                Cs.get(r).forEach(function (t) {
                   return e.add(t);
                 });
               }
@@ -35636,18 +35833,18 @@
           (e.prototype.MapClanEventTypeToGroup = function (e) {
             var t = null;
             return (
-              ys.forEach(function (n, r) {
+              Cs.forEach(function (n, r) {
                 -1 !== n.indexOf(e) && (t = r);
               }),
-              t || gs.k_EEvents
+              t || Ss.k_EEvents
             );
           }),
           (e.prototype.InitDefaultCheckboxes = function (e, t, n) {
             (this.m_bInitializedForUpdatesOnly = t),
-              (this.m_mapEventTypeGroupsAllowed = Ss(t ? [gs.k_EUpdates] : bs));
-            var r = ge.De.EREALM === Ne.IN.k_ESteamRealmChina ? vs : fs;
-            (this.m_mapGameSources = Ss(e ? r : Es)),
-              n && this.m_mapGameSources.set(ps.k_EFeatured, !0);
+              (this.m_mapEventTypeGroupsAllowed = Ds(t ? [Ss.k_EUpdates] : Ns));
+            var r = ge.De.EREALM === Ne.IN.k_ESteamRealmChina ? ws : Ts;
+            (this.m_mapGameSources = Ds(e ? r : Is)),
+              n && this.m_mapGameSources.set(Es.k_EFeatured, !0);
           }),
           (e.prototype.Init = function (e, t, n, r, a) {
             (this.m_eStorageType = a), (this.m_strStorageKey = r);
@@ -35659,8 +35856,8 @@
                 var l = s.rgEventTypeGroupsAllowed,
                   c = s.rgGameSources;
                 return (
-                  (this.m_mapEventTypeGroupsAllowed = Ss(l)),
-                  (this.m_mapGameSources = Ss(c)),
+                  (this.m_mapEventTypeGroupsAllowed = Ds(l)),
+                  (this.m_mapGameSources = Ds(c)),
                   void (
                     void 0 !== s.bCuratorUnhideOnFollowDismissed &&
                     (this.m_bCuratorUnhideOnFollowDialogDismissed =
@@ -35697,8 +35894,8 @@
           }),
           (e.prototype.BIsGameSourceAllowed = function (e) {
             return (
-              !(e === ps.k_EFollowing && !Oe.bIsFollowingEnabled) &&
-              !(e === ps.k_ECurator && !Oe.bIsCuratorsEnabled) &&
+              !(e === Es.k_EFollowing && !Oe.bIsFollowingEnabled) &&
+              !(e === Es.k_ECurator && !Oe.bIsCuratorsEnabled) &&
               this.m_mapGameSources.has(e)
             );
           }),
@@ -35707,26 +35904,26 @@
               ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
               : this.m_mapEventTypeGroupsAllowed.delete(e),
               this.SaveFilterPreferences(),
-              ws.RecordFilterChangeEvent(this);
+              Ls.RecordFilterChangeEvent(this);
           }),
           (e.prototype.SetGameSourceAllowed = function (e, t) {
             t
               ? (this.m_mapGameSources.set(e, !0),
-                e == ps.k_ERecent
-                  ? this.m_mapGameSources.delete(ps.k_ELibrary)
-                  : e == ps.k_ELibrary &&
+                e == Es.k_ERecent
+                  ? this.m_mapGameSources.delete(Es.k_ELibrary)
+                  : e == Es.k_ELibrary &&
                     ((0, fe.X)(
-                      !this.m_mapGameSources.has(ps.k_ERecent),
+                      !this.m_mapGameSources.has(Es.k_ERecent),
                       "Setting Library although Recent already set - illusion was broken"
                     ),
-                    this.m_mapGameSources.delete(ps.k_ERecent)))
+                    this.m_mapGameSources.delete(Es.k_ERecent)))
               : (this.m_mapGameSources.delete(e),
-                e == ps.k_ERecent
-                  ? this.m_mapGameSources.set(ps.k_ELibrary, !0)
-                  : e == ps.k_ELibrary &&
-                    this.m_mapGameSources.delete(ps.k_ERecent)),
+                e == Es.k_ERecent
+                  ? this.m_mapGameSources.set(Es.k_ELibrary, !0)
+                  : e == Es.k_ELibrary &&
+                    this.m_mapGameSources.delete(Es.k_ERecent)),
               this.SaveFilterPreferences(),
-              ws.RecordFilterChangeEvent(this);
+              Ls.RecordFilterChangeEvent(this);
           }),
           (e.prototype.BShouldDisplayEvent = function (e) {
             var t = e.GetSource(),
@@ -35739,27 +35936,27 @@
               !!(
                 this.enabledEventTypeSet.has(e.event_type) ||
                 (this.m_bInitializedForUpdatesOnly &&
-                  this.BIsEventTypeGroupAllowed(gs.k_EUpdates) &&
+                  this.BIsEventTypeGroupAllowed(Ss.k_EUpdates) &&
                   28 == e.event_type &&
                   e.start_time < 1599202800)
               ) &&
-              (!!(t & us.k_eRequired || t & us.k_eReposted) ||
+              (!!(t & gs.k_eRequired || t & gs.k_eReposted) ||
                 Boolean(
-                  (this.BIsGameSourceAllowed(ps.k_ERecent) && n) ||
-                    (this.BIsGameSourceAllowed(ps.k_ELibrary) &&
-                      t & us.k_eLibrary) ||
-                    (this.BIsGameSourceAllowed(ps.k_EWishlist) &&
-                      t & us.k_eWishlist) ||
-                    (this.BIsGameSourceAllowed(ps.k_EFollowing) &&
-                      t & us.k_eFollowing) ||
-                    (this.BIsGameSourceAllowed(ps.k_ERecommended) &&
-                      t & us.k_eRecommended) ||
-                    (this.BIsGameSourceAllowed(ps.k_ESteam) &&
-                      t & us.k_eSteam) ||
-                    (this.BIsGameSourceAllowed(ps.k_EFeatured) &&
-                      t & us.k_eFeatured) ||
-                    (this.BIsGameSourceAllowed(ps.k_ECurator) &&
-                      t & us.k_eCurator)
+                  (this.BIsGameSourceAllowed(Es.k_ERecent) && n) ||
+                    (this.BIsGameSourceAllowed(Es.k_ELibrary) &&
+                      t & gs.k_eLibrary) ||
+                    (this.BIsGameSourceAllowed(Es.k_EWishlist) &&
+                      t & gs.k_eWishlist) ||
+                    (this.BIsGameSourceAllowed(Es.k_EFollowing) &&
+                      t & gs.k_eFollowing) ||
+                    (this.BIsGameSourceAllowed(Es.k_ERecommended) &&
+                      t & gs.k_eRecommended) ||
+                    (this.BIsGameSourceAllowed(Es.k_ESteam) &&
+                      t & gs.k_eSteam) ||
+                    (this.BIsGameSourceAllowed(Es.k_EFeatured) &&
+                      t & gs.k_eFeatured) ||
+                    (this.BIsGameSourceAllowed(Es.k_ECurator) &&
+                      t & gs.k_eCurator)
                 ))
             );
           }),
@@ -35771,12 +35968,12 @@
           }),
           (e.prototype.BAreAnyEventsFiltered = function (e) {
             var t = this,
-              n = ge.De.EREALM === Ne.IN.k_ESteamRealmChina ? vs : fs;
+              n = ge.De.EREALM === Ne.IN.k_ESteamRealmChina ? ws : Ts;
             return (
-              (e ? n : Es).some(function (e) {
+              (e ? n : Is).some(function (e) {
                 return !t.BIsGameSourceAllowed(e);
               }) ||
-              bs.some(function (e) {
+              Ns.some(function (e) {
                 return !t.BIsEventTypeGroupAllowed(e);
               })
             );
@@ -35821,8 +36018,8 @@
             "k_eReminder_EmailUnverified"),
           (e[(e.k_eReminder_MobilePushMissing = 12)] =
             "k_eReminder_MobilePushMissing");
-      })(Ts || (Ts = {}));
-      var ws = new ((function () {
+      })(Bs || (Bs = {}));
+      var Ls = new ((function () {
         function e() {
           (this.m_nPastViewedIndex = 0),
             (this.m_nPastViewedDays = 0),
@@ -35865,7 +36062,7 @@
                       Math.min(n.m_nFutureViewedIndex, 4095) |
                       (Math.min(n.m_nFutureViewableEvents, 255) << 12) |
                       (Math.min(n.GetTimeSpentOnPageS(e), 2047) << 20);
-                    ws.SendExperimentEventToSteam(18, t);
+                    Ls.SendExperimentEventToSteam(18, t);
                   });
                 }
               } else {
@@ -35880,7 +36077,7 @@
                       Math.min(n.m_nPastViewedIndex, 4095) |
                       (Math.min(n.m_nPastViewedDays, 255) << 12) |
                       (Math.min(n.GetTimeSpentOnPageS(e), 2047) << 20);
-                    ws.SendExperimentEventToSteam(17, t);
+                    Ls.SendExperimentEventToSteam(17, t);
                   });
                 }
               }
@@ -35889,19 +36086,19 @@
             var t = this;
             this.m_scheduledFilterChange.Schedule(1e3, function () {
               var n = 0;
-              e.BIsGameSourceAllowed(ps.k_ELibrary) && (n |= 1),
-                e.BIsGameSourceAllowed(ps.k_EWishlist) && (n |= 2),
-                e.BIsGameSourceAllowed(ps.k_EFollowing) && (n |= 4),
-                e.BIsGameSourceAllowed(ps.k_ERecommended) && (n |= 8),
-                e.BIsGameSourceAllowed(ps.k_ESteam) && (n |= 16),
-                e.BIsGameSourceAllowed(ps.k_EFeatured) && (n |= 32),
-                e.BIsGameSourceAllowed(ps.k_ERecent) && (n |= 64),
-                e.BIsEventTypeGroupAllowed(gs.k_ENews) && (n |= 1024),
-                e.BIsEventTypeGroupAllowed(gs.k_EEvents) && (n |= 2048),
-                e.BIsEventTypeGroupAllowed(gs.k_EStreaming) && (n |= 4096),
-                e.BIsEventTypeGroupAllowed(gs.k_EUpdates) && (n |= 8192),
-                e.BIsEventTypeGroupAllowed(gs.k_EReleases) && (n |= 16384),
-                e.BIsEventTypeGroupAllowed(gs.k_ESales) && (n |= 32768),
+              e.BIsGameSourceAllowed(Es.k_ELibrary) && (n |= 1),
+                e.BIsGameSourceAllowed(Es.k_EWishlist) && (n |= 2),
+                e.BIsGameSourceAllowed(Es.k_EFollowing) && (n |= 4),
+                e.BIsGameSourceAllowed(Es.k_ERecommended) && (n |= 8),
+                e.BIsGameSourceAllowed(Es.k_ESteam) && (n |= 16),
+                e.BIsGameSourceAllowed(Es.k_EFeatured) && (n |= 32),
+                e.BIsGameSourceAllowed(Es.k_ERecent) && (n |= 64),
+                e.BIsEventTypeGroupAllowed(Ss.k_ENews) && (n |= 1024),
+                e.BIsEventTypeGroupAllowed(Ss.k_EEvents) && (n |= 2048),
+                e.BIsEventTypeGroupAllowed(Ss.k_EStreaming) && (n |= 4096),
+                e.BIsEventTypeGroupAllowed(Ss.k_EUpdates) && (n |= 8192),
+                e.BIsEventTypeGroupAllowed(Ss.k_EReleases) && (n |= 16384),
+                e.BIsEventTypeGroupAllowed(Ss.k_ESales) && (n |= 32768),
                 n != t.m_nLastRecordedFilter &&
                   ((t.m_nLastRecordedFilter = n),
                   t.SendExperimentEventToSteam(16, n));
@@ -35941,16 +36138,16 @@
           e
         );
       })())();
-      window.g_EventCalendarTrackingStore = ws;
-      var Is = n(8339),
-        Ns = xe.Message;
+      window.g_EventCalendarTrackingStore = Ls;
+      var Rs = n(8339),
+        As = xe.Message;
       !(function (e) {
         function t(n) {
           void 0 === n && (n = null);
           var r = e.call(this) || this;
           return (
             t.prototype.appids || je.aR(t.M()),
-            Ns.initialize(r, n, 0, -1, [1], null),
+            As.initialize(r, n, 0, -1, [1], null),
             r
           );
         }
@@ -36014,15 +36211,15 @@
           (t.prototype.getClassName = function () {
             return "CCommunity_GetApps_Request";
           });
-      })(Ns);
-      var Cs,
-        Ds = (function (e) {
+      })(As);
+      var Gs,
+        Ms = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.apps || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [1], null),
+              As.initialize(r, n, 0, -1, [1], null),
               r
             );
           }
@@ -36033,7 +36230,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { apps: { n: 1, c: Is.VJ, r: !0, q: !0 } },
+                    fields: { apps: { n: 1, c: Rs.VJ, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -36076,15 +36273,15 @@
             }),
             t
           );
-        })(Ns),
-        Bs =
+        })(As),
+        ks =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.appid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -36146,14 +36343,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetAppRichPresenceLocalization_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.appid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [2], null),
+                As.initialize(r, n, 0, -1, [2], null),
                 r
               );
             }
@@ -36170,7 +36367,7 @@
                           br: je.FE.readInt32,
                           bw: je.Xc.writeInt32,
                         },
-                        token_lists: { n: 2, c: Rs, r: !0, q: !0 },
+                        token_lists: { n: 2, c: Ps, r: !0, q: !0 },
                       },
                     }),
                   t.sm_m
@@ -36214,14 +36411,14 @@
               }),
               t
             );
-          })(Ns)),
-        Ls = (function (e) {
+          })(As)),
+        Os = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.name || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -36286,14 +36483,14 @@
             }),
             t
           );
-        })(Ns),
-        Rs = (function (e) {
+        })(As),
+        Ps = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.language || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [2], null),
+              As.initialize(r, n, 0, -1, [2], null),
               r
             );
           }
@@ -36310,7 +36507,7 @@
                         br: je.FE.readString,
                         bw: je.Xc.writeString,
                       },
-                      tokens: { n: 2, c: Ls, r: !0, q: !0 },
+                      tokens: { n: 2, c: Os, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
@@ -36354,15 +36551,15 @@
             }),
             t
           );
-        })(Ns),
-        As =
+        })(As),
+        Fs =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.steamid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -36474,14 +36671,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetCommentThread_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.gidcomment || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [12], null),
+                As.initialize(r, n, 0, -1, [12], null),
                 r
               );
             }
@@ -36533,7 +36730,7 @@
                           br: je.FE.readBool,
                           bw: je.Xc.writeBool,
                         },
-                        ipaddress: { n: 9, c: Is.j7 },
+                        ipaddress: { n: 9, c: Rs.j7 },
                         total_hidden: {
                           n: 10,
                           br: je.FE.readInt32,
@@ -36544,7 +36741,7 @@
                           br: je.FE.readBool,
                           bw: je.Xc.writeBool,
                         },
-                        reactions: { n: 12, c: Gs, r: !0, q: !0 },
+                        reactions: { n: 12, c: Us, r: !0, q: !0 },
                         gidparentcomment: {
                           n: 13,
                           br: je.FE.readFixed64String,
@@ -36593,14 +36790,14 @@
               }),
               t
             );
-          })(Ns)),
-        Gs = (function (e) {
+          })(As)),
+        Us = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.reactionid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -36665,14 +36862,14 @@
             }),
             t
           );
-        })(Ns),
-        Ms = (function (e) {
+        })(As),
+        xs = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.comments || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [1, 2, 9], null),
+              As.initialize(r, n, 0, -1, [1, 2, 9], null),
               r
             );
           }
@@ -36684,8 +36881,8 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      comments: { n: 1, c: As, r: !0, q: !0 },
-                      deleted_comments: { n: 2, c: As, r: !0, q: !0 },
+                      comments: { n: 1, c: Fs, r: !0, q: !0 },
+                      deleted_comments: { n: 2, c: Fs, r: !0, q: !0 },
                       steamid: {
                         n: 3,
                         br: je.FE.readFixed64String,
@@ -36811,15 +37008,15 @@
             }),
             t
           );
-        })(Ns),
-        ks =
+        })(As),
+        Hs =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.steamid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -36916,14 +37113,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PostCommentToThread_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.gidcomment || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -36998,15 +37195,15 @@
               }),
               t
             );
-          })(Ns)),
-        Os =
+          })(As)),
+        zs =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.steamid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -37088,12 +37285,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_DeleteCommentFromThread_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, a.ZT)(t, e),
@@ -37130,15 +37327,15 @@
               }),
               t
             );
-          })(Ns)),
-        Ps =
+          })(As)),
+        Ws =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.commentthreadtype || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -37225,14 +37422,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_RateCommentThread_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.gidcomment || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -37312,15 +37509,15 @@
               }),
               t
             );
-          })(Ns)),
-        Fs =
+          })(As)),
+        js =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.commentthreadtype || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -37402,14 +37599,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetCommentThreadRatings_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.commentthreadid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [5], null),
+                As.initialize(r, n, 0, -1, [5], null),
                 r
               );
             }
@@ -37491,14 +37688,14 @@
               }),
               t
             );
-          })(Ns)),
-        Us = (function (e) {
+          })(As)),
+        Vs = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.announcementid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -37568,12 +37765,12 @@
             }),
             t
           );
-        })(Ns),
-        xs = (function (e) {
+        })(As),
+        Js = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return Ns.initialize(n, t, 0, -1, void 0, null), n;
+            return As.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, a.ZT)(t, e),
@@ -37610,14 +37807,14 @@
             }),
             t
           );
-        })(Ns),
-        Hs = (function (e) {
+        })(As),
+        Ys = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.announcementid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -37677,14 +37874,14 @@
             }),
             t
           );
-        })(Ns),
-        zs = (function (e) {
+        })(As),
+        Xs = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.voted_up || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -37749,15 +37946,15 @@
             }),
             t
           );
-        })(Ns),
-        Ws =
+        })(As),
+        Zs =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.steamid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -37819,14 +38016,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetAvatarHistory_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.avatars || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [1], null),
+                As.initialize(r, n, 0, -1, [1], null),
                 r
               );
             }
@@ -37837,7 +38034,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { avatars: { n: 1, c: js, r: !0, q: !0 } },
+                      fields: { avatars: { n: 1, c: qs, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -37880,14 +38077,14 @@
               }),
               t
             );
-          })(Ns)),
-        js = (function (e) {
+          })(As)),
+        qs = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.avatar_sha1 || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -37957,14 +38154,14 @@
             }),
             t
           );
-        })(Ns),
-        Vs = (function (e) {
+        })(As),
+        Ks = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.priority || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [2], null),
+              As.initialize(r, n, 0, -1, [2], null),
               r
             );
           }
@@ -38031,15 +38228,15 @@
             }),
             t
           );
-        })(Ns),
-        Js =
+        })(As),
+        Qs =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.count || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [5, 6, 8], null),
+                As.initialize(r, n, 0, -1, [5, 6, 8], null),
                 r
               );
             }
@@ -38089,7 +38286,7 @@
                           br: je.FE.readBool,
                           bw: je.Xc.writeBool,
                         },
-                        app_list: { n: 8, c: Vs, r: !0, q: !0 },
+                        app_list: { n: 8, c: Ks, r: !0, q: !0 },
                         count_after: {
                           n: 9,
                           d: 0,
@@ -38143,14 +38340,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventNews_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.results || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [1], null),
+                As.initialize(r, n, 0, -1, [1], null),
                 r
               );
             }
@@ -38161,7 +38358,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { results: { n: 1, c: Is.uV, r: !0, q: !0 } },
+                      fields: { results: { n: 1, c: Rs.uV, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -38204,15 +38401,15 @@
               }),
               t
             );
-          })(Ns)),
-        Ys =
+          })(As)),
+        $s =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.include_steam_blog || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -38279,14 +38476,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetBestEventsForUser_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.clanid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -38377,14 +38574,14 @@
               }),
               t
             );
-          })(Ns)),
-        Xs = (function (e) {
+          })(As)),
+        el = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.results || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [1], null),
+              As.initialize(r, n, 0, -1, [1], null),
               r
             );
           }
@@ -38395,7 +38592,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: Ys, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: $s, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -38438,13 +38635,13 @@
             }),
             t
           );
-        })(Ns),
-        Zs =
+        })(As),
+        tl =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, a.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -38478,12 +38675,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_ClearUserPartnerEventsAppPriorities_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, a.ZT)(t, e),
@@ -38520,14 +38717,14 @@
               }),
               t
             );
-          })(Ns)),
-        qs = (function (e) {
+          })(As)),
+        nl = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.appid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -38592,13 +38789,13 @@
             }),
             t
           );
-        })(Ns),
-        Ks =
+        })(As),
+        rl =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, a.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -38632,14 +38829,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventsAppPriorities_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.priorities || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [1], null),
+                As.initialize(r, n, 0, -1, [1], null),
                 r
               );
             }
@@ -38650,7 +38847,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { priorities: { n: 1, c: qs, r: !0, q: !0 } },
+                      fields: { priorities: { n: 1, c: nl, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -38693,15 +38890,15 @@
               }),
               t
             );
-          })(Ns)),
-        Qs =
+          })(As)),
+        al =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.appid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -38758,12 +38955,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_ClearSinglePartnerEventsAppPriority_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, a.ZT)(t, e),
@@ -38800,15 +38997,15 @@
               }),
               t
             );
-          })(Ns)),
-        $s =
+          })(As)),
+        il =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.appid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -38865,12 +39062,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PartnerEventsShowMoreForApp_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, a.ZT)(t, e),
@@ -38907,15 +39104,15 @@
               }),
               t
             );
-          })(Ns)),
-        el =
+          })(As)),
+        ol =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.appid || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, void 0, null),
+                As.initialize(r, n, 0, -1, void 0, null),
                 r
               );
             }
@@ -38972,12 +39169,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PartnerEventsShowLessForApp_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Ns.initialize(n, t, 0, -1, void 0, null), n;
+              return As.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, a.ZT)(t, e),
@@ -39014,14 +39211,14 @@
               }),
               t
             );
-          })(Ns)),
-        tl = (function (e) {
+          })(As)),
+        sl = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.markings || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, [1], null),
+              As.initialize(r, n, 0, -1, [1], null),
               r
             );
           }
@@ -39032,7 +39229,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { markings: { n: 1, c: nl, r: !0, q: !0 } },
+                    fields: { markings: { n: 1, c: ll, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -39075,14 +39272,14 @@
             }),
             t
           );
-        })(Ns),
-        nl = (function (e) {
+        })(As),
+        ll = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.clanid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -39162,12 +39359,12 @@
             }),
             t
           );
-        })(Ns),
-        rl = (function (e) {
+        })(As),
+        cl = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return Ns.initialize(n, t, 0, -1, void 0, null), n;
+            return As.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, a.ZT)(t, e),
@@ -39204,15 +39401,15 @@
             }),
             t
           );
-        })(Ns),
-        al =
+        })(As),
+        ul =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.event_gids || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [1], null),
+                As.initialize(r, n, 0, -1, [1], null),
                 r
               );
             }
@@ -39276,14 +39473,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventViewStatus_Request";
               });
-          })(Ns),
+          })(As),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var r = e.call(this) || this;
               return (
                 t.prototype.events || je.aR(t.M()),
-                Ns.initialize(r, n, 0, -1, [1], null),
+                As.initialize(r, n, 0, -1, [1], null),
                 r
               );
             }
@@ -39294,7 +39491,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { events: { n: 1, c: il, r: !0, q: !0 } },
+                      fields: { events: { n: 1, c: dl, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -39337,14 +39534,14 @@
               }),
               t
             );
-          })(Ns)),
-        il = (function (e) {
+          })(As)),
+        dl = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var r = e.call(this) || this;
             return (
               t.prototype.event_gid || je.aR(t.M()),
-              Ns.initialize(r, n, 0, -1, void 0, null),
+              As.initialize(r, n, 0, -1, void 0, null),
               r
             );
           }
@@ -39419,10 +39616,10 @@
             }),
             t
           );
-        })(Ns);
+        })(As);
       !(function (e) {
         (e.GetApps = function (e, t) {
-          return e.SendMsg("Community.GetApps#1", t, Ds, {
+          return e.SendMsg("Community.GetApps#1", t, Ms, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -39432,37 +39629,37 @@
             return e.SendMsg(
               "Community.GetAppRichPresenceLocalization#1",
               t,
-              Bs,
+              ks,
               { ePrivilege: 1 }
             );
           }),
           (e.GetCommentThread = function (e, t) {
-            return e.SendMsg("Community.GetCommentThread#1", t, Ms, {
+            return e.SendMsg("Community.GetCommentThread#1", t, xs, {
               ePrivilege: 2,
             });
           }),
           (e.PostCommentToThread = function (e, t) {
-            return e.SendMsg("Community.PostCommentToThread#1", t, ks, {
+            return e.SendMsg("Community.PostCommentToThread#1", t, Hs, {
               ePrivilege: 3,
             });
           }),
           (e.DeleteCommentFromThread = function (e, t) {
-            return e.SendMsg("Community.DeleteCommentFromThread#1", t, Os, {
+            return e.SendMsg("Community.DeleteCommentFromThread#1", t, zs, {
               ePrivilege: 1,
             });
           }),
           (e.RateCommentThread = function (e, t) {
-            return e.SendMsg("Community.RateCommentThread#1", t, Ps, {
+            return e.SendMsg("Community.RateCommentThread#1", t, Ws, {
               ePrivilege: 3,
             });
           }),
           (e.GetCommentThreadRatings = function (e, t) {
-            return e.SendMsg("Community.GetCommentThreadRatings#1", t, Fs, {
+            return e.SendMsg("Community.GetCommentThreadRatings#1", t, js, {
               ePrivilege: 2,
             });
           }),
           (e.RateClanAnnouncement = function (e, t) {
-            return e.SendMsg("Community.RateClanAnnouncement#1", t, xs, {
+            return e.SendMsg("Community.RateClanAnnouncement#1", t, Js, {
               ePrivilege: 3,
             });
           }),
@@ -39470,31 +39667,31 @@
             return e.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
               t,
-              zs,
+              Xs,
               { ePrivilege: 1 }
             );
           }),
           (e.GetAvatarHistory = function (e, t) {
-            return e.SendMsg("Community.GetAvatarHistory#1", t, Ws, {
+            return e.SendMsg("Community.GetAvatarHistory#1", t, Zs, {
               ePrivilege: 1,
             });
           }),
           (e.GetUserPartnerEventNews = function (e, t) {
-            return e.SendMsg("Community.GetUserPartnerEventNews#1", t, Js, {
+            return e.SendMsg("Community.GetUserPartnerEventNews#1", t, Qs, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBestEventsForUser = function (e, t) {
-            return e.SendMsg("Community.GetBestEventsForUser#1", t, Xs, {
+            return e.SendMsg("Community.GetBestEventsForUser#1", t, el, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.MarkPartnerEventsForUser = function (e, t) {
-            return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, rl, {
+            return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, cl, {
               ePrivilege: 1,
             });
           }),
@@ -39502,17 +39699,17 @@
             return e.SendMsg(
               "Community.GetUserPartnerEventViewStatus#1",
               t,
-              al,
+              ul,
               { bConstMethod: !0, ePrivilege: 1 }
             );
           }),
           (e.PartnerEventsShowMoreForApp = function (e, t) {
-            return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, $s, {
+            return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, il, {
               ePrivilege: 1,
             });
           }),
           (e.PartnerEventsShowLessForApp = function (e, t) {
-            return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, el, {
+            return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, ol, {
               ePrivilege: 1,
             });
           }),
@@ -39520,7 +39717,7 @@
             return e.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
               t,
-              Zs,
+              tl,
               { ePrivilege: 1 }
             );
           }),
@@ -39528,7 +39725,7 @@
             return e.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
               t,
-              Ks,
+              rl,
               { ePrivilege: 1 }
             );
           }),
@@ -39536,13 +39733,13 @@
             return e.SendMsg(
               "Community.ClearSinglePartnerEventsAppPriority#1",
               t,
-              Qs,
+              al,
               { ePrivilege: 1 }
             );
           });
-      })(Cs || (Cs = {}));
-      var ol,
-        sl = (function () {
+      })(Gs || (Gs = {}));
+      var ml,
+        pl = (function () {
           function e(e) {
             (this.m_setShownEvents = new Set()),
               (this.m_setReadEvents = new Set()),
@@ -39556,7 +39753,7 @@
               var r = this.MakeKey(e, n);
               if (this.m_setShownEvents.has(r)) return !1;
               this.m_setShownEvents.add(r);
-              var a = new nl();
+              var a = new ll();
               return (
                 a.set_event_gid(e),
                 a.set_clanid(t),
@@ -39570,7 +39767,7 @@
               var r = this.MakeKey(e, n);
               if (this.m_setReadEvents.has(r)) return !1;
               this.m_setReadEvents.add(r);
-              var a = new nl();
+              var a = new ll();
               return (
                 a.set_event_gid(e),
                 a.set_clanid(t),
@@ -39615,13 +39812,13 @@
                       )
                         return [2];
                       if (((t = !1), !this.m_CMInterface)) return [3, 2];
-                      for (n = Fe.gA.Init(tl), r = 0, i = e; r < i.length; r++)
+                      for (n = Fe.gA.Init(sl), r = 0, i = e; r < i.length; r++)
                         (o = i[r]), n.Body().add_markings(o);
                       return (
                         (this.m_bUploading = !0),
                         [
                           4,
-                          Cs.MarkPartnerEventsForUser(
+                          Gs.MarkPartnerEventsForUser(
                             this.m_CMInterface.GetServiceTransport(),
                             n
                           ),
@@ -39687,7 +39884,7 @@
             e
           );
         })(),
-        ll = (function () {
+        _l = (function () {
           function e(e) {
             (this.appid = 0),
               (this.can_edit = !1),
@@ -39720,8 +39917,8 @@
         (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
           (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
           (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-      })(ol || (ol = {}));
-      var cl = (function () {
+      })(ml || (ml = {}));
+      var hl = (function () {
         function e() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
@@ -39771,7 +39968,7 @@
               return (0, a.Jh)(this, function (a) {
                 return (
                   (this.m_cm = t),
-                  (this.m_tracker = new sl(t)),
+                  (this.m_tracker = new pl(t)),
                   (n = (0, ge.ip)(
                     "partnereventpermissions",
                     "application_config"
@@ -39779,7 +39976,7 @@
                   this.ValidateStoreDefault(n) &&
                     ((0, _e.z)(function () {
                       n.forEach(function (t) {
-                        var n = new ll(t.clanid),
+                        var n = new _l(t.clanid),
                           r = { result: n, promise: e.RemapToPromise(n) };
                         i.CopyFromResponseToTrack(r, t),
                           i.m_mapClanToUserPermissions.set(t.clanid, r);
@@ -39860,7 +40057,7 @@
             return this.m_mapClanToUserPermissions.has(e);
           }),
           (e.prototype.GetPartnerEventPermissions = function (e) {
-            if (!e || !e.BIsValid()) return new ll(0);
+            if (!e || !e.BIsValid()) return new _l(0);
             var t = e.GetAccountID();
             return (
               this.m_mapClanToUserPermissions.has(t) ||
@@ -39892,7 +40089,7 @@
                   (n = this.m_mapClanToUserPermissions.get(t)) ||
                     ((n = {
                       promise: this.InternalLoadSingleAppEventPermissions(e),
-                      result: new ll(t),
+                      result: new _l(t),
                     }),
                     this.m_mapClanToUserPermissions.set(t, n)),
                   [2, n.promise]
@@ -39936,7 +40133,7 @@
                       (r = t.GetAccountID()),
                       (i = !Boolean(ge.L7.logged_in)),
                       this.m_mapClanToUserPermissions.has(r) ||
-                        ((o = new ll(t.GetAccountID())),
+                        ((o = new _l(t.GetAccountID())),
                         this.m_mapClanToUserPermissions.set(r, {
                           result: o,
                           promise: e.RemapToPromise(o),
@@ -40118,7 +40315,7 @@
                               !1 === t && e.UpdateVoteCount("down", 1);
                           }),
                           this.m_cm
-                            ? ((i = Fe.gA.Init(Us))
+                            ? ((i = Fe.gA.Init(Vs))
                                 .Body()
                                 .set_announcementid(e.AnnouncementGID),
                               i.Body().set_vote_up(!!t),
@@ -40129,7 +40326,7 @@
                                 ),
                               [
                                 4,
-                                Cs.RateClanAnnouncement(
+                                Gs.RateClanAnnouncement(
                                   this.m_cm.GetServiceTransport(),
                                   i
                                 ),
@@ -40183,12 +40380,12 @@
                           ]
                         : ((n = void 0),
                           this.m_cm
-                            ? ((r = Fe.gA.Init(Hs))
+                            ? ((r = Fe.gA.Init(Ys))
                                 .Body()
                                 .set_announcementid(e.AnnouncementGID),
                               [
                                 4,
-                                Cs.GetClanAnnouncementVoteForUser(
+                                Gs.GetClanAnnouncementVoteForUser(
                                   this.m_cm.GetServiceTransport(),
                                   r
                                 ),
@@ -40270,7 +40467,7 @@
           e
         );
       })();
-      var ul = new ((function () {
+      var gl = new ((function () {
           function e() {
             (this.m_bValidatedEmail = !1),
               (this.m_nMobileDeviceCount = 0),
@@ -40357,14 +40554,14 @@
             e
           );
         })())(),
-        dl = n(61825),
-        ml = n(44294),
-        pl = n(16451),
-        _l = n.n(pl),
-        hl = n(80008);
-      function gl(e, t) {
-        var n = hl.tz.guess(),
-          r = hl.unix(e).tz(n),
+        fl = n(61825),
+        vl = n(44294),
+        El = n(16451),
+        bl = n.n(El),
+        yl = n(80008);
+      function Sl(e, t) {
+        var n = yl.tz.guess(),
+          r = yl.unix(e).tz(n),
           a = (0, Ut.CE)();
         return (
           a && r.locale(a),
@@ -40383,7 +40580,7 @@
           )
         );
       }
-      var fl = (0, d.Pi)(function (e) {
+      var Tl = (0, d.Pi)(function (e) {
           var t = e.dateAndTime,
             n = e.bSingleLine,
             r = e.bOnlyTime,
@@ -40392,15 +40589,15 @@
             l = !i && Boolean(t),
             c = s && (0, Ut.$1)(t),
             u = e.stylesmodule
-              ? (0, a.pi)((0, a.pi)({}, _l()), e.stylesmodule)
-              : _l();
+              ? (0, a.pi)((0, a.pi)({}, bl()), e.stylesmodule)
+              : bl();
           return n
             ? o.createElement(
                 "span",
                 { className: r || i ? u.DateAndTimeInline : u.DateAndTime },
                 s && c,
                 o.createElement("span", null, " "),
-                Boolean(t && l) && gl(t, !0)
+                Boolean(t && l) && Sl(t, !0)
               )
             : o.createElement(
                 "div",
@@ -40416,13 +40613,13 @@
                 o.createElement(
                   "div",
                   { className: u.LocalizedTime },
-                  Boolean(t && l) && gl(t, !0)
+                  Boolean(t && l) && Sl(t, !0)
                 )
               );
         }),
-        vl = function (e) {
+        wl = function (e) {
           var t,
-            n = o.createElement(fl, {
+            n = o.createElement(Tl, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -40451,8 +40648,8 @@
               t = e.startDateAndTime,
               n = e.endDateAndTime,
               r = this.props.stylesmodule
-                ? (0, a.pi)((0, a.pi)({}, _l()), this.props.stylesmodule)
-                : _l(),
+                ? (0, a.pi)((0, a.pi)({}, bl()), this.props.stylesmodule)
+                : bl(),
               i =
                 this.props.bHideEndTime ||
                 null == this.props.endDateAndTime ||
@@ -40483,7 +40680,7 @@
                   ),
                   " "
                 ),
-                o.createElement(fl, { stylesmodule: r, dateAndTime: t })
+                o.createElement(Tl, { stylesmodule: r, dateAndTime: t })
               );
             var l = t <= s && s <= n,
               c = (0, Qt.yK)(new Date(1e3 * t), new Date(1e3 * n));
@@ -40504,7 +40701,7 @@
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
                   )
                 ),
-                o.createElement(fl, {
+                o.createElement(Tl, {
                   stylesmodule: r,
                   bSingleLine: !0,
                   dateAndTime: t,
@@ -40522,7 +40719,7 @@
                       : "#EventDisplay_TimeEndsOn"
                   )
                 ),
-                o.createElement(fl, {
+                o.createElement(Tl, {
                   stylesmodule: r,
                   bSingleLine: !0,
                   bOnlyTime: c,
@@ -40559,8 +40756,8 @@
                 n = e.endDateAndTime,
                 r = e.bHideEndTime,
                 i = this.props.stylesmodule
-                  ? (0, a.pi)((0, a.pi)({}, _l()), this.props.stylesmodule)
-                  : _l();
+                  ? (0, a.pi)((0, a.pi)({}, bl()), this.props.stylesmodule)
+                  : bl();
               if (null == t || 0 == t)
                 return o.createElement(
                   "div",
@@ -40581,7 +40778,7 @@
                   (0, Ut.$1)(t, c)
                 ),
                 d = o.createElement(
-                  vl,
+                  wl,
                   { rtFullDate: t, stylesmodule: i },
                   o.createElement(
                     "div",
@@ -40598,7 +40795,7 @@
                 (l < t &&
                   t < l + Qt._H.PerWeek &&
                   (d = o.createElement(
-                    vl,
+                    wl,
                     { rtFullDate: t, stylesmodule: i },
                     o.createElement(
                       "div",
@@ -40609,7 +40806,7 @@
                         o.createElement(
                           "div",
                           { className: i.ShortDateAndTime },
-                          gl(t),
+                          Sl(t),
                           " "
                         )
                       )
@@ -40621,7 +40818,7 @@
               var m = t <= l && l <= n;
               m &&
                 (d = o.createElement(
-                  vl,
+                  wl,
                   { rtFullDate: t, className: i.ActiveEvent, stylesmodule: i },
                   o.createElement(
                     "span",
@@ -40677,7 +40874,7 @@
                 );
               }
               var f = o.createElement(
-                vl,
+                wl,
                 { rtFullDate: n, stylesmodule: i },
                 p
               );
@@ -40690,11 +40887,11 @@
             }),
             (t = (0, a.gn)([d.Pi], t));
         })(o.Component);
-      var El = n(72812),
-        bl = n(3563),
-        yl = n(80369),
-        Sl = n(25320),
-        Tl = (function (e) {
+      var Il = n(72812),
+        Nl = n(3563),
+        Cl = n(80369),
+        Dl = n(25320),
+        Bl = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { maximized: n.BIsMaximized() }), n;
@@ -40756,7 +40953,7 @@
                             e && e.close();
                           },
                         },
-                        o.createElement(Sl.pVO, null)
+                        o.createElement(Dl.pVO, null)
                       ),
                       !this.props.hideMinMax &&
                         o.createElement(
@@ -40767,8 +40964,8 @@
                               e.SteamClient.Window.ToggleMaximize();
                             },
                           },
-                          this.state.maximized && o.createElement(Sl.r6F, null),
-                          !this.state.maximized && o.createElement(Sl.YqJ, null)
+                          this.state.maximized && o.createElement(Dl.r6F, null),
+                          !this.state.maximized && o.createElement(Dl.YqJ, null)
                         ),
                       !this.props.hideMinMax &&
                         o.createElement(
@@ -40779,17 +40976,17 @@
                               e.SteamClient.Window.Minimize();
                             },
                           },
-                          o.createElement(Sl.gR, null)
+                          o.createElement(Dl.gR, null)
                         )
                     )
                 )
               );
             }),
-            (0, a.gn)([ss.ak], t.prototype, "UpdateMaximizeState", null),
+            (0, a.gn)([ps.ak], t.prototype, "UpdateMaximizeState", null),
             t
           );
         })(o.Component);
-      function wl(e, t, n) {
+      function Ll(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var r, i, o, s, l, c, u, d;
           return (0, a.Jh)(this, function (a) {
@@ -40797,7 +40994,7 @@
               case 0:
                 return (
                   (r = !0 === (null == n ? void 0 : n.bNeverPopOut)),
-                  (i = !r && Cl(null, t)),
+                  (i = !r && Gl(null, t)),
                   (o =
                     (null == n ? void 0 : n.bForcePopOut) &&
                     (null == n ? void 0 : n.popupWidth) &&
@@ -40805,7 +41002,7 @@
                   (l = i && !o)
                     ? [
                         4,
-                        Dl(e, t, null == n ? void 0 : n.promiseRenderComplete),
+                        Ml(e, t, null == n ? void 0 : n.promiseRenderComplete),
                       ]
                     : [3, 2]
                 );
@@ -40818,7 +41015,7 @@
                     s.height / t.innerHeight < 0.9 &&
                     s.width / t.innerWidth < 0.8),
                   r || (!(null == n ? void 0 : n.bForcePopOut) && c)
-                    ? [2, Nl(e, t)]
+                    ? [2, Al(e, t)]
                     : ((u = {
                         strTitle:
                           (null == n ? void 0 : n.strTitle) ||
@@ -40838,7 +41035,7 @@
                       }),
                       [
                         2,
-                        Nl(
+                        Al(
                           e,
                           t,
                           u.strTitle,
@@ -40852,17 +41049,17 @@
           });
         });
       }
-      function Il(e, t, n) {
+      function Rl(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function () {
           return (0, a.Jh)(this, function (r) {
             return [
               2,
-              wl(e, t, (0, a.pi)({ bHideMainWindowForPopouts: !0 }, n)),
+              Ll(e, t, (0, a.pi)({ bHideMainWindowForPopouts: !0 }, n)),
             ];
           });
         });
       }
-      function Nl(e, t, n, r, i, s, l) {
+      function Al(e, t, n, r, i, s, l) {
         var c,
           u,
           d = e.props.closeModal,
@@ -40877,11 +41074,11 @@
           _ = o.cloneElement(e, { closeModal: p });
         if (
           (ge.De.IN_GAMEPADUI && (t = window.parent),
-          Cl((l = l || (0, El.BL)(t)), t) && r && n)
+          Gl((l = l || (0, Il.BL)(t)), t) && r && n)
         ) {
           if (r.bHideMainWindowForPopouts) {
             var h = o.createElement(
-              El.e1,
+              Il.e1,
               {
                 className: "Hidden",
                 onEscKeypress: !_.props.bDisableBackgroundDismiss && p,
@@ -40891,17 +41088,17 @@
             u = l.ShowModal(h);
           }
           var g = (0, a.pi)((0, a.pi)({}, r), { fnOnClose: m }),
-            f = new Rl(t, n, g, _, i, s);
+            f = new Pl(t, n, g, _, i, s);
           f.Show(), (c = f);
         } else c = l.ShowModal(_);
         return c;
       }
-      function Cl(e, t) {
+      function Gl(e, t) {
         return (
-          (e = e || (0, El.BL)(t || window)), ge.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, Il.BL)(t || window)), ge.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      function Dl(e, t, n) {
+      function Ml(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var r, o, s, l, c;
           return (0, a.Jh)(this, function (a) {
@@ -40936,9 +41133,9 @@
           });
         });
       }
-      var Bl,
-        Ll,
-        Rl = (function (e) {
+      var kl,
+        Ol,
+        Pl = (function (e) {
           function t(t, n, r, a, i, o) {
             var s =
               e.call(this, n, {
@@ -41020,14 +41217,14 @@
                 i.render(
                   o.createElement(
                     "div",
-                    { className: "PopupFullWindow", onContextMenu: yl.T },
-                    o.createElement(Tl, {
+                    { className: "PopupFullWindow", onContextMenu: Cl.T },
+                    o.createElement(Bl, {
                       hideMinMax: !0,
                       popup: e,
                       hideActions: n,
                       style: r,
                     }),
-                    o.createElement(El.t9, { ModalManager: (0, El.BL)(e) }),
+                    o.createElement(Il.t9, { ModalManager: (0, Il.BL)(e) }),
                     this.m_modalElement
                   ),
                   t
@@ -41036,9 +41233,9 @@
             }),
             t
           );
-        })(bl.K3),
-        Al = n(96733),
-        Gl = n.n(Al);
+        })(Nl.K3),
+        Fl = n(96733),
+        Ul = n.n(Fl);
       o.createContext({ bCanUseLink: !1 });
       !(function (e) {
         (e.k_eView = "view"),
@@ -41057,21 +41254,21 @@
           (e.k_eStoreOwnerPage = "store"),
           (e.k_eStoreSalePage = "sale"),
           (e.k_eStoreUsersNewsHub = "usernewshub");
-      })(Bl || (Bl = {})),
+      })(kl || (kl = {})),
         (function (e) {
           (e.k_eFacebook = "facebook"),
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
-        })(Ll || (Ll = {}));
-      var Ml =
+        })(Ol || (Ol = {}));
+      var xl =
         /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
-      function kl(e, t) {
+      function Hl(e, t) {
         var n,
           r,
           a = "store" === (0, ge.Zv)(),
           i =
             ((n = window.location.href),
-            null == (r = n.match(Ml)) ? void 0 : r[1]),
+            null == (r = n.match(xl)) ? void 0 : r[1]),
           o = a && "news" == i,
           s = "community" === (0, ge.Zv)(),
           l = t.appid ? "games" : "groups",
@@ -41082,32 +41279,32 @@
               (!t.appid &&
                 t.clanSteamID.GetAccountID() === ge.JA.CLANACCOUNTID));
         switch (e) {
-          case Bl.k_eView:
+          case kl.k_eView:
             return c || o;
-          case Bl.k_eCommunityView:
-          case Bl.k_eCommunityEdit:
-          case Bl.k_eCommunityEditBroadcast:
-          case Bl.k_eCommunityAdminPage:
-          case Bl.k_eCommunityPublish:
-          case Bl.k_eCommunityMigrate:
-          case Bl.k_eCommunityPreview:
-          case Bl.k_eCommunityPreviewSale:
-          case Bl.k_eCommunityAnnouncementHub:
+          case kl.k_eCommunityView:
+          case kl.k_eCommunityEdit:
+          case kl.k_eCommunityEditBroadcast:
+          case kl.k_eCommunityAdminPage:
+          case kl.k_eCommunityPublish:
+          case kl.k_eCommunityMigrate:
+          case kl.k_eCommunityPreview:
+          case kl.k_eCommunityPreviewSale:
+          case kl.k_eCommunityAnnouncementHub:
             return c;
-          case Bl.k_eViewWebSiteHub:
+          case kl.k_eViewWebSiteHub:
             return c || o;
-          case Bl.k_eStoreView:
-          case Bl.k_eStoreNewsHub:
-          case Bl.k_eStoreOwnerPage:
-          case Bl.k_eStoreUsersNewsHub:
+          case kl.k_eStoreView:
+          case kl.k_eStoreNewsHub:
+          case kl.k_eStoreOwnerPage:
+          case kl.k_eStoreUsersNewsHub:
             return o;
-          case Bl.k_eStoreSalePage:
+          case kl.k_eStoreSalePage:
             return !1;
           default:
             return (0, fe.X)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function Ol(e, t, n) {
+      function zl(e, t, n) {
         if (n)
           return (
             (e ? "/games/" + ge.JA.VANITY_ID : "/groups/" + ge.JA.VANITY_ID) +
@@ -41116,33 +41313,33 @@
         var r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return ge.De.COMMUNITY_BASE_URL + r + "/";
       }
-      function Pl(e, t, n) {
+      function Wl(e, t, n) {
         var r = "relative" === n,
           a = "community" === (0, ge.Zv)(),
           i = r ? "/" : ge.De.STORE_BASE_URL,
-          o = Ol(e.appid, e.clanSteamID, r);
-        t === Bl.k_eView
-          ? (t = a ? Bl.k_eCommunityView : Bl.k_eStoreView)
-          : t === Bl.k_eViewWebSiteHub &&
-            (t = a ? Bl.k_eCommunityAnnouncementHub : Bl.k_eStoreNewsHub);
+          o = zl(e.appid, e.clanSteamID, r);
+        t === kl.k_eView
+          ? (t = a ? kl.k_eCommunityView : kl.k_eStoreView)
+          : t === kl.k_eViewWebSiteHub &&
+            (t = a ? kl.k_eCommunityAnnouncementHub : kl.k_eStoreNewsHub);
         var s = e.GID ? e.GID : "",
           l = e.AnnouncementGID ? e.AnnouncementGID : "";
         switch (t) {
-          case Bl.k_eCommunityPublish:
+          case kl.k_eCommunityPublish:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/migrate_announcement/" + l
                 : "partnerevents/publish/" + s + "?tab=publishing")
             );
-          case Bl.k_eCommunityEdit:
+          case kl.k_eCommunityEdit:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/migrate_announcement/" + l
                 : "partnerevents/edit/" + s)
             );
-          case Bl.k_eCommunityEditBroadcast:
+          case kl.k_eCommunityEditBroadcast:
             return (
               o +
               (e.bOldAnnouncement
@@ -41150,22 +41347,22 @@
                 : "partnerevents/edit/" + s) +
               "?tab=broadcast"
             );
-          case Bl.k_eCommunityMigrate:
+          case kl.k_eCommunityMigrate:
             return o + "partnerevents/migrate_announcement/" + l;
-          case Bl.k_eCommunityPreview:
+          case kl.k_eCommunityPreview:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/preview_old_announcement/" + l
                 : "partnerevents/preview/" + s)
             );
-          case Bl.k_eCommunityPreviewSale:
+          case kl.k_eCommunityPreviewSale:
             return o + "partnerevents/previewsale/" + s;
-          case Bl.k_eCommunityAdminPage:
+          case kl.k_eCommunityAdminPage:
             return o + "partnerevents";
-          case Bl.k_eCommunityAnnouncementHub:
+          case kl.k_eCommunityAnnouncementHub:
             return o + "announcements";
-          case Bl.k_eStoreNewsHub:
+          case kl.k_eStoreNewsHub:
             return (
               i +
               "news/" +
@@ -41173,14 +41370,14 @@
                 ? "app/" + e.appid
                 : "group/" + e.clanSteamID.GetAccountID())
             );
-          case Bl.k_eStoreOwnerPage:
+          case kl.k_eStoreOwnerPage:
             return (
               i +
               (e.appid
                 ? "app/" + e.appid
                 : "curator/" + e.clanSteamID.GetAccountID())
             );
-          case Bl.k_eStoreSalePage:
+          case kl.k_eStoreSalePage:
             return e.jsondata.bSaleEnabled
               ? i +
                   (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
@@ -41188,9 +41385,9 @@
                     : "curator/" + e.clanSteamID.GetAccountID() + "/sale/") +
                   e.jsondata.sale_vanity_id
               : i;
-          case Bl.k_eCommunityView:
+          case kl.k_eCommunityView:
             return o + "announcements/detail/" + l;
-          case Bl.k_eStoreView:
+          case kl.k_eStoreView:
             return (
               i +
               "news/" +
@@ -41200,32 +41397,32 @@
               "/" +
               (e.bOldAnnouncement ? "old_view/" + l : "view/" + s)
             );
-          case Bl.k_eStoreUsersNewsHub:
+          case kl.k_eStoreUsersNewsHub:
             return i + "news/";
           default:
             return (0, fe.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      var Fl = n(27575),
-        Ul = n(85745),
-        xl = n(55420),
-        Hl = n.n(xl),
-        zl = n(47747).Z;
-      function Wl(e, t) {
+      var jl = n(27575),
+        Vl = n(85745),
+        Jl = n(55420),
+        Yl = n.n(Jl),
+        Xl = n(47747).Z;
+      function Zl(e, t) {
         return e.endsWith("/") || (e += "/"), e + "login/" + t + "/";
       }
-      function jl() {
+      function ql() {
         var e = new FormData();
         return e.append("donotcache", new Date().getTime().toString()), e;
       }
-      function Vl(e) {
+      function Kl(e) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var t, n, r, i;
           return (0, a.Jh)(this, function (a) {
             switch (a.label) {
               case 0:
-                (t = jl()),
-                  (n = Wl(e, "refreshcaptcha")),
+                (t = ql()),
+                  (n = Zl(e, "refreshcaptcha")),
                   (r = ""),
                   (a.label = 1);
               case 1:
@@ -41242,14 +41439,14 @@
           });
         });
       }
-      function Jl(e, t) {
+      function Ql(e, t) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var n, r, i, o, s;
           return (0, a.Jh)(this, function (a) {
             switch (a.label) {
               case 0:
-                (n = jl()).append("username", t),
-                  (r = Wl(e, "getrsakey")),
+                (n = ql()).append("username", t),
+                  (r = Zl(e, "getrsakey")),
                   (a.label = 1);
               case 1:
                 return a.trys.push([1, 3, , 4]), [4, pe().post(r, n)];
@@ -41271,7 +41468,7 @@
           });
         });
       }
-      function Yl(e, t, n, r) {
+      function $l(e, t, n, r) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var i, o, s, l, c, u, d;
           return (0, a.Jh)(this, function (a) {
@@ -41279,14 +41476,14 @@
               case 0:
                 if (
                   ((i = (function (e, t) {
-                    var n = zl.getPublicKey(t.publickey_mod, t.publickey_exp),
-                      r = zl.encrypt(e, n);
+                    var n = Xl.getPublicKey(t.publickey_mod, t.publickey_exp),
+                      r = Xl.encrypt(e, n);
                     return !1 === r ? null : r;
                   })(n.strPassword, r)),
                   !i)
                 )
                   return [2, null];
-                (o = jl()).append("password", i),
+                (o = ql()).append("password", i),
                   o.append("username", n.strUserName),
                   o.append("twofactorcode", n.strTwoFactorCode || ""),
                   o.append("emailauth", n.strEmailAuthCode || ""),
@@ -41303,7 +41500,7 @@
                   t &&
                     (o.append("oauth_client_id", t),
                     o.append("mobile_chat_client", "true")),
-                  (l = Wl(e, "dologin")),
+                  (l = Zl(e, "dologin")),
                   (a.label = 1);
               case 1:
                 return a.trys.push([1, 3, , 4]), [4, pe().post(l, o, s)];
@@ -41323,7 +41520,7 @@
           });
         });
       }
-      function Xl(e, t, n) {
+      function ec(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var r;
           return (0, a.Jh)(this, function (a) {
@@ -41338,12 +41535,12 @@
                   !n.strPassword || n.strPassword.match(/[^\x00-\x7F]/)
                     ? [2, null]
                     : n.strUserName
-                    ? [4, Jl(e, n.strUserName)]
+                    ? [4, Ql(e, n.strUserName)]
                     : [2, null]
                 );
               case 1:
                 return (r = a.sent())
-                  ? [4, Yl(e, t, n, r)]
+                  ? [4, $l(e, t, n, r)]
                   : (console.log("Failed to get RSA key"), [2, null]);
               case 2:
                 return [2, a.sent()];
@@ -41351,28 +41548,28 @@
           });
         });
       }
-      var Zl, ql;
+      var tc, nc;
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.AccountName = 1)] = "AccountName"),
           (e[(e.EmailCode = 2)] = "EmailCode"),
           (e[(e.TwoFactorCode = 3)] = "TwoFactorCode"),
           (e[(e.Complete = 4)] = "Complete");
-      })(Zl || (Zl = {})),
+      })(tc || (tc = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"), (e[(e.InvalidCode = 1)] = "InvalidCode");
-        })(ql || (ql = {}));
-      var Kl = (function () {
+        })(nc || (nc = {}));
+      var rc = (function () {
           function e(e, t) {
             (this.m_strBaseURL = ""),
               (this.m_strOAuthClientID = ""),
               (this.m_fnLoginComplete = null),
               (this.m_bRequestInFlight = !1),
-              (this.m_eCurrentStep = Zl.AccountName),
+              (this.m_eCurrentStep = tc.AccountName),
               (this.m_strErrorMessage = ""),
               (this.m_strEmailDomain = ""),
               (this.m_strCaptchaURL = ""),
-              (this.m_eSteamGuardCodeError = ql.None),
+              (this.m_eSteamGuardCodeError = nc.None),
               (this.m_strBaseURL = e),
               (this.m_strOAuthClientID = t),
               (this.m_userFields = {
@@ -41465,7 +41662,7 @@
                           }),
                           [
                             4,
-                            Xl(
+                            ec(
                               this.m_strBaseURL,
                               this.m_strOAuthClientID,
                               this.m_userFields
@@ -41493,7 +41690,7 @@
                 );
               if (e.login_complete) {
                 if (
-                  ((this.m_eCurrentStep = Zl.Complete), this.m_fnLoginComplete)
+                  ((this.m_eCurrentStep = tc.Complete), this.m_fnLoginComplete)
                 ) {
                   var t = {
                     steamID: e.oauth ? e.oauth.steamid : "",
@@ -41504,32 +41701,32 @@
                 }
               } else
                 (this.m_strErrorMessage = e.message || ""),
-                  (this.m_eSteamGuardCodeError = ql.None),
+                  (this.m_eSteamGuardCodeError = nc.None),
                   e.requires_twofactor
                     ? (this.UpdateCaptchaURL("-1"),
-                      this.m_eCurrentStep != Zl.TwoFactorCode ||
+                      this.m_eCurrentStep != tc.TwoFactorCode ||
                         this.m_strErrorMessage ||
                         ((this.m_strErrorMessage = (0, Ut.Xx)(
                           "#MobileLogin_IncorrectSteamGuard"
                         )),
-                        (this.m_eSteamGuardCodeError = ql.InvalidCode),
+                        (this.m_eSteamGuardCodeError = nc.InvalidCode),
                         (this.m_userFields.strTwoFactorCode = "")),
-                      (this.m_eCurrentStep = Zl.TwoFactorCode))
+                      (this.m_eCurrentStep = tc.TwoFactorCode))
                     : e.captcha_needed && e.captcha_gid
-                    ? ((this.m_eCurrentStep = Zl.AccountName),
+                    ? ((this.m_eCurrentStep = tc.AccountName),
                       this.UpdateCaptchaURL(e.captcha_gid))
                     : e.emailauth_needed
                     ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
                       e.emailsteamid &&
                         (this.m_userFields.emailSteamID = e.emailsteamid),
-                      this.m_eCurrentStep != Zl.EmailCode ||
+                      this.m_eCurrentStep != tc.EmailCode ||
                         this.m_strErrorMessage ||
                         ((this.m_strErrorMessage = (0, Ut.Xx)(
                           "#MobileLogin_IncorrectSteamGuard"
                         )),
-                        (this.m_eSteamGuardCodeError = ql.InvalidCode),
+                        (this.m_eSteamGuardCodeError = nc.InvalidCode),
                         (this.m_userFields.strEmailAuthCode = "")),
-                      (this.m_eCurrentStep = Zl.EmailCode))
+                      (this.m_eCurrentStep = tc.EmailCode))
                     : e.agreement_session_url
                     ? (this.Shutdown(),
                       console.log(window.location.href),
@@ -41545,7 +41742,7 @@
                 return (0, a.Jh)(this, function (t) {
                   switch (t.label) {
                     case 0:
-                      return [4, Vl(this.m_strBaseURL)];
+                      return [4, Kl(this.m_strBaseURL)];
                     case 1:
                       return (e = t.sent())
                         ? (this.UpdateCaptchaURL(e), [2])
@@ -41560,7 +41757,7 @@
                 (this.m_strCaptchaURL =
                   "-1" != e
                     ? (function (e, t) {
-                        return Wl(e, "rendercaptcha") + "?gid=" + t;
+                        return Zl(e, "rendercaptcha") + "?gid=" + t;
                       })(this.m_strBaseURL, e)
                     : "");
             }),
@@ -41576,11 +41773,11 @@
             e
           );
         })(),
-        Ql = (function (e) {
+        ac = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
-              (n.m_manager = new Kl(n.props.baseURL)),
+              (n.m_manager = new rc(n.props.baseURL)),
               n.props.onLoginComplete &&
                 n.m_manager.SetLoginCompleteCallback(n.props.onLoginComplete),
               n
@@ -41595,7 +41792,7 @@
               var e = this.props,
                 t = (e.baseURL, e.onLoginComplete, e.className),
                 n = (0, a._T)(e, ["baseURL", "onLoginComplete", "className"]),
-                r = (0, E.Z)(Hl().LoginDialog, t),
+                r = (0, E.Z)(Yl().LoginDialog, t),
                 i = this.m_manager.GetCurrentStep(),
                 s = this.m_manager.GetErrorMessage();
               return o.createElement(
@@ -41603,33 +41800,33 @@
                 (0, a.pi)({ className: r }, n),
                 o.createElement(
                   "div",
-                  { className: Hl().LoginPanelBackground },
-                  o.createElement(Sl.ui7, null)
+                  { className: Yl().LoginPanelBackground },
+                  o.createElement(Dl.ui7, null)
                 ),
                 o.createElement(
                   "div",
-                  { className: Hl().LoginPanelContent },
-                  s && o.createElement($l, { text: s }),
-                  i == Zl.AccountName &&
-                    o.createElement(ec, {
+                  { className: Yl().LoginPanelContent },
+                  s && o.createElement(ic, { text: s }),
+                  i == tc.AccountName &&
+                    o.createElement(oc, {
                       manager: this.m_manager,
                       autoFocus: this.props.autoFocus,
                     }),
-                  i == Zl.TwoFactorCode &&
-                    o.createElement(nc, {
+                  i == tc.TwoFactorCode &&
+                    o.createElement(lc, {
                       manager: this.m_manager,
-                      authtype: Zl.TwoFactorCode,
+                      authtype: tc.TwoFactorCode,
                     }),
-                  i == Zl.EmailCode &&
-                    o.createElement(nc, {
+                  i == tc.EmailCode &&
+                    o.createElement(lc, {
                       manager: this.m_manager,
-                      authtype: Zl.EmailCode,
+                      authtype: tc.EmailCode,
                     }),
-                  i == Zl.Complete &&
+                  i == tc.Complete &&
                     o.createElement(
                       "div",
-                      { className: Hl().LoginComplete },
-                      o.createElement(os.V, null)
+                      { className: Yl().LoginComplete },
+                      o.createElement(ms.V, null)
                     )
                 )
               );
@@ -41637,10 +41834,10 @@
             (t = (0, a.gn)([d.Pi], t))
           );
         })(o.Component);
-      function $l(e) {
-        return o.createElement("div", { className: Hl().ErrorMessage }, e.text);
+      function ic(e) {
+        return o.createElement("div", { className: Yl().ErrorMessage }, e.text);
       }
-      var ec = (function (e) {
+      var oc = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { nNameSize: 0, nPassSize: 0 }), n;
@@ -41680,33 +41877,33 @@
               return (
                 (t =
                   1 == this.state.nPassSize
-                    ? Hl().MedPass
+                    ? Yl().MedPass
                     : 2 == this.state.nPassSize
-                    ? Hl().LargePass
-                    : Hl().DefaultPass),
+                    ? Yl().LargePass
+                    : Yl().DefaultPass),
                 (e =
                   1 == this.state.nNameSize
-                    ? Hl().MedName
+                    ? Yl().MedName
                     : 2 == this.state.nNameSize
-                    ? Hl().LargeName
-                    : Hl().DefaultNAme),
+                    ? Yl().LargeName
+                    : Yl().DefaultNAme),
                 o.createElement(
                   "div",
-                  { className: Hl().AccountPasswordPanel },
+                  { className: Yl().AccountPasswordPanel },
                   o.createElement(
                     "div",
-                    { className: Hl().SigninTitle },
+                    { className: Yl().SigninTitle },
                     (0, Ut.Xx)("#Login_SignIn")
                   ),
                   o.createElement(
                     "form",
                     {
-                      className: Hl().AccountPasswordForm,
+                      className: Yl().AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.createElement(ml.II, {
+                    o.createElement(vl.II, {
                       autoFocus: this.props.autoFocus,
-                      className: (0, E.Z)(Hl().AccountNameLabel, e),
+                      className: (0, E.Z)(Yl().AccountNameLabel, e),
                       label: (0, Ut.Xx)("#Login_AccountName"),
                       type: "text",
                       value: r.GetUserName(),
@@ -41714,9 +41911,9 @@
                       maxLength: 64,
                       onChange: this.OnChangeName,
                     }),
-                    o.createElement(ml.II, {
+                    o.createElement(vl.II, {
                       bIsPassword: !0,
-                      className: (0, E.Z)(Hl().PasswordDots, t),
+                      className: (0, E.Z)(Yl().PasswordDots, t),
                       label: (0, Ut.Xx)("#Login_Password"),
                       type: "password",
                       autoComplete: "off",
@@ -41725,8 +41922,8 @@
                       value: r.GetPassword(),
                       onChange: this.OnChangePassword,
                     }),
-                    o.createElement(ml.ji, {
-                      className: Hl().RememberMeCheck,
+                    o.createElement(vl.ji, {
+                      className: Yl().RememberMeCheck,
                       label: (0, Ut.Xx)("#Login_RememberMe"),
                       disabled: !1,
                       onChange: function () {
@@ -41734,32 +41931,32 @@
                       },
                       checked: r.GetRememberPassword(),
                     }),
-                    r.GetCaptchaURL() && o.createElement(tc, { manager: r }),
+                    r.GetCaptchaURL() && o.createElement(sc, { manager: r }),
                     o.createElement(
-                      ml.KM,
+                      vl.KM,
                       { disabled: this.props.manager.IsRequestInFlight() },
                       (0, Ut.Xx)("#Login_SignIn").toLocaleUpperCase()
                     )
                   ),
                   o.createElement(
                     "a",
-                    { className: Hl().NeedHelpLink, href: ge.De.HELP_BASE_URL },
+                    { className: Yl().NeedHelpLink, href: ge.De.HELP_BASE_URL },
                     (0, Ut.Xx)("#Login_ForgotPassword")
                   ),
                   o.createElement("div", {
-                    className: Hl().LoginCreateSeperator,
+                    className: Yl().LoginCreateSeperator,
                   }),
                   o.createElement(
                     "div",
-                    { className: Hl().SteamUpsellContainer },
+                    { className: Yl().SteamUpsellContainer },
                     o.createElement(
                       "div",
-                      { className: Hl().SteamUpsell },
+                      { className: Yl().SteamUpsell },
                       (0, Ut.Xx)("#Login_NoSteamAccount")
                     ),
                     o.createElement(
                       "div",
-                      { className: Hl().CreateAccountLink },
+                      { className: Yl().CreateAccountLink },
                       o.createElement(
                         "a",
                         { href: ge.De.STORE_BASE_URL + "join/" },
@@ -41770,14 +41967,14 @@
                 )
               );
             }),
-            (0, a.gn)([ss.ak], t.prototype, "OnSubmit", null),
-            (0, a.gn)([ss.ak], t.prototype, "OnChangeName", null),
-            (0, a.gn)([ss.ak], t.prototype, "OnChangePassword", null),
-            (0, a.gn)([ss.ak], t.prototype, "OnChangeRememberPass", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnSubmit", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnChangeName", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnChangePassword", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnChangeRememberPass", null),
             (t = (0, a.gn)([d.Pi], t))
           );
         })(o.Component),
-        tc = (function (e) {
+        sc = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -41793,23 +41990,23 @@
               var e = this.props.manager;
               return o.createElement(
                 "div",
-                { className: Hl().CaptchaContainer },
+                { className: Yl().CaptchaContainer },
                 o.createElement(
                   "div",
-                  { className: Hl().CaptchaBlock },
+                  { className: Yl().CaptchaBlock },
                   o.createElement(
                     "div",
-                    { className: Hl().CaptchaImageAndInput },
+                    { className: Yl().CaptchaImageAndInput },
                     o.createElement(
                       "div",
-                      { className: Hl().CaptchaImageBox },
+                      { className: Yl().CaptchaImageBox },
                       o.createElement("img", {
-                        className: Hl().CaptchaImage,
+                        className: Yl().CaptchaImage,
                         src: e.GetCaptchaURL(),
                       })
                     ),
-                    o.createElement(ml.II, {
-                      className: Hl().CaptchaInput,
+                    o.createElement(vl.II, {
+                      className: Yl().CaptchaInput,
                       type: "text",
                       autoComplete: "off",
                       maxLength: 6,
@@ -41819,7 +42016,7 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: Hl().ErrorMessage },
+                    { className: Yl().ErrorMessage },
                     (0, Ut.Xx)("#Login_CaptchaVerification")
                   )
                 ),
@@ -41829,7 +42026,7 @@
                   o.createElement(
                     "span",
                     {
-                      className: Hl().RefreshCaptchaText,
+                      className: Yl().RefreshCaptchaText,
                       onClick: this.RefreshCaptcha,
                     },
                     (0, Ut.Xx)("#Login_RefreshCaptcha")
@@ -41837,12 +42034,12 @@
                 )
               );
             }),
-            (0, a.gn)([ss.ak], t.prototype, "OnCaptchaText", null),
-            (0, a.gn)([ss.ak], t.prototype, "RefreshCaptcha", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnCaptchaText", null),
+            (0, a.gn)([ps.ak], t.prototype, "RefreshCaptcha", null),
             (t = (0, a.gn)([d.Pi], t))
           );
         })(o.Component),
-        nc = (function (e) {
+        lc = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -41852,7 +42049,7 @@
               e.preventDefault(), this.props.manager.DoLogin();
             }),
             (t.prototype.OnChangeAuthCode = function (e) {
-              this.props.authtype == Zl.TwoFactorCode
+              this.props.authtype == tc.TwoFactorCode
                 ? this.props.manager.SetTwoFactorCode(e.target.value)
                 : this.props.manager.SetEmailAuthCode(e.target.value);
             }),
@@ -41862,50 +42059,50 @@
                 n = "",
                 r = null,
                 a = "",
-                i = t.GetSteamGuardCodeError() == ql.InvalidCode;
+                i = t.GetSteamGuardCodeError() == nc.InvalidCode;
               switch (this.props.authtype) {
-                case Zl.TwoFactorCode:
+                case tc.TwoFactorCode:
                   (n = t.GetTwoFactorCode()),
                     (r = (0, Ut.Xx)("#Login_Enter2FA")),
-                    (e = o.createElement(Sl.vT2, null)),
+                    (e = o.createElement(Dl.vT2, null)),
                     (a = (0, Ut.Xx)("#Login_Enter2FAHelp"));
                   break;
-                case Zl.EmailCode:
+                case tc.EmailCode:
                   (n = t.GetEmailAuthCode()),
                     (r = (0, Ut.kQ)(
                       "#Login_SentSteamguard",
                       o.createElement(
                         "span",
-                        { className: Hl().Highlight },
+                        { className: Yl().Highlight },
                         "@",
                         t.GetEmailDomain()
                       )
                     )),
                     (a = (0, Ut.Xx)("#Login_EnterSteamguard")),
-                    (e = o.createElement(Sl.wr9, null));
+                    (e = o.createElement(Dl.wr9, null));
               }
               return o.createElement(
                 "div",
-                { className: Hl().AuthenticationPanel },
-                o.createElement(ml.__, null, (0, Ut.Xx)("#Login_SigningIn")),
+                { className: Yl().AuthenticationPanel },
+                o.createElement(vl.__, null, (0, Ut.Xx)("#Login_SigningIn")),
                 o.createElement(
                   "div",
-                  { className: Hl().SigningInAccountName },
+                  { className: Yl().SigningInAccountName },
                   t.GetUserName()
                 ),
-                o.createElement(ml.Ac, null, r),
+                o.createElement(vl.Ac, null, r),
                 o.createElement(
                   "div",
-                  { className: Hl().AuthenticatorInputcontainer },
+                  { className: Yl().AuthenticatorInputcontainer },
                   e,
                   o.createElement(
                     "form",
                     {
-                      className: Hl().AccountPasswordForm,
+                      className: Yl().AccountPasswordForm,
                       onSubmit: this.OnSubmit,
                     },
-                    o.createElement(ml.II, {
-                      className: (0, E.Z)(Hl().AccountName),
+                    o.createElement(vl.II, {
+                      className: (0, E.Z)(Yl().AccountName),
                       label: "Steam Guard Code",
                       type: "text",
                       autoComplete: "off",
@@ -41915,7 +42112,7 @@
                       onChange: this.OnChangeAuthCode,
                     }),
                     o.createElement(
-                      ml.KM,
+                      vl.KM,
                       { disabled: this.props.manager.IsRequestInFlight() },
                       (0, Ut.Xx)("#Login_SteamguardSubmit").toLocaleUpperCase()
                     )
@@ -41925,8 +42122,8 @@
                   "a",
                   {
                     className: (0, E.Z)(
-                      Hl().NeedHelpLink,
-                      i ? Hl().NeedHelpHighlight : null
+                      Yl().NeedHelpLink,
+                      i ? Yl().NeedHelpHighlight : null
                     ),
                     href: "http://help.steampowered.com/",
                   },
@@ -41934,12 +42131,12 @@
                 )
               );
             }),
-            (0, a.gn)([ss.ak], t.prototype, "OnSubmit", null),
-            (0, a.gn)([ss.ak], t.prototype, "OnChangeAuthCode", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnSubmit", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnChangeAuthCode", null),
             (t = (0, a.gn)([d.Pi], t))
           );
         })(o.Component),
-        rc = (function (e) {
+        cc = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -41958,17 +42155,17 @@
                 : o.createElement(
                     "div",
                     null,
-                    o.createElement(Ql, {
+                    o.createElement(ac, {
                       baseURL: (0, ge.Kc)(),
                       onLoginComplete: this.OnLoginComplete,
                     })
                   );
             }),
-            (0, a.gn)([ss.ak], t.prototype, "OnLoginComplete", null),
+            (0, a.gn)([ps.ak], t.prototype, "OnLoginComplete", null),
             t
           );
         })(o.Component),
-        ac = (function (e) {
+        uc = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -41976,18 +42173,18 @@
             (0, a.ZT)(t, e),
             (t.prototype.render = function () {
               return o.createElement(
-                El.e1,
+                Il.e1,
                 {
                   onEscKeypress: this.props.closeModal,
                   bDisableBackgroundDismiss: !0,
                 },
-                o.createElement(rc, { redirectURL: this.props.redirectURL })
+                o.createElement(cc, { redirectURL: this.props.redirectURL })
               );
             }),
             t
           );
         })(o.Component);
-      var ic = (function (e) {
+      var dc = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -41995,7 +42192,7 @@
             (t.m_bLoadWasCancelled = !1),
             (t.state = {
               bIsOpen: !1,
-              bIsLoadingNotificationSettings: !ul.BIsLoaded(),
+              bIsLoadingNotificationSettings: !gl.BIsLoaded(),
             }),
             t
           );
@@ -42005,7 +42202,7 @@
           (t.prototype.componentDidMount = function () {
             var e = this;
             this.state.bIsLoadingNotificationSettings &&
-              ul
+              gl
                 .HintLoad()
                 .catch(function (e) {
                   return (
@@ -42031,7 +42228,7 @@
             this.m_bLoadWasCancelled = !0;
           }),
           (t.prototype.ToggleMenu = function (e) {
-            var t = cl.Get().BIsUserLoggedIn();
+            var t = hl.Get().BIsUserLoggedIn();
             t || ge.De.IN_CLIENT
               ? (!t &&
                   ge.De.IN_CLIENT &&
@@ -42041,16 +42238,16 @@
                 this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
                 e.stopPropagation(),
                 e.preventDefault())
-              : Il(
-                  o.createElement(El.uH, {
+              : Rl(
+                  o.createElement(Il.uH, {
                     strTitle: (0, Ut.Xx)("#EventDisplay_Share_NotLoggedIn"),
                     strDescription: (0, Ut.Xx)(
                       "#EventDisplay_Share_NotLoggedIn_Description"
                     ),
                     strOKButtonText: (0, Ut.Xx)("#MobileLogin_SignIn"),
                     onOK: function () {
-                      Il(
-                        o.createElement(ac, {
+                      Rl(
+                        o.createElement(uc, {
                           ownerWin: window,
                           redirectURL: window.location.href,
                         }),
@@ -42067,7 +42264,7 @@
             if (this.m_iMenuInstance) this.m_iMenuInstance.Show();
             else {
               var t = o.createElement(
-                  lc,
+                  _c,
                   (0, a.pi)({}, this.props, {
                     fnHasReminderSet: function () {
                       return e.BHasSomeNotificationSetting();
@@ -42081,12 +42278,12 @@
                   bDisablePopTop: !0,
                   bMatchWidth: !0,
                   strClassName: (0, E.Z)(
-                    Fl.ReminderDialog,
-                    Fl.ReminderOptions,
-                    dl.contextMenu
+                    jl.ReminderDialog,
+                    jl.ReminderOptions,
+                    fl.contextMenu
                   ),
                 };
-              (this.m_iMenuInstance = (0, ms.yV)(
+              (this.m_iMenuInstance = (0, vs.yV)(
                 t,
                 this.m_elDropDownRef.current,
                 n
@@ -42094,9 +42291,9 @@
                 this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
             }
             this.setState({ bIsOpen: !0 }),
-              ws.RecordAppInteractionEvent(
+              Ls.RecordAppInteractionEvent(
                 this.props.eventModel.appid,
-                Ts.k_eReminder_Opened
+                Bs.k_eReminder_Opened
               );
           }),
           (t.prototype.HideMenu = function () {
@@ -42107,21 +42304,21 @@
             var e = this.props.eventModel,
               t = e.GID;
             return (
-              (ul.BHasValidatedEmail() &&
-                cl
+              (gl.BHasValidatedEmail() &&
+                hl
                   .Get()
                   .BFollowsEventAndNotifiedBy(
                     e.clanSteamID,
                     t,
-                    ol.k_ENotifyFlagByEmail
+                    ml.k_ENotifyFlagByEmail
                   )) ||
-              (ul.BHasPushNotification() &&
-                cl
+              (gl.BHasPushNotification() &&
+                hl
                   .Get()
                   .BFollowsEventAndNotifiedBy(
                     e.clanSteamID,
                     t,
-                    ol.k_ENotifyFlagByPush
+                    ml.k_ENotifyFlagByPush
                   ))
             );
           }),
@@ -42134,10 +42331,10 @@
               {
                 className: (0, E.Z)(
                   ((e = {}),
-                  (e[Fl.ReminderCheckBox] = !0),
-                  (e[Gl().ReminderCtn] = !0),
-                  (e[Fl.IconMode] = t),
-                  (e[Fl.TextMode] = !t),
+                  (e[jl.ReminderCheckBox] = !0),
+                  (e[Ul().ReminderCtn] = !0),
+                  (e[jl.IconMode] = t),
+                  (e[jl.TextMode] = !t),
                   (e.ReminderSet = n),
                   (e.RemindMeWidget = !0),
                   e)
@@ -42148,44 +42345,44 @@
               n &&
                 o.createElement(
                   "div",
-                  { className: Fl.RemindCheck },
-                  o.createElement(Sl.JrY, null)
+                  { className: jl.RemindCheck },
+                  o.createElement(Dl.JrY, null)
                 ),
               t &&
                 o.createElement(
                   "div",
-                  { className: Fl.RemindBell },
-                  o.createElement(Sl.Uos, null)
+                  { className: jl.RemindBell },
+                  o.createElement(Dl.Uos, null)
                 ),
               o.createElement(
                 "div",
-                { className: Fl.ReminderDefault },
+                { className: jl.ReminderDefault },
                 (0, Ut.Xx)("#EventDisplay_Reminder_SetReminder")
               ),
-              o.createElement("div", { className: Fl.ReminderOptions })
+              o.createElement("div", { className: jl.ReminderOptions })
             );
           }),
-          (0, a.gn)([ss.ak], t.prototype, "ToggleMenu", null),
-          (0, a.gn)([ss.ak], t.prototype, "ShowMenu", null),
-          (0, a.gn)([ss.ak], t.prototype, "HideMenu", null),
+          (0, a.gn)([ps.ak], t.prototype, "ToggleMenu", null),
+          (0, a.gn)([ps.ak], t.prototype, "ShowMenu", null),
+          (0, a.gn)([ps.ak], t.prototype, "HideMenu", null),
           (t = (0, a.gn)([d.Pi], t))
         );
       })(o.Component);
-      function oc(e) {
+      function mc(e) {
         var t = e.eventGID,
           n = (0, a._T)(e, ["eventGID"]),
-          r = hs(t);
+          r = ys(t);
         if (!r) return null;
         var i = (0, ue.jM)(ge.De.LANGUAGE);
         return o.createElement(
-          ic,
+          dc,
           (0, a.pi)({ lang: i }, n, { eventModel: r })
         );
       }
-      function sc(e) {
+      function pc(e) {
         return Me.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      var lc = (function (e) {
+      var _c = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bIsRequestInFlight: !1 }), t;
@@ -42209,7 +42406,7 @@
                       a.trys.push([1, 3, , 4]),
                       [
                         4,
-                        cl
+                        hl
                           .Get()
                           .SetFollowOrUnfollowEvent(!e, t, r.clanSteamID, i, n),
                       ]
@@ -42218,18 +42415,18 @@
                     return (
                       a.sent(),
                       e &&
-                        (n === ol.k_ENotifyFlagByEmail
-                          ? this.TrackEventAction(Ts.k_eReminder_Email)
-                          : n === ol.k_ENotifyFlagByPush &&
-                            this.TrackEventAction(Ts.k_eReminder_MobilePush)),
+                        (n === ml.k_ENotifyFlagByEmail
+                          ? this.TrackEventAction(Bs.k_eReminder_Email)
+                          : n === ml.k_ENotifyFlagByPush &&
+                            this.TrackEventAction(Bs.k_eReminder_MobilePush)),
                       [3, 4]
                     );
                   case 3:
                     return (
                       (s = a.sent()),
-                      Nl(
+                      Al(
                         o.createElement(
-                          El.JX,
+                          Il.JX,
                           {
                             strTitle: (0, Ut.Xx)(
                               t
@@ -42257,25 +42454,25 @@
             });
           }),
           (t.prototype.OnChangeFollowByEmail = function (e) {
-            this.OnChangeFollowOrIgnore(e, !1, ol.k_ENotifyFlagByEmail);
+            this.OnChangeFollowOrIgnore(e, !1, ml.k_ENotifyFlagByEmail);
           }),
           (t.prototype.OnChangeFollowByPush = function (e) {
-            this.OnChangeFollowOrIgnore(e, !1, ol.k_ENotifyFlagByPush);
+            this.OnChangeFollowOrIgnore(e, !1, ml.k_ENotifyFlagByPush);
           }),
           (t.prototype.GetExternalCalendarEventTitle = function () {
             var e = this.props,
               t = e.eventModel,
               n = e.lang,
               r = t.GetNameWithFallback(n);
-            return _s.BHasEntityNameForID(t.appid, t.clanSteamID.GetAccountID())
-              ? _s.GetEntityNameForID(t.appid, t.clanSteamID.GetAccountID()) +
+            return bs.BHasEntityNameForID(t.appid, t.clanSteamID.GetAccountID())
+              ? bs.GetEntityNameForID(t.appid, t.clanSteamID.GetAccountID()) +
                   ": " +
                   r
               : r;
           }),
           (t.prototype.TrackEventAction = function (e) {
             var t = this.props.eventModel;
-            ws.RecordAppInteractionEvent(t.appid, e);
+            Ls.RecordAppInteractionEvent(t.appid, e);
           }),
           (t.prototype.GetExternalCalendarEventBody = function () {
             var e = this.props,
@@ -42285,14 +42482,14 @@
             r = r ? r + "\n\n\n" : "";
             var a = t.GetSummaryWithFallback(n),
               i = (function (e, t, n) {
-                return Pl(
+                return Wl(
                   e,
                   t,
-                  "forceAbsolute" !== n && kl(t, e) ? "relative" : "absolute"
+                  "forceAbsolute" !== n && Hl(t, e) ? "relative" : "absolute"
                 );
               })(
                 t,
-                t.jsondata.bSaleEnabled ? Bl.k_eStoreSalePage : Bl.k_eStoreView,
+                t.jsondata.bSaleEnabled ? kl.k_eStoreSalePage : kl.k_eStoreView,
                 "forceAbsolute"
               );
             return "" + r + a + "\n\n" + i;
@@ -42302,8 +42499,8 @@
               t = encodeURIComponent(this.GetExternalCalendarEventTitle()),
               n = encodeURIComponent(this.GetExternalCalendarEventBody()),
               r = e.GetStartTimeAndDateUnixSeconds(),
-              a = sc(r),
-              i = sc(e.GetEndTimeAndDateUnixSeconds() || r + Qt._H.PerHour);
+              a = pc(r),
+              i = pc(e.GetEndTimeAndDateUnixSeconds() || r + Qt._H.PerHour);
             return (function (e) {
               return ge.De.SNR &&
                 ge.De.SNR.length > 0 &&
@@ -42352,8 +42549,8 @@
               i = t.bOnlyShowIcon,
               s = t.fnHasReminderSet,
               l = t.fnHidePanel,
-              c = ul.BHasValidatedEmail(),
-              u = ul.BHasPushNotification(),
+              c = gl.BHasValidatedEmail(),
+              u = gl.BHasPushNotification(),
               d = r && n.GetStartTimeAndDateUnixSeconds();
             return o.createElement(
               "div",
@@ -42362,8 +42559,8 @@
                 "div",
                 {
                   className: (0, E.Z)(
-                    Fl.ReminderCheckBox,
-                    i ? Fl.IconMode : Fl.TextMode,
+                    jl.ReminderCheckBox,
+                    i ? jl.IconMode : jl.TextMode,
                     "RemindMeWidget"
                   ),
                   onClick: l,
@@ -42371,41 +42568,41 @@
                 s() &&
                   o.createElement(
                     "div",
-                    { className: Fl.RemindCheck },
-                    o.createElement(Sl.JrY, null)
+                    { className: jl.RemindCheck },
+                    o.createElement(Dl.JrY, null)
                   ),
                 i &&
                   o.createElement(
                     "div",
-                    { className: Fl.RemindBell },
-                    o.createElement(Sl.Uos, null)
+                    { className: jl.RemindBell },
+                    o.createElement(Dl.Uos, null)
                   ),
                 o.createElement(
                   "div",
-                  { className: Fl.ReminderDefault },
+                  { className: jl.ReminderDefault },
                   (0, Ut.Xx)("#EventDisplay_Reminder_SetReminder")
                 ),
-                o.createElement("div", { className: Fl.ReminderOpennedOptions })
+                o.createElement("div", { className: jl.ReminderOpennedOptions })
               ),
               o.createElement(
                 "div",
                 {
                   className: (0, E.Z)(
-                    Fl.FlexColumnContainer,
-                    Fl.ReminderBackground,
-                    a && Fl.ReminderExpandsLeft
+                    jl.FlexColumnContainer,
+                    jl.ReminderBackground,
+                    a && jl.ReminderExpandsLeft
                   ),
                 },
                 this.state.bIsRequestInFlight &&
-                  o.createElement(os.V, {
-                    className: Fl.RpcThrobber,
+                  o.createElement(ms.V, {
+                    className: jl.RpcThrobber,
                     size: "xlarge",
                     position: "center",
                   }),
                 d &&
                   o.createElement(
                     "div",
-                    { className: Fl.FullStartTime },
+                    { className: jl.FullStartTime },
                     (0, Ut.kQ)(
                       "#EventDisplay_EventUpcoming_WithDateAndTime",
                       (0, Ut.$1)(
@@ -42415,39 +42612,39 @@
                           Oe.GetTimeNowWithOverrideAsDate()
                         )
                       ),
-                      gl(d, !0)
+                      Sl(d, !0)
                     )
                   ),
                 o.createElement(
                   "div",
-                  { className: Fl.ReminderOptionsHeader },
+                  { className: jl.ReminderOptionsHeader },
                   (0, Ut.Xx)("#EventDisplay_Reminder_GetNotification_Via")
                 ),
                 o.createElement(
                   "div",
                   {
-                    className: (0, E.Z)(Fl.ReminderOption, !c && Fl.Unverified),
+                    className: (0, E.Z)(jl.ReminderOption, !c && jl.Unverified),
                   },
                   o.createElement(
                     Fn.HP,
                     {
-                      className: Fl.CheckboxWrapper,
-                      strTooltipClassname: Fl.ReminderOptionTooltip,
+                      className: jl.CheckboxWrapper,
+                      strTooltipClassname: jl.ReminderOptionTooltip,
                       toolTipContent: (0, Ut.Xx)(
                         c
                           ? "#EventReminder_NotifyByEmail_ttip"
                           : "#EventReminder_NotifyByEmail_Missing"
                       ),
                     },
-                    o.createElement(ml.ji, {
+                    o.createElement(vl.ji, {
                       label: (0, Ut.Xx)("#EventDisplay_Reminder_ViaEmail"),
                       disabled: !c,
-                      checked: cl
+                      checked: hl
                         .Get()
                         .BFollowsEventAndNotifiedBy(
                           n.clanSteamID,
                           n.GID,
-                          ol.k_ENotifyFlagByEmail
+                          ml.k_ENotifyFlagByEmail
                         ),
                       onChange: this.OnChangeFollowByEmail,
                     })
@@ -42455,7 +42652,7 @@
                   !c &&
                     o.createElement(
                       "div",
-                      { className: Ul.FlexColumnContainer },
+                      { className: Vl.FlexColumnContainer },
                       o.createElement(
                         "a",
                         {
@@ -42463,7 +42660,7 @@
                           target: ge.De.IN_CLIENT ? void 0 : "_blank",
                           onClick: function () {
                             return e.TrackEventAction(
-                              Ts.k_eReminder_EmailUnverified
+                              Bs.k_eReminder_EmailUnverified
                             );
                           },
                         },
@@ -42474,28 +42671,28 @@
                 o.createElement(
                   "div",
                   {
-                    className: (0, E.Z)(Fl.ReminderOption, !u && Fl.Unverified),
+                    className: (0, E.Z)(jl.ReminderOption, !u && jl.Unverified),
                   },
                   o.createElement(
                     Fn.HP,
                     {
-                      className: Fl.CheckboxWrapper,
-                      strTooltipClassname: Fl.ReminderOptionTooltip,
+                      className: jl.CheckboxWrapper,
+                      strTooltipClassname: jl.ReminderOptionTooltip,
                       toolTipContent: (0, Ut.Xx)(
                         u
                           ? "#EventReminder_NotifyByMobile_ttip"
                           : "#EventReminder_NotifyByMobile_Missing"
                       ),
                     },
-                    o.createElement(ml.ji, {
+                    o.createElement(vl.ji, {
                       label: (0, Ut.Xx)("#EventDisplay_Reminder_ViaMobileApp"),
                       disabled: !u,
-                      checked: cl
+                      checked: hl
                         .Get()
                         .BFollowsEventAndNotifiedBy(
                           n.clanSteamID,
                           n.GID,
-                          ol.k_ENotifyFlagByPush
+                          ml.k_ENotifyFlagByPush
                         ),
                       onChange: this.OnChangeFollowByPush,
                     })
@@ -42503,7 +42700,7 @@
                   !u &&
                     o.createElement(
                       "div",
-                      { className: Ul.FlexColumnContainer },
+                      { className: Vl.FlexColumnContainer },
                       o.createElement(
                         "a",
                         {
@@ -42511,7 +42708,7 @@
                           target: ge.De.IN_CLIENT ? void 0 : "_blank",
                           onClick: function () {
                             return e.TrackEventAction(
-                              Ts.k_eReminder_MobilePushMissing
+                              Bs.k_eReminder_MobilePushMissing
                             );
                           },
                         },
@@ -42524,20 +42721,20 @@
                   null,
                   o.createElement(
                     "div",
-                    { className: Fl.ReminderOptionsHeader },
+                    { className: jl.ReminderOptionsHeader },
                     (0, Ut.Xx)("#EventDisplay_Reminder_AddToCalendar")
                   ),
                   o.createElement(
                     "div",
-                    { className: Fl.ReminderCalendarOptions },
+                    { className: jl.ReminderCalendarOptions },
                     o.createElement(
                       "a",
                       {
-                        className: Fl.ReminderOption,
+                        className: jl.ReminderOption,
                         href: this.GetICSDownloadLink("ics"),
                         onClick: function () {
                           return e.TrackEventAction(
-                            Ts.k_eReminder_CalendarApple
+                            Bs.k_eReminder_CalendarApple
                           );
                         },
                       },
@@ -42546,12 +42743,12 @@
                     o.createElement(
                       "a",
                       {
-                        className: Fl.ReminderOption,
+                        className: jl.ReminderOption,
                         target: ge.De.IN_CLIENT ? void 0 : "_blank",
                         href: this.GetGoogleCalendarLink(),
                         onClick: function () {
                           return e.TrackEventAction(
-                            Ts.k_eReminder_CalendarGoogle
+                            Bs.k_eReminder_CalendarGoogle
                           );
                         },
                       },
@@ -42560,11 +42757,11 @@
                     o.createElement(
                       "a",
                       {
-                        className: Fl.ReminderOption,
+                        className: jl.ReminderOption,
                         href: this.GetICSDownloadLink("outlook"),
                         onClick: function () {
                           return e.TrackEventAction(
-                            Ts.k_eReminder_CalendarOutlook
+                            Bs.k_eReminder_CalendarOutlook
                           );
                         },
                       },
@@ -42576,13 +42773,13 @@
               )
             );
           }),
-          (0, a.gn)([ss.ak], t.prototype, "OnChangeFollowByEmail", null),
-          (0, a.gn)([ss.ak], t.prototype, "OnChangeFollowByPush", null),
-          (0, a.gn)([ss.ak], t.prototype, "TrackEventAction", null),
+          (0, a.gn)([ps.ak], t.prototype, "OnChangeFollowByEmail", null),
+          (0, a.gn)([ps.ak], t.prototype, "OnChangeFollowByPush", null),
+          (0, a.gn)([ps.ak], t.prototype, "TrackEventAction", null),
           (t = (0, a.gn)([d.Pi], t))
         );
       })(o.Component);
-      var cc = (function () {
+      var hc = (function () {
           function e() {
             (this.m_bUserHasVolumePreference = !1),
               (this.m_flVolumePreference = 0);
@@ -42604,12 +42801,12 @@
             (e.Get = function () {
               return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
             }),
-            (0, a.gn)([ss.ak], e.prototype, "BUserHasVolumePreference", null),
-            (0, a.gn)([ss.ak], e.prototype, "SetVolumePreference", null),
+            (0, a.gn)([ps.ak], e.prototype, "BUserHasVolumePreference", null),
+            (0, a.gn)([ps.ak], e.prototype, "SetVolumePreference", null),
             e
           );
         })(),
-        uc = function (e) {
+        gc = function (e) {
           var t = e.video,
             n = e.bAutoPlay,
             r = e.bControls,
@@ -42684,20 +42881,20 @@
               : null,
             _ = (function (e) {
               return !(
-                !ts(e.sPoster) ||
+                !ss(e.sPoster) ||
                 (e.rgVideoSources &&
                   e.rgVideoSources.some(function (e) {
-                    return !ts(e.sURL);
+                    return !ss(e.sURL);
                   })) ||
                 (e.rgVideoTracks &&
                   e.rgVideoTracks.some(function (e) {
-                    return !ts(e.sURL);
+                    return !ss(e.sURL);
                   }))
               );
             })(t),
             h = void 0;
           (!_ || (s && "public" == ge.De.WEB_UNIVERSE)) && (h = "anonymous");
-          var g = i || (n && cc.Get().BVolumePreferenceMuted()),
+          var g = i || (n && hc.Get().BVolumePreferenceMuted()),
             f = t.sPoster ? d(t.sPoster) : "";
           return o.createElement(
             "video",
@@ -42714,20 +42911,20 @@
               onVolumeChange: function (e) {
                 var t = e.target,
                   n = t.muted ? 0 : t.volume;
-                c && cc.Get().SetVolumePreference(n);
+                c && hc.Get().SetVolumePreference(n);
               },
               onPlay: function (e) {
                 var t = e.target,
                   r = 0 == t.currentTime,
-                  a = cc.Get().BUserHasVolumePreference();
+                  a = hc.Get().BUserHasVolumePreference();
                 if ((u(!0), r))
                   if (a || n)
                     a &&
-                      ((t.volume = cc.Get().GetVolumePreference()),
-                      (t.muted = cc.Get().BVolumePreferenceMuted()));
+                      ((t.volume = hc.Get().GetVolumePreference()),
+                      (t.muted = hc.Get().BVolumePreferenceMuted()));
                   else {
                     var i = t.muted ? 0 : t.volume;
-                    cc.Get().SetVolumePreference(i);
+                    hc.Get().SetVolumePreference(i);
                   }
               },
             },
@@ -42735,20 +42932,20 @@
             p
           );
         },
-        dc = o.createContext({});
-      function mc() {
-        return o.useContext(dc);
+        fc = o.createContext({});
+      function vc() {
+        return o.useContext(fc);
       }
-      var pc = n(56524),
-        _c = n.n(pc),
-        hc = new Map([
+      var Ec = n(56524),
+        bc = n.n(Ec),
+        yc = new Map([
           [
             "b",
             {
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().Bold },
+                  { className: bc().Bold },
                   e.children
                 );
               },
@@ -42761,7 +42958,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: (0, E.Z)(_c().Italic, "BB_Italic") },
+                  { className: (0, E.Z)(bc().Italic, "BB_Italic") },
                   e.children
                 );
               },
@@ -42772,7 +42969,7 @@
             "h1",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().Header1, "BB_Header1"));
+                return Tc(e, (0, E.Z)(bc().Header1, "BB_Header1"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42782,7 +42979,7 @@
             "h2",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().Header2, "BB_Header2"));
+                return Tc(e, (0, E.Z)(bc().Header2, "BB_Header2"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42792,7 +42989,7 @@
             "h3",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().Header3, "BB_Header3"));
+                return Tc(e, (0, E.Z)(bc().Header3, "BB_Header3"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42802,7 +42999,7 @@
             "h4",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().Header4, "BB_Header4"));
+                return Tc(e, (0, E.Z)(bc().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42812,7 +43009,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().Header5, "BB_Header5"));
+                return Tc(e, (0, E.Z)(bc().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42822,7 +43019,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return fc(e, (0, E.Z)(_c().SmallText, "BB_SmallText"));
+                return Tc(e, (0, E.Z)(bc().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -42834,7 +43031,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().Underline },
+                  { className: bc().Underline },
                   e.children
                 );
               },
@@ -42847,7 +43044,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().Strike },
+                  { className: bc().Strike },
                   e.children
                 );
               },
@@ -42868,9 +43065,9 @@
                     [n]
                   );
                 return o.createElement(
-                  Ko.s,
+                  rs.s,
                   {
-                    className: (0, E.Z)(_c().Spoiler, n && _c().Revealed),
+                    className: (0, E.Z)(bc().Spoiler, n && bc().Revealed),
                     focusable: !0,
                     onActivate: a,
                     onOKActionDescription: (0, Ut.Xx)(
@@ -42879,7 +43076,7 @@
                   },
                   o.createElement(
                     "span",
-                    { className: _c().SpoilerText },
+                    { className: bc().SpoilerText },
                     e.children
                   )
                 );
@@ -42891,7 +43088,7 @@
             "hr",
             {
               Constructor: function (e) {
-                return o.createElement("div", { className: _c().HR });
+                return o.createElement("div", { className: bc().HR });
               },
               autocloses: !1,
             },
@@ -42909,9 +43106,9 @@
             "url",
             {
               Constructor: function (e) {
-                var t = gc(e.args),
-                  n = "button" == gc(e.args, "style") ? _c().LinkButton : null,
-                  r = gc(e.args, "id");
+                var t = Sc(e.args),
+                  n = "button" == Sc(e.args, "style") ? bc().LinkButton : null,
+                  r = Sc(e.args, "id");
                 r &&
                   "string" == typeof r &&
                   r.length > 0 &&
@@ -42928,7 +43125,7 @@
                     e.children
                   );
                 return o.createElement(
-                  vc,
+                  wc,
                   { className: n, href: t, id: r },
                   e.children
                 );
@@ -42940,14 +43137,14 @@
             "quote",
             {
               Constructor: function (e) {
-                var t = gc(e.args, "author");
+                var t = Sc(e.args, "author");
                 return o.createElement(
                   "blockquote",
-                  { className: (0, E.Z)(_c().BlockQuote, e.className) },
+                  { className: (0, E.Z)(bc().BlockQuote, e.className) },
                   !!t &&
                     o.createElement(
                       "div",
-                      { className: _c().QuoteAuthor },
+                      { className: bc().QuoteAuthor },
                       (0, Ut.Xx)("#Bbcode_Originally_Posted_By") + " ",
                       " ",
                       o.createElement("b", null, t + ":")
@@ -42964,7 +43161,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().PullQuote },
+                  { className: bc().PullQuote },
                   e.children
                 );
               },
@@ -42977,7 +43174,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().Code },
+                  { className: bc().Code },
                   e.children
                 );
               },
@@ -42990,7 +43187,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "ul",
-                  { className: _c().List },
+                  { className: bc().List },
                   e.children
                 );
               },
@@ -43004,7 +43201,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "ol",
-                  { className: _c().OrderedList },
+                  { className: bc().OrderedList },
                   e.children
                 );
               },
@@ -43016,7 +43213,7 @@
             "*",
             {
               Constructor: function (e) {
-                var t = gc(e.args, "id");
+                var t = Sc(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -43024,7 +43221,7 @@
                   (t = t.substring(1));
                 return o.createElement(
                   "li",
-                  { className: _c().ListItem, id: t || void 0 },
+                  { className: bc().ListItem, id: t || void 0 },
                   e.children
                 );
               },
@@ -43036,16 +43233,16 @@
             "table",
             {
               Constructor: function (e) {
-                var t = gc(e.args, "noborder"),
-                  n = gc(e.args, "equalcells");
+                var t = Sc(e.args, "noborder"),
+                  n = Sc(e.args, "equalcells");
                 return o.createElement(
                   "div",
                   {
                     className: (0, E.Z)(
-                      _c().Table,
+                      bc().Table,
                       "BB_Table",
-                      t && _c().NoBorder,
-                      n && _c().EqualCells
+                      t && bc().NoBorder,
+                      n && bc().EqualCells
                     ),
                   },
                   e.children
@@ -43061,7 +43258,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: (0, E.Z)(_c().TableRow, "BB_TableRow") },
+                  { className: (0, E.Z)(bc().TableRow, "BB_TableRow") },
                   e.children
                 );
               },
@@ -43076,7 +43273,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: _c().TableHeader },
+                  { className: bc().TableHeader },
                   e.children
                 );
               },
@@ -43089,11 +43286,11 @@
             "td",
             {
               Constructor: function (e) {
-                var t = gc(e.args, "width");
+                var t = Sc(e.args, "width");
                 return o.createElement(
                   "div",
                   {
-                    className: (0, E.Z)(_c().TableData, "BB_TableData"),
+                    className: (0, E.Z)(bc().TableData, "BB_TableData"),
                     style: t && { width: t },
                   },
                   e.children
@@ -43108,7 +43305,7 @@
             "expand",
             {
               Constructor: function (e) {
-                var t = Boolean(gc(e.args, "expanded")),
+                var t = Boolean(Sc(e.args, "expanded")),
                   n = o.useState(t),
                   r = n[0],
                   a = n[1],
@@ -43118,43 +43315,43 @@
                         return {
                           collapsed: "#Bbcode_Expand_Details_Collapsed",
                           expanded: "#Bbcode_Expand_Details_Expanded",
-                          style: _c().ExpandSection_Details,
+                          style: bc().ExpandSection_Details,
                         };
                       case "spoiler":
                         return {
                           collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
                           expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                          style: _c().ExpandSection_Spoiler,
+                          style: bc().ExpandSection_Spoiler,
                         };
                       case "title":
                         return {
                           collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                          style: _c().ExpandSection_WithTitle,
+                          style: bc().ExpandSection_WithTitle,
                         };
                       default:
                         return {
                           collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                          style: _c().ExpandSection_ShowMore,
+                          style: bc().ExpandSection_ShowMore,
                         };
                     }
-                  })(gc(e.args, "type"), gc(e.args, "title"));
+                  })(Sc(e.args, "type"), Sc(e.args, "title"));
                 return o.createElement(
                   "div",
                   {
                     className: (0, E.Z)(
-                      _c().ExpandSectionBlock,
+                      bc().ExpandSectionBlock,
                       i.style,
                       r
-                        ? _c().ExpandSectionExpanded
-                        : _c().ExpandSectionCollapsed
+                        ? bc().ExpandSectionExpanded
+                        : bc().ExpandSectionCollapsed
                     ),
                   },
                   o.createElement(
                     "div",
                     {
-                      className: _c().ExpandSectionHeader,
+                      className: bc().ExpandSectionHeader,
                       onClick: function () {
                         return a(!r);
                       },
@@ -43162,14 +43359,14 @@
                     (0, Ut.Xx)(r ? i.expanded : i.collapsed),
                     o.createElement(
                       "div",
-                      { className: _c().EmbedArrow },
-                      o.createElement(Sl.ret, { angle: r ? 180 : 0 })
+                      { className: bc().EmbedArrow },
+                      o.createElement(Dl.ret, { angle: r ? 180 : 0 })
                     )
                   ),
                   r &&
                     o.createElement(
                       "div",
-                      { className: _c().ExpandSectionBody },
+                      { className: bc().ExpandSectionBody },
                       e.children
                     )
                 );
@@ -43184,11 +43381,11 @@
             {
               Constructor: function (e) {
                 var t = e.context.event,
-                  n = gc(e.args);
-                if (n) return o.createElement(oc, { eventGID: n });
+                  n = Sc(e.args);
+                if (n) return o.createElement(mc, { eventGID: n });
                 if (t) {
                   var r = (0, ue.jM)(ge.De.LANGUAGE);
-                  return o.createElement(ic, { eventModel: t, lang: r });
+                  return o.createElement(dc, { eventModel: t, lang: r });
                 }
                 return null;
               },
@@ -43199,10 +43396,10 @@
             "doclink",
             {
               Constructor: function (e) {
-                var t = gc(e.args),
-                  n = "button" == gc(e.args, "style") ? _c().LinkButton : null;
+                var t = Sc(e.args),
+                  n = "button" == Sc(e.args, "style") ? bc().LinkButton : null;
                 return o.createElement(
-                  vc,
+                  wc,
                   { className: n, href: ge.De.PARTNER_BASE_URL + "doc/" + t },
                   e.children
                 );
@@ -43216,8 +43413,8 @@
           "looping_media",
           {
             Constructor: function (e) {
-              var t = Ec(e);
-              return o.createElement(uc, {
+              var t = Ic(e);
+              return o.createElement(gc, {
                 video: t,
                 bAutoPlay: !0,
                 bControls: !1,
@@ -43227,7 +43424,7 @@
             autocloses: !1,
           },
         ],
-        ["video", { Constructor: bc, autocloses: !1 }],
+        ["video", { Constructor: Nc, autocloses: !1 }],
         [
           "youtubeorvideo",
           {
@@ -43236,18 +43433,18 @@
                 ge.De.EREALM === Ne.IN.k_ESteamRealmChina ||
                 "CN" == ge.De.COUNTRY.toLocaleUpperCase()
               )
-                return bc(e);
-              var t = gc(e.args, "youtubeid"),
-                n = gc(e.args, "size"),
-                r = gc(e.args, "seconds"),
-                a = "full" == n ? ls.sizeFull : ls.sizeThumb,
+                return Nc(e);
+              var t = Sc(e.args, "youtubeid"),
+                n = Sc(e.args, "size"),
+                r = Sc(e.args, "seconds"),
+                a = "full" == n ? _s.sizeFull : _s.sizeThumb,
                 i =
                   "full" == n
                     ? ""
                     : "leftthumb" == n
-                    ? ls.floatLeft
-                    : ls.floatRight;
-              return o.createElement(ds, {
+                    ? _s.floatLeft
+                    : _s.floatRight;
+              return o.createElement(fs, {
                 videoID: t,
                 nStartSeconds: r ? Number.parseInt(r) : void 0,
                 classNameAlign: i,
@@ -43263,20 +43460,20 @@
           {
             Constructor: function (e) {
               if (ge.De.EREALM === Ne.IN.k_ESteamRealmChina) return null;
-              var t = gc(e.args);
+              var t = Sc(e.args);
               if (t) {
                 var n = t.split(";");
                 if (2 == n.length) {
                   var r = n[0],
                     a = n[1].toLocaleLowerCase(),
-                    i = "full" == a ? ls.sizeFull : ls.sizeThumb,
+                    i = "full" == a ? _s.sizeFull : _s.sizeThumb,
                     s =
                       "full" == a
                         ? ""
                         : "leftthumb" == a
-                        ? ls.floatLeft
-                        : ls.floatRight;
-                  return o.createElement(ds, {
+                        ? _s.floatLeft
+                        : _s.floatRight;
+                  return o.createElement(fs, {
                     videoID: r,
                     classNameAlign: s,
                     classNameSize: i,
@@ -43290,11 +43487,11 @@
           },
         ],
       ]);
-      function gc(e, t) {
+      function Sc(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function fc(e, t) {
-        var n = gc(e.args, "id");
+      function Tc(e, t) {
+        var n = Sc(e.args, "id");
         return (
           n &&
             "string" == typeof n &&
@@ -43308,19 +43505,19 @@
           )
         );
       }
-      var vc = function (e) {
+      var wc = function (e) {
         var t,
           n = e.href,
           r = (0, a._T)(e, ["href"]),
-          i = rs(n, mc());
+          i = cs(n, vc());
         (function (e, t) {
           if (e.startsWith("steam://")) return !1;
           if (e.startsWith("/")) return !1;
-          var n = Qo(e).toLowerCase(),
-            r = Qo(ge.De.COMMUNITY_BASE_URL).toLowerCase(),
-            a = Qo(ge.De.STORE_BASE_URL).toLowerCase(),
-            i = Qo(ge.De.HELP_BASE_URL).toLowerCase(),
-            o = Qo(ge.De.PARTNER_BASE_URL || "").toLowerCase();
+          var n = as(e).toLowerCase(),
+            r = as(ge.De.COMMUNITY_BASE_URL).toLowerCase(),
+            a = as(ge.De.STORE_BASE_URL).toLowerCase(),
+            i = as(ge.De.HELP_BASE_URL).toLowerCase(),
+            o = as(ge.De.PARTNER_BASE_URL || "").toLowerCase();
           return (
             n !== r &&
             n !== a &&
@@ -43346,24 +43543,24 @@
           n &&
           !n.startsWith("steam://")
             ? (function (e) {
-                var t = Qo(e);
+                var t = as(e);
                 return t.startsWith("www.") && (t = t.slice(4)), t;
               })(n)
             : void 0;
         return o.createElement(
-          qo.IS,
+          ns.IS,
           (0, a.pi)({}, r, { href: i, rel: t }),
           o.createElement("span", { "data-tooltip-text": s }, e.children)
         );
       };
-      function Ec(e) {
-        var t = gc(e.args, "poster");
-        t && (t = es(t));
+      function Ic(e) {
+        var t = Sc(e.args, "poster");
+        t && (t = os(t));
         var n = new Array(),
-          r = gc(e.args, "mp4");
-        r && n.push({ sURL: es(r), sFormat: "video/mp4" });
-        var a = gc(e.args, "webm");
-        a && n.push({ sURL: es(a), sFormat: "video/webm" });
+          r = Sc(e.args, "mp4");
+        r && n.push({ sURL: os(r), sFormat: "video/mp4" });
+        var a = Sc(e.args, "webm");
+        a && n.push({ sURL: os(a), sFormat: "video/webm" });
         for (
           var i = (0, ue.jM)(ge.De.LANGUAGE),
             o = 0 != i,
@@ -43372,18 +43569,18 @@
           l < 30;
           l++
         ) {
-          var c = gc(e.args, "sub_" + (0, Ne.dt)(l));
+          var c = Sc(e.args, "sub_" + (0, Ne.dt)(l));
           c &&
             s.push({
-              sURL: es(c),
+              sURL: os(c),
               eLanguage: l,
               sKind: "subtitles",
               bDefault: o && l == i,
             });
-          var u = gc(e.args, "cap_" + (0, Ne.dt)(l));
+          var u = Sc(e.args, "cap_" + (0, Ne.dt)(l));
           u &&
             s.push({
-              sURL: es(u),
+              sURL: os(u),
               eLanguage: l,
               sKind: "captions",
               bDefault: o && l == i,
@@ -43391,33 +43588,33 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function bc(e) {
-        var t = Ec(e),
+      function Nc(e) {
+        var t = Ic(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: es(n), sFormat: "video/webm" });
-        var r = gc(e.args, "autoplay"),
+          t.rgVideoSources.push({ sURL: os(n), sFormat: "video/webm" });
+        var r = Sc(e.args, "autoplay"),
           a = "0" !== r && "off" !== r && "false" !== r,
-          i = gc(e.args, "controls"),
+          i = Sc(e.args, "controls"),
           s = "0" !== i && "off" !== i && "false" !== i;
-        return o.createElement(uc, {
+        return o.createElement(gc, {
           video: t,
           bAutoPlay: a,
           bControls: s,
           bLoop: a,
         });
       }
-      var yc = new ((function () {
+      var Cc = new ((function () {
           function e() {
-            (this.m_asyncPrizePool = new Zo.L()),
-              (this.m_asyncPatchNotesListData = new Zo.L()),
-              (this.m_asyncPatchNotesData = new Zo.r()),
-              (this.m_asyncBPPrice = new Zo.r()),
+            (this.m_asyncPrizePool = new ts.L()),
+              (this.m_asyncPatchNotesListData = new ts.L()),
+              (this.m_asyncPatchNotesData = new ts.r()),
+              (this.m_asyncBPPrice = new ts.r()),
               (this.m_nSelectedAbilityIndex = 0),
-              (this.m_asyncShortFilmOwnership = new Zo.L()),
+              (this.m_asyncShortFilmOwnership = new ts.L()),
               (this.m_BBCodeDictionary = new Map(
-                (0, a.pr)(Array.from(hc.entries()), [
+                (0, a.pr)(Array.from(yc.entries()), [
                   ["color", { Constructor: b.H, autocloses: !1 }],
                   ["block", { Constructor: b.qH, autocloses: !1 }],
                   ["spoiler", { Constructor: b.b4, autocloses: !1 }],
@@ -43442,7 +43639,7 @@
           return (
             (e.prototype.Init = function () {
               i.render(
-                o.createElement(Xo, { app: this }),
+                o.createElement(es, { app: this }),
                 document.getElementById("dota_react_root")
               );
             }),
@@ -43647,8 +43844,8 @@
             e
           );
         })())(),
-        Sc = ["main", "springcleaning22", "juneupdate22"];
-      function Tc(e) {
+        Dc = ["main", "springcleaning22", "juneupdate22"];
+      function Bc(e) {
         return (0, a.mG)(this, void 0, void 0, function () {
           var t, r, i, o, s, l, c, u, d, m, p;
           return (0, a.Jh)(this, function (_) {
@@ -43659,7 +43856,7 @@
                   Promise.all(
                     (0, a.pr)(
                       [n(56576)("./shared_" + e + ".json")],
-                      Sc.map(function (t) {
+                      Dc.map(function (t) {
                         return n(91946)("./" + t + "_" + e + ".json");
                       })
                     )
@@ -43677,7 +43874,7 @@
                         Promise.all(
                           (0, a.pr)(
                             [n(56576)("./shared_" + l + ".json")],
-                            Sc.map(function (e) {
+                            Dc.map(function (e) {
                               return n(91946)("./" + e + "_" + l + ".json");
                             })
                           )
@@ -43708,10 +43905,10 @@
                 return (
                   (0, ge.Ek)("application_config"),
                   (0, g.R)(),
-                  [4, Tc(g.Y.LANGUAGE)]
+                  [4, Bc(g.Y.LANGUAGE)]
                 );
               case 1:
-                return e.sent(), yc.Init(), [2];
+                return e.sent(), Cc.Init(), [2];
             }
           });
         });
@@ -45426,6 +45623,9 @@
           autographguidelines: function () {
             return "/autographguidelines";
           },
+          portraitguidelines: function () {
+            return "/portraitguidelines";
+          },
           majorsregistration_requestforproposal: function () {
             return "/majorsregistration/requestforproposal";
           },
@@ -46167,7 +46367,7 @@
             t
           );
         })(a.Component),
-        m = n(32914),
+        m = n(23220),
         p = "{STEAM_CLAN_LOC_IMAGE}",
         _ = "{STEAM_CLAN_IMAGE}";
       function h(e) {
@@ -47444,7 +47644,7 @@
         s = n(40635),
         l = n.n(s),
         c = n(67506),
-        u = n(32914),
+        u = n(23220),
         d = n(70798),
         m = n(5550),
         p = n(66564),
@@ -68539,7 +68739,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 32914), e((e.s = t));
+      return (t = 23220), e((e.s = t));
       var t;
     });
     e.O();

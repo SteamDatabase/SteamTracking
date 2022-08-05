@@ -356,6 +356,9 @@ ${IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg
 ${IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg
 ${IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg
 ${IMG_URL}dpc/dpc_logo.png
+${IMG_URL}dpc/portrait_guidelines/${imageName}
+${IMG_URL}dpc/portrait_guidelines/example-player-1.jpg
+${IMG_URL}dpc/portrait_guidelines/example-player-2.jpg
 ${IMG_URL}dpc/request_for_proposal/dpc_2023_rfp.pdf
 ${IMG_URL}dpc/request_for_proposal/dpc_major_2023_rfp.pdf
 ${IMG_URL}enno/build1_poster.jpg
