@@ -33,6 +33,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+s:co
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -420,8 +421,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Aug  9 2022
-18:24:04
+Aug 10 2022
+12:34:14
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1785,11 +1786,11 @@ MXGJJ98X76
 .e<w
 cdE-T/9
 %vmJ1
-hpi	s
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+1RaB
 :v3DH
 }#ArE9
 _8t?4
@@ -1857,7 +1858,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220810012408Z0/
+220810193416Z0/
+ko[b
+RFO!
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1865,43 +1868,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		V6CV3EglhWTZb806sOZcKgZ03Q0=
+		ldrHU9kDbVPsa29bYpRFJrUht+I=
 		</data>
 		<data>
-		rV7EydyHPfcy3Zy4AF/M77mttPM=
+		qFb4SIKh0C2hhsAg7exori2rxBM=
 		</data>
 	</array>
 </dict>
 </plist>
-609<h~v/
-%mWa[p
-B$`Wu\c
-|Wv.y
-Te8j
-20220810012410Z0
+MlIG
+20220810193423Z0
+&gbS
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802164002Z
-220913164001Z0B1
-Timestamp Signer NWK11
+220802163003Z
+220913163002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-W`H/E->
-;c2%W
-qnEK"
-e}-a
-py~(
--]%v
+/5q>
+^eJE
+#}=>
+fJeM
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-t)TD}
-lnSks{gx
-my?m
-qqCJ _
-5I&0
+-*:E
+A<Lo0$
+9nbV\
+A	<g
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1940,10 +1937,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220810012410Z0#
-#Uh^
-R m/
-Bv<B-y
+&gbS
+220810193423Z0#
+m! o
+'P	g
+=sTVQ
 __TEXT
 __text
 __TEXT
@@ -2667,8 +2665,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Aug  9 2022
-18:24:05
+Aug 10 2022
+12:34:14
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4036,7 +4034,7 @@ C=r|
 !qL4
 0pQKP
 QQ^Z
-U?qc;
+}[[tA
 =j79^a
 e00;
 G+I&$
@@ -4096,7 +4094,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220810012408Z0/
+220810193416Z0/
+?6^1x4
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4104,41 +4103,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		0EPfRp5Meb8/bsWf+Dzkmovz+rg=
+		tRISkNJc/bk/Nl4xeDSdmu7r4mI=
 		</data>
 		<data>
-		+MmPgtP8Sp4ugbZloozfQrXhyQI=
+		q34rbeCEKfivWTaIJ9gq0vYjZeQ=
 		</data>
 	</array>
 </dict>
 </plist>
-JGao
-3.qDL
-Ox3>
-y3fo
-d#5K
-20220810012410Z0
-&gbS
+[`EuE
+6u|hN
+7J	>
+=p<A
+20220810193423Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802163003Z
-220913163002Z0B1
-Timestamp Signer NWK21
+220802164002Z
+220913164001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-/5q>
-^eJE
-#}=>
-fJeM
+W`H/E->
+;c2%W
+qnEK"
+e}-a
+py~(
+-]%v
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--*:E
-A<Lo0$
-9nbV\
-A	<g
+t)TD}
+lnSks{gx
+my?m
+qqCJ _
+5I&0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4177,11 +4177,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-&gbS
-220810012410Z0#
-\#~j|
-tDQ2
-1mv!36U+
+220810193423Z0#
+]Ey;
+&t`!
+,^KT
++|Wh
 __TEXT
 __text
 __TEXT
@@ -4218,6 +4218,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
+tGALg
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -4402,8 +4403,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Aug  9 2022
-18:24:05
+Aug 10 2022
+12:34:14
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5747,6 +5748,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+~q )
 vGUW
 Ux$/
 \+{V2
@@ -5760,6 +5762,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+Mb^p
 ad`m
 SR=>w
 N]\"~
@@ -5829,7 +5832,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220810012408Z0/
+220810193416Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5837,43 +5840,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		9UCtZWec0dipM2sY5Qhz4hFvGHE=
+		RSMWMXL9nP75l7A8oFIwuXNE+tI=
 		</data>
 		<data>
-		VviEcrM0Rn4UR0k38ORTwAGsKy4=
+		Ct/SM4e0EzotTuukfGPreaeZ+JE=
 		</data>
 	</array>
 </dict>
 </plist>
-.[^<
-{:*8
-'bR6F
-a	H7
-SsbO
-20220810012410Z0
+20220810193423Z0
+&gbS
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802164002Z
-220913164001Z0B1
-Timestamp Signer NWK11
+220802163003Z
+220913163002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-W`H/E->
-;c2%W
-qnEK"
-e}-a
-py~(
--]%v
+/5q>
+^eJE
+#}=>
+fJeM
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-t)TD}
-lnSks{gx
-my?m
-qqCJ _
-5I&0
+-*:E
+A<Lo0$
+9nbV\
+A	<g
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5912,5 +5908,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220810012410Z0#
-N-H-
+&gbS
+220810193423Z0#
+NT0+
+#P%X
+_=\}
