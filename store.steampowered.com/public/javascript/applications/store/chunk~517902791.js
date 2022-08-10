@@ -388,7 +388,6 @@
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
-        include_supported_languages: !0,
       };
       function d() {
         return { width: 231, height: 87 };
@@ -10978,8 +10977,7 @@
               t.BIsGameIgnored(e.GetParentAppID()))) ||
           t.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
           t.BExcludeTagIDs(e.GetTagIDs()) ||
-          e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)) ||
-          !t.BIsAnyLanguageEnabled([0, ...e.GetAllLanguagesWithSomeSupport()])
+          e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e))
         );
       }
       function v(e, t, r, s) {
