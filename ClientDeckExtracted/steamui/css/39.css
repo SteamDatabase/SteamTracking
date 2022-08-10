@@ -9335,6 +9335,9 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
     transform: translateY(0px);
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .displayscaledialog_Dialog_25KHn {
   max-width: 560px;
 }
@@ -9366,6 +9369,23 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
 }
 .displayscaledialog_YouCanChangeThisLater_LDYUg strong {
   color: #fff;
+}
+.displayscaledialog_SectionSeparator_3BK5o {
+  height: 24px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.displaysettings_TimeRangeControls_10XNA {
+  display: flex;
+  flex-direction: row;
+}
+.displaysettings_TimeRangeControls_10XNA .displaysettings_And_sL5P5 {
+  flex-shrink: 0;
+  margin: auto 1.5ch;
+}
+.displaysettings_TimeRangeControls_10XNA > *:not(.displaysettings_And_sL5P5) {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
