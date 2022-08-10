@@ -3,18 +3,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6272],
   {
-    29399: (e) => {
-      e.exports = {
-        GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
-        GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
-        Active: "tabbar_Active_37f6M",
-        GraphicalAssetStatus: "tabbar_GraphicalAssetStatus_ojMj8",
-        VOWarning: "tabbar_VOWarning_21XR-",
-        StatusSuccess: "tabbar_StatusSuccess_1HWSe",
-        StatusDanger: "tabbar_StatusDanger_2jgbN",
-        StatusCaution: "tabbar_StatusCaution_31Lxu",
-      };
-    },
     35208: (e) => {
       e.exports = {
         BroadcastChatCtn: "conferencebroadcast_BroadcastChatCtn_28b1v",
@@ -81,128 +69,18 @@
         ConferenceDateRange: "landing_ConferenceDateRange_2FSEt",
       };
     },
-    12538: (e, t, n) => {
+    30827: (e, n, t) => {
       "use strict";
-      n.d(t, { n: () => _ });
-      var a = n(67294),
-        o = n(78587),
-        c = n(7573),
-        l = n(41311),
-        r = n(31933),
-        s = n(29399),
-        i = n.n(s),
-        m = n(28268),
-        d = n(72258);
-      class u extends a.Component {
-        constructor() {
-          super(...arguments), (this.state = { activeTab: "" });
-        }
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({ activeTab: this.props.startingTab })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, r.ks)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(e) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== e.location.key &&
-            this.setState({ activeTab: (0, r.ks)(this.props.location, "tab") });
-        }
-        OnTabClick(e) {
-          this.setState({ activeTab: e.key }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, r.i9)(this.props.history, "tab", e.key),
-            e.onClick && e.onClick(e);
-        }
-        render() {
-          const e =
-            this.props.tabs.find((e) => e.key === this.state.activeTab) ||
-            this.props.tabs[0];
-          return a.createElement(
-            a.Fragment,
-            null,
-            a.createElement(
-              "div",
-              { className: i().GraphicalAssetsTabs },
-              this.props.tabs.map((t) => {
-                if (!t.hidden) {
-                  let n = "";
-                  return (
-                    "success" === t.statusType
-                      ? (n = i().StatusSuccess)
-                      : "danger" === t.statusType
-                      ? (n = i().StatusDanger)
-                      : "caution" === t.statusType && (n = i().StatusCaution),
-                    a.createElement(
-                      d.M2,
-                      {
-                        key: t.key,
-                        condition: Boolean(t.statusToolTip),
-                        wrap: (e) =>
-                          a.createElement(
-                            m.HP,
-                            { toolTipContent: t.statusToolTip || t.tooltip },
-                            e
-                          ),
-                      },
-                      a.createElement(
-                        "div",
-                        {
-                          key: t.key,
-                          className: `${i().GraphicalAssetsTab} ${
-                            t.key === e.key ? i().Active : ""
-                          }`,
-                          onClick: () => this.OnTabClick(t),
-                        },
-                        Boolean(t.vo_warning) &&
-                          a.createElement(
-                            m.HP,
-                            { toolTipContent: t.vo_warning },
-                            a.createElement(
-                              "div",
-                              { className: i().VOWarning },
-                              (0, l.Xx)("#EventEditor_VOWarning")
-                            )
-                          ),
-                        Boolean(t.status) &&
-                          a.createElement(
-                            "div",
-                            {
-                              className: (0, c.Z)(i().GraphicalAssetStatus, n),
-                            },
-                            t.status
-                          ),
-                        t.name
-                      )
-                    )
-                  );
-                }
-                return null;
-              })
-            ),
-            a.createElement("div", null, e && e.contents)
-          );
-        }
-      }
-      const _ = (0, o.EN)(u);
-    },
-    30827: (e, t, n) => {
-      "use strict";
-      n.r(t), n.d(t, { ConferenceRoutes: () => De, default: () => Te });
-      var a = n(67294),
-        o = n(78587),
-        c = n(74091),
-        l = n(63473),
-        r = n(26149),
-        s = (n(92398), n(3389)),
-        i = (n(35093), n(84047)),
-        m = n(99533),
-        d = n(90666);
+      t.r(n), t.d(n, { ConferenceRoutes: () => De, default: () => Ne });
+      var a = t(67294),
+        o = t(78587),
+        c = t(74091),
+        l = t(63473),
+        r = t(26149),
+        i = (t(92398), t(3389)),
+        s = (t(35093), t(84047)),
+        m = t(99533),
+        d = t(90666);
       class u {
         constructor() {
           (this.m_mapConferences = new Map()),
@@ -224,25 +102,25 @@
         Init() {
           let e = (0, d.kQ)("conferenceinfo", "application_config");
           if (this.ValidateStoreDefault(e)) {
-            const t = (0, r.jM)(d.De.LANGUAGE),
-              n = (0, i.cJ)(e.clan_faq_about_page),
-              a = i.xP.Get().GetFAQPublishedContent(n, t),
+            const n = (0, r.jM)(d.De.LANGUAGE),
+              t = (0, s.cJ)(e.clan_faq_about_page),
+              a = s.xP.Get().GetFAQPublishedContent(t, n),
               o = (0, l.vZ)(
                 e.localized_logo,
-                t,
+                n,
                 null == a ? void 0 : a.timestamp
               ),
               c = (0, l.vZ)(
                 e.localized_mobile_logo,
-                t,
+                n,
                 null == a ? void 0 : a.timestamp
               ),
               m = {
                 strConferenceID: e.vanity,
                 rtStartTime: e.start_rtime,
                 rtEndTime: e.end_rtime,
-                clanSteamID: new s.K(e.event_group_steamid),
-                broadcastSteamID: new s.K(e.broadcast_steamid),
+                clanSteamID: new i.K(e.event_group_steamid),
+                broadcastSteamID: new i.K(e.broadcast_steamid),
                 bPartnerOnly: e.partner_only,
                 faqAboutPage: a,
                 strLocalizedLogos: "string" == typeof o ? [o] : o,
@@ -254,127 +132,127 @@
           }
         }
         ValidateStoreDefault(e) {
-          const t = e;
+          const n = e;
           return (
-            !(!t || "object" != typeof t) &&
-            "string" == typeof t.event_group_steamid &&
-            "number" == typeof t.start_rtime &&
-            "number" == typeof t.end_rtime
+            !(!n || "object" != typeof n) &&
+            "string" == typeof n.event_group_steamid &&
+            "number" == typeof n.start_rtime &&
+            "number" == typeof n.end_rtime
           );
         }
       }
-      var _ = n(5525),
-        f = n(32548),
-        E = n(96602),
-        C = n(60501),
-        v = n(12538),
-        p = n(41311),
-        g = n(13271),
-        b = n(85503),
-        h = n(63405),
-        S = (n(69765), n(52795), n(28976)),
-        I = n(7573),
-        D = n(35208),
-        T = n(17157),
-        N = n(40185);
-      n(4344);
-      function A(e) {
-        const { conferenceInfo: t } = e,
-          n = t.broadcastSteamID.ConvertTo64BitString();
+      var f = t(5525),
+        E = t(32548),
+        C = t(96602),
+        _ = t(60501),
+        v = t(12538),
+        g = t(41311),
+        p = t(13271),
+        I = t(85503),
+        h = t(63405),
+        b = (t(69765), t(52795), t(28976)),
+        S = t(7573),
+        D = t(35208),
+        N = t(17157),
+        A = t(40185);
+      t(4344);
+      function T(e) {
+        const { conferenceInfo: n } = e,
+          t = n.broadcastSteamID.ConvertTo64BitString();
         return a.createElement(
-          f.S,
+          E.S,
           null,
           a.createElement(h.default, {
-            steamIDBroadcast: n,
+            steamIDBroadcast: t,
             watchLocation: 5,
             bStartMuted: !0,
           })
         );
       }
       function y(e) {
-        const { conferenceInfo: t } = e,
-          n = (0, g.SZ)(() => t.broadcastSteamID.ConvertTo64BitString());
+        const { conferenceInfo: n } = e,
+          t = (0, p.SZ)(() => n.broadcastSteamID.ConvertTo64BitString());
         return a.createElement(
           "div",
           {
-            className: (0, I.Z)(
+            className: (0, S.Z)(
               D.BroadcastChatCtn,
               e.className ? `${e.className}` : ""
             ),
           },
           a.createElement(
-            f.S,
+            E.S,
             null,
-            a.createElement(b.c, {
-              emoticonStore: S.D$,
+            a.createElement(I.c, {
+              emoticonStore: b.D$,
               watchLocation: 5,
-              steamID: n,
+              steamID: t,
               globalChat: !0,
-              bPartnerMemberOnlyChat: t.bPartnerOnly,
+              bPartnerMemberOnlyChat: n.bPartnerOnly,
               bInvertLayout: !0,
             })
           )
         );
       }
-      function k(e) {
-        const { conferenceInfo: t } = e,
-          [n, o] = a.useState(!1);
-        return n
+      function w(e) {
+        const { conferenceInfo: n } = e,
+          [t, o] = a.useState(!1);
+        return t
           ? null
           : a.createElement(
               "div",
-              { className: T.broadcast_floating },
-              a.createElement(N.BroadcastEmbeddablePopoutHeader, {
-                steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
+              { className: N.broadcast_floating },
+              a.createElement(A.BroadcastEmbeddablePopoutHeader, {
+                steamIDBroadcast: n.broadcastSteamID.ConvertTo64BitString(),
                 OnPreventPopup: () => o(!0),
               }),
-              a.createElement(A, { conferenceInfo: t })
+              a.createElement(T, { conferenceInfo: n })
             );
       }
-      var w = n(88254);
+      var L = t(88254);
       function x(e) {
-        const { conferenceInfo: t } = e;
+        const { conferenceInfo: n } = e;
         return "dev" != d.De.WEB_UNIVERSE
           ? null
           : a.createElement(
               "div",
               null,
               a.createElement("h1", null, "Conference Data"),
-              a.createElement(w.G, { data: t }),
+              a.createElement(L.G, { data: n }),
               a.createElement("h1", null, "Config Data"),
-              a.createElement(w.m, { strConfigID: "application_config" })
+              a.createElement(L.m, { strConfigID: "application_config" })
             );
       }
-      var M = n(69382),
-        L = n(68130),
-        G = n(95598),
-        H = n(28268),
-        P = n(30600),
-        B = n(70655),
-        R = n(35118),
-        X = n(9915);
+      var M = t(69382),
+        k = t(68130),
+        P = t(95598),
+        H = t(28268),
+        B = t(30600),
+        G = t(70655),
+        R = t(35118),
+        X = t(9915);
       class Q {
         constructor() {
           this.m_inFlight = null;
         }
-        LoadInitialCalendarData(e, t) {
-          return (0, B.mG)(this, void 0, void 0, function* () {
+        LoadInitialCalendarData(e, n) {
+          return (0, G.mG)(this, void 0, void 0, function* () {
             return (
               this.m_inFlight ||
-                (this.m_inFlight = this.InternalLoadInitialCalendarData(e, t)),
+                (this.m_inFlight = this.InternalLoadInitialCalendarData(e, n)),
               this.m_inFlight
             );
           });
         }
-        InternalLoadInitialCalendarData(e, t) {
-          return (0, B.mG)(this, void 0, void 0, function* () {
+        InternalLoadInitialCalendarData(e, n) {
+          return (0, G.mG)(this, void 0, void 0, function* () {
             X.cb.IsInitialized() || X.cb.InitGlobal(),
               (0, R.PC)({
-                collectionid: t,
+                collectionid: n,
                 bSectionByDay: !0,
                 rtCalendarEnd: e,
               });
-            const n = (0, R.vY)(),
+            const t = (0, R.vY)(),
               a = (0, d.kQ)("conference_calendar", "application_config");
             a &&
               ("dev" == d.De.WEB_UNIVERSE &&
@@ -382,45 +260,45 @@
                   "Conference LandingPage loading initial events: " + a.length,
                   a
                 ),
-              yield n.RegisterCalendarEventsAndModels(a)),
-              n.SetFilteredView((e) => !0);
+              yield t.RegisterCalendarEventsAndModels(a)),
+              t.SetFilteredView((e) => !0);
           });
         }
         static Get() {
           return Q.m_singleton || (Q.m_singleton = new Q()), Q.m_singleton;
         }
       }
-      n(80315), n(68002);
-      var O = n(81503),
-        V = (n(49186), n(7200)),
-        F = n(48341),
-        W = n(51983),
-        j = n(67546),
-        U = n(90110),
-        q = n(3044),
-        z = n(31933),
-        Z = n(22975);
+      t(80315), t(68002);
+      var F = t(81503),
+        V = (t(49186), t(7200)),
+        U = t(48341),
+        q = t(51983),
+        O = t(67546),
+        j = t(90110),
+        W = t(3044),
+        z = t(31933),
+        Z = t(22975);
       function Y(e) {
-        const { displayLocation: t, fnChangeModalEvent: n } = e,
+        const { displayLocation: n, fnChangeModalEvent: t } = e,
           [o, c] = a.useState(null),
           [l, r] = (0, z.Ar)("emgid", null),
-          [i, m] = (0, z.Ar)("emclan", null);
+          [s, m] = (0, z.Ar)("emclan", null);
         return (
-          (0, Z.Qg)(n, (e, t) => {
-            r(e), m(s.K.InitFromClanID(t).ConvertTo64BitString());
+          (0, Z.Qg)(t, (e, n) => {
+            r(e), m(i.K.InitFromClanID(n).ConvertTo64BitString());
           }),
           a.useEffect(() => {
-            if (null != l && null != i) {
-              const e = new s.K(i);
+            if (null != l && null != s) {
+              const e = new i.K(s);
               V.j1
                 .LoadPartnerEventFromClanEventGIDAndClanSteamID(e, l, 0)
                 .then(c);
             }
-          }, [l, i]),
+          }, [l, s]),
           o
-            ? a.createElement(q.x, {
+            ? a.createElement(W.x, {
                 appid: o.appid,
-                trackingLocation: t,
+                trackingLocation: n,
                 announcementGID: o.GetAnnouncementGID(),
                 partnerEventStore: V.j1,
                 eventModel: o,
@@ -432,51 +310,51 @@
             : null
         );
       }
-      var K = n(88883),
-        $ = n(8850),
-        J = n(59650),
-        ee = n(13596),
-        te = n(74163),
-        ne = n(53622),
-        ae = n(74891),
-        oe = n(75532);
+      var K = t(88883),
+        J = t(8850),
+        $ = t(59650),
+        ee = t(13596),
+        ne = t(74163),
+        te = t(53622),
+        ae = t(74891),
+        oe = t(75532);
       function ce(e) {
-        const t = (0, R.vY)(),
-          n = (0, _.F_)(10),
-          o = t.GetActiveEventsAt(n) || [],
+        const n = (0, R.vY)(),
+          t = (0, f.F_)(10),
+          o = n.GetActiveEventsAt(t) || [],
           [c] = a.useState(new m.pB()),
           l = a.useCallback(
-            (e, t) => (0, W.h)(V.j1.GetClanEventModel(e), window),
+            (e, n) => (0, q.h)(V.j1.GetClanEventModel(e), window),
             []
           );
-        return 0 == t.GetNumEventsLoaded()
+        return 0 == n.GetNumEventsLoaded()
           ? a.createElement(
               "div",
               null,
-              (0, p.Xx)("#Conference_No_Schedule_Yet")
+              (0, g.Xx)("#Conference_No_Schedule_Yet")
             )
           : a.createElement(
               "div",
               { className: oe.EventsScheduleCtn },
               a.createElement(Y, { displayLocation: 6, fnChangeModalEvent: c }),
-              a.createElement(ie, {
+              a.createElement(se, {
                 rgActiveEvents: o,
                 fnDisplayModalEvent: l,
               }),
               a.createElement(re, {
                 rgActiveEvents: o,
                 fnDisplayModalEvent: l,
-                rtNow: n,
+                rtNow: t,
               }),
               a.createElement("br", null),
               a.createElement("br", null),
               a.createElement(
-                F.zx,
+                U.zx,
                 {
                   onClick: (e) =>
-                    (0, J.AM)(a.createElement(_e, null), (0, ne.RA)(e)),
+                    (0, $.AM)(a.createElement(fe, null), (0, te.RA)(e)),
                 },
-                (0, p.Xx)("#Conference_NeedHelp")
+                (0, g.Xx)("#Conference_NeedHelp")
               )
             );
       }
@@ -488,16 +366,16 @@
         );
       }
       function re(e) {
-        const { rgActiveEvents: t, rtNow: n } = e,
+        const { rgActiveEvents: n, rtNow: t } = e,
           o = (0, R.vY)()
-            .GetCalendarItemsInTimeRange(n + 1)
-            .rgCalendarItems.filter((e) => !t.some((t) => t.GID == e.unique_id))
-            .sort((e, t) => e.start_time - t.start_time);
+            .GetCalendarItemsInTimeRange(t + 1)
+            .rgCalendarItems.filter((e) => !n.some((n) => n.GID == e.unique_id))
+            .sort((e, n) => e.start_time - n.start_time);
         return 0 == o.length
           ? a.createElement(
               "div",
               null,
-              (0, p.Xx)("#Conference_No_More_Schedule")
+              (0, g.Xx)("#Conference_No_More_Schedule")
             )
           : a.createElement(
               "div",
@@ -505,34 +383,34 @@
               a.createElement(
                 "div",
                 { className: oe.SectionTitle },
-                (0, p.Xx)("#Conference_ScheduleNext")
+                (0, g.Xx)("#Conference_ScheduleNext")
               ),
               a.createElement(
                 "div",
                 { className: oe.EventSchedCtn },
                 o.map((o, c) =>
-                  a.createElement(se, {
+                  a.createElement(ie, {
                     key: o.unique_id,
-                    bDisplayAsUpNext: Boolean(0 == c && t.length >= 1),
+                    bDisplayAsUpNext: Boolean(0 == c && n.length >= 1),
                     calendarItem: o,
                     fnDisplayModalEvent: e.fnDisplayModalEvent,
-                    rtNow: n,
+                    rtNow: t,
                   })
                 )
               )
             );
       }
-      function se(e) {
+      function ie(e) {
         const {
-            calendarItem: t,
-            bDisplayAsUpNext: n,
+            calendarItem: n,
+            bDisplayAsUpNext: t,
             fnDisplayModalEvent: o,
             rtNow: c,
           } = e,
-          l = V.j1.GetClanEventModel(t.unique_id),
-          s = (0, r.jM)(d.De.LANGUAGE),
-          i = l.GetStartTimeAndDateUnixSeconds(),
-          m = (0, P.yK)(new Date(1e3 * c), new Date(1e3 * i));
+          l = V.j1.GetClanEventModel(n.unique_id),
+          i = (0, r.jM)(d.De.LANGUAGE),
+          s = l.GetStartTimeAndDateUnixSeconds(),
+          m = (0, B.yK)(new Date(1e3 * c), new Date(1e3 * s));
         return a.createElement(
           "div",
           {
@@ -542,32 +420,32 @@
           a.createElement(
             "div",
             { className: oe.Title },
-            l.GetNameWithFallback(s)
+            l.GetNameWithFallback(i)
           ),
           a.createElement(
             "div",
             { className: oe.SessionTime },
-            !m && a.createElement("div", null, (0, p.$1)(i, !0)),
+            !m && a.createElement("div", null, (0, g.$1)(s, !0)),
             a.createElement(
               "div",
               null,
-              Boolean(n && m)
-                ? (0, p.Xx)(
+              Boolean(t && m)
+                ? (0, g.Xx)(
                     "#Conference_StartInMin",
-                    Math.max(1, Math.floor((i - c) / 60))
+                    Math.max(1, Math.floor((s - c) / 60))
                   )
-                : (0, p.Xx)(
+                : (0, g.Xx)(
                     "#Conference_StartsAt",
-                    (0, ae.Sc)(i, { bForce24HourClock: !1 })
+                    (0, ae.Sc)(s, { bForce24HourClock: !1 })
                   )
             )
           ),
           a.createElement(
             "div",
-            { className: (0, I.Z)(oe.ReminderContainer, oe.OnlyIcon) },
-            a.createElement(U.m, {
+            { className: (0, S.Z)(oe.ReminderContainer, oe.OnlyIcon) },
+            a.createElement(j.m, {
               eventModel: l,
-              lang: s,
+              lang: i,
               bOnlyShowIcon: !0,
               bExpandLeft: !0,
               bShowStartTime: !1,
@@ -575,12 +453,12 @@
           )
         );
       }
-      function ie(e) {
-        const { rgActiveEvents: t, fnDisplayModalEvent: n } = e;
-        if (!t || 0 == t.length) return null;
-        const o = t[0],
+      function se(e) {
+        const { rgActiveEvents: n, fnDisplayModalEvent: t } = e;
+        if (!n || 0 == n.length) return null;
+        const o = n[0],
           c = (0, r.jM)(d.De.LANGUAGE),
-          l = O.R.ParseEventModelPresenters(o, c);
+          l = F.R.ParseEventModelPresenters(o, c);
         return a.createElement(
           "div",
           { className: oe.ActiveEventCtn },
@@ -619,40 +497,40 @@
             "div",
             {
               className: oe.ReadMoreBtn,
-              onClick: () => n(o.GID, o.clanSteamID.GetAccountID()),
+              onClick: () => t(o.GID, o.clanSteamID.GetAccountID()),
             },
-            (0, p.Xx)("#EventEmail_Button_ClickForMoreDetails")
+            (0, g.Xx)("#EventEmail_Button_ClickForMoreDetails")
           )
         );
       }
       function me(e) {
-        const { conferenceInfo: t } = e,
-          n = (0, R.vY)(),
-          o = (0, _.F_)(10),
-          c = n.GetActiveEventsAt(o) || [],
+        const { conferenceInfo: n } = e,
+          t = (0, R.vY)(),
+          o = (0, f.F_)(10),
+          c = t.GetActiveEventsAt(o) || [],
           [l] = a.useState(new m.pB()),
-          r = n
-            .GetCalendarItemsInTimeRange(t.rtStartTime - 1, o)
+          r = t
+            .GetCalendarItemsInTimeRange(n.rtStartTime - 1, o)
             .rgCalendarItems.filter(
               (e) => 0 == c.length || c[0].GID != e.unique_id
             )
-            .sort((e, t) => e.start_time - t.start_time);
+            .sort((e, n) => e.start_time - n.start_time);
         return 0 == r.length
-          ? a.createElement("div", null, (0, p.Xx)("#Conference_NoPastEvents"))
+          ? a.createElement("div", null, (0, g.Xx)("#Conference_NoPastEvents"))
           : a.createElement(
               "div",
               { className: oe.PastEventsCtn },
               a.createElement(Y, { displayLocation: 6, fnChangeModalEvent: l }),
               r.map((e) => {
-                const t = V.j1.GetClanEventModel(e.unique_id);
-                return a.createElement(j.V, {
+                const n = V.j1.GetClanEventModel(e.unique_id);
+                return a.createElement(O.V, {
                   key: "row" + e.unique_id,
-                  eventModel: t,
+                  eventModel: n,
                   calendarEvent: e,
                   bSuppressHoverEffects: !1,
                   mode: "wide",
                   fnOnClicked: () =>
-                    l.Dispatch(t.GID, t.clanSteamID.GetAccountID()),
+                    l.Dispatch(n.GID, n.clanSteamID.GetAccountID()),
                 });
               })
             );
@@ -665,34 +543,34 @@
         );
       }
       function ue(e) {
-        const { conferenceInfo: t } = e,
-          n = (0, te.T)("WithCalendarStore"),
+        const { conferenceInfo: n } = e,
+          t = (0, ne.T)("WithCalendarStore"),
           [o, c] = (0, a.useState)(!0);
         return (
           (0, a.useEffect)(() => {
-            n.token.reason ||
+            t.token.reason ||
               Q.Get()
-                .LoadInitialCalendarData(t.rtEndTime, t.strConferenceID)
+                .LoadInitialCalendarData(n.rtEndTime, n.strConferenceID)
                 .finally(() => {
-                  n.token.reason || c(!1);
+                  t.token.reason || c(!1);
                 });
-          }, [t.rtEndTime, t.strConferenceID, n]),
+          }, [n.rtEndTime, n.strConferenceID, t]),
           o
             ? a.createElement(ee.V, null)
             : a.createElement(a.Fragment, null, e.children)
         );
       }
-      function _e(e) {
-        const { closeModal: t } = e;
+      function fe(e) {
+        const { closeModal: n } = e;
         return a.createElement(
-          $.uH,
+          J.uH,
           {
-            strTitle: (0, p.Xx)("#Conference_NeedHelp"),
+            strTitle: (0, g.Xx)("#Conference_NeedHelp"),
             bAlertDialog: !0,
-            onCancel: t,
-            onOK: t,
+            onCancel: n,
+            onOK: n,
           },
-          a.createElement("div", null, (0, p.Xx)("#Conference_NeedHelp_Desc1")),
+          a.createElement("div", null, (0, g.Xx)("#Conference_NeedHelp_Desc1")),
           a.createElement(
             "div",
             null,
@@ -702,7 +580,7 @@
               a.createElement(
                 "div",
                 null,
-                (0, p.Xx)("#Conference_NeedHelp_BroadcastChatQ")
+                (0, g.Xx)("#Conference_NeedHelp_BroadcastChatQ")
               ),
               a.createElement(
                 "ul",
@@ -710,19 +588,19 @@
                 a.createElement(
                   "li",
                   null,
-                  (0, p.Xx)("#Conference_NeedHelp_ChatA1")
+                  (0, g.Xx)("#Conference_NeedHelp_ChatA1")
                 ),
                 a.createElement(
                   "li",
                   null,
-                  (0, p.kQ)(
+                  (0, g.kQ)(
                     "#Conference_NeedHelp_BroadcastChatA1",
                     a.createElement(
                       "a",
                       {
                         href: "https://help.steampowered.com/en/faqs/view/71D3-35C2-AD96-AA3A",
                       },
-                      (0, p.Xx)("#Conferenec_NeedHelp_LimitedAccounts")
+                      (0, g.Xx)("#Conferenec_NeedHelp_LimitedAccounts")
                     )
                   )
                 )
@@ -734,7 +612,7 @@
               a.createElement(
                 "div",
                 null,
-                (0, p.Xx)("#Conference_NeedHelp_QandAQ")
+                (0, g.Xx)("#Conference_NeedHelp_QandAQ")
               ),
               a.createElement(
                 "ul",
@@ -742,7 +620,7 @@
                 a.createElement(
                   "li",
                   null,
-                  (0, p.Xx)("#Conference_NeedHelp_ChatA1")
+                  (0, g.Xx)("#Conference_NeedHelp_ChatA1")
                 )
               )
             ),
@@ -752,63 +630,63 @@
               a.createElement(
                 "span",
                 null,
-                (0, p.Xx)("#Conference_NeedHelp_StillHaveQuestions")
+                (0, g.Xx)("#Conference_NeedHelp_StillHaveQuestions")
               ),
               a.createElement(
                 "a",
                 {
                   href: "https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933",
                 },
-                (0, p.Xx)("#Conference_NeedHelp_CreateTicket")
+                (0, g.Xx)("#Conference_NeedHelp_CreateTicket")
               )
             )
           )
         );
       }
-      var fe = n(38560),
-        Ee = n(77765),
-        Ce = n(8456);
+      var Ee = t(38560),
+        Ce = t(77765),
+        _e = t(8456);
       function ve(e) {
-        const { conferenceInfo: t, bShowYouTube: n } = e,
+        const { conferenceInfo: n, bShowYouTube: t } = e,
           [o, c] = a.useState(!1),
-          l = (0, _.F_)(P._H.PerMinute) < t.rtStartTime - 30 * P._H.PerMinute;
+          l = (0, f.F_)(B._H.PerMinute) < n.rtStartTime - 30 * B._H.PerMinute;
         return a.createElement(
           "div",
-          { className: fe.ConferenceHome },
+          { className: Ee.ConferenceHome },
           a.createElement(
             "div",
-            { className: (0, I.Z)(fe.LeftCol, o ? "Active" : "Hidden") },
+            { className: (0, S.Z)(Ee.LeftCol, o ? "Active" : "Hidden") },
             a.createElement(
               "div",
-              { className: fe.AgendaCtn },
-              a.createElement(le, { conferenceInfo: t }),
+              { className: Ee.AgendaCtn },
+              a.createElement(le, { conferenceInfo: n }),
               a.createElement(
                 "div",
                 {
-                  className: fe.AgendaToggle,
+                  className: Ee.AgendaToggle,
                   onClick: () => {
                     c(!o);
                   },
                 },
                 a.createElement(
                   H.HP,
-                  { toolTipContent: (0, p.Xx)("#QAndA_HideSchedule") },
+                  { toolTipContent: (0, g.Xx)("#QAndA_HideSchedule") },
                   a.createElement(
                     "div",
-                    { className: fe.CollapseBtn },
-                    a.createElement(G.NP6, { angle: 0 })
+                    { className: Ee.CollapseBtn },
+                    a.createElement(P.NP6, { angle: 0 })
                   )
                 ),
                 a.createElement(
                   H.HP,
-                  { toolTipContent: (0, p.Xx)("#QAndA_ShowSchedule") },
+                  { toolTipContent: (0, g.Xx)("#QAndA_ShowSchedule") },
                   a.createElement(
                     "div",
-                    { className: fe.CalendarBtn },
-                    a.createElement(G.faS, null),
+                    { className: Ee.CalendarBtn },
+                    a.createElement(P.faS, null),
                     a.createElement(
                       "div",
-                      { className: fe.CalendarText },
+                      { className: Ee.CalendarText },
                       "See Event Schedule"
                     )
                   )
@@ -818,242 +696,242 @@
           ),
           a.createElement(
             "div",
-            { className: fe.MainCol },
-            n &&
-              a.createElement(Ee.O, {
-                videoID: t.youtubeVideoID,
+            { className: Ee.MainCol },
+            t &&
+              a.createElement(Ce.O, {
+                videoID: n.youtubeVideoID,
                 classNameAlign: "",
-                classNameSize: Ce.sizeFull,
+                classNameSize: _e.sizeFull,
                 bAutoPlay: !0,
                 bShowVideoImmediately: !0,
               }),
             Boolean(l)
               ? a.createElement(
                   "div",
-                  { className: fe.InteractionCtn },
+                  { className: Ee.InteractionCtn },
                   a.createElement(
                     "div",
-                    { className: fe.PreEventNote },
-                    (0, p.Xx)("#Conference_ChatHidden", 30)
+                    { className: Ee.PreEventNote },
+                    (0, g.Xx)("#Conference_ChatHidden", 30)
                   )
                 )
-              : a.createElement(pe, { conferenceInfo: t })
+              : a.createElement(ge, { conferenceInfo: n })
           )
         );
       }
-      function pe(e) {
-        const { conferenceInfo: t } = e,
-          [n, o] = a.useState(window.innerWidth > 910),
+      function ge(e) {
+        const { conferenceInfo: n } = e,
+          [t, o] = a.useState(window.innerWidth > 910),
           [c, l] = a.useState(!0),
           r =
             d.De.COMMUNITY_BASE_URL +
             "broadcast/chatonly/" +
-            t.broadcastSteamID.ConvertTo64BitString(),
-          s =
+            n.broadcastSteamID.ConvertTo64BitString(),
+          i =
             d.De.COMMUNITY_BASE_URL +
             "questions/" +
             d.JA.VANITY_ID +
             "/view/" +
-            t.globalQandASessionID;
+            n.globalQandASessionID;
         return a.createElement(
           "div",
-          { className: fe.InteractionCtn },
+          { className: Ee.InteractionCtn },
           a.createElement(
             "div",
-            { className: fe.TabControlsCtn },
+            { className: Ee.TabControlsCtn },
             a.createElement(
               "div",
               {
-                className: (0, I.Z)(
-                  fe.InnerChatTab,
-                  fe.ChatTab,
-                  n ? fe.Active : ""
+                className: (0, S.Z)(
+                  Ee.InnerChatTab,
+                  Ee.ChatTab,
+                  t ? Ee.Active : ""
                 ),
               },
               a.createElement(
                 "div",
                 {
-                  className: fe.TabTitle,
+                  className: Ee.TabTitle,
                   onClick: () => {
                     o(!0), l(!1);
                   },
                 },
-                (0, p.Xx)("#Conference_Tab_Chat")
+                (0, g.Xx)("#Conference_Tab_Chat")
               ),
               a.createElement(
                 H.HP,
-                { toolTipContent: (0, p.Xx)("#QAndA_PopOutChat_ttip") },
+                { toolTipContent: (0, g.Xx)("#QAndA_PopOutChat_ttip") },
                 a.createElement(
                   "a",
-                  { className: fe.Popout, href: r, target: "_blank" },
-                  a.createElement(G.yRy, null)
+                  { className: Ee.Popout, href: r, target: "_blank" },
+                  a.createElement(P.yRy, null)
                 )
               )
             ),
             a.createElement(
               "div",
               {
-                className: (0, I.Z)(
-                  fe.InnerChatTab,
-                  fe.QATab,
-                  c ? fe.Active : ""
+                className: (0, S.Z)(
+                  Ee.InnerChatTab,
+                  Ee.QATab,
+                  c ? Ee.Active : ""
                 ),
               },
               a.createElement(
                 "div",
                 {
-                  className: fe.TabTitle,
+                  className: Ee.TabTitle,
                   onClick: () => {
                     o(!1), l(!0);
                   },
                 },
-                (0, p.Xx)("#Conference_Tab_QandA")
+                (0, g.Xx)("#Conference_Tab_QandA")
               ),
               a.createElement(
                 H.HP,
-                { toolTipContent: (0, p.Xx)("#QAndA_PopOutQAndA_ttip") },
+                { toolTipContent: (0, g.Xx)("#QAndA_PopOutQAndA_ttip") },
                 a.createElement(
                   "a",
-                  { className: fe.Popout, href: s, target: "_blank" },
-                  a.createElement(G.yRy, null)
+                  { className: Ee.Popout, href: i, target: "_blank" },
+                  a.createElement(P.yRy, null)
                 )
               )
             ),
             a.createElement(
               H.HP,
-              { toolTipContent: (0, p.Xx)("#QAndA_ChatToggle_ShowBoth") },
+              { toolTipContent: (0, g.Xx)("#QAndA_ChatToggle_ShowBoth") },
               a.createElement(
                 "div",
                 {
-                  className: fe.ShowBothTabs,
+                  className: Ee.ShowBothTabs,
                   onClick: () => {
                     o(!0), l(!0);
                   },
                 },
-                a.createElement(G.chI, null)
+                a.createElement(P.chI, null)
               )
             )
           ),
           a.createElement(
             "div",
-            { className: fe.ChatStack },
-            Boolean((n && c) || (!c && !n)) &&
+            { className: Ee.ChatStack },
+            Boolean((t && c) || (!c && !t)) &&
               a.createElement(
                 a.Fragment,
                 null,
                 a.createElement(
                   "div",
-                  { className: fe.ChatColumn },
+                  { className: Ee.ChatColumn },
                   a.createElement(y, {
-                    conferenceInfo: t,
-                    className: fe.ChatCtn,
+                    conferenceInfo: n,
+                    className: Ee.ChatCtn,
                   })
                 ),
                 a.createElement(
                   "div",
-                  { className: fe.QAColumn },
-                  a.createElement(M.kF, { gidSession: t.globalQandASessionID })
+                  { className: Ee.QAColumn },
+                  a.createElement(M.kF, { gidSession: n.globalQandASessionID })
                 )
               ),
-            Boolean(n && !c) &&
-              a.createElement(y, { conferenceInfo: t, className: fe.ChatCtn }),
-            Boolean(!n && c) &&
-              a.createElement(M.kF, { gidSession: t.globalQandASessionID })
+            Boolean(t && !c) &&
+              a.createElement(y, { conferenceInfo: n, className: Ee.ChatCtn }),
+            Boolean(!t && c) &&
+              a.createElement(M.kF, { gidSession: n.globalQandASessionID })
           )
         );
       }
-      function ge(e) {
-        const { conferenceInfo: t } = e;
-        if (!t.faqAboutPage)
-          return a.createElement("div", null, (0, p.Xx)("#Conference_NoAbout"));
-        const { title: n, content: o, timestamp: c } = t.faqAboutPage;
+      function pe(e) {
+        const { conferenceInfo: n } = e;
+        if (!n.faqAboutPage)
+          return a.createElement("div", null, (0, g.Xx)("#Conference_NoAbout"));
+        const { title: t, content: o, timestamp: c } = n.faqAboutPage;
         return a.createElement(
           "div",
           null,
-          a.createElement("div", { className: fe.AboutTitle }, n),
-          a.createElement(L.R, { text: o, bShowErrorInfo: !1 })
+          a.createElement("div", { className: Ee.AboutTitle }, t),
+          a.createElement(k.R, { text: o, bShowErrorInfo: !1 })
         );
       }
-      function be(e) {
-        const { conferenceInfo: t } = e;
-        return a.createElement(de, { conferenceInfo: t });
+      function Ie(e) {
+        const { conferenceInfo: n } = e;
+        return a.createElement(de, { conferenceInfo: n });
       }
-      var he = n(55609);
-      function Se(e) {
-        const { strVanity: t } = e,
-          n = u.Get().GetConferenceInfo(t);
-        return n
+      var he = t(55609);
+      function be(e) {
+        const { strVanity: n } = e,
+          t = u.Get().GetConferenceInfo(n);
+        return t
           ? a.createElement(
-              f.S,
+              E.S,
               null,
               a.createElement(
                 "div",
                 { className: he.ConferencePageCtn },
-                a.createElement(Ie, { conferenceInfo: n })
+                a.createElement(Se, { conferenceInfo: t })
               )
             )
-          : a.createElement("div", null, (0, p.Xx)("#Conference_Invalid"));
+          : a.createElement("div", null, (0, g.Xx)("#Conference_Invalid"));
       }
-      function Ie(e) {
-        const { conferenceInfo: t } = e,
-          n = (e) =>
+      function Se(e) {
+        const { conferenceInfo: n } = e,
+          t = (e) =>
             window.sessionStorage.setItem(
               "conferenceCurrentTab",
               `?tab=${e.key}`
             ),
           o = [],
-          c = (0, _.zD)();
+          c = (0, f.zD)();
         return (
-          c < t.rtEndTime &&
+          c < n.rtEndTime &&
             o.push({
-              name: (0, p.Xx)("#Conference_tab_Home"),
+              name: (0, g.Xx)("#Conference_tab_Home"),
               key: "live",
               contents: a.createElement(
-                f.S,
+                E.S,
                 null,
                 a.createElement(ve, {
-                  bShowYouTube: !!t.youtubeVideoID,
-                  conferenceInfo: t,
+                  bShowYouTube: !!n.youtubeVideoID,
+                  conferenceInfo: n,
                 })
               ),
-              onClick: n,
+              onClick: t,
             }),
           o.push({
-            name: (0, p.Xx)("#Conference_tab_Past"),
+            name: (0, g.Xx)("#Conference_tab_Past"),
             key: "past",
             contents: a.createElement(
-              f.S,
+              E.S,
               null,
-              a.createElement(be, { conferenceInfo: t }),
-              !t.youtubeVideoID &&
-                Boolean(c < t.rtEndTime) &&
-                a.createElement(k, { conferenceInfo: t })
+              a.createElement(Ie, { conferenceInfo: n }),
+              !n.youtubeVideoID &&
+                Boolean(c < n.rtEndTime) &&
+                a.createElement(w, { conferenceInfo: n })
             ),
-            onClick: n,
+            onClick: t,
           }),
           o.push({
-            name: (0, p.Xx)("#Conference_tab_Info"),
+            name: (0, g.Xx)("#Conference_tab_Info"),
             key: "about",
             contents: a.createElement(
-              f.S,
+              E.S,
               null,
-              a.createElement(ge, { conferenceInfo: t }),
-              !t.youtubeVideoID &&
-                Boolean(c < t.rtEndTime) &&
-                a.createElement(k, { conferenceInfo: t })
+              a.createElement(pe, { conferenceInfo: n }),
+              !n.youtubeVideoID &&
+                Boolean(c < n.rtEndTime) &&
+                a.createElement(w, { conferenceInfo: n })
             ),
-            onClick: n,
+            onClick: t,
           }),
           o.push({
             name: "(VO/WebUniveser=Dev) Debug",
             key: "debug",
             hidden: "dev" != d.De.WEB_UNIVERSE,
             contents: a.createElement(
-              f.S,
+              E.S,
               null,
-              a.createElement(x, { conferenceInfo: t })
+              a.createElement(x, { conferenceInfo: n })
             ),
-            onClick: n,
+            onClick: t,
           }),
           a.createElement(
             "div",
@@ -1061,20 +939,20 @@
             a.createElement(
               "div",
               { className: he.ConferenceHeaderCtn },
-              a.createElement(C.j, {
+              a.createElement(_.j, {
                 className: he.LogoImage,
-                rgSources: t.strLocalizedLogos,
+                rgSources: n.strLocalizedLogos,
               }),
-              a.createElement(C.j, {
+              a.createElement(_.j, {
                 className: he.LogoImageMobile,
-                rgSources: t.strLocalizedMobileLogos,
+                rgSources: n.strLocalizedMobileLogos,
               }),
               a.createElement(
                 "div",
                 { className: he.ConferenceDateRange },
-                a.createElement(E.Sw, {
-                  rtStartDate: t.rtStartTime,
-                  rtEndDate: t.rtEndTime,
+                a.createElement(C.Sw, {
+                  rtStartDate: n.rtStartTime,
+                  rtEndDate: n.rtEndTime,
                 })
               )
             ),
@@ -1085,7 +963,7 @@
       const De = {
         LandingPage: (e) => `/(conference|steamworksvirtualconference)/${e}`,
       };
-      const Te = function (e) {
+      const Ne = function (e) {
         return a.createElement(
           o.rs,
           null,
@@ -1095,18 +973,18 @@
               a.createElement(c.d, {
                 config: {
                   "conference-root": () => {
-                    const { vanity_str: t } = e.match.params;
-                    return a.createElement(Se, {
-                      strVanity: t.toLocaleLowerCase(),
+                    const { vanity_str: n } = e.match.params;
+                    return a.createElement(be, {
+                      strVanity: n.toLocaleLowerCase(),
                     });
                   },
                 },
               }),
           }),
-          a.createElement(o.AW, { component: Ne })
+          a.createElement(o.AW, { component: Ae })
         );
       };
-      function Ne(e) {
+      function Ae(e) {
         return "dev" !== d.De.WEB_UNIVERSE
           ? a.createElement(o.l_, { to: "/" })
           : a.createElement(

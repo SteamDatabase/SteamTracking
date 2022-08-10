@@ -249,17 +249,6 @@
       (0, n.gn)([r.LO], i.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const c = new i();
     },
-    27991: (e, t, a) => {
-      "use strict";
-      a.d(t, { nf: () => l });
-      var n = a(37694),
-        r = (a(67294), a(65902)),
-        o = (a(159), a(74163), a(90666));
-      function l(e) {
-        n.OT.BIsInitialized() ||
-          n.OT.Initialize(new r.J(o.De.WEBAPI_BASE_URL, e));
-      }
-    },
     70350: (e, t, a) => {
       "use strict";
       a.d(t, { KE: () => F, T4: () => L, _G: () => R });
@@ -1225,8 +1214,8 @@
         z = a(93981),
         H = a(44298),
         V = a(2388),
-        W = a(83147);
-      function X(e) {
+        X = a(83147);
+      function W(e) {
         const t = V.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
           let a = new z.Pv(e);
@@ -1241,7 +1230,7 @@
       }
       const Z = (e) => {
         e.steamid.GetAccountID();
-        const [t, a] = (0, n.useState)(X(e.steamid)),
+        const [t, a] = (0, n.useState)(W(e.steamid)),
           [r, o] = (0, n.useState)(V.y$.GetProfileURLBySteamID(e.steamid)),
           [s, i] = (0, n.useState)(V.y$.GetPersonaNameBySteamID(e.steamid));
         return (
@@ -1250,7 +1239,7 @@
               (() =>
                 (0, l.mG)(void 0, void 0, void 0, function* () {
                   yield V.y$.LoadProfiles([e.steamid.ConvertTo64BitString()]),
-                    a(X(e.steamid)),
+                    a(W(e.steamid)),
                     o(V.y$.GetProfileURLBySteamID(e.steamid)),
                     i(V.y$.GetPersonaNameBySteamID(e.steamid));
                 }))();
@@ -1258,7 +1247,7 @@
           }, [e.steamid, t]),
           n.createElement(
             "div",
-            { className: W.AvatarCtn },
+            { className: X.AvatarCtn },
             n.createElement(
               "a",
               {
@@ -1273,7 +1262,7 @@
             ),
             n.createElement(
               "div",
-              { className: W.NameAndProps },
+              { className: X.NameAndProps },
               Boolean(e.bShowName) &&
                 n.createElement(
                   "a",
@@ -1293,8 +1282,8 @@
         $ = a(9410),
         q = a(95598),
         Y = a(72258),
-        J = a(35092),
-        Q = a(87266);
+        Q = a(35092),
+        J = a(87266);
       function ee(e) {
         const { broadcasterSteamID: t } = e,
           a = t.ConvertTo64BitString(),
@@ -1308,15 +1297,15 @@
           null,
           n.createElement(
             "div",
-            { className: Q.ProfileCtn },
+            { className: J.ProfileCtn },
             n.createElement(
               "a",
               {
-                href: (0, J.OL)(
+                href: (0, Q.OL)(
                   (null == l ? void 0 : l.GetStorePageURL()) ||
                     v.De.STORE_BASE_URL + "app/" + o
                 ),
-                className: Q.GameCapsule,
+                className: J.GameCapsule,
               },
               n.createElement("img", {
                 src: null == l ? void 0 : l.GetAssets().GetMainCapsuleURL(),
@@ -1324,17 +1313,17 @@
             ),
             n.createElement(
               "div",
-              { className: Q.StreamDetailsCtn },
+              { className: J.StreamDetailsCtn },
               n.createElement(
                 "div",
-                { className: Q.GameAndOptionsCtn },
+                { className: J.GameAndOptionsCtn },
                 n.createElement(
                   "div",
-                  { className: Q.GameAndViewersCtn },
+                  { className: J.GameAndViewersCtn },
                   n.createElement(te, { broadcasterSteamID: t }),
                   n.createElement(
                     "div",
-                    { className: Q.ViewerCount },
+                    { className: J.ViewerCount },
                     (0, k.kb)("#Broadcast_ViewerCount", r.toLocaleString())
                   )
                 ),
@@ -1355,12 +1344,12 @@
             [l] = (0, K.vs)(o, { include_assets: !0 });
           return n.createElement(
             "div",
-            { className: Q.BroadcastTitleCtn },
+            { className: J.BroadcastTitleCtn },
             (0, k.Xx)("#Broadcast_Playing"),
             n.createElement(
               "a",
               {
-                href: (0, J.OL)(
+                href: (0, Q.OL)(
                   (null == l ? void 0 : l.GetStorePageURL()) ||
                     v.De.STORE_BASE_URL + "app/" + o
                 ),
@@ -1377,7 +1366,7 @@
           d.c9.GetOrCreateBroadcastInfo(a);
           return n.createElement(
             "div",
-            { className: Q.BroadcastUserActionsCtn },
+            { className: J.BroadcastUserActionsCtn },
             Boolean(
               v.L7.steamid != e.broadcasterSteamID.ConvertTo64BitString()
             ) &&

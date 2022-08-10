@@ -39,7 +39,7 @@ $J.extend( $J.fn.dataTableExt.oSort, {
 	}
 });
 
-const UTM_MAX_CELL_DISPLAY_LENGTH = 25;
+const UTM_MAX_CELL_DISPLAY_LENGTH = 20;
 
 // truncate long strings which can otherwise cause the column width to grow
 function ellipsifyUTMCellData( data )

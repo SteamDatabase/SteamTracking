@@ -124,6 +124,9 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 		else
 			$Tag.show();
 	}
+
+	// apply tag filter text if not empty
+	$Container.trigger( 'tablefilter_update' );
 }
 
 function FillFormFromNavigation( querystring, link_click, initial_load )
@@ -287,7 +290,7 @@ function ReplaceTerm( term )
 	AjaxSearchResults();
 }
 
-var g_ajaxInFlight;
+var g_ajaxInFlight = null;
 var g_rgDesiredParameters = null;
 var g_rgCurrentParameters = null;
 var g_bPopulatingSearchControls = false;
@@ -621,6 +624,10 @@ function DecorateFilterControls()
 		var $dataStore = $J('#' + strParam);
 		var antiField = $dataStore.data('antifield');
 
+		$Control.mousedown( function( event ) {
+			event.preventDefault(); // don't take focus on a checkbox click
+		});
+
 		$Control.click( function() {
 			var $antiStore = antiField ? $J('#' + antiField) : null;
 			var strValues = decodeURIComponent( $dataStore.val() );
@@ -647,8 +654,6 @@ function DecorateFilterControls()
 					// Set checked on our parent row.
 					$Control.parent().addClass( 'checked' );
 				}
-
-				$Control.trigger('tablefilter_clear');
 			}
 			// When unchecking a field, no extra anti-field work is needed.
 			else {

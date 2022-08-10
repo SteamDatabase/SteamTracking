@@ -195,6 +195,9 @@ div.jqplot-table-legend-swatch-outline {
 .stat_tracked {
     color: #91b807;
 }
+.stat_trackedTrusted {
+    color: #69bff3;
+}
 .stat_wishlist {
     color: #c1bc20;
 }

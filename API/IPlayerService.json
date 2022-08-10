@@ -123,6 +123,12 @@
                     "type": "bool",
                     "optional": true,
                     "description": "if set, skip unvetted store apps"
+                },
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Will return appinfo in this language"
                 }
             ]
         },

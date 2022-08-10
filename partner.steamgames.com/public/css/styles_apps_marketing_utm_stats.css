@@ -30,9 +30,13 @@
 }
 
 #utmdetails_table th {
-	background-color: #434953;
+	background-color: #151618;
 	padding-right: 10px;
 	vertical-align: top;
+}
+#utmdetails_table th.sorting {
+	padding-right: 20px;
+	vertical-align: bottom;
 }
 
 #utmdetails_table th select {
@@ -43,8 +47,11 @@
 	background-color: #303030;
 }
 
-#utmdetails_table tr td {
+#utmdetails_table tr td.clickable {
 	cursor: pointer;
+}
+#utmdetails_table tr td.clickable:hover {
+	background-color: #3c4148;
 }
 
 #utmdetails_table td.group {

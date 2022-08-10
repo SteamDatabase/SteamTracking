@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7422415";
+var CLSTAMP = "7426991";
 !(function (e) {
   var t = {};
   function n(r) {
@@ -356,7 +356,7 @@ var CLSTAMP = "7422415";
           return t;
       }
     }
-    var C, R, k, T, b, N, O;
+    var R, C, k, T, b, N, O;
     !(function (e) {
       (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
         "k_EConnectivityTestResult_Unknown"),
@@ -372,7 +372,7 @@ var CLSTAMP = "7422415";
           "k_EConnectivityTestResult_WifiDisabled"),
         (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
           "k_EConnectivityTestResult_NoLAN");
-    })(C || (C = {})),
+    })(R || (R = {})),
       (function (e) {
         (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
           "k_ENetFakeLocalSystemState_Normal"),
@@ -386,7 +386,7 @@ var CLSTAMP = "7422415";
             "k_ENetFakeLocalSystemState_NoInternet"),
           (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
             "k_ENetFakeLocalSystemState_NoSteam");
-      })(R || (R = {})),
+      })(C || (C = {})),
       (function (e) {
         (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
           "k_ESuspendResumeProgressState_Invalid"),
@@ -530,6 +530,7 @@ var CLSTAMP = "7422415";
         IN_GAMEPADUI: !1,
         ON_DECK: !1,
         IN_LOGIN: !1,
+        IN_LOGIN_REFRESH: !1,
         IN_STANDALONE_KEYBOARD: !1,
       },
       s = {
@@ -991,6 +992,8 @@ var CLSTAMP = "7422415";
         a((r = r.apply(e, t || [])).next());
       });
     }
+    Object.create;
+    Object.create;
   },
   tkkQ: function (e, t, n) {
     "use strict";

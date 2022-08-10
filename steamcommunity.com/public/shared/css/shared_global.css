@@ -496,6 +496,47 @@
 	margin-top: 0;
 }
 
+.miniprofile_playtimesection {
+    border: none;
+    min-height: 57px;
+    box-sizing: border-box;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: radial-gradient( circle at top left, rgba(81, 148, 255, 0.5) 0%, rgba(0, 39, 112, 0.075) 100% ), linear-gradient(to bottom, rgba(58, 148, 184, 0.637) 0%, rgba(106, 201, 239, 0.15) 1px, rgba(19, 100, 133, 0.1) 25%, rgba(106, 201, 239, 0.0) 50% );
+}
+
+.miniprofile_playtimesection .gamelogo {
+    width: 120px;
+    height: 55px;
+    margin-right: 12px;
+    box-shadow: 0 0 2px black ;
+}
+
+.miniprofile_playtimesection .playtimecontent {
+    color: rgba(181, 255, 255, 0.5);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.miniprofile_playtimesection .playtimecontent div:nth-child(2) {
+    margin-top: 4px;
+}
+
+.miniprofile_playtimesection .playtimecontent .timeplayed {
+    color: rgb(181, 255, 255);
+}
+
+.miniprofile_playtimesection.forcurrentgame {
+    padding: 0px;
+    align-items: initial;
+    min-height: 0px;
+    background: transparent;
+}
+
 .miniprofile_background {
 	position: absolute;
 	top: 0;

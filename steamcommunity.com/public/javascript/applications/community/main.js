@@ -2276,7 +2276,7 @@
               c.push("restoredetails=" + t.strRestoreDetails),
             t.window_opener_id && c.push("openerid=" + t.window_opener_id),
             c && (l += "?" + c.join("&"));
-          let u = (t.owner_window || window).open(l, e, o, !0);
+          let u = (t.owner_window || window).open(l, e, o);
           if (!u)
             return (
               console.log(
@@ -12829,12 +12829,9 @@
         FindBestActiveDropRegionForPoint(e, t) {
           const n = this.m_activeDraggable.GetDragDocument();
           let r;
-          if ("elementsFromPoint" in n) r = n.elementsFromPoint(e, t);
-          else if ("msElementsFromPoint" in n) {
-            const i = n.msElementsFromPoint;
-            r = Array.from(i(e, t));
-          }
-          if (r) {
+          if (
+            ("elementsFromPoint" in n && (r = n.elementsFromPoint(e, t)), r)
+          ) {
             const e = new Map();
             this.m_rgActiveDropRegions.forEach((t) => e.set(t.GetElement(), t));
             for (const t of r) {
@@ -13790,33 +13787,37 @@
       var lt = n(52992);
       i.forwardRef(function (e, t) {
         const { className: n } = e,
-          s = (0, r._T)(e, ["className"]),
-          [a, l] = i.useState(!1),
-          u = () => l((e) => !e);
+          s = (0, r._T)(e, ["className"]);
+        let a = i.useRef(),
+          l = (0, z.BE)(t, a);
+        const [u, d] = i.useState(!1),
+          m = i.useCallback(() => {
+            d((e) => !e), window.setTimeout(() => a.current.Focus(), 1);
+          }, []);
         return i.createElement(
           o.s,
           {
             className: n,
-            onOptionsButton: u,
+            onOptionsButton: m,
             onOptionsActionDescription: (0, c.Xx)(
-              a ? "#Login_HidePassword" : "#Login_ShowPassword"
+              u ? "#Login_HidePassword" : "#Login_ShowPassword"
             ),
           },
           i.createElement(
             q,
             Object.assign(
               {
-                bIsPassword: !a,
+                bIsPassword: !u,
                 autoComplete: "off",
-                ref: t,
+                ref: l,
                 inlineControls: i.createElement(
                   x,
                   {
                     className: lt.TogglePasswordVisibilityBtn,
-                    onPointerDown: u,
-                    onOKButton: u,
+                    onPointerDown: m,
+                    onOKButton: m,
                   },
-                  a
+                  u
                     ? i.createElement(it.Hz5, null)
                     : i.createElement(it.dQJ, null)
                 ),
@@ -19472,8 +19473,6 @@
       }
       function a(e, t) {
         return {
-          width: t.width,
-          height: t.height,
           top: e.screenTop + t.top,
           bottom: e.screenTop + t.bottom,
           left: e.screenLeft + t.left,
@@ -20831,6 +20830,7 @@
           IN_GAMEPADUI: !1,
           ON_DECK: !1,
           IN_LOGIN: !1,
+          IN_LOGIN_REFRESH: !1,
           IN_STANDALONE_KEYBOARD: !1,
         },
         o = {
@@ -21096,11 +21096,12 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(5503),
             n.e(8075),
-            n.e(2677),
             n.e(508),
+            n.e(648),
             n.e(400),
             n.e(2136),
           ]).then(n.bind(n, 34098))
@@ -21114,11 +21115,12 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(5503),
             n.e(8075),
-            n.e(2677),
             n.e(508),
+            n.e(648),
             n.e(400),
             n.e(9349),
           ]).then(n.bind(n, 88569))
@@ -21132,11 +21134,12 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(5503),
             n.e(8075),
-            n.e(2677),
             n.e(508),
+            n.e(648),
             n.e(400),
             n.e(3352),
           ]).then(n.bind(n, 93871))
@@ -21154,6 +21157,7 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(5503),
             n.e(2449),
@@ -21171,6 +21175,7 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(5503),
             n.e(8075),
@@ -21187,9 +21192,10 @@
             n.e(3742),
             n.e(5253),
             n.e(9427),
+            n.e(3973),
             n.e(9348),
             n.e(8075),
-            n.e(2677),
+            n.e(648),
             n.e(2449),
             n.e(8120),
             n.e(1649),

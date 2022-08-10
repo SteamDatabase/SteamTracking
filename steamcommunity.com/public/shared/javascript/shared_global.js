@@ -1017,11 +1017,27 @@ function InitMiniprofileHovers()
 	$Hover.hide();
 	$J(document.body).append( $Hover );
 
-	var fnDataFactory = function( key ) { return new CDelayedAJAXData( 'miniprofile/' + key, MINIPROFILE_DELAY_BEFORE_AJAX ); };
+	var fnDataFactory = function( key ) {
+		var rgKey = key.split( /_/ );
+		var strURL = 'miniprofile/' + rgKey[0];
+
+		if ( rgKey[1] )
+        {
+			strURL += '?appid=' + rgKey[1];
+        }
+
+		return new CDelayedAJAXData( strURL, MINIPROFILE_DELAY_BEFORE_AJAX );
+	};
+
+	var fnReadKey = function ( $Target ) {
+		var appid = $Target.parents('[data-miniprofile-appid]').first().data('miniprofile-appid');
+		return $Target.data('miniprofile') + '_' + appid;
+	};
 
 	var rgCallbacks = BindAJAXHovers( $Hover, $HoverContent, {
 		fnDataFactory: fnDataFactory,
 		fnPositionHover: PositionMiniprofileHover,
+		fnReadKey: fnReadKey,
 		strDataName: 'miniprofile',
 		strURLMatch: 'miniprofile'
 	}  );

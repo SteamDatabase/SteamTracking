@@ -1182,7 +1182,7 @@
               c.push("restoredetails=" + t.strRestoreDetails),
             t.window_opener_id && c.push("openerid=" + t.window_opener_id),
             c && (l += "?" + c.join("&"));
-          let u = (t.owner_window || window).open(l, e, r, !0);
+          let u = (t.owner_window || window).open(l, e, r);
           if (!u)
             return (
               console.log(
@@ -8166,12 +8166,9 @@
         FindBestActiveDropRegionForPoint(e, t) {
           const n = this.m_activeDraggable.GetDragDocument();
           let i;
-          if ("elementsFromPoint" in n) i = n.elementsFromPoint(e, t);
-          else if ("msElementsFromPoint" in n) {
-            const o = n.msElementsFromPoint;
-            i = Array.from(o(e, t));
-          }
-          if (i) {
+          if (
+            ("elementsFromPoint" in n && (i = n.elementsFromPoint(e, t)), i)
+          ) {
             const e = new Map();
             this.m_rgActiveDropRegions.forEach((t) => e.set(t.GetElement(), t));
             for (const t of i) {
@@ -9127,33 +9124,37 @@
       var it = n(52992);
       o.forwardRef(function (e, t) {
         const { className: n } = e,
-          s = (0, i._T)(e, ["className"]),
-          [a, l] = o.useState(!1),
-          u = () => l((e) => !e);
+          s = (0, i._T)(e, ["className"]);
+        let a = o.useRef(),
+          l = (0, K.BE)(t, a);
+        const [u, d] = o.useState(!1),
+          h = o.useCallback(() => {
+            d((e) => !e), window.setTimeout(() => a.current.Focus(), 1);
+          }, []);
         return o.createElement(
           r.s,
           {
             className: n,
-            onOptionsButton: u,
+            onOptionsButton: h,
             onOptionsActionDescription: (0, c.Xx)(
-              a ? "#Login_HidePassword" : "#Login_ShowPassword"
+              u ? "#Login_HidePassword" : "#Login_ShowPassword"
             ),
           },
           o.createElement(
             q,
             Object.assign(
               {
-                bIsPassword: !a,
+                bIsPassword: !u,
                 autoComplete: "off",
-                ref: t,
+                ref: l,
                 inlineControls: o.createElement(
                   F,
                   {
                     className: it.TogglePasswordVisibilityBtn,
-                    onPointerDown: u,
-                    onOKButton: u,
+                    onPointerDown: h,
+                    onOKButton: h,
                   },
-                  a
+                  u
                     ? o.createElement(Je.Hz5, null)
                     : o.createElement(Je.dQJ, null)
                 ),

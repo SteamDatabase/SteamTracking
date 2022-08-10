@@ -119,7 +119,8 @@
   width: 270px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb {
-  background: gray;
+  background: #3d4450;
+  color: #fff;
   padding: 12px;
   font-size: 18px;
   font-weight: 500;
@@ -127,12 +128,14 @@
   text-align: center;
   letter-spacing: 0.03em;
   width: 50%;
+  border: none;
+  border-radius: 2px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:hover {
-  background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
+  background: #525b6a;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:active {
-  background: linear-gradient(90deg, #06bfff 50%, #2d73ff 100%);
+  background: #2f343e;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE {
   background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
@@ -351,14 +354,17 @@
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 200;
-  margin-bottom: -36px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshReason_3jz0o {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 8px;
+  color: #dfe3e6;
+  font-size: 15px;
+  margin-bottom: 28px;
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh {
+.newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh.IN_CLIENT {
+  width: 630px;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_StandardLayout_286eh:not(.IN_CLIENT) {
   width: 700px;
 }
 .newlogindialog_Login_ZOBYq
@@ -414,8 +420,13 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf {
   background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
   padding: 34px 40px 15px 40px;
-  width: 700px;
   box-sizing: border-box;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf.IN_CLIENT {
+  width: 630px;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
+  width: 700px;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf
@@ -455,6 +466,9 @@
 }
 .qrcode_QRBits_3FhhK {
   display: grid;
+}
+.qrcode_Bit_2Yuvr.qrcode_Active_274P1 {
+  background-color: #212328;
 }
 .qrcode_Bit_2Yuvr:not(.qrcode_Active_274P1) {
   background-color: #1999ff;
