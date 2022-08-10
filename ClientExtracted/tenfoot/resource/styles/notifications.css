@@ -563,6 +563,20 @@
     background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }
 
+#ControllerConfigImage.controller_switch_joycon_left,
+#ControllerConfigImage.controller_switch_joycon_right,
+#ControllerImage.controller_switch_joycon_left,
+#ControllerImage.controller_switch_joycon_right
+{
+    background-image: url( "file://{images}/controller_icon_switch_joycon_single.png" );
+}
+
+#ControllerConfigImage.controller_switch_joycon_pair,
+#ControllerImage.controller_switch_joycon_pair,
+{
+    background-image: url( "file://{images}/controller_icon_switch_joycon_pair.png" );
+}
+
 #ControllerConfigImage.controller_mobile_touch,
 #ControllerImage.controller_mobile_touch,
 {

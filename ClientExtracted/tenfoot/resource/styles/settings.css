@@ -4067,19 +4067,9 @@ SettingsPanel_ControllerConfigs .SettingsContent
     visibility: collapse;
 }
 
-#SettingsController_NintendoLayout.NintendoEnabled
-{
-    visibility: visible;
-}
-
 #NintendoLayoutPanel
 {
     height: 800px;
-}
-
-#SettingsController_NintendoLayout
-{
-    visibility: collapse;
 }
 
 #NintendoLayoutHelpImage

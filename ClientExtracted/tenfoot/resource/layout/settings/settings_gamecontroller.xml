@@ -23,8 +23,9 @@
 				</Button>
 				<ToggleButton class="CheckBox" id="SettingsController_SwitchSupport" text="#SettingsController_SwitchSupport" selectionpos="auto" onactivate="ControllerSetting_SwitchSupport()" onfocus="OnNonControllerButtonFocused(5);" />
 				<ToggleButton class="CheckBox" id="SettingsController_NintendoLayout" text="#SettingsController_NintendoLayout" selectionpos="auto" onactivate="ControllerSetting_NintendoLayout()" onfocus="OnNonControllerButtonFocused(6);" />
-				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused(7);" />
-				<Button id="RecoverFirmware" class="Button" selectionpos="auto" onactivate="ControllerFirmwareRecovery();" onfocus="OnNonControllerButtonFocused(8);">
+				<ToggleButton class="CheckBox" id="SettingsController_CombinedJoycon" text="#SettingsController_CombinedJoycon" selectionpos="auto" onactivate="ControllerSetting_CombinedJoycon()" onfocus="OnNonControllerButtonFocused(7);" />
+				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused(8);" />
+				<Button id="RecoverFirmware" class="Button" selectionpos="auto" onactivate="ControllerFirmwareRecovery();" onfocus="OnNonControllerButtonFocused(9);">
 					<Label class="LongDesc" text="#Library_Details_FirmwareRecover" />
 				</Button>
 				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused(9);">
@@ -129,6 +130,7 @@
 					<Label class="NintendoLayoutHelpText" text="#SettingsController_NintendoLayoutSetupText" />
 					<Image id="NintendoLayoutHelpImage" />
 				</Panel>
+				<Label class="CombinedJoyconHelpText" text="#SettingsController_CombinedJoyconHelpText" />
 				<Label class="GenericHelpText" text="#SettingsController_GenericJoystickSetupText" />
 				<Label class="FirmwareRecovery" text="#SettingsController_FirmwareRecoveryWarning_Body" />
 				<Label class="AddAController" />

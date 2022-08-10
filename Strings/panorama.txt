@@ -174,6 +174,7 @@ HB
 1
 1
 1
+1
 
 
 
@@ -2848,7 +2849,6 @@ PowerA Spectra Infinity Controller
 PowerA Xbox One Controller
 Xbox One Elite Controller
 Xbox One Elite 2 Controller
-HORI Fighting Commander
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 row_stride_out >= row_stride
@@ -5381,8 +5381,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Aug  5 2022
-15:54:59
+Aug  9 2022
+18:26:37
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8292,6 +8292,7 @@ HB
 1
 1
 1
+1
 
 
 
@@ -8353,7 +8354,6 @@ F
 !
 &
 `+
--
 1
 +
 +
@@ -8417,6 +8417,7 @@ Ic
 -
 d
 Uk/
+v*
 K
 @
 @
@@ -8448,13 +8449,14 @@ K
 @
 @
 0
+H*
 @
 @
 p&
 &
 &
 &
-P)
+|)
 @
 @
 @
@@ -8480,12 +8482,13 @@ k$
 (
 (
 (
-(
+)
 )
 )
 -
 '
 $
+u'
 #
 1
 1
@@ -8509,13 +8512,13 @@ $
 #
 @
 #
-&
 P
 0
 (
 (
 P
 j
+e#
 ,
 t0
 A
@@ -8523,7 +8526,6 @@ A
 A
 A
 (
-R#
 U"
 #
 #
@@ -8532,6 +8534,7 @@ E9u
 "
 E9u
 "
+&
 @
 A
 A
@@ -8542,12 +8545,10 @@ A
 A
 A
 +
-u"
 %
 7/
 3/
-"
-$
+v"
 !
 *
 *
@@ -8555,18 +8556,22 @@ d.
 }
 '
 %,
+9#
 
 @
+#
+@"
 -
 +
 +
+t"
 (
 ,
 !
 !
 !
 !
-v
+g
 }
 )
 "
@@ -8991,6 +8996,8 @@ V
 
 
 @
+
+
 
 
 

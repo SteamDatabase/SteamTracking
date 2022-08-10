@@ -1092,8 +1092,9 @@
 	"SettingsController_XboxDriverUninstall_Failure"	"Driver removal failed with error code {s:error}"
 	"SettingsController_XboxDriverRestart_Now"			"RESTART"
 	"SettingsController_XboxDriverRestart_Later"		"LATER"
-	"SettingsController_SwitchSupport"					"Switch Pro Configuration Support"
+	"SettingsController_SwitchSupport"					"Switch Configuration Support"
 	"SettingsController_NintendoLayout"					"  Use Nintendo Button Layout"
+	"SettingsController_CombinedJoycon"					"  Combine Pairs of Joy-Con Controllers"
 	"SettingsController_GenericGamepadSupport"			"Generic Gamepad Configuration Support"
 	"SettingsController_CheckGuideButton"				"Guide Button Focuses Steam"
 	"SettingsController_PreviewWaterMark"				"PREVIEW"
@@ -1729,6 +1730,7 @@
 
 	"Controller_OptOut_Title"			"Configuration Support Disabled"
 	"Controller_OptOut_Desc"			"Configuration support for the {s:controllertype} is disabled.  {s:controllertype} Configuration support must be enabled in Steam's main Controller Settings and Support for this Game must be enabled under this game's Controller Options."
+	"Controller_OptOut_Switch_Desc"			"Configuration support for Nintendo Switch controllers is disabled. Nintendo Switch Controller Configuration support must be enabled in Steam's main Controller Settings and Support for this Game must be enabled under this game's Controller Options."
 	"Controller_GameBundledConfigError_Title"	"Game Configuration Unavailable"
 	"Controller_GameBundledConfigError_Desc"	"This game includes the official configuration in the game files. Please install the game to view the configuration."
 
@@ -5081,7 +5083,8 @@
 	"SettingsController_XBoxSetupText"	"If Steam Input XBox Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers.\n\nNote: On Windows you may need to adjust your Xbox DVR application settings in order for the Guide Button to register."
 	"SettingsController_XBoxDriverText"	"If Xbox Extended Feature Support is enabled, Steam will use a custom driver to provide access to up to 16 Xbox Controllers and allow you to bind the paddles of the Xbox Elite Controllers.\n\nNote: You must reboot your computer after installing or uninstalling the custom driver."
 	"SettingsController_SwitchSetupText"	"If Steam Input Switch Configuration Support is enabled, it will then be reconfigurable per-game using the same Configurator system available to Steam Controllers.\n\nNote: This setting must be disabled for Switch Pro controllers to work in games not launched through Steam while Steam is running."
-	"SettingsController_NintendoLayoutSetupText"	"If Nintendo Layout is enabled, configurations on Switch Pro Controllers will flip the A and B buttons and X and Y buttons.  When used with default X-Input style layouts this will help the button names to match more closely, but with different physical layout."
+	"SettingsController_NintendoLayoutSetupText"	"If Nintendo Layout is enabled, configurations on Switch Controllers will flip the A and B buttons and X and Y buttons.  When used with default X-Input style layouts this will help the button names to match more closely, but with different physical layout."
+	"SettingsController_CombinedJoyconHelpText" "If Combine Pairs of Joy-Con Controllers is enabled, right and left Joy-Con controllers will be combined into a single Switch Pro style controller."
 	"SettingsController_GuideButtonSetupText" "Note: On Windows you may need to adjust your Xbox DVR application settings in order for the Guide Button to register"
 	"SettingsController_TurnOffSetupText" "If \"Turn off on Big Picture Exit\" is enabled Steam will turn off wirelessly connected controllers when shutting down"
 	"SettingsController_IdleTurnOffSetupText" "Steam will turn off your controller after it has been idle for this amount of time"
