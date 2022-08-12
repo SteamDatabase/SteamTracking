@@ -32479,7 +32479,7 @@
                 n.getImageData(0, 0, t.width, t.height).data[3] > 0
               );
             },
-            k = "Image files must be named '(player account id).png'",
+            k = "Image files must be named <friend id>.png",
             O = "Image dimensions must be 1024x512 pixels",
             P = "Image must be a compatible .png file",
             F = "Image must have a transparent background",
@@ -33026,7 +33026,7 @@
           {
             imageName: "adobe-express-download-png.jpg",
             locIdentifier: "download",
-            bullets: 4,
+            bullets: 5,
           },
         ],
         Do = function (e) {
