@@ -129,6 +129,12 @@
                     "type": "string",
                     "optional": false,
                     "description": "Will return appinfo in this language"
+                },
+                {
+                    "name": "include_extended_appinfo",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "true if we want even more details (capsule, sortas, and capabilities) about each game.  include_appinfo must also be true."
                 }
             ]
         },

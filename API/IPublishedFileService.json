@@ -781,6 +781,212 @@
             ]
         },
         {
+            "name": "GetUserFileCount",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Retrieves a count of files published by a user. Uses the same messages as GetUserFiles but totalonly must be true.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID of the user whose files are being requested."
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "App Id of the app that the files were published to."
+                },
+                {
+                    "name": "page",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "(Optional) Starting page for results."
+                },
+                {
+                    "name": "numperpage",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "(Optional) The number of results, per page to return."
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": true,
+                    "description": "(Optional) Type of files to be returned."
+                },
+                {
+                    "name": "sortmethod",
+                    "type": "string",
+                    "optional": true,
+                    "description": "(Optional) Sorting method to use on returned values."
+                },
+                {
+                    "name": "privacy",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "(optional) Filter by privacy settings."
+                },
+                {
+                    "name": "requiredtags",
+                    "type": "string",
+                    "optional": false,
+                    "description": "(Optional) Tags that must be present on a published file to satisfy the query."
+                },
+                {
+                    "name": "excludedtags",
+                    "type": "string",
+                    "optional": false,
+                    "description": "(Optional) Tags that must NOT be present on a published file to satisfy the query."
+                },
+                {
+                    "name": "required_kv_tags",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "Required key-value tags to match on."
+                },
+                {
+                    "name": "filetype",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "(Optional) File type to match files to."
+                },
+                {
+                    "name": "creator_appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "App Id of the app that published the files, only matched if specified."
+                },
+                {
+                    "name": "match_cloud_filename",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Match this cloud filename if specified."
+                },
+                {
+                    "name": "cache_max_age_seconds",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Allow stale data to be returned for the specified number of seconds."
+                },
+                {
+                    "name": "language",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "Specifies the localized text to return. Defaults to English."
+                },
+                {
+                    "name": "taggroups",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "(Optional) At least one of the tags must be present on a published file to satisfy the query."
+                },
+                {
+                    "name": "totalonly",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "(Optional) If true, only return the total number of files that satisfy this query."
+                },
+                {
+                    "name": "ids_only",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "(Optional) If true, only return the published file ids of files that satisfy this query."
+                },
+                {
+                    "name": "return_vote_data",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Return vote data"
+                },
+                {
+                    "name": "return_tags",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return tags in the file details"
+                },
+                {
+                    "name": "return_kv_tags",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Return key-value tags in the file details"
+                },
+                {
+                    "name": "return_previews",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return preview image and video details in the file details"
+                },
+                {
+                    "name": "return_children",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return child item ids in the file details"
+                },
+                {
+                    "name": "return_short_description",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Populate the short_description field instead of file_description"
+                },
+                {
+                    "name": "return_for_sale_data",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return pricing information, if applicable"
+                },
+                {
+                    "name": "return_metadata",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Populate the metadata field"
+                },
+                {
+                    "name": "return_playtime_stats",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Return playtime stats for the specified number of days before today."
+                },
+                {
+                    "name": "strip_description_bbcode",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Strips BBCode from descriptions."
+                },
+                {
+                    "name": "return_reactions",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If true, then reactions to items will be returned."
+                },
+                {
+                    "name": "startindex_override",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Backwards compatible for the client."
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return the data for the specified revision."
+                },
+                {
+                    "name": "return_apps",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Return list of apps the items belong to"
+                }
+            ]
+        },
+        {
             "name": "SetDeveloperMetadata",
             "version": 1,
             "httpmethod": "POST",
