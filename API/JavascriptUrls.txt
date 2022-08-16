@@ -606,7 +606,6 @@ ${IMG_URL}team_2586976.png
 ${IMG_URL}team_unknown.png
 ${IMG_URL}team_unkown.png
 ${IMG_URL}teams_override/team_unknown_web.png
-${IMG_URL}teams_override_nope/${nTeamID}.png
 ${IMG_URL}teaser/valve_logo.png
 ${IMG_URL}valve_logo.png
 ${IMG_URL}x_close.png

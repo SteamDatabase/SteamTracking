@@ -19480,14 +19480,13 @@
             : o.createElement("div", null, e.children);
         }),
         er = o.memo(function (e) {
-          var t = (0, o.useState)(0 == e.nTeamID ? 1 : 0),
+          var t = (0, o.useState)(0),
             n = t[0],
             r = t[1],
             a = (0, o.useState)(0 == e.nTeamID),
             i = a[0],
             s = a[1],
             l = [
-              g.Y.IMG_URL + "teams_override_nope/" + e.nTeamID + ".png",
               g.Y.CDN_URL + "apps/dota2/teamlogos/" + e.nTeamID + ".png",
               g.Y.IMG_URL + "teams_override/team_unknown_web.png",
               "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -19495,7 +19494,7 @@
           return (
             (0, o.useEffect)(
               function () {
-                r(0 == e.nTeamID ? 1 : 0), s(0 == e.nTeamID);
+                r(0), s(0 == e.nTeamID);
               },
               [e.nTeamID]
             ),
