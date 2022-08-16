@@ -19487,7 +19487,7 @@
             i = a[0],
             s = a[1],
             l = [
-              g.Y.IMG_URL + "teams_override/" + e.nTeamID + ".png",
+              g.Y.IMG_URL + "teams_override_nope/" + e.nTeamID + ".png",
               g.Y.CDN_URL + "apps/dota2/teamlogos/" + e.nTeamID + ".png",
               g.Y.IMG_URL + "teams_override/team_unknown_web.png",
               "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
