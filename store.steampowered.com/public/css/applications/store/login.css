@@ -4,6 +4,12 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13 {
   display: flex;
   flex-direction: row;
+  flex: 1;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13 {
+    flex-direction: column;
+  }
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS {
   flex: 0;
@@ -11,11 +17,83 @@
   gap: 4px;
   margin-left: 24px;
 }
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 48px;
+  }
+}
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_ScanQRButton_IsYb2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #32353c;
+  border-radius: 2px;
+  border: none;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_ScanQRButton_IsYb2:hover {
+  background-color: #393c44;
+}
+@media screen and (min-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_QRSection_2ZDyS
+    .newlogindialog_ScanQRButton_IsYb2 {
+    display: none;
+  }
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_ScanQRButton_IsYb2
+  .newlogindialog_QRIcon_2zKSq {
+  color: #1999ff;
+  width: 25px;
+  margin: 8px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_QRSection_2ZDyS
+    .newlogindialog_QRCodeContainer_3YjUm {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_QRCodeContainer_3YjUm
   .newlogindialog_QR_1d6FZ {
   aspect-ratio: 1;
   border-radius: 2px;
+  margin: 8px 8px 8px 0px;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_HideButton_u88sc {
+  display: none;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_ShowQR_12nP- {
+  display: flex;
+  flex-direction: column;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_UseMobileAppForQR_9xgsv {
+  text-align: center;
+  font-size: 12px;
+  color: #afafaf;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK {
   display: grid;
@@ -329,10 +407,28 @@
   padding: 10px 28px;
   cursor: text;
   border: 1px solid transparent;
+  position: relative;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Disabled_2HFP7 {
+  background-color: #26272b;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Danger_1-HwJ {
   border-color: #c15755;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_SegmentedCharacterInput_1kJ6q
+  .newlogindialog_Loading_i9MK3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SegmentedCharacterInput_1kJ6q
@@ -365,7 +461,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh:not(.IN_CLIENT) {
-  width: 700px;
+  width: 100%;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh
@@ -375,6 +471,13 @@
   text-transform: uppercase;
   letter-spacing: 0.055em;
   font-weight: 200;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_StandardLayout_286eh
+    .newlogindialog_PrimaryHeader_39uMK {
+    text-align: center;
+  }
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh
@@ -389,6 +492,7 @@
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc {
   background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
   padding: 40px 32px 15px 32px;
+  width: inherit;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
@@ -426,7 +530,7 @@
   width: 630px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
-  width: 700px;
+  width: 100%;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf
@@ -437,6 +541,22 @@
   padding-top: 15px;
   color: #afafaf;
   font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1
+    .newlogindialog_AccountCreation_19yGb {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf
@@ -475,8 +595,12 @@
 }
 .qrlogin_LoginQR_1wtS3 {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: calc(200px - 2.5em);
+  height: calc(200px - 2.5em);
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1.25em;
+  border-radius: 0.625em;
 }
 .qrlogin_LoginQR_1wtS3.qrlogin_Blur_3j1v- {
   filter: blur(5px);

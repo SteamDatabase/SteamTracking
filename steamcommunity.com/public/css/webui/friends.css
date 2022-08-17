@@ -2040,6 +2040,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   position: relative;
   overflow: hidden;
   --left-track-color: #1a9fff;
+  border-radius: 3px;
 }
 .gamepadslider_SliderTrack_1yMK-.gamepadslider_SliderHasNotches_R1k_9 {
   width: calc(100% - 20px);
@@ -2240,6 +2241,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_wJcd2 svg {
   width: 0;
   min-width: 4em;
   border: none;
+  border-radius: 3px;
   outline: none;
   padding: 4px 8px;
   box-sizing: border-box;
@@ -8264,7 +8266,7 @@ span.partnereventshared_tooltip_Ctn_1JlN_ {
   max-width: 100%;
 }
 .partnereventshared_SaleSectionHeader_tYyZc span {
-  color: #969696;
+  color: #fff;
 }
 .partnereventshared_SaleSectionContainer_sWcXL {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -8696,6 +8698,703 @@ button.Primary.partnereventshared_AddSectionButton_1Wscd {
   align-items: center;
   justify-content: center;
 }
+.newlogindialog_Login_-2IXP {
+  position: relative;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SideBySide_1VPfP {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_-2IXP .newlogindialog_SideBySide_1VPfP {
+    flex-direction: column;
+  }
+}
+.newlogindialog_Login_-2IXP .newlogindialog_QRSection_R9KmM {
+  flex: 0;
+  display: grid;
+  gap: 4px;
+  margin-left: 24px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_-2IXP .newlogindialog_QRSection_R9KmM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 48px;
+  }
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_ScanQRButton_2tPqY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #32353c;
+  border-radius: 2px;
+  border: none;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_ScanQRButton_2tPqY:hover {
+  background-color: #393c44;
+}
+@media screen and (min-width: 700px) {
+  .newlogindialog_Login_-2IXP
+    .newlogindialog_QRSection_R9KmM
+    .newlogindialog_ScanQRButton_2tPqY {
+    display: none;
+  }
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_ScanQRButton_2tPqY
+  .newlogindialog_QRIcon_f0CA1 {
+  color: #1999ff;
+  width: 25px;
+  margin: 8px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_-2IXP
+    .newlogindialog_QRSection_R9KmM
+    .newlogindialog_QRCodeContainer_oA2_A {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_QRCodeContainer_oA2_A
+  .newlogindialog_QR_3IwkL {
+  aspect-ratio: 1;
+  border-radius: 2px;
+  margin: 8px 8px 8px 0px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_HideButton_ETbgw {
+  display: none;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_ShowQR_1iSty {
+  display: flex;
+  flex-direction: column;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_QRSection_R9KmM
+  .newlogindialog_UseMobileAppForQR_hSI9x {
+  text-align: center;
+  font-size: 12px;
+  color: #afafaf;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextField_1_9W5 {
+  display: grid;
+  grid-template-areas: "label hint" "input input";
+  grid-template-columns: 1fr min-content;
+  gap: 2px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextInput_3ktcw {
+  border-radius: 2px;
+  color: #fff;
+  padding: 10px;
+  background-color: #32353c;
+  outline: none;
+  font-size: 15px;
+  grid-area: input;
+  border: 1px solid #32353c;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextInput_3ktcw:hover {
+  background-color: #393c44;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_TextInput_3ktcw.newlogindialog_Danger_2ZO8- {
+  border-color: #c15755;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_LoginForm_LWJYZ {
+  flex: 1;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_FieldLabel_1tLjM {
+  font-size: 12px;
+  color: #afafaf;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_FieldLabel_1tLjM.newlogindialog_Highlight_2jILW {
+  color: #1999ff;
+  font-weight: 500;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_CheckboxField_ovVtt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_CheckboxField_ovVtt
+  .newlogindialog_CheckboxFieldLabel_1aShI {
+  color: #afafaf;
+  font-size: 12px;
+  user-select: none;
+  padding-left: 6px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_Checkbox_3JdFM {
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+  border-radius: 2px;
+  background-color: #32353c;
+  cursor: pointer;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_Checkbox_3JdFM
+  .newlogindialog_Check_3Lom4 {
+  width: 100%;
+  height: 100%;
+  background-color: #1999ff;
+  border-radius: 2px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_Checkbox_3JdFM:hover {
+  background-color: #393c44;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_Checkbox_3JdFM:focus {
+  outline: 1px #06bfff solid;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_CheckboxField_ovVtt:hover
+  .newlogindialog_Checkbox_3JdFM {
+  background-color: #393c44;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshButtonContainer_3Luoc {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  gap: 15px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_RefreshButtonContainer_3Luoc
+  button {
+  width: 50%;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SignInButtonContainer_3sUXi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SignInButtonContainer_3sUXi button {
+  width: 270px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshQuitButton_3yQP7 {
+  background: #3d4450;
+  color: #fff;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.03em;
+  width: 50%;
+  border: none;
+  border-radius: 2px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshQuitButton_3yQP7:hover {
+  background: #525b6a;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshQuitButton_3yQP7:active {
+  background: #2f343e;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SubmitButton_1n4vt {
+  background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SubmitButton_1n4vt:hover {
+  background: linear-gradient(90deg, #06bfff 30%, #2d73ff 100%);
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SubmitButton_1n4vt:active {
+  background: linear-gradient(90deg, #06bfff 50%, #2d73ff 100%);
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SubmitButton_1n4vt:disabled {
+  opacity: 0.5;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SubmitButton_1n4vt:focus {
+  outline: solid #06bfff;
+  outline-width: 1px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_Text_3lNRP {
+  color: #afafaf;
+  font-size: 12px;
+  display: inline-block;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_Text_3lNRP.newlogindialog_Center_1B202 {
+  text-align: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextLink_wj6ht {
+  color: #afafaf;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextLink_wj6ht:hover {
+  color: #c9c9c9;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_FormError_2nB3O {
+  color: #c15755;
+  font-size: 12px;
+  font-weight: 500;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_TextAlignCenter_m9fML {
+  text-align: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_FlexCol_1pn1y {
+  display: flex;
+  flex-direction: column;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_AlignItemsCenter_1udg4 {
+  align-items: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_JustifyContentCenter_qTbml {
+  justify-content: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_ProtectingAccount_CRJft {
+  text-align: center;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_ProtectingAccount_CRJft
+  .newlogindialog_Label_2LKhA {
+  font-size: 18px;
+  font-weight: 500;
+  color: #afafaf;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_ProtectingAccount_CRJft
+  .newlogindialog_AccountName_lQtcL {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_ProtectingAccount_CRJft
+  .newlogindialog_Description_1iMqm {
+  font-size: 14px;
+  color: #afafaf;
+  opacity: 0.5;
+  font-weight: 500;
+  padding-top: 6px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_AwaitingMobileConfText_2JBKE {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  max-width: 450px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_AwaitingMobileConfIcon_gL5IU {
+  width: 55px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EnterCodeInsteadLink_1F_ID {
+  font-size: 12px;
+  color: #1999ff;
+  text-align: center;
+  cursor: pointer;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EnterCodeFromMobileContainer_22gB1,
+.newlogindialog_Login_-2IXP .newlogindialog_EnterCodeFromEmailContainer_26YRA {
+  padding: 0 12px;
+  gap: 24px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromMobileContainer_22gB1
+  .newlogindialog_EnterCodeFromMobile_29Qo4,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromMobileContainer_22gB1
+  .newlogindialog_EnterCodeFromEmail_2mhrS,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromEmailContainer_26YRA
+  .newlogindialog_EnterCodeFromMobile_29Qo4,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromEmailContainer_26YRA
+  .newlogindialog_EnterCodeFromEmail_2mhrS {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromMobileContainer_22gB1
+  .newlogindialog_EnterCodeFromMobile_29Qo4
+  .newlogindialog_EnterCodeEmailAddress_1KNlC,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromMobileContainer_22gB1
+  .newlogindialog_EnterCodeFromEmail_2mhrS
+  .newlogindialog_EnterCodeEmailAddress_1KNlC,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromEmailContainer_26YRA
+  .newlogindialog_EnterCodeFromMobile_29Qo4
+  .newlogindialog_EnterCodeEmailAddress_1KNlC,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EnterCodeFromEmailContainer_26YRA
+  .newlogindialog_EnterCodeFromEmail_2mhrS
+  .newlogindialog_EnterCodeEmailAddress_1KNlC {
+  color: #1999ff;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_CodeInputFieldContainer_3-Mzd {
+  position: relative;
+  background-color: #32353c;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_CodeInputFieldContainer_3-Mzd
+  .newlogindialog_CodeInputField_kHGYG {
+  letter-spacing: 36px;
+  font-size: 28px;
+  padding: 12px 26px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  font-family: inherit;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_CodeInputFieldContainer_3-Mzd
+  .newlogindialog_SegmentContainer_2w_V1 {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  bottom: 8px;
+  left: 16px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_CodeInputFieldContainer_3-Mzd
+  .newlogindialog_SegmentContainer_2w_V1
+  .newlogindialog_Segment_2VrJv {
+  width: 40px;
+  height: 2px;
+  background-color: #afafaf;
+  opacity: 0.25;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_SegmentedCharacterInput_1ETdj {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #32353c;
+  border-radius: 2px;
+  gap: 20px;
+  padding: 10px 28px;
+  cursor: text;
+  border: 1px solid transparent;
+  position: relative;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_SegmentedCharacterInput_1ETdj.newlogindialog_Disabled_19syR {
+  background-color: #26272b;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_SegmentedCharacterInput_1ETdj.newlogindialog_Danger_2ZO8- {
+  border-color: #c15755;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_SegmentedCharacterInput_1ETdj
+  .newlogindialog_Loading_3UVCg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_SegmentedCharacterInput_1ETdj
+  input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(175, 175, 175, 0.25);
+  padding: 0;
+  color: #fff;
+  width: 40px;
+  font-size: 28px;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: center;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshTitle_3FTSH {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_RefreshReason_13oML {
+  color: #dfe3e6;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_StandardLayout_1vFqW.IN_CLIENT {
+  width: 630px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW:not(.IN_CLIENT) {
+  width: 100%;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW
+  .newlogindialog_PrimaryHeader_19Rc0 {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  font-weight: 200;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_-2IXP
+    .newlogindialog_StandardLayout_1vFqW
+    .newlogindialog_PrimaryHeader_19Rc0 {
+    text-align: center;
+  }
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW
+  .newlogindialog_FormContainer_2BC2t {
+  background-color: #181a21;
+  border-radius: 4px;
+  padding: 24px 32px 24px 32px;
+  flex: 1;
+  max-width: 680px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr {
+  background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
+  padding: 40px 32px 15px 32px;
+  width: inherit;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr
+  .newlogindialog_FormContainer_2BC2t {
+  background: transparent;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr.newlogindialog_Compact_3IFB0
+  .newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr:not(.IN_CLIENT) {
+  background: linear-gradient(321.58deg, #212629 47.91%, #333841 91.08%);
+  width: 500px;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr.newlogindialog_Compact_3IFB0
+  .newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr:not(.IN_CLIENT)
+  .newlogindialog_FormContainer_2BC2t {
+  background: #21232880;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr.IN_CLIENT {
+  min-height: 448px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_HeaderLogo_2syYB {
+  height: 46px;
+  width: 153px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EmbeddedRoot_Hz7Z1 {
+  background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
+  padding: 34px 40px 15px 40px;
+  box-sizing: border-box;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EmbeddedRoot_Hz7Z1.IN_CLIENT {
+  width: 630px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EmbeddedRoot_Hz7Z1:not(.IN_CLIENT) {
+  width: 100%;
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EmbeddedRoot_Hz7Z1
+  .newlogindialog_EmbeddedRootFooter_2WSMa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  color: #afafaf;
+  font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_-2IXP
+    .newlogindialog_EmbeddedRoot_Hz7Z1
+    .newlogindialog_EmbeddedRootFooter_2WSMa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .newlogindialog_Login_-2IXP
+    .newlogindialog_EmbeddedRoot_Hz7Z1
+    .newlogindialog_EmbeddedRootFooter_2WSMa
+    .newlogindialog_AccountCreation_1cusB {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.newlogindialog_Login_-2IXP
+  .newlogindialog_EmbeddedRoot_Hz7Z1
+  .newlogindialog_EmbeddedRootFooter_2WSMa
+  .newlogindialog_AccountCreationPrompt_2iCrG {
+  margin-right: 8px;
+}
+.newlogindialog_Login_-2IXP .newlogindialog_EmbeddedRoot_Hz7Z1 input,
+.newlogindialog_Login_-2IXP
+  .newlogindialog_StandardLayout_1vFqW.newlogindialog_Embedded_29cYr
+  input {
+  box-shadow: none;
+}
+.newlogindialog_FailureTitle_3AhYn {
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  font-weight: 200;
+  text-align: center;
+}
+.newlogindialog_FailureDescription_17V_Q {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.qrcode_QRBits__9TCv {
+  display: grid;
+}
+.qrcode_Bit_UHXQy.qrcode_Active_3pfYQ {
+  background-color: #212328;
+}
+.qrcode_Bit_UHXQy:not(.qrcode_Active_3pfYQ) {
+  background-color: #1999ff;
+}
+.qrlogin_LoginQR_24-FU {
+  position: relative;
+  width: calc(200px - 2.5em);
+  height: calc(200px - 2.5em);
+  border-style: solid;
+  border-color: #fff;
+  border-width: 1.25em;
+  border-radius: 0.625em;
+}
+.qrlogin_LoginQR_24-FU.qrlogin_Blur_1YOSo {
+  filter: blur(5px);
+}
+.qrlogin_Overlay_2HKbn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.qrlogin_Overlay_2HKbn .qrlogin_Box_XVkQv {
+  display: flex;
+  border-radius: 3px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 16px;
+}
+.qrlogin_Column_4htQv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qrlogin_Loading_WHV2l {
+  border-radius: 50%;
+  margin: auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #fff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: qrlogin_LoadAmin_3_6Kq 1.1s infinite linear;
+  animation: qrlogin_LoadAmin_3_6Kq 1.1s infinite linear;
+}
+.qrlogin_Loading_WHV2l.qrlogin_Small_1Bftu {
+  width: 3em;
+  height: 3em;
+  min-width: 3em;
+  min-height: 3em;
+  border-top-width: 0.3em;
+  border-right-width: 0.3em;
+  border-bottom-width: 0.3em;
+  border-left-width: 0.3em;
+}
+.qrlogin_Loading_WHV2l.qrlogin_Medium_18XYP {
+  width: 6em;
+  height: 6em;
+  min-width: 6em;
+  min-height: 6em;
+  border-top-width: 0.4em;
+  border-right-width: 0.4em;
+  border-bottom-width: 0.4em;
+  border-left-width: 0.4em;
+}
+.qrlogin_Loading_WHV2l.qrlogin_Large_2VcHe {
+  width: 10em;
+  height: 10em;
+  min-width: 10em;
+  min-height: 10em;
+  border-top-width: 1.1em;
+  border-right-width: 1.1em;
+  border-bottom-width: 1.1em;
+  border-left-width: 1.1em;
+}
+@-webkit-keyframes qrlogin_LoadAmin_3_6Kq {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes qrlogin_LoadAmin_3_6Kq {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .youtubeembed_DynamicLinkBox_26n5n {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
@@ -8985,16 +9684,25 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
   font-size: 11px;
   line-height: 11px;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section {
+.SaleSectionCtn.text_section .eventbbcodeparser_SaleSectionCtn_36_f6,
+.SaleSectionCtn.text_section .eventbbcodeparser_SaleTextCtn_2LGqT {
   color: #c3c4d9;
   font-size: 14px;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleSectionCtn_36_f6
+  .eventbbcodeparser_ReminderCtn_2wh6z,
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleTextCtn_2LGqT
   .eventbbcodeparser_ReminderCtn_2wh6z {
   width: 300px;
   margin: 6px 0;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleSectionCtn_36_f6
+  .eventbbcodeparser_BlockQuote_EIjUK,
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleTextCtn_2LGqT
   .eventbbcodeparser_BlockQuote_EIjUK {
   border: none;
   width: 60%;
@@ -9002,30 +9710,54 @@ iframe.eventbbcodeparser_MedalTVWidget_20ZvO {
   margin: 0 auto;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleSectionCtn_36_f6
+    .eventbbcodeparser_BlockQuote_EIjUK,
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleTextCtn_2LGqT
     .eventbbcodeparser_BlockQuote_EIjUK {
     width: 100%;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleSectionCtn_36_f6
+  .BB_TableData,
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleTextCtn_2LGqT
+  .BB_TableData {
   font-size: 18px;
 }
 @media screen and (max-width: 800px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleSectionCtn_36_f6
+    .BB_TableData,
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleTextCtn_2LGqT
+    .BB_TableData {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 600px) {
-  .eventbbcodeparser_SaleSectionCtn_36_f6.text_section .BB_TableData {
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleSectionCtn_36_f6
+    .BB_TableData,
+  .SaleSectionCtn.text_section
+    .eventbbcodeparser_SaleTextCtn_2LGqT
+    .BB_TableData {
     font-size: 13px;
   }
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section img {
+.SaleSectionCtn.text_section .eventbbcodeparser_SaleSectionCtn_36_f6 img,
+.SaleSectionCtn.text_section .eventbbcodeparser_SaleTextCtn_2LGqT img {
   max-width: 100%;
   height: auto;
   width: -webkit-fill-available;
 }
-.eventbbcodeparser_SaleSectionCtn_36_f6.text_section
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleSectionCtn_36_f6
+  .eventbbcodeparser_Link_35HFF,
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleTextCtn_2LGqT
   .eventbbcodeparser_Link_35HFF {
   color: #fff;
 }

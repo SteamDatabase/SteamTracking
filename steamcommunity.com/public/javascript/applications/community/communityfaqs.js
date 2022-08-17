@@ -7552,8 +7552,8 @@
         M = a(28268),
         z = a(41311),
         E = a(73604),
-        F = a(93320),
-        W = a.n(F),
+        W = a(93320),
+        F = a.n(W),
         R = a(22188),
         O = (a(27394), a(13679)),
         N = a.n(O),
@@ -8110,10 +8110,10 @@
             }, []),
             n.createElement(
               "div",
-              { className: W().FAQDashboardPage },
+              { className: F().FAQDashboardPage },
               n.createElement(
                 "div",
-                { className: W().FAQDashboard },
+                { className: F().FAQDashboard },
                 n.createElement(ge, null),
                 n.createElement(be, {
                   eCurrentSortColumn: o,
@@ -8122,7 +8122,7 @@
                 0 == t.length &&
                   n.createElement(
                     "div",
-                    { className: W().ErrorMsg },
+                    { className: F().ErrorMsg },
                     (0, z.Xx)("#FAQDashboard_Empty")
                   ),
                 s.map((e) => n.createElement(ke, { key: e[0], rgColumns: e })),
@@ -8151,15 +8151,15 @@
             );
           return n.createElement(
             "div",
-            { className: W().DashboardHeader },
+            { className: F().DashboardHeader },
             n.createElement(
               "div",
-              { className: W().DashboardHeaderTitle },
+              { className: F().DashboardHeaderTitle },
               (0, z.Xx)("#FAQDashboard_Header")
             ),
             n.createElement(
               "div",
-              { className: W().DashboardHeaderButtonCtn },
+              { className: F().DashboardHeaderButtonCtn },
               n.createElement(
                 C.zx,
                 { onClick: a },
@@ -8183,7 +8183,7 @@
               },
               bOKDisabled: 0 == t.length,
               closeModal: e.closeModal,
-              className: W().CreateFAQDialog,
+              className: F().CreateFAQDialog,
             },
             n.createElement(
               C.h4,
@@ -8199,7 +8199,7 @@
                 (0, z.Xx)("#FAQDashboard_CreateFAQInstructions"),
                 n.createElement("input", {
                   type: "text",
-                  className: W().NameInput,
+                  className: F().NameInput,
                   value: t,
                   placeholder: (0, z.Xx)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
@@ -8213,7 +8213,7 @@
         be = (e) =>
           n.createElement(
             "div",
-            { className: W().DashboardListHeaderRow },
+            { className: F().DashboardListHeaderRow },
             n.createElement(
               we,
               Object.assign(
@@ -8305,10 +8305,10 @@
               SetSortColumn: s,
             } = e,
             r = (0, y.Z)(
-              W().EntryColumn,
-              W().ClickableHeader,
-              a ? W().NameCol : W().DataCol,
-              i == o && W().Selected
+              F().EntryColumn,
+              F().ClickableHeader,
+              a ? F().NameCol : F().DataCol,
+              i == o && F().Selected
             );
           return n.createElement(
             M.HP,
@@ -8321,7 +8321,7 @@
             (0, z.Xx)(t),
             n.createElement(
               "div",
-              { className: W().DownArrow },
+              { className: F().DownArrow },
               n.createElement(D.$gZ, null)
             )
           );
@@ -8330,7 +8330,7 @@
           const { nCount: t, nTotal: a, nGoal: o } = e;
           return n.createElement(
             "div",
-            { className: t == o ? W().GoodCount : W().BadCount },
+            { className: t == o ? F().GoodCount : F().BadCount },
             t + " / " + a
           );
         },
@@ -8338,7 +8338,7 @@
           const { bIsVisible: t } = e;
           return n.createElement(
             "div",
-            { className: t ? W().Visible : W().Hidden },
+            { className: t ? F().Visible : F().Hidden },
             (0, z.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible")
           );
         },
@@ -8351,46 +8351,46 @@
             {
               route: o.k_eCommunityEdit,
               faqid: t,
-              className: W().DashboardEntry,
+              className: F().DashboardEntry,
             },
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().NameCol) },
-              n.createElement("div", { className: W().EntryInternalName }, a)
+              { className: (0, y.Z)(F().EntryColumn, F().NameCol) },
+              n.createElement("div", { className: F().EntryInternalName }, a)
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(me, { rtTimestamp: i })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(ve, { nCount: s, nTotal: u, nGoal: u })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(ve, { nCount: r, nTotal: u, nGoal: 0 })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(ve, { nCount: l, nTotal: c, nGoal: c })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(ve, { nCount: p, nTotal: c, nGoal: 0 })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(Se, { bIsVisible: d })
             ),
             n.createElement(
               "div",
-              { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
+              { className: (0, y.Z)(F().EntryColumn, F().DataCol) },
               n.createElement(Se, { bIsVisible: h })
             )
           );
@@ -8678,7 +8678,7 @@
             )
           );
         },
-        Fe = (e) =>
+        We = (e) =>
           n.createElement(
             M.HP,
             { toolTipContent: (0, z.Xx)("#FAQEditor_ChangeVisible_ttip") },
@@ -8688,7 +8688,7 @@
                 className: V.EditPreviewButton,
                 onClick: (t) => {
                   (0, P.AM)(
-                    n.createElement(We, { draft: e.draft }),
+                    n.createElement(Fe, { draft: e.draft }),
                     (0, j.RA)(t)
                   );
                 },
@@ -8696,7 +8696,7 @@
               (0, z.Xx)("#FAQEditor_EditVisible")
             )
           ),
-        We = (e) => {
+        Fe = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [o, s] = n.useState(!1),
@@ -8883,7 +8883,7 @@
                     n.createElement(
                       "div",
                       { className: Re.StatusBtnCtn },
-                      n.createElement(Fe, { draft: r })
+                      n.createElement(We, { draft: r })
                     )
                   ),
                   n.createElement(
@@ -9170,7 +9170,7 @@
               n.createElement(
                 "div",
                 { className: G().EventOptions },
-                n.createElement(He.u, {
+                n.createElement(He.uW, {
                   selectedLang: _e.U.Get().GetCurEditLanguage(),
                   fnOnLanguageChanged: _e.U.Get().SetCurEditLanguage,
                   fnLangHasData: t.BHasSomeTextForLanguage,

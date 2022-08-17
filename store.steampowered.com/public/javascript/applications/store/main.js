@@ -145,7 +145,7 @@
     },
     35402: (e, t, r) => {
       "use strict";
-      r.d(t, { C: () => B, Y: () => y });
+      r.d(t, { C: () => B, Y: () => w });
       var n = r(70655),
         i = r(9669),
         s = r.n(i),
@@ -163,8 +163,8 @@
         f = r(15845),
         b = r(49875);
       r(54891);
-      const y = 5,
-        w = "auto";
+      const w = 5,
+        y = "auto";
       var S;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
@@ -1015,7 +1015,7 @@
           if (!this.m_mpd) return 0;
           let t = this.GetAvailableVideoStartTime(),
             r = this.GetBufferedLiveEdgeTime();
-          (e = d.Lh(e, t, r)), (this.m_bUserLiveEdgeChoice = e >= r - y);
+          (e = d.Lh(e, t, r)), (this.m_bUserLiveEdgeChoice = e >= r - w);
           let n = this.m_elVideo.paused;
           if ((n || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -1119,7 +1119,7 @@
           let e = [];
           if (
             (e.push({
-              id: w,
+              id: y,
               displayName: "Auto",
               selected: null === this.m_videoRepSelected,
             }),
@@ -1155,7 +1155,7 @@
         SetVideoRepresentation(e) {
           let t = !0,
             r = this.GetVideoLoader();
-          if (e && e.id != w) {
+          if (e && e.id != y) {
             let n = r.GetRepresentationByID(e.id);
             n &&
               ((t = !1),
@@ -1289,7 +1289,7 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new w());
+            (this.m_fpsMonitor = new y());
         }
         GetBytesReceivedToDisplay() {
           return (0, u.l)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -1821,12 +1821,12 @@
         (0, n.gn)([i.LO], b.prototype, "m_nFramesDecoded", void 0),
         (0, n.gn)([i.LO], b.prototype, "m_nFramesDropped", void 0),
         (0, n.gn)([i.aD], b.prototype, "SegmentReceived", null);
-      class y {
+      class w {
         reset(e, t) {
           (this.bDropReading = e), (this.nTotalDecodedFrames = t);
         }
       }
-      class w {
+      class y {
         constructor() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -1901,14 +1901,14 @@
           (r =
             this.m_rgResultsWindow.length >= this.k_nSlidingWindow
               ? this.m_rgResultsWindow.shift()
-              : new y()),
+              : new w()),
             r.reset(e, t),
             this.m_rgResultsWindow.push(r);
         }
       }
-      (0, n.gn)([i.LO], w.prototype, "m_bDroppingFrameDetected", void 0),
-        (0, n.gn)([i.LO], w.prototype, "m_nCurrentFPS", void 0),
-        (0, n.gn)([i.aD.bound], w.prototype, "TakeReading", null);
+      (0, n.gn)([i.LO], y.prototype, "m_bDroppingFrameDetected", void 0),
+        (0, n.gn)([i.LO], y.prototype, "m_nCurrentFPS", void 0),
+        (0, n.gn)([i.aD.bound], y.prototype, "TakeReading", null);
     },
     15845: (e, t, r) => {
       "use strict";
@@ -1916,7 +1916,7 @@
         BE: () => b,
         FH: () => p,
         Jn: () => h,
-        MS: () => y,
+        MS: () => w,
         QA: () => g,
         Y6: () => _,
         v2: () => f,
@@ -2003,7 +2003,7 @@
           (r - t.segmentTemplate.nStartNumber) * n - e.GetDurationSinceStarted()
         );
       }
-      class y {
+      class w {
         constructor() {
           (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
@@ -2184,9 +2184,9 @@
           if (!b.strID || null === b.nStart)
             return (0, i.yv)("MPD - Missing Period Information."), !1;
           (this.m_rgPeriods = []), this.m_rgPeriods.push(b);
-          let y = f.getElementsByTagName("AdaptationSet");
-          for (let e = 0; e < y.length; e++) {
-            let t = y[e],
+          let w = f.getElementsByTagName("AdaptationSet");
+          for (let e = 0; e < w.length; e++) {
+            let t = w[e],
               r = d(t, "description"),
               s = d(t, "lang"),
               o = {
@@ -3130,7 +3130,7 @@
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35,
       ];
-      var h, _, p, g, f, b, y;
+      var h, _, p, g, f, b, w;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -3208,7 +3208,7 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(y || (y = {}));
+        })(w || (w = {}));
     },
     1351: (e, t, r) => {
       "use strict";
@@ -3410,7 +3410,7 @@
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
       })(g || (g = {}));
-      var f, b, y, w, S;
+      var f, b, w, y, S;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -3432,7 +3432,7 @@
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(y || (y = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3442,7 +3442,7 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(w || (w = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
@@ -4737,7 +4737,7 @@
         VJ: () => I,
         VL: () => o,
         WJ: () => L,
-        cR: () => F,
+        cR: () => x,
         eK: () => D,
         oY: () => R,
       });
@@ -4910,9 +4910,9 @@
                   release: { n: 31, c: g },
                   platforms: { n: 32, c: f },
                   game_rating: { n: 33, c: a },
-                  best_purchase_option: { n: 40, c: y },
-                  purchase_options: { n: 41, c: y, r: !0, q: !0 },
-                  accessories: { n: 42, c: y, r: !0, q: !0 },
+                  best_purchase_option: { n: 40, c: w },
+                  purchase_options: { n: 41, c: w, r: !0, q: !0 },
+                  accessories: { n: 42, c: w, r: !0, q: !0 },
                   screenshots: { n: 50, c: S },
                   trailers: { n: 51, c: v },
                   supported_languages: { n: 52, c: M, r: !0, q: !0 },
@@ -5721,17 +5721,17 @@
           return "StoreItem_Platforms_VRSupport";
         }
       }
-      class y extends s {
+      class w extends s {
         constructor(e = null) {
           super(),
-            y.prototype.packageid || i.aR(y.M()),
+            w.prototype.packageid || i.aR(w.M()),
             s.initialize(this, e, 0, -1, [20, 21, 22], null);
         }
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
                 fields: {
                   packageid: { n: 1, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
                   bundleid: { n: 2, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
@@ -5780,9 +5780,9 @@
                     br: i.FE.readInt32,
                     bw: i.Xc.writeInt32,
                   },
-                  active_discounts: { n: 20, c: w, r: !0, q: !0 },
-                  user_active_discounts: { n: 21, c: w, r: !0, q: !0 },
-                  inactive_discounts: { n: 22, c: w, r: !0, q: !0 },
+                  active_discounts: { n: 20, c: y, r: !0, q: !0 },
+                  user_active_discounts: { n: 21, c: y, r: !0, q: !0 },
+                  inactive_discounts: { n: 22, c: y, r: !0, q: !0 },
                   user_can_purchase: {
                     n: 30,
                     br: i.FE.readBool,
@@ -5802,73 +5802,6 @@
                     n: 41,
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
-                  },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = i.Bh(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption";
-        }
-      }
-      class w extends s {
-        constructor(e = null) {
-          super(),
-            w.prototype.discount_amount || i.aR(w.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  discount_amount: {
-                    n: 1,
-                    br: i.FE.readInt64String,
-                    bw: i.Xc.writeInt64String,
-                  },
-                  discount_description: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  discount_end_date: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -5905,6 +5838,73 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PurchaseOption";
+        }
+      }
+      class y extends s {
+        constructor(e = null) {
+          super(),
+            y.prototype.discount_amount || i.aR(y.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  discount_amount: {
+                    n: 1,
+                    br: i.FE.readInt64String,
+                    bw: i.Xc.writeInt64String,
+                  },
+                  discount_description: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  discount_end_date: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = i.Bh(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_PurchaseOption_Discount";
@@ -6606,61 +6606,10 @@
           return "CStoreBrowse_GetItems_Request";
         }
       }
-      class F extends s {
-        constructor(e = null) {
-          super(),
-            F.prototype.store_items || i.aR(F.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Response";
-        }
-      }
       class x extends s {
         constructor(e = null) {
           super(),
-            x.prototype.categories || i.aR(x.M()),
+            x.prototype.store_items || i.aR(x.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -6668,7 +6617,7 @@
             x.sm_m ||
               (x.sm_m = {
                 proto: x,
-                fields: { categories: { n: 1, c: A, r: !0, q: !0 } },
+                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
               }),
             x.sm_m
           );
@@ -6703,6 +6652,57 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetItems_Response";
+        }
+      }
+      class F extends s {
+        constructor(e = null) {
+          super(),
+            F.prototype.categories || i.aR(F.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
+                fields: { categories: { n: 1, c: A, r: !0, q: !0 } },
+              }),
+            F.sm_m
+          );
+        }
+        static MBF() {
+          return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
+        }
+        toObject(e = !1) {
+          return F.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(F.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(F.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(F.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(F.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetStoreCategories_Response";
@@ -6789,14 +6789,14 @@
       var I;
       !(function (e) {
         (e.GetItems = function (e, t) {
-          return e.SendMsg("StoreBrowse.GetItems#1", t, F, {
+          return e.SendMsg("StoreBrowse.GetItems#1", t, x, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
           (e.GetStoreCategories = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, x, {
+            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, F, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -7213,7 +7213,7 @@
     },
     75362: (e, t, r) => {
       "use strict";
-      r.d(t, { Uh: () => T });
+      r.d(t, { Uh: () => R });
       var n = r(70655),
         i = r(58114),
         s = r(33019),
@@ -7557,22 +7557,22 @@
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
       let f,
         b = [],
-        y = (e, t) => b.push({ error: e, cCallsitesToIgnore: t });
-      const w = !0;
+        w = (e, t) => b.push({ error: e, cCallsitesToIgnore: t });
+      const y = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...n) => {
-          t || y(new Error(v(r, ...n)), 2), e.apply(console, [t, r, ...n]);
+          t || w(new Error(v(r, ...n)), 2), e.apply(console, [t, r, ...n]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          y(new Error(v(e, ...r)), 1), t.apply(console, [e, ...r]);
+          w(new Error(v(e, ...r)), 1), t.apply(console, [e, ...r]);
         }),
           g("error", (e) => {
-            y(e.error, 0);
+            w(e.error, 0);
           }),
           (f = window.setTimeout(() => {
-            (b = []), (y = () => {});
+            (b = []), (w = () => {});
           }, 3e4));
       }
       const S = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 };
@@ -7587,8 +7587,8 @@
               ? (b.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t })
                 ),
-                (y = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (y = () => {}),
+                (w = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (w = () => {}),
             (b = []),
             clearTimeout(f),
             window.setTimeout(() => {
@@ -7633,7 +7633,7 @@
                               bIncludeMessageInIdentifier: n,
                             } = t,
                             i = e.stack.split("\n");
-                          let s = M(i.filter((e) => !!e.match(E))[r]);
+                          let s = L(i.filter((e) => !!e.match(E))[r]);
                           n && (s = `${s} ${e.message}`);
                           const a = i
                             .map((e) => {
@@ -7650,7 +7650,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: s,
-                            identifierHash: yield R(s),
+                            identifierHash: yield x(s),
                             message: a,
                           };
                         });
@@ -7663,29 +7663,69 @@
                               bIncludeMessageInIdentifier: n,
                             } = t,
                             i = e.stack.split("\n");
-                          let s = M(i.filter((e) => !!e.match(C))[r]);
+                          let s = L(i.filter((e) => !!e.match(C))[r]);
                           n && (s = `${s} ${e.message}`);
                           const a = i
                             .map((e) => {
                               const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
                               if (!t) return e;
-                              if (4 === t.length) {
-                                const [e, r, n, i] = t,
-                                  s = parseInt(n),
-                                  a = parseInt(i);
-                                if (!isNaN(s) && !isNaN(a)) return [e, r, s, a];
+                              if (5 === t.length) {
+                                const [e, r, n, i, s] = t,
+                                  a = parseInt(i),
+                                  o = parseInt(s);
+                                if (!isNaN(a) && !isNaN(o)) return [r, n, a, o];
                               }
                               return e;
                             })
                             .filter((e) => !!e);
                           return {
                             identifier: s,
-                            identifierHash: yield R(s),
+                            identifierHash: yield x(s),
                             message: [e.message, ...a],
                           };
                         });
                       })(e, t)
-                    : null;
+                    : e.stack && e.stack.match(M)
+                    ? (function (e, t) {
+                        return (0, n.mG)(this, void 0, void 0, function* () {
+                          const {
+                              bIncludeMessageInIdentifier: r,
+                              cCallsitesToIgnore: n,
+                            } = t,
+                            i = e.stack.split("\n"),
+                            s = i[n],
+                            a = s.split("/");
+                          let o = a[a.length - 1];
+                          s.indexOf("@") > -1 &&
+                            (o = s.split("@")[0] + "@" + o),
+                            r && (o = `${o} ${e.message}`);
+                          const l = i
+                            .map((e) => {
+                              const t = e.match(/(.*@)?(.*):(\d+):(\d+)/);
+                              if (!t) return e;
+                              if (5 === t.length) {
+                                const [e, r, n, i, s] = t,
+                                  a = parseInt(i),
+                                  o = parseInt(s);
+                                if (!isNaN(a) && !isNaN(o)) return [r, n, a, o];
+                              }
+                              return e;
+                            })
+                            .filter((e) => !!e);
+                          return {
+                            identifier: o,
+                            identifierHash: yield x(o),
+                            message: [e.message, ...l],
+                          };
+                        });
+                      })(e, t)
+                    : (T ||
+                        (console.warn(
+                          "Error reporter does not know how to parse generated stack:"
+                        ),
+                        console.warn(e.stack),
+                        (T = !0)),
+                      null);
                 } catch (e) {
                   return (
                     console.warn(`Failed to normalize error stack: ${e}`), null
@@ -7708,7 +7748,7 @@
                 this.SendErrorReports(this.m_rgErrorQueue),
                   (this.m_rgErrorQueue = []),
                   (this.m_sendTimer = null);
-              }, 6e4));
+              }, 1e4));
         }
         SendErrorReports(e) {
           if (!e || !e.length) return;
@@ -7744,7 +7784,7 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return w;
+          return y;
         }
       }
       function v(e, ...t) {
@@ -7760,8 +7800,11 @@
           .join(", ");
       }
       const E = /^\s*at .*(\S+:\d+|\(native\))/m,
-        C = /(^|@)\S+:\d+/;
-      function M(e) {
+        C = /(^|@)\S+:\d+/,
+        M = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let k,
+        T = !1;
+      function L(e) {
         return (function (e) {
           const t = "https://",
             r = e.indexOf(t);
@@ -7777,16 +7820,15 @@
           })(e)
         );
       }
-      let k;
-      const T = () => (k || L(new B()), k),
-        L = (e) => {
+      const R = () => (k || D(new B()), k),
+        D = (e) => {
           (k = e),
             d.S.InstallErrorReportingStore(k),
             i.lq.InstallErrorReportingStore(k),
             u.LJ.InstallErrorReportingStore(k),
             p.InstallErrorReportingStore(k);
         };
-      function R(e) {
+      function x(e) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           try {
             const r = yield window.crypto.subtle.digest(
@@ -8236,7 +8278,12 @@
         }
         ForceUpdate() {
           this.m_ActiveOverlay
-            ? window.setTimeout(() => this.m_ActiveOverlay.forceUpdate(), 1)
+            ? window.setTimeout(() => {
+                var e;
+                null === (e = this.m_ActiveOverlay) ||
+                  void 0 === e ||
+                  e.forceUpdate();
+              }, 1)
             : (0, i.X)(
                 !1,
                 "Modal action was taken, but there is no <DialogOverlay> element to show it in.  Will retry when one is ready."
@@ -8300,7 +8347,7 @@
       r.d(t, {
         $06: () => H,
         $gZ: () => u,
-        BKy: () => x,
+        BKy: () => F,
         BNo: () => he,
         Bh5: () => ae,
         Cts: () => be,
@@ -8310,11 +8357,11 @@
         IWH: () => U,
         JrY: () => M,
         KJh: () => ue,
-        KKY: () => Re,
-        LjF: () => we,
+        KKY: () => De,
+        LjF: () => ye,
         Lk$: () => J,
         MrB: () => $,
-        NP6: () => F,
+        NP6: () => x,
         P7E: () => b,
         P9w: () => N,
         Q0U: () => ce,
@@ -8326,9 +8373,9 @@
         V7n: () => O,
         VR: () => Z,
         Vgm: () => ee,
-        X: () => y,
+        X: () => w,
         XBH: () => j,
-        YVI: () => Le,
+        YVI: () => Re,
         YVR: () => P,
         YqJ: () => A,
         YtI: () => _,
@@ -8340,8 +8387,9 @@
         doA: () => Se,
         dzL: () => C,
         ffh: () => B,
-        g0p: () => ye,
+        g0p: () => we,
         gR: () => I,
+        j7C: () => Le,
         k4K: () => f,
         kqV: () => _e,
         ktE: () => ge,
@@ -8351,7 +8399,7 @@
         mKt: () => ie,
         miF: () => Me,
         opd: () => Be,
-        pVO: () => w,
+        pVO: () => y,
         pkz: () => S,
         r6F: () => G,
         ret: () => h,
@@ -8365,7 +8413,7 @@
         ui7: () => V,
         vJ$: () => le,
         vT2: () => q,
-        vyu: () => De,
+        vyu: () => xe,
         wUs: () => T,
         wn$: () => re,
         wr9: () => Y,
@@ -8616,7 +8664,7 @@
           )
         );
       }
-      function y(e) {
+      function w(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -8641,7 +8689,7 @@
           )
         );
       }
-      function w(e) {
+      function y(e) {
         const t = e.color || "#FFFFFF";
         return i.createElement(
           "svg",
@@ -8848,6 +8896,7 @@
       function k(e) {
         let t = e.highlightColor || "#00ccff",
           r = e.color || "#2d73ff";
+        const [n] = (0, i.useState)(Math.random().toString());
         return i.createElement(
           "svg",
           {
@@ -8866,21 +8915,13 @@
             null,
             i.createElement(
               "linearGradient",
-              { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              i.createElement("stop", {
-                id: "stop0",
-                offset: "0%",
-                stopColor: t,
-              }),
-              i.createElement("stop", {
-                id: "stop1",
-                offset: "100%",
-                stopColor: r,
-              })
+              { id: `${n}_linear`, x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
+              i.createElement("stop", { offset: "0%", stopColor: t }),
+              i.createElement("stop", { offset: "100%", stopColor: r })
             ),
             i.createElement(
               "filter",
-              { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
+              { id: `${n}_f1`, x: "0", y: "0", width: "200%", height: "200%" },
               i.createElement("feOffset", {
                 result: "offOut",
                 in: "SourceAlpha",
@@ -8901,7 +8942,7 @@
           ),
           i.createElement("path", {
             fill: "none",
-            stroke: "url(#linear)",
+            stroke: `url(#${n}_linear)`,
             strokeWidth: "24",
             strokeLinecap: "round",
             strokeLinejoin: "miter",
@@ -8913,8 +8954,8 @@
           i.createElement("path", {
             fill: "none",
             opacity: ".2",
-            filter: "url(#f1)",
-            stroke: "url(#linear)",
+            filter: `url(#${n}_f1)`,
+            stroke: `url(#${n}_linear)`,
             strokeWidth: "24",
             strokeLinecap: "round",
             strokeLinejoin: "miter",
@@ -9243,7 +9284,7 @@
           })
         );
       }
-      function F(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -9279,7 +9320,7 @@
             })
         );
       }
-      function x(e) {
+      function F(e) {
         const { angle: t } = e,
           r = (0, n._T)(e, ["angle"]);
         return i.createElement(
@@ -10380,7 +10421,7 @@
           })
         );
       }
-      function ye(e) {
+      function we(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -10403,7 +10444,7 @@
           })
         );
       }
-      function we(e) {
+      function ye(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10970,6 +11011,29 @@
         return i.createElement(
           "svg",
           Object.assign(
+            { className: (0, o.Z)(c().SteamDeckCompatLogo, t) },
+            r,
+            {
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            }
+          ),
+          i.createElement("path", {
+            opacity: "0.84",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
+            fill: "white",
+          })
+        );
+      }
+      function Re(e) {
+        const { className: t } = e,
+          r = (0, n._T)(e, ["className"]);
+        return i.createElement(
+          "svg",
+          Object.assign(
             {
               className: (0, o.Z)(
                 c().SteamDeckCompatIcon,
@@ -10992,7 +11056,7 @@
           })
         );
       }
-      function Re(e) {
+      function De(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11020,7 +11084,7 @@
           })
         );
       }
-      function De(e) {
+      function xe(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11535,12 +11599,12 @@
         Et: () => b,
         GB: () => n,
         J$: () => c,
-        Jk: () => y,
+        Jk: () => w,
         Lh: () => f,
         Mv: () => S,
         RA: () => o,
         RD: () => d,
-        U0: () => w,
+        U0: () => y,
         V2: () => B,
         _J: () => p,
         __: () => _,
@@ -11585,13 +11649,13 @@
         }
         return r;
       }
-      function y(e, t) {
+      function w(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function w(e, t) {
+      function y(e, t) {
         if (!("ownerDocument" in e)) return !0;
         const r = e.ownerDocument.defaultView.getComputedStyle(e),
           n = "x" === t ? r.overflowX : r.overflowY;
@@ -11646,7 +11710,7 @@
         Xx: () => d,
         Yt: () => v,
         eH: () => B,
-        is: () => w,
+        is: () => y,
         jr: () => c.jr,
         kQ: () => u,
         kb: () => g,
@@ -11840,7 +11904,7 @@
           return null;
         }
       }
-      const y = {
+      const w = {
           english: "en",
           german: "de",
           french: "fr",
@@ -11873,7 +11937,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        w = {
+        y = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -11905,7 +11969,7 @@
           "vi-VN": 28,
         };
       function S() {
-        return y[a.De.LANGUAGE] || null;
+        return w[a.De.LANGUAGE] || null;
       }
       function B(e) {
         let t,
@@ -12181,8 +12245,8 @@
       const g = new Map(),
         f = new Map(),
         b = new Map(),
-        y = new Map(),
-        w = new Map();
+        w = new Map(),
+        y = new Map();
       function S(e, t = !1, r = !0) {
         const n = {
             weekday: r ? "long" : "short",
@@ -12190,11 +12254,11 @@
             month: t ? "long" : "short",
           },
           s = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
-        let a = w.get(s);
+        let a = y.get(s);
         return (
           a ||
           ((a = e.toLocaleDateString(i.Yt.GetPreferredLocales(), n)),
-          w.set(s, a),
+          y.set(s, a),
           a)
         );
       }
@@ -12233,14 +12297,14 @@
       }
       function C(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
-        let r = y.get(t);
+        let r = w.get(t);
         return (
           r ||
           ((r = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
-          y.set(t, r),
+          w.set(t, r),
           r)
         );
       }
@@ -12540,7 +12604,7 @@
         De: () => a,
         Ek: () => _,
         JA: () => c,
-        Kc: () => w,
+        Kc: () => y,
         L7: () => o,
         Wj: () => m,
         Zv: () => S,
@@ -12719,46 +12783,46 @@
       function b(e, t = "webui_config") {
         return g(e, t, !1);
       }
-      function y(e, t) {
+      function w(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function w() {
+      function y() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return y(e, a.STORE_BASE_URL)
+        return w(e, a.STORE_BASE_URL)
           ? a.STORE_BASE_URL
-          : y(e, a.COMMUNITY_BASE_URL)
+          : w(e, a.COMMUNITY_BASE_URL)
           ? a.COMMUNITY_BASE_URL
-          : y(e, a.CHAT_BASE_URL)
+          : w(e, a.CHAT_BASE_URL)
           ? a.CHAT_BASE_URL
-          : y(e, a.PARTNER_BASE_URL)
+          : w(e, a.PARTNER_BASE_URL)
           ? a.PARTNER_BASE_URL
-          : y(e, a.HELP_BASE_URL)
+          : w(e, a.HELP_BASE_URL)
           ? a.HELP_BASE_URL
-          : y(e, a.STEAMTV_BASE_URL)
+          : w(e, a.STEAMTV_BASE_URL)
           ? a.STEAMTV_BASE_URL
-          : y(e, a.STATS_BASE_URL)
+          : w(e, a.STATS_BASE_URL)
           ? a.STATS_BASE_URL
-          : y(e, a.INTERNAL_STATS_BASE_URL)
+          : w(e, a.INTERNAL_STATS_BASE_URL)
           ? a.INTERNAL_STATS_BASE_URL
-          : y(e, "https://steamloopback.host")
+          : w(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
       function S() {
         const e = window.location.href;
-        return y(e, a.STORE_BASE_URL)
+        return w(e, a.STORE_BASE_URL)
           ? "store"
-          : y(e, a.COMMUNITY_BASE_URL)
+          : w(e, a.COMMUNITY_BASE_URL)
           ? "community"
-          : y(e, a.PARTNER_BASE_URL)
+          : w(e, a.PARTNER_BASE_URL)
           ? "partnerweb"
-          : y(e, a.HELP_BASE_URL)
+          : w(e, a.HELP_BASE_URL)
           ? "help"
-          : y(e, a.STEAMTV_BASE_URL)
+          : w(e, a.STEAMTV_BASE_URL)
           ? "steamtv"
-          : y(e, a.STATS_BASE_URL) || y(e, a.INTERNAL_STATS_BASE_URL)
+          : w(e, a.STATS_BASE_URL) || w(e, a.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -12937,7 +13001,10 @@
               ),
               { MarketingMessages: () => "/marketingmessages/" }
             ),
-            { YearInReview: (e) => "/yearinreview" + (e ? "/" + e : "") }
+            {
+              YearInReview: (e, t) =>
+                `/yearinreview${e ? "/" + e : "/"}${t ? "/" + t : ""}`,
+            }
           ),
           { DiagData: () => "/:anything*/diagdata" }
         );
@@ -12999,8 +13066,8 @@
         }
       }
       var b = r(27515),
-        y = r(1959),
-        w = r(2957);
+        w = r(1959),
+        y = r(2957);
       const S = ({ config: e }) =>
         s.createElement(
           s.Fragment,
@@ -13016,11 +13083,13 @@
                       if (!t || "object" != typeof t || Array.isArray(t))
                         throw new Error();
                       return t;
-                    } catch (e) {
+                    } catch (r) {
                       return (
                         console.error(
-                          `There was a problem parsing props for feature target "${t}"`
+                          `There was a problem parsing props for feature target "${t}"`,
+                          r
                         ),
+                        console.log(`Problematic string: >>>${e}<<<`),
                         {}
                       );
                     }
@@ -13176,8 +13245,8 @@
         (0, n.gn)([L.ak], R.prototype, "OnUserInputNeeded", null),
         (0, n.gn)([L.ak], R.prototype, "UserInputRecieved", null);
       var D = r(13271),
-        F = r(7573),
-        x = r(73604);
+        x = r(7573),
+        F = r(73604);
       const A = parseInt(M().nTimelineHoverEdgePadding);
       function I(e) {
         let { manifest: t, forcePause: r } = e,
@@ -13311,20 +13380,20 @@
             onMouseLeave: l,
           },
           s.createElement("div", {
-            className: (0, F.Z)(M().Bar, M().Buffered),
+            className: (0, x.Z)(M().Bar, M().Buffered),
           }),
           s.createElement("div", {
-            className: (0, F.Z)(M().Bar, M().Played),
+            className: (0, x.Z)(M().Bar, M().Played),
             style: g,
           }),
           s.createElement("div", {
-            className: (0, F.Z)(M().HoverTick),
+            className: (0, x.Z)(M().HoverTick),
             style: _,
           }),
           s.createElement(
             "div",
-            { ref: a, className: (0, F.Z)(M().HoverTime), style: p },
-            (0, x.I8)(h, !0)
+            { ref: a, className: (0, x.Z)(M().HoverTime), style: p },
+            (0, F.I8)(h, !0)
           )
         );
       }
@@ -13393,6 +13462,7 @@
             n ||
             (Promise.all([
               r.e(1164),
+              r.e(5959),
               r.e(8511),
               r.e(1320),
               r.e(8535),
@@ -13400,12 +13470,13 @@
               r.e(3661),
               r.e(7804),
               r.e(4030),
+              r.e(8374),
               r.e(9886),
               r.e(166),
               r.e(7751),
               r.e(2301),
-              r.e(7131),
               r.e(3456),
+              r.e(7131),
               r.e(6431),
               r.e(6614),
               r.e(7599),
@@ -13418,8 +13489,6 @@
               r.e(3238),
               r.e(1979),
               r.e(2420),
-              r.e(9211),
-              r.e(477),
               r.e(691),
               r.e(2136),
             ])
@@ -13449,10 +13518,12 @@
         J = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(7200),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(166),
             r.e(3456),
             r.e(9682),
@@ -13461,13 +13532,15 @@
         Q = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(7400),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(166),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(7599),
             r.e(4466),
@@ -13489,17 +13562,19 @@
         te = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13527,43 +13602,46 @@
         ne = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(1320),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6614),
             r.e(7599),
             r.e(930),
             r.e(2420),
+            r.e(40),
           ]).then(r.bind(r, 63543))
         ),
         ie = s.lazy(() =>
           Promise.all([r.e(1164), r.e(7804), r.e(5821)]).then(r.bind(r, 86531))
         ),
         se = s.lazy(() =>
-          Promise.all([r.e(7131), r.e(6431), r.e(477), r.e(1918)]).then(
-            r.bind(r, 23879)
-          )
+          Promise.all([r.e(7131), r.e(6431), r.e(1918)]).then(r.bind(r, 23879))
         ),
         ae = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13571,7 +13649,6 @@
             r.e(5136),
             r.e(73),
             r.e(9332),
-            r.e(9211),
             r.e(3207),
           ]).then(r.bind(r, 53881))
         ),
@@ -13587,6 +13664,7 @@
         le = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
@@ -13594,12 +13672,13 @@
             r.e(3661),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13612,8 +13691,6 @@
             r.e(3238),
             r.e(1979),
             r.e(2420),
-            r.e(9211),
-            r.e(477),
             r.e(691),
             r.e(2136),
           ]).then(r.bind(r, 5571))
@@ -13621,6 +13698,7 @@
         ce = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
@@ -13629,12 +13707,13 @@
             r.e(3321),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13647,8 +13726,6 @@
             r.e(3238),
             r.e(1979),
             r.e(2420),
-            r.e(9211),
-            r.e(477),
             r.e(691),
             r.e(9788),
           ]).then(r.bind(r, 66480))
@@ -13656,6 +13733,7 @@
         me = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
@@ -13664,12 +13742,13 @@
             r.e(3321),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13682,8 +13761,6 @@
             r.e(3238),
             r.e(1979),
             r.e(2420),
-            r.e(9211),
-            r.e(477),
             r.e(691),
             r.e(9788),
           ]).then(r.bind(r, 52008))
@@ -13691,6 +13768,7 @@
         de = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
@@ -13698,12 +13776,13 @@
             r.e(3661),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13716,8 +13795,6 @@
             r.e(3238),
             r.e(1979),
             r.e(2420),
-            r.e(9211),
-            r.e(477),
             r.e(691),
             r.e(680),
           ]).then(r.bind(r, 41135))
@@ -13725,6 +13802,7 @@
         ue = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(8535),
@@ -13732,12 +13810,13 @@
             r.e(3661),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13750,29 +13829,31 @@
             r.e(3238),
             r.e(1979),
             r.e(2420),
-            r.e(9211),
-            r.e(477),
             r.e(691),
             r.e(680),
           ]).then(r.bind(r, 31970))
         ),
         he = s.lazy(() =>
-          Promise.all([r.e(4030), r.e(4535)]).then(r.bind(r, 74269))
+          Promise.all([r.e(5959), r.e(4030), r.e(8374), r.e(4535)]).then(
+            r.bind(r, 22143)
+          )
         ),
         _e = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(9177),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -13787,17 +13868,19 @@
         pe = s.lazy(() =>
           Promise.all([
             r.e(1164),
+            r.e(5959),
             r.e(8511),
             r.e(1320),
             r.e(9177),
             r.e(7804),
             r.e(4030),
+            r.e(8374),
             r.e(9886),
             r.e(166),
             r.e(7751),
             r.e(2301),
-            r.e(7131),
             r.e(3456),
+            r.e(7131),
             r.e(6431),
             r.e(6614),
             r.e(7599),
@@ -14190,14 +14273,14 @@
         return s.createElement(
           b.u.Provider,
           { value: { bCanUseLink: !0 } },
-          s.createElement(Y, null, t, s.createElement(ye, null))
+          s.createElement(Y, null, t, s.createElement(we, null))
         );
       }
-      const ye = (e) => {
-        const t = s.createElement(y.t, { ModalManager: (0, w.BL)(window) });
+      const we = (e) => {
+        const t = s.createElement(w.t, { ModalManager: (0, y.BL)(window) });
         return i.createPortal(t, document.body);
       };
-      var we = r(65902),
+      var ye = r(65902),
         Se = r(75362),
         Be = r(53622);
       r(69491);
@@ -14210,7 +14293,7 @@
             (0, Se.Uh)().Init(
               "Store",
               CLSTAMP,
-              new we.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new ye.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, n.mG)(this, void 0, void 0, function* () {

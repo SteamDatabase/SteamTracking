@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [73],
+  [73, 40],
   {
     98953: (e) => {
       e.exports = {
@@ -552,26 +552,23 @@
           return s.$k.k_RejectEarlyAccess;
         const c = o.GetAppType();
         return t.software || 6 != c
-          ? (4 != c && 11 != c) ||
-            (t.dlc && (!t.dlc_for_you || d.BIsGameOwned(o.GetParentAppID())))
-            ? t.games_already_in_library && d.BIsGameOwned(e)
-              ? s.$k.k_RejectInLibrary
-              : t.games_not_in_library && !d.BIsGameOwned(e)
-              ? s.$k.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(c)
-              ? s.$k.k_RejectVideo
-              : t.has_discount && !o.GetBestPurchaseOption().discount_pct
-              ? s.$k.k_RejectNoDiscount
-              : 1 == c &&
-                t.games_already_in_library &&
-                d.BIsGameOwned(o.GetParentAppID())
-              ? s.$k.k_RejectInLibrary
-              : i
-              ? (1 == c && r.BHasAppID(o.GetParentAppID())) || r.BHasAppID(e)
-                ? s.$k.k_RejectAlreadyDisplayed
-                : h(o, t)
-              : s.$k.k_NotRejected
-            : s.$k.k_RejectDLC
+          ? t.games_already_in_library && d.BIsGameOwned(e)
+            ? s.$k.k_RejectInLibrary
+            : t.games_not_in_library && !d.BIsGameOwned(e)
+            ? s.$k.k_RejectNotInLibrary
+            : !t.video && [7, 8, 9].includes(c)
+            ? s.$k.k_RejectVideo
+            : t.has_discount && !o.GetBestPurchaseOption().discount_pct
+            ? s.$k.k_RejectNoDiscount
+            : 1 == c &&
+              t.games_already_in_library &&
+              d.BIsGameOwned(o.GetParentAppID())
+            ? s.$k.k_RejectInLibrary
+            : i
+            ? (1 == c && r.BHasAppID(o.GetParentAppID())) || r.BHasAppID(e)
+              ? s.$k.k_RejectAlreadyDisplayed
+              : h(o, t)
+            : s.$k.k_NotRejected
           : s.$k.k_RejectSoftware;
       }
       function S(e, t) {
@@ -8817,7 +8814,7 @@
               ((d = i.event_followed_flags[l]), e ? (o = d & ~o) : (o |= d));
             let c = 0 == o,
               u =
-                ((0, m.Kc)() == m.De.STORE_BASE_URL
+                ("store" === (0, m.Zv)()
                   ? m.De.STORE_BASE_URL + "events"
                   : m.De.COMMUNITY_BASE_URL +
                     "/gid/" +
@@ -8825,7 +8822,6 @@
                 (c ? "/unfolloworunignoreevent" : "/followorignoreevent"),
               p = new URLSearchParams();
             p.append("sessionid", m.De.SESSIONID),
-              p.append("authwgtoken", m.L7.authwgtoken),
               p.append("ignore", "" + t),
               p.append("gid", a),
               p.append("notification_flag", "" + o),
@@ -8883,24 +8879,24 @@
               );
             }
             {
-              let i =
-                window.location.href.indexOf(m.De.COMMUNITY_BASE_URL) >= 0
-                  ? m.De.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    e.clanSteamID.ConvertTo64BitString() +
-                    "/announcements/rate/" +
-                    e.AnnouncementGID
-                  : m.De.STORE_BASE_URL +
-                    "updated/ajaxrateupdate/" +
-                    e.AnnouncementGID;
-              const a = new URLSearchParams();
-              a.append("sessionid", m.De.SESSIONID),
-                a.append("authwgtoken", m.L7.authwgtoken),
-                a.append("voteup", t ? "1" : "0"),
-                a.append("clanid", "" + e.clanSteamID.GetAccountID()),
-                a.append("ajax", "1");
-              let s = { withCredentials: !0, cancelToken: r.token };
-              return 1 == (yield n().post(i, a, s)).data.success;
+              const i = (0, m.Zv)(),
+                a =
+                  "community" == i || "steamtv" == i
+                    ? m.De.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      e.clanSteamID.ConvertTo64BitString() +
+                      "/announcements/rate/" +
+                      e.AnnouncementGID
+                    : m.De.STORE_BASE_URL +
+                      "updated/ajaxrateupdate/" +
+                      e.AnnouncementGID,
+                s = new URLSearchParams();
+              s.append("sessionid", m.De.SESSIONID),
+                s.append("voteup", t ? "1" : "0"),
+                s.append("clanid", "" + e.clanSteamID.GetAccountID()),
+                s.append("ajax", "1");
+              const o = { withCredentials: !0, cancelToken: r.token };
+              return 1 == (yield n().post(a, s, o)).data.success;
             }
           });
         }
@@ -10092,7 +10088,7 @@
     },
     67777: (e, t, r) => {
       "use strict";
-      r.d(t, { Hu: () => Z, RJ: () => J, Yb: () => Q, ll: () => re });
+      r.d(t, { Hu: () => Y, RJ: () => ee, Yb: () => K, ll: () => ae });
       var i = r(70655),
         a = r(9669),
         n = r.n(a),
@@ -10132,26 +10128,28 @@
         z = r(84282),
         U = r(22335),
         W = r.n(U),
-        x = r(23211),
-        V = r(88335),
-        j = r.n(V),
-        H = r(5146);
-      const X = "DEBUG_UseNewGameHover";
-      function Z() {
-        return "none" !== $();
+        x = r(13679),
+        V = r.n(x),
+        j = r(23211),
+        H = r(88335),
+        X = r.n(H),
+        Z = r(5146);
+      const $ = "DEBUG_UseNewGameHover";
+      function Y() {
+        return "none" !== q();
       }
-      function $() {
+      function q() {
         var e;
         return (
           (null === (e = window.sessionStorage) || void 0 === e
             ? void 0
-            : e.getItem(X)) || "default"
+            : e.getItem($)) || "default"
         );
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(X, e);
+        window.sessionStorage.setItem($, e);
       };
-      function Y(e) {
+      function Q(e) {
         const { info: t } = e,
           r = (0, l.useRef)({
             include_assets: !0,
@@ -10279,7 +10277,7 @@
           )
         );
       }
-      function q(e) {
+      function J(e) {
         const { rgTagIDs: t } = e;
         return l.createElement(
           "div",
@@ -10297,7 +10295,7 @@
           )
         );
       }
-      function Q(e) {
+      function K(e) {
         const { appInfo: t, bTruncateTotalReviews: r, bShowTooltip: i } = e,
           [a] = (0, B.jk)(
             null == t ? void 0 : t.id,
@@ -10369,6 +10367,7 @@
             ? l.createElement(
                 G.HP,
                 {
+                  strTooltipClassname: V().HoverAboveModal,
                   toolTipContent: (0, O.Xx)(
                     c,
                     n.percent_positive,
@@ -10380,7 +10379,7 @@
             : d
         );
       }
-      const J = (0, o.Pi)((e) => {
+      const ee = (0, o.Pi)((e) => {
           const { appID: t, snr: r, classOverride: a } = e,
             s = t && g.jg.Get().BIsGameWishlisted(t),
             o = t && g.jg.Get().BOwnsApp(t),
@@ -10411,7 +10410,7 @@
                       ? (c(!0),
                         yield g.jg.Get().UpdateGameWishlist(t, !s, r),
                         m.current.token.reason || c(!1))
-                      : (0, x.Xt)();
+                      : (0, j.Xt)();
                 }),
             },
             l.createElement(R.sqQ, null),
@@ -10427,7 +10426,7 @@
             )
           );
         }),
-        K = (e) => {
+        te = (e) => {
           const { nCreatorAccountID: t } = e,
             [r, i] = (0, _.KU)(t),
             a = (0, h.iG)(t);
@@ -10444,7 +10443,7 @@
             l.createElement(y.C4, { clanAccountID: t })
           );
         },
-        ee = (0, o.Pi)((e) => {
+        re = (0, o.Pi)((e) => {
           const {
               info: t,
               strStoreUrl: r,
@@ -10535,8 +10534,8 @@
                     null == g ? void 0 : g.GetName()
                   )
                 ),
-                Boolean(g) && l.createElement(q, { rgTagIDs: g.GetTagIDs() }),
-                Boolean(!o && g) && l.createElement(Q, { appInfo: t }),
+                Boolean(g) && l.createElement(J, { rgTagIDs: g.GetTagIDs() }),
+                Boolean(!o && g) && l.createElement(K, { appInfo: t }),
                 Boolean(!o && S) &&
                   l.createElement(
                     "div",
@@ -10560,12 +10559,12 @@
                 Boolean(i) && i,
                 Boolean(d && w) &&
                   l.createElement(D.r, { appid: t.id, bIsMuted: !1 }),
-                c && l.createElement(K, { nCreatorAccountID: c })
+                c && l.createElement(te, { nCreatorAccountID: c })
               )
             )
           );
         }),
-        te = (0, o.Pi)((e) => {
+        ie = (0, o.Pi)((e) => {
           l.useEffect(() => {
             g.jg.Get().HintLoad();
           }, []);
@@ -10583,7 +10582,7 @@
               {
                 className: (0, F.Z)(
                   W().GameHoverCapsuleCtn,
-                  j().InGameHover,
+                  X().InGameHover,
                   i && W().UseHidingBottomHalf
                 ),
                 onClick: n,
@@ -10596,27 +10595,27 @@
                   className: W().TrailerAnchorStoreLink,
                 },
                 Boolean(!a && !n) &&
-                  l.createElement(J, { appID: t.id, snr: e.strSNR }),
-                l.createElement(Y, { info: t })
+                  l.createElement(ee, { appID: t.id, snr: e.strSNR }),
+                l.createElement(Q, { info: t })
               ),
               l.createElement(
-                ee,
+                re,
                 Object.assign({}, e, { bPreventNavigation: Boolean(n) })
               )
             )
           );
         });
-      function re(e) {
+      function ae(e) {
         const { item: t } = e,
           [r] = (0, B.jk)(t.id, (0, v.TM)(t.type), {});
         if (!r) return null;
         if (1 == r.GetStoreItemType() && 1 == r.GetIncludedAppIDs().length) {
           const t = { id: r.GetIncludedAppIDs()[0], type: "game" };
-          return l.createElement(ie, Object.assign({}, e, { item: t }));
+          return l.createElement(ne, Object.assign({}, e, { item: t }));
         }
-        return l.createElement(ie, Object.assign({}, e));
+        return l.createElement(ne, Object.assign({}, e));
       }
-      function ie(e) {
+      function ne(e) {
         const {
             item: t,
             elElementToAppend: r,
@@ -10645,9 +10644,9 @@
         if (!_) return null;
         if (N.De.IN_GAMEPADUI)
           return l.createElement(l.Fragment, null, e.children);
-        if (!Z())
+        if (!Y())
           return l.createElement(
-            H._,
+            Z._,
             {
               type: (0, v.Hy)(_.GetStoreItemType()),
               id: t.id,
@@ -10657,10 +10656,10 @@
             },
             e.children
           );
-        const S = "hiding" == $(),
+        const S = "hiding" == q(),
           b = (0, p.Hf)(`${_.GetStorePageURL()}${o ? `?${o}` : ""}`, h),
           w = l.createElement(
-            te,
+            ie,
             Object.assign(
               {},
               {
@@ -10678,12 +10677,12 @@
             )
           );
         return l.createElement(
-          ne,
+          oe,
           Object.assign({ hoverContent: w, strClickUrl: b }, u),
           e.children
         );
       }
-      const ae = l.forwardRef((e, t) => {
+      const se = l.forwardRef((e, t) => {
         const { fnClose: r, sourceRef: i, hoverProps: a } = e;
         return l.createElement(
           m.T,
@@ -10709,11 +10708,10 @@
                     r();
                 },
                 onBlur: (e) => {
-                  ((e.relatedTarget &&
-                    !M.ni(e.currentTarget, e.relatedTarget)) ||
+                  (e.relatedTarget && M.ni(e.currentTarget, e.relatedTarget)) ||
                     (e.relatedTarget &&
                       i.current &&
-                      !i.current.contains(e.relatedTarget))) &&
+                      i.current.contains(e.relatedTarget)) ||
                     r();
                 },
                 onKeyDown: (e) => {
@@ -10726,7 +10724,7 @@
           )
         );
       });
-      class ne extends l.Component {
+      class oe extends l.Component {
         constructor() {
           super(...arguments),
             (this.m_refHoverSourceDiv = l.createRef()),
@@ -10785,9 +10783,9 @@
                       zIndex: 98,
                       width: 1.15 * o.clientWidth,
                       fontSize: d,
-                      minHeight: "hiding" == $() ? void 0 : 300,
+                      minHeight: "hiding" == q() ? void 0 : 300,
                       height:
-                        "hiding" == $()
+                        "hiding" == q()
                           ? 1.15 * o.clientWidth * (125 / 184)
                           : void 0,
                     },
@@ -10798,16 +10796,16 @@
               ),
               m = "game-hover-" + Math.floor(1e8 * Math.random());
             (this.m_fnHidePopup = () =>
-              ne.sm_embeddedElements.HideElement(o.ownerDocument, m)),
+              oe.sm_embeddedElements.HideElement(o.ownerDocument, m)),
               (this.m_nScrollYAtHoverStart = window.scrollY),
               window.addEventListener("scroll", this.OnScroll);
             const u = null != a ? a : 150;
             (this.m_bPopupShowPending = !0),
-              yield ne.sm_embeddedElements.ShowElementDelayed(
+              yield oe.sm_embeddedElements.ShowElementDelayed(
                 o.ownerDocument,
                 u,
                 l.createElement(
-                  ae,
+                  se,
                   {
                     sourceRef: this.m_refHoverSourceDiv,
                     ref: this.m_refHoverContentDiv,
@@ -10863,11 +10861,11 @@
           );
         }
       }
-      (ne.sm_embeddedElements = new c.AN("item-hover-source-elements")),
-        (0, i.gn)([P.ak], ne.prototype, "ClosePopup", null),
-        (0, i.gn)([P.ak], ne.prototype, "OnUnhover", null),
-        (0, i.gn)([P.ak], ne.prototype, "OnScroll", null),
-        (0, i.gn)([P.ak], ne.prototype, "OnHover", null);
+      (oe.sm_embeddedElements = new c.AN("item-hover-source-elements")),
+        (0, i.gn)([P.ak], oe.prototype, "ClosePopup", null),
+        (0, i.gn)([P.ak], oe.prototype, "OnUnhover", null),
+        (0, i.gn)([P.ak], oe.prototype, "OnScroll", null),
+        (0, i.gn)([P.ak], oe.prototype, "OnHover", null);
     },
     89673: (e, t, r) => {
       "use strict";

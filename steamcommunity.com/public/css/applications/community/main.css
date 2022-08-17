@@ -2040,6 +2040,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   position: relative;
   overflow: hidden;
   --left-track-color: #1a9fff;
+  border-radius: 3px;
 }
 .gamepadslider_SliderTrack_Mq25N.gamepadslider_SliderHasNotches_2XiAy {
   width: calc(100% - 20px);
@@ -2240,6 +2241,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   width: 0;
   min-width: 4em;
   border: none;
+  border-radius: 3px;
   outline: none;
   padding: 4px 8px;
   box-sizing: border-box;

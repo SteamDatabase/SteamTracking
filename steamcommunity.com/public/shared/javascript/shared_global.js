@@ -179,7 +179,7 @@ function $JFromIDOrElement( elem )
  * @param strSecondaryActionButton	Add a secondary ok button (three buttons total).  Resolves with done() like OK but passes 'SECONDARY' as argument to handler
  * @returns CModal
  */
-function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton )
+function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButton, strSecondaryActionButton, rgModalParams )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -208,7 +208,7 @@ function ShowConfirmDialog( strTitle, strDescription, strOKButton, strCancelButt
 	$CancelButton.click( function() { fnCancel( true ); } );
 	rgButtons.push( $CancelButton );
 
-	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel );
+	var Modal = _BuildDialog( strTitle, strDescription, rgButtons, fnCancel, rgModalParams );
 	Modal.Show();
 
 	_BindOnEnterKeyPressForDialog( Modal, deferred, fnOK );

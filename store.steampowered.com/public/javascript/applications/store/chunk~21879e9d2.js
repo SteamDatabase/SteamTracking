@@ -1945,7 +1945,7 @@
       }
     },
     159: (e, t, r) => {
-      r.d(t, { Z: () => I });
+      r.d(t, { Z: () => R });
       var s = r(70655),
         i = r(22188),
         n = (r(26149), r(92398), r(58114)),
@@ -2048,14 +2048,14 @@
             e.include_supported_languages || t.include_supported_languages,
         };
       }
-      function R(e, t) {
+      function I(e, t) {
         return (0, s.mG)(this, void 0, void 0, function* () {
           const r = yield e,
             s = yield t;
           return 1 != r ? r : s;
         });
       }
-      class I {
+      class R {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 5),
             (this.k_nMaxBatchSize = 250),
@@ -2071,7 +2071,6 @@
             (this.m_SteamInterface = null),
             (this.m_bUsePartnerAPI = !1),
             (this.m_bInitialized = !1),
-            (this.m_cc = p.De.COUNTRY),
             (this.m_bActivelyResettingCache = !1),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_setPendingBundleInfo = new Set()),
@@ -2084,28 +2083,28 @@
         }
         static Get() {
           return (
-            I.sm_instance ||
-              ((I.sm_instance = new I()),
-              (window.StoreItemCache = I.sm_instance)),
-            I.sm_instance
+            R.sm_instance ||
+              ((R.sm_instance = new R()),
+              (window.StoreItemCache = R.sm_instance)),
+            R.sm_instance
           );
         }
         static Initialize(e, t) {
           return (0, s.mG)(this, void 0, void 0, function* () {
             (0, m.X)(
-              !I.Get().m_bInitialized,
+              !R.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once."
             ),
-              (I.Get().m_SteamInterface = e),
-              (I.Get().m_bUsePartnerAPI = !!t),
-              (I.Get().m_bInitialized = !0);
+              (R.Get().m_SteamInterface = e),
+              (R.Get().m_bUsePartnerAPI = !!t),
+              (R.Get().m_bInitialized = !0);
           });
         }
         GetSteamInterface() {
           return this.m_SteamInterface;
         }
-        SetCountryCode(e) {
-          this.m_cc = e;
+        SetSteamInterface(e) {
+          this.m_SteamInterface = e;
         }
         ResetCache() {
           return (0, s.mG)(this, void 0, void 0, function* () {
@@ -2117,11 +2116,8 @@
               (this.m_bActivelyResettingCache = !1);
           });
         }
-        SetSteamInterface(e) {
-          this.m_SteamInterface = e;
-        }
         static BIsInitialized() {
-          return I.Get().m_bInitialized;
+          return R.Get().m_bInitialized;
         }
         QueueAppRequest(e, t) {
           return (0, s.mG)(this, void 0, void 0, function* () {
@@ -2190,7 +2186,7 @@
           return (0, s.mG)(this, void 0, void 0, function* () {
             if (
               ((0, m.X)(
-                I.ValidateDataRequest(r),
+                R.ValidateDataRequest(r),
                 "Invalid Data Request: " + JSON.stringify(r)
               ),
               this.m_bActivelyResettingCache)
@@ -2317,7 +2313,7 @@
                 (t = B(null == r ? void 0 : r.dataRequest, t)),
                   r && o.push(r.promise),
                   this.m_mapAppsInFlight.set(e, {
-                    promise: r ? R(r.promise, a) : a,
+                    promise: r ? I(r.promise, a) : a,
                     dataRequest: t,
                   });
               }
@@ -2332,7 +2328,7 @@
                   (t = B(null == r ? void 0 : r.dataRequest, t)),
                     r && o.push(r.promise),
                     this.m_mapPackageInFlight.set(e, {
-                      promise: r ? R(r.promise, a) : a,
+                      promise: r ? I(r.promise, a) : a,
                       dataRequest: t,
                     });
                 }
@@ -2347,7 +2343,7 @@
                   (t = B(null == r ? void 0 : r.dataRequest, t)),
                     r && o.push(r.promise),
                     this.m_mapBundleInFlight.set(e, {
-                      promise: r ? R(r.promise, a) : a,
+                      promise: r ? I(r.promise, a) : a,
                       dataRequest: t,
                     });
                 }
@@ -2414,20 +2410,17 @@
               const a = [];
               for (; t.length > 0; ) {
                 const s = t.splice(0, this.k_nMaxBatchSize);
-                l.push(s);
-                let i = (0, g.Fq)(this.m_bUsePartnerAPI);
-                if (this.m_bUsePartnerAPI) {
+                if ((l.push(s), this.m_bUsePartnerAPI)) {
                   const t = n.gA.Init(d);
                   t.Body().set_include_unpublished(!1);
-                  const l = t.Body().request(!0);
-                  l.set_context(i),
-                    l.set_data_request(u.Qn.fromObject(r)),
-                    l.set_ids(s),
+                  const i = t.Body().request(!0);
+                  i.set_context((0, g.Fq)(this.m_bUsePartnerAPI)),
+                    i.set_data_request(u.Qn.fromObject(r)),
+                    i.set_ids(s),
                     a.push(_.GetItems(e.GetServiceTransport(), t));
                 } else {
                   const t = n.gA.Init(u.eK);
-                  i.set_country_code(this.m_cc),
-                    t.Body().set_context(i),
+                  (0, g.pA)(t, this.m_bUsePartnerAPI),
                     (0, g.De)(t, r),
                     t.Body().set_ids(s),
                     a.push(u.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
@@ -2604,10 +2597,10 @@
           );
         }
       }
-      (I.k_DataRequest_CommonOnly = {}),
-        (I.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
-        (I.k_DataRequest_Assets = { include_assets: !0 }),
-        (I.k_DataRequest_IncludeAll = {
+      (R.k_DataRequest_CommonOnly = {}),
+        (R.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
+        (R.k_DataRequest_Assets = { include_assets: !0 }),
+        (R.k_DataRequest_IncludeAll = {
           include_assets: !0,
           include_release: !0,
           include_platforms: !0,
@@ -2751,8 +2744,8 @@
             include_trailers: g,
             include_ratings: f,
             include_tag_count: B,
-            include_reviews: R,
-            include_basic_info: I,
+            include_reviews: I,
+            include_basic_info: R,
             include_supported_languages: v,
           } = r;
         if (
@@ -2766,8 +2759,8 @@
               include_trailers: g,
               include_ratings: f,
               include_tag_count: B,
-              include_reviews: R,
-              include_basic_info: I,
+              include_reviews: I,
+              include_basic_info: R,
               include_supported_languages: v,
             };
             if (
@@ -2786,7 +2779,7 @@
                 }),
               () => n.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, u, d, _, m, h, p, g, f, B, R, I, v]),
+          }, [e, t, s, u, d, _, m, h, p, g, f, B, I, R, v]),
           !e)
         )
           return [null, 2];
@@ -2840,7 +2833,7 @@
             include_tag_count: g,
             include_reviews: f,
             include_basic_info: B,
-            include_supported_languages: R,
+            include_supported_languages: I,
           } = r;
         if (
           ((0, n.useEffect)(() => {
@@ -2856,7 +2849,7 @@
                 include_tag_count: g,
                 include_reviews: f,
                 include_basic_info: B,
-                include_supported_languages: R,
+                include_supported_languages: I,
               },
               s = e.filter((e) => !l.Z.Get().BHasStoreItem(e, t));
             if (0 == s.length) return;
@@ -2868,7 +2861,7 @@
               }),
               () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, o, u, c, d, _, m, h, p, g, f, B, R]),
+          }, [e, t, s, o, u, c, d, _, m, h, p, g, f, B, I]),
           !e)
         )
           return 2;

@@ -167,8 +167,8 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ConfirmOverwriteVoteOrNominationDialog: () => B,
-          EventDisplaySteamAwardNomination: () => L,
+          ConfirmOverwriteVoteOrNominationDialog: () => L,
+          EventDisplaySteamAwardNomination: () => B,
           EventDisplaySteamAwardVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => x,
           default: () => I,
@@ -255,7 +255,7 @@
           return null;
         });
       }
-      let L = class extends l.Component {
+      let B = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
@@ -353,7 +353,7 @@
         }
         HandleConflict(e) {
           (0, y.AM)(
-            l.createElement(B, {
+            l.createElement(L, {
               strLocTokenInfix: "Nomination",
               strNewGameTitle: this.props.event.GetGameTitle(this.props.lang),
               fnGetOldGameTitle: () => this.m_strPreviousNomineeTitle,
@@ -379,7 +379,6 @@
             const n = u.De.STORE_BASE_URL + "steamawards/ajaxnominategame",
               r = new URLSearchParams();
             r.append("sessionid", u.De.SESSIONID),
-              r.append("authwgtoken", u.L7.authwgtoken),
               r.append("categoryid", e.toString()),
               r.append("nominatedid", t.toString()),
               r.append("rescind", a ? "0" : "1"),
@@ -563,12 +562,12 @@
           );
         }
       };
-      (0, n.gn)([o.LO], L.prototype, "m_strPreviousNomineeTitle", void 0),
-        (0, n.gn)([o.LO], L.prototype, "m_nominationEventDetails", void 0),
-        (0, n.gn)([S.ak], L.prototype, "OnNominateClick", null),
-        (0, n.gn)([S.ak], L.prototype, "SaveNomination", null),
-        (L = (0, n.gn)([s.Pi], L));
-      let B = class extends l.Component {
+      (0, n.gn)([o.LO], B.prototype, "m_strPreviousNomineeTitle", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_nominationEventDetails", void 0),
+        (0, n.gn)([S.ak], B.prototype, "OnNominateClick", null),
+        (0, n.gn)([S.ak], B.prototype, "SaveNomination", null),
+        (B = (0, n.gn)([s.Pi], B));
+      let L = class extends l.Component {
         OnConfirm() {
           this.props.fnOnConfirm(), this.props.closeModal();
         }
@@ -609,9 +608,9 @@
           });
         }
       };
-      (0, n.gn)([S.ak], B.prototype, "OnConfirm", null),
-        (0, n.gn)([S.ak], B.prototype, "OnCancel", null),
-        (B = (0, n.gn)([s.Pi], B));
+      (0, n.gn)([S.ak], L.prototype, "OnConfirm", null),
+        (0, n.gn)([S.ak], L.prototype, "OnCancel", null),
+        (L = (0, n.gn)([s.Pi], L));
       let V = class extends l.Component {
         constructor() {
           super(...arguments),
@@ -694,7 +693,7 @@
         HandleConflict(e) {
           const t = d.Z.Get().GetApp(this.props.appID);
           (0, y.AM)(
-            l.createElement(B, {
+            l.createElement(L, {
               strLocTokenInfix: "Vote",
               strNewGameTitle: null == t ? void 0 : t.GetName(),
               fnGetOldGameTitle: () => this.m_strPreviousVotedForAppTitle,
@@ -714,7 +713,6 @@
             const a = u.De.STORE_BASE_URL + "steamawards/ajaxvoteforgame",
               n = new URLSearchParams();
             n.append("sessionid", u.De.SESSIONID),
-              n.append("authwgtoken", u.L7.authwgtoken),
               n.append("categoryid", e.toString()),
               n.append("appid", t.toString());
             try {

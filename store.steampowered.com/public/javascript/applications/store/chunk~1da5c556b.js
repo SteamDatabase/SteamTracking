@@ -76,6 +76,7 @@
         AppSummaryWidgetCtn: "eventbbcodeparser_AppSummaryWidgetCtn_3Mdza",
         LoyaltyRewardCtn: "eventbbcodeparser_LoyaltyRewardCtn_2SGke",
         SaleSectionCtn: "eventbbcodeparser_SaleSectionCtn_2Xrw_",
+        SaleTextCtn: "eventbbcodeparser_SaleTextCtn_2Z1dC",
         ReminderCtn: "eventbbcodeparser_ReminderCtn_1dtL2",
         BlockQuote: "eventbbcodeparser_BlockQuote_2mfpG",
         SocialLink: "eventbbcodeparser_SocialLink_wn4Fw",
@@ -127,7 +128,7 @@
       "use strict";
       n.d(t, {
         Ah: () => N,
-        BB: () => w,
+        BB: () => x,
         Be: () => C,
         GS: () => O,
         HC: () => F,
@@ -193,7 +194,7 @@
         ],
         ["h1", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
         ["h2", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: w, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h3", { Constructor: x, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
@@ -319,7 +320,7 @@
                   e.children
                 );
               return i.createElement(
-                x,
+                w,
                 { className: n, href: t, id: a },
                 e.children
               );
@@ -518,7 +519,7 @@
               const t = R(e.args),
                 n = "button" == R(e.args, "style") ? S().LinkButton : null;
               return i.createElement(
-                x,
+                w,
                 { className: n, href: `${f.De.PARTNER_BASE_URL}doc/${t}` },
                 e.children
               );
@@ -602,10 +603,10 @@
       function B(e) {
         return k(e, (0, b.Z)(S().Header2, "BB_Header2"));
       }
-      function w(e) {
+      function x(e) {
         return k(e, (0, b.Z)(S().Header3, "BB_Header3"));
       }
-      const x = (e) => {
+      const w = (e) => {
         const { href: t } = e,
           n = (0, a._T)(e, ["href"]),
           o = (0, E.bJ)();
@@ -1134,8 +1135,8 @@
         k = n(93976),
         I = n(7573),
         B = n(41311),
-        w = n(30156),
-        x = n(30600),
+        x = n(30156),
+        w = n(30600),
         A = n(35092),
         M = n(77569),
         O = n.n(M),
@@ -1314,9 +1315,9 @@
       function W(e) {
         return o.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, a.gn)([w.ak], V.prototype, "ToggleMenu", null),
-        (0, a.gn)([w.ak], V.prototype, "ShowMenu", null),
-        (0, a.gn)([w.ak], V.prototype, "HideMenu", null),
+      (0, a.gn)([x.ak], V.prototype, "ToggleMenu", null),
+        (0, a.gn)([x.ak], V.prototype, "ShowMenu", null),
+        (0, a.gn)([x.ak], V.prototype, "HideMenu", null),
         (V = (0, a.gn)([i.Pi], V));
       let Y = class extends r.Component {
         constructor() {
@@ -1399,7 +1400,7 @@
             n = encodeURIComponent(this.GetExternalCalendarEventBody()),
             a = e.GetStartTimeAndDateUnixSeconds(),
             i = W(a),
-            o = W(e.GetEndTimeAndDateUnixSeconds() || a + x._H.PerHour),
+            o = W(e.GetEndTimeAndDateUnixSeconds() || a + w._H.PerHour),
             r =
               (E.De.IN_CLIENT ? "steam://openurl_external/" : "") +
               `https://calendar.google.com/calendar/r/eventedit?text=${t}&details=${n}&dates=${i}/${o}`;
@@ -1482,7 +1483,7 @@
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     (0, B.$1)(
                       d,
-                      (0, x.U8)(
+                      (0, w.U8)(
                         new Date(1e3 * d),
                         _.JW.GetTimeNowWithOverrideAsDate()
                       )
@@ -1634,9 +1635,9 @@
           );
         }
       };
-      (0, a.gn)([w.ak], Y.prototype, "OnChangeFollowByEmail", null),
-        (0, a.gn)([w.ak], Y.prototype, "OnChangeFollowByPush", null),
-        (0, a.gn)([w.ak], Y.prototype, "TrackEventAction", null),
+      (0, a.gn)([x.ak], Y.prototype, "OnChangeFollowByEmail", null),
+        (0, a.gn)([x.ak], Y.prototype, "OnChangeFollowByPush", null),
+        (0, a.gn)([x.ak], Y.prototype, "TrackEventAction", null),
         (Y = (0, a.gn)([i.Pi], Y));
     },
     35841: (e, t, n) => {
