@@ -40,7 +40,17 @@ for (const file of files) {
 				if (node.type === Syntax.Property) {
 					this.skip();
 
-					if (node.value.type !== Syntax.FunctionExpression || node.value.params.length !== 3) {
+					/*
+						oFam: function (e, r, t) {
+
+						or
+
+						24262: (e, t, r) => {
+					*/
+					if (
+						(node.value.type !== Syntax.ArrowFunctionExpression && node.value.type !== Syntax.FunctionExpression) ||
+						node.value.params.length !== 3
+					) {
 						// (module, module.exports, __webpack_require__)
 						return;
 					}
@@ -622,7 +632,35 @@ function TraverseModule(ast) {
 				node.callee.object.name === webpackRequireName &&
 				node.callee.property.name === "d"
 			) {
-				if (
+				/*
+					r.d(t, { YearInReviewRoutes: () => W, default: () => j })
+				*/
+				if (node.arguments[1].type === Syntax.ObjectExpression) {
+					for (const property of node.arguments[1].properties) {
+						if (
+							property.key.type !== Syntax.Identifier ||
+							property.value.type !== Syntax.ArrowFunctionExpression ||
+							property.value.body.type !== Syntax.Identifier
+						) {
+							/*
+								ZT: () => A.Z,
+							*/
+							if (property.value.body.type === Syntax.MemberExpression) {
+								continue;
+							}
+							throw new Error("Unexpected webpack function");
+						}
+
+						const exportedId = property.key.name;
+						const localId = property.value.body.name;
+
+						exportedIds.set(exportedId, localId);
+						exportedIdsFlipped.set(localId, exportedId);
+					}
+
+					this.skip();
+					return;
+				} else if (
 					node.arguments[2].type !== Syntax.FunctionExpression ||
 					node.arguments[2].body.type !== Syntax.BlockStatement ||
 					node.arguments[2].body.body[0].type !== Syntax.ReturnStatement
