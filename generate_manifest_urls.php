@@ -66,6 +66,11 @@ foreach( $Manifests as $Manifest )
 			continue;
 		}
 
+		if( str_starts_with( $Match, 'libraries~' ) )
+		{
+			continue;
+		}
+
 		foreach( $Manifest[ 'Paths' ] as $Path )
 		{
 			$Url = $Path[ 'Prepend' ] . $Match . $Path[ 'Append' ];

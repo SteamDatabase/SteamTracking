@@ -19,6 +19,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private bool $ExtractClientArchives = false;
 		private bool $SyncProtobufs = false;
 		private bool $DumpJavascriptFiles = false;
+		private bool $UpdateManifestUrls = false;
 
 		/** @var array<string, string> */
 		private array $ClientArchiveFolder =
@@ -85,20 +86,39 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			$this->CurrentTime = time( );
 
 			$this->URLsToFetch = $this->ParseUrls( );
+			$KnownUrls = [];
+
+			foreach( $this->URLsToFetch as $Url )
+			{
+				$KnownUrls[] = $Url[ 'URL' ];
+			}
 
 			$Tries = 5;
 
 			do
 			{
 				$URLs = $this->URLsToFetch;
-
-				$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
-
 				$this->URLsToFetch = [];
 
+				$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
 				$this->Fetch( $URLs );
 			}
 			while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
+
+			if( $this->UpdateManifestUrls )
+			{
+				$this->URLsToFetch = $this->ProcessManifests( $KnownUrls );
+
+				do
+				{
+					$URLs = $this->URLsToFetch;
+					$this->URLsToFetch = [];
+
+					$this->Log( '{yellow}' . count( $URLs ) . ' urls to be fetched...' );
+					$this->Fetch( $URLs );
+				}
+				while( !empty( $this->URLsToFetch ) && $Tries-- > 0 );
+			}
 
 			foreach( $this->ETags as &$ETags )
 			{
@@ -427,28 +447,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				}
 				else if( str_ends_with( $File, '.js' ) )
 				{
+					if( str_ends_with( $File, '/manifest.js' ) )
+					{
+						$this->UpdateManifestUrls = true;
+					}
+
 					$this->DumpJavascriptFiles = true;
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
-
-				if( $OriginalFile === 'store.steampowered.com/public/javascript/applications/store/manifest.js' )
-				{
-					$Data = file_get_contents( $OriginalFile );
-					preg_match_all( '/\d+: "(chunk~.+)",$/m', $Data, $ManifestMatches );
-					$ManifestMatches = array_unique( $ManifestMatches[ 1 ] );
-
-					foreach( $ManifestMatches as $Match )
-					{
-						$NewFilePath = 'store.steampowered.com/public/javascript/applications/store/' . $Match . '.js';
-
-						$this->URLsToFetch[ ] =
-						[
-							'URL'  => 'https://' . $NewFilePath . '?__TIME__&l=english&_cdn=cloudflare',
-							'File' => $NewFilePath,
-						];
-					}
-				}
 
 				return true;
 			}
@@ -697,6 +704,85 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 
 			return $Urls;
+		}
+
+		/**
+		 * @param string[] $KnownUrls
+		 *
+		 * @return array<int, array{URL: string, File: string}>
+		 */
+		private function ProcessManifests( array $KnownUrls ) : array
+		{
+			system( 'node generate_manifest_urls.mjs' );
+
+			$URLsToFetch = [];
+			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_manifests.txt';
+
+			if( !file_exists( $ManifestUrlsPath ) )
+			{
+				throw new Exception( $ManifestUrlsPath . ' does not exist' );
+			}
+
+			$ManifestUrls = file( $ManifestUrlsPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+			$ManifestUrls = array_diff( $ManifestUrls, $KnownUrls );
+
+			foreach( $ManifestUrls as $Url )
+			{
+				if( !str_starts_with( $Url, 'https://' ) )
+				{
+					throw new Exception( $Url . ' does not start with https://' );
+				}
+
+				$QuestionMark = strrpos( $Url, '?' );
+
+				if( $QuestionMark === false )
+				{
+					throw new Exception( $Url . ' does not contain a question mark' );
+				}
+
+				$URLsToFetch[] =
+				[
+					'URL'  => $Url,
+					'File' => substr( $Url, 8, $QuestionMark - 8 ),
+				];
+			}
+
+			// Find and delete old chunk~ files
+			$Folders = [];
+
+			foreach( $URLsToFetch as $Url )
+			{
+				$Filename = basename( $Url[ 'File' ] );
+
+				if( str_starts_with( $Filename, 'chunk~' ) )
+				{
+					$Folder = __DIR__ . '/' . dirname( $Url[ 'File' ] ) . '/';
+
+					if( !isset( $Folders[ $Folder ] ) )
+					{
+						$Folders[ $Folder ] = [];
+					}
+
+					$Folders[ $Folder ][ $Filename ] = true;
+				}
+			}
+
+			foreach( $Folders as $Folder => $NewChunks )
+			{
+				foreach( glob( $Folder . 'chunk~*' ) as $FilepathOnDisk )
+				{
+					$Filename = basename( $FilepathOnDisk );
+
+					if( !isset( $NewChunks[ $Filename ] ) )
+					{
+						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
+
+						unlink( $FilepathOnDisk );
+					}
+				}
+			}
+
+			return $URLsToFetch;
 		}
 
 		private function Log( string $String ) : void
