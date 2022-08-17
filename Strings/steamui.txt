@@ -21613,9 +21613,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Aug 10 2022
+Aug 16 2022
 build_time
-12:37:44
+15:23:33
 package_version
 local
 SteamClient020
@@ -29204,7 +29204,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-12:38:27
+15:24:17
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -31072,7 +31072,7 @@ sOSVersionId
 sOSBuildId
 nSteamVersion
 sSteamBuildDate
-Aug 10 2022 12:38:38
+Aug 16 2022 15:24:26
 sSteamAPI
 sCPUVendor
 sCPUName
@@ -41650,7 +41650,7 @@ j
 j
 j
 E8}
-|W
+&e
 e
 J=
 W
