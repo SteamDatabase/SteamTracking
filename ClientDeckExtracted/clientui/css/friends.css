@@ -68,7 +68,7 @@
 
 .throbber_ThrobberText_3r290,
 .throbber_LoadingWrapper_9UFR8 .throbber_ThrobberText_3r290 {
-  color: #3d85c8;
+  color: rgb(61, 133, 200);
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
@@ -96,11 +96,11 @@
 }
 
 .throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber.throbber_blur_3cMTP path {
-  stroke: #4375fd;
+  stroke: rgb(67, 117, 253);
 }
 
 .throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber path {
-  stroke: #67c1f5;
+  stroke: rgb(103, 193, 245);
   animation-name: throbber_ThrobberRoundLoop_3iwJU;
   animation-duration: 0.7s;
   stroke-linecap: butt;
@@ -121,7 +121,7 @@
 
 .throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber .throbber_roundOuter_3LNze {
   opacity: 1;
-  stroke: #3b8bb9;
+  stroke: rgb(59, 139, 185);
   stroke-width: 6px;
   transform-origin: 50% 50%;
   stroke-linecap: round;
@@ -167,7 +167,7 @@
   .SVGIcon_Throbber
   .throbber_topCircle_3Zy4H
   circle {
-  stroke: #67c1f5;
+  stroke: rgb(103, 193, 245);
   animation-name: throbber_ThrobberTopCircleLoop_RFW6m;
   animation-duration: 3s;
   animation-delay: -1.2s;
@@ -187,7 +187,7 @@
   .SVGIcon_Throbber
   .throbber_bottomCircle_1XTvd
   path {
-  fill: #67c1f5;
+  fill: rgb(103, 193, 245);
   stroke-width: 0;
   animation-name: throbber_ThrobberBottomCircleLoop_1AigW;
   animation-duration: 3s;
@@ -592,7 +592,7 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .FullModalOverlay.NotReadyToRender {
-  background: black;
+  background: rgb(0, 0, 0);
 }
 
 .FullModalOverlay .ModalPosition_Content {
@@ -643,12 +643,12 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogBody a {
-  color: #6dcff6;
+  color: rgb(109, 207, 246);
   text-decoration: none;
 }
 
 .DialogBody a:hover {
-  color: #b0e9ff;
+  color: rgb(176, 233, 255);
 }
 
 .ModalDialogPopup .DialogContentTransition .DialogBody {
@@ -747,12 +747,12 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
-  stroke: #788a92;
+  stroke: rgb(120, 138, 146);
   stroke-width: 24px;
 }
 
 .ModalPosition_Dismiss .closeButton:hover .SVGIcon_X_Line line {
-  stroke: white;
+  stroke: rgb(255, 255, 255);
 }
 
 .ModalPosition_Dismiss .closeButton:hover {
@@ -932,14 +932,14 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogHeaderSubtitle {
-  color: #6e7985;
+  color: rgb(110, 121, 133);
   font-size: 22px;
   letter-spacing: 1px;
   text-transform: none;
 }
 
 .DialogHighlight {
-  color: #4297f8;
+  color: rgb(66, 151, 248);
 }
 
 .DialogFooter {
@@ -994,7 +994,7 @@ button.DialogButton::-moz-focus-inner {
 /* stylelint-disable selector-class-pattern */
 .disabled .DialogLabelStrong .DialogLabel,
 .disabled .DialogLabel.DialogLabelStrong {
-  color: #424853;
+  color: rgb(66, 72, 83);
 }
 
 /* stylelint-enable selector-class-pattern */
@@ -1002,7 +1002,12 @@ button.DialogButton::-moz-focus-inner {
   flex: 1;
   min-height: 1px;
   max-height: 1px;
-  background: linear-gradient(to right, #393e47 0%, #40464f 20%, #393e47 100%);
+  background: linear-gradient(
+    to right,
+    rgb(57, 62, 71) 0%,
+    rgb(64, 70, 79) 20%,
+    rgb(57, 62, 71) 100%
+  );
   margin-bottom: 16px;
 }
 
@@ -1109,14 +1114,14 @@ button.DialogButton::-moz-focus-inner {
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   transition: all 0.2s ease-in-out;
 }
 
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 11px;
 }
 
@@ -1160,10 +1165,10 @@ button.DialogButton::-moz-focus-inner {
 .DialogTextInputBase.inviteURLLink {
   /* stylelint-disable-line selector-class-pattern */
   padding: 0 12px;
-  background: #30353b;
+  background: rgb(48, 53, 59);
   margin-right: 4px;
   flex-grow: 4;
-  box-shadow: inset 0px 0px 4px #0006;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
   border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
@@ -1288,14 +1293,22 @@ button.DialogButton.Primary {
 }
 
 button.DialogButton.GreenPlay {
-  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
   background-position: 25%;
   background-size: 330% 100%;
 }
 
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
-  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
   background-position: 0%;
   background-size: 330% 100%;
   color: white;
@@ -1304,13 +1317,17 @@ button.DialogButton.GreenPlay.gpfocus {
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
-  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background: linear-gradient(
+    to right,
+    rgb(138, 195, 41) 0%,
+    rgb(74, 122, 22) 60%
+  );
   background-position: 40%;
   transition-duration: 0.04s;
 }
 
 button.DialogButton.Secondary.Off {
-  box-shadow: inset 1px 1px 4px #0003;
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 button.DialogButton:enabled:active,
@@ -1348,7 +1365,7 @@ button.DialogButton:disabled:hover,
 button.DialogButton.Disabled,
 button.DialogButton.Disabled:hover {
   background: rgba(61, 67, 77, 0.35);
-  color: #464d58;
+  color: rgb(70, 77, 88);
   box-shadow: none;
   cursor: default;
   pointer-events: none;
@@ -1366,7 +1383,7 @@ button.TextButton {
   color: white;
   cursor: pointer;
   font-weight: 100;
-  border-bottom: 1px dotted #0000;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0);
 }
 
 button.TextButton .SVGIcon_Button {
@@ -1448,7 +1465,7 @@ button.TextButton.gpfocus {
 
 .Disabled .DialogToggleField_Option.Active {
   color: #666;
-  background-color: #434953;
+  background-color: rgb(67, 73, 83);
 }
 
 .DialogToggle_Description {
@@ -1522,7 +1539,7 @@ button.TextButton.gpfocus {
 }
 
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
-  fill: #189cff;
+  fill: rgb(24, 156, 255);
 }
 
 /* stylelint-disable selector-class-pattern */
@@ -1748,7 +1765,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox {
   width: 22px;
   height: 22px;
-  background-color: #0004;
+  background-color: rgba(0, 0, 0, 0.2666666667);
   padding: 0;
   box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
@@ -1889,7 +1906,7 @@ button.TextButton.gpfocus {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  color: #1b98ff;
+  color: rgb(27, 152, 255);
   transition: all 0s ease-out;
   z-index: 0;
   pointer-events: none;
@@ -1973,16 +1990,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    black 0px,
-    black 1px,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    black 0px,
-    black 1px,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -2005,16 +2022,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    black 0px,
-    black 1px,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    black 0px,
-    black 1px,
+    rgb(0, 0, 0) 0px,
+    rgb(0, 0, 0) 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -2072,7 +2089,7 @@ body.in_global_drag .title-area {
 }
 
 .title-area-icon .SVGIcon_X_Line line {
-  stroke: #788a92;
+  stroke: rgb(120, 138, 146);
   stroke-width: 24px;
 }
 
@@ -2105,7 +2122,7 @@ body.in_global_drag .title-area {
 .DialogBodyNotificationBar {
   font-size: 12px;
   letter-spacing: 0px;
-  color: #52b8e0;
+  color: rgb(82, 184, 224);
   line-height: 18px;
   height: 18px;
   display: flex;
@@ -2122,12 +2139,12 @@ body.in_global_drag .title-area {
 
 .DialogBodyNotificationBar .SVGIcon_Lock .topLock {
   /* stylelint-disable-line selector-class-pattern */
-  fill: #52b8e0;
+  fill: rgb(82, 184, 224);
 }
 
 .DialogBodyNotificationBar .SVGIcon_Lock .baseLock {
   /* stylelint-disable-line selector-class-pattern */
-  stroke: #52b8e0;
+  stroke: rgb(82, 184, 224);
 }
 
 .GenericConfirmDialog .friend {
@@ -2263,7 +2280,7 @@ body.in_global_drag .title-area {
 .WaitingForInterFaceReadyContainer {
   width: 100%;
   height: 100%;
-  background-color: #1f2126;
+  background-color: rgb(31, 33, 38);
   display: flex;
 }
 
@@ -2310,19 +2327,19 @@ body.in_global_drag .title-area {
 }
 
 .A {
-  background-color: #f006;
+  background-color: rgba(255, 0, 0, 0.4);
   height: 40px;
 }
 
 .B {
-  background-color: #0f06;
+  background-color: rgba(0, 255, 0, 0.4);
   display: flex;
   flex-direction: column;
 }
 
 .ScrollList {
   border: 2px solid pink;
-  background-color: #000a;
+  background-color: rgba(0, 0, 0, 0.6666666667);
   margin: 16px 32px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2334,7 +2351,7 @@ body.in_global_drag .title-area {
   border: 2px outset red;
   height: 60px;
   margin: 4px 32px;
-  background-color: #000a;
+  background-color: rgba(0, 0, 0, 0.6666666667);
   margin-bottom: 16px;
 }
 
@@ -2342,11 +2359,11 @@ body.in_global_drag .title-area {
   border: 2px inset blue;
   height: 60px;
   margin: 4px 32px;
-  background-color: #000a;
+  background-color: rgba(0, 0, 0, 0.6666666667);
 }
 
 .C {
-  background-color: #00f6;
+  background-color: rgba(0, 0, 255, 0.4);
   height: 40px;
 }
 
@@ -2452,9 +2469,9 @@ body {
   height: calc(100% - 24px);
   background: radial-gradient(
     ellipse farthest-corner at 50% 30%,
-    #212329 0%,
-    #1e2025 50%,
-    #1c1d22 100%
+    rgb(33, 35, 41) 0%,
+    rgb(30, 32, 37) 50%,
+    rgb(28, 29, 34) 100%
   );
 }
 
@@ -2465,8 +2482,8 @@ body {
 .chat_main {
   width: 100%;
   height: 100%;
-  background-color: #22252b;
-  color: #969696;
+  background-color: rgb(34, 37, 43);
+  color: rgb(150, 150, 150);
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
@@ -2488,7 +2505,7 @@ body {
 }
 
 .FriendsFailureContainer .titleText {
-  color: #ffae00;
+  color: rgb(255, 174, 0);
   font-size: 18px;
   margin-bottom: 8px;
 }
@@ -2502,7 +2519,7 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 16px;
-  color: #ffae00;
+  color: rgb(255, 174, 0);
   cursor: default;
 }
 
@@ -2527,8 +2544,12 @@ body.in_global_drag .friendlist_titlebar {
   width: calc(100% - 32px);
   display: inline-block;
   height: 32px;
-  background-color: #15a2fe;
-  background: linear-gradient(to right, #15a2fe 0%, #3647e9 100%);
+  background-color: rgb(21, 162, 254);
+  background: linear-gradient(
+    to right,
+    rgb(21, 162, 254) 0%,
+    rgb(54, 71, 233) 100%
+  );
   user-select: none;
   cursor: pointer;
   color: white;
@@ -2545,11 +2566,19 @@ body.in_global_drag .friendlist_titlebar {
 }
 
 .retryButton:hover {
-  background: linear-gradient(to right, #33c0ff 0%, #4a91ff 100%);
+  background: linear-gradient(
+    to right,
+    rgb(51, 192, 255) 0%,
+    rgb(74, 145, 255) 100%
+  );
 }
 
 .retryButton:active {
-  background: linear-gradient(to right, #018eea 0%, #185feb 100%);
+  background: linear-gradient(
+    to right,
+    rgb(1, 142, 234) 0%,
+    rgb(24, 95, 235) 100%
+  );
 }
 
 .friends_loading_error .currentUserContainer {
@@ -2610,7 +2639,7 @@ body.in_global_drag .friendlist_titlebar {
   transition: color 0.94s ease-in-out;
   text-shadow: 1px 1px 3px #000;
   -webkit-app-region: drag;
-  color: #575757;
+  color: rgb(87, 87, 87);
 }
 
 .friends_loading_error .cautionIcon {
@@ -2628,11 +2657,11 @@ body.in_global_drag .friendlist_titlebar {
 
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation line,
 .friends_loading_error .cautionIcon .SVGIcon_Caution .triangle path {
-  stroke: #ffae00;
+  stroke: rgb(255, 174, 0);
 }
 
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation path {
-  fill: #ffae00;
+  fill: rgb(255, 174, 0);
 }
 
 /*# sourceMappingURL=friends.css.map*/
