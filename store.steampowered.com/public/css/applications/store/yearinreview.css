@@ -1,0 +1,143 @@
+.yirlanding_YearInReviewContainer_1FBH8 {
+  font-family: "Motiva Sans", sans-serif;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2% 2%;
+  min-height: 80vh;
+}
+.yirlanding_RewindHeader_1wMXR {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.yirlanding_UserName_3_FPl {
+  color: pink;
+  font-size: 48px;
+}
+.yirlanding_YearSubtitle_1HWWi {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 800;
+  color: #fff;
+}
+.yircomponents_TotalMinutesContainer_1Wj_E {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0px;
+}
+.yircomponents_TotalMinutesContainer_1Wj_E .yircomponents_MinutesPlayed_33Xip {
+  font-size: 240px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+.yircomponents_TotalMinutesContainer_1Wj_E
+  .yircomponents_TotalMinutesSubtitle_156D1 {
+  font-size: 72px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+.yircomponents_TopGamesContainer_1j8KS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 72px 0px;
+}
+.yircomponents_TopGamesContainer_1j8KS .yircomponents_TopGameTitle_3xEkR {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa {
+  position: relative;
+  height: 232px;
+  width: 720px;
+  margin: 16px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_BackgroundImage_1X3FQ {
+  filter: saturate(0.4) opacity(0.4) blur(0px);
+  border-radius: 16px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_RankNameContainer_3_H22 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  padding: 0px 16px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_RankNameContainer_3_H22
+  .yircomponents_Rank_1fe0i {
+  padding: 0px 8px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_RankNameContainer_3_H22
+  .yircomponents_Title_2geom {
+  padding: 0px 8px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_MinutesContainer_2U4OU {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_MinutesContainer_2U4OU
+  .yircomponents_MinutesPlayed_33Xip {
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_MinutesContainer_2U4OU
+  .yircomponents_MinutesSubtitle_17vh1 {
+  font-size: 16px;
+  font-weight: 200;
+  color: #fff;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_Left_5T9Mz {
+  left: 0;
+}
+.yircomponents_TopGamesContainer_1j8KS
+  .yircomponents_TopGameBlockContainer_1o-Oa
+  .yircomponents_Right_2R67s {
+  right: 0;
+}

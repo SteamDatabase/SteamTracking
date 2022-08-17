@@ -1,0 +1,233 @@
+.image_MessageContent_rohJ- {
+  text-align: center;
+  margin: 0px auto;
+  width: 570px;
+  padding: 0px 13px;
+}
+.image_GameImage_2It5b {
+  cursor: pointer;
+  width: auto;
+  position: relative;
+  box-shadow: 0 0 10px #000;
+  font-size: 0px;
+}
+.image_GameImage_2It5b img {
+  max-width: 570px;
+}
+.image_TextTop_3cnZM {
+  position: absolute;
+  top: 0px;
+  width: 570px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.image_TextBottom_2pJeu {
+  position: absolute;
+  bottom: 0px;
+  height: 233px;
+  width: 570px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #fff;
+  display: block;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+A:visited {
+  color: #fff;
+  text-decoration: none;
+}
+A:link {
+  color: #fff;
+  text-decoration: none;
+}
+A:hover {
+  color: #fff;
+  text-decoration: none;
+}
+A:active {
+  color: #000;
+  text-decoration: none;
+}
+.image_Legal_zzC_W {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #56707f;
+  margin-bottom: 3px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+  text-align: left;
+  width: 570px;
+  margin-top: 6px;
+}
+.image_ButtonContainer_3CVNg {
+  position: relative;
+  width: auto;
+  height: 59px;
+  background: rgba(0, 0, 0, 0.2);
+  padding-top: 8px;
+}
+.image_Btn_3YohC {
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #233c50 0%, #233c50 90%);
+  border-radius: 3px;
+  font-weight: 400;
+  margin: 2px auto;
+  padding: 16px 20px 0px;
+  height: 30px;
+  width: fit-content;
+  line-height: 15px;
+  transition: background 0.15s ease-out;
+}
+.image_Btn_3YohC a,
+.image_Btn_3YohC a:hover {
+  color: #fff;
+}
+.image_Btn_3YohC:hover {
+  background: linear-gradient(to right, #68c0f2 0%, #427d9f 90%);
+  box-shadow: 2px 2px 10px #000;
+  transition: background 0.25s ease-in;
+}
+.image_Price_KtsI7 {
+  height: 59px;
+  width: 145px;
+  display: inline-table;
+  vertical-align: middle;
+  position: absolute;
+  text-align: center;
+  right: 0px;
+}
+.image_NoPrice_3gtjP,
+.image_Price_KtsI7 {
+  width: 140px;
+  float: right;
+}
+.image_PriceReal_zlxx_ {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.image_PriceRealShort_1XB_w {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.image_PriceRegular_7m4i8 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+  text-decoration: line-through;
+  position: relative;
+  top: -10px;
+}
+.image_Strike_3fFJl {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+.image_ShareLinks_2FhhQ {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #aaa;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 16px;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.image_ShareLinks_2FhhQ img {
+  vertical-align: middle;
+  margin-right: 3px;
+  border: none;
+  opacity: 0.5;
+  transition: opacity 0.15s ease-out;
+}
+.image_ShareLinks_2FhhQ img:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+@media screen and (max-height: 500px) {
+  .image_All_1WpMe {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .image_MessageContent_rohJ- {
+    width: 330px;
+    padding: 8px;
+  }
+  .image_GameImage_2It5b {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 6px #000;
+  }
+  .image_GameImage_2It5b img {
+    max-width: 330px;
+  }
+  .image_TextTop_3cnZM,
+  .image_TextBottom_2pJeu {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 6px 0px 6px;
+    box-sizing: border-box;
+  }
+  .image_ButtonContainer_3CVNg {
+    height: 32px;
+    padding-top: 5px;
+  }
+  .image_Btn_3YohC {
+    font-size: 12px;
+    margin: 2px auto;
+    padding: 9px 12px 0px;
+    height: 17px;
+    line-height: 9px;
+  }
+  .image_Btn_3YohC:hover {
+    box-shadow: 2px 2px 6px #000;
+  }
+  .image_Price_KtsI7 {
+    height: 34px;
+  }
+  .image_NoPrice_3gtjP,
+  .image_Price_KtsI7 {
+    width: 81px;
+  }
+  .image_PriceReal_zlxx_,
+  .image_PriceRealShort_1XB_w {
+    font-size: 12px;
+    height: 19px;
+    margin-top: 6px;
+  }
+  .image_PriceRealShort_1XB_w {
+    font-size: 7px;
+  }
+  .image_PriceRegular_7m4i8 {
+    font-size: 7px;
+    top: -6px;
+  }
+  .image_Legal_zzC_W {
+    font-size: 7px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 4px;
+  }
+}

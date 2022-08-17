@@ -1,0 +1,450 @@
+body.forgeyourfate {
+  background: url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
+      no-repeat top center,
+    #232323;
+  filter: drop-shadow(2px 4px 6px #00000066);
+}
+.summersale2021story_PageOuterContainer_A1mol {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.summersale2021story_LocalizedHeaderImg_2ef14 {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_LocalizedHeaderImg_2ef14 {
+    display: none;
+  }
+}
+.summersale2021story_LocalizedHeaderMobileImg_3NX2a {
+  display: none;
+  margin-bottom: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_LocalizedHeaderMobileImg_3NX2a {
+    display: block;
+  }
+}
+.summersale2021story_PageInnerBG_dkYvU {
+  background: url(../../../images/applications/store/back_cover.jpg?v=valveisgoodatcaching)
+      no-repeat top center,
+    #442e31;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-size: contain;
+  padding: 50px 0;
+  border-radius: 7px;
+  filter: drop-shadow(2px 4px 20px #00000033);
+}
+.summersale2021story_PageInnerContent_20TiA {
+  max-width: 940px;
+  margin: 0 auto;
+  color: #fffbec;
+  padding: 0 2%;
+}
+.summersale2021story_GenreListContainer_17we1 {
+  display: flex;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.summersale2021story_HeaderContainer_1gPQk {
+  max-width: 770px;
+  margin: 0 auto;
+  font-family: "Jomhuria", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  word-break: break-word;
+  font-size: 185px;
+  text-align: left;
+  border-bottom: 3px solid #fefeef;
+  line-height: 80px;
+  margin-bottom: 25px;
+  margin-top: 100px;
+  color: #fffbec;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_HeaderContainer_1gPQk {
+    margin-top: 0;
+    font-size: 100px;
+    line-height: 70px;
+  }
+}
+.summersale2021story_HeaderContainer_1gPQk
+  .summersale2021story_HeaderPrefix_3hjBU {
+  max-width: 770px;
+  margin: 0 auto 4px 0px;
+  font-size: 24px;
+  line-height: 54px;
+  text-indent: 3px;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+.greek .summersale2021story_HeaderContainer_1gPQk,
+.japanese .summersale2021story_HeaderContainer_1gPQk,
+.koreana .summersale2021story_HeaderContainer_1gPQk,
+.russian .summersale2021story_HeaderContainer_1gPQk,
+.schinese .summersale2021story_HeaderContainer_1gPQk,
+.tchinese .summersale2021story_HeaderContainer_1gPQk,
+.thai .summersale2021story_HeaderContainer_1gPQk,
+.turkish .summersale2021story_HeaderContainer_1gPQk,
+.ukrainian .summersale2021story_HeaderContainer_1gPQk,
+.vietnamese .summersale2021story_HeaderContainer_1gPQk {
+  font-size: 80px;
+  font-family: "Motiva Sans", sans-serif;
+}
+.greek .summersale2021story_GenreTitle_25hml,
+.japanese .summersale2021story_GenreTitle_25hml,
+.koreana .summersale2021story_GenreTitle_25hml,
+.russian .summersale2021story_GenreTitle_25hml,
+.schinese .summersale2021story_GenreTitle_25hml,
+.tchinese .summersale2021story_GenreTitle_25hml,
+.thai .summersale2021story_GenreTitle_25hml,
+.turkish .summersale2021story_GenreTitle_25hml,
+.ukrainian .summersale2021story_GenreTitle_25hml,
+.vietnamese .summersale2021story_GenreTitle_25hml {
+  font-family: "Motiva Sans", sans-serif;
+}
+.bulgarian .summersale2021story_HeaderContainer_1gPQk {
+  line-height: 130px;
+  font-size: 140px;
+}
+.bulgarian .summersale2021story_HeaderPrefix_3hjBU {
+  margin-bottom: 15px;
+}
+.czech .summersale2021story_HeaderContainer_1gPQk,
+.danish .summersale2021story_HeaderContainer_1gPQk,
+.french .summersale2021story_HeaderContainer_1gPQk,
+.hungarian .summersale2021story_HeaderContainer_1gPQk,
+.polish .summersale2021story_HeaderContainer_1gPQk,
+.romanian .summersale2021story_HeaderContainer_1gPQk,
+.vietnamese .summersale2021story_HeaderContainer_1gPQk {
+  line-height: 110px;
+}
+.czech .summersale2021story_HeaderPrefix_3hjBU,
+.danish .summersale2021story_HeaderPrefix_3hjBU,
+.french .summersale2021story_HeaderPrefix_3hjBU,
+.hungarian .summersale2021story_HeaderPrefix_3hjBU,
+.polish .summersale2021story_HeaderPrefix_3hjBU,
+.romanian .summersale2021story_HeaderPrefix_3hjBU,
+.vietnamese .summersale2021story_HeaderPrefix_3hjBU {
+  margin-bottom: 12px;
+}
+.russian .summersale2021story_HeaderContainer_1gPQk,
+.turkish .summersale2021story_HeaderContainer_1gPQk {
+  padding-bottom: 10px;
+}
+.turkish .summersale2021story_HeaderContainer_1gPQk,
+.vietnamese .summersale2021story_HeaderContainer_1gPQk {
+  font-family: "Motiva Sans", sans-serif;
+}
+.summersale2021story_ListHeader_jZV6e {
+  max-width: 770px;
+  margin: 0 auto;
+  text-indent: 0px;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+.summersale2021story_HeaderIntro_3STDK {
+  max-width: 770px;
+  margin: 0 auto;
+  text-indent: 0px;
+  font-size: 24px;
+  line-height: 54px;
+  font-weight: 900;
+  font-style: italic;
+  color: #fffbec;
+}
+.summersale2021story_HeaderDesc_3Eeti {
+  max-width: 770px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-indent: 0px;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: justify;
+  color: #968396;
+  display: block;
+}
+.summersale2021story_HeaderDesc_3Eeti.summersale2021story_Wallpapers_3j1mt {
+  font-size: 14px;
+}
+.summersale2021story_Noto_1S5tj {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: 600;
+}
+.summersale2021story_Noto_1S5tj.schinese,
+.summersale2021story_Noto_1S5tj.sc_schinese {
+  font-family: "Noto Serif", "Noto Serif SC", sans-serif;
+}
+.summersale2021story_Noto_1S5tj.tchinese {
+  font-family: "Noto Serif", "Noto Serif TC", sans-serif;
+}
+.summersale2021story_Noto_1S5tj.japanese {
+  font-family: "Noto Serif", "Noto Serif JP", sans-serif;
+}
+.summersale2021story_Noto_1S5tj.korean {
+  font-family: "Noto Serif", "Noto Serif KR	", sans-serif;
+}
+.summersale2021story_GenreContainer_2JuP7 {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  background: #cd723f;
+  flex: 1 1 100%;
+  color: #000;
+  margin-bottom: 10px;
+  min-height: 150px;
+  -webkit-transition: all 0.23s ease-out;
+  -moz-transition: all 0.23s ease-out;
+  -o-transition: all 0.23s ease-out;
+  transition: all 0.23s ease-out;
+  border: 10px solid #fffbec00;
+  border-radius: 40px;
+  transform: scale(1);
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_GenreContainer_2JuP7 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.summersale2021story_GenreContainer_2JuP7:hover {
+  color: initial;
+  border: 10px solid #fffbef;
+  transform: scale(1.09);
+}
+.summersale2021story_GenreContainer_2JuP7:hover
+  .summersale2021story_GenreSubheader_1hagU {
+  color: #fefeef;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_LeftColumn_1BzJC {
+  max-width: 60%;
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_GenreContainer_2JuP7
+    .summersale2021story_LeftColumn_1BzJC {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_RightColumn_2l_lu {
+  display: flex;
+  align-items: center;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_GenreTitle_25hml {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  color: #232323;
+  margin-bottom: 10px;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_GenreSubheader_1hagU {
+  font-size: 16px;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_GenreSubheader_1hagU
+  span {
+  text-decoration: underline;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_GenreStory_3cVcC {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #232323;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_StickerPreview_1AsdN {
+  width: 158px;
+  height: 158px;
+  border: 0px solid #efefef00;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-position: center;
+  background-color: #23232333;
+  background-repeat: no-repeat;
+  box-shadow: 3px -1px 4px 4px #00000022, inset 0px 0px 0px 5px #fefeef;
+}
+.summersale2021story_GenreContainer_2JuP7
+  .summersale2021story_StickerPreview_1AsdN.summersale2021story_Unclaimed_oT-hE {
+  border: 3px dashed #fefeef66;
+  box-shadow: inset 0px 0px 0px 5px #fefeef00;
+}
+.summersale2021story_GenreContainer_2JuP7.summersale2021story_Unclaimed_oT-hE {
+  background: #7c5f5a;
+}
+.summersale2021story_CompletedSummaryText_24Z9t {
+  margin: 50px auto;
+  padding: 0 2%;
+}
+.summersale2021story_TheEnd_2b58z {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 0.09em;
+  color: #fefeef;
+  margin: 0 auto 200px;
+  max-width: 750px;
+  text-indent: 0px;
+}
+.summersale2021story_BadgeContainer_2wlN6 {
+  background: url(../../../images/applications/store/book.jpg?v=valveisgoodatcaching)
+    no-repeat top center;
+  background-size: contain;
+  margin: 50px auto;
+  display: flex;
+  color: #212121;
+  height: 900px;
+  max-width: 1100px;
+  border-radius: 5px;
+  transform: skew(2deg, -2deg);
+  box-shadow: 6px -2px 8px 8px #00000011;
+}
+@media screen and (max-width: 900px) {
+  .summersale2021story_BadgeContainer_2wlN6 {
+    height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .summersale2021story_BadgeContainer_2wlN6 {
+    background: url(../../../images/applications/store/page_texture.jpg?v=valveisgoodatcaching)
+      no-repeat top center;
+    width: 100%;
+    height: auto;
+    transform: none;
+    flex-wrap: wrap;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_BadgeName_3EwgF {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  margin: 15px 0;
+}
+@media screen and (max-width: 700px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_BadgeName_3EwgF {
+    font-size: 30px;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_SubHeader_-Ej5O {
+  font-size: 32px;
+}
+@media screen and (max-width: 700px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_SubHeader_-Ej5O {
+    font-size: 20px;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_BadgeText_2Vbv_ {
+  font-size: 18px;
+  text-align: center;
+  text-transform: none;
+  color: #232323;
+}
+@media screen and (max-width: 700px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_BadgeText_2Vbv_ {
+    font-size: 14px;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_BadgeDesc_37uOV {
+  font-style: normal;
+  font-weight: 600;
+  color: #232323;
+  font-size: 18px;
+  text-align: justify;
+  max-width: 700px;
+}
+@media screen and (max-width: 700px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_BadgeDesc_37uOV {
+    font-size: 14px;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_BadgeImg_x74En {
+  width: 40vw;
+  max-width: 390px;
+  max-height: 390px;
+  height: 40vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 3px -1px 4px 4px #00000011, inset 0px 0px 0px 22px #fefeef;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 700px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_BadgeImg_x74En {
+    box-shadow: none;
+    margin-bottom: 10px;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_BadgeLink_2qaiZ {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #437882;
+  margin-top: 10px;
+}
+.summersale2021story_BadgeContainer_2wlN6
+  .summersale2021story_FrameExample_1q5L2 {
+  background: url(../../../images/applications/store/all_frames_sm.png?v=valveisgoodatcaching)
+    no-repeat top center;
+  width: 24vw;
+  height: 12vw;
+  background-size: contain;
+  margin: 10px;
+  padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  .summersale2021story_BadgeContainer_2wlN6
+    .summersale2021story_FrameExample_1q5L2 {
+    width: 40vw;
+    height: 15vw;
+  }
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Badge_51_1iE6U {
+  background-image: url(../../../images/applications/store/51_lg.png?v=valveisgoodatcaching);
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Badge_52_2tJdQ {
+  background-image: url(../../../images/applications/store/52_lg.png?v=valveisgoodatcaching);
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Badge_53_2kvVu {
+  background-image: url(../../../images/applications/store/53_lg.png?v=valveisgoodatcaching);
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Badge_54_2VzkL {
+  background-image: url(../../../images/applications/store/54_lg.png?v=valveisgoodatcaching);
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Badge_55_11CXt {
+  background-image: url(../../../images/applications/store/55_lg.png?v=valveisgoodatcaching);
+}
+.summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Column_1TnJ8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 5%;
+  max-width: 40%;
+}
+@media screen and (max-width: 500px) {
+  .summersale2021story_BadgeContainer_2wlN6 .summersale2021story_Column_1TnJ8 {
+    padding: 5%;
+    max-width: none;
+    width: 100%;
+  }
+}
