@@ -4221,6 +4221,7 @@
     "ControllerBinding_InnerDeadzoneFlickStick_Description": "Push the stick as far as this threshold to see the flick-turn begin. The flick-turn speed will scale depending on how far it is between Inner and Outer deadzone. Higher-than-normal Inner Deadzone values are recommended because a more accurate initial angle can be calcuated than with small ones.",
     "ControllerBinding_OuterDeadzoneFlickStick": "Outer Deadzone",
     "ControllerBinding_OuterDeadzoneFlickStick_Description": "Push the stick this far to get the maximum flick-turn rate.",
+    "ControllerBinding_HapticIntensityAbsMouse": "Haptic Intensity",
     "ControllerBinding_HapticIntensityAbsMouse_Description": "This sets the intensity of the haptics.",
     "ControllerBinding_HapticIntensityAbsMouse_Off": "Haptic Intensity - Off",
     "ControllerBinding_HapticIntensityAbsMouse_Off_Description": "Do not use haptics for this mode.",
