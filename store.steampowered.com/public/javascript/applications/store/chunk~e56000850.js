@@ -956,7 +956,7 @@
             { className: k().Column },
             n.createElement(
               "div",
-              null,
+              { style: { position: "relative" } },
               n.createElement(
                 A,
                 {
