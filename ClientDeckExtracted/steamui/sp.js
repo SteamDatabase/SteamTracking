@@ -10921,7 +10921,7 @@
           l = o ? Do(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1660765101),
+          c = parseInt(1660787114),
           m = c && $o(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, so.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -11258,28 +11258,20 @@
           l = (0, Lo.Yb)(),
           c = (0, Lo.$S)(),
           u = c && !n;
-        return (
-          console.error(c, l),
-          o || 0 != l.length
-            ? a.createElement(
-                i.Aw,
+        return o || 0 != l.length
+          ? a.createElement(
+              i.Aw,
+              null,
+              a.createElement(
+                i.dQ,
                 null,
-                a.createElement(
-                  i.dQ,
-                  null,
-                  (0, g.Xx)("#Settings_Beta_Participation")
-                ),
-                u && a.createElement(ii, { channels: l, currentChannel: c }),
-                !u &&
-                  a.createElement(
-                    a.Fragment,
-                    null,
-                    a.createElement(ai, null),
-                    o
-                  )
-              )
-            : null
-        );
+                (0, g.Xx)("#Settings_Beta_Participation")
+              ),
+              u && a.createElement(ii, { channels: l, currentChannel: c }),
+              !u &&
+                a.createElement(a.Fragment, null, a.createElement(ai, null), o)
+            )
+          : null;
       }
       function ci(e) {
         return a.createElement(
@@ -25193,30 +25185,31 @@
         }
       }
       function $p(e) {
-        const t = a.useCallback(
-          (t, n) => {
-            if (1 != t) return;
-            let a;
-            switch (n) {
-              case 6:
-                a = () => SteamClient.User.StartRestart();
-                break;
-              case 7:
-                a = () => SteamClient.System.RestartPC();
-                break;
-              default:
-                a = e.onContinue;
-            }
-            !(function (e) {
-              if ((go.SetOOBEComplete(), T.hq.IsDeckFactoryImage()))
-                return void SteamClient.System.RestartPC();
-              e();
-            })(a);
-          },
-          [e.onContinue]
-        );
+        const { onGoBack: t } = e,
+          n = a.useCallback(
+            (n, a) => {
+              if (1 != n) return void (t && t());
+              let r;
+              switch (a) {
+                case 6:
+                  r = () => SteamClient.User.StartRestart();
+                  break;
+                case 7:
+                  r = () => SteamClient.System.RestartPC();
+                  break;
+                default:
+                  r = e.onContinue;
+              }
+              !(function (e) {
+                if ((go.SetOOBEComplete(), T.hq.IsDeckFactoryImage()))
+                  return void SteamClient.System.RestartPC();
+                e();
+              })(r);
+            },
+            [e.onContinue, t]
+          );
         return a.createElement(co.s6, {
-          onUpdateComplete: t,
+          onUpdateComplete: n,
           onShowHelp: () => {
             J.g4.NavigateToDeckSetupHelp();
           },
@@ -25567,9 +25560,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Aug 17 2022 : 12:38:21",
-              BUILD_TIME_UTC: "Aug 17 2022 : 19:38:21",
-              BUILD_RTIME_UTC: 1660765101,
+              BUILD_TIME_LOCAL: "Aug 17 2022 : 18:45:14",
+              BUILD_TIME_UTC: "Aug 18 2022 : 01:45:14",
+              BUILD_RTIME_UTC: 1660787114,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
