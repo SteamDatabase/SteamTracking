@@ -83,7 +83,7 @@
 "Steam_ProductCostLabel"	"가격"
 "Steam_TaxLabel"	"부가세"
 "Steam_TotalLabel"	"합계"
-"Steam_ProcessingSubscriptionInfo" "이용권 구매를 처리 중입니다.
+"Steam_ProcessingSubscriptionInfo" "구독 구매를 처리 중입니다.
 이 작업은 1분 안에 처리됩니다."
 "Steam_SubscribeCompleteInfo" "감사합니다! %s1의 구매가 완료되었습니다. \n\n이제 게임 라이브러리에서 원하는 게임을 두 번 클릭하거나 게임 제목을 마우스 오른쪽 버튼으로 클릭한 후 메뉴에서 '플레이'를 선택하여 플레이를 시작할 수 있습니다."
 "Steam_PreorderCompleteInfo" "감사합니다! %s1의 예약 주문이 완료되었습니다. \n\n이제 게임이 공식적으로 출시되면 바로 플레이하실 수 있습니다!"
@@ -194,6 +194,7 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"시작"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"게임 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"게임 플레이"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"게임 플레이"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"나중에 업데이트"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"체험판 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"도구 시작"
@@ -215,6 +216,7 @@
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"준비되는 대로 애플리케이션 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"게임이 준비되면 바로 시작"
+"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"체험판이 준비되는 대로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"도구가 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"준비되면 사운드트랙 재생하기"
@@ -1234,7 +1236,7 @@
 "Steam_Subscription_Preorder_Timeout" "%subscription%에 대한 예약 주문이 완료되지 않았습니다. Steam 사용량이 많아 현재 거래를 처리할 수 없습니다.\n\n거래가 처리되면 결과를 바로 알려드리겠습니다."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "정기 이용 취소됨"
-"Steam_SubscriptionCancelled_Cancelled"	"사용자의 %subscription% 이용권이 취소되었습니다. 이 조치는 Steam 계정 소유자의 요청 또는 Steam 이용 약관에 따라 Valve에 의해 수행되었습니다."
+"Steam_SubscriptionCancelled_Cancelled"	"사용자의 %subscription% 구독이 취소되었습니다. 이 조치는 Steam 계정 소유자의 요청 또는 Steam 이용 약관에 따라 Valve에 의해 수행되었습니다."
 
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "Steam 서버가 현재 혼잡합니다."
 "Steam_SubscriptionCancelled_ServerFailed" "%subscription%에 대한 가입 절차가 완료되지 않았습니다. Steam 서버는 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n불편을 드려 대단히 죄송합니다. 몇 시간 후에 다시 시도하십시오."
@@ -1242,8 +1244,8 @@
 "Steam_Subscription_ContactSupport_Headline" "구매 오류"
 "Steam_Subscription_ContactSupport" "오류가 발생했습니다. %subscription%에 대한 가입 절차가 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하십시오."
 
-"Steam_SubscriptionFailure_Timeout_Headline" "이용권 구매 보류 중"
-"Steam_SubscriptionFailure_Timeout" "%subscription%의 이용권 구매가 완료되지 않았습니다. Steam은 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n그러나, 그 동안 %subscription% 게임을 실행할 수 있습니다. 거래가 처리되면 거래 결과를 바로 알려드리겠습니다."
+"Steam_SubscriptionFailure_Timeout_Headline" "구독 구매 보류 중"
+"Steam_SubscriptionFailure_Timeout" "%subscription%의 구독 구매가 완료되지 않았습니다. Steam은 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n그러나, 그 동안 %subscription% 게임을 실행할 수 있습니다. 거래가 처리되면 거래 결과를 바로 알려드리겠습니다."
 
 "Steam_Subscription_RestrictedCountry_Headline" "사용 불가"
 "Steam_Subscription_RestrictedCountry" "죄송합니다. 해당 국가에서 %subscription% 게임을 구매할 수 없습니다. 구매가 취소되었습니다."
@@ -1514,8 +1516,8 @@
 "Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"%subscription% 구매가 성공적으로 완료되었습니다. 사은품 또는 경품이 배달되면 바로 확인 메일을 받게 될 것입니다. 주문해 주셔서 감사합니다!"
 "Steam_Subscription_Success_WithShipping_Headline"	"감사합니다. 거래가 완료되었습니다."
 
-"Steam_SubscriptionFailure_Timeout_CantPlay_Headline"	"이용권 구매 보류 중"
-"Steam_SubscriptionFailure_Timeout_CantPlay"	"%subscription%의 이용권 구매가 완료되지 않았습니다. 현재 Steam 서버가 거래를 처리할 수 없습니다.\n\n이용권 구매가 완료되어야만 %subscription%(을)를 플레이할 수 있습니다. 불편을 끼쳐 죄송합니다. Steam 팀에서 이 상황을 해결하기 위해 노력하고 있으며 거래가 완료되는 대로 바로 알려드리겠습니다."
+"Steam_SubscriptionFailure_Timeout_CantPlay_Headline"	"구독 구매 보류 중"
+"Steam_SubscriptionFailure_Timeout_CantPlay"	"%subscription%의 구독 구매가 완료되지 않았습니다. 현재 Steam 서버가 거래를 처리할 수 없습니다.\n\n구독 구매가 완료되어야만 %subscription%(을)를 플레이할 수 있습니다. 불편을 끼쳐 죄송합니다. Steam 팀에서 이 상황을 해결하기 위해 노력하고 있으며 거래가 완료되는 대로 바로 알려드리겠습니다."
 
 "Steam_CannotStartSecondPurchase"	"이미 구매 절차가 진행 중이므로 다른 제품의 구매를 시작할 수 없습니다. 현재 진행 중인 구매를 완료 또는 취소하여 주십시오."
 
@@ -2126,6 +2128,7 @@
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"이 애플리케이션의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"이 게임의 모든 파일은 이제 Steam을 통해 다운로드합니다."
+"Steam_Install_WillDownloadAllFiles$appType=beta"	"이 게임의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"이 체험판의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"이 매체의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"이 사운드트랙의 모든 파일은 이제 Steam을 통해 다운로드합니다."
@@ -2134,6 +2137,7 @@
 "Steam_Install_StartCacheLoading$appType=application"		"로컬 애플리케이션 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=game"		"로컬 게임 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=demo"		"체험판 로컬 파일 생성하는 중..."
+"Steam_Install_StartCacheLoading$appType=beta"		"로컬 게임 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=media"		"로컬 미디어 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=music"		"로컬 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=tool"		"로컬 도구 파일 생성하는 중..."
@@ -2791,7 +2795,7 @@
 "Steam_SendGuestPass_AccountLockedError$type=guestpass"	"귀하의 계정은 잠겨 있습니다. 체험권을 보내거나 받을 수 없습니다."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"본인에게 게스트 패스를 보낼 수는 없습니다!"
-"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"본인에게 패스를 보내려고 합니다. 게스트 패스로 친구들과 게임을 공유합니다. %package% 무료 이용권으로 친구를 초대하십시오!"
+"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"본인에게 패스를 보내려고 합니다. 게스트 패스로 친구들과 게임을 공유합니다. %package% 무료 구독으로 친구를 초대하십시오!"
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "게스트 패스 이미 전송됨"
 "Steam_SendGuestPass_PendingError$type=guestpass"	"지난 24시간 이내에 %search%에게 이미 게스트 패스를 보냈습니다. 가장 최근의 시도 이후 24시간이 지나기 전에는 이 주소로 게스트 패스를 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하십시오."

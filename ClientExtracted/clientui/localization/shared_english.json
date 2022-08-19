@@ -1167,9 +1167,12 @@
 
 	"Login_SignIn_WithAccountName": "Sign in with account name",
 	"Login_SignIn_OrWithQRCode": "Or sign in with QR",
+	"Login_SignIn_EscapeHatch": "Having trouble with new login? <1>Click here</1> to use the old experience.",
 	"Login_UseAppForQR": "Use the %1$s to sign in via QR code",
 	"Login_UseAppForQR_Inner": "Steam Mobile App",
 	"Login_GetMobileApp_Link": "Get the mobile app",
+	"Login_UseMobileAppForQR_Inline": "Use the <1>Steam Mobile App</1> to sign in via QR code", 
+	"Login_ScanAQRCode_Button": "Scan a QR code", 
 	"Login_CheckCredentials": "Please check your password and account name and try again.",
 	"Login_IncorrectSteamGuard": "Incorrect code, please try again",
 	"Login_Help_SignIn": "Help, I can't sign in",
@@ -1672,6 +1675,7 @@
 	"Sale_Reservation_Expired": "Reservation expired.",
 	"Sale_Reservation_ExpectedDate": "Expected order availability:",
 	"Sale_Reservation_YourExpectedDate": "Your expected order availability:",
+	"Sale_Reservation_Komodo": "Steam Deck is open for reservation in Japan, South Korea, Taiwan, and Hong Kong via Komodo at <1>steamdeck.komodo.jp</1>",
 
 	"Sale_BrowserSortOption_TopWishlisted": "Most Wishlisted Upcoming Games",
 	"Sale_BrowserSortOption_TopWishlisted_ttip": "Upcoming games sorted by total (all-time) wishlist counts. Only includes games not yet released on Steam.",
@@ -1704,7 +1708,9 @@
 	"Sale_BrowserSortOption_ContentHub_TopSellers": "Top Sellers",
 	"Sale_BrowserSortOption_ContentHub_TopSellers_ttip": "Top selling games by overall revenue",
 	"Sale_BrowserSortOption_ContentHub_Popular": "Popular",
-	"Sale_BrowserSortOption_ContentHub_Popular_ttip": "",
+	"Sale_BrowserSortOption_ContentHub_Popular_ttip": "The most popular games right now based on number of players",
+	"Sale_BrowserSortOption_ContentHub_Popular_Controller": "What's Being Played",
+	"Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip": "The most popular games right now based on number of players using a controller",
 	"Sale_BrowserSortOption_ContentHub_TopRated": "Top Rated",
 	"Sale_BrowserSortOption_ContentHub_TopRated_ttip": "Games sorted by user review score",
 	"Sale_BrowserSortOption_ContentHub_Upcoming": "Upcoming",
@@ -2007,6 +2013,7 @@
 	"Localization_Error_XMLParseError": "Error occurred when parsing and applying the XML data: %1$s",
 	"Localization_Success_ImportComplete": "Localization Import Completed. The following languages updated: %1$s",
 	"Localization_Success_ImportComplete_NoChange": "Localization Import Completed. No changes were made.",
+	"Localization_EditorNotInFocus": "The current section does not support localization",
 
 	"TrailerPlayer_ID_NotProvided": "Cannot display trailer: The App ID and/or Trailer ID is not provided. The offical group event can automatically deetermine appid, however, both are required.",
 	"TrailerPlayer_CouldNotLoad": "Could not load appid %1$s and trailer %2$s. Double check they are published and visible on the store.",
@@ -2270,6 +2277,8 @@
 	"DiscoveryQueue_WidgetHeader": "A new way to discover top-selling, new and similar products to what you play and use on Steam.",
 	"DiscoveryQueue_WidgetHeader_LoggedOut": "Sign in to discover top-selling, new and similar products to what you play and use on Steam.",
 	"DiscoveryQueue_LaunchAction": "Launch Discovery Queue",
+
+	"StoreTrailer_AutoPlayVideos": "Autoplay Videos",
 
 	"ManageFriends_AddAFriend": "Add a friend",
 	"ManageFriends_InviteAFriend": "Invite a friend",

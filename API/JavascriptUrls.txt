@@ -1108,6 +1108,8 @@ ${baseURL}/userreviews/setdeveloperresponse/${recommendationID}
 ${baseURL}/userreviews/update/${recommendationID}
 ${baseURL}/userreviews/votetag/${recommendationID}
 ${baseURL}account/preferences
+${baseUrl}ajaxgetconfig
+${baseUrl}ajaxgetuserconfig
 ${cdnURL}/labs/diving_bell/back.svg
 ${cdnURL}/labs/diving_bell/openinnewtab_icon.svg
 ${cdnURL}/labs/diving_bell/refresh.svg
@@ -1315,6 +1317,7 @@ ${strClanURL}/uploadimage
 ${strPreviewURL}${strRssURL}
 ${strProfileURL}ajaxgroupinvite?new_profile=1${bBulkFriendInvite ? '&bulk=1' : ''}
 ${strRedirectURL}/info
+${strRelativeURL}${strChanged}
 ${strRssURL}${}
 ${strSearchBaseURL}${strQuery}
 ${strSearchBaseURL}Home
@@ -1665,7 +1668,15 @@ https://confluence.valve.org/display/etc...
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
+https://fb.me/react-controlled-components
+https://fb.me/react-devtools
+https://fb.me/react-devtools-faq
+https://fb.me/react-strict-mode-find-node%s
+https://fb.me/react-strict-mode-string-ref%s
+https://fb.me/react-unsafe-component-lifecycles
+https://fb.me/rules-of-hooks
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
+https://github.com/facebook/react/issues/3236).
 https://help.steampowered.com
 https://help.steampowered.com/
 https://help.steampowered.com/#HelpWithEconTrading

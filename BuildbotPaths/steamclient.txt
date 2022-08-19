@@ -192,6 +192,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/nethost.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/offline_ticket.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/osxhelpers.mm

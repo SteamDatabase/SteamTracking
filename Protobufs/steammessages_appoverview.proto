@@ -166,6 +166,7 @@ message CAppOverview {
 	optional .ESteamDeckCompatibilityCategory steam_deck_compat_category = 64 [default = k_ESteamDeckCompatibilityCategory_Unknown];
 	optional uint32 rt_last_time_locally_played = 65;
 	optional uint32 rt_purchased_time = 66;
+	optional string header_filename = 67;
 }
 
 message CAppOverview_Change {

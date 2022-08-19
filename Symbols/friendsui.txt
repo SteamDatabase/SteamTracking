@@ -355,6 +355,7 @@
  fseek
  fstat$INODE64
  ftell
+ ftello
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount

@@ -401,8 +401,8 @@ crashhandler001
 crashhandler002
 crashhandler003
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
 Failed to load opengl framework!!!
@@ -528,8 +528,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Aug 17 2022
-11:21:40
+Aug 18 2022
+18:49:41
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -929,19 +929,25 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-5ZX/FI
-2r}N
-*mb"
+G>d1
+\b:W
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-V'Fb$E
-:an_\
-Q~)+
-SG*~V
-T$l0
-=JD}
+>5_	
+F	*V
+T#6q
+=T	G
+kMB=
+l/{`!li
+@zS-
+re, 
+6sh3
+6y}W
+C$jG
+=n9e
+@fy|
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -997,8 +1003,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182208Z0/
-6	ZH
+220819015008Z0/
+-*~j
+(SF}(
+cl<E0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1006,17 +1014,15 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		WPRthrcc4EUiAYYaF3mwP5c0f5Y=
+		K8LpFKyqTI30DKMD1FgHoGNsPEU=
 		</data>
 		<data>
-		P7QP2dU5iRl7uCAGEc9j5VQe838=
+		vwoPAsf5PpFfGOZNvNWk31YEprw=
 		</data>
 	</array>
 </dict>
 </plist>
-hLe.
-%l*n
-20220817182217Z0
+20220819015024Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1078,8 +1084,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182217Z0#
-rcHX
+220819015024Z0#
+=HBD
+Hzhl@
+kR@ri
 __TEXT
 __text
 __TEXT
@@ -1125,7 +1133,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-l5:kK
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1707,8 +1714,8 @@ crashhandler001
 crashhandler002
 crashhandler003
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
 Failed to load opengl framework!!!
@@ -1805,8 +1812,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Aug 17 2022
-11:21:41
+Aug 18 2022
+18:49:43
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2241,30 +2248,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-<*`l
-vu|#
-CN%4
-\Pq}
-EViuUF
-K\LC
+BV.v
+q,=1
+t_;{
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-4iHD
-4tx&
-Faq)
-+y9-
-B7V:
-x29(
-rx`z
-r_sQ
-bjxs
+w<~4%
+gpRM
+ydT	
+zlE{
+#Fby
+Wq2.
+s8}`
+26(.
 OY*A_
 ]s=$+k
-9djp"
-f*2B3
-/^Z{\
+mvPE
+~V>&
+RO'^HDW
+J2L{
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2320,7 +2324,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182208Z0/
+220819015008Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2328,17 +2332,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		2a/SmvjN/X5Agerhu4oKD7mTsTA=
+		N6wqD8Vg8hGH8CQNaW90vsMQKrg=
 		</data>
 		<data>
-		K5CzZzr/W/84ehBl7qsha8KHE/A=
+		UPXMQ45tukzAhOy/D61fsnCkxHw=
 		</data>
 	</array>
 </dict>
 </plist>
-$k@<<?
-20220817182217Z0
-1C6$Z
+z7u`IV
+h:mf
+%Wb)
+QV&1_
+^B@t
+20220819015024Z0
 &gbS
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -2399,12 +2406,14 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 &gbS
-220817182217Z0#
-zxY]
-FDG%
-@\fn
-?[=V)
-,4FV
+220819015024Z0#
+Y2F-
+@sVh
+|rNdF?4
+_zH$z
+xvZ9
+EXVt1KF
+K$(j}E*
 __TEXT
 __text
 __TEXT
@@ -2465,17 +2474,16 @@ Tv*@
  @9H5
 cS9 
 Q)Ij8?
-	Xm2
-	Xj2
+	Xl2
+	Xi2
  @9H
 5h"@9
 h&B)
 +ih8J	
 Lii8k	
 		n9
-R		.9
-WW	X
- H	X
+R		.9h
+ii8J	
 jv8(
 h(8*
 ij`8
@@ -2608,8 +2616,8 @@ crashhandler001
 crashhandler002
 crashhandler003
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
 Failed to load opengl framework!!!
@@ -2707,8 +2715,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Aug 17 2022
-11:21:41
+Aug 18 2022
+18:49:47
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3136,26 +3144,22 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-CT\J!~
-{BB"
-H0J+
-8;l7
+}SwR
+%{@[d
+Y@/G
+	[;]v
+<XF]
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-~@}7
-f{7~~
-<lXF
-DHZl
-EN@r]
-\ `V
-qa:-y
-2		e
-(s8*K'
-g@K	r
-[bEd
- n }e
+j$&\
+0lSg7
+!)ki
+FL%>i
+"frV
+j&8v
+`xho 
 eF1]
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3212,8 +3216,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182208Z0/
-SR%m O
+220819015008Z0/
+72le
+%A0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3221,45 +3226,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		vvzIiThO4b0/Azlsqwr+g/ZmR+s=
+		YoCT88/rJkJ8ol2DRUw3ucn+x8k=
 		</data>
 		<data>
-		qhINPhgTrOz9vqnv3FNSJW0gT6I=
+		lr4IalyCBVCBlLdVCf/H8mGq/Ag=
 		</data>
 	</array>
 </dict>
 </plist>
-@	`Ns
-Q+7`K
-EHj-A^
-ncQ-
-[irtI
-0Ugn^
-x+6R;
-IsLUO}
-m2|N
-20220817182217Z0
-&gbS
+7zBO
+t_r9
+20220819015024Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802163003Z
-220913163002Z0B1
-Timestamp Signer NWK21
+220802164002Z
+220913164001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-/5q>
-^eJE
-#}=>
-fJeM
+W`H/E->
+;c2%W
+qnEK"
+e}-a
+py~(
+-]%v
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--*:E
-A<Lo0$
-9nbV\
-A	<g
+t)TD}
+lnSks{gx
+my?m
+qqCJ _
+5I&0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3298,7 +3298,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-&gbS
-220817182217Z0#
- Gv)f
-QV_'
+220819015024Z0#
+ul0+
+`[[H$
+@(.8

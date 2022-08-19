@@ -654,6 +654,10 @@ service PublishedFile {
 		option (method_description) = "Retrieves files published by a user.";
 	}
 
+	rpc GetUserFileCount (.CPublishedFile_GetUserFiles_Request) returns (.CPublishedFile_GetUserFiles_Response) {
+		option (method_description) = "Retrieves a count of files published by a user. Uses the same messages as GetUserFiles but totalonly must be true.";
+	}
+
 	rpc AreFilesInSubscriptionList (.CPublishedFile_AreFilesInSubscriptionList_Request) returns (.CPublishedFile_AreFilesInSubscriptionList_Response) {
 		option (method_description) = "Determines which files in the given list are in a user's subscription list";
 	}

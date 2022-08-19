@@ -142,9 +142,9 @@
 "Overlay_FriendChangeConfirmation_Button_Add"				"친구 추가"
 "Overlay_FriendChangeConfirmation_Reason_Remove"			"%persona%님을 친구 목록에서 삭제할까요?"
 "Overlay_FriendChangeConfirmation_Button_Remove"			"친구 삭제"
-"Overlay_FriendChangeConfirmation_Reason_RequestAccept"		"%persona%님으로부터 친구 요청이 왔습니다. 친구로 추가하시겠습니까?"
+"Overlay_FriendChangeConfirmation_Reason_RequestAccept"		"%persona%님으로부터 친구 신청이 왔습니다. 친구로 추가하시겠습니까?"
 "Overlay_FriendChangeConfirmation_Button_RequestAccept"		"요청 수락"
-"Overlay_FriendChangeConfirmation_Reason_RequestIgnore"		"%persona%님이 보낸 친구 요청을 무시할까요?"
+"Overlay_FriendChangeConfirmation_Reason_RequestIgnore"		"%persona%님이 보낸 친구 신청을 무시할까요?"
 "Overlay_FriendChangeConfirmation_Button_RequestIgnore"		"요청 무시"
 
 "Overlay_LobbyInvite_WrongGame_Title"	"게임 초대"

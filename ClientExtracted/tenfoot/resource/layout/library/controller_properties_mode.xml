@@ -297,7 +297,7 @@
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickClick" />
         </Panel>
         <Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+          <Label class="FieldLabel" text="#ControllerBinding_FlickStickSensitivity" />
           <Slider id="FlickStickSensitivity" direction="horizontal" />
         </Panel>
 
@@ -798,9 +798,31 @@
           <Slider id="FlickStickSmoothing" direction="horizontal" />
         </Panel>
 	    	<Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TransitionTime"/>
-          <Slider id="Int_FlickStickTransitionTime" direction="horizontal" />
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickDeadzoneInner"/>
+          <Slider id="FlickStickDeadzoneInner" direction="horizontal" />
         </Panel>
+		<Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+			<Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickDeadzoneOuter"/>
+			<Slider id="FlickStickDeadzoneOuter" direction="horizontal" />
+		</Panel>
+		<Panel class="FieldWrapper" modes="flickstick" advanced="off" visualization="off">
+			<Label class="FieldLabel" text="#ControllerBinding_FlickStickForwardDeadzone"/>
+			<Slider id="FlickStickForwardDeadzone" direction="horizontal" />
+		</Panel>
+		<Panel class="FieldWrapper" modes="flickstick" advanced="on" visualization="off">
+			<Label class="FieldLabel" text="#ControllerBinding_FlickStickSnapTightness"/>
+			<Slider id="FlickStickSnapTightness" direction="horizontal" />
+		</Panel>
+				
+		<Panel class="FieldWrapper" modes="flickstick" advanced="on" visualization="off">
+			<Label class="FieldLabel" text="#ControllerBinding_FlickStickSweepTightness"/>
+			<Slider id="FlickStickSweepTightness" direction="horizontal" />
+		</Panel>
+		<Panel class="FieldWrapper" modes="flickstick" advanced="on" visualization="off">
+			<Label class="FieldLabel" text="#ControllerBinding_FlickStickSweepSensitivity"/>
+			<Slider id="FlickStickSweepSensitivity" direction="horizontal" />
+		</Panel>
+					
         <!-- Mouse Region Mode -->
         <Panel class="FieldWrapper" modes="mouseregion" gameactions="off" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_PositionX" />
@@ -1208,19 +1230,27 @@
 						<DropDown id="ModeShiftDropDown" />
 					</Panel>
 
-          <Panel class="FieldWrapper" modes="flickstick" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickOuterRing" />
-            <ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickOuterRing" />
-          </Panel>
-          <Panel class="FieldWrapper" modes="flickstick" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadiusFlickStick" />
-            <Slider id="EdgeBindingRadiusFlickStick" direction="horizontal" />
-          </Panel>
-          <Panel class="FieldWrapper" modes="flickstick" sources="trackpad joystick" advanced="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
-            <Slider id="RotationFlickStick" direction="horizontal" />
-          </Panel>
-          
+			<Panel class="FieldWrapper" id="FlickStickSnapModePulldownTab" gameactions="off" advanced="off" >
+				<Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickSnapMode" />
+				<DropDown id="FlickStickSnapMode" />
+			</Panel>			
+			<Panel class="FieldWrapper" modes="flickstick" sources="trackpad joystick" advanced="off">
+			  <Label class="FieldLabel" text="#Library_Details_FieldLabel_Rotation" />
+			  <Slider id="RotationFlickStick" direction="horizontal" />
+			</Panel>
+			<Panel class="FieldWrapper" modes="flickstick" advanced="off">
+				<Label class="FieldLabel" text="#ControllerBinding_FlickStickDepressionSpeed" />
+				<Slider id="FlickStickDepressionSpeed" direction="horizontal" />
+			</Panel>
+			
+			<Panel class="FieldWrapper" modes="flickstick" advanced="on">
+				<Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickOuterRing" />
+				<ControllerBindingButton class="BindingButtonPropertiesMode" id="FlickStickOuterRing" />
+			</Panel>
+			<Panel class="FieldWrapper" modes="flickstick" advanced="on">
+				<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadiusFlickStick" />
+				<Slider id="EdgeBindingRadiusFlickStick" direction="horizontal" />
+			</Panel>
           <!-- Dpad Mode -->
 					<Panel class="FieldWrapper" modes="dpad" advanced ="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />

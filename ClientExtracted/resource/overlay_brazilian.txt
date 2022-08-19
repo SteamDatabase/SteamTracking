@@ -10,7 +10,7 @@
 "Overlay_SettingsTabTitleApp"	"Em aplicativo"
 "Overlay_SettingsDescription"	"Use o Painel Steam para acessar a Comunidade Steam, a Conversa Steam e outros recursos sem sair do jogo."
 "Overlay_SettingsDescriptionApp"	"O Steam pode permanecer ativo e exibir mensagens de notificação da Comunidade Steam, assim como uma interface completa de amigos, enquanto estiver no seu aplicativo."
-"Overlay_SettingsEnable"	"Ativar o painel Steam dentro do jogo"
+"Overlay_SettingsEnable"	"Ativar o Painel Steam dentro do jogo"
 "Overlay_SettingsEnableApp"	"Ativar a Comunidade Steam dentro do aplicativo"
 "Overlay_SettingsSCTenfootEnable"	"Sempre usar o painel do modo Big Picture quando usar um controle configurado pelo Steam"
 "Overlay_SettingsHotKeyLabel"	"Teclas de atalho do Painel"

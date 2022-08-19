@@ -20,6 +20,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+x2E
+x2E
 __DATA
 @E
 @E
@@ -35,12 +37,10 @@ __DATA
 8BE
 __mod_init_func
 __DATA
-NE
-NE
 __const
 __DATA
-PQE
-PQE
+`QE
+`QE
 __cfstring
 __DATA
 __objc_imageinfo__DATA
@@ -69,7 +69,7 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-(8\
+88\
 P
 
 
@@ -101,11 +101,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-HD\
+XD\
 Hb
 )
-A:
-1:
 E*
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
@@ -13807,8 +13805,6 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-A:
-1:
 E*
 C*
 0
@@ -13820,18 +13816,17 @@ C*
 [
 [
 [
-5:
 :
 :
 :
+BD
 @
+ZY
 9
 9
 9
 x
-z8
 8
-U
 
 
 @
@@ -13843,6 +13838,7 @@ B
 B
 7
 7
+7
 p
 7
 7
@@ -13852,12 +13848,8 @@ p
 0
 p
 0
-p6
-+
-(6
-#P
+B6
 E7
-q5
 p
 0
 p
@@ -13865,7 +13857,6 @@ p
 p
 0
 6
-6A
 p
 0
 p
@@ -13878,21 +13869,17 @@ p
 0
 p
 0
-@5
-(5
 E8u
 E8u
-5
 5
 5
 5
 5
 0
+&4
 H=
 4
-S4
-J4
-A4
+_4
 j
 p
 0
@@ -13913,11 +13900,13 @@ AWj
 4
 4
 4
+4
 0
 0
 0
 p
 0
+7)
 p
 0
 4
@@ -13944,10 +13933,9 @@ p
 0
 p
 0
+a2
 p
 0
-C9
-_2
 j
 j
 j
@@ -13983,6 +13971,7 @@ j
 j
 j
 j
+OS
 j
 j
 j
@@ -14047,7 +14036,7 @@ j
 j
 j
 j
-8S
+<S
 ^3
 \3
 j
@@ -14060,16 +14049,13 @@ j
 j
 .
 .
-.
-42
 p
 AWj
 3
 3
 3
-r2
-[2
-U2
+f2
+^'
 p
 0
 p
@@ -14077,7 +14063,6 @@ p
 p
 0
 I
-y=
 p
 0
 p
@@ -14121,7 +14106,7 @@ j
 j
 j
 j
-:<
+A<
 j
 j
 j
@@ -14138,13 +14123,12 @@ j
 j
 j
 j
-A
 p
 0
 p
 0
-w1
-3R
+K1
+@1
 p
 0
 p
@@ -14153,7 +14137,6 @@ p
 0
 p
 0
-41
 t2
 p
 p
@@ -14169,12 +14152,11 @@ j
 j
 j
 j
-AQ
-<Q
 p
 0
 p
 0
+p-
 p
 0
 p
@@ -14189,17 +14171,13 @@ E
 p
 0
 p
-A0
 
 
-(
 8
-{*
-1C
+0
 p
-*P
 E8}
-T0
++
 $
 p
 0
@@ -14213,8 +14191,10 @@ p
 p
 p
 0
+6P
 ;/
-t*
+0
+0
 0
 0
 0
@@ -14233,11 +14213,9 @@ D
 /
 /
 /
-/
-/
-/
-XC
 5
+r/
+%C
 @
 Hc
 Hc
@@ -14269,15 +14247,19 @@ IcE
 IcE
 @
 @
-'/
-6.
+@.
+..
+_/
 .
 .
 .
 .
+.
+.
+k8
 V
-?N
-%.
+}-
+K-
 -
 -
 -
@@ -14287,8 +14269,7 @@ V
 -
 =
 M
-M
-M
+L-
 =
 ,
 ,
@@ -14297,44 +14278,34 @@ M
 ,
 ,
 ,
-,
-,
-,
-,
-,
-+
-[+
-;+
+-
+l+
+6
 +
 +
 +
-A*
-\+
 +
-+
+h+
 @
-r*
 )
 )
 )
 )
-j)
+/
+g)
 (
-&)
 )
 )
-lH
-9'
+.
+i'
 '
-'
+o*
 (
 (
 @
-<&
 M9e
 @
 @
-'
 '
 ?
 ?
@@ -14353,8 +14324,6 @@ M9e
 ?
 
 ,
-,
-,
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
@@ -14363,8 +14332,6 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 Pj
 ARj
 j
-{%
-$
 0
 0
 =
@@ -14372,6 +14339,7 @@ $
 @
 =
 9
+["
 =
 %
 =
@@ -14665,6 +14633,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+o!
 =
 @
 
@@ -14672,20 +14641,23 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-t+
 H=
 Ic]
 j
 j
 j
 j
+-"
+
 "
 j
 j
+NA
+IA
 
-|
-A
+L
 t$I;M
+,
 e
 W
 ,7~5d
@@ -14847,7 +14819,6 @@ P
 @
 &
 #
-Z
 #
 #
 -
@@ -14856,15 +14827,18 @@ e,
 G,
 fD9%:@,
 A+M
+r
+_
+Y+
 j
 j
 j
 j
 j
 j
-
 =
 0
++
 
 
 j
@@ -14898,11 +14872,14 @@ j
 j
 j
 
->*
+@*
+;*
+8*
 d
 &
 &
 d
+#
 0
 A+4$A+u
 ~m=
@@ -14910,6 +14887,7 @@ A+4$A+u
 =
 =
 @
+3"
 j
 j
 j
@@ -14921,6 +14899,8 @@ j
 j
 j
 j
+"
+"
 "
 "
 "
@@ -14966,10 +14946,10 @@ j
 j
 j
 =
-d
 {
 
 
+"
 
 j
 j
@@ -14982,6 +14962,8 @@ j
 j
 j
 E
+o
+a
 j
 j
 j
@@ -14995,9 +14977,9 @@ j
 j
 j
 j
-[&
+\&
+B&
 j
-&
 j
 j
 j
@@ -15066,9 +15048,7 @@ $
 %
 %
 %
-%
-%
-%
+S"
 @
 @
 &
@@ -15134,16 +15114,15 @@ j
 j
 .
 d
-]"
 =
-Lc%[|"
-Hcnz"
+Lc%{|"
 
 =
 @
 =*.*
 =
 @
+g"
 @
 @
 @

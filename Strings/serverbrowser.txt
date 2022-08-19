@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+{
+{
 __stubs
 __TEXT
 __stub_helper
@@ -3863,11 +3865,10 @@ j
 p
 0
 j
+B%
 j
 j
 j
-u%
-4%
 0
 0
 AT=
@@ -3934,12 +3935,13 @@ M9e
 ?
 @
 @
+7
 
-j
+Z
+
 
 
 d
-J
 A+M
 
 
@@ -3964,6 +3966,7 @@ j
 j
 j
 
+Q
 j
 j
 j

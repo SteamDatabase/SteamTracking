@@ -2966,6 +2966,132 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   background: #fff;
   color: #23262e;
 }
+@keyframes systemdock_ItemFocusAnim-darkerGrey-nocolor_3hL8S {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-darkerGrey_yyClg {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-darkGrey_2YDtP {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-grey_IKd5z {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnimBorder-darkGrey_1Zl6e {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-green_2zIbx {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes systemdock_focusAnimation_ZBtLC {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes systemdock_hoverAnimation_2ErZZ {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb .systemdock_Image_e5mfX {
+  width: 40%;
+  margin-bottom: 2em;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_UnplugWarning_1FKgs {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_ProgressContainer_2DMQJ {
+  width: 70%;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_ProgressContainer_2DMQJ
+  .systemdock_TimeRemaining_3QsZq {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0.2em;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  min-height: 2em;
+}
 @keyframes gamepaduioverlayquickactions_ItemFocusAnim-darkerGrey-nocolor_1hNh2 {
   from {
     background: #3d4450;
@@ -4763,116 +4889,6 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
 }
 .gamepadhomewhatsnew_Empty_3_vx-:first-child {
   display: block;
-}
-@keyframes discoveryqueue_ItemFocusAnim-darkerGrey-nocolor_NuCXd {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes discoveryqueue_ItemFocusAnim-darkerGrey_2JYi5 {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes discoveryqueue_ItemFocusAnim-darkGrey_37-zQ {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes discoveryqueue_ItemFocusAnim-grey_3ZoQm {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes discoveryqueue_ItemFocusAnimBorder-darkGrey_1cA2l {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes discoveryqueue_ItemFocusAnim-green_3jA5G {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes discoveryqueue_focusAnimation_2T0W9 {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes discoveryqueue_hoverAnimation_2RNn2 {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.discoveryqueue_DiscoveryQueue_11hKh {
-  scroll-snap-align: end;
-  scroll-margin-bottom: 24px;
-}
-.discoveryqueue_DiscoveryQueueImages_1Gh0r {
-  position: relative;
-  margin-top: 5px;
-}
-.discoveryqueue_DiscoveryQueueApp_1ziG0 {
-  position: absolute;
-  opacity: 1;
-}
-.discoveryqueue_BannerWrapper_2Ld4I {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.discoveryqueue_Banner_C91S5 {
-  background-color: #1a9fff;
-  font-size: 12px;
-  width: fit-content;
-  padding: 0px 40px;
-  text-transform: uppercase;
-}
-.discoveryqueue_DiscoveryQueueAppImage_14GPQ {
-  width: 100%;
 }
 @keyframes gamepadhomerecommended_ItemFocusAnim-darkerGrey-nocolor_1N30_ {
   from {
@@ -8962,6 +8978,15 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin-top: 12px;
   margin-bottom: 16px;
 }
+.facetedbrowse_FacetTitleCtn_3W_uV {
+  display: flex;
+}
+.facetedbrowse_FacetTitleCtn_3W_uV svg {
+  height: 10px;
+  margin-top: 10px;
+  fill: rgba(255, 255, 255, 0.75);
+  stroke: rgba(255, 255, 255, 0.75);
+}
 .facetedbrowse_FacetTitle_3L67O {
   text-transform: uppercase;
   font-size: 16px;
@@ -8970,6 +8995,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   padding: 4px 0;
   width: fit-content;
   opacity: 70%;
+  flex-grow: 1;
 }
 .facetedbrowse_FacetTitle_3L67O:hover {
   cursor: pointer;
@@ -9226,16 +9252,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   transform: translateX(0px);
   transition: opacity 0.1s ease, transform 0.2s ease;
 }
-.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppVideo_ah1w3 {
-  object-fit: fill;
-  height: 100%;
-  width: 100%;
-}
-.discoveryqueuewizard_AppVideoCtn_2XCS5 .discoveryqueuewizard_AppMainCap_24yvt {
-  height: 100%;
-  width: 100%;
-  transition: opacity 0.6s ease 1s;
-  opacity: 1;
+.discoveryqueuewizard_AppVideoCtn_2XCS5
+  .discoveryqueuewizard_DeckVerifiedLogo_2mYU2 {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
 }
 .discoveryqueuewizard_AppDetailsCtn_2E1O4 {
   color: #fff;
@@ -9259,7 +9281,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   overflow: scroll;
   -webkit-mask-image: linear-gradient(black 94%, transparent);
 }
-.BasicUI .discoveryqueuewizard_AppDetailsCtn_2E1O4 {
+.BasicUI
+  .discoveryqueuewizard_AppDetailsCtn_2E1O4
+  .discoveryqueuewizard_AppDetailsCtnTop_3LnWP {
   padding: 12px;
 }
 .discoveryqueuewizard_AppDetailsHeader_1Qn-x {
@@ -9590,6 +9614,20 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .discoveryqueuewizard_TopBarCtn_24gmm.discoveryqueuewizard_TopMargin_2xo1m {
   margin-top: 40px;
 }
+.discoveryqueuewizard_BotomBarCtn_YW9Pr {
+  display: flex;
+  padding: 8px;
+  padding-left: 16px;
+  align-items: center;
+  align-self: normal;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.discoveryqueuewizard_BotomBarCtn_YW9Pr
+  .discoveryqueuewizard_LearnMoreLink_3bCDZ {
+  color: #fff;
+  text-decoration: underline;
+}
 @keyframes discoveryqueuewizard_revealTopBarCtn_2Gt6G {
   from {
     transform: translateY(-40px);
@@ -9778,7 +9816,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-size: 12px;
   color: var(--gpStoreLighterGrey);
   padding: 0;
-  border-top: 1px solid #acb2c924;
   line-height: 18px;
 }
 .discoveryqueuewizard_TradingCardCtn_36Qbj {
@@ -9828,6 +9865,53 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   flex-direction: column;
   justify-content: center;
   margin-left: 4px;
+}
+.ContentHubMainCarouselCapsule .discoveryqueuewizard_WhyRelevant_WBWfZ {
+  font-size: 15px;
+}
+.appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appcarouseltrailer_AppCarouselTrailerCtn_3hJp_:hover
+  .appcarouseltrailer_AutoplayCheckbox_36Ep1 {
+  display: block;
+}
+.appcarouseltrailer_AppVideo_2ykD7 {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.6s ease 1s;
+  opacity: 0;
+  position: absolute;
+}
+.appcarouseltrailer_AppMainCap_2SJkc {
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.6s ease 1s;
+  opacity: 1;
+  position: absolute;
+}
+.appcarouseltrailer_PlayButton_2b7SF {
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+.appcarouseltrailer_PlayButton_2b7SF svg {
+  width: 130px;
+  height: auto;
+}
+.appcarouseltrailer_AutoplayCheckbox_36Ep1 {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  font-size: 13px;
+  color: #fff;
+  display: none;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
   height: 200px;
@@ -11916,12 +12000,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   flex-basis: 0;
   overflow: hidden;
   margin: 0 12px;
-}
-.qrcode_QRBits_3FhhK {
-  display: grid;
-}
-.qrcode_Bit_2Yuvr:not(.qrcode_Active_274P1) {
-  background-color: #1999ff;
 }
 @keyframes decksetuphelp_ItemFocusAnim-darkerGrey-nocolor_3Frly {
   from {
@@ -14292,6 +14370,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     transform: translateY(0px);
   }
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .displayscaledialog_Dialog_25KHn {
   max-width: 560px;
 }
@@ -14323,6 +14404,23 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .displayscaledialog_YouCanChangeThisLater_LDYUg strong {
   color: #fff;
+}
+.displayscaledialog_SectionSeparator_3BK5o {
+  height: 24px;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.displaysettings_TimeRangeControls_10XNA {
+  display: flex;
+  flex-direction: row;
+}
+.displaysettings_TimeRangeControls_10XNA .displaysettings_And_sL5P5 {
+  flex-shrink: 0;
+  margin: auto 1.5ch;
+}
+.displaysettings_TimeRangeControls_10XNA > *:not(.displaysettings_And_sL5P5) {
+  flex-grow: 1;
 }
 :root {
   --basicui-header-height: 0px;
@@ -14505,132 +14603,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .homesettings_Instructions_1dDcJ.homesettings_Instructions_1dDcJ {
   font-size: 12px;
   padding: 12px 0px;
-}
-@keyframes systemdock_ItemFocusAnim-darkerGrey-nocolor_3hL8S {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes systemdock_ItemFocusAnim-darkerGrey_yyClg {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes systemdock_ItemFocusAnim-darkGrey_2YDtP {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes systemdock_ItemFocusAnim-grey_IKd5z {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes systemdock_ItemFocusAnimBorder-darkGrey_1Zl6e {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes systemdock_ItemFocusAnim-green_2zIbx {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes systemdock_focusAnimation_ZBtLC {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes systemdock_hoverAnimation_2ErZZ {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.systemdock_SystemDockUpdateApplyTakeover_qRqRb {
-  background-color: #000;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-}
-.systemdock_SystemDockUpdateApplyTakeover_qRqRb .systemdock_Image_e5mfX {
-  width: 40%;
-  margin-bottom: 2em;
-}
-.systemdock_SystemDockUpdateApplyTakeover_qRqRb
-  .systemdock_UnplugWarning_1FKgs {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 22px;
-  line-height: 28px;
-  text-align: center;
-  margin-bottom: 0.8em;
-  font-weight: bold;
-}
-.systemdock_SystemDockUpdateApplyTakeover_qRqRb
-  .systemdock_ProgressContainer_2DMQJ {
-  width: 70%;
-}
-.systemdock_SystemDockUpdateApplyTakeover_qRqRb
-  .systemdock_ProgressContainer_2DMQJ
-  .systemdock_TimeRemaining_3QsZq {
-  color: #fff;
-  font-weight: bold;
-  margin-top: 0.2em;
-  text-align: left;
-  font-variant-numeric: tabular-nums;
-  text-transform: uppercase;
-  min-height: 2em;
 }
 .keyboardsettings_KeyboardThemeButtons_1yVJW {
   display: flex;

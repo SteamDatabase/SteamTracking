@@ -768,7 +768,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard LBACK, Shift"
+							"binding"		"game_action Keyboard LTRIGGER"
 						}
 						"settings"
 						{
@@ -793,7 +793,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard RBACK, Alt"
+							"binding"		"game_action Keyboard RTRIGGER"
 						}
 						"settings"
 						{

@@ -16,6 +16,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper_webapihost.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/BasePanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/OverlayWebBrowser.cpp

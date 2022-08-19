@@ -178,6 +178,7 @@ message CMsgStorageDevicesData {
 
 	repeated .CMsgStorageDevicesData.Drive drives = 1;
 	repeated .CMsgStorageDevicesData.BlockDevice block_devices = 2;
+	optional bool is_unmount_supported = 3;
 }
 
 message CCloud_PendingRemoteOperation {
@@ -237,7 +238,7 @@ message CMsgSystemPerfNetworkInterface {
 message CMsgSystemPerfDiagnosticInfo {
 	repeated .CMsgSystemPerfDiagnosticEntry entries = 1;
 	repeated .CMsgSystemPerfNetworkInterface interfaces = 2;
-	optional string sensors_json = 3;
+	optional float battery_temp_c = 3;
 }
 
 message CMsgSystemPerfLimits {

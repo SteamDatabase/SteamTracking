@@ -528,7 +528,7 @@
 "Friends_SteamInputControllerConnectedNotification_Info" "Usando configurações de"
 "Friends_SteamInputControllerConfigNotification_Info" "CONFIGURAÇÃO:"
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
-"Friends_SteamInputControllerConfigNotification_Info3" "Edite no painel Steam"
+"Friends_SteamInputControllerConfigNotification_Info3" "Edite no Painel Steam"
 "Library_ControllerSaveDefaultTitle" "Configuração oficial"
 "SettingsController_AutosaveName" "Config. pessoal salva autom."
 "SettingsController_SteamController" "Controle Steam"
@@ -754,7 +754,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "Inferior direito"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "Inferior esquerdo"
 "Steam_Settings_Broadcast_Disabled_System" "A Transmissão Steam não está atualmente disponível neste sistema operacional."
-"Steam_Settings_Broadcast_Disabled_Overlay" "Ative o painel Steam para fazer transmissões ao vivo."
+"Steam_Settings_Broadcast_Disabled_Overlay" "Ative o Painel Steam para fazer transmissões ao vivo."
 "Steam_Settings_Broadcast_Disabled_User" "A sua conta não possui privilégios suficientes para realizar transmissões ao vivo."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Não foi possível iniciar a transmissão nesta máquina.\n\nO Windows está executando o Steam em modo de compatibilidade, o que pode impedir a Transmissão Steam de funcionar corretamente. Caso esta máquina esteja executando o Windows 7 ou posterior, siga as instruções na página de suporte abaixo para desativar o modo de compatibilidade."
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
@@ -787,7 +787,7 @@
 "Broadcast_Upload_Result_12" "atraso muito grande"
 
 "Steam_Settings_Browser"	"Navegador web"
-"Overlay_SettingsBrowserDesc" "As seguintes configurações se aplicam ao navegador web integrado ao cliente Steam e usado no painel Steam."
+"Overlay_SettingsBrowserDesc" "As seguintes configurações se aplicam ao navegador web integrado ao cliente Steam e usado no Painel Steam."
 "Steam_SettingsBrowserDeleteAllData"	"Excluir dados do navegador"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Excluir todos os cookies, histórico e cache do navegador do Steam?"
 

@@ -10,25 +10,29 @@ __stub_helper
 __TEXT
 __cstring
 __TEXT
-P"'
-P"'
 __gcc_except_tab__TEXT
+,@)
+,@)
 __const
 __TEXT
 __objc_methname
 __TEXT
 __objc_classname__TEXT
+)9-
+)9-
 __objc_methtype
 __TEXT
+49-
 (
+49-
 __unwind_info
 __TEXT
-<;-
-<;-
+\9-
+\9-
 __eh_frame
 __TEXT
-00.
-00.
+P0.
+P0.
 __DATA
 @.
 @.
@@ -40,9 +44,10 @@ __got
 __DATA
 __la_symbol_ptr
 __DATA
-
 __mod_init_func
 __DATA
+(O.
+(O.
 __const
 __DATA
 __cfstring
@@ -55,17 +60,32 @@ __objc_selrefs
 __DATA
 __objc_classrefs__DATA
 __objc_superrefs__DATA
+8
+C
+8
+C
 __objc_ivar
 __DATA
+@
+C
+@
+C
 __objc_data
 __DATA
+H
+C
 P
+H
+C
 __data
 __DATA
-PH
+C
+C
 __thread_vars
 __DATA
+0IC
 0
+0IC
 __thread_data
 __DATA
 @
@@ -75,16 +95,13 @@ __bss
 __DATA
 __common
 __DATA
-`^C
 H
 __LINKEDIT
-C
+D
 
 @
 @loader_path/gameoverlayui.dylib
 "
-C
-6C
 P
 k
 l
@@ -133,10 +150,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-zC
-HG
 )
-`?D
 C
 23IClientParentalSettings
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
@@ -161,10 +175,19 @@ N20CBroadcastLiveBanner27CCallback_OnBroadcastStatusE
 10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
+21CReactLoginDialogBase
+24CReactRefreshLoginDialog
 N19CRefreshLoginDialog24CCallback_OnLogonSuccessE
 9CCallbackI19CRefreshLoginDialog23SteamServersConnected_tLb0EE
 N19CRefreshLoginDialog24CCallback_OnLogonFailureE
 9CCallbackI19CRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
+N24CReactRefreshLoginDialog24CCallback_OnLogonSuccessE
+9CCallbackI24CReactRefreshLoginDialog23SteamServersConnected_tLb0EE
+N24CReactRefreshLoginDialog24CCallback_OnLogonFailureE
+9CCallbackI24CReactRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
+20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKcS2_EE
+20IJSMethodCallHandler
+20CJSMethodCallHandlerI21CReactLoginDialogBaseJ9CSmartPtrI18CJSCallbackPromiseEEE
 21CSettingsSubBroadcast
 N21CSettingsSubBroadcast27CCallback_OnBroadcastStatusE
 9CCallbackI21CSettingsSubBroadcast17BroadcastStatus_tLb0EE
@@ -201,7 +224,6 @@ N16CSteamAuthedHTML35CCallback_OnParentalWebTokenChangedE
 9CCallbackI16CSteamAuthedHTML25ParentalWebTokenChanged_tLb0EE
 20CMultipleCallResultsI16CSteamAuthedHTML26SupportSystemReportReady_tE
 20CJSMethodCallHandlerI16CSteamAuthedHTMLJ9CSmartPtrI15CJSCallbackFuncEEE
-20IJSMethodCallHandler
 12CTradeDialog
 11CURLManager
 7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
@@ -7063,6 +7085,7 @@ x
 &z
 0u
 UUUUUUUUUUUUUUUU0123456789ABCDEF22CJSCallbackFunc_HTMLJS
+18CJSCallbackPromise
 0C
 0E
 0C
@@ -7930,6 +7953,8 @@ NSt3__121__basic_string_commonILb1EEE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
+20CJSMethodCallHandlerIN4vgui4HTMLEJ9CSmartPtrI15CJSCallbackFuncEEE
+16CHTMLProtoBufMsgI13CMsgDisableF5E
 N4vgui9HTMLPopupE
 N4vgui9HTMLPopup9PopupHTMLE
 N4vgui5ImageE
@@ -8368,11 +8393,42 @@ OnLogonFailure: %u
 #Steam_Login_ErrorTitle
 #Steam_ErrorLoginFailed
 Quit
+%s/%s?IN_CLIENT=true&LOCAL_HOSTNAME=%s&WEBAPI_BASE_URL=%s&STORE_BASE_URL=%s&USE_POPUPS=true&DEV_MODE=%s&LANGUAGE=%s&PLATFORM=%s&COUNTRY=%s&LAUNCHER_TYPE=%d
+index.html
+true
+&IN_LOGIN=true
+&IN_LOGIN_REFRESH=true
+&IN_CHROMEOS=true
+LoginDialog
+-dev
+#Steam_Login_Title
+HTMLRoot
+steamui
+Close
+Auth.SetLoginToken
+Auth.GetRefreshInfo
+reason
+account_name
+login_token_id
+Failed to connect to servers after login refresh: %d
 CRefreshLoginDialog
 vgui::Frame
 CRefreshLoginDialog::OnLogonSuccess
 CRefreshLoginDialog::OnLogonFailure
+CReactLoginDialogBase
+BrowserDraggableRegionsChanged
+CReactRefreshLoginDialog
+CReactRefreshLoginDialog::OnLogonSuccess
+CReactRefreshLoginDialog::OnLogonFailure
 Frame
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+m_p == NULL
+%s requires %d arguments; only %d given
+%s call had invalid argument (arg %d)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+m_iRefs > 0 && m_iRefs < 0x1000000
+m_iRefs >= 0 && m_iRefs < 0x0ffffff
+m_pObj == NULL
 SettingsSubBroadcast
 BroadcastStatus
 #Steam_Settings_Broadcast_StatusNotBroadcast
@@ -8676,8 +8732,6 @@ htmlpopupchild
 CSteamAuthedHTML
 vgui::HTML
 CSteamAuthedHTML::OnParentalWebTokenChanged
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
-m_iRefs > 0 && m_iRefs < 0x1000000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
 CSteamAuthedHTMLPopup
@@ -8694,18 +8748,12 @@ m_vecStyleChangedCallbacks
 m_DirWatcherClient
 CIMEPanel
 HTMLPopup
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
-m_pObj == NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 m_mapAPICalls
-%s requires %d arguments; only %d given
-%s call had invalid argument (arg %d)
 #steam_tradedialog_title
--dev
 steam/cached/tradedialog.layout
 CTradeDialog
 OnSetHTMLTitle
@@ -8782,11 +8830,21 @@ https://cdn.beta.steampowered.com/store
 https://cdn.steamchina.eccdnx.com/store
 https://steamcdn-a.akamaihd.net/store
 ://
+https://steamloopback.host
 steam://
 steamlink://
 steamchina://
 steambeta://
 steamchinabeta://
+https://127.0.0.1:8283
+https://api-china.beta.valve.org
+https://api.beta.steampowered.com
+http://10.1.1.18:8282
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper_webapihost.cpp
+!bUsePartnerWebAPI
+https://api.steamchina.com
+https://partner.steam-api.com
+https://api.steampowered.com
 VRModeBegin
 VRModeEnd with no matching begin.
 VRModeEnd after %d seconds
@@ -9227,7 +9285,6 @@ Recovery
 resource/layout/parentalunlockdialog.layout
 #Steam_Parental_ForgotPIN
 steam://url/ParentalRecovery
-Close
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 pfnOnUnlock == NULL || pfnOnWebTokenChanged == NULL
 DoParentalUnlock
@@ -9416,7 +9473,6 @@ Failed to post that I was waiting for an event
 %s.BinSemLock
 Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
 Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
-true
 Bad Access flag on shared mem create: %s: %u
 /Shm/%x
 /dev/null
@@ -9448,6 +9504,8 @@ PutInternal: Not enough space for put when locked
 Asked to unlock memory for write.. but wasn't locked
 -webmicrotxn
 Should we use the web microtxn path
+-reactlogin
+Should we use the react login refresh UI
 @durationControlInitialNotification
 Show initial duration control notification.
 steam://url/CommunityFilePage/%llu
@@ -9696,7 +9754,6 @@ steamLogin
 steamLoginSecure
 handle
 BroadcastUploadErrorNotification
-reason
 Broadcast_Upload_Result_%u
 #Broadcast_RecordingError_General
 #Broadcast_RecordingError_URL_General
@@ -9855,8 +9912,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug 17 2022
-11:24:13
+Aug 18 2022
+18:52:11
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -11534,6 +11591,8 @@ Out of Memory
 libpng error: %s
 undefined
 libpng warning: %s
+resolve
+reject
 bool
 int
 double
@@ -12266,7 +12325,6 @@ BrowserExitFullScreen
 Skipping js method registration, already exists: %s
 Unknown method: %s
 Method call failed: %s
-BrowserDraggableRegionsChanged
 BrowserResizeGripChanged
 BrowserSetWindowPosition
 width
@@ -12279,6 +12337,7 @@ BrowserBringWindowToFront
 BrowserSetForegroundWindow
 BrowserMaximizeRestoreWindow
 BrowserMinimizeWindow
+_internal.RegisterForStyleChanges
 css
 map
 Detected file change in %s
@@ -13574,6 +13633,7 @@ Beta
 Internal
 Dev
 None
+Kiosk
 Groups
 Language
 =
@@ -13838,34 +13898,45 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-b%
-`&
 0
-2B
 Ic
-&
 p
 0
+d-
 0
+B%
 p
 0
+F&
 &
-V%
-j
-j
-j
-j
-j
-j
-j
-j
-j
 &
-0
+&
+&
+&
 %
+&
+&
+&
+-
+/.
+$
+$
+c%
+j
+j
+j
+j
+j
+j
+j
+j
+j
+7%
+0
 %
 p
 0
+9%
 j
 j
 j
@@ -13874,9 +13945,10 @@ j
 j
 j
 j
-%
-o$
 #
+Z$
+#
+(
 j
 j
 j
@@ -13924,42 +13996,43 @@ j
 j
 j
 j
+2@
 j
-$
-$
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+O+
 $
 $
 $
 $
-j#
+$
+$
+@
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 0
-T#
-.
 A9]
 d
+*"
 j
 j
 j
@@ -13972,55 +14045,52 @@ j
 j
 j
 j
-
-
-?
-?
-?
-?
-
-
-
-@
-
-0
-.
-.
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-p
-p
 #
-A"
-k)
-@
-=
 "
 
-)
-s)
-i.
+
+
+
+
+@
+
 0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+0
+p
+p
+p
+2
+2
+J"
+@
+=
+
+"
+)
+0
+)
+)
 0
 \
-J"
+.
+.
 j
 j
 j
@@ -14050,32 +14120,21 @@ j
 j
 j
 j
-)
+w!
+o!
+e=
+O!
 "
 "
 "
 "
-"
-5!
-<0
+f(
 Hi
-=
-=
-=
-=
-!
-!
-!
-!
-J
 j
 j
 j
 j
 j
-!
-!
-R<
 j
 j
 j
@@ -14090,41 +14149,39 @@ j
 j
 j
 0
-!
-!
 p
 0
-!
-#
-"
-#
-'
-#
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+"!
 <
+M
+#
+#
+#
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+'
 0
 0
 AT=
@@ -14135,7 +14192,6 @@ AT=
 D
 @
 @
-b
 @
 Hc
 Hc
@@ -14170,8 +14226,8 @@ IcE
 V
 =
 =
+"
 @
-U5
 @
 M9e
 @
@@ -14365,25 +14421,23 @@ P
 @
 |
 |
+"
 @
 @
 "
-A
-
 d
-m
-F
-'
+T
+d
+k
+s
+4
 
 
 
 
 
-
-
+n
 A+M
-t7f9gk'
-t7f9Jc'
 j
 j
 j
@@ -14392,9 +14446,7 @@ j
 j
 =
 0
-J
-j
-
+S
 j
 j
 j
@@ -14405,8 +14457,7 @@ j
 j
 j
 j
-
-K
+j
 
 j
 j
@@ -14436,7 +14487,6 @@ A+4$A+u
 =
 =
 =
-
 @
 j
 j
@@ -14497,6 +14547,8 @@ j
 j
 j
 j
+"
+"
 j
 j
 j
@@ -14542,6 +14594,8 @@ j
 j
 j
 j
+:!
+!
 j
 j
 j
@@ -14558,7 +14612,7 @@ j
 j
 j
 j
-J
+f
 @
 @
 &
@@ -14653,8 +14707,7 @@ Hc
 0
 E
 0
-d
 0
 0
-L
+3
 p

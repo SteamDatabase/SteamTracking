@@ -190,6 +190,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Executar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jogar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jogar"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"Jogar"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Atualizar depois"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jogar demonstração"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar"
@@ -211,6 +212,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Iniciar aplicativo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Iniciar jogo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Iniciar jogo assim que estiver pronto"
+"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"Iniciar jogo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Iniciar demonstração assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Iniciar ferramenta assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Reproduzir trilha sonora assim que estiver pronta"
@@ -2122,6 +2124,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Agora todos os arquivos deste aplicativo serão baixados pelo Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Agora todos os arquivos deste jogo serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=beta"	"Agora todos os arquivos deste jogo serão baixados pelo Steam."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"Agora todos os arquivos desta demonstração serão baixados pelo Steam."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Agora todos os arquivos desta mídia serão baixados pelo Steam."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Agora todos os arquivos desta trilha sonora serão baixados pelo Steam."
@@ -2130,6 +2133,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Install_StartCacheLoading$appType=application"		"Criando arquivos locais do(s) aplicativo(s)..."
 "Steam_Install_StartCacheLoading$appType=game"		"Criando arquivos locais do(s) jogo(s)..."
 "Steam_Install_StartCacheLoading$appType=demo"		"Criando arquivos locais da(s) demonstração(ões)..."
+"Steam_Install_StartCacheLoading$appType=beta"		"Criando arquivos locais do jogo..."
 "Steam_Install_StartCacheLoading$appType=media"		"Criando arquivos locais da(s) mídia(s)..."
 "Steam_Install_StartCacheLoading$appType=music"		"Criando arquivos locais..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Criando arquivos locais da ferramenta..."
@@ -2316,7 +2320,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 
 "Steam_InstallComplete_RetailInstall"		"Os seus jogos selecionados agora estão acessíveis na Biblioteca de Jogos Steam. Quaisquer atualizações começaram a ser baixadas em segundo plano."
 "Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Para acessar esses jogos de qualquer computador, basta iniciar a sessão com a conta Steam \"%account%\"."
-"Steam_Install_AutoLaunchGamesList"		"Ver biblioteca Steam"
+"Steam_Install_AutoLaunchGamesList"		"Ver Biblioteca Steam"
 "Steam_Install_AutoLaunchGameStart"		"Iniciar agora"
 "Steam_Install_DontShowPageAgain"		"Fechar automaticamente da próxima vez"
 
@@ -4060,14 +4064,14 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Limpar os dados de download pode resolver problemas ao baixar ou iniciar aplicativos"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Isso não afetará jogos já instalados ou salvos"
 
-"SteamUI_ContentMgr_Repair_Title" "Reparo de biblioteca Steam"
+"SteamUI_ContentMgr_Repair_Title" "Reparo de Biblioteca Steam"
 "SteamUI_ContentMgr_Repair_Starting" "Interrompendo downloads..."
 "SteamUI_ContentMgr_Repair_Running" "Reparando pasta da biblioteca..."
 "SteamUI_ContentMgr_Repair_Finished" "Reparo de pasta concluído"
 "SteamUI_ContentMgr_Repair_Failed" "Falha no reparo de pasta"
 
 "SteamUI_InstallUnder" "Instalar em %s1"
-"SteamUI_CreateNewDrive" "Criar nova biblioteca Steam no disco %s1"
+"SteamUI_CreateNewDrive" "Criar nova Biblioteca Steam no disco %s1"
 
 "Steam_GamePropertiesOpenFolder" "Navegar pelos arquivos locais..."
 "Steam_GamePropertiesMoveFolder" "Mover pasta de instalação..."
@@ -4081,7 +4085,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_MoveAppFolder_Info" "%game% está instalado na pasta da biblioteca \"%folder%\". "
 "Steam_MoveAppFolder_Success" "Sucesso, %numfiles% arquivos foram movidos para a pasta da biblioteca escolhida."
 "Steam_MoveAppFolder_Failure" "Falha ao mover todos os arquivos para a pasta da biblioteca escolhida (%error%)."
-"Steam_MoveAppFolder_FolderExists" "Já existe pasta de instalação do jogo na biblioteca Steam selecionada"
+"Steam_MoveAppFolder_FolderExists" "Já existe pasta de instalação do jogo na Biblioteca Steam selecionada"
 "Steam_MoveAppFolder_NoStart" "Não é possível mover os arquivos para a pasta da biblioteca escolhida (%error%)."
 
 "Steam_HelpUsTranslate" "Fluente em inglês e português? Ajude-nos a traduzir o Steam."
@@ -4203,7 +4207,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_subnav_badges"		"Insígnias"
 "steam_subnav_inventory"	"Inventário"
 
-"Steam_RememberThisComputer" "Lembrar este computador?"
+"Steam_RememberThisComputer" "Lembrar deste computador?"
 "SteamUI_Invalid_Account_Name" "Nome de usuário inválido"
 "SteamUI_Invalid_Email_Address" "Endereço de e-mail inválido"
 
@@ -4220,7 +4224,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_DeviceAuth_RequestDialog_Title" "Solicitação de compartilhamento de biblioteca"
 "Steam_DeviceAuth_RequestDialog_To" "Olá, %owner%,"
 "Steam_DeviceAuth_RequestDialog_From" "Obrigado(a),\n%user%"
-"Steam_DeviceAuth_RequestDialog_Text" "Deseja compartilhar o acesso à sua biblioteca Steam neste computador?"
+"Steam_DeviceAuth_RequestDialog_Text" "Deseja compartilhar o acesso à sua Biblioteca Steam neste computador?"
 "Steam_DeviceAuth_RequestDialog_Description" "Nomeie este computador:"
 "Steam_DeviceAuth_RequestDialog_Cancel" "Cancelar"
 "Steam_DeviceAuth_RequestDialog_Send" "Enviar solicitação"
@@ -4235,7 +4239,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "Steam_Settings_Family_Sharing_Title" "Compartilhamento de biblioteca"
 "Steam_Settings_Family_Sharing_ManageSharing" "Gerenciar outros computadores"
-"Steam_Settings_Family_Sharing_Info" "O compartilhamento de biblioteca permite que você compartilhe a sua biblioteca Steam com outros neste computador. Após serem autorizados, usuários Steam em computadores compartilhados poderão acessar, baixar e jogar a sua biblioteca de jogos Steam disponíveis enquanto você não estiver jogando."
+"Steam_Settings_Family_Sharing_Info" "O compartilhamento de biblioteca permite que você compartilhe a sua Biblioteca Steam com outros neste computador. Após serem autorizados, usuários Steam em computadores compartilhados poderão acessar, baixar e jogar a sua biblioteca de jogos Steam disponíveis enquanto você não estiver jogando."
 "Steam_Settings_Family_Sharing_AuthorizedDevice" "Autorizar compartilhamento neste computador"
 "Steam_Settings_Family_Sharing_AuthorizedDevice_ToolTip" "Você pode autorizar até dez computadores"
 
@@ -4717,7 +4721,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "VR_Error_Title"				"Erro ao iniciar SteamVR"
 "VR_Error_VRSkipParam"			"O SteamVR não foi iniciado devido ao parâmetro de inicialização -vrskip. Deseja iniciá-lo mesmo assim?"
 "VR_Error_ComponentNotInstalled" "O SteamVR não está disponível porque a ferramenta SteamVR não está instalada. Deseja instalá-la?"
-"VR_Error_ComponentBusy"		"O SteamVR não está disponível enquanto a ferramenta SteamVR estiver sendo atualizada, desinstalada, validada, etc."
+"VR_Error_ComponentBusy"		"O SteamVR não está disponível enquanto a ferramenta SteamVR estiver sendo atualizada, desinstalada, validada etc."
 "VR_Error_CrashProtection"		"O SteamVR está desativado porque travou da última vez que foi executado. Deseja tentar novamente?"
 "VR_Error_HmdNotFound"			"O SteamVR não está disponível porque um headset compatível não foi detectado."
 "VR_Error_UnknownError"			"O SteamVR falhou em inicializar devido a um motivo desconhecido. (Erro: %error%)"

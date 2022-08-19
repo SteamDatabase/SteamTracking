@@ -192,7 +192,7 @@
  free
  freeaddrinfo
  fseek
- ftell
+ ftello
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount

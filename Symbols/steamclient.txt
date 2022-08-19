@@ -621,6 +621,7 @@
  fsync
  fsync$UNIX2003
  ftell
+ ftello
  ftruncate
  futimes
  fwrite

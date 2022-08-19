@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-
-
+}
+}
 __stubs
 __TEXT
 __stub_helper
@@ -1066,6 +1066,9 @@ Don't use ANGLE for rendering backend on Linux
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 -cef-disable-gpu
 Disable GPU usage in CEF (force software rendering/compositing)
+-cef-delaypageload
+Disable early-out for known page loads
+-cef-disable-delaypageload
 -store
 -community
 -clientui
@@ -1133,6 +1136,7 @@ clientui
 --enable-logging
 --v=%s
 --v=1
+-delaypageload
 --log-file=%s
 BREAKPAD_DUMP_LOCATION
 --full-memory-crash-report
@@ -2327,14 +2331,10 @@ sc_schinese
 @
 @
 
-
 @
+
 E
-S
-8
-
-
-
+Q
 
 
 0
@@ -2383,7 +2383,6 @@ IcE
 @
 @
 V
-H;52w
 =
 =
 @
@@ -2407,7 +2406,6 @@ M9e
 ?
 ?
 
-6
 Ic
 @
 @

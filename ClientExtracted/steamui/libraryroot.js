@@ -7451,18 +7451,15 @@
                           : "TURN Relay";
                         break;
                       case In.k_ESteamNetTransport_SDRP2P:
-                        e.sdrpopid_local
+                        t = e.sdrpopid_local
                           ? e.sdrpopid_local != e.sdrpopid_remote &&
                             e.sdrpopid_remote
-                            ? (e.sdrpopid_local != e.sdrpopid_remote &&
-                                e.sdrpopid_remote) ||
-                              (t =
-                                "SDR Relay via " +
-                                Vn(e.sdrpopid_local) +
-                                "-" +
-                                Vn(e.sdrpopid_remote))
-                            : (t = "SDR Relay via " + Vn(e.sdrpopid_local))
-                          : (t = "SDR Relay");
+                            ? "SDR Relay via " +
+                              Vn(e.sdrpopid_local) +
+                              "-" +
+                              Vn(e.sdrpopid_remote)
+                            : "SDR Relay via " + Vn(e.sdrpopid_local)
+                          : "SDR Relay";
                         break;
                       case In.k_ESteamNetTransport_SDRHostedServer:
                         t =

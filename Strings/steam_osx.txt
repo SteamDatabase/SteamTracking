@@ -13,22 +13,26 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-p#2
-p#2
 __const
 __TEXT
-]3
-]3
+@]3
+@]3
 __objc_methname
 __TEXT
+47
+47
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 0
 __cstring
 __TEXT
+=7
+=7
 __unwind_info
 __TEXT
+0Q;
+0Q;
 __DATA
 <
 <
@@ -49,25 +53,27 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-0=?
-0=?
+P=?
+P=?
 __objc_imageinfo__DATA
-@=?
-@=?
+`=?
+`=?
 __objc_const
 __DATA
-H=?
-H=?
+h=?
+h=?
 __objc_selrefs
 __DATA
-H??
-H??
+h??
+h??
 __objc_classrefs__DATA
 __objc_superrefs__DATA
 __objc_ivar
 __DATA
 __objc_data
 __DATA
+D?
+D?
 __data
 __DATA
 __thread_vars
@@ -82,7 +88,7 @@ __bss
 __DATA
 __common
 __DATA
-{A
+`{A
 H
 __LINKEDIT
 @B
@@ -135,13 +141,13 @@ h
 :
 )
 `A
-s'
 0
-C(
+@(
 (
 (
 (
 9
+f1
 0
 @
 @
@@ -150,6 +156,7 @@ C(
 @
 @
 @
+N6
 1
 1
 1
@@ -159,6 +166,8 @@ Hi
 Hi
 Hi
 &
+W'
+Z&
 '
 '
 15CBaseFileSystem
@@ -2218,7 +2227,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Aug 17 2022 11:23:59
+Startup - updater built Aug 18 2022 18:51:56
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2505,8 +2514,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Aug 17 2022
-11:24:00
+Aug 18 2022
+18:51:57
 crashhandler003
 steam
 Steam Executable Crash
@@ -2603,7 +2612,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-11:23:57
+18:51:55
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10007,8 +10016,8 @@ CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 PS3
 ps3
 web
@@ -10368,7 +10377,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-11:21:41
+18:49:43
 Jan
 Feb
 Mar
@@ -10886,6 +10895,8 @@ macos11.1
 macos1017
 macos12
 macos13
+macos14
+macos15
 linux22
 linux24
 linux26
@@ -12736,20 +12747,20 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-#>7
-od7
+c>7
 
-4_7
+Re7
+Ze7
+t_7
 
-T:
 0
-s'
 0
-C(
+@(
 (
 (
 (
 9
+f1
 0
 @
 @
@@ -12758,6 +12769,7 @@ C(
 @
 @
 @
+N6
 1
 1
 1
@@ -12767,6 +12779,8 @@ Hi
 Hi
 Hi
 &
+W'
+Z&
 '
 '
 
@@ -12779,11 +12793,14 @@ Hi
 &
 &
 &
+&
 0
 0
 0
+g5
+0
+V5
 
-,&
 0
 5
 5
@@ -12795,12 +12812,9 @@ Hi
 @9
 &
 &
-&
-o<
 
 0
 Ic
-/
 7
 0
 0
@@ -12813,8 +12827,10 @@ AT=
 D
 @
 @
-0
+%0
 *4
+0
+4
 4
 4
 4
@@ -12854,42 +12870,41 @@ IcE
 .
 .
 .
-.
-3
+a3
 V
+'-
 -
 -
 =
-g,
+u,
+2
 j6
-,
 ,
 ,
 ,
 ,
 =
 9
+D+
 1
+3+
+1+
 +
 +
 +
 +
-R0
++
++
 @
-Z"
+s/
 @
 c
 )
-)
-7'
-G.
-B.
+*
 (
-Y'
-6'
+75
 '
 '
-K(
 @
 M9e
 &
@@ -12918,14 +12933,16 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+8&
+'&
 @
 %
+&
 &
 `
 `
 @
 
-*
 *
 j
 j
@@ -12941,7 +12958,6 @@ M)u
 =
 @
 =
-_(
 "
 =
 %
@@ -13240,6 +13256,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
+r.
 @
 @
 @
@@ -13253,24 +13270,18 @@ j
 j
 j
 &
-&
 j
 j
 
+2!
 !
-O!
-b$
 t$I;M
-$
 $
 e
 W
 ,7~5d
-#m8)
-#5)
-#M+)
-#-+)
-#M()
+#M5)
+#m+)
 H
 0
 #
@@ -13288,8 +13299,8 @@ H
 
 
 Hc
-L)5;}$
-L950y$
+L)5{}$
+L95py$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13302,6 +13313,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+#
 #
 0
 0
@@ -13522,9 +13534,12 @@ H=
 
 =
 @
+*
 =
 @
 =*.*
+
+
 
 
 
@@ -13552,7 +13567,6 @@ H=
 0
 0
 0
-9
 0
 H=
 0
@@ -13578,8 +13592,6 @@ E
 @
 0
 0
-
-i
 Hc
 0
 0
@@ -13602,7 +13614,6 @@ P
 @
 @
 0
-g
 =a
 
 0

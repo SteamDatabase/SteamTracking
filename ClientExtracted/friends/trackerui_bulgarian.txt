@@ -667,7 +667,7 @@
 "Friends_WebStatus_Tooltip"		"На линия ползвайки браузър"
 "Friends_MobileStatus_Tooltip"	"На линия ползвайки мобилно устройство"
 "Friends_BigPictureStatus_Tooltip"	"На линия, използвайки „Голям екран“"
-"Friends_VRStatusStatus_Tooltip" "На линия във виртуална реалност"
+"Friends_VRStatusStatus_Tooltip" "На линия във ВР"
 
 "friends_newturn_info" "1 нов ход чака за Вас"
 "friends_newturns_info" "%turns% нови хода чакат за Вас"

@@ -672,8 +672,8 @@ m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -720,6 +720,8 @@ MacOS 11
 MacOS 11.1
 MacOS 12
 MacOS 13
+MacOS 14
+MacOS 15
 Linux
 Linux 2.2
 Linux 2.4
@@ -2210,28 +2212,38 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-04R[~
-x@)X
-j~\"0
-gR]>
-/DoS
+!^3(
+sVXP
+f{IR
+.cXM
+ia@t
+tDEf
+}ReY9
+Vaa|
+*|*K
 |{_ ^
 :+S@&
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-F^n3
-(x`	
-rz#J
-sgt6
-JP |
-	Q0N8
-/*R9a
-BDBh
-~m"8
-R:je
-;$',
+aMZ{
+Lp@A
+1r05
+m+7*
+Jv: 
+qEC!
+y3 zY
+7]95
+BGyaQch
+"$YM
+/^47
+lEE|
+R~wB
+ePwx
+3B1W
+uI}9
+XU0m
 ,v)X
 %z [u
 Apple Inc.1&0$
@@ -2289,8 +2301,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182236Z0/
-y5^B
+220819015034Z0/
+0.n;iD
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2298,39 +2310,45 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Hg7whj+K3NAbn7K20XGCdZyEdLc=
+		MzU08FUSHFNm4lP6djyr+yboCuo=
 		</data>
 		<data>
-		0VqdeTVeQrra60nDXp63HWkQaDM=
+		2/ep444bkM0wLm47aUSbhGW+sKw=
 		</data>
 	</array>
 </dict>
 </plist>
-<GHO
-X/DG
-3or+
-20220817182245Z0
-&gbS
+":Yk
+yTT}
+~DV^t?
+5[8IN
+!)MS
+#p(:
+JWqf
+20220819015051Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802163003Z
-220913163002Z0B1
-Timestamp Signer NWK21
+220802164002Z
+220913164001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-/5q>
-^eJE
-#}=>
-fJeM
+W`H/E->
+;c2%W
+qnEK"
+e}-a
+py~(
+-]%v
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--*:E
-A<Lo0$
-9nbV\
-A	<g
+t)TD}
+lnSks{gx
+my?m
+qqCJ _
+5I&0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2369,10 +2387,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-&gbS
-220817182245Z0#
-GXr5
-hx:DR
+220819015051Z0#
+y'w7
+]*L=.GV
+-)cL
+Ic'e&>{
+o`f7
 __TEXT
 __text
 __TEXT
@@ -2678,7 +2698,7 @@ AVSH
 [A^]
 AVSH
 w-Hc
-Lc5.m
+Lc5^m
 [A^]
 AWAVAUATSH
 ~vLi
@@ -2933,7 +2953,7 @@ AWAVAUATSPI
 AVSI
 [A^]
 AWAVSH
-Lc52
+Lc5R
 x(Hc
 VUUUH
 X[A^A_]
@@ -3496,8 +3516,8 @@ m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -3544,6 +3564,8 @@ MacOS 11
 MacOS 11.1
 MacOS 12
 MacOS 13
+MacOS 14
+MacOS 15
 Linux
 Linux 2.2
 Linux 2.4
@@ -5056,47 +5078,40 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Medh
-.^E1
-mA\%
-uFtI
-afsp
++~0H42
+0xD;t
+*Ksx
+B([Q!
 U*60
 c$$6
-p>2GO
-~CQp
+.__0
+Q}:f~
+5d%b
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-PH()FT
-	512G
-?:-+
-OCKa
-i#!O
-;u8@
-`tXI
-e==m
-84`A
-GS}7
-/vV/
-lhb$
-'NAD
-PtSr
-3<VX
-Fn3I
-zF<9
-&IX%
-3\%Z
+,)lb
+z(K/i
+#{rMh
+/C"K
+mXXp
+]q7+
+hU	J
+<	$*
+DiB*
 ua%[
 Yx19
 XGaf
 C24zZ
 3:gz,	
 mH3Y
-:wDx.
-hB-e
-Z`R"\
+>.W;
+O.mb
+V FU
+	't`^
+E3Q:q
+q^8=
 M=)(
 O	2cj|
 Apple Inc.1&0$
@@ -5154,8 +5169,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182236Z0/
-lL'[_
+220819015034Z0/
+~q/KQ
+tU0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5163,21 +5179,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		7KzJjWxb6fOgU24wncbwNBcMolE=
+		fnEvS1HR/63AEBRFEgyfZcb8dFU=
 		</data>
 		<data>
-		xBWDPfZrWeCRvk1sxDXnY8oMHnY=
+		IM3gUH80q9oh9pn6lKIR9sBZvr4=
 		</data>
 	</array>
 </dict>
 </plist>
-Qhl$I
-C+d)
-4Z3o
-[[^5-zH~_C]f?Q
-Mbv>
-x[Dm4
-20220817182246Z0
+srNco
+ob0]R
+}9A)
+F.v?
+20220819015051Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5239,11 +5253,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182246Z0#
-xUqs<
-YGS$
-Yyh=g
-c2g0
+220819015051Z0#
+ze:N
+pS[=T
+fh&u
+MH`,9h
 __TEXT
 __text
 __TEXT
@@ -5298,8 +5312,6 @@ TH|@
 R,|@
 +ih8J	
  	@z
-<9@)
-<9`'
 TK	@
 R,|@
 D@i!
@@ -5379,9 +5391,9 @@ T9|@
 R(#	
 Rh!	
 Rl}@
-Bd	p
 +ih8J	
 Lii8k	
+ii8J	
 T	]	
 ii8J	
 ii8J	
@@ -5390,12 +5402,12 @@ yixJ
 ii8J	
 @9,!
 @9,!
-`j	p
-bm	0
+ l	0
 Th! 
 T6|@
-"*	0
-"!	p
+@(	P
+ '	P
+89 %	P
 K"}@
 jv8(
 T	@!
@@ -5455,12 +5467,10 @@ R	kzx*
 ji8?
 7HK6
 @9[3
-ho	X
-	D	X)
-hA	X
+)E	X)
 hj8*i(8
 ?i(8
-i5	X)
+6	X)
 .@8h
 @9 z
 4kj 8
@@ -5712,8 +5722,8 @@ m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
+Unsupported macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
 Windows 3.11
@@ -5760,6 +5770,8 @@ MacOS 11
 MacOS 11.1
 MacOS 12
 MacOS 13
+MacOS 14
+MacOS 15
 Linux
 Linux 2.2
 Linux 2.4
@@ -7263,42 +7275,41 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-"gle
-)9:A
-n~oZ
-fuT4
-XT'?
-}P~z
-}FT 
-	FSs
-8YKj
-N(ob
-a?:$
-]iT@
-v*Z}
+(~SX1'
+mXnA1
+N.'k
+	#'SS
+U6`tX
+HhMj
+:+"?r
+;#%DO|*
+?+nX
+V-5A
+5;7G
+wQ:q
+rZu:
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-:B(w
-?0Y8
-GmQ-
-wK&%r
-?k*vQ%
-0Cb(f
-E*y^B
-.7/L,
-N;)t-
-fp!%
-[+.s
-G2%M
-DZkB
-<O]Z
-RNWv
-z&i*
-@F+p
-p&QPS
-zLR2
+A0:}
+wPi1R{
+INH%
+b^-I
+B~lFj
+k!cM
+Se@?H
+Gg8h
+]1J^
+4@{2@H<
+R	}N
+<9qf
+h-ga
+aWU1
+*e't
+2<p1r#
+vtmt
+3lr!
 d5~pJri
 FU*X
 Apple Inc.1&0$
@@ -7356,7 +7367,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220817182236Z0/
+220819015035Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7364,36 +7375,43 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		E+7ECuOduVPtZUz5utemP2YXDWI=
+		LLo338lB85v0iTODk/xVs9lQja4=
 		</data>
 		<data>
-		RZezW6hRG7gzkftkztLWcrwdDJM=
+		ayXFbKCWEebjf0lCMsmGP2LXVEA=
 		</data>
 	</array>
 </dict>
 </plist>
-20220817182246Z0
-&gbS
+dmgz
+hPF2
+=SLh
+j<Mh
+z\'v
+20220819015051Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802163003Z
-220913163002Z0B1
-Timestamp Signer NWK21
+220802164002Z
+220913164001Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-/5q>
-^eJE
-#}=>
-fJeM
+W`H/E->
+;c2%W
+qnEK"
+e}-a
+py~(
+-]%v
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--*:E
-A<Lo0$
-9nbV\
-A	<g
+t)TD}
+lnSks{gx
+my?m
+qqCJ _
+5I&0
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7432,9 +7450,5 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-&gbS
-220817182246Z0#
-Y':#
-~1E>
-|zDX*A
-.,I+
+220819015051Z0#
+eDFT

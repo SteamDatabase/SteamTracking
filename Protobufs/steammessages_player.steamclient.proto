@@ -51,6 +51,8 @@ message CPlayer_GetOwnedGames_Request {
 	repeated uint32 appids_filter = 4 [(description) = "if set, restricts result set to the passed in apps"];
 	optional bool include_free_sub = 5 [(description) = "Some games are in the free sub, which are excluded by default."];
 	optional bool skip_unvetted_apps = 6 [default = true, (description) = "if set, skip unvetted store apps"];
+	optional string language = 7 [(description) = "Will return appinfo in this language"];
+	optional bool include_extended_appinfo = 8 [(description) = "true if we want even more details (capsule, sortas, and capabilities) about each game.  include_appinfo must also be true."];
 }
 
 message CPlayer_GetOwnedGames_Response {
@@ -64,6 +66,12 @@ message CPlayer_GetOwnedGames_Response {
 		optional int32 playtime_windows_forever = 8;
 		optional int32 playtime_mac_forever = 9;
 		optional int32 playtime_linux_forever = 10;
+		optional uint32 rtime_last_played = 11;
+		optional string capsule_filename = 12;
+		optional string sort_as = 13;
+		optional bool has_workshop = 14;
+		optional bool has_market = 15;
+		optional bool has_dlc = 16;
 	}
 
 	optional uint32 game_count = 1;

@@ -50,7 +50,6 @@ __LINKEDIT
 @loader_path/steamconsole.dylib
 "
 P
-$
 
 *
 8

@@ -53,6 +53,7 @@
  GetCrashHandlerFactory
  GetLocalHostname
  GetOSType
+ GetPlatformName
  GetSpewOutputFunc
  KeyValuesSystemSteam
  Log
@@ -84,6 +85,7 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
+ Plat_IsChromeOS
  Plat_IsInDebugSession
  Plat_MSTime
  Plat_MSTime64
@@ -383,7 +385,7 @@
  freeaddrinfo
  fseek
  fstat$INODE64
- ftell
+ ftello
  ftruncate
  fwrite
  g_VProfManager

@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7437011";
+var CLSTAMP = "7448642";
 (() => {
   var e,
     t,
@@ -125,13 +125,13 @@ var CLSTAMP = "7437011";
           dt: () => y,
           eV: () => E,
           fk: () => i,
-          gt: () => L,
+          gt: () => z,
           hz: () => S,
           jA: () => g,
           jM: () => v,
           j_: () => M,
           kg: () => F,
-          lb: () => z,
+          lb: () => T,
           m2: () => w,
           my: () => n,
           p6: () => o,
@@ -141,7 +141,7 @@ var CLSTAMP = "7437011";
           r7: () => B,
           sG: () => u,
           us: () => p,
-          wr: () => T,
+          wr: () => L,
           xM: () => _,
         });
         const s = 1,
@@ -383,7 +383,7 @@ var CLSTAMP = "7437011";
           }
           return !1;
         }
-        var F, k, x, R, T, z, L;
+        var F, k, x, R, L, T, z;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -447,7 +447,7 @@ var CLSTAMP = "7437011";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(T || (T = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -455,13 +455,13 @@ var CLSTAMP = "7437011";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(z || (z = {})),
+          })(T || (T = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(L || (L = {}));
+          })(z || (z = {}));
       },
       4778: (e, t, r) => {
         "use strict";
@@ -494,11 +494,11 @@ var CLSTAMP = "7437011";
         r.d(t, {
           _1: () => E,
           bD: () => B,
-          UM: () => T,
-          Yd: () => z,
+          UM: () => L,
+          Yd: () => T,
           hz: () => n.hz,
           e7: () => o.e7,
-          mU: () => L,
+          mU: () => z,
           uN: () => o.uN,
           dN: () => R,
           kv: () => x,
@@ -815,7 +815,7 @@ var CLSTAMP = "7437011";
             this.content_descriptors_to_exclude = [];
           }
         }
-        function T(e) {
+        function L(e) {
           switch (e) {
             case 1:
               return "game";
@@ -840,7 +840,7 @@ var CLSTAMP = "7437011";
           }
           return "invalid";
         }
-        function z(e) {
+        function T(e) {
           switch (e) {
             case 0:
               return "game";
@@ -862,7 +862,7 @@ var CLSTAMP = "7437011";
           }
           return "invalid";
         }
-        function L(e) {
+        function z(e) {
           return (
             "game" === e ||
             "dlc" === e ||
@@ -1463,7 +1463,7 @@ var CLSTAMP = "7437011";
       },
       40792: (e, t, r) => {
         "use strict";
-        r.d(t, { zn: () => T });
+        r.d(t, { zn: () => L });
         var n = r(70655),
           i = r(43161),
           s = r(79742),
@@ -2363,7 +2363,7 @@ var CLSTAMP = "7437011";
           ),
           (0, n.gn)([h.aD], R.prototype, "DispatchMessage", null),
           (0, n.gn)([h.aD], R.prototype, "OnDisconnect", null);
-        class T extends R {
+        class L extends R {
           constructor() {
             super(...arguments),
               (this.m_setEMsgHandlers = new Set()),
@@ -2537,10 +2537,10 @@ var CLSTAMP = "7437011";
           ClearHeartbeatInterval() {}
           ResetHeartbeatInterval() {}
         }
-        (0, n.gn)([h.aD], T.prototype, "OnLogonInfoChanged", null);
-        var z = r(99591),
-          L = r(9669),
-          I = r.n(L);
+        (0, n.gn)([h.aD], L.prototype, "OnLogonInfoChanged", null);
+        var T = r(99591),
+          z = r(9669),
+          I = r.n(z);
         class O {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
@@ -3046,7 +3046,7 @@ var CLSTAMP = "7437011";
             DecodeAndDispatchMultiMsg(e) {
               let t = e.Body().message_body();
               if (!t) return;
-              e.Body().size_unzipped() && (t = z.inflate(t));
+              e.Body().size_unzipped() && (t = T.inflate(t));
               let r = new u.At(t);
               for (; r.GetCountBytesRemaining() > 0; ) {
                 let e = r.GetUint32(),
@@ -3673,6 +3673,11 @@ var CLSTAMP = "7437011";
                       n: 66,
                       br: i.FE.readUint32,
                       bw: i.Xc.writeUint32,
+                    },
+                    header_filename: {
+                      n: 67,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
                     },
                   },
                 }),
@@ -5488,8 +5493,8 @@ var CLSTAMP = "7437011";
           VJ: () => O,
           VL: () => o,
           WJ: () => x,
-          cR: () => z,
-          eK: () => T,
+          cR: () => T,
+          eK: () => L,
           oY: () => R,
         });
         var n = r(33019),
@@ -7404,10 +7409,67 @@ var CLSTAMP = "7437011";
             return "StoreItemID";
           }
         }
+        class L extends s {
+          constructor(e = null) {
+            super(),
+              L.prototype.ids || i.aR(L.M()),
+              s.initialize(this, e, 0, -1, [1], null);
+          }
+          static M() {
+            return (
+              L.sm_m ||
+                (L.sm_m = {
+                  proto: L,
+                  fields: {
+                    ids: { n: 1, c: R, r: !0, q: !0 },
+                    context: { n: 2, c: x },
+                    data_request: { n: 3, c: k },
+                  },
+                }),
+              L.sm_m
+            );
+          }
+          static MBF() {
+            return L.sm_mbf || (L.sm_mbf = i.Bh(L.M())), L.sm_mbf;
+          }
+          toObject(e = !1) {
+            return L.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(L.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(L.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new L();
+            return L.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(L.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(L.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CStoreBrowse_GetItems_Request";
+          }
+        }
         class T extends s {
           constructor(e = null) {
             super(),
-              T.prototype.ids || i.aR(T.M()),
+              T.prototype.store_items || i.aR(T.M()),
               s.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
@@ -7415,11 +7477,7 @@ var CLSTAMP = "7437011";
               T.sm_m ||
                 (T.sm_m = {
                   proto: T,
-                  fields: {
-                    ids: { n: 1, c: R, r: !0, q: !0 },
-                    context: { n: 2, c: x },
-                    data_request: { n: 3, c: k },
-                  },
+                  fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
                 }),
               T.sm_m
             );
@@ -7458,13 +7516,13 @@ var CLSTAMP = "7437011";
             );
           }
           getClassName() {
-            return "CStoreBrowse_GetItems_Request";
+            return "CStoreBrowse_GetItems_Response";
           }
         }
         class z extends s {
           constructor(e = null) {
             super(),
-              z.prototype.store_items || i.aR(z.M()),
+              z.prototype.categories || i.aR(z.M()),
               s.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
@@ -7472,7 +7530,7 @@ var CLSTAMP = "7437011";
               z.sm_m ||
                 (z.sm_m = {
                   proto: z,
-                  fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
+                  fields: { categories: { n: 1, c: I, r: !0, q: !0 } },
                 }),
               z.sm_m
             );
@@ -7508,59 +7566,6 @@ var CLSTAMP = "7437011";
             var e = new n.BinaryWriter();
             return (
               z.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CStoreBrowse_GetItems_Response";
-          }
-        }
-        class L extends s {
-          constructor(e = null) {
-            super(),
-              L.prototype.categories || i.aR(L.M()),
-              s.initialize(this, e, 0, -1, [1], null);
-          }
-          static M() {
-            return (
-              L.sm_m ||
-                (L.sm_m = {
-                  proto: L,
-                  fields: { categories: { n: 1, c: I, r: !0, q: !0 } },
-                }),
-              L.sm_m
-            );
-          }
-          static MBF() {
-            return L.sm_mbf || (L.sm_mbf = i.Bh(L.M())), L.sm_mbf;
-          }
-          toObject(e = !1) {
-            return L.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return i.TA(L.M(), e, t);
-          }
-          static fromObject(e) {
-            return i.aD(L.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new n.BinaryReader(e),
-              r = new L();
-            return L.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return i.F(L.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new n.BinaryWriter();
-            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            i.l2(L.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new n.BinaryWriter();
-            return (
-              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -7650,14 +7655,14 @@ var CLSTAMP = "7437011";
         var O;
         !(function (e) {
           (e.GetItems = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetItems#1", t, z, {
+            return e.SendMsg("StoreBrowse.GetItems#1", t, T, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
             (e.GetStoreCategories = function (e, t) {
-              return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, L, {
+              return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, z, {
                 bConstMethod: !0,
                 ePrivilege: 0,
                 eWebAPIKeyRequirement: 1,
@@ -7668,99 +7673,101 @@ var CLSTAMP = "7437011";
       7952: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $06: () => J,
+          $06: () => ee,
           $gZ: () => h,
-          Bh5: () => Se,
-          E1z: () => be,
+          BKy: () => A,
+          Bh5: () => Fe,
+          E1z: () => fe,
           Ehc: () => I,
           FUf: () => E,
-          Fsn: () => j,
+          Fsn: () => H,
           GhU: () => S,
-          Gue: () => he,
-          HEZ: () => T,
-          I8b: () => we,
-          IF0: () => _e,
-          IWH: () => Z,
+          Gue: () => ge,
+          HEZ: () => L,
+          I8b: () => Be,
+          IF0: () => pe,
+          IWH: () => $,
           JrY: () => x,
-          KJh: () => Le,
-          KKY: () => Ze,
-          Lao: () => N,
-          Lk$: () => oe,
-          M3$: () => Ae,
-          MrB: () => ee,
-          NP6: () => W,
-          OWX: () => Ue,
+          KJh: () => Oe,
+          KKY: () => $e,
+          Lao: () => j,
+          Lk$: () => le,
+          M3$: () => Ne,
+          MrB: () => re,
+          NP6: () => U,
+          OWX: () => De,
           P7E: () => f,
-          P9w: () => H,
-          Q0U: () => xe,
-          S2L: () => ze,
+          P9w: () => q,
+          Q0U: () => Le,
+          S2L: () => Ie,
           SUY: () => p,
-          THo: () => Y,
-          UWx: () => de,
-          Ucz: () => Q,
-          Uos: () => L,
-          Uxw: () => me,
-          V7n: () => G,
-          VR: () => te,
-          Vgm: () => le,
-          VwZ: () => Ie,
+          THo: () => K,
+          UWx: () => _e,
+          Ucz: () => te,
+          Uos: () => z,
+          Uxw: () => he,
+          V7n: () => P,
+          VR: () => ne,
+          Vgm: () => me,
+          VwZ: () => We,
           X: () => B,
-          XBH: () => $,
-          YVI: () => qe,
-          YVR: () => P,
-          YqJ: () => U,
+          XBH: () => J,
+          YVI: () => Ye,
+          YVR: () => V,
+          YqJ: () => D,
           YtI: () => g,
           Yz9: () => k,
-          ZJH: () => Ce,
+          ZJH: () => ke,
           Zrf: () => d,
-          _3P: () => pe,
-          _F3: () => ae,
-          _GE: () => ue,
-          _mi: () => Fe,
-          civ: () => Be,
-          dE8: () => We,
-          dLw: () => Re,
-          daM: () => fe,
-          doA: () => De,
+          _3P: () => we,
+          _F3: () => ce,
+          _GE: () => de,
+          _mi: () => xe,
+          civ: () => Ee,
+          dE8: () => Ae,
+          dLw: () => Te,
+          daM: () => ye,
+          doA: () => Xe,
           dzL: () => F,
           ffh: () => v,
-          gR: () => A,
-          gf_: () => Oe,
-          j7C: () => Ve,
+          gR: () => N,
+          gf_: () => Ue,
+          j7C: () => Ze,
           k4K: () => w,
-          lsH: () => q,
-          m4d: () => ye,
-          mBz: () => He,
+          lsH: () => Y,
+          m4d: () => Me,
+          mBz: () => qe,
           mKE: () => R,
-          mKt: () => Ee,
-          miF: () => Pe,
-          opd: () => Ne,
+          mKt: () => ve,
+          miF: () => Ve,
+          opd: () => je,
           pVO: () => y,
           pkz: () => M,
-          r6F: () => D,
-          rFk: () => X,
+          r6F: () => X,
+          rFk: () => G,
           ret: () => _,
-          s1S: () => ie,
+          s1S: () => ae,
           shV: () => C,
-          sqQ: () => Xe,
-          tEX: () => K,
-          tLe: () => se,
-          thP: () => O,
+          sqQ: () => Ge,
+          tEX: () => Q,
+          tLe: () => oe,
+          thP: () => W,
           tkI: () => b,
-          uZu: () => Me,
-          ui7: () => V,
-          vJ$: () => ke,
-          vT2: () => re,
-          vyu: () => Ye,
-          w2j: () => ve,
-          wUs: () => z,
-          wn$: () => ge,
-          wr9: () => ne,
-          x0L: () => je,
-          xg: () => Te,
-          yTr: () => Ge,
-          yVt: () => ce,
-          z5E: () => $e,
+          uZu: () => Se,
+          ui7: () => Z,
+          vJ$: () => Re,
+          vT2: () => ie,
+          vyu: () => Ke,
+          w2j: () => Ce,
+          wUs: () => T,
+          wn$: () => be,
+          wr9: () => se,
+          wx$: () => O,
+          x0L: () => He,
+          xg: () => ze,
+          yTr: () => Pe,
+          yVt: () => ue,
+          z5E: () => Je,
         });
         var n = r(70655),
           i = r(67294),
@@ -8291,27 +8298,31 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function x() {
+        function x(e) {
+          var t;
           return i.createElement(
             "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Check",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
+            Object.assign(
+              {
+                version: "1.1",
+                id: "base",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Check",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                strokeWidth: "24",
+                stroke: null !== (t = e.color) && void 0 !== t ? t : "#fff",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+              },
+              e
+            ),
             i.createElement("polyline", {
               fill: "none",
-              stroke: "#fff",
-              strokeWidth: "24",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
               points: "49.5,147.75 95,210.75 206.5,45.25 ",
             })
           );
@@ -8319,6 +8330,7 @@ var CLSTAMP = "7437011";
         function R(e) {
           let t = e.highlightColor || "#00ccff",
             r = e.color || "#2d73ff";
+          const [n] = (0, i.useState)(Math.random().toString());
           return i.createElement(
             "svg",
             {
@@ -8337,21 +8349,25 @@ var CLSTAMP = "7437011";
               null,
               i.createElement(
                 "linearGradient",
-                { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-                i.createElement("stop", {
-                  id: "stop0",
-                  offset: "0%",
-                  stopColor: t,
-                }),
-                i.createElement("stop", {
-                  id: "stop1",
-                  offset: "100%",
-                  stopColor: r,
-                })
+                {
+                  id: `${n}_linear`,
+                  x1: "0%",
+                  y1: "0%",
+                  x2: "100%",
+                  y2: "100%",
+                },
+                i.createElement("stop", { offset: "0%", stopColor: t }),
+                i.createElement("stop", { offset: "100%", stopColor: r })
               ),
               i.createElement(
                 "filter",
-                { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
+                {
+                  id: `${n}_f1`,
+                  x: "0",
+                  y: "0",
+                  width: "200%",
+                  height: "200%",
+                },
                 i.createElement("feOffset", {
                   result: "offOut",
                   in: "SourceAlpha",
@@ -8372,7 +8388,7 @@ var CLSTAMP = "7437011";
             ),
             i.createElement("path", {
               fill: "none",
-              stroke: "url(#linear)",
+              stroke: `url(#${n}_linear)`,
               strokeWidth: "24",
               strokeLinecap: "round",
               strokeLinejoin: "miter",
@@ -8384,8 +8400,8 @@ var CLSTAMP = "7437011";
             i.createElement("path", {
               fill: "none",
               opacity: ".2",
-              filter: "url(#f1)",
-              stroke: "url(#linear)",
+              filter: `url(#${n}_f1)`,
+              stroke: `url(#${n}_linear)`,
               strokeWidth: "24",
               strokeLinecap: "round",
               strokeLinejoin: "miter",
@@ -8396,7 +8412,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function T() {
+        function L() {
           return i.createElement(
             "svg",
             {
@@ -8424,7 +8440,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function z(e) {
+        function T(e) {
           let t = "SVGIcon_Button SVGIcon_Throbber ";
           return (
             e.className && (t += e.className),
@@ -8649,7 +8665,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function L(e) {
+        function z(e) {
           return m.De.IN_GAMEPADUI
             ? i.createElement(
                 "svg",
@@ -8722,7 +8738,85 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function O() {
+        function O(e) {
+          const { direction: t } = e,
+            r = (0, n._T)(e, ["direction"]);
+          switch (t) {
+            case "up":
+              return i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "36px",
+                    height: "36px",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  r
+                ),
+                i.createElement("path", {
+                  d: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
+                  fill: "currentColor",
+                })
+              );
+            case "down":
+              return i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "36px",
+                    height: "36px",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  r
+                ),
+                i.createElement("path", {
+                  d: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
+                  fill: "currentColor",
+                })
+              );
+            case "left":
+              return i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "36px",
+                    height: "36px",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  r
+                ),
+                i.createElement("path", {
+                  d: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
+                  fill: "currentColor",
+                })
+              );
+            case "right":
+              return i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    viewBox: "0 0 36 36",
+                    width: "36px",
+                    height: "36px",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                  },
+                  r
+                ),
+                i.createElement("path", {
+                  d: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
+                  fill: "currentColor",
+                })
+              );
+          }
+        }
+        function W() {
           return i.createElement(
             "svg",
             {
@@ -8742,7 +8836,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function W(e) {
+        function U(e) {
           return i.createElement(
             "svg",
             {
@@ -8778,7 +8872,29 @@ var CLSTAMP = "7437011";
               })
           );
         }
-        function U() {
+        function A(e) {
+          const { angle: t } = e,
+            r = (0, n._T)(e, ["angle"]);
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                style: { transform: `rotate(${e.angle}deg)` },
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 32 32",
+                fill: "none",
+              },
+              r
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
+            })
+          );
+        }
+        function D() {
           return i.createElement(
             "svg",
             {
@@ -8814,7 +8930,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function A() {
+        function N() {
           return i.createElement(
             "svg",
             {
@@ -8840,7 +8956,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function D() {
+        function X() {
           return i.createElement(
             "svg",
             {
@@ -8873,7 +8989,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function N() {
+        function j() {
           return i.createElement(
             "svg",
             {
@@ -8900,7 +9016,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function X() {
+        function G() {
           return i.createElement(
             "svg",
             {
@@ -8977,7 +9093,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function G(e) {
+        function P(e) {
           return i.createElement(
             "svg",
             {
@@ -8998,7 +9114,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function j(e) {
+        function H(e) {
           return m.De.IN_GAMEPADUI
             ? i.createElement(
                 "svg",
@@ -9092,7 +9208,7 @@ var CLSTAMP = "7437011";
                 )
               );
         }
-        function P() {
+        function V() {
           return i.createElement(
             "svg",
             {
@@ -9127,7 +9243,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function H(e) {
+        function q(e) {
           return i.createElement(
             "svg",
             {
@@ -9166,7 +9282,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function V(e) {
+        function Z(e) {
           const t = (0, o.Z)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -9197,7 +9313,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function q() {
+        function Y() {
           return i.createElement(
             "svg",
             {
@@ -9223,7 +9339,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Z() {
+        function $() {
           return i.createElement(
             "svg",
             {
@@ -9244,7 +9360,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function Y() {
+        function K() {
           return i.createElement(
             "svg",
             {
@@ -9265,7 +9381,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function $() {
+        function J() {
           return i.createElement(
             "svg",
             {
@@ -9285,7 +9401,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function K() {
+        function Q() {
           return i.createElement(
             "svg",
             {
@@ -9322,7 +9438,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function J() {
+        function ee() {
           return i.createElement(
             "svg",
             {
@@ -9350,7 +9466,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Q() {
+        function te() {
           return i.createElement(
             "svg",
             {
@@ -9370,7 +9486,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ee(e) {
+        function re(e) {
           const { className: t } = e;
           return i.createElement(
             "svg",
@@ -9390,7 +9506,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function te() {
+        function ne() {
           return i.createElement(
             "svg",
             {
@@ -9412,7 +9528,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function re() {
+        function ie() {
           return i.createElement(
             "svg",
             {
@@ -9457,7 +9573,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ne() {
+        function se() {
           return i.createElement(
             "svg",
             {
@@ -9490,7 +9606,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ie() {
+        function ae() {
           return i.createElement(
             "svg",
             {
@@ -9509,7 +9625,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function se() {
+        function oe() {
           return i.createElement(
             "svg",
             {
@@ -9528,7 +9644,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ae() {
+        function ce() {
           return i.createElement(
             "svg",
             {
@@ -9547,7 +9663,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function oe() {
+        function le() {
           return i.createElement(
             "svg",
             {
@@ -9566,7 +9682,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ce() {
+        function ue() {
           return i.createElement(
             "svg",
             {
@@ -9587,7 +9703,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function le() {
+        function me() {
           return i.createElement(
             "svg",
             {
@@ -9618,7 +9734,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ue() {
+        function de() {
           return i.createElement(
             "svg",
             {
@@ -9684,7 +9800,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function me(e) {
+        function he(e) {
           const t = (0, o.Z)(
             "SVGIcon_Button",
             e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
@@ -9710,7 +9826,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function de() {
+        function _e() {
           return i.createElement(
             "svg",
             {
@@ -9760,7 +9876,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function he(e) {
+        function ge(e) {
           const { fullcolor: t, className: r } = e;
           let n = t ? "rgb(102, 185, 255)" : "none",
             s = t ? "rgb(255, 208, 0)" : "none",
@@ -9814,7 +9930,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function _e() {
+        function pe() {
           return i.createElement(
             "svg",
             {
@@ -9878,7 +9994,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ge() {
+        function be() {
           return i.createElement(
             "svg",
             {
@@ -9897,7 +10013,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function pe(e) {
+        function we(e) {
           let t = c.r4(e.percentComplete, 0, 100, 800, 0);
           return i.createElement(
             "svg",
@@ -9925,7 +10041,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function be() {
+        function fe() {
           return i.createElement(
             "svg",
             {
@@ -9952,7 +10068,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function we() {
+        function Be() {
           return i.createElement(
             "svg",
             {
@@ -9990,7 +10106,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function fe() {
+        function ye() {
           return i.createElement(
             "svg",
             {
@@ -10026,7 +10142,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Be(e) {
+        function Ee(e) {
           return i.createElement(
             "svg",
             {
@@ -10056,7 +10172,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ye() {
+        function Me() {
           return i.createElement(
             "svg",
             {
@@ -10091,7 +10207,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ee() {
+        function ve() {
           return i.createElement(
             "svg",
             {
@@ -10116,7 +10232,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Me() {
+        function Se() {
           return i.createElement(
             "svg",
             {
@@ -10138,7 +10254,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function ve() {
+        function Ce() {
           return i.createElement(
             "svg",
             {
@@ -10160,7 +10276,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Se() {
+        function Fe() {
           return i.createElement(
             "svg",
             {
@@ -10200,7 +10316,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ce() {
+        function ke() {
           return i.createElement(
             "svg",
             {
@@ -10228,7 +10344,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function Fe() {
+        function xe() {
           return i.createElement(
             "svg",
             {
@@ -10248,7 +10364,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function ke() {
+        function Re() {
           return i.createElement(
             "svg",
             {
@@ -10264,7 +10380,7 @@ var CLSTAMP = "7437011";
             i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
           );
         }
-        function xe() {
+        function Le() {
           return i.createElement(
             "svg",
             {
@@ -10283,7 +10399,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Re() {
+        function Te() {
           return i.createElement(
             "svg",
             {
@@ -10302,7 +10418,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Te(e, t) {
+        function ze(e, t) {
           return m.De.IN_GAMEPADUI
             ? i.createElement(
                 "svg",
@@ -10339,7 +10455,7 @@ var CLSTAMP = "7437011";
                 })
               );
         }
-        function ze(e) {
+        function Ie(e) {
           return i.createElement(
             "svg",
             {
@@ -10358,7 +10474,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Le(e) {
+        function Oe(e) {
           return i.createElement(
             "svg",
             {
@@ -10377,7 +10493,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ie(e) {
+        function We(e) {
           return i.createElement(
             "svg",
             {
@@ -10397,7 +10513,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Oe(e) {
+        function Ue(e) {
           return i.createElement(
             "svg",
             {
@@ -10420,7 +10536,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function We(e) {
+        function Ae(e) {
           return i.createElement(
             "svg",
             {
@@ -10443,7 +10559,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ue(e) {
+        function De(e) {
           return i.createElement(
             "svg",
             { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -10470,7 +10586,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ae(e) {
+        function Ne(e) {
           const { className: t, color: r } = e;
           return i.createElement(
             "svg",
@@ -10496,7 +10612,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function De(e) {
+        function Xe(e) {
           const { className: t } = e;
           (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -10674,7 +10790,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function Ne() {
+        function je() {
           return i.createElement(
             "svg",
             {
@@ -10705,7 +10821,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function Xe(e) {
+        function Ge(e) {
           return i.createElement(
             "svg",
             Object.assign({}, e, {
@@ -10721,7 +10837,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ge() {
+        function Pe() {
           return i.createElement(
             "svg",
             {
@@ -10739,7 +10855,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function je() {
+        function He() {
           return i.createElement(
             "svg",
             {
@@ -10761,7 +10877,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function Pe() {
+        function Ve() {
           return i.createElement(
             "svg",
             {
@@ -10799,7 +10915,7 @@ var CLSTAMP = "7437011";
             )
           );
         }
-        function He(e) {
+        function qe(e) {
           return i.createElement(
             "svg",
             Object.assign({}, e, {
@@ -10817,7 +10933,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ve(e) {
+        function Ze(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -10840,7 +10956,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function qe(e) {
+        function Ye(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -10868,7 +10984,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ze(e) {
+        function $e(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -10896,7 +11012,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function Ye(e) {
+        function Ke(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -10924,7 +11040,7 @@ var CLSTAMP = "7437011";
             })
           );
         }
-        function $e(e) {
+        function Je(e) {
           const { className: t } = e,
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
@@ -11268,23 +11384,24 @@ var CLSTAMP = "7437011";
         "use strict";
         r.d(t, {
           $1: () => l.$1,
-          CE: () => E,
+          CE: () => M,
           Jr: () => _,
           LJ: () => u,
-          LZ: () => f,
+          LZ: () => B,
           Mh: () => l.Mh,
           Np: () => l.Np,
           Qw: () => m,
           XG: () => l.XG,
           Xx: () => d,
-          Yt: () => M,
+          Yt: () => v,
           ek: () => l.ek,
-          is: () => y,
+          is: () => E,
           jr: () => l.jr,
           kQ: () => h,
-          kb: () => b,
+          kb: () => w,
           m9: () => l.m9,
           vX: () => l.vX,
+          x$: () => p,
           yW: () => l.yW,
           yu: () => g,
         });
@@ -11396,14 +11513,14 @@ var CLSTAMP = "7437011";
           }
         }
         function m(e) {
-          return null != M.LocalizeString(e, !0);
+          return null != v.LocalizeString(e, !0);
         }
         function d(e, ...t) {
-          let r = M.LocalizeString(e);
-          return void 0 === r ? e : w(r, ...t);
+          let r = v.LocalizeString(e);
+          return void 0 === r ? e : f(r, ...t);
         }
         function h(e, ...t) {
-          let r = M.LocalizeString(e);
+          let r = v.LocalizeString(e);
           if (void 0 === r) return e;
           let i,
             s = [],
@@ -11422,10 +11539,17 @@ var CLSTAMP = "7437011";
             : h(e + "_Plural", t, ...r);
         }
         function g(e, ...t) {
-          let r = M.LocalizeString(e);
-          return void 0 === r ? e : p(r, ...t);
+          let r = v.LocalizeString(e);
+          return void 0 === r ? e : b(r, ...t);
         }
-        function p(e, ...t) {
+        function p(e, t, ...r) {
+          let n;
+          return (
+            (n = d(1 === t || "1" === t ? e : e + "_Plural", t)),
+            void 0 === n ? e : b(n, ...r)
+          );
+        }
+        function b(e, ...t) {
           let r,
             i = [],
             s = /(.*?)<(\d+)>(.*)<\/(\2)>/g,
@@ -11441,12 +11565,12 @@ var CLSTAMP = "7437011";
           }
           return i.push(e.substr(a)), n.createElement(n.Fragment, null, ...i);
         }
-        function b(e, t, ...r) {
+        function w(e, t, ...r) {
           return 1 === t || "1" === t
             ? d(e, t, ...r)
             : d(e + "_Plural", t, ...r);
         }
-        function w(e, ...t) {
+        function f(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
@@ -11457,7 +11581,7 @@ var CLSTAMP = "7437011";
                 return e;
               }));
         }
-        class f {
+        class B {
           static Set(e, t, r) {
             if (e.length <= t) {
               if (t >= 30) return e;
@@ -11470,12 +11594,12 @@ var CLSTAMP = "7437011";
           }
           static GetWithFallback(e, t) {
             if (e) {
-              return f.Get(e, t) || f.Get(e, u.GetELanguageFallback(t));
+              return B.Get(e, t) || B.Get(e, u.GetELanguageFallback(t));
             }
             return null;
           }
         }
-        const B = {
+        const y = {
             english: "en",
             german: "de",
             french: "fr",
@@ -11508,7 +11632,7 @@ var CLSTAMP = "7437011";
             sc_schinese: "zh-cn",
             koreana: "ko",
           },
-          y = {
+          E = {
             "en-US": 0,
             "de-DE": 1,
             "fr-FR": 2,
@@ -11539,11 +11663,11 @@ var CLSTAMP = "7437011";
             "es-419": 27,
             "vi-VN": 28,
           };
-        function E() {
-          return B[a.De.LANGUAGE] || null;
+        function M() {
+          return y[a.De.LANGUAGE] || null;
         }
-        const M = new u();
-        window.LocalizationManager = M;
+        const v = new u();
+        window.LocalizationManager = v;
       },
       32588: (e, t, r) => {
         "use strict";
@@ -12391,6 +12515,7 @@ var CLSTAMP = "7437011";
             IN_GAMEPADUI: !1,
             ON_DECK: !1,
             IN_LOGIN: !1,
+            IN_LOGIN_REFRESH: !1,
             IN_STANDALONE_KEYBOARD: !1,
           },
           a = {
@@ -12449,9 +12574,9 @@ var CLSTAMP = "7437011";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 15 2022 : 12:08:56",
-                    BUILD_TIME_UTC: "Aug 15 2022 : 19:08:56",
-                    BUILD_RTIME_UTC: 1660590536,
+                    BUILD_TIME_LOCAL: "Aug 19 2022 : 09:57:38",
+                    BUILD_TIME_UTC: "Aug 19 2022 : 16:57:38",
+                    BUILD_RTIME_UTC: 1660928258,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12577,17 +12702,19 @@ var CLSTAMP = "7437011";
           d = r(40792);
         r(82155);
         const h = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(642), r.e(7656), r.e(1010)]).then(
+            Promise.all([r.e(1517), r.e(7976), r.e(8501), r.e(1010)]).then(
               r.bind(r, 60806)
             )
           ),
           _ = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(642), r.e(4535)]).then(r.bind(r, 13061))
+            Promise.all([r.e(1517), r.e(7976), r.e(4535)]).then(
+              r.bind(r, 87964)
+            )
           ),
           g =
             (n.lazy(() =>
-              Promise.all([r.e(1517), r.e(642), r.e(7656), r.e(5742)]).then(
-                r.bind(r, 57934)
+              Promise.all([r.e(1517), r.e(7976), r.e(8501), r.e(5742)]).then(
+                r.bind(r, 95783)
               )
             ),
             document.getElementById("root"));
@@ -12640,7 +12767,7 @@ var CLSTAMP = "7437011";
               (this.cm = new d.zn());
           }
           render() {
-            return u.De.IN_LOGIN
+            return u.De.IN_LOGIN || u.De.IN_LOGIN_REFRESH
               ? n.createElement(
                   n.Suspense,
                   { fallback: n.createElement(p, null) },
@@ -12920,7 +13047,7 @@ var CLSTAMP = "7437011";
       a[e]
         ? t.push(a[e])
         : 0 !== a[e] &&
-          { 1010: 1, 4535: 1, 4601: 1, 5742: 1, 6109: 1, 7656: 1 }[e] &&
+          { 1010: 1, 4535: 1, 4601: 1, 5742: 1, 6109: 1, 8501: 1 }[e] &&
           t.push(
             (a[e] = s(e).then(
               () => {

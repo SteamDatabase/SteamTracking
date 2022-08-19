@@ -1340,7 +1340,7 @@
  fseek
  fstat$INODE64
  fsync
- ftell
+ ftello
  ftruncate
  fwrite
  g_ClockSpeed
