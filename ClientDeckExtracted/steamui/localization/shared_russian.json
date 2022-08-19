@@ -1079,6 +1079,7 @@
     "Login_RefreshReason_Generic": "Войдите в аккаунт снова (%1$s)",
     "Login_SignIn_WithAccountName": "Войти, используя имя аккаунта",
     "Login_SignIn_OrWithQRCode": "Или войти, используя QR-код",
+    "Login_SignIn_EscapeHatch": "Проблемы с новым способом входа? <1>Нажмите сюда</1>, чтобы войти в аккаунт как раньше.",
     "Login_UseAppForQR": "Используйте %1$s, чтобы войти с помощью QR-кода",
     "Login_UseAppForQR_Inner": "мобильное приложение Steam",
     "Login_GetMobileApp_Link": "Установите мобильное приложение",

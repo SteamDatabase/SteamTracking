@@ -1083,7 +1083,7 @@
 	"Login_UseAppForQR": "Usa a %1$s para iniciares sessão com um código QR",
 	"Login_UseAppForQR_Inner": "aplicação móvel do Steam",
 	"Login_GetMobileApp_Link": "Descarrega a app móvel",
-	"Login_UseMobileAppForQR_Inline": "Usa a <1>aplicação móvel do Steam</1> para iniciares sessão com um código QR",
+	"Login_UseMobileAppForQR_Inline": "Usa a <1>app móvel do Steam</1> para iniciares sessão com um código QR",
 	"Login_ScanAQRCode_Button": "Ler código QR",
 	"Login_CheckCredentials": "Verifica a tua palavra-passe e o nome da tua conta e tenta de novo.",
 	"Login_IncorrectSteamGuard": "Código incorreto, tenta de novo",

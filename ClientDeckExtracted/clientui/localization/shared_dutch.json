@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Meld je opnieuw aan (%1$s)",
 	"Login_SignIn_WithAccountName": "Inloggen met accountnaam",
 	"Login_SignIn_OrWithQRCode": "Of een QR-code gebruiken",
+	"Login_SignIn_EscapeHatch": "Problemen met het nieuwe aanmelden? <1>Klik hier</1> voor de oude manier van aanmelden.",
 	"Login_UseAppForQR": "Gebruik de %1$s om met een QR-code in te loggen",
 	"Login_UseAppForQR_Inner": "mobiele Steam-app",
 	"Login_GetMobileApp_Link": "Download de mobiele app",

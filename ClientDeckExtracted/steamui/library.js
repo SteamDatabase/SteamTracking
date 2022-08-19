@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7445010";
+var CLSTAMP = "7448062";
 (() => {
   var e,
     t,
@@ -529,8 +529,8 @@ var CLSTAMP = "7445010";
           oW: () => k,
           fu: () => y,
           t$: () => _,
-          XM: () => O,
-          L2: () => I,
+          XM: () => I,
+          L2: () => O,
           eT: () => h,
           r7: () => n.r7,
           qu: () => n.qu,
@@ -877,10 +877,10 @@ var CLSTAMP = "7445010";
             "advertising" === e
           );
         }
-        function I(e) {
+        function O(e) {
           return e;
         }
-        function O(e) {
+        function I(e) {
           return e;
         }
         var W, U;
@@ -2540,8 +2540,8 @@ var CLSTAMP = "7445010";
         (0, n.gn)([h.aD], L.prototype, "OnLogonInfoChanged", null);
         var T = r(99591),
           z = r(9669),
-          I = r.n(z);
-        class O {
+          O = r.n(z);
+        class I {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
           }
@@ -2759,12 +2759,12 @@ var CLSTAMP = "7445010";
             return (0, n.mG)(this, void 0, void 0, function* () {
               let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
                 r = performance.now();
-              const n = I().CancelToken.source();
+              const n = O().CancelToken.source();
               let i = window.setTimeout(() => {
                 e.strHost, n.cancel();
               }, 1e3);
               try {
-                let s = yield I().head(t, { cancelToken: n.token });
+                let s = yield O().head(t, { cancelToken: n.token });
                 e.strHost, window.clearTimeout(i);
                 let a = performance.now() - r,
                   o = s.headers["x-steam-cmload"]
@@ -2772,7 +2772,7 @@ var CLSTAMP = "7445010";
                     : void 0;
                 e.strHost, (e.msPing = a), (e.nCMLoad = o);
               } catch (t) {
-                I().isCancel(t) ? e.strHost : window.clearTimeout(i),
+                O().isCancel(t) ? e.strHost : window.clearTimeout(i),
                   (e.msPing = 1e4),
                   (e.nCMLoad = 0);
               }
@@ -2784,7 +2784,7 @@ var CLSTAMP = "7445010";
           return (0, n.mG)(this, void 0, void 0, function* () {
             const e =
                 o.De.WEBAPI_BASE_URL + "ISteamDirectory/GetCMList/v1/?cellid=0",
-              t = (yield I().get(e)).data,
+              t = (yield O().get(e)).data,
               r = (t && t.response && t.response.serverlist_websockets) || [];
             return r.length, r.map((e, t) => ({ strHost: e, nPriority: t }));
           });
@@ -2807,7 +2807,7 @@ var CLSTAMP = "7445010";
                 (this.m_bLoadingCMList = !1),
                 (this.m_iCallSeq = 1),
                 (this.m_mapWaitingCallbacks = new Map()),
-                (this.m_CMList = new O()),
+                (this.m_CMList = new I()),
                 (this.LogOnResponseHandler = (0, i.OW)(751, y, (e) => {
                   let t = e.Body().eresult();
                   (this.m_Session.m_bWaitingForLogonResponse = !1),
@@ -5490,7 +5490,7 @@ var CLSTAMP = "7445010";
         "use strict";
         r.d(t, {
           Qn: () => k,
-          VJ: () => O,
+          VJ: () => I,
           VL: () => o,
           WJ: () => x,
           cR: () => T,
@@ -7530,7 +7530,7 @@ var CLSTAMP = "7445010";
               z.sm_m ||
                 (z.sm_m = {
                   proto: z,
-                  fields: { categories: { n: 1, c: I, r: !0, q: !0 } },
+                  fields: { categories: { n: 1, c: O, r: !0, q: !0 } },
                 }),
               z.sm_m
             );
@@ -7572,17 +7572,17 @@ var CLSTAMP = "7445010";
             return "CStoreBrowse_GetStoreCategories_Response";
           }
         }
-        class I extends s {
+        class O extends s {
           constructor(e = null) {
             super(),
-              I.prototype.categoryid || i.aR(I.M()),
+              O.prototype.categoryid || i.aR(O.M()),
               s.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
-              I.sm_m ||
-                (I.sm_m = {
-                  proto: I,
+              O.sm_m ||
+                (O.sm_m = {
+                  proto: O,
                   fields: {
                     categoryid: {
                       n: 1,
@@ -7612,47 +7612,47 @@ var CLSTAMP = "7445010";
                     },
                   },
                 }),
-              I.sm_m
+              O.sm_m
             );
           }
           static MBF() {
-            return I.sm_mbf || (I.sm_mbf = i.Bh(I.M())), I.sm_mbf;
+            return O.sm_mbf || (O.sm_mbf = i.Bh(O.M())), O.sm_mbf;
           }
           toObject(e = !1) {
-            return I.toObject(e, this);
+            return O.toObject(e, this);
           }
           static toObject(e, t) {
-            return i.TA(I.M(), e, t);
+            return i.TA(O.M(), e, t);
           }
           static fromObject(e) {
-            return i.aD(I.M(), e);
+            return i.aD(O.M(), e);
           }
           static deserializeBinary(e) {
             let t = new n.BinaryReader(e),
-              r = new I();
-            return I.deserializeBinaryFromReader(r, t);
+              r = new O();
+            return O.deserializeBinaryFromReader(r, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return i.F(I.MBF(), e, t);
+            return i.F(O.MBF(), e, t);
           }
           serializeBinary() {
             var e = new n.BinaryWriter();
-            return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            i.l2(I.M(), e, t);
+            i.l2(O.M(), e, t);
           }
           serializeBase64String() {
             var e = new n.BinaryWriter();
             return (
-              I.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              O.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
             return "CStoreBrowse_GetStoreCategories_Response_Category";
           }
         }
-        var O;
+        var I;
         !(function (e) {
           (e.GetItems = function (e, t) {
             return e.SendMsg("StoreBrowse.GetItems#1", t, T, {
@@ -7668,7 +7668,7 @@ var CLSTAMP = "7445010";
                 eWebAPIKeyRequirement: 1,
               });
             });
-        })(O || (O = {}));
+        })(I || (I = {}));
       },
       7952: (e, t, r) => {
         "use strict";
@@ -7678,7 +7678,7 @@ var CLSTAMP = "7445010";
           BKy: () => A,
           Bh5: () => Fe,
           E1z: () => fe,
-          Ehc: () => I,
+          Ehc: () => O,
           FUf: () => E,
           Fsn: () => H,
           GhU: () => S,
@@ -7688,7 +7688,7 @@ var CLSTAMP = "7445010";
           IF0: () => pe,
           IWH: () => $,
           JrY: () => x,
-          KJh: () => Oe,
+          KJh: () => Ie,
           KKY: () => $e,
           Lao: () => j,
           Lk$: () => le,
@@ -7699,7 +7699,7 @@ var CLSTAMP = "7445010";
           P7E: () => f,
           P9w: () => q,
           Q0U: () => Le,
-          S2L: () => Ie,
+          S2L: () => Oe,
           SUY: () => p,
           THo: () => K,
           UWx: () => _e,
@@ -7762,7 +7762,7 @@ var CLSTAMP = "7445010";
           wUs: () => T,
           wn$: () => be,
           wr9: () => se,
-          wx$: () => O,
+          wx$: () => I,
           x0L: () => He,
           xg: () => ze,
           yTr: () => Pe,
@@ -8298,27 +8298,31 @@ var CLSTAMP = "7445010";
             )
           );
         }
-        function x() {
+        function x(e) {
+          var t;
           return i.createElement(
             "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Check",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
+            Object.assign(
+              {
+                version: "1.1",
+                id: "base",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Check",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                strokeWidth: "24",
+                stroke: null !== (t = e.color) && void 0 !== t ? t : "#fff",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+              },
+              e
+            ),
             i.createElement("polyline", {
               fill: "none",
-              stroke: "#fff",
-              strokeWidth: "24",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
               points: "49.5,147.75 95,210.75 206.5,45.25 ",
             })
           );
@@ -8699,7 +8703,7 @@ var CLSTAMP = "7445010";
                 })
               );
         }
-        function I(e) {
+        function O(e) {
           return i.createElement(
             "svg",
             {
@@ -8734,7 +8738,7 @@ var CLSTAMP = "7445010";
             })
           );
         }
-        function O(e) {
+        function I(e) {
           const { direction: t } = e,
             r = (0, n._T)(e, ["direction"]);
           switch (t) {
@@ -10451,7 +10455,7 @@ var CLSTAMP = "7445010";
                 })
               );
         }
-        function Ie(e) {
+        function Oe(e) {
           return i.createElement(
             "svg",
             {
@@ -10470,7 +10474,7 @@ var CLSTAMP = "7445010";
             })
           );
         }
-        function Oe(e) {
+        function Ie(e) {
           return i.createElement(
             "svg",
             {
@@ -12570,9 +12574,9 @@ var CLSTAMP = "7445010";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 17 2022 : 19:25:35",
-                    BUILD_TIME_UTC: "Aug 18 2022 : 02:25:35",
-                    BUILD_RTIME_UTC: 1660789535,
+                    BUILD_TIME_LOCAL: "Aug 18 2022 : 20:34:16",
+                    BUILD_TIME_UTC: "Aug 19 2022 : 03:34:16",
+                    BUILD_RTIME_UTC: 1660880056,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12711,7 +12715,7 @@ var CLSTAMP = "7445010";
           ),
           w = n.lazy(() =>
             Promise.all([r.e(1517), r.e(7976), r.e(8501), r.e(5742)]).then(
-              r.bind(r, 77027)
+              r.bind(r, 53143)
             )
           ),
           f = document.getElementById("root"),

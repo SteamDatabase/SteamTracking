@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "กรุณาเข้าสู่ระบบอีกครั้ง (%1$s)",
 	"Login_SignIn_WithAccountName": "เข้าสู่ระบบด้วยชื่อบัญชี",
 	"Login_SignIn_OrWithQRCode": "หรือเข้าสู่ระบบด้วย QR",
+	"Login_SignIn_EscapeHatch": "หากมีปัญหาในการเข้าสู่ระบบแบบใหม่ <1>คลิกที่นี่</1>เพื่อใช้แบบเก่า",
 	"Login_UseAppForQR": "ใช้ %1$s เพื่อเข้าสู่ระบบด้วยรหัส QR",
 	"Login_UseAppForQR_Inner": "แอป Steam แบบพกพา",
 	"Login_GetMobileApp_Link": "รับแอปแบบพกพา",

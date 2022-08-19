@@ -1079,6 +1079,7 @@
     "Login_RefreshReason_Generic": "Συνδεθείτε ξανά (%1$s)",
     "Login_SignIn_WithAccountName": "Σύνδεση με όνομα λογαριασμού",
     "Login_SignIn_OrWithQRCode": "Ή σύνδεση με QR",
+    "Login_SignIn_EscapeHatch": "Αντιμετωπίζετε προβλήματα με τη νέα διαδικασία σύνδεσης; <1>Κάντε κλικ εδώ</1> για να χρησιμοποιήσετε την παλιά διαδικασία.",
     "Login_UseAppForQR": "Χρησιμοποιήστε το %1$s για να συνδεθείτε μέσω κωδικού QR",
     "Login_UseAppForQR_Inner": "Εφαρμογή Steam Mobile",
     "Login_GetMobileApp_Link": "Αποκτήστε την εφαρμογή για κινητές συσκευές",

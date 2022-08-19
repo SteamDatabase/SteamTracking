@@ -1079,7 +1079,7 @@
 	"Login_RefreshReason_Generic": "Bitte melden Sie sich erneut an (%1$s)",
 	"Login_SignIn_WithAccountName": "Mit Accountnamen anmelden",
 	"Login_SignIn_OrWithQRCode": "Oder mit QR-Code anmelden",
-	"Login_SignIn_EscapeHatch": "Haben Sie Probleme bei einer erneuten Anmeldung?<1>Klicken Sie hier</1>, um die alte Ansicht zu verwenden.",
+	"Login_SignIn_EscapeHatch": "Haben Sie Probleme bei einer erneuten Anmeldung? <1>Klicken Sie hier</1>, um die alte Ansicht zu verwenden.",
 	"Login_UseAppForQR": "Die %1$s nutzen, um sich mit dem QR-Code anzumelden.",
 	"Login_UseAppForQR_Inner": "Steam-Mobile-App",
 	"Login_GetMobileApp_Link": "Holen Sie sich die mobile App",

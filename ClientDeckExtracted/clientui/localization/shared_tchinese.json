@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "請再次登入（%1$s）",
 	"Login_SignIn_WithAccountName": "以帳戶名稱登入",
 	"Login_SignIn_OrWithQRCode": "或以 QR 碼登入",
+	"Login_SignIn_EscapeHatch": "使用新版登入方式時遇到問題？<1>點擊此處</1>以使用舊版方式。",
 	"Login_UseAppForQR": "透過 %1$s來使用 QR 碼登入",
 	"Login_UseAppForQR_Inner": "Steam 行動應用程式",
 	"Login_GetMobileApp_Link": "取得行動應用程式",

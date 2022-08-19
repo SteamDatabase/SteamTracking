@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "다시 로그인하세요(%1$s)",
 	"Login_SignIn_WithAccountName": "계정 이름으로 로그인",
 	"Login_SignIn_OrWithQRCode": "또는 QR 코드로 로그인",
+	"Login_SignIn_EscapeHatch": "로그인에 문제가 있나요? <1>여기를 클릭</1>하면 이전 방식으로 로그인할 수 있습니다.",
 	"Login_UseAppForQR": "%1$s을 사용하여 QR 코드로 로그인",
 	"Login_UseAppForQR_Inner": "Steam 모바일 앱",
 	"Login_GetMobileApp_Link": "모바일 앱 다운로드",

@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Kérjük, lépj be újra (%1$s)",
 	"Login_SignIn_WithAccountName": "Belépés fióknévvel",
 	"Login_SignIn_OrWithQRCode": "Belépés QR-kóddal",
+	"Login_SignIn_EscapeHatch": "Problémád van az új belépéssel?<1>Kattints ide</1> a régi módszer használatához.",
 	"Login_UseAppForQR": "%1$s használata a QR-kódos belépéshez",
 	"Login_UseAppForQR_Inner": "Steam mobilalkalmazás",
 	"Login_GetMobileApp_Link": "Mobilalkalmazás beszerzése",

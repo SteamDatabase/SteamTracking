@@ -1079,6 +1079,7 @@
     "Login_RefreshReason_Generic": "Kirjaudu uudelleen (%1$s)",
     "Login_SignIn_WithAccountName": "Kirjaudu sisään tilinimellä",
     "Login_SignIn_OrWithQRCode": "tai QR-koodilla",
+    "Login_SignIn_EscapeHatch": "Aiheuttaako uusi kirjautuminen ongelmia? <1>Klikkaa tästä</1> käyttääksesi vanhaa kirjautumismenetelmää.",
     "Login_UseAppForQR": "Käytä sovellusta %1$s kirjautuaksesi sisään QR-koodilla",
     "Login_UseAppForQR_Inner": "Steam-mobiilisovellus",
     "Login_GetMobileApp_Link": "Hanki mobiilisovellus",

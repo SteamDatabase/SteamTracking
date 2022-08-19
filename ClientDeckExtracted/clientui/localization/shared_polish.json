@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Zaloguj się ponownie (%1$s)",
 	"Login_SignIn_WithAccountName": "Zaloguj się z użyciem nazwy konta",
 	"Login_SignIn_OrWithQRCode": "Lub zaloguj się z użyciem kodu QR",
+	"Login_SignIn_EscapeHatch": "Masz problem z nowym logowaniem? <1>Kliknij tutaj</1>, aby skorzystać ze starego sposobu.",
 	"Login_UseAppForQR": "Użyj %1$s, by zalogować się z użyciem kodu QR",
 	"Login_UseAppForQR_Inner": "aplikacji mobilnej Steam",
 	"Login_GetMobileApp_Link": "Pobierz aplikację mobilną",

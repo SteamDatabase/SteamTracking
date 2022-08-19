@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Por favor, inicia sesión de nuevo (%1$s)",
 	"Login_SignIn_WithAccountName": "Inicia sesión con tu nombre de cuenta",
 	"Login_SignIn_OrWithQRCode": "o bien con un código QR",
+	"Login_SignIn_EscapeHatch": "¿Estás teniendo problemas con el nuevo método de inicio de sesión? <1>Haz clic aquí</1> para usar el método anterior.",
 	"Login_UseAppForQR": "Usar la %1$s para iniciar sesión con un código QR",
 	"Login_UseAppForQR_Inner": "aplicación Steam Mobile",
 	"Login_GetMobileApp_Link": "Obtener la aplicación móvil",

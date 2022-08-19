@@ -1,63 +1,66 @@
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/throbber.scss ***!
+  \********************************************************************************************************************************************************************************************/
 /* stylelint-disable selector-class-pattern */
-.throbber_LoadingWrapper_9UFR8 {
+.throbber_LoadingWrapper_1HyRg {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
-.throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST {
-  animation-name: throbber_none_3yGk4;
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy {
+  animation-name: throbber_none_3dXVh;
 }
-.throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST * {
-  animation-name: throbber_none_3yGk4 !important;
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy * {
+  animation-name: throbber_none_3dXVh !important;
   stroke-dasharray: initial !important;
   stroke-dashoffset: initial !important;
   stroke-width: 5px !important;
   opacity: 1 !important;
 }
-.throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST
-  .throbber_bottomCircle_1XTvd
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy
+  .throbber_bottomCircle_25ip-
   path {
   stroke-width: 0 !important;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_noString_2uxjb {
+.throbber_LoadingWrapper_1HyRg.throbber_noString_25hUI {
   flex-direction: row;
 }
 
-.throbber_LoadingWrapper_9UFR8 .throbber_Throbber_1Y6Da,
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber,
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber path {
+.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.throbber_LoadingWrapper_9UFR8 .throbber_Throbber_1Y6Da {
+.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva {
   align-self: center;
   margin: 0px;
   width: 100%;
   height: 100%;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_throbber_small_21jHr
-  .throbber_Throbber_1Y6Da {
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
+  .throbber_Throbber_v2Wva {
   width: 32px;
   height: 32px;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_throbber_medium_1nACb
-  .throbber_Throbber_1Y6Da {
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
+  .throbber_Throbber_v2Wva {
   width: 64px;
   height: 64px;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_throbber_large_3hJM_
-  .throbber_Throbber_1Y6Da {
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_large_3nisx
+  .throbber_Throbber_v2Wva {
   width: 92px;
   height: 92px;
 }
 
-.throbber_throbber_center_wrapper_1Dn-N {
+.throbber_throbber_center_wrapper_3hIjC {
   width: 100%;
   height: 100%;
   display: flex;
@@ -66,9 +69,9 @@
   justify-content: center;
 }
 
-.throbber_ThrobberText_3r290,
-.throbber_LoadingWrapper_9UFR8 .throbber_ThrobberText_3r290 {
-  color: rgb(61, 133, 200);
+.throbber_ThrobberText_2LAFw,
+.throbber_LoadingWrapper_1HyRg .throbber_ThrobberText_2LAFw {
+  color: #3d85c8;
   font-size: 12px;
   text-transform: uppercase;
   text-align: center;
@@ -78,30 +81,30 @@
   font-weight: 500;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_throbber_medium_1nACb
-  .throbber_ThrobberText_3r290 {
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
+  .throbber_ThrobberText_2LAFw {
   margin-top: 4px;
 }
 
-.throbber_LoadingWrapper_9UFR8.throbber_throbber_small_21jHr
-  .throbber_ThrobberText_3r290 {
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
+  .throbber_ThrobberText_2LAFw {
   margin-top: 2px;
 }
 
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber.throbber_blur_3cMTP {
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U {
   filter: blur(3px);
   position: absolute;
   left: 0;
   top: 0px;
 }
 
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber.throbber_blur_3cMTP path {
-  stroke: rgb(67, 117, 253);
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U path {
+  stroke: #4375fd;
 }
 
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber path {
-  stroke: rgb(103, 193, 245);
-  animation-name: throbber_ThrobberRoundLoop_3iwJU;
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberRoundLoop_1PbAa;
   animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
@@ -109,37 +112,37 @@
   opacity: 0;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundOuterOutline_1yAiX,
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber .throbber_roundOuter_3LNze {
+  .throbber_roundOuterOutline_TrexM,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
   stroke-dashoffset: 0;
   stroke-dasharray: 116;
   /*stroke-dasharray: 40 10 30 20 20 30 10 40;*/
   stroke-width: 6px;
 }
 
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber .throbber_roundOuter_3LNze {
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
   opacity: 1;
-  stroke: rgb(59, 139, 185);
+  stroke: #3b8bb9;
   stroke-width: 6px;
   transform-origin: 50% 50%;
   stroke-linecap: round;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundOuterOutline_1yAiX {
+  .throbber_roundOuterOutline_TrexM {
   display: none;
 }
 
-@keyframes throbber_ThrobberRoundLoop_3iwJU {
+@keyframes throbber_ThrobberRoundLoop_1PbAa {
   to {
     stroke-dashoffset: -232;
   }
 }
-.throbber_LoadingWrapper_9UFR8 .SVGIcon_Throbber .throbber_roundFill_3dnp9 {
-  animation-name: throbber_ThrobberFillLoop_1e442;
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundFill_3rrUj {
+  animation-name: throbber_ThrobberFillLoop_HAZ1M;
   animation-duration: 3s;
   animation-delay: -1.2s;
   animation-iteration-count: infinite;
@@ -148,7 +151,7 @@
   stroke-width: 0;
 }
 
-@keyframes throbber_ThrobberFillLoop_1e442 {
+@keyframes throbber_ThrobberFillLoop_HAZ1M {
   0% {
     fill: rgba(103, 193, 245, 0);
   }
@@ -159,16 +162,16 @@
     fill: rgba(103, 193, 245, 0);
   }
 }
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_topCircle_3Zy4H
-  .throbber_circlePulse_17mrs,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_topCircle__EJ7b
+  .throbber_circlePulse_379p5,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_topCircle_3Zy4H
+  .throbber_topCircle__EJ7b
   circle {
-  stroke: rgb(103, 193, 245);
-  animation-name: throbber_ThrobberTopCircleLoop_RFW6m;
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberTopCircleLoop_2GFtS;
   animation-duration: 3s;
   animation-delay: -1.2s;
   animation-iteration-count: infinite;
@@ -176,27 +179,27 @@
   transform-origin: 67% 36%;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_topCircle_3Zy4H
+  .throbber_topCircle__EJ7b
   circle {
-  animation-name: throbber_ThrobberBottomCircleLoop_1AigW;
+  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_bottomCircle_1XTvd
+  .throbber_bottomCircle_25ip-
   path {
-  fill: rgb(103, 193, 245);
+  fill: #67c1f5;
   stroke-width: 0;
-  animation-name: throbber_ThrobberBottomCircleLoop_1AigW;
+  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
   animation-duration: 3s;
   animation-delay: -0.6s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes throbber_ThrobberTopCircleLoop_RFW6m {
+@keyframes throbber_ThrobberTopCircleLoop_2GFtS {
   0% {
     opacity: 0;
     transform: scale(0.75);
@@ -219,7 +222,7 @@
     stroke-width: 0px;
   }
 }
-@keyframes throbber_ThrobberBottomCircleLoop_1AigW {
+@keyframes throbber_ThrobberBottomCircleLoop_7qnpn {
   0% {
     opacity: 0;
   }
@@ -233,177 +236,177 @@
     opacity: 0;
   }
 }
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber15_Ty6Px,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber15_3Xmey,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber14_T03GA,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber14_3Bz3S,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber13_2YjHq,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber13_3He3o,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber12_39ueX,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber12_1wN9D,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber11_ze_zC,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber11_6i7GD,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber10_jIdSr,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber10_12Nu_,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber09_3R4dR,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber09_2tK3N,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber08_2WJ-s,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber08_3ARjZ,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber07_2UhCH,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber07_2O6v6,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber06_gkW0p,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber06_3IwAT,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber05_20j9w,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber05_2PAW0,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber04_3TMdv,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber04_3GvQ1,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber03_3aNO_,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber03_SCH1y,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber02_1m8h_,
-.throbber_LoadingWrapper_9UFR8
+  .throbber_roundThrobber02_1OqfY,
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber01_2h6Ph {
-  animation-name: throbber_ThrobberRoundLoopThickness_1YJDV;
+  .throbber_roundThrobber01_1VNop {
+  animation-name: throbber_ThrobberRoundLoopThickness_2cif1;
   animation-duration: 3s;
   stroke-dasharray: 150 950;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber01_2h6Ph {
+  .throbber_roundThrobber01_1VNop {
   animation-delay: 0s;
   opacity: 0.06;
   stroke-width: 0.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber02_1m8h_ {
+  .throbber_roundThrobber02_1OqfY {
   animation-delay: -0.1s;
   opacity: 0.13;
   stroke-width: 1px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber03_3aNO_ {
+  .throbber_roundThrobber03_SCH1y {
   animation-delay: -0.2s;
   opacity: 0.2;
   stroke-width: 1.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber04_3TMdv {
+  .throbber_roundThrobber04_3GvQ1 {
   animation-delay: -0.3s;
   opacity: 0.26;
   stroke-width: 2px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber05_20j9w {
+  .throbber_roundThrobber05_2PAW0 {
   animation-delay: -0.4s;
   opacity: 0.33;
   stroke-width: 2.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber06_gkW0p {
+  .throbber_roundThrobber06_3IwAT {
   animation-delay: -0.5s;
   opacity: 0.4;
   stroke-width: 3px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber07_2UhCH {
+  .throbber_roundThrobber07_2O6v6 {
   animation-delay: -0.6s;
   opacity: 0.46;
   stroke-width: 3.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber08_2WJ-s {
+  .throbber_roundThrobber08_3ARjZ {
   animation-delay: -0.7s;
   opacity: 0.53;
   stroke-width: 4px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber09_3R4dR {
+  .throbber_roundThrobber09_2tK3N {
   animation-delay: -0.8s;
   opacity: 0.6;
   stroke-width: 4.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber10_jIdSr {
+  .throbber_roundThrobber10_12Nu_ {
   animation-delay: -0.9s;
   opacity: 0.66;
   stroke-width: 5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber11_ze_zC {
+  .throbber_roundThrobber11_6i7GD {
   animation-delay: -1s;
   opacity: 0.73;
   stroke-width: 5.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber12_39ueX {
+  .throbber_roundThrobber12_1wN9D {
   animation-delay: -1.1s;
   opacity: 0.8;
   stroke-width: 6px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber13_2YjHq {
+  .throbber_roundThrobber13_3He3o {
   animation-delay: -1.2s;
   opacity: 0.86;
   stroke-width: 6.5px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber14_T03GA {
+  .throbber_roundThrobber14_3Bz3S {
   animation-delay: -1.3s;
   opacity: 0.93;
   stroke-width: 7px;
 }
 
-.throbber_LoadingWrapper_9UFR8
+.throbber_LoadingWrapper_1HyRg
   .SVGIcon_Throbber
-  .throbber_roundThrobber15_Ty6Px {
+  .throbber_roundThrobber15_3Xmey {
   animation-delay: -1.4s;
   opacity: 1;
   stroke-width: 7.5px;
 }
 
-@keyframes throbber_ThrobberRoundLoopThickness_1YJDV {
+@keyframes throbber_ThrobberRoundLoopThickness_2cif1 {
   /*
   10%
   {
@@ -445,32 +448,35 @@
     stroke-dashoffset: -1100;
   }
 }
-.throbber_throbber_small_21jHr {
+.throbber_throbber_small_4dIL2 {
   width: 36px;
   height: 36px;
 }
 
-.throbber_throbber_medium_1nACb {
+.throbber_throbber_medium_QXu8P {
   width: 64px;
   height: 64px;
 }
 
-.throbber_throbber_large_3hJM_ {
+.throbber_throbber_large_3nisx {
   width: 92px;
   height: 92px;
 }
 
-.throbber_throbber_xlarge_iO6_X {
+.throbber_throbber_xlarge_3LxJj {
   width: 120px;
   height: 120px;
 }
 
-.throbber_throbber_xxlarge_3KPYp {
+.throbber_throbber_xxlarge_1mUb9 {
   width: 240px;
   height: 240px;
 }
 
 /* stylelint-enable selector-class-pattern */
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/shared_svg_library.scss ***!
+  \******************************************************************************************************************************************************************************************************/
 .SVGIcon_Button {
   fill: #ffffff;
   overflow: visible;
@@ -480,7 +486,7 @@
   max-height: 320px;
 }
 
-.shared_svg_library_EmoticonBow_2ly3o {
+.shared_svg_library_EmoticonBow_3pZfA {
   position: absolute;
   top: -15px;
   right: 0;
@@ -488,44 +494,47 @@
   left: 0;
 }
 
-.shared_svg_library_EmoticonBow_st0_HMUMS {
+.shared_svg_library_EmoticonBow_st0_qBW44 {
   opacity: 0.4;
   fill: #231f20;
 }
 
-.shared_svg_library_EmoticonBow_st1_3wZe- {
+.shared_svg_library_EmoticonBow_st1_23IlE {
   fill: #e41e25;
 }
 
-.shared_svg_library_SteamDeckCompatInfo_3266r {
+.shared_svg_library_SteamDeckCompatInfo_3TbPV {
   display: flex;
   background-color: #0e141b;
   padding: 2px;
   border-radius: 20px;
 }
 
-.shared_svg_library_SteamDeckCompatLogo_Xa7Sr {
+.shared_svg_library_SteamDeckCompatLogo_Q6MwZ {
   width: 20px;
   height: 20px;
 }
 
-.shared_svg_library_SteamDeckCompatIcon_1_u0j {
+.shared_svg_library_SteamDeckCompatIcon_2hKXi {
   width: 20px;
   height: 20px;
 }
 
-.shared_svg_library_SteamDeckCompatVerified_RC4ka {
+.shared_svg_library_SteamDeckCompatVerified_1PZiH {
   color: #59bf40;
 }
 
-.shared_svg_library_SteamDeckCompatPlayable_2kLuX {
+.shared_svg_library_SteamDeckCompatPlayable_uTOLJ {
   color: #ffc82c;
 }
 
-.shared_svg_library_SteamDeckCompatUnsupported_1J1SA,
-.shared_svg_library_SteamDeckCompatUnknown_2Tn_q {
+.shared_svg_library_SteamDeckCompatUnsupported_3XLWD,
+.shared_svg_library_SteamDeckCompatUnknown_53DS6 {
   color: #dcdedf;
 }
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../web_src/shared/js/ui/shared_dialog.css ***!
+  \************************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 /* reset browser styles */
 button.DialogButton {
@@ -592,7 +601,7 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .FullModalOverlay.NotReadyToRender {
-  background: rgb(0, 0, 0);
+  background: black;
 }
 
 .FullModalOverlay .ModalPosition_Content {
@@ -643,12 +652,12 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogBody a {
-  color: rgb(109, 207, 246);
+  color: #6dcff6;
   text-decoration: none;
 }
 
 .DialogBody a:hover {
-  color: rgb(176, 233, 255);
+  color: #b0e9ff;
 }
 
 .ModalDialogPopup .DialogContentTransition .DialogBody {
@@ -747,12 +756,12 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
-  stroke: rgb(120, 138, 146);
+  stroke: #788a92;
   stroke-width: 24px;
 }
 
 .ModalPosition_Dismiss .closeButton:hover .SVGIcon_X_Line line {
-  stroke: rgb(255, 255, 255);
+  stroke: white;
 }
 
 .ModalPosition_Dismiss .closeButton:hover {
@@ -932,14 +941,14 @@ button.DialogButton::-moz-focus-inner {
 }
 
 .DialogHeaderSubtitle {
-  color: rgb(110, 121, 133);
+  color: #6e7985;
   font-size: 22px;
   letter-spacing: 1px;
   text-transform: none;
 }
 
 .DialogHighlight {
-  color: rgb(66, 151, 248);
+  color: #4297f8;
 }
 
 .DialogFooter {
@@ -994,7 +1003,7 @@ button.DialogButton::-moz-focus-inner {
 /* stylelint-disable selector-class-pattern */
 .disabled .DialogLabelStrong .DialogLabel,
 .disabled .DialogLabel.DialogLabelStrong {
-  color: rgb(66, 72, 83);
+  color: #424853;
 }
 
 /* stylelint-enable selector-class-pattern */
@@ -1002,12 +1011,7 @@ button.DialogButton::-moz-focus-inner {
   flex: 1;
   min-height: 1px;
   max-height: 1px;
-  background: linear-gradient(
-    to right,
-    rgb(57, 62, 71) 0%,
-    rgb(64, 70, 79) 20%,
-    rgb(57, 62, 71) 100%
-  );
+  background: linear-gradient(to right, #393e47 0%, #40464f 20%, #393e47 100%);
   margin-bottom: 16px;
 }
 
@@ -1114,14 +1118,14 @@ button.DialogButton::-moz-focus-inner {
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px #0000;
   transition: all 0.2s ease-in-out;
 }
 
 .DialogTextInputBase:focus,
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px;
 }
 
@@ -1165,10 +1169,10 @@ button.DialogButton::-moz-focus-inner {
 .DialogTextInputBase.inviteURLLink {
   /* stylelint-disable-line selector-class-pattern */
   padding: 0 12px;
-  background: rgb(48, 53, 59);
+  background: #30353b;
   margin-right: 4px;
   flex-grow: 4;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 4px #0006;
   border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
@@ -1293,22 +1297,14 @@ button.DialogButton.Primary {
 }
 
 button.DialogButton.GreenPlay {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 25%;
   background-size: 330% 100%;
 }
 
 button.DialogButton.GreenPlay:hover,
 button.DialogButton.GreenPlay.gpfocus {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 0%;
   background-size: 330% 100%;
   color: white;
@@ -1317,17 +1313,13 @@ button.DialogButton.GreenPlay.gpfocus {
 button.DialogButton.GreenPlay:active,
 button.DialogButton.GreenPlay:active:hover,
 button.DialogButton.GreenPlay:active.gpfocus {
-  background: linear-gradient(
-    to right,
-    rgb(138, 195, 41) 0%,
-    rgb(74, 122, 22) 60%
-  );
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
   background-position: 40%;
   transition-duration: 0.04s;
 }
 
 button.DialogButton.Secondary.Off {
-  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 4px #0003;
 }
 
 button.DialogButton:enabled:active,
@@ -1365,7 +1357,7 @@ button.DialogButton:disabled:hover,
 button.DialogButton.Disabled,
 button.DialogButton.Disabled:hover {
   background: rgba(61, 67, 77, 0.35);
-  color: rgb(70, 77, 88);
+  color: #464d58;
   box-shadow: none;
   cursor: default;
   pointer-events: none;
@@ -1383,7 +1375,7 @@ button.TextButton {
   color: white;
   cursor: pointer;
   font-weight: 100;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0);
+  border-bottom: 1px dotted #0000;
 }
 
 button.TextButton .SVGIcon_Button {
@@ -1465,7 +1457,7 @@ button.TextButton.gpfocus {
 
 .Disabled .DialogToggleField_Option.Active {
   color: #666;
-  background-color: rgb(67, 73, 83);
+  background-color: #434953;
 }
 
 .DialogToggle_Description {
@@ -1522,7 +1514,7 @@ button.TextButton.gpfocus {
 
 .DialogDropDown_CurrentDisplay:empty::before {
   /* Make the min height effectively 1 line. min-height:1em doesn't account for line-height. */
-  content: "\A0";
+  content: " ";
 }
 
 .DialogDropDown._DialogInputContainer {
@@ -1539,7 +1531,7 @@ button.TextButton.gpfocus {
 }
 
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
-  fill: rgb(24, 156, 255);
+  fill: #189cff;
 }
 
 /* stylelint-disable selector-class-pattern */
@@ -1765,7 +1757,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox {
   width: 22px;
   height: 22px;
-  background-color: rgba(0, 0, 0, 0.2666666667);
+  background-color: #0004;
   padding: 0;
   box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
@@ -1906,7 +1898,7 @@ button.TextButton.gpfocus {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  color: rgb(27, 152, 255);
+  color: #1b98ff;
   transition: all 0s ease-out;
   z-index: 0;
   pointer-events: none;
@@ -1990,16 +1982,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -2022,16 +2014,16 @@ body.in_global_drag .title-area {
   background: linear-gradient(to right, #007896, #1f3d96);
   -webkit-mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
   );
   mask: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0px,
-    rgb(0, 0, 0) 1px,
+    black 0px,
+    black 1px,
     rgba(0, 0, 0, 0.4) 1px,
     rgba(0, 0, 0, 0.2) 8px,
     rgba(0, 0, 0, 0) 100%
@@ -2089,7 +2081,7 @@ body.in_global_drag .title-area {
 }
 
 .title-area-icon .SVGIcon_X_Line line {
-  stroke: rgb(120, 138, 146);
+  stroke: #788a92;
   stroke-width: 24px;
 }
 
@@ -2122,7 +2114,7 @@ body.in_global_drag .title-area {
 .DialogBodyNotificationBar {
   font-size: 12px;
   letter-spacing: 0px;
-  color: rgb(82, 184, 224);
+  color: #52b8e0;
   line-height: 18px;
   height: 18px;
   display: flex;
@@ -2139,12 +2131,12 @@ body.in_global_drag .title-area {
 
 .DialogBodyNotificationBar .SVGIcon_Lock .topLock {
   /* stylelint-disable-line selector-class-pattern */
-  fill: rgb(82, 184, 224);
+  fill: #52b8e0;
 }
 
 .DialogBodyNotificationBar .SVGIcon_Lock .baseLock {
   /* stylelint-disable-line selector-class-pattern */
-  stroke: rgb(82, 184, 224);
+  stroke: #52b8e0;
 }
 
 .GenericConfirmDialog .friend {
@@ -2280,7 +2272,7 @@ body.in_global_drag .title-area {
 .WaitingForInterFaceReadyContainer {
   width: 100%;
   height: 100%;
-  background-color: rgb(31, 33, 38);
+  background-color: #1f2126;
   display: flex;
 }
 
@@ -2327,19 +2319,19 @@ body.in_global_drag .title-area {
 }
 
 .A {
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: #f006;
   height: 40px;
 }
 
 .B {
-  background-color: rgba(0, 255, 0, 0.4);
+  background-color: #0f06;
   display: flex;
   flex-direction: column;
 }
 
 .ScrollList {
   border: 2px solid pink;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
   margin: 16px 32px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2351,7 +2343,7 @@ body.in_global_drag .title-area {
   border: 2px outset red;
   height: 60px;
   margin: 4px 32px;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
   margin-bottom: 16px;
 }
 
@@ -2359,11 +2351,11 @@ body.in_global_drag .title-area {
   border: 2px inset blue;
   height: 60px;
   margin: 4px 32px;
-  background-color: rgba(0, 0, 0, 0.6666666667);
+  background-color: #000a;
 }
 
 .C {
-  background-color: rgba(0, 0, 255, 0.4);
+  background-color: #00f6;
   height: 40px;
 }
 
@@ -2398,6 +2390,9 @@ body.in_global_drag .title-area {
   color: white;
   text-decoration: underline;
 }
+/*!********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/fonts.css ***!
+  \********************************************************************************************************************************************************************/
 /*
  * SteamMain
  */
@@ -2458,6 +2453,9 @@ body.in_global_drag .title-area {
   src: url("/custom_fonts/clientui.uifont?MotivaSans-Black") format("truetype");
   font-weight: 900;
 }
+/*!****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/css/index_friends.css ***!
+  \****************************************************************************************************************************************************************************/
 body {
   margin: 0px;
   padding: 0px;
@@ -2469,9 +2467,9 @@ body {
   height: calc(100% - 24px);
   background: radial-gradient(
     ellipse farthest-corner at 50% 30%,
-    rgb(33, 35, 41) 0%,
-    rgb(30, 32, 37) 50%,
-    rgb(28, 29, 34) 100%
+    #212329 0%,
+    #1e2025 50%,
+    #1c1d22 100%
   );
 }
 
@@ -2482,8 +2480,8 @@ body {
 .chat_main {
   width: 100%;
   height: 100%;
-  background-color: rgb(34, 37, 43);
-  color: rgb(150, 150, 150);
+  background-color: #22252b;
+  color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
@@ -2505,7 +2503,7 @@ body {
 }
 
 .FriendsFailureContainer .titleText {
-  color: rgb(255, 174, 0);
+  color: #ffae00;
   font-size: 18px;
   margin-bottom: 8px;
 }
@@ -2519,7 +2517,7 @@ body {
   margin-right: auto;
   text-align: center;
   margin-top: 16px;
-  color: rgb(255, 174, 0);
+  color: #ffae00;
   cursor: default;
 }
 
@@ -2544,12 +2542,8 @@ body.in_global_drag .friendlist_titlebar {
   width: calc(100% - 32px);
   display: inline-block;
   height: 32px;
-  background-color: rgb(21, 162, 254);
-  background: linear-gradient(
-    to right,
-    rgb(21, 162, 254) 0%,
-    rgb(54, 71, 233) 100%
-  );
+  background-color: #15a2fe;
+  background: linear-gradient(to right, #15a2fe 0%, #3647e9 100%);
   user-select: none;
   cursor: pointer;
   color: white;
@@ -2566,19 +2560,11 @@ body.in_global_drag .friendlist_titlebar {
 }
 
 .retryButton:hover {
-  background: linear-gradient(
-    to right,
-    rgb(51, 192, 255) 0%,
-    rgb(74, 145, 255) 100%
-  );
+  background: linear-gradient(to right, #33c0ff 0%, #4a91ff 100%);
 }
 
 .retryButton:active {
-  background: linear-gradient(
-    to right,
-    rgb(1, 142, 234) 0%,
-    rgb(24, 95, 235) 100%
-  );
+  background: linear-gradient(to right, #018eea 0%, #185feb 100%);
 }
 
 .friends_loading_error .currentUserContainer {
@@ -2639,7 +2625,7 @@ body.in_global_drag .friendlist_titlebar {
   transition: color 0.94s ease-in-out;
   text-shadow: 1px 1px 3px #000;
   -webkit-app-region: drag;
-  color: rgb(87, 87, 87);
+  color: #575757;
 }
 
 .friends_loading_error .cautionIcon {
@@ -2657,11 +2643,11 @@ body.in_global_drag .friendlist_titlebar {
 
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation line,
 .friends_loading_error .cautionIcon .SVGIcon_Caution .triangle path {
-  stroke: rgb(255, 174, 0);
+  stroke: #ffae00;
 }
 
 .friends_loading_error .cautionIcon .SVGIcon_Caution .exclamation path {
-  fill: rgb(255, 174, 0);
+  fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map*/
+/*# sourceMappingURL=friends.css.map?contenthash=c6b9b506df388f0242f6*/

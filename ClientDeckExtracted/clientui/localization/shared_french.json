@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Veuillez vous reconnecter (%1$s)",
 	"Login_SignIn_WithAccountName": "Se connecter avec un nom de compte",
 	"Login_SignIn_OrWithQRCode": "Ou se connecter avec un QR code",
+	"Login_SignIn_EscapeHatch": "Vous rencontrez des problèmes avec la nouvelle méthode de connexion ? <1>Cliquez ici</1> pour revenir à l'ancienne.",
 	"Login_UseAppForQR": "Utilisez l'%1$s pour vous connecter avec un QR code",
 	"Login_UseAppForQR_Inner": "application mobile Steam",
 	"Login_GetMobileApp_Link": "Obtenir l'application mobile",

@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Log på igen (%1$s)",
 	"Login_SignIn_WithAccountName": "Log på med kontonavn",
 	"Login_SignIn_OrWithQRCode": "Eller log på med QR",
+	"Login_SignIn_EscapeHatch": "Har du problemer med det nye login? <1>Klik her</1> for at bruge den gamle metode.",
 	"Login_UseAppForQR": "Brug %1$s til at logge på ved hjælp af en QR-kode",
 	"Login_UseAppForQR_Inner": "Steam-mobilappen",
 	"Login_GetMobileApp_Link": "Få mobilappen",

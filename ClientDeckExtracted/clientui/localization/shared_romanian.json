@@ -1079,6 +1079,7 @@
 	"Login_RefreshReason_Generic": "Te rugăm să te conectezi din nou (%1$s)",
 	"Login_SignIn_WithAccountName": "Conectează-te cu numele contului",
 	"Login_SignIn_OrWithQRCode": "Sau conectează-te cu un cod QR",
+	"Login_SignIn_EscapeHatch": "Întâmpini probleme cu noua interfață de conectare? <1>Apasă aici</1> pentru utilizarea versiunii vechi.",
 	"Login_UseAppForQR": "Utilizează %1$s pentru a te conecta cu ajutorul codului QR",
 	"Login_UseAppForQR_Inner": "aplicația Steam pentru dispozitive mobile",
 	"Login_GetMobileApp_Link": "Obține aplicația pentru dispozitive mobile",

@@ -159,7 +159,8 @@ body {
   .newlogindialog_QR_1d6FZ {
   aspect-ratio: 1;
   border-radius: 2px;
-  margin: 8px 8px 8px 0px;
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
@@ -247,8 +248,6 @@ body {
   .newlogindialog_Check_6EoZE {
   width: 100%;
   height: 100%;
-  background-color: #1999ff;
-  border-radius: 2px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover {
   background-color: #393c44;
