@@ -38946,12 +38946,11 @@ a {
 }
 .autographguidelines_AutographGuidelines_fe1EM {
   width: 100%;
-  min-width: 320px;
+  min-width: 1200px;
   background-color: #000;
   color: #fff;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 .autographguidelines_AutographGuidelines_fe1EM
   .autographguidelines_Background_3BKNm {
@@ -39143,6 +39142,7 @@ a {
   .autographguidelines_ImagePreparationContainer_2Deg3
   .autographguidelines_ClickZoom_2-a-7 {
   width: 45%;
+  margin: auto;
 }
 .autographguidelines_AutographGuidelines_fe1EM
   .autographguidelines_Background_3BKNm

@@ -32973,7 +32973,7 @@
           {
             imageName: "sign-signature-postit-note.jpg",
             locIdentifier: "sign",
-            bullets: 1,
+            bullets: 4,
           },
         ],
         Co = [
