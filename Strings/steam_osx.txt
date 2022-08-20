@@ -31,8 +31,8 @@ __TEXT
 =7
 __unwind_info
 __TEXT
-0Q;
-0Q;
+8Q;
+8Q;
 __DATA
 <
 <
@@ -146,8 +146,8 @@ h
 (
 (
 (
+o1
 9
-f1
 0
 @
 @
@@ -2227,7 +2227,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Aug 18 2022 18:51:56
+Startup - updater built Aug 19 2022 17:53:32
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2514,8 +2514,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Aug 18 2022
-18:51:57
+Aug 19 2022
+17:53:33
 crashhandler003
 steam
 Steam Executable Crash
@@ -2612,7 +2612,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-18:51:55
+17:53:31
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10377,7 +10377,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-18:49:43
+17:51:15
 Jan
 Feb
 Mar
@@ -12178,7 +12178,7 @@ cRecordInit > 0
 m_cBucket > 0
 m_pMemoryPoolRecord
 PvRecordFind( unKey ) == NULL
-Performance warning: too many items, not enough buckets
+Performance warning: too many items (%d), not enough buckets (%d)
 not enough buckets in thash class %s (%d records, %d buckets)
 pvRemove
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
@@ -12759,8 +12759,8 @@ t_7
 (
 (
 (
+o1
 9
-f1
 0
 @
 @
@@ -12796,7 +12796,6 @@ Z&
 &
 0
 0
-0
 g5
 0
 V5
@@ -12812,6 +12811,7 @@ V5
 @9
 &
 &
+3/
 
 0
 Ic
@@ -12872,11 +12872,9 @@ IcE
 .
 a3
 V
-'-
--
+%-
 -
 =
-u,
 2
 j6
 ,
@@ -12885,11 +12883,8 @@ j6
 ,
 =
 9
-D+
+q+
 1
-3+
-1+
-+
 +
 +
 +
@@ -12902,9 +12897,13 @@ c
 )
 *
 (
+(
+q'
 75
 '
 '
+d&
+^&
 @
 M9e
 &
@@ -13531,10 +13530,11 @@ to=
 @
 H=
 =
+b
+C
 
 =
 @
-*
 =
 @
 =*.*
