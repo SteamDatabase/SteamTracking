@@ -1033,7 +1033,7 @@
           }
         }
       });
-      (f.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0"),
+      (f.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0&playsinline=1"),
         (0, i.gn)([s.LO], f.prototype, "m_youtubeInfo", void 0),
         (0, i.gn)([h.ak], f.prototype, "OnClick", null),
         (f = a = (0, i.gn)([l.Pi], f));
