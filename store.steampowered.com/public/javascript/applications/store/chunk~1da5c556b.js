@@ -128,21 +128,21 @@
       "use strict";
       n.d(t, {
         Ah: () => N,
-        BB: () => x,
+        BB: () => B,
         Be: () => C,
         GS: () => O,
-        HC: () => F,
+        HC: () => M,
         LW: () => L,
-        MJ: () => H,
+        MJ: () => V,
         R6: () => I,
         YC: () => U,
-        aV: () => M,
+        aV: () => P,
         im: () => R,
-        jj: () => P,
+        jj: () => H,
         pu: () => A,
-        qy: () => V,
+        qy: () => G,
         vZ: () => T,
-        zV: () => B,
+        zV: () => w,
       });
       var a = n(70655),
         i = n(67294),
@@ -154,17 +154,17 @@
         c = n(24399),
         m = n(77765),
         u = n(8456),
-        _ = n(50949),
-        p = n(35841),
+        p = n(50949),
+        _ = n(35841),
         h = n(95598),
         E = n(65924),
         b = n(7573),
-        v = n(41311),
-        g = n(35092),
-        f = n(90666),
-        D = n(49727),
-        y = n(10126),
-        S = n.n(y);
+        y = n(41311),
+        v = n(35092),
+        g = n(90666),
+        f = n(49727),
+        D = n(10126),
+        S = n.n(D);
       const C = new Map([
         [
           "b",
@@ -193,8 +193,8 @@
           },
         ],
         ["h1", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h2", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: x, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h2", { Constructor: w, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h3", { Constructor: B, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
@@ -265,7 +265,7 @@
                   className: (0, b.Z)(S().Spoiler, t && S().Revealed),
                   focusable: !0,
                   onActivate: a,
-                  onOKActionDescription: (0, v.Xx)(
+                  onOKActionDescription: (0, y.Xx)(
                     t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show"
                   ),
                 },
@@ -320,7 +320,7 @@
                   e.children
                 );
               return i.createElement(
-                w,
+                x,
                 { className: n, href: t, id: a },
                 e.children
               );
@@ -355,9 +355,9 @@
             autocloses: !1,
           },
         ],
-        ["list", { Constructor: M, autocloses: !1, skipInternalNewline: !0 }],
+        ["list", { Constructor: P, autocloses: !1, skipInternalNewline: !0 }],
         ["olist", { Constructor: O, autocloses: !1, skipInternalNewline: !0 }],
-        ["*", { Constructor: F, autocloses: !0, skipInternalNewline: !0 }],
+        ["*", { Constructor: M, autocloses: !0, skipInternalNewline: !0 }],
         [
           "table",
           {
@@ -476,7 +476,7 @@
                 i.createElement(
                   "div",
                   { className: S().ExpandSectionHeader, onClick: () => a(!n) },
-                  (0, v.Xx)(n ? o.expanded : o.collapsed),
+                  (0, y.Xx)(n ? o.expanded : o.collapsed),
                   i.createElement(
                     "div",
                     { className: S().EmbedArrow },
@@ -502,10 +502,10 @@
             Constructor: function (e) {
               const { event: t } = e.context,
                 n = R(e.args);
-              if (n) return i.createElement(_.C, { eventGID: n });
+              if (n) return i.createElement(p.C, { eventGID: n });
               if (t) {
-                const e = (0, o.jM)(f.De.LANGUAGE);
-                return i.createElement(_.m, { eventModel: t, lang: e });
+                const e = (0, o.jM)(g.De.LANGUAGE);
+                return i.createElement(p.m, { eventModel: t, lang: e });
               }
               return null;
             },
@@ -519,8 +519,8 @@
               const t = R(e.args),
                 n = "button" == R(e.args, "style") ? S().LinkButton : null;
               return i.createElement(
-                w,
-                { className: n, href: `${f.De.PARTNER_BASE_URL}doc/${t}` },
+                x,
+                { className: n, href: `${g.De.PARTNER_BASE_URL}doc/${t}` },
                 e.children
               );
             },
@@ -529,18 +529,18 @@
         ],
       ]);
       new Map([
-        ["looping_media", { Constructor: P, autocloses: !1 }],
-        ["video", { Constructor: V, autocloses: !1 }],
+        ["looping_media", { Constructor: H, autocloses: !1 }],
+        ["video", { Constructor: G, autocloses: !1 }],
         ["youtubeorvideo", { Constructor: U, autocloses: !1 }],
-        ["previewyoutube", { Constructor: H, autocloses: !1 }],
+        ["previewyoutube", { Constructor: V, autocloses: !1 }],
       ]);
       function T(e, t, n = 0) {
-        const a = f.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
-        if (void 0 !== e && e.startsWith(D.A1))
-          return a + e.substring(D.A1.length + 1);
-        if (void 0 !== e && e.startsWith(D.UC)) {
+        const a = g.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
+        if (void 0 !== e && e.startsWith(f.A1))
+          return a + e.substring(f.A1.length + 1);
+        if (void 0 !== e && e.startsWith(f.UC)) {
           const i = new Array(),
-            o = e.substr(D.UC.length + 1),
+            o = e.substr(f.UC.length + 1),
             s = c.aN.GetHashFromHashAndExt(o),
             l = c.aN.GetExtensionStringFromHashAndExt(o);
           if (null != t) {
@@ -557,11 +557,11 @@
       function N(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
-        const n = (0, g.FM)(e).toLowerCase(),
-          a = (0, g.FM)(f.De.COMMUNITY_BASE_URL).toLowerCase(),
-          i = (0, g.FM)(f.De.STORE_BASE_URL).toLowerCase(),
-          o = (0, g.FM)(f.De.HELP_BASE_URL).toLowerCase(),
-          r = (0, g.FM)(f.De.PARTNER_BASE_URL || "").toLowerCase();
+        const n = (0, v.FM)(e).toLowerCase(),
+          a = (0, v.FM)(g.De.COMMUNITY_BASE_URL).toLowerCase(),
+          i = (0, v.FM)(g.De.STORE_BASE_URL).toLowerCase(),
+          o = (0, v.FM)(g.De.HELP_BASE_URL).toLowerCase(),
+          r = (0, v.FM)(g.De.PARTNER_BASE_URL || "").toLowerCase();
         return (
           n !== a &&
           n !== i &&
@@ -600,13 +600,13 @@
       function I(e) {
         return k(e, (0, b.Z)(S().Header1, "BB_Header1"));
       }
-      function B(e) {
+      function w(e) {
         return k(e, (0, b.Z)(S().Header2, "BB_Header2"));
       }
-      function x(e) {
+      function B(e) {
         return k(e, (0, b.Z)(S().Header3, "BB_Header3"));
       }
-      const w = (e) => {
+      const x = (e) => {
         const { href: t } = e,
           n = (0, a._T)(e, ["href"]),
           o = (0, E.bJ)();
@@ -614,8 +614,8 @@
           l = (0, d.B1)(t, o);
         N(l) &&
           ((l =
-            (f.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-            f.De.COMMUNITY_BASE_URL +
+            (g.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+            g.De.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             l),
           (r = "noopener nofollow"));
@@ -624,7 +624,7 @@
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, g.XW)(t)
+            ? (0, v.XW)(t)
             : void 0;
         return i.createElement(
           s.IS,
@@ -641,14 +641,14 @@
             i.createElement(
               "div",
               { className: S().QuoteAuthor },
-              (0, v.Xx)("#Bbcode_Originally_Posted_By") + " ",
+              (0, y.Xx)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               i.createElement("b", null, t + ":")
             ),
           e.children
         );
       }
-      function M(e) {
+      function P(e) {
         return i.createElement("ul", { className: S().List }, e.children);
       }
       function O(e) {
@@ -658,7 +658,7 @@
           e.children
         );
       }
-      function F(e) {
+      function M(e) {
         let t = R(e.args, "id");
         return (
           t &&
@@ -673,8 +673,8 @@
           )
         );
       }
-      function H(e) {
-        if (f.De.EREALM === r.IN.k_ESteamRealmChina) return null;
+      function V(e) {
+        if (g.De.EREALM === r.IN.k_ESteamRealmChina) return null;
         let t = R(e.args);
         if (t) {
           let e = t.split(";");
@@ -698,24 +698,24 @@
         }
         return i.createElement(i.Fragment, null);
       }
-      function G(e) {
+      function F(e) {
         let t = R(e.args, "poster");
-        t && (t = (0, g.et)(t));
+        t && (t = (0, v.et)(t));
         const n = new Array();
         {
           const t = R(e.args, "mp4");
-          t && n.push({ sURL: (0, g.et)(t), sFormat: "video/mp4" });
+          t && n.push({ sURL: (0, v.et)(t), sFormat: "video/mp4" });
           const a = R(e.args, "webm");
-          a && n.push({ sURL: (0, g.et)(a), sFormat: "video/webm" });
+          a && n.push({ sURL: (0, v.et)(a), sFormat: "video/webm" });
         }
-        const a = (0, o.jM)(f.De.LANGUAGE),
+        const a = (0, o.jM)(g.De.LANGUAGE),
           i = 0 != a,
           s = new Array();
         for (let t = 0; t < 30; t++) {
           const n = R(e.args, "sub_" + (0, r.dt)(t));
           n &&
             s.push({
-              sURL: (0, g.et)(n),
+              sURL: (0, v.et)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: i && t == a,
@@ -723,7 +723,7 @@
           const o = R(e.args, "cap_" + (0, r.dt)(t));
           o &&
             s.push({
-              sURL: (0, g.et)(o),
+              sURL: (0, v.et)(o),
               eLanguage: t,
               sKind: "captions",
               bDefault: i && t == a,
@@ -731,26 +731,26 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function P(e) {
-        const t = G(e);
-        return i.createElement(p.Y, {
+      function H(e) {
+        const t = F(e);
+        return i.createElement(_.Y, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
           bLoop: !0,
         });
       }
-      function V(e) {
-        const t = G(e),
+      function G(e) {
+        const t = F(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, g.et)(n), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, v.et)(n), sFormat: "video/webm" });
         const a = R(e.args, "autoplay"),
           o = "0" !== a && "off" !== a && "false" !== a,
           r = R(e.args, "controls"),
           s = "0" !== r && "off" !== r && "false" !== r;
-        return i.createElement(p.Y, {
+        return i.createElement(_.Y, {
           video: t,
           bAutoPlay: o,
           bControls: s,
@@ -759,10 +759,10 @@
       }
       function U(e) {
         if (
-          f.De.EREALM === r.IN.k_ESteamRealmChina ||
-          "CN" == f.De.COUNTRY.toLocaleUpperCase()
+          g.De.EREALM === r.IN.k_ESteamRealmChina ||
+          "CN" == g.De.COUNTRY.toLocaleUpperCase()
         )
-          return V(e);
+          return G(e);
         const t = R(e.args, "youtubeid"),
           n = R(e.args, "size"),
           a = R(e.args, "seconds");
@@ -906,141 +906,113 @@
     },
     77765: (e, t, n) => {
       "use strict";
-      n.d(t, { O: () => f });
-      var a,
-        i = n(70655),
-        o = n(9669),
-        r = n.n(o),
-        s = n(22188),
-        l = n(29323),
-        d = n(67294),
-        c = n(63315),
-        m = n(13596),
-        u = n(7573),
-        _ = n(41311),
-        p = n(93976),
-        h = n(30156),
-        E = n(90666),
-        b = n(8456),
-        v = n.n(b),
-        g = n(47808);
-      let f = (a = class extends d.Component {
-        constructor(e) {
-          super(e), (this.m_cancelSignal = r().CancelToken.source());
-          let t = !this.props.bShowVideoImmediately;
-          (this.state = { bSummaryMode: t, bLoadedMetaData: !1 }),
-            (this.m_youtubeInfo = {
-              title: (0, _.Xx)("#Loading"),
-              description: "",
-              videoid: e.videoID,
-              views: "0",
-            });
-        }
-        componentDidMount() {
-          this.state.bSummaryMode && this.HintLoadMetadata();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "YouTubeInlineSnippet component unmounted"
-          );
-        }
-        HintLoadMetadata() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            c.A.LoadYouTubeDynamicData(
-              [this.props.videoID],
-              this.m_cancelSignal
-            )
+      n.d(t, { O: () => h });
+      var a = n(67294),
+        i = n(63315),
+        o = n(13596),
+        r = n(74163),
+        s = n(93976),
+        l = n(7573),
+        d = n(41311),
+        c = n(47808),
+        m = n(90666),
+        u = n(90844),
+        p = n(8456),
+        _ = n.n(p);
+      function h(e) {
+        const {
+            videoID: t,
+            bShowVideoImmediately: n,
+            bAutoPlay: p,
+            nStartSeconds: h,
+            classNameSize: E,
+            classNameAlign: b,
+          } = e,
+          [y, v] = (0, a.useState)(!n),
+          [g, f] = (0, a.useState)(!1),
+          D = (0, r.T)("YouTubeInlineSnippet"),
+          [S, C] = (0, a.useState)({
+            title: (0, d.Xx)("#Loading"),
+            description: "",
+            videoid: t,
+            views: "0",
+          });
+        (0, a.useEffect)(() => {
+          y &&
+            i.A.LoadYouTubeDynamicData([t], D)
               .then((e) => {
-                !this.m_cancelSignal.token.reason &&
-                  e.length > 0 &&
-                  ((this.m_youtubeInfo = e[0]),
-                  this.setState({ bLoadedMetaData: !0 }));
+                !D.token.reason && e.length > 0 && (C(e[0]), f(!0));
               })
               .catch((e) =>
                 console.error(
-                  "YouTubeInlineSnippet: " + (0, p.l)(e).strErrorMsg
+                  "YouTubeInlineSnippet: " + (0, s.l)(e).strErrorMsg
                 )
               );
-          });
-        }
-        OnClick() {
-          this.setState({ bSummaryMode: !1 });
-        }
-        render() {
-          let e = this.props.videoID;
-          if (this.state.bSummaryMode) {
-            let t = this.m_youtubeInfo.title,
-              n = this.m_youtubeInfo.views,
-              a = this.m_youtubeInfo.description;
-            return d.createElement(
+        }, [y, D, t]);
+        const T = !1;
+        if (
+          (a.useEffect(() => {
+            n && (0, u.m)(() => {});
+          }, [n, T]),
+          y)
+        ) {
+          const e = S.title,
+            n = S.views,
+            i = S.description;
+          return a.createElement(
+            "div",
+            { className: _().DynamicLinkBox, onClick: () => v(!1) },
+            a.createElement("img", {
+              className: _().DynamicLink_Preview,
+              src: "https://img.youtube.com/vi/" + t + "/0.jpg",
+            }),
+            a.createElement(
               "div",
-              { className: v().DynamicLinkBox, onClick: this.OnClick },
-              d.createElement("img", {
-                className: v().DynamicLink_Preview,
-                src: "https://img.youtube.com/vi/" + e + "/0.jpg",
-              }),
-              d.createElement(
+              { className: _().DynamicLink_Content },
+              a.createElement(
                 "div",
-                { className: v().DynamicLink_Content },
-                d.createElement(
-                  "div",
-                  { className: v().DynamicLink_Name },
-                  (0, _.Xx)("#EventEditor_YouTubeVideoTitle", t)
-                ),
-                d.createElement(
-                  "div",
-                  { className: v().DynamicLink_YoutubeViews },
-                  (0, _.Xx)(
-                    "#EventEditor_YouTubeVideoViews",
-                    (0, g.AV)(Number(n))
-                  )
-                ),
-                d.createElement(
-                  "div",
-                  { className: v().Dynamiclink_Content },
-                  this.state.bLoadedMetaData && a,
-                  !this.state.bLoadedMetaData && d.createElement(m.V, null)
+                { className: _().DynamicLink_Name },
+                (0, d.Xx)("#EventEditor_YouTubeVideoTitle", e)
+              ),
+              a.createElement(
+                "div",
+                { className: _().DynamicLink_YoutubeViews },
+                (0, d.Xx)(
+                  "#EventEditor_YouTubeVideoViews",
+                  (0, c.AV)(Number(n))
                 )
+              ),
+              a.createElement(
+                "div",
+                { className: _().Dynamiclink_Content },
+                g && i,
+                !g && a.createElement(o.V, { size: "medium" })
               )
-            );
-          }
-          {
-            let t = this.props.classNameSize,
-              n = this.props.classNameAlign;
-            const i =
-              "https://www.youtube.com/embed/" +
-              e +
-              a.m_strYouTubeOptions +
-              (this.props.bAutoPlay ? "&autoplay=1" : "") +
-              (this.props.nStartSeconds
-                ? "&t=" + this.props.nStartSeconds
-                : "");
-            return d.createElement(
-              "div",
-              { className: (0, u.Z)(v().PreviewYouTubeVideo, t, n), id: e },
-              d.createElement("img", {
-                src:
-                  E.De.COMMUNITY_CDN_URL +
-                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-              }),
-              d.createElement("iframe", {
-                className: (0, u.Z)(v().PreviewYouTubeVideo, t, n),
-                src: i,
-                allowFullScreen: !0,
-                frameBorder: 0,
-              })
-            );
-          }
+            )
+          );
         }
-      });
-      (f.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0&playsinline=1"),
-        (0, i.gn)([s.LO], f.prototype, "m_youtubeInfo", void 0),
-        (0, i.gn)([h.ak], f.prototype, "OnClick", null),
-        (f = a = (0, i.gn)([l.Pi], f));
+        return a.createElement(
+          "div",
+          { className: (0, l.Z)(_().PreviewYouTubeVideo, E, b), id: t },
+          a.createElement("img", {
+            src:
+              m.De.COMMUNITY_CDN_URL +
+              "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+          }),
+          a.createElement(u.e, {
+            video: t,
+            autoplay: p,
+            startSeconds: h,
+            playsInline: !0,
+            autopause: !0,
+            showFullscreenBtn: !0,
+          })
+        );
+      }
     },
     50949: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => U, m: () => V });
+      n.d(t, { C: () => U, m: () => G });
       var a = n(70655),
         i = n(29323),
         o = n(30381),
@@ -1051,13 +1023,13 @@
         c = n(50153),
         m = (n(37662), n(76776)),
         u = n(51391),
-        _ = n(5525),
-        p = n(9915),
+        p = n(5525),
+        _ = n(9915),
         h = n(22188),
         E = n(90666),
         b = (n(82946), n(9669)),
-        v = n.n(b);
-      class g {
+        y = n.n(b);
+      class v {
         constructor() {
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
@@ -1108,7 +1080,7 @@
         InternalLoad() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             const e = E.De.STORE_BASE_URL + "notification/ajaxusersettings",
-              t = yield v().get(e, { withCredentials: !0 });
+              t = yield y().get(e, { withCredentials: !0 });
             return (
               1 == t.data.success &&
                 (0, h.z)(() => {
@@ -1121,11 +1093,11 @@
           });
         }
       }
-      (0, a.gn)([h.LO], g.prototype, "m_bValidatedEmail", void 0),
-        (0, a.gn)([h.LO], g.prototype, "m_nMobileDeviceCount", void 0);
-      let f = new g();
-      var D = n(16156),
-        y = n(48341),
+      (0, a.gn)([h.LO], v.prototype, "m_bValidatedEmail", void 0),
+        (0, a.gn)([h.LO], v.prototype, "m_nMobileDeviceCount", void 0);
+      let g = new v();
+      var f = n(16156),
+        D = n(48341),
         S = n(96602),
         C = n(84351),
         T = n(59650),
@@ -1134,29 +1106,29 @@
         L = n(28268),
         k = n(93976),
         I = n(7573),
-        B = n(41311),
-        x = n(30156),
-        w = n(30600),
+        w = n(41311),
+        B = n(30156),
+        x = n(30600),
         A = n(35092),
-        M = n(77569),
-        O = n.n(M),
-        F = n(38600),
-        H = n(62209),
-        G = n(34133),
-        P = n(23211);
-      let V = class extends r.Component {
+        P = n(77569),
+        O = n.n(P),
+        M = n(38600),
+        V = n(62209),
+        F = n(34133),
+        H = n(23211);
+      let G = class extends r.Component {
         constructor() {
           super(...arguments),
             (this.m_elDropDownRef = r.createRef()),
             (this.m_bLoadWasCancelled = !1),
             (this.state = {
               bIsOpen: !1,
-              bIsLoadingNotificationSettings: !f.BIsLoaded(),
+              bIsLoadingNotificationSettings: !g.BIsLoaded(),
             });
         }
         componentDidMount() {
           this.state.bIsLoadingNotificationSettings &&
-            f
+            g
               .HintLoad()
               .catch(
                 (e) => (
@@ -1181,7 +1153,7 @@
           this.m_bLoadWasCancelled = !0;
         }
         ToggleMenu(e) {
-          const t = p.cb.Get().BIsUserLoggedIn();
+          const t = _.cb.Get().BIsUserLoggedIn();
           t || E.De.IN_CLIENT
             ? (!t &&
                 E.De.IN_CLIENT &&
@@ -1193,12 +1165,12 @@
               e.preventDefault())
             : (0, T.AM)(
                 r.createElement(C.uH, {
-                  strTitle: (0, B.Xx)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, B.Xx)(
+                  strTitle: (0, w.Xx)("#EventDisplay_Share_NotLoggedIn"),
+                  strDescription: (0, w.Xx)(
                     "#EventDisplay_Share_NotLoggedIn_Description"
                   ),
-                  strOKButtonText: (0, B.Xx)("#MobileLogin_SignIn"),
-                  onOK: () => (0, P.Xt)(),
+                  strOKButtonText: (0, w.Xx)("#MobileLogin_SignIn"),
+                  onOK: () => (0, H.Xt)(),
                 }),
                 window
               );
@@ -1207,7 +1179,7 @@
           if (this.m_iMenuInstance) this.m_iMenuInstance.Show();
           else {
             let e = r.createElement(
-                Y,
+                W,
                 Object.assign({}, this.props, {
                   fnHasReminderSet: () => this.BHasSomeNotificationSetting(),
                   fnHidePanel: this.HideMenu,
@@ -1219,9 +1191,9 @@
                 bDisablePopTop: !0,
                 bMatchWidth: !0,
                 strClassName: (0, I.Z)(
-                  H.ReminderDialog,
-                  H.ReminderOptions,
-                  D.contextMenu
+                  V.ReminderDialog,
+                  V.ReminderOptions,
+                  f.contextMenu
                 ),
               };
             (this.m_iMenuInstance = (0, l.yV)(
@@ -1245,21 +1217,21 @@
           const { eventModel: e } = this.props,
             t = e.GID;
           return (
-            (f.BHasValidatedEmail() &&
-              p.cb
+            (g.BHasValidatedEmail() &&
+              _.cb
                 .Get()
                 .BFollowsEventAndNotifiedBy(
                   e.clanSteamID,
                   t,
-                  p.rE.k_ENotifyFlagByEmail
+                  _.rE.k_ENotifyFlagByEmail
                 )) ||
-            (f.BHasPushNotification() &&
-              p.cb
+            (g.BHasPushNotification() &&
+              _.cb
                 .Get()
                 .BFollowsEventAndNotifiedBy(
                   e.clanSteamID,
                   t,
-                  p.rE.k_ENotifyFlagByPush
+                  _.rE.k_ENotifyFlagByPush
                 ))
           );
         }
@@ -1270,10 +1242,10 @@
             "div",
             {
               className: (0, I.Z)({
-                [H.ReminderCheckBox]: !0,
+                [V.ReminderCheckBox]: !0,
                 [O().ReminderCtn]: !0,
-                [H.IconMode]: e,
-                [H.TextMode]: !e,
+                [V.IconMode]: e,
+                [V.TextMode]: !e,
                 ReminderSet: t,
                 RemindMeWidget: !0,
               }),
@@ -1283,21 +1255,21 @@
             t &&
               r.createElement(
                 "div",
-                { className: H.RemindCheck },
+                { className: V.RemindCheck },
                 r.createElement(N.JrY, null)
               ),
             e &&
               r.createElement(
                 "div",
-                { className: H.RemindBell },
+                { className: V.RemindBell },
                 r.createElement(N.Uos, null)
               ),
             r.createElement(
               "div",
-              { className: H.ReminderDefault },
-              (0, B.Xx)("#EventDisplay_Reminder_SetReminder")
+              { className: V.ReminderDefault },
+              (0, w.Xx)("#EventDisplay_Reminder_SetReminder")
             ),
-            r.createElement("div", { className: H.ReminderOptions })
+            r.createElement("div", { className: V.ReminderOptions })
           );
         }
       };
@@ -1308,18 +1280,18 @@
         if (!i) return null;
         const o = (0, s.jM)(E.De.LANGUAGE);
         return r.createElement(
-          V,
+          G,
           Object.assign({ lang: o }, n, { eventModel: i })
         );
       }
-      function W(e) {
+      function Y(e) {
         return o.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, a.gn)([x.ak], V.prototype, "ToggleMenu", null),
-        (0, a.gn)([x.ak], V.prototype, "ShowMenu", null),
-        (0, a.gn)([x.ak], V.prototype, "HideMenu", null),
-        (V = (0, a.gn)([i.Pi], V));
-      let Y = class extends r.Component {
+      (0, a.gn)([B.ak], G.prototype, "ToggleMenu", null),
+        (0, a.gn)([B.ak], G.prototype, "ShowMenu", null),
+        (0, a.gn)([B.ak], G.prototype, "HideMenu", null),
+        (G = (0, a.gn)([i.Pi], G));
+      let W = class extends r.Component {
         constructor() {
           super(...arguments), (this.state = { bIsRequestInFlight: !1 });
         }
@@ -1330,25 +1302,25 @@
             if (i && i != s.Z3) {
               this.setState({ bIsRequestInFlight: !0 });
               try {
-                yield p.cb
+                yield _.cb
                   .Get()
                   .SetFollowOrUnfollowEvent(!e, t, a.clanSteamID, i, n),
                   e &&
-                    (n === p.rE.k_ENotifyFlagByEmail
+                    (n === _.rE.k_ENotifyFlagByEmail
                       ? this.TrackEventAction(u.g.k_eReminder_Email)
-                      : n === p.rE.k_ENotifyFlagByPush &&
+                      : n === _.rE.k_ENotifyFlagByPush &&
                         this.TrackEventAction(u.g.k_eReminder_MobilePush));
               } catch (e) {
                 (0, T.BR)(
                   r.createElement(
                     C.JX,
                     {
-                      strTitle: (0, B.Xx)(
+                      strTitle: (0, w.Xx)(
                         t
                           ? "#EventDisplay_Reminder_IgnoreEvent_Error"
                           : "#EventDisplay_Reminder_FollowEvent_Error"
                       ),
-                      strDescription: (0, B.Xx)(
+                      strDescription: (0, w.Xx)(
                         t
                           ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
                           : "#EventDisplay_Reminder_FollowEvent_ErrorDesc"
@@ -1364,10 +1336,10 @@
           });
         }
         OnChangeFollowByEmail(e) {
-          this.OnChangeFollowOrIgnore(e, !1, p.rE.k_ENotifyFlagByEmail);
+          this.OnChangeFollowOrIgnore(e, !1, _.rE.k_ENotifyFlagByEmail);
         }
         OnChangeFollowByPush(e) {
-          this.OnChangeFollowOrIgnore(e, !1, p.rE.k_ENotifyFlagByPush);
+          this.OnChangeFollowOrIgnore(e, !1, _.rE.k_ENotifyFlagByPush);
         }
         GetExternalCalendarEventTitle() {
           const { eventModel: e, lang: t } = this.props,
@@ -1390,17 +1362,17 @@
           n = n ? `${n}\n\n\n` : "";
           const a = e.GetSummaryWithFallback(t),
             i = e.jsondata.bSaleEnabled
-              ? F.Ue.k_eStoreSalePage
-              : F.Ue.k_eStoreView;
-          return `${n}${a}\n\n${(0, F.q)(e, i, "forceAbsolute")}`;
+              ? M.Ue.k_eStoreSalePage
+              : M.Ue.k_eStoreView;
+          return `${n}${a}\n\n${(0, M.q)(e, i, "forceAbsolute")}`;
         }
         GetGoogleCalendarLink() {
           const { eventModel: e } = this.props,
             t = encodeURIComponent(this.GetExternalCalendarEventTitle()),
             n = encodeURIComponent(this.GetExternalCalendarEventBody()),
             a = e.GetStartTimeAndDateUnixSeconds(),
-            i = W(a),
-            o = W(e.GetEndTimeAndDateUnixSeconds() || a + w._H.PerHour),
+            i = Y(a),
+            o = Y(e.GetEndTimeAndDateUnixSeconds() || a + x._H.PerHour),
             r =
               (E.De.IN_CLIENT ? "steam://openurl_external/" : "") +
               `https://calendar.google.com/calendar/r/eventedit?text=${t}&details=${n}&dates=${i}/${o}`;
@@ -1412,7 +1384,7 @@
               ? "app/" + t.appid
               : "group/" + t.clanSteamID.GetAccountID(),
             i = "l=" + (0, s.j_)(n);
-          return `${E.De.STORE_BASE_URL}${(0, F.x3)()}/download/${a}/${e}/${
+          return `${E.De.STORE_BASE_URL}${(0, M.x3)()}/download/${a}/${e}/${
             t.GID
           }?${i}`;
         }
@@ -1425,8 +1397,8 @@
               fnHasReminderSet: i,
               fnHidePanel: o,
             } = this.props,
-            s = f.BHasValidatedEmail(),
-            l = f.BHasPushNotification(),
+            s = g.BHasValidatedEmail(),
+            l = g.BHasPushNotification(),
             d = t && e.GetStartTimeAndDateUnixSeconds();
           return r.createElement(
             "div",
@@ -1435,8 +1407,8 @@
               "div",
               {
                 className: (0, I.Z)(
-                  H.ReminderCheckBox,
-                  a ? H.IconMode : H.TextMode,
+                  V.ReminderCheckBox,
+                  a ? V.IconMode : V.TextMode,
                   "RemindMeWidget"
                 ),
                 onClick: o,
@@ -1444,48 +1416,48 @@
               i() &&
                 r.createElement(
                   "div",
-                  { className: H.RemindCheck },
+                  { className: V.RemindCheck },
                   r.createElement(N.JrY, null)
                 ),
               a &&
                 r.createElement(
                   "div",
-                  { className: H.RemindBell },
+                  { className: V.RemindBell },
                   r.createElement(N.Uos, null)
                 ),
               r.createElement(
                 "div",
-                { className: H.ReminderDefault },
-                (0, B.Xx)("#EventDisplay_Reminder_SetReminder")
+                { className: V.ReminderDefault },
+                (0, w.Xx)("#EventDisplay_Reminder_SetReminder")
               ),
-              r.createElement("div", { className: H.ReminderOpennedOptions })
+              r.createElement("div", { className: V.ReminderOpennedOptions })
             ),
             r.createElement(
               "div",
               {
                 className: (0, I.Z)(
-                  H.FlexColumnContainer,
-                  H.ReminderBackground,
-                  n && H.ReminderExpandsLeft
+                  V.FlexColumnContainer,
+                  V.ReminderBackground,
+                  n && V.ReminderExpandsLeft
                 ),
               },
               this.state.bIsRequestInFlight &&
                 r.createElement(R.V, {
-                  className: H.RpcThrobber,
+                  className: V.RpcThrobber,
                   size: "xlarge",
                   position: "center",
                 }),
               d &&
                 r.createElement(
                   "div",
-                  { className: H.FullStartTime },
-                  (0, B.kQ)(
+                  { className: V.FullStartTime },
+                  (0, w.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    (0, B.$1)(
+                    (0, w.$1)(
                       d,
-                      (0, w.U8)(
+                      (0, x.U8)(
                         new Date(1e3 * d),
-                        _.JW.GetTimeNowWithOverrideAsDate()
+                        p.JW.GetTimeNowWithOverrideAsDate()
                       )
                     ),
                     (0, S.w$)(d, !0)
@@ -1493,32 +1465,32 @@
                 ),
               r.createElement(
                 "div",
-                { className: H.ReminderOptionsHeader },
-                (0, B.Xx)("#EventDisplay_Reminder_GetNotification_Via")
+                { className: V.ReminderOptionsHeader },
+                (0, w.Xx)("#EventDisplay_Reminder_GetNotification_Via")
               ),
               r.createElement(
                 "div",
-                { className: (0, I.Z)(H.ReminderOption, !s && H.Unverified) },
+                { className: (0, I.Z)(V.ReminderOption, !s && V.Unverified) },
                 r.createElement(
                   L.HP,
                   {
-                    className: H.CheckboxWrapper,
-                    strTooltipClassname: H.ReminderOptionTooltip,
-                    toolTipContent: (0, B.Xx)(
+                    className: V.CheckboxWrapper,
+                    strTooltipClassname: V.ReminderOptionTooltip,
+                    toolTipContent: (0, w.Xx)(
                       s
                         ? "#EventReminder_NotifyByEmail_ttip"
                         : "#EventReminder_NotifyByEmail_Missing"
                     ),
                   },
-                  r.createElement(y.ji, {
-                    label: (0, B.Xx)("#EventDisplay_Reminder_ViaEmail"),
+                  r.createElement(D.ji, {
+                    label: (0, w.Xx)("#EventDisplay_Reminder_ViaEmail"),
                     disabled: !s,
-                    checked: p.cb
+                    checked: _.cb
                       .Get()
                       .BFollowsEventAndNotifiedBy(
                         e.clanSteamID,
                         e.GID,
-                        p.rE.k_ENotifyFlagByEmail
+                        _.rE.k_ENotifyFlagByEmail
                       ),
                     onChange: this.OnChangeFollowByEmail,
                   })
@@ -1526,7 +1498,7 @@
                 !s &&
                   r.createElement(
                     "div",
-                    { className: G.FlexColumnContainer },
+                    { className: F.FlexColumnContainer },
                     r.createElement(
                       "a",
                       {
@@ -1537,33 +1509,33 @@
                             u.g.k_eReminder_EmailUnverified
                           ),
                       },
-                      (0, B.Xx)("#EventReminder_NotifyByEmail_Missing_Add")
+                      (0, w.Xx)("#EventReminder_NotifyByEmail_Missing_Add")
                     )
                   )
               ),
               r.createElement(
                 "div",
-                { className: (0, I.Z)(H.ReminderOption, !l && H.Unverified) },
+                { className: (0, I.Z)(V.ReminderOption, !l && V.Unverified) },
                 r.createElement(
                   L.HP,
                   {
-                    className: H.CheckboxWrapper,
-                    strTooltipClassname: H.ReminderOptionTooltip,
-                    toolTipContent: (0, B.Xx)(
+                    className: V.CheckboxWrapper,
+                    strTooltipClassname: V.ReminderOptionTooltip,
+                    toolTipContent: (0, w.Xx)(
                       l
                         ? "#EventReminder_NotifyByMobile_ttip"
                         : "#EventReminder_NotifyByMobile_Missing"
                     ),
                   },
-                  r.createElement(y.ji, {
-                    label: (0, B.Xx)("#EventDisplay_Reminder_ViaMobileApp"),
+                  r.createElement(D.ji, {
+                    label: (0, w.Xx)("#EventDisplay_Reminder_ViaMobileApp"),
                     disabled: !l,
-                    checked: p.cb
+                    checked: _.cb
                       .Get()
                       .BFollowsEventAndNotifiedBy(
                         e.clanSteamID,
                         e.GID,
-                        p.rE.k_ENotifyFlagByPush
+                        _.rE.k_ENotifyFlagByPush
                       ),
                     onChange: this.OnChangeFollowByPush,
                   })
@@ -1571,7 +1543,7 @@
                 !l &&
                   r.createElement(
                     "div",
-                    { className: G.FlexColumnContainer },
+                    { className: F.FlexColumnContainer },
                     r.createElement(
                       "a",
                       {
@@ -1582,7 +1554,7 @@
                             u.g.k_eReminder_MobilePushMissing
                           ),
                       },
-                      (0, B.Xx)("#EventReminder_NotifyByMobile_Install")
+                      (0, w.Xx)("#EventReminder_NotifyByMobile_Install")
                     )
                   )
               ),
@@ -1591,42 +1563,42 @@
                 null,
                 r.createElement(
                   "div",
-                  { className: H.ReminderOptionsHeader },
-                  (0, B.Xx)("#EventDisplay_Reminder_AddToCalendar")
+                  { className: V.ReminderOptionsHeader },
+                  (0, w.Xx)("#EventDisplay_Reminder_AddToCalendar")
                 ),
                 r.createElement(
                   "div",
-                  { className: H.ReminderCalendarOptions },
+                  { className: V.ReminderCalendarOptions },
                   r.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: V.ReminderOption,
                       href: this.GetICSDownloadLink("ics"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarApple),
                     },
-                    (0, B.Xx)("#EventDisplay_Reminder_AppleCalendar_Short")
+                    (0, w.Xx)("#EventDisplay_Reminder_AppleCalendar_Short")
                   ),
                   r.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: V.ReminderOption,
                       target: E.De.IN_CLIENT ? void 0 : "_blank",
                       href: this.GetGoogleCalendarLink(),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarGoogle),
                     },
-                    (0, B.Xx)("#EventDisplay_Reminder_GoogleCalendar_Short")
+                    (0, w.Xx)("#EventDisplay_Reminder_GoogleCalendar_Short")
                   ),
                   r.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: V.ReminderOption,
                       href: this.GetICSDownloadLink("outlook"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarOutlook),
                     },
-                    (0, B.Xx)("#EventDisplay_Reminder_OutlookCalendar_Short")
+                    (0, w.Xx)("#EventDisplay_Reminder_OutlookCalendar_Short")
                   )
                 )
               ),
@@ -1635,10 +1607,10 @@
           );
         }
       };
-      (0, a.gn)([x.ak], Y.prototype, "OnChangeFollowByEmail", null),
-        (0, a.gn)([x.ak], Y.prototype, "OnChangeFollowByPush", null),
-        (0, a.gn)([x.ak], Y.prototype, "TrackEventAction", null),
-        (Y = (0, a.gn)([i.Pi], Y));
+      (0, a.gn)([B.ak], W.prototype, "OnChangeFollowByEmail", null),
+        (0, a.gn)([B.ak], W.prototype, "OnChangeFollowByPush", null),
+        (0, a.gn)([B.ak], W.prototype, "TrackEventAction", null),
+        (W = (0, a.gn)([i.Pi], W));
     },
     35841: (e, t, n) => {
       "use strict";
@@ -1677,7 +1649,7 @@
         (0, a.gn)([c.ak], m.prototype, "SetVolumePreference", null);
       const u = (e) => {
         const { video: t, bAutoPlay: n, bControls: a, bLoop: c, bMuted: u } = e,
-          _ = (0, i.useMemo)(() => {
+          p = (0, i.useMemo)(() => {
             var e;
             return Boolean(
               null === (e = t.rgVideoTracks) || void 0 === e
@@ -1685,7 +1657,7 @@
                 : e.some((e) => "subtitles" == e.sKind || "captions" == e.sKind)
             );
           }, [t.rgVideoTracks]),
-          [p, h] = i.useState(!1);
+          [_, h] = i.useState(!1);
         if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
         const E = (e) => {
             const t = new URL(e);
@@ -1704,7 +1676,7 @@
                 type: e.sFormat,
               })
             ),
-          v = t.rgVideoTracks
+          y = t.rgVideoTracks
             ? t.rgVideoTracks.map((e) => {
                 let n = e.eLanguage;
                 if (d.De.EREALM === r.IN.k_ESteamRealmChina)
@@ -1733,7 +1705,7 @@
                 });
               })
             : null,
-          g = (function (e) {
+          v = (function (e) {
             return !(
               !(0, l.dK)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -1742,26 +1714,26 @@
                 e.rgVideoTracks.some((e) => !(0, l.dK)(e.sURL)))
             );
           })(t);
-        let f;
-        (!g || (_ && "public" == d.De.WEB_UNIVERSE)) && (f = "anonymous");
-        const D = u || (n && m.Get().BVolumePreferenceMuted()),
-          y = t.sPoster ? E(t.sPoster) : "";
+        let g;
+        (!v || (p && "public" == d.De.WEB_UNIVERSE)) && (g = "anonymous");
+        const f = u || (n && m.Get().BVolumePreferenceMuted()),
+          D = t.sPoster ? E(t.sPoster) : "";
         return i.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: n,
-            muted: D,
+            muted: f,
             playsInline: !0,
             controls: a,
-            poster: y,
+            poster: D,
             loop: c,
-            crossOrigin: f,
+            crossOrigin: g,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
-              p && m.Get().SetVolumePreference(n);
+              _ && m.Get().SetVolumePreference(n);
             },
             onPlay: (e) => {
               const t = e.target,
@@ -1779,18 +1751,18 @@
             },
           },
           b,
-          v
+          y
         );
       };
     },
     96602: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => v,
+        Ai: () => y,
         H6: () => E,
-        Kj: () => p,
+        Kj: () => _,
         Zg: () => b,
-        uv: () => g,
+        uv: () => v,
         w$: () => h,
       });
       var a = n(70655),
@@ -1803,16 +1775,16 @@
         c = n(95906),
         m = n.n(c),
         u = n(5525);
-      const _ = n(80008);
-      function p(e) {
-        const t = _.tz.guess(),
-          n = _.unix(e).tz(t),
+      const p = n(80008);
+      function _(e) {
+        const t = p.tz.guess(),
+          n = p.unix(e).tz(t),
           a = (0, r.CE)();
         return a && n.locale(a), n.format("LT");
       }
       function h(e, t) {
-        const n = _.tz.guess(),
-          a = _.unix(e).tz(n),
+        const n = p.tz.guess(),
+          a = p.unix(e).tz(n),
           o = (0, r.CE)();
         return (
           o && a.locale(o),
@@ -1891,7 +1863,7 @@
             e.children
           );
         };
-      let v = class extends i.Component {
+      let y = class extends i.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
@@ -1991,8 +1963,8 @@
           );
         }
       };
-      v = (0, a.gn)([s.Pi], v);
-      let g = class extends i.Component {
+      y = (0, a.gn)([s.Pi], y);
+      let v = class extends i.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -2021,7 +1993,7 @@
               { className: a.ShortDateAndTime },
               (0, r.$1)(e, l)
             );
-          let _ = i.createElement(
+          let p = i.createElement(
             b,
             { rtFullDate: e, stylesmodule: a },
             i.createElement(
@@ -2038,7 +2010,7 @@
           if (
             (s < e &&
               e < s + d._H.PerWeek &&
-              (_ = i.createElement(
+              (p = i.createElement(
                 b,
                 { rtFullDate: e, stylesmodule: a },
                 i.createElement(
@@ -2058,10 +2030,10 @@
               )),
             n || null == t || t < 1)
           )
-            return _;
-          const p = e <= s && s <= t;
-          p &&
-            (_ = i.createElement(
+            return p;
+          const _ = e <= s && s <= t;
+          _ &&
+            (p = i.createElement(
               b,
               { rtFullDate: e, className: a.ActiveEvent, stylesmodule: a },
               i.createElement(
@@ -2071,12 +2043,12 @@
               )
             ));
           let E = null;
-          const v = p ? t - s : t - e;
-          if (v <= d._H.PerDay) {
+          const y = _ ? t - s : t - e;
+          if (y <= d._H.PerDay) {
             const e = i.createElement(
               "div",
               { className: a.ShortDateAndTime },
-              (0, r.yW)(v, !0)
+              (0, r.yW)(y, !0)
             );
             E =
               t < s
@@ -2090,7 +2062,7 @@
                     "div",
                     { className: a.RightSideTitles },
                     (0, r.kQ)(
-                      p
+                      _
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e
@@ -2117,11 +2089,202 @@
               )
             );
           }
-          const g = i.createElement(b, { rtFullDate: t, stylesmodule: a }, E);
-          return i.createElement("div", { className: a.ShortDateRange }, _, g);
+          const v = i.createElement(b, { rtFullDate: t, stylesmodule: a }, E);
+          return i.createElement("div", { className: a.ShortDateRange }, p, v);
         }
       };
-      g = (0, a.gn)([s.Pi], g);
+      v = (0, a.gn)([s.Pi], v);
+    },
+    90844: (e, t, n) => {
+      "use strict";
+      n.d(t, { e: () => h, m: () => p });
+      var a,
+        i = n(70655),
+        o = n(67294),
+        r = n(48780),
+        s = n(80533),
+        l = n(30156),
+        d = n(7573),
+        c = n(13596);
+      !(function (e) {
+        (e[(e.NotLoaded = 0)] = "NotLoaded"),
+          (e[(e.Loading = 1)] = "Loading"),
+          (e[(e.Loaded = 2)] = "Loaded");
+      })(a || (a = {}));
+      let m = a.NotLoaded,
+        u = [];
+      function p(e) {
+        if (m == a.Loaded) return void e();
+        if (m == a.NotLoaded) {
+          let e = document.createElement("script");
+          e.src = "https://www.youtube.com/iframe_api";
+          let t = document.getElementsByTagName("script")[0];
+          t.parentNode.insertBefore(e, t), (window.onYouTubeIframeAPIReady = _);
+        }
+        u.findIndex((t) => e == t) < 0 && u.push(e);
+      }
+      function _() {
+        m = a.Loaded;
+        for (let e of u) e();
+        u = [];
+      }
+      class h extends o.Component {
+        constructor(e) {
+          super(e),
+            (this.m_strPlayerID = ""),
+            (this.m_player = null),
+            (this.m_playerContainer = null),
+            (this.m_bPlayerReady = !1),
+            (this.m_strPlayerID = "YoutubePlayer_" + h.s_nPlayerIndex++),
+            (this.state = { bYoutubeLoaded: !1 });
+        }
+        componentWillUnmount() {
+          var e;
+          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), r.Zf(u, e);
+        }
+        shouldComponentUpdate(e, t) {
+          if (!this.m_player) return !1;
+          const n = this.props;
+          return n.autoplay != e.autoplay ||
+            n.controls != e.controls ||
+            n.showInfo != e.showInfo ||
+            n.video != e.video
+            ? (this.CreatePlayer(e), !1)
+            : ((n.width == e.width && n.height == e.height) ||
+                (this.m_bPlayerReady &&
+                  e.width &&
+                  e.height &&
+                  this.m_player.setSize(e.width, e.height)),
+              n.forcePause != e.forcePause);
+        }
+        componentDidUpdate(e) {
+          e.forcePause != this.props.forcePause &&
+            (this.props.forcePause
+              ? this.m_player.pauseVideo()
+              : this.m_player.playVideo());
+        }
+        DestroyPlayer() {
+          if (this.m_player)
+            try {
+              this.m_player.stopVideo && this.m_player.stopVideo(),
+                this.m_player.destroy && this.m_player.destroy();
+            } catch (e) {
+            } finally {
+              this.m_player = null;
+            }
+        }
+        BindPlayerContainer(e) {
+          this.m_playerContainer != e &&
+            ((this.m_playerContainer = e),
+            this.DestroyPlayer(),
+            this.m_playerContainer && p(this.OnYoutubeScriptsReady));
+        }
+        OnYoutubeScriptsReady() {
+          this.CreatePlayer(this.props);
+        }
+        CreatePlayer(e) {
+          if ((this.DestroyPlayer(), !this.m_playerContainer)) return;
+          const t = !1 === e.autoplay ? 0 : 1,
+            n = !0 === e.showInfo ? 1 : 0,
+            a = !0 === e.controls ? 1 : 0,
+            i = !0 === e.showFullscreenBtn ? 1 : 0,
+            o = !0 === e.playsInline ? 1 : 0;
+          let r = {
+              width: void 0 !== e.width ? String(e.width) : void 0,
+              height: void 0 !== e.height ? String(e.height) : void 0,
+              videoId: e.video,
+              playerVars: {
+                autoplay: t,
+                showinfo: n,
+                autohide: 1,
+                fs: i,
+                modestbranding: 1,
+                rel: 0,
+                playsinline: o,
+                iv_load_policy: 3,
+                controls: a,
+                start: e.startSeconds,
+              },
+              events: {
+                onReady: this.OnPlayerReady,
+                onStateChange: this.OnPlayerStateChange,
+                onError: this.OnError,
+              },
+            },
+            s = this.m_playerContainer.firstElementChild;
+          (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(s, r));
+        }
+        OnPlayerReady(e) {
+          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+            let e = this.m_player.getVideoData(),
+              t = { strAuthor: "", strTitle: "", strVideoID: "" };
+            e.author && (t.strAuthor = e.author),
+              e.title && (t.strTitle = e.title),
+              e.video_id && (t.strVideoID = e.video_id),
+              this.props.onVideoInfoChanged(t);
+          }
+          this.props.width &&
+            this.props.height &&
+            this.m_player.setSize(this.props.width, this.props.height),
+            this.props.autoplay && this.m_player.playVideo(),
+            this.props.onPlayerReady && this.props.onPlayerReady();
+        }
+        OnPlayerStateChange(e) {
+          switch (e.data) {
+            case YT.PlayerState.UNSTARTED:
+              break;
+            case YT.PlayerState.BUFFERING:
+              this.props.onBuffering && this.props.onBuffering();
+              break;
+            case YT.PlayerState.PLAYING:
+              this.props.onPlaying && this.props.onPlaying();
+              break;
+            case YT.PlayerState.PAUSED:
+              this.props.onPaused && this.props.onPaused();
+              break;
+            case YT.PlayerState.ENDED:
+              this.props.onMovieEnd && this.props.onMovieEnd();
+          }
+        }
+        OnError(e) {
+          console.log("Youtube: Playback failed", e),
+            this.props.onError && this.props.onError(e);
+        }
+        OnPlayerLeftView() {
+          this.props.autopause &&
+            this.m_player &&
+            this.m_bPlayerReady &&
+            this.m_player.pauseVideo();
+        }
+        PlayVideo(e) {
+          this.m_player &&
+            this.m_bPlayerReady &&
+            (e && this.m_player.seekTo(0, !0), this.m_player.playVideo());
+        }
+        render() {
+          const e = o.createElement(
+            "div",
+            {
+              key: this.m_strPlayerID,
+              ref: this.BindPlayerContainer,
+              className: (0, d.Z)("YoutubePlayer", this.props.classnames),
+            },
+            o.createElement(c.V, { className: "YoutubePlayerThrobber" })
+          );
+          return this.props.autopause
+            ? o.createElement(s.h, { onLeave: this.OnPlayerLeftView }, e)
+            : e;
+        }
+      }
+      (h.s_nPlayerIndex = 0),
+        (0, i.gn)([l.ak], h.prototype, "BindPlayerContainer", null),
+        (0, i.gn)([l.ak], h.prototype, "OnYoutubeScriptsReady", null),
+        (0, i.gn)([l.ak], h.prototype, "CreatePlayer", null),
+        (0, i.gn)([l.ak], h.prototype, "OnPlayerReady", null),
+        (0, i.gn)([l.ak], h.prototype, "OnPlayerStateChange", null),
+        (0, i.gn)([l.ak], h.prototype, "OnError", null),
+        (0, i.gn)([l.ak], h.prototype, "OnPlayerLeftView", null),
+        (0, i.gn)([l.ak], h.prototype, "PlayVideo", null);
     },
   },
 ]);
