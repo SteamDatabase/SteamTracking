@@ -25361,6 +25361,7 @@
       class O {
         constructor(e) {
           (this.m_steamIDBroadcast = ""),
+            (this.m_bInitialized = !1),
             (this.m_strTitle = ""),
             (this.m_strAppId = "" + z),
             (this.m_nAppID = z),
@@ -25373,7 +25374,8 @@
             (this.m_steamIDBroadcast = e);
         }
       }
-      (0, i.gn)([s.LO], O.prototype, "m_strTitle", void 0),
+      (0, i.gn)([s.LO], O.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([s.LO], O.prototype, "m_strTitle", void 0),
         (0, i.gn)([s.LO], O.prototype, "m_strAppId", void 0),
         (0, i.gn)([s.LO], O.prototype, "m_nAppID", void 0),
         (0, i.gn)([s.LO], O.prototype, "m_strAppTitle", void 0),
@@ -25554,11 +25556,14 @@
         StartInfo(e) {
           const t = this.GetOrCreateBroadcastInfo(e);
           return (
-            t.m_nRefCount++, 1 === t.m_nRefCount && this.LoadBroadcastInfo(t), t
+            t.m_nRefCount++,
+            (t.m_bInitialized && t.m_schUpdateTimeout.IsScheduled()) ||
+              this.LoadBroadcastInfo(t),
+            t
           );
         }
         StopInfo(e) {
-          e.m_nRefCount--, 0 === e.m_nRefCount && e.m_schUpdateTimeout.Cancel();
+          e.m_nRefCount--;
         }
         GetOrCreateBroadcastInfo(e) {
           if (!e) {
@@ -25622,7 +25627,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             let t = "0",
               r = this.m_mapBroadcasts.get(e.m_steamIDBroadcast);
-            r && (t = r.m_ulBroadcastID);
+            if ((r && (t = r.m_ulBroadcastID), 0 == e.m_nRefCount)) return;
             const i = {
               steamid: e.m_steamIDBroadcast,
               broadcastid: t,
@@ -25637,10 +25642,11 @@
                 `${w.De.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
                 { params: i }
               );
-              if (!t || !t.data) return;
+              if (!t || !t.data) return void (e.m_bInitialized = !0);
               const r = t.data;
               (0, s.z)(() => {
-                (e.m_strTitle = r.title),
+                (e.m_bInitialized = !0),
+                  (e.m_strTitle = r.title),
                   (e.m_strAppId = r.appid),
                   (e.m_nAppID = Number.parseInt(r.appid)),
                   (e.m_strAppTitle = r.app_title),
