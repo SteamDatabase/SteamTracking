@@ -10886,7 +10886,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1661208830),
+          c = parseInt(1661366405),
           u = c && Jo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, lo.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -24483,10 +24483,13 @@
             });
           }
           LoginWithCredentials(e, t, n) {
-            SteamClient.User.SetLoginCredentials(e, t, n),
-              this.state.bOfflineMode
-                ? SteamClient.User.StartOffline(!0)
-                : SteamClient.User.StartLogin();
+            if (
+              (SteamClient.User.SetLoginCredentials(e, t, n),
+              this.state.bOfflineMode)
+            ) {
+              const e = !0;
+              SteamClient.User.StartOffline(e);
+            } else SteamClient.User.StartLogin();
           }
           ShowNewLogin(e) {
             (this.m_strLastAccountName = ""),
@@ -25517,9 +25520,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Aug 22 2022 : 15:53:50",
-              BUILD_TIME_UTC: "Aug 22 2022 : 22:53:50",
-              BUILD_RTIME_UTC: 1661208830,
+              BUILD_TIME_LOCAL: "Aug 24 2022 : 11:40:05",
+              BUILD_TIME_UTC: "Aug 24 2022 : 18:40:05",
+              BUILD_RTIME_UTC: 1661366405,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {

@@ -94328,6 +94328,7 @@ function TestLocalizeCalendarTime()
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
           FROM_WEB: false,
+          WEBSITE_ID: "Unknown",
           // this used to be part of config, but reading the cookie is best.  Defined as a getter for backwards compatibility.
           get SESSIONID() {
             return GetSessionID();
@@ -95950,4 +95951,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=bdb6add633154d1a15eb
+//# sourceMappingURL=friends.js.map?contenthash=a789da36a37612b1a442

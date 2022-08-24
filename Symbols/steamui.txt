@@ -1562,6 +1562,7 @@
  setsockopt
  sha1_block_data_order
  sha256_block_data_order
+ sha512_block_data_order
  shm_open
  shm_unlink
  shutdown
@@ -1634,6 +1635,7 @@
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
  std::nothrow
+ std::out_of_range::~out_of_range()
  std::terminate()
  stpcpy
  strcasecmp
@@ -1684,6 +1686,7 @@
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::exception
  typeinfo for std::length_error
+ typeinfo for std::out_of_range
  typeinfo for unsigned char
  typeinfo for unsigned int
  typeinfo for unsigned long long
@@ -1757,6 +1760,7 @@
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::length_error
+ vtable for std::out_of_range
  wcschr
  wcscmp
  wcscpy

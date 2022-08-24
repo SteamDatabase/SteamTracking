@@ -6,6 +6,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_25519_donna.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
@@ -21,6 +22,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/ipcclient.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jwt.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logfile.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
@@ -500,6 +502,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/ui/ui_tooltip_manager.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/userlogincontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/vr2dgameoverlay.cpp

@@ -74,6 +74,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Request {
 	optional bool remember_login = 5 [(description) = "deprecated"];
 	optional .EAuthTokenPlatformType platform_type = 6 [default = k_EAuthTokenPlatformType_Unknown];
 	optional .ESessionPersistence persistence = 7 [default = k_ESessionPersistence_Persistent, (description) = "whether we are requesting a persistent or an ephemeral session"];
+	optional string website_id = 8 [default = "Unknown", (description) = "(EMachineAuthWebDomain) identifier of client requesting auth"];
 }
 
 message CAuthentication_BeginAuthSessionViaCredentials_Response {
