@@ -10,9 +10,7 @@ body.global.joinsteam {
 
 body.v6.joinsteam {
 	color: #E9E9E9;
-	background-color: #212429;
-	background-position: -60vw 0;
-	background-repeat: no-repeat;
+	background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' ) -45vw 0 no-repeat, #212429;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -626,6 +624,9 @@ body.joinsteam.verify_email {
         margin: 10px 0 0 0;
     }
 
+	html.responsive body.v6 .page_content {
+		background-image: none;
+	}
 }
 
 @media screen and ( max-width: 800px ) {
@@ -633,7 +634,6 @@ body.joinsteam.verify_email {
     html body.v6.joinsteam {
         background-image: none;
     }
-
 }
 
 @media screen and ( min-width: 1200px )
@@ -647,4 +647,10 @@ body.joinsteam.verify_email {
     html.responsive body.v6.joinsteam {
         background-position: -20vw 0;
     }
+}
+
+@media screen and (min-width: 1700px) {
+	html.responsive body.login {
+		background-position: -24vw 0;
+	}
 }

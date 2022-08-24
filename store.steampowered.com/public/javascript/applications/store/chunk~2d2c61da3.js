@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9886],
+  [3345],
   {
     39722: (e, r, t) => {
       t.d(r, { Bn: () => _, Pe: () => u });

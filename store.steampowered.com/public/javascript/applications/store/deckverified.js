@@ -13,7 +13,7 @@
         a = i(10847),
         r = i(84351),
         p = i(95598),
-        d = i(30156);
+        d = i(22975);
       class h extends o.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });

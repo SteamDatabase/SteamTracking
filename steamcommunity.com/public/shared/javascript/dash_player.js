@@ -7554,7 +7554,7 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"steamLanguage":"brazilian"
 	},
 	"pt-PT":{
-		"displayName":"Portuguese",
+		"displayName":"Portuguese - Portugal",
 		"steamLanguage":"portuguese"
 	},
 	"ro-RO":{

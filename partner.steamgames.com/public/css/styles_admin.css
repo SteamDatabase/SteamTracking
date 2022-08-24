@@ -3966,3 +3966,7 @@ table.root_path_table {
 .crossPlatform_no {
     color: #fff03a;
 }
+
+select.additional_languages {
+    margin-top: 12px;
+}

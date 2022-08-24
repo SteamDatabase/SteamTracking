@@ -391,6 +391,7 @@
             (this.m_unPersonaStateFlags = 0),
             (this.m_strPlayerName = ""),
             (this.m_strAvatarHash = l.W),
+            (this.m_strAccountName = ""),
             (this.m_rtLastSeenOnline = 0),
             (this.m_strGameExtraInfo = ""),
             (this.m_unGameServerIP = 0),
@@ -616,6 +617,7 @@
         (0, n.gn)([s.LO], p.prototype, "m_unPersonaStateFlags", void 0),
         (0, n.gn)([s.LO], p.prototype, "m_strPlayerName", void 0),
         (0, n.gn)([s.LO], p.prototype, "m_strAvatarHash", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strAccountName", void 0),
         (0, n.gn)([s.LO], p.prototype, "m_rtLastSeenOnline", void 0),
         (0, n.gn)([s.LO], p.prototype, "m_strGameExtraInfo", void 0),
         (0, n.gn)([s.LO], p.prototype, "m_unGameServerIP", void 0),
@@ -794,9 +796,9 @@
               bHideEnhancedRichPresenceLabel: S,
               bHideSnooze: v,
               bHideStatus: B,
-              renderStatus: C,
-              renderRichPresence: b,
-              bHidePersona: y,
+              renderStatus: y,
+              renderRichPresence: C,
+              bHidePersona: b,
               bDNDSet: E,
               bHasPartyBeacon: L,
               bHasGamePrivacy: N,
@@ -842,14 +844,14 @@
                 !r.is_in_nonsteam_game || p || (0, o.my)(c)
                   ? r.GetCurrentGameName()
                   : (0, i.Xx)("#PersonaStateInNonSteamGame")),
-              p || y
+              p || b
                 ? p && r.is_awayOrSnooze && (O = (0, i.Xx)("#PersonaStateAway"))
                 : (O = r.GetCurrentGameRichPresence()))
             : r.m_broadcastAccountId &&
               (Q = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
             Q || (Q = r.GetLocalizedOnlineStatus()),
-            C && (Q = C());
-          let k = !y && !v;
+            y && (Q = y());
+          let k = !b && !v;
           !1 === v && (k = !0),
             r.is_awayOrSnooze && k && (D = s.createElement(h, { persona: r }));
           let z = null;
@@ -860,15 +862,15 @@
                 s.createElement(_.$gZ, null)
               ))
             : w.push(I().noContextMenu),
-            y && w.push(I().hidePersona),
-            b && (O = b()),
+            b && w.push(I().hidePersona),
+            C && (O = C()),
             (!f && O) || w.push(I().twoLine);
           const U = !r.is_ingame && !B,
             F = !S && O,
             T = Q && (!f || !F);
           let H = u && !A,
             M = H ? u : r.m_strPlayerName,
-            Z = !y && (T || U) && F;
+            Z = !b && (T || U) && F;
           return s.createElement(
             "div",
             Object.assign({}, R, {
@@ -923,7 +925,7 @@
                 ),
               z
             ),
-            !y &&
+            !b &&
               s.createElement(
                 "div",
                 { className: I().richPresenceContainer },
@@ -1223,7 +1225,7 @@
       a.d(t, { j: () => i });
       var n = a(70655),
         s = a(67294),
-        r = a(30156);
+        r = a(22975);
       class i extends s.Component {
         constructor(e) {
           super(e),

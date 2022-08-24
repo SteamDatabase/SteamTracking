@@ -100,7 +100,7 @@
         n = i(67294),
         s = i(17888),
         o = i(80533),
-        r = i(30156);
+        r = i(22975);
       class l extends n.Component {
         OnEnter() {
           s.E.AddImpression(this.props.appID, this.props.snr);
@@ -167,7 +167,7 @@
         d = i(95598),
         m = i(7573),
         p = i(41311),
-        _ = i(30156),
+        _ = i(22975),
         u = i(66854),
         g = i(58808),
         h = i.n(g),

@@ -8728,6 +8728,88 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_BetaContainer_8YiSr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 200px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_BetaTag_2hxdu {
+  color: #1999ff;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 6px 0px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_BetaSubtitleWithQR_gN6QO {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_PhoneIcon_1Orm4 {
+  width: 28px;
+  height: 48px;
+  fill: #afafaf;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_BetaSubtitle_2kSCn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #afafaf;
+  margin: 8px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_JoinBetaButton_2YJ_V {
+  background-color: #32353c;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  padding: 6px 8px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
+  .newlogindialog_ShowQRLink_18gwL {
+  text-align: center;
+  text-decoration-line: underline;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #afafaf;
+  padding: 12px 0px;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_QRSection_5I7Ax
+    .newlogindialog_BetaContainer_8YiSr {
+    align-items: center;
+  }
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_QRSection_5I7Ax
+    .newlogindialog_PhoneIcon_1Orm4 {
+    display: none;
+  }
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_QRSection_5I7Ax
+    .newlogindialog_BetaSubtitle_2kSCn {
+    text-align: center;
+  }
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_QRSection_5I7Ax
   .newlogindialog_ScanQRButton_3y8ko {
   display: flex;
   align-items: center;
@@ -8735,9 +8817,9 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   background-color: #32353c;
   border-radius: 2px;
   border: none;
-  padding: 12px 16px;
+  padding: 2px 16px;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 0.03em;
 }
 .newlogindialog_Login_3VsPM
@@ -8775,7 +8857,8 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_QR_3DtFb {
   aspect-ratio: 1;
   border-radius: 2px;
-  margin: 8px 8px 8px 0px;
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
@@ -8794,6 +8877,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   text-align: center;
   font-size: 12px;
   color: #afafaf;
+  padding: 12px 0px;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_TextField_3fRHZ {
   display: grid;
@@ -8863,8 +8947,6 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_Check_2GPrm {
   width: 100%;
   height: 100%;
-  background-color: #1999ff;
-  border-radius: 2px;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_Checkbox_2q4eX:hover {
   background-color: #393c44;
@@ -8964,6 +9046,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   color: #c15755;
   font-size: 12px;
   font-weight: 500;
+  text-align: center;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_TextAlignCenter_12uBX {
   text-align: center;
@@ -9004,6 +9087,13 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   font-weight: 500;
   padding-top: 6px;
 }
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_ProtectingAccount_aUvXl
+    .newlogindialog_Description_JPge0 {
+    opacity: 1;
+  }
+}
 .newlogindialog_Login_3VsPM .newlogindialog_AwaitingMobileConfText_3aiWV {
   color: #fff;
   font-size: 22px;
@@ -9015,10 +9105,16 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 .newlogindialog_Login_3VsPM .newlogindialog_AwaitingMobileConfIcon_30hdF {
   width: 55px;
 }
+.newlogindialog_Login_3VsPM .newlogindialog_LinkContainer_pmRUk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .newlogindialog_Login_3VsPM .newlogindialog_EnterCodeInsteadLink_2c14j {
   font-size: 12px;
-  color: #1999ff;
   text-align: center;
+  text-decoration: underline;
+  padding: 12px 0px;
   cursor: pointer;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_EnterCodeFromMobileContainer_N-VeL,
@@ -9181,12 +9277,32 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_StandardLayout_26BQi
+  .newlogindialog_EscapeHatch_2Ue9s {
+  font-size: 12px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_StandardLayout_26BQi
+    .newlogindialog_EscapeHatch_2Ue9s {
+    text-align: center;
+  }
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_StandardLayout_26BQi
   .newlogindialog_FormContainer_1Vs8b {
   background-color: #181a21;
   border-radius: 4px;
-  padding: 24px 32px 24px 32px;
+  padding: 24px 32px;
   flex: 1;
-  max-width: 680px;
+  min-width: 636px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_StandardLayout_26BQi
+    .newlogindialog_FormContainer_1Vs8b {
+    min-width: 300px;
+    background-color: transparent;
+  }
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_StandardLayout_26BQi.newlogindialog_Embedded_mkAEY {
@@ -9279,6 +9395,12 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   text-align: center;
 }
 .newlogindialog_FailureDescription_3TKBs {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.newlogindialog_OfferOffline_2AXcH {
   color: #fff;
   font-size: 16px;
   margin-bottom: 24px;
@@ -9751,7 +9873,7 @@ iframe.eventbbcodeparser_MedalTVWidget_3Hm58 {
 .SaleSectionCtn.text_section .eventbbcodeparser_SaleTextCtn_1FQUR img {
   max-width: 100%;
   height: auto;
-  width: -webkit-fill-available;
+  width: auto;
 }
 .SaleSectionCtn.text_section
   .eventbbcodeparser_SaleSectionCtn_2OhAZ

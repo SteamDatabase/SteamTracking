@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7751],
+  [9698],
   {
     49727: (e, t, r) => {
       r.d(t, {
@@ -2076,6 +2076,7 @@
             (this.m_setPendingBundleInfo = new Set()),
             (this.m_setPendingPackageInfo = new Set()),
             (this.m_setPendingDataRequest = {}),
+            (this.m_PendingInfoResolve = void 0),
             (this.m_PendingTimer = void 0),
             (this.k_AlreadyResolvedOK = Promise.resolve(1)),
             (this.k_AlreadyResolvedInvalid = Promise.resolve(8)),
@@ -2108,8 +2109,18 @@
         }
         ResetCache() {
           return (0, s.mG)(this, void 0, void 0, function* () {
-            (this.m_bActivelyResettingCache = !0),
-              yield this.FlushPendingInfo(),
+            (this.m_bActivelyResettingCache = !0), this.FlushPendingInfo();
+            let e = [];
+            this.m_mapAppsInFlight.forEach((t) => {
+              e.push(t.promise);
+            }),
+              this.m_mapBundleInFlight.forEach((t) => {
+                e.push(t.promise);
+              }),
+              this.m_mapPackageInFlight.forEach((t) => {
+                e.push(t.promise);
+              }),
+              yield Promise.all(e),
               this.m_mapApps.clear(),
               this.m_mapBundles.clear(),
               this.m_mapPackages.clear(),
@@ -2249,6 +2260,7 @@
         }
         FlushPendingInfo() {
           return (0, s.mG)(this, void 0, void 0, function* () {
+            if (void 0 === this.m_PendingInfoResolve) return;
             const e = this.m_PendingInfoResolve,
               t = Array.from(this.m_setPendingAppInfo),
               r = Array.from(this.m_setPendingPackageInfo),
@@ -2728,7 +2740,7 @@
       var s = r(9669),
         i = r.n(s),
         n = r(67294),
-        a = (r(49727), r(92398), r(990), r(30156)),
+        a = (r(49727), r(92398), r(990), r(22975)),
         l = (r(81238), r(159));
       function o(e, t, r, s) {
         const a = (0, n.useRef)(),

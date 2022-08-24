@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7454311";
+var CLSTAMP = "7458012";
 (() => {
   "use strict";
   function e(e) {
@@ -106,6 +106,7 @@ var CLSTAMP = "7454311";
       CHAT_BASE_URL: "",
       STORE_BASE_URL: "",
       LOGIN_BASE_URL: "",
+      SUPPORT_BASE_URL: "",
       STORE_ICON_BASE_URL: "",
       IMG_URL: "",
       STEAMTV_BASE_URL: "",
@@ -147,6 +148,7 @@ var CLSTAMP = "7454311";
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
       IN_STANDALONE_KEYBOARD: !1,
+      STANDALONE_CONFIGURATOR_APPID: 0,
     },
     l = {
       logged_in: !1,

@@ -5014,7 +5014,7 @@
           );
       var nt = r(95598),
         ot = r(7573),
-        lt = r(30156),
+        lt = r(22975),
         ct = r(47922),
         dt = r.n(ct);
       const mt = new RegExp("ː([^ː]*)ː", "g"),
@@ -6680,7 +6680,7 @@
         m = r(67833),
         u = (r(69765), r(29757)),
         h = r(159),
-        _ = r(30156),
+        _ = r(22975),
         p = r(99533);
       class b extends l.Component {
         constructor() {

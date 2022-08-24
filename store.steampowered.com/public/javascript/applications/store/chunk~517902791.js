@@ -5133,7 +5133,7 @@
         s = r(22188),
         o = r(50141),
         l = r(2641),
-        d = r(30156);
+        d = r(22975);
       class c extends Error {}
       class m extends l.C7 {
         constructor(e) {
@@ -5655,6 +5655,7 @@
       class G {
         constructor(e) {
           (this.m_steamIDBroadcast = ""),
+            (this.m_bInitialized = !1),
             (this.m_strTitle = ""),
             (this.m_strAppId = "" + I),
             (this.m_nAppID = I),
@@ -5667,7 +5668,8 @@
             (this.m_steamIDBroadcast = e);
         }
       }
-      (0, i.gn)([s.LO], G.prototype, "m_strTitle", void 0),
+      (0, i.gn)([s.LO], G.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([s.LO], G.prototype, "m_strTitle", void 0),
         (0, i.gn)([s.LO], G.prototype, "m_strAppId", void 0),
         (0, i.gn)([s.LO], G.prototype, "m_nAppID", void 0),
         (0, i.gn)([s.LO], G.prototype, "m_strAppTitle", void 0),
@@ -5848,11 +5850,14 @@
         StartInfo(e) {
           const t = this.GetOrCreateBroadcastInfo(e);
           return (
-            t.m_nRefCount++, 1 === t.m_nRefCount && this.LoadBroadcastInfo(t), t
+            t.m_nRefCount++,
+            (t.m_bInitialized && t.m_schUpdateTimeout.IsScheduled()) ||
+              this.LoadBroadcastInfo(t),
+            t
           );
         }
         StopInfo(e) {
-          e.m_nRefCount--, 0 === e.m_nRefCount && e.m_schUpdateTimeout.Cancel();
+          e.m_nRefCount--;
         }
         GetOrCreateBroadcastInfo(e) {
           if (!e) {
@@ -5916,7 +5921,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             let t = "0",
               r = this.m_mapBroadcasts.get(e.m_steamIDBroadcast);
-            r && (t = r.m_ulBroadcastID);
+            if ((r && (t = r.m_ulBroadcastID), 0 == e.m_nRefCount)) return;
             const i = {
               steamid: e.m_steamIDBroadcast,
               broadcastid: t,
@@ -5931,10 +5936,11 @@
                 `${h.De.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
                 { params: i }
               );
-              if (!t || !t.data) return;
+              if (!t || !t.data) return void (e.m_bInitialized = !0);
               const r = t.data;
               (0, s.z)(() => {
-                (e.m_strTitle = r.title),
+                (e.m_bInitialized = !0),
+                  (e.m_strTitle = r.title),
                   (e.m_strAppId = r.appid),
                   (e.m_nAppID = Number.parseInt(r.appid)),
                   (e.m_strAppTitle = r.app_title),
@@ -9161,7 +9167,7 @@
         o = r(74163),
         l = r(77520),
         d = r(93976),
-        c = r(30156),
+        c = r(22975),
         m = r(90666);
       class u {
         constructor() {
@@ -10122,7 +10128,7 @@
         F = r(7573),
         M = r(53622),
         O = r(41311),
-        P = r(30156),
+        P = r(22975),
         N = r(90666),
         L = r(65924),
         z = r(84282),
@@ -12448,7 +12454,7 @@
       r.d(t, { W: () => d, _: () => c });
       var i = r(67294),
         a = r(67833),
-        n = (r(30156), r(90666)),
+        n = (r(22975), r(90666)),
         s = r(65924),
         o = r(7707),
         l = r(77520);
@@ -12569,7 +12575,7 @@
       r.d(t, { J: () => l, e: () => d });
       var i = r(70655),
         a = r(67294),
-        n = r(30156),
+        n = r(22975),
         s = r(52519),
         o = r(41311);
       class l extends a.Component {
@@ -12665,7 +12671,7 @@
         a = r(67294),
         n = r(17888),
         s = r(80533),
-        o = r(30156);
+        o = r(22975);
       class l extends a.Component {
         OnEnter() {
           n.E.AddImpression(this.props.appID, this.props.snr);

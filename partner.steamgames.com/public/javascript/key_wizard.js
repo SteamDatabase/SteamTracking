@@ -206,6 +206,7 @@ KeyRequestWizard.prototype.KeyWizardTab = function( show )
 			$J( "#keywiz_confirm_apps").text( 'Appids: ' + this.m_package_desc[ this.m_selected_package_id]['appids'] );
 			$J( "#keywiz_confirm_requests").text( this.m_key_quantity.toLocaleString() );
 			$J( "#keywiz_confirm_tag").text( $J("#keywiz_tag_select :selected").text() );
+			$J( "#keywiz_submit_request" ).attr( 'disabled', false );
 			break;
 		case 'keywiz_completed':
 			$J('#keywiz_completed').addClass('keywiz_nav_link_selected');
@@ -421,10 +422,15 @@ KeyRequestWizard.prototype.KeyWizardConfirmed = function( appid )
 		} );
 
 		var _this = this;
-				SetRequestKeys( appid, requests, function() {
+		$J( "#keywiz_submit_request" ).attr( 'disabled', true );
+				SetRequestKeys( appid, requests,
+		function() {
 			// TODO: Update the values of the successful key request.
 			_this.m_bReachedRequestComplete = true;
 			_this.KeyWizardTab( 'keywiz_completed' );
+		},
+		function() {
+			$J( "#keywiz_submit_request" ).attr( 'disabled', false );
 		} );
 	}
 	else

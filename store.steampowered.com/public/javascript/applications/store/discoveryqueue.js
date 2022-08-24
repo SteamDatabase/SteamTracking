@@ -21,7 +21,7 @@
         s = n(67294),
         o = n(7707),
         u = n(27745),
-        i = n(30156),
+        i = n(22975),
         a = n(90666);
       function c(e) {
         const { children: t, navTreeRef: n } = e,
@@ -57,17 +57,17 @@
         d = n(27717),
         p = n(95598),
         v = n(52114),
-        m = n(34425),
-        _ = n(71174);
+        _ = n(34425),
+        m = n(71174);
       n(12505);
       function g(e) {
         const { appID: t } = e,
           n = (0, d.g)(),
           [i] = (0, o.Ar)("inqueue", 0),
           [g, C] = (0, r.useState)(!1),
-          [y, D] = (0, r.useState)(!1),
+          [D, y] = (0, r.useState)(!1),
           [E] = (0, v.vs)(t, { include_assets: !0 }),
-          f = (0, _.L)(),
+          f = (0, m.L)(),
           T = r.useRef();
         r.useEffect(() => {
           var e;
@@ -76,16 +76,16 @@
             : e.Activate(!0);
         }, []);
         const b = r.useCallback(() => {
-            D(!0);
+            y(!0);
           }, []),
           x = r.useCallback(() => {
             C(!0);
           }, []);
         return n && E
-          ? y
+          ? D
             ? null
             : r.createElement(
-                m.p,
+                _.p,
                 {
                   NavigationManager: f,
                   navTreeRef: T,
@@ -113,11 +113,12 @@
                     { onClick: x, className: a().WidgetText },
                     (0, c.Xx)("#DiscoveryQueue_ResumeWizard")
                   ),
-                  r.createElement(
-                    "div",
-                    { className: a().CloseButton, onClick: b },
-                    r.createElement(p.X, null)
-                  ),
+                  !s.De.IN_GAMEPADUI &&
+                    r.createElement(
+                      "div",
+                      { className: a().CloseButton, onClick: b },
+                      r.createElement(p.X, null)
+                    ),
                   g &&
                     r.createElement(l.MS, {
                       includeAppID: t,

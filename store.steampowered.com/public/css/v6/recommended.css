@@ -1438,6 +1438,13 @@ html.touch .similar_grid_item .buttons {
     color: #8f98a0;
 }
 
+#review_create .steam_china_disclaimer {
+	font-size: 13px;
+	margin-bottom: 15px;
+	line-height: 17px;
+	color: #DD8763;
+}
+
 #review_create .avatar {
 	width: 94px;
 	height: 94px;
@@ -2200,7 +2207,7 @@ html.touch .similar_grid_item .buttons {
 	margin: 0px 0px 8px;
 	font-size: 11px;
 	font-style: normal;
-	color: ##DD8763;
+	color: #DD8763;
 }
 
 .review_box .hr {
@@ -2302,7 +2309,6 @@ html.touch .similar_grid_item .buttons {
 	vertical-align: text-top;
 	margin-right: 4px;
 }
-
 
 #Reviewssummary0 .recent_reviews .review_box .rightcol {
 	width: 294px;

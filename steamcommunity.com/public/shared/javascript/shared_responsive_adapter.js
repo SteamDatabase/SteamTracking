@@ -545,7 +545,7 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "polish"} ).text( 'Polski (Polish)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "portuguese"} ).text( 'Português (Portuguese)' )
+				$J('<option/>', {value: "portuguese"} ).text( 'Português (Portuguese - Portugal)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "brazilian"} ).text( 'Português - Brasil (Portuguese - Brazil)' )

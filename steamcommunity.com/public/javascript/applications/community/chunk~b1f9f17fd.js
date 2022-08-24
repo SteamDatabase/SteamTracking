@@ -11849,7 +11849,8 @@
           );
         if (!i) return null;
         if (!t.BUsesContentHubForItemSource()) return null;
-        if ("events" !== a.section_type) return null;
+        if ("events" !== a.section_type || a.hide_view_all_events_link)
+          return null;
         const r = D.De.STORE_BASE_URL + "news/" + i;
         return n.createElement(
           "div",
@@ -12978,21 +12979,38 @@
           return a.tabs
             .map((e) => l.z5.find((t) => t.flavor === e))
             .filter((e) => !!e)
-            .map((e) =>
-              n.createElement(
-                Mn.HP,
-                {
-                  key: e.flavor,
-                  toolTipContent: (0, x.Xx)(e.tooltip),
-                  onClick: () => this.OnFlavorLabelClick(e.flavor),
-                  className: (0, f.Z)(
-                    Fn().FlavorLabel,
-                    i == e.flavor && Fn().SelectedFlavor
-                  ),
-                },
-                (0, x.Xx)(e.label)
-              )
-            );
+            .map((e) => {
+              var t, a;
+              let r = e.label,
+                l = e.tooltip;
+              return (
+                (null === (t = this.props.event) || void 0 === t
+                  ? void 0
+                  : t.BUsesContentHubForItemSource()) &&
+                  "controller" ===
+                    (null === (a = this.props.event) || void 0 === a
+                      ? void 0
+                      : a.GetContentHubType()) &&
+                  "contenthub_popular" === e.flavor &&
+                  ((r =
+                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
+                  (l =
+                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip")),
+                n.createElement(
+                  Mn.HP,
+                  {
+                    key: e.flavor,
+                    toolTipContent: (0, x.Xx)(l),
+                    onClick: () => this.OnFlavorLabelClick(e.flavor),
+                    className: (0, f.Z)(
+                      Fn().FlavorLabel,
+                      i == e.flavor && Fn().SelectedFlavor
+                    ),
+                  },
+                  (0, x.Xx)(r)
+                )
+              );
+            });
         }
         OnApplySearch(e) {
           this.m_cancelSignal.token.reason ||
@@ -13598,26 +13616,27 @@
         }
         return t;
       }
-      const vi = ["recent_events", "recent_tagged_events"];
+      function vi(e, t, a) {
+        if (null == e || null == t) return null;
+        let n = e + "_" + t;
+        return a && (n += "_" + a), n;
+      }
       class hi {
         constructor() {
-          this.m_rgRecentEvent = new Map();
+          (this.m_rgRecentEvent = new Map()), (this.m_mapPromises = new Map());
         }
         static Get() {
           return (
             hi.s_Singleton ||
               ((hi.s_Singleton = new hi()),
-              hi.s_Singleton.Init(),
               "dev" == D.De.WEB_UNIVERSE &&
                 (window.g_EventListSaleStore = hi.s_Singleton)),
             hi.s_Singleton
           );
         }
-        Init() {
-          vi.forEach((e) => {
-            let t = (0, D.kQ)(e, "application_config");
-            this.ValidateStoreDefault(t) && this.AddAllRecentEvents(e, t);
-          });
+        Init(e, t) {
+          let a = (0, D.kQ)(e, "application_config");
+          this.ValidateStoreDefault(a) && this.AddAllRecentEvents(e, a, t);
         }
         ValidateStoreDefault(e) {
           const t = e;
@@ -13633,11 +13652,11 @@
             "number" == typeof t[0].appid
           );
         }
-        AddAllRecentEvents(e, t) {
+        AddAllRecentEvents(e, t, a) {
           this.m_rgRecentEvent.has(e) ||
             this.m_rgRecentEvent.set(e, new Array());
-          const a = this.m_rgRecentEvent.get(e);
-          t.forEach((e) => a.push(e));
+          const n = this.m_rgRecentEvent.get(e);
+          this.GetFilteredTaggedEvents(t, a).forEach((e) => n.push(e));
         }
         GetEventTimeRange(e) {
           var t, a;
@@ -13666,81 +13685,116 @@
         GetRecentEventsForSalesPage(e, t, a) {
           var n, i, r;
           return (0, G.mG)(this, void 0, void 0, function* () {
-            let l = Object.assign(
-              {
+            const l = vi(
+              "recent_events",
+              null == t ? void 0 : t.unique_id,
+              null == a ? void 0 : a.unique_id
+            );
+            if (!this.m_rgRecentEvent.has(l) && !this.m_mapPromises.has(l)) {
+              let s = Object.assign(
+                {
+                  cc: D.De.COUNTRY || "US",
+                  l: D.De.LANGUAGE,
+                  clan_account_id: e.clanSteamID.GetAccountID(),
+                  clan_event_gid: e.GID,
+                  count: t.smart_section_max_apps,
+                  show_recent_first: Boolean(
+                    t.event_schedule_show_recent_first
+                  ),
+                  hubtype:
+                    null === (n = e.GetContentHub()) || void 0 === n
+                      ? void 0
+                      : n.type,
+                  category:
+                    null === (i = e.GetContentHub()) || void 0 === i
+                      ? void 0
+                      : i.category,
+                  tagid:
+                    null === (r = e.GetContentHub()) || void 0 === r
+                      ? void 0
+                      : r.tagid,
+                  tabuniqueid: (null == a ? void 0 : a.unique_id) || void 0,
+                  tabfilter: (null == a ? void 0 : a.store_filter) || void 0,
+                  sectionid: (null == t ? void 0 : t.unique_id) || void 0,
+                  sectionfilter:
+                    (null == t ? void 0 : t.store_filter) || void 0,
+                  prune_list_optin_name:
+                    e.jsondata.prune_list_optin_name || void 0,
+                  optin_tagid: e.jsondata.optin_tagid || void 0,
+                  optin_prune_tagid: e.jsondata.optin_prune_tagid || void 0,
+                },
+                this.GetEventTimeRange(t)
+              );
+              this.m_mapPromises.set(
+                l,
+                this.InternalEventForSalePageSection(l, s)
+              );
+            }
+            return this.m_mapPromises.get(l);
+          });
+        }
+        GetRecentTaggedEventsForSalesPage(e, t, a) {
+          return (0, G.mG)(this, void 0, void 0, function* () {
+            const n = vi(
+              "recent_tagged_events",
+              null == t ? void 0 : t.unique_id,
+              null == a ? void 0 : a.unique_id
+            );
+            if (!this.m_rgRecentEvent.has(n) && !this.m_mapPromises.has(n)) {
+              let i = {
                 cc: D.De.COUNTRY || "US",
                 l: D.De.LANGUAGE,
-                clan_account_id: e.clanSteamID.GetAccountID(),
-                clan_event_gid: e.GID,
+                start_time: t.event_schedule_rtime_start
+                  ? t.event_schedule_rtime_start
+                  : e.startTime,
+                end_time: t.event_schedule_rtime_end
+                  ? t.event_schedule_rtime_end
+                  : e.endTime,
                 count: t.smart_section_max_apps,
                 show_recent_first: Boolean(t.event_schedule_show_recent_first),
-                hubtype:
-                  null === (n = e.GetContentHub()) || void 0 === n
-                    ? void 0
-                    : n.type,
-                category:
-                  null === (i = e.GetContentHub()) || void 0 === i
-                    ? void 0
-                    : i.category,
-                tagid:
-                  null === (r = e.GetContentHub()) || void 0 === r
-                    ? void 0
-                    : r.tagid,
-                tabuniqueid: a,
-                prune_list_optin_name:
-                  e.jsondata.prune_list_optin_name || void 0,
-                optin_tagid: e.jsondata.optin_tagid || void 0,
-                optin_prune_tagid: e.jsondata.optin_prune_tagid || void 0,
-              },
-              this.GetEventTimeRange(t)
-            );
-            return this.InternalEventForSalePageSection("recent_events", l);
+                tags: (t.smart_section_event_tags || []).join(","),
+                tabuniqueid: (null == a ? void 0 : a.unique_id) || void 0,
+                tabfilter: (null == a ? void 0 : a.store_filter) || void 0,
+                sectionid: (null == t ? void 0 : t.unique_id) || void 0,
+                sectionfilter: (null == t ? void 0 : t.store_filter) || void 0,
+              };
+              this.m_mapPromises.set(
+                n,
+                this.InternalEventForSalePageSection(
+                  n,
+                  i,
+                  null == t ? void 0 : t.recent_tagged_events_source
+                )
+              );
+            }
+            return this.m_mapPromises.get(n);
           });
         }
-        GetRecentTaggedEventsForSalesPage(e, t) {
+        InternalEventForSalePageSection(e, t, a) {
           return (0, G.mG)(this, void 0, void 0, function* () {
-            let a = {
-              cc: D.De.COUNTRY || "US",
-              l: D.De.LANGUAGE,
-              start_time: t.event_schedule_rtime_start
-                ? t.event_schedule_rtime_start
-                : e.startTime,
-              end_time: t.event_schedule_rtime_end
-                ? t.event_schedule_rtime_end
-                : e.endTime,
-              count: t.smart_section_max_apps,
-              show_recent_first: Boolean(t.event_schedule_show_recent_first),
-              tags: (t.smart_section_event_tags || []).join(","),
-            };
-            return this.InternalEventForSalePageSection(
-              "recent_tagged_events",
-              a
-            );
-          });
-        }
-        InternalEventForSalePageSection(e, t) {
-          return (0, G.mG)(this, void 0, void 0, function* () {
-            if (!this.m_rgRecentEvent.has(e)) {
+            if ((this.Init(e, a), !this.m_rgRecentEvent.has(e))) {
               this.m_rgRecentEvent.set(e, new Array());
-              const a =
+              const n =
                 D.De.STORE_BASE_URL +
-                ("recent_events" == e
+                (e.startsWith("recent_events")
                   ? "saleaction/ajaxrecentsaleevents"
                   : "saleaction/ajaxrecenttaggedsaleevents");
               try {
-                const n = yield w().get(a, { params: t, withCredentials: !0 });
-                1 == n.data.success &&
+                const i = yield w().get(n, { params: t, withCredentials: !0 });
+                1 == i.data.success &&
                   (0, ut.z)(() => {
                     if (
-                      (this.AddAllRecentEvents(e, n.data.recent_events),
-                      n.data.partnerevents)
+                      (this.AddAllRecentEvents(e, i.data.recent_events, a),
+                      i.data.partnerevents)
                     ) {
-                      Tt.j1.RegisterClanEvents(n.data.partnerevents);
-                      const e = n.data.partnerevents
-                        .map((e) => e.appid)
-                        .filter(Boolean);
-                      e.length > 0 &&
-                        e.forEach((e) => I.Z.Get().QueueAppRequest(e, c.bk));
+                      const e = this.GetFilteredPartnerEvents(
+                        i.data.partnerevents,
+                        a
+                      );
+                      Tt.j1.RegisterClanEvents(e);
+                      const t = e.map((e) => e.appid).filter(Boolean);
+                      t.length > 0 &&
+                        t.forEach((e) => I.Z.Get().QueueAppRequest(e, c.bk));
                     }
                   });
               } catch (t) {
@@ -13756,6 +13810,38 @@
             }
             return this.m_rgRecentEvent.get(e);
           });
+        }
+        GetFilteredTaggedEvents(e, t) {
+          switch (t) {
+            case "wishlist":
+              return e.filter((e) => P.jg.Get().BIsGameWishlisted(e.appid));
+            case "library":
+              return e.filter((e) => P.jg.Get().BIsGameOwned(e.appid));
+            case "recommended":
+              return e.filter((e) => P.jg.Get().BIsGameRecommended(e.appid));
+            default:
+              return e;
+          }
+        }
+        GetFilteredPartnerEvents(e, t) {
+          switch (t) {
+            case "wishlist":
+              return e.filter(
+                (e) =>
+                  !Boolean(e.appid) || P.jg.Get().BIsGameWishlisted(e.appid)
+              );
+            case "library":
+              return e.filter(
+                (e) => !Boolean(e.appid) || P.jg.Get().BIsGameOwned(e.appid)
+              );
+            case "recommended":
+              return e.filter(
+                (e) =>
+                  !Boolean(e.appid) || P.jg.Get().BIsGameRecommended(e.appid)
+              );
+            default:
+              return e;
+          }
         }
       }
       (0, G.gn)([ut.LO], hi.prototype, "m_rgRecentEvent", void 0),
@@ -14232,9 +14318,15 @@
                       .GetRecentEventsForSalesPage(
                         e,
                         y,
-                        null == n ? void 0 : n.GetActiveTabUniqueID()
+                        null == n ? void 0 : n.GetTab()
                       )
-                  : yield hi.Get().GetRecentTaggedEventsForSalesPage(e, y);
+                  : yield hi
+                      .Get()
+                      .GetRecentTaggedEventsForSalesPage(
+                        e,
+                        y,
+                        null == n ? void 0 : n.GetTab()
+                      );
               t =
                 yield Tt.j1.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   a.map((e) => e.gid),
@@ -14244,7 +14336,11 @@
             let i = t.map((e) => e.GID);
             (i = Ei(e, y, a, n, "events2", i, (e, t) => (0, It.LQ)(t))),
               (t = i.map((e) => Tt.j1.GetClanEventModel(e)));
-            let r = t.filter((e) => !!e && n.ShouldShowEvent(e));
+            let r = t.filter(
+              (t) =>
+                !!t &&
+                (e.BUsesContentHubForItemSource() || n.ShouldShowEvent(t))
+            );
             yield I.Z.Get().QueueMultipleAppRequests(
               r.map((e) => e.appid).filter(Boolean),
               c.bk

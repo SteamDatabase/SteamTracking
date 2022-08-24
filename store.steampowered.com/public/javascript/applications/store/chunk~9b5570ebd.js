@@ -5,7 +5,7 @@
   [3456],
   {
     77636: (e, t, s) => {
-      s.d(t, { LA: () => m, jg: () => c });
+      s.d(t, { LA: () => m, jg: () => u });
       var r = s(70655),
         n = s(9669),
         i = s.n(n),
@@ -15,19 +15,19 @@
         p = s(67294);
       const l = "unUserdataVersion";
       function m() {
-        const [e, t] = (0, p.useState)(!c.Get().BIsLoaded());
+        const [e, t] = (0, p.useState)(!u.Get().BIsLoaded());
         return (
           (0, p.useEffect)(() => {
-            c.Get().BIsLoaded() ||
-              c
+            u.Get().BIsLoaded() ||
+              u
                 .Get()
                 .HintLoad()
-                .finally(() => t(!c.Get().BIsLoaded()));
+                .finally(() => t(!u.Get().BIsLoaded()));
           }, []),
-          [e, c.Get()]
+          [e, u.Get()]
         );
       }
-      class c {
+      class u {
         constructor() {
           (this.m_setWishList = new Set()),
             (this.m_wishlistInOrder = Array()),
@@ -477,95 +477,111 @@
         }
         static Get() {
           return (
-            c.s_globalSingletonStore ||
-              ((c.s_globalSingletonStore = new c()),
+            u.s_globalSingletonStore ||
+              ((u.s_globalSingletonStore = new u()),
               "dev" == d.De.WEB_UNIVERSE &&
-                (window.DUS = c.s_globalSingletonStore)),
-            c.s_globalSingletonStore
+                (window.DUS = u.s_globalSingletonStore)),
+            u.s_globalSingletonStore
           );
         }
       }
-      (0, r.gn)([o.LO], c.prototype, "m_setWishList", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setOwnedPackages", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setOwnedApps", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setFollowedApps", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setExcludedTagsIds", void 0),
+      (0, r.gn)([o.LO], u.prototype, "m_setWishList", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setExcludedTagsIds", void 0),
         (0, r.gn)(
           [o.LO],
-          c.prototype,
+          u.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        (0, r.gn)([o.LO], c.prototype, "m_setRecommendedApps", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_mapIgnoredApps", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_mapIgnoredPackages", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setCuratorsFollowed", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setCuratorsIgnored", void 0),
         (0, r.gn)(
           [o.LO],
-          c.prototype,
+          u.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        (0, r.gn)([o.LO], c.prototype, "m_primaryLanguage", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_secondaryLanguages", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setRecommendedTags", void 0),
         (0, r.gn)(
           [o.LO],
-          c.prototype,
+          u.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        (0, r.gn)([o.LO], c.prototype, "m_setPackagesInCart", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_setAppsInCart", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_nCartLineItemCount", void 0),
-        (0, r.gn)([o.LO], c.prototype, "m_bAjaxInFlight", void 0),
-        (0, r.gn)([o.aD], c.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([o.LO], u.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([o.aD], u.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
-      s.d(t, { Xt: () => l, _I: () => m });
+      s.d(t, { Xt: () => u, _I: () => c });
       var r = s(67294),
-        n = (s(55914), s(3786)),
-        i = s(59650),
-        o = s(41311),
-        a = s(90666);
-      s(28274), s(88514), s(65902), s(92742);
-      function d(e) {
-        const t = (t) =>
-          (window.location.href =
-            e.redirectURL && e.redirectURL !== (0, a.Kc)() + "login"
-              ? e.redirectURL
-              : a.De.COMMUNITY_BASE_URL);
-        return a.L7 && a.L7.logged_in
-          ? (t(), null)
-          : r.createElement(
-              "div",
-              null,
-              r.createElement(n.f, { baseURL: (0, a.Kc)(), onLoginComplete: t })
-            );
+        n = (s(55914), s(3786), s(59650)),
+        i = s(41311),
+        o = s(90666),
+        a = s(28274),
+        d = (s(88514), s(65902)),
+        p = s(92742);
+      function l(e) {
+        return r.createElement(h, Object.assign({}, e));
       }
-      function p(e) {
+      function m(e) {
         return r.createElement(
-          i.e1,
+          n.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(d, { redirectURL: e.redirectURL })
+          r.createElement(l, { redirectURL: e.redirectURL })
         );
       }
-      function l() {
-        (0, i.AM)(
-          r.createElement(p, {
+      function u() {
+        (0, n.AM)(
+          r.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, i.Xx)("#Login_SignIn") }
         );
       }
-      function m(e) {
-        (0, i.AM)(
-          r.createElement(p, { ownerWin: window, redirectURL: e }),
+      function c(e) {
+        (0, n.AM)(
+          r.createElement(m, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, i.Xx)("#Login_SignIn") }
+        );
+      }
+      function h(e) {
+        const { redirectURL: t } = e,
+          [s] = (0, r.useState)(
+            new d.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+          ),
+          [n, i] = (0, r.useState)(!1);
+        return r.createElement(
+          "div",
+          null,
+          n
+            ? r.createElement(a.pT, null)
+            : r.createElement(a.wK, {
+                autoFocus: !0,
+                transport: s,
+                platform: 2,
+                onComplete: (e) => {
+                  e == p.TG.k_PrimaryDomainFail
+                    ? i(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                disableQR: !0,
+                theme: "modal",
+              })
         );
       }
     },
@@ -578,7 +594,7 @@
         a = s(10847),
         d = s(84351),
         p = s(95598),
-        l = s(30156);
+        l = s(22975);
       class m extends n.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
@@ -665,8 +681,8 @@
         }
       }
       (0, r.gn)([l.ak], m.prototype, "UpdateMaximizeState", null);
-      var c = s(77520),
-        u = s(41311),
+      var u = s(77520),
+        c = s(41311),
         h = s(90666);
       function g(e, t, s) {
         return (0, r.mG)(this, void 0, void 0, function* () {
@@ -708,7 +724,7 @@
           const l = {
               strTitle:
                 (null == s ? void 0 : s.strTitle) ||
-                (0, u.Xx)("#Dialog_DefaultWindowTitle"),
+                (0, c.Xx)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == s ? void 0 : s.fnOnClose,
               popupWidth:
                 (null == s ? void 0 : s.popupWidth) ||
@@ -738,15 +754,15 @@
       function w(e, t, s, r, i, o, a) {
         let p, l;
         const m = e.props.closeModal,
-          c = () => {
+          u = () => {
             l && l.Close(),
               m && m(),
               (null == r ? void 0 : r.fnOnClose) && r.fnOnClose();
           },
-          u = () => {
-            p && p.Close(), c();
+          c = () => {
+            p && p.Close(), u();
           },
-          g = n.cloneElement(e, { closeModal: u });
+          g = n.cloneElement(e, { closeModal: c });
         if (
           (h.De.IN_GAMEPADUI && (t = window.parent),
           I((a = a || (0, d.BL)(t)), t) && r && s)
@@ -756,13 +772,13 @@
               d.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !g.props.bDisableBackgroundDismiss && u,
+                onEscKeypress: !g.props.bDisableBackgroundDismiss && c,
               },
               n.createElement("div", null)
             );
             l = a.ShowModal(e);
           }
-          const e = Object.assign(Object.assign({}, r), { fnOnClose: c }),
+          const e = Object.assign(Object.assign({}, r), { fnOnClose: u }),
             m = new C(t, s, e, g, i, o);
           m.Show(), (p = m);
         } else p = a.ShowModal(g);
@@ -791,7 +807,7 @@
             (this.m_options = i);
         }
         Update(e) {
-          (0, c.X)(!1, "NYI");
+          (0, u.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
           var t, s, r;

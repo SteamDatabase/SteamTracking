@@ -290,7 +290,7 @@ function SetAppWorkshopInfo( appid, hashParams )
 }
 
 // handler for requesting keys
-function SetRequestKeys( appid, requests, fnOnSuccess )
+function SetRequestKeys( appid, requests, fnOnSuccess, fnOnFailure )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/requestkeys/' + appid,
 		{
@@ -314,6 +314,10 @@ function SetRequestKeys( appid, requests, fnOnSuccess )
 			}
 			else
 			{
+				if ( fnOnFailure )
+				{
+					fnOnFailure();
+				}
 				$('AjaxOutput').innerHTML = "<span style='color:red'>" + results.message + "</span>";
 			}
 		},

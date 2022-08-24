@@ -24,7 +24,7 @@ function GetSupportedLanguages()
 				'russian': 'Russian',
 				'thai': 'Thai',
 				'japanese': 'Japanese',
-				'portuguese': 'Portuguese',
+				'portuguese': 'Portuguese - Portugal',
 				'polish': 'Polish',
 				'danish': 'Danish',
 				'dutch': 'Dutch',

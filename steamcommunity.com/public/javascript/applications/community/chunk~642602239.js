@@ -33177,6 +33177,7 @@
             (this.m_setPendingBundleInfo = new Set()),
             (this.m_setPendingPackageInfo = new Set()),
             (this.m_setPendingDataRequest = {}),
+            (this.m_PendingInfoResolve = void 0),
             (this.m_PendingTimer = void 0),
             (this.k_AlreadyResolvedOK = Promise.resolve(1)),
             (this.k_AlreadyResolvedInvalid = Promise.resolve(8)),
@@ -33209,8 +33210,18 @@
         }
         ResetCache() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            (this.m_bActivelyResettingCache = !0),
-              yield this.FlushPendingInfo(),
+            (this.m_bActivelyResettingCache = !0), this.FlushPendingInfo();
+            let e = [];
+            this.m_mapAppsInFlight.forEach((t) => {
+              e.push(t.promise);
+            }),
+              this.m_mapBundleInFlight.forEach((t) => {
+                e.push(t.promise);
+              }),
+              this.m_mapPackageInFlight.forEach((t) => {
+                e.push(t.promise);
+              }),
+              yield Promise.all(e),
               this.m_mapApps.clear(),
               this.m_mapBundles.clear(),
               this.m_mapPackages.clear(),
@@ -33350,6 +33361,7 @@
         }
         FlushPendingInfo() {
           return (0, i.mG)(this, void 0, void 0, function* () {
+            if (void 0 === this.m_PendingInfoResolve) return;
             const e = this.m_PendingInfoResolve,
               t = Array.from(this.m_setPendingAppInfo),
               r = Array.from(this.m_setPendingPackageInfo),
@@ -35485,137 +35497,109 @@
     },
     77765: (e, t, r) => {
       "use strict";
-      r.d(t, { O: () => b });
-      var i,
-        n = r(70655),
-        a = r(9669),
-        s = r.n(a),
-        o = r(22188),
-        l = r(29323),
-        c = r(67294),
-        d = r(63315),
-        m = r(13596),
-        u = r(7573),
-        _ = r(41311),
-        p = r(93976),
-        h = r(22975),
-        g = r(90666),
-        f = r(8456),
-        B = r.n(f),
-        y = r(47808);
-      let b = (i = class extends c.Component {
-        constructor(e) {
-          super(e), (this.m_cancelSignal = s().CancelToken.source());
-          let t = !this.props.bShowVideoImmediately;
-          (this.state = { bSummaryMode: t, bLoadedMetaData: !1 }),
-            (this.m_youtubeInfo = {
-              title: (0, _.Xx)("#Loading"),
-              description: "",
-              videoid: e.videoID,
-              views: "0",
-            });
-        }
-        componentDidMount() {
-          this.state.bSummaryMode && this.HintLoadMetadata();
-        }
-        componentWillUnmount() {
-          this.m_cancelSignal.cancel(
-            "YouTubeInlineSnippet component unmounted"
-          );
-        }
-        HintLoadMetadata() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            d.A.LoadYouTubeDynamicData(
-              [this.props.videoID],
-              this.m_cancelSignal
-            )
+      r.d(t, { O: () => h });
+      var i = r(67294),
+        n = r(63315),
+        a = r(13596),
+        s = r(74163),
+        o = r(93976),
+        l = r(7573),
+        c = r(41311),
+        d = r(47808),
+        m = r(90666),
+        u = r(90844),
+        _ = r(8456),
+        p = r.n(_);
+      function h(e) {
+        const {
+            videoID: t,
+            bShowVideoImmediately: r,
+            bAutoPlay: _,
+            nStartSeconds: h,
+            classNameSize: g,
+            classNameAlign: f,
+          } = e,
+          [B, y] = (0, i.useState)(!r),
+          [b, v] = (0, i.useState)(!1),
+          w = (0, s.T)("YouTubeInlineSnippet"),
+          [S, C] = (0, i.useState)({
+            title: (0, c.Xx)("#Loading"),
+            description: "",
+            videoid: t,
+            views: "0",
+          });
+        (0, i.useEffect)(() => {
+          B &&
+            n.A.LoadYouTubeDynamicData([t], w)
               .then((e) => {
-                !this.m_cancelSignal.token.reason &&
-                  e.length > 0 &&
-                  ((this.m_youtubeInfo = e[0]),
-                  this.setState({ bLoadedMetaData: !0 }));
+                !w.token.reason && e.length > 0 && (C(e[0]), v(!0));
               })
               .catch((e) =>
                 console.error(
-                  "YouTubeInlineSnippet: " + (0, p.l)(e).strErrorMsg
+                  "YouTubeInlineSnippet: " + (0, o.l)(e).strErrorMsg
                 )
               );
-          });
-        }
-        OnClick() {
-          this.setState({ bSummaryMode: !1 });
-        }
-        render() {
-          let e = this.props.videoID;
-          if (this.state.bSummaryMode) {
-            let t = this.m_youtubeInfo.title,
-              r = this.m_youtubeInfo.views,
-              i = this.m_youtubeInfo.description;
-            return c.createElement(
+        }, [B, w, t]);
+        const E = !1;
+        if (
+          (i.useEffect(() => {
+            r && (0, u.m)(() => {});
+          }, [r, E]),
+          B)
+        ) {
+          const e = S.title,
+            r = S.views,
+            n = S.description;
+          return i.createElement(
+            "div",
+            { className: p().DynamicLinkBox, onClick: () => y(!1) },
+            i.createElement("img", {
+              className: p().DynamicLink_Preview,
+              src: "https://img.youtube.com/vi/" + t + "/0.jpg",
+            }),
+            i.createElement(
               "div",
-              { className: B().DynamicLinkBox, onClick: this.OnClick },
-              c.createElement("img", {
-                className: B().DynamicLink_Preview,
-                src: "https://img.youtube.com/vi/" + e + "/0.jpg",
-              }),
-              c.createElement(
+              { className: p().DynamicLink_Content },
+              i.createElement(
                 "div",
-                { className: B().DynamicLink_Content },
-                c.createElement(
-                  "div",
-                  { className: B().DynamicLink_Name },
-                  (0, _.Xx)("#EventEditor_YouTubeVideoTitle", t)
-                ),
-                c.createElement(
-                  "div",
-                  { className: B().DynamicLink_YoutubeViews },
-                  (0, _.Xx)(
-                    "#EventEditor_YouTubeVideoViews",
-                    (0, y.AV)(Number(r))
-                  )
-                ),
-                c.createElement(
-                  "div",
-                  { className: B().Dynamiclink_Content },
-                  this.state.bLoadedMetaData && i,
-                  !this.state.bLoadedMetaData && c.createElement(m.V, null)
+                { className: p().DynamicLink_Name },
+                (0, c.Xx)("#EventEditor_YouTubeVideoTitle", e)
+              ),
+              i.createElement(
+                "div",
+                { className: p().DynamicLink_YoutubeViews },
+                (0, c.Xx)(
+                  "#EventEditor_YouTubeVideoViews",
+                  (0, d.AV)(Number(r))
                 )
+              ),
+              i.createElement(
+                "div",
+                { className: p().Dynamiclink_Content },
+                b && n,
+                !b && i.createElement(a.V, { size: "medium" })
               )
-            );
-          }
-          {
-            let t = this.props.classNameSize,
-              r = this.props.classNameAlign;
-            const n =
-              "https://www.youtube.com/embed/" +
-              e +
-              i.m_strYouTubeOptions +
-              (this.props.bAutoPlay ? "&autoplay=1" : "") +
-              (this.props.nStartSeconds
-                ? "&t=" + this.props.nStartSeconds
-                : "");
-            return c.createElement(
-              "div",
-              { className: (0, u.Z)(B().PreviewYouTubeVideo, t, r), id: e },
-              c.createElement("img", {
-                src:
-                  g.De.COMMUNITY_CDN_URL +
-                  "public/shared/images/responsive/youtube_16x9_placeholder.gif",
-              }),
-              c.createElement("iframe", {
-                className: (0, u.Z)(B().PreviewYouTubeVideo, t, r),
-                src: n,
-                allowFullScreen: !0,
-                frameBorder: 0,
-              })
-            );
-          }
+            )
+          );
         }
-      });
-      (b.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0"),
-        (0, n.gn)([o.LO], b.prototype, "m_youtubeInfo", void 0),
-        (0, n.gn)([h.ak], b.prototype, "OnClick", null),
-        (b = i = (0, n.gn)([l.Pi], b));
+        return i.createElement(
+          "div",
+          { className: (0, l.Z)(p().PreviewYouTubeVideo, g, f), id: t },
+          i.createElement("img", {
+            src:
+              m.De.COMMUNITY_CDN_URL +
+              "public/shared/images/responsive/youtube_16x9_placeholder.gif",
+          }),
+          i.createElement(u.e, {
+            video: t,
+            autoplay: _,
+            startSeconds: h,
+            playsInline: !0,
+            autopause: !0,
+            showFullscreenBtn: !0,
+          })
+        );
+      }
     },
     97024: (e, t, r) => {
       "use strict";
@@ -44588,6 +44572,197 @@
       function d() {
         return n.useContext(o);
       }
+    },
+    90844: (e, t, r) => {
+      "use strict";
+      r.d(t, { e: () => h, m: () => _ });
+      var i,
+        n = r(70655),
+        a = r(67294),
+        s = r(48780),
+        o = r(80533),
+        l = r(22975),
+        c = r(7573),
+        d = r(13596);
+      !(function (e) {
+        (e[(e.NotLoaded = 0)] = "NotLoaded"),
+          (e[(e.Loading = 1)] = "Loading"),
+          (e[(e.Loaded = 2)] = "Loaded");
+      })(i || (i = {}));
+      let m = i.NotLoaded,
+        u = [];
+      function _(e) {
+        if (m == i.Loaded) return void e();
+        if (m == i.NotLoaded) {
+          let e = document.createElement("script");
+          e.src = "https://www.youtube.com/iframe_api";
+          let t = document.getElementsByTagName("script")[0];
+          t.parentNode.insertBefore(e, t), (window.onYouTubeIframeAPIReady = p);
+        }
+        u.findIndex((t) => e == t) < 0 && u.push(e);
+      }
+      function p() {
+        m = i.Loaded;
+        for (let e of u) e();
+        u = [];
+      }
+      class h extends a.Component {
+        constructor(e) {
+          super(e),
+            (this.m_strPlayerID = ""),
+            (this.m_player = null),
+            (this.m_playerContainer = null),
+            (this.m_bPlayerReady = !1),
+            (this.m_strPlayerID = "YoutubePlayer_" + h.s_nPlayerIndex++),
+            (this.state = { bYoutubeLoaded: !1 });
+        }
+        componentWillUnmount() {
+          var e;
+          this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), s.Zf(u, e);
+        }
+        shouldComponentUpdate(e, t) {
+          if (!this.m_player) return !1;
+          const r = this.props;
+          return r.autoplay != e.autoplay ||
+            r.controls != e.controls ||
+            r.showInfo != e.showInfo ||
+            r.video != e.video
+            ? (this.CreatePlayer(e), !1)
+            : ((r.width == e.width && r.height == e.height) ||
+                (this.m_bPlayerReady &&
+                  e.width &&
+                  e.height &&
+                  this.m_player.setSize(e.width, e.height)),
+              r.forcePause != e.forcePause);
+        }
+        componentDidUpdate(e) {
+          e.forcePause != this.props.forcePause &&
+            (this.props.forcePause
+              ? this.m_player.pauseVideo()
+              : this.m_player.playVideo());
+        }
+        DestroyPlayer() {
+          if (this.m_player)
+            try {
+              this.m_player.stopVideo && this.m_player.stopVideo(),
+                this.m_player.destroy && this.m_player.destroy();
+            } catch (e) {
+            } finally {
+              this.m_player = null;
+            }
+        }
+        BindPlayerContainer(e) {
+          this.m_playerContainer != e &&
+            ((this.m_playerContainer = e),
+            this.DestroyPlayer(),
+            this.m_playerContainer && _(this.OnYoutubeScriptsReady));
+        }
+        OnYoutubeScriptsReady() {
+          this.CreatePlayer(this.props);
+        }
+        CreatePlayer(e) {
+          if ((this.DestroyPlayer(), !this.m_playerContainer)) return;
+          const t = !1 === e.autoplay ? 0 : 1,
+            r = !0 === e.showInfo ? 1 : 0,
+            i = !0 === e.controls ? 1 : 0,
+            n = !0 === e.showFullscreenBtn ? 1 : 0,
+            a = !0 === e.playsInline ? 1 : 0;
+          let s = {
+              width: void 0 !== e.width ? String(e.width) : void 0,
+              height: void 0 !== e.height ? String(e.height) : void 0,
+              videoId: e.video,
+              playerVars: {
+                autoplay: t,
+                showinfo: r,
+                autohide: 1,
+                fs: n,
+                modestbranding: 1,
+                rel: 0,
+                playsinline: a,
+                iv_load_policy: 3,
+                controls: i,
+                start: e.startSeconds,
+              },
+              events: {
+                onReady: this.OnPlayerReady,
+                onStateChange: this.OnPlayerStateChange,
+                onError: this.OnError,
+              },
+            },
+            o = this.m_playerContainer.firstElementChild;
+          (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(o, s));
+        }
+        OnPlayerReady(e) {
+          if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
+            let e = this.m_player.getVideoData(),
+              t = { strAuthor: "", strTitle: "", strVideoID: "" };
+            e.author && (t.strAuthor = e.author),
+              e.title && (t.strTitle = e.title),
+              e.video_id && (t.strVideoID = e.video_id),
+              this.props.onVideoInfoChanged(t);
+          }
+          this.props.width &&
+            this.props.height &&
+            this.m_player.setSize(this.props.width, this.props.height),
+            this.props.autoplay && this.m_player.playVideo(),
+            this.props.onPlayerReady && this.props.onPlayerReady();
+        }
+        OnPlayerStateChange(e) {
+          switch (e.data) {
+            case YT.PlayerState.UNSTARTED:
+              break;
+            case YT.PlayerState.BUFFERING:
+              this.props.onBuffering && this.props.onBuffering();
+              break;
+            case YT.PlayerState.PLAYING:
+              this.props.onPlaying && this.props.onPlaying();
+              break;
+            case YT.PlayerState.PAUSED:
+              this.props.onPaused && this.props.onPaused();
+              break;
+            case YT.PlayerState.ENDED:
+              this.props.onMovieEnd && this.props.onMovieEnd();
+          }
+        }
+        OnError(e) {
+          console.log("Youtube: Playback failed", e),
+            this.props.onError && this.props.onError(e);
+        }
+        OnPlayerLeftView() {
+          this.props.autopause &&
+            this.m_player &&
+            this.m_bPlayerReady &&
+            this.m_player.pauseVideo();
+        }
+        PlayVideo(e) {
+          this.m_player &&
+            this.m_bPlayerReady &&
+            (e && this.m_player.seekTo(0, !0), this.m_player.playVideo());
+        }
+        render() {
+          const e = a.createElement(
+            "div",
+            {
+              key: this.m_strPlayerID,
+              ref: this.BindPlayerContainer,
+              className: (0, c.Z)("YoutubePlayer", this.props.classnames),
+            },
+            a.createElement(d.V, { className: "YoutubePlayerThrobber" })
+          );
+          return this.props.autopause
+            ? a.createElement(o.h, { onLeave: this.OnPlayerLeftView }, e)
+            : e;
+        }
+      }
+      (h.s_nPlayerIndex = 0),
+        (0, n.gn)([l.ak], h.prototype, "BindPlayerContainer", null),
+        (0, n.gn)([l.ak], h.prototype, "OnYoutubeScriptsReady", null),
+        (0, n.gn)([l.ak], h.prototype, "CreatePlayer", null),
+        (0, n.gn)([l.ak], h.prototype, "OnPlayerReady", null),
+        (0, n.gn)([l.ak], h.prototype, "OnPlayerStateChange", null),
+        (0, n.gn)([l.ak], h.prototype, "OnError", null),
+        (0, n.gn)([l.ak], h.prototype, "OnPlayerLeftView", null),
+        (0, n.gn)([l.ak], h.prototype, "PlayVideo", null);
     },
     17888: (e, t, r) => {
       "use strict";

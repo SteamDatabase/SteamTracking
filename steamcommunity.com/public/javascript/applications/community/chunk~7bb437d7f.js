@@ -474,7 +474,7 @@
     },
     5525: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => u, JW: () => h, zD: () => v });
+      n.d(t, { F_: () => h, JW: () => u, zD: () => v });
       var a = n(70655),
         r = n(22188),
         s = n(30381),
@@ -534,8 +534,8 @@
         }
       }
       (0, a.gn)([r.LO], c.prototype, "nOverrideDateNow", void 0);
-      const h = new c();
-      function u(e = 1) {
+      const u = new c();
+      function h(e = 1) {
         const [t, n] = i.useState(() => _()),
           a = (0, m.T)("useTimeNowWithOverride"),
           r = i.useCallback(() => {
@@ -553,23 +553,23 @@
           t
         );
       }
-      window.g_EventCalendarDevFeatures = h;
+      window.g_EventCalendarDevFeatures = u;
       const p = new Date(),
         g = Math.floor(p.getTime() / 1e3);
       function _() {
         const e = Math.floor(Date.now() / 1e3);
-        return h.nOverrideDateNow ? h.nOverrideDateNow + (e - g) : e;
+        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - g) : e;
       }
       function v() {
         return i.useMemo(() => {
-          return null !== (e = h.nOverrideDateNow) && void 0 !== e ? e : g;
+          return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : g;
           var e;
         }, []);
       }
     },
     9410: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => A });
+      n.d(t, { Xt: () => O });
       var a = n(67294),
         r = n(70655),
         s = n(22188),
@@ -764,8 +764,8 @@
         (0, r.gn)([s.LO], c.prototype, "m_eSteamGuardCodeError", void 0),
         (0, r.gn)([i.a], c.prototype, "DoLogin", null),
         (0, r.gn)([s.aD.bound], c.prototype, "UpdateCaptchaURL", null);
-      var h = n(48341),
-        u = n(95598),
+      var u = n(48341),
+        h = n(95598),
         p = n(29323),
         g = n(22975),
         _ = n(7573),
@@ -798,7 +798,7 @@
             a.createElement(
               "div",
               { className: E().LoginPanelBackground },
-              a.createElement(u.ui7, null)
+              a.createElement(h.ui7, null)
             ),
             a.createElement(
               "div",
@@ -890,7 +890,7 @@
               a.createElement(
                 "form",
                 { className: E().AccountPasswordForm, onSubmit: this.OnSubmit },
-                a.createElement(h.II, {
+                a.createElement(u.II, {
                   autoFocus: this.props.autoFocus,
                   className: (0, _.Z)(E().AccountNameLabel, e),
                   label: (0, l.Xx)("#Login_AccountName"),
@@ -900,7 +900,7 @@
                   maxLength: 64,
                   onChange: this.OnChangeName,
                 }),
-                a.createElement(h.II, {
+                a.createElement(u.II, {
                   bIsPassword: !0,
                   className: (0, _.Z)(E().PasswordDots, t),
                   label: (0, l.Xx)("#Login_Password"),
@@ -911,7 +911,7 @@
                   value: n.GetPassword(),
                   onChange: this.OnChangePassword,
                 }),
-                a.createElement(h.ji, {
+                a.createElement(u.ji, {
                   className: E().RememberMeCheck,
                   label: (0, l.Xx)("#Login_RememberMe"),
                   disabled: !1,
@@ -920,7 +920,7 @@
                 }),
                 n.GetCaptchaURL() && a.createElement(j, { manager: n }),
                 a.createElement(
-                  h.KM,
+                  u.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
                   (0, l.Xx)("#Login_SignIn").toLocaleUpperCase()
                 )
@@ -984,7 +984,7 @@
                     src: e.GetCaptchaURL(),
                   })
                 ),
-                a.createElement(h.II, {
+                a.createElement(u.II, {
                   className: E().CaptchaInput,
                   type: "text",
                   autoComplete: "off",
@@ -1037,7 +1037,7 @@
             case m.TwoFactorCode:
               (n = t.GetTwoFactorCode()),
                 (r = (0, l.Xx)("#Login_Enter2FA")),
-                (e = a.createElement(u.vT2, null)),
+                (e = a.createElement(h.vT2, null)),
                 (s = (0, l.Xx)("#Login_Enter2FAHelp"));
               break;
             case m.EmailCode:
@@ -1052,18 +1052,18 @@
                   )
                 )),
                 (s = (0, l.Xx)("#Login_EnterSteamguard")),
-                (e = a.createElement(u.wr9, null));
+                (e = a.createElement(h.wr9, null));
           }
           return a.createElement(
             "div",
             { className: E().AuthenticationPanel },
-            a.createElement(h.__, null, (0, l.Xx)("#Login_SigningIn")),
+            a.createElement(u.__, null, (0, l.Xx)("#Login_SigningIn")),
             a.createElement(
               "div",
               { className: E().SigningInAccountName },
               t.GetUserName()
             ),
-            a.createElement(h.Ac, null, r),
+            a.createElement(u.Ac, null, r),
             a.createElement(
               "div",
               { className: E().AuthenticatorInputcontainer },
@@ -1071,7 +1071,7 @@
               a.createElement(
                 "form",
                 { className: E().AccountPasswordForm, onSubmit: this.OnSubmit },
-                a.createElement(h.II, {
+                a.createElement(u.II, {
                   className: (0, _.Z)(E().AccountName),
                   label: "Steam Guard Code",
                   type: "text",
@@ -1082,7 +1082,7 @@
                   onChange: this.OnChangeAuthCode,
                 }),
                 a.createElement(
-                  h.KM,
+                  u.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
                   (0, l.Xx)("#Login_SteamguardSubmit").toLocaleUpperCase()
                 )
@@ -1105,37 +1105,54 @@
       (0, r.gn)([g.ak], b.prototype, "OnSubmit", null),
         (0, r.gn)([g.ak], b.prototype, "OnChangeAuthCode", null),
         (b = (0, r.gn)([p.Pi], b));
-      var N = n(59650);
-      n(28274), n(88514), n(65902), n(92742);
-      function L(e) {
-        const t = (t) =>
-          (window.location.href =
-            e.redirectURL && e.redirectURL !== (0, S.Kc)() + "login"
-              ? e.redirectURL
-              : S.De.COMMUNITY_BASE_URL);
-        return S.L7 && S.L7.logged_in
-          ? (t(), null)
-          : a.createElement(
-              "div",
-              null,
-              a.createElement(T, { baseURL: (0, S.Kc)(), onLoginComplete: t })
-            );
+      var N = n(59650),
+        w = n(28274),
+        L = (n(88514), n(65902)),
+        A = n(92742);
+      function R(e) {
+        return a.createElement(x, Object.assign({}, e));
       }
-      function w(e) {
+      function y(e) {
         return a.createElement(
           N.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(L, { redirectURL: e.redirectURL })
+          a.createElement(R, { redirectURL: e.redirectURL })
         );
       }
-      function A() {
+      function O() {
         (0, N.AM)(
-          a.createElement(w, {
+          a.createElement(y, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
           { strTitle: (0, l.Xx)("#Login_SignIn") }
+        );
+      }
+      function x(e) {
+        const { redirectURL: t } = e,
+          [n] = (0, a.useState)(
+            new L.J(S.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+          ),
+          [r, s] = (0, a.useState)(!1);
+        return a.createElement(
+          "div",
+          null,
+          r
+            ? a.createElement(w.pT, null)
+            : a.createElement(w.wK, {
+                autoFocus: !0,
+                transport: n,
+                platform: 2,
+                onComplete: (e) => {
+                  e == A.TG.k_PrimaryDomainFail
+                    ? s(!0)
+                    : window.location.assign(t);
+                },
+                redirectUrl: t,
+                disableQR: !0,
+                theme: "modal",
+              })
         );
       }
     },
@@ -1159,17 +1176,17 @@
         m = n(30600),
         d = n(95906),
         c = n.n(d),
-        h = n(5525);
-      const u = n(80008);
+        u = n(5525);
+      const h = n(80008);
       function p(e) {
-        const t = u.tz.guess(),
-          n = u.unix(e).tz(t),
+        const t = h.tz.guess(),
+          n = h.unix(e).tz(t),
           a = (0, o.CE)();
         return a && n.locale(a), n.format("LT");
       }
       function g(e, t) {
-        const n = u.tz.guess(),
-          a = u.unix(e).tz(n),
+        const n = h.tz.guess(),
+          a = h.unix(e).tz(n),
           s = (0, o.CE)();
         return (
           s && a.locale(s),
@@ -1269,7 +1286,7 @@
               ),
               (0, o.Xx)("#EventDisplay_TimeDisplayNone")
             );
-          let s = h.JW.GetTimeNowWithOverride();
+          let s = u.JW.GetTimeNowWithOverride();
           if (a)
             return r.createElement(
               "div",
@@ -1370,15 +1387,15 @@
               ),
               (0, o.Xx)("#EventDisplay_TimeDisplayNone")
             );
-          const s = h.JW.GetTimeNowWithOverrideAsDate(),
-            i = h.JW.GetTimeNowWithOverride(),
+          const s = u.JW.GetTimeNowWithOverrideAsDate(),
+            i = u.JW.GetTimeNowWithOverride(),
             l = (0, m.U8)(new Date(1e3 * e), s),
             d = r.createElement(
               "div",
               { className: a.ShortDateAndTime },
               (0, o.$1)(e, l)
             );
-          let u = r.createElement(
+          let h = r.createElement(
             v,
             { rtFullDate: e, stylesmodule: a },
             r.createElement(
@@ -1395,7 +1412,7 @@
           if (
             (i < e &&
               e < i + m._H.PerWeek &&
-              (u = r.createElement(
+              (h = r.createElement(
                 v,
                 { rtFullDate: e, stylesmodule: a },
                 r.createElement(
@@ -1415,10 +1432,10 @@
               )),
             n || null == t || t < 1)
           )
-            return u;
+            return h;
           const p = e <= i && i <= t;
           p &&
-            (u = r.createElement(
+            (h = r.createElement(
               v,
               { rtFullDate: e, className: a.ActiveEvent, stylesmodule: a },
               r.createElement(
@@ -1475,7 +1492,7 @@
             );
           }
           const C = r.createElement(v, { rtFullDate: t, stylesmodule: a }, _);
-          return r.createElement("div", { className: a.ShortDateRange }, u, C);
+          return r.createElement("div", { className: a.ShortDateRange }, h, C);
         }
       };
       function S(e) {
@@ -1489,7 +1506,7 @@
           "div",
           { className: s },
           (function (e, t, n) {
-            const a = h.JW.GetTimeNowWithOverrideAsDate(),
+            const a = u.JW.GetTimeNowWithOverrideAsDate(),
               r = new Date(1e3 * e),
               s = new Date(1e3 * t),
               i = a.getFullYear() == r.getFullYear(),
@@ -1497,12 +1514,12 @@
               m = r.getFullYear() == s.getFullYear(),
               d = m && r.getMonth() == s.getMonth(),
               c = d && r.getDate() == s.getDate(),
-              u = {
+              h = {
                 day: "numeric",
                 month: null != n ? n : "long",
                 year: i ? void 0 : "numeric",
               },
-              p = r.toLocaleDateString(o.Yt.GetPreferredLocales(), u);
+              p = r.toLocaleDateString(o.Yt.GetPreferredLocales(), h);
             if (c) return p;
             {
               const e = {

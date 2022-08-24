@@ -105,6 +105,7 @@
  V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  V_FixDoubleSlashes
  V_IsAbsolutePath
+ V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  V_RemoveDotSlashes
  V_StripExtension
  V_StripFilename

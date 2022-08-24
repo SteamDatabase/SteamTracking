@@ -661,7 +661,20 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 	if ( navref )
 		MakeNavCookie( navref, url );
 
-	$J.post( url, {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, received_compensation: received_compensation, disable_comments: bDisableComments, sessionid: g_sessionID} )
+	var params = {
+		appid: appid,
+		steamworksappid: steamworksappid,
+		comment: comment,
+		rated_up: rated_up,
+		is_public: is_public,
+		language: language,
+		received_compensation:
+		received_compensation,
+		disable_comments: bDisableComments,
+				sessionid: g_sessionID
+	};
+
+	$J.post( url, params )
 		.done( function( data ) {
 			if ( data && data.success )
 			{

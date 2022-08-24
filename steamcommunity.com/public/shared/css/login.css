@@ -520,10 +520,10 @@ ul#why_list li {
 	padding-top: 12px;
 }
 
-/* 2020 LOGIN PAGE */
+/* 2022 LOGIN PAGE */
 body.login {
 	color: #E9E9E9;
-	background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' ) -45vw 0 no-repeat, #212429;
+	background-color: #181A21;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -534,6 +534,12 @@ body.login .page_content_flex {
 	display: flex;
 	justify-content: space-between;
 	min-height: 800px;
+}
+
+body.login .page_content {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
+	padding: 0px 8px;
+	width: 100%;
 }
 
 body.login.china {
@@ -611,7 +617,7 @@ body.login.china {
 }
 
 .login_btn_ctn a {
-	margin: 20px 0 0 0;
+	margin: 20px 0 10px 0;
 	display: block;
 	text-align: center;
 }
@@ -834,16 +840,23 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	padding-bottom: 0;
 }
 
+html.responsive .responsive_page_template_content
+{
+	background-color: #181A21;
+}
+
 .login_bottom_row {
 	display: flex;
 	flex-direction: row;
-	margin-top: 48px;
+	padding-top: 48px;
 	align-items: center;
 
-	max-width: 700px;
 
 	margin-right: auto;
 	margin-left: auto;
+	width: 100%;
+	justify-content: center;
+	background-color: #181A21;
 }
 
 .login_bottom_row_item {
@@ -854,6 +867,7 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	max-width: 200px;
 }
 
 @media screen and ( max-width: 640px )
@@ -886,26 +900,6 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	}
 }
 
-@media screen and ( max-width: 910px ) {
-	html.responsive body.login {
-		background-image: radial-gradient(60% 40% at 0% -0.03%, rgba(74, 81, 92, 0.5) 0%, rgba(74, 81, 92, 0) 100%);
-	}
-}
-
-@media screen and ( min-width: 1400px )
-{
-	html.responsive body.login {
-		background-position: -30vw 0;
-	}
-}
-
-@media screen and (min-width: 1700px) {
-	html.responsive body.login {
-		background-position: -24vw 0;
-	}
-}
-
-
 @media screen and (max-width: 910px )
 {
 	html.responsive body.login .page_content_flex, html.responsive  {
@@ -917,7 +911,30 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		flex-wrap: wrap;
 	}
 
-	html.responsive body.login {
-		background-image: none;
+	html.responsive body.v6 .page_content {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
+		padding: 0px;
+		width: 100%;
+		margin: 0 auto;
 	}
+
+}
+
+@media screen and ( max-width: 700px ) {
+
+	html.responsive .login_left_col {
+		width: 100%;
+	}
+
+	html.responsive .login_bottom_row {
+		flex-direction: column-reverse;
+	}
+
+	html.responsive body.v6 .page_content {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
+	}
+}
+
+body.v6 #footer_spacer {
+	background-color: #181A21;
 }

@@ -44,6 +44,7 @@
             (this.m_unPersonaStateFlags = 0),
             (this.m_strPlayerName = ""),
             (this.m_strAvatarHash = A.W),
+            (this.m_strAccountName = ""),
             (this.m_rtLastSeenOnline = 0),
             (this.m_strGameExtraInfo = ""),
             (this.m_unGameServerIP = 0),
@@ -269,6 +270,7 @@
         (0, r.gn)([s.LO], _.prototype, "m_unPersonaStateFlags", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_strPlayerName", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_strAvatarHash", void 0),
+        (0, r.gn)([s.LO], _.prototype, "m_strAccountName", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_rtLastSeenOnline", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_strGameExtraInfo", void 0),
         (0, r.gn)([s.LO], _.prototype, "m_unGameServerIP", void 0),
@@ -285,7 +287,7 @@
     },
     44298: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => h, vV: () => u });
+      a.d(t, { o: () => c, vV: () => h });
       var r = a(70655),
         s = a(67294),
         i = a(29323),
@@ -298,7 +300,7 @@
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
       var _ = a(25130),
         p = a.n(_);
-      class h extends s.Component {
+      class c extends s.Component {
         render() {
           const e = this.props,
             {
@@ -309,7 +311,7 @@
               statusPosition: m,
               children: _,
             } = e,
-            h = (0, r._T)(e, [
+            c = (0, r._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -317,10 +319,10 @@
               "statusPosition",
               "children",
             ]),
-            u = [];
+            h = [];
           return (
-            t && u.push(t),
-            u.push(
+            t && h.push(t),
+            h.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -348,7 +350,7 @@
                     i
                   ),
                 },
-                h
+                c
               ),
               s.createElement("div", {
                 className: (0, o.Z)(p().avatarStatus, "avatarStatus", m),
@@ -356,7 +358,7 @@
               }),
               s.createElement(A.j, {
                 className: (0, o.Z)(p().avatar, "avatar"),
-                rgSources: u,
+                rgSources: h,
                 draggable: !1,
               }),
               _
@@ -364,7 +366,7 @@
           );
         }
       }
-      let u = class extends s.Component {
+      let h = class extends s.Component {
         render() {
           const e = this.props,
             { persona: t, size: a, animatedAvatar: i, className: A } = e,
@@ -385,7 +387,7 @@
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
                     (_ = t.avatar_url_full)),
             s.createElement(
-              h,
+              c,
               Object.assign(
                 {
                   strAvatarURL: _,
@@ -398,8 +400,8 @@
           );
         }
       };
-      u = (0, r.gn)([i.Pi], u);
-      const c = (0, i.Pi)((e) => {
+      h = (0, r.gn)([i.Pi], h);
+      const u = (0, i.Pi)((e) => {
         const { profileItem: t, className: a, bDisableAnimation: i } = e,
           n = (0, r._T)(e, ["profileItem", "className", "bDisableAnimation"]);
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
@@ -480,10 +482,10 @@
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
             this.state.bAnimate || (a = null),
             s.createElement(
-              u,
+              h,
               Object.assign({ animatedAvatar: a }, m),
               n,
-              s.createElement(c, {
+              s.createElement(u, {
                 profileItem: i,
                 bDisableAnimation: "None" === this.props.loopDuration,
               })

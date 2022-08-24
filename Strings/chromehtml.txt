@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-}
-}
+i
+i
 __stubs
 __TEXT
 __stub_helper
@@ -21,6 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
+8e
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -63,6 +64,7 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
+h
 P
 
 
@@ -1069,6 +1071,8 @@ Disable GPU usage in CEF (force software rendering/compositing)
 -cef-delaypageload
 Disable early-out for known page loads
 -cef-disable-delaypageload
+-cef-enable-samesite-by-default-cookies
+Treat unspecified samesite as samesite=lax
 -store
 -community
 -clientui
@@ -1107,9 +1111,12 @@ clientui
 --ignore-certificate-errors
 -browser-offline
 -fakeoffline
---enable-blink-features=ResizeObserver,Worklet,AudioWorklet
+ResizeObserver
+Worklet
+AudioWorklet
 --enable-media-stream
---disable-blink-features=Badging
+Badging
+SameSiteByDefaultCookies
 .cef-enable-remote-debugging
 -devtools-address
 127.0.0.1
@@ -1117,7 +1124,7 @@ clientui
 8080
 --remote-debugging-port=%s
 --remote-debugging-address=%s
---disable-features=CalculateNativeWinOcclusion
+CalculateNativeWinOcclusion
 --enable-smooth-scrolling
 --disable-smooth-scrolling
 --disable-gpu-compositing --disable-gpu
@@ -1143,6 +1150,11 @@ BREAKPAD_DUMP_LOCATION
 --disable-breakpad
 --disable-hang-monitor --disable-gpu-watchdog
 --disable-quick-menu
+--enable-features=
+,
+--disable-features=
+--enable-blink-features=
+--disable-blink-features=
 bValidHandle == true
 Failed to connect to master html process, created shared memory (spawn time %0.2f)
 %s_%u_%u
@@ -1393,7 +1405,6 @@ google.protobuf.ListValue
 google.protobuf.Struct
 CHECK failed: checkpoints_.empty():
 CHECK failed: !checkpoints_.empty():
-,
 CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
 CHECK failed: (field_count()) == (2):
 CHECK failed: has_default_value():
@@ -2331,10 +2342,14 @@ sc_schinese
 @
 @
 
-@
 
+@
+]
 E
-Q
+}
+b
+i
+
 
 
 0
@@ -2402,10 +2417,12 @@ M9e
 ?
 ?
 :
+I
 ?
 ?
 ?
 
+8
 Ic
 @
 @

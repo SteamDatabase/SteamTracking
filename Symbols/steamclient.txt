@@ -377,6 +377,7 @@
  V_IsAbsolutePath
  V_JoinNumbers
  V_JoinNumbersUint
+ V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  V_MakeAbsolutePath
  V_MakeRelativePath
  V_MatchWildcardDNSName

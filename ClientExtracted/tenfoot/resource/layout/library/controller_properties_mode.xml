@@ -1232,7 +1232,7 @@
 						<DropDown id="ModeShiftDropDown" />
 					</Panel>
 
-			<Panel class="FieldWrapper" id="FlickStickSnapModePulldownTab" gameactions="off" advanced="off" >
+			<Panel class="FieldWrapper" id="FlickStickSnapModePulldownTab" modes="flickstick" gameactions="off" advanced="off" >
 				<Label class="FieldLabel" text="#Library_Details_FieldLabel_FlickStickSnapMode" />
 				<DropDown id="FlickStickSnapMode" />
 			</Panel>

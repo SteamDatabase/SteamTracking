@@ -15605,40 +15605,119 @@
     },
     74091: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => s });
+      n.d(t, { d: () => l });
       var r = n(67294),
-        i = n(73935);
-      const s = ({ config: e }) =>
-        r.createElement(
+        i = n(73935),
+        s = n(53622),
+        o = n(48780),
+        a = n(53477);
+      function l({ config: e, isDynamic: t }) {
+        const n = t ? u : c;
+        return r.createElement(
           r.Fragment,
           null,
-          Object.keys(e || {}).map((t) => {
-            const n = document.querySelectorAll(`[data-featuretarget=${t}`);
-            return n.length
-              ? Array.from(n).map((n, r) => {
-                  const s = (function (e, t) {
-                    if (!e) return {};
-                    try {
-                      const t = JSON.parse(e);
-                      if (!t || "object" != typeof t || Array.isArray(t))
-                        throw new Error();
-                      return t;
-                    } catch (n) {
-                      return (
-                        console.error(
-                          `There was a problem parsing props for feature target "${t}"`,
-                          n
-                        ),
-                        console.log(`Problematic string: >>>${e}<<<`),
-                        {}
-                      );
-                    }
-                  })(n.getAttribute("data-props"), t);
-                  return (0, i.createPortal)(e[t](s), n, `${t}${r}`);
-                })
-              : null;
-          })
+          Object.keys(e || {}).map((t) =>
+            r.createElement(n, { key: t, featureName: t, render: e[t] })
+          )
         );
+      }
+      function c(e) {
+        const { featureName: t, render: n } = e,
+          i = r.useMemo(
+            () =>
+              Array.from(
+                document.querySelectorAll(`[data-featuretarget=${t}]`)
+              ),
+            [t]
+          );
+        return i.length
+          ? r.createElement(
+              r.Fragment,
+              null,
+              i.map((e, i) =>
+                r.createElement(d, {
+                  key: i,
+                  featureName: t,
+                  elem: e,
+                  render: n,
+                })
+              )
+            )
+          : null;
+      }
+      function u(e) {
+        const { featureName: t, render: n } = e,
+          i = (0, a.NW)(),
+          l = r.useRef([]),
+          c = r.useRef(0);
+        return (
+          r.useEffect(() => {
+            const e = `[data-featuretarget=${t}]`;
+            (l.current = []), (c.current = 0);
+            const n = (e) => l.current.push({ key: c.current++, elem: e }),
+              r = (e) => o.Qf(l.current, (t) => t.elem == e);
+            document.querySelectorAll(e).forEach(n), l.current.length && i();
+            const a = new MutationObserver((t) => {
+              let o = !1;
+              for (const i of t)
+                s.Eu(
+                  i,
+                  (t) => {
+                    m(t, e).forEach((e) => {
+                      n(e), (o = !0);
+                    });
+                  },
+                  (t) => {
+                    m(t, e).forEach((e) => {
+                      r(e), (o = !0);
+                    });
+                  }
+                );
+              o && i();
+            });
+            return (
+              a.observe(document, { childList: !0, subtree: !0 }),
+              () => a.disconnect()
+            );
+          }, [t, i]),
+          r.createElement(
+            r.Fragment,
+            null,
+            l.current.map(({ key: e, elem: i }) =>
+              r.createElement(d, { key: e, elem: i, featureName: t, render: n })
+            )
+          )
+        );
+      }
+      function d(e) {
+        const { featureName: t, elem: n, render: s } = e,
+          o = r.useMemo(
+            () =>
+              (function (e, t) {
+                if (!e) return {};
+                try {
+                  const t = JSON.parse(e);
+                  if (!t || "object" != typeof t || Array.isArray(t))
+                    throw new Error();
+                  return t;
+                } catch (n) {
+                  return (
+                    console.error(
+                      `There was a problem parsing props for feature target "${t}"`,
+                      n
+                    ),
+                    console.log(`Problematic string: >>>${e}<<<`),
+                    {}
+                  );
+                }
+              })(n.getAttribute("data-props"), t),
+            [n, t]
+          );
+        return (0, i.createPortal)(s(o), n);
+      }
+      function m(e, t) {
+        return e.matches(t) ? [e] : e.querySelectorAll(t);
+      }
     },
     59650: (e, t, n) => {
       "use strict";
@@ -16478,27 +16557,31 @@
           })
         );
       }
-      function M() {
+      function M(e) {
+        var t;
         return i.createElement(
           "svg",
-          {
-            version: "1.1",
-            id: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_Check",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
+          Object.assign(
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Check",
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              strokeWidth: "24",
+              stroke: null !== (t = e.color) && void 0 !== t ? t : "#fff",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeMiterlimit: "10",
+            },
+            e
+          ),
           i.createElement("polyline", {
             fill: "none",
-            stroke: "#fff",
-            strokeWidth: "24",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
           })
         );
@@ -19488,6 +19571,7 @@
         Dj: () => v,
         Ei: () => u,
         Et: () => w,
+        Eu: () => M,
         GB: () => i,
         J$: () => d,
         Jk: () => C,
@@ -19738,6 +19822,21 @@
           a.push(i);
         }
         return i.prepend(...a), a;
+      }
+      function M(e, t, n) {
+        if ("childList" === e.type) {
+          for (let n = 0; n < e.addedNodes.length; n++) {
+            const r = e.addedNodes[n];
+            if (r.nodeType === Node.ELEMENT_NODE) {
+              const e = r;
+              e.parentElement && t(e);
+            }
+          }
+          for (let t = 0; t < e.removedNodes.length; t++) {
+            const r = e.removedNodes[t];
+            r.nodeType === Node.ELEMENT_NODE && n(r);
+          }
+        }
       }
     },
     55038: (e, t, n) => {
@@ -20857,6 +20956,7 @@
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
           IMG_URL: "",
           STEAMTV_BASE_URL: "",
@@ -20898,6 +20998,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
           IN_STANDALONE_KEYBOARD: !1,
+          STANDALONE_CONFIGURATOR_APPID: 0,
         },
         o = {
           logged_in: !1,

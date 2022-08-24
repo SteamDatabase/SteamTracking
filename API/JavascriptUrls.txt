@@ -191,6 +191,7 @@ ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
+${COMMUNITY_BASE_URL}groups/SteamMobileApp
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
@@ -325,6 +326,7 @@ ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
 ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
+${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
 ${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
 ${IMG_URL}${titleButtonImage}

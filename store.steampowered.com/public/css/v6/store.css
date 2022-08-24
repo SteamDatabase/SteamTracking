@@ -5423,6 +5423,14 @@ body.v6 .quadscreenshot_carousel h2 {
 		text-align: center;
 	}
 
+	html.responsive .carousel_container .carousel_items > *  {
+		position: relative;
+		top: auto;
+		left: auto;
+		opacity: 1;
+		margin-right: 11px;
+	}
+
 	html.responsive .carousel_container .carousel_thumbs {
 		margin-top: -1px;
 		height: 25px;

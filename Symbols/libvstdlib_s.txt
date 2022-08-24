@@ -143,6 +143,7 @@
  T V_JoinNumbers
  T V_JoinNumbersUint
  T V_JoinNumbersUint64
+ T V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  T V_MakeAbsolutePath
  T V_MakeFileSafeName
  T V_MakeRelativePath
