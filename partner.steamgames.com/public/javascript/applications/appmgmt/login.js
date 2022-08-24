@@ -419,11 +419,10 @@
           (0, o.useEffect)(
             () => (
               (window.g_ShowLoginDialog = (e) =>
-                (0, n.AM)(
-                  o.createElement(h, { redirectUrl: e, disableQR: !0 }),
-                  window,
-                  { popupWidth: 700, popupHeight: 440 }
-                )),
+                (0, n.AM)(o.createElement(h, { redirectUrl: e }), window, {
+                  popupWidth: 700,
+                  popupHeight: 440,
+                })),
               () => {
                 delete window.g_ShowLoginDialog;
               }

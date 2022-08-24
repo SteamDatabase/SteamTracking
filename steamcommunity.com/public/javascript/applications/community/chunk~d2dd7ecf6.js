@@ -6404,7 +6404,11 @@
             window.addEventListener("scroll", this.OnScroll),
             this.setState({ nVisibleHeight: window.innerHeight }),
             window.scrollTo(0, 0),
-            this.UpdateEventControlLocationAndVisibility();
+            this.UpdateEventControlLocationAndVisibility(),
+            C.De.IN_MOBILE_WEBVIEW &&
+              this.props.location &&
+              0 == this.props.history.length &&
+              this.props.history.push(this.props.location);
         }
         componentDidUpdate(e, t) {
           (t.bUserIsLoggedIn == this.state.bUserIsLoggedIn &&

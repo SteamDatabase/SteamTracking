@@ -8731,7 +8731,6 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_BetaContainer_8YiSr {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   width: 200px;
 }
@@ -8739,10 +8738,12 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_QRSection_5I7Ax
   .newlogindialog_BetaTag_2hxdu {
   color: #1999ff;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   margin: 6px 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
@@ -8750,12 +8751,12 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 8px 0px;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
   .newlogindialog_PhoneIcon_1Orm4 {
-  width: 28px;
-  height: 48px;
+  width: 120px;
   fill: #afafaf;
 }
 .newlogindialog_Login_3VsPM
@@ -8770,14 +8771,14 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
   .newlogindialog_JoinBetaButton_2YJ_V {
-  background-color: #32353c;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 20px;
   text-align: center;
   color: #fff;
-  padding: 6px 8px;
+  padding: 8px 16px;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
@@ -8998,6 +8999,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   background: #2f343e;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_SubmitButton_31hS8 {
+  position: relative;
   background: linear-gradient(90deg, #06bfff 0%, #2d73ff 100%);
   border-radius: 2px;
   border: none;
@@ -9023,6 +9025,22 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 .newlogindialog_Login_3VsPM .newlogindialog_SubmitButton_31hS8:focus {
   outline: solid #06bfff;
   outline-width: 1px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_SubmitButton_31hS8.newlogindialog_Loading_1JQXL {
+  color: transparent;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_SubmitButton_31hS8
+  .newlogindialog_LoadingContainer_1qGU3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_Text_2KlYg {
   color: #afafaf;
@@ -9277,18 +9295,6 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_StandardLayout_26BQi
-  .newlogindialog_EscapeHatch_2Ue9s {
-  font-size: 12px;
-}
-@media screen and (max-width: 700px) {
-  .newlogindialog_Login_3VsPM
-    .newlogindialog_StandardLayout_26BQi
-    .newlogindialog_EscapeHatch_2Ue9s {
-    text-align: center;
-  }
-}
-.newlogindialog_Login_3VsPM
-  .newlogindialog_StandardLayout_26BQi
   .newlogindialog_FormContainer_1Vs8b {
   background-color: #181a21;
   border-radius: 4px;
@@ -9405,6 +9411,72 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   font-size: 16px;
   margin-bottom: 24px;
   text-align: center;
+}
+.newlogindialog_LoadingSpinner_hKmcG {
+  border-radius: 50%;
+  margin: auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #fff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: newlogindialog_LoadAmin_24ArI 1.1s infinite linear;
+  animation: newlogindialog_LoadAmin_24ArI 1.1s infinite linear;
+}
+.newlogindialog_LoadingSpinner_hKmcG.newlogindialog_Small_N3N_5 {
+  width: 2.4em;
+  height: 2.4em;
+  min-width: 2.4em;
+  min-height: 2.4em;
+  border-top-width: 0.3em;
+  border-right-width: 0.3em;
+  border-bottom-width: 0.3em;
+  border-left-width: 0.3em;
+}
+.newlogindialog_LoadingSpinner_hKmcG.newlogindialog_Medium_1pc_0 {
+  width: 6em;
+  height: 6em;
+  min-width: 6em;
+  min-height: 6em;
+  border-top-width: 0.4em;
+  border-right-width: 0.4em;
+  border-bottom-width: 0.4em;
+  border-left-width: 0.4em;
+}
+.newlogindialog_LoadingSpinner_hKmcG.newlogindialog_Large_14ld9 {
+  width: 10em;
+  height: 10em;
+  min-width: 10em;
+  min-height: 10em;
+  border-top-width: 1.1em;
+  border-right-width: 1.1em;
+  border-bottom-width: 1.1em;
+  border-left-width: 1.1em;
+}
+@-webkit-keyframes newlogindialog_LoadAmin_24ArI {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes newlogindialog_LoadAmin_24ArI {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 .qrcode_QRBits_1UNWC {
   display: grid;

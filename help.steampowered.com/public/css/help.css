@@ -320,6 +320,22 @@ body.v6 {
 		url( 'https://help.steampowered.com/public/images/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
 }
 
+.page_body_ctn.login {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( '../../../shared/public/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
+	padding: 0px 8px;
+	width: 100%;
+	height: 100vh;
+}
+
+@media screen and (max-width: 700px){
+	.page_body_ctn.login {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( '../../../shared/public/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
+		padding: 0px 8px;
+		width: 100%;
+		height: 100vh;
+	}
+}
+
 body.v6 > div#global_header {
 	border-bottom-color: #171a21;
 }

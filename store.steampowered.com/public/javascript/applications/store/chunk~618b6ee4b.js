@@ -6803,9 +6803,9 @@
           n.e(8374),
           n.e(166),
           n.e(2301),
-          n.e(3456),
           n.e(3345),
           n.e(7131),
+          n.e(3456),
           n.e(6431),
           n.e(9698),
           n.e(6614),
@@ -11181,9 +11181,9 @@
             n.e(8374),
             n.e(166),
             n.e(2301),
-            n.e(3456),
             n.e(3345),
             n.e(7131),
+            n.e(3456),
             n.e(6431),
             n.e(9698),
             n.e(6614),
@@ -12990,7 +12990,11 @@
             window.addEventListener("scroll", this.OnScroll),
             this.setState({ nVisibleHeight: window.innerHeight }),
             window.scrollTo(0, 0),
-            this.UpdateEventControlLocationAndVisibility();
+            this.UpdateEventControlLocationAndVisibility(),
+            j.De.IN_MOBILE_WEBVIEW &&
+              this.props.location &&
+              0 == this.props.history.length &&
+              this.props.history.push(this.props.location);
         }
         componentDidUpdate(e, t) {
           (t.bUserIsLoggedIn == this.state.bUserIsLoggedIn &&
@@ -20917,9 +20921,9 @@
             n.e(8374),
             n.e(166),
             n.e(2301),
-            n.e(3456),
             n.e(3345),
             n.e(7131),
+            n.e(3456),
             n.e(6431),
             n.e(9698),
             n.e(6614),

@@ -18734,6 +18734,7 @@
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
           FROM_WEB: !1,
+          WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
               if (!(0, i.t$)()) return u || (u = d()), u;

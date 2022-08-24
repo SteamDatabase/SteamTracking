@@ -569,7 +569,7 @@
     },
     9410: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => O });
+      n.d(t, { Xt: () => x });
       var a = n(67294),
         r = n(70655),
         s = n(22188),
@@ -1106,22 +1106,36 @@
         (0, r.gn)([g.ak], b.prototype, "OnChangeAuthCode", null),
         (b = (0, r.gn)([p.Pi], b));
       var N = n(59650),
-        w = n(28274),
-        L = (n(88514), n(65902)),
-        A = n(92742);
-      function R(e) {
-        return a.createElement(x, Object.assign({}, e));
-      }
+        L = n(28274),
+        w = (n(88514), n(65902)),
+        A = n(92742),
+        R = n(92398);
       function y(e) {
+        const t = (t) =>
+          (window.location.href =
+            e.redirectURL && e.redirectURL !== (0, S.Kc)() + "login"
+              ? e.redirectURL
+              : S.De.COMMUNITY_BASE_URL);
+        return S.De.EREALM !== R.IN.k_ESteamRealmChina
+          ? a.createElement(F, Object.assign({}, e))
+          : S.L7 && S.L7.logged_in
+          ? (t(), null)
+          : a.createElement(
+              "div",
+              null,
+              a.createElement(T, { baseURL: (0, S.Kc)(), onLoginComplete: t })
+            );
+      }
+      function O(e) {
         return a.createElement(
           N.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(R, { redirectURL: e.redirectURL })
+          a.createElement(y, { redirectURL: e.redirectURL })
         );
       }
-      function O() {
+      function x() {
         (0, N.AM)(
-          a.createElement(y, {
+          a.createElement(O, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -1129,18 +1143,18 @@
           { strTitle: (0, l.Xx)("#Login_SignIn") }
         );
       }
-      function x(e) {
+      function F(e) {
         const { redirectURL: t } = e,
           [n] = (0, a.useState)(
-            new L.J(S.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new w.J(S.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
           [r, s] = (0, a.useState)(!1);
         return a.createElement(
           "div",
           null,
           r
-            ? a.createElement(w.pT, null)
-            : a.createElement(w.wK, {
+            ? a.createElement(L.pT, null)
+            : a.createElement(L.wK, {
                 autoFocus: !0,
                 transport: n,
                 platform: 2,
@@ -1150,7 +1164,6 @@
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
-                disableQR: !0,
                 theme: "modal",
               })
         );

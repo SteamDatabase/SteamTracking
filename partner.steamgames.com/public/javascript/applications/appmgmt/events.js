@@ -43226,7 +43226,7 @@
     },
     9410: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => M });
+      n.d(t, { Xt: () => G });
       var a = n(67294),
         r = n(70655),
         i = n(22188),
@@ -43765,20 +43765,34 @@
       var C = n(59650),
         I = n(28274),
         T = (n(88514), n(65902)),
-        A = n(92742);
-      function R(e) {
-        return a.createElement(G, Object.assign({}, e));
-      }
+        A = n(92742),
+        R = n(92398);
       function k(e) {
+        const t = (t) =>
+          (window.location.href =
+            e.redirectURL && e.redirectURL !== (0, f.Kc)() + "login"
+              ? e.redirectURL
+              : f.De.COMMUNITY_BASE_URL);
+        return f.De.EREALM !== R.IN.k_ESteamRealmChina
+          ? a.createElement(L, Object.assign({}, e))
+          : f.L7 && f.L7.logged_in
+          ? (t(), null)
+          : a.createElement(
+              "div",
+              null,
+              a.createElement(y, { baseURL: (0, f.Kc)(), onLoginComplete: t })
+            );
+      }
+      function M(e) {
         return a.createElement(
           C.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(R, { redirectURL: e.redirectURL })
+          a.createElement(k, { redirectURL: e.redirectURL })
         );
       }
-      function M() {
+      function G() {
         (0, C.AM)(
-          a.createElement(k, {
+          a.createElement(M, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -43786,7 +43800,7 @@
           { strTitle: (0, l.Xx)("#Login_SignIn") }
         );
       }
-      function G(e) {
+      function L(e) {
         const { redirectURL: t } = e,
           [n] = (0, a.useState)(
             new T.J(f.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -43807,7 +43821,6 @@
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
-                disableQR: !0,
                 theme: "modal",
               })
         );
@@ -77498,7 +77511,11 @@
             window.addEventListener("scroll", this.OnScroll),
             this.setState({ nVisibleHeight: window.innerHeight }),
             window.scrollTo(0, 0),
-            this.UpdateEventControlLocationAndVisibility();
+            this.UpdateEventControlLocationAndVisibility(),
+            s.De.IN_MOBILE_WEBVIEW &&
+              this.props.location &&
+              0 == this.props.history.length &&
+              this.props.history.push(this.props.location);
         }
         componentDidUpdate(e, t) {
           (t.bUserIsLoggedIn == this.state.bUserIsLoggedIn &&
