@@ -1,0 +1,1270 @@
+:root {
+  --basicui-header-height: 0px;
+}
+.sharedappdetailsheader_TopCapsule_2meE3 {
+  --header-height: 24vw;
+  height: var(--header-height);
+  width: 100%;
+  z-index: -1000;
+  background-color: #141414;
+  background-size: cover;
+  overflow: hidden;
+  user-select: none;
+}
+.BasicUI .sharedappdetailsheader_TopCapsule_2meE3 {
+  --header-height: calc(80px + 20vw);
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_NoArt_3ixso {
+  height: 24vw;
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_NoArt_3ixso
+  .sharedappdetailsheader_ImgSrc__dije,
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_NoArt_3ixso
+  .sharedappdetailsheader_ImgContainer_3VFZB {
+  display: none;
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FallbackArt_kgNCR {
+  height: 24vw;
+}
+.sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c {
+  opacity: 0;
+}
+.sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0 {
+  opacity: 1 !important;
+  background: transparent;
+}
+.sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover {
+  background: transparent;
+}
+.sharedappdetailsheader_TopCapsule_2meE3 .AddLinkRegion {
+  margin-top: 24px;
+  background-color: transparent;
+}
+.sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_BoxSizerValidRegion_3IAVE {
+  height: 100%;
+}
+.BasicUI
+  .sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_BoxSizerValidRegion_3IAVE {
+  height: 85%;
+}
+.sharedappdetailsheader_TopCapsule_2meE3:hover
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c {
+  opacity: 1;
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_TopCapsule_2meE3 {
+  overflow: visible;
+  max-height: 320px;
+  display: flex;
+  justify-content: center;
+}
+.BasicUI
+  .sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_TopCapsule_2meE3 {
+  max-height: unset;
+}
+.sharedappdetailsheader_TopCapsule_2meE3
+  .sharedappdetailsheader_Background_3h8sv {
+  width: 222%;
+  height: 165%;
+  margin-left: -61%;
+  margin-top: -13.3%;
+  opacity: 1;
+  object-fit: contain;
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitActive_1yfFC,
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitDone_K6WfG {
+  height: var(--header-height);
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+  height: calc(100vh - 40px);
+}
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_TopCapsule_2meE3.sharedappdetailsheader_FullscreenExitActive_1yfFC {
+  transition: height 800ms cubic-bezier(0, 0, 0.1, 1);
+}
+.sharedappdetailsheader_TitleImageContainer_3H5_m {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  pointer-events: none;
+}
+.sharedappdetailsheader_UpperCenter_1A9Wm
+  .sharedappdetailsheader_TitleImageContainer_3H5_m {
+  justify-content: center;
+  align-items: center;
+}
+.sharedappdetailsheader_CenterCenter_1n52Y
+  .sharedappdetailsheader_TitleImageContainer_3H5_m {
+  justify-content: center;
+  align-items: center;
+}
+.sharedappdetailsheader_BottomCenter_7Muka
+  .sharedappdetailsheader_TitleImageContainer_3H5_m {
+  justify-content: center;
+  align-items: center;
+}
+.sharedappdetailsheader_TitleLogo_38wKH {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  margin-left: 0%;
+  margin-top: 0%;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  display: none;
+}
+.sharedappdetailsheader_TitleLogo_38wKH.sharedappdetailsheader_Loaded_N_GIy {
+  display: inline-block;
+}
+.sharedappdetailsheader_BottomLeft_TJInl
+  .sharedappdetailsheader_TitleLogo_38wKH {
+  top: initial;
+  bottom: 0;
+  left: 0;
+  object-position: bottom;
+}
+.sharedappdetailsheader_UpperLeft_12mBn
+  .sharedappdetailsheader_TitleLogo_38wKH {
+  top: 0;
+  bottom: initial;
+  object-position: top;
+}
+.sharedappdetailsheader_UpperCenter_1A9Wm
+  .sharedappdetailsheader_TitleLogo_38wKH {
+  top: 0;
+  left: initial;
+  bottom: initial;
+  margin-bottom: auto;
+  object-position: top;
+}
+.sharedappdetailsheader_CenterCenter_1n52Y
+  .sharedappdetailsheader_TitleLogo_38wKH {
+  object-position: center;
+  left: initial;
+  top: initial;
+  bottom: initial;
+  right: initial;
+}
+.sharedappdetailsheader_BottomCenter_7Muka
+  .sharedappdetailsheader_TitleLogo_38wKH {
+  margin-top: auto;
+  left: initial;
+  top: initial;
+  right: initial;
+  object-position: bottom;
+}
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA {
+  flex: 1;
+  max-height: 320px;
+  position: relative;
+  -moz-transform: scale(1);
+}
+.BasicUI .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
+  width: 100%;
+  max-height: unset;
+}
+div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
+  transform-origin: 0 0;
+  transform: translateZ(-1px) scale(2);
+}
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitActive_1yfFC,
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitDone_K6WfG {
+  opacity: 1;
+}
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+  opacity: 0.2;
+}
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitActive_1yfFC {
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+.sharedappdetailsheader_ImgContainer_3VFZB {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+.BasicUI .sharedappdetailsheader_ImgContainer_3VFZB {
+  height: 100%;
+}
+.sharedappdetailsheader_ImgSrc__dije {
+  width: calc(100% + 128px);
+  height: 100%;
+  object-fit: cover;
+  max-width: 1660px;
+  position: relative;
+  -webkit-mask-image: url(../../../images/applications/appmgmt/test_hero_image_mask.png?v=valveisgoodatcaching);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url(../../../images/applications/appmgmt/test_hero_image_mask.png?v=valveisgoodatcaching);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+.BasicUI .sharedappdetailsheader_ImgSrc__dije {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: unset;
+  mask-image: unset;
+  max-width: unset;
+}
+.sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c,
+.sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlur_3XYFK {
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  object-fit: initial;
+  min-height: 0;
+  max-height: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+.BasicUI
+  .sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c,
+.BasicUI
+  .sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlur_3XYFK {
+  height: 100%;
+}
+.sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c {
+  height: 200%;
+  opacity: 0.2;
+  position: relative;
+  transform: scaleY(-1);
+  filter: saturate(2);
+  -webkit-mask-image: linear-gradient(to top, black 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+.BasicUI
+  .sharedappdetailsheader_ImgSrc__dije.sharedappdetailsheader_ImgBlurBackdrop_ooM_c {
+  width: 200%;
+  height: 200%;
+  margin-left: -50%;
+  filter: saturate(1);
+}
+.sharedappdetailsheader_PinBox_2MNl_ {
+  width: 18px;
+  height: 18px;
+  margin: 4px;
+  position: absolute;
+  z-index: 1001;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sharedappdetailsheader_PinBox_2MNl_.sharedappdetailsheader_BottomLeft_TJInl {
+  border-left: 4px solid #49ee51;
+  border-bottom: 4px solid #49ee51;
+  left: 0;
+  bottom: 0;
+}
+.sharedappdetailsheader_PinBox_2MNl_.sharedappdetailsheader_UpperLeft_12mBn {
+  border-left: 4px solid #49ee51;
+  border-top: 4px solid #49ee51;
+  top: 0;
+  left: 0;
+}
+.sharedappdetailsheader_PinBox_2MNl_.sharedappdetailsheader_UpperCenter_1A9Wm {
+  border-top: 4px solid #49ee51;
+  top: 0;
+  width: 24px;
+}
+.sharedappdetailsheader_PinBox_2MNl_.sharedappdetailsheader_CenterCenter_1n52Y {
+  border: 4px solid rgba(34, 240, 27, 0.377);
+  border-radius: 4px;
+  left: initial;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.sharedappdetailsheader_PinBox_2MNl_.sharedappdetailsheader_BottomCenter_7Muka {
+  border-bottom: 4px solid #49ee51;
+  bottom: 0;
+  width: 24px;
+}
+.sharedappdetailsheader_PinBox_2MNl_:hover {
+  border-color: #fff;
+}
+.sharedappdetailsheader_BoxSizerContainer_P_15e {
+  position: absolute;
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: column;
+  top: 16px;
+  left: 26px;
+  bottom: 16px;
+  right: 26px;
+}
+.sharedappdetailsheader_BoxSizerValidRegion_3IAVE {
+  width: 100%;
+  height: 85%;
+  -webkit-app-region: no-drag;
+  position: relative;
+}
+.sharedappdetailsheader_BoxSizer_30GVp {
+  left: 15%;
+  top: 20%;
+  width: 20%;
+  height: 10%;
+  position: absolute;
+}
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1 {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  -webkit-app-region: no-drag;
+  transition: all 0.16s ease-in-out;
+  z-index: 50;
+}
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_EdgeDown_2GhIW {
+  z-index: 52;
+  transition: none;
+}
+.sharedappdetailsheader_BoxSizerGridBox_SOent {
+  width: calc(100% + 32px);
+  height: calc(100% + 32px);
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-rows: 16px auto 16px;
+  grid-gap: 0;
+  grid-row-gap: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+  -webkit-app-region: no-drag;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c {
+  background-color: rgba(92, 191, 230, 0.192);
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+.sharedappdetailsheader_EdgeDown_2GhIW
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c {
+  opacity: 1;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_TopLeft_22mT3 {
+  border-right: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Top_mr-iZ {
+  border-bottom: 2px dotted #008ada;
+  background: linear-gradient(
+    to top,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.sharedappdetailsheader_UpperLeft_12mBn
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Top_mr-iZ,
+.sharedappdetailsheader_UpperCenter_1A9Wm
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Top_mr-iZ {
+  border-bottom-style: solid;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_TopRight_2R2GI {
+  border-left: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Left_1SkZn {
+  border-right: 2px dotted #008ada;
+  background: linear-gradient(
+    to left,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.sharedappdetailsheader_UpperLeft_12mBn
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Left_1SkZn,
+.sharedappdetailsheader_BottomLeft_TJInl
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Left_1SkZn {
+  border-right-style: solid;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0 {
+  cursor: move;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerDelete_1PkXP {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all 0.21s ease-in-out;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerSettings_1A8eE {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all 0.21s ease-in-out;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerDelete_1PkXP
+  line,
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerSettings_1A8eE
+  line {
+  stroke-width: 26px;
+  stroke: #008ada;
+  transition: all 0.21s ease-in-out;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover
+  .sharedappdetailsheader_BoxSizerDelete_1PkXP:hover
+  line,
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover
+  .sharedappdetailsheader_BoxSizerSettings_1A8eE:hover
+  line {
+  stroke: #cce0ff;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover
+  .sharedappdetailsheader_BoxSizerDelete_1PkXP,
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover
+  .sharedappdetailsheader_BoxSizerSettings_1A8eE {
+  opacity: 1;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Right_2Lhfb {
+  border-left: 2px dotted #008ada;
+  background: linear-gradient(
+    to right,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_BottomLeft_TJInl {
+  border-right: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Bottom_3zocf {
+  border-top: 2px dotted #008ada;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.sharedappdetailsheader_BottomCenter_7Muka
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Bottom_3zocf,
+.sharedappdetailsheader_BottomLeft_TJInl
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Bottom_3zocf {
+  border-top-style: solid;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_BottomRight_3pM0Z {
+  border-left: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.sharedappdetailsheader_AddBoxSizer_30qkI,
+.sharedappdetailsheader_SaveBoxSizer_3y_TI {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  background: #000a;
+  border: 1px solid rgba(59, 127, 238, 0.541);
+  color: #3b7fee;
+  z-index: 51;
+  user-select: none;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.sharedappdetailsheader_AddBoxSizer_30qkI:hover,
+.sharedappdetailsheader_SaveBoxSizer_3y_TI:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.sharedappdetailsheader_SaveBoxSizer_3y_TI {
+  top: 45px;
+}
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_TopLeft_22mT3
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_TopLeft_22mT3,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_Top_mr-iZ
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Top_mr-iZ,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_TopRight_2R2GI
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_TopRight_2R2GI,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_Left_1SkZn
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Left_1SkZn,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_Right_2Lhfb
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Right_2Lhfb,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_BottomLeft_TJInl
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_BottomLeft_TJInl,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_Bottom_3zocf
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Bottom_3zocf,
+.sharedappdetailsheader_BoxSizerDragBox_-1oS1.sharedappdetailsheader_BottomRight_3pM0Z
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_BottomRight_3pM0Z {
+  border-color: #fff;
+}
+.sharedappdetailsheader_BoxSizerEdge_1pW2c:hover {
+  border-color: #7eadf8;
+}
+.sharedappdetailsheader_EdgeDown_2GhIW.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0,
+.sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Middle__s3x0:hover {
+  z-index: 10;
+  background-color: rgba(133, 156, 255, 0.171);
+}
+.sharedappdetailsheader_EdgeDown_2GhIW.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Right_2Lhfb,
+.sharedappdetailsheader_EdgeDown_2GhIW.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Bottom_3zocf,
+.sharedappdetailsheader_EdgeDown_2GhIW.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Top_mr-iZ,
+.sharedappdetailsheader_EdgeDown_2GhIW.sharedappdetailsheader_Middle__s3x0
+  .sharedappdetailsheader_BoxSizerEdge_1pW2c.sharedappdetailsheader_Left_1SkZn {
+  border-color: #fff;
+}
+.sharedappdetailsheader_BoxSizerButtonContainer_2VX3O
+  .sharedappdetailsheader_DialogButton_2XD1_ {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+}
+.sharedappdetailsheader_BoxSizerInfo_15Amg {
+  background-color: #000;
+  padding: 10px;
+}
+.sharedappdetailsheader_TextNameSpace_32q5n {
+  flex: 1;
+  align-self: flex-end;
+}
+.sharedappdetailsheader_TitleSection_1P_tv {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  user-select: none;
+  color: #fff;
+}
+.sharedappdetailsheader_TitleSection_1P_tv
+  .sharedappdetailsheader_Features_P_lFf {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  align-items: center;
+}
+.BasicUI
+  .sharedappdetailsheader_TitleSection_1P_tv
+  .sharedappdetailsheader_Features_P_lFf {
+  display: none;
+}
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitActive_1yfFC,
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitDone_K6WfG,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(.sharedappdetailsheader_FullscreenEnterActive_2FlTp),
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitActive_1yfFC,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitDone_K6WfG {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC),
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterDone_1PRtu,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitStart_1sphg:not(.sharedappdetailsheader_FullscreenExitActive_1yfFC) {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterActive_2FlTp {
+  transition: opacity 266.6666666667ms ease-out,
+    transform 266.6666666667ms cubic-bezier(0.6, 0, 1, 1);
+}
+.sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitActive_1yfFC,
+.sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitActive_1yfFC {
+  transition: opacity 800ms cubic-bezier(0, 0, 0.1, 1),
+    transform 800ms cubic-bezier(0, 0, 0.1, 1);
+}
+.sharedappdetailsheader_SVGTitle_2w_Zq {
+  align-self: flex-end;
+  max-width: 1280px;
+  overflow: visible;
+}
+.sharedappdetailsheader_SVGTitle_2w_Zq text {
+  text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
+  letter-spacing: 1px;
+}
+.BasicUI .sharedappdetailsheader_SVGTitle_2w_Zq text {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 17px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  fill: #fff;
+}
+.BasicUI .sharedappdetailsheader_TopGradient_2qcOu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  height: 75px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.logoeditor_LogoEditorContainer_3G8aW {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  font-family: "Motiva Sans", sans-serif;
+}
+.logoeditor_LogoEditorHeaderContainer_31GWs {
+  position: relative;
+}
+.logoeditor_LogoEditorDetailsContainer_1uN9i {
+  box-sizing: border-box;
+  position: relative;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #24282f;
+  perspective: 1px;
+  perspective-origin: 0 0;
+  min-width: 0;
+}
+.logoeditor_NoLogoImage_3HX66 .logoeditor_Title_32fDU {
+  visibility: visible;
+}
+.logoeditor_LogoEditorGameListContainer_26dKg {
+  display: flex;
+  flex: 0;
+  min-width: 300px;
+  width: 300px;
+}
+.logoeditor_TitleSection_3EpYa {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 16px;
+  padding-bottom: 5px;
+  pointer-events: none;
+}
+.logoeditor_TitleSection_3EpYa .logoeditor_Title_32fDU {
+  visibility: hidden;
+  flex-grow: 1;
+  font-size: 33px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.logoeditor_TitleSection_3EpYa .logoeditor_Features_1XHDu {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+body.library_logo_popup {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 1000px;
+  font-family: "Motiva Sans", Sans-serif;
+}
+html {
+  height: 100%;
+}
+.StoreAdminReactRoot.LibraryLogoEditorPopup {
+  height: 100%;
+  display: flex;
+}
+.logoeditor_DetailsArea_1ToHZ {
+  position: relative;
+  height: 600px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  flex-direction: row;
+  background-color: #24282f;
+}
+.logoeditor_LogoEditorPopup_3h6ed {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.logoeditor_LogoEditorPopup_3h6ed .logoeditor_SavingThrobberContainer_8igOr {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  align-items: center;
+  justify-content: space-around;
+  transition: background-color 0.5s;
+}
+.logoeditor_LogoEditorPopup_3h6ed
+  .logoeditor_SavingThrobberContainer_8igOr
+  .logoeditor_SavingThrobber_1Oc14 {
+  display: none;
+}
+.logoeditor_LogoEditorPopup_3h6ed.logoeditor_Saving_QovVg
+  .logoeditor_SavingThrobberContainer_8igOr {
+  z-index: 100;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.75);
+  pointer-events: all;
+}
+.logoeditor_LogoEditorPopup_3h6ed.logoeditor_Saving_QovVg
+  .logoeditor_SavingThrobberContainer_8igOr
+  .logoeditor_SavingThrobber_1Oc14 {
+  display: flex;
+}
+.logoeditor_LogoEditorPopup_3h6ed.logoeditor_Saving_QovVg
+  > :not(.logoeditor_SavingThrobberContainer_8igOr) {
+  filter: blur(5px);
+}
+.logoeditor_LogoEditorPopup_3h6ed .logoeditor_LogoEditorContainer_3G8aW {
+  flex: 1;
+  min-height: 0;
+  transition: opacity 0.5s;
+}
+.logoeditor_LogoEditorPopup_3h6ed .logoeditor_LogoEditorSaveActions_tWdDs {
+  background: #333;
+  flex: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.logoeditor_LogoEditorPopup_3h6ed
+  .logoeditor_LogoEditorSaveActions_tWdDs
+  .logoeditor_LogoEditorSavedMessage_1ZpFT {
+  color: #a4d007;
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.logoeditor_LogoEditorPopup_3h6ed
+  .logoeditor_LogoEditorSaveActions_tWdDs
+  .logoeditor_LogoEditorSavedMessage_1ZpFT.logoeditor_Saved_1ES2_ {
+  color: #a4d007;
+  max-height: 30px;
+  margin-bottom: 12px;
+}
+.logoeditor_LogoEditorPopup_3h6ed
+  .logoeditor_LogoEditorSaveActions_tWdDs
+  .logoeditor_LogoEditorButtons_2LdrC {
+  display: flex;
+  justify-content: center;
+}
+.logoeditor_LogoEditorPopup_3h6ed
+  .logoeditor_LogoEditorSaveActions_tWdDs
+  .logoeditor_LogoEditorButtons_2LdrC
+  .logoeditor_LogoEditorButton_3XBe6 {
+  flex: 0;
+  min-width: 160px;
+  margin: 0 16px;
+}
+.logoeditor_LogoEditorPopup_3h6ed button {
+  margin: 0 10px;
+  border-radius: 2px;
+  font-size: 20px;
+  border: none;
+  padding: 6px 8px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #d2e885;
+  background: #adbe57;
+  background: linear-gradient(to bottom, #a1bf07 5%, #80a006 95%);
+  box-shadow: none;
+}
+.logoeditor_LogoEditorPopup_3h6ed button:hover {
+  color: #fff;
+  box-shadow: 0 0 2px 1px #000;
+}
+.logoeditor_LogoEditorPopup_3h6ed button.logoeditor_CancelBtn_3xnGm {
+  color: #ccc;
+  background: linear-gradient(to bottom, #778088 5%, #414a52 95%);
+}
+.logoeditor_LogoEditorPopup_3h6ed button.logoeditor_CancelBtn_3xnGm:hover {
+  color: #fff;
+}
+.logoeditor_ListDivider_3JOU7 {
+  width: 4px;
+  background-color: #17191b;
+  flex-shrink: 0;
+}
+.logoeditor_Instructions_HQq3b {
+  color: #9c9c9c;
+  padding: 0 12px;
+}
+.logoeditor_Instructions_HQq3b h2 {
+  color: #fff;
+}
+.fakeappdetailsrow_Container_ImYU5 {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
+    rgba(29, 34, 39, 0.75);
+  transition: all 0.3s;
+  border-bottom: 0px solid #6a6a6a00;
+  position: relative;
+  top: 0;
+  z-index: 10;
+  padding: 10px;
+  color: #fff;
+}
+.fakeappdetailsrow_StickyHeader_2C2bs {
+  background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%),
+    #1d2227;
+  border-bottom: 1px solid #707379;
+}
+.fakeappdetailsrow_Row_3i6Bc {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+  padding: 10px;
+}
+.fakeappdetailsrow_ActionSection_18DZH {
+  flex: 0 0 auto;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1 {
+  flex: 1 0 auto;
+  position: relative;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1.fakeappdetailsrow_PermanentlyUnavailable_dy473 {
+  display: flex;
+  flex-direction: row;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1 > :last-child {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1.fakeappdetailsrow_PermanentlyUnavailable_dy473
+  > :last-child {
+  opacity: 1;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1 > :first-child {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1
+  .fakeappdetailsrow_GameStatsSection_12DXx {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fakeappdetailsrow_StatusAndStats_2dtS1.fakeappdetailsrow_PermanentlyUnavailable_dy473
+  .fakeappdetailsrow_GameStatsSection_12DXx {
+  position: relative;
+}
+.fakeappdetailsrow_RightControls_18x3w {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+.fakeappdetailsrow_AppButtonsContainer_2UjH5 {
+  display: flex;
+  flex-flow: row;
+  margin-left: auto;
+}
+.fakeappdetailsrow_GameInfoButton_n3SLd {
+  box-sizing: border-box;
+  display: flex;
+  height: 32px;
+  padding: 0px 10px;
+  align-items: center;
+  background-color: #24282f;
+  border-radius: 4px;
+  border: none;
+  user-select: none;
+  font-size: 13px;
+  color: #929799;
+}
+.fakeappdetailsrow_GameInfoButton_n3SLd .fakeappdetailsrow_Arrow_C0opA {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 20px;
+}
+.fakeappdetailsrow_GameInfoButton_n3SLd .fakeappdetailsrow_Arrow_C0opA polygon {
+  fill: #2d73ff;
+}
+.fakeappdetailsrow_MenuButton_19jdY {
+  box-sizing: border-box;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #24282f;
+  border: none;
+}
+.fakeappdetailsrow_MenuButton_19jdY svg {
+  fill: #929799;
+  color: #929799;
+}
+.fakeappdetailsrow_DetailsSection_3Ajg1 {
+  box-sizing: border-box;
+  margin-left: 30px;
+  height: 100%;
+}
+.fakeappdetailsrow_DetailsSection_3Ajg1
+  .fakeappdetailsrow_DetailsSectionStatus_2ZJjH {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.fakeappdetailsrow_DetailsSection_3Ajg1
+  .fakeappdetailsrow_DetailsSectionExtra_1wzuG {
+  color: #888;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.fakeappdetailsrow_DetailsSection_3Ajg1
+  .fakeappdetailsrow_DetailsProgressContainer_1pcsx {
+  width: 150px;
+}
+.fakeappdetailsrow_DetailsProgressContainer_1pcsx {
+  height: 6px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #151619;
+  margin-top: 6px;
+}
+.fakeappdetailsrow_DetailsProgressContainer_1pcsx
+  .fakeappdetailsrow_DetailsProgressBar_2KOE1 {
+  background-color: #2d73ff;
+  border-radius: 5px;
+  height: 100%;
+}
+.fakeappdetailsrow_InvalidPlatform_31Ep4 span {
+  margin-right: 5px;
+  color: #fff;
+}
+.fakeappdetailsrow_InvalidPlatform_31Ep4 .fakeappdetailsrow_Icons_3sb86 {
+  display: inline-flex;
+  flex-direction: row;
+  vertical-align: bottom;
+}
+.fakeappdetailsrow_InvalidPlatform_31Ep4 .fakeappdetailsrow_Icon_fJP-Y {
+  margin-right: 5px;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i {
+  display: flex;
+  flex-flow: row;
+  margin: auto 0px auto 30px;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i
+  .fakeappdetailsrow_AchievementLeft_wiXRi {
+  width: 30px;
+  height: 30px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAu5JREFUeNqUlntojWEcx98zFJpL/DVSpGk1I5tDSaY2TG1WboUYjiiJpkizyVAuWwkrlzbbfyaaZKihIdPUhlmsTZZsaqkzt120lXx+9Z3e5n3P5qlP5/Q8v8vz/G7nBIqLix2flQrn4TtUwb5B5+dgGYyF7FAoVO1lZKTjvwpgKkyGI9ADKTp7pL0vMFrO5ngZifIxHieFexADi/WiWpGivRjJxJeUlMQNx0EGtEOTzmq1PwPy4LU4qj1HMibbhJN2SI8UopMQDWfgBbyEh9AAu+Gj5KYrJ9tgB7TBQtgFp6DSz0ErzJLQN7gPRVAxSM4cZcNquAgroVp7rZFe8EphyoRuGaqIUAh2thzWwDgYpRB65iALDsNnqId1cNkZel2RbJ10c8jDdi8HRSq7RdAIM+HdMBy8NVn6oFG6ZuOsl4M6lZ0lLQBdMGEYDkymi1sHpGs23ng5sDg+VznuhGeK71DLZGqkkycbmV4OOiXoqDwt/geHeIWdHYBL0rFVQ7g6/RotDcJqtE9wGu7AFA/jFopb1jMYbJNOWCXrW6YtkKAesOTtgRNqnAbXLRNhLhyCXuJvZ/EwAh5HGhVZqpwozaIMTdIgXFVv9Oh7UGerJBsl3axIL4hWJ99VyaXqFZka2xskd03T9LYGX6eSmyYb3X4ONmuvFDpUdhegX11a6qq4fl3A0YvsUumyUejnYIsSVakxbIPuq4aZPX+TS9ZyMA0mucZJWDYKvXKQqATb8/vgF1xXnGdLptT1CktqFRVUDn2GdBNIepKXg636LPMoyaDrV65A3xd4yJW5iuWfEK3XqJ0I+ZAM+1WaSRodzZL9qT2H287T7HkCT+GDbO0d7OAHxCruAytfFTRfs+q39uvlwCJwTJdJduk1e71ghcLUoZvkwEZVxXgZdQ/GpTqzyimH47BEHf43zIEIf1tiVTm9+jGxmX9TZ2vhhkI1xhJOklv+51+FrfeQq/Z/oDofWJWqLjvL9TNu648AAwC8RtW7+bC2yQAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  margin: 3px;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i
+  .fakeappdetailsrow_AchievementRight_2LYsH {
+  box-sizing: border-box;
+  padding-left: 5px;
+  height: 36px;
+  display: flex;
+  flex-flow: column;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i
+  .fakeappdetailsrow_AchievementProgressRow_2cJRw {
+  display: flex;
+  flex-flow: row;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i
+  .fakeappdetailsrow_AchievementLabel_2ZFed {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #9c9c9c;
+  letter-spacing: 1px;
+}
+.fakeappdetailsrow_MiniAchievements_omt3i
+  .fakeappdetailsrow_AchievementCountLabel_1hPIv {
+  font-size: 15px;
+  margin-right: 10px;
+  color: #56595b;
+}
+.fakeappdetailsrow_Playtime_2JGJB {
+  display: flex;
+  flex-flow: row;
+  margin: auto 0px auto 30px;
+}
+.fakeappdetailsrow_Playtime_2JGJB .fakeappdetailsrow_PlaytimeLeft_2QY4p {
+  width: 30px;
+  height: 30px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAl9JREFUeNq0lU9IFVEUh5+vob+bgopH6apFkAZWLoKCCqIWubAwjXBRPS0hJCioEMQWUq9Fgdt6byMtMiPKooWlCdEmgqLNQyLNwYIwoqgoMrXvwG9gGGbGl+914JvL3Jl7fveee+65ZdlsNhFjS+Cn7/0eVMMEuPAEbqfT6c9RDspiBNbCCPTBUfW9ho2B/35BDi4g9CnoJBkz++/wCt76+jZBCjZDCzyEhXAS8rlcbudcAvVwDRbDV9gOXb7v0/ARXoItfR/UwCNYCQOIHIkTOAzNUBGxqgdw399BWExsL3SAY8KI1EYJHNMmvokQsBnXBjsRmYUurXYB9CCS8gssV1i+aCPna51a5Qq45AlY7MaVgkWZrYSmDf5AE6soT2ozn8JQogSGyDuaO9qPRntMhcW1SDOBBtidTPwfe6620lYwoJc9MQNsIgf+QeCD2tUmsEOncRn8CHFcrxyvUt+LAgRmvVJkDiZ9tSdoj6FXzm3zTsC2AgRSaidNIK+XqpAfl8IoHIf1KiO/CxCoUZs3gUG97A/5cSusg+sFOvasTu1gUiGYUazXFJs+HC7zcVA+e01gTDXfSsXVEqToFfnq49CNeefgrDKoEc4UMXsbe0i+zvmLnasybel1GVrn4bxVY81HM7MfD7syTylMJnwL2gM3WphZElxUabC4n8Z5t/fRCfzcrT25oQGWDXfFM3gPi6Actuh7nQ7qN6ugOO/3O3RCZtSvM5HRnjSIKLNr9KbFHOdu8KMTMcjV9Xle7S7YAKtUfSd0hwxbKlq2RKk7c8TX1UoyMfU/1sFfAQYAP8ad8QJ371wAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  margin: 3px;
+}
+.fakeappdetailsrow_Playtime_2JGJB .fakeappdetailsrow_PlaytimeRight_1LPuQ {
+  box-sizing: border-box;
+  padding-left: 5px;
+  height: 36px;
+  display: flex;
+  flex-flow: column;
+}
+.fakeappdetailsrow_Playtime_2JGJB .fakeappdetailsrow_PlaytimeLabel_3MSPY {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #9c9c9c;
+  letter-spacing: 1px;
+}
+.fakeappdetailsrow_Playtime_2JGJB .fakeappdetailsrow_PlaytimeInfo_1SIEL {
+  font-size: 15px;
+  margin-right: 10px;
+  color: #56595b;
+}
+.fakeappdetailsrow_LastPlayed_oWVFW {
+  display: flex;
+  flex-flow: row;
+  margin: auto 0px auto 30px;
+}
+.fakeappdetailsrow_LastPlayed_oWVFW .fakeappdetailsrow_LastPlayedRight_WRJ1X {
+  box-sizing: border-box;
+  padding-left: 5px;
+  height: 36px;
+  display: flex;
+  flex-flow: column;
+}
+.fakeappdetailsrow_LastPlayed_oWVFW .fakeappdetailsrow_LastPlayedLabel_2-xkM {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #9c9c9c;
+  letter-spacing: 1px;
+}
+.fakeappdetailsrow_LastPlayed_oWVFW .fakeappdetailsrow_LastPlayedInfo_1fGHk {
+  font-size: 15px;
+  margin-right: 10px;
+  color: #2d73ff;
+}
+.fakeappdetailsrow_RecentlyUpdated_1bxok {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  margin: 6px 0px 0px 0px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 15px;
+  color: #9c9c9c;
+}
+.fakeappdetailsrow_RecentlyUpdated_1bxok
+  .fakeappdetailsrow_RecentlyUpdatedIcon_aYj4F {
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 19px #66b9ff;
+  background-color: #66b9ff;
+  border-radius: 10px;
+  margin: 6px 3px 3px 3px;
+  margin-right: 10px;
+}
+.fakeappdetailsrow_RecentlyUpdated_1bxok
+  .fakeappdetailsrow_RecentlyUpdatedText_3rzHt {
+  color: #66b9ff;
+}
+.fakeappdetailsrow_RecentlyUpdated_1bxok
+  .fakeappdetailsrow_RecentlyUpdatedLink_3Yyra {
+  margin-left: auto;
+}
+.fakeappdetailsrow_PlayButtonContainer_3dlYJ {
+  box-sizing: border-box;
+  height: 46px;
+  width: 150px;
+}
+.fakeappdetailsrow_PlayButton_3MzeF {
+  opacity: 0.25;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  padding-top: 4px;
+  padding-bottom: 14px;
+  border-radius: 2px;
+  border: none;
+  flex: none;
+  background: linear-gradient(to right, #06bfff, #2d73ff);
+}
+.fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_Green_Y4sii {
+  background: linear-gradient(to right, #70d61d, #01a75b);
+}
+.fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_Disabled_o6V6t {
+  background: linear-gradient(to right, #06bfff80, #2d73ff80);
+  color: #ffffff80;
+  border: 1px solid #06c1ff;
+  padding: 7px;
+  padding-top: 3px;
+  padding-bottom: 13px;
+}
+.fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_NoAction_GALfz {
+  padding: 0px;
+}
+.fakeappdetailsrow_PlayButton_3MzeF .fakeappdetailsrow_ThrobberContainer_2OBm7 {
+  height: 100%;
+  width: auto;
+  opacity: 0.5;
+}
+.fakeappdetailsrow_PlayButton_3MzeF
+  .fakeappdetailsrow_ThrobberContainer_2OBm7
+  .fakeappdetailsrow_Throbber_1uJfK {
+  opacity: 1;
+  animation: none;
+  margin: auto;
+}
+.fakeappdetailsrow_PlayButton_3MzeF .fakeappdetailsrow_ButtonText_3PV-5 {
+  vertical-align: middle;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 36px;
+  text-align: center;
+  margin: auto;
+}
+.fakeappdetailsrow_PlayButton_3MzeF.fakeappdetailsrow_Disabled_o6V6t
+  .fakeappdetailsrow_ButtonText_3PV-5 {
+  color: #ffffff80;
+}
+.fakegamelist_GameList_2Ke99 {
+  padding: 0px;
+  user-select: none;
+  outline: none;
+  background-color: #24282f;
+  color: #22262f;
+  overflow: hidden;
+  flex: 1;
+}
+.fakegamelist_GameListEntry_14lr0 {
+  font-size: 13px;
+  font-weight: 200;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 0px 0px 0px #000, 0 0px 0px 0px #000;
+  padding: 2px 5px 2px 23px;
+  color: #fff;
+  user-select: none;
+  outline: none;
+}
+.fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h {
+  box-sizing: border-box;
+  background: linear-gradient(
+    to right,
+    #42444d 0%,
+    #35373f 90%,
+    rgba(53, 55, 63, 0) 110%
+  );
+  border-right: 0px solid #202127;
+  box-shadow: 0 0px 2px 0px #0005, 0 0px 16px 0px #0004;
+}
+.fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h.fakegamelist_Updating_yTNHk {
+  color: #74d1ff;
+  background: linear-gradient(
+    to right,
+    #4f5364 0%,
+    #444757 90%,
+    rgba(69, 73, 88, 0) 110%
+  );
+}
+.fakegamelist_GameListEntry_14lr0:hover {
+  color: #fff;
+  background-color: #2e3036;
+  transition: background-color 0.25s;
+}
+.fakegamelist_GameListEntry_14lr0.fakegamelist_Uninstalled_2hOgD {
+  color: rgba(255, 255, 255, 0.5);
+}
+.fakegamelist_GameListEntry_14lr0.fakegamelist_Uninstalled_2hOgD:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.fakegamelist_GameListEntry_14lr0 .fakegamelist_GameIcon_2ROZT {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+.fakegamelist_GameListEntry_14lr0 .fakegamelist_GameIconPlaceholder_2AyMQ {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  border-radius: 2px;
+}

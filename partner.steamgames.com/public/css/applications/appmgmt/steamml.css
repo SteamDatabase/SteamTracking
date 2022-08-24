@@ -1,0 +1,760 @@
+* {
+  box-sizing: border-box;
+}
+.steamml_Background_msjGf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steamml_SteamMLButton_2yReX {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 16px;
+  border-radius: 4px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.steamml_SteamMLButton_2yReX.steamml_AcceptButton_2tY__ {
+  background: linear-gradient(to bottom, #82a6d7, #3c6091);
+  border-top: 1px solid #aaceff;
+}
+.steamml_SteamMLButton_2yReX.steamml_AcceptButton_2tY__ .steamml_Inner_1Zoc2 {
+  color: #fff;
+}
+.steamml_SteamMLButton_2yReX.steamml_CancelButton_2BCE0 {
+  background: linear-gradient(to bottom, #ca5025, #572310);
+  border-top: 1px solid #e76b3e;
+}
+.steamml_SteamMLButton_2yReX.steamml_CancelButton_2BCE0 .steamml_Inner_1Zoc2 {
+  color: #f7d8cd;
+}
+.steamml_SteamMLButton_2yReX:hover {
+  filter: brightness(1.1);
+}
+.steamml_SteamMLButton_2yReX.steamml_Disabled_1W_vx {
+  filter: saturate(0) brightness(0.6);
+  cursor: default;
+}
+.steamml_SteamMLButton_2yReX .steamml_Inner_1Zoc2 {
+  font-size: 17px;
+  text-align: center;
+  user-select: none;
+}
+.steamml_FullSize_1-nKc {
+  width: 100%;
+  height: 100%;
+}
+.steamml_Header_35ajn {
+  width: 600px;
+  min-width: 600px;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.steamml_Header_35ajn .steamml_HeaderOption_3KFf6 {
+  flex-grow: 1;
+  min-width: 100px;
+  margin: 0px 12px;
+  height: 50px;
+  color: #999;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+.steamml_Header_35ajn .steamml_HeaderOption_3KFf6:hover {
+  background-color: #282828;
+}
+.steamml_Header_35ajn .steamml_HeaderOption_3KFf6.steamml_Selected_OilN- {
+  background-color: #323940;
+  color: #43a8f5;
+}
+.steamml_SchemaPage_36OV- {
+  width: 100%;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steamml_SchemaList_3r0tl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.steamml_SchemaList_3r0tl .steamml_SelectAppID_3nezX {
+  margin-bottom: 10px;
+}
+.steamml_SchemaList_3r0tl.steamml_Hidden_1VPtl {
+  height: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.steamml_SchemaElement_1xjli {
+  width: 100%;
+  max-width: 900px;
+  min-width: 700px;
+  margin: 8px 0px;
+  padding: 4px 12px;
+  border: 1px solid #122b3d;
+  border-radius: 4px;
+  background-color: #0e2130;
+  text-decoration: none;
+  color: #999;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.steamml_SchemaElement_1xjli .steamml_Label_3uE4k {
+  color: #ccc;
+}
+.steamml_SchemaElement_1xjli .steamml_SchemaName_36bwA {
+  font-size: 18px;
+  color: #43a8f5;
+}
+.steamml_SchemaElement_1xjli .steamml_AppID_3Uaeb {
+  font-size: 14px;
+  color: #2e71a5;
+}
+.steamml_SchemaElement_1xjli .steamml_HorizontalSection_1rTEk {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.steamml_SchemaElement_1xjli .steamml_RowCount_gPsPX,
+.steamml_SchemaElement_1xjli .steamml_KeepCount_2RxON {
+  margin-top: 2px;
+}
+.steamml_SchemaElement_1xjli:hover {
+  filter: brightness(1.3);
+}
+.steamml_SchemaDetails_1gFQf {
+  max-width: 1000px;
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+.steamml_SchemaDetails_1gFQf .steamml_Back_2m9wk {
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+.steamml_SchemaDetails_1gFQf .steamml_Back_2m9wk:hover {
+  filter: brightness(1.3);
+}
+.steamml_SchemaDetails_1gFQf .steamml_SchemaDetailsHeader_cUNhZ {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 12px;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsHeader_cUNhZ
+  .steamml_SchemaDetailsBack_15COw {
+  font-size: 40px;
+  padding: 0px 10px 6px 0px;
+  color: #aaa;
+  text-decoration: none;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsHeader_cUNhZ
+  .steamml_SchemaDetailsBack_15COw:hover {
+  color: #fff;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsHeader_cUNhZ
+  .steamml_SchemaDetailsTitle_9IFUR {
+  height: 100%;
+  flex-grow: 1;
+  padding: 4px 10px;
+  background-color: #132f44;
+  border-bottom: 2px solid #2e72a7;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsHeader_cUNhZ
+  .steamml_SchemaDetailsTitle_9IFUR
+  .steamml_SchemaDetailsName_CblW8 {
+  font-size: 30px;
+  color: #43a8f5;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsHeader_cUNhZ
+  .steamml_SchemaDetailsTitle_9IFUR
+  .steamml_SchemaDetailsSchemaID_16qUh {
+  font-size: 12px;
+  color: #2e72a7;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ {
+  color: #999;
+  font-size: 14px;
+  background-color: #222;
+  border: 1px solid #252525;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 4px;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeInt32_3q6FZ
+  .steamml_TypeName_11e6z {
+  color: #b19696;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeInt64_1sUna
+  .steamml_TypeName_11e6z {
+  color: #a78181;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeBool_3QiDC
+  .steamml_TypeName_11e6z {
+  color: #83805a;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeFloat_DfgR3
+  .steamml_TypeName_11e6z {
+  color: #836d5a;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeEnum_3w9sP
+  .steamml_TypeName_11e6z {
+  color: #6e835a;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ.steamml_TypeTimestamp_33yo7
+  .steamml_TypeName_11e6z {
+  color: #835a6d;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ
+  .steamml_ElementName_1v_wK {
+  color: #fff;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsElementBody_1lLqQ
+  .steamml_TypeName_11e6z {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsStructRow_lWQfK {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsStructRow_lWQfK:hover {
+  filter: brightness(1.3);
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsStructRow_lWQfK
+  .steamml_CollapseIcon_1vRxM {
+  padding: 0px 4px;
+  margin-left: -22px;
+  transition: 0.2s;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_SchemaDetailsStructRow_lWQfK
+  .steamml_CollapseIcon_1vRxM.steamml_Collapsed_3qRbu {
+  transform: rotateZ(-90deg);
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_StructIndent_1bga0 {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  overflow-y: hidden;
+}
+.steamml_SchemaDetails_1gFQf
+  .steamml_SchemaDetailsElements_3Dsdf
+  .steamml_SchemaDetailsElement_2_-ub
+  .steamml_StructIndent_1bga0.steamml_IndentCollapsed_1OU7X {
+  height: 0px;
+}
+.steamml_ProblemPage_3F8_L {
+  width: 100%;
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steamml_ProblemPage_3F8_L .steamml_ProblemListContainer_35Ll4 {
+  width: 800px;
+  margin-top: 30px;
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steamml_ProblemPage_3F8_L
+  .steamml_ProblemListContainer_35Ll4
+  .steamml_ProblemListHeader_21PbN {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.steamml_ProblemPage_3F8_L
+  .steamml_ProblemListContainer_35Ll4
+  .steamml_NoProblems_IRyHO {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.steamml_ProblemEntry_13BKE {
+  width: 800px;
+  background-color: #323940;
+  border: 1px solid #3e4750;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: relative;
+  transition-property: filter, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.steamml_ProblemEntry_13BKE:hover {
+  filter: brightness(1.1);
+}
+.steamml_ProblemEntry_13BKE .steamml_ProblemName_3Hgxj {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.steamml_ProblemEntry_13BKE .steamml_Inactive_TW09g {
+  font-size: 16px;
+  color: #ca5029;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.steamml_ProblemEntry_13BKE .steamml_ProblemDescription_3qnlN {
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.steamml_ProblemEntry_13BKE .steamml_ProblemID_2yjPq {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 14px;
+  padding-top: 6px;
+}
+.steamml_ProblemEntry_13BKE .steamml_Dates_3jJSR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.steamml_ProblemEntry_13BKE .steamml_Dates_3jJSR .steamml_CreatedDate_3nOnI {
+  font-size: 12px;
+  color: #888;
+}
+.steamml_ProblemEntry_13BKE .steamml_Dates_3jJSR .steamml_UpdatedDate_3gM54 {
+  font-size: 12px;
+  color: #888;
+}
+.steamml_ProblemEntry_13BKE .steamml_ProblemSchemaList_2k2xZ {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.steamml_AddNewProblem_1IaIK {
+  width: 800px;
+  background-color: #262c31;
+  border: 1px solid #323941;
+  border-radius: 6px;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  transition-property: width, transform, filter, height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  position: relative;
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsPrompt_1F_iV {
+  cursor: pointer;
+  width: 400px;
+  height: 48px;
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsPrompt_1F_iV:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsPrompt_1F_iV
+  .steamml_NewProblemHeader_2Uxe1.steamml_PlusSymbol_2zfyC {
+  transform: scale(1);
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsPrompt_1F_iV
+  .steamml_NewProblemDescription_3vIDf {
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsHeader_1vZgE {
+  height: 700px;
+  margin-bottom: 10px;
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsHeader_1vZgE
+  .steamml_NewProblemHeader_2Uxe1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3e4750;
+  justify-content: start;
+}
+.steamml_AddNewProblem_1IaIK.steamml_IsHeader_1vZgE
+  .steamml_NewProblemHeader_2Uxe1
+  .steamml_PlusSymbol_2zfyC {
+  width: 0px;
+}
+.steamml_AddNewProblem_1IaIK .steamml_NewProblemHeader_2Uxe1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition-property: justify-content;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_NewProblemHeader_2Uxe1
+  .steamml_PlusSymbol_2zfyC {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  transition-property: width;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_NewProblemHeader_2Uxe1
+  .steamml_AddProblemHeader_3dXuk {
+  font-size: 18px;
+  color: #b6c5ca;
+  text-align: center;
+}
+.steamml_AddNewProblem_1IaIK .steamml_NewProblemDescription_3vIDf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+  overflow-y: hidden;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_NewProblemDescription_3vIDf
+  .steamml_LabelValue_3wqW3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_NewProblemDescription_3vIDf
+  .steamml_LabelValue_3wqW3
+  .steamml_Label_3uE4k {
+  width: 200px;
+  height: 22px;
+  color: #b2b2b2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_NewProblemDescription_3vIDf
+  .steamml_LabelValue_3wqW3
+  .steamml_Value_3RWed {
+  flex-grow: 1;
+  height: 22px;
+  border: 0px solid transparent;
+  background-color: #1a1a1a;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  padding: 4px;
+}
+.steamml_AddNewProblem_1IaIK .steamml_SchemaListContainer_3TzDR {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+.steamml_AddNewProblem_1IaIK
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_SchemaSelectListTitle_37bp6 {
+  color: #b2b2b2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.steamml_AddNewProblem_1IaIK .steamml_ButtonContainer_Sp68r {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  align-self: center;
+}
+.steamml_SchemaSelectList_3spVx {
+  width: 100%;
+  height: 450px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #39393a;
+  border-right: 1px solid #39393a;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  position: relative;
+  transition-property: height;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+.steamml_SchemaSelectList_3spVx.steamml_Hidden_1VPtl {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.steamml_SchemaSelectList_3spVx .steamml_SchemaOption_2eV2T {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 3px 0px;
+  border: 1px solid #3e4750;
+  background-color: #202529;
+  cursor: pointer;
+  transition-property: filter, transform, background-color, border;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.05s;
+  position: relative;
+}
+.steamml_SchemaSelectList_3spVx .steamml_SchemaOption_2eV2T:hover {
+  filter: brightness(1.3);
+  transform: scale(1.02);
+}
+.steamml_SchemaSelectList_3spVx
+  .steamml_SchemaOption_2eV2T.steamml_Selected_OilN- {
+  background-color: #3e525f;
+  border: 1px solid #3e4a50;
+  color: #fff;
+}
+.steamml_ProblemDetails_UGqiq {
+  width: 800px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.steamml_ProblemDetails_UGqiq .steamml_BackButton_1Sb8R {
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+.steamml_ProblemDetails_UGqiq .steamml_ProblemDetailsHeaderContainer_28zUx {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #323940, #262c31);
+  border-bottom: 2px solid #3e4750;
+  padding: 8px 16px;
+  position: relative;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  form.steamml_Hidden_1VPtl {
+  height: 0px;
+  max-height: 0px;
+  padding: 0;
+  border-width: 0;
+  overflow: hidden;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemName_3Hgxj {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemName_3Hgxj.steamml_Hidden_1VPtl {
+  display: none;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemNameEditing_2268o {
+  height: 35px;
+  width: 200px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemDescription_3qnlN {
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  color: #dbe2e6;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemDescription_3qnlN.steamml_Hidden_1VPtl {
+  display: none;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemDescEditing_VSvOs {
+  height: 32px;
+  width: 500px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_ProblemID_2yjPq {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 14px;
+  padding-top: 6px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_Dates_3jJSR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_Dates_3jJSR
+  .steamml_CreatedDate_3nOnI {
+  font-size: 12px;
+  color: #888;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_ProblemDetailsHeaderContainer_28zUx
+  .steamml_Dates_3jJSR
+  .steamml_UpdatedDate_3gM54 {
+  font-size: 12px;
+  color: #888;
+}
+.steamml_ProblemDetails_UGqiq .steamml_SchemaListContainer_3TzDR {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_SchemaListHeader_3rvzl {
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_SchemaListEdit_1Ch8t {
+  position: absolute;
+  top: 26px;
+  right: 4px;
+  color: #888;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_SchemaListEdit_1Ch8t:hover {
+  color: #fff;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_SchemaElement_1xjli {
+  height: 36px;
+}
+.steamml_ProblemDetails_UGqiq
+  .steamml_SchemaListContainer_3TzDR
+  .steamml_ButtonContainer_Sp68r {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  margin: 16px 0px;
+}
+.steamml_ProblemDetails_UGqiq .steamml_DeleteLink_2lI41 {
+  font-size: 14px;
+  color: #ca5025;
+  text-transform: uppercase;
+  margin: 8px auto;
+  cursor: pointer;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+.steamml_ProblemDetails_UGqiq .steamml_DeleteLink_2lI41:hover {
+  color: #d67754;
+}

@@ -20,6 +20,7 @@ const paths = [
 	"./ClientDeckExtracted/clientui/",
 	"./ClientDeckExtracted/steamui/",
 	"./help.steampowered.com/public/javascript/applications/help/",
+	"./partner.steamgames.com/public/javascript/applications/appmgmt/",
 	"./partner.steamgames.com/public/javascript/webui/storeadmin/",
 	"./steamcommunity.com/public/javascript/applications/community/",
 	"./steamcommunity.com/public/javascript/webui/",

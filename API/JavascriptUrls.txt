@@ -153,6 +153,7 @@ ${COMMUNITY_BASE_URL}friends/add
 ${COMMUNITY_BASE_URL}games/${_ ? _ : _}/partnerevents/
 ${COMMUNITY_BASE_URL}games/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}gid/${broadcast_item_drops_details_clan_accountid}/partnerevents/view/${broadcast_item_drops_details_event_gid}
+${COMMUNITY_BASE_URL}gid/${clan_accountid}/partnerevents/view/${clan_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxcreateupdatedeletepartnerevents/
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgeteventhistory
@@ -642,6 +643,7 @@ ${IMG_URL}team_unkown.png
 ${IMG_URL}teams_override/team_unknown_web.png
 ${IMG_URL}teaser/valve_logo.png
 ${IMG_URL}valve_logo.png
+${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
@@ -735,14 +737,18 @@ ${PARTNER_BASE_URL}optin/admin/edit/${}
 ${PARTNER_BASE_URL}optin/ajaxadminupdate
 ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage
+${PARTNER_BASE_URL}optin/ajaxgetalleligibleoptinapps
+${PARTNER_BASE_URL}optin/ajaxgetalloptinregistrations
 ${PARTNER_BASE_URL}optin/ajaxgetinvitedpartners
 ${PARTNER_BASE_URL}optin/ajaxgetoptinappwithdemoid
 ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition
 ${PARTNER_BASE_URL}optin/ajaxgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxgetoptinstats
+${PARTNER_BASE_URL}optin/ajaxgetspecialeventinfo
 ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
 ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
+${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
@@ -786,6 +792,13 @@ ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
+${PARTNER_BASE_URL}steamml/create_problem
+${PARTNER_BASE_URL}steamml/delete_problem
+${PARTNER_BASE_URL}steamml/edit_problem
+${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${SESSIONID}
+${PARTNER_BASE_URL}steamml/get_problems?sessionid=${SESSIONID}
+${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${SESSIONID}
+${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
@@ -970,6 +983,7 @@ ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
+${STORE_BASE_URL}news/sale/${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}
 ${STORE_BASE_URL}newshub/group/${clanAccountID}
 ${STORE_BASE_URL}newshub/group/${}/view
