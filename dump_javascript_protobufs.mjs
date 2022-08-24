@@ -743,24 +743,36 @@ function TraverseModule(ast) {
 			/*
 				class o extends s {
 			*/
-			if (
-				messageIdentifier !== null &&
-				node.type === Syntax.ClassDeclaration &&
-				node.superClass?.type === Syntax.Identifier &&
-				node.superClass.name === messageIdentifier
-			) {
-				const message = TraverseClass(node.body, importedIds);
-				message.id = node.id.name;
-				messages.push(message);
+			if (messageIdentifier !== null && node.type === Syntax.ClassDeclaration) {
+				let parseClass = false;
 
-				const exportedId = exportedIdsFlipped.get(message.id);
-
-				if (exportedId) {
-					exportedIds.set(exportedId, message.className);
+				/*
+					class s extends (1856 != t.j ? n : null) {
+				*/
+				if (
+					node.superClass?.type === Syntax.ConditionalExpression &&
+					node.superClass?.consequent.type === Syntax.Identifier &&
+					node.superClass.consequent.name === messageIdentifier
+				) {
+					parseClass = true;
+				} else if (node.superClass?.type === Syntax.Identifier && node.superClass.name === messageIdentifier) {
+					parseClass = true;
 				}
 
-				this.skip();
-				return;
+				if (parseClass) {
+					const message = TraverseClass(node.body, importedIds);
+					message.id = node.id.name;
+					messages.push(message);
+
+					const exportedId = exportedIdsFlipped.get(message.id);
+
+					if (exportedId) {
+						exportedIds.set(exportedId, message.className);
+					}
+
+					this.skip();
+					return;
+				}
 			}
 
 			/*
@@ -770,25 +782,68 @@ function TraverseModule(ast) {
 			*/
 			if (
 				messageIdentifier !== null &&
-				node.type === Syntax.CallExpression &&
-				parent?.id?.type === Syntax.Identifier &&
-				node.callee.type === Syntax.FunctionExpression &&
-				node.arguments.length === 1 &&
-				node.arguments[0].type === Syntax.Identifier &&
-				node.arguments[0].name === messageIdentifier
+				parent?.type === Syntax.VariableDeclarator &&
+				parent?.id?.type === Syntax.Identifier
 			) {
-				const message = TraverseTranspiledClass(node.callee.body, importedIds);
-				message.id = parent.id.name;
-				messages.push(message);
+				/*
+					c = ((function (n) {
 
-				const exportedId = exportedIdsFlipped.get(message.id);
+					})(s), (function (n) {
 
-				if (exportedId) {
-					exportedIds.set(exportedId, message.className);
+					})(s));
+				*/
+				if (node.type === Syntax.SequenceExpression) {
+					for (let i = 0; i < node.expressions.length; i++) {
+						const expr = node.expressions[i];
+
+						if (
+							messageIdentifier !== null &&
+							expr.type === Syntax.CallExpression &&
+							expr.callee.type === Syntax.FunctionExpression &&
+							expr.arguments.length === 1 &&
+							expr.arguments[0].type === Syntax.Identifier &&
+							expr.arguments[0].name === messageIdentifier
+						) {
+							const message = TraverseTranspiledClass(expr.callee.body, importedIds);
+
+							if (i === node.expressions.length - 1) {
+								message.id = parent.id.name;
+							}
+
+							messages.push(message);
+
+							const exportedId = exportedIdsFlipped.get(message.id);
+
+							if (exportedId) {
+								exportedIds.set(exportedId, message.className);
+							}
+						}
+					}
+
+					this.skip();
+					return;
 				}
 
-				this.skip();
-				return;
+				if (
+					node.type === Syntax.CallExpression &&
+					node.callee.type === Syntax.FunctionExpression &&
+					node.arguments.length === 1 &&
+					node.arguments[0].type === Syntax.Identifier &&
+					node.arguments[0].name === messageIdentifier
+				) {
+					const message = TraverseTranspiledClass(node.callee.body, importedIds);
+					message.id = parent.id.name;
+					messages.push(message);
+
+					const exportedId = exportedIdsFlipped.get(message.id);
+
+					if (exportedId) {
+						exportedIds.set(exportedId, message.className);
+					}
+
+					this.skip();
+					return;
+				}
 			}
 
 			/*
