@@ -18,7 +18,8 @@ for await (const file of GetRecursiveFilesToParse()) {
 				} else if (
 					node.type === Syntax.Literal &&
 					IsBaseUrlExpression(node) &&
-					!file.endsWith("steammobile_android.js")
+					!file.endsWith("steammobile_chat.js") &&
+					!file.endsWith("steammobile_app.js")
 				) {
 					allStrings.add(FormatNode(node, true).join(""));
 					this.skip();

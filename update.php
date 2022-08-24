@@ -402,10 +402,10 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 
 			if(
-				$OriginalFile === 'Scripts/WebUI/steammobile_android.js' ||
 				str_ends_with( $File, 'english-json.js' ) ||
 				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
+				str_starts_with( $OriginalFile, 'Scripts/WebUI/steammobile' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
 				str_contains( $OriginalFile, '/applications/' )
@@ -435,7 +435,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				file_put_contents( $File, $Data );
 
-				if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
+				if( $OriginalFile === 'Scripts/WebUI/steammobile_app.js' || $OriginalFile === 'Scripts/WebUI/steammobile_chat.js' )
 				{
 					$this->SyncProtobufs = true;
 
