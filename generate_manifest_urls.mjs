@@ -15,6 +15,10 @@ const files = [
 		file: "help.steampowered.com/public/javascript/applications/help/manifest.js",
 		cdn: "https://help.steampowered.com/public/",
 	},
+	{
+		file: "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js",
+		cdn: "https://partner.steamgames.com/public/",
+	},
 	/* different AST
 	{
 		file: "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js",

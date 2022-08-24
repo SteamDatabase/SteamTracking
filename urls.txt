@@ -270,6 +270,8 @@ https://help.steampowered.com/public/javascript/ticketmaster.js?__TIME__&l=engli
 https://partner.steamgames.com/public/javascript/admin.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/admin_monitor.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/admin_publisher.js?__TIME__&l=english&_cdn=cloudflare
+https://partner.steamgames.com/public/javascript/applications/appmgmt/main.js?__TIME__&l=english&_cdn=cloudflare
+https://partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/apps_mstats.js?__TIME__&l=english&_cdn=cloudflare
 https://partner.steamgames.com/public/javascript/apps_workshop.js?__TIME__&l=english&_cdn=cloudflare
