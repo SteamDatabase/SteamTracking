@@ -303,6 +303,82 @@ function decodeEnum(matchedEnum) {
 }
 
 function decodeProtobuf(matchedClass, rgEnums) {
+	const start = matchedClass[0].indexOf(',fields:{');
+	
+	if(start < 1) {
+		return { "name": matchedClass.groups.msgClassName, "fields": [] };
+	}
+
+	let end = 0;
+	let brackets = 1;
+
+	for(let i = start; i < matchedClass[0].length; i++) {
+		const char = matchedClass[0][i];
+
+		if(char === '{') {
+			brackets++;
+		}
+		else if(char === '}') {
+			brackets--;
+
+			if(brackets === 0) {
+				end = i;
+				break;
+			}
+		}
+	}
+
+	const fields = matchedClass[0].substring(start + ',fields:'.length, end)
+		.replace(/(?<=(?:d|c):)([_a-zA-Z$]{1,2}(\.[_a-zA-Z0-9$]+)?)(?=,)?/g, '"$1"') // constructor
+		.replace(/(?<=br:|bw:)[^,}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
+	
+	const rgFields = [];
+	let protoFields = null;
+	eval(`protoFields=${fields}`);
+
+	for (const fieldName in protoFields) {
+		let field = protoFields[fieldName];
+		let fieldDesc = {
+			id: field.n,
+			flag: field.r ? "repeated" : "optional",
+			name: fieldName,
+			type: "?",
+		};
+
+		if (field.c) {
+			// It's a nested message of some sort
+			if (field.c === matchedClass.groups.msgClassName) {
+				// constructor name, special case for recursive messages
+				fieldDesc.type = minVarName;
+			} else {
+				fieldDesc.type = field.c;
+			}
+		} else {
+			fieldDesc.type = field.br.toLowerCase().replace("64string", "64");
+			if (fieldDesc.type === "enum") {
+				// ToDo: RE enums
+				fieldDesc.type = "int32";
+				fieldDesc.description = "enum";
+			}
+		}
+
+		// default?
+		if (Object.hasOwn(field, "d")) {
+			if (fieldDesc.type === "string") {
+				fieldDesc.default = JSON.stringify(field.d);
+			} else {
+				fieldDesc.default = field.d;
+			}
+		}
+
+		rgFields.push(fieldDesc);
+	}
+
+	return { "name": matchedClass.groups.msgClassName, "fields": rgFields };
+}
+
+/*
+function decodeProtobuf(matchedClass, rgEnums) {
 	let rgMatchedField,
 	    reClassField = /case (?<id>\d+):(?<nestedMessage>[^:]*)[\w\$]\.(?<flag>set_|add_)(?<name>\w+)\((?:[\w\$]\.read(?<type>\w+)\(\)|[\w\$])\);break;/g,
 	    rgFields = [];
@@ -389,6 +465,7 @@ function decodeProtobuf(matchedClass, rgEnums) {
 
 	return { "name": matchedClass.groups.msgClassName, "fields": rgFields };
 }
+*/
 
 function decodeServiceMethod(matches, protos, rgShortToLong) {
 	let svcName = matches.groups.svcName,
@@ -399,7 +476,10 @@ function decodeServiceMethod(matches, protos, rgShortToLong) {
 		msgRequestName = rgShortToLong[matches.groups.msgNotifyShortName];
 	} else if (matches.groups.msgResponseShortName) { // response
 		msgResponseName = rgShortToLong[matches.groups.msgResponseShortName];
-		msgRequestName = msgResponseName.replace(/_Response$/, '_Request');
+
+		if(msgResponseName) {
+			msgRequestName = msgResponseName.replace(/_Response$/, '_Request');
+		}
 
 		if (!Object.values(rgShortToLong).includes(msgRequestName)) {
 			msgRequestName = null;
