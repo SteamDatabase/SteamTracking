@@ -2,8 +2,8 @@
   "private": true,
   "name": "steamtracking",
   "scripts": {
-    "eslint": "eslint ./protobufdumper.js ./*.mjs",
-    "format": "prettier --write --use-tabs --print-width 120 ./protobufdumper.js ./*.mjs",
+    "eslint": "eslint ./friendsuiprotodumper.js ./protobufdumper.js ./*.mjs",
+    "format": "prettier --write --use-tabs --print-width 120 ./friendsuiprotodumper.js ./protobufdumper.js ./*.mjs",
     "prettier": "prettier --write"
   },
   "dependencies": {

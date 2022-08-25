@@ -1,34 +1,38 @@
-'use strict';
+"use strict";
 
 if (process.argv.length <= 2) {
-	console.log('Usage: \n  dumper.js <input_file.js> [options]');
-	console.log('  node [flags] dumper.js <input_file.js> [options]');
-	console.log('Options:');
-	console.log('  --Oall=<output_file>           - dump enums and protos to file <output_file> (same as --Oenum + --Oproto)');
-	console.log('  --Oenum=<output_file_enums>    - dump only enums to file <output_file_enums> (default: <stdout>)');
-	console.log('  --Oproto=<output_file_protos>  - dump only protos to file <output_file_protos> (default: <stdout>)');
-	console.log('  --filter-known-protos          - do not dump known proto messages and services (default: false');
+	console.log("Usage: \n  dumper.js <input_file.js> [options]");
+	console.log("  node [flags] dumper.js <input_file.js> [options]");
+	console.log("Options:");
+	console.log(
+		"  --Oall=<output_file>           - dump enums and protos to file <output_file> (same as --Oenum + --Oproto)"
+	);
+	console.log("  --Oenum=<output_file_enums>    - dump only enums to file <output_file_enums> (default: <stdout>)");
+	console.log("  --Oproto=<output_file_protos>  - dump only protos to file <output_file_protos> (default: <stdout>)");
+	console.log("  --filter-known-protos          - do not dump known proto messages and services (default: false");
 	console.log('  --known-protos-dir=<path>      - path to *.proto files (default: "Protobufs")');
 	return;
 }
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 let g_inputFile,
-    g_outputEnumsFile = null, g_outputProtosFile = null,
-    g_bFilterKnownProtos = false, g_strKnownProtosDir = 'Protobufs';
+	g_outputEnumsFile = null,
+	g_outputProtosFile = null,
+	g_bFilterKnownProtos = false,
+	g_strKnownProtosDir = "Protobufs";
 
 for (let i = 2; i < process.argv.length; ++i) {
-	if (process.argv[i].startsWith('--Oall=')) {
+	if (process.argv[i].startsWith("--Oall=")) {
 		g_outputEnumsFile = g_outputProtosFile = process.argv[i].substring(7);
-	} else if (process.argv[i].startsWith('--Oenum=')) {
+	} else if (process.argv[i].startsWith("--Oenum=")) {
 		g_outputEnumsFile = process.argv[i].substring(8);
-	} else if (process.argv[i].startsWith('--Oproto=')) {
+	} else if (process.argv[i].startsWith("--Oproto=")) {
 		g_outputProtosFile = process.argv[i].substring(9);
-	} else if (process.argv[i] === '--filter-known-protos') {
+	} else if (process.argv[i] === "--filter-known-protos") {
 		g_bFilterKnownProtos = true;
-	} else if (process.argv[i].startsWith('--known-protos-dir=')) {
+	} else if (process.argv[i].startsWith("--known-protos-dir=")) {
 		g_strKnownProtosDir = process.argv[i].substring(19);
 	} else {
 		g_inputFile = process.argv[i];
@@ -36,24 +40,29 @@ for (let i = 2; i < process.argv.length; ++i) {
 }
 
 if (!g_inputFile) {
-	console.error('Input file is not defined');
+	console.error("Input file is not defined");
 	return;
 }
 
 if (g_outputEnumsFile !== null && g_outputEnumsFile === g_outputProtosFile) {
-	g_outputEnumsFile = g_outputProtosFile = fs.createWriteStream(g_outputEnumsFile, { flags: 'w', encoding: 'utf8' });
+	g_outputEnumsFile = g_outputProtosFile = fs.createWriteStream(g_outputEnumsFile, { flags: "w", encoding: "utf8" });
 	if (g_bFilterKnownProtos) {
-		console.warn('DO NOT DUMP ENUMS AND FILTERED PROTOS TO THE SAME FILE!');
+		console.warn("DO NOT DUMP ENUMS AND FILTERED PROTOS TO THE SAME FILE!");
 	}
 } else {
-	g_outputEnumsFile = g_outputEnumsFile ? fs.createWriteStream(g_outputEnumsFile, { flags: 'w', encoding: 'utf8' }) : process.stdout;
-	g_outputProtosFile = g_outputProtosFile ? fs.createWriteStream(g_outputProtosFile, { flags: 'w', encoding: 'utf8' }) : process.stdout;
+	g_outputEnumsFile = g_outputEnumsFile
+		? fs.createWriteStream(g_outputEnumsFile, { flags: "w", encoding: "utf8" })
+		: process.stdout;
+	g_outputProtosFile = g_outputProtosFile
+		? fs.createWriteStream(g_outputProtosFile, { flags: "w", encoding: "utf8" })
+		: process.stdout;
 }
 
-let g_rgEnums = [], g_rgProtos = [];
+let g_rgEnums = [],
+	g_rgProtos = [];
 const g_mapServices = new Map();
 
-let fileData = fs.readFileSync(g_inputFile, 'utf8');
+let fileData = fs.readFileSync(g_inputFile, "utf8");
 
 const rgResults = handleFile(fileData);
 if (!rgResults) {
@@ -61,17 +70,20 @@ if (!rgResults) {
 }
 
 if (g_bFilterKnownProtos) {
-	getKnownProtobufMessages(g_strKnownProtosDir, function(mapKnownMessages, mapKnownServices) {
+	getKnownProtobufMessages(g_strKnownProtosDir, function (mapKnownMessages, mapKnownServices) {
 		const imports = new Set();
 		imports.add(mapKnownMessages.get("NoResponse"));
 
 		const filteredProtos = g_rgProtos.filter((proto) => !mapKnownMessages.has(proto.name));
 		const filteredServices = Array.from(g_mapServices).filter(([svcName]) => !mapKnownServices.has(svcName));
-		filteredServices.some(([svcName, methods]) => methods.some(({unknown}) => unknown) && filteredProtos.push({ "name": "UnknownProto", "fields": [] }));
+		filteredServices.some(
+			([svcName, methods]) =>
+				methods.some(({ unknown }) => unknown) && filteredProtos.push({ name: "UnknownProto", fields: [] })
+		);
 
 		filteredProtos.forEach((proto) => {
 			proto.fields.forEach((field) => {
-				if (field.type.charAt(0) === '.') {
+				if (field.type.charAt(0) === ".") {
 					const file = mapKnownMessages.get(field.type.substr(1));
 
 					if (file) {
@@ -87,24 +99,41 @@ if (g_bFilterKnownProtos) {
 		outputServices(filteredServices, g_outputProtosFile);
 
 		// stats
-		console.log('// enums:', rgResults.actual.enums, 'of', rgResults.expected.enums1.length, '+', rgResults.expected.enums2.length);
-		console.log('// messages:', rgResults.actual.messages, 'of', rgResults.expected.messages.length);
-		console.log('// svc methods:', rgResults.actual.methods, 'of', rgResults.expected.methods.length);
+		console.log(
+			"// enums:",
+			rgResults.actual.enums,
+			"of",
+			rgResults.expected.enums1.length,
+			"+",
+			rgResults.expected.enums2.length
+		);
+		console.log("// messages:", rgResults.actual.messages, "of", rgResults.expected.messages.length);
+		console.log("// svc methods:", rgResults.actual.methods, "of", rgResults.expected.methods.length);
 
 		g_outputEnumsFile.end();
 		g_outputProtosFile.end();
 	});
 } else {
-	g_rgProtos.push({ "name": "NoResponse", "fields": [] });
-	Array.from(g_mapServices).some(([svcName, methods]) => methods.some(({unknown}) => unknown) && g_rgProtos.push({ "name": "UnknownProto", "fields": [] }));
+	g_rgProtos.push({ name: "NoResponse", fields: [] });
+	Array.from(g_mapServices).some(
+		([svcName, methods]) =>
+			methods.some(({ unknown }) => unknown) && g_rgProtos.push({ name: "UnknownProto", fields: [] })
+	);
 
 	outputEnums(g_rgEnums, g_outputEnumsFile);
 	outputProtos(g_rgProtos, g_outputProtosFile);
 	outputServices(g_mapServices, g_outputProtosFile);
 
-	console.log('// enums:', rgResults.actual.enums, 'of', rgResults.expected.enums1.length, '+', rgResults.expected.enums2.length);
-	console.log('// messages:', rgResults.actual.messages, 'of', rgResults.expected.messages.length);
-	console.log('// svc methods:', rgResults.actual.methods, 'of', rgResults.expected.methods.length);
+	console.log(
+		"// enums:",
+		rgResults.actual.enums,
+		"of",
+		rgResults.expected.enums1.length,
+		"+",
+		rgResults.expected.enums2.length
+	);
+	console.log("// messages:", rgResults.actual.messages, "of", rgResults.expected.messages.length);
+	console.log("// svc methods:", rgResults.actual.methods, "of", rgResults.expected.methods.length);
 
 	g_outputEnumsFile.end();
 	g_outputProtosFile.end();
@@ -112,38 +141,40 @@ if (g_bFilterKnownProtos) {
 
 function getKnownProtobufMessages(dirName, callback) {
 	const msgRegex = /([ \t]*)message (\w+) \{/g,
-	      svcRegex = /service (\w+) \{/g,
-	      mapKnownMessages = new Map(),
-	      mapKnownServices = new Map();
+		svcRegex = /service (\w+) \{/g,
+		mapKnownMessages = new Map(),
+		mapKnownServices = new Map();
 	let MsgAndLevel = [];
 
-	fs.readdir(dirName, function(err, files) {
-		files.filter((file) => file.endsWith(".proto")).forEach((fileName) => {
-			const file = fs.readFileSync(path.join(dirName, fileName)).toString();
+	fs.readdir(dirName, function (err, files) {
+		files
+			.filter((file) => file.endsWith(".proto"))
+			.forEach((fileName) => {
+				const file = fs.readFileSync(path.join(dirName, fileName)).toString();
 
-			let matches;
-			while (matches = msgRegex.exec(file)) {
-				let currLevel = matches[1].length;
-				let msgName = matches[2];
+				let matches;
+				while ((matches = msgRegex.exec(file))) {
+					let currLevel = matches[1].length;
+					let msgName = matches[2];
 
-				if (MsgAndLevel[0] && MsgAndLevel[0].level >= currLevel) {
-					let prevMsg;
-					do {
-						prevMsg = MsgAndLevel.shift();
-					} while (prevMsg && prevMsg.level > currLevel);
+					if (MsgAndLevel[0] && MsgAndLevel[0].level >= currLevel) {
+						let prevMsg;
+						do {
+							prevMsg = MsgAndLevel.shift();
+						} while (prevMsg && prevMsg.level > currLevel);
+					}
+					if (MsgAndLevel[0]) {
+						msgName = MsgAndLevel[0].name + "_" + msgName;
+					}
+
+					MsgAndLevel.unshift({ name: msgName, level: currLevel });
+					mapKnownMessages.set(msgName, fileName);
 				}
-				if (MsgAndLevel[0]) {
-					msgName = MsgAndLevel[0].name + '_' + msgName;
+
+				while ((matches = svcRegex.exec(file))) {
+					mapKnownServices.set(matches[1], fileName);
 				}
-
-				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
-				mapKnownMessages.set(msgName, fileName);
-			}
-
-			while (matches = svcRegex.exec(file)) {
-				mapKnownServices.set(matches[1], fileName);
-			}
-		});
+			});
 
 		callback(mapKnownMessages, mapKnownServices);
 	});
@@ -151,27 +182,31 @@ function getKnownProtobufMessages(dirName, callback) {
 
 function handleFile(fileData) {
 	let reModule = /__d\(function\(\w,\w,\w,\w,\w,\w,\w\).+?(?=__d\(|__r\()/gs,
-	    reNumericEnums = /(?<enumKVs>(?:[\w\$]+\[[\w\$]+\.\w+=-?[\de]+\]="\w+"[,;]?)+)}\)\([\w\$]+\|\|\((?:[\w\$]+\.(?<enumName>\w+)=)?(?<enumShortName>\w+)={}\)/g,
-	    reProtoClass = /(?<msgShortName>[\w\$]+)=\(function\([\w\$]+\).*?value:function\(\){return["'](?<msgClassName>\w+)["']}.*?[\w\$]\.\2=\1/g,
-	    reSvcMethod = /(?:SendNotification\()?["'](?<svcName>\w+)\.(?<methodName>\w+)#1["'],(?:request:(?<msgNotifyShortName>[\w\$]+)|\w[\),](?<msgResponseShortName>[\w\$]+)?)/g;
+		reNumericEnums =
+			/(?<enumKVs>(?:[\w\$]+\[[\w\$]+\.\w+=-?[\de]+\]="\w+"[,;]?)+)}\)\([\w\$]+\|\|\((?:[\w\$]+\.(?<enumName>\w+)=)?(?<enumShortName>\w+)={}\)/g,
+		reProtoClass =
+			/(?<msgShortName>[\w\$]+)=\(function\([\w\$]+\).*?value:function\(\){return["'](?<msgClassName>\w+)["']}.*?[\w\$]\.\2=\1/g,
+		reSvcMethod =
+			/(?:SendNotification\()?["'](?<svcName>\w+)\.(?<methodName>\w+)#1["'],(?:request:(?<msgNotifyShortName>[\w\$]+)|\w[\),](?<msgResponseShortName>[\w\$]+)?)/g;
 
 	let rgModules = fileData.match(reModule);
 	if (!rgModules) {
-		console.error('Cannot find modules');
+		console.error("Cannot find modules");
 		return;
 	}
 
-	let nEnumCount = 0, nMsgCount = 0, nSvcMethodsCount = 0;
+	let nEnumCount = 0,
+		nMsgCount = 0,
+		nSvcMethodsCount = 0;
 
 	rgModules.forEach((esModule) => {
 		let rgMatches,
-		    rgModuleEnums = [],
-		    rgModuleProtos = [],
-		    rgProtoShortNamesToLongNames = {};
+			rgModuleEnums = [],
+			rgModuleProtos = [],
+			rgProtoShortNamesToLongNames = {};
 
 		// 1-st pass: enum
-		while (rgMatches = reNumericEnums.exec(esModule)) {
-			
+		while ((rgMatches = reNumericEnums.exec(esModule))) {
 			let rgDecodedEnum = decodeEnum(rgMatches);
 			if (rgDecodedEnum) {
 				nEnumCount += 1;
@@ -183,7 +218,7 @@ function handleFile(fileData) {
 		}
 
 		// 2-st pass: proto
-		while (rgMatches = reProtoClass.exec(esModule)) {
+		while ((rgMatches = reProtoClass.exec(esModule))) {
 			nMsgCount += 1;
 
 			rgProtoShortNamesToLongNames[rgMatches.groups.msgShortName] = rgMatches.groups.msgClassName;
@@ -192,7 +227,7 @@ function handleFile(fileData) {
 		}
 
 		// 3-rd pass: service
-		while (rgMatches = reSvcMethod.exec(esModule)) {
+		while ((rgMatches = reSvcMethod.exec(esModule))) {
 			nSvcMethodsCount += 1;
 
 			let service = decodeServiceMethod(rgMatches, rgModuleProtos, rgProtoShortNamesToLongNames);
@@ -208,9 +243,9 @@ function handleFile(fileData) {
 		rgModuleProtos.forEach((proto) => {
 			proto.fields.forEach((field) => {
 				if (field.typeLong) {
-					field.type = '.' + field.typeLong;
+					field.type = "." + field.typeLong;
 				} else if (field.typeShort && rgProtoShortNamesToLongNames[field.typeShort]) {
-					field.type = '.' + rgProtoShortNamesToLongNames[field.typeShort];
+					field.type = "." + rgProtoShortNamesToLongNames[field.typeShort];
 				}
 			});
 		});
@@ -220,19 +255,23 @@ function handleFile(fileData) {
 	});
 
 	return {
-		"actual": {
-			"modules": rgModules.length,
-			"enums": nEnumCount,
-			"messages": nMsgCount,
-			"methods": nSvcMethodsCount
+		actual: {
+			modules: rgModules.length,
+			enums: nEnumCount,
+			messages: nMsgCount,
+			methods: nSvcMethodsCount,
 		},
-		"expected": {
-			"enums0": fileData.match(/(?:[\w\$]+\[[\w\$]+\.\w+=-?[\de]+\]="\w+"[,;]?)+}\)\([\w\$]+\|\|\((?:[\w\$]+\.\w+=)?\w+={}\)/g),
-			"enums1": fileData.match(/(?:[\w\$]+\[[\w\$]+\.(\w+)=-?[\de]+\]="\1"[,;]?)+}\)\(([\w\$]+)\|\|\([\w\$]+\.\w+=\2={}\)/g),
-			"enums2": fileData.match(/(?:[\w\$]+\[[\w\$]+\.(\w+)=-?[\de]+\]="\1"[,;]?)+}\)\(([\w\$]+)\|\|\(\2={}\)/g),
-			"messages": fileData.match(/"deserializeBinaryFromReader"/g),
-			"methods": fileData.match(/["']\w+\.\w+#1["']/g)
-		}
+		expected: {
+			enums0: fileData.match(
+				/(?:[\w\$]+\[[\w\$]+\.\w+=-?[\de]+\]="\w+"[,;]?)+}\)\([\w\$]+\|\|\((?:[\w\$]+\.\w+=)?\w+={}\)/g
+			),
+			enums1: fileData.match(
+				/(?:[\w\$]+\[[\w\$]+\.(\w+)=-?[\de]+\]="\1"[,;]?)+}\)\(([\w\$]+)\|\|\([\w\$]+\.\w+=\2={}\)/g
+			),
+			enums2: fileData.match(/(?:[\w\$]+\[[\w\$]+\.(\w+)=-?[\de]+\]="\1"[,;]?)+}\)\(([\w\$]+)\|\|\(\2={}\)/g),
+			messages: fileData.match(/"deserializeBinaryFromReader"/g),
+			methods: fileData.match(/["']\w+\.\w+#1["']/g),
+		},
 	};
 }
 
@@ -245,20 +284,20 @@ function commonSubstring(str1, str2) {
 
 function tryRenameKeys(data, enumName) {
 	let reSubstrToReplace = null,
-	    allEnumKeys = Object.keys(data);
+		allEnumKeys = Object.keys(data);
 
-	if (allEnumKeys.every(keyName => keyName.startsWith('k_'))) {
+	if (allEnumKeys.every((keyName) => keyName.startsWith("k_"))) {
 		let commonName = allEnumKeys.reduce(commonSubstring);
-		reSubstrToReplace = new RegExp(`^k_${enumName}_?|^${commonName}`, 'i');
-	} else if (allEnumKeys.every(keyName => keyName.startsWith(enumName))) {
-		reSubstrToReplace = new RegExp(`^${enumName}_?`, 'i');
+		reSubstrToReplace = new RegExp(`^k_${enumName}_?|^${commonName}`, "i");
+	} else if (allEnumKeys.every((keyName) => keyName.startsWith(enumName))) {
+		reSubstrToReplace = new RegExp(`^${enumName}_?`, "i");
 	}
 
 	if (reSubstrToReplace) {
-		allEnumKeys.forEach(keyName => {
-			let newKeyName = keyName.replace(reSubstrToReplace, '');
-			if ('0123456789'.includes(newKeyName.charAt(0))) {
-				newKeyName = '_' + newKeyName;
+		allEnumKeys.forEach((keyName) => {
+			let newKeyName = keyName.replace(reSubstrToReplace, "");
+			if ("0123456789".includes(newKeyName.charAt(0))) {
+				newKeyName = "_" + newKeyName;
 			}
 			data[newKeyName] = data[keyName];
 			delete data[keyName];
@@ -271,8 +310,8 @@ function tryRenameKeys(data, enumName) {
 function decodeEnum(matchedEnum) {
 	let data = {};
 
-	matchedEnum.groups.enumKVs.match(/\w+=-?[\de]+/g).forEach(matched => {
-		let [enumKey, enumValue] = matched.split('=');
+	matchedEnum.groups.enumKVs.match(/\w+=-?[\de]+/g).forEach((matched) => {
+		let [enumKey, enumValue] = matched.split("=");
 		data[enumKey] = JSON.parse(enumValue);
 	});
 
@@ -281,57 +320,57 @@ function decodeEnum(matchedEnum) {
 	if (matchedEnum.groups.enumName) {
 		// named enum
 		result = {
-			"name": matchedEnum.groups.enumName,
-			"keys": tryRenameKeys(data, matchedEnum.groups.enumName)
+			name: matchedEnum.groups.enumName,
+			keys: tryRenameKeys(data, matchedEnum.groups.enumName),
 		};
 	} else {
 		// unnamed enum, try to figure it out
 		let allEnumKeys = Object.keys(data);
-		if (allEnumKeys.every(keyName => keyName.startsWith('k_'))) {
-			let commonName = allEnumKeys.reduce(commonSubstring).replace(/^k_|_$/g, '');
+		if (allEnumKeys.every((keyName) => keyName.startsWith("k_"))) {
+			let commonName = allEnumKeys.reduce(commonSubstring).replace(/^k_|_$/g, "");
 
 			if (commonName.length >= 3) {
 				result = {
-					"name": commonName,
-					"keys": tryRenameKeys(data, commonName)
+					name: commonName,
+					keys: tryRenameKeys(data, commonName),
 				};
 			}
 		}
 	}
-	
+
 	return result;
 }
 
 function decodeProtobuf(matchedClass, rgEnums) {
-	const start = matchedClass[0].indexOf(',fields:{');
-	
-	if(start < 1) {
-		return { "name": matchedClass.groups.msgClassName, "fields": [] };
+	const start = matchedClass[0].indexOf(",fields:{");
+
+	if (start < 1) {
+		return { name: matchedClass.groups.msgClassName, fields: [] };
 	}
 
 	let end = 0;
 	let brackets = 1;
 
-	for(let i = start; i < matchedClass[0].length; i++) {
+	for (let i = start; i < matchedClass[0].length; i++) {
 		const char = matchedClass[0][i];
 
-		if(char === '{') {
+		if (char === "{") {
 			brackets++;
-		}
-		else if(char === '}') {
+		} else if (char === "}") {
 			brackets--;
 
-			if(brackets === 0) {
+			if (brackets === 0) {
 				end = i;
 				break;
 			}
 		}
 	}
 
-	const fields = matchedClass[0].substring(start + ',fields:'.length, end)
+	const fields = matchedClass[0]
+		.substring(start + ",fields:".length, end)
 		.replace(/(?<=(?:d|c):)([_a-zA-Z$]{1,2}(\.[_a-zA-Z0-9$]+)?)(?=,)?/g, '"$1"') // constructor
 		.replace(/(?<=br:|bw:)[^,}]+?(?:read|write)(\w+)(?=,)?/g, '"$1"'); // reader/writer
-	
+
 	const rgFields = [];
 	let protoFields = null;
 	eval(`protoFields=${fields}`);
@@ -374,7 +413,7 @@ function decodeProtobuf(matchedClass, rgEnums) {
 		rgFields.push(fieldDesc);
 	}
 
-	return { "name": matchedClass.groups.msgClassName, "fields": rgFields };
+	return { name: matchedClass.groups.msgClassName, fields: rgFields };
 }
 
 /*
@@ -469,16 +508,19 @@ function decodeProtobuf(matchedClass, rgEnums) {
 
 function decodeServiceMethod(matches, protos, rgShortToLong) {
 	let svcName = matches.groups.svcName,
-	    methodName = matches.groups.methodName,
-	    msgRequestName = null, msgResponseName = 'NoResponse';
+		methodName = matches.groups.methodName,
+		msgRequestName = null,
+		msgResponseName = "NoResponse";
 
-	if (matches.groups.msgNotifyShortName) { // S->C notification
+	if (matches.groups.msgNotifyShortName) {
+		// S->C notification
 		msgRequestName = rgShortToLong[matches.groups.msgNotifyShortName];
-	} else if (matches.groups.msgResponseShortName) { // response
+	} else if (matches.groups.msgResponseShortName) {
+		// response
 		msgResponseName = rgShortToLong[matches.groups.msgResponseShortName];
 
-		if(msgResponseName) {
-			msgRequestName = msgResponseName.replace(/_Response$/, '_Request');
+		if (msgResponseName) {
+			msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
 		}
 
 		if (!Object.values(rgShortToLong).includes(msgRequestName)) {
@@ -493,8 +535,12 @@ function decodeServiceMethod(matches, protos, rgShortToLong) {
 
 	if (!msgRequestName) {
 		protos.some((proto) => {
-			if ((proto.name === 'C' + svcName + '_' + methodName + (matches.groups.msgResponseShortName ? '_Request' : '_Notification'))
-				|| !matches.groups.msgResponseShortName && (proto.name === 'C' + svcName + '_' + methodName.replace(/^Notify/, '') + '_Notification')) {
+			if (
+				proto.name ===
+					"C" + svcName + "_" + methodName + (matches.groups.msgResponseShortName ? "_Request" : "_Notification") ||
+				(!matches.groups.msgResponseShortName &&
+					proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")
+			) {
 				msgRequestName = proto.name;
 				return true;
 			}
@@ -502,19 +548,19 @@ function decodeServiceMethod(matches, protos, rgShortToLong) {
 		});
 
 		if (!msgRequestName) {
-			msgRequestName = 'UnknownProto';
+			msgRequestName = "UnknownProto";
 			bUnknownProto = true;
 		}
 	}
 
 	return {
-		"name": svcName,
-		"method": {
-			"name": methodName,
-			"request": msgRequestName,
-			"response": msgResponseName,
-			"unknown": bUnknownProto
-		}
+		name: svcName,
+		method: {
+			name: methodName,
+			request: msgRequestName,
+			response: msgResponseName,
+			unknown: bUnknownProto,
+		},
 	};
 }
 
@@ -523,7 +569,7 @@ function outputImports(imports, stream) {
 		stream.write(`import "${importName}";\n`);
 	}
 
-	stream.write('\n');
+	stream.write("\n");
 }
 
 function outputEnums(enums, stream) {
@@ -533,12 +579,10 @@ function outputEnums(enums, stream) {
 		return 0;
 	});
 
-	for (const {name, keys} of enums)
-	{
+	for (const { name, keys } of enums) {
 		stream.write(`enum ${name}\n{\n`);
 
-		for (const enumKey in keys)
-		{
+		for (const enumKey in keys) {
 			stream.write(`\t${enumKey} = ${keys[enumKey]};\n`);
 		}
 
@@ -553,18 +597,18 @@ function outputProtos(protos, stream) {
 			stream.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
 			let options = [];
-			if (field.hasOwnProperty('default')) {
+			if (field.hasOwnProperty("default")) {
 				options.push(`default = ${field.default}`);
 			}
-			if (field.hasOwnProperty('description')) {
+			if (field.hasOwnProperty("description")) {
 				options.push(`(description) = "${field.description}"`);
 			}
 			if (options.length) {
-				stream.write(` [${options.join(', ')}]`);
+				stream.write(` [${options.join(", ")}]`);
 			}
-			stream.write(';\n');
+			stream.write(";\n");
 		});
-		stream.write('}\n\n');
+		stream.write("}\n\n");
 	});
 }
 
@@ -576,6 +620,6 @@ function outputServices(services, stream) {
 			stream.write(`\trpc ${method.name} (.${method.request}) returns (.${method.response});\n`);
 		}
 
-		stream.write('}\n\n');
+		stream.write("}\n\n");
 	}
 }
