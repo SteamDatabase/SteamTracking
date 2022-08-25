@@ -35592,8 +35592,9 @@
           }),
           i.createElement(u.e, {
             video: t,
-            autoplay: _,
+            autoplay: null != _ && _,
             startSeconds: h,
+            controls: !0,
             playsInline: !0,
             autopause: !0,
             showFullscreenBtn: !0,

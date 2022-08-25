@@ -1003,6 +1003,7 @@
             video: t,
             autoplay: null != p && p,
             startSeconds: h,
+            controls: !0,
             playsInline: !0,
             autopause: !0,
             showFullscreenBtn: !0,
