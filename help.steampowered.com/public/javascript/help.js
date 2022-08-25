@@ -15,6 +15,12 @@ HelpWizard = {
 				wizard_url = window.location.hash.replace( /^#!?/,'');
 		}
 
+				if ( wizard_url.toLowerCase().startsWith('login') )
+		{
+			window.location = "https://help.steampowered.com/wizard/" + wizard_url;
+			return;
+		}
+
 		var page_url = wizard_url;
 		var iQueryString = wizard_url.indexOf( '?' );
 		if ( iQueryString >= 0 )
@@ -46,7 +52,7 @@ HelpWizard = {
 		// fade the page out
 		$J( '#page_content' ).removeClass( 'page_loaded page_error' );
 
-	        $J( '#loading_throbber' ).removeClass('page_loaded');
+		$J( '#loading_throbber' ).removeClass('page_loaded');
 
 		if ( HelpWizard.m_bUseHistoryAPI )
 		{
