@@ -110,6 +110,7 @@ ${COMMUNITY_BASE_URL}/gid/${}/deleteimage/
 ${COMMUNITY_BASE_URL}/gid/${}/getimages/
 ${COMMUNITY_BASE_URL}/gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}/resizeimage/
+${COMMUNITY_BASE_URL}/profiles/${}/ajaxgetbadgeinfo/${appid}
 ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
@@ -204,6 +205,11 @@ ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
+${COMMUNITY_BASE_URL}miniprofile/${}/json
+${COMMUNITY_BASE_URL}mobileconf/ajaxop?${}
+${COMMUNITY_BASE_URL}mobileconf/detailspage/${id}?${}
+${COMMUNITY_BASE_URL}mobileconf/getlist
+${COMMUNITY_BASE_URL}mobileconf/multiajaxop?${}
 ${COMMUNITY_BASE_URL}my
 ${COMMUNITY_BASE_URL}my/ajaxgetappagegatesbypassed/
 ${COMMUNITY_BASE_URL}my/ajaxgetcommunitypreference/
@@ -284,6 +290,7 @@ ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/snowball/
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
+${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
@@ -319,10 +326,12 @@ ${COMMUNITY_URL}broadcast/watchnew/${_ ? _ : _}?origin=https://www.dota2.com&ena
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
+${HELP_BASE_URL}/wizard/HelpWithSteamIssue/?issueid=809
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
+${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
 ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
@@ -959,6 +968,7 @@ ${STORE_BASE_URL}itemstore/${nAppID}/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
 ${STORE_BASE_URL}itemstore/${}
 ${STORE_BASE_URL}itemstore/${}/ajaxgetitemdefs
+${STORE_BASE_URL}join
 ${STORE_BASE_URL}join/
 ${STORE_BASE_URL}labs
 ${STORE_BASE_URL}labs/${}?optout=1
@@ -971,6 +981,7 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
+${STORE_BASE_URL}legal
 ${STORE_BASE_URL}login/checkdevice
 ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}lunarnewyearmarket
@@ -978,6 +989,7 @@ ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp
+${STORE_BASE_URL}news
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
@@ -1036,6 +1048,7 @@ ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}steam_refunds
+${STORE_BASE_URL}steamaccount/addfunds
 ${STORE_BASE_URL}steamawards/
 ${STORE_BASE_URL}steamawards/ajaxgetpartnervotedefs
 ${STORE_BASE_URL}steamawards/ajaxgetsteamawardeventdetails
@@ -1059,6 +1072,7 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_ICON_BASE_URL}${}
+${STORE_ICON_BASE_URL}/${appid}/${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${URL}${URL}
@@ -1324,6 +1338,7 @@ ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${sURL}${}
 ${serverUrl}${}?platform=android&hash=${hash}
 ${short_url}/${invite_token}
+${sourceURL}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/
 ${strBaseURL}${strLocation}
 ${strBaseURL}${}

@@ -1001,7 +1001,7 @@
           }),
           a.createElement(u.e, {
             video: t,
-            autoplay: p,
+            autoplay: null != p && p,
             startSeconds: h,
             playsInline: !0,
             autopause: !0,
