@@ -3045,8 +3045,11 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
 }
 .systemdock_SystemDockUpdateApplyTakeover_qRqRb {
   background-color: #000;
+  display: flex;
   width: 100%;
   height: 100%;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb .systemdock_Container_2xe96 {
   display: flex;
   flex: 1;
   justify-content: center;
@@ -9917,10 +9920,10 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   height: 200px;
   display: flex;
   position: relative;
+  overflow: hidden;
   cursor: pointer;
   user-select: none;
   box-shadow: var(--gpShadow-Medium);
-  transition: box-shadow 0.2s ease;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
   .discoveryqueuewidget_WidgetHeaderCtn_3u5R_ {
@@ -9931,7 +9934,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
     rgba(64, 121, 153, 0) 100%
   );
   position: absolute;
-  height: 100%;
+  height: 200px;
   width: 70%;
   z-index: 5;
   display: flex;
@@ -9940,7 +9943,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   align-items: flex-start;
   padding: 0 32px;
   line-height: 30px;
-  transition: filter 0.2s ease;
   row-gap: 4px;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
@@ -9949,7 +9951,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: flex;
   column-gap: 4px;
   align-items: center;
-  transition: column-gap 0.2s ease;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
   .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
@@ -9975,12 +9976,17 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .discoveryqueuewidget_LaunchAction_1V7ho {
   column-gap: 8px;
 }
-.discoveryqueuewidget_AppCarouselCtn_29s_c {
-  scroll-behavior: smooth;
-  overflow: hidden;
-  display: flex;
-  width: 50%;
+.discoveryqueuewidget_AppCarouselPosition_3bu52 {
+  width: 320px;
   margin-left: auto;
+  overflow: hidden;
+  position: relative;
+}
+.discoveryqueuewidget_AppCarouselCtn_29s_c {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .discoveryqueuewidget_WidgetHeaderText_uUpem {
   font-weight: 700;
@@ -9991,7 +9997,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .discoveryqueuewidget_AppCapsuleCtn_2dIBN {
   width: 320px;
-  height: 100%;
+  height: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -15586,6 +15592,9 @@ body {
   -webkit-tap-highlight-color: transparent;
   touch-action: none;
   z-index: 5;
+}
+.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneConfigurator_1oZO8 {
+  zoom: 1.5;
 }
 .gamepadui_MainNavMenuMainSplit_2Y_Mr {
   height: 100%;

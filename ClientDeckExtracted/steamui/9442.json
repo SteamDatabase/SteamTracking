@@ -4207,8 +4207,6 @@
     "ControllerBinding_SensitivityFlickStick_Description": "One full 360° 'Sweep' on the FlickStick will result in %1$spx horizontal mouse movement. Tuning Tip: perform a 360° degree sweep in game. If your aim overshoots your starting direction, decrease this value. If you undershoot, increase it.",
     "ControllerBinding_SensitivitySweepFlickStick": "Sweep Sensitivity Scale",
     "ControllerBinding_SensitivitySweepFlickStick_Description": "Multiplier for 'Sweeping' the FlickStick around the outer edge. Tweak this only after you have tweaked Pixels Per Revolution.",
-    "ControllerBinding_Int_FlickStickTransitionTime": "Transition Time",
-    "ControllerBinding_Int_FlickStickTransitionTime_Description": "The time (in ms) that FlickStick will take to transition from the current view angle to the target angle, when it is activated.",
     "ControllerBinding_SmoothingFlickStick": "Smoothing",
     "ControllerBinding_SmoothingFlickStick_Description": "Smoothing helps to remove noise and jitter from the mouse.  Smaller values will result in less filtering, while higher values will be more filtered and smoother.",
     "ControllerBinding_SnapModeFlickStick": "Snap Angle",

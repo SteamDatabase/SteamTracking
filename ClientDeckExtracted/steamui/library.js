@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7448062";
+var CLSTAMP = "7465844";
 (() => {
   var e,
     t,
@@ -12517,6 +12517,7 @@ var CLSTAMP = "7448062";
             IN_LOGIN: !1,
             IN_LOGIN_REFRESH: !1,
             IN_STANDALONE_KEYBOARD: !1,
+            STANDALONE_CONFIGURATOR_APPID: 0,
           },
           a = {
             logged_in: !1,
@@ -12574,9 +12575,9 @@ var CLSTAMP = "7448062";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 18 2022 : 20:34:16",
-                    BUILD_TIME_UTC: "Aug 19 2022 : 03:34:16",
-                    BUILD_RTIME_UTC: 1660880056,
+                    BUILD_TIME_LOCAL: "Aug 25 2022 : 18:56:01",
+                    BUILD_TIME_UTC: "Aug 26 2022 : 01:56:01",
+                    BUILD_RTIME_UTC: 1661478961,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12796,6 +12797,7 @@ var CLSTAMP = "7448062";
               null,
               t &&
                 !d.De.IN_STANDALONE_KEYBOARD &&
+                0 == d.De.STANDALONE_CONFIGURATOR_APPID &&
                 n.createElement(u.k, {
                   strOverrideStartupMovie: m.Z,
                   onVideoComplete: i,

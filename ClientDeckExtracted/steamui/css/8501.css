@@ -68036,7 +68036,9 @@ button.controllerconfiguratormapping_BindingIconButton_33A29.DialogButton {
   min-width: 0;
   width: 40px;
   max-width: 40px;
-  height: 40px;
+  height: auto;
+  display: flex;
+  align-self: stretch;
   overflow: hidden;
 }
 button.controllerconfiguratormapping_BindingIconButton_33A29.DialogButton,
@@ -68105,6 +68107,39 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .controllerconfiguratormapping_SettingFieldDescription_16pDD {
   margin-left: 0px;
   color: #8b929a;
+}
+.controllerconfiguratormapping_BindingDisplayName_rDprC
+  .controllerconfiguratormapping_FriendlyName_QJYtd {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 1.1em;
+  text-align: center;
+  color: #b8bcbf;
+}
+.DialogButton.gpfocus
+  .controllerconfiguratormapping_BindingDisplayName_rDprC
+  .controllerconfiguratormapping_FriendlyName_QJYtd {
+  color: #23262e;
+}
+.controllerconfiguratormapping_BindingDisplayName_rDprC
+  .controllerconfiguratormapping_Binding_jOz-f {
+  line-height: 1.1em;
 }
 :root {
   --basicui-header-height: 0px;
