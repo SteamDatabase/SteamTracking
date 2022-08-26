@@ -35,52 +35,96 @@ for (const file of files) {
 		const messages = [];
 		const enums = [];
 
-		traverse(ast, {
-			enter: function (node) {
-				if (node.type === Syntax.Property) {
-					this.skip();
-
-					/*
-						oFam: function (e, r, t) {
-
-						or
-
-						24262: (e, t, r) => {
-					*/
+		// React native code is minified differently, so we need to handle it separately
+		if (file.includes("steammobile_")) {
+			traverse(ast, {
+				enter: function (node) {
 					if (
-						(node.value.type !== Syntax.ArrowFunctionExpression && node.value.type !== Syntax.FunctionExpression) ||
-						node.value.params.length !== 3
+						node.type === Syntax.ExpressionStatement &&
+						node.expression.type === Syntax.CallExpression &&
+						node.expression.callee.type === Syntax.Identifier &&
+						node.expression.callee.name === "__d" &&
+						node.expression.arguments[0].type === Syntax.FunctionExpression &&
+						node.expression.arguments[0].body.type === Syntax.BlockStatement &&
+						node.expression.arguments[0].params.length === 7
 					) {
-						// (module, module.exports, __webpack_require__)
-						return;
+						this.skip();
+
+						const func = node.expression.arguments[0].body;
+						const requireVar = node.expression.arguments[0].params[1].name;
+						const exportVar = node.expression.arguments[0].params[5].name;
+						const dependencyMapVar = node.expression.arguments[0].params[6].name;
+						const currentModule = node.expression.arguments[1].value;
+						const dependencyMap = [];
+
+						for (const dep of node.expression.arguments[2].elements) {
+							dependencyMap.push(dep.value);
+						}
+
+						const result = TraverseReactNativeModule(func, requireVar, exportVar, dependencyMapVar, dependencyMap);
+
+						if (crossModuleExportedMessages.has(currentModule)) {
+							throw new Error("Module already exported");
+						}
+
+						crossModuleExportedMessages.set(currentModule, result.exportedIds);
+
+						// Look up field types from other messages in same module
+						FixTypesSameModule(result.services, result.messages);
+
+						services.push(...result.services);
+						messages.push(...result.messages);
 					}
+				},
+			});
+		} else {
+			traverse(ast, {
+				enter: function (node) {
+					if (node.type === Syntax.Property) {
+						this.skip();
 
-					const result = TraverseModule(node.value);
-					let currentModule;
+						/*
+							oFam: function (e, r, t) {
 
-					if (node.key.type === Syntax.Identifier) {
-						currentModule = node.key.name;
-					} else if (node.key.type === Syntax.Literal) {
-						currentModule = node.key.value;
-					} else {
-						throw new Error("Failed to find key name");
+							or
+
+							24262: (e, t, r) => {
+						*/
+						if (
+							(node.value.type !== Syntax.ArrowFunctionExpression && node.value.type !== Syntax.FunctionExpression) ||
+							node.value.params.length !== 3
+						) {
+							// (module, module.exports, __webpack_require__)
+							return;
+						}
+
+						const result = TraverseModule(node.value);
+						let currentModule;
+
+						if (node.key.type === Syntax.Identifier) {
+							currentModule = node.key.name;
+						} else if (node.key.type === Syntax.Literal) {
+							currentModule = node.key.value;
+						} else {
+							throw new Error("Failed to find key name");
+						}
+
+						if (crossModuleExportedMessages.has(currentModule)) {
+							throw new Error("Module already exported");
+						}
+
+						crossModuleExportedMessages.set(currentModule, result.exportedIds);
+
+						// Look up field types from other messages in same module
+						FixTypesSameModule(result.services, result.messages);
+
+						services.push(...result.services);
+						messages.push(...result.messages);
+						enums.push(...result.enums);
 					}
-
-					if (crossModuleExportedMessages.has(currentModule)) {
-						throw new Error("Module already exported");
-					}
-
-					crossModuleExportedMessages.set(currentModule, result.exportedIds);
-
-					// Look up field types from other messages in same module
-					FixTypesSameModule(result.services, result.messages);
-
-					services.push(...result.services);
-					messages.push(...result.messages);
-					enums.push(...result.enums);
-				}
-			},
-		});
+				},
+			});
+		}
 
 		FixTypesCrossModule(services, messages, crossModuleExportedMessages);
 
@@ -980,6 +1024,191 @@ function TraverseClass(ast, importedIds) {
 	return message;
 }
 
+function TraverseReactNativeModule(ast, requireVar, exportVar, dependencyMapVar, dependencyMap) {
+	const services = [];
+	const messages = [];
+	const enums = [];
+	const importedIds = new Map();
+	const exportedIds = new Map();
+	let messageIdentifier = null;
+
+	traverse(ast, {
+		enter: function (node, parent) {
+			/*
+				var P = c.Message;
+			*/
+			if (
+				node.type === Syntax.VariableDeclarator &&
+				node.id.type === Syntax.Identifier &&
+				node.init?.type === Syntax.MemberExpression &&
+				node.init.property.type === Syntax.Identifier &&
+				node.init.property.name === "Message"
+			) {
+				messageIdentifier = node.id.name;
+				return;
+			}
+
+			/*
+				h = r(o[10])
+			*/
+			if (node.type === Syntax.VariableDeclarator && node.init) {
+				const importedId = CheckReactNativeRequireExpression(node.init, requireVar, dependencyMapVar, dependencyMap);
+
+				if (importedId !== null) {
+					const localId = node.id.name;
+					importedIds.set(localId, importedId);
+					return;
+				}
+			}
+
+			/*
+				S = (r(d[15]), r(d[16]));
+			*/
+			if (node.type === Syntax.VariableDeclarator && node.init?.type === Syntax.SequenceExpression) {
+				const call = node.init.expressions[node.init.expressions.length - 1];
+
+				const importedId = CheckReactNativeRequireExpression(call, requireVar, dependencyMapVar, dependencyMap);
+
+				if (importedId !== null) {
+					const localId = node.id.name;
+					importedIds.set(localId, importedId);
+					return;
+				}
+
+				/* TODO: Not needed so far?
+				if (
+					call.type === Syntax.MemberExpression &&
+					call.property.type === Syntax.Identifier &&
+					call.property.name === "Message"
+				) {
+					messageIdentifier = node.id.name;
+					return;
+				}
+				*/
+			}
+
+			/*
+				a.CAuthentication_GetPasswordRSAPublicKey_Request = p;
+			*/
+			if (
+				node.type === Syntax.AssignmentExpression &&
+				node.left.type === Syntax.MemberExpression &&
+				node.left.object.type === Syntax.Identifier &&
+				node.left.object.name === exportVar &&
+				node.right.type === Syntax.Identifier
+			) {
+				const exportedId = node.left.property.name;
+				const localId = node.right.name;
+				const message = messages.find((m) => m.id === localId);
+
+				if (message) {
+					exportedIds.set(exportedId, message.className);
+				}
+
+				return;
+			}
+
+			/*
+				var _ = (function (t) {
+
+				})(P);
+			*/
+			if (
+				node.type === Syntax.VariableDeclarator &&
+				node.id.type === Syntax.Identifier &&
+				node.init?.type === Syntax.CallExpression &&
+				node.init.arguments.length === 1 &&
+				node.init.arguments[0].type === Syntax.Identifier &&
+				node.init.arguments[0].name === messageIdentifier &&
+				node.init.callee?.type === Syntax.FunctionExpression &&
+				node.init.callee?.body.type === Syntax.BlockStatement
+			) {
+				var message = ParseReactNativeMessage(node.init.callee.body, importedIds);
+
+				if (message !== null) {
+					message.id = node.id.name;
+					messages.push(message);
+				}
+
+				this.skip();
+				return;
+			}
+
+			/*
+				return e.SendMsg("Video.ClientGetVideoURL#1", t, s, { ePrivilege: 1 });
+				return e.SendNotification("ClientMetrics.ClientBootstrapReport#1", t, { ePrivilege: 1 });
+			*/
+			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
+				let msg = null;
+				if (node.property.name === "SendMsg") {
+					msg = GetSendMsg(parent, messages, importedIds);
+				} else if (node.property.name === "SendNotification") {
+					msg = GetSendNotification(parent);
+				}
+
+				if (msg !== null) {
+					services.push(msg);
+					this.skip();
+					return;
+				}
+			}
+		},
+	});
+
+	return { services, messages, enums, exportedIds };
+}
+
+function CheckReactNativeRequireExpression(node, requireVar, dependencyMapVar, dependencyMap) {
+	if (
+		node.type === Syntax.CallExpression &&
+		node.callee.type === Syntax.Identifier &&
+		node.callee.name === requireVar &&
+		node.arguments.length === 1 &&
+		node.arguments[0].type === Syntax.MemberExpression &&
+		node.arguments[0].object.type === Syntax.Identifier &&
+		node.arguments[0].object.name === dependencyMapVar
+	) {
+		return dependencyMap[node.arguments[0].property.value];
+	}
+
+	return null;
+}
+
+function ParseReactNativeMessage(node, importedIds) {
+	const ret = node.body[node.body.length - 1];
+
+	if (ret.type !== Syntax.ReturnStatement) {
+		return null;
+	}
+
+	const keys = [
+		...ret.argument.expressions[0].arguments[1].elements,
+		...ret.argument.expressions[0].arguments[2].elements,
+	];
+
+	const message = {
+		className: null,
+		dependants: new Set(),
+		fields: [],
+	};
+
+	for (const key of keys) {
+		if (key.type !== Syntax.ObjectExpression) {
+			continue;
+		}
+
+		const name = key.properties[0].value.value;
+
+		if (name === "getClassName") {
+			message.className = GetClassNameLiteral(key.properties[1]);
+		} else if (name === "M") {
+			message.fields = TraverseFields(key.properties[1], importedIds);
+		}
+	}
+
+	return message;
+}
+
 function TraverseFields(ast, importedIds) {
 	const fields = [];
 	let selfProtoIdentifier = null;
@@ -1019,7 +1248,11 @@ function TraverseFields(ast, importedIds) {
 								field.flag = "repeated";
 							}
 						} else if (fieldProp.key.name === "d") {
-							field.default = EvaluateConstant(fieldProp);
+							if (fieldProp.value.type === Syntax.MemberExpression) {
+								// TODO: Support default fields expressions
+							} else {
+								field.default = EvaluateConstant(fieldProp);
+							}
 						} else if (fieldProp.key.name === "c") {
 							if (fieldProp.value.type === Syntax.Identifier) {
 								// Recursive messages
