@@ -1872,6 +1872,7 @@ https://partner.steamgames.com/creatorhome/ajaxsavelinks
 https://partner.steamgames.com/dashboard/?requestedPrimaryPublisher=${}
 https://partner.steamgames.com/doc/${slug}?language=${value}&beta=${beta}
 https://partner.steamgames.com/doc/${url_slug}?beta=1&language=${}
+https://partner.steamgames.com/doc/${url_slug}?beta=1&language=${}&version=${}
 https://partner.steamgames.com/doc/${url_slug}?language=${}
 https://partner.steamgames.com/doc/marketing/event_tools
 https://partner.steamgames.com/doc/marketing/event_tools/event_examples
