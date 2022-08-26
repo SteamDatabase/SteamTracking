@@ -435,19 +435,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				file_put_contents( $File, $Data );
 
-				/*
-				if( $OriginalFile === 'Scripts/WebUI/steammobile_app.js' || $OriginalFile === 'Scripts/WebUI/steammobile_chat.js' )
-				{
-					$this->SyncProtobufs = true;
-
-					system(
-						'node friendsuiprotodumper.js ' . escapeshellarg( $OriginalFile ) .
-						' --Oenum=Structs/enums.steamd --Oproto=../ValveProtobufs/webui/friends_mobile.proto' .
-						' --filter-known-protos'
-					);
-				}
-				*/
-				
 				if( str_ends_with( $File, '.js' ) )
 				{
 					if( str_ends_with( $File, '/manifest.js' ) )
