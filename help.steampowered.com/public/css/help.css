@@ -321,7 +321,7 @@ body.v6 {
 }
 
 .page_body_ctn.login {
-	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( '../../../shared/public/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
 	padding: 0px 8px;
 	width: 100%;
 	height: 100vh;
@@ -329,7 +329,7 @@ body.v6 {
 
 @media screen and (max-width: 700px){
 	.page_body_ctn.login {
-		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( '../../../shared/public/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
 		padding: 0px 8px;
 		width: 100%;
 		height: 100vh;
