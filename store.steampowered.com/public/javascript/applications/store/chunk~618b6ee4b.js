@@ -28995,68 +28995,90 @@
           );
         });
       }
-      function Co(e, t, n, a, r, o, s, l, c, u, m, p, _, g, h, v = 0, f = !1) {
+      function Co(
+        e,
+        t,
+        n,
+        a,
+        r,
+        o,
+        s,
+        l,
+        c,
+        u,
+        m,
+        p,
+        _,
+        g,
+        h,
+        v = 0,
+        f = !1,
+        C = null
+      ) {
         return (0, w.mG)(this, void 0, void 0, function* () {
-          const C = _o(e, t, n);
-          if (C.enable_faceted_browsing && f) {
+          const b = _o(e, t, n);
+          if (
+            (b.enable_faceted_browsing && o.SetFromURLParam(C),
+            b.enable_faceted_browsing && f)
+          ) {
             yield F.jg.Get().HintLoad();
-            let e = (0, H.ow)(C.facets);
+            let e = (0, H.ow)(b.facets);
             (e = e.filter((e) => a.ShouldShowCapsule(e))),
               (e = (0, V.K)(e, r)),
               o.SetPotentiallyVisibleCapsules(e);
           }
           if (
-            "items" === C.section_type &&
-            "sale_tabhub" != C.smart_section_type
+            "items" === b.section_type &&
+            "sale_tabhub" != b.smart_section_type
           ) {
             let m;
             yield F.jg.Get().HintLoad();
             let p = !1;
-            if (C.smart_section) {
+            if (b.smart_section) {
               const t = yield fo(
                 n,
                 a,
                 e,
-                C,
+                b,
                 (function (e) {
                   return (D.De.IN_CLIENT ? "library-" : (0, D.Zv)() + "-") + e;
                 })(s),
                 o,
-                C.prioritize_discounts
+                b.prioritize_discounts
               );
               (m = t.capsules),
-                (p = t.bMoreRemaining && m.length < C.smart_section_max_apps),
-                C.enable_faceted_browsing ||
-                  (m = po(e, C, n, a, "capsules", m, mo)),
-                C.enable_faceted_browsing &&
+                (p = t.bMoreRemaining && m.length < b.smart_section_max_apps),
+                b.enable_faceted_browsing ||
+                  (m = po(e, b, n, a, "capsules", m, mo)),
+                b.enable_faceted_browsing &&
                   (o.SetFacetCounts(t.facetCounts),
                   o.SetSolrMatchCount(t.nMatchCount));
-            } else (m = C.capsules), (m = po(e, C, n, a, "capsules", m, mo));
+            } else (m = b.capsules), (m = po(e, b, n, a, "capsules", m, mo));
             e.BUsesContentHubForItemSource() ||
               (m = m.filter((e) => a.ShouldShowCapsule(e))),
               (m = (0, V.K)(m, r)),
-              C.enable_faceted_browsing &&
-                (m = C.smart_section
+              b.enable_faceted_browsing &&
+                (m = b.smart_section
                   ? o.ApplyOptInFilters(m)
                   : o.FilterCapsules(m));
             const f = (0, Hr.F2)(
-              C.unique_id,
+              b.unique_id,
               null == a ? void 0 : a.GetActiveTabUniqueID()
             );
             f && Vr(f, m, n);
-            let b = !1;
-            const y = Qr(C, v),
-              I = wr(C, y);
+            let C = !1;
+            const y = Qr(b, v),
+              I = wr(b, y);
             {
               let t = m.length;
               const a = !n && "store" === (0, D.Zv)(),
-                r = (y > 0 && a) || (0, H.j)(e, C);
-              if (!C.show_as_carousel && r) {
+                r = (y > 0 && a) || (0, H.j)(e, b);
+              if (!b.show_as_carousel && r) {
                 const e = 4,
-                  n = wr(C, y) + e;
-                t > n + 4 && ((t = n), (b = !0));
+                  n = wr(b, y) + e;
+                t > n + 4 && ((t = n), (C = !0));
               }
-              const o = (0, i.kd)(C);
+              const o = (0, i.kd)(b);
               if (o > 0) {
                 const e = 5,
                   n = 1.1,
@@ -29065,77 +29087,77 @@
               }
               m.length > t && (m = m.slice(0, t));
             }
-            const w = (0, S.kl)(C);
+            const w = (0, S.kl)(b);
             yield (0, E.qr)(m, d.bk, w);
             let T,
               L = new Array();
-            if (C.enable_faceted_browsing) {
-              C.smart_section || (m = o.ApplyPriceFilters(m)),
+            if (b.enable_faceted_browsing) {
+              b.smart_section || (m = o.ApplyPriceFilters(m)),
                 (m = yield o.ApplyUserPreferenceFilters(m, w, L));
-              const e = b || p;
+              const e = C || p;
               o.UpdateMatchCount(e, m.length);
             }
             T = yield (0, E.A$)(m, w, L, (t) => Yr(t, e) || Xr(t, e));
             const A = L.length;
-            if (C.prioritize_discounts) {
+            if (b.prioritize_discounts) {
               const e = [],
                 t = [];
               for (const n of T) (0, E.kD)(n) ? e.push(n) : t.push(n);
               T = e.concat(t);
             }
             if (
-              (C.smart_section || C.sale_tag_filter) &&
-              !C.enable_faceted_browsing
+              (b.smart_section || b.sale_tag_filter) &&
+              !b.enable_faceted_browsing
             ) {
-              l.MarkAllAppsNotVisible(C.unique_id), T.sort(l.SortKey.bind(l));
-              const e = (0, S.ev)(C, v) || T.length;
+              l.MarkAllAppsNotVisible(b.unique_id), T.sort(l.SortKey.bind(l));
+              const e = (0, S.ev)(b, v) || T.length;
               T.slice(0, e).forEach(l.BMarkAppVisibile.bind(l, t.unique_id));
             }
             {
-              const e = (0, i.kd)(C);
+              const e = (0, i.kd)(b);
               e > 0 && e < T.length && (T = T.slice(0, e));
             }
             const N = T.length <= I && p;
             c(A),
               u(T),
-              _(b),
+              _(C),
               g(!0),
               h(N),
-              C.dynamic_reveal &&
-                !C.smart_section_type &&
-                (zr.Get().AddSaleCapsules(C.unique_id, C.capsules),
+              b.dynamic_reveal &&
+                !b.smart_section_type &&
+                (zr.Get().AddSaleCapsules(b.unique_id, b.capsules),
                 zr
                   .Get()
                   .IncrementalSectionNeedingReveal(e.clanSteamID, e.GID, n));
-          } else if ("events" === C.section_type) {
+          } else if ("events" === b.section_type) {
             let t;
             if (
-              !C.smart_section ||
-              ("recent_events" !== C.smart_section_type &&
-                "recent_tagged_events" !== C.smart_section_type)
+              !b.smart_section ||
+              ("recent_events" !== b.smart_section_type &&
+                "recent_tagged_events" !== b.smart_section_type)
             )
               t =
                 yield Gt.j1.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                   null,
-                  C.events
+                  b.events
                     .filter((e) => Boolean(e))
                     .map((e) => e.announcement_gid)
                 );
             else {
               const n =
-                "recent_events" === C.smart_section_type
+                "recent_events" === b.smart_section_type
                   ? yield ho
                       .Get()
                       .GetRecentEventsForSalesPage(
                         e,
-                        C,
+                        b,
                         null == a ? void 0 : a.GetTab()
                       )
                   : yield ho
                       .Get()
                       .GetRecentTaggedEventsForSalesPage(
                         e,
-                        C,
+                        b,
                         null == a ? void 0 : a.GetTab()
                       );
               t =
@@ -29145,7 +29167,7 @@
                 );
             }
             let r = t.map((e) => e.GID);
-            (r = po(e, C, n, a, "events2", r, (e, t) => (0, At.LQ)(t))),
+            (r = po(e, b, n, a, "events2", r, (e, t) => (0, At.LQ)(t))),
               (t = r.map((e) => Gt.j1.GetClanEventModel(e)));
             let o = t.filter(
               (t) =>
@@ -29159,30 +29181,30 @@
             let i = t.map((e) => ({ type: "game", id: e.appid }));
             yield F.jg.Get().HintLoad();
             const s = [];
-            i = yield (0, E.A$)(i, (0, S.kl)(C), s);
+            i = yield (0, E.A$)(i, (0, S.kl)(b), s);
             const l = new Set(s.map((e) => e.id));
             (o = o.filter((e) => !l.has(e.appid))),
               m(o),
               g(!0),
-              !C.dynamic_reveal ||
-                (C.smart_section_type &&
-                  "recent_tagged_events" !== C.smart_section_type) ||
-                (zr.Get().AddEvents(C.unique_id, r),
+              !b.dynamic_reveal ||
+                (b.smart_section_type &&
+                  "recent_tagged_events" !== b.smart_section_type) ||
+                (zr.Get().AddEvents(b.unique_id, r),
                 zr
                   .Get()
                   .IncrementalSectionNeedingReveal(e.clanSteamID, e.GID, n));
           } else if (
-            "links" === C.section_type ||
-            "sale_tabhub" === C.smart_section_type
+            "links" === b.section_type ||
+            "sale_tabhub" === b.smart_section_type
           ) {
-            let t = C.links;
-            if ("sale_tabhub" === C.smart_section_type) {
+            let t = b.links;
+            if ("sale_tabhub" === b.smart_section_type) {
               (t = (yield j.Get().GetSaleTags()).map((e) => ({
                 url: e.url,
                 localized_link_capsule: void 0,
                 materialized_link_capsule: e.square,
               }))),
-                (t = po(e, C, n, a, "links", t, (e, t) => (0, At.LQ)(t)));
+                (t = po(e, b, n, a, "links", t, (e, t) => (0, At.LQ)(t)));
             }
             p(t), g(!0);
           }
@@ -29251,23 +29273,25 @@
               return () => o();
             })(e.section, l, N, B, i),
           [l, i, N, e.section]
-        ),
-          (0, a.useEffect)(() => {
-            const t = e.section.enable_faceted_browsing && !u;
-            Co(n, e.section, i, l, c, P, d, r, A, B, R, M, C, m, T, p, t);
-          }, [
-            l,
-            r,
-            u,
-            i,
-            n,
-            P,
-            c,
-            p,
-            d,
-            e.section,
-            e.section.enable_faceted_browsing,
-          ]),
+        );
+        const U = (0, et.ks)(e.history, "facets" + e.section.unique_id);
+        (0, a.useEffect)(() => {
+          const t = e.section.enable_faceted_browsing && !u;
+          Co(n, e.section, i, l, c, P, d, r, A, B, R, M, C, m, T, p, t, U);
+        }, [
+          l,
+          r,
+          u,
+          i,
+          n,
+          P,
+          c,
+          p,
+          d,
+          e.section,
+          e.section.enable_faceted_browsing,
+          U,
+        ]),
           (0, a.useEffect)(
             () => () => {
               e.appVisibilityTracker.MarkAllAppsNotVisible(e.section.unique_id),
@@ -29280,10 +29304,10 @@
               e.section.unique_id,
             ]
           );
-        const U = () => {
-            D || (T(!0), V());
+        const V = () => {
+            D || (T(!0), j());
           },
-          V = () =>
+          j = () =>
             (0, w.mG)(this, void 0, void 0, function* () {
               const e = p + 4,
                 t =
@@ -29292,34 +29316,34 @@
                     (null == G ? void 0 : G.length) || 0,
                     (null == N ? void 0 : N.length) || 0
                   ) + 1;
-              ce._.Get().AddInteraction(j.unique_id, t), h(e);
+              ce._.Get().AddInteraction(W.unique_id, t), h(e);
             }),
-          j = _o(n, e.section, i, !0),
-          W = (0, g.V)(j, n).background;
-        let z = null;
+          W = _o(n, e.section, i, !0),
+          z = (0, g.V)(W, n).background;
+        let Z = null;
         if (u) {
           const e = {
               saleEvent: n,
-              section: j,
-              capsules: Kr(j, N),
+              section: W,
+              capsules: Kr(W, N),
               links: G,
-              events: Jr(j, x),
+              events: Jr(W, x),
               language: o,
               nMaxCapsulesPerRow: O,
               bScreenIsWide: F,
               nShowAdditionalRows: p - 1,
             },
-            t = Qr(j, e.nShowAdditionalRows),
-            r = qr((0, S.tT)(j), t, e.capsules.length);
+            t = Qr(W, e.nShowAdditionalRows),
+            r = qr((0, S.tT)(W), t, e.capsules.length);
           r < t && (e.nShowAdditionalRows -= t - r);
           let { content: s, bAdditionalContent: l } = (0, S.Rs)(e);
-          if (((z = s), (z && l) || E)) {
-            const t = Qr(j, p),
-              n = qr((0, S.tT)(j), t, e.capsules.length) < t;
-            z = a.createElement(
+          if (((Z = s), (Z && l) || E)) {
+            const t = Qr(W, p),
+              n = qr((0, S.tT)(W), t, e.capsules.length) < t;
+            Z = a.createElement(
               a.Fragment,
               null,
-              z,
+              Z,
               a.createElement(
                 "div",
                 {
@@ -29337,7 +29361,7 @@
                       a.createElement(
                         $.wl,
                         {
-                          onClick: U,
+                          onClick: V,
                           className: (0, I.Z)(
                             lo().ShowContentsButton,
                             "ShowContentsButton"
@@ -29348,9 +29372,9 @@
               )
             );
           }
-          if (!z) {
-            if (!i && !j.enable_faceted_browsing) return null;
-            z = j.enable_faceted_browsing
+          if (!Z) {
+            if (!i && !W.enable_faceted_browsing) return null;
+            Z = W.enable_faceted_browsing
               ? a.createElement(
                   "div",
                   { className: v().preview_placeholder_section },
@@ -29360,14 +29384,14 @@
                   "div",
                   { className: v().preview_placeholder_section },
                   (0, k.Xx)(
-                    j.smart_section
+                    W.smart_section
                       ? "#Sale_SmartPlaceHolder"
                       : "#Sale_PlaceHolder"
                   )
                 );
           }
         } else
-          z = j.enable_faceted_browsing
+          Z = W.enable_faceted_browsing
             ? a.createElement(
                 "div",
                 { className: lo().FacetedBrowseLoadThrobber },
@@ -29379,7 +29403,7 @@
                     ? void 0
                     : t.capsules_per_row_array,
               });
-        const { feature: Z, depth: Y } = (function (e, t, n) {
+        const { feature: Y, depth: q } = (function (e, t, n) {
           if (e.enable_faceted_browsing) {
             const e = null == n ? void 0 : n.GetSelectedOptionsCount();
             if (e) return { feature: "salefacetbrowse", depth: e };
@@ -29402,13 +29426,13 @@
           return {
             feature: !t || t.BIsDefaultTab() ? "salesection" : "saletabsection",
           };
-        })(j, l, P);
+        })(W, l, P);
         return a.createElement(
           b.ZP,
-          { feature: Z, depth: Y },
-          Boolean(j.dynamic_reveal && i) &&
+          { feature: Y, depth: q },
+          Boolean(W.dynamic_reveal && i) &&
             a.createElement(co, {
-              section: j,
+              section: W,
               fnGetCapsules: () => N,
               fnSetCapsules: B,
               fnGetEvents: () => x,
@@ -29429,16 +29453,16 @@
                     Qr(e, 0)
                   );
                   return 250 * Math.max(1, t);
-                })(j) + "px",
+                })(W) + "px",
               className: (0, I.Z)({
                 [v().SaleSection]: !0,
-                [v().CarouselDisplay]: j.show_as_carousel,
+                [v().CarouselDisplay]: W.show_as_carousel,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
               }),
               rootMargin: s.HG,
-              style: (0, g.V)(j, n),
-              onRender: () => ce._.Get().AddInteraction(j.unique_id, 0),
+              style: (0, g.V)(W, n),
+              onRender: () => ce._.Get().AddInteraction(W.unique_id, 0),
             },
             a.createElement(
               "div",
@@ -29447,37 +29471,37 @@
                 X.AO,
                 Object.assign({}, e, { nHiddenCapsules: L })
               ),
-              a.createElement(Lr, { event: n, section: j }),
+              a.createElement(Lr, { event: n, section: W }),
               a.createElement($r, {
                 event: n,
-                section: j,
+                section: W,
                 activeTab: l,
                 nSaleDayIndex: c,
                 capsules: N,
                 facetFilterState: P,
               })
             ),
-            j.enable_faceted_browsing
+            W.enable_faceted_browsing
               ? a.createElement(
                   H.mR,
                   {
                     language: o,
-                    section: j,
+                    section: W,
                     facetFilterState: P,
-                    nMaxFacetValues: j.max_facet_values_for_facet || 100,
-                    background: W,
+                    nMaxFacetValues: W.max_facet_values_for_facet || 100,
+                    background: z,
                     fnOnUpdateFilter: () => {
                       (0, et.i9)(
                         e.history,
-                        "facets" + j.unique_id,
+                        "facets" + W.unique_id,
                         P.GetURLParam()
                       );
                     },
                   },
-                  z
+                  Z
                 )
-              : a.createElement(a.Fragment, null, z),
-            a.createElement(lt.r, { section: j })
+              : a.createElement(a.Fragment, null, Z),
+            a.createElement(lt.r, { section: W })
           )
         );
       }
