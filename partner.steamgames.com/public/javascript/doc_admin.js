@@ -52,8 +52,13 @@ function updateArticleSummary( articleSummary ) {
 			var $link = $J( '<a></a>' );
 			$link.attr( 'href', 'https://partner.steamgames.com/doc/' + articleSummary.url_slug + "?language=" + version[ 'language' ] );
 			$link.text( g_rgLanguageNames[ version[ 'language' ] ] );
+
+			var $linkVersion = $J( '<a></a>' );
+			$linkVersion.attr( 'href', 'https://partner.steamgames.com/doc/' + articleSummary.url_slug + "?beta=1&language=" + version[ 'language' ] + "&version=" + version['version'] );
+			$linkVersion.text( version[ 'version' ] );
+
 			$row.append( $J( '<td></td>' ).append( $link ) );
-			$row.append( $J( '<td></td>' ).text( version[ 'version' ] ) );
+			$row.append( $J( '<td></td>' ).append( $linkVersion) );
 			$row.append( $J( '<td></td>' ).text( new Date( version[ 'timestamp' ] * 1000 ).toLocaleDateString( lang, dateFormat ) ) );
 			$row.append( $J( '<td></td>' ).append( $J( '<a></a>' ).attr( 'href', version[ 'editor_url' ] ).text( version[ 'editor_name' ] ) ) );
 			$liveVersions.append( $row );

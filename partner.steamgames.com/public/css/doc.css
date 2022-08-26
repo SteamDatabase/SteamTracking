@@ -92,6 +92,10 @@ td {
 	border-color: #ca5029;
 }
 
+.adminControlsVersion {
+	font-size: 14px;
+}
+
 .AdminPageContent {
 	padding: 0 0 113px;
 	margin: 0;
