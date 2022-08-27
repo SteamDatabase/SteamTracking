@@ -256,6 +256,7 @@ function OutputMessages(messages, stream = process.stdout) {
 		stream.write(`message ${message.className} {\n`);
 
 		const seenFields = new Set();
+		const seenFieldsNames = new Set();
 
 		for (const field of message.fields) {
 			if (seenFields.has(field.id) && field.type === "UNKNOWN") {
@@ -267,9 +268,12 @@ function OutputMessages(messages, stream = process.stdout) {
 
 			if (seenFields.has(field.id) || field.type === "UNKNOWN") {
 				stream.write("//");
+			} else if (seenFieldsNames.has(field.name)) {
+				field.name += `__field_${field.id}`;
 			}
 
 			seenFields.add(field.id);
+			seenFieldsNames.add(field.name);
 
 			stream.write(`${field.flag} ${field.type} ${field.name} = ${field.id}`);
 
