@@ -949,6 +949,7 @@
     "WriteReview_Dialog_AddReview_Header": "Would you like to post a review?",
     "WriteReview_Dialog_ReviewInstructions_Link": "Rules and Guidelines",
     "WriteReview_Dialog_ReviewInstructions": "Please describe what you liked or disliked about this product and whether you recommend it to others. Please remember to be polite and follow the %1$s. A description is required to post your recommendation.",
+    "WriteReview_Dialog_SteamChinaDisclaimer": "By posting this review, you agree that the location where you wrote this review will be shared with other users in Steam China.",
     "WriteReview_Dialog_AllowComments": "Allow comments",
     "WriteReview_Dialog_FreeDisclaimer": "Check this box if you received this product for free",
     "WriteReview_Dialog_FreeDisclaimer_Tooltip": "Check this box if you were given this product for free. Will show Product received for free alongside your review. If you received additional compensation for the review of this game, you must disclose that in the text of your review.",

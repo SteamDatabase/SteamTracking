@@ -10886,7 +10886,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1661366405),
+          c = parseInt(1661544391),
           u = c && Jo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, lo.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -25520,9 +25520,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Aug 24 2022 : 11:40:05",
-              BUILD_TIME_UTC: "Aug 24 2022 : 18:40:05",
-              BUILD_RTIME_UTC: 1661366405,
+              BUILD_TIME_LOCAL: "Aug 26 2022 : 13:06:31",
+              BUILD_TIME_UTC: "Aug 26 2022 : 20:06:31",
+              BUILD_RTIME_UTC: 1661544391,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -30813,7 +30813,7 @@
                   .GetControllers()
                   .find((t) => t.nControllerIndex == e.controllerIndex);
           return null != r &&
-            (0, oh.hE)(r.eControllerType) &&
+            (0, oh.l5)(r.eControllerType) &&
             null !=
               (null ===
                 (t =
@@ -30848,7 +30848,7 @@
             ce.tH
               .Get()
               .GetControllers()
-              .find((e) => 38 == e.eControllerType);
+              .find((e) => (0, oh.DA)(e.eControllerType));
           return a.createElement(
             i.uT,
             null,

@@ -4204,7 +4204,7 @@
     "ControllerBinding_EdgeBindingRadiusFlickStick": "Command Radius",
     "ControllerBinding_EdgeBindingRadiusFlickStick_Description": "Moving the Joystick past this radius will trigger the 'On-Flick Command' (assigned on the Joystick settings menu).",
     "ControllerBinding_SensitivityFlickStick": "Sensitivity (Pixels Per Revolution)",
-    "ControllerBinding_SensitivityFlickStick_Description": "One full 360° 'Sweep' on the FlickStick will result in %1$spx horizontal mouse movement. Tuning Tip: perform a 360° degree sweep in game. If your aim overshoots your starting direction, decrease this value. If you undershoot, increase it.",
+    "ControllerBinding_SensitivityFlickStick_Description": "One full 360° 'Sweep' on the FlickStick will result in %1$spx of horizontal mouse movement. Tuning Tip: perform a 360° degree sweep in game. If your aim overshoots your starting direction, decrease this value. If you undershoot, increase it. If you change your in-game sensitivity, you will have to re-tune this value.",
     "ControllerBinding_SensitivitySweepFlickStick": "Sweep Sensitivity Scale",
     "ControllerBinding_SensitivitySweepFlickStick_Description": "Multiplier for 'Sweeping' the FlickStick around the outer edge. Tweak this only after you have tweaked Pixels Per Revolution.",
     "ControllerBinding_SmoothingFlickStick": "Smoothing",

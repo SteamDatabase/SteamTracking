@@ -62542,6 +62542,9 @@ div.NarrowRightPanel
 .writereview_DescribeGame_2ZLbG {
   margin: 5px 0 10px 0;
 }
+.writereview_DescribeGame_2ZLbG .writereview_SteamChinaDisclaimer_1rTQm {
+  margin-top: 5px;
+}
 .writereview_ReviewTextArea_392iE {
   width: calc(100% - 6px);
   min-height: 100px;

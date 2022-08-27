@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-{
-{
 __stubs
 __TEXT
 __stub_helper
@@ -3829,6 +3827,7 @@ s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
 0
+#&
 j
 j
 j
@@ -3865,10 +3864,11 @@ j
 p
 0
 j
-B%
 j
 j
 j
+u%
+4%
 0
 0
 AT=
@@ -3935,13 +3935,11 @@ M9e
 ?
 @
 @
-7
-
-Z
 
 
 
 d
+#
 A+M
 
 
@@ -3989,6 +3987,7 @@ d
 &
 &
 d
+d
 0
 A+4$A+u
 ~m=
@@ -3996,6 +3995,7 @@ A+4$A+u
 =
 =
 @
+G
 j
 j
 j
