@@ -1,5 +1,5 @@
 import { join as pathJoin } from "path";
-import { readFile } from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
 import { createWriteStream } from "fs";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
@@ -141,7 +141,12 @@ const mergedMessages = MergeMessages(allMessages);
 
 console.log("Found", mergedMessages.size, "messages");
 
-{
+await OutputSplitServices(allServices, mergedMessages);
+await OutputCommon(mergedMessages);
+await OutputCommonBase();
+
+// Output split protos
+async function OutputSplitServices(allServices, mergedMessages) {
 	const splitServices = SplitServices(allServices);
 	MarkMethodDependants(splitServices, mergedMessages);
 	const groupedServices = GroupServices(splitServices);
@@ -153,9 +158,6 @@ console.log("Found", mergedMessages.size, "messages");
 
 		const imports = new Set();
 		const consumedMessages = new Map();
-
-		// Always include unified base, required for `description` attribute and NoResponse message
-		imports.add("steammessages_unified_base.steamclient.proto");
 
 		for (const [, message] of mergedMessages) {
 			const dependencyCount = GetMatchingDependencyCount(services, message.dependants);
@@ -171,7 +173,17 @@ console.log("Found", mergedMessages.size, "messages");
 
 				message.consumed = true;
 				consumedMessages.set(message.className, message);
-			} else if (message.className !== NoResponse) {
+
+				// If we write a description, it needs base include
+				for (const field of message.fields) {
+					if (Object.hasOwn(field, "description")) {
+						imports.add("common_base.proto");
+						break;
+					}
+				}
+			} else if (message.className === NoResponse || message.className === NotImplemented) {
+				imports.add("common_base.proto");
+			} else {
 				imports.add("common.proto");
 			}
 		}
@@ -180,13 +192,18 @@ console.log("Found", mergedMessages.size, "messages");
 	}
 }
 
-{
-	const imports = new Set(["steammessages_unified_base.steamclient.proto"]);
+// Output common protos which were not split into services or are used by multiple services
+async function OutputCommon(mergedMessages) {
+	const imports = new Set(["common_base.proto"]);
 
 	const commonMessages = new Map();
 
 	for (const [, message] of mergedMessages) {
-		if (!message.consumed && message.className !== NoResponse) {
+		if (message.className === NoResponse || message.className === NotImplemented) {
+			continue;
+		}
+
+		if (!message.consumed) {
 			commonMessages.set(message.className, message);
 		}
 	}
@@ -194,6 +211,40 @@ console.log("Found", mergedMessages.size, "messages");
 	console.log("Found", commonMessages.size, "common messages");
 
 	await OutputToFile(pathJoin(outputPath, "common.proto"), imports, [], commonMessages);
+}
+
+// Output common_base
+async function OutputCommonBase() {
+	const base = `import "google/protobuf/descriptor.proto";
+
+extend .google.protobuf.FieldOptions {
+	optional string description = 50000;
+}
+
+extend .google.protobuf.ServiceOptions {
+	optional string service_description = 50000;
+}
+
+extend .google.protobuf.MethodOptions {
+	optional string method_description = 50000;
+}
+
+extend .google.protobuf.EnumOptions {
+	optional string enum_description = 50000;
+}
+
+extend .google.protobuf.EnumValueOptions {
+	optional string enum_value_description = 50000;
+}
+
+message NoResponse {
+}
+
+message NotImplemented {
+}
+`;
+
+	await writeFile(pathJoin(outputPath, "common_base.proto"), base);
 }
 
 {
@@ -246,7 +297,7 @@ function OutputImports(imports, stream = process.stdout) {
 
 function OutputMessages(messages, stream = process.stdout) {
 	for (const [, message] of messages) {
-		if (!message.consumed && message.dependants.size > 0 && message.className !== NotImplemented) {
+		if (!message.consumed && message.dependants.size > 0) {
 			const dependants = [...message.dependants.values()];
 			dependants.sort();
 
@@ -284,7 +335,7 @@ function OutputMessages(messages, stream = process.stdout) {
 			}
 
 			if (Object.hasOwn(field, "description")) {
-				options.push(`(description) = "${field.description}"`);
+				options.push(`(.description) = "${field.description}"`);
 			}
 
 			if (options.length > 0) {
