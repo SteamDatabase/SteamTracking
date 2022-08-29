@@ -564,25 +564,25 @@ function MergeMessages(allMessages) {
 }
 
 function MergeEnums(allEnums) {
-	const keyedMessages = new Map();
+	const keyedEnums = new Map();
 
-	for (const message of allEnums) {
-		const existingMessage = keyedMessages.get(message.name);
+	for (const { name, values } of allEnums) {
+		const existingEnum = keyedEnums.get(name);
 
-		if (existingMessage) {
-			existingMessage.push(message);
+		if (existingEnum) {
+			existingEnum.push(values);
 		} else {
-			keyedMessages.set(message.name, [message]);
+			keyedEnums.set(name, [values]);
 		}
 	}
 
-	const cleanMessages = new Map();
+	const cleanEnums = new Map();
 
-	for (const [name, messages] of keyedMessages) {
-		cleanMessages.set(name, messages[0]); // TODO: Merge
+	for (const [name, values] of keyedEnums) {
+		cleanEnums.set(name, values[0]); // TODO: Merge
 	}
 
-	return SortMapByKey(cleanMessages);
+	return SortMapByKey(cleanEnums);
 }
 
 function FixTypesSameModule(services, messages) {
