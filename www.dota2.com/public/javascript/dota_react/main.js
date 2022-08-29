@@ -32663,9 +32663,9 @@
               );
             },
             j = function (e, t) {
-              return e.hasAutograph && !t.hasAutograph
+              return e.hasUploadedAutograph && !t.hasUploadedAutograph
                 ? -1
-                : (!e.hasAutograph && t.hasAutograph) ||
+                : (!e.hasUploadedAutograph && t.hasUploadedAutograph) ||
                   (null == e ? void 0 : e.name.toLowerCase()) >
                     (null == t ? void 0 : t.name.toLowerCase())
                 ? 1
@@ -32954,8 +32954,18 @@
                               a++
                             )
                               n[a].file && (r = !0);
-                            G[t].hasAutograph = r;
+                            G[t].hasUploadedAutograph = r;
                           }),
+                          (G = G.filter(function (e) {
+                            var t;
+                            return (
+                              (null ===
+                                (t = null == e ? void 0 : e.autographs) ||
+                              void 0 === t
+                                ? void 0
+                                : t.length) >= 4
+                            );
+                          })),
                           G.sort(j),
                           G.map(function (e, t) {
                             return o.createElement(
@@ -33015,7 +33025,7 @@
           {
             imageName: "photograph-signature.jpg",
             locIdentifier: "photograph",
-            bullets: 1,
+            bullets: 3,
           },
           {
             imageName: "transfer-signature.jpg",
