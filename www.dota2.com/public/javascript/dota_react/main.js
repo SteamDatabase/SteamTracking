@@ -32426,7 +32426,7 @@
               return (
                 t.length &&
                   t.forEach(function (l) {
-                    G(l.name) || n.push(l.name);
+                    M(l.name) || n.push(l.name);
                     var c = new FileReader();
                     e.push(c),
                       (c.onerror = function () {
@@ -32442,7 +32442,7 @@
                             o++,
                               (1024 === c.width && 512 === c.height) ||
                                 r.push(l.name),
-                              M(c) && i.push(l.name),
+                              k(c) && i.push(l.name),
                               o === t.length && (s(n), d(r), _(a), v(i), S(!0));
                           }),
                           (c.onerror = function () {
@@ -32464,11 +32464,12 @@
             [t]
           );
           var A,
-            G = function (e) {
+            G,
+            M = function (e) {
               var t = e.substr(0, e.lastIndexOf(".")) || e;
               return "string" == typeof t && /^-?\d+$/.test(t);
             },
-            M = function (e) {
+            k = function (e) {
               var t = document.querySelector("canvas"),
                 n = t.getContext("2d");
               return (
@@ -32478,12 +32479,12 @@
                 n.getImageData(0, 0, t.width, t.height).data[3] > 0
               );
             },
-            k = "Image files must be named <friend id>.png",
-            O = "Image dimensions must be 1024x512 pixels",
-            P = "Image must be a compatible .png file",
-            F = "Image must have a transparent background",
-            U = [k, O, P, F],
-            x =
+            O = "Image files must be named <friend id>.png",
+            P = "Image dimensions must be 1024x512 pixels",
+            F = "Image must be a compatible .png file",
+            U = "Image must have a transparent background",
+            x = [O, P, F, U],
+            H =
               ((A = []),
               i.length > 0 &&
                 (t.length > 1 &&
@@ -32499,7 +32500,7 @@
                   o.createElement(
                     "div",
                     { key: "FileNameWarning" },
-                    o.createElement("b", null, k),
+                    o.createElement("b", null, O),
                     " "
                   ),
                   o.createElement("br", { key: "FileNameWarningBreak" })
@@ -32518,7 +32519,7 @@
                   o.createElement(
                     "div",
                     { key: "FileDimensionsWarning" },
-                    o.createElement("b", null, O),
+                    o.createElement("b", null, P),
                     " "
                   ),
                   o.createElement("br", { key: "FileDimensionsWarningBreak" })
@@ -32537,7 +32538,7 @@
                   o.createElement(
                     "div",
                     { key: "FileLoadingWarning" },
-                    o.createElement("b", null, P),
+                    o.createElement("b", null, F),
                     " "
                   ),
                   o.createElement("br", { key: "FileLoadingWarningBreak" })
@@ -32556,14 +32557,14 @@
                   o.createElement(
                     "div",
                     { key: "FileTransparencyWarning" },
-                    o.createElement("b", null, F),
+                    o.createElement("b", null, U),
                     " "
                   ),
                   o.createElement("br", { key: "FileTransparencyWarningBreak" })
                 )),
               A.pop(),
               A),
-            H = (function () {
+            z = (function () {
               if (0 === D.length) return null;
               for (
                 var e = [
@@ -32590,7 +32591,7 @@
               }
               return e;
             })(),
-            z = function (e) {
+            W = function (e) {
               var t,
                 n = e.proName,
                 r = e.accountId,
@@ -32628,7 +32629,19 @@
                   o.createElement(
                     "label",
                     null,
-                    o.createElement("input", { type: "checkbox" }),
+                    o.createElement("input", {
+                      type: "checkbox",
+                      value: r,
+                      onChange: function (e) {
+                        return (function (e) {
+                          Array.from(
+                            document.querySelectorAll("input:checked")
+                          ).forEach(function (t) {
+                            e.target.value !== t.value && (t.checked = !1);
+                          });
+                        })(e);
+                      },
+                    }),
                     o.createElement("img", {
                       src: t,
                       className: s
@@ -32648,6 +32661,18 @@
                   r ? "(" + r + ")" : "(missing account id)"
                 )
               );
+            },
+            j = function (e, t) {
+              return e.hasAutograph && !t.hasAutograph
+                ? -1
+                : (!e.hasAutograph && t.hasAutograph) ||
+                  (null == e ? void 0 : e.name.toLowerCase()) >
+                    (null == t ? void 0 : t.name.toLowerCase())
+                ? 1
+                : (null == e ? void 0 : e.name.toLowerCase()) <
+                  (null == t ? void 0 : t.name.toLowerCase())
+                ? -1
+                : 0;
             };
           return o.createElement(
             "div",
@@ -32722,7 +32747,7 @@
                         o.createElement(
                           "ul",
                           null,
-                          U.map(function (e, t) {
+                          x.map(function (e, t) {
                             return o.createElement(
                               "li",
                               { key: "specification-" + t },
@@ -32860,7 +32885,7 @@
                             "div",
                             null,
                             o.createElement("br", null),
-                            0 === x.length &&
+                            0 === H.length &&
                               o.createElement(
                                 "div",
                                 { className: So().FileInput },
@@ -32872,8 +32897,8 @@
                                     "international2020/icon_check.png",
                                 })
                               ),
-                            0 === x.length && o.createElement("br", null),
-                            x.length > 0 &&
+                            0 === H.length && o.createElement("br", null),
+                            H.length > 0 &&
                               o.createElement(
                                 "div",
                                 null,
@@ -32886,12 +32911,12 @@
                                 }),
                                 " "
                               ),
-                            x.length > 0 &&
+                            H.length > 0 &&
                               o.createElement(
                                 "div",
                                 { className: So().FileErrors },
                                 o.createElement("br", null),
-                                x
+                                H
                               )
                           ),
                         o.createElement(
@@ -32899,7 +32924,7 @@
                           null,
                           o.createElement("input", {
                             type:
-                              0 === t.length || x.length > 0 || !y
+                              0 === t.length || H.length > 0 || !y
                                 ? "hidden"
                                 : "submit",
                             value: "Upload Files",
@@ -32907,7 +32932,7 @@
                           })
                         )
                       ),
-                      o.createElement("div", null, H),
+                      o.createElement("div", null, z),
                       o.createElement("br", null),
                       o.createElement("div", { className: So().SmoothLine })
                     ),
@@ -32922,7 +32947,17 @@
                       "div",
                       null,
                       w && w.team_autographs
-                        ? w.team_autographs.map(function (e, t) {
+                        ? ((G = w.team_autographs).forEach(function (e, t) {
+                            for (
+                              var n = e.autographs, r = !1, a = 0;
+                              a < n.length;
+                              a++
+                            )
+                              n[a].file && (r = !0);
+                            G[t].hasAutograph = r;
+                          }),
+                          G.sort(j),
+                          G.map(function (e, t) {
                             return o.createElement(
                               "div",
                               { key: e.team_id + "Container" },
@@ -32943,7 +32978,7 @@
                                     r = e.account_id,
                                     a = e.file,
                                     i = e.timestamp;
-                                  return o.createElement(z, {
+                                  return o.createElement(W, {
                                     key: r,
                                     proName: n,
                                     accountId: r,
@@ -32954,7 +32989,7 @@
                                 })
                               )
                             );
-                          })
+                          }))
                         : o.createElement(
                             "div",
                             null,
