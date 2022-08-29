@@ -9928,7 +9928,8 @@
               );
         });
       function U(e) {
-        return n(57766)(`./icon_showcase_${e}.svg`);
+        const t = n(57766)(`./icon_showcase_${e}.svg`);
+        return null == t ? void 0 : t.default;
       }
       const V = (e) =>
         i.createElement(
