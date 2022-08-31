@@ -268,7 +268,7 @@
         xL: () => u,
       });
       var s = a(90666);
-      a(92398);
+      a(92398), a(41311);
       function r(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
@@ -373,7 +373,7 @@
         try {
           const a = new URL(t),
             s = new URL(e);
-          return a.origin + s.pathname + s.search + s.hash;
+          return a.href.replace(/\/$/, "") + s.pathname + s.search + s.hash;
         } catch (e) {
           return "";
         }
@@ -381,7 +381,7 @@
     },
     71034: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { MarketingMessageRoutes: () => G, default: () => O });
+      a.r(t), a.d(t, { MarketingMessageRoutes: () => $, default: () => V });
       var s = a(67294),
         r = a(9355),
         n = a(78587),
@@ -391,8 +391,11 @@
         c = a(26149),
         m = a(58114),
         u = a(39722),
-        _ = a(90666);
-      class p {
+        _ = a(90666),
+        p = a(32367),
+        d = a(14146);
+      a(990);
+      class g {
         constructor(e) {
           this.m_SteamInterface = e;
         }
@@ -400,21 +403,29 @@
           return (0, o.mG)(this, void 0, void 0, function* () {
             const e = m.gA.Init(u.Pe);
             e.Body().set_country_code(_.De.COUNTRY),
-              e.Body().set_elanguage((0, c.jM)(_.De.LANGUAGE));
+              e.Body().set_elanguage((0, c.jM)(_.De.LANGUAGE)),
+              (0, p.pA)(e),
+              (0, p.De)(e, g.sm_DefaultDataRequest);
             return (yield u.Bn.GetMarketingMessagesForUser(
               this.m_SteamInterface.GetServiceTransport(),
               e
             ))
               .Body()
-              .toObject().messages;
+              .messages();
           });
         }
       }
-      class d {
+      g.sm_DefaultDataRequest = {};
+      class h {
         constructor(e) {
-          this.m_message = e;
+          (this.m_message = e),
+            e.associated_item() &&
+              (this.m_item = new d.Z(
+                e.associated_item(),
+                g.sm_DefaultDataRequest
+              ));
           try {
-            const t = JSON.parse(e.template_vars_json);
+            const t = JSON.parse(e.template_vars_json());
             t.use_additional_fields &&
               (t.use_additional_fields = "true" === t.use_additional_fields),
               t.use_custom_legal_text &&
@@ -426,123 +437,155 @@
           } catch (e) {}
         }
         get id() {
-          return this.m_message.gid;
+          return this.m_message.gid();
         }
         GetTemplateType() {
-          return this.m_message.template_type;
+          return this.m_message.template_type();
         }
         GetTemplateVars() {
           return this.m_templateVars;
         }
+        get associated_item() {
+          return this.m_item;
+        }
       }
-      var g = a(13596),
-        h = a(43044),
-        E = a(72258),
-        f = a(67833),
-        C = a(92398);
-      const L = s.createContext(null);
-      function D() {
-        return s.useContext(L);
+      var E = a(13596),
+        f = a(43044),
+        C = a(72258),
+        D = a(67833),
+        L = a(92398),
+        N = a(32548);
+      const b = s.createContext(null);
+      function M() {
+        return s.useContext(b);
       }
-      function b(e) {
+      function v(e) {
         const { message: t } = e;
         return s.createElement(
-          L.Provider,
+          b.Provider,
           { value: t },
           s.createElement(
             "div",
-            { className: h.all },
+            { className: f.all },
             s.createElement(
               "div",
-              { className: h.MessageContent },
-              s.createElement(M, null),
-              s.createElement(v, null),
+              { className: f.MessageContent },
+              s.createElement(w, null),
+              s.createElement(U, null),
               s.createElement("div", { style: { clear: "both" } }),
-              s.createElement(k, null)
+              s.createElement(T, null)
             )
           )
         );
       }
-      function N(e) {
+      function R(e) {
         const t = (0, l.bJ)(),
           a = e.GetTemplateVars();
         return s.useCallback(
-          (e) => (0, E.b8)(e, (0, f.OL)(a.linkurl, t)),
+          (e) => (0, C.b8)(e, (0, D.OL)(a.linkurl, t)),
           [a.linkurl, t]
         );
       }
-      function M(e) {
-        const t = D(),
+      function w(e) {
+        const t = M(),
           a = t.GetTemplateVars(),
-          r = N(t);
+          r = R(t);
         let n = a.ll_image[_.De.LANGUAGE];
         return (
           n || (n = a.ll_image.english),
           s.createElement(
             "div",
-            { className: h.GameImage, onClick: r },
-            n && s.createElement(S, { path: n.path })
+            { className: f.GameImage, onClick: r },
+            n && s.createElement(x, { path: n.path })
           )
         );
       }
-      function v(e) {
-        const t = D(),
-          a = N(t),
+      function U(e) {
+        const t = M(),
+          a = R(t),
           r =
             t.GetTemplateVars().button_text_custom ||
             t.GetTemplateVars().button_text;
         return s.createElement(
           "div",
-          { className: h.ButtonContainer },
-          s.createElement(w, null),
-          s.createElement(R, null),
+          { className: f.ButtonContainer },
+          s.createElement(N.S, null, s.createElement(P, null)),
+          s.createElement(k, null),
           s.createElement(
             "div",
-            { className: h.Btn, style: { cursor: "pointer" }, onClick: a },
+            { className: f.Btn, style: { cursor: "pointer" }, onClick: a },
             r
           )
         );
       }
-      function w() {
-        return s.createElement("div", { className: h.NoPrice });
+      function P() {
+        const e = M().associated_item;
+        if (
+          e &&
+          e.GetBestPurchaseOption() &&
+          e.GetBestPurchaseOption().formatted_final_price
+        ) {
+          const t = e.GetBestPurchaseOption();
+          return s.createElement(
+            "div",
+            { className: f.Price },
+            s.createElement(
+              "div",
+              {
+                className:
+                  t.formatted_final_price.length < 7
+                    ? f.PriceReal
+                    : f.PriceRealShort,
+              },
+              t.formatted_final_price
+            ),
+            t.discount_pct > 0 &&
+              s.createElement(
+                "div",
+                { className: f.PriceRegular },
+                t.formatted_original_price
+              )
+          );
+        }
+        return s.createElement("div", { className: f.NoPrice });
       }
-      function R() {
-        const e = D();
+      function k() {
+        const e = M();
         return e.GetTemplateVars().disable_sharing ||
           !e.GetTemplateVars().shareurl ||
-          _.De.EREALM == C.IN.k_ESteamRealmChina ||
+          _.De.EREALM == L.IN.k_ESteamRealmChina ||
           "XC" == _.De.COUNTRY
           ? null
           : s.createElement(
               "div",
-              { className: h.ShareLinks },
+              { className: f.ShareLinks },
               "Share:",
               s.createElement("br", null),
               s.createElement(
-                U,
+                S,
                 { sitename: "facebook" },
-                s.createElement(T, { path: "marketing/image/facebook.gif" })
+                s.createElement(I, { path: "marketing/image/facebook.gif" })
               ),
               s.createElement(
-                U,
+                S,
                 { sitename: "twitter" },
-                s.createElement(T, { path: "marketing/image/twitter.gif" })
+                s.createElement(I, { path: "marketing/image/twitter.gif" })
               ),
               s.createElement(
-                U,
+                S,
                 { sitename: "reddit" },
-                s.createElement(T, { path: "marketing/image/reddit.gif" })
+                s.createElement(I, { path: "marketing/image/reddit.gif" })
               )
             );
       }
-      function U(e) {
-        const t = D()
+      function S(e) {
+        const t = M()
           .GetTemplateVars()
           .shareurl.replace(/%SITENAME%/, e.sitename);
-        return s.createElement(E.ns, { href: t, children: e.children });
+        return s.createElement(C.ns, { href: t, children: e.children });
       }
-      function k(e) {
-        const t = D();
+      function T(e) {
+        const t = M();
         let a = s.createElement(
           s.Fragment,
           null,
@@ -559,10 +602,10 @@
               null,
               t.GetTemplateVars().custom_legal_text
             )),
-          s.createElement("div", { className: h.Legal }, a)
+          s.createElement("div", { className: f.Legal }, a)
         );
       }
-      function T(e) {
+      function I(e) {
         const { path: t } = e,
           a = (0, o._T)(e, ["path"]);
         return s.createElement(
@@ -570,11 +613,11 @@
           Object.assign({}, a, { src: `${_.De.PUBLIC_SHARED_URL}images/${t}` })
         );
       }
-      function S(e) {
+      function x(e) {
         var t;
         const { path: a } = e,
           r = (0, o._T)(e, ["path"]),
-          n = D();
+          n = M();
         return s.createElement(
           "img",
           Object.assign({}, r, {
@@ -586,14 +629,14 @@
           })
         );
       }
-      function P(e) {
+      function A(e) {
         const { message: t } = e;
         return "image" === t.GetTemplateType()
-          ? s.createElement(b, { message: t })
+          ? s.createElement(v, { message: t })
           : null;
       }
-      var I = a(48341);
-      function x(e) {
+      var G = a(48341);
+      function y(e) {
         const t = (function (e) {
             const { data: t, isLoading: a } = (0, i.useQuery)(
                 ["MarketingMessages", "List"],
@@ -603,44 +646,53 @@
                 () =>
                   null == t
                     ? void 0
-                    : t.map((e) => {
-                        var { message: t } = e,
-                          a = (0, o._T)(e, ["message"]);
-                        return Object.assign({ message: new d(t) }, a);
-                      }),
+                    : t.map((e) => ({
+                        message: new h(e.message()),
+                        alreadySeen: e.already_seen(),
+                      })),
                 [t]
               );
             return a ? null : r;
           })(e.MarketingMessagesStore),
           [a, r] = s.useState(0);
-        if (null === t) return s.createElement(g.V, null);
-        const n = t[a];
+        if (null === t) return s.createElement(E.V, null);
+        const n = t[a].message,
+          l = a < t.length - 1 ? t[a + 1].message : null;
         return s.createElement(
           "div",
           null,
-          s.createElement(P, { message: n.message }),
+          s.createElement(O, { key: n.id, message: n }),
+          l && s.createElement(O, { key: l.id, message: l, preload: !0 }),
           s.createElement(
-            I.Uq,
+            G.Uq,
             null,
             a > 0
               ? s.createElement(
-                  I.zx,
+                  G.zx,
                   { onClick: () => r(a - 1) },
                   "<< Previous"
                 )
               : s.createElement("div", null),
             a < t.length - 1
-              ? s.createElement(I.zx, { onClick: () => r(a + 1) }, "Next >>")
+              ? s.createElement(G.zx, { onClick: () => r(a + 1) }, "Next >>")
               : s.createElement("div", null)
           )
         );
       }
-      var A = a(65902);
-      const G = {
+      function O(e) {
+        const { message: t, preload: a } = e;
+        return s.createElement(
+          "div",
+          { style: a ? { display: "none" } : {} },
+          s.createElement(A, { message: t })
+        );
+      }
+      var B = a(65902);
+      const $ = {
         List: () => `${r.Z.MarketingMessages()}list/`,
         Message: (e) => `${r.Z.MarketingMessages()}${e}`,
       };
-      function O(e) {
+      function V(e) {
         const t = (function () {
           const [e, t] = s.useState(null);
           return (
@@ -648,15 +700,15 @@
               e ||
                 t(
                   (function () {
-                    if (!B) {
+                    if (!j) {
                       const e = (0, _.kQ)(
                           "store_user_config",
                           "application_config"
                         ),
-                        t = new A.J(_.De.WEBAPI_BASE_URL, e.webapi_token);
-                      B = new p(t);
+                        t = new B.J(_.De.WEBAPI_BASE_URL, e.webapi_token);
+                      j = new g(t);
                     }
-                    return B;
+                    return j;
                   })()
                 );
             }, [e]),
@@ -672,24 +724,24 @@
                 null,
                 s.createElement(
                   n.AW,
-                  { path: `${G.List()}` },
-                  s.createElement(x, { MarketingMessagesStore: t })
+                  { path: `${$.List()}` },
+                  s.createElement(y, { MarketingMessagesStore: t })
                 ),
                 s.createElement(
                   n.AW,
-                  { path: `${G.Message(":messageid")}` },
-                  s.createElement(y, null)
+                  { path: `${$.Message(":messageid")}` },
+                  s.createElement(Y, null)
                 ),
                 s.createElement(
                   n.AW,
                   null,
-                  s.createElement(n.l_, { to: `${G.List()}` })
+                  s.createElement(n.l_, { to: `${$.List()}` })
                 )
               )
             )
           : null;
       }
-      function y() {
+      function Y() {
         const e = (0, n.$B)();
         return s.createElement(
           "h1",
@@ -698,7 +750,7 @@
           e.params.messageid
         );
       }
-      let B;
+      let j;
     },
   },
 ]);

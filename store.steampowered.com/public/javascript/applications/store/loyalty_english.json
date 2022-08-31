@@ -10,6 +10,7 @@
     "HowItWorksLink": "How Points Work",
     "YourBalance": "Your Balance",
     "RewardsPointsHistoryLink": "Points History",
+    "MyEquippedProfileItems": "My Profile",
     "SeeAllButton": "See All",
     "SeeAllWithCountButton": "See All (%1$s)",
     "HiddenWithCountButton": "%1$s Hidden",
@@ -430,5 +431,15 @@
     "ShopPageTitle_ArtistProfiles": "Artist Profiles",
     "FeaturedBanner_ArtistProfiles_Headline": "Introducing Artist Profiles",
     "FeaturedBanner_ArtistProfiles_Subhead": "Equip all new Artist Profiles featuring unique art featured in Steam sales and events.",
-    "FeaturedBanner_ArtistProfiles_CallToAction": "View all"
+    "FeaturedBanner_ArtistProfiles_CallToAction": "View all",
+    "EquippedProfile_Header_Title": "Equipped Profile Items",
+    "EquippedProfile_Header_Desc": "These items are currently shown on this user's profile.",
+    "EquippedProfile_AvailableForPurchase": "Available For Purchase",
+    "EquippedProfile_NotAvailable": "Unavailable For Purchase",
+    "EquippedProfile_NotAvailable_Desc": "This item may have been available for a limited time or was given away as part of a promotion.",
+    "EquippedProfile_NotAvailable_Desc_Plural": "These items may have been available for a limited time or were given away as part of a promotion.",
+    "EquippedProfile_Error_Generic": "We are unable to retreive this user's equipped items at this time. Please try again later.",
+    "EquippedProfile_Error_AccessDenied": "You cannot view this user's items due to their profile privacy settings.",
+    "EquippedProfile_Error_NoItems": "This user has no profile items equipped.",
+    "EquippedProfile_RelatedAppsCarousel_Title": "Popular Items From These Games"
 }

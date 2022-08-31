@@ -11112,6 +11112,14 @@ body.v6.rewards .ModalPosition_Content {
   text-decoration: underline;
   color: #fff;
 }
+.index_Header_FGf6c {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.index_ErrorCtn_1rqQV {
+  font-size: 14px;
+}
 body.v6.rewards {
   background-color: #161a1f;
   height: 100%;

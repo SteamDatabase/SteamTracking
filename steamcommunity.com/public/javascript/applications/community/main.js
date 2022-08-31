@@ -2113,7 +2113,8 @@
           BIsInOverlay() {
             return (
               this.browser_info &&
-              this.browser_info != { m_unPID: 0, m_nBrowserID: -1 }
+              0 != this.browser_info.m_unPID &&
+              -1 != this.browser_info.m_nBrowserID
             );
           }
           SetSavedDimensionsKey(e) {
@@ -4729,7 +4730,7 @@
               ));
         }
       }
-      class I {
+      class O {
         constructor(e) {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
@@ -4844,14 +4845,14 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, r.gn)([a.a], I.prototype, "ResetScrollState", null);
-      const O = new WeakMap();
+      (0, r.gn)([a.a], O.prototype, "ResetScrollState", null);
+      const I = new WeakMap();
       function k(e) {
-        let t = O.get(e);
-        return t || ((t = new I(e)), O.set(e, t)), t;
+        let t = I.get(e);
+        return t || ((t = new O(e)), I.set(e, t)), t;
       }
       function F(e) {
-        const t = O.get(e);
+        const t = I.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -7200,8 +7201,8 @@
         VL: () => a,
         WJ: () => R,
         cR: () => k,
-        eK: () => O,
-        oY: () => I,
+        eK: () => I,
+        oY: () => O,
       });
       var r = n(33019),
         i = n(40110);
@@ -8009,6 +8010,11 @@
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
+                  coming_soon_display: {
+                    n: 8,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                   is_early_access: {
                     n: 10,
                     br: i.FE.readBool,
@@ -8078,7 +8084,11 @@
                 fields: {
                   windows: { n: 1, br: i.FE.readBool, bw: i.Xc.writeBool },
                   mac: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  linux: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  steamos_linux: {
+                    n: 3,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                   vr_support: { n: 10, c: v },
                   steam_deck_compat_category: {
                     n: 11,
@@ -8954,17 +8964,17 @@
           return "StoreBrowseContext";
         }
       }
-      class I extends s {
+      class O extends s {
         constructor(e = null) {
           super(),
-            I.prototype.appid || i.aR(I.M()),
+            O.prototype.appid || i.aR(O.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   appid: { n: 1, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   packageid: {
@@ -8973,61 +8983,6 @@
                     bw: i.Xc.writeUint32,
                   },
                   bundleid: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = i.Bh(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            n = new I();
-          return I.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItemID";
-        }
-      }
-      class O extends s {
-        constructor(e = null) {
-          super(),
-            O.prototype.ids || i.aR(O.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  ids: { n: 1, c: I, r: !0, q: !0 },
-                  context: { n: 2, c: R },
-                  data_request: { n: 3, c: T },
                 },
               }),
             O.sm_m
@@ -9063,6 +9018,61 @@
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItemID";
+        }
+      }
+      class I extends s {
+        constructor(e = null) {
+          super(),
+            I.prototype.ids || i.aR(I.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
+                fields: {
+                  ids: { n: 1, c: O, r: !0, q: !0 },
+                  context: { n: 2, c: R },
+                  data_request: { n: 3, c: T },
+                },
+              }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = i.Bh(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new I();
+          return I.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetItems_Request";
@@ -9633,7 +9643,7 @@
     },
     75362: (e, t, n) => {
       "use strict";
-      n.d(t, { Uh: () => I });
+      n.d(t, { Uh: () => O });
       var r = n(70655),
         i = n(58114),
         s = n(33019),
@@ -10240,8 +10250,8 @@
           })(e)
         );
       }
-      const I = () => (M || O(new E()), M),
-        O = (e) => {
+      const O = () => (M || I(new E()), M),
+        I = (e) => {
           (M = e),
             d.S.InstallErrorReportingStore(M),
             i.lq.InstallErrorReportingStore(M),
@@ -10316,7 +10326,7 @@
       "use strict";
       n.d(t, {
         bY: () => x,
-        Td: () => I,
+        Td: () => O,
         xV: () => T,
         Zo: () => R,
         Vc: () => L,
@@ -10451,7 +10461,7 @@
                 s.createElement(
                   s.Fragment,
                   null,
-                  s.createElement(O, null),
+                  s.createElement(I, null),
                   s.createElement(
                     R,
                     { className: p.Cancel, onSelected: e },
@@ -10604,7 +10614,7 @@
         (0, r.gn)([E.ak], R.prototype, "OnOKButton", null),
         (0, r.gn)([E.ak], R.prototype, "OnMouseEnter", null),
         (0, r.gn)([E.ak], R.prototype, "Focus", null);
-      class I extends s.PureComponent {
+      class O extends s.PureComponent {
         render() {
           const e = this.props,
             { bChecked: t, children: n, className: i } = e,
@@ -10619,7 +10629,7 @@
           );
         }
       }
-      function O(e) {
+      function I(e) {
         var t;
         const n = s.useContext(M),
           r =
@@ -11166,7 +11176,7 @@
         zx: () => x,
         ji: () => W,
         VY: () => T,
-        oX: () => O,
+        oX: () => I,
         Vh: () => qe,
         ry: () => Ce,
         lm: () => Re,
@@ -11311,7 +11321,7 @@
           )
         );
       }
-      class I extends i.Component {
+      class O extends i.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }
@@ -11322,16 +11332,16 @@
           );
         }
       }
-      function O(e) {
+      function I(e) {
         const { classNameContent: t, bCenterVertically: n } = e,
           s = (0, r._T)(e, ["classNameContent", "bCenterVertically"]);
         return i.createElement(
           T,
           { className: t, bCenterVertically: n },
-          i.createElement(I, Object.assign({}, s))
+          i.createElement(O, Object.assign({}, s))
         );
       }
-      (0, r.gn)([u.a], I.prototype, "OnSubmit", null);
+      (0, r.gn)([u.a], O.prototype, "OnSubmit", null);
       const k = i.forwardRef(function (e, t) {
           const n = m(),
             { svgicon: o } = e,
@@ -11766,7 +11776,7 @@
         j = n(73935),
         X = n(53622),
         K = n(19228);
-      class Z extends K.Rq {
+      class Y extends K.Rq {
         constructor(e, t, n) {
           super(X.kR(j.findDOMNode(e)), n),
             (this.m_props = {}),
@@ -11798,7 +11808,7 @@
               this.m_component.setState(this.m_setStateOnComplete);
         }
       }
-      var Y = n(77520);
+      var Z = n(77520);
       const $ = i.forwardRef(function (e, t) {
         const n = m();
         return i.createElement(
@@ -11890,7 +11900,7 @@
               r = -24;
             this.setState({ m_bCompletedCopiedAnimation: !1 }),
               this.setState({ m_CopiedYPos: n }, () => {
-                (this.m_CopiedAnimation = new Z(
+                (this.m_CopiedAnimation = new Y(
                   this,
                   { m_CopiedYPos: r },
                   {
@@ -11913,7 +11923,7 @@
           }
         }
         CheckProps(e) {
-          (0, Y.X)(
+          (0, Z.X)(
             !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
             "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
           );
@@ -12756,8 +12766,8 @@
       }
       (0, r.gn)([z.ak], Re.prototype, "OnMenuOpened", null);
       n(67345);
-      var Ie = n(22188),
-        Oe = n(79822),
+      var Oe = n(22188),
+        Ie = n(79822),
         ke = n(48780),
         Fe = n(48899);
       class xe extends i.Component {
@@ -12809,7 +12819,7 @@
       (0, r.gn)([z.ak], xe.prototype, "OnDrop", null);
       class Ne {
         constructor() {
-          (this.m_embeddedElement = new Oe.AN("DragGhosts")),
+          (this.m_embeddedElement = new Ie.AN("DragGhosts")),
             (this.m_rgDropRegions = []),
             (this.m_rgActiveDropRegions = []);
         }
@@ -13161,7 +13171,7 @@
         (0, r.gn)([z.ak], Ae.prototype, "OnMouseUp", null),
         (0, r.gn)([z.ak], Ae.prototype, "OnTouchStart", null),
         (0, r.gn)([z.ak], Ae.prototype, "OnTouchEnd", null),
-        (0, r.gn)([Ie.aD], Ae.prototype, "ResetDragState", null),
+        (0, r.gn)([Oe.aD], Ae.prototype, "ResetDragState", null),
         (0, r.gn)([z.ak], Ae.prototype, "OnHTMLDragStart", null),
         (0, r.gn)([z.ak], Ae.prototype, "OnHTMLDragEnd", null);
       class Pe extends i.Component {
@@ -13335,13 +13345,13 @@
         je = n(48626),
         Xe = n.n(je),
         Ke = n(39746);
-      function Ze(e) {
+      function Ye(e) {
         return i.createElement(
           o.s,
           Object.assign({ navEntryPreferPosition: Ke.c4.PREFERRED_CHILD }, e)
         );
       }
-      function Ye(e) {
+      function Ze(e) {
         const { title: t, icon: n, active: s } = e,
           o = (0, r._T)(e, ["title", "icon", "active"]);
         return i.createElement("div", Object.assign({}, o), t);
@@ -13412,7 +13422,7 @@
             const r = t == g;
             return i.createElement(h.T, {
               component: e.renderPageListItem,
-              fallback: Ye,
+              fallback: Ze,
               className: (0, l.Z)(s.PagedSettingsDialog_PageListItem, {
                 [s.Active]: r,
               }),
@@ -13461,7 +13471,7 @@
               h.T,
               {
                 component: e.renderPageList,
-                fallback: Ze,
+                fallback: Ye,
                 className: s.PagedSettingsDialog_PageList,
               },
               b
@@ -13640,8 +13650,8 @@
           M = null != a || null != n || (S && null != c),
           T = null != m ? m : "min",
           R = null != h ? h : "standard",
-          I = null != p ? p : "standard",
-          O = null != _ ? _ : "standard",
+          O = null != p ? p : "standard",
+          I = null != _ ? _ : "standard",
           k = null == v || v,
           F = null != b ? b : 0,
           x = null != w ? w : "center",
@@ -13680,13 +13690,13 @@
                 "shift-children-below" == D &&
                   tt().InlineWrapShiftsChildrenBelow,
                 !!s && tt().WithDescription,
-                "standard" == O && tt().WithBottomSeparatorStandard,
-                "thick" == O && tt().WithBottomSeparatorThick,
+                "standard" == I && tt().WithBottomSeparatorStandard,
+                "thick" == I && tt().WithBottomSeparatorThick,
                 "fixed" == T && tt().ChildrenWidthFixed,
                 "max" == T && tt().ChildrenWidthGrow,
                 "standard" == R && tt().ExtraPaddingOnChildrenBelow,
-                "standard" == I && tt().StandardPadding,
-                "compact" == I && tt().CompactPadding,
+                "standard" == O && tt().StandardPadding,
+                "compact" == O && tt().CompactPadding,
                 B && tt().Clickable,
                 k && tt().HighlightOnFocus
               ),
@@ -13944,6 +13954,7 @@
             (this.m_fStartValue = null),
             (this.m_fLatestUserValue = null),
             (this.m_bInnerSliderHasFocus = !1),
+            (this.m_nRepeatCount = 0),
             (this.m_fStartValue = this.props.value),
             (this.m_fLatestUserValue = this.props.value);
         }
@@ -13963,10 +13974,21 @@
         }
         get step() {
           var e;
-          return null !== (e = this.props.step) && void 0 !== e ? e : 1;
+          return Math.abs(
+            null !== (e = this.props.step) && void 0 !== e ? e : 1
+          );
         }
         get normalizedStep() {
           return this.step / this.range;
+        }
+        get normalizedDpadStep() {
+          var e;
+          const t =
+              null !== (e = this.props.dpadStep) && void 0 !== e
+                ? e
+                : this.step,
+            n = t > 0 ? t / this.range : 0.01;
+          return Math.max(n, this.normalizedStep);
         }
         get normalizedClampedValue() {
           const e =
@@ -14075,38 +14097,50 @@
           }
         }
         OnGamepadDirection(e) {
-          var t;
+          var t, n;
           if (this.props.disabled) return !1;
-          let n = 0;
-          if (e.detail.button == Ve.eV.DIR_LEFT) n = -1;
+          let r = 0;
+          if (e.detail.button == Ve.eV.DIR_LEFT) r = -1;
           else {
             if (e.detail.button != Ve.eV.DIR_RIGHT) return !1;
-            n = 1;
+            r = 1;
           }
-          let r =
-            null !== (t = this.props.minimumDpadGranularity) && void 0 !== t
-              ? t
-              : 0.05;
-          0 == r && 0 == this.normalizedStep && (r = 0.05);
-          const i =
+          e.detail.is_repeat
+            ? this.m_nRepeatCount++
+            : (this.m_nRepeatCount = 0);
+          const i = 1 / this.normalizedDpadStep,
+            s = Math.floor((0, Fe.Lh)((0, Fe.r4)(i, 5, 20, 4, 10), 4, 10)),
+            o = (0, Fe.r4)(
+              this.m_nRepeatCount,
+              0,
+              s,
+              this.normalizedDpadStep,
+              0.1
+            ),
+            a =
               0 == this.normalizedStep
-                ? r
-                : Math.round(r / this.normalizedStep) * this.normalizedStep,
-            s = Math.max(i, this.normalizedStep) * n,
-            o = pt(this.normalizedStep, this.normalizedClampedValue + s);
-          let a = gt(this.props.min, this.props.max, o);
+                ? Math.round(o / this.normalizedDpadStep) *
+                  this.normalizedDpadStep
+                : Math.round(o / this.normalizedStep) * this.normalizedStep,
+            l = Math.max(a, this.normalizedDpadStep) * r,
+            c = pt(this.normalizedStep, this.normalizedClampedValue + l);
+          let u = gt(this.props.min, this.props.max, c);
           if (
-            ((a = (0, Fe.Lh)(
-              a,
-              this.props.clampMin ? this.props.clampMin : this.props.min,
-              this.props.clampMax ? this.props.clampMax : this.props.max
+            ((u = (0, Fe.Lh)(
+              u,
+              null !== (t = this.props.clampMin) && void 0 !== t
+                ? t
+                : this.props.min,
+              null !== (n = this.props.clampMax) && void 0 !== n
+                ? n
+                : this.props.max
             )),
-            a != this.props.value)
+            u != this.props.value)
           ) {
-            const e = a > this.m_fLatestUserValue;
+            const e = u > this.m_fLatestUserValue;
             He.LT.PlayNavSound(e ? He.qr.SliderUp : He.qr.SliderDown),
-              (this.m_fLatestUserValue = a),
-              this.props.onChange && this.props.onChange(a, 2);
+              (this.m_fLatestUserValue = u),
+              this.props.onChange && this.props.onChange(u, 2);
           } else He.LT.PlayNavSound(He.qr.FailedNav);
           return !0;
         }
@@ -14738,8 +14772,8 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(Et || (Et = {}));
-      var It = n(77323),
-        Ot = n.n(It);
+      var Ot = n(77323),
+        It = n.n(Ot);
       const kt = i.createContext(null);
       function Ft(e) {
         const t = i.useContext(kt),
@@ -14757,12 +14791,12 @@
             },
             l
           ),
-          s && i.createElement("div", { className: Ot().PageListItem_Icon }, s),
-          i.createElement("div", { className: Ot().PageListItem_Title }, n)
+          s && i.createElement("div", { className: It().PageListItem_Icon }, s),
+          i.createElement("div", { className: It().PageListItem_Title }, n)
         );
       }
       function xt(e) {
-        return i.createElement("div", { className: Ot().Separator });
+        return i.createElement("div", { className: It().Separator });
       }
       i.forwardRef(function (e, t) {
         const n = i.useRef();
@@ -14777,7 +14811,7 @@
           i.createElement(
             qe,
             Object.assign({}, e, {
-              stylesheet: Ot(),
+              stylesheet: It(),
               showTitle: r,
               renderPageListItem: Ft,
               renderPageListSeparator: xt,
@@ -14792,7 +14826,7 @@
           ? (t = Et.Up)
           : "down" == e.direction && (t = Et.Down);
         let n =
-          ((r = Ot()),
+          ((r = It()),
           (s = t) == Et.Left
             ? r.Left
             : s == Et.Right
@@ -14807,7 +14841,7 @@
           Mt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Rt(Ot(), Ot().ContentTransition),
+            childrenClasses: Rt(It(), It().ContentTransition),
             direction: n,
           },
           e.children
@@ -15378,7 +15412,7 @@
             key: e.key,
             modal: e,
             active: e == a,
-            Component: null != n ? n : I,
+            Component: null != n ? n : O,
           })
         );
         return r.createElement(
@@ -15415,7 +15449,7 @@
           )
         );
       }
-      function I(e) {
+      function O(e) {
         const { className: t, active: n, children: i } = e,
           s = r.useRef();
         return (
@@ -15429,7 +15463,7 @@
           r.createElement("div", { ref: s, className: t, tabIndex: -1 }, i)
         );
       }
-      var O = n(7707),
+      var I = n(7707),
         k = n(27745),
         F = n(35921),
         x = (n(23816), n(17010), n(12505), n(71174)),
@@ -15441,7 +15475,7 @@
           a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return L.De.IN_GAMEPADUI && !L.De.IN_LIBRARY
           ? r.createElement(
-              O.Fe,
+              I.Fe,
               {
                 navID: n,
                 NavigationManager: o,
@@ -16017,84 +16051,85 @@
     95598: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $06: () => Y,
+        $06: () => $,
         $gZ: () => m,
-        BKy: () => L,
-        BNo: () => Ce,
-        Bh5: () => he,
+        BKy: () => N,
+        BNo: () => Ee,
+        Bh5: () => pe,
         Ehc: () => k,
         GhU: () => y,
-        I8b: () => le,
-        IWH: () => X,
+        I8b: () => ce,
+        IWH: () => K,
         JrY: () => M,
-        KJh: () => we,
-        KKY: () => ke,
-        Lao: () => G,
-        Lk$: () => re,
-        MrB: () => Q,
-        NP6: () => x,
+        KJh: () => Ce,
+        KKY: () => Fe,
+        Lao: () => W,
+        Lk$: () => ie,
+        MrB: () => J,
+        NP6: () => L,
         P7E: () => v,
-        P9w: () => H,
-        Q0U: () => _e,
+        P9w: () => z,
+        Q0U: () => fe,
         SUY: () => g,
-        Ucz: () => q,
-        Uos: () => O,
-        V7n: () => U,
-        VR: () => J,
-        Vgm: () => se,
-        WNf: () => ue,
-        WWB: () => ve,
+        Ucz: () => Q,
+        Uos: () => I,
+        V7n: () => V,
+        VR: () => ee,
+        Vgm: () => oe,
+        WNf: () => de,
+        WWB: () => be,
         X: () => w,
-        XBH: () => K,
-        YVI: () => Oe,
-        YVR: () => V,
-        YqJ: () => N,
+        XBH: () => Y,
+        YVI: () => ke,
+        YVR: () => H,
+        YqJ: () => A,
         YtI: () => p,
-        ZJH: () => pe,
+        ZJH: () => ge,
         Zrf: () => d,
-        _GE: () => oe,
-        c7E: () => Re,
-        chI: () => $,
-        dLw: () => fe,
-        daM: () => ce,
-        doA: () => Ee,
+        _GE: () => ae,
+        c7E: () => Oe,
+        chI: () => q,
+        dLw: () => ve,
+        daM: () => ue,
+        doA: () => Se,
         dzL: () => B,
         faS: () => T,
         ffh: () => S,
-        gR: () => A,
+        gR: () => P,
         j7C: () => Ie,
         k4K: () => f,
-        lsH: () => j,
-        mBz: () => Te,
+        lsH: () => X,
+        mBz: () => Re,
         mKE: () => R,
-        mKt: () => de,
-        miF: () => Me,
-        opd: () => Se,
+        mKt: () => me,
+        miF: () => Te,
+        opd: () => ye,
         pVO: () => C,
         pkz: () => E,
-        r6F: () => P,
-        rFk: () => W,
+        r6F: () => G,
+        rFk: () => U,
         ret: () => h,
         shV: () => D,
-        sqQ: () => ye,
+        sqQ: () => De,
         tEX: () => Z,
-        tLe: () => ne,
-        thP: () => F,
+        tLe: () => re,
+        thP: () => x,
         tkI: () => _,
-        uZu: () => me,
-        ui7: () => z,
-        vJ$: () => ge,
-        vT2: () => ee,
-        vyu: () => Fe,
-        wUs: () => I,
-        wn$: () => ae,
-        wr9: () => te,
-        x0L: () => Be,
-        xg: () => be,
+        uZu: () => he,
+        ui7: () => j,
+        vJ$: () => _e,
+        vT2: () => te,
+        vyu: () => xe,
+        wUs: () => O,
+        wn$: () => le,
+        wr9: () => ne,
+        wx$: () => F,
+        x0L: () => Me,
+        xg: () => we,
         yRy: () => b,
-        yTr: () => De,
-        yVt: () => ie,
-        z5E: () => xe,
+        yTr: () => Be,
+        yVt: () => se,
+        z5E: () => Le,
       });
       var r = n(70655),
         i = n(67294),
@@ -16685,7 +16720,7 @@
           })
         );
       }
-      function I(e) {
+      function O(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -16910,7 +16945,7 @@
           )
         );
       }
-      function O(e) {
+      function I(e) {
         return u.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -16983,7 +17018,85 @@
           })
         );
       }
-      function F() {
+      function F(e) {
+        const { direction: t } = e,
+          n = (0, r._T)(e, ["direction"]);
+        switch (t) {
+          case "up":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                n
+              ),
+              i.createElement("path", {
+                d: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
+                fill: "currentColor",
+              })
+            );
+          case "down":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                n
+              ),
+              i.createElement("path", {
+                d: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
+                fill: "currentColor",
+              })
+            );
+          case "left":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                n
+              ),
+              i.createElement("path", {
+                d: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
+                fill: "currentColor",
+              })
+            );
+          case "right":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  viewBox: "0 0 36 36",
+                  width: "36px",
+                  height: "36px",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg",
+                },
+                n
+              ),
+              i.createElement("path", {
+                d: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
+                fill: "currentColor",
+              })
+            );
+        }
+      }
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -17003,7 +17116,7 @@
           })
         );
       }
-      function x(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -17039,7 +17152,7 @@
             })
         );
       }
-      function L(e) {
+      function N(e) {
         const { angle: t } = e,
           n = (0, r._T)(e, ["angle"]);
         return i.createElement(
@@ -17061,7 +17174,7 @@
           })
         );
       }
-      function N() {
+      function A() {
         return i.createElement(
           "svg",
           {
@@ -17097,7 +17210,7 @@
           })
         );
       }
-      function A() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -17123,7 +17236,7 @@
           })
         );
       }
-      function P() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -17156,7 +17269,7 @@
           })
         );
       }
-      function G() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -17183,7 +17296,7 @@
           })
         );
       }
-      function W() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -17260,7 +17373,7 @@
           )
         );
       }
-      function U(e) {
+      function V(e) {
         return i.createElement(
           "svg",
           {
@@ -17281,7 +17394,7 @@
           })
         );
       }
-      function V() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -17316,7 +17429,7 @@
           })
         );
       }
-      function H(e) {
+      function z(e) {
         return i.createElement(
           "svg",
           {
@@ -17354,7 +17467,7 @@
           })
         );
       }
-      function z(e) {
+      function j(e) {
         const t = (0, a.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -17385,7 +17498,7 @@
           })
         );
       }
-      function j() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -17411,7 +17524,7 @@
           })
         );
       }
-      function X() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -17432,7 +17545,7 @@
           )
         );
       }
-      function K() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -17489,7 +17602,7 @@
           )
         );
       }
-      function Y() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -17517,7 +17630,7 @@
           })
         );
       }
-      function $() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -17583,7 +17696,7 @@
           })
         );
       }
-      function q() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -17603,7 +17716,7 @@
           })
         );
       }
-      function Q(e) {
+      function J(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -17623,7 +17736,7 @@
           })
         );
       }
-      function J() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -17645,7 +17758,7 @@
           })
         );
       }
-      function ee() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -17690,7 +17803,7 @@
           })
         );
       }
-      function te() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -17723,7 +17836,7 @@
           })
         );
       }
-      function ne() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -17742,7 +17855,7 @@
           })
         );
       }
-      function re() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -17761,7 +17874,7 @@
           })
         );
       }
-      function ie() {
+      function se() {
         return i.createElement(
           "svg",
           {
@@ -17782,7 +17895,7 @@
           })
         );
       }
-      function se() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -17813,7 +17926,7 @@
           })
         );
       }
-      function oe() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -17879,7 +17992,7 @@
           })
         );
       }
-      function ae() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -17898,7 +18011,7 @@
           })
         );
       }
-      function le() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -17936,7 +18049,7 @@
           })
         );
       }
-      function ce() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -17972,7 +18085,7 @@
           })
         );
       }
-      function ue() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -17991,7 +18104,7 @@
           })
         );
       }
-      function de() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -18016,7 +18129,7 @@
           })
         );
       }
-      function me() {
+      function he() {
         return i.createElement(
           "svg",
           {
@@ -18038,7 +18151,7 @@
           })
         );
       }
-      function he() {
+      function pe() {
         return i.createElement(
           "svg",
           {
@@ -18078,7 +18191,7 @@
           })
         );
       }
-      function pe() {
+      function ge() {
         return i.createElement(
           "svg",
           {
@@ -18106,7 +18219,7 @@
           )
         );
       }
-      function ge() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -18122,7 +18235,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function _e() {
+      function fe() {
         return i.createElement(
           "svg",
           {
@@ -18141,7 +18254,7 @@
           })
         );
       }
-      function fe() {
+      function ve() {
         return i.createElement(
           "svg",
           {
@@ -18160,7 +18273,7 @@
           })
         );
       }
-      function ve() {
+      function be() {
         return i.createElement(
           "svg",
           {
@@ -18180,7 +18293,7 @@
           })
         );
       }
-      function be(e, t) {
+      function we(e, t) {
         return u.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -18217,7 +18330,7 @@
               })
             );
       }
-      function we(e) {
+      function Ce(e) {
         return i.createElement(
           "svg",
           {
@@ -18236,7 +18349,7 @@
           })
         );
       }
-      function Ce(e) {
+      function Ee(e) {
         return i.createElement(
           "svg",
           {
@@ -18272,7 +18385,7 @@
           )
         );
       }
-      function Ee(e) {
+      function Se(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18450,7 +18563,7 @@
           )
         );
       }
-      function Se() {
+      function ye() {
         return i.createElement(
           "svg",
           {
@@ -18481,7 +18594,7 @@
           )
         );
       }
-      function ye(e) {
+      function De(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -18497,7 +18610,7 @@
           })
         );
       }
-      function De() {
+      function Be() {
         return i.createElement(
           "svg",
           {
@@ -18515,7 +18628,7 @@
           })
         );
       }
-      function Be() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -18537,7 +18650,7 @@
           )
         );
       }
-      function Me() {
+      function Te() {
         return i.createElement(
           "svg",
           {
@@ -18575,7 +18688,7 @@
           )
         );
       }
-      function Te(e) {
+      function Re(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -18593,7 +18706,7 @@
           })
         );
       }
-      function Re() {
+      function Oe() {
         return i.createElement(
           "svg",
           {
@@ -18650,7 +18763,7 @@
           })
         );
       }
-      function Oe(e) {
+      function ke(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18678,7 +18791,7 @@
           })
         );
       }
-      function ke(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18706,7 +18819,7 @@
           })
         );
       }
-      function Fe(e) {
+      function xe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18734,7 +18847,7 @@
           })
         );
       }
-      function xe(e) {
+      function Le(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -20123,6 +20236,7 @@
       "use strict";
       n.d(t, {
         $1: () => l,
+        Kb: () => B,
         LO: () => D,
         Mh: () => E,
         Np: () => y,
@@ -20135,76 +20249,76 @@
         yW: () => a,
       });
       var r,
-        i = n(41311),
-        s = n(30600),
-        o = n(27661);
+        i = n(27661),
+        s = n(41311),
+        o = n(30600);
       function a(e, t, n) {
-        let o;
+        let i;
         if ("boolean" == typeof t) {
-          o = {
+          i = {
             eSuffix: t ? r.None : r.Ago,
             bForceSingleUnits: n,
             bHighGranularity: !1,
           };
         } else
-          o = Object.assign(
+          i = Object.assign(
             { eSuffix: r.Ago, bForceSingleUnits: !1, bHighGranularity: !1 },
             t
           );
         let a = "#TimeInterval_";
         if (
-          (o.eSuffix == r.Ago
+          (i.eSuffix == r.Ago
             ? (a = "#TimeSince_")
-            : o.eSuffix == r.Remaining && (a = "#TimeRemaining_"),
-          e >= 2 * s._H.PerYear)
+            : i.eSuffix == r.Remaining && (a = "#TimeRemaining_"),
+          e >= 2 * o._H.PerYear)
         )
-          return (0, i.Xx)(a + "XYears", Math.floor(e / s._H.PerYear));
-        if (e >= s._H.PerYear)
-          return (e -= s._H.PerYear) >= 2 * s._H.PerMonth &&
-            !o.bForceSingleUnits
-            ? (0, i.Xx)(a + "1YearXMonths", Math.floor(e / s._H.PerMonth))
-            : (0, i.Xx)(a + "1Year");
-        if (e >= 2 * s._H.PerMonth)
-          return (0, i.Xx)(a + "XMonths", Math.floor(e / s._H.PerMonth));
-        if (e >= 2 * s._H.PerWeek)
-          return (0, i.Xx)(a + "XWeeks", Math.floor(e / s._H.PerWeek));
-        if (e >= s._H.PerWeek)
-          return (0, i.Xx)(a + "1Week", Math.floor(e / s._H.PerWeek));
-        if (e >= 2 * s._H.PerDay)
-          return (0, i.Xx)(a + "XDays", Math.floor(e / s._H.PerDay));
-        if (e >= s._H.PerDay)
-          return (e -= s._H.PerDay) >= 2 * s._H.PerHour && !o.bForceSingleUnits
-            ? (0, i.Xx)(a + "1DayXHours", Math.floor(e / s._H.PerHour))
-            : (0, i.Xx)(a + "1Day");
-        if (e >= 2 * s._H.PerHour)
-          return (0, i.Xx)(a + "XHours", Math.floor(e / s._H.PerHour));
-        if (e >= s._H.PerHour)
-          return (e -= s._H.PerHour) >= 2 * s._H.PerMinute &&
-            !o.bForceSingleUnits
-            ? (0, i.Xx)(a + "1HourXMinutes", Math.floor(e / s._H.PerMinute))
-            : (0, i.Xx)(a + "1Hour");
-        if (e >= 2 * s._H.PerMinute) {
-          const t = Math.floor(e / s._H.PerMinute),
-            n = e % s._H.PerMinute;
-          return o.bHighGranularity && 0 != n
+          return (0, s.Xx)(a + "XYears", Math.floor(e / o._H.PerYear));
+        if (e >= o._H.PerYear)
+          return (e -= o._H.PerYear) >= 2 * o._H.PerMonth &&
+            !i.bForceSingleUnits
+            ? (0, s.Xx)(a + "1YearXMonths", Math.floor(e / o._H.PerMonth))
+            : (0, s.Xx)(a + "1Year");
+        if (e >= 2 * o._H.PerMonth)
+          return (0, s.Xx)(a + "XMonths", Math.floor(e / o._H.PerMonth));
+        if (e >= 2 * o._H.PerWeek)
+          return (0, s.Xx)(a + "XWeeks", Math.floor(e / o._H.PerWeek));
+        if (e >= o._H.PerWeek)
+          return (0, s.Xx)(a + "1Week", Math.floor(e / o._H.PerWeek));
+        if (e >= 2 * o._H.PerDay)
+          return (0, s.Xx)(a + "XDays", Math.floor(e / o._H.PerDay));
+        if (e >= o._H.PerDay)
+          return (e -= o._H.PerDay) >= 2 * o._H.PerHour && !i.bForceSingleUnits
+            ? (0, s.Xx)(a + "1DayXHours", Math.floor(e / o._H.PerHour))
+            : (0, s.Xx)(a + "1Day");
+        if (e >= 2 * o._H.PerHour)
+          return (0, s.Xx)(a + "XHours", Math.floor(e / o._H.PerHour));
+        if (e >= o._H.PerHour)
+          return (e -= o._H.PerHour) >= 2 * o._H.PerMinute &&
+            !i.bForceSingleUnits
+            ? (0, s.Xx)(a + "1HourXMinutes", Math.floor(e / o._H.PerMinute))
+            : (0, s.Xx)(a + "1Hour");
+        if (e >= 2 * o._H.PerMinute) {
+          const t = Math.floor(e / o._H.PerMinute),
+            n = e % o._H.PerMinute;
+          return i.bHighGranularity && 0 != n
             ? 1 == n
-              ? (0, i.Xx)(a + "XMinutes1Second", t)
-              : (0, i.Xx)(a + "XMinutesXSeconds", t, n)
-            : (0, i.Xx)(a + "XMinutes", t);
+              ? (0, s.Xx)(a + "XMinutes1Second", t)
+              : (0, s.Xx)(a + "XMinutesXSeconds", t, n)
+            : (0, s.Xx)(a + "XMinutes", t);
         }
-        if (e >= s._H.PerMinute) {
-          const t = e % s._H.PerMinute;
-          return o.bHighGranularity && 0 != t
+        if (e >= o._H.PerMinute) {
+          const t = e % o._H.PerMinute;
+          return i.bHighGranularity && 0 != t
             ? 1 == t
-              ? (0, i.Xx)(a + "1Minute1Second")
-              : (0, i.Xx)(a + "1MinuteXSeconds", t)
-            : (0, i.Xx)(a + "1Minute");
+              ? (0, s.Xx)(a + "1Minute1Second")
+              : (0, s.Xx)(a + "1MinuteXSeconds", t)
+            : (0, s.Xx)(a + "1Minute");
         }
-        return o.bHighGranularity
+        return i.bHighGranularity
           ? 1 == e
-            ? (0, i.Xx)(a + "1Second")
-            : (0, i.Xx)(a + "XSeconds", e)
-          : (0, i.Xx)(a + "LessThanAMinute");
+            ? (0, s.Xx)(a + "1Second")
+            : (0, s.Xx)(a + "XSeconds", e)
+          : (0, s.Xx)(a + "LessThanAMinute");
       }
       function l(e, t, n) {
         const r = {
@@ -20214,7 +20328,7 @@
           year: t ? void 0 : "numeric",
         };
         return new Date(1e3 * e).toLocaleDateString(
-          i.Yt.GetPreferredLocales(),
+          s.Yt.GetPreferredLocales(),
           r
         );
       }
@@ -20224,7 +20338,7 @@
         let r = m.get(n);
         if (r) return r;
         return (
-          (r = t.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          (r = t.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
             month: "short",
             day: "numeric",
@@ -20242,8 +20356,8 @@
       const u = new Map();
       function d(e, t) {
         const n = new Date(1e3 * e),
-          r = i.Yt.GetPreferredLocales(),
-          s =
+          r = s.Yt.GetPreferredLocales(),
+          i =
             t.bForce24HourClock ||
             (function (e) {
               let t = u.get(e);
@@ -20260,7 +20374,7 @@
             })(r[0]);
         return n.toLocaleTimeString(
           r,
-          s
+          i
             ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
             : { hour: "numeric", minute: "2-digit" }
         );
@@ -20268,25 +20382,25 @@
       const m = new Map(),
         h = new Map();
       function p(e, t, n = !0, r = !0) {
-        const s = new Date(),
+        const o = new Date(),
           a = new Date(1e3 * e);
-        if (a.getFullYear() != s.getFullYear()) return c(e);
-        r && o.zO(new Date().setHours(24, 0, 0, 0) - s.getTime());
+        if (a.getFullYear() != o.getFullYear()) return c(e);
+        r && i.zO(new Date().setHours(24, 0, 0, 0) - o.getTime());
         const l = new Date();
         if ((l.setHours(0, 0, 0, 0), n))
           if (a >= l) {
             if ((l.setDate(l.getDate() + 1), a < l))
-              return (0, i.Xx)("#Time_Today");
+              return (0, s.Xx)("#Time_Today");
             if ((l.setDate(l.getDate() + 1), a < l))
-              return (0, i.Xx)("#Time_Tomorrow");
+              return (0, s.Xx)("#Time_Tomorrow");
           } else if ((l.setDate(l.getDate() - 1), a >= l))
-            return (0, i.Xx)("#Time_Yesterday");
+            return (0, s.Xx)("#Time_Yesterday");
         const u = { month: t ? "long" : "short", day: "numeric" },
           d = a.setHours(0, 0, 0, 0) + u.month;
         let m = h.get(d);
         return (
           m ||
-          ((m = a.toLocaleDateString(i.Yt.GetPreferredLocales(), u)),
+          ((m = a.toLocaleDateString(s.Yt.GetPreferredLocales(), u)),
           h.set(d, m),
           m)
         );
@@ -20310,60 +20424,60 @@
         if (n > r) {
           if (!a.bGranularFutureTime)
             return (
-              o.zO(n.getTime() - r.getTime()),
+              i.zO(n.getTime() - r.getTime()),
               n.getFullYear() == r.getFullYear() ? S(n) : D(n)
             );
-          o.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
+          i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
           let e = new Date();
           return (
             e.setHours(0, 0, 0, 0),
             e.setDate(e.getDate() + 1),
             n < e
-              ? (0, i.Xx)("#Time_Today")
+              ? (0, s.Xx)("#Time_Today")
               : (e.setDate(e.getDate() + 1),
                 n < e
-                  ? (0, i.Xx)("#Time_Tomorrow")
+                  ? (0, s.Xx)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
                     n < e ? E(n) : C(n, !0, a.bAbbreviateDayOfWeek)))
           );
         }
-        o.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
+        i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
         let c = new Date();
         if ((c.setHours(0, 0, 0, 0), n >= c))
           return a.bGranularToday
             ? a.bGranularTodayTimeOnly
               ? d(e, { bForce24HourClock: a.bForce24HourClock })
-              : (0, i.Xx)(
+              : (0, s.Xx)(
                   "#Time_Today_At",
                   d(e, { bForce24HourClock: a.bForce24HourClock })
                 )
-            : (0, i.Xx)("#Time_Today");
+            : (0, s.Xx)("#Time_Today");
         if ((c.setDate(r.getDate() - 1), n >= c))
           return a.bGranularYesterday
-            ? (0, i.Xx)(
+            ? (0, s.Xx)(
                 "#Time_Yesterday_At",
                 d(e, { bForce24HourClock: a.bForce24HourClock })
               )
-            : (0, i.Xx)("#Time_Yesterday");
+            : (0, s.Xx)("#Time_Yesterday");
         c.setDate(r.getDate() - 6);
         const u = new Date(c);
         if (a.bGranularWeek && n >= u) return C(n, !1, !a.bAbbreviateDayOfWeek);
         if (a.bGranularPast)
-          return (0, i.Xx)(
+          return (0, s.Xx)(
             "#Time_Past_At",
             l(e, n.getFullYear() == r.getFullYear(), !a.bAbbreviateDayOfWeek),
             d(e, { bForce24HourClock: a.bForce24HourClock })
           );
-        if (n >= u) return (0, i.Xx)("#TimeSince_ThisWeek");
+        if (n >= u) return (0, s.Xx)("#TimeSince_ThisWeek");
         if (
           n.getMonth() == r.getMonth() &&
           n.getFullYear() == r.getFullYear()
         ) {
           const e =
-            Math.floor((u.valueOf() - n.valueOf()) / (1e3 * s._H.PerWeek)) + 1;
+            Math.floor((u.valueOf() - n.valueOf()) / (1e3 * o._H.PerWeek)) + 1;
           return 1 == e
-            ? (0, i.Xx)("#TimeSince_1Week")
-            : (0, i.Xx)("#TimeSince_XWeeks", e);
+            ? (0, s.Xx)("#TimeSince_1Week")
+            : (0, s.Xx)("#TimeSince_XWeeks", e);
         }
         return n.getFullYear() == r.getFullYear() ? S(n) : D(n);
       }
@@ -20378,12 +20492,12 @@
             day: "numeric",
             month: t ? "long" : "short",
           },
-          s = e.setHours(0, 0, 0, 0) + r.weekday + r.month;
-        let o = w.get(s);
+          i = e.setHours(0, 0, 0, 0) + r.weekday + r.month;
+        let o = w.get(i);
         return (
           o ||
-          ((o = e.toLocaleDateString(i.Yt.GetPreferredLocales(), r)),
-          w.set(s, o),
+          ((o = e.toLocaleDateString(s.Yt.GetPreferredLocales(), r)),
+          w.set(i, o),
           o)
         );
       }
@@ -20391,7 +20505,7 @@
         let t = _.get(e.getDay());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             weekday: "long",
           })),
           _.set(e.getDay(), t),
@@ -20402,7 +20516,7 @@
         let t = f.get(e.getMonth());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
           })),
           f.set(e.getMonth(), t),
@@ -20413,7 +20527,7 @@
         let t = v.get(e.getFullYear());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
           })),
           v.set(e.getFullYear(), t),
@@ -20425,13 +20539,31 @@
         let n = b.get(t);
         return (
           n ||
-          ((n = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((n = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
           b.set(t, n),
           n)
         );
+      }
+      function B(e) {
+        switch (e.getUTCMonth()) {
+          case 0:
+          case 1:
+          case 2:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q1", e.getUTCFullYear());
+          case 3:
+          case 4:
+          case 5:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q2", e.getUTCFullYear());
+          case 6:
+          case 7:
+          case 8:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q3", e.getUTCFullYear());
+          default:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
+        }
       }
     },
     30543: (e, t, n) => {
@@ -21394,8 +21526,8 @@
         M = () => (u.JA.IS_OGG ? "games" : "groups"),
         T = () => "/:anything*/diagdata",
         R = () => "/login/home",
-        I = () => "/(migrateevents|migrate)",
-        O = (e) => `/${M()}/${e}/partnerevents`,
+        O = () => "/(migrateevents|migrate)",
+        I = (e) => `/${M()}/${e}/partnerevents`,
         k = (e) => `/${M()}/${e}/(events|announcements)`,
         F = (e) => `/app/${e}(/workshop/)?`,
         x = (e) => `/groups/${e}/`,
@@ -21412,8 +21544,8 @@
         j = () => "/workshop/discussions",
         X = () => "/sharedfiles/filedetails/discussions",
         K = () => "/discussions/forum",
-        Z = () => "/faqs/",
-        Y = () => "/questions/",
+        Y = () => "/faqs/",
+        Z = () => "/questions/",
         $ = () => "/(conference|steamworksvirtualconference)/",
         q = () => "/";
       class Q extends r.Component {
@@ -21452,10 +21584,10 @@
                     })
                   ),
                   r.createElement(o.AW, {
-                    path: O(":appid_or_vanity_str"),
+                    path: I(":appid_or_vanity_str"),
                     component: v,
                   }),
-                  r.createElement(o.AW, { path: I(), component: b }),
+                  r.createElement(o.AW, { path: O(), component: b }),
                   r.createElement(o.AW, {
                     path: k(":appid_or_vanity_str"),
                     component: f,
@@ -21528,8 +21660,8 @@
                     path: A(),
                     render: (e) => r.createElement(w, Object.assign({}, e)),
                   }),
-                  r.createElement(o.AW, { path: Z(), component: S }),
-                  r.createElement(o.AW, { path: Y(), component: D }),
+                  r.createElement(o.AW, { path: Y(), component: S }),
+                  r.createElement(o.AW, { path: Z(), component: D }),
                   r.createElement(o.AW, { path: $(), component: y }),
                   r.createElement(o.AW, {
                     path: q(),

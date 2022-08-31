@@ -631,7 +631,7 @@
         w = r(67294),
         I = (r(990), r(77636)),
         b = r(32367),
-        C = (r(81238), r(159)),
+        C = (r(14146), r(159)),
         E = r(77520);
       class A {
         constructor(e, t) {
@@ -1149,7 +1149,7 @@
       "use strict";
       r.d(t, { S: () => p });
       var n = r(67294),
-        i = (r(81238), r(35921)),
+        i = (r(14146), r(35921)),
         o = r(57540),
         a = r.n(o),
         s = r(95598),
@@ -1296,7 +1296,7 @@
     },
     56489: (e, t, r) => {
       "use strict";
-      r.d(t, { sK: () => ue, MS: () => se });
+      r.d(t, { sK: () => ue, MS: () => se, Vw: () => ie });
       var n = r(70655),
         i = r(13271),
         o = r(67294),
@@ -1306,7 +1306,7 @@
         c = r(39746),
         u = r(67833),
         d = (r(990), r(10767), r(77636)),
-        m = (r(81238), r(159)),
+        m = (r(14146), r(159)),
         p = r(52114),
         h = r(37694),
         _ = r(67777),
@@ -1845,8 +1845,8 @@
         U = r.n(Q),
         q = r(3389),
         X = r(44298),
-        j = r(88767),
-        V = r(17888),
+        V = r(88767),
+        j = r(17888),
         H = r(52117),
         Z = r(65924),
         K = r(65409),
@@ -1966,9 +1966,9 @@
               [m]
             ),
             X = o.useCallback((e) => v, [v]),
-            j = o.useCallback(
+            V = o.useCallback(
               (e) => {
-                re("Currently focused index: ", e), V.E.AddImpression(m[e], ne);
+                re("Currently focused index: ", e), j.E.AddImpression(m[e], ne);
               },
               [t, m]
             ),
@@ -1997,12 +1997,12 @@
                       focused: h === e,
                       fnGetFriendState: l,
                       index: e,
-                      fnOnAppFocus: j,
+                      fnOnAppFocus: V,
                       nItemHeight: x,
                       nItemWidth: r,
                       appID: m[e],
                     }),
-              [t, j, m, h, x, a, Q, O]
+              [t, V, m, h, x, a, Q, O]
             ),
             K = o.useCallback((e, t) => {
               D.De.IN_GAMEPADUI || (C(e), I(t));
@@ -2400,7 +2400,7 @@
           T = (0, x.C)(b),
           F = (0, x.Ud)(b),
           N = (0, x.Nl)(),
-          L = (0, j.useQuery)(
+          L = (0, V.useQuery)(
             ["SimilarPlayedAppsLoad", b],
             () => {
               var e;
@@ -2418,7 +2418,7 @@
               () => d.jg.Get().GetRecommendingCuratorsForApp(e) || [],
               [e]
             );
-            return (0, j.useQuery)(
+            return (0, V.useQuery)(
               ["RecommendingCurators", e],
               () =>
                 Promise.all(
@@ -2457,7 +2457,7 @@
               e
             );
           }, [A]),
-          Q = (0, j.useQuery)(
+          Q = (0, V.useQuery)(
             ["FollowedCreators", b],
             () =>
               Y.sV
@@ -2465,7 +2465,7 @@
                 .then((e) => ({ clanInfo: e, type: O[0].type })),
             { enabled: !!D && O && O.length > 0 }
           ),
-          X = (0, j.useQuery)(
+          X = (0, V.useQuery)(
             ["PlayerSummaries", b],
             () =>
               (0, n.mG)(this, void 0, void 0, function* () {
@@ -2535,13 +2535,13 @@
           X.isLoading
         )
           return o.createElement(z.V, { size: "medium", position: "center" });
-        let V = [];
+        let j = [];
         F.isSuccess &&
           F.data.arrSimilarPlayedApps &&
           F.data.arrSimilarPlayedApps.forEach((e) => {
             const t = m.Z.Get().GetApp(e.appid);
             t
-              ? V.push(
+              ? j.push(
                   o.createElement(pe, {
                     key: e.appid,
                     lifetimePlaytime: e.playtimeForever,
@@ -2582,7 +2582,7 @@
           J > 0 && ee++,
           Z && ee++,
           H >= 0 && ee++,
-          V.length > 0 && ee++,
+          j.length > 0 && ee++,
           G &&
             (null === (u = null == P ? void 0 : P.data) || void 0 === u
               ? void 0
@@ -2609,14 +2609,14 @@
                   { className: U().WhyRelevant },
                   (0, k.Xx)("#DiscoveryQueue_WhyRelevant")
                 ),
-                V.length > 0 &&
+                j.length > 0 &&
                   o.createElement(
                     _e,
                     { header: (0, k.Xx)("#DiscoveryQueue_SimilarGames") },
                     o.createElement(
                       "div",
                       { className: U().ReleventSimilarAppsCtn },
-                      V
+                      j
                     )
                   ),
                 G &&

@@ -145,7 +145,7 @@
     },
     35402: (e, t, r) => {
       "use strict";
-      r.d(t, { C: () => B, Y: () => y });
+      r.d(t, { C: () => B, Y: () => w });
       var n = r(70655),
         i = r(9669),
         s = r.n(i),
@@ -163,8 +163,8 @@
         f = r(15845),
         b = r(49875);
       r(54891);
-      const y = 5,
-        w = "auto";
+      const w = 5,
+        y = "auto";
       var S;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
@@ -1015,7 +1015,7 @@
           if (!this.m_mpd) return 0;
           let t = this.GetAvailableVideoStartTime(),
             r = this.GetBufferedLiveEdgeTime();
-          (e = d.Lh(e, t, r)), (this.m_bUserLiveEdgeChoice = e >= r - y);
+          (e = d.Lh(e, t, r)), (this.m_bUserLiveEdgeChoice = e >= r - w);
           let n = this.m_elVideo.paused;
           if ((n || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -1119,7 +1119,7 @@
           let e = [];
           if (
             (e.push({
-              id: w,
+              id: y,
               displayName: "Auto",
               selected: null === this.m_videoRepSelected,
             }),
@@ -1155,7 +1155,7 @@
         SetVideoRepresentation(e) {
           let t = !0,
             r = this.GetVideoLoader();
-          if (e && e.id != w) {
+          if (e && e.id != y) {
             let n = r.GetRepresentationByID(e.id);
             n &&
               ((t = !1),
@@ -1289,7 +1289,7 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new w());
+            (this.m_fpsMonitor = new y());
         }
         GetBytesReceivedToDisplay() {
           return (0, u.l)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -1821,12 +1821,12 @@
         (0, n.gn)([i.LO], b.prototype, "m_nFramesDecoded", void 0),
         (0, n.gn)([i.LO], b.prototype, "m_nFramesDropped", void 0),
         (0, n.gn)([i.aD], b.prototype, "SegmentReceived", null);
-      class y {
+      class w {
         reset(e, t) {
           (this.bDropReading = e), (this.nTotalDecodedFrames = t);
         }
       }
-      class w {
+      class y {
         constructor() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -1901,14 +1901,14 @@
           (r =
             this.m_rgResultsWindow.length >= this.k_nSlidingWindow
               ? this.m_rgResultsWindow.shift()
-              : new y()),
+              : new w()),
             r.reset(e, t),
             this.m_rgResultsWindow.push(r);
         }
       }
-      (0, n.gn)([i.LO], w.prototype, "m_bDroppingFrameDetected", void 0),
-        (0, n.gn)([i.LO], w.prototype, "m_nCurrentFPS", void 0),
-        (0, n.gn)([i.aD.bound], w.prototype, "TakeReading", null);
+      (0, n.gn)([i.LO], y.prototype, "m_bDroppingFrameDetected", void 0),
+        (0, n.gn)([i.LO], y.prototype, "m_nCurrentFPS", void 0),
+        (0, n.gn)([i.aD.bound], y.prototype, "TakeReading", null);
     },
     15845: (e, t, r) => {
       "use strict";
@@ -1916,7 +1916,7 @@
         BE: () => b,
         FH: () => p,
         Jn: () => h,
-        MS: () => y,
+        MS: () => w,
         QA: () => g,
         Y6: () => _,
         v2: () => f,
@@ -2003,7 +2003,7 @@
           (r - t.segmentTemplate.nStartNumber) * n - e.GetDurationSinceStarted()
         );
       }
-      class y {
+      class w {
         constructor() {
           (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
@@ -2184,9 +2184,9 @@
           if (!b.strID || null === b.nStart)
             return (0, i.yv)("MPD - Missing Period Information."), !1;
           (this.m_rgPeriods = []), this.m_rgPeriods.push(b);
-          let y = f.getElementsByTagName("AdaptationSet");
-          for (let e = 0; e < y.length; e++) {
-            let t = y[e],
+          let w = f.getElementsByTagName("AdaptationSet");
+          for (let e = 0; e < w.length; e++) {
+            let t = w[e],
               r = d(t, "description"),
               s = d(t, "lang"),
               o = {
@@ -3130,7 +3130,7 @@
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35,
       ];
-      var h, _, p, g, f, b, y;
+      var h, _, p, g, f, b, w;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -3208,7 +3208,7 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(y || (y = {}));
+        })(w || (w = {}));
     },
     1351: (e, t, r) => {
       "use strict";
@@ -3410,7 +3410,7 @@
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
       })(g || (g = {}));
-      var f, b, y, w, S;
+      var f, b, w, y, S;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -3432,7 +3432,7 @@
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(y || (y = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3442,7 +3442,7 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(w || (w = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
@@ -4737,7 +4737,7 @@
         VJ: () => I,
         VL: () => o,
         WJ: () => L,
-        cR: () => F,
+        cR: () => x,
         eK: () => D,
         oY: () => R,
       });
@@ -4910,9 +4910,9 @@
                   release: { n: 31, c: g },
                   platforms: { n: 32, c: f },
                   game_rating: { n: 33, c: a },
-                  best_purchase_option: { n: 40, c: y },
-                  purchase_options: { n: 41, c: y, r: !0, q: !0 },
-                  accessories: { n: 42, c: y, r: !0, q: !0 },
+                  best_purchase_option: { n: 40, c: w },
+                  purchase_options: { n: 41, c: w, r: !0, q: !0 },
+                  accessories: { n: 42, c: w, r: !0, q: !0 },
                   screenshots: { n: 50, c: S },
                   trailers: { n: 51, c: v },
                   supported_languages: { n: 52, c: M, r: !0, q: !0 },
@@ -5547,6 +5547,11 @@
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
+                  coming_soon_display: {
+                    n: 8,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                   is_early_access: {
                     n: 10,
                     br: i.FE.readBool,
@@ -5616,7 +5621,11 @@
                 fields: {
                   windows: { n: 1, br: i.FE.readBool, bw: i.Xc.writeBool },
                   mac: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  linux: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  steamos_linux: {
+                    n: 3,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
                   vr_support: { n: 10, c: b },
                   steam_deck_compat_category: {
                     n: 11,
@@ -5721,17 +5730,17 @@
           return "StoreItem_Platforms_VRSupport";
         }
       }
-      class y extends s {
+      class w extends s {
         constructor(e = null) {
           super(),
-            y.prototype.packageid || i.aR(y.M()),
+            w.prototype.packageid || i.aR(w.M()),
             s.initialize(this, e, 0, -1, [20, 21, 22], null);
         }
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
                 fields: {
                   packageid: { n: 1, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
                   bundleid: { n: 2, br: i.FE.readInt32, bw: i.Xc.writeInt32 },
@@ -5780,9 +5789,9 @@
                     br: i.FE.readInt32,
                     bw: i.Xc.writeInt32,
                   },
-                  active_discounts: { n: 20, c: w, r: !0, q: !0 },
-                  user_active_discounts: { n: 21, c: w, r: !0, q: !0 },
-                  inactive_discounts: { n: 22, c: w, r: !0, q: !0 },
+                  active_discounts: { n: 20, c: y, r: !0, q: !0 },
+                  user_active_discounts: { n: 21, c: y, r: !0, q: !0 },
+                  inactive_discounts: { n: 22, c: y, r: !0, q: !0 },
                   user_can_purchase: {
                     n: 30,
                     br: i.FE.readBool,
@@ -5802,73 +5811,6 @@
                     n: 41,
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
-                  },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = i.Bh(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption";
-        }
-      }
-      class w extends s {
-        constructor(e = null) {
-          super(),
-            w.prototype.discount_amount || i.aR(w.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  discount_amount: {
-                    n: 1,
-                    br: i.FE.readInt64String,
-                    bw: i.Xc.writeInt64String,
-                  },
-                  discount_description: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  discount_end_date: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -5905,6 +5847,73 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PurchaseOption";
+        }
+      }
+      class y extends s {
+        constructor(e = null) {
+          super(),
+            y.prototype.discount_amount || i.aR(y.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  discount_amount: {
+                    n: 1,
+                    br: i.FE.readInt64String,
+                    bw: i.Xc.writeInt64String,
+                  },
+                  discount_description: {
+                    n: 2,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  discount_end_date: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = i.Bh(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_PurchaseOption_Discount";
@@ -6606,61 +6615,10 @@
           return "CStoreBrowse_GetItems_Request";
         }
       }
-      class F extends s {
-        constructor(e = null) {
-          super(),
-            F.prototype.store_items || i.aR(F.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Response";
-        }
-      }
       class x extends s {
         constructor(e = null) {
           super(),
-            x.prototype.categories || i.aR(x.M()),
+            x.prototype.store_items || i.aR(x.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -6668,7 +6626,7 @@
             x.sm_m ||
               (x.sm_m = {
                 proto: x,
-                fields: { categories: { n: 1, c: A, r: !0, q: !0 } },
+                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
               }),
             x.sm_m
           );
@@ -6703,6 +6661,57 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetItems_Response";
+        }
+      }
+      class F extends s {
+        constructor(e = null) {
+          super(),
+            F.prototype.categories || i.aR(F.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
+                fields: { categories: { n: 1, c: A, r: !0, q: !0 } },
+              }),
+            F.sm_m
+          );
+        }
+        static MBF() {
+          return F.sm_mbf || (F.sm_mbf = i.Bh(F.M())), F.sm_mbf;
+        }
+        toObject(e = !1) {
+          return F.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(F.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(F.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(F.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(F.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetStoreCategories_Response";
@@ -6789,14 +6798,14 @@
       var I;
       !(function (e) {
         (e.GetItems = function (e, t) {
-          return e.SendMsg("StoreBrowse.GetItems#1", t, F, {
+          return e.SendMsg("StoreBrowse.GetItems#1", t, x, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
           });
         }),
           (e.GetStoreCategories = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, x, {
+            return e.SendMsg("StoreBrowse.GetStoreCategories#1", t, F, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -7557,22 +7566,22 @@
         window.addEventListener || (r.g && r.g.addEventListener) || (() => {});
       let f,
         b = [],
-        y = (e, t) => b.push({ error: e, cCallsitesToIgnore: t });
-      const w = !0;
+        w = (e, t) => b.push({ error: e, cCallsitesToIgnore: t });
+      const y = !0;
       {
         const e = console.assert;
         console.assert = (t, r, ...n) => {
-          t || y(new Error(v(r, ...n)), 2), e.apply(console, [t, r, ...n]);
+          t || w(new Error(v(r, ...n)), 2), e.apply(console, [t, r, ...n]);
         };
         const t = console.error;
         (console.error = (e, ...r) => {
-          y(new Error(v(e, ...r)), 1), t.apply(console, [e, ...r]);
+          w(new Error(v(e, ...r)), 1), t.apply(console, [e, ...r]);
         }),
           g("error", (e) => {
-            y(e.error, 0);
+            w(e.error, 0);
           }),
           (f = window.setTimeout(() => {
-            (b = []), (y = () => {});
+            (b = []), (w = () => {});
           }, 3e4));
       }
       const S = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 };
@@ -7587,8 +7596,8 @@
               ? (b.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t })
                 ),
-                (y = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (y = () => {}),
+                (w = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (w = () => {}),
             (b = []),
             clearTimeout(f),
             window.setTimeout(() => {
@@ -7650,7 +7659,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: s,
-                            identifierHash: yield F(s),
+                            identifierHash: yield x(s),
                             message: a,
                           };
                         });
@@ -7680,7 +7689,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: s,
-                            identifierHash: yield F(s),
+                            identifierHash: yield x(s),
                             message: [e.message, ...a],
                           };
                         });
@@ -7714,7 +7723,7 @@
                             .filter((e) => !!e);
                           return {
                             identifier: o,
-                            identifierHash: yield F(o),
+                            identifierHash: yield x(o),
                             message: [e.message, ...l],
                           };
                         });
@@ -7784,7 +7793,7 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return w;
+          return y;
         }
       }
       function v(e, ...t) {
@@ -7828,7 +7837,7 @@
             u.LJ.InstallErrorReportingStore(k),
             p.InstallErrorReportingStore(k);
         };
-      function F(e) {
+      function x(e) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           try {
             const r = yield window.crypto.subtle.digest(
@@ -8345,83 +8354,84 @@
     95598: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $06: () => H,
+        $06: () => X,
         $gZ: () => u,
-        BKy: () => x,
-        BNo: () => he,
-        Bh5: () => ae,
-        Cts: () => be,
+        BKy: () => A,
+        BNo: () => _e,
+        Bh5: () => oe,
+        Cts: () => we,
         Ehc: () => R,
         GhU: () => v,
-        I8b: () => ne,
-        IWH: () => U,
+        I8b: () => ie,
+        IWH: () => j,
         JrY: () => M,
-        KJh: () => ue,
-        KKY: () => De,
-        LjF: () => we,
+        KJh: () => he,
+        KKY: () => xe,
+        LjF: () => Se,
         Lk$: () => J,
-        MrB: () => $,
+        MrB: () => Z,
         NP6: () => F,
         P7E: () => b,
-        P9w: () => N,
-        Q0U: () => ce,
-        Q1v: () => pe,
+        P9w: () => V,
+        Q0U: () => me,
+        Q1v: () => ge,
         SUY: () => p,
-        SjW: () => fe,
-        Ucz: () => X,
+        SjW: () => be,
+        Ucz: () => $,
         Uos: () => L,
-        V7n: () => O,
-        VR: () => Z,
-        Vgm: () => ee,
-        X: () => y,
-        XBH: () => j,
-        YVI: () => Re,
-        YVR: () => P,
-        YqJ: () => A,
+        V7n: () => P,
+        VR: () => q,
+        Vgm: () => te,
+        X: () => w,
+        XBH: () => W,
+        YVI: () => De,
+        YVR: () => N,
+        YqJ: () => I,
         YtI: () => _,
-        ZJH: () => oe,
+        ZJH: () => le,
         Zrf: () => d,
-        _GE: () => te,
-        c7E: () => Te,
-        dLw: () => me,
-        doA: () => Se,
+        _GE: () => re,
+        c7E: () => Le,
+        dLw: () => de,
+        doA: () => Be,
         dzL: () => C,
         ffh: () => B,
         g0p: () => ye,
-        gR: () => I,
-        j7C: () => Le,
+        gR: () => G,
+        j7C: () => Re,
         k4K: () => f,
-        kqV: () => _e,
-        ktE: () => ge,
-        lsH: () => z,
-        mBz: () => ke,
+        kqV: () => pe,
+        ktE: () => fe,
+        lsH: () => U,
+        mBz: () => Te,
         mKE: () => k,
-        mKt: () => ie,
-        miF: () => Me,
-        opd: () => Be,
-        pVO: () => w,
+        mKt: () => se,
+        miF: () => ke,
+        opd: () => ve,
+        pVO: () => y,
         pkz: () => S,
-        r6F: () => G,
+        r6F: () => O,
         ret: () => h,
         shV: () => E,
-        sqQ: () => ve,
-        tEX: () => W,
-        tLe: () => K,
-        thP: () => D,
+        sqQ: () => Ee,
+        tEX: () => H,
+        tLe: () => Q,
+        thP: () => x,
         tkI: () => g,
-        uZu: () => se,
-        ui7: () => V,
-        vJ$: () => le,
-        vT2: () => q,
+        uZu: () => ae,
+        ui7: () => z,
+        vJ$: () => ce,
+        vT2: () => Y,
         vyu: () => Fe,
         wUs: () => T,
-        wn$: () => re,
-        wr9: () => Y,
-        x0L: () => Ce,
-        xg: () => de,
-        yTr: () => Ee,
-        yVt: () => Q,
-        z5E: () => xe,
+        wn$: () => ne,
+        wr9: () => K,
+        wx$: () => D,
+        x0L: () => Me,
+        xg: () => ue,
+        yTr: () => Ce,
+        yVt: () => ee,
+        z5E: () => Ae,
       });
       var n = r(70655),
         i = r(67294),
@@ -8664,7 +8674,7 @@
           )
         );
       }
-      function y(e) {
+      function w(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -8689,7 +8699,7 @@
           )
         );
       }
-      function w(e) {
+      function y(e) {
         const t = e.color || "#FFFFFF";
         return i.createElement(
           "svg",
@@ -9268,7 +9278,85 @@
           })
         );
       }
-      function D() {
+      function D(e) {
+        const { direction: t } = e,
+          r = (0, n._T)(e, ["direction"]);
+        switch (t) {
+          case "up":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                r
+              ),
+              i.createElement("path", {
+                d: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
+                fill: "currentColor",
+              })
+            );
+          case "down":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                r
+              ),
+              i.createElement("path", {
+                d: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
+                fill: "currentColor",
+              })
+            );
+          case "left":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "36px",
+                  height: "36px",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                r
+              ),
+              i.createElement("path", {
+                d: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
+                fill: "currentColor",
+              })
+            );
+          case "right":
+            return i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  viewBox: "0 0 36 36",
+                  width: "36px",
+                  height: "36px",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg",
+                },
+                r
+              ),
+              i.createElement("path", {
+                d: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
+                fill: "currentColor",
+              })
+            );
+        }
+      }
+      function x() {
         return i.createElement(
           "svg",
           {
@@ -9324,7 +9412,7 @@
             })
         );
       }
-      function x(e) {
+      function A(e) {
         const { angle: t } = e,
           r = (0, n._T)(e, ["angle"]);
         return i.createElement(
@@ -9346,7 +9434,7 @@
           })
         );
       }
-      function A() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -9382,7 +9470,7 @@
           })
         );
       }
-      function I() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -9408,7 +9496,7 @@
           })
         );
       }
-      function G() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -9441,7 +9529,7 @@
           })
         );
       }
-      function O(e) {
+      function P(e) {
         return i.createElement(
           "svg",
           {
@@ -9462,7 +9550,7 @@
           })
         );
       }
-      function P() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -9497,7 +9585,7 @@
           })
         );
       }
-      function N(e) {
+      function V(e) {
         return i.createElement(
           "svg",
           {
@@ -9535,7 +9623,7 @@
           })
         );
       }
-      function V(e) {
+      function z(e) {
         const t = (0, o.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -9566,7 +9654,7 @@
           })
         );
       }
-      function z() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -9592,7 +9680,7 @@
           })
         );
       }
-      function U() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -9613,7 +9701,7 @@
           )
         );
       }
-      function j() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -9633,7 +9721,7 @@
           )
         );
       }
-      function W() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -9670,7 +9758,7 @@
           )
         );
       }
-      function H() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -9698,7 +9786,7 @@
           })
         );
       }
-      function X() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -9718,7 +9806,7 @@
           })
         );
       }
-      function $(e) {
+      function Z(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -9738,7 +9826,7 @@
           })
         );
       }
-      function Z() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -9760,7 +9848,7 @@
           })
         );
       }
-      function q() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -9805,7 +9893,7 @@
           })
         );
       }
-      function Y() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -9838,7 +9926,7 @@
           })
         );
       }
-      function K() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -9876,7 +9964,7 @@
           })
         );
       }
-      function Q() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -9897,7 +9985,7 @@
           })
         );
       }
-      function ee() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -9928,7 +10016,7 @@
           })
         );
       }
-      function te() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -9994,7 +10082,7 @@
           })
         );
       }
-      function re() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -10013,7 +10101,7 @@
           })
         );
       }
-      function ne() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -10051,7 +10139,7 @@
           })
         );
       }
-      function ie() {
+      function se() {
         return i.createElement(
           "svg",
           {
@@ -10076,7 +10164,7 @@
           })
         );
       }
-      function se() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -10098,7 +10186,7 @@
           })
         );
       }
-      function ae() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -10138,7 +10226,7 @@
           })
         );
       }
-      function oe() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -10166,7 +10254,7 @@
           )
         );
       }
-      function le() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -10182,7 +10270,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function ce() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -10201,7 +10289,7 @@
           })
         );
       }
-      function me() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -10220,7 +10308,7 @@
           })
         );
       }
-      function de(e, t) {
+      function ue(e, t) {
         return m.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -10257,7 +10345,7 @@
               })
             );
       }
-      function ue(e) {
+      function he(e) {
         return i.createElement(
           "svg",
           {
@@ -10276,7 +10364,7 @@
           })
         );
       }
-      function he(e) {
+      function _e(e) {
         return i.createElement(
           "svg",
           {
@@ -10312,7 +10400,7 @@
           )
         );
       }
-      function _e(e) {
+      function pe(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10329,30 +10417,6 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M57.9907 30.2382L57.9932 30.1318L23.3635 58.4652L23.159 58.2152L23.0596 58.295C9.86456 55.3567 0 43.5804 0 29.5C0 13.2076 13.2076 0 29.5 0C45.7683 0 58.9609 13.1684 59 29.4275L57.9907 30.2382ZM57.9886 28.6833C52.956 26.4605 41.9077 24.7254 31.9404 33.2687C22.1502 41.6604 21.6264 52.0873 22.7598 57.1984C10.2728 54.1704 1 42.9181 1 29.5C1 13.7599 13.7599 1 29.5 1C44.967 1 57.5563 13.3209 57.9886 28.6833ZM57.2445 29.4523L23.7148 56.8857C22.676 52.0493 23.1845 42.0909 32.5912 34.028C41.9759 25.984 52.3311 27.4183 57.2445 29.4523Z",
-            fill: "",
-          })
-        );
-      }
-      function pe(e) {
-        const { className: t } = e,
-          r = (0, n._T)(e, ["className"]);
-        return i.createElement(
-          "svg",
-          Object.assign(
-            {
-              className: (0, o.Z)(t, "SVGIcon_Button"),
-              width: "60px",
-              height: "52px",
-              viewBox: "0 0 60 52",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r
-          ),
-          i.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M0.5 5.5C0.5 2.46243 2.96243 0 6 0H54C57.0376 0 59.5 2.46243 59.5 5.5V35C59.5 38.0376 57.0376 40.5 54 40.5H52.5C51.6716 40.5 51 41.1716 51 42V50.0858C51 51.4221 49.3843 52.0914 48.4393 51.1464L37.7929 40.5H6C2.96243 40.5 0.5 38.0376 0.5 35V5.5ZM6 1C3.51472 1 1.5 3.01472 1.5 5.5V35C1.5 37.4853 3.51472 39.5 6 39.5H38H38.2071L38.3536 39.6464L49.1464 50.4393C49.4614 50.7543 50 50.5312 50 50.0858V42C50 40.6193 51.1193 39.5 52.5 39.5H54C56.4853 39.5 58.5 37.4853 58.5 35V5.5C58.5 3.01472 56.4853 1 54 1H6ZM30 32C36.6274 32 42 26.6274 42 20C42 13.3726 36.6274 8 30 8C23.3726 8 18 13.3726 18 20C18 26.6274 23.3726 32 30 32ZM30 33C37.1797 33 43 27.1797 43 20C43 12.8203 37.1797 7 30 7C22.8203 7 17 12.8203 17 20C17 27.1797 22.8203 33 30 33ZM26.5 18C27.3284 18 28 17.3284 28 16.5C28 15.6716 27.3284 15 26.5 15C25.6716 15 25 15.6716 25 16.5C25 17.3284 25.6716 18 26.5 18ZM35 16.5C35 17.3284 34.3284 18 33.5 18C32.6716 18 32 17.3284 32 16.5C32 15.6716 32.6716 15 33.5 15C34.3284 15 35 15.6716 35 16.5ZM24.5 22C24.5 24.4853 26.5147 26.5 29 26.5H31C33.4853 26.5 35.5 24.4853 35.5 22H34.5C34.5 23.933 32.933 25.5 31 25.5H29C27.067 25.5 25.5 23.933 25.5 22H24.5Z",
             fill: "",
           })
         );
@@ -10376,12 +10440,36 @@
           i.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d: "M6 0C2.96243 0 0.5 2.46243 0.5 5.5V35C0.5 38.0376 2.96243 40.5 6 40.5H37.7929L48.4393 51.1464C49.3843 52.0914 51 51.4221 51 50.0858V42C51 41.1716 51.6716 40.5 52.5 40.5H54C57.0376 40.5 59.5 38.0376 59.5 35V5.5C59.5 2.46243 57.0376 0 54 0H6ZM1.5 5.5C1.5 3.01472 3.51472 1 6 1H54C56.4853 1 58.5 3.01472 58.5 5.5V35C58.5 37.4853 56.4853 39.5 54 39.5H52.5C51.1193 39.5 50 40.6193 50 42V50.0858C50 50.5312 49.4614 50.7543 49.1464 50.4393L38.3536 39.6464L38.2071 39.5H38H6C3.51472 39.5 1.5 37.4853 1.5 35V5.5ZM16 8.88154L17.8736 13.9448C18.0761 14.4922 18.5078 14.9239 19.0552 15.1264L24.1185 17L19.0552 18.8736C18.5078 19.0761 18.0761 19.5078 17.8736 20.0552L16 25.1185L14.1264 20.0552C13.9239 19.5078 13.4922 19.0761 12.9448 18.8736L7.88154 17L12.9448 15.1264C13.4922 14.9239 13.9239 14.4922 14.1264 13.9448L16 8.88154ZM15.0621 8.53451C15.3843 7.66389 16.6157 7.66389 16.9379 8.5345L18.8114 13.5978C18.9127 13.8715 19.1285 14.0873 19.4022 14.1886L24.4655 16.0621C25.3361 16.3843 25.3361 17.6157 24.4655 17.9379L19.4022 19.8114C19.1285 19.9127 18.9127 20.1285 18.8114 20.4022L16.9379 25.4655C16.6157 26.3361 15.3843 26.3361 15.0621 25.4655L13.1886 20.4022C13.0873 20.1285 12.8715 19.9127 12.5978 19.8114L7.53451 17.9379C6.66389 17.6157 6.66389 16.3843 7.5345 16.0621L12.5978 14.1886C12.8715 14.0873 13.0873 13.8715 13.1886 13.5978L15.0621 8.53451ZM32.8736 23.9448L31 18.8815L29.1264 23.9448C28.9239 24.4922 28.4922 24.9239 27.9448 25.1264L22.8815 27L27.9448 28.8736C28.4922 29.0761 28.9239 29.5078 29.1264 30.0552L31 35.1185L32.8736 30.0552C33.0761 29.5078 33.5078 29.0761 34.0552 28.8736L39.1185 27L34.0552 25.1264C33.5078 24.9239 33.0761 24.4922 32.8736 23.9448ZM31.9379 18.5345C31.6157 17.6639 30.3843 17.6639 30.0621 18.5345L28.1886 23.5978C28.0873 23.8715 27.8715 24.0873 27.5978 24.1886L22.5345 26.0621C21.6639 26.3843 21.6639 27.6157 22.5345 27.9379L27.5978 29.8114C27.8715 29.9127 28.0873 30.1285 28.1886 30.4022L30.0621 35.4655C30.3843 36.3361 31.6157 36.3361 31.9379 35.4655L33.8114 30.4022C33.9127 30.1285 34.1285 29.9127 34.4022 29.8114L39.4655 27.9379C40.3361 27.6157 40.3361 26.3843 39.4655 26.0621L34.4022 24.1886C34.1285 24.0873 33.9127 23.8715 33.8114 23.5978L31.9379 18.5345ZM43 4.88154L44.8736 9.9448C45.0761 10.4922 45.5078 10.9239 46.0552 11.1264L51.1185 13L46.0552 14.8736C45.5078 15.0761 45.0761 15.5078 44.8736 16.0552L43 21.1185L41.1264 16.0552C40.9239 15.5078 40.4922 15.0761 39.9448 14.8736L34.8815 13L39.9448 11.1264C40.4922 10.9239 40.9239 10.4922 41.1264 9.9448L43 4.88154ZM42.0621 4.53451C42.3843 3.66389 43.6157 3.66389 43.9379 4.5345L45.8114 9.59776C45.9127 9.87148 46.1285 10.0873 46.4022 10.1886L51.4655 12.0621C52.3361 12.3843 52.3361 13.6157 51.4655 13.9379L46.4022 15.8114C46.1285 15.9127 45.9127 16.1285 45.8114 16.4022L43.9379 21.4655C43.6157 22.3361 42.3843 22.3361 42.0621 21.4655L40.1886 16.4022C40.0873 16.1285 39.8715 15.9127 39.5978 15.8114L34.5345 13.9379C33.6639 13.6157 33.6639 12.3843 34.5345 12.0621L39.5978 10.1886C39.8715 10.0873 40.0873 9.87148 40.1886 9.59776L42.0621 4.53451Z",
+            d: "M0.5 5.5C0.5 2.46243 2.96243 0 6 0H54C57.0376 0 59.5 2.46243 59.5 5.5V35C59.5 38.0376 57.0376 40.5 54 40.5H52.5C51.6716 40.5 51 41.1716 51 42V50.0858C51 51.4221 49.3843 52.0914 48.4393 51.1464L37.7929 40.5H6C2.96243 40.5 0.5 38.0376 0.5 35V5.5ZM6 1C3.51472 1 1.5 3.01472 1.5 5.5V35C1.5 37.4853 3.51472 39.5 6 39.5H38H38.2071L38.3536 39.6464L49.1464 50.4393C49.4614 50.7543 50 50.5312 50 50.0858V42C50 40.6193 51.1193 39.5 52.5 39.5H54C56.4853 39.5 58.5 37.4853 58.5 35V5.5C58.5 3.01472 56.4853 1 54 1H6ZM30 32C36.6274 32 42 26.6274 42 20C42 13.3726 36.6274 8 30 8C23.3726 8 18 13.3726 18 20C18 26.6274 23.3726 32 30 32ZM30 33C37.1797 33 43 27.1797 43 20C43 12.8203 37.1797 7 30 7C22.8203 7 17 12.8203 17 20C17 27.1797 22.8203 33 30 33ZM26.5 18C27.3284 18 28 17.3284 28 16.5C28 15.6716 27.3284 15 26.5 15C25.6716 15 25 15.6716 25 16.5C25 17.3284 25.6716 18 26.5 18ZM35 16.5C35 17.3284 34.3284 18 33.5 18C32.6716 18 32 17.3284 32 16.5C32 15.6716 32.6716 15 33.5 15C34.3284 15 35 15.6716 35 16.5ZM24.5 22C24.5 24.4853 26.5147 26.5 29 26.5H31C33.4853 26.5 35.5 24.4853 35.5 22H34.5C34.5 23.933 32.933 25.5 31 25.5H29C27.067 25.5 25.5 23.933 25.5 22H24.5Z",
             fill: "",
           })
         );
       }
       function fe(e) {
+        const { className: t } = e,
+          r = (0, n._T)(e, ["className"]);
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              className: (0, o.Z)(t, "SVGIcon_Button"),
+              width: "60px",
+              height: "52px",
+              viewBox: "0 0 60 52",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            r
+          ),
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M6 0C2.96243 0 0.5 2.46243 0.5 5.5V35C0.5 38.0376 2.96243 40.5 6 40.5H37.7929L48.4393 51.1464C49.3843 52.0914 51 51.4221 51 50.0858V42C51 41.1716 51.6716 40.5 52.5 40.5H54C57.0376 40.5 59.5 38.0376 59.5 35V5.5C59.5 2.46243 57.0376 0 54 0H6ZM1.5 5.5C1.5 3.01472 3.51472 1 6 1H54C56.4853 1 58.5 3.01472 58.5 5.5V35C58.5 37.4853 56.4853 39.5 54 39.5H52.5C51.1193 39.5 50 40.6193 50 42V50.0858C50 50.5312 49.4614 50.7543 49.1464 50.4393L38.3536 39.6464L38.2071 39.5H38H6C3.51472 39.5 1.5 37.4853 1.5 35V5.5ZM16 8.88154L17.8736 13.9448C18.0761 14.4922 18.5078 14.9239 19.0552 15.1264L24.1185 17L19.0552 18.8736C18.5078 19.0761 18.0761 19.5078 17.8736 20.0552L16 25.1185L14.1264 20.0552C13.9239 19.5078 13.4922 19.0761 12.9448 18.8736L7.88154 17L12.9448 15.1264C13.4922 14.9239 13.9239 14.4922 14.1264 13.9448L16 8.88154ZM15.0621 8.53451C15.3843 7.66389 16.6157 7.66389 16.9379 8.5345L18.8114 13.5978C18.9127 13.8715 19.1285 14.0873 19.4022 14.1886L24.4655 16.0621C25.3361 16.3843 25.3361 17.6157 24.4655 17.9379L19.4022 19.8114C19.1285 19.9127 18.9127 20.1285 18.8114 20.4022L16.9379 25.4655C16.6157 26.3361 15.3843 26.3361 15.0621 25.4655L13.1886 20.4022C13.0873 20.1285 12.8715 19.9127 12.5978 19.8114L7.53451 17.9379C6.66389 17.6157 6.66389 16.3843 7.5345 16.0621L12.5978 14.1886C12.8715 14.0873 13.0873 13.8715 13.1886 13.5978L15.0621 8.53451ZM32.8736 23.9448L31 18.8815L29.1264 23.9448C28.9239 24.4922 28.4922 24.9239 27.9448 25.1264L22.8815 27L27.9448 28.8736C28.4922 29.0761 28.9239 29.5078 29.1264 30.0552L31 35.1185L32.8736 30.0552C33.0761 29.5078 33.5078 29.0761 34.0552 28.8736L39.1185 27L34.0552 25.1264C33.5078 24.9239 33.0761 24.4922 32.8736 23.9448ZM31.9379 18.5345C31.6157 17.6639 30.3843 17.6639 30.0621 18.5345L28.1886 23.5978C28.0873 23.8715 27.8715 24.0873 27.5978 24.1886L22.5345 26.0621C21.6639 26.3843 21.6639 27.6157 22.5345 27.9379L27.5978 29.8114C27.8715 29.9127 28.0873 30.1285 28.1886 30.4022L30.0621 35.4655C30.3843 36.3361 31.6157 36.3361 31.9379 35.4655L33.8114 30.4022C33.9127 30.1285 34.1285 29.9127 34.4022 29.8114L39.4655 27.9379C40.3361 27.6157 40.3361 26.3843 39.4655 26.0621L34.4022 24.1886C34.1285 24.0873 33.9127 23.8715 33.8114 23.5978L31.9379 18.5345ZM43 4.88154L44.8736 9.9448C45.0761 10.4922 45.5078 10.9239 46.0552 11.1264L51.1185 13L46.0552 14.8736C45.5078 15.0761 45.0761 15.5078 44.8736 16.0552L43 21.1185L41.1264 16.0552C40.9239 15.5078 40.4922 15.0761 39.9448 14.8736L34.8815 13L39.9448 11.1264C40.4922 10.9239 40.9239 10.4922 41.1264 9.9448L43 4.88154ZM42.0621 4.53451C42.3843 3.66389 43.6157 3.66389 43.9379 4.5345L45.8114 9.59776C45.9127 9.87148 46.1285 10.0873 46.4022 10.1886L51.4655 12.0621C52.3361 12.3843 52.3361 13.6157 51.4655 13.9379L46.4022 15.8114C46.1285 15.9127 45.9127 16.1285 45.8114 16.4022L43.9379 21.4655C43.6157 22.3361 42.3843 22.3361 42.0621 21.4655L40.1886 16.4022C40.0873 16.1285 39.8715 15.9127 39.5978 15.8114L34.5345 13.9379C33.6639 13.6157 33.6639 12.3843 34.5345 12.0621L39.5978 10.1886C39.8715 10.0873 40.0873 9.87148 40.1886 9.59776L42.0621 4.53451Z",
+            fill: "",
+          })
+        );
+      }
+      function be(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10405,7 +10493,7 @@
           })
         );
       }
-      function be(e) {
+      function we(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10448,7 +10536,7 @@
           })
         );
       }
-      function we(e) {
+      function Se(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10654,7 +10742,7 @@
           )
         );
       }
-      function Se(e) {
+      function Be(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10832,7 +10920,7 @@
           )
         );
       }
-      function Be() {
+      function ve() {
         return i.createElement(
           "svg",
           {
@@ -10863,7 +10951,7 @@
           )
         );
       }
-      function ve(e) {
+      function Ee(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -10879,7 +10967,7 @@
           })
         );
       }
-      function Ee() {
+      function Ce() {
         return i.createElement(
           "svg",
           {
@@ -10897,7 +10985,7 @@
           })
         );
       }
-      function Ce() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -10919,7 +11007,7 @@
           )
         );
       }
-      function Me() {
+      function ke() {
         return i.createElement(
           "svg",
           {
@@ -10957,7 +11045,7 @@
           )
         );
       }
-      function ke(e) {
+      function Te(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -10975,7 +11063,7 @@
           })
         );
       }
-      function Te() {
+      function Le() {
         return i.createElement(
           "svg",
           {
@@ -11009,7 +11097,7 @@
           )
         );
       }
-      function Le(e) {
+      function Re(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11032,7 +11120,7 @@
           })
         );
       }
-      function Re(e) {
+      function De(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11060,7 +11148,7 @@
           })
         );
       }
-      function De(e) {
+      function xe(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11116,7 +11204,7 @@
           })
         );
       }
-      function xe(e) {
+      function Ae(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11257,6 +11345,13 @@
               strErrorMsg: e.response.data.message,
               errorCode: e.response.data.success,
             };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.response.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
         } else {
           if (void 0 !== e.success && void 0 !== e.msg)
             return { strErrorMsg: e.msg, errorCode: e.success };
@@ -11604,12 +11699,12 @@
         Eu: () => E,
         GB: () => n,
         J$: () => c,
-        Jk: () => y,
+        Jk: () => w,
         Lh: () => f,
         Mv: () => S,
         RA: () => o,
         RD: () => d,
-        U0: () => w,
+        U0: () => y,
         V2: () => B,
         _J: () => p,
         __: () => _,
@@ -11654,13 +11749,13 @@
         }
         return r;
       }
-      function y(e, t) {
+      function w(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function w(e, t) {
+      function y(e, t) {
         if (!("ownerDocument" in e)) return !0;
         const r = e.ownerDocument.defaultView.getComputedStyle(e),
           n = "x" === t ? r.overflowX : r.overflowY;
@@ -11730,7 +11825,7 @@
         Xx: () => d,
         Yt: () => v,
         eH: () => B,
-        is: () => w,
+        is: () => y,
         jr: () => c.jr,
         kQ: () => u,
         kb: () => g,
@@ -11924,7 +12019,7 @@
           return null;
         }
       }
-      const y = {
+      const w = {
           english: "en",
           german: "de",
           french: "fr",
@@ -11957,7 +12052,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        w = {
+        y = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -11989,7 +12084,7 @@
           "vi-VN": 28,
         };
       function S() {
-        return y[a.De.LANGUAGE] || null;
+        return w[a.De.LANGUAGE] || null;
       }
       function B(e) {
         let t,
@@ -12019,6 +12114,7 @@
       "use strict";
       r.d(t, {
         $1: () => l,
+        Kb: () => M,
         LO: () => C,
         Mh: () => B,
         Np: () => E,
@@ -12030,76 +12126,76 @@
         yW: () => o,
       });
       var n,
-        i = r(41311),
-        s = r(30600),
-        a = r(27661);
+        i = r(27661),
+        s = r(41311),
+        a = r(30600);
       function o(e, t, r) {
-        let a;
+        let i;
         if ("boolean" == typeof t) {
-          a = {
+          i = {
             eSuffix: t ? n.None : n.Ago,
             bForceSingleUnits: r,
             bHighGranularity: !1,
           };
         } else
-          a = Object.assign(
+          i = Object.assign(
             { eSuffix: n.Ago, bForceSingleUnits: !1, bHighGranularity: !1 },
             t
           );
         let o = "#TimeInterval_";
         if (
-          (a.eSuffix == n.Ago
+          (i.eSuffix == n.Ago
             ? (o = "#TimeSince_")
-            : a.eSuffix == n.Remaining && (o = "#TimeRemaining_"),
-          e >= 2 * s._H.PerYear)
+            : i.eSuffix == n.Remaining && (o = "#TimeRemaining_"),
+          e >= 2 * a._H.PerYear)
         )
-          return (0, i.Xx)(o + "XYears", Math.floor(e / s._H.PerYear));
-        if (e >= s._H.PerYear)
-          return (e -= s._H.PerYear) >= 2 * s._H.PerMonth &&
-            !a.bForceSingleUnits
-            ? (0, i.Xx)(o + "1YearXMonths", Math.floor(e / s._H.PerMonth))
-            : (0, i.Xx)(o + "1Year");
-        if (e >= 2 * s._H.PerMonth)
-          return (0, i.Xx)(o + "XMonths", Math.floor(e / s._H.PerMonth));
-        if (e >= 2 * s._H.PerWeek)
-          return (0, i.Xx)(o + "XWeeks", Math.floor(e / s._H.PerWeek));
-        if (e >= s._H.PerWeek)
-          return (0, i.Xx)(o + "1Week", Math.floor(e / s._H.PerWeek));
-        if (e >= 2 * s._H.PerDay)
-          return (0, i.Xx)(o + "XDays", Math.floor(e / s._H.PerDay));
-        if (e >= s._H.PerDay)
-          return (e -= s._H.PerDay) >= 2 * s._H.PerHour && !a.bForceSingleUnits
-            ? (0, i.Xx)(o + "1DayXHours", Math.floor(e / s._H.PerHour))
-            : (0, i.Xx)(o + "1Day");
-        if (e >= 2 * s._H.PerHour)
-          return (0, i.Xx)(o + "XHours", Math.floor(e / s._H.PerHour));
-        if (e >= s._H.PerHour)
-          return (e -= s._H.PerHour) >= 2 * s._H.PerMinute &&
-            !a.bForceSingleUnits
-            ? (0, i.Xx)(o + "1HourXMinutes", Math.floor(e / s._H.PerMinute))
-            : (0, i.Xx)(o + "1Hour");
-        if (e >= 2 * s._H.PerMinute) {
-          const t = Math.floor(e / s._H.PerMinute),
-            r = e % s._H.PerMinute;
-          return a.bHighGranularity && 0 != r
+          return (0, s.Xx)(o + "XYears", Math.floor(e / a._H.PerYear));
+        if (e >= a._H.PerYear)
+          return (e -= a._H.PerYear) >= 2 * a._H.PerMonth &&
+            !i.bForceSingleUnits
+            ? (0, s.Xx)(o + "1YearXMonths", Math.floor(e / a._H.PerMonth))
+            : (0, s.Xx)(o + "1Year");
+        if (e >= 2 * a._H.PerMonth)
+          return (0, s.Xx)(o + "XMonths", Math.floor(e / a._H.PerMonth));
+        if (e >= 2 * a._H.PerWeek)
+          return (0, s.Xx)(o + "XWeeks", Math.floor(e / a._H.PerWeek));
+        if (e >= a._H.PerWeek)
+          return (0, s.Xx)(o + "1Week", Math.floor(e / a._H.PerWeek));
+        if (e >= 2 * a._H.PerDay)
+          return (0, s.Xx)(o + "XDays", Math.floor(e / a._H.PerDay));
+        if (e >= a._H.PerDay)
+          return (e -= a._H.PerDay) >= 2 * a._H.PerHour && !i.bForceSingleUnits
+            ? (0, s.Xx)(o + "1DayXHours", Math.floor(e / a._H.PerHour))
+            : (0, s.Xx)(o + "1Day");
+        if (e >= 2 * a._H.PerHour)
+          return (0, s.Xx)(o + "XHours", Math.floor(e / a._H.PerHour));
+        if (e >= a._H.PerHour)
+          return (e -= a._H.PerHour) >= 2 * a._H.PerMinute &&
+            !i.bForceSingleUnits
+            ? (0, s.Xx)(o + "1HourXMinutes", Math.floor(e / a._H.PerMinute))
+            : (0, s.Xx)(o + "1Hour");
+        if (e >= 2 * a._H.PerMinute) {
+          const t = Math.floor(e / a._H.PerMinute),
+            r = e % a._H.PerMinute;
+          return i.bHighGranularity && 0 != r
             ? 1 == r
-              ? (0, i.Xx)(o + "XMinutes1Second", t)
-              : (0, i.Xx)(o + "XMinutesXSeconds", t, r)
-            : (0, i.Xx)(o + "XMinutes", t);
+              ? (0, s.Xx)(o + "XMinutes1Second", t)
+              : (0, s.Xx)(o + "XMinutesXSeconds", t, r)
+            : (0, s.Xx)(o + "XMinutes", t);
         }
-        if (e >= s._H.PerMinute) {
-          const t = e % s._H.PerMinute;
-          return a.bHighGranularity && 0 != t
+        if (e >= a._H.PerMinute) {
+          const t = e % a._H.PerMinute;
+          return i.bHighGranularity && 0 != t
             ? 1 == t
-              ? (0, i.Xx)(o + "1Minute1Second")
-              : (0, i.Xx)(o + "1MinuteXSeconds", t)
-            : (0, i.Xx)(o + "1Minute");
+              ? (0, s.Xx)(o + "1Minute1Second")
+              : (0, s.Xx)(o + "1MinuteXSeconds", t)
+            : (0, s.Xx)(o + "1Minute");
         }
-        return a.bHighGranularity
+        return i.bHighGranularity
           ? 1 == e
-            ? (0, i.Xx)(o + "1Second")
-            : (0, i.Xx)(o + "XSeconds", e)
-          : (0, i.Xx)(o + "LessThanAMinute");
+            ? (0, s.Xx)(o + "1Second")
+            : (0, s.Xx)(o + "XSeconds", e)
+          : (0, s.Xx)(o + "LessThanAMinute");
       }
       function l(e, t, r) {
         const n = {
@@ -12109,7 +12205,7 @@
           year: t ? void 0 : "numeric",
         };
         return new Date(1e3 * e).toLocaleDateString(
-          i.Yt.GetPreferredLocales(),
+          s.Yt.GetPreferredLocales(),
           n
         );
       }
@@ -12119,7 +12215,7 @@
         let n = u.get(r);
         if (n) return n;
         return (
-          (n = t.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          (n = t.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
             month: "short",
             day: "numeric",
@@ -12137,8 +12233,8 @@
       const m = new Map();
       function d(e, t) {
         const r = new Date(1e3 * e),
-          n = i.Yt.GetPreferredLocales(),
-          s =
+          n = s.Yt.GetPreferredLocales(),
+          i =
             t.bForce24HourClock ||
             (function (e) {
               let t = m.get(e);
@@ -12155,7 +12251,7 @@
             })(n[0]);
         return r.toLocaleTimeString(
           n,
-          s
+          i
             ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
             : { hour: "numeric", minute: "2-digit" }
         );
@@ -12163,25 +12259,25 @@
       const u = new Map(),
         h = new Map();
       function _(e, t, r = !0, n = !0) {
-        const s = new Date(),
+        const a = new Date(),
           o = new Date(1e3 * e);
-        if (o.getFullYear() != s.getFullYear()) return c(e);
-        n && a.zO(new Date().setHours(24, 0, 0, 0) - s.getTime());
+        if (o.getFullYear() != a.getFullYear()) return c(e);
+        n && i.zO(new Date().setHours(24, 0, 0, 0) - a.getTime());
         const l = new Date();
         if ((l.setHours(0, 0, 0, 0), r))
           if (o >= l) {
             if ((l.setDate(l.getDate() + 1), o < l))
-              return (0, i.Xx)("#Time_Today");
+              return (0, s.Xx)("#Time_Today");
             if ((l.setDate(l.getDate() + 1), o < l))
-              return (0, i.Xx)("#Time_Tomorrow");
+              return (0, s.Xx)("#Time_Tomorrow");
           } else if ((l.setDate(l.getDate() - 1), o >= l))
-            return (0, i.Xx)("#Time_Yesterday");
+            return (0, s.Xx)("#Time_Yesterday");
         const m = { month: t ? "long" : "short", day: "numeric" },
           d = o.setHours(0, 0, 0, 0) + m.month;
         let u = h.get(d);
         return (
           u ||
-          ((u = o.toLocaleDateString(i.Yt.GetPreferredLocales(), m)),
+          ((u = o.toLocaleDateString(s.Yt.GetPreferredLocales(), m)),
           h.set(d, u),
           u)
         );
@@ -12205,80 +12301,80 @@
         if (r > n) {
           if (!o.bGranularFutureTime)
             return (
-              a.zO(r.getTime() - n.getTime()),
+              i.zO(r.getTime() - n.getTime()),
               r.getFullYear() == n.getFullYear() ? v(r) : C(r)
             );
-          a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
+          i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
           let e = new Date();
           return (
             e.setHours(0, 0, 0, 0),
             e.setDate(e.getDate() + 1),
             r < e
-              ? (0, i.Xx)("#Time_Today")
+              ? (0, s.Xx)("#Time_Today")
               : (e.setDate(e.getDate() + 1),
                 r < e
-                  ? (0, i.Xx)("#Time_Tomorrow")
+                  ? (0, s.Xx)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
                     r < e ? B(r) : S(r, !0, o.bAbbreviateDayOfWeek)))
           );
         }
-        a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
+        i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
         let c = new Date();
         if ((c.setHours(0, 0, 0, 0), r >= c))
           return o.bGranularToday
             ? o.bGranularTodayTimeOnly
               ? d(e, { bForce24HourClock: o.bForce24HourClock })
-              : (0, i.Xx)(
+              : (0, s.Xx)(
                   "#Time_Today_At",
                   d(e, { bForce24HourClock: o.bForce24HourClock })
                 )
-            : (0, i.Xx)("#Time_Today");
+            : (0, s.Xx)("#Time_Today");
         if ((c.setDate(n.getDate() - 1), r >= c))
           return o.bGranularYesterday
-            ? (0, i.Xx)(
+            ? (0, s.Xx)(
                 "#Time_Yesterday_At",
                 d(e, { bForce24HourClock: o.bForce24HourClock })
               )
-            : (0, i.Xx)("#Time_Yesterday");
+            : (0, s.Xx)("#Time_Yesterday");
         c.setDate(n.getDate() - 6);
         const m = new Date(c);
         if (o.bGranularWeek && r >= m) return S(r, !1, !o.bAbbreviateDayOfWeek);
         if (o.bGranularPast)
-          return (0, i.Xx)(
+          return (0, s.Xx)(
             "#Time_Past_At",
             l(e, r.getFullYear() == n.getFullYear(), !o.bAbbreviateDayOfWeek),
             d(e, { bForce24HourClock: o.bForce24HourClock })
           );
-        if (r >= m) return (0, i.Xx)("#TimeSince_ThisWeek");
+        if (r >= m) return (0, s.Xx)("#TimeSince_ThisWeek");
         if (
           r.getMonth() == n.getMonth() &&
           r.getFullYear() == n.getFullYear()
         ) {
           const e =
-            Math.floor((m.valueOf() - r.valueOf()) / (1e3 * s._H.PerWeek)) + 1;
+            Math.floor((m.valueOf() - r.valueOf()) / (1e3 * a._H.PerWeek)) + 1;
           return 1 == e
-            ? (0, i.Xx)("#TimeSince_1Week")
-            : (0, i.Xx)("#TimeSince_XWeeks", e);
+            ? (0, s.Xx)("#TimeSince_1Week")
+            : (0, s.Xx)("#TimeSince_XWeeks", e);
         }
         return r.getFullYear() == n.getFullYear() ? v(r) : C(r);
       }
       const g = new Map(),
         f = new Map(),
         b = new Map(),
-        y = new Map(),
-        w = new Map();
+        w = new Map(),
+        y = new Map();
       function S(e, t = !1, r = !0) {
         const n = {
             weekday: r ? "long" : "short",
             day: "numeric",
             month: t ? "long" : "short",
           },
-          s = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
-        let a = w.get(s);
+          i = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
+        let a = y.get(i);
         return (
           a ||
-          ((a = e.toLocaleDateString(i.Yt.GetPreferredLocales(), n)),
-          w.set(s, a),
+          ((a = e.toLocaleDateString(s.Yt.GetPreferredLocales(), n)),
+          y.set(i, a),
           a)
         );
       }
@@ -12286,7 +12382,7 @@
         let t = g.get(e.getDay());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             weekday: "long",
           })),
           g.set(e.getDay(), t),
@@ -12297,7 +12393,7 @@
         let t = f.get(e.getMonth());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
           })),
           f.set(e.getMonth(), t),
@@ -12308,7 +12404,7 @@
         let t = b.get(e.getFullYear());
         return (
           t ||
-          ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
           })),
           b.set(e.getFullYear(), t),
@@ -12317,16 +12413,34 @@
       }
       function C(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
-        let r = y.get(t);
+        let r = w.get(t);
         return (
           r ||
-          ((r = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+          ((r = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
-          y.set(t, r),
+          w.set(t, r),
           r)
         );
+      }
+      function M(e) {
+        switch (e.getUTCMonth()) {
+          case 0:
+          case 1:
+          case 2:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q1", e.getUTCFullYear());
+          case 3:
+          case 4:
+          case 5:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q2", e.getUTCFullYear());
+          case 6:
+          case 7:
+          case 8:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q3", e.getUTCFullYear());
+          default:
+            return (0, s.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
+        }
       }
     },
     47808: (e, t, r) => {
@@ -12630,7 +12744,7 @@
         De: () => a,
         Ek: () => _,
         JA: () => c,
-        Kc: () => w,
+        Kc: () => y,
         L7: () => o,
         Wj: () => m,
         Zv: () => S,
@@ -12812,46 +12926,46 @@
       function b(e, t = "webui_config") {
         return g(e, t, !1);
       }
-      function y(e, t) {
+      function w(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function w() {
+      function y() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return y(e, a.STORE_BASE_URL)
+        return w(e, a.STORE_BASE_URL)
           ? a.STORE_BASE_URL
-          : y(e, a.COMMUNITY_BASE_URL)
+          : w(e, a.COMMUNITY_BASE_URL)
           ? a.COMMUNITY_BASE_URL
-          : y(e, a.CHAT_BASE_URL)
+          : w(e, a.CHAT_BASE_URL)
           ? a.CHAT_BASE_URL
-          : y(e, a.PARTNER_BASE_URL)
+          : w(e, a.PARTNER_BASE_URL)
           ? a.PARTNER_BASE_URL
-          : y(e, a.HELP_BASE_URL)
+          : w(e, a.HELP_BASE_URL)
           ? a.HELP_BASE_URL
-          : y(e, a.STEAMTV_BASE_URL)
+          : w(e, a.STEAMTV_BASE_URL)
           ? a.STEAMTV_BASE_URL
-          : y(e, a.STATS_BASE_URL)
+          : w(e, a.STATS_BASE_URL)
           ? a.STATS_BASE_URL
-          : y(e, a.INTERNAL_STATS_BASE_URL)
+          : w(e, a.INTERNAL_STATS_BASE_URL)
           ? a.INTERNAL_STATS_BASE_URL
-          : y(e, "https://steamloopback.host")
+          : w(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
       function S() {
         const e = window.location.href;
-        return y(e, a.STORE_BASE_URL)
+        return w(e, a.STORE_BASE_URL)
           ? "store"
-          : y(e, a.COMMUNITY_BASE_URL)
+          : w(e, a.COMMUNITY_BASE_URL)
           ? "community"
-          : y(e, a.PARTNER_BASE_URL)
+          : w(e, a.PARTNER_BASE_URL)
           ? "partnerweb"
-          : y(e, a.HELP_BASE_URL)
+          : w(e, a.HELP_BASE_URL)
           ? "help"
-          : y(e, a.STEAMTV_BASE_URL)
+          : w(e, a.STEAMTV_BASE_URL)
           ? "steamtv"
-          : y(e, a.STATS_BASE_URL) || y(e, a.INTERNAL_STATS_BASE_URL)
+          : w(e, a.STATS_BASE_URL) || w(e, a.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -12870,21 +12984,22 @@
     },
     9355: (e, t, r) => {
       "use strict";
-      r.d(t, { Z: () => m, l: () => d });
+      r.d(t, { Z: () => d, l: () => u });
       var n = r(90666);
       const i = {},
-        s = { LoyaltyKeyboard: () => "/points/shop/c/keyboard" },
-        a = {
+        s = { LoyaltyEquippedProfile: (e) => `/points/profile/${e}` },
+        a = { LoyaltyKeyboard: () => "/points/shop/c/keyboard" },
+        o = {
           LoyaltySteamBadge: () => "/points/shop/c/steambadge",
           LoyaltyProfileCustomizations: () => "/points/shop/profileshowcases",
         },
-        o = {
+        l = {
           LoyaltyItemBundles: () => "/points/shop/c/itembundles",
           LoyaltyItemBundle: (e) => `/points/shop/bundle/${e}`,
         },
-        l = {},
         c = {},
-        m = Object.assign(
+        m = {},
+        d = Object.assign(
           Object.assign(
             Object.assign(
               Object.assign(
@@ -12900,125 +13015,135 @@
                                   Object.assign(
                                     Object.assign(
                                       Object.assign(
+                                        Object.assign(
+                                          {
+                                            Home: () => "/",
+                                            Login: () => "/login",
+                                            AppStorePage: () =>
+                                              "/app/:appid(\\d+)/:gamename?",
+                                            PackageStorePage: () =>
+                                              "/sub/:subid(\\d+)/:packagename?",
+                                            BundleStorePage: () =>
+                                              "/bundle/:bundleid(\\d+)/:bundlename?",
+                                            SaleLandingPage: () =>
+                                              "/sale/:salePageName",
+                                            RemotePlay: () =>
+                                              "/remoteplay_hub/",
+                                            VRHardware: () => "/vrhardware/",
+                                            RemotePlayTogether: () =>
+                                              "/together/",
+                                            SteamDeck: () => "/steamdeck/",
+                                            CreatorSaleLandingPage: () =>
+                                              "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
+                                            SubscriptionPlanLandingPage: () =>
+                                              "/subscriptions/:salePageName",
+                                            CuratorHomePage: () => [
+                                              "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
+                                              "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
+                                            ],
+                                            CuratorListPage: () => [
+                                              "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                              "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                            ],
+                                            CuratorAdminPage: () =>
+                                              "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
+                                          },
+                                          {
+                                            NewsHub: () =>
+                                              "/:prefix(news|newshub|events)",
+                                            NewsHubApp: (e, t) =>
+                                              `/:prefix(news|newshub|events)/app/${e}/${t}`,
+                                            NewsHubGroup: (e, t) =>
+                                              `/:prefix(news|newshub|events)/group/${e}/${t}`,
+                                            NewsHubCollection: (e, t) =>
+                                              `/:prefix(news|newshub|events)/collection/${e}/${t}`,
+                                            NewsHubSale: (e, t) =>
+                                              `/:prefix(news|newshub|events)/sale/${e}/${t}`,
+                                            NewsHubContentHub: (e, t, r) =>
+                                              `/:prefix(news|newshub|events)/${e}/${t}/${r}`,
+                                            EventViewByApp: (e, t, r) =>
+                                              `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${r}`,
+                                            EventViewByGroup: (e, t, r) =>
+                                              `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${r}`,
+                                            OldAnnouncementViewByApp: (
+                                              e,
+                                              t,
+                                              r
+                                            ) =>
+                                              `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                            OldAnnouncementViewByGroup: (
+                                              e,
+                                              t,
+                                              r
+                                            ) =>
+                                              `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                          }
+                                        ),
                                         {
-                                          Home: () => "/",
-                                          Login: () => "/login",
-                                          AppStorePage: () =>
-                                            "/app/:appid(\\d+)/:gamename?",
-                                          PackageStorePage: () =>
-                                            "/sub/:subid(\\d+)/:packagename?",
-                                          BundleStorePage: () =>
-                                            "/bundle/:bundleid(\\d+)/:bundlename?",
-                                          SaleLandingPage: () =>
-                                            "/sale/:salePageName",
-                                          RemotePlay: () => "/remoteplay_hub/",
-                                          VRHardware: () => "/vrhardware/",
-                                          RemotePlayTogether: () =>
-                                            "/together/",
-                                          SteamDeck: () => "/steamdeck/",
-                                          CreatorSaleLandingPage: () =>
-                                            "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
-                                          SubscriptionPlanLandingPage: () =>
-                                            "/subscriptions/:salePageName",
-                                          CuratorHomePage: () => [
-                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
-                                            "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
-                                          ],
-                                          CuratorListPage: () => [
-                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                            "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                          ],
-                                          CuratorAdminPage: () =>
-                                            "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
-                                        },
-                                        {
-                                          NewsHub: () =>
-                                            "/:prefix(news|newshub|events)",
-                                          NewsHubApp: (e, t) =>
-                                            `/:prefix(news|newshub|events)/app/${e}/${t}`,
-                                          NewsHubGroup: (e, t) =>
-                                            `/:prefix(news|newshub|events)/group/${e}/${t}`,
-                                          NewsHubCollection: (e, t) =>
-                                            `/:prefix(news|newshub|events)/collection/${e}/${t}`,
-                                          NewsHubSale: (e, t) =>
-                                            `/:prefix(news|newshub|events)/sale/${e}/${t}`,
-                                          NewsHubContentHub: (e, t, r) =>
-                                            `/:prefix(news|newshub|events)/${e}/${t}/${r}`,
-                                          EventViewByApp: (e, t, r) =>
-                                            `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${r}`,
-                                          EventViewByGroup: (e, t, r) =>
-                                            `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${r}`,
-                                          OldAnnouncementViewByApp: (e, t, r) =>
-                                            `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
-                                          OldAnnouncementViewByGroup: (
-                                            e,
-                                            t,
-                                            r
-                                          ) =>
-                                            `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${r}`,
+                                          EventAdmin: () => "/events_admin",
+                                          EventModeration: () =>
+                                            "/events_admin/(moderate)?/:appid(\\d+)?/",
+                                          EventBackfill: () =>
+                                            "/events_admin/backfill/",
                                         }
                                       ),
                                       {
-                                        EventAdmin: () => "/events_admin",
                                         EventModeration: () =>
-                                          "/events_admin/(moderate)?/:appid(\\d+)?/",
+                                          "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
                                         EventBackfill: () =>
                                           "/events_admin/backfill/",
+                                        EventGameFestivalDebug: () =>
+                                          "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
+                                        EventRSSModeration: () =>
+                                          "/events_admin/rss_admin/",
+                                        InteractiveRecommender: () =>
+                                          "/recommender/:steamid(\\d+)?/",
+                                        LabsSandbox: () => "/labs/sandbox",
+                                        LabsHome: () => "/labs",
+                                        AccountPreferences: () => "/account/",
                                       }
                                     ),
-                                    {
-                                      EventModeration: () =>
-                                        "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
-                                      EventBackfill: () =>
-                                        "/events_admin/backfill/",
-                                      EventGameFestivalDebug: () =>
-                                        "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
-                                      EventRSSModeration: () =>
-                                        "/events_admin/rss_admin/",
-                                      InteractiveRecommender: () =>
-                                        "/recommender/:steamid(\\d+)?/",
-                                      LabsSandbox: () => "/labs/sandbox",
-                                      LabsHome: () => "/labs",
-                                      AccountPreferences: () => "/account/",
-                                    }
+                                    c
                                   ),
-                                  l
+                                  {
+                                    Loyalty: () => "/points",
+                                    LoyaltyStore: () => "/points/shop",
+                                    LoyaltyGetPoints: () => "/points/getpoints",
+                                    LoyaltyHowItWorks: () =>
+                                      "/points/howitworks",
+                                    LoyaltyStickers: () =>
+                                      "/points/shop/c/stickers",
+                                    LoyaltyEmoticons: () =>
+                                      "/points/shop/c/emoticons",
+                                    LoyaltyChatEffects: () =>
+                                      "/points/shop/c/chateffects",
+                                    LoyaltyBackgrounds: () =>
+                                      "/points/shop/c/backgrounds",
+                                    LoyaltyProfile: () =>
+                                      "/points/shop/c/profile",
+                                    LoyaltyAvatar: () =>
+                                      "/points/shop/c/avatar",
+                                    LoyaltyByGame: () => "/points/shop/c/games",
+                                    LoyaltyGiveawayRules: () =>
+                                      "/points/giveawayrules",
+                                  }
                                 ),
-                                {
-                                  Loyalty: () => "/points",
-                                  LoyaltyStore: () => "/points/shop",
-                                  LoyaltyGetPoints: () => "/points/getpoints",
-                                  LoyaltyHowItWorks: () => "/points/howitworks",
-                                  LoyaltyStickers: () =>
-                                    "/points/shop/c/stickers",
-                                  LoyaltyEmoticons: () =>
-                                    "/points/shop/c/emoticons",
-                                  LoyaltyChatEffects: () =>
-                                    "/points/shop/c/chateffects",
-                                  LoyaltyBackgrounds: () =>
-                                    "/points/shop/c/backgrounds",
-                                  LoyaltyProfile: () =>
-                                    "/points/shop/c/profile",
-                                  LoyaltyAvatar: () => "/points/shop/c/avatar",
-                                  LoyaltyByGame: () => "/points/shop/c/games",
-                                  LoyaltyGiveawayRules: () =>
-                                    "/points/giveawayrules",
-                                }
+                                a
                               ),
-                              s
+                              i
                             ),
-                            i
+                            o
                           ),
-                          a
+                          l
                         ),
-                        o
+                        {
+                          LoyaltyProfileBundles: () =>
+                            "/points/shop/c/profilebundles",
+                          LoyaltyArtistProfiles: () =>
+                            "/points/shop/c/artistprofiles",
+                        }
                       ),
-                      {
-                        LoyaltyProfileBundles: () =>
-                          "/points/shop/c/profilebundles",
-                        LoyaltyArtistProfiles: () =>
-                          "/points/shop/c/artistprofiles",
-                      }
+                      s
                     ),
                     {
                       ContentHubHome: () =>
@@ -13031,11 +13156,11 @@
               ),
               { MarketingMessages: () => "/marketingmessages/" }
             ),
-            c
+            m
           ),
           { DiagData: () => "/:anything*/diagdata" }
         );
-      function d() {
+      function u() {
         let e = document.createElement("a");
         e.href = n.De.STORE_BASE_URL;
         let t = e.pathname;
@@ -13093,8 +13218,8 @@
         }
       }
       var b = r(27515),
-        y = r(1959),
-        w = r(2957),
+        w = r(1959),
+        y = r(2957),
         S = r(53622),
         B = r(48780),
         v = r(53477);
@@ -13208,8 +13333,8 @@
       var L = r(22188),
         R = r(95598),
         D = r(48899),
-        F = r(76884),
-        x = r.n(F),
+        x = r(76884),
+        F = r.n(x),
         A = r(35402),
         I = r(99533),
         G = r(22975);
@@ -13353,7 +13478,7 @@
       var P = r(13271),
         N = r(7573),
         V = r(73604);
-      const z = parseInt(x().nTimelineHoverEdgePadding);
+      const z = parseInt(F().nTimelineHoverEdgePadding);
       function U(e) {
         let { manifest: t, forcePause: r } = e,
           [n, i] = (function (e) {
@@ -13378,7 +13503,7 @@
         let a = (0, P.SZ)(() => i.GetUserInputNeeded());
         return s.createElement(
           "div",
-          { className: x().TrailerPlayer },
+          { className: F().TrailerPlayer },
           s.createElement("video", { ref: n }),
           s.createElement(j, { player: i }),
           a && s.createElement(q, { player: i })
@@ -13391,13 +13516,13 @@
           }, [t]);
         return s.createElement(
           "div",
-          { className: x().PlayerControls, onClick: r },
+          { className: F().PlayerControls, onClick: r },
           s.createElement(
             "div",
-            { className: x().LowerControls },
+            { className: F().LowerControls },
             s.createElement(
               "div",
-              { className: x().LoweControlTopRow },
+              { className: F().LoweControlTopRow },
               s.createElement(H, { player: t }),
               s.createElement(X, { player: t }),
               s.createElement($, { player: t }),
@@ -13479,26 +13604,26 @@
         return s.createElement(
           "div",
           {
-            className: x().Timeline,
+            className: F().Timeline,
             onClick: i,
             onMouseMove: c,
             onMouseEnter: o,
             onMouseLeave: l,
           },
           s.createElement("div", {
-            className: (0, N.Z)(x().Bar, x().Buffered),
+            className: (0, N.Z)(F().Bar, F().Buffered),
           }),
           s.createElement("div", {
-            className: (0, N.Z)(x().Bar, x().Played),
+            className: (0, N.Z)(F().Bar, F().Played),
             style: g,
           }),
           s.createElement("div", {
-            className: (0, N.Z)(x().HoverTick),
+            className: (0, N.Z)(F().HoverTick),
             style: _,
           }),
           s.createElement(
             "div",
-            { ref: a, className: (0, N.Z)(x().HoverTime), style: p },
+            { ref: a, className: (0, N.Z)(F().HoverTime), style: p },
             (0, V.I8)(h, !0)
           )
         );
@@ -13522,7 +13647,7 @@
           }, [t]);
         return s.createElement(
           "div",
-          { className: x().UserInputNeeded, onClick: r },
+          { className: F().UserInputNeeded, onClick: r },
           s.createElement(R.shV, null)
         );
       }
@@ -13531,13 +13656,13 @@
           n = (0, P.SZ)(
             () =>
               !(function () {
-                J ||
-                  ((J = new K()),
-                  (window.GameHighlightTrailers = J),
+                Q ||
+                  ((Q = new K()),
+                  (window.GameHighlightTrailers = Q),
                   window.dispatchEvent(
                     new CustomEvent("valve_gamehighlighttrailers_ready")
                   ));
-                return J;
+                return Q;
               })().BPlayTrailer(t)
           ),
           i = (function (e) {
@@ -13560,18 +13685,18 @@
         }
       }
       (0, n.gn)([L.LO], K.prototype, "m_mapTrailerPlay", void 0);
-      let J = null;
-      var Q = r(88767);
+      let Q = null;
+      var J = r(88767);
       r(20938);
       function ee(e) {
         const t = s.useRef(te);
         let r = e.children;
         return (
           e.debug,
-          s.createElement(Q.QueryClientProvider, { client: t.current }, r)
+          s.createElement(J.QueryClientProvider, { client: t.current }, r)
         );
       }
-      const te = new Q.QueryClient({
+      const te = new J.QueryClient({
         defaultOptions: { queries: { staleTime: 1 / 0 } },
       });
       function re(e) {
@@ -13591,14 +13716,14 @@
               r.e(4030),
               r.e(8374),
               r.e(166),
-              r.e(2301),
               r.e(3345),
+              r.e(2301),
               r.e(7131),
               r.e(3456),
               r.e(6431),
-              r.e(9698),
               r.e(6614),
               r.e(7599),
+              r.e(9698),
               r.e(930),
               r.e(5136),
               r.e(73),
@@ -13653,7 +13778,7 @@
             r.e(6720),
             r.e(6571),
             r.e(8986),
-          ]).then(r.bind(r, 88152))
+          ]).then(r.bind(r, 17446))
         ),
         oe = s.lazy(() =>
           Promise.all([
@@ -13676,14 +13801,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13699,8 +13824,8 @@
             r.e(7804),
             r.e(4030),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(9698),
             r.e(2814),
           ]).then(r.bind(r, 93609))
@@ -13714,13 +13839,13 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(2420),
           ]).then(r.bind(r, 63543))
@@ -13742,14 +13867,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13779,14 +13904,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13814,14 +13939,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13849,14 +13974,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13883,14 +14008,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13904,7 +14029,7 @@
             r.e(680),
           ]).then(r.bind(r, 41135))
         ),
-        ye = s.lazy(() =>
+        we = s.lazy(() =>
           Promise.all([
             r.e(1164),
             r.e(5959),
@@ -13917,14 +14042,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13938,7 +14063,7 @@
             r.e(680),
           ]).then(r.bind(r, 31970))
         ),
-        we = s.lazy(() =>
+        ye = s.lazy(() =>
           Promise.all([r.e(5959), r.e(4030), r.e(8374), r.e(4535)]).then(
             r.bind(r, 22143)
           )
@@ -13954,14 +14079,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -13981,14 +14106,14 @@
             r.e(4030),
             r.e(8374),
             r.e(166),
-            r.e(2301),
             r.e(3345),
+            r.e(2301),
             r.e(7131),
             r.e(3456),
             r.e(6431),
-            r.e(9698),
             r.e(6614),
             r.e(7599),
+            r.e(9698),
             r.e(930),
             r.e(5136),
             r.e(73),
@@ -14043,7 +14168,7 @@
                       s.createElement(E, {
                         config: {
                           login: (e) =>
-                            s.createElement(we, Object.assign({}, e)),
+                            s.createElement(ye, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -14335,7 +14460,7 @@
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.Categories(),
-                      render: (e) => s.createElement(ye, null),
+                      render: (e) => s.createElement(we, null),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.AccountPreferences(),
@@ -14379,7 +14504,7 @@
         );
       }
       const Me = (e) => {
-        const t = s.createElement(y.t, { ModalManager: (0, w.BL)(window) });
+        const t = s.createElement(w.t, { ModalManager: (0, y.BL)(window) });
         return i.createPortal(t, document.body);
       };
       var ke = r(65902),

@@ -19,6 +19,7 @@
         QRIcon: "newlogindialog_QRIcon_2zKSq",
         QRCodeContainer: "newlogindialog_QRCodeContainer_3YjUm",
         QR: "newlogindialog_QR_1d6FZ",
+        QRHideLink: "newlogindialog_QRHideLink_1mk4A",
         HideButton: "newlogindialog_HideButton_u88sc",
         ShowQR: "newlogindialog_ShowQR_12nP-",
         UseMobileAppForQR: "newlogindialog_UseMobileAppForQR_9xgsv",
@@ -1752,34 +1753,43 @@
                 i.Body().set_steamid(this.m_steamid),
                 i.Body().set_code(e),
                 i.Body().set_code_type(r ? 2 : 3);
-              const n = (yield f.$h.UpdateAuthSessionWithSteamGuardCode(
-                this.m_transport,
-                i
-              )).GetEResult();
-              if (1 !== n) {
-                if (!t) return n;
-                switch (n) {
+              const n = yield f.$h.UpdateAuthSessionWithSteamGuardCode(
+                  this.m_transport,
+                  i
+                ),
+                s = n.GetEResult();
+              if (1 !== s) {
+                if (!t)
+                  return (
+                    console.error(
+                      `Failed to automatically update session with local SG info. Result ${s}. Transport ${n
+                        .Hdr()
+                        .transport_error()}`
+                    ),
+                    s
+                  );
+                switch (s) {
                   case 65:
                   case 88:
-                    return (this.m_eStatus = r ? 10 : 11), n;
+                    return (this.m_eStatus = r ? 10 : 11), s;
                   case 27:
                     return (
                       (this.m_eFailureState = m.NZ.Expired),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      n
+                      s
                     );
                   default:
                     return (
                       console.error(
-                        `Failed to update auth session with SG code. Result: ${n}`
+                        `Failed to update auth session with SG code. Result: ${s}`
                       ),
                       (this.m_eFailureState = m.NZ.Generic),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      n
+                      s
                     );
                 }
               }
-              return (this.m_eStatus = 13), this.StartPolling(), n;
+              return (this.m_eStatus = 13), this.StartPolling(), s;
             } catch (e) {
               return (
                 console.error(
@@ -2130,7 +2140,14 @@
           f = 0 === o || 1 === o || c,
           p = 4 === o,
           _ = 3 === o,
-          b = f || p || _;
+          b = _
+            ? n.createElement(W, null)
+            : p
+            ? n.createElement(x, { reset: m })
+            : f
+            ? n.createElement(L, { size: "small" })
+            : null,
+          y = f || p || _;
         return (
           (0, n.useEffect)(() => {
             var t;
@@ -2151,21 +2168,15 @@
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
                   quality: N(g),
-                  className: (0, s.Z)(k().LoginQR, b && k().Blur),
+                  className: (0, s.Z)(k().LoginQR, y && k().Blur),
                 },
                 g
               ),
-              b &&
+              y &&
                 n.createElement(
                   "div",
                   { className: k().Overlay },
-                  n.createElement(
-                    "div",
-                    { className: k().Box },
-                    f && n.createElement(L, { size: "small" }),
-                    p && n.createElement(x, { reset: m }),
-                    _ && n.createElement(W, null)
-                  )
+                  n.createElement("div", { className: k().Box }, b)
                 )
             )
           )
@@ -2663,7 +2674,15 @@
             platform: a,
             refreshInfo: o,
           } = e,
-          [l, c] = (0, n.useState)(!1);
+          [l, c] = (function () {
+            const e = "bShowLoginQR",
+              [t, r] = (0, n.useState)("1" === localStorage.getItem(e)),
+              i = (0, n.useCallback)((t) => {
+                r(t),
+                  t ? localStorage.setItem(e, "1") : localStorage.removeItem(e);
+              }, []);
+            return [t, i];
+          })();
         return n.createElement(
           "div",
           { className: E().QRSection },
@@ -2724,6 +2743,11 @@
                   platform: a,
                   refreshInfo: o,
                 })
+              ),
+              n.createElement(
+                "div",
+                { className: E().QRHideLink, onClick: () => c(!1) },
+                (0, D.Xx)("#Button_Hide")
               )
             )
         );

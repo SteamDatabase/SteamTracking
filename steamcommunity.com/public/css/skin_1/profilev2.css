@@ -982,6 +982,10 @@ body.profile_page.flat_page #footer_spacer {
 	vertical-align: middle;
 }
 
+#view_equipped_items_icon {
+    width: 20px;
+}
+
 #profile_action_dropdown {
 	white-space: nowrap;
 }

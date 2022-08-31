@@ -206,6 +206,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}miniprofile/${}/json
+${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}mobileconf/ajaxop?${}
 ${COMMUNITY_BASE_URL}mobileconf/detailspage/${id}?${}
 ${COMMUNITY_BASE_URL}mobileconf/getlist
@@ -326,6 +327,7 @@ ${COMMUNITY_URL}broadcast/watchnew/${_ ? _ : _}?origin=https://www.dota2.com&ena
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
+${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}/wizard/HelpWithSteamIssue/?issueid=809
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
@@ -673,6 +675,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}${}${}
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}/${}/${}${}
+${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${_ ? _ : _}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_mp4}
@@ -695,6 +698,7 @@ ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" :
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
 ${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
+${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
@@ -712,6 +716,7 @@ ${PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder/${}
 ${PARTNER_BASE_URL}admin/store/spotlight/${id}
 ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
+${PARTNER_BASE_URL}apps/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${}
@@ -729,6 +734,7 @@ ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/broadcast
+${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/discounting/csv
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5

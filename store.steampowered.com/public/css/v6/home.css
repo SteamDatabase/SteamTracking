@@ -4060,7 +4060,6 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .home_page_content.takeunder {
-	margin-bottom: 60px;
     margin-top: 10px;
 	position: relative;
 	z-index: auto;
@@ -4073,7 +4072,6 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 
     html.responsive .home_page_content.takeunder {
         margin-top: 0;
-        margin-bottom: 0px;
     }
 
 }

@@ -1300,14 +1300,14 @@
             a.e(4030),
             a.e(8374),
             a.e(166),
-            a.e(2301),
             a.e(3345),
+            a.e(2301),
             a.e(7131),
             a.e(3456),
             a.e(6431),
-            a.e(9698),
             a.e(6614),
             a.e(7599),
+            a.e(9698),
             a.e(930),
             a.e(5136),
             a.e(73),
@@ -2324,7 +2324,7 @@
         return (0, i.ue)()
           ? s.createElement(
               Me.n,
-              null,
+              { bSalePage: !0 },
               s.createElement(
                 r.rs,
                 null,

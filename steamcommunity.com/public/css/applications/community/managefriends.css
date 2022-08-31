@@ -87,6 +87,13 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 380px) {
+  .managefriends_CopyContainer_2r_KS {
+    min-width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .managefriends_CopyContainer_2r_KS .managefriends_Text_3NGNC {
   font-size: 32px;
   line-height: 30px;
@@ -123,6 +130,11 @@
   margin: 7px 7px 7px auto;
   text-transform: uppercase;
   width: fit-content;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ {
+    width: 100%;
+  }
 }
 .BasicUI .managefriends_CopyContainer_2r_KS .managefriends_Button_1ARlQ {
   font: var(--gpText-BodyLarge);

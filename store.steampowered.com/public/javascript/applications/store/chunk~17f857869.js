@@ -1190,7 +1190,7 @@
         xL: () => m,
       });
       var i = t(90666);
-      t(92398);
+      t(92398), t(41311);
       function n(e) {
         let r = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
@@ -1295,7 +1295,7 @@
         try {
           const t = new URL(r),
             i = new URL(e);
-          return t.origin + i.pathname + i.search + i.hash;
+          return t.href.replace(/\/$/, "") + i.pathname + i.search + i.hash;
         } catch (e) {
           return "";
         }

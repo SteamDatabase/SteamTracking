@@ -4,17 +4,21 @@ body.joinsteam.csgo, body.joinsteam.dota, body.china.joinsteam {
 	background-image: none;
 }
 
-body.global.joinsteam {
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' );
-}
 
 body.v6.joinsteam {
 	color: #E9E9E9;
-	background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' ) -45vw 0 no-repeat, #212429;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 		;
+}
+
+body.global.joinsteam {
+	background: radial-gradient(30% 40% at 40% 30%, rgba(33, 36, 41, .5) 0%, rgba(33, 36, 41, 0) 100%) no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg' ) -45vw 0 no-repeat, #212429;
+}
+
+body.china.joinsteam {
+	background: #212429;
 }
 
 body.v6.joinsteam #checkout_steam_logo {

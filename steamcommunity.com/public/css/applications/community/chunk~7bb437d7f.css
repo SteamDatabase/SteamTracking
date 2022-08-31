@@ -650,16 +650,14 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .rdt .rdtPicker td {
   color: #fff;
 }
+.rdt .rdtPicker td.rdtDisabled,
+.rdt .rdtPicker td.rdtDisabled:hover {
+  color: #333;
+}
 .rdt .rdtPicker td.rdtDay:hover {
   color: #000;
 }
 .rdt .rdtPicker td .rdtCounter .rdtBtn:hover {
-  color: #000;
-}
-.rdt .rdtPicker td.rdtNew {
-  color: #fff;
-}
-.rdt .rdtPicker td.rdtNew:hover {
   color: #000;
 }
 .partnereventshared_GamepadOnlyScrollPanel_cEBYf {

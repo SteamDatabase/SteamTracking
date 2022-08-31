@@ -1,0 +1,66 @@
+.releasedaterequest_ReleaseDateModal_RKE7g > .DialogContent_InnerWidth {
+  max-width: 920px;
+}
+.releasedaterequest_ReleaseDateRequestBody_32Cdq {
+  min-width: 800px;
+  margin-bottom: 16px;
+}
+.releasedaterequest_Column__gUUe {
+  display: flex;
+  flex-direction: column;
+  min-height: 375px;
+}
+.releasedaterequest_ColumnLabel_xebmA {
+  font-family: "Motiva Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #bfbfbf;
+}
+.releasedaterequest_ColumnContent_eZhsk {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 18px;
+  flex: 1;
+}
+.releasedaterequest_YellowNote_Kt0aR {
+  color: #e2c58b;
+}
+.releasedaterequest_PublishNowWarning_2-dra {
+  background: #333;
+  border: 1px solid #c6670e;
+  padding: 9px 12px;
+  font-family: "Motiva Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin: 14px 0;
+  color: #ff8a1c;
+}
+.releasedaterequest_ErrorBox_27JIJ {
+  margin: 4px 0 24px 0;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(146, 3, 3, 0.8) 5.43%,
+    rgba(112, 49, 20, 0.301) 100%
+  );
+  color: #fff;
+  animation-duration: 1s;
+  animation-name: releasedaterequest_HTMLErrorBoxAppear_bXT6n;
+}
+@keyframes releasedaterequest_HTMLErrorBoxAppear_bXT6n {
+  from {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

@@ -376,7 +376,7 @@
       });
       var i = r(92398),
         a = (r(990), r(28875), r(77636)),
-        n = (r(81238), r(159)),
+        n = (r(14146), r(159)),
         s = r(48116),
         o = r(90666);
       const l = {
@@ -504,7 +504,7 @@
                 d.BIsPreferredPlatform("mac")) ||
               ((null === (n = e.GetPlatforms()) || void 0 === n
                 ? void 0
-                : n.linux) &&
+                : n.steamos_linux) &&
                 d.BIsPreferredPlatform("linux"))
             )
           )
@@ -10109,7 +10109,7 @@
         _ = (r(990), r(76776)),
         h = r(461),
         g = r(77636),
-        S = (r(81238), r(159)),
+        S = (r(14146), r(159)),
         v = r(48116),
         B = r(52114),
         b = r(97024),
@@ -10891,7 +10891,7 @@
         n = r(48116),
         s = r(92398),
         o = (r(37662), r(990), r(77636)),
-        l = (r(81238), r(159)),
+        l = (r(14146), r(159)),
         d = r(37694),
         c = r(90666);
       function m(e) {
@@ -11570,7 +11570,7 @@
           { className: (0, o.Z)(d().CapsulePlatform, l) },
           m.windows && i.createElement(s.Bh5, null),
           m.mac && i.createElement(s.uZu, null),
-          m.linux && i.createElement(s.ui7, null),
+          m.steamos_linux && i.createElement(s.ui7, null),
           (null === (t = m.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
             i.createElement(s.VR, null)
         );
@@ -11646,7 +11646,7 @@
         n = r(67294),
         s = r(77442),
         o = (r(37662), r(990), r(77636)),
-        l = (r(81238), r(48116)),
+        l = (r(14146), r(48116)),
         d = r(52114),
         c = (r(85732), r(72062));
       class m {}
@@ -11740,7 +11740,7 @@
         s = r(37723),
         o = r(92398),
         l = (r(91891), r(990), r(39388)),
-        d = (r(81238), r(48116)),
+        d = (r(14146), r(48116)),
         c = r(52114),
         m = r(97024),
         u = r(49754),
@@ -12024,7 +12024,7 @@
       r.d(t, { h: () => l });
       r(23816);
       var i = r(67833),
-        a = (r(81238), r(72062)),
+        a = (r(14146), r(72062)),
         n = r(77520),
         s = r(41311),
         o = r(90666);
@@ -12326,7 +12326,7 @@
       r.d(t, { N: () => u, q: () => p });
       var i = r(67294),
         a = r(90666),
-        n = (r(37662), r(81238), r(159)),
+        n = (r(37662), r(14146), r(159)),
         s = r(48116),
         o = r(52114),
         l = r(96187),

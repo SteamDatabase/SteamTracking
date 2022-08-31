@@ -537,9 +537,12 @@ body.login .page_content_flex {
 }
 
 body.login .page_content {
-	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
 	padding: 0px 8px;
 	width: 100%;
+}
+
+body.login.global .page_content {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;}
 }
 
 body.login.china {
@@ -907,12 +910,18 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	}
 
 	html.responsive body.v6 .page_content {
-		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
 		padding: 0px;
 		width: 100%;
 		margin: 0 auto;
 	}
 
+	html.responsive body.v6.global .page_content {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
+	}
+
+	html.responsive body.v6.china .page_content {
+		background: #181A21;
+	}
 }
 
 @media screen and ( max-width: 700px ) {
@@ -925,8 +934,12 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		flex-direction: column-reverse;
 	}
 
-	html.responsive body.login .page_content {
+	html.responsive body.login.global .page_content {
 		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
+	}
+
+	html.responsive body.login.china .page_content {
+		background: #181A21;
 	}
 }
 

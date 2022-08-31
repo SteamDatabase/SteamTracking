@@ -19,6 +19,7 @@
         QRIcon: "newlogindialog_QRIcon_2zKSq",
         QRCodeContainer: "newlogindialog_QRCodeContainer_3YjUm",
         QR: "newlogindialog_QR_1d6FZ",
+        QRHideLink: "newlogindialog_QRHideLink_1mk4A",
         HideButton: "newlogindialog_HideButton_u88sc",
         ShowQR: "newlogindialog_ShowQR_12nP-",
         UseMobileAppForQR: "newlogindialog_UseMobileAppForQR_9xgsv",
@@ -362,7 +363,7 @@
     },
     28274: (e, t, r) => {
       "use strict";
-      r.d(t, { wK: () => G, pT: () => H });
+      r.d(t, { wK: () => G, pT: () => D });
       var i = r(70655),
         n = r(67294),
         a = r(58114),
@@ -592,34 +593,43 @@
                 i.Body().set_steamid(this.m_steamid),
                 i.Body().set_code(e),
                 i.Body().set_code_type(r ? 2 : 3);
-              const n = (yield h.$h.UpdateAuthSessionWithSteamGuardCode(
-                this.m_transport,
-                i
-              )).GetEResult();
-              if (1 !== n) {
-                if (!t) return n;
-                switch (n) {
+              const n = yield h.$h.UpdateAuthSessionWithSteamGuardCode(
+                  this.m_transport,
+                  i
+                ),
+                s = n.GetEResult();
+              if (1 !== s) {
+                if (!t)
+                  return (
+                    console.error(
+                      `Failed to automatically update session with local SG info. Result ${s}. Transport ${n
+                        .Hdr()
+                        .transport_error()}`
+                    ),
+                    s
+                  );
+                switch (s) {
                   case 65:
                   case 88:
-                    return (this.m_eStatus = r ? 10 : 11), n;
+                    return (this.m_eStatus = r ? 10 : 11), s;
                   case 27:
                     return (
                       (this.m_eFailureState = m.NZ.Expired),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      n
+                      s
                     );
                   default:
                     return (
                       console.error(
-                        `Failed to update auth session with SG code. Result: ${n}`
+                        `Failed to update auth session with SG code. Result: ${s}`
                       ),
                       (this.m_eFailureState = m.NZ.Generic),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
-                      n
+                      s
                     );
                 }
               }
-              return (this.m_eStatus = 13), this.StartPolling(), n;
+              return (this.m_eStatus = 13), this.StartPolling(), s;
             } catch (e) {
               return (
                 console.error(
@@ -970,7 +980,14 @@
           h = 0 === o || 1 === o || c,
           B = 4 === o,
           b = 3 === o,
-          C = h || B || b;
+          C = b
+            ? n.createElement(x, null)
+            : B
+            ? n.createElement(N, { reset: m })
+            : h
+            ? n.createElement(O, { size: "small" })
+            : null,
+          y = h || B || b;
         return (
           (0, n.useEffect)(() => {
             var t;
@@ -991,21 +1008,15 @@
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
                   quality: L(_),
-                  className: (0, s.Z)(k().LoginQR, C && k().Blur),
+                  className: (0, s.Z)(k().LoginQR, y && k().Blur),
                 },
                 _
               ),
-              C &&
+              y &&
                 n.createElement(
                   "div",
                   { className: k().Overlay },
-                  n.createElement(
-                    "div",
-                    { className: k().Box },
-                    h && n.createElement(O, { size: "small" }),
-                    B && n.createElement(N, { reset: m }),
-                    b && n.createElement(x, null)
-                  )
+                  n.createElement("div", { className: k().Box }, C)
                 )
             )
           )
@@ -1082,9 +1093,9 @@
       var j = r(41311),
         I = r(13596),
         X = r(95598);
-      const U = (0, n.createContext)(!1),
-        D = () => (0, n.useContext)(U);
-      function H() {
+      const H = (0, n.createContext)(!1),
+        U = () => (0, n.useContext)(H);
+      function D() {
         return n.createElement(
           "div",
           { className: E().Login },
@@ -1113,7 +1124,7 @@
         const { embedded: t } = e,
           r = (0, i._T)(e, ["embedded"]);
         return n.createElement(
-          U.Provider,
+          H.Provider,
           { value: t },
           n.createElement(
             "div",
@@ -1185,7 +1196,7 @@
           ),
           [T, A] = (0, n.useState)(""),
           [k, W] = (0, n.useState)(!0),
-          L = D(),
+          L = U(),
           O = !(0 === _ || 1 === _ || 2 === _),
           N = () => y(M, T, k),
           x = () => {
@@ -1205,7 +1216,7 @@
           const t = n.createElement(
             "div",
             { className: E().SideBySide },
-            n.createElement(q, {
+            n.createElement(Q, {
               strAccountName: M,
               onAccountNameChange: z,
               strPassword: T,
@@ -1218,7 +1229,7 @@
               refreshInfo: e.refreshInfo,
             }),
             !s &&
-              n.createElement(Q, {
+              n.createElement(q, {
                 transport: r,
                 onQRStatusChange: v,
                 onComplete: g,
@@ -1416,7 +1427,7 @@
           n.createElement("div", { className: E().RefreshReason }, (0, j.Xx)(i))
         );
       }
-      function q(e) {
+      function Q(e) {
         const {
             onSubmit: t,
             status: r,
@@ -1430,7 +1441,7 @@
             onRememberMeChange: d,
           } = e,
           [g, _] = (0, n.useState)(!1),
-          h = D(),
+          h = U(),
           B = 1 === r || 13 === r,
           b = 2 === r && !g,
           C = b
@@ -1495,7 +1506,7 @@
             )
         );
       }
-      function Q(e) {
+      function q(e) {
         const {
             onQRStatusChange: t,
             transport: r,
@@ -1503,7 +1514,15 @@
             platform: a,
             refreshInfo: o,
           } = e,
-          [l, c] = (0, n.useState)(!1);
+          [l, c] = (function () {
+            const e = "bShowLoginQR",
+              [t, r] = (0, n.useState)("1" === localStorage.getItem(e)),
+              i = (0, n.useCallback)((t) => {
+                r(t),
+                  t ? localStorage.setItem(e, "1") : localStorage.removeItem(e);
+              }, []);
+            return [t, i];
+          })();
         return n.createElement(
           "div",
           { className: E().QRSection },
@@ -1564,6 +1583,11 @@
                   platform: a,
                   refreshInfo: o,
                 })
+              ),
+              n.createElement(
+                "div",
+                { className: E().QRHideLink, onClick: () => c(!1) },
+                (0, j.Xx)("#Button_Hide")
               )
             )
         );
@@ -1923,7 +1947,7 @@
             "mobile" === r
               ? (0, j.Xx)("#Login_MobileProtectingAccount")
               : (0, j.Xx)("#Login_EmailProtectingAccount"),
-          a = D();
+          a = U();
         return n.createElement(
           "div",
           { className: E().ProtectingAccount },
@@ -2029,7 +2053,7 @@
       }
       function pe(e) {
         const { type: t, accountName: r, onUseCodeOverride: i } = e,
-          a = D(),
+          a = U(),
           s = n.createElement(_e, { type: "mobile" }),
           o = a
             ? n.createElement(
@@ -2240,7 +2264,7 @@
       }
       function Te(e) {
         const { title: t, children: r, compact: i } = e,
-          a = D();
+          a = U();
         return n.createElement(
           Ee,
           {

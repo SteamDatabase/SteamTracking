@@ -34,6 +34,9 @@ body.v6 {
 	display:flex;
 	margin-left: 32px;
 	margin-top: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .friends_header_avatar {
 	position: relative;

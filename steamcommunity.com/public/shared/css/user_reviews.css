@@ -216,6 +216,11 @@ select {
 	margin-left: 0px;
 }
 
+#ReviewEdit .steam_china_disclaimer {
+	margin-bottom: 10px;
+	color: #DD8763;
+}
+
 .recommendation_date {
 	font-size: 11px;
 	color: #a0a08b;

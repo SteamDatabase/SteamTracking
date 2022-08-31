@@ -134,7 +134,7 @@
       "use strict";
       t.r(r), t.d(r, { PricingRoutes: () => Ge, default: () => We });
       var n = t(9355),
-        i = t(74053),
+        i = t(2422),
         a = t(67294),
         l = t(73727),
         o = t(5977),

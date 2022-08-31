@@ -395,7 +395,7 @@
     },
     39722: (e, t, i) => {
       "use strict";
-      i.d(t, { Ax: () => o, Bn: () => D, SL: () => g, nQ: () => p });
+      i.d(t, { Ax: () => o, Bn: () => b, SL: () => v, nQ: () => g });
       var r = i(33019),
         n = i(40110),
         s = i(990);
@@ -789,13 +789,27 @@
       class m extends a {
         constructor(e = null) {
           super(),
-            m.prototype.message || n.aR(m.M()),
+            m.prototype.has_pending_messages || n.aR(m.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             m.sm_m ||
-              (m.sm_m = { proto: m, fields: { message: { n: 1, c: l } } }),
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  has_pending_messages: {
+                    n: 1,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  pending_message_count: {
+                    n: 2,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
+                },
+              }),
             m.sm_m
           );
         }
@@ -831,7 +845,7 @@
           return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_GetDisplayMarketingMessage_Response";
+          return "CMarketingMessages_DoesUserHavePendingMarketingMessages_Response";
         }
       }
       class _ extends a {
@@ -843,7 +857,7 @@
         static M() {
           return (
             _.sm_m ||
-              (_.sm_m = { proto: _, fields: { message: { n: 1, c: o } } }),
+              (_.sm_m = { proto: _, fields: { message: { n: 1, c: l } } }),
             _.sm_m
           );
         }
@@ -879,38 +893,19 @@
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_GetMarketingMessage_Response";
+          return "CMarketingMessages_GetDisplayMarketingMessage_Response";
         }
       }
       class p extends a {
         constructor(e = null) {
           super(),
-            p.prototype.lookup_type || n.aR(p.M()),
-            a.initialize(this, e, 0, -1, [4], null);
+            p.prototype.message || n.aR(p.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  lookup_type: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                  gid: {
-                    n: 2,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  message_type: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                  gidlist: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeRepeatedFixed64String,
-                  },
-                  title: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
-                },
-              }),
+              (p.sm_m = { proto: p, fields: { message: { n: 1, c: o } } }),
             p.sm_m
           );
         }
@@ -944,6 +939,73 @@
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessages_GetMarketingMessage_Response";
+        }
+      }
+      class g extends a {
+        constructor(e = null) {
+          super(),
+            g.prototype.lookup_type || n.aR(g.M()),
+            a.initialize(this, e, 0, -1, [4], null);
+        }
+        static M() {
+          return (
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  lookup_type: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
+                  gid: {
+                    n: 2,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                  message_type: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
+                  gidlist: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeRepeatedFixed64String,
+                  },
+                  title: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
+                },
+              }),
+            g.sm_m
+          );
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = n.Bh(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(g.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            i = new g();
+          return g.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(g.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(g.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMarketingMessages_FindMarketingMessages_Request";
@@ -1000,73 +1062,16 @@
           return "CMarketingMessages_FindMarketingMessages_Response";
         }
       }
-      class g extends a {
-        constructor(e = null) {
-          super(),
-            g.prototype.message || n.aR(g.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = { proto: g, fields: { message: { n: 1, c: o } } }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = n.Bh(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(g.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new g();
-          return g.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(g.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(g.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_CreateMarketingMessage_Request";
-        }
-      }
       class v extends a {
         constructor(e = null) {
           super(),
-            v.prototype.gid || n.aR(v.M()),
+            v.prototype.message || n.aR(v.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             v.sm_m ||
-              (v.sm_m = {
-                proto: v,
-                fields: {
-                  gid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                },
-              }),
+              (v.sm_m = { proto: v, fields: { message: { n: 1, c: o } } }),
             v.sm_m
           );
         }
@@ -1102,21 +1107,42 @@
           return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_CreateMarketingMessage_Response";
+          return "CMarketingMessages_CreateMarketingMessage_Request";
         }
       }
       class y extends a {
         constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            y.prototype.gid || n.aR(y.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = n.Bh(y.M())), y.sm_mbf;
         }
         toObject(e = !1) {
           return y.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.TA(y.M(), e, t);
         }
         static fromObject(e) {
-          return new y();
+          return n.aD(y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new r.BinaryReader(e),
@@ -1124,19 +1150,21 @@
           return y.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.F(y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new r.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.l2(y.M(), e, t);
+        }
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_UpdateMarketingMessage_Response";
+          return "CMarketingMessages_CreateMarketingMessage_Response";
         }
       }
       class f extends a {
@@ -1170,10 +1198,44 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMarketingMessages_UpdateMarketingMessage_Response";
+        }
+      }
+      class D extends a {
+        constructor(e = null) {
+          super(), a.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new D();
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            i = new D();
+          return D.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMarketingMessages_DeleteMarketingMessage_Response";
         }
       }
-      var D;
+      var b;
       !(function (e) {
         (e.GetActiveMarketingMessages = function (e, t) {
           return e.SendMsg(
@@ -1191,11 +1253,19 @@
               { bConstMethod: !0, ePrivilege: 1 }
             );
           }),
+          (e.DoesUserHavePendingMarketingMessages = function (e, t) {
+            return e.SendMsg(
+              "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
+              t,
+              m,
+              { bConstMethod: !0, ePrivilege: 1 }
+            );
+          }),
           (e.GetDisplayMarketingMessage = function (e, t) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessage#1",
               t,
-              m,
+              _,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -1207,7 +1277,7 @@
             );
           }),
           (e.GetMarketingMessage = function (e, t) {
-            return e.SendMsg("MarketingMessages.GetMarketingMessage#1", t, _, {
+            return e.SendMsg("MarketingMessages.GetMarketingMessage#1", t, p, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
@@ -1216,7 +1286,7 @@
             return e.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
               t,
-              v,
+              y,
               { ePrivilege: 4 }
             );
           }),
@@ -1224,7 +1294,7 @@
             return e.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
               t,
-              y,
+              f,
               { ePrivilege: 4 }
             );
           }),
@@ -1232,7 +1302,7 @@
             return e.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
               t,
-              f,
+              D,
               { ePrivilege: 4 }
             );
           }),
@@ -1244,13 +1314,13 @@
               { ePrivilege: 4 }
             );
           });
-      })(D || (D = {}));
+      })(b || (b = {}));
     },
     48966: (e, t, i) => {
       "use strict";
       i.d(t, {
         Rg: () => l,
-        XB: () => g,
+        XB: () => h,
         XD: () => y,
         ik: () => d,
         pA: () => b,
@@ -1873,75 +1943,18 @@
           return "CPublishing_GetPartnerAppOptInEmailDefAndStats_Request";
         }
       }
-      class h extends s {
-        constructor(e = null) {
-          super(),
-            h.prototype.defs || n.aR(h.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: { defs: { n: 1, c: _, r: !0, q: !0 } },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = n.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new h();
-          return h.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_GetPartnerAppOptInEmailDefAndStats_Response";
-        }
-      }
       class g extends s {
         constructor(e = null) {
           super(),
-            g.prototype.email_def_id || n.aR(g.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            g.prototype.defs || n.aR(g.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
-                fields: {
-                  email_def_id: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                },
+                fields: { defs: { n: 1, c: _, r: !0, q: !0 } },
               }),
             g.sm_m
           );
@@ -1976,6 +1989,63 @@
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_GetPartnerAppOptInEmailDefAndStats_Response";
+        }
+      }
+      class h extends s {
+        constructor(e = null) {
+          super(),
+            h.prototype.email_def_id || n.aR(h.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  email_def_id: {
+                    n: 1,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = n.Bh(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            i = new h();
+          return h.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_GetEstimatePartnerAppOptInEmail_Request";
@@ -2756,7 +2826,7 @@
             return e.SendMsg(
               "Publishing.GetPartnerAppOptInEmailDefAndStats#1",
               t,
-              h,
+              g,
               { ePrivilege: 1 }
             );
           }),
@@ -2909,10 +2979,10 @@
       (0, r.gn)([n.LO], d.prototype, "nOverrideDateNow", void 0);
       const m = new d();
       function _(e = 1) {
-        const [t, i] = o.useState(() => g()),
+        const [t, i] = o.useState(() => h()),
           r = (0, c.T)("useTimeNowWithOverride"),
           n = o.useCallback(() => {
-            r.token.reason || i(g());
+            r.token.reason || i(h());
           }, []);
         return (
           o.useEffect(() => {
@@ -2928,14 +2998,14 @@
       }
       window.g_EventCalendarDevFeatures = m;
       const p = new Date(),
-        h = Math.floor(p.getTime() / 1e3);
-      function g() {
+        g = Math.floor(p.getTime() / 1e3);
+      function h() {
         const e = Math.floor(Date.now() / 1e3);
-        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - h) : e;
+        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - g) : e;
       }
       function v() {
         var e;
-        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : h;
+        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : g;
       }
       function y() {
         return o.useMemo(() => v(), []);
@@ -2943,7 +3013,7 @@
     },
     2388: (e, t, i) => {
       "use strict";
-      i.d(t, { Gr: () => h, Jq: () => g, y$: () => p });
+      i.d(t, { Gr: () => g, Jq: () => h, y$: () => p });
       var r = i(70655),
         n = i(9669),
         s = i.n(n),
@@ -3023,7 +3093,7 @@
       }
       (0, r.gn)([a.LO], _.prototype, "m_mapProfiles", void 0);
       const p = new _();
-      function h(e) {
+      function g(e) {
         const t = o.useMemo(
             () => (e ? ("string" == typeof e ? new c.K(e) : e) : null),
             [e]
@@ -3054,8 +3124,8 @@
         }, [e]);
         return [i, !!t && p.GetProfileBySteamID(t)];
       }
-      function g(e) {
-        return h(o.useMemo(() => c.K.InitFromAccountID(e), [e]));
+      function h(e) {
+        return g(o.useMemo(() => c.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = p;
     },
@@ -3112,14 +3182,15 @@
     },
     81238: (e, t, i) => {
       "use strict";
-      i.d(t, { Z: () => c });
+      i.d(t, { Z: () => u });
       var r = i(22188),
         n = (i(26149), i(92398), i(13328), i(990), i(48116)),
         s = i(77520),
         a = i(41311),
         o = i(74891),
-        l = i(90666);
-      class c {
+        l = i(90666),
+        c = i(50647);
+      class u {
         constructor(e, t) {
           var i, r, n;
           (this.m_bVisible = !1),
@@ -3159,7 +3230,7 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new d(e.assets(), e.id())),
+            ((this.m_Assets = new m(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_release &&
               !this.m_ReleaseInfo &&
@@ -3177,11 +3248,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new p(e.screenshots())),
+              ((this.m_Screenshots = new g(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new m(e.trailers())),
+              ((this.m_Trailers = new _(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count > this.m_rgStoreTags.length &&
               this.m_DataRequested.include_tag_count < t.include_tag_count &&
@@ -3224,7 +3295,7 @@
           );
         }
         BContainDataRequest(e) {
-          return c.BDataRequestContainsOtherDataRequest(
+          return u.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e
           );
@@ -3494,7 +3565,7 @@
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
             this.m_BasicInfo
-              ? u([
+              ? d([
                   ...this.m_BasicInfo.developers,
                   ...this.m_BasicInfo.publishers,
                   ...this.m_BasicInfo.franchises,
@@ -3505,19 +3576,19 @@
         GetAllPublisherCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? u(this.m_BasicInfo.publishers) : []
+            this.m_BasicInfo ? d(this.m_BasicInfo.publishers) : []
           );
         }
         GetAllDeveloperCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? u(this.m_BasicInfo.developers) : []
+            this.m_BasicInfo ? d(this.m_BasicInfo.developers) : []
           );
         }
         GetAllFranchiseCreatorClans() {
           return (
             this.BCheckDataRequestIncluded({ include_basic_info: !0 }),
-            this.m_BasicInfo ? u(this.m_BasicInfo.franchises) : []
+            this.m_BasicInfo ? d(this.m_BasicInfo.franchises) : []
           );
         }
         GetCapsuleHeadline() {
@@ -3556,6 +3627,15 @@
             this.m_Assets
           );
         }
+        GetOriginalReleaseDateRTime() {
+          var e;
+          this.BCheckDataRequestIncluded({ include_release: !0 });
+          let t =
+            null === (e = this.m_ReleaseInfo) || void 0 === e
+              ? void 0
+              : e.original_steam_release_date;
+          return t || (t = this.GetReleaseDateRTime()), t;
+        }
         GetReleaseDateRTime() {
           var e, t, i;
           if (
@@ -3580,7 +3660,12 @@
         }
         GetFormattedSteamReleaseDate() {
           var e;
-          this.BCheckDataRequestIncluded({ include_release: !0 });
+          if (
+            (this.BCheckDataRequestIncluded({ include_release: !0 }),
+            this.m_ReleaseInfo.is_coming_soon &&
+              this.m_ReleaseInfo.coming_soon_display)
+          )
+            return (0, c.y)(this.m_ReleaseInfo);
           const t = this.GetReleaseDateRTime();
           return (
             null === (e = this.m_ReleaseInfo) || void 0 === e
@@ -3750,12 +3835,12 @@
           this.m_BestPurchaseOption = e;
         }
       }
-      function u(e) {
+      function d(e) {
         if (!(null == e ? void 0 : e.length)) return [];
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class d {
+      class m {
         constructor(e, t) {
           const i = e.asset_url_format();
           i &&
@@ -3856,20 +3941,20 @@
           return this.m_strCommunityIcon;
         }
       }
-      class m {
+      class _ {
         constructor(e) {
           (this.m_mapTrailer = new Map()),
             (this.m_higherTrailers = new Array()),
             (this.m_otherTrailers = new Array()),
             e.highlights() &&
               e.highlights().forEach((e) => {
-                let t = new _(e);
+                let t = new p(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_higherTrailers.push(t);
               }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new _(e);
+                let t = new p(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -3889,7 +3974,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class _ {
+      class p {
         constructor(e) {
           (this.m_strTrailerName = e.trailer_name()),
             (this.m_nBaseID = e.trailer_base_id());
@@ -3957,7 +4042,7 @@
           return l.De.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
         }
       }
-      class p {
+      class g {
         constructor(e) {
           (this.m_rgAllScreenshots = new Array()),
             (this.m_rgOnlyAllAgesScreenshots = new Array());
@@ -4069,8 +4154,8 @@
         };
       })(_ || (_ = {}));
       var p = i(77520),
-        h = i(93976),
-        g = i(90666);
+        g = i(93976),
+        h = i(90666);
       i(13328);
       const v = l.Message;
       class y extends v {
@@ -4304,10 +4389,10 @@
       function B(e) {
         let t = new u.WJ();
         return (
-          e || t.set_country_code(g.De.COUNTRY),
-          t.set_language(g.De.LANGUAGE),
-          g.De.EREALM != s.IN.k_ESteamRealmUnknown &&
-            t.set_steam_realm(g.De.EREALM),
+          e || t.set_country_code(h.De.COUNTRY),
+          t.set_language(h.De.LANGUAGE),
+          h.De.EREALM != s.IN.k_ESteamRealmUnknown &&
+            t.set_steam_realm(h.De.EREALM),
           t
         );
       }
@@ -4719,7 +4804,7 @@
             let r = 1;
             e ||
               (this.GetSteamInterface() ||
-                this.SetSteamInterface(new o.J(g.De.WEBAPI_BASE_URL)),
+                this.SetSteamInterface(new o.J(h.De.WEBAPI_BASE_URL)),
               (e = this.GetSteamInterface())),
               (t = this.SortStoreItems(t));
             const s = new Array();
@@ -4753,7 +4838,7 @@
                           r = e.item_type();
                         if (1 != e.success() || this.BIsStoreItemMissing(t, r))
                           switch (
-                            ("dev" == g.De.WEB_UNIVERSE &&
+                            ("dev" == h.De.WEB_UNIVERSE &&
                               console.warn(
                                 `Failed to load ${t} type ${r} with error ${e.success()}`,
                                 e
@@ -4789,12 +4874,12 @@
                         e.Hdr().error_message(),
                       (0, n.ZN)(t)
                     ),
-                    (1 == e.Hdr().transport_error() || g.De.FROM_WEB) &&
+                    (1 == e.Hdr().transport_error() || h.De.FROM_WEB) &&
                       this.MarkStoreItemIDUnavailable(s[a]),
                     1 == r && (r = e.GetEResult()));
               });
             } catch (e) {
-              const t = (0, h.l)(e);
+              const t = (0, g.l)(e);
               return (
                 console.error(
                   "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
@@ -4941,10 +5026,10 @@
         Hy: () => l,
         RB: () => f,
         TM: () => o,
-        Uc: () => g,
+        Uc: () => h,
         YF: () => p,
         bg: () => v,
-        hQ: () => h,
+        hQ: () => g,
         mm: () => y,
         qE: () => a,
         t9: () => u,
@@ -5054,7 +5139,7 @@
           ? 2
           : -1;
       }
-      function h(e) {
+      function g(e) {
         const t = Number.parseInt(e.substring(1));
         switch (e.charAt(0)) {
           case "a":
@@ -5065,7 +5150,7 @@
             return { bundleid: t };
         }
       }
-      function g(e) {
+      function h(e) {
         return "application" == e
           ? 0
           : "bundle" == e
@@ -5116,8 +5201,8 @@
       "use strict";
       i.d(t, {
         Eq: () => p,
-        Hc: () => g,
-        KI: () => h,
+        Hc: () => h,
+        KI: () => g,
         OT: () => m,
         wj: () => _,
       });
@@ -5352,14 +5437,45 @@
           i
         );
       }
-      function h() {
+      function g() {
         return { fnQueueMultipleTagLoads: m.Get().QueueMultipleTagLoads };
       }
-      function g() {
+      function h() {
         return { fnGetTagID: m.Get().GetTagID };
       }
       (0, r.gn)([u.ak], m.prototype, "GetTagID", null),
         (0, r.gn)([u.ak], m.prototype, "QueueMultipleTagLoads", null);
+    },
+    50647: (e, t, i) => {
+      "use strict";
+      i.d(t, { M: () => a, y: () => s });
+      var r = i(41311),
+        n = i(74891);
+      function s(e) {
+        return a(
+          e.coming_soon_display,
+          e.steam_release_date,
+          e.custom_release_date_message
+        );
+      }
+      function a(e, t, i) {
+        switch (e) {
+          case "date_full":
+            return (0, r.vX)(t);
+          case "date_month":
+            return (0, n.LO)(new Date(1e3 * t));
+          case "date_quarter":
+            return (0, n.Kb)(new Date(1e3 * t));
+          case "date_year":
+            return (0, n.Np)(new Date(1e3 * t));
+          case "text_comingsoon":
+            return i || (0, r.Xx)("#Store_ComingSoon_ComingSoon");
+          case "text_tba":
+            return i || (0, r.Xx)("#Store_ComingSoon_TBA");
+          default:
+            return "";
+        }
+      }
     },
     74163: (e, t, i) => {
       "use strict";
@@ -5538,9 +5654,9 @@
         UT: () => y,
         Ys: () => _,
         Zu: () => p,
-        mj: () => g,
+        mj: () => h,
         n: () => f,
-        rN: () => h,
+        rN: () => g,
         rg: () => v,
         up: () => d,
       });
@@ -5575,7 +5691,7 @@
         _.k_Followup,
         _.k_PermissionRequest,
       ];
-      function h(e) {
+      function g(e) {
         switch (e) {
           case _.k_Invite:
             return "Invitation Email";
@@ -5596,7 +5712,7 @@
         }
         return "unknown";
       }
-      function g(e) {
+      function h(e) {
         switch (e) {
           case _.k_Invite:
           case _.k_InviteReminder:
@@ -5631,7 +5747,8 @@
           (e[(e.k_EnterDiscount = 13)] = "k_EnterDiscount"),
           (e[(e.k_EnterDiscountReminder = 14)] = "k_EnterDiscountReminder"),
           (e[(e.k_LearnMore = 15)] = "k_LearnMore"),
-          (e[(e.k_MediaUsePermission = 16)] = "k_MediaUsePermission");
+          (e[(e.k_MediaUsePermission = 16)] = "k_MediaUsePermission"),
+          (e[(e.k_MeasureResults = 17)] = "k_MeasureResults");
       })(v || (v = {}));
       const y = [
         v.k_Custom,
@@ -5651,6 +5768,7 @@
         v.k_StatsSummary,
         v.k_SurveyButton,
         v.k_MediaUsePermission,
+        v.k_MeasureResults,
       ];
       function f(e) {
         switch (e) {
@@ -5688,6 +5806,8 @@
             return "Learn More Link";
           case v.k_MediaUsePermission:
             return "Media Usage Permission Request";
+          case v.k_MeasureResults:
+            return "Measuring Your Results";
         }
         return "unknown";
       }
@@ -6051,7 +6171,7 @@
         Lr: () => S,
         fH: () => f,
         i4: () => v,
-        o: () => g,
+        o: () => h,
         vc: () => D,
         z8: () => b,
       });
@@ -6067,7 +6187,7 @@
         m = i(90666);
       const _ = "SaleEvent_DurationDiscount_Tooltip",
         p = "discount";
-      class h {
+      class g {
         constructor() {
           (this.m_mapDiscountEvents = new Map()),
             (this.m_discountEventsListCallback = new u.pB()),
@@ -6078,7 +6198,7 @@
         }
         GetFutureDiscountEvents() {
           const e = (0, o.kl)();
-          return Array.from(h.Get().m_mapDiscountEvents.values()).filter(
+          return Array.from(g.Get().m_mapDiscountEvents.values()).filter(
             (t) => t.end_date > e
           );
         }
@@ -6090,8 +6210,8 @@
         }
         static Get() {
           return (
-            h.s_Singleton || ((h.s_Singleton = new h()), h.s_Singleton.Init()),
-            h.s_Singleton
+            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
+            g.s_Singleton
           );
         }
         Init() {
@@ -6181,23 +6301,23 @@
             const r =
                 m.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxupdatediscountevent",
-              h = new FormData();
-            h.append("sessionid", m.De.SESSIONID),
-              h.append("name", i),
-              h.append("start_time", e.toString()),
-              h.append("end_time", t.toString()),
-              h.append("allowed_appids", c.join(",")),
-              h.append("allowed_publisherids", o.join(",")),
-              h.append("description", a),
-              h.append("collision_type", "proximity"),
-              h.append("event", "1"),
-              h.append("header", n),
-              h.append("tooltip", _),
-              h.append("type", p),
-              h.append("prevent_weeklong", "");
-            let g = null;
+              g = new FormData();
+            g.append("sessionid", m.De.SESSIONID),
+              g.append("name", i),
+              g.append("start_time", e.toString()),
+              g.append("end_time", t.toString()),
+              g.append("allowed_appids", c.join(",")),
+              g.append("allowed_publisherids", o.join(",")),
+              g.append("description", a),
+              g.append("collision_type", "proximity"),
+              g.append("event", "1"),
+              g.append("header", n),
+              g.append("tooltip", _),
+              g.append("type", p),
+              g.append("prevent_weeklong", "");
+            let h = null;
             try {
-              const l = yield s().post(r, h, {
+              const l = yield s().post(r, g, {
                 withCredentials: !0,
                 cancelToken: null == u ? void 0 : u.token,
               });
@@ -6232,11 +6352,11 @@
                   r
                 );
               }
-              g = { response: l };
+              h = { response: l };
             } catch (e) {
-              g = e;
+              h = e;
             }
-            const v = (0, l.l)(g);
+            const v = (0, l.l)(h);
             return (
               console.error(
                 "CDiscountEventStore.CreateDiscountEvent: failed",
@@ -6369,36 +6489,36 @@
           });
         }
       }
-      function g() {
-        return h.Get().GetFutureDiscountEvents();
+      function h() {
+        return g.Get().GetFutureDiscountEvents();
       }
       function v() {
-        return h.Get().GetFutureDiscountEventListCallback();
+        return g.Get().GetFutureDiscountEventListCallback();
       }
       function y(e) {
-        const t = h.Get().BLoadedViaInitOrFullLoad(),
-          [i, r] = a.useState(t ? h.Get().GetFutureDiscountEvents() : null),
+        const t = g.Get().BLoadedViaInitOrFullLoad(),
+          [i, r] = a.useState(t ? g.Get().GetFutureDiscountEvents() : null),
           [n, s] = a.useState(null),
           o =
             e ||
             Number.parseInt((0, m.kQ)("publisherid", "application_config"));
-        (0, d.Qg)(h.Get().GetFutureDiscountEventListCallback(), r),
+        (0, d.Qg)(g.Get().GetFutureDiscountEventListCallback(), r),
           a.useEffect(() => {
-            h.Get().BLoadedViaInitOrFullLoad() ||
-              h.Get().LoadAllDiscountEvents(o).then(s);
+            g.Get().BLoadedViaInitOrFullLoad() ||
+              g.Get().LoadAllDiscountEvents(o).then(s);
           }, [i, o]);
         const l = null != n ? n : (null == i ? void 0 : i.length) ? 1 : null;
         return a.useMemo(() => ({ rgDiscountEvents: i, eResult: l }), [i, l]);
       }
       function f(e) {
-        return h.Get().GetDiscountEvent(e);
+        return g.Get().GetDiscountEvent(e);
       }
       function D(e) {
-        const [t, i] = a.useState(h.Get().GetDiscountEvent(e));
+        const [t, i] = a.useState(g.Get().GetDiscountEvent(e));
         return (
           a.useEffect(() => {
             ((!t && e) || (null == t ? void 0 : t.id) != e) &&
-              h
+              g
                 .Get()
                 .LoadSingleDiscountEvent(e)
                 .then((e) => {
@@ -6409,19 +6529,19 @@
         );
       }
       function b() {
-        return { fnCreateDiscountEvent: h.Get().CreateDiscountEvent };
+        return { fnCreateDiscountEvent: g.Get().CreateDiscountEvent };
       }
       function S() {
         return {
           fnUpdateDiscountEventAppAndPublisherList:
-            h.Get().UpdateDiscountEventPublisherAndAppList,
+            g.Get().UpdateDiscountEventPublisherAndAppList,
         };
       }
-      (0, r.gn)([c.a], h.prototype, "GetDiscountEvent", null),
-        (0, r.gn)([c.a], h.prototype, "CreateDiscountEvent", null),
+      (0, r.gn)([c.a], g.prototype, "GetDiscountEvent", null),
+        (0, r.gn)([c.a], g.prototype, "CreateDiscountEvent", null),
         (0, r.gn)(
           [c.a],
-          h.prototype,
+          g.prototype,
           "UpdateDiscountEventPublisherAndAppList",
           null
         );
@@ -6441,8 +6561,8 @@
         m = i(93976),
         _ = i(22975),
         p = i(90666),
-        h = i(85948);
-      const g = "section_",
+        g = i(85948);
+      const h = "section_",
         v = "list_",
         y = "option_";
       class f {
@@ -6912,7 +7032,7 @@
         GetRequiredTags() {
           let e = [];
           if (this.m_model && this.m_model.required_tags) {
-            let t = h.v.Get().GetGameTags();
+            let t = g.v.Get().GetGameTags();
             Object.keys(this.m_model.required_tags).forEach((i) => {
               const r = t.find((e) => e.value == i);
               r && e.push({ label: r.label, value: r.value });
@@ -7012,7 +7132,7 @@
         GetCategoryTags() {
           let e = [];
           if (this.m_model && this.m_model.categories.tags) {
-            let t = h.v.Get().GetGameTags();
+            let t = g.v.Get().GetGameTags();
             Object.keys(this.m_model.categories.tags).forEach((i) => {
               const r = t.find((e) => e.value == i);
               e.push({ label: r.label, value: r.value });
@@ -7261,9 +7381,9 @@
         }
         GenerateUniqueIDForOptInSection() {
           let e = Math.floor(1 + 1e5 * Math.random());
-          for (; this.GetDynamicSectionByID(g + e); )
+          for (; this.GetDynamicSectionByID(h + e); )
             e = Math.floor(1 + 1e5 * Math.random());
-          return g + e;
+          return h + e;
         }
         static GenerateUniqueIDForOptionListSection(e) {
           let t = Math.floor(1 + 1e5 * Math.random());
@@ -7283,7 +7403,7 @@
         SetDirty(e) {
           this.m_bDirty != e &&
             ((this.m_bDirty = e),
-            h.v.Get().SetUnpublishedChanges(this.GetFullName()));
+            g.v.Get().SetUnpublishedChanges(this.GetFullName()));
         }
         Save(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
@@ -7319,7 +7439,7 @@
                   e
                 );
               }
-              h.v.Get().SetOptInDefinition(this.m_model),
+              g.v.Get().SetOptInDefinition(this.m_model),
                 yield this.RefreshInProgressStats(e),
                 this.SetDirty(!1);
             } catch (e) {
@@ -7646,7 +7766,7 @@
         }
         GetGameTagOptions() {
           if (!this.rgGameTokens.length) {
-            h.v
+            g.v
               .Get()
               .GetGameTags()
               .forEach((e) => {
@@ -8333,13 +8453,13 @@
     45328: (e, t, i) => {
       "use strict";
       i.d(t, {
-        A0: () => g,
+        A0: () => h,
         Cy: () => b,
         PV: () => v,
         QQ: () => y,
         V7: () => D,
         ZW: () => f,
-        qh: () => h,
+        qh: () => g,
       });
       var r = i(70655),
         n = i(9669),
@@ -8353,7 +8473,7 @@
         m = i(99533),
         _ = i(22975),
         p = i(90666);
-      class h {
+      class g {
         constructor() {
           (this.m_mapRegistrations = new Map()),
             (this.m_mapRequestedAppIDs = new Map()),
@@ -8614,7 +8734,7 @@
         RegisterAppForOptIn(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const i = t.startsWith("sale_") ? t : "sale_" + t,
-              r = h.Get().CreateOrGetRegistration(e, i);
+              r = g.Get().CreateOrGetRegistration(e, i);
             return (
               (r.accountid_add = p.L7.accountid),
               (r.opt_in = !0),
@@ -8658,11 +8778,11 @@
         }
         static Get() {
           return (
-            h.s_OptInRegs ||
-              ((h.s_OptInRegs = new h()),
-              (window.COptInRegistrations = h.s_OptInRegs),
-              h.s_OptInRegs.Init()),
-            h.s_OptInRegs
+            g.s_OptInRegs ||
+              ((g.s_OptInRegs = new g()),
+              (window.COptInRegistrations = g.s_OptInRegs),
+              g.s_OptInRegs.Init()),
+            g.s_OptInRegs
           );
         }
         InternalAddRegistrations(e) {
@@ -8709,7 +8829,7 @@
           );
         }
       }
-      function g(e, t) {
+      function h(e, t) {
         var i;
         const r =
           null === (i = e.jsondata) || void 0 === i
@@ -8735,7 +8855,7 @@
       function v() {
         return o.useMemo(
           () => ({
-            fnLoadMultiOptInRegistration: h.Get().LoadMultiOptInRegistration,
+            fnLoadMultiOptInRegistration: g.Get().LoadMultiOptInRegistration,
           }),
           []
         );
@@ -8745,7 +8865,7 @@
         return (
           (0, o.useEffect)(() => {
             const i = t.filter(Boolean);
-            h.Get()
+            g.Get()
               .LoadMultiOptInRegistration(
                 i.map(() => e),
                 i
@@ -8753,7 +8873,7 @@
               .then(() => {
                 const t = new Map();
                 i.forEach((i) => {
-                  const r = h.Get().GetRegistration(i, e);
+                  const r = g.Get().GetRegistration(i, e);
                   r && t.set(i, r);
                 }),
                   r(t);
@@ -8763,9 +8883,9 @@
         );
       }
       function f(e) {
-        const [t, i] = o.useState(h.Get().GetAllOptInRegistrations(e));
+        const [t, i] = o.useState(g.Get().GetAllOptInRegistrations(e));
         return (
-          (0, _.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(e), i), t
+          (0, _.Qg)(g.Get().GetOptInNameRegistrationsCallbackList(e), i), t
         );
       }
       function D(e) {
@@ -8803,19 +8923,19 @@
       function b(e, t) {
         const i = (0, l.useQuery)(
           ["useAllOptInRegistrationByName", e, Boolean(t)],
-          () => h.Get().FetchOptInRegistrationForOptIn(e, t),
+          () => g.Get().FetchOptInRegistrationForOptIn(e, t),
           { staleTime: 36e5 }
         );
         return i.isLoading ? null : i.data;
       }
       (0, r.gn)(
         [d.a],
-        h.prototype,
+        g.prototype,
         "GetOptInRegistrationAndEligibilityForApp",
         null
       ),
-        (0, r.gn)([d.a], h.prototype, "LoadMultiOptInRegistration", null),
-        (0, r.gn)([a.aD], h.prototype, "Init", null);
+        (0, r.gn)([d.a], g.prototype, "LoadMultiOptInRegistration", null),
+        (0, r.gn)([a.aD], g.prototype, "Init", null);
     },
     46994: (e, t, i) => {
       "use strict";
@@ -8828,12 +8948,12 @@
         Su: () => D,
         XM: () => f,
         Xj: () => w,
-        _J: () => g,
+        _J: () => h,
         b2: () => E,
         co: () => y,
         hd: () => R,
         k1: () => k,
-        kk: () => h,
+        kk: () => g,
         v6: () => b,
         yI: () => S,
       });
@@ -9003,11 +9123,11 @@
             const _ = Array.from(d).sort();
             if (0 == _.length) return 1;
             const p = (0, m.kQ)("publisherid", "application_config"),
-              h =
+              g =
                 m.De.PARTNER_BASE_URL +
                 "promotion/discounts/ajaxgetpackagediscounts/" +
                 p;
-            let g = null,
+            let h = null,
               v = null;
             try {
               const e = [],
@@ -9017,7 +9137,7 @@
                 r.push(n);
                 const a = { packageids: n.join(","), origin: self.origin };
                 e.push(
-                  s().get(h, {
+                  s().get(g, {
                     params: a,
                     withCredentials: !0,
                     cancelToken: null == t ? void 0 : t.token,
@@ -9037,18 +9157,18 @@
                         : n.success) ||
                     !e.data.discounts)
                 ) {
-                  g = { response: e };
+                  h = { response: e };
                   break;
                 }
                 e.data.discounts.forEach((e) => o.push(e));
               }
-              null == g && this.InternalAddDiscounts(o, Array.from(d));
+              null == h && this.InternalAddDiscounts(o, Array.from(d));
             } catch (e) {
-              g = e;
+              h = e;
             }
-            if (null == g) r(1);
+            if (null == h) r(1);
             else {
-              const e = (0, l.l)(g);
+              const e = (0, l.l)(h);
               console.error(
                 "Could not load Discounts for packages",
                 v,
@@ -9060,7 +9180,7 @@
                     (c =
                       null ===
                         (o =
-                          null === (a = null == g ? void 0 : g.response) ||
+                          null === (a = null == h ? void 0 : h.response) ||
                           void 0 === a
                             ? void 0
                             : a.data) || void 0 === o
@@ -9086,7 +9206,7 @@
               c.append("name", e.strDiscountName),
               c.append("description", e.strDiscountDescription),
               e.discountEventID &&
-                !h(e.discountEventID) &&
+                !g(e.discountEventID) &&
                 c.append("type", e.discountEventID),
               c.append("percent", e.nDiscountPct.toString()),
               c.append(
@@ -9259,10 +9379,10 @@
           e.strDiscountName
         )}`;
       }
-      function h(e) {
+      function g(e) {
         return e.startsWith("custom-event-");
       }
-      function g(e) {
+      function h(e) {
         return _.Get().GetDiscountByID(e);
       }
       function v(e) {
@@ -9361,7 +9481,7 @@
     51477: (e, t, i) => {
       "use strict";
       i.d(t, {
-        $D: () => h,
+        $D: () => g,
         AM: () => p,
         Gd: () => _,
         MQ: () => c,
@@ -9452,7 +9572,7 @@
         const [e, t] = r.useState(l.Get().m_rgVisiblePackageIDs);
         return (0, s.Qg)(l.Get().m_visiblePackageIDsCallbackList, t), e;
       }
-      function h() {
+      function g() {
         return r.useMemo(
           () => (0, a.kQ)("publisherid", "application_config"),
           []
@@ -9463,7 +9583,7 @@
       "use strict";
       i.d(t, {
         $w: () => w,
-        AN: () => W,
+        AN: () => N,
         Dt: () => M,
         FR: () => b,
         HV: () => y,
@@ -9473,19 +9593,19 @@
         PP: () => I,
         Rs: () => A,
         Tj: () => S,
-        We: () => z,
+        We: () => j,
         X1: () => P,
         _w: () => v,
         bS: () => L,
         dU: () => k,
         df: () => F,
-        j_: () => N,
+        j_: () => W,
         np: () => q,
         on: () => C,
         ps: () => G,
         rX: () => R,
         sN: () => x,
-        uT: () => j,
+        uT: () => z,
         yh: () => O,
       });
       var r = i(70655),
@@ -9500,7 +9620,7 @@
         m = i(90666),
         _ = i(51477),
         p = i(13271);
-      class h {
+      class g {
         constructor() {
           (this.m_mapPackagePrice = new Map()),
             (this.m_setRecurringSubscriptions = new Set()),
@@ -9521,8 +9641,8 @@
         }
         static Get() {
           return (
-            h.s_Singleton || ((h.s_Singleton = new h()), h.s_Singleton.Init()),
-            h.s_Singleton
+            g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
+            g.s_Singleton
           );
         }
         Init() {
@@ -9562,36 +9682,36 @@
             else
               "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid recurring subscriptions payload");
-          const h = (0, m.kQ)("pending_proposals", "application_config");
+          const g = (0, m.kQ)("pending_proposals", "application_config");
           if (
             (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
-                h
+                g
               ),
-            h)
+            g)
           )
-            if (this.BIsPendingPricePayloadValid(h))
-              for (let e in h) {
-                const t = h[e],
+            if (this.BIsPendingPricePayloadValid(g))
+              for (let e in g) {
+                const t = g[e],
                   i = parseInt(e);
                 this.m_mapPriceProposals.set(i, t);
               }
             else
               "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid pending price proposal payload");
-          const g = (0, m.kQ)("pricing_guidelines", "application_config");
+          const h = (0, m.kQ)("pricing_guidelines", "application_config");
           if (
             (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
-                g
+                h
               ),
-            g)
+            h)
           )
-            if (this.BIsGuidelinesPayloadValid(g)) {
-              for (let e in g) {
-                const t = g[e],
+            if (this.BIsGuidelinesPayloadValid(h)) {
+              for (let e in h) {
+                const t = h[e],
                   i = new Map(),
                   r = 100 * parseInt(e.substring(3));
                 this.m_rgPriceLevels.push(r),
@@ -9642,7 +9762,7 @@
                       : a.get(u)) && void 0 !== o
                   ? o
                   : 0,
-              h =
+              g =
                 null !==
                   (c =
                     null === (l = this.m_mapPriceGuidelines.get(500)) ||
@@ -9652,8 +9772,8 @@
                   ? c
                   : 0;
             this.m_mapMinPrices.set(u, Math.ceil(0.9 * d));
-            const g = Math.floor(Math.min(d / 2, m / 4, _ / 6, p / 8, h / 10));
-            this.m_mapMinDiscountedPrices.set(u, g);
+            const h = Math.floor(Math.min(d / 2, m / 4, _ / 6, p / 8, g / 10));
+            this.m_mapMinDiscountedPrices.set(u, h);
           }
           const v = (0, m.kQ)("currency_data", "application_config");
           if (
@@ -9822,7 +9942,7 @@
                 });
               })
             ),
-            e.sort(g),
+            e.sort(h),
             e
           );
         }
@@ -9926,12 +10046,12 @@
             } catch (e) {
               p = e;
             }
-            const h = (0, l.l)(p);
+            const g = (0, l.l)(p);
             return (
               console.error(
                 "CPackagePricingStore.SubmitProposalToServer: failed",
-                h.strErrorMsg,
-                h
+                g.strErrorMsg,
+                g
               ),
               null !==
                 (o =
@@ -10063,7 +10183,7 @@
             : 0;
         }
       }
-      function g(e, t) {
+      function h(e, t) {
         if (e.strPriceKey == t.strPriceKey) {
           const i = (0, _.vB)(e.packageID),
             r = (0, _.vB)(t.packageID);
@@ -10073,7 +10193,7 @@
       }
       function v(e) {
         const t = e.split("_")[0];
-        return h.Get().m_mapCurrencyData.get(t);
+        return g.Get().m_mapCurrencyData.get(t);
       }
       function y(e, t) {
         var i;
@@ -10099,8 +10219,8 @@
           ? [r.strSymbol + r.strSymbolAndNumberSeparator, n, ""]
           : ["", n, r.strSymbolAndNumberSeparator + r.strSymbol];
       }
-      (0, r.gn)([o.LO], h.prototype, "m_mapOverridesPerPriceKey", void 0),
-        (0, r.gn)([o.aD], h.prototype, "UpdateOverridesPerPriceKey", null);
+      (0, r.gn)([o.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, r.gn)([o.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
       const f = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
@@ -10116,38 +10236,38 @@
         return f.has(e) ? f.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
       function b(e, t) {
-        return h.Get().GetPrice(e, t);
+        return g.Get().GetPrice(e, t);
       }
       function S(e) {
-        const t = h.Get().m_strDisplayPriceKey;
-        return y(h.Get().GetPrice(e, t), t).join("");
+        const t = g.Get().m_strDisplayPriceKey;
+        return y(g.Get().GetPrice(e, t), t).join("");
       }
       function I(e) {
-        const [t, i] = a.useState(h.Get().m_strDisplayPriceKey);
+        const [t, i] = a.useState(g.Get().m_strDisplayPriceKey);
         return (
-          (0, u.Qg)(h.Get().m_displayPriceKeyCallbackList, i),
+          (0, u.Qg)(g.Get().m_displayPriceKeyCallbackList, i),
           (function (e, t) {
-            const [i, r] = a.useState(h.Get().GetPrice(e, t));
+            const [i, r] = a.useState(g.Get().GetPrice(e, t));
             return (
-              (0, u.Qg)(h.Get().GetPriceGridCellCallbackList(e, t), r),
-              a.useEffect(() => r(h.Get().GetPrice(e, t)), [e, t]),
+              (0, u.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), r),
+              a.useEffect(() => r(g.Get().GetPrice(e, t)), [e, t]),
               y(i, t).join("")
             );
           })(e, t)
         );
       }
       function B(e, t) {
-        const i = h.Get().GetPrice(e, "USD");
+        const i = g.Get().GetPrice(e, "USD");
         let r = null;
-        for (let e of h.Get().m_rgPriceLevels)
+        for (let e of g.Get().m_rgPriceLevels)
           if (e > i) {
             r = e;
             break;
           }
         if ("USD" == t || !r)
           return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        let n = h.Get().m_mapPriceGuidelines.get(r).get(t);
-        const s = h.Get().m_mapPriceGuidelines.get(r).get("USD");
+        let n = g.Get().m_mapPriceGuidelines.get(r).get(t);
+        const s = g.Get().m_mapPriceGuidelines.get(r).get("USD");
         if (s != i) {
           const e = i / s;
           (r *= e), (n = Math.ceil(n * e));
@@ -10160,13 +10280,13 @@
           () =>
             (function (e) {
               for (const t of e)
-                for (const e of h.Get().m_rgKnownPriceKeys) {
+                for (const e of g.Get().m_rgKnownPriceKeys) {
                   if ("USD" == e) continue;
                   const { nSuggestedPriceInCents: i, nGuidelinesLevel: r } = B(
                     t,
                     e
                   );
-                  h.Get().OverridePrice(t, e, i);
+                  g.Get().OverridePrice(t, e, i);
                 }
             })(e),
           [e]
@@ -10175,21 +10295,21 @@
       function k(e, t) {
         var i;
         const r = (0, u.NW)();
-        (0, u.Qg)(h.Get().GetPriceGridCellCallbackList(e, t), r);
-        const n = h.Get().GetPrice(e, t);
-        (0, u.Qg)(h.Get().GetPriceGridCellCallbackList(e, "USD"), r);
+        (0, u.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), r);
+        const n = g.Get().GetPrice(e, t);
+        (0, u.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), r);
         const { nSuggestedPriceInCents: s, nGuidelinesLevel: o } = B(e, t),
-          l = a.useCallback((i) => h.Get().OverridePrice(e, t, i), [e, t]),
-          c = h.Get().GetPublishedPrice(e, t),
-          d = h.Get().GetProposedPrice(e, t),
+          l = a.useCallback((i) => g.Get().OverridePrice(e, t, i), [e, t]),
+          c = g.Get().GetPublishedPrice(e, t),
+          d = g.Get().GetProposedPrice(e, t),
           { nMinPriceInCents: m, nMaxPriceInCents: _ } = R(e, t),
           p =
-            null !== (i = h.Get().m_mapMinDiscountedPrices.get(t)) &&
+            null !== (i = g.Get().m_mapMinDiscountedPrices.get(t)) &&
             void 0 !== i
               ? i
               : 0,
-          g = n ? Math.floor((100 * (n - p)) / n) : 90,
-          v = g < Math.min(90, Math.floor((100 * (o - 50)) / o)) ? g : null;
+          h = n ? Math.floor((100 * (n - p)) / n) : 90,
+          v = h < Math.min(90, Math.floor((100 * (o - 50)) / o)) ? h : null;
         return a.useMemo(
           () => ({
             nPriceInCents: n,
@@ -10208,19 +10328,19 @@
         var i;
         return {
           nMinPriceInCents:
-            null !== (i = h.Get().m_mapMinPrices.get(t)) && void 0 !== i
+            null !== (i = g.Get().m_mapMinPrices.get(t)) && void 0 !== i
               ? i
               : 0,
-          nMaxPriceInCents: h.Get().m_setRecurringSubscriptions.has(e)
-            ? h.Get().GetPublishedPrice(e, t)
+          nMaxPriceInCents: g.Get().m_setRecurringSubscriptions.has(e)
+            ? g.Get().GetPublishedPrice(e, t)
             : null,
         };
       }
       function P() {
         return a.useCallback((e, t, i) => {
-          const r = h.Get().GetPrice(e, t);
+          const r = g.Get().GetPrice(e, t);
           return (
-            h.Get().OverridePrice(e, t, i),
+            g.Get().OverridePrice(e, t, i),
             r == i
               ? null
               : {
@@ -10233,14 +10353,14 @@
         }, []);
       }
       function G(e) {
-        return h.Get().m_mapPriceProposals.get(e);
+        return g.Get().m_mapPriceProposals.get(e);
       }
       function w(e) {
         const t = G(e),
           i = [];
-        for (const r of h.Get().m_rgKnownPriceKeys) {
+        for (const r of g.Get().m_rgKnownPriceKeys) {
           const n = t.prices[r],
-            s = h.Get().GetPublishedPrice(e, r);
+            s = g.Get().GetPublishedPrice(e, r);
           n != s &&
             i.push({
               packageID: e,
@@ -10252,88 +10372,88 @@
         return i;
       }
       function C() {
-        return h.Get().m_rgKnownPriceKeys;
+        return g.Get().m_rgKnownPriceKeys;
       }
       function M(e) {
-        return h.Get().m_mapPriceKeyDescriptions.get(e);
+        return g.Get().m_mapPriceKeyDescriptions.get(e);
       }
       function O(e) {
         return a.useCallback(() => {
-          h.Get().DiscardAllLocalPriceOverridesForKey(e);
+          g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
       function L(e) {
         return a.useCallback(() => {
-          h.Get().DiscardLocalPriceOverridesForPackage(e);
+          g.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
       function A(e) {
         return a.useCallback(() => {
-          h.Get().CancelProposal(e);
+          g.Get().CancelProposal(e);
         }, [e]);
       }
       function T() {
-        const [e, t] = a.useState(h.Get().m_strDisplayPriceKey),
-          i = h.Get().m_rgKnownPriceKeys,
+        const [e, t] = a.useState(g.Get().m_strDisplayPriceKey),
+          i = g.Get().m_rgKnownPriceKeys,
           r = a.useCallback((e) => {
             t(e),
-              (h.Get().m_strDisplayPriceKey = e),
-              h.Get().m_displayPriceKeyCallbackList.Dispatch(e);
+              (g.Get().m_strDisplayPriceKey = e),
+              g.Get().m_displayPriceKeyCallbackList.Dispatch(e);
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
       }
       function F(e) {
         const t = (0, u.NW)();
         return (
-          (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, t),
-          h.Get().BHasLocalPriceOverrides(e)
+          (0, u.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
+          g.Get().BHasLocalPriceOverrides(e)
         );
       }
       function U() {
-        const [e, t] = a.useState(() => h.Get().GetAllLocalPriceOverrides());
-        return (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, t), e;
+        const [e, t] = a.useState(() => g.Get().GetAllLocalPriceOverrides());
+        return (0, u.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function j(e) {
-        return (0, p.SZ)(() => h.Get().GetLocalOverrideCountForPriceKey(e));
+      function z(e) {
+        return (0, p.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
       }
-      function z() {
+      function j() {
         return a.useCallback(() => {
           var e;
           return (
-            (null === (e = h.Get().GetAllLocalPriceOverrides()) || void 0 === e
+            (null === (e = g.Get().GetAllLocalPriceOverrides()) || void 0 === e
               ? void 0
               : e.length) > 0
           );
         }, []);
       }
-      function N() {
-        return a.useCallback(() => h.Get().DiscardAllLocalPriceOverrides(), []);
-      }
       function W() {
+        return a.useCallback(() => g.Get().DiscardAllLocalPriceOverrides(), []);
+      }
+      function N() {
         const e = [],
           t = a.useRef(new Map());
-        h.Get().m_mapPriceGuidelines.forEach((i, r) => {
+        g.Get().m_mapPriceGuidelines.forEach((i, r) => {
           const n = i.get("USD");
           e.push(n), t.current.set(n, r);
         }),
           e.sort((e, t) => e - t);
         const i = a.useCallback((e, i) => {
           const r = t.current.get(i);
-          h.Get()
+          g.Get()
             .m_mapPriceGuidelines.get(r)
-            .forEach((t, i) => h.Get().OverridePrice(e, i, t));
+            .forEach((t, i) => g.Get().OverridePrice(e, i, t));
         }, []);
         return { rgUSDPricesInCents: e, fnApplyGuidelines: i };
       }
       function x() {
         return a.useCallback(
-          (e, t, i) => h.Get().SubmitProposalToServer(e, t, i),
+          (e, t, i) => g.Get().SubmitProposalToServer(e, t, i),
           []
         );
       }
       function q() {
         return a.useCallback(
-          (e, t) => h.Get().PublishApprovedProposal(e, t, 6e4),
+          (e, t) => g.Get().PublishApprovedProposal(e, t, 6e4),
           []
         );
       }
@@ -10350,13 +10470,13 @@
         LX: () => b,
         TB: () => O,
         _9: () => C,
-        dy: () => z,
+        dy: () => j,
         hr: () => P,
-        k: () => N,
+        k: () => W,
         pl: () => G,
         s$: () => M,
         yn: () => A,
-        z$: () => W,
+        z$: () => N,
       });
       i(73914);
       var r = i(85261),
@@ -10371,8 +10491,8 @@
         m = i(99533),
         _ = i(22975),
         p = i(73604),
-        h = i(30600),
-        g = i(90666),
+        g = i(30600),
+        h = i(90666),
         v = i(36097);
       function y(e, t) {
         var i, r;
@@ -10413,8 +10533,8 @@
         );
       }
       const D = 28,
-        b = D * h._H.PerDay - 1.5 * h._H.PerHour,
-        S = 10 * h._H.PerMinute;
+        b = D * g._H.PerDay - 1.5 * g._H.PerHour,
+        S = 10 * g._H.PerMinute;
       class I {
         constructor() {
           (this.m_mapPackageStateForDiscountEvents = new Map()),
@@ -10422,7 +10542,7 @@
             (this.m_mapDiscountGridCellCallbackList = new Map()),
             (this.m_mapDiscountEventColumnCallbackList = new Map()),
             (this.m_localPackageDiscountOverrideCallbackList = new m.pB()),
-            "dev" == g.De.WEB_UNIVERSE &&
+            "dev" == h.De.WEB_UNIVERSE &&
               (window.g_DiscountGridEditStore = this);
         }
         static Get() {
@@ -10577,9 +10697,9 @@
                 );
           this.m_mapPackageStateForDiscountEvents.has(e) ||
             this.m_mapPackageStateForDiscountEvents.set(e, new Map());
-          const h = this.m_mapPackageStateForDiscountEvents.get(e);
+          const g = this.m_mapPackageStateForDiscountEvents.get(e);
           for (const n of l) {
-            if (t && h.has(n.id)) continue;
+            if (t && g.has(n.id)) continue;
             const o = { packageID: e, discountEventID: n.id, nBaseAppID: c };
             if (
               ((o.discount = null == m ? void 0 : m.get(n.id)),
@@ -10624,8 +10744,8 @@
                   })));
               }
             }
-            y(o, h.get(n.id)) ||
-              (h.set(n.id, o),
+            y(o, g.get(n.id)) ||
+              (g.set(n.id, o),
               this.GetDiscountGridCellCallbackList(e, n.id).Dispatch(o),
               this.GetDiscountEventColumnCallbackList(n.id).Dispatch(
                 this.GetAllPackageStatesForDiscountEvent(n.id)
@@ -10668,7 +10788,7 @@
               "unique" != (null == i ? void 0 : i.collision_type) &&
                 (a = Math.min(a, e.rtStartDate - b));
             }
-            if (m + h._H.PerDay < a) {
+            if (m + g._H.PerDay < a) {
               const t = {
                 bIsAvailable: !0,
                 rtStartDate: m,
@@ -10700,10 +10820,10 @@
                 (m = Math.max(m, e.rtEndDate + b));
             }
             const _ = (0, l._)(m);
-            _ - m <= 2 * h._H.PerHour && (m = _);
+            _ - m <= 2 * g._H.PerHour && (m = _);
           }
-          const _ = (0, l._)(s + h._H.PerYear / 2);
-          if (m + h._H.PerDay < _) {
+          const _ = (0, l._)(s + g._H.PerYear / 2);
+          if (m + g._H.PerDay < _) {
             const t = {
               bIsAvailable: !0,
               rtStartDate: m,
@@ -10942,9 +11062,9 @@
         );
       }
       function U(e) {
-        const [t, i] = c.useState(() => j(e)),
+        const [t, i] = c.useState(() => z(e)),
           r = c.useCallback(() => {
-            i(j(e));
+            i(z(e));
           }, [e]);
         return (
           c.useEffect(r, [e, r]),
@@ -10952,7 +11072,7 @@
           t
         );
       }
-      function j(e) {
+      function z(e) {
         var t, i;
         const r = I.Get().GetAllPackageStatesForDiscountEvent(e),
           n = {
@@ -10994,7 +11114,7 @@
           }
         return n;
       }
-      function z(e) {
+      function j(e) {
         return (
           !!(0, s.LT)(e).some((e) => e.nDiscountPct > 0) ||
           !(
@@ -11016,7 +11136,7 @@
           )
         );
       }
-      function N(e) {
+      function W(e) {
         if ((0, s.kk)(e)) return !0;
         const t = (0, r.fH)(e);
         if (!(null == t ? void 0 : t.opt_in_name)) return !0;
@@ -11026,7 +11146,7 @@
           i.some((e) => !e.restricted && !e.pruned)
         );
       }
-      function W(e) {
+      function N(e) {
         const t = (function () {
             const [e, t] = c.useState(I.IsInitialized());
             return (0, _.Qg)(I.s_initializationCallbackList, t), e;
@@ -11056,9 +11176,9 @@
         P6: () => S,
         QM: () => _,
         Zq: () => D,
-        f0: () => h,
+        f0: () => g,
         im: () => v,
-        ix: () => g,
+        ix: () => h,
         wQ: () => p,
         x9: () => y,
         y4: () => b,
@@ -11263,10 +11383,10 @@
       function p() {
         return m.Get().m_rgDiscountEvents;
       }
-      function h(e) {
+      function g(e) {
         return m.Get().m_mapDiscountEventsByID.get(e);
       }
-      function g() {
+      function h() {
         return m.Get().m_discountEventsCallbackList;
       }
       function v() {
@@ -11318,11 +11438,11 @@
     89042: (e, t, i) => {
       "use strict";
       i.d(t, {
-        A$: () => g,
+        A$: () => h,
         Eg: () => D,
         Ii: () => y,
         JP: () => f,
-        O7: () => h,
+        O7: () => g,
         UA: () => _,
         zQ: () => m,
         zV: () => p,
@@ -11410,7 +11530,7 @@
           []
         );
       }
-      function h(e) {
+      function g(e) {
         return r.useMemo(
           () => ({
             visible: !1,
@@ -11424,7 +11544,7 @@
           []
         );
       }
-      function g(e) {
+      function h(e) {
         const t = e.getCell("packageType"),
           i = t && "function" == typeof t.getValue && t.getValue();
         i && e.getElement().classList.add(i);
