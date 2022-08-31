@@ -163,8 +163,8 @@ P^_]
 ^_[]
 ^_[]
 ^_[]
-^_[]
 ,^_[]
+^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -187,11 +187,12 @@ VWVWP
 HD^_]
 ^_[]
 ^_[]
-PQRS
-u19Y
+PQRV
+u19q
 u,9Q
 ;A$u
 RPhg
+VShX
 ^_[]
 ^_[]
 9;t!
@@ -205,9 +206,8 @@ WVh'
 PRWW
 QPRR
 <^_[]
-j@RV
-Gf8C
-^_[]
+j@VW
+GL8C
 ^_[]
 ^_[]
 ^_[]
@@ -588,6 +588,7 @@ StopJob
 Unable to write to video stream: dst not aligned!
 Unable to write to video stream: dst stride (stride=%u)!
 Failed to write screenshot to stream, clearing data!
+Not enough room in mem stream for video frame
 Video stream full!
 Video stream full.. couldn't get buffer!
 %s_mutex
@@ -627,13 +628,13 @@ COpenGLFrameCapture - missing opengl methods
 Failed to create y plane
 Failed to create uv plane
 Failed to create rgba plane
+Unsupported output format
 Invalid texture for fbo generated
 COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
 COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
 bFlipRendering
 srcWidth
 srcHeight
-Not enough room in mem stream for video frame
 #extension GL_ARB_texture_rectangle : enable
 uniform sampler2DRect tex0;
 // YUV coefficients 
@@ -1846,49 +1847,42 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-8hYL>
-J6:@v
-6L@*
-Uq{I
-gw\#E
-sGWol
-28R$
-i0C%`RZIac
-7>p_s7Z
-q3?0\,
-QYpvC
-PN?n
-c9|LF
-$I*P
-i|b@gn
-/u:'U
-[a|*
-EQ"Q
-5$?H
+bh	O
+hGp/
+f\o('v\3
+[p^4;
+!92XI
+H\-FT
+n6 X
+WtW@j
+zwb;c8
+.e%(
+aR}Z1
+@ZT<
+vC"I
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-5Gw	
-hD}H
-@qJj
-q!5gKy4
-"H,3
-fX^v
-Em]I
-7@(P|0D
-F(Nb
-2o$n7
-Jm"s
-3>eO
-A$Jf
-Cx1@
-_/ 7
-d	dH
-%*!5
-Kx4})
-6hEx,d%
-:3m#
+,ci\Dky
+;B!`
+:IghK=
+e&A%
+NJF=
+^>fpW"s
+ZQaH
+ut):
+@n[D1
+J'2io1"
+{ os,"P
+UG{]
+|U}y
+X-&U
+&~*\
+/,#`"
+.}Xs	
+@2HB
+!CFd
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1944,8 +1938,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220826205915Z0/
- del4
+220831042732Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1953,41 +1946,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		RE1kn9Cu2X91X7r4VC3xWSLgXBs=
+		Zf9OdRaLpw3qMXt7oMPdWbVHeh4=
 		</data>
 		<data>
-		ZGVsNOu8fH8sLP4o51YVNsFxtGM=
+		nq4w0VU0s9ZPIxES1xpgsDKGDk0=
 		</data>
 	</array>
 </dict>
 </plist>
-!;v&6R
-yuqG)
-20220826205933Z0
-@|!}<4
+DM5F
+"" 4M
+X%`D
+tI!Mitxb
+,P"z
+LKbOI
+/Xe*
+20220831042739Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802164002Z
-220913164001Z0B1
-Timestamp Signer NWK11
+220830162503Z
+221011162502Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-W`H/E->
-;c2%W
-qnEK"
-e}-a
-py~(
--]%v
+Cn&6
+ >$I
+C8gP
+W6RJw
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-t)TD}
-lnSks{gx
-my?m
-qqCJ _
-5I&0
+P\Pj
+^QCF
+C}Bf
+qj~:
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2026,10 +2020,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220826205933Z0#
-dqt	 
-.W/>
--(&+s5L
+220831042739Z0#
+&lC'
+/-7X0
+2Z];	
+{)!*
+u@*\)@
+)$xG
+*\B<
+^Mew
 __TEXT
 __text
 __TEXT
@@ -2243,10 +2242,10 @@ AWAVAUATSH
 t(E9
 [A\A]A^A_]
 AWAVAUATSH
-t+D9
-[A\A]A^A_]
-AWAVAUATSH
 P D9
+([A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
 ([A\A]A^A_]
 AWAVAUATSH
 t	E9
@@ -2306,20 +2305,7 @@ AVSH
 AWAVAUATSH
 ([A\A]A^A_]
 AWAVAUATSH
-D$?A
-L$@A
-L$LA
-L$PA
-L$TA
-L$XE
-l$HfA
-L$^A
-D$bA8F
-[A\A]A^A_]
-AWAVAUATSH
-L$ A
-L$ A
-[A\A]A^A_]
+FLA8E
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -2597,7 +2583,7 @@ AWAVSPI
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-Wj
+D8-gj
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2903,7 +2889,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D95W
+D95g
 UAWAVAUATSH
 D$`H
 D$8H
@@ -2984,6 +2970,7 @@ StopJob
 Unable to write to video stream: dst not aligned!
 Unable to write to video stream: dst stride (stride=%u)!
 Failed to write screenshot to stream, clearing data!
+Not enough room in mem stream for video frame
 Video stream full!
 Video stream full.. couldn't get buffer!
 %s_mutex
@@ -3025,13 +3012,13 @@ COpenGLFrameCapture - missing opengl methods
 Failed to create y plane
 Failed to create uv plane
 Failed to create rgba plane
+Unsupported output format
 Invalid texture for fbo generated
 COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
 COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
 bFlipRendering
 srcWidth
 srcHeight
-Not enough room in mem stream for video frame
 #extension GL_ARB_texture_rectangle : enable
 uniform sampler2DRect tex0;
 // YUV coefficients 
@@ -4356,43 +4343,50 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-+m(n
->#'Qsp
-SchT
-o^MS'?
--f@+
-(3|V
-|NW*
-+[}%
-_%@F
-@n1V
-O0s7
-kr`|f
-=@{>
-;3}0
+<Qz.
+ft*gR
+|PaJ
+q'YO2
+xkF	
+Iw1n
+x9rc3j
+RYBO\
+@\Od
+B+wym
+`U(}=
+-]i4
+8WT	
+`[7~
+RCzH
+8tMu
+1VE3
+2Ho$
+>m`02
+I:fN
+<}h~
+0yVf
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-ABP{
-Z|u\
-B3eH
-QF~[
-pXsq
-u>70
-	vvq
-}M+`'
-]D\<nj
-4_Gk
-hDQP
-ZY}{2
-+hDU!c
-rc%9
-RL} 
-J*_H
-<])	
-g*/q
-ai)=k1
+fk J
+/`#S
+%<&`
+D>=[
+~c.qf
+'UQ;R2
+{3aPP
+KqzDsG
+N.XK0j
+\6jc
+J_)j
+I=R9
+7	 eqCt
+E;\Gf&
+:|^E4z
+4D$w!q
+!)xd
+M\ C
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4448,9 +4442,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220826205915Z0/
-y.EF
->!0[
+220831042732Z0/
+\^xc
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4458,40 +4451,42 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		YaS6DoQO+imN5Cko8/BgYLudEMA=
+		F6565HQqnH8Skv1cXnhjH9bHjdc=
 		</data>
 		<data>
-		zeJaT+vMEeLuY54R2DMogpumhFU=
+		4AHVh4MVyXKQDCf5xmNtiXJIGtE=
 		</data>
 	</array>
 </dict>
 </plist>
-L[.p
-DJa7Q
-Jig_
-@8fE
-20220826205933Z0
-&gbS
+fCi01
+{<!a
+&Wf/
+b[Aev
+rr0a]
+20220831042739Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802163003Z
-220913163002Z0B1
-Timestamp Signer NWK21
+220830163502Z
+221011163501Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-/5q>
-^eJE
-#}=>
-fJeM
+!Q=M
+*O(l
+i9Ef1
+i q't
+own9b
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
--*:E
-A<Lo0$
-9nbV\
-A	<g
+A2C9
+}Wqn
+*		9
+~7Jx8
+|Bg/W'
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4530,11 +4525,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-&gbS
-220826205933Z0#
--pbV
-,$f$
-G!Ec
+SR0	
+220831042739Z0#
+]wGR
+HB,0
+YG-(
+XD59D
 __TEXT
 __text
 __TEXT
@@ -4595,7 +4591,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-_0r1
+b>2s
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4640,10 +4636,8 @@ $E9H
 &E9h
 h&A)
 (	29
-4UG	0
 jh8)	
 29:3	
-@9-B
 h"@9
 Th*@
 Th.@
@@ -4655,17 +4649,14 @@ h&@9
 hvB9
 hrB9
 C9a"C9b&C9c*C9
+[)5A
 aBA9
+E)}@
 h&D)
-i"@9
-<*2	p
-+1	p
-9h2@
-	)h"@
-)hBB
-yh:@
-<h"@9
-T`/	0
+=h"@9
+h"@9
+yi:@
+4`o	p
 bD9h
 Th#@
 hbN9
@@ -4779,9 +4770,9 @@ hfA9
 Th&@
 Th&@
 Rh:@
-TV6	
- 3	X
-A1	XA
+TV7	
+ 4	X
+A2	XA
 T`*@
 4a*@
 4hrA9
@@ -4867,6 +4858,7 @@ StopJob
 Unable to write to video stream: dst not aligned!
 Unable to write to video stream: dst stride (stride=%u)!
 Failed to write screenshot to stream, clearing data!
+Not enough room in mem stream for video frame
 Video stream full!
 Video stream full.. couldn't get buffer!
 %s_mutex
@@ -4908,13 +4900,13 @@ COpenGLFrameCapture - missing opengl methods
 Failed to create y plane
 Failed to create uv plane
 Failed to create rgba plane
+Unsupported output format
 Invalid texture for fbo generated
 COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
 COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
 bFlipRendering
 srcWidth
 srcHeight
-Not enough room in mem stream for video frame
 #extension GL_ARB_texture_rectangle : enable
 uniform sampler2DRect tex0;
 // YUV coefficients 
@@ -6131,48 +6123,36 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-?6CA
-^ZJk
-FQf%
-P"fEy
-jAiM
-A24V
-_lIc
-'H|r!
-Ijvh
--_<K
-7BRc
-c>tBU
-bP#i
-,5ZV
-N!xl
-G}`1
+|7ccW
+y#?f
+r)vY2
+4X!P|
+)RxE
+8,%$
+[':N
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-F3)H
-;1f1:
-)`3"
-&rj5i
-p*vS
-LH,2~E!5K
-#`I	
-#jfR*#
-sm]	
-ghQW
-d19~Y
-sN)p
-<hD*)
-[\,h
-Sy7:=
-OblI
-[rU+N
-`hSQ
-Sg!y
-m&]Z
+WdK0`
+rl6AGd)
+&~\N
+G6bt
+tC.7
+)&*;
+mr]O
+G]m9<B
+$,dU
+m`-i
+	P8+r
+]a0d
+/66;
+7%m:K
+A@fO
+oaQ:
 <'~-
-Frm}=sF
+azP!
+kS^Ob
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6228,9 +6208,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220826205915Z0/
- t}n+;
- VdXH
+220831042732Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6238,41 +6216,40 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		GMBp2L7is0wOh6W+07hwacag8Jw=
+		KudM+M8KgT2wC/42TMXvSvLozuY=
 		</data>
 		<data>
-		lCGuk7sKuxBC+z/yGNWzng5fbNg=
+		iJ31tSiZOuM0u2eulHVfvBy9ZCA=
 		</data>
 	</array>
 </dict>
 </plist>
-l7%-
-:`SC
-Knqr
-20220826205933Z0
+_M,+
+Z|/M'
+$e@L
+20220831042739Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220802164002Z
-220913164001Z0B1
+220830163502Z
+221011163501Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-W`H/E->
-;c2%W
-qnEK"
-e}-a
-py~(
--]%v
+!Q=M
+*O(l
+i9Ef1
+i q't
+own9b
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-t)TD}
-lnSks{gx
-my?m
-qqCJ _
-5I&0
+A2C9
+}Wqn
+*		9
+~7Jx8
+|Bg/W'
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6311,8 +6288,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220826205933Z0#
-ff0+
-,V'f
-7!!R
-y'V>YY
+SR0	
+220831042739Z0#
+GOg!b
+RF\V
+_T5f~
+^dwC

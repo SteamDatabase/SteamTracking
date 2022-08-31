@@ -395,6 +395,7 @@
  SDL_GetError
  SDL_GetGlobalMouseState
  SDL_GetHint
+ SDL_GetJoystickGUIDInfo
  SDL_GetNumAudioDevices
  SDL_GetNumVideoDisplays
  SDL_GetPlatform

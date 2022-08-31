@@ -69456,7 +69456,8 @@ object-assign
           BIsInOverlay() {
             return (
               this.browser_info &&
-              this.browser_info != { m_unPID: 0, m_nBrowserID: -1 }
+              this.browser_info.m_unPID != 0 &&
+              this.browser_info.m_nBrowserID != -1
             );
           }
           SetSavedDimensionsKey(strSavedDimensionsKey) {
@@ -95951,4 +95952,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=7f51e7264aa0578f2e11
+//# sourceMappingURL=friends.js.map?contenthash=c7c5247b6026574e8a68

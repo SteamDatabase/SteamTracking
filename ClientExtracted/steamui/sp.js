@@ -3239,7 +3239,7 @@
         ne = n(4193),
         ae = n(24815),
         re = n(8178),
-        oe = n(78587),
+        oe = n(5977),
         ie = n(93518),
         le = n(32588),
         se = n(95684),
@@ -10886,7 +10886,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1661544391),
+          c = parseInt(1661910815),
           u = c && Jo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, lo.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -23762,7 +23762,7 @@
       var mp = n(91180),
         up = n(39131),
         dp = n(94537),
-        pp = n(88983);
+        pp = n(19670);
       function _p(e) {
         let t = (0, m.e1)(_o.CurrentLanguage),
           n = (0, m.e1)(_o.AvailableLanguages),
@@ -25328,12 +25328,13 @@
               a.Children.forEach(t, (t) => {
                 if (null != r || !a.isValidElement(t)) return;
                 n = t;
-                let o = t.props.path || t.props.from;
-                o &&
-                  (r = (0, oe.LX)(
-                    e.pathname,
-                    Object.assign(Object.assign({}, t.props), { path: o })
-                  ));
+                let o = t.props.path;
+                !o && "from" in t.props && (o = t.props.from),
+                  o &&
+                    (r = (0, oe.LX)(
+                      e.pathname,
+                      Object.assign(Object.assign({}, t.props), { path: o })
+                    ));
               }),
               [n, r]
             );
@@ -25520,9 +25521,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Aug 26 2022 : 13:06:31",
-              BUILD_TIME_UTC: "Aug 26 2022 : 20:06:31",
-              BUILD_RTIME_UTC: 1661544391,
+              BUILD_TIME_LOCAL: "Aug 30 2022 : 18:53:35",
+              BUILD_TIME_UTC: "Aug 31 2022 : 01:53:35",
+              BUILD_RTIME_UTC: 1661910815,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
