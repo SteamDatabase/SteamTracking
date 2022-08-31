@@ -58880,13 +58880,20 @@
         );
       var Za = n(38530);
       function qa(e) {
-        const { optInDefinition: t } = e;
-        return Ma.Get().BHasAdditionalFeaturing() &&
+        const { optInDefinition: t } = e,
+          n = (0, D.ip)("optin_preview_mode", "application_config") || !1;
+        return (Ma.Get().BHasAdditionalFeaturing() || n) &&
           t.additional_featuring_section_enabled &&
           (t.collect_trailer_permissions || t.collect_demo_permissions)
           ? d.createElement(
               "div",
               null,
+              Boolean(n) &&
+                d.createElement(
+                  "div",
+                  { className: Q.WarningStylesBackground },
+                  "NOTE: In Preview Mode, this Trailer or Demo Usage only appear for apps marked with featuring."
+                ),
               Boolean(t.collect_trailer_permissions) &&
                 d.createElement(Ya, { optInDefinition: t }),
               Boolean(t.collect_demo_permissions) &&
