@@ -13810,14 +13810,14 @@
           );
         };
       function fn(e) {
-        const t = "string" == typeof e.to ? e.to : e.to.pathname,
-          n = (0, a.$B)(t);
+        const t = (0, a.TH)(),
+          n = "string" == typeof e.to ? e.to : e.to.pathname,
+          r = (0, a.$B)(n),
+          o = !!r && (!e.exact || r.isExact),
+          s = o && e.isActive ? e.isActive(r, t) : o;
         return i.createElement(
           cn,
-          {
-            active: !!n && (!e.exact || n.isExact),
-            className: an.ScrollableTabItem,
-          },
+          { active: s, className: an.ScrollableTabItem },
           e.children
         );
       }
