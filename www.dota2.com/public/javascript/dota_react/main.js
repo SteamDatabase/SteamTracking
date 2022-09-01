@@ -11900,12 +11900,12 @@
                       ),
                     },
                     "edge" != ke.name &&
+                      "edge-chromium" != ke.name &&
                       o.createElement("source", {
                         type: "video/webm",
                         src:
                           h.Y.VIDEO_URL + "international2022/aegis_loop.webm",
                       }),
-                    "|",
                     o.createElement("source", {
                       type: "video/mp4",
                       src: h.Y.VIDEO_URL + "international2022/aegis_loop.mp4",
