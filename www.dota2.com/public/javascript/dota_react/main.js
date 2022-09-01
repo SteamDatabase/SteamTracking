@@ -32974,7 +32974,8 @@
                               o.createElement(
                                 "div",
                                 { className: So().TeamName },
-                                e.name || "(Team name)"
+                                e.name || "(Team name)",
+                                e.team_id ? " (" + e.team_id + ")" : ""
                               ),
                               o.createElement(
                                 "div",
