@@ -162,7 +162,7 @@ message CMarketingMessages_FindMarketingMessages_Response {
 }
 
 service MarketingMessages {
-	option (service_description) = "Marketing message data ("Steam News" updates at client startup).";
+	option (service_description) = "Marketing message data (\"Steam News\" updates at client startup).";
 
 	rpc GetActiveMarketingMessages (.CMarketingMessages_GetActiveMarketingMessages_Request) returns (.CMarketingMessages_GetActiveMarketingMessages_Response) {
 		option (method_description) = "Get a list of active marketing messages.";
