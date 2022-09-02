@@ -37221,12 +37221,12 @@ body.in_global_drag .title-area {
     color: #fff;
   }
 }
-:global .friendListHeaderContainer:global(.GamepadMode),
-:global(.GamepadMode) :global .friendListHeaderContainer {
+.friendListHeaderContainer.GamepadMode,
+.GamepadMode .friendListHeaderContainer {
   min-height: 0px;
   background-color: transparent;
 }
-:global .favoriteElement {
+.favoriteElement {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -37238,51 +37238,45 @@ body.in_global_drag .title-area {
   scroll-margin-top: 16px;
   scroll-margin-bottom: 16px;
 }
-:global .favoriteElement:global(.gpfocuswithin) {
+.favoriteElement.gpfocuswithin {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global .favoriteElement:global(.GamepadMode),
-:global(.GamepadMode) :global .favoriteElement {
+.favoriteElement.GamepadMode,
+.GamepadMode .favoriteElement {
   height: unset;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 44px;
 }
-:global .favoriteElement:global(.GamepadMode) .ChatRoomGroupAvatar,
-:global(.GamepadMode) :global .favoriteElement .ChatRoomGroupAvatar {
+.favoriteElement.GamepadMode .ChatRoomGroupAvatar,
+.GamepadMode .favoriteElement .ChatRoomGroupAvatar {
   width: 32px;
   height: 32px;
 }
-:global
-  .favoriteElement:global(.GamepadMode)
-  .ChatRoomGroupAvatar
-  .ChatRoomGroupAvatar_initials,
-:global(.GamepadMode)
-  :global
+.favoriteElement.GamepadMode .ChatRoomGroupAvatar .ChatRoomGroupAvatar_initials,
+.GamepadMode
   .favoriteElement
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
   font-size: 18px;
   padding-top: 3px;
 }
-:global .favoriteElement:global(.GamepadMode) .friend.online,
-:global(.GamepadMode) :global .favoriteElement .friend.online {
+.favoriteElement.GamepadMode .friend.online,
+.GamepadMode .favoriteElement .friend.online {
   padding-left: 14px;
   margin-top: 2px;
 }
-:global .favoriteElement:global(.GamepadMode):first-of-type,
-:global(.GamepadMode) :global .favoriteElement:first-of-type {
+.favoriteElement.GamepadMode:first-of-type,
+.GamepadMode .favoriteElement:first-of-type {
   scroll-margin-top: 44px;
 }
-:global :global(.chatRoomMembers.groupMemberList) .friend {
+.chatRoomMembers.groupMemberList .friend {
   margin-top: 2px;
 }
-:global
-  :global(.chatRoomMembers.groupMemberList)
-  :global(.chatroomBucket_regular) {
+.chatRoomMembers.groupMemberList .chatroomBucket_regular {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -37293,35 +37287,33 @@ body.in_global_drag .title-area {
   transform: scale(1) rotateX(0deg);
   scroll-margin: 32px 0;
 }
-:global
-  :global(.chatRoomMembers.groupMemberList)
-  :global(.chatroomBucket_regular):global(.gpfocus) {
+.chatRoomMembers.groupMemberList .chatroomBucket_regular.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
-:global .ChatRoomGroupAvatar:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomGroupAvatar {
+.ChatRoomGroupAvatar.GamepadMode,
+.GamepadMode .ChatRoomGroupAvatar {
   height: 32px;
   width: 32px;
   margin-left: 4px;
   margin-right: 1px;
   border: 2px solid #67707b;
 }
-:global .ChatRoomGroupAvatar:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomGroupAvatar,
-:global .ChatRoomMultiFriendAvatar:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomMultiFriendAvatar {
+.ChatRoomGroupAvatar.GamepadMode,
+.GamepadMode .ChatRoomGroupAvatar,
+.ChatRoomMultiFriendAvatar.GamepadMode,
+.GamepadMode .ChatRoomMultiFriendAvatar {
   border: 2px solid #67707b;
 }
-:global .ChatRoomMultiFriendAvatar:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomMultiFriendAvatar {
+.ChatRoomMultiFriendAvatar.GamepadMode,
+.GamepadMode .ChatRoomMultiFriendAvatar {
   width: 31px;
   height: 31px;
   flex-shrink: 0;
   margin: 0;
 }
-:global .sectionTitle:global(.GamepadMode),
-:global(.GamepadMode) :global .sectionTitle {
+.sectionTitle.GamepadMode,
+.GamepadMode .sectionTitle {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -37342,20 +37334,20 @@ body.in_global_drag .title-area {
   color: #8b929a;
   padding-left: 16px;
 }
-:global .friend.quickAccessFriend:global(.GamepadMode),
-:global(.GamepadMode) :global .friend.quickAccessFriend {
+.friend.quickAccessFriend.GamepadMode,
+.GamepadMode .friend.quickAccessFriend {
   width: calc(100% - 12px);
   padding-left: 14px;
   margin: 0;
 }
-:global .friend.quickAccessFriend:global(.GamepadMode).online,
-:global(.GamepadMode) :global .friend.quickAccessFriend.online {
+.friend.quickAccessFriend.GamepadMode.online,
+.GamepadMode .friend.quickAccessFriend.online {
   padding-left: 14px;
 }
-:global .quickAccessFriend.QuickAccessChat:global(.GamepadMode),
-:global(.GamepadMode) :global .quickAccessFriend.QuickAccessChat,
-:global .quickAccessFriend.QuickAccessClan:global(.GamepadMode),
-:global(.GamepadMode) :global .quickAccessFriend.QuickAccessClan {
+.quickAccessFriend.QuickAccessChat.GamepadMode,
+.GamepadMode .quickAccessFriend.QuickAccessChat,
+.quickAccessFriend.QuickAccessClan.GamepadMode,
+.GamepadMode .quickAccessFriend.QuickAccessClan {
   display: flex;
   flex-direction: row;
   flex-grow: 0;
@@ -37364,10 +37356,10 @@ body.in_global_drag .title-area {
   padding-bottom: 3px;
   width: 100%;
 }
-:global .quickAccessFriend.QuickAccessChat .clanName:global(.GamepadMode),
-:global(.GamepadMode) :global .quickAccessFriend.QuickAccessChat .clanName,
-:global .quickAccessFriend.QuickAccessClan .clanName:global(.GamepadMode),
-:global(.GamepadMode) :global .quickAccessFriend.QuickAccessClan .clanName {
+.quickAccessFriend.QuickAccessChat .clanName.GamepadMode,
+.GamepadMode .quickAccessFriend.QuickAccessChat .clanName,
+.quickAccessFriend.QuickAccessClan .clanName.GamepadMode,
+.GamepadMode .quickAccessFriend.QuickAccessClan .clanName {
   padding-left: 5px;
   flex-direction: column;
   min-width: 0;
@@ -37390,28 +37382,24 @@ body.in_global_drag .title-area {
   color: #c5d6d4;
   font-weight: 400;
 }
-:global
-  .quickAccessFriend.QuickAccessChat
+.quickAccessFriend.QuickAccessChat
   .ChatUnreadMessageIndicator
   .chatUnreadCircle,
-:global
-  .quickAccessFriend.QuickAccessClan
+.quickAccessFriend.QuickAccessClan
   .ChatUnreadMessageIndicator
   .chatUnreadCircle {
   margin-top: 21px;
 }
-:global
-  .quickAccessFriend.QuickAccessChat
+.quickAccessFriend.QuickAccessChat
   .ChatUnreadMessageIndicator.UnreadMention
   .chatUnreadCircle,
-:global
-  .quickAccessFriend.QuickAccessClan
+.quickAccessFriend.QuickAccessClan
   .ChatUnreadMessageIndicator.UnreadMention
   .chatUnreadCircle {
   margin-left: -3px;
 }
-.DialogContent_InnerWidth :global .chatRoomVoiceChannel,
-.DialogContent_InnerWidth :global .chatRoomTextChannel {
+.DialogContent_InnerWidth .chatRoomVoiceChannel,
+.DialogContent_InnerWidth .chatRoomTextChannel {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -37421,55 +37409,31 @@ body.in_global_drag .title-area {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.DialogContent_InnerWidth :global .chatRoomVoiceChannel:global(.gpfocus),
-.DialogContent_InnerWidth :global .chatRoomTextChannel:global(.gpfocus) {
+.DialogContent_InnerWidth .chatRoomVoiceChannel.gpfocus,
+.DialogContent_InnerWidth .chatRoomTextChannel.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
-:global .FriendPickerScrollPanel {
+.FriendPickerScrollPanel {
   padding: 1px 0;
 }
-:global
-  .ChatRoomGroupInviteDialog:global(.GamepadMode)
-  .insetShadow.verticalInsetShadow,
-:global(.GamepadMode)
-  :global
-  .ChatRoomGroupInviteDialog
-  .insetShadow.verticalInsetShadow {
+.ChatRoomGroupInviteDialog.GamepadMode .insetShadow.verticalInsetShadow,
+.GamepadMode .ChatRoomGroupInviteDialog .insetShadow.verticalInsetShadow {
   display: none;
 }
-:global
-  .ChatRoomGroupInviteDialog:global(.GamepadMode)
-  .FriendPickerFriendList
-  > .Panel,
-:global(.GamepadMode)
-  :global
-  .ChatRoomGroupInviteDialog
-  .FriendPickerFriendList
-  > .Panel {
+.ChatRoomGroupInviteDialog.GamepadMode .FriendPickerFriendList > .Panel,
+.GamepadMode .ChatRoomGroupInviteDialog .FriendPickerFriendList > .Panel {
   padding-top: 6px;
 }
-:global
-  .ChatRoomGroupInviteDialog:global(.GamepadMode)
-  .FriendPicker_SuggestedFriend,
-:global(.GamepadMode)
-  :global
-  .ChatRoomGroupInviteDialog
-  .FriendPicker_SuggestedFriend {
+.ChatRoomGroupInviteDialog.GamepadMode .FriendPicker_SuggestedFriend,
+.GamepadMode .ChatRoomGroupInviteDialog .FriendPicker_SuggestedFriend {
   scroll-margin: 16px 0;
 }
-:global
-  .ChatRoomGroupInviteDialog:global(.GamepadMode)
-  .FriendPicker_SuggestedFriend
-  .friend,
-:global(.GamepadMode)
-  :global
-  .ChatRoomGroupInviteDialog
-  .FriendPicker_SuggestedFriend
-  .friend {
+.ChatRoomGroupInviteDialog.GamepadMode .FriendPicker_SuggestedFriend .friend,
+.GamepadMode .ChatRoomGroupInviteDialog .FriendPicker_SuggestedFriend .friend {
   padding-left: 8px;
 }
-:global .FriendPicker_SuggestedFriend .friend {
+.FriendPicker_SuggestedFriend .friend {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -37479,23 +37443,21 @@ body.in_global_drag .title-area {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.FriendPicker_Focus :global .FriendPicker_SuggestedFriend.Focus {
+.FriendPicker_Focus .FriendPicker_SuggestedFriend.Focus {
   background: linear-gradient(
     to right,
     rgba(59, 63, 72, 0.5) 0% 20%,
     transparent 100%
   );
 }
-:global .FriendPicker_SuggestedFriend:global(.gpfocus) .friend {
+.FriendPicker_SuggestedFriend.gpfocus .friend {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
 }
-.DialogContent_InnerWidth :global .chatRoomTextChannel.ActiveTextChannel {
+.DialogContent_InnerWidth .chatRoomTextChannel.ActiveTextChannel {
   background-color: transparent;
 }
-.DialogContent_InnerWidth
-  :global
-  .chatRoomTextChannel.ActiveTextChannel::after {
+.DialogContent_InnerWidth .chatRoomTextChannel.ActiveTextChannel::after {
   content: "";
   height: 75%;
   width: 10px;
@@ -37505,16 +37467,12 @@ body.in_global_drag .title-area {
   background: #1a9fff;
   border-radius: 6px;
 }
-:global .chatRoomTextChannel .ChatUnreadMessageIndicator:global(.GamepadMode),
-:global(.GamepadMode) :global .chatRoomTextChannel .ChatUnreadMessageIndicator {
+.chatRoomTextChannel .ChatUnreadMessageIndicator.GamepadMode,
+.GamepadMode .chatRoomTextChannel .ChatUnreadMessageIndicator {
   background: unset;
 }
-:global
-  .chatRoomTextChannel
-  .ChatUnreadMessageIndicator:global(.GamepadMode)
-  .chatUnreadCircle,
-:global(.GamepadMode)
-  :global
+.chatRoomTextChannel .ChatUnreadMessageIndicator.GamepadMode .chatUnreadCircle,
+.GamepadMode
   .chatRoomTextChannel
   .ChatUnreadMessageIndicator
   .chatUnreadCircle {
@@ -37526,23 +37484,23 @@ body.in_global_drag .title-area {
   left: 5px;
   top: 18px;
 }
-:global .friendlistListContainer:global(.GamepadMode),
-:global(.GamepadMode) :global .friendlistListContainer {
+.friendlistListContainer.GamepadMode,
+.GamepadMode .friendlistListContainer {
   background: transparent;
 }
-:global .friendGroup.taggedGroup:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup.taggedGroup,
-:global .friendGroup.gameGroup:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup.gameGroup {
+.friendGroup.taggedGroup.GamepadMode,
+.GamepadMode .friendGroup.taggedGroup,
+.friendGroup.gameGroup.GamepadMode,
+.GamepadMode .friendGroup.gameGroup {
   border-top: 1px solid #3d4450;
   margin-top: 0px;
 }
-:global .FriendsListContent:global(.GamepadMode),
-:global(.GamepadMode) :global .FriendsListContent {
+.FriendsListContent.GamepadMode,
+.GamepadMode .FriendsListContent {
   flex-direction: unset;
 }
-:global .friendGroup .groupName:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup .groupName {
+.friendGroup .groupName.GamepadMode,
+.GamepadMode .friendGroup .groupName {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
@@ -37580,81 +37538,68 @@ body.in_global_drag .title-area {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
 }
-:global .friendGroup .groupName:global(.GamepadMode):global(.gpfocus),
-:global(.GamepadMode) :global .friendGroup .groupName:global(.gpfocus) {
+.friendGroup .groupName.GamepadMode.gpfocus,
+.GamepadMode .friendGroup .groupName.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global .friendGroup.friendOutgoingRequests .groupName,
-:global .friendGroup.friendRequests .groupName {
+.friendGroup.friendOutgoingRequests .groupName,
+.friendGroup.friendRequests .groupName {
   padding: 6px 24px;
   padding-left: 16px;
 }
-:global .friendGroup .friendInviteContainer {
+.friendGroup .friendInviteContainer {
   margin-top: 2px;
 }
-:global .ExpandPlusMinus:global(.GamepadMode),
-:global(.GamepadMode) :global .ExpandPlusMinus {
+.ExpandPlusMinus.GamepadMode,
+.GamepadMode .ExpandPlusMinus {
   display: none;
 }
-:global
-  .gameGroup:not(.OtherGamesGroup):not(.NonSteamGamesGroup)
-  .gameGroupContainer:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
+.gameGroup:not(.OtherGamesGroup):not(.NonSteamGamesGroup)
+  .gameGroupContainer.GamepadMode,
+.GamepadMode
   .gameGroup:not(.OtherGamesGroup):not(.NonSteamGamesGroup)
   .gameGroupContainer {
   width: unset;
   height: 22px;
 }
-:global .friendGroup .groupIcon:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup .groupIcon {
+.friendGroup .groupIcon.GamepadMode,
+.GamepadMode .friendGroup .groupIcon {
   margin-right: 0px;
 }
-:global .groupName .gameGroupContainer .groupIcon:global(.GamepadMode),
-:global(.GamepadMode) :global .groupName .gameGroupContainer .groupIcon,
-:global .FriendInGameIcon img:global(.GamepadMode),
-:global(.GamepadMode) :global .FriendInGameIcon img {
+.groupName .gameGroupContainer .groupIcon.GamepadMode,
+.GamepadMode .groupName .gameGroupContainer .groupIcon,
+.FriendInGameIcon img.GamepadMode,
+.GamepadMode .FriendInGameIcon img {
   margin-left: 0px;
   margin-top: 0px;
 }
-:global
-  .FriendsListContent
+.FriendsListContent
   .friendlistListContainer
-  .friendGroup.onlineFriends:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
+  .friendGroup.onlineFriends.GamepadMode,
+.GamepadMode
   .FriendsListContent
   .friendlistListContainer
   .friendGroup.onlineFriends {
   border-top: 1px solid rgba(76, 180, 255, 0.3);
   background: none;
 }
-:global
-  .FriendsListContent
+.FriendsListContent
   .friendlistListContainer
-  .friendGroup.offlineFriends:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
+  .friendGroup.offlineFriends.GamepadMode,
+.GamepadMode
   .FriendsListContent
   .friendlistListContainer
   .friendGroup.offlineFriends {
   border-top: 1px solid #3d4450;
   background: none;
 }
-:global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .friend:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .friend,
-:global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .SteamPlayerGroupFooter:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
+.friendGroup.gameGroup:not(.OtherGamesGroup) .friend.GamepadMode,
+.GamepadMode .friendGroup.gameGroup:not(.OtherGamesGroup) .friend,
+.friendGroup.gameGroup:not(.OtherGamesGroup)
+  .SteamPlayerGroupFooter.GamepadMode,
+.GamepadMode
   .friendGroup.gameGroup:not(.OtherGamesGroup)
   .SteamPlayerGroupFooter {
   padding: 0px 0;
@@ -37665,68 +37610,55 @@ body.in_global_drag .title-area {
   flex-grow: 1;
   height: 46px;
 }
-:global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .SteamPlayerGroupFooter.lastInGroup:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
+.friendGroup.gameGroup:not(.OtherGamesGroup)
+  .SteamPlayerGroupFooter.lastInGroup.GamepadMode,
+.GamepadMode
   .friendGroup.gameGroup:not(.OtherGamesGroup)
   .SteamPlayerGroupFooter.lastInGroup {
   margin-top: -8px;
 }
-:global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .SteamPlayerGroupFooter.lastInGroup:global(.GamepadMode)
+.friendGroup.gameGroup:not(.OtherGamesGroup)
+  .SteamPlayerGroupFooter.lastInGroup.GamepadMode
   .SteamPlayerGroupFooterLabel,
-:global(.GamepadMode)
-  :global
+.GamepadMode
   .friendGroup.gameGroup:not(.OtherGamesGroup)
   .SteamPlayerGroupFooter.lastInGroup
   .SteamPlayerGroupFooterLabel {
   margin-left: 10px;
   color: #3e862d;
 }
-:global
-  .friendGroup.gameGroup:not(.OtherGamesGroup)
-  .SteamPlayerGroupFooter.lastInGroup:global(.GamepadMode)
+.friendGroup.gameGroup:not(.OtherGamesGroup)
+  .SteamPlayerGroupFooter.lastInGroup.GamepadMode
   .count,
-:global(.GamepadMode)
-  :global
+.GamepadMode
   .friendGroup.gameGroup:not(.OtherGamesGroup)
   .SteamPlayerGroupFooter.lastInGroup
   .count {
   color: #59bf40;
 }
-:global
-  .friendlistListContainer
-  .friend.ingame
-  .labelHolder:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
-  .friendlistListContainer
-  .friend.ingame
-  .labelHolder {
+.friendlistListContainer .friend.ingame .labelHolder.GamepadMode,
+.GamepadMode .friendlistListContainer .friend.ingame .labelHolder {
   padding: 0;
   margin: 0;
   margin-left: 8px;
   flex-grow: 1;
 }
-:global .friend .labelHolder:global(.GamepadMode),
-:global(.GamepadMode) :global .friend .labelHolder {
+.friend .labelHolder.GamepadMode,
+.GamepadMode .friend .labelHolder {
   height: unset;
   margin-left: 8px;
   max-width: 182px;
 }
-:global(#QuickAccess-Menu) :global .friend .labelHolder:global(.GamepadMode),
-:global(#QuickAccess-Menu) :global(.GamepadMode) :global .friend .labelHolder {
+#QuickAccess-Menu .friend .labelHolder.GamepadMode,
+#QuickAccess-Menu .GamepadMode .friend .labelHolder {
   max-width: 238px;
 }
-:global(#QuickAccess-Menu) :global .friend .labelHolder:global(.GamepadMode),
-:global(#QuickAccess-Menu) :global(.GamepadMode) :global .friend .labelHolder {
+#QuickAccess-Menu .friend .labelHolder.GamepadMode,
+#QuickAccess-Menu .GamepadMode .friend .labelHolder {
   max-width: 238px;
 }
-:global .FriendInGameIcon:global(.GamepadMode),
-:global(.GamepadMode) :global .FriendInGameIcon {
+.FriendInGameIcon.GamepadMode,
+.GamepadMode .FriendInGameIcon {
   margin-left: unset;
   width: unset;
   display: flex;
@@ -37736,20 +37668,16 @@ body.in_global_drag .title-area {
   z-index: 2;
   margin-left: -4px;
 }
-:global .FriendInGameIcon .FriendInGameIcon_NA:global(.GamepadMode),
-:global(.GamepadMode) :global .FriendInGameIcon .FriendInGameIcon_NA {
+.FriendInGameIcon .FriendInGameIcon_NA.GamepadMode,
+.GamepadMode .FriendInGameIcon .FriendInGameIcon_NA {
   margin-left: 0;
 }
-:global .friendGroup.offlineFriends .groupName .groupCount:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
-  .friendGroup.offlineFriends
-  .groupName
-  .groupCount,
-:global .friendGroup.onlineFriends .groupName .groupCount:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup.onlineFriends .groupName .groupCount,
-:global .friendGroup .groupName .groupCount.collapsed:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup .groupName .groupCount.collapsed {
+.friendGroup.offlineFriends .groupName .groupCount.GamepadMode,
+.GamepadMode .friendGroup.offlineFriends .groupName .groupCount,
+.friendGroup.onlineFriends .groupName .groupCount.GamepadMode,
+.GamepadMode .friendGroup.onlineFriends .groupName .groupCount,
+.friendGroup .groupName .groupCount.collapsed.GamepadMode,
+.GamepadMode .friendGroup .groupName .groupCount.collapsed {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -37769,47 +37697,47 @@ body.in_global_drag .title-area {
   text-transform: uppercase;
   color: #8b929a;
 }
-:global .friendGroup .groupName {
+.friendGroup .groupName {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-:global .friendGroup .groupName .groupCount:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup .groupName .groupCount {
+.friendGroup .groupName .groupCount.GamepadMode,
+.GamepadMode .friendGroup .groupName .groupCount {
   margin-left: 8px;
 }
-:global .friend:global(.GamepadMode),
-:global(.GamepadMode) :global .friend {
+.friend.GamepadMode,
+.GamepadMode .friend {
   display: flex;
   align-items: center;
 }
-:global .ContextMenuButton:global(.GamepadMode),
-:global(.GamepadMode) :global .ContextMenuButton {
+.ContextMenuButton.GamepadMode,
+.GamepadMode .ContextMenuButton {
   display: flex;
   align-items: center;
 }
-:global .ContextMenuButton:global(.GamepadMode) svg,
-:global(.GamepadMode) :global .ContextMenuButton svg {
+.ContextMenuButton.GamepadMode svg,
+.GamepadMode .ContextMenuButton svg {
   margin-top: 3px;
 }
-:global .friendlistListContainer .friend.online:global(.GamepadMode),
-:global(.GamepadMode) :global .friendlistListContainer .friend.online {
+.friendlistListContainer .friend.online.GamepadMode,
+.GamepadMode .friendlistListContainer .friend.online {
   padding-left: 14px;
 }
-:global .friendGroup .SteamPlayerGroupFooter:global(.GamepadMode),
-:global(.GamepadMode) :global .friendGroup .SteamPlayerGroupFooter {
+.friendGroup .SteamPlayerGroupFooter.GamepadMode,
+.GamepadMode .friendGroup .SteamPlayerGroupFooter {
   display: flex;
   align-items: center;
 }
-:global .friend.inGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) :global .friend.inGroup .SteamPlayerGroupLines {
+.friend.inGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.inGroup .SteamPlayerGroupLines {
   width: 4px;
   border-width: 1px;
   border-color: #3e862d;
   border-left-width: 2px;
   margin-top: 0px;
 }
-:global .friend.firstInGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) :global .friend.firstInGroup .SteamPlayerGroupLines {
+.friend.firstInGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.firstInGroup .SteamPlayerGroupLines {
   border-top-left-radius: 2px;
   margin-bottom: -3px;
   margin-left: -6px;
@@ -37817,15 +37745,10 @@ body.in_global_drag .title-area {
   border-width: 2px;
   border-color: #3e862d;
 }
-:global .friend.lastInGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) :global .friend.lastInGroup .SteamPlayerGroupLines,
-:global
-  .SteamPlayerGroupFooter.lastInGroup
-  .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
-  .SteamPlayerGroupFooter.lastInGroup
-  .SteamPlayerGroupLines {
+.friend.lastInGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.lastInGroup .SteamPlayerGroupLines,
+.SteamPlayerGroupFooter.lastInGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .SteamPlayerGroupFooter.lastInGroup .SteamPlayerGroupLines {
   border-bottom-left-radius: 2px;
   margin-top: -24px;
   height: 20px;
@@ -37834,23 +37757,23 @@ body.in_global_drag .title-area {
   border-color: #3e862d;
   z-index: 2;
 }
-:global .FriendVoiceChat:global(.gpfocus) {
+.FriendVoiceChat.gpfocus {
   background: #3d4450;
   transition: none;
 }
-:global .GroupVoiceChatFriend:global(.gpfocus) {
+.GroupVoiceChatFriend.gpfocus {
   background: #3d4450;
   transition: none;
 }
-:global .titleBarContainer.ChatTabs:global(.GamepadMode),
-:global(.GamepadMode) :global .titleBarContainer.ChatTabs,
-:global .chatWindow:global(.GamepadMode),
-:global(.GamepadMode) :global .chatWindow,
-:global .chatDialogs:global(.GamepadMode),
-:global(.GamepadMode) :global .chatDialogs {
+.titleBarContainer.ChatTabs.GamepadMode,
+.GamepadMode .titleBarContainer.ChatTabs,
+.chatWindow.GamepadMode,
+.GamepadMode .chatWindow,
+.chatDialogs.GamepadMode,
+.GamepadMode .chatDialogs {
   background: transparent;
 }
-:global .ChatHistorySelector {
+.ChatHistorySelector {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -37866,20 +37789,20 @@ body.in_global_drag .title-area {
   opacity: 0;
   filter: blur(2px);
 }
-:global .chatWindow .chatHeader:global(.GamepadMode),
-:global(.GamepadMode) :global .chatWindow .chatHeader {
+.chatWindow .chatHeader.GamepadMode,
+.GamepadMode .chatWindow .chatHeader {
   min-height: 0px;
   background: transparent;
   z-index: 2;
 }
-:global .titleBarContainer.ChatTabs:global(.GamepadMode),
-:global(.GamepadMode) :global .titleBarContainer.ChatTabs {
+.titleBarContainer.ChatTabs.GamepadMode,
+.GamepadMode .titleBarContainer.ChatTabs {
   padding-bottom: 8px;
   padding-top: 8px;
   background-color: transparent;
 }
-:global .multiChatDialog:global(.GamepadMode),
-:global(.GamepadMode) :global .multiChatDialog {
+.multiChatDialog.GamepadMode,
+.GamepadMode .multiChatDialog {
   flex: 2;
   background: radial-gradient(
     155.42% 100% at 50% 0%,
@@ -37888,8 +37811,8 @@ body.in_global_drag .title-area {
     rgba(14, 20, 27, 0.2) 100%
   );
 }
-:global .multiChatDialog:global(.GamepadMode):global(.gpfocuswithin),
-:global(.GamepadMode) :global .multiChatDialog:global(.gpfocuswithin) {
+.multiChatDialog.GamepadMode.gpfocuswithin,
+.GamepadMode .multiChatDialog.gpfocuswithin {
   background-color: #23262e;
   background: radial-gradient(
     155.42% 100% at 50% 0%,
@@ -37898,51 +37821,33 @@ body.in_global_drag .title-area {
     rgba(35, 38, 46, 0.2) 100%
   );
 }
-:global
-  .multiChatDialog:global(.GamepadMode):global(.gpfocuswithin)
-  .chatWindow
-  .chatEntry
-  > *,
-:global(.GamepadMode)
-  :global
-  .multiChatDialog:global(.gpfocuswithin)
-  .chatWindow
-  .chatEntry
-  > * {
+.multiChatDialog.GamepadMode.gpfocuswithin .chatWindow .chatEntry > *,
+.GamepadMode .multiChatDialog.gpfocuswithin .chatWindow .chatEntry > * {
   background-color: #2b333f;
 }
-:global .multiChatDialog:global(.GamepadMode) .speakerTimeStamp,
-:global(.GamepadMode) :global .multiChatDialog .speakerTimeStamp {
+.multiChatDialog.GamepadMode .speakerTimeStamp,
+.GamepadMode .multiChatDialog .speakerTimeStamp {
   color: #67707b;
 }
-:global
-  .chatTabSetContainer.gamepadui
-  .HorizontalMiniSlider:global(.GamepadMode),
-:global(.GamepadMode)
-  :global
-  .chatTabSetContainer.gamepadui
-  .HorizontalMiniSlider {
+.chatTabSetContainer.gamepadui .HorizontalMiniSlider.GamepadMode,
+.GamepadMode .chatTabSetContainer.gamepadui .HorizontalMiniSlider {
   padding: 0 6px;
 }
-:global .chatWindow .chatEntry:global(.GamepadMode),
-:global(.GamepadMode) :global .chatWindow .chatEntry {
+.chatWindow .chatEntry.GamepadMode,
+.GamepadMode .chatWindow .chatEntry {
   padding: 0px;
   background-color: transparent;
 }
-:global .chatWindow .chatEntry:global(.GamepadMode):global(.gpfocuswithin) > *,
-:global(.GamepadMode)
-  :global
-  .chatWindow
-  .chatEntry:global(.gpfocuswithin)
-  > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
+.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-:global .chatWindow .chatEntry > *:global(.GamepadMode),
-:global(.GamepadMode) :global .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *.GamepadMode,
+.GamepadMode .chatWindow .chatEntry > * {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -37959,20 +37864,20 @@ body.in_global_drag .title-area {
   transform: scale(1) rotateX(0deg);
   box-shadow: 0 0 10px #0e141b;
 }
-:global .ShowStaleWarning .FriendsDataOutofDate {
+.ShowStaleWarning .FriendsDataOutofDate {
   transform: translateY(32px);
 }
-:global .FriendsListAndChatsSteamDeck {
+.FriendsListAndChatsSteamDeck {
   display: flex;
   flex-direction: row;
   width: 100%;
   position: relative;
 }
-:global .FriendsListAndChatsSteamDeck .SteamDeckChats {
+.FriendsListAndChatsSteamDeck .SteamDeckChats {
   display: flex;
   flex: 1;
 }
-:global .FriendsListAndChatsSteamDeck .FriendsDataOutofDate {
+.FriendsListAndChatsSteamDeck .FriendsDataOutofDate {
   position: absolute;
   margin: 0 auto;
   width: 100%;
@@ -37984,7 +37889,7 @@ body.in_global_drag .title-area {
   pointer-events: none;
   transition: transform 0.32s ease-in-out;
 }
-:global .FriendsListAndChatsSteamDeck .FriendsDataOutofDate div {
+.FriendsListAndChatsSteamDeck .FriendsDataOutofDate div {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -38012,15 +37917,15 @@ body.in_global_drag .title-area {
   background-color: #3d4450;
   box-shadow: 1px 0 8px #000;
 }
-:global .FriendsListAndChatsSteamDeck .FriendsDataOutofDate svg {
+.FriendsListAndChatsSteamDeck .FriendsDataOutofDate svg {
   width: 12px;
   height: 12px;
   margin: 0 4px;
 }
-:global .listContentContainer :first-child.friendGroup.gameGroup {
+.listContentContainer :first-child.friendGroup.gameGroup {
   border-top: none;
 }
-:global :global(#QuickAccess-Menu) .GamepadMode.friendlist .TabPanelHeader {
+#QuickAccess-Menu .GamepadMode.friendlist .TabPanelHeader {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0px;
@@ -38051,7 +37956,7 @@ body.in_global_drag .title-area {
   padding-top: 3px;
   height: 33px;
 }
-:global .GamepadMode.friendlist {
+.GamepadMode.friendlist {
   width: 100%;
   max-width: unset;
   display: flex;
@@ -38066,7 +37971,7 @@ body.in_global_drag .title-area {
   );
   border-right: 1px solid #000;
 }
-:global .GamepadMode.friendlist:global(.gpfocuswithin) {
+.GamepadMode.friendlist.gpfocuswithin {
   background-color: #23262e;
   background: radial-gradient(
     155.42% 100% at 50% 0%,
@@ -38075,116 +37980,108 @@ body.in_global_drag .title-area {
     rgba(35, 38, 46, 0.2) 100%
   );
 }
-:global
-  .GamepadMode.friendlist:global(.gpfocuswithin)
-  .FriendsListSteamDeckTopSection {
+.GamepadMode.friendlist.gpfocuswithin .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
-:global(#QuickAccess-Menu)
-  :global
-  .GamepadMode.friendlist:global(.gpfocuswithin) {
+#QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
 }
-:global(#QuickAccess-Menu)
-  :global
-  .GamepadMode.friendlist:global(.gpfocuswithin)
+#QuickAccess-Menu
+  .GamepadMode.friendlist.gpfocuswithin
   .FriendsListSteamDeckTopSection {
   background-color: transparent;
 }
-:global .GamepadMode.friendlist.FriendsListAnchored {
+.GamepadMode.friendlist.FriendsListAnchored {
   max-width: 240px;
 }
-:global .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+.GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
 }
-:global .GamepadMode.friendlist .FriendsListSteamDeckTabs {
+.GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
   flex-direction: row;
   padding: 0px;
   height: 30px;
   padding-bottom: 8px;
 }
-:global
-  .GamepadMode.friendlist
-  .FriendsListSteamDeckTabs
-  .SVGIcon_FavoriteFriends {
+.GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FavoriteFriends {
   margin-top: 3px;
 }
-:global .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FriendIcon {
+.GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_FriendIcon {
   margin-top: 8px;
 }
-:global .GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_Group {
+.GamepadMode.friendlist .FriendsListSteamDeckTabs .SVGIcon_Group {
   margin-top: 9px;
 }
-:global .GamepadMode.friendlist .FriendsListTab {
+.GamepadMode.friendlist .FriendsListTab {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
 }
-:global .GamepadMode.friendlist .FriendsListTab svg {
+.GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
   stroke: currentColor;
   color: inherit;
 }
-:global .GamepadMode.friendlist .FriendsListTab svg path {
+.GamepadMode.friendlist .FriendsListTab svg path {
   stroke: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTab svg line,
-:global .GamepadMode.friendlist .FriendsListTab svg polygon {
+.GamepadMode.friendlist .FriendsListTab svg line,
+.GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTab.Active {
+.GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
   color: #8b929a;
 }
-:global .GamepadMode.friendlist .FriendsListTab.Active svg {
+.GamepadMode.friendlist .FriendsListTab.Active svg {
   fill: currentColor;
   stroke: currentColor;
   color: inherit;
 }
-:global .GamepadMode.friendlist .FriendsListTab.Active svg path {
+.GamepadMode.friendlist .FriendsListTab.Active svg path {
   stroke: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTab.Active svg line,
-:global .GamepadMode.friendlist .FriendsListTab.Active svg polygon {
+.GamepadMode.friendlist .FriendsListTab.Active svg line,
+.GamepadMode.friendlist .FriendsListTab.Active svg polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTab > .SVGIcon_Button {
+.GamepadMode.friendlist .FriendsListTab > .SVGIcon_Button {
   height: 24px;
   vertical-align: middle;
 }
-:global .GamepadMode.friendlist .FriendsListTab:global(.gpfocus) {
+.GamepadMode.friendlist .FriendsListTab.gpfocus {
   color: #fff;
   color: #fff;
 }
-:global .GamepadMode.friendlist .FriendsListTab:global(.gpfocus) svg {
+.GamepadMode.friendlist .FriendsListTab.gpfocus svg {
   fill: currentColor;
   stroke: currentColor;
   color: inherit;
 }
-:global .GamepadMode.friendlist .FriendsListTab:global(.gpfocus) svg path {
+.GamepadMode.friendlist .FriendsListTab.gpfocus svg path {
   stroke: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTab:global(.gpfocus) svg line,
-:global .GamepadMode.friendlist .FriendsListTab:global(.gpfocus) svg polygon {
+.GamepadMode.friendlist .FriendsListTab.gpfocus svg line,
+.GamepadMode.friendlist .FriendsListTab.gpfocus svg polygon {
   stroke: currentColor;
   fill: currentColor;
 }
-:global .GamepadMode.friendlist .FriendsListTabPanelContainer {
+.GamepadMode.friendlist .FriendsListTabPanelContainer {
   width: 100%;
   height: 100%;
   position: relative;
   overflow: scroll hidden;
 }
-:global .GamepadMode.friendlist .TabPanelHeader {
+.GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -38209,13 +38106,13 @@ body.in_global_drag .title-area {
   justify-content: space-between;
   padding: 4px 6px 4px 16px;
 }
-:global .GamepadMode.friendlist .TabPanelHeader .FriendActionsContainer {
+.GamepadMode.friendlist .TabPanelHeader .FriendActionsContainer {
   display: flex;
   flex-direction: row;
 }
-:global .GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
-:global .GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
-:global .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+.GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton,
+.GamepadMode.friendlist .TabPanelHeader .AddFriendButton,
+.GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
   color: #67707b;
   width: 20px;
   height: 20px;
@@ -38225,55 +38122,40 @@ body.in_global_drag .title-area {
   background-color: rgba(103, 112, 123, 0.25);
   border-radius: 3px;
 }
-:global
-  .GamepadMode.friendlist
-  .TabPanelHeader
-  .NewChatGroupButton:global(.gpfocus),
-:global
-  .GamepadMode.friendlist
-  .TabPanelHeader
-  .AddFriendButton:global(.gpfocus),
-:global
-  .GamepadMode.friendlist
-  .TabPanelHeader
-  .FriendsInvitesButton:global(.gpfocus) {
+.GamepadMode.friendlist .TabPanelHeader .NewChatGroupButton.gpfocus,
+.GamepadMode.friendlist .TabPanelHeader .AddFriendButton.gpfocus,
+.GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton.gpfocus {
   background-color: #67707b;
   color: #fff;
 }
-:global .GamepadMode.friendlist .TabPanelHeader svg {
+.GamepadMode.friendlist .TabPanelHeader svg {
   width: 20px;
   height: 20px;
   z-index: 1;
 }
-:global .GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
+.GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton {
   display: flex;
   flex-direction: row;
   width: unset;
   margin-right: 6px;
 }
-:global
-  .GamepadMode.friendlist
-  .TabPanelHeader
-  .FriendsInvitesButton:global(.gpfocus) {
+.GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton.gpfocus {
   background-color: #67707b;
   color: #fff;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .TabPanelHeader
-  .FriendsInvitesButton:global(.gpfocus)
+  .FriendsInvitesButton.gpfocus
   .PendingInviteCount {
   color: #fff;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .TabPanelHeader
-  .FriendsInvitesButton:global(.gpfocus)
+  .FriendsInvitesButton.gpfocus
   .WavingArm {
   animation-name: FriendRequestWave;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .TabPanelHeader
   .FriendsInvitesButton
   .PendingInviteCount {
@@ -38287,24 +38169,20 @@ body.in_global_drag .title-area {
   color: #0e141b;
   font-size: 12px;
 }
-:global
-  .GamepadMode.friendlist
-  .TabPanelHeader
-  .FriendsInvitesButton
-  .WavingArm {
+.GamepadMode.friendlist .TabPanelHeader .FriendsInvitesButton .WavingArm {
   animation-name: none;
   animation-duration: 0.3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   transform-origin: 43% 55%;
 }
-:global .GamepadMode.friendlist .FriendsListTabPanel.beforeActiveTab {
+.GamepadMode.friendlist .FriendsListTabPanel.beforeActiveTab {
   transform: translateX(-64px);
 }
-:global .GamepadMode.friendlist .FriendsListTabPanel.afterActiveTab {
+.GamepadMode.friendlist .FriendsListTabPanel.afterActiveTab {
   transform: translateX(64px);
 }
-:global .GamepadMode.friendlist .FriendsListTabPanel {
+.GamepadMode.friendlist .FriendsListTabPanel {
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
@@ -38322,75 +38200,57 @@ body.in_global_drag .title-area {
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
-:global .GamepadMode.friendlist .FriendsListTabPanel.Active {
+.GamepadMode.friendlist .FriendsListTabPanel.Active {
   opacity: 1;
   transform: translateX(0px);
   z-index: 1;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
   > div:first-of-type,
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .FriendsListTabPanel.FavoritesTabList
   > div:first-of-type {
   padding-top: 8px;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .FriendsListTabPanel.FriendsTabList
   > div:first-of-type {
   padding-top: 0px;
 }
-:global
-  .GamepadMode.friendlist
-  .FriendsListTabPanel.GroupsTabList
-  > div:first-of-type {
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
 }
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
   > div:first-of-type,
-:global
-  .GamepadMode.friendlist
+.GamepadMode.friendlist
   .FriendsListTabPanel.FavoritesTabList
   > div:first-of-type,
-:global
-  .GamepadMode.friendlist
-  .FriendsListTabPanel.FriendsTabList
-  > div:first-of-type,
-:global
-  .GamepadMode.friendlist
-  .FriendsListTabPanel.GroupsTabList
-  > div:first-of-type {
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:first-of-type,
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   overflow-y: scroll;
 }
-:global .GamepadMode.friendlist .FriendsListContent {
+.GamepadMode.friendlist .FriendsListContent {
   max-height: 100%;
   transition: max-height 0.4s ease-in-out;
 }
-:global .GamepadMode.friendlist .GroupChats .ChatRoomList {
+.GamepadMode.friendlist .GroupChats .ChatRoomList {
   padding-top: 0px;
 }
-:global .GamepadMode.friendlist .friend.quickAccessFriend .avatarHolder {
+.GamepadMode.friendlist .friend.quickAccessFriend .avatarHolder {
   height: 36px;
   width: 36px;
 }
-:global
-  .GamepadMode.friendlist
-  .friend.quickAccessFriend
-  .avatarHolder
-  .avatar {
+.GamepadMode.friendlist .friend.quickAccessFriend .avatarHolder .avatar {
   height: 36px;
   width: 36px;
 }
-:global .GamepadMode.friendlist .FavoriteFriend_GameIcon {
+.GamepadMode.friendlist .FavoriteFriend_GameIcon {
   left: -4px;
   right: unset;
 }
-:global .friendlistListContainer button.BackToFriendsListButton {
+.friendlistListContainer button.BackToFriendsListButton {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -38402,29 +38262,24 @@ body.in_global_drag .title-area {
   display: none;
 }
 .FriendRequestViewActive
-  :global
   .friendlistListContainer
   button.BackToFriendsListButton {
   display: block;
 }
-:global
-  .friendlistListContainer
-  button.BackToFriendsListButton.DialogButton:enabled,
-:global .friendlistListContainer button.BackToFriendsListButton.DialogButton {
+.friendlistListContainer button.BackToFriendsListButton.DialogButton:enabled,
+.friendlistListContainer button.BackToFriendsListButton.DialogButton {
   padding: 6px 24px;
   font-size: 14px;
   padding-left: 16px;
   text-align: left;
   border-radius: 0;
 }
-:global
-  .friendlistListContainer
-  button.BackToFriendsListButton:global(.gpfocus) {
+.friendlistListContainer button.BackToFriendsListButton.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global .RightSideButtonContainer {
+.RightSideButtonContainer {
   position: absolute;
   right: 0;
   bottom: 62px;
@@ -38437,80 +38292,65 @@ body.in_global_drag .title-area {
   margin-top: 8px;
   align-self: flex-start;
 }
-:global .RightSideButtonContainer .oneOnOneVoiceChatButton {
+.RightSideButtonContainer .oneOnOneVoiceChatButton {
   overflow: hidden;
 }
-:global
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton
-  :global(.SonarCircle) {
+.RightSideButtonContainer .oneOnOneVoiceChatButton .SonarCircle {
   filter: blur(2px);
   left: -1.8px;
   top: -3px;
 }
-.VoiceRequested :global .RightSideButtonContainer .oneOnOneVoiceChatButton {
+.VoiceRequested .RightSideButtonContainer .oneOnOneVoiceChatButton {
   color: #9bd98c;
 }
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
-  .RightSideButtonContainer {
+.SteamDeckChats.gpfocuswithin .RightSideButtonContainer {
   border-left: 2px solid rgba(103, 112, 123, 0);
 }
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
-  .RightSideButtonContainer
-  .AddFriendButton,
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+.SteamDeckChats.gpfocuswithin .RightSideButtonContainer .AddFriendButton,
+.SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
   .inviteAnotherFriendButton {
   background-color: #2b333f;
 }
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+.SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
-  .AddFriendButton:global(.gpfocus),
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+  .AddFriendButton.gpfocus,
+.SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
-  .inviteAnotherFriendButton:global(.gpfocus) {
+  .inviteAnotherFriendButton.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+.SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
   .oneOnOneVoiceChatButton {
   background-color: #2b333f;
 }
-:global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+.SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
-  .oneOnOneVoiceChatButton:global(.gpfocus) {
+  .oneOnOneVoiceChatButton.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
 .VoiceRequested
-  :global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+  .SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
-  .oneOnOneVoiceChatButton:global(.gpfocus) {
+  .oneOnOneVoiceChatButton.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-green;
 }
 .VoiceRequested
-  :global(.SteamDeckChats):global(.gpfocuswithin)
-  :global
+  .SteamDeckChats.gpfocuswithin
   .RightSideButtonContainer
   .oneOnOneVoiceChatButton {
   color: #fff;
 }
-:global .RightSideButtonContainer .AddFriendButton,
-:global .RightSideButtonContainer .oneOnOneVoiceChatButton,
-:global .RightSideButtonContainer .inviteAnotherFriendButton {
+.RightSideButtonContainer .AddFriendButton,
+.RightSideButtonContainer .oneOnOneVoiceChatButton,
+.RightSideButtonContainer .inviteAnotherFriendButton {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -38537,30 +38377,27 @@ body.in_global_drag .title-area {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-:global .RightSideButtonContainer .AddFriendButton svg,
-:global .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
-:global .RightSideButtonContainer .inviteAnotherFriendButton svg {
+.RightSideButtonContainer .AddFriendButton svg,
+.RightSideButtonContainer .oneOnOneVoiceChatButton svg,
+.RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
 }
-:global .RightSideButtonContainer .oneOnOneVoiceChatButton {
+.RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
   cursor: pointer;
   display: flex;
 }
-:global
-  .RightSideButtonContainer
-  .oneOnOneVoiceChatButton
-  .WaitingForYouFirstTime {
+.RightSideButtonContainer .oneOnOneVoiceChatButton .WaitingForYouFirstTime {
   position: relative;
   height: 20px;
 }
-:global .GamepadMode .FriendPicker_Suggestions:global(.gpfocus) {
+.GamepadMode .FriendPicker_Suggestions.gpfocus {
   background: #3d4450;
   transition: none;
 }
-:global .ChatRoomListGroupItem:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomListGroupItem {
+.ChatRoomListGroupItem.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem {
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -38572,122 +38409,92 @@ body.in_global_drag .title-area {
   height: 44px;
   scroll-margin: 16px 0;
 }
-:global .ChatRoomListGroupItem:global(.GamepadMode):global(.gpfocus),
-:global(.GamepadMode) :global .ChatRoomListGroupItem:global(.gpfocus) {
+.ChatRoomListGroupItem.GamepadMode.gpfocus,
+.GamepadMode .ChatRoomListGroupItem.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global .ChatRoomListGroupItem_header:global(.GamepadMode),
-:global(.GamepadMode) :global .ChatRoomListGroupItem_header {
+.ChatRoomListGroupItem_header.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem_header {
   padding-left: 15px;
   padding-top: 0;
 }
-.chatRoomGroupHeader :global .ChatRoomListGroupItem_header:global(.GamepadMode),
-.chatRoomGroupHeader
-  :global(.GamepadMode)
-  :global
-  .ChatRoomListGroupItem_header {
+.chatRoomGroupHeader .ChatRoomListGroupItem_header.GamepadMode,
+.chatRoomGroupHeader .GamepadMode .ChatRoomListGroupItem_header {
   width: 31px;
   height: 31px;
   margin: 0px;
 }
-:global
-  .ChatRoomListGroupItem_header:global(.GamepadMode)
-  .ChatRoomMultiFriendAvatar,
-:global(.GamepadMode)
-  :global
-  .ChatRoomListGroupItem_header
-  .ChatRoomMultiFriendAvatar {
+.ChatRoomListGroupItem_header.GamepadMode .ChatRoomMultiFriendAvatar,
+.GamepadMode .ChatRoomListGroupItem_header .ChatRoomMultiFriendAvatar {
   align-items: flex-start;
 }
-:global
-  .ChatRoomListGroupItem_header:global(.GamepadMode)
-  .groupNameStatusContainer,
-:global(.GamepadMode)
-  :global
-  .ChatRoomListGroupItem_header
-  .groupNameStatusContainer {
+.ChatRoomListGroupItem_header.GamepadMode .groupNameStatusContainer,
+.GamepadMode .ChatRoomListGroupItem_header .groupNameStatusContainer {
   padding-left: 6px;
 }
-:global .ChatRoomList_Empty_Description {
+.ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode) .ChatRoomGroupAvatar_initials,
-:global(.GamepadMode)
-  :global
-  .chatRoomGroupHeader
-  .ChatRoomGroupAvatar_initials {
+.chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
+.GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode) .chatRoomGroupControls,
-:global(.GamepadMode) :global .chatRoomGroupHeader .chatRoomGroupControls {
+.chatRoomGroupHeader.GamepadMode .chatRoomGroupControls,
+.GamepadMode .chatRoomGroupHeader .chatRoomGroupControls {
   justify-content: flex-end;
 }
-:global
-  .chatRoomGroupHeader:global(.GamepadMode)
-  .chatRoomGroupControls
-  .statMemberStat,
-:global(.GamepadMode)
-  :global
-  .chatRoomGroupHeader
-  .chatRoomGroupControls
-  .statMemberStat {
+.chatRoomGroupHeader.GamepadMode .chatRoomGroupControls .statMemberStat,
+.GamepadMode .chatRoomGroupHeader .chatRoomGroupControls .statMemberStat {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-size: 12px;
   font-weight: bold;
   margin-bottom: -3px;
 }
-:global
-  .chatRoomGroupHeader:global(.GamepadMode)
+.chatRoomGroupHeader.GamepadMode
   .chatRoomGroupControls
   .statMemberStat
   .statCircle,
-:global(.GamepadMode)
-  :global
+.GamepadMode
   .chatRoomGroupHeader
   .chatRoomGroupControls
   .statMemberStat
   .statCircle {
   margin-left: 2px;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode),
-:global(.GamepadMode) :global .chatRoomGroupHeader {
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
   background-color: #0e141b;
   box-shadow: 0 0 14px #0e141b;
   padding: 6px 4px 6px 10px;
   max-height: 34px;
 }
-.SteamDeckChats:global(.gpfocuswithin)
-  :global
-  .chatRoomGroupHeader:global(.GamepadMode),
-.SteamDeckChats:global(.gpfocuswithin)
-  :global(.GamepadMode)
-  :global
-  .chatRoomGroupHeader {
+.SteamDeckChats.gpfocuswithin .chatRoomGroupHeader.GamepadMode,
+.SteamDeckChats.gpfocuswithin .GamepadMode .chatRoomGroupHeader {
   background-color: #23262e;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode) .ChatRoomGroupAvatar,
-:global(.GamepadMode) :global .chatRoomGroupHeader .ChatRoomGroupAvatar {
+.chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar,
+.GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar {
   width: 32px;
   height: 32px;
   border-width: 1px;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode) .chatRoomGroupHeaderName,
-:global(.GamepadMode) :global .chatRoomGroupHeader .chatRoomGroupHeaderName {
+.chatRoomGroupHeader.GamepadMode .chatRoomGroupHeaderName,
+.GamepadMode .chatRoomGroupHeader .chatRoomGroupHeaderName {
   font-size: 16px;
   font-weight: normal;
   display: flex;
   align-items: center;
 }
-:global .chatRoomGroupHeader:global(.GamepadMode) .chatRoomGroupHeaderTagline,
-:global(.GamepadMode) :global .chatRoomGroupHeader .chatRoomGroupHeaderTagline {
+.chatRoomGroupHeader.GamepadMode .chatRoomGroupHeaderTagline,
+.GamepadMode .chatRoomGroupHeader .chatRoomGroupHeaderTagline {
   font-size: 12px;
   font-weight: bold;
   margin-left: 10px;
 }
-:global .chatRoomGroupActiveChat:global(.GamepadMode),
-:global(.GamepadMode) :global .chatRoomGroupActiveChat {
+.chatRoomGroupActiveChat.GamepadMode,
+.GamepadMode .chatRoomGroupActiveChat {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -38710,100 +38517,79 @@ body.in_global_drag .title-area {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-:global
-  .chatRoomGroupActiveChat:global(.GamepadMode):global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.TextLines),
-:global
-  .chatRoomGroupActiveChat:global(.GamepadMode):global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.ScratchPad)
+.chatRoomGroupActiveChat.GamepadMode.voiceRoom .SVGIcon_TextRoom .TextLines,
+.chatRoomGroupActiveChat.GamepadMode.voiceRoom
+  .SVGIcon_TextRoom
+  .ScratchPad
   path,
-:global
-  .chatRoomGroupActiveChat:global(.GamepadMode):global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.ScratchPad)
+.chatRoomGroupActiveChat.GamepadMode.voiceRoom
+  .SVGIcon_TextRoom
+  .ScratchPad
   line,
-:global(.GamepadMode)
-  :global
-  .chatRoomGroupActiveChat:global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.TextLines),
-:global(.GamepadMode)
-  :global
-  .chatRoomGroupActiveChat:global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.ScratchPad)
+.GamepadMode .chatRoomGroupActiveChat.voiceRoom .SVGIcon_TextRoom .TextLines,
+.GamepadMode
+  .chatRoomGroupActiveChat.voiceRoom
+  .SVGIcon_TextRoom
+  .ScratchPad
   path,
-:global(.GamepadMode)
-  :global
-  .chatRoomGroupActiveChat:global(.voiceRoom)
-  :global(.SVGIcon_TextRoom)
-  :global(.ScratchPad)
+.GamepadMode
+  .chatRoomGroupActiveChat.voiceRoom
+  .SVGIcon_TextRoom
+  .ScratchPad
   line {
   stroke-width: 10px;
   stroke: #8f9e9c;
 }
-:global .chatRoomGroupActiveChat:global(.GamepadMode):global(.gpfocus),
-:global(.GamepadMode) :global .chatRoomGroupActiveChat:global(.gpfocus) {
+.chatRoomGroupActiveChat.GamepadMode.gpfocus,
+.GamepadMode .chatRoomGroupActiveChat.gpfocus {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-:global .MultiUserChat.GroupChat:global(.GamepadMode),
-:global(.GamepadMode) :global .MultiUserChat.GroupChat {
+.MultiUserChat.GroupChat.GamepadMode,
+.GamepadMode .MultiUserChat.GroupChat {
   display: flex;
   flex-direction: row;
 }
-:global
-  .GamepadMode
-  .DialogSpanningTable
-  td.friendCell
-  .friend:global(.gpfocus) {
+.GamepadMode .DialogSpanningTable td.friendCell .friend.gpfocus {
   background: #3d4450;
   transition: none;
 }
-:global .GamepadMode .DialogSpanningTable td.buttonCell .DialogButton {
+.GamepadMode .DialogSpanningTable td.buttonCell .DialogButton {
   min-width: auto;
 }
-:global .GamepadMode .ChatRoomNotificationSettingsDialog .notificationsChannel {
+.GamepadMode .ChatRoomNotificationSettingsDialog .notificationsChannel {
   height: unset;
   scroll-margin-top: 16px;
   scroll-margin-bottom: 16px;
 }
-:global .GamepadMode .notificationRow > :first-child {
+.GamepadMode .notificationRow > :first-child {
   flex: 1;
 }
-:global .GamepadMode.ChatRoomGroupInviteDialog .DropTarget {
+.GamepadMode.ChatRoomGroupInviteDialog .DropTarget {
   overflow: hidden;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   .DropTarget
   .CreateChat_NonBetaFriendsWarning {
   margin: 0;
 }
-:global .GamepadMode.ChatRoomGroupInviteDialog .FriendPicker_Suggestions {
+.GamepadMode.ChatRoomGroupInviteDialog .FriendPicker_Suggestions {
   background-color: transparent;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   .FriendPicker_Suggestions
   .FriendPicker_Suggestions_List {
   padding: 0;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
-  .FriendPicker_Suggestions
-  .insetShadow {
+.GamepadMode.ChatRoomGroupInviteDialog .FriendPicker_Suggestions .insetShadow {
   display: none;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   .FriendPicker_InvitedFriend_NotInBetaWarning {
   background-color: #de3618;
 }
-:global .GamepadMode.ChatRoomGroupInviteDialog .DialogLabel {
+.GamepadMode.ChatRoomGroupInviteDialog .DialogLabel {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -38822,21 +38608,18 @@ body.in_global_drag .title-area {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .DialogListBuilderInput_ListItem {
   align-self: center;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .DialogListBuilderInput_ListItem
   .FriendPicker_InvitedFriend_NotInBetaWarning {
   background-color: #de3618;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .DialogListBuilderInput_Input.DialogInputPlaceholder {
   box-shadow: none;
@@ -38860,38 +38643,33 @@ body.in_global_drag .title-area {
   font-style: normal;
   padding-left: 0px;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .FriendPicker_ChosenFriend {
   padding: 4px 8px;
   margin: 0 4px;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .FriendPicker_ChosenFriend
   span {
   font-size: 16px;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer
   .FriendPicker_ChosenFriend
   svg {
   display: none;
 }
-:global .GamepadMode.ChatRoomGroupInviteDialog ._DialogInputContainer.Active {
+.GamepadMode.ChatRoomGroupInviteDialog ._DialogInputContainer.Active {
   background-color: #fff;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer.Active
   .DialogListBuilderInput_Input.DialogInputPlaceholder {
   color: #23262e;
 }
-:global
-  .GamepadMode.ChatRoomGroupInviteDialog
+.GamepadMode.ChatRoomGroupInviteDialog
   ._DialogInputContainer.Active
   .DialogListBuilderInput_Input.DialogInputPlaceholder::placeholder {
   font-style: italic;
@@ -38961,7 +38739,7 @@ html.web_chat_frame body {
   margin: 0;
   overflow: hidden;
 }
-.friendGroup .groupName:global(.gpfocus) {
+.friendGroup .groupName.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -39245,8 +39023,8 @@ body.in_global_drag .friendlist_titlebar {
   display: flex;
   flex-direction: row;
 }
-.socialInputContainer .inputContainer:global(.GamepadMode),
-:global(.GamepadMode) .socialInputContainer .inputContainer {
+.socialInputContainer .inputContainer.GamepadMode,
+.GamepadMode .socialInputContainer .inputContainer {
   height: 32px;
 }
 .compactView .socialInputContainer .inputContainer {
@@ -39266,8 +39044,8 @@ body.in_global_drag .friendlist_titlebar {
   transform: scale3d(1, 1, 1);
   margin: 8px 8px 0 8px;
 }
-.MemberListOptionsContainer .socialInputContainer:global(.GamepadMode),
-:global(.GamepadMode) .MemberListOptionsContainer .socialInputContainer {
+.MemberListOptionsContainer .socialInputContainer.GamepadMode,
+.GamepadMode .MemberListOptionsContainer .socialInputContainer {
   margin: 0;
 }
 .MemberListViewCompact .MemberListOptionsContainer .socialInputContainer {
@@ -39312,8 +39090,8 @@ body.in_global_drag .friendlist_titlebar {
   transition: opacity 0.4s ease-in-out;
   pointer-events: none;
 }
-.FriendChatTypingNotification:global(.GamepadMode),
-:global(.GamepadMode) .FriendChatTypingNotification {
+.FriendChatTypingNotification.GamepadMode,
+.GamepadMode .FriendChatTypingNotification {
   background: linear-gradient(
     to top,
     rgba(19, 32, 44, 0.9) 0%,
@@ -39735,8 +39513,8 @@ body.in_global_drag .friendlist_titlebar {
 .friendInviteContainer .friend .inviteLabel {
   color: #4f6168 !important;
 }
-.friendInviteContainer .friend .inviteLabel:global(.GamepadMode),
-:global(.GamepadMode) .friendInviteContainer .friend .inviteLabel {
+.friendInviteContainer .friend .inviteLabel.GamepadMode,
+.GamepadMode .friendInviteContainer .friend .inviteLabel {
   padding-right: 16px;
   color: #8b929a !important;
 }
@@ -40065,14 +39843,14 @@ body.in_global_drag .friendlist_titlebar {
   border-radius: 2px;
   overflow: hidden;
 }
-.inputContainer:global(.GamepadMode),
-:global(.GamepadMode) .inputContainer {
+.inputContainer.GamepadMode,
+.GamepadMode .inputContainer {
   height: 40px;
   border-radius: 0;
   padding-right: 6px;
 }
-.inputContainer:global(.GamepadMode) .friendSearchClear,
-:global(.GamepadMode) .inputContainer .friendSearchClear {
+.inputContainer.GamepadMode .friendSearchClear,
+.GamepadMode .inputContainer .friendSearchClear {
   display: none;
 }
 .friendSearchInput[type="text"] {
@@ -40094,8 +39872,8 @@ body.in_global_drag .friendlist_titlebar {
   background-repeat: no-repeat;
   background-position: 6px 4px;
 }
-.friendSearchInput[type="text"]:global(.GamepadMode),
-:global(.GamepadMode) .friendSearchInput[type="text"] {
+.friendSearchInput[type="text"].GamepadMode,
+.GamepadMode .friendSearchInput[type="text"] {
   box-shadow: none;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -40117,24 +39895,24 @@ body.in_global_drag .friendlist_titlebar {
   font-style: normal;
   padding-left: 16px;
 }
-.friendSearchInput[type="text"]:global(.GamepadMode),
-.friendSearchInput[type="text"]:global(.GamepadMode):not(:global(.disabled)):not(:global(.gpfocus)):hover,
-:global(.GamepadMode) .friendSearchInput[type="text"],
-:global(.GamepadMode)
-  .friendSearchInput[type="text"]:not(:global(.disabled)):not(:global(.gpfocus)):hover {
+.friendSearchInput[type="text"].GamepadMode,
+.friendSearchInput[type="text"].GamepadMode:not(.disabled):not(.gpfocus):hover,
+.GamepadMode .friendSearchInput[type="text"],
+.GamepadMode
+  .friendSearchInput[type="text"]:not(.disabled):not(.gpfocus):hover {
   background: #23262e;
 }
-.friendSearchInput[type="text"]:global(.GamepadMode):global(.gpfocus),
-.friendSearchInput[type="text"]:global(.GamepadMode):global(.gpfocus):hover,
-:global(.GamepadMode) .friendSearchInput[type="text"]:global(.gpfocus),
-:global(.GamepadMode) .friendSearchInput[type="text"]:global(.gpfocus):hover {
+.friendSearchInput[type="text"].GamepadMode.gpfocus,
+.friendSearchInput[type="text"].GamepadMode.gpfocus:hover,
+.GamepadMode .friendSearchInput[type="text"].gpfocus,
+.GamepadMode .friendSearchInput[type="text"].gpfocus:hover {
   background: #fff;
   color: #000;
   box-shadow: none;
   padding-left: 16px;
 }
-.friendSearchInput[type="text"]:global(.GamepadMode)::placeholder,
-:global(.GamepadMode) .friendSearchInput[type="text"]::placeholder {
+.friendSearchInput[type="text"].GamepadMode::placeholder,
+.GamepadMode .friendSearchInput[type="text"]::placeholder {
   font-style: italic;
   color: #67707b;
   font-size: 16px;
@@ -40147,8 +39925,8 @@ body.in_global_drag .friendlist_titlebar {
   padding-left: 22px;
   background-position: 4px 4px;
 }
-.friendSearchInput[type="text"]:focus:global(.GamepadMode),
-:global(.GamepadMode) .friendSearchInput[type="text"]:focus {
+.friendSearchInput[type="text"]:focus.GamepadMode,
+.GamepadMode .friendSearchInput[type="text"]:focus {
   background-color: #fff;
   color: #000;
 }
@@ -40377,8 +40155,8 @@ body.in_global_drag .friendlist_titlebar {
   transition: all 0.26s ease-in-out;
   cursor: pointer;
 }
-.groupHeaderContainer .SortByRecent:global(.GamepadMode),
-:global(.GamepadMode) .groupHeaderContainer .SortByRecent {
+.groupHeaderContainer .SortByRecent.GamepadMode,
+.GamepadMode .groupHeaderContainer .SortByRecent {
   width: 30px;
   height: 29px;
   margin-right: 0;
@@ -40393,19 +40171,14 @@ body.in_global_drag .friendlist_titlebar {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
-.groupHeaderContainer:global(.gpfocuswithin) .SortByRecent:global(.GamepadMode),
-:global(.GamepadMode)
-  .groupHeaderContainer:global(.gpfocuswithin)
-  .SortByRecent {
+.groupHeaderContainer.gpfocuswithin .SortByRecent.GamepadMode,
+.GamepadMode .groupHeaderContainer.gpfocuswithin .SortByRecent {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
 }
-.groupHeaderContainer:global(.gpfocuswithin)
-  .SortByRecent:global(.GamepadMode):global(.gpfocus),
-:global(.GamepadMode)
-  .groupHeaderContainer:global(.gpfocuswithin)
-  .SortByRecent:global(.gpfocus) {
+.groupHeaderContainer.gpfocuswithin .SortByRecent.GamepadMode.gpfocus,
+.GamepadMode .groupHeaderContainer.gpfocuswithin .SortByRecent.gpfocus {
   animation-name: ItemFocusAnim-grey;
 }
 .SVGIcon_SortBy {
@@ -40458,8 +40231,8 @@ body.in_global_drag .friendlist_titlebar {
   position: relative;
   overflow: visible;
 }
-.chatRoomMembers .friendGroup .groupName:global(.GamepadMode),
-:global(.GamepadMode) .chatRoomMembers .friendGroup .groupName {
+.chatRoomMembers .friendGroup .groupName.GamepadMode,
+.GamepadMode .chatRoomMembers .friendGroup .groupName {
   margin-left: 0;
 }
 .friendGroup.offlineFriends .groupName,
@@ -40583,7 +40356,7 @@ body.in_global_drag .friendlist_titlebar {
 .CompactFriendsList .friendsContainer.groupCollapsed {
   padding-bottom: 0px;
 }
-.friendsContainer:global(.gpfocus) {
+.friendsContainer.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -40687,7 +40460,7 @@ body.in_global_drag .friendlist_titlebar {
   scroll-margin-top: 16px;
   scroll-margin-bottom: 16px;
 }
-.friendStatusHover:global(.gpfocuswithin) {
+.friendStatusHover.gpfocuswithin {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
@@ -40815,11 +40588,8 @@ body.in_global_drag .friendlist_titlebar {
   height: 45px;
   padding: 0 0.5px;
 }
-.quickAccessFriend.QuickAccessChat
-  .ChatRoomMultiFriendAvatar:global(.GamepadMode),
-:global(.GamepadMode)
-  .quickAccessFriend.QuickAccessChat
-  .ChatRoomMultiFriendAvatar {
+.quickAccessFriend.QuickAccessChat .ChatRoomMultiFriendAvatar.GamepadMode,
+.GamepadMode .quickAccessFriend.QuickAccessChat .ChatRoomMultiFriendAvatar {
   width: 30px;
   height: 30px;
   margin-left: 4px;
@@ -40977,18 +40747,18 @@ body.in_global_drag .friendlist_titlebar {
   margin-left: -10px;
   border-width: 1px;
 }
-.friend.firstInGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) .friend.firstInGroup .SteamPlayerGroupLines,
-.friend.inGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) .friend.inGroup .SteamPlayerGroupLines,
-.friend.lastInGroup .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) .friend.lastInGroup .SteamPlayerGroupLines,
-.SteamPlayerGroupFooter .SteamPlayerGroupLines:global(.GamepadMode),
-:global(.GamepadMode) .SteamPlayerGroupFooter .SteamPlayerGroupLines {
+.friend.firstInGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.firstInGroup .SteamPlayerGroupLines,
+.friend.inGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.inGroup .SteamPlayerGroupLines,
+.friend.lastInGroup .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .friend.lastInGroup .SteamPlayerGroupLines,
+.SteamPlayerGroupFooter .SteamPlayerGroupLines.GamepadMode,
+.GamepadMode .SteamPlayerGroupFooter .SteamPlayerGroupLines {
   margin-left: -6px;
 }
-.friend.awayOrSnooze:global(.GamepadMode),
-:global(.GamepadMode) .friend.awayOrSnooze {
+.friend.awayOrSnooze.GamepadMode,
+.GamepadMode .friend.awayOrSnooze {
   opacity: 1;
   filter: saturate(1);
 }
@@ -41224,7 +40994,7 @@ body.in_global_drag .friendlist_titlebar {
   box-shadow: -2px -2px 6px #00000088;
   overflow: hidden;
 }
-.chatTabSelector:global(.gpfocus) {
+.chatTabSelector.gpfocus {
   background: #fff;
   transition: none;
 }
@@ -41782,10 +41552,10 @@ body.in_global_drag .friendlist_titlebar {
   margin-top: 12px;
   position: absolute;
 }
-.ChatRoomListGroupItem .FriendMessageCount:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomListGroupItem .FriendMessageCount,
-.unreadFriend .FriendMessageCount:global(.GamepadMode),
-:global(.GamepadMode) .unreadFriend .FriendMessageCount {
+.ChatRoomListGroupItem .FriendMessageCount.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem .FriendMessageCount,
+.unreadFriend .FriendMessageCount.GamepadMode,
+.GamepadMode .unreadFriend .FriendMessageCount {
   animation-name: none;
   padding: 2px;
   background: #ffd55f;
@@ -41801,13 +41571,10 @@ body.in_global_drag .friendlist_titlebar {
   text-align: center;
   position: relative;
 }
-.ChatRoomListGroupItem
-  .FriendMessageCount:global(.GamepadMode).HasUnreadMention,
-:global(.GamepadMode)
-  .ChatRoomListGroupItem
-  .FriendMessageCount.HasUnreadMention,
-.unreadFriend .FriendMessageCount:global(.GamepadMode).HasUnreadMention,
-:global(.GamepadMode) .unreadFriend .FriendMessageCount.HasUnreadMention {
+.ChatRoomListGroupItem .FriendMessageCount.GamepadMode.HasUnreadMention,
+.GamepadMode .ChatRoomListGroupItem .FriendMessageCount.HasUnreadMention,
+.unreadFriend .FriendMessageCount.GamepadMode.HasUnreadMention,
+.GamepadMode .unreadFriend .FriendMessageCount.HasUnreadMention {
   line-height: 11px;
 }
 .CompactFriendsList .unreadFriend .FriendMessageCount {
@@ -41961,8 +41728,8 @@ body.in_global_drag .friendlist_titlebar {
   line-height: 100vh;
   user-select: none;
 }
-.chatDialogs .emptyChatDialogs:global(.GamepadMode),
-:global(.GamepadMode) .chatDialogs .emptyChatDialogs {
+.chatDialogs .emptyChatDialogs.GamepadMode,
+.GamepadMode .chatDialogs .emptyChatDialogs {
   font-weight: bold;
   font-size: 12px;
   line-height: 22px;
@@ -42224,8 +41991,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   position: relative;
   overflow: hidden;
 }
-.msg div.ChatMessageOpenGraph:global(.gpfocus),
-.msg div.SteamPublishedFile:global(.gpfocus) {
+.msg div.ChatMessageOpenGraph.gpfocus,
+.msg div.SteamPublishedFile.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -42672,7 +42439,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   height: 110px;
   border-radius: 8px;
 }
-.ChatMessageInvite:global(.gpfocus) {
+.ChatMessageInvite.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -43178,8 +42945,8 @@ input.InviteFriendToChatDialog_LinkInput {
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
-.SonarCircle:global(.GamepadMode),
-:global(.GamepadMode) .SonarCircle {
+.SonarCircle.GamepadMode,
+.GamepadMode .SonarCircle {
   left: 0.2px;
   top: -1px;
   border-width: 2px;
@@ -43748,8 +43515,8 @@ a.connectionStatus:visited {
 .friend.awayOrSnooze .labelHolder {
   opacity: 0.5;
 }
-.friend.awayOrSnooze .labelHolder:global(.GamepadMode),
-:global(.GamepadMode) .friend.awayOrSnooze .labelHolder {
+.friend.awayOrSnooze .labelHolder.GamepadMode,
+.GamepadMode .friend.awayOrSnooze .labelHolder {
   opacity: 1;
 }
 .chatWindow .chatBody {
@@ -43996,18 +43763,18 @@ a.connectionStatus:visited {
   transition-duration: 0.32s;
   transition-timing-function: ease-in-out;
 }
-.ChatHistoryContainer:global(.GamepadMode),
-:global(.GamepadMode) .ChatHistoryContainer {
+.ChatHistoryContainer.GamepadMode,
+.GamepadMode .ChatHistoryContainer {
   margin-right: 46px;
 }
-.ChatHistoryContainer:global(.gpfocus) .ChatHistorySelector {
+.ChatHistoryContainer.gpfocus .ChatHistorySelector {
   opacity: 1;
 }
-.ChatHistoryContainer:global(.gpfocus) .msg.timeDivision {
+.ChatHistoryContainer.gpfocus .msg.timeDivision {
   color: #8b929a;
 }
-.ChatHistoryContainer:global(.gpfocus) .msg.timeDivision .horizDivider,
-.ChatHistoryContainer:global(.gpfocus) .msg.timeDivision .preHorizDivider {
+.ChatHistoryContainer.gpfocus .msg.timeDivision .horizDivider,
+.ChatHistoryContainer.gpfocus .msg.timeDivision .preHorizDivider {
   background-color: rgba(139, 146, 154, 0.3);
 }
 .inviteAnotherFriendButton {
@@ -44085,8 +43852,8 @@ a.connectionStatus:visited {
   border-left: 1px solid #22252b;
   overflow-x: hidden;
 }
-.chatRoomMembers:global(.GamepadMode),
-:global(.GamepadMode) .chatRoomMembers {
+.chatRoomMembers.GamepadMode,
+.GamepadMode .chatRoomMembers {
   border-left: 0px solid transparent;
 }
 .MemberListColumn {
@@ -44098,8 +43865,8 @@ a.connectionStatus:visited {
   background-color: rgba(34, 37, 43, 0);
   position: relative;
 }
-.MemberListColumn:global(.GamepadMode),
-:global(.GamepadMode) .MemberListColumn {
+.MemberListColumn.GamepadMode,
+.GamepadMode .MemberListColumn {
   width: 320px;
 }
 .MemberListColumn.MemberListViewCompact {
@@ -44140,20 +43907,13 @@ a.connectionStatus:visited {
   z-index: 10;
   background: none;
 }
-.MemberListColumn
-  .friend
-  .rankIcon.isFriend
-  .SVGIcon_Crown:global(.GamepadMode),
-:global(.GamepadMode)
-  .MemberListColumn
-  .friend
-  .rankIcon.isFriend
-  .SVGIcon_Crown {
+.MemberListColumn .friend .rankIcon.isFriend .SVGIcon_Crown.GamepadMode,
+.GamepadMode .MemberListColumn .friend .rankIcon.isFriend .SVGIcon_Crown {
   left: -13px;
   top: -23px;
 }
-.MemberListColumn .friend .rankIcon .SVGIcon_Crown:global(.GamepadMode),
-:global(.GamepadMode) .MemberListColumn .friend .rankIcon .SVGIcon_Crown {
+.MemberListColumn .friend .rankIcon .SVGIcon_Crown.GamepadMode,
+.GamepadMode .MemberListColumn .friend .rankIcon .SVGIcon_Crown {
   left: -13px;
 }
 .MemberListColumn .friend .chatMemberFriendIcon svg {
@@ -44164,8 +43924,8 @@ a.connectionStatus:visited {
   bottom: -6px;
   z-index: 1;
 }
-.MemberListColumn .friend .chatMemberFriendIcon svg:global(.GamepadMode),
-:global(.GamepadMode) .MemberListColumn .friend .chatMemberFriendIcon svg {
+.MemberListColumn .friend .chatMemberFriendIcon svg.GamepadMode,
+.GamepadMode .MemberListColumn .friend .chatMemberFriendIcon svg {
   left: -15px;
   bottom: -9px;
 }
@@ -44770,8 +44530,8 @@ html.web_chat_frame .perf_timing_area {
   flex-direction: row;
   padding-left: 0px;
 }
-.msg.timeDivision:global(.GamepadMode),
-:global(.GamepadMode) .msg.timeDivision {
+.msg.timeDivision.GamepadMode,
+.GamepadMode .msg.timeDivision {
   font-weight: bold;
   text-transform: uppercase;
   color: #67707b;
@@ -44789,8 +44549,8 @@ html.web_chat_frame .perf_timing_area {
 .timeDivision.time_passes .preHorizDivider {
   margin-left: 88px;
 }
-.timeDivision.time_passes .preHorizDivider:global(.GamepadMode),
-:global(.GamepadMode) .timeDivision.time_passes .preHorizDivider {
+.timeDivision.time_passes .preHorizDivider.GamepadMode,
+.GamepadMode .timeDivision.time_passes .preHorizDivider {
   margin-left: 0;
 }
 .timeDivision.time_passes .preHorizDivider {
@@ -44812,8 +44572,8 @@ html.web_chat_frame .perf_timing_area {
   margin-bottom: auto;
   margin-right: 8px;
 }
-.timeDivision .preHorizDivider:global(.GamepadMode),
-:global(.GamepadMode) .timeDivision .preHorizDivider {
+.timeDivision .preHorizDivider.GamepadMode,
+.GamepadMode .timeDivision .preHorizDivider {
   flex: 1;
   width: unset;
 }
@@ -44828,8 +44588,8 @@ html.web_chat_frame .perf_timing_area {
   margin-bottom: auto;
   margin-left: 8px;
 }
-.timeDivision .horizDivider:global(.GamepadMode),
-:global(.GamepadMode) .timeDivision .horizDivider {
+.timeDivision .horizDivider.GamepadMode,
+.GamepadMode .timeDivision .horizDivider {
   margin-left: 2px;
 }
 .msg.ChatMsgSlashEmote .speaker {
@@ -45351,8 +45111,8 @@ html.web_chat_frame .perf_timing_area {
   margin-left: 6px;
   white-space: nowrap;
 }
-.speakerTimeStamp:global(.GamepadMode),
-:global(.GamepadMode) .speakerTimeStamp {
+.speakerTimeStamp.GamepadMode,
+.GamepadMode .speakerTimeStamp {
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -45362,8 +45122,8 @@ html.web_chat_frame .perf_timing_area {
 .speaker.ingame .speakerStatus {
   background-color: #a6df3d;
 }
-.speaker.ingame .speakerStatus:global(.GamepadMode),
-:global(.GamepadMode) .speaker.ingame .speakerStatus {
+.speaker.ingame .speakerStatus.GamepadMode,
+.GamepadMode .speaker.ingame .speakerStatus {
   background-color: #59bf40;
 }
 .speaker.away .speakerStatus {
@@ -45379,8 +45139,8 @@ html.web_chat_frame .perf_timing_area {
 .speaker.online .speakerStatus {
   background-color: #0295ca;
 }
-.speaker.online .speakerStatus:global(.GamepadMode),
-:global(.GamepadMode) .speaker.online .speakerStatus {
+.speaker.online .speakerStatus.GamepadMode,
+.GamepadMode .speaker.online .speakerStatus {
   background-color: #4cb4ff;
 }
 .speaker.watchingbroadcast .speakerStatus {
@@ -45424,7 +45184,7 @@ html.web_chat_frame .perf_timing_area {
   transition-duration: 0.12s;
   transition-timing-function: ease-in-out;
 }
-.msg:global(.gpfocus) {
+.msg.gpfocus {
   background: #3d4450;
   transition: none;
 }
@@ -45432,8 +45192,8 @@ html.web_chat_frame .perf_timing_area {
   padding: 1.5px 0;
   margin-right: 16px;
 }
-.MultiUserChat .msg:global(.GamepadMode),
-:global(.GamepadMode) .MultiUserChat .msg {
+.MultiUserChat .msg.GamepadMode,
+.GamepadMode .MultiUserChat .msg {
   border-radius: 6px;
 }
 .MultiUserChat .msg:not(.ChatMsgSlashEmote) {
@@ -46245,11 +46005,11 @@ html.web_chat_frame .perf_timing_area {
   font-size: 16px;
   padding-top: 4px;
 }
-:global(#QuickAccess-Menu)
+#QuickAccess-Menu
   .ChatRoomGroupAvatar.Small
-  .ChatRoomGroupAvatar_initials:global(.GamepadMode),
-:global(.GamepadMode)
-  :global(#QuickAccess-Menu)
+  .ChatRoomGroupAvatar_initials.GamepadMode,
+.GamepadMode
+  #QuickAccess-Menu
   .ChatRoomGroupAvatar.Small
   .ChatRoomGroupAvatar_initials {
   padding-top: 1px;
@@ -46531,8 +46291,8 @@ html.web_chat_frame .perf_timing_area {
   margin-bottom: 10px;
   font-size: 12px;
 }
-.mentionSearchText:global(.GamepadMode),
-:global(.GamepadMode) .mentionSearchText {
+.mentionSearchText.GamepadMode,
+.GamepadMode .mentionSearchText {
   margin-bottom: 4px;
   font-size: 10px;
 }
@@ -46548,20 +46308,20 @@ html.web_chat_frame .perf_timing_area {
   margin-right: 12px;
   overflow: hidden;
 }
-.suggestOption:global(.GamepadMode),
-:global(.GamepadMode) .suggestOption {
+.suggestOption.GamepadMode,
+.GamepadMode .suggestOption {
   margin-bottom: 4px;
   font-size: 10px;
   line-height: 12px;
   padding-left: 20px;
 }
-.suggestOption:global(.GamepadMode).mentionSearchOption.manyMatches,
-:global(.GamepadMode) .suggestOption.mentionSearchOption.manyMatches {
+.suggestOption.GamepadMode.mentionSearchOption.manyMatches,
+.GamepadMode .suggestOption.mentionSearchOption.manyMatches {
   font-size: 10px;
   line-height: 12px;
 }
-.suggestOption:global(.GamepadMode).selected,
-:global(.GamepadMode) .suggestOption.selected {
+.suggestOption.GamepadMode.selected,
+.GamepadMode .suggestOption.selected {
   padding-left: 24px;
 }
 .suggestOption .nickname {
@@ -46586,8 +46346,8 @@ span.mentionSearchMatch {
   display: flex;
   flex-direction: row;
 }
-.mentionSuggestion:global(.GamepadMode),
-:global(.GamepadMode) .mentionSuggestion {
+.mentionSuggestion.GamepadMode,
+.GamepadMode .mentionSuggestion {
   position: relative;
   overflow: visible;
 }
@@ -46604,8 +46364,8 @@ span.mentionSearchMatch {
   margin-right: 4px;
   transition: margin 0.15s ease-in-out;
 }
-.mentionAvatar:global(.GamepadMode),
-:global(.GamepadMode) .mentionAvatar {
+.mentionAvatar.GamepadMode,
+.GamepadMode .mentionAvatar {
   width: 14px;
   height: 14px;
   left: -20px;
@@ -46641,8 +46401,8 @@ span.mention {
   white-space: nowrap;
   vertical-align: bottom;
 }
-span.mention:global(.GamepadMode),
-:global(.GamepadMode) span.mention {
+span.mention.GamepadMode,
+.GamepadMode span.mention {
   border: 0 solid transparent;
   font-weight: 500;
   font-size: 12px;
@@ -46653,8 +46413,8 @@ span.mention.me {
   color: #fff;
   border: 0.5px solid #7b93a7;
 }
-span.mention.me:global(.GamepadMode),
-:global(.GamepadMode) span.mention.me {
+span.mention.me.GamepadMode,
+.GamepadMode span.mention.me {
   border: 0 solid transparent;
 }
 .HoverPositionPopup {
@@ -46999,8 +46759,8 @@ body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox {
   margin-left: 3px;
   margin-right: 3px;
 }
-.favoriteElement .ChatRoomGroupAvatar.HasAvatar:global(.GamepadMode),
-:global(.GamepadMode) .favoriteElement .ChatRoomGroupAvatar.HasAvatar {
+.favoriteElement .ChatRoomGroupAvatar.HasAvatar.GamepadMode,
+.GamepadMode .favoriteElement .ChatRoomGroupAvatar.HasAvatar {
   height: 32px;
   width: 32px;
   margin-left: 4px;
@@ -47162,10 +46922,10 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   order: 5;
   z-index: 1;
 }
-.ChatTabContent .avatarHolder .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode) .ChatTabContent .avatarHolder .avatarStatus,
-.friend.quickAccessFriend .avatarHolder .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode) .friend.quickAccessFriend .avatarHolder .avatarStatus {
+.ChatTabContent .avatarHolder .avatarStatus.GamepadMode,
+.GamepadMode .ChatTabContent .avatarHolder .avatarStatus,
+.friend.quickAccessFriend .avatarHolder .avatarStatus.GamepadMode,
+.GamepadMode .friend.quickAccessFriend .avatarHolder .avatarStatus {
   position: absolute;
   height: unset;
   width: 3px;
@@ -47173,8 +46933,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   bottom: 0;
   right: -4px;
 }
-.friend .avatarHolder .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode) .friend .avatarHolder .avatarStatus {
+.friend .avatarHolder .avatarStatus.GamepadMode,
+.GamepadMode .friend .avatarHolder .avatarStatus {
   position: absolute;
   height: unset;
   width: 3px;
@@ -47183,12 +46943,12 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   right: -2px;
   display: block;
 }
-:global(.chatRoomMembers.groupMemberList)
+.chatRoomMembers.groupMemberList
   .friend
   .avatarHolder
-  .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode)
-  :global(.chatRoomMembers.groupMemberList)
+  .avatarStatus.GamepadMode,
+.GamepadMode
+  .chatRoomMembers.groupMemberList
   .friend
   .avatarHolder
   .avatarStatus {
@@ -47209,19 +46969,12 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   mask-size: 5px 6px;
   opacity: 0.75;
 }
-.ChatTabContent
-  .friend.awayOrSnooze
-  .avatarHolder
-  .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode)
-  .ChatTabContent
-  .friend.awayOrSnooze
-  .avatarHolder
-  .avatarStatus,
+.ChatTabContent .friend.awayOrSnooze .avatarHolder .avatarStatus.GamepadMode,
+.GamepadMode .ChatTabContent .friend.awayOrSnooze .avatarHolder .avatarStatus,
 .friend.quickAccessFriend.friend.awayOrSnooze
   .avatarHolder
-  .avatarStatus:global(.GamepadMode),
-:global(.GamepadMode)
+  .avatarStatus.GamepadMode,
+.GamepadMode
   .friend.quickAccessFriend.friend.awayOrSnooze
   .avatarHolder
   .avatarStatus {
@@ -48079,8 +47832,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   z-index: 1;
   margin: 4px;
 }
-.ChatRoomListGroupItem .ChatRoomGroupAvatar:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomListGroupItem .ChatRoomGroupAvatar {
+.ChatRoomListGroupItem .ChatRoomGroupAvatar.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem .ChatRoomGroupAvatar {
   width: 32px;
   height: 32px;
   border-width: 2px;
@@ -48091,8 +47844,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   height: 34px;
   border-width: 0;
 }
-.ChatRoomListGroupItem .ChatRoomGroupAvatar.HasAvatar:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomListGroupItem .ChatRoomGroupAvatar.HasAvatar {
+.ChatRoomListGroupItem .ChatRoomGroupAvatar.HasAvatar.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem .ChatRoomGroupAvatar.HasAvatar {
   width: 32px;
   height: 32px;
   border-width: 2px;
@@ -48160,8 +47913,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem
   .ChatRoomGroupAvatar
-  .ChatRoomGroupAvatar_initials:global(.GamepadMode),
-:global(.GamepadMode)
+  .ChatRoomGroupAvatar_initials.GamepadMode,
+.GamepadMode
   .ChatRoomListGroupItem
   .ChatRoomGroupAvatar
   .ChatRoomGroupAvatar_initials {
@@ -48283,8 +48036,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem.HasLinkedBroadcast
   .groupNameStatusContainer
-  .displayRow:global(.GamepadMode),
-:global(.GamepadMode)
+  .displayRow.GamepadMode,
+.GamepadMode
   .ChatRoomListGroupItem.HasLinkedBroadcast
   .groupNameStatusContainer
   .displayRow {
@@ -48305,8 +48058,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.groupNameStatusContainer .chatRoomName:global(.GamepadMode),
-:global(.GamepadMode) .groupNameStatusContainer .chatRoomName {
+.groupNameStatusContainer .chatRoomName.GamepadMode,
+.GamepadMode .groupNameStatusContainer .chatRoomName {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -48371,13 +48124,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   color: #c5d6d4;
   font-size: 14px;
 }
-.ChatRoomListGroupItem
-  .groupNameStatusContainer
-  .chatRoomName:global(.GamepadMode),
-:global(.GamepadMode)
-  .ChatRoomListGroupItem
-  .groupNameStatusContainer
-  .chatRoomName {
+.ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName {
   font-size: 15px;
 }
 .ChatRoomListGroupItem.HasLinkedBroadcast {
@@ -48782,8 +48530,8 @@ button.chatRoomHeaderButton:hover {
   padding: 2px;
   border-bottom: 1px solid rgba(23, 24, 29, 0.75);
 }
-.chatRoomGroupHeader:global(.GamepadMode),
-:global(.GamepadMode) .chatRoomGroupHeader {
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
   border-bottom: 0px solid transparent;
 }
 .namedGroup .chatRoomGroupHeader {
@@ -48995,10 +48743,10 @@ button.chatRoomHeaderButton:hover {
 .inviteButton.inviteButtonJoinVoice.gpfocus {
   background: linear-gradient(to right, #13ae26 0%, #16f72d 100%);
 }
-.ChatMessageInvite.gpfocus .DialogButton.GreenPlay:global(.GamepadMode),
-:global(.GamepadMode) .ChatMessageInvite.gpfocus .DialogButton.GreenPlay,
-.ChatMessageInvite.gpfocus .inviteButton:global(.GamepadMode),
-:global(.GamepadMode) .ChatMessageInvite.gpfocus .inviteButton {
+.ChatMessageInvite.gpfocus .DialogButton.GreenPlay.GamepadMode,
+.GamepadMode .ChatMessageInvite.gpfocus .DialogButton.GreenPlay,
+.ChatMessageInvite.gpfocus .inviteButton.GamepadMode,
+.GamepadMode .ChatMessageInvite.gpfocus .inviteButton {
   background: #fff;
   color: #0e141b;
   transition-duration: 0s;
@@ -49593,22 +49341,22 @@ img.ChatRoomGroupAvatar_Avatar {
   fill: rgba(0, 0, 0, 0);
   stroke: rgba(104, 110, 115, 0.4);
 }
-.SVGIcon_TextRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_TextRoom,
-.SVGIcon_Button.SVGIcon_TextRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_Button.SVGIcon_TextRoom,
-.SVGIcon_VoiceRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_VoiceRoom,
-.SVGIcon_Button.SVGIcon_VoiceRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_Button.SVGIcon_VoiceRoom {
+.SVGIcon_TextRoom.GamepadMode,
+.GamepadMode .SVGIcon_TextRoom,
+.SVGIcon_Button.SVGIcon_TextRoom.GamepadMode,
+.GamepadMode .SVGIcon_Button.SVGIcon_TextRoom,
+.SVGIcon_VoiceRoom.GamepadMode,
+.GamepadMode .SVGIcon_VoiceRoom,
+.SVGIcon_Button.SVGIcon_VoiceRoom.GamepadMode,
+.GamepadMode .SVGIcon_Button.SVGIcon_VoiceRoom {
   width: 20px;
   height: 20px;
   margin-right: 0;
 }
-.SVGIcon_TextRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_TextRoom,
-.SVGIcon_Button.SVGIcon_TextRoom:global(.GamepadMode),
-:global(.GamepadMode) .SVGIcon_Button.SVGIcon_TextRoom {
+.SVGIcon_TextRoom.GamepadMode,
+.GamepadMode .SVGIcon_TextRoom,
+.SVGIcon_Button.SVGIcon_TextRoom.GamepadMode,
+.GamepadMode .SVGIcon_Button.SVGIcon_TextRoom {
   margin-right: 4px;
 }
 .SVGIcon_PlusCircle {
@@ -49920,8 +49668,8 @@ img.ChatRoomGroupAvatar_Avatar {
   align-self: flex-end;
   user-select: none;
 }
-.chatRoomGroupStats:global(.GamepadMode),
-:global(.GamepadMode) .chatRoomGroupStats {
+.chatRoomGroupStats.GamepadMode,
+.GamepadMode .chatRoomGroupStats {
   margin-bottom: 3px;
 }
 .namedGroup .chatRoomGroupStats {
@@ -50152,8 +49900,8 @@ a.general_btn:hover {
   flex-shrink: 1;
   min-height: 0;
 }
-.FriendPicker:global(.GamepadMode),
-:global(.GamepadMode) .FriendPicker {
+.FriendPicker.GamepadMode,
+.GamepadMode .FriendPicker {
   overflow-y: hidden;
 }
 .FriendPicker .FriendPickerFriendList {
@@ -50161,17 +49909,17 @@ a.general_btn:hover {
   display: flex;
   flex-direction: column;
 }
-.FriendPicker .FriendPickerFriendList:global(.GamepadMode),
-:global(.GamepadMode) .FriendPicker .FriendPickerFriendList {
+.FriendPicker .FriendPickerFriendList.GamepadMode,
+.GamepadMode .FriendPicker .FriendPickerFriendList {
   overflow-y: hidden;
 }
-.FriendPicker .FriendPickerFriendList:global(.GamepadMode):global(.gpfocus),
-:global(.GamepadMode) .FriendPicker .FriendPickerFriendList:global(.gpfocus) {
+.FriendPicker .FriendPickerFriendList.GamepadMode.gpfocus,
+.GamepadMode .FriendPicker .FriendPickerFriendList.gpfocus {
   background: #3d4450;
   transition: none;
 }
-.FriendPicker .FriendPickerFriendList:global(.GamepadMode) > .Panel,
-:global(.GamepadMode) .FriendPicker .FriendPickerFriendList > .Panel {
+.FriendPicker .FriendPickerFriendList.GamepadMode > .Panel,
+.GamepadMode .FriendPicker .FriendPickerFriendList > .Panel {
   max-height: 140px;
 }
 .IsDropInvite .DropTarget {
@@ -50437,39 +50185,39 @@ a.general_btn:hover {
   display: flex;
   flex-direction: column;
 }
-.ChatRoomGroupInviteDialog.GamepadMode:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomGroupInviteDialog.GamepadMode {
+.ChatRoomGroupInviteDialog.GamepadMode.GamepadMode,
+.GamepadMode .ChatRoomGroupInviteDialog.GamepadMode {
   min-height: 355px;
 }
-.ChatRoomGroupInviteDialog.GamepadMode:global(.GamepadMode) .FriendPicker,
-:global(.GamepadMode) .ChatRoomGroupInviteDialog.GamepadMode .FriendPicker {
+.ChatRoomGroupInviteDialog.GamepadMode.GamepadMode .FriendPicker,
+.GamepadMode .ChatRoomGroupInviteDialog.GamepadMode .FriendPicker {
   height: 100%;
 }
-.ChatRoomGroupInviteDialog.GamepadMode:global(.GamepadMode) .DialogHeader,
-:global(.GamepadMode) .ChatRoomGroupInviteDialog.GamepadMode .DialogHeader {
+.ChatRoomGroupInviteDialog.GamepadMode.GamepadMode .DialogHeader,
+.GamepadMode .ChatRoomGroupInviteDialog.GamepadMode .DialogHeader {
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
 }
-.ChatRoomGroupInviteDialog.GamepadMode:global(.GamepadMode)
+.ChatRoomGroupInviteDialog.GamepadMode.GamepadMode
   .DialogHeader
   .InviteToVoiceHeader,
-:global(.GamepadMode)
+.GamepadMode
   .ChatRoomGroupInviteDialog.GamepadMode
   .DialogHeader
   .InviteToVoiceHeader {
   display: flex;
   flex-direction: row;
 }
-.ChatRoomGroupInviteDialog.GamepadMode:global(.GamepadMode)
+.ChatRoomGroupInviteDialog.GamepadMode.GamepadMode
   .DialogHeader
   .InviteToVoiceHeader
-  :global(.DialogHeaderSubtitle.DialogHighlight),
-:global(.GamepadMode)
+  .DialogHeaderSubtitle.DialogHighlight,
+.GamepadMode
   .ChatRoomGroupInviteDialog.GamepadMode
   .DialogHeader
   .InviteToVoiceHeader
-  :global(.DialogHeaderSubtitle.DialogHighlight) {
+  .DialogHeaderSubtitle.DialogHighlight {
   margin-left: 8px;
 }
 .ChatRoomGroupInviteDialog .FriendPicker {
@@ -50577,8 +50325,8 @@ a.general_btn:hover {
   mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
   white-space: nowrap;
 }
-.contextMenuGameItem:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuGameItem {
+.contextMenuGameItem.GamepadMode,
+.GamepadMode .contextMenuGameItem {
   width: 100%;
   max-width: 100%;
 }
@@ -50599,16 +50347,16 @@ a.general_btn:hover {
 .contextMenuGameOptions {
   background-color: #00000066;
 }
-.contextMenuUnselectable:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuUnselectable,
-.contextMenuUnselectable.disabled:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuUnselectable.disabled,
-.contextMenuGameTitle:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuGameTitle,
-.contextMenuBroadcast:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuBroadcast,
-.contextMenuGameOptions:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuGameOptions {
+.contextMenuUnselectable.GamepadMode,
+.GamepadMode .contextMenuUnselectable,
+.contextMenuUnselectable.disabled.GamepadMode,
+.GamepadMode .contextMenuUnselectable.disabled,
+.contextMenuGameTitle.GamepadMode,
+.GamepadMode .contextMenuGameTitle,
+.contextMenuBroadcast.GamepadMode,
+.GamepadMode .contextMenuBroadcast,
+.contextMenuGameOptions.GamepadMode,
+.GamepadMode .contextMenuGameOptions {
   background: #1a1c22;
   color: #8b929a;
   border: solid 5px #23262e;
@@ -50619,8 +50367,8 @@ a.general_btn:hover {
   background: rgba(0, 0, 0, 0);
   color: #9ca4a7;
 }
-.contextMenuUnselectable:hover:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuUnselectable:hover {
+.contextMenuUnselectable:hover.GamepadMode,
+.GamepadMode .contextMenuUnselectable:hover {
   background: #1a1c22;
   color: #8b929a;
   border: solid 5px #23262e;
@@ -50666,8 +50414,8 @@ a.general_btn:hover {
 .contextMenuGameName {
   color: #cbdde4;
 }
-.contextMenuGameName:global(.GamepadMode),
-:global(.GamepadMode) .contextMenuGameName {
+.contextMenuGameName.GamepadMode,
+.GamepadMode .contextMenuGameName {
   color: #8b929a;
 }
 .GameHeader,
@@ -50683,8 +50431,8 @@ a.general_btn:hover {
   border-radius: 5px;
   overflow: hidden;
 }
-.ChatRoomGroupOGGAvatar:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomGroupOGGAvatar {
+.ChatRoomGroupOGGAvatar.GamepadMode,
+.GamepadMode .ChatRoomGroupOGGAvatar {
   width: 75px;
   height: 35px;
   border-radius: 3px;
@@ -50757,8 +50505,8 @@ a.general_btn:hover {
   margin-left: 4px;
   margin-right: 4px;
 }
-.ChatRoomListGroupItem .ChatRoomMultiFriendAvatar.Small:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomListGroupItem .ChatRoomMultiFriendAvatar.Small {
+.ChatRoomListGroupItem .ChatRoomMultiFriendAvatar.Small.GamepadMode,
+.GamepadMode .ChatRoomListGroupItem .ChatRoomMultiFriendAvatar.Small {
   margin-left: 2px;
   margin-right: 1px;
   margin-top: 4px;
@@ -50831,8 +50579,8 @@ a.general_btn:hover {
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }
-.NotificationSettingsSavingIndicator:global(.GamepadMode),
-:global(.GamepadMode) .NotificationSettingsSavingIndicator {
+.NotificationSettingsSavingIndicator.GamepadMode,
+.GamepadMode .NotificationSettingsSavingIndicator {
   position: absolute;
   right: 0;
   top: 0;
@@ -50852,8 +50600,8 @@ a.general_btn:hover {
 .ChatRoomNotificationSettingsDialog .DialogHBar {
   margin-bottom: 8px;
 }
-.ChatRoomNotificationSettingsDialog .DialogHBar:global(.GamepadMode),
-:global(.GamepadMode) .ChatRoomNotificationSettingsDialog .DialogHBar {
+.ChatRoomNotificationSettingsDialog .DialogHBar.GamepadMode,
+.GamepadMode .ChatRoomNotificationSettingsDialog .DialogHBar {
   display: none;
 }
 .ChatRoomNotificationSettingsDialog .indicatorOptionContainer {
@@ -50869,11 +50617,8 @@ a.general_btn:hover {
   height: 100%;
   transition: opacity 0.32s ease-in-out;
 }
-.ChatRoomNotificationSettingsDialog
-  .ChatUnreadMessageIndicator:global(.GamepadMode),
-:global(.GamepadMode)
-  .ChatRoomNotificationSettingsDialog
-  .ChatUnreadMessageIndicator {
+.ChatRoomNotificationSettingsDialog .ChatUnreadMessageIndicator.GamepadMode,
+.GamepadMode .ChatRoomNotificationSettingsDialog .ChatUnreadMessageIndicator {
   margin-left: -24px;
 }
 .ChatRoomNotificationSettingsDialog .ChatUnreadMessageIndicator.Hidden {
@@ -51141,11 +50886,8 @@ button.DialogButton.LocalMicTestButton {
   flex-shrink: 0;
   justify-content: initial;
 }
-.ChatRoomNotificationSettingsDialog
-  .notificationsChannelHeader:global(.GamepadMode),
-:global(.GamepadMode)
-  .ChatRoomNotificationSettingsDialog
-  .notificationsChannelHeader {
+.ChatRoomNotificationSettingsDialog .notificationsChannelHeader.GamepadMode,
+.GamepadMode .ChatRoomNotificationSettingsDialog .notificationsChannelHeader {
   display: none;
 }
 .ChatRoomNotificationSettingsDialog
@@ -51539,8 +51281,8 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   width: 24px;
   height: 24px;
 }
-.groupMemberList .friend .avatarHolder img.avatar:global(.GamepadMode),
-:global(.GamepadMode) .groupMemberList .friend .avatarHolder img.avatar {
+.groupMemberList .friend .avatarHolder img.avatar.GamepadMode,
+.GamepadMode .groupMemberList .friend .avatarHolder img.avatar {
   width: 100%;
   height: 100%;
 }
