@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7472758";
+var CLSTAMP = "7481100";
 (() => {
   var e,
     t,
@@ -131,7 +131,7 @@ var CLSTAMP = "7472758";
           jM: () => v,
           j_: () => M,
           kg: () => F,
-          lb: () => T,
+          lb: () => L,
           m2: () => w,
           my: () => n,
           p6: () => o,
@@ -141,7 +141,7 @@ var CLSTAMP = "7472758";
           r7: () => B,
           sG: () => u,
           us: () => p,
-          wr: () => L,
+          wr: () => T,
           xM: () => _,
         });
         const s = 1,
@@ -383,7 +383,7 @@ var CLSTAMP = "7472758";
           }
           return !1;
         }
-        var F, k, x, R, L, T, z;
+        var F, k, x, R, T, L, z;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -447,7 +447,7 @@ var CLSTAMP = "7472758";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(L || (L = {})),
+          })(T || (T = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -455,7 +455,7 @@ var CLSTAMP = "7472758";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(T || (T = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
@@ -494,8 +494,8 @@ var CLSTAMP = "7472758";
         r.d(t, {
           _1: () => E,
           bD: () => B,
-          UM: () => L,
-          Yd: () => T,
+          UM: () => T,
+          Yd: () => L,
           hz: () => n.hz,
           e7: () => o.e7,
           mU: () => z,
@@ -815,7 +815,7 @@ var CLSTAMP = "7472758";
             this.content_descriptors_to_exclude = [];
           }
         }
-        function L(e) {
+        function T(e) {
           switch (e) {
             case 1:
               return "game";
@@ -840,7 +840,7 @@ var CLSTAMP = "7472758";
           }
           return "invalid";
         }
-        function T(e) {
+        function L(e) {
           switch (e) {
             case 0:
               return "game";
@@ -1463,7 +1463,7 @@ var CLSTAMP = "7472758";
       },
       40792: (e, t, r) => {
         "use strict";
-        r.d(t, { zn: () => L });
+        r.d(t, { zn: () => T });
         var n = r(70655),
           i = r(43161),
           s = r(79742),
@@ -2363,7 +2363,7 @@ var CLSTAMP = "7472758";
           ),
           (0, n.gn)([h.aD], R.prototype, "DispatchMessage", null),
           (0, n.gn)([h.aD], R.prototype, "OnDisconnect", null);
-        class L extends R {
+        class T extends R {
           constructor() {
             super(...arguments),
               (this.m_setEMsgHandlers = new Set()),
@@ -2537,8 +2537,8 @@ var CLSTAMP = "7472758";
           ClearHeartbeatInterval() {}
           ResetHeartbeatInterval() {}
         }
-        (0, n.gn)([h.aD], L.prototype, "OnLogonInfoChanged", null);
-        var T = r(99591),
+        (0, n.gn)([h.aD], T.prototype, "OnLogonInfoChanged", null);
+        var L = r(99591),
           z = r(9669),
           O = r.n(z);
         class I {
@@ -3046,7 +3046,7 @@ var CLSTAMP = "7472758";
             DecodeAndDispatchMultiMsg(e) {
               let t = e.Body().message_body();
               if (!t) return;
-              e.Body().size_unzipped() && (t = T.inflate(t));
+              e.Body().size_unzipped() && (t = L.inflate(t));
               let r = new u.At(t);
               for (; r.GetCountBytesRemaining() > 0; ) {
                 let e = r.GetUint32(),
@@ -5493,8 +5493,8 @@ var CLSTAMP = "7472758";
           VJ: () => I,
           VL: () => o,
           WJ: () => x,
-          cR: () => T,
-          eK: () => L,
+          cR: () => L,
+          eK: () => T,
           oY: () => R,
         });
         var n = r(33019),
@@ -6331,6 +6331,11 @@ var CLSTAMP = "7472758";
                       br: i.FE.readBool,
                       bw: i.Xc.writeBool,
                     },
+                    coming_soon_display: {
+                      n: 8,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
                     is_early_access: {
                       n: 10,
                       br: i.FE.readBool,
@@ -6402,7 +6407,11 @@ var CLSTAMP = "7472758";
                   fields: {
                     windows: { n: 1, br: i.FE.readBool, bw: i.Xc.writeBool },
                     mac: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
-                    linux: { n: 3, br: i.FE.readBool, bw: i.Xc.writeBool },
+                    steamos_linux: {
+                      n: 3,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
                     vr_support: { n: 10, c: w },
                     steam_deck_compat_category: {
                       n: 11,
@@ -7409,67 +7418,10 @@ var CLSTAMP = "7472758";
             return "StoreItemID";
           }
         }
-        class L extends s {
-          constructor(e = null) {
-            super(),
-              L.prototype.ids || i.aR(L.M()),
-              s.initialize(this, e, 0, -1, [1], null);
-          }
-          static M() {
-            return (
-              L.sm_m ||
-                (L.sm_m = {
-                  proto: L,
-                  fields: {
-                    ids: { n: 1, c: R, r: !0, q: !0 },
-                    context: { n: 2, c: x },
-                    data_request: { n: 3, c: k },
-                  },
-                }),
-              L.sm_m
-            );
-          }
-          static MBF() {
-            return L.sm_mbf || (L.sm_mbf = i.Bh(L.M())), L.sm_mbf;
-          }
-          toObject(e = !1) {
-            return L.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return i.TA(L.M(), e, t);
-          }
-          static fromObject(e) {
-            return i.aD(L.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new n.BinaryReader(e),
-              r = new L();
-            return L.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return i.F(L.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new n.BinaryWriter();
-            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            i.l2(L.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new n.BinaryWriter();
-            return (
-              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CStoreBrowse_GetItems_Request";
-          }
-        }
         class T extends s {
           constructor(e = null) {
             super(),
-              T.prototype.store_items || i.aR(T.M()),
+              T.prototype.ids || i.aR(T.M()),
               s.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
@@ -7477,7 +7429,11 @@ var CLSTAMP = "7472758";
               T.sm_m ||
                 (T.sm_m = {
                   proto: T,
-                  fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
+                  fields: {
+                    ids: { n: 1, c: R, r: !0, q: !0 },
+                    context: { n: 2, c: x },
+                    data_request: { n: 3, c: k },
+                  },
                 }),
               T.sm_m
             );
@@ -7513,6 +7469,59 @@ var CLSTAMP = "7472758";
             var e = new n.BinaryWriter();
             return (
               T.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CStoreBrowse_GetItems_Request";
+          }
+        }
+        class L extends s {
+          constructor(e = null) {
+            super(),
+              L.prototype.store_items || i.aR(L.M()),
+              s.initialize(this, e, 0, -1, [1], null);
+          }
+          static M() {
+            return (
+              L.sm_m ||
+                (L.sm_m = {
+                  proto: L,
+                  fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
+                }),
+              L.sm_m
+            );
+          }
+          static MBF() {
+            return L.sm_mbf || (L.sm_mbf = i.Bh(L.M())), L.sm_mbf;
+          }
+          toObject(e = !1) {
+            return L.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(L.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(L.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new L();
+            return L.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(L.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(L.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              L.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -7655,7 +7664,7 @@ var CLSTAMP = "7472758";
         var I;
         !(function (e) {
           (e.GetItems = function (e, t) {
-            return e.SendMsg("StoreBrowse.GetItems#1", t, T, {
+            return e.SendMsg("StoreBrowse.GetItems#1", t, L, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -7683,7 +7692,7 @@ var CLSTAMP = "7472758";
           Fsn: () => H,
           GhU: () => S,
           Gue: () => ge,
-          HEZ: () => L,
+          HEZ: () => T,
           I8b: () => Be,
           IF0: () => pe,
           IWH: () => $,
@@ -7698,7 +7707,7 @@ var CLSTAMP = "7472758";
           OWX: () => De,
           P7E: () => f,
           P9w: () => q,
-          Q0U: () => Le,
+          Q0U: () => Te,
           S2L: () => Oe,
           SUY: () => p,
           THo: () => K,
@@ -7725,7 +7734,7 @@ var CLSTAMP = "7472758";
           _mi: () => xe,
           civ: () => Ee,
           dE8: () => Ae,
-          dLw: () => Te,
+          dLw: () => Le,
           daM: () => ye,
           doA: () => Xe,
           dzL: () => F,
@@ -7759,7 +7768,7 @@ var CLSTAMP = "7472758";
           vT2: () => ie,
           vyu: () => Ke,
           w2j: () => Ce,
-          wUs: () => T,
+          wUs: () => L,
           wn$: () => be,
           wr9: () => se,
           wx$: () => I,
@@ -8412,7 +8421,7 @@ var CLSTAMP = "7472758";
             })
           );
         }
-        function L() {
+        function T() {
           return i.createElement(
             "svg",
             {
@@ -8440,7 +8449,7 @@ var CLSTAMP = "7472758";
             })
           );
         }
-        function T(e) {
+        function L(e) {
           let t = "SVGIcon_Button SVGIcon_Throbber ";
           return (
             e.className && (t += e.className),
@@ -10380,7 +10389,7 @@ var CLSTAMP = "7472758";
             i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
           );
         }
-        function Le() {
+        function Te() {
           return i.createElement(
             "svg",
             {
@@ -10399,7 +10408,7 @@ var CLSTAMP = "7472758";
             })
           );
         }
-        function Te() {
+        function Le() {
           return i.createElement(
             "svg",
             {
@@ -11673,6 +11682,7 @@ var CLSTAMP = "7472758";
         "use strict";
         r.d(t, {
           $1: () => c,
+          Kb: () => F,
           LO: () => C,
           Mh: () => M,
           Np: () => S,
@@ -11686,77 +11696,77 @@ var CLSTAMP = "7472758";
           yW: () => o,
         });
         var n,
-          i = r(27194),
-          s = r(8178),
-          a = r(27661);
+          i = r(27661),
+          s = r(27194),
+          a = r(8178);
         function o(e, t, r) {
-          let a;
+          let i;
           if ("boolean" == typeof t) {
-            a = {
+            i = {
               eSuffix: t ? n.None : n.Ago,
               bForceSingleUnits: r,
               bHighGranularity: !1,
             };
           } else
-            a = Object.assign(
+            i = Object.assign(
               { eSuffix: n.Ago, bForceSingleUnits: !1, bHighGranularity: !1 },
               t
             );
           let o = "#TimeInterval_";
           if (
-            (a.eSuffix == n.Ago
+            (i.eSuffix == n.Ago
               ? (o = "#TimeSince_")
-              : a.eSuffix == n.Remaining && (o = "#TimeRemaining_"),
-            e >= 2 * s._H.PerYear)
+              : i.eSuffix == n.Remaining && (o = "#TimeRemaining_"),
+            e >= 2 * a._H.PerYear)
           )
-            return (0, i.Xx)(o + "XYears", Math.floor(e / s._H.PerYear));
-          if (e >= s._H.PerYear)
-            return (e -= s._H.PerYear) >= 2 * s._H.PerMonth &&
-              !a.bForceSingleUnits
-              ? (0, i.Xx)(o + "1YearXMonths", Math.floor(e / s._H.PerMonth))
-              : (0, i.Xx)(o + "1Year");
-          if (e >= 2 * s._H.PerMonth)
-            return (0, i.Xx)(o + "XMonths", Math.floor(e / s._H.PerMonth));
-          if (e >= 2 * s._H.PerWeek)
-            return (0, i.Xx)(o + "XWeeks", Math.floor(e / s._H.PerWeek));
-          if (e >= s._H.PerWeek)
-            return (0, i.Xx)(o + "1Week", Math.floor(e / s._H.PerWeek));
-          if (e >= 2 * s._H.PerDay)
-            return (0, i.Xx)(o + "XDays", Math.floor(e / s._H.PerDay));
-          if (e >= s._H.PerDay)
-            return (e -= s._H.PerDay) >= 2 * s._H.PerHour &&
-              !a.bForceSingleUnits
-              ? (0, i.Xx)(o + "1DayXHours", Math.floor(e / s._H.PerHour))
-              : (0, i.Xx)(o + "1Day");
-          if (e >= 2 * s._H.PerHour)
-            return (0, i.Xx)(o + "XHours", Math.floor(e / s._H.PerHour));
-          if (e >= s._H.PerHour)
-            return (e -= s._H.PerHour) >= 2 * s._H.PerMinute &&
-              !a.bForceSingleUnits
-              ? (0, i.Xx)(o + "1HourXMinutes", Math.floor(e / s._H.PerMinute))
-              : (0, i.Xx)(o + "1Hour");
-          if (e >= 2 * s._H.PerMinute) {
-            const t = Math.floor(e / s._H.PerMinute),
-              r = e % s._H.PerMinute;
-            return a.bHighGranularity && 0 != r
+            return (0, s.Xx)(o + "XYears", Math.floor(e / a._H.PerYear));
+          if (e >= a._H.PerYear)
+            return (e -= a._H.PerYear) >= 2 * a._H.PerMonth &&
+              !i.bForceSingleUnits
+              ? (0, s.Xx)(o + "1YearXMonths", Math.floor(e / a._H.PerMonth))
+              : (0, s.Xx)(o + "1Year");
+          if (e >= 2 * a._H.PerMonth)
+            return (0, s.Xx)(o + "XMonths", Math.floor(e / a._H.PerMonth));
+          if (e >= 2 * a._H.PerWeek)
+            return (0, s.Xx)(o + "XWeeks", Math.floor(e / a._H.PerWeek));
+          if (e >= a._H.PerWeek)
+            return (0, s.Xx)(o + "1Week", Math.floor(e / a._H.PerWeek));
+          if (e >= 2 * a._H.PerDay)
+            return (0, s.Xx)(o + "XDays", Math.floor(e / a._H.PerDay));
+          if (e >= a._H.PerDay)
+            return (e -= a._H.PerDay) >= 2 * a._H.PerHour &&
+              !i.bForceSingleUnits
+              ? (0, s.Xx)(o + "1DayXHours", Math.floor(e / a._H.PerHour))
+              : (0, s.Xx)(o + "1Day");
+          if (e >= 2 * a._H.PerHour)
+            return (0, s.Xx)(o + "XHours", Math.floor(e / a._H.PerHour));
+          if (e >= a._H.PerHour)
+            return (e -= a._H.PerHour) >= 2 * a._H.PerMinute &&
+              !i.bForceSingleUnits
+              ? (0, s.Xx)(o + "1HourXMinutes", Math.floor(e / a._H.PerMinute))
+              : (0, s.Xx)(o + "1Hour");
+          if (e >= 2 * a._H.PerMinute) {
+            const t = Math.floor(e / a._H.PerMinute),
+              r = e % a._H.PerMinute;
+            return i.bHighGranularity && 0 != r
               ? 1 == r
-                ? (0, i.Xx)(o + "XMinutes1Second", t)
-                : (0, i.Xx)(o + "XMinutesXSeconds", t, r)
-              : (0, i.Xx)(o + "XMinutes", t);
+                ? (0, s.Xx)(o + "XMinutes1Second", t)
+                : (0, s.Xx)(o + "XMinutesXSeconds", t, r)
+              : (0, s.Xx)(o + "XMinutes", t);
           }
-          if (e >= s._H.PerMinute) {
-            const t = e % s._H.PerMinute;
-            return a.bHighGranularity && 0 != t
+          if (e >= a._H.PerMinute) {
+            const t = e % a._H.PerMinute;
+            return i.bHighGranularity && 0 != t
               ? 1 == t
-                ? (0, i.Xx)(o + "1Minute1Second")
-                : (0, i.Xx)(o + "1MinuteXSeconds", t)
-              : (0, i.Xx)(o + "1Minute");
+                ? (0, s.Xx)(o + "1Minute1Second")
+                : (0, s.Xx)(o + "1MinuteXSeconds", t)
+              : (0, s.Xx)(o + "1Minute");
           }
-          return a.bHighGranularity
+          return i.bHighGranularity
             ? 1 == e
-              ? (0, i.Xx)(o + "1Second")
-              : (0, i.Xx)(o + "XSeconds", e)
-            : (0, i.Xx)(o + "LessThanAMinute");
+              ? (0, s.Xx)(o + "1Second")
+              : (0, s.Xx)(o + "XSeconds", e)
+            : (0, s.Xx)(o + "LessThanAMinute");
         }
         function c(e, t, r) {
           const n = {
@@ -11766,7 +11776,7 @@ var CLSTAMP = "7472758";
             year: t ? void 0 : "numeric",
           };
           return new Date(1e3 * e).toLocaleDateString(
-            i.Yt.GetPreferredLocales(),
+            s.Yt.GetPreferredLocales(),
             n
           );
         }
@@ -11776,7 +11786,7 @@ var CLSTAMP = "7472758";
           let n = d.get(r);
           if (n) return n;
           return (
-            (n = t.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+            (n = t.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               year: "numeric",
               month: "short",
               day: "numeric",
@@ -11794,8 +11804,8 @@ var CLSTAMP = "7472758";
         const u = new Map();
         function m(e, t) {
           const r = new Date(1e3 * e),
-            n = i.Yt.GetPreferredLocales(),
-            s =
+            n = s.Yt.GetPreferredLocales(),
+            i =
               t.bForce24HourClock ||
               (function (e) {
                 let t = u.get(e);
@@ -11812,7 +11822,7 @@ var CLSTAMP = "7472758";
               })(n[0]);
           return r.toLocaleTimeString(
             n,
-            s
+            i
               ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
               : { hour: "numeric", minute: "2-digit" }
           );
@@ -11820,25 +11830,25 @@ var CLSTAMP = "7472758";
         const d = new Map(),
           h = new Map();
         function _(e, t, r = !0, n = !0) {
-          const s = new Date(),
+          const a = new Date(),
             o = new Date(1e3 * e);
-          if (o.getFullYear() != s.getFullYear()) return l(e);
-          n && a.zO(new Date().setHours(24, 0, 0, 0) - s.getTime());
+          if (o.getFullYear() != a.getFullYear()) return l(e);
+          n && i.zO(new Date().setHours(24, 0, 0, 0) - a.getTime());
           const c = new Date();
           if ((c.setHours(0, 0, 0, 0), r))
             if (o >= c) {
               if ((c.setDate(c.getDate() + 1), o < c))
-                return (0, i.Xx)("#Time_Today");
+                return (0, s.Xx)("#Time_Today");
               if ((c.setDate(c.getDate() + 1), o < c))
-                return (0, i.Xx)("#Time_Tomorrow");
+                return (0, s.Xx)("#Time_Tomorrow");
             } else if ((c.setDate(c.getDate() - 1), o >= c))
-              return (0, i.Xx)("#Time_Yesterday");
+              return (0, s.Xx)("#Time_Yesterday");
           const u = { month: t ? "long" : "short", day: "numeric" },
             m = o.setHours(0, 0, 0, 0) + u.month;
           let d = h.get(m);
           return (
             d ||
-            ((d = o.toLocaleDateString(i.Yt.GetPreferredLocales(), u)),
+            ((d = o.toLocaleDateString(s.Yt.GetPreferredLocales(), u)),
             h.set(m, d),
             d)
           );
@@ -11862,75 +11872,75 @@ var CLSTAMP = "7472758";
           if (r > n) {
             if (!o.bGranularFutureTime)
               return (
-                a.zO(r.getTime() - n.getTime()),
+                i.zO(r.getTime() - n.getTime()),
                 r.getFullYear() == n.getFullYear() ? v(r) : C(r)
               );
-            a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
+            i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
             let e = new Date();
             return (
               e.setHours(0, 0, 0, 0),
               e.setDate(e.getDate() + 1),
               r < e
-                ? (0, i.Xx)("#Time_Today")
+                ? (0, s.Xx)("#Time_Today")
                 : (e.setDate(e.getDate() + 1),
                   r < e
-                    ? (0, i.Xx)("#Time_Tomorrow")
+                    ? (0, s.Xx)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
                       r < e ? M(r) : E(r, !0, o.bAbbreviateDayOfWeek)))
             );
           }
-          a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
+          i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
           let l = new Date();
           if ((l.setHours(0, 0, 0, 0), r >= l))
             return o.bGranularToday
               ? o.bGranularTodayTimeOnly
                 ? m(e, { bForce24HourClock: o.bForce24HourClock })
-                : (0, i.Xx)(
+                : (0, s.Xx)(
                     "#Time_Today_At",
                     m(e, { bForce24HourClock: o.bForce24HourClock })
                   )
-              : (0, i.Xx)("#Time_Today");
+              : (0, s.Xx)("#Time_Today");
           if ((l.setDate(n.getDate() - 1), r >= l))
             return o.bGranularYesterday
-              ? (0, i.Xx)(
+              ? (0, s.Xx)(
                   "#Time_Yesterday_At",
                   m(e, { bForce24HourClock: o.bForce24HourClock })
                 )
-              : (0, i.Xx)("#Time_Yesterday");
+              : (0, s.Xx)("#Time_Yesterday");
           l.setDate(n.getDate() - 6);
           const u = new Date(l);
           if (o.bGranularWeek && r >= u)
             return E(r, !1, !o.bAbbreviateDayOfWeek);
           if (o.bGranularPast)
-            return (0, i.Xx)(
+            return (0, s.Xx)(
               "#Time_Past_At",
               c(e, r.getFullYear() == n.getFullYear(), !o.bAbbreviateDayOfWeek),
               m(e, { bForce24HourClock: o.bForce24HourClock })
             );
-          if (r >= u) return (0, i.Xx)("#TimeSince_ThisWeek");
+          if (r >= u) return (0, s.Xx)("#TimeSince_ThisWeek");
           if (
             r.getMonth() == n.getMonth() &&
             r.getFullYear() == n.getFullYear()
           ) {
             const e =
-              Math.floor((u.valueOf() - r.valueOf()) / (1e3 * s._H.PerWeek)) +
+              Math.floor((u.valueOf() - r.valueOf()) / (1e3 * a._H.PerWeek)) +
               1;
             return 1 == e
-              ? (0, i.Xx)("#TimeSince_1Week")
-              : (0, i.Xx)("#TimeSince_XWeeks", e);
+              ? (0, s.Xx)("#TimeSince_1Week")
+              : (0, s.Xx)("#TimeSince_XWeeks", e);
           }
           return r.getFullYear() == n.getFullYear() ? v(r) : C(r);
         }
         function p(e) {
           const t = new Date(1e3 * e),
             r = new Date();
-          a.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
+          i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
           let n = new Date();
           return (
             n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
-            (n = (0, s.Ky)(n)),
+            (n = (0, a.Ky)(n)),
             t >= n
-              ? (0, i.Xx)("#Time_Recent")
+              ? (0, s.Xx)("#Time_Recent")
               : t.getFullYear() == r.getFullYear()
               ? v(t)
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
@@ -11949,12 +11959,12 @@ var CLSTAMP = "7472758";
               day: "numeric",
               month: t ? "long" : "short",
             },
-            s = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
-          let a = y.get(s);
+            i = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
+          let a = y.get(i);
           return (
             a ||
-            ((a = e.toLocaleDateString(i.Yt.GetPreferredLocales(), n)),
-            y.set(s, a),
+            ((a = e.toLocaleDateString(s.Yt.GetPreferredLocales(), n)),
+            y.set(i, a),
             a)
           );
         }
@@ -11962,7 +11972,7 @@ var CLSTAMP = "7472758";
           let t = b.get(e.getDay());
           return (
             t ||
-            ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+            ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               weekday: "long",
             })),
             b.set(e.getDay(), t),
@@ -11973,7 +11983,7 @@ var CLSTAMP = "7472758";
           let t = w.get(e.getMonth());
           return (
             t ||
-            ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+            ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               month: "long",
             })),
             w.set(e.getMonth(), t),
@@ -11984,7 +11994,7 @@ var CLSTAMP = "7472758";
           let t = f.get(e.getFullYear());
           return (
             t ||
-            ((t = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+            ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               year: "numeric",
             })),
             f.set(e.getFullYear(), t),
@@ -11996,13 +12006,31 @@ var CLSTAMP = "7472758";
           let r = B.get(t);
           return (
             r ||
-            ((r = e.toLocaleDateString(i.Yt.GetPreferredLocales(), {
+            ((r = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               month: "long",
               year: "numeric",
             })),
             B.set(t, r),
             r)
           );
+        }
+        function F(e) {
+          switch (e.getUTCMonth()) {
+            case 0:
+            case 1:
+            case 2:
+              return (0, s.Xx)("#Time_QuarterOfYear_Q1", e.getUTCFullYear());
+            case 3:
+            case 4:
+            case 5:
+              return (0, s.Xx)("#Time_QuarterOfYear_Q2", e.getUTCFullYear());
+            case 6:
+            case 7:
+            case 8:
+              return (0, s.Xx)("#Time_QuarterOfYear_Q3", e.getUTCFullYear());
+            default:
+              return (0, s.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
+          }
         }
       },
       38645: (e, t, r) => {
@@ -12476,6 +12504,7 @@ var CLSTAMP = "7472758";
             CHAT_BASE_URL: "",
             STORE_BASE_URL: "",
             LOGIN_BASE_URL: "",
+            SUPPORT_BASE_URL: "",
             STORE_ICON_BASE_URL: "",
             IMG_URL: "",
             STEAMTV_BASE_URL: "",
@@ -12500,6 +12529,7 @@ var CLSTAMP = "7472758";
             BUILD_TIMESTAMP: 0,
             PAGE_TIMESTAMP: 0,
             FROM_WEB: !1,
+            WEBSITE_ID: "Unknown",
             get SESSIONID() {
               return (function () {
                 if (!(0, i.t$)()) return c || (c = l()), c;
@@ -12575,9 +12605,9 @@ var CLSTAMP = "7472758";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 29 2022 : 18:07:05",
-                    BUILD_TIME_UTC: "Aug 30 2022 : 01:07:05",
-                    BUILD_RTIME_UTC: 1661821625,
+                    BUILD_TIME_LOCAL: "Sep 1 2022 : 03:38:03",
+                    BUILD_TIME_UTC: "Sep 1 2022 : 10:38:03",
+                    BUILD_RTIME_UTC: 1662028683,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12705,18 +12735,16 @@ var CLSTAMP = "7472758";
           _ = r(40792),
           g = r(82155);
         const p = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(7976), r.e(8501), r.e(1010)]).then(
+            Promise.all([r.e(1517), r.e(710), r.e(3991), r.e(1010)]).then(
               r.bind(r, 60806)
             )
           ),
           b = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(7976), r.e(4535)]).then(
-              r.bind(r, 87964)
-            )
+            Promise.all([r.e(1517), r.e(710), r.e(4535)]).then(r.bind(r, 87964))
           ),
           w = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(7976), r.e(8501), r.e(5742)]).then(
-              r.bind(r, 53143)
+            Promise.all([r.e(1517), r.e(710), r.e(3991), r.e(5742)]).then(
+              r.bind(r, 7017)
             )
           ),
           f = document.getElementById("root"),
@@ -13084,7 +13112,7 @@ var CLSTAMP = "7472758";
       a[e]
         ? t.push(a[e])
         : 0 !== a[e] &&
-          { 1010: 1, 4535: 1, 4601: 1, 5742: 1, 6109: 1, 8501: 1 }[e] &&
+          { 710: 1, 1010: 1, 3991: 1, 4535: 1, 4601: 1, 5742: 1, 6109: 1 }[e] &&
           t.push(
             (a[e] = s(e).then(
               () => {

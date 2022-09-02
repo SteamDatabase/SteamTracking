@@ -66309,6 +66309,8 @@ object-assign
             /* binding */ ESystemUISystemKey,
           /* harmony export */ EUIComposition: () =>
             /* binding */ EUIComposition,
+          /* harmony export */ HIDKeyboardKeys: () =>
+            /* binding */ HIDKeyboardKeys,
           /* harmony export */ SendTextSpecialKeys: () =>
             /* binding */ SendTextSpecialKeys,
           /* harmony export */ k_nSteamClientBetaNone: () =>
@@ -66427,6 +66429,162 @@ object-assign
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_BACKSPACE"] = "\u0002";
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_LAST"] = "\u0003";
         })(SendTextSpecialKeys || (SendTextSpecialKeys = {}));
+        // Scan codes for HID keyboards - taken from controller_constants.h
+        var HIDKeyboardKeys;
+        (function (HIDKeyboardKeys) {
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_INVALID"] = 0)] = "KEY_INVALID";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_FIRST"] = 4)] = "KEY_FIRST";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_A"] = 4)] = "KEY_A";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_B"] = 5)] = "KEY_B";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_C"] = 6)] = "KEY_C";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_D"] = 7)] = "KEY_D";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_E"] = 8)] = "KEY_E";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F"] = 9)] = "KEY_F";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_G"] = 10)] = "KEY_G";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_H"] = 11)] = "KEY_H";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_I"] = 12)] = "KEY_I";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_J"] = 13)] = "KEY_J";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_K"] = 14)] = "KEY_K";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_L"] = 15)] = "KEY_L";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_M"] = 16)] = "KEY_M";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_N"] = 17)] = "KEY_N";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_O"] = 18)] = "KEY_O";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_P"] = 19)] = "KEY_P";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Q"] = 20)] = "KEY_Q";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_R"] = 21)] = "KEY_R";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_S"] = 22)] = "KEY_S";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_T"] = 23)] = "KEY_T";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_U"] = 24)] = "KEY_U";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_V"] = 25)] = "KEY_V";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_W"] = 26)] = "KEY_W";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_X"] = 27)] = "KEY_X";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Y"] = 28)] = "KEY_Y";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Z"] = 29)] = "KEY_Z";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_1"] = 30)] = "KEY_1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_2"] = 31)] = "KEY_2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_3"] = 32)] = "KEY_3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_4"] = 33)] = "KEY_4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_5"] = 34)] = "KEY_5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_6"] = 35)] = "KEY_6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_7"] = 36)] = "KEY_7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_8"] = 37)] = "KEY_8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_9"] = 38)] = "KEY_9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_0"] = 39)] = "KEY_0";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RETURN"] = 40)] = "KEY_RETURN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_ESCAPE"] = 41)] = "KEY_ESCAPE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACKSPACE"] = 42)] =
+            "KEY_BACKSPACE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_TAB"] = 43)] = "KEY_TAB";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SPACE"] = 44)] = "KEY_SPACE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DASH"] = 45)] = "KEY_DASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_EQUALS"] = 46)] = "KEY_EQUALS";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LEFT_BRACKET"] = 47)] =
+            "KEY_LEFT_BRACKET";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RIGHT_BRACKET"] = 48)] =
+            "KEY_RIGHT_BRACKET";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACKSLASH"] = 49)] =
+            "KEY_BACKSLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_UNUSED1"] = 50)] =
+            "KEY_UNUSED1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SEMICOLON"] = 51)] =
+            "KEY_SEMICOLON";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SINGLE_QUOTE"] = 52)] =
+            "KEY_SINGLE_QUOTE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACK_TICK"] = 53)] =
+            "KEY_BACK_TICK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_COMMA"] = 54)] = "KEY_COMMA";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PERIOD"] = 55)] = "KEY_PERIOD";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_FORWARD_SLASH"] = 56)] =
+            "KEY_FORWARD_SLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_CAPSLOCK"] = 57)] =
+            "KEY_CAPSLOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F1"] = 58)] = "KEY_F1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F2"] = 59)] = "KEY_F2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F3"] = 60)] = "KEY_F3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F4"] = 61)] = "KEY_F4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F5"] = 62)] = "KEY_F5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F6"] = 63)] = "KEY_F6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F7"] = 64)] = "KEY_F7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F8"] = 65)] = "KEY_F8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F9"] = 66)] = "KEY_F9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F10"] = 67)] = "KEY_F10";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F11"] = 68)] = "KEY_F11";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F12"] = 69)] = "KEY_F12";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PRINT_SCREEN"] = 70)] =
+            "KEY_PRINT_SCREEN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SCROLL_LOCK"] = 71)] =
+            "KEY_SCROLL_LOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BREAK"] = 72)] = "KEY_BREAK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_INSERT"] = 73)] = "KEY_INSERT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_HOME"] = 74)] = "KEY_HOME";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PAGE_UP"] = 75)] =
+            "KEY_PAGE_UP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DELETE"] = 76)] = "KEY_DELETE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_END"] = 77)] = "KEY_END";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PAGE_DOWN"] = 78)] =
+            "KEY_PAGE_DOWN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RIGHT_ARROW"] = 79)] =
+            "KEY_RIGHT_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LEFT_ARROW"] = 80)] =
+            "KEY_LEFT_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DOWN_ARROW"] = 81)] =
+            "KEY_DOWN_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_UP_ARROW"] = 82)] =
+            "KEY_UP_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_NUM_LOCK"] = 83)] =
+            "KEY_NUM_LOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_FORWARD_SLASH"] = 84)] =
+            "KEY_KEYPAD_FORWARD_SLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_ASTERISK"] = 85)] =
+            "KEY_KEYPAD_ASTERISK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_DASH"] = 86)] =
+            "KEY_KEYPAD_DASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_PLUS"] = 87)] =
+            "KEY_KEYPAD_PLUS";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_ENTER"] = 88)] =
+            "KEY_KEYPAD_ENTER";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_1"] = 89)] =
+            "KEY_KEYPAD_1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_2"] = 90)] =
+            "KEY_KEYPAD_2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_3"] = 91)] =
+            "KEY_KEYPAD_3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_4"] = 92)] =
+            "KEY_KEYPAD_4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_5"] = 93)] =
+            "KEY_KEYPAD_5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_6"] = 94)] =
+            "KEY_KEYPAD_6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_7"] = 95)] =
+            "KEY_KEYPAD_7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_8"] = 96)] =
+            "KEY_KEYPAD_8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_9"] = 97)] =
+            "KEY_KEYPAD_9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_0"] = 98)] =
+            "KEY_KEYPAD_0";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_PERIOD"] = 99)] =
+            "KEY_KEYPAD_PERIOD";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LALT"] = 100)] = "KEY_LALT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LSHIFT"] = 101)] = "KEY_LSHIFT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LWIN"] = 102)] = "KEY_LWIN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LCONTROL"] = 103)] =
+            "KEY_LCONTROL";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RALT"] = 104)] = "KEY_RALT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RSHIFT"] = 105)] = "KEY_RSHIFT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RWIN"] = 106)] = "KEY_RWIN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RCONTROL"] = 107)] =
+            "KEY_RCONTROL";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_VOLUP"] = 108)] = "KEY_VOLUP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_VOLDOWN"] = 109)] =
+            "KEY_VOLDOWN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_MUTE"] = 110)] = "KEY_MUTE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PLAY"] = 111)] = "KEY_PLAY";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_STOP"] = 112)] = "KEY_STOP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_NEXT"] = 113)] = "KEY_NEXT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PREV"] = 114)] = "KEY_PREV";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LAST"] = 114)] = "KEY_LAST";
+        })(HIDKeyboardKeys || (HIDKeyboardKeys = {}));
 
         /***/
       },
@@ -67621,6 +67779,8 @@ object-assign
             /* reexport safe */ _gameactiontypes__WEBPACK_IMPORTED_MODULE_11__.GameActionDetails,
           /* harmony export */ GameLaunchOption: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.GameLaunchOption,
+          /* harmony export */ HIDKeyboardKeys: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.HIDKeyboardKeys,
           /* harmony export */ InstallAppAndCreateShortcutData: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.InstallAppAndCreateShortcutData,
           /* harmony export */ InstallFolderInfo: () =>
@@ -69456,7 +69616,8 @@ object-assign
           BIsInOverlay() {
             return (
               this.browser_info &&
-              this.browser_info != { m_unPID: 0, m_nBrowserID: -1 }
+              this.browser_info.m_unPID != 0 &&
+              this.browser_info.m_nBrowserID != -1
             );
           }
           SetSavedDimensionsKey(strSavedDimensionsKey) {
@@ -73597,6 +73758,10 @@ object-assign
             /* binding */ EControllerActivationType,
           /* harmony export */ EControllerActivationTypeToString: () =>
             /* binding */ EControllerActivationTypeToString,
+          /* harmony export */ EControllerDigitalIO: () =>
+            /* binding */ EControllerDigitalIO,
+          /* harmony export */ EControllerDigitalIOToString: () =>
+            /* binding */ EControllerDigitalIOToString,
           /* harmony export */ EControllerLEDSettingType: () =>
             /* binding */ EControllerLEDSettingType,
           /* harmony export */ EControllerLEDSettingTypeToString: () =>
@@ -76650,6 +76815,455 @@ object-assign
             "unknown EFlickStickSnapAngles ( " + eFlickStickSnapAngles + " )"
           );
         }
+        var EControllerDigitalIO;
+        (function (EControllerDigitalIO) {
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonNone"] = -1)
+          ] = "k_EControllerDigitalInput_ButtonNone";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonRightTrigger"
+            ] = 0)
+          ] = "k_EControllerDigitalInput_ButtonRightTrigger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftTrigger"
+            ] = 1)
+          ] = "k_EControllerDigitalInput_ButtonLeftTrigger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button1"] = 2)
+          ] = "k_EControllerDigitalInput_Button1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonY"] = 2)
+          ] = "k_EControllerDigitalInput_ButtonY";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button2"] = 3)
+          ] = "k_EControllerDigitalInput_Button2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonB"] = 3)
+          ] = "k_EControllerDigitalInput_ButtonB";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button3"] = 4)
+          ] = "k_EControllerDigitalInput_Button3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonX"] = 4)
+          ] = "k_EControllerDigitalInput_ButtonX";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button4"] = 5)
+          ] = "k_EControllerDigitalInput_Button4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonA"] = 5)
+          ] = "k_EControllerDigitalInput_ButtonA";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonRightBumper"
+            ] = 6)
+          ] = "k_EControllerDigitalInput_ButtonRightBumper";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftBumper"
+            ] = 7)
+          ] = "k_EControllerDigitalInput_ButtonLeftBumper";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftJoystickClick"
+            ] = 8)
+          ] = "k_EControllerDigitalInput_ButtonLeftJoystickClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonEscape"] = 9)
+          ] = "k_EControllerDigitalInput_ButtonEscape";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonSteam"] = 10)
+          ] = "k_EControllerDigitalInput_ButtonSteam";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonMenu"] = 11)
+          ] = "k_EControllerDigitalInput_ButtonMenu";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickUp"] = 12)
+          ] = "k_EControllerDigitalInput_StickUp";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickDown"] = 13)
+          ] = "k_EControllerDigitalInput_StickDown";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickLeft"] = 14)
+          ] = "k_EControllerDigitalInput_StickLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickRight"] = 15)
+          ] = "k_EControllerDigitalInput_StickRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch1"] = 16)
+          ] = "k_EControllerDigitalInput_Touch1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonUp"] = 16)
+          ] = "k_EControllerDigitalInput_ButtonUp";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch2"] = 17)
+          ] = "k_EControllerDigitalInput_Touch2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonRight"] = 17)
+          ] = "k_EControllerDigitalInput_ButtonRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch3"] = 18)
+          ] = "k_EControllerDigitalInput_Touch3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonLeft"] = 18)
+          ] = "k_EControllerDigitalInput_ButtonLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch4"] = 19)
+          ] = "k_EControllerDigitalInput_Touch4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonDown"] = 19)
+          ] = "k_EControllerDigitalInput_ButtonDown";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackLeft"
+            ] = 20)
+          ] = "k_EControllerDigitalInput_ButtonBackLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackRight"
+            ] = 21)
+          ] = "k_EControllerDigitalInput_ButtonBackRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadN"
+            ] = 22)
+          ] = "k_EControllerDigitalInput_LeftTrackpadN";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadNe"
+            ] = 23)
+          ] = "k_EControllerDigitalInput_LeftTrackpadNe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadE"
+            ] = 24)
+          ] = "k_EControllerDigitalInput_LeftTrackpadE";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadSe"
+            ] = 25)
+          ] = "k_EControllerDigitalInput_LeftTrackpadSe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadS"
+            ] = 26)
+          ] = "k_EControllerDigitalInput_LeftTrackpadS";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadSw"
+            ] = 27)
+          ] = "k_EControllerDigitalInput_LeftTrackpadSw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadW"
+            ] = 28)
+          ] = "k_EControllerDigitalInput_LeftTrackpadW";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadNw"
+            ] = 29)
+          ] = "k_EControllerDigitalInput_LeftTrackpadNw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadN"
+            ] = 30)
+          ] = "k_EControllerDigitalInput_RightTrackpadN";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadNe"
+            ] = 31)
+          ] = "k_EControllerDigitalInput_RightTrackpadNe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadE"
+            ] = 32)
+          ] = "k_EControllerDigitalInput_RightTrackpadE";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadSe"
+            ] = 33)
+          ] = "k_EControllerDigitalInput_RightTrackpadSe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadS"
+            ] = 34)
+          ] = "k_EControllerDigitalInput_RightTrackpadS";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadSw"
+            ] = 35)
+          ] = "k_EControllerDigitalInput_RightTrackpadSw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadW"
+            ] = 36)
+          ] = "k_EControllerDigitalInput_RightTrackpadW";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadNw"
+            ] = 37)
+          ] = "k_EControllerDigitalInput_RightTrackpadNw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadDoubleTap"
+            ] = 38)
+          ] = "k_EControllerDigitalInput_LeftTrackpadDoubleTap";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadDoubleTap"
+            ] = 39)
+          ] = "k_EControllerDigitalInput_RightTrackpadDoubleTap";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadOuterRadius"
+            ] = 40)
+          ] = "k_EControllerDigitalInput_LeftTrackpadOuterRadius";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadOuterRadius"
+            ] = 41)
+          ] = "k_EControllerDigitalInput_RightTrackpadOuterRadius";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadClick"
+            ] = 42)
+          ] = "k_EControllerDigitalInput_LeftTrackpadClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadClick"
+            ] = 43)
+          ] = "k_EControllerDigitalInput_RightTrackpadClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_BatteryLow"] = 44)
+          ] = "k_EControllerDigitalInput_BatteryLow";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTriggerThreshold"
+            ] = 45)
+          ] = "k_EControllerDigitalInput_LeftTriggerThreshold";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTriggerThreshold"
+            ] = 46)
+          ] = "k_EControllerDigitalInput_RightTriggerThreshold";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackLeft2"
+            ] = 47)
+          ] = "k_EControllerDigitalInput_ButtonBackLeft2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackRight2"
+            ] = 48)
+          ] = "k_EControllerDigitalInput_ButtonBackRight2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonAlwaysOn"
+            ] = 49)
+          ] = "k_EControllerDigitalInput_ButtonAlwaysOn";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonAncillary1"
+            ] = 50)
+          ] = "k_EControllerDigitalInput_ButtonAncillary1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro0"
+            ] = 51)
+          ] = "k_EControllerDigitalInput_ButtonMacro0";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro1"
+            ] = 52)
+          ] = "k_EControllerDigitalInput_ButtonMacro1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro2"
+            ] = 53)
+          ] = "k_EControllerDigitalInput_ButtonMacro2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro3"
+            ] = 54)
+          ] = "k_EControllerDigitalInput_ButtonMacro3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro4"
+            ] = 55)
+          ] = "k_EControllerDigitalInput_ButtonMacro4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro5"
+            ] = 56)
+          ] = "k_EControllerDigitalInput_ButtonMacro5";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro6"
+            ] = 57)
+          ] = "k_EControllerDigitalInput_ButtonMacro6";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro7"
+            ] = 58)
+          ] = "k_EControllerDigitalInput_ButtonMacro7";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro1Finger"
+            ] = 59)
+          ] = "k_EControllerDigitalInput_ButtonMacro1Finger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro2Finger"
+            ] = 60)
+          ] = "k_EControllerDigitalInput_ButtonMacro2Finger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Count"] = 61)
+          ] = "k_EControllerDigitalInput_Count";
+        })(EControllerDigitalIO || (EControllerDigitalIO = {}));
+        function EControllerDigitalIOToString(eControllerDigitalIO) {
+          if (true) {
+            switch (eControllerDigitalIO) {
+              case -1:
+                return "k_EControllerDigitalInput_ButtonNone";
+              case 0:
+                return "k_EControllerDigitalInput_ButtonRightTrigger";
+              case 1:
+                return "k_EControllerDigitalInput_ButtonLeftTrigger";
+              // value 2 could also be k_EControllerDigitalInput_Button1
+              case 2:
+                return "k_EControllerDigitalInput_ButtonY";
+              // value 3 could also be k_EControllerDigitalInput_Button2
+              case 3:
+                return "k_EControllerDigitalInput_ButtonB";
+              // value 4 could also be k_EControllerDigitalInput_Button3
+              case 4:
+                return "k_EControllerDigitalInput_ButtonX";
+              // value 5 could also be k_EControllerDigitalInput_Button4
+              case 5:
+                return "k_EControllerDigitalInput_ButtonA";
+              case 6:
+                return "k_EControllerDigitalInput_ButtonRightBumper";
+              case 7:
+                return "k_EControllerDigitalInput_ButtonLeftBumper";
+              case 8:
+                return "k_EControllerDigitalInput_ButtonLeftJoystickClick";
+              case 9:
+                return "k_EControllerDigitalInput_ButtonEscape";
+              case 10:
+                return "k_EControllerDigitalInput_ButtonSteam";
+              case 11:
+                return "k_EControllerDigitalInput_ButtonMenu";
+              case 12:
+                return "k_EControllerDigitalInput_StickUp";
+              case 13:
+                return "k_EControllerDigitalInput_StickDown";
+              case 14:
+                return "k_EControllerDigitalInput_StickLeft";
+              case 15:
+                return "k_EControllerDigitalInput_StickRight";
+              // value 16 could also be k_EControllerDigitalInput_Touch1
+              case 16:
+                return "k_EControllerDigitalInput_ButtonUp";
+              // value 17 could also be k_EControllerDigitalInput_Touch2
+              case 17:
+                return "k_EControllerDigitalInput_ButtonRight";
+              // value 18 could also be k_EControllerDigitalInput_Touch3
+              case 18:
+                return "k_EControllerDigitalInput_ButtonLeft";
+              // value 19 could also be k_EControllerDigitalInput_Touch4
+              case 19:
+                return "k_EControllerDigitalInput_ButtonDown";
+              case 20:
+                return "k_EControllerDigitalInput_ButtonBackLeft";
+              case 21:
+                return "k_EControllerDigitalInput_ButtonBackRight";
+              case 22:
+                return "k_EControllerDigitalInput_LeftTrackpadN";
+              case 23:
+                return "k_EControllerDigitalInput_LeftTrackpadNe";
+              case 24:
+                return "k_EControllerDigitalInput_LeftTrackpadE";
+              case 25:
+                return "k_EControllerDigitalInput_LeftTrackpadSe";
+              case 26:
+                return "k_EControllerDigitalInput_LeftTrackpadS";
+              case 27:
+                return "k_EControllerDigitalInput_LeftTrackpadSw";
+              case 28:
+                return "k_EControllerDigitalInput_LeftTrackpadW";
+              case 29:
+                return "k_EControllerDigitalInput_LeftTrackpadNw";
+              case 30:
+                return "k_EControllerDigitalInput_RightTrackpadN";
+              case 31:
+                return "k_EControllerDigitalInput_RightTrackpadNe";
+              case 32:
+                return "k_EControllerDigitalInput_RightTrackpadE";
+              case 33:
+                return "k_EControllerDigitalInput_RightTrackpadSe";
+              case 34:
+                return "k_EControllerDigitalInput_RightTrackpadS";
+              case 35:
+                return "k_EControllerDigitalInput_RightTrackpadSw";
+              case 36:
+                return "k_EControllerDigitalInput_RightTrackpadW";
+              case 37:
+                return "k_EControllerDigitalInput_RightTrackpadNw";
+              case 38:
+                return "k_EControllerDigitalInput_LeftTrackpadDoubleTap";
+              case 39:
+                return "k_EControllerDigitalInput_RightTrackpadDoubleTap";
+              case 40:
+                return "k_EControllerDigitalInput_LeftTrackpadOuterRadius";
+              case 41:
+                return "k_EControllerDigitalInput_RightTrackpadOuterRadius";
+              case 42:
+                return "k_EControllerDigitalInput_LeftTrackpadClick";
+              case 43:
+                return "k_EControllerDigitalInput_RightTrackpadClick";
+              case 44:
+                return "k_EControllerDigitalInput_BatteryLow";
+              case 45:
+                return "k_EControllerDigitalInput_LeftTriggerThreshold";
+              case 46:
+                return "k_EControllerDigitalInput_RightTriggerThreshold";
+              case 47:
+                return "k_EControllerDigitalInput_ButtonBackLeft2";
+              case 48:
+                return "k_EControllerDigitalInput_ButtonBackRight2";
+              case 49:
+                return "k_EControllerDigitalInput_ButtonAlwaysOn";
+              case 50:
+                return "k_EControllerDigitalInput_ButtonAncillary1";
+              case 51:
+                return "k_EControllerDigitalInput_ButtonMacro0";
+              case 52:
+                return "k_EControllerDigitalInput_ButtonMacro1";
+              case 53:
+                return "k_EControllerDigitalInput_ButtonMacro2";
+              case 54:
+                return "k_EControllerDigitalInput_ButtonMacro3";
+              case 55:
+                return "k_EControllerDigitalInput_ButtonMacro4";
+              case 56:
+                return "k_EControllerDigitalInput_ButtonMacro5";
+              case 57:
+                return "k_EControllerDigitalInput_ButtonMacro6";
+              case 58:
+                return "k_EControllerDigitalInput_ButtonMacro7";
+              case 59:
+                return "k_EControllerDigitalInput_ButtonMacro1Finger";
+              case 60:
+                return "k_EControllerDigitalInput_ButtonMacro2Finger";
+              case 61:
+                return "k_EControllerDigitalInput_Count";
+            }
+          }
+          return (
+            "unknown EControllerDigitalIO ( " + eControllerDigitalIO + " )"
+          );
+        }
 
         /***/
       },
@@ -78316,6 +78930,13 @@ object-assign
                     bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
                       .WriterProto.writeBool,
                   },
+                  coming_soon_display: {
+                    n: 8,
+                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
+                      .ReaderProto.readString,
+                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
+                      .WriterProto.writeString,
+                  },
                   is_early_access: {
                     n: 10,
                     br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
@@ -78436,7 +79057,7 @@ object-assign
                     bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
                       .WriterProto.writeBool,
                   },
-                  linux: {
+                  steamos_linux: {
                     n: 3,
                     br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
                       .ReaderProto.readBool,
@@ -92282,6 +92903,8 @@ object-assign
             /* binding */ ETimeSinceSuffix,
           /* harmony export */ LocalizeCalendarMonthAndYear: () =>
             /* binding */ LocalizeCalendarMonthAndYear,
+          /* harmony export */ LocalizeCalendarQuarter: () =>
+            /* binding */ LocalizeCalendarQuarter,
           /* harmony export */ LocalizeCalendarTime: () =>
             /* binding */ LocalizeCalendarTime,
           /* harmony export */ LocalizeCalendarTimeLessGranular: () =>
@@ -92306,6 +92929,10 @@ object-assign
             /* binding */ LocalizeTimeSince,
           /* harmony export */
         });
+        /* harmony import */ var mobx_utils__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! mobx-utils */ "./node_modules/mobx-utils/mobx-utils.module.js"
+          );
         /* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
             /*! ../localization */ "../../../web_src/shared/js/utils/localization.ts"
@@ -92313,10 +92940,6 @@ object-assign
         /* harmony import */ var _time__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! ../time */ "../../../web_src/shared/js/utils/time.ts"
-          );
-        /* harmony import */ var mobx_utils__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! mobx-utils */ "./node_modules/mobx-utils/mobx-utils.module.js"
           );
 
         // some of these functions return an observable value, some don't.  Look for references to MobxUtils.now().
@@ -92973,7 +93596,7 @@ object-assign
         function LocalizeCalendarYear(date) {
           let strYear = g_mapCachedLocalizedYear.get(date.getFullYear());
           if (strYear) return strYear;
-          // BUGBUG Is this ever more complicated than just dt.getFullYear().toString() ?
+          // This will be formatted in some languages, like "2022年" in japanese
           strYear = date.toLocaleDateString(
             _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
             { year: "numeric" }
@@ -92991,6 +93614,40 @@ object-assign
           );
           g_mapCachedLocalizedMonthAndYear.set(nMapKey, strMonthAndYear);
           return strMonthAndYear;
+        }
+        // return a string like "Q3 2022"
+        function LocalizeCalendarQuarter(date) {
+          switch (date.getUTCMonth()) {
+            case 0: // january
+            case 1:
+            case 2:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q1",
+                date.getUTCFullYear()
+              );
+            case 3:
+            case 4:
+            case 5:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q2",
+                date.getUTCFullYear()
+              );
+            case 6:
+            case 7:
+            case 8:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q3",
+                date.getUTCFullYear()
+              );
+            case 9:
+            case 10:
+            case 11:
+            default: // not expected for getUTCMonth not to return a 0-11 value
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q4",
+                date.getUTCFullYear()
+              );
+          }
         }
         /*
 function TestLocalizeCalendarTime()
@@ -94300,6 +94957,7 @@ function TestLocalizeCalendarTime()
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
           IMG_URL: "",
           STEAMTV_BASE_URL: "",
@@ -94328,6 +94986,7 @@ function TestLocalizeCalendarTime()
           BUILD_TIMESTAMP: 0,
           PAGE_TIMESTAMP: 0,
           FROM_WEB: false,
+          WEBSITE_ID: "Unknown",
           // this used to be part of config, but reading the cookie is best.  Defined as a getter for backwards compatibility.
           get SESSIONID() {
             return GetSessionID();
@@ -94343,6 +95002,7 @@ function TestLocalizeCalendarTime()
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
           IN_STANDALONE_KEYBOARD: false,
+          STANDALONE_CONFIGURATOR_APPID: 0,
         };
         /** User info, mostly populated by GetWebUICurrentUserInfo and GetWebUICurrentUserInfoForStore */
         const UserConfig = {
@@ -95950,4 +96610,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=bdb6add633154d1a15eb
+//# sourceMappingURL=friends.js.map?contenthash=d87b91b349ac2234b429

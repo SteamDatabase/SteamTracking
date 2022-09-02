@@ -8539,7 +8539,6 @@ html:not(.touch)
 }
 .carousel_carouselNavButton_1KK5N:hover svg {
   opacity: 1;
-  filter: drop-shadow(0px 0px 10px black);
 }
 .carousel_carouselNavButton_1KK5N:disabled svg {
   opacity: 0.1;

@@ -15,9 +15,9 @@
       var l = n(67294),
         o = n(8199),
         s = n.n(o),
-        a = n(7952),
-        r = n(78869),
-        u = n(18609),
+        u = n(7952),
+        a = n(78869),
+        r = n(18609),
         c = (n(36378), n(40792), n(38440)),
         i = n(70655),
         m = n(27194),
@@ -28,15 +28,16 @@
         return (0, i.mG)(this, void 0, void 0, function* () {
           if (E) return;
           E = !0;
-          const e = r.De.LANGUAGE,
+          const e = a.De.LANGUAGE,
             t = m.LJ.GetLanguageFallback(e),
             n = e === t,
             [l, o] = yield Promise.all([(0, f.I2)(e), n ? null : (0, f.I2)(t)]);
           m.Yt.InitFromObjects(l, o, null, null);
         });
       }
-      n(21645);
-      const h = (e) => {
+      n(21645), n(10708);
+      var h = n(63709);
+      const L = (e) => {
         console.log("Login success"),
           SteamClient.Auth.SetLoginToken(e.strRefreshToken, e.strAccountName);
       };
@@ -69,44 +70,49 @@
             );
       }
       function g(e) {
-        let t = new c.J(r.De.WEBAPI_BASE_URL).GetServiceTransport(),
+        let t = new c.J(a.De.WEBAPI_BASE_URL).GetServiceTransport(),
           [n, o] = (0, l.useState)(null);
-        (0, l.useEffect)(() => {
-          r.De.IN_LOGIN_REFRESH &&
-            SteamClient.Auth.GetRefreshInfo().then((e) => {
-              1 != e.reason ? o(e) : o(null);
-            });
-        }, []);
-        const a = `${null == n ? void 0 : n.account_name}${
+        !(function (e) {
+          (0, l.useEffect)(() => {
+            (0, h.Uh)().Init("Client Login", CLSTAMP, e);
+          }, [e]);
+        })(t),
+          (0, l.useEffect)(() => {
+            a.De.IN_LOGIN_REFRESH &&
+              SteamClient.Auth.GetRefreshInfo().then((e) => {
+                1 != e.reason ? o(e) : o(null);
+              });
+          }, []);
+        const u = `${null == n ? void 0 : n.account_name}${
           null == n ? void 0 : n.reason
         }`;
         return l.createElement(
           "div",
           { className: s().Login },
-          l.createElement(I, null),
-          l.createElement(u.i9, {
-            key: a,
+          l.createElement(C, null),
+          l.createElement(r.i9, {
+            key: u,
             autoFocus: !0,
             transport: t,
-            onSuccess: h,
+            onSuccess: L,
             platform: 1,
             embedded: !0,
             refreshInfo: n,
           })
         );
       }
-      function I(e) {
+      function C(e) {
         return l.createElement(
           "div",
           { className: s().TitleBar },
-          r.De.IN_LOGIN &&
+          a.De.IN_LOGIN &&
             l.createElement(
               "a",
               { href: "steam://close" },
               l.createElement(
                 "div",
                 { className: s().CloseButton },
-                l.createElement(a.X, null)
+                l.createElement(u.X, null)
               )
             )
         );
