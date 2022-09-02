@@ -19499,7 +19499,7 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 80302))
+          ]).then(n.bind(n, 70825))
         ),
         I = s.lazy(() =>
           Promise.all([n.e(7940), n.e(3069), n.e(9060), n.e(8974)]).then(

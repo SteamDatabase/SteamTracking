@@ -581,6 +581,7 @@ ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition
 ${PARTNER_BASE_URL}optin/ajaxgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxgetoptinstats
 ${PARTNER_BASE_URL}optin/ajaxgetspecialeventinfo
+${PARTNER_BASE_URL}optin/ajaxinviteapps
 ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
 ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats

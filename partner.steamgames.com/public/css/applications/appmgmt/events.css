@@ -18682,6 +18682,20 @@ button.rbc-input::-moz-focus-inner {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.optin_admin_editor_InviteButtonRow_z70Aa {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.optin_admin_editor_InviteButtonRow_z70Aa > div {
+  flex-grow: 1;
+}
+.optin_admin_editor_NarrowInputField_3s6tX
+  .DialogInput_Wrapper._DialogLayout
+  input {
+  width: 50px;
+  max-width: 50px;
+}
 .optin_admin_editor_TopBarContainer_aeUyk {
   display: flex;
   flex-direction: row;
@@ -18734,6 +18748,9 @@ button.rbc-input::-moz-focus-inner {
 .optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
   font-size: 14px;
   margin-bottom: 8px;
+}
+.optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC hr {
+  border-bottom: 1px solid #bfc8cd;
 }
 .optin_admin_editor_RightSection_3NiRT {
   padding: 16px;
@@ -18979,7 +18996,7 @@ button.rbc-input::-moz-focus-inner {
   width: 24px;
   height: 24px;
 }
-.optin_admin_editor_stats_DownloadRow_3h3SU {
+.optin_admin_manage_dashboard_DownloadRow_3Bo6G {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
