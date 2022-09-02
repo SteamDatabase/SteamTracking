@@ -16384,7 +16384,7 @@ a {
   align-items: left;
   margin-bottom: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
     .battlepasspageinternational2022_WallpapersContainer_2Klm_ {
     flex-wrap: wrap;
@@ -18773,8 +18773,7 @@ a {
 .battlepasspageinternational2022_BuyBattlePassCapsule_C7Wxj
   .battlepasspageinternational2022_CapsuleLevelBundle_2RsFD {
   margin-bottom: 0.8em;
-  font-size: 23;
-  font-size: clamp(23px, -0.4255319149vw + 31.170212766px, 27px);
+  font-size: 23px;
   color: #9fa2a3;
   font-weight: 800;
   text-transform: uppercase;
@@ -18785,9 +18784,8 @@ a {
 .battlepasspageinternational2022_BuyBattlePassCapsule_C7Wxj
   .battlepasspageinternational2022_CapsuleDiscount_b_bJA {
   margin-top: 20px;
-  height: 18px;
-  font-size: 16;
-  font-size: clamp(16px, -0.4255319149vw + 24.170212766px, 20px);
+  min-height: 18px;
+  font-size: 16px;
   color: #60d079;
   font-weight: 600;
   text-shadow: 0px 0px 10px #18aa00;
@@ -18801,8 +18799,7 @@ a {
   box-shadow: 0px 6px 10px #00000057;
   text-shadow: none;
   color: #fffbcd;
-  font-size: 18;
-  font-size: clamp(18px, -0.4255319149vw + 26.170212766px, 22px);
+  font-size: 18px;
   font-weight: 600;
   transition: 0.15s;
   transition-property: all;

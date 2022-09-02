@@ -38843,12 +38843,15 @@
             w = T[1],
             N = (0, o.useState)([]),
             I = N[0],
-            D = N[1];
-          function R() {
+            D = N[1],
+            R = (0, o.useState)([]),
+            A = R[0],
+            M = R[1];
+          function G() {
             return (0, r.mG)(this, void 0, void 0, function () {
-              var e;
-              return (0, r.Jh)(this, function (t) {
-                switch (t.label) {
+              var e, t, n, a;
+              return (0, r.Jh)(this, function (r) {
+                switch (r.label) {
                   case 0:
                     return [
                       4,
@@ -38862,14 +38865,27 @@
                       ),
                     ];
                   case 1:
-                    return (e = t.sent()) && e.data && w(e.data), [2];
+                    return (
+                      (e = r.sent()) &&
+                        e.data &&
+                        (w(e.data),
+                        e.data.team_autographs &&
+                          ((t = e.data.team_autographs),
+                          (n = t.map(function (e) {
+                            return e.autographs;
+                          })),
+                          (a = n.flat().map(function (e) {
+                            return e.account_id ? e.account_id.toString() : "";
+                          })).length && D(a))),
+                      [2]
+                    );
                 }
               });
             });
           }
           (0, o.useEffect)(function () {
             try {
-              R();
+              G();
             } catch (e) {
               console.log("Could not fetch get autographs.");
             }
@@ -38885,15 +38901,21 @@
               return (
                 t.length &&
                   t.forEach(function (l) {
-                    G(l.name) || n.push(l.name);
-                    var c = new FileReader();
-                    e.push(c),
-                      (c.onerror = function () {
+                    var c, u;
+                    (c = l.name),
+                      ("string" !=
+                        typeof (u = c.substr(0, c.lastIndexOf(".")) || c) ||
+                        !/^-?\d+$/.test(u) ||
+                        (I.length > 0 && !I.includes(u))) &&
+                        n.push(l.name);
+                    var m = new FileReader();
+                    e.push(m),
+                      (m.onerror = function () {
                         o++,
                           r.push(l.name),
                           o === t.length && (s(n), d(a), _(r), v(i), S(!0));
                       }),
-                      (c.onload = function (e) {
+                      (m.onload = function (e) {
                         var c = new Image();
                         (c.crossOrigin = "Anonymous"),
                           (c.src = e.target.result.toString()),
@@ -38901,7 +38923,7 @@
                             o++,
                               (1024 === c.width && 512 === c.height) ||
                                 a.push(l.name),
-                              k(c) && i.push(l.name),
+                              P(c) && i.push(l.name),
                               o === t.length && (s(n), d(a), _(r), v(i), S(!0));
                           }),
                           (c.onerror = function () {
@@ -38910,7 +38932,7 @@
                               o === t.length && (s(n), d(a), _(r), v(i), S(!0));
                           });
                       }),
-                      c.readAsDataURL(l);
+                      m.readAsDataURL(l);
                   }),
                 function () {
                   !0,
@@ -38920,15 +38942,11 @@
                 }
               );
             },
-            [t]
+            [t, I]
           );
-          var A,
-            M,
-            G = function (e) {
-              var t = e.substr(0, e.lastIndexOf(".")) || e;
-              return "string" == typeof t && /^-?\d+$/.test(t);
-            },
-            k = function (e) {
+          var k,
+            F,
+            P = function (e) {
               var t = document.querySelector("canvas"),
                 n = t.getContext("2d");
               return (
@@ -38938,18 +38956,19 @@
                 n.getImageData(0, 0, t.width, t.height).data[3] > 0
               );
             },
-            F = "Image files must be named <friend id>.png",
-            P = "Image dimensions must be "
+            O =
+              "Image files must be named <friend id>.png, and the id must be a valid id",
+            x = "Image dimensions must be "
               .concat(1024, "x")
               .concat(512, " pixels"),
-            O = "Image must be a compatible .png file",
-            x = "Image must have a transparent background",
-            U = [F, P, O, x],
-            z =
-              ((A = []),
+            U = "Image must be a compatible .png file",
+            z = "Image must have a transparent background",
+            H = [O, x, U, z],
+            W =
+              ((k = []),
               i.length > 0 &&
                 (t.length > 1 &&
-                  A.push(
+                  k.push(
                     o.createElement(
                       "div",
                       { key: "IncorrectFileNames" },
@@ -38957,18 +38976,18 @@
                       i.join(", ")
                     )
                   ),
-                A.push(
+                k.push(
                   o.createElement(
                     "div",
                     { key: "FileNameWarning" },
-                    o.createElement("b", null, F),
+                    o.createElement("b", null, O),
                     " "
                   ),
                   o.createElement("br", { key: "FileNameWarningBreak" })
                 )),
               c.length > 0 &&
                 (t.length > 1 &&
-                  A.push(
+                  k.push(
                     o.createElement(
                       "div",
                       { key: "IncorrectFileDimensions" },
@@ -38976,18 +38995,18 @@
                       c.join(", ")
                     )
                   ),
-                A.push(
+                k.push(
                   o.createElement(
                     "div",
                     { key: "FileDimensionsWarning" },
-                    o.createElement("b", null, P),
+                    o.createElement("b", null, x),
                     " "
                   ),
                   o.createElement("br", { key: "FileDimensionsWarningBreak" })
                 )),
               p.length > 0 &&
                 (t.length > 1 &&
-                  A.push(
+                  k.push(
                     o.createElement(
                       "div",
                       { key: "FileLoadingErrors" },
@@ -38995,18 +39014,18 @@
                       p.join(", ")
                     )
                   ),
-                A.push(
+                k.push(
                   o.createElement(
                     "div",
                     { key: "FileLoadingWarning" },
-                    o.createElement("b", null, O),
+                    o.createElement("b", null, U),
                     " "
                   ),
                   o.createElement("br", { key: "FileLoadingWarningBreak" })
                 )),
               f.length > 0 &&
                 (t.length > 1 &&
-                  A.push(
+                  k.push(
                     o.createElement(
                       "div",
                       { key: "IncorrectFileTransparency" },
@@ -39014,19 +39033,19 @@
                       f.join(", ")
                     )
                   ),
-                A.push(
+                k.push(
                   o.createElement(
                     "div",
                     { key: "FileTransparencyWarning" },
-                    o.createElement("b", null, x),
+                    o.createElement("b", null, z),
                     " "
                   ),
                   o.createElement("br", { key: "FileTransparencyWarningBreak" })
                 )),
-              A.pop(),
-              A),
-            H = (function () {
-              if (0 === I.length) return null;
+              k.pop(),
+              k),
+            j = (function () {
+              if (0 === A.length) return null;
               for (
                 var e = [
                     o.createElement("br", {
@@ -39034,24 +39053,24 @@
                     }),
                   ],
                   t = 0;
-                t < I.length;
+                t < A.length;
                 t++
               ) {
-                var n = I[t].error,
+                var n = A[t].error,
                   a = n ? "Error: ".concat(n) : "";
                 e.push(
                   o.createElement(
                     "div",
                     { key: "autographResponse".concat(t) },
                     "Filename: "
-                      .concat(I[t].name, ".\t")
+                      .concat(A[t].name, ".\t")
                       .concat(n ? a : "Upload success!")
                   )
                 );
               }
               return e;
             })(),
-            W = function (e) {
+            V = function (e) {
               var t,
                 n = e.proName,
                 a = e.accountId,
@@ -39122,7 +39141,7 @@
                 )
               );
             },
-            j = function (e, t) {
+            J = function (e, t) {
               return e.hasUploadedAutograph && !t.hasUploadedAutograph
                 ? -1
                 : (!e.hasUploadedAutograph && t.hasUploadedAutograph) ||
@@ -39134,7 +39153,7 @@
                 ? -1
                 : 0;
             },
-            V = 0 == h.Y.ACCOUNT_ID && !h.Y.VALVE_INTERNAL;
+            Y = 0 == h.Y.ACCOUNT_ID && !h.Y.VALVE_INTERNAL;
           return o.createElement(
             "div",
             { className: Rs().MajorsRegistrationAutographsPage },
@@ -39170,7 +39189,7 @@
                     { className: (0, b.Z)(Rs().Header) },
                     "Player Autographs"
                   ),
-                  V &&
+                  Y &&
                     o.createElement(
                       "div",
                       { className: Rs().NeedToLogin },
@@ -39196,7 +39215,7 @@
                         "Sign in"
                       )
                     ),
-                  !V &&
+                  !Y &&
                     o.createElement(
                       "div",
                       { className: Rs().SubmitAutographs },
@@ -39211,7 +39230,7 @@
                         o.createElement(
                           "ul",
                           null,
-                          U.map(function (e, t) {
+                          H.map(function (e, t) {
                             return o.createElement(
                               "li",
                               { key: "specification-".concat(t) },
@@ -39309,10 +39328,10 @@
                                       return i++, [3, 1];
                                     case 4:
                                       return (
-                                        D(a),
+                                        M(a),
                                         n([]),
                                         setTimeout(function () {
-                                          return R();
+                                          return G();
                                         }, 1500),
                                         [2]
                                       );
@@ -39330,7 +39349,7 @@
                           accept: ".png",
                           multiple: !0,
                           onChange: function (e) {
-                            D([]), S(!1);
+                            M([]), S(!1);
                             for (
                               var t = e.target.files, a = [], r = 0;
                               r < t.length;
@@ -39348,7 +39367,7 @@
                             "div",
                             null,
                             o.createElement("br", null),
-                            0 === z.length &&
+                            0 === W.length &&
                               o.createElement(
                                 "div",
                                 { className: Rs().FileInput },
@@ -39361,8 +39380,8 @@
                                   ),
                                 })
                               ),
-                            0 === z.length && o.createElement("br", null),
-                            z.length > 0 &&
+                            0 === W.length && o.createElement("br", null),
+                            W.length > 0 &&
                               o.createElement(
                                 "div",
                                 null,
@@ -39376,12 +39395,12 @@
                                 }),
                                 " "
                               ),
-                            z.length > 0 &&
+                            W.length > 0 &&
                               o.createElement(
                                 "div",
                                 { className: Rs().FileErrors },
                                 o.createElement("br", null),
-                                z
+                                W
                               )
                           ),
                         o.createElement(
@@ -39389,7 +39408,7 @@
                           null,
                           o.createElement("input", {
                             type:
-                              0 === t.length || z.length > 0 || !y
+                              0 === t.length || W.length > 0 || !y
                                 ? "hidden"
                                 : "submit",
                             value: "Upload Files",
@@ -39397,13 +39416,13 @@
                           })
                         )
                       ),
-                      o.createElement("div", null, H),
+                      o.createElement("div", null, j),
                       o.createElement("br", null),
                       o.createElement("div", { className: Rs().SmoothLine })
                     ),
                   o.createElement("canvas", { id: "canvas", hidden: !0 })
                 ),
-                !V &&
+                !Y &&
                   o.createElement(
                     "div",
                     { className: Rs().ViewAutographs },
@@ -39412,16 +39431,16 @@
                       "div",
                       null,
                       C && C.team_autographs
-                        ? ((M = C.team_autographs).forEach(function (e, t) {
+                        ? ((F = C.team_autographs).forEach(function (e, t) {
                             for (
                               var n = e.autographs, a = !1, r = 0;
                               r < n.length;
                               r++
                             )
                               n[r].file && (a = !0);
-                            M[t].hasUploadedAutograph = a;
+                            F[t].hasUploadedAutograph = a;
                           }),
-                          (M = M.filter(function (e) {
+                          (F = F.filter(function (e) {
                             var t;
                             return (
                               (null ===
@@ -39431,8 +39450,8 @@
                                 : t.length) >= 4
                             );
                           })),
-                          M.sort(j),
-                          M.map(function (e, t) {
+                          F.sort(J),
+                          F.map(function (e, t) {
                             return o.createElement(
                               "div",
                               { key: "".concat(e.team_id, "Container") },
@@ -39454,7 +39473,7 @@
                                     a = e.account_id,
                                     r = e.file,
                                     i = e.timestamp;
-                                  return o.createElement(W, {
+                                  return o.createElement(V, {
                                     key: a,
                                     proName: n,
                                     accountId: a,
