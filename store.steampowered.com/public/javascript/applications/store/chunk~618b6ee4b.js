@@ -16210,12 +16210,12 @@
       "use strict";
       n.d(t, {
         EJ: () => H,
-        Et: () => j,
+        Et: () => W,
         PI: () => T,
         hj: () => A,
         j: () => U,
         mR: () => O,
-        ow: () => V,
+        ow: () => j,
       });
       var a = n(70655),
         r = n(9669),
@@ -16804,11 +16804,13 @@
           }),
             this.m_bServerSideFiltering
               ? this.m_prunedFacets.forEach((e) => {
+                  const t = V(e.facet.facet);
                   e.facetValues.forEach((e) => {
-                    let t = e.nMatchingFilteredCapsules;
+                    let n = e.nMatchingFilteredCapsules;
                     e.bDeactivated = !(
                       e.bEnabled ||
                       t ||
+                      n ||
                       e.facetValue.type === u.HL.k_EUserPreference
                     );
                   });
@@ -17367,7 +17369,7 @@
                     key: "facet_" + g + "_value_" + n,
                     facetValue: t,
                     styleOverrides: s,
-                    showMatchCounts: D,
+                    showMatchCounts: D && !V(r.facet.facet),
                   },
                   e
                 )
@@ -17626,6 +17628,13 @@
         );
       }
       function V(e) {
+        for (const t of e.facetValues)
+          if (null != t.filter)
+            for (const e of t.filter.clauses)
+              for (const t of e.or_tags) if (t.startsWith("[Opt]")) return !0;
+        return !1;
+      }
+      function j(e) {
         const t = new Array(),
           n = new Set();
         for (const a of e)
@@ -17637,7 +17646,7 @@
               }
         return t;
       }
-      function j(e, t) {
+      function W(e, t) {
         var n, a, r, o, s, i, l;
         const d = p.Z.Get().GetStoreItem(t.id, (0, _.TM)(t.type)),
           m = (0, _.Ds)(
@@ -17707,13 +17716,13 @@
             const p =
               null === (i = e.rgSubexpressions) || void 0 === i
                 ? void 0
-                : i.some((e) => j(e, t));
+                : i.some((e) => W(e, t));
             return e.bNegated ? !p : p;
           case u.PJ.k_EStoreFilterClauseTypeAnd:
             const _ =
               null === (l = e.rgSubexpressions) || void 0 === l
                 ? void 0
-                : l.every((e) => j(e, t));
+                : l.every((e) => W(e, t));
             return e.bNegated ? !_ : _;
           default:
             return !0;
@@ -30959,33 +30968,33 @@
           [V]
         );
         const j = (0, h.bJ)(),
-          [W] = (0, w.Ar)("newmaincarousellayout", !1);
-        if (!(0, T.g)()) return null;
+          [W] = (0, w.Ar)("newmaincarousellayout", !1),
+          z = (0, T.g)();
         if (!P) return null;
-        let z =
+        let Z =
           (null === (t = P.GetAssets().GetLibraryHeroURL()) || void 0 === t
             ? void 0
             : t.trim().length) > 0
             ? P.GetAssets().GetLibraryHeroURL()
             : P.GetAssets().GetPageBackgroundURL();
-        const Z = P.GetOnlyAllAgesSafeScreenshots();
-        null == Z || Z.length;
-        let X = P.GetMicroTrailer();
+        const X = P.GetOnlyAllAgesSafeScreenshots();
+        null == X || X.length;
+        let Y = P.GetMicroTrailer();
         O &&
-          ((z && 11 !== P.GetAppType()) ||
-            (z =
+          ((Z && 11 !== P.GetAppType()) ||
+            (Z =
               (null === (n = O.GetAssets().GetLibraryHeroURL()) || void 0 === n
                 ? void 0
                 : n.trim().length) > 0
                 ? O.GetAssets().GetLibraryHeroURL()
                 : O.GetAssets().GetPageBackgroundURL()),
-          X || (X = null == O ? void 0 : O.GetMicroTrailer()));
-        const Y = (0, i.Hf)(P.GetStorePageURL(), j),
-          q = (0, i.mY)(j),
-          Q = 0 == P.GetStoreItemType();
+          Y || (Y = null == O ? void 0 : O.GetMicroTrailer()));
+        const q = (0, i.Hf)(P.GetStorePageURL(), j),
+          Q = (0, i.mY)(j),
+          J = 0 == P.GetStoreItemType();
         return a.createElement(
           p.zw,
-          { appid: Q && P.GetAppID() },
+          { appid: J && P.GetAppID() },
           a.createElement(
             s.s,
             {
@@ -31015,7 +31024,7 @@
                 "div",
                 {
                   className: (0, _.Z)(c.BGImage),
-                  style: { backgroundImage: `url("${z}")` },
+                  style: { backgroundImage: `url("${Z}")` },
                 },
                 " "
               )
@@ -31026,14 +31035,14 @@
               a.createElement(
                 "a",
                 {
-                  href: Y,
+                  href: q,
                   className: (0, _.Z)({
                     [c.Artwork]: !0,
                     [c.ContentHubArtwork]: W,
                   }),
                 },
                 a.createElement(v.RJ, {
-                  snr: q,
+                  snr: Q,
                   appID: R.id,
                   classOverride: (0, _.Z)("WishlistButton"),
                 }),
@@ -31046,11 +31055,11 @@
                       "div",
                       {
                         className: (0, _.Z)(c.BGImage),
-                        style: { backgroundImage: `url("${z}")` },
+                        style: { backgroundImage: `url("${Z}")` },
                       },
                       " "
                     ),
-                    Boolean(X) &&
+                    Boolean(Y) &&
                       a.createElement(
                         "div",
                         { className: c.BGVideo },
@@ -31079,7 +31088,7 @@
                 a.createElement(
                   "div",
                   { className: c.BottomBarCtn },
-                  Boolean(k && Q)
+                  Boolean(k && J)
                     ? a.createElement(y.r, { appid: P.GetAppID(), bIsMuted: M })
                     : a.createElement(d.Hl, {
                         info: x,
@@ -31117,10 +31126,10 @@
                     { className: c.TitleCtn },
                     a.createElement(
                       "a",
-                      { className: c.Title, href: Y },
+                      { className: c.Title, href: q },
                       P.GetName()
                     ),
-                    Q &&
+                    J &&
                       a.createElement(
                         "div",
                         { className: c.StoreSaleItemRelease },
@@ -31133,7 +31142,7 @@
                           )
                         )
                       ),
-                    Q &&
+                    J &&
                       a.createElement(
                         "div",
                         {
@@ -31161,18 +31170,19 @@
                 Boolean(L) &&
                   L.length > 0 &&
                   a.createElement("div", { className: c.Reason }, L),
-                a.createElement(
-                  "div",
-                  { className: c.AppRelevanceCtn },
-                  a.createElement(f.sK, {
-                    appID: P.GetAppID(),
-                    storeItem: P,
-                    bShowAvatars: !1,
-                    bHideDescription: !0,
-                    bShowCuratorInfo: !0,
-                    bShowCreatorInfo: !0,
-                  })
-                )
+                z &&
+                  a.createElement(
+                    "div",
+                    { className: c.AppRelevanceCtn },
+                    a.createElement(f.sK, {
+                      appID: P.GetAppID(),
+                      storeItem: P,
+                      bShowAvatars: !1,
+                      bHideDescription: !0,
+                      bShowCuratorInfo: !0,
+                      bShowCreatorInfo: !0,
+                    })
+                  )
               )
             )
           )
