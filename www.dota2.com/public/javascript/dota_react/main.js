@@ -11253,7 +11253,6 @@
               colorBottom: "#8F2854",
               colorButtonLeft: "#C7516D",
               colorButtonRight: "#952E46",
-              discountPct: 5,
               itemdef: 23630,
               level: 50,
             }),
@@ -11263,7 +11262,6 @@
               colorBottom: "#642020",
               colorButtonLeft: "#D95443",
               colorButtonRight: "#A81F21",
-              discountPct: 15,
               itemdef: 23631,
               level: 100,
             })
