@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7493063";
+var CLSTAMP = "7493725";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7493063";
     i,
     s,
     r = {
-      88157: (e, t, n) => {
+      63170: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7493063";
         }
         Object.create;
         Object.create;
-        n(58366);
+        n(52410);
         var r = n(87363),
           o = n(61533);
         function a(e) {
@@ -697,7 +697,7 @@ var CLSTAMP = "7493063";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(P || (P = {}));
         var F, W, x;
-        n(92361);
+        n(26654);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -821,7 +821,7 @@ var CLSTAMP = "7493063";
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
           })($ || ($ = {}));
-        n(47398), n(7194);
+        n(18072), n(39438);
         var K, Y;
         function J(e, t, n) {
           return {
@@ -1062,7 +1062,7 @@ var CLSTAMP = "7493063";
         }
         window.LocalizationManager = ie;
         var re = n(22188),
-          oe = n(9301);
+          oe = n(29323);
         class ae {
           constructor(e) {
             (this.m_bReady = !1),
@@ -1265,7 +1265,7 @@ var CLSTAMP = "7493063";
           }
         }
         var de = n(42238);
-        n(87495);
+        n(41721);
         class _e extends ae {
           BIsExpired() {
             return he.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1633,7 +1633,7 @@ var CLSTAMP = "7493063";
             });
           });
       },
-      68123: (e, t, n) => {
+      18702: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1800,7 +1800,7 @@ var CLSTAMP = "7493063";
               };
         }
       },
-      58366: (e, t, n) => {
+      52410: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1919,7 +1919,7 @@ var CLSTAMP = "7493063";
           "./shared_italian.json": [48254, 5933],
           "./shared_japanese.json": [15505, 2844],
           "./shared_koreana.json": [84137, 6542],
-          "./shared_latam.json": [48284, 2443],
+          "./shared_latam.json": [50861, 2443],
           "./shared_norwegian.json": [65115, 4108],
           "./shared_polish.json": [35330, 3252],
           "./shared_portuguese.json": [37943, 5849],
@@ -1964,7 +1964,7 @@ var CLSTAMP = "7493063";
           "./shared_italian.json": [48254, 5933],
           "./shared_japanese.json": [15505, 2844],
           "./shared_koreana.json": [84137, 6542],
-          "./shared_latam.json": [48284, 2443],
+          "./shared_latam.json": [50861, 2443],
           "./shared_norwegian.json": [65115, 4108],
           "./shared_polish.json": [35330, 3252],
           "./shared_portuguese.json": [37943, 5849],
@@ -2134,7 +2134,7 @@ var CLSTAMP = "7493063";
         1635: "471b1452f15ab121f4c0",
         2029: "4e0c023f0b10c2b1a44f",
         2431: "cbd2760e1ccf9ea63610",
-        2443: "9765daacc522172071fc",
+        2443: "8a81855f0e0159a8a76a",
         2537: "ac46dfe7866b2283342a",
         2822: "096020c1e2920696e32a",
         2844: "de507c5ab1a9f3565f70",
@@ -2320,6 +2320,6 @@ var CLSTAMP = "7493063";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(88157));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(63170));
   c = a.O(c);
 })();
