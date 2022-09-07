@@ -340,14 +340,6 @@
         LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_3F6YM",
       };
     },
-    77723: (e) => {
-      e.exports = {
-        Link: "salebanner_Link_26cHo",
-        Banner: "salebanner_Banner_2df4N",
-        Big: "salebanner_Big_1m7WT",
-        Mobile: "salebanner_Mobile_2w3oX",
-      };
-    },
     22661: (e) => {
       e.exports = {
         LegalFooter: "legalfooter_LegalFooter_2YSVe",
@@ -464,71 +456,6 @@
                 })
               ),
               a.createElement("div", { style: { clear: "left" } })
-            )
-          : null;
-      }
-    },
-    93612: (e, t, n) => {
-      "use strict";
-      n.d(t, { i: () => m });
-      var a = n(67294),
-        r = n(26149),
-        l = n(50153),
-        o = n(7573),
-        s = n(41311),
-        i = n(35092),
-        c = n(90666),
-        d = n(77723);
-      function m(e) {
-        const { gidEvent: t } = e,
-          n = (0, l.XC)(t),
-          [m, u] = (0, a.useMemo)(() => {
-            var e, t, a, l;
-            if (
-              (null ===
-                (t =
-                  null === (e = null == n ? void 0 : n.jsondata) || void 0 === e
-                    ? void 0
-                    : e.localized_sale_product_banner) || void 0 === t
-                ? void 0
-                : t.length) > 0 &&
-              (null ===
-                (l =
-                  null === (a = null == n ? void 0 : n.jsondata) || void 0 === a
-                    ? void 0
-                    : a.localized_sale_product_mobile_banner) || void 0 === l
-                ? void 0
-                : l.length) > 0
-            ) {
-              const e = (0, r.jM)(c.De.LANGUAGE),
-                t = s.LZ.GetWithFallback(
-                  n.jsondata.localized_sale_product_banner,
-                  e
-                ),
-                a = s.LZ.GetWithFallback(
-                  n.jsondata.localized_sale_product_mobile_banner,
-                  e
-                ),
-                l = n.clanSteamID.GetAccountID();
-              return [
-                c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${l}/${t}`,
-                c.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${l}/${a}`,
-              ];
-            }
-            return [null, null];
-          }, [n]);
-        return m && u
-          ? a.createElement(
-              "a",
-              { href: (0, i.OL)(n.GetSaleURL()), className: d.Link },
-              a.createElement("img", {
-                src: m,
-                className: (0, o.Z)(d.Banner, d.Big),
-              }),
-              a.createElement("img", {
-                src: u,
-                className: (0, o.Z)(d.Banner, d.Mobile),
-              })
             )
           : null;
       }
@@ -1091,7 +1018,7 @@
     },
     60693: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Jn });
+      n.r(t), n.d(t, { default: () => $n });
       var a = n(9355),
         r = n(67294),
         l = n(78587),
@@ -1338,7 +1265,7 @@
         z = n(41311),
         q = n(30185),
         K = n(47808);
-      let $ = class extends r.Component {
+      let J = class extends r.Component {
         render() {
           const {
             summary: e,
@@ -1696,8 +1623,8 @@
               );
         }
       };
-      $ = (0, f.gn)([m.Pi], $);
-      var J = n(85732),
+      J = (0, f.gn)([m.Pi], J);
+      var $ = n(85732),
         Q = n(93612),
         ee = n(87541),
         te = n(51483),
@@ -1954,7 +1881,7 @@
                             "AppSummaryWidgetCtn"
                           ),
                         },
-                        r.createElement(J.ju, {
+                        r.createElement($.ju, {
                           id: t.appid,
                           type: (0, p.Yd)(g.GetAppType()),
                         })
@@ -2327,7 +2254,7 @@
                 "div",
                 { className: V().EditorStatsCtn },
                 (0, z.Xx)("#EventDashBoard_SummaryStats_Admin_Title"),
-                r.createElement($, {
+                r.createElement(J, {
                   summary: n.m_stats,
                   bIsAllowedInLibrary: t,
                   bEventIsInModerationQueue: (0, _.Kt)(e),
@@ -2821,7 +2748,7 @@
         ze = n(73604),
         qe = n(19474),
         Ke = n.n(qe);
-      function $e(e) {
+      function Je(e) {
         const t = new Set();
         return (
           (e.indexOf("games") >= 0 || e.indexOf("dlc") >= 0) && t.add("apps"),
@@ -2829,7 +2756,7 @@
           t
         );
       }
-      class Je extends r.Component {
+      class $e extends r.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -2856,7 +2783,7 @@
         }
         GetSuggestionsFromServer(e) {
           return (0, f.mG)(this, void 0, void 0, function* () {
-            const t = $e(this.props.rgCorporaToSearch);
+            const t = Je(this.props.rgCorporaToSearch);
             t.has("apps") && this.GetAppSuggestionsFromServer(e),
               t.has("curators") && this.GetCuratorSuggestions(e);
           });
@@ -2982,7 +2909,7 @@
               (this.m_nHighestSentRequestID++, !(null == t ? void 0 : t.length))
             )
               return (
-                Array.from($e(this.props.rgCorporaToSearch)).forEach((e) =>
+                Array.from(Je(this.props.rgCorporaToSearch)).forEach((e) =>
                   this.m_mapHighestReceivedRequestIDFromBackEnd.set(
                     e,
                     this.m_nHighestSentRequestID
@@ -3026,7 +2953,7 @@
             i = (null == l ? void 0 : l.length) > 0,
             c = (null == o ? void 0 : o.length) > 0,
             d = (null == s ? void 0 : s.length) > 0,
-            m = $e(n).size > 1,
+            m = Je(n).size > 1,
             u =
               m &&
               c &&
@@ -3035,7 +2962,7 @@
                   ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
                   : "#EventCalendar_SearchResultsHeader_GameSection"
               ),
-            p = Array.from($e(n)).some(
+            p = Array.from(Je(n)).some(
               (e) =>
                 this.m_nHighestSentRequestID >
                 this.m_mapHighestReceivedRequestIDFromBackEnd.get(e)
@@ -3092,7 +3019,7 @@
           );
         }
       }
-      (0, f.gn)([ie.ak], Je.prototype, "UpdateSuggestions", null);
+      (0, f.gn)([ie.ak], $e.prototype, "UpdateSuggestions", null);
       const Qe = (e) =>
         r.createElement(
           "div",
@@ -4020,7 +3947,7 @@
           return t;
         }
         render() {
-          return r.createElement(Je, {
+          return r.createElement($e, {
             strLabel: this.props.label,
             fnOnSelected: () => {},
             fnDecorateSuggestion: this.DecorateSearchSuggestion,
@@ -4585,8 +4512,8 @@
         zt = n(96602),
         qt = n(6092),
         Kt = n(52962),
-        $t = n(86278);
-      let Jt = class extends r.Component {
+        Jt = n(86278);
+      let $t = class extends r.Component {
         constructor() {
           super(...arguments), (this.state = { bVideoPlayerReady: !1 });
         }
@@ -4873,8 +4800,8 @@
           );
         }
       };
-      (0, f.gn)([ie.ak], Jt.prototype, "OnFallbackClick", null),
-        (Jt = (0, f.gn)([m.Pi], Jt));
+      (0, f.gn)([ie.ak], $t.prototype, "OnFallbackClick", null),
+        ($t = (0, f.gn)([m.Pi], $t));
       let Qt = class extends r.Component {
         OnTitleClick(e) {
           const { eventModel: t } = this.props,
@@ -4925,7 +4852,7 @@
           const { eventModel: t, calendarEvent: n, className: a } = e,
             l = (0, Me.vY)().GetStoreInitializationTimestamp().getTime() / 1e3,
             o = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
-            s = t && (0, $t.G1)(t.type) && t.GetEndTimeAndDateUnixSeconds();
+            s = t && (0, Jt.G1)(t.type) && t.GetEndTimeAndDateUnixSeconds();
           if (s && o < l && l < s) {
             const e = s - l,
               t = (0, z.yW)(e, !0);
@@ -5194,7 +5121,7 @@
             s = (0, ie.NW)();
           return o
             ? r.createElement(
-                Jt,
+                $t,
                 Object.assign({ eventModel: l, calendarEvent: n }, a)
               )
             : r.createElement(
@@ -6971,13 +6898,13 @@
               )
             )
           );
-      var $n = n(54086);
-      const Jn = (e) => {
+      var Jn = n(54086);
+      const $n = (e) => {
         const [t] = (0, i.Ar)("byday", !1),
           [n] = (0, i.Ar)("upcoming", !1);
         return (0, s.ue)()
           ? r.createElement(
-              $n.n,
+              Jn.n,
               { bSalePage: !0 },
               r.createElement(
                 l.rs,

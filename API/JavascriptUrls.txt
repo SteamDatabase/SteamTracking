@@ -825,6 +825,7 @@ ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
+${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}news/sale/${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}

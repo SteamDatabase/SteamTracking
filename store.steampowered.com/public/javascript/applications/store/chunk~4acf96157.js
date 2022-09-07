@@ -83,6 +83,14 @@
         SpeakerHover: "presenterpopup_SpeakerHover_1ctFc",
       };
     },
+    77723: (e) => {
+      e.exports = {
+        Link: "salebanner_Link_26cHo",
+        Banner: "salebanner_Banner_2df4N",
+        Big: "salebanner_Big_1m7WT",
+        Mobile: "salebanner_Mobile_2w3oX",
+      };
+    },
     35944: (e) => {
       e.exports = {
         LinkRegionDragBox: "linkregionbox_LinkRegionDragBox_3riG1",
@@ -349,8 +357,8 @@
       n.d(t, {
         hp: () => U,
         tk: () => T,
-        ag: () => V,
-        uC: () => z,
+        ag: () => z,
+        uC: () => V,
         D3: () => oe,
       });
       var o = n(70655),
@@ -361,7 +369,7 @@
         a = n(23153),
         l = n(29139),
         m = (n(21927), n(52114));
-      class p extends s.Component {
+      class d extends s.Component {
         constructor(e) {
           super(e);
         }
@@ -393,16 +401,16 @@
           );
         }
       }
-      p.defaultProps = { text: "" };
-      var d = n(10847),
+      d.defaultProps = { text: "" };
+      var p = n(10847),
         h = n(7573),
         u = n(41311),
-        E = n(22975);
-      function g(e, t) {
+        _ = n(22975);
+      function E(e, t) {
         return e + "economy/sticker/" + t;
       }
       n(41775);
-      var _ = n(90666),
+      var g = n(90666),
         f = n(48341),
         v = n(35921),
         k = n(23200),
@@ -519,12 +527,12 @@
             L,
             null,
             s.createElement(
-              w,
+              D,
               { title: t },
               s.createElement(x, Object.assign({}, c))
             )
           ),
-          s.createElement(D, { value: r, onChange: n, onSubmit: i })
+          s.createElement(B, { value: r, onChange: n, onSubmit: i })
         );
       }
       function R(e) {
@@ -540,16 +548,16 @@
               var { title: t } = e,
                 n = (0, o._T)(e, ["title"]);
               return s.createElement(
-                w,
+                D,
                 { title: t, key: t },
                 s.createElement(x, Object.assign({}, n))
               );
             })
           ),
-          s.createElement(D, { value: n, onChange: t })
+          s.createElement(B, { value: n, onChange: t })
         );
       }
-      function w(e) {
+      function D(e) {
         return s.createElement(
           "div",
           { className: S.Section },
@@ -557,7 +565,7 @@
           s.createElement("div", { className: S.SectionContent }, e.children)
         );
       }
-      function D(e) {
+      function B(e) {
         const { value: t, onChange: n, onSubmit: o } = e;
         return s.createElement(
           "div",
@@ -572,7 +580,7 @@
           })
         );
       }
-      function B(e) {
+      function w(e) {
         const { className: t } = e,
           n = (0, o._T)(e, ["className"]);
         return s.createElement(
@@ -580,9 +588,9 @@
           Object.assign({ className: (0, h.Z)(t, S.AddonPickerMessage) }, n)
         );
       }
-      var A = n(81864),
-        y = n.n(A),
-        N = n(72258);
+      var M = n(81864),
+        N = n.n(M),
+        A = n(72258);
       class T extends s.PureComponent {
         constructor() {
           super(...arguments),
@@ -603,11 +611,11 @@
             s.Fragment,
             null,
             s.createElement(
-              p,
+              d,
               { text: o, style: "merge-adjacent" },
               s.createElement("img", {
                 src: r,
-                className: (0, h.Z)(y().emoticon, t ? y().large : void 0),
+                className: (0, h.Z)(N().emoticon, t ? N().large : void 0),
                 "data-emoticon": e,
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
@@ -615,7 +623,7 @@
               })
             ),
             this.state.showHover &&
-              s.createElement(M, {
+              s.createElement(y, {
                 target: this.m_ref.current,
                 store: n,
                 emoticon: e,
@@ -623,9 +631,9 @@
           );
         }
       }
-      (0, o.gn)([E.ak], T.prototype, "OnMouseEnter", null),
-        (0, o.gn)([E.ak], T.prototype, "OnMouseLeave", null);
-      const M = (0, i.Pi)((e) => {
+      (0, o.gn)([_.ak], T.prototype, "OnMouseEnter", null),
+        (0, o.gn)([_.ak], T.prototype, "OnMouseLeave", null);
+      const y = (0, i.Pi)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             r = n.Get(o);
           return s.createElement(
@@ -648,20 +656,20 @@
             {
               target: e,
               style: { zIndex: 1700 },
-              className: y().EmoticonHover,
+              className: N().EmoticonHover,
             },
             o,
             s.createElement(
               "div",
-              { className: y().Info },
+              { className: N().Info },
               s.createElement(
                 "div",
-                { className: y().Name },
+                { className: N().Name },
                 t || s.createElement("span", null, " ")
               ),
               s.createElement(
                 "div",
-                { className: y().AppName },
+                { className: N().AppName },
                 n || s.createElement("span", null, " ")
               )
             )
@@ -709,9 +717,9 @@
                   {
                     title: (0, u.Xx)("#AddonPicker_RecentlyUsed"),
                     className: (0, h.Z)(
-                      y().PickerTab,
-                      y().Clock,
-                      e && y().ActiveTab
+                      N().PickerTab,
+                      N().Clock,
+                      e && N().ActiveTab
                     ),
                   },
                   s.createElement(ae, null)
@@ -726,7 +734,7 @@
                 }),
             }),
           s.createElement(
-            d.xV,
+            p.xV,
             null,
             s.createElement(P, {
               config: [
@@ -737,12 +745,12 @@
                       "span",
                       {
                         title: (0, u.Xx)("#AddonPicker_Emoticons"),
-                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
+                        className: (0, h.Z)(N().PickerTab, e && N().ActiveTab),
                       },
                       s.createElement(se, null)
                     ),
                   renderContent: () =>
-                    s.createElement(W, {
+                    s.createElement(j, {
                       store: t,
                       hoverStore: n,
                       onItemSelect: (e) => c(e.name),
@@ -755,7 +763,7 @@
                       "span",
                       {
                         title: (0, u.Xx)("#AddonPicker_Stickers"),
-                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
+                        className: (0, h.Z)(N().PickerTab, e && N().ActiveTab),
                       },
                       s.createElement(ie, null)
                     ),
@@ -771,7 +779,7 @@
                       "span",
                       {
                         title: (0, u.Xx)("#AddonPicker_RoomEffects"),
-                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
+                        className: (0, h.Z)(N().PickerTab, e && N().ActiveTab),
                       },
                       s.createElement(ce, null)
                     ),
@@ -819,9 +827,9 @@
                     {
                       title: (0, u.Xx)("#AddonPicker_RecentlyUsed"),
                       className: (0, h.Z)(
-                        y().PickerTab,
-                        y().Clock,
-                        e && y().ActiveTab
+                        N().PickerTab,
+                        N().Clock,
+                        e && N().ActiveTab
                       ),
                     },
                     s.createElement(ae, null)
@@ -836,7 +844,7 @@
                   }),
               }),
             s.createElement(
-              d.xV,
+              p.xV,
               null,
               s.createElement(P, {
                 config: [
@@ -848,14 +856,14 @@
                         {
                           title: (0, u.Xx)("#AddonPicker_Emoticons"),
                           className: (0, h.Z)(
-                            y().PickerTab,
-                            e && y().ActiveTab
+                            N().PickerTab,
+                            e && N().ActiveTab
                           ),
                         },
                         s.createElement(se, null)
                       ),
                     renderContent: () =>
-                      s.createElement(W, {
+                      s.createElement(j, {
                         store: e,
                         hoverStore: t,
                         onItemSelect: (e) => n(e.name),
@@ -869,8 +877,8 @@
                         {
                           title: (0, u.Xx)("#AddonPicker_Stickers"),
                           className: (0, h.Z)(
-                            y().PickerTab,
-                            e && y().ActiveTab
+                            N().PickerTab,
+                            e && N().ActiveTab
                           ),
                         },
                         s.createElement(ie, null)
@@ -888,49 +896,6 @@
         }
       };
       X = (0, o.gn)([i.Pi], X);
-      class V extends s.Component {
-        constructor(e) {
-          super(e), (this.state = { strSearchText: "" });
-          let t = this.props.emoticonStore;
-          t.is_initialized ||
-            (t.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, r.gx)(
-              () => t.is_initialized,
-              () => this.forceUpdate()
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return s.createElement(
-            d.xV,
-            null,
-            s.createElement(P, {
-              config: [
-                {
-                  renderTab: () =>
-                    s.createElement(
-                      "span",
-                      {
-                        title: (0, u.Xx)("#AddonPicker_Emoticons"),
-                        className: y().PickerTab,
-                      },
-                      s.createElement(se, null)
-                    ),
-                  renderContent: () =>
-                    s.createElement(q, {
-                      store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
-                      onItemSelect: (e) => this.props.OnSelected(e.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            })
-          );
-        }
-      }
       class z extends s.Component {
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -947,7 +912,7 @@
         }
         render() {
           return s.createElement(
-            d.xV,
+            p.xV,
             null,
             s.createElement(P, {
               config: [
@@ -957,7 +922,50 @@
                       "span",
                       {
                         title: (0, u.Xx)("#AddonPicker_Emoticons"),
-                        className: y().PickerTab,
+                        className: N().PickerTab,
+                      },
+                      s.createElement(se, null)
+                    ),
+                  renderContent: () =>
+                    s.createElement(q, {
+                      store: this.props.emoticonStore,
+                      hoverStore: this.props.emoticonHoverStore,
+                      onItemSelect: (e) => this.props.OnSelected(e.name, !1),
+                      flairGroupID: this.props.strFlairGroupID,
+                    }),
+                },
+              ],
+            })
+          );
+        }
+      }
+      class V extends s.Component {
+        constructor(e) {
+          super(e), (this.state = { strSearchText: "" });
+          let t = this.props.emoticonStore;
+          t.is_initialized ||
+            (t.UpdateEmoticonList(),
+            (this.m_disposeEmoticonStore = (0, r.gx)(
+              () => t.is_initialized,
+              () => this.forceUpdate()
+            )));
+        }
+        componentWillUnmount() {
+          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
+        }
+        render() {
+          return s.createElement(
+            p.xV,
+            null,
+            s.createElement(P, {
+              config: [
+                {
+                  renderTab: () =>
+                    s.createElement(
+                      "span",
+                      {
+                        title: (0, u.Xx)("#AddonPicker_Emoticons"),
+                        className: N().PickerTab,
                       },
                       s.createElement(se, null)
                     ),
@@ -998,7 +1006,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   s.createElement(
-                    B,
+                    w,
                     null,
                     r
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1017,7 +1025,7 @@
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   s.createElement(
-                    B,
+                    w,
                     null,
                     r
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1035,7 +1043,7 @@
           );
         }
       }
-      class W extends s.Component {
+      class j extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -1061,17 +1069,17 @@
             onSubmit: () => n(c[0]),
             renderEmpty: () =>
               r
-                ? s.createElement(B, null, (0, u.Xx)("#AddonPicker_NoResults"))
-                : s.createElement(j, null),
+                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                : s.createElement(W, null),
           });
         }
       }
-      function j() {
+      function W() {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
-            B,
+            w,
             null,
             (0, u.Xx)(
               "#AddonPicker_NoneOwned",
@@ -1079,18 +1087,18 @@
             )
           ),
           s.createElement(
-            B,
+            w,
             null,
             (0, u.kQ)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               s.createElement(
-                N.ns,
-                { href: `${_.De.STORE_BASE_URL}points/shop/c/emoticons` },
+                A.ns,
+                { href: `${g.De.STORE_BASE_URL}points/shop/c/emoticons` },
                 (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
               ),
               s.createElement(
-                N.ns,
-                { href: `${_.De.COMMUNITY_BASE_URL}market` },
+                A.ns,
+                { href: `${g.De.COMMUNITY_BASE_URL}market` },
                 (0, u.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
               )
             )
@@ -1116,12 +1124,12 @@
             onSubmit: () => t(o[0]),
             renderEmpty: () =>
               n
-                ? s.createElement(B, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
                 : s.createElement(
                     s.Fragment,
                     null,
                     s.createElement(
-                      B,
+                      w,
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -1129,14 +1137,14 @@
                       )
                     ),
                     s.createElement(
-                      B,
+                      w,
                       null,
                       (0, u.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
                         s.createElement(
-                          N.ns,
+                          A.ns,
                           {
-                            href: `${_.De.STORE_BASE_URL}points/shop/c/stickers`,
+                            href: `${g.De.STORE_BASE_URL}points/shop/c/stickers`,
                           },
                           (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
                         )
@@ -1166,12 +1174,12 @@
             onSubmit: () => n(r[0]),
             renderEmpty: () =>
               o
-                ? s.createElement(B, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
                 : s.createElement(
                     s.Fragment,
                     null,
                     s.createElement(
-                      B,
+                      w,
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -1179,14 +1187,14 @@
                       )
                     ),
                     s.createElement(
-                      B,
+                      w,
                       null,
                       (0, u.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
                         s.createElement(
-                          N.ns,
+                          A.ns,
                           {
-                            href: `${_.De.STORE_BASE_URL}points/shop/c/chateffects`,
+                            href: `${g.De.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
                           (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
                         )
@@ -1220,7 +1228,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   s.createElement(
-                    B,
+                    w,
                     null,
                     r
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1245,11 +1253,11 @@
                   renderEmpty: () =>
                     r
                       ? s.createElement(
-                          B,
+                          w,
                           null,
                           (0, u.Xx)("#AddonPicker_NoResults")
                         )
-                      : s.createElement(j, null),
+                      : s.createElement(W, null),
                 },
               ],
             })
@@ -1283,11 +1291,11 @@
                 renderEmpty: () =>
                   r
                     ? s.createElement(
-                        B,
+                        w,
                         null,
                         (0, u.Xx)("#AddonPicker_NoResults")
                       )
-                    : s.createElement(j, null),
+                    : s.createElement(W, null),
               },
             ],
           });
@@ -1299,7 +1307,7 @@
           r = !t.last_used && t.time_received;
         return s.createElement(
           "div",
-          { className: y().EmoticonItem },
+          { className: N().EmoticonItem },
           s.createElement(T, {
             emoticon: t.name,
             emoticonHoverStore: n,
@@ -1318,13 +1326,13 @@
           const e = this.props,
             { sticker: t, className: n } = e,
             r = (0, o._T)(e, ["sticker", "className"]),
-            i = g(_.De.COMMUNITY_CDN_URL, t.name);
+            i = E(g.De.COMMUNITY_CDN_URL, t.name);
           return s.createElement(
             "div",
             Object.assign(
               {
                 ref: this.m_ref,
-                className: (0, h.Z)(n, y().StickerButton),
+                className: (0, h.Z)(n, N().StickerButton),
                 onMouseOver: () => this.setState({ showHover: !0 }),
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -1348,8 +1356,8 @@
           O,
           { target: t, title: n, subtitle: null == r ? void 0 : r.GetName() },
           s.createElement("img", {
-            src: g(_.De.COMMUNITY_CDN_URL, n),
-            className: y().StickerHoverSticker,
+            src: E(g.De.COMMUNITY_CDN_URL, n),
+            className: N().StickerHoverSticker,
           })
         );
       });
@@ -1373,7 +1381,7 @@
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
                 onBlur: () => this.setState({ showHover: !1 }),
-                className: (0, h.Z)(r, y().EffectButton),
+                className: (0, h.Z)(r, N().EffectButton),
               },
               i
             ),
@@ -1400,7 +1408,7 @@
           { target: t, title: n, subtitle: null == c ? void 0 : c.GetName() },
           s.createElement(
             "div",
-            { className: y().EffectHoverEffect },
+            { className: N().EffectHoverEffect },
             i.renderEffectIcon()
           )
         );
@@ -1408,8 +1416,8 @@
       function oe() {
         return s.createElement(
           "div",
-          { className: y().NewEmoticonIndicator },
-          s.createElement("div", { className: y().NewEmoticonCircle })
+          { className: N().NewEmoticonIndicator },
+          s.createElement("div", { className: N().NewEmoticonCircle })
         );
       }
       class re extends s.Component {
@@ -1430,12 +1438,12 @@
         }
         render() {
           let e = this.props.emoticon,
-            t = [y().EmoticonSelector_Item],
+            t = [N().EmoticonSelector_Item],
             n = !1;
           return (
             !e.last_used &&
               e.time_received &&
-              (t.push(y().EmoticonSelector_Item_New), (n = !0)),
+              (t.push(N().EmoticonSelector_Item_New), (n = !0)),
             s.createElement(
               "div",
               {
@@ -1455,7 +1463,7 @@
         }
       }
       function ie(e) {
-        return _.De.IN_GAMEPADUI
+        return g.De.IN_GAMEPADUI
           ? s.createElement(
               "svg",
               Object.assign(
@@ -1517,7 +1525,7 @@
             );
       }
       function se(e) {
-        return _.De.IN_GAMEPADUI
+        return g.De.IN_GAMEPADUI
           ? s.createElement(
               "svg",
               Object.assign(
@@ -1549,7 +1557,7 @@
             );
       }
       function ce(e) {
-        return _.De.IN_GAMEPADUI
+        return g.De.IN_GAMEPADUI
           ? s.createElement(
               "svg",
               Object.assign(
@@ -1614,7 +1622,7 @@
           })
         );
       }
-      (0, o.gn)([E.ak], re.prototype, "SetVisible", null);
+      (0, o.gn)([_.ak], re.prototype, "SetVisible", null);
     },
     92202: (e, t, n) => {
       "use strict";
@@ -1627,13 +1635,13 @@
         a = n(35921),
         l = n(35562),
         m = n(83997),
-        p = (n(95598), n(41311)),
-        d = (n(29139), n(21927), n(7573)),
+        d = (n(95598), n(41311)),
+        p = (n(29139), n(21927), n(7573)),
         h = n(89608),
         u = n.n(h),
-        E = (n(10847), n(41775), n(5827));
-      const g = 1576780700;
-      let _ = class extends r.Component {
+        _ = (n(10847), n(41775), n(5827));
+      const E = 1576780700;
+      let g = class extends r.Component {
         OnEmoticonClick(e) {
           var t;
           const {
@@ -1685,7 +1693,7 @@
             this.BHaveUnseenEmoticons() && i)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < g) && (e = g), i("rtLastAckedNewEmoticons", e);
+            (!e || e < E) && (e = E), i("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -1699,7 +1707,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < g || (t && (!e || e < t));
+          return !e || e < E || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: n, useImg: o } = this.props;
@@ -1713,17 +1721,17 @@
                   a.s,
                   {
                     onClick: this.OnEmoticonClick,
-                    onOKActionDescription: (0, p.Xx)(
+                    onOKActionDescription: (0, d.Xx)(
                       "#ChatEntryButton_Emoticon"
                     ),
                     focusable: !0,
                   },
                   r.createElement("img", {
                     src: this.props.useImg,
-                    className: (0, d.Z)(...i),
+                    className: (0, p.Z)(...i),
                     title:
                       this.props.title ||
-                      (0, p.Xx)("#ChatEntryButton_Emoticon"),
+                      (0, d.Xx)("#ChatEntryButton_Emoticon"),
                     "data-tooltip-text": n,
                   })
                 )
@@ -1731,31 +1739,31 @@
                 r.createElement(
                   c.wl,
                   {
-                    className: (0, d.Z)(...i),
-                    onOKActionDescription: (0, p.Xx)(
+                    className: (0, p.Z)(...i),
+                    onOKActionDescription: (0, d.Xx)(
                       "#ChatEntryButton_Emoticon"
                     ),
                     type: "button",
                     onClick: this.OnEmoticonClick,
                     title:
                       this.props.title ||
-                      (0, p.Xx)("#ChatEntryButton_Emoticon"),
+                      (0, d.Xx)("#ChatEntryButton_Emoticon"),
                     disabled: e,
                     "data-tooltip-text": n,
                   },
-                  this.props.buttonIcon || r.createElement(E.tk, null),
+                  this.props.buttonIcon || r.createElement(_.tk, null),
                   s && r.createElement(m.D3, null)
                 ))
           );
         }
       };
-      (0, o.gn)([s.ak], _.prototype, "OnEmoticonClick", null),
-        (_ = (0, o.gn)([i.Pi], _));
-      const f = _;
+      (0, o.gn)([s.ak], g.prototype, "OnEmoticonClick", null),
+        (g = (0, o.gn)([i.Pi], g));
+      const f = g;
     },
     88883: (e, t, n) => {
       "use strict";
-      n.d(t, { G$: () => _, pj: () => g, qs: () => E });
+      n.d(t, { G$: () => g, pj: () => E, qs: () => _ });
       var o = n(70655),
         r = n(29323),
         i = n(67294),
@@ -1764,12 +1772,12 @@
         a = n(79822),
         l = n(23153),
         m = (n(28268), n(22975)),
-        p = n(90666),
-        d = n(8577),
+        d = n(90666),
+        p = n(8577),
         h = n(26640),
         u = n.n(h);
-      const E = (0, r.Pi)((e) => {
-        const t = e.photo ? (0, s.vZ)(e.photo, (0, c.jM)(p.De.LANGUAGE)) : null,
+      const _ = (0, r.Pi)((e) => {
+        const t = e.photo ? (0, s.vZ)(e.photo, (0, c.jM)(d.De.LANGUAGE)) : null,
           n = e.photo ? ("string" == typeof t ? t : t[1]) : null,
           o = Boolean(e.title),
           r = Boolean(e.company);
@@ -1804,11 +1812,11 @@
               "div",
               { className: u().SpeakerBio },
               e.bio,
-              e.bioString && i.createElement(d.N, { text: e.bioString })
+              e.bioString && i.createElement(p.N, { text: e.bioString })
             )
         );
       });
-      class g extends i.Component {
+      class E extends i.Component {
         constructor() {
           super(...arguments), (this.m_refAnchor = i.createRef());
         }
@@ -1836,17 +1844,17 @@
             },
             o = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            g.sm_embeddedElements.HideElement(t.ownerDocument, o)),
+            E.sm_embeddedElements.HideElement(t.ownerDocument, o)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          g.sm_embeddedElements.ShowElementDelayed(
+          E.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             i.createElement(
               l.T,
               Object.assign({}, n),
               i.createElement(
-                E,
+                _,
                 Object.assign({}, this.props, { fnClose: this.OnLeave })
               )
             ),
@@ -1871,15 +1879,15 @@
           );
         }
       }
-      (g.sm_embeddedElements = new a.AN("presenter-hover-source-elements")),
-        (0, o.gn)([m.ak], g.prototype, "ClosePopup", null),
-        (0, o.gn)([m.ak], g.prototype, "OnScroll", null),
-        (0, o.gn)([m.ak], g.prototype, "OnHover", null),
-        (0, o.gn)([m.ak], g.prototype, "OnLeave", null);
-      class _ extends i.Component {
+      (E.sm_embeddedElements = new a.AN("presenter-hover-source-elements")),
+        (0, o.gn)([m.ak], E.prototype, "ClosePopup", null),
+        (0, o.gn)([m.ak], E.prototype, "OnScroll", null),
+        (0, o.gn)([m.ak], E.prototype, "OnHover", null),
+        (0, o.gn)([m.ak], E.prototype, "OnLeave", null);
+      class g extends i.Component {
         render() {
           const e = this.props.photo
-              ? (0, s.vZ)(this.props.photo, (0, c.jM)(p.De.LANGUAGE))
+              ? (0, s.vZ)(this.props.photo, (0, c.jM)(d.De.LANGUAGE))
               : null,
             t =
               this.props.photo && !this.props.hidePhotoInCompactView
@@ -1893,7 +1901,7 @@
             "div",
             { className: u().SpeakerOuter },
             i.createElement(
-              g,
+              E,
               Object.assign({}, this.props),
               i.createElement(
                 "div",
@@ -1925,6 +1933,77 @@
             )
           );
         }
+      }
+    },
+    93612: (e, t, n) => {
+      "use strict";
+      n.d(t, { i: () => d });
+      var o = n(67294),
+        r = n(26149),
+        i = n(50153),
+        s = n(7573),
+        c = n(41311),
+        a = n(35092),
+        l = n(90666),
+        m = n(77723);
+      function d(e) {
+        const { gidEvent: t } = e,
+          n = (0, i.XC)(t),
+          [d, p] = (0, o.useMemo)(() => {
+            var e, t, o, i;
+            if (
+              (null ===
+                (t =
+                  null === (e = null == n ? void 0 : n.jsondata) || void 0 === e
+                    ? void 0
+                    : e.localized_sale_product_banner) || void 0 === t
+                ? void 0
+                : t.length) > 0 &&
+              (null ===
+                (i =
+                  null === (o = null == n ? void 0 : n.jsondata) || void 0 === o
+                    ? void 0
+                    : o.localized_sale_product_mobile_banner) || void 0 === i
+                ? void 0
+                : i.length) > 0
+            ) {
+              const e = (0, r.jM)(l.De.LANGUAGE),
+                t = c.LZ.GetWithFallback(
+                  n.jsondata.localized_sale_product_banner,
+                  e
+                ),
+                o = c.LZ.GetWithFallback(
+                  n.jsondata.localized_sale_product_mobile_banner,
+                  e
+                );
+              if (
+                (null == t ? void 0 : t.length) > 0 &&
+                (null == o ? void 0 : o.length) > 0
+              ) {
+                const e = n.clanSteamID.GetAccountID();
+                return [
+                  l.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${t}`,
+                  l.De.MEDIA_CDN_COMMUNITY_URL + `images/clans/${e}/${o}`,
+                ];
+              }
+            }
+            return [null, null];
+          }, [n]);
+        return (null == d ? void 0 : d.length) > 0 &&
+          (null == p ? void 0 : p.length) > 0
+          ? o.createElement(
+              "a",
+              { href: (0, a.OL)(n.GetSaleURL()), className: m.Link },
+              o.createElement("img", {
+                src: d,
+                className: (0, s.Z)(m.Banner, m.Big),
+              }),
+              o.createElement("img", {
+                src: p,
+                className: (0, s.Z)(m.Banner, m.Mobile),
+              })
+            )
+          : null;
       }
     },
     15396: (e, t, n) => {
@@ -1981,22 +2060,22 @@
               "mode",
             ]),
             m = this.state.bRenderChildren;
-          let p = c;
+          let d = c;
           if (!m) {
             const e = this.state.nPrevRenderWidth || t,
               o = this.state.nPrevRenderHeight || n;
             (void 0 === o && void 0 === e) ||
-              (p = Object.assign(Object.assign({}, c), {
+              (d = Object.assign(Object.assign({}, c), {
                 minHeight: o,
                 minWidth: e,
               }));
           }
-          const d = this.BLoadAndUnload() ? "repeated" : "once";
+          const p = this.BLoadAndUnload() ? "repeated" : "once";
           return r.createElement(
             s.U,
-            Object.assign({ ref: this.m_refContainer, style: p }, l, {
+            Object.assign({ ref: this.m_refContainer, style: d }, l, {
               onVisibilityChange: this.OnVisibilityChange,
-              trigger: d,
+              trigger: p,
             }),
             m && this.props.children
           );
@@ -2006,7 +2085,7 @@
     },
     57148: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => E });
+      n.d(t, { l: () => _ });
       var o,
         r = n(70655),
         i = n(67294),
@@ -2015,9 +2094,9 @@
         a = n(99533),
         l = n(41311),
         m = n(48341),
-        p = n(95598),
-        d = n(35944),
-        h = n.n(d),
+        d = n(95598),
+        p = n(35944),
+        h = n.n(p),
         u = n(48899);
       !(function (e) {
         (e.topleft = "topleft"),
@@ -2030,7 +2109,7 @@
           (e.bottom = "bottom"),
           (e.bottomright = "bottomright");
       })(o || (o = {}));
-      let E = class extends i.Component {
+      let _ = class extends i.Component {
         constructor(e) {
           super(e),
             (this.m_fnMouseUp = null),
@@ -2375,7 +2454,7 @@
                         className: h().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      i.createElement(p.pVO, null)
+                      i.createElement(d.pVO, null)
                     ),
                   !this.props.bDisableLink &&
                     i.createElement(
@@ -2384,7 +2463,7 @@
                         className: h().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      i.createElement(p.pkz, null)
+                      i.createElement(d.pkz, null)
                     ),
                   i.createElement(
                     "div",
@@ -2473,16 +2552,16 @@
           );
         }
       };
-      (0, r.gn)([s.ak], E.prototype, "LinkRegionBoxRef", null),
-        (0, r.gn)([s.ak], E.prototype, "OnMouseDown", null),
-        (0, r.gn)([s.ak], E.prototype, "OnMouseMove", null),
-        (0, r.gn)([s.ak], E.prototype, "OnMouseUp", null),
-        (0, r.gn)([s.ak], E.prototype, "HandleDelete", null),
-        (0, r.gn)([s.ak], E.prototype, "OnSetLinkURLChange", null),
-        (0, r.gn)([s.ak], E.prototype, "OnSetLinkDescriptionChange", null),
-        (0, r.gn)([s.ak], E.prototype, "OnSaveLink", null),
-        (0, r.gn)([s.ak], E.prototype, "OnEditLink", null),
-        (E = (0, r.gn)([c.Pi], E));
+      (0, r.gn)([s.ak], _.prototype, "LinkRegionBoxRef", null),
+        (0, r.gn)([s.ak], _.prototype, "OnMouseDown", null),
+        (0, r.gn)([s.ak], _.prototype, "OnMouseMove", null),
+        (0, r.gn)([s.ak], _.prototype, "OnMouseUp", null),
+        (0, r.gn)([s.ak], _.prototype, "HandleDelete", null),
+        (0, r.gn)([s.ak], _.prototype, "OnSetLinkURLChange", null),
+        (0, r.gn)([s.ak], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, r.gn)([s.ak], _.prototype, "OnSaveLink", null),
+        (0, r.gn)([s.ak], _.prototype, "OnEditLink", null),
+        (_ = (0, r.gn)([c.Pi], _));
     },
     54452: (e, t, n) => {
       "use strict";
