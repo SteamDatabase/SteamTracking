@@ -48,7 +48,11 @@ function IsLeftSideBaseUrlExpression(node) {
 }
 
 function IsBaseUrlExpression(node) {
-	if (node.type === Syntax.Literal && typeof node.value === "string" && node.value.startsWith("https://")) {
+	if (
+		node.type === Syntax.Literal &&
+		typeof node.value === "string" &&
+		(node.value.startsWith("http://") || node.value.startsWith("https://") || node.value.startsWith("steam://"))
+	) {
 		return true;
 	}
 
