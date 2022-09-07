@@ -10984,7 +10984,7 @@
           l = o ? Do(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1662088533),
+          c = parseInt(1662504050),
           m = c && $o(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, so.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -25631,9 +25631,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Sep 1 2022 : 20:15:33",
-              BUILD_TIME_UTC: "Sep 2 2022 : 03:15:33",
-              BUILD_RTIME_UTC: 1662088533,
+              BUILD_TIME_LOCAL: "Sep 6 2022 : 15:40:50",
+              BUILD_TIME_UTC: "Sep 6 2022 : 22:40:50",
+              BUILD_RTIME_UTC: 1662504050,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
