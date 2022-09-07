@@ -615,6 +615,7 @@
         }
         QueueMultipleAppRequests(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 0, t))
             )).filter((e) => 1 != e);
@@ -623,6 +624,7 @@
         }
         QueueMultiplePackageRequests(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 1, t))
             )).filter((e) => 1 != e);
@@ -631,6 +633,7 @@
         }
         QueueMultipleBundleRequests(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 2, t))
             )).filter((e) => 1 != e);
@@ -639,6 +642,7 @@
         }
         QueueMultipleStoreItemRequests(e, t, s) {
           return (0, n.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const n = (yield Promise.all(
               e.map((e, n) => this.QueueStoreItemRequest(e, t[n], s))
             )).filter((e) => 1 != e);

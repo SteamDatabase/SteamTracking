@@ -10871,7 +10871,9 @@
           : ["grid"];
       }
       function M(e, t, a, s, c) {
-        return Boolean("events" === e.section_type)
+        return Boolean(
+          "events" === e.section_type || "sale_events" === e.section_type
+        )
           ? s
             ? s
                 .filter((e) => Boolean(e))
@@ -29035,7 +29037,10 @@
               ("tag" === n.smart_section_type ||
                 "category" === n.smart_section_type),
             l = "items" === n.section_type,
-            s = "items" === n.section_type || "events" === n.section_type,
+            s =
+              "items" === n.section_type ||
+              "events" === n.section_type ||
+              "sale_events" === n.section_type,
             c = "items" === n.section_type,
             d = "library" === n.single_item_style,
             m =

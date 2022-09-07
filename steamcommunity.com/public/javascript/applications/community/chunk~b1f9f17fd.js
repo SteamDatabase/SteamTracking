@@ -5550,7 +5550,7 @@
                       cc: G.De.COUNTRY,
                     }),
                   }
-                )).data;
+                )).data.rgAppIDs;
               }
               return { rgAppIDs: a, rgSolrFacetCounts: null };
             } catch (e) {
@@ -5573,7 +5573,7 @@
                   max_results: t,
                   feature: e,
                 })).rgAppIDs;
-              this.m_rgTopN = n.map((e) => Number(e));
+              this.m_rgTopN = null == n ? void 0 : n.map((e) => Number(e));
             }
             return this.m_rgTopN;
           });
@@ -11931,7 +11931,10 @@
           );
         if (!i) return null;
         if (!t.BUsesContentHubForItemSource()) return null;
-        if ("events" !== a.section_type || a.hide_view_all_events_link)
+        if (
+          ("events" !== a.section_type && "sale_events" !== a.section_type) ||
+          a.hide_view_all_events_link
+        )
           return null;
         const r = G.De.STORE_BASE_URL + "news/" + i;
         return n.createElement(
@@ -14498,13 +14501,17 @@
               r.map((e) => e.appid).filter(Boolean),
               d.bk
             );
-            let l = t.map((e) => ({ type: "game", id: e.appid }));
-            yield F.jg.Get().HintLoad();
-            const s = [];
-            l = yield (0, S.A$)(l, (0, h.kl)(C), s);
-            const o = new Set(s.map((e) => e.id));
-            (r = r.filter((e) => !o.has(e.appid))),
-              u(r),
+            let l = r
+              .filter((e) => 0 != e.appid)
+              .map((e) => ({ type: "game", id: e.appid }));
+            if (l.length > 0) {
+              yield F.jg.Get().HintLoad();
+              const e = [];
+              l = yield (0, S.A$)(l, (0, h.kl)(C), e);
+              const t = new Set(e.map((e) => e.id));
+              r = r.filter((e) => 0 == e.appid || !t.has(e.appid));
+            }
+            u(r),
               E(!0),
               !C.dynamic_reveal ||
                 (C.smart_section_type &&
