@@ -2922,6 +2922,58 @@ body.v6 #footer_spacer.china_spacer {
 }
 
 
+/* For Date pickers shared between projects */
+
+.rdt .rdtPicker {
+    background: #576070;
+    border: 1px solid #646f82;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.rdt .rdtPicker th {
+    border-bottom: transparent;
+}
+
+.rdt .rdtPicker td {
+    color: white;
+}
+
+/* days that show from the previous or subsequent calendar month (eg when a month does not start on a Sunday) */
+.rdt .rdtPicker td.rdtNew,
+.rdt .rdtPicker td.rdtOld {
+ }
+
+.rdt .rdtPicker td.rdtDisabled,
+.rdt .rdtPicker td.rdtDisabled:hover {
+     color: #333333;
+ }
+
+.rdt .rdtPicker td.rdtDay:hover,
+.rdt .rdtPicker td.rdtMonth:hover,
+.rdt .rdtPicker td.rdtYear:hover {
+     color: black;
+ }
+
+.rdt .rdtPicker td .rdtCounter .rdtBtn:hover {
+     color: black;
+}
+
+.rdt .rdtPicker th.rdtSwitch {
+    color: white;
+    font-size: 13px;
+}
+
+.rdt .rdtPicker th.rdtSwitch:hover {
+    color: black;
+}
+
+.rdt .rdtPicker th.dow {
+    background: #474f5c;
+    color: #9aa3b1;
+}
+
+
+
 /* for dynamic store items */
 html.responsive .ds_steam_deck_compat {
 	display: block;

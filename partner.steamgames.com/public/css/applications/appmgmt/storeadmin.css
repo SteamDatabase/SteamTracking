@@ -11,14 +11,19 @@
   min-height: 375px;
 }
 .releasedaterequest_ColumnLabel_xebmA {
+  margin-bottom: 7px;
   font-family: "Motiva Sans", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #bfbfbf;
+}
+.releasedaterequest_ReleaseColumnFooter_3egfk {
+  margin-top: 8px;
+  font-size: 12px;
 }
 .releasedaterequest_ColumnContent_eZhsk {
   background: rgba(0, 0, 0, 0.2);
@@ -26,10 +31,12 @@
   padding: 18px;
   flex: 1;
 }
-.releasedaterequest_YellowNote_Kt0aR {
-  color: #e2c58b;
+.releasedaterequest_BlueNote_1iIVg {
+  color: #0ea5cf;
+  margin-bottom: 16px;
 }
 .releasedaterequest_PublishNowWarning_2-dra {
+  position: relative;
   background: #333;
   border: 1px solid #c6670e;
   padding: 9px 12px;
@@ -38,8 +45,22 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
-  margin: 14px 0;
+  margin: 14px 0 20px 0;
   color: #ff8a1c;
+}
+.releasedaterequest_PublishNowWarning_2-dra:after {
+  top: 100%;
+  left: 24%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(198, 103, 14, 0);
+  border-top-color: #c6670e;
+  border-width: 10px;
+  margin-left: -10px;
 }
 .releasedaterequest_ErrorBox_27JIJ {
   margin: 4px 0 24px 0;

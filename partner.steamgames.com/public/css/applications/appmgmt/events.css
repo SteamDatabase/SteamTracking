@@ -4075,6 +4075,10 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   background: #000;
 }
 .salepreviewwidgets_StoreSaleWidgetTitle_3jI46 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   cursor: pointer;
   line-height: 28px;
   width: fit-content;
@@ -4426,10 +4430,12 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   display: none;
 }
 .salepreviewwidgets_StoreSaleWidgetShortDesc_VvP06 {
-  flex-grow: 1;
-  max-height: 93px;
-  padding: 6px 0px 6px 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
   overflow: hidden;
+  padding: 6px 0px 0px 0px;
   text-align: left;
   font-size: 13px;
   color: #c3c3c3;
@@ -5011,7 +5017,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 30px;
+  height: 38px;
   box-sizing: border-box;
   z-index: 2;
   cursor: pointer;
@@ -5773,6 +5779,7 @@ html.touch
   opacity: 70%;
   margin-top: 4px;
   margin-right: 8px;
+  margin-bottom: 12px;
   display: none;
 }
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -6087,10 +6094,17 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
     .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
     .salepreviewwidgets_StoreSaleWidgetShortDesc_VvP06 {
-    display: block;
+    display: -webkit-box;
+    min-block-size: 30px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
     height: 2em;
     overflow: hidden;
     flex-grow: unset;
+    line-height: 15px;
+    margin-top: 0px;
+    margin-bottom: 6px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -17298,6 +17312,10 @@ html.responsive.touch
   padding: 8px;
   box-sizing: border-box;
   margin-top: 16px;
+  margin-bottom: 18px;
+}
+.dailydealeditor_ButtonRow_2fO-C .dailydealeditor_DashLink_1Xkkb {
+  margin-bottom: 0px;
 }
 .dailydealeditor_ButtonRow_2fO-C .dailydealeditor_ButtonRowSpacer_3PObg {
   flex-grow: 1;
@@ -18745,11 +18763,15 @@ button.rbc-input::-moz-focus-inner {
   padding: 12px;
   margin-bottom: 30px;
 }
+.optin_admin_editor_Section_2yL7J .optin_admin_editor_Section_2yL7J {
+  background: #34373e;
+  border-radius: 5px;
+}
 .optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC {
   font-size: 14px;
   margin-bottom: 8px;
 }
-.optin_admin_editor_Section_2yL7J .optin_admin_editor_SectionDesc_33_oC hr {
+.optin_admin_editor_Section_2yL7J hr {
   border-bottom: 1px solid #bfc8cd;
 }
 .optin_admin_editor_RightSection_3NiRT {

@@ -1523,7 +1523,7 @@
     },
     28274: (e, t, r) => {
       "use strict";
-      r.d(t, { wK: () => P, pT: () => U });
+      r.d(t, { wK: () => P, pT: () => V });
       var i = r(70655),
         n = r(67294),
         a = r(58114),
@@ -2145,7 +2145,7 @@
             : p
             ? n.createElement(x, { reset: m })
             : f
-            ? n.createElement(L, { size: "small" })
+            ? n.createElement(N, { size: "small" })
             : null,
           y = f || p || _;
         return (
@@ -2167,7 +2167,7 @@
                   borderWidth: 0,
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
-                  quality: N(g),
+                  quality: L(g),
                   className: (0, s.Z)(k().LoginQR, y && k().Blur),
                 },
                 g
@@ -2182,10 +2182,10 @@
           )
         );
       }
-      function N(e) {
+      function L(e) {
         return e.length <= 90 ? S.Q : void 0;
       }
-      function L(e) {
+      function N(e) {
         const { size: t } = e;
         return n.createElement("div", {
           className: (0, s.Z)(
@@ -2254,8 +2254,8 @@
         I = r(13596),
         j = r(95598);
       const X = (0, n.createContext)(!1),
-        V = () => (0, n.useContext)(X);
-      function U() {
+        U = () => (0, n.useContext)(X);
+      function V() {
         return n.createElement(
           "div",
           { className: E().Login },
@@ -2356,8 +2356,8 @@
           ),
           [z, A] = (0, n.useState)(""),
           [k, O] = (0, n.useState)(!0),
-          N = V(),
-          L = !(0 === g || 1 === g || 2 === g),
+          L = U(),
+          N = !(0 === g || 1 === g || 2 === g),
           x = () => y(T, z, k),
           W = () => {
             console.log(`Logging in offline with username ${T}`),
@@ -2371,7 +2371,7 @@
               ? void 0
               : t.login_token_id) && v(e.refreshInfo.login_token_id);
           }, [e.refreshInfo]),
-          !L)
+          !N)
         ) {
           const t = n.createElement(
             "div",
@@ -2397,7 +2397,7 @@
                 refreshInfo: l,
               })
           );
-          if (N) {
+          if (L) {
             let e = u.De.IN_CLIENT;
             return n.createElement(
               Ee,
@@ -2601,7 +2601,7 @@
             onRememberMeChange: d,
           } = e,
           [h, g] = (0, n.useState)(!1),
-          f = V(),
+          f = U(),
           p = 1 === r || 13 === r,
           _ = 2 === r && !h,
           b = _
@@ -2748,6 +2748,17 @@
                 "div",
                 { className: E().QRHideLink, onClick: () => c(!1) },
                 (0, D.Xx)("#Button_Hide")
+              ),
+              n.createElement(
+                "div",
+                { className: E().UseMobileAppForQR },
+                (0, D.yu)(
+                  "#Login_UseMobileAppForQR_Inline",
+                  n.createElement(Se, {
+                    href: `${u.De.STORE_BASE_URL}mobile`,
+                    align: "center",
+                  })
+                )
               )
             )
         );
@@ -3107,7 +3118,7 @@
             "mobile" === r
               ? (0, D.Xx)("#Login_MobileProtectingAccount")
               : (0, D.Xx)("#Login_EmailProtectingAccount"),
-          a = V();
+          a = U();
         return n.createElement(
           "div",
           { className: E().ProtectingAccount },
@@ -3213,7 +3224,7 @@
       }
       function we(e) {
         const { type: t, accountName: r, onUseCodeOverride: i } = e,
-          a = V(),
+          a = U(),
           s = n.createElement(ge, { type: "mobile" }),
           o = a
             ? n.createElement(
@@ -3424,7 +3435,7 @@
       }
       function ze(e) {
         const { title: t, children: r, compact: i } = e,
-          a = V();
+          a = U();
         return n.createElement(
           Ee,
           {
@@ -5020,7 +5031,7 @@
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var k, O, N;
+      var k, O, L;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, l, {
@@ -5137,7 +5148,7 @@
                 ePrivilege: 1,
               });
             });
-        })(N || (N = {}));
+        })(L || (L = {}));
     },
     99925: (e, t, r) => {
       "use strict";

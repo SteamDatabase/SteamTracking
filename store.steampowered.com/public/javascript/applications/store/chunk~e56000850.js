@@ -1093,8 +1093,8 @@
       var j = r(41311),
         I = r(13596),
         X = r(95598);
-      const H = (0, n.createContext)(!1),
-        U = () => (0, n.useContext)(H);
+      const U = (0, n.createContext)(!1),
+        H = () => (0, n.useContext)(U);
       function D() {
         return n.createElement(
           "div",
@@ -1124,7 +1124,7 @@
         const { embedded: t } = e,
           r = (0, i._T)(e, ["embedded"]);
         return n.createElement(
-          H.Provider,
+          U.Provider,
           { value: t },
           n.createElement(
             "div",
@@ -1196,7 +1196,7 @@
           ),
           [T, A] = (0, n.useState)(""),
           [k, W] = (0, n.useState)(!0),
-          L = U(),
+          L = H(),
           O = !(0 === _ || 1 === _ || 2 === _),
           N = () => y(M, T, k),
           x = () => {
@@ -1441,7 +1441,7 @@
             onRememberMeChange: d,
           } = e,
           [g, _] = (0, n.useState)(!1),
-          h = U(),
+          h = H(),
           B = 1 === r || 13 === r,
           b = 2 === r && !g,
           C = b
@@ -1588,6 +1588,17 @@
                 "div",
                 { className: E().QRHideLink, onClick: () => c(!1) },
                 (0, j.Xx)("#Button_Hide")
+              ),
+              n.createElement(
+                "div",
+                { className: E().UseMobileAppForQR },
+                (0, j.yu)(
+                  "#Login_UseMobileAppForQR_Inline",
+                  n.createElement(Se, {
+                    href: `${u.De.STORE_BASE_URL}mobile`,
+                    align: "center",
+                  })
+                )
               )
             )
         );
@@ -1947,7 +1958,7 @@
             "mobile" === r
               ? (0, j.Xx)("#Login_MobileProtectingAccount")
               : (0, j.Xx)("#Login_EmailProtectingAccount"),
-          a = U();
+          a = H();
         return n.createElement(
           "div",
           { className: E().ProtectingAccount },
@@ -2053,7 +2064,7 @@
       }
       function pe(e) {
         const { type: t, accountName: r, onUseCodeOverride: i } = e,
-          a = U(),
+          a = H(),
           s = n.createElement(_e, { type: "mobile" }),
           o = a
             ? n.createElement(
@@ -2264,7 +2275,7 @@
       }
       function Te(e) {
         const { title: t, children: r, compact: i } = e,
-          a = U();
+          a = H();
         return n.createElement(
           Ee,
           {

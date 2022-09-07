@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    290: (e, t, n) => {
+    56: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => Qe });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(32);
+        a = n(171);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -89,8 +89,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var _ = n(430),
-        v = n(918);
+      var _ = n(130),
+        v = n(801);
       class f extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -456,7 +456,7 @@
           );
         }
       }
-      var I = n(483);
+      var I = n(65);
       function w(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -1146,11 +1146,11 @@
           return this.m_node;
         }
       }
-      function U(e, t, n) {
+      function U(e, t, n, i = 0.001) {
         return "x" == e
-          ? t.x + t.width > n.x && t.x < n.x + n.width
+          ? t.x + t.width > n.x + i && t.x + i < n.x + n.width
           : "y" == e
-          ? t.y + t.height > n.y && t.y < n.y + n.height
+          ? t.y + t.height > n.y + i && t.y + i < n.y + n.height
           : (p(!1, `Invalid axis ${e}`), !1);
       }
       function H(e, t, n) {
@@ -2739,7 +2739,7 @@
         }
       }
       (0, o.gn)([_.a], we.prototype, "OnMessage", null);
-      n(890);
+      n(272);
       class Te extends a.oH {
         constructor(e) {
           super(),

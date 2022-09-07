@@ -633,6 +633,7 @@ html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuContents_3IFsI {
 }
 html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuItem_1LSq5 {
   min-width: fit-content;
+  white-space: nowrap;
 }
 .contextmenu_contextMenuContents_3IFsI {
   display: flex;
@@ -8031,27 +8032,6 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   font-size: 14px;
   color: #c44848;
 }
-.rdt .rdtPicker {
-  background: #576070;
-  border: 1px solid #646f82;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
-}
-.rdt .rdtPicker th {
-  border-bottom: transparent;
-}
-.rdt .rdtPicker td {
-  color: #fff;
-}
-.rdt .rdtPicker td.rdtDisabled,
-.rdt .rdtPicker td.rdtDisabled:hover {
-  color: #333;
-}
-.rdt .rdtPicker td.rdtDay:hover {
-  color: #000;
-}
-.rdt .rdtPicker td .rdtCounter .rdtBtn:hover {
-  color: #000;
-}
 .partnereventshared_GamepadOnlyScrollPanel_3bZmO {
   height: 100vh;
   overflow-y: scroll;
@@ -9090,6 +9070,12 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 .newlogindialog_Login_3VsPM .newlogindialog_EmbeddedRoot_2aujf:not(.IN_CLIENT) {
   width: 100%;
   min-width: 700px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_EmbeddedRoot_2aujf:not(.IN_CLIENT) {
+    min-width: 0px;
+  }
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_EmbeddedRoot_2aujf
@@ -50321,8 +50307,6 @@ a.general_btn:hover {
 .contextMenuGameItem {
   max-width: 190px;
   line-height: 20px;
-  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
   white-space: nowrap;
 }
 .contextMenuGameItem.GamepadMode,
@@ -50362,6 +50346,11 @@ a.general_btn:hover {
   border: solid 5px #23262e;
   border-top: none;
   border-bottom: none;
+}
+.contextMenuGameTitleBlurCropContainer {
+  width: 100%;
+  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
 }
 .contextMenuUnselectable:hover {
   background: rgba(0, 0, 0, 0);

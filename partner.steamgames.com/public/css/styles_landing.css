@@ -1548,7 +1548,8 @@ span.icon_finances.user_pub_rights, span.icon_email.user_pub_rights { display: i
 }
 
 .icon_edit.icon_inline,
-.icon_download.icon_inline
+.icon_download.icon_inline,
+.icon_documentation.icon_inline
 {
 	display: inline;
 	font-size: 16px;

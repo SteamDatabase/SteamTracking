@@ -4008,6 +4008,11 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   margin-bottom: 0;
   margin-top: 0;
 }
+.facetedbrowseeditor_FacetValueFilterDescCtn_WSCVd {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 8px;
+  margin: 8px 0;
+}
 :root {
   --main-text-color: #dbe2e6;
   --main-light-blue-background: #93b3c8;
@@ -7385,7 +7390,7 @@ td.rdtYear:hover {
   padding: 20px;
   background: #0000004f;
   backdrop-filter: blur(20px);
-  height: 300px;
+  height: 308px;
   margin-top: 30px;
 }
 .ContentHubMainCarouselCapsule
@@ -7393,7 +7398,7 @@ td.rdtYear:hover {
   .SaleTagBlockCtn
   .TagBox
   .WidgetTag {
-  font-size: 14px;
+  font-size: 12px;
   color: #c6d4df;
   background-color: rgba(124, 113, 113, 0.3);
 }
@@ -7401,7 +7406,7 @@ td.rdtYear:hover {
   .animated_featured_capsule_Info_2mUNQ
   .SaleTagBlockCtn
   .TagBox {
-  max-height: 55px;
+  max-height: 50px;
   gap: 2px;
 }
 .ContentHubMainCarouselCapsule
@@ -7440,6 +7445,15 @@ td.rdtYear:hover {
   border-top: none;
   font-size: 14px;
   margin-top: 6px;
+  max-height: 125px;
+  flex-wrap: wrap;
+}
+.ContentHubMainCarouselCapsule
+  .animated_featured_capsule_Info_2mUNQ
+  .animated_featured_capsule_AppRelevanceCtn_21_sk
+  > div
+  > div {
+  width: 50%;
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ

@@ -7257,6 +7257,14 @@
           e !== this.m_model.do_anytime.enter_discounts &&
             ((this.m_model.do_anytime.enter_discounts = e), this.SetDirty(!0));
         }
+        GetDiscountEventID() {
+          return this.m_model.do_anytime.discount_event_id || "";
+        }
+        SetDiscountEventID(e) {
+          e !== this.m_model.do_anytime.discount_event_id &&
+            ((this.m_model.do_anytime.discount_event_id = e),
+            this.SetDirty(!0));
+        }
         GetExternalAppReviewers() {
           return this.m_model.external_app_reviewer || [];
         }
@@ -7888,6 +7896,8 @@
         ),
         (0, r.gn)([h.ak], b.prototype, "BIsEnterDiscountsEnabled", null),
         (0, r.gn)([l.aD.bound], b.prototype, "SetEnterDiscountsEnabled", null),
+        (0, r.gn)([h.ak], b.prototype, "GetDiscountEventID", null),
+        (0, r.gn)([l.aD.bound], b.prototype, "SetDiscountEventID", null),
         (0, r.gn)([h.ak], b.prototype, "GetExternalAppReviewers", null),
         (0, r.gn)([l.aD.bound], b.prototype, "SetExternalAppReviewers", null),
         (0, r.gn)([l.aD.bound], b.prototype, "RemoveExternalAppReviewAt", null),
@@ -9479,31 +9489,33 @@
     47842: (e, t, i) => {
       "use strict";
       i.d(t, {
-        $w: () => w,
-        AN: () => N,
-        Dt: () => M,
+        $w: () => C,
+        AN: () => q,
+        Dt: () => O,
         FR: () => b,
         HV: () => y,
-        OB: () => T,
-        OG: () => U,
+        HX: () => j,
+        OB: () => F,
+        OG: () => z,
         Ol: () => E,
         PP: () => B,
-        Rs: () => A,
+        Rs: () => T,
         Tj: () => S,
-        We: () => z,
+        We: () => N,
         X1: () => P,
         _w: () => v,
-        bS: () => L,
+        bS: () => A,
         dU: () => k,
-        df: () => F,
-        j_: () => W,
-        np: () => q,
-        on: () => C,
+        df: () => U,
+        j_: () => x,
+        ju: () => w,
+        np: () => X,
+        on: () => M,
         ps: () => G,
         rX: () => R,
-        sN: () => x,
-        uT: () => j,
-        yh: () => O,
+        sN: () => V,
+        uT: () => W,
+        yh: () => L,
       });
       var r = i(70655),
         n = i(9669),
@@ -10253,6 +10265,9 @@
         return h.Get().m_mapPriceProposals.get(e);
       }
       function w(e) {
+        return h.Get().m_mapPriceProposals.get(e);
+      }
+      function C(e) {
         const t = G(e),
           i = [];
         for (const r of h.Get().m_rgKnownPriceKeys) {
@@ -10268,28 +10283,28 @@
         }
         return i;
       }
-      function C() {
+      function M() {
         return h.Get().m_rgKnownPriceKeys;
       }
-      function M(e) {
+      function O(e) {
         return h.Get().m_mapPriceKeyDescriptions.get(e);
       }
-      function O(e) {
+      function L(e) {
         return a.useCallback(() => {
           h.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function L(e) {
+      function A(e) {
         return a.useCallback(() => {
           h.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
-      function A(e) {
+      function T(e) {
         return a.useCallback(() => {
           h.Get().CancelProposal(e);
         }, [e]);
       }
-      function T() {
+      function F() {
         const [e, t] = a.useState(h.Get().m_strDisplayPriceKey),
           i = h.Get().m_rgKnownPriceKeys,
           r = a.useCallback((e) => {
@@ -10299,21 +10314,24 @@
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
       }
-      function F(e) {
+      function U(e) {
         const t = (0, u.NW)();
         return (
           (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, t),
           h.Get().BHasLocalPriceOverrides(e)
         );
       }
-      function U() {
+      function j(e) {
+        return h.Get().BHasLocalPriceOverrides(e);
+      }
+      function z() {
         const [e, t] = a.useState(() => h.Get().GetAllLocalPriceOverrides());
         return (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function j(e) {
+      function W(e) {
         return (0, p.SZ)(() => h.Get().GetLocalOverrideCountForPriceKey(e));
       }
-      function z() {
+      function N() {
         return a.useCallback(() => {
           var e;
           return (
@@ -10323,10 +10341,10 @@
           );
         }, []);
       }
-      function W() {
+      function x() {
         return a.useCallback(() => h.Get().DiscardAllLocalPriceOverrides(), []);
       }
-      function N() {
+      function q() {
         const e = [],
           t = a.useRef(new Map());
         h.Get().m_mapPriceGuidelines.forEach((i, r) => {
@@ -10342,13 +10360,13 @@
         }, []);
         return { rgUSDPricesInCents: e, fnApplyGuidelines: i };
       }
-      function x() {
+      function V() {
         return a.useCallback(
           (e, t, i) => h.Get().SubmitProposalToServer(e, t, i),
           []
         );
       }
-      function q() {
+      function X() {
         return a.useCallback(
           (e, t) => h.Get().PublishApprovedProposal(e, t, 6e4),
           []

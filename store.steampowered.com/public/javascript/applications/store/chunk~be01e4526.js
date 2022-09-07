@@ -3257,11 +3257,11 @@
           return this.m_node;
         }
       }
-      function u(e, t, n) {
+      function u(e, t, n, i = 0.001) {
         return "x" == e
-          ? t.x + t.width > n.x && t.x < n.x + n.width
+          ? t.x + t.width > n.x + i && t.x + i < n.x + n.width
           : "y" == e
-          ? t.y + t.height > n.y && t.y < n.y + n.height
+          ? t.y + t.height > n.y + i && t.y + i < n.y + n.height
           : ((0, o.X)(!1, `Invalid axis ${e}`), !1);
       }
       function d(e, t, n) {
@@ -6326,7 +6326,7 @@
             e.dimensions = {
               left: this.m_menuProps.clientX,
               top: this.m_menuProps.clientY,
-              width: 350,
+              width: 2,
               height: 1,
             };
           else {
@@ -6334,7 +6334,7 @@
               this.m_menuProps.element.ownerDocument.defaultView,
               this.m_menuProps.element.getBoundingClientRect()
             );
-            e.dimensions = { left: t.right, top: t.top, width: 350, height: 1 };
+            e.dimensions = { left: t.right, top: t.top, width: 2, height: 1 };
           }
           return (
             (e.availscreenwidth =

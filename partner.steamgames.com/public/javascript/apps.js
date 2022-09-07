@@ -3507,18 +3507,31 @@ function CreatePHPDateFromObject( d )
 
 function VerifyReleasePrepurchase( appid, data )
 {
-	VerifyReleaseCommon( appid, data, ReleaseGamePrepurchase );
+	VerifyReleaseCommon(
+		appid,
+		data,
+		ReleaseGamePrepurchase,
+		"Confirm Pre-Purchase",
+		"If you are ready to start pre-purchase, please type the phrase \"%1$s\" into the box below.",
+		"Start my prepurchase",
+		"Start Pre-Purchase"	);
 }
 
 function VerifyReleaseGame( appid, data )
 {
-	VerifyReleaseCommon( appid, data, ReleaseGame );
+	VerifyReleaseCommon(
+		appid,
+		data,
+		ReleaseGame,
+		"Confirm App Release",
+		"If you are ready to release your app and make it available to customers immediately, please type the phrase \"%1$s\" into the box below.",
+		"Release my app",
+		"Release Now"	);
 }
 
-function VerifyReleaseCommon( appid, data, fnRelease )
+function VerifyReleaseCommon( appid, data, fnRelease, strConfirmTitle, strConfirmText, strAcceptString, strButtonText )
 {
-	var strAcceptString = "Release my app";
-	var dialog = ShowPromptDialog( "Confirm App Release", "If you are ready to release your app and make it available to customers immediately, please type the phrase \"%1$s\" into the box below.".replace('%1$s', strAcceptString), "Release Now", null );
+	var dialog = ShowPromptDialog( strConfirmTitle, strConfirmText.replace('%1$s', strAcceptString), strButtonText, null );
 
 	var input = $J( dialog.m_$Content ).find( "input" );
 	var releasebtn = $J( dialog.m_$Content ).find( "button" );

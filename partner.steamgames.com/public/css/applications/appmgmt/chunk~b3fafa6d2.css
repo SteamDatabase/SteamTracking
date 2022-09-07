@@ -639,27 +639,6 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   font-size: 14px;
   color: #c44848;
 }
-.rdt .rdtPicker {
-  background: #576070;
-  border: 1px solid #646f82;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
-}
-.rdt .rdtPicker th {
-  border-bottom: transparent;
-}
-.rdt .rdtPicker td {
-  color: #fff;
-}
-.rdt .rdtPicker td.rdtDisabled,
-.rdt .rdtPicker td.rdtDisabled:hover {
-  color: #333;
-}
-.rdt .rdtPicker td.rdtDay:hover {
-  color: #000;
-}
-.rdt .rdtPicker td .rdtCounter .rdtBtn:hover {
-  color: #000;
-}
 .partnereventshared_GamepadOnlyScrollPanel_cEBYf {
   height: 100vh;
   overflow-y: scroll;

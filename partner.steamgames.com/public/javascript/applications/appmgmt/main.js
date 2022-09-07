@@ -4040,11 +4040,11 @@
           return this.m_node;
         }
       }
-      function m(e, t, n) {
+      function m(e, t, n, r = 0.001) {
         return "x" == e
-          ? t.x + t.width > n.x && t.x < n.x + n.width
+          ? t.x + t.width > n.x + r && t.x + r < n.x + n.width
           : "y" == e
-          ? t.y + t.height > n.y && t.y < n.y + n.height
+          ? t.y + t.height > n.y + r && t.y + r < n.y + n.height
           : ((0, i.X)(!1, `Invalid axis ${e}`), !1);
       }
       function h(e, t, n) {
@@ -9196,7 +9196,7 @@
             e.dimensions = {
               left: this.m_menuProps.clientX,
               top: this.m_menuProps.clientY,
-              width: 350,
+              width: 2,
               height: 1,
             };
           else {
@@ -9204,7 +9204,7 @@
               this.m_menuProps.element.ownerDocument.defaultView,
               this.m_menuProps.element.getBoundingClientRect()
             );
-            e.dimensions = { left: t.right, top: t.top, width: 350, height: 1 };
+            e.dimensions = { left: t.right, top: t.top, width: 2, height: 1 };
           }
           return (
             (e.availscreenwidth =
@@ -17922,8 +17922,14 @@
         SetPreferredLocales(e) {
           this.m_rgLocalesToUse = e;
         }
+        BLooksLikeToken(e) {
+          return e && e.length > 0 && "#" == e.charAt(0);
+        }
+        LocalizeIfToken(e, t) {
+          return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
+        }
         LocalizeString(e, t) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return;
+          if (!this.BLooksLikeToken(e)) return;
           let n = this.m_mapTokens.get(e.substring(1));
           if (void 0 !== n) return n;
           !t &&
@@ -17960,7 +17966,7 @@
         return o.push(n.substr(a)), r.createElement(r.Fragment, null, ...o);
       }
       function h(e, ...t) {
-        let n = E.LocalizeString(e);
+        let n = E.LocalizeIfToken(e);
         return void 0 === n ? e : p(n, ...t);
       }
       function p(e, ...t) {
@@ -19463,7 +19469,7 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 79314))
+          ]).then(n.bind(n, 40034))
         ),
         k = s.lazy(() =>
           Promise.all([
@@ -19499,7 +19505,7 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 70825))
+          ]).then(n.bind(n, 2126))
         ),
         I = s.lazy(() =>
           Promise.all([n.e(7940), n.e(3069), n.e(9060), n.e(8974)]).then(

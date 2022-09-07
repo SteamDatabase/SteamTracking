@@ -10,7 +10,7 @@ LocalizationManifestReady("profile", "manifest", {
     "No one can leave comments except for you.",
   ProfilePrivacy_BasicDetails: "My basic details",
   ProfilePrivacy_BasicDetails_Desc:
-    "Your profile name and avatar are visible to anyone who visits your profile and are used to represent you in multiplayer games.",
+    "Your profile name and avatar are visible to anyone who visits your profile and are used to represent you in multiplayer games. The profile background image and miniprofile elements you choose may also be visible, even if your profile is private.",
   ProfilePrivacy_Profile: "My profile",
   ProfilePrivacy_Profile_Desc:
     "Your community profile includes your profile summary, friends list, badges, Steam Level, showcases, comments, and group membership.",

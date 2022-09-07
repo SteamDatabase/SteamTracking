@@ -11,8 +11,9 @@
           "releasedaterequest_ReleaseDateRequestBody_32Cdq",
         Column: "releasedaterequest_Column__gUUe",
         ColumnLabel: "releasedaterequest_ColumnLabel_xebmA",
+        ReleaseColumnFooter: "releasedaterequest_ReleaseColumnFooter_3egfk",
         ColumnContent: "releasedaterequest_ColumnContent_eZhsk",
-        YellowNote: "releasedaterequest_YellowNote_Kt0aR",
+        BlueNote: "releasedaterequest_BlueNote_1iIVg",
         PublishNowWarning: "releasedaterequest_PublishNowWarning_2-dra",
         ErrorBox: "releasedaterequest_ErrorBox_27JIJ",
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
@@ -311,7 +312,7 @@
     },
     5525: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => _, JW: () => m, kl: () => D, zD: () => b });
+      n.d(t, { F_: () => _, JW: () => c, kl: () => D, zD: () => b });
       var a = n(70655),
         s = n(22188),
         r = n(30381),
@@ -320,7 +321,7 @@
         i = n(92398),
         u = n(74163),
         d = n(90666);
-      class c {
+      class m {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -370,8 +371,8 @@
           }
         }
       }
-      (0, a.gn)([s.LO], c.prototype, "nOverrideDateNow", void 0);
-      const m = new c();
+      (0, a.gn)([s.LO], m.prototype, "nOverrideDateNow", void 0);
+      const c = new m();
       function _(e = 1) {
         const [t, n] = o.useState(() => g()),
           a = (0, u.T)("useTimeNowWithOverride"),
@@ -390,16 +391,16 @@
           t
         );
       }
-      window.g_EventCalendarDevFeatures = m;
+      window.g_EventCalendarDevFeatures = c;
       const p = new Date(),
         j = Math.floor(p.getTime() / 1e3);
       function g() {
         const e = Math.floor(Date.now() / 1e3);
-        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - j) : e;
+        return c.nOverrideDateNow ? c.nOverrideDateNow + (e - j) : e;
       }
       function D() {
         var e;
-        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : j;
+        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : j;
       }
       function b() {
         return o.useMemo(() => D(), []);
@@ -464,7 +465,7 @@
         i = n(50647),
         u = n(22453),
         d = n(41311);
-      function c(e) {
+      function m(e) {
         const {
             appid: t,
             release_info: { steam_release_date: n, coming_soon_display: a },
@@ -489,11 +490,11 @@
           l.createElement(
             "div",
             { style: { maxWidth: "400px", marginTop: "4px" } },
-            l.createElement(m, { value: s, onChange: r, rtSteamReleaseDate: o })
+            l.createElement(c, { value: s, onChange: r, rtSteamReleaseDate: o })
           )
         );
       }
-      function m(e) {
+      function c(e) {
         const { rtSteamReleaseDate: t, value: n, onChange: a } = e,
           s = !!t,
           r = l.useMemo(
@@ -528,9 +529,9 @@
         g = n(42795),
         D = n(27100),
         b = n(90666),
-        E = n(35092),
-        h = n(9669),
-        v = n.n(h);
+        h = n(35092),
+        E = n(9669),
+        v = n.n(E);
       n(26149);
       function f(e) {
         const {
@@ -541,18 +542,18 @@
             bIsStorePageReviewed: r,
             bIsWaitingForBuildReview: o,
             bIsFirstSelfPublishingApp: i,
-            rtReleaseDate: c,
+            rtReleaseDate: m,
             rtReleaseTime: j,
             rtEarliestDate: g,
             strComingSoonDisplay: D,
           } = e,
-          [h, f] = l.useState(c),
-          [k, y] = l.useState(D || "date_full"),
-          [N, A] = l.useState("none"),
-          [T, L] = l.useState(),
-          O = l.useCallback(() => {
-            A("submitting"),
-              L(null),
+          [E, f] = l.useState(m),
+          [y, N] = l.useState(D || "date_full"),
+          [A, L] = l.useState("none"),
+          [T, O] = l.useState(),
+          I = l.useCallback(() => {
+            L("submitting"),
+              O(null),
               (function (e) {
                 var t, n;
                 return (0, _.mG)(this, void 0, void 0, function* () {
@@ -579,84 +580,117 @@
                     );
                   window.location.reload();
                 });
-              })({ unAppID: t, rtReleaseDate: h, strComingSoonDisplay: k })
+              })({ unAppID: t, rtReleaseDate: E, strComingSoonDisplay: y })
                 .then(() => {
-                  A("refreshing");
+                  L("refreshing");
                 })
                 .catch((e) => {
-                  A("none"), L(e);
+                  L("none"), O(e);
                 });
-          }, [t, h, k]),
-          I = n && "none" == N ? O : null,
-          z = l.useRef(),
-          X = l.useCallback(() => z.current.parentElement.remove(), []),
-          W = {
+          }, [t, E, y]),
+          z = n && "none" == A ? I : null,
+          X = l.useRef(),
+          W = l.useCallback(() => X.current.parentElement.remove(), []),
+          q = {
             bCanUpdateComingSoonDate: n,
             bIsComingSoon: s,
             bIsStorePageReviewed: r,
             bIsWaitingForBuildReview: o,
             bIsFirstSelfPublishingApp: i,
             rtEarliestDate: g,
-            rtReleaseTime: h,
+            rtReleaseTime: E,
           };
-        return l.createElement(
-          l.Fragment,
-          null,
+        let B;
+        return (
+          (B =
+            s && r
+              ? o
+                ? l.createElement(
+                    k,
+                    null,
+                    (0, d.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
+                  )
+                : l.createElement(
+                    k,
+                    null,
+                    (0, d.Xx)("#App_Landing_Release_EarliestDate", (0, d.vX)(g))
+                  )
+              : i
+              ? l.createElement(
+                  k,
+                  null,
+                  (0, d.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
+                )
+              : l.createElement(
+                  k,
+                  null,
+                  (0, d.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
+                )),
           l.createElement(
-            S,
-            { bCanUpdateComingSoonDate: n, fnSubmit: I, fnCloseModal: X },
-            T && l.createElement("div", { className: p.ErrorBox }, T),
+            l.Fragment,
+            null,
             l.createElement(
-              u.Uq,
-              null,
+              S,
+              { bCanUpdateComingSoonDate: n, fnSubmit: z, fnCloseModal: W },
+              T && l.createElement("div", { className: p.ErrorBox }, T),
+              B,
               l.createElement(
-                C,
-                { label: (0, d.Xx)("#App_Landing_IntendedReleaseDateTitle") },
-                l.createElement(w, {
-                  rtSelectedDate: h,
-                  setSelectedDate: f,
-                  bCanUpdateComingSoonDate: n,
-                  rtEarliestDate: g,
-                }),
-                l.createElement(R, Object.assign({}, W))
+                u.Uq,
+                null,
+                l.createElement(
+                  C,
+                  { label: (0, d.Xx)("#App_Landing_IntendedReleaseDateTitle") },
+                  l.createElement(R, {
+                    rtSelectedDate: E,
+                    setSelectedDate: f,
+                    bCanUpdateComingSoonDate: n,
+                    rtEarliestDate: g,
+                  }),
+                  l.createElement(w, Object.assign({}, q))
+                ),
+                l.createElement(
+                  C,
+                  { label: (0, d.Xx)("#App_Landing_PublicDateDisplayTitle") },
+                  l.createElement(c, {
+                    rtSteamReleaseDate: E,
+                    value: y,
+                    onChange: N,
+                  }),
+                  l.createElement(
+                    "p",
+                    null,
+                    (0, d.Xx)("#App_Landing_ReleaseDateStorePage")
+                  ),
+                  l.createElement(
+                    "p",
+                    null,
+                    (0, d.Xx)("#App_Landing_ReleaseDateStoreListing")
+                  )
+                )
               ),
               l.createElement(
-                C,
-                { label: (0, d.Xx)("#App_Landing_PublicDateDisplayTitle") },
-                l.createElement(m, {
-                  rtSteamReleaseDate: h,
-                  value: k,
-                  onChange: y,
-                }),
-                l.createElement(
-                  "p",
-                  null,
-                  (0, d.Xx)("#App_Landing_ReleaseDateStorePage")
+                "div",
+                { className: p.ReleaseColumnFooter },
+                (0, d.yu)(
+                  "#App_Landing_NeedHelpWithReleaseDates",
+                  l.createElement("a", {
+                    target: "_blank",
+                    href: `${b.De.PARTNER_BASE_URL}doc/store/coming_soon`,
+                  }),
+                  l.createElement("a", {
+                    target: "_blank",
+                    href: `${(0, h.iv)()}wizard/HelpWithPublishing`,
+                  })
                 )
-              )
+              ),
+              l.createElement(x, {
+                rtEarliestDate: g,
+                strReleaseState: a,
+                bCanUpdateComingSoonDate: n,
+              })
             ),
-            l.createElement(
-              "div",
-              { className: p.ReleaseColumnFooter },
-              (0, d.yu)(
-                "#App_Landing_NeedHelpWithReleaseDates",
-                l.createElement("a", {
-                  target: "_blank",
-                  href: `${b.De.PARTNER_BASE_URL}doc/store/coming_soon`,
-                }),
-                l.createElement("a", {
-                  target: "_blank",
-                  href: `${(0, E.iv)()}wizard/HelpWithPublishing`,
-                })
-              )
-            ),
-            l.createElement(x, {
-              rtEarliestDate: g,
-              strReleaseState: a,
-              bCanUpdateComingSoonDate: n,
-            })
-          ),
-          l.createElement("div", { ref: z })
+            l.createElement("div", { ref: X })
+          )
         );
       }
       function S(e) {
@@ -693,11 +727,11 @@
         return l.createElement(
           u.sg,
           { className: p.Column },
-          l.createElement("div", { className: p.ColumnLabel }, t),
+          l.createElement("div", { className: p.ColumnLabel }, t, ":"),
           l.createElement("div", { className: p.ColumnContent }, n)
         );
       }
-      function w(e) {
+      function R(e) {
         const {
           bCanUpdateComingSoonDate: t,
           rtSelectedDate: n,
@@ -720,7 +754,7 @@
           })
         );
       }
-      function R(e) {
+      function w(e) {
         const {
           bCanUpdateComingSoonDate: t,
           bIsComingSoon: n,
@@ -730,65 +764,42 @@
           rtEarliestDate: o,
           rtReleaseTime: i,
         } = e;
-        if (!t)
-          return l.createElement(
-            "p",
-            null,
-            (0, d.Xx)(
-              "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-              (0, d.vX)(i)
+        return t
+          ? l.createElement(
+              l.Fragment,
+              null,
+              l.createElement(
+                "p",
+                null,
+                (0, d.Xx)("#App_Landing_Set_Release_Date_SetIntended")
+              ),
+              l.createElement(
+                "p",
+                null,
+                (0, d.Xx)("#App_Landing_Set_Release_Date_Weekends")
+              ),
+              l.createElement(
+                "p",
+                null,
+                (0, d.Xx)("#App_Landing_Set_Release_Date_PacificTime")
+              )
             )
-          );
-        let u;
-        return (
-          (u =
-            n && a
-              ? s
-                ? l.createElement(
-                    k,
-                    null,
-                    (0, d.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
-                  )
-                : l.createElement(
-                    k,
-                    null,
-                    (0, d.Xx)("#App_Landing_Release_EarliestDate", (0, d.vX)(o))
-                  )
-              : r
-              ? l.createElement(
-                  k,
-                  null,
-                  (0, d.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
-                )
-              : l.createElement(
-                  k,
-                  null,
-                  (0, d.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
-                )),
-          l.createElement(
-            l.Fragment,
-            null,
-            u,
-            l.createElement(
+          : l.createElement(
               "p",
               null,
-              (0, d.Xx)("#App_Landing_Set_Release_Date_Desc1")
-            ),
-            l.createElement(
-              "p",
-              null,
-              (0, d.Xx)("#App_Landing_Set_Release_Date_Desc2")
-            ),
-            l.createElement(
-              "p",
-              null,
-              (0, d.Xx)("#App_Landing_Set_Release_Date_Desc3")
-            )
-          )
-        );
+              (0, d.yu)(
+                (0, d.Xx)(
+                  "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
+                  (0, d.vX)(i)
+                ),
+                l.createElement("a", {
+                  href: `${(0, h.iv)()}wizard/HelpWithPublishing?issueid=905`,
+                })
+              )
+            );
       }
       function k(e) {
-        return l.createElement("span", { className: p.YellowNote }, e.children);
+        return l.createElement("span", { className: p.BlueNote }, e.children);
       }
       function x(e) {
         const {
@@ -802,11 +813,7 @@
               "div",
               { className: p.PublishNowWarning },
               a
-                ? l.createElement(
-                    k,
-                    null,
-                    (0, d.Xx)("#App_Landing_Set_Release_Date_ComingSoonWarning")
-                  )
+                ? (0, d.Xx)("#App_Landing_Set_Release_Date_ComingSoonWarning")
                 : (0, d.Xx)(
                     "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                     (0, d.vX)(t)
@@ -823,7 +830,7 @@
             l.createElement(o.d, {
               config: {
                 "storeadmin-coming-soon-entry": (e) =>
-                  l.createElement(c, Object.assign({}, e)),
+                  l.createElement(m, Object.assign({}, e)),
               },
             })
           ),

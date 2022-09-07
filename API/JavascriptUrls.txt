@@ -548,9 +548,11 @@ ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxresendinvitationemail
+${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}doc/${}
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
+${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
@@ -595,6 +597,7 @@ ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
+${PARTNER_BASE_URL}packages/discounts/${packageID}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
@@ -854,6 +857,7 @@ ${STORE_BASE_URL}sale/${vanity}
 ${STORE_BASE_URL}sale/${}
 ${STORE_BASE_URL}sale/clorthax_quest
 ${STORE_BASE_URL}sale/summersaletradingcards
+${STORE_BASE_URL}saleaction/
 ${STORE_BASE_URL}saleaction/ajaxclosealldoor
 ${STORE_BASE_URL}saleaction/ajaxforceupdatefeaturedapptags
 ${STORE_BASE_URL}saleaction/ajaxgetallitemsforsale

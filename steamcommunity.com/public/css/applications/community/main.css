@@ -633,6 +633,7 @@ html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuContents_2y2tU {
 }
 html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuItem_pFo3k {
   min-width: fit-content;
+  white-space: nowrap;
 }
 .contextmenu_contextMenuContents_2y2tU {
   display: flex;

@@ -11923,8 +11923,14 @@
         SetPreferredLocales(e) {
           this.m_rgLocalesToUse = e;
         }
+        BLooksLikeToken(e) {
+          return e && e.length > 0 && "#" == e.charAt(0);
+        }
+        LocalizeIfToken(e, t) {
+          return this.BLooksLikeToken(e) ? this.LocalizeString(e, t) : e;
+        }
         LocalizeString(e, t) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return;
+          if (!this.BLooksLikeToken(e)) return;
           let r = this.m_mapTokens.get(e.substring(1));
           if (void 0 !== r) return r;
           !t &&
@@ -11961,7 +11967,7 @@
         return s.push(r.substr(o)), n.createElement(n.Fragment, null, ...s);
       }
       function h(e, ...t) {
-        let r = v.LocalizeString(e);
+        let r = v.LocalizeIfToken(e);
         return void 0 === r ? e : p(r, ...t);
       }
       function _(e, t, ...r) {

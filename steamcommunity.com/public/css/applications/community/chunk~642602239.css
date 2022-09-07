@@ -1793,6 +1793,10 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   background: #000;
 }
 .salepreviewwidgets_StoreSaleWidgetTitle_3jI46 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   cursor: pointer;
   line-height: 28px;
   width: fit-content;
@@ -2144,10 +2148,12 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   display: none;
 }
 .salepreviewwidgets_StoreSaleWidgetShortDesc_VvP06 {
-  flex-grow: 1;
-  max-height: 93px;
-  padding: 6px 0px 6px 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
   overflow: hidden;
+  padding: 6px 0px 0px 0px;
   text-align: left;
   font-size: 13px;
   color: #c3c3c3;
@@ -2729,7 +2735,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   display: flex;
   align-items: center;
   color: #fff;
-  height: 30px;
+  height: 38px;
   box-sizing: border-box;
   z-index: 2;
   cursor: pointer;
@@ -3491,6 +3497,7 @@ html.touch
   opacity: 70%;
   margin-top: 4px;
   margin-right: 8px;
+  margin-bottom: 12px;
   display: none;
 }
 .salepreviewwidgets_SaleItemBrowserRow_y9MSd
@@ -3805,10 +3812,17 @@ html.touch
     .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk:hover
     .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
     .salepreviewwidgets_StoreSaleWidgetShortDesc_VvP06 {
-    display: block;
+    display: -webkit-box;
+    min-block-size: 30px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
     height: 2em;
     overflow: hidden;
     flex-grow: unset;
+    line-height: 15px;
+    margin-top: 0px;
+    margin-bottom: 6px;
   }
 }
 @media screen and (min-width: 768px) {
