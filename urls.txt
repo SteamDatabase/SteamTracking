@@ -430,6 +430,7 @@ https://steamcommunity.com/public/javascript/video_functions_v2.js?__TIME__&l=en
 https://steamcommunity.com/public/javascript/webui/chathelpers.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/webui/clientcom.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/webui/friends.js?__TIME__&l=english&_cdn=cloudflare
+https://steamcommunity.com/public/javascript/webui/friendsui_english-json.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/webui/steammessages.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/workshop_commerce.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/workshop_functions.js?__TIME__&l=english&_cdn=cloudflare
