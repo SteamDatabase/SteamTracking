@@ -14630,7 +14630,7 @@
         c = a(39746),
         d = a(67833),
         u = (a(990), a(10767), a(77636)),
-        m = (a(14146), a(159)),
+        m = a(159),
         p = a(52114),
         _ = a(37694),
         g = a(67777),
@@ -15170,7 +15170,7 @@
         z = a(3389),
         V = a(44298),
         W = a(88767),
-        Z = a(17888),
+        Z = (a(14146), a(17888)),
         q = a(52117),
         Q = a(65924),
         Y = a(13596),
@@ -16176,118 +16176,124 @@
           r.createElement(
             r.Fragment,
             null,
-            r.createElement(
-              "div",
-              { className: j().WhyRelevant },
-              (0, F.Xx)("#DiscoveryQueue_WhyRelevant")
-            ),
             $ > 0 &&
               r.createElement(
-                "div",
-                { className: j().RelevantCtn },
-                V.length > 0 &&
-                  r.createElement(
-                    Te,
-                    { header: (0, F.Xx)("#DiscoveryQueue_SimilarGames") },
+                r.Fragment,
+                null,
+                r.createElement(
+                  "div",
+                  { className: j().WhyRelevant },
+                  (0, F.Xx)("#DiscoveryQueue_WhyRelevant")
+                ),
+                r.createElement(
+                  "div",
+                  { className: j().RelevantCtn },
+                  V.length > 0 &&
                     r.createElement(
-                      "div",
-                      { className: j().ReleventSimilarAppsCtn },
-                      V
-                    )
-                  ),
-                k &&
-                  (null === (p = null == R ? void 0 : R.data) || void 0 === p
-                    ? void 0
-                    : p.length) > 0 &&
-                  r.createElement(
-                    Te,
-                    {
-                      header: (0, F.Xx)("#ContentHub_Recommendation_Curators"),
-                    },
+                      Te,
+                      { header: (0, F.Xx)("#DiscoveryQueue_SimilarGames") },
+                      r.createElement(
+                        "div",
+                        { className: j().ReleventSimilarAppsCtn },
+                        V
+                      )
+                    ),
+                  k &&
+                    (null === (p = null == R ? void 0 : R.data) || void 0 === p
+                      ? void 0
+                      : p.length) > 0 &&
                     r.createElement(
-                      "div",
+                      Te,
                       {
-                        className: (0, N.Z)(
-                          j().ReleventSimilarAppsCtn,
-                          j().RecommendingCuratorsCtn
+                        header: (0, F.Xx)(
+                          "#ContentHub_Recommendation_Curators"
                         ),
                       },
-                      R.data.map((e) =>
-                        r.createElement(fe, {
-                          key: "curator_" + e.clanAccountID,
-                          curator: e,
-                        })
+                      r.createElement(
+                        "div",
+                        {
+                          className: (0, N.Z)(
+                            j().ReleventSimilarAppsCtn,
+                            j().RecommendingCuratorsCtn
+                          ),
+                        },
+                        R.data.map((e) =>
+                          r.createElement(fe, {
+                            key: "curator_" + e.clanAccountID,
+                            curator: e,
+                          })
+                        )
                       )
-                    )
-                  ),
-                A &&
-                  Boolean(U.data) &&
-                  r.createElement(Ce, { creatorInfo: U.data }),
-                Z >= 0 &&
-                  r.createElement(Te, {
-                    header: (0, F.x$)(
-                      "#DiscoveryQueue_TopSellers",
-                      (Z + 1).toLocaleString(),
-                      r.createElement("span", {
-                        className: j().RelevantTextBold,
-                      })
                     ),
+                  A &&
+                    Boolean(U.data) &&
+                    r.createElement(Ce, { creatorInfo: U.data }),
+                  Z >= 0 &&
+                    r.createElement(Te, {
+                      header: (0, F.x$)(
+                        "#DiscoveryQueue_TopSellers",
+                        (Z + 1).toLocaleString(),
+                        r.createElement("span", {
+                          className: j().RelevantTextBold,
+                        })
+                      ),
+                    }),
+                  q &&
+                    r.createElement(Te, {
+                      header: (0, F.Xx)("#DiscoveryQueue_RecommendedByIR"),
+                    }),
+                  r.createElement(ye, {
+                    bShowAvatars: I,
+                    count:
+                      null ===
+                        (g =
+                          null === (_ = x.data) || void 0 === _
+                            ? void 0
+                            : _.owns) || void 0 === g
+                        ? void 0
+                        : g.length,
+                    locToken: "#DiscoveryQueue_FriendsOwned",
+                    arrSteamIDs:
+                      null === (h = X.data) || void 0 === h
+                        ? void 0
+                        : h.rgOwnedFriends,
+                    fnGetFriendState: T,
                   }),
-                q &&
-                  r.createElement(Te, {
-                    header: (0, F.Xx)("#DiscoveryQueue_RecommendedByIR"),
+                  r.createElement(ye, {
+                    bShowAvatars: I,
+                    count:
+                      null ===
+                        (S =
+                          null === (v = x.data) || void 0 === v
+                            ? void 0
+                            : v.in_wishlist) || void 0 === S
+                        ? void 0
+                        : S.length,
+                    locToken: "#DiscoveryQueue_FriendsWishlisted",
+                    arrSteamIDs:
+                      null === (E = X.data) || void 0 === E
+                        ? void 0
+                        : E.rgWishlistFriends,
+                    fnGetFriendState: T,
                   }),
-                r.createElement(ye, {
-                  bShowAvatars: I,
-                  count:
-                    null ===
-                      (g =
-                        null === (_ = x.data) || void 0 === _
-                          ? void 0
-                          : _.owns) || void 0 === g
-                      ? void 0
-                      : g.length,
-                  locToken: "#DiscoveryQueue_FriendsOwned",
-                  arrSteamIDs:
-                    null === (h = X.data) || void 0 === h
-                      ? void 0
-                      : h.rgOwnedFriends,
-                  fnGetFriendState: T,
-                }),
-                r.createElement(ye, {
-                  bShowAvatars: I,
-                  count:
-                    null ===
-                      (S =
-                        null === (v = x.data) || void 0 === v
-                          ? void 0
-                          : v.in_wishlist) || void 0 === S
-                      ? void 0
-                      : S.length,
-                  locToken: "#DiscoveryQueue_FriendsWishlisted",
-                  arrSteamIDs:
-                    null === (E = X.data) || void 0 === E
-                      ? void 0
-                      : E.rgWishlistFriends,
-                  fnGetFriendState: T,
-                }),
-                r.createElement(ye, {
-                  bShowAvatars: I,
-                  count:
-                    null ===
-                      (f =
-                        null === (C = L.data) || void 0 === C
-                          ? void 0
-                          : C.accountids_recommended) || void 0 === f
-                      ? void 0
-                      : f.length,
-                  locToken: "#DiscoveryQueue_FriendsRecommended",
-                  arrSteamIDs:
-                    null === (b = X.data) || void 0 === b
-                      ? void 0
-                      : b.rgRecommendedFriends,
-                  fnGetFriendState: T,
-                })
+                  r.createElement(ye, {
+                    bShowAvatars: I,
+                    count:
+                      null ===
+                        (f =
+                          null === (C = L.data) || void 0 === C
+                            ? void 0
+                            : C.accountids_recommended) || void 0 === f
+                        ? void 0
+                        : f.length,
+                    locToken: "#DiscoveryQueue_FriendsRecommended",
+                    arrSteamIDs:
+                      null === (b = X.data) || void 0 === b
+                        ? void 0
+                        : b.rgRecommendedFriends,
+                    fnGetFriendState: T,
+                  })
+                )
               ),
             (!w || 0 == $) &&
               r.createElement(
