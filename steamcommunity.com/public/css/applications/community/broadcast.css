@@ -1,3 +1,46 @@
+.salebanner_Link_26cHo {
+  display: block;
+  margin-bottom: 16px;
+}
+.salebanner_Banner_2df4N {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  top: 0;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  transform: scale(1);
+  filter: saturate(0.85);
+  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
+}
+.salebanner_Banner_2df4N:hover {
+  filter: saturate(1);
+  transform: scale(1.03);
+}
+.salebanner_Big_1m7WT {
+  width: 1053px;
+}
+.salebanner_Mobile_2w3oX {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  .salebanner_Link_26cHo {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .salebanner_Big_1m7WT {
+    display: none;
+  }
+  .salebanner_Mobile_2w3oX {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
 .linkregionbox_LinkRegionDragBox_3riG1 {
   position: absolute;
   top: 32px;

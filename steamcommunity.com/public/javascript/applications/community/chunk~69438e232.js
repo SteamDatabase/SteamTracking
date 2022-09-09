@@ -2687,7 +2687,7 @@
     },
     27535: (e, t, n) => {
       "use strict";
-      n.d(t, { Xy: () => W, m$: () => X, v6: () => K });
+      n.d(t, { Xy: () => Z, m$: () => Y, v6: () => J });
       var a = n(70655),
         r = n(22188),
         o = n(29323),
@@ -2728,13 +2728,14 @@
         F = n(23937),
         z = n(90110),
         H = n(30100),
-        j = n(28578);
-      const V = i.lazy(() =>
+        j = n(28578),
+        V = n(93612);
+      const X = i.lazy(() =>
         Promise.all([n.e(3973), n.e(2449), n.e(2832), n.e(4601)]).then(
           n.bind(n, 40185)
         )
       );
-      let X = class extends i.Component {
+      let Y = class extends i.Component {
         constructor(e) {
           super(e),
             (this.m_loader = null),
@@ -2747,7 +2748,7 @@
             (this.m_nCurrentRenderCount = 0),
             !this.props.bShowOnlyInitialEvent &&
               this.props.initialEvent &&
-              ((this.m_loader = new Q(this.props.partnerEventStore)),
+              ((this.m_loader = new K(this.props.partnerEventStore)),
               this.m_loader.InitAroundEvent(
                 this.props.initialEvent,
                 this.props.additionalParams
@@ -2926,7 +2927,7 @@
             const t = e.GID == this.props.initialEvent.GID,
               n = t;
             s.push(
-              i.createElement(W, {
+              i.createElement(Z, {
                 ref: t ? this.m_refScrollAnchor : null,
                 key: e.GID,
                 event: e,
@@ -2965,7 +2966,7 @@
               ref: this.m_refPage,
             },
             this.props.showAppHeader &&
-              i.createElement(K, { appId: l, clanId: p }),
+              i.createElement(J, { appId: l, clanId: p }),
             i.createElement(
               "div",
               {
@@ -3058,7 +3059,7 @@
                       )
                     ),
                     !a &&
-                      i.createElement(Y, {
+                      i.createElement(W, {
                         loader: this.m_loader,
                         location: "top",
                       }),
@@ -3074,7 +3075,7 @@
                       s
                     ),
                     !a &&
-                      i.createElement(Y, {
+                      i.createElement(W, {
                         loader: this.m_loader,
                         location: "bottom",
                       }),
@@ -3089,23 +3090,23 @@
           );
         }
       };
-      (0, a.gn)([O.ak], X.prototype, "ScrollToNextEvent", null),
-        (0, a.gn)([O.ak], X.prototype, "ScrollToPrevEvent", null),
-        (0, a.gn)([O.ak], X.prototype, "OnScrollComplete", null),
-        (0, a.gn)([O.ak], X.prototype, "Close", null),
-        (0, a.gn)([O.ak], X.prototype, "OnBackgroundClick", null),
-        (0, a.gn)([O.ak], X.prototype, "OnKeyDown", null),
-        (0, a.gn)([O.ak], X.prototype, "OnScroll", null),
-        (0, a.gn)([O.ak], X.prototype, "OnTouchStart", null),
-        (0, a.gn)([O.ak], X.prototype, "OnTouchMove", null),
-        (0, a.gn)([O.ak], X.prototype, "OnWheel", null),
-        (X = (0, a.gn)([o.Pi], X));
-      const Y = (0, o.Pi)((e) => {
+      (0, a.gn)([O.ak], Y.prototype, "ScrollToNextEvent", null),
+        (0, a.gn)([O.ak], Y.prototype, "ScrollToPrevEvent", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnScrollComplete", null),
+        (0, a.gn)([O.ak], Y.prototype, "Close", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnBackgroundClick", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnKeyDown", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnScroll", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnTouchStart", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnTouchMove", null),
+        (0, a.gn)([O.ak], Y.prototype, "OnWheel", null),
+        (Y = (0, a.gn)([o.Pi], Y));
+      const W = (0, o.Pi)((e) => {
         let t = e.loader.GetNewerState(),
           n = e.loader.GetOlderState();
-        return t == Z.Loading && n == Z.Loading
+        return t == Q.Loading && n == Q.Loading
           ? null
-          : ("top" == e.location ? t : n) == Z.Loading
+          : ("top" == e.location ? t : n) == Q.Loading
           ? i.createElement(
               "div",
               { className: U().DirectionState },
@@ -3116,7 +3117,7 @@
             )
           : null;
       });
-      let W = class extends i.Component {
+      let Z = class extends i.Component {
         constructor(e) {
           super(e),
             (this.m_refContent = i.createRef()),
@@ -3186,7 +3187,7 @@
             O = t ? t.group_name : "";
           }
           const P = m.JW.GetTimeNowWithOverride(),
-            X = 28 !== w && P < e.GetStartTimeAndDateUnixSeconds() && !C;
+            Y = 28 !== w && P < e.GetStartTimeAndDateUnixSeconds() && !C;
           return i.createElement(
             j.rC,
             null,
@@ -3226,7 +3227,7 @@
                     {
                       className: (0, B.Z)(
                         U().EventTypeAndTimeRow,
-                        X && U().WithReminder
+                        Y && U().WithReminder
                       ),
                     },
                     i.createElement(
@@ -3243,7 +3244,7 @@
                       ),
                       i.createElement(I.jd, { event: e })
                     ),
-                    X &&
+                    Y &&
                       !C &&
                       i.createElement(
                         "div",
@@ -3302,7 +3303,7 @@
                   i.createElement(
                     i.Suspense,
                     { fallback: i.createElement("div", null) },
-                    i.createElement(V, { event: this.props.event })
+                    i.createElement(X, { event: this.props.event })
                   )
                 ),
               e.BHasTag("steam_award_nomination_request") &&
@@ -3350,8 +3351,9 @@
                   i.createElement(
                     "div",
                     { className: (0, B.Z)(U().ReadMoreCnt) },
+                    i.createElement(V.i, { gidEvent: e.GID }),
                     i.createElement(
-                      N.ns,
+                      "a",
                       {
                         className: (0, B.Z)(T().Button),
                         href: (0, R.OL)(e.GetSaleURL()),
@@ -3371,22 +3373,22 @@
           );
         }
       };
-      var Z;
-      (0, a.gn)([O.ak], W.prototype, "OnEnterVisible", null),
-        (0, a.gn)([O.ak], W.prototype, "OnLeaveVisible", null),
-        (W = (0, a.gn)([o.Pi], W)),
+      var Q;
+      (0, a.gn)([O.ak], Z.prototype, "OnEnterVisible", null),
+        (0, a.gn)([O.ak], Z.prototype, "OnLeaveVisible", null),
+        (Z = (0, a.gn)([o.Pi], Z)),
         (function (e) {
           (e[(e.Idle = 1)] = "Idle"),
             (e[(e.Loading = 2)] = "Loading"),
             (e[(e.EndOfContent = 3)] = "EndOfContent");
-        })(Z || (Z = {}));
-      class Q {
+        })(Q || (Q = {}));
+      class K {
         constructor(e) {
           (this.k_nMaxPerDirection = 3),
             (this.m_nAppID = 0),
             (this.m_rgEvents = []),
-            (this.m_eOlderDirection = Z.Idle),
-            (this.m_eNewerDirection = Z.Idle),
+            (this.m_eOlderDirection = Q.Idle),
+            (this.m_eNewerDirection = Q.Idle),
             (this.m_partnerEventStore = e);
         }
         GetEvents() {
@@ -3407,8 +3409,8 @@
             (this.m_nAppID = e.appid),
               (this.m_clanSteamID = e.clanSteamID),
               (this.m_rgEvents = []),
-              (this.m_eOlderDirection = Z.Loading),
-              (this.m_eNewerDirection = Z.Loading),
+              (this.m_eOlderDirection = Q.Loading),
+              (this.m_eNewerDirection = Q.Loading),
               (this.m_additionalParams = t),
               this.m_rgEvents.push(e);
             let a = null;
@@ -3425,26 +3427,26 @@
             (0, r.z)(() => {
               if (!a || 0 == a.length)
                 return (
-                  (this.m_eOlderDirection = Z.EndOfContent),
-                  void (this.m_eNewerDirection = Z.EndOfContent)
+                  (this.m_eOlderDirection = Q.EndOfContent),
+                  void (this.m_eNewerDirection = Q.EndOfContent)
                 );
               let t = a.findIndex((t) => t.GID == e.GID),
                 n = t,
                 r = t >= 0 ? a.length - t - 1 : 0;
               (this.m_eNewerDirection =
-                n >= this.k_nMaxPerDirection ? Z.Idle : Z.EndOfContent),
+                n >= this.k_nMaxPerDirection ? Q.Idle : Q.EndOfContent),
                 (this.m_eOlderDirection =
-                  r >= this.k_nMaxPerDirection ? Z.Idle : Z.EndOfContent),
+                  r >= this.k_nMaxPerDirection ? Q.Idle : Q.EndOfContent),
                 (this.m_rgEvents = a);
             });
           });
         }
         LoadMoreAtEnd() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            if (this.m_eOlderDirection != Z.Idle) return;
+            if (this.m_eOlderDirection != Q.Idle) return;
             if (0 == this.m_rgEvents.length) return;
             let e = this.m_rgEvents[this.m_rgEvents.length - 1];
-            this.m_eOlderDirection = Z.Loading;
+            this.m_eOlderDirection = Q.Loading;
             let t = null;
             try {
               const n = this.m_partnerEventStore;
@@ -3458,21 +3460,21 @@
               );
             } catch (e) {}
             (0, r.z)(() => {
-              if (!t) return void (this.m_eOlderDirection = Z.Idle);
+              if (!t) return void (this.m_eOlderDirection = Q.Idle);
               const e = new Set(this.m_rgEvents.map((e) => e.GID));
               for (let n of t)
                 e.has(n.GID) || (this.m_rgEvents.push(n), e.add(n.GID));
               this.m_eOlderDirection =
-                t.length >= this.k_nMaxPerDirection ? Z.Idle : Z.EndOfContent;
+                t.length >= this.k_nMaxPerDirection ? Q.Idle : Q.EndOfContent;
             });
           });
         }
         LoadMoreAtBeginning() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            if (this.m_eNewerDirection != Z.Idle) return;
+            if (this.m_eNewerDirection != Q.Idle) return;
             if (0 == this.m_rgEvents.length) return;
             let e = this.m_rgEvents[0];
-            this.m_eNewerDirection = Z.Loading;
+            this.m_eNewerDirection = Q.Loading;
             let t = null;
             try {
               const n = this.m_partnerEventStore;
@@ -3485,20 +3487,20 @@
               );
             } catch (e) {}
             (0, r.z)(() => {
-              if (!t) return void (this.m_eNewerDirection = Z.Idle);
+              if (!t) return void (this.m_eNewerDirection = Q.Idle);
               const e = new Set(this.m_rgEvents.map((e) => e.GID));
               for (let n of t.reverse())
                 e.has(n.GID) || (this.m_rgEvents.unshift(n), e.add(n.GID));
               this.m_eNewerDirection =
-                t.length >= this.k_nMaxPerDirection ? Z.Idle : Z.EndOfContent;
+                t.length >= this.k_nMaxPerDirection ? Q.Idle : Q.EndOfContent;
             });
           });
         }
       }
-      (0, a.gn)([r.LO.shallow], Q.prototype, "m_rgEvents", void 0),
-        (0, a.gn)([r.LO], Q.prototype, "m_eOlderDirection", void 0),
-        (0, a.gn)([r.LO], Q.prototype, "m_eNewerDirection", void 0);
-      const K = (0, o.Pi)((e) =>
+      (0, a.gn)([r.LO.shallow], K.prototype, "m_rgEvents", void 0),
+        (0, a.gn)([r.LO], K.prototype, "m_eOlderDirection", void 0),
+        (0, a.gn)([r.LO], K.prototype, "m_eNewerDirection", void 0);
+      const J = (0, o.Pi)((e) =>
         i.createElement(
           "div",
           {

@@ -3813,11 +3813,12 @@ span.partnersaledisplay_vr_required_1KRF9 {
   z-index: 99;
   left: 0px;
   right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  width: -moz-fit-content;
   max-width: 100%;
-  padding: 8px 0px 8px 0px;
+  padding: 8px;
 }
 html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
   top: 62px;

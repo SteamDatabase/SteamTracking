@@ -4255,6 +4255,7 @@
           "EventEmail_Subject_NewChapter",
           "EventEmail_Subject_NewBattlePass",
           "EventEmail_Subject_NewSeason",
+          "EventEmail_Subject_NowFree",
         ],
         _ = [
           "EventEmail_Button_ClickForMoreDetails",

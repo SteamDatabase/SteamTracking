@@ -1165,11 +1165,27 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 	};
 
 	var strEventNamespace = 'AjaxHover' + strDataName;
-	$J(document ).on('mouseenter.' + strEventNamespace, strSelector, function() {
+	$J(document ).on( 'mouseenter.' + strEventNamespace + ' touchend.' + strEventNamespace, strSelector, function(e) {
 		var $Target = $J(this);
 		fnOnHover( $Target, fnReadKey( $Target) );
+
+		// Prevent click if we're sticky
+		if ( typeof $Target.data('stickyhover') !== 'undefined' )
+		{
+			e.preventDefault();
+		}
 	} );
-	$J(document ).on('click.' + strEventNamespace + ' mouseleave.' + strEventNamespace, strSelector, fnCancelHover );
+	$J(document ).on( 'click.' + strEventNamespace + ' mouseleave.' + strEventNamespace, strSelector, function(e) {
+		var $Target = $J(this);
+
+		// Cancel if we're not sticky
+		if ( typeof $Target.data('stickyhover') == 'undefined' )
+		{
+			fnCancelHover();
+		}
+	} );
+	// Cancel when clicking/touching elsewhere regardless if sticky
+	$J(document ).on( 'click', null, fnCancelHover );
 
 	// register this hover so HideAJAXHovers() can hide it when invoked
 	_RegisterAJAXHoverHideFunction( fnCancelHover );
