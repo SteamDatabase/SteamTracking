@@ -2359,7 +2359,7 @@
           [k, O] = (0, n.useState)(!0),
           L = U(),
           N = !(0 === g || 1 === g || 2 === g),
-          W = () => B(M, z, k),
+          W = () => (M && z ? B(M, z, k) : Promise.resolve(0)),
           x = () => {
             console.log(`Logging in offline with username ${M}`),
               SteamClient.User.SetLoginCredentials(M, z, k);
@@ -2603,26 +2603,37 @@
           } = e,
           [h, g] = (0, n.useState)(!1),
           f = U(),
-          _ = 1 === r || 13 === r,
-          p = 2 === r && !h,
-          y = p
+          _ = (function () {
+            const e = (0, n.useRef)(!0);
+            return (
+              (0, n.useEffect)(
+                () => () => {
+                  e.current = !1;
+                },
+                [e]
+              ),
+              (0, n.useCallback)(() => e.current, [e])
+            );
+          })(),
+          p = 1 === r || 13 === r,
+          y = 2 === r && !h,
+          B = y
             ? n.createElement(oe, null, (0, D.Xx)("#Login_CheckCredentials"))
             : n.createElement(oe, null, " "),
-          B = i && !a,
-          b = i && !!a;
+          b = i && !a,
+          C = i && !!a;
         return n.createElement(
           ve,
           {
             onSubmit: () => {
-              h &&
-                t().then((e) => {
-                  console.log(`password submit returned ${e}`), g(!1);
-                });
+              t().then(() => {
+                _() && g(!1);
+              });
             },
             className: R().LoginForm,
           },
           n.createElement($, {
-            tone: p ? "danger" : void 0,
+            tone: y ? "danger" : void 0,
             label: n.createElement(
               K,
               { highlight: !0 },
@@ -2632,26 +2643,26 @@
             onChange: (e) => {
               g(!0), o(e);
             },
-            autoFocus: B,
+            autoFocus: b,
             disabled: u.De.IN_LOGIN_REFRESH,
           }),
           n.createElement($, {
-            tone: p ? "danger" : void 0,
+            tone: y ? "danger" : void 0,
             label: n.createElement(K, null, (0, D.Xx)("#Login_Password")),
             value: l,
             onChange: (e) => {
               g(!0), c(e);
             },
             type: "password",
-            autoFocus: b,
+            autoFocus: C,
           }),
           n.createElement(ee, {
             label: (0, D.Xx)("#Login_RememberMe_Short"),
             value: m,
             onChange: d,
           }),
-          n.createElement(re, { loading: _ }),
-          y,
+          n.createElement(re, { loading: p }),
+          B,
           !f &&
             n.createElement(
               Se,

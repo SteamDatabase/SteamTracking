@@ -64,14 +64,16 @@ message CMsgClientGetClientAppListResponse {
 		optional bool installed = 4;
 		optional bool auto_update = 5;
 		optional uint64 bytes_downloaded = 6;
-		optional uint64 bytes_needed = 7;
+		optional uint64 bytes_to_download = 7;
 		optional uint32 bytes_download_rate = 8;
+		repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;
 		optional bool download_paused = 11;
 		optional uint32 num_downloading = 12;
 		optional uint32 num_paused = 13;
 		optional bool changing = 14;
 		optional bool available_on_platform = 15;
-		repeated .CMsgClientGetClientAppListResponse.App.DLC dlcs = 9;
+		optional uint64 bytes_staged = 16;
+		optional uint64 bytes_to_stage = 17;
 	}
 
 	repeated .CMsgClientGetClientAppListResponse.App apps = 1;
