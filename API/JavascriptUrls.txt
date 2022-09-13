@@ -36,7 +36,6 @@ ${BASE_URL}recommender/${STEAM_ID}/savesettings
 ${BASE_URL}recommender/${STEAM_ID}/stats
 ${BASE_URL}recommender/${STEAM_ID}/tags?sessionid=${SESSION_ID}
 ${BASE_URL}recommender/${STEAM_ID}/wishlist?snr=${LINK_PARAM}
-${BASE_URL}store
 ${BASE_URL}webapi/IDOTA2DPC/${}/v001
 ${BASE_URL}webapi/IDOTA2DPC/GetDPCSearchResults/v001
 ${BASE_URL}webapi/IDOTA2DPC/GetDPCStandings/v001

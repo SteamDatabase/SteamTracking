@@ -4123,16 +4123,6 @@
               )
             ),
             o.createElement("div", { className: S().VerticalBar }),
-            o.createElement(
-              "a",
-              { className: S().HeaderLink, href: h.Y.BASE_URL + "store" },
-              o.createElement(
-                "div",
-                { className: S().SectionHeader },
-                (0, E.Jr)("#header_store")
-              )
-            ),
-            o.createElement("div", { className: S().VerticalBar }),
             o.createElement(C, null),
             o.createElement("div", { className: S().Spacer }),
             o.createElement(
@@ -60940,11 +60930,6 @@
                       return d(!1);
                     },
                   },
-                  r.createElement(
-                    "a",
-                    { href: "".concat(a.Y.BASE_URL, "store") },
-                    (0, s.Jr)("#header_store")
-                  ),
                   r.createElement(
                     _.rU,
                     { to: m._.patchnotes() },
