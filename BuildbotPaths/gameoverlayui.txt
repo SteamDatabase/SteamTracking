@@ -1,5 +1,4 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/../common/clientdirectories.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp

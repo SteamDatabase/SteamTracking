@@ -7521,8 +7521,6 @@
 	"SteamUI_VRShortcut"					"VR Shortcut"
 	"SteamUI_SteamControllerActionsBlockOutdatedTitle" "Controller Configuration Outdated"
 	"SteamUI_SteamControllerActionsBlockOutdatedDescription" "The developer of this game has made changes to the official configuration that might invalidate your current one.\n\nWe recommend selecting the official configuration to prevent any issues."
-	"SteamUI_3rdPartyRemapper_Title"		"Controller Remapper Detected"
-	"SteamUI_3rdPartyRemapper_Description"	"You appear to be using a controller remapping tool for your PS4 controller.  This game uses Steam Input and does not require any remapping software.  The two may conflict if the remapping tool is not disabled."
 
 	"SteamUI_EmptyDiskManagementList" "No installed games"
 	"SettingsController_BindingsConfig" "CONFIGURE BUTTONS"

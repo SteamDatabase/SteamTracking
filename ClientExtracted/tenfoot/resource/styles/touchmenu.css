@@ -107,14 +107,39 @@
     width: 720px;
 }
 
+#TouchMenuPad.Hotbar.MenuSize5
+{
+	width: 800px;
+}
+
+#TouchMenuPad.Hotbar.MenuSize6
+{
+	width: 1080px;
+}
+
 #TouchMenuPad.Hotbar.MenuSize7
 {
     width: 1260px;
 }
 
+#TouchMenuPad.Hotbar.MenuSize8
+{
+	width: 1440px;
+}
+
 #TouchMenuPad.Hotbar.MenuSize9
 {
     width: 1620px;
+}
+
+#TouchMenuPad.Hotbar.MenuSize10
+{
+	width: 1800px;
+}
+
+#TouchMenuPad.Hotbar.MenuSize11
+{
+	width: 1980px;
 }
 
 #TouchMenuPad.Hotbar.MenuSize12
@@ -125,6 +150,15 @@
 #TouchMenuPad.Hotbar.MenuSize13
 {
     width: 2340px;
+}
+
+#TouchMenuPad.Hotbar.MenuSize14
+{
+	width: 2520px;
+}
+
+#TouchMenuPad.Hotbar.MenuSize15 {
+	width: 2700px;
 }
 
 #TouchMenuPad.Hotbar.MenuSize16
