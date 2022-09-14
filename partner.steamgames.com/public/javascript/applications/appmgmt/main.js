@@ -448,20 +448,24 @@
     },
     26149: (e, t, n) => {
       "use strict";
+      function r(e) {
+        return 3 == e || 6 == e;
+      }
       n.d(t, {
-        De: () => u,
-        QS: () => r,
-        YO: () => i,
-        Z3: () => s,
-        dt: () => o,
-        eV: () => a,
-        jM: () => c,
-        j_: () => l,
+        De: () => d,
+        QS: () => i,
+        YO: () => s,
+        Z3: () => o,
+        dt: () => a,
+        eV: () => l,
+        jM: () => u,
+        j_: () => c,
+        my: () => r,
       });
-      const r = 1,
-        i = 4,
-        s = "18446744073709551615";
-      function o(e, t = "en") {
+      const i = 1,
+        s = 4,
+        o = "18446744073709551615";
+      function a(e, t = "en") {
         switch (e) {
           case 0:
             return "en";
@@ -527,8 +531,8 @@
             return t;
         }
       }
-      const a = (e) => ("koreana" === e ? "korean" : e);
-      function l(e, t = "") {
+      const l = (e) => ("koreana" === e ? "korean" : e);
+      function c(e, t = "") {
         switch (e) {
           case 0:
             return "english";
@@ -594,7 +598,7 @@
             return t;
         }
       }
-      function c(e, t = 0) {
+      function u(e, t = 0) {
         switch (e) {
           case "english":
             return 0;
@@ -661,11 +665,11 @@
             return t;
         }
       }
-      const u = [
+      const d = [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35,
       ];
-      var d, m, h, p, g, _, f;
+      var m, h, p, g, _, f, b;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -681,7 +685,7 @@
             "k_EConnectivityTestResult_WifiDisabled"),
           (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
             "k_EConnectivityTestResult_NoLAN");
-      })(d || (d = {})),
+      })(m || (m = {})),
         (function (e) {
           (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
@@ -695,7 +699,7 @@
               "k_ENetFakeLocalSystemState_NoInternet"),
             (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
               "k_ENetFakeLocalSystemState_NoSteam");
-        })(m || (m = {})),
+        })(h || (h = {})),
         (function (e) {
           (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
             "k_ESuspendResumeProgressState_Invalid"),
@@ -709,7 +713,7 @@
               "k_ESuspendResumeProgressState_WaitingForApp"),
             (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
               "k_ESuspendResumeProgressState_Working");
-        })(h || (h = {})),
+        })(p || (p = {})),
         (function (e) {
           (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
             "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -719,7 +723,7 @@
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
               "k_EFloatingGamepadTextInputModeModeNumeric");
-        })(p || (p = {})),
+        })(g || (g = {})),
         (function (e) {
           (e[(e.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
@@ -729,7 +733,7 @@
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
               "k_EAppUpdateContentType_Max");
-        })(g || (g = {})),
+        })(_ || (_ = {})),
         (function (e) {
           (e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
@@ -737,13 +741,13 @@
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
               "k_EOverlayToStoreFlag_AddToCartAndShow");
-        })(_ || (_ = {})),
+        })(f || (f = {})),
         (function (e) {
           (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(f || (f = {}));
+        })(b || (b = {}));
     },
     1351: (e, t, n) => {
       "use strict";
@@ -758,11 +762,11 @@
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(r || (r = {}));
     },
-    92398: (e, t, n) => {
+    54698: (e, t, n) => {
       "use strict";
       n.d(t, {
         e7: () => o.e7,
-        mU: () => E,
+        mU: () => S,
         i_: () => l,
         j_: () => r.j_,
         dt: () => r.dt,
@@ -858,10 +862,8 @@
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
       })(m || (m = {}));
-      var h = n(33019);
-      n(40110);
-      h.Message;
-      var p, g, _;
+      var h, p, g;
+      n(13447);
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -879,7 +881,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(p || (p = {}));
+      })(h || (h = {}));
       !(function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -934,7 +936,7 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(g || (g = {}));
+      })(p || (p = {}));
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -942,14 +944,14 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(_ || (_ = {}));
-      var f, b, v, w, S;
+      })(g || (g = {}));
+      var _, f, b, v, w;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(f || (f = {})),
+      })(_ || (_ = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -958,14 +960,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(b || (b = {})),
+        })(f || (f = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(v || (v = {})),
+        })(b || (b = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -975,16 +977,16 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(w || (w = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(S || (S = {}));
+        })(w || (w = {}));
       n(64010), n(990);
-      function E(e) {
+      function S(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -999,7 +1001,7 @@
           "advertising" === e
         );
       }
-      var C, y;
+      var E, C;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -1007,7 +1009,7 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(C || (C = {})),
+      })(E || (E = {})),
         (function (e) {
           (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
             "k_EClientUsedInputTypeKeyboard"),
@@ -1017,7 +1019,7 @@
               "k_EClientUsedInputTypeController"),
             (e[(e.k_EClientUsedInputTypeMax = 3)] =
               "k_EClientUsedInputTypeMax");
-        })(y || (y = {}));
+        })(C || (C = {}));
     },
     58114: (e, t, n) => {
       "use strict";
@@ -1825,7 +1827,7 @@
         a = n(53622),
         l = n(99198),
         c = n(81130),
-        u = n(92398),
+        u = n(54698),
         d = n(41311),
         m = n(90666),
         h = n(77520),
@@ -2364,12 +2366,11 @@
     7707: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Fe: () => c,
-        Hy: () => u,
-        IS: () => h,
-        Ks: () => d,
-        bX: () => p,
-        wl: () => m,
+        Hy: () => c,
+        IS: () => m,
+        Ks: () => u,
+        bX: () => h,
+        wl: () => d,
       });
       var r = n(70655),
         i = n(67294),
@@ -2378,7 +2379,7 @@
         a = (n(23816), n(17010), n(39746), n(6990)),
         l = n(80378);
       n(35921);
-      const c = i.forwardRef(function (e, t) {
+      i.forwardRef(function (e, t) {
         const {
             NavigationManager: n,
             onActivated: c,
@@ -2438,13 +2439,13 @@
           i.createElement(s.ET.Provider, { value: C.Root }, g)
         );
       });
-      function u() {
+      function c() {
         return i.createRef();
       }
-      const d = (0, s.lP)("div"),
-        m = (0, s.lP)("button"),
-        h = (0, s.lP)("a"),
-        p = (0, s.hi)("input");
+      const u = (0, s.lP)("div"),
+        d = (0, s.lP)("button"),
+        m = (0, s.lP)("a"),
+        h = (0, s.hi)("input");
       (0, s.hi)("textarea"), (0, s.lP)("img");
     },
     571: (e, t, n) => {
@@ -2468,7 +2469,7 @@
         c = n(17010),
         u = (n(39746), n(7707)),
         d = (n(27745), n(80378)),
-        m = (n(92398), n(53622));
+        m = (n(54698), n(13447), n(53622));
       class h {
         SetFactory(e) {
           this.m_factory = e;
@@ -2500,31 +2501,7 @@
               n ||
               ((u = o),
               (e, t) => {
-                if (
-                  !(function (e) {
-                    if ("Backspace" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Enter" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Tab" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
-                      );
-                    if (
-                      1 === e.length ||
-                      ("ArrowLeft" != e && "ArrowRight" != e && "Tab" != e)
-                    )
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(e), !0
-                      );
-                    return !1;
-                  })(e) &&
-                  u.current
-                ) {
+                if (u.current) {
                   const n = u.current,
                     r = n.value;
                   !(function (e, t, n) {
@@ -2593,7 +2570,40 @@
                     const e = new Event("input", { bubbles: !0 });
                     n.dispatchEvent(e);
                   }
-                }
+                } else
+                  !(function (e) {
+                    if ("Backspace" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(""), !0
+                      );
+                    if ("Enter" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(""), !0
+                      );
+                    if ("Tab" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
+                      );
+                    if ("ArrowLeft" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSetKeyState(80, !0),
+                        SteamClient.Input.ControllerKeyboardSetKeyState(80, !1),
+                        !0
+                      );
+                    if ("ArrowRight" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSetKeyState(79, !0),
+                        SteamClient.Input.ControllerKeyboardSetKeyState(79, !1),
+                        !0
+                      );
+                    if (
+                      1 === e.length ||
+                      ("ArrowLeft" != e && "ArrowRight" != e && "Tab" != e)
+                    )
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(e), !0
+                      );
+                  })(e);
               }),
             BIsElementValidForInput: () =>
               o.current && document.activeElement == o.current,
@@ -3793,7 +3803,6 @@
     },
     98610: (e, t, n) => {
       "use strict";
-      n.d(t, { Z: () => g });
       var r = n(70655),
         i = n(23200),
         s = n(48780),
@@ -4105,15 +4114,14 @@
     17010: (e, t, n) => {
       "use strict";
       n.d(t, {
-        sA: () => b,
-        lx: () => m,
-        ZT: () => u.Z,
-        TB: () => p,
-        uW: () => d,
-        Ii: () => f,
-        ZR: () => g,
-        U7: () => _,
-        sq: () => h,
+        sA: () => f,
+        lx: () => d,
+        TB: () => h,
+        uW: () => u,
+        Ii: () => _,
+        ZR: () => p,
+        U7: () => g,
+        sq: () => m,
       });
       var r = n(23200),
         i = (n(37059), n(77520)),
@@ -4208,9 +4216,8 @@
           );
         }
       }
-      var u = n(98610);
-      n(12505);
-      class d {
+      n(98610), n(12505);
+      class u {
         constructor(e) {
           this.m_node = e;
         }
@@ -4261,14 +4268,14 @@
           return this.m_node;
         }
       }
-      function m(e, t, n, r = 0.001) {
+      function d(e, t, n, r = 0.001) {
         return "x" == e
           ? t.x + t.width > n.x + r && t.x + r < n.x + n.width
           : "y" == e
           ? t.y + t.height > n.y + r && t.y + r < n.y + n.height
           : ((0, i.X)(!1, `Invalid axis ${e}`), !1);
       }
-      function h(e, t, n) {
+      function m(e, t, n) {
         let r;
         return (
           "x" == e
@@ -4280,7 +4287,7 @@
           r < 0 ? 0 : r
         );
       }
-      function p(e, t, n) {
+      function h(e, t, n) {
         const r = t[e],
           s = (function (e, t) {
             return "x" == e
@@ -4291,16 +4298,16 @@
           })(e, n);
         return r < s.min ? s.min - r : r > s.max ? r - s.max : 0;
       }
-      function g(e) {
+      function p(e) {
         return { x: e.x, y: e.y };
       }
-      const _ = {
+      const g = {
         OnBlur: () => {},
         OnFocus: () => {},
         OnFocusChange: () => {},
         OnForceMeasureFocusRing: () => {},
       };
-      function f(e) {
+      function _(e) {
         if (!e) return o.gj.NONE;
         const t = e.ownerDocument.defaultView,
           n = t.getComputedStyle(e);
@@ -4327,7 +4334,7 @@
         }
         return o.gj.COLUMN;
       }
-      function b(e) {
+      function f(e) {
         switch (e) {
           case r.eV.DIR_UP:
           case r.eV.DIR_DOWN:
@@ -7107,6 +7114,12 @@
         }
       }
     },
+    13447: (e, t, n) => {
+      "use strict";
+      var r = n(33019);
+      n(40110);
+      r.Message;
+    },
     990: (e, t, n) => {
       "use strict";
       n.d(t, {
@@ -9874,264 +9887,6 @@
           }
           var t;
         });
-      }
-    },
-    55281: (e, t, n) => {
-      "use strict";
-      n.d(t, { l: () => p });
-      var r = n(28777),
-        i = n(67294),
-        s = n(35921),
-        o = n(95598),
-        a = n(7573);
-      var l = n(39853),
-        c = n(15396),
-        u = n(54452),
-        d = n(90666);
-      class m extends i.Component {
-        render() {
-          const { showArrows: e } = this.props,
-            t = this.props.visibleSlides,
-            n = this.props.totalSlides,
-            s = this.props.currentSlide;
-          if (t >= n) return null;
-          const c = (100 * s) / n,
-            u = 100 * (1 - Math.min(s + t, n) / n),
-            d = c + (50 * t) / n,
-            m = 100 - d;
-          return i.createElement(
-            "div",
-            { className: l.pipScrollerContainer },
-            e &&
-              i.createElement(
-                r.jp,
-                {
-                  className: (0, a.Z)(
-                    l.pipScrollButton,
-                    l.left,
-                    l.carouselNavButton
-                  ),
-                },
-                i.createElement(o.thP, null)
-              ),
-            i.createElement(
-              "div",
-              { className: l.pipScroller },
-              i.createElement("div", { className: l.scrollBackground }),
-              i.createElement("div", {
-                className: l.scrollForeground,
-                style: { left: c + "%", right: u + "%" },
-              }),
-              i.createElement(
-                "div",
-                {
-                  className: l.scrollNavDiv,
-                  style: { left: "0%", width: d + "%" },
-                },
-                i.createElement(
-                  r.jp,
-                  {
-                    className: (0, a.Z)(l.carouselNavButton, l.scrollNavButton),
-                  },
-                  i.createElement("div", null)
-                )
-              ),
-              i.createElement(
-                "div",
-                {
-                  className: l.scrollNavDiv,
-                  style: { right: "0%", width: m + "%" },
-                },
-                i.createElement(
-                  r.P1,
-                  {
-                    className: (0, a.Z)(l.carouselNavButton, l.scrollNavButton),
-                  },
-                  i.createElement("div", null)
-                )
-              )
-            ),
-            e &&
-              i.createElement(
-                r.P1,
-                {
-                  className: (0, a.Z)(
-                    l.pipScrollButton,
-                    l.right,
-                    l.carouselNavButton
-                  ),
-                },
-                i.createElement(o.thP, null)
-              )
-          );
-        }
-      }
-      const h = (0, r.Rq)(m, (e) => ({
-        currentSlide: e.currentSlide,
-        totalSlides: e.totalSlides,
-        visibleSlides: e.visibleSlides,
-      }));
-      function p(e) {
-        const t = () => i.Children.count(e.children),
-          n = t(),
-          o = Math.min(t(), e.visibleElements);
-        if (!n || !o) return null;
-        const u = o < n,
-          m = e.hideArrows || !u,
-          p = !u || e.hidePips;
-        let g = 4 / 3,
-          f = !0;
-        e.slideAspectRatio && ((g = e.slideAspectRatio), (f = !1));
-        const b = `items_in_row_${e.visibleElements}`;
-        return i.createElement(
-          s.s,
-          {
-            "flow-children": "row",
-            className: (0, a.Z)(l.carouselBody, e.className, b),
-          },
-          i.createElement(
-            r.sj,
-            {
-              visibleSlides: e.visibleElements,
-              totalSlides: t(),
-              naturalSlideWidth: 100 * g,
-              naturalSlideHeight: 100,
-              step: e.visibleElements,
-              infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: f,
-              touchEnabled: !0,
-              lockOnWindowScroll: !0,
-              orientation: "horizontal",
-              disableKeyboard: !0,
-            },
-            i.createElement(
-              _,
-              {
-                bHideArrows: m,
-                bAutoAdvance: e.bAutoAdvance && !d.De.IN_GAMEPADUI,
-                onSlide: e.onSlide,
-              },
-              i.Children.map(e.children, (t, n) => {
-                const s = e.bLazyRenderChildren
-                  ? i.createElement(
-                      c.Y,
-                      {
-                        rootMargin: "0px 100% 0px 100%",
-                        bHorizontal: !0,
-                        placeholderWidth: 1,
-                        placeholderHeight: 1,
-                      },
-                      t
-                    )
-                  : t;
-                return i.createElement(
-                  r.Mi,
-                  { className: l.innerSlide, key: "slide_" + n, index: n },
-                  s
-                );
-              })
-            ),
-            !p &&
-              (e.useTestScrollbar
-                ? i.createElement(h, { showArrows: m, carouselStore: null })
-                : i.createElement(
-                    "div",
-                    { className: l.breadcrumbContainer },
-                    ((t) =>
-                      i.Children.map(e.children, (e, n) =>
-                        n % t != 0
-                          ? null
-                          : i.createElement(
-                              r.oT,
-                              { slide: n, className: l.pip },
-                              i.createElement("img", {
-                                src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC",
-                              })
-                            )
-                      ))(o)
-                  ))
-          )
-        );
-      }
-      function g(e) {
-        e && (window.clearTimeout(e.current), (e.current = null));
-      }
-      function _(e) {
-        const { bHideArrows: t, bAutoAdvance: n, children: s, onSlide: c } = e,
-          d = i.useContext(r.ro),
-          m = i.useRef(d.state.currentSlide),
-          [h, p] = i.useState(null),
-          [_, f] = i.useState(!!n),
-          b = i.useRef(null),
-          v = i.useRef(null);
-        i.useEffect(() => {
-          const e = () => {
-            b.current = window.setTimeout(() => {
-              if (b.current) {
-                g(b);
-                const e = (d.state.currentSlide + 1) % d.state.totalSlides;
-                d.setStoreState({ currentSlide: e });
-              }
-            }, 8e3);
-          };
-          _ && e();
-          const t = () => {
-            const t = m.current,
-              n = d.state.currentSlide;
-            c && c(n), p(n > t ? "Right" : n < t ? "Left" : null), g(v);
-            (v.current = window.setTimeout(() => {
-              v.current && (p(null), g(v));
-            }, 1e3)),
-              (m.current = n),
-              b.current ? (g(b), f(!1)) : _ && e();
-          };
-          return (
-            d.subscribe(t),
-            () => {
-              d.unsubscribe(t), g(b), g(v);
-            }
-          );
-        }, [d, _]);
-        const w = !!h && "CarouselSliding" + h;
-        return i.createElement(
-          "div",
-          { className: (0, a.Z)(l.sliderBody, "SliderBody", w) },
-          !t &&
-            i.createElement(
-              r.jp,
-              {
-                className: (0, a.Z)(
-                  l.carouselBtnCtn,
-                  l.left,
-                  l.carouselNavButton,
-                  "CarouselBtnLeft"
-                ),
-              },
-              i.createElement(o.thP, null)
-            ),
-          i.createElement(
-            r.iR,
-            {
-              className: u.U.GetScrollableClassname(),
-              classNameTray: l.slideTrayCustomize,
-              classNameAnimation: l.DisableSliderMotion,
-            },
-            s
-          ),
-          !t &&
-            i.createElement(
-              r.P1,
-              {
-                className: (0, a.Z)(
-                  l.carouselBtnCtn,
-                  l.right,
-                  l.carouselNavButton,
-                  "CarouselBtnRight"
-                ),
-              },
-              i.createElement(o.thP, null)
-            )
-        );
       }
     },
     88254: (e, t, n) => {
@@ -13231,7 +12986,7 @@
           )
         );
       }
-      const qe = i.forwardRef((e, t) => {
+      const qe = i.forwardRef(function (e, t) {
         var n, r;
         const s = null !== (n = e.stylesheet) && void 0 !== n ? n : Xe(),
           a = e.pages,
@@ -13270,16 +13025,20 @@
                 e.renderPageListSeparator && e.renderPageListSeparator({})
               );
             if ("spacer" === t)
-              return i.createElement("div", { className: Xe().PageListSpacer });
+              return i.createElement("div", {
+                key: n,
+                className: Xe().PageListSpacer,
+              });
             if (!1 === t.visible) return null;
-            const r = t == g;
+            const r = t == g,
+              o = t.title && t.title.length > 0 ? t.title : n.toString();
             return i.createElement(h.T, {
               component: e.renderPageListItem,
               fallback: Ye,
               className: (0, l.Z)(s.PagedSettingsDialog_PageListItem, {
                 [s.Active]: r,
               }),
-              key: t.title,
+              key: o,
               onClick: () => {
                 He.LT.PlayNavSound(He.qr.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
@@ -14957,13 +14716,14 @@
         Ehc: () => o,
         Hz5: () => l,
         MCw: () => s,
-        RCC: () => d,
-        Tvf: () => u,
+        RCC: () => m,
+        Tvf: () => d,
+        WWB: () => u,
         dQJ: () => c,
       });
       var r = n(70655),
         i = n(67294);
-      n(92398), n(98379), n(21205);
+      n(54698), n(98379), n(21205);
       function s(e) {
         return i.createElement(
           "svg",
@@ -15164,6 +14924,25 @@
       function u(e) {
         return i.createElement(
           "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            e
+          ),
+          i.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M16.48 35.0499V29.3499L16.51 29.3399C13.4035 28.995 10.5086 27.5974 8.30636 25.3794C6.10411 23.1615 4.72712 20.2567 4.40423 17.1478C4.08134 14.039 4.83199 10.9132 6.53143 8.29005C8.23087 5.66685 10.7768 3.70417 13.7461 2.72816C16.7153 1.75214 19.9292 1.82157 22.8536 2.9249C25.7779 4.02823 28.2367 6.09903 29.8213 8.79316C31.4058 11.4873 32.0208 14.6425 31.564 17.7346C31.1071 20.8266 29.606 23.6692 27.31 25.7899L16.48 35.0499ZM16.8787 23.6588C17.2136 23.8813 17.6074 24 18.0102 24C18.5503 24 19.0684 23.7867 19.4503 23.407C19.8323 23.0274 20.0468 22.5124 20.0468 21.9755C20.0468 21.5751 19.9274 21.1837 19.7036 20.8508C19.4798 20.5178 19.1617 20.2584 18.7896 20.1051C18.4174 19.9519 18.0079 19.9118 17.6129 19.9899C17.2178 20.068 16.8549 20.2609 16.57 20.544C16.2852 20.8271 16.0912 21.1878 16.0127 21.5806C15.9341 21.9733 15.9744 22.3803 16.1286 22.7502C16.2827 23.1202 16.5437 23.4364 16.8787 23.6588ZM20.0223 16.721C20.158 16.5009 20.3489 16.3197 20.5764 16.1952L20.5662 16.2357C21.3168 15.7895 21.9366 15.1554 22.3636 14.3967C22.7906 13.638 23.0099 12.7812 22.9997 11.9119C22.9894 11.0426 22.7499 10.1911 22.3052 9.44256C21.8604 8.694 21.2259 8.07451 20.4649 7.64592C19.704 7.21733 18.8433 6.99465 17.9687 7.0001C17.0941 7.00555 16.2362 7.23893 15.4808 7.67697C14.7253 8.115 14.0986 8.74235 13.6633 9.49639C13.228 10.2504 12.9993 11.1048 13 11.9742H16.5947C16.5893 11.786 16.6218 11.5987 16.6905 11.4233C16.7592 11.2479 16.8626 11.0879 16.9946 10.953C17.1266 10.818 17.2845 10.7107 17.4589 10.6375C17.6334 10.5643 17.8208 10.5266 18.0102 10.5266C18.3866 10.5398 18.7429 10.6984 19.0035 10.9688C19.264 11.2391 19.4082 11.5998 19.4053 11.9742C19.3995 12.2096 19.334 12.4398 19.2147 12.6434C19.0954 12.8469 18.9263 13.0171 18.723 13.1382C17.961 13.5756 17.3277 14.2039 16.8863 14.9606C16.445 15.7172 16.211 16.5757 16.2077 17.4504V18.5537H19.8024V17.4504C19.8109 17.1924 19.8866 16.9411 20.0223 16.721Z",
+          })
+        );
+      }
+      function d(e) {
+        return i.createElement(
+          "svg",
           {
             width: "5",
             height: "19",
@@ -15177,7 +14956,7 @@
           })
         );
       }
-      function d(e) {
+      function m(e) {
         return i.createElement(
           "svg",
           {
@@ -15276,10 +15055,9 @@
       n.d(t, {
         On: () => S,
         t9: () => R,
-        Pv: () => Z,
-        uH: () => Q,
-        RG: () => q,
-        JX: () => J,
+        uH: () => X,
+        RG: () => z,
+        JX: () => K,
         BL: () => m,
         e1: () => v,
         D2: () => E,
@@ -15579,37 +15357,35 @@
           r.createElement("div", { ref: s, className: t, tabIndex: -1 }, i)
         );
       }
-      var I = n(7707),
-        O = n(27745),
-        F = n(35921),
-        L = (n(23816), n(17010)),
-        N = (n(12505), n(23200)),
-        x = n(81130);
-      let A = [
-        { index: 0, type: N.eV.OK, category: "action" },
-        { index: 1, type: N.eV.CANCEL, category: "action" },
-        { index: 2, type: N.eV.SECONDARY, category: "action" },
-        { index: 3, type: N.eV.OPTIONS, category: "action" },
-        { index: 4, type: N.eV.BUMPER_LEFT, category: "action" },
-        { index: 5, type: N.eV.BUMPER_RIGHT, category: "action" },
-        { index: 6, type: N.eV.TRIGGER_LEFT, category: "action" },
-        { index: 7, type: N.eV.TRIGGER_RIGHT, category: "action" },
-        { index: 8, type: N.eV.SELECT, category: "action" },
-        { index: 9, type: N.eV.START, category: "action" },
-        { index: 10, type: N.eV.LSTICK_CLICK, category: "action" },
-        { index: 11, type: N.eV.RSTICK_CLICK, category: "action" },
-        { index: 12, type: N.eV.DIR_UP, category: "navigation" },
-        { index: 13, type: N.eV.DIR_DOWN, category: "navigation" },
-        { index: 14, type: N.eV.DIR_LEFT, category: "navigation" },
-        { index: 15, type: N.eV.DIR_RIGHT, category: "navigation" },
-        { index: 16, type: N.eV.STEAM_GUIDE, category: "action" },
-        { index: 17, type: N.eV.SELECT, category: "action" },
+      n(7707), n(27745);
+      var I = n(35921),
+        O = (n(23816), n(17010), n(12505), n(23200)),
+        F = n(81130);
+      let L = [
+        { index: 0, type: O.eV.OK, category: "action" },
+        { index: 1, type: O.eV.CANCEL, category: "action" },
+        { index: 2, type: O.eV.SECONDARY, category: "action" },
+        { index: 3, type: O.eV.OPTIONS, category: "action" },
+        { index: 4, type: O.eV.BUMPER_LEFT, category: "action" },
+        { index: 5, type: O.eV.BUMPER_RIGHT, category: "action" },
+        { index: 6, type: O.eV.TRIGGER_LEFT, category: "action" },
+        { index: 7, type: O.eV.TRIGGER_RIGHT, category: "action" },
+        { index: 8, type: O.eV.SELECT, category: "action" },
+        { index: 9, type: O.eV.START, category: "action" },
+        { index: 10, type: O.eV.LSTICK_CLICK, category: "action" },
+        { index: 11, type: O.eV.RSTICK_CLICK, category: "action" },
+        { index: 12, type: O.eV.DIR_UP, category: "navigation" },
+        { index: 13, type: O.eV.DIR_DOWN, category: "navigation" },
+        { index: 14, type: O.eV.DIR_LEFT, category: "navigation" },
+        { index: 15, type: O.eV.DIR_RIGHT, category: "navigation" },
+        { index: 16, type: O.eV.STEAM_GUIDE, category: "action" },
+        { index: 17, type: O.eV.SELECT, category: "action" },
       ];
-      class P extends N.oH {
+      class N extends O.oH {
         constructor() {
           super(),
             (this.m_rgGamepadStatus = []),
-            this.SetSourceType(N.Rr.GAMEPAD),
+            this.SetSourceType(O.Rr.GAMEPAD),
             window.addEventListener("gamepadconnected", (e) => {
               this.m_bGamepadDetected ||
                 (this.OnGamepadDetected(), this.PollGamepads());
@@ -15624,8 +15400,8 @@
             this.m_rgGamepadStatus[n] ||
               (this.m_rgGamepadStatus[n] = { buttons: [] });
             let i = this.m_rgGamepadStatus[n];
-            for (let e = 0; e < A.length; e++) {
-              let n = A[e],
+            for (let e = 0; e < L.length; e++) {
+              let n = L[e],
                 s = n.index;
               r.buttons[s] &&
                 (r.buttons[s].pressed
@@ -15646,42 +15422,42 @@
             this.PollGamepads();
         }
       }
-      (0, C.gn)([x.a], P.prototype, "PollGamepads", null),
-        (0, C.gn)([x.a], P.prototype, "OnWindowRegainedFocus", null);
-      var G = n(92398);
-      const W = {
-          A: N.eV.OK,
-          B: N.eV.CANCEL,
-          X: N.eV.SECONDARY,
-          Y: N.eV.OPTIONS,
-          SELECT: N.eV.SELECT,
-          START: N.eV.START,
-          LSHOULDER: N.eV.BUMPER_LEFT,
-          RSHOULDER: N.eV.BUMPER_RIGHT,
-          LTRIGGER: N.eV.TRIGGER_LEFT,
-          RTRIGGER: N.eV.TRIGGER_RIGHT,
-          LEFTSTICK_UP: N.eV.DIR_UP,
-          LEFTSTICK_RIGHT: N.eV.DIR_RIGHT,
-          LEFTSTICK_DOWN: N.eV.DIR_DOWN,
-          LEFTSTICK_LEFT: N.eV.DIR_LEFT,
-          LEFTSTICK_CLICK: N.eV.LSTICK_CLICK,
-          RIGHTSTICK_CLICK: N.eV.RSTICK_CLICK,
-          LeftStick: N.eV.LSTICK_TOUCH,
-          RightStick: N.eV.RSTICK_TOUCH,
-          LeftTrackpad: N.eV.LPAD_TOUCH,
-          LeftTrackpadClick: N.eV.LPAD_CLICK,
-          RightTrackpad: N.eV.RPAD_TOUCH,
-          RightTrackpadClick: N.eV.RPAD_CLICK,
-          RearLeftUpper: N.eV.REAR_LEFT_UPPER,
-          RearLeftLower: N.eV.REAR_LEFT_LOWER,
-          RearRightUpper: N.eV.REAR_RIGHT_UPPER,
-          RearRightLower: N.eV.REAR_RIGHT_LOWER,
+      (0, C.gn)([F.a], N.prototype, "PollGamepads", null),
+        (0, C.gn)([F.a], N.prototype, "OnWindowRegainedFocus", null);
+      var x = n(54698);
+      const A = {
+          A: O.eV.OK,
+          B: O.eV.CANCEL,
+          X: O.eV.SECONDARY,
+          Y: O.eV.OPTIONS,
+          SELECT: O.eV.SELECT,
+          START: O.eV.START,
+          LSHOULDER: O.eV.BUMPER_LEFT,
+          RSHOULDER: O.eV.BUMPER_RIGHT,
+          LTRIGGER: O.eV.TRIGGER_LEFT,
+          RTRIGGER: O.eV.TRIGGER_RIGHT,
+          LEFTSTICK_UP: O.eV.DIR_UP,
+          LEFTSTICK_RIGHT: O.eV.DIR_RIGHT,
+          LEFTSTICK_DOWN: O.eV.DIR_DOWN,
+          LEFTSTICK_LEFT: O.eV.DIR_LEFT,
+          LEFTSTICK_CLICK: O.eV.LSTICK_CLICK,
+          RIGHTSTICK_CLICK: O.eV.RSTICK_CLICK,
+          LeftStick: O.eV.LSTICK_TOUCH,
+          RightStick: O.eV.RSTICK_TOUCH,
+          LeftTrackpad: O.eV.LPAD_TOUCH,
+          LeftTrackpadClick: O.eV.LPAD_CLICK,
+          RightTrackpad: O.eV.RPAD_TOUCH,
+          RightTrackpadClick: O.eV.RPAD_CLICK,
+          RearLeftUpper: O.eV.REAR_LEFT_UPPER,
+          RearLeftLower: O.eV.REAR_LEFT_LOWER,
+          RearRightUpper: O.eV.REAR_RIGHT_UPPER,
+          RearRightLower: O.eV.REAR_RIGHT_LOWER,
         },
-        U = {
-          [G.Xg.SystemKey0]: N.eV.STEAM_GUIDE,
-          [G.Xg.SystemKey1]: N.eV.STEAM_QUICK_MENU,
+        P = {
+          [x.Xg.SystemKey0]: O.eV.STEAM_GUIDE,
+          [x.Xg.SystemKey1]: O.eV.STEAM_QUICK_MENU,
         };
-      class V extends N.oH {
+      class G extends O.oH {
         constructor() {
           super(),
             (this.m_rgControllers = new Map()),
@@ -15693,10 +15469,10 @@
               SteamClient.System.UI.RegisterForSystemKeyEvents(
                 this.HandleSystemKeyEvents
               )),
-            this.SetSourceType(N.Rr.GAMEPAD);
+            this.SetSourceType(O.Rr.GAMEPAD);
         }
         HandleSystemKeyEvents(e) {
-          const t = U[e.eKey];
+          const t = P[e.eKey];
           t && this.OnSystemButtonPress(t, e.nControllerIndex);
         }
         OnSystemButtonPress(e, t) {
@@ -15711,7 +15487,7 @@
         }
         HandleControllerInputMessages(e) {
           for (const t of e) {
-            const e = W[t.strActionName],
+            const e = A[t.strActionName],
               n = this.GetController(t.nController);
             null != e
               ? t.bState && !n.activeButtons[e]
@@ -15722,28 +15498,28 @@
                   ((n.activeButtons[e] = !1), this.OnButtonUp(e, t.nController))
               : "Scroll" == t.strActionName ||
                 ("LEFTPAD_ANALOG" == t.strActionName
-                  ? n.activeButtons[N.eV.LPAD_TOUCH] &&
-                    this.OnAnalogPad(N.eV.LPAD_TOUCH, t.x, t.y, t.nController)
+                  ? n.activeButtons[O.eV.LPAD_TOUCH] &&
+                    this.OnAnalogPad(O.eV.LPAD_TOUCH, t.x, t.y, t.nController)
                   : "RIGHTPAD_ANALOG" == t.strActionName &&
-                    n.activeButtons[N.eV.RPAD_TOUCH] &&
-                    this.OnAnalogPad(N.eV.RPAD_TOUCH, t.x, t.y, t.nController));
+                    n.activeButtons[O.eV.RPAD_TOUCH] &&
+                    this.OnAnalogPad(O.eV.RPAD_TOUCH, t.x, t.y, t.nController));
           }
         }
       }
-      (0, C.gn)([x.a], V.prototype, "HandleSystemKeyEvents", null),
-        (0, C.gn)([x.a], V.prototype, "HandleControllerInputMessages", null);
-      class H extends N.oH {
+      (0, C.gn)([F.a], G.prototype, "HandleSystemKeyEvents", null),
+        (0, C.gn)([F.a], G.prototype, "HandleControllerInputMessages", null);
+      class W extends O.oH {
         constructor(e) {
           super(),
-            (this.m_lastButtonDown = N.eV.INVALID),
-            this.SetSourceType(N.Rr.KEYBOARD),
+            (this.m_lastButtonDown = O.eV.INVALID),
+            this.SetSourceType(O.Rr.KEYBOARD),
             e.addEventListener("keydown", this.OnKeyDown),
             e.addEventListener("keyup", this.OnKeyUp),
             e.addEventListener("blur", this.Reset);
         }
         OnKeyDown(e) {
           const t = this.TranslateKey(e);
-          t != N.eV.INVALID &&
+          t != O.eV.INVALID &&
             (e.preventDefault(),
             t != this.m_lastButtonDown &&
               (this.Reset(),
@@ -15752,15 +15528,15 @@
         }
         OnKeyUp(e) {
           const t = this.TranslateKey(e);
-          t != N.eV.INVALID &&
+          t != O.eV.INVALID &&
             (this.OnButtonUp(t),
-            (this.m_lastButtonDown = N.eV.INVALID),
+            (this.m_lastButtonDown = O.eV.INVALID),
             e.preventDefault());
         }
         Reset() {
-          this.m_lastButtonDown != N.eV.INVALID &&
+          this.m_lastButtonDown != O.eV.INVALID &&
             (this.OnButtonUp(this.m_lastButtonDown),
-            (this.m_lastButtonDown = N.eV.INVALID));
+            (this.m_lastButtonDown = O.eV.INVALID));
         }
         TranslateKey(e) {
           const t = e.code,
@@ -15773,68 +15549,68 @@
           if (n && r)
             switch (t) {
               case "Digit4":
-                return N.eV.TRIGGER_LEFT;
+                return O.eV.TRIGGER_LEFT;
               case "Digit5":
-                return N.eV.TRIGGER_RIGHT;
+                return O.eV.TRIGGER_RIGHT;
               default:
-                return N.eV.INVALID;
+                return O.eV.INVALID;
             }
           if (n)
             switch (t) {
               case "Digit1":
-                return N.eV.STEAM_GUIDE;
+                return O.eV.STEAM_GUIDE;
               case "Digit2":
-                return N.eV.STEAM_QUICK_MENU;
+                return O.eV.STEAM_QUICK_MENU;
               case "Digit3":
               case "Digit9":
-                return N.eV.SELECT;
+                return O.eV.SELECT;
               case "Digit4":
-                return N.eV.BUMPER_LEFT;
+                return O.eV.BUMPER_LEFT;
               case "Digit5":
-                return N.eV.BUMPER_RIGHT;
+                return O.eV.BUMPER_RIGHT;
               case "Digit6":
-                return N.eV.LSTICK_CLICK;
+                return O.eV.LSTICK_CLICK;
               case "Digit7":
-                return N.eV.RSTICK_CLICK;
+                return O.eV.RSTICK_CLICK;
               case "Digit8":
-                return N.eV.OPTIONS;
+                return O.eV.OPTIONS;
               case "Digit0":
-                return N.eV.START;
+                return O.eV.START;
             }
           switch (t) {
             case "Escape":
-              return N.eV.CANCEL;
+              return O.eV.CANCEL;
             case "Enter":
-              return i ? N.eV.INVALID : N.eV.OK;
+              return i ? O.eV.INVALID : O.eV.OK;
             case "Backspace":
-              return i ? N.eV.INVALID : N.eV.SECONDARY;
+              return i ? O.eV.INVALID : O.eV.SECONDARY;
             case "ArrowUp":
-              return N.eV.DIR_UP;
+              return O.eV.DIR_UP;
             case "ArrowDown":
-              return N.eV.DIR_DOWN;
+              return O.eV.DIR_DOWN;
             case "ArrowLeft":
-              return N.eV.DIR_LEFT;
+              return O.eV.DIR_LEFT;
             case "ArrowRight":
-              return N.eV.DIR_RIGHT;
+              return O.eV.DIR_RIGHT;
           }
-          return N.eV.INVALID;
+          return O.eV.INVALID;
         }
       }
-      (0, C.gn)([x.a], H.prototype, "OnKeyDown", null),
-        (0, C.gn)([x.a], H.prototype, "OnKeyUp", null),
-        (0, C.gn)([x.a], H.prototype, "Reset", null);
-      class j extends N.oH {
+      (0, C.gn)([F.a], W.prototype, "OnKeyDown", null),
+        (0, C.gn)([F.a], W.prototype, "OnKeyUp", null),
+        (0, C.gn)([F.a], W.prototype, "Reset", null);
+      class U extends O.oH {
         constructor(e) {
           super(),
             (this.m_nAccumulatedMouseMovement = 0),
             (this.m_bFirstMouseUpdate = !0),
-            this.SetSourceType(N.Rr.MOUSE),
+            this.SetSourceType(O.Rr.MOUSE),
             e.addEventListener("mousedown", this.OnMouseDown),
             e.addEventListener("mousemove", this.OnMouseMove),
             e.addEventListener("blur", this.Reset);
         }
         OnMouseDown(e) {
-          e.defaultPrevented || this.OnNavigationTypeChanged(N.Rr.MOUSE);
+          e.defaultPrevented || this.OnNavigationTypeChanged(O.Rr.MOUSE);
         }
         OnMouseMove(e) {
           if (!e.defaultPrevented) {
@@ -15848,7 +15624,7 @@
               Math.abs(e.screenX - this.m_nLastScreenX) +
               Math.abs(e.screenY - this.m_nLastScreenY)),
               this.m_nAccumulatedMouseMovement > 500 &&
-                (this.Reset(), this.OnNavigationTypeChanged(N.Rr.MOUSE));
+                (this.Reset(), this.OnNavigationTypeChanged(O.Rr.MOUSE));
           }
         }
         Reset() {
@@ -15856,79 +15632,14 @@
             (this.m_bFirstMouseUpdate = !0);
         }
       }
-      (0, C.gn)([x.a], j.prototype, "OnMouseDown", null),
-        (0, C.gn)([x.a], j.prototype, "OnMouseMove", null),
-        (0, C.gn)([x.a], j.prototype, "Reset", null);
-      var z = n(90666),
-        X = n(73935);
-      class K {
-        constructor() {
-          (this.m_GamepadNavigationController = new L.ZT()),
-            z.De.IN_GAMEPADUI &&
-              (this.m_GamepadNavigationController.RegisterInputSource(new V()),
-              this.m_GamepadNavigationController.RegisterInputSource(new P())),
-            "dev" == z.De.WEB_UNIVERSE &&
-              (this.m_GamepadNavigationController.RegisterInputSource(
-                new H(window)
-              ),
-              this.m_GamepadNavigationController.RegisterInputSource(
-                new j(window)
-              ));
-        }
-        GetNavigationController() {
-          return this.m_GamepadNavigationController;
-        }
-        static Get() {
-          return (
-            K.s_Singleton ||
-              ((K.s_Singleton = new K()),
-              "dev" == z.De.WEB_UNIVERSE &&
-                (window.g_StoreWebNavStore = K.s_Singleton)),
-            K.s_Singleton
-          );
-        }
-      }
-      function Z(e) {
-        const { children: t, navID: n, closeModal: i } = e,
-          s = r.createRef(),
-          o = (function () {
-            let e = window.legacyWebFocusNavController;
-            return (
-              e || (e = K.Get().GetNavigationController()),
-              e.SetGamepadEventUpdateBatcher(X.unstable_batchedUpdates),
-              e
-            );
-          })(),
-          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return z.De.IN_GAMEPADUI && !z.De.IN_LIBRARY
-          ? r.createElement(
-              I.Fe,
-              {
-                navID: n,
-                NavigationManager: o,
-                navTreeRef: s,
-                onCancelButton: i,
-                className: y.GamepadOnlyModalWrapper,
-              },
-              r.createElement(
-                O.O,
-                null,
-                r.createElement(
-                  F.s,
-                  {
-                    className: y.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: a,
-                    focusableIfNoChildren: !0,
-                  },
-                  t
-                )
-              )
-            )
-          : r.createElement(r.Fragment, null, t);
-      }
-      var Y = n(29323),
-        $ = n(41311);
-      let q = class extends r.Component {
+      (0, C.gn)([F.a], U.prototype, "OnMouseDown", null),
+        (0, C.gn)([F.a], U.prototype, "OnMouseMove", null),
+        (0, C.gn)([F.a], U.prototype, "Reset", null);
+      var V = n(90666);
+      n(73935);
+      var H = n(29323),
+        j = n(41311);
+      let z = class extends r.Component {
         Cancel() {
           (this.props.onCancel && this.props.onCancel()) ||
             (this.props.closeModal && this.props.closeModal());
@@ -15959,17 +15670,17 @@
                   this.props.className
                 ),
                 onSubmit: this.OK,
-                bCenterVertically: !z.De.IN_GAMEPADUI,
+                bCenterVertically: !V.De.IN_GAMEPADUI,
               },
               this.props.children
             )
           );
         }
       };
-      (0, C.gn)([B.ak], q.prototype, "Cancel", null),
-        (0, C.gn)([B.ak], q.prototype, "OK", null),
-        (q = (0, C.gn)([Y.Pi], q));
-      let Q = class extends r.Component {
+      (0, C.gn)([B.ak], z.prototype, "Cancel", null),
+        (0, C.gn)([B.ak], z.prototype, "OK", null),
+        (z = (0, C.gn)([H.Pi], z));
+      let X = class extends r.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -15996,7 +15707,7 @@
               "bAlertDialog",
               "children",
             ]),
-            m = s || (0, $.Xx)("#Button_Close");
+            m = s || (0, j.Xx)("#Button_Close");
           let h = r.createElement(i.o9, {
             bOKDisabled: this.props.bOKDisabled,
             bCancelDisabled: this.props.bCancelDisabled,
@@ -16021,10 +15732,10 @@
                   bUpdateDisabled: this.props.bMiddleDisabled,
                 })),
             r.createElement(
-              q,
+              z,
               Object.assign({}, d),
               r.createElement(
-                F.s,
+                I.s,
                 { onCancelButton: this.Cancel },
                 r.createElement(
                   i.h4,
@@ -16044,14 +15755,14 @@
           );
         }
       };
-      (0, C.gn)([B.ak], Q.prototype, "Cancel", null),
-        (Q = (0, C.gn)([Y.Pi], Q));
-      let J = class extends r.Component {
+      (0, C.gn)([B.ak], X.prototype, "Cancel", null),
+        (X = (0, C.gn)([H.Pi], X));
+      let K = class extends r.Component {
         render() {
           const e = Object.assign(
             {
-              strTitle: (0, $.Xx)("#Error_FailureNotice"),
-              strDescription: (0, $.Xx)("#Error_GenericFailureDescription"),
+              strTitle: (0, j.Xx)("#Error_FailureNotice"),
+              strDescription: (0, j.Xx)("#Error_GenericFailureDescription"),
               bAlertDialog: !0,
               bDestructiveWarning: !0,
               onOK: () => {},
@@ -16059,10 +15770,10 @@
             },
             this.props
           );
-          return r.createElement(Q, Object.assign({}, e));
+          return r.createElement(X, Object.assign({}, e));
         }
       };
-      J = (0, C.gn)([Y.Pi], J);
+      K = (0, C.gn)([H.Pi], K);
     },
     74091: (e, t, n) => {
       "use strict";
@@ -16183,70 +15894,65 @@
     95598: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $06: () => z,
+        $06: () => V,
         $gZ: () => m,
-        Bh5: () => ie,
-        Ehc: () => I,
-        GhU: () => C,
-        I8b: () => ee,
-        IWH: () => V,
-        JrY: () => B,
-        KJh: () => ue,
-        KKY: () => be,
-        Lk$: () => $,
-        NP6: () => F,
-        P7E: () => b,
-        P9w: () => G,
+        Bh5: () => te,
+        Ehc: () => M,
+        I8b: () => q,
+        IWH: () => G,
+        JrY: () => y,
+        KJh: () => se,
+        KKY: () => he,
+        Lk$: () => K,
+        P9w: () => x,
         SUY: () => g,
-        Uos: () => k,
-        V7n: () => P,
-        VR: () => X,
-        Vgm: () => Q,
-        WPl: () => A,
-        WWB: () => le,
-        X: () => v,
-        XBH: () => H,
-        YVI: () => fe,
-        YqJ: () => L,
+        Uos: () => R,
+        V7n: () => N,
+        VR: () => H,
+        Vgm: () => Y,
+        WPl: () => L,
+        WWB: () => ie,
+        X: () => b,
+        XBH: () => W,
+        YVI: () => me,
+        YqJ: () => I,
         YtI: () => p,
-        ZJH: () => se,
         Zrf: () => d,
-        dLw: () => ae,
-        daM: () => te,
-        dzL: () => D,
-        ffh: () => E,
-        gR: () => N,
-        ge: () => R,
+        dLw: () => re,
+        daM: () => Q,
+        dzL: () => C,
+        ffh: () => S,
+        gR: () => O,
+        ge: () => B,
         k4K: () => f,
-        lsH: () => U,
-        mBz: () => _e,
-        mKE: () => T,
-        mKt: () => ne,
-        miF: () => ge,
-        opd: () => de,
-        pVO: () => w,
-        pkz: () => S,
-        r6F: () => x,
+        lsH: () => P,
+        mBz: () => de,
+        mKE: () => D,
+        mKt: () => J,
+        miF: () => ue,
+        opd: () => oe,
+        pVO: () => v,
+        pkz: () => w,
+        r6F: () => F,
         ret: () => h,
-        shV: () => y,
-        sqQ: () => me,
-        tEX: () => j,
-        tLe: () => Y,
-        thP: () => O,
+        shV: () => E,
+        sqQ: () => ae,
+        tEX: () => U,
+        tLe: () => X,
+        thP: () => k,
         tkI: () => _,
-        uZu: () => re,
-        ui7: () => W,
-        vJ$: () => oe,
-        vT2: () => K,
-        vyu: () => ve,
-        wUs: () => M,
-        wn$: () => J,
-        wr9: () => Z,
-        x0L: () => pe,
-        xg: () => ce,
-        yTr: () => he,
-        yVt: () => q,
-        z5E: () => we,
+        uZu: () => ee,
+        ui7: () => A,
+        vJ$: () => ne,
+        vT2: () => j,
+        vyu: () => pe,
+        wUs: () => T,
+        wn$: () => $,
+        wr9: () => z,
+        x0L: () => ce,
+        yTr: () => le,
+        yVt: () => Z,
+        z5E: () => ge,
       });
       var r = n(70655),
         i = n(67294),
@@ -16465,31 +16171,7 @@
               )
             );
       }
-      function b() {
-        return i.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            x: "0px",
-            y: "0px",
-            width: "100px",
-            height: "91.582px",
-            viewBox: "0 0 100 91.582",
-            enableBackground: "new 0 0 100 91.582",
-          },
-          i.createElement(
-            "g",
-            null,
-            i.createElement("path", {
-              clipPath: "url(#SVGID_2_)",
-              d: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\r\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\r\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\r\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\r\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\r\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\r\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\r\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\r\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\r\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\r\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\r\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\r\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\r\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\r\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\r\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\r\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\r\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\r\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\r\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\r\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\r\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\r\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\r\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\r\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\r\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\r\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\r\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
-            })
-          )
-        );
-      }
-      function v(e) {
+      function b(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -16514,7 +16196,7 @@
           )
         );
       }
-      function w(e) {
+      function v(e) {
         const t = e.color || "#FFFFFF";
         return i.createElement(
           "svg",
@@ -16551,7 +16233,7 @@
           })
         );
       }
-      function S() {
+      function w() {
         return i.createElement(
           "svg",
           {
@@ -16574,7 +16256,7 @@
           })
         );
       }
-      function E(e) {
+      function S(e) {
         const { muted: t, className: n } = e;
         return i.createElement(
           "svg",
@@ -16642,16 +16324,7 @@
           )
         );
       }
-      function C() {
-        return i.createElement(
-          "svg",
-          { width: "50px", height: "25px", viewBox: "0 0 50 25" },
-          i.createElement("path", {
-            d: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
-          })
-        );
-      }
-      function y() {
+      function E() {
         return i.createElement(
           "svg",
           {
@@ -16671,7 +16344,7 @@
           })
         );
       }
-      function D() {
+      function C() {
         return i.createElement(
           "svg",
           {
@@ -16693,7 +16366,7 @@
           })
         );
       }
-      function B(e) {
+      function y(e) {
         var t;
         return i.createElement(
           "svg",
@@ -16722,7 +16395,7 @@
           })
         );
       }
-      function T(e) {
+      function D(e) {
         let t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         const [r] = (0, i.useState)(Math.random().toString());
@@ -16795,7 +16468,7 @@
           })
         );
       }
-      function R(e) {
+      function B(e) {
         const t = e.color || "#020202";
         return i.createElement(
           "svg",
@@ -16852,7 +16525,7 @@
           )
         );
       }
-      function M(e) {
+      function T(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -17077,7 +16750,7 @@
           )
         );
       }
-      function k(e) {
+      function R(e) {
         return u.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -17115,7 +16788,7 @@
               })
             );
       }
-      function I(e) {
+      function M(e) {
         return i.createElement(
           "svg",
           {
@@ -17150,7 +16823,7 @@
           })
         );
       }
-      function O() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -17170,43 +16843,7 @@
           })
         );
       }
-      function F(e) {
-        return i.createElement(
-          "svg",
-          {
-            style: { transform: `rotate(${e.angle}deg)` },
-            version: "1.1",
-            id: "arrowBase",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DoubleArrow",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
-          i.createElement("polyline", {
-            className: "Arrow1",
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "23",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
-          }),
-          !e.singlearrow &&
-            i.createElement("polyline", {
-              className: "Arrow2",
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "23",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
-            })
-        );
-      }
-      function L() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -17242,7 +16879,7 @@
           })
         );
       }
-      function N() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -17268,7 +16905,7 @@
           })
         );
       }
-      function x() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -17301,7 +16938,7 @@
           })
         );
       }
-      function A() {
+      function L() {
         return i.createElement(
           "svg",
           {
@@ -17323,7 +16960,7 @@
           )
         );
       }
-      function P(e) {
+      function N(e) {
         return i.createElement(
           "svg",
           {
@@ -17344,7 +16981,7 @@
           })
         );
       }
-      function G(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -17382,7 +17019,7 @@
           })
         );
       }
-      function W(e) {
+      function A(e) {
         const t = (0, a.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -17413,7 +17050,7 @@
           })
         );
       }
-      function U() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -17439,7 +17076,7 @@
           })
         );
       }
-      function V() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -17460,7 +17097,7 @@
           )
         );
       }
-      function H() {
+      function W() {
         return i.createElement(
           "svg",
           {
@@ -17480,7 +17117,7 @@
           )
         );
       }
-      function j() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -17517,7 +17154,7 @@
           )
         );
       }
-      function z() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -17545,7 +17182,7 @@
           })
         );
       }
-      function X() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -17567,7 +17204,7 @@
           })
         );
       }
-      function K() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -17612,7 +17249,7 @@
           })
         );
       }
-      function Z() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -17645,7 +17282,7 @@
           })
         );
       }
-      function Y() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -17664,7 +17301,7 @@
           })
         );
       }
-      function $() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -17683,7 +17320,7 @@
           })
         );
       }
-      function q() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -17704,7 +17341,7 @@
           })
         );
       }
-      function Q() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -17735,7 +17372,7 @@
           })
         );
       }
-      function J() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -17754,7 +17391,7 @@
           })
         );
       }
-      function ee() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -17792,7 +17429,7 @@
           })
         );
       }
-      function te() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -17828,7 +17465,7 @@
           })
         );
       }
-      function ne() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -17853,7 +17490,7 @@
           })
         );
       }
-      function re() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -17875,7 +17512,7 @@
           })
         );
       }
-      function ie() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -17915,35 +17552,7 @@
           })
         );
       }
-      function se() {
-        return i.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_3_copy",
-            xmlns: "http://www.w3.org/2000/svg",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 256 256",
-          },
-          i.createElement(
-            "g",
-            { id: "Layer_3_copy" },
-            i.createElement(
-              "g",
-              { id: "g4768_1_", transform: "translate(-6.9308024,-10)" },
-              i.createElement("g", { id: "g4763_1_" })
-            ),
-            i.createElement("path", {
-              d: "M206.3,36.6c-19.4,0-35.8,14.1-40.3,33H24.8c-6,0-10.8,4.8-10.8,10.8s4.8,10.8,10.8,10.8h141.3\r\n\t\t\t\tc4.7,18.6,20.9,32.4,40.2,32.4c22.9,0,41.5-19.5,41.5-43.5C247.9,56.2,229.2,36.6,206.3,36.6z M206.3,109.7\r\n\t\t\t\tc-15.2,0-27.5-13.2-27.5-29.5c0-16.3,12.4-29.5,27.5-29.5s27.5,13.2,27.5,29.5C233.9,96.4,221.5,109.7,206.3,109.7z",
-            }),
-            i.createElement("path", {
-              d: "M230.4,157.3H107.9c-4.6-14.6-18.3-25.2-34.3-25.2s-29.7,10.6-34.3,25.2H24.8c-6,0-10.8,4.8-10.8,10.8\r\n\t\t\t\tS18.9,179,24.8,179h14.3c4.6,14.6,18.3,25.2,34.3,25.2s29.7-10.6,34.3-25.2h122.5c6,0,10.8-4.8,10.8-10.8S236.4,157.3,230.4,157.3z\r\n\t\t\t\tM73.5,189.8c-8,0-14.9-4.3-18.7-10.8l0,0c-0.7-1.2-1.3-2.4-1.7-3.7c0,0,0-0.1,0-0.1c-0.1-0.4-0.2-0.8-0.4-1.2c0-0.1,0-0.1,0-0.2\r\n\t\t\t\tc-0.2-0.8-0.4-1.7-0.5-2.6c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.7-0.1-1c0-0.1,0-0.2,0-0.4c0-0.4,0-0.9,0-1.3s0-0.9,0-1.3\r\n\t\t\t\tc0-0.1,0-0.2,0-0.4c0-0.3,0.1-0.7,0.1-1c0-0.1,0-0.2,0-0.3c0.1-0.9,0.3-1.8,0.5-2.6c0-0.1,0-0.1,0-0.2c0.1-0.4,0.2-0.8,0.4-1.2\r\n\t\t\t\tc0,0,0-0.1,0-0.1c0.5-1.3,1-2.6,1.7-3.7c3.7-6.4,10.7-10.8,18.7-10.8c8,0,14.9,4.3,18.7,10.8c0.7,1.2,1.3,2.4,1.7,3.7\r\n\t\t\t\tc0,0,0,0.1,0,0.1c0.1,0.4,0.3,0.8,0.4,1.2c0,0.1,0,0.1,0,0.2c0.2,0.8,0.4,1.7,0.5,2.6c0,0.1,0,0.2,0,0.3c0,0.3,0.1,0.7,0.1,1\r\n\t\t\t\tc0,0.1,0,0.2,0,0.4c0,0.4,0,0.9,0,1.3s0,0.9,0,1.3c0,0.1,0,0.2,0,0.4c0,0.3-0.1,0.7-0.1,1c0,0.1,0,0.2,0,0.3\r\n\t\t\t\tc-0.1,0.9-0.3,1.8-0.5,2.6c0,0.1,0,0.1,0,0.2c-0.1,0.4-0.2,0.8-0.4,1.2c0,0,0,0.1,0,0.1c-0.5,1.3-1,2.6-1.7,3.7l0,0\r\n\t\t\t\tC88.5,185.4,81.5,189.8,73.5,189.8z",
-            })
-          )
-        );
-      }
-      function oe() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -17959,7 +17568,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function ae() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -17978,7 +17587,7 @@
           })
         );
       }
-      function le() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -17998,44 +17607,7 @@
           })
         );
       }
-      function ce(e, t) {
-        return u.De.IN_GAMEPADUI
-          ? i.createElement(
-              "svg",
-              Object.assign(
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                },
-                e
-              ),
-              i.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M2 4V16V20L7 16H24V4H2ZM12 20V32H29L34 36V32V20H12Z",
-                fill: "currentColor",
-              })
-            )
-          : i.createElement(
-              "svg",
-              {
-                version: "1.1",
-                id: "Layer_2",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: e.className,
-                x: "0px",
-                y: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 409.6 409.6",
-              },
-              i.createElement("path", {
-                d: "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z",
-              })
-            );
-      }
-      function ue(e) {
+      function se(e) {
         return i.createElement(
           "svg",
           {
@@ -18054,7 +17626,7 @@
           })
         );
       }
-      function de() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -18085,7 +17657,7 @@
           )
         );
       }
-      function me(e) {
+      function ae(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -18101,7 +17673,7 @@
           })
         );
       }
-      function he() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -18119,7 +17691,7 @@
           })
         );
       }
-      function pe() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -18141,7 +17713,7 @@
           )
         );
       }
-      function ge() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -18179,7 +17751,7 @@
           )
         );
       }
-      function _e(e) {
+      function de(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -18197,7 +17769,7 @@
           })
         );
       }
-      function fe(e) {
+      function me(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18225,7 +17797,7 @@
           })
         );
       }
-      function be(e) {
+      function he(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18253,7 +17825,7 @@
           })
         );
       }
-      function ve(e) {
+      function pe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18281,7 +17853,7 @@
           })
         );
       }
-      function we(e) {
+      function ge(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -18568,7 +18140,7 @@
       var r = n(70655),
         i = n(22188),
         s = n(67294),
-        o = (n(26149), n(92398), n(57287)),
+        o = (n(26149), n(54698), n(57287)),
         a = n(53622),
         l = n(41311),
         c = n(90666),
@@ -18958,30 +18530,19 @@
     },
     48780: (e, t, n) => {
       "use strict";
-      function r(e) {
-        if ((null == e ? void 0 : e.length) > 1) {
-          let t = e.length;
-          for (; 0 !== t; ) {
-            let n = Math.floor(Math.random() * t);
-            t -= 1;
-            let r = e[t];
-            (e[t] = e[n]), (e[n] = r);
-          }
-        }
-      }
-      function i(e, t, n) {
+      function r(e, t, n) {
         t < 0 ||
           n < 0 ||
           (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
       }
-      function s(e, t) {
-        return o(e, (e) => t == e);
+      function i(e, t) {
+        return s(e, (e) => t == e);
       }
-      function o(e, t) {
+      function s(e, t) {
         let n = e.findIndex(t);
         return n >= 0 && (e.splice(n, 1), !0);
       }
-      function a(e, t, n) {
+      function o(e, t, n) {
         let r = 0,
           i = e.length - 1;
         for (; r <= i; ) {
@@ -18997,7 +18558,7 @@
         }
         return i;
       }
-      function l(e, t, n) {
+      function a(e, t, n) {
         return (
           e ||
             console.error(
@@ -19006,18 +18567,17 @@
           e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
         );
       }
-      function c(e) {
+      function l(e) {
         const t = new Set();
         return e.forEach((e) => t.add(e)), Array.from(t);
       }
       n.d(t, {
-        LG: () => l,
-        LQ: () => r,
-        Qf: () => o,
-        Zf: () => s,
-        hV: () => i,
-        kp: () => c,
-        sL: () => a,
+        LG: () => a,
+        Qf: () => s,
+        Zf: () => i,
+        hV: () => r,
+        kp: () => l,
+        sL: () => o,
       });
     },
     77520: (e, t, n) => {
@@ -19487,7 +19047,6 @@
         LJ: () => u,
         LZ: () => f,
         Mh: () => c.Mh,
-        Np: () => c.Np,
         XG: () => c.XG,
         Xx: () => d,
         Yt: () => S,
@@ -19502,7 +19061,7 @@
       });
       var r = n(67294),
         i = n(26149),
-        s = n(92398),
+        s = n(54698),
         o = n(90666),
         a = n(48780),
         l = n(99533),
@@ -20796,7 +20355,7 @@
     13001: (e, t, n) => {
       "use strict";
       var r = n(70655),
-        i = (n(56084), n(2422)),
+        i = (n(56084), n(911)),
         s = n(67294),
         o = n(73935),
         a = n(77520);
@@ -20876,211 +20435,461 @@
             l.Yt.InitDirect(n);
         });
     },
-    2422: (e, t, n) => {
+    911: (e, t, n) => {
       "use strict";
-      n.d(t, { g: () => F, R: () => L });
+      n.d(t, { g: () => H, R: () => j });
       var r = n(9355),
         i = n(71969),
         s = n.n(i),
         o = n(67294),
         a = n(7573),
-        l = n(55281),
-        c = n(52454),
-        u = n(41311),
-        d = n(90666);
-      const m = (e) =>
+        l = n(28777),
+        c = n(35921),
+        u = n(95598);
+      var d = n(39853),
+        m = n(15396),
+        h = n(54452),
+        p = n(90666);
+      class g extends o.Component {
+        render() {
+          const { showArrows: e } = this.props,
+            t = this.props.visibleSlides,
+            n = this.props.totalSlides,
+            r = this.props.currentSlide;
+          if (t >= n) return null;
+          const i = (100 * r) / n,
+            s = 100 * (1 - Math.min(r + t, n) / n),
+            c = i + (50 * t) / n,
+            m = 100 - c;
+          return o.createElement(
+            "div",
+            { className: d.pipScrollerContainer },
+            e &&
+              o.createElement(
+                l.jp,
+                {
+                  className: (0, a.Z)(
+                    d.pipScrollButton,
+                    d.left,
+                    d.carouselNavButton
+                  ),
+                },
+                o.createElement(u.thP, null)
+              ),
+            o.createElement(
+              "div",
+              { className: d.pipScroller },
+              o.createElement("div", { className: d.scrollBackground }),
+              o.createElement("div", {
+                className: d.scrollForeground,
+                style: { left: i + "%", right: s + "%" },
+              }),
+              o.createElement(
+                "div",
+                {
+                  className: d.scrollNavDiv,
+                  style: { left: "0%", width: c + "%" },
+                },
+                o.createElement(
+                  l.jp,
+                  {
+                    className: (0, a.Z)(d.carouselNavButton, d.scrollNavButton),
+                  },
+                  o.createElement("div", null)
+                )
+              ),
+              o.createElement(
+                "div",
+                {
+                  className: d.scrollNavDiv,
+                  style: { right: "0%", width: m + "%" },
+                },
+                o.createElement(
+                  l.P1,
+                  {
+                    className: (0, a.Z)(d.carouselNavButton, d.scrollNavButton),
+                  },
+                  o.createElement("div", null)
+                )
+              )
+            ),
+            e &&
+              o.createElement(
+                l.P1,
+                {
+                  className: (0, a.Z)(
+                    d.pipScrollButton,
+                    d.right,
+                    d.carouselNavButton
+                  ),
+                },
+                o.createElement(u.thP, null)
+              )
+          );
+        }
+      }
+      const _ = (0, l.Rq)(g, (e) => ({
+        currentSlide: e.currentSlide,
+        totalSlides: e.totalSlides,
+        visibleSlides: e.visibleSlides,
+      }));
+      function f(e) {
+        const t = () => o.Children.count(e.children),
+          n = t(),
+          r = Math.min(t(), e.visibleElements);
+        if (!n || !r) return null;
+        const i = r < n,
+          s = e.hideArrows || !i,
+          u = !i || e.hidePips;
+        let h = 4 / 3,
+          g = !0;
+        e.slideAspectRatio && ((h = e.slideAspectRatio), (g = !1));
+        const f = `items_in_row_${e.visibleElements}`;
+        return o.createElement(
+          c.s,
+          {
+            "flow-children": "row",
+            className: (0, a.Z)(d.carouselBody, e.className, f),
+          },
+          o.createElement(
+            l.sj,
+            {
+              visibleSlides: e.visibleElements,
+              totalSlides: t(),
+              naturalSlideWidth: 100 * h,
+              naturalSlideHeight: 100,
+              step: e.visibleElements,
+              infinite: !e.disableEdgeWrap,
+              isIntrinsicHeight: g,
+              touchEnabled: !0,
+              lockOnWindowScroll: !0,
+              orientation: "horizontal",
+              disableKeyboard: !0,
+            },
+            o.createElement(
+              v,
+              {
+                bHideArrows: s,
+                bAutoAdvance: e.bAutoAdvance && !p.De.IN_GAMEPADUI,
+                onSlide: e.onSlide,
+              },
+              o.Children.map(e.children, (t, n) => {
+                const r = e.bLazyRenderChildren
+                  ? o.createElement(
+                      m.Y,
+                      {
+                        rootMargin: "0px 100% 0px 100%",
+                        bHorizontal: !0,
+                        placeholderWidth: 1,
+                        placeholderHeight: 1,
+                      },
+                      t
+                    )
+                  : t;
+                return o.createElement(
+                  l.Mi,
+                  { className: d.innerSlide, key: "slide_" + n, index: n },
+                  r
+                );
+              })
+            ),
+            !u &&
+              (e.useTestScrollbar
+                ? o.createElement(_, { showArrows: s, carouselStore: null })
+                : o.createElement(
+                    "div",
+                    { className: d.breadcrumbContainer },
+                    ((t) =>
+                      o.Children.map(e.children, (e, n) =>
+                        n % t != 0
+                          ? null
+                          : o.createElement(
+                              l.oT,
+                              { slide: n, className: d.pip },
+                              o.createElement("img", {
+                                src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC",
+                              })
+                            )
+                      ))(r)
+                  ))
+          )
+        );
+      }
+      function b(e) {
+        e && (window.clearTimeout(e.current), (e.current = null));
+      }
+      function v(e) {
+        const { bHideArrows: t, bAutoAdvance: n, children: r, onSlide: i } = e,
+          s = o.useContext(l.ro),
+          c = o.useRef(s.state.currentSlide),
+          [m, p] = o.useState(null),
+          [g, _] = o.useState(!!n),
+          f = o.useRef(null),
+          v = o.useRef(null);
+        o.useEffect(() => {
+          const e = () => {
+            f.current = window.setTimeout(() => {
+              if (f.current) {
+                b(f);
+                const e = (s.state.currentSlide + 1) % s.state.totalSlides;
+                s.setStoreState({ currentSlide: e });
+              }
+            }, 8e3);
+          };
+          g && e();
+          const t = () => {
+            const t = c.current,
+              n = s.state.currentSlide;
+            i && i(n), p(n > t ? "Right" : n < t ? "Left" : null), b(v);
+            (v.current = window.setTimeout(() => {
+              v.current && (p(null), b(v));
+            }, 1e3)),
+              (c.current = n),
+              f.current ? (b(f), _(!1)) : g && e();
+          };
+          return (
+            s.subscribe(t),
+            () => {
+              s.unsubscribe(t), b(f), b(v);
+            }
+          );
+        }, [s, g]);
+        const w = !!m && "CarouselSliding" + m;
+        return o.createElement(
+          "div",
+          { className: (0, a.Z)(d.sliderBody, "SliderBody", w) },
+          !t &&
+            o.createElement(
+              l.jp,
+              {
+                className: (0, a.Z)(
+                  d.carouselBtnCtn,
+                  d.left,
+                  d.carouselNavButton,
+                  "CarouselBtnLeft"
+                ),
+              },
+              o.createElement(u.thP, null)
+            ),
+          o.createElement(
+            l.iR,
+            {
+              className: h.U.GetScrollableClassname(),
+              classNameTray: d.slideTrayCustomize,
+              classNameAnimation: d.DisableSliderMotion,
+            },
+            r
+          ),
+          !t &&
+            o.createElement(
+              l.P1,
+              {
+                className: (0, a.Z)(
+                  d.carouselBtnCtn,
+                  d.right,
+                  d.carouselNavButton,
+                  "CarouselBtnRight"
+                ),
+              },
+              o.createElement(u.thP, null)
+            )
+        );
+      }
+      var w = n(52454),
+        S = n(41311);
+      const E = (e) =>
           o.createElement(
             o.Fragment,
             null,
-            o.createElement(p, null),
+            o.createElement(y, null),
             o.createElement(
               "div",
               { className: "agenda_title" },
-              (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Speakers")
+              (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Speakers")
             ),
-            o.createElement(_, null)
+            o.createElement(B, null)
           ),
-        h = (e) =>
+        C = (e) =>
           o.createElement(
             "div",
-            { className: c.Container },
+            { className: w.Container },
             o.createElement(
               "div",
-              { className: c.AgendaImageCtn },
+              { className: w.AgendaImageCtn },
               o.createElement("img", {
-                className: c.AgendaScreenshot,
-                src: d.De.COMMUNITY_CDN_ASSET_URL + e.screenshot,
+                className: w.AgendaScreenshot,
+                src: p.De.COMMUNITY_CDN_ASSET_URL + e.screenshot,
               })
             ),
             o.createElement(
               "div",
-              { className: c.RightColumn },
+              { className: w.RightColumn },
               o.createElement(
                 "div",
-                { className: c.BubbleCtn },
+                { className: w.BubbleCtn },
                 o.createElement(
                   "div",
-                  { className: c.BubbleTopLine },
+                  { className: w.BubbleTopLine },
                   e.strSpeakers
                 ),
-                o.createElement("div", { className: c.BubbleTime }, e.strTime),
-                o.createElement("div", { className: c.BubbleTitle }, e.strTitle)
+                o.createElement("div", { className: w.BubbleTime }, e.strTime),
+                o.createElement("div", { className: w.BubbleTitle }, e.strTitle)
               ),
-              o.createElement("div", { className: c.AgendaDescCtn }, e.strDesc)
+              o.createElement("div", { className: w.AgendaDescCtn }, e.strDesc)
             )
           ),
-        p = (e) =>
+        y = (e) =>
           o.createElement(
             "div",
-            { className: c.CarouselContainer },
+            { className: w.CarouselContainer },
             o.createElement(
-              l.l,
+              f,
               {
                 hideArrows: !1,
                 visibleElements: 1,
                 useTestScrollbar: !1,
                 bLazyRenderChildren: !1,
                 disableEdgeWrap: !1,
-                className: (0, a.Z)(c.CarouselItems),
+                className: (0, a.Z)(w.CarouselItems),
               },
-              o.createElement(h, {
+              o.createElement(C, {
                 key: 1,
-                strDesc: (0, u.Xx)(
+                strDesc: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_gautam.png",
-                strTime: (0, u.Xx)(
+                strTime: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Time"
                 ),
-                strTitle: (0, u.Xx)(
+                strTitle: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Title"
                 ),
-                strSpeakers: (0, u.Xx)(
+                strSpeakers: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session1_Speakers"
                 ),
               }),
-              o.createElement(h, {
+              o.createElement(C, {
                 key: 2,
-                strDesc: (0, u.Xx)(
+                strDesc: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_alden_and_adil.png",
-                strTime: (0, u.Xx)(
+                strTime: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Time"
                 ),
-                strTitle: (0, u.Xx)(
+                strTitle: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Title"
                 ),
-                strSpeakers: (0, u.Xx)(
+                strSpeakers: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session2_Speakers"
                 ),
               }),
-              o.createElement(h, {
+              o.createElement(C, {
                 key: 3,
-                strDesc: (0, u.Xx)(
+                strDesc: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_jenny.png",
-                strTime: (0, u.Xx)(
+                strTime: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Time"
                 ),
-                strTitle: (0, u.Xx)(
+                strTitle: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Title"
                 ),
-                strSpeakers: (0, u.Xx)(
+                strSpeakers: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session3_Speakers"
                 ),
               }),
-              o.createElement(h, {
+              o.createElement(C, {
                 key: 4,
-                strDesc: (0, u.Xx)(
+                strDesc: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Desc"
                 ),
                 screenshot: "steamworksevents/screenshot_joe.png",
-                strTime: (0, u.Xx)(
+                strTime: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Time"
                 ),
-                strTitle: (0, u.Xx)(
+                strTitle: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Title"
                 ),
-                strSpeakers: (0, u.Xx)(
+                strSpeakers: (0, S.Xx)(
                   "#SteamworksEvents_BuildingCommunity_Session4_Speakers"
                 ),
               })
             )
           ),
-        g = (e) =>
+        D = (e) =>
           o.createElement(
             "div",
-            { className: c.SpeakerContainer },
+            { className: w.SpeakerContainer },
             o.createElement("img", {
               title: e.strTitle,
-              src: d.De.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
+              src: p.De.COMMUNITY_CDN_ASSET_URL + e.imgHeadshot,
             }),
             o.createElement(
               "div",
-              { className: c.SpeakerBio },
-              o.createElement("div", { className: c.SpeakerTitle }, e.strTitle),
+              { className: w.SpeakerBio },
+              o.createElement("div", { className: w.SpeakerTitle }, e.strTitle),
               e.strBio
             )
           ),
-        _ = (e) =>
+        B = (e) =>
           o.createElement(
             "div",
-            { className: c.SpeakersListContainer },
-            o.createElement(g, {
+            { className: w.SpeakersListContainer },
+            o.createElement(D, {
               imgHeadshot: "steamworksevents/gautam_headshot.png",
-              strTitle: (0, u.Xx)(
+              strTitle: (0, S.Xx)(
                 "#SteamworksEvents_BuildingCommunity_GautamTitle"
               ),
-              strBio: (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Gautam"),
+              strBio: (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Gautam"),
             }),
-            o.createElement(g, {
+            o.createElement(D, {
               imgHeadshot: "steamworksevents/alden_headshot.png",
-              strTitle: (0, u.Xx)(
+              strTitle: (0, S.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AldenTitle"
               ),
-              strBio: (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Alden"),
+              strBio: (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Alden"),
             }),
-            o.createElement(g, {
+            o.createElement(D, {
               imgHeadshot: "steamworksevents/adil_headshot.png",
-              strTitle: (0, u.Xx)(
+              strTitle: (0, S.Xx)(
                 "#SteamworksEvents_BuildingCommunity_AdilTitle"
               ),
-              strBio: (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Adil"),
+              strBio: (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Adil"),
             }),
-            o.createElement(g, {
+            o.createElement(D, {
               imgHeadshot: "steamworksevents/jenny_headshot.png",
-              strTitle: (0, u.Xx)(
+              strTitle: (0, S.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JennyTitle"
               ),
-              strBio: (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Jenny"),
+              strBio: (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Jenny"),
             }),
-            o.createElement(g, {
+            o.createElement(D, {
               imgHeadshot: "steamworksevents/joe_headshot.png",
-              strTitle: (0, u.Xx)(
+              strTitle: (0, S.Xx)(
                 "#SteamworksEvents_BuildingCommunity_JoeTitle"
               ),
-              strBio: (0, u.Xx)("#SteamworksEvents_BuildingCommunity_Joe"),
+              strBio: (0, S.Xx)("#SteamworksEvents_BuildingCommunity_Joe"),
             })
           );
-      var f = n(73727),
-        b = n(5977),
-        v = n(88254),
-        w = n(27100),
-        S = n(74091),
-        E = n(23989);
-      const C = o.lazy(() =>
+      var T = n(73727),
+        R = n(5977),
+        M = n(88254),
+        k = n(27100),
+        I = n(74091),
+        O = n(23989);
+      const F = o.lazy(() =>
           Promise.all([n.e(477), n.e(5888), n.e(4535)]).then(n.bind(n, 49686))
         ),
-        y = o.lazy(() => n.e(7762).then(n.bind(n, 93974))),
-        D = o.lazy(() =>
+        L = o.lazy(() => n.e(7762).then(n.bind(n, 93974))),
+        N = o.lazy(() =>
           Promise.all([n.e(3784), n.e(6117), n.e(6699)]).then(n.bind(n, 27327))
         ),
-        B = o.lazy(() =>
+        x = o.lazy(() =>
           Promise.all([n.e(3784), n.e(6117), n.e(6699)]).then(n.bind(n, 99752))
         ),
-        T = o.lazy(() =>
+        A = o.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -21089,7 +20898,7 @@
             n.e(2529),
           ]).then(n.bind(n, 76083))
         ),
-        R = o.lazy(() =>
+        P = o.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -21102,9 +20911,9 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 91790))
+          ]).then(n.bind(n, 63484))
         ),
-        M = o.lazy(() =>
+        G = o.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -21117,9 +20926,9 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 40034))
+          ]).then(n.bind(n, 51866))
         ),
-        k = o.lazy(() =>
+        W = o.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -21134,7 +20943,7 @@
             n.e(2136),
           ]).then(n.bind(n, 84820))
         ),
-        I = o.lazy(() =>
+        U = o.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(493),
@@ -21147,20 +20956,20 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 2126))
+          ]).then(n.bind(n, 8374))
         ),
-        O = o.lazy(() =>
+        V = o.lazy(() =>
           Promise.all([n.e(7940), n.e(3069), n.e(9060), n.e(8974)]).then(
             n.bind(n, 94335)
           )
         );
-      class F extends o.Component {
+      class H extends o.Component {
         render() {
           return o.createElement(
-            f.VK,
+            T.VK,
             { basename: (0, r.l)() },
             o.createElement(
-              E.R,
+              O.R,
               null,
               o.createElement(
                 "div",
@@ -21169,71 +20978,71 @@
                   o.Suspense,
                   { fallback: o.createElement("div", null) },
                   o.createElement(
-                    b.rs,
+                    R.rs,
                     null,
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       exact: !0,
                       path: "/",
-                      component: C,
+                      component: F,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       exact: !0,
                       path: r.Z.DiagData(),
                       render: (e) =>
                         o.createElement(
-                          v.m,
+                          M.m,
                           Object.assign({}, e, {
                             key: e.match.params.gid,
                             strConfigID: "application_config",
                           })
                         ),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.SalePages(),
-                      component: k,
+                      component: W,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.OptInPages(),
-                      component: I,
+                      component: U,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.StoreGameAdminRoot(),
-                      component: O,
+                      component: V,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.AppLandingPage(),
-                      component: O,
+                      component: V,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.SteamML(),
-                      render: () => o.createElement(y, null),
+                      render: () => o.createElement(L, null),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.BuildPatchNotes(),
                       render: (e) =>
-                        o.createElement(R, { appId: e.match.params.appid }),
+                        o.createElement(P, { appId: e.match.params.appid }),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.SteamworksEvents(),
-                      render: () => o.createElement(m, null),
+                      render: () => o.createElement(E, null),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.PromotionTools(),
-                      component: M,
+                      component: G,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.PricingTools(),
-                      component: T,
+                      component: A,
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.DeckVerifiedAdmin(),
                       render: () =>
-                        o.createElement(S.d, {
+                        o.createElement(I.d, {
                           config: {
                             "deck-verified-results": (e) =>
-                              o.createElement(B, {
+                              o.createElement(x, {
                                 dataprops: e,
-                                results: (0, d.kQ)(
+                                results: (0, p.kQ)(
                                   "deckcompatibility",
                                   "application_config"
                                 ),
@@ -21241,31 +21050,31 @@
                           },
                         }),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.DeckCompatTestingDashboard(),
                       render: () =>
-                        o.createElement(S.d, {
+                        o.createElement(I.d, {
                           config: {
                             "deck-verified-results-inflight": (e) =>
-                              o.createElement(B, {
+                              o.createElement(x, {
                                 dataprops: e,
-                                results: (0, d.kQ)(
+                                results: (0, p.kQ)(
                                   "deckcompatibility_inflight",
                                   "application_config"
                                 ),
                               }),
                             "deck-verified-results-submitted": (e) =>
-                              o.createElement(B, {
+                              o.createElement(x, {
                                 dataprops: e,
-                                results: (0, d.kQ)(
+                                results: (0, p.kQ)(
                                   "deckcompatibility_submitted",
                                   "application_config"
                                 ),
                               }),
                             "deck-verified-results-published": (e) =>
-                              o.createElement(B, {
+                              o.createElement(x, {
                                 dataprops: e,
-                                results: (0, d.kQ)(
+                                results: (0, p.kQ)(
                                   "deckcompatibility_published",
                                   "application_config"
                                 ),
@@ -21273,15 +21082,15 @@
                           },
                         }),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.DeckCompatTestingAppHistory(),
                       render: () =>
-                        o.createElement(S.d, {
+                        o.createElement(I.d, {
                           config: {
                             "deck-verified-results-reports": (e) =>
-                              o.createElement(B, {
+                              o.createElement(x, {
                                 dataprops: e,
-                                results: (0, d.kQ)(
+                                results: (0, p.kQ)(
                                   "deckcompatibility_reports",
                                   "application_config"
                                 ),
@@ -21289,14 +21098,14 @@
                           },
                         }),
                     }),
-                    o.createElement(b.AW, {
+                    o.createElement(R.AW, {
                       path: r.Z.DeckVerified(),
                       render: () =>
-                        o.createElement(S.d, {
+                        o.createElement(I.d, {
                           config: {
                             "deck-verified-results": () =>
-                              o.createElement(D, {
-                                results: (0, d.kQ)(
+                              o.createElement(N, {
+                                results: (0, p.kQ)(
                                   "deckcompatibility",
                                   "application_config"
                                 ),
@@ -21304,18 +21113,18 @@
                           },
                         }),
                     }),
-                    o.createElement(b.AW, { component: L })
+                    o.createElement(R.AW, { component: j })
                   ),
-                  o.createElement(w.t9, { ModalManager: (0, w.BL)(window) })
+                  o.createElement(k.t9, { ModalManager: (0, k.BL)(window) })
                 )
               )
             )
           );
         }
       }
-      function L(e) {
-        return "dev" !== d.De.WEB_UNIVERSE
-          ? o.createElement(b.l_, { push: !0, to: "/" })
+      function j(e) {
+        return "dev" !== p.De.WEB_UNIVERSE
+          ? o.createElement(R.l_, { push: !0, to: "/" })
           : o.createElement(
               "div",
               null,

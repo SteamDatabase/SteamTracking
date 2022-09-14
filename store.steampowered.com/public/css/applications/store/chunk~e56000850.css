@@ -258,6 +258,7 @@
   .newlogindialog_Check_6EoZE {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover {
   background-color: #393c44;
@@ -638,12 +639,13 @@
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   .newlogindialog_FormContainer_3jLIH {
   background: transparent;
+  padding: 24px 0px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
     .newlogindialog_FormContainer_3jLIH {
-    padding: 24px 0px;
+    min-width: 0px;
   }
 }
 .newlogindialog_Login_ZOBYq
@@ -680,7 +682,7 @@
   width: 100%;
   min-width: 700px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
     min-width: 0px;
@@ -696,7 +698,7 @@
   color: #afafaf;
   font-size: 12px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_EmbeddedRoot_2Vbrf
     .newlogindialog_EmbeddedRootFooter_1HRJ1 {

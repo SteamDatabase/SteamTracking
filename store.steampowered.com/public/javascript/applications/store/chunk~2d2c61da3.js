@@ -5,7 +5,7 @@
   [3345],
   {
     39722: (e, t, r) => {
-      r.d(t, { Bn: () => R, Pe: () => c });
+      r.d(t, { Bn: () => M, Pe: () => c, UD: () => g });
       var i = r(33019),
         s = r(40110),
         a = r(990);
@@ -584,13 +584,22 @@
       class g extends n {
         constructor(e = null) {
           super(),
-            g.prototype.message || s.aR(g.M()),
+            g.prototype.gid || s.aR(g.M()),
             n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             g.sm_m ||
-              (g.sm_m = { proto: g, fields: { message: { n: 1, c: l } } }),
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: s.FE.readFixed64String,
+                    bw: s.Xc.writeFixed64String,
+                  },
+                },
+              }),
             g.sm_m
           );
         }
@@ -626,22 +635,19 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_GetMarketingMessage_Response";
+          return "CMarketingMessages_MarkMessageSeen_Notification";
         }
       }
       class B extends n {
         constructor(e = null) {
           super(),
-            B.prototype.messages || s.aR(B.M()),
-            n.initialize(this, e, 0, -1, [1], null);
+            B.prototype.message || s.aR(B.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             B.sm_m ||
-              (B.sm_m = {
-                proto: B,
-                fields: { messages: { n: 1, c: l, r: !0, q: !0 } },
-              }),
+              (B.sm_m = { proto: B, fields: { message: { n: 1, c: l } } }),
             B.sm_m
           );
         }
@@ -677,27 +683,21 @@
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_FindMarketingMessages_Response";
+          return "CMarketingMessages_GetMarketingMessage_Response";
         }
       }
       class p extends n {
         constructor(e = null) {
           super(),
-            p.prototype.gid || s.aR(p.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            p.prototype.messages || s.aR(p.M()),
+            n.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             p.sm_m ||
               (p.sm_m = {
                 proto: p,
-                fields: {
-                  gid: {
-                    n: 1,
-                    br: s.FE.readFixed64String,
-                    bw: s.Xc.writeFixed64String,
-                  },
-                },
+                fields: { messages: { n: 1, c: l, r: !0, q: !0 } },
               }),
             p.sm_m
           );
@@ -734,21 +734,42 @@
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_CreateMarketingMessage_Response";
+          return "CMarketingMessages_FindMarketingMessages_Response";
         }
       }
       class b extends n {
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            b.prototype.gid || s.aR(b.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: {
+                  gid: {
+                    n: 1,
+                    br: s.FE.readFixed64String,
+                    bw: s.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = s.Bh(b.M())), b.sm_mbf;
         }
         toObject(e = !1) {
           return b.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return s.TA(b.M(), e, t);
         }
         static fromObject(e) {
-          return new b();
+          return s.aD(b.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -756,19 +777,21 @@
           return b.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return s.F(b.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          s.l2(b.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CMarketingMessages_UpdateMarketingMessage_Response";
+          return "CMarketingMessages_CreateMarketingMessage_Response";
         }
       }
       class y extends n {
@@ -802,10 +825,44 @@
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CMarketingMessages_UpdateMarketingMessage_Response";
+        }
+      }
+      class R extends n {
+        constructor(e = null) {
+          super(), n.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new R();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CMarketingMessages_DeleteMarketingMessage_Response";
         }
       }
-      var R;
+      var M;
       !(function (e) {
         (e.GetActiveMarketingMessages = function (e, t) {
           return e.SendMsg(
@@ -847,7 +904,7 @@
             );
           }),
           (e.GetMarketingMessage = function (e, t) {
-            return e.SendMsg("MarketingMessages.GetMarketingMessage#1", t, g, {
+            return e.SendMsg("MarketingMessages.GetMarketingMessage#1", t, B, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
@@ -856,7 +913,7 @@
             return e.SendMsg(
               "MarketingMessages.CreateMarketingMessage#1",
               t,
-              p,
+              b,
               { ePrivilege: 4 }
             );
           }),
@@ -864,7 +921,7 @@
             return e.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
               t,
-              b,
+              y,
               { ePrivilege: 4 }
             );
           }),
@@ -872,7 +929,7 @@
             return e.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
               t,
-              y,
+              R,
               { ePrivilege: 4 }
             );
           }),
@@ -880,11 +937,11 @@
             return e.SendMsg(
               "MarketingMessages.FindMarketingMessages#1",
               t,
-              B,
+              p,
               { ePrivilege: 4 }
             );
           });
-      })(R || (R = {}));
+      })(M || (M = {}));
     },
     87931: (e, t, r) => {
       r.d(t, { $2: () => c, Ax: () => B, e8: () => m });
@@ -1537,7 +1594,7 @@
       r.d(t, { De: () => o, Fq: () => l, pA: () => n });
       var i = r(990),
         s = r(90666),
-        a = (r(33019), r(58114), r(92398));
+        a = (r(33019), r(58114), r(54698));
       r(87931);
       function n(e, t) {
         e.Body().set_context(l(t));
@@ -1559,7 +1616,7 @@
     14146: (e, t, r) => {
       r.d(t, { Z: () => c });
       var i = r(22188),
-        s = (r(26149), r(92398), r(13328), r(990), r(48116)),
+        s = (r(26149), r(54698), r(13328), r(990), r(48116)),
         a = r(77520),
         n = r(41311),
         l = r(74891),
@@ -2475,14 +2532,18 @@
     48116: (e, t, r) => {
       r.d(t, {
         $k: () => i,
-        Ds: () => n,
-        Hy: () => l,
-        TM: () => a,
-        qE: () => s,
+        Ds: () => l,
+        GV: () => s,
+        Hy: () => o,
+        TM: () => n,
+        qE: () => a,
       });
       var i;
-      r(92398), r(39722), r(990);
+      r(54698), r(39722), r(990);
       function s(e) {
+        return "app" == e ? 0 : "sub" == e ? 1 : 2;
+      }
+      function a(e) {
         switch (e) {
           case 0:
             return "app";
@@ -2495,7 +2556,7 @@
         }
         return "invalid";
       }
-      function a(e) {
+      function n(e) {
         switch (e) {
           case "sub":
             return 1;
@@ -2505,7 +2566,7 @@
             return 0;
         }
       }
-      function n(e, t) {
+      function l(e, t) {
         switch (e) {
           case 2:
             return "bundle";
@@ -2542,7 +2603,7 @@
             }
         }
       }
-      function l(e) {
+      function o(e) {
         switch (e) {
           case 2:
             return "bundle";

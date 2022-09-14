@@ -3223,12 +3223,12 @@
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(n || (n = {}));
     },
-    92398: (e, t, r) => {
+    54698: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Yd: () => B,
+        Yd: () => S,
         e7: () => a.e7,
-        mU: () => v,
+        mU: () => B,
         i_: () => l,
         De: () => n.De,
         j_: () => n.j_,
@@ -3325,10 +3325,8 @@
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
       })(u || (u = {}));
-      var h = r(33019);
-      r(40110);
-      h.Message;
-      var _, p, g;
+      var h, _, p;
+      r(13447);
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -3346,7 +3344,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(_ || (_ = {}));
+      })(h || (h = {}));
       !(function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -3401,7 +3399,7 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(p || (p = {}));
+      })(_ || (_ = {}));
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -3409,14 +3407,14 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(g || (g = {}));
-      var f, b, w, y, S;
+      })(p || (p = {}));
+      var g, f, b, w, y;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(f || (f = {})),
+      })(g || (g = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -3425,14 +3423,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(b || (b = {})),
+        })(f || (f = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(w || (w = {})),
+        })(b || (b = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3442,16 +3440,16 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(y || (y = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(S || (S = {}));
+        })(y || (y = {}));
       r(64010), r(990);
-      function B(e) {
+      function S(e) {
         switch (e) {
           case 0:
             return "game";
@@ -3473,7 +3471,7 @@
         }
         return "invalid";
       }
-      function v(e) {
+      function B(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -3488,7 +3486,7 @@
           "advertising" === e
         );
       }
-      var E, C;
+      var v, E;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -3496,7 +3494,7 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(E || (E = {})),
+      })(v || (v = {})),
         (function (e) {
           (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
             "k_EClientUsedInputTypeKeyboard"),
@@ -3506,7 +3504,7 @@
               "k_EClientUsedInputTypeController"),
             (e[(e.k_EClientUsedInputTypeMax = 3)] =
               "k_EClientUsedInputTypeMax");
-        })(C || (C = {}));
+        })(E || (E = {}));
     },
     58114: (e, t, r) => {
       "use strict";
@@ -4729,6 +4727,12 @@
           return "CClanMatchEventByRange";
         }
       }
+    },
+    13447: (e, t, r) => {
+      "use strict";
+      var n = r(33019);
+      r(40110);
+      n.Message;
     },
     990: (e, t, r) => {
       "use strict";
@@ -7867,7 +7871,7 @@
       var n = r(70655),
         i = r(9669),
         s = r.n(i),
-        a = (r(22188), r(26149), r(92398), r(58114)),
+        a = (r(22188), r(26149), r(54698), r(58114)),
         o = r(65902),
         l = r(78913),
         c = (r(82946), r(93976)),
@@ -11817,7 +11821,7 @@
       });
       var n = r(67294),
         i = r(26149),
-        s = r(92398),
+        s = r(54698),
         a = r(90666),
         o = r(48780),
         l = r(99533),
@@ -13168,7 +13172,7 @@
         u = r.n(d),
         h = r(73727),
         _ = r(78587),
-        p = r(92398);
+        p = r(54698);
       class g extends s.Component {
         render() {
           if ("dev" !== l.De.WEB_UNIVERSE) return null;
@@ -13801,7 +13805,7 @@
             r.e(9332),
             r.e(1979),
             r.e(4601),
-          ]).then(r.bind(r, 67199))
+          ]).then(r.bind(r, 93975))
         ),
         ce = s.lazy(() =>
           Promise.all([
@@ -14110,7 +14114,7 @@
         ),
         ve = s.lazy(() =>
           Promise.all([r.e(1164), r.e(7804), r.e(3345), r.e(4158)]).then(
-            r.bind(r, 71034)
+            r.bind(r, 75075)
           )
         );
       class Ee extends s.Component {

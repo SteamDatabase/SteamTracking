@@ -1167,40 +1167,6 @@
           return "CMarketingMessages_CreateMarketingMessage_Response";
         }
       }
-      class D extends a {
-        constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new D();
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new D();
-          return D.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_UpdateMarketingMessage_Response";
-        }
-      }
       class f extends a {
         constructor(e = null) {
           super(), a.initialize(this, e, 0, -1, void 0, null);
@@ -1230,6 +1196,40 @@
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMarketingMessages_UpdateMarketingMessage_Response";
+        }
+      }
+      class D extends a {
+        constructor(e = null) {
+          super(), a.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new D();
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            i = new D();
+          return D.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMarketingMessages_DeleteMarketingMessage_Response";
@@ -1294,7 +1294,7 @@
             return e.SendMsg(
               "MarketingMessages.UpdateMarketingMessage#1",
               t,
-              D,
+              f,
               { ePrivilege: 4 }
             );
           }),
@@ -1302,7 +1302,7 @@
             return e.SendMsg(
               "MarketingMessages.DeleteMarketingMessage#1",
               t,
-              f,
+              D,
               { ePrivilege: 4 }
             );
           }),
@@ -2162,51 +2162,51 @@
           return "CPublishing_TestFirePartnerAppOptInEmail_Request";
         }
       }
-      class D extends s {
+      class f extends s {
         constructor(e = null) {
           super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return D.toObject(e, this);
+          return f.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new D();
+          return new f();
         }
         static deserializeBinary(e) {
           let t = new r.BinaryReader(e),
-            i = new D();
-          return D.deserializeBinaryFromReader(i, t);
+            i = new f();
+          return f.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new r.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new r.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_TestFirePartnerAppOptInEmail_Response";
         }
       }
-      class f extends s {
+      class D extends s {
         constructor(e = null) {
           super(),
-            f.prototype.accountid || n.aR(f.M()),
+            D.prototype.accountid || n.aR(D.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
                 fields: {
                   accountid: {
                     n: 1,
@@ -2242,39 +2242,39 @@
                   },
                 },
               }),
-            f.sm_m
+            D.sm_m
           );
         }
         static MBF() {
-          return f.sm_mbf || (f.sm_mbf = n.Bh(f.M())), f.sm_mbf;
+          return D.sm_mbf || (D.sm_mbf = n.Bh(D.M())), D.sm_mbf;
         }
         toObject(e = !1) {
-          return f.toObject(e, this);
+          return D.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(f.M(), e, t);
+          return n.TA(D.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(f.M(), e);
+          return n.aD(D.M(), e);
         }
         static deserializeBinary(e) {
           let t = new r.BinaryReader(e),
-            i = new f();
-          return f.deserializeBinaryFromReader(i, t);
+            i = new D();
+          return D.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(f.MBF(), e, t);
+          return n.F(D.MBF(), e, t);
         }
         serializeBinary() {
           var e = new r.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(f.M(), e, t);
+          n.l2(D.M(), e, t);
         }
         serializeBase64String() {
           var e = new r.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerOptInEmailTracking";
@@ -2354,7 +2354,7 @@
                     br: n.FE.readFixed64String,
                     bw: n.Xc.writeFixed64String,
                   },
-                  results: { n: 2, c: f, r: !0, q: !0 },
+                  results: { n: 2, c: D, r: !0, q: !0 },
                 },
               }),
             S.sm_m
@@ -2790,7 +2790,7 @@
             return e.SendMsg(
               "Publishing.TestFirePartnerAppOptInEmail#1",
               t,
-              D,
+              f,
               { ePrivilege: 1 }
             );
           }),
@@ -2871,7 +2871,7 @@
         s = i(30381),
         a = i.n(s),
         o = i(67294),
-        l = i(92398),
+        l = i(54698),
         c = i(74163),
         u = i(90666);
       class d {
@@ -2961,13 +2961,13 @@
     },
     2388: (e, t, i) => {
       "use strict";
-      i.d(t, { Gr: () => h, Jq: () => g, y$: () => p });
+      i.d(t, { Gr: () => h, Jq: () => g, si: () => v, y$: () => p });
       var r = i(70655),
         n = i(9669),
         s = i.n(n),
         a = i(22188),
         o = i(67294),
-        l = (i(26149), i(92398), i(43359)),
+        l = (i(26149), i(54698), i(43359)),
         c = i(3389),
         u = (i(82946), i(77520)),
         d = i(93976),
@@ -3028,6 +3028,9 @@
         BHasProfileBySteamID(e) {
           return this.m_mapProfiles.has(e.ConvertTo64BitString());
         }
+        BHasAllProfilesBySteamID(e) {
+          return !e.some((e) => !this.BHasProfileBySteamID(e));
+        }
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
@@ -3074,6 +3077,43 @@
       }
       function g(e) {
         return h(o.useMemo(() => c.K.InitFromAccountID(e), [e]));
+      }
+      function v(e) {
+        return (function (e) {
+          const t = o.useMemo(
+              () =>
+                e
+                  ? e.map((e) => ("string" == typeof e ? new c.K(e) : e))
+                  : null,
+              [e]
+            ),
+            [i, r] = (0, o.useState)(!!t && !p.BHasAllProfilesBySteamID(t));
+          return (
+            (0, o.useEffect)(() => {
+              const e = s().CancelToken.source();
+              return (
+                t &&
+                  !p.BHasAllProfilesBySteamID(t) &&
+                  p
+                    .LoadProfiles(t.map((e) => e.ConvertTo64BitString()))
+                    .catch((e) => {
+                      const i = (0, d.l)(e);
+                      console.error(
+                        "useUserProfile failed to load profile for list: " +
+                          i.strErrorMsg,
+                        (0, a.ZN)(t),
+                        i
+                      );
+                    })
+                    .finally(() => {
+                      e.token.reason || r(!1);
+                    }),
+                () => e.cancel("unmounting useAllUserProfile")
+              );
+            }, [t]),
+            [i, !!t && t.map((e) => p.GetProfileBySteamID(e))]
+          );
+        })(o.useMemo(() => e.map((e) => c.K.InitFromAccountID(e)), [e]));
       }
       window.g_ProfileStore = p;
     },
@@ -3132,7 +3172,7 @@
       "use strict";
       i.d(t, { Z: () => u });
       var r = i(22188),
-        n = (i(26149), i(92398), i(13328), i(990), i(48116)),
+        n = (i(26149), i(54698), i(13328), i(990), i(48116)),
         s = i(77520),
         a = i(41311),
         o = i(74891),
@@ -4027,7 +4067,7 @@
       i.d(t, { Z: () => G });
       var r = i(70655),
         n = i(22188),
-        s = (i(26149), i(92398)),
+        s = (i(26149), i(54698)),
         a = i(58114),
         o = i(65902),
         l = i(33019),
@@ -4160,17 +4200,17 @@
           return "CStoreQueryPerResultMetadata";
         }
       }
-      class D extends v {
+      class f extends v {
         constructor(e = null) {
           super(),
-            D.prototype.total_matching_records || c.aR(D.M()),
+            f.prototype.total_matching_records || c.aR(f.M()),
             v.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
                 fields: {
                   total_matching_records: {
                     n: 1,
@@ -4180,61 +4220,6 @@
                   start: { n: 2, br: c.FE.readInt32, bw: c.Xc.writeInt32 },
                   count: { n: 3, br: c.FE.readInt32, bw: c.Xc.writeInt32 },
                   per_result_metadata: { n: 4, c: y, r: !0, q: !0 },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = c.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return c.TA(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return c.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new l.BinaryReader(e),
-            i = new D();
-          return D.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return c.F(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new l.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          c.l2(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new l.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreQueryResultMetadata";
-        }
-      }
-      class f extends v {
-        constructor(e = null) {
-          super(),
-            f.prototype.metadata || c.aR(f.M()),
-            v.initialize(this, e, 0, -1, [2, 3], null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  metadata: { n: 1, c: D },
-                  ids: { n: 2, c: u.oY, r: !0, q: !0 },
-                  store_items: { n: 3, c: u.VL, r: !0, q: !0 },
                 },
               }),
             f.sm_m
@@ -4272,6 +4257,61 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreQueryResultMetadata";
+        }
+      }
+      class D extends v {
+        constructor(e = null) {
+          super(),
+            D.prototype.metadata || c.aR(D.M()),
+            v.initialize(this, e, 0, -1, [2, 3], null);
+        }
+        static M() {
+          return (
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
+                fields: {
+                  metadata: { n: 1, c: f },
+                  ids: { n: 2, c: u.oY, r: !0, q: !0 },
+                  store_items: { n: 3, c: u.VL, r: !0, q: !0 },
+                },
+              }),
+            D.sm_m
+          );
+        }
+        static MBF() {
+          return D.sm_mbf || (D.sm_mbf = c.Bh(D.M())), D.sm_mbf;
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return c.TA(D.M(), e, t);
+        }
+        static fromObject(e) {
+          return c.aD(D.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            i = new D();
+          return D.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return c.F(D.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          c.l2(D.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreQuery_Query_Response";
         }
       }
@@ -4287,7 +4327,7 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  metadata: { n: 1, c: D },
+                  metadata: { n: 1, c: f },
                   ids: { n: 2, c: u.oY, r: !0, q: !0 },
                   store_items: { n: 3, c: u.VL, r: !0, q: !0 },
                 },
@@ -4349,7 +4389,7 @@
       }
       !(function (e) {
         (e.Query = function (e, t) {
-          return e.SendMsg("StoreQuery.Query#1", t, f, {
+          return e.SendMsg("StoreQuery.Query#1", t, D, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -4501,6 +4541,7 @@
         }
         QueueMultipleAppRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const i = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 0, t))
             )).filter((e) => 1 != e);
@@ -4509,6 +4550,7 @@
         }
         QueueMultiplePackageRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const i = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 1, t))
             )).filter((e) => 1 != e);
@@ -4517,6 +4559,7 @@
         }
         QueueMultipleBundleRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const i = (yield Promise.all(
               e.map((e) => this.QueueStoreItemRequest(e, 2, t))
             )).filter((e) => 1 != e);
@@ -4525,6 +4568,7 @@
         }
         QueueMultipleStoreItemRequests(e, t, i) {
           return (0, r.mG)(this, void 0, void 0, function* () {
+            if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
               e.map((e, r) => this.QueueStoreItemRequest(e, t[r], i))
             )).filter((e) => 1 != e);
@@ -4972,7 +5016,7 @@
         D3: () => s,
         GV: () => n,
         Hy: () => l,
-        RB: () => D,
+        RB: () => f,
         TM: () => o,
         Uc: () => g,
         YF: () => p,
@@ -4985,7 +5029,7 @@
         y: () => m,
       });
       var r;
-      i(92398), i(39722), i(990);
+      i(54698), i(39722), i(990);
       function n(e) {
         return "app" == e ? 0 : "sub" == e ? 1 : 2;
       }
@@ -5119,7 +5163,7 @@
       function y(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
-      function D(e) {
+      function f(e) {
         return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
       !(function (e) {
@@ -5156,7 +5200,7 @@
       });
       var r = i(70655),
         n = i(67294),
-        s = (i(92398), i(58114)),
+        s = (i(54698), i(58114)),
         a = i(10767),
         o = i(74163),
         l = i(77520),
@@ -5508,7 +5552,7 @@
       var r,
         n,
         s = i(26149);
-      i(92398), i(53481);
+      i(54698), i(53481);
       function a(e) {
         var t, i, r, n, s;
         return (
@@ -5598,12 +5642,12 @@
       "use strict";
       i.d(t, {
         I_: () => b,
-        S4: () => f,
+        S4: () => D,
         UT: () => y,
         Ys: () => _,
         Zu: () => p,
         mj: () => g,
-        n: () => D,
+        n: () => f,
         rN: () => h,
         rg: () => v,
         up: () => d,
@@ -5718,7 +5762,7 @@
         v.k_MediaUsePermission,
         v.k_MeasureResults,
       ];
-      function D(e) {
+      function f(e) {
         switch (e) {
           case v.k_Custom:
             return "Custom text section";
@@ -5759,7 +5803,7 @@
         }
         return "unknown";
       }
-      class f {
+      class D {
         constructor(e, t) {
           (this.m_bReadOnly = !1),
             (this.m_strOptInName = e),
@@ -5988,26 +6032,26 @@
           }
         }
       }
-      (0, r.gn)([a.LO], f.prototype, "m_email", void 0),
-        (0, r.gn)([a.LO], f.prototype, "m_sections", void 0),
-        (0, r.gn)([u.ak], f.prototype, "BHasLanguageData", null),
-        (0, r.gn)([u.ak], f.prototype, "GetSubject", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "AddSection", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetServerEmailDefID", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetType", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetEmailTargeting", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetInternalName", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetAssetKitURL", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetWikiDocURL", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetSurveyLinkURL", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetSalePreviewURL", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetDemoPreviewDate", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetCancelDate", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetPreviewDate", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetPermissionDate", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetScheduleMaxItems", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetNextEditionDate", null),
-        (0, r.gn)([a.aD.bound], f.prototype, "SetSubject", null);
+      (0, r.gn)([a.LO], D.prototype, "m_email", void 0),
+        (0, r.gn)([a.LO], D.prototype, "m_sections", void 0),
+        (0, r.gn)([u.ak], D.prototype, "BHasLanguageData", null),
+        (0, r.gn)([u.ak], D.prototype, "GetSubject", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "AddSection", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetServerEmailDefID", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetType", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetEmailTargeting", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetInternalName", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetAssetKitURL", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetWikiDocURL", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetSurveyLinkURL", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetSalePreviewURL", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetDemoPreviewDate", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetCancelDate", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetPreviewDate", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetPermissionDate", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetScheduleMaxItems", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetNextEditionDate", null),
+        (0, r.gn)([a.aD.bound], D.prototype, "SetSubject", null);
       class b {
         constructor(e) {
           (this.m_bReadOnly = !1), (this.m_section = e);
@@ -6110,17 +6154,17 @@
     },
     73914: (e, t, i) => {
       "use strict";
-      i(92398);
+      i(54698);
     },
     85261: (e, t, i) => {
       "use strict";
       i.d(t, {
         J7: () => y,
         Lr: () => S,
-        fH: () => D,
+        fH: () => f,
         i4: () => v,
         o: () => g,
-        vc: () => f,
+        vc: () => D,
         z8: () => b,
       });
       var r = i(70655),
@@ -6458,10 +6502,10 @@
         const l = null != n ? n : (null == i ? void 0 : i.length) ? 1 : null;
         return a.useMemo(() => ({ rgDiscountEvents: i, eResult: l }), [i, l]);
       }
-      function D(e) {
+      function f(e) {
         return h.Get().GetDiscountEvent(e);
       }
-      function f(e) {
+      function D(e) {
         const [t, i] = a.useState(h.Get().GetDiscountEvent(e));
         return (
           a.useEffect(() => {
@@ -6496,7 +6540,7 @@
     },
     12900: (e, t, i) => {
       "use strict";
-      i.d(t, { Hf: () => f, On: () => b, cf: () => D, tb: () => B });
+      i.d(t, { Hf: () => D, On: () => b, cf: () => f, tb: () => B });
       var r = i(70655),
         n = i(9669),
         s = i.n(n),
@@ -6504,7 +6548,7 @@
         o = i(53481),
         l = i(22188),
         c = i(67294),
-        u = i(92398),
+        u = i(54698),
         d = i(78468),
         m = (i(22453), i(82946), i(48780)),
         _ = i(93976),
@@ -6513,8 +6557,8 @@
         g = i(90666),
         v = i(85948);
       const y = "section_",
-        D = "list_",
-        f = "option_";
+        f = "list_",
+        D = "option_";
       class b {
         constructor() {
           (this.m_bDirty = !1),
@@ -7349,15 +7393,15 @@
         }
         static GenerateUniqueIDForOptionListSection(e) {
           let t = Math.floor(1 + 1e5 * Math.random());
-          for (; e && e.some((e) => e.unique_id === D + t); )
-            t = Math.floor(1 + 1e5 * Math.random());
-          return D + t;
-        }
-        static GenerateUniqueIDForListItem(e) {
-          let t = Math.floor(1 + 1e5 * Math.random());
           for (; e && e.some((e) => e.unique_id === f + t); )
             t = Math.floor(1 + 1e5 * Math.random());
           return f + t;
+        }
+        static GenerateUniqueIDForListItem(e) {
+          let t = Math.floor(1 + 1e5 * Math.random());
+          for (; e && e.some((e) => e.unique_id === D + t); )
+            t = Math.floor(1 + 1e5 * Math.random());
+          return D + t;
         }
         BIsDirty() {
           return this.m_bDirty;
@@ -8364,8 +8408,8 @@
         Cy: () => b,
         PV: () => v,
         QQ: () => y,
-        V7: () => f,
-        ZW: () => D,
+        V7: () => D,
+        ZW: () => f,
         qh: () => h,
       });
       var r = i(70655),
@@ -8374,7 +8418,7 @@
         a = (i(97789), i(73914), i(22188)),
         o = i(67294),
         l = i(88767),
-        c = (i(92398), i(82946), i(48780)),
+        c = (i(54698), i(82946), i(48780)),
         u = i(93976),
         d = i(81130),
         m = i(99533),
@@ -8789,14 +8833,14 @@
           i
         );
       }
-      function D(e) {
+      function f(e) {
         const [t, i] = o.useState(h.Get().GetAllOptInRegistrations(e));
         return (
           (0, _.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(e), i), t
         );
       }
-      function f(e) {
-        const t = D(e),
+      function D(e) {
+        const t = f(e),
           [i, r] = o.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -8852,8 +8896,8 @@
         ID: () => B,
         LT: () => v,
         Qy: () => P,
-        Su: () => f,
-        XM: () => D,
+        Su: () => D,
+        XM: () => f,
         Xj: () => w,
         _J: () => g,
         b2: () => E,
@@ -8868,7 +8912,7 @@
         n = i(9669),
         s = i.n(n),
         a = i(67294),
-        o = (i(92398), i(5525)),
+        o = (i(54698), i(5525)),
         l = (i(82946), i(93976)),
         c = i(99533),
         u = i(22975),
@@ -9298,10 +9342,10 @@
       function y(e) {
         return _.Get().GetAllDiscountsForPackage(e);
       }
-      function D(e) {
+      function f(e) {
         return _.Get().GetCallbackListForPackage(e);
       }
-      function f() {
+      function D() {
         return _.Get().GetAllDiscountsForAllPackages();
       }
       function b() {
@@ -9398,7 +9442,7 @@
         z: () => u,
       });
       var r = i(67294),
-        n = (i(92398), i(99533)),
+        n = (i(54698), i(99533)),
         s = i(22975),
         a = i(90666);
       const o = "pn";
@@ -9522,7 +9566,7 @@
         s = i.n(n),
         a = i(67294),
         o = i(22188),
-        l = (i(92398), i(82946), i(93976)),
+        l = (i(54698), i(82946), i(93976)),
         c = i(99533),
         u = i(22975),
         d = i(73604),
@@ -9632,7 +9676,7 @@
               "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid pricing guidelines payload");
           this.m_rgKnownPriceKeys = Array.from(u).sort((e, t) =>
-            (0, d.eT)(f(e), f(t))
+            (0, d.eT)(D(e), D(t))
           );
           for (const u of this.m_rgKnownPriceKeys) {
             const d =
@@ -10098,7 +10142,7 @@
             r = (0, _.vB)(t.packageID);
           return (0, d.eT)(i, r);
         }
-        return (0, d.eT)(f(e.strPriceKey), f(t.strPriceKey));
+        return (0, d.eT)(D(e.strPriceKey), D(t.strPriceKey));
       }
       function v(e) {
         const t = e.split("_")[0];
@@ -10130,7 +10174,7 @@
       }
       (0, r.gn)([o.LO], h.prototype, "m_mapOverridesPerPriceKey", void 0),
         (0, r.gn)([o.aD], h.prototype, "UpdateOverridesPerPriceKey", null);
-      const D = new Map([
+      const f = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -10141,8 +10185,8 @@
         ["KRW", "@8"],
         ["RUB", "@9"],
       ]);
-      function f(e) {
-        return D.has(e) ? D.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+      function D(e) {
+        return f.has(e) ? f.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
       function b(e, t) {
         return h.Get().GetPrice(e, t);
@@ -10379,7 +10423,7 @@
         B6: () => w,
         E5: () => U,
         E_: () => T,
-        Eh: () => f,
+        Eh: () => D,
         HU: () => L,
         JW: () => F,
         LX: () => b,
@@ -10401,7 +10445,7 @@
         o = i(23088),
         l = i(42795),
         c = i(67294),
-        u = (i(92398), i(5525)),
+        u = (i(54698), i(5525)),
         d = (i(81238), i(18388)),
         m = i(99533),
         _ = i(22975),
@@ -10428,14 +10472,14 @@
               : r.length) &&
           (null == e ? void 0 : e.optInReg) ==
             (null == t ? void 0 : t.optInReg) &&
-          D(null == e ? void 0 : e.discount, null == t ? void 0 : t.discount) &&
+          f(null == e ? void 0 : e.discount, null == t ? void 0 : t.discount) &&
           (null == e ? void 0 : e.nBaseAppID) ==
             (null == t ? void 0 : t.nBaseAppID) &&
           (null == e ? void 0 : e.bChangedLocally) ==
             (null == t ? void 0 : t.bChangedLocally)
         );
       }
-      function D(e, t) {
+      function f(e, t) {
         var i;
         return (
           (!t &&
@@ -10447,8 +10491,8 @@
           (!!t && t.nDiscountPct == (null == e ? void 0 : e.nDiscountPct))
         );
       }
-      const f = 28,
-        b = f * h._H.PerDay - 1.5 * h._H.PerHour,
+      const D = 28,
+        b = D * h._H.PerDay - 1.5 * h._H.PerHour,
         S = 10 * h._H.PerMinute;
       class B {
         constructor() {
@@ -10508,7 +10552,7 @@
               discountEventID: a.id,
               bChangedLocally: !0,
             };
-          return D(o, s)
+          return f(o, s)
             ? null
             : (this.m_mapLocalPackageDiscountOverrides.has(e) ||
                 this.m_mapLocalPackageDiscountOverrides.set(e, new Map()),
@@ -10524,7 +10568,7 @@
           return (
             this.m_mapLocalPackageDiscountOverrides.forEach((t) =>
               t.forEach((t) => {
-                D(t, t.nDiscountID && (0, s._J)(t.nDiscountID)) || e.push(t);
+                f(t, t.nDiscountID && (0, s._J)(t.nDiscountID)) || e.push(t);
               })
             ),
             e.sort(R),
@@ -10565,7 +10609,7 @@
             null === (t = this.m_mapLocalPackageDiscountOverrides.get(e)) ||
               void 0 === t ||
               t.forEach((e, t) => {
-                D(e, n.get(t)) || n.set(t, e);
+                f(e, n.get(t)) || n.set(t, e);
               }),
             n
           );
@@ -11086,11 +11130,11 @@
     36097: (e, t, i) => {
       "use strict";
       i.d(t, {
-        $f: () => D,
+        $f: () => f,
         D_: () => B,
         P6: () => S,
         QM: () => _,
-        Zq: () => f,
+        Zq: () => D,
         f0: () => h,
         im: () => v,
         ix: () => g,
@@ -11099,7 +11143,7 @@
         y4: () => b,
       });
       var r = i(67294),
-        n = (i(92398), i(5525)),
+        n = (i(54698), i(5525)),
         s = i(99533),
         a = i(22975),
         o = i(90666),
@@ -11312,10 +11356,10 @@
         const [e, t] = r.useState(m.Get().m_setVisibleDiscountEventIDs);
         return (0, a.Qg)(m.Get().m_visibleDiscountEventIDsCallbackList, t), e;
       }
-      function D(e = !0) {
+      function f(e = !0) {
         return m.Get().m_setVisibleDiscountEventIDs;
       }
-      function f(e) {
+      function D(e) {
         const [t, i] = r.useState(m.Get().m_mapDiscountEventsByID.get(e)),
           n = r.useCallback(
             () => i(m.Get().m_mapDiscountEventsByID.get(e)),
@@ -11354,9 +11398,9 @@
       "use strict";
       i.d(t, {
         A$: () => g,
-        Eg: () => f,
+        Eg: () => D,
         Ii: () => y,
-        JP: () => D,
+        JP: () => f,
         O7: () => h,
         UA: () => _,
         zQ: () => m,
@@ -11383,7 +11427,7 @@
                   (0, a.Xx)("#PackageGrid_PackageID", c)
                 );
         return r.createElement(
-          f,
+          D,
           {
             fnBLocalChangesExist: i,
             fnWarnUser: n,
@@ -11474,7 +11518,7 @@
               : 0,
           u = o.getRow().getData().packageID;
         return r.createElement(
-          f,
+          D,
           {
             fnBLocalChangesExist: i,
             fnWarnUser: n,
@@ -11502,7 +11546,7 @@
           [e]
         );
       }
-      function D(e, t, i, r) {
+      function f(e, t, i, r) {
         return e == (0, a.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
           ? `<div title='${(0, a.Xx)(
               "#PackageGrid_NoBaseGameExplanation"
@@ -11515,7 +11559,7 @@
               t
             )})</span></div>`;
       }
-      function f(e) {
+      function D(e) {
         const {
           fnBLocalChangesExist: t,
           fnWarnUser: i,
@@ -11668,7 +11712,7 @@
       "use strict";
       i.d(t, { R1: () => l, Sx: () => a, xs: () => u });
       var r = i(70655),
-        n = (i(9669), i(92398), i(990), i(81238), i(18388)),
+        n = (i(9669), i(54698), i(990), i(81238), i(18388)),
         s = i(41311);
       const a = new Set([0, 2, 6, 13]),
         o = new Set([4, 7, 11]);

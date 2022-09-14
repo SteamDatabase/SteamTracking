@@ -1151,6 +1151,9 @@ function LocUpdateLangThatHaveText( id )
 		idLanguage = idLanguage.slice( 0, idLanguage.indexOf( "__hidden" ) );
 		var option = document.getElementById( id + idLanguage + '__option' );
 
+		if ( option === null )
+			continue;
+
 		if ( hiddenInputs[i].value.length > 0 )
 			option.classList.add( 'HasText' );
 		else

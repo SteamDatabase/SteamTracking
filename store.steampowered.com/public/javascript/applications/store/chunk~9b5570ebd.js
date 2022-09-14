@@ -5,29 +5,16 @@
   [3456],
   {
     77636: (e, t, s) => {
-      s.d(t, { LA: () => m, jg: () => c });
+      s.d(t, { LA: () => c, jg: () => m });
       var n = s(70655),
         r = s(9669),
         i = s.n(r),
         o = s(22188),
-        a = (s(26149), s(92398), s(3389), s(82946), s(93976)),
+        a = (s(26149), s(54698), s(3389), s(82946), s(93976)),
         d = s(90666),
         p = s(67294);
       const l = "unUserdataVersion";
-      function m() {
-        const [e, t] = (0, p.useState)(!c.Get().BIsLoaded());
-        return (
-          (0, p.useEffect)(() => {
-            c.Get().BIsLoaded() ||
-              c
-                .Get()
-                .HintLoad()
-                .finally(() => t(!c.Get().BIsLoaded()));
-          }, []),
-          [e, c.Get()]
-        );
-      }
-      class c {
+      class m {
         constructor() {
           (this.m_setWishList = new Set()),
             (this.m_wishlistInOrder = Array()),
@@ -477,50 +464,63 @@
         }
         static Get() {
           return (
-            c.s_globalSingletonStore ||
-              ((c.s_globalSingletonStore = new c()),
+            m.s_globalSingletonStore ||
+              ((m.s_globalSingletonStore = new m()),
               "dev" == d.De.WEB_UNIVERSE &&
-                (window.DUS = c.s_globalSingletonStore)),
-            c.s_globalSingletonStore
+                (window.DUS = m.s_globalSingletonStore)),
+            m.s_globalSingletonStore
           );
         }
       }
-      (0, n.gn)([o.LO], c.prototype, "m_setWishList", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setOwnedPackages", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setOwnedApps", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setFollowedApps", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setExcludedTagsIds", void 0),
+      function c() {
+        const [e, t] = (0, p.useState)(!m.Get().BIsLoaded());
+        return (
+          (0, p.useEffect)(() => {
+            m.Get().BIsLoaded() ||
+              m
+                .Get()
+                .HintLoad()
+                .finally(() => t(!m.Get().BIsLoaded()));
+          }, []),
+          [e, m.Get()]
+        );
+      }
+      (0, n.gn)([o.LO], m.prototype, "m_setWishList", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setOwnedPackages", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setOwnedApps", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setFollowedApps", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setExcludedTagsIds", void 0),
         (0, n.gn)(
           [o.LO],
-          c.prototype,
+          m.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        (0, n.gn)([o.LO], c.prototype, "m_setRecommendedApps", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_mapIgnoredApps", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_mapIgnoredPackages", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setCuratorsFollowed", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setCuratorsIgnored", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setRecommendedApps", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_mapIgnoredApps", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_mapIgnoredPackages", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setCuratorsFollowed", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setCuratorsIgnored", void 0),
         (0, n.gn)(
           [o.LO],
-          c.prototype,
+          m.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        (0, n.gn)([o.LO], c.prototype, "m_primaryLanguage", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_secondaryLanguages", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setRecommendedTags", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_primaryLanguage", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_secondaryLanguages", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setRecommendedTags", void 0),
         (0, n.gn)(
           [o.LO],
-          c.prototype,
+          m.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        (0, n.gn)([o.LO], c.prototype, "m_setPackagesInCart", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_setAppsInCart", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_nCartLineItemCount", void 0),
-        (0, n.gn)([o.LO], c.prototype, "m_bAjaxInFlight", void 0),
-        (0, n.gn)([o.aD], c.prototype, "UpdateAppIgnore", null);
+        (0, n.gn)([o.LO], m.prototype, "m_setPackagesInCart", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_setAppsInCart", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_nCartLineItemCount", void 0),
+        (0, n.gn)([o.LO], m.prototype, "m_bAjaxInFlight", void 0),
+        (0, n.gn)([o.aD], m.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
       s.d(t, { Xt: () => h, _I: () => g });
@@ -532,7 +532,7 @@
         d = s(28274),
         p = (s(88514), s(65902)),
         l = s(92742),
-        m = s(92398);
+        m = s(54698);
       function c(e) {
         const t = (t) =>
           (window.location.href =

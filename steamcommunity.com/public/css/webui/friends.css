@@ -8649,6 +8649,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_Check_2GPrm {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_Checkbox_2q4eX:hover {
   background-color: #393c44;
@@ -9029,12 +9030,13 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_StandardLayout_26BQi.newlogindialog_Embedded_mkAEY
   .newlogindialog_FormContainer_1Vs8b {
   background: transparent;
+  padding: 24px 0px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_3VsPM
     .newlogindialog_StandardLayout_26BQi.newlogindialog_Embedded_mkAEY
     .newlogindialog_FormContainer_1Vs8b {
-    padding: 24px 0px;
+    min-width: 0px;
   }
 }
 .newlogindialog_Login_3VsPM
@@ -9071,7 +9073,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   width: 100%;
   min-width: 700px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_3VsPM
     .newlogindialog_EmbeddedRoot_2aujf:not(.IN_CLIENT) {
     min-width: 0px;
@@ -9087,7 +9089,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   color: #afafaf;
   font-size: 12px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_3VsPM
     .newlogindialog_EmbeddedRoot_2aujf
     .newlogindialog_EmbeddedRootFooter_9AbKY {

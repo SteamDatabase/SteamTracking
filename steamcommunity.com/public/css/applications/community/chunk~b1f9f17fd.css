@@ -142,19 +142,6 @@
 Body.v6.tag_page.contenthub_page {
   background-color: #202327;
 }
-.contenthubmaincarousel.expanded
-  .contenthubshared_MainCarousel_rKC9i
-  .carousel
-  .SliderBody {
-  position: unset;
-}
-.contenthubmaincarousel.expanded
-  .contenthubshared_MainCarousel_rKC9i
-  .carousel
-  .SliderBody
-  button {
-  top: 250px;
-}
 .contenthubshared_MainCarousel_rKC9i {
   width: 100%;
   position: unset;
@@ -380,10 +367,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray:after {
   margin: 0px auto;
 }
 .ContentHubSalePage .contenthubmaincarousel.expanded {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 500px;
   display: block;
   width: 100%;
 }
@@ -406,56 +389,26 @@ html.tablet .ContentHubSalePage .contenthubmaincarousel.expanded {
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubtitle.expanded:first-child,
-.ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-.ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-  ~ .SaleSectionCtn.contenthubtitle.expanded {
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
   margin-bottom: 456px;
 }
 html.tablet
   .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubtitle.expanded:first-child,
-html.tablet
-  .ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-html.tablet
-  .ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-  ~ .SaleSectionCtn.contenthubtitle.expanded {
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
   margin-bottom: unset;
 }
 @media screen and (max-width: 910px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubtitle.expanded:first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-    ~ .SaleSectionCtn.contenthubtitle.expanded {
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
     margin-bottom: unset;
   }
 }
 @media screen and (max-width: 940px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubtitle.expanded:first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-    ~ .SaleSectionCtn.contenthubtitle.expanded {
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
     margin-bottom: 470px;
   }
 }
@@ -1185,9 +1138,6 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   width: 90%;
   animation-delay: 0.23s;
 }
-.saleghostsections_GhostCtn_3gdzT .saleghostsections_MainCapRowExpanded_16pNv {
-  padding-top: 205px;
-}
 @keyframes saleghostsections_GhostShine_3xEY- {
   0% {
     background-position: 100% 100%;
@@ -1276,7 +1226,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 .maincapsule_PlaceholderExpanded_ZUCkq {
   max-width: 1920px;
   margin: 0 auto;
-  height: 680px;
+  height: 400px;
 }
 .BasicUI .maincapsule_PlaceholderExpanded_ZUCkq {
   height: 230px;
@@ -1290,7 +1240,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 .maincapsule_PlaceholderCompact_12-VZ {
   width: 910px;
   margin: 0 auto;
-  height: 480px;
+  height: 400px;
 }
 .maincapsule_PlaceholderCompact_12-VZ .maincapsule_ThrobberCtn_1l4x_ {
   padding-top: 180px;
@@ -1317,6 +1267,9 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   margin-bottom: 36px;
   position: relative;
   z-index: 1;
+}
+.expanded .contenthubmaincarousel_ContentHubTitleCtn_61ECB {
+  margin-bottom: 18px;
 }
 .BasicUI .contenthubmaincarousel_ContentHubTitleCtn_61ECB {
   margin-bottom: 12px !important;
@@ -2759,30 +2712,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .partnereventdates_EventEditorVisibilityCtn_3hqZR {
   margin-top: 12px;
 }
-.partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.partnereventassociatedbuild_AssociatedBuildBody_1rnVU button.DialogButton {
-  margin-left: auto;
-  max-width: 200px;
-}
-.partnereventassociatedbuild_BuildDisplay_1HwK4 {
-  font-size: 16px;
-}
-.partnereventassociatedbuild_BuildUnlinked_1cg3t {
-  color: #ff0;
-}
-.partnereventassociatedbuild_BuildLinkedBranch_2ssXJ,
-.partnereventassociatedbuild_BuildLinkedDefault_fHJYY {
-  color: #fff;
-}
-.partnereventassociatedbuild_BuildIDLink_2-Syn:hover {
-  text-decoration: underline;
-}
 .salesectionsubscription_MainBlock_2xkU3 {
   margin-left: auto;
   margin-right: auto;
@@ -2891,403 +2820,105 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .salesectionsubscription_DiscountPriceBlock_2wQcn {
   display: inline-block;
 }
-.partnereventemails_CenterAlign_cMmai {
-  display: flex;
-  justify-content: center;
+.storesuggest_SuggestContainer_2n5ab ._DialogLayout {
+  margin-bottom: 2px;
 }
-.partnereventemails_ControlBarCtn_1RQ0B {
-  background: #3a3f48;
-  padding: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
+.storesuggest_SuggestContainer_2n5ab ._DialogLayout input {
+  font-size: 16px;
 }
-.partnereventemails_ButtonSettingContainer_3jwD2 {
-  align-self: center;
-  padding: 20px;
-  background-color: #30343b;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-.partnereventemails_ButtonSettingContainer_3jwD2 span {
-  margin-right: 16px;
-}
-.partnereventemails_ButtonSettingContainer_3jwD2
-  .partnereventemails_ButtonSettingRow_1mF5p {
-  margin-bottom: 8px;
-}
-.partnereventemails_DevHeader_35PpK {
-  width: 800px;
-  min-width: 800px;
-  font-size: 0pt;
-  line-height: 0pt;
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-}
-.partnereventemails_EmailTabCtn_fDsyX {
-  position: relative;
-}
-.partnereventemails_EmailInputText_1UcSg {
-  color: #0fbfff;
-}
-.partnereventemails_EmailBackground_bEP0P {
-  background-color: #25282e;
-}
-.partnereventemails_DevEmailEmailBackground_20Vcu {
-  color: #e1e4e9;
-}
-.partnereventemails_EmailEditorContent_1nDhB {
-  width: 800px;
-  flex-grow: 2;
-  padding-top: 20px;
-  margin: 0 auto;
-}
-.partnereventemails_EmailIconHeader_3LZBl,
-.partnereventemails_FooterLegal_bJOii {
-  background-color: #30343b;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.partnereventemails_EditImageInputCtn_1LyXp {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(81, 89, 100, 0.8);
-  z-index: 1;
-  align-self: center;
-}
-.partnereventemails_EditImageInputCtn_1LyXp span {
-  align-self: center;
-  padding: 8px;
-}
-.partnereventemails_EmailInput_2D8AC {
-  background-color: #121319;
-  border-color: #2d3341;
-  border-width: 1px;
-}
-.partnereventemails_EmailOptionTitle_1zLvJ {
-  margin-top: 5px;
-  margin-right: 30px;
-}
-.partnereventemails_EmailSection_1zUIk {
-  display: flex;
-  flex-direction: column;
-  padding-right: 80px;
-  padding-left: 80px;
-}
-.partnereventemails_EmailSection_1zUIk textarea {
-  padding: 12px;
+.storesuggest_SuggestContainer_2n5ab .storesuggest_Results__dpvO {
+  overflow-y: auto;
+  background: #3a404a;
+  width: 100%;
   box-sizing: border-box;
-  border: none;
-  background: var(--main-editor-input-bg-color);
-  outline-width: 0;
-  color: #e6e7e8;
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 18px;
-  border-radius: 4px;
-  box-shadow: 0 0 5px #000 inset;
-  resize: vertical;
-  text-align: left;
+  margin-bottom: 4px;
+  border-radius: 0px 0px 4px 4px;
 }
-.partnereventemails_EmailSection_1zUIk input {
-  text-align: left;
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_EmptyResults_3BRBi {
+  padding: 2px;
+  text-align: center;
 }
-.partnereventemails_EmailSubjectCtn_BHpFD {
-  padding-top: 20px;
-  padding-bottom: 30px;
-}
-.partnereventemails_EmailSubjectSelect_18xOZ {
-  width: calc(100% - 12px);
-}
-.partnereventemails_EmailTemplate_18iTr {
-  box-shadow: 0 0 10px #000;
-}
-.partnereventemails_EmailTemplate_18iTr hr {
-  margin: 25px;
-  border-color: #5b6274;
-}
-.partnereventemails_EmailTextCtn_1rQlP {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 26px;
-}
-input.partnereventemails_HeadlineInput_2lHX9 {
-  align-self: center;
-  width: 90%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 21px;
-}
-input.partnereventemails_HeadlineInput_2lHX9::placeholder {
-  font-size: 21px;
-}
-.partnereventemails_Footer_23AXh {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventemails_Footer_23AXh div {
-  padding-top: 10px;
-  align-self: center;
-}
-.partnereventemails_Footer_23AXh span {
-  align-self: center;
-  padding-bottom: 10px;
-}
-.partnereventemails_FooterLegal_bJOii {
-  margin-top: 20px;
-  padding-left: 10px;
-}
-.partnereventemails_ImgCrossCtn_59gyF {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.partnereventemails_FullImageCtn_uv6NV {
-  width: 100%;
-  height: 300px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-}
-.partnereventemails_FullImageCtn_uv6NV img {
-  border: none;
-  position: absolute;
-  top: 0;
-  height: 300px;
-}
-.partnereventemails_BodyInput_3VRhY {
-  align-self: center;
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.partnereventemails_Hello_Gd3d5 {
-  font-size: 18px;
-  font-weight: 200;
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultSectionHeader_23MUU {
+  padding: 2px;
+  text-align: center;
   color: #fff;
-  padding: 30px 30px 15px;
+  background-color: gray;
 }
-.partnereventemails_Reason_10TSv {
-  padding: 0 30px;
-}
-.partnereventemails_RecipientCtn_330Dr {
-  padding-top: 30px;
-}
-.partnereventemails_GameLink_39DSS {
-  padding: 0 30px;
-}
-.partnereventemails_RightAlign_zffsf {
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF {
   display: flex;
-  justify-content: flex-end;
-  padding-bottom: 10px;
-  text-decoration: underline;
-}
-.partnereventemails_TargetAndAudience_3h8QM {
-  display: flex;
-  justify-content: space-between;
-  width: 700px;
-}
-.partnereventemails_VideoCtn_2mtrE {
-  width: 640px;
-  height: 366px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #30343b;
-  align-self: center;
+  padding: 6px;
+  border-bottom: 1px solid #474e59;
   position: relative;
-  overflow: hidden;
 }
-.partnereventemails_VideoCtn_2mtrE img {
-  border: none;
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF:hover {
+  cursor: pointer;
+  background: #5c6472;
+}
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF:last-child {
+  border-bottom: none;
+}
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF
+  .storesuggest_AvatarImage_34zaz {
+  width: auto;
+  height: 30px;
+  flex-shrink: 0;
+}
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF
+  .storesuggest_GameName_3DcZv {
+  padding: 0px 8px;
+  letter-spacing: 0px;
+  font-size: 14px;
+  text-transform: none;
+}
+.storesuggest_SuggestContainer_2n5ab
+  .storesuggest_Results__dpvO
+  .storesuggest_ResultRow_3kPvF
+  .storesuggest_Label_21GTl {
   position: absolute;
-  top: 0;
-  height: 555px;
-  margin-top: -70px;
+  top: 4px;
+  right: 0;
+  font-size: 10px;
+  background: #add8e6;
+  color: #000;
+  padding: 0 10px;
 }
-.partnereventemails_VideoInputCtn_1ESNV {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(81, 89, 100, 0.8);
-  padding: 20px;
-  min-width: 300px;
-  z-index: 1;
-  align-self: center;
-}
-.partnereventemails_VideoInputCtn_1ESNV div {
-  align-self: center;
-  color: #0fbfff;
-  padding: 10px;
-}
-.partnereventemails_VideoInputCtn_1ESNV input {
-  align-self: center;
-  width: 90%;
-}
-.partnereventemails_ButtonDestInputSaleURL_3Lr4k {
+.partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
   margin-top: 10px;
-  width: 550px;
-}
-.partnereventemails_DevEmailTemplate_sC9ZV {
   width: 100%;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  -webkit-border-horizontal-spacing: 0px;
-  -webkit-border-vertical-spacing: 0px;
-  background-color: #e1e4e9;
-}
-.partnereventemails_DevEmail_Content_25Gtl {
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 78px;
-  padding-right: 78px;
-}
-.partnereventemails_DevEmail_HearComes_3nvmQ {
-  color: #000;
-  font-size: 36px;
-  line-height: 50px;
-  text-align: left;
-  font-weight: normal;
-  letter-spacing: 1px;
-  min-width: auto !important;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-}
-.partnereventemails_DevEmail_TopLogo_1dbBh {
-  width: 203px;
-  height: 43px;
-  padding-top: 70px;
-  padding-left: 450px;
-}
-.partnereventemails_DevEmail_TopHeader_2lmZl {
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images/events/devemailblue/header_bg.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  height: 180px;
-}
-.partnereventemails_DevEmail_Subject_37Wbo {
-  color: #000;
-  font-size: 42px;
-  line-height: 50px;
-  text-align: left;
-  font-weight: bold;
-  letter-spacing: 1px;
-  min-width: auto !important;
-  padding-bottom: 45px;
-}
-.partnereventemails_DevEmail_SignOff_Img_KW2YG {
-  width: 70px;
-  height: 70px;
-  border: 0px;
-}
-.partnereventemails_DevEmail_Signoff_3iJuG {
-  color: #000;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: left;
-  min-width: auto !important;
-  padding-bottom: 100px;
-}
-.partnereventemails_DevEmail_Footer_Ctn_RINyW {
-  padding-top: 50px;
-  padding-bottom: 60px;
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color: #fff;
-}
-.partnereventemails_DevEmail_Footer_Reason_1h_Bm {
-  color: #000;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: left;
-  min-width: auto !important;
-  padding-bottom: 50px;
-}
-.partnereventemails_DevEmail_Footer_SubSection_2gEsj {
   display: flex;
   flex-direction: row;
-  padding-top: 40px;
+  align-items: center;
 }
-.partnereventemails_DevEmail_Footer_Bold_CSfHW {
-  color: #000;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: left;
-  min-width: auto !important;
-  padding-bottom: 12px;
+.partnereventassociatedbuild_AssociatedBuildBody_1rnVU button.DialogButton {
+  margin-left: auto;
+  max-width: 200px;
 }
-.partnereventemails_DevEmail_Footer_Regular_1dDJa {
-  color: #000;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: left;
-  min-width: auto !important;
-  padding-bottom: 18px;
+.partnereventassociatedbuild_BuildDisplay_1HwK4 {
+  font-size: 16px;
 }
-.partnereventemails_DevEmail_Follow_1gwxy {
-  color: #000;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: left;
-  min-width: auto !important;
+.partnereventassociatedbuild_BuildUnlinked_1cg3t {
+  color: #ff0;
 }
-.partnereventemails_DevEmail_RecipientTable_2EDti {
-  border-spacing: 0 30px;
+.partnereventassociatedbuild_BuildLinkedBranch_2ssXJ,
+.partnereventassociatedbuild_BuildLinkedDefault_fHJYY {
+  color: #fff;
 }
-.partnereventemails_DevEmail_RecipientTable_2EDti th {
-  vertical-align: top;
-}
-.partnereventemails_TargetCtn_1Ts_n {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
-.partnereventemails_TargetCtn_1Ts_n .partnereventemails_TargetTypeTitle_2Erit {
-  width: 255px;
-}
-.partnereventemails_TargetCtn_1Ts_n .partnereventemails_TargetTypeCtn_3TxAc {
-  border: 1px solid #464b58;
-  padding: 16px;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-grow: 1;
-}
-.partnereventemails_TargetCtn_1Ts_n
-  .partnereventemails_TargetTypeCtn_3TxAc
-  .partnereventemails_TargetedListCtn_3NubR {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventemails_TargetCtn_1Ts_n
-  .partnereventemails_TargetTypeCtn_3TxAc
-  .partnereventemails_SelectListCtn_980o4 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.partnereventemails_TargetCtn_1Ts_n
-  .partnereventemails_TargetTypeCtn_3TxAc
-  .partnereventemails_SelectListCtn_980o4
-  > label {
-  width: fit-content;
-}
-.partnereventemails_SupportCtn_27guD {
-  margin-top: 30px;
-  font-size: 18px;
-  color: #000;
-  display: block;
-}
-.partnereventemails_SupportCtn_27guD a {
-  color: #679dff;
+.partnereventassociatedbuild_BuildIDLink_2-Syn:hover {
   text-decoration: underline;
 }
 .SaleSectionCtn.vo_internal.cyoa_story {
@@ -3717,84 +3348,404 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     opacity: 1;
   }
 }
-.partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
-  background-color: #473991;
+.partnereventemails_CenterAlign_cMmai {
+  display: flex;
+  justify-content: center;
+}
+.partnereventemails_ControlBarCtn_1RQ0B {
+  background: #3a3f48;
+  padding: 12px;
+  margin-top: 20px;
   margin-bottom: 20px;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_SteamAwardCategoryOptions_1wsxj {
-  background: #473991;
-  color: #fff;
   display: flex;
+  justify-content: space-between;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_event_nomination_banner_ctn_-WzN3 {
-  display: flex;
+.partnereventemails_ButtonSettingContainer_3jwD2 {
+  align-self: center;
+  padding: 20px;
+  background-color: #30343b;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.partnereventemails_ButtonSettingContainer_3jwD2 span {
+  margin-right: 16px;
+}
+.partnereventemails_ButtonSettingContainer_3jwD2
+  .partnereventemails_ButtonSettingRow_1mF5p {
+  margin-bottom: 8px;
+}
+.partnereventemails_DevHeader_35PpK {
+  width: 800px;
+  min-width: 800px;
+  font-size: 0pt;
+  line-height: 0pt;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+.partnereventemails_EmailTabCtn_fDsyX {
   position: relative;
-  margin-bottom: 15px;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_CategoryTextCtn_3vRv1 {
+.partnereventemails_EmailInputText_1UcSg {
+  color: #0fbfff;
+}
+.partnereventemails_EmailBackground_bEP0P {
+  background-color: #25282e;
+}
+.partnereventemails_DevEmailEmailBackground_20Vcu {
+  color: #e1e4e9;
+}
+.partnereventemails_EmailEditorContent_1nDhB {
+  width: 800px;
+  flex-grow: 2;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.partnereventemails_EmailIconHeader_3LZBl,
+.partnereventemails_FooterLegal_bJOii {
+  background-color: #30343b;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.partnereventemails_EditImageInputCtn_1LyXp {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(81, 89, 100, 0.8);
+  z-index: 1;
+  align-self: center;
+}
+.partnereventemails_EditImageInputCtn_1LyXp span {
+  align-self: center;
+  padding: 8px;
+}
+.partnereventemails_EmailInput_2D8AC {
+  background-color: #121319;
+  border-color: #2d3341;
+  border-width: 1px;
+}
+.partnereventemails_EmailOptionTitle_1zLvJ {
+  margin-top: 5px;
+  margin-right: 30px;
+}
+.partnereventemails_EmailSection_1zUIk {
+  display: flex;
+  flex-direction: column;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+.partnereventemails_EmailSection_1zUIk textarea {
+  padding: 12px;
+  box-sizing: border-box;
+  border: none;
+  background: var(--main-editor-input-bg-color);
+  outline-width: 0;
+  color: #e6e7e8;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #000 inset;
+  resize: vertical;
+  text-align: left;
+}
+.partnereventemails_EmailSection_1zUIk input {
+  text-align: left;
+}
+.partnereventemails_EmailSubjectCtn_BHpFD {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.partnereventemails_EmailSubjectSelect_18xOZ {
+  width: calc(100% - 12px);
+}
+.partnereventemails_EmailTemplate_18iTr {
+  box-shadow: 0 0 10px #000;
+}
+.partnereventemails_EmailTemplate_18iTr hr {
+  margin: 25px;
+  border-color: #5b6274;
+}
+.partnereventemails_EmailTextCtn_1rQlP {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+input.partnereventemails_HeadlineInput_2lHX9 {
+  align-self: center;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+input.partnereventemails_HeadlineInput_2lHX9::placeholder {
+  font-size: 21px;
+}
+.partnereventemails_Footer_23AXh {
   display: flex;
   flex-direction: column;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_SteamAwardTitle_3Sq0j {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 36px;
-  margin: 20px 0;
+.partnereventemails_Footer_23AXh div {
+  padding-top: 10px;
+  align-self: center;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_event_nomination_trophy_3kVDt {
-  width: 80px;
-  margin-right: 30px;
+.partnereventemails_Footer_23AXh span {
+  align-self: center;
+  padding-bottom: 10px;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_RadioBtnCtn_1Y6BP {
+.partnereventemails_FooterLegal_bJOii {
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.partnereventemails_ImgCrossCtn_59gyF {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.partnereventemails_FullImageCtn_uv6NV {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+.partnereventemails_FullImageCtn_uv6NV img {
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 300px;
+}
+.partnereventemails_BodyInput_3VRhY {
+  align-self: center;
+  width: 100%;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_RadioBtnCtn_1Y6BP
-  * {
-  cursor: pointer;
+.partnereventemails_Hello_Gd3d5 {
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff;
+  padding: 30px 30px 15px;
 }
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_CategoryTitle_25wr6 {
-  font-weight: bold;
+.partnereventemails_Reason_10TSv {
+  padding: 0 30px;
 }
-.partnereventspecialcategories_Halloween_1etNG {
-  padding: 10px;
-  background-color: #6d5934;
-  color: #dbe2e6;
-  margin-bottom: 12px;
+.partnereventemails_RecipientCtn_330Dr {
+  padding-top: 30px;
 }
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventTitle_6NPnW {
-  font-size: 16px;
-  font-weight: 600;
+.partnereventemails_GameLink_39DSS {
+  padding: 0 30px;
 }
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventDesc_2aLMq {
-  margin-bottom: 12px;
-}
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventDesc_2aLMq
-  a {
+.partnereventemails_RightAlign_zffsf {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
   text-decoration: underline;
 }
-.partnereventspecialcategories_Halloween_1etNG .EventCategory {
-  background-color: #393d47;
+.partnereventemails_TargetAndAudience_3h8QM {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
 }
-.progressutils_ErrorMessaage_13sZc {
-  color: red;
-  font-weight: bold;
+.partnereventemails_VideoCtn_2mtrE {
+  width: 640px;
+  height: 366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #30343b;
+  align-self: center;
+  position: relative;
+  overflow: hidden;
 }
-.progressutils_UpdatingMessage_3baPw {
-  color: #fff;
+.partnereventemails_VideoCtn_2mtrE img {
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 555px;
+  margin-top: -70px;
+}
+.partnereventemails_VideoInputCtn_1ESNV {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(81, 89, 100, 0.8);
+  padding: 20px;
+  min-width: 300px;
+  z-index: 1;
+  align-self: center;
+}
+.partnereventemails_VideoInputCtn_1ESNV div {
+  align-self: center;
+  color: #0fbfff;
+  padding: 10px;
+}
+.partnereventemails_VideoInputCtn_1ESNV input {
+  align-self: center;
+  width: 90%;
+}
+.partnereventemails_ButtonDestInputSaleURL_3Lr4k {
+  margin-top: 10px;
+  width: 550px;
+}
+.partnereventemails_DevEmailTemplate_sC9ZV {
+  width: 100%;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+  background-color: #e1e4e9;
+}
+.partnereventemails_DevEmail_Content_25Gtl {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 78px;
+  padding-right: 78px;
+}
+.partnereventemails_DevEmail_HearComes_3nvmQ {
+  color: #000;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.partnereventemails_DevEmail_TopLogo_1dbBh {
+  width: 203px;
+  height: 43px;
+  padding-top: 70px;
+  padding-left: 450px;
+}
+.partnereventemails_DevEmail_TopHeader_2lmZl {
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images/events/devemailblue/header_bg.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 180px;
+}
+.partnereventemails_DevEmail_Subject_37Wbo {
+  color: #000;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: left;
   font-weight: bold;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 45px;
+}
+.partnereventemails_DevEmail_SignOff_Img_KW2YG {
+  width: 70px;
+  height: 70px;
+  border: 0px;
+}
+.partnereventemails_DevEmail_Signoff_3iJuG {
+  color: #000;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 100px;
+}
+.partnereventemails_DevEmail_Footer_Ctn_RINyW {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #fff;
+}
+.partnereventemails_DevEmail_Footer_Reason_1h_Bm {
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 50px;
+}
+.partnereventemails_DevEmail_Footer_SubSection_2gEsj {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+}
+.partnereventemails_DevEmail_Footer_Bold_CSfHW {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 12px;
+}
+.partnereventemails_DevEmail_Footer_Regular_1dDJa {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 18px;
+}
+.partnereventemails_DevEmail_Follow_1gwxy {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+}
+.partnereventemails_DevEmail_RecipientTable_2EDti {
+  border-spacing: 0 30px;
+}
+.partnereventemails_DevEmail_RecipientTable_2EDti th {
+  vertical-align: top;
+}
+.partnereventemails_TargetCtn_1Ts_n {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.partnereventemails_TargetCtn_1Ts_n .partnereventemails_TargetTypeTitle_2Erit {
+  width: 255px;
+}
+.partnereventemails_TargetCtn_1Ts_n .partnereventemails_TargetTypeCtn_3TxAc {
+  border: 1px solid #464b58;
+  padding: 16px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.partnereventemails_TargetCtn_1Ts_n
+  .partnereventemails_TargetTypeCtn_3TxAc
+  .partnereventemails_TargetedListCtn_3NubR {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventemails_TargetCtn_1Ts_n
+  .partnereventemails_TargetTypeCtn_3TxAc
+  .partnereventemails_SelectListCtn_980o4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.partnereventemails_TargetCtn_1Ts_n
+  .partnereventemails_TargetTypeCtn_3TxAc
+  .partnereventemails_SelectListCtn_980o4
+  > label {
+  width: fit-content;
+}
+.partnereventemails_SupportCtn_27guD {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #000;
+  display: block;
+}
+.partnereventemails_SupportCtn_27guD a {
+  color: #679dff;
+  text-decoration: underline;
 }
 .salebadgeprogressdisplay_OuterCtn_3yY4b {
   display: flex;
@@ -3886,37 +3837,84 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     flex-direction: column;
   }
 }
-.partnereventoptions_ThemedCtn_3JuTN {
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//events/halloween_art_tile.png");
+.partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
+  background-color: #473991;
+  margin-bottom: 20px;
 }
-.partnereventoptions_CategoryOption_4ke28 {
-  font-size: 13px;
-  color: #dfe3e6;
-}
-.partnereventoptions_CategoryTitle_Dx6oJ {
-  font-weight: 500;
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_SteamAwardCategoryOptions_1wsxj {
+  background: #473991;
   color: #fff;
+  display: flex;
 }
-.partnereventoptions_event_nomination_banner_ctn_1w12V {
-  margin: -16px -16px 0px -16px;
-  background-color: #061822;
-  width: calc(100% + 32px);
-  height: 153px;
-  border-top-left-radius: 4px;
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_event_nomination_banner_ctn_-WzN3 {
+  display: flex;
   position: relative;
+  margin-bottom: 15px;
 }
-.partnereventoptions_event_nomination_banner_ctn_1w12V
-  .partnereventoptions_event_nomination_banner_2nEQS {
-  position: absolute;
-  top: -36px;
-  right: 0;
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_CategoryTextCtn_3vRv1 {
+  display: flex;
+  flex-direction: column;
 }
-.partnereventoptions_event_nomination_banner_text_1gePU {
-  color: #dfe3e6;
-  position: relative;
-  padding: 16px;
-  display: block;
-  margin-right: 101px;
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_SteamAwardTitle_3Sq0j {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 20px 0;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_event_nomination_trophy_3kVDt {
+  width: 80px;
+  margin-right: 30px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_RadioBtnCtn_1Y6BP {
+  margin-bottom: 10px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_RadioBtnCtn_1Y6BP
+  * {
+  cursor: pointer;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_CategoryTitle_25wr6 {
+  font-weight: bold;
+}
+.partnereventspecialcategories_Halloween_1etNG {
+  padding: 10px;
+  background-color: #6d5934;
+  color: #dbe2e6;
+  margin-bottom: 12px;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventTitle_6NPnW {
+  font-size: 16px;
+  font-weight: 600;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventDesc_2aLMq {
+  margin-bottom: 12px;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventDesc_2aLMq
+  a {
+  text-decoration: underline;
+}
+.partnereventspecialcategories_Halloween_1etNG .EventCategory {
+  background-color: #393d47;
+}
+.progressutils_ErrorMessaage_13sZc {
+  color: red;
+  font-weight: bold;
+}
+.progressutils_UpdatingMessage_3baPw {
+  color: #fff;
+  font-weight: bold;
 }
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
   height: 200px;
@@ -4036,22 +4034,37 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .discoveryqueuewidget_Placeholder_3rUZ- {
   height: 200px;
 }
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
-  background-color: #abb2bd;
-  padding: 12px;
-  color: #000;
-  display: flex;
-  flex-direction: row;
+.partnereventoptions_ThemedCtn_3JuTN {
+  background-image: url("https://community.cloudflare.steamstatic.com/public/images//events/halloween_art_tile.png");
 }
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
-  .requirevalvepublishapproval_Right_184Cy {
-  border-left: 1px solid #000;
-  padding-left: 18px;
-  margin-left: 18px;
-  min-width: 200px;
+.partnereventoptions_CategoryOption_4ke28 {
+  font-size: 13px;
+  color: #dfe3e6;
 }
-.requirevalvepublishapproval_Title_1TI4b {
-  font-weight: bold;
+.partnereventoptions_CategoryTitle_Dx6oJ {
+  font-weight: 500;
+  color: #fff;
+}
+.partnereventoptions_event_nomination_banner_ctn_1w12V {
+  margin: -16px -16px 0px -16px;
+  background-color: #061822;
+  width: calc(100% + 32px);
+  height: 153px;
+  border-top-left-radius: 4px;
+  position: relative;
+}
+.partnereventoptions_event_nomination_banner_ctn_1w12V
+  .partnereventoptions_event_nomination_banner_2nEQS {
+  position: absolute;
+  top: -36px;
+  right: 0;
+}
+.partnereventoptions_event_nomination_banner_text_1gePU {
+  color: #dfe3e6;
+  position: relative;
+  padding: 16px;
+  display: block;
+  margin-right: 101px;
 }
 .salequestdisplay_description_22ryq {
   padding-left: 5em;
@@ -4079,8 +4092,22 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   margin-left: auto;
   margin-right: auto;
 }
-.partnereventpublishingcontrols_PublishContainer_2tCY6 {
-  max-width: 30%;
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
+  background-color: #abb2bd;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
+  .requirevalvepublishapproval_Right_184Cy {
+  border-left: 1px solid #000;
+  padding-left: 18px;
+  margin-left: 18px;
+  min-width: 200px;
+}
+.requirevalvepublishapproval_Title_1TI4b {
+  font-weight: bold;
 }
 :root {
   --basicui-header-height: 0px;
@@ -4105,6 +4132,34 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   .saledisplaylogo_SalePageLogoCtn_2kLRR {
     margin-bottom: 0px;
   }
+}
+.partnereventpublishingcontrols_PublishContainer_2tCY6 {
+  max-width: 30%;
+}
+.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ:nth-child(even) {
+  background: rgba(0, 0, 0, 0.25);
+}
+.debugmatchesdialog_DiscrepancyDialogHeaderRow_2W2_r {
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.debugmatchesdialog_DiscrepancyDialogCell_LWAHl {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+  text-align: left;
+  padding: 4px;
+}
+.debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
+  z-index: 2000;
 }
 .partnereventpublishingtab_SummaryItems_12a_L,
 .partnereventpublishingtab_ReachItems_H_jRC {
@@ -4184,91 +4239,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .partnereventpublishingtab_ReachPendingVisibilityText_n1wAj {
   color: orange;
-}
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
-  width: 100%;
-  display: flex;
-  background: rgba(0, 0, 0, 0.5);
-}
-.debugmatchesdialog_DiscrepancyDialogRow_3UBBZ:nth-child(even) {
-  background: rgba(0, 0, 0, 0.25);
-}
-.debugmatchesdialog_DiscrepancyDialogHeaderRow_2W2_r {
-  width: 100%;
-  display: flex;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.debugmatchesdialog_DiscrepancyDialogCell_LWAHl {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 50%;
-  text-align: left;
-  padding: 4px;
-}
-.debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
-  z-index: 2000;
-}
-.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
-  background-color: #2e3138;
-  padding: 12px;
-  color: #969696;
-}
-.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
-  .saleguidelinedialog_SignedBy_aFTva {
-  display: flex;
-}
-.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
-  width: 100%;
-  height: 300px;
-  padding: 24px;
-  box-sizing: border-box;
-  background-color: #2e3138;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
-  .saleguidelinedialog_OpenGuidelinesBtnCtn_1xJdi {
-  width: 50%;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px;
-  background-color: #2e3138;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu button {
-  flex-basis: 30%;
-}
-.saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
-  flex-basis: 70%;
-}
-.saleguidelinedialog_Intro_yYvoX {
-  margin-bottom: 8px;
-}
-.saleguidelinedialog_AgreementsCtn_1TWap {
-  margin: 12px 0px;
-}
-.saleguidelinedialog_ContactSectionCtn_3gDWx {
-  display: flex;
-  flex-direction: column;
-}
-.saleguidelinedialog_ContactSectionCtn_3gDWx div {
-  margin-top: 8px;
-}
-.saleguidelinedialog_SectionTitle_3HeMo {
-  font-size: 13px;
-  color: #cacaca;
-  font-weight: 400;
-  text-transform: uppercase;
-  padding-top: 24px;
 }
 :root {
   --basicui-header-height: 0px;
@@ -4558,23 +4528,65 @@ html.responsive.touch
 .BasicUI .saleitembrowser_SuggestContainer_1jJg_ {
   display: none;
 }
-.partnereventrevisionhistory_VersionListCtn_32hnY {
-  max-height: 500px;
-  overflow-y: scroll;
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
+  background-color: #2e3138;
+  padding: 12px;
+  color: #969696;
 }
-.partnereventrevisionhistory_VersionCtn_3vUSX {
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
+  .saleguidelinedialog_SignedBy_aFTva {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 1px solid #000;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
 }
-.partnereventrevisionhistory_VersionCtn_3vUSX
-  .partnereventrevisionhistory_VersionInfoCtn_1sI79 {
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
+  width: 100%;
+  height: 300px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #2e3138;
   display: flex;
   flex-direction: column;
-  min-width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
+  .saleguidelinedialog_OpenGuidelinesBtnCtn_1xJdi {
+  width: 50%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #2e3138;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu button {
+  flex-basis: 30%;
+}
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu .saleguidelinedialog_Text_1yrjm {
+  flex-basis: 70%;
+}
+.saleguidelinedialog_Intro_yYvoX {
+  margin-bottom: 8px;
+}
+.saleguidelinedialog_AgreementsCtn_1TWap {
+  margin: 12px 0px;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx {
+  display: flex;
+  flex-direction: column;
+}
+.saleguidelinedialog_ContactSectionCtn_3gDWx div {
+  margin-top: 8px;
+}
+.saleguidelinedialog_SectionTitle_3HeMo {
+  font-size: 13px;
+  color: #cacaca;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 24px;
 }
 .saleminigames_Ctn_1SGWR {
   display: flex;
@@ -4640,18 +4652,23 @@ html.responsive.touch
   box-shadow: 4px 4px 0px #0097c9;
   color: #0097c9;
 }
-.partnereventsalesorttiers_SortTierControls_1_f_6 {
+.partnereventrevisionhistory_VersionListCtn_32hnY {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.partnereventrevisionhistory_VersionCtn_3vUSX {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.partnereventrevisionhistory_VersionCtn_3vUSX
+  .partnereventrevisionhistory_VersionInfoCtn_1sI79 {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-top: 10px;
-}
-.partnereventsalesorttiers_SortTierExplanation_1U8SA {
-  padding-bottom: 8px;
-}
-button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
-  background-color: rgba(80, 84, 90, 0.35);
-  color: #9f9396;
+  min-width: 80%;
 }
 :root {
   --basicui-header-height: 0px;
@@ -4706,6 +4723,88 @@ button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.partnereventsalesorttiers_SortTierControls_1_f_6 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+.partnereventsalesorttiers_SortTierExplanation_1U8SA {
+  padding-bottom: 8px;
+}
+button.DialogButton.partnereventsalesorttiers_AutoTierButton_3uDH_:disabled {
+  background-color: rgba(80, 84, 90, 0.35);
+  color: #9f9396;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  transition: background-image 0.1s ease-out;
+}
+.BasicUI .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
+  display: none;
 }
 .tableofcontents_TableOfContentsContainer_2VyHw {
   position: absolute;

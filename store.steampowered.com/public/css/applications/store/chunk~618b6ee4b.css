@@ -2584,11 +2584,8 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
-  min-height: 500px;
   position: relative;
   z-index: 4;
-  width: 908px;
-  height: 500px;
   margin: 0 auto;
 }
 .BasicUI .animated_featured_capsule_FeatureCtn_1No48 {
@@ -2607,7 +2604,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .animated_featured_capsule_SuperCapsuleCtn_1n268 {
   width: 100%;
-  height: 400px;
   position: relative;
   background: #000;
 }
@@ -2617,10 +2613,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .BasicUI .animated_featured_capsule_SuperCapsuleCtn_1n268 {
   height: 300px;
 }
+.contenthubmaincarousel.expanded .animated_featured_capsule_BGImage_3GMV1 {
+  display: none;
+}
 .ContentHubSalePage
   .SaleSectionCtn.contenthubmaincarousel.expanded
   .animated_featured_capsule_SuperCapsuleCtn_1n268 {
-  height: 566px;
   background: none;
 }
 .ContentHubSalePage
@@ -2638,7 +2636,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .ContentHubSalePage
   .SaleSectionCtn.contenthubmaincarousel.expanded
   .animated_featured_capsule_FeatureCtn_1No48 {
-  padding-top: 175px;
   max-width: 940px;
   width: 100%;
   box-sizing: border-box;
@@ -2782,9 +2779,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .animated_featured_capsule_Artwork_3UsQc {
   flex-shrink: 0;
-  margin-top: 30px;
   padding: 0;
-  margin-left: 10px;
   position: relative;
   z-index: 2;
   height: 340px;
@@ -2828,16 +2823,13 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .animated_featured_capsule_Info_2mUNQ {
   display: flex;
   flex-direction: column;
-  height: 450px;
   padding-left: 8px;
-  padding-top: 30px;
   z-index: 1;
 }
 .animated_featured_capsule_ContentHubSuperCapsuleCtn_1tUPe
   .animated_featured_capsule_Info_2mUNQ {
   height: 354px;
   padding: 8px;
-  margin-top: 30px;
   background: linear-gradient(to right, #223b4f 5%, #25435b 95%);
 }
 .BasicUI .animated_featured_capsule_Info_2mUNQ {
@@ -3132,7 +3124,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background: #0000004f;
   backdrop-filter: blur(20px);
   height: 308px;
-  margin-top: 30px;
 }
 .ContentHubMainCarouselCapsule
   .animated_featured_capsule_Info_2mUNQ
@@ -4176,19 +4167,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 Body.v6.tag_page.contenthub_page {
   background-color: #202327;
 }
-.contenthubmaincarousel.expanded
-  .contenthubshared_MainCarousel_rKC9i
-  .carousel
-  .SliderBody {
-  position: unset;
-}
-.contenthubmaincarousel.expanded
-  .contenthubshared_MainCarousel_rKC9i
-  .carousel
-  .SliderBody
-  button {
-  top: 250px;
-}
 .contenthubshared_MainCarousel_rKC9i {
   width: 100%;
   position: unset;
@@ -4414,10 +4392,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray:after {
   margin: 0px auto;
 }
 .ContentHubSalePage .contenthubmaincarousel.expanded {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 500px;
   display: block;
   width: 100%;
 }
@@ -4440,56 +4414,26 @@ html.tablet .ContentHubSalePage .contenthubmaincarousel.expanded {
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubtitle.expanded:first-child,
-.ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-.ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-  ~ .SaleSectionCtn.contenthubtitle.expanded {
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
   margin-bottom: 456px;
 }
 html.tablet
   .ContentHubSalePage
   .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubtitle.expanded:first-child,
-html.tablet
-  .ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-html.tablet
-  .ContentHubSalePage
-  .SaleSectionTabListContainer
-  .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-  ~ .SaleSectionCtn.contenthubtitle.expanded {
+  .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
   margin-bottom: unset;
 }
 @media screen and (max-width: 910px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubtitle.expanded:first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-    ~ .SaleSectionCtn.contenthubtitle.expanded {
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
     margin-bottom: unset;
   }
 }
 @media screen and (max-width: 940px) {
   .ContentHubSalePage
     .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubtitle.expanded:first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child,
-  .ContentHubSalePage
-    .SaleSectionTabListContainer
-    .SaleSectionCtn.contenthubpartnertakeover.expanded:empty:first-child
-    ~ .SaleSectionCtn.contenthubtitle.expanded {
+    .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
     margin-bottom: 470px;
   }
 }
@@ -5219,9 +5163,6 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   width: 90%;
   animation-delay: 0.23s;
 }
-.saleghostsections_GhostCtn_3gdzT .saleghostsections_MainCapRowExpanded_16pNv {
-  padding-top: 205px;
-}
 @keyframes saleghostsections_GhostShine_3xEY- {
   0% {
     background-position: 100% 100%;
@@ -5362,7 +5303,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 .maincapsule_PlaceholderExpanded_ZUCkq {
   max-width: 1920px;
   margin: 0 auto;
-  height: 680px;
+  height: 400px;
 }
 .BasicUI .maincapsule_PlaceholderExpanded_ZUCkq {
   height: 230px;
@@ -5376,7 +5317,7 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 .maincapsule_PlaceholderCompact_12-VZ {
   width: 910px;
   margin: 0 auto;
-  height: 480px;
+  height: 400px;
 }
 .maincapsule_PlaceholderCompact_12-VZ .maincapsule_ThrobberCtn_1l4x_ {
   padding-top: 180px;
@@ -5391,6 +5332,9 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   margin-bottom: 36px;
   position: relative;
   z-index: 1;
+}
+.expanded .contenthubmaincarousel_ContentHubTitleCtn_61ECB {
+  margin-bottom: 18px;
 }
 .BasicUI .contenthubmaincarousel_ContentHubTitleCtn_61ECB {
   margin-bottom: 12px !important;
@@ -7728,6 +7672,60 @@ html.responsive.touch
   box-shadow: 4px 4px 0px #0097c9;
   color: #0097c9;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.salesection_ShowContentsContainer_14g7C {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+.salesection_ShowContentsContainer_14g7C .salesection_ShowContentsButton_p8mU9 {
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #222;
+  background: rgba(255, 255, 255, 0.7);
+}
+.BasicUI
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9 {
+  background: unset;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s ease;
+  font: var(--gpText-BodyLarge);
+  padding: 10px 20px;
+  min-width: 32%;
+}
+.BasicUI
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9.gpfocus {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+}
+.salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9:hover {
+  color: #222;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.BasicUI
+  .salesection_ShowContentsContainer_14g7C
+  .salesection_ShowContentsButton_p8mU9:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: unset;
+}
+.salesection_FacetedBrowseLoadThrobber_1hNUt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .giveawaynextdraw_countdownCtn_awreX {
   background: radial-gradient(
     100% 80% at 64% 95%,
@@ -7791,56 +7789,71 @@ html.responsive.touch
 :root {
   --basicui-header-height: 0px;
 }
-.salesection_ShowContentsContainer_14g7C {
-  display: flex;
-  justify-content: center;
-  margin-top: 14px;
-}
-.salesection_ShowContentsContainer_14g7C .salesection_ShowContentsButton_p8mU9 {
-  border-radius: 2px;
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  cursor: pointer;
-  color: #222;
-  background: rgba(255, 255, 255, 0.7);
-}
-.BasicUI
-  .salesection_ShowContentsContainer_14g7C
-  .salesection_ShowContentsButton_p8mU9 {
-  background: unset;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.12);
-  transition: background-color 0.2s ease;
-  font: var(--gpText-BodyLarge);
-  padding: 10px 20px;
-  min-width: 32%;
-}
-.BasicUI
-  .salesection_ShowContentsContainer_14g7C
-  .salesection_ShowContentsButton_p8mU9.gpfocus {
-  color: #000;
-  background-color: #fff;
-  border-radius: 0px;
-}
-.salesection_ShowContentsContainer_14g7C
-  .salesection_ShowContentsButton_p8mU9:hover {
-  color: #222;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-.BasicUI
-  .salesection_ShowContentsContainer_14g7C
-  .salesection_ShowContentsButton_p8mU9:hover {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.24);
-  box-shadow: unset;
-}
-.salesection_FacetedBrowseLoadThrobber_1hNUt {
+.salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
+  position: absolute;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    ),
+    linear-gradient(180deg, #000000 90%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  transition: background-image 0.1s ease-out;
+}
+.BasicUI .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
+  display: none;
 }
 .saleeventbbcodeparser_ErrorDiv_1Vj6H {
   background-color: hotpink;

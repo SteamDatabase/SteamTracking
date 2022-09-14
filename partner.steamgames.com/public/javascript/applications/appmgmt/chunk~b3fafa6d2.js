@@ -405,7 +405,7 @@
         md: () => h,
       });
       var r = n(90666),
-        a = (n(92398), n(41311));
+        a = (n(54698), n(41311));
       function i(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",

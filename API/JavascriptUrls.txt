@@ -594,6 +594,7 @@ ${PARTNER_BASE_URL}optin/sale/${}
 ${PARTNER_BASE_URL}optin/sale/${}/${nBaseAppID}
 ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
+${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${packageID}
@@ -630,6 +631,7 @@ ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
+${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem

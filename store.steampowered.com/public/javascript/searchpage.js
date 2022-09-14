@@ -629,6 +629,9 @@ function DecorateFilterControls()
 		});
 
 		$Control.click( function() {
+			if ( $Control.parent().hasClass('disabled') )
+				return;
+
 			var $antiStore = antiField ? $J('#' + antiField) : null;
 			var strValues = decodeURIComponent( $dataStore.val() );
 			value = String(value); // Javascript: Dynamic types except sometimes not.
@@ -641,7 +644,9 @@ function DecorateFilterControls()
 			// exists.
 			if ( !$Control.hasClass( 'checked' ) ) {
 				if ( bIsToggle )
+				{
 					finalValue = 1;
+				}
 				else {
 					finalValue = strArrayAdd( strValues, value );
 					if ( $antiStore ) {
@@ -651,9 +656,9 @@ function DecorateFilterControls()
 						$J("span[data-value="+value+"][data-param="+antiField+"]").removeClass( 'checked' );
 
 					}
-					// Set checked on our parent row.
-					$Control.parent().addClass( 'checked' );
 				}
+				// Set checked on our parent row.
+				$Control.parent().addClass( 'checked' );
 			}
 			// When unchecking a field, no extra anti-field work is needed.
 			else {

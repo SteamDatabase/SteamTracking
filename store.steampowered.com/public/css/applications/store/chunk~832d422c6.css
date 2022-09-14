@@ -1364,3 +1364,8 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .partnereventdisplay_ReadMoreCnt_d_R9N {
   padding-top: 20px;
 }
+.partnereventdisplay_ReadMoreCnt_d_R9N .LinkButton {
+  background-color: #2681da;
+  font-size: 16px;
+  color: #fff;
+}

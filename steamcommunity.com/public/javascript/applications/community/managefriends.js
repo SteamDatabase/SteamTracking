@@ -55,8 +55,8 @@
         a = n.n(s),
         i = n(22188),
         o = n(67294),
-        d = (n(26149), n(92398), n(43359)),
-        l = n(3389),
+        l = (n(26149), n(54698), n(43359)),
+        d = n(3389),
         c = (n(82946), n(77520)),
         u = n(93976),
         m = n(90666);
@@ -86,9 +86,9 @@
               200 == i.status &&
               i.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = (0, d.U)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = (0, d.U)(e.avatar_url, "full")),
-                  (e.avatar_url = (0, d.U)(e.avatar_url)),
+                  (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
+                  (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
+                  (e.avatar_url = (0, l.U)(e.avatar_url)),
                   this.m_mapProfiles.set(e.steamid, e),
                   this.m_mapProfilesLoading.delete(e.steamid);
               });
@@ -99,7 +99,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
+            d.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(e) {
@@ -110,11 +110,14 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
+            d.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(e) {
           return this.m_mapProfiles.has(e.ConvertTo64BitString());
+        }
+        BHasAllProfilesBySteamID(e) {
+          return !e.some((e) => !this.BHasProfileBySteamID(e));
         }
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
@@ -131,7 +134,7 @@
       const p = new _();
       function g(e) {
         const t = o.useMemo(
-            () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
+            () => (e ? ("string" == typeof e ? new d.K(e) : e) : null),
             [e]
           ),
           [n, r] = (0, o.useState)(!!t && !p.BHasProfileBySteamID(t));
@@ -161,7 +164,7 @@
         return [n, !!t && p.GetProfileBySteamID(t)];
       }
       function f(e) {
-        return g(o.useMemo(() => l.K.InitFromAccountID(e), [e]));
+        return g(o.useMemo(() => d.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = p;
     },
@@ -173,8 +176,8 @@
         a = n(22975),
         i = n(9669),
         o = n.n(i),
-        d = n(48341),
-        l = n(41311),
+        l = n(48341),
+        d = n(41311),
         c = n(76778),
         u = n.n(c),
         m = n(90666),
@@ -271,7 +274,7 @@
             s.createElement(
               "div",
               { className: u().HeaderBlock },
-              (0, l.Xx)("#ManageFriends_AddAFriend")
+              (0, d.Xx)("#ManageFriends_AddAFriend")
             ),
             s.createElement(
               "div",
@@ -279,14 +282,14 @@
               s.createElement(
                 "h1",
                 { className: u().Heading },
-                (0, l.Xx)("#ManageFriends_YourFriendCode")
+                (0, d.Xx)("#ManageFriends_YourFriendCode")
               ),
               s.createElement(
                 "div",
                 { className: u().CopyContainer },
                 s.createElement("h1", { className: u().Text }, m.L7.accountid),
                 s.createElement(
-                  d.KM,
+                  l.KM,
                   {
                     autoFocus: !0,
                     className: u().Button,
@@ -294,18 +297,18 @@
                       this.OnCopy("friend_code", String(m.L7.accountid)),
                   },
                   this.state.friend_code_copied
-                    ? (0, l.Xx)("#ManageFriends_Copied")
-                    : (0, l.Xx)("#ManageFriends_Copy")
+                    ? (0, d.Xx)("#ManageFriends_Copied")
+                    : (0, d.Xx)("#ManageFriends_Copy")
                 )
               ),
               s.createElement(
                 "p",
                 { className: u().Body },
-                (0, l.Xx)("#ManageFriends_EnterFriendCode")
+                (0, d.Xx)("#ManageFriends_EnterFriendCode")
               ),
               s.createElement(C, {
                 onButtonClick: this.OnAddFriend,
-                buttonText: (0, l.Xx)("#ManageFriends_SendInvite"),
+                buttonText: (0, d.Xx)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
                 bDisableForFriends: !0,
                 bShowStatus: !0,
@@ -317,17 +320,17 @@
               s.createElement(
                 "h1",
                 { className: u().Heading },
-                (0, l.Xx)("#ManageFriends_OrSendQuickInvite")
+                (0, d.Xx)("#ManageFriends_OrSendQuickInvite")
               ),
               s.createElement(
                 "p",
                 { className: u().Body },
-                (0, l.Xx)("#ManageFriends_QuickInviteDescription")
+                (0, d.Xx)("#ManageFriends_QuickInviteDescription")
               ),
               s.createElement(
                 "p",
                 { className: u().Body },
-                (0, l.Xx)("#ManageFriends_QuickInviteNote")
+                (0, d.Xx)("#ManageFriends_QuickInviteNote")
               ),
               s.createElement(
                 "div",
@@ -335,23 +338,23 @@
                 Boolean(this.state.invite_token) &&
                   s.createElement("div", { className: u().Link }, e),
                 s.createElement(
-                  d.KM,
+                  l.KM,
                   {
                     className: u().Button,
                     onClick: () => this.OnCopy("invite", e),
                   },
                   this.state.invite_copied
-                    ? (0, l.Xx)("#ManageFriends_Copied")
-                    : (0, l.Xx)("#ManageFriends_Copy")
+                    ? (0, d.Xx)("#ManageFriends_Copied")
+                    : (0, d.Xx)("#ManageFriends_Copy")
                 )
               ),
               s.createElement(
-                d.zx,
+                l.zx,
                 {
                   className: u().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
-                (0, l.Xx)("#ManageFriends_CreateInviteLink")
+                (0, d.Xx)("#ManageFriends_CreateInviteLink")
               )
             ),
             s.createElement(
@@ -360,7 +363,7 @@
               s.createElement(
                 "h1",
                 { className: u().Heading },
-                (0, l.Xx)("#ManageFriends_OrSearch")
+                (0, d.Xx)("#ManageFriends_OrSearch")
               ),
               s.createElement("br", null),
               s.createElement(
@@ -376,12 +379,12 @@
                 s.createElement(
                   "div",
                   { style: { width: "100%" } },
-                  s.createElement(d.II, {
+                  s.createElement(l.II, {
                     className: u().Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
-                    placeholder: (0, l.Xx)("#ManageFriends_EnterProfileName"),
+                    placeholder: (0, d.Xx)("#ManageFriends_EnterProfileName"),
                   })
                 ),
                 s.createElement(
@@ -472,11 +475,11 @@
           return s.createElement(
             "div",
             null,
-            s.createElement(d.II, {
+            s.createElement(l.II, {
               className: u().Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
-              placeholder: (0, l.Xx)(
+              placeholder: (0, d.Xx)(
                 "#ManageFriends_EnterFriendCodePlaceholder"
               ),
             }),
@@ -488,7 +491,7 @@
                 bShowStatus: this.props.bShowStatus,
               },
               s.createElement(
-                d.KM,
+                l.KM,
                 {
                   onClick: () =>
                     this.OnActionClick(this.state.searchResult.steamid),
@@ -548,7 +551,7 @@
                         target: m.De.IN_GAMEPADUI ? void 0 : "_blank",
                         href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
-                      (0, l.Xx)("#ManageFriends_ProfileLink")
+                      (0, d.Xx)("#ManageFriends_ProfileLink")
                     ),
                     s.createElement("br", null),
                     s.createElement(
@@ -571,7 +574,7 @@
                   s.createElement(
                     "div",
                     null,
-                    (0, l.Xx)("#ManageFriends_IsFriend")
+                    (0, d.Xx)("#ManageFriends_IsFriend")
                   ),
                 0 != t.friends_in_common &&
                   s.createElement(
@@ -588,11 +591,11 @@
                           "/friendscommon",
                       },
                       1 === t.friends_in_common
-                        ? (0, l.Xx)(
+                        ? (0, d.Xx)(
                             "#ManageFriends_FriendsInCommonSingular",
                             t.friends_in_common
                           )
-                        : (0, l.Xx)(
+                        : (0, d.Xx)(
                             "#ManageFriends_FriendsInCommon",
                             t.friends_in_common
                           )
@@ -603,14 +606,14 @@
                   s.createElement(
                     "div",
                     { className: u().Failure },
-                    (0, l.Xx)("#ManageFriends_InviteFailure")
+                    (0, d.Xx)("#ManageFriends_InviteFailure")
                   ),
                 r &&
                   "success" === n &&
                   s.createElement(
                     "div",
                     { className: u().Success },
-                    (0, l.Xx)("#ManageFriends_InviteSuccess", t.persona_name)
+                    (0, d.Xx)("#ManageFriends_InviteSuccess", t.persona_name)
                   )
               )
             )

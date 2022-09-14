@@ -3,6 +3,12 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [1649],
   {
+    82860: (e) => {
+      e.exports = {
+        SectionTitleHeader: "collapseablesection_SectionTitleHeader_1K5gA",
+        required_title: "collapseablesection_required_title_29VCz",
+      };
+    },
     58514: (e) => {
       e.exports = {
         QAFullPageView: "questions_QAFullPageView_3tZpF",
@@ -77,12 +83,89 @@
         DeleteInfo: "questions_DeleteInfo_3EhGH",
       };
     },
+    98300: (e, t, n) => {
+      "use strict";
+      n.d(t, { bC: () => v, fU: () => _, mY: () => m, ug: () => A });
+      var s = n(48341),
+        o = n(41311),
+        i = n(95598),
+        a = n(67294),
+        r = n(7573),
+        l = n(34133),
+        u = n(32548),
+        d = n(29323),
+        c = n(82860);
+      const m = (0, d.Pi)((e) =>
+        a.createElement(
+          a.Fragment,
+          null,
+          a.createElement(
+            "div",
+            {
+              className: (0, r.Z)(
+                e.className ? e.className : c.SectionTitleHeader,
+                c.required_title
+              ),
+            },
+            a.createElement(
+              "div",
+              {
+                className: (0, r.Z)(
+                  l.EventEditorTextTitle,
+                  "EventEditorTextTitle"
+                ),
+              },
+              e.title,
+              Boolean(e.tooltip) && a.createElement(v, { tooltip: e.tooltip })
+            ),
+            a.createElement(_, {
+              bIsMinimized: e.getMinimized(),
+              fnToggleMinimize: e.toggleMinimized,
+            })
+          ),
+          !e.getMinimized() && a.createElement(u.S, null, e.children)
+        )
+      );
+      function A(e) {
+        const [t, n] = a.useState(Boolean(e.bStartMinimized));
+        return a.createElement(
+          m,
+          Object.assign({}, e, {
+            getMinimized: () => t,
+            toggleMinimized: () => n(!t),
+          }),
+          e.children
+        );
+      }
+      function _(e) {
+        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return a.createElement(
+          s.zx,
+          { "data-tooltip-text": (0, o.Xx)(r), onClick: n },
+          e.bIsMinimized
+            ? a.createElement(i.YqJ, null)
+            : a.createElement(i.gR, null)
+        );
+      }
+      function v(e) {
+        return a.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: (0, r.Z)(l.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          a.createElement(i.WWB, null)
+        );
+      }
+    },
     69382: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => P, EI: () => K, kF: () => J });
+      n.d(t, { A: () => P, EI: () => Z, kF: () => J });
       var s = n(70655),
         o = n(67294),
-        i = (n(92398), n(3389)),
+        i = (n(54698), n(3389)),
         a = n(5525),
         r = n(81130),
         l = n(99533),
@@ -968,21 +1051,21 @@
           [n, s]
         );
       }
-      var D = n(48341),
-        b = n(9410),
+      var b = n(48341),
+        D = n(9410),
         I = n(96602),
         f = n(8850),
         w = n(59650),
         T = n(95598),
-        k = n(13596),
-        q = n(28268),
+        q = n(13596),
+        k = n(28268),
         G = n(98300),
-        L = n(7573),
-        M = n(41311),
-        U = n(73604),
-        x = n(30600),
-        V = n(58514),
-        B = n.n(V);
+        M = n(7573),
+        L = n(41311),
+        x = n(73604),
+        U = n(30600),
+        B = n(58514),
+        V = n.n(B);
       function P(e) {
         const t = (function () {
           const [e, t] = o.useState(C.Get().GetAllSessions());
@@ -996,32 +1079,32 @@
         })();
         return o.createElement(
           "div",
-          { className: B().QADashboardCtn },
+          { className: V().QADashboardCtn },
           o.createElement(R, null),
           o.createElement(
             "div",
             {
-              className: (0, L.Z)(B().DashboardRow, B().DashboardColumnHeaders),
+              className: (0, M.Z)(V().DashboardRow, V().DashboardColumnHeaders),
             },
             o.createElement(
               "div",
-              { className: B().QAndAName },
-              (0, M.Xx)("#QAndA_Column_Name")
+              { className: V().QAndAName },
+              (0, L.Xx)("#QAndA_Column_Name")
             ),
             o.createElement(
               "div",
-              { className: B().GIDSession },
-              (0, M.Xx)("#QAndA_Column_GID")
+              { className: V().GIDSession },
+              (0, L.Xx)("#QAndA_Column_GID")
             ),
             o.createElement(
               "div",
-              { className: B().QuestionCount },
-              (0, M.Xx)("#QAndA_Column_QuestionCount")
+              { className: V().QuestionCount },
+              (0, L.Xx)("#QAndA_Column_QuestionCount")
             ),
             o.createElement(
               "div",
-              { className: B().QAndADeleteColumn },
-              (0, M.Xx)("#QAndA_Column_DeleteButtons")
+              { className: V().QAndADeleteColumn },
+              (0, L.Xx)("#QAndA_Column_DeleteButtons")
             )
           ),
           t.map((e) => o.createElement(O, { key: e.gidSession, qanda: e }))
@@ -1031,25 +1114,25 @@
         const t = o.useCallback(
           () =>
             (0, w.x1)(o.createElement(H, null), window, {
-              strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
+              strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
             }),
           []
         );
         return o.createElement(
           "div",
-          { className: B().DashboardHeader },
+          { className: V().DashboardHeader },
           o.createElement(
             "div",
-            { className: B().DashboardHeaderTitle },
-            (0, M.Xx)("#QAndA_Dashboard")
+            { className: V().DashboardHeaderTitle },
+            (0, L.Xx)("#QAndA_Dashboard")
           ),
           o.createElement(
             "div",
-            { className: B().DashboardHeaderButtonCtn },
+            { className: V().DashboardHeaderButtonCtn },
             o.createElement(
-              D.zx,
+              b.zx,
               { onClick: t },
-              (0, M.Xx)("#QAndA_CreateQAndA_Button")
+              (0, L.Xx)("#QAndA_CreateQAndA_Button")
             )
           )
         );
@@ -1063,19 +1146,19 @@
         return o.createElement(
           f.uH,
           {
-            strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
-            strDescription: (0, M.Xx)("#QAndA_CreateQAndA_Instructions"),
-            strOKButtonText: (0, M.Xx)("#Button_Create"),
+            strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
+            strDescription: (0, L.Xx)("#QAndA_CreateQAndA_Instructions"),
+            strOKButtonText: (0, L.Xx)("#Button_Create"),
             onOK: () => t(n),
             bOKDisabled: 0 == n.length,
             closeModal: e.closeModal,
-            className: B().CreateQAndADialog,
+            className: V().CreateQAndADialog,
           },
-          o.createElement(D.II, {
+          o.createElement(b.II, {
             type: "text",
-            className: B().NameInput,
+            className: V().NameInput,
             value: n,
-            placeholder: (0, M.Xx)("#QAndA_EnterNamePrompt"),
+            placeholder: (0, L.Xx)("#QAndA_EnterNamePrompt"),
             onFocus: (e) => e.target.select(),
             onChange: (e) => s(e.currentTarget.value),
             maxLength: 120,
@@ -1095,27 +1178,27 @@
               e.stopPropagation(),
                 e.preventDefault(),
                 (0, w.x1)(o.createElement(X, { qanda: t }), window, {
-                  strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
+                  strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
                 });
             },
             [t]
           );
         return o.createElement(
           "a",
-          { className: B().DashboardRow, href: n },
+          { className: V().DashboardRow, href: n },
           o.createElement(y, { qanda: t }),
-          o.createElement("div", { className: B().GIDSession }, t.gidSession),
+          o.createElement("div", { className: V().GIDSession }, t.gidSession),
           o.createElement(
             "div",
-            { className: B().QuestionCount },
+            { className: V().QuestionCount },
             t.rgQuestionGIDs.length
           ),
           o.createElement(
             "div",
-            { className: B().QAndADeleteColumn },
+            { className: V().QAndADeleteColumn },
             o.createElement(
               "div",
-              { className: B().DeleteButton, onClick: s },
+              { className: V().DeleteButton, onClick: s },
               o.createElement(T.rFk, null)
             )
           )
@@ -1134,40 +1217,40 @@
               ? t.strName
               : o.createElement(
                   "span",
-                  { className: B().Prompt },
-                  (0, M.Xx)("#QAndA_EnterNamePrompt")
+                  { className: V().Prompt },
+                  (0, L.Xx)("#QAndA_EnterNamePrompt")
                 ),
           u = o.createElement(
             "div",
-            { className: B().NameInput },
-            o.createElement(D.II, {
+            { className: V().NameInput },
+            o.createElement(b.II, {
               type: "text",
-              className: B().NameInput,
+              className: V().NameInput,
               value: i,
-              placeholder: (0, M.Xx)("#QAndA_EnterNamePrompt"),
+              placeholder: (0, L.Xx)("#QAndA_EnterNamePrompt"),
               onFocus: (e) => e.target.select(),
               onChange: (e) => a(e.currentTarget.value),
               maxLength: 120,
             }),
             o.createElement(
-              D.KM,
+              b.KM,
               {
                 onClick: (e) => {
                   e.stopPropagation(),
                     e.preventDefault(),
-                    0 != (0, U.eT)(i, t.strName)
+                    0 != (0, x.eT)(i, t.strName)
                       ? r(t.gidSession, i).then(() => s(!1))
                       : s(!1);
                 },
-                className: B().InputButton,
+                className: V().InputButton,
               },
-              (0, M.Xx)("#Button_Save")
+              (0, L.Xx)("#Button_Save")
             )
           );
         return o.createElement(
           "div",
           {
-            className: (0, L.Z)(B().QAndAName, n && B().Editing),
+            className: (0, M.Z)(V().QAndAName, n && V().Editing),
             onClick: (e) => {
               e.stopPropagation(), e.preventDefault(), n || s(!0);
             },
@@ -1184,21 +1267,21 @@
         return o.createElement(
           f.uH,
           {
-            strTitle: (0, M.Xx)("#QAndA_Column_DeleteButtons"),
-            strDescription: (0, M.Xx)("#QAndA_DeleteQAndA_Instructions"),
+            strTitle: (0, L.Xx)("#QAndA_Column_DeleteButtons"),
+            strDescription: (0, L.Xx)("#QAndA_DeleteQAndA_Instructions"),
             onOK: () => n(t.gidSession),
             closeModal: e.closeModal,
-            className: B().DeleteQAndADialog,
+            className: V().DeleteQAndADialog,
           },
           o.createElement(
             "div",
-            { className: B().DeleteInfo },
-            (0, M.Xx)("#QAndA_Column_Name") + ": " + t.strName
+            { className: V().DeleteInfo },
+            (0, L.Xx)("#QAndA_Column_Name") + ": " + t.strName
           ),
           o.createElement(
             "div",
-            { className: B().DeleteInfo },
-            (0, M.Xx)("#QAndA_Column_QuestionCount") +
+            { className: V().DeleteInfo },
+            (0, L.Xx)("#QAndA_Column_QuestionCount") +
               ": " +
               t.rgQuestionGIDs.length
           )
@@ -1221,54 +1304,54 @@
           })(n);
         if (!l) return null;
         const c = r - l.rtPostTime,
-          m = c < x._H.PerDay ? (0, M.yW)(c) : (0, M.m9)(l.rtPostTime),
+          m = c < U._H.PerDay ? (0, L.yW)(c) : (0, L.m9)(l.rtPostTime),
           A = i ? () => a(n, !l.bUserUpVoted) : null,
           _ = i
             ? l.bUserUpVoted
-              ? B().Vote_Positive
-              : B().Vote_Ready
-            : B().Vote_CannotVote,
-          v = (0, L.Z)(
-            B().Question,
-            3 == l.eState && B().Hidden,
-            1 == l.eState && B().Moderated,
-            0 == l.eState && B().Unmoderated,
-            2 == l.eState && B().Answered
+              ? V().Vote_Positive
+              : V().Vote_Ready
+            : V().Vote_CannotVote,
+          v = (0, M.Z)(
+            V().Question,
+            3 == l.eState && V().Hidden,
+            1 == l.eState && V().Moderated,
+            0 == l.eState && V().Unmoderated,
+            2 == l.eState && V().Answered
           );
         return o.createElement(
           "div",
           { className: v },
           o.createElement(
             "div",
-            { className: B().QuestionCtn },
+            { className: V().QuestionCtn },
             o.createElement(Y, { accountID: l.posterAccountID }),
             o.createElement(
               "div",
-              { className: B().QuestionText },
+              { className: V().QuestionText },
               o.createElement(
                 "div",
-                { className: B().QuestionAndVotes },
+                { className: V().QuestionAndVotes },
                 o.createElement(
                   "div",
-                  { className: B().QuestionTitle },
+                  { className: V().QuestionTitle },
                   l.strQuestionText
                 ),
                 o.createElement(
-                  q.HP,
+                  k.HP,
                   {
                     toolTipContent:
                       i &&
                       (l.bUserUpVoted
-                        ? (0, M.Xx)("#QAndA_VoteRemoveTooltip")
-                        : (0, M.Xx)("#QAndA_VoteTooltip")),
+                        ? (0, L.Xx)("#QAndA_VoteRemoveTooltip")
+                        : (0, L.Xx)("#QAndA_VoteTooltip")),
                   },
                   o.createElement(
                     "div",
-                    { className: (0, L.Z)(_, B().Votes), onClick: A },
-                    o.createElement(T.KJh, { className: B().RateIcon }),
+                    { className: (0, M.Z)(_, V().Votes), onClick: A },
+                    o.createElement(T.KJh, { className: V().RateIcon }),
                     o.createElement(
                       "div",
-                      { className: B().VoteCount },
+                      { className: V().VoteCount },
                       Number(l.nVoteCount).toLocaleString()
                     )
                   )
@@ -1276,16 +1359,16 @@
               ),
               o.createElement(
                 "div",
-                { className: B().QuestionStats },
+                { className: V().QuestionStats },
                 o.createElement(
                   "div",
-                  { className: B().PostTime },
+                  { className: V().PostTime },
                   o.createElement(
                     I.Zg,
                     {
                       rtFullDate: l.rtPostTime,
-                      className: B().PostTime,
-                      stylesmodule: B(),
+                      className: V().PostTime,
+                      stylesmodule: V(),
                     },
                     m
                   )
@@ -1293,51 +1376,51 @@
               )
             )
           ),
-          l.rtAnswerTime && o.createElement(j, { question: l, rtNow: r }),
+          l.rtAnswerTime && o.createElement(z, { question: l, rtNow: r }),
           s &&
-            o.createElement(z, {
+            o.createElement(j, {
               gidSession: t,
               gidQuestion: n,
               eState: null == l ? void 0 : l.eState,
             })
         );
       }
-      function j(e) {
+      function z(e) {
         const { question: t, rtNow: n } = e,
           s = t.rtAnswerTime && n - t.rtAnswerTime,
           i =
             t.rtAnswerTime &&
-            (s < x._H.PerDay ? (0, M.yW)(s) : (0, M.m9)(t.rtAnswerTime));
+            (s < U._H.PerDay ? (0, L.yW)(s) : (0, L.m9)(t.rtAnswerTime));
         return t.strAnswerText
           ? o.createElement(
               "div",
-              { className: B().Answer },
+              { className: V().Answer },
               o.createElement(
                 "div",
-                { className: B().AnswerTitle },
+                { className: V().AnswerTitle },
                 o.createElement(
                   "div",
-                  { className: B().AnswerCheck },
+                  { className: V().AnswerCheck },
                   o.createElement(T.mKE, { color: "#67c1f5" })
                 ),
-                (0, M.Xx)("#QAndA_ModeratorAnswerTitle")
+                (0, L.Xx)("#QAndA_ModeratorAnswerTitle")
               ),
               o.createElement(
                 "div",
-                { className: B().AnswerText },
+                { className: V().AnswerText },
                 " ",
                 t.strAnswerText,
                 " "
               ),
               o.createElement(
                 "div",
-                { className: B().QuestionStats },
+                { className: V().QuestionStats },
                 o.createElement(
                   I.Zg,
                   {
                     rtFullDate: t.rtAnswerTime,
-                    className: B().PostTime,
-                    stylesmodule: B(),
+                    className: V().PostTime,
+                    stylesmodule: V(),
                   },
                   i
                 )
@@ -1345,13 +1428,13 @@
             )
           : o.createElement(
               "div",
-              { className: B().AnswerTitle },
+              { className: V().AnswerTitle },
               o.createElement(
                 "div",
-                { className: B().AnswerCheck },
+                { className: V().AnswerCheck },
                 o.createElement(T.mKE, { color: "#67c1f5" })
               ),
-              (0, M.Xx)("#QAndA_AlreadyAnsweredTitle")
+              (0, L.Xx)("#QAndA_AlreadyAnsweredTitle")
             );
       }
       function Y(e) {
@@ -1365,7 +1448,7 @@
               "a",
               {
                 href: d.De.COMMUNITY_BASE_URL + "profiles/" + s,
-                className: B().PersonaName,
+                className: V().PersonaName,
                 "data-miniprofile": "s" + s,
               },
               null !== (t = null == r ? void 0 : r.persona_name) && void 0 !== t
@@ -1373,7 +1456,7 @@
                 : s
             );
       }
-      function z(e) {
+      function j(e) {
         const { gidSession: t, gidQuestion: n, eState: s } = e,
           { fnAnswerQuestion: i, fnModerateQuestion: a } = N(t),
           r = 0 == s || 3 == s,
@@ -1381,86 +1464,86 @@
           u = 1 == s;
         return o.createElement(
           "div",
-          { className: B().ModeratorSection },
-          (0, M.Xx)("#QAndA_ModeratorLabel"),
+          { className: V().ModeratorSection },
+          (0, L.Xx)("#QAndA_ModeratorLabel"),
           o.createElement(
             "div",
-            { className: B().ToolRow },
+            { className: V().ToolRow },
             o.createElement($, {
-              strPrompt: (0, M.Xx)("#QAndA_AnswerPrompt"),
+              strPrompt: (0, L.Xx)("#QAndA_AnswerPrompt"),
               fnSubmit: (e) => i(n, e),
             })
           ),
           o.createElement(
             "div",
-            { className: B().ToolRow },
-            (0, M.Xx)("#QAndA_ModeratorOtherOptionsLabel"),
+            { className: V().ToolRow },
+            (0, L.Xx)("#QAndA_ModeratorOtherOptionsLabel"),
             o.createElement(
-              q.HP,
+              k.HP,
               {
-                toolTipContent: (0, M.Xx)("#QAndA_ModerateApproveButton_ttip"),
+                toolTipContent: (0, L.Xx)("#QAndA_ModerateApproveButton_ttip"),
               },
               o.createElement(
-                D.zx,
+                b.zx,
                 {
                   onClick: () => a(n, 1),
-                  className: B().InputButton,
+                  className: V().InputButton,
                   disabled: !r,
                 },
-                (0, M.Xx)("#QAndA_ModerateApproveButton")
+                (0, L.Xx)("#QAndA_ModerateApproveButton")
               )
             ),
             o.createElement(
-              q.HP,
-              { toolTipContent: (0, M.Xx)("#QAndA_ModerateHideButton_ttip") },
+              k.HP,
+              { toolTipContent: (0, L.Xx)("#QAndA_ModerateHideButton_ttip") },
               o.createElement(
-                D.zx,
+                b.zx,
                 {
                   onClick: () => a(n, 3),
-                  className: B().InputButton,
+                  className: V().InputButton,
                   disabled: !l,
                 },
-                (0, M.Xx)("#QAndA_ModerateHideButton")
+                (0, L.Xx)("#QAndA_ModerateHideButton")
               )
             ),
             o.createElement(
-              q.HP,
-              { toolTipContent: (0, M.Xx)("#QAndA_QuickAnswerButton_ttip") },
+              k.HP,
+              { toolTipContent: (0, L.Xx)("#QAndA_QuickAnswerButton_ttip") },
               o.createElement(
-                D.zx,
+                b.zx,
                 {
                   onClick: () => i(n, ""),
-                  className: B().InputButton,
+                  className: V().InputButton,
                   disabled: !u,
                 },
-                (0, M.Xx)("#QAndA_QuickAnswerButton")
+                (0, L.Xx)("#QAndA_QuickAnswerButton")
               )
             )
           )
         );
       }
-      function K(e) {
+      function Z(e) {
         const { gidSession: t } = e;
         A();
         const { strName: n, bUserCanModerate: s } = h(t);
         return o.createElement(
           "div",
-          { className: B().QAFullPageView },
+          { className: V().QAFullPageView },
           o.createElement(
             "div",
-            { className: B().QAName },
-            (0, M.Xx)("#QAndA_Header") +
+            { className: V().QAName },
+            (0, L.Xx)("#QAndA_Header") +
               ((null == n ? void 0 : n.length) > 0 ? ": " + n : "")
           ),
           o.createElement(
             "div",
-            { className: B().QAColumns },
+            { className: V().QAColumns },
             o.createElement(J, { gidSession: t, bHalfOfFullPage: s }),
-            s && o.createElement(Z, { gidSession: t })
+            s && o.createElement(K, { gidSession: t })
           )
         );
       }
-      function Z(e) {
+      function K(e) {
         const { gidSession: t } = e,
           {
             bUserCanModerate: n,
@@ -1472,17 +1555,17 @@
           ? o.createElement(
               "div",
               {
-                className: (0, L.Z)(B().QAModeratorColumn, B().QASplitColumns),
+                className: (0, M.Z)(V().QAModeratorColumn, V().QASplitColumns),
               },
               o.createElement(
                 G.ug,
                 {
-                  title: (0, M.Xx)("#QAndA_ModeratorViewHeader"),
-                  className: B().ModeratorInstructions,
+                  title: (0, L.Xx)("#QAndA_ModeratorViewHeader"),
+                  className: V().ModeratorInstructions,
                 },
                 o.createElement(
                   "div",
-                  { className: B().QuestionList },
+                  { className: V().QuestionList },
                   s.map((e) =>
                     o.createElement(F, {
                       key: e,
@@ -1498,13 +1581,13 @@
               o.createElement(
                 G.ug,
                 {
-                  title: (0, M.Xx)("#QAndA_HiddenQuestionsHeader"),
-                  className: B().AnsweredSectionHeader,
+                  title: (0, L.Xx)("#QAndA_HiddenQuestionsHeader"),
+                  className: V().AnsweredSectionHeader,
                   bStartMinimized: !0,
                 },
                 o.createElement(
                   "div",
-                  { className: B().QuestionList },
+                  { className: V().QuestionList },
                   i.map((e) =>
                     o.createElement(F, {
                       key: e,
@@ -1539,24 +1622,24 @@
           { fnModerateQuestion: C } = N(t);
         return o.createElement(
           "div",
-          { className: (0, L.Z)(B().QAMainCtn, n && B().QASplitColumns) },
+          { className: (0, M.Z)(V().QAMainCtn, n && V().QASplitColumns) },
           o.createElement(
             "div",
-            { className: (0, L.Z)(B().QAHeader, g && B().ModerationHeader) },
+            { className: (0, M.Z)(V().QAHeader, g && V().ModerationHeader) },
             o.createElement(
-              D.zx,
+              b.zx,
               {
                 onClick: v,
                 disabled: !i,
-                className: (0, L.Z)(
-                  B().InputButton,
-                  B().Reload,
-                  Q && B().Reloading
+                className: (0, M.Z)(
+                  V().InputButton,
+                  V().Reload,
+                  Q && V().Reloading
                 ),
               },
               o.createElement(
                 "div",
-                { className: B().ReloadIcon },
+                { className: V().ReloadIcon },
                 o.createElement(T.Lao, null)
               )
             ),
@@ -1564,25 +1647,25 @@
               ? o.createElement(
                   o.Fragment,
                   null,
-                  (0, M.Xx)("#QAndA_ModeratorLabelHeader"),
+                  (0, L.Xx)("#QAndA_ModeratorLabelHeader"),
                   o.createElement(
-                    q.HP,
+                    k.HP,
                     {
-                      toolTipContent: (0, M.Xx)(
+                      toolTipContent: (0, L.Xx)(
                         "#QAndA_ModerateHideAllButton_ttip"
                       ),
                     },
                     o.createElement(
-                      D.zx,
+                      b.zx,
                       {
                         onClick: () =>
                           (0, s.mG)(this, void 0, void 0, function* () {
                             for (const e of [_, c, m])
                               for (const t of e) yield C(t, 3);
                           }),
-                        className: B().InputButton,
+                        className: V().InputButton,
                       },
-                      (0, M.Xx)("#QAndA_ModerateHideAllButton")
+                      (0, L.Xx)("#QAndA_ModerateHideAllButton")
                     )
                   )
                 )
@@ -1593,20 +1676,20 @@
           c.length + m.length == 0
             ? o.createElement(
                 "div",
-                { className: B().NoQuestions },
-                (0, M.Xx)("#QAndA_NoQuestionsYet")
+                { className: V().NoQuestions },
+                (0, L.Xx)("#QAndA_NoQuestionsYet")
               )
             : o.createElement(
                 "div",
-                { className: B().QuestionsCtn },
+                { className: V().QuestionsCtn },
                 o.createElement(
                   "div",
-                  { className: B().InsetShadowTopCtn },
-                  o.createElement("div", { className: B().InsetShadowTop })
+                  { className: V().InsetShadowTopCtn },
+                  o.createElement("div", { className: V().InsetShadowTop })
                 ),
                 o.createElement(
                   "div",
-                  { className: B().QuestionList },
+                  { className: V().QuestionList },
                   i
                     ? c.map((e) =>
                         o.createElement(F, {
@@ -1619,7 +1702,7 @@
                           rtNow: p,
                         })
                       )
-                    : o.createElement(k.V, { position: "center" })
+                    : o.createElement(q.V, { position: "center" })
                 ),
                 m.length > 0 &&
                   o.createElement(
@@ -1627,12 +1710,12 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: B().AnsweredSectionHeader },
-                      (0, M.Xx)("#QAndA_AnsweredQuestionsHeader")
+                      { className: V().AnsweredSectionHeader },
+                      (0, L.Xx)("#QAndA_AnsweredQuestionsHeader")
                     ),
                     o.createElement(
                       "div",
-                      { className: B().QuestionList },
+                      { className: V().QuestionList },
                       m.map((e) =>
                         o.createElement(F, {
                           key: e,
@@ -1657,11 +1740,11 @@
           null,
           o.createElement(
             "div",
-            { className: B().Description },
-            (0, M.Xx)("#QAndA_HeaderDescription")
+            { className: V().Description },
+            (0, L.Xx)("#QAndA_HeaderDescription")
           ),
           o.createElement($, {
-            strPrompt: (0, M.Xx)("#QAndA_QuestionPrompt"),
+            strPrompt: (0, L.Xx)("#QAndA_QuestionPrompt"),
             fnSubmit: (t) =>
               (0, s.mG)(this, void 0, void 0, function* () {
                 const s = yield e.fnAskQuestion(t);
@@ -1678,8 +1761,8 @@
           }),
           o.createElement(
             "div",
-            { className: (0, L.Z)(B().QuestionACK, t && B().Visible) },
-            (0, M.Xx)("#QAndA_QuestionWasPosted")
+            { className: (0, M.Z)(V().QuestionACK, t && V().Visible) },
+            (0, L.Xx)("#QAndA_QuestionWasPosted")
           )
         );
       }
@@ -1692,8 +1775,8 @@
           null,
           o.createElement(
             "div",
-            { className: B().InputCtn },
-            o.createElement(D.II, {
+            { className: V().InputCtn },
+            o.createElement(b.II, {
               type: "text",
               placeholder: t,
               maxLength: 512,
@@ -1702,15 +1785,15 @@
             }),
             o.createElement(
               "div",
-              { className: B().ButtonCtn },
+              { className: V().ButtonCtn },
               r &&
                 o.createElement(
                   "div",
-                  { className: B().SaveSpinner },
-                  o.createElement(k.V, { size: "small", position: "center" })
+                  { className: V().SaveSpinner },
+                  o.createElement(q.V, { size: "small", position: "center" })
                 ),
               o.createElement(
-                D.zx,
+                b.zx,
                 {
                   onClick: () =>
                     (0, s.mG)(this, void 0, void 0, function* () {
@@ -1718,9 +1801,9 @@
                       1 == (yield n(i)) && a(""), l(!1);
                     }),
                   disabled: r || !i,
-                  className: B().InputButton,
+                  className: V().InputButton,
                 },
-                (0, M.Xx)("#QAndA_SubmitCommentButton")
+                (0, L.Xx)("#QAndA_SubmitCommentButton")
               )
             )
           )
@@ -1729,20 +1812,20 @@
       function ee(e) {
         return o.createElement(
           "div",
-          { className: B().Description },
+          { className: V().Description },
           o.createElement(
             "div",
-            { className: B().LogInPrompt },
-            (0, M.Xx)("#QAndA_LogInPrompt")
+            { className: V().LogInPrompt },
+            (0, L.Xx)("#QAndA_LogInPrompt")
           ),
           !d.L7.logged_in &&
             o.createElement(
-              D.zx,
+              b.zx,
               {
-                onClick: b.Xt,
-                className: (0, L.Z)(B().SignInButton, B().InputButton),
+                onClick: D.Xt,
+                className: (0, M.Z)(V().SignInButton, V().InputButton),
               },
-              (0, M.Xx)("#Login_SignIn")
+              (0, L.Xx)("#Login_SignIn")
             )
         );
       }

@@ -37,7 +37,7 @@
         g = a(13596),
         S = a(7573),
         E = a(90666),
-        v = (a(92398), a(56052)),
+        v = (a(54698), a(56052)),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -123,8 +123,8 @@
       });
       var I = a(26149),
         N = a(1351),
-        P = a(1245),
-        D = (a(69765), a(58185), a(10767), a(81503)),
+        D = a(1245),
+        P = (a(69765), a(58185), a(10767), a(81503)),
         y = a(52795),
         B = a(28976),
         G = (a(3356), a(27991)),
@@ -138,16 +138,16 @@
         R = a(47808),
         V = a(22975),
         W = (a(19663), a(3389)),
-        j = (a(49186), a(461)),
-        M = a(17157),
-        U = a.n(M);
+        M = (a(49186), a(461)),
+        j = a(17157),
+        U = a.n(j);
       const H = (0, o.Pi)((e) => {
         const { event: t } = e,
           a = t.clanSteamID.GetAccountID(),
           r = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           o = (0, l.useRef)(null),
           [i, c] = (0, l.useState)(
-            t ? j.bq.GetCreatorHome(t.clanSteamID) : null
+            t ? M.bq.GetCreatorHome(t.clanSteamID) : null
           );
         if (
           ((0, l.useEffect)(() => {
@@ -156,7 +156,7 @@
             return (
               (0, s.mG)(void 0, void 0, void 0, function* () {
                 const t = W.K.InitFromClanID(a),
-                  s = yield j.bq.LoadCreatorHome(t, e);
+                  s = yield M.bq.LoadCreatorHome(t, e);
                 e.token.reason || c(s);
               }),
               () => {
@@ -308,7 +308,7 @@
           const t = this.state.bExpanded,
             a = y.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
           (0, B.wx)(a, t ? 2 : 3, e.snr),
-            t && (0, P.X)() && (0, P.X)().AddEvent(1005),
+            t && (0, D.X)() && (0, D.X)().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -372,7 +372,7 @@
             ),
             o = l.createElement(z, { key: "left" + r, ImgUrl: e.left_panel });
           if (r < 11) {
-            const t = D.C.GetAppIDListForBroadcasterSteamID(e.steamid);
+            const t = P.C.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (r = t[0]);
           }
           return (
@@ -414,7 +414,7 @@
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
             ((this.m_bMarkedUsabilitySeen = !0),
-            (0, P.X)() && (0, P.X)().AddEvent(1004));
+            (0, D.X)() && (0, D.X)().AddEvent(1004));
         }
         render() {
           if (!F.IsBroadcastAllowed() || this.state.bLoadingPreference)
@@ -576,7 +576,7 @@
             this.props.stream.steamid
           ).m_nAppID;
           (0, B.wx)(e, 7, this.props.stream.snr),
-            (0, P.X)() && (0, P.X)().AddEvent(1006),
+            (0, D.X)() && (0, D.X)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {
@@ -1003,29 +1003,6 @@
             )
           : null;
       }
-    },
-    11539: (e, t, a) => {
-      "use strict";
-      a.d(t, { h: () => n });
-      var s = a(67294),
-        r = a(80533);
-      const n = (e) => {
-        const { onPositionChange: t, onLeave: a } = e,
-          n = s.useCallback(
-            (e) => (
-              void 0 === e.previousPosition &&
-                e.currentPosition === r.h.above &&
-                a &&
-                a(e),
-              t && t(e)
-            ),
-            [t, a]
-          );
-        return s.createElement(
-          r.h,
-          Object.assign({}, e, { onPositionChange: n })
-        );
-      };
     },
   },
 ]);

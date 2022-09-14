@@ -52,6 +52,8 @@
           "trailer",
           "speaker",
           "doclink",
+          "video",
+          "vod",
         ],
         l = [
           "h1",
@@ -65,7 +67,15 @@
           "noparse",
           "url",
         ],
-        u = ["img", "previewyoutube", "looping_media", "roomeffect"],
+        u = [
+          "img",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "video",
+          "vod",
+          "trailer",
+        ],
         d = (o.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         c = "{STEAM_CLAN_LOC_IMAGE}";
       function m(e, t = null, s = " ") {
@@ -400,7 +410,7 @@
       s.d(t, { Z: () => P });
       var n = s(70655),
         i = s(22188),
-        r = (s(26149), s(92398), s(58114)),
+        r = (s(26149), s(54698), s(58114)),
         a = s(65902),
         o = s(33019),
         l = s(40110),
@@ -1093,7 +1103,7 @@
       var n = s(9669),
         i = s.n(n),
         r = s(67294),
-        a = (s(49727), s(92398), s(990), s(22975)),
+        a = (s(49727), s(54698), s(990), s(22975)),
         o = (s(14146), s(159));
       function l(e, t, s, n) {
         const a = (0, r.useRef)(),

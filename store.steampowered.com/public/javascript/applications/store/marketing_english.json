@@ -64,5 +64,18 @@
     "msg_play_it_now": "Play it now",
     "msg_action_buy": "Buy it now",
     "msg_action_info": "Click here for more info",
+    "msg_on_sale_now": "On Sale Now!",
+    "label_early_beta_access": "Early Beta Access",
+    "label_new_dlc_available": "New DLC Available",
+    "label_pre_load_now": "Pre-Load Now",
+    "discount_desc_limited_time": "Limited Time Offer",
+    "discount_desc_limited_time_date": "Limited Time Offer",
+    "text_now_available": "Now Available",
+    "text_now_available_steamplay": "Now Available",
+    "text_now_available_mac": "Now Available on Mac",
+    "text_now_available_on_pc_mac_and_linux": "Now Available on PC, Mac and Linux!",
+    "text_now_free_to_play": "Now Free to Play",
+    "text_new_free_to_play": "New Free to Play",
+    "text_free_new_dlc_now_available": "Free new dlc now available",
     "dummy": "dummy"
 }

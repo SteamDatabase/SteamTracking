@@ -741,7 +741,7 @@
         a = n(53622),
         l = n(99198),
         c = n(81130),
-        u = n(92398),
+        u = n(54698),
         d = n(41311),
         h = n(90666),
         m = n(77520),
@@ -1384,7 +1384,7 @@
         c = n(37464),
         u = (n(39746), n(7707)),
         d = (n(27745), n(80378)),
-        h = (n(92398), n(53622));
+        h = (n(54698), n(13447), n(53622));
       class m {
         SetFactory(e) {
           this.m_factory = e;
@@ -1416,31 +1416,7 @@
               n ||
               ((u = r),
               (e, t) => {
-                if (
-                  !(function (e) {
-                    if ("Backspace" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Enter" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Tab" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
-                      );
-                    if (
-                      1 === e.length ||
-                      ("ArrowLeft" != e && "ArrowRight" != e && "Tab" != e)
-                    )
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(e), !0
-                      );
-                    return !1;
-                  })(e) &&
-                  u.current
-                ) {
+                if (u.current) {
                   const n = u.current,
                     i = n.value;
                   !(function (e, t, n) {
@@ -1509,7 +1485,40 @@
                     const e = new Event("input", { bubbles: !0 });
                     n.dispatchEvent(e);
                   }
-                }
+                } else
+                  !(function (e) {
+                    if ("Backspace" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(""), !0
+                      );
+                    if ("Enter" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(""), !0
+                      );
+                    if ("Tab" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
+                      );
+                    if ("ArrowLeft" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSetKeyState(80, !0),
+                        SteamClient.Input.ControllerKeyboardSetKeyState(80, !1),
+                        !0
+                      );
+                    if ("ArrowRight" == e)
+                      return (
+                        SteamClient.Input.ControllerKeyboardSetKeyState(79, !0),
+                        SteamClient.Input.ControllerKeyboardSetKeyState(79, !1),
+                        !0
+                      );
+                    if (
+                      1 === e.length ||
+                      ("ArrowLeft" != e && "ArrowRight" != e && "Tab" != e)
+                    )
+                      return (
+                        SteamClient.Input.ControllerKeyboardSendText(e), !0
+                      );
+                  })(e);
               }),
             BIsElementValidForInput: () =>
               r.current && document.activeElement == r.current,
@@ -5387,7 +5396,7 @@
       }
       (0, i.gn)([s.a], a.prototype, "PollGamepads", null),
         (0, i.gn)([s.a], a.prototype, "OnWindowRegainedFocus", null);
-      var l = n(92398);
+      var l = n(54698);
       const c = {
           A: o.eV.OK,
           B: o.eV.CANCEL,
@@ -8664,7 +8673,7 @@
           )
         );
       }
-      const Xe = o.forwardRef((e, t) => {
+      const Xe = o.forwardRef(function (e, t) {
         var n, i;
         const s = null !== (n = e.stylesheet) && void 0 !== n ? n : He(),
           a = e.pages,
@@ -8703,16 +8712,20 @@
                 e.renderPageListSeparator && e.renderPageListSeparator({})
               );
             if ("spacer" === t)
-              return o.createElement("div", { className: He().PageListSpacer });
+              return o.createElement("div", {
+                key: n,
+                className: He().PageListSpacer,
+              });
             if (!1 === t.visible) return null;
-            const i = t == g;
+            const i = t == g,
+              r = t.title && t.title.length > 0 ? t.title : n.toString();
             return o.createElement(m.T, {
               component: e.renderPageListItem,
               fallback: Ke,
               className: (0, l.Z)(s.PagedSettingsDialog_PageListItem, {
                 [s.Active]: i,
               }),
-              key: t.title,
+              key: r,
               onClick: () => {
                 ke.LT.PlayNavSound(ke.qr.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
@@ -10161,7 +10174,7 @@
       });
       var i = n(70655),
         o = n(67294);
-      n(92398), n(98379), n(21205);
+      n(54698), n(98379), n(21205);
       function s(e) {
         const { direction: t } = e,
           n = (0, i._T)(e, ["direction"]);
@@ -10855,7 +10868,7 @@
       var i = n(70655),
         o = n(22188),
         s = n(67294),
-        r = (n(26149), n(92398), n(35562)),
+        r = (n(26149), n(54698), n(35562)),
         a = n(53622),
         l = n(41311),
         c = n(90666),

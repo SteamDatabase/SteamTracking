@@ -630,6 +630,140 @@ html:not(.touch)
   width: 100%;
   height: 100%;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.addonpicker_Picker_3acyH {
+  border-radius: 6px;
+  max-width: min(364px, 100vw);
+  max-width: 364px;
+  min-width: min(364px, 100vw);
+  min-width: 364px;
+  max-height: min(364px, 100vh);
+  max-height: 364px;
+  min-height: min(364px, 100vh);
+  min-height: 364px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.BasicUIContextMenu .addonpicker_Picker_3acyH {
+  background-color: #23262e;
+  border-radius: 0;
+}
+.addonpicker_Tabs_3DjoX {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #2b2c2f;
+}
+.addonpicker_Tab_1F8Bh {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  padding: 2px 2px;
+  cursor: pointer;
+}
+.addonpicker_Tab_1F8Bh.addonpicker_Focus_3GiAc .addonpicker_TabContent_2MluN {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_1F8Bh.addonpicker_Active_2bg1w {
+  border-bottom: 4px solid #4297f8;
+  cursor: default;
+}
+.addonpicker_Tab_1F8Bh .addonpicker_TabContent_2MluN {
+  border-radius: 4px;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8;
+}
+.addonpicker_Tab_1F8Bh
+  .addonpicker_TabContent_2MluN:hover:not(.addonpicker_Active_2bg1w) {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.addonpicker_Tab_1F8Bh .addonpicker_TabContent_2MluN.addonpicker_Active_2bg1w {
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+}
+.addonpicker_Content_1c-qe {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+.addonpicker_ItemList_2tnPH {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd {
+  padding: 3px;
+  margin: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd:hover,
+.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd.addonpicker_Focus_3GiAc {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.addonpicker_SectionedPageTitle_1rBPd,
+.addonpicker_SectionTitle_3ff2f {
+  text-transform: uppercase;
+  color: gray;
+  padding: 8px 0;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.addonpicker_SectionTitle_3ff2f {
+  font-size: 14px;
+}
+.addonpicker_SectionedPageTitle_1rBPd {
+  font-size: 16px;
+}
+.addonpicker_FilterInputContainer_vzSOl {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx {
+  box-sizing: border-box;
+  height: 28px;
+  background-color: #2b2c2f;
+}
+.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx:hover,
+.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx:focus {
+  background-color: #2b2c2f !important;
+}
+.BasicUIContextMenu .addonpicker_FilterInputContainer_vzSOl {
+  display: none;
+}
+.addonpicker_AddonPickerMessage_LGYf8 {
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+.addonpicker_AddonPickerMessage_LGYf8 a {
+  color: #4297f8;
+  text-decoration: none;
+}
 .bbcodes_Bold_1opdq {
   display: inline;
   font-weight: bold;
@@ -894,140 +1028,6 @@ a.bbcodes_LinkButton_lMVeY:hover {
   background-color: #3691fa;
   color: #fff;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.addonpicker_Picker_3acyH {
-  border-radius: 6px;
-  max-width: min(364px, 100vw);
-  max-width: 364px;
-  min-width: min(364px, 100vw);
-  min-width: 364px;
-  max-height: min(364px, 100vh);
-  max-height: 364px;
-  min-height: min(364px, 100vh);
-  min-height: 364px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.BasicUIContextMenu .addonpicker_Picker_3acyH {
-  background-color: #23262e;
-  border-radius: 0;
-}
-.addonpicker_Tabs_3DjoX {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border-bottom: 2px solid #2b2c2f;
-}
-.addonpicker_Tab_1F8Bh {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom: 4px solid transparent;
-  padding: 2px 2px;
-  cursor: pointer;
-}
-.addonpicker_Tab_1F8Bh.addonpicker_Focus_3GiAc .addonpicker_TabContent_2MluN {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_1F8Bh.addonpicker_Active_2bg1w {
-  border-bottom: 4px solid #4297f8;
-  cursor: default;
-}
-.addonpicker_Tab_1F8Bh .addonpicker_TabContent_2MluN {
-  border-radius: 4px;
-  padding: 4px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0.8;
-}
-.addonpicker_Tab_1F8Bh
-  .addonpicker_TabContent_2MluN:hover:not(.addonpicker_Active_2bg1w) {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-.addonpicker_Tab_1F8Bh .addonpicker_TabContent_2MluN.addonpicker_Active_2bg1w {
-  padding: 2px;
-  width: 28px;
-  height: 28px;
-  opacity: 1;
-}
-.addonpicker_Content_1c-qe {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow-y: auto;
-  padding: 0 12px;
-}
-.addonpicker_ItemList_2tnPH {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd {
-  padding: 3px;
-  margin: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd:hover,
-.addonpicker_ItemList_2tnPH .addonpicker_Item_3zgnd.addonpicker_Focus_3GiAc {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.addonpicker_SectionedPageTitle_1rBPd,
-.addonpicker_SectionTitle_3ff2f {
-  text-transform: uppercase;
-  color: gray;
-  padding: 8px 0;
-  letter-spacing: 1.5px;
-  width: 100%;
-}
-.addonpicker_SectionTitle_3ff2f {
-  font-size: 14px;
-}
-.addonpicker_SectionedPageTitle_1rBPd {
-  font-size: 16px;
-}
-.addonpicker_FilterInputContainer_vzSOl {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 6px;
-}
-.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx {
-  box-sizing: border-box;
-  height: 28px;
-  background-color: #2b2c2f;
-}
-.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx:hover,
-.addonpicker_FilterInputContainer_vzSOl .addonpicker_FilterInput_18mhx:focus {
-  background-color: #2b2c2f !important;
-}
-.BasicUIContextMenu .addonpicker_FilterInputContainer_vzSOl {
-  display: none;
-}
-.addonpicker_AddonPickerMessage_LGYf8 {
-  font-size: 13px;
-  font-style: italic;
-  padding-bottom: 4px;
-}
-.addonpicker_AddonPickerMessage_LGYf8 a {
-  color: #4297f8;
-  text-decoration: none;
 }
 .emoticon_NewEmoticonIndicator_3B1SU {
   background: radial-gradient(

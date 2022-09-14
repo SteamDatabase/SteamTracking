@@ -1,52 +1,46 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+"use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [908],
   {
-    82860: (e) => {
-      e.exports = {
-        SectionTitleHeader: "collapseablesection_SectionTitleHeader_1K5gA",
-        required_title: "collapseablesection_required_title_29VCz",
-      };
-    },
-    2388: (e, t, i) => {
-      "use strict";
-      i.d(t, { Gr: () => p, Jq: () => g, y$: () => _ });
-      var r = i(70655),
-        n = i(9669),
-        o = i.n(n),
-        a = i(22188),
-        s = i(67294),
-        l = (i(26149), i(92398), i(43359)),
-        m = i(3389),
-        c = (i(82946), i(77520)),
-        u = i(93976),
-        d = i(90666);
-      class f {
+    2388: (e, t, r) => {
+      r.d(t, { Gr: () => _, Jq: () => P, y$: () => h });
+      var a = r(70655),
+        o = r(9669),
+        n = r.n(o),
+        s = r(22188),
+        i = r(67294),
+        l = (r(26149), r(54698), r(43359)),
+        m = r(3389),
+        u = (r(82946), r(77520)),
+        c = r(93976),
+        f = r(90666);
+      class d {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
         LoadProfiles(e, t) {
-          return (0, r.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             (0,
-            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let i = e.filter(
+            u.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let r = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
-            if (0 == i.length) return this.m_mapProfilesLoading.get(e[0]);
-            let r = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              n = o().get(r, {
-                params: { steamids: i.join(",") },
+            if (0 == r.length) return this.m_mapProfilesLoading.get(e[0]);
+            let a = f.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              o = n().get(a, {
+                params: { steamids: r.join(",") },
                 withCredentials: !0,
                 cancelToken: null == t ? void 0 : t.token,
               });
-            i.forEach((e) => this.m_mapProfilesLoading.set(e, n));
-            let a = yield n;
-            a.data &&
-              200 == a.status &&
-              a.data.forEach((e) => {
+            r.forEach((e) => this.m_mapProfilesLoading.set(e, o));
+            let s = yield o;
+            s.data &&
+              200 == s.status &&
+              s.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
                   (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
                   (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
@@ -78,178 +72,104 @@
         BHasProfileBySteamID(e) {
           return this.m_mapProfiles.has(e.ConvertTo64BitString());
         }
+        BHasAllProfilesBySteamID(e) {
+          return !e.some((e) => !this.BHasProfileBySteamID(e));
+        }
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
-            ? d.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : d.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+            ? f.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : f.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, r.gn)([a.LO], f.prototype, "m_mapProfiles", void 0);
-      const _ = new f();
-      function p(e) {
-        const t = s.useMemo(
+      (0, a.gn)([s.LO], d.prototype, "m_mapProfiles", void 0);
+      const h = new d();
+      function _(e) {
+        const t = i.useMemo(
             () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
             [e]
           ),
-          [i, r] = (0, s.useState)(!!t && !_.BHasProfileBySteamID(t));
-        (0, s.useEffect)(() => {
-          const e = o().CancelToken.source();
+          [r, a] = (0, i.useState)(!!t && !h.BHasProfileBySteamID(t));
+        (0, i.useEffect)(() => {
+          const e = n().CancelToken.source();
           return (
             t &&
-              !_.BHasProfileBySteamID(t) &&
-              _.LoadProfiles([t.ConvertTo64BitString()])
+              !h.BHasProfileBySteamID(t) &&
+              h
+                .LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const i = (0, u.l)(e);
+                  const r = (0, c.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       t.ConvertTo64BitString() +
                       ": " +
-                      i.strErrorMsg,
-                    i
+                      r.strErrorMsg,
+                    r
                   );
                 })
                 .finally(() => {
-                  e.token.reason || r(!1);
+                  e.token.reason || a(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [i, !!t && _.GetProfileBySteamID(t)];
+        return [r, !!t && h.GetProfileBySteamID(t)];
       }
-      function g(e) {
-        return p(s.useMemo(() => m.K.InitFromAccountID(e), [e]));
+      function P(e) {
+        return _(i.useMemo(() => m.K.InitFromAccountID(e), [e]));
       }
-      window.g_ProfileStore = _;
+      window.g_ProfileStore = h;
     },
-    98300: (e, t, i) => {
-      "use strict";
-      i.d(t, { bC: () => p, fU: () => _, mY: () => d, ug: () => f });
-      var r = i(48341),
-        n = i(41311),
-        o = i(95598),
-        a = i(67294),
-        s = i(7573),
-        l = i(34133),
-        m = i(32548),
-        c = i(29323),
-        u = i(82860);
-      const d = (0, c.Pi)((e) =>
-        a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(
-            "div",
-            {
-              className: (0, s.Z)(
-                e.className ? e.className : u.SectionTitleHeader,
-                u.required_title
-              ),
-            },
-            a.createElement(
-              "div",
-              {
-                className: (0, s.Z)(
-                  l.EventEditorTextTitle,
-                  "EventEditorTextTitle"
-                ),
-              },
-              e.title,
-              Boolean(e.tooltip) && a.createElement(p, { tooltip: e.tooltip })
-            ),
-            a.createElement(_, {
-              bIsMinimized: e.getMinimized(),
-              fnToggleMinimize: e.toggleMinimized,
-            })
-          ),
-          !e.getMinimized() && a.createElement(m.S, null, e.children)
-        )
-      );
-      function f(e) {
-        const [t, i] = a.useState(Boolean(e.bStartMinimized));
-        return a.createElement(
-          d,
-          Object.assign({}, e, {
-            getMinimized: () => t,
-            toggleMinimized: () => i(!t),
-          }),
-          e.children
-        );
-      }
-      function _(e) {
-        const { bIsMinimized: t, fnToggleMinimize: i } = e,
-          s = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return a.createElement(
-          r.zx,
-          { "data-tooltip-text": (0, n.Xx)(s), onClick: i },
-          e.bIsMinimized
-            ? a.createElement(o.YqJ, null)
-            : a.createElement(o.gR, null)
-        );
-      }
-      function p(e) {
-        return a.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: (0, s.Z)(l.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          a.createElement(o.WWB, null)
-        );
-      }
-    },
-    69761: (e, t, i) => {
-      "use strict";
-      i.r(t), i.d(t, { QAndARoutes: () => l, default: () => m });
-      var r = i(69382),
-        n = i(67294),
-        o = i(78587),
-        a = i(74091),
-        s = i(90666);
+    69761: (e, t, r) => {
+      r.r(t), r.d(t, { QAndARoutes: () => l, default: () => m });
+      var a = r(69382),
+        o = r(67294),
+        n = r(78587),
+        s = r(74091),
+        i = r(90666);
       const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
         FullPageView: (e, t) => `/questions/${e}/view/${t}`,
       };
       const m = function (e) {
-        return n.createElement(
-          o.rs,
+        return o.createElement(
+          n.rs,
           null,
-          n.createElement(o.AW, {
+          o.createElement(n.AW, {
             path: l.Dashboard(":vanity_str"),
             render: (e) =>
-              n.createElement(a.d, {
+              o.createElement(s.d, {
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t } = e.match.params;
-                    return n.createElement(r.A, { vanity_str: t });
+                    return o.createElement(a.A, { vanity_str: t });
                   },
                 },
               }),
           }),
-          n.createElement(o.AW, {
+          o.createElement(n.AW, {
             path: l.FullPageView(":vanity_str", ":session_gid"),
             render: (e) =>
-              n.createElement(a.d, {
+              o.createElement(s.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t, session_gid: i } = e.match.params;
-                    return n.createElement(r.EI, { gidSession: i });
+                    const { vanity_str: t, session_gid: r } = e.match.params;
+                    return o.createElement(a.EI, { gidSession: r });
                   },
                 },
               }),
           }),
-          n.createElement(o.AW, { component: c })
+          o.createElement(n.AW, { component: u })
         );
       };
-      function c(e) {
-        return "dev" !== s.De.WEB_UNIVERSE
-          ? n.createElement(o.l_, { to: "/" })
-          : n.createElement(
+      function u(e) {
+        return "dev" !== i.De.WEB_UNIVERSE
+          ? o.createElement(n.l_, { to: "/" })
+          : o.createElement(
               "div",
               null,
               "Unknown Route - Check ui/routes/questions.tsx to see if this page has been added to the list of routes."

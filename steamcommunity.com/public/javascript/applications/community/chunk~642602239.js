@@ -627,6 +627,8 @@
           "trailer",
           "speaker",
           "doclink",
+          "video",
+          "vod",
         ],
         l = [
           "h1",
@@ -640,7 +642,15 @@
           "noparse",
           "url",
         ],
-        c = ["img", "previewyoutube", "looping_media", "roomeffect"],
+        c = [
+          "img",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "video",
+          "vod",
+          "trailer",
+        ],
         d = o.filter((e) => -1 == c.indexOf(e)),
         m = "{STEAM_CLAN_IMAGE}",
         u = "{STEAM_CLAN_LOC_IMAGE}";
@@ -998,7 +1008,7 @@
       var i = r(70655),
         n = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(54698),
         o = r(7707),
         l = r(35921),
         c = r(4224),
@@ -3576,7 +3586,7 @@
         ml: () => u,
         q2: () => d,
       });
-      var i = r(92398),
+      var i = r(54698),
         n = (r(990), r(28875), r(77636)),
         a = (r(14146), r(159)),
         s = r(73285),
@@ -3876,7 +3886,7 @@
       r.d(t, { W: () => l });
       var i = r(70655),
         n = (r(3389), r(22188)),
-        a = (r(92398), r(91891), r(461), r(90666)),
+        a = (r(54698), r(91891), r(461), r(90666)),
         s = (r(45343), r(9669)),
         o = r.n(s);
       r(82946), r(26149);
@@ -4032,7 +4042,7 @@
       r.d(t, { Gk: () => c, LH: () => l, ZT: () => i, xM: () => o });
       var i,
         n = r(159),
-        a = (r(26149), r(92398), r(76776)),
+        a = (r(26149), r(54698), r(76776)),
         s = r(41311);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
@@ -4171,7 +4181,7 @@
       "use strict";
       r.d(t, { Sn: () => a });
       var i = r(70655),
-        n = (r(92398), r(81130));
+        n = (r(54698), r(81130));
       const a = { bScheduleEnabled: !1, scheduleEntries: [] };
       (0, i.gn)(
         [n.a],
@@ -4200,7 +4210,7 @@
     15528: (e, t, r) => {
       "use strict";
       r.d(t, { Y: () => n, l: () => i });
-      r(92398), r(26149);
+      r(54698), r(26149);
       const i = ["show", "hide", "remove"],
         n = {
           bBroadcastEnabled: !1,
@@ -4226,7 +4236,7 @@
       var i,
         n = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398), r(4224)),
+        s = (r(26149), r(54698), r(4224)),
         o = (r(3389), r(24399)),
         l = r(41311),
         c = r(81130);
@@ -4604,7 +4614,7 @@
       var i = r(70655),
         n = r(22188),
         a = r(49727),
-        s = (r(26149), r(92398)),
+        s = (r(26149), r(54698)),
         o = (r(92685), r(15528)),
         l = r(3389),
         c = (r(21205), r(65497), r(12453), r(24399)),
@@ -5907,7 +5917,7 @@
       r.d(t, { XC: () => l, ai: () => o });
       var i = r(13271),
         n = r(67294),
-        a = (r(92398), r(49186), r(7200)),
+        a = (r(54698), r(49186), r(7200)),
         s = r(74163);
       r(3389);
       function o(e) {
@@ -6038,7 +6048,7 @@
       "use strict";
       var i = r(70655),
         n = r(22188),
-        a = (r(26149), r(92398), r(21205), r(83090), r(77636), r(35092)),
+        a = (r(26149), r(54698), r(21205), r(83090), r(77636), r(35092)),
         s = r(90666);
       class o {
         InitFrom(e) {
@@ -6466,7 +6476,7 @@
       r.d(t, { v: () => h });
       var i = r(70655),
         n = r(67294),
-        a = (r(92398), r(159)),
+        a = (r(54698), r(159)),
         s = r(48341),
         o = r(8850),
         l = r(59650),
@@ -25325,7 +25335,7 @@
         (0, i.gn)([s.aD.bound], D.prototype, "CaptureStatsForDisplay", null),
         (0, i.gn)([b.a], D.prototype, "OnVideoPause", null),
         (0, i.gn)([b.a], D.prototype, "OnVideoResize", null);
-      r(92398), r(69765);
+      r(54698), r(69765);
       var T = r(93976),
         A = r(50498);
       const z = 7;
@@ -26381,7 +26391,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(26149),
-        l = (r(92398), r(92685)),
+        l = (r(54698), r(92685)),
         c = r(3389),
         d = (r(68002), r(82946), r(48780)),
         m = r(77520),
@@ -27203,7 +27213,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(3389)),
+        l = (r(26149), r(54698), r(3389)),
         c = (r(82946), r(77520)),
         d = r(90666),
         m = r(461);
@@ -27601,7 +27611,7 @@
         s = r.n(a),
         o = r(22188),
         l = r(67294),
-        c = (r(92398), r(19663)),
+        c = (r(54698), r(19663)),
         d = (r(91891), r(3389)),
         m = (r(82946), r(90666));
       class u {
@@ -27793,7 +27803,7 @@
         a = r.n(n),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(92398), r(40252), r(82946), r(90666));
+        l = (r(26149), r(54698), r(40252), r(82946), r(90666));
       class c {
         constructor(e) {
           (this.appid = e.appid),
@@ -27959,29 +27969,16 @@
     },
     77636: (e, t, r) => {
       "use strict";
-      r.d(t, { LA: () => m, jg: () => u });
+      r.d(t, { LA: () => u, jg: () => m });
       var i = r(70655),
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(3389), r(82946), r(93976)),
+        o = (r(26149), r(54698), r(3389), r(82946), r(93976)),
         l = r(90666),
         c = r(67294);
       const d = "unUserdataVersion";
-      function m() {
-        const [e, t] = (0, c.useState)(!u.Get().BIsLoaded());
-        return (
-          (0, c.useEffect)(() => {
-            u.Get().BIsLoaded() ||
-              u
-                .Get()
-                .HintLoad()
-                .finally(() => t(!u.Get().BIsLoaded()));
-          }, []),
-          [e, u.Get()]
-        );
-      }
-      class u {
+      class m {
         constructor() {
           (this.m_setWishList = new Set()),
             (this.m_wishlistInOrder = Array()),
@@ -28431,50 +28428,63 @@
         }
         static Get() {
           return (
-            u.s_globalSingletonStore ||
-              ((u.s_globalSingletonStore = new u()),
+            m.s_globalSingletonStore ||
+              ((m.s_globalSingletonStore = new m()),
               "dev" == l.De.WEB_UNIVERSE &&
-                (window.DUS = u.s_globalSingletonStore)),
-            u.s_globalSingletonStore
+                (window.DUS = m.s_globalSingletonStore)),
+            m.s_globalSingletonStore
           );
         }
       }
-      (0, i.gn)([s.LO], u.prototype, "m_setWishList", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setOwnedPackages", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setOwnedApps", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setFollowedApps", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setExcludedTagsIds", void 0),
+      function u() {
+        const [e, t] = (0, c.useState)(!m.Get().BIsLoaded());
+        return (
+          (0, c.useEffect)(() => {
+            m.Get().BIsLoaded() ||
+              m
+                .Get()
+                .HintLoad()
+                .finally(() => t(!m.Get().BIsLoaded()));
+          }, []),
+          [e, m.Get()]
+        );
+      }
+      (0, i.gn)([s.LO], m.prototype, "m_setWishList", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setOwnedPackages", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setOwnedApps", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setFollowedApps", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setExcludedTagsIds", void 0),
         (0, i.gn)(
           [s.LO],
-          u.prototype,
+          m.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        (0, i.gn)([s.LO], u.prototype, "m_setRecommendedApps", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_mapIgnoredApps", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_mapIgnoredPackages", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setCuratorsFollowed", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setCuratorsIgnored", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setRecommendedApps", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_mapIgnoredApps", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_mapIgnoredPackages", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setCuratorsFollowed", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setCuratorsIgnored", void 0),
         (0, i.gn)(
           [s.LO],
-          u.prototype,
+          m.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        (0, i.gn)([s.LO], u.prototype, "m_primaryLanguage", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_secondaryLanguages", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setRecommendedTags", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_primaryLanguage", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_secondaryLanguages", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setRecommendedTags", void 0),
         (0, i.gn)(
           [s.LO],
-          u.prototype,
+          m.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        (0, i.gn)([s.LO], u.prototype, "m_setPackagesInCart", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_setAppsInCart", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_nCartLineItemCount", void 0),
-        (0, i.gn)([s.LO], u.prototype, "m_bAjaxInFlight", void 0),
-        (0, i.gn)([s.aD], u.prototype, "UpdateAppIgnore", null);
+        (0, i.gn)([s.LO], m.prototype, "m_setPackagesInCart", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_setAppsInCart", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_nCartLineItemCount", void 0),
+        (0, i.gn)([s.LO], m.prototype, "m_bAjaxInFlight", void 0),
+        (0, i.gn)([s.aD], m.prototype, "UpdateAppIgnore", null);
     },
     29139: (e, t, r) => {
       "use strict";
@@ -28761,7 +28771,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(67294),
-        o = (r(26149), r(92398), r(82946), r(93976)),
+        o = (r(26149), r(54698), r(82946), r(93976)),
         l = r(99533),
         c = r(22975),
         d = r(90666);
@@ -29002,30 +29012,43 @@
         (0, i.gn)([c.ak], m.prototype, "LoadItemDef", null),
         (0, i.gn)([c.ak], m.prototype, "LoadAllItemDefForSingleApp", null);
     },
-    35118: (e, t, r) => {
+    55546: (e, t, r) => {
       "use strict";
-      r.d(t, { EV: () => A, PC: () => D, vY: () => T });
-      var i = r(70655),
-        n = r(9669),
-        a = r.n(n),
-        s = r(22188),
-        o = r(30381),
-        l = (r(26149), r(92398), r(80315)),
-        c = (r(49186), r(3389)),
-        d = r(9915),
-        m = r(7200),
-        u = r(159),
-        _ = r(89673),
-        p = (r(82946), r(77520)),
-        h = r(93976),
-        g = r(81130),
-        f = r(41311),
-        B = r(90666),
-        y = r(77636),
-        b = r(51391),
-        v = r(75007),
-        w = r(20562),
-        S = r(5525),
+      r.d(t, { EV: () => A, vY: () => T, PC: () => D });
+      var i,
+        n = r(70655),
+        a = r(9669),
+        s = r.n(a),
+        o = r(22188),
+        l = r(30381),
+        c = (r(26149), r(54698), r(80315)),
+        d = (r(49186), r(3389)),
+        m = r(9915),
+        u = r(7200),
+        _ = r(159),
+        p = r(89673),
+        h = (r(82946), r(77520)),
+        g = r(93976),
+        f = r(81130),
+        B = r(41311),
+        y = r(90666),
+        b = r(77636),
+        v = r(51391),
+        w = r(75007);
+      r(23937);
+      !(function (e) {
+        (e.Default = "default"),
+          (e.Upcoming = "upcoming"),
+          (e.Featured = "featured"),
+          (e.Press = "press"),
+          (e.Steam = "steam"),
+          (e.Halloween = "halloween"),
+          (e.Dev_All = "all"),
+          (e.Dev_AssociatedPress = "associated_press"),
+          (e.Dev_Sales = "associated_sales");
+      })(i || (i = {}));
+      new Map();
+      var S = r(5525),
         C = r(35017);
       function E(e, t, r, i) {
         return {
@@ -29046,15 +29069,15 @@
             (this.m_mapCalendarClansByID = new Map()),
             (this.m_mapCalendarEventsByGid = new Map()),
             (this.m_rgSortedCalendarEvents = new Array()),
-            (this.m_visibilityStore = new v.RC()),
-            (this.m_currentView = s.LO.box(null)),
+            (this.m_visibilityStore = new w.RC()),
+            (this.m_currentView = o.LO.box(null)),
             (this.m_bFinishedSearchingForward = !1),
             (this.m_bFinishedSearchingBackward = !1),
             (this.m_rgCalendarSections = []),
             (this.m_rgFutureSections = []),
             (this.m_collectionMetaData = void 0),
             (this.m_key = e),
-            y.jg.Get().HintLoad();
+            b.jg.Get().HintLoad();
         }
         GetNumEventsLoaded() {
           return this.m_mapCalendarEventsByGid.size;
@@ -29069,8 +29092,8 @@
         }
         BIsShowingFeaturedFeed() {
           return Boolean(
-            this.GetCollectionID() === w.B.Featured ||
-              (this.BIsGlobalCalendar() && !B.L7.accountid)
+            this.GetCollectionID() === i.Featured ||
+              (this.BIsGlobalCalendar() && !y.L7.accountid)
           );
         }
         BIsSingleSourceCalendar() {
@@ -29211,15 +29234,15 @@
           const e = this.GetStoreInitializationTimestamp(),
             t = [],
             r = e.getTime() / 1e3;
-          t.push(E(r, (0, f.Xx)("#EventCalendar_FutureEventsHeader"), r));
+          t.push(E(r, (0, B.Xx)("#EventCalendar_FutureEventsHeader"), r));
           const i = new Date(e);
           i.setHours(0, 0, 0, 1);
           let n = i.getTime() / 1e3;
-          t.push(E(r, (0, f.Xx)("#Time_Today"), n, r)),
+          t.push(E(r, (0, B.Xx)("#Time_Today"), n, r)),
             i.setDate(i.getDate() - 1);
           let a = n;
           (n = i.getTime() / 1e3),
-            t.push(E(r, (0, f.Xx)("#Time_Yesterday"), n, a));
+            t.push(E(r, (0, B.Xx)("#Time_Yesterday"), n, a));
           const s =
               this.m_rgSortedCalendarEvents[
                 this.m_rgSortedCalendarEvents.length - 1
@@ -29230,14 +29253,14 @@
             i.setDate(i.getDate() - 1),
               (a = n),
               (n = i.getTime() / 1e3),
-              t.push(E(r, (0, f.Mh)(i), n, a)),
+              t.push(E(r, (0, B.Mh)(i), n, a)),
               (l = o > n);
           const c = new Date(i);
           let d = n;
           for (; c.getMonth() == e.getMonth() && 1 != c.getDate() && !l; ) {
             c.setDate(c.getDate() - 7);
             const e = c.getTime() / 1e3;
-            t.push(E(r, (0, f.jr)(d - 1), e, d)), (l = o > e), (d = e);
+            t.push(E(r, (0, B.jr)(d - 1), e, d)), (l = o > e), (d = e);
           }
           const m = new Date(e);
           m.setHours(0, 0, 0, 1), m.setDate(1);
@@ -29246,7 +29269,7 @@
             const n = new Date(m);
             n.setMonth(e.getMonth() - i, 1);
             const a = n.getTime() / 1e3;
-            t.push(E(r, (0, f.jr)(a), a, u)), (l = o > a), (u = a);
+            t.push(E(r, (0, B.jr)(a), a, u)), (l = o > a), (u = a);
           }
           this.m_rgCalendarSections.length > t.length
             ? this.m_rgCalendarSections.splice(
@@ -29273,46 +29296,46 @@
           t.push(
             E(
               n,
-              (0, f.Xx)(
+              (0, B.Xx)(
                 this.m_key.bSectionByDay ? "#Time_UpNext" : "#Time_Today"
               ),
               n,
               s
             )
           );
-          let l = r <= s,
+          let o = r <= s,
             c = s;
           a.setDate(a.getDate() + 1),
             (s = a.getTime() / 1e3),
-            l || t.push(E(n, (0, f.Xx)("#Time_Tomorrow"), c, s)),
-            (l = r <= s);
-          const d = 6 - o(e).weekday();
-          for (let e = 2; e <= d && !l; e++) {
+            o || t.push(E(n, (0, B.Xx)("#Time_Tomorrow"), c, s)),
+            (o = r <= s);
+          const d = 6 - l(e).weekday();
+          for (let e = 2; e <= d && !o; e++) {
             c = s;
-            const e = (0, f.Mh)(a);
+            const e = (0, B.Mh)(a);
             a.setDate(a.getDate() + 1),
               (s = a.getTime() / 1e3),
               t.push(E(n, e, c, s)),
-              (l = r <= s);
+              (o = r <= s);
           }
           if (this.m_key.bSectionByDay)
-            for (; !l; ) {
+            for (; !o; ) {
               c = s;
-              const e = (0, f.XG)(a);
+              const e = (0, B.XG)(a);
               a.setDate(a.getDate() + 1),
                 (s = a.getTime() / 1e3),
                 t.push(E(n, e, c, s)),
-                (l = r <= s);
+                (o = r <= s);
             }
           else {
             const i = new Date(a);
             let c = s;
-            const d = o(e).daysInMonth();
-            if (i.getMonth() == e.getMonth() && i.getDate() != d && !l) {
+            const d = l(e).daysInMonth();
+            if (i.getMonth() == e.getMonth() && i.getDate() != d && !o) {
               i.setDate(i.getDate() + 7);
               const e = i.getTime() / 1e3;
-              t.push(E(n, (0, f.Xx)("#EventCalendar_NextWeek"), c, e)),
-                (l = r <= e),
+              t.push(E(n, (0, B.Xx)("#EventCalendar_NextWeek"), c, e)),
+                (o = r <= e),
                 (c = e);
             }
             const m = new Date(e);
@@ -29321,18 +29344,18 @@
               (m.setMonth(m.getMonth() + 1),
               m.setDate(1),
               m.setHours(0, 0, 0, 0),
-              i < m && !l)
+              i < m && !o)
             ) {
               const e = m.getTime() / 1e3;
-              t.push(E(n, (0, f.Xx)("#EventCalendar_LaterThisMonth"), c, e)),
-                (l = r <= e),
+              t.push(E(n, (0, B.Xx)("#EventCalendar_LaterThisMonth"), c, e)),
+                (o = r <= e),
                 (u = e);
             } else u = c;
-            for (let i = 2; !l; i++) {
+            for (let i = 2; !o; i++) {
               const a = new Date(m);
               a.setMonth(e.getMonth() + i);
               const s = a.getTime() / 1e3;
-              t.push(E(n, (0, f.jr)(u), u, s)), (l = r <= s), (u = s);
+              t.push(E(n, (0, B.jr)(u), u, s)), (o = r <= s), (u = s);
             }
           }
           this.m_rgFutureSections.length > t.length
@@ -29345,13 +29368,13 @@
                 .forEach((e) => this.m_rgFutureSections.push(e));
         }
         RegisterCalendarEventsAndModels(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            yield y.jg.Get().HintLoad(),
-              (0, s.z)(() => {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            yield b.jg.Get().HintLoad(),
+              (0, o.z)(() => {
                 this.RegisterCalendarApps(e.apps),
                   this.RegisterCalendarClans(e.clans),
                   this.RegisterCalendarEvents(e.documents),
-                  m.j1.RegisterClanEvents(e.events),
+                  u.j1.RegisterClanEvents(e.events),
                   this.RegisterReadEvents(e.events_read),
                   this.RegisterEventVotes(e.event_votes),
                   e.forwardComplete && (this.m_bFinishedSearchingForward = !0),
@@ -29371,7 +29394,7 @@
           if (e)
             for (const t of e) {
               if (this.m_mapCalendarAppsByID.has(t.appid)) continue;
-              const e = new l.LH();
+              const e = new c.LH();
               (e.appid = t.appid),
                 (e.source = t.source),
                 (e.playtime = t.playtime),
@@ -29384,7 +29407,7 @@
           if (e)
             for (const t of e)
               if (!this.m_mapCalendarClansByID.has(t.clanid)) {
-                const e = new l.Gk();
+                const e = new c.Gk();
                 (e.clanid = t.clanid),
                   (e.source = t.source),
                   this.m_mapCalendarClansByID.set(t.clanid, e);
@@ -29392,12 +29415,12 @@
         }
         RegisterReadEvents(e) {
           if (!e) return;
-          const t = d.cb.Get();
+          const t = m.cb.Get();
           for (const r of e) t.SetEventAsRead(r);
         }
         RegisterEventVotes(e) {
           if (!e) return;
-          const t = d.cb.Get();
+          const t = m.cb.Get();
           for (const r of e) {
             const e = void 0 === r.vote ? void 0 : Boolean(r.vote);
             t.SetVote(r.id, e);
@@ -29449,7 +29472,7 @@
             : this.m_backwardRequestInFlight;
         }
         SetRequestInFlight(e, t) {
-          (0, p.X)(
+          (0, h.X)(
             !t || !this.GetRequestInFlight(e),
             "Already have a request in flight for",
             e
@@ -29459,19 +29482,19 @@
               : (this.m_backwardRequestInFlight = t);
         }
         LoadAdditionalEvents(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (this.BHitEventHorizon(e)) return 1;
             let r = this.GetRequestInFlight(e);
             if (r) return r;
-            const n =
-                B.De.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
-              s =
+            const i =
+                y.De.STORE_BASE_URL + "events/ajaxgetusereventcalendarrange/",
+              a =
                 "forward" === e
                   ? this.m_nForwardStuckCount
                   : this.m_nBackwardStuckCount,
-              o = s < 3 ? s : 0,
-              l = s >= 3 ? 1 : 0,
-              c = ("dev" === B.De.WEB_UNIVERSE ? 50 : 250) + 50 * o,
+              o = a < 3 ? a : 0,
+              l = a >= 3 ? 1 : 0,
+              c = ("dev" === y.De.WEB_UNIVERSE ? 50 : 250) + 50 * o,
               d = this.GetTimeEdgeForDirection(
                 e,
                 S.JW.GetTimeNowWithOverride()
@@ -29510,14 +29533,14 @@
               ? ((m.minTime = Math.floor(d + l)), (m.ascending = !0))
               : ((m.maxTime = Math.floor(d - l)), (m.ascending = !1));
             return (
-              (r = a()
-                .get(n, {
+              (r = s()
+                .get(i, {
                   params: m,
                   cancelToken: t ? t.token : void 0,
                   withCredentials: !0,
                 })
                 .then((r) =>
-                  (0, i.mG)(this, void 0, void 0, function* () {
+                  (0, n.mG)(this, void 0, void 0, function* () {
                     if (
                       (this.SetRequestInFlight(e, null), 1 == r.data.success)
                     ) {
@@ -29532,7 +29555,7 @@
                 )
                 .catch((t) => {
                   this.SetRequestInFlight(e, null);
-                  let r = (0, h.l)(t);
+                  let r = (0, g.l)(t);
                   return (
                     console.error(
                       "LoadAdditionalEvents hit error " + r.strErrorMsg,
@@ -29552,7 +29575,7 @@
         BInternalInsertCalendarEventItem(e) {
           if (!e.unique_id)
             return (
-              (0, p.X)(
+              (0, h.X)(
                 !1,
                 "Attmpted to register a calendar event item with an invalid unique id!"
               ),
@@ -29563,7 +29586,7 @@
             r = this.m_mapCalendarClansByID.get(e.clanid);
           if (!t && !r)
             return console.log("No AppInfo or ClanInfo For: ", e), !1;
-          const i = new l.xM();
+          const i = new c.xM();
           return (
             (i.clanid = e.clanid),
             (i.unique_id = e.unique_id),
@@ -29588,54 +29611,54 @@
           );
         }
         UpdateEventBlockFromCalendarEvent(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             let r = e.appInfo ? e.appid : void 0,
               i = e.clanInfo ? e.clanInfo.clanid : void 0;
             null != r || null != i
               ? (yield C.m.Get().UpdateCommunitionSetting(t, r, i),
-                b.Y.RecordAppInteractionEvent(r, b.g.k_eMuted))
-              : (0, p.X)(
+                v.Y.RecordAppInteractionEvent(r, v.g.k_eMuted))
+              : (0, h.X)(
                   !1,
                   "Both clan id and account id are missing, cannot change communication status"
                 );
           });
         }
       }
-      (0, i.gn)([s.LO], R.prototype, "m_mapCalendarEventsByGid", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_rgSortedCalendarEvents", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_bFinishedSearchingForward", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_bFinishedSearchingBackward", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_rgCalendarSections", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_rgFutureSections", void 0),
-        (0, i.gn)([s.LO], R.prototype, "m_collectionMetaData", void 0),
-        (0, i.gn)([s.aD], R.prototype, "InitCalendarSections", null),
-        (0, i.gn)([s.aD], R.prototype, "InitFutureCalendarSections", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterCalendarEventsAndModels", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterCalendarApps", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterCalendarClans", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterReadEvents", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterEventVotes", null),
-        (0, i.gn)([s.aD], R.prototype, "RegisterCalendarEvents", null),
-        (0, i.gn)([g.a], R.prototype, "BHitEventHorizon", null),
-        (0, i.gn)([s.aD.bound], R.prototype, "LoadAdditionalEvents", null),
-        (0, i.gn)(
-          [s.aD],
+      (0, n.gn)([o.LO], R.prototype, "m_mapCalendarEventsByGid", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgSortedCalendarEvents", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_bFinishedSearchingForward", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_bFinishedSearchingBackward", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgCalendarSections", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_rgFutureSections", void 0),
+        (0, n.gn)([o.LO], R.prototype, "m_collectionMetaData", void 0),
+        (0, n.gn)([o.aD], R.prototype, "InitCalendarSections", null),
+        (0, n.gn)([o.aD], R.prototype, "InitFutureCalendarSections", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarEventsAndModels", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarApps", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarClans", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterReadEvents", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterEventVotes", null),
+        (0, n.gn)([o.aD], R.prototype, "RegisterCalendarEvents", null),
+        (0, n.gn)([f.a], R.prototype, "BHitEventHorizon", null),
+        (0, n.gn)([o.aD.bound], R.prototype, "LoadAdditionalEvents", null),
+        (0, n.gn)(
+          [o.aD],
           R.prototype,
           "UpdateEventBlockFromCalendarEvent",
           null
         );
       class I {
-        constructor(e, t, r, n, a, o) {
-          (this.m_rgLoadedEventsBox = s.LO.box([])),
+        constructor(e, t, r, i, a, s) {
+          (this.m_rgLoadedEventsBox = o.LO.box([])),
             (this.m_lastLoadLatch = null),
             (this.m_fnGetUnfilteredEvents = e),
             (this.m_fnLoadAdditionalEvents = t),
             (this.m_fnBHitEventHorizon = r),
-            (this.m_fnBIsEventInView = n),
+            (this.m_fnBIsEventInView = i),
             (this.m_bSkipStorePreferenceCheck = a),
-            (this.m_bAllowMutedAndIgnoredSources = o),
-            (this.m_rgAutorunDisposer = (0, s.EH)(() =>
-              (0, i.mG)(this, void 0, void 0, function* () {
+            (this.m_bAllowMutedAndIgnoredSources = s),
+            (this.m_rgAutorunDisposer = (0, o.EH)(() =>
+              (0, n.mG)(this, void 0, void 0, function* () {
                 const e = this.viewFilteredEvents.slice();
                 if (!this.m_bSkipStorePreferenceCheck) {
                   const t = Array.from(
@@ -29643,9 +29666,9 @@
                   ).sort();
                   if (
                     ((this.m_lastLoadLatch = e),
-                    yield u.Z.Get().QueueMultipleAppRequests(
+                    yield _.Z.Get().QueueMultipleAppRequests(
                       t,
-                      Object.assign(Object.assign({}, _.NC), {
+                      Object.assign(Object.assign({}, p.NC), {
                         include_assets: !0,
                       })
                     ),
@@ -29672,18 +29695,18 @@
               if (
                 !this.m_bAllowMutedAndIgnoredSources &&
                 (C.m.Get().BIsMutedAppID(e.appid) ||
-                  y.jg.Get().BIsGameIgnored(e.appid))
+                  b.jg.Get().BIsGameIgnored(e.appid))
               )
                 return !1;
               if (
                 !this.m_bSkipStorePreferenceCheck &&
-                (0, _.TR)(u.Z.Get().GetApp(e.appid))
+                (0, p.TR)(_.Z.Get().GetApp(e.appid))
               )
                 return !1;
             } else if (
               !this.m_bAllowMutedAndIgnoredSources &&
               (C.m.Get().BIsMutedClanID(e.clanid) ||
-                y.jg.Get().BIsIgnoringCurator(c.K.InitFromClanID(e.clanid)))
+                b.jg.Get().BIsIgnoringCurator(d.K.InitFromClanID(e.clanid)))
             )
               return !1;
             return !0;
@@ -29697,7 +29720,7 @@
             : r.length > 0 && r[r.length - 1].start_time < t;
         }
         EnsureRangeIsLoaded(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             for (
               let e = 0;
               e < 100 && !this.BIsCompleteThroughTime("forward", t);
@@ -29738,7 +29761,7 @@
         }
         GetActiveEventsAt(e) {
           return this.filteredAndCheckedEvents
-            .map((e) => m.j1.GetClanEventModel(e.unique_id))
+            .map((e) => u.j1.GetClanEventModel(e.unique_id))
             .filter((t) => {
               if (t) {
                 const r = t.endTime || t.startTime + 3600;
@@ -29748,9 +29771,9 @@
             });
         }
       }
-      (0, i.gn)([s.Fl.struct], I.prototype, "viewFilteredEvents", null),
-        (0, i.gn)([s.Fl.struct], I.prototype, "filteredAndCheckedEvents", null);
-      const M = s.LO.box(null),
+      (0, n.gn)([o.Fl.struct], I.prototype, "viewFilteredEvents", null),
+        (0, n.gn)([o.Fl.struct], I.prototype, "filteredAndCheckedEvents", null);
+      const M = o.LO.box(null),
         F = new Map();
       function D(e) {
         let t = "";
@@ -29795,7 +29818,7 @@
         n = r(9669),
         a = r.n(n),
         s = (r(58185), r(90666)),
-        o = (r(92398), r(35118), r(80315), r(99533)),
+        o = (r(54698), r(55546), r(80315), r(99533)),
         l = r(75007);
       !(function (e) {
         (e[(e.k_eDiscussions = 0)] = "k_eDiscussions"),
@@ -29937,7 +29960,7 @@
       var i,
         n = r(70655),
         a = r(22188),
-        s = (r(26149), r(92398)),
+        s = (r(26149), r(54698)),
         o = r(80315),
         l = r(77520),
         c = r(90666),
@@ -30176,125 +30199,6 @@
         (0, n.gn)([a.aD], y.prototype, "SetEventTypeGroupAllowed", null),
         (0, n.gn)([a.aD], y.prototype, "SetGameSourceAllowed", null);
     },
-    20562: (e, t, r) => {
-      "use strict";
-      r.d(t, { B: () => i, W: () => l });
-      var i,
-        n = r(23937),
-        a = r(41311),
-        s = r(90666);
-      !(function (e) {
-        (e.Default = "default"),
-          (e.Upcoming = "upcoming"),
-          (e.Featured = "featured"),
-          (e.Press = "press"),
-          (e.Steam = "steam"),
-          (e.Halloween = "halloween"),
-          (e.Dev_All = "all"),
-          (e.Dev_AssociatedPress = "associated_press"),
-          (e.Dev_Sales = "associated_sales");
-      })(i || (i = {}));
-      const o = new Map();
-      function l(e) {
-        return (
-          0 == o.size &&
-            (function () {
-              const e = (0, n.x3)();
-              o.set(i.Default, {
-                id: i.Default,
-                strUrl: `${e}/`,
-                strName: (0, a.Xx)("#EventCalendar_NewsChannel_YourNews"),
-                strSubtitle: (0, a.Xx)(
-                  "#EventCalendar_NewsChannel_Personalized"
-                ),
-                strHeaderTitle: (0, a.Xx)(
-                  "#EventCalendar_NewsChannel_YourNews_HeaderTitle"
-                ),
-              }),
-                o.set(i.Upcoming, {
-                  id: i.Upcoming,
-                  strUrl: `${e}/?upcoming=1`,
-                  strName: (0, a.Xx)("#EventCalendar_NewsChannel_Upcoming"),
-                  strShortName: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_UpcomingShort"
-                  ),
-                  strSubtitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_Personalized"
-                  ),
-                }),
-                o.set(i.Featured, {
-                  id: i.Featured,
-                  strUrl: `${e}/collection/featured/`,
-                  strName: (0, a.Xx)("#EventCalendar_NewsChannel_Featured"),
-                  strSubtitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_TopSellers"
-                  ),
-                  strHeaderTitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_Featured_HeaderTitle"
-                  ),
-                }),
-                o.set(i.Press, {
-                  id: i.Press,
-                  strUrl: `${e}/collection/press/`,
-                  strName: (0, a.Xx)("#EventCalendar_NewsChannel_Press"),
-                  strHeaderTitle: (0, a.Xx)(
-                    "#EventCalendar_Collection_News_Title"
-                  ),
-                  strHeaderSubtitle: (0, a.Xx)(
-                    "#EventCalendar_Collection_News_Subtitle"
-                  ),
-                }),
-                o.set(i.Steam, {
-                  id: i.Steam,
-                  strUrl: `${e}/collection/steam/`,
-                  strName: (0, a.Xx)("#EventCalendar_NewsChannel_Steam"),
-                  strSubtitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_SteamSubtitle"
-                  ),
-                  strHeaderTitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_Steam_HeaderTitle"
-                  ),
-                }),
-                o.set(i.Halloween, {
-                  id: i.Halloween,
-                  strUrl: `${e}/collection/halloween/`,
-                  strName: (0, a.Xx)("#EventCalendar_NewsChannel_Halloween"),
-                  strSubtitle: (0, a.Xx)(
-                    "#EventCalendar_NewsChannel_HalloweenSubtitle"
-                  ),
-                  strHeaderTitle: (0, a.Xx)(
-                    "#EventCalendar_Collection_Halloween_Title"
-                  ),
-                  strHeaderSubtitle: (0, a.Xx)(
-                    "#EventCalendar_Collection_Halloween_Subtitle"
-                  ),
-                }),
-                s.L7.is_support &&
-                  (o.set(i.Dev_All, {
-                    id: i.Dev_All,
-                    strUrl: `${e}/collection/all/`,
-                    strName: (0, a.Xx)("#EventCalendar_NewsChannel_All"),
-                    bIsValveOnly: !0,
-                  }),
-                  o.set(i.Dev_Sales, {
-                    id: i.Dev_Sales,
-                    strUrl: `${e}/collection/sales/`,
-                    strName: (0, a.Xx)("#EventCalendar_NewsChannel_AllSales"),
-                    bIsValveOnly: !0,
-                  }),
-                  o.set(i.Dev_AssociatedPress, {
-                    id: i.Dev_AssociatedPress,
-                    strUrl: `${e}/collection/associated_press/`,
-                    strName: (0, a.Xx)(
-                      "#EventCalendar_NewsChannel_AssociatedPress"
-                    ),
-                    bIsValveOnly: !0,
-                  }));
-            })(),
-          o.get(e)
-        );
-      }
-    },
     9915: (e, t, r) => {
       "use strict";
       r.d(t, { cb: () => y, rE: () => p, J: () => b });
@@ -30302,7 +30206,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(58114)),
+        o = (r(26149), r(54698), r(58114)),
         l = (r(49186), r(68002)),
         c = r(99533),
         d = r(81130),
@@ -30883,7 +30787,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(80315), r(82946), r(77520)),
+        o = (r(26149), r(54698), r(80315), r(82946), r(77520)),
         l = r(93976),
         c = r(90666);
       class d {
@@ -30996,7 +30900,7 @@
         s = r(22188),
         o = r(27661),
         l = r(26149),
-        c = (r(92398), r(52411), r(49186)),
+        c = (r(54698), r(52411), r(49186)),
         d = r(3389),
         m = (r(39799), r(24020)),
         u = (r(82946), r(48780)),
@@ -32147,7 +32051,7 @@
       r.d(t, { De: () => l, Fq: () => o, pA: () => s });
       var i = r(990),
         n = r(90666),
-        a = (r(33019), r(58114), r(92398));
+        a = (r(33019), r(58114), r(54698));
       r(87931);
       function s(e, t) {
         e.Body().set_context(o(t));
@@ -32170,7 +32074,7 @@
       "use strict";
       r.d(t, { Z: () => d });
       var i = r(22188),
-        n = (r(26149), r(92398), r(13328), r(990), r(73285)),
+        n = (r(26149), r(54698), r(13328), r(990), r(73285)),
         a = r(77520),
         s = r(41311),
         o = r(74891),
@@ -33088,7 +32992,7 @@
       r.d(t, { Z: () => b });
       var i = r(70655),
         n = r(22188),
-        a = (r(26149), r(92398), r(58114)),
+        a = (r(26149), r(54698), r(58114)),
         s = r(65902),
         o = r(33019),
         l = r(40110),
@@ -33773,13 +33677,14 @@
     73285: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ds: () => S,
-        Hy: () => C,
-        qE: () => v,
-        TM: () => w,
+        Ds: () => C,
+        Hy: () => E,
+        qE: () => w,
+        TM: () => S,
+        GV: () => v,
         $k: () => b,
       });
-      r(92398);
+      r(54698);
       var i = r(33019),
         n = r(40110),
         a = r(990);
@@ -34506,6 +34411,9 @@
       }
       var y, b;
       function v(e) {
+        return "app" == e ? 0 : "sub" == e ? 1 : 2;
+      }
+      function w(e) {
         switch (e) {
           case 0:
             return "app";
@@ -34518,7 +34426,7 @@
         }
         return "invalid";
       }
-      function w(e) {
+      function S(e) {
         switch (e) {
           case "sub":
             return 1;
@@ -34528,7 +34436,7 @@
             return 0;
         }
       }
-      function S(e, t) {
+      function C(e, t) {
         switch (e) {
           case 2:
             return "bundle";
@@ -34565,7 +34473,7 @@
             }
         }
       }
-      function C(e) {
+      function E(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -34690,7 +34598,7 @@
       var i = r(9669),
         n = r.n(i),
         a = r(67294),
-        s = (r(49727), r(92398), r(990), r(22975)),
+        s = (r(49727), r(54698), r(990), r(22975)),
         o = (r(14146), r(159));
       function l(e, t, r, i) {
         const s = (0, a.useRef)(),
@@ -34853,7 +34761,7 @@
       r.d(t, { Eq: () => p, OT: () => u, wj: () => _ });
       var i = r(70655),
         n = r(67294),
-        a = (r(92398), r(58114)),
+        a = (r(54698), r(58114)),
         s = r(10767),
         o = r(74163),
         l = r(77520),
@@ -35176,7 +35084,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(22188),
-        o = (r(26149), r(92398), r(78913), r(93976)),
+        o = (r(26149), r(54698), r(78913), r(93976)),
         l = r(90666),
         c = r(99386);
       class d {
@@ -35242,7 +35150,7 @@
       var i = r(70655),
         n = r(9669),
         a = r.n(n),
-        s = (r(22188), r(26149), r(92398), r(58114)),
+        s = (r(22188), r(26149), r(54698), r(58114)),
         o = r(65902),
         l = r(78913),
         c = (r(82946), r(93976)),
@@ -35719,7 +35627,7 @@
       "use strict";
       r.d(t, { Rd: () => z, _R: () => G, Ws: () => T });
       var i = r(67294),
-        n = (r(92398), r(7707)),
+        n = (r(54698), r(7707)),
         a = (r(21205), r(33019));
       r(40110);
       a.Message;
@@ -37625,7 +37533,7 @@
       "use strict";
       r.d(t, { a: () => h });
       var i = r(67294),
-        n = (r(92398), r(67833)),
+        n = (r(54698), r(67833)),
         a = (r(990), r(77636)),
         s = r(73285),
         o = r(52114),
@@ -37719,7 +37627,7 @@
       "use strict";
       r.d(t, { f: () => p });
       var i = r(67294),
-        n = (r(92398), r(97079)),
+        n = (r(54698), r(97079)),
         a = (r(990), r(39388)),
         s = r(73285),
         o = r(52114),
@@ -37785,7 +37693,7 @@
         c = r(26149),
         d = (r(49186), r(7200)),
         m = r(22975),
-        u = r(92398),
+        u = r(54698),
         _ = r(4224),
         p = r(3389),
         h = r(77765),
@@ -38592,9 +38500,13 @@
         Ae = r(50498),
         ze = (r(69765), r(32548));
       const Ge = n.lazy(() =>
-          Promise.all([r.e(3973), r.e(2449), r.e(2832), r.e(4601)]).then(
-            r.bind(r, 63405)
-          )
+          Promise.all([
+            r.e(3973),
+            r.e(2677),
+            r.e(2449),
+            r.e(2832),
+            r.e(4601),
+          ]).then(r.bind(r, 63405))
         ),
         ke = (e) => {
           const t = (0, n.useRef)(null),
@@ -39202,7 +39114,7 @@
         a = r(30381),
         s = r(67294),
         o = r(26149),
-        l = (r(92398), r(57287)),
+        l = (r(54698), r(57287)),
         c = r(80315),
         d = r(50153),
         m = (r(49186), r(76776)),
@@ -39732,10 +39644,10 @@
       var i = r(70655),
         n = r(29323),
         a = r(67294),
-        s = (r(92398), r(19663), r(3389)),
+        s = (r(54698), r(19663), r(3389)),
         o = r(461),
         l = r(77636),
-        c = r(35118),
+        c = r(55546),
         d = r(75007),
         m = r(5525),
         u = r(9915),
@@ -39961,7 +39873,7 @@
         o = r(29323),
         l = r(67294),
         c = r(88983),
-        d = (r(92398), r(79822)),
+        d = (r(54698), r(79822)),
         m = (r(49186), r(23153)),
         u = r(43359),
         _ = r(67833),
@@ -41055,7 +40967,7 @@
       var i = r(70655),
         n = r(77442),
         a = r(73285),
-        s = r(92398),
+        s = r(54698),
         o = (r(49186), r(990), r(77636)),
         l = (r(14146), r(159)),
         c = r(37694),
@@ -41226,7 +41138,7 @@
       r.d(t, { Hl: () => W, S$: () => j, a4: () => U, ju: () => O });
       var i = r(29323),
         n = r(67294),
-        a = (r(26149), r(92398), r(7707)),
+        a = (r(26149), r(54698), r(7707)),
         s = r(35921),
         o = r(39746),
         l = (r(49186), r(43359)),
@@ -41746,7 +41658,7 @@
       "use strict";
       r.d(t, { Bj: () => u, xP: () => _, vs: () => m });
       var i = r(67294);
-      r(92398);
+      r(54698);
       var n = r(28976),
         a = r(77636),
         s = r(159),
@@ -41904,7 +41816,7 @@
         n = r.n(i),
         a = r(67294),
         s = r(88983),
-        o = r(92398),
+        o = r(54698),
         l = (r(91891), r(990), r(39388)),
         c = (r(14146), r(73285)),
         d = r(52114),
@@ -42278,7 +42190,7 @@
       r.d(t, { zw: () => p, Dt: () => u, $N: () => _ });
       r(990);
       var i = r(67294),
-        n = r(92398),
+        n = r(54698),
         a = r(67833),
         s = r(70655),
         o = r(17888),
@@ -42332,7 +42244,7 @@
       var i = r(70655),
         n = r(13271),
         a = r(67294),
-        s = (r(92398), r(67833)),
+        s = (r(54698), r(67833)),
         o = r(77636),
         l = r(88335),
         c = r.n(l),
@@ -42476,7 +42388,7 @@
       r.d(t, { r: () => m });
       var i = r(29323),
         n = r(67294),
-        a = (r(92398), r(97079)),
+        a = (r(54698), r(97079)),
         s = r(77636),
         o = r(7573),
         l = r(41311),
@@ -42727,7 +42639,7 @@
       var i = r(70655),
         n = r(67294),
         a = r(26149),
-        s = r(92398),
+        s = r(54698),
         o = r(41311),
         l = r(35092),
         c = r(90666),
@@ -45039,7 +44951,7 @@
         n = r(9669),
         a = r.n(n),
         s = r(67294),
-        o = (r(26149), r(92398), r(82946), r(93976)),
+        o = (r(26149), r(54698), r(82946), r(93976)),
         l = r(90666);
       const c = (e) => {
         const [t, r] = (0, s.useState)(!!e && void 0);
@@ -45117,7 +45029,7 @@
         md: () => _,
       });
       var i = r(90666);
-      r(92398), r(41311);
+      r(54698), r(41311);
       function n(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",

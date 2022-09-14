@@ -231,13 +231,13 @@ a.linkbar .rightblock {
 }
 
 .tab_filter_control:hover,
-.tab_filter_control_row:hover {
+.tab_filter_control_row:not(.disabled):hover {
     color: #ffffff;
     background: rgba( 255, 255, 255, 0.1);
 }
 
 .tab_filter_control.checked,
-.tab_filter_control_row.checked {
+.tab_filter_control_row:not(.disabled).checked {
     background: #67c1f5; /* Old browsers */
     background: -moz-linear-gradient(-60deg,  #67c1f5 0%, #417a9b 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#67c1f5), color-stop(100%,#417a9b)); /* Chrome,Safari4+ */
@@ -257,8 +257,13 @@ a.linkbar .rightblock {
 
 /* Even if a control isn't active, we brighten the text if its parent row is. */
 /* This allows for excluded terms to show cleanly. */
-.tab_filter_control_row.checked .tab_filter_control {
+.tab_filter_control_row:not(.disabled).checked .tab_filter_control {
 	color: #ffffff;
+}
+
+.tab_filter_control_row.disabled .tab_filter_control {
+	opacity: 0.4;
+	cursor: default;
 }
 
 .tab_filter_control_checkbox {

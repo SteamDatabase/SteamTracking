@@ -3366,12 +3366,21 @@ function InitTopGrossingDateSlider( InitArgs )
 	var $Element = InitArgs.$Element;
 	var rgRangeData = InitArgs.rgRangeData;
 
-	var $Checkbox = $J('#top_grossing_library_check');
+	InitTopSellersControls( $Element.parents( '.topsellers_controls' ), rgRangeData );
+}
 
-	var $TabItems = $J('#tab_topgrossing_content').children('.tab_content_items');
-	var ItemsByReleaseDate = {};
+function InitTopSellersControls( $Controls, RangeInitData )
+{
+	//var $Controls = $Element.parents( '.topsellers_controls' );
+
+	var $Checkbox = $Controls.find('#top_sellers_library_check');
+	var $CheckboxHideF2P = $Controls.find( '#top_sellers_f2p_check' );
+
+	var $TabItems = $Controls.parents( '.tab_content' ).children('.tab_content_items');
+	var TopSellersCache = {};
 	var bAJAXInFlight = false;
-	var fnLoadTopGrossing = function( time )
+	var fnTopSellersKey = function ( time, bHideF2P ) { return parseInt( time ) + '_' + ( bHideF2P ? 'hidef2p' : '' ); }
+	var fnLoadTopGrossing = function( time, bHideF2P )
 	{
 		if ( bAJAXInFlight )
 		{
@@ -3381,7 +3390,7 @@ function InitTopGrossingDateSlider( InitArgs )
 
 		bAJAXInFlight = true;
 		$TabItems.addClass('loading');
-		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', {time: time } ).done( function( data ) {
+		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P } ).done( function( data ) {
 			if ( data.storeitemdata && data.html )
 			{
 				GStoreItemData.AddStoreItemDataSet( data.storeitemdata );
@@ -3395,9 +3404,9 @@ function InitTopGrossingDateSlider( InitArgs )
 				html = $Temp.html();
 				$Temp.empty();
 			}
-			ItemsByReleaseDate[ time ] = html;
+			TopSellersCache[ fnTopSellersKey( time, bHideF2P ) ] = html;
 		}).fail( function() {
-			ItemsByReleaseDate[ time ] = '<div>Error</div>';
+			TopSellersCache[ fnTopSellersKey( time, bHideF2P ) ] = '<div>Error</div>';
 		} ).always( function() {
 			$TabItems.removeClass('loading');
 			bAJAXInFlight = false;
@@ -3407,34 +3416,39 @@ function InitTopGrossingDateSlider( InitArgs )
 
 	var fnRenderTopGrossing = function( bOnChange )
 	{
-		var bFilterLibraryItems = $Checkbox.length ? $Checkbox.prop('checked') : true;
-		var nTimeValue = rgRangeData[ $Element.val() ].time;
+		var bFilterLibraryItems = $Checkbox.length ? !$Checkbox.prop('checked') : false;
+		var bHideF2P = !$CheckboxHideF2P.prop( 'checked' );
+		var nTimeValue = RangeInitData ? RangeInitData.rgRangeData[ RangeInitData.$Element.val() ].time : 0;
 
 		if ( bOnChange )
 		{
-			WebStorage.SetLocal( 'topgrossing_prefs', { bFilterLibraryItems: bFilterLibraryItems, nTimeValue: nTimeValue } );
+			WebStorage.SetLocal( 'topgrossing_prefs', { bFilterLibraryItems: bFilterLibraryItems, bHideF2P: bHideF2P, nTimeValue: nTimeValue } );
 		}
 
-		if ( !ItemsByReleaseDate[ nTimeValue ] )
+		if ( !TopSellersCache[ fnTopSellersKey( nTimeValue, bHideF2P ) ] )
 		{
 			// We don't have the HTML.  Load it.
-			fnLoadTopGrossing( nTimeValue );
+			fnLoadTopGrossing( nTimeValue, bHideF2P );
 		}
 		else
 		{
-			$TabItems.html( ItemsByReleaseDate[nTimeValue] );
-			GHomepage.FilterTab( '#tab_topgrossing_content', { games_already_in_library: !bFilterLibraryItems, dlc_for_you: true } );
+			$TabItems.html( TopSellersCache[ fnTopSellersKey( nTimeValue, bHideF2P ) ] );
+			GHomepage.FilterTab( '#tab_topsellers_content', { games_already_in_library: !bFilterLibraryItems, dlc_for_you: true } );
+
+			var strTargetSeeMore = bHideF2P ? 'hidef2p' : 'default';
+			var $SeeMoreLinks = $J('#tab_topsellers_content').children('.tab_see_more').children('.topsellers_see_more');
+			$SeeMoreLinks.hide().filter('[data-searchid=' + strTargetSeeMore + ']').show();
 		}
 	};
 
-	$Element.add($Checkbox).on( 'change', function() {
+	$Checkbox.add($CheckboxHideF2P).add( RangeInitData ? RangeInitData.$Element : null ).on( 'change', function() {
 		fnRenderTopGrossing( true /*onchange*/ );
 	});
 
 	if ( !g_AccountID )
 		$Checkbox.parents('.tab_control').hide();
 
-	ItemsByReleaseDate[0] = $TabItems.html();
+	TopSellersCache[ fnTopSellersKey( 0, false ) ] = $TabItems.html();
 
 	GHomepage.AddCustomRender( function() {
 		var rgPrefs = WebStorage.GetLocal( 'topgrossing_prefs' );
@@ -3442,11 +3456,15 @@ function InitTopGrossingDateSlider( InitArgs )
 		{
 			if ( rgPrefs.bFilterLibraryItems !== undefined )
 			{
-				$Checkbox.prop( 'checked', rgPrefs.bFilterLibraryItems );
+				$Checkbox.prop( 'checked', !rgPrefs.bFilterLibraryItems );
 			}
-			if ( rgPrefs.nTimeValue !== undefined )
+			if ( rgPrefs.bHideF2P !== undefined )
 			{
-				InitArgs.UpdateRangeControlByValue( 'time', rgPrefs.nTimeValue );
+				$CheckboxHideF2P.prop( 'checked', !rgPrefs.bHideF2P );
+			}
+			if ( rgPrefs.nTimeValue !== undefined && RangeInitData )
+			{
+				RangeInitData.UpdateRangeControlByValue( 'time', rgPrefs.nTimeValue );
 			}
 		}
 		fnRenderTopGrossing();
