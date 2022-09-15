@@ -54063,7 +54063,7 @@
       var Dt = n(49017),
         Bt = n(94361),
         wt = n(30892);
-      n(40252), n(74163);
+      n(40252);
       function Ct(e) {
         const { tableRef: t } = e,
           n = (0, d.useCallback)(() => {
@@ -55679,10 +55679,21 @@
           n = (0, l.tb)(),
           a = (0, Me.SZ)(() => t.GetFullName()),
           { rgEmailDefAndStats: i } = W(a);
-        if (!n || !n.json_invited || !i)
+        if (
+          !(
+            n &&
+            (n.json_invited ||
+              n.json_eligible ||
+              n.json_opted_in ||
+              n.json_featured ||
+              n.json_opted_out) &&
+            i
+          )
+        )
           return d.createElement(V.V, {
             size: "medium",
-            string: "Loading Stats/No Stats",
+            string: "Loading Stats/No Stats to show",
+            position: "center",
           });
         const r = null == i ? void 0 : i.some((e) => e.completed);
         return d.createElement(tn, { stats: n, bSomeEmailSent: r });
