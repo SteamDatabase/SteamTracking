@@ -11140,7 +11140,8 @@
             ? m.GetTagIDs()
             : [],
           te = 0 == c.GetStoreItemType(),
-          re = (0, d.Hf)(J, X);
+          re = (0, d.Hf)(J, X),
+          ie = G.De.IN_GAMEPADUI || c.BIsReleased() || c.BIsPrePurchase();
         return a.createElement(
           y.zw,
           { appid: te ? c.GetAppID() : void 0 },
@@ -11287,9 +11288,7 @@
                             info: p,
                             bShowDemoButton: M,
                             bHidePrice: P,
-                            bHideWishlistButton: !(
-                              !G.De.IN_GAMEPADUI && c.BIsComingSoon()
-                            ),
+                            bHideWishlistButton: ie,
                             bShowDeckCompatibilityDialog: V,
                           })
                     )
@@ -11953,8 +11952,8 @@
         if (!o.GetBestPurchasePriceFormatted() || !o.GetBestPurchaseOption())
           return null;
         const u = o.GetBestPurchaseOption().discount_pct || m,
-          p = u && m && u > m && m,
-          _ = o.GetBestPurchaseOption().packageid;
+          p = u && m && u > m && m;
+        o.GetBestPurchaseOption().packageid;
         return n.createElement(
           "div",
           {
@@ -11964,7 +11963,7 @@
               "StoreSalePriceWidgetContainer"
             ),
           },
-          Boolean(o.BIsComingSoon() && !!_) &&
+          Boolean(o.BIsPrePurchase()) &&
             n.createElement(
               "div",
               {

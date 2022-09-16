@@ -32601,6 +32601,17 @@
               : e.is_coming_soon
           );
         }
+        BIsPrePurchase() {
+          var e;
+          return (
+            this.BIsComingSoon() &&
+            Boolean(
+              null === (e = this.GetBestPurchaseOption()) || void 0 === e
+                ? void 0
+                : e.packageid
+            )
+          );
+        }
         BIsReleased() {
           return !this.BIsComingSoon();
         }
@@ -41218,7 +41229,8 @@
             ? m.GetTagIDs()
             : [],
           te = 0 == d.GetStoreItemType(),
-          re = (0, c.Hf)(Q, X);
+          re = (0, c.Hf)(Q, X),
+          ie = D.De.IN_GAMEPADUI || d.BIsReleased() || d.BIsPrePurchase();
         return n.createElement(
           w.zw,
           { appid: te ? d.GetAppID() : void 0 },
@@ -41365,9 +41377,7 @@
                             info: _,
                             bShowDemoButton: G,
                             bHidePrice: L,
-                            bHideWishlistButton: !(
-                              !D.De.IN_GAMEPADUI && d.BIsComingSoon()
-                            ),
+                            bHideWishlistButton: ie,
                             bShowDeckCompatibilityDialog: j,
                           })
                     )
@@ -42031,8 +42041,8 @@
         if (!o.GetBestPurchasePriceFormatted() || !o.GetBestPurchaseOption())
           return null;
         const u = o.GetBestPurchaseOption().discount_pct || m,
-          _ = u && m && u > m && m,
-          p = o.GetBestPurchaseOption().packageid;
+          _ = u && m && u > m && m;
+        o.GetBestPurchaseOption().packageid;
         return a.createElement(
           "div",
           {
@@ -42042,7 +42052,7 @@
               "StoreSalePriceWidgetContainer"
             ),
           },
-          Boolean(o.BIsComingSoon() && !!p) &&
+          Boolean(o.BIsPrePurchase()) &&
             a.createElement(
               "div",
               {

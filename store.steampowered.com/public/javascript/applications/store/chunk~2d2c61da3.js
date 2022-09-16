@@ -2143,6 +2143,17 @@
               : e.is_coming_soon
           );
         }
+        BIsPrePurchase() {
+          var e;
+          return (
+            this.BIsComingSoon() &&
+            Boolean(
+              null === (e = this.GetBestPurchaseOption()) || void 0 === e
+                ? void 0
+                : e.packageid
+            )
+          );
+        }
         BIsReleased() {
           return !this.BIsComingSoon();
         }
