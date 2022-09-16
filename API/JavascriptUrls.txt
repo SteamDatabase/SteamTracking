@@ -521,6 +521,7 @@ ${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
+${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${}
@@ -591,6 +592,7 @@ ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
+${PARTNER_BASE_URL}optin/sale/${}/
 ${PARTNER_BASE_URL}optin/sale/${}/${nBaseAppID}
 ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
@@ -2331,6 +2333,7 @@ https://twitter.com/dota2ti
 https://twitter.com/steam_games
 https://underlords.com/download/androidarm32
 https://underlords.com/download/androidarm64
+https://valvecorp.slack.com/app_redirect?channel=${_ ? _ : _}
 https://valvesoftware.com
 https://www.amazon.com/
 https://www.dota2.com.cn/theshanghaimajor/english/overview

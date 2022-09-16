@@ -3676,6 +3676,17 @@
               : e.is_coming_soon
           );
         }
+        BIsPrePurchase() {
+          var e;
+          return (
+            this.BIsComingSoon() &&
+            Boolean(
+              null === (e = this.GetBestPurchaseOption()) || void 0 === e
+                ? void 0
+                : e.packageid
+            )
+          );
+        }
         BIsReleased() {
           return !this.BIsComingSoon();
         }
@@ -6156,6 +6167,10 @@
       "use strict";
       i(54698);
     },
+    36845: (e, t, i) => {
+      "use strict";
+      i(30892), i(54698), i(49017), i(97789);
+    },
     85261: (e, t, i) => {
       "use strict";
       i.d(t, {
@@ -6538,6 +6553,74 @@
           null
         );
     },
+    49017: (e, t, i) => {
+      "use strict";
+      i.d(t, { o: () => l });
+      var r = i(70655),
+        n = i(9669),
+        s = i.n(n),
+        a = (i(46994), i(22188), i(88767)),
+        o = (i(54698), i(82946), i(93976), i(90666));
+      function l(e, t, i) {
+        const { isLoading: n, data: l } = (0, a.useQuery)(
+          ["useOptedInAppWithDiscounts", e, t, i],
+          () =>
+            (function (e) {
+              return (0, r.mG)(this, void 0, void 0, function* () {
+                const t =
+                    o.De.PARTNER_BASE_URL + "discounts/ajaxgetdiscountbyapp",
+                  i = new Map();
+                if (!e || 0 == e.length) return i;
+                const r = [...e],
+                  n = (r.length, []);
+                for (; r.length > 0; ) {
+                  const e = r.splice(0, 250),
+                    i = new FormData();
+                  i.append("sessionid", o.De.SESSIONID),
+                    i.append("rgAppIDs", e.join(",")),
+                    i.append("bExcludeExpired", "1"),
+                    n.push(s().post(t, i, { withCredentials: !0 }));
+                }
+                return (
+                  (yield Promise.all(n)).forEach((e) => {
+                    var t, r, n;
+                    if (
+                      200 == (null == e ? void 0 : e.status) &&
+                      1 ==
+                        (null === (t = null == e ? void 0 : e.data) ||
+                        void 0 === t
+                          ? void 0
+                          : t.success) &&
+                      (null === (r = null == e ? void 0 : e.data) ||
+                      void 0 === r
+                        ? void 0
+                        : r.map)
+                    )
+                      for (let t in e.data.map) {
+                        const r = Number.parseInt(t);
+                        r && i.set(r, e.data.map[r]);
+                      }
+                    else
+                      console.log(
+                        "Error: Failed on FetchDiscountByApp request " +
+                          (null == e ? void 0 : e.status) +
+                          " " +
+                          (null == e ? void 0 : e.statusText) +
+                          " " +
+                          (null === (n = null == e ? void 0 : e.data) ||
+                          void 0 === n
+                            ? void 0
+                            : n.success)
+                      );
+                  }),
+                  i
+                );
+              });
+            })(t)
+        );
+        return n ? null : l;
+      }
+    },
     12900: (e, t, i) => {
       "use strict";
       i.d(t, { Hf: () => D, On: () => b, cf: () => f, tb: () => B });
@@ -6546,7 +6629,7 @@
         s = i.n(n),
         a = i(97789),
         o = i(53481),
-        l = i(22188),
+        l = (i(36845), i(22188)),
         c = i(67294),
         u = i(54698),
         d = i(78468),
@@ -8235,7 +8318,7 @@
         n = i(9669),
         s = i.n(n),
         a = i(97789),
-        o = i(22188),
+        o = (i(36845), i(22188)),
         l = (i(26149), i(82946), i(93976)),
         c = i(90666);
       class u {
@@ -8741,12 +8824,17 @@
           e.forEach((e) => {
             if (!Number.isNaN(e.appid)) {
               let i = this.m_mapRegistrations.get(e.appid);
-              i || ((i = new Map()), this.m_mapRegistrations.set(e.appid, i)),
-                e.jsondata &&
-                  "string" == typeof e.jsondata &&
-                  (e.jsondata = JSON.parse(e.jsondata)),
-                i.set(e.opt_in_name, e),
-                t.add(e.opt_in_name);
+              if (
+                (i ||
+                  ((i = new Map()), this.m_mapRegistrations.set(e.appid, i)),
+                e.jsondata && "string" == typeof e.jsondata)
+              ) {
+                const t = e.jsondata;
+                0 == t.trim().length
+                  ? (e.jsondata = {})
+                  : (e.jsondata = JSON.parse(t));
+              }
+              i.set(e.opt_in_name, e), t.add(e.opt_in_name);
             }
           }),
             Array.from(t).forEach((e) => {
@@ -8816,19 +8904,22 @@
         return (
           (0, o.useEffect)(() => {
             const i = t.filter(Boolean);
-            h.Get()
-              .LoadMultiOptInRegistration(
-                i.map(() => e),
-                i
-              )
-              .then(() => {
-                const t = new Map();
-                i.forEach((i) => {
-                  const r = h.Get().GetRegistration(i, e);
-                  r && t.set(i, r);
-                }),
-                  r(t);
-              });
+            i.length > 0
+              ? h
+                  .Get()
+                  .LoadMultiOptInRegistration(
+                    i.map(() => e),
+                    i
+                  )
+                  .then(() => {
+                    const t = new Map();
+                    i.forEach((i) => {
+                      const r = h.Get().GetRegistration(i, e);
+                      r && t.set(i, r);
+                    }),
+                      r(t);
+                  })
+              : r(new Map());
           }, [e, t]),
           i
         );
@@ -9545,10 +9636,10 @@
         PP: () => B,
         Rs: () => T,
         Tj: () => S,
-        We: () => N,
+        We: () => W,
         X1: () => P,
         _w: () => v,
-        bS: () => A,
+        bS: () => L,
         dU: () => k,
         df: () => U,
         j_: () => x,
@@ -9558,8 +9649,8 @@
         ps: () => G,
         rX: () => R,
         sN: () => V,
-        uT: () => W,
-        yh: () => L,
+        uT: () => N,
+        yh: () => A,
       });
       var r = i(70655),
         n = i(9669),
@@ -10333,12 +10424,12 @@
       function O(e) {
         return h.Get().m_mapPriceKeyDescriptions.get(e);
       }
-      function L(e) {
+      function A(e) {
         return a.useCallback(() => {
           h.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function A(e) {
+      function L(e) {
         return a.useCallback(() => {
           h.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
@@ -10372,10 +10463,10 @@
         const [e, t] = a.useState(() => h.Get().GetAllLocalPriceOverrides());
         return (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function W(e) {
+      function N(e) {
         return (0, p.SZ)(() => h.Get().GetLocalOverrideCountForPriceKey(e));
       }
-      function N() {
+      function W() {
         return a.useCallback(() => {
           var e;
           return (
@@ -10424,18 +10515,18 @@
         E5: () => U,
         E_: () => T,
         Eh: () => D,
-        HU: () => L,
+        HU: () => A,
         JW: () => F,
         LX: () => b,
         TB: () => O,
         _9: () => C,
         dy: () => z,
         hr: () => P,
-        k: () => W,
+        k: () => N,
         pl: () => G,
         s$: () => M,
-        yn: () => A,
-        z$: () => N,
+        yn: () => L,
+        z$: () => W,
       });
       i(73914);
       var r = i(85261),
@@ -10960,7 +11051,7 @@
           []
         );
       }
-      function L(e, t) {
+      function A(e, t) {
         var i, r, n;
         const s =
           null === (i = B.Get().m_mapPackageStateForDiscountEvents.get(e)) ||
@@ -10977,7 +11068,7 @@
             : 0
           : null;
       }
-      function A(e, t) {
+      function L(e, t) {
         const [i, r] = c.useState(() => {
           var i;
           return null ===
@@ -11095,7 +11186,7 @@
           )
         );
       }
-      function W(e) {
+      function N(e) {
         if ((0, s.kk)(e)) return !0;
         const t = (0, r.fH)(e);
         if (!(null == t ? void 0 : t.opt_in_name)) return !0;
@@ -11105,7 +11196,7 @@
           i.some((e) => !e.restricted && !e.pruned)
         );
       }
-      function N(e) {
+      function W(e) {
         const t = (function () {
             const [e, t] = c.useState(B.IsInitialized());
             return (0, _.Qg)(B.s_initializationCallbackList, t), e;
