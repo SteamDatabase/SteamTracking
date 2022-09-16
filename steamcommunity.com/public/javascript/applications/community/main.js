@@ -2508,76 +2508,7 @@
               n ||
               ((u = o),
               (e, t) => {
-                if (u.current) {
-                  const n = u.current,
-                    r = n.value;
-                  !(function (e, t, n) {
-                    const r = e,
-                      i = t;
-                    if (null == i) return;
-                    if (
-                      !r ||
-                      null == r.selectionStart ||
-                      null == r.selectionEnd ||
-                      null == r.value ||
-                      null == r.value.length
-                    )
-                      return;
-                    const s = r.selectionStart,
-                      o = r.selectionEnd,
-                      a =
-                        ((c = r.selectionDirection),
-                        "backward" === c ? -1 : "forward" === c ? 1 : 0),
-                      l = m.__(r);
-                    var c;
-                    if (1 === i.length || ("Enter" === i && l)) {
-                      const e = "Enter" === i ? "\n" : i,
-                        t = r.value;
-                      Object.getOwnPropertyDescriptor(
-                        window.HTMLInputElement.prototype,
-                        "value"
-                      ).set.call(r, t.slice(0, s) + e + t.slice(o)),
-                        r.setSelectionRange(s + 1, s + 1, "none");
-                    } else if ("Backspace" === i) {
-                      const e = r.value;
-                      s !== o
-                        ? ((r.value = e.slice(0, s) + e.slice(o)),
-                          r.setSelectionRange(s, s, "none"))
-                        : r.selectionStart > 0 &&
-                          ((r.value = e.slice(0, s - 1) + e.slice(o)),
-                          r.setSelectionRange(s - 1, s - 1, "none"));
-                    } else if ("ArrowLeft" === i)
-                      if (n) {
-                        const e = _(-1, [s, o, a], [0, r.value.length]);
-                        r.setSelectionRange(e[0], e[1], f(e[2]));
-                      } else
-                        s === o && s > 0
-                          ? r.setSelectionRange(s - 1, s - 1, "none")
-                          : r.setSelectionRange(s, s, "none");
-                    else if ("ArrowRight" === i)
-                      if (n) {
-                        const e = _(1, [s, o, a], [0, r.value.length]);
-                        r.setSelectionRange(e[0], e[1], f(e[2]));
-                      } else
-                        s === o && o < r.value.length
-                          ? r.setSelectionRange(o + 1, o + 1, "none")
-                          : r.setSelectionRange(o, o, "none");
-                    else
-                      "ArrowUp" === i || "Home" === i
-                        ? r.setSelectionRange(0, 0, "none")
-                        : ("ArrowDown" !== i && "End" !== i) ||
-                          r.setSelectionRange(
-                            r.value.length,
-                            r.value.length,
-                            "none"
-                          );
-                  })(n, e, t);
-                  const i = n.value;
-                  if (r !== i) {
-                    const e = new Event("input", { bubbles: !0 });
-                    n.dispatchEvent(e);
-                  }
-                } else
+                if (
                   !(function (e) {
                     if ("Backspace" == e)
                       return (
@@ -2603,14 +2534,83 @@
                         SteamClient.Input.ControllerKeyboardSetKeyState(79, !1),
                         !0
                       );
-                    if (
-                      1 === e.length ||
-                      ("ArrowLeft" != e && "ArrowRight" != e && "Tab" != e)
-                    )
+                    if (1 === e.length)
                       return (
                         SteamClient.Input.ControllerKeyboardSendText(e), !0
                       );
-                  })(e);
+                    return !1;
+                  })(e)
+                )
+                  if (u.current) {
+                    const n = u.current,
+                      r = n.value;
+                    !(function (e, t, n) {
+                      const r = e,
+                        i = t;
+                      if (null == i) return;
+                      if (
+                        !r ||
+                        null == r.selectionStart ||
+                        null == r.selectionEnd ||
+                        null == r.value ||
+                        null == r.value.length
+                      )
+                        return;
+                      const s = r.selectionStart,
+                        o = r.selectionEnd,
+                        a =
+                          ((c = r.selectionDirection),
+                          "backward" === c ? -1 : "forward" === c ? 1 : 0),
+                        l = m.__(r);
+                      var c;
+                      if (1 === i.length || ("Enter" === i && l)) {
+                        const e = "Enter" === i ? "\n" : i,
+                          t = r.value;
+                        Object.getOwnPropertyDescriptor(
+                          window.HTMLInputElement.prototype,
+                          "value"
+                        ).set.call(r, t.slice(0, s) + e + t.slice(o)),
+                          r.setSelectionRange(s + 1, s + 1, "none");
+                      } else if ("Backspace" === i) {
+                        const e = r.value;
+                        s !== o
+                          ? ((r.value = e.slice(0, s) + e.slice(o)),
+                            r.setSelectionRange(s, s, "none"))
+                          : r.selectionStart > 0 &&
+                            ((r.value = e.slice(0, s - 1) + e.slice(o)),
+                            r.setSelectionRange(s - 1, s - 1, "none"));
+                      } else if ("ArrowLeft" === i)
+                        if (n) {
+                          const e = _(-1, [s, o, a], [0, r.value.length]);
+                          r.setSelectionRange(e[0], e[1], f(e[2]));
+                        } else
+                          s === o && s > 0
+                            ? r.setSelectionRange(s - 1, s - 1, "none")
+                            : r.setSelectionRange(s, s, "none");
+                      else if ("ArrowRight" === i)
+                        if (n) {
+                          const e = _(1, [s, o, a], [0, r.value.length]);
+                          r.setSelectionRange(e[0], e[1], f(e[2]));
+                        } else
+                          s === o && o < r.value.length
+                            ? r.setSelectionRange(o + 1, o + 1, "none")
+                            : r.setSelectionRange(o, o, "none");
+                      else
+                        "ArrowUp" === i || "Home" === i
+                          ? r.setSelectionRange(0, 0, "none")
+                          : ("ArrowDown" !== i && "End" !== i) ||
+                            r.setSelectionRange(
+                              r.value.length,
+                              r.value.length,
+                              "none"
+                            );
+                    })(n, e, t);
+                    const i = n.value;
+                    if (r !== i) {
+                      const e = new Event("input", { bubbles: !0 });
+                      n.dispatchEvent(e);
+                    }
+                  } else;
               }),
             BIsElementValidForInput: () =>
               o.current && document.activeElement == o.current,
@@ -9565,13 +9565,13 @@
             case "Backspace":
               return s ? i.eV.INVALID : i.eV.SECONDARY;
             case "ArrowUp":
-              return i.eV.DIR_UP;
+              return s ? i.eV.INVALID : i.eV.DIR_UP;
             case "ArrowDown":
-              return i.eV.DIR_DOWN;
+              return s ? i.eV.INVALID : i.eV.DIR_DOWN;
             case "ArrowLeft":
-              return i.eV.DIR_LEFT;
+              return s ? i.eV.INVALID : i.eV.DIR_LEFT;
             case "ArrowRight":
-              return i.eV.DIR_RIGHT;
+              return s ? i.eV.INVALID : i.eV.DIR_RIGHT;
           }
           return i.eV.INVALID;
         }

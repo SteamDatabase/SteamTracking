@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7491188";
+var CLSTAMP = "7513400";
 (() => {
   var e,
     t,
@@ -12276,15 +12276,13 @@ var CLSTAMP = "7491188";
         }
         function m() {
           const e = n.useRef(!1);
-          return (
-            n.useEffect(
-              () => () => {
-                e.current = !0;
-              },
-              []
-            ),
-            () => e.current
+          n.useEffect(
+            () => () => {
+              e.current = !0;
+            },
+            []
           );
+          return n.useCallback(() => e.current, []);
         }
         function d(e) {
           const [t, r] = n.useState(1);
@@ -12605,9 +12603,9 @@ var CLSTAMP = "7491188";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 6 2022 : 15:40:50",
-                    BUILD_TIME_UTC: "Sep 6 2022 : 22:40:50",
-                    BUILD_RTIME_UTC: 1662504050,
+                    BUILD_TIME_LOCAL: "Sep 15 2022 : 17:55:22",
+                    BUILD_TIME_UTC: "Sep 16 2022 : 00:55:22",
+                    BUILD_RTIME_UTC: 1663289722,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12744,7 +12742,7 @@ var CLSTAMP = "7491188";
           ),
           w = n.lazy(() =>
             Promise.all([r.e(1517), r.e(710), r.e(3991), r.e(5742)]).then(
-              r.bind(r, 7017)
+              r.bind(r, 83165)
             )
           ),
           f = document.getElementById("root"),
