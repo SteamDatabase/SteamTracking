@@ -2510,35 +2510,27 @@
               (e, t) => {
                 if (
                   !(function (e) {
-                    if ("Backspace" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Enter" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(""), !0
-                      );
-                    if ("Tab" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText("\t"), !0
-                      );
-                    if ("ArrowLeft" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSetKeyState(80, !0),
+                    return "Backspace" == e
+                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
+                      : "Enter" == e
+                      ? (SteamClient.Input.ControllerKeyboardSendText(""), !0)
+                      : "Tab" == e
+                      ? (SteamClient.Input.ControllerKeyboardSendText("\t"), !0)
+                      : "ArrowLeft" == e
+                      ? (SteamClient.Input.ControllerKeyboardSetKeyState(
+                          80,
+                          !0
+                        ),
                         SteamClient.Input.ControllerKeyboardSetKeyState(80, !1),
-                        !0
-                      );
-                    if ("ArrowRight" == e)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSetKeyState(79, !0),
+                        !0)
+                      : "ArrowRight" == e
+                      ? (SteamClient.Input.ControllerKeyboardSetKeyState(
+                          79,
+                          !0
+                        ),
                         SteamClient.Input.ControllerKeyboardSetKeyState(79, !1),
-                        !0
-                      );
-                    if (1 === e.length)
-                      return (
-                        SteamClient.Input.ControllerKeyboardSendText(e), !0
-                      );
-                    return !1;
+                        !0)
+                      : (SteamClient.Input.ControllerKeyboardSendText(e), !0);
                   })(e)
                 )
                   if (u.current) {
