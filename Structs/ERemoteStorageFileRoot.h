@@ -19,7 +19,4 @@ typedef enum ERemoteStorageFileRoot
     k_ERemoteStorageFileRootLinuxXdgDataHome = 15,
     k_ERemoteStorageFileRootLinuxXdgConfigHome = 16,
     k_ERemoteStorageFileRootAndroidSteamPackageRoot = 17,
-    k_ERemoteStorageFileRootBanned = 24936422,
-    k_ERemoteStorageFileRootClean = 24936439,
-    k_ERemoteStorageFileRootCustom_clean = 24936451,
 } ERemoteStorageFileRoot;
