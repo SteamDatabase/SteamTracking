@@ -123,6 +123,7 @@ ${COMMUNITY_BASE_URL}broadcast/watch/${}
 ${COMMUNITY_BASE_URL}chat
 ${COMMUNITY_BASE_URL}chat/
 ${COMMUNITY_BASE_URL}chat/invite/${}
+${COMMUNITY_BASE_URL}comment/${comment_type}/bounce/${}/${forum_id}/?feature2=${topic_id}
 ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512
