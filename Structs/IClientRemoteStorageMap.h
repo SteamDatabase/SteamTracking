@@ -27,6 +27,9 @@ public:
     virtual unknown_ret IsCloudEnabledForAccount() = 0;
     virtual unknown_ret IsCloudEnabledForApp(void*) = 0;
     virtual unknown_ret SetCloudEnabledForApp(void*,void*) = 0;
+    virtual unknown_ret IsCloudSyncOnSuspendAvailableForApp(void*) = 0;
+    virtual unknown_ret IsCloudSyncOnSuspendEnabledForApp(void*) = 0;
+    virtual unknown_ret SetCloudSyncOnSuspendEnabledForApp(void*,void*) = 0;
     virtual unknown_ret UGCDownload(void*,void*,void*,void*) = 0;
     virtual unknown_ret UGCDownloadToLocation(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetUGCDownloadProgress(void*,void*,void*,void*) = 0;

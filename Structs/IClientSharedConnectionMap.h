@@ -8,4 +8,5 @@ public:
     virtual unknown_ret RegisterEMsgHandler(void*,void*) = 0;
     virtual unknown_ret RegisterServiceMethodHandler(void*,void*) = 0;
     virtual unknown_ret BPopReceivedMessage(void*,void*,void*) = 0;
+    virtual unknown_ret InitiateConnection(void*) = 0;
 };

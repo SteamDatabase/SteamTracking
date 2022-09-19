@@ -10,7 +10,7 @@ public:
     virtual unknown_ret GetMultipleAppDataSections(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret RequestAppInfoUpdate(void*,void*) = 0;
     virtual unknown_ret GetDLCCount(void*) = 0;
-    virtual unknown_ret BGetDLCDataByIndex(void*,void*,void*) = 0;
+    virtual unknown_ret BGetDLCDataByIndex(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetAppType(void*) = 0;
     virtual unknown_ret GetStoreTagLocalization(void*,void*,void*,void*,void*) = 0;
 };

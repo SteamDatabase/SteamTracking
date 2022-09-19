@@ -123,4 +123,7 @@ typedef enum EResult
     k_EResultFailedToParseInput = 122,
     k_EResultNoVerifiedPhoneNumber = 123,
     k_EResultInsufficientBatteryCharge = 124,
+    k_EResultChargerRequired = 125,
+    k_EResultCachedCredentialIsInvalid = 126,
+    k_EResultPhoneNumberIsVoiceOverIP = 127,
 } EResult;

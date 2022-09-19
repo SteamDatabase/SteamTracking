@@ -1,8 +1,8 @@
 class IClientControllerSerializedMap
 {
 public:
-    virtual unknown_ret Unknown_4870400() = 0;
-    virtual unknown_ret Unknown_4870560() = 0;
+    virtual unknown_ret Unknown_5085232() = 0;
+    virtual unknown_ret Unknown_5085392() = 0;
     virtual unknown_ret ShowBindingPanel(void*,void*,void*) = 0;
     virtual unknown_ret GetControllerTypeForHandle(void*,void*) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(void*,void*) = 0;
@@ -25,6 +25,8 @@ public:
     virtual unknown_ret GetActionManifestPath(void*,void*) = 0;
     virtual unknown_ret DumpConfigurationToDisk(void*) = 0;
     virtual unknown_ret FlushCloudedConfigFilesToDisk() = 0;
+    virtual unknown_ret StartBindingVisualization(void*,void*,void*) = 0;
+    virtual unknown_ret StopBindingVisualization(void*,void*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetAllControllersStatus(void*) = 0;
     virtual unknown_ret GetControllerDetails(void*) = 0;
@@ -40,7 +42,7 @@ public:
     virtual unknown_ret SetUserLedColor(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetRumble(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SetRumbleExtended(void*,void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret LoadConfigFromVDFString(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret LoadConfigFromVDFString(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(void*,void*) = 0;
     virtual unknown_ret WarmOptInStatus(void*,void*) = 0;
@@ -52,9 +54,12 @@ public:
     virtual unknown_ret GetControllerConfiguration(void*,void*) = 0;
     virtual unknown_ret SetControllerActionSet(void*,void*,void*) = 0;
     virtual unknown_ret SetControllerSourceMode(void*,void*,void*) = 0;
+    virtual unknown_ret DuplicateControllerSourceMode(void*,void*,void*) = 0;
     virtual unknown_ret SetControllerInputActivator(void*,void*,void*) = 0;
     virtual unknown_ret SetControllerInputBinding(void*,void*,void*) = 0;
     virtual unknown_ret SetControllerInputActivatorEnabled(void*,void*,void*) = 0;
+    virtual unknown_ret SetControllerMiscMappingSettings(void*,void*,void*) = 0;
+    virtual unknown_ret SwapControllerModeInputBindings(void*,void*,void*) = 0;
     virtual unknown_ret IsModified(void*) = 0;
     virtual unknown_ret ClearModified(void*) = 0;
     virtual unknown_ret GetLocalizationTokenCount(void*) = 0;
@@ -107,6 +112,8 @@ public:
     virtual unknown_ret GetBindingCreator(void*) = 0;
     virtual unknown_ret GetBindingProgenitor(void*) = 0;
     virtual unknown_ret SetBindingProgenitor(void*,void*) = 0;
+    virtual unknown_ret GetBindingURL(void*) = 0;
+    virtual unknown_ret SetBindingURL(void*,void*) = 0;
     virtual unknown_ret GetBindingExportType(void*) = 0;
     virtual unknown_ret SetBindingExportType(void*,void*) = 0;
     virtual unknown_ret GetConfigFeatures(void*,void*) = 0;
@@ -115,6 +122,7 @@ public:
     virtual unknown_ret PS4SettingsChanged(void*) = 0;
     virtual unknown_ret SwitchSettingsChanged(void*) = 0;
     virtual unknown_ret ControllerSettingsChanged(void*) = 0;
+    virtual unknown_ret SetTrackpadPressureCurve(void*,void*,void*) = 0;
     virtual unknown_ret IsControllerConnected(void*,void*) = 0;
     virtual unknown_ret GetControllerState(void*,void*) = 0;
     virtual unknown_ret TriggerHapticPulse(void*,void*,void*,void*,void*,void*) = 0;
@@ -181,17 +189,21 @@ public:
     virtual unknown_ret BAllowAppConfigForController(void*,void*) = 0;
     virtual unknown_ret ResetControllerEnableCache() = 0;
     virtual unknown_ret GetControllerEnableSupport(void*) = 0;
-    virtual unknown_ret BShouldShowThirdPartyRemapperWarning(void*) = 0;
     virtual unknown_ret BInputGenerated() = 0;
     virtual unknown_ret GetControllerActivityByType(void*) = 0;
     virtual unknown_ret GetLastActiveControllerVID() = 0;
     virtual unknown_ret GetLastActiveControllerPID() = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(void*,void*,void*,void*) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(void*,void*,void*) = 0;
+    virtual unknown_ret LoadRemotePlayControllerPersonalizationVDF(void*,void*) = 0;
+    virtual unknown_ret FindControllerByPath(void*) = 0;
+    virtual unknown_ret GetControllerPath(void*,void*) = 0;
+    virtual unknown_ret GetControllerProductName(void*,void*) = 0;
     virtual unknown_ret SetControllerHapticsSetting(void*,void*) = 0;
     virtual unknown_ret SetControllerRumbleSetting(void*,void*) = 0;
     virtual unknown_ret BGetTouchConfigData(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(void*,void*,void*) = 0;
     virtual unknown_ret SetGyroOn(void*,void*,void*) = 0;
     virtual unknown_ret CursorVisibilityChanged(void*) = 0;
+    virtual unknown_ret ForceSimpleHapticEvent(void*,void*,void*,void*,void*) = 0;
 };

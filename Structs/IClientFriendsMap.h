@@ -246,4 +246,8 @@ public:
     virtual unknown_ret SetNumChatsWithUnreadPriorityMessages(void*) = 0;
     virtual unknown_ret RegisterProtocolInOverlayBrowser(void*) = 0;
     virtual unknown_ret HandleProtocolForOverlayBrowser(void*,void*) = 0;
+    virtual unknown_ret RequestEquippedProfileItems(void*,void*) = 0;
+    virtual unknown_ret BHasEquippedProfileItem(void*,void*,void*) = 0;
+    virtual unknown_ret GetProfileItemPropertyString(void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetProfileItemPropertyUint(void*,void*,void*,void*) = 0;
 };

@@ -42,6 +42,7 @@ public:
     virtual unknown_ret GetEnteredGamepadTextLength() = 0;
     virtual unknown_ret GetEnteredGamepadTextInput(void*,void*) = 0;
     virtual unknown_ret GamepadTextInputClosed(void*,void*,void*) = 0;
+    virtual unknown_ret ShowControllerLayoutPreview(void*,void*,void*) = 0;
     virtual unknown_ret SetSpew(void*,void*,void*) = 0;
     virtual unknown_ret BDownloadsDisabled() = 0;
     virtual unknown_ret SetFocusedWindow(void*,void*,void*) = 0;
@@ -49,7 +50,6 @@ public:
     virtual unknown_ret CheckSteamReachable() = 0;
     virtual unknown_ret SetLastGameLaunchMethod(void*) = 0;
     virtual unknown_ret SetVideoAdapterInfo(void*,void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret SetControllerOverrideMode(void*,void*,void*) = 0;
     virtual unknown_ret SetOverlayWindowFocusForPipe(void*,void*,void*) = 0;
     virtual unknown_ret GetGameOverlayUIInstanceFocusGameID(void*,void*) = 0;
     virtual unknown_ret SetControllerConfigFileForAppID(void*,void*) = 0;
@@ -97,4 +97,5 @@ public:
     virtual unknown_ret DismissFloatingGamepadTextInput() = 0;
     virtual unknown_ret FloatingGamepadTextInputDismissed() = 0;
     virtual unknown_ret SetGameLauncherMode(void*,void*) = 0;
+    virtual unknown_ret ClearAllHTTPCaches() = 0;
 };

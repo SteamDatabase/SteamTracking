@@ -57,6 +57,8 @@ typedef enum EOSType
     k_EOSTypeMacos1017 = -75,
     k_EOSTypeMacos12 = -74,
     k_EOSTypeMacos13 = -69,
+    k_EOSTypeMacos14 = -68,
+    k_EOSTypeMacos15 = -67,
     k_EOSTypeUnknown = -1,
     k_EOSTypeWindows = 0,
     k_EOSTypeWin311 = 1,

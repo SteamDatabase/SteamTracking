@@ -17,5 +17,6 @@ typedef enum EAppState
     k_EAppStateAppRunning = 8192,
     k_EAppStateComponentInUse = 16384,
     k_EAppStateMovingFolder = 32768,
+    k_EAppStateTerminating = 65536,
     k_EAppStatePrefetchingInfo = 131072,
 } EAppState;

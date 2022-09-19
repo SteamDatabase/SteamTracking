@@ -58,10 +58,14 @@ public:
     virtual unknown_ret AcceptEULA(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetRemoteClientPlatformName(void*,void*,void*) = 0;
     virtual unknown_ret BIsStreamClientRunning() = 0;
-    virtual unknown_ret BIsStreamClientRunning(void*) = 0;
     virtual unknown_ret BIsStreamClientRunningConnectedToClient(void*,void*,void*) = 0;
+    virtual unknown_ret BIsStreamClientRemotePlayTogether() = 0;
+    virtual unknown_ret GetStreamClientRemoteSteamVersion() = 0;
     virtual unknown_ret BGetStreamingClientConfig(void*) = 0;
     virtual unknown_ret BSetStreamingClientConfig(void*) = 0;
+    virtual unknown_ret BQueueControllerConfigMessageForRemote(void*) = 0;
+    virtual unknown_ret BGetControllerConfigMessageForLocal(void*) = 0;
+    virtual unknown_ret SetStreamingClientControllerInputPaused(void*) = 0;
     virtual unknown_ret RequestControllerConfig(void*,void*,void*,void*) = 0;
     virtual unknown_ret PostControllerConfig(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetControllerConfig(void*,void*,void*,void*) = 0;
@@ -76,6 +80,7 @@ public:
     virtual unknown_ret SetRemotePlayTogetherQualityOverride(void*) = 0;
     virtual unknown_ret SetRemotePlayTogetherBitrateOverride(void*) = 0;
     virtual unknown_ret BHasRemotePlayInviteAndSession(void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret BCreateRemotePlayGroup(void*) = 0;
     virtual unknown_ret CreateRemotePlayInviteAndSession(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret CancelRemotePlayInviteAndSession(void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret JoinRemotePlaySession(void*,void*,void*) = 0;
@@ -90,7 +95,7 @@ public:
     virtual unknown_ret OnClientUsedInput(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret OnPlaceholderStateChanged(void*) = 0;
     virtual unknown_ret OnRemoteClientRemotePlayClearControllers() = 0;
-    virtual unknown_ret OnRemoteClientRemotePlayControllerIndexSet(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret OnRemoteClientRemotePlayControllerIndexSet(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret UpdateRemotePlayTogetherGroup() = 0;
     virtual unknown_ret DisbandRemotePlayTogetherGroup() = 0;
     virtual unknown_ret OnRemotePlayUIMovedController() = 0;

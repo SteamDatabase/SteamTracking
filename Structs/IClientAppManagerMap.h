@@ -8,15 +8,16 @@ public:
     virtual unknown_ret GetAppInstallState(void*) = 0;
     virtual unknown_ret GetAppInstallDir(void*,void*,void*) = 0;
     virtual unknown_ret GetAppContentInfo(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetAppStagingInfo(void*,void*,void*) = 0;
     virtual unknown_ret IsAppDlcInstalled(void*,void*) = 0;
     virtual unknown_ret GetDlcDownloadProgress(void*,void*,void*,void*) = 0;
-    virtual unknown_ret GetDlcSizeOnDisk(void*,void*) = 0;
     virtual unknown_ret BIsDlcEnabled(void*,void*,void*) = 0;
     virtual unknown_ret SetDlcEnabled(void*,void*,void*) = 0;
+    virtual unknown_ret SetDlcContext(void*,void*) = 0;
+    virtual unknown_ret GetDlcSizes(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetNumInstalledApps() = 0;
     virtual unknown_ret GetInstalledApps(void*,void*) = 0;
     virtual unknown_ret BIsWaitingForInstalledApps() = 0;
-    virtual unknown_ret GetAppDependency(void*) = 0;
     virtual unknown_ret GetAppDependencies(void*,void*,void*) = 0;
     virtual unknown_ret GetDependentApps(void*,void*,void*) = 0;
     virtual unknown_ret GetUpdateInfo(void*,void*) = 0;
@@ -69,10 +70,6 @@ public:
     virtual unknown_ret MoveApp(void*,void*) = 0;
     virtual unknown_ret GetMoveAppProgress(void*,void*,void*,void*) = 0;
     virtual unknown_ret CancelMoveApp(void*) = 0;
-    virtual unknown_ret BWaitForFiles(void*) = 0;
-    virtual unknown_ret BNeedsFile(void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret BAddFileOnDisk(void*,void*,void*,void*,void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret FinishAddingFiles(void*) = 0;
     virtual unknown_ret GetAppStateInfo(void*,void*) = 0;
     virtual unknown_ret BIsAvailableOnPlatform(void*,void*) = 0;
     virtual unknown_ret BCanRemotePlayTogether(void*) = 0;
@@ -103,5 +100,4 @@ public:
     virtual unknown_ret GetSystemIconFile(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetUseHTTPSForDownloads(void*) = 0;
     virtual unknown_ret GetUseHTTPSForDownloads() = 0;
-    virtual unknown_ret SetAppPlatformOverride(void*,void*,void*) = 0;
 };

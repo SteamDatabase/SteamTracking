@@ -21,4 +21,5 @@ typedef enum EControllerSourceMode
     k_EControllerSourceMode2dscroll = 18,
     k_EControllerSourceModeHotbar = 19,
     k_EControllerSourceModeDisabled = 20,
+    k_EControllerSourceModeReference = 21,
 } EControllerSourceMode;

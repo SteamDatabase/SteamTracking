@@ -15,6 +15,7 @@ public:
     virtual unknown_ret GetControllerConfigOverrides(void*) = 0;
     virtual unknown_ret StartSession(void*) = 0;
     virtual unknown_ret ReleaseSession(void*,void*,void*) = 0;
+    virtual unknown_ret BIsLauncherServiceEnabled(void*) = 0;
     virtual unknown_ret DeleteCompatData(void*) = 0;
     virtual unknown_ret GetCompatibilityDataDiskSize(void*) = 0;
     virtual unknown_ret BNeedsUnlockH264(void*) = 0;

@@ -26,6 +26,7 @@ public:
     virtual unknown_ret GetUserStat(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetUserStat(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetUserAchievement(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetUserAchievementProgress(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret ResetAllStats(void*,void*) = 0;
     virtual unknown_ret FindOrCreateLeaderboard(void*,void*,void*) = 0;
     virtual unknown_ret FindLeaderboard(void*) = 0;

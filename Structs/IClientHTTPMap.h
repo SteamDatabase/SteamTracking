@@ -28,4 +28,5 @@ public:
     virtual unknown_ret SetHTTPRequestAbsoluteTimeoutMS(void*,void*) = 0;
     virtual unknown_ret GetHTTPRequestWasTimedOut(void*,void*) = 0;
     virtual unknown_ret SetHTTPRequestRedirectsEnabled(void*,void*) = 0;
+    virtual unknown_ret SaveHTTPResponseBodyToDisk(void*,void*,void*) = 0;
 };

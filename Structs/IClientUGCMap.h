@@ -91,4 +91,6 @@ public:
     virtual unknown_ret DeleteItem(void*,void*) = 0;
     virtual unknown_ret ShowWorkshopEULA() = 0;
     virtual unknown_ret GetWorkshopEULAStatus() = 0;
+    virtual unknown_ret GetNumDownloadedItems(void*) = 0;
+    virtual unknown_ret GetDownloadedItems(void*,void*,void*) = 0;
 };

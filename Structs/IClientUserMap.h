@@ -1,12 +1,13 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_4870448() = 0;
+    virtual unknown_ret Unknown_5085280() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret LogOff() = 0;
     virtual unknown_ret BLoggedOn() = 0;
     virtual unknown_ret GetLogonState() = 0;
     virtual unknown_ret BConnected() = 0;
+    virtual unknown_ret BInitiateReconnect() = 0;
     virtual unknown_ret BTryingToLogin() = 0;
     virtual unknown_ret GetSteamID(void*) = 0;
     virtual unknown_ret GetConsoleSteamID(void*) = 0;
@@ -53,6 +54,8 @@ public:
     virtual unknown_ret RequestWebAuthToken() = 0;
     virtual unknown_ret SetLoginInformation(void*,void*,void*) = 0;
     virtual unknown_ret SetTwoFactorCode(void*) = 0;
+    virtual unknown_ret SetLoginToken(void*,void*) = 0;
+    virtual unknown_ret GetLoginTokenID() = 0;
     virtual unknown_ret ClearAllLoginInformation() = 0;
     virtual unknown_ret BEnableEmbeddedClient(void*) = 0;
     virtual unknown_ret ResetEmbeddedClient(void*) = 0;
@@ -63,7 +66,6 @@ public:
     virtual unknown_ret BIsCyberCafe() = 0;
     virtual unknown_ret BIsAcademicAccount() = 0;
     virtual unknown_ret BIsPortal2EducationAccount() = 0;
-    virtual unknown_ret BIsAlienwareDemoAccount() = 0;
     virtual unknown_ret TrackNatTraversalStat(void*) = 0;
     virtual unknown_ret TrackSteamUsageEvent(void*,void*,void*) = 0;
     virtual unknown_ret TrackSteamGUIUsage(void*) = 0;
@@ -108,6 +110,7 @@ public:
     virtual unknown_ret GetAppOwnershipTicketExtendedData(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret GetMarketingMessageCount() = 0;
     virtual unknown_ret GetMarketingMessage(void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret MarkMarketingMessageSeen(void*,void*) = 0;
     virtual unknown_ret GetAuthSessionTicket(void*,void*,void*) = 0;
     virtual unknown_ret BeginAuthSession(void*,void*,void*,void*) = 0;
     virtual unknown_ret EndAuthSession(void*,void*) = 0;
@@ -258,4 +261,6 @@ public:
     virtual unknown_ret ResumeSuspendedGames(void*) = 0;
     virtual unknown_ret GetClientInstallationID() = 0;
     virtual unknown_ret Test_SetClientInstallationID(void*,void*) = 0;
+    virtual unknown_ret GetAppIDForGameID(void*) = 0;
+    virtual unknown_ret BDoNotDisturb() = 0;
 };

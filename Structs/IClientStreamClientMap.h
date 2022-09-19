@@ -9,6 +9,9 @@ public:
     virtual unknown_ret BSaveStreamingClientConfig(void*) = 0;
     virtual unknown_ret SetQualityOverride(void*) = 0;
     virtual unknown_ret SetBitrateOverride(void*) = 0;
+    virtual unknown_ret ShowOnScreenKeyboard() = 0;
+    virtual unknown_ret BQueueControllerConfigMessageForLocal(void*) = 0;
+    virtual unknown_ret BGetControllerConfigMessageForRemote(void*) = 0;
     virtual unknown_ret GetSystemInfo() = 0;
     virtual unknown_ret StartStreamingSession(void*) = 0;
     virtual unknown_ret ReportStreamingSessionEvent(void*,void*) = 0;

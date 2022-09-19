@@ -14,4 +14,5 @@ typedef enum EParentalFeature
     k_EParentalFeatureLibrary = 11,
     k_EParentalFeatureTest = 12,
     k_EParentalFeatureSiteLicense = 13,
+    k_EParentalFeatureKiosk = 14,
 } EParentalFeature;
