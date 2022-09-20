@@ -1,8 +1,9 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5085280() = 0;
+    virtual unknown_ret Unknown_5091136() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
+    virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;
     virtual unknown_ret BLoggedOn() = 0;
     virtual unknown_ret GetLogonState() = 0;
@@ -96,6 +97,7 @@ public:
     virtual unknown_ret RequestLegacyCDKeyFromApp(void*,void*,void*) = 0;
     virtual unknown_ret BIsAnyGameRunning() = 0;
     virtual unknown_ret GetSteamGuardDetails() = 0;
+    virtual unknown_ret GetSentryFileData(void*) = 0;
     virtual unknown_ret GetTwoFactorDetails() = 0;
     virtual unknown_ret BHasTwoFactor() = 0;
     virtual unknown_ret GetEmail(void*,void*,void*) = 0;

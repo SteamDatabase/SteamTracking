@@ -63476,6 +63476,8 @@ object-assign
             /* binding */ EFloatingGamepadTextInputMode,
           /* harmony export */ EFriendRelationship: () =>
             /* binding */ EFriendRelationship,
+          /* harmony export */ EGamingDeviceType: () =>
+            /* binding */ EGamingDeviceType,
           /* harmony export */ ELanguage: () => /* binding */ ELanguage,
           /* harmony export */ ELanguagePchLanguage: () =>
             /* binding */ ELanguagePchLanguage,
@@ -65850,6 +65852,33 @@ object-assign
           EActivateGameOverlayToWebPageMode ||
             (EActivateGameOverlayToWebPageMode = {})
         );
+        var EGamingDeviceType;
+        (function (EGamingDeviceType) {
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_Unknown"] = 0)
+          ] = "k_EGamingDeviceType_Unknown";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_StandardPC"] = 1)
+          ] = "k_EGamingDeviceType_StandardPC";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_Console"] = 256)
+          ] = "k_EGamingDeviceType_Console";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_PS3"] = 272)
+          ] = "k_EGamingDeviceType_PS3";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_Steambox"] = 288)
+          ] = "k_EGamingDeviceType_Steambox";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_Handheld"] = 512)
+          ] = "k_EGamingDeviceType_Handheld";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_Phone"] = 528)
+          ] = "k_EGamingDeviceType_Phone";
+          EGamingDeviceType[
+            (EGamingDeviceType["k_EGamingDeviceType_SteamDeck"] = 544)
+          ] = "k_EGamingDeviceType_SteamDeck";
+        })(EGamingDeviceType || (EGamingDeviceType = {}));
 
         /***/
       },
@@ -67517,6 +67546,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EFloatingGamepadTextInputMode,
           /* harmony export */ EFriendRelationship: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EFriendRelationship,
+          /* harmony export */ EGamingDeviceType: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EGamingDeviceType,
           /* harmony export */ EGraphicsPerfOverlayState: () =>
             /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EGraphicsPerfOverlayState,
           /* harmony export */ EHTTPProxyMode: () =>
@@ -68642,6 +68673,179 @@ object-assign
           ErrorCondition[(ErrorCondition["k_ErrorCondition_Offline"] = 5)] =
             "k_ErrorCondition_Offline";
         })(ErrorCondition || (ErrorCondition = {}));
+
+        /***/
+      },
+
+    /***/ "../../../web_src/shared/js/common/ostype.ts":
+      /*!***************************************************!*\
+  !*** ../../../web_src/shared/js/common/ostype.ts ***!
+  \***************************************************/
+      /***/ (
+        __unused_webpack_module,
+        __webpack_exports__,
+        __webpack_require__
+      ) => {
+        "use strict";
+        __webpack_require__.r(__webpack_exports__);
+        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ EOSType: () => /* binding */ EOSType,
+          /* harmony export */
+        });
+        // this enum needs to match the reference in osversion.h
+        var EOSType;
+        (function (EOSType) {
+          EOSType[(EOSType["k_eOSXboxOne"] = -800)] = "k_eOSXboxOne";
+          EOSType[(EOSType["k_eOSWebClient"] = -700)] = "k_eOSWebClient";
+          // TODO: pull this out and teach the routing layer about per-app or per-session restrictions
+          EOSType[(EOSType["k_eOSEmbeddedClient"] = -675)] =
+            "k_eOSEmbeddedClient";
+          EOSType[(EOSType["k_eTVOSUnknown"] = -650)] = "k_eTVOSUnknown";
+          EOSType[(EOSType["k_eTVOS9"] = -649)] = "k_eTVOS9";
+          EOSType[(EOSType["k_eTVOS9_1"] = -648)] = "k_eTVOS9_1";
+          EOSType[(EOSType["k_eTVOS9_2"] = -647)] = "k_eTVOS9_2";
+          EOSType[(EOSType["k_eTVOS9_3"] = -646)] = "k_eTVOS9_3";
+          EOSType[(EOSType["k_eTVOS10"] = -645)] = "k_eTVOS10";
+          EOSType[(EOSType["k_eTVOS10_1"] = -644)] = "k_eTVOS10_1";
+          EOSType[(EOSType["k_eTVOS10_2"] = -643)] = "k_eTVOS10_2";
+          EOSType[(EOSType["k_eTVOS11"] = -642)] = "k_eTVOS11";
+          EOSType[(EOSType["k_eTVOS11_1"] = -641)] = "k_eTVOS11_1";
+          EOSType[(EOSType["k_eTVOS11_2"] = -640)] = "k_eTVOS11_2";
+          EOSType[(EOSType["k_eTVOS11_3"] = -639)] = "k_eTVOS11_3";
+          EOSType[(EOSType["k_eTVOS11_4"] = -638)] = "k_eTVOS11_4";
+          EOSType[(EOSType["k_eTVOS12"] = -637)] = "k_eTVOS12";
+          EOSType[(EOSType["k_eTVOS12_1"] = -636)] = "k_eTVOS12_1";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          // k_eTVOSMax = -635
+          EOSType[(EOSType["k_eIOSUnknown"] = -600)] = "k_eIOSUnknown";
+          EOSType[(EOSType["k_eIOS1"] = -599)] = "k_eIOS1";
+          EOSType[(EOSType["k_eIOS2"] = -598)] = "k_eIOS2";
+          EOSType[(EOSType["k_eIOS3"] = -597)] = "k_eIOS3";
+          EOSType[(EOSType["k_eIOS4"] = -596)] = "k_eIOS4";
+          EOSType[(EOSType["k_eIOS5"] = -595)] = "k_eIOS5";
+          EOSType[(EOSType["k_eIOS6"] = -594)] = "k_eIOS6";
+          EOSType[(EOSType["k_eIOS6_1"] = -593)] = "k_eIOS6_1";
+          EOSType[(EOSType["k_eIOS7"] = -592)] = "k_eIOS7";
+          EOSType[(EOSType["k_eIOS7_1"] = -591)] = "k_eIOS7_1";
+          EOSType[(EOSType["k_eIOS8"] = -590)] = "k_eIOS8";
+          EOSType[(EOSType["k_eIOS8_1"] = -589)] = "k_eIOS8_1";
+          EOSType[(EOSType["k_eIOS8_2"] = -588)] = "k_eIOS8_2";
+          EOSType[(EOSType["k_eIOS8_3"] = -587)] = "k_eIOS8_3";
+          EOSType[(EOSType["k_eIOS8_4"] = -586)] = "k_eIOS8_4";
+          EOSType[(EOSType["k_eIOS9"] = -585)] = "k_eIOS9";
+          EOSType[(EOSType["k_eIOS9_1"] = -584)] = "k_eIOS9_1";
+          EOSType[(EOSType["k_eIOS9_2"] = -583)] = "k_eIOS9_2";
+          EOSType[(EOSType["k_eIOS9_3"] = -582)] = "k_eIOS9_3";
+          EOSType[(EOSType["k_eIOS10"] = -581)] = "k_eIOS10";
+          EOSType[(EOSType["k_eIOS10_1"] = -580)] = "k_eIOS10_1";
+          EOSType[(EOSType["k_eIOS10_2"] = -579)] = "k_eIOS10_2";
+          EOSType[(EOSType["k_eIOS10_3"] = -578)] = "k_eIOS10_3";
+          EOSType[(EOSType["k_eIOS11"] = -577)] = "k_eIOS11";
+          EOSType[(EOSType["k_eIOS11_1"] = -576)] = "k_eIOS11_1";
+          EOSType[(EOSType["k_eIOS11_2"] = -575)] = "k_eIOS11_2";
+          EOSType[(EOSType["k_eIOS11_3"] = -574)] = "k_eIOS11_3";
+          EOSType[(EOSType["k_eIOS11_4"] = -573)] = "k_eIOS11_4";
+          EOSType[(EOSType["k_eIOS12"] = -572)] = "k_eIOS12";
+          EOSType[(EOSType["k_eIOS12_1"] = -571)] = "k_eIOS12_1";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          EOSType[(EOSType["k_eIOSMax"] = -570)] = "k_eIOSMax";
+          EOSType[(EOSType["k_eAndroidUnknown"] = -500)] = "k_eAndroidUnknown";
+          // We only attempt to distinguish major versions of Android.
+          EOSType[(EOSType["k_eAndroid6"] = -499)] = "k_eAndroid6";
+          EOSType[(EOSType["k_eAndroid7"] = -498)] = "k_eAndroid7";
+          EOSType[(EOSType["k_eAndroid8"] = -497)] = "k_eAndroid8";
+          EOSType[(EOSType["k_eAndroid9"] = -496)] = "k_eAndroid9";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          EOSType[(EOSType["k_eAndroidMax"] = -495)] = "k_eAndroidMax";
+          EOSType[(EOSType["k_eOSUMQ"] = -400)] = "k_eOSUMQ";
+          EOSType[(EOSType["k_eOSPS3"] = -300)] = "k_eOSPS3";
+          // k_eOSPS3Max = -299
+          EOSType[(EOSType["k_eLinuxUnknown"] = -203)] = "k_eLinuxUnknown";
+          EOSType[(EOSType["k_eLinux22"] = -202)] = "k_eLinux22";
+          EOSType[(EOSType["k_eLinux24"] = -201)] = "k_eLinux24";
+          EOSType[(EOSType["k_eLinux26"] = -200)] = "k_eLinux26";
+          EOSType[(EOSType["k_eLinux32"] = -199)] = "k_eLinux32";
+          EOSType[(EOSType["k_eLinux35"] = -198)] = "k_eLinux35";
+          // No need to detect every kernel version. Just detect long-term stable versions.
+          // This is better than bucketing everything in k_eLinuxUnknown.
+          EOSType[(EOSType["k_eLinux36"] = -197)] = "k_eLinux36";
+          EOSType[(EOSType["k_eLinux310"] = -196)] = "k_eLinux310";
+          EOSType[(EOSType["k_eLinux316"] = -195)] = "k_eLinux316";
+          EOSType[(EOSType["k_eLinux318"] = -194)] = "k_eLinux318";
+          EOSType[(EOSType["k_eLinux3Unknown"] = -193)] = "k_eLinux3Unknown";
+          EOSType[(EOSType["k_eLinux4Unknown"] = -192)] = "k_eLinux4Unknown";
+          EOSType[(EOSType["k_eLinux41"] = -191)] = "k_eLinux41";
+          EOSType[(EOSType["k_eLinux44"] = -190)] = "k_eLinux44";
+          EOSType[(EOSType["k_eLinux49"] = -189)] = "k_eLinux49";
+          EOSType[(EOSType["k_eLinux414"] = -188)] = "k_eLinux414";
+          EOSType[(EOSType["k_eLinux419"] = -187)] = "k_eLinux419";
+          EOSType[(EOSType["k_eLinux5Unknown"] = -186)] = "k_eLinux5Unknown";
+          EOSType[(EOSType["k_eLinux54"] = -185)] = "k_eLinux54";
+          EOSType[(EOSType["k_eLinux6Unknown"] = -184)] = "k_eLinux6Unknown";
+          EOSType[(EOSType["k_eLinux7Unknown"] = -183)] = "k_eLinux7Unknown";
+          EOSType[(EOSType["k_eLinux510"] = -182)] = "k_eLinux510";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          EOSType[(EOSType["k_eLinuxMax"] = -103)] = "k_eLinuxMax";
+          EOSType[(EOSType["k_eMacOSUnknown"] = -102)] = "k_eMacOSUnknown";
+          EOSType[(EOSType["k_eMacOS104"] = -101)] = "k_eMacOS104";
+          EOSType[(EOSType["k_eMacOS105"] = -100)] = "k_eMacOS105";
+          EOSType[(EOSType["k_eMacOS1058"] = -99)] = "k_eMacOS1058";
+          EOSType[(EOSType["k_eMacOS106_unused1"] = -98)] =
+            "k_eMacOS106_unused1";
+          EOSType[(EOSType["k_eMacOS106_unused2"] = -97)] =
+            "k_eMacOS106_unused2";
+          EOSType[(EOSType["k_eMacOS106_unused3"] = -96)] =
+            "k_eMacOS106_unused3";
+          EOSType[(EOSType["k_eMacOS106"] = -95)] = "k_eMacOS106";
+          EOSType[(EOSType["k_eMacOS1063"] = -94)] = "k_eMacOS1063";
+          EOSType[(EOSType["k_eMacOS1064_slgu"] = -93)] = "k_eMacOS1064_slgu";
+          EOSType[(EOSType["k_eMacOS1067"] = -92)] = "k_eMacOS1067";
+          EOSType[(EOSType["k_eMacOS1067_unused"] = -91)] =
+            "k_eMacOS1067_unused";
+          EOSType[(EOSType["k_eMacOS107"] = -90)] = "k_eMacOS107";
+          EOSType[(EOSType["k_eMacOS108"] = -89)] = "k_eMacOS108";
+          EOSType[(EOSType["k_eMacOS109"] = -88)] = "k_eMacOS109";
+          EOSType[(EOSType["k_eMacOS1010"] = -87)] = "k_eMacOS1010";
+          EOSType[(EOSType["k_eMacOS1011"] = -86)] = "k_eMacOS1011";
+          EOSType[(EOSType["k_eMacOS1012"] = -85)] = "k_eMacOS1012";
+          EOSType[(EOSType["k_eMacOS1013"] = -84)] = "k_eMacOS1013";
+          EOSType[(EOSType["k_eMacOS1014"] = -83)] = "k_eMacOS1014";
+          EOSType[(EOSType["k_eMacOS1015"] = -82)] = "k_eMacOS1015";
+          EOSType[(EOSType["k_eMacOS1016"] = -81)] = "k_eMacOS1016";
+          EOSType[(EOSType["k_eMacOS11"] = -80)] = "k_eMacOS11";
+          EOSType[(EOSType["k_eMacOS11_1"] = -79)] = "k_eMacOS11_1";
+          EOSType[(EOSType["k_eMacOS1017"] = -75)] = "k_eMacOS1017";
+          EOSType[(EOSType["k_eMacOS12"] = -74)] = "k_eMacOS12";
+          EOSType[(EOSType["k_eMacOS1018"] = -70)] = "k_eMacOS1018";
+          EOSType[(EOSType["k_eMacOS13"] = -69)] = "k_eMacOS13";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          EOSType[(EOSType["k_eMacOSMax"] = -2)] = "k_eMacOSMax";
+          EOSType[(EOSType["k_eOSUnknown"] = -1)] = "k_eOSUnknown";
+          EOSType[(EOSType["k_eWinUnknown"] = 0)] = "k_eWinUnknown";
+          EOSType[(EOSType["k_eWin311"] = 1)] = "k_eWin311";
+          EOSType[(EOSType["k_eWin95"] = 2)] = "k_eWin95";
+          EOSType[(EOSType["k_eWin98"] = 3)] = "k_eWin98";
+          EOSType[(EOSType["k_eWinME"] = 4)] = "k_eWinME";
+          EOSType[(EOSType["k_eWinNT"] = 5)] = "k_eWinNT";
+          EOSType[(EOSType["k_eWin2000"] = 6)] = "k_eWin2000";
+          EOSType[(EOSType["k_eWinXP"] = 7)] = "k_eWinXP";
+          EOSType[(EOSType["k_eWin2003"] = 8)] = "k_eWin2003";
+          EOSType[(EOSType["k_eWinVista"] = 9)] = "k_eWinVista";
+          EOSType[(EOSType["k_eWindows7"] = 10)] = "k_eWindows7";
+          EOSType[(EOSType["k_eWin2008"] = 11)] = "k_eWin2008";
+          EOSType[(EOSType["k_eWin2012"] = 12)] = "k_eWin2012";
+          EOSType[(EOSType["k_eWindows8"] = 13)] = "k_eWindows8";
+          EOSType[(EOSType["k_eWindows81"] = 14)] = "k_eWindows81";
+          EOSType[(EOSType["k_eWin2012R2"] = 15)] = "k_eWin2012R2";
+          EOSType[(EOSType["k_eWindows10"] = 16)] = "k_eWindows10";
+          EOSType[(EOSType["k_eWin2016"] = 17)] = "k_eWin2016";
+          EOSType[(EOSType["k_eWin2019"] = 18)] = "k_eWin2019";
+          EOSType[(EOSType["k_eWin2022"] = 19)] = "k_eWin2022";
+          EOSType[(EOSType["k_eWindows11"] = 20)] = "k_eWindows11";
+          // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
+          EOSType[(EOSType["k_eWinMAX"] = 21)] = "k_eWinMAX";
+          EOSType[(EOSType["k_eOSTypeMax"] = 32)] = "k_eOSTypeMax"; // win types + other ifdef'd types
+        })(EOSType || (EOSType = {}));
 
         /***/
       },
@@ -69954,6 +70158,10 @@ object-assign
         /* harmony import */ var _steamclient_clientinterfacehelpers__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
             /*! ./steamclient/clientinterfacehelpers */ "../../../web_src/shared/js/steamclient/clientinterfacehelpers.ts"
+          );
+        /* harmony import */ var _common_ostype__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! ./common/ostype */ "../../../web_src/shared/js/common/ostype.ts"
           );
         //
         // contains definitions for all methods and objects exposed from C++ Steam Client
@@ -95952,4 +96160,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=64f54dfcb46292cd6cd2
+//# sourceMappingURL=friends.js.map?contenthash=83db4ab06c5ffb576a9e

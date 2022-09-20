@@ -1469,6 +1469,8 @@ enum EMsg {
 	k_EMsgClientServerTimestampResponse = 9803;
 	k_EMsgServiceMethodCallFromClientNonAuthed = 9804;
 	k_EMsgClientHello = 9805;
+	k_EMsgClientEnableOrDisableDownloads = 9806;
+	k_EMsgClientEnableOrDisableDownloadsResponse = 9807;
 	k_EMsgClientLANP2PBase = 9900;
 	k_EMsgClientLANP2PRequestChunk = 9900;
 	k_EMsgClientLANP2PRequestChunkResponse = 9901;
