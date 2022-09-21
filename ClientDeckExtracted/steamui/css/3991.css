@@ -1135,6 +1135,10 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_30VHl.gpfocus {
   outline: none;
 }
+.gamepaddialog_ModalPosition_30VHl.gamepaddialog_NoHeaderPadding_2kAHX {
+  top: 0;
+  padding: 0;
+}
 .gamepaddialog_ModalPosition_30VHl > .gamepaddialog_GamepadDialogContent_3joNk {
   margin: auto;
   background-color: #0e141b;
@@ -67026,6 +67030,10 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 .controllerconfiguratormapping_ModalPosition_1B8RZ.gpfocus {
   outline: none;
 }
+.controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_NoHeaderPadding_1SDUs {
+  top: 0;
+  padding: 0;
+}
 .controllerconfiguratormapping_ModalPosition_1B8RZ
   > .controllerconfiguratormapping_GamepadDialogContent_31tKG {
   margin: auto;
@@ -67266,6 +67274,9 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   .DialogControlsSection
   .Focusable {
   scroll-margin-top: 80px;
+}
+.controllerconfiguratormapping_SettingMaxWidth_zcqYG {
+  max-width: 92%;
 }
 .controllerconfiguratormapping_FlexFlowRow_2_Bof {
   display: flex;
