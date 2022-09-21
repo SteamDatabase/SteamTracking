@@ -21080,7 +21080,7 @@
             n.e(6117),
             n.e(9060),
             n.e(2136),
-          ]).then(n.bind(n, 71408))
+          ]).then(n.bind(n, 27672))
         ),
         V = o.lazy(() =>
           Promise.all([n.e(7940), n.e(3069), n.e(9060), n.e(8974)]).then(

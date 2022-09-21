@@ -578,6 +578,7 @@ ${PARTNER_BASE_URL}optin/ajaxbatchgetoptinregistation
 ${PARTNER_BASE_URL}optin/ajaxcreatedemopackage
 ${PARTNER_BASE_URL}optin/ajaxgetalleligibleoptinapps
 ${PARTNER_BASE_URL}optin/ajaxgetalloptinregistrations
+${PARTNER_BASE_URL}optin/ajaxgetapplisttonotprune
 ${PARTNER_BASE_URL}optin/ajaxgetinvitedpartners
 ${PARTNER_BASE_URL}optin/ajaxgetoptinappwithdemoid
 ${PARTNER_BASE_URL}optin/ajaxgetoptinpublicdefinition

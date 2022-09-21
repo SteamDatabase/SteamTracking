@@ -51023,6 +51023,394 @@ div.LowPerfMode
 .gpfocus.appdetailsplaysection_CloudStatusRow_QvHky:after {
   display: none;
 }
+.appdetailsplaysection_ClaimButtonContainer_21FLO {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 164px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  background: rgba(220, 222, 223, 0.17);
+}
+.appdetailsplaysection_ClaimButtonContainer_21FLO.appdetailsplaysection_LongButton_1acKL {
+  height: 28px;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: inherit;
+  margin-bottom: 16px;
+}
+div.NarrowRightPanel
+  .appdetailsplaysection_ClaimButtonContainer_21FLO:not(.appdetailsplaysection_LongButton_1acKL) {
+  min-width: 114px;
+  height: 32px;
+}
+div.NarrowRightPanel
+  .appdetailsplaysection_ClaimButtonContainer_21FLO:not(.appdetailsplaysection_LongButton_1acKL).appdetailsplaysection_ShowStreaming_1yCGo {
+  min-width: 168px;
+}
+.BasicUI
+  div.NarrowRightPanel
+  .appdetailsplaysection_ClaimButtonContainer_21FLO {
+  min-width: 218px;
+  height: 48px;
+}
+.appdetailsplaysection_ButtonChild_14LCw {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 25%;
+  background-size: 330% 100%;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw {
+  outline: none;
+  justify-content: left;
+  background: transparent;
+  color: #dcdedf;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw svg path {
+  stroke: currentColor;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw svg line,
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw svg polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw
+  .appdetailsplaysection_ButtonText_oNbJX {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  color: #dcdedf;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw svg {
+  margin-right: 14px;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus {
+  background: #1a9fff;
+  position: relative;
+  color: #fff;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    75deg,
+    rgba(26, 159, 255, 0) 33%,
+    #b3dfff 50%,
+    rgba(26, 159, 255, 0) 66%
+  );
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.1s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  border-radius: 2px;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus:focus::after {
+  opacity: 0;
+  animation-name: appdetailsplaysection_focusAnimation_13PJ8;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition: opacity 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    calc(0% + 2px) 100%,
+    calc(0% + 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(0% + 2px) calc(100% - 2px),
+    calc(0% + 2px) 100%,
+    100% 100%,
+    100% 0
+  );
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus:hover::after {
+  opacity: 1;
+  animation: appdetailsplaysection_hoverAnimation_13XF2 0.5s
+    cubic-bezier(0.16, 0.86, 0.43, 0.99) forwards;
+  transition: opacity 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99) forwards;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    calc(0% + 2px) 100%,
+    calc(0% + 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(0% + 2px) calc(100% - 2px),
+    calc(0% + 2px) 100%,
+    100% 100%,
+    100% 0
+  );
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus svg path {
+  stroke: currentColor;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus svg line,
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus svg polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus
+  .appdetailsplaysection_ButtonText_oNbJX {
+  color: #fff;
+}
+.BasicUI .appdetailsplaysection_ButtonChild_14LCw.Focusable:focus svg {
+  transition: none;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover {
+  background: #1a9fff;
+  position: relative;
+  color: #fff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    75deg,
+    rgba(26, 159, 255, 0) 33%,
+    #b3dfff 50%,
+    rgba(26, 159, 255, 0) 66%
+  );
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.1s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  border-radius: 2px;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover:focus::after {
+  opacity: 0;
+  animation-name: appdetailsplaysection_focusAnimation_13PJ8;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition: opacity 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    calc(0% + 2px) 100%,
+    calc(0% + 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(0% + 2px) calc(100% - 2px),
+    calc(0% + 2px) 100%,
+    100% 100%,
+    100% 0
+  );
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover:hover::after {
+  opacity: 1;
+  animation: appdetailsplaysection_hoverAnimation_13XF2 0.5s
+    cubic-bezier(0.16, 0.86, 0.43, 0.99) forwards;
+  transition: opacity 0.5s cubic-bezier(0.16, 0.86, 0.43, 0.99) forwards;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    calc(0% + 2px) 100%,
+    calc(0% + 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(0% + 2px),
+    calc(100% - 2px) calc(100% - 2px),
+    calc(0% + 2px) calc(100% - 2px),
+    calc(0% + 2px) 100%,
+    100% 100%,
+    100% 0
+  );
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  path {
+  stroke: currentColor;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  line,
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  .appdetailsplaysection_ButtonText_oNbJX {
+  color: #fff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .BasicUI
+  .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg {
+  transition: none;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw
+  svg {
+  fill: #cbeeff;
+  transition: all 0.2s ease-in-out;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw
+  svg
+  path {
+  stroke: #c1f8ff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw
+  svg
+  line,
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw
+  svg
+  polygon {
+  stroke: #c1f8ff;
+  fill: #c1f8ff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw:hover {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg {
+  fill: #fff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  path {
+  stroke: #fff;
+}
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  line,
+:not(.appdetailsplaysection_Disabled_2L_o4)
+  > .appdetailsplaysection_ButtonChild_14LCw:hover
+  svg
+  polygon {
+  stroke: #fff;
+  fill: #fff;
+}
+.appdetailsplaysection_Disabled_2L_o4
+  > .appdetailsplaysection_ButtonChild_14LCw {
+  box-sizing: border-box;
+  background: #2e3136;
+  color: #ffffff80;
+  cursor: default;
+}
+.appdetailsplaysection_ClaimButton_1sk5R {
+  box-sizing: border-box;
+  height: 100%;
+  flex: 1 0 auto;
+  padding: 4px 12px 4px 12px;
+  border-radius: 2px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.BasicUI .appdetailsplaysection_ClaimButton_1sk5R {
+  padding: 8px 16px;
+  min-width: 210px;
+}
+.appdetailsplaysection_ClaimButton_1sk5R
+  .appdetailsplaysection_ButtonText_oNbJX {
+  vertical-align: middle;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  align-self: center;
+  margin-top: 0px;
+}
+.appdetailsplaysection_LongButton_1acKL
+  .appdetailsplaysection_ClaimButton_1sk5R
+  .appdetailsplaysection_ButtonText_oNbJX {
+  text-align: initial;
+  line-height: 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+:not(.appdetailsplaysection_LongButton_1acKL)
+  div.NarrowRightPanel
+  .appdetailsplaysection_ClaimButton_1sk5R
+  .appdetailsplaysection_ButtonText_oNbJX {
+  font-size: 16px;
+}
+.appdetailsplaysection_ClaimButton_1sk5R svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin-right: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.BasicUI .appdetailsplaysection_ClaimButton_1sk5R svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
 .crossfade {
   position: relative;
   overflow: hidden;
