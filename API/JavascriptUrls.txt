@@ -2196,7 +2196,7 @@ https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
 https://store.steampowered.com/cart/getcartstate
-https://store.steampowered.com/categories/image/${strImageURL}?cc=${}&l=${}
+https://store.steampowered.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
 https://store.steampowered.com/checkout/addfreebundle/${bundleid}
 https://store.steampowered.com/checkout/addfreelicense/${subid}

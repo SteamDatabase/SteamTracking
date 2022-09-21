@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7515420";
+var CLSTAMP = "7522026";
 (() => {
   "use strict";
   function e(e) {
@@ -11,7 +11,7 @@ var CLSTAMP = "7515420";
   function t() {
     return !!window.document;
   }
-  var n, o, i, s, a, _, r;
+  var n, o, i, s, _, a, c, r;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -75,21 +75,36 @@ var CLSTAMP = "7515420";
           "k_EAppUpdateContentType_Shader"),
         (e[(e.k_EAppUpdateContentType_Max = 3)] =
           "k_EAppUpdateContentType_Max");
-    })(a || (a = {})),
+    })(_ || (_ = {})),
     (function (e) {
       (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
         (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
           "k_EOverlayToStoreFlag_AddToCart"),
         (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
           "k_EOverlayToStoreFlag_AddToCartAndShow");
-    })(_ || (_ = {})),
+    })(a || (a = {})),
     (function (e) {
       (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
         "k_EActivateGameOverlayToWebPageMode_Default"),
         (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
           "k_EActivateGameOverlayToWebPageMode_Modal");
+    })(c || (c = {})),
+    (function (e) {
+      (e[(e.k_EGamingDeviceType_Unknown = 0)] = "k_EGamingDeviceType_Unknown"),
+        (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
+          "k_EGamingDeviceType_StandardPC"),
+        (e[(e.k_EGamingDeviceType_Console = 256)] =
+          "k_EGamingDeviceType_Console"),
+        (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
+        (e[(e.k_EGamingDeviceType_Steambox = 288)] =
+          "k_EGamingDeviceType_Steambox"),
+        (e[(e.k_EGamingDeviceType_Handheld = 512)] =
+          "k_EGamingDeviceType_Handheld"),
+        (e[(e.k_EGamingDeviceType_Phone = 528)] = "k_EGamingDeviceType_Phone"),
+        (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
+          "k_EGamingDeviceType_SteamDeck");
     })(r || (r = {}));
-  const c = {
+  const l = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -134,7 +149,7 @@ var CLSTAMP = "7515420";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!t()) return m || (m = S()), m;
+          if (!t()) return p || (p = S()), p;
           let n = e("sessionid");
           n || (n = S());
           return n;
@@ -151,7 +166,7 @@ var CLSTAMP = "7515420";
       IN_STANDALONE_KEYBOARD: !1,
       STANDALONE_CONFIGURATOR_APPID: 0,
     },
-    l = {
+    u = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -166,8 +181,8 @@ var CLSTAMP = "7515420";
       short_url: "",
       country_code: "",
     },
-    u = { steamid: "", clanid: 0, listid: 0 },
-    d = {
+    d = { steamid: "", clanid: 0, listid: 0 },
+    E = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
       APPID: 0,
@@ -184,8 +199,8 @@ var CLSTAMP = "7515420";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-  let m;
+    m = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+  let p;
   function S() {
     let e = (function () {
       let e = "";
@@ -219,15 +234,15 @@ var CLSTAMP = "7515420";
       e
     );
   }
-  function p(n = "webui_config") {
+  function C(n = "webui_config") {
     const o = {},
       i = A("config", n);
-    i && (delete i.SESSIONID, Object.assign(c, i), (o.config = !0));
+    i && (delete i.SESSIONID, Object.assign(l, i), (o.config = !0));
     const s = A("userinfo", n);
     s &&
-      (Object.assign(l, s),
+      (Object.assign(u, s),
       (o.userConfig = !0),
-      l.is_support &&
+      u.is_support &&
         (function () {
           let n = null;
           return (
@@ -235,15 +250,15 @@ var CLSTAMP = "7515420";
             Boolean(n && 1 === Number.parseInt(n))
           );
         })() &&
-        (l.is_support = !1));
-    const a = A("broadcast", n);
-    a && (Object.assign(u, a), (o.broadcastConfig = !0));
-    const _ = A("community", n);
-    _ && (Object.assign(d, _), (o.communityConfig = !0));
-    const r = A("event", n);
-    return r && (Object.assign(E, r), (o.eventConfig = !0)), o;
+        (u.is_support = !1));
+    const _ = A("broadcast", n);
+    _ && (Object.assign(d, _), (o.broadcastConfig = !0));
+    const a = A("community", n);
+    a && (Object.assign(E, a), (o.communityConfig = !0));
+    const c = A("event", n);
+    return c && (Object.assign(m, c), (o.eventConfig = !0)), o;
   }
-  function C(e, t = "webui_config", n) {
+  function g(e, t = "webui_config", n) {
     let o;
     if (
       ((o =
@@ -267,10 +282,10 @@ var CLSTAMP = "7515420";
     else n && console.error("Missing config element #", t);
   }
   function A(e, t = "webui_config") {
-    return C(e, t, !0);
+    return g(e, t, !0);
   }
-  let h = { success: !0, result: 1 };
-  class g {
+  let k = { success: !0, result: 1 };
+  class h {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -312,8 +327,8 @@ var CLSTAMP = "7515420";
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
       let n = Object.assign({}, e, {
-        universe: c.EUNIVERSE,
-        accountid: l.accountid,
+        universe: l.EUNIVERSE,
+        accountid: u.accountid,
       });
       void 0 !== t && (n.sequenceid = t);
       try {
@@ -381,9 +396,9 @@ var CLSTAMP = "7515420";
       );
     }
   }
-  let k = new (class {
+  let T = new (class {
     constructor() {
-      (this.m_connection = new g()),
+      (this.m_connection = new h()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -405,7 +420,7 @@ var CLSTAMP = "7515420";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => h,
+        () => k,
         () => this.FailureResult()
       );
     }
@@ -450,7 +465,7 @@ var CLSTAMP = "7515420";
     }
     BClientAccountMatches() {
       return (
-        !l.logged_in || l.accountid == this.m_connection.ClientInfo.unAccountID
+        !u.logged_in || u.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -461,15 +476,15 @@ var CLSTAMP = "7515420";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? h : this.FailureResult(e.success)
+                  1 === e.success ? k : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = k),
+  (window.ClientConnectionAPI = T),
     document.addEventListener("DOMContentLoaded", function () {
-      p(), (window.ClientConnectionAPI = k);
+      C(), (window.ClientConnectionAPI = T);
     });
 })();

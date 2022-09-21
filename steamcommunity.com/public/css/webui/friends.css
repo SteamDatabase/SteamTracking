@@ -1625,6 +1625,10 @@ button.gamepaddialog_Button_25Hnb.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_3pcZn.gpfocus {
   outline: none;
 }
+.gamepaddialog_ModalPosition_3pcZn.gamepaddialog_NoHeaderPadding_210hN {
+  top: 0;
+  padding: 0;
+}
 .gamepaddialog_ModalPosition_3pcZn > .gamepaddialog_GamepadDialogContent_2PUp_ {
   margin: auto;
   background-color: #0e141b;
@@ -4833,6 +4837,19 @@ body.modals_BodyNoScrollDialog_R9GkI {
   height: 12px;
   margin-right: 4px;
   margin-bottom: -1px;
+}
+.chatroommenu_ChatroomContextMenuDisableableItem_wxpoI {
+  display: flex;
+  flex-direction: column;
+  border-color: transparent;
+  border-top: none;
+  display: block;
+}
+.chatroommenu_ChatroomContextMenuDisableableItem_wxpoI
+  .chatroommenu_DisabledDescriptor_l2_77 {
+  font-size: 11px;
+  color: #707379;
+  line-height: 14px;
 }
 .invitedrop_InviteDropMessage_2f19f {
   text-shadow: 0px 1px 6px #000, 0px 2px 12px #000;
@@ -9103,6 +9120,17 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
     .newlogindialog_AccountCreation_sS-RP {
     display: flex;
     flex-direction: column;
+  }
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_EmbeddedRoot_2aujf
+    .newlogindialog_EmbeddedRootFooter_9AbKY
+    .newlogindialog_AccountCreation_sS-RP.newlogindialog_InClient_2dZVD {
+    flex-direction: row;
+  }
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_EmbeddedRoot_2aujf
+    .newlogindialog_EmbeddedRootFooter_9AbKY.newlogindialog_InClient_2dZVD {
+    flex-direction: row;
   }
 }
 .newlogindialog_Login_3VsPM
@@ -31641,6 +31669,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .managefriends_ProfileCard_yW-Ii .managefriends_Image__MeR7 {
   width: 80px;
@@ -31650,6 +31679,12 @@ div:hover > .BBCodeCollapseControl {
 }
 .managefriends_ProfileCard_yW-Ii .managefriends_ProfileContent_3sv8V {
   margin-left: 20px;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_ProfileCard_yW-Ii .managefriends_ProfileContent_3sv8V {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
 .managefriends_ProfileLink_3pHCq {
   margin-top: 10px;
@@ -31675,6 +31710,19 @@ div:hover > .BBCodeCollapseControl {
 #searchIcon svg {
   width: 24px;
   height: 24px;
+}
+.managefriends_FriendCodeSelector_uK64R .managefriends_SendInviteButton_2gZxm {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_FriendCodeSelector_uK64R
+    .managefriends_SendInviteButton_2gZxm {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 :root {
   --basicui-header-height: 0px;

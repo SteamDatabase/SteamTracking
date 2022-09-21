@@ -4489,16 +4489,15 @@
     },
     5525: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => _, JW: () => u, rw: () => v });
+      n.d(t, { JW: () => c, rw: () => _ });
       var a = n(70655),
         i = n(22188),
         r = n(30381),
         s = n.n(r),
         o = n(67294),
         l = n(54698),
-        d = n(74163),
-        m = n(90666);
-      class c {
+        d = (n(74163), n(90666));
+      class m {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -4508,10 +4507,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return m.De.EREALM != l.IN.k_ESteamRealmChina;
+          return d.De.EREALM != l.IN.k_ESteamRealmChina;
         }
         get bIsCuratorsEnabled() {
-          return m.De.EREALM != l.IN.k_ESteamRealmChina;
+          return d.De.EREALM != l.IN.k_ESteamRealmChina;
         }
         get bIncludeCurators() {
           return !0;
@@ -4534,7 +4533,7 @@
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == m.De.WEB_UNIVERSE || "beta" == m.De.WEB_UNIVERSE)
+            ("dev" == d.De.WEB_UNIVERSE || "beta" == d.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
             let n = /^\d+$/.test(e) ? s().unix(Number.parseInt(e)) : s()(e);
@@ -4548,35 +4547,13 @@
           }
         }
       }
-      (0, a.gn)([i.LO], c.prototype, "nOverrideDateNow", void 0);
-      const u = new c();
-      function _(e = 1) {
-        const [t, n] = o.useState(() => g()),
-          a = (0, d.T)("useTimeNowWithOverride"),
-          i = o.useCallback(() => {
-            a.token.reason || n(g());
-          }, []);
-        return (
-          o.useEffect(() => {
-            const t = 1e3 * e,
-              n = t - (Date.now() % t),
-              a = window.setTimeout(i, n);
-            return () => {
-              window.clearTimeout(a);
-            };
-          }, [t, e, i]),
-          t
-        );
-      }
-      window.g_EventCalendarDevFeatures = u;
-      const p = new Date(),
-        h = Math.floor(p.getTime() / 1e3);
-      function g() {
-        const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
-      }
-      function v() {
-        return o.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
+      (0, a.gn)([i.LO], m.prototype, "nOverrideDateNow", void 0);
+      const c = new m();
+      window.g_EventCalendarDevFeatures = c;
+      const u = new Date();
+      Math.floor(u.getTime() / 1e3);
+      function _() {
+        return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     7200: (e, t, n) => {

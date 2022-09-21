@@ -1605,7 +1605,7 @@ GHomepage = {
 				}
 
 				var $image = $J( '<img/>', {
-					"src": "https://store.steampowered.com/" + "categories/image/" + strImageURL + "?cc=" + cc + "&l=" + l,
+					"src": "https://store.steampowered.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l,
 				} );
 				$capsule.append( $image );
 
@@ -2275,10 +2275,10 @@ GHomepage = {
 				{
 					$MessageCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 				}
-				$MessageCtn.append($J('<div/>').html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;'));
+				$MessageCtn.append($J('<div/>').html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large') : '&nbsp;'));
 			}
 			else
-				$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
+				$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_large' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
 
 			GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
 

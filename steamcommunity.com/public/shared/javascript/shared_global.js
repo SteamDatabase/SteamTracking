@@ -5,6 +5,7 @@ Steam = {
 	sm_bUserInGameOverlay: false,
 	sm_bUserInTenfootBrowser: false,
 	sm_bUserInMobileChat: false,
+	sm_bUserInMobileApp: false,
 
 	BIsUserInSteamClient: function()
 	{
@@ -46,6 +47,14 @@ Steam = {
 		return Steam.sm_bUserInMobileChat;
 	},
 
+	BIsUserInSteamMobileApp: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInMobileApp;
+	},
+
 	GetClientPackageVersion: function()
 	{
 		if ( !Steam.BIsUserInClientOrOverlay() )
@@ -78,6 +87,7 @@ Steam = {
 		Steam.sm_bUserInGameOverlay = fnCheckAgent( 'Valve Steam GameOverlay', 'force_overlay_view' );
 		Steam.sm_bUserInClient = Steam.sm_bUserInTenfootBrowser || fnCheckAgent( 'Valve Steam Client', 'force_client_view' );
 		Steam.sm_bUserInMobileChat = fnCheckAgent( 'Valve Steam Mobile Chat', 'force_mobile_chat_view' );
+		Steam.sm_bUserInMobileApp = fnCheckAgent( 'Valve Steam App', 'force_mobile_app_view' );
 
 		Steam.sm_bInitialized = true;
 	},

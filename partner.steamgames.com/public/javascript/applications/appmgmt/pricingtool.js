@@ -1278,10 +1278,14 @@
             )));
         let C = o || !!l;
         return i.createElement(
-          w.HP,
-          { className: (0, v.Z)(x().ProposalState, p), toolTipContent: D },
-          i.createElement("div", { className: x().ProposalStateKey }),
-          h,
+          "div",
+          { className: (0, v.Z)(x().ProposalState, p) },
+          i.createElement(
+            w.HP,
+            { toolTipContent: D },
+            i.createElement("div", { className: x().ProposalStateKey }),
+            h
+          ),
           C &&
             i.createElement(z, {
               hoverKey: m,

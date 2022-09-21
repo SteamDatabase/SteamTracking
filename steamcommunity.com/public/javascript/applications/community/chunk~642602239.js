@@ -21063,6 +21063,11 @@
                 fields: {
                   id: { n: 1, c: a.oY },
                   score: { n: 2, br: n.FE.readDouble, bw: n.Xc.writeDouble },
+                  spellcheck_generated_result: {
+                    n: 3,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             m.sm_m
@@ -21107,7 +21112,7 @@
         constructor(e = null) {
           super(),
             u.prototype.total_matching_records || n.aR(u.M()),
-            s.initialize(this, e, 0, -1, [4], null);
+            s.initialize(this, e, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -21123,6 +21128,13 @@
                   start: { n: 2, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
                   count: { n: 3, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
                   per_result_metadata: { n: 4, c: m, r: !0, q: !0 },
+                  spellcheck_suggestions: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeRepeatedString,
+                  },
                 },
               }),
             u.sm_m
@@ -38308,7 +38320,11 @@
                     "AppSummaryWidgetCtn"
                   ),
                 },
-                n.createElement(U.ju, { id: r, type: t })
+                n.createElement(U.ju, {
+                  id: r,
+                  type: t,
+                  bAllowTwoLinesForHeader: !0,
+                })
               );
             }
           }
@@ -41202,47 +41218,51 @@
             bUseSubscriptionLayout: O,
             bHidePlatforms: N,
             bHideContainedApps: W,
-            bShowReviewSummary: x,
-            bShowDeckCompatibilityDialog: j,
-            bAutoFocus: V,
-            fnOnClickOverride: H,
+            bAllowTwoLinesForHeader: x,
+            bShowReviewSummary: j,
+            bShowDeckCompatibilityDialog: V,
+            bAutoFocus: H,
+            fnOnClickOverride: X,
           } = e,
-          X = (0, T.bJ)(),
-          q = n.useMemo(
+          q = (0, T.bJ)(),
+          Z = n.useMemo(
             () => (null == d ? void 0 : d.GetIncludedAppIDsOrSelf()),
             [d]
           );
         if (!d) return null;
-        const Z = d.GetBestPurchaseOption().discount_pct,
-          K = d.GetIncludedAppIDs().length;
-        let $ = d.GetShortDescription();
+        const K = d.GetBestPurchaseOption().discount_pct,
+          $ = d.GetIncludedAppIDs().length;
+        let Y = d.GetShortDescription();
         (2 != d.GetStoreItemType() && 1 != d.GetStoreItemType()) ||
-          ($ = Z
-            ? (0, F.Xx)("#Sale_BundleSave_WithDiscount", Z, K)
-            : (0, F.Xx)("#Sale_BundleSave", K));
-        const Y = (0, c.mY)(X),
-          Q = d.GetStorePageURL(),
-          J = Boolean(!W && K > 0),
-          ee = d.BHasTags()
+          (Y = K
+            ? (0, F.Xx)("#Sale_BundleSave_WithDiscount", K, $)
+            : (0, F.Xx)("#Sale_BundleSave", $));
+        const Q = (0, c.mY)(q),
+          J = d.GetStorePageURL(),
+          ee = Boolean(!W && $ > 0),
+          te = d.BHasTags()
             ? d.GetTagIDs()
             : (null == m ? void 0 : m.BHasTags())
             ? m.GetTagIDs()
             : [],
-          te = 0 == d.GetStoreItemType(),
-          re = (0, c.Hf)(Q, X),
-          ie = D.De.IN_GAMEPADUI || d.BIsReleased() || d.BIsPrePurchase();
+          re = 0 == d.GetStoreItemType(),
+          ie = (0, c.Hf)(J, q),
+          ne = D.De.IN_GAMEPADUI || d.BIsReleased() || d.BIsPrePurchase();
         return n.createElement(
           w.zw,
-          { appid: te ? d.GetAppID() : void 0 },
+          { appid: re ? d.GetAppID() : void 0 },
           n.createElement(
             s.s,
             {
-              className: k().StoreSaleWidgetOuterContainer,
+              className: (0, M.Z)({
+                [k().StoreSaleWidgetOuterContainer]: !0,
+                [k().AllowTwoLineHeader]: x,
+              }),
               onMouseEnter: () => l(!0),
               onMouseLeave: () => l(!1),
               "flow-children": "grid",
               navEntryPreferPosition: o.c4.PREFERRED_CHILD,
-              autoFocus: V,
+              autoFocus: H,
             },
             n.createElement(
               a.Ks,
@@ -41253,8 +41273,8 @@
                     k().SaleItemDefaultCapsuleDisplay
                   ),
                 },
-                (0, b.h)(d, X, void 0, H),
-                { preferredFocus: J }
+                (0, b.h)(d, q, void 0, X),
+                { preferredFocus: ee }
               ),
               n.createElement(
                 "div",
@@ -41262,14 +41282,14 @@
                 n.createElement(
                   "a",
                   {
-                    href: H ? void 0 : re,
-                    target: D.De.IN_CLIENT || H ? void 0 : "_blank",
-                    onClick: H,
+                    href: X ? void 0 : ie,
+                    target: D.De.IN_CLIENT || X ? void 0 : "_blank",
+                    onClick: X,
                   },
                   n.createElement(
                     "div",
                     { className: k().StoreSaleWidgetImage },
-                    n.createElement(f.vs, { appids: q }),
+                    n.createElement(f.vs, { appids: Z }),
                     n.createElement(U, { info: I, imageType: "header" }),
                     n.createElement(R.y, {
                       eDeckCompatibilityCategory:
@@ -41286,17 +41306,17 @@
                 {
                   className: (0, M.Z)(
                     k().StoreSaleWidgetRight,
-                    J ? k().Bundle : ""
+                    ee ? k().Bundle : ""
                   ),
                 },
-                Boolean(te && !H) &&
+                Boolean(re && !X) &&
                   n.createElement(z.RJ, {
                     appID: u.id,
                     classOverride: (0, M.Z)(
                       p().WishlistButtonNotTop,
                       "WishlistButton"
                     ),
-                    snr: Y,
+                    snr: Q,
                   }),
                 n.createElement(
                   "div",
@@ -41304,9 +41324,9 @@
                   n.createElement(
                     "a",
                     {
-                      href: H ? void 0 : re,
+                      href: X ? void 0 : ie,
                       target: D.De.IN_CLIENT ? void 0 : "_blank",
-                      onClick: H,
+                      onClick: X,
                     },
                     n.createElement(
                       "div",
@@ -41318,11 +41338,11 @@
                 n.createElement(
                   "div",
                   { className: k().StoreSaleWidgetReleaseAndTags },
-                  ee &&
+                  te &&
                     n.createElement(
                       "div",
                       { className: k().StoreSaleWidgetTags },
-                      ee.map((e) =>
+                      te.map((e) =>
                         n.createElement(v.H, {
                           key: "tag_" + e,
                           tagid: e,
@@ -41333,7 +41353,7 @@
                   n.createElement(
                     "div",
                     { className: k().WidgetReleaseDateAndPlatformCtn },
-                    te &&
+                    re &&
                       n.createElement(
                         "div",
                         { className: k().StoreSaleWidgetRelease },
@@ -41341,10 +41361,10 @@
                       ),
                     !N && n.createElement(g.a, { item: u })
                   ),
-                  x && n.createElement(z.Yb, { appInfo: u })
+                  j && n.createElement(z.Yb, { appInfo: u })
                 ),
-                J && n.createElement(P, { info: _ }),
-                Boolean(te && $) &&
+                ee && n.createElement(P, { info: _ }),
+                Boolean(re && Y) &&
                   n.createElement(
                     "div",
                     {
@@ -41353,32 +41373,32 @@
                         "StoreSaleWidgetShortDesc"
                       ),
                     },
-                    Boolean($.startsWith("#") && -1 == $.indexOf(" "))
+                    Boolean(Y.startsWith("#") && -1 == Y.indexOf(" "))
                       ? n.createElement(
                           "span",
                           { className: k().LocalizationSpan },
                           (0, F.yu)(
-                            $,
+                            Y,
                             n.createElement("i", null),
                             n.createElement("i", null),
                             n.createElement("i", null),
                             n.createElement("i", null)
                           )
                         )
-                      : $
+                      : Y
                   ),
-                Boolean(!H)
+                Boolean(!X)
                   ? n.createElement(
                       n.Fragment,
                       null,
-                      Boolean(O && te)
+                      Boolean(O && re)
                         ? n.createElement(C.r, { appid: u.id, bIsMuted: i })
                         : n.createElement(y.x1, {
                             info: _,
                             bShowDemoButton: G,
                             bHidePrice: L,
-                            bHideWishlistButton: ie,
-                            bShowDeckCompatibilityDialog: j,
+                            bHideWishlistButton: ne,
+                            bShowDeckCompatibilityDialog: V,
                           })
                     )
                   : n.createElement(
@@ -41392,7 +41412,7 @@
                           "a",
                           {
                             className: (0, M.Z)(k().Action, "CartBtn"),
-                            onClick: H,
+                            onClick: X,
                           },
                           (0, F.Xx)("#Summer2022_opt_in_button")
                         )

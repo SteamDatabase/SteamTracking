@@ -14001,7 +14001,7 @@ ul li {
   border: none;
 }
 .planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
-  background: #2c2e35;
+  background: #5f6372;
   border-left: 1px solid #1b1e22;
 }
 .planningdashboard_CalendarCtn_3reVP
@@ -14009,6 +14009,14 @@ ul li {
   .rbc-month-view
   .rbc-day-bg.rbc-off-range-bg {
   background: #23242a;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.DayInThePast {
+  background: rgba(41, 45, 51, 0.7);
+  pointer-events: none;
+  z-index: 5;
 }
 .planningdashboard_CalendarCtn_3reVP
   .rbc-calendar
@@ -15379,6 +15387,7 @@ button.rbc-input::-moz-focus-inner {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .managefriends_ProfileCard_2a7rs .managefriends_Image_vQTKB {
   width: 80px;
@@ -15388,6 +15397,12 @@ button.rbc-input::-moz-focus-inner {
 }
 .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
   margin-left: 20px;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
 .managefriends_ProfileLink_14jbp {
   margin-top: 10px;
@@ -15413,6 +15428,19 @@ button.rbc-input::-moz-focus-inner {
 #searchIcon svg {
   width: 24px;
   height: 24px;
+}
+.managefriends_FriendCodeSelector_35N5F .managefriends_SendInviteButton_3Izq1 {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_FriendCodeSelector_35N5F
+    .managefriends_SendInviteButton_3Izq1 {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 .optin_admin_manage_dashboard_DownloadRow_3Bo6G {
   display: flex;

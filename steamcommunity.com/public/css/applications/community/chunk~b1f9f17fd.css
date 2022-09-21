@@ -147,7 +147,7 @@ Body.v6.tag_page.contenthub_page {
   position: unset;
 }
 .contenthubshared_MainCarousel_rKC9i .carousel .CarouselBtnLeft {
-  left: calc(50% - 546px);
+  left: calc(50% - 564px);
 }
 .contenthubshared_MainCarousel_rKC9i .carousel .CarouselBtnRight {
   left: calc(50% + 504px);
@@ -651,7 +651,7 @@ html.tablet
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  grid-template-areas: "title discount" "timer discount";
+  grid-template-areas: "title discount" "title discount";
   bottom: 0;
   width: 100%;
   height: 54px;
@@ -664,22 +664,11 @@ html.tablet
   .contenthubshared_DailyDealTextCtn_1ngzl
   .contenthubshared_DailyDealDesc_1xES0 {
   grid-area: title;
-  font-size: 12px;
+  font-size: 14px;
   color: #283846;
-}
-.contenthubshared_DailyDealCtn_3FVdc
-  .contenthubshared_DailyDealTextCtn_1ngzl
-  .contenthubshared_DailyDealTimer_3NGSy {
-  grid-area: timer;
-  font-size: 11px;
-}
-.contenthubshared_DailyDealCtn_3FVdc
-  .contenthubshared_DailyDealTextCtn_1ngzl
-  .contenthubshared_DailyDealTimer_3NGSy
-  span {
-  color: #c4e4f2;
-  background-color: #4f95bd;
-  padding: 2px 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .contenthubshared_DailyDealCtn_3FVdc .contenthubshared_DiscountBlock_tnGNQ {
   grid-area: discount;
@@ -2061,6 +2050,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .managefriends_ProfileCard_2a7rs .managefriends_Image_vQTKB {
   width: 80px;
@@ -2070,6 +2060,12 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
   margin-left: 20px;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
 .managefriends_ProfileLink_14jbp {
   margin-top: 10px;
@@ -2095,6 +2091,19 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 #searchIcon svg {
   width: 24px;
   height: 24px;
+}
+.managefriends_FriendCodeSelector_35N5F .managefriends_SendInviteButton_3Izq1 {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_FriendCodeSelector_35N5F
+    .managefriends_SendInviteButton_3Izq1 {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 .salesectioneventschedule_SaleSchedCtn_3yzeu {
   height: 480px;
@@ -4530,12 +4539,20 @@ html.responsive.touch
 }
 .saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
   background-color: #2e3138;
+  border: 1px solid #761f28;
   padding: 12px;
   color: #969696;
 }
 .saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
+  .saleguidelinedialog_GuidelinesDoneCtn_-bMPu {
+  border-left: 2px solid #a4d007;
+}
+.saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB
   .saleguidelinedialog_SignedBy_aFTva {
   display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 16px;
 }
 .saleguidelinedialog_GuidelinesNoticeCtn_2vRv8 {
   width: 100%;

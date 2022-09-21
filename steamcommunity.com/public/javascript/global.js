@@ -787,9 +787,17 @@ function ShowTradeOffer( tradeOfferID, rgParams )
 			winHeight = window.screen.availHeight - nClientChromePX;
 	}
 
-	var winOffer = window.open( 'https://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
+	var strURL = 'https://steamcommunity.com/tradeoffer/' + tradeOfferID + '/' + strParams;
+	if ( Steam.BIsUserInSteamMobileApp() )
+	{
+		window.location = strURL;
+	}
+	else
+	{
+		var winOffer = window.open( strURL, strKey, 'height=' + winHeight + ',width=1028,resize=yes,scrollbars=yes' );
 
-	winOffer.focus();
+		winOffer.focus();
+	}
 }
 
 function Logout()

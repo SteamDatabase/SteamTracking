@@ -3736,6 +3736,21 @@ a.help_request_row.closed, a.help_request_row.closed .help_request_name {
 	line-height: 20px;
 }
 
+.help_request_track_shipping {
+	background-color: #253040;
+	margin: 6px 0 2px 0;
+	border: 1px solid #3b718d;
+	padding: 14px 20px;
+	margin-bottom: 20px;
+	color: #a6b4bf;
+}
+
+.help_request_track_shipping_title {
+	color: #5eafde;
+	font-size: 16px;
+	margin: 0px 0px 14px 0px;
+}
+
 .help_request_area {
 	font-size: 12px;
 	color: #9eb3cc;

@@ -2288,6 +2288,12 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
   background-color: #b8860b;
   color: #fff;
 }
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
 .partnereventdialog_Padding_2oWai {
   padding-top: 10px;
 }

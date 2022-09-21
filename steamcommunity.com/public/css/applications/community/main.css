@@ -1625,6 +1625,10 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_30VHl.gpfocus {
   outline: none;
 }
+.gamepaddialog_ModalPosition_30VHl.gamepaddialog_NoHeaderPadding_2kAHX {
+  top: 0;
+  padding: 0;
+}
 .gamepaddialog_ModalPosition_30VHl > .gamepaddialog_GamepadDialogContent_3joNk {
   margin: auto;
   background-color: #0e141b;

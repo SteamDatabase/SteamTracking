@@ -217,6 +217,7 @@
         WarningIconLayout: "partnereventdialog_WarningIconLayout_3POKG",
         WarningStylesBackground:
           "partnereventdialog_WarningStylesBackground_2MAql",
+        Stuck: "partnereventdialog_Stuck_2JqXL",
         Padding: "partnereventdialog_Padding_2oWai",
         NotTooWideModal: "partnereventdialog_NotTooWideModal_3P6Se",
       };
@@ -1506,6 +1507,16 @@
                   reactions: { n: 40, c: d, r: !0, q: !0 },
                   ipaddress: {
                     n: 41,
+                    br: l.FE.readString,
+                    bw: l.Xc.writeString,
+                  },
+                  hidden_in_steam_china: {
+                    n: 42,
+                    br: l.FE.readBool,
+                    bw: l.Xc.writeBool,
+                  },
+                  steam_china_location: {
+                    n: 43,
                     br: l.FE.readString,
                     bw: l.Xc.writeString,
                   },
@@ -23652,7 +23663,7 @@
       });
       var W = a(13271),
         Z = a(23937),
-        Q = (a(87678), a(76776)),
+        Q = (a(55277), a(76776)),
         q = a(461),
         J = a(97450),
         Y = a(10847),

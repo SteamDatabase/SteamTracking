@@ -713,6 +713,17 @@
     display: flex;
     flex-direction: column;
   }
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1
+    .newlogindialog_AccountCreation_19yGb.newlogindialog_InClient_2GR-7 {
+    flex-direction: row;
+  }
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1.newlogindialog_InClient_2GR-7 {
+    flex-direction: row;
+  }
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf

@@ -846,12 +846,8 @@ body.v6 .cart_digital_notice_ctn h2
 	padding: 0px;
 	height: 190px;
 	box-shadow: 0 0 5px #000;
-	background: -moz-linear-gradient(top, #758996  75%, #30588b 95%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(75%,#758996 ), color-stop(95%,#30588b));
-	background: -webkit-linear-gradient(top, #758996  75%,#30588b 95%);
-	background: -o-linear-gradient(top, #758996  75%,#30588b 95%);
-	background: -ms-linear-gradient(top, #758996  75%,#30588b 95%);
-	background: linear-gradient(to bottom, #758996  75%,#30588b 95%);
+    background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);
+    background: linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);
 }
 
 .dailydeal_ctn .dailydeal_cap,
@@ -863,17 +859,9 @@ body.v6 .cart_digital_notice_ctn h2
 	margin-left: 6px;
 }
 .dailydeal_ctn .dailydeal_desc {
-	color: #283846;
 	margin-right: 6px;
 }
-.dailydeal_ctn .dailydeal_countdown {
-	color: #c4e4f2;
-	background-color: #4f95bd;
-}
 
-.dailydeal_ctn .dailydeal_desc {
-	color: #c6d4df;
-}
 
 /* global checkout */
 

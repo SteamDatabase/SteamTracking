@@ -1599,6 +1599,8 @@
     "Sale_default_label_245": "Card",
     "Sale_default_label_246": "DLC For You",
     "Sale_default_label_247": "Soundtracks For You",
+    "Sale_default_label_248": "Ninjas",
+    "Sale_default_label_249": "Assassins",
     "SalePage_LoginPrompt": "Sign in to view additional items selected just for you.",
     "SalePage_LoginReservationPrompt": "Login for reservations",
     "SalePage_ParentApp_DLC": "DLC For",
@@ -2211,5 +2213,10 @@
     "ActionButtonLabelReorder": "Reorder",
     "Slider_AdjustSlider": "Adjust Slider",
     "Slider_EditValue": "Edit Value",
+    "TimeRemaining_MoreThanOneYear": "> 1 year",
+    "TimeRemaining_MonthsDays": "%1$sm %2$sd",
+    "TimeRemaining_DaysHoursMinutes": "%1$sd %2$s:%3$s",
+    "TimeRemaining_HoursMinutesSeconds": "%1$s:%2$s:%3$s",
+    "TimeRemaining_MinutesSeconds": "%1$s:%2$s",
     "shared_dummy": "dont translate"
 }

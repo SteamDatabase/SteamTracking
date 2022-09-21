@@ -1105,7 +1105,9 @@ function OnInitializeTransactionFailure( detail, result )
 				case 87:
 					error_text = 'Your order cannot be completed because your cart contains items that you\'ve already purchased, but removed from your account.  Please visit <a href="https://help.steampowered.com/en/wizard/HelpWithGame">support</a> to re-enable access to your content.';
 					break;
-
+				case 84:
+					error_text = 'Your order cannot be completed because your cart contains items that are no longer available right now and require you to join a waiting list.';
+					break;
 				case 96:
 					error_text = 'You may not update your Steam account\'s country more than once every 3 months. Please complete this purchase using a payment method from your current region.';
 					break;

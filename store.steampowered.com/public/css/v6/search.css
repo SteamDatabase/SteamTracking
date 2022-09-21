@@ -548,7 +548,7 @@ div.autocomplete ul li {
 	color: #67c1f5;
 }
 
-#TagSuggest {
+.search_filter_suggest {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	color: #fff;
 	border-radius: 3px;
@@ -559,10 +559,15 @@ div.autocomplete ul li {
 	margin: 5px;
 }
 
-#TagSuggest.blur {
+.search_filter_suggest.blur {
 	font-style: italic;
 	color: #7092a5;
 	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.4);
+}
+
+#search_manage_lang_preferences_btn {
+	padding: 5px;
+	margin: 2px 5px;
 }
 
 @media screen and (max-width: 910px)

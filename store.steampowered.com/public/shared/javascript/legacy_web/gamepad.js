@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    313: (e, t, n) => {
+    587: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => Qe });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(298);
+        a = n(157);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -89,8 +89,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var _ = n(543),
-        v = n(519);
+      var _ = n(20),
+        v = n(492);
       class f extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -185,7 +185,7 @@
               ? i
               : null;
           null != s && (o += " (" + s + ")");
-          R(e, A.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
+          N(e, A.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
         }
       }
       (0, o.gn)([_.a], F.prototype, "Debug", null),
@@ -206,7 +206,7 @@
             this.LoadSettings();
         }
         LogAsLogManager(...e) {
-          R(
+          N(
             C.Info,
             this.IncludeBacktraceInLog,
             "LogManager",
@@ -305,7 +305,7 @@
           });
         }
       }
-      function R(e, t, n, i, ...o) {
+      function N(e, t, n, i, ...o) {
         const s = (function (e) {
             let t = 0;
             for (let n = 0; n < e.length; n++)
@@ -367,13 +367,13 @@
       (A.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
         (A.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
         (A.s_Singleton = null);
-      class N {
+      class R {
         constructor(e) {
           this.m_root = e;
         }
         static SerializeNavState(e, t = !0, n = !0) {
           return {
-            root: N.SerializeNavNode(e, t, n),
+            root: R.SerializeNavNode(e, t, n),
             bHadFocus: e.BFocusWithin(),
           };
         }
@@ -384,79 +384,83 @@
             o.length &&
               -1 != s &&
               t &&
-              (i = o.map((e, t) => N.SerializeNavNode(e, t == s || n, n))),
+              (i = o.map((e, t) => R.SerializeNavNode(e, t == s || n, n))),
             { sNavKey: e.NavKey, iActiveChild: s, rgChildren: i }
           );
         }
         static RestoreSerializedNavState(e, t, n = 0) {
           const { root: o, bHadFocus: s } = t;
           e.Tree.Controller.RestoreHistoryTransaction(() => {
-            N.RestoreSerializedNavNode(e, o),
+            R.RestoreSerializedNavNode(e, o),
               (1 == n || (0 == n && s)) && e.BTakeFocus(i.APPLICATION);
           });
         }
         static RestoreSerializedNavNode(e, t) {
-          const { sNavKey: n, iActiveChild: i, rgChildren: o } = t;
+          var n;
+          const { sNavKey: i, iActiveChild: o, rgChildren: s } = t;
           if (
-            (n && p(n == e.NavKey, "navkey mismatch"),
-            e.SetActiveChild(i),
-            o && o.length)
+            (i && p(i == e.NavKey, "navkey mismatch"),
+            e.SetActiveChild(o),
+            s && s.length)
           ) {
             const [t] = e.GetChildren();
-            let n = new Map();
+            let i = new Map();
             t.forEach((e) => {
-              e.NavKey && n.set(e.NavKey, e);
+              e.NavKey && i.set(e.NavKey, e);
             });
-            for (const e of o) {
+            for (const e of s) {
               if (!e.sNavKey) continue;
-              const t = n.get(e.sNavKey);
-              t && N.RestoreSerializedNavNode(t, e);
+              const t = i.get(e.sNavKey);
+              t && R.RestoreSerializedNavNode(t, e);
             }
-            if (-1 != i && o[i].sNavKey) {
-              const s = n.get(o[i].sNavKey);
-              s && e.SetActiveChild(t.indexOf(s));
+            if (
+              -1 != o &&
+              (null === (n = s[o]) || void 0 === n ? void 0 : n.sNavKey)
+            ) {
+              const n = i.get(s[o].sNavKey);
+              n && e.SetActiveChild(t.indexOf(n));
             }
-            let s = 0,
-              r = 0;
-            for (; s < t.length && r < o.length; ) {
-              for (; s < t.length && t[s].NavKey; ) s++;
-              for (; r < o.length && o[r].sNavKey; ) r++;
-              if (s >= t.length || r >= o.length) break;
-              N.RestoreSerializedNavNode(t[s], o[r]), s++, r++;
+            let r = 0,
+              a = 0;
+            for (; r < t.length && a < s.length; ) {
+              for (; r < t.length && t[r].NavKey; ) r++;
+              for (; a < s.length && s[a].sNavKey; ) a++;
+              if (r >= t.length || a >= s.length) break;
+              R.RestoreSerializedNavNode(t[r], s[a]), r++, a++;
             }
           }
         }
       }
-      class S extends N {
+      class I extends R {
         constructor() {
           super(...arguments), (this.m_rgHistory = []);
         }
         PushState() {
-          this.m_rgHistory.push(N.SerializeNavState(this.m_root));
+          this.m_rgHistory.push(R.SerializeNavState(this.m_root));
         }
         PopState(e = 0) {
           this.m_rgHistory.length &&
-            N.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
+            R.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
         }
       }
-      class D extends N {
+      class D extends R {
         constructor() {
           super(...arguments), (this.m_mapHistory = new Map());
         }
         SaveState(e) {
-          this.m_mapHistory.set(e, N.SerializeNavState(this.m_root));
+          this.m_mapHistory.set(e, R.SerializeNavState(this.m_root));
         }
         RestoreState(e, t = 0) {
           const n = this.m_mapHistory.get(e);
           return (
             !!n &&
             (console.log(`Restoring history for state ${e}`),
-            N.RestoreSerializedNavState(this.m_root, n, t),
+            R.RestoreSerializedNavState(this.m_root, n, t),
             !0)
           );
         }
       }
-      var I = n(900);
+      var S = n(720);
       function w(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -978,7 +982,7 @@
           );
         }
         UnregisterGamepadNavigationTree(e) {
-          I.Zf(this.m_rgGamepadNavigationTrees, e),
+          S.Zf(this.m_rgGamepadNavigationTrees, e),
             this.m_LastActiveNavTree == e &&
               ((this.m_LastActiveNavTree = null),
               this.SetActiveNavTree(null, !0));
@@ -1005,7 +1009,7 @@
         }
         BlurNavTree(e) {
           this.m_LastActiveNavTree == e && this.SetActiveNavTree(null, !0),
-            I.Zf(this.m_rgGamepadNavigationTrees, e),
+            S.Zf(this.m_rgGamepadNavigationTrees, e),
             this.m_rgGamepadNavigationTrees.unshift(e);
         }
         IsActiveFocusNavTree(e) {
@@ -1017,7 +1021,7 @@
         SetActiveNavTree(e, t = !1) {
           if (e && this.m_LastActiveNavTree == e) return;
           const n = this.m_LastActiveNavTree;
-          n && I.Zf(this.m_rgGamepadNavigationTrees, n),
+          n && S.Zf(this.m_rgGamepadNavigationTrees, n),
             e ||
               (this.m_rgGamepadNavigationTrees.length &&
                 (e =
@@ -1025,7 +1029,7 @@
                     this.m_rgGamepadNavigationTrees.length - 1
                   ]));
           const o = this.m_LastActiveFocusNavTree == e;
-          e && I.Zf(this.m_rgGamepadNavigationTrees, e),
+          e && S.Zf(this.m_rgGamepadNavigationTrees, e),
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
             k(
@@ -1124,7 +1128,7 @@
           return this.m_node.NavKey;
         }
         PushState() {
-          this.m_History || (this.m_History = new S(this.m_node)),
+          this.m_History || (this.m_History = new I(this.m_node)),
             this.m_History.PushState();
         }
         PopState(e = 0) {
@@ -2593,9 +2597,9 @@
       (0, o.gn)([_.a], Ae.prototype, "OnDOMFocus", null),
         (0, o.gn)([_.a], Ae.prototype, "OnDOMBlur", null),
         (0, o.gn)([_.a], Ae.prototype, "OnNavigationEvent", null);
-      const Re = "GamepadInput";
-      var Ne;
-      function Se(e) {
+      const Ne = "GamepadInput";
+      var Re;
+      function Ie(e) {
         const [t, n] = e.split(".", 2);
         return (
           t &&
@@ -2612,18 +2616,18 @@
           (e[(e.None = 2)] = "None"),
           (e[(e.Basic = 3)] = "Basic"),
           (e[(e.Full = 4)] = "Full");
-      })(Ne || (Ne = {}));
+      })(Re || (Re = {}));
       class De {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
             (this.m_NavigationController = e),
-            Se("BrowserView.RegisterForMessageFromParent") &&
-            Se("BrowserView.PostMessageToParent")
+            Ie("BrowserView.RegisterForMessageFromParent") &&
+            Ie("BrowserView.PostMessageToParent")
               ? ((this.m_bIsGamepadInputExternallyControlled = !0),
                 (this.m_postMessage = new we()))
               : ((this.m_bIsGamepadInputExternallyControlled =
                   window.top != window.self),
-                (this.m_postMessage = new Ie(window.top))),
+                (this.m_postMessage = new Se(window.top))),
             this.m_postMessage.RegisterForMessage(this.OnMessage),
             window.addEventListener("unload", this.PostPageUnloading),
             this.m_NavigationController.RegisterForUnhandledButtonDownEvents(
@@ -2666,8 +2670,8 @@
           }
         }
         SendGameInputState(e) {
-          let t = Ne.Basic;
-          window.bSupportsGamepadUI && (t = Ne.Full),
+          let t = Re.Basic;
+          window.bSupportsGamepadUI && (t = Re.Full),
             this.m_postMessage.PostMessage({
               type: "GameInputState",
               data: { source: e, support: t },
@@ -2689,7 +2693,7 @@
       (0, o.gn)([_.a], De.prototype, "OnFocusChanged", null),
         (0, o.gn)([_.a], De.prototype, "OnMessage", null),
         (0, o.gn)([_.a], De.prototype, "PostPageUnloading", null);
-      class Ie {
+      class Se {
         constructor(e) {
           (this.m_postWindow = e),
             window.addEventListener("message", this.OnMessage);
@@ -2699,17 +2703,17 @@
         }
         PostMessage(e) {
           let t = JSON.stringify(e);
-          this.m_postWindow.postMessage({ gamepadMessage: Re, args: t }, "*");
+          this.m_postWindow.postMessage({ gamepadMessage: Ne, args: t }, "*");
         }
         OnMessage(e) {
           let t = null == e ? void 0 : e.data;
-          if (t && t.gamepadMessage == Re && t.args) {
+          if (t && t.gamepadMessage == Ne && t.args) {
             const e = JSON.parse(t.args);
             this.m_fnCallback(e);
           }
         }
       }
-      (0, o.gn)([_.a], Ie.prototype, "OnMessage", null);
+      (0, o.gn)([_.a], Se.prototype, "OnMessage", null);
       class we {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -2719,10 +2723,10 @@
         }
         PostMessage(e) {
           let t = JSON.stringify(e);
-          SteamClient.BrowserView.PostMessageToParent(Re, t);
+          SteamClient.BrowserView.PostMessageToParent(Ne, t);
         }
         OnMessage(e, t) {
-          if (e == Re) {
+          if (e == Ne) {
             const e = JSON.parse(t);
             this.m_fnCallback(e);
           } else if ("Checkout" == e) {
@@ -2739,7 +2743,7 @@
         }
       }
       (0, o.gn)([_.a], we.prototype, "OnMessage", null);
-      n(57);
+      n(860);
       class Te extends a.oH {
         constructor(e) {
           super(),
@@ -2817,13 +2821,13 @@
             case "Backspace":
               return o ? a.eV.INVALID : a.eV.SECONDARY;
             case "ArrowUp":
-              return a.eV.DIR_UP;
+              return o ? a.eV.INVALID : a.eV.DIR_UP;
             case "ArrowDown":
-              return a.eV.DIR_DOWN;
+              return o ? a.eV.INVALID : a.eV.DIR_DOWN;
             case "ArrowLeft":
-              return a.eV.DIR_LEFT;
+              return o ? a.eV.INVALID : a.eV.DIR_LEFT;
             case "ArrowRight":
-              return a.eV.DIR_RIGHT;
+              return o ? a.eV.INVALID : a.eV.DIR_RIGHT;
           }
           return a.eV.INVALID;
         }
@@ -2908,7 +2912,7 @@
         }
         SendMessage(e) {
           const t = Object.assign({ type: "VirtualKeyboardMessage" }, e);
-          Se("BrowserView.PostMessageToParent")
+          Ie("BrowserView.PostMessageToParent")
             ? SteamClient.BrowserView.PostMessageToParent(
                 t.type,
                 JSON.stringify(t)
@@ -3079,7 +3083,7 @@
         if (n && n[e]) {
           const i = n[e];
           !(function (e, t, n = 0) {
-            N.RestoreSerializedNavState(e, t, n);
+            R.RestoreSerializedNavState(e, t, n);
           })(t, i);
         }
       }
@@ -3131,7 +3135,7 @@
                 var e;
                 window.history.replaceState(
                   Object.assign(Object.assign({}, window.history.state), {
-                    [o]: ((e = s), N.SerializeNavState(e, !0, !1)),
+                    [o]: ((e = s), R.SerializeNavState(e, !0, !1)),
                   }),
                   null
                 );
@@ -3280,11 +3284,11 @@
         delete C["flow-children"];
         let {
             clickOnActivate: A,
-            maintainX: R,
-            maintainY: N,
-            enableVirtualKeyboard: S,
+            maintainX: N,
+            maintainY: R,
+            enableVirtualKeyboard: I,
             preferredChild: D,
-            onOKActionDescription: I,
+            onOKActionDescription: S,
             onCancelActionDescription: w,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: O,
@@ -3435,9 +3439,9 @@
               })(F)
             : fe.NONE;
         Z != fe.NONE && ($.layout = Z),
-          R
+          N
             ? ($.navEntryPreferPosition = be.MAINTAIN_X)
-            : N
+            : R
             ? ($.navEntryPreferPosition = be.MAINTAIN_Y)
             : D && ($.navEntryPreferPosition = be.PREFERRED_CHILD),
           A &&
@@ -3446,7 +3450,7 @@
             ot(e, () => {
               _.off("vgp_onok");
             })),
-          S &&
+          I &&
             (_.on("vgp_onok.vkbindings", () => Ye.ShowVirtualKeyboard()),
             _.on("click.vkbindings", () => Ye.ShowVirtualKeyboard()),
             _.on("blur.vkbindings", () => {
@@ -3468,7 +3472,7 @@
             ((b.m_FocusRing = Me(_)),
             "static" == _.css("position") && _.css("position", "relative"));
         const ee = m({
-            onOKActionDescription: I,
+            onOKActionDescription: S,
             onCancelActionDescription: w,
             onSecondaryActionDescription: T,
             onOptionsActionDescription: O,

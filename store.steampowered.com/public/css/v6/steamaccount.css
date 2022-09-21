@@ -780,3 +780,60 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	line-height: 24px;
 	padding: 0px 12px;
 }
+
+/* hardware used */
+.hardware_used {
+    display: flex;
+    flex-direction: column;
+}
+
+.hardware_item_header, .hardware_item {
+    display: grid;
+	grid-template-columns: 30% 25% 45%;
+	padding: 5px;
+	margin-bottom: 1px;
+	background-color: rgba( 255, 255, 255, 0.2 );
+	color: #dcdedf;
+}
+
+.hardware_item_header {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.hardware_item.gpfocus {
+	background-color: white;
+	color: #0e141b;
+	border: 1px solid #000000;
+}
+
+.hardware_item .controller_code {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.steam_deck_components {
+	display: flex;
+	flex-direction: column;
+}
+
+.steam_deck_component {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #3B546A;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 16px;
+}
+.steam_deck_component .steam_deck_component_type {
+	font-weight: bold;
+	color: #DCDEDF;
+	padding-bottom: 7px;
+}
+.steam_deck_component .steam_deck_component_details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 7px;
+	color: #7C8EA3;
+}

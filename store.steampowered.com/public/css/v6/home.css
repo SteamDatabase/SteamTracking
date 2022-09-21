@@ -4003,11 +4003,18 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 
 .home_marketing_message .discount_block {
 	line-height: 15px;
-	height: 16px;
+	height: 54px;
 	padding: 4px;
 	text-align: right;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
 }
+.home_marketing_message.small .discount_block {
+    height: 35px;
+}
+
 
 .home_marketing_message > img {
 	width: 100%;
@@ -4782,16 +4789,12 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 }
 
 .dailydeal_desc {
-	color: #283846;
 	visibility: hidden;
-}
-
-.dailydeal_countdown {
-	background-color: #4f95bd;
-}
-
-.daily_deal .dailydeal_countdown {
-	color: #c4e4f2;
+    height: 44px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .daily_deal .bundle_base_discount {

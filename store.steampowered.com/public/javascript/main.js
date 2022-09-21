@@ -1417,6 +1417,8 @@ function AddFreeLicense( subid, strDisplayName )
 		var data = V_ParseJSON( jqXHR.responseText );
 		if ( data && data.purchaseresultdetail == 9 )
 			ShowAlertDialog( strDisplayName, 'This product is already available in your Steam library.' );
+		else if ( data && data.purchaseresultdetail == 24 )
+			ShowAlertDialog( strDisplayName, 'Before you can add this product to your Steam account, you must own the base product.' );
 		else
 			ShowAlertDialog( strDisplayName, 'There was a problem adding this product to your account.  Please try again later.' );
 	}).always( function () {

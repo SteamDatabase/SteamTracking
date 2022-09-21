@@ -129,6 +129,71 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 	$Container.trigger( 'tablefilter_update' );
 }
 
+// This sorts languages by, first already selected ones, then languages from user preferences
+g_LangMap = null;
+function PopulateLangFilterData( rgSelectedLanguages, rgLanguagesShowOnTop )
+{
+	var $Container = $J('#LanguageFilter_Container');
+	var $Langs = $Container.children('div').detach();
+
+	// Map of language IDs to HTML elements
+	if ( !g_LangMap )
+	{
+		g_LangMap = {};
+		$Langs.each( function() {
+			var $Lang = $J(this);
+			g_LangMap[ $Lang.data('value') ] = $Lang;
+		} );
+	}
+
+	var nIndex = 0;
+	var rgDisplayedLangs = {};
+
+	// First move our already selected elements to the top of our control.
+	for ( var i = 0; i < rgSelectedLanguages.length; i++ )
+	{
+		var langid = rgSelectedLanguages[ i ];
+		var $Lang = g_LangMap[ langid ];
+		$Container.append( $Lang ).show();
+		rgDisplayedLangs[ langid ] = true;
+		nIndex++;
+	}
+
+	// Then move our prioritized languages to the top as well, below the already active ones
+	for ( var i = 0; i < rgLanguagesShowOnTop.length; i++ )
+	{
+		var langid = rgLanguagesShowOnTop[ i ];
+		if ( rgDisplayedLangs[ langid ] )
+			continue;	//handled above
+		var $Lang = g_LangMap[ langid ];
+		$Container.append( $Lang ).show();
+		rgDisplayedLangs[ langid ] = true;
+		nIndex++;
+	}
+
+	// Add any remaining languages, show if there's still room
+	for ( var langid in g_LangMap )
+	{
+		if ( rgDisplayedLangs[ langid ] )
+			continue;	//handled above
+
+		var $Lang = g_LangMap[ langid ];
+		$Container.append( $Lang );
+		if ( nIndex++ > 15 )
+			$Lang.hide();
+		else
+			$Lang.show();
+	}
+
+	if ( rgSelectedLanguages.length )
+	{
+		$J('#LanguageFilter_Container').css( {maxHeight: ''} );
+	}
+
+	// apply tag filter text if not empty
+	$Container.trigger( 'tablefilter_update' );
+}
+
 function FillFormFromNavigation( querystring, link_click, initial_load )
 {
 	var rgLocationParams = querystring.toQueryParams();

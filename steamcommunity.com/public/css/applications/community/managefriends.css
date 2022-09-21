@@ -191,6 +191,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 .managefriends_ProfileCard_2a7rs .managefriends_Image_vQTKB {
   width: 80px;
@@ -200,6 +201,12 @@
 }
 .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
   margin-left: 20px;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_ProfileCard_2a7rs .managefriends_ProfileContent_29EO2 {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
 .managefriends_ProfileLink_14jbp {
   margin-top: 10px;
@@ -225,4 +232,17 @@
 #searchIcon svg {
   width: 24px;
   height: 24px;
+}
+.managefriends_FriendCodeSelector_35N5F .managefriends_SendInviteButton_3Izq1 {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 380px) {
+  .managefriends_FriendCodeSelector_35N5F
+    .managefriends_SendInviteButton_3Izq1 {
+    width: 100%;
+    margin-top: 10px;
+  }
 }

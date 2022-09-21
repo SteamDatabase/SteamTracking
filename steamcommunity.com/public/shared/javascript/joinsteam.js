@@ -51,6 +51,7 @@ function StartCreationSession()
 				new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #b44040', duration: 0.5 } );
 			}
 
+			RefreshCaptcha();
 			ShowError( strError );
 		}
 		else
@@ -109,6 +110,7 @@ function StartCreationSessionParentalConsent()
 					g_parentalConsentDialog = null;
 				}
 
+				RefreshCaptcha();
 				ShowError( strError );
 			}
 			else
@@ -575,8 +577,6 @@ function ShowError( strError )
 	$J('#' + error_div).show();
 	Effect.ScrollTo( error_div );
 	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#f4b786' } );
-
-	RefreshCaptcha();
 }
 
 

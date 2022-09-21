@@ -4172,7 +4172,7 @@ Body.v6.tag_page.contenthub_page {
   position: unset;
 }
 .contenthubshared_MainCarousel_rKC9i .carousel .CarouselBtnLeft {
-  left: calc(50% - 546px);
+  left: calc(50% - 564px);
 }
 .contenthubshared_MainCarousel_rKC9i .carousel .CarouselBtnRight {
   left: calc(50% + 504px);
@@ -4676,7 +4676,7 @@ html.tablet
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
-  grid-template-areas: "title discount" "timer discount";
+  grid-template-areas: "title discount" "title discount";
   bottom: 0;
   width: 100%;
   height: 54px;
@@ -4689,22 +4689,11 @@ html.tablet
   .contenthubshared_DailyDealTextCtn_1ngzl
   .contenthubshared_DailyDealDesc_1xES0 {
   grid-area: title;
-  font-size: 12px;
+  font-size: 14px;
   color: #283846;
-}
-.contenthubshared_DailyDealCtn_3FVdc
-  .contenthubshared_DailyDealTextCtn_1ngzl
-  .contenthubshared_DailyDealTimer_3NGSy {
-  grid-area: timer;
-  font-size: 11px;
-}
-.contenthubshared_DailyDealCtn_3FVdc
-  .contenthubshared_DailyDealTextCtn_1ngzl
-  .contenthubshared_DailyDealTimer_3NGSy
-  span {
-  color: #c4e4f2;
-  background-color: #4f95bd;
-  padding: 2px 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .contenthubshared_DailyDealCtn_3FVdc .contenthubshared_DiscountBlock_tnGNQ {
   grid-area: discount;
@@ -5242,6 +5231,12 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
 .partnereventdialog_WarningStylesBackground_2MAql {
   background-color: #b8860b;
   color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
 }
 .partnereventdialog_Padding_2oWai {
   padding-top: 10px;

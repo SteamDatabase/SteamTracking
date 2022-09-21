@@ -4171,6 +4171,11 @@
                 fields: {
                   id: { n: 1, c: u.oY },
                   score: { n: 2, br: c.FE.readDouble, bw: c.Xc.writeDouble },
+                  spellcheck_generated_result: {
+                    n: 3,
+                    br: c.FE.readBool,
+                    bw: c.Xc.writeBool,
+                  },
                 },
               }),
             y.sm_m
@@ -4215,7 +4220,7 @@
         constructor(e = null) {
           super(),
             f.prototype.total_matching_records || c.aR(f.M()),
-            v.initialize(this, e, 0, -1, [4], null);
+            v.initialize(this, e, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -4231,6 +4236,13 @@
                   start: { n: 2, br: c.FE.readInt32, bw: c.Xc.writeInt32 },
                   count: { n: 3, br: c.FE.readInt32, bw: c.Xc.writeInt32 },
                   per_result_metadata: { n: 4, c: y, r: !0, q: !0 },
+                  spellcheck_suggestions: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: c.FE.readString,
+                    bw: c.Xc.writeRepeatedString,
+                  },
                 },
               }),
             f.sm_m
@@ -8487,13 +8499,13 @@
     45328: (e, t, i) => {
       "use strict";
       i.d(t, {
-        A0: () => g,
-        Cy: () => b,
-        PV: () => v,
-        QQ: () => y,
-        V7: () => D,
-        ZW: () => f,
-        qh: () => h,
+        A0: () => v,
+        Cy: () => S,
+        PV: () => y,
+        QQ: () => f,
+        V7: () => b,
+        ZW: () => D,
+        qh: () => g,
       });
       var r = i(70655),
         n = i(9669),
@@ -8502,12 +8514,13 @@
         o = i(67294),
         l = i(88767),
         c = (i(54698), i(82946), i(48780)),
-        u = i(93976),
-        d = i(81130),
-        m = i(99533),
-        _ = i(22975),
-        p = i(90666);
-      class h {
+        u = i(77520),
+        d = i(93976),
+        m = i(81130),
+        _ = i(99533),
+        p = i(22975),
+        h = i(90666);
+      class g {
         constructor() {
           (this.m_mapRegistrations = new Map()),
             (this.m_mapRequestedAppIDs = new Map()),
@@ -8529,6 +8542,29 @@
         }
         GetOptInRegistrationAndEligibilityForApp(e) {
           return this.m_mapRegistrations.get(e);
+        }
+        GetOptInRegistrationAndEligibilityForApps(e) {
+          if (0 == e.length) return null;
+          let t = new Map();
+          for (let i of e) {
+            let e = this.m_mapRegistrations.get(i);
+            if (e)
+              for (let i of e.keys()) {
+                let e = t.get(i);
+                e || (e = 0), t.set(i, e + 1);
+              }
+          }
+          let i = new Map(),
+            r = e[0];
+          return (
+            t.forEach((t, n) => {
+              if (t == e.length) {
+                let e = this.m_mapRegistrations.get(r).get(n);
+                (0, u.X)(e, "Missing OptIn Restration"), i.set(n, e);
+              }
+            }),
+            i.size > 0 ? i : null
+          );
         }
         BHasOptionOnRegistration(e, t, i) {
           var r, n;
@@ -8607,7 +8643,7 @@
         GetOptInNameRegistrationsCallbackList(e) {
           return e
             ? (this.m_mapOptInNameCallback.has(e) ||
-                this.m_mapOptInNameCallback.set(e, new m.pB()),
+                this.m_mapOptInNameCallback.set(e, new _.pB()),
               this.m_mapOptInNameCallback.get(e))
             : null;
         }
@@ -8615,8 +8651,8 @@
           var i;
           return (0, r.mG)(this, void 0, void 0, function* () {
             const r =
-                p.De.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
-              n = { sessionid: p.De.SESSIONID, opt_in_name: e, opt_in_only: t },
+                h.De.PARTNER_BASE_URL + "optin/ajaxgetalloptinregistrations",
+              n = { sessionid: h.De.SESSIONID, opt_in_name: e, opt_in_only: t },
               a = yield s().get(r, { params: n, withCredentials: !0 });
             return null === (i = null == a ? void 0 : a.data) || void 0 === i
               ? void 0
@@ -8633,8 +8669,8 @@
                 : n.get(t);
             if (r) return r;
             try {
-              const r = p.De.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
-                n = { sessionid: p.De.SESSIONID, appid: t, opt_in_name: e },
+              const r = h.De.PARTNER_BASE_URL + "optin/ajaxgetoptinregistation",
+                n = { sessionid: h.De.SESSIONID, appid: t, opt_in_name: e },
                 o = yield s().get(r, {
                   params: n,
                   withCredentials: !0,
@@ -8665,7 +8701,7 @@
                 return !0;
               }
               {
-                const e = (0, u.l)(o);
+                const e = (0, d.l)(o);
                 console.error(
                   "LoadOptInRegistration : failed with a response and: " +
                     e.strErrorMsg,
@@ -8673,7 +8709,7 @@
                 );
               }
             } catch (e) {
-              const t = (0, u.l)(e);
+              const t = (0, d.l)(e);
               console.error(
                 "LoadOptInRegistration : failed with " + t.strErrorMsg,
                 t
@@ -8710,8 +8746,8 @@
               0 == l.length)
             )
               return !0;
-            const d =
-              p.De.PARTNER_BASE_URL + "optin/ajaxbatchgetoptinregistation";
+            const u =
+              h.De.PARTNER_BASE_URL + "optin/ajaxbatchgetoptinregistation";
             let m = null;
             try {
               const t = [];
@@ -8723,7 +8759,7 @@
                     origin: self.origin,
                   };
                 t.push(
-                  s().get(d, {
+                  s().get(u, {
                     params: n,
                     withCredentials: !0,
                     cancelToken: null == i ? void 0 : i.token,
@@ -8752,7 +8788,7 @@
             }
             if (null == m) r(!0);
             else {
-              const i = (0, u.l)(m);
+              const i = (0, d.l)(m);
               console.error(
                 "Could not load OptIn for Apps",
                 t,
@@ -8768,11 +8804,11 @@
         RegisterAppForOptIn(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const i = t.startsWith("sale_") ? t : "sale_" + t,
-              r = h.Get().CreateOrGetRegistration(e, i);
+              r = g.Get().CreateOrGetRegistration(e, i);
             return (
-              (r.accountid_add = p.L7.accountid),
+              (r.accountid_add = h.L7.accountid),
               (r.opt_in = !0),
-              (r.accountid_lastmod = p.L7.accountid),
+              (r.accountid_lastmod = h.L7.accountid),
               this.UpdateOptInRegistration(r)
             );
           });
@@ -8783,10 +8819,10 @@
             let i = null;
             try {
               const r = new FormData();
-              r.append("sessionid", p.De.SESSIONID),
+              r.append("sessionid", h.De.SESSIONID),
                 Object.keys(e).forEach((t) => r.append(t, e[t]));
               const n =
-                  p.De.PARTNER_BASE_URL +
+                  h.De.PARTNER_BASE_URL +
                   "optin/ajaxupdateoptinregistration/" +
                   e.appid,
                 a = yield s().post(n, r, { withCredentials: !0 });
@@ -8796,9 +8832,9 @@
                   (null === (t = a.data) || void 0 === t ? void 0 : t.success)
               )
                 return null;
-              i = (0, u.l)(a);
+              i = (0, d.l)(a);
             } catch (e) {
-              i = (0, u.l)(e);
+              i = (0, d.l)(e);
             }
             return (
               console.error(
@@ -8812,11 +8848,11 @@
         }
         static Get() {
           return (
-            h.s_OptInRegs ||
-              ((h.s_OptInRegs = new h()),
-              (window.COptInRegistrations = h.s_OptInRegs),
-              h.s_OptInRegs.Init()),
-            h.s_OptInRegs
+            g.s_OptInRegs ||
+              ((g.s_OptInRegs = new g()),
+              (window.COptInRegistrations = g.s_OptInRegs),
+              g.s_OptInRegs.Init()),
+            g.s_OptInRegs
           );
         }
         InternalAddRegistrations(e) {
@@ -8846,12 +8882,12 @@
         Init() {
           let e = JSON.parse(
             JSON.stringify(
-              (0, p.kQ)("optin_registrations", "application_config")
+              (0, h.kQ)("optin_registrations", "application_config")
             )
           );
           this.ValidateStoreDefault(e) &&
             (this.InternalAddRegistrations(e),
-            "dev" == p.De.WEB_UNIVERSE &&
+            "dev" == h.De.WEB_UNIVERSE &&
               console.log("COptInRegistrations: " + e.length, e));
         }
         ValidateStoreDefault(e) {
@@ -8868,7 +8904,7 @@
           );
         }
       }
-      function g(e, t) {
+      function v(e, t) {
         var i;
         const r =
           null === (i = e.jsondata) || void 0 === i
@@ -8891,21 +8927,21 @@
         }
         return [];
       }
-      function v() {
+      function y() {
         return o.useMemo(
           () => ({
-            fnLoadMultiOptInRegistration: h.Get().LoadMultiOptInRegistration,
+            fnLoadMultiOptInRegistration: g.Get().LoadMultiOptInRegistration,
           }),
           []
         );
       }
-      function y(e, t) {
+      function f(e, t) {
         const [i, r] = o.useState(null);
         return (
           (0, o.useEffect)(() => {
             const i = t.filter(Boolean);
             i.length > 0
-              ? h
+              ? g
                   .Get()
                   .LoadMultiOptInRegistration(
                     i.map(() => e),
@@ -8914,7 +8950,7 @@
                   .then(() => {
                     const t = new Map();
                     i.forEach((i) => {
-                      const r = h.Get().GetRegistration(i, e);
+                      const r = g.Get().GetRegistration(i, e);
                       r && t.set(i, r);
                     }),
                       r(t);
@@ -8924,14 +8960,14 @@
           i
         );
       }
-      function f(e) {
-        const [t, i] = o.useState(h.Get().GetAllOptInRegistrations(e));
+      function D(e) {
+        const [t, i] = o.useState(g.Get().GetAllOptInRegistrations(e));
         return (
-          (0, _.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(e), i), t
+          (0, p.Qg)(g.Get().GetOptInNameRegistrationsCallbackList(e), i), t
         );
       }
-      function D(e) {
-        const t = f(e),
+      function b(e) {
+        const t = D(e),
           [i, r] = o.useState({
             nAppOptedIn: 0,
             nAppEligible: 0,
@@ -8962,22 +8998,28 @@
           i
         );
       }
-      function b(e, t) {
+      function S(e, t) {
         const i = (0, l.useQuery)(
           ["useAllOptInRegistrationByName", e, Boolean(t)],
-          () => h.Get().FetchOptInRegistrationForOptIn(e, t),
+          () => g.Get().FetchOptInRegistrationForOptIn(e, t),
           { staleTime: 36e5 }
         );
         return i.isLoading ? null : i.data;
       }
       (0, r.gn)(
-        [d.a],
-        h.prototype,
+        [m.a],
+        g.prototype,
         "GetOptInRegistrationAndEligibilityForApp",
         null
       ),
-        (0, r.gn)([d.a], h.prototype, "LoadMultiOptInRegistration", null),
-        (0, r.gn)([a.aD], h.prototype, "Init", null);
+        (0, r.gn)(
+          [m.a],
+          g.prototype,
+          "GetOptInRegistrationAndEligibilityForApps",
+          null
+        ),
+        (0, r.gn)([m.a], g.prototype, "LoadMultiOptInRegistration", null),
+        (0, r.gn)([a.aD], g.prototype, "Init", null);
     },
     46994: (e, t, i) => {
       "use strict";
@@ -10736,9 +10778,16 @@
           const a = d.Z.Get().GetPackage(e);
           if (!a) return;
           const l = (0, v.wQ)(),
-            c = (0, o.R1)(a).nBaseAppID,
-            u = c && n.qh.Get().GetOptInRegistrationAndEligibilityForApp(c),
-            m = this.GetPackageDiscountsIncludingOverrides(e),
+            c = (0, o.R1)(a).nBaseAppID;
+          let u = c && n.qh.Get().GetOptInRegistrationAndEligibilityForApp(c);
+          c ||
+            u ||
+            (u = n.qh
+              .Get()
+              .GetOptInRegistrationAndEligibilityForApps(
+                a.GetIncludedAppIDs()
+              ));
+          const m = this.GetPackageDiscountsIncludingOverrides(e),
             _ = !m,
             p = _
               ? null

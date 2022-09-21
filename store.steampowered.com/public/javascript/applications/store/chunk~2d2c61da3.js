@@ -1297,6 +1297,11 @@
                 fields: {
                   id: { n: 1, c: a.oY },
                   score: { n: 2, br: s.FE.readDouble, bw: s.Xc.writeDouble },
+                  spellcheck_generated_result: {
+                    n: 3,
+                    br: s.FE.readBool,
+                    bw: s.Xc.writeBool,
+                  },
                 },
               }),
             d.sm_m
@@ -1341,7 +1346,7 @@
         constructor(e = null) {
           super(),
             _.prototype.total_matching_records || s.aR(_.M()),
-            n.initialize(this, e, 0, -1, [4], null);
+            n.initialize(this, e, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -1357,6 +1362,13 @@
                   start: { n: 2, br: s.FE.readInt32, bw: s.Xc.writeInt32 },
                   count: { n: 3, br: s.FE.readInt32, bw: s.Xc.writeInt32 },
                   per_result_metadata: { n: 4, c: d, r: !0, q: !0 },
+                  spellcheck_suggestions: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: s.FE.readString,
+                    bw: s.Xc.writeRepeatedString,
+                  },
                 },
               }),
             _.sm_m
