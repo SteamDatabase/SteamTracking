@@ -1056,11 +1056,11 @@
           return r.millerRabin(e);
         });
       const E = n;
-      var M = function (e, t) {
+      var F = function (e, t) {
           (this.modulus = new E(e, 16)),
             (this.encryptionExponent = new E(t, 16));
         },
-        F = {
+        M = {
           base64:
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
           encode: function (e) {
@@ -1139,7 +1139,7 @@
         };
       const z = {
         getPublicKey: function (e, t) {
-          return new M(e, t);
+          return new F(e, t);
         },
         encrypt: function (e, t) {
           return (
@@ -1147,7 +1147,7 @@
             !!(e = this.pkcs1pad2(e, (t.modulus.bitLength() + 7) >> 3)) &&
             !!(e = e.modPowInt(t.encryptionExponent, t.modulus)) &&
             (1 == (1 & (e = e.toString(16)).length) && (e = "0" + e),
-            F.encode(T.decode(e)))
+            M.encode(T.decode(e)))
           );
         },
         pkcs1pad2: function (e, t) {
@@ -1696,9 +1696,12 @@
                 ),
                 29
               );
+            const n = e.replace(/[^\x00-\x7F]/g, ""),
+              a = t.replace(/[^\x00-\x7F]/g, "");
+            if (!n.length || !a.length) return 8;
             (this.m_eStatus = 1), (this.m_bUsingCodeOverride = !1);
             try {
-              const n = yield (function (e, t) {
+              const t = yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   const r = s.gA.Init(f.kp);
                   r.Body().set_account_name(t);
@@ -1730,8 +1733,8 @@
                     return console.error(`Failed to get RSA key: ${e}`), null;
                   }
                 });
-              })(this.m_transport, e);
-              if (!n)
+              })(this.m_transport, n);
+              if (!t)
                 return (
                   console.error(
                     "Cannot start auth session without a valid RSA key"
@@ -1740,28 +1743,28 @@
                   (this.m_eFailureState = m.NZ.Network),
                   20
                 );
-              const a = (0, g.IC)(t, n),
-                l = s.gA.Init(f._u);
+              const l = (0, g.IC)(a, t),
+                d = s.gA.Init(f._u);
               if (
-                (l.Body().set_account_name(e),
-                l.Body().set_encrypted_password(a),
-                l.Body().set_encryption_timestamp(n.timestamp),
-                l.Body().set_remember_login(!!r),
-                l.Body().set_persistence(r ? 1 : 0),
-                l.Body().set_website_id(u.De.WEBSITE_ID),
-                l.Body().set_device_details(yield this.GetDeviceDetails()),
+                (d.Body().set_account_name(n),
+                d.Body().set_encrypted_password(l),
+                d.Body().set_encryption_timestamp(t.timestamp),
+                d.Body().set_remember_login(!!r),
+                d.Body().set_persistence(r ? 1 : 0),
+                d.Body().set_website_id(u.De.WEBSITE_ID),
+                d.Body().set_device_details(yield this.GetDeviceDetails()),
                 u.De.IN_CLIENT)
               ) {
                 (yield SteamClient.Auth.GetSteamGuardData()).eresult;
               }
-              const d = yield f.$h.BeginAuthSessionViaCredentials(
+              const h = yield f.$h.BeginAuthSessionViaCredentials(
                 this.m_transport,
-                l
+                d
               );
               return (0, o.z)(() =>
                 (0, i.mG)(this, void 0, void 0, function* () {
-                  const t = d.GetEResult(),
-                    r = d.Hdr().transport_error();
+                  const t = h.GetEResult(),
+                    r = h.Hdr().transport_error();
                   if (1 !== t)
                     switch (t) {
                       case 5:
@@ -1790,7 +1793,7 @@
                     allowed_confirmations: a,
                     steamid: o,
                     weak_token: l,
-                  } = d.Body().toObject();
+                  } = h.Body().toObject();
                   if (
                     ((this.m_msPollInterval = 1e3 * s),
                     (this.m_strClientID = i),
@@ -1814,18 +1817,18 @@
                       console.log(`checkdevice ajax failed: ${e.message}`);
                     }
                   }
-                  const h = (function (e) {
+                  const d = (function (e) {
                       let t = e[0] || 0;
                       e.length > 1 && (t = e.sort((e, t) => y[e] - y[t])[0]);
                       return t;
                     })(a.map(({ confirmation_type: e }) => e)),
-                    g = a.find(({ confirmation_type: e }) => e === h);
+                    g = a.find(({ confirmation_type: e }) => e === d);
                   switch (
                     (g &&
                       g.associated_message &&
                       (this.m_strConfirmationAssociatedMessage =
                         g.associated_message),
-                    h)
+                    d)
                   ) {
                     case 1:
                       return (this.m_eStatus = 13), this.StartPolling(), t;
@@ -2089,9 +2092,9 @@
         v = r.n(S),
         R = r(14344),
         E = r(43921),
-        M = r.n(E);
+        F = r.n(E);
       r(21645);
-      function F(e) {
+      function M(e) {
         const {
             transport: t,
             onComplete: r,
@@ -2127,7 +2130,7 @@
           }, [e.refreshInfo]),
           n.createElement(
             "div",
-            { className: M().Column },
+            { className: F().Column },
             n.createElement(
               "div",
               { style: { position: "relative" } },
@@ -2138,15 +2141,15 @@
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
                   quality: T(h),
-                  className: (0, a.Z)(M().LoginQR, b && M().Blur),
+                  className: (0, a.Z)(F().LoginQR, b && F().Blur),
                 },
                 h
               ),
               b &&
                 n.createElement(
                   "div",
-                  { className: M().Overlay },
-                  n.createElement("div", { className: M().Box }, p)
+                  { className: F().Overlay },
+                  n.createElement("div", { className: F().Box }, p)
                 )
             )
           )
@@ -2159,10 +2162,10 @@
         const { size: t } = e;
         return n.createElement("div", {
           className: (0, a.Z)(
-            M().Loading,
-            "small" == t && M().Small,
-            ("medium" == t || !t) && M().Medium,
-            "large" == t && M().Large
+            F().Loading,
+            "small" == t && F().Small,
+            ("medium" == t || !t) && F().Medium,
+            "large" == t && F().Large
           ),
         });
       }
@@ -2272,7 +2275,7 @@
             disableQR: a,
             autoFocus: o,
             refreshInfo: l,
-            renderSuccess: c = () => n.createElement(Me, null),
+            renderSuccess: c = () => n.createElement(Fe, null),
           } = e,
           h = ({
             bSuccess: e,
@@ -2318,8 +2321,8 @@
             setTokenToRevoke: t.SetTokenToRevoke,
           }));
         })({ transport: r, onComplete: h, ePlatformType: s });
-        const [E, M] = (0, n.useState)(0),
-          [F, T] = (0, n.useState)(
+        const [E, F] = (0, n.useState)(0),
+          [M, T] = (0, n.useState)(
             null !== (t = null == l ? void 0 : l.account_name) && void 0 !== t
               ? t
               : ""
@@ -2328,10 +2331,10 @@
           [k, j] = (0, n.useState)(!0),
           N = x(),
           W = !(0 === g || 1 === g || 2 === g),
-          I = () => (F && z ? y(F, z, k) : Promise.resolve(0)),
+          I = () => (M && z ? y(M, z, k) : Promise.resolve(0)),
           L = () => {
-            console.log(`Logging in offline with username ${F}`),
-              SteamClient.User.SetLoginCredentials(F, z, k);
+            console.log(`Logging in offline with username ${M}`),
+              SteamClient.User.SetLoginCredentials(M, z, k);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -2347,7 +2350,7 @@
             "div",
             { className: v().SideBySide },
             n.createElement(U, {
-              strAccountName: F,
+              strAccountName: M,
               onAccountNameChange: T,
               strPassword: z,
               onPasswordChange: A,
@@ -2361,7 +2364,7 @@
             !a &&
               n.createElement(G, {
                 transport: r,
-                onQRStatusChange: M,
+                onQRStatusChange: F,
                 onComplete: h,
                 platform: s,
                 refreshInfo: l,
@@ -2717,7 +2720,7 @@
               n.createElement(
                 "div",
                 { className: v().QR },
-                n.createElement(F, {
+                n.createElement(M, {
                   onStatusChange: t,
                   transport: r,
                   onComplete: i,
@@ -3470,7 +3473,7 @@
           })
         );
       }
-      function Me() {
+      function Fe() {
         return n.createElement(
           Be,
           { alignItems: "center", justifyContent: "center" },
@@ -4931,17 +4934,17 @@
           return "CAuthentication_RefreshToken_Revoke_Response";
         }
       }
-      class M extends a {
+      class F extends a {
         constructor(e = null) {
           super(),
-            M.prototype.refresh_token || n.aR(M.M()),
+            F.prototype.refresh_token || n.aR(F.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   refresh_token: {
                     n: 1,
@@ -4952,84 +4955,6 @@
                     n: 2,
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
-                  },
-                },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new M();
-          return M.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_MigrateMobileSession_Response";
-        }
-      }
-      class F extends a {
-        constructor(e = null) {
-          super(),
-            F.prototype.token_id || n.aR(F.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  token_id: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  token_description: {
-                    n: 2,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                  time_updated: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  platform_type: {
-                    n: 4,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                  token_state: { n: 5, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                  owner_steamid: {
-                    n: 6,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
                   },
                 },
               }),
@@ -5066,6 +4991,84 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_MigrateMobileSession_Response";
+        }
+      }
+      class M extends a {
+        constructor(e = null) {
+          super(),
+            M.prototype.token_id || n.aR(M.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  token_id: {
+                    n: 1,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                  token_description: {
+                    n: 2,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                  time_updated: {
+                    n: 3,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  platform_type: {
+                    n: 4,
+                    br: n.FE.readEnum,
+                    bw: n.Xc.writeEnum,
+                  },
+                  token_state: { n: 5, br: n.FE.readEnum, bw: n.Xc.writeEnum },
+                  owner_steamid: {
+                    n: 6,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new M();
+          return M.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSupportRefreshTokenDescription";
@@ -5142,7 +5145,7 @@
             z.sm_m ||
               (z.sm_m = {
                 proto: z,
-                fields: { refresh_tokens: { n: 1, c: F, r: !0, q: !0 } },
+                fields: { refresh_tokens: { n: 1, c: M, r: !0, q: !0 } },
               }),
             z.sm_m
           );
@@ -5193,7 +5196,7 @@
             A.sm_m ||
               (A.sm_m = {
                 proto: A,
-                fields: { refresh_tokens: { n: 1, c: F, r: !0, q: !0 } },
+                fields: { refresh_tokens: { n: 1, c: M, r: !0, q: !0 } },
               }),
             A.sm_m
           );
@@ -5553,7 +5556,7 @@
             );
           }),
           (e.MigrateMobileSession = function (e, t) {
-            return e.SendMsg("Authentication.MigrateMobileSession#1", t, M, {
+            return e.SendMsg("Authentication.MigrateMobileSession#1", t, F, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
