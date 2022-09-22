@@ -11945,17 +11945,18 @@
               });
         }
         GetMatchCountForFacetValue(e) {
-          var t, n, a, r, i, s, o, l, c, m, p, _, h, g, v, S, E, f, b, C;
+          var t, n, a, r, i, s, o, l, c, m, p, _, h, g, v, S, E, f, b, C, y, D;
           if (this.m_mapMultiFacetCounts) {
-            const C = "402",
-              y = "401",
-              D = "9",
-              I = "28",
-              w = "41",
-              A = "42",
-              k = "43",
-              B = "44",
-              T = "37";
+            const D = "402",
+              I = "401",
+              w = "9",
+              A = "28",
+              k = "18",
+              B = "41",
+              T = "42",
+              L = "43",
+              G = "44",
+              N = "37";
             switch (e.facetValue.type) {
               case u.HL.k_ESaleTagFilter:
               case void 0:
@@ -11994,91 +11995,104 @@
                         (s = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === s
                         ? void 0
-                        : s.get(C);
+                        : s.get(D);
                     case "vr only":
                       return null ===
                         (o = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === o
                         ? void 0
-                        : o.get(y);
+                        : o.get(I);
                     case "full controller":
                       return null ===
                         (l = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === l
                         ? void 0
-                        : l.get(I);
+                        : l.get(A);
+                    case "any controller":
+                      return (
+                        (null ===
+                          (c = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === c
+                          ? void 0
+                          : c.get(A)) ||
+                        (null ===
+                          (m = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === m
+                          ? void 0
+                          : m.get(k))
+                      );
                     case "remote play":
                       return Math.max(
-                        null ===
-                          (c = this.m_mapMultiFacetCounts.get("category")) ||
-                          void 0 === c
-                          ? void 0
-                          : c.get(w),
-                        null ===
-                          (m = this.m_mapMultiFacetCounts.get("category")) ||
-                          void 0 === m
-                          ? void 0
-                          : m.get(A),
                         null ===
                           (p = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === p
                           ? void 0
-                          : p.get(k),
+                          : p.get(B),
                         null ===
                           (_ = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === _
                           ? void 0
-                          : _.get(B)
+                          : _.get(T),
+                        null ===
+                          (h = this.m_mapMultiFacetCounts.get("category")) ||
+                          void 0 === h
+                          ? void 0
+                          : h.get(L),
+                        null ===
+                          (g = this.m_mapMultiFacetCounts.get("category")) ||
+                          void 0 === g
+                          ? void 0
+                          : g.get(G)
                       );
                     case "remote play together":
                       return null ===
-                        (h = this.m_mapMultiFacetCounts.get("category")) ||
-                        void 0 === h
-                        ? void 0
-                        : h.get(B);
-                    case "free":
-                      return null ===
-                        (g = this.m_mapMultiFacetCounts.get("genre")) ||
-                        void 0 === g
-                        ? void 0
-                        : g.get(T);
-                    case "discounted":
-                      return null ===
-                        (v = this.m_mapMultiFacetCounts.get("discounted")) ||
+                        (v = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === v
                         ? void 0
-                        : v.get("true");
-                    case "coop":
+                        : v.get(G);
+                    case "free":
                       return null ===
-                        (S = this.m_mapMultiFacetCounts.get("category")) ||
+                        (S = this.m_mapMultiFacetCounts.get("genre")) ||
                         void 0 === S
                         ? void 0
-                        : S.get(D);
+                        : S.get(N);
+                    case "discounted":
+                      return null ===
+                        (E = this.m_mapMultiFacetCounts.get("discounted")) ||
+                        void 0 === E
+                        ? void 0
+                        : E.get("true");
+                    case "coop":
+                      return null ===
+                        (f = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === f
+                        ? void 0
+                        : f.get(w);
                   }
                 break;
               case u.HL.k_EAppType:
-                return null === (E = this.m_mapMultiFacetCounts.get("type")) ||
-                  void 0 === E
-                  ? void 0
-                  : E.get(e.facetValue.appType);
-              case u.HL.k_ELanguage:
-                const L = (0, d.j_)(e.facetValue.language);
-                return null ===
-                  (f = this.m_mapMultiFacetCounts.get("supportedlang_" + L)) ||
-                  void 0 === f
-                  ? void 0
-                  : f.get("true");
-              case u.HL.k_EContentDescriptor:
-                return null ===
-                  (b = this.m_mapMultiFacetCounts.get("descids")) ||
+                return null === (b = this.m_mapMultiFacetCounts.get("type")) ||
                   void 0 === b
                   ? void 0
-                  : b.get(e.facetValue.contentDescriptor.toString());
+                  : b.get(e.facetValue.appType);
+              case u.HL.k_ELanguage:
+                const M = (0, d.j_)(e.facetValue.language);
+                return null ===
+                  (C = this.m_mapMultiFacetCounts.get("supportedlang_" + M)) ||
+                  void 0 === C
+                  ? void 0
+                  : C.get("true");
+              case u.HL.k_EContentDescriptor:
+                return null ===
+                  (y = this.m_mapMultiFacetCounts.get("descids")) ||
+                  void 0 === y
+                  ? void 0
+                  : y.get(e.facetValue.contentDescriptor.toString());
             }
           } else if (this.m_facetCounts)
-            return null === (C = this.m_facetCounts) || void 0 === C
+            return null === (D = this.m_facetCounts) || void 0 === D
               ? void 0
-              : C.get(e.facetValue.nAtomicStoreTagID);
+              : D.get(e.facetValue.nAtomicStoreTagID);
           return null;
         }
         DeactivateFacetValues() {
@@ -23150,34 +23164,42 @@
             .map((e) => s.z5.find((t) => t.flavor === e))
             .filter((e) => !!e)
             .map((e) => {
-              var t, n;
-              let i = e.label,
-                s = e.tooltip;
+              var t, n, i;
+              let s = e.label,
+                o = e.tooltip;
               return (
                 (null === (t = this.props.event) || void 0 === t
                   ? void 0
                   : t.BUsesContentHubForItemSource()) &&
-                  "controller" ===
-                    (null === (n = this.props.event) || void 0 === n
-                      ? void 0
-                      : n.GetContentHubType()) &&
                   "contenthub_popular" === e.flavor &&
-                  ((i =
-                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
-                  (s =
-                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip")),
+                  ("controller" ===
+                  (null === (n = this.props.event) || void 0 === n
+                    ? void 0
+                    : n.GetContentHubType())
+                    ? ((s =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
+                      (o =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip"))
+                    : "greatondeck" ===
+                        (null === (i = this.props.event) || void 0 === i
+                          ? void 0
+                          : i.GetContentHubType()) &&
+                      ((s =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
+                      (o =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))),
                 a.createElement(
                   dt.HP,
                   {
                     key: e.flavor,
-                    toolTipContent: (0, G.Xx)(s),
+                    toolTipContent: (0, G.Xx)(o),
                     onClick: () => this.OnFlavorLabelClick(e.flavor),
                     className: (0, D.Z)(
                       zr().FlavorLabel,
                       r == e.flavor && zr().SelectedFlavor
                     ),
                   },
-                  (0, G.Xx)(i)
+                  (0, G.Xx)(s)
                 )
               );
             });

@@ -13046,34 +13046,42 @@
             .map((e) => l.z5.find((t) => t.flavor === e))
             .filter((e) => !!e)
             .map((e) => {
-              var t, a;
-              let r = e.label,
-                l = e.tooltip;
+              var t, a, r;
+              let l = e.label,
+                s = e.tooltip;
               return (
                 (null === (t = this.props.event) || void 0 === t
                   ? void 0
                   : t.BUsesContentHubForItemSource()) &&
-                  "controller" ===
-                    (null === (a = this.props.event) || void 0 === a
-                      ? void 0
-                      : a.GetContentHubType()) &&
                   "contenthub_popular" === e.flavor &&
-                  ((r =
-                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
-                  (l =
-                    "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip")),
+                  ("controller" ===
+                  (null === (a = this.props.event) || void 0 === a
+                    ? void 0
+                    : a.GetContentHubType())
+                    ? ((l =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_Controller"),
+                      (s =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_Controller_ttip"))
+                    : "greatondeck" ===
+                        (null === (r = this.props.event) || void 0 === r
+                          ? void 0
+                          : r.GetContentHubType()) &&
+                      ((l =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck"),
+                      (s =
+                        "#Sale_BrowserSortOption_ContentHub_Popular_GreatOnDeck_ttip"))),
                 n.createElement(
                   Hn.HP,
                   {
                     key: e.flavor,
-                    toolTipContent: (0, x.Xx)(l),
+                    toolTipContent: (0, x.Xx)(s),
                     onClick: () => this.OnFlavorLabelClick(e.flavor),
                     className: (0, D.Z)(
                       zn().FlavorLabel,
                       i == e.flavor && zn().SelectedFlavor
                     ),
                   },
-                  (0, x.Xx)(r)
+                  (0, x.Xx)(l)
                 )
               );
             });
