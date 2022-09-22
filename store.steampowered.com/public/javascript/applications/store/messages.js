@@ -379,9 +379,17 @@
         }
       }
     },
-    75075: (e, t, s) => {
+    70695: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { MarketingMessageRoutes: () => j, default: () => z });
+      s.d(t, { T: () => r });
+      var a = s(90666);
+      function r() {
+        return (0, a.kQ)("store_user_config", "application_config");
+      }
+    },
+    13925: (e, t, s) => {
+      "use strict";
+      s.r(t), s.d(t, { MarketingMessageRoutes: () => z, default: () => W });
       var a = s(67294),
         r = s(9355),
         n = s(78587),
@@ -794,12 +802,13 @@
           )
         );
       }
-      var Y = s(65902);
-      const j = {
+      var Y = s(70695),
+        j = s(65902);
+      const z = {
         List: () => `${r.Z.MarketingMessages()}list/`,
         Message: (e) => `${r.Z.MarketingMessages()}${e}`,
       };
-      function z(e) {
+      function W(e) {
         const t = (function () {
           const [e, t] = a.useState(null);
           return (
@@ -807,15 +816,12 @@
               e ||
                 t(
                   (function () {
-                    if (!Z) {
-                      const e = (0, _.kQ)(
-                          "store_user_config",
-                          "application_config"
-                        ),
-                        t = new Y.J(_.De.WEBAPI_BASE_URL, e.webapi_token);
-                      Z = new p(t);
+                    if (!F) {
+                      const e = (0, Y.T)(),
+                        t = new j.J(_.De.WEBAPI_BASE_URL, e.webapi_token);
+                      F = new p(t);
                     }
-                    return Z;
+                    return F;
                   })()
                 );
             }, [e]),
@@ -831,24 +837,24 @@
                 null,
                 a.createElement(
                   n.AW,
-                  { path: `${j.List()}` },
+                  { path: `${z.List()}` },
                   a.createElement(B, { MarketingMessagesStore: t })
                 ),
                 a.createElement(
                   n.AW,
-                  { path: `${j.Message(":messageid")}` },
-                  a.createElement(W, null)
+                  { path: `${z.Message(":messageid")}` },
+                  a.createElement(Z, null)
                 ),
                 a.createElement(
                   n.AW,
                   null,
-                  a.createElement(n.l_, { to: `${j.List()}` })
+                  a.createElement(n.l_, { to: `${z.List()}` })
                 )
               )
             )
           : null;
       }
-      function W() {
+      function Z() {
         const e = (0, n.$B)();
         return a.createElement(
           "h1",
@@ -857,7 +863,7 @@
           e.params.messageid
         );
       }
-      let Z;
+      let F;
     },
   },
 ]);

@@ -211,6 +211,9 @@
   box-sizing: content-box;
 }
 .eventrow_OtherEvents_TextTitle_3Zufl {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   font-size: 15px;
   line-height: 19px;
   color: #fff;

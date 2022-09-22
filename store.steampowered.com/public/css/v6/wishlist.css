@@ -795,6 +795,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	}
 	.wishlist .controls .control_row {
 		padding-top: 5px;
+		flex-wrap: wrap-reverse;
 	}
 
 	.filter_section .wrapper {

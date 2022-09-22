@@ -1,0 +1,1264 @@
+.onlineuserchart_Placeholder_2kmc5 {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%
+  );
+  background-size: 400% 400%;
+  border-radius: 5px;
+  animation: onlineuserchart_GhostShine_M2laU 3.2s ease;
+  animation-iteration-count: infinite;
+}
+.onlineuserchart_ChartContainerPlaceholder_2XkUV {
+  height: 210px;
+  width: 940px;
+}
+@keyframes onlineuserchart_GhostShine_M2laU {
+  0% {
+    background-position: 100% 100%;
+  }
+  30% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.onlineuserchart_ChartContainer_FpMH3 {
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 16px 0px 0px;
+}
+@media all and (max-width: 700px) {
+  .onlineuserchart_ChartContainer_FpMH3 {
+    flex-direction: column-reverse;
+  }
+}
+.onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Chart_Rv-Tn {
+  flex: 1;
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Chart_Rv-Tn
+  .recharts-cartesian-grid-horizontal
+  line {
+  stroke: #4c5661;
+}
+.onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Stats_3ZiPu {
+  min-width: 25%;
+  margin-left: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media all and (max-width: 700px) {
+  .onlineuserchart_ChartContainer_FpMH3 .onlineuserchart_Stats_3ZiPu {
+    flex-direction: row;
+  }
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Stats_3ZiPu
+  .onlineuserchart_StatsTitle_TY7Qb {
+  color: #fff;
+  letter-spacing: 0px;
+  font-size: 27px;
+  font-weight: 300;
+}
+@media all and (max-width: 700px) {
+  .onlineuserchart_ChartContainer_FpMH3
+    .onlineuserchart_Stats_3ZiPu
+    .onlineuserchart_StatsTitle_TY7Qb {
+    font-size: 21px;
+  }
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Stats_3ZiPu
+  .onlineuserchart_StatSubtitle_20FBR {
+  font-size: 10px;
+  color: #b6b6b6;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Stats_3ZiPu
+  .onlineuserchart_StatSubtitle_20FBR
+  .onlineuserchart_Concurrent_1kVRt {
+  color: #82ff01;
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Stats_3ZiPu
+  .onlineuserchart_StatSubtitle_20FBR
+  .onlineuserchart_Now_2j4oL {
+  color: #70c3ff;
+}
+.onlineuserchart_ChartContainer_FpMH3
+  .onlineuserchart_Stats_3ZiPu
+  .onlineuserchart_CurrentStats_3uEBR {
+  padding-bottom: 30px;
+}
+@media all and (max-width: 700px) {
+  .onlineuserchart_ChartContainer_FpMH3
+    .onlineuserchart_Stats_3ZiPu
+    .onlineuserchart_CurrentStats_3uEBR {
+    padding-bottom: 0px;
+  }
+}
+body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
+  background: #0e1014;
+}
+.steamchartsshell_SteamChartsShell_2rArj {
+  position: relative;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  min-height: 80vh;
+  transition: padding-left 0.2s;
+  padding-left: 200px;
+  z-index: 0;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsShell_2rArj {
+    padding-left: 0px;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_HeaderCtn_1kLTg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsShell_2rArj
+    .steamchartsshell_SteamChartsContent_2uKyX
+    .steamchartsshell_HeaderCtn_1kLTg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_HeaderCtn_1kLTg.steamchartsshell_WithSubtitle__kbFJ {
+  margin-bottom: 0px;
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_HeaderCtn_1kLTg
+  h1 {
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsShell_2rArj
+    .steamchartsshell_SteamChartsContent_2uKyX
+    .steamchartsshell_HeaderCtn_1kLTg
+    h1 {
+    font-size: 29px;
+  }
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  h3 {
+  font-size: 23px;
+  font-weight: 300;
+  text-align: center;
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_PageSubtitle_3wxTK {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  display: block;
+  color: #fff;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsShell_2rArj
+    .steamchartsshell_SteamChartsContent_2uKyX
+    .steamchartsshell_PageSubtitle_3wxTK {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .steamchartsshell_SteamChartsShell_2rArj
+    .steamchartsshell_SteamChartsContent_2uKyX
+    .steamchartsshell_PageSubtitle_3wxTK
+    span {
+    display: none;
+  }
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_PageSubtitle_3wxTK
+  span {
+  color: #85939d;
+}
+.steamchartsshell_SteamChartsShell_2rArj
+  .steamchartsshell_SteamChartsContent_2uKyX
+  .steamchartsshell_PageSubtitle_3wxTK
+  > div {
+  margin-left: 6px;
+  display: inline-block;
+}
+.page_content_ctn#page_root {
+  position: relative;
+  transition: padding-left 0.2s, padding-right 0.2s;
+  overflow: hidden;
+}
+div#global_header .content {
+  position: relative;
+  left: 0;
+  transition: left 0.2s;
+}
+@media all and (min-width: 1190px) {
+  .page_content_ctn#page_root {
+    padding-left: 200px;
+  }
+  div#global_header .content {
+    left: 90px;
+  }
+  .steamchartsshell_SteamChartsShell_2rArj {
+    padding-left: 0;
+  }
+}
+@media all and (min-width: 1374px) {
+  .page_content_ctn#page_root {
+    padding-right: 200px;
+  }
+  div#global_header .content {
+    left: 0;
+  }
+}
+.steamchartsshell_SteamChartsRootPosition_2tAk2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+.steamchartsshell_AlignWithMenu_2-hIB {
+  position: relative;
+  width: 100vw;
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  margin-right: 30px;
+  padding-top: 94px;
+  overflow: hidden;
+  background: #0e1014;
+  background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
+  transition: padding-top 0.2s;
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h svg.steamchartsshell_SteamLogo_3qWYY {
+  position: absolute;
+  width: 110%;
+  top: -90px;
+  left: -40px;
+  filter: opacity(0.1);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, black 100%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media screen and (max-width: 1190px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h svg.steamchartsshell_SteamLogo_3qWYY {
+    top: 40px;
+  }
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h > :not(svg) {
+  position: relative;
+}
+@media screen and (max-width: 1190px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h {
+    padding-top: 96px;
+    box-shadow: unset;
+    background: unset;
+  }
+}
+@media screen and (max-width: 910px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h {
+    position: relative;
+    padding-top: 0;
+    margin-right: 0;
+    width: unset;
+    overflow-x: scroll;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background: #25282e;
+  }
+  .steamchartsshell_SteamChartsMenu_KSZ9h::-webkit-scrollbar {
+    height: 0;
+    background: transparent;
+  }
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT.steamchartsshell_Weekly_jC5Vq
+    .steamchartsshell_MenuLinks_Lj-O1
+    a:not(:first-child),
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT.steamchartsshell_Monthly_2mbn0
+    .steamchartsshell_MenuLinks_Lj-O1
+    a:not(:first-child) {
+    display: none;
+  }
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h
+  .steamchartsshell_MenuGroup_2X7eT
+  .steamchartsshell_MenuHeader_19boj {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px 0px 0px 18px;
+  margin-top: 2px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #7c8588;
+  border-top: 1px solid #2e3033;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT
+    .steamchartsshell_MenuHeader_19boj {
+    display: none;
+  }
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h
+  .steamchartsshell_MenuGroup_2X7eT
+  .steamchartsshell_MenuLinks_Lj-O1
+  a {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 18px;
+  margin: 4px 0px;
+  color: #c3d3d8;
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h
+  .steamchartsshell_MenuGroup_2X7eT
+  .steamchartsshell_MenuLinks_Lj-O1
+  a:hover {
+  background-color: #414653;
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h
+  .steamchartsshell_MenuGroup_2X7eT
+  .steamchartsshell_MenuLinks_Lj-O1
+  a.steamchartsshell_ActiveLink_3kEWJ {
+  background-color: #414653;
+}
+.steamchartsshell_SteamChartsMenu_KSZ9h
+  .steamchartsshell_MenuGroup_2X7eT
+  .steamchartsshell_MenuLinks_Lj-O1
+  a
+  svg {
+  width: 26px;
+  height: 26px;
+  margin-right: 14px;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT
+    .steamchartsshell_MenuLinks_Lj-O1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT
+    .steamchartsshell_MenuLinks_Lj-O1
+    a {
+    white-space: nowrap;
+  }
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT
+    .steamchartsshell_MenuLinks_Lj-O1
+    a
+    span {
+    display: flex;
+  }
+  .steamchartsshell_SteamChartsMenu_KSZ9h
+    .steamchartsshell_MenuGroup_2X7eT
+    .steamchartsshell_MenuLinks_Lj-O1
+    a
+    svg {
+    width: 19px;
+    height: 19px;
+    margin-right: 7px;
+  }
+}
+.steamchartsshell_ChartRangeCtn_wLFBO {
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: fit-content;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
+  margin-left: 16px;
+}
+@media all and (max-width: 910px) {
+  .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
+    font-size: 14px;
+  }
+}
+.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavCtn_1tUsA {
+  display: flex;
+  flex-grow: 1;
+}
+.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavCtn_1tUsA a {
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgba(144, 153, 161, 0.1),
+    rgba(144, 153, 161, 0.06)
+  );
+  padding: 12px 24px;
+  border-radius: 3px;
+  margin-right: 4px;
+  height: 43px;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+}
+.steamchartsshell_ChartRangeCtn_wLFBO
+  .steamchartsshell_ChartNavCtn_1tUsA:not(.steamchartsshell_Disabled_2VVBw)
+  a:hover {
+  background: linear-gradient(
+    to right,
+    rgba(204, 213, 220, 0.2),
+    rgba(204, 213, 220, 0.1)
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavPrev_PFs4U {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavNext_27ASB {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 9px;
+  border-color: transparent transparent transparent #fff;
+}
+.steamchartsshell_ChartRangeCtn_wLFBO
+  .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
+  .steamchartsshell_ChartNavNext_27ASB,
+.steamchartsshell_ChartRangeCtn_wLFBO
+  .steamchartsshell_ChartNavCtn_1tUsA.steamchartsshell_Disabled_2VVBw
+  .steamchartsshell_ChartNavPrev_PFs4U {
+  border-color: transparent transparent transparent #545c67;
+}
+.overviewpage_PageContainer_ACgX0 {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.overviewpage_OverviewPageSection_nu5vb {
+  margin-bottom: 48px;
+}
+.overviewpage_OverviewPageSection_nu5vb .overviewpage_SectionTitle_3xW3V {
+  font-size: 16px;
+  color: #c5cbd8;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.overviewpage_OverviewPageSection_nu5vb .overviewpage_SectionTitle_3xW3V b {
+  color: #fff;
+  font-weight: 500;
+}
+.overviewpage_ChartItemsCtn_3BNYF {
+  background: linear-gradient(
+    135deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(144, 153, 161, 0.06) 100%
+  );
+  border-radius: 3px;
+  padding: 6px;
+}
+.overviewpage_ChartItemsCtn_3BNYF .overviewpage_ChartMoreBtn_2HZLN {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #1e2834;
+  font-weight: 400;
+  text-align: center;
+}
+.overviewpage_ChartItemsCtn_3BNYF .overviewpage_ChartMoreBtn_2HZLN:hover {
+  background-color: #3a4d64;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.overviewpage_PageSubtitle_PEIn3 {
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.overviewpage_SideBySideCharts_2nroV {
+  display: flex;
+  flex-direction: row;
+}
+.overviewpage_SideBySideCharts_2nroV .overviewpage_OverviewChart_13C_Z {
+  flex: 1;
+  min-width: 0;
+  min-height: 570px;
+}
+.overviewpage_SideBySideCharts_2nroV
+  .overviewpage_OverviewChart_13C_Z:first-child {
+  margin-right: 30px;
+}
+.overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h {
+  flex: 1;
+  min-width: 0;
+}
+.overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h:first-child {
+  margin-right: 30px;
+}
+@media all and (max-width: 550px) {
+  .overviewpage_SideBySideCharts_2nroV {
+    flex-direction: column;
+  }
+  .overviewpage_SideBySideCharts_2nroV .overviewpage_Chart_3r75h:first-child,
+  .overviewpage_SideBySideCharts_2nroV
+    .overviewpage_OverviewChart_13C_Z:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+.overviewpage_TopItem_3rNNl {
+  border-bottom: 1px solid #1a9fff;
+}
+.overviewpage_TopItem_3rNNl img.overviewpage_Capsule_1hnd3 {
+  max-width: 100%;
+}
+.overviewpage_TopItem_3rNNl .overviewpage_ItemRow_WAvlE {
+  padding: 14px 6px;
+  border-top: none;
+}
+.overviewpage_TopItem_3rNNl
+  .overviewpage_ItemRow_WAvlE
+  .overviewpage_Rank_2Y06I {
+  font-size: 21px;
+  color: #fff;
+  line-height: 25px;
+}
+.overviewpage_ItemRow_WAvlE {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+  padding: 12px 4px;
+  border-top: 1px solid #4c5661;
+}
+.overviewpage_ItemRow_WAvlE .overviewpage_Rank_2Y06I {
+  color: #a7a7a7;
+  margin-right: 5px;
+  width: 18px;
+  text-align: center;
+}
+.overviewpage_ItemRow_WAvlE:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.overviewpage_ItemRow_WAvlE .overviewpage_ItemNameCtn_33Kj2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.overviewpage_ItemRow_WAvlE
+  .overviewpage_ItemNameCtn_33Kj2
+  .overviewpage_ItemDesc_27Ohq {
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #a0aab6;
+  margin-top: 2px;
+}
+.overviewpage_ItemRow_WAvlE .overviewpage_AddDataCtn_3hcZi {
+  text-align: right;
+}
+.overviewpage_ItemRow_WAvlE .overviewpage_AddDataDesc_2AWpr {
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #a0aab6;
+  margin-top: 2px;
+}
+.overviewpage_ImageButtonCtn_11u1M {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 192px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageButtonLink_9BzHA {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 50px #2d333b;
+}
+.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageButtonLink_9BzHA:hover {
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageGridCtn_tSK7M {
+  position: absolute;
+  padding: 0px;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 304%;
+  transform: scale(0.55) rotate(337deg) translateX(-44%) translateY(1%);
+  transform-origin: top left;
+  transition: all 0.3s ease-in;
+  filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
+    hue-rotate(0deg) saturate(1) blur(4px);
+}
+.overviewpage_Monthly_3N9ub
+  .overviewpage_ImageButtonCtn_11u1M
+  .overviewpage_ImageGridCtn_tSK7M {
+  transform: scale(0.45) rotate(337deg) translateX(-31%) translateY(1%);
+  filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
+    hue-rotate(0deg) saturate(1) blur(4px);
+}
+.overviewpage_ImageButtonCtn_11u1M .overviewpage_ImageGridCtn_tSK7M img {
+  width: 33%;
+  height: auto;
+}
+.overviewpage_ImageButtonCtn_11u1M:hover .overviewpage_ImageGridCtn_tSK7M {
+  transform: scale(0.58) rotate(337deg) translateX(-45%) translateY(-2%);
+}
+.overviewpage_Monthly_3N9ub
+  .overviewpage_ImageButtonCtn_11u1M:hover
+  .overviewpage_ImageGridCtn_tSK7M {
+  transform: scale(0.48) rotate(337deg) translateX(-32%) translateY(-3%);
+}
+.overviewpage_MoreLinksCtn_2ZaAF {
+  position: relative;
+}
+.overviewpage_MoreLinksCtn_2ZaAF a {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(144, 153, 161, 0.1),
+    rgba(144, 153, 161, 0.06)
+  );
+}
+.overviewpage_Placeholder_1s7CW {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%
+  );
+  background-size: 400% 400%;
+  border-radius: 5px;
+  animation: overviewpage_GhostShine_1GvQt 3.2s ease;
+  animation-iteration-count: infinite;
+}
+.overviewpage_OverviewChartPlaceholder_rGp5A {
+  height: 570px;
+  width: 455px;
+}
+@keyframes overviewpage_GhostShine_1GvQt {
+  0% {
+    background-position: 100% 100%;
+  }
+  30% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.weeklytopsellers_WeekBrowseLink_DOEXq {
+  cursor: pointer;
+}
+.weeklytopsellers_CountryControl_14L3r {
+  margin-top: 4px;
+}
+.weeklytopsellers_CountryControl_14L3r
+  .weeklytopsellers_DropDownContainer_cuSpV {
+  width: 33%;
+  min-width: 250px;
+}
+.weeklytopsellers_MostPlayedOptionsControl_JNIDk
+  .weeklytopsellers_DropDownContainer_cuSpV {
+  width: 33%;
+  min-width: 250px;
+}
+.weeklytopsellers_TopGameBackground_39Yky {
+  filter: saturate(0.4) opacity(0.4) blur(0px);
+  position: absolute;
+  top: -95px;
+  left: 1%;
+  width: calc(100vw - 200px);
+  max-width: 1900px;
+  transform-origin: top;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    );
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  z-index: -1;
+}
+@media screen and (max-width: 910px) {
+  .weeklytopsellers_TopGameBackground_39Yky {
+    top: -20px;
+    width: 100vw;
+    transform: scale(1.5);
+  }
+}
+.weeklytopsellers_BrowseTopSellersButton_2S1tS {
+  margin-top: 12px;
+}
+.weeklytopsellers_ChartPage_2txZN {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.weeklytopsellers_ChartTable_3arZn {
+  width: 100%;
+  color: #fff;
+  border-spacing: 0 3px;
+  border-collapse: separate;
+  border: none;
+}
+.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_ColumnHeaders_3eKiI {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_ColumnHeaders_3eKiI th {
+  font-weight: 300;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_HoverCell_3Jiuz {
+  width: 0%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Rank_2BuNW {
+  width: 5%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Rank_2BuNW
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Game_3fOO4 {
+  width: 50%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Game_3fOO4
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Price_amGaR {
+  width: 15%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Price_amGaR {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Change_150QP {
+  width: 9%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Change_150QP
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Concurrent_grXsM {
+  width: 18%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Concurrent_grXsM
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_Weeks_1ODme {
+  width: 7%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_Weeks_1ODme
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
+  th.weeklytopsellers_PeakInGame_1zxLz {
+  width: 12%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th.weeklytopsellers_PeakInGame_1zxLz
+    span {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_RightCell__iRXB {
+  text-align: right;
+  padding-right: 16px;
+}
+.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_TableRow_2-RN6 {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 92, 103, 0.3),
+    rgba(90, 98, 108, 0.3)
+  );
+  position: relative;
+  overflow: visible;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.weeklytopsellers_ChartTable_3arZn .weeklytopsellers_TableRow_2-RN6:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(130, 137, 151, 0.3),
+    rgba(163, 170, 178, 0.3)
+  );
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6:hover
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_Banner_24xXq
+  .weeklytopsellers_BannerText_UFtgo {
+  display: block;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_HoverCell_3Jiuz {
+  width: 0px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_HoverCell_3Jiuz
+  .weeklytopsellers_HoverSource_1oW6Q {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_HoverCell_3Jiuz
+  .weeklytopsellers_HoverSource_1oW6Q
+  .weeklytopsellers_HoverMask_N8w56 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 6;
+}
+@media screen and (max-width: 1750px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_TableRow_2-RN6
+    .weeklytopsellers_HoverCell_3Jiuz
+    .weeklytopsellers_HoverSource_1oW6Q {
+    width: 25%;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_RankCell_34h48 {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  width: 5%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_PriceCell_3IyfU {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: fit-content;
+  min-width: 15%;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_TableRow_2-RN6
+    .weeklytopsellers_PriceCell_3IyfU {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh {
+  color: transparent;
+  text-align: right;
+  padding-right: 16px;
+  width: 7%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh
+  .weeklytopsellers_Tooltip_2OA1J {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh.Up {
+  color: #68bb28;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh.Up:hover {
+  cursor: help;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh.Down {
+  color: #ec9d0c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh.Down:hover {
+  cursor: help;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh
+  .weeklytopsellers_ListWeeksDebut_3VOg1 {
+  background-color: #76dbfb;
+  color: #202327;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 2px 6px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ConcurrentCell_3L0CD {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 15%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_WeeksCell_xm7Jp {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 5%;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_WeeksCell_xm7Jp
+  .weeklytopsellers_Tooltip_2OA1J {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_PeakInGameCell_yJB7D {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 12%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH {
+  padding: 6px 16px 6px 0px;
+  width: 50%;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH.weeklytopsellers_Unavailable_mqJv4
+  .weeklytopsellers_TopChartItem_2C5PJ {
+  line-height: normal;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH.weeklytopsellers_Unavailable_mqJv4
+  .weeklytopsellers_GameName_1n_4- {
+  margin-left: 0;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  a {
+  display: flex;
+  flex-direction: row;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_CapsuleArt_2dODJ {
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+}
+@media all and (max-width: 530px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_TableRow_2-RN6
+    .weeklytopsellers_CapsuleCell_18kGH
+    .weeklytopsellers_CapsuleArt_2dODJ {
+    height: auto;
+    width: 46%;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_ExpandedImage_3gRec {
+  height: 70px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_ExpandedMedia_3WcY4 {
+  height: 110px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_ExpandedButtons_3-yfb {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_CartButton_HYru8 {
+  margin: 4px;
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_GameInfo_3fbEr {
+  padding: 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_GameName_1n_4- {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  white-space: pre-line;
+  overflow: hidden;
+  min-width: 0;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_CapsuleCell_18kGH
+  .weeklytopsellers_GameName_1n_4-
+  .weeklytopsellers_GameUnavailable_1VpmU {
+  font-size: 12px;
+  color: #a6a6a6;
+  margin-left: 19px;
+}
+.weeklytopsellers_TopChartItem_2C5PJ {
+  display: flex;
+  line-height: 52px;
+  align-items: center;
+  position: relative;
+}
+.weeklytopsellers_CapsuleDecorator_1zTJh {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  display: grid;
+  row-gap: 5px;
+}
+.weeklytopsellers_Banner_24xXq {
+  font-size: 11px;
+  color: #111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  padding: 3px 4px 3px 4px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: #66c0f4;
+}
+.weeklytopsellers_LinesImg_3Lfjg {
+  height: 10px;
+}
+.weeklytopsellers_BannerText_UFtgo {
+  display: none;
+}
+.weeklytopsellers_ChartPlaceholder_3sJkw {
+  min-height: 100vh;
+}
+.weeklytopsellers_WeeklyFooterControls_3qtwd {
+  margin: 12px auto 0 auto;
+  max-width: 50vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.weeklytopsellers_Tooltip_2OA1J {
+  display: inline-block;
+}
+.weeklytopsellers_PriceWidget_30rPO {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.weeklytopsellers_PriceWidget_30rPO .StoreSalePriceWidgetContainer {
+  margin-top: 0px;
+}
+.weeklytopsellers_TopReleasesContainer_HVGCL {
+  margin-top: -95px;
+  width: 100%;
+}
+.topreleasespage_TopReleasesContainer_2ZjmC {
+  margin-top: -95px;
+  width: 100%;
+}
+body.topreleasespage_TopReleasesPage_r5cVJ div.responsive_page_frame {
+  background: unset;
+}

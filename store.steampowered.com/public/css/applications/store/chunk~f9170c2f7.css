@@ -132,37 +132,242 @@
 .hoverposition_HoverAboveModal_1SHX2 {
   z-index: 2000;
 }
-.tooltip_TextToolTip_29b2a {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
+.focusring_FocusRingRoot_3PH_X {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.focusring_FocusRing_1IZrQ {
+  position: absolute;
+  pointer-events: none;
+  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  animation: focusring_flash_1YTKZ 0.5s ease,
+    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
+    focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
+}
+.focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {
+  outline-color: #ff0;
+}
+.focusring_FocusRingOnHiddenItem_2OusV.focusring_DebugFocusRing_YxeOZ {
+  outline-offset: 2px;
+  outline-color: red;
+  background-color: red;
+}
+@keyframes focusring_flash_1YTKZ {
+  0% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes focusring_growOutline_Z3LxS {
+  0% {
+    outline: 12px solid;
+  }
+  100% {
+    outline: 2px solid;
+  }
+}
+@keyframes focusring_fadeOutline_2hZu3 {
+  0% {
+    outline-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    outline-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes focusring_blinker_3wFMM {
+  50% {
+    opacity: 0.4;
+  }
+}
+.contextmenu_ContextMenuMouseOverlay_pu9cO {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1599;
+}
+.contextmenu_ContextMenuFocusContainer_2qyBZ:focus {
+  outline: none;
+}
+.contextmenu_contextMenu_LQkrb {
+  position: absolute;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  transition: opacity 200ms;
+  z-index: 1600;
   user-select: none;
+  padding: 4px;
 }
-.tooltip_ToolTipCustom_3Dt__ {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
-  user-select: none;
+.web_chat_frame .contextmenu_contextMenu_LQkrb {
+  max-height: calc(100% - 128px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
-.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipTitle_3YNfm {
-  color: #e0e1e6;
+html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenu_LQkrb {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0;
 }
-.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipTitle_3YNfm.tooltip_Center_2-PU0 {
-  text-align: center;
+html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuContents_2y2tU {
+  padding: 4px;
 }
-.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipInsetContent_1nxOn {
-  color: #aaacb6;
-  margin: 6px 4px;
+html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuItem_pFo3k {
+  min-width: fit-content;
+  white-space: nowrap;
+}
+.contextmenu_contextMenuContents_2y2tU {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.contextmenu_contextMenu_LQkrb:not(.visible) {
+  opacity: 0;
+  pointer-events: none;
+}
+.contextmenu_contextMenuItem_pFo3k {
+  padding: 4px 6px;
+  line-height: 17px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.contextmenu_contextMenuItem_pFo3k:first-child {
+  border-top: 0.5px solid rgba(80, 87, 94, 0);
+}
+.contextmenu_contextMenuItem_pFo3k:hover,
+.contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
+  background: #5a6069;
+  color: #b8c5c9;
+}
+.contextmenu_contextMenuItem_pFo3k.disabled {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+  pointer-events: none;
+}
+.contextmenu_contextMenuItem_pFo3k.disabled:hover {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+}
+.contextmenu_contextMenuItem_pFo3k.menuChecked {
+  color: #6dcff6;
+}
+.contextmenu_contextMenuItem_pFo3k.menuChecked.contextMenuCheckMark {
+  display: block;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_MenuSectionHeader_2Q7u1 {
+  padding-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.contextmenu_ContextMenuSeparator_1F2Ec + .contextmenu_contextMenuItem_pFo3k {
+  border-top-color: dimgray;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_NoSeparation_3twt2 {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_UpperCase_2ZwZj {
+  text-transform: uppercase;
+}
+.contextmenu_contextMenuItem_pFo3k .SVGIcon_Button {
+  height: 10px;
+  width: 10px;
+  margin-right: 4px;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T {
+  display: flex;
+  padding-right: 2px;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
+  .contextmenu_Label_38fI0 {
+  flex: 1 0 auto;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
+  .contextmenu_Arrow_2NKnR {
+  flex: 0 0 auto;
+  margin: 0px 0px 0px 4px;
+}
+.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
+  .SVGIcon_DownArrowContextMenu {
+  height: 14px;
+  width: 14px;
+  transform: rotateZ(-90deg);
+  fill: #9ca4a7;
+  margin: 0px 3px;
+}
+.contextmenu_contextMenuItem_pFo3k svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+}
+.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle {
+  height: 16px;
+  width: 16px;
+  margin-left: -3px;
+  margin-bottom: -3px;
+}
+.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle line {
+  stroke: gray;
+  shape-rendering: crispEdges;
+  stroke-width: 20px;
+}
+.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle circle {
+  opacity: 0;
+}
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none;
+}
+.contextmenu_PopoutSubMenu_IpTgn {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.contextmenu_PopoutSubMenu_IpTgn .contextmenu_PopoutSubMenuItems_y5L1f {
+  position: absolute;
+  width: 60%;
+  height: fit-content;
+  left: 100%;
+  top: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  word-wrap: break-word;
 }
 .dropdownlabel_DropDownLabelContainer_2wVxO {
   display: flex;
@@ -1340,59 +1545,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadinput_PinDigit_1oiQ5 {
   text-align: center;
 }
-.focusring_FocusRingRoot_3PH_X {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-}
-.focusring_FocusRing_1IZrQ {
-  position: absolute;
-  pointer-events: none;
-  outline-offset: 2px;
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_1YTKZ 0.5s ease,
-    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
-    focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
-}
-.focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {
-  outline-color: #ff0;
-}
-.focusring_FocusRingOnHiddenItem_2OusV.focusring_DebugFocusRing_YxeOZ {
-  outline-offset: 2px;
-  outline-color: red;
-  background-color: red;
-}
-@keyframes focusring_flash_1YTKZ {
-  0% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-}
-@keyframes focusring_growOutline_Z3LxS {
-  0% {
-    outline: 12px solid;
-  }
-  100% {
-    outline: 2px solid;
-  }
-}
-@keyframes focusring_fadeOutline_2hZu3 {
-  0% {
-    outline-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    outline-color: rgba(255, 255, 255, 0.6);
-  }
-}
-@keyframes focusring_blinker_3wFMM {
-  50% {
-    opacity: 0.4;
-  }
-}
 .gamepadslider_SliderControlPanelGroup_MY8iY {
   flex-grow: 1;
 }
@@ -1848,190 +2000,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   bottom: 0;
   left: 0;
 }
-.contextmenu_ContextMenuMouseOverlay_pu9cO {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1599;
-}
-.contextmenu_ContextMenuFocusContainer_2qyBZ:focus {
-  outline: none;
-}
-.contextmenu_contextMenu_LQkrb {
-  position: absolute;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  transition: opacity 200ms;
-  z-index: 1600;
-  user-select: none;
-  padding: 4px;
-}
-.web_chat_frame .contextmenu_contextMenu_LQkrb {
-  max-height: calc(100% - 128px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenu_LQkrb {
-  position: static;
-  box-shadow: none;
-  display: inline-block;
-  padding: 0;
-}
-html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuContents_2y2tU {
-  padding: 4px;
-}
-html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuItem_pFo3k {
-  min-width: fit-content;
-  white-space: nowrap;
-}
-.contextmenu_contextMenuContents_2y2tU {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  font-size: 14px;
-  -webkit-app-region: no-drag;
-}
-.contextmenu_contextMenu_LQkrb:not(.visible) {
-  opacity: 0;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_pFo3k {
-  padding: 4px 6px;
-  line-height: 17px;
-  color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
-  cursor: default;
-  position: relative;
-  min-width: 120px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.contextmenu_contextMenuItem_pFo3k:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0);
-}
-.contextmenu_contextMenuItem_pFo3k:hover,
-.contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
-  background: #5a6069;
-  color: #b8c5c9;
-}
-.contextmenu_contextMenuItem_pFo3k.disabled {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_pFo3k.disabled:hover {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-}
-.contextmenu_contextMenuItem_pFo3k.menuChecked {
-  color: #6dcff6;
-}
-.contextmenu_contextMenuItem_pFo3k.menuChecked.contextMenuCheckMark {
-  display: block;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_MenuSectionHeader_2Q7u1 {
-  padding-top: 8px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.contextmenu_ContextMenuSeparator_1F2Ec + .contextmenu_contextMenuItem_pFo3k {
-  border-top-color: dimgray;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_NoSeparation_3twt2 {
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_UpperCase_2ZwZj {
-  text-transform: uppercase;
-}
-.contextmenu_contextMenuItem_pFo3k .SVGIcon_Button {
-  height: 10px;
-  width: 10px;
-  margin-right: 4px;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T {
-  display: flex;
-  padding-right: 2px;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
-  .contextmenu_Label_38fI0 {
-  flex: 1 0 auto;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
-  .contextmenu_Arrow_2NKnR {
-  flex: 0 0 auto;
-  margin: 0px 0px 0px 4px;
-}
-.contextmenu_contextMenuItem_pFo3k.contextmenu_SubMenu_jVo8T
-  .SVGIcon_DownArrowContextMenu {
-  height: 14px;
-  width: 14px;
-  transform: rotateZ(-90deg);
-  fill: #9ca4a7;
-  margin: 0px 3px;
-}
-.contextmenu_contextMenuItem_pFo3k svg {
-  height: 12px;
-  width: 12px;
-  margin-right: 6px;
-}
-.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle {
-  height: 16px;
-  width: 16px;
-  margin-left: -3px;
-  margin-bottom: -3px;
-}
-.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle line {
-  stroke: gray;
-  shape-rendering: crispEdges;
-  stroke-width: 20px;
-}
-.contextmenu_contextMenuItem_pFo3k .SVGIcon_PlusCircle circle {
-  opacity: 0;
-}
-.contextMenuCheckMark {
-  width: 4px;
-  height: 18px;
-  background-color: #6dcff6;
-  min-height: 1px;
-  position: absolute;
-  left: -4px;
-  margin-top: 0px;
-  display: none;
-}
-.contextmenu_PopoutSubMenu_IpTgn {
-  position: relative;
-  width: 100%;
-  overflow: visible;
-}
-.contextmenu_PopoutSubMenu_IpTgn .contextmenu_PopoutSubMenuItems_y5L1f {
-  position: absolute;
-  width: 60%;
-  height: fit-content;
-  left: 100%;
-  top: 0;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  word-wrap: break-word;
-}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_3M5nC {
   from {
     background: #3d4450;
@@ -2349,4 +2317,36 @@ html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenuItem_pFo3k {
   transition-property: transform, opacity;
   transition-duration: 80ms;
   transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+.tooltip_TextToolTip_29b2a {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none;
+}
+.tooltip_ToolTipCustom_3Dt__ {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none;
+}
+.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipTitle_3YNfm {
+  color: #e0e1e6;
+}
+.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipTitle_3YNfm.tooltip_Center_2-PU0 {
+  text-align: center;
+}
+.tooltip_ToolTipCustom_3Dt__ .tooltip_ToolTipInsetContent_1nxOn {
+  color: #aaacb6;
+  margin: 6px 4px;
 }

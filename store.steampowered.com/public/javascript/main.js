@@ -2870,4 +2870,19 @@ function GetUsabilityTracker()
 	return g_usabilityTracker;
 }
 
+function ScrollToTopStoreMobileAware()
+{
+	var bUseSmallScreenMode = window.UseSmallScreenMode && window.UseSmallScreenMode();
+	var bIsMobileClient = $J('html').is('.mobile_client:not(.legacy_mobile)')
+	if ( bUseSmallScreenMode && !bIsMobileClient )
+	{
+		var $Window = $J( window );
+		$Window.scrollTop( $J( '#store_header' ).height() );
+	}
+	else
+	{
+		window.scrollTo( 0, 0 );
+	}
+}
+
 

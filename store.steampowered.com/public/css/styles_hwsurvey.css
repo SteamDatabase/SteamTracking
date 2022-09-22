@@ -1,4 +1,7 @@
 
+body.v6 {
+    background: #0e1014;
+}
 
 #hws_main {
 	text-align:left;
@@ -60,11 +63,11 @@ img.hws_vendor {
 }
 
 p.blurb {
-	width:585px;
+	width: 100%;
 	font-size:14px;
 	line-height:18px;
 	color:#c6d4df;
-	margin-bottom:6px;
+	margin-bottom:25px;
 }
 
 p.blurb2 {
@@ -104,16 +107,13 @@ p.blurb2 {
 
 
 #main_stats_header {
-	width:925px;
-	padding:5px 0px 5px 15px;
-	margin: 10px 0px 2px 0px;
-	background-color: rgba( 0, 0, 0, 0.4 );
-	font-size: 11px;
+	width: 100%;
+	margin: 0 0 18px 0;
+	font-size: 18px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			text-transform: uppercase;
-}
+		}
 
 #main_stats, #sub_stats {
 	width:924px;
@@ -249,7 +249,7 @@ p.blurb2 {
 	width: 306px;
 	height: 188px;
 	position: relative;
-	background: rgba( 0, 0, 0, 0.5 );
+    background: linear-gradient(90deg, rgba(86, 92, 103, 0.3), rgba(90, 98, 108, 0.3));
 }
 .chartdiv {
 	position:absolute;
@@ -398,24 +398,35 @@ form {
 	text-align:right;
 	padding-right:10px;
 	color:#ffffff;
+    font-size: 13px;
 }
 
 input {
-	font-size:10px;
+	font-size:13px;
 }
 
 select {
-	font-size:10px;
+	font-size:13px;
 }
 
 a.backLink,a.backLink:hover,a.backLink:active,a.backLink:visited {
-	text-decoration:none;
-	color: #ffffff;
+    display: inline-block;
+    background: rgba(59, 63, 72, 0.5);
+    color: #dfe3e6;
+    font-size: 14px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin: 4px 0px 12px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px #0000;
+    transition: all 0.2s ease-in-out;
 }
 
 a.backLink:hover {
-	text-decoration:underline;
-	color:#000000;
+	color:#ffffff;
+    background: rgba(59, 63, 72, 0.8);
 }
 
 .hideme {

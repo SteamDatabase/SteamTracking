@@ -8449,83 +8449,87 @@
     95598: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $06: () => X,
+        $06: () => q,
         $gZ: () => u,
-        BKy: () => A,
-        BNo: () => he,
-        Bh5: () => oe,
-        Cts: () => be,
-        Ehc: () => R,
+        BKy: () => O,
+        BNo: () => fe,
+        Bh5: () => de,
+        Cts: () => Be,
+        Ehc: () => F,
         GhU: () => v,
-        I8b: () => ie,
-        IWH: () => j,
-        JrY: () => M,
-        KJh: () => ue,
-        KKY: () => De,
-        LjF: () => ye,
-        Lk$: () => J,
-        MrB: () => Z,
-        NP6: () => F,
+        I8b: () => le,
+        IWH: () => X,
+        JrY: () => k,
+        KJh: () => ge,
+        KKY: () => Ie,
+        LjF: () => Ee,
+        Lk$: () => re,
+        MrB: () => K,
+        NP6: () => G,
         P7E: () => b,
-        P9w: () => V,
-        Q1v: () => pe,
+        P9w: () => j,
+        Q1v: () => we,
+        SK8: () => oe,
         SUY: () => p,
-        SjW: () => fe,
-        Ucz: () => $,
-        Uos: () => L,
-        V7n: () => P,
-        VR: () => q,
-        Vgm: () => te,
+        SjW: () => Se,
+        Ucz: () => Y,
+        Uos: () => x,
+        V7n: () => z,
+        VR: () => Q,
+        Vgm: () => ie,
         X: () => w,
-        XBH: () => W,
-        YVI: () => Re,
-        YVR: () => N,
-        YqJ: () => I,
+        XBH: () => $,
+        YVI: () => Ae,
+        YVR: () => U,
+        YqJ: () => P,
         YtI: () => _,
-        ZJH: () => le,
+        ZJH: () => ue,
         Zrf: () => d,
-        _GE: () => re,
-        c7E: () => Te,
-        dLw: () => me,
-        doA: () => Se,
-        dzL: () => C,
+        _GE: () => se,
+        c7E: () => xe,
+        dLw: () => _e,
+        doA: () => Ce,
+        dzL: () => M,
+        faS: () => T,
         ffh: () => B,
-        g0p: () => we,
-        gR: () => G,
-        j7C: () => Le,
+        g0p: () => ve,
+        gR: () => N,
+        j7C: () => Fe,
         k4K: () => f,
-        kqV: () => _e,
-        ktE: () => ge,
-        lsH: () => U,
-        mBz: () => ke,
-        mKE: () => k,
-        mKt: () => se,
-        miF: () => Me,
-        opd: () => Be,
+        k6n: () => C,
+        kL2: () => L,
+        kqV: () => be,
+        ktE: () => ye,
+        lsH: () => H,
+        mBz: () => De,
+        mKE: () => R,
+        mKt: () => ce,
+        miF: () => Re,
+        opd: () => Me,
         pVO: () => y,
         pkz: () => S,
-        r6F: () => O,
+        r6F: () => V,
         ret: () => h,
         shV: () => E,
-        sqQ: () => ve,
-        tEX: () => H,
-        tLe: () => Q,
-        thP: () => x,
+        sqQ: () => ke,
+        tEX: () => Z,
+        tLe: () => te,
+        thP: () => I,
         tkI: () => g,
-        uZu: () => ae,
-        ui7: () => z,
-        vJ$: () => ce,
-        vT2: () => Y,
-        vyu: () => xe,
-        wUs: () => T,
-        wn$: () => ne,
-        wr9: () => K,
-        wx$: () => D,
-        x0L: () => Ce,
-        xg: () => de,
-        yTr: () => Ee,
-        yVt: () => ee,
-        z5E: () => Fe,
+        uZu: () => me,
+        ui7: () => W,
+        vJ$: () => he,
+        vT2: () => J,
+        vyu: () => Ge,
+        wUs: () => D,
+        wn$: () => ae,
+        wr9: () => ee,
+        wx$: () => A,
+        x0L: () => Le,
+        xg: () => pe,
+        yTr: () => Te,
+        yVt: () => ne,
+        z5E: () => Oe,
       });
       var n = r(70655),
         i = r(67294),
@@ -8954,6 +8958,26 @@
         return i.createElement(
           "svg",
           {
+            width: "23",
+            height: "23",
+            viewBox: "0 0 23 23",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          i.createElement("path", {
+            d: "M15.3252 10.8948L9.73258 7.16634C9.24837 6.85161 8.6189 7.19055 8.6189 7.77161V15.2284C8.6189 15.8095 9.27258 16.1484 9.73258 15.8337L15.3252 12.1053C15.761 11.8148 15.761 11.1853 15.3252 10.8948Z",
+            fill: "#C3D3D8",
+          }),
+          i.createElement("path", {
+            d: "M11.5 0C5.15684 0 0 5.15684 0 11.5C0 17.8432 5.15684 23 11.5 23C17.8432 23 23 17.8432 23 11.5C23 5.15684 17.8432 0 11.5 0ZM11.5 21.2084C6.14947 21.2084 1.79158 16.8505 1.79158 11.5C1.79158 6.14947 6.14947 1.79158 11.5 1.79158C16.8505 1.79158 21.2084 6.14947 21.2084 11.5C21.2084 16.8505 16.8505 21.2084 11.5 21.2084Z",
+            fill: "#C3D3D8",
+          })
+        );
+      }
+      function M() {
+        return i.createElement(
+          "svg",
+          {
             version: "1.1",
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
@@ -8972,7 +8996,7 @@
           })
         );
       }
-      function M(e) {
+      function k(e) {
         var t;
         return i.createElement(
           "svg",
@@ -9001,7 +9025,49 @@
           })
         );
       }
-      function k(e) {
+      function T() {
+        return i.createElement(
+          "svg",
+          {
+            width: "25",
+            height: "24",
+            viewBox: "0 0 25 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M1.97014 2.77093H4.44345V3.97865C4.44345 5.04817 5.31099 5.91572 6.38052 5.91572C7.45004 5.91572 8.31699 5.04817 8.31699 3.97865V2.77093H16.6836V3.97865C16.6836 5.04817 17.5511 5.91572 18.6207 5.91572C19.6902 5.91572 20.5571 5.04817 20.5571 3.97865V2.77093H23.0293C24.1136 2.77093 25 3.65738 25 4.74167V21.4991C25 22.5834 24.1136 23.4698 23.0293 23.4698H1.97073C0.886445 23.4698 0 22.5834 0 21.4991V4.74167C0 3.65738 0.886445 2.77093 1.97073 2.77093H1.97014ZM23.5005 8.23961V21.4991C23.5005 21.7578 23.2879 21.9704 23.0293 21.9704H1.97073C1.71206 21.9704 1.49946 21.7583 1.49946 21.4991V8.23961H23.5005V8.23961Z",
+            fill: "#717A81",
+          }),
+          i.createElement("path", {
+            d: "M5.29335 1.08724C5.29335 0.486629 5.77998 0 6.38059 0C6.98061 0 7.46724 0.486629 7.46724 1.08724V3.97867C7.46724 4.57928 6.98061 5.06591 6.38059 5.06591C5.77998 5.06591 5.29335 4.57928 5.29335 3.97867V1.08724V1.08724Z",
+            fill: "#717A81",
+          }),
+          i.createElement("path", {
+            d: "M17.5329 1.08724C17.5329 0.486629 18.0195 0 18.6201 0C19.2201 0 19.7068 0.486629 19.7068 1.08724V3.97867C19.7068 4.57928 19.2201 5.06591 18.6201 5.06591C18.0195 5.06591 17.5329 4.57928 17.5329 3.97867V1.08724V1.08724Z",
+            fill: "#717A81",
+          })
+        );
+      }
+      function L() {
+        return i.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          i.createElement("path", {
+            d: "M1.91995 1.20001C1.5223 1.20001 1.19995 1.52236 1.19995 1.92001V22.08C1.19995 22.4776 1.52232 22.8 1.91995 22.8H22.08C22.4776 22.8 22.7999 22.4776 22.7999 22.08C22.7999 21.6824 22.4776 21.36 22.08 21.36H2.63995V1.92001C2.63995 1.52236 2.31758 1.20001 1.91995 1.20001ZM16.32 6.72001C15.8854 6.71929 15.5464 7.12373 15.5625 7.47751C15.5821 7.85454 15.9429 8.17971 16.32 8.16001H18.3525L11.97 14.16L9.67495 12.2475C9.52982 12.0749 9.29995 11.9772 9.07495 11.9925C8.91446 12.004 8.75853 12.0713 8.63995 12.18L3.83995 16.5C3.54514 16.7473 3.50834 17.2483 3.76495 17.535C4.02158 17.8217 4.52167 17.8383 4.79995 17.5725L9.14246 13.665L11.4525 15.5925C11.7066 15.887 12.2125 15.9125 12.495 15.645L19.4399 9.12001V11.28C19.4347 11.6604 19.7795 12.0075 20.16 12.0075C20.5404 12.0075 20.8853 11.6604 20.8799 11.28V7.44001C20.8799 7.06303 20.5369 6.72005 20.16 6.72001H16.32Z",
+            fill: "#C3D3D8",
+          })
+        );
+      }
+      function R(e) {
         let t = e.highlightColor || "#00ccff",
           r = e.color || "#2d73ff";
         const [n] = (0, i.useState)(Math.random().toString());
@@ -9074,7 +9140,7 @@
           })
         );
       }
-      function T(e) {
+      function D(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -9299,7 +9365,7 @@
           )
         );
       }
-      function L(e) {
+      function x(e) {
         return m.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -9337,7 +9403,7 @@
               })
             );
       }
-      function R(e) {
+      function F(e) {
         return i.createElement(
           "svg",
           {
@@ -9372,7 +9438,7 @@
           })
         );
       }
-      function D(e) {
+      function A(e) {
         const { direction: t } = e,
           r = (0, n._T)(e, ["direction"]);
         switch (t) {
@@ -9450,7 +9516,7 @@
             );
         }
       }
-      function x() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -9470,7 +9536,7 @@
           })
         );
       }
-      function F(e) {
+      function G(e) {
         return i.createElement(
           "svg",
           {
@@ -9506,7 +9572,7 @@
             })
         );
       }
-      function A(e) {
+      function O(e) {
         const { angle: t } = e,
           r = (0, n._T)(e, ["angle"]);
         return i.createElement(
@@ -9528,7 +9594,7 @@
           })
         );
       }
-      function I() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -9564,7 +9630,7 @@
           })
         );
       }
-      function G() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -9590,7 +9656,7 @@
           })
         );
       }
-      function O() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -9623,7 +9689,7 @@
           })
         );
       }
-      function P(e) {
+      function z(e) {
         return i.createElement(
           "svg",
           {
@@ -9644,7 +9710,7 @@
           })
         );
       }
-      function N() {
+      function U() {
         return i.createElement(
           "svg",
           {
@@ -9679,7 +9745,7 @@
           })
         );
       }
-      function V(e) {
+      function j(e) {
         return i.createElement(
           "svg",
           {
@@ -9717,7 +9783,7 @@
           })
         );
       }
-      function z(e) {
+      function W(e) {
         const t = (0, o.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -9748,7 +9814,7 @@
           })
         );
       }
-      function U() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -9774,7 +9840,7 @@
           })
         );
       }
-      function j() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -9795,7 +9861,7 @@
           )
         );
       }
-      function W() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -9815,7 +9881,7 @@
           )
         );
       }
-      function H() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -9852,7 +9918,7 @@
           )
         );
       }
-      function X() {
+      function q() {
         return i.createElement(
           "svg",
           {
@@ -9880,7 +9946,7 @@
           })
         );
       }
-      function $() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -9900,7 +9966,7 @@
           })
         );
       }
-      function Z(e) {
+      function K(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -9920,7 +9986,7 @@
           })
         );
       }
-      function q() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -9942,7 +10008,7 @@
           })
         );
       }
-      function Y() {
+      function J() {
         return i.createElement(
           "svg",
           {
@@ -9987,7 +10053,7 @@
           })
         );
       }
-      function K() {
+      function ee() {
         return i.createElement(
           "svg",
           {
@@ -10020,7 +10086,7 @@
           })
         );
       }
-      function Q() {
+      function te() {
         return i.createElement(
           "svg",
           {
@@ -10039,7 +10105,7 @@
           })
         );
       }
-      function J() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -10058,7 +10124,7 @@
           })
         );
       }
-      function ee() {
+      function ne() {
         return i.createElement(
           "svg",
           {
@@ -10079,7 +10145,7 @@
           })
         );
       }
-      function te() {
+      function ie() {
         return i.createElement(
           "svg",
           {
@@ -10110,7 +10176,7 @@
           })
         );
       }
-      function re() {
+      function se() {
         return i.createElement(
           "svg",
           {
@@ -10176,7 +10242,7 @@
           })
         );
       }
-      function ne() {
+      function ae() {
         return i.createElement(
           "svg",
           {
@@ -10195,7 +10261,27 @@
           })
         );
       }
-      function ie() {
+      function oe() {
+        return i.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_4",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Home",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          i.createElement("polygon", {
+            points:
+              "42.054,228.271 113.669,228.271 113.669,170.973 142.324,170.973 142.324,228.271 213.946,228.271 213.946,142.324 242.595,142.324 128,27.729 13.405,142.324 42.054,142.324 ",
+          })
+        );
+      }
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -10233,7 +10319,7 @@
           })
         );
       }
-      function se() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -10258,7 +10344,7 @@
           })
         );
       }
-      function ae() {
+      function me() {
         return i.createElement(
           "svg",
           {
@@ -10280,7 +10366,7 @@
           })
         );
       }
-      function oe() {
+      function de() {
         return i.createElement(
           "svg",
           {
@@ -10320,7 +10406,7 @@
           })
         );
       }
-      function le() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -10348,7 +10434,7 @@
           )
         );
       }
-      function ce() {
+      function he() {
         return i.createElement(
           "svg",
           {
@@ -10364,7 +10450,7 @@
           i.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function me() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -10383,7 +10469,7 @@
           })
         );
       }
-      function de(e, t) {
+      function pe(e, t) {
         return m.De.IN_GAMEPADUI
           ? i.createElement(
               "svg",
@@ -10420,7 +10506,7 @@
               })
             );
       }
-      function ue(e) {
+      function ge(e) {
         return i.createElement(
           "svg",
           {
@@ -10439,7 +10525,7 @@
           })
         );
       }
-      function he(e) {
+      function fe(e) {
         return i.createElement(
           "svg",
           {
@@ -10475,7 +10561,7 @@
           )
         );
       }
-      function _e(e) {
+      function be(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10496,7 +10582,7 @@
           })
         );
       }
-      function pe(e) {
+      function we(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10520,7 +10606,7 @@
           })
         );
       }
-      function ge(e) {
+      function ye(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10544,7 +10630,7 @@
           })
         );
       }
-      function fe(e) {
+      function Se(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10568,7 +10654,7 @@
           })
         );
       }
-      function be(e) {
+      function Be(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10588,7 +10674,7 @@
           })
         );
       }
-      function we(e) {
+      function ve(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -10611,7 +10697,7 @@
           })
         );
       }
-      function ye(e) {
+      function Ee(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10817,7 +10903,7 @@
           )
         );
       }
-      function Se(e) {
+      function Ce(e) {
         const { className: t } = e;
         (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -10995,7 +11081,7 @@
           )
         );
       }
-      function Be() {
+      function Me() {
         return i.createElement(
           "svg",
           {
@@ -11026,7 +11112,7 @@
           )
         );
       }
-      function ve(e) {
+      function ke(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -11042,7 +11128,7 @@
           })
         );
       }
-      function Ee() {
+      function Te() {
         return i.createElement(
           "svg",
           {
@@ -11060,7 +11146,7 @@
           })
         );
       }
-      function Ce() {
+      function Le() {
         return i.createElement(
           "svg",
           {
@@ -11082,7 +11168,7 @@
           )
         );
       }
-      function Me() {
+      function Re() {
         return i.createElement(
           "svg",
           {
@@ -11120,7 +11206,7 @@
           )
         );
       }
-      function ke(e) {
+      function De(e) {
         return i.createElement(
           "svg",
           Object.assign({}, e, {
@@ -11138,7 +11224,7 @@
           })
         );
       }
-      function Te() {
+      function xe() {
         return i.createElement(
           "svg",
           {
@@ -11172,7 +11258,7 @@
           )
         );
       }
-      function Le(e) {
+      function Fe(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11195,7 +11281,7 @@
           })
         );
       }
-      function Re(e) {
+      function Ae(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11223,7 +11309,7 @@
           })
         );
       }
-      function De(e) {
+      function Ie(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11251,7 +11337,7 @@
           })
         );
       }
-      function xe(e) {
+      function Ge(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -11279,7 +11365,7 @@
           })
         );
       }
-      function Fe(e) {
+      function Oe(e) {
         const { className: t } = e,
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
@@ -12195,14 +12281,15 @@
       "use strict";
       r.d(t, {
         $1: () => l,
-        Kb: () => M,
-        LO: () => C,
-        Mh: () => B,
-        Np: () => E,
-        Sc: () => d,
-        XG: () => S,
-        jr: () => p,
-        m9: () => _,
+        Kb: () => T,
+        LO: () => k,
+        Mh: () => E,
+        Np: () => M,
+        Sc: () => h,
+        Ti: () => d,
+        XG: () => v,
+        jr: () => f,
+        m9: () => g,
         vX: () => c,
         yW: () => o,
       });
@@ -12296,7 +12383,7 @@
           n = new Date(1e3 * e);
         if (!t) {
           const e = n.setHours(0, 0, 0, 0);
-          let t = u.get(e);
+          let t = _.get(e);
           if (t) return t;
         }
         const i = Object.assign(
@@ -12310,15 +12397,29 @@
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
       })(n || (n = {}));
-      new Map();
       const m = new Map();
-      function d(e, t) {
+      function d(e) {
+        let t = new Date(1e3 * e);
+        const r = t.setHours(0, 0, 0, 0);
+        let n = m.get(r);
+        if (n) return n;
+        return (
+          (n = t.toLocaleDateString(s.Yt.GetPreferredLocales(), {
+            month: "long",
+            year: "numeric",
+          })),
+          m.set(r, n),
+          n
+        );
+      }
+      const u = new Map();
+      function h(e, t) {
         const r = new Date(1e3 * e),
           n = s.Yt.GetPreferredLocales(),
           i =
             t.bForce24HourClock ||
             (function (e) {
-              let t = m.get(e);
+              let t = u.get(e);
               if (!0 === t || !1 === t) return t;
               const r = new Date();
               return (
@@ -12326,7 +12427,7 @@
                 (t =
                   r.toLocaleTimeString(e, { hour: "numeric" }) ==
                   r.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
-                m.set(e, t),
+                u.set(e, t),
                 t
               );
             })(n[0]);
@@ -12337,9 +12438,9 @@
             : { hour: "numeric", minute: "2-digit" }
         );
       }
-      const u = new Map(),
-        h = new Map();
-      function _(e, t, r = !0, n = !0) {
+      const _ = new Map(),
+        p = new Map();
+      function g(e, t, r = !0, n = !0) {
         const a = new Date(),
           o = new Date(1e3 * e);
         if (o.getFullYear() != a.getFullYear()) return c(e);
@@ -12355,15 +12456,15 @@
             return (0, s.Xx)("#Time_Yesterday");
         const m = { month: t ? "long" : "short", day: "numeric" },
           d = o.setHours(0, 0, 0, 0) + m.month;
-        let u = h.get(d);
+        let u = p.get(d);
         return (
           u ||
           ((u = o.toLocaleDateString(s.Yt.GetPreferredLocales(), m)),
-          h.set(d, u),
+          p.set(d, u),
           u)
         );
       }
-      function p(e, t) {
+      function f(e, t) {
         const r = new Date(1e3 * e),
           n = new Date(),
           o = Object.assign(
@@ -12383,7 +12484,7 @@
           if (!o.bGranularFutureTime)
             return (
               i.zO(r.getTime() - n.getTime()),
-              r.getFullYear() == n.getFullYear() ? v(r) : C(r)
+              r.getFullYear() == n.getFullYear() ? C(r) : k(r)
             );
           i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
           let e = new Date();
@@ -12396,7 +12497,7 @@
                 r < e
                   ? (0, s.Xx)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
-                    r < e ? B(r) : S(r, !0, o.bAbbreviateDayOfWeek)))
+                    r < e ? E(r) : v(r, !0, o.bAbbreviateDayOfWeek)))
           );
         }
         i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
@@ -12404,27 +12505,27 @@
         if ((c.setHours(0, 0, 0, 0), r >= c))
           return o.bGranularToday
             ? o.bGranularTodayTimeOnly
-              ? d(e, { bForce24HourClock: o.bForce24HourClock })
+              ? h(e, { bForce24HourClock: o.bForce24HourClock })
               : (0, s.Xx)(
                   "#Time_Today_At",
-                  d(e, { bForce24HourClock: o.bForce24HourClock })
+                  h(e, { bForce24HourClock: o.bForce24HourClock })
                 )
             : (0, s.Xx)("#Time_Today");
         if ((c.setDate(n.getDate() - 1), r >= c))
           return o.bGranularYesterday
             ? (0, s.Xx)(
                 "#Time_Yesterday_At",
-                d(e, { bForce24HourClock: o.bForce24HourClock })
+                h(e, { bForce24HourClock: o.bForce24HourClock })
               )
             : (0, s.Xx)("#Time_Yesterday");
         c.setDate(n.getDate() - 6);
         const m = new Date(c);
-        if (o.bGranularWeek && r >= m) return S(r, !1, !o.bAbbreviateDayOfWeek);
+        if (o.bGranularWeek && r >= m) return v(r, !1, !o.bAbbreviateDayOfWeek);
         if (o.bGranularPast)
           return (0, s.Xx)(
             "#Time_Past_At",
             l(e, r.getFullYear() == n.getFullYear(), !o.bAbbreviateDayOfWeek),
-            d(e, { bForce24HourClock: o.bForce24HourClock })
+            h(e, { bForce24HourClock: o.bForce24HourClock })
           );
         if (r >= m) return (0, s.Xx)("#TimeSince_ThisWeek");
         if (
@@ -12437,75 +12538,75 @@
             ? (0, s.Xx)("#TimeSince_1Week")
             : (0, s.Xx)("#TimeSince_XWeeks", e);
         }
-        return r.getFullYear() == n.getFullYear() ? v(r) : C(r);
+        return r.getFullYear() == n.getFullYear() ? C(r) : k(r);
       }
-      const g = new Map(),
-        f = new Map(),
-        b = new Map(),
+      const b = new Map(),
         w = new Map(),
-        y = new Map();
-      function S(e, t = !1, r = !0) {
+        y = new Map(),
+        S = new Map(),
+        B = new Map();
+      function v(e, t = !1, r = !0) {
         const n = {
             weekday: r ? "long" : "short",
             day: "numeric",
             month: t ? "long" : "short",
           },
           i = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
-        let a = y.get(i);
+        let a = B.get(i);
         return (
           a ||
           ((a = e.toLocaleDateString(s.Yt.GetPreferredLocales(), n)),
-          y.set(i, a),
+          B.set(i, a),
           a)
         );
       }
-      function B(e) {
-        let t = g.get(e.getDay());
+      function E(e) {
+        let t = b.get(e.getDay());
         return (
           t ||
           ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             weekday: "long",
           })),
-          g.set(e.getDay(), t),
+          b.set(e.getDay(), t),
           t)
         );
       }
-      function v(e) {
-        let t = f.get(e.getMonth());
+      function C(e) {
+        let t = w.get(e.getMonth());
         return (
           t ||
           ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
           })),
-          f.set(e.getMonth(), t),
+          w.set(e.getMonth(), t),
           t)
         );
       }
-      function E(e) {
-        let t = b.get(e.getFullYear());
+      function M(e) {
+        let t = y.get(e.getFullYear());
         return (
           t ||
           ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
           })),
-          b.set(e.getFullYear(), t),
+          y.set(e.getFullYear(), t),
           t)
         );
       }
-      function C(e) {
+      function k(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
-        let r = w.get(t);
+        let r = S.get(t);
         return (
           r ||
           ((r = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
             year: "numeric",
           })),
-          w.set(t, r),
+          S.set(t, r),
           r)
         );
       }
-      function M(e) {
+      function T(e) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
@@ -12526,7 +12627,7 @@
     },
     47808: (e, t, r) => {
       "use strict";
-      r.d(t, { AV: () => s, l: () => i });
+      r.d(t, { AV: () => s, X_: () => a, l: () => i });
       var n = r(41311);
       function i(e, t, r, i) {
         let s = t;
@@ -12579,6 +12680,15 @@
       }
       function s(e) {
         return e.toLocaleString(n.Yt.GetPreferredLocales());
+      }
+      function a(e) {
+        return e > 1e9
+          ? Math.trunc(e / 1e9).toString() + "B"
+          : e > 1e6
+          ? Math.trunc(e / 1e6).toString() + "M"
+          : e > 1e3
+          ? Math.trunc(e / 1e3).toString() + "K"
+          : e.toString();
       }
     },
     48899: (e, t, r) => {
@@ -12895,11 +13005,11 @@
           DEV_MODE: !1,
           IN_LIBRARY: !1,
           IN_GAMEPADUI: !1,
+          LEGACY_GAMEPADUI_MODE: 0,
+          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
-          IN_STANDALONE_KEYBOARD: !1,
-          STANDALONE_CONFIGURATOR_APPID: 0,
         },
         o = {
           logged_in: !1,
@@ -13078,7 +13188,7 @@
           LoyaltyItemBundles: () => "/points/shop/c/itembundles",
           LoyaltyItemBundle: (e) => `/points/shop/bundle/${e}`,
         },
-        c = {},
+        c = { SteamCharts: () => "/stats/" },
         m = {},
         d = Object.assign(
           Object.assign(
@@ -13786,28 +13896,28 @@
           return (
             n ||
             (Promise.all([
-              r.e(1164),
-              r.e(5959),
-              r.e(8511),
-              r.e(1320),
+              r.e(3349),
+              r.e(3375),
+              r.e(8061),
+              r.e(1636),
               r.e(8535),
               r.e(9177),
               r.e(3661),
-              r.e(7804),
-              r.e(4030),
-              r.e(8374),
-              r.e(166),
-              r.e(3345),
-              r.e(2301),
-              r.e(7131),
-              r.e(3456),
-              r.e(6431),
-              r.e(6614),
-              r.e(7599),
-              r.e(9698),
-              r.e(930),
-              r.e(5136),
-              r.e(73),
+              r.e(7319),
+              r.e(1154),
+              r.e(4883),
+              r.e(7937),
+              r.e(2823),
+              r.e(8149),
+              r.e(6067),
+              r.e(8465),
+              r.e(6298),
+              r.e(4486),
+              r.e(7676),
+              r.e(6411),
+              r.e(2016),
+              r.e(322),
+              r.e(2025),
               r.e(4466),
               r.e(9332),
               r.e(6720),
@@ -13829,173 +13939,198 @@
         ie = re("DemoAndQuickPitch"),
         se = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(7200),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3456),
-            r.e(9682),
-          ]).then(r.bind(r, 82910))
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
+            r.e(2276),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
+            r.e(5331),
+          ]).then(r.bind(r, 65498))
         ),
         ae = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(7200),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(8465),
+            r.e(9682),
+          ]).then(r.bind(r, 82910))
+        ),
+        oe = s.lazy(() =>
+          Promise.all([
+            r.e(3349),
+            r.e(3375),
             r.e(7400),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(7599),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(7676),
             r.e(4466),
             r.e(6720),
             r.e(6571),
             r.e(8986),
           ]).then(r.bind(r, 17446))
         ),
-        oe = s.lazy(() =>
+        le = s.lazy(() =>
           Promise.all([
-            r.e(1164),
+            r.e(3349),
             r.e(7400),
-            r.e(7804),
+            r.e(7319),
             r.e(4466),
             r.e(6571),
             r.e(988),
           ]).then(r.bind(r, 16390))
         ),
-        le = s.lazy(() =>
+        ce = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(9332),
             r.e(1979),
             r.e(4601),
           ]).then(r.bind(r, 93975))
         ),
-        ce = s.lazy(() =>
+        me = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(8511),
-            r.e(7804),
-            r.e(4030),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(9698),
+            r.e(3349),
+            r.e(8061),
+            r.e(7319),
+            r.e(1154),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6411),
             r.e(2814),
           ]).then(r.bind(r, 93609))
         ),
-        me = s.lazy(() =>
+        de = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(1320),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
+            r.e(3349),
+            r.e(3375),
+            r.e(1636),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
             r.e(2420),
           ]).then(r.bind(r, 63543))
         ),
-        de = s.lazy(() =>
-          Promise.all([r.e(1164), r.e(7804), r.e(5821)]).then(r.bind(r, 86531))
-        ),
         ue = s.lazy(() =>
-          Promise.all([r.e(7131), r.e(6431), r.e(1918)]).then(r.bind(r, 23879))
+          Promise.all([r.e(3349), r.e(7319), r.e(5821)]).then(r.bind(r, 86531))
         ),
         he = s.lazy(() =>
+          Promise.all([r.e(6067), r.e(6298), r.e(1918)]).then(r.bind(r, 23879))
+        ),
+        _e = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(9332),
             r.e(3207),
           ]).then(r.bind(r, 53881))
         ),
-        _e = s.lazy(() =>
+        pe = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(7804),
-            r.e(6614),
-            r.e(5136),
+            r.e(3349),
+            r.e(7319),
+            r.e(4486),
+            r.e(322),
             r.e(1825),
           ]).then(r.bind(r, 66668))
         ),
-        pe = s.lazy(() =>
+        ge = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(4466),
             r.e(9332),
             r.e(6720),
@@ -14006,31 +14141,31 @@
             r.e(2136),
           ]).then(r.bind(r, 60693))
         ),
-        ge = s.lazy(() =>
+        fe = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
             r.e(9177),
             r.e(3661),
             r.e(3321),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(4466),
             r.e(9332),
             r.e(6720),
@@ -14041,31 +14176,31 @@
             r.e(9788),
           ]).then(r.bind(r, 66480))
         ),
-        fe = s.lazy(() =>
+        be = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
             r.e(9177),
             r.e(3661),
             r.e(3321),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(4466),
             r.e(9332),
             r.e(6720),
@@ -14076,30 +14211,30 @@
             r.e(9788),
           ]).then(r.bind(r, 52008))
         ),
-        be = s.lazy(() =>
+        we = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(4466),
             r.e(9332),
             r.e(6720),
@@ -14110,30 +14245,30 @@
             r.e(680),
           ]).then(r.bind(r, 41135))
         ),
-        we = s.lazy(() =>
+        ye = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(8535),
             r.e(9177),
             r.e(3661),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(4466),
             r.e(9332),
             r.e(6720),
@@ -14144,71 +14279,71 @@
             r.e(680),
           ]).then(r.bind(r, 31970))
         ),
-        ye = s.lazy(() =>
-          Promise.all([r.e(5959), r.e(4030), r.e(8374), r.e(4535)]).then(
+        Se = s.lazy(() =>
+          Promise.all([r.e(3375), r.e(1154), r.e(4883), r.e(4535)]).then(
             r.bind(r, 22143)
           )
         ),
-        Se = s.lazy(() =>
+        Be = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(9177),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(6720),
             r.e(3238),
             r.e(556),
           ]).then(r.bind(r, 2523))
         ),
-        Be = s.lazy(() =>
+        ve = s.lazy(() =>
           Promise.all([
-            r.e(1164),
-            r.e(5959),
-            r.e(8511),
-            r.e(1320),
+            r.e(3349),
+            r.e(3375),
+            r.e(8061),
+            r.e(1636),
             r.e(9177),
-            r.e(7804),
-            r.e(4030),
-            r.e(8374),
-            r.e(166),
-            r.e(3345),
-            r.e(2301),
-            r.e(7131),
-            r.e(3456),
-            r.e(6431),
-            r.e(6614),
-            r.e(7599),
-            r.e(9698),
-            r.e(930),
-            r.e(5136),
-            r.e(73),
+            r.e(7319),
+            r.e(1154),
+            r.e(4883),
+            r.e(7937),
+            r.e(2823),
+            r.e(8149),
+            r.e(6067),
+            r.e(8465),
+            r.e(6298),
+            r.e(4486),
+            r.e(7676),
+            r.e(6411),
+            r.e(2016),
+            r.e(322),
+            r.e(2025),
             r.e(6720),
             r.e(3238),
             r.e(556),
           ]).then(r.bind(r, 95664))
         ),
-        ve = s.lazy(() =>
-          Promise.all([r.e(1164), r.e(7804), r.e(3345), r.e(4158)]).then(
-            r.bind(r, 75075)
+        Ee = s.lazy(() =>
+          Promise.all([r.e(3349), r.e(7319), r.e(2823), r.e(4158)]).then(
+            r.bind(r, 13925)
           )
         );
-      class Ee extends s.Component {
+      class Ce extends s.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -14223,7 +14358,7 @@
               "div",
               { className: u().App },
               s.createElement(
-                Ce,
+                Me,
                 null,
                 s.createElement(
                   s.Suspense,
@@ -14249,7 +14384,7 @@
                       s.createElement(E, {
                         config: {
                           login: (e) =>
-                            s.createElement(ye, Object.assign({}, e)),
+                            s.createElement(Se, Object.assign({}, e)),
                         },
                       })
                     ),
@@ -14270,15 +14405,15 @@
                                 appid: Number.parseInt(t),
                               }),
                             "review-award": () =>
-                              s.createElement(oe, { key: `appawardmodal${t}` }),
+                              s.createElement(le, { key: `appawardmodal${t}` }),
                             "steamawardsvote-embed": () =>
-                              s.createElement(me, {
+                              s.createElement(de, {
                                 key: `steamawardsvote_${t}`,
                                 appID: Number.parseInt(t),
                               }),
                             "broadcast-embed": () =>
                               s.createElement(
-                                le,
+                                ce,
                                 Object.assign(
                                   { key: `appbroadcastcast_${t}` },
                                   e,
@@ -14291,7 +14426,7 @@
                                 appID: Number.parseInt(t),
                               }),
                             "deck-verified-results": () =>
-                              s.createElement(_e, {
+                              s.createElement(pe, {
                                 appID: Number.parseInt(t),
                                 results: (0, l.kQ)(
                                   "deckcompatibility",
@@ -14305,7 +14440,7 @@
                             "gamehighlight-trailer": (e) =>
                               s.createElement(Y, Object.assign({}, e)),
                             "discovery-queue-app-widget": () =>
-                              s.createElement(Se, {
+                              s.createElement(Be, {
                                 key: `discoveryqueue${t}`,
                                 appID: Number.parseInt(t),
                               }),
@@ -14325,14 +14460,14 @@
                         return s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: (0, p.jM)(l.De.LANGUAGE),
                               }),
                             "broadcast-embed": () =>
                               s.createElement(
-                                le,
+                                ce,
                                 Object.assign(
                                   { key: `broadcastsale_${t}` },
                                   e,
@@ -14345,7 +14480,7 @@
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.CuratorAdminPage(),
-                      component: ge,
+                      component: fe,
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
@@ -14354,7 +14489,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -14374,7 +14509,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key:
                                   "subscription_plan_" +
                                   e.match.params.salePageName,
@@ -14391,7 +14526,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: "sale_remoteplaylanding",
                                 promotionName: "remoteplaylanding",
                                 language: (0, p.jM)(l.De.LANGUAGE),
@@ -14405,7 +14540,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: "sale_together",
                                 promotionName: "sale_together",
                                 language: (0, p.jM)(l.De.LANGUAGE),
@@ -14419,7 +14554,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: "sale_vrhardware",
                                 promotionName: "vrhardware",
                                 language: (0, p.jM)(l.De.LANGUAGE),
@@ -14433,7 +14568,7 @@
                         s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: "sale_steamdeck",
                                 promotionName: "steamdeck",
                                 language: (0, p.jM)(l.De.LANGUAGE),
@@ -14449,7 +14584,7 @@
                           config: {
                             "broadcast-embed": () =>
                               s.createElement(
-                                le,
+                                ce,
                                 Object.assign(
                                   {
                                     key:
@@ -14472,7 +14607,7 @@
                         s.createElement(E, {
                           config: {
                             "list-display": () =>
-                              s.createElement(he, {
+                              s.createElement(_e, {
                                 key: "curator_list",
                                 listid: e.match.params.listid,
                               }),
@@ -14483,7 +14618,7 @@
                       exact: !0,
                       path: m.Z.PackageStorePage(),
                       render: (e) =>
-                        s.createElement(le, {
+                        s.createElement(ce, {
                           key: "packagebroadcast_" + e.match.params.subid,
                           subid: Number.parseInt(e.match.params.subid),
                         }),
@@ -14492,32 +14627,35 @@
                       exact: !0,
                       path: m.Z.BundleStorePage(),
                       render: (e) =>
-                        s.createElement(le, {
+                        s.createElement(ce, {
                           key: "bundlebroadcast_" + e.match.params.bundleid,
                           bundleid: Number.parseInt(e.match.params.bundleid),
                         }),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.NewsHub(),
-                      render: (e) => s.createElement(pe, null),
+                      render: (e) => s.createElement(ge, null),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.EventAdmin(),
-                      render: (e) => s.createElement(fe, null),
+                      render: (e) => s.createElement(be, null),
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
                       path: m.Z.InteractiveRecommender(),
-                      render: (e) => s.createElement(se, null),
+                      render: (e) => s.createElement(ae, null),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.LabsSandbox(),
-                      render: (e) => s.createElement(ce, null),
+                      render: (e) => s.createElement(me, null),
                     }),
-                    !1,
+                    s.createElement(_.AW, {
+                      path: m.Z.SteamCharts(),
+                      render: (e) => s.createElement(se, Object.assign({}, e)),
+                    }),
                     s.createElement(_.AW, {
                       path: m.Z.Loyalty(),
-                      render: () => s.createElement(ae, null),
+                      render: () => s.createElement(oe, null),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.ContentHubHome(),
@@ -14530,7 +14668,7 @@
                         return s.createElement(E, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(be, {
+                              s.createElement(we, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: (0, p.jM)(l.De.LANGUAGE),
@@ -14541,16 +14679,16 @@
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.Categories(),
-                      render: (e) => s.createElement(we, null),
+                      render: (e) => s.createElement(ye, null),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.AccountPreferences(),
-                      render: (e) => s.createElement(de, Object.assign({}, e)),
+                      render: (e) => s.createElement(ue, Object.assign({}, e)),
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
                       path: m.Z.SummerSale2021Story(),
-                      render: (e) => s.createElement(ue, null),
+                      render: (e) => s.createElement(he, null),
                     }),
                     s.createElement(_.AW, {
                       exact: !0,
@@ -14559,13 +14697,13 @@
                         s.createElement(E, {
                           config: {
                             "discovery-queue-button": () =>
-                              s.createElement(Be, null),
+                              s.createElement(ve, null),
                           },
                         }),
                     }),
                     s.createElement(_.AW, {
                       path: m.Z.MarketingMessages(),
-                      render: (e) => s.createElement(ve, Object.assign({}, e)),
+                      render: (e) => s.createElement(Ee, Object.assign({}, e)),
                     }),
                     !1,
                     s.createElement(_.AW, null, !1)
@@ -14576,20 +14714,20 @@
           );
         }
       }
-      function Ce(e) {
+      function Me(e) {
         const { children: t } = e;
         return s.createElement(
           b.u.Provider,
           { value: { bCanUseLink: !0 } },
-          s.createElement(ee, null, t, s.createElement(Me, null))
+          s.createElement(ee, null, t, s.createElement(ke, null))
         );
       }
-      const Me = (e) => {
+      const ke = (e) => {
         const t = s.createElement(w.t, { ModalManager: (0, y.BL)(window) });
         return i.createPortal(t, document.body);
       };
-      var ke = r(65902),
-        Te = r(75362);
+      var Te = r(65902),
+        Le = r(75362);
       r(69491);
       S.Dj(function () {
         return (0, n.mG)(this, void 0, void 0, function* () {
@@ -14597,10 +14735,10 @@
             (yield (0, l.x)(o(), l.De.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, Te.Uh)().Init(
+            (0, Le.Uh)().Init(
               "Store",
               CLSTAMP,
-              new ke.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new Te.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, n.mG)(this, void 0, void 0, function* () {
@@ -14630,7 +14768,7 @@
             })(l.De.LANGUAGE),
             document.getElementById("application_root")
               ? i.render(
-                  s.createElement(Ee),
+                  s.createElement(Ce),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
@@ -14652,7 +14790,7 @@
         "./marketing_hungarian.json": [98955, 8994],
         "./marketing_italian.json": [69804, 8001],
         "./marketing_japanese.json": [47017, 7082],
-        "./marketing_koreana.json": [18446, 4171],
+        "./marketing_koreana.json": [60518, 4171],
         "./marketing_latam.json": [74763, 9899],
         "./marketing_norwegian.json": [76045, 6169],
         "./marketing_polish.json": [83787, 2448],
@@ -14696,7 +14834,7 @@
         "./marketing_hungarian.json": [98955, 8994],
         "./marketing_italian.json": [69804, 8001],
         "./marketing_japanese.json": [47017, 7082],
-        "./marketing_koreana.json": [18446, 4171],
+        "./marketing_koreana.json": [60518, 4171],
         "./marketing_latam.json": [74763, 9899],
         "./marketing_norwegian.json": [76045, 6169],
         "./marketing_polish.json": [83787, 2448],
@@ -14742,7 +14880,7 @@
         "./sales_japanese.json": [33855, 7094],
         "./sales_koreana.json": [38127, 584],
         "./sales_latam.json": [4335, 4682],
-        "./sales_norwegian.json": [30166, 4550],
+        "./sales_norwegian.json": [30166, 1164],
         "./sales_polish.json": [12369, 4248],
         "./sales_portuguese.json": [87577, 5414],
         "./sales_romanian.json": [91478, 1012],
@@ -14786,7 +14924,7 @@
         "./sales_japanese.json": [33855, 7094],
         "./sales_koreana.json": [38127, 584],
         "./sales_latam.json": [4335, 4682],
-        "./sales_norwegian.json": [30166, 4550],
+        "./sales_norwegian.json": [30166, 1164],
         "./sales_polish.json": [12369, 4248],
         "./sales_portuguese.json": [87577, 5414],
         "./sales_romanian.json": [91478, 1012],

@@ -800,6 +800,7 @@ ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}friends/recommendgame
 ${STORE_BASE_URL}greatondeck
+${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
 ${STORE_BASE_URL}itemstore/${}
@@ -884,7 +885,12 @@ ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
 ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
+${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
+${STORE_BASE_URL}stats/content/
+${STORE_BASE_URL}stats/support/
+${STORE_BASE_URL}stats/topnewreleases/${}
+${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steamaccount/addfunds
 ${STORE_BASE_URL}steamawards/

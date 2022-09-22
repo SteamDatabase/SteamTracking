@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9698],
+  [6411],
   {
     49727: (e, t, s) => {
       s.d(t, {
@@ -1226,7 +1226,13 @@
                 include_basic_info: I,
                 include_supported_languages: v,
               },
-              n = e.filter((e) => !o.Z.Get().BHasStoreItem(e, t));
+              n = e.filter(
+                (e) =>
+                  !(
+                    o.Z.Get().BHasStoreItem(e, t) ||
+                    o.Z.Get().BIsStoreItemMissing(e, t)
+                  )
+              );
             if (0 == n.length) return;
             const r = i().CancelToken.source(),
               a = n.map((e) => o.Z.Get().QueueStoreItemRequest(e, t, s));

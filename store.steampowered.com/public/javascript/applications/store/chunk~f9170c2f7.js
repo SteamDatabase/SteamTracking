@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7804],
+  [7319],
   {
     48369: (e) => {
       e.exports = {
@@ -1198,7 +1198,9 @@
             t.target_browser &&
               (c.push("pid=" + t.target_browser.m_unPID),
               c.push("browser=" + t.target_browser.m_nBrowserID),
-              c.push("browserType=" + t.target_browser.m_eBrowserType),
+              t.target_browser.m_eBrowserType
+                ? c.push("browserType=" + t.target_browser.m_eBrowserType)
+                : t.browserType && c.push("browserType=" + t.browserType),
               t.availscreenwidth &&
                 t.availscreenheight &&
                 (c.push("screenavailwidth=" + t.availscreenwidth),
@@ -1220,9 +1222,11 @@
           t.html_class && (d = `class="${t.html_class}"`);
           let h = "";
           t.body_class && (h = `class="${t.body_class}"`);
-          let m = `<!DOCTYPE html><html ${d}><head><title></title></head><body ${h}><div id="popup_target"></div></body></html>`;
+          let m = "";
+          t.popup_class && (m = `class="${t.popup_class}"`);
+          let p = `<!DOCTYPE html><html ${d}><head><title></title></head><body ${h}><div id="popup_target" ${m}></div></body></html>`;
           return (
-            u.document.write(m),
+            u.document.write(p),
             (u.document.title = s),
             a.V2(u, a.Mv()),
             { popup: u, element: u.document.getElementById("popup_target") }
@@ -6536,6 +6540,7 @@
         VY: () => R,
         oX: () => L,
         Vh: () => Xe,
+        TW: () => Ce,
         ry: () => _e,
         $_: () => S,
         h4: () => C,
@@ -7169,10 +7174,7 @@
         return o.createElement(
           m.T,
           Object.assign(
-            {
-              component: null == n ? void 0 : n.InputElement,
-              fallback: "input",
-            },
+            { component: null == n ? void 0 : n.InputElement, fallback: s.bX },
             e,
             { componentRef: t }
           )
@@ -10751,17 +10753,18 @@
     },
     28268: (e, t, n) => {
       "use strict";
-      n.d(t, { HP: () => m });
+      n.d(t, { HP: () => p, gz: () => g });
       var i = n(70655),
         o = n(67294),
         s = n(79822),
         r = n(7707),
-        a = n(23153),
-        l = n(41311),
-        c = n(22975),
-        u = n(48037),
-        d = n.n(u);
-      class h extends o.Component {
+        a = n(7573),
+        l = n(23153),
+        c = n(41311),
+        u = n(22975),
+        d = n(48037),
+        h = n.n(d);
+      class m extends o.Component {
         TryHide() {
           this.m_fnHide && this.m_fnHide(), (this.m_fnHide = null);
         }
@@ -10793,8 +10796,8 @@
             const n = (e) => (this.m_fnHide = e);
             u =
               "string" == typeof e
-                ? p.ForText(e, n, t, c)
-                : p.ForReactNode(e, n, t, c);
+                ? _.ForText(e, n, t, c)
+                : _.ForReactNode(e, n, t, c);
           }
           const d = Object.assign(Object.assign({}, this.props), {
             onMouseEnter: u ? u.ShowToolTip : null,
@@ -10803,9 +10806,9 @@
           return this.RenderHelper(d, u);
         }
       }
-      (h.defaultProps = { nDelayShowMS: 300 }),
-        (0, i.gn)([c.ak], h.prototype, "TryHide", null);
-      class m extends h {
+      (m.defaultProps = { nDelayShowMS: 300 }),
+        (0, i.gn)([u.ak], m.prototype, "TryHide", null);
+      class p extends m {
         RenderHelper(e, t) {
           const {
               toolTipContent: n,
@@ -10841,10 +10844,21 @@
           );
         }
       }
+      class g extends o.Component {
+        render() {
+          const e = this.props,
+            { className: t } = e,
+            n = (0, i._T)(e, ["className"]);
+          return o.createElement(
+            "div",
+            Object.assign({ className: (0, a.Z)(h().ToolTipCustom, t) }, n),
+            this.props.children
+          );
+        }
+      }
       o.Component;
       o.Component;
-      o.Component;
-      class p {
+      class _ {
         constructor(e, t, n, i) {
           (this.m_rctContent = e),
             (this.m_nDelayShowMS = n),
@@ -10853,14 +10867,14 @@
             (this.m_fnOnShow = t);
         }
         static ForReactNode(e, t, n, i) {
-          return new p(e, t, n, i);
+          return new _(e, t, n, i);
         }
         static ForText(e, t, n, i) {
-          return new p(
+          return new _(
             o.createElement(
               "div",
-              { className: d().TextToolTip },
-              (0, l.Xx)(e)
+              { className: h().TextToolTip },
+              (0, c.Xx)(e)
             ),
             t,
             n,
@@ -10874,11 +10888,11 @@
           if ("function" == typeof this.m_rctContent) {
             if (((i = this.m_rctContent()), !i)) return;
           } else i = this.m_rctContent;
-          p.sm_embeddedElements.ShowElementDelayed(
+          _.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             this.m_nDelayShowMS,
             o.createElement(
-              a.T,
+              l.T,
               Object.assign({}, n, this.m_hoverPositionProps),
               i
             ),
@@ -10888,12 +10902,12 @@
         }
         HideToolTip(e) {
           const t = e.currentTarget || e;
-          p.sm_embeddedElements.HideElement(t.ownerDocument, this.m_strKey);
+          _.sm_embeddedElements.HideElement(t.ownerDocument, this.m_strKey);
         }
       }
-      (p.sm_embeddedElements = new s.AN("ignored-id-tooltip-map")),
-        (0, i.gn)([c.ak], p.prototype, "ShowToolTip", null),
-        (0, i.gn)([c.ak], p.prototype, "HideToolTip", null);
+      (_.sm_embeddedElements = new s.AN("ignored-id-tooltip-map")),
+        (0, i.gn)([u.ak], _.prototype, "ShowToolTip", null),
+        (0, i.gn)([u.ak], _.prototype, "HideToolTip", null);
     },
     72258: (e, t, n) => {
       "use strict";
