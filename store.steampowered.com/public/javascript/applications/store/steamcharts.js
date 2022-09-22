@@ -3555,7 +3555,7 @@
         TopNewReleases: (e) => `${n.Z.SteamCharts()}topnewreleases/${e}`,
       };
       function zt(e) {
-        return `${w.De.STORE_BASE_URL}stats/topnewreleases/${e}`;
+        return `${w.De.STORE_BASE_URL}charts/topnewreleases/${e}`;
       }
       function xt(e) {
         const [t, r] = (0, o.useState)(!1),

@@ -13188,7 +13188,7 @@
           LoyaltyItemBundles: () => "/points/shop/c/itembundles",
           LoyaltyItemBundle: (e) => `/points/shop/bundle/${e}`,
         },
-        c = { SteamCharts: () => "/stats/" },
+        c = { SteamCharts: () => "/charts/" },
         m = {},
         d = Object.assign(
           Object.assign(

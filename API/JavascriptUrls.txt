@@ -737,6 +737,7 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
+${STORE_BASE_URL}charts/topnewreleases/${}
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
@@ -889,7 +890,6 @@ ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
-${STORE_BASE_URL}stats/topnewreleases/${}
 ${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steamaccount/addfunds
