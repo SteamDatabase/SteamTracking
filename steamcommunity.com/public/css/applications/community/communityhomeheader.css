@@ -126,7 +126,8 @@
 .communityhomeheader_Search_r2myG .communityhomeheader_SearchResultsCtn_23v0A {
   background: #181a21;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
+  transform: translate3d(0, 0, 0);
   width: 100%;
 }
 .communityhomeheader_Search_r2myG

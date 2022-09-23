@@ -234,13 +234,13 @@
                   (0, o.Xx)("#Community_Home_Header_AddFriend_Button")
                 )
               ),
-              n.createElement(A, null),
+              n.createElement(g, null),
               n.createElement(w, null)
             )
           )
         );
       }
-      function A() {
+      function g() {
         const [e, t] = (0, n.useState)(""),
           [r, i] = (0, n.useState)([]),
           [h, b] = (0, n.useState)(!1),
@@ -271,12 +271,12 @@
           n.createElement(
             C.s,
             { className: m().AppHubsCtn },
-            n.createElement(g, {
+            n.createElement(A, {
               appShortcuts: S.data.personalAppIds,
               sectionTitle: (0, o.Xx)("#Community_Home_Header_GameHubs_ForYou"),
               withDivider: S.data.popularAppIds.length > 0,
             }),
-            n.createElement(g, {
+            n.createElement(A, {
               appShortcuts: S.data.popularAppIds,
               sectionTitle: (0, o.Xx)(
                 "#Community_Home_Header_GameHubs_Popular"
@@ -287,7 +287,9 @@
             C.s,
             {
               onFocus: () => b(!0),
-              onBlur: () => b(!1),
+              onBlur: (e) => {
+                e.currentTarget.contains(e.relatedTarget) || b(!1);
+              },
               className: m().Search,
             },
             n.createElement(
@@ -340,7 +342,7 @@
           )
         );
       }
-      function g(e) {
+      function A(e) {
         const { appShortcuts: t, sectionTitle: r, withDivider: a } = e;
         return t && t.length
           ? n.createElement(
@@ -377,12 +379,12 @@
             )
           : null;
       }
-      const N = "subsection",
-        T = "browsefilter";
+      const T = "subsection",
+        N = "browsefilter";
       function w() {
         const e = (0, y.k6)(),
-          t = (0, H.ks)(e, N),
-          r = (0, H.ks)(e, T);
+          t = (0, H.ks)(e, T),
+          r = (0, H.ks)(e, N);
         return n.createElement(
           "div",
           null,
