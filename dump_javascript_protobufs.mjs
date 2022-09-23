@@ -26,6 +26,8 @@ const allMessages = [
 	},
 ];
 
+const globalModuleExportedMessages = new Map();
+
 for (const file of files) {
 	try {
 		const code = await readFile(file);
@@ -115,6 +117,15 @@ for (const file of files) {
 
 						crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
+						if (globalModuleExportedMessages.has(currentModule)) {
+							globalModuleExportedMessages.set(
+								currentModule,
+								new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds])
+							);
+						} else {
+							globalModuleExportedMessages.set(currentModule, result.exportedIds);
+						}
+
 						// Look up field types from other messages in same module
 						FixTypesSameModule(result.services, result.messages);
 
@@ -136,6 +147,8 @@ for (const file of files) {
 		continue;
 	}
 }
+
+FixTypesCrossModule(allServices, allMessages, globalModuleExportedMessages);
 
 const mergedMessages = MergeMessages(allMessages);
 
