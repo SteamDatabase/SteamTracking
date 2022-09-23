@@ -78,6 +78,7 @@ ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
+${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
 ${COMMUNITY_BASE_URL}${_ ? "minigame/ajaxgetgameitemdefsforeditor" : "minigame/ajaxgetgameitemdefs"}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
@@ -101,12 +102,15 @@ ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
+${COMMUNITY_BASE_URL}actions/SearchApps/${}
 ${COMMUNITY_BASE_URL}actions/ajaxcreateupdatediscountevent
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
 ${COMMUNITY_BASE_URL}actions/ajaxsetappagegatebypass/
 ${COMMUNITY_BASE_URL}actions/selectPreviousAvatar
+${COMMUNITY_BASE_URL}app/${appId}
+${COMMUNITY_BASE_URL}app/${appid}
 ${COMMUNITY_BASE_URL}app/${appid}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}app/${unAppID}
 ${COMMUNITY_BASE_URL}app/${}
@@ -255,6 +259,7 @@ ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetactiveoptins
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetoptintagids
 ${COMMUNITY_BASE_URL}search/users
+${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${sharedFileID}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}

@@ -10796,8 +10796,8 @@
             const n = (e) => (this.m_fnHide = e);
             u =
               "string" == typeof e
-                ? _.ForText(e, n, t, c)
-                : _.ForReactNode(e, n, t, c);
+                ? f.ForText(e, n, t, c)
+                : f.ForReactNode(e, n, t, c);
           }
           const d = Object.assign(Object.assign({}, this.props), {
             onMouseEnter: u ? u.ShowToolTip : null,
@@ -10856,9 +10856,43 @@
           );
         }
       }
-      o.Component;
-      o.Component;
-      class _ {
+      class _ extends o.Component {
+        render() {
+          const e = this.props,
+            { className: t } = e,
+            n = __rest(e, ["className"]);
+          return React.createElement(
+            "div",
+            Object.assign(
+              {
+                className: classnames(
+                  styles.ToolTipTitle,
+                  this.props.center ? styles.Center : "",
+                  t
+                ),
+              },
+              n
+            ),
+            this.props.children
+          );
+        }
+      }
+      class v extends o.Component {
+        render() {
+          const e = this.props,
+            { className: t } = e,
+            n = __rest(e, ["className"]);
+          return React.createElement(
+            "div",
+            Object.assign(
+              { className: classnames(styles.ToolTipInsetContent, t) },
+              n
+            ),
+            this.props.children
+          );
+        }
+      }
+      class f {
         constructor(e, t, n, i) {
           (this.m_rctContent = e),
             (this.m_nDelayShowMS = n),
@@ -10867,10 +10901,10 @@
             (this.m_fnOnShow = t);
         }
         static ForReactNode(e, t, n, i) {
-          return new _(e, t, n, i);
+          return new f(e, t, n, i);
         }
         static ForText(e, t, n, i) {
-          return new _(
+          return new f(
             o.createElement(
               "div",
               { className: h().TextToolTip },
@@ -10888,7 +10922,7 @@
           if ("function" == typeof this.m_rctContent) {
             if (((i = this.m_rctContent()), !i)) return;
           } else i = this.m_rctContent;
-          _.sm_embeddedElements.ShowElementDelayed(
+          f.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             this.m_nDelayShowMS,
             o.createElement(
@@ -10902,12 +10936,12 @@
         }
         HideToolTip(e) {
           const t = e.currentTarget || e;
-          _.sm_embeddedElements.HideElement(t.ownerDocument, this.m_strKey);
+          f.sm_embeddedElements.HideElement(t.ownerDocument, this.m_strKey);
         }
       }
-      (_.sm_embeddedElements = new s.AN("ignored-id-tooltip-map")),
-        (0, i.gn)([u.ak], _.prototype, "ShowToolTip", null),
-        (0, i.gn)([u.ak], _.prototype, "HideToolTip", null);
+      (f.sm_embeddedElements = new s.AN("ignored-id-tooltip-map")),
+        (0, i.gn)([u.ak], f.prototype, "ShowToolTip", null),
+        (0, i.gn)([u.ak], f.prototype, "HideToolTip", null);
     },
     72258: (e, t, n) => {
       "use strict";

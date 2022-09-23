@@ -240,6 +240,10 @@ body.apphub_blue
 		margin-top: 2px;
 		margin-bottom: 9px;
 	}
+
+	html.responsive .apphub_NoMoreContent {
+		background: none;
+	}
 }
 
 .apphub_AllContentText

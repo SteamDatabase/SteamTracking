@@ -24973,7 +24973,10 @@
           [_]
         );
         const [h, g] = a.useState(
-          null == n ? void 0 : n.GetImageURLWithFallback("sale_overlay", i)
+          (null == n ? void 0 : n.GetImageURL("sale_overlay", i)) ||
+            (null == n
+              ? void 0
+              : n.GetImageURL("sale_overlay", G.LJ.GetELanguageFallback(i)))
         );
         if (
           (a.useEffect(() => {

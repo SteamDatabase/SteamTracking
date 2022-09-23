@@ -7,6 +7,10 @@ body
     color: #636363;
 }
 
+.apphub_background {
+	height: 100%;
+}
+
 .community_home_header
 {
 	position: relative;

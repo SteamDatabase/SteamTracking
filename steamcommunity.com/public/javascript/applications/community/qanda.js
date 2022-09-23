@@ -4,43 +4,43 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [908],
   {
-    2388: (e, t, r) => {
-      r.d(t, { Gr: () => _, Jq: () => P, y$: () => h });
-      var a = r(70655),
-        o = r(9669),
-        n = r.n(o),
-        s = r(22188),
-        i = r(67294),
-        l = (r(26149), r(54698), r(43359)),
-        m = r(3389),
-        u = (r(82946), r(77520)),
-        c = r(93976),
-        f = r(90666);
-      class d {
+    2388: (e, r, t) => {
+      t.d(r, { Gr: () => p, Jq: () => _, y$: () => g });
+      var s = t(70655),
+        o = t(9669),
+        a = t.n(o),
+        n = t(22188),
+        i = t(67294),
+        l = (t(26149), t(54698), t(43359)),
+        u = t(3389),
+        c = (t(82946), t(77520)),
+        m = t(93976),
+        d = t(90666);
+      class f {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
-        LoadProfiles(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+        LoadProfiles(e, r) {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             (0,
-            u.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let r = e.filter(
+            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let t = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
-            if (0 == r.length) return this.m_mapProfilesLoading.get(e[0]);
-            let a = f.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              o = n().get(a, {
-                params: { steamids: r.join(",") },
+            if (0 == t.length) return this.m_mapProfilesLoading.get(e[0]);
+            let s = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              o = a().get(s, {
+                params: { steamids: t.join(",") },
                 withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
+                cancelToken: null == r ? void 0 : r.token,
               });
-            r.forEach((e) => this.m_mapProfilesLoading.set(e, o));
-            let s = yield o;
-            s.data &&
-              200 == s.status &&
-              s.data.forEach((e) => {
+            t.forEach((e) => this.m_mapProfilesLoading.set(e, o));
+            let n = yield o;
+            n.data &&
+              200 == n.status &&
+              n.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
                   (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
                   (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
@@ -55,7 +55,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            m.K.InitFromAccountID(e).ConvertTo64BitString()
+            u.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(e) {
@@ -66,7 +66,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            m.K.InitFromAccountID(e).ConvertTo64BitString()
+            u.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(e) {
@@ -76,99 +76,165 @@
           return !e.some((e) => !this.BHasProfileBySteamID(e));
         }
         GetProfileURLBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.profile_url
-            ? f.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : f.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+          const r = this.GetProfileBySteamID(e);
+          return r && r.profile_url
+            ? d.De.COMMUNITY_BASE_URL + "id/" + r.profile_url
+            : d.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.persona_name ? t.persona_name : "";
+          const r = this.GetProfileBySteamID(e);
+          return r && r.persona_name ? r.persona_name : "";
         }
       }
-      (0, a.gn)([s.LO], d.prototype, "m_mapProfiles", void 0);
-      const h = new d();
-      function _(e) {
-        const t = i.useMemo(
-            () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
+      (0, s.gn)([n.LO], f.prototype, "m_mapProfiles", void 0);
+      const g = new f();
+      function p(e) {
+        const r = i.useMemo(
+            () => (e ? ("string" == typeof e ? new u.K(e) : e) : null),
             [e]
           ),
-          [r, a] = (0, i.useState)(!!t && !h.BHasProfileBySteamID(t));
+          [t, s] = (0, i.useState)(!!r && !g.BHasProfileBySteamID(r));
         (0, i.useEffect)(() => {
-          const e = n().CancelToken.source();
+          const e = a().CancelToken.source();
           return (
-            t &&
-              !h.BHasProfileBySteamID(t) &&
-              h
-                .LoadProfiles([t.ConvertTo64BitString()])
+            r &&
+              !g.BHasProfileBySteamID(r) &&
+              g
+                .LoadProfiles([r.ConvertTo64BitString()])
                 .catch((e) => {
-                  const r = (0, c.l)(e);
+                  const t = (0, m.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
-                      t.ConvertTo64BitString() +
+                      r.ConvertTo64BitString() +
                       ": " +
-                      r.strErrorMsg,
-                    r
+                      t.strErrorMsg,
+                    t
                   );
                 })
                 .finally(() => {
-                  e.token.reason || a(!1);
+                  e.token.reason || s(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [r, !!t && h.GetProfileBySteamID(t)];
+        return [t, !!r && g.GetProfileBySteamID(r)];
       }
-      function P(e) {
-        return _(i.useMemo(() => m.K.InitFromAccountID(e), [e]));
+      function _(e) {
+        return p(i.useMemo(() => u.K.InitFromAccountID(e), [e]));
       }
-      window.g_ProfileStore = h;
+      window.g_ProfileStore = g;
     },
-    69761: (e, t, r) => {
-      r.r(t), r.d(t, { QAndARoutes: () => l, default: () => m });
-      var a = r(69382),
-        o = r(67294),
-        n = r(78587),
-        s = r(74091),
-        i = r(90666);
+    93976: (e, r, t) => {
+      t.d(r, { l: () => n });
+      t(26149);
+      var s = t(9669),
+        o = t.n(s),
+        a = t(58114);
+      function n(e) {
+        if (o().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.response.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: "
+            ),
+              console.error(e),
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof a.gA)
+              return {
+                strErrorMsg: "" + e.GetEResult(),
+                errorCode: e.GetEResult(),
+              };
+            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+      }
+    },
+    69761: (e, r, t) => {
+      t.r(r), t.d(r, { QAndARoutes: () => l, default: () => u });
+      var s = t(69382),
+        o = t(67294),
+        a = t(78587),
+        n = t(74091),
+        i = t(90666);
       const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
-        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
+        FullPageView: (e, r) => `/questions/${e}/view/${r}`,
       };
-      const m = function (e) {
+      const u = function (e) {
         return o.createElement(
-          n.rs,
+          a.rs,
           null,
-          o.createElement(n.AW, {
+          o.createElement(a.AW, {
             path: l.Dashboard(":vanity_str"),
             render: (e) =>
-              o.createElement(s.d, {
+              o.createElement(n.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t } = e.match.params;
-                    return o.createElement(a.A, { vanity_str: t });
+                    const { vanity_str: r } = e.match.params;
+                    return o.createElement(s.A, { vanity_str: r });
                   },
                 },
               }),
           }),
-          o.createElement(n.AW, {
+          o.createElement(a.AW, {
             path: l.FullPageView(":vanity_str", ":session_gid"),
             render: (e) =>
-              o.createElement(s.d, {
+              o.createElement(n.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t, session_gid: r } = e.match.params;
-                    return o.createElement(a.EI, { gidSession: r });
+                    const { vanity_str: r, session_gid: t } = e.match.params;
+                    return o.createElement(s.EI, { gidSession: t });
                   },
                 },
               }),
           }),
-          o.createElement(n.AW, { component: u })
+          o.createElement(a.AW, { component: c })
         );
       };
-      function u(e) {
+      function c(e) {
         return "dev" !== i.De.WEB_UNIVERSE
-          ? o.createElement(n.l_, { to: "/" })
+          ? o.createElement(a.l_, { to: "/" })
           : o.createElement(
               "div",
               null,

@@ -68245,10 +68245,10 @@ svg.reorderablelist_ReorderArrow_2gZry {
   --basicui-header-height: 0px;
 }
 :root {
-  --virtualmenutouchkey-accent: #1a9fff;
-  --virtualmenutouchkey-bg: #1f1f1f;
-  --virtualmenutouchkey-bg-hover: #103753;
-  --virtualmenutouchkey-fg: #ffffff;
+  --virtualmenu-accent: #1a9fff;
+  --virtualmenu-bg: #1f1f1f;
+  --virtualmenu-bg-hover: #103753;
+  --virtualmenu-fg: #ffffff;
   --virtualmenutouchkey-icon-width: 100%;
   --virtualmenutouchkey-icon-height: 100%;
   --virtualmenupointer-x: 0%;
@@ -68257,8 +68257,6 @@ svg.reorderablelist_ReorderArrow_2gZry {
   --virtualmenutouchkey-midpoint-x: 0%;
   --virtualmenutouchkey-midpoint-y: 0%;
   --virtualmenutouchkey-description-width: 0px;
-  --touchkeyglyph-bg: #1f1f1f;
-  --touchkeyglyph-fg: #ffffff;
 }
 .gamepaduiappoverlayvirtualmenucontainer_BrowserViewHost_1y1Z7 {
   position: absolute;
@@ -68341,9 +68339,9 @@ svg.reorderablelist_ReorderArrow_2gZry {
   font-size: 22px;
   line-height: 28px;
   line-height: 1.5em;
-  border: solid 0px var(--virtualmenutouchkey-accent);
-  background: var(--virtualmenutouchkey-bg);
-  color: var(--virtualmenutouchkey-fg);
+  border: solid 0px var(--virtualmenu-accent);
+  background: var(--virtualmenu-bg);
+  color: var(--virtualmenu-fg);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -68384,7 +68382,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     100% 100%,
     circle,
     transparent 20px,
-    var(--virtualmenutouchkey-bg) calc(0.5 * 20px)
+    var(--virtualmenu-bg) calc(0.5 * 20px)
   );
 }
 .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
@@ -68394,7 +68392,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     0% 100%,
     circle,
     transparent 20px,
-    var(--virtualmenutouchkey-bg) calc(0.5 * 20px)
+    var(--virtualmenu-bg) calc(0.5 * 20px)
   );
 }
 .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
@@ -68422,7 +68420,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     100% 100%,
     circle,
     transparent 200px,
-    var(--virtualmenutouchkey-bg) calc(0.5 * 200px)
+    var(--virtualmenu-bg) calc(0.5 * 200px)
   );
 }
 .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
@@ -68432,7 +68430,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     0% 100%,
     circle,
     transparent 200px,
-    var(--virtualmenutouchkey-bg) calc(0.5 * 200px)
+    var(--virtualmenu-bg) calc(0.5 * 200px)
   );
 }
 .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
@@ -68505,9 +68503,9 @@ svg.reorderablelist_ReorderArrow_2gZry {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  color: var(--virtualmenutouchkey-fg);
-  background-color: var(--virtualmenutouchkey-bg);
-  border-top: solid 4px var(--virtualmenutouchkey-bg);
+  color: var(--virtualmenu-fg);
+  background-color: var(--virtualmenu-bg);
+  border-top: solid 4px var(--virtualmenu-bg);
   box-sizing: border-box;
 }
 .gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW)
@@ -68532,12 +68530,9 @@ svg.reorderablelist_ReorderArrow_2gZry {
   .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_BottomEdge_3-DR_.gamepaduiappoverlayvirtualmenucontainer_RightEdge_3VkZb {
   border-bottom-right-radius: 20px;
 }
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn) {
-  opacity: 0.56;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
-  background: var(--virtualmenutouchkey-bg-hover);
-  border-top-color: var(--virtualmenutouchkey-accent);
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW).gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  background: var(--virtualmenu-bg-hover);
+  border-top-color: var(--virtualmenu-accent);
   z-index: 1;
 }
 .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
@@ -68559,16 +68554,20 @@ svg.reorderablelist_ReorderArrow_2gZry {
 .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56 {
   border: solid 4px transparent;
   border-radius: 50%;
-  background-color: var(--virtualmenutouchkey-bg);
+  background-color: var(--virtualmenu-bg);
   width: 184px;
   height: 184px;
   top: calc(50% - 92px);
   left: calc(50% - 92px);
   box-sizing: border-box;
 }
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
-  border-color: var(--virtualmenutouchkey-accent);
-  background-color: var(--virtualmenutouchkey-bg-hover);
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  border-color: var(--virtualmenu-accent);
+  background-color: var(--virtualmenu-bg-hover);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn),
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
+  opacity: 0.5;
 }
 .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
   font-size: 64px;
@@ -68647,19 +68646,19 @@ svg.reorderablelist_ReorderArrow_2gZry {
   left: 0;
   right: 0;
   transform: translate(
-    calc(var(--virtualmenupointer-x) - 20px),
-    calc(var(--virtualmenupointer-y) - 20px)
+    calc(var(--virtualmenupointer-x) - 15px),
+    calc(var(--virtualmenupointer-y) - 15px)
   );
   pointer-events: none;
 }
 .gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9::before {
   content: "";
   background: #0e141b;
-  border-radius: 20px;
+  border-radius: 15px;
   pointer-events: all;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   opacity: 0.8;
   transition: background-color 0.15s ease-out;
 }
@@ -68678,11 +68677,11 @@ svg.reorderablelist_ReorderArrow_2gZry {
   margin: auto;
   max-width: 100%;
   text-align: center;
-  color: var(--touchkeyglyph-fg);
+  color: var(--virtualmenu-fg);
   border-radius: 0.3em;
   font-size: 0.5em;
   font-weight: 700;
-  border: solid 2px var(--touchkeyglyph-fg);
+  border: solid 2px var(--virtualmenu-fg);
   display: flex;
   flex-direction: row;
 }
@@ -68696,8 +68695,8 @@ svg.reorderablelist_ReorderArrow_2gZry {
 }
 .gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
   .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh {
-  color: var(--touchkeyglyph-bg);
-  background-color: var(--touchkeyglyph-fg);
+  color: var(--virtualmenu-bg);
+  background-color: var(--virtualmenu-fg);
   border-radius: 0.2em;
   border-bottom: solid 0.2em rgba(0, 0, 0, 0.5);
 }
@@ -68736,8 +68735,12 @@ svg.reorderablelist_ReorderArrow_2gZry {
 .gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u {
   fill: #1f1f1f;
 }
-.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf {
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn).gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf {
   fill: #103753;
+}
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u:not(.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn),
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
+  opacity: 0.5;
 }
 .gamepaduiappoverlayvirtualmenucontainer_SelectionArc_2Znw2 {
   fill: #1a9fff;

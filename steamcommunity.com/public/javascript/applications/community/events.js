@@ -17,6 +17,35 @@
         LatestUpdateButton: "partnereventwebrowembed_LatestUpdateButton_3F6YM",
       };
     },
+    34425: (e, t, n) => {
+      "use strict";
+      n.d(t, { p: () => c });
+      var a = n(70655),
+        o = n(67294),
+        s = n(7707),
+        r = n(27745),
+        i = n(22975),
+        l = n(90666);
+      function c(e) {
+        const { children: t, navTreeRef: n } = e,
+          c = (0, a._T)(e, ["children", "navTreeRef"]),
+          d = o.useRef(),
+          p = (0, i.BE)(d, n);
+        if (l.De.IN_GAMEPADUI) {
+          const e = window.__nav_tree_root;
+          return o.createElement(
+            s.Fe,
+            Object.assign({}, c, {
+              navTreeRef: p,
+              secondary: !0,
+              parentEmbeddedNavTree: e,
+            }),
+            o.createElement(r.O, null, t)
+          );
+        }
+        return o.createElement(o.Fragment, null, t);
+      }
+    },
     91799: (e, t, n) => {
       "use strict";
       n.d(t, { M: () => b, q: () => I });
@@ -35,8 +64,8 @@
         h = n(89694),
         E = (n(68002), n(32548)),
         _ = n(41147),
-        S = n(70882);
-      let w = class extends o.Component {
+        w = n(70882);
+      let S = class extends o.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new l.K(r.JA.CLANSTEAMID));
         }
@@ -95,11 +124,11 @@
           });
         }
       };
-      w = (0, a.gn)([s.Pi], w);
-      const I = (0, m.M)(w),
+      S = (0, a.gn)([s.Pi], S);
+      const I = (0, m.M)(S),
         b = (e) =>
           o.createElement(
-            S.R0,
+            w.R0,
             Object.assign({}, e, {
               key: e.match.params.oldAnnouncementGID,
               bClearDirty: !0,
@@ -108,9 +137,9 @@
             })
           );
     },
-    34098: (e, t, n) => {
+    2218: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => T });
+      n.r(t), n.d(t, { default: () => H });
       var a = n(9355),
         o = n(91799),
         s = n(67294),
@@ -126,8 +155,8 @@
         h = n(13596),
         E = n(74163),
         _ = n(41311),
-        S = n(90666),
-        w = n(70655),
+        w = n(90666),
+        S = n(70655),
         I = n(29323),
         b = (n(54698), n(22975)),
         D = n(3044),
@@ -150,15 +179,15 @@
         }
         LoadAppAndFirstEvent() {
           var e;
-          return (0, w.mG)(this, void 0, void 0, function* () {
-            const t = (0, S.kQ)(
+          return (0, S.mG)(this, void 0, void 0, function* () {
+            const t = (0, w.kQ)(
               "eventinfinitescrolllanding",
               "application_config"
             );
             let n;
             t && "string" == typeof t && (n = t);
             const a = window.location.href.startsWith(
-                S.De.COMMUNITY_BASE_URL + "groups"
+                w.De.COMMUNITY_BASE_URL + "groups"
               ),
               o = a
                 ? yield L.sV.LoadOGGClanInfoForGroupVanity(
@@ -216,13 +245,13 @@
             : s.createElement("div", null);
         }
       };
-      (0, w.gn)([b.ak], g.prototype, "HideModal", null),
-        (g = (0, w.gn)([I.Pi], g));
-      var M = n(7707);
-      n(27745);
-      var k = n(35921),
-        A = n(39746),
-        f = (n(12505), n(71174), n(24020)),
+      (0, S.gn)([b.ak], g.prototype, "HideModal", null),
+        (g = (0, S.gn)([I.Pi], g));
+      n(34425);
+      var M = n(7707),
+        f = n(35921),
+        k = n(39746),
+        A = (n(12505), n(71174), n(24020)),
         C = n(70350),
         B = n(95598),
         U = n(13045);
@@ -237,7 +266,7 @@
               announcementGIDList: [],
               last_update_event: null,
             });
-          const t = (0, f.b)("EventWebRowEmbed");
+          const t = (0, A.b)("EventWebRowEmbed");
           this.ValidateStoreDefault(t) &&
             ((this.state.bPreLoaded = t.bPreLoaded),
             (this.state.announcementGIDList = t.announcementGIDList),
@@ -249,7 +278,7 @@
             }));
         }
         componentDidMount() {
-          return (0, w.mG)(this, void 0, void 0, function* () {
+          return (0, S.mG)(this, void 0, void 0, function* () {
             const {
               appid: e,
               event_customization: t,
@@ -382,7 +411,7 @@
                   null,
                   (0, _.Xx)("#EventBrowse_RecentEvents")
                 ),
-                !S.De.IN_GAMEPADUI &&
+                !w.De.IN_GAMEPADUI &&
                   s.createElement(
                     "div",
                     { className: U.SectionButtonCtn },
@@ -424,12 +453,12 @@
                 )
               ),
             Boolean(o && r) &&
-              s.createElement(W, {
+              s.createElement(T, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 announcementGID: r,
                 onClick: this.ShowLatestUpdateModal,
               }),
-            Boolean(o && !r && !S.De.IN_GAMEPADUI) &&
+            Boolean(o && !r && !w.De.IN_GAMEPADUI) &&
               s.createElement(N, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 onClick: this.ShowLatestUpdateModal,
@@ -447,8 +476,8 @@
           closeModal: i,
         } = e;
         return s.createElement(D.x, {
-          className: S.De.IN_GAMEPADUI ? void 0 : U.StoreHeaderAdjust,
-          eventClassName: S.De.IN_GAMEPADUI ? U.GamePadUIWidthAdjust : void 0,
+          className: w.De.IN_GAMEPADUI ? void 0 : U.StoreHeaderAdjust,
+          eventClassName: w.De.IN_GAMEPADUI ? U.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: a,
           announcementGID: o,
@@ -476,7 +505,7 @@
           )
         );
       }
-      function W(e) {
+      function T(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
           o = n ? d.j1.GetClanEventFromAnnouncementGID(n) : null,
           r = (e) => {
@@ -501,25 +530,25 @@
           ),
           Boolean(o) &&
             s.createElement(
-              k.s,
+              f.s,
               {
                 className: U.EventsSummariesCtn,
                 "flow-children": "column",
-                navEntryPreferPosition: A.c4.PREFERRED_CHILD,
+                navEntryPreferPosition: k.c4.PREFERRED_CHILD,
               },
               s.createElement(C.KE, { event: o, onClick: r })
             )
         );
       }
-      (0, w.gn)([b.ak], y.prototype, "ShowModal", null),
-        (0, w.gn)([b.ak], y.prototype, "ShowLatestUpdateModal", null),
-        (0, w.gn)([b.ak], y.prototype, "CloseModal", null);
-      var x = n(10669),
-        H = n(5525);
-      class j extends s.Component {
+      (0, S.gn)([b.ak], y.prototype, "ShowModal", null),
+        (0, S.gn)([b.ak], y.prototype, "ShowLatestUpdateModal", null),
+        (0, S.gn)([b.ak], y.prototype, "CloseModal", null);
+      var W = n(10669),
+        j = n(5525);
+      class x extends s.Component {
         render() {
           const { appid: e } = this.props;
-          let t = H.JW.GetTimeNowWithOverrideAsDate(),
+          let t = j.JW.GetTimeNowWithOverrideAsDate(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
           return s.createElement(
@@ -530,7 +559,7 @@
             },
             s.createElement(y, {
               appid: e,
-              partnerEventStore: x.wk,
+              partnerEventStore: W.wk,
               event_customization: {
                 require_tags: ["workshop"],
                 rtime_oldestevent: a,
@@ -542,12 +571,12 @@
           );
         }
       }
-      function T(e) {
+      function H(e) {
         const [t, n] = s.useState(!0),
           u = (0, E.T)();
         return (
           s.useEffect(() => {
-            l.Q8.Init(new i.J(S.De.WEBAPI_BASE_URL)),
+            l.Q8.Init(new i.J(w.De.WEBAPI_BASE_URL)),
               d.j1.Init(),
               (0, p.nf)(null),
               Promise.all([c.cb.InitGlobal()]).then(() => {
@@ -595,7 +624,7 @@
                     path: a.W3.WorkshopHub(":appid(\\d+)"),
                     render: (e) =>
                       s.createElement(
-                        j,
+                        x,
                         Object.assign({}, e, {
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
@@ -630,7 +659,7 @@
         );
       }
       function F(e) {
-        return "dev" !== S.De.WEB_UNIVERSE
+        return "dev" !== w.De.WEB_UNIVERSE
           ? s.createElement(r.l_, { push: !0, to: "/" })
           : s.createElement("div", null, "Unknown route");
       }

@@ -11047,7 +11047,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1663717845),
+          c = parseInt(1663888267),
           m = c && Jo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, io.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -25447,7 +25447,7 @@
               }
             );
           }, [i, e, _, h]),
-          i && 0 != i_.i.ActiveTouchMenus.length)
+          i && 0 != i_.iB.ActiveTouchMenus.length)
         )
           return a.createElement(o_.i5, { appID: T.hq.MainRunningApp.appid });
         let C = T.hq.IsNewOverlapEnabled() && n == T.MA.Main,
@@ -25704,9 +25704,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Sep 20 2022 : 16:50:45",
-              BUILD_TIME_UTC: "Sep 20 2022 : 23:50:45",
-              BUILD_RTIME_UTC: 1663717845,
+              BUILD_TIME_LOCAL: "Sep 22 2022 : 16:11:07",
+              BUILD_TIME_UTC: "Sep 22 2022 : 23:11:07",
+              BUILD_RTIME_UTC: 1663888267,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
