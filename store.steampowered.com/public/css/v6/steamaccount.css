@@ -229,7 +229,7 @@ p.currency_change_confirm_dialog_footer {
 }
 
 .youraccount_updating_shipping_button_row {
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .shipping_row_alternate {
@@ -836,4 +836,145 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	justify-content: space-between;
 	padding-bottom: 7px;
 	color: #7C8EA3;
+}
+
+/* transaction details view */
+.orderdetails_body {
+	padding-top: 30px;
+}
+
+.orderdetails_row {
+	display: flex;
+	flex-direction: row;
+}
+
+.orderdetails_block {
+	padding-left: 30px;
+}
+
+.orderdetails_block:not( :last-child ) {
+	padding-right: 30px;
+	border-right: 1px solid rgb( 78, 88, 100 );
+}
+
+.orderdetails_block:first-child {
+	padding-left: 0px;
+}
+
+.orderdetails_header {
+	font-size: 20px;
+	line-height: 24px;
+	color: #ffffff;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+
+.orderdetails_orderdate {
+	font-size: 14px;
+	line-height: 17px;
+	color: #6AC9FF;
+	margin-bottom: 28px;
+}
+
+.orderdetails_itemcapsule {
+	display: flex;
+	/* justify-content: center; */
+	margin-bottom: 13px;
+}
+
+.orderdetails_shippingaddress {
+	font-size: 14px;
+	line-height: 17px;
+	color: rgb( 198, 201, 205 );
+}
+
+.orderdetails_shipstep {
+	display: flex;
+	margin-top: 12px;
+}
+
+.orderdetails_shipstep.first {
+	margin-top: 0;
+}
+
+.orderdetails_shiptext {
+	font-size: 17px;
+	line-height: 22px;
+	color: white;
+	margin-left: 12px;
+}
+
+.orderdetails_shippip
+{
+	width: 22px;
+	height: 22px;
+	border: 4px solid #798089;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.orderdetails_shippip::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #6AC9FF00;
+	box-sizing: border-box;
+}
+
+/* after is the circle in the middle */
+.orderdetails_shipstep.complete .orderdetails_shippip {
+	border: 4px solid #D9D9D9;
+}
+
+.orderdetails_shipstep.complete .orderdetails_shippip::after {
+	background-color: #6AC9FF;
+}
+
+/* before is the connecting line */
+.orderdetails_shipstep.complete .orderdetails_shippip::before {
+	background-color: #D9D9D9;
+	border: 2px dashed #79808900;
+	height: 18px;
+}
+
+.orderdetails_shippip:before {
+	content: "";
+	width: 4px;
+	height: 18px;
+	background-color: #79808900;
+	border: 2px solid #798089;
+	box-sizing: border-box;
+	position: absolute;
+	margin-top: -34px;
+}
+
+.orderdetails_shipstep.first .orderdetails_shippip::before {
+	content: "";
+	visibility: collapse;
+}
+
+.orderdetails_tracklink {
+	color: #66c0f4;
+}
+
+.orderdetails_tracklink:hover {
+	color: #46a0c4;
+}
+
+#shipping_state_select_droplist,
+#shipping_country_droplist {
+	z-index: 3000;
+}
+
+.orderdetails_editshipping_dialog {
+	max-width: 600px;
+}
+
+.orderdetails_editshipping_dialog #submit_payment_info_btn {
+	margin-left: 0px;
 }

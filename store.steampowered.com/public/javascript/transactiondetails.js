@@ -12,31 +12,37 @@ function ReportYourAccountJSError( message, e )
 			}
 }
 
+function ClearUpdateShippingErrors()
+{
+ 	$('updateShippingError').innerHTML = '';
+	$('updateShippingError').style.display = 'none';
+}
+
+g_dlgEditShippingAddress = null;
 function ShowUpdateShippingAddressForm()
 {
-	$('shippingAddress').hide();
+	g_dlgEditShippingAddress = ShowDialog( 'Edit Shipping Address', $J( "#updateShippingAddress" ) );
+	g_dlgEditShippingAddress.SetRemoveContentOnDismissal( false );
+
 	$('shipping_info_confirm').hide();
-	$('updateShippingAddress').show();
-	
-		$('errorMessage').innerHTML = '';
-	$('errorMessage').style.display = 'none';
+	$('shipping_info_edit').show();
+
+	ClearUpdateShippingErrors();
 }
 
 function HideUpdateShippingAddressForm()
 {
-	$('shippingAddress').show();
-	$('shipping_info_confirm').hide();
-	$('updateShippingAddress').hide();
+	if ( g_dlgEditShippingAddress )
+		g_dlgEditShippingAddress.Dismiss();
 
-		$('errorMessage').innerHTML = '';
-	$('errorMessage').style.display = 'none';	
+	ClearUpdateShippingErrors();
 }
 
 function UpdateShippingAddress()
 {
 		var errorString = '';
 
-		var rgBadFields = { 
+		var rgBadFields = {
 		shipping_first_name : false,
 		shipping_last_name : false,
 		shipping_address : false,
@@ -58,14 +64,14 @@ function UpdateShippingAddress()
 	{
 				if ( errorString != '' )
 		{
-			$('errorMessage').innerHTML = errorString;
-			$('errorMessage').style.display = '';
-			new Effect.Highlight( 'errorMessage', { endcolor : '#000000', startcolor : '#ff9900' } );	
+			$('updateShippingError').innerHTML = errorString;
+			$('updateShippingError').style.display = '';
+			new Effect.Highlight( 'updateShippingError', { endcolor : '#000000', startcolor : '#ff9900' } );
 		}
 		else
 		{
-						$('errorMessage').innerHTML = '';
-			$('errorMessage').style.display = 'none';
+						$('updateShippingError').innerHTML = '';
+			$('updateShippingError').style.display = 'none';
 
 			VerifyShippingAddress();
 		}
@@ -151,9 +157,10 @@ function OnVerifyShippingAddressSuccess( result )
 					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
 					break;
 			}
-			$('errorMessage').innerHTML = error_text;
-			$('errorMessage').style.display = '';
-			new Effect.Highlight( 'errorMessage', { endcolor : '#000000', startcolor : '#ff9900' } );				
+
+			$('updateShippingError').innerHTML = error_text;
+			$('updateShippingError').style.display = '';
+			new Effect.Highlight( 'updateShippingError', { endcolor : '#000000', startcolor : '#ff9900' } );
 		}
 		else if ( result.bValidAddress || result.bSuggestedAddressMatches )
 		{
@@ -164,14 +171,13 @@ function OnVerifyShippingAddressSuccess( result )
 			Shipping_UpdateFieldsFromVerificationCall( result );
 
 			$('shipping_info_confirm').show();
-			$('shippingAddress').hide();
-			$('updateShippingAddress').hide();
+			$('shipping_info_edit').hide();
 		
 						var error_text = 'We\'ve found a suggestion for your shipping address.';
 			
-			$('errorMessage').innerHTML = error_text;
-			$('errorMessage').style.display = '';
-			new Effect.Highlight( 'errorMessage', { endcolor : '#000000', startcolor : '#ff9900' } );	
+			$('updateShippingError').innerHTML = error_text;
+			$('updateShippingError').style.display = '';
+			new Effect.Highlight( 'updateShippingError', { endcolor : '#000000', startcolor : '#ff9900' } );
 		}
 	} 
 	catch( e ) 
@@ -180,23 +186,13 @@ function OnVerifyShippingAddressSuccess( result )
 	}
 }
 
-function ShowShippingAddressForm()
-{
-	$('shipping_info_entry').show();
-	$('shipping_info_confirm').hide();
-	
-		$('errorMessage').innerHTML = '';
-	$('errorMessage').style.display = 'none';
-}
-
 function ShippingAddressVerified( bUseCorrected )
 {
 	if ( bUseCorrected )
 	{
 		Shipping_UpdateAddressWithCorrectedFields();
 	}
-	
-//	ShowShippingAddressForm();
+
 	SubmitUpdateShippingAddress();
 }
 
@@ -206,9 +202,9 @@ function OnVerifyShippingAddressFailure()
 	{
 				var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 		
-		$('errorMessage').innerHTML = error_text;
-		$('errorMessage').style.display = '';
-		new Effect.Highlight( 'errorMessage', { endcolor : '#000000', startcolor : '#ff9900' } );	
+		$('updateShippingError').innerHTML = error_text;
+		$('updateShippingError').style.display = '';
+		new Effect.Highlight( 'updateShippingError', { endcolor : '#000000', startcolor : '#ff9900' } );
 	} 
 	catch (e) 
 	{
@@ -280,13 +276,13 @@ function SubmitUpdateShippingAddress()
 }
 
 
-function OnUpdateShippingAddressFailure( )
+function OnUpdateShippingAddressFailure()
 {
 	try 
 	{
-		$('errorMessage').innerHTML = 'There was a problem updating your shipping address for this order.';
-		$('errorMessage').show();
-		new Effect.Highlight( 'errorMessage', { endcolor : '#000000', startcolor : '#ff9900' } );	
+		$('updateShippingError').innerHTML = 'There was a problem updating your shipping address for this order.';
+		$('updateShippingError').show();
+		new Effect.Highlight( 'updateShippingError', { endcolor : '#000000', startcolor : '#ff9900' } );
 	} 
 	catch (e) 
 	{
