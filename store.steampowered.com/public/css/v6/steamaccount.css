@@ -978,3 +978,8 @@ body.v6 h2.pageheader.youraccount_pageheader {
 .orderdetails_editshipping_dialog #submit_payment_info_btn {
 	margin-left: 0px;
 }
+
+.orderdetails_shippingdelay {
+	margin-top: 20px;
+	width: 300px;
+}
