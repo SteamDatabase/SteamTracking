@@ -884,7 +884,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 
 .orderdetails_shippingaddress {
 	font-size: 14px;
-	line-height: 17px;
+	line-height: 18px;
 	color: rgb( 198, 201, 205 );
 }
 
@@ -900,8 +900,12 @@ body.v6 h2.pageheader.youraccount_pageheader {
 .orderdetails_shiptext {
 	font-size: 17px;
 	line-height: 22px;
-	color: white;
+	color: #798089;
 	margin-left: 12px;
+}
+
+.orderdetails_shipstep.complete .orderdetails_shiptext {
+	color: white;
 }
 
 .orderdetails_shippip
