@@ -67475,7 +67475,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   line-height: 1.1em;
 }
 .controllerconfiguratormapping_VirtualMenuPreviewContainer_2d-7m {
-  height: 155px;
+  height: 185px;
   position: relative;
   display: flex;
   flex-grow: 1;
@@ -68271,19 +68271,21 @@ svg.reorderablelist_ReorderArrow_2gZry {
   left: 0;
   padding: 0;
   margin: 0;
+  contain: strict;
   width: 100%;
   height: 100%;
   background-color: transparent;
 }
 .gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6 {
   position: absolute;
+  top: 0;
+  left: 0;
   transform-origin: top left;
   display: flex;
   flex-direction: column;
 }
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
-  width: 400px;
-  height: 400px;
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Preview_2o0Iv {
+  padding: 50px;
 }
 .gamepaduiappoverlayvirtualmenucontainer_RadialTouchMenuHoverKeyDescription_4M7pJ {
   margin-top: 20px;
