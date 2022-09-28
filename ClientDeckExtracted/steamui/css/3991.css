@@ -43875,6 +43875,135 @@ div.creatorhomeembed_SocialContainer_1MvXz {
     transform: translateY(0px) scale(1);
   }
 }
+@keyframes systemdock_ItemFocusAnim-darkerGrey-nocolor_3hL8S {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-darkerGrey_yyClg {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-darkGrey_2YDtP {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-grey_IKd5z {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes systemdock_ItemFocusAnimBorder-darkGrey_1Zl6e {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes systemdock_ItemFocusAnim-green_2zIbx {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes systemdock_focusAnimation_ZBtLC {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes systemdock_hoverAnimation_2ErZZ {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb {
+  background-color: #000;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb .systemdock_Container_2xe96 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb .systemdock_Image_e5mfX {
+  width: 40%;
+  margin-bottom: 2em;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_UnplugWarning_1FKgs {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_ProgressContainer_2DMQJ {
+  width: 70%;
+}
+.systemdock_SystemDockUpdateApplyTakeover_qRqRb
+  .systemdock_ProgressContainer_2DMQJ
+  .systemdock_TimeRemaining_3QsZq {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0.2em;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  min-height: 2em;
+}
 :root {
   --basicui-header-height: 0px;
 }
