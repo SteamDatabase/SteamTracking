@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7538787";
+var CLSTAMP = "7541527";
 (() => {
   "use strict";
   var a,
@@ -207,8 +207,8 @@ var CLSTAMP = "7538787";
         238: "5711d8e8dd2f2351048d",
         301: "531b62bce6af7437dfba",
         312: "cf81efba39c35a19118b",
-        400: "7d137f5042280b0bc564",
-        508: "009e6ccc4554c625c643",
+        400: "e7289408558c2dc49599",
+        508: "fa382d55cce34619fa6f",
         543: "7e04eee5a698b6b9ff11",
         617: "4006d493d498fa988dc8",
         755: "39539aaa31a5d0bc10df",
@@ -239,7 +239,7 @@ var CLSTAMP = "7538787";
         2745: "0c6e64566e4b3c90d95b",
         2805: "eb860976152352673d09",
         2822: "816ccd9f9ca129bfab8c",
-        2832: "09ca947a6b533f2dd054",
+        2832: "fa0f991cc5630ea1568b",
         3007: "a34481d10a48c32d3923",
         3038: "921ff57030944062a61d",
         3202: "19d060b19bc21838d625",
@@ -315,7 +315,7 @@ var CLSTAMP = "7538787";
         9348: "3b1fc524e8ea95b19c8c",
         9349: "173ceaa24dec12cd8b32",
         9389: "9807bdc2c8f977930af3",
-        9427: "88e6eb637678a0362284",
+        9427: "7cd315c6f3684444c384",
         9513: "608ab4189971f6b78e5e",
         9547: "3f0bb803c26a99600d42",
         9561: "eaa6fe2cc381f1f30034",
@@ -397,12 +397,12 @@ var CLSTAMP = "7538787";
             r < l.length;
             r++
           ) {
-            var f = l[r];
+            var b = l[r];
             if (
-              f.getAttribute("src") == a ||
-              f.getAttribute("data-webpack") == i + n
+              b.getAttribute("src") == a ||
+              b.getAttribute("data-webpack") == i + n
             ) {
-              t = f;
+              t = b;
               break;
             }
           }
@@ -414,7 +414,7 @@ var CLSTAMP = "7538787";
           t.setAttribute("data-webpack", i + n),
           (t.src = a)),
           (o[a] = [e]);
-        var b = (e, n) => {
+        var f = (e, n) => {
             (t.onerror = t.onload = null), clearTimeout(h);
             var i = o[a];
             if (
@@ -426,11 +426,11 @@ var CLSTAMP = "7538787";
               return e(n);
           },
           h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: t }),
+            f.bind(null, void 0, { type: "timeout", target: t }),
             12e4
           );
-        (t.onerror = b.bind(null, t.onerror)),
-          (t.onload = b.bind(null, t.onload)),
+        (t.onerror = f.bind(null, t.onerror)),
+          (t.onload = f.bind(null, t.onload)),
           s && document.head.appendChild(t);
       }
     }),

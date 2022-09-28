@@ -21163,8 +21163,9 @@
               )
           : a.createElement(y.V, { size: "medium", position: "center" });
       }
+      n(10767);
       var nr = n(74686),
-        ar = (n(62170), n(47144)),
+        ar = n(47144),
         rr = n.n(ar),
         ir = n(6843),
         sr = n(44741),
@@ -21172,14 +21173,18 @@
         lr = (n(87931), n(88767));
       n(93981);
       function cr(e) {
-        const { eStoreDiscoveryQueueType: t, fnGetFriendState: n } = e,
-          [r, i] = (0, a.useState)([]),
-          [s, o] = (0, a.useState)(!1),
-          l = (0, Oe.g)(),
-          [c, d] = (0, a.useState)(!1),
-          u = a.useRef(),
-          m = a.useRef(0),
-          [p, _] = (0, a.useState)([]);
+        const {
+            eStoreDiscoveryQueueType: t,
+            storePageFilter: n,
+            fnGetFriendState: r,
+          } = e,
+          [i, s] = (0, a.useState)([]),
+          [o, l] = (0, a.useState)(!1),
+          c = (0, Oe.g)(),
+          [d, u] = (0, a.useState)(!1),
+          m = a.useRef(),
+          p = a.useRef(0),
+          [_, h] = (0, a.useState)([]);
         if (
           ((0, lr.useQuery)(
             ["DiscoveryQueueWidget"],
@@ -21193,65 +21198,66 @@
                   filters: { type_filters: { include_games: !0 } },
                 })
                 .then((e) => {
-                  i(e.GetItemIDs().map((e) => e.appid));
+                  s(e.GetItemIDs().map((e) => e.appid));
                 }),
-            { enabled: l && !I.L7.logged_in, staleTime: 1 / 0 }
+            { enabled: c && !I.L7.logged_in, staleTime: 1 / 0 }
           ),
           a.useEffect(() => {
-            c ||
+            d ||
               (() => {
                 (0, w.mG)(this, void 0, void 0, function* () {
-                  if (I.L7.logged_in && !r.length) {
+                  if (I.L7.logged_in && !i.length) {
                     const e = yield ir.W.Get().GetDiscoveryQueueAppsOfType(
                       t,
                       I.De.COUNTRY,
-                      !0
+                      !0,
+                      n
                     );
-                    i([...e]);
+                    s([...e]);
                   }
-                  if (r.length) {
+                  if (i.length) {
                     let e = nr.Vw;
                     (e.include_screenshots = !0),
-                      yield B.Z.Get().QueueMultipleAppRequests(r, e),
+                      yield B.Z.Get().QueueMultipleAppRequests(i, e),
                       F.jg.Get().HintLoad();
-                    const t = r.map((e) =>
+                    const t = i.map((e) =>
                       a.createElement(dr, { key: "Capsule_" + e, appID: e })
                     );
                     t.push(
                       a.createElement(dr, {
-                        key: "Capsule2_" + r[0],
-                        appID: r[0],
+                        key: "Capsule2_" + i[0],
+                        appID: i[0],
                       })
                     ),
-                      _(t),
-                      d(!0);
+                      h(t),
+                      u(!0);
                   }
                 });
               })();
-          }, [t, r, c]),
+          }, [t, i, d]),
           a.useEffect(() => {
-            if (!c) return;
+            if (!d) return;
             let e;
             const t = performance.now(),
               n = () => {
                 const a =
                   ((performance.now() - t) / 40) %
-                  (u.current.offsetWidth - 320);
-                (u.current.style.transform = `translateX( -${a}px )`),
+                  (m.current.offsetWidth - 320);
+                (m.current.style.transform = `translateX( -${a}px )`),
                   (e = requestAnimationFrame(n));
               };
             e = requestAnimationFrame(n);
-          }, [u, m, c]),
-          !c)
+          }, [m, p, d]),
+          !d)
         )
           return a.createElement(y.V, {
             className: rr().Placeholder,
             size: "medium",
             position: "center",
           });
-        const h = () => {
+        const g = () => {
           I.L7.logged_in
-            ? o(!0)
+            ? l(!0)
             : (window.location.href = `${
                 I.De.STORE_BASE_URL
               }login?redir=${encodeURIComponent(document.location.href)}`);
@@ -21260,9 +21266,9 @@
           te.s,
           {
             focusable: !0,
-            onOKButton: h,
+            onOKButton: g,
             onOKActionDescription: (0, G.Xx)("#DiscoveryQueue_OpenWizard"),
-            onClick: h,
+            onClick: g,
             className: rr().DiscoveryQueueWidgetCtn,
           },
           a.createElement(
@@ -21297,20 +21303,26 @@
             a.createElement(
               "div",
               {
-                ref: u,
+                ref: m,
                 className: (0, D.Z)(rr().AppCarouselCtn, "vt-scrollable"),
               },
-              p
+              _
             )
           ),
-          s &&
-            a.createElement(nr.MS, {
-              bWizardVisible: s,
-              strUserCountry: I.De.COUNTRY,
-              fnCloseModal: () => o(!1),
-              eStoreDiscoveryQueueType: t,
-              fnGetFriendState: n,
-            })
+          o &&
+            a.createElement(
+              nr.MS,
+              Object.assign(
+                {
+                  bWizardVisible: o,
+                  strUserCountry: I.De.COUNTRY,
+                  fnCloseModal: () => l(!1),
+                  eStoreDiscoveryQueueType: t,
+                  fnGetFriendState: r,
+                },
+                e
+              )
+            )
         );
       }
       function dr(e) {
@@ -21351,7 +21363,19 @@
         );
       }
       function ur(e) {
-        const { bIsPreview: t, event: n, section: r, language: i } = e;
+        const { bIsPreview: t, event: n, section: r, language: i } = e,
+          s = {
+            nSaleTagID:
+              !n.BUsesContentHubForItemSource() && n.featured_app_tagid,
+            strContentHubType: n.GetContentHubType(),
+            strContentHubCategory: n.GetContentHubCategory(),
+            nContentHubTagID: n.GetContentHubTag(),
+            bDiscountsOnly: n.BContentHubDiscountedOnly(),
+            bPrioritizeDiscounts: r.prioritize_discounts,
+            strOptInName: n.jsondata.prune_list_optin_name,
+            nOptInTagID: n.jsondata.optin_tagid,
+            nPruneTagID: n.jsondata.optin_prune_tagid,
+          };
         return a.createElement(
           f.Y,
           {
@@ -21364,7 +21388,10 @@
             ),
             style: (0, h.V)(r, n),
           },
-          a.createElement(cr, { eStoreDiscoveryQueueType: 0 })
+          a.createElement(cr, {
+            eStoreDiscoveryQueueType: 0,
+            storePageFilter: s,
+          })
         );
       }
       var mr = n(55817);

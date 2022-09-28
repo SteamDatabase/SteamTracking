@@ -26834,7 +26834,10 @@
                   void 0 === e ||
                   e.addEventListener("wheel", n),
                 function () {
-                  return t.current.removeEventListener("wheel", n);
+                  var e;
+                  return null === (e = t.current) || void 0 === e
+                    ? void 0
+                    : e.removeEventListener("wheel", n);
                 }
               );
             }, []),
