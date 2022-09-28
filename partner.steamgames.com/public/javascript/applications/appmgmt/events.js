@@ -61447,14 +61447,15 @@
         const [l, c] = d.useState(new Set()),
           [m, p] = d.useState(""),
           [_, h] = d.useState(0),
-          [g, v] = d.useState(!1);
+          [g, v] = d.useState(!1),
+          [E, f] = d.useState(0);
         return (
           d.useEffect(() => {
             const e = (null == m ? void 0 : m.trim().length) > 2,
               i = null == m ? void 0 : m.toLocaleLowerCase(),
               r = Array.from(l),
               s = new Set(a || []);
-            if (s.size > 0) {
+            if (t.length > 0 && (l.size > 0 || e || _ || E)) {
               const a = t
                 .filter((t) => {
                   var n, a, r, s, o;
@@ -61519,7 +61520,7 @@
                 .filter((e) => !(g && s.size > 0) || !s.has(e));
               n(a);
             }
-          }, [g, n, _, a, t, l, m]),
+          }, [g, n, E, _, a, t, l, m]),
           d.createElement(
             Se.ug,
             { title: "Filter Options", bStartMinimized: !0 },
@@ -61547,11 +61548,15 @@
                     label: (0, b.Xx)("#EventCalendar_UniversalSearch"),
                     placeholder: "search by app name, description",
                     value: m,
-                    onChange: (e) => p(e.target.value),
+                    onChange: (e) => {
+                      p(e.target.value), f(1);
+                    },
                   }),
                   d.createElement(yi, {
                     setFilterTagIDs: l,
-                    fnUpdateSetFilterTagIDs: c,
+                    fnUpdateSetFilterTagIDs: (e) => {
+                      c(e), f(1);
+                    },
                     rgAppIDs: t,
                     bLoading: r,
                   }),
@@ -61561,12 +61566,16 @@
                       "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: () => _,
-                    fnSetTimeToUpdate: h,
+                    fnSetTimeToUpdate: (e) => {
+                      h(e), f(1);
+                    },
                   }),
                   Boolean((null == a ? void 0 : a.length) > 0) &&
                     d.createElement(u.ji, {
                       checked: g,
-                      onChange: v,
+                      onChange: (e) => {
+                        v(e), f(1);
+                      },
                       tooltip:
                         "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
                       label: "Filter out previously emailed apps from pruning",
@@ -61791,36 +61800,39 @@
             rgNotToPruneList: i,
             bPendingReview: r,
           } = e,
-          [s, o] = d.useState(),
-          l = s || t;
-        return (null == l ? void 0 : l.length) > 0
-          ? d.createElement(
-              "div",
-              null,
-              Boolean(r) &&
-                d.createElement(vi, { strOptInName: n, rgAppIDs: l }),
-              d.createElement(Si, {
-                pageid: n,
-                rgOrderedAppIDs: t,
-                fnSetFilteredAppID: o,
-                rgNotToPruneList: i,
-              }),
-              l.map((e, t) =>
-                d.createElement(wi, {
-                  key: (a ? "prune" : "invited") + e,
-                  pageid: n,
-                  appid: e,
-                  bInvited: !a && !r,
-                  bPendingReview: r,
-                  index: t,
-                })
+          [s, o] = d.useState(null),
+          l = null != s ? s : t;
+        return d.createElement(
+          "div",
+          null,
+          Boolean(r) && d.createElement(vi, { strOptInName: n, rgAppIDs: l }),
+          d.createElement(Si, {
+            pageid: n,
+            rgOrderedAppIDs: t,
+            fnSetFilteredAppID: o,
+            rgNotToPruneList: i,
+          }),
+          (null == l ? void 0 : l.length) > 0
+            ? d.createElement(
+                d.Fragment,
+                null,
+                l.map((e, t) =>
+                  d.createElement(wi, {
+                    key: (a ? "prune" : "invited") + e,
+                    pageid: n,
+                    appid: e,
+                    bInvited: !a && !r,
+                    bPendingReview: r,
+                    index: t,
+                  })
+                )
               )
-            )
-          : d.createElement(
-              "span",
-              null,
-              (0, b.Xx)("#OptIn_AppReview_EmptyList")
-            );
+            : d.createElement(
+                "span",
+                null,
+                (0, b.Xx)("#OptIn_AppReview_EmptyList")
+              )
+        );
       }
       function wi(e) {
         return d.createElement(
@@ -72954,7 +72966,7 @@
           { oEditablePlan: n } = e;
         return (
           t.set("name", n.GetModel().name),
-          t.set("dailydealid", n.GetID()),
+          t.set("promotionplanid", n.GetID()),
           t.set("start", "" + n.GetStartDate()),
           r.createElement(
             "a",
