@@ -1303,6 +1303,7 @@
                     r: !0,
                     q: !0,
                     br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
                     bw: a.Xc.writeRepeatedUint32,
                   },
                 },

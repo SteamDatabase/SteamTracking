@@ -2126,6 +2126,7 @@
                     r: !0,
                     q: !0,
                     br: S.FE.readUint64String,
+                    pbr: S.FE.readPackedUint64String,
                     bw: S.Xc.writeRepeatedUint64String,
                   },
                 },
@@ -5178,7 +5179,7 @@
       });
       var yt = r(1351),
         ft = r(1245),
-        Ct = (r(58185), r(10767), r(29757)),
+        Ct = (r(58185), r(62170), r(29757)),
         vt = r(28976),
         wt = (r(3356), r(27991)),
         Mt = r(159),
@@ -5293,7 +5294,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 161065804,
+            broadcasterAccountID: 927819071,
           },
         ],
       };

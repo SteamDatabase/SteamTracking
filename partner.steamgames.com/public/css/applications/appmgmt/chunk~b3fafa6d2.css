@@ -565,7 +565,6 @@ span.partnereventshared_tooltip_Ctn_3tZQl {
   letter-spacing: 0.05em;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -588,6 +587,10 @@ span.partnereventshared_tooltip_Ctn_3tZQl {
 }
 .partnereventshared_SaleSectionHeader_3FRxV span {
   color: #fff;
+}
+.partnereventshared_SaleSectionSubtitle_1JRr3 {
+  text-transform: lowercase;
+  font-size: 16px;
 }
 .partnereventshared_SaleSectionContainer_1UD2h {
   grid-template-columns: repeat(1, minmax(0px, 1fr));

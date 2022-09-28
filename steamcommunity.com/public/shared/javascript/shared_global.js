@@ -565,8 +565,8 @@ function CModal( $Content, rgParams )
 	this.m_fnBackgroundClick = null;
 	this.m_fnOnResize = null;
 	this.m_bDismissOnBackgroundClick = !rgParams.bExplicitDismissalOnly;
-	this.m_nMaxWidth = 0;
-	this.m_nMaxHeight = 0;
+	this.m_nMaxWidth = rgParams.nMaxWidth || 0;
+	this.m_nMaxHeight = rgParams.nMaxHeight || 0;
 
 	this.m_fnOnDismiss = null;
 	this.m_fnGPOnCloseModal = null;

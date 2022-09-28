@@ -15,7 +15,7 @@
         r = i(27100),
         p = i(95598),
         d = i(22975);
-      class h extends s.Component {
+      class m extends s.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
         }
@@ -100,8 +100,8 @@
           );
         }
       }
-      (0, o.gn)([d.ak], h.prototype, "UpdateMaximizeState", null);
-      var m = i(77520),
+      (0, o.gn)([d.ak], m.prototype, "UpdateMaximizeState", null);
+      var h = i(77520),
         c = i(41311),
         u = i(90666);
       function v(e, t, i) {
@@ -155,14 +155,14 @@
               bHideMainWindowForPopouts:
                 null == i ? void 0 : i.bHideMainWindowForPopouts,
             },
-            h = { bHideActions: null == i ? void 0 : i.bHideActionIcons };
+            m = { bHideActions: null == i ? void 0 : i.bHideActionIcons };
           return w(
             e,
             t,
             d.strTitle,
             d,
             null == i ? void 0 : i.browserContext,
-            h
+            m
           );
         });
       }
@@ -173,14 +173,14 @@
       }
       function w(e, t, i, o, n, l, a) {
         let p, d;
-        const h = e.props.closeModal,
-          m = () => {
+        const m = e.props.closeModal,
+          h = () => {
             d && d.Close(),
-              h && h(),
+              m && m(),
               (null == o ? void 0 : o.fnOnClose) && o.fnOnClose();
           },
           c = () => {
-            p && p.Close(), m();
+            p && p.Close(), h();
           },
           v = s.cloneElement(e, { closeModal: c });
         if (
@@ -198,9 +198,9 @@
             );
             d = a.ShowModal(e);
           }
-          const e = Object.assign(Object.assign({}, o), { fnOnClose: m }),
-            h = new _(t, i, e, v, n, l);
-          h.Show(), (p = h);
+          const e = Object.assign(Object.assign({}, o), { fnOnClose: h }),
+            m = new _(t, i, e, v, n, l);
+          m.Show(), (p = m);
         } else p = a.ShowModal(v);
         return p;
       }
@@ -227,7 +227,7 @@
             (this.m_options = n);
         }
         Update(e) {
-          (0, m.X)(!1, "NYI");
+          (0, h.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
           var t, i, o;
@@ -267,7 +267,8 @@
         OnLoad() {}
         OnResize() {}
         OnClose() {
-          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose();
+          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
+            n.unmountComponentAtNode(this.m_element);
         }
         Render(e, t) {
           if (
@@ -284,7 +285,7 @@
               s.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: a.T },
-                s.createElement(h, {
+                s.createElement(m, {
                   hideMinMax: !0,
                   popup: e,
                   hideActions: i,
@@ -360,7 +361,7 @@
       var o = i(67294),
         s = i(59650),
         n = i(27100),
-        l = i(28274),
+        l = i(51167),
         a = (i(88514), i(65902)),
         r = i(90666),
         p = i(92742);
@@ -369,7 +370,7 @@
           (0, o.useEffect)(
             () => (
               (window.g_ShowLoginDialog = (e) =>
-                (0, s.AM)(o.createElement(h, { redirectUrl: e }), window, {
+                (0, s.AM)(o.createElement(m, { redirectUrl: e }), window, {
                   popupWidth: 700,
                   popupHeight: 440,
                 })),
@@ -382,7 +383,7 @@
           null
         );
       }
-      function h(e) {
+      function m(e) {
         const {
             redirectUrl: t = r.De.PARTNER_BASE_URL,
             disableQR: i,
@@ -391,18 +392,18 @@
           d = (0, o.useRef)(
             new a.J(r.De.WEBAPI_BASE_URL).GetServiceTransport()
           ).current,
-          [h, m] = (0, o.useState)(!1);
+          [m, h] = (0, o.useState)(!1);
         return o.createElement(
           n.e1,
           { onEscKeypress: s, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
-          h
+          m
             ? o.createElement(l.pT, null)
             : o.createElement(l.wK, {
                 platform: 2,
                 transport: d,
                 onComplete: (e) => {
                   e == p.TG.k_PrimaryDomainFail
-                    ? m(!0)
+                    ? h(!0)
                     : window.location.assign(t);
                 },
                 autoFocus: !0,

@@ -96,6 +96,7 @@
         tooltip_Ctn: "partnereventshared_tooltip_Ctn_3tZQl",
         SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_26P7E",
         SaleSectionHeader: "partnereventshared_SaleSectionHeader_3FRxV",
+        SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_1JRr3",
         SaleSectionContainer: "partnereventshared_SaleSectionContainer_1UD2h",
         AddSectionButton: "partnereventshared_AddSectionButton_15e-D",
         EventElementRequired: "partnereventshared_EventElementRequired_appje",
@@ -153,8 +154,8 @@
         m = n(41311),
         c = n(22975),
         v = n(28268),
-        E = n(39294),
-        u = n.n(E),
+        u = n(39294),
+        E = n.n(u),
         T = n(80008),
         C = n.n(T);
       let D = class extends i.Component {
@@ -253,7 +254,7 @@
             bNoDefaultDate: p,
           } = this.props;
           let c = n(),
-            E = c > 0 ? new Date(1e3 * c) : null,
+            u = c > 0 ? new Date(1e3 * c) : null,
             T = "h:mm A";
           const D = r && r(),
             S =
@@ -287,10 +288,10 @@
             R = !!a && x != a && C().unix(c).tz(a);
           return i.createElement(
             "div",
-            { className: (0, h.Z)(u().EventTimeSection, this.props.className) },
+            { className: (0, h.Z)(E().EventTimeSection, this.props.className) },
             i.createElement(
               "div",
-              { className: (0, h.Z)(u().EventTimeTitle, "DialogLabel") },
+              { className: (0, h.Z)(E().EventTimeTitle, "DialogLabel") },
               i.createElement(
                 v.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
@@ -300,7 +301,7 @@
               S &&
                 i.createElement(
                   "span",
-                  { className: u().DateErrorCtn },
+                  { className: E().DateErrorCtn },
                   i.createElement("img", { src: d.Z }),
                   (0, m.Xx)(f)
                 )
@@ -310,17 +311,17 @@
               { className: _().FlexRowContainer },
               i.createElement(
                 "div",
-                { className: (0, h.Z)(_().InputBorder, u().TimeBlock) },
+                { className: (0, h.Z)(_().InputBorder, E().TimeBlock) },
                 i.createElement(o(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
-                  value: this.state.dateAsString ? this.state.dateAsString : E,
+                  value: this.state.dateAsString ? this.state.dateAsString : u,
                   isValidDate: this.IsValidDate,
                   initialValue: A,
                   inputProps: {
                     placeholder: (0, m.Xx)("#DateTimePicker_Enter_Date"),
                     className: (0, h.Z)(
-                      u().DateWidth,
+                      E().DateWidth,
                       "DialogInput",
                       "DialogTextInputBase"
                     ),
@@ -330,23 +331,23 @@
                 !!R &&
                   i.createElement(
                     "div",
-                    { className: u().PacificTimeHint },
+                    { className: E().PacificTimeHint },
                     R.format("L")
                   )
               ),
               i.createElement(
                 "div",
-                { className: (0, h.Z)(_().InputBorder, u().TimeBlock) },
+                { className: (0, h.Z)(_().InputBorder, E().TimeBlock) },
                 i.createElement(o(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
                   timeFormat: T,
                   timeConstraints: g,
-                  value: this.state.timeAsString ? this.state.timeAsString : E,
+                  value: this.state.timeAsString ? this.state.timeAsString : u,
                   inputProps: {
                     placeholder: (0, m.Xx)("#DateTimePicker_Enter_Time"),
                     className: (0, h.Z)(
-                      u().TimeWidth,
+                      E().TimeWidth,
                       "DialogInput",
                       "DialogTextInputBase"
                     ),
@@ -356,7 +357,7 @@
                 !!R &&
                   i.createElement(
                     "div",
-                    { className: u().PacificTimeHint },
+                    { className: E().PacificTimeHint },
                     R.format("LT")
                   )
               ),
@@ -366,13 +367,13 @@
                   null,
                   i.createElement(
                     "div",
-                    { className: u().TimeZone },
+                    { className: E().TimeZone },
                     B.zoneAbbr()
                   ),
                   !!R &&
                     i.createElement(
                       "div",
-                      { className: u().TimeZone },
+                      { className: E().TimeZone },
                       R.zoneAbbr()
                     )
                 )

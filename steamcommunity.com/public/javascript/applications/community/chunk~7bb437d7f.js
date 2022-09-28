@@ -133,6 +133,7 @@
         tooltip_Ctn: "partnereventshared_tooltip_Ctn_3tZQl",
         SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_26P7E",
         SaleSectionHeader: "partnereventshared_SaleSectionHeader_3FRxV",
+        SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_1JRr3",
         SaleSectionContainer: "partnereventshared_SaleSectionContainer_1UD2h",
         AddSectionButton: "partnereventshared_AddSectionButton_15e-D",
         EventElementRequired: "partnereventshared_EventElementRequired_appje",
@@ -810,12 +811,12 @@
                   autoFocus: this.props.autoFocus,
                 }),
               l == m.TwoFactorCode &&
-                a.createElement(b, {
+                a.createElement(j, {
                   manager: this.m_manager,
                   authtype: m.TwoFactorCode,
                 }),
               l == m.EmailCode &&
-                a.createElement(b, {
+                a.createElement(j, {
                   manager: this.m_manager,
                   authtype: m.EmailCode,
                 }),
@@ -918,7 +919,7 @@
                   onChange: () => this.OnChangeRememberPass,
                   checked: n.GetRememberPassword(),
                 }),
-                n.GetCaptchaURL() && a.createElement(j, { manager: n }),
+                n.GetCaptchaURL() && a.createElement(b, { manager: n }),
                 a.createElement(
                   h.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
@@ -958,7 +959,7 @@
         (0, r.gn)([_.ak], N.prototype, "OnChangePassword", null),
         (0, r.gn)([_.ak], N.prototype, "OnChangeRememberPass", null),
         (N = (0, r.gn)([p.Pi], N));
-      let j = class extends a.Component {
+      let b = class extends a.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
         }
@@ -1014,10 +1015,10 @@
           );
         }
       };
-      (0, r.gn)([_.ak], j.prototype, "OnCaptchaText", null),
-        (0, r.gn)([_.ak], j.prototype, "RefreshCaptcha", null),
-        (j = (0, r.gn)([p.Pi], j));
-      let b = class extends a.Component {
+      (0, r.gn)([_.ak], b.prototype, "OnCaptchaText", null),
+        (0, r.gn)([_.ak], b.prototype, "RefreshCaptcha", null),
+        (b = (0, r.gn)([p.Pi], b));
+      let j = class extends a.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
         }
@@ -1102,11 +1103,11 @@
           );
         }
       };
-      (0, r.gn)([_.ak], b.prototype, "OnSubmit", null),
-        (0, r.gn)([_.ak], b.prototype, "OnChangeAuthCode", null),
-        (b = (0, r.gn)([p.Pi], b));
+      (0, r.gn)([_.ak], j.prototype, "OnSubmit", null),
+        (0, r.gn)([_.ak], j.prototype, "OnChangeAuthCode", null),
+        (j = (0, r.gn)([p.Pi], j));
       var f = n(59650),
-        L = n(28274),
+        L = n(51167),
         w = (n(88514), n(65902)),
         A = n(92742),
         R = n(54698);

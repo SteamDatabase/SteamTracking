@@ -69,6 +69,8 @@
         ActiveLink: "steamchartsshell_ActiveLink_3kEWJ",
         ChartRangeCtn: "steamchartsshell_ChartRangeCtn_wLFBO",
         ChartRangeText: "steamchartsshell_ChartRangeText_vlHd8",
+        ShortDate: "steamchartsshell_ShortDate_2AQqw",
+        LongDate: "steamchartsshell_LongDate_1V5zB",
         ChartNavCtn: "steamchartsshell_ChartNavCtn_1tUsA",
         Disabled: "steamchartsshell_Disabled_2VVBw",
         ChartNavPrev: "steamchartsshell_ChartNavPrev_PFs4U",
@@ -1384,8 +1386,10 @@
         }
       }
       function Z(e) {
-        return (0, c.useQuery)(["MostPlayedByConcurrent"], () =>
-          e.LoadMostPlayedByConcurrent()
+        return (0, c.useQuery)(
+          ["MostPlayedByConcurrent"],
+          () => e.LoadMostPlayedByConcurrent(),
+          { staleTime: 3e5 }
         );
       }
       var H = r(52114);
@@ -2529,7 +2533,7 @@
                   },
                   (0, ne.Xx)("#SteamCharts_TopSellers_TablePeakInGame"),
                   " ",
-                  o.createElement("span", null, "(?)")
+                  o.createElement($e.WWB, null)
                 )
               )
             )
@@ -2551,9 +2555,13 @@
                   ),
                   direction: "top",
                 },
-                (0, ne.Xx)("#SteamCharts_TopSellers_TableChange"),
+                o.createElement(
+                  "span",
+                  null,
+                  (0, ne.Xx)("#SteamCharts_TopSellers_TableChange")
+                ),
                 " ",
-                o.createElement("span", null, "(?)")
+                o.createElement($e.WWB, null)
               )
             )
           : o.createElement(
@@ -2570,7 +2578,7 @@
                 },
                 (0, ne.Xx)("#SteamCharts_TopSellers_TableCurrentPlayers"),
                 " ",
-                o.createElement("span", null, "(?)")
+                o.createElement($e.WWB, null)
               )
             );
       }
@@ -2773,8 +2781,10 @@
         var t, r;
         const { MostPlayedStore: a } = e,
           n = (function (e) {
-            return (0, c.useQuery)(["MostPlayedDAU"], () =>
-              e.LoadMostPlayedByDAU()
+            return (0, c.useQuery)(
+              ["MostPlayedDAU"],
+              () => e.LoadMostPlayedByDAU(),
+              { staleTime: 36e5 }
             );
           })(a);
         if (n.isLoading) return o.createElement(yt.V, { position: "center" });
@@ -2921,7 +2931,8 @@
                     direction: "top",
                   },
                   (0, ne.Xx)("#SteamCharts_TopSellers_TablePrice"),
-                  " (?)"
+                  " ",
+                  o.createElement($e.WWB, null)
                 )
               ),
               o.createElement(
@@ -2936,9 +2947,13 @@
                     ),
                     direction: "top",
                   },
-                  (0, ne.Xx)("#SteamCharts_TopSellers_TableChange"),
+                  o.createElement(
+                    "span",
+                    null,
+                    (0, ne.Xx)("#SteamCharts_TopSellers_TableChange")
+                  ),
                   " ",
-                  o.createElement("span", null, "(?)")
+                  o.createElement($e.WWB, null)
                 )
               ),
               o.createElement(
@@ -2955,7 +2970,7 @@
                   },
                   (0, ne.Xx)("#SteamCharts_TopSellers_TableWeeks"),
                   " ",
-                  o.createElement("span", null, "(?)")
+                  o.createElement($e.WWB, null)
                 )
               )
             )
@@ -3367,7 +3382,21 @@
               { strLink: l },
               o.createElement("div", { className: Ae().ChartNavNext }, " ")
             ),
-            o.createElement("div", { className: Ae().ChartRangeText }, ie(t))
+            o.createElement(
+              "div",
+              { className: (0, _e.Z)(Ae().ChartRangeText, Ae().LongDate) },
+              ie(t)
+            ),
+            o.createElement(
+              "div",
+              { className: (0, _e.Z)(Ae().ChartRangeText, Ae().ShortDate) },
+              (function (e) {
+                return (0, ne.Xx)(
+                  "#SteamCharts_TopSellers_WeeklyRangeShort",
+                  (0, se.$1)(e, { timeZone: "UTC" })
+                );
+              })(t)
+            )
           )
         );
       }

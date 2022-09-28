@@ -155,6 +155,13 @@
         HasCurrentGameRichPresence() {
           return this.m_mapRichPresence.has("steam_display");
         }
+        HasRichPresenceForViewGameInfo() {
+          return !!(
+            this.m_mapRichPresence.has("status") ||
+            this.m_mapRichPresence.has("connect") ||
+            this.m_mapRichPresence.has("connect_private")
+          );
+        }
         GetCurrentGameRichPresence() {
           if (this.HasCurrentGameRichPresence()) {
             let e = n.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);

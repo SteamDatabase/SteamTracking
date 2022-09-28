@@ -443,6 +443,7 @@
                     r: !0,
                     q: !0,
                     br: i.FE.readInt32,
+                    pbr: i.FE.readPackedInt32,
                     bw: i.Xc.writeRepeatedInt32,
                   },
                   content_descriptors_must_match: {
@@ -450,6 +451,7 @@
                     r: !0,
                     q: !0,
                     br: i.FE.readEnum,
+                    pbr: i.FE.readPackedEnum,
                     bw: i.Xc.writeRepeatedEnum,
                   },
                   content_descriptors_excluded: {
@@ -457,6 +459,7 @@
                     r: !0,
                     q: !0,
                     br: i.FE.readEnum,
+                    pbr: i.FE.readPackedEnum,
                     bw: i.Xc.writeRepeatedEnum,
                   },
                   regional_top_n_sellers: {
@@ -640,6 +643,7 @@
                     r: !0,
                     q: !0,
                     br: i.FE.readInt32,
+                    pbr: i.FE.readPackedInt32,
                     bw: i.Xc.writeRepeatedInt32,
                   },
                 },

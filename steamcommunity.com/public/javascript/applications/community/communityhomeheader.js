@@ -73,11 +73,15 @@
       var a = r(67294),
         n = r(78587);
       function o(e, t) {
-        const r = "location" in e ? e.location : e,
-          a = "search" in r ? r.search : r,
-          n = new URLSearchParams(a.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+        let r;
+        "string" == typeof e
+          ? (r = e)
+          : "location" in e
+          ? (r = e.location.search)
+          : "search" in e && (r = e.search);
+        const a = new URLSearchParams(r.substring(1));
+        if (a.has(t)) {
+          const e = a.getAll(t);
           return e[e.length - 1];
         }
       }
@@ -87,22 +91,25 @@
         a.delete(t), i(r) && a.append(t, r), e.push(`?${a.toString()}`);
       }
       function s(e, t) {
-        const r = (0, n.k6)();
-        let s = t;
-        const c = o(location, e);
-        i(c) &&
-          (s = i(t)
-            ? "boolean" == typeof t
-              ? t.constructor("false" !== c)
-              : t.constructor(c)
-            : c);
-        const [l, u] = (0, a.useState)(s);
-        return [
-          l,
-          (t) => {
-            m(r, e, i(t) ? String(t) : null), u(t);
-          },
-        ];
+        const r = (0, n.k6)(),
+          s = (0, n.TH)(),
+          c = (0, a.useMemo)(() => {
+            const r = o(s.search, e);
+            return i(r)
+              ? i(t)
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== r)
+                  : t.constructor(r)
+                : r
+              : t;
+          }, [s.search, e, t]),
+          l = (0, a.useCallback)(
+            (t) => {
+              m(r, e, i(t) ? String(t) : null);
+            },
+            [r, e]
+          );
+        return [c, l];
       }
       function c(e, t) {
         const r = new URLSearchParams(e.location.search.substring(1));
@@ -188,8 +195,8 @@
         p = r.n(h),
         _ = r(52114);
       var b = r(7573),
-        S = r(159),
-        H = r(31933),
+        H = r(159),
+        S = r(31933),
         y = r(78587),
         C = r(35921),
         v = r(34425),
@@ -244,7 +251,7 @@
         const [e, t] = (0, n.useState)(""),
           [r, i] = (0, n.useState)([]),
           [h, b] = (0, n.useState)(!1),
-          S = (function () {
+          H = (function () {
             const e = (0, n.useMemo)(
                 () => (0, c.ip)("personalapps", "application_config") || [],
                 []
@@ -264,7 +271,7 @@
               data: { personalAppIds: e, popularAppIds: t },
             };
           })();
-        if (S.isLoading) return n.createElement(d.V, { position: "center" });
+        if (H.isLoading) return n.createElement(d.V, { position: "center" });
         return n.createElement(
           "div",
           { className: m().CommunityHomeHeaderContent },
@@ -272,12 +279,12 @@
             C.s,
             { className: m().AppHubsCtn },
             n.createElement(A, {
-              appShortcuts: S.data.personalAppIds,
+              appShortcuts: H.data.personalAppIds,
               sectionTitle: (0, o.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: S.data.popularAppIds.length > 0,
+              withDivider: H.data.popularAppIds.length > 0,
             }),
             n.createElement(A, {
-              appShortcuts: S.data.popularAppIds,
+              appShortcuts: H.data.popularAppIds,
               sectionTitle: (0, o.Xx)(
                 "#Community_Home_Header_GameHubs_Popular"
               ),
@@ -364,7 +371,7 @@
           : null;
       }
       function I(e) {
-        const t = S.Z.Get().GetApp(e.appId);
+        const t = H.Z.Get().GetApp(e.appId);
         return t
           ? n.createElement(
               s.IS,
@@ -383,8 +390,8 @@
         N = "browsefilter";
       function w() {
         const e = (0, y.k6)(),
-          t = (0, H.ks)(e, T),
-          r = (0, H.ks)(e, N);
+          t = (0, S.ks)(e, T),
+          r = (0, S.ks)(e, N);
         return n.createElement(
           "div",
           null,

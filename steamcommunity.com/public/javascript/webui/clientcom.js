@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7527972";
+var CLSTAMP = "7538787";
 (() => {
   "use strict";
   function e(e) {
@@ -160,11 +160,11 @@ var CLSTAMP = "7527972";
       DEV_MODE: !1,
       IN_LIBRARY: !1,
       IN_GAMEPADUI: !1,
+      LEGACY_GAMEPADUI_MODE: 0,
+      LEGACY_CONTROLLER_CONFIG_APPID: 0,
       ON_DECK: !1,
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
-      IN_STANDALONE_KEYBOARD: !1,
-      STANDALONE_CONFIGURATOR_APPID: 0,
     },
     u = {
       logged_in: !1,
@@ -236,9 +236,9 @@ var CLSTAMP = "7527972";
   }
   function C(n = "webui_config") {
     const o = {},
-      i = A("config", n);
+      i = k("config", n);
     i && (delete i.SESSIONID, Object.assign(l, i), (o.config = !0));
-    const s = A("userinfo", n);
+    const s = k("userinfo", n);
     s &&
       (Object.assign(u, s),
       (o.userConfig = !0),
@@ -251,11 +251,11 @@ var CLSTAMP = "7527972";
           );
         })() &&
         (u.is_support = !1));
-    const _ = A("broadcast", n);
+    const _ = k("broadcast", n);
     _ && (Object.assign(d, _), (o.broadcastConfig = !0));
-    const a = A("community", n);
+    const a = k("community", n);
     a && (Object.assign(E, a), (o.communityConfig = !0));
-    const c = A("event", n);
+    const c = k("event", n);
     return c && (Object.assign(m, c), (o.eventConfig = !0)), o;
   }
   function g(e, t = "webui_config", n) {
@@ -281,10 +281,10 @@ var CLSTAMP = "7527972";
       }
     else n && console.error("Missing config element #", t);
   }
-  function A(e, t = "webui_config") {
+  function k(e, t = "webui_config") {
     return g(e, t, !0);
   }
-  let k = { success: !0, result: 1 };
+  let A = { success: !0, result: 1 };
   class h {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
@@ -420,7 +420,7 @@ var CLSTAMP = "7527972";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => k,
+        () => A,
         () => this.FailureResult()
       );
     }
@@ -476,7 +476,7 @@ var CLSTAMP = "7527972";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? k : this.FailureResult(e.success)
+                  1 === e.success ? A : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )

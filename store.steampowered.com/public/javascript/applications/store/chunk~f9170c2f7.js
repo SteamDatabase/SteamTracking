@@ -753,20 +753,19 @@
     },
     53157: (e, t, n) => {
       "use strict";
-      n.d(t, { K3: () => _, eL: () => i });
+      n.d(t, { K3: () => g, eL: () => i });
       var i,
         o = n(70655),
         s = n(22188),
-        r = n(73935),
-        a = n(53622),
-        l = n(99198),
-        c = n(81130),
-        u = n(54698),
-        d = n(41311),
-        h = n(90666),
-        m = n(77520),
-        p = n(48780);
-      class g {
+        r = (n(73935), n(53622)),
+        a = n(99198),
+        l = n(81130),
+        c = n(54698),
+        u = n(41311),
+        d = n(90666),
+        h = n(77520),
+        m = n(48780);
+      class p {
         constructor(e, t, n) {
           if (((this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []), n))
             for (let e = 0; e < n.length; e++) this.AddLink(n[e], !0);
@@ -799,12 +798,12 @@
         }
         OnLinkLoad(e) {
           e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-            p.Zf(this.m_rgLoadingLinks, e.currentTarget),
+            m.Zf(this.m_rgLoadingLinks, e.currentTarget),
             0 == this.m_rgLoadingLinks.length &&
               (this.m_fnRender(), (this.m_fnRender = void 0));
         }
       }
-      (0, o.gn)([c.a], g.prototype, "OnLinkLoad", null),
+      (0, o.gn)([l.a], p.prototype, "OnLinkLoad", null),
         (function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
@@ -817,10 +816,10 @@
             (e[(e.BackgroundTransparent = 256)] = "BackgroundTransparent"),
             (e[(e.NotFocusable = 512)] = "NotFocusable");
         })(i || (i = {}));
-      class _ {
+      class g {
         constructor(e, t) {
           (this.m_bFocused = !1),
-            (0, m.X)(
+            (0, h.X)(
               e,
               "Name is required.  This is an internal name, different from title."
             ),
@@ -858,7 +857,7 @@
           let n,
             o,
             s,
-            r = f.GetExistingPopup(this.m_strName);
+            r = v.GetExistingPopup(this.m_strName);
           (r && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             r
@@ -866,7 +865,7 @@
                 (n = r.m_popup),
                 r.ReleasePopup(),
                 (s = r.m_renderWhenReady),
-                f.RemoveTrackedPopup(r),
+                v.RemoveTrackedPopup(r),
                 n.removeEventListener("beforeunload", r.OnBeforeUnloadEvent),
                 n.removeEventListener("unload", r.OnUnload),
                 n.removeEventListener("resize", r.OnResizeEvent),
@@ -875,11 +874,11 @@
                 n.removeEventListener("drop", r.OnDrop),
                 n.removeEventListener("dragover", r.OnDragOver),
                 n.removeEventListener("message", this.OnMessage))
-              : (({ popup: n, element: o } = v.CreatePopup(
+              : (({ popup: n, element: o } = _.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
-                (s = new g(n.document, o))),
+                (s = new p(n.document, o))),
             n &&
               o &&
               ((n.document.title = this.m_strTitle),
@@ -891,16 +890,16 @@
               n.addEventListener("drop", this.OnDrop),
               n.addEventListener("dragover", this.OnDragOver),
               n.addEventListener("message", this.OnMessage),
-              h.De.LANGUAGE &&
-                n.document.documentElement.setAttribute("lang", (0, d.CE)()),
+              d.De.LANGUAGE &&
+                n.document.documentElement.setAttribute("lang", (0, u.CE)()),
               (this.m_popup = n),
               (this.m_element = o),
               (this.m_renderWhenReady = s),
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
-            f.AddTrackedPopup(this),
-            r && e && this.Focus());
+            v.AddTrackedPopup(this),
+            r ? e && this.Focus() : this.OnCreate());
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -919,8 +918,8 @@
           var i;
           this.browser_info &&
             ((i = this.browser_info).m_eBrowserType ==
-              u.i_.EBrowserType_OpenVROverlay ||
-              i.m_eBrowserType == u.i_.EBrowserType_OpenVROverlay_Dashboard) &&
+              c.i_.EBrowserType_OpenVROverlay ||
+              i.m_eBrowserType == c.i_.EBrowserType_OpenVROverlay_Dashboard) &&
             (t.ownerDocument.body.className += " VR"),
             this.Render(e, t),
             this.OnLoad(),
@@ -929,6 +928,7 @@
                 ? e.SteamClient.Window.BringToFront()
                 : e.SteamClient.Window.ShowWindow());
         }
+        OnCreate() {}
         OnResizeEvent() {
           this.OnResize();
         }
@@ -937,9 +937,9 @@
         }
         OnUnload() {
           this.RemoveEventListeners(),
-            f.RemoveTrackedPopup(this),
+            v.RemoveTrackedPopup(this),
             this.OnClose(),
-            r.unmountComponentAtNode(this.m_element);
+            (this.m_popup = void 0);
         }
         get browser_info() {
           return this.m_rgParams.target_browser;
@@ -1028,16 +1028,16 @@
         OnFocus() {}
         OnBlur() {}
       }
-      (0, o.gn)([s.LO], _.prototype, "m_bFocused", void 0),
-        (0, o.gn)([c.a], _.prototype, "OnMessage", null),
-        (0, o.gn)([c.a], _.prototype, "OnResizeEvent", null),
-        (0, o.gn)([c.a], _.prototype, "OnBeforeUnloadEvent", null),
-        (0, o.gn)([c.a], _.prototype, "OnUnload", null),
-        (0, o.gn)([c.a], _.prototype, "OnFocusInternal", null),
-        (0, o.gn)([c.a], _.prototype, "OnBlurInternal", null);
+      (0, o.gn)([s.LO], g.prototype, "m_bFocused", void 0),
+        (0, o.gn)([l.a], g.prototype, "OnMessage", null),
+        (0, o.gn)([l.a], g.prototype, "OnResizeEvent", null),
+        (0, o.gn)([l.a], g.prototype, "OnBeforeUnloadEvent", null),
+        (0, o.gn)([l.a], g.prototype, "OnUnload", null),
+        (0, o.gn)([l.a], g.prototype, "OnFocusInternal", null),
+        (0, o.gn)([l.a], g.prototype, "OnBlurInternal", null);
       (0, o.gn)(
-        [c.a],
-        class extends _ {
+        [l.a],
+        class extends g {
           constructor(e, t, n, i) {
             super(e, n), this.SetSavedDimensionsKey(t), (this.m_bExpires = i);
           }
@@ -1059,14 +1059,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  f.SetRestoreDetails(
+                  v.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = f.GetRestoreDetails(
+                  (e.strRestoreDetails = v.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -1093,7 +1093,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (f.SetRestoreDetails(e, t, this.m_bExpires),
+                    (v.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -1106,14 +1106,14 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            f.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            v.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
         "QueryAndStoreWindowPosition",
         null
       );
-      class v {
+      class _ {
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
@@ -1137,12 +1137,12 @@
                 this.m_mapPopups.clear();
             });
             let e = document.querySelector("head");
-            (0, m.X)(e, "Couldn't find head element"),
+            (0, h.X)(e, "Couldn't find head element"),
               e &&
                 ((this.m_DynamicCSSObserver = new MutationObserver(() => {
-                  const e = a.Mv();
+                  const e = r.Mv();
                   this.m_mapPopups.forEach((t) => {
-                    a.V2(t.window, e);
+                    r.V2(t.window, e);
                   });
                 })),
                 this.m_DynamicCSSObserver.observe(e, { childList: !0 }));
@@ -1186,10 +1186,10 @@
             i = n.width || 300,
             o = n.height || 300,
             s = t.title,
-            r = "width=" + i + ",height=" + o;
-          void 0 !== n.left && (r += ",left=" + n.left),
-            void 0 !== n.top && (r += ",top=" + n.top),
-            (r += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
+            a = "width=" + i + ",height=" + o;
+          void 0 !== n.left && (a += ",left=" + n.left),
+            void 0 !== n.top && (a += ",top=" + n.top),
+            (a += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
           let l = "about:blank",
             c = [];
           c.push("createflags=" + t.eCreationFlags),
@@ -1210,7 +1210,7 @@
               c.push("restoredetails=" + t.strRestoreDetails),
             t.window_opener_id && c.push("openerid=" + t.window_opener_id),
             c && (l += "?" + c.join("&"));
-          let u = (t.owner_window || window).open(l, e, r);
+          let u = (t.owner_window || window).open(l, e, a);
           if (!u)
             return (
               console.log(
@@ -1228,7 +1228,7 @@
           return (
             u.document.write(p),
             (u.document.title = s),
-            a.V2(u, a.Mv()),
+            r.V2(u, r.Mv()),
             { popup: u, element: u.document.getElementById("popup_target") }
           );
         }
@@ -1298,13 +1298,13 @@
         }
       }
       (0, o.gn)(
-        [c.a, (0, l.D)(100)],
-        v.prototype,
+        [l.a, (0, a.D)(100)],
+        _.prototype,
         "DebouncedSaveSavedDimensionStore",
         null
       );
-      let f = new v();
-      window.g_PopupManager = f;
+      let v = new _();
+      window.g_PopupManager = v;
     },
     7707: (e, t, n) => {
       "use strict";
@@ -6404,7 +6404,9 @@
         OnFocus() {}
         OnLoad() {}
         OnResize() {}
-        OnClose() {}
+        OnClose() {
+          r.unmountComponentAtNode(this.m_element);
+        }
       }
       function P(e) {
         return s.createElement("div", {

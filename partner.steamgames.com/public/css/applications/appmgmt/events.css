@@ -12064,6 +12064,9 @@ hr.VO {
   box-sizing: content-box;
 }
 .eventrow_OtherEvents_TextTitle_3Zufl {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   font-size: 15px;
   line-height: 19px;
   color: #fff;
@@ -12623,6 +12626,9 @@ html.responsive.touch
   .salelabels_SectionLabelLinkButton_1bw3D:hover {
   background: #7a5a6c;
   border-color: #fff;
+}
+.salelabels_SectionTitleInnerCtn_2R3H5 {
+  margin-bottom: 10px;
 }
 .saleghostsections_GhostCtn_3gdzT {
   width: 100%;

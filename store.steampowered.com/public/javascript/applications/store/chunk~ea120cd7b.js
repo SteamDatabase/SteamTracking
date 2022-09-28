@@ -95,6 +95,7 @@
         tooltip_Ctn: "partnereventshared_tooltip_Ctn_3tZQl",
         SaleEditorSpacing: "partnereventshared_SaleEditorSpacing_26P7E",
         SaleSectionHeader: "partnereventshared_SaleSectionHeader_3FRxV",
+        SaleSectionSubtitle: "partnereventshared_SaleSectionSubtitle_1JRr3",
         SaleSectionContainer: "partnereventshared_SaleSectionContainer_1UD2h",
         AddSectionButton: "partnereventshared_AddSectionButton_15e-D",
         EventElementRequired: "partnereventshared_EventElementRequired_appje",
@@ -1161,7 +1162,7 @@
     37662: (e, t, n) => {
       "use strict";
       n.d(t, {
-        e3: () => J,
+        e3: () => Q,
         s0: () => C,
         ls: () => D,
         Z9: () => w,
@@ -1188,7 +1189,7 @@
         bN: () => S,
         dn: () => A,
         z5: () => R,
-        Vv: () => Q,
+        Vv: () => J,
       });
       var a = n(70655),
         i = n(22188),
@@ -1234,7 +1235,7 @@
         "GetEventStartTime",
         null
       );
-      n(52411), n(22220), n(10767);
+      n(52411), n(22220), n(62170);
       const b = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function D(e) {
         return (
@@ -1443,11 +1444,9 @@
         return e.cap_item_count || 0;
       }
       function V(e) {
-        return e.cap_section_content
-          ? e.cap_section_row_count && e.cap_section_row_count > 0
-            ? e.cap_section_row_count
-            : 4
-          : 0;
+        return e.cap_section_row_count && e.cap_section_row_count > 0
+          ? e.cap_section_row_count
+          : 4;
       }
       function W(e) {
         return Boolean(null == e ? void 0 : e.store_filter)
@@ -1497,8 +1496,8 @@
           ),
           { bScheduleEnabled: !1, scheduleEntries: [] }
         ),
-        Q = "old_announce_",
-        J = [
+        J = "old_announce_",
+        Q = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",

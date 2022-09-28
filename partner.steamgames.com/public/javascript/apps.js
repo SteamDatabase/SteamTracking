@@ -3344,6 +3344,52 @@ function DisplayGrantCommunityItemForm( eItemClass, strDisplayName )
 	DisplayDivOnClick( 'grant_communityitems_actions', 'grant_items_form_ctn' );
 }
 
+function CreateGameProfile( appID )
+{
+	const $dialog = ShowPromptDialog( 'Create New Game Profile', 'Please enter a unique name for this game profile. This name cannot be changed and will be visible to users.', 'Create' );
+
+	$dialog.done( function( strName )
+	{
+		AppsAjaxRequest( g_szBaseURL + '/apps/ajaxcreategameprofile/' + appID,
+			{ 'name' : strName },
+			function( data ) {
+				if ( data.success == 1 )
+				{
+					location.href = g_szBaseURL + '/apps/communityitems/' + appID + '/' + data.item_type;
+				}
+				else
+				{
+					const errorDialog = ShowAlertDialog( 'Create New Game Profile', 'We ran into an issue creating this game profile. Please try again or check for partial creation. (%1$s)'.replace('%1$s', data.success ) );
+					errorDialog.done( function() { location.reload(); } );
+				}
+			}
+		);
+	} );
+}
+
+function DeleteGameProfile( appID, item_type, bDelete )
+{
+	const $dialog = ShowConfirmDialog( 'Delete Game Profile', 'Are you sure you want to delete this game profile bundle and its associated items? This cannot be undone.', 'Delete' );
+
+	$dialog.done( function()
+	{
+		AppsAjaxRequest( g_szBaseURL + '/apps/ajaxdeletegameprofile/' + appID,
+			{ 'type' : item_type, 'delete' : bDelete },
+			function( data ) {
+				if ( data.success == 1 )
+				{
+					location.href = g_szBaseURL + '/apps/communityitems/' + appID;
+				}
+			else
+				{
+					const errorDialog = ShowAlertDialog( 'Delete Game Profile', 'We ran into an issue deleting this game profile. Please try again later or contact Steamworks support. (%1$s)'.replace('%1$s', data.success ) );
+					errorDialog.done( function() { location.reload(); } );
+				}
+			}
+		);
+	} );
+}
+
 //
 // Tags
 //

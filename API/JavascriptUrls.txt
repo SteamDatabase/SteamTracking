@@ -72,8 +72,8 @@ ${CHAT_BASE_URL}comment/recommendation/formattinghelp
 ${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
-${CHAT_BASE_URL}public/images/broadcast/csgo_antwerp_pgl_2022_chat_logo.png
 ${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
+${CHAT_BASE_URL}public/images/broadcast/csgo_rio_2022_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CHAT_BASE_URL}public/javascript/webui/noisegate-audio-worklet.js?v=4
 ${COMMUNITY_BASE_URL}
@@ -1038,7 +1038,11 @@ ${g_szBaseURL}/admin/savepackageajax
 ${g_szBaseURL}/apps/addchallengeforchallengegroup/${appid}
 ${g_szBaseURL}/apps/addgameandchallengegroup/${appid}
 ${g_szBaseURL}/apps/addmoduleforchallengegroup/${appid}
+${g_szBaseURL}/apps/ajaxcreategameprofile/${appID}
+${g_szBaseURL}/apps/ajaxdeletegameprofile/${appID}
 ${g_szBaseURL}/apps/cdnpush/${appid}
+${g_szBaseURL}/apps/communityitems/${appID}
+${g_szBaseURL}/apps/communityitems/${appID}/${item_type}
 ${g_szBaseURL}/apps/createogg/${appid}
 ${g_szBaseURL}/apps/crossbranch/${appid}
 ${g_szBaseURL}/apps/deleteachievement/${appid}/${statid}/${bitid}
@@ -2198,7 +2202,7 @@ https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
 https://store.steampowered.com/app/1046930/Dota_Underlords/
 https://store.steampowered.com/app/570/Dota_2/
-https://store.steampowered.com/app/730
+https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/
 https://store.steampowered.com/appreport/${nAppId}/report/
 https://store.steampowered.com/appreviewhistogram/${appid}
 https://store.steampowered.com/appreviews/${appid}

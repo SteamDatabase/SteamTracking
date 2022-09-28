@@ -10,7 +10,7 @@
         DI: () => X,
         Fi: () => o,
         Op: () => P,
-        Y3: () => F,
+        Y3: () => _,
         n6: () => M,
         tj: () => u,
       });
@@ -35,6 +35,7 @@
                     r: !0,
                     q: !0,
                     br: n.FE.readInt32,
+                    pbr: n.FE.readPackedInt32,
                     bw: n.Xc.writeRepeatedInt32,
                   },
                   language: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
@@ -533,6 +534,7 @@
                     r: !0,
                     q: !0,
                     br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
                     bw: n.Xc.writeRepeatedUint32,
                   },
                   user_subscribed: {
@@ -779,17 +781,17 @@
           return "CCommunity_RateCommentThread_Response";
         }
       }
-      class _ extends s {
+      class F extends s {
         constructor(e = null) {
           super(),
-            _.prototype.commentthreadid || n.aR(_.M()),
+            F.prototype.commentthreadid || n.aR(F.M()),
             s.initialize(this, e, 0, -1, [5], null);
         }
         static M() {
           return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   commentthreadid: {
                     n: 1,
@@ -808,70 +810,8 @@
                     r: !0,
                     q: !0,
                     br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
                     bw: n.Xc.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(_.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new _();
-          return _.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(_.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(_.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetCommentThreadRatings_Response";
-        }
-      }
-      class F extends s {
-        constructor(e = null) {
-          super(),
-            F.prototype.announcementid || n.aR(F.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  announcementid: {
-                    n: 1,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  vote_up: { n: 2, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  clan_accountid: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
                   },
                 },
               }),
@@ -908,6 +848,69 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetCommentThreadRatings_Response";
+        }
+      }
+      class _ extends s {
+        constructor(e = null) {
+          super(),
+            _.prototype.announcementid || n.aR(_.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  announcementid: {
+                    n: 1,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  vote_up: { n: 2, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  clan_accountid: {
+                    n: 3,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(_.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new _();
+          return _.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(_.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(_.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_RateClanAnnouncement_Request";
@@ -1914,7 +1917,7 @@
             });
           }),
           (e.GetCommentThreadRatings = function (e, r) {
-            return e.SendMsg("Community.GetCommentThreadRatings#1", r, _, {
+            return e.SendMsg("Community.GetCommentThreadRatings#1", r, F, {
               ePrivilege: 2,
             });
           }),

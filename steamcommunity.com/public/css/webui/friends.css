@@ -7975,7 +7975,6 @@ span.partnereventshared_tooltip_Ctn_2i6sR {
   letter-spacing: 0.05em;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -7998,6 +7997,10 @@ span.partnereventshared_tooltip_Ctn_2i6sR {
 }
 .partnereventshared_SaleSectionHeader_2PQjR span {
   color: #fff;
+}
+.partnereventshared_SaleSectionSubtitle_1Q5Hj {
+  text-transform: lowercase;
+  font-size: 16px;
 }
 .partnereventshared_SaleSectionContainer_18U3x {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -8831,13 +8834,23 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
     opacity: 1;
   }
 }
-.newlogindialog_Login_3VsPM .newlogindialog_AwaitingMobileConfText_3aiWV {
+.newlogindialog_Login_3VsPM .newlogindialog_ConfirmationContainer_zQoVO {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_ConfirmationContainer_zQoVO
+  .newlogindialog_AwaitingMobileConfText_3aiWV {
   color: #fff;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  max-width: 450px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 .newlogindialog_Login_3VsPM .newlogindialog_AwaitingMobileConfIcon_30hdF {
   width: 55px;
@@ -8854,11 +8867,30 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   padding: 12px 0px;
   cursor: pointer;
 }
+.newlogindialog_Login_3VsPM .newlogindialog_EnterBackupCodeContainer_h7flG,
 .newlogindialog_Login_3VsPM .newlogindialog_EnterCodeFromMobileContainer_N-VeL,
 .newlogindialog_Login_3VsPM .newlogindialog_EnterCodeFromEmailContainer_2gWRR {
   padding: 0 12px;
   gap: 24px;
 }
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterBackupCodeContainer_h7flG
+  .newlogindialog_Label_2UNfX,
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterCodeFromMobileContainer_N-VeL
+  .newlogindialog_Label_2UNfX,
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterCodeFromEmailContainer_2gWRR
+  .newlogindialog_Label_2UNfX {
+  font-size: 12px;
+  color: #afafaf;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterBackupCodeContainer_h7flG
+  .newlogindialog_EnterCodeFromMobile_3hmvy,
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterBackupCodeContainer_h7flG
+  .newlogindialog_EnterCodeFromEmail_3mAXm,
 .newlogindialog_Login_3VsPM
   .newlogindialog_EnterCodeFromMobileContainer_N-VeL
   .newlogindialog_EnterCodeFromMobile_3hmvy,
@@ -8876,6 +8908,14 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   font-size: 16px;
   line-height: 20px;
 }
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterBackupCodeContainer_h7flG
+  .newlogindialog_EnterCodeFromMobile_3hmvy
+  .newlogindialog_EnterCodeEmailAddress_1FHRg,
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EnterBackupCodeContainer_h7flG
+  .newlogindialog_EnterCodeFromEmail_3mAXm
+  .newlogindialog_EnterCodeEmailAddress_1FHRg,
 .newlogindialog_Login_3VsPM
   .newlogindialog_EnterCodeFromMobileContainer_N-VeL
   .newlogindialog_EnterCodeFromMobile_3hmvy
@@ -8950,6 +8990,24 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 .newlogindialog_Login_3VsPM
   .newlogindialog_SegmentedCharacterInput_1viP3.newlogindialog_Danger_3B4MM {
   border-color: #c15755;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_SegmentedCharacterInput_1viP3.newlogindialog_BackupCode_DaITv {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_SegmentedCharacterInput_1viP3.newlogindialog_BackupCode_DaITv {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_3VsPM
+    .newlogindialog_SegmentedCharacterInput_1viP3.newlogindialog_BackupCode_DaITv
+    input {
+    width: 26px;
+  }
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_SegmentedCharacterInput_1viP3
@@ -9230,6 +9288,14 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.newlogindialog_MutedErrorReference_3TgsQ {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #555;
+  font-size: 12px;
+  padding: 8px 10px;
 }
 .qrcode_QRBits_1UNWC {
   display: grid;

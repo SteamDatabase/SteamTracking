@@ -416,9 +416,21 @@ div#global_header .content {
 .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
   margin-left: 16px;
 }
+.steamchartsshell_ChartRangeCtn_wLFBO
+  .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_ShortDate_2AQqw {
+  display: none;
+}
 @media all and (max-width: 910px) {
   .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartRangeText_vlHd8 {
     font-size: 14px;
+  }
+  .steamchartsshell_ChartRangeCtn_wLFBO
+    .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_ShortDate_2AQqw {
+    display: block;
+  }
+  .steamchartsshell_ChartRangeCtn_wLFBO
+    .steamchartsshell_ChartRangeText_vlHd8.steamchartsshell_LongDate_1V5zB {
+    display: none;
   }
 }
 .steamchartsshell_ChartRangeCtn_wLFBO .steamchartsshell_ChartNavCtn_1tUsA {
@@ -826,6 +838,22 @@ div#global_header .content {
 }
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_ColumnHeaders_3eKiI
+  th
+  svg {
+  width: 15px;
+  fill: #8890a0;
+  margin-left: 3px;
+}
+@media all and (max-width: 700px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_ColumnHeaders_3eKiI
+    th
+    svg {
+    display: none;
+  }
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_ColumnHeaders_3eKiI
   th.weeklytopsellers_Rank_2BuNW {
   width: 5%;
 }
@@ -880,39 +908,15 @@ div#global_header .content {
   th.weeklytopsellers_Concurrent_grXsM {
   width: 18%;
 }
-@media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Concurrent_grXsM
-    span {
-    display: none;
-  }
-}
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_ColumnHeaders_3eKiI
   th.weeklytopsellers_Weeks_1ODme {
   width: 7%;
 }
-@media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_Weeks_1ODme
-    span {
-    display: none;
-  }
-}
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_ColumnHeaders_3eKiI
   th.weeklytopsellers_PeakInGame_1zxLz {
   width: 12%;
-}
-@media all and (max-width: 700px) {
-  .weeklytopsellers_ChartTable_3arZn
-    .weeklytopsellers_ColumnHeaders_3eKiI
-    th.weeklytopsellers_PeakInGame_1zxLz
-    span {
-    display: none;
-  }
 }
 .weeklytopsellers_ChartTable_3arZn .weeklytopsellers_RightCell__iRXB {
   text-align: right;
@@ -927,6 +931,7 @@ div#global_header .content {
   position: relative;
   overflow: visible;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   cursor: pointer;
 }
 .weeklytopsellers_ChartTable_3arZn .weeklytopsellers_TableRow_2-RN6:hover {
@@ -1187,6 +1192,18 @@ div#global_header .content {
   overflow: hidden;
   min-width: 0;
 }
+@media all and (max-width: 500px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_TableRow_2-RN6
+    .weeklytopsellers_CapsuleCell_18kGH
+    .weeklytopsellers_GameName_1n_4- {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_TableRow_2-RN6
   .weeklytopsellers_CapsuleCell_18kGH
@@ -1240,7 +1257,7 @@ div#global_header .content {
   flex-direction: column;
 }
 .weeklytopsellers_Tooltip_2OA1J {
-  display: inline-block;
+  display: inline-flex;
 }
 .weeklytopsellers_PriceWidget_30rPO {
   display: inline-block;

@@ -164,6 +164,7 @@
                     r: !0,
                     q: !0,
                     br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
                     bw: n.Xc.writeRepeatedUint32,
                   },
                 },

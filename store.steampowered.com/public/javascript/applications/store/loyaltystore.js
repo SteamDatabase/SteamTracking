@@ -14154,6 +14154,7 @@
                     r: !0,
                     q: !0,
                     br: En.FE.readUint32,
+                    pbr: En.FE.readPackedUint32,
                     bw: En.Xc.writeRepeatedUint32,
                   },
                   reserve_price: {

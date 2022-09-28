@@ -1074,8 +1074,8 @@
         j = n(90666);
       var V = n(10847),
         X = n(88883),
-        Y = n(13596),
-        W = n(28268),
+        W = n(13596),
+        Y = n(28268),
         Z = n(64129),
         Q = n.n(Z),
         K = (n(26149), n(92685), n(68002), n(77520)),
@@ -1135,7 +1135,7 @@
           l.Fragment,
           null,
           h
-            ? l.createElement(Y.V, {
+            ? l.createElement(W.V, {
                 size: "medium",
                 string: (0, w.Xx)("#Loading"),
               })
@@ -1179,7 +1179,7 @@
                 (0, w.Xx)("#ClanImagePickAndResize_UploadStatus", D.status)
               ),
               E
-                ? l.createElement(Y.V, {
+                ? l.createElement(W.V, {
                     string: (0, w.Xx)("#Uploading"),
                     size: "small",
                   })
@@ -1311,7 +1311,7 @@
                 this.state.errorCode
               )
             : "" == this.state.formattingHelp.__html
-            ? l.createElement(Y.V, null)
+            ? l.createElement(W.V, null)
             : l.createElement(
                 P.uH,
                 {
@@ -2368,7 +2368,7 @@
               })
             ),
             l.createElement(
-              W.HP,
+              Y.HP,
               {
                 toolTipContent: (0, w.Xx)(
                   "#EventEditor_AssociateSteamAccount_ttip"
@@ -2385,7 +2385,7 @@
               "div",
               null,
               T &&
-                l.createElement(Y.V, {
+                l.createElement(W.V, {
                   string: (0, w.Xx)("#Loading"),
                   size: "small",
                 }),
@@ -2567,7 +2567,7 @@
                   onOK: e,
                   onCancel: e,
                 },
-                l.createElement(Y.V, null)
+                l.createElement(W.V, null)
               )
             : this.state.bFinishedConverting
             ? l.createElement(P.uH, {
@@ -2943,8 +2943,8 @@
         j = n(72258),
         V = n(19228),
         X = n(77520),
-        Y = n(99533),
-        W = n(53622),
+        W = n(99533),
+        Y = n(53622),
         Z = n(22975),
         Q = n(90110),
         K = n(30100),
@@ -3089,7 +3089,7 @@
         SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t) {
           const n =
               e.target instanceof Node &&
-              W.ni(this.m_refScroll.current, e.target),
+              Y.ni(this.m_refScroll.current, e.target),
             a = t < 0 && this.m_refScroll.current.scrollTop < 1,
             r =
               this.m_refScroll.current.scrollHeight -
@@ -3108,7 +3108,7 @@
         }
         componentDidMount() {
           const e = this.m_refScroll.current;
-          e && !W.ni(e, e.ownerDocument.activeElement) && e.focus();
+          e && !Y.ni(e, e.ownerDocument.activeElement) && e.focus();
           const t = this.m_refPage.current;
           t &&
             (t.addEventListener("touchstart", this.OnTouchStart),
@@ -3120,7 +3120,7 @@
         componentDidUpdate(e, t, n) {
           if (null !== n) {
             let e = this.m_refScroll.current;
-            e && !W.ni(e, e.ownerDocument.activeElement) && e.focus();
+            e && !Y.ni(e, e.ownerDocument.activeElement) && e.focus();
             let t = this.m_refScrollAnchor.current
               ? this.m_refScrollAnchor.current.GetDOM()
               : null;
@@ -3345,7 +3345,7 @@
         constructor(e) {
           super(e),
             (this.m_refContent = i.createRef()),
-            (this.m_sendReadInfo = new Y.Ar()),
+            (this.m_sendReadInfo = new W.Ar()),
             (this.m_bSentRead = !1),
             this.props.event.appid &&
               _.Z.Get().QueueAppRequest(this.props.event.appid, {
@@ -4136,18 +4136,18 @@
         j = n(72258),
         V = n(28268),
         X = n(35092),
-        Y = n(22188);
+        W = n(22188);
       n(82946);
-      class W {
+      class Y {
         constructor() {
           (this.m_mapClanReposted = new Set()),
             (this.m_mapSourceEventGIDToPostedClans = new Map());
         }
         static Get() {
           return (
-            W.s_EventRepost ||
-              ((W.s_EventRepost = new W()), W.s_EventRepost.Initialize()),
-            W.s_EventRepost
+            Y.s_EventRepost ||
+              ((Y.s_EventRepost = new Y()), Y.s_EventRepost.Initialize()),
+            Y.s_EventRepost
           );
         }
         static ValidateRepostData(e) {
@@ -4164,7 +4164,7 @@
         Initialize() {
           if (document.getElementById("application_config")) {
             let e = (0, i.kQ)("repostcontrols", "application_config");
-            W.ValidateRepostData(e) &&
+            Y.ValidateRepostData(e) &&
               e.repost_clan_account_ids.forEach((e) =>
                 this.m_mapClanReposted.add(e)
               );
@@ -4285,7 +4285,7 @@
           });
         }
       }
-      (0, a.gn)([Y.LO], W.prototype, "m_mapClanReposted", void 0);
+      (0, a.gn)([W.LO], Y.prototype, "m_mapClanReposted", void 0);
       var Z = n(48341),
         Q = n(32548);
       const K = (0, o.Pi)((e) => {
@@ -4303,7 +4303,7 @@
               (0, a.mG)(void 0, void 0, void 0, function* () {
                 const e = E().CancelToken.source();
                 S.current = e.cancel;
-                const n = W.Get().LoadClansAlreadyRepostedTo(
+                const n = Y.Get().LoadClansAlreadyRepostedTo(
                   t.clanSteamID,
                   t.GID,
                   e
@@ -4314,7 +4314,7 @@
                 });
                 let a = new Array();
                 a.push(n),
-                  W.Get()
+                  Y.Get()
                     .GetRepostClanAccountID()
                     .forEach((e) => {
                       const t = I.K.InitFromClanID(e);
@@ -4328,7 +4328,7 @@
         }, [n, t.GID, t.clanSteamID]);
         const C = new Array();
         return (
-          W.Get()
+          Y.Get()
             .GetRepostClanAccountID()
             .forEach((e) => {
               const n = H.sV.GetClanInfoByClanAccountID(e);
@@ -4428,7 +4428,7 @@
                         for (const r of Array.from(c)) {
                           const o = I.K.InitFromClanID(r);
                           if (
-                            !(yield W.Get().RepostEvent(
+                            !(yield Y.Get().RepostEvent(
                               t.clanSteamID,
                               t.GID,
                               o,
@@ -4444,7 +4444,7 @@
                         for (const r of Array.from(d)) {
                           const o = I.K.InitFromClanID(r);
                           if (
-                            !(yield W.Get().RepostEvent(
+                            !(yield Y.Get().RepostEvent(
                               t.clanSteamID,
                               t.GID,
                               o,
@@ -4609,7 +4609,7 @@
             ),
             n = e.GetForumTopicURL(),
             a = i.De.EREALM === z.IN.k_ESteamRealmChina,
-            o = i.L7.logged_in && W.Get().BCanRepostPartnerEvent();
+            o = i.L7.logged_in && Y.Get().BCanRepostPartnerEvent();
           return r.createElement(
             q.s,
             { className: g().Container, "flow-children": "row", focusable: !1 },
@@ -5157,11 +5157,15 @@
       var a = n(67294),
         r = n(78587);
       function o(e, t) {
-        const n = "location" in e ? e.location : e,
-          a = "search" in n ? n.search : n,
-          r = new URLSearchParams(a.substring(1));
-        if (r.has(t)) {
-          const e = r.getAll(t);
+        let n;
+        "string" == typeof e
+          ? (n = e)
+          : "location" in e
+          ? (n = e.location.search)
+          : "search" in e && (n = e.search);
+        const a = new URLSearchParams(n.substring(1));
+        if (a.has(t)) {
+          const e = a.getAll(t);
           return e[e.length - 1];
         }
       }
@@ -5171,22 +5175,25 @@
         a.delete(t), i(n) && a.append(t, n), e.push(`?${a.toString()}`);
       }
       function l(e, t) {
-        const n = (0, r.k6)();
-        let l = t;
-        const c = o(location, e);
-        i(c) &&
-          (l = i(t)
-            ? "boolean" == typeof t
-              ? t.constructor("false" !== c)
-              : t.constructor(c)
-            : c);
-        const [p, d] = (0, a.useState)(l);
-        return [
-          p,
-          (t) => {
-            s(n, e, i(t) ? String(t) : null), d(t);
-          },
-        ];
+        const n = (0, r.k6)(),
+          l = (0, r.TH)(),
+          c = (0, a.useMemo)(() => {
+            const n = o(l.search, e);
+            return i(n)
+              ? i(t)
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== n)
+                  : t.constructor(n)
+                : n
+              : t;
+          }, [l.search, e, t]),
+          p = (0, a.useCallback)(
+            (t) => {
+              s(n, e, i(t) ? String(t) : null);
+            },
+            [n, e]
+          );
+        return [c, p];
       }
       function c(e, t) {
         const n = new URLSearchParams(e.location.search.substring(1));
@@ -5200,7 +5207,7 @@
     },
     63543: (e, t, n) => {
       "use strict";
-      n.d(t, { WF: () => B, yi: () => f });
+      n.d(t, { WF: () => k, yi: () => f });
       var a = n(70655),
         r = n(9669),
         o = n.n(r),
@@ -5817,8 +5824,27 @@
         (0, a.gn)([v.ak], w.prototype, "OnVoteClick", null),
         (0, a.gn)([v.ak], w.prototype, "SaveVote", null),
         (w = (0, a.gn)([s.Pi], w));
-      l.Component;
-      let B = class extends l.Component {
+      class B extends l.Component {
+        constructor(e) {
+          super(e);
+          let t = GetConfigJSON("steamwawards", "application_config");
+          this.m_voteCategories = null == t ? void 0 : t.votecategories;
+        }
+        render() {
+          return this.m_voteCategories
+            ? React.createElement(k, {
+                appID: this.props.appID,
+                bRenderFromStorePage: !0,
+                bIsEventActionEnabled: !0,
+                voteCategories: this.m_voteCategories,
+              })
+            : (console.error(
+                `SteamAwardStorePageVoteWidget: Missing Steam Awards config for app ${this.props.appID}`
+              ),
+              null);
+        }
+      }
+      let k = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_cancelSignal = o().CancelToken.source()),
@@ -5949,8 +5975,8 @@
           );
         }
       };
-      (0, a.gn)([i.LO], B.prototype, "m_awardEventDetails", void 0),
-        (B = (0, a.gn)([s.Pi], B));
+      (0, a.gn)([i.LO], k.prototype, "m_awardEventDetails", void 0),
+        (k = (0, a.gn)([s.Pi], k));
     },
     34948: (e, t, n) => {
       "use strict";

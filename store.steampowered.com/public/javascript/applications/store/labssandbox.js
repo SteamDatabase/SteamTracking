@@ -1895,6 +1895,7 @@
                     r: !0,
                     q: !0,
                     br: N.FE.readInt32,
+                    pbr: N.FE.readPackedInt32,
                     bw: N.Xc.writeRepeatedInt32,
                   },
                   similar_items_appids: {
@@ -1902,6 +1903,7 @@
                     r: !0,
                     q: !0,
                     br: N.FE.readInt32,
+                    pbr: N.FE.readPackedInt32,
                     bw: N.Xc.writeRepeatedInt32,
                   },
                   similar_items: { n: 7, c: k.VL, r: !0, q: !0 },

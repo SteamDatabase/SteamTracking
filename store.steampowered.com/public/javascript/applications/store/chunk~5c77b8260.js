@@ -8,8 +8,8 @@
       s.d(t, { LA: () => c, jg: () => m });
       var n = s(70655),
         r = s(9669),
-        i = s.n(r),
-        o = s(22188),
+        o = s.n(r),
+        i = s(22188),
         a = (s(26149), s(54698), s(3389), s(82946), s(93976)),
         d = s(90666),
         p = s(67294);
@@ -184,10 +184,10 @@
               },
               s = d.De.STORE_BASE_URL + "dynamicstore/userdata/";
             try {
-              let e = yield i().get(s, { params: t, withCredentials: !0 });
+              let e = yield o().get(s, { params: t, withCredentials: !0 });
               e &&
                 200 == e.status &&
-                (0, o.z)(() => {
+                (0, i.z)(() => {
                   if (((this.m_bIsLoaded = !0), e.data.rgCurators)) {
                     this.m_setCuratorsFollowed = new Set();
                     for (const t in e.data.rgCurators)
@@ -298,11 +298,11 @@
               "curators/" +
               (t ? "ajaxfollow/" : "ajaxignore/");
             const r = e.GetAccountID(),
-              o = new FormData();
-            o.append("clanid", "" + r),
-              o.append("sessionid", d.De.SESSIONID),
-              o.append(t ? "follow" : "ignore", s ? "1" : "0");
-            let a = yield i().post(n, o, { withCredentials: !0 });
+              i = new FormData();
+            i.append("clanid", "" + r),
+              i.append("sessionid", d.De.SESSIONID),
+              i.append(t ? "follow" : "ignore", s ? "1" : "0");
+            let a = yield o().post(n, i, { withCredentials: !0 });
             if (a && 200 == a.status) {
               this.InvalidateCache();
               const e = t
@@ -324,11 +324,11 @@
               r.append("ignore_reason", "" + s);
             try {
               this.m_bAjaxInFlight = !0;
-              let a = yield i().post(n, r, { withCredentials: !0 });
+              let a = yield o().post(n, r, { withCredentials: !0 });
               return (
                 a &&
                   200 == a.status &&
-                  (0, o.z)(() => {
+                  (0, i.z)(() => {
                     this.InvalidateCache(),
                       t
                         ? this.m_mapIgnoredApps.set(e, s)
@@ -350,12 +350,12 @@
               d.De.STORE_BASE_URL +
               "api/" +
               (t ? "addtowishlist" : "removefromwishlist");
-            const o = new FormData();
-            o.append("appid", "" + e),
-              o.append("sessionid", d.De.SESSIONID),
-              s && o.append("snr", s),
+            const i = new FormData();
+            i.append("appid", "" + e),
+              i.append("sessionid", d.De.SESSIONID),
+              s && i.append("snr", s),
               (this.m_bAjaxInFlight = !0);
-            let a = yield i().post(n, o, {
+            let a = yield o().post(n, i, {
               withCredentials: !0,
               cancelToken: r ? r.token : void 0,
             });
@@ -378,18 +378,18 @@
             return a.data;
           });
         }
-        AddToCart(e, t, s, r, o, a) {
+        AddToCart(e, t, s, r, i, a) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             const n = new FormData();
             n.append("action", "add_to_cart"),
               a
                 ? n.append("bundleid", a.toString())
                 : n.append("subid", "" + t),
-              o && n.append("snr", o),
+              i && n.append("snr", i),
               n.append("sessionid", d.De.SESSIONID),
               n.append("quantity", "1");
             try {
-              yield i().post(s, n, { withCredentials: !0 });
+              yield o().post(s, n, { withCredentials: !0 });
               let t = d.De.IN_CLIENT ? "steam://url/StoreCart" : r;
               e.preventDefault(),
                 this.InvalidateCache(),
@@ -409,7 +409,7 @@
                 t.append("cc", d.De.COUNTRY);
               let s =
                   d.De.STORE_BASE_URL + "actions/addappformastersubscription",
-                n = yield i().post(s, t, { withCredentials: !0 });
+                n = yield o().post(s, t, { withCredentials: !0 });
               if (
                 (this.InvalidateCache(),
                 !n.data.success || 1 !== n.data.success)
@@ -433,7 +433,7 @@
               n.append("appid", "" + e),
                 n.append("sessionid", d.De.SESSIONID),
                 t || n.append("unfollow", "1");
-              const r = yield i().post(s, n, { withCredentials: !0 });
+              const r = yield o().post(s, n, { withCredentials: !0 });
               if (!r.data) return 2;
               this.InvalidateCache(),
                 t
@@ -485,51 +485,51 @@
           [e, m.Get()]
         );
       }
-      (0, n.gn)([o.LO], m.prototype, "m_setWishList", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setOwnedPackages", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setOwnedApps", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setFollowedApps", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setExcludedTagsIds", void 0),
+      (0, n.gn)([i.LO], m.prototype, "m_setWishList", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setOwnedPackages", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setOwnedApps", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setFollowedApps", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setExcludedTagsIds", void 0),
         (0, n.gn)(
-          [o.LO],
+          [i.LO],
           m.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        (0, n.gn)([o.LO], m.prototype, "m_setRecommendedApps", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_mapIgnoredApps", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_mapIgnoredPackages", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setCuratorsFollowed", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setCuratorsIgnored", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setRecommendedApps", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_mapIgnoredApps", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_mapIgnoredPackages", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setCuratorsFollowed", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setCuratorsIgnored", void 0),
         (0, n.gn)(
-          [o.LO],
+          [i.LO],
           m.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        (0, n.gn)([o.LO], m.prototype, "m_primaryLanguage", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_secondaryLanguages", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setRecommendedTags", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_primaryLanguage", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_secondaryLanguages", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setRecommendedTags", void 0),
         (0, n.gn)(
-          [o.LO],
+          [i.LO],
           m.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        (0, n.gn)([o.LO], m.prototype, "m_setPackagesInCart", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_setAppsInCart", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_nCartLineItemCount", void 0),
-        (0, n.gn)([o.LO], m.prototype, "m_bAjaxInFlight", void 0),
-        (0, n.gn)([o.aD], m.prototype, "UpdateAppIgnore", null);
+        (0, n.gn)([i.LO], m.prototype, "m_setPackagesInCart", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_setAppsInCart", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_nCartLineItemCount", void 0),
+        (0, n.gn)([i.LO], m.prototype, "m_bAjaxInFlight", void 0),
+        (0, n.gn)([i.aD], m.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
       s.d(t, { Xt: () => h, _I: () => g });
       var n = s(67294),
         r = (s(55914), s(3786)),
-        i = s(59650),
-        o = s(41311),
+        o = s(59650),
+        i = s(41311),
         a = s(90666),
-        d = s(28274),
+        d = s(51167),
         p = (s(88514), s(65902)),
         l = s(92742),
         m = s(54698);
@@ -551,26 +551,26 @@
       }
       function u(e) {
         return n.createElement(
-          i.e1,
+          o.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
           n.createElement(c, { redirectURL: e.redirectURL })
         );
       }
       function h() {
-        (0, i.AM)(
+        (0, o.AM)(
           n.createElement(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, i.Xx)("#Login_SignIn") }
         );
       }
       function g(e) {
-        (0, i.AM)(
+        (0, o.AM)(
           n.createElement(u, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, i.Xx)("#Login_SignIn") }
         );
       }
       function _(e) {
@@ -578,7 +578,7 @@
           [s] = (0, n.useState)(
             new p.J(a.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
-          [r, i] = (0, n.useState)(!1);
+          [r, o] = (0, n.useState)(!1);
         return n.createElement(
           "div",
           null,
@@ -590,7 +590,7 @@
                 platform: 2,
                 onComplete: (e) => {
                   e == l.TG.k_PrimaryDomainFail
-                    ? i(!0)
+                    ? o(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
@@ -603,8 +603,8 @@
       s.d(t, { e1: () => d.e1, x1: () => g, BR: () => w, AM: () => _ });
       var n = s(70655),
         r = s(67294),
-        i = s(73935),
-        o = s(53157),
+        o = s(73935),
+        i = s(53157),
         a = s(10847),
         d = s(84351),
         p = s(95598),
@@ -701,13 +701,13 @@
       function g(e, t, s) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           const r = !0 === (null == s ? void 0 : s.bNeverPopOut),
-            o = !r && I(null, t),
+            i = !r && I(null, t),
             a =
               (null == s ? void 0 : s.bForcePopOut) &&
               (null == s ? void 0 : s.popupWidth) &&
               (null == s ? void 0 : s.popupHeight),
             d =
-              o &&
+              i &&
               !a &&
               (yield (function (e, t, s) {
                 return (0, n.mG)(this, void 0, void 0, function* () {
@@ -715,15 +715,15 @@
                   (n.style.position = "absolute"),
                     (n.style.visibility = "hidden"),
                     t.document.body.appendChild(n),
-                    i.render(e, n),
+                    o.render(e, n),
                     yield s;
                   let r = document;
                   h.De.IN_LIBRARY && r.fonts && (yield r.fonts.ready);
-                  const o = n.getBoundingClientRect(),
-                    a = Math.ceil(o.height),
-                    d = Math.ceil(o.width);
+                  const i = n.getBoundingClientRect(),
+                    a = Math.ceil(i.height),
+                    d = Math.ceil(i.width);
                   return (
-                    i.unmountComponentAtNode(n),
+                    o.unmountComponentAtNode(n),
                     t.document.body.removeChild(n),
                     { height: a, width: d }
                   );
@@ -765,7 +765,7 @@
           return g(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, s));
         });
       }
-      function w(e, t, s, n, i, o, a) {
+      function w(e, t, s, n, o, i, a) {
         let p, l;
         const m = e.props.closeModal,
           c = () => {
@@ -793,7 +793,7 @@
             l = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, n), { fnOnClose: c }),
-            m = new C(t, s, e, g, i, o);
+            m = new C(t, s, e, g, o, i);
           m.Show(), (p = m);
         } else p = a.ShowModal(g);
         return p;
@@ -803,8 +803,8 @@
           (e = e || (0, d.BL)(t || window)), h.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class C extends o.K3 {
-        constructor(e, t, s, n, r, i) {
+      class C extends i.K3 {
+        constructor(e, t, s, n, r, o) {
           super(t, {
             title: s.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
@@ -818,7 +818,7 @@
             (this.m_windowOpener = e),
             (this.m_modalProps = s),
             (this.m_modalElement = n),
-            (this.m_options = i);
+            (this.m_options = o);
         }
         Update(e) {
           (0, c.X)(!1, "NYI");
@@ -826,8 +826,8 @@
         UpdateParamsBeforeShow(e) {
           var t, s, n;
           let r,
-            i,
             o,
+            i,
             a = this.m_modalProps.popupWidth || 500,
             d = this.m_modalProps.popupHeight || 400;
           if (
@@ -844,24 +844,25 @@
               ? void 0
               : n.GetBrowserID)
           )
-            o = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            i = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (r = (e.availWidth - a) / 2), (i = (e.availHeight - d) / 2);
+            (r = (e.availWidth - a) / 2), (o = (e.availHeight - d) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((r += t.availLeft), (i += t.availTop));
+              ((r += t.availLeft), (o += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: a, height: d, left: r, top: i },
-            window_opener_id: o,
+            dimensions: { width: a, height: d, left: r, top: o },
+            window_opener_id: i,
           });
         }
         OnLoad() {}
         OnResize() {}
         OnClose() {
-          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose();
+          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
+            o.unmountComponentAtNode(this.m_element);
         }
         Render(e, t) {
           if (
@@ -874,7 +875,7 @@
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
-            i.render(
+            o.render(
               r.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: a.T },

@@ -4939,6 +4939,7 @@
                     r: !0,
                     q: !0,
                     br: _.FE.readUint64String,
+                    pbr: _.FE.readPackedUint64String,
                     bw: _.Xc.writeRepeatedUint64String,
                   },
                 },

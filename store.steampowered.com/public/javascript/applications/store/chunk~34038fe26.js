@@ -297,6 +297,7 @@
                     r: !0,
                     q: !0,
                     br: n.FE.readInt32,
+                    pbr: n.FE.readPackedInt32,
                     bw: n.Xc.writeRepeatedInt32,
                   },
                   formatted_balance: {

@@ -440,6 +440,9 @@ strong {
 .partnereventsale_SalePageLogoCtn_3YZLN > div {
   margin-top: 0px;
 }
+.partnereventsale_SectionSubtitleCtn_bj1H_ {
+  padding-top: 8px;
+}
 .partnereventsaletagitems_FilterDisplayCtn_3y3Xg
   .partnereventsaletagitems_FilterTitle_24W_L {
   color: #fff;
@@ -2653,6 +2656,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   box-sizing: content-box;
 }
 .eventrow_OtherEvents_TextTitle_3Zufl {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   font-size: 15px;
   line-height: 19px;
   color: #fff;
@@ -3947,285 +3953,6 @@ td.rdtYear:hover {
   color: gray;
   font-size: 10px;
 }
-.partnereventshared_ErrorPage_1HZBl {
-  padding: 24px;
-  text-align: center;
-}
-.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorMsg__guJ8,
-.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorCode_2ZZXk {
-  font-family: monospace;
-  padding: 6px;
-}
-.partnereventshared_PendingVisibilityText_1G3Ia {
-  margin-left: 12px;
-  color: orange;
-}
-.salelabels_SectionLabelCtn_17xMe {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
-  margin-left: auto;
-  display: flex;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
-  background: #4a2a3c;
-  padding: 4px 10px;
-  border-radius: 3px;
-  border: 1px solid #50484c;
-  height: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.salelabels_SectionLabelCtn_17xMe
-  .salelabels_SectionLabelLinkButton_1bw3D:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH {
-  cursor: grabbing !important;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Jolly Lodger";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
-    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "New Rocker";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
-    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
-}
-@font-face {
-  font-family: "Chonburi";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
-    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
-      format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
-    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Sigmar One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
-    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-.saletabeditor_CurrentTabsCtn_24eKi {
-  border-top: 1px solid #464b58;
-  padding-top: 0px;
-  margin-top: 16px;
-}
-.saletabeditor_AddButton_2fqBD {
-  width: 25%;
-}
-.saletabeditor_ImgPreview_3jXQP {
-  width: 100px;
-  height: 20px;
-  overflow: hidden;
-  padding-right: 10px;
-}
-.saletabeditor_ColorButtonsCtn_pxbho button.DialogButton {
-  text-align: left;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  padding: 2px 12px;
-  box-sizing: border-box;
-  margin: 4px 0px;
-}
-.saletabeditor_ColorButtonsCtn_pxbho .saletabeditor_EventEditorTextTitle_2QrzB {
-  padding-top: 0px;
-}
-.saletabeditor_SelectedTabDetailsCtn_3FCo- {
-  margin-left: 70px;
-}
-.reservations_description_VmWUF {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 3em;
-  color: #fff;
-}
-.reservations_description2_1seHG {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0px;
-  color: #fff;
-}
-.reservations_j1_3F3Ev {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #ffffff0f;
-  border-radius: 3px;
-  width: 300px;
-  padding: 20px;
-  margin: 10px;
-  color: #fff;
-}
-.reservations_options_1_TYR {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.reservations_price_3hZ64 {
-  right: 10px;
-  top: 150px;
-  font-size: 20px;
-  font-weight: 500;
-}
-.reservations_CommunityPreviewReservationWidgetControl_3d8Bh {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.reservations_reservecopy_1TC3e {
-  flex-grow: 1;
-}
-.reservations_reserverow_2IJxF {
-  max-width: 300px;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-}
-.reservations_reserverowReserved_2Rjlv {
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-}
-.reservations_reserverow_2IJxF > div {
-  margin: 10px;
-}
-.reservations_reservebutton_15UWX {
-  background: #fff;
-}
-.reservations_noreserve_1PHyP {
-  border-radius: 3px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 15px;
-  padding: 10px;
-  width: 80%;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 400;
-}
-.reservations_cancelreservation_gw18S {
-  max-width: 300px;
-}
-.reservations_alreadyreserved_1MUMr {
-  font-style: italic;
-  padding-bottom: 5px;
-  color: #ffffff80;
-}
-.reservations_expecteddate_3T6SP {
-  text-align: center;
-}
-.reservations_Link_CzZBM {
-  text-decoration: underline;
-}
-.reservations_Link_CzZBM:hover {
-  text-decoration: none;
-}
-@media screen and (max-width: 940px) {
-  .reservations_description_VmWUF {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .reservations_description2_1seHG {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
-  flex-grow: 1;
-  margin-right: 16px;
-  display: flex;
-  flex-direction: row;
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
-  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL {
-  flex-grow: 1;
-  padding: 8px;
-}
-.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
-  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
-  flex-grow: 4;
-}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -4626,6 +4353,32 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-weight: 600;
   padding: 0px;
 }
+.salelabels_SectionLabelCtn_17xMe {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
+  margin-left: auto;
+  display: flex;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
+  background: #4a2a3c;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #50484c;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.salelabels_SectionLabelCtn_17xMe
+  .salelabels_SectionLabelLinkButton_1bw3D:hover {
+  background: #7a5a6c;
+  border-color: #fff;
+}
+.salelabels_SectionTitleInnerCtn_2R3H5 {
+  margin-bottom: 10px;
+}
 .saleitemdefdisplay_QuanityAndPrice_2BmhS {
   display: flex;
   flex-direction: row-reverse;
@@ -4673,6 +4426,102 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .basicpartnereventrender_Main_2U6-V {
   height: 100vh;
   overflow-y: scroll;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jolly Lodger";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Jolly Lodger"), local("JollyLodger"),
+    url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "New Rocker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"),
+    url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+@font-face {
+  font-family: "Chonburi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Chonburi"), local("Chonburi-Regular"),
+    url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sigmar One";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+    url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
 :root {
@@ -7498,6 +7347,177 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 100%;
   height: 100%;
 }
+.salerewardshelfdisplay_RewardContainer_10sVo {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+.partnereventshared_ErrorPage_1HZBl {
+  padding: 24px;
+  text-align: center;
+}
+.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorMsg__guJ8,
+.partnereventshared_ErrorPage_1HZBl .partnereventshared_ErrorCode_2ZZXk {
+  font-family: monospace;
+  padding: 6px;
+}
+.partnereventshared_PendingVisibilityText_1G3Ia {
+  margin-left: 12px;
+  color: orange;
+}
+.horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH {
+  cursor: grabbing !important;
+}
+.saletabeditor_CurrentTabsCtn_24eKi {
+  border-top: 1px solid #464b58;
+  padding-top: 0px;
+  margin-top: 16px;
+}
+.saletabeditor_AddButton_2fqBD {
+  width: 25%;
+}
+.saletabeditor_ImgPreview_3jXQP {
+  width: 100px;
+  height: 20px;
+  overflow: hidden;
+  padding-right: 10px;
+}
+.saletabeditor_ColorButtonsCtn_pxbho button.DialogButton {
+  text-align: left;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 2px 12px;
+  box-sizing: border-box;
+  margin: 4px 0px;
+}
+.saletabeditor_ColorButtonsCtn_pxbho .saletabeditor_EventEditorTextTitle_2QrzB {
+  padding-top: 0px;
+}
+.saletabeditor_SelectedTabDetailsCtn_3FCo- {
+  margin-left: 70px;
+}
+.reservations_description_VmWUF {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+  color: #fff;
+}
+.reservations_description2_1seHG {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0px;
+  color: #fff;
+}
+.reservations_j1_3F3Ev {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ffffff0f;
+  border-radius: 3px;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  color: #fff;
+}
+.reservations_options_1_TYR {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.reservations_price_3hZ64 {
+  right: 10px;
+  top: 150px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.reservations_CommunityPreviewReservationWidgetControl_3d8Bh {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reservations_reservecopy_1TC3e {
+  flex-grow: 1;
+}
+.reservations_reserverow_2IJxF {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.reservations_reserverowReserved_2Rjlv {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.reservations_reserverow_2IJxF > div {
+  margin: 10px;
+}
+.reservations_reservebutton_15UWX {
+  background: #fff;
+}
+.reservations_noreserve_1PHyP {
+  border-radius: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.reservations_cancelreservation_gw18S {
+  max-width: 300px;
+}
+.reservations_alreadyreserved_1MUMr {
+  font-style: italic;
+  padding-bottom: 5px;
+  color: #ffffff80;
+}
+.reservations_expecteddate_3T6SP {
+  text-align: center;
+}
+.reservations_Link_CzZBM {
+  text-decoration: underline;
+}
+.reservations_Link_CzZBM:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 940px) {
+  .reservations_description_VmWUF {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .reservations_description2_1seHG {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g {
+  flex-grow: 1;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL {
+  flex-grow: 1;
+  padding: 8px;
+}
+.contenthubsectionseditor_ContentHubSectionCtn_G2T4g
+  .contenthubsectionseditor_ContentHubSectionInnerCtn_Xl-LL:first-child {
+  flex-grow: 4;
+}
 .saleeditorlocationcontrolwidget_DisplayWarning_162UW {
   padding: 5px;
   font-weight: bolder;
@@ -7538,17 +7558,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .partnereventdescriptiontab_DescEditorPadding_3mLVV.partnereventdescriptiontab_ImagePickerCtn_Mc28x {
   width: 395px;
-}
-.salerewardshelfdisplay_RewardContainer_10sVo {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 1em;
 }
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;
