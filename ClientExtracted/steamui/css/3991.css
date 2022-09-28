@@ -4088,6 +4088,7 @@ body.modals_BodyNoScrollDialog_3lrlA {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  height: 18px;
 }
 .gamelistsearchbar_SearchFilterInput_172OF
   .gamelistsearchbar_FilterTag_3gzh_

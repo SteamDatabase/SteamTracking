@@ -258,6 +258,7 @@
   .newlogindialog_Check_6EoZE {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_Checkbox_3tTFg:hover {
   background-color: #393c44;
@@ -422,13 +423,23 @@
     opacity: 1;
   }
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfText_7LmnT {
+.newlogindialog_Login_ZOBYq .newlogindialog_ConfirmationContainer_2aZnk {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_ConfirmationContainer_2aZnk
+  .newlogindialog_AwaitingMobileConfText_7LmnT {
   color: #fff;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  max-width: 450px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfIcon_2hLC_ {
   width: 55px;
@@ -445,11 +456,30 @@
   padding: 12px 0px;
   cursor: pointer;
 }
+.newlogindialog_Login_ZOBYq .newlogindialog_EnterBackupCodeContainer_2TAgP,
 .newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromMobileContainer_T68fB,
 .newlogindialog_Login_ZOBYq .newlogindialog_EnterCodeFromEmailContainer_2pVTW {
   padding: 0 12px;
   gap: 24px;
 }
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterBackupCodeContainer_2TAgP
+  .newlogindialog_Label_2SE9Z,
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromMobileContainer_T68fB
+  .newlogindialog_Label_2SE9Z,
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterCodeFromEmailContainer_2pVTW
+  .newlogindialog_Label_2SE9Z {
+  font-size: 12px;
+  color: #afafaf;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterBackupCodeContainer_2TAgP
+  .newlogindialog_EnterCodeFromMobile_1Rruw,
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterBackupCodeContainer_2TAgP
+  .newlogindialog_EnterCodeFromEmail_1-D_t,
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromMobile_1Rruw,
@@ -467,6 +497,14 @@
   font-size: 16px;
   line-height: 20px;
 }
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterBackupCodeContainer_2TAgP
+  .newlogindialog_EnterCodeFromMobile_1Rruw
+  .newlogindialog_EnterCodeEmailAddress_2zLvb,
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EnterBackupCodeContainer_2TAgP
+  .newlogindialog_EnterCodeFromEmail_1-D_t
+  .newlogindialog_EnterCodeEmailAddress_2zLvb,
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EnterCodeFromMobileContainer_T68fB
   .newlogindialog_EnterCodeFromMobile_1Rruw
@@ -541,6 +579,24 @@
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_Danger_1-HwJ {
   border-color: #c15755;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_SegmentedCharacterInput_1kJ6q.newlogindialog_BackupCode_1q02w
+    input {
+    width: 26px;
+  }
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_SegmentedCharacterInput_1kJ6q
@@ -643,12 +699,13 @@
   .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
   .newlogindialog_FormContainer_3jLIH {
   background: transparent;
+  padding: 24px 0px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_StandardLayout_286eh.newlogindialog_Embedded_CpeGc
     .newlogindialog_FormContainer_3jLIH {
-    padding: 24px 0px;
+    min-width: 0px;
   }
 }
 .newlogindialog_Login_ZOBYq
@@ -685,6 +742,12 @@
   width: 100%;
   min-width: 700px;
 }
+@media screen and (max-width: 796px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
+    min-width: 0px;
+  }
+}
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf
   .newlogindialog_EmbeddedRootFooter_1HRJ1 {
@@ -695,7 +758,7 @@
   color: #afafaf;
   font-size: 12px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_EmbeddedRoot_2Vbrf
     .newlogindialog_EmbeddedRootFooter_1HRJ1 {
@@ -709,6 +772,17 @@
     .newlogindialog_AccountCreation_19yGb {
     display: flex;
     flex-direction: column;
+  }
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1
+    .newlogindialog_AccountCreation_19yGb.newlogindialog_InClient_2GR-7 {
+    flex-direction: row;
+  }
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_EmbeddedRootFooter_1HRJ1.newlogindialog_InClient_2GR-7 {
+    flex-direction: row;
   }
 }
 .newlogindialog_Login_ZOBYq
@@ -980,4 +1054,4 @@ body {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
 
-/*# sourceMappingURL=css\710.css.map*/
+/*# sourceMappingURL=css\7936.css.map*/

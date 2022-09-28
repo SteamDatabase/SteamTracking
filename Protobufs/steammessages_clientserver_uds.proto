@@ -82,6 +82,7 @@ message CMsgClientGetClientAppListResponse {
 		optional uint32 estimated_seconds_remaining = 21;
 		optional int32 queue_position = 22;
 		optional bool uninstalling = 23;
+		optional uint32 rt_time_scheduled = 24;
 	}
 
 	repeated .CMsgClientGetClientAppListResponse.App apps = 1;

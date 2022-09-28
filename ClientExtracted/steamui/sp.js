@@ -2815,7 +2815,7 @@
           a.OT.Initialize(new r.J(o.De.WEBAPI_BASE_URL, e));
       }
     },
-    85602: (e, t, n) => {
+    80868: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => Zy });
       var a = n(67294),
@@ -10857,7 +10857,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1663871442),
+          c = parseInt(1664321898),
           m = c && Jo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, lo.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -23095,8 +23095,8 @@
           );
         };
       var Gd = n(19329),
-        Bd = n(1981);
-      var Ld = n(92520),
+        Bd = n(47283),
+        Ld = n(92520),
         Rd = n.n(Ld);
       const Pd = a.createContext(null),
         Od = a.memo(function () {
@@ -23125,8 +23125,7 @@
           );
           const u = a.useCallback(
               (e) => {
-                var t;
-                r(e), (t = "/GamepadHome/" + e), Bd.q.ReportTrackedAction(t);
+                r(e), (0, Bd.I)("/GamepadHome/" + e);
               },
               [r]
             ),
@@ -25482,9 +25481,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Sep 22 2022 : 11:30:42",
-              BUILD_TIME_UTC: "Sep 22 2022 : 18:30:42",
-              BUILD_RTIME_UTC: 1663871442,
+              BUILD_TIME_LOCAL: "Sep 27 2022 : 16:38:18",
+              BUILD_TIME_UTC: "Sep 27 2022 : 23:38:18",
+              BUILD_RTIME_UTC: 1664321898,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
