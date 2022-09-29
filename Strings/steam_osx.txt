@@ -29,6 +29,8 @@ __TEXT
 >7
 __unwind_info
 __TEXT
+LR;
+LR;
 __DATA
 <
 <
@@ -84,7 +86,6 @@ __bss
 __DATA
 __common
 __DATA
-`{A
 H
 __LINKEDIT
 @B
@@ -137,9 +138,11 @@ h
 :
 )
 `A
+?
 0
 (
 (
+t7f9
 9
 (
 0
@@ -2224,7 +2227,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep 27 2022 16:44:01
+Startup - updater built Sep 29 2022 12:57:57
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2511,8 +2514,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep 27 2022
-16:44:02
+Sep 29 2022
+12:57:57
 crashhandler003
 steam
 Steam Executable Crash
@@ -2609,7 +2612,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:44:00
+12:57:56
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10374,7 +10377,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-16:41:10
+12:56:05
 Jan
 Feb
 Mar
@@ -11665,6 +11668,8 @@ k_EMsgClientUninstallClientApp
 k_EMsgClientUninstallClientAppResponse
 k_EMsgClientSetClientAppUpdateState
 k_EMsgClientSetClientAppUpdateStateResponse
+k_EMsgClientEnableOrDisableDownloads
+k_EMsgClientEnableOrDisableDownloadsResponse
 k_EMsgChannelEncryptRequest
 k_EMsgChannelEncryptResponse
 k_EMsgFileXferRequest
@@ -12751,9 +12756,11 @@ C?7
 T`7
 
 0
+?
 0
 (
 (
+t7f9
 9
 (
 0
@@ -12893,7 +12900,6 @@ M.
 (
 ^-
 >-
-75
 '
 '
 @
@@ -13247,7 +13253,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 @
 
-r.
 @
 @
 @
@@ -13274,8 +13279,6 @@ $
 e
 W
 ,7~5d
-#M5)
-#m+)
 H
 0
 #
@@ -13293,8 +13296,8 @@ H
 
 
 Hc
-L)5{}$
-L95py$
+H;5\z$
+L)5[t$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13308,6 +13311,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 C"
+#
 #
 #
 0
@@ -13611,7 +13615,9 @@ P
 @
 @
 0
+\
 =a
+,
 
 0
 Hi

@@ -2305,11 +2305,11 @@
           DEV_MODE: !1,
           IN_LIBRARY: !1,
           IN_GAMEPADUI: !1,
+          LEGACY_GAMEPADUI_MODE: 0,
+          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
-          IN_STANDALONE_KEYBOARD: !1,
-          STANDALONE_CONFIGURATOR_APPID: 0,
         };
       function V() {
         var e = (function () {
@@ -2468,7 +2468,7 @@
       new Map();
       new Map();
       new Map(), new Map();
-      new Map(), new Map(), new Map(), new Map(), new Map();
+      new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
       var X = (function () {
         function e() {
           (this.m_mapTokens = new Map()),

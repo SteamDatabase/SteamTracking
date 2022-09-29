@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7538920";
+var CLSTAMP = "7541544";
 (() => {
   var e,
     t,
@@ -129,8 +129,8 @@ var CLSTAMP = "7538920";
           gt: () => z,
           hz: () => S,
           jA: () => g,
-          jM: () => M,
-          j_: () => v,
+          jM: () => v,
+          j_: () => M,
           kg: () => k,
           lb: () => L,
           m2: () => w,
@@ -228,7 +228,7 @@ var CLSTAMP = "7538920";
           }
         }
         const E = (e) => ("koreana" === e ? "korean" : e);
-        function v(e, t = "") {
+        function M(e, t = "") {
           switch (e) {
             case 0:
               return "english";
@@ -294,7 +294,7 @@ var CLSTAMP = "7538920";
               return t;
           }
         }
-        function M(e, t = 0) {
+        function v(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -533,8 +533,8 @@ var CLSTAMP = "7538920";
           j_: () => n.j_,
           dt: () => n.dt,
           F8: () => n.F8,
-          a: () => M,
-          e9: () => v,
+          a: () => v,
+          e9: () => M,
           ue: () => b,
           IN: () => o.IN,
           Zv: () => n.Zv,
@@ -755,13 +755,13 @@ var CLSTAMP = "7538920";
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
         })(w || (w = {}));
-        var v, M, S, C, k;
+        var M, v, S, C, k;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(v || (v = {})),
+        })(M || (M = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -770,7 +770,7 @@ var CLSTAMP = "7538920";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(M || (M = {})),
+          })(v || (v = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
@@ -1967,18 +1967,18 @@ var CLSTAMP = "7538920";
           }
         }
         a.Message;
-        const v = a.Message;
-        class M extends v {
+        const M = a.Message;
+        class v extends M {
           constructor(e = null) {
             super(),
-              M.prototype.server_types_available || g.aR(M.M()),
-              v.initialize(this, e, 0, -1, [1], null);
+              v.prototype.server_types_available || g.aR(v.M()),
+              M.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
             return (
-              M.sm_m ||
-                (M.sm_m = {
-                  proto: M,
+              v.sm_m ||
+                (v.sm_m = {
+                  proto: v,
                   fields: {
                     server_types_available: { n: 1, c: S, r: !0, q: !0 },
                     server_type_for_auth_services: {
@@ -1988,51 +1988,51 @@ var CLSTAMP = "7538920";
                     },
                   },
                 }),
-              M.sm_m
+              v.sm_m
             );
           }
           static MBF() {
-            return M.sm_mbf || (M.sm_mbf = g.Bh(M.M())), M.sm_mbf;
+            return v.sm_mbf || (v.sm_mbf = g.Bh(v.M())), v.sm_mbf;
           }
           toObject(e = !1) {
-            return M.toObject(e, this);
+            return v.toObject(e, this);
           }
           static toObject(e, t) {
-            return g.TA(M.M(), e, t);
+            return g.TA(v.M(), e, t);
           }
           static fromObject(e) {
-            return g.aD(M.M(), e);
+            return g.aD(v.M(), e);
           }
           static deserializeBinary(e) {
             let t = new a.BinaryReader(e),
-              r = new M();
-            return M.deserializeBinaryFromReader(r, t);
+              r = new v();
+            return v.deserializeBinaryFromReader(r, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return g.F(M.MBF(), e, t);
+            return g.F(v.MBF(), e, t);
           }
           serializeBinary() {
             var e = new a.BinaryWriter();
-            return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            g.l2(M.M(), e, t);
+            g.l2(v.M(), e, t);
           }
           serializeBase64String() {
             var e = new a.BinaryWriter();
             return (
-              M.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              v.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
             return "CMsgClientServersAvailable";
           }
         }
-        class S extends v {
+        class S extends M {
           constructor(e = null) {
             super(),
               S.prototype.server || g.aR(S.M()),
-              v.initialize(this, e, 0, -1, void 0, null);
+              M.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
@@ -2145,7 +2145,7 @@ var CLSTAMP = "7538920";
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              (this.ClientServersAvailableHandler = (0, i.OW)(5501, M, (e) => {
+              (this.ClientServersAvailableHandler = (0, i.OW)(5501, v, (e) => {
                 let t = new Set(this.m_setConnectedServers);
                 for (let r of e.Body().server_types_available()) {
                   let e = r.server();
@@ -5695,7 +5695,7 @@ var CLSTAMP = "7538920";
                     purchase_options: { n: 41, c: f, r: !0, q: !0 },
                     accessories: { n: 42, c: f, r: !0, q: !0 },
                     screenshots: { n: 50, c: y },
-                    trailers: { n: 51, c: v },
+                    trailers: { n: 51, c: M },
                     supported_languages: { n: 52, c: C, r: !0, q: !0 },
                     store_url_path_override: {
                       n: 53,
@@ -6855,67 +6855,11 @@ var CLSTAMP = "7538920";
             return "StoreItem_Screenshots_Screenshot";
           }
         }
-        class v extends s {
-          constructor(e = null) {
-            super(),
-              v.prototype.highlights || i.aR(v.M()),
-              s.initialize(this, e, 0, -1, [1, 2], null);
-          }
-          static M() {
-            return (
-              v.sm_m ||
-                (v.sm_m = {
-                  proto: v,
-                  fields: {
-                    highlights: { n: 1, c: S, r: !0, q: !0 },
-                    other_trailers: { n: 2, c: S, r: !0, q: !0 },
-                  },
-                }),
-              v.sm_m
-            );
-          }
-          static MBF() {
-            return v.sm_mbf || (v.sm_mbf = i.Bh(v.M())), v.sm_mbf;
-          }
-          toObject(e = !1) {
-            return v.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return i.TA(v.M(), e, t);
-          }
-          static fromObject(e) {
-            return i.aD(v.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new n.BinaryReader(e),
-              r = new v();
-            return v.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return i.F(v.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new n.BinaryWriter();
-            return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            i.l2(v.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new n.BinaryWriter();
-            return (
-              v.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "StoreItem_Trailers";
-          }
-        }
         class M extends s {
           constructor(e = null) {
             super(),
-              M.prototype.filename || i.aR(M.M()),
-              s.initialize(this, e, 0, -1, void 0, null);
+              M.prototype.highlights || i.aR(M.M()),
+              s.initialize(this, e, 0, -1, [1, 2], null);
           }
           static M() {
             return (
@@ -6923,12 +6867,8 @@ var CLSTAMP = "7538920";
                 (M.sm_m = {
                   proto: M,
                   fields: {
-                    filename: {
-                      n: 1,
-                      br: i.FE.readString,
-                      bw: i.Xc.writeString,
-                    },
-                    type: { n: 2, br: i.FE.readString, bw: i.Xc.writeString },
+                    highlights: { n: 1, c: S, r: !0, q: !0 },
+                    other_trailers: { n: 2, c: S, r: !0, q: !0 },
                   },
                 }),
               M.sm_m
@@ -6968,6 +6908,66 @@ var CLSTAMP = "7538920";
             );
           }
           getClassName() {
+            return "StoreItem_Trailers";
+          }
+        }
+        class v extends s {
+          constructor(e = null) {
+            super(),
+              v.prototype.filename || i.aR(v.M()),
+              s.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              v.sm_m ||
+                (v.sm_m = {
+                  proto: v,
+                  fields: {
+                    filename: {
+                      n: 1,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    type: { n: 2, br: i.FE.readString, bw: i.Xc.writeString },
+                  },
+                }),
+              v.sm_m
+            );
+          }
+          static MBF() {
+            return v.sm_mbf || (v.sm_mbf = i.Bh(v.M())), v.sm_mbf;
+          }
+          toObject(e = !1) {
+            return v.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(v.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(v.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new v();
+            return v.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(v.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(v.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              v.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "StoreItem_Trailers_VideoSource";
           }
         }
@@ -6993,9 +6993,9 @@ var CLSTAMP = "7538920";
                       br: i.FE.readString,
                       bw: i.Xc.writeString,
                     },
-                    trailer_480p: { n: 3, c: M, r: !0, q: !0 },
-                    trailer_max: { n: 4, c: M, r: !0, q: !0 },
-                    microtrailer: { n: 5, c: M, r: !0, q: !0 },
+                    trailer_480p: { n: 3, c: v, r: !0, q: !0 },
+                    trailer_max: { n: 4, c: v, r: !0, q: !0 },
+                    microtrailer: { n: 5, c: v, r: !0, q: !0 },
                     screenshot_medium: {
                       n: 10,
                       br: i.FE.readString,
@@ -7748,20 +7748,20 @@ var CLSTAMP = "7538920";
           daM: () => ye,
           doA: () => Xe,
           dzL: () => k,
-          ffh: () => M,
+          ffh: () => v,
           gR: () => N,
           gf_: () => Ue,
           j7C: () => Ze,
           k4K: () => w,
           lsH: () => Y,
-          m4d: () => ve,
+          m4d: () => Me,
           mBz: () => qe,
           mKE: () => R,
-          mKt: () => Me,
+          mKt: () => ve,
           miF: () => Ve,
           opd: () => Ge,
           pVO: () => y,
-          pkz: () => v,
+          pkz: () => M,
           r6F: () => X,
           rFk: () => j,
           ret: () => h,
@@ -8140,7 +8140,7 @@ var CLSTAMP = "7538920";
               })
           );
         }
-        function v() {
+        function M() {
           return i.createElement(
             "svg",
             {
@@ -8163,7 +8163,7 @@ var CLSTAMP = "7538920";
             })
           );
         }
-        function M(e) {
+        function v(e) {
           const { muted: t, className: r } = e;
           return i.createElement(
             "svg",
@@ -10191,7 +10191,7 @@ var CLSTAMP = "7538920";
             })
           );
         }
-        function ve() {
+        function Me() {
           return i.createElement(
             "svg",
             {
@@ -10226,7 +10226,7 @@ var CLSTAMP = "7538920";
             })
           );
         }
-        function Me() {
+        function ve() {
           return i.createElement(
             "svg",
             {
@@ -11403,7 +11403,7 @@ var CLSTAMP = "7538920";
         "use strict";
         r.d(t, {
           $1: () => l.$1,
-          CE: () => v,
+          CE: () => M,
           Jr: () => h,
           LJ: () => u,
           LZ: () => B,
@@ -11412,7 +11412,7 @@ var CLSTAMP = "7538920";
           Qw: () => m,
           XG: () => l.XG,
           Xx: () => d,
-          Yt: () => M,
+          Yt: () => v,
           ek: () => l.ek,
           is: () => E,
           jr: () => l.jr,
@@ -11532,14 +11532,14 @@ var CLSTAMP = "7538920";
           }
         }
         function m(e) {
-          return null != M.LocalizeString(e, !0);
+          return null != v.LocalizeString(e, !0);
         }
         function d(e, ...t) {
-          let r = M.LocalizeString(e);
+          let r = v.LocalizeString(e);
           return void 0 === r ? e : f(r, ...t);
         }
         function _(e, ...t) {
-          let r = M.LocalizeString(e);
+          let r = v.LocalizeString(e);
           if (void 0 === r) return e;
           let i,
             s = [],
@@ -11558,7 +11558,7 @@ var CLSTAMP = "7538920";
             : _(e + "_Plural", t, ...r);
         }
         function g(e, ...t) {
-          let r = M.LocalizeString(e);
+          let r = v.LocalizeString(e);
           return void 0 === r ? e : b(r, ...t);
         }
         function p(e, t, ...r) {
@@ -11682,23 +11682,24 @@ var CLSTAMP = "7538920";
             "es-419": 27,
             "vi-VN": 28,
           };
-        function v() {
+        function M() {
           return y[a.De.LANGUAGE] || null;
         }
-        const M = new u();
-        window.LocalizationManager = M;
+        const v = new u();
+        window.LocalizationManager = v;
       },
       32588: (e, t, r) => {
         "use strict";
         r.d(t, {
           $1: () => c,
           LO: () => C,
-          Mh: () => v,
+          Mh: () => M,
           Np: () => S,
           Sc: () => m,
           U$: () => n,
           XG: () => E,
           ek: () => p,
+          jA: () => k,
           jr: () => g,
           m9: () => h,
           vX: () => l,
@@ -11882,7 +11883,7 @@ var CLSTAMP = "7538920";
             if (!o.bGranularFutureTime)
               return (
                 a.zO(r.getTime() - n.getTime()),
-                r.getFullYear() == n.getFullYear() ? M(r) : C(r)
+                r.getFullYear() == n.getFullYear() ? v(r) : C(r)
               );
             a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
             let e = new Date();
@@ -11895,7 +11896,7 @@ var CLSTAMP = "7538920";
                   r < e
                     ? (0, i.Xx)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
-                      r < e ? v(r) : E(r, !0, o.bAbbreviateDayOfWeek)))
+                      r < e ? M(r) : E(r, !0, o.bAbbreviateDayOfWeek)))
             );
           }
           a.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
@@ -11938,7 +11939,7 @@ var CLSTAMP = "7538920";
               ? (0, i.Xx)("#TimeSince_1Week")
               : (0, i.Xx)("#TimeSince_XWeeks", e);
           }
-          return r.getFullYear() == n.getFullYear() ? M(r) : C(r);
+          return r.getFullYear() == n.getFullYear() ? v(r) : C(r);
         }
         function p(e) {
           const t = new Date(1e3 * e),
@@ -11951,7 +11952,7 @@ var CLSTAMP = "7538920";
             t >= n
               ? (0, i.Xx)("#Time_Recent")
               : t.getFullYear() == r.getFullYear()
-              ? M(t)
+              ? v(t)
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
               ? C(t)
               : S(t)
@@ -11977,7 +11978,7 @@ var CLSTAMP = "7538920";
             a)
           );
         }
-        function v(e) {
+        function M(e) {
           let t = b.get(e.getDay());
           return (
             t ||
@@ -11988,7 +11989,7 @@ var CLSTAMP = "7538920";
             t)
           );
         }
-        function M(e) {
+        function v(e) {
           let t = w.get(e.getMonth());
           return (
             t ||
@@ -12021,6 +12022,39 @@ var CLSTAMP = "7538920";
             })),
             B.set(t, r),
             r)
+          );
+        }
+        function k(e) {
+          const t = Math.floor(e / s._H.PerYear),
+            r = Math.floor(e / s._H.PerMonth),
+            n = Math.floor((e % s._H.PerMonth) / s._H.PerDay),
+            a = Math.floor((e % s._H.PerDay) / s._H.PerHour),
+            o = Math.floor((e % s._H.PerHour) / s._H.PerMinute);
+          return (
+            (e %= s._H.PerMinute),
+            t > 0
+              ? (0, i.Xx)("#TimeRemaining_MoreThanOneYear")
+              : r > 0
+              ? (0, i.Xx)("#TimeRemaining_MonthsDays", r, n)
+              : n > 0
+              ? (0, i.Xx)(
+                  "#TimeRemaining_DaysHoursMinutes",
+                  n,
+                  a.toString().padStart(2, "0"),
+                  o.toString().padStart(2, "0")
+                )
+              : a > 0
+              ? (0, i.Xx)(
+                  "#TimeRemaining_HoursMinutesSeconds",
+                  a.toString().padStart(2, "0"),
+                  o.toString().padStart(2, "0"),
+                  e.toString().padStart(2, "0")
+                )
+              : (0, i.Xx)(
+                  "#TimeRemaining_MinutesSeconds",
+                  o.toString().padStart(2, "0"),
+                  e.toString().padStart(2, "0")
+                )
           );
         }
       },
@@ -12594,9 +12628,9 @@ var CLSTAMP = "7538920";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 27 2022 : 16:38:18",
-                    BUILD_TIME_UTC: "Sep 27 2022 : 23:38:18",
-                    BUILD_RTIME_UTC: 1664321898,
+                    BUILD_TIME_LOCAL: "Sep 28 2022 : 12:17:51",
+                    BUILD_TIME_UTC: "Sep 28 2022 : 19:17:51",
+                    BUILD_RTIME_UTC: 1664392671,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)

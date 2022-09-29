@@ -92511,6 +92511,8 @@ object-assign
             /* binding */ LocalizeRtime32ToShortDate,
           /* harmony export */ LocalizeRtime32ToShorterDate: () =>
             /* binding */ LocalizeRtime32ToShorterDate,
+          /* harmony export */ LocalizeTimeRemaining: () =>
+            /* binding */ LocalizeTimeRemaining,
           /* harmony export */ LocalizeTimeSince: () =>
             /* binding */ LocalizeTimeSince,
           /* harmony export */
@@ -93200,6 +93202,71 @@ object-assign
           );
           g_mapCachedLocalizedMonthAndYear.set(nMapKey, strMonthAndYear);
           return strMonthAndYear;
+        }
+        /** Return a string representing time remaining for the given number of seconds. In English:
+         * Greater than 1 year: "> 1 year"
+         * Greater than 1 month: "1m 2d"
+         * Greater than 1 day: "1d 12:23"
+         * Greater than 1 hour: "01:23:45"
+         * Less than 1 hour: "12:34"
+         */
+        function LocalizeTimeRemaining(nSeconds) {
+          const nYears = Math.floor(
+            nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerYear
+          );
+          const nMonths = Math.floor(
+            nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMonth
+          );
+          const nDays = Math.floor(
+            (nSeconds % _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMonth) /
+              _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerDay
+          );
+          const nHours = Math.floor(
+            (nSeconds % _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerDay) /
+              _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerHour
+          );
+          const nMinutes = Math.floor(
+            (nSeconds % _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerHour) /
+              _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMinute
+          );
+          nSeconds =
+            nSeconds % _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMinute;
+          if (nYears > 0) {
+            return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+              "#TimeRemaining_MoreThanOneYear"
+            );
+          }
+          if (nMonths > 0) {
+            return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+              "#TimeRemaining_MonthsDays",
+              nMonths,
+              nDays
+            );
+          }
+          if (nDays > 0) {
+            // Display days and hours and minutes
+            return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+              "#TimeRemaining_DaysHoursMinutes",
+              nDays,
+              nHours.toString().padStart(2, "0"),
+              nMinutes.toString().padStart(2, "0")
+            );
+          }
+          if (nHours > 0) {
+            // Display hours, minutes, and seconds
+            return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+              "#TimeRemaining_HoursMinutesSeconds",
+              nHours.toString().padStart(2, "0"),
+              nMinutes.toString().padStart(2, "0"),
+              nSeconds.toString().padStart(2, "0")
+            );
+          }
+          // Display minutes and seconds
+          return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+            "#TimeRemaining_MinutesSeconds",
+            nMinutes.toString().padStart(2, "0"),
+            nSeconds.toString().padStart(2, "0")
+          );
         }
         /*
 function TestLocalizeCalendarTime()
@@ -96160,4 +96227,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=0b4110e9931f6c6f2c42
+//# sourceMappingURL=friends.js.map?contenthash=adaa4d750af7d1b3a3f6

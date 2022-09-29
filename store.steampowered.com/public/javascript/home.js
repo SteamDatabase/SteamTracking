@@ -2010,16 +2010,6 @@ GHomepage = {
 		$ImageCapsule.append( $Image );
 		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
 
-		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
-		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
-		{
-			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
-			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
-			$divMasterSub.append( $imgMasterSub );
-
-			$ImageCapsule.append( $divMasterSub );
-		}
-
 		$ItemLink.append( $ImageCapsule );
 
 		// micro trailer

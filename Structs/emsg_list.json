@@ -2772,6 +2772,18 @@
         "name": "k_EMsgClientHello"
     },
     {
+        "emsg": 9806,
+        "flags": 6,
+        "server_type": 41,
+        "name": "k_EMsgClientEnableOrDisableDownloads"
+    },
+    {
+        "emsg": 9807,
+        "flags": 6,
+        "server_type": 41,
+        "name": "k_EMsgClientEnableOrDisableDownloadsResponse"
+    },
+    {
         "emsg": 9900,
         "flags": 2,
         "server_type": -1,

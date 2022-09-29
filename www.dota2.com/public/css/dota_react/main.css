@@ -579,6 +579,8 @@
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tooltip_ToolTipCustom_3g-WB {
   box-sizing: border-box;
@@ -1387,6 +1389,10 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ModalPosition_1A0Q4.gpfocus {
   outline: none;
+}
+.gamepaddialog_ModalPosition_1A0Q4.gamepaddialog_NoHeaderPadding_HEGHg {
+  top: 0;
+  padding: 0;
 }
 .gamepaddialog_ModalPosition_1A0Q4 > .gamepaddialog_GamepadDialogContent_Gn6rC {
   margin: auto;
@@ -22735,17 +22741,17 @@ a {
   z-index: 99999;
 }
 .dpcmenubar_DPCMenuBar_1SBIP {
+  position: sticky;
+  top: 140px;
+  z-index: 999;
   width: 100%;
   height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: -webkit-linear-gradient(left, #131315, #131315, #131315, #131315);
-  filter: drop-shadow(0px 16px 10px #00000099);
-  position: sticky;
-  top: 140px;
-  z-index: 999;
+  background: #131315;
+  filter: drop-shadow(0px 4px 6px #00000080);
 }
 .dpcmenubar_DPCMenuBar_1SBIP.dpcmenubar_IsEventInactive_2Ixc4 {
   top: 80px;
@@ -22791,11 +22797,11 @@ a {
   justify-content: center;
   align-items: center;
   color: #6b7785;
-  border-bottom: 2px solid transparent;
-  border-top: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
   transition-property: color;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: 0.15s;
 }
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
@@ -22803,23 +22809,23 @@ a {
   .dpcmenubar_DPCLink_2GNzc
   .dpcmenubar_Label_3mnIs {
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-weight: 800;
-  font-size: 13px;
+  font-size: 14px;
   margin: 0px 20px;
 }
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
   .dpcmenubar_DPCOptions_1jMa2
   .dpcmenubar_DPCLink_2GNzc.dpcmenubar_Active_1PCYx {
-  color: #fff;
-  border-bottom: 2px solid #ff6046;
+  color: #d9dfe6;
+  border-bottom: 3px solid #ff6046;
 }
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
   .dpcmenubar_DPCOptions_1jMa2
   .dpcmenubar_DPCLink_2GNzc:hover {
-  color: #fff;
+  color: #d9dfe6;
 }
 .dpcmenubar_DPCMenuBar_1SBIP
   .dpcmenubar_DPCHeaderContents_XzLjB
@@ -22859,6 +22865,7 @@ a {
 }
 .dpcmenubar_DPCSpoilerBlock_1gYpv .dpcmenubar_SpoilerText_2HWki {
   font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: flex;
@@ -22869,7 +22876,10 @@ a {
   .dpcmenubar_SpoilerText_2HWki
   .dpcmenubar_SpoilerLabel_1o5DK {
   color: #6b7785;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .dpcmenubar_DPCSpoilerBlock_1gYpv
   .dpcmenubar_SpoilerText_2HWki
@@ -28664,6 +28674,524 @@ a {
     display: none;
   }
 }
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs .dpcroot_LCQTextContainer_3xD8y {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventStartTitle_3DBYG,
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventEndTitle_330NF {
+  margin-top: 25px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_LCQEventPhaseBox_al9g4
+    .dpcroot_LCQEventStartTitle_3DBYG,
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_LCQEventPhaseBox_al9g4
+    .dpcroot_LCQEventEndTitle_330NF {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventStartDate_165Xe,
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventEndDate_3J9tx {
+  margin-top: 3px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 0px 4px #e1261c);
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_LCQEventPhaseBox_al9g4
+    .dpcroot_LCQEventStartDate_165Xe,
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_LCQEventPhaseBox_al9g4
+    .dpcroot_LCQEventEndDate_3J9tx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventStartDate_165Xe
+  time,
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQEventPhaseBox_al9g4
+  .dpcroot_LCQEventEndDate_3J9tx
+  time {
+  font-family: "Reaver", serif;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQCenterText_1MbOX {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQCenterText_1MbOX
+  .dpcroot_LCQLogo_1YM7J {
+  width: 600px;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQCenterText_1MbOX
+  .dpcroot_LCQEventTitle_3lHp2 {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  filter: drop-shadow(0px 0px 4px #e1261c);
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_LCQCenterText_1MbOX
+  .dpcroot_LCQEventSubTitle_1cEWp {
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_PrizePoolBox_2Ik9u {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_PrizePoolBox_2Ik9u
+  .dpcroot_EventResultsTitle_1ReEx {
+  display: none;
+  margin-left: 150px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_PrizePoolBox_2Ik9u
+    .dpcroot_EventResultsTitle_1ReEx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_PrizePoolBox_2Ik9u
+  .dpcroot_EventResultsButton_3yzbY {
+  display: none;
+  margin-top: 20px;
+  margin-left: 150px;
+  margin-right: 180px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #ffa192;
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderTI2022LastChance_uCZSs
+  .dpcroot_LCQTextContainer_3xD8y
+  .dpcroot_LCQEventTextContainer_39F6r
+  .dpcroot_PrizePoolBox_2Ik9u
+  .dpcroot_EventResultsButton_3yzbY:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022LastChance_uCZSs
+    .dpcroot_LCQTextContainer_3xD8y
+    .dpcroot_LCQEventTextContainer_39F6r
+    .dpcroot_PrizePoolBox_2Ik9u
+    .dpcroot_EventResultsButton_3yzbY {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK .dpcroot_TI11BannerContainer_1GXzb {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11GroupTitle_Xekvp,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11PlayoffTitle_3-fuN,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11FinalsTitle_3J_IW {
+  margin-top: 25px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11GroupTitle_Xekvp,
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11PlayoffTitle_3-fuN,
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11FinalsTitle_3J_IW {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11GroupStartDate_1ibpV,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11PlayoffStartDate_2vFOx,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11FinalsStartDate_1eHv7 {
+  margin-top: 3px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Reaver", serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 0px 4px #e1261c);
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11GroupStartDate_1ibpV,
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11PlayoffStartDate_2vFOx,
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11EventPhaseBox_1ttc4
+    .dpcroot_TI11FinalsStartDate_1eHv7 {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11GroupStartDate_1ibpV
+  time,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11PlayoffStartDate_2vFOx
+  time,
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11EventPhaseBox_1ttc4
+  .dpcroot_TI11FinalsStartDate_1eHv7
+  time {
+  font-family: "Reaver", serif;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11CenterBox_1OpIk {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11CenterBox_1OpIk
+  .dpcroot_TILogo_3qlYs {
+  width: 460px;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11CenterBox_1OpIk
+  .dpcroot_TI11Season_3wHSd {
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_PrizePoolTitle_JYJRh {
+  margin-right: 120px;
+  margin-left: 40px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11PrizePoolBox_geMi9
+    .dpcroot_PrizePoolTitle_JYJRh {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_PrizePoolValue_2SztN {
+  margin-right: 120px;
+  margin-left: 40px;
+  margin-top: 3px;
+  font-family: "Reaver", serif;
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 0px 4px #e1261c);
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11PrizePoolBox_geMi9
+    .dpcroot_PrizePoolValue_2SztN {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_PrizePoolDesc_3P5rQ {
+  margin-right: 120px;
+  margin-left: 40px;
+  margin-top: 15px;
+  color: #b9c0c2;
+  font-family: "Radiance", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11PrizePoolBox_geMi9
+    .dpcroot_PrizePoolDesc_3P5rQ {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;
@@ -29894,19 +30422,22 @@ a {
 }
 .aboutbanner_DPCAboutBanner_2QgBE .aboutbanner_Background_3O-Jk {
   width: 100%;
-  max-width: 1920px;
   height: 330px;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-size: 1920px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
 }
 .aboutbanner_DPCAboutBanner_2QgBE
   .aboutbanner_Background_3O-Jk
   .aboutbanner_Content_25lN3 {
   width: 100%;
-  padding: 0px 400px;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -29917,7 +30448,7 @@ a {
   .aboutbanner_Title_2Ed2T {
   color: #fff;
   font-family: "Reaver", serif;
-  font-weight: 650;
+  font-weight: 600;
   font-size: 30px;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -29926,38 +30457,40 @@ a {
   .aboutbanner_Background_3O-Jk
   .aboutbanner_Content_25lN3
   .aboutbanner_Body_11EGA {
-  color: #a3a3a3;
-  font-family: "Reaver", serif;
-  font-weight: 550;
-  font-size: 20px;
-  letter-spacing: 1px;
   width: 430px;
   margin-bottom: 35px;
+  color: #a3a3a3;
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 25px;
 }
 .aboutbanner_DPCAboutBanner_2QgBE
   .aboutbanner_Background_3O-Jk
   .aboutbanner_Content_25lN3
   .aboutbanner_Button_3WY5V {
-  border: 1px solid #a3a3a3;
-  border-radius: 3px;
-  padding: 10px 35px;
-  background-color: transparent;
-  color: #a3a3a3;
-  font-size: 15px;
-  font-weight: 700;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+  padding: 12px 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Radiance", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition-property: color, border-color, background-color;
+  background-color: transparent;
+  transition-property: all;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: 0.15s;
 }
 .aboutbanner_DPCAboutBanner_2QgBE
   .aboutbanner_Background_3O-Jk
   .aboutbanner_Content_25lN3
   .aboutbanner_Button_3WY5V:hover {
-  border-color: #fff;
-  color: #fff;
   background-color: #ffffff1a;
+  transform: translateY(-1px);
+  filter: drop-shadow(0px 6px 4px #00000080);
 }
 .standingsbracket_DPCStandingsBracket_1Xt0p {
   position: relative;
@@ -33564,9 +34097,1375 @@ a {
   letter-spacing: 1px;
   color: #a3a3a3;
 }
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.international2022_Tooltip_395U8 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2022_CarouselFade_3Rn5w {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.international2022_StandardButton_2i0to {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.international2022_StandardButton_2i0to:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.international2022_StandardButton_2i0to .international2022_ButtonText_2R5SV {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.international2022_StandardButton_2i0to .international2022_SteamLogo_2ONzd {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam_icon.svg");
+}
+.international2022_ToolTip_3kfUr {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.international2022_TextStyleDisplay_ku5wl {
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2022_TextStyleSmallHeading_13qSv {
+  font-size: 20;
+  font-size: clamp(20px, -0.4255319149vw + 28.170212766px, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2022_TextStyleHeading_1Krt8 {
+  font-size: 35;
+  font-size: clamp(32px, 0.3191489362vw + 28.8723404255px, 35px);
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2022_TextStyleSectionHeading_2l5eC {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  line-height: 100%;
+}
+.international2022_TextStyleOverline_1J2Dg {
+  font-size: 17;
+  font-size: clamp(17px, -0.3191489362vw + 23.1276595745px, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+}
+.international2022_TextStyleButton_3f021 {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 100%;
+}
+.international2022_TextStyleCaption_3PeOQ {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 100%;
+}
+.international2022_TextStyleBody_2kW36 {
+  font-size: 16;
+  font-size: clamp(16px, -0.4255319149vw + 24.170212766px, 20px);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2022_TextStyleDescription_X1eMe {
+  font-size: 15;
+  font-size: clamp(15px, -0.3191489362vw + 21.1276595745px, 18px);
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2022_TextStyleThumbnailBody_3qHu9 {
+  font-size: 15;
+  font-size: clamp(15px, -0.3191489362vw + 21.1276595745px, 18px);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 164%;
+}
+.international2022_TextStyleFootnote_3gC5e {
+  font-size: 13;
+  font-size: clamp(13px, -0.3191489362vw + 19.1276595745px, 16px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 164%;
+}
+.international2022_MajorHeaderPreTitle_3iZSj {
+  font-size: 18;
+  font-size: clamp(18px, -0.4255319149vw + 26.170212766px, 22px);
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+.international2022_MajorHeaderTitle_23nz3 {
+  font-family: "Reaver", serif;
+  filter: drop-shadow(0px 3px 3px #000000b6);
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.international2022_MajorHeaderSubtitle_VoZFI {
+  font-size: 16;
+  font-size: clamp(16px, -0.4255319149vw + 24.170212766px, 20px);
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2022_TextColorYellow_276lX {
+  color: #ebcf87;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorOrange_355CV {
+  color: #ea6953;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorRed_3yiOs {
+  color: #e1261c;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorDarkRed_20RI7 {
+  color: #952e46;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorBlack_3edoV {
+  color: #222;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorDarkerGold_3_pGT {
+  color: #4f3612;
+}
+.international2022_TextColorDarkGold_34rhv {
+  color: #936725;
+}
+.international2022_TextColorGold_3HtpV {
+  color: #c79123;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLightGold_1SeAp {
+  color: #e4c269;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLighterGold_opZiA {
+  color: #ecd393;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLightestGold_214Bz {
+  color: #f8e8b9;
+}
+.international2022_TextColorGrey_sH58j {
+  color: #48495c;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLightGrey_64C-7 {
+  color: #63656a;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLighterGrey_38Rf9 {
+  color: #9fa2a3;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorLightestGrey_e63ST {
+  color: #ebeaeb;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2022_TextColorWhite_2eY4a {
+  color: #fff;
+  text-shadow: 0px 2px 4px #000000cc;
+}
+.international2022_TextColorGoldGlow_iZ26R {
+  color: #fff;
+  text-shadow: 0px 0px 16px #c79123;
+}
+.international2022_TextColorGreenGlow_2yQiG {
+  color: #8fed31;
+  text-shadow: 0px 0px 8px #69993a;
+}
+.international2022_TextColorYellowShadowGradient_1pbdp {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 2px 3px #0000009c);
+}
+.international2022_TextColorYellowGradient_2tmeV {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #e1261c);
+}
+.international2022_TextColorFVArcanaGradient_3-QgQ {
+  background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #721fd1);
+}
+.international2022_TextColorGreenGradient_IoO50 {
+  background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #106618);
+}
+.international2022_TextColorBlueGradient_3Z6Ls {
+  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+}
+.international2022_TextColorPhantomGradient_2hc8W {
+  background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 7px #debfff);
+}
+.international2022_TextColorBlueShadowGradient_2HkIu {
+  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 2px 3px #0000009c);
+}
+.international2022_TextColorGoldGradient_1IAzS {
+  background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 10px black);
+}
+.international2022_InternationalCountdownContainer_3ACB8 {
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 60%;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/dpc/lcq_countdown_bg.jpg");
+  border-top: 2px solid #952e46;
+  border-bottom: 2px solid #952e46;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_InternationalCountdown_1RzSd {
+  margin-top: 30px;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_CountdownPreHeader_2oWFL {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  margin-top: 1em;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_CountdownHeader_1TPYQ {
+  margin-top: 0.5em;
+  font-family: "Reaver", serif;
+  font-size: 35px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_CountdownTimer_1ZhL5 {
+  width: 70%;
+  margin: 16px auto 0 auto;
+  border-top: 1px solid #ff8c78;
+  border-bottom: 1px solid #ff8c78;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_CountdownDesc_1JJk_ {
+  width: 70%;
+  min-width: 320px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #9fa2a3;
+  font-size: 20;
+  font-size: clamp(20px, -0.4255319149vw + 28.170212766px, 24px);
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_CountdownLogo_3svGi {
+  width: 65%;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_ViewScheduleButton_JJP7X {
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  display: inline-block;
+  text-shadow: none;
+  color: #fffbcd;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #ffa192;
+  letter-spacing: 1px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_ViewScheduleButton_JJP7X:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_KeepUpHeader_3Yc2o {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20;
+  font-size: clamp(20px, -0.6382978723vw + 32.2553191489px, 26px);
+  margin-top: 2em;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_SocialIcons_1zNjk {
+  margin-top: 1em;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_SocialIcons_1zNjk
+  .international2022_IconImg_3r_em {
+  width: 60px;
+  height: 60px;
+  margin: 0em 0.5em;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.international2022_InternationalCountdownContainer_3ACB8
+  .international2022_SocialIcons_1zNjk
+  .international2022_IconImg_3r_em:hover {
+  filter: brightness(1.3);
+  transform: translateY(-2px);
+}
+.international2022_InternationalPrizeSplits_2Wz0V {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/prize_bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_DividerTop_1tjFO {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/divider.png");
+  background-size: cover;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  box-shadow: 0px 0px 20px #000;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_PrizePoolLabel_4kPuH {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 150px;
+  font-family: "Reaver", serif;
+  color: #bb9a4a;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_PrizePoolValue_2nlg9 {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Title_2sHft {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Reaver", serif;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 26px;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Underline_4WHxx {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin-bottom: 40px;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Grid_1fotT {
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Grid_1fotT
+  .international2022_GridRow_3wFBe {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Grid_1fotT
+  .international2022_GridRow_3wFBe
+  .international2022_GridEntry_JdGub {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000090;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Grid_1fotT
+  .international2022_GridRow_3wFBe
+  .international2022_GridEntry_JdGub
+  .international2022_PrizeValue_2rCxx {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Reaver", serif;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.international2022_InternationalPrizeSplits_2Wz0V
+  .international2022_PrizeGridContain_1TiJs
+  .international2022_Grid_1fotT
+  .international2022_GridRow_3wFBe
+  .international2022_GridEntry_JdGub
+  .international2022_Place_1-ITW {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #a3a3a3;
+}
+.international2022_InternationalBPBanner_3FFCp {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
+  background-size: cover;
+  background-position: center top;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  display: block;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Sparkles_1lcVX {
+  position: absolute;
+  width: 100%;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-name: international2022_PortraitIn_2D8IA;
+}
+@keyframes international2022_PortraitIn_2D8IA {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc {
+  width: 100%;
+  height: auto;
+  background-color: #00000060;
+  overflow: visible;
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-top: 2px solid #952e46;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_ImageContainer_1LmkZ {
+  width: 50%;
+  overflow: visible;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  margin-left: 20%;
+}
+@media (max-width: 900px) {
+  .international2022_InternationalBPBanner_3FFCp
+    .international2022_Background_2zobc
+    .international2022_TI11BPContent_2zYPR
+    .international2022_ImageContainer_1LmkZ {
+    display: none;
+  }
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_ImageContainer_1LmkZ
+  .international2022_StatueImage_3Bs1A {
+  width: 200%;
+  margin-top: 30px;
+  z-index: 10;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  width: 50%;
+  padding: 0px 70px 0px 70px;
+  margin-left: -20%;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_TI11BPOverline_3Vxr4 {
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_TI11BPHeader_3ka4J {
+  margin-top: 10px;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_Underline_4WHxx {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin: 20px 0px;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_TI11BPDetails_1E4dh {
+  margin-top: 20px;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_TI11BPDetails2_2YkwC {
+  margin-top: 20px;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_LearnMoreButton_2kSGo {
+  border: 1px solid #bb9a4a;
+  border-radius: 3px;
+  padding: 10px 35px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  user-select: none;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_TI11BPContent_2zYPR
+  .international2022_TI11BPText_FVSAs
+  .international2022_LearnMoreButton_2kSGo:hover {
+  border-color: #e6c373;
+  color: #fff;
+  background-color: #ffffff1a;
+}
+.international2022_InternationalBPBanner_3FFCp
+  .international2022_Background_2zobc
+  .international2022_Rewardline_37_bU {
+  width: 100%;
+  margin-top: 0px;
+}
+.international2022_InternationalTeamList_2a1qB {
+  width: 100%;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
+  padding-bottom: 100px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #952e46;
+}
+.international2022_InternationalTeamList_2a1qB .international2022_Title_2sHft {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.international2022_InternationalTeamList_2a1qB
+  .international2022_Underline_4WHxx {
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin-bottom: 40px;
+}
+.international2022_InternationalTeamList_2a1qB
+  .international2022_TeamGrid_ZTq5g {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.international2022_InternationalTeamListTeam_3Ps_n {
+  width: 180px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0px 0px 30px #000000aa;
+  border: 2px solid #000;
+  background-color: #00000090;
+}
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_GoldTeamLogo_1T0M_ {
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_TeamName_1wOTn {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+}
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_TeamRegion_3A3y_ {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a3a3a3;
+}
+.international2022_Fantasy_2lbFd {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1px;
+  border-top: 2px solid #952e46;
+  position: relative;
+}
+.international2022_FantasyImageContainer_3yec9 {
+  width: 45%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .international2022_FantasyImageContainer_3yec9 {
+    width: 100%;
+    height: 70%;
+  }
+}
+.international2022_FantasyImageContainer_3yec9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.international2022_FantasyTextContainer_2xZdP {
+  width: 55%;
+  height: 100%;
+  padding: 0 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .international2022_FantasyTextContainer_2xZdP {
+    width: 100%;
+    height: 30%;
+    padding: 3vw 10vw;
+  }
+}
+.international2022_FantasyTextContainerTitle_3n3lV {
+  margin-top: 10px;
+}
+.international2022_FantasyTextContainerDesc_vceNJ {
+  margin-top: 20px;
+}
+.international2022_SupportersClub_372J4 {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1px;
+  border-top: 2px solid #952e46;
+  position: relative;
+}
+.international2022_SupportersClubImageContainer_1jEwH {
+  width: 45%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .international2022_SupportersClubImageContainer_1jEwH {
+    width: 100%;
+    height: 70%;
+  }
+}
+.international2022_SupportersClubImageContainer_1jEwH img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.international2022_SupportersClubTextContainer_3Yagn {
+  width: 55%;
+  height: 100%;
+  padding: 0 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .international2022_SupportersClubTextContainer_3Yagn {
+    width: 100%;
+    height: 30%;
+    padding: 3vw 10vw;
+  }
+}
+.international2022_SupportersClubTextContainerTitle_1vzmB {
+  margin-top: 10px;
+}
+.international2022_SupportersClubTextContainerDesc_2eOF- {
+  margin-top: 20px;
+}
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1 {
   width: 100%;
-  height: 200px;
+  height: 220px;
   background: #27272d;
   display: flex;
   flex-direction: row;
@@ -33584,6 +35483,8 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -33591,20 +35492,20 @@ a {
   width: 600px;
   display: flex;
   flex-direction: column;
-  color: #fff;
   z-index: 1;
+  color: #fff;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_LeftLabels_1S5hU
   .nextmatchbanner_ComingUp_ssNrI {
   color: #a3a3a3;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   font-family: "Reaver", serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -33612,8 +35513,8 @@ a {
   .nextmatchbanner_TeamNames_2qmHd {
   display: flex;
   flex-direction: row;
-  opacity: 0;
   margin-bottom: 20px;
+  opacity: 0;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -33631,26 +35532,29 @@ a {
   font-weight: bold;
   font-family: "Reaver", serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_LeftLabels_1S5hU
   .nextmatchbanner_TeamNames_2qmHd
   .nextmatchbanner_Versus_2vMQ4 {
-  color: #fff;
+  color: #a3a3a3;
   font-size: 18px;
   font-family: "Reaver", serif;
+  font-weight: 400;
   margin: 0px 8px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_LeftLabels_1S5hU
   .nextmatchbanner_WatchLive_3FFg9 {
+  margin-bottom: 5px;
   color: #a3a3a3;
-  font-size: 12px;
-  font-family: "Reaver", serif;
-  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 0px;
+  font-weight: 400;
   opacity: 0;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
@@ -33663,10 +35567,11 @@ a {
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_LeftLabels_1S5hU
   .nextmatchbanner_Timestamp_25Zsy {
-  font-family: "Reaver", serif;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-family: "Radiance", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #a3a3a3;
   opacity: 0;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
@@ -33678,11 +35583,11 @@ a {
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_TeamWrapper_V_zcX {
-  opacity: 0.3;
-  filter: brightness(0.3);
-  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
   height: 100%;
   position: relative;
+  opacity: 0.5;
+  filter: brightness(0.3);
+  filter: drop-shadow(4px 4px 6px #00000080);
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -33698,14 +35603,14 @@ a {
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_TeamWrapper_V_zcX
   .nextmatchbanner_TeamDiagonal_P0TjX {
-  width: 175px;
-  min-width: 175px;
+  width: 200px;
+  min-width: 220px;
   height: 100%;
   background-position: center;
   background-size: cover;
-  background-color: #111;
+  background-color: #101010;
   clip-path: polygon(50px 0px, 175px 0px, 125px 100%, 0px 100%);
-  margin-right: -50px;
+  margin-right: -95px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
@@ -33721,14 +35626,13 @@ a {
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_ScheduleButtonContainer_N5OW3
   .nextmatchbanner_ScheduleButton_3R4ex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  padding: 15px 30px;
   z-index: 1;
-  border: 2px solid #fff;
-  border-radius: 2px;
+  padding: 15px 30px;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
   cursor: pointer;
   user-select: none;
 }
@@ -33736,18 +35640,20 @@ a {
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_ScheduleButtonContainer_N5OW3
   .nextmatchbanner_ScheduleButton_3R4ex:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
+  transform: translateY(-1px);
+  filter: drop-shadow(0px 6px 6px #000);
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1
   .nextmatchbanner_BannerContents_4w40D
   .nextmatchbanner_ScheduleButtonContainer_N5OW3
   .nextmatchbanner_ScheduleButton_3R4ex
   .nextmatchbanner_Label_3h4sp {
-  height: 20px;
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Radiance", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -36454,6 +38360,11 @@ a {
   align-items: center;
   gap: 8px;
   padding-bottom: 200px;
+}
+.teamlist_DPCTeamList_2FXfn
+  .teamlist_TeamList_2Z-Lh
+  .teamlist_NoFollowedTeams_16SUu {
+  margin-top: 16px;
 }
 .teamlist_DPCTeamList_2FXfn .teamlist_ShowMoreButton_1N1JS {
   padding: 8px 50px;
@@ -52232,7 +54143,6 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
   letter-spacing: 0.05em;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 10px;
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
@@ -52255,6 +54165,10 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
 }
 .partnereventshared_SaleSectionHeader_3QqpI span {
   color: #fff;
+}
+.partnereventshared_SaleSectionSubtitle_1-hMZ {
+  text-transform: lowercase;
+  font-size: 16px;
 }
 .partnereventshared_SaleSectionContainer_1In5l {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -53088,13 +55002,23 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
     opacity: 1;
   }
 }
-.newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfText_2uk5- {
+.newlogindialog_Login_1sORI .newlogindialog_ConfirmationContainer_19SiV {
+  background-color: #32353c;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px 0px 20px;
+  border-radius: 2px;
+  max-width: 500px;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_ConfirmationContainer_19SiV
+  .newlogindialog_AwaitingMobileConfText_2uk5- {
   color: #fff;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: center;
-  max-width: 450px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfIcon_2-LaW {
   width: 55px;
@@ -53111,11 +55035,30 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   padding: 12px 0px;
   cursor: pointer;
 }
+.newlogindialog_Login_1sORI .newlogindialog_EnterBackupCodeContainer_2CFo9,
 .newlogindialog_Login_1sORI .newlogindialog_EnterCodeFromMobileContainer_2hXVu,
 .newlogindialog_Login_1sORI .newlogindialog_EnterCodeFromEmailContainer_1_U2w {
   padding: 0 12px;
   gap: 24px;
 }
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterBackupCodeContainer_2CFo9
+  .newlogindialog_Label_2TD8Z,
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterCodeFromMobileContainer_2hXVu
+  .newlogindialog_Label_2TD8Z,
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterCodeFromEmailContainer_1_U2w
+  .newlogindialog_Label_2TD8Z {
+  font-size: 12px;
+  color: #afafaf;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterBackupCodeContainer_2CFo9
+  .newlogindialog_EnterCodeFromMobile_mrtUl,
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterBackupCodeContainer_2CFo9
+  .newlogindialog_EnterCodeFromEmail_1O8C_,
 .newlogindialog_Login_1sORI
   .newlogindialog_EnterCodeFromMobileContainer_2hXVu
   .newlogindialog_EnterCodeFromMobile_mrtUl,
@@ -53133,6 +55076,14 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   font-size: 16px;
   line-height: 20px;
 }
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterBackupCodeContainer_2CFo9
+  .newlogindialog_EnterCodeFromMobile_mrtUl
+  .newlogindialog_EnterCodeEmailAddress_3BXYi,
+.newlogindialog_Login_1sORI
+  .newlogindialog_EnterBackupCodeContainer_2CFo9
+  .newlogindialog_EnterCodeFromEmail_1O8C_
+  .newlogindialog_EnterCodeEmailAddress_3BXYi,
 .newlogindialog_Login_1sORI
   .newlogindialog_EnterCodeFromMobileContainer_2hXVu
   .newlogindialog_EnterCodeFromMobile_mrtUl
@@ -53207,6 +55158,24 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI
   .newlogindialog_SegmentedCharacterInput_3Ac-q.newlogindialog_Danger_kQ8P- {
   border-color: #c15755;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_SegmentedCharacterInput_3Ac-q.newlogindialog_BackupCode_2P1_B {
+  max-width: 392px;
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_1sORI
+    .newlogindialog_SegmentedCharacterInput_3Ac-q.newlogindialog_BackupCode_2P1_B {
+    padding: 10px 7px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .newlogindialog_Login_1sORI
+    .newlogindialog_SegmentedCharacterInput_3Ac-q.newlogindialog_BackupCode_2P1_B
+    input {
+    width: 26px;
+  }
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_SegmentedCharacterInput_3Ac-q
@@ -53487,6 +55456,14 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.newlogindialog_MutedErrorReference_2vwQi {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #555;
+  font-size: 12px;
+  padding: 8px 10px;
 }
 .qrcode_QRBits_22VuG {
   display: grid;
