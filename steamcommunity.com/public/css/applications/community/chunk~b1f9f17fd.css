@@ -3762,15 +3762,22 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   align-items: center;
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
 }
 .salebadgeprogressdisplay_ImgSpread_47-JS {
   width: 140px;
-  margin-left: -15px;
+  margin-left: 7px;
+  top: 10px;
   position: relative;
-  margin-right: 50px;
+  margin-right: 30px;
+  height: 140px;
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img {
+  width: 120px;
+  height: 120px;
 }
 .salebadgeprogressdisplay_ImgSpread_47-JS img:first-child {
-  position: relative;
+  position: absolute;
   z-index: 2;
   transform: rotate(-25deg);
 }
@@ -3778,7 +3785,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   position: absolute;
   opacity: 0.5;
   filter: saturate(0.4);
-  left: 34px;
+  left: 20px;
   z-index: 1;
 }
 .salebadgeprogressdisplay_Title_1gx7w {
@@ -3830,6 +3837,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 }
 .salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ svg {
   height: 60px;
+  margin-top: 13%;
 }
 .salebadgeprogressdisplay_FinalBadge_t2T3x {
   display: flex;
@@ -3986,7 +3994,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   column-gap: 8px;
 }
 .discoveryqueuewidget_AppCarouselPosition_3bu52 {
-  width: 320px;
+  width: 420px;
   margin-left: auto;
   overflow: hidden;
   position: relative;
