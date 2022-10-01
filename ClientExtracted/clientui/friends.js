@@ -63490,6 +63490,7 @@ object-assign
           /* harmony export */ ELoginProgressType: () =>
             /* binding */ ELoginProgressType,
           /* harmony export */ ELoginState: () => /* binding */ ELoginState,
+          /* harmony export */ ELoginUIStyle: () => /* binding */ ELoginUIStyle,
           /* harmony export */ ENetFakeLocalSystemState: () =>
             /* binding */ ENetFakeLocalSystemState,
           /* harmony export */ EOverlayToStoreFlag: () =>
@@ -65879,6 +65880,16 @@ object-assign
             (EGamingDeviceType["k_EGamingDeviceType_SteamDeck"] = 544)
           ] = "k_EGamingDeviceType_SteamDeck";
         })(EGamingDeviceType || (EGamingDeviceType = {}));
+        var ELoginUIStyle;
+        (function (ELoginUIStyle) {
+          ELoginUIStyle[(ELoginUIStyle["k_ELoginUIStyleOld"] = 0)] =
+            "k_ELoginUIStyleOld";
+          ELoginUIStyle[
+            (ELoginUIStyle["k_ELoginUIStyleNewWithoutQRCode"] = 1)
+          ] = "k_ELoginUIStyleNewWithoutQRCode";
+          ELoginUIStyle[(ELoginUIStyle["k_ELoginUIStyleNew"] = 2)] =
+            "k_ELoginUIStyleNew";
+        })(ELoginUIStyle || (ELoginUIStyle = {}));
 
         /***/
       },
@@ -67570,6 +67581,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ELoginProgressType,
           /* harmony export */ ELoginState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ELoginState,
+          /* harmony export */ ELoginUIStyle: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ELoginUIStyle,
           /* harmony export */ ELogoPinnedPosition: () =>
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.ELogoPinnedPosition,
           /* harmony export */ EMusicPlayingRepeatStatus: () =>
@@ -96227,4 +96240,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=adaa4d750af7d1b3a3f6
+//# sourceMappingURL=friends.js.map?contenthash=e2ab5c7f77339d4102ba

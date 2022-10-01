@@ -11,7 +11,7 @@
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => v });
+      n.r(t), n.d(t, { default: () => g });
       var l = n(67294),
         o = n(8199),
         a = n.n(o),
@@ -35,16 +35,16 @@
           m.Yt.InitFromObjects(l, o, null, null);
         });
       }
-      n(21645), n(10708);
-      var h = n(63709);
-      const S = (e) => {
+      var S = n(21645),
+        h = (n(10708), n(63709));
+      const L = (e) => {
         var t;
         console.log("Login success"),
           SteamClient.Auth.SetLoginToken(e.strRefreshToken, e.strAccountName);
         const n = null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
         n && SteamClient.Auth.SetSteamGuardData(e.strAccountName, n);
       };
-      function v(e) {
+      function g(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
             const [e, t] = l.useState(!1);
@@ -75,6 +75,7 @@
       function C(e) {
         let t = new c.J(u.De.WEBAPI_BASE_URL).GetServiceTransport(),
           [n, o] = (0, l.useState)(null);
+        const [s, i] = (0, l.useState)(!1);
         !(function (e) {
           (0, l.useEffect)(() => {
             (0, h.Uh)().Init("Client Login", CLSTAMP, e);
@@ -84,27 +85,31 @@
             u.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
                 1 != e.reason ? o(e) : o(null);
+              }),
+              SteamClient.Auth.GetLoginUIStyle().then((e) => {
+                i(e == S.cL.k_ELoginUIStyleNew);
               });
           }, []);
-        const s = `${null == n ? void 0 : n.account_name}${
+        const m = `${null == n ? void 0 : n.account_name}${
           null == n ? void 0 : n.reason
         }`;
         return l.createElement(
           "div",
           { className: a().Login },
-          l.createElement(L, null),
+          l.createElement(I, null),
           l.createElement(r.i9, {
-            key: s,
+            key: m,
             autoFocus: !0,
             transport: t,
-            onSuccess: S,
+            onSuccess: L,
             platform: 1,
             embedded: !0,
             refreshInfo: n,
+            disableQR: !s,
           })
         );
       }
-      function L(e) {
+      function I(e) {
         return l.createElement(
           "div",
           { className: a().TitleBar },

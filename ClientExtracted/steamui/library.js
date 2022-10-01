@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7541544";
+var CLSTAMP = "7549626";
 (() => {
   var e,
     t,
@@ -122,6 +122,7 @@ var CLSTAMP = "7541544";
           Z3: () => f,
           Zv: () => x,
           aM: () => b,
+          cL: () => O,
           dt: () => y,
           eV: () => E,
           fk: () => i,
@@ -384,7 +385,7 @@ var CLSTAMP = "7541544";
           }
           return !1;
         }
-        var k, F, x, R, T, L, z, I;
+        var k, F, x, R, T, L, z, I, O;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -480,7 +481,13 @@ var CLSTAMP = "7541544";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(I || (I = {}));
+          })(I || (I = {})),
+          (function (e) {
+            (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+              (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
+                "k_ELoginUIStyleNewWithoutQRCode"),
+              (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+          })(O || (O = {}));
       },
       4778: (e, t, r) => {
         "use strict";
@@ -532,6 +539,7 @@ var CLSTAMP = "7541544";
           z$: () => k,
           j_: () => n.j_,
           dt: () => n.dt,
+          cL: () => n.cL,
           F8: () => n.F8,
           a: () => v,
           e9: () => M,
@@ -12628,9 +12636,9 @@ var CLSTAMP = "7541544";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 28 2022 : 12:17:51",
-                    BUILD_TIME_UTC: "Sep 28 2022 : 19:17:51",
-                    BUILD_RTIME_UTC: 1664392671,
+                    BUILD_TIME_LOCAL: "Sep 30 2022 : 13:50:22",
+                    BUILD_TIME_UTC: "Sep 30 2022 : 20:50:22",
+                    BUILD_RTIME_UTC: 1664571022,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
