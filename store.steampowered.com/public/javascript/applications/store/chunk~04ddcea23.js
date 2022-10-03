@@ -2130,24 +2130,28 @@
           );
         }
         GetFormattedSteamReleaseDate() {
-          var e;
+          var e, r, t;
           if (
             (this.BCheckDataRequestIncluded({ include_release: !0 }),
-            this.m_ReleaseInfo.is_coming_soon &&
-              this.m_ReleaseInfo.coming_soon_display)
+            (null === (e = this.m_ReleaseInfo) || void 0 === e
+              ? void 0
+              : e.is_coming_soon) &&
+              (null === (r = this.m_ReleaseInfo) || void 0 === r
+                ? void 0
+                : r.coming_soon_display))
           )
             return u(this.m_ReleaseInfo);
-          const r = this.GetReleaseDateRTime();
+          const i = this.GetReleaseDateRTime();
           return (
-            null === (e = this.m_ReleaseInfo) || void 0 === e
+            null === (t = this.m_ReleaseInfo) || void 0 === t
               ? void 0
-              : e.is_abridged_release_date
+              : t.is_abridged_release_date
           )
-            ? r
-              ? (0, l.LO)(new Date(1e3 * r))
+            ? i
+              ? (0, l.LO)(new Date(1e3 * i))
               : ""
-            : r
-            ? (0, n.vX)(r)
+            : i
+            ? (0, n.vX)(i)
             : "";
         }
         BIsComingSoon() {
