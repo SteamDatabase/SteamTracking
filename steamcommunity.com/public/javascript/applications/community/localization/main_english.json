@@ -1591,6 +1591,8 @@
     "Sale_Section_BadgeProgress_Ghost_URL_ttip": "Optional assets which if set, will be displayed to the user BEFORE they acquire the actual badge. This is useful when you want to hide specific details about the badge before it is acquired. Asset should be 160x160 px.",
     "Sale_Section_BadgeProgress_AddLevelsUrls": "Add Level and URL Line",
     "Sale_Section_BadgeProgress_EventBadgeID": "User Badge ID (event specific)",
+    "Sale_Section_BadgeProgress_DiscoveryQueue": "Badge levels are granted when Discovery Queue's are completed on this sale page",
+    "Sale_Section_BadgeProgress_DiscoveryQueue_ttip": "This expect the discovery queue to exist on the sale page first. The badge will dynamically update when a queue is completed and it will push down badge grants to the discovery queue summary page.",
     "Sale_Section_Quest": "Quest Progress Editor",
     "Sale_Section_Quest_Desc": "Defines a section which can display different bbcode content based on quest progression.",
     "Sale_Section_Quest_Incremental_Reveal": "If true, only show the closed door after the previous one has been opened",

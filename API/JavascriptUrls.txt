@@ -119,6 +119,7 @@ ${COMMUNITY_BASE_URL}broadcast/broadcastdebuginfo
 ${COMMUNITY_BASE_URL}broadcast/chatonly/${}
 ${COMMUNITY_BASE_URL}broadcast/report
 ${COMMUNITY_BASE_URL}broadcast/setbroadcastrestriction
+${COMMUNITY_BASE_URL}broadcast/share/${}?site=${}
 ${COMMUNITY_BASE_URL}broadcast/stopbroadcast
 ${COMMUNITY_BASE_URL}broadcast/unban
 ${COMMUNITY_BASE_URL}broadcast/updatebroadcastsettings

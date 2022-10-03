@@ -836,6 +836,11 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	justify-content: space-between;
 	padding-bottom: 7px;
 	color: #7C8EA3;
+	gap: 10px;
+}
+
+.steam_deck_component .steam_deck_component_details > div:nth-child(2) {
+	text-align: right;
 }
 
 /* transaction details view */

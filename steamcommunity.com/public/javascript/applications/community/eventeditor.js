@@ -99,7 +99,7 @@
         p = n(70350),
         _ = n(89694),
         E = (n(68002), n(32548)),
-        h = n(21600),
+        h = n(28759),
         g = n(70882);
       let D = class extends i.Component {
         constructor() {
@@ -1448,7 +1448,7 @@
         }),
         Ee = (0, k.M)(pe);
       var he = n(91799),
-        ge = n(21077),
+        ge = n(70562),
         De = n(70882),
         Se = n(65902),
         we = n(86605),
@@ -1774,12 +1774,12 @@
         Ue = n(11108),
         Re = n(95598),
         Ve = n(9410),
-        We = n(21600),
+        We = n(28759),
         je = n(15986),
         Fe = n(46713);
       function He(e) {
         var t;
-        const n = (0, Ue.o)(e.nEventBadgeID);
+        const n = (0, Ue.oS)(e.nEventBadgeID);
         return (null == n ? void 0 : n.level) > 0
           ? d.createElement(
               "span",

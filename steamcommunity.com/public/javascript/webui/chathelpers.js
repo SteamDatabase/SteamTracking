@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7546651";
+var CLSTAMP = "7552531";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7546651";
     i,
     s,
     r = {
-      9559: (e, t, n) => {
+      39914: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7546651";
         }
         Object.create;
         Object.create;
-        n(41362);
+        n(17988);
         var r = n(87363),
           o = n(61533);
         function a(e) {
@@ -283,7 +283,7 @@ var CLSTAMP = "7546651";
             WEBSITE_ID: "Unknown",
             get SESSIONID() {
               return (function () {
-                if (!c()) return b || (b = S()), b;
+                if (!c()) return T || (T = S()), T;
                 let e = a("sessionid");
                 e || (e = S());
                 return e;
@@ -333,8 +333,8 @@ var CLSTAMP = "7546651";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          T = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-        let b;
+          b = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+        let T;
         function S() {
           let e = (function () {
             let e = "";
@@ -390,7 +390,7 @@ var CLSTAMP = "7546651";
           const r = L("community", e);
           r && (Object.assign(I, r), (t.communityConfig = !0));
           const o = L("event", e);
-          return o && (Object.assign(T, o), (t.eventConfig = !0)), t;
+          return o && (Object.assign(b, o), (t.eventConfig = !0)), t;
         }
         function R(e, t = "webui_config", n) {
           let i;
@@ -715,7 +715,7 @@ var CLSTAMP = "7546651";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(F || (F = {}));
         var W, x, H;
-        n(61582);
+        n(27880);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -839,7 +839,7 @@ var CLSTAMP = "7546651";
               (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
                 "k_EHTTPProxyMode_Automatic");
           })(K || (K = {}));
-        n(15862), n(54696);
+        n(22985), n(92623);
         var Y, J;
         function X(e, t, n) {
           return {
@@ -1283,7 +1283,7 @@ var CLSTAMP = "7546651";
           }
         }
         var _e = n(42238);
-        n(97685);
+        n(9743);
         class he extends ce {
           BIsExpired() {
             return me.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1651,7 +1651,7 @@ var CLSTAMP = "7546651";
             });
           });
       },
-      9856: (e, t, n) => {
+      30741: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1818,7 +1818,7 @@ var CLSTAMP = "7546651";
               };
         }
       },
-      41362: (e, t, n) => {
+      17988: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2195,7 +2195,7 @@ var CLSTAMP = "7546651";
         7651: "105f41e4552d9eace169",
         7706: "a665eacf21008e36c4a4",
         7781: "b87d74c84e82c64a6968",
-        7975: "8dbeacbc6882fe336067",
+        7975: "79d140748fff2a1a29b1",
         8247: "e83b7c56fb1d44384b04",
         8385: "68d04f19fab0a3dd1118",
         8518: "30000cddbba24c645913",
@@ -2338,6 +2338,6 @@ var CLSTAMP = "7546651";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(9559));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(39914));
   c = a.O(c);
 })();

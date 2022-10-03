@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7546651";
+var CLSTAMP = "7552531";
 (() => {
   "use strict";
   var a,
@@ -93,6 +93,7 @@ var CLSTAMP = "7546651";
         1261: "localization/shared_norwegian-json",
         1311: "localization/main_greek-json",
         1421: "libraries~b1f9f17fd",
+        1437: "libraries~3e64a5bb8",
         1546: "localization/sales_english-json",
         1579: "localization/shared_ukrainian-json",
         1649: "chunk~03410565e",
@@ -103,18 +104,16 @@ var CLSTAMP = "7546651";
         2329: "avatarcrop",
         2351: "localization/main_swedish-json",
         2373: "localization/sales_schinese-json",
-        2449: "chunk~7a7b104fb",
         2468: "libraries~d2dd7ecf6",
         2557: "localization/main_ukrainian-json",
-        2677: "chunk~3593b01ab",
         2723: "localization/sales_polish-json",
         2738: "localization/shared_turkish-json",
         2745: "localization/sales_ukrainian-json",
         2805: "chunk~4b330692b",
         2822: "localization/shared_greek-json",
-        2832: "chunk~d3aa4b017",
         3007: "localization/sales_finnish-json",
         3038: "localization/main_french-json",
+        3058: "chunk~3e64a5bb8",
         3202: "localization/sales_vietnamese-json",
         3298: "localization/shared_brazilian-json",
         3352: "eventinternal",
@@ -133,7 +132,6 @@ var CLSTAMP = "7546651";
         4487: "localization/shared_swedish-json",
         4513: "localization/shared_italian-json",
         4535: "login",
-        4601: "broadcast",
         4729: "localization/shared_french-json",
         4819: "localization/sales_tchinese-json",
         4979: "localization/sales_italian-json",
@@ -185,7 +183,6 @@ var CLSTAMP = "7546651";
         9167: "localization/sales_thai-json",
         9233: "localization/main_japanese-json",
         9316: "localization/sales_romanian-json",
-        9348: "chunk~69438e232",
         9349: "eventeditor",
         9389: "localization/main_sc_schinese-json",
         9427: "chunk~642602239",
@@ -204,12 +201,12 @@ var CLSTAMP = "7546651";
       {
         27: "46a2f6f35e4d7022e92b",
         113: "81d4826881b8a27979f7",
-        131: "d147b5124cd69ef42d9d",
+        131: "6d46938e6de8eccb9671",
         238: "5711d8e8dd2f2351048d",
         301: "531b62bce6af7437dfba",
         312: "cf81efba39c35a19118b",
-        400: "f681bb1fda2cf6fd4ff5",
-        508: "75afdb06992b7b09fbb4",
+        400: "e1d60fff75b793f5e1c1",
+        508: "013afcff4f97c134ce79",
         543: "7e04eee5a698b6b9ff11",
         617: "4006d493d498fa988dc8",
         755: "39539aaa31a5d0bc10df",
@@ -222,36 +219,35 @@ var CLSTAMP = "7546651";
         1261: "8f8b7360d10a706df3bf",
         1311: "16e22290f62e9af7d93e",
         1421: "ff32a78bb5b9198b59d1",
+        1437: "e9c90791141b86a5609c",
         1546: "828e9c360f07290c4b9a",
         1579: "c80ff6705d3fecc4df11",
         1649: "27bd849d10937b286bc3",
         1953: "7e9e0fb930bccf4bc083",
-        2136: "6b6f87f1e226f8f45c0a",
+        2136: "1b746d16fbd919c8f543",
         2138: "17c845c4b1baf3184907",
         2235: "4e42fad4dab05d34aa6b",
         2329: "cd3c1b3a4d5d92ff9833",
         2351: "2f044f67de71cb8760e8",
         2373: "06251fd1a88d5e5852c4",
-        2449: "6866db3725c3af073e41",
-        2468: "d33e79fc08b08f4b9daf",
+        2468: "40c30f97fc9888dc8641",
         2557: "5ec469cb7894f1c4cb63",
-        2677: "a490b4343b2e6caf0014",
         2723: "3774ba2b4701e88c8211",
         2738: "3fe3bae8c7f6f8d6b128",
         2745: "0c6e64566e4b3c90d95b",
         2805: "eb860976152352673d09",
         2822: "816ccd9f9ca129bfab8c",
-        2832: "fa0f991cc5630ea1568b",
         3007: "a34481d10a48c32d3923",
         3038: "921ff57030944062a61d",
+        3058: "23f825c86678c3247d07",
         3202: "19d060b19bc21838d625",
         3298: "02949e416ba8a0062bae",
         3352: "5e4d0e040ad4e9a78e03",
-        3499: "6c099a6b70c2ed1db7cf",
+        3499: "6e99cf5318f274d4924d",
         3591: "b971a2a6a62c1c00a12a",
         3602: "d49e9e8ce3f5925b53ad",
         3742: "1c69cb29f71f4489aba4",
-        3973: "a3e3cfd3c6a9ebdecbb9",
+        3973: "cc5ee1be52e8ce4738d3",
         4097: "32f5f1eca43f9cc0c5ac",
         4183: "381e086478e2e2bd0dd8",
         4264: "15461a535d2ba266df46",
@@ -262,7 +258,6 @@ var CLSTAMP = "7546651";
         4487: "1df487059fa5702b197d",
         4513: "2191eb27e5cef38fe5dd",
         4535: "24da8b95e5a39ec4016a",
-        4601: "394836393f98ad0165f8",
         4729: "e40bcdcc0e656bd2581a",
         4819: "9fd6da0552df7f5a3d2a",
         4979: "16e78d33b1473245cc37",
@@ -270,7 +265,7 @@ var CLSTAMP = "7546651";
         5253: "01ecb97dda65c6e4854e",
         5277: "ed0892f2af38ebcbb062",
         5279: "fa678e963e2996f0c049",
-        5436: "f911c3653b71a6e83b21",
+        5436: "479740c416993c36c26f",
         5439: "ab8938bd06fb93a8566c",
         5493: "c0567588b72437163583",
         5494: "2897c946bb61da3dd35b",
@@ -278,7 +273,7 @@ var CLSTAMP = "7546651";
         5757: "5ff2c1dfabd3860902be",
         6091: "229e82d246b8e1ad7dd9",
         6148: "5aca2d35a443fd3058d9",
-        6272: "ea6744e9ebe644e737bd",
+        6272: "01755c9d0a7c264a3568",
         6403: "d91bb023cfb7b2bba06c",
         6415: "7238e0048bb3a76ba980",
         6437: "caa49d3d01d07f13aeea",
@@ -314,14 +309,13 @@ var CLSTAMP = "7546651";
         9167: "7b02d5ac7b50aa12061d",
         9233: "4659dab992f26d3d5aa0",
         9316: "66488a79dddc2a6878ea",
-        9348: "3b1fc524e8ea95b19c8c",
-        9349: "b61d24e72cca7b5e6e5f",
+        9349: "98a70ff4d7ef6a5be028",
         9389: "9807bdc2c8f977930af3",
-        9427: "7cd315c6f3684444c384",
+        9427: "a1036af4917d008816d0",
         9513: "608ab4189971f6b78e5e",
         9547: "3f0bb803c26a99600d42",
         9561: "eaa6fe2cc381f1f30034",
-        9665: "8b871e06f508ec95a4d2",
+        9665: "a1998f49eb76b7399d67",
         9828: "220d8afe7210f42ba6ac",
         9854: "836abedcdb4e3d7e8ae3",
         9888: "2a883fbb25478d5822da",
@@ -339,18 +333,17 @@ var CLSTAMP = "7546651";
         908: "qanda",
         2136: "events",
         2329: "avatarcrop",
-        2449: "chunk~7a7b104fb",
+        3058: "chunk~3e64a5bb8",
         3352: "eventinternal",
         3499: "communityfaqs",
+        3973: "chunk~4e3b43bb2",
         4535: "login",
-        4601: "broadcast",
         5253: "chunk~7bb437d7f",
         5436: "broadcasts",
         6272: "conference",
         6845: "profile",
         8647: "managefriends",
         8919: "chunk~215b3e016",
-        9348: "chunk~69438e232",
         9349: "eventeditor",
         9427: "chunk~642602239",
       }[a] +
@@ -358,23 +351,22 @@ var CLSTAMP = "7546651";
       {
         238: "e083c44bb9e2d8c48b8a",
         312: "d7d01e034284e686fbe9",
-        400: "affd79f17167dcbc9d3b",
-        508: "5e13e9db6058f3a2e0f3",
+        400: "794d724d726e9b058a41",
+        508: "0b6fc2f2e54f8ee5b2df",
         908: "402d6864700943e3ed5f",
         2136: "7677775ce82ff87c079e",
         2329: "70358f02752594d6bf7b",
-        2449: "9fc936c181695abf43c3",
+        3058: "7103368f84cdee74a331",
         3352: "f3838685918d3c88bdc3",
         3499: "ceabdd14fa2e8fac8cdf",
+        3973: "63ea757a223f62f4d0f4",
         4535: "120ef11d3786830c5571",
-        4601: "8afb19817af163e4db81",
         5253: "ea40b496f2547731a91c",
-        5436: "c7cb9391d0c08e93a68a",
-        6272: "99266c2797f2b1a29f40",
+        5436: "91056006a3e4d09e2c02",
+        6272: "1c42df2359f38faeec7c",
         6845: "3f3faaebf755f0c5e867",
         8647: "67fdc171f31b8ee41a06",
         8919: "79c8afa161f1689ecfa4",
-        9348: "f6c5fbdcaf74f491bf3b",
         9349: "051a518f3e92dd04dbcc",
         9427: "cd00d1a807a2971e9386",
       }[a]),
@@ -399,12 +391,12 @@ var CLSTAMP = "7546651";
             r < l.length;
             r++
           ) {
-            var f = l[r];
+            var b = l[r];
             if (
-              f.getAttribute("src") == a ||
-              f.getAttribute("data-webpack") == i + n
+              b.getAttribute("src") == a ||
+              b.getAttribute("data-webpack") == i + n
             ) {
-              s = f;
+              s = b;
               break;
             }
           }
@@ -416,7 +408,7 @@ var CLSTAMP = "7546651";
           s.setAttribute("data-webpack", i + n),
           (s.src = a)),
           (o[a] = [e]);
-        var b = (e, n) => {
+        var f = (e, n) => {
             (s.onerror = s.onload = null), clearTimeout(h);
             var i = o[a];
             if (
@@ -428,11 +420,11 @@ var CLSTAMP = "7546651";
               return e(n);
           },
           h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: s }),
+            f.bind(null, void 0, { type: "timeout", target: s }),
             12e4
           );
-        (s.onerror = b.bind(null, s.onerror)),
-          (s.onload = b.bind(null, s.onload)),
+        (s.onerror = f.bind(null, s.onerror)),
+          (s.onload = f.bind(null, s.onload)),
           t && document.head.appendChild(s);
       }
     }),
@@ -522,18 +514,17 @@ var CLSTAMP = "7546651";
             908: 1,
             2136: 1,
             2329: 1,
-            2449: 1,
+            3058: 1,
             3352: 1,
             3499: 1,
+            3973: 1,
             4535: 1,
-            4601: 1,
             5253: 1,
             5436: 1,
             6272: 1,
             6845: 1,
             8647: 1,
             8919: 1,
-            9348: 1,
             9349: 1,
             9427: 1,
           }[a] &&
@@ -554,8 +545,7 @@ var CLSTAMP = "7546651";
         var o = d.o(a, e) ? a[e] : void 0;
         if (0 !== o)
           if (o) n.push(o[2]);
-          else if (/^(4601|6700)$/.test(e)) a[e] = 0;
-          else {
+          else if (6700 != e) {
             var i = new Promise((n, i) => (o = a[e] = [n, i]));
             n.push((o[2] = i));
             var c = d.p + d.u(e),
@@ -577,7 +567,7 @@ var CLSTAMP = "7546651";
               "chunk-" + e,
               e
             );
-          }
+          } else a[e] = 0;
       }),
         (d.O.j = (e) => 0 === a[e]);
       var e = (e, n) => {

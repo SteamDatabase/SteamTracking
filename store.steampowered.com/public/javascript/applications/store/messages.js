@@ -35,7 +35,7 @@
         r = s(35092),
         n = s(90666);
       const l = JSON.parse(
-        '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201}'
+        '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201}'
       );
       function i(e, t = "", s = null) {
         return u.InstrumentLink(e, t, s);
@@ -258,13 +258,13 @@
       "use strict";
       s.d(t, {
         FM: () => r,
-        OL: () => g,
+        OL: () => d,
         Pm: () => i,
         XW: () => n,
         dK: () => c,
         et: () => o,
         k6: () => _,
-        md: () => d,
+        md: () => g,
         xL: () => u,
       });
       var a = s(90666);
@@ -361,7 +361,7 @@
       function _(e) {
         return m(e, "page_bg_generated_v6b.jpg");
       }
-      function g(e) {
+      function d(e) {
         return a.De.SNR &&
           a.De.SNR.length > 0 &&
           e &&
@@ -369,7 +369,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + a.De.SNR
           : e;
       }
-      function d(e, t) {
+      function g(e, t) {
         try {
           const s = new URL(t),
             a = new URL(e);
@@ -400,8 +400,8 @@
         m = s(58114),
         u = s(39722),
         _ = s(90666),
-        g = s(32367),
-        d = s(14146);
+        d = s(32367),
+        g = s(14146);
       s(990);
       class p {
         constructor(e) {
@@ -415,8 +415,8 @@
               s.Body().set_client_package_version(e.nClientPackageVersion),
               s.Body().set_operating_system(e.eOSType),
               t && s.Body().set_include_seen_messages(!0),
-              (0, g.pA)(s),
-              (0, g.De)(s, p.sm_DefaultDataRequest);
+              (0, d.pA)(s),
+              (0, d.De)(s, p.sm_DefaultDataRequest);
             const a = yield u.Bn.GetMarketingMessagesForUser(
               this.m_SteamInterface.GetServiceTransport(),
               s
@@ -444,7 +444,7 @@
         constructor(e) {
           (this.m_message = e),
             e.associated_item() &&
-              (this.m_item = new d.Z(
+              (this.m_item = new g.Z(
                 e.associated_item(),
                 p.sm_DefaultDataRequest
               ));
@@ -714,7 +714,7 @@
           })(t, s),
           [c, m] = a.useState(!1),
           [u, _] = a.useState(0),
-          g = (0, n.k6)();
+          d = (0, n.k6)();
         if (
           (a.useEffect(() => {
             !r ||
@@ -722,8 +722,8 @@
               l ||
               (s.bIncludeSeenMessages
                 ? m(!0)
-                : g.replace(
-                    Object.assign(Object.assign({}, g.location), {
+                : d.replace(
+                    Object.assign(Object.assign({}, d.location), {
                       search: G(
                         Object.assign(Object.assign({}, s), {
                           bIncludeSeenMessages: !0,
@@ -731,7 +731,7 @@
                       ),
                     })
                   ));
-          }, [r, s, g, l]),
+          }, [r, s, d, l]),
           l)
         )
           return a.createElement(
@@ -746,14 +746,14 @@
             (0, M.Xx)("#MarketingMessages_NoneAvailable")
           );
         if (null === r || !r.length) return a.createElement(f.V, null);
-        const d = r[u].message,
+        const g = r[u].message,
           p = u < r.length - 1 ? r[u + 1].message : null;
         return a.createElement(
           "div",
           null,
           a.createElement($, {
-            key: d.id,
-            message: d,
+            key: g.id,
+            message: g,
             MarketingMessagesStore: t,
           }),
           p &&
