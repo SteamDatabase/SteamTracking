@@ -70,9 +70,43 @@ body.v6.login .rightcol .spotlight_block {
 	margin-bottom: 4px;
 }
 
-.shipping_info_address_display {
+.shipping_info_verify_radio
+{
+	margin-left: 20px;
+}
+
+.shipping_info_verify_radio+label
+{
+	margin-left: -30px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.shipping_info_verify_radio:checked+label
+{
+	margin-left: -28px;
+    padding-left: 46px;
+    padding-right: 28px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 2px solid #c6d4df;
+}
+
+.shipping_info_address_display_header
+{
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.shipping_info_address_display
+{
 	padding: 8px;
-	font-size: 13px;
+	font-size: 13px !important;
+	display: -moz-inline-box !important;
+	display: inline-block !important;
+	vertical-align: middle;	
 }
 
 .checkout_content_box

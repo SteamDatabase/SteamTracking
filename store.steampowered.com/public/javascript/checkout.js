@@ -3791,6 +3791,7 @@ function OnVerifyShippingAddressSuccess( result )
 			Shipping_UpdateFieldsFromVerificationCall( result );
 			$('shipping_info_confirm').show();
 			$('shipping_info_entry').hide();
+			$('shipping_info_verify_update').checked = true;
 
 						var error_text = 'We\'ve found a suggestion for your shipping address.';
 
@@ -3810,6 +3811,11 @@ function ShowShippingAddressForm()
 
 		$('error_display').innerHTML = '';
 	$('error_display').style.display = 'none';
+}
+
+function SelectShippingAddressSuggestion()
+{
+	ShippingAddressVerified( $('shipping_info_verify_update').checked );
 }
 
 function ShippingAddressVerified( bUseCorrected )

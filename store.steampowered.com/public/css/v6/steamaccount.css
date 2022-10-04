@@ -460,6 +460,10 @@ body.v6 .account_settings_container .h3_content {
     min-width: 35%;
 }
 
+.account_settings_container .two_column_container {
+	display: flex;
+}
+
 .app_tag_form_ctn .gray_bevel.for_text_input,
 .text_filter_custom_banned_words_form_ctn .gray_bevel.for_text_input,
 .text_filter_custom_clean_words_form_ctn .gray_bevel.for_text_input {

@@ -38,6 +38,11 @@ function HideUpdateShippingAddressForm()
 	ClearUpdateShippingErrors();
 }
 
+function SelectShippingAddressSuggestion()
+{
+	ShippingAddressVerified( $('shipping_info_verify_update').checked );
+}
+
 function UpdateShippingAddress()
 {
 		var errorString = '';
