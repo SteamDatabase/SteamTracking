@@ -10883,7 +10883,7 @@
           l = o ? Fo(o) : "";
         if (!e) return null;
         const s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          c = parseInt(1664842894),
+          c = parseInt(1664863539),
           m = c && Uo(c, t, l),
           d = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           p = (0, lo.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -25543,9 +25543,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Oct 3 2022 : 17:21:34",
-              BUILD_TIME_UTC: "Oct 4 2022 : 00:21:34",
-              BUILD_RTIME_UTC: 1664842894,
+              BUILD_TIME_LOCAL: "Oct 3 2022 : 23:05:39",
+              BUILD_TIME_UTC: "Oct 4 2022 : 06:05:39",
+              BUILD_RTIME_UTC: 1664863539,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -31747,29 +31747,30 @@
       }
       function Hv(e) {
         var t, n;
-        const o = (0, Iv.dK)(),
-          l = a.useMemo(() => {
+        const o = (0, Iv.m$)(),
+          l = (0, Iv.dK)(),
+          s = a.useMemo(() => {
             var e, t;
             return null !==
-              (t = null === (e = o.data) || void 0 === e ? void 0 : e.modes) &&
+              (t = null === (e = l.data) || void 0 === e ? void 0 : e.modes) &&
               void 0 !== t
               ? t
               : [];
-          }, [o]),
-          s =
+          }, [l]),
+          c =
             void 0 ===
-            (null === (t = o.data) || void 0 === t
+            (null === (t = l.data) || void 0 === t
               ? void 0
               : t.has_mode_override),
-          c =
+          u =
             !1 ===
-            (null === (n = o.data) || void 0 === n
+            (null === (n = l.data) || void 0 === n
               ? void 0
               : n.has_mode_override),
-          u = (0, g.Xx)("#Settings_Display_Resolution_Auto_Resolution");
-        let m = e.bottomSeparator;
-        "auto" == m && (m = c ? "standard" : "none");
-        const d = (function () {
+          m = (0, g.Xx)("#Settings_Display_Resolution_Auto_Resolution");
+        let d = e.bottomSeparator;
+        "auto" == d && (d = u ? "standard" : "none");
+        const p = (function () {
           const e = a.useRef(),
             t = a.useCallback(() => {
               if (e.current) {
@@ -31785,29 +31786,38 @@
             e
           );
         })();
-        return a.createElement(
-          a.Fragment,
-          null,
-          a.createElement(i.gE, {
-            disabled: s,
-            label: u,
-            checked: c,
-            onChange: (e) =>
-              (0, r.mG)(this, void 0, void 0, function* () {
-                var t, n;
-                yield Iv.OE.Get().SetMode(
-                  null === (t = o.data) || void 0 === t ? void 0 : t.id,
-                  l[0].id
-                ),
-                  e &&
-                    Iv.OE.Get().ClearModeOverride(
-                      null === (n = o.data) || void 0 === n ? void 0 : n.id
-                    );
-              }),
-            bottomSeparator: m,
-          }),
-          a.createElement("div", { ref: d, style: { visibility: "hidden" } })
-        );
+        return l.data
+          ? !0 !== o.data
+            ? null
+            : a.createElement(
+                a.Fragment,
+                null,
+                a.createElement(i.gE, {
+                  disabled: c,
+                  label: m,
+                  checked: u,
+                  onChange: (e) =>
+                    (0, r.mG)(this, void 0, void 0, function* () {
+                      var t, n;
+                      yield Iv.OE.Get().SetMode(
+                        null === (t = l.data) || void 0 === t ? void 0 : t.id,
+                        s[0].id
+                      ),
+                        e &&
+                          Iv.OE.Get().ClearModeOverride(
+                            null === (n = l.data) || void 0 === n
+                              ? void 0
+                              : n.id
+                          );
+                    }),
+                  bottomSeparator: d,
+                }),
+                a.createElement("div", {
+                  ref: p,
+                  style: { visibility: "hidden" },
+                })
+              )
+          : null;
       }
       function Uv() {
         const e = (0, Iv.m$)(),
