@@ -1147,7 +1147,7 @@ function MobileApp_UpdateSearchSuggestions( $Term )
 	g_nMobileSearchTermTimer = window.setTimeout( function() {
 			g_nMobileSearchTermTimer = 0;
 			sLastVal = $Term;
-			SearchTimeout( $Term, v_trim( sLastVal ), $SuggestionsCtn, $Suggestions );
+			SearchTimeout( $Term, v_trim( sLastVal ), $SuggestionsCtn, $Suggestions, true /* bUseResponsivePopupOverlay */ );
 		}, msDelayBeforeTimeout );
 }
 
@@ -1219,7 +1219,7 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPref
 
 	InitializeSearchSuggestionParams( cc, realm, l, rgUserPreferences, strPackageXMLVersion );
 }
-function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
+function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions, bUseResponsivePopupOverlay = false )
 {
 	if ( value )
 	{
@@ -1234,19 +1234,20 @@ function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 				var el = this;
 				$J(el).on( 'mouseover', function( event ) { SearchSuggestOnMouseOver( event, $J(el) ); } );
 			} );
-			ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
+			ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions, bUseResponsivePopupOverlay );
 		} );
 	}
 	else
 	{
 		$Suggestions.empty();
-		ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions );
+		ShowSuggestionsAsNecessary( false, $SuggestionsCtn, $Suggestions, bUseResponsivePopupOverlay );
 	}
 }
 
-function ShowSuggestionsAsNecessary( bForceHide, $SuggestionsCtn, $Suggestions )
+function ShowSuggestionsAsNecessary( bForceHide, $SuggestionsCtn, $Suggestions, bUseResponsivePopupOverlay = false )
 {
-	if ( $Suggestions.children().length > 0 && !bForceHide )
+	var bShow = $Suggestions.children().length > 0 && !bForceHide;
+	if ( bShow )
 	{
 		ShowWithFade( $SuggestionsCtn );
 	}
@@ -1254,7 +1255,28 @@ function ShowSuggestionsAsNecessary( bForceHide, $SuggestionsCtn, $Suggestions )
 	{
 		HideWithFade( $SuggestionsCtn );
 	}
+
+	if ( bUseResponsivePopupOverlay )
+	{
+		UpdateResponsiveSearchOverlay( bShow );
+	}
 }
+
+function UpdateResponsiveSearchOverlay( bShow )
+{
+	var $ResponsiveSearchOverlay = $J( '#responsive_store_search_overlay' );
+	if ( bShow )
+	{
+		$ResponsiveSearchOverlay.show();
+		document.body.classList.add( 'responsive_store_overlay_visible' );
+	}
+	else
+	{
+		$ResponsiveSearchOverlay.hide();
+		document.body.classList.remove( 'responsive_store_overlay_visible' );
+	}
+}
+
 function SearchSuggestOnKeyDown( event, $Term, $SuggestionsCtn, $Suggestions )
 {
 	if ( event.keyCode == 27 /* Event.KEY_ESC */ )

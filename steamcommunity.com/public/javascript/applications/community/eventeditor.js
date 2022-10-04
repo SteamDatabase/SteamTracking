@@ -175,7 +175,7 @@
     },
     88569: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => st });
+      n.r(t), n.d(t, { default: () => dt });
       var a = n(9355),
         i = n(10669),
         r = n(13748),
@@ -193,21 +193,21 @@
         h = n(34133),
         g = n.n(h),
         D = n(58687),
-        S = n(8850),
+        S = n(69472),
         w = n(59650),
         b = n(13596),
         C = n(77520),
         y = n(7573),
         I = n(41311),
         T = n(93976),
-        f = n(22975),
+        f = n(64839),
         x = n(90666),
         k = n(36067),
         A = n(70216),
         L = n.n(A),
         M = n(97914),
-        G = n(27775),
-        N = n(26149),
+        N = n(27775),
+        G = n(26149),
         P = n(48341),
         O = (n(98650), n(28645));
       function B(e) {
@@ -224,14 +224,14 @@
                       i.wk
                         .LoadEditorModel(e.clanSteamID, e.GID)
                         .then((e) => {
-                          const t = (0, G.HJ)(e, !0, !0, !0),
+                          const t = (0, N.HJ)(e, !0, !0, !0),
                             a = t.GetLanguagesWithTokens();
                           a.length > 1
                             ? (a.sort((e, t) =>
                                 (0, I.Xx)(
-                                  "#Language_" + (0, N.j_)(e)
+                                  "#Language_" + (0, G.j_)(e)
                                 ).localeCompare(
-                                  (0, I.Xx)("#Language_" + (0, N.j_)(t))
+                                  (0, I.Xx)("#Language_" + (0, G.j_)(t))
                                 )
                               ),
                               (0, w.AM)(
@@ -271,14 +271,14 @@
           const e = t.GetLanguagesWithTokens();
           t.ClearLanguagesTokens(n),
             (a.GetEventModel().jsondata.bSaleEnabled = !0),
-            (0, G.XS)(a, t, e),
+            (0, N.XS)(a, t, e),
             (a.GetEventModel().jsondata.bSaleEnabled = !1);
         }
         e(null, "clone");
       }
       function U(e) {
         const { langs: t, locData: n, closeModal: a, fnOnGotoPage: i } = e,
-          r = (0, N.jM)(x.De.LANGUAGE),
+          r = (0, G.jM)(x.De.LANGUAGE),
           [l, o] = d.useState(new Set(t.filter((e) => e != r)));
         return d.createElement(
           S.uH,
@@ -304,7 +304,7 @@
                   const n = new Set(l);
                   t ? n.delete(e) : n.add(e), o(n);
                 },
-                label: (0, I.Xx)("#Language_" + (0, N.j_)(e)),
+                label: (0, I.Xx)("#Language_" + (0, G.j_)(e)),
                 checked: !l.has(e),
               })
             )
@@ -382,7 +382,7 @@
                     this.state.redirectTarget
                 );
             }
-          let s = (0, N.jM)(x.De.LANGUAGE);
+          let s = (0, G.jM)(x.De.LANGUAGE);
           t.BIsLanguageValidForRealms(s) || (s = t.BInRealmGlobal() ? 0 : 29);
           let c,
             m,
@@ -898,7 +898,7 @@
                   let c,
                     d = 0,
                     m = new Array();
-                  const u = (0, N.jM)(x.De.LANGUAGE);
+                  const u = (0, G.jM)(x.De.LANGUAGE);
                   do {
                     if (
                       ((d += 1),
@@ -1551,7 +1551,7 @@
         (0, l.gn)([Le.LO], Me.prototype, "rtime_end", void 0),
         (0, l.gn)([Le.LO], Me.prototype, "closed", void 0),
         (0, l.gn)([Le.LO], Me.prototype, "winner_count", void 0);
-      class Ge {
+      class Ne {
         constructor() {
           (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
             (this.m_bLoadedFromConfig = !1);
@@ -1605,10 +1605,10 @@
           });
         }
       }
-      (0, l.gn)([Le.LO], Ge.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
-        (0, l.gn)([Le.aD], Ge.prototype, "CopyToGiveaway", null);
-      const Ne = new Ge();
-      window.g_GiveawayStore = Ne;
+      (0, l.gn)([Le.LO], Ne.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
+        (0, l.gn)([Le.aD], Ne.prototype, "CopyToGiveaway", null);
+      const Ge = new Ne();
+      window.g_GiveawayStore = Ge;
       var Pe = n(53861),
         Oe = n(72258);
       let Be = class extends d.Component {
@@ -1624,7 +1624,7 @@
         }
         componentDidMount() {
           return (0, l.mG)(this, void 0, void 0, function* () {
-            let e = yield Ne.FirstTimeLoadGiveaway(
+            let e = yield Ge.FirstTimeLoadGiveaway(
               this.props.giveawayid,
               this.m_cancelSignal
             );
@@ -1654,7 +1654,7 @@
               e.seconds_until_drawing <= 0 &&
               !e.closed &&
               (this.ClearCountDown(),
-              yield Ne.ReloadGiveaway(
+              yield Ge.ReloadGiveaway(
                 this.props.giveawayid,
                 this.m_cancelSignal
               ),
@@ -1874,8 +1874,9 @@
         }
         return null;
       }
-      let Ke = null;
-      function Ye(e) {
+      var Ke = n(64804);
+      let Ye = null;
+      function $e(e) {
         const { event: t } = e.context,
           n = Number.parseInt((0, ye.im)(e.args, "appid")),
           a = Number.parseInt((0, ye.im)(e.args, "itemdefid")),
@@ -1894,7 +1895,7 @@
               string: (0, I.Xx)("#Loading"),
             });
       }
-      function $e(e) {
+      function et(e) {
         const t = (function () {
           const [e, t] = d.useState(Ie.Get().GetCounts());
           return (
@@ -1916,7 +1917,7 @@
         }
         return d.createElement("span", null, Number(a).toLocaleString());
       }
-      function et(e) {
+      function tt(e) {
         var t, n, a, i;
         const r = (0, Te.V)("library");
         if (!r) return d.createElement(b.V, { size: "small" });
@@ -1945,16 +1946,16 @@
         }
         return d.createElement("span", null, Number(o).toLocaleString());
       }
-      function tt(e) {
+      function nt(e) {
         const t = Number.parseInt((0, ye.im)(e.args)),
           n =
             "hide" in e.args &&
             Boolean(Number.parseInt((0, ye.im)(e.args, "hide")));
         return t >= 0
-          ? d.createElement(nt, { nDoorIndex: t, bHide: n }, e.children)
+          ? d.createElement(at, { nDoorIndex: t, bHide: n }, e.children)
           : null;
       }
-      function nt(e) {
+      function at(e) {
         const { nDoorIndex: t, bHide: n, children: a } = e,
           i = (0, xe._4)(t);
         return null == i
@@ -1963,7 +1964,7 @@
           ? d.createElement(d.Fragment, null, e.children)
           : null;
       }
-      function at(e) {
+      function it(e) {
         if (x.L7.logged_in) {
           const t = Number.parseInt((0, ye.im)(e.args)),
             n = Number.parseInt((0, ye.im)(e.args, "mod"));
@@ -1971,13 +1972,13 @@
         }
         return null;
       }
-      function it(e) {
+      function rt(e) {
         const t = (0, ye.im)(e.args);
         return (null == t ? void 0 : t.trim().length) > 0
           ? d.createElement("div", { className: t.trim() }, e.children)
           : d.createElement(d.Fragment, null, e.children);
       }
-      function rt(e) {
+      function lt(e) {
         return d.createElement(
           "span",
           { className: Ae.LocalizeBlock },
@@ -1990,54 +1991,66 @@
           )
         );
       }
-      function lt(e) {
+      function ot(e) {
         let t = (0, ye.im)(e.args);
         return t
           ? d.createElement(Be, { giveawayid: t })
           : d.createElement(d.Fragment, null);
       }
-      var ot = n(26111);
-      n(69491), n(55038);
       function st(e) {
+        const t = Number.parseInt((0, ye.im)(e.args));
+        if (t) {
+          const n = Number.parseInt((0, ye.im)(e.args, "depositpackageid"));
+          return d.createElement(Ke.Yj, {
+            reservationPackageID: t,
+            depositPackageID: n,
+          });
+        }
+        return d.createElement(d.Fragment, null);
+      }
+      var ct = n(26111);
+      n(69491), n(55038);
+      function dt(e) {
         const [t, n] = d.useState(!0);
         return (
           d.useEffect(() => {
             we.Q8.Init(new Se.J(x.De.WEBAPI_BASE_URL)),
               oe.j1.Init(),
               i.wk.Init(),
-              ot.d.AddDictionary(
-                (null == Ke &&
-                  (Ke = new Map([
+              ct.d.AddDictionary(
+                (null == Ye &&
+                  (Ye = new Map([
                     [
                       "itemdef",
                       {
-                        Constructor: Ye,
+                        Constructor: $e,
                         autocloses: !1,
                         skipInternalNewline: !0,
                         allowWrapTextForCopying: !0,
                       },
                     ],
                     ["wishlist", { Constructor: Xe.gq, autocloses: !1 }],
-                    ["deckcompatcount", { Constructor: $e, autocloses: !1 }],
+                    ["deckcompatcount", { Constructor: et, autocloses: !1 }],
                     [
                       "deckcompatuserlibrarycount",
-                      { Constructor: et, autocloses: !1 },
+                      { Constructor: tt, autocloses: !1 },
                     ],
-                    ["giveawayinfo", { Constructor: lt, autocloses: !1 }],
+                    ["giveawayinfo", { Constructor: ot, autocloses: !1 }],
                     ["price", { Constructor: Xe.J8, autocloses: !1 }],
                     ["pricesavings", { Constructor: Xe.Eu, autocloses: !1 }],
                     [
                       "eventdoorvisibility",
-                      { Constructor: tt, autocloses: !1 },
+                      { Constructor: nt, autocloses: !1 },
                     ],
-                    ["chooseaccount", { Constructor: at, autocloses: !1 }],
+                    ["chooseaccount", { Constructor: it, autocloses: !1 }],
                     ["badgecurrentlevel", { Constructor: ze, autocloses: !1 }],
                     ["optindoorquest", { Constructor: Je, autocloses: !1 }],
-                    ["classname", { Constructor: it, autocloses: !1 }],
-                    ["localize", { Constructor: rt, autocloses: !1 }],
+                    ["classname", { Constructor: rt, autocloses: !1 }],
+                    ["localize", { Constructor: lt, autocloses: !1 }],
                     ["salesection", { Constructor: Ze, autocloses: !1 }],
+                    ["reservationbutton", { Constructor: st, autocloses: !1 }],
                   ])),
-                Ke)
+                Ye)
               ),
               Promise.all([be.cb.InitGlobal(), (0, Ce.nf)(null)]).then(() =>
                 n(!1)
@@ -2205,12 +2218,12 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, { component: ct })
+                  d.createElement(V.AW, { component: mt })
                 )
               )
         );
       }
-      function ct(e) {
+      function mt(e) {
         return "dev" !== x.De.WEB_UNIVERSE
           ? d.createElement(V.l_, { push: !0, to: "/" })
           : d.createElement("div", null, "Unknown route");

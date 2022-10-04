@@ -3461,7 +3461,7 @@ function UpdateReleaseRequest( nAppId, rgChanges, bReload )
 	}
 
 	$J.ajax({
-		url: 'https://partner.steamgames.com/apps/ajaxupdatereleaserequest/' + nAppId,
+		url: 'https://partner.steamgames.com/apprelease/ajaxupdatereleaserequest/' + nAppId,
 		cache: false,
 		type: "POST",
 		data: rgChanges,

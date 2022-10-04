@@ -12,9 +12,9 @@
         n = i(73935),
         l = i(53157),
         a = i(10847),
-        r = i(27100),
+        r = i(56525),
         p = i(95598),
-        d = i(22975);
+        d = i(64839);
       class m extends s.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
@@ -182,26 +182,23 @@
           c = () => {
             p && p.Close(), h();
           },
-          v = s.cloneElement(e, { closeModal: c });
-        if (
-          (u.De.IN_GAMEPADUI && (t = window.parent),
-          b((a = a || (0, r.BL)(t)), t) && o && i)
-        ) {
+          u = s.cloneElement(e, { closeModal: c });
+        if (b((a = a || (0, r.BL)(t)), t) && o && i) {
           if (o.bHideMainWindowForPopouts) {
             const e = s.createElement(
               r.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !v.props.bDisableBackgroundDismiss && c,
+                onEscKeypress: !u.props.bDisableBackgroundDismiss && c,
               },
               s.createElement("div", null)
             );
             d = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, o), { fnOnClose: h }),
-            m = new _(t, i, e, v, n, l);
+            m = new _(t, i, e, u, n, l);
           m.Show(), (p = m);
-        } else p = a.ShowModal(v);
+        } else p = a.ShowModal(u);
         return p;
       }
       function b(e, t) {
@@ -360,7 +357,7 @@
       i.r(t), i.d(t, { default: () => d });
       var o = i(67294),
         s = i(59650),
-        n = i(27100),
+        n = i(56525),
         l = i(51167),
         a = (i(88514), i(65902)),
         r = i(90666),

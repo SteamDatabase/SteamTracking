@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7552531";
+var CLSTAMP = "7555176";
 (() => {
   "use strict";
   function e(e) {
@@ -11,7 +11,7 @@ var CLSTAMP = "7552531";
   function t() {
     return !!window.document;
   }
-  var n, o, i, s, _, a, c, r;
+  var n, o, i, s, _, a, c, r, l;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -103,8 +103,14 @@ var CLSTAMP = "7552531";
         (e[(e.k_EGamingDeviceType_Phone = 528)] = "k_EGamingDeviceType_Phone"),
         (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
           "k_EGamingDeviceType_SteamDeck");
-    })(r || (r = {}));
-  const l = {
+    })(r || (r = {})),
+    (function (e) {
+      (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+        (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
+          "k_ELoginUIStyleNewWithoutQRCode"),
+        (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+    })(l || (l = {}));
+  const u = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -149,9 +155,9 @@ var CLSTAMP = "7552531";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!t()) return p || (p = S()), p;
+          if (!t()) return p || (p = C()), p;
           let n = e("sessionid");
-          n || (n = S());
+          n || (n = C());
           return n;
         })();
       },
@@ -166,7 +172,7 @@ var CLSTAMP = "7552531";
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
     },
-    u = {
+    E = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -182,7 +188,7 @@ var CLSTAMP = "7552531";
       country_code: "",
     },
     d = { steamid: "", clanid: 0, listid: 0 },
-    E = {
+    m = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
       APPID: 0,
@@ -199,9 +205,9 @@ var CLSTAMP = "7552531";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    m = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+    S = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
   let p;
-  function S() {
+  function C() {
     let e = (function () {
       let e = "";
       for (let o = 0; o < 24; o++)
@@ -234,15 +240,15 @@ var CLSTAMP = "7552531";
       e
     );
   }
-  function C(n = "webui_config") {
+  function g(n = "webui_config") {
     const o = {},
-      i = k("config", n);
-    i && (delete i.SESSIONID, Object.assign(l, i), (o.config = !0));
-    const s = k("userinfo", n);
+      i = A("config", n);
+    i && (delete i.SESSIONID, Object.assign(u, i), (o.config = !0));
+    const s = A("userinfo", n);
     s &&
-      (Object.assign(u, s),
+      (Object.assign(E, s),
       (o.userConfig = !0),
-      u.is_support &&
+      E.is_support &&
         (function () {
           let n = null;
           return (
@@ -250,15 +256,15 @@ var CLSTAMP = "7552531";
             Boolean(n && 1 === Number.parseInt(n))
           );
         })() &&
-        (u.is_support = !1));
-    const _ = k("broadcast", n);
+        (E.is_support = !1));
+    const _ = A("broadcast", n);
     _ && (Object.assign(d, _), (o.broadcastConfig = !0));
-    const a = k("community", n);
-    a && (Object.assign(E, a), (o.communityConfig = !0));
-    const c = k("event", n);
-    return c && (Object.assign(m, c), (o.eventConfig = !0)), o;
+    const a = A("community", n);
+    a && (Object.assign(m, a), (o.communityConfig = !0));
+    const c = A("event", n);
+    return c && (Object.assign(S, c), (o.eventConfig = !0)), o;
   }
-  function g(e, t = "webui_config", n) {
+  function k(e, t = "webui_config", n) {
     let o;
     if (
       ((o =
@@ -281,11 +287,11 @@ var CLSTAMP = "7552531";
       }
     else n && console.error("Missing config element #", t);
   }
-  function k(e, t = "webui_config") {
-    return g(e, t, !0);
+  function A(e, t = "webui_config") {
+    return k(e, t, !0);
   }
-  let A = { success: !0, result: 1 };
-  class h {
+  let h = { success: !0, result: 1 };
+  class T {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -327,8 +333,8 @@ var CLSTAMP = "7552531";
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
       let n = Object.assign({}, e, {
-        universe: l.EUNIVERSE,
-        accountid: u.accountid,
+        universe: u.EUNIVERSE,
+        accountid: E.accountid,
       });
       void 0 !== t && (n.sequenceid = t);
       try {
@@ -396,9 +402,9 @@ var CLSTAMP = "7552531";
       );
     }
   }
-  let T = new (class {
+  let I = new (class {
     constructor() {
-      (this.m_connection = new h()),
+      (this.m_connection = new T()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -420,7 +426,7 @@ var CLSTAMP = "7552531";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => A,
+        () => h,
         () => this.FailureResult()
       );
     }
@@ -465,7 +471,7 @@ var CLSTAMP = "7552531";
     }
     BClientAccountMatches() {
       return (
-        !u.logged_in || u.accountid == this.m_connection.ClientInfo.unAccountID
+        !E.logged_in || E.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -476,15 +482,15 @@ var CLSTAMP = "7552531";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? A : this.FailureResult(e.success)
+                  1 === e.success ? h : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = T),
+  (window.ClientConnectionAPI = I),
     document.addEventListener("DOMContentLoaded", function () {
-      C(), (window.ClientConnectionAPI = T);
+      g(), (window.ClientConnectionAPI = I);
     });
 })();

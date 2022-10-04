@@ -570,7 +570,7 @@
         P = a(11539),
         M = a(41311),
         O = a(47808),
-        R = a(22975),
+        R = a(64839),
         H = (a(19663), a(3389)),
         V = (a(49186), a(461)),
         U = a(17157),
@@ -643,7 +643,7 @@
         z = a(56175),
         J = a(47077),
         K = a(78853),
-        q = a(8850),
+        q = a(69472),
         Q = a(88380),
         $ = a(72258),
         ee = a(23937),
@@ -1321,11 +1321,11 @@
                     )
                   )
                 ),
-              e && i.createElement("span", { className: W().ChatToggle }),
               n &&
                 i.createElement(
                   "div",
                   { className: W().chat_link },
+                  i.createElement(L.mBz, null),
                   i.createElement(
                     "a",
                     {
@@ -1339,7 +1339,6 @@
                           (0, ie.RA)(e)
                         ),
                     },
-                    i.createElement(L.mBz, { className: ae().ShareIcon }),
                     (0, M.Xx)("#Broadcast_ShareBroadcast")
                   )
                 ),
@@ -1637,11 +1636,11 @@
         M = a(7573),
         O = a(53622),
         R = a(41311),
-        H = a(22975),
+        H = a(64839),
         V = a(59650),
         U = a(52822),
         W = (a(19663), a(7209)),
-        Z = a(8850),
+        Z = a(69472),
         X = a(13596),
         j = a(22093),
         Y = a(77475),
@@ -3161,7 +3160,7 @@
         );
       }
       var rt,
-        st = a(55281),
+        st = a(23331),
         lt = a(5726),
         ot = a.n(lt);
       let it = class extends p.Component {
@@ -4753,7 +4752,7 @@
         o = a.n(l),
         i = (a(82946), a(26149), a(67294)),
         c = a(99533),
-        d = a(22975),
+        d = a(64839),
         u = a(77520);
       class m {
         constructor() {
@@ -4968,7 +4967,7 @@
         o = a(67294),
         i = (a(26149), a(21946), a(82946), a(93976)),
         c = a(99533),
-        d = a(22975),
+        d = a(64839),
         u = a(90666),
         m = a(5525),
         p = a(22925);
@@ -5618,7 +5617,7 @@
         s = a(22188),
         l = (a(67294), a(54698), a(49186), a(77520)),
         o = a(99533),
-        i = a(22975),
+        i = a(64839),
         c = a(90666),
         d = a(7200),
         u = a(159),
@@ -5906,62 +5905,63 @@
         Init() {}
       }
     },
-    55281: (e, t, a) => {
+    23331: (e, t, a) => {
       "use strict";
-      a.d(t, { l: () => _ });
+      a.d(t, { l: () => h });
       var n = a(28777),
         r = a(67294),
         s = a(35921),
         l = a(95598),
-        o = a(7573);
-      var i = a(39853),
-        c = a(15396),
-        d = a(54452),
-        u = a(90666);
-      class m extends r.Component {
+        o = a(7573),
+        i = a(69657),
+        c = a(39853),
+        d = a(15396),
+        u = a(54452),
+        m = a(90666);
+      class p extends r.Component {
         render() {
           const { showArrows: e } = this.props,
             t = this.props.visibleSlides,
             a = this.props.totalSlides,
             s = this.props.currentSlide;
           if (t >= a) return null;
-          const c = (100 * s) / a,
+          const i = (100 * s) / a,
             d = 100 * (1 - Math.min(s + t, a) / a),
-            u = c + (50 * t) / a,
+            u = i + (50 * t) / a,
             m = 100 - u;
           return r.createElement(
             "div",
-            { className: i.pipScrollerContainer },
+            { className: c.pipScrollerContainer },
             e &&
               r.createElement(
                 n.jp,
                 {
                   className: (0, o.Z)(
-                    i.pipScrollButton,
-                    i.left,
-                    i.carouselNavButton
+                    c.pipScrollButton,
+                    c.left,
+                    c.carouselNavButton
                   ),
                 },
                 r.createElement(l.thP, null)
               ),
             r.createElement(
               "div",
-              { className: i.pipScroller },
-              r.createElement("div", { className: i.scrollBackground }),
+              { className: c.pipScroller },
+              r.createElement("div", { className: c.scrollBackground }),
               r.createElement("div", {
-                className: i.scrollForeground,
-                style: { left: c + "%", right: d + "%" },
+                className: c.scrollForeground,
+                style: { left: i + "%", right: d + "%" },
               }),
               r.createElement(
                 "div",
                 {
-                  className: i.scrollNavDiv,
+                  className: c.scrollNavDiv,
                   style: { left: "0%", width: u + "%" },
                 },
                 r.createElement(
                   n.jp,
                   {
-                    className: (0, o.Z)(i.carouselNavButton, i.scrollNavButton),
+                    className: (0, o.Z)(c.carouselNavButton, c.scrollNavButton),
                   },
                   r.createElement("div", null)
                 )
@@ -5969,13 +5969,13 @@
               r.createElement(
                 "div",
                 {
-                  className: i.scrollNavDiv,
+                  className: c.scrollNavDiv,
                   style: { right: "0%", width: m + "%" },
                 },
                 r.createElement(
                   n.P1,
                   {
-                    className: (0, o.Z)(i.carouselNavButton, i.scrollNavButton),
+                    className: (0, o.Z)(c.carouselNavButton, c.scrollNavButton),
                   },
                   r.createElement("div", null)
                 )
@@ -5986,9 +5986,9 @@
                 n.P1,
                 {
                   className: (0, o.Z)(
-                    i.pipScrollButton,
-                    i.right,
-                    i.carouselNavButton
+                    c.pipScrollButton,
+                    c.right,
+                    c.carouselNavButton
                   ),
                 },
                 r.createElement(l.thP, null)
@@ -5996,55 +5996,55 @@
           );
         }
       }
-      const p = (0, n.Rq)(m, (e) => ({
+      const _ = (0, n.Rq)(p, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function _(e) {
+      function h(e) {
         const t = () => r.Children.count(e.children),
           a = t(),
           l = Math.min(t(), e.visibleElements);
         if (!a || !l) return null;
-        const d = l < a,
-          m = e.hideArrows || !d,
-          _ = !d || e.hidePips;
-        let h = 4 / 3,
-          v = !0;
-        e.slideAspectRatio && ((h = e.slideAspectRatio), (v = !1));
-        const E = `items_in_row_${e.visibleElements}`;
+        const u = l < a,
+          p = e.hideArrows || !u,
+          h = !u || e.hidePips;
+        let g = 4 / 3,
+          E = !0;
+        e.slideAspectRatio && ((g = e.slideAspectRatio), (E = !1));
+        const S = `items_in_row_${e.visibleElements}`;
         return r.createElement(
           s.s,
           {
             "flow-children": "row",
-            className: (0, o.Z)(i.carouselBody, e.className, E),
+            className: (0, o.Z)(c.carouselBody, e.className, S),
           },
           r.createElement(
             n.sj,
             {
               visibleSlides: e.visibleElements,
               totalSlides: t(),
-              naturalSlideWidth: 100 * h,
+              naturalSlideWidth: 100 * g,
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: v,
+              isIntrinsicHeight: E,
               touchEnabled: !0,
               lockOnWindowScroll: !0,
               orientation: "horizontal",
               disableKeyboard: !0,
             },
             r.createElement(
-              g,
+              v,
               {
-                bHideArrows: m,
-                bAutoAdvance: e.bAutoAdvance && !u.De.IN_GAMEPADUI,
+                bHideArrows: p,
+                bAutoAdvance: e.bAutoAdvance && !m.De.IN_GAMEPADUI,
                 onSlide: e.onSlide,
               },
               r.Children.map(e.children, (t, a) => {
                 const s = e.bLazyRenderChildren
                   ? r.createElement(
-                      c.Y,
+                      d.Y,
                       {
                         rootMargin: "0px 100% 0px 100%",
                         bHorizontal: !0,
@@ -6056,84 +6056,82 @@
                   : t;
                 return r.createElement(
                   n.Mi,
-                  { className: i.innerSlide, key: "slide_" + a, index: a },
+                  { className: c.innerSlide, key: "slide_" + a, index: a },
                   s
                 );
               })
             ),
-            !_ &&
+            !h &&
               (e.useTestScrollbar
-                ? r.createElement(p, { showArrows: m, carouselStore: null })
+                ? r.createElement(_, { showArrows: p, carouselStore: null })
                 : r.createElement(
                     "div",
-                    { className: i.breadcrumbContainer },
+                    { className: c.breadcrumbContainer },
                     ((t) =>
                       r.Children.map(e.children, (e, a) =>
                         a % t != 0
                           ? null
                           : r.createElement(
                               n.oT,
-                              { slide: a, className: i.pip },
-                              r.createElement("img", {
-                                src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC",
-                              })
+                              { slide: a, className: c.pip },
+                              r.createElement("img", { src: i.Z })
                             )
                       ))(l)
                   ))
           )
         );
       }
-      function h(e) {
+      function g(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function g(e) {
-        const { bHideArrows: t, bAutoAdvance: a, children: s, onSlide: c } = e,
-          u = r.useContext(n.ro),
-          m = r.useRef(u.state.currentSlide),
+      function v(e) {
+        const { bHideArrows: t, bAutoAdvance: a, children: s, onSlide: i } = e,
+          d = r.useContext(n.ro),
+          m = r.useRef(d.state.currentSlide),
           [p, _] = r.useState(null),
-          [g, v] = r.useState(!!a),
+          [h, v] = r.useState(!!a),
           E = r.useRef(null),
           S = r.useRef(null);
         r.useEffect(() => {
           const e = () => {
             E.current = window.setTimeout(() => {
               if (E.current) {
-                h(E);
-                const e = (u.state.currentSlide + 1) % u.state.totalSlides;
-                u.setStoreState({ currentSlide: e });
+                g(E);
+                const e = (d.state.currentSlide + 1) % d.state.totalSlides;
+                d.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
-          g && e();
+          h && e();
           const t = () => {
             const t = m.current,
-              a = u.state.currentSlide;
-            c && c(a), _(a > t ? "Right" : a < t ? "Left" : null), h(S);
+              a = d.state.currentSlide;
+            i && i(a), _(a > t ? "Right" : a < t ? "Left" : null), g(S);
             (S.current = window.setTimeout(() => {
-              S.current && (_(null), h(S));
+              S.current && (_(null), g(S));
             }, 1e3)),
               (m.current = a),
-              E.current ? (h(E), v(!1)) : g && e();
+              E.current ? (g(E), v(!1)) : h && e();
           };
           return (
-            u.subscribe(t),
+            d.subscribe(t),
             () => {
-              u.unsubscribe(t), h(E), h(S);
+              d.unsubscribe(t), g(E), g(S);
             }
           );
-        }, [u, g]);
+        }, [d, h]);
         const C = !!p && "CarouselSliding" + p;
         return r.createElement(
           "div",
-          { className: (0, o.Z)(i.sliderBody, "SliderBody", C) },
+          { className: (0, o.Z)(c.sliderBody, "SliderBody", C) },
           !t &&
             r.createElement(
               n.jp,
               {
                 className: (0, o.Z)(
-                  i.carouselBtnCtn,
-                  i.left,
-                  i.carouselNavButton,
+                  c.carouselBtnCtn,
+                  c.left,
+                  c.carouselNavButton,
                   "CarouselBtnLeft"
                 ),
               },
@@ -6142,9 +6140,9 @@
           r.createElement(
             n.iR,
             {
-              className: d.U.GetScrollableClassname(),
-              classNameTray: i.slideTrayCustomize,
-              classNameAnimation: i.DisableSliderMotion,
+              className: u.U.GetScrollableClassname(),
+              classNameTray: c.slideTrayCustomize,
+              classNameAnimation: c.DisableSliderMotion,
             },
             s
           ),
@@ -6153,9 +6151,9 @@
               n.P1,
               {
                 className: (0, o.Z)(
-                  i.carouselBtnCtn,
-                  i.right,
-                  i.carouselNavButton,
+                  c.carouselBtnCtn,
+                  c.right,
+                  c.carouselNavButton,
                   "CarouselBtnRight"
                 ),
               },
@@ -6447,9 +6445,9 @@
       a.d(t, { n: () => v });
       var n = a(70655),
         r = a(67294),
-        s = a(8850),
+        s = a(69472),
         l = a(41311),
-        o = a(22975),
+        o = a(64839),
         i = a(21735),
         c = a.n(i),
         d = a(26149),
@@ -6688,7 +6686,7 @@
         v = a(90666),
         E = a(96944),
         S = a(99646),
-        C = a(8850),
+        C = a(69472),
         b = a(11108),
         f = a(22925),
         y = a(31933),
@@ -7149,10 +7147,10 @@
         G = a(7573),
         k = a(53622),
         A = a(41311),
-        F = a(22975),
+        F = a(64839),
         L = a(35092),
         x = a(90666),
-        P = a(8850),
+        P = a(69472),
         M = a(59650),
         O = (a(72258), a(17170)),
         R = a.n(O),
@@ -9641,7 +9639,7 @@
       a.d(t, { O: () => c });
       var n = a(70655),
         r = a(67294),
-        s = a(22975),
+        s = a(64839),
         l = a(73863),
         o = a.n(l),
         i = a(35921);
@@ -9809,7 +9807,7 @@
         Y = a(77520),
         z = a(41311),
         J = a(47808),
-        K = a(22975),
+        K = a(64839),
         q = a(35092);
       const Q = i.lazy(() => Promise.resolve().then(a.bind(a, 934))),
         $ = (0, l.Pi)((e) => {
@@ -11083,7 +11081,7 @@
       a.d(t, { Y: () => o });
       var n = a(70655),
         r = a(67294),
-        s = a(22975),
+        s = a(64839),
         l = a(54452);
       class o extends r.Component {
         constructor() {
@@ -11171,7 +11169,7 @@
         p = a(99533),
         _ = a(7573),
         h = a(41311),
-        g = a(22975),
+        g = a(64839),
         v = a(73604),
         E = a(90666),
         S = a(19474),
@@ -11509,7 +11507,7 @@
       var n = a(70655),
         r = a(67294),
         s = a(53622),
-        l = a(22975);
+        l = a(64839);
       class o extends r.Component {
         constructor() {
           super(...arguments),
@@ -11639,6 +11637,12 @@
           Object.assign({}, e, { onPositionChange: s })
         );
       };
+    },
+    69657: (e, t, a) => {
+      "use strict";
+      a.d(t, { Z: () => n });
+      const n =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
     },
   },
 ]);

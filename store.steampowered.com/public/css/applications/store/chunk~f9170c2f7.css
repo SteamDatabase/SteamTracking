@@ -2328,6 +2328,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tooltip_ToolTipCustom_3Dt__ {
   box-sizing: border-box;

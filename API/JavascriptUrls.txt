@@ -486,6 +486,7 @@ ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${LOGIN_BASE_URL}jwt/checkdevice
+${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
@@ -544,7 +545,8 @@ ${PARTNER_BASE_URL}admin/store/pageclusteredit/takeunder/${}
 ${PARTNER_BASE_URL}admin/store/spotlight/${id}
 ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
-${PARTNER_BASE_URL}apps/ajaxupdatereleaserequest/${}
+${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
+${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${}
@@ -896,6 +898,8 @@ ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
+${STORE_BASE_URL}stats/support?json=1
+${STORE_BASE_URL}stats/supportdata.json
 ${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
 ${STORE_BASE_URL}steamaccount/addfunds
@@ -1242,6 +1246,7 @@ http://ns.adobe.com/AdobeIllustrator/10.0/
 http://proxy
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGGo7VWk-kzO_V91empDlVz7ORGAWDqHhbR1TfHLen4wgZiPcIqcBn0kpYb7cAXB9ZJHRPUDQ
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGHorVWwb1mbacg0bL6DV136-dDUDPhGBHXgmacLef8nQM0MpF8IBukyM1M7cAXB9aR2qBKFA
+http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
 http://steamcommunity.com/sharedfiles/filedetails/?id=143962136
 http://steamcommunity.com/sharedfiles/filedetails/?id=402492882
 http://steamcommunity.com/tradingcards/faq/
@@ -1747,6 +1752,7 @@ https://partner.steamgames.com/admin/store/packagesave/${itemID}?activetab=tab_g
 https://partner.steamgames.com/admin/store/suggestclusteritemsjson/
 https://partner.steamgames.com/admin/store/suggestitemjson/
 https://partner.steamgames.com/admin/store/suggestpackagejson/
+https://partner.steamgames.com/apprelease/ajaxupdatereleaserequest/${nAppId}
 https://partner.steamgames.com/apps/addworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/ajaxaddtag/${nAppId}
 https://partner.steamgames.com/apps/ajaxaddtodedicatedserverpackage/${appid}
@@ -1755,7 +1761,6 @@ https://partner.steamgames.com/apps/ajaxcreatevideoseries
 https://partner.steamgames.com/apps/ajaxsetadmintagsvisibility/${appid}
 https://partner.steamgames.com/apps/ajaxsetappfield/${appid}
 https://partner.steamgames.com/apps/ajaxsetcouponstate
-https://partner.steamgames.com/apps/ajaxupdatereleaserequest/${nAppId}
 https://partner.steamgames.com/apps/ajaxupgradegreenlightentry/
 https://partner.steamgames.com/apps/banapp/${appid}
 https://partner.steamgames.com/apps/landing/${appID}

@@ -1320,6 +1320,7 @@
     "Sale_Minigame_ContineQuest": "Go to Quest Page",
     "Sale_ReserveNow": "Reserve Now %1$s",
     "Sale_ReserveExhausted": "Out of stock",
+    "Sale_ReserveUnavailable": "Unavailable in your Country",
     "Sale_ReserveEditor": "Reservation Widget Editor",
     "Sale_ReserveEditor_Add": "Add Reservation Option",
     "Sale_ReserveEditor_EditTitle": "Edit Description",

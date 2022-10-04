@@ -3875,6 +3875,28 @@ html.responsive.touch
   scroll-padding: 0px 64px;
   width: 100%;
 }
+@media screen and (max-width: 910px) {
+  html.responsive.touch
+    .partnersaledisplay_SaleSectionTabs_2xKqp
+    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px 10px;
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 910px) and (max-width: 910px) {
+  html:not(.force_desktop)
+    .partnersaledisplay_SaleSectionTabs_2xKqp
+    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px 10px;
+    overflow-x: scroll;
+  }
+}
 .partnersaledisplay_SaleSectionTabs_2xKqp
   .partnersaledisplay_SaleSectionTabsRow_2Zyym {
   margin: 0px auto;

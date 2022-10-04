@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    406: (e, t, n) => {
+    79: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => Qe });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(186);
+        a = n(483);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -49,13 +49,15 @@
         return c(e, "vgp_ondirection", d(t));
       }
       function h(e, t, n) {
-        if (null === e) return !0;
-        let i = new e.ownerDocument.defaultView.CustomEvent(t, {
+        let i = e;
+        if (null === i || !i.ownerDocument || !i.ownerDocument.defaultView)
+          return !0;
+        let o = new i.ownerDocument.defaultView.CustomEvent(t, {
           bubbles: !0,
           cancelable: !0,
           detail: n,
         });
-        return e.dispatchEvent(i);
+        return e.dispatchEvent(o);
       }
       function d(e) {
         return (t) => {
@@ -89,8 +91,8 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var _ = n(30),
-        v = n(98);
+      var _ = n(440),
+        v = n(266);
       class f extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -460,7 +462,7 @@
           );
         }
       }
-      var S = n(616);
+      var S = n(590);
       function w(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -2743,7 +2745,7 @@
         }
       }
       (0, o.gn)([_.a], we.prototype, "OnMessage", null);
-      n(908);
+      n(714);
       class Te extends a.oH {
         constructor(e) {
           super(),

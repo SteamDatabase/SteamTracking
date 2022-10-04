@@ -1122,7 +1122,7 @@
             f.sm_m ||
               (f.sm_m = {
                 proto: f,
-                fields: { tags_to_exclude: { n: 1, c: M, r: !0, q: !0 } },
+                fields: { tags_to_exclude: { n: 1, c: z, r: !0, q: !0 } },
               }),
             f.sm_m
           );
@@ -1162,17 +1162,17 @@
           return "CStore_UserTagPreferences";
         }
       }
-      class M extends s {
+      class z extends s {
         constructor(e = null) {
           super(),
-            M.prototype.tagid || n.aR(M.M()),
+            z.prototype.tagid || n.aR(z.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
                 fields: {
                   tagid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   name: { n: 2, br: n.FE.readString, bw: n.Xc.writeString },
@@ -1181,59 +1181,6 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
-                },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(M.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new M();
-          return M.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(M.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(M.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_UserTagPreferences_Tag";
-        }
-      }
-      class z extends s {
-        constructor(e = null) {
-          super(),
-            z.prototype.content_descriptors_to_exclude || n.aR(z.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
-                fields: {
-                  content_descriptors_to_exclude: { n: 1, c: F, r: !0, q: !0 },
                 },
               }),
             z.sm_m
@@ -1269,6 +1216,59 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_UserTagPreferences_Tag";
+        }
+      }
+      class M extends s {
+        constructor(e = null) {
+          super(),
+            M.prototype.content_descriptors_to_exclude || n.aR(M.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  content_descriptors_to_exclude: { n: 1, c: F, r: !0, q: !0 },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(M.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new M();
+          return M.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(M.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(M.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_UserContentDescriptorPreferences";
@@ -1350,7 +1350,7 @@
                 fields: {
                   preferences: { n: 1, c: h },
                   tag_preferences: { n: 2, c: f },
-                  content_descriptor_preferences: { n: 3, c: z },
+                  content_descriptor_preferences: { n: 3, c: M },
                 },
               }),
             R.sm_m
@@ -1619,7 +1619,7 @@
                 fields: {
                   preferences: { n: 1, c: h },
                   tag_preferences: { n: 2, c: f },
-                  content_descriptor_preferences: { n: 3, c: z },
+                  content_descriptor_preferences: { n: 3, c: M },
                 },
               }),
             T.sm_m
@@ -1740,9 +1740,9 @@
         s = t(73935),
         a = t(53157),
         o = t(10847),
-        l = t(27100),
+        l = t(56525),
         c = t(95598),
-        u = t(22975);
+        u = t(64839);
       class d extends n.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
@@ -1910,26 +1910,23 @@
           B = () => {
             c && c.Close(), m();
           },
-          b = n.cloneElement(e, { closeModal: B });
-        if (
-          (p.De.IN_GAMEPADUI && (r = window.parent),
-          w((o = o || (0, l.BL)(r)), r) && i && t)
-        ) {
+          p = n.cloneElement(e, { closeModal: B });
+        if (w((o = o || (0, l.BL)(r)), r) && i && t) {
           if (i.bHideMainWindowForPopouts) {
             const e = n.createElement(
               l.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !b.props.bDisableBackgroundDismiss && B,
+                onEscKeypress: !p.props.bDisableBackgroundDismiss && B,
               },
               n.createElement("div", null)
             );
             u = o.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, i), { fnOnClose: m }),
-            d = new y(r, t, e, b, s, a);
+            d = new y(r, t, e, p, s, a);
           d.Show(), (c = d);
-        } else c = o.ShowModal(b);
+        } else c = o.ShowModal(p);
         return c;
       }
       function w(e, r) {

@@ -1,3 +1,67 @@
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb {
+  display: flex;
+  flex-direction: row;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb.releasedateinfo_GameEditCtn_2JigU {
+  max-width: 320px;
+  background: #000;
+  padding: 16px;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb
+  .releasedateinfo_ReleaseDateContent_AVZgM {
+  flex: 1;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb .releasedateinfo_EditButton_1R5w2 {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb
+  .releasedateinfo_EditButton_1R5w2
+  .releasedateinfo_Spacer_3TcEp {
+  flex: 1;
+  margin-right: 16px;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb
+  .releasedateinfo_EditButton_1R5w2
+  .releasedateinfo_Spacer_3TcEp.releasedateinfo_Top_kNcnU {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 12px;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb
+  .releasedateinfo_EditButton_1R5w2
+  .releasedateinfo_Spacer_3TcEp.releasedateinfo_Bottom_2TBzK {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 12px;
+}
+.releasedateinfo_ReleaseDateInfoCtn_2mHXb
+  .releasedateinfo_EditButton_1R5w2
+  .releasedateinfo_EditButtonIcon_22a0a {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background: linear-gradient(to right, #47bfff 5%, #1a8cc2 60%);
+  border-radius: 3px;
+}
+.releasedateinfo_LabelField_1olrp {
+  margin-bottom: 15px;
+}
+.releasedateinfo_LabelField_1olrp .releasedateinfo_Label_M3h38 {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #808285;
+  margin-bottom: 3px;
+}
+.releasedateinfo_LabelField_1olrp .releasedateinfo_BigField_4jS-j {
+  line-height: 21px;
+  font-size: 20px;
+}
+.releasedateinfo_LabelField_1olrp .releasedateinfo_Set_eEhAf {
+  color: #fff;
+}
 .releasedaterequest_ReleaseDateModal_RKE7g > .DialogContent_InnerWidth {
   max-width: 920px;
 }

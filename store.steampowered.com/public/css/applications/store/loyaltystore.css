@@ -4959,6 +4959,7 @@ body.v6.rewards .ModalPosition_Content {
   .redeempointsmodal_ItemButtonsContainer_drMXI button {
     width: 100%;
     margin-top: 15px;
+    margin-left: 0;
   }
 }
 .redeempointsmodal_ItemButtonsContainer_drMXI a {
@@ -4984,6 +4985,12 @@ body.v6.rewards .ModalPosition_Content {
   overflow: hidden;
   padding: 0;
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .redeempointsmodal_RedeemButton_19X6A {
+    width: 100%;
+    text-align: center;
+  }
 }
 .redeempointsmodal_RedeemButton_19X6A
   .redeempointsmodal_DiscountContainer_17jkg {
@@ -5011,7 +5018,6 @@ body.v6.rewards .ModalPosition_Content {
   padding: 7px 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
   white-space: nowrap;
 }
@@ -5764,6 +5770,9 @@ body.v6.rewards .ModalPosition_Content {
   font-size: 0.9rem;
   color: #b3b4cd;
   text-decoration: underline;
+}
+.redeempointsmodal_RedeemModalMobileScroll_37xDg {
+  height: 100%;
 }
 .seasonalbadge_Badge_1-t5y {
   margin: 5px;

@@ -12,8 +12,8 @@
         i = s(22188),
         a = (s(26149), s(54698), s(3389), s(82946), s(93976)),
         d = s(90666),
-        p = s(67294);
-      const l = "unUserdataVersion";
+        l = s(67294);
+      const p = "unUserdataVersion";
       class m {
         constructor() {
           (this.m_setWishList = new Set()),
@@ -175,7 +175,7 @@
         }
         InternalLoad() {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(l) || "0",
+            let e = window.localStorage.getItem(p) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + d.L7.accountid,
@@ -456,9 +456,9 @@
         }
         InvalidateCache() {
           window.localStorage.setItem(
-            l,
+            p,
             (
-              Number.parseInt(window.localStorage.getItem(l) || "0") + 1
+              Number.parseInt(window.localStorage.getItem(p) || "0") + 1
             ).toString()
           );
         }
@@ -473,9 +473,9 @@
         }
       }
       function c() {
-        const [e, t] = (0, p.useState)(!m.Get().BIsLoaded());
+        const [e, t] = (0, l.useState)(!m.Get().BIsLoaded());
         return (
-          (0, p.useEffect)(() => {
+          (0, l.useEffect)(() => {
             m.Get().BIsLoaded() ||
               m
                 .Get()
@@ -530,8 +530,8 @@
         i = s(41311),
         a = s(90666),
         d = s(51167),
-        p = (s(88514), s(65902)),
-        l = s(92742),
+        l = (s(88514), s(65902)),
+        p = s(92742),
         m = s(54698);
       function c(e) {
         const t = (t) =>
@@ -576,7 +576,7 @@
       function _(e) {
         const { redirectURL: t } = e,
           [s] = (0, n.useState)(
-            new p.J(a.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new l.J(a.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
           [r, o] = (0, n.useState)(!1);
         return n.createElement(
@@ -589,7 +589,7 @@
                 transport: s,
                 platform: 2,
                 onComplete: (e) => {
-                  e == l.TG.k_PrimaryDomainFail
+                  e == p.TG.k_PrimaryDomainFail
                     ? o(!0)
                     : window.location.assign(t);
                 },
@@ -607,8 +607,8 @@
         i = s(53157),
         a = s(10847),
         d = s(84351),
-        p = s(95598),
-        l = s(22975);
+        l = s(95598),
+        p = s(64839);
       class m extends r.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
@@ -664,7 +664,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(p.pVO, null)
+                    r.createElement(l.pVO, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -675,8 +675,8 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && r.createElement(p.r6F, null),
-                      !this.state.maximized && r.createElement(p.YqJ, null)
+                      this.state.maximized && r.createElement(l.r6F, null),
+                      !this.state.maximized && r.createElement(l.YqJ, null)
                     ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -687,14 +687,14 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      r.createElement(p.gR, null)
+                      r.createElement(l.gR, null)
                     )
                 )
             )
           );
         }
       }
-      (0, n.gn)([l.ak], m.prototype, "UpdateMaximizeState", null);
+      (0, n.gn)([p.ak], m.prototype, "UpdateMaximizeState", null);
       var c = s(77520),
         u = s(41311),
         h = s(90666);
@@ -729,13 +729,13 @@
                   );
                 });
               })(e, t, null == s ? void 0 : s.promiseRenderComplete)),
-            p =
+            l =
               d &&
               d.height / t.innerHeight < 0.9 &&
               d.width / t.innerWidth < 0.8;
-          if (r || (!(null == s ? void 0 : s.bForcePopOut) && p))
+          if (r || (!(null == s ? void 0 : s.bForcePopOut) && l))
             return w(e, t);
-          const l = {
+          const p = {
               strTitle:
                 (null == s ? void 0 : s.strTitle) ||
                 (0, u.Xx)("#Dialog_DefaultWindowTitle"),
@@ -753,8 +753,8 @@
           return w(
             e,
             t,
-            l.strTitle,
-            l,
+            p.strTitle,
+            p,
             null == s ? void 0 : s.browserContext,
             m
           );
@@ -766,37 +766,34 @@
         });
       }
       function w(e, t, s, n, o, i, a) {
-        let p, l;
+        let l, p;
         const m = e.props.closeModal,
           c = () => {
-            l && l.Close(),
+            p && p.Close(),
               m && m(),
               (null == n ? void 0 : n.fnOnClose) && n.fnOnClose();
           },
           u = () => {
-            p && p.Close(), c();
+            l && l.Close(), c();
           },
-          g = r.cloneElement(e, { closeModal: u });
-        if (
-          (h.De.IN_GAMEPADUI && (t = window.parent),
-          I((a = a || (0, d.BL)(t)), t) && n && s)
-        ) {
+          h = r.cloneElement(e, { closeModal: u });
+        if (I((a = a || (0, d.BL)(t)), t) && n && s) {
           if (n.bHideMainWindowForPopouts) {
             const e = r.createElement(
               d.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !g.props.bDisableBackgroundDismiss && u,
+                onEscKeypress: !h.props.bDisableBackgroundDismiss && u,
               },
               r.createElement("div", null)
             );
-            l = a.ShowModal(e);
+            p = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, n), { fnOnClose: c }),
-            m = new C(t, s, e, g, o, i);
-          m.Show(), (p = m);
-        } else p = a.ShowModal(g);
-        return p;
+            m = new C(t, s, e, h, o, i);
+          m.Show(), (l = m);
+        } else l = a.ShowModal(h);
+        return l;
       }
       function I(e, t) {
         return (

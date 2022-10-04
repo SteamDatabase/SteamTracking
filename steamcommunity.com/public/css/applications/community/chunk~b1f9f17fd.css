@@ -1563,6 +1563,108 @@ html.responsive.touch
   background: #fff;
   color: #000;
 }
+.reservations_description_VmWUF {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 3em;
+  color: #fff;
+}
+.reservations_description2_1seHG {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0px;
+  color: #fff;
+}
+.reservations_j1_3F3Ev {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #ffffff0f;
+  border-radius: 3px;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  color: #fff;
+}
+.reservations_options_1_TYR {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.reservations_price_3hZ64 {
+  right: 10px;
+  top: 150px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.reservations_CommunityPreviewReservationWidgetControl_3d8Bh {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reservations_reservecopy_1TC3e {
+  flex-grow: 1;
+}
+.reservations_reserverow_2IJxF {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.reservations_reserverowReserved_2Rjlv {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.reservations_reserverow_2IJxF > div {
+  margin: 10px;
+}
+.reservations_reservebutton_15UWX {
+  background: #fff;
+}
+.reservations_noreserve_1PHyP {
+  border-radius: 3px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.reservations_cancelreservation_gw18S {
+  max-width: 300px;
+}
+.reservations_alreadyreserved_1MUMr {
+  font-style: italic;
+  padding-bottom: 5px;
+  color: #ffffff80;
+}
+.reservations_expecteddate_3T6SP {
+  text-align: center;
+}
+.reservations_Link_CzZBM {
+  text-decoration: underline;
+}
+.reservations_Link_CzZBM:hover {
+  text-decoration: none;
+}
+@media screen and (max-width: 940px) {
+  .reservations_description_VmWUF {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .reservations_description2_1seHG {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
 .eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu {
   margin-bottom: 10px;
 }

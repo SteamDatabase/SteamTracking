@@ -1,29 +1,6 @@
-.onlineuserchart_Placeholder_2kmc5 {
-  background: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.1) 40%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.1) 60%
-  );
-  background-size: 400% 400%;
-  border-radius: 5px;
-  animation: onlineuserchart_GhostShine_M2laU 3.2s ease;
-  animation-iteration-count: infinite;
-}
 .onlineuserchart_ChartContainerPlaceholder_2XkUV {
   height: 210px;
   width: 940px;
-}
-@keyframes onlineuserchart_GhostShine_M2laU {
-  0% {
-    background-position: 100% 100%;
-  }
-  30% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }
 .onlineuserchart_ChartContainer_FpMH3 {
   background-image: linear-gradient(
@@ -108,6 +85,440 @@
     .onlineuserchart_CurrentStats_3uEBR {
     padding-bottom: 0px;
   }
+}
+.chartscommon_PageSection_3JAzR {
+  margin-bottom: 48px;
+}
+.chartscommon_PageSection_3JAzR .chartscommon_SectionTitle_f7CCw {
+  font-size: 16px;
+  color: #c5cbd8;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.chartscommon_PageSection_3JAzR .chartscommon_SectionTitle_f7CCw b {
+  color: #fff;
+  font-weight: 500;
+}
+.chartscommon_ChartPage_1A7Na {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.chartscommon_Placeholder_3XI-C {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%
+  );
+  background-size: 400% 400%;
+  border-radius: 5px;
+  animation: chartscommon_GhostShine_1NHk0 3.2s ease;
+  animation-iteration-count: infinite;
+}
+@keyframes chartscommon_GhostShine_1NHk0 {
+  0% {
+    background-position: 100% 100%;
+  }
+  30% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.chartscommon_ChartTable_37mz_ {
+  width: 100%;
+  color: #fff;
+  border-spacing: 0 3px;
+  border-collapse: separate;
+  border: none;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th {
+  font-weight: 300;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_HoverCell_2-85m {
+  width: 0%;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th svg {
+  width: 15px;
+  fill: #8890a0;
+  margin-left: 3px;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_ .chartscommon_ColumnHeaders_WgKS9 th svg {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Rank_2-OCR {
+  width: 5%;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_ColumnHeaders_WgKS9
+    th.chartscommon_Rank_2-OCR
+    span {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Game_1qyeH {
+  width: 50%;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_ColumnHeaders_WgKS9
+    th.chartscommon_Game_1qyeH
+    span {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Price_1JgiW {
+  width: 15%;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_ColumnHeaders_WgKS9
+    th.chartscommon_Price_1JgiW {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Change_3hclD {
+  width: 9%;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_ColumnHeaders_WgKS9
+    th.chartscommon_Change_3hclD
+    span {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Concurrent_2k9G_ {
+  width: 18%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_Weeks_UuiGa {
+  width: 7%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_ColumnHeaders_WgKS9
+  th.chartscommon_PeakInGame_1self {
+  width: 12%;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_RightCell_3eIfq {
+  text-align: right;
+  padding-right: 16px;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_TableRow_1e_nc {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 92, 103, 0.3),
+    rgba(90, 98, 108, 0.3)
+  );
+  position: relative;
+  overflow: visible;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.chartscommon_ChartTable_37mz_ .chartscommon_TableRow_1e_nc:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(130, 137, 151, 0.3),
+    rgba(163, 170, 178, 0.3)
+  );
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc:hover
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_Banner_1y4IQ
+  .chartscommon_BannerText_2xCtg {
+  display: block;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_HoverCell_2-85m {
+  width: 0px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_HoverCell_2-85m
+  .chartscommon_HoverSource_ueQE3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_HoverCell_2-85m
+  .chartscommon_HoverSource_ueQE3
+  .chartscommon_HoverMask_23Aj1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 6;
+}
+@media screen and (max-width: 1750px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_TableRow_1e_nc
+    .chartscommon_HoverCell_2-85m
+    .chartscommon_HoverSource_ueQE3 {
+    width: 25%;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_RankCell_22FqH {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  width: 5%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_PriceCell_vqWZa {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: fit-content;
+  min-width: 15%;
+}
+@media all and (max-width: 700px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_TableRow_1e_nc
+    .chartscommon_PriceCell_vqWZa {
+    display: none;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf {
+  color: transparent;
+  text-align: right;
+  padding-right: 16px;
+  width: 7%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf
+  .chartscommon_Tooltip_21PHm {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf.Up {
+  color: #68bb28;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf.Up:hover {
+  cursor: help;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf.Down {
+  color: #ec9d0c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf.Down:hover {
+  cursor: help;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf
+  .chartscommon_ListWeeksDebut_2MncB {
+  background-color: #76dbfb;
+  color: #202327;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 2px 6px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ConcurrentCell_23DBG {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 15%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_WeeksCell_1yNbV {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 5%;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_WeeksCell_1yNbV
+  .chartscommon_Tooltip_21PHm {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_PeakInGameCell_1cfHF {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 12%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO {
+  padding: 6px 16px 6px 0px;
+  width: 50%;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO.chartscommon_Unavailable_2GDqa
+  .chartscommon_TopChartItem_1Ijc9 {
+  line-height: normal;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO.chartscommon_Unavailable_2GDqa
+  .chartscommon_GameName_2_W75 {
+  margin-left: 0;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  a {
+  display: flex;
+  flex-direction: row;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_CapsuleArt_10KmY {
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+}
+@media all and (max-width: 530px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_TableRow_1e_nc
+    .chartscommon_CapsuleCell_GdWJO
+    .chartscommon_CapsuleArt_10KmY {
+    height: auto;
+    width: 46%;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_ExpandedImage_30CvP {
+  height: 70px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_ExpandedMedia_1TFZa {
+  height: 110px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_ExpandedButtons_24pnI {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_CartButton_29c7H {
+  margin: 4px;
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_GameInfo_7ffoO {
+  padding: 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_GameName_2_W75 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  white-space: pre-line;
+  overflow: hidden;
+  min-width: 0;
+}
+@media all and (max-width: 500px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_TableRow_1e_nc
+    .chartscommon_CapsuleCell_GdWJO
+    .chartscommon_GameName_2_W75 {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_CapsuleCell_GdWJO
+  .chartscommon_GameName_2_W75
+  .chartscommon_GameUnavailable_eEqFi {
+  font-size: 12px;
+  color: #a6a6a6;
+  margin-left: 19px;
 }
 body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
   background: #0e1014;
@@ -491,20 +902,6 @@ div#global_header .content {
   margin: 0 auto;
   padding: 0 2%;
 }
-.overviewpage_OverviewPageSection_nu5vb {
-  margin-bottom: 48px;
-}
-.overviewpage_OverviewPageSection_nu5vb .overviewpage_SectionTitle_3xW3V {
-  font-size: 16px;
-  color: #c5cbd8;
-  font-weight: 200;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-.overviewpage_OverviewPageSection_nu5vb .overviewpage_SectionTitle_3xW3V b {
-  color: #fff;
-  font-weight: 500;
-}
 .overviewpage_ChartItemsCtn_3BNYF {
   background: linear-gradient(
     135deg,
@@ -709,7 +1106,29 @@ div#global_header .content {
     rgba(144, 153, 161, 0.06)
   );
 }
-.overviewpage_Placeholder_1s7CW {
+.overviewpage_OverviewChartPlaceholder_rGp5A {
+  min-height: 494px;
+}
+.weeklytopsellers_PageSection_2zGFB {
+  margin-bottom: 48px;
+}
+.weeklytopsellers_PageSection_2zGFB .weeklytopsellers_SectionTitle_1tl1E {
+  font-size: 16px;
+  color: #c5cbd8;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.weeklytopsellers_PageSection_2zGFB .weeklytopsellers_SectionTitle_1tl1E b {
+  color: #fff;
+  font-weight: 500;
+}
+.weeklytopsellers_ChartPage_2txZN {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.weeklytopsellers_Placeholder_13Wag {
   background: linear-gradient(
     to bottom right,
     rgba(255, 255, 255, 0.1) 40%,
@@ -718,14 +1137,10 @@ div#global_header .content {
   );
   background-size: 400% 400%;
   border-radius: 5px;
-  animation: overviewpage_GhostShine_1GvQt 3.2s ease;
+  animation: weeklytopsellers_GhostShine_3n0N_ 3.2s ease;
   animation-iteration-count: infinite;
 }
-.overviewpage_OverviewChartPlaceholder_rGp5A {
-  height: 570px;
-  width: 455px;
-}
-@keyframes overviewpage_GhostShine_1GvQt {
+@keyframes weeklytopsellers_GhostShine_3n0N_ {
   0% {
     background-position: 100% 100%;
   }
@@ -735,85 +1150,6 @@ div#global_header .content {
   100% {
     background-position: 0% 0%;
   }
-}
-.weeklytopsellers_WeekBrowseLink_DOEXq {
-  cursor: pointer;
-}
-.weeklytopsellers_CountryControl_14L3r {
-  margin-top: 4px;
-}
-.weeklytopsellers_CountryControl_14L3r
-  .weeklytopsellers_DropDownContainer_cuSpV {
-  width: 33%;
-  min-width: 250px;
-}
-.weeklytopsellers_MostPlayedOptionsControl_JNIDk
-  .weeklytopsellers_DropDownContainer_cuSpV {
-  width: 33%;
-  min-width: 250px;
-}
-.weeklytopsellers_TopGameBackground_39Yky {
-  filter: saturate(0.4) opacity(0.4) blur(0px);
-  position: absolute;
-  top: -95px;
-  left: 1%;
-  width: calc(100vw - 200px);
-  max-width: 1900px;
-  transform-origin: top;
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      15.77% 44.22% at 50% 104.95%,
-      rgba(66, 66, 66, 0) 0%,
-      #333333 100%
-    ),
-    radial-gradient(
-      30.95% 86.8% at 30.69% 13.2%,
-      rgba(66, 66, 66, 0.33) 0%,
-      #333333 100%
-    ),
-    radial-gradient(
-      51.31% 143.89% at 49.99% 24.75%,
-      #000000 0%,
-      #000000 52.6%,
-      rgba(0, 0, 0, 0.18) 83.33%,
-      rgba(0, 0, 0, 0) 95.31%
-    );
-  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      15.77% 44.22% at 50% 104.95%,
-      rgba(66, 66, 66, 0) 0%,
-      #333333 100%
-    ),
-    radial-gradient(
-      30.95% 86.8% at 30.69% 13.2%,
-      rgba(66, 66, 66, 0.33) 0%,
-      #333333 100%
-    ),
-    radial-gradient(
-      51.31% 143.89% at 49.99% 24.75%,
-      #000000 0%,
-      #000000 52.6%,
-      rgba(0, 0, 0, 0.18) 83.33%,
-      rgba(0, 0, 0, 0) 95.31%
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: source-in;
-  z-index: -1;
-}
-@media screen and (max-width: 910px) {
-  .weeklytopsellers_TopGameBackground_39Yky {
-    top: -20px;
-    width: 100vw;
-    transform: scale(1.5);
-  }
-}
-.weeklytopsellers_BrowseTopSellersButton_2S1tS {
-  margin-top: 12px;
-}
-.weeklytopsellers_ChartPage_2txZN {
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 0 2%;
 }
 .weeklytopsellers_ChartTable_3arZn {
   width: 100%;
@@ -1213,6 +1549,69 @@ div#global_header .content {
   color: #a6a6a6;
   margin-left: 19px;
 }
+.weeklytopsellers_WeekBrowseLink_DOEXq {
+  cursor: pointer;
+}
+.weeklytopsellers_CountryControl_14L3r {
+  margin-top: 4px;
+}
+.weeklytopsellers_CountryControl_14L3r
+  .weeklytopsellers_DropDownContainer_cuSpV {
+  width: 33%;
+  min-width: 250px;
+}
+.weeklytopsellers_MostPlayedOptionsControl_JNIDk
+  .weeklytopsellers_DropDownContainer_cuSpV {
+  width: 33%;
+  min-width: 250px;
+}
+.weeklytopsellers_TopGameBackground_39Yky {
+  filter: saturate(0.4) opacity(0.4) blur(0px);
+  position: absolute;
+  top: -95px;
+  left: 1%;
+  width: calc(100vw - 200px);
+  max-width: 1900px;
+  transform-origin: top;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    );
+  mask: radial-gradient(
+    51.31% 143.89% at 49.99% -21.75%,
+    #000000 0%,
+    #000000 52.6%,
+    rgba(0, 0, 0, 0.18) 83.33%,
+    rgba(0, 0, 0, 0) 95.31%
+  );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  z-index: -1;
+}
+@media screen and (max-width: 910px) {
+  .weeklytopsellers_TopGameBackground_39Yky {
+    top: -20px;
+    width: 100vw;
+    transform: scale(1.5);
+  }
+}
+.weeklytopsellers_BrowseTopSellersButton_2S1tS {
+  margin-top: 12px;
+}
 .weeklytopsellers_TopChartItem_2C5PJ {
   display: flex;
   line-height: 52px;
@@ -1275,4 +1674,42 @@ div#global_header .content {
 .topreleasespage_TopReleasesContainer_2ZjmC {
   margin-top: -95px;
   width: 100%;
+}
+.supportstats_HelpRequestChartContainer_1dbAl {
+  height: 300px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+.supportstats_CategoryBlock_34D_U.supportstats_Placeholder_3r4Y8 {
+  min-height: 300px;
+}
+.supportstats_CategoryBlock_34D_U thead th {
+  padding: 4px 12px;
+}
+.supportstats_CategoryBlock_34D_U thead th.supportstats_Category_1hxGI {
+  width: 45%;
+}
+.supportstats_CategoryBlock_34D_U thead th.supportstats_Submitted24h_N_TWx {
+  width: 25%;
+}
+.supportstats_CategoryBlock_34D_U thead th.supportstats_ResponseTimes_34kNE {
+  width: 30%;
+}
+.supportstats_CategoryBlock_34D_U tbody tr.supportstats_TableRow_1tiKS {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: default;
+}
+.supportstats_CategoryBlock_34D_U tbody tr.supportstats_TableRow_1tiKS td {
+  padding: 4px 12px;
+}
+.supportstats_CategoryBlock_34D_U tbody td.supportstats_Submitted24h_N_TWx,
+.supportstats_CategoryBlock_34D_U tbody td.supportstats_ResponseTimes_34kNE {
+  color: #c5cbd8;
+}
+.supportstats_CategoryBlock_34D_U .supportstats_NumberCol_1GPA- {
+  text-align: right;
 }

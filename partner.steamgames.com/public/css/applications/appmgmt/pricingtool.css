@@ -63,6 +63,9 @@
   flex-direction: column;
   max-height: calc(100vh - 250px);
 }
+.pricinggrid_PricingGridCtn_2j-z9.pricinggrid_PendingVisible_vwVxp {
+  max-height: calc(100vh - 303px);
+}
 .pricinggrid_PricingGridCtn_2j-z9 .pricinggrid_PricingGrid_fKA16 {
   background: #303238;
   padding: 16px 0px 0px 16px;
@@ -207,6 +210,10 @@ div.pricinggrid_HoverToolTip_1OS2v {
   overflow-wrap: break-word;
   white-space: break-spaces;
 }
+.pricinggrid_ProposalState_2YxpI .pricinggrid_StateText_12KKC {
+  margin-right: auto;
+  display: flex;
+}
 .pricinggrid_ProposalState_2YxpI .pricinggrid_ProposalStateKey_2KHIg {
   width: 9px;
   height: 9px;
@@ -245,9 +252,6 @@ div.pricinggrid_HoverToolTip_1OS2v {
 .pricinggrid_ProposalState_2YxpI.pricinggrid_ApprovedCanPublish_2ejxC
   .DialogButton:hover {
   background: linear-gradient(to bottom right, #a4d007 0%, #8cb106 60%);
-}
-.pricinggrid_ProposalState_2YxpI .pricinggrid_PackageMore_2lozM {
-  margin-left: auto;
 }
 .pricinggridcell_PriceCell_1sKIc {
   display: flex;

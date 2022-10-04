@@ -523,7 +523,7 @@
     60806: (e, t, n) => {
       "use strict";
       n.r(t),
-        n.d(t, { PartnerEventOverlayContainer: () => xr, default: () => fr });
+        n.d(t, { PartnerEventOverlayContainer: () => fr, default: () => Nr });
       var r = n(70655),
         a = n(67294),
         i = n(5977),
@@ -7559,20 +7559,19 @@
       var dr = n(76309),
         ur = n(54009),
         hr = n(72157),
-        _r = n(14966),
-        gr = n(10088),
-        wr = n.n(gr),
-        yr = n(72026),
-        br = n.n(yr),
-        Er = n(4757),
-        Sr = n.n(Er);
+        _r = n(10088),
+        gr = n.n(_r),
+        wr = n(72026),
+        yr = n.n(wr),
+        br = n(4757),
+        Er = n.n(br);
       n(10449);
-      const Cr = {
+      const Sr = {
         1: "LibraryDisplaySizeSmall",
         2: "LibraryDisplaySizeMedium",
         3: "LibraryDisplaySizeLarge",
       };
-      let vr = class extends a.Component {
+      let Cr = class extends a.Component {
         constructor(e) {
           super(e),
             (this.m_mapEmbeddedMouseOverlays = new ln.AN(
@@ -7584,7 +7583,7 @@
           let n = t ? parseInt(t) : void 0;
           Number.isNaN(n) && (n = void 0),
             void 0 !== n &&
-              (n = (0, tt.Lh)(n, 0, parseInt(wr().LeftListMaxPercentage))),
+              (n = (0, tt.Lh)(n, 0, parseInt(gr().LeftListMaxPercentage))),
             (this.state = {
               loaded: !1,
               bIsResizingGamesList: !1,
@@ -7775,13 +7774,13 @@
         ComputeListWidthPercentage(e) {
           const t = window.innerWidth,
             n = (0, tt.Lh)(
-              t - parseInt(wr().RightPanelMinWidth),
-              parseInt(wr().LeftListMinWidth),
-              (t * parseInt(wr().LeftListMaxPercentage)) / 100
+              t - parseInt(gr().RightPanelMinWidth),
+              parseInt(gr().LeftListMinWidth),
+              (t * parseInt(gr().LeftListMaxPercentage)) / 100
             );
           return (
-            (e = (0, tt.Lh)(e, parseInt(wr().LeftListMinWidth), n)),
-            (0, tt.Lh)((100 * e) / t, 0, parseInt(wr().LeftListMaxPercentage))
+            (e = (0, tt.Lh)(e, parseInt(gr().LeftListMinWidth), n)),
+            (0, tt.Lh)((100 * e) / t, 0, parseInt(gr().LeftListMaxPercentage))
           );
         }
         SetGameListWidth(e) {
@@ -7809,21 +7808,21 @@
             return a.createElement(
               "div",
               {
-                className: (0, f.Z)(br().Container, br().PreloadThrobber),
+                className: (0, f.Z)(yr().Container, yr().PreloadThrobber),
                 onContextMenu: this.OnRootContextMenu,
               },
               a.createElement(st.V, { size: "xlarge", static: !0 }),
               a.createElement(
                 "div",
-                { className: br().ThreeDots },
+                { className: yr().ThreeDots },
                 a.createElement("div", {
-                  className: (0, f.Z)(br().Dot, br().Dot1),
+                  className: (0, f.Z)(yr().Dot, yr().Dot1),
                 }),
                 a.createElement("div", {
-                  className: (0, f.Z)(br().Dot, br().Dot2),
+                  className: (0, f.Z)(yr().Dot, yr().Dot2),
                 }),
                 a.createElement("div", {
-                  className: (0, f.Z)(br().Dot, br().Dot3),
+                  className: (0, f.Z)(yr().Dot, yr().Dot3),
                 })
               )
             );
@@ -7834,20 +7833,20 @@
             Ee.cS.settings.nLibraryDisplaySize
           );
           const r = (0, f.Z)(
-              wr().Container,
+              gr().Container,
               S.g4.BLowPerfMode() ? "LowPerfMode" : "HighPerfMode",
-              Cr[n],
-              this.state.bIsResizingGamesList && wr().IsResizingLeftList
+              Sr[n],
+              this.state.bIsResizingGamesList && gr().IsResizingLeftList
             ),
             o = {
-              breakNarrow: [parseInt(Sr().BreakNarrow), "NarrowWindow"],
-              breakWide: [parseInt(Sr().BreakWide), "WideWindow"],
+              breakNarrow: [parseInt(Er().BreakNarrow), "NarrowWindow"],
+              breakWide: [parseInt(Er().BreakWide), "WideWindow"],
               breakUltraWide: [
-                parseInt(Sr().BreakUltraWide),
+                parseInt(Er().BreakUltraWide),
                 "UltraWideWindow",
               ],
-              breakShort: [parseInt(Sr().BreakShort), "ShortWindow"],
-              breakTall: [parseInt(Sr().BreakTall), "TallWindow"],
+              breakShort: [parseInt(Er().BreakShort), "ShortWindow"],
+              breakTall: [parseInt(Er().BreakTall), "TallWindow"],
               strMedium: "MediumWindow",
             };
           return a.createElement(
@@ -7863,7 +7862,7 @@
               a.createElement(
                 Te._n,
                 { path: Te.Z5.Downloads() },
-                a.createElement(kr, null, a.createElement(En.a, null))
+                a.createElement(xr, null, a.createElement(En.a, null))
               ),
               a.createElement(
                 i.AW,
@@ -7877,7 +7876,7 @@
                     a.createElement(
                       "div",
                       {
-                        className: wr().LeftListSizableContainer,
+                        className: gr().LeftListSizableContainer,
                         ref: this.m_elGamesListContainerRef,
                         style: t,
                       },
@@ -7890,8 +7889,8 @@
                     null,
                     a.createElement("div", {
                       className: (0, f.Z)(
-                        wr().LibraryWindowDivider,
-                        wr().Sizable
+                        gr().LibraryWindowDivider,
+                        gr().Sizable
                       ),
                       onMouseDown: this.OnGrabberMouseDown,
                       onTouchStart: this.OnGrabberTouchStart,
@@ -7903,23 +7902,23 @@
                     a.createElement(
                       Te._n,
                       { path: Te.Z5.Library.Home() },
-                      a.createElement(kr, null, a.createElement(on, null))
+                      a.createElement(xr, null, a.createElement(on, null))
                     ),
                     a.createElement(
                       Te._n,
                       { path: Te.Z5.Library.App() },
-                      a.createElement(kr, null, a.createElement(m.SK, null))
+                      a.createElement(xr, null, a.createElement(m.SK, null))
                     ),
                     a.createElement(
                       Te._n,
                       { path: Te.Z5.Library.Collection() },
-                      a.createElement(kr, null, a.createElement(ae, null))
+                      a.createElement(xr, null, a.createElement(ae, null))
                     ),
                     a.createElement(
                       Te._n,
                       { path: Te.Z5.Library.AllCollections() },
                       a.createElement(
-                        kr,
+                        xr,
                         null,
                         a.createElement(c.qr, {
                           coverSize: Ee.cS.settings.nLibraryDisplaySize,
@@ -7952,42 +7951,42 @@
           );
         }
       };
-      (0, r.gn)([B.ak], vr.prototype, "OnPostMessage", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnAppProperties", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnContentManagement", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnMouseUp", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnMessage", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnWindowKeyDown", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnGrabberMouseDown", null),
-        (0, r.gn)([B.ak], vr.prototype, "OnGrabberTouchStart", null),
-        (0, r.gn)([B.ak], vr.prototype, "HandleTouchMove", null),
-        (0, r.gn)([B.ak], vr.prototype, "HandleMouseMove", null),
-        (0, r.gn)([B.ak], vr.prototype, "SetGameListWidth", null),
-        (0, r.gn)([B.ak], vr.prototype, "UnregisterGameListDragEvents", null),
-        (vr = (0, r.gn)([l.Pi], vr));
-      const Nr = (0, i.EN)(vr);
-      function fr(e) {
+      (0, r.gn)([B.ak], Cr.prototype, "OnPostMessage", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnAppProperties", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnContentManagement", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnMouseUp", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnMessage", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnWindowKeyDown", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnGrabberMouseDown", null),
+        (0, r.gn)([B.ak], Cr.prototype, "OnGrabberTouchStart", null),
+        (0, r.gn)([B.ak], Cr.prototype, "HandleTouchMove", null),
+        (0, r.gn)([B.ak], Cr.prototype, "HandleMouseMove", null),
+        (0, r.gn)([B.ak], Cr.prototype, "SetGameListWidth", null),
+        (0, r.gn)([B.ak], Cr.prototype, "UnregisterGameListDragEvents", null),
+        (Cr = (0, r.gn)([l.Pi], Cr));
+      const vr = (0, i.EN)(Cr);
+      function Nr(e) {
         return a.createElement(
           Te.R,
           { initialPath: Te.Z5.Library.Home() },
-          a.createElement(_r.R, null, a.createElement(Nr, { cm: e.cm }))
+          a.createElement(vr, { cm: e.cm })
         );
       }
-      function xr() {
+      function fr() {
         const e = (0, Te.xI)(),
           t = (0, Te.zr)(),
           n = {
-            enter: wr().OverlayAppDetailsTransitionEnter,
-            enterActive: wr().OverlayAppDetailsTransitionEnterActive,
-            enterDone: wr().OverlayAppDetailsTransitionEntered,
-            exit: wr().OverlayAppDetailsTransitionExit,
-            exitActive: wr().OverlayAppDetailsTransitionExitActive,
+            enter: gr().OverlayAppDetailsTransitionEnter,
+            enterActive: gr().OverlayAppDetailsTransitionEnterActive,
+            enterDone: gr().OverlayAppDetailsTransitionEntered,
+            exit: gr().OverlayAppDetailsTransitionExit,
+            exitActive: gr().OverlayAppDetailsTransitionExitActive,
           },
           r = !S.g4.BLowPerfMode();
         return a.createElement(
           o.Z,
           {
-            className: wr().AppDetailsOverlayTransitionGroup,
+            className: gr().AppDetailsOverlayTransitionGroup,
             appear: r,
             enter: r,
             exit: r,
@@ -8005,28 +8004,28 @@
             )
         );
       }
-      function kr(e) {
+      function xr(e) {
         const { children: t } = e,
           n = {
-            enter: wr().AppDetailsTransitionEnter,
-            enterActive: wr().AppDetailsTransitionEnterActive,
-            exit: wr().AppDetailsTransitionExit,
-            exitActive: wr().AppDetailsTransitionExitActive,
+            enter: gr().AppDetailsTransitionEnter,
+            enterActive: gr().AppDetailsTransitionEnterActive,
+            exit: gr().AppDetailsTransitionExit,
+            exitActive: gr().AppDetailsTransitionExitActive,
           },
           l = (0, i.$B)(Te.Z5.Library.AllCollections()),
           m = {
             breakUltraNarrow: [
-              parseInt(Sr().RightBreakUltraNarrow),
+              parseInt(Er().RightBreakUltraNarrow),
               "UltraNarrowRightPanel",
             ],
-            breakNarrow: [parseInt(Sr().RightBreakNarrow), "NarrowRightPanel"],
-            breakWide: [parseInt(Sr().RightBreakWide), "WideRightPanel"],
+            breakNarrow: [parseInt(Er().RightBreakNarrow), "NarrowRightPanel"],
+            breakWide: [parseInt(Er().RightBreakWide), "WideRightPanel"],
             breakUltraWide: [
-              parseInt(Sr().RightBreakUltraWide),
+              parseInt(Er().RightBreakUltraWide),
               "UltraWideRightPanel",
             ],
-            breakShort: [parseInt(Sr().BreakShort), "ShortRightPanel"],
-            breakTall: [parseInt(Sr().BreakTall), "TallRightPanel"],
+            breakShort: [parseInt(Er().BreakShort), "ShortRightPanel"],
+            breakTall: [parseInt(Er().BreakTall), "TallRightPanel"],
             strMedium: "MediumRightPanel",
             fnDimensionsChanged: (e, t) => {
               C.l.SetDimensions(e, t);
@@ -8034,11 +8033,11 @@
           };
         return a.createElement(
           cn.u,
-          Object.assign({ className: wr().MainPanel }, m),
+          Object.assign({ className: gr().MainPanel }, m),
           a.createElement(
             o.Z,
             {
-              className: wr().AppDetailsTransitionGroup,
+              className: gr().AppDetailsTransitionGroup,
               appear: !0,
               enter: !0,
               exit: !0,
@@ -8057,15 +8056,15 @@
               },
               a.createElement(
                 "div",
-                { className: wr().AppDetailsMain },
+                { className: gr().AppDetailsMain },
                 t,
-                a.createElement(xr, null)
+                a.createElement(fr, null)
               )
             )
           ),
           a.createElement(c.mf, {
-            className: wr().NewCollectionTarget,
-            strEligibleClassName: !l && wr().Visible,
+            className: gr().NewCollectionTarget,
+            strEligibleClassName: !l && gr().Visible,
           })
         );
       }

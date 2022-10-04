@@ -457,6 +457,7 @@ body.v6 .account_settings_container .h3_content {
 .account_settings_container .half {
 	display: inline-block;
 	margin-right: 25px;
+    min-width: 35%;
 }
 
 .app_tag_form_ctn .gray_bevel.for_text_input,
@@ -913,26 +914,34 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	color: white;
 }
 
+.orderdetails_shippip_container {
+	width: 22px;
+	height: 22px;
+	position: relative;
+}
 .orderdetails_shippip
 {
 	width: 22px;
 	height: 22px;
 	border: 4px solid #798089;
 	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: relative;
 	box-sizing: border-box;
 }
 
-.orderdetails_shippip::after {
+/* force the browser to draw this circle with the same code that we draw the outer circle, instead of trying to center it using standard div centering techniques, so any DPI/scale factor rounding is applied consistently across both divs */
+.orderdetails_shippip_highlight {
 	content: "";
-	width: 10px;
-	height: 10px;
+	width: 22px;
+	height: 22px;
 	border-radius: 50%;
+	border: 6px solid #00000000;
 	background-color: #6AC9FF00;
 	box-sizing: border-box;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	background-clip: padding-box;
 }
 
 /* after is the circle in the middle */
@@ -940,7 +949,7 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	border: 4px solid #D9D9D9;
 }
 
-.orderdetails_shipstep.complete .orderdetails_shippip::after {
+.orderdetails_shipstep.complete .orderdetails_shippip_highlight {
 	background-color: #6AC9FF;
 }
 
@@ -955,11 +964,12 @@ body.v6 h2.pageheader.youraccount_pageheader {
 	content: "";
 	width: 4px;
 	height: 18px;
-	background-color: #79808900;
-	border: 2px solid #798089;
+	background-color: #798089;
 	box-sizing: border-box;
 	position: absolute;
-	margin-top: -34px;
+	top: 0px;
+	left: 50%;
+	transform: translate( -50%, -19px );
 }
 
 .orderdetails_shipstep.first .orderdetails_shippip::before {

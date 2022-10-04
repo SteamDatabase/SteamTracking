@@ -1,55 +1,215 @@
-.focusring_FocusRingRoot_2V_BA {
-  position: absolute;
-  pointer-events: none;
+body.modals_BodyNoScroll_1R1WX {
+  overflow-y: hidden;
+  height: 100vh;
+}
+body.modals_BodyNoScrollDialog_R9GkI {
+  overflow-y: hidden;
+  height: 100vh;
+}
+.modals_OverlayModal_2c13a {
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500;
 }
-.focusring_FocusRing_12ai5 {
+.modals_GamepadOnlyModalWrapper_hJDHj {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.modals_GamepadOnlyModalWrapper_hJDHj .modals_GamepadOnlyPanelWrapper_f7Zyz {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.contextmenu_ContextMenuMouseOverlay_pw-MD {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1599;
+}
+.contextmenu_ContextMenuFocusContainer_3iUZi:focus {
+  outline: none;
+}
+.contextmenu_contextMenu_2sA-f {
   position: absolute;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  transition: opacity 200ms;
+  z-index: 1600;
+  user-select: none;
+  padding: 4px;
+}
+.web_chat_frame .contextmenu_contextMenu_2sA-f {
+  max-height: calc(100% - 128px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenu_2sA-f {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0;
+}
+html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuContents_3IFsI {
+  padding: 4px;
+}
+html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuItem_1LSq5 {
+  min-width: fit-content;
+  white-space: nowrap;
+}
+.contextmenu_contextMenuContents_3IFsI {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag;
+}
+.contextmenu_contextMenu_2sA-f:not(.visible) {
+  opacity: 0;
   pointer-events: none;
-  outline-offset: 2px;
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_1_-xA 0.5s ease,
-    focusring_growOutline_3T-jN 0.4s ease, focusring_fadeOutline_2Twjr 0.4s ease,
-    focusring_blinker_2AyMC 1.2s ease-in-out 0.4s 20;
 }
-.focusring_FocusRing_12ai5.focusring_DebugFocusRing_3GOCC {
-  outline-color: #ff0;
+.contextmenu_contextMenuItem_1LSq5 {
+  padding: 4px 6px;
+  line-height: 17px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
-.focusring_FocusRingOnHiddenItem_1t6v5.focusring_DebugFocusRing_3GOCC {
-  outline-offset: 2px;
-  outline-color: red;
-  background-color: red;
+.contextmenu_contextMenuItem_1LSq5:first-child {
+  border-top: 0.5px solid rgba(80, 87, 94, 0);
 }
-@keyframes focusring_flash_1_-xA {
-  0% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
+.contextmenu_contextMenuItem_1LSq5:hover,
+.contextmenu_contextMenuItem_1LSq5.contextmenu_active_34JiP {
+  background: #5a6069;
+  color: #b8c5c9;
 }
-@keyframes focusring_growOutline_3T-jN {
-  0% {
-    outline: 12px solid;
-  }
-  100% {
-    outline: 2px solid;
-  }
+.contextmenu_contextMenuItem_1LSq5.disabled {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+  pointer-events: none;
 }
-@keyframes focusring_fadeOutline_2Twjr {
-  0% {
-    outline-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    outline-color: rgba(255, 255, 255, 0.6);
-  }
+.contextmenu_contextMenuItem_1LSq5.disabled:hover {
+  background: none;
+  color: #6b7072;
+  cursor: default;
 }
-@keyframes focusring_blinker_2AyMC {
-  50% {
-    opacity: 0.4;
-  }
+.contextmenu_contextMenuItem_1LSq5.menuChecked {
+  color: #6dcff6;
+}
+.contextmenu_contextMenuItem_1LSq5.menuChecked.contextMenuCheckMark {
+  display: block;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_MenuSectionHeader_xpu-S {
+  padding-top: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.contextmenu_ContextMenuSeparator_2l_Pc + .contextmenu_contextMenuItem_1LSq5 {
+  border-top-color: dimgray;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_NoSeparation_1J6Cl {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_UpperCase_nIxAl {
+  text-transform: uppercase;
+}
+.contextmenu_contextMenuItem_1LSq5 .SVGIcon_Button {
+  height: 10px;
+  width: 10px;
+  margin-right: 4px;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ {
+  display: flex;
+  padding-right: 2px;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
+  .contextmenu_Label_3-nDx {
+  flex: 1 0 auto;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
+  .contextmenu_Arrow_3noJs {
+  flex: 0 0 auto;
+  margin: 0px 0px 0px 4px;
+}
+.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
+  .SVGIcon_DownArrowContextMenu {
+  height: 14px;
+  width: 14px;
+  transform: rotateZ(-90deg);
+  fill: #9ca4a7;
+  margin: 0px 3px;
+}
+.contextmenu_contextMenuItem_1LSq5 svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+}
+.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle {
+  height: 16px;
+  width: 16px;
+  margin-left: -3px;
+  margin-bottom: -3px;
+}
+.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle line {
+  stroke: gray;
+  shape-rendering: crispEdges;
+  stroke-width: 20px;
+}
+.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle circle {
+  opacity: 0;
+}
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none;
+}
+.contextmenu_PopoutSubMenu_1gxqm {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.contextmenu_PopoutSubMenu_1gxqm .contextmenu_PopoutSubMenuItems_22DnG {
+  position: absolute;
+  width: 60%;
+  height: fit-content;
+  left: 100%;
+  top: 0;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1;
+  word-wrap: break-word;
 }
 .throbber_LoadingWrapper_1HyRg {
   display: flex;
@@ -591,190 +751,6 @@
 .radio_Button_1L98K:hover {
   background-color: #33363e;
 }
-.contextmenu_ContextMenuMouseOverlay_pw-MD {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1599;
-}
-.contextmenu_ContextMenuFocusContainer_3iUZi:focus {
-  outline: none;
-}
-.contextmenu_contextMenu_2sA-f {
-  position: absolute;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  transition: opacity 200ms;
-  z-index: 1600;
-  user-select: none;
-  padding: 4px;
-}
-.web_chat_frame .contextmenu_contextMenu_2sA-f {
-  max-height: calc(100% - 128px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenu_2sA-f {
-  position: static;
-  box-shadow: none;
-  display: inline-block;
-  padding: 0;
-}
-html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuContents_3IFsI {
-  padding: 4px;
-}
-html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuItem_1LSq5 {
-  min-width: fit-content;
-  white-space: nowrap;
-}
-.contextmenu_contextMenuContents_3IFsI {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  font-size: 14px;
-  -webkit-app-region: no-drag;
-}
-.contextmenu_contextMenu_2sA-f:not(.visible) {
-  opacity: 0;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_1LSq5 {
-  padding: 4px 6px;
-  line-height: 17px;
-  color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
-  cursor: default;
-  position: relative;
-  min-width: 120px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-.contextmenu_contextMenuItem_1LSq5:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0);
-}
-.contextmenu_contextMenuItem_1LSq5:hover,
-.contextmenu_contextMenuItem_1LSq5.contextmenu_active_34JiP {
-  background: #5a6069;
-  color: #b8c5c9;
-}
-.contextmenu_contextMenuItem_1LSq5.disabled {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-  pointer-events: none;
-}
-.contextmenu_contextMenuItem_1LSq5.disabled:hover {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-}
-.contextmenu_contextMenuItem_1LSq5.menuChecked {
-  color: #6dcff6;
-}
-.contextmenu_contextMenuItem_1LSq5.menuChecked.contextMenuCheckMark {
-  display: block;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_MenuSectionHeader_xpu-S {
-  padding-top: 8px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-.contextmenu_ContextMenuSeparator_2l_Pc + .contextmenu_contextMenuItem_1LSq5 {
-  border-top-color: dimgray;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_NoSeparation_1J6Cl {
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_UpperCase_nIxAl {
-  text-transform: uppercase;
-}
-.contextmenu_contextMenuItem_1LSq5 .SVGIcon_Button {
-  height: 10px;
-  width: 10px;
-  margin-right: 4px;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ {
-  display: flex;
-  padding-right: 2px;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
-  .contextmenu_Label_3-nDx {
-  flex: 1 0 auto;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
-  .contextmenu_Arrow_3noJs {
-  flex: 0 0 auto;
-  margin: 0px 0px 0px 4px;
-}
-.contextmenu_contextMenuItem_1LSq5.contextmenu_SubMenu_3JELJ
-  .SVGIcon_DownArrowContextMenu {
-  height: 14px;
-  width: 14px;
-  transform: rotateZ(-90deg);
-  fill: #9ca4a7;
-  margin: 0px 3px;
-}
-.contextmenu_contextMenuItem_1LSq5 svg {
-  height: 12px;
-  width: 12px;
-  margin-right: 6px;
-}
-.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle {
-  height: 16px;
-  width: 16px;
-  margin-left: -3px;
-  margin-bottom: -3px;
-}
-.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle line {
-  stroke: gray;
-  shape-rendering: crispEdges;
-  stroke-width: 20px;
-}
-.contextmenu_contextMenuItem_1LSq5 .SVGIcon_PlusCircle circle {
-  opacity: 0;
-}
-.contextMenuCheckMark {
-  width: 4px;
-  height: 18px;
-  background-color: #6dcff6;
-  min-height: 1px;
-  position: absolute;
-  left: -4px;
-  margin-top: 0px;
-  display: none;
-}
-.contextmenu_PopoutSubMenu_1gxqm {
-  position: relative;
-  width: 100%;
-  overflow: visible;
-}
-.contextmenu_PopoutSubMenu_1gxqm .contextmenu_PopoutSubMenuItems_22DnG {
-  position: absolute;
-  width: 60%;
-  height: fit-content;
-  left: 100%;
-  top: 0;
-  background: radial-gradient(
-    ellipse farthest-corner at 50% 0%,
-    #3c4047 0%,
-    #3c4047 50%,
-    #33363d 100%
-  );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
-  word-wrap: break-word;
-}
 .dropdown_DialogDropDownMenu_Item_V-eFz {
   padding: 10px 15px;
   cursor: pointer;
@@ -816,6 +792,8 @@ html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuItem_1LSq5 {
   box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tooltip_ToolTipCustom_3SnEF {
   box-sizing: border-box;
@@ -2439,6 +2417,59 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2PmTF svg {
   width: 16px;
   margin-top: -12px;
 }
+.focusring_FocusRingRoot_2V_BA {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.focusring_FocusRing_12ai5 {
+  position: absolute;
+  pointer-events: none;
+  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  animation: focusring_flash_1_-xA 0.5s ease,
+    focusring_growOutline_3T-jN 0.4s ease, focusring_fadeOutline_2Twjr 0.4s ease,
+    focusring_blinker_2AyMC 1.2s ease-in-out 0.4s 20;
+}
+.focusring_FocusRing_12ai5.focusring_DebugFocusRing_3GOCC {
+  outline-color: #ff0;
+}
+.focusring_FocusRingOnHiddenItem_1t6v5.focusring_DebugFocusRing_3GOCC {
+  outline-offset: 2px;
+  outline-color: red;
+  background-color: red;
+}
+@keyframes focusring_flash_1_-xA {
+  0% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes focusring_growOutline_3T-jN {
+  0% {
+    outline: 12px solid;
+  }
+  100% {
+    outline: 2px solid;
+  }
+}
+@keyframes focusring_fadeOutline_2Twjr {
+  0% {
+    outline-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    outline-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes focusring_blinker_2AyMC {
+  50% {
+    opacity: 0.4;
+  }
+}
 .scrollpanel_ScrollPanel_XQJ__ {
   position: relative;
 }
@@ -2786,35 +2817,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2PmTF svg {
   transition-property: transform, opacity;
   transition-duration: 80ms;
   transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
-}
-body.modals_BodyNoScroll_1R1WX {
-  overflow-y: hidden;
-  height: 100vh;
-}
-body.modals_BodyNoScrollDialog_R9GkI {
-  overflow-y: hidden;
-  height: 100vh;
-}
-.modals_OverlayModal_2c13a {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1500;
-}
-.modals_GamepadOnlyModalWrapper_hJDHj {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  max-height: 100vh;
-  overflow-y: scroll;
-}
-.modals_GamepadOnlyModalWrapper_hJDHj .modals_GamepadOnlyPanelWrapper_f7Zyz {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
 }
 :root {
   --basicui-header-height: 0px;
@@ -9160,9 +9162,13 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 15px;
   color: #afafaf;
   font-size: 12px;
+}
+.newlogindialog_Login_3VsPM
+  .newlogindialog_EmbeddedRoot_2aujf
+  .newlogindialog_EmbeddedRootFooter_9AbKY:not(.newlogindialog_InClient_2dZVD) {
+  padding-top: 15px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_3VsPM

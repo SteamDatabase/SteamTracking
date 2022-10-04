@@ -852,6 +852,8 @@
         RedeemThrobber: "redeempointsmodal_RedeemThrobber_3weKx",
         PreviewLinkContainer: "redeempointsmodal_PreviewLinkContainer_2uwx7",
         PreviewLink: "redeempointsmodal_PreviewLink_1F7sB",
+        RedeemModalMobileScroll:
+          "redeempointsmodal_RedeemModalMobileScroll_37xDg",
       };
     },
     94215: (e) => {
@@ -1268,7 +1270,7 @@
         r = n(67294),
         a = n(7707),
         o = n(27745),
-        s = n(22975),
+        s = n(64839),
         l = n(90666);
       function c(e) {
         const { children: t, navTreeRef: n } = e,
@@ -1670,7 +1672,7 @@
         c = n.n(l),
         m = n(90666),
         d = n(93976),
-        p = n(22975),
+        p = n(64839),
         u = n(58114),
         _ = (n(21205), n(14974)),
         g = n(65497),
@@ -5784,7 +5786,7 @@
         l = n(22188),
         c = n(29323),
         m = n(13271),
-        d = n(22975),
+        d = n(64839),
         p = n(73727),
         u = n(29525),
         _ = n(84351),
@@ -7246,7 +7248,7 @@
               { navID: "RedeemPoints", closeModal: this.CloseModal },
               o.createElement(
                 Ae.TN,
-                null,
+                { className: u.RedeemModalMobileScroll },
                 o.createElement(
                   Mt,
                   null,
@@ -13034,7 +13036,7 @@
         );
       }
       var Gt = n(34425),
-        Ft = (n(12505), n(22975));
+        Ft = (n(12505), n(64839));
       n(60664), n(37464);
       const Ot = "FocusNavHistoryID";
       function zt(e) {

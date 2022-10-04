@@ -3783,6 +3783,7 @@ a.pulldown_mobile {
 		margin-bottom: 0;
 	}
 
+	html.responsive #responsive_store_search_overlay,
 	html.responsive #responsive_store_nav_overlay {
 		position: fixed;
 		top: 0;
@@ -3809,7 +3810,7 @@ a.pulldown_mobile {
 		max-height: 90vh;
 	}
 
-	html.responsive body.responsive_store_nav_overlay_visible {
+	html.responsive body.responsive_store_overlay_visible {
 		overflow-y: hidden;
 		touch-action: none;
 		-ms-touch-action: none;

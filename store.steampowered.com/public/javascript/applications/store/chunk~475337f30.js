@@ -82,8 +82,8 @@
         HeaderLogo: "newlogindialog_HeaderLogo_1rtyT",
         EmbeddedRoot: "newlogindialog_EmbeddedRoot_2Vbrf",
         EmbeddedRootFooter: "newlogindialog_EmbeddedRootFooter_1HRJ1",
-        AccountCreation: "newlogindialog_AccountCreation_19yGb",
         InClient: "newlogindialog_InClient_2GR-7",
+        AccountCreation: "newlogindialog_AccountCreation_19yGb",
         AccountCreationPrompt: "newlogindialog_AccountCreationPrompt_1h5_x",
         FailureTitle: "newlogindialog_FailureTitle_A3Y-u",
         FailureDescription: "newlogindialog_FailureDescription_3gFes",
@@ -390,7 +390,7 @@
         m = r(92742),
         d = r(26149),
         g = r(13271),
-        _ = r(22975),
+        _ = r(64839),
         h = r(75255),
         B = r(88514),
         b = (r(21205), r(65902)),
@@ -536,7 +536,7 @@
                       const e = new FormData();
                       e.append("clientid", i),
                         e.append("steamid", this.m_steamid);
-                      const t = `${u.De.LOGIN_BASE_URL}jwt/checkdevice`;
+                      const t = `${u.De.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                       try {
                         if (
                           1 ==
@@ -1343,74 +1343,81 @@
               })
           );
           if (x) {
-            let e = u.De.IN_CLIENT;
-            return n.createElement(
-              ke,
-              { gap: u.De.IN_LOGIN ? 36 : void 0, className: M().EmbeddedRoot },
-              !e && !1,
-              u.De.IN_LOGIN &&
-                n.createElement(xe, { className: M().HeaderLogo }),
-              n.createElement(Y, { refreshInfo: c }),
-              t,
+            let e,
+              r = u.De.IN_CLIENT;
+            return (
+              u.De.IN_LOGIN && (e = u.De.IN_CLIENT ? 28 : 36),
               n.createElement(
-                "div",
-                {
-                  className: (0, s.Z)(
-                    M().EmbeddedRootFooter,
-                    e && M().InClient
-                  ),
-                },
-                (function (e) {
-                  return e
-                    ? n.createElement(
-                        Te,
-                        {
-                          onClick: () => {
-                            SteamClient.LoginUI.ShowAccountRecovery();
-                          },
-                        },
-                        (0, D.Xx)("#Login_Help_SignIn")
-                      )
-                    : n.createElement(
-                        Te,
-                        {
-                          href: `${
-                            u.De.HELP_BASE_URL
-                          }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                            document.location.href
-                          )}`,
-                        },
-                        (0, D.Xx)("#Login_Help_SignIn")
-                      );
-                })(e),
+                ke,
+                { gap: e, className: M().EmbeddedRoot },
+                !r && !1,
+                u.De.IN_LOGIN &&
+                  n.createElement(xe, { className: M().HeaderLogo }),
+                n.createElement(Y, { refreshInfo: c }),
+                t,
                 n.createElement(
                   "div",
                   {
-                    className: (0, s.Z)(M().AccountCreation, e && M().InClient),
+                    className: (0, s.Z)(
+                      M().EmbeddedRootFooter,
+                      r && M().InClient
+                    ),
                   },
-                  n.createElement(
-                    "span",
-                    { className: M().AccountCreationPrompt },
-                    (0, D.Xx)("#Login_NoSteamAccount")
-                  ),
                   (function (e) {
                     return e
                       ? n.createElement(
                           Te,
                           {
-                            inline: !0,
                             onClick: () => {
-                              SteamClient.LoginUI.ShowAccountCreation();
+                              SteamClient.LoginUI.ShowAccountRecovery();
                             },
                           },
-                          (0, D.Xx)("#Login_CreateAccount")
+                          (0, D.Xx)("#Login_Help_SignIn")
                         )
                       : n.createElement(
                           Te,
-                          { inline: !0, href: `${u.De.STORE_BASE_URL}join/` },
-                          (0, D.Xx)("#Login_CreateAccount")
+                          {
+                            href: `${
+                              u.De.HELP_BASE_URL
+                            }wizard/HelpWithLogin?redir=${encodeURIComponent(
+                              document.location.href
+                            )}`,
+                          },
+                          (0, D.Xx)("#Login_Help_SignIn")
                         );
-                  })(e)
+                  })(r),
+                  n.createElement(
+                    "div",
+                    {
+                      className: (0, s.Z)(
+                        M().AccountCreation,
+                        r && M().InClient
+                      ),
+                    },
+                    n.createElement(
+                      "span",
+                      { className: M().AccountCreationPrompt },
+                      (0, D.Xx)("#Login_NoSteamAccount")
+                    ),
+                    (function (e) {
+                      return e
+                        ? n.createElement(
+                            Te,
+                            {
+                              inline: !0,
+                              onClick: () => {
+                                SteamClient.LoginUI.ShowAccountCreation();
+                              },
+                            },
+                            (0, D.Xx)("#Login_CreateAccount")
+                          )
+                        : n.createElement(
+                            Te,
+                            { inline: !0, href: `${u.De.STORE_BASE_URL}join/` },
+                            (0, D.Xx)("#Login_CreateAccount")
+                          );
+                    })(r)
+                  )
                 )
               )
             );
@@ -3664,6 +3671,9 @@
                   time: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   ip: { n: 2, c: a.j7 },
                   locale: { n: 3, br: n.FE.readString, bw: n.Xc.writeString },
+                  country: { n: 4, br: n.FE.readString, bw: n.Xc.writeString },
+                  state: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
+                  city: { n: 6, br: n.FE.readString, bw: n.Xc.writeString },
                 },
               }),
             R.sm_m

@@ -3793,24 +3793,28 @@
           );
         }
         GetFormattedSteamReleaseDate() {
-          var e;
+          var e, t, i;
           if (
             (this.BCheckDataRequestIncluded({ include_release: !0 }),
-            this.m_ReleaseInfo.is_coming_soon &&
-              this.m_ReleaseInfo.coming_soon_display)
+            (null === (e = this.m_ReleaseInfo) || void 0 === e
+              ? void 0
+              : e.is_coming_soon) &&
+              (null === (t = this.m_ReleaseInfo) || void 0 === t
+                ? void 0
+                : t.coming_soon_display))
           )
             return (0, c.y)(this.m_ReleaseInfo);
-          const t = this.GetReleaseDateRTime();
+          const r = this.GetReleaseDateRTime();
           return (
-            null === (e = this.m_ReleaseInfo) || void 0 === e
+            null === (i = this.m_ReleaseInfo) || void 0 === i
               ? void 0
-              : e.is_abridged_release_date
+              : i.is_abridged_release_date
           )
-            ? t
-              ? (0, o.LO)(new Date(1e3 * t))
+            ? r
+              ? (0, o.LO)(new Date(1e3 * r))
               : ""
-            : t
-            ? (0, a.vX)(t)
+            : r
+            ? (0, a.vX)(r)
             : "";
         }
         BIsComingSoon() {
@@ -5374,7 +5378,7 @@
         o = i(74163),
         l = i(77520),
         c = i(93976),
-        u = i(22975),
+        u = i(64839),
         d = i(90666);
       class m {
         constructor() {
@@ -5828,7 +5832,7 @@
         o = i(26149),
         l = (i(48966), i(78468)),
         c = i(77520),
-        u = i(22975);
+        u = i(64839);
       const d = "email_",
         m = "email_section_";
       var _;
@@ -6348,7 +6352,7 @@
         l = (i(82946), i(93976)),
         c = i(81130),
         u = i(99533),
-        d = i(22975),
+        d = i(64839),
         m = i(90666);
       const _ = "SaleEvent_DurationDiscount_Tooltip",
         p = "discount";
@@ -6794,7 +6798,7 @@
         m = (i(22453), i(82946), i(48780)),
         _ = i(93976),
         p = i(99533),
-        g = i(22975),
+        g = i(64839),
         h = i(90666),
         v = i(85948);
       const y = "section_",
@@ -8664,7 +8668,7 @@
         d = i(93976),
         m = i(81130),
         _ = i(99533),
-        p = i(22975),
+        p = i(64839),
         g = i(90666);
       class h {
         constructor() {
@@ -9194,7 +9198,7 @@
         o = (i(54698), i(5525)),
         l = (i(82946), i(93976)),
         c = i(99533),
-        u = i(22975),
+        u = i(64839),
         d = i(73604),
         m = i(90666);
       class _ {
@@ -9722,7 +9726,7 @@
       });
       var r = i(67294),
         n = (i(54698), i(99533)),
-        s = i(22975),
+        s = i(64839),
         a = i(90666);
       const o = "pn";
       class l {
@@ -9847,7 +9851,7 @@
         o = i(22188),
         l = (i(54698), i(82946), i(93976)),
         c = i(99533),
-        u = i(22975),
+        u = i(64839),
         d = i(73604),
         m = i(90666),
         _ = i(51477),
@@ -10727,7 +10731,7 @@
         u = (i(54698), i(5525)),
         d = (i(81238), i(18388)),
         m = i(99533),
-        _ = i(22975),
+        _ = i(64839),
         p = i(73604),
         g = i(30600),
         h = i(90666),
@@ -11431,7 +11435,7 @@
       var r = i(67294),
         n = (i(54698), i(5525)),
         s = i(99533),
-        a = i(22975),
+        a = i(64839),
         o = i(90666),
         l = i(85261),
         c = i(46994),

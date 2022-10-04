@@ -1595,24 +1595,28 @@
           );
         }
         GetFormattedSteamReleaseDate() {
-          var e;
+          var e, t, r;
           if (
             (this.BCheckDataRequestIncluded({ include_release: !0 }),
-            this.m_ReleaseInfo.is_coming_soon &&
-              this.m_ReleaseInfo.coming_soon_display)
+            (null === (e = this.m_ReleaseInfo) || void 0 === e
+              ? void 0
+              : e.is_coming_soon) &&
+              (null === (t = this.m_ReleaseInfo) || void 0 === t
+                ? void 0
+                : t.coming_soon_display))
           )
             return u(this.m_ReleaseInfo);
-          const t = this.GetReleaseDateRTime();
+          const s = this.GetReleaseDateRTime();
           return (
-            null === (e = this.m_ReleaseInfo) || void 0 === e
+            null === (r = this.m_ReleaseInfo) || void 0 === r
               ? void 0
-              : e.is_abridged_release_date
+              : r.is_abridged_release_date
           )
-            ? t
-              ? (0, o.LO)(new Date(1e3 * t))
+            ? s
+              ? (0, o.LO)(new Date(1e3 * s))
               : ""
-            : t
-            ? (0, a.vX)(t)
+            : s
+            ? (0, a.vX)(s)
             : "";
         }
         BIsComingSoon() {
@@ -3629,7 +3633,7 @@
       var s = r(9669),
         i = r.n(s),
         n = r(67294),
-        a = (r(49727), r(54698), r(990), r(22975)),
+        a = (r(49727), r(54698), r(990), r(64839)),
         o = (r(14146), r(159));
       function l(e, t, r, s) {
         const a = (0, n.useRef)(),

@@ -344,6 +344,21 @@ textarea.gray {
 	margin-left: 72px;
 }
 
+.form_readonly_block {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.form_readonly_block.legacy_settings {
+    border: 1px solid #777777;
+    border-left: 3px solid orange;
+    padding: 16px;
+}
+
+.legacy_title {
+    color: orange;
+}
+
 .imagelanguagelist {
 	overflow: auto;
 }

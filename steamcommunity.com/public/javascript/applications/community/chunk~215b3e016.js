@@ -82,8 +82,8 @@
         HeaderLogo: "newlogindialog_HeaderLogo_1rtyT",
         EmbeddedRoot: "newlogindialog_EmbeddedRoot_2Vbrf",
         EmbeddedRootFooter: "newlogindialog_EmbeddedRootFooter_1HRJ1",
-        AccountCreation: "newlogindialog_AccountCreation_19yGb",
         InClient: "newlogindialog_InClient_2GR-7",
+        AccountCreation: "newlogindialog_AccountCreation_19yGb",
         AccountCreationPrompt: "newlogindialog_AccountCreationPrompt_1h5_x",
         FailureTitle: "newlogindialog_FailureTitle_A3Y-u",
         FailureDescription: "newlogindialog_FailureDescription_3gFes",
@@ -1445,9 +1445,10 @@
             r = o(e, "refreshcaptcha"),
             i = "";
           try {
-            let e = yield a().post(r, t);
-            if (200 != e.status) return !1;
-            i = e.data.gid;
+            let e = { "Content-Type": "multipart/form-data" },
+              n = yield a().post(r, t, { headers: e });
+            if (200 != n.status) return !1;
+            i = n.data.gid;
           } catch (e) {
             return !1;
           }
@@ -1478,20 +1479,21 @@
               let i,
                 n = o(e, "getrsakey");
               try {
-                let e = yield a().post(n, r);
-                if (200 != e.status) return null;
-                let t = e.data;
+                let e = { "Content-Type": "multipart/form-data" },
+                  t = yield a().post(n, r, { headers: e });
+                if (200 != t.status) return null;
+                let s = t.data;
                 if (
                   !(
-                    t &&
-                    t.success &&
-                    t.publickey_mod &&
-                    t.publickey_exp &&
-                    t.timestamp
+                    s &&
+                    s.success &&
+                    s.publickey_mod &&
+                    s.publickey_exp &&
+                    s.timestamp
                   )
                 )
                   return null;
-                i = t;
+                i = s;
               } catch (e) {
                 return null;
               }
@@ -1521,6 +1523,7 @@
               let u,
                 d = o(e, "dologin");
               try {
+                c.headers = { "Content-Type": "multipart/form-data" };
                 let e = yield a().post(d, s, c);
                 if (200 != e.status) return null;
                 let t = e.data;
@@ -1550,7 +1553,7 @@
         m = r(92742),
         d = r(26149),
         h = r(13271),
-        g = r(22975),
+        g = r(64839),
         f = r(75255),
         _ = r(88514),
         p = (r(21205), r(65902)),
@@ -1696,7 +1699,7 @@
                       const e = new FormData();
                       e.append("clientid", i),
                         e.append("steamid", this.m_steamid);
-                      const t = `${u.De.LOGIN_BASE_URL}jwt/checkdevice`;
+                      const t = `${u.De.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                       try {
                         if (
                           1 ==
@@ -2187,9 +2190,9 @@
           p = 4 === l,
           b = 3 === l,
           B = b
-            ? n.createElement(I, null)
+            ? n.createElement(j, null)
             : p
-            ? n.createElement(j, { reset: d })
+            ? n.createElement(I, { reset: d })
             : _
             ? n.createElement(D, { size: "small" })
             : null,
@@ -2242,7 +2245,7 @@
           ),
         });
       }
-      function j(e) {
+      function I(e) {
         return n.createElement(
           "svg",
           {
@@ -2271,7 +2274,7 @@
           })
         );
       }
-      function I() {
+      function j() {
         return n.createElement(
           "svg",
           {
@@ -2390,7 +2393,7 @@
             disableQR: o,
             autoFocus: l,
             refreshInfo: c,
-            renderSuccess: d = () => n.createElement(je, null),
+            renderSuccess: d = () => n.createElement(Ie, null),
           } = e,
           g = ({
             bSuccess: e,
@@ -2462,8 +2465,8 @@
           [N, L] = (0, n.useState)(""),
           [W, x] = (0, n.useState)(!0),
           D = H(),
-          j = !(0 === p || 1 === p || 2 === p),
-          I = () => (k && N ? S(k, N, W) : Promise.resolve(0)),
+          I = !(0 === p || 1 === p || 2 === p),
+          j = () => (k && N ? S(k, N, W) : Promise.resolve(0)),
           U = () => {
             console.log(`Logging in offline with username ${k}`),
               SteamClient.User.SetLoginCredentials(k, N, W);
@@ -2476,7 +2479,7 @@
               ? void 0
               : t.login_token_id) && T(e.refreshInfo.login_token_id);
           }, [e.refreshInfo]),
-          !j)
+          !I)
         ) {
           const t = n.createElement(
             "div",
@@ -2488,7 +2491,7 @@
               onPasswordChange: L,
               bRememberMe: W,
               onRememberMeChange: x,
-              onSubmit: I,
+              onSubmit: j,
               status: p,
               autoFocus: l,
               refreshInfo: e.refreshInfo,
@@ -2503,74 +2506,81 @@
               })
           );
           if (D) {
-            let e = u.De.IN_CLIENT;
-            return n.createElement(
-              ke,
-              { gap: u.De.IN_LOGIN ? 36 : void 0, className: M().EmbeddedRoot },
-              !e && !1,
-              u.De.IN_LOGIN &&
-                n.createElement(De, { className: M().HeaderLogo }),
-              n.createElement(Y, { refreshInfo: c }),
-              t,
+            let e,
+              r = u.De.IN_CLIENT;
+            return (
+              u.De.IN_LOGIN && (e = u.De.IN_CLIENT ? 28 : 36),
               n.createElement(
-                "div",
-                {
-                  className: (0, s.Z)(
-                    M().EmbeddedRootFooter,
-                    e && M().InClient
-                  ),
-                },
-                (function (e) {
-                  return e
-                    ? n.createElement(
-                        ze,
-                        {
-                          onClick: () => {
-                            SteamClient.LoginUI.ShowAccountRecovery();
-                          },
-                        },
-                        (0, X.Xx)("#Login_Help_SignIn")
-                      )
-                    : n.createElement(
-                        ze,
-                        {
-                          href: `${
-                            u.De.HELP_BASE_URL
-                          }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                            document.location.href
-                          )}`,
-                        },
-                        (0, X.Xx)("#Login_Help_SignIn")
-                      );
-                })(e),
+                ke,
+                { gap: e, className: M().EmbeddedRoot },
+                !r && !1,
+                u.De.IN_LOGIN &&
+                  n.createElement(De, { className: M().HeaderLogo }),
+                n.createElement(Y, { refreshInfo: c }),
+                t,
                 n.createElement(
                   "div",
                   {
-                    className: (0, s.Z)(M().AccountCreation, e && M().InClient),
+                    className: (0, s.Z)(
+                      M().EmbeddedRootFooter,
+                      r && M().InClient
+                    ),
                   },
-                  n.createElement(
-                    "span",
-                    { className: M().AccountCreationPrompt },
-                    (0, X.Xx)("#Login_NoSteamAccount")
-                  ),
                   (function (e) {
                     return e
                       ? n.createElement(
                           ze,
                           {
-                            inline: !0,
                             onClick: () => {
-                              SteamClient.LoginUI.ShowAccountCreation();
+                              SteamClient.LoginUI.ShowAccountRecovery();
                             },
                           },
-                          (0, X.Xx)("#Login_CreateAccount")
+                          (0, X.Xx)("#Login_Help_SignIn")
                         )
                       : n.createElement(
                           ze,
-                          { inline: !0, href: `${u.De.STORE_BASE_URL}join/` },
-                          (0, X.Xx)("#Login_CreateAccount")
+                          {
+                            href: `${
+                              u.De.HELP_BASE_URL
+                            }wizard/HelpWithLogin?redir=${encodeURIComponent(
+                              document.location.href
+                            )}`,
+                          },
+                          (0, X.Xx)("#Login_Help_SignIn")
                         );
-                  })(e)
+                  })(r),
+                  n.createElement(
+                    "div",
+                    {
+                      className: (0, s.Z)(
+                        M().AccountCreation,
+                        r && M().InClient
+                      ),
+                    },
+                    n.createElement(
+                      "span",
+                      { className: M().AccountCreationPrompt },
+                      (0, X.Xx)("#Login_NoSteamAccount")
+                    ),
+                    (function (e) {
+                      return e
+                        ? n.createElement(
+                            ze,
+                            {
+                              inline: !0,
+                              onClick: () => {
+                                SteamClient.LoginUI.ShowAccountCreation();
+                              },
+                            },
+                            (0, X.Xx)("#Login_CreateAccount")
+                          )
+                        : n.createElement(
+                            ze,
+                            { inline: !0, href: `${u.De.STORE_BASE_URL}join/` },
+                            (0, X.Xx)("#Login_CreateAccount")
+                          );
+                    })(r)
+                  )
                 )
               )
             );
@@ -3688,7 +3698,7 @@
           })
         );
       }
-      function je() {
+      function Ie() {
         return n.createElement(
           ke,
           { alignItems: "center", justifyContent: "center" },
@@ -4824,6 +4834,9 @@
                   time: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   ip: { n: 2, c: a.j7 },
                   locale: { n: 3, br: n.FE.readString, bw: n.Xc.writeString },
+                  country: { n: 4, br: n.FE.readString, bw: n.Xc.writeString },
+                  state: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
+                  city: { n: 6, br: n.FE.readString, bw: n.Xc.writeString },
                 },
               }),
             v.sm_m
@@ -5539,7 +5552,7 @@
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var x, D, j;
+      var x, D, I;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, l, {
@@ -5667,7 +5680,7 @@
                 ePrivilege: 1,
               });
             });
-        })(j || (j = {}));
+        })(I || (I = {}));
     },
     99925: (e, t, r) => {
       "use strict";

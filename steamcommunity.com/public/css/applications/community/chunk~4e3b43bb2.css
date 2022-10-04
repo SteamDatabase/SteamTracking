@@ -1227,9 +1227,10 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 }
 .discussionwidget_linkField_1mRpV {
   font-size: 12px;
+  align-items: center;
+  margin-top: 10px;
 }
 .discussionwidget_linkField_1mRpV span {
-  padding-top: 9px;
   padding-right: 10px;
   padding-left: 2px;
 }
@@ -1265,9 +1266,11 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 }
 .discussionwidget_LinkInput_2IeAw {
   flex-grow: 10;
-  padding-left: 8px;
-  padding-right: 8px;
-  min-width: 400px;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #909090;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
@@ -1275,6 +1278,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   outline: none;
   font-family: "Motiva Sans", Sans-serif;
   resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 700px) {
   .discussionwidget_LinkInput_2IeAw {
@@ -5601,7 +5607,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 .broadcast_embeddable_viewer_bar_2t4Yv
   .broadcast_embeddable_viewer_links_15u7W
@@ -5610,6 +5616,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   width: 16px;
   height: 16px;
   margin-right: 4px;
+  fill: #fff;
 }
 @media screen and (max-width: 768px) {
   .broadcast_embeddable_viewer_bar_2t4Yv

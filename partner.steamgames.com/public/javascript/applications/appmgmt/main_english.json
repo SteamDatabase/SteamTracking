@@ -683,6 +683,10 @@
     "App_Landing_ReleaseDateStoreListing": "When selecting a non-specific format such as 'Month Year' or 'Year', your game will be sorted in lists to be at the end of the selected time period.",
     "App_Landing_NeedHelpWithReleaseDates": "Need help with release dates? <1>Documentation</1> | <2>Steamworks support</2>",
     "App_Landing_NoDateSelected": "No release date selected",
+    "App_Landing_SpecifiedReleaseDate": "Specified release date:",
+    "App_Landing_UnsetReleaseDate": "Unset",
+    "App_Landing_CustomersSeeReleaseDate": "Customers see this display:",
     "GameEdit_ComingSoonDisplayEntry": "If your title is coming soon, you can use this setting to choose how your intended release appears on the store.",
+    "GameEdit_ComingSoon_SelectAnOption": "Select an option...",
     "dummy": "dummy"
 }

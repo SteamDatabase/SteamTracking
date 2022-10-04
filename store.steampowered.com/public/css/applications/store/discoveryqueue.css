@@ -103,6 +103,7 @@
   line-height: 1.4;
   backdrop-filter: blur(6px);
   color: #dcdedf;
+  scrollbar-width: none;
 }
 .discoveryqueuewizard_DiscoveryQueueCarouselCtn_1GFC6
   .discoveryqueuewizard_TextLink_1hQVC {
@@ -222,6 +223,7 @@
   row-gap: 8px;
   overflow: scroll;
   -webkit-mask-image: linear-gradient(black 94%, transparent);
+  scrollbar-width: none;
 }
 .BasicUI
   .discoveryqueuewizard_AppDetailsCtn_2E1O4
@@ -813,4 +815,22 @@
 }
 .ContentHubMainCarouselCapsule .discoveryqueuewizard_WhyRelevant_WBWfZ {
   font-size: 15px;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA {
+  text-align: center;
+  margin-top: 16px;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDot_2f92W {
+  margin-left: 4px;
+  margin-right: 4px;
+  opacity: 30%;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDotActive_2oIov {
+  opacity: 80%;
+}
+.discoveryqueuewizard_ProgressCtn_1IvtA
+  .discoveryqueuewizard_ProgressDotHidden_n2UAY {
+  opacity: 0%;
 }

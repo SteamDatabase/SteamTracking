@@ -6805,7 +6805,6 @@ html.touch
   border-radius: 2px;
   cursor: pointer;
   white-space: nowrap;
-  margin: 0 3px;
   padding: 0 10px;
 }
 .demobutton_DemoButton_1GAs9.demobutton_DisabledButton_2TQ4l,
@@ -7556,6 +7555,28 @@ html.responsive.touch
   scroll-padding: 0px 64px;
   width: 100%;
 }
+@media screen and (max-width: 910px) {
+  html.responsive.touch
+    .partnersaledisplay_SaleSectionTabs_2xKqp
+    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px 10px;
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 910px) and (max-width: 910px) {
+  html:not(.force_desktop)
+    .partnersaledisplay_SaleSectionTabs_2xKqp
+    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0px 10px;
+    overflow-x: scroll;
+  }
+}
 .partnersaledisplay_SaleSectionTabs_2xKqp
   .partnersaledisplay_SaleSectionTabsRow_2Zyym {
   margin: 0px auto;
@@ -7851,9 +7872,10 @@ html.responsive.touch
 }
 .discussionwidget_linkField_1mRpV {
   font-size: 12px;
+  align-items: center;
+  margin-top: 10px;
 }
 .discussionwidget_linkField_1mRpV span {
-  padding-top: 9px;
   padding-right: 10px;
   padding-left: 2px;
 }
@@ -7889,9 +7911,11 @@ html.responsive.touch
 }
 .discussionwidget_LinkInput_2IeAw {
   flex-grow: 10;
-  padding-left: 8px;
-  padding-right: 8px;
-  min-width: 400px;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #909090;
   background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid #000;
@@ -7899,6 +7923,9 @@ html.responsive.touch
   outline: none;
   font-family: "Motiva Sans", Sans-serif;
   resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 700px) {
   .discussionwidget_LinkInput_2IeAw {
@@ -14079,6 +14106,7 @@ ul li {
   font-size: 22px;
   color: #fff;
   font-weight: 200;
+  text-align: left;
 }
 .planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group {
   position: relative;
@@ -15115,8 +15143,25 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: row;
   gap: 8px;
 }
-.optin_admin_editor_InviteButtonRow_z70Aa > div {
+.optin_admin_editor_InviteButtonRow_z70Aa > div:first-child {
   flex-grow: 1;
+  margin-right: 30px;
+}
+.optin_admin_editor_InviteButtonRow_z70Aa > div button {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.optin_admin_editor_ShowAllInvitedRow_YH0Zz {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 20px;
+}
+.optin_admin_editor_ShowAllInvitedRow_YH0Zz > div button {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 .optin_admin_editor_NarrowInputField_3s6tX
   .DialogInput_Wrapper._DialogLayout
@@ -15199,6 +15244,19 @@ button.rbc-input::-moz-focus-inner {
   color: var(--main-editor-text-color);
   font-size: 14px;
   overflow-x: hidden;
+}
+.optin_admin_editor_InvitedAppHistoryDialog_1OeP6 {
+  max-width: 700px;
+}
+.optin_admin_editor_InvitedAppHistoryTable_Lp1p- {
+  width: 100%;
+}
+.optin_admin_editor_InvitedAppRow_2tiXs {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+}
+.optin_admin_editor_InvitedAppRow_2tiXs td {
+  padding: 2px 6px;
 }
 :root {
   --basicui-header-height: 0px;
