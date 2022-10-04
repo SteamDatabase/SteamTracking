@@ -1130,6 +1130,7 @@
  V_MakeFileSafeName
  V_MatchWildcardString
  V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ V_ParseSteamOpenURLExternalProtocol
  V_ParseURLQueryString
  V_RemoveChar
  V_RemoveDotSlashes

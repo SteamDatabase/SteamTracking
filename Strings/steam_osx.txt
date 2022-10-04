@@ -13,8 +13,8 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-$2
-$2
+0$2
+0$2
 __const
 __TEXT
 __objc_methname
@@ -140,15 +140,12 @@ h
 `A
 ?
 0
-(
-(
+D(
 t7f9
 9
-(
 0
 @
 @
-(
 l6
 @
 @
@@ -158,18 +155,17 @@ l6
 1
 $
 1
+p.
+k.
 Hi
 Hi
 Hi
 &
 &
+*.
 #6
-n&
-T'
 6
 '
-'
-3'
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -2227,7 +2223,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep 30 2022 17:54:50
+Startup - updater built Oct  4 2022 14:49:48
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2514,8 +2510,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep 30 2022
-17:54:51
+Oct  4 2022
+14:49:49
 crashhandler003
 steam
 Steam Executable Crash
@@ -2612,7 +2608,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-17:54:49
+14:49:47
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10377,7 +10373,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-17:52:55
+14:47:53
 Jan
 Feb
 Mar
@@ -12758,15 +12754,12 @@ T`7
 0
 ?
 0
-(
-(
+D(
 t7f9
 9
-(
 0
 @
 @
-(
 l6
 @
 @
@@ -12776,20 +12769,21 @@ l6
 1
 $
 1
+p.
+k.
 Hi
 Hi
 Hi
 &
 &
+*.
 #6
-n&
-T'
 6
 '
-'
-3'
 
 %
+'
+'
 '
 '
 &
@@ -12799,6 +12793,7 @@ T'
 0
 0
 P5
+&
 65
 
 0
@@ -12806,11 +12801,9 @@ P5
 5
 5
 5
-x/
-(&
+&
 @9
-&
-&
+8/
 
 0
 Ic
@@ -12867,44 +12860,48 @@ IcE
 .
 3
 V
+<-
 -
 -
 =
-y,
+w,
+v,
 2
 2
 2
+,
 ,
 ,
 ,
 =
 9
-Z+
-G+
+`+
+R+
 13
 +
 +
-+
-+
-+
 40
+s*
 0
 @
+["
 @
 I/
 /
 /
 c
 *
+w(
 M.
 (
 ^-
 >-
 '
 '
+a&
+]&
 @
 M9e
-&
 @
 @
 ?
@@ -13530,16 +13527,12 @@ to=
 @
 H=
 =
-h
 
 =
 @
 =
 @
 =*.*
-
-
-
 
 @
 @
@@ -13585,6 +13578,7 @@ E
 
 0
 0
+g
 @
 @
 @
@@ -13592,7 +13586,6 @@ E
 0
 0
 
-f
 Hc
 0
 0
@@ -13614,10 +13607,9 @@ P
 
 @
 @
+e
 0
-\
 =a
-,
 
 0
 Hi

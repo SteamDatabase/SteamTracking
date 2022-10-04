@@ -9155,61 +9155,65 @@
             return (null == e ? void 0 : e.length) > 0 ? e[0] : null;
           }, [i.jsondata.sale_sections]),
           _ = (0, Da.hc)(c, l);
-        return a.createElement(
-          f.Y,
-          {
-            placeholderHeight: "100vh",
-            rootMargin: o.HG,
-            className: (0, w.Z)(
-              v.SaleSection,
-              p().SaleSectionCtn,
-              "DiscoveryQueueCSS"
-            ),
-            style: (0, g.V)(s, i),
-          },
-          Boolean(_) &&
-            a.createElement(
-              "div",
-              null,
-              (0, A.Xx)("#DiscoveryQueue_SalePage_Exhausted")
-            ),
-          a.createElement(Oa, {
-            eStoreDiscoveryQueueType: c,
-            storePageFilter: l,
-            strQueueDescriptionOverride: u,
-            fnDisplaySummaryReward: Boolean(m)
-              ? (e) =>
-                  a.createElement(Ha, {
-                    relativeQueueCompleted: e,
-                    badgeRewardSection: m,
-                  })
-              : void 0,
-          })
-        );
+        return (0, ee.p)()
+          ? null
+          : a.createElement(
+              f.Y,
+              {
+                placeholderHeight: "100vh",
+                rootMargin: o.HG,
+                className: (0, w.Z)(
+                  v.SaleSection,
+                  p().SaleSectionCtn,
+                  "DiscoveryQueueCSS"
+                ),
+                style: (0, g.V)(s, i),
+              },
+              Boolean(_) &&
+                a.createElement(
+                  "div",
+                  null,
+                  (0, A.Xx)("#DiscoveryQueue_SalePage_Exhausted")
+                ),
+              a.createElement(Oa, {
+                eStoreDiscoveryQueueType: c,
+                storePageFilter: l,
+                strQueueDescriptionOverride: u,
+                fnDisplaySummaryReward: Boolean(m)
+                  ? (e) =>
+                      a.createElement(Ha, {
+                        relativeQueueCompleted: e,
+                        badgeRewardSection: m,
+                      })
+                  : void 0,
+              })
+            );
       }
       function Wa(e) {
         const { event: t, section: n, language: i } = e;
-        return a.createElement(
-          E.ZP,
-          { feature: "badgeprogress" },
-          a.createElement(
-            f.Y,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: o.HG,
-              className: (0, w.Z)(
-                v.SaleSection,
-                p().SaleSectionCtn,
-                "SaleQuizCSS"
-              ),
-              style: (0, g.V)(n, t),
-            },
-            a.createElement(Z.AO, { section: n, event: t, language: i }),
-            D.L7.logged_in
-              ? a.createElement(Za, Object.assign({}, e))
-              : a.createElement(qa, Object.assign({}, e))
-          )
-        );
+        return (0, ee.p)()
+          ? null
+          : a.createElement(
+              E.ZP,
+              { feature: "badgeprogress" },
+              a.createElement(
+                f.Y,
+                {
+                  placeholderHeight: "100vh",
+                  rootMargin: o.HG,
+                  className: (0, w.Z)(
+                    v.SaleSection,
+                    p().SaleSectionCtn,
+                    "SaleQuizCSS"
+                  ),
+                  style: (0, g.V)(n, t),
+                },
+                a.createElement(Z.AO, { section: n, event: t, language: i }),
+                D.L7.logged_in
+                  ? a.createElement(Za, Object.assign({}, e))
+                  : a.createElement(qa, Object.assign({}, e))
+              )
+            );
       }
       function qa(e) {
         var t;

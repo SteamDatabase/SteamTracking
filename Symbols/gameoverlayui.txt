@@ -267,6 +267,7 @@
  V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_MakeAbsolutePath
+ V_ParseSteamOpenURLExternalProtocol
  V_RemoveDotSlashes
  V_SetExtension
  V_SplitNumbers

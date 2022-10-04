@@ -154,6 +154,7 @@
  T V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ T V_ParseSteamOpenURLExternalProtocol
  T V_ParseURLQueryString
  T V_RemoveChar
  T V_RemoveDotSlashes
