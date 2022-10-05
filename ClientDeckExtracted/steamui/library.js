@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7557739";
+var CLSTAMP = "7560398";
 (() => {
   var e,
     t,
@@ -12622,9 +12622,9 @@ var CLSTAMP = "7557739";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 4 2022 : 14:02:05",
-                    BUILD_TIME_UTC: "Oct 4 2022 : 21:02:05",
-                    BUILD_RTIME_UTC: 1664917325,
+                    BUILD_TIME_LOCAL: "Oct 5 2022 : 11:23:47",
+                    BUILD_TIME_UTC: "Oct 5 2022 : 18:23:47",
+                    BUILD_RTIME_UTC: 1664994227,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -12741,7 +12741,7 @@ var CLSTAMP = "7557739";
             ["OverrideableResource", e],
             () =>
               (0, n.mG)(this, void 0, void 0, function* () {
-                const t = "/overrides" + e,
+                const t = "/uioverrides" + e,
                   r = (yield fetch(t, { method: "HEAD" })).ok;
                 return { bIsOverride: r, strUrl: r ? t : e };
               }),
