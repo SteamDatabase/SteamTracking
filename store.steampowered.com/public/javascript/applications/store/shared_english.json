@@ -1685,6 +1685,7 @@
     "Sale_BrowserSortOption_ContentHub_All": "All Items",
     "Sale_BrowserSortOption_ContentHub_All_ttip": "All matching items, sorted by sales rank",
     "Sale_BrowserSortOption_ContentHub_Suffix": "Content Hub",
+    "Sale_ItemBrowser_ShowFromBeginning": "Click here to view all matches from the beginning",
     "SalePage_WatchForDrop_Minutes_Developer": "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
     "SalePage_WatchForDrop_Minutes_CreatorNamed": "Watch the stream for %1$s minutes and get item drops from %2$s when the event is over!",
     "SalePage_WatchForDrop_Hours_Developer": "Watch the stream for %1$s hours and get item drops from the developer when the event is over!",

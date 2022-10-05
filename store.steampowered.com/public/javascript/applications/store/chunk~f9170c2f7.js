@@ -11280,6 +11280,7 @@
         "Haptics",
         "ControllerConfigurator",
         "FriendsUI/RemotePlay",
+        "SalePage",
       ];
       var l;
       !(function (e) {
