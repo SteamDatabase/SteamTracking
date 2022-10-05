@@ -3691,28 +3691,9 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   font-size: 22px;
   line-height: 28px;
 }
-.gamepadhomerecentgames_RecentGamesBackground_1SRox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.4;
-  filter: saturate(0.1);
-  transform: scale3d(0.975, 0.975, 1) translateY(-28px);
-}
 .gamepadhomerecentgames_RecentGamesBackgroundImage_3Mp8R {
   width: 100%;
   height: 100%;
-  -webkit-mask-image: -webkit-gradient(
-      linear,
-      left 80%,
-      left bottom,
-      from(black),
-      to(rgba(0, 0, 0, 0))
-    ),
-    -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0%, black), color-stop(5%, rgba(0, 0, 0, 0)), color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, black));
-  -webkit-mask-composite: source-out;
   object-fit: cover;
   animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   animation-duration: 0.5s;
@@ -3721,6 +3702,7 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
   opacity: 0.5;
+  will-change: transform, opacity;
 }
 .gamepadhomerecentgames_RecentGamesBackgroundImage_3Mp8R.gamepadhomerecentgames_OffScreen_Yk-I2.gamepadhomerecentgames_MoveLeft_30M_n {
   animation-name: gamepadhomerecentgames_InLeft2_1-Jey;
@@ -3738,9 +3720,45 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   animation-name: gamepadhomerecentgames_InLeft_22nzP;
   opacity: 0.5;
 }
+.gamepadhomerecentgames_RecentGamesBackgroundContainer_QNkOt,
+.gamepadhomerecentgames_RecentGamesBackgroundImages_30D-8 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
 .gamepadhomerecentgames_RecentGamesBackgroundContainer_QNkOt {
+  contain: strict;
+}
+.gamepadhomerecentgames_RecentGamesBackgroundImages_30D-8
+  .gamepadhomerecentgames_RecentGamesBackground_1SRox {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0.4;
+  filter: saturate(0.1);
+}
+.gamepadhomerecentgames_RecentGamesBackgroundFadeGradient_1ksIq {
+  contain: strict;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: -webkit-gradient(
+      linear,
+      left 80%,
+      left 90%,
+      from(rgba(21, 37, 51, 0)),
+      to(#152533)
+    ),
+    -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(1%, #152533), color-stop(5%, rgba(21, 37, 51, 0)), color-stop(95%, rgba(21, 37, 51, 0)), color-stop(99%, #152533));
 }
 @keyframes gamepadhomerecentgames_InRight_1HKCB {
   from {
