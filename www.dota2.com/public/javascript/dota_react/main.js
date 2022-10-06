@@ -13242,7 +13242,7 @@
                       playsInline: !0,
                       poster: "".concat(
                         h.Y.VIDEO_URL,
-                        "international2022/pa_persona_turntable.jpg"
+                        "international2022/pa_persona_turntable.png"
                       ),
                     },
                     o.createElement("source", {
@@ -13618,7 +13618,7 @@
                       className: Pe().PBShowcaseImg,
                       src: "".concat(
                         h.Y.IMG_URL,
-                        "international2022/prestige/pb_prestige_overlay.png"
+                        "international2022/prestige/pb_prestige_side_overlay.png"
                       ),
                       "data-aos": "fade-in",
                       "data-aos-duration": "1000",

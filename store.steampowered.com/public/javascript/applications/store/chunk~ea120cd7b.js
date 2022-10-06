@@ -2247,6 +2247,12 @@
             ? void 0
             : t.find((t) => t.unique_id == e);
         }
+        GetSaleSectionsByType(e) {
+          var t;
+          return null === (t = this.jsondata.sale_sections) || void 0 === t
+            ? void 0
+            : t.filter((t) => t.section_type == e);
+        }
         GetSaleSectionCount() {
           return this.jsondata.sale_sections.length;
         }
