@@ -864,6 +864,8 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
+${STORE_BASE_URL}reservation/ajaxcancelreservation
+${STORE_BASE_URL}reservation/ajaxdirectreservation
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
 ${STORE_BASE_URL}reservation/cancelreservation
 ${STORE_BASE_URL}sale/${sale_vanity_id}
