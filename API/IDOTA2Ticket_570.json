@@ -61,6 +61,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Valid Badge Type 3"
+                },
+                {
+                    "name": "ValidBadgeType4",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Valid Badge Type 4"
                 }
             ]
         }

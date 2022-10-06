@@ -4,27 +4,28 @@ __TEXT
 @.
 __text
 __TEXT
+Ie&
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-0"'
-0"'
 __gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
 __TEXT
+s3-
+s3-
 __objc_classname__TEXT
-y:-
-y:-
 __objc_methtype
 __TEXT
 (
 __unwind_info
 __TEXT
+,:-
+,:-
 __eh_frame
 __TEXT
 00.
@@ -77,7 +78,6 @@ __DATA
 y^
 __common
 __DATA
-SC
 H
 __LINKEDIT
 C
@@ -86,6 +86,7 @@ C
 @loader_path/gameoverlayui.dylib
 "
 C
+(6C
 P
 k
 l
@@ -134,9 +135,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-hG
 )
-p@D
 C
 23IClientParentalSettings
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
@@ -168,11 +167,13 @@ N19CRefreshLoginDialog24CCallback_OnLogonSuccessE
 9CCallbackI19CRefreshLoginDialog23SteamServersConnected_tLb0EE
 N19CRefreshLoginDialog24CCallback_OnLogonFailureE
 9CCallbackI19CRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
+N21CReactLoginDialogBase32CCallbackInternal_OnLogonSuccessE
+N21CReactLoginDialogBase32CCallbackInternal_OnLogonFailureE
 N24CReactRefreshLoginDialog24CCallback_OnLogonSuccessE
 9CCallbackI24CReactRefreshLoginDialog23SteamServersConnected_tLb0EE
 N24CReactRefreshLoginDialog24CCallback_OnLogonFailureE
 9CCallbackI24CReactRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
-20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKcS2_EE
+20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
 20IJSMethodCallHandler
 20CJSMethodCallHandlerI21CReactLoginDialogBaseJ9CSmartPtrI18CJSCallbackPromiseEEE
 21CSettingsSubBroadcast
@@ -8388,28 +8389,33 @@ Auth.SetLoginToken
 System.GetOSType
 Auth.GetRefreshInfo
 Auth.GetLoginUIStyle
+Unexpected reentrancy
 reason
 account_name
 login_token_id
 Failed to connect to servers after login refresh: %d
+Success
+Login failure
 CRefreshLoginDialog
 vgui::Frame
 CRefreshLoginDialog::OnLogonSuccess
 CRefreshLoginDialog::OnLogonFailure
 CReactLoginDialogBase
 BrowserDraggableRegionsChanged
+CReactLoginDialogBase::OnLogonSuccess
+CReactLoginDialogBase::OnLogonFailure
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+m_iRefs > 0 && m_iRefs < 0x1000000
 CReactRefreshLoginDialog
 CReactRefreshLoginDialog::OnLogonSuccess
 CReactRefreshLoginDialog::OnLogonFailure
 Frame
+m_iRefs >= 0 && m_iRefs < 0x0ffffff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+m_pObj == NULL
 m_p == NULL
 %s requires %d arguments; only %d given
 %s call had invalid argument (arg %d)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
-m_iRefs > 0 && m_iRefs < 0x1000000
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
-m_pObj == NULL
 SettingsSubBroadcast
 BroadcastStatus
 #Steam_Settings_Broadcast_StatusNotBroadcast
@@ -9890,8 +9896,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Oct  4 2022
-14:49:57
+Oct  5 2022
+17:32:44
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13757,21 +13763,28 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-&B
-M&
+B
 Ic
-"
+&
+&
+&
+&
 p
 0
+&
 0
 p
 0
+!
 &
-&
-)$
-A
-u
-&%
+-
+-
+-
+#
+|A
+#-
+7%
+}%
 j
 j
 j
@@ -13781,13 +13794,16 @@ j
 j
 j
 j
-&
-VA
+.
+^A
 %
 %
 0
 %
 $
+,
+,
+,
 p
 0
 j
@@ -13798,40 +13814,15 @@ j
 j
 j
 j
-u$
-(
-#
 %
 j
-*#
 j
 j
 j
 j
 j
 j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+p$
 j
 j
 j
@@ -13856,24 +13847,56 @@ j
 j
 j
 j
-E$
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+#
+M$
+j
+j
+j
+j
+$
+j
+j
+$
+j
 $
 $
+j
+j
+$
+$
+j
+j
 $
 $
 j
 j
+$
+$
 j
 j
+$
 j
+$
 j
-j
-j
-j
-j
-j
-j
-j
+$
 j
 j
 j
@@ -13881,21 +13904,17 @@ j
 j
 j
 $
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
+b#
+y*
 0
+$
 A9]
 #
+#
+#
+#
 d
+d#
 j
 j
 j
@@ -13906,9 +13925,14 @@ j
 j
 j
 j
+#
 j
 j
 *
+C#
+:#
+7!
+%#
 
 
 
@@ -13917,11 +13941,20 @@ j
 @
 
 0
+'!
 #
 #
-]"
 #
-.
+#
+#
+#
+#
+#
+#
+p
+0
+p
+0
 p
 0
 #
@@ -13938,19 +13971,18 @@ p
 p
 0
 p
-0
-p
-0
 p
 p
-p
+$"
 @
 =
-%!
+!
 
 0
 0
 \
+7"
+m!
 j
 j
 j
@@ -13977,25 +14009,21 @@ j
 j
 j
 j
-=
-=
 j
 j
 j
 "
 "
 "
-"
-)!
+A!
 !
 !
 !
 !
-!
-!
+((
 Hi
 (
-j!
+(
 j
 j
 j
@@ -14003,7 +14031,6 @@ j
 j
 j
 j
-!
 j
 j
 j
@@ -14013,14 +14040,10 @@ j
 0
 p
 0
-!!
-!
-!
-$
-4
+5
 #
-?<
 #
+V1
 #
 j
 j
@@ -14046,6 +14069,15 @@ j
 j
 j
 j
+'
+<
+<
+<
+<
+<
+<
+<
+<
 <
 <
 0
@@ -14058,8 +14090,7 @@ AT=
 D
 @
 @
-y#
-W
++
 @
 Hc
 Hc
@@ -14094,8 +14125,12 @@ IcE
 V
 =
 =
+O
+"
+,
+,
 @
-h+
+l+
 *
 @
 M9e
@@ -14116,8 +14151,6 @@ M9e
 ?
 ?
 ?
-2
-2
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 i[
 i[
@@ -14294,28 +14327,33 @@ P
 |
 @
 @
-!
 
 d
 
 
 
+.'
 
-q
 A+M
 
 
 
-|&
+t7f9/l'
+'
+'
+'
 j
 j
 j
 j
 j
 j
+
 =
 0
-L
+,&
+F
+C
 j
 j
 j
@@ -14327,7 +14365,6 @@ j
 j
 j
 j
-&
 
 j
 j
@@ -14358,6 +14395,7 @@ A+4$A+u
 =
 =
 @
+
 
 
 j
@@ -14420,15 +14458,10 @@ j
 j
 j
 j
-P!
+a!
 !
 !
-!
-!
-!
-!
-!
-!
+2!
 j
 j
 j

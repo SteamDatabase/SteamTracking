@@ -11241,9 +11241,9 @@
                   this.m_mapResults.get(p)
                 );
               }
-              S = (0, U.l)(e);
+              this.m_mapPromises.delete(p), (S = (0, U.l)(e));
             } catch (e) {
-              S = (0, U.l)(e);
+              this.m_mapPromises.delete(p), (S = (0, U.l)(e));
             }
             return (
               console.error(

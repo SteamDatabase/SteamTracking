@@ -888,12 +888,17 @@
   }
 }
 .newlogindialog_MutedErrorReference_2NH8k {
-  position: absolute;
   bottom: 0;
   right: 0;
   color: #555;
   font-size: 12px;
   padding: 8px 10px;
+}
+:not(.IN_CLIENT) .newlogindialog_MutedErrorReference_2NH8k {
+  position: absolute;
+}
+.IN_CLIENT .newlogindialog_MutedErrorReference_2NH8k {
+  position: fixed;
 }
 .qrcode_QRBits_3FhhK {
   display: grid;

@@ -1,8 +1,8 @@
 class IClientGameServerInternalMap
 {
 public:
-    virtual unknown_ret Unknown_5093296() = 0;
-    virtual unknown_ret Unknown_5093200() = 0;
+    virtual unknown_ret Unknown_5093280() = 0;
+    virtual unknown_ret Unknown_5093184() = 0;
     virtual unknown_ret SetSDRLogin(void*) = 0;
     virtual unknown_ret Unknown_4550736() = 0;
     virtual unknown_ret InitGameServerSerialized(void*,void*,void*,void*,void*,void*) = 0;

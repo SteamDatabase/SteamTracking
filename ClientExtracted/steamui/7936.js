@@ -2339,8 +2339,9 @@
             autoFocus: l,
             refreshInfo: c,
             renderSuccess: m = () => n.createElement(Oe, null),
+            lastResult: g,
           } = e,
-          g = ({
+          f = ({
             bSuccess: e,
             strRefreshToken: t,
             strAccessToken: r,
@@ -2355,22 +2356,22 @@
                 strNewGuardData: s,
               });
           },
-          f = u.De.IN_CLIENT ? H : V,
-          p = u.De.IN_CLIENT
+          p = u.De.IN_CLIENT ? H : V,
+          b = u.De.IN_CLIENT
             ? (e) => SteamClient.Auth.GetSteamGuardData(e)
             : null;
         let {
-          eStatus: b,
-          eFailureState: _,
-          strErrorReference: B,
-          strConfirmationAssociatedMessage: w,
-          strAccountName: C,
-          start: S,
-          reset: v,
-          addCode: R,
-          goBack: E,
-          useCodeOverride: T,
-          setTokenToRevoke: F,
+          eStatus: _,
+          eFailureState: B,
+          strErrorReference: w,
+          strConfirmationAssociatedMessage: C,
+          strAccountName: S,
+          start: v,
+          reset: R,
+          addCode: E,
+          goBack: T,
+          useCodeOverride: F,
+          setTokenToRevoke: z,
         } = (function (e) {
           const [t, r] = (0, n.useState)(new y(e));
           return (0, h.SZ)(() => ({
@@ -2397,24 +2398,24 @@
           }));
         })({
           transport: r,
-          onComplete: g,
-          onDeviceDetails: f,
-          onGetMachineAuth: p,
+          onComplete: f,
+          onDeviceDetails: p,
+          onGetMachineAuth: b,
         });
-        const [z, A] = (0, n.useState)(0),
-          [k, O] = (0, n.useState)(
+        const [A, k] = (0, n.useState)(0),
+          [O, j] = (0, n.useState)(
             null !== (t = null == c ? void 0 : c.account_name) && void 0 !== t
               ? t
               : ""
           ),
-          [j, N] = (0, n.useState)(""),
-          [I, x] = (0, n.useState)(!0),
-          L = D(),
-          U = !(0 === b || 1 === b || 2 === b),
-          X = () => (k && j ? S(k, j, I) : Promise.resolve(0)),
-          P = () => {
-            console.log(`Logging in offline with username ${k}`),
-              SteamClient.User.SetLoginCredentials(k, j, I);
+          [N, I] = (0, n.useState)(""),
+          [x, L] = (0, n.useState)(!0),
+          U = D(),
+          X = !(0 === _ || 1 === _ || 2 === _),
+          P = () => (O && N ? v(O, N, x) : Promise.resolve(0)),
+          G = () => {
+            console.log(`Logging in offline with username ${O}`),
+              SteamClient.User.SetLoginCredentials(O, N, x);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -2422,35 +2423,45 @@
             var t;
             (null === (t = e.refreshInfo) || void 0 === t
               ? void 0
-              : t.login_token_id) && F(e.refreshInfo.login_token_id);
+              : t.login_token_id) && z(e.refreshInfo.login_token_id);
           }, [e.refreshInfo]),
-          !U)
-        ) {
+          null != g && 1 != g)
+        )
+          return n.createElement(
+            "div",
+            { className: M().Login },
+            n.createElement(de, {
+              reset: () => window.location.reload(),
+              failure: d.NZ.Generic,
+              errorReference: g.toString(),
+            })
+          );
+        if (!X) {
           const t = n.createElement(
             "div",
             { className: M().SideBySide },
             n.createElement(q, {
-              strAccountName: k,
-              onAccountNameChange: O,
-              strPassword: j,
-              onPasswordChange: N,
-              bRememberMe: I,
-              onRememberMeChange: x,
-              onSubmit: X,
-              status: b,
+              strAccountName: O,
+              onAccountNameChange: j,
+              strPassword: N,
+              onPasswordChange: I,
+              bRememberMe: x,
+              onRememberMeChange: L,
+              onSubmit: P,
+              status: _,
               autoFocus: l,
               refreshInfo: e.refreshInfo,
             }),
             !o &&
               n.createElement(Q, {
                 transport: r,
-                onQRStatusChange: A,
-                onComplete: g,
+                onQRStatusChange: k,
+                onComplete: f,
                 platform: s,
                 refreshInfo: c,
               })
           );
-          if (L) {
+          if (U) {
             let e,
               r = u.De.IN_CLIENT;
             return (
@@ -2552,7 +2563,7 @@
           );
           return n.createElement(Ae, { title: i }, t);
         }
-        switch (b) {
+        switch (_) {
           case 1:
           case 13:
             return n.createElement(le, null);
@@ -2560,42 +2571,42 @@
           case 11:
           case 3:
           case 10:
-            const e = 5 === b || 11 === b;
+            const e = 5 === _ || 11 === _;
             return n.createElement(he, {
               type: e ? "mobile" : "email",
-              onSubmitCode: R,
-              status: b,
-              associatedLabel: w,
-              accountName: C,
-              onBack: E,
+              onSubmitCode: E,
+              status: _,
+              associatedLabel: C,
+              accountName: S,
+              onBack: T,
             });
           case 6:
           case 4:
-            const t = 6 === b;
+            const t = 6 === _;
             return n.createElement(Se, {
               type: t ? "mobile" : "email",
-              accountName: C,
-              onUseCodeOverride: T,
+              accountName: S,
+              onUseCodeOverride: F,
             });
           case 16:
-            return n.createElement(me, { reset: v });
+            return n.createElement(me, { reset: R });
           case 15:
             return n.createElement(de, {
-              reset: v,
-              failure: _,
-              onRequestOffline: P,
-              errorReference: B,
+              reset: R,
+              failure: B,
+              onRequestOffline: G,
+              errorReference: w,
             });
           case 14:
             return n.createElement(Ae, { compact: !0 }, m());
           default:
             return (
-              console.error(`Unknown Phase: ${b}`),
+              console.error(`Unknown Phase: ${_}`),
               n.createElement(de, {
-                reset: v,
+                reset: R,
                 failure: d.NZ.Generic,
-                onRequestOffline: P,
-                errorReference: B,
+                onRequestOffline: G,
+                errorReference: w,
               })
             );
         }
