@@ -6021,6 +6021,12 @@
           I = t.text_section_contents
             ? t.text_section_contents[n] || t.text_section_contents[y] || ""
             : void 0;
+        if (!h)
+          return a.createElement(C.V, {
+            size: "medium",
+            position: "center",
+            string: (0, L.Xx)("#Loading"),
+          });
         let G = null;
         return (
           h &&
@@ -14839,16 +14845,12 @@
               ? a.createElement(
                   a.Fragment,
                   null,
-                  a.createElement(
-                    "div",
-                    {
-                      className: (0, p.Z)(
-                        E.expecteddate_str,
-                        "ReservationShipDate"
-                      ),
-                    },
-                    (0, v.Xx)("#Sale_Reservation_ExpectedShipDate")
-                  ),
+                  a.createElement("div", {
+                    className: (0, p.Z)(
+                      E.expecteddate_str,
+                      "ReservationShipDate"
+                    ),
+                  }),
                   r.strLocalizedShippingMessage
                 )
               : a.createElement("span", null, " ")
@@ -15372,8 +15374,8 @@
         g = n(31933),
         v = n(26712);
       function h(e) {
-        const [t] = (0, g.Ar)("beta", !1);
-        return (t && m.L7.is_support) || e;
+        const [t] = (0, g.Ar)("beta", 0);
+        return Boolean(t && m.L7.is_support) || e;
       }
       function S(e) {
         const {
