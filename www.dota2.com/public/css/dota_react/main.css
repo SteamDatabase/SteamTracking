@@ -16543,7 +16543,13 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PersonaBreakdownHeight_rdgjG {
-  min-height: 900px;
+  height: 1425px;
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_PersonaBreakdownHeight_rdgjG {
+    height: 1730px;
+  }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PersonaBreakdownHeight_rdgjG
@@ -17035,13 +17041,27 @@ a {
   max-width: 750px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE {
-  height: 1000px;
+  .battlepasspageinternational2022_PBPrestigeHeight_2hcZ_ {
+  width: 100%;
+  height: 650px;
   border-top: 2px solid #952e46;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundle_1JgZv {
+  .battlepasspageinternational2022_PBPrestigeHeight_2hcZ_
+  .battlepasspageinternational2022_PBPrestige_3eEet {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 90%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -17053,25 +17073,16 @@ a {
   position: relative;
   text-align: center;
   height: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundleShowcaseVideo_1faLk {
+  .battlepasspageinternational2022_PBLoreHeightShowcaseVideo_4t_D- {
   width: 100%;
   max-width: 1000px;
   z-index: 1;
   margin: 40px 0px 0px 0px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundleTextContainer_2jwOn {
+  .battlepasspageinternational2022_PBLoreHeightTextContainer_1CiDc {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17084,69 +17095,97 @@ a {
   z-index: 3;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundleSubtitle_42EKJ {
+  .battlepasspageinternational2022_PBLoreHeightSubtitle_3is07 {
   margin-top: 10px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundleDesc_3l6MW {
+  .battlepasspageinternational2022_PBLoreHeightDesc_3vF71 {
   margin-top: 16px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundle_1JgZv
-  .battlepasspageinternational2022_PrestigeBundleShowcaseVideo_1faLk {
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW {
   width: 100%;
-  max-width: 1000px;
-  z-index: 1;
-  border: 1px solid;
-  border-image: linear-gradient(to bottom, #ea6953, #952e46);
-  border-image-slice: 1;
-  box-shadow: 0px 5px 20px #000;
-}
-@media (max-width: 900px) {
-  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-    .battlepasspageinternational2022_PrestigeBundle_1JgZv
-    .battlepasspageinternational2022_PrestigeBundleShowcaseVideo_1faLk {
-    margin: 40px 0px 0px 0px;
-  }
-}
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundle_1JgZv
-  .battlepasspageinternational2022_PrestigeBundleTextContainer_2jwOn {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBShowcaseVideoContainer_10HQL {
   width: 100%;
-  max-width: 800px;
-  text-align: center;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBShowcaseVideoContainer_10HQL
+  .battlepasspageinternational2022_PBShowcaseImg_3dPNT {
+  height: auto;
+  width: 100%;
+  max-width: 650px;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 0px 20px #224bac74);
 }
 @media (max-width: 1200px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-    .battlepasspageinternational2022_PrestigeBundle_1JgZv
-    .battlepasspageinternational2022_PrestigeBundleTextContainer_2jwOn {
-    bottom: 20px;
+    .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+    .battlepasspageinternational2022_PBLore_3wsPW
+    .battlepasspageinternational2022_PBShowcaseVideoContainer_10HQL
+    .battlepasspageinternational2022_PBShowcaseImg_3dPNT {
+    display: none;
   }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundle_1JgZv
-  .battlepasspageinternational2022_PrestigeBundleTextContainer_2jwOn
-  .battlepasspageinternational2022_PrestigeBundleSubitle_2ES5J {
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBShowcaseVideoContainer_10HQL
+  .battlepasspageinternational2022_PBShowcaseVideo_2GIMb {
+  width: 100%;
+  max-width: 1000px;
+  z-index: 1;
+  border: 2px solid;
+  border-image: linear-gradient(to top, #37816a, #65d89f);
+  border-image-slice: 1;
+  filter: drop-shadow(0px 0px 20px #000);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBLoreTextContainer_2lNw3 {
+  width: 100%;
+  max-width: 750px;
+  z-index: 1;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBLoreTextContainer_2lNw3
+  .battlepasspageinternational2022_PBLoreTitle_21Tzu {
+  margin-top: 2em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBLoreTextContainer_2lNw3
+  .battlepasspageinternational2022_PBLoreSubtitle_IRJ04 {
   margin-top: 0.5em;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_PrestigeBundleHeight_1SwCE
-  .battlepasspageinternational2022_PrestigeBundle_1JgZv
-  .battlepasspageinternational2022_PrestigeBundleTextContainer_2jwOn
-  .battlepasspageinternational2022_PrestigeBundleDesc_3l6MW {
+  .battlepasspageinternational2022_PBLoreHeight_2Vzqf
+  .battlepasspageinternational2022_PBLore_3wsPW
+  .battlepasspageinternational2022_PBLoreTextContainer_2lNw3
+  .battlepasspageinternational2022_PBLoreDesc_3GOca {
   margin-top: 1em;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -55021,7 +55060,12 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   padding-left: 20px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_AwaitingMobileConfIcon_2-LaW {
+  width: 40px;
+  color: #1a99ff;
+}
+.newlogindialog_Login_1sORI .newlogindialog_AwaitingEmailConfIcon_25Iz9 {
   width: 55px;
+  color: #1a99ff;
 }
 .newlogindialog_Login_1sORI .newlogindialog_LinkContainer_3r7XV {
   display: flex;
@@ -55328,9 +55372,13 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 15px;
   color: #afafaf;
   font-size: 12px;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_EmbeddedRoot_EKQN-
+  .newlogindialog_EmbeddedRootFooter_1t0uA:not(.newlogindialog_InClient_2_z8K) {
+  padding-top: 15px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_1sORI
@@ -55458,12 +55506,17 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   }
 }
 .newlogindialog_MutedErrorReference_2vwQi {
-  position: absolute;
   bottom: 0;
   right: 0;
   color: #555;
   font-size: 12px;
   padding: 8px 10px;
+}
+:not(.IN_CLIENT) .newlogindialog_MutedErrorReference_2vwQi {
+  position: absolute;
+}
+.IN_CLIENT .newlogindialog_MutedErrorReference_2vwQi {
+  position: fixed;
 }
 .qrcode_QRBits_22VuG {
   display: grid;

@@ -442,7 +442,12 @@
   padding-left: 20px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_AwaitingMobileConfIcon_2hLC_ {
+  width: 40px;
+  color: #1a99ff;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_AwaitingEmailConfIcon_3iM5L {
   width: 55px;
+  color: #1a99ff;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_LinkContainer_3yJHp {
   display: flex;
