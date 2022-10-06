@@ -15333,20 +15333,28 @@
         );
       }
       function u(e) {
-        var t, n;
+        var t, n, a;
         if (null == e ? void 0 : e.bDepositRequired) {
           if (
             (null === (t = e.rgDepositPackageInfo) || void 0 === t
               ? void 0
               : t.length) > 0 &&
-            0 == e.rgDepositPackageInfo.filter((e) => e.bVisible).length
+            0 == e.rgDepositPackageInfo.filter((e) => e.bVisible).length &&
+            (null === (n = null == e ? void 0 : e.rgReservationPackageInfo) ||
+            void 0 === n
+              ? void 0
+              : n.length) > 0 &&
+            0 ==
+              (null == e
+                ? void 0
+                : e.rgReservationPackageInfo.filter((e) => e.bVisible).length)
           )
             return !1;
         } else if (
-          (null === (n = null == e ? void 0 : e.rgReservationPackageInfo) ||
-          void 0 === n
+          (null === (a = null == e ? void 0 : e.rgReservationPackageInfo) ||
+          void 0 === a
             ? void 0
-            : n.length) > 0 &&
+            : a.length) > 0 &&
           0 ==
             (null == e
               ? void 0
