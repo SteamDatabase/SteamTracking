@@ -131,6 +131,7 @@
   scroll-snap-align: center;
   overflow: hidden;
   margin: 0 auto;
+  outline: none;
   transition: transform ease;
   transition-duration: 0.5s;
 }

@@ -1308,12 +1308,18 @@
           }, []),
           D = n.useCallback((e) => {
             (_.current.style.opacity = "0"),
-              v.current && (v.current.play(), (v.current.style.opacity = "1"));
+              v.current &&
+                (v.current.play().catch((e) => {
+                  console.error("Failed to play main trailer: ", e);
+                }),
+                (v.current.style.opacity = "1"));
           }, []),
           G = n.useCallback(() => {
             (y.current.style.opacity = "0"),
               _.current &&
-                (_.current.play(),
+                (_.current.play().catch((e) => {
+                  console.error("Failed to play microtrailer: ", e);
+                }),
                 (_.current.style.opacity = "1"),
                 (_.current.onended = D)),
               b(!0);
@@ -1349,7 +1355,6 @@
             className: s().AppMainCap,
             src: t.GetAssets().GetMainCapsuleURL(),
           }),
-          ";",
           !o &&
             t.GetAllTrailers().BHasTrailers() &&
             n.createElement(
@@ -1385,6 +1390,7 @@
                   {
                     className: (0, d.Z)(s().AppVideo, "Microtrailer"),
                     ref: _,
+                    preload: "auto",
                     playsInline: !0,
                     muted: !0,
                   },
@@ -1406,6 +1412,7 @@
                     ref: v,
                     onVolumeChange: R,
                     muted: Boolean(I),
+                    preload: "auto",
                     playsInline: !0,
                     loop: !0,
                     controls: !0,
