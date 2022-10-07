@@ -636,7 +636,7 @@
     "PricingDashboard_ShowCompactModeCheckBoxLabel": "compact view",
     "PricingDashboard_GuidelinesPickerDescription": "Select a price below to set that price for USD and apply recommended converted prices to all other currencies.",
     "PricingDashboard_ShowAllPackages": "Show all packages",
-    "PricingDashboard_ShowProposedChanges": "Show submitted for approval packages",
+    "PricingDashboard_ShowProposedChanges": "Show packages submitted for review",
     "PricingDashboard_ShowOnlyChangedPackages": "Show locally changed packages",
     "PricingDashboard_PriceIncreaseDisallowed": "You cannot raise the price of a subscription. Please contact Steam if you need to do this.",
     "PricingDashboard_PriceTooLow": "Price must be at least %1$s.",
