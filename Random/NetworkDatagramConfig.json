@@ -1,5 +1,5 @@
 {
-  "revision": 400,
+  "revision": 401,
   "certs": [
     "Ii4IARIgSJbwDpn/07/GHiGMKio0Vh18VN3D/hKzQGh6n0Yx9qpFHfAYY00dMh91KT6tfJIvitz8MkB8abvDa50KdIaizx/eKZL26MQ5is+3Xbt8YN6k3FeSImzcPPWE84v77+8n0GbkZaBj+uPJHbXgxZQmjOy9HokH",
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFHfAYY00dMh91KT6tfJIvitz8MkBkR1T/xN6234O5xVdANVkvztOFOg4C2u5x4SirXUjSxOxBbso7JSh6f/HorajFsL2WT0r/7pVQ/I8InxhMvG0I",
@@ -100,8 +100,8 @@
       "desc": "PW Guangdong 2",
       "geo": [ 113.15, 23.7 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -111,8 +111,8 @@
       "desc": "PW Guangdong 2 (Mobile)",
       "geo": [ 113.15, 23.7 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -148,8 +148,8 @@
       "desc": "PW Guangdong 2 (Telecom)",
       "geo": [ 113.15, 23.7 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -185,8 +185,8 @@
       "desc": "PW Guangdong 2 (Unicom)",
       "geo": [ 113.15, 23.7 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -275,10 +275,9 @@
       "desc": "Moses Lake",
       "geo": [ -119.28, 47.12 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": true,
       "partners": 3,
@@ -369,7 +368,7 @@
         "google"
       ],
       "num_gameservers": 4,
-      "partners": 16,
+      "partners": 0,
       "tier": 2
     },
     "gru": {
@@ -424,7 +423,7 @@
         "google"
       ],
       "num_gameservers": 8,
-      "partners": 16,
+      "partners": 0,
       "tier": 2
     },
     "guw1": {
@@ -434,17 +433,16 @@
         "google"
       ],
       "num_gameservers": 4,
-      "partners": 16,
+      "partners": 0,
       "tier": 2
     },
     "hkg": {
       "desc": "Hong Kong",
       "geo": [ 113.92, 22.31 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": true,
       "partners": 3,
@@ -679,7 +677,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -691,7 +689,7 @@
         "test"
       ],
       "num_gameservers": 4,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -703,7 +701,7 @@
         "test"
       ],
       "num_gameservers": 4,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -715,7 +713,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -727,7 +725,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -739,7 +737,7 @@
         "test"
       ],
       "num_gameservers": 4,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -747,12 +745,11 @@
       "desc": "Multiplay Dallas",
       "geo": [ -96.8, 32.78 ],
       "groups": [
-        "steam-global",
         "multiplay",
-        "valve"
+        "steam-global"
       ],
       "num_gameservers": 8,
-      "partners": 5,
+      "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -776,7 +773,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -788,7 +785,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -800,7 +797,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -812,7 +809,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -824,7 +821,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -843,7 +840,7 @@
         "test"
       ],
       "num_gameservers": 4,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -867,7 +864,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -879,7 +876,7 @@
         "test"
       ],
       "num_gameservers": 8,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -903,7 +900,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -915,7 +912,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -939,7 +936,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -951,7 +948,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -975,7 +972,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -999,7 +996,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -1011,7 +1008,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
@@ -1035,7 +1032,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -1047,7 +1044,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -1059,7 +1056,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -1071,7 +1068,7 @@
         "test"
       ],
       "num_gameservers": 0,
-      "partners": 4,
+      "partners": 0,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
     },
@@ -1082,7 +1079,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
-      "partners": 8,
+      "partners": 0,
       "tier": 2
     },
     "ord": {
@@ -1163,8 +1160,8 @@
       "desc": "PW Guangdong 1",
       "geo": [ 113.3, 23.1 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1191,8 +1188,8 @@
     "pwj": {
       "geo": [ 116.4, 38.3 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1220,8 +1217,8 @@
       "desc": "PW Hebei",
       "geo": [ 116.4, 39.9 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1252,8 +1249,8 @@
       "desc": "PW Wuhan",
       "geo": [ 114.2, 30.4 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1281,8 +1278,8 @@
       "desc": "PW Zhejiang",
       "geo": [ 120.5, 29.2 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1393,10 +1390,9 @@
       "desc": "Singapore",
       "geo": [ 103.83, 1.28 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": true,
       "partners": 3,
@@ -1432,8 +1428,8 @@
       "desc": "PW Shanghai",
       "geo": [ 121.5, 31.2 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1443,8 +1439,8 @@
       "desc": "PW Shanghai (Mobile)",
       "geo": [ 121.5, 31.2 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1480,8 +1476,8 @@
       "desc": "PW Shanghai (Telecom)",
       "geo": [ 121.5, 31.2 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1517,8 +1513,8 @@
       "desc": "PW Shanghai (Unicom)",
       "geo": [ 121.5, 31.2 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1557,8 +1553,8 @@
       "desc": "Shanghai (sha-4) Backbone",
       "geo": [ 121.53, 31.23 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1680,10 +1676,9 @@
       "desc": "Sydney",
       "geo": [ 151.21, -33.86 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": true,
       "partners": 3,
@@ -1711,8 +1706,8 @@
       "desc": "PW Tianjin",
       "geo": [ 117.1, 39.8 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": true,
       "partners": 2,
@@ -1722,8 +1717,8 @@
       "desc": "PW Tianjin (Mobile)",
       "geo": [ 117.1, 39.8 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1759,8 +1754,8 @@
       "desc": "PW Tianjin (Telecom)",
       "geo": [ 117.1, 39.8 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1796,8 +1791,8 @@
       "desc": "PW Tianjin (Unicom)",
       "geo": [ 117.1, 39.8 ],
       "groups": [
-        "steam-china",
-        "perfectworld"
+        "perfectworld",
+        "steam-china"
       ],
       "has_gameservers": false,
       "partners": 2,
@@ -1836,10 +1831,9 @@
       "desc": "Tokyo (North)",
       "geo": [ 139.68, 35.68 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": true,
       "partners": 3,
@@ -1871,10 +1865,9 @@
       "desc": "Tokyo (South)",
       "geo": [ 139.68, 35.68 ],
       "groups": [
-        "steam-global",
         "steam-china",
-        "valve",
-        "perfectworld"
+        "steam-global",
+        "valve"
       ],
       "has_gameservers": false,
       "partners": 3,
@@ -1965,7 +1958,7 @@
     [ "ams", "mlx1", 6 ],
     [ "ams", "mst1", 9 ],
     [ "ams", "oln1", 7 ],
-    [ "ams", "ord", 97 ],
+    [ "ams", "ord", 98 ],
     [ "ams", "par", 10 ],
     [ "ams", "sto", 20 ],
     [ "ams", "sto2", 20 ],
@@ -1975,7 +1968,7 @@
     [ "atl", "gru", 132 ],
     [ "atl", "guc1", 26 ],
     [ "atl", "iad", 13 ],
-    [ "atl", "lax", 65 ],
+    [ "atl", "lax", 66 ],
     [ "atl", "mas1", 16 ],
     [ "atl", "mat1", 0 ],
     [ "atl", "mch1", 18 ],
@@ -1998,7 +1991,7 @@
     [ "can", "cant", 0 ],
     [ "can", "canu", 0 ],
     [ "can", "fra", 179 ],
-    [ "can", "hkg", 6 ],
+    [ "can", "hkg", 5 ],
     [ "can", "mhk1", 3 ],
     [ "can", "msg1", 53 ],
     [ "can", "pwg", 2 ],
@@ -2014,7 +2007,7 @@
     [ "cant", "mhk1", 3 ],
     [ "cant", "pwg", 2 ],
     [ "canu", "fra", 179 ],
-    [ "canu", "hkg", 8 ],
+    [ "canu", "hkg", 9 ],
     [ "canu", "pwg", 3 ],
     [ "dfw", "eat", 49 ],
     [ "dfw", "fra", 123 ],
@@ -2026,7 +2019,7 @@
     [ "dfw", "mat1", 23 ],
     [ "dfw", "mch1", 25 ],
     [ "dfw", "mdc1", 37 ],
-    [ "dfw", "mdf1", 0 ],
+    [ "dfw", "mdf1", 1 ],
     [ "dfw", "mla1", 39 ],
     [ "dfw", "mmi1", 35 ],
     [ "dfw", "mmo1", 48 ],
@@ -2041,7 +2034,7 @@
     [ "dxb", "hkg", 106 ],
     [ "dxb", "maa", 42 ],
     [ "dxb", "mdb1", 0 ],
-    [ "dxb", "ord", 298 ],
+    [ "dxb", "ord", 299 ],
     [ "dxb", "sgp", 76 ],
     [ "eat", "fra", 162 ],
     [ "eat", "guw1", 4 ],
@@ -2053,7 +2046,7 @@
     [ "eat", "ord", 51 ],
     [ "eat", "sea", 2 ],
     [ "eze", "gru", 28 ],
-    [ "eze", "lax", 151 ],
+    [ "eze", "lax", 152 ],
     [ "eze", "lim", 49 ],
     [ "eze", "msp1", 33 ],
     [ "eze", "ord", 177 ],
@@ -2067,7 +2060,7 @@
     [ "fra", "jnb", 173 ],
     [ "fra", "lax", 149 ],
     [ "fra", "lhr", 14 ],
-    [ "fra", "maa", 352 ],
+    [ "fra", "maa", 353 ],
     [ "fra", "mad", 30 ],
     [ "fra", "mam1", 7 ],
     [ "fra", "mas1", 131 ],
@@ -2091,7 +2084,7 @@
     [ "fra", "mtp1", 187 ],
     [ "fra", "mty1", 186 ],
     [ "fra", "oln1", 12 ],
-    [ "fra", "ord", 102 ],
+    [ "fra", "ord", 103 ],
     [ "fra", "par", 9 ],
     [ "fra", "pwg", 180 ],
     [ "fra", "pwj", 158 ],
@@ -2104,7 +2097,7 @@
     [ "fra", "shat", 176 ],
     [ "fra", "shau", 176 ],
     [ "fra", "shb", 176 ],
-    [ "fra", "sto", 29 ],
+    [ "fra", "sto", 28 ],
     [ "fra", "sto2", 26 ],
     [ "fra", "tsn", 156 ],
     [ "fra", "tsnm", 156 ],
@@ -2130,7 +2123,7 @@
     [ "gru", "scl", 53 ],
     [ "guc1", "iad", 31 ],
     [ "guc1", "mch1", 13 ],
-    [ "guc1", "mdf1", 17 ],
+    [ "guc1", "mdf1", 19 ],
     [ "guc1", "msl1", 11 ],
     [ "guc1", "ord", 13 ],
     [ "guw1", "lax", 26 ],
@@ -2148,7 +2141,7 @@
     [ "hkg", "mty1", 58 ],
     [ "hkg", "pwg", 6 ],
     [ "hkg", "pwj", 39 ],
-    [ "hkg", "pwu", 44 ],
+    [ "hkg", "pwu", 45 ],
     [ "hkg", "pww", 41 ],
     [ "hkg", "pwz", 34 ],
     [ "hkg", "sea", 145 ],
@@ -2162,11 +2155,11 @@
     [ "hkg", "syd", 119 ],
     [ "hkg", "tsn", 39 ],
     [ "hkg", "tsnm", 57 ],
-    [ "hkg", "tsnt", 44 ],
+    [ "hkg", "tsnt", 43 ],
     [ "hkg", "tsnu", 38 ],
     [ "hkg", "tyo", 53 ],
     [ "hkg", "tyo1", 52 ],
-    [ "iad", "lax", 64 ],
+    [ "iad", "lax", 65 ],
     [ "iad", "mas1", 0 ],
     [ "iad", "mat1", 17 ],
     [ "iad", "mch1", 18 ],
@@ -2177,13 +2170,13 @@
     [ "iad", "mny1", 6 ],
     [ "iad", "msl1", 22 ],
     [ "iad", "mto1", 11 ],
-    [ "iad", "ord", 19 ],
+    [ "iad", "ord", 20 ],
     [ "jnb", "lhr", 165 ],
     [ "jnb", "msg1", 173 ],
     [ "jnb", "msp1", 148 ],
     [ "jnb", "par", 172 ],
     [ "jnb", "sto", 189 ],
-    [ "jnb", "syd", 448 ],
+    [ "jnb", "syd", 447 ],
     [ "lax", "lim", 102 ],
     [ "lax", "mla1", 0 ],
     [ "lax", "mpx1", 11 ],
@@ -2233,8 +2226,9 @@
     [ "mdc1", "mny1", 6 ],
     [ "mdc1", "mto1", 11 ],
     [ "mdc1", "ord", 19 ],
+    [ "mdf1", "mmi1", 32 ],
     [ "mdf1", "msa1", 27 ],
-    [ "mdf1", "ord", 20 ],
+    [ "mdf1", "ord", 21 ],
     [ "mfr1", "mlx1", 3 ],
     [ "mfr1", "mst1", 3 ],
     [ "mfr1", "ord", 139 ],
@@ -2298,12 +2292,12 @@
     [ "ord", "scl", 178 ],
     [ "ord", "sea", 47 ],
     [ "ord", "seo", 167 ],
-    [ "ord", "sto", 116 ],
+    [ "ord", "sto", 117 ],
     [ "ord", "sto2", 116 ],
-    [ "ord", "tyo", 144 ],
+    [ "ord", "tyo", 142 ],
     [ "ord", "tyo1", 140 ],
-    [ "ord", "vie", 114 ],
-    [ "ord", "waw", 118 ],
+    [ "ord", "vie", 116 ],
+    [ "ord", "waw", 117 ],
     [ "par", "vie", 21 ],
     [ "pwj", "pwu", 9 ],
     [ "pwj", "tsn", 2 ],
@@ -2311,7 +2305,7 @@
     [ "pwj", "tsnu", 1 ],
     [ "pwu", "tsn", 5 ],
     [ "pwu", "tsnm", 17 ],
-    [ "pwu", "tsnt", 15 ],
+    [ "pwu", "tsnt", 14 ],
     [ "pwu", "tsnu", 9 ],
     [ "pww", "pwz", 17 ],
     [ "pww", "sha", 17 ],
