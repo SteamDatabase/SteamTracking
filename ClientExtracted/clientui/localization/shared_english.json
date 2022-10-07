@@ -1214,11 +1214,16 @@
 
 	"Login_Error_Network_Title": "Connection Problem",
 	"Login_Error_Network_Description": "There was a problem communicating with Steam. Please try again later.",
+	"Login_Error_RateLimit_Title": "Too Many Retries",
+	"Login_Error_RateLimit_Description": "There have been too many sign in failures from your location in a short time period. Please wait and try again later.",
 	"Login_GoOffline_Description": "You can try running Steam in Offline Mode.",
 	"Login_GoOffline_Button": "Enter Offline Mode",
 
 	"Login_Error_Default_Description": "Something went wrong while attempting to sign you in. Please try again later.",
 	"Login_Error_MoveAuthenticator_Description": "There was a problem moving your authenticator. Please try again later.",
+
+	"Login_ConnectingToSteam": "Connecting to Steam",
+	"Login_LoadingAccountInfo": "Loading Account",
 
 	"Emoticon_Search": "Search Emoticons",
 	"AddonPicker_RecentlyUsed": "Recently Used",

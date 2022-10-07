@@ -15,8 +15,8 @@
       var l = n(67294),
         o = n(8199),
         a = n.n(o),
-        u = n(7952),
-        s = n(78869),
+        s = n(7952),
+        u = n(78869),
         i = n(37764),
         r = (n(74963), n(40792), n(38440)),
         c = n(70655),
@@ -28,7 +28,7 @@
         return (0, c.mG)(this, void 0, void 0, function* () {
           if (S) return;
           S = !0;
-          const e = s.De.LANGUAGE,
+          const e = u.De.LANGUAGE,
             t = m.LJ.GetLanguageFallback(e),
             n = e === t,
             [l, o] = yield Promise.all([(0, f.I2)(e), n ? null : (0, f.I2)(t)]);
@@ -66,16 +66,16 @@
             );
       }
       function v(e) {
-        let t = new r.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
+        let t = new r.J(u.De.WEBAPI_BASE_URL).GetServiceTransport(),
           [n, o] = (0, l.useState)(null);
-        const [u, c] = (0, l.useState)(!1);
+        const [s, c] = (0, l.useState)(!1);
         !(function (e) {
           (0, l.useEffect)(() => {
             (0, h.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
         })(t),
           (0, l.useEffect)(() => {
-            s.De.IN_LOGIN_REFRESH &&
+            u.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
                 1 != e.reason ? o(e) : o(null);
               }),
@@ -106,11 +106,11 @@
                   e.strRefreshToken,
                   e.strAccountName
                 ).then((e) => {
-                  console.log(
-                    `client login returned ${e.result} (${e.message})`
-                  ),
-                    f(e.result),
-                    null !== m && 1 != m && d(S + 1);
+                  const t = e.result,
+                    n = e.message;
+                  console.log(`client login returned ${t} (${n})`),
+                    f(t),
+                    1 != t && d(S + 1);
                 });
               const n =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
@@ -119,7 +119,7 @@
             platform: 1,
             embedded: !0,
             refreshInfo: n,
-            disableQR: !u,
+            disableQR: !s,
             lastResult: m,
           })
         );
@@ -128,14 +128,14 @@
         return l.createElement(
           "div",
           { className: a().TitleBar },
-          s.De.IN_LOGIN &&
+          u.De.IN_LOGIN &&
             l.createElement(
               "a",
               { href: "steam://close" },
               l.createElement(
                 "div",
                 { className: a().CloseButton },
-                l.createElement(u.X, null)
+                l.createElement(s.X, null)
               )
             )
         );

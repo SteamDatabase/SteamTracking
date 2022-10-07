@@ -1153,7 +1153,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 
 		if ( bLimitedUser )
 		{
-			ShowAlertDialog( 'Error', 'It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank" rel="noreferrer">Steam Support</a> for more info.' );
+			ShowAlertDialog( 'Error', 'It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank" rel="">Steam Support</a> for more info.' );
 			return;
 		}
 

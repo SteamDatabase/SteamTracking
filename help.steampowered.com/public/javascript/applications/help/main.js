@@ -200,6 +200,9 @@
         Medium: "newlogindialog_Medium_1LJg9",
         Large: "newlogindialog_Large_1PXJQ",
         MutedErrorReference: "newlogindialog_MutedErrorReference_2NH8k",
+        WaitingForTokenContainer:
+          "newlogindialog_WaitingForTokenContainer_dQzPZ",
+        Client: "newlogindialog_Client_1ZDxg",
       };
     },
     1105: (e) => {
@@ -41814,7 +41817,8 @@
             (e[(e.Generic = 1)] = "Generic"),
             (e[(e.Expired = 2)] = "Expired"),
             (e[(e.Network = 3)] = "Network"),
-            (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator");
+            (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator"),
+            (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded");
         })(q_ || (q_ = {})),
         (function (e) {
           (e[(e.k_Success = 0)] = "k_Success"),
@@ -41871,6 +41875,8 @@
                 return (
                   9 === r || 27 === r
                     ? (this.m_eFailureState = q_.Expired)
+                    : 84 === r
+                    ? (this.m_eFailureState = q_.RateLimitExceeded)
                     : (console.error(
                         `Failed to poll auth session. Result: ${r}`
                       ),
@@ -42133,6 +42139,14 @@
                           return (
                             this.SetFailureState(q_.Network, rg.EResult(20)), t
                           );
+                        case 84:
+                          return (
+                            this.SetFailureState(
+                              q_.RateLimitExceeded,
+                              rg.EResult(t)
+                            ),
+                            t
+                          );
                         default:
                           return (
                             console.error(
@@ -42200,7 +42214,7 @@
                         (this.m_eStatus = 4), this.StartPolling(!1);
                         break;
                       case 3:
-                        this.m_eStatus = 5;
+                        (this.m_eStatus = 5), this.StartPolling(!1);
                         break;
                       case 4:
                         (this.m_eStatus = 6), this.StartPolling(!1);
@@ -42271,6 +42285,12 @@
                   case 27:
                     return (
                       this.SetFailureState(q_.Expired, rg.EResult(s)),
+                      this.m_onCompleteCallback({ bSuccess: !1 }),
+                      s
+                    );
+                  case 84:
+                    return (
+                      this.SetFailureState(q_.RateLimitExceeded, rg.EResult(s)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       s
                     );
@@ -43080,7 +43100,6 @@
           return i.createElement(hf, { title: n }, t);
         }
         switch (h) {
-          case 1:
           case 13:
             return i.createElement(jg, null);
           case 5:
@@ -43518,8 +43537,23 @@
           { compact: !0 },
           i.createElement(
             lf,
-            { alignItems: "center" },
-            i.createElement(Ch, null)
+            {
+              alignItems: "center",
+              className: Rr(
+                ag().WaitingForTokenContainer,
+                S.IN_CLIENT && ag().Client
+              ),
+            },
+            i.createElement(Ch, { size: "xlarge" }),
+            i.createElement(
+              "div",
+              { className: Rr(ag().Description) },
+              Ss(
+                S.IN_CLIENT
+                  ? "#Login_ConnectingToSteam"
+                  : "#Login_LoadingAccountInfo"
+              )
+            )
           )
         );
       }
@@ -43571,6 +43605,11 @@
                 return {
                   title: Ss("#Error_Generic"),
                   description: Ss("#Login_Error_MoveAuthenticator_Description"),
+                };
+              case q_.RateLimitExceeded:
+                return {
+                  title: Ss("#Login_Error_RateLimit_Title"),
+                  description: Ss("#Login_Error_RateLimit_Description"),
                 };
               case q_.Generic:
               default:
@@ -43983,7 +44022,8 @@
               },
               autoFocus: !0,
             },
-            s
+            s,
+            { allowCharacter: (e) => /\w/g.test(e) }
           )
         );
       }
@@ -43998,20 +44038,23 @@
             disabled: l,
             loading: c,
             backupCode: u,
+            allowCharacter: d,
           } = e,
-          d = (0, i.useRef)([]),
-          m = () => n(d.current.map((e) => e.value)),
-          h = (e) => {
-            const t = e.target.nextElementSibling;
-            e.target.value && t && t.focus(), m();
-          },
+          m = (0, i.useRef)([]),
+          h = () => n(m.current.map((e) => e.value)),
           p = (e) => {
-            var t;
-            -1 === d.current.findIndex((e) => !!e.value)
-              ? null === (t = d.current[0]) || void 0 === t || t.select()
-              : e.target.select();
+            const t = e.target.value;
+            if (t && d && !d(t)) return;
+            const r = e.target.nextElementSibling;
+            e.target.value && r && r.focus(), h();
           },
           _ = (e) => {
+            var t;
+            -1 === m.current.findIndex((e) => !!e.value)
+              ? null === (t = m.current[0]) || void 0 === t || t.select()
+              : e.target.select();
+          },
+          g = (e) => {
             const t = e.target;
             if ("Backspace" === e.key || "Delete" === e.key) {
               const r =
@@ -44020,7 +44063,7 @@
                   : t.nextElementSibling;
               "" === t.value &&
                 r &&
-                ((r.value = ""), r.focus(), e.preventDefault(), m());
+                ((r.value = ""), r.focus(), e.preventDefault(), h());
             } else if ("ArrowLeft" === e.key || "ArrowRight" === e.key) {
               const r =
                 "ArrowLeft" === e.key
@@ -44029,7 +44072,7 @@
               r && (r.focus(), e.preventDefault());
             }
           },
-          g = (e) => {
+          f = (e) => {
             const t = e.clipboardData.getData("Text");
             let r = e.target,
               n = 0;
@@ -44038,21 +44081,21 @@
                 (r.value = t.charAt(n)),
                 (r = r.nextElementSibling),
                 n++;
-            m(), e.preventDefault(), s && s();
+            h(), e.preventDefault(), s && s();
           },
-          f = [];
+          b = [];
         for (let e = 0; e < t; e++)
-          f.push(
+          b.push(
             i.createElement("input", {
               type: "text",
               maxLength: 1,
               key: e,
-              ref: (t) => (d.current[e] = t),
-              onChange: h,
-              onFocus: p,
+              ref: (t) => (m.current[e] = t),
+              onChange: p,
+              onFocus: _,
               onClick: (e) => e.stopPropagation(),
-              onKeyDown: _,
-              onPaste: g,
+              onKeyDown: g,
+              onPaste: f,
               value: r[e] ? r[e][0] : "",
               autoComplete: "none",
               autoFocus: 0 === e && o,
@@ -44069,8 +44112,8 @@
               u && ag().BackupCode
             ),
             onClick: () => {
-              const e = d.current.find((e) => !e.value);
-              e ? e.focus() : d.current[d.current.length - 1].focus();
+              const e = m.current.find((e) => !e.value);
+              e ? e.focus() : m.current[m.current.length - 1].focus();
             },
           },
           c &&
@@ -44079,7 +44122,7 @@
               { className: ag().Loading },
               i.createElement(Hg, { size: "small" })
             ),
-          f
+          b
         );
       }
       function mf(e) {

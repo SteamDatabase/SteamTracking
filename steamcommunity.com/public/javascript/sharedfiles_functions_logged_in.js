@@ -58,7 +58,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 			return false;
 		case 112:
-			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.' );
+			ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="">Visit Steam Support</a> for more information.' );
 			return false;
 		case 21:
 			ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
@@ -70,7 +70,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'You cannot vote on this item because of an active game ban or VAC ban on your account.' );
 			return false;
 		case 24:
-			ShowAlertDialog( 'Error', 'You must <a href="https://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );
+			ShowAlertDialog( 'Error', 'You must <a href="https://store.steampowered.com/twofactor/manage" target="_blank" rel="">enable Steam Guard</a> before you can vote.' );
 			return false;
 		case 20:
 			ShowAlertDialog( 'Error', 'Voting on this item has ended. ' );
@@ -407,7 +407,7 @@ function ValidateVoteSuccess( transport )
 	}
 	else if ( transport.responseJSON.success == 24 )
 	{
-		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.' );
+		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="">Visit Steam Support</a> for more information.' );
 	}
 	else if ( transport.responseJSON.success == 16 )
 	{

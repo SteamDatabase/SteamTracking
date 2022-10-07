@@ -420,8 +420,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct  6 2022
-16:32:03
+Oct  7 2022
+15:28:40
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1781,13 +1781,14 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+(c9<Wk
  <Da
 %vmJ1
-\3>#
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+-DAS
 :v3DH
 }#ArE9
 \.h[z
@@ -1799,6 +1800,7 @@ YP67
 ([~~
 g&O5Vq
 NNo6
+x<S }8
 @kp!s
 Kf]cT#
 "d,7
@@ -1858,9 +1860,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233207Z0/
-=k0[
-i"1D
+221007222843Z0/
+)[P?KV
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1868,38 +1869,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		pNynE3T4+SE0OJmc5xt4Yu7SYZg=
+		lNdRjMeJqhoJGilbUD9LVgs71BE=
 		</data>
 		<data>
-		lUVBE2kiMUQU6+i/04yajH+VgLo=
+		PWC9gvOI9kH5CSfeH6HsfXInqg8=
 		</data>
 	</array>
 </dict>
 </plist>
-PBG:Y
-/<=S
-3{J;
->G<$
-20221006233223Z0
+YE]:q
+gD\:(
+20221007222905Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220927162002Z
-221108162001Z0B1
-Timestamp Signer NWK21
+220927163003Z
+221108163002Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-.10V(\
-uC](
-r.Vk
+!mCy
+9#4~,
+%VXt
+Li+b
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Q/`$
-S^"pdN
-fVHc
-c[.o
+dv4H
+}KYM
+]k?<
+!_6[
+ptr+
+yLr)
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1938,10 +1940,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233223Z0#
-m70+
-pi!R
-[LnN{
+221007222905Z0#
+Da0+
+8' |%
 __TEXT
 __text
 __TEXT
@@ -2665,8 +2666,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct  6 2022
-16:32:03
+Oct  7 2022
+15:28:40
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4013,7 +4014,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-#)W`C
 F=[pk
 .o	Q
 37ak[
@@ -4026,6 +4026,7 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+5APo
 6s,P
 `DOv
 dHwzN
@@ -4033,7 +4034,6 @@ C=r|
 !qL4
 0pQKP
 QQ^Z
-1Zna
 =j79^a
 e00;
 G+I&$
@@ -4093,7 +4093,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233207Z0/
+221007222843Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4101,39 +4101,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		D7wvex8AGMINoxEdb8t90SWyppI=
+		pTr0nIHWgp6jAhS6HYHhLeQDag4=
 		</data>
 		<data>
-		vqg0xmlwk8pn7GKcvmMGkt5SmFI=
+		P/Ornplq6tt0fxZllJqBDBg0GXg=
 		</data>
 	</array>
 </dict>
 </plist>
-xJIla
-OZ%&
-20221006233223Z0
+R;dz
+qD[p_
+}MYT
+20221007222905Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220927163003Z
-221108163002Z0B1
-Timestamp Signer NWK11
+220927162002Z
+221108162001Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-!mCy
-9#4~,
-%VXt
-Li+b
+.10V(\
+uC](
+r.Vk
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-dv4H
-}KYM
-]k?<
-!_6[
-ptr+
-yLr)
+Q/`$
+S^"pdN
+fVHc
+c[.o
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4172,11 +4170,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233223Z0#
-*{3>
--O,T
-1NU#e
-G1h.
+221007222905Z0#
+pi!R
+5/z(
 __TEXT
 __text
 __TEXT
@@ -4213,7 +4209,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-t_4B
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -4398,8 +4393,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 Steam
-Oct  6 2022
-16:32:03
+Oct  7 2022
+15:28:40
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -5762,6 +5757,7 @@ N]\"~
 : r4
 ld/`{
 a3z`!
+f)|v
 2]Ct9
 3RZ/
 /4b&H
@@ -5825,8 +5821,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233207Z0/
-yhZL
+221007222844Z0/
+%'E_a@
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5834,38 +5830,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		e43d2hN+DEzFzyUIXnRzAvSLkHk=
+		py9/ly5xFP29rvEVU+0aNZ+kkmA=
 		</data>
 		<data>
-		32CJNp4u1avim+py+G1iSN8dlsA=
+		0mx/eQGLFNwAShyDTGqf8RmRnnM=
 		</data>
 	</array>
 </dict>
 </plist>
-Sr2h
-20221006233223Z0
+Xpus
+ %u=
+0c0|
+20221007222905Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220927163003Z
-221108163002Z0B1
-Timestamp Signer NWK11
+220927162002Z
+221108162001Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-!mCy
-9#4~,
-%VXt
-Li+b
+.10V(\
+uC](
+r.Vk
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-dv4H
-}KYM
-]k?<
-!_6[
-ptr+
-yLr)
+Q/`$
+S^"pdN
+fVHc
+c[.o
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5904,10 +5899,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221006233223Z0#
-1a;vI
-^G c
-JBj3
-SXH7
-2M>a
-Tj	&
+221007222905Z0#
+pi!R
+d2(z
+L~t)
++iw=
+*2xZ

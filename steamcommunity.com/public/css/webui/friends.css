@@ -9303,6 +9303,17 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   font-size: 12px;
   padding: 8px 10px;
 }
+.newlogindialog_WaitingForTokenContainer_3XsYi.newlogindialog_Client_3NaJ- {
+  padding-top: 80px;
+}
+.newlogindialog_WaitingForTokenContainer_3XsYi
+  .newlogindialog_Description_JPge0 {
+  padding-top: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
 .qrcode_QRBits_1UNWC {
   display: grid;
 }

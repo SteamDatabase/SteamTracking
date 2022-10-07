@@ -1918,11 +1918,11 @@ function CancelAccountDeletion()
 		type: 'POST',
 		data: g_rgDefaultWizardPageParams,
 	} ).fail( function( jqxhr ) {
-		ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+		ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="">contact Steam Support</a>.' );
 	} ).done( function( data ) {
 		if ( data.success != 1 )
 		{
-			ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+			ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="">contact Steam Support</a>.' );
 		}
 		else
 		{
@@ -1941,11 +1941,11 @@ function CancelSteamChinaAccessDeletion()
 		type: 'POST',
 		data: g_rgDefaultWizardPageParams,
 	} ).fail( function( jqxhr ) {
-		ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+		ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="">contact Steam Support</a>.' );
 	} ).done( function( data ) {
 		if ( data.success != 1 )
 		{
-			ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+			ShowAlertDialog( 'Cancel Steam China Access and Information Deletion', 'Could not contact the servers to cancel the request. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="">contact Steam Support</a>.' );
 		}
 		else
 		{

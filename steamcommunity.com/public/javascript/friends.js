@@ -167,7 +167,7 @@ function ConfirmLeaveGroup( steamid, strGroupName, elem )
 function ConfirmCancelInvite( steamid, elem )
 {
 	ShowConfirmDialog( 'Cancel Invite',
-	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="noreferrer">friend invite link</a>.',
+	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="">friend invite link</a>.',
 	'Cancel Invite'
 	).done( function() {
 		ApplyFriendAction( 'remove', steamid, elem, UpdateSentList );

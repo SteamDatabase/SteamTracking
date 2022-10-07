@@ -95,6 +95,9 @@
         Medium: "newlogindialog_Medium_1LJg9",
         Large: "newlogindialog_Large_1PXJQ",
         MutedErrorReference: "newlogindialog_MutedErrorReference_2NH8k",
+        WaitingForTokenContainer:
+          "newlogindialog_WaitingForTokenContainer_dQzPZ",
+        Client: "newlogindialog_Client_1ZDxg",
       };
     },
     1105: (e) => {
@@ -1218,7 +1221,8 @@
           (e[(e.Generic = 1)] = "Generic"),
           (e[(e.Expired = 2)] = "Expired"),
           (e[(e.Network = 3)] = "Network"),
-          (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator");
+          (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator"),
+          (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded");
       })(i || (i = {})),
         (function (e) {
           (e[(e.k_Success = 0)] = "k_Success"),
@@ -1275,6 +1279,8 @@
                 return (
                   9 === r || 27 === r
                     ? (this.m_eFailureState = i.Expired)
+                    : 84 === r
+                    ? (this.m_eFailureState = i.RateLimitExceeded)
                     : (console.error(
                         `Failed to poll auth session. Result: ${r}`
                       ),
@@ -1670,6 +1676,14 @@
                           return (
                             this.SetFailureState(m.NZ.Network, v.EResult(20)), t
                           );
+                        case 84:
+                          return (
+                            this.SetFailureState(
+                              m.NZ.RateLimitExceeded,
+                              v.EResult(t)
+                            ),
+                            t
+                          );
                         default:
                           return (
                             console.error(
@@ -1736,7 +1750,7 @@
                         (this.m_eStatus = 4), this.StartPolling(!1);
                         break;
                       case 3:
-                        this.m_eStatus = 5;
+                        (this.m_eStatus = 5), this.StartPolling(!1);
                         break;
                       case 4:
                         (this.m_eStatus = 6), this.StartPolling(!1);
@@ -1807,6 +1821,15 @@
                   case 27:
                     return (
                       this.SetFailureState(m.NZ.Expired, v.EResult(s)),
+                      this.m_onCompleteCallback({ bSuccess: !1 }),
+                      s
+                    );
+                  case 84:
+                    return (
+                      this.SetFailureState(
+                        m.NZ.RateLimitExceeded,
+                        v.EResult(s)
+                      ),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       s
                     );
@@ -2146,8 +2169,8 @@
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
       })(R || (R = {}));
-      var N = r(1105),
-        L = r.n(N);
+      var L = r(1105),
+        N = r.n(L);
       r(54698);
       function W(e) {
         const {
@@ -2207,7 +2230,7 @@
           }, [e.refreshInfo, g]),
           n.createElement(
             "div",
-            { className: L().Column },
+            { className: N().Column },
             n.createElement(
               "div",
               { style: { position: "relative" } },
@@ -2218,15 +2241,15 @@
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
                   quality: x(f),
-                  className: (0, s.Z)(L().LoginQR, y && L().Blur),
+                  className: (0, s.Z)(N().LoginQR, y && N().Blur),
                 },
                 f
               ),
               y &&
                 n.createElement(
                   "div",
-                  { className: L().Overlay },
-                  n.createElement("div", { className: L().Box }, b)
+                  { className: N().Overlay },
+                  n.createElement("div", { className: N().Box }, b)
                 )
             )
           )
@@ -2239,10 +2262,10 @@
         const { size: t } = e;
         return n.createElement("div", {
           className: (0, s.Z)(
-            L().Loading,
-            "small" == t && L().Small,
-            ("medium" == t || !t) && L().Medium,
-            "large" == t && L().Large
+            N().Loading,
+            "small" == t && N().Small,
+            ("medium" == t || !t) && N().Medium,
+            "large" == t && N().Large
           ),
         });
       }
@@ -2463,14 +2486,14 @@
               ? t
               : ""
           ),
-          [N, L] = (0, n.useState)(""),
+          [L, N] = (0, n.useState)(""),
           [W, x] = (0, n.useState)(!0),
           D = H(),
           I = !(0 === p || 1 === p || 2 === p),
-          j = () => (k && N ? S(k, N, W) : Promise.resolve(0)),
+          j = () => (k && L ? S(k, L, W) : Promise.resolve(0)),
           U = () => {
             console.log(`Logging in offline with username ${k}`),
-              SteamClient.User.SetLoginCredentials(k, N, W);
+              SteamClient.User.SetLoginCredentials(k, L, W);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -2488,8 +2511,8 @@
             n.createElement(ee, {
               strAccountName: k,
               onAccountNameChange: O,
-              strPassword: N,
-              onPasswordChange: L,
+              strPassword: L,
+              onPasswordChange: N,
               bRememberMe: W,
               onRememberMeChange: x,
               onSubmit: j,
@@ -2609,7 +2632,6 @@
           return n.createElement(xe, { title: i }, t);
         }
         switch (p) {
-          case 1:
           case 13:
             return n.createElement(ge, null);
           case 5:
@@ -3047,8 +3069,23 @@
           { compact: !0 },
           n.createElement(
             ke,
-            { alignItems: "center" },
-            n.createElement(U.V, null)
+            {
+              alignItems: "center",
+              className: (0, s.Z)(
+                M().WaitingForTokenContainer,
+                u.De.IN_CLIENT && M().Client
+              ),
+            },
+            n.createElement(U.V, { size: "xlarge" }),
+            n.createElement(
+              "div",
+              { className: (0, s.Z)(M().Description) },
+              (0, X.Xx)(
+                u.De.IN_CLIENT
+                  ? "#Login_ConnectingToSteam"
+                  : "#Login_LoadingAccountInfo"
+              )
+            )
           )
         );
       }
@@ -3102,6 +3139,11 @@
                   description: (0, X.Xx)(
                     "#Login_Error_MoveAuthenticator_Description"
                   ),
+                };
+              case m.NZ.RateLimitExceeded:
+                return {
+                  title: (0, X.Xx)("#Login_Error_RateLimit_Title"),
+                  description: (0, X.Xx)("#Login_Error_RateLimit_Description"),
                 };
               case m.NZ.Generic:
               default:
@@ -3191,7 +3233,7 @@
                       null,
                       (0, X.Xx)("#Login_IncorrectSteamGuard")
                     ),
-                  n.createElement(Ne, {
+                  n.createElement(Le, {
                     value: l,
                     onChange: (e) => {
                       u || m(!0), c(e);
@@ -3502,11 +3544,11 @@
           };
         return n.createElement("div", { style: s, className: a }, t);
       }
-      function Ne(e) {
+      function Le(e) {
         const { onChange: t, backupCode: r } = e,
           a = (0, i._T)(e, ["onChange", "backupCode"]);
         return n.createElement(
-          Le,
+          Ne,
           Object.assign(
             {
               length: w(r),
@@ -3517,11 +3559,12 @@
               },
               autoFocus: !0,
             },
-            a
+            a,
+            { allowCharacter: (e) => /\w/g.test(e) }
           )
         );
       }
-      function Le(e) {
+      function Ne(e) {
         const {
             length: t,
             value: r,
@@ -3532,20 +3575,23 @@
             disabled: c,
             loading: u,
             backupCode: m,
+            allowCharacter: d,
           } = e,
-          d = (0, n.useRef)([]),
-          h = () => i(d.current.map((e) => e.value)),
-          g = (e) => {
-            const t = e.target.nextElementSibling;
-            e.target.value && t && t.focus(), h();
-          },
+          h = (0, n.useRef)([]),
+          g = () => i(h.current.map((e) => e.value)),
           f = (e) => {
-            var t;
-            -1 === d.current.findIndex((e) => !!e.value)
-              ? null === (t = d.current[0]) || void 0 === t || t.select()
-              : e.target.select();
+            const t = e.target.value;
+            if (t && d && !d(t)) return;
+            const r = e.target.nextElementSibling;
+            e.target.value && r && r.focus(), g();
           },
           _ = (e) => {
+            var t;
+            -1 === h.current.findIndex((e) => !!e.value)
+              ? null === (t = h.current[0]) || void 0 === t || t.select()
+              : e.target.select();
+          },
+          p = (e) => {
             const t = e.target;
             if ("Backspace" === e.key || "Delete" === e.key) {
               const r =
@@ -3554,7 +3600,7 @@
                   : t.nextElementSibling;
               "" === t.value &&
                 r &&
-                ((r.value = ""), r.focus(), e.preventDefault(), h());
+                ((r.value = ""), r.focus(), e.preventDefault(), g());
             } else if ("ArrowLeft" === e.key || "ArrowRight" === e.key) {
               const r =
                 "ArrowLeft" === e.key
@@ -3563,7 +3609,7 @@
               r && (r.focus(), e.preventDefault());
             }
           },
-          p = (e) => {
+          B = (e) => {
             const t = e.clipboardData.getData("Text");
             let r = e.target,
               i = 0;
@@ -3572,21 +3618,21 @@
                 (r.value = t.charAt(i)),
                 (r = r.nextElementSibling),
                 i++;
-            h(), e.preventDefault(), a && a();
+            g(), e.preventDefault(), a && a();
           },
-          B = [];
+          b = [];
         for (let e = 0; e < t; e++)
-          B.push(
+          b.push(
             n.createElement("input", {
               type: "text",
               maxLength: 1,
               key: e,
-              ref: (t) => (d.current[e] = t),
-              onChange: g,
-              onFocus: f,
+              ref: (t) => (h.current[e] = t),
+              onChange: f,
+              onFocus: _,
               onClick: (e) => e.stopPropagation(),
-              onKeyDown: _,
-              onPaste: p,
+              onKeyDown: p,
+              onPaste: B,
               value: r[e] ? r[e][0] : "",
               autoComplete: "none",
               autoFocus: 0 === e && l,
@@ -3603,8 +3649,8 @@
               m && M().BackupCode
             ),
             onClick: () => {
-              const e = d.current.find((e) => !e.value);
-              e ? e.focus() : d.current[d.current.length - 1].focus();
+              const e = h.current.find((e) => !e.value);
+              e ? e.focus() : h.current[h.current.length - 1].focus();
             },
           },
           u &&
@@ -3613,7 +3659,7 @@
               { className: M().Loading },
               n.createElement(fe, { size: "small" })
             ),
-          B
+          b
         );
       }
       function We(e) {
@@ -5390,64 +5436,10 @@
           return "CAuthenticationSupport_GetTokenHistory_Response";
         }
       }
-      class N extends s {
-        constructor(e = null) {
-          super(),
-            N.prototype.nonce || n.aR(N.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  nonce: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                  expiry: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            N.sm_m
-          );
-        }
-        static MBF() {
-          return N.sm_mbf || (N.sm_mbf = n.Bh(N.M())), N.sm_mbf;
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(N.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(N.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new N();
-          return N.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(N.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(N.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCloudGaming_CreateNonce_Response";
-        }
-      }
       class L extends s {
         constructor(e = null) {
           super(),
-            L.prototype.appid || n.aR(L.M()),
+            L.prototype.nonce || n.aR(L.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -5456,12 +5448,8 @@
               (L.sm_m = {
                 proto: L,
                 fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  minutes_remaining: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
+                  nonce: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
+                  expiry: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                 },
               }),
             L.sm_m
@@ -5499,6 +5487,64 @@
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CCloudGaming_CreateNonce_Response";
+        }
+      }
+      class N extends s {
+        constructor(e = null) {
+          super(),
+            N.prototype.appid || n.aR(N.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
+                fields: {
+                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  minutes_remaining: {
+                    n: 2,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                },
+              }),
+            N.sm_m
+          );
+        }
+        static MBF() {
+          return N.sm_mbf || (N.sm_mbf = n.Bh(N.M())), N.sm_mbf;
+        }
+        toObject(e = !1) {
+          return N.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(N.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(N.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new N();
+          return N.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(N.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(N.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CCloudGaming_TimeRemaining";
         }
       }
@@ -5513,7 +5559,7 @@
             W.sm_m ||
               (W.sm_m = {
                 proto: W,
-                fields: { entries: { n: 2, c: L, r: !0, q: !0 } },
+                fields: { entries: { n: 2, c: N, r: !0, q: !0 } },
               }),
             W.sm_m
           );
@@ -5670,7 +5716,7 @@
         })(D || (D = {})),
         (function (e) {
           (e.CreateNonce = function (e, t) {
-            return e.SendMsg("CloudGaming.CreateNonce#1", t, N, {
+            return e.SendMsg("CloudGaming.CreateNonce#1", t, L, {
               bConstMethod: !0,
               ePrivilege: 1,
             });

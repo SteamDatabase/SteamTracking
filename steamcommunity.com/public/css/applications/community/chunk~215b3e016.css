@@ -890,6 +890,17 @@
   font-size: 12px;
   padding: 8px 10px;
 }
+.newlogindialog_WaitingForTokenContainer_dQzPZ.newlogindialog_Client_1ZDxg {
+  padding-top: 80px;
+}
+.newlogindialog_WaitingForTokenContainer_dQzPZ
+  .newlogindialog_Description_QApnT {
+  padding-top: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+}
 .qrcode_QRBits_3FhhK {
   display: grid;
 }

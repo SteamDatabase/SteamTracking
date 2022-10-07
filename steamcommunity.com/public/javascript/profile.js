@@ -158,7 +158,7 @@ function CancelInvite()
 	var strPersonaName = g_rgProfileData['personaname'];
 
 	ShowConfirmDialog( 'Cancel Invite',
-	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="noreferrer">friend invite link</a>.',
+	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="">friend invite link</a>.',
 	'Cancel Invite'
 	).done( function() {
 		$J.post(
@@ -240,7 +240,7 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 				break;
 
 			case 24:
-				strMessage = 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.';
+				strMessage = 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="">Visit Steam Support</a> for more information.';
 				break;
 
 			default:

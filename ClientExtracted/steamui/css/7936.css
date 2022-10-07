@@ -188,6 +188,11 @@
   text-align: center;
   font-size: 12px;
   color: #afafaf;
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_QRSection_2ZDyS
+  .newlogindialog_UseMobileAppForQR_9xgsv
+  :not(.newlogindialog_InClient_2GR-7) {
   padding: 12px 0px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_TextField_2KXGK {
@@ -762,11 +767,6 @@
   color: #afafaf;
   font-size: 12px;
 }
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_EmbeddedRoot_2Vbrf
-  .newlogindialog_EmbeddedRootFooter_1HRJ1:not(.newlogindialog_InClient_2GR-7) {
-  padding-top: 15px;
-}
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_EmbeddedRoot_2Vbrf
@@ -904,6 +904,17 @@
 }
 .IN_CLIENT .newlogindialog_MutedErrorReference_2NH8k {
   position: fixed;
+}
+.newlogindialog_WaitingForTokenContainer_dQzPZ.newlogindialog_Client_1ZDxg {
+  padding-top: 80px;
+}
+.newlogindialog_WaitingForTokenContainer_dQzPZ
+  .newlogindialog_Description_QApnT {
+  padding-top: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
 }
 .qrcode_QRBits_3FhhK {
   display: grid;
