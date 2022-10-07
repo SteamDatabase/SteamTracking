@@ -1,5 +1,5 @@
 {
-  "revision": 397,
+  "revision": 399,
   "certs": [
     "Ii4IARIgSJbwDpn/07/GHiGMKio0Vh18VN3D/hKzQGh6n0Yx9qpFHfAYY00dMh91KT6tfJIvitz8MkB8abvDa50KdIaizx/eKZL26MQ5is+3Xbt8YN6k3FeSImzcPPWE84v77+8n0GbkZaBj+uPJHbXgxZQmjOy9HokH",
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFHfAYY00dMh91KT6tfJIvitz8MkBkR1T/xN6234O5xVdANVkvztOFOg4C2u5x4SirXUjSxOxBbso7JSh6f/HorajFsL2WT0r/7pVQ/I8InxhMvG0I",
@@ -423,7 +423,7 @@
       "groups": [
         "google"
       ],
-      "num_gameservers": 4,
+      "num_gameservers": 8,
       "partners": 16,
       "tier": 2
     },
@@ -475,28 +475,18 @@
           "port_range": [ 27015, 27060 ]
         },
         {
+          "hostname": "sdr7-hkg1.valve.net",
           "ipv4": "103.28.54.182",
           "port_range": [ 27015, 27060 ]
         },
         {
+          "hostname": "sdr8-hkg1.valve.net",
           "ipv4": "103.28.54.183",
           "port_range": [ 27015, 27060 ]
         },
         {
+          "hostname": "sdr9-hkg1.valve.net",
           "ipv4": "103.28.54.184",
-          "port_range": [ 27015, 27060 ]
-        },
-        {
-          "hostname": "sdr7-hkg1.valve.net",
-          "ipv4": "153.254.86.182",
-          "port_range": [ 27015, 27060 ]
-        },
-        {
-          "ipv4": "153.254.86.183",
-          "port_range": [ 27015, 27060 ]
-        },
-        {
-          "ipv4": "153.254.86.184",
           "port_range": [ 27015, 27060 ]
         }
       ],
@@ -685,9 +675,9 @@
       "desc": "Multiplay Amsterdam",
       "geo": [ 4.9, 52.37 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -696,9 +686,9 @@
       "desc": "Multiplay Ashburn",
       "geo": [ -77.5, 39.0 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 4,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -707,9 +697,9 @@
       "desc": "Multiplay Atlanta",
       "geo": [ -84.4, 33.7 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 4,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -718,9 +708,9 @@
       "desc": "Multiplay Chicago",
       "geo": [ -87.65, 41.85 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -729,9 +719,9 @@
       "desc": "Multiplay Dubai",
       "geo": [ 55.3, 25.25 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -740,9 +730,9 @@
       "desc": "Multiplay Washington DC",
       "geo": [ -77.09, 38.94 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 4,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -755,7 +745,7 @@
         "multiplay",
         "valve"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 8,
       "partners": 5,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -776,9 +766,9 @@
       "desc": "Multiplay Frankfurt",
       "geo": [ 8.68, 50.12 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -787,9 +777,9 @@
       "desc": "Multiplay Hong Kong",
       "geo": [ 114.2, 22.3 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -798,9 +788,9 @@
       "desc": "Multiplay Los Angeles",
       "geo": [ -118.24, 34.05 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -809,9 +799,9 @@
       "desc": "Multiplay London",
       "geo": [ -0.13, 51.51 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -820,20 +810,27 @@
       "desc": "Multiplay Luxembourg City",
       "geo": [ 6.13, 49.61 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
+      "relays": [
+        {
+          "hostname": "sdr1-lux-mplay.valve.net",
+          "ipv4": "188.42.190.100",
+          "port_range": [ 27015, 27044 ]
+        }
+      ],
       "tier": 2
     },
     "mmi1": {
       "desc": "Multiplay Miami",
       "geo": [ -80.19, 25.76 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 4,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -854,9 +851,9 @@
       "desc": "Multiplay Montreal",
       "geo": [ -73.6, 45.5 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -865,21 +862,21 @@
       "desc": "Multiplay New York",
       "geo": [ -74.0, 40.71 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 8,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
           "hostname": "sdr1-nyc-mplay.valve.net",
           "ipv4": "74.201.228.148",
-          "port_range": [ 27015, 27052 ]
+          "port_range": [ 27015, 27060 ]
         },
         {
           "hostname": "sdr2-nyc-mplay.valve.net",
           "ipv4": "74.201.228.149",
-          "port_range": [ 27015, 27052 ]
+          "port_range": [ 27015, 27060 ]
         }
       ],
       "tier": 2
@@ -888,9 +885,9 @@
       "desc": "Multiplay Pheonix",
       "geo": [ -112.1, 33.4 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -899,9 +896,9 @@
       "desc": "Multiplay Salt Lake City",
       "geo": [ -111.89, 40.76 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -922,9 +919,9 @@
       "desc": "Multiplay Singapore",
       "geo": [ 103.8, 1.4 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -933,9 +930,9 @@
       "desc": "Multiplay San Jose",
       "geo": [ -121.9, 37.3 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -956,9 +953,9 @@
       "desc": "Multiplay St. Louis",
       "geo": [ -90.2, 38.6 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -979,9 +976,9 @@
       "desc": "Multiplay Sao Paulo",
       "geo": [ -46.7, -23.6 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -990,9 +987,9 @@
       "desc": "Multiplay Strasbourg",
       "geo": [ 7.75, 48.57 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1013,9 +1010,9 @@
       "desc": "Multiplay Sydney",
       "geo": [ 151.2, -33.9 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1024,9 +1021,9 @@
       "desc": "Multiplay Toronto",
       "geo": [ -79.7, 43.7 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1035,9 +1032,9 @@
       "desc": "Multiplay Taipei",
       "geo": [ 121.6, 25.0 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1046,9 +1043,9 @@
       "desc": "Multiplay Tokyo",
       "geo": [ 139.7, 35.7 ],
       "groups": [
-        "multiplay"
+        "multiplay-test"
       ],
-      "has_gameservers": true,
+      "num_gameservers": 0,
       "partners": 4,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1943,18 +1940,17 @@
     [ "ams", "mlx1", 6 ],
     [ "ams", "mst1", 9 ],
     [ "ams", "oln1", 7 ],
-    [ "ams", "ord", 98 ],
+    [ "ams", "ord", 97 ],
     [ "ams", "par", 10 ],
     [ "ams", "sto", 20 ],
-    [ "ams", "sto2", 19 ],
-    [ "ams", "vie", 17 ],
-    [ "ams", "waw", 21 ],
+    [ "ams", "sto2", 20 ],
+    [ "ams", "vie", 18 ],
     [ "atl", "dfw", 21 ],
     [ "atl", "fra", 99 ],
     [ "atl", "gru", 132 ],
     [ "atl", "guc1", 26 ],
     [ "atl", "iad", 13 ],
-    [ "atl", "lax", 66 ],
+    [ "atl", "lax", 65 ],
     [ "atl", "mas1", 16 ],
     [ "atl", "mat1", 0 ],
     [ "atl", "mch1", 18 ],
@@ -1967,7 +1963,7 @@
     [ "atl", "mto1", 23 ],
     [ "atl", "ord", 19 ],
     [ "bom", "dxb", 26 ],
-    [ "bom", "fra", 368 ],
+    [ "bom", "fra", 370 ],
     [ "bom", "hkg", 80 ],
     [ "bom", "maa", 17 ],
     [ "bom", "mdb1", 38 ],
@@ -1977,7 +1973,7 @@
     [ "can", "cant", 0 ],
     [ "can", "canu", 0 ],
     [ "can", "fra", 179 ],
-    [ "can", "hkg", 5 ],
+    [ "can", "hkg", 6 ],
     [ "can", "mhk1", 3 ],
     [ "can", "msg1", 53 ],
     [ "can", "pwg", 2 ],
@@ -1993,10 +1989,10 @@
     [ "cant", "mhk1", 3 ],
     [ "cant", "pwg", 2 ],
     [ "canu", "fra", 179 ],
-    [ "canu", "hkg", 56 ],
+    [ "canu", "hkg", 9 ],
     [ "canu", "pwg", 3 ],
     [ "dfw", "eat", 49 ],
-    [ "dfw", "fra", 122 ],
+    [ "dfw", "fra", 123 ],
     [ "dfw", "guc1", 19 ],
     [ "dfw", "guw1", 50 ],
     [ "dfw", "iad", 42 ],
@@ -2005,7 +2001,7 @@
     [ "dfw", "mat1", 23 ],
     [ "dfw", "mch1", 25 ],
     [ "dfw", "mdc1", 37 ],
-    [ "dfw", "mdf1", 1 ],
+    [ "dfw", "mdf1", 0 ],
     [ "dfw", "mla1", 39 ],
     [ "dfw", "mmi1", 35 ],
     [ "dfw", "mmo1", 48 ],
@@ -2016,11 +2012,11 @@
     [ "dfw", "msl1", 17 ],
     [ "dfw", "mto1", 38 ],
     [ "dfw", "ord", 21 ],
-    [ "dfw", "sea", 48 ],
-    [ "dxb", "hkg", 106 ],
+    [ "dfw", "sea", 47 ],
+    [ "dxb", "hkg", 105 ],
     [ "dxb", "maa", 42 ],
     [ "dxb", "mdb1", 0 ],
-    [ "dxb", "ord", 299 ],
+    [ "dxb", "ord", 298 ],
     [ "dxb", "sgp", 76 ],
     [ "eat", "fra", 162 ],
     [ "eat", "guw1", 4 ],
@@ -2032,10 +2028,10 @@
     [ "eat", "ord", 51 ],
     [ "eat", "sea", 2 ],
     [ "eze", "gru", 28 ],
-    [ "eze", "lax", 152 ],
-    [ "eze", "lim", 50 ],
+    [ "eze", "lax", 151 ],
+    [ "eze", "lim", 49 ],
     [ "eze", "msp1", 33 ],
-    [ "eze", "ord", 178 ],
+    [ "eze", "ord", 177 ],
     [ "eze", "scl", 20 ],
     [ "fra", "gew1", 6 ],
     [ "fra", "gru", 196 ],
@@ -2046,7 +2042,7 @@
     [ "fra", "jnb", 173 ],
     [ "fra", "lax", 149 ],
     [ "fra", "lhr", 14 ],
-    [ "fra", "maa", 352 ],
+    [ "fra", "maa", 353 ],
     [ "fra", "mad", 30 ],
     [ "fra", "mam1", 7 ],
     [ "fra", "mas1", 131 ],
@@ -2070,20 +2066,20 @@
     [ "fra", "mtp1", 187 ],
     [ "fra", "mty1", 186 ],
     [ "fra", "oln1", 12 ],
-    [ "fra", "ord", 103 ],
+    [ "fra", "ord", 102 ],
     [ "fra", "par", 9 ],
     [ "fra", "pwg", 180 ],
     [ "fra", "pwj", 158 ],
     [ "fra", "pwu", 155 ],
     [ "fra", "pww", 169 ],
     [ "fra", "pwz", 178 ],
-    [ "fra", "sgp", 322 ],
+    [ "fra", "sgp", 320 ],
     [ "fra", "sha", 176 ],
     [ "fra", "sham", 176 ],
     [ "fra", "shat", 176 ],
     [ "fra", "shau", 176 ],
     [ "fra", "shb", 176 ],
-    [ "fra", "sto", 25 ],
+    [ "fra", "sto", 29 ],
     [ "fra", "sto2", 26 ],
     [ "fra", "tsn", 156 ],
     [ "fra", "tsnm", 156 ],
@@ -2118,7 +2114,7 @@
     [ "guw1", "msj1", 18 ],
     [ "guw1", "ord", 54 ],
     [ "guw1", "sea", 4 ],
-    [ "hkg", "maa", 64 ],
+    [ "hkg", "maa", 63 ],
     [ "hkg", "mdb1", 118 ],
     [ "hkg", "mhk1", 0 ],
     [ "hkg", "msg1", 51 ],
@@ -2126,23 +2122,23 @@
     [ "hkg", "mtp1", 16 ],
     [ "hkg", "mty1", 58 ],
     [ "hkg", "pwg", 6 ],
-    [ "hkg", "pwj", 64 ],
-    [ "hkg", "pwu", 72 ],
-    [ "hkg", "pww", 40 ],
-    [ "hkg", "pwz", 34 ],
+    [ "hkg", "pwj", 39 ],
+    [ "hkg", "pwu", 44 ],
+    [ "hkg", "pww", 42 ],
+    [ "hkg", "pwz", 35 ],
     [ "hkg", "sea", 145 ],
-    [ "hkg", "seo", 38 ],
+    [ "hkg", "seo", 37 ],
     [ "hkg", "sgp", 31 ],
     [ "hkg", "sha", 24 ],
     [ "hkg", "sham", 37 ],
-    [ "hkg", "shat", 28 ],
-    [ "hkg", "shau", 58 ],
+    [ "hkg", "shat", 29 ],
+    [ "hkg", "shau", 36 ],
     [ "hkg", "shb", 28 ],
     [ "hkg", "syd", 119 ],
     [ "hkg", "tsn", 39 ],
-    [ "hkg", "tsnm", 56 ],
-    [ "hkg", "tsnt", 43 ],
-    [ "hkg", "tsnu", 66 ],
+    [ "hkg", "tsnm", 57 ],
+    [ "hkg", "tsnt", 45 ],
+    [ "hkg", "tsnu", 39 ],
     [ "hkg", "tyo", 53 ],
     [ "hkg", "tyo1", 52 ],
     [ "iad", "lax", 64 ],
@@ -2150,20 +2146,20 @@
     [ "iad", "mat1", 17 ],
     [ "iad", "mch1", 18 ],
     [ "iad", "mdc1", 0 ],
+    [ "iad", "mdf1", 33 ],
     [ "iad", "mmi1", 29 ],
     [ "iad", "mmo1", 15 ],
     [ "iad", "mny1", 6 ],
     [ "iad", "msl1", 22 ],
     [ "iad", "mto1", 11 ],
-    [ "iad", "ord", 20 ],
+    [ "iad", "ord", 19 ],
     [ "jnb", "lhr", 165 ],
     [ "jnb", "msg1", 173 ],
     [ "jnb", "msp1", 148 ],
     [ "jnb", "par", 172 ],
-    [ "jnb", "sto2", 189 ],
-    [ "jnb", "syd", 447 ],
+    [ "jnb", "sto", 189 ],
+    [ "jnb", "syd", 448 ],
     [ "lax", "lim", 102 ],
-    [ "lax", "mdf1", 34 ],
     [ "lax", "mla1", 0 ],
     [ "lax", "mpx1", 11 ],
     [ "lax", "msa1", 18 ],
@@ -2176,8 +2172,9 @@
     [ "lhr", "mln1", 0 ],
     [ "lhr", "mlx1", 9 ],
     [ "lhr", "oln1", 0 ],
-    [ "lhr", "ord", 103 ],
+    [ "lhr", "ord", 102 ],
     [ "lhr", "par", 8 ],
+    [ "lhr", "sto", 25 ],
     [ "lhr", "sto2", 24 ],
     [ "lim", "msp1", 68 ],
     [ "lim", "ord", 148 ],
@@ -2185,7 +2182,7 @@
     [ "maa", "mdb1", 58 ],
     [ "maa", "sgp", 33 ],
     [ "maa", "syd", 122 ],
-    [ "mad", "ord", 116 ],
+    [ "mad", "ord", 115 ],
     [ "mad", "par", 20 ],
     [ "mam1", "mlx1", 6 ],
     [ "mam1", "ord", 132 ],
@@ -2201,7 +2198,6 @@
     [ "mat1", "mmi1", 19 ],
     [ "mat1", "msl1", 15 ],
     [ "mat1", "ord", 18 ],
-    [ "mch1", "mdf1", 21 ],
     [ "mch1", "msl1", 8 ],
     [ "mch1", "mto1", 13 ],
     [ "mch1", "ord", 0 ],
@@ -2212,6 +2208,7 @@
     [ "mdc1", "mny1", 6 ],
     [ "mdc1", "mto1", 11 ],
     [ "mdc1", "ord", 19 ],
+    [ "mdf1", "msa1", 27 ],
     [ "mdf1", "ord", 21 ],
     [ "mfr1", "mlx1", 3 ],
     [ "mfr1", "mst1", 3 ],
@@ -2277,11 +2274,11 @@
     [ "ord", "sea", 47 ],
     [ "ord", "seo", 167 ],
     [ "ord", "sto", 117 ],
-    [ "ord", "sto2", 117 ],
-    [ "ord", "tyo", 142 ],
+    [ "ord", "sto2", 116 ],
+    [ "ord", "tyo", 145 ],
     [ "ord", "tyo1", 140 ],
     [ "ord", "vie", 114 ],
-    [ "ord", "waw", 117 ],
+    [ "ord", "waw", 118 ],
     [ "par", "vie", 21 ],
     [ "pwj", "pwu", 9 ],
     [ "pwj", "tsn", 2 ],
@@ -2289,7 +2286,7 @@
     [ "pwj", "tsnu", 1 ],
     [ "pwu", "tsn", 5 ],
     [ "pwu", "tsnm", 17 ],
-    [ "pwu", "tsnt", 14 ],
+    [ "pwu", "tsnt", 15 ],
     [ "pwu", "tsnu", 9 ],
     [ "pww", "pwz", 17 ],
     [ "pww", "sha", 17 ],
@@ -2303,12 +2300,12 @@
     [ "seo", "tyo", 30 ],
     [ "seo", "tyo1", 30 ],
     [ "sgp", "syd", 89 ],
-    [ "sgp", "tyo", 81 ],
+    [ "sgp", "tyo", 82 ],
     [ "sgp", "tyo1", 82 ],
     [ "sha", "sham", 0 ],
     [ "sha", "shat", 0 ],
     [ "sha", "shau", 0 ],
-    [ "sha", "shb", 1 ],
+    [ "sha", "shb", 2 ],
     [ "sham", "shat", 0 ],
     [ "sham", "shau", 0 ],
     [ "sham", "shb", 4 ],
@@ -2316,7 +2313,7 @@
     [ "shat", "shb", 2 ],
     [ "shau", "shb", 5 ],
     [ "sto", "sto2", 0 ],
-    [ "sto", "waw", 21 ],
+    [ "sto", "waw", 20 ],
     [ "sto2", "waw", 20 ],
     [ "tsn", "tsnm", 0 ],
     [ "tsn", "tsnt", 0 ],
