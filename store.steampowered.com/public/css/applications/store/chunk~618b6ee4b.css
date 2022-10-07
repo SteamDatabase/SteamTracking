@@ -1541,6 +1541,14 @@
   .discoveryqueuewizard_ProgressDotHidden_n2UAY {
   opacity: 0%;
 }
+.discoveryqueuewizard_DiscoveryQueueName_1hDU6 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  font-weight: bold;
+  opacity: 80%;
+}
 .appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
   position: relative;
   width: 100%;

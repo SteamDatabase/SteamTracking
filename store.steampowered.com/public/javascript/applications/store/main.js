@@ -13060,13 +13060,24 @@
           ? e.toUpperCase()
           : e.charAt(0).toUpperCase() + e.slice(1);
       }
+      function d(e) {
+        return atob(e.replace(/-/g, "+").replace(/_/g, "/"));
+      }
+      function u(e) {
+        return btoa(e)
+          .replace(/\+/g, "-")
+          .replace("///g", "_")
+          .replace(/=/g, "");
+      }
       r.d(t, {
+        GM: () => u,
         HA: () => s,
         I8: () => a,
         JD: () => c,
         W5: () => o,
         Xf: () => m,
         eT: () => n,
+        nh: () => d,
         oU: () => l,
       });
     },

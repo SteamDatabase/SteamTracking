@@ -1,51 +1,3 @@
-:root {
-  --basicui-header-height: 0px;
-}
-.discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background: #121b24;
-  box-shadow: 0px 1px 0px #203345;
-  border-radius: 4px;
-  width: fit-content;
-  z-index: 1000;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
-  position: fixed;
-  min-width: 300px;
-}
-.BasicUI .discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx {
-  width: auto;
-  position: initial;
-  transform: none;
-  z-index: 0;
-}
-.discoveryqueueappwidget_WidgetText_co4IP {
-  color: #1a9fff;
-  cursor: pointer;
-  transition: color 0.1s ease;
-  font-size: 14px;
-  margin: 0 15px;
-}
-.discoveryqueueappwidget_WidgetText_co4IP:hover {
-  color: #fff;
-}
-.discoveryqueueappwidget_WidgetCapsule_ZyOLs {
-  width: 80px;
-}
-.discoveryqueueappwidget_CloseButton_bfN8k {
-  width: 12px;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-left: auto;
-  display: flex;
-}
-.discoveryqueueappwidget_Y_1FD7r {
-  vertical-align: sub;
-  margin-left: 10px;
-}
 .appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
   position: relative;
   width: 100%;
@@ -834,4 +786,60 @@
 .discoveryqueuewizard_ProgressCtn_1IvtA
   .discoveryqueuewizard_ProgressDotHidden_n2UAY {
   opacity: 0%;
+}
+.discoveryqueuewizard_DiscoveryQueueName_1hDU6 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  font-weight: bold;
+  opacity: 80%;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #121b24;
+  box-shadow: 0px 1px 0px #203345;
+  border-radius: 4px;
+  width: fit-content;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  position: fixed;
+  min-width: 300px;
+}
+.BasicUI .discoveryqueueappwidget_DiscoveryQueueWidgetCtn_1LXqx {
+  width: auto;
+  position: initial;
+  transform: none;
+  z-index: 0;
+}
+.discoveryqueueappwidget_WidgetText_co4IP {
+  color: #1a9fff;
+  cursor: pointer;
+  transition: color 0.1s ease;
+  font-size: 14px;
+  margin: 0 15px;
+}
+.discoveryqueueappwidget_WidgetText_co4IP:hover {
+  color: #fff;
+}
+.discoveryqueueappwidget_WidgetCapsule_ZyOLs {
+  width: 80px;
+}
+.discoveryqueueappwidget_CloseButton_bfN8k {
+  width: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+}
+.discoveryqueueappwidget_Y_1FD7r {
+  vertical-align: sub;
+  margin-left: 10px;
 }
