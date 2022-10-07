@@ -33713,7 +33713,8 @@
             f = oe(),
             v = f.width,
             E = (f.height, v > 1500),
-            y = tr.f.Get().GetEventNodes(e);
+            y = tr.f.Get().GetEventNodes(e),
+            T = y ? y.length : 0;
           return (
             (0, o.useEffect)(
               function () {
@@ -33777,7 +33778,7 @@
                 }
                 g(0);
               },
-              [e, t.is_event_completed, a, n.nLeagueID, n.nNodeID]
+              [e, t.is_event_completed, a, n.nLeagueID, n.nNodeID, T]
             ),
             y && 0 != y.length
               ? 0 == n.nLeagueID && 0 == n.nNodeID

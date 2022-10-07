@@ -111,6 +111,10 @@ function OpenFriendChat( steamid, accountid )
 	{
 		window.location = 'steamchatmobile://friend/' + steamid;
 	}
+	else if ( Steam.BIsUserInSteamMobileApp() )
+	{
+				window.location = 'https://steamcommunity.com/chat/friend/' + steamid;
+	}
 	else if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
@@ -138,6 +142,10 @@ function OpenGroupChat( steamid )
 	if ( Steam.BIsUserInSteamMobileChat() )
 	{
 		window.location = 'steamchatmobile://group/' + steamid;
+	}
+	else if ( Steam.BIsUserInSteamMobileApp() )
+	{
+				window.location = 'https://steamcommunity.com/chat/group/' + steamid;
 	}
 	else if ( !Steam.BIsUserInClientOrOverlay() && typeof ClientConnectionAPI !== 'undefined' )
 	{

@@ -1958,7 +1958,9 @@ https://steamcommunity.com/broadcast/getchatinfo/
 https://steamcommunity.com/broadcast/watch/
 https://steamcommunity.com/chat/
 https://steamcommunity.com/chat/chatlog/${m_unAccountID}
+https://steamcommunity.com/chat/friend/${steamid}
 https://steamcommunity.com/chat/friendstate/${m_unAccountID}
+https://steamcommunity.com/chat/group/${steamid}
 https://steamcommunity.com/comment/${strCommentThreadType}/formattinghelp
 https://steamcommunity.com/comment/${strCommentThreadType}/removenotification/${steamidOwner}/${gidFeature}
 https://steamcommunity.com/discussions/games/
