@@ -292,6 +292,8 @@
         BadgeDesc: "salebadgeprogressdisplay_BadgeDesc_2OhKt",
         BadgeLevel: "salebadgeprogressdisplay_BadgeLevel_2vVmr",
         FinalBadge: "salebadgeprogressdisplay_FinalBadge_t2T3x",
+        DiscoveryQueueBelow:
+          "salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a",
       };
     },
     59448: (e) => {
@@ -9288,8 +9290,8 @@
                   className: (0, D.Z)({
                     [v.SaleSection]: !0,
                     [p().SaleSectionCtn]: !0,
-                    SaleQuizCSS: !0,
-                    [Oa.DiscoveryQueueBelow]: r,
+                    BadgeProgressCSS: !0,
+                    [Oa.DiscoveryQueueBelow]: r && w.L7.logged_in,
                   }),
                   style: (0, g.V)(i, n),
                 },
@@ -14476,7 +14478,7 @@
                         "ReservationShipDate"
                       ),
                     },
-                    (0, v.Xx)("#Sale_Reservation_ExpectedShipDate")
+                    (0, v.Xx)("#Sale_Reservation_ExpectedDeliveryDate")
                   ),
                   r.strLocalizedShippingMessage
                 )
@@ -14541,11 +14543,7 @@
                   ),
                   onOK: () => {
                     u(!0);
-                    const e = (null == i ? void 0 : i.bDepositRequired)
-                      ? null == s
-                        ? void 0
-                        : s.unPackageID
-                      : r.unPackageID;
+                    const e = r.unPackageID;
                     o.N.Get()
                       .CancelUserReservation(
                         null == i ? void 0 : i.in_memory_identifier,

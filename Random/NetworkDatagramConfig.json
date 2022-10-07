@@ -1,5 +1,5 @@
 {
-  "revision": 399,
+  "revision": 400,
   "certs": [
     "Ii4IARIgSJbwDpn/07/GHiGMKio0Vh18VN3D/hKzQGh6n0Yx9qpFHfAYY00dMh91KT6tfJIvitz8MkB8abvDa50KdIaizx/eKZL26MQ5is+3Xbt8YN6k3FeSImzcPPWE84v77+8n0GbkZaBj+uPJHbXgxZQmjOy9HokH",
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFHfAYY00dMh91KT6tfJIvitz8MkBkR1T/xN6234O5xVdANVkvztOFOg4C2u5x4SirXUjSxOxBbso7JSh6f/HorajFsL2WT0r/7pVQ/I8InxhMvG0I",
@@ -675,7 +675,8 @@
       "desc": "Multiplay Amsterdam",
       "geo": [ 4.9, 52.37 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -686,7 +687,8 @@
       "desc": "Multiplay Ashburn",
       "geo": [ -77.5, 39.0 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 4,
       "partners": 4,
@@ -697,7 +699,8 @@
       "desc": "Multiplay Atlanta",
       "geo": [ -84.4, 33.7 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 4,
       "partners": 4,
@@ -708,7 +711,8 @@
       "desc": "Multiplay Chicago",
       "geo": [ -87.65, 41.85 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -719,7 +723,8 @@
       "desc": "Multiplay Dubai",
       "geo": [ 55.3, 25.25 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -730,7 +735,8 @@
       "desc": "Multiplay Washington DC",
       "geo": [ -77.09, 38.94 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 4,
       "partners": 4,
@@ -766,7 +772,8 @@
       "desc": "Multiplay Frankfurt",
       "geo": [ 8.68, 50.12 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -777,7 +784,8 @@
       "desc": "Multiplay Hong Kong",
       "geo": [ 114.2, 22.3 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -788,7 +796,8 @@
       "desc": "Multiplay Los Angeles",
       "geo": [ -118.24, 34.05 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -799,7 +808,8 @@
       "desc": "Multiplay London",
       "geo": [ -0.13, 51.51 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -810,7 +820,8 @@
       "desc": "Multiplay Luxembourg City",
       "geo": [ 6.13, 49.61 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -828,7 +839,8 @@
       "desc": "Multiplay Miami",
       "geo": [ -80.19, 25.76 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 4,
       "partners": 4,
@@ -851,7 +863,8 @@
       "desc": "Multiplay Montreal",
       "geo": [ -73.6, 45.5 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -862,7 +875,8 @@
       "desc": "Multiplay New York",
       "geo": [ -74.0, 40.71 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 8,
       "partners": 4,
@@ -885,7 +899,8 @@
       "desc": "Multiplay Pheonix",
       "geo": [ -112.1, 33.4 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -896,7 +911,8 @@
       "desc": "Multiplay Salt Lake City",
       "geo": [ -111.89, 40.76 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -919,7 +935,8 @@
       "desc": "Multiplay Singapore",
       "geo": [ 103.8, 1.4 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -930,7 +947,8 @@
       "desc": "Multiplay San Jose",
       "geo": [ -121.9, 37.3 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -953,7 +971,8 @@
       "desc": "Multiplay St. Louis",
       "geo": [ -90.2, 38.6 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -976,7 +995,8 @@
       "desc": "Multiplay Sao Paulo",
       "geo": [ -46.7, -23.6 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -987,7 +1007,8 @@
       "desc": "Multiplay Strasbourg",
       "geo": [ 7.75, 48.57 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -1010,7 +1031,8 @@
       "desc": "Multiplay Sydney",
       "geo": [ 151.2, -33.9 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -1021,7 +1043,8 @@
       "desc": "Multiplay Toronto",
       "geo": [ -79.7, 43.7 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -1032,7 +1055,8 @@
       "desc": "Multiplay Taipei",
       "geo": [ 121.6, 25.0 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -1043,7 +1067,8 @@
       "desc": "Multiplay Tokyo",
       "geo": [ 139.7, 35.7 ],
       "groups": [
-        "multiplay-test"
+        "multiplay",
+        "test"
       ],
       "num_gameservers": 0,
       "partners": 4,
@@ -1963,7 +1988,7 @@
     [ "atl", "mto1", 23 ],
     [ "atl", "ord", 19 ],
     [ "bom", "dxb", 26 ],
-    [ "bom", "fra", 370 ],
+    [ "bom", "fra", 369 ],
     [ "bom", "hkg", 80 ],
     [ "bom", "maa", 17 ],
     [ "bom", "mdb1", 38 ],
@@ -1989,7 +2014,7 @@
     [ "cant", "mhk1", 3 ],
     [ "cant", "pwg", 2 ],
     [ "canu", "fra", 179 ],
-    [ "canu", "hkg", 9 ],
+    [ "canu", "hkg", 8 ],
     [ "canu", "pwg", 3 ],
     [ "dfw", "eat", 49 ],
     [ "dfw", "fra", 123 ],
@@ -2013,7 +2038,7 @@
     [ "dfw", "mto1", 38 ],
     [ "dfw", "ord", 21 ],
     [ "dfw", "sea", 47 ],
-    [ "dxb", "hkg", 105 ],
+    [ "dxb", "hkg", 106 ],
     [ "dxb", "maa", 42 ],
     [ "dxb", "mdb1", 0 ],
     [ "dxb", "ord", 298 ],
@@ -2042,7 +2067,7 @@
     [ "fra", "jnb", 173 ],
     [ "fra", "lax", 149 ],
     [ "fra", "lhr", 14 ],
-    [ "fra", "maa", 353 ],
+    [ "fra", "maa", 352 ],
     [ "fra", "mad", 30 ],
     [ "fra", "mam1", 7 ],
     [ "fra", "mas1", 131 ],
@@ -2073,7 +2098,7 @@
     [ "fra", "pwu", 155 ],
     [ "fra", "pww", 169 ],
     [ "fra", "pwz", 178 ],
-    [ "fra", "sgp", 320 ],
+    [ "fra", "sgp", 321 ],
     [ "fra", "sha", 176 ],
     [ "fra", "sham", 176 ],
     [ "fra", "shat", 176 ],
@@ -2114,7 +2139,7 @@
     [ "guw1", "msj1", 18 ],
     [ "guw1", "ord", 54 ],
     [ "guw1", "sea", 4 ],
-    [ "hkg", "maa", 63 ],
+    [ "hkg", "maa", 64 ],
     [ "hkg", "mdb1", 118 ],
     [ "hkg", "mhk1", 0 ],
     [ "hkg", "msg1", 51 ],
@@ -2124,21 +2149,21 @@
     [ "hkg", "pwg", 6 ],
     [ "hkg", "pwj", 39 ],
     [ "hkg", "pwu", 44 ],
-    [ "hkg", "pww", 42 ],
-    [ "hkg", "pwz", 35 ],
+    [ "hkg", "pww", 41 ],
+    [ "hkg", "pwz", 34 ],
     [ "hkg", "sea", 145 ],
-    [ "hkg", "seo", 37 ],
+    [ "hkg", "seo", 38 ],
     [ "hkg", "sgp", 31 ],
     [ "hkg", "sha", 24 ],
     [ "hkg", "sham", 37 ],
-    [ "hkg", "shat", 29 ],
+    [ "hkg", "shat", 28 ],
     [ "hkg", "shau", 36 ],
-    [ "hkg", "shb", 28 ],
+    [ "hkg", "shb", 27 ],
     [ "hkg", "syd", 119 ],
     [ "hkg", "tsn", 39 ],
     [ "hkg", "tsnm", 57 ],
-    [ "hkg", "tsnt", 45 ],
-    [ "hkg", "tsnu", 39 ],
+    [ "hkg", "tsnt", 44 ],
+    [ "hkg", "tsnu", 38 ],
     [ "hkg", "tyo", 53 ],
     [ "hkg", "tyo1", 52 ],
     [ "iad", "lax", 64 ],
@@ -2182,7 +2207,7 @@
     [ "maa", "mdb1", 58 ],
     [ "maa", "sgp", 33 ],
     [ "maa", "syd", 122 ],
-    [ "mad", "ord", 115 ],
+    [ "mad", "ord", 116 ],
     [ "mad", "par", 20 ],
     [ "mam1", "mlx1", 6 ],
     [ "mam1", "ord", 132 ],
@@ -2209,7 +2234,7 @@
     [ "mdc1", "mto1", 11 ],
     [ "mdc1", "ord", 19 ],
     [ "mdf1", "msa1", 27 ],
-    [ "mdf1", "ord", 21 ],
+    [ "mdf1", "ord", 20 ],
     [ "mfr1", "mlx1", 3 ],
     [ "mfr1", "mst1", 3 ],
     [ "mfr1", "ord", 139 ],
@@ -2273,9 +2298,9 @@
     [ "ord", "scl", 178 ],
     [ "ord", "sea", 47 ],
     [ "ord", "seo", 167 ],
-    [ "ord", "sto", 117 ],
+    [ "ord", "sto", 116 ],
     [ "ord", "sto2", 116 ],
-    [ "ord", "tyo", 145 ],
+    [ "ord", "tyo", 144 ],
     [ "ord", "tyo1", 140 ],
     [ "ord", "vie", 114 ],
     [ "ord", "waw", 118 ],
@@ -2300,12 +2325,12 @@
     [ "seo", "tyo", 30 ],
     [ "seo", "tyo1", 30 ],
     [ "sgp", "syd", 89 ],
-    [ "sgp", "tyo", 82 ],
+    [ "sgp", "tyo", 81 ],
     [ "sgp", "tyo1", 82 ],
     [ "sha", "sham", 0 ],
     [ "sha", "shat", 0 ],
     [ "sha", "shau", 0 ],
-    [ "sha", "shb", 2 ],
+    [ "sha", "shb", 1 ],
     [ "sham", "shat", 0 ],
     [ "sham", "shau", 0 ],
     [ "sham", "shb", 4 ],
