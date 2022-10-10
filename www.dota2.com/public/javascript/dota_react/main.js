@@ -29892,11 +29892,14 @@
             M = B ? -Qr.OQ / 3 : 0,
             G = B ? -Qr.GJ / 2 : 0,
             k = tr.f.Get().GetNodeTypeString(null == n ? void 0 : n.node_type);
-          return e.bAlwaysRender ||
-            0 != (null == n ? void 0 : n.team_id_1) ||
-            0 != (null == n ? void 0 : n.team_id_2) ||
-            0 != (null == n ? void 0 : n.incoming_node_id_1) ||
-            0 != (null == n ? void 0 : n.incoming_node_id_2)
+          return t === ar._A.INTERNATIONAL_2022_LASTCHANCE &&
+            "#dpc_bracket_grand_final_abbrev" === e.strNodeTitle
+            ? null
+            : e.bAlwaysRender ||
+              0 != (null == n ? void 0 : n.team_id_1) ||
+              0 != (null == n ? void 0 : n.team_id_2) ||
+              0 != (null == n ? void 0 : n.incoming_node_id_1) ||
+              0 != (null == n ? void 0 : n.incoming_node_id_2)
             ? o.createElement(
                 "div",
                 {
@@ -30123,15 +30126,16 @@
         ni = n(58111),
         ai = n.n(ni);
       var ri = (0, d.Pi)(function (e) {
-          var t = tr.f.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID),
-            n = Math.pow(
+          var t = Uo(),
+            n = tr.f.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID),
+            a = Math.pow(
               2,
               Math.ceil(
-                Math.log(null == t ? void 0 : t.team_count) / Math.log(2)
+                Math.log(null == n ? void 0 : n.team_count) / Math.log(2)
               )
             );
-          if (null == t) return null;
-          var a = (function (e, t) {
+          if (null == n) return null;
+          var r = (function (e, t) {
             switch ("".concat(e, "_").concat(t)) {
               case "".concat(ar.L$.BRACKET_DOUBLE_SEED_LOSER, "_").concat(12):
                 return {
@@ -30158,14 +30162,14 @@
                   arrBracketNodeConnectors: Qr.bf,
                 };
             }
-          })(t.node_group_type, n);
-          if (!a) return null;
-          var r = !1,
-            i = new Set();
-          null == t ||
-            t.nodes.forEach(function (e) {
-              r =
-                r ||
+          })(n.node_group_type, a);
+          if (!r) return null;
+          var i = !1,
+            s = new Set();
+          null == n ||
+            n.nodes.forEach(function (e) {
+              i =
+                i ||
                 0 != (null == e ? void 0 : e.team_id_1) ||
                 0 != (null == e ? void 0 : e.team_id_2);
               var t = (null == e ? void 0 : e.actual_time)
@@ -30177,36 +30181,36 @@
                 : e.scheduled_time;
               if (0 != t) {
                 var n = new Date(1e3 * t).setHours(0, 0, 0, 0) / 1e3;
-                i.add(n);
+                s.add(n);
               }
             });
-          var s = Array.from(i.values()).sort(),
-            l = !r,
-            c = function (t) {
+          var l = Array.from(s.values()).sort(),
+            c = !i,
+            u = function (t) {
               0 != e.nExpandedNodeID && e.setExpandedNodeID(0);
             };
           return o.createElement(
             "div",
             {
               className: ai().DPCStandingsBracketTree,
-              style: { width: a.nWidth, height: a.nHeight },
+              style: { width: r.nWidth, height: r.nHeight },
               onClick: function () {
-                return c;
+                return u;
               },
             },
-            null == t
+            null == n
               ? void 0
-              : t.nodes.map(function (t, n) {
-                  var r = (null == t ? void 0 : t.actual_time)
+              : n.nodes.map(function (t, n) {
+                  var a = (null == t ? void 0 : t.actual_time)
                       ? null == t
                         ? void 0
                         : t.actual_time
                       : null == t
                       ? void 0
                       : t.scheduled_time,
-                    i = new Date(1e3 * r).setHours(0, 0, 0, 0) / 1e3,
-                    c = e.bShowingDays
-                      ? s.findIndex(function (e) {
+                    i = new Date(1e3 * a).setHours(0, 0, 0, 0) / 1e3,
+                    s = e.bShowingDays
+                      ? l.findIndex(function (e) {
                           return i == e;
                         }) + 1
                       : 0;
@@ -30217,58 +30221,61 @@
                       className: ai().BracketNodeContainer,
                       style: {
                         left:
-                          a.arrBracketNodeLocations[n].nPosX - a.nLeftOffset,
-                        top: a.arrBracketNodeLocations[n].nPosY,
+                          r.arrBracketNodeLocations[n].nPosX - r.nLeftOffset,
+                        top: r.arrBracketNodeLocations[n].nPosY,
                       },
                     },
                     o.createElement(ti, {
                       nLeagueID: e.nLeagueID,
                       nNodeID: t.node_id,
                       strNodeTitle: "".concat(
-                        a.arrBracketNodeLocations[n].strLabel,
+                        r.arrBracketNodeLocations[n].strLabel,
                         "_abbrev"
                       ),
                       nExpandedNodeID: e.nExpandedNodeID,
                       setExpandedNodeID: e.setExpandedNodeID,
-                      strBackgroundColor: Qr.jr[c],
-                      bAlwaysRender: l,
+                      strBackgroundColor: Qr.jr[s],
+                      bAlwaysRender: c,
                     })
                   );
                 }),
-            a.arrBracketNodeConnectors.map(function (e, n) {
+            r.arrBracketNodeConnectors.map(function (e, a) {
               for (
-                var r = !1, i = 0, s = e.arrIncomingNodeIndices;
-                i < s.length;
-                i++
+                var i = !1, s = 0, l = e.arrIncomingNodeIndices;
+                s < l.length;
+                s++
               ) {
-                var c = s[i],
-                  u = null == t ? void 0 : t.nodes[c];
+                var u = l[s],
+                  d = null == n ? void 0 : n.nodes[u];
                 if (
-                  (null == u ? void 0 : u.team_id_1) ||
-                  (null == u ? void 0 : u.team_id_2) ||
-                  (null == u ? void 0 : u.incoming_node_id_1) ||
-                  (null == u ? void 0 : u.incoming_node_id_2)
+                  (null == d ? void 0 : d.team_id_1) ||
+                  (null == d ? void 0 : d.team_id_2) ||
+                  (null == d ? void 0 : d.incoming_node_id_1) ||
+                  (null == d ? void 0 : d.incoming_node_id_2)
                 ) {
-                  r = !0;
+                  i = !0;
                   break;
                 }
               }
-              return r || l
-                ? o.createElement(
-                    "div",
-                    {
-                      key: "connector_".concat(n),
-                      className: ai().BracketConnectorContainer,
-                      style: {
-                        left: e.nPosX - a.nLeftOffset,
-                        top: e.nPosY,
-                        width: e.nWidth,
-                        height: e.nHeight,
+              return i || c
+                ? t === ar._A.INTERNATIONAL_2022_LASTCHANCE &&
+                  a === r.arrBracketNodeConnectors.length - 1
+                  ? null
+                  : o.createElement(
+                      "div",
+                      {
+                        key: "connector_".concat(a),
+                        className: ai().BracketConnectorContainer,
+                        style: {
+                          left: e.nPosX - r.nLeftOffset,
+                          top: e.nPosY,
+                          width: e.nWidth,
+                          height: e.nHeight,
+                        },
                       },
-                    },
-                    e.bStraight && o.createElement(oi, null),
-                    !e.bStraight && o.createElement(ii, null)
-                  )
+                      e.bStraight && o.createElement(oi, null),
+                      !e.bStraight && o.createElement(ii, null)
+                    )
                 : null;
             })
           );
@@ -31525,7 +31532,9 @@
               r ? { value: ar.BY.GROUP_A, strLabel: "#dpc_group_a" } : void 0,
               r ? { value: ar.BY.GROUP_B, strLabel: "#dpc_group_b" } : void 0,
               { value: ar.BY.PLAYOFF, strLabel: "#dpc_playoff" },
-              { value: ar.BY.RESULTS, strLabel: "#dpc_results" },
+              e != ar._A.INTERNATIONAL_2022_LASTCHANCE
+                ? { value: ar.BY.RESULTS, strLabel: "#dpc_results" }
+                : void 0,
             ],
             g = (0, nr.UP)(n.strPhase);
           return tr.f.Get().GetEventType(e) != ar.f5.MAJOR &&
