@@ -30006,11 +30006,13 @@
                   o.createElement(
                     "div",
                     { className: (0, b.Z)(ei().Details, !B && ei().Hidden) },
-                    o.createElement(dr(), {
-                      className: ei().Timestamp,
-                      date: 1e3 * v,
-                      format: "MMM DD LT",
-                    }),
+                    0 !== v &&
+                      o.createElement(dr(), {
+                        className: ei().Timestamp,
+                        date: 1e3 * v,
+                        format: "MMM DD LT",
+                      }),
+                    0 === v && "",
                     o.createElement("div", { className: ei().Separator }),
                     o.createElement(
                       "div",
