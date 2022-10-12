@@ -5682,7 +5682,7 @@
       });
       var Tt = a(1351),
         Mt = a(1245),
-        It = (a(58185), a(62170), a(52795)),
+        It = (a(58185), a(10767), a(52795)),
         Ft = a(28976),
         Dt = (a(3356), a(27991)),
         Nt = a(18388),
@@ -5978,9 +5978,8 @@
                 term: e.replace(" ", "+"),
                 require_type: r.join(","),
                 excluded_tags: ma.jg.Get().GetExcludedTagsSortedByID(),
-                excluded_content_descriptors: ma.jg
-                  .Get()
-                  .GetExcludedContentDescriptor(),
+                excluded_content_descriptors:
+                  ma.jg.Get().ExcludedContentDescriptor,
               },
               i = `${fe.De.STORE_BASE_URL}search/suggest`,
               o = yield s().get(i, { params: n, withCredentials: !0 });

@@ -9151,10 +9151,11 @@
       "use strict";
       n.d(t, {
         HG: () => s,
-        LJ: () => c,
+        LJ: () => d,
+        Zh: () => l,
         _: () => o,
         ml: () => i,
-        zs: () => l,
+        zs: () => c,
       });
       n(26149);
       var a = n(37662),
@@ -9164,22 +9165,23 @@
       function o() {
         return window.innerWidth >= 940;
       }
-      function l(e) {
-        const t = (function (e = 940) {
-            const [t, n] = (0, r.useState)(window.innerWidth >= e);
+      function l(e = 940) {
+        const [t, n] = (0, r.useState)(window.innerWidth >= e);
+        return (
+          (0, r.useEffect)(() => {
+            const t = () => {
+              n(window.innerWidth >= e);
+            };
             return (
-              (0, r.useEffect)(() => {
-                const t = () => {
-                  n(window.innerWidth >= e);
-                };
-                return (
-                  window.addEventListener("resize", t),
-                  () => window.removeEventListener("resize", t)
-                );
-              }, [e]),
-              t
+              window.addEventListener("resize", t),
+              () => window.removeEventListener("resize", t)
             );
-          })(940),
+          }, [e]),
+          t
+        );
+      }
+      function c(e) {
+        const t = l(940),
           n = (0, a.fD)(e);
         return t
           ? { nMaxCapsulesPerRow: n.nMaxItemsPerRow, bScreenIsWide: t }
@@ -9194,7 +9196,7 @@
               bScreenIsWide: t,
             };
       }
-      function c(e) {
+      function d(e) {
         const t = (0, a.fD)(e);
         return o()
           ? t.nMaxItemsPerRow
@@ -18236,7 +18238,7 @@
       var K = n(85732),
         Q = n(58114),
         J = n(65902),
-        q = n(14974),
+        q = (n(46321), n(14974)),
         $ = n(77520),
         ee = n(99533);
       class te {
@@ -19245,9 +19247,8 @@
                 term: e.replace(" ", "+"),
                 require_type: a.join(","),
                 excluded_tags: z.jg.Get().GetExcludedTagsSortedByID(),
-                excluded_content_descriptors: z.jg
-                  .Get()
-                  .GetExcludedContentDescriptor(),
+                excluded_content_descriptors:
+                  z.jg.Get().ExcludedContentDescriptor,
               },
               i = `${U.De.STORE_BASE_URL}search/suggest`,
               o = yield s().get(i, { params: r, withCredentials: !0 });
@@ -26913,20 +26914,25 @@
         );
       }
       function C(e) {
-        const { event: t } = e,
-          [n, s, i] = (0, a.SZ)(() => [
+        const { event: t, dateRangeLayout: n = "horizontal" } = e,
+          [s, i, o] = (0, a.SZ)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
             t.GetEndTimeAndDateUnixSeconds(),
             t.type,
-          ]);
-        return r.createElement(
-          "div",
-          { className: g().EventDetailTimeInfo },
-          r.createElement(u.uv, {
-            startDateAndTime: n,
-            endDateAndTime: s,
-            bHideEndTime: !(0, h.G1)(i),
-          })
+          ]),
+          l = {};
+        return (
+          "vertical" == n && (l.ShortDateRange = g().VerticalLocalDateAndTime),
+          r.createElement(
+            "div",
+            { className: g().EventDetailTimeInfo },
+            r.createElement(u.uv, {
+              startDateAndTime: s,
+              endDateAndTime: i,
+              bHideEndTime: !(0, h.G1)(o),
+              stylesmodule: l,
+            })
+          )
         );
       }
     },

@@ -1369,3 +1369,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 16px;
   color: #fff;
 }
+.partnereventdisplay_VerticalLocalDateAndTime_1QFMN {
+  display: flex;
+  flex-direction: column;
+}

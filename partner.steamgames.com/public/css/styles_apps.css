@@ -332,11 +332,15 @@ textarea#leaderboard_blob {
 }
 
 .game_profile_row.parent {
-    grid-template-columns: 180px 200px 1fr auto;
+    grid-template-columns: 160px 200px 1fr auto;
 }
 
 .game_profile_row.child {
-    margin-left: 100px;
+    margin-left: 80px;
+}
+
+.game_profile_row.disabled {
+    opacity: .3;
 }
 
 .form_row_flex {

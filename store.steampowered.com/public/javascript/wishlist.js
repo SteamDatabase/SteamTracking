@@ -90,6 +90,7 @@ var CWishlistController = function()
 		$J('#section_filters').removeClass('hover');
 	});
 
+	window.addEventListener('scroll', this.OnUserScroll.bind(this)); // register a callback which ONLY fires when user takes action.  this.OnScroll is also called by our JS.
 	window.addEventListener('scroll', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnResize.bind(this));
@@ -407,7 +408,10 @@ CWishlistController.prototype.BuildElements = function()
 			_this.LoadSettings();
 			_this.Update();
 			$J('#throbber').hide();
-			$J('#total_num_games').text( Object.keys(_this.rgElements).length )
+			$J('#total_num_games').text( Object.keys(_this.rgElements).length );
+
+			// if we stored a last scroll position in history.state, scroll there now
+			_this.ScrollToLastKnownYPosition();
 		}
 	}
 
@@ -428,7 +432,7 @@ CWishlistController.prototype.SetFilterString = function()
 		strFilterString += key + '='+value;
 	});
 
-	history.replaceState(undefined, undefined, "#" + strFilterString)
+	history.replaceState( history.state, undefined, "#" + strFilterString );
 }
 
 CWishlistController.prototype.ApplyDefaultView = function()
@@ -1132,4 +1136,16 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 
 	return true;
 }
+
+// Save current scroll position, which we'll restore if the user navigates back to the wishlist page
+CWishlistController.prototype.OnUserScroll = function()
+{
+	window.history.replaceState( { wishlistScroll: parseInt( window.scrollY ) }, "" );
+}
+CWishlistController.prototype.ScrollToLastKnownYPosition = function()
+{
+	if ( window.history.state && window.history.state.wishlistScroll != null )
+		window.scrollTo( 0, window.history.state.wishlistScroll );
+}
+
 

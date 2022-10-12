@@ -699,6 +699,16 @@
 .animated_featured_capsule_DeckCompatIconOverride_on2Le {
   top: 45px;
 }
+@media screen and (max-width: 910px) {
+  .ContentHubMainCarouselCapsule {
+    min-width: 90vw;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .ContentHubMainCarouselCapsule {
+  min-width: unset;
+  scroll-snap-align: unset;
+}
 .ContentHubMainCarouselCapsule .animated_featured_capsule_Info_2mUNQ {
   padding: 20px;
   background: #0000004f;
@@ -1593,32 +1603,6 @@
   color: #fff;
   display: none;
 }
-.salelabels_SectionLabelCtn_17xMe {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
-  margin-left: auto;
-  display: flex;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
-  background: #4a2a3c;
-  padding: 4px 10px;
-  border-radius: 3px;
-  border: 1px solid #50484c;
-  height: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.salelabels_SectionLabelCtn_17xMe
-  .salelabels_SectionLabelLinkButton_1bw3D:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.salelabels_SectionTitleInnerCtn_2R3H5 {
-  margin-bottom: 10px;
-}
 :root {
   --basicui-header-height: 0px;
 }
@@ -1798,6 +1782,38 @@
 .salehilightplayerembed_PopupScreenshot_1-fbw {
   width: 100%;
   height: 100%;
+}
+.salelabels_SectionLabelCtn_17xMe {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
+  margin-left: auto;
+  display: flex;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
+  background: #4a2a3c;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #50484c;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.salelabels_SectionLabelCtn_17xMe
+  .salelabels_SectionLabelLinkButton_1bw3D:hover {
+  background: #7a5a6c;
+  border-color: #fff;
+}
+.salelabels_SectionTitleInnerCtn_2R3H5 {
+  margin-bottom: 10px;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .saleitemdefdisplay_QuanityAndPrice_2BmhS {
   display: flex;
@@ -2044,7 +2060,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   margin: unset;
-  padding: 0px var(--gpSpace-Gutter) 8px;
   scroll-padding: 0px var(--gpSpace-Gutter);
 }
 @media screen and (max-width: 910px) {
@@ -2053,7 +2068,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
     margin: unset;
-    padding: 0px var(--gpSpace-Gutter) 8px;
     scroll-padding: 0px var(--gpSpace-Gutter);
   }
 }
@@ -2128,7 +2142,7 @@ html.tablet
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 8px;
+  margin: 0 16px 0 0;
 }
 .contenthubshared_SpotlightsColumn_1g97e .CapsuleBottomBar {
   height: 54px;
@@ -2146,6 +2160,16 @@ html.tablet
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   width: 100%;
+}
+@media screen and (max-width: 910px) {
+  .contenthubshared_SpotlightCtn_3pJ3t {
+    min-width: 300px;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .contenthubshared_SpotlightCtn_3pJ3t {
+  min-width: unset;
+  scroll-snap-align: unset;
 }
 .contenthubshared_SpotlightCtn_3pJ3t .contenthubshared_SpotlightImageCtn_1o33E {
   position: relative;
@@ -4980,7 +5004,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .saleitembrowser_SaleItemBrowserContainer_2wLns
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9 {
   overflow-x: auto;
-  margin: 0 -16px 6px;
+  margin: 0 0 6px;
   padding: 0 0 6px;
   text-transform: uppercase;
   letter-spacing: 0.07em;

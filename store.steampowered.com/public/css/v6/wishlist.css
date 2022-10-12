@@ -833,6 +833,13 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	}
 }
 
+@media screen and ( min-width: 501px) and ( max-width: 910px ) {
+
+	/* Make the search edit control easier to access on tablet screens */
+	html.responsive #wishlist_search {
+		font-size: 16px;
+	}
+}
 
 @media screen and (max-width: 500px) {
 	#wishlist_ctn:not(.compact) .wishlist_row .capsule {

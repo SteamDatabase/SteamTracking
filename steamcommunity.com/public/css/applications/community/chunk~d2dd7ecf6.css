@@ -4073,6 +4073,16 @@ td.rdtYear:hover {
 .animated_featured_capsule_DeckCompatIconOverride_on2Le {
   top: 45px;
 }
+@media screen and (max-width: 910px) {
+  .ContentHubMainCarouselCapsule {
+    min-width: 90vw;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .ContentHubMainCarouselCapsule {
+  min-width: unset;
+  scroll-snap-align: unset;
+}
 .ContentHubMainCarouselCapsule .animated_featured_capsule_Info_2mUNQ {
   padding: 20px;
   background: #0000004f;
@@ -5450,6 +5460,7 @@ td.rdtYear:hover {
   scroll-snap-align: center;
   overflow: hidden;
   margin: 0 auto;
+  outline: none;
   transition: transform ease;
   transition-duration: 0.5s;
 }
@@ -6153,6 +6164,14 @@ td.rdtYear:hover {
   .discoveryqueuewizard_ProgressDotHidden_n2UAY {
   opacity: 0%;
 }
+.discoveryqueuewizard_DiscoveryQueueName_1hDU6 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  font-weight: bold;
+  opacity: 80%;
+}
 .appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
   position: relative;
   width: 100%;
@@ -6376,6 +6395,12 @@ td.rdtYear:hover {
 .salehilightplayerembed_PopupScreenshot_1-fbw {
   width: 100%;
   height: 100%;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .salerewardshelfdisplay_RewardContainer_10sVo {
   display: flex;

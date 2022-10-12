@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7569978";
+var CLSTAMP = "7577816";
 (() => {
   "use strict";
   var e,
@@ -8,11 +8,11 @@ var CLSTAMP = "7569978";
     n,
     a,
     i = {
-      903: (e, t, n) => {
+      358: (e, t, n) => {
         n.d(t, { B: () => s });
         var a = n(655),
-          i = n(142),
-          r = n(809);
+          i = n(426),
+          r = n(36);
         let o = [
           { index: 0, type: i.eV.OK, category: "action" },
           { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -77,11 +77,11 @@ var CLSTAMP = "7569978";
         (0, a.gn)([r.a], s.prototype, "PollGamepads", null),
           (0, a.gn)([r.a], s.prototype, "OnWindowRegainedFocus", null);
       },
-      142: (e, t, n) => {
+      426: (e, t, n) => {
         n.d(t, { eV: () => a, Rr: () => i, oH: () => c });
         var a,
           i,
-          r = n(424);
+          r = n(182);
         class o {
           constructor(e) {
             this.m_config = e;
@@ -263,7 +263,7 @@ var CLSTAMP = "7569978";
           }
         }
       },
-      563: (e, t, n) => {
+      892: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             let n = e.findIndex(t);
@@ -272,7 +272,7 @@ var CLSTAMP = "7569978";
         }
         n.d(t, { Zf: () => a });
       },
-      809: (e, t, n) => {
+      36: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -287,11 +287,11 @@ var CLSTAMP = "7569978";
         }
         n.d(t, { a: () => a });
       },
-      424: (e, t, n) => {
+      182: (e, t, n) => {
         n.d(t, { pB: () => o, vq: () => c });
         var a = n(655),
-          i = n(563),
-          r = n(809);
+          i = n(892),
+          r = n(36);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -466,7 +466,7 @@ var CLSTAMP = "7569978";
     (o.e = (e) =>
       Promise.all(Object.keys(o.f).reduce((t, n) => (o.f[n](e, t), t), []))),
     (o.u = (e) =>
-      "javascript/legacy_web/gamepad.js?contenthash=5e4d96b0e5e0ac528b30"),
+      "javascript/legacy_web/gamepad.js?contenthash=52146c7d12e25a82e850"),
     (o.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=6e6111865655343f0b1a"),
     (o.g = (function () {
@@ -490,12 +490,12 @@ var CLSTAMP = "7569978";
             u < l.length;
             u++
           ) {
-            var p = l[u];
+            var d = l[u];
             if (
-              p.getAttribute("src") == n ||
-              p.getAttribute("data-webpack") == t + i
+              d.getAttribute("src") == n ||
+              d.getAttribute("data-webpack") == t + i
             ) {
-              s = p;
+              s = d;
               break;
             }
           }
@@ -507,7 +507,7 @@ var CLSTAMP = "7569978";
           s.setAttribute("data-webpack", t + i),
           (s.src = n)),
           (e[n] = [a]);
-        var d = (t, a) => {
+        var p = (t, a) => {
             (s.onerror = s.onload = null), clearTimeout(h);
             var i = e[n];
             if (
@@ -519,11 +519,11 @@ var CLSTAMP = "7569978";
               return t(a);
           },
           h = setTimeout(
-            d.bind(null, void 0, { type: "timeout", target: s }),
+            p.bind(null, void 0, { type: "timeout", target: s }),
             12e4
           );
-        (s.onerror = d.bind(null, s.onerror)),
-          (s.onload = d.bind(null, s.onload)),
+        (s.onerror = p.bind(null, s.onerror)),
+          (s.onload = p.bind(null, s.onload)),
           c && document.head.appendChild(s);
       }
     }),
@@ -665,12 +665,12 @@ var CLSTAMP = "7569978";
       var e = o(655),
         t = (o(352), o(311)),
         n = o.n(t),
-        a = o(903);
+        a = o(358);
       function i(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield o
             .e(511)
-            .then(o.bind(o, 506));
+            .then(o.bind(o, 404));
           e(t);
         });
       }

@@ -85,7 +85,7 @@
             "object" == typeof e && "GetAccountID" in e ? e.GetAccountID() : e;
           return this.m_setCuratorsIgnored.has(t);
         }
-        GetExcludedContentDescriptor() {
+        get ExcludedContentDescriptor() {
           return Array.from(this.m_setExcludedContentDescriptors);
         }
         BExcludesTag(e) {
@@ -520,6 +520,7 @@
         (0, n.gn)([i.LO], m.prototype, "m_setAppsInCart", void 0),
         (0, n.gn)([i.LO], m.prototype, "m_nCartLineItemCount", void 0),
         (0, n.gn)([i.LO], m.prototype, "m_bAjaxInFlight", void 0),
+        (0, n.gn)([i.Fl], m.prototype, "ExcludedContentDescriptor", null),
         (0, n.gn)([i.aD], m.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {

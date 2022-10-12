@@ -147,6 +147,7 @@ LocalizationManifestReady("profile", "manifest", {
   ProfileTheme_Lunar2022: "Lunar 2022",
   ProfileTheme_SteamDeck: "Steam Deck",
   ProfileTheme_Steam3000: "Steam 3000",
+  ProfileTheme_GameProfile: "Game Profile",
   Profile_PersonaNameCooldown:
     "This account has been banned from changing its profile name for:",
   Profile_PersonaNameCooldown_Desc:

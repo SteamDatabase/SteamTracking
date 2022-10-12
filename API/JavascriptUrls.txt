@@ -485,6 +485,7 @@ ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
+${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/checkdevice
 ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
@@ -1865,6 +1866,7 @@ https://s.team/chat/${}
 https://s.team/deck/setup
 https://s.team/join
 https://s.team/remoteplay/connect/${}?appid=${appID}&${remoteplayString}
+https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://sketchfab.com/models/${modelID}/embed?autostart=1
 https://sketchfab.com/models/${modelid}/embed?autostart=1
 https://sketchfab.com/oembed?url=https://sketchfab.com/models/${modelID}
@@ -2308,7 +2310,7 @@ https://store.steampowered.com/recommended/ignorerecommendation
 https://store.steampowered.com/recommended/ignorerecommendation/
 https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
-https://store.steampowered.com/search/?term=${$Term}
+https://store.steampowered.com/search/?term=${$Term}${snr}
 https://store.steampowered.com/search/hometab/TopGrossing/
 https://store.steampowered.com/search/results
 https://store.steampowered.com/search/results/
@@ -2439,6 +2441,7 @@ steam://friends/message/${steamid}
 steam://gamewebcallback/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${m_gameid}/${m_game_lobby_id}/${steamid64}
+steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
 steam://open/downloads
 steam://open/friends
@@ -2460,11 +2463,13 @@ steam://openurl_external/${}
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
 steam://remoteplay/connect
 steam://remoteplay/connect/${}?appid=${appID}&${remoteplayString}
+steam://remoteplay/connect/${}?appid=${}&${}
 steam://run/${app_to_run}
 steam://run/${appid}
 steam://run/${}
 steam://run/%1$s
 steam://rungame/${appID}/${}
+steam://rungame/${}/${}
 steam://rungameid/${}
 steam://settings/account
 steam://settings/account${}

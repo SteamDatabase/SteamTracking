@@ -697,8 +697,9 @@
         y = r(90666),
         g = r(9669),
         f = r.n(g),
-        S = r(41619),
+        S = r(21032),
         w = r(77636);
+      r(46321);
       function C(e) {
         return (0, v.useQuery)(
           A.Get().GetFriendsGameplayInfoKey(e),
@@ -721,26 +722,22 @@
         );
       }
       function E() {
-        const { data: e } = (0, S.cs)(
-          A.Get().StoryQueryStore,
-          "App Relevance Store Top Sellers",
-          { sort: 11, start: 0, count: 100 }
-        );
+        const { data: e } = (0, S.cs)("App Relevance Store Top Sellers", {
+          sort: 11,
+          start: 0,
+          count: 100,
+        });
         return e;
       }
       class A {
         static Init(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             (A.Get().m_transport = e.GetServiceTransport()),
-              (A.Get().m_DynamicUserStore = yield w.jg.Get().HintLoad()),
-              (A.Get().m_StoreQueryStore = new S.zv(
-                e,
-                A.Get().m_DynamicUserStore
-              ));
+              (A.Get().m_DynamicUserStore = yield w.jg.Get().HintLoad());
           });
         }
         static BIsLoaded() {
-          return Boolean(A.Get().m_transport && A.Get().m_StoreQueryStore);
+          return Boolean(A.Get().m_transport);
         }
         static Get() {
           return (
@@ -748,11 +745,14 @@
             this.s_AppRelevanceStore
           );
         }
+        GetTransport() {
+          return this.m_transport;
+        }
+        GetDynamicUserStore() {
+          return this.m_DynamicUserStore;
+        }
         GetFriendsGameplayInfoKey(e) {
           return `GetFriendsGameplayInfoKey_${e}`;
-        }
-        get StoryQueryStore() {
-          return this.m_StoreQueryStore;
         }
         LoadFriendsGameplayInfo(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
@@ -1186,63 +1186,75 @@
       (u.s_PlayerStoreStore = null),
         (0, n.gn)([l.LO], u.prototype, "m_mapPlayerSummaries", void 0);
     },
-    41619: (e, t, r) => {
+    21032: (e, t, r) => {
       "use strict";
-      r.d(t, { cs: () => m, zv: () => d });
+      r.d(t, { cs: () => p, qX: () => m });
       var n = r(70655),
         i = r(67294),
         o = r(88767),
         s = (r(26149), r(58114)),
-        a = (r(990), r(87931)),
-        l = (r(77636), r(32367)),
+        a = (r(13328), r(990), r(87931)),
+        l = r(32367),
         c = (r(14146), r(159)),
         u = r(77520);
-      class d {
-        constructor(e, t) {
-          (this.m_ServiceTransport = e.GetServiceTransport()),
-            (this.m_DynamicStore = t);
-        }
-        get DynamicStore() {
-          return this.m_DynamicStore;
-        }
-        ExecuteQuery(e, t, r, i) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = s.gA.Init(a.e8);
-            (0, l.pA)(n),
-              r && (0, l.De)(n, r),
-              (null == i ? void 0 : i.override_country_code) &&
-                n.Body().set_override_country_code(i.override_country_code),
-              n.Body().set_query(a.$2.fromObject(t)),
-              n.Body().set_query_name(e);
-            const o = yield a.Ax.Query(this.m_ServiceTransport, n);
-            if (1 != o.GetEResult()) throw o.GetEResult();
-            return new p(o, r);
-          });
-        }
+      const d = i.createContext({});
+      function m(e) {
+        let { transport: t, defaultOptions: r, children: n } = e,
+          o = i.useMemo(
+            () => ({ defaultOptions: r || {}, transport: t }),
+            [r, t]
+          );
+        return i.createElement(d.Provider, { value: o }, n);
       }
-      function m(e, t, r, n, s) {
-        const a = i.useMemo(
-            () =>
-              Object.assign(Object.assign({}, r), {
-                filters: Object.assign(
-                  {
-                    content_descriptors_excluded: (
-                      null == s ? void 0 : s.ignore_preferences
-                    )
-                      ? []
-                      : e.DynamicStore.GetExcludedContentDescriptor(),
-                  },
-                  r.filters
-                ),
-              }),
-            [r, s]
-          ),
-          l = ["StoreQueryStore", a, n, s];
-        return (0, o.useQuery)(l, () => e.ExecuteQuery(t, a, n, s), {
-          staleTime: 36e5,
-        });
+      function p(e, t, r, c) {
+        let m = i.useContext(d);
+        (m && m.transport) ||
+          (0, u.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
+        let p = m.defaultOptions;
+        const _ = i.useMemo(() => {
+          let e = [];
+          return (
+            (null == c ? void 0 : c.content_descriptors_excluded)
+              ? (e = c.content_descriptors_excluded)
+              : (null == p ? void 0 : p.content_descriptors_excluded) &&
+                (e = p.content_descriptors_excluded),
+            Object.assign(Object.assign({}, t), {
+              filters: Object.assign(
+                { content_descriptors_excluded: e },
+                t.filters
+              ),
+            })
+          );
+        }, [t, c, p]);
+        let v;
+        void 0 !== (null == c ? void 0 : c.override_country_code)
+          ? (v = c.override_country_code)
+          : void 0 !== (null == p ? void 0 : p.override_country_code) &&
+            (v = p.override_country_code);
+        let y = { staleTime: 36e5 };
+        (null == c ? void 0 : c.reactQuery) &&
+          (y = Object.assign(Object.assign({}, y), c.reactQuery));
+        const g = ["StoreQueryStore", _, r, c];
+        return (0, o.useQuery)(
+          g,
+          () =>
+            (function (e, t, r, i, o) {
+              return (0, n.mG)(this, void 0, void 0, function* () {
+                const n = s.gA.Init(a.e8);
+                (0, l.pA)(n),
+                  i && (0, l.De)(n, i),
+                  o && n.Body().set_override_country_code(o),
+                  n.Body().set_query(a.$2.fromObject(r)),
+                  n.Body().set_query_name(t);
+                const c = yield a.Ax.Query(e, n);
+                if (1 != c.GetEResult()) throw c.GetEResult();
+                return new h(c, i);
+              });
+            })(m.transport, e, _, r, v),
+          y
+        );
       }
-      class p {
+      class h {
         constructor(e, t) {
           this.ReadResults(e, t);
         }
@@ -1343,7 +1355,7 @@
                 (_.current.onended = D)),
               b(!0);
           }, [D]),
-          T = n.useCallback(
+          R = n.useCallback(
             (e) => {
               (0, l.I1)(h, String(!e), 3650), f(!e), e || (B(), b(!1));
             },
@@ -1352,7 +1364,7 @@
         n.useEffect(() => {
           S && r && !o && !g && _.current && G(), r || B();
         }, [r, o, g, S, G, B]);
-        const R = (0, n.useCallback)(
+        const T = (0, n.useCallback)(
           (e) => {
             const t = e.target,
               r = t.muted ? 0 : t.volume;
@@ -1393,7 +1405,7 @@
                   className: s().AutoplayCheckbox,
                   style: N,
                   label: (0, c.Xx)("#StoreTrailer_AutoPlayVideos"),
-                  onChange: T,
+                  onChange: R,
                 })
               ),
               g &&
@@ -1429,7 +1441,7 @@
                   {
                     className: (0, d.Z)(s().AppVideo, "Trailer"),
                     ref: v,
-                    onVolumeChange: R,
+                    onVolumeChange: T,
                     muted: Boolean(I),
                     preload: "auto",
                     playsInline: !0,
@@ -1705,7 +1717,7 @@
                   { className: I().RelevantCtn },
                   ee.length > 0 &&
                     i.createElement(
-                      R,
+                      T,
                       { header: (0, g.Xx)("#DiscoveryQueue_SimilarGames") },
                       i.createElement(
                         "div",
@@ -1718,7 +1730,7 @@
                       ? void 0
                       : v.length) > 0 &&
                     i.createElement(
-                      R,
+                      T,
                       {
                         header: (0, g.Xx)(
                           "#ContentHub_Recommendation_Curators"
@@ -1744,7 +1756,7 @@
                     Boolean(J.data) &&
                     i.createElement(B, { creatorInfo: J.data }),
                   te >= 0 &&
-                    i.createElement(R, {
+                    i.createElement(T, {
                       header: (0, g.x$)(
                         "#DiscoveryQueue_TopSellers",
                         (te + 1).toLocaleString(),
@@ -1754,10 +1766,10 @@
                       ),
                     }),
                   re &&
-                    i.createElement(R, {
+                    i.createElement(T, {
                       header: (0, g.Xx)("#DiscoveryQueue_RecommendedByIR"),
                     }),
-                  i.createElement(T, {
+                  i.createElement(R, {
                     bShowAvatars: Q,
                     count:
                       null ===
@@ -1774,7 +1786,7 @@
                         : A.rgOwnedFriends,
                     fnGetFriendState: x,
                   }),
-                  i.createElement(T, {
+                  i.createElement(R, {
                     bShowAvatars: Q,
                     count:
                       null ===
@@ -1791,7 +1803,7 @@
                         : N.rgWishlistFriends,
                     fnGetFriendState: x,
                   }),
-                  i.createElement(T, {
+                  i.createElement(R, {
                     bShowAvatars: Q,
                     count:
                       null ===
@@ -1835,7 +1847,7 @@
             n = "#ContentHub_Recommendation_FollowedFranchise";
         }
         return n
-          ? i.createElement(R, {
+          ? i.createElement(T, {
               header: (0, g.kQ)(
                 n,
                 i.createElement(
@@ -1884,7 +1896,7 @@
           )
         );
       }
-      function T(e) {
+      function R(e) {
         const {
           arrSteamIDs: t,
           count: r,
@@ -1941,7 +1953,7 @@
                     ));
             }),
             i.createElement(
-              R,
+              T,
               {
                 header: (0, g.x$)(
                   o,
@@ -1958,7 +1970,7 @@
           const e = new u.K(t[0]),
             r = n ? n(e) : w.b.Get().GetPlayerSummary(e.ConvertTo64BitString());
           return r && r.m_bInitialized
-            ? i.createElement(R, {
+            ? i.createElement(T, {
                 header: (0, g.kQ)(
                   o + "_Single",
                   i.createElement(
@@ -1974,7 +1986,7 @@
             : null;
         }
       }
-      function R(e) {
+      function T(e) {
         const { children: t, header: r } = e;
         return i.createElement(
           "div",
@@ -2091,8 +2103,8 @@
         B = r(52114),
         D = r(37694),
         G = r(67777),
-        T = r(89673),
-        R = r(44741),
+        R = r(89673),
+        T = r(44741),
         F = r(24432),
         k = r(73935),
         N = r(64839),
@@ -2656,7 +2668,7 @@
               (o = a),
               r && -1 === n.findIndex((e) => e === r) && n.unshift(r),
               yield E.Z.Get().QueueMultipleAppRequests(n, se),
-              yield (0, T.dw)(n);
+              yield (0, R.dw)(n);
           } catch (e) {
             console.error("Failed getting discovery queue apps", e);
           }
@@ -2680,13 +2692,13 @@
           [C, I] = o.useState("DiscoveryQueue"),
           [E, A] = o.useState(!0),
           [B, D] = o.useState(!1),
-          [G, T] = o.useState(!1),
-          R = o.useRef(),
+          [G, R] = o.useState(!1),
+          T = o.useRef(),
           F = (0, V.T)("DiscoveryQueueWizard");
-        K("ArrowLeft", (e) => R.current.MoveLeft(e)),
-          K("Left", (e) => R.current.MoveLeft(e)),
-          K("ArrowRight", (e) => R.current.MoveRight(e)),
-          K("Right", (e) => R.current.MoveRight(e)),
+        K("ArrowLeft", (e) => T.current.MoveLeft(e)),
+          K("Left", (e) => T.current.MoveLeft(e)),
+          K("ArrowRight", (e) => T.current.MoveRight(e)),
+          K("Right", (e) => T.current.MoveRight(e)),
           K("Escape", () => i && i()),
           K("Esc", () => i && i());
         const k = o.useMemo(
@@ -2729,7 +2741,7 @@
                     ? void 0
                     : r.reason) || v(o),
                   e ||
-                    null === (n = null == R ? void 0 : R.current) ||
+                    null === (n = null == T ? void 0 : T.current) ||
                     void 0 === n ||
                     n.MoveRight(),
                   ie("Loaded new discovery queue apps: ", i);
@@ -2737,7 +2749,7 @@
             [t, c, p, _]
           );
         o.useEffect(() => {
-          Q(!0).then(() => T(!0)),
+          Q(!0).then(() => R(!0)),
             f.jg.Get().HintLoad(),
             I(
               (() => {
@@ -2929,7 +2941,7 @@
                       o.createElement(
                         l.s,
                         {
-                          onClick: (e) => R.current.MoveLeft(e),
+                          onClick: (e) => T.current.MoveLeft(e),
                           className: (0, d.Z)(
                             re().QueueNavArrow,
                             re().LeftArrow,
@@ -2941,7 +2953,7 @@
                       o.createElement(U, {
                         name: C,
                         className: re().DiscoveryQueueCarousel,
-                        ref: R,
+                        ref: T,
                         fnDoesItemTakeFocus: ee,
                         fnOnFocusedColumnChange: te,
                         fnUpdateArrows: $,
@@ -2963,7 +2975,7 @@
                       o.createElement(
                         l.s,
                         {
-                          onClick: (e) => R.current.MoveRight(e),
+                          onClick: (e) => T.current.MoveRight(e),
                           className: (0, d.Z)(
                             re().QueueNavArrow,
                             re().RightArrow,
@@ -3025,7 +3037,7 @@
           C = (0, i.SZ)(() => f.jg.Get().BIsGameWishlisted(t)),
           I = (0, i.SZ)(() => f.jg.Get().BIsGameIgnored(t)),
           E = (0, D.Eq)(null == S ? void 0 : S.GetTagIDs()),
-          T = b.De.IN_GAMEPADUI,
+          R = b.De.IN_GAMEPADUI,
           k = (0, H.bJ)(),
           N = o.useMemo(() => (0, Y.Pf)(v), [v]),
           L = o.useMemo(() => "?inqueue=" + p + (v ? "_" + N : ""), [p, v, N]),
@@ -3143,7 +3155,7 @@
                     { className: re().AppName },
                     S.GetName()
                   ),
-                  o.createElement(R.Jc, {
+                  o.createElement(T.Jc, {
                     bSingleLineMode: !0,
                     info: { id: e.appID, type: (0, s.Yd)(S.GetAppType()) },
                   })
@@ -3195,7 +3207,7 @@
                       className: (0, d.Z)(re().QueueButton, re().Primary),
                       href: me(S.GetStorePageURL() + L, k),
                     },
-                    T &&
+                    R &&
                       o.createElement(F.VC, {
                         button: J.FX.Y,
                         type: F.yV.Light,
@@ -3215,7 +3227,7 @@
                         className: re().QueueButton,
                         onClick: x,
                       },
-                      T &&
+                      R &&
                         o.createElement(F.VC, {
                           button: J.FX.Y,
                           type: F.yV.Light,
@@ -3321,17 +3333,17 @@
           [A, B] = o.useState(!1),
           D = (0, H.bJ)(),
           G = (0, Y.hc)(i, p),
-          T = (0, V.T)("DiscoveryQueueSummary"),
-          R = o.useCallback(() => {
+          R = (0, V.T)("DiscoveryQueueSummary"),
+          T = o.useCallback(() => {
             B(!0),
               m(!1).then(() => {
                 var e;
-                (null === (e = null == T ? void 0 : T.token) || void 0 === e
+                (null === (e = null == R ? void 0 : R.token) || void 0 === e
                   ? void 0
                   : e.reason) || B(!0);
               });
           }, [
-            null === (t = null == T ? void 0 : T.token) || void 0 === t
+            null === (t = null == R ? void 0 : R.token) || void 0 === t
               ? void 0
               : t.reason,
             m,
@@ -3352,7 +3364,7 @@
               window.location.href = me(b.De.STORE_BASE_URL + "wishlist", D);
             },
             onOKActionDescription: (0, h.Xx)("#Button_Continue"),
-            onOKButton: R,
+            onOKButton: T,
             onCancelActionDescription: (0, h.Xx)("#ActionButtonLabelDone"),
             onCancelButton: () => s && s(),
           },
@@ -3458,7 +3470,7 @@
                         re().Primary,
                         re().Wide
                       ),
-                      onClick: R,
+                      onClick: T,
                     },
                     A ? (0, h.Xx)("#Loading") : (0, h.Xx)("#Button_Continue")
                   )

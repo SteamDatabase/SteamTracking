@@ -1128,7 +1128,8 @@ var k_nSearchKeypressTimeoutExtensionMS = 125;
 // we'll have the mobile app navigate to the search page without having to post a message to the webview
 function MobileApp_ShowSearchResults( $SNR, $Term )
 {
-	window.location = 'https://store.steampowered.com/search/?term=' + $Term;
+	const snr = $SNR ? '&snr=' + $SNR : '';
+	window.location = 'https://store.steampowered.com/search/?term=' + $Term + snr;
 }
 
 function MobileApp_UpdateSearchSuggestions( $Term )

@@ -1064,6 +1064,16 @@ a.bbcodes_LinkButton_lMVeY:hover {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 910px) {
+  .eventrow_OtherEvents_2ioeM {
+    min-width: 320px;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .eventrow_OtherEvents_2ioeM {
+  min-width: unset;
+  scroll-snap-align: unset;
+}
 .BasicUI .eventrow_OtherEvents_2ioeM {
   display: unset;
 }
@@ -1103,7 +1113,7 @@ a.bbcodes_LinkButton_lMVeY:hover {
   min-width: 180px;
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: 0px 8px 0px 8px;
+  margin: 0px 16px 0px 0px;
 }
 .BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: unset;

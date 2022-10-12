@@ -947,10 +947,10 @@
           }
           return r.millerRabin(t);
         });
-      const x = e;
-      var A = function (t, i) {
-          (this.modulus = new x(t, 16)),
-            (this.encryptionExponent = new x(i, 16));
+      const A = e;
+      var x = function (t, i) {
+          (this.modulus = new A(t, 16)),
+            (this.encryptionExponent = new A(i, 16));
         },
         M = {
           base64:
@@ -1031,7 +1031,7 @@
         };
       const O = {
         getPublicKey: function (t, i) {
-          return new A(t, i);
+          return new x(t, i);
         },
         encrypt: function (t, i) {
           return (
@@ -1048,7 +1048,7 @@
             r[--i] = t.charCodeAt(o--);
           for (r[--i] = 0; i > 2; )
             r[--i] = Math.floor(254 * Math.random()) + 1;
-          return (r[--i] = 2), (r[--i] = 0), new x(r);
+          return (r[--i] = 2), (r[--i] = 0), new A(r);
         },
       };
     },
@@ -1107,7 +1107,12 @@
               try {
                 let t = { "Content-Type": "multipart/form-data" },
                   i = yield s().post(e, r, { headers: t });
-                if (200 != i.status) return null;
+                if (200 != i.status)
+                  return (
+                    console.log("GetRSAKey failure: "),
+                    console.log(i.status),
+                    null
+                  );
                 let n = i.data;
                 if (
                   !(
@@ -1118,15 +1123,19 @@
                     n.timestamp
                   )
                 )
-                  return null;
+                  return (
+                    console.log("GetRSAKey failure: "), console.log(n), null
+                  );
                 o = n;
               } catch (t) {
-                return null;
+                return (
+                  console.log("GetRSAKey exception: "), console.log(t), null
+                );
               }
               return o;
             });
           })(t, r.strUserName);
-          if (!e) return console.log("Failed to get RSA key"), null;
+          if (!e) return console.error(`Failed to get RSA key from ${t}`), null;
           let n = yield (function (t, i, r, e) {
             return (0, o.mG)(this, void 0, void 0, function* () {
               const o = f(r.strPassword, e);

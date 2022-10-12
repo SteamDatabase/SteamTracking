@@ -1598,7 +1598,12 @@
     },
     88380: (e, t, a) => {
       "use strict";
-      a.d(t, { DeH: () => s.De, Xxn: () => R.Xx });
+      a.d(t, {
+        DeH: () => s.De,
+        kQm: () => s.kQ,
+        Xxn: () => R.Xx,
+        L7r: () => s.L7,
+      });
       var n = a(54698),
         r = a(7200),
         s = a(90666),
@@ -4689,10 +4694,11 @@
       "use strict";
       a.d(t, {
         HG: () => s,
-        LJ: () => c,
+        LJ: () => d,
+        Zh: () => i,
         _: () => o,
         ml: () => l,
-        zs: () => i,
+        zs: () => c,
       });
       a(26149);
       var n = a(49186),
@@ -4702,22 +4708,23 @@
       function o() {
         return window.innerWidth >= 940;
       }
-      function i(e) {
-        const t = (function (e = 940) {
-            const [t, a] = (0, r.useState)(window.innerWidth >= e);
+      function i(e = 940) {
+        const [t, a] = (0, r.useState)(window.innerWidth >= e);
+        return (
+          (0, r.useEffect)(() => {
+            const t = () => {
+              a(window.innerWidth >= e);
+            };
             return (
-              (0, r.useEffect)(() => {
-                const t = () => {
-                  a(window.innerWidth >= e);
-                };
-                return (
-                  window.addEventListener("resize", t),
-                  () => window.removeEventListener("resize", t)
-                );
-              }, [e]),
-              t
+              window.addEventListener("resize", t),
+              () => window.removeEventListener("resize", t)
             );
-          })(940),
+          }, [e]),
+          t
+        );
+      }
+      function c(e) {
+        const t = i(940),
           a = (0, n.fD)(e);
         return t
           ? { nMaxCapsulesPerRow: a.nMaxItemsPerRow, bScreenIsWide: t }
@@ -4732,7 +4739,7 @@
               bScreenIsWide: t,
             };
       }
-      function c(e) {
+      function d(e) {
         const t = (0, n.fD)(e);
         return o()
           ? t.nMaxItemsPerRow
@@ -11280,9 +11287,8 @@
                 term: e.replace(" ", "+"),
                 require_type: n.join(","),
                 excluded_tags: d.jg.Get().GetExcludedTagsSortedByID(),
-                excluded_content_descriptors: d.jg
-                  .Get()
-                  .GetExcludedContentDescriptor(),
+                excluded_content_descriptors:
+                  d.jg.Get().ExcludedContentDescriptor,
               },
               s = `${E.De.STORE_BASE_URL}search/suggest`,
               c = yield l().get(s, { params: r, withCredentials: !0 });

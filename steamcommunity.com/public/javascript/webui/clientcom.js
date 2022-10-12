@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7569952";
+var CLSTAMP = "7577906";
 (() => {
   "use strict";
   function e(e) {
@@ -11,7 +11,7 @@ var CLSTAMP = "7569952";
   function t() {
     return !!window.document;
   }
-  var n, o, i, s, _, a, c, r, l;
+  var n, o, i, _, s, a, r, c, l, m, u;
   !(function (e) {
     (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
       "k_EConnectivityTestResult_Unknown"),
@@ -65,7 +65,7 @@ var CLSTAMP = "7569952";
           "k_EFloatingGamepadTextInputModeModeEmail"),
         (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
           "k_EFloatingGamepadTextInputModeModeNumeric");
-    })(s || (s = {})),
+    })(_ || (_ = {})),
     (function (e) {
       (e[(e.k_EAppUpdateContentType_Content = 0)] =
         "k_EAppUpdateContentType_Content"),
@@ -75,7 +75,7 @@ var CLSTAMP = "7569952";
           "k_EAppUpdateContentType_Shader"),
         (e[(e.k_EAppUpdateContentType_Max = 3)] =
           "k_EAppUpdateContentType_Max");
-    })(_ || (_ = {})),
+    })(s || (s = {})),
     (function (e) {
       (e[(e.k_EOverlayToStoreFlag_None = 0)] = "k_EOverlayToStoreFlag_None"),
         (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
@@ -88,7 +88,7 @@ var CLSTAMP = "7569952";
         "k_EActivateGameOverlayToWebPageMode_Default"),
         (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
           "k_EActivateGameOverlayToWebPageMode_Modal");
-    })(c || (c = {})),
+    })(r || (r = {})),
     (function (e) {
       (e[(e.k_EGamingDeviceType_Unknown = 0)] = "k_EGamingDeviceType_Unknown"),
         (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
@@ -103,14 +103,48 @@ var CLSTAMP = "7569952";
         (e[(e.k_EGamingDeviceType_Phone = 528)] = "k_EGamingDeviceType_Phone"),
         (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
           "k_EGamingDeviceType_SteamDeck");
-    })(r || (r = {})),
+    })(c || (c = {})),
     (function (e) {
       (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
         (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
           "k_ELoginUIStyleNewWithoutQRCode"),
         (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-    })(l || (l = {}));
-  const u = {
+    })(l || (l = {})),
+    (function (e) {
+      (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
+        "k_ECommunityProfileItemProperty_ImageSmall"),
+        (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
+          "k_ECommunityProfileItemProperty_ImageLarge"),
+        (e[(e.k_ECommunityProfileItemProperty_InternalName = 2)] =
+          "k_ECommunityProfileItemProperty_InternalName"),
+        (e[(e.k_ECommunityProfileItemProperty_Title = 3)] =
+          "k_ECommunityProfileItemProperty_Title"),
+        (e[(e.k_ECommunityProfileItemProperty_Description = 4)] =
+          "k_ECommunityProfileItemProperty_Description"),
+        (e[(e.k_ECommunityProfileItemProperty_AppID = 5)] =
+          "k_ECommunityProfileItemProperty_AppID"),
+        (e[(e.k_ECommunityProfileItemProperty_TypeID = 6)] =
+          "k_ECommunityProfileItemProperty_TypeID"),
+        (e[(e.k_ECommunityProfileItemProperty_Class = 7)] =
+          "k_ECommunityProfileItemProperty_Class"),
+        (e[(e.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
+          "k_ECommunityProfileItemProperty_MovieWebM"),
+        (e[(e.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
+          "k_ECommunityProfileItemProperty_MovieMP4"),
+        (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
+          "k_ECommunityProfileItemProperty_MovieWebMSmall"),
+        (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
+          "k_ECommunityProfileItemProperty_MovieMP4Small");
+    })(m || (m = {})),
+    (function (e) {
+      (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
+        "k_ERaiseGameWindowResult_NotRunning"),
+        (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
+          "k_ERaiseGameWindowResult_Success"),
+        (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
+          "k_ERaiseGameWindowResult_Failure");
+    })(u || (u = {}));
+  const E = {
       EUNIVERSE: 0,
       WEB_UNIVERSE: "",
       LANGUAGE: "english",
@@ -155,9 +189,9 @@ var CLSTAMP = "7569952";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!t()) return p || (p = C()), p;
+          if (!t()) return k || (k = I()), k;
           let n = e("sessionid");
-          n || (n = C());
+          n || (n = I());
           return n;
         })();
       },
@@ -172,7 +206,7 @@ var CLSTAMP = "7569952";
       IN_LOGIN: !1,
       IN_LOGIN_REFRESH: !1,
     },
-    E = {
+    d = {
       logged_in: !1,
       steamid: "",
       accountid: 0,
@@ -187,8 +221,8 @@ var CLSTAMP = "7569952";
       short_url: "",
       country_code: "",
     },
-    d = { steamid: "", clanid: 0, listid: 0 },
-    m = {
+    p = { steamid: "", clanid: 0, listid: 0 },
+    S = {
       CLANSTEAMID: "",
       CLANACCOUNTID: 0,
       APPID: 0,
@@ -205,9 +239,9 @@ var CLSTAMP = "7569952";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    S = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-  let p;
-  function C() {
+    C = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+  let k;
+  function I() {
     let e = (function () {
       let e = "";
       for (let o = 0; o < 24; o++)
@@ -223,17 +257,17 @@ var CLSTAMP = "7569952";
       (function (e, n, o, i) {
         if (!t()) return;
         i || (i = "/");
-        let s = "";
+        let _ = "";
         if (void 0 !== o && o) {
           let e = new Date();
           e.setTime(e.getTime() + 864e5 * o),
-            (s = "; expires=" + e.toUTCString());
+            (_ = "; expires=" + e.toUTCString());
         }
         document.cookie =
           encodeURIComponent(e) +
           "=" +
           encodeURIComponent(n) +
-          s +
+          _ +
           ";path=" +
           i;
       })("sessionid", e, 0),
@@ -243,12 +277,12 @@ var CLSTAMP = "7569952";
   function g(n = "webui_config") {
     const o = {},
       i = A("config", n);
-    i && (delete i.SESSIONID, Object.assign(u, i), (o.config = !0));
-    const s = A("userinfo", n);
-    s &&
-      (Object.assign(E, s),
+    i && (delete i.SESSIONID, Object.assign(E, i), (o.config = !0));
+    const _ = A("userinfo", n);
+    _ &&
+      (Object.assign(d, _),
       (o.userConfig = !0),
-      E.is_support &&
+      d.is_support &&
         (function () {
           let n = null;
           return (
@@ -256,15 +290,15 @@ var CLSTAMP = "7569952";
             Boolean(n && 1 === Number.parseInt(n))
           );
         })() &&
-        (E.is_support = !1));
-    const _ = A("broadcast", n);
-    _ && (Object.assign(d, _), (o.broadcastConfig = !0));
+        (d.is_support = !1));
+    const s = A("broadcast", n);
+    s && (Object.assign(p, s), (o.broadcastConfig = !0));
     const a = A("community", n);
-    a && (Object.assign(m, a), (o.communityConfig = !0));
-    const c = A("event", n);
-    return c && (Object.assign(S, c), (o.eventConfig = !0)), o;
+    a && (Object.assign(S, a), (o.communityConfig = !0));
+    const r = A("event", n);
+    return r && (Object.assign(C, r), (o.eventConfig = !0)), o;
   }
-  function k(e, t = "webui_config", n) {
+  function y(e, t = "webui_config", n) {
     let o;
     if (
       ((o =
@@ -288,10 +322,10 @@ var CLSTAMP = "7569952";
     else n && console.error("Missing config element #", t);
   }
   function A(e, t = "webui_config") {
-    return k(e, t, !0);
+    return y(e, t, !0);
   }
   let h = { success: !0, result: 1 };
-  class T {
+  class R {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -333,8 +367,8 @@ var CLSTAMP = "7569952";
       if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
         return !1;
       let n = Object.assign({}, e, {
-        universe: u.EUNIVERSE,
-        accountid: E.accountid,
+        universe: E.EUNIVERSE,
+        accountid: d.accountid,
       });
       void 0 !== t && (n.sequenceid = t);
       try {
@@ -402,9 +436,9 @@ var CLSTAMP = "7569952";
       );
     }
   }
-  let I = new (class {
+  let T = new (class {
     constructor() {
-      (this.m_connection = new T()),
+      (this.m_connection = new R()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -471,7 +505,7 @@ var CLSTAMP = "7569952";
     }
     BClientAccountMatches() {
       return (
-        !E.logged_in || E.accountid == this.m_connection.ClientInfo.unAccountID
+        !d.logged_in || d.accountid == this.m_connection.ClientInfo.unAccountID
       );
     }
     GenericEResultCall(e) {
@@ -489,8 +523,8 @@ var CLSTAMP = "7569952";
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = I),
+  (window.ClientConnectionAPI = T),
     document.addEventListener("DOMContentLoaded", function () {
-      g(), (window.ClientConnectionAPI = I);
+      g(), (window.ClientConnectionAPI = T);
     });
 })();

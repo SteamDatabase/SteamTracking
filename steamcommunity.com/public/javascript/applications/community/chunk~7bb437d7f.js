@@ -806,7 +806,7 @@
               { className: E().LoginPanelContent },
               d && a.createElement(D, { text: d }),
               l == m.AccountName &&
-                a.createElement(N, {
+                a.createElement(b, {
                   manager: this.m_manager,
                   autoFocus: this.props.autoFocus,
                 }),
@@ -834,7 +834,7 @@
         return a.createElement("div", { className: E().ErrorMessage }, e.text);
       }
       T = (0, r.gn)([p.Pi], T);
-      let N = class extends a.Component {
+      let b = class extends a.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
         }
@@ -919,7 +919,7 @@
                   onChange: () => this.OnChangeRememberPass,
                   checked: n.GetRememberPassword(),
                 }),
-                n.GetCaptchaURL() && a.createElement(b, { manager: n }),
+                n.GetCaptchaURL() && a.createElement(N, { manager: n }),
                 a.createElement(
                   h.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
@@ -954,12 +954,12 @@
           );
         }
       };
-      (0, r.gn)([_.ak], N.prototype, "OnSubmit", null),
-        (0, r.gn)([_.ak], N.prototype, "OnChangeName", null),
-        (0, r.gn)([_.ak], N.prototype, "OnChangePassword", null),
-        (0, r.gn)([_.ak], N.prototype, "OnChangeRememberPass", null),
-        (N = (0, r.gn)([p.Pi], N));
-      let b = class extends a.Component {
+      (0, r.gn)([_.ak], b.prototype, "OnSubmit", null),
+        (0, r.gn)([_.ak], b.prototype, "OnChangeName", null),
+        (0, r.gn)([_.ak], b.prototype, "OnChangePassword", null),
+        (0, r.gn)([_.ak], b.prototype, "OnChangeRememberPass", null),
+        (b = (0, r.gn)([p.Pi], b));
+      let N = class extends a.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
         }
@@ -1015,9 +1015,9 @@
           );
         }
       };
-      (0, r.gn)([_.ak], b.prototype, "OnCaptchaText", null),
-        (0, r.gn)([_.ak], b.prototype, "RefreshCaptcha", null),
-        (b = (0, r.gn)([p.Pi], b));
+      (0, r.gn)([_.ak], N.prototype, "OnCaptchaText", null),
+        (0, r.gn)([_.ak], N.prototype, "RefreshCaptcha", null),
+        (N = (0, r.gn)([p.Pi], N));
       let j = class extends a.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
@@ -1611,7 +1611,14 @@
           (n = e.charCodeAt(t)), (a = (a << 5) - a + n), (a |= 0);
         return a;
       }
+      function m(e) {
+        return btoa(e)
+          .replace(/\+/g, "-")
+          .replace("///g", "_")
+          .replace(/=/g, "");
+      }
       n.d(t, {
+        GM: () => m,
         HA: () => s,
         JD: () => l,
         W5: () => i,

@@ -4745,6 +4745,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   font-size: 16px;
   color: #fff;
 }
+.partnereventdisplay_VerticalLocalDateAndTime_1QFMN {
+  display: flex;
+  flex-direction: column;
+}
 .broadcastchat_BroadcastChat_37jsi {
   max-width: 194px;
   min-width: 0;
@@ -5082,6 +5086,16 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 910px) {
+  .eventrow_OtherEvents_2ioeM {
+    min-width: 320px;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .eventrow_OtherEvents_2ioeM {
+  min-width: unset;
+  scroll-snap-align: unset;
+}
 .BasicUI .eventrow_OtherEvents_2ioeM {
   display: unset;
 }
@@ -5121,7 +5135,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   min-width: 180px;
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: 0px 8px 0px 8px;
+  margin: 0px 16px 0px 0px;
 }
 .BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: unset;

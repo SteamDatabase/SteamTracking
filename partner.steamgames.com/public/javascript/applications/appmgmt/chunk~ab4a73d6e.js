@@ -24,6 +24,7 @@
         HideButton: "newlogindialog_HideButton_u88sc",
         ShowQR: "newlogindialog_ShowQR_12nP-",
         UseMobileAppForQR: "newlogindialog_UseMobileAppForQR_9xgsv",
+        InClient: "newlogindialog_InClient_2GR-7",
         TextField: "newlogindialog_TextField_2KXGK",
         TextInput: "newlogindialog_TextInput_2eKVn",
         Danger: "newlogindialog_Danger_1-HwJ",
@@ -37,6 +38,8 @@
         RefreshButtonContainer: "newlogindialog_RefreshButtonContainer_2SbbR",
         SignInButtonContainer: "newlogindialog_SignInButtonContainer_14fsn",
         RefreshQuitButton: "newlogindialog_RefreshQuitButton_KFTqb",
+        OfferOfflineButton: "newlogindialog_OfferOfflineButton_1Rcg4",
+        TryAgainButton: "newlogindialog_TryAgainButton_GMIRO",
         SubmitButton: "newlogindialog_SubmitButton_2QgFE",
         Loading: "newlogindialog_Loading_i9MK3",
         LoadingContainer: "newlogindialog_LoadingContainer_OYHj3",
@@ -55,6 +58,7 @@
         ConfirmationContainer: "newlogindialog_ConfirmationContainer_2aZnk",
         AwaitingMobileConfText: "newlogindialog_AwaitingMobileConfText_7LmnT",
         AwaitingMobileConfIcon: "newlogindialog_AwaitingMobileConfIcon_2hLC_",
+        AwaitingEmailConfIcon: "newlogindialog_AwaitingEmailConfIcon_3iM5L",
         LinkContainer: "newlogindialog_LinkContainer_3yJHp",
         EnterCodeInsteadLink: "newlogindialog_EnterCodeInsteadLink_37AOB",
         EnterBackupCodeContainer:
@@ -83,11 +87,11 @@
         HeaderLogo: "newlogindialog_HeaderLogo_1rtyT",
         EmbeddedRoot: "newlogindialog_EmbeddedRoot_2Vbrf",
         EmbeddedRootFooter: "newlogindialog_EmbeddedRootFooter_1HRJ1",
-        InClient: "newlogindialog_InClient_2GR-7",
         AccountCreation: "newlogindialog_AccountCreation_19yGb",
         AccountCreationPrompt: "newlogindialog_AccountCreationPrompt_1h5_x",
         FailureTitle: "newlogindialog_FailureTitle_A3Y-u",
         FailureDescription: "newlogindialog_FailureDescription_3gFes",
+        FailureButtons: "newlogindialog_FailureButtons_2OZ64",
         OfferOffline: "newlogindialog_OfferOffline_2DPst",
         LoadingSpinner: "newlogindialog_LoadingSpinner_2rGL7",
         LoadAmin: "newlogindialog_LoadAmin_1EdkR",
@@ -1187,7 +1191,7 @@
         l = r.n(o),
         c = r(58114),
         u = r(81130),
-        m = (r(26149), r(90666)),
+        m = (r(26149), r(36039), r(90666)),
         d = r(88514),
         h = (r(99925), r(79742));
       function g(e) {
@@ -1253,7 +1257,8 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             try {
               const e = c.gA.Init(d.Uy);
-              e.Body().set_client_id(this.m_strClientID),
+              e.SetEMsg(9804),
+                e.Body().set_client_id(this.m_strClientID),
                 e.Body().set_request_id(this.m_rgRequestID),
                 this.m_strTokenToRevoke &&
                   e.Body().set_token_to_revoke(this.m_strTokenToRevoke);
@@ -1269,6 +1274,7 @@
                     2 === e || 3 === e)
                   )
                     return (
+                      this.m_transport.MakeReady(),
                       window.setTimeout(
                         this.PollForUpdate,
                         this.m_msPollInterval
@@ -1339,7 +1345,7 @@
         GetDeviceDetails() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             const e = yield this.m_onDeviceDetailsCallback();
-            return console.log("details", e), d.up.fromObject(e);
+            return d.up.fromObject(e);
           });
         }
       }
@@ -1488,7 +1494,12 @@
               try {
                 let e = { "Content-Type": "multipart/form-data" },
                   t = yield a().post(n, r, { headers: e });
-                if (200 != t.status) return null;
+                if (200 != t.status)
+                  return (
+                    console.log("GetRSAKey failure: "),
+                    console.log(t.status),
+                    null
+                  );
                 let s = t.data;
                 if (
                   !(
@@ -1499,15 +1510,19 @@
                     s.timestamp
                   )
                 )
-                  return null;
+                  return (
+                    console.log("GetRSAKey failure: "), console.log(s), null
+                  );
                 i = s;
               } catch (e) {
-                return null;
+                return (
+                  console.log("GetRSAKey exception: "), console.log(e), null
+                );
               }
               return i;
             });
           })(e, r.strUserName);
-          if (!n) return console.log("Failed to get RSA key"), null;
+          if (!n) return console.error(`Failed to get RSA key from ${e}`), null;
           let s = yield (function (e, t, r, n) {
             return (0, i.mG)(this, void 0, void 0, function* () {
               const i = m(r.strPassword, n);
@@ -1557,7 +1572,7 @@
         l = r(9669),
         c = r.n(l),
         u = r(90666),
-        m = r(92742),
+        m = (r(36039), r(92742)),
         d = r(26149),
         h = r(13271),
         g = r(64839),
@@ -1605,7 +1620,9 @@
               const t = yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   const r = a.gA.Init(_.kp);
-                  r.Body().set_account_name(t);
+                  r.Body().set_account_name(t),
+                    r.SetEMsg(9804),
+                    yield e.MakeReady();
                   try {
                     const t = yield _.$h.GetPasswordRSAPublicKey(e, r);
                     if ((t.DEBUG_LogToConsole(), 1 !== t.GetEResult()))
@@ -1646,7 +1663,8 @@
               const l = (0, f.IC)(s, t),
                 d = a.gA.Init(_._u);
               if (
-                (d.Body().set_account_name(n),
+                (d.SetEMsg(9804),
+                d.Body().set_account_name(n),
                 d.Body().set_encrypted_password(l),
                 d.Body().set_encryption_timestamp(t.timestamp),
                 d.Body().set_remember_login(!!r),
@@ -1658,6 +1676,7 @@
                 const e = yield this.m_onGetMachineAuth(n);
                 1 == e.eresult && d.Body().set_guard_data(e.data);
               }
+              yield this.m_transport.MakeReady();
               const h = yield _.$h.BeginAuthSessionViaCredentials(
                 this.m_transport,
                 d
@@ -1795,7 +1814,8 @@
             try {
               const r = 3 === this.m_eStatus || 10 === this.m_eStatus,
                 i = a.gA.Init(_.Am);
-              i.Body().set_client_id(this.m_strClientID),
+              i.SetEMsg(9804),
+                i.Body().set_client_id(this.m_strClientID),
                 i.Body().set_steamid(this.m_steamid),
                 i.Body().set_code(e),
                 i.Body().set_code_type(r ? 2 : 3);
@@ -2055,8 +2075,11 @@
               );
             this.m_eStatus = 1;
             try {
+              yield this.m_transport.MakeReady();
               const e = a.gA.Init(_.oZ);
-              e.Body().set_device_details(yield this.GetDeviceDetails());
+              e.SetEMsg(9804),
+                e.Body().set_device_details(yield this.GetDeviceDetails()),
+                e.Body().set_website_id(u.De.WEBSITE_ID);
               const t = yield _.$h.BeginAuthSessionViaQR(this.m_transport, e),
                 r = t.GetEResult(),
                 i = t.Hdr().transport_error();
@@ -2326,11 +2349,11 @@
       var X = r(41311),
         U = r(13596),
         G = r(95598);
-      const V =
+      const P =
           r.p +
           "images/applications/appmgmt/login_mobile_auth.png?v=valveisgoodatcaching",
-        P = (0, n.createContext)(!1),
-        H = () => (0, n.useContext)(P);
+        V = (0, n.createContext)(!1),
+        H = () => (0, n.useContext)(V);
       function Z() {
         return n.createElement(
           "div",
@@ -2342,25 +2365,71 @@
         );
       }
       function q(e) {
-        return n.createElement(
-          Q,
-          Object.assign({}, e, {
-            onSuccess: (t) => {
-              const { strRefreshToken: r } = t;
-              (0, m.qO)(r).then(
-                (t) => e.onComplete(t),
-                () => e.onComplete(m.TG.k_PrimaryDomainFail)
-              );
-            },
-            embedded: "modal" === e.theme,
-          })
-        );
+        return (function (e) {
+          const t = (0, n.useRef)(e);
+          t.current = e;
+          const [r, a] = (0, n.useState)(!0);
+          return (
+            (0, n.useEffect)(() => {
+              t.current &&
+                (function (e) {
+                  var t;
+                  return (0, i.mG)(this, void 0, void 0, function* () {
+                    const r = new FormData();
+                    r.append("redir", e);
+                    const n = yield c().post(
+                      `${u.De.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                      r,
+                      { timeout: 1e4, withCredentials: !0 }
+                    );
+                    if (
+                      200 !== n.status ||
+                      !(null === (t = null == n ? void 0 : n.data) ||
+                      void 0 === t
+                        ? void 0
+                        : t.success)
+                    )
+                      return !1;
+                    const a = n.data,
+                      { success: s, login_url: o, error: l } = a,
+                      m = (0, i._T)(a, ["success", "login_url", "error"]),
+                      d = new FormData();
+                    Object.keys(m).forEach((e) => d.append(e, m[e]));
+                    const h = yield c().post(o, d),
+                      g = 200 === h.status && 1 === h.data.result;
+                    return g && window.location.assign(e), g;
+                  });
+                })(t.current)
+                  .then((e) => {
+                    a(e);
+                  })
+                  .catch((e) => {
+                    console.warn("PerformRefresh exception", e), a(!1);
+                  });
+            }, [t]),
+            r
+          );
+        })(e.redirectUrl)
+          ? null
+          : n.createElement(
+              Q,
+              Object.assign({}, e, {
+                onSuccess: (t) => {
+                  const { strRefreshToken: r } = t;
+                  (0, m.qO)(r).then(
+                    (t) => e.onComplete(t),
+                    () => e.onComplete(m.TG.k_PrimaryDomainFail)
+                  );
+                },
+                embedded: "modal" === e.theme,
+              })
+            );
       }
       function Q(e) {
         const { embedded: t } = e,
           r = (0, i._T)(e, ["embedded"]);
         return n.createElement(
-          P.Provider,
+          V.Provider,
           { value: t },
           n.createElement(
             "div",
@@ -2418,38 +2487,42 @@
             autoFocus: l,
             refreshInfo: c,
             renderSuccess: d = () => n.createElement(Ie, null),
+            lastResult: g,
           } = e,
-          g = ({
-            bSuccess: e,
-            strRefreshToken: t,
-            strAccessToken: r,
-            strAccountName: n,
-            strNewGuardData: a,
-          }) => {
-            e &&
-              i({
-                strRefreshToken: t,
-                strAccessToken: r,
-                strAccountName: n,
-                strNewGuardData: a,
-              });
-          },
-          f = u.De.IN_CLIENT ? $ : K,
-          _ = u.De.IN_CLIENT
+          f = (0, n.useCallback)(
+            ({
+              bSuccess: e,
+              strRefreshToken: t,
+              strAccessToken: r,
+              strAccountName: n,
+              strNewGuardData: a,
+            }) => {
+              e &&
+                i({
+                  strRefreshToken: t,
+                  strAccessToken: r,
+                  strAccountName: n,
+                  strNewGuardData: a,
+                });
+            },
+            [i]
+          ),
+          _ = u.De.IN_CLIENT ? $ : K,
+          p = u.De.IN_CLIENT
             ? (e) => SteamClient.Auth.GetSteamGuardData(e)
             : null;
         let {
-          eStatus: p,
-          eFailureState: B,
-          strErrorReference: y,
-          strConfirmationAssociatedMessage: w,
-          strAccountName: C,
-          start: S,
-          reset: v,
-          addCode: E,
-          goBack: R,
-          useCodeOverride: F,
-          setTokenToRevoke: T,
+          eStatus: B,
+          eFailureState: y,
+          strErrorReference: w,
+          strConfirmationAssociatedMessage: C,
+          strAccountName: S,
+          start: v,
+          reset: E,
+          addCode: R,
+          goBack: F,
+          useCodeOverride: T,
+          setTokenToRevoke: z,
         } = (function (e) {
           const [t, r] = (0, n.useState)(new b(e));
           return (0, h.SZ)(() => ({
@@ -2476,24 +2549,24 @@
           }));
         })({
           transport: r,
-          onComplete: g,
-          onDeviceDetails: f,
-          onGetMachineAuth: _,
+          onComplete: f,
+          onDeviceDetails: _,
+          onGetMachineAuth: p,
         });
-        const [z, A] = (0, n.useState)(0),
-          [k, O] = (0, n.useState)(
+        const [A, k] = (0, n.useState)(0),
+          [O, L] = (0, n.useState)(
             null !== (t = null == c ? void 0 : c.account_name) && void 0 !== t
               ? t
               : ""
           ),
-          [L, N] = (0, n.useState)(""),
-          [W, x] = (0, n.useState)(!0),
-          D = H(),
-          I = !(0 === p || 1 === p || 2 === p),
-          j = () => (k && L ? S(k, L, W) : Promise.resolve(0)),
-          U = () => {
-            console.log(`Logging in offline with username ${k}`),
-              SteamClient.User.SetLoginCredentials(k, L, W);
+          [N, W] = (0, n.useState)(""),
+          [x, D] = (0, n.useState)(!0),
+          I = H(),
+          j = !(0 === B || 1 === B || 2 === B),
+          U = () => (O && N ? v(O, N, x) : Promise.resolve(0)),
+          G = () => {
+            console.log(`Logging in offline with username ${O}`),
+              SteamClient.User.SetLoginCredentials(O, N, x);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -2501,42 +2574,67 @@
             var t;
             (null === (t = e.refreshInfo) || void 0 === t
               ? void 0
-              : t.login_token_id) && T(e.refreshInfo.login_token_id);
+              : t.login_token_id) && z(e.refreshInfo.login_token_id);
           }, [e.refreshInfo]),
-          !I)
-        ) {
+          u.De.IN_CLIENT &&
+            (0, n.useEffect)(() => {
+              var e, t;
+              null === (t = (e = SteamClient.Auth).GetCommandLineCredentials) ||
+                void 0 === t ||
+                t.call(e).then((e) => {
+                  if ((e.username && L(e.username), e.password)) {
+                    const t = !1;
+                    v(e.username, e.password, t);
+                  }
+                });
+            }, []),
+          null != g && 1 != g)
+        )
+          return n.createElement(
+            "div",
+            { className: M().Login },
+            n.createElement(pe, {
+              reset: () => window.location.reload(),
+              failure: m.NZ.Generic,
+              errorReference: g.toString(),
+            })
+          );
+        if (!j) {
           const t = n.createElement(
             "div",
             { className: M().SideBySide },
             n.createElement(ee, {
-              strAccountName: k,
-              onAccountNameChange: O,
-              strPassword: L,
-              onPasswordChange: N,
-              bRememberMe: W,
-              onRememberMeChange: x,
-              onSubmit: j,
-              status: p,
+              strAccountName: O,
+              onAccountNameChange: L,
+              strPassword: N,
+              onPasswordChange: W,
+              bRememberMe: x,
+              onRememberMeChange: D,
+              onSubmit: U,
+              status: B,
               autoFocus: l,
               refreshInfo: e.refreshInfo,
             }),
             !o &&
               n.createElement(te, {
                 transport: r,
-                onQRStatusChange: A,
-                onComplete: g,
+                onQRStatusChange: k,
+                onComplete: f,
                 platform: a,
                 refreshInfo: c,
               })
           );
-          if (D) {
+          if (I) {
             let e,
               r = u.De.IN_CLIENT;
             return (
-              u.De.IN_LOGIN && (e = u.De.IN_CLIENT ? 28 : 36),
+              u.De.IN_LOGIN && (e = 36),
               n.createElement(
                 ke,
-                { gap: e, className: M().EmbeddedRoot },
+                {
+                  gap: e,
+                  className: (0, s.Z)(M().EmbeddedRoot, r && M().InClient),
+                },
                 !r && !1,
                 u.De.IN_LOGIN &&
                   n.createElement(De, { className: M().HeaderLogo }),
@@ -2631,49 +2729,49 @@
           );
           return n.createElement(xe, { title: i }, t);
         }
-        switch (p) {
+        switch (B) {
           case 13:
             return n.createElement(ge, null);
           case 5:
           case 11:
           case 3:
           case 10:
-            const e = 5 === p || 11 === p;
+            const e = 5 === B || 11 === B;
             return n.createElement(be, {
               type: e ? "mobile" : "email",
-              onSubmitCode: E,
-              status: p,
-              associatedLabel: w,
-              accountName: C,
-              onBack: R,
+              onSubmitCode: R,
+              status: B,
+              associatedLabel: C,
+              accountName: S,
+              onBack: F,
             });
           case 6:
           case 4:
-            const t = 6 === p;
+            const t = 6 === B;
             return n.createElement(Te, {
               type: t ? "mobile" : "email",
-              accountName: C,
-              onUseCodeOverride: F,
+              accountName: S,
+              onUseCodeOverride: T,
             });
           case 16:
-            return n.createElement(Be, { reset: v });
+            return n.createElement(Be, { reset: E });
           case 15:
             return n.createElement(pe, {
-              reset: v,
-              failure: B,
-              onRequestOffline: U,
-              errorReference: y,
+              reset: E,
+              failure: y,
+              onRequestOffline: G,
+              errorReference: w,
             });
           case 14:
             return n.createElement(xe, { compact: !0 }, d());
           default:
             return (
-              console.error(`Unknown Phase: ${p}`),
+              console.error(`Unknown Phase: ${B}`),
               n.createElement(pe, {
-                reset: v,
+                reset: E,
                 failure: m.NZ.Generic,
-                onRequestOffline: U,
-                errorReference: y,
+                onRequestOffline: G,
+                errorReference: w,
               })
             );
         }
@@ -2840,11 +2938,13 @@
                   t ? localStorage.setItem(e, "1") : localStorage.removeItem(e);
               }, []);
             return [t, i];
-          })();
+          })(),
+          m = !u.De.IN_CLIENT,
+          d = !m || l;
         return n.createElement(
           "div",
           { className: M().QRSection },
-          !l &&
+          !d &&
             n.createElement(
               "div",
               { className: M().BetaContainer },
@@ -2876,16 +2976,17 @@
                 },
                 (0, X.Xx)("#Login_JoinBeta_Button")
               ),
-              n.createElement(
-                "div",
-                { className: M().ShowQRLink, onClick: () => c(!0) },
-                (0, X.Xx)("#Login_InBetaShowQR_Link")
-              )
+              m &&
+                n.createElement(
+                  "div",
+                  { className: M().ShowQRLink, onClick: () => c(!0) },
+                  (0, X.Xx)("#Login_InBetaShowQR_Link")
+                )
             ),
-          l &&
+          d &&
             n.createElement(
               "div",
-              { className: (0, s.Z)(M().QRCodeContainer, l ? M().ShowQR : "") },
+              { className: (0, s.Z)(M().QRCodeContainer, d ? M().ShowQR : "") },
               n.createElement(
                 ie,
                 { highlight: !0 },
@@ -2902,11 +3003,12 @@
                   refreshInfo: o,
                 })
               ),
-              n.createElement(
-                "div",
-                { className: M().QRHideLink, onClick: () => c(!1) },
-                (0, X.Xx)("#Button_Hide")
-              ),
+              m &&
+                n.createElement(
+                  "div",
+                  { className: M().QRHideLink, onClick: () => c(!1) },
+                  (0, X.Xx)("#Button_Hide")
+                ),
               n.createElement(
                 "div",
                 { className: M().UseMobileAppForQR },
@@ -3038,20 +3140,20 @@
         return n.createElement(de, Object.assign({ type: "submit" }, e));
       }
       function de(e) {
-        const { loading: t, disabled: r, children: a } = e,
-          o = (0, i._T)(e, ["loading", "disabled", "children"]),
-          l = r || t;
+        const { className: t, loading: r, disabled: a, children: o } = e,
+          l = (0, i._T)(e, ["className", "loading", "disabled", "children"]),
+          c = a || r;
         return n.createElement(
           "button",
           Object.assign(
             {
-              className: (0, s.Z)(M().SubmitButton, t && M().Loading),
-              disabled: l,
+              className: (0, s.Z)(M().SubmitButton, r && M().Loading, t),
+              disabled: c,
             },
-            o
+            l
           ),
-          a,
-          t &&
+          o,
+          r &&
             n.createElement(
               "div",
               { className: M().LoadingContainer },
@@ -3104,10 +3206,9 @@
         return n.createElement(
           "div",
           { className: M().OfferOffline },
-          n.createElement("p", null, (0, X.Xx)("#Login_GoOffline_Description")),
           n.createElement(
-            de,
-            { onClick: e.onRequestOffline },
+            "button",
+            { className: M().OfferOfflineButton, onClick: e.onRequestOffline },
             (0, X.Xx)("#Login_GoOffline_Button")
           )
         );
@@ -3162,8 +3263,22 @@
             { alignItems: "center", gap: 12 },
             n.createElement("div", { className: M().FailureTitle }, s),
             n.createElement("div", { className: M().FailureDescription }, o),
-            l && n.createElement(_e, { onRequestOffline: i }),
-            n.createElement(de, { onClick: t }, (0, X.Xx)("#Button_Back"))
+            l &&
+              n.createElement(
+                "div",
+                { className: M().FailureDescription },
+                (0, X.Xx)("#Login_GoOffline_Description")
+              ),
+            n.createElement(
+              Oe,
+              { className: M().FailureButtons },
+              n.createElement(
+                de,
+                { className: M().TryAgainButton, onClick: t },
+                (0, X.Xx)("#Button_Retry")
+              ),
+              l && n.createElement(_e, { onRequestOffline: i })
+            )
           ),
           a &&
             n.createElement(
@@ -3190,26 +3305,27 @@
           [u, m] = (0, n.useState)(!1),
           [d, h] = (0, n.useState)(!1),
           [g, f] = (0, n.useState)(!1),
-          _ = l.join(""),
-          p = S(_, g),
-          B = (e) => {
+          _ = "mobile" === t,
+          p = l.join(""),
+          B = S(p, g),
+          b = (e) => {
             h(!0),
               r(e).then(() => {
                 m(!1), h(!1);
               });
           },
-          b = !u && (11 === i || 10 === i);
-        let y, w;
+          y = !u && (11 === i || 10 === i);
+        let w, C;
         return (
           g
             ? "mobile" === t
-              ? ((w = n.createElement(we, null)), (y = "#Login_UseMobileCode"))
-              : ((w = n.createElement(we, null)), (y = "#Login_UseEmailCode"))
-            : ((w =
+              ? ((C = n.createElement(we, null)), (w = "#Login_UseMobileCode"))
+              : ((C = n.createElement(we, null)), (w = "#Login_UseEmailCode"))
+            : ((C =
                 "mobile" === t
                   ? n.createElement(Ce, null)
                   : n.createElement(Se, { emailAddress: s })),
-              (y = "#Login_UseBackupCode")),
+              (w = "#Login_UseBackupCode")),
           n.createElement(
             xe,
             { title: (0, X.Xx)("#Login_Title_SteamGuard"), compact: !0 },
@@ -3217,7 +3333,7 @@
               Ae,
               {
                 onSubmit: () => {
-                  p && B(_);
+                  B && b(p);
                 },
               },
               n.createElement(
@@ -3227,7 +3343,7 @@
                 n.createElement(
                   ke,
                   { alignItems: "center", gap: 2 },
-                  b &&
+                  y &&
                     n.createElement(
                       he,
                       null,
@@ -3238,19 +3354,20 @@
                     onChange: (e) => {
                       u || m(!0), c(e);
                       const t = e.join("");
-                      S(t, g) && B(t);
+                      S(t, g) && b(t);
                     },
-                    tone: b ? "danger" : void 0,
+                    tone: y ? "danger" : void 0,
                     loading: d,
                     backupCode: g,
                   })
                 ),
-                w,
-                n.createElement(
-                  ze,
-                  { onClick: () => f(!g), align: "center" },
-                  (0, X.Xx)(y)
-                ),
+                C,
+                _ &&
+                  n.createElement(
+                    ze,
+                    { onClick: () => f(!g), align: "center" },
+                    (0, X.Xx)(w)
+                  ),
                 n.createElement(ye, { type: t })
               )
             )
@@ -3342,7 +3459,7 @@
               )
             )
           ),
-          n.createElement(Fe, { className: M().AwaitingMobileConfIcon })
+          n.createElement(Fe, { className: M().AwaitingEmailConfIcon })
         );
       }
       function ve(e) {
@@ -3373,7 +3490,7 @@
           n.createElement(
             "div",
             { className: M().ConfirmationContainer },
-            n.createElement("img", { src: V }),
+            n.createElement("img", { src: P }),
             n.createElement(
               "div",
               { className: M().AwaitingMobileConfText },
@@ -3385,10 +3502,36 @@
       function Re(e) {
         return n.createElement(
           "svg",
-          { viewBox: "0 0 55 49", fill: "none", className: e.className },
+          {
+            viewBox: "0 0 33 49",
+            fill: "currentColor",
+            className: e.className,
+          },
           n.createElement("path", {
-            d: "M36.1497 0.664062H18.7667C16.0532 0.664062 13.8485 2.86796 13.8485 5.49568V43.3009C13.8485 46.0134 16.0532 48.1326 18.7667 48.1326H36.0649C38.7784 48.1326 40.9831 45.9287 40.9831 43.3009V5.49568C40.9831 2.78319 38.8632 0.664062 36.1497 0.664062ZM38.1848 43.3009C38.1848 44.4029 37.2521 45.3353 36.1497 45.3353H18.7667C17.6643 45.3353 16.7316 44.4029 16.7316 43.3009V42.1142H38.1848V43.3009ZM38.1848 39.317H16.7316V9.73394H38.1848V39.317ZM38.1848 6.93669H16.7316V5.49568C16.7316 4.39373 17.6643 3.46131 18.7667 3.46131H36.0649C37.1673 3.46131 38.1 4.39373 38.1 5.49568V6.93669H38.1848ZM44.7988 14.7351C44.2053 14.9894 43.9509 15.5827 44.1205 16.1761C45.7316 20.3296 45.7316 24.9069 44.1205 29.0604C43.8661 29.6538 44.2053 30.3319 44.7988 30.5014C44.9684 30.5862 45.0532 30.5862 45.2228 30.5862C45.7316 30.5862 46.1556 30.3319 46.3252 29.8233C48.1907 25.1612 48.1907 19.9905 46.3252 15.2437C46.0708 14.8198 45.3924 14.4808 44.7988 14.7351ZM10.1176 14.7351C9.52399 14.4808 8.84562 14.8198 8.67603 15.4132C6.81054 20.0753 6.81054 25.246 8.67603 29.9928C8.84562 30.4166 9.2696 30.7557 9.77837 30.7557C9.94796 30.7557 10.0328 30.7557 10.2023 30.6709C10.7959 30.4166 11.0503 29.8233 10.8807 29.2299C9.2696 25.0764 9.2696 20.4991 10.8807 16.3456C10.9655 15.5827 10.7111 14.9894 10.1176 14.7351ZM52.3456 11.9378C52.0912 11.3445 51.4977 11.0902 50.9041 11.2597C50.3105 11.514 50.0562 12.1074 50.2257 12.7007V12.7855C52.9392 19.0581 52.9392 26.2631 50.2257 32.451C50.1409 32.7053 50.0562 33.0444 50.2257 33.2987C50.3105 33.553 50.5649 33.8072 50.8193 33.892C50.9889 33.9768 51.0737 33.9768 51.2433 33.9768C51.6673 33.9768 52.0912 33.7225 52.2608 33.2987C55.3135 26.6022 55.3135 18.719 52.3456 11.9378ZM4.69065 12.7855C4.94504 12.1921 4.69065 11.514 4.09709 11.2597C3.8427 11.1749 3.50352 11.0902 3.24913 11.2597C2.99475 11.3445 2.74036 11.5988 2.65557 11.8531C-0.312272 18.719 -0.312272 26.5174 2.65557 33.3834C2.82516 33.8072 3.24913 34.0615 3.67311 34.0615C3.8427 34.0615 4.01229 34.0615 4.09709 33.9768C4.35147 33.892 4.60586 33.6377 4.69065 33.3834C4.77545 33.1291 4.77545 32.7901 4.69065 32.5358C1.9772 26.2631 1.9772 19.0581 4.69065 12.7855ZM20.3778 15.9218C21.2257 15.9218 21.8193 15.2437 21.8193 14.4808C21.8193 13.7179 21.1409 13.0398 20.3778 13.0398C19.6146 13.0398 18.9363 13.7179 18.9363 14.4808C18.9363 15.2437 19.6146 15.9218 20.3778 15.9218ZM24.1088 15.9218C24.9567 15.9218 25.5503 15.2437 25.5503 14.4808C25.5503 13.7179 24.8719 13.0398 24.1088 13.0398C23.2608 13.0398 22.6673 13.7179 22.6673 14.4808C22.5825 15.2437 23.2608 15.9218 24.1088 15.9218ZM27.755 15.9218C28.6029 15.9218 29.1965 15.2437 29.1965 14.4808C29.1965 13.7179 28.5181 13.0398 27.755 13.0398C26.907 13.0398 26.3135 13.7179 26.3135 14.4808C26.3135 15.2437 26.9918 15.9218 27.755 15.9218ZM31.4012 15.9218C32.2491 15.9218 32.8427 15.2437 32.8427 14.4808C32.8427 13.7179 32.1643 13.0398 31.4012 13.0398C30.5532 13.0398 29.9597 13.7179 29.9597 14.4808C29.9597 15.2437 30.638 15.9218 31.4012 15.9218ZM35.1322 15.9218C35.9801 15.9218 36.5737 15.2437 36.5737 14.4808C36.5737 13.7179 35.8953 13.0398 35.1322 13.0398C34.2842 13.0398 33.6907 13.7179 33.6907 14.4808C33.6059 15.2437 34.2842 15.9218 35.1322 15.9218Z",
-            fill: "#1A99FF",
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M28 47.1106C29.1046 47.1106 30 46.2151 30 45.1106L30 3.72705C30 2.62248 29.1046 1.72705 28 1.72705L5 1.72705C3.89544 1.72705 3 2.62248 3 3.72705L3 45.1106C3 46.2151 3.89543 47.1106 5 47.1106L28 47.1106ZM5.68119 5.82741L27.3188 5.82741L27.3188 42.7772H5.68119L5.68119 5.82741ZM20.9999 44.944C20.9999 45.3429 20.6766 45.6662 20.2777 45.6662L12.7221 45.6662C12.3233 45.6662 11.9999 45.3429 11.9999 44.944C11.9999 44.5451 12.3233 44.2218 12.7221 44.2218H20.2777C20.6766 44.2218 20.9999 44.5451 20.9999 44.944ZM17.2778 4.44406C17.6767 4.44406 18 4.12071 18 3.72184C18 3.32296 17.6767 2.99962 17.2778 2.99962L15.7222 2.99962C15.3233 2.99962 15 3.32296 15 3.72184C15 4.12071 15.3233 4.44406 15.7222 4.44406L17.2778 4.44406Z",
+          }),
+          n.createElement("path", {
+            fill: "currentColor",
+            d: "M22.2456 22.4164C22.2456 21.6666 22.8127 21.0002 23.6228 21.0002C24.3519 21.0002 25 21.6666 25 22.4164C25 23.1661 24.3519 23.8325 23.6228 23.8325C22.8937 23.8325 22.2456 23.1661 22.2456 22.4164Z",
+          }),
+          n.createElement("path", {
+            fill: "currentColor",
+            d: "M18.6812 22.4164C18.6812 21.6666 19.2483 21.0002 20.0584 21.0002C20.8685 21.0002 21.5166 21.6666 21.4355 22.4164C21.4355 23.1661 20.8685 23.8325 20.0584 23.8325C19.3293 23.8325 18.6812 23.1661 18.6812 22.4164Z",
+          }),
+          n.createElement("path", {
+            fill: "currentColor",
+            d: "M15.1977 22.4164C15.1977 21.6666 15.7648 21.0002 16.5749 21.0002C17.304 21.0002 17.9521 21.6666 17.9521 22.4164C17.9521 23.1661 17.385 23.8325 16.5749 23.8325C15.8458 23.8325 15.1977 23.1661 15.1977 22.4164Z",
+          }),
+          n.createElement("path", {
+            fill: "currentColor",
+            d: "M11.7143 22.4164C11.7143 21.6666 12.2814 21.0002 13.0915 21.0002C13.8206 21.0002 14.4686 21.6666 14.4686 22.4164C14.4686 23.1661 13.9016 23.8325 13.0915 23.8325C12.3624 23.8325 11.7143 23.1661 11.7143 22.4164Z",
+          }),
+          n.createElement("path", {
+            fill: "currentColor",
+            d: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
           })
         );
       }
@@ -3497,8 +3640,12 @@
       function ze(e) {
         const { children: t, align: r, inline: i } = e,
           a = (0, s.Z)(M().TextLink, "center" === r && M().TextAlignCenter);
-        if ("href" in e)
-          return n.createElement("a", { className: a, href: e.href }, t);
+        if ("href" in e) {
+          const r = u.De.IN_CLIENT
+            ? `steam://openurl_external/${e.href}`
+            : e.href;
+          return n.createElement("a", { className: a, href: r }, t);
+        }
         {
           const r = i ? "span" : "div";
           return n.createElement(r, { className: a, onClick: e.onClick }, t);
@@ -3756,7 +3903,7 @@
     88514: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $h: () => x,
+        $h: () => D,
         Am: () => y,
         Uy: () => f,
         _u: () => h,
@@ -4045,6 +4192,12 @@
                     bw: n.Xc.writeEnum,
                   },
                   device_details: { n: 3, c },
+                  website_id: {
+                    n: 4,
+                    d: "Unknown",
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
                 },
               }),
             m.sm_m
@@ -5149,6 +5302,24 @@
                     br: n.FE.readFixed64String,
                     bw: n.Xc.writeFixed64String,
                   },
+                  os_platform: {
+                    n: 7,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  os_type: { n: 8, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  auth_type: {
+                    n: 9,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  gaming_device_type: {
+                    n: 10,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  first_seen: { n: 11, c: T },
+                  last_seen: { n: 12, c: T },
                 },
               }),
             M.sm_m
@@ -5192,7 +5363,7 @@
       class T extends s {
         constructor(e = null) {
           super(),
-            T.prototype.action || n.aR(T.M()),
+            T.prototype.time || n.aR(T.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -5201,14 +5372,11 @@
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  action: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
-                  time: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  ip: { n: 3, c: a.j7 },
-                  actor: {
-                    n: 4,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
+                  time: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  ip: { n: 2, c: a.j7 },
+                  country: { n: 3, br: n.FE.readString, bw: n.Xc.writeString },
+                  state: { n: 4, br: n.FE.readString, bw: n.Xc.writeString },
+                  city: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
                 },
               }),
             T.sm_m
@@ -5246,21 +5414,30 @@
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSupportRefreshTokenAudit";
+          return "CSupportRefreshTokenDescription_TokenUsageEvent";
         }
       }
       class z extends s {
         constructor(e = null) {
           super(),
-            z.prototype.refresh_tokens || n.aR(z.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            z.prototype.action || n.aR(z.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             z.sm_m ||
               (z.sm_m = {
                 proto: z,
-                fields: { refresh_tokens: { n: 1, c: M, r: !0, q: !0 } },
+                fields: {
+                  action: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  time: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  ip: { n: 3, c: a.j7 },
+                  actor: {
+                    n: 4,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                },
               }),
             z.sm_m
           );
@@ -5297,7 +5474,7 @@
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuthenticationSupport_QueryRefreshTokensByAccount_Response";
+          return "CSupportRefreshTokenAudit";
         }
       }
       class A extends s {
@@ -5348,21 +5525,36 @@
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuthenticationSupport_QueryRefreshTokenByID_Response";
+          return "CAuthenticationSupport_QueryRefreshTokensByAccount_Response";
         }
       }
       class k extends s {
         constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            k.prototype.refresh_tokens || n.aR(k.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: { refresh_tokens: { n: 1, c: M, r: !0, q: !0 } },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = n.Bh(k.M())), k.sm_mbf;
         }
         toObject(e = !1) {
           return k.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.TA(k.M(), e, t);
         }
         static fromObject(e) {
-          return new k();
+          return n.aD(k.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -5370,48 +5562,35 @@
           return k.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.F(k.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.l2(k.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuthenticationSupport_RevokeToken_Response";
+          return "CAuthenticationSupport_QueryRefreshTokenByID_Response";
         }
       }
       class O extends s {
         constructor(e = null) {
-          super(),
-            O.prototype.history || n.aR(O.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: { history: { n: 1, c: T, r: !0, q: !0 } },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return O.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(O.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.aD(O.M(), e);
+          return new O();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -5419,38 +5598,33 @@
           return O.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(O.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(O.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuthenticationSupport_GetTokenHistory_Response";
+          return "CAuthenticationSupport_RevokeToken_Response";
         }
       }
       class L extends s {
         constructor(e = null) {
           super(),
-            L.prototype.nonce || n.aR(L.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            L.prototype.history || n.aR(L.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             L.sm_m ||
               (L.sm_m = {
                 proto: L,
-                fields: {
-                  nonce: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                  expiry: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
+                fields: { history: { n: 1, c: z, r: !0, q: !0 } },
               }),
             L.sm_m
           );
@@ -5487,13 +5661,13 @@
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CCloudGaming_CreateNonce_Response";
+          return "CAuthenticationSupport_GetTokenHistory_Response";
         }
       }
       class N extends s {
         constructor(e = null) {
           super(),
-            N.prototype.appid || n.aR(N.M()),
+            N.prototype.nonce || n.aR(N.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -5502,12 +5676,8 @@
               (N.sm_m = {
                 proto: N,
                 fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  minutes_remaining: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
+                  nonce: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
+                  expiry: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                 },
               }),
             N.sm_m
@@ -5545,21 +5715,28 @@
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CCloudGaming_TimeRemaining";
+          return "CCloudGaming_CreateNonce_Response";
         }
       }
       class W extends s {
         constructor(e = null) {
           super(),
-            W.prototype.entries || n.aR(W.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            W.prototype.appid || n.aR(W.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             W.sm_m ||
               (W.sm_m = {
                 proto: W,
-                fields: { entries: { n: 2, c: N, r: !0, q: !0 } },
+                fields: {
+                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  minutes_remaining: {
+                    n: 2,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                },
               }),
             W.sm_m
           );
@@ -5596,10 +5773,61 @@
           return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CCloudGaming_TimeRemaining";
+        }
+      }
+      class x extends s {
+        constructor(e = null) {
+          super(),
+            x.prototype.entries || n.aR(x.M()),
+            s.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
+                fields: { entries: { n: 2, c: W, r: !0, q: !0 } },
+              }),
+            x.sm_m
+          );
+        }
+        static MBF() {
+          return x.sm_mbf || (x.sm_mbf = n.Bh(x.M())), x.sm_mbf;
+        }
+        toObject(e = !1) {
+          return x.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(x.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(x.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(x.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(x.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var x, D, I;
+      var D, I, j;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, l, {
@@ -5682,13 +5910,13 @@
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(x || (x = {})),
+      })(D || (D = {})),
         (function (e) {
           (e.QueryRefreshTokensByAccount = function (e, t) {
             return e.SendMsg(
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
               t,
-              z,
+              A,
               { bConstMethod: !0, ePrivilege: 5 }
             );
           }),
@@ -5696,12 +5924,12 @@
               return e.SendMsg(
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
                 t,
-                A,
+                k,
                 { bConstMethod: !0, ePrivilege: 5 }
               );
             }),
             (e.RevokeToken = function (e, t) {
-              return e.SendMsg("AuthenticationSupport.RevokeToken#1", t, k, {
+              return e.SendMsg("AuthenticationSupport.RevokeToken#1", t, O, {
                 ePrivilege: 5,
               });
             }),
@@ -5709,25 +5937,25 @@
               return e.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
                 t,
-                O,
+                L,
                 { bConstMethod: !0, ePrivilege: 5 }
               );
             });
-        })(D || (D = {})),
+        })(I || (I = {})),
         (function (e) {
           (e.CreateNonce = function (e, t) {
-            return e.SendMsg("CloudGaming.CreateNonce#1", t, L, {
+            return e.SendMsg("CloudGaming.CreateNonce#1", t, N, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
             (e.GetTimeRemaining = function (e, t) {
-              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, W, {
+              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, x, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             });
-        })(I || (I = {}));
+        })(j || (j = {}));
     },
     99925: (e, t, r) => {
       "use strict";

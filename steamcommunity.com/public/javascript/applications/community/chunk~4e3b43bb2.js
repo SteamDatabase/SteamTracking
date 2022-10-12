@@ -443,6 +443,8 @@
         MarketLink: "partnereventdisplay_MarketLink_3fjva",
         MarketLinkhover: "partnereventdisplay_MarketLinkhover_21osb",
         ReadMoreCnt: "partnereventdisplay_ReadMoreCnt_d_R9N",
+        VerticalLocalDateAndTime:
+          "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
     65281: (e) => {
@@ -13560,20 +13562,25 @@
         );
       }
       function B(e) {
-        const { event: t } = e,
-          [r, i, s] = (0, n.SZ)(() => [
+        const { event: t, dateRangeLayout: r = "horizontal" } = e,
+          [i, s, o] = (0, n.SZ)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
             t.GetEndTimeAndDateUnixSeconds(),
             t.type,
-          ]);
-        return a.createElement(
-          "div",
-          { className: g().EventDetailTimeInfo },
-          a.createElement(u.uv, {
-            startDateAndTime: r,
-            endDateAndTime: i,
-            bHideEndTime: !(0, h.G1)(s),
-          })
+          ]),
+          l = {};
+        return (
+          "vertical" == r && (l.ShortDateRange = g().VerticalLocalDateAndTime),
+          a.createElement(
+            "div",
+            { className: g().EventDetailTimeInfo },
+            a.createElement(u.uv, {
+              startDateAndTime: i,
+              endDateAndTime: s,
+              bHideEndTime: !(0, h.G1)(o),
+              stylesmodule: l,
+            })
+          )
         );
       }
     },

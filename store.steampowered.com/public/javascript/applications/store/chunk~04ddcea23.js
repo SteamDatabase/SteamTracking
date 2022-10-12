@@ -1266,7 +1266,7 @@
         constructor(e = null) {
           super(),
             o.prototype.released_only || s.aR(o.M()),
-            l.initialize(this, e, 0, -1, [10, 11, 15, 16], null);
+            l.initialize(this, e, 0, -1, [10, 11, 15, 16, 45], null);
         }
         static M() {
           return (
@@ -1331,6 +1331,14 @@
                     bw: s.Xc.writeInt32,
                   },
                   store_page_filter: { n: 44, c: a._v },
+                  parent_appids: {
+                    n: 45,
+                    r: !0,
+                    q: !0,
+                    br: s.FE.readUint32,
+                    pbr: s.FE.readPackedUint32,
+                    bw: s.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             o.sm_m

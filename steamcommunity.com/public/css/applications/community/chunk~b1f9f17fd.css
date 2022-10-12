@@ -199,7 +199,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   margin: unset;
-  padding: 0px var(--gpSpace-Gutter) 8px;
   scroll-padding: 0px var(--gpSpace-Gutter);
 }
 @media screen and (max-width: 910px) {
@@ -208,7 +207,6 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
     margin: unset;
-    padding: 0px var(--gpSpace-Gutter) 8px;
     scroll-padding: 0px var(--gpSpace-Gutter);
   }
 }
@@ -283,7 +281,7 @@ html.tablet
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 8px;
+  margin: 0 16px 0 0;
 }
 .contenthubshared_SpotlightsColumn_1g97e .CapsuleBottomBar {
   height: 54px;
@@ -301,6 +299,16 @@ html.tablet
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   width: 100%;
+}
+@media screen and (max-width: 910px) {
+  .contenthubshared_SpotlightCtn_3pJ3t {
+    min-width: 300px;
+    scroll-snap-align: start;
+  }
+}
+.BasicUI .contenthubshared_SpotlightCtn_3pJ3t {
+  min-width: unset;
+  scroll-snap-align: unset;
 }
 .contenthubshared_SpotlightCtn_3pJ3t .contenthubshared_SpotlightImageCtn_1o33E {
   position: relative;
@@ -3749,6 +3757,24 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
     flex-direction: column;
   }
 }
+.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a {
+  z-index: 3;
+  margin-bottom: 0;
+}
+.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a:after {
+  top: 100%;
+  left: 10%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #1e1e1e;
+  border-width: 20px;
+  margin-left: -20px;
+}
 .partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
   background-color: #473991;
   margin-bottom: 20px;
@@ -4162,7 +4188,7 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 .saleitembrowser_SaleItemBrowserContainer_2wLns
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9 {
   overflow-x: auto;
-  margin: 0 -16px 6px;
+  margin: 0 0 6px;
   padding: 0 0 6px;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -4439,6 +4465,33 @@ html.responsive.touch
 }
 .BasicUI .saleitembrowser_SuggestContainer_1jJg_ {
   display: none;
+}
+.saleitembrowser_ResetItemsCtn_1XX4L {
+  height: 48px;
+  margin-bottom: 4px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.saleitembrowser_ResetItemsCtn_1XX4L svg {
+  height: 14px;
+  width: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 50%;
+}
+.saleitembrowser_ResetItemsCtn_1XX4L .saleitembrowser_ResetItems_1Yy62 {
+  opacity: 50%;
+  text-align: center;
+}
+.saleitembrowser_ResetItemsCtn_1XX4L:hover svg {
+  opacity: 100%;
+}
+.saleitembrowser_ResetItemsCtn_1XX4L:hover .saleitembrowser_ResetItems_1Yy62 {
+  opacity: 100%;
 }
 .saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
   background-color: #2e3138;

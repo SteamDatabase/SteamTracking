@@ -161,14 +161,16 @@
         MarketLink: "partnereventdisplay_MarketLink_3fjva",
         MarketLinkhover: "partnereventdisplay_MarketLinkhover_21osb",
         ReadMoreCnt: "partnereventdisplay_ReadMoreCnt_d_R9N",
+        VerticalLocalDateAndTime:
+          "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
     63543: (e, t, a) => {
       "use strict";
       a.r(t),
         a.d(t, {
-          ConfirmOverwriteVoteOrNominationDialog: () => L,
-          EventDisplaySteamAwardNomination: () => B,
+          ConfirmOverwriteVoteOrNominationDialog: () => B,
+          EventDisplaySteamAwardNomination: () => L,
           EventDisplaySteamAwardVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => x,
           default: () => I,
@@ -183,8 +185,8 @@
         p = a(48341),
         m = a(34133),
         v = a.n(m),
-        _ = a(93976),
-        c = a(7573),
+        c = a(93976),
+        _ = a(7573),
         g = a(41311),
         S = a(64839),
         u = a(90666),
@@ -246,7 +248,7 @@
             )
               return e.data.event_details;
           } catch (e) {
-            const t = (0, _.l)(e);
+            const t = (0, c.l)(e);
             console.error(
               "Could not fetch award event details:" + t.strErrorMsg,
               t
@@ -255,7 +257,7 @@
           return null;
         });
       }
-      let B = class extends l.Component {
+      let L = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
@@ -308,7 +310,7 @@
                   a.data.nominations &&
                   this.ProcessNominations(a.data.nominations);
               } catch (e) {
-                const t = (0, _.l)(e);
+                const t = (0, c.l)(e);
                 console.error(
                   "Could not fetch previous nominations:" + t.strErrorMsg,
                   t
@@ -353,7 +355,7 @@
         }
         HandleConflict(e) {
           (0, y.AM)(
-            l.createElement(L, {
+            l.createElement(B, {
               strLocTokenInfix: "Nomination",
               strNewGameTitle: this.props.event.GetGameTitle(this.props.lang),
               fnGetOldGameTitle: () => this.m_strPreviousNomineeTitle,
@@ -390,9 +392,9 @@
               });
               if (this.m_cancelSignal.token.reason) return;
               (e && 200 == e.status && 1 == e.data.success) ||
-                console.error("Nomination request failed.", e && (0, _.l)(e));
+                console.error("Nomination request failed.", e && (0, c.l)(e));
             } catch (e) {
-              const t = (0, _.l)(e);
+              const t = (0, c.l)(e);
               console.error("SaveNomination failed: " + t.strErrorMsg, t);
             }
           });
@@ -442,7 +444,7 @@
             "div",
             {
               style: a,
-              className: (0, c.Z)(
+              className: (0, _.Z)(
                 w().SteamAwardContainer,
                 v().PartnerEventFont
               ),
@@ -562,12 +564,12 @@
           );
         }
       };
-      (0, n.gn)([o.LO], B.prototype, "m_strPreviousNomineeTitle", void 0),
-        (0, n.gn)([o.LO], B.prototype, "m_nominationEventDetails", void 0),
-        (0, n.gn)([S.ak], B.prototype, "OnNominateClick", null),
-        (0, n.gn)([S.ak], B.prototype, "SaveNomination", null),
-        (B = (0, n.gn)([s.Pi], B));
-      let L = class extends l.Component {
+      (0, n.gn)([o.LO], L.prototype, "m_strPreviousNomineeTitle", void 0),
+        (0, n.gn)([o.LO], L.prototype, "m_nominationEventDetails", void 0),
+        (0, n.gn)([S.ak], L.prototype, "OnNominateClick", null),
+        (0, n.gn)([S.ak], L.prototype, "SaveNomination", null),
+        (L = (0, n.gn)([s.Pi], L));
+      let B = class extends l.Component {
         OnConfirm() {
           this.props.fnOnConfirm(), this.props.closeModal();
         }
@@ -608,9 +610,9 @@
           });
         }
       };
-      (0, n.gn)([S.ak], L.prototype, "OnConfirm", null),
-        (0, n.gn)([S.ak], L.prototype, "OnCancel", null),
-        (L = (0, n.gn)([s.Pi], L));
+      (0, n.gn)([S.ak], B.prototype, "OnConfirm", null),
+        (0, n.gn)([S.ak], B.prototype, "OnCancel", null),
+        (B = (0, n.gn)([s.Pi], B));
       let V = class extends l.Component {
         constructor() {
           super(...arguments),
@@ -648,7 +650,7 @@
                   a.data.votes &&
                   this.UpdateVoteState(a.data.votes);
               } catch (e) {
-                const t = (0, _.l)(e);
+                const t = (0, c.l)(e);
                 console.error(
                   "Could not fetch previous votes:" + t.strErrorMsg,
                   t
@@ -693,7 +695,7 @@
         HandleConflict(e) {
           const t = d.Z.Get().GetApp(this.props.appID);
           (0, y.AM)(
-            l.createElement(L, {
+            l.createElement(B, {
               strLocTokenInfix: "Vote",
               strNewGameTitle: null == t ? void 0 : t.GetName(),
               fnGetOldGameTitle: () => this.m_strPreviousVotedForAppTitle,
@@ -722,9 +724,9 @@
               });
               if (this.m_cancelSignal.token.reason) return;
               (e && 200 == e.status && 1 == e.data.success) ||
-                console.error("Vote request failed.", e && (0, _.l)(e));
+                console.error("Vote request failed.", e && (0, c.l)(e));
             } catch (e) {
-              const t = (0, _.l)(e);
+              const t = (0, c.l)(e);
               console.error("SaveVote failed: " + t.strErrorMsg, t);
             }
           });
@@ -737,7 +739,7 @@
           return this.props.bIsEventActionEnabled || this.props.previewMode || t
             ? l.createElement(
                 "div",
-                { className: (0, c.Z)(w().SteamAwardVoteWidget) },
+                { className: (0, _.Z)(w().SteamAwardVoteWidget) },
                 l.createElement("div", { className: w().SteamAwardVotePrompt }),
                 l.createElement(
                   "div",
@@ -745,7 +747,7 @@
                   l.createElement(
                     "div",
                     {
-                      className: (0, c.Z)(
+                      className: (0, _.Z)(
                         w().SteamAwardCategoryTitle,
                         w().VotingTitle
                       ),
@@ -872,7 +874,7 @@
               "div",
               {
                 style: t,
-                className: (0, c.Z)(
+                className: (0, _.Z)(
                   w().SteamAwardContainer,
                   v().PartnerEventFont
                 ),
@@ -912,7 +914,7 @@
                             "a",
                             {
                               href: u.De.STORE_BASE_URL + "steamawards/",
-                              className: (0, c.Z)(
+                              className: (0, _.Z)(
                                 w().SteamAwardLearnMore,
                                 w().BottomRight
                               ),
