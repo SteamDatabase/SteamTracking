@@ -281,7 +281,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				foreach( $ApkLinks as &$ApkLink )
 				{
-					$ApkLink = preg_replace( '/^https:\/\/[\w.\/-]+\//', 'https://media.steampowered.com/', $ApkLink );
+					$ApkLink = preg_replace( '/^https:\/\/[^\/]+\//', 'https://media.steampowered.com/', $ApkLink );
 
 					if( preg_match( '/\/apps\/([\w-]+)\//', $ApkLink, $AppName ) === 1 )
 					{
@@ -307,11 +307,17 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			}
 			else if( $File === '.support/archives/steam-android.apk' )
 			{
+				$this->Log( 'Dumping mobile app' );
+
+				file_put_contents( $File, $Data );
+
 				system( 'unzip -j ".support/archives/steam-android.apk" "assets/index.android.bundle" -d "."' );
 				system( 'mv index.android.bundle Scripts/WebUI/steammobile_app.js' );
 				system( 'npm run prettier Scripts/WebUI/steammobile_app.js' );
 
 				$this->DumpJavascriptFiles = true;
+
+				return true;
 			}
 			// Unzip it
 			else if( str_ends_with( $File, '.zip' ) )

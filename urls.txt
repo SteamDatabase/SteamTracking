@@ -16,7 +16,6 @@ https://partner.steamgames.com/public/css/styles_packages.css?__TIME__&_cdn=clou
 https://partner.steamgames.com/public/css/taxonomy_survey.css?__TIME__&_cdn=cloudflare
 https://partner.steamgames.com/public/css/webui/storeadmin/storeadmin.css?__TIME__&_cdn=cloudflare
 https://steamcommunity.com/public/css/applications/community/avatarcrop.css?__TIME__&_cdn=cloudflare
-https://steamcommunity.com/public/css/applications/community/broadcast.css?__TIME__&_cdn=cloudflare
 https://steamcommunity.com/public/css/applications/community/broadcasts.css?__TIME__&_cdn=cloudflare
 https://steamcommunity.com/public/css/applications/community/communityawardsapp.css?__TIME__&_cdn=cloudflare
 https://steamcommunity.com/public/css/applications/community/communityfaqs.css?__TIME__&_cdn=cloudflare
@@ -153,7 +152,6 @@ https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__&_cdn
 https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/interactive_recommender/main.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/accountpreferences.css?__TIME__&_cdn=cloudflare
-https://store.steampowered.com/public/css/applications/store/broadcast.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/curatorreviewlistlanding.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/eventadmin.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/events.css?__TIME__&_cdn=cloudflare
@@ -166,7 +164,6 @@ https://store.steampowered.com/public/css/applications/store/pointsbundles.css?_
 https://store.steampowered.com/public/css/applications/store/profileshowcases.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/reviewaward.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/applications/store/saledisplay.css?__TIME__&_cdn=cloudflare
-https://store.steampowered.com/public/css/applications/store/steamawardsvote.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/bigpicture/application.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/bigpicture/eventbackground.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/bigpicture/eventbackground_empty.css?__TIME__&_cdn=cloudflare
@@ -300,7 +297,6 @@ https://partner.steamgames.com/public/javascript/webui/storeadmin/main_english-j
 https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/applications/community/avatarcrop.js?__TIME__&l=english&_cdn=cloudflare
-https://steamcommunity.com/public/javascript/applications/community/broadcast.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/applications/community/broadcasts.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/applications/community/communityawardsapp.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/applications/community/communityfaqs.js?__TIME__&l=english&_cdn=cloudflare
@@ -456,7 +452,6 @@ https://store.steampowered.com/public/javascript/about.js?__TIME__&l=english&_cd
 https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/accountpreferences.js?__TIME__&l=english&_cdn=cloudflare
-https://store.steampowered.com/public/javascript/applications/store/broadcast.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/curatorreviewlistlanding.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/deckverified.js?__TIME__&l=english&_cdn=cloudflare
 https://store.steampowered.com/public/javascript/applications/store/eventadmin.js?__TIME__&l=english&_cdn=cloudflare
@@ -526,6 +521,7 @@ https://www.dota2.com/public/javascript/applications/dpc/main.js?__TIME__&l=engl
 https://www.dota2.com/public/javascript/dota_react/main.js?__TIME__&l=english&_cdn=cloudflare
 https://www.dota2.com/public/javascript/dota_react/main_english-json.js?__TIME__&_cdn=cloudflare
 https://www.dota2.com/public/javascript/dota_react/shared_english-json.js?__TIME__&_cdn=cloudflare
+https://www.dota2.com/public/javascript/dota_react/AdminPages.js?__TIME__&_cdn=cloudflare
 https://www.underlords.com/public/javascript/localization/items_english.js?__TIME__&l=english&_cdn=cloudflare
 https://www.underlords.com/public/javascript/localization/main_english.js?__TIME__&l=english&_cdn=cloudflare
 https://www.underlords.com/public/javascript/localization/shared_english.js?__TIME__&l=english&_cdn=cloudflare
