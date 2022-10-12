@@ -28,7 +28,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_BetaContainer_WgZQL {
+  .newlogindialog_MessagingContainer_3ph6w {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -36,7 +36,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_BetaTag_pYvWM {
+  .newlogindialog_MessagingTag_3jy5R {
   color: #1999ff;
   font-weight: 500;
   font-size: 12px;
@@ -47,7 +47,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_BetaSubtitleWithQR_hnv-G {
+  .newlogindialog_MessagingSubtitleCtn_3dSxv {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,13 +55,13 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_PhoneIcon_3mIgS {
+  .newlogindialog_MessagingIcon_2H3fB {
   width: 120px;
   fill: #afafaf;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_BetaSubtitle_2XVB0 {
+  .newlogindialog_MessagingSubtitle_toeax {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -70,7 +70,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_JoinBetaButton_3Pmq8 {
+  .newlogindialog_MessagingButton_-jjqv {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   font-weight: 700;
@@ -82,7 +82,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_ShowQRLink_-lvk- {
+  .newlogindialog_MessagingLink_1ozce {
   text-align: center;
   text-decoration-line: underline;
   font-weight: 400;
@@ -95,17 +95,12 @@
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_ZOBYq
     .newlogindialog_QRSection_2ZDyS
-    .newlogindialog_BetaContainer_WgZQL {
+    .newlogindialog_MessagingContainer_3ph6w {
     align-items: center;
   }
   .newlogindialog_Login_ZOBYq
     .newlogindialog_QRSection_2ZDyS
-    .newlogindialog_PhoneIcon_3mIgS {
-    display: none;
-  }
-  .newlogindialog_Login_ZOBYq
-    .newlogindialog_QRSection_2ZDyS
-    .newlogindialog_BetaSubtitle_2XVB0 {
+    .newlogindialog_MessagingSubtitle_toeax {
     text-align: center;
   }
 }
@@ -147,7 +142,7 @@
   .newlogindialog_Login_ZOBYq
     .newlogindialog_QRSection_2ZDyS
     .newlogindialog_QRCodeContainer_3YjUm {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -175,12 +170,6 @@
   .newlogindialog_QRSection_2ZDyS
   .newlogindialog_HideButton_u88sc {
   display: none;
-}
-.newlogindialog_Login_ZOBYq
-  .newlogindialog_QRSection_2ZDyS
-  .newlogindialog_ShowQR_12nP- {
-  display: flex;
-  flex-direction: column;
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_QRSection_2ZDyS

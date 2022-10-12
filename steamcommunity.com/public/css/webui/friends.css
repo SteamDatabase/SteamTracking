@@ -8441,7 +8441,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_BetaContainer_8YiSr {
+  .newlogindialog_MessagingContainer_3nq1H {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8449,7 +8449,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_BetaTag_2hxdu {
+  .newlogindialog_MessagingTag_1q-sf {
   color: #1999ff;
   font-weight: 500;
   font-size: 12px;
@@ -8460,7 +8460,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_BetaSubtitleWithQR_gN6QO {
+  .newlogindialog_MessagingSubtitleCtn_3cmP7 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8468,13 +8468,13 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_PhoneIcon_1Orm4 {
+  .newlogindialog_MessagingIcon_YQ-RN {
   width: 120px;
   fill: #afafaf;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_BetaSubtitle_2kSCn {
+  .newlogindialog_MessagingSubtitle_1AHDD {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -8483,7 +8483,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_JoinBetaButton_2YJ_V {
+  .newlogindialog_MessagingButton_1i0mN {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   font-weight: 700;
@@ -8495,7 +8495,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_ShowQRLink_18gwL {
+  .newlogindialog_MessagingLink_1hGMV {
   text-align: center;
   text-decoration-line: underline;
   font-weight: 400;
@@ -8508,17 +8508,12 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_3VsPM
     .newlogindialog_QRSection_5I7Ax
-    .newlogindialog_BetaContainer_8YiSr {
+    .newlogindialog_MessagingContainer_3nq1H {
     align-items: center;
   }
   .newlogindialog_Login_3VsPM
     .newlogindialog_QRSection_5I7Ax
-    .newlogindialog_PhoneIcon_1Orm4 {
-    display: none;
-  }
-  .newlogindialog_Login_3VsPM
-    .newlogindialog_QRSection_5I7Ax
-    .newlogindialog_BetaSubtitle_2kSCn {
+    .newlogindialog_MessagingSubtitle_1AHDD {
     text-align: center;
   }
 }
@@ -8560,7 +8555,7 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_Login_3VsPM
     .newlogindialog_QRSection_5I7Ax
     .newlogindialog_QRCodeContainer_340xk {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -8588,12 +8583,6 @@ button.Primary.partnereventshared_AddSectionButton_KDecq {
   .newlogindialog_QRSection_5I7Ax
   .newlogindialog_HideButton_39ylI {
   display: none;
-}
-.newlogindialog_Login_3VsPM
-  .newlogindialog_QRSection_5I7Ax
-  .newlogindialog_ShowQR_rzjCs {
-  display: flex;
-  flex-direction: column;
 }
 .newlogindialog_Login_3VsPM
   .newlogindialog_QRSection_5I7Ax
