@@ -192,6 +192,7 @@ https://store.steampowered.com/public/css/store_tablet.css?__TIME__&_cdn=cloudfl
 https://store.steampowered.com/public/css/styles_about.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__&_cdn=cloudflare
+https://store.steampowered.com/public/css/styles_mobile_about_v2.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/styles_parental.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/styles_phone.css?__TIME__&_cdn=cloudflare
 https://store.steampowered.com/public/css/styles_ssav5.css?__TIME__&_cdn=cloudflare
