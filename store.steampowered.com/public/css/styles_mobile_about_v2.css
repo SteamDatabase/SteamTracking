@@ -1,0 +1,451 @@
+
+.responsive_page_template_content {
+	padding-bottom: 0;
+}
+
+#footer_spacer {
+	background-color: #171a21;
+}
+
+a {
+	color: #1A97FF;
+}
+
+.mobile_apps_page {
+	font-family: 'Motiva Sans';
+}
+
+.mobile_section_rows {
+	max-width: 940px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.mobile_section_columns {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.left_align {
+	align-items: flex-start;
+}
+
+.top-align {
+	justify-content: flex-start;
+}
+
+.fill_column {
+	width: 100%
+}
+
+.mobile_page_section {
+	padding: 50px 40px;
+}
+
+.mobile_page_header {
+	background: linear-gradient(130.49deg, #25282E 15.41%, #303641 59.02%);
+	font-style: normal;
+	padding: 24px;
+	color: #FFFFFF;
+}
+
+.header_item {
+	padding-bottom: 12px;
+}
+
+.mobile_got_apps {
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 57px;
+	text-align: center;
+}
+
+.mobile_stay_connected {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.mobile_app_section {
+	background-color: #FFFFFF;
+	flex-direction: column;
+	color: #1E2024;
+	overflow: hidden;
+}
+
+.mobile_app_section .description_item {
+	color: rgba(40, 44, 52, 0.7);
+}
+
+.beta_header_ctn {
+	background: #1A97FF;
+	border-radius: 2px;
+	margin-bottom: 40px;
+	padding: 24px;
+	color: #FFFFFF;
+}
+
+.beta_header {
+	font-weight: 800;
+	font-size: 22px;
+	line-height: 31px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.beta_description {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 21px;
+	letter-spacing: 0.03em;
+}
+
+.beta_feedback {
+	text-decoration: underline;
+}
+
+.mobile_beta_button {
+	padding: 12px 24px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: #282C34;
+	margin: 24px auto;
+}
+
+.mobile_app_header_ctn {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+.mobile_app_header_text {
+	font-weight: 800;
+	font-size: 52px;
+	line-height: 60px;
+	color: #282C34;
+}
+
+.mobile_app_header_icon {
+	width: 75px;
+	aspect-ratio: 1;
+}
+
+.mobile_section_subtitle {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 29px;
+	color: rgba(40, 44, 52, 0.7);
+}
+
+.mobile_images_ctn {
+	display: flex;
+	justify-content: center;
+	margin: 24px 0px;
+}
+
+.mobile_app_example_image {
+	width: 100%;
+	min-width: 620px;
+}
+
+.mobile_section_footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(67, 69, 81, 0.05);
+	border-radius: 2px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 17px;
+	text-align: center;
+	color: rgba(30, 32, 36, 0.5);
+	padding: 12px 48px;
+	margin: 90px auto;
+	flex-direction: inherit;
+}
+
+.mobile_footer_text {
+	padding: 12px;
+}
+
+.mobile_footer_qr_code {
+	width: 140px;
+	height: 140px;
+	padding: 0px 12px;
+}
+
+.mobile_apple_store_link {
+	height: 51px;
+}
+
+.mobile_google_play_store_link {
+	height: 78px;
+}
+
+.steam_link_section {
+	color: #FFFFFF;
+	background-image: url('/public/images/mobile/steam_link_bg.png');
+	background-size: cover;
+}
+.steam_link_accent {
+	width: 50%;
+	padding: 16px;
+}
+
+.steam_link_example {
+	width: 100%;
+}
+
+.steam_link_desc_ctn {
+	margin-top: 24px;
+	margin-bottom: 48px;
+}
+
+.steam_link_desc {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 40px;
+	color: #FFFFFF;
+}
+
+.steam_link_learn_more {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #1A97FF;
+}
+
+.steam_link_dropdown_wrapper {
+	background: #1A98FF;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #FFFFFF;
+	border-radius: 2px;
+	border: none;
+	padding: 12px;
+	margin: 16px 0px;
+	cursor: pointer;
+	position: relative;
+	width: 75%;
+}
+
+.steam_link_dropdown_placeholder_wrapper {
+	user-select: none;
+	position: relative;
+	width: 100%;
+}
+
+.steam_link_dropdown_placeholder_wrapper::after {
+	font-weight: 700;
+	content: "⌵";
+	font-size: 16px;
+	line-height: 23px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+	color: #FFFFFF;
+	z-index: 0;
+}
+
+.steam_link_dropdown_flyout {
+	background: #1A98FF;
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	font-weight: normal;
+	border-radius: 2px;
+	margin-top: 35px;
+	width: 100%;
+}
+
+.steam_link_dropdown_option_link {
+	padding: 8px;
+	color: #FFFFFF;
+}
+
+.steam_link_dropdown_option_link:hover {
+	background-color: rgb(110, 187, 253);
+	color: #FFFFFF;
+}
+
+.steam_link_learn_more {
+	display: block;
+	text-align: center;
+}
+
+.chat_app_section {
+	background-color: #FFFFFF;
+	color: #1E2024;
+}
+
+.chat_app_example {
+	margin: 48px;
+	padding-left: 24px;
+	max-width: 300px;
+	width: 100%;
+}
+
+.chat_app_example_mobile {
+	width: 100%;
+	padding-bottom: 16px;
+	display: none;
+}
+
+.chat_app_apk {
+	display: block;
+	text-align: center;
+}
+
+.mobile_app_more_info_section {
+	color: #FFFFFF;
+	padding: 48px;
+	background: linear-gradient(136.95deg, #303641 26.31%, #25282E 79.23%);
+}
+
+.mobile_app_more_info_section .description_item {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.mobile_app_more_info_section .mobile_pill_link {
+	background-color: #1A98FF;
+}
+
+.mobile_links_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile_pill_link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #384252;
+	border-radius: 26px;
+	padding: 12px 18px;
+	margin: 12px;
+	width: fit-content
+}
+
+.pill_icon {
+	margin-right: 8px;
+	width: 30px;
+	aspect-ratio: 1;
+}
+
+.pill_text {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 26px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.section_header_ctn {
+	display: flex;
+	flex-direction: column;
+}
+
+.section_icon_header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.section_icon {
+	aspect-ratio: 1;
+	width: 66px;
+}
+
+.section_header_text {
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 57px;
+	padding: 16px 0px 16px 16px;
+
+}
+
+.section_subtitle {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 23px;
+}
+
+.description_container {
+	list-style-position: outside;
+	margin-left: 24px;
+	margin-top: 12px;
+}
+
+.description_title {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+.description_item {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 23px;
+}
+
+.mobile_section_app_link_ctn {
+	padding: 12px 0px;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+	.mobile_section_rows {
+		flex-direction: column;
+	}
+
+	.mobile_section_rows.reverse_collapse {
+		flex-direction: column-reverse;
+	}
+
+	.mobile_section_app_link_ctn {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.mobile_images_ctn {
+		flex-direction: column;
+	}
+
+	.steam_link_section .mobile_section_rows .mobile_section_columns.left_align {
+		align-items: center;
+	}
+
+	.chat_app_example {
+		display: none;
+	}
+
+	.chat_app_example_mobile {
+		display: block;
+	}
+
+
+}
