@@ -37,7 +37,15 @@ async function GetJavascriptFiles(dirName) {
 
 	const files = await readDir(dirName);
 
-	return files.filter((fileName) => fileName.endsWith(".js")).map((fileName) => pathJoin(dirName, fileName));
+	return files
+		.filter((fileName) => {
+			if (fileName == "licenses.js") {
+				return false;
+			}
+
+			return fileName.endsWith(".js");
+		})
+		.map((fileName) => pathJoin(dirName, fileName));
 }
 
 export async function GetFilesToParse() {

@@ -28,6 +28,8 @@ const allMessages = [
 
 const globalModuleExportedMessages = new Map();
 
+console.log("Found", files.length, "files to parse");
+
 for (const file of files) {
 	try {
 		const code = await readFile(file);
