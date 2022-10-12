@@ -1376,9 +1376,11 @@ function TraverseFields(ast, importedIds) {
 								throw new Error("Unexpected field.br");
 							}
 						} else if (fieldProp.key.name === "bw") {
-							//
+							// writeRepeated type
+						} else if (fieldProp.key.name === "pbr") {
+							// readPacked type
 						} else {
-							throw new Error("Unexpected field");
+							console.warn(`Unexpected field: ${fieldProp.key.name}`);
 						}
 					}
 
