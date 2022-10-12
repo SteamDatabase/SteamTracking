@@ -37016,10 +37016,7 @@
                             state: { bAutoScroll: !0 },
                             pathname: u._.dpc_standings(
                               (0, nr.B2)(e),
-                              (0, nr.o5)(ar.BY.RESULTS),
-                              ""
-                                .concat(tr.f.Get().GetDefaultRegion(e), "_")
-                                .concat(ar.sd.DIVISION_I)
+                              (0, nr.o5)(ar.BY.PLAYOFF)
                             ),
                           },
                           className: Fr().EventResultsButton,
