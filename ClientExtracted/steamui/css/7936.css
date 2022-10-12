@@ -295,7 +295,9 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_SignInButtonContainer_14fsn button {
   width: 270px;
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb {
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb,
+.newlogindialog_Login_ZOBYq .newlogindialog_OfferOfflineButton_1Rcg4,
+.newlogindialog_Login_ZOBYq .newlogindialog_TryAgainButton_GMIRO {
   background: #3d4450;
   color: #fff;
   padding: 12px;
@@ -304,15 +306,21 @@
   font-family: inherit;
   text-align: center;
   letter-spacing: 0.03em;
-  width: 50%;
   border: none;
   border-radius: 2px;
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:hover {
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:hover,
+.newlogindialog_Login_ZOBYq .newlogindialog_OfferOfflineButton_1Rcg4:hover,
+.newlogindialog_Login_ZOBYq .newlogindialog_TryAgainButton_GMIRO:hover {
   background: #525b6a;
 }
-.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:active {
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb:active,
+.newlogindialog_Login_ZOBYq .newlogindialog_OfferOfflineButton_1Rcg4:active,
+.newlogindialog_Login_ZOBYq .newlogindialog_TryAgainButton_GMIRO:active {
   background: #2f343e;
+}
+.newlogindialog_Login_ZOBYq .newlogindialog_RefreshQuitButton_KFTqb {
+  width: 50%;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_SubmitButton_2QgFE {
   position: relative;
@@ -820,11 +828,17 @@
   margin-bottom: 24px;
   text-align: center;
 }
+.newlogindialog_FailureButtons_2OZ64 {
+  gap: 12px;
+}
 .newlogindialog_OfferOffline_2DPst {
   color: #fff;
   font-size: 16px;
-  margin-bottom: 24px;
   text-align: center;
+}
+.newlogindialog_OfferOfflineButton_1Rcg4.newlogindialog_OfferOfflineButton_1Rcg4,
+.newlogindialog_TryAgainButton_GMIRO.newlogindialog_TryAgainButton_GMIRO {
+  padding: 12px 24px;
 }
 .newlogindialog_LoadingSpinner_2rGL7 {
   border-radius: 50%;

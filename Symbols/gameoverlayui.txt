@@ -282,6 +282,7 @@
  V_URLCracker
  V_URLDecodeRaw
  V_URLEncode
+ V_URLEncodeRaw
  V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8

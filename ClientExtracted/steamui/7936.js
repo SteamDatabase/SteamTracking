@@ -36,6 +36,8 @@
         RefreshButtonContainer: "newlogindialog_RefreshButtonContainer_2SbbR",
         SignInButtonContainer: "newlogindialog_SignInButtonContainer_14fsn",
         RefreshQuitButton: "newlogindialog_RefreshQuitButton_KFTqb",
+        OfferOfflineButton: "newlogindialog_OfferOfflineButton_1Rcg4",
+        TryAgainButton: "newlogindialog_TryAgainButton_GMIRO",
         SubmitButton: "newlogindialog_SubmitButton_2QgFE",
         Loading: "newlogindialog_Loading_i9MK3",
         LoadingContainer: "newlogindialog_LoadingContainer_OYHj3",
@@ -88,6 +90,7 @@
         AccountCreationPrompt: "newlogindialog_AccountCreationPrompt_1h5_x",
         FailureTitle: "newlogindialog_FailureTitle_A3Y-u",
         FailureDescription: "newlogindialog_FailureDescription_3gFes",
+        FailureButtons: "newlogindialog_FailureButtons_2OZ64",
         OfferOffline: "newlogindialog_OfferOffline_2DPst",
         LoadingSpinner: "newlogindialog_LoadingSpinner_2rGL7",
         LoadAmin: "newlogindialog_LoadAmin_1EdkR",
@@ -3010,20 +3013,20 @@
         return n.createElement(ae, Object.assign({ type: "submit" }, e));
       }
       function ae(e) {
-        const { loading: t, disabled: r, children: s } = e,
-          o = (0, i._T)(e, ["loading", "disabled", "children"]),
-          l = r || t;
+        const { className: t, loading: r, disabled: s, children: o } = e,
+          l = (0, i._T)(e, ["className", "loading", "disabled", "children"]),
+          c = s || r;
         return n.createElement(
           "button",
           Object.assign(
             {
-              className: (0, a.Z)(T().SubmitButton, t && T().Loading),
-              disabled: l,
+              className: (0, a.Z)(T().SubmitButton, r && T().Loading, t),
+              disabled: c,
             },
-            o
+            l
           ),
-          s,
-          t &&
+          o,
+          r &&
             n.createElement(
               "div",
               { className: T().LoadingContainer },
@@ -3076,10 +3079,9 @@
         return n.createElement(
           "div",
           { className: T().OfferOffline },
-          n.createElement("p", null, (0, W.Xx)("#Login_GoOffline_Description")),
           n.createElement(
-            ae,
-            { onClick: e.onRequestOffline },
+            "button",
+            { className: T().OfferOfflineButton, onClick: e.onRequestOffline },
             (0, W.Xx)("#Login_GoOffline_Button")
           )
         );
@@ -3134,8 +3136,22 @@
             { alignItems: "center", gap: 12 },
             n.createElement("div", { className: T().FailureTitle }, a),
             n.createElement("div", { className: T().FailureDescription }, o),
-            l && n.createElement(ue, { onRequestOffline: i }),
-            n.createElement(ae, { onClick: t }, (0, W.Xx)("#Button_Back"))
+            l &&
+              n.createElement(
+                "div",
+                { className: T().FailureDescription },
+                (0, W.Xx)("#Login_GoOffline_Description")
+              ),
+            n.createElement(
+              Te,
+              { className: T().FailureButtons },
+              n.createElement(
+                ae,
+                { className: T().TryAgainButton, onClick: t },
+                (0, W.Xx)("#Button_Retry")
+              ),
+              l && n.createElement(ue, { onRequestOffline: i })
+            )
           ),
           s &&
             n.createElement(
