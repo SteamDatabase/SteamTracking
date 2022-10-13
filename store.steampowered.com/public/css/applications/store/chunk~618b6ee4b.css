@@ -1603,6 +1603,124 @@
   color: #fff;
   display: none;
 }
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
+  height: 200px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--gpShadow-Medium);
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_ {
+  background: linear-gradient(
+    90deg,
+    #30506c 0%,
+    #386483 75%,
+    rgba(64, 121, 153, 0) 100%
+  );
+  position: absolute;
+  height: 200px;
+  width: 70%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 32px;
+  line-height: 30px;
+  row-gap: 4px;
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
+  .discoveryqueuewidget_LaunchAction_1V7ho {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
+  .discoveryqueuewidget_LaunchAction_1V7ho
+  svg {
+  width: 24px;
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover,
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus {
+  box-shadow: 0px 6px 12px 0px #0000003d;
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_,
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_ {
+  filter: brightness(1.2);
+}
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
+  .discoveryqueuewidget_LaunchAction_1V7ho,
+.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus
+  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
+  .discoveryqueuewidget_LaunchAction_1V7ho {
+  column-gap: 8px;
+}
+.discoveryqueuewidget_AppCarouselPosition_3bu52 {
+  width: 420px;
+  margin-left: auto;
+  overflow: hidden;
+  position: relative;
+}
+.discoveryqueuewidget_AppCarouselCtn_29s_c {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.discoveryqueuewidget_WidgetHeaderText_uUpem {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #fff;
+  width: 80%;
+}
+.discoveryqueuewidget_AppCapsuleCtn_2dIBN {
+  width: 320px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 80%;
+}
+.discoveryqueuewidget_LibraryImage_2C3wb {
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+  display: flex;
+}
+.discoveryqueuewidget_LibraryImage_2C3wb img {
+  width: 50px;
+}
+.discoveryqueuewidget_AppName_2t1rR {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.discoveryqueuewidget_LoginButton_24bCZ {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 16px;
+  background: #1a9fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #fff;
+}
+.discoveryqueuewidget_Placeholder_3rUZ- {
+  height: 200px;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -4789,124 +4907,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   border-top-color: #1e1e1e;
   border-width: 20px;
   margin-left: -20px;
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
-  height: 200px;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  box-shadow: var(--gpShadow-Medium);
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_ {
-  background: linear-gradient(
-    90deg,
-    #30506c 0%,
-    #386483 75%,
-    rgba(64, 121, 153, 0) 100%
-  );
-  position: absolute;
-  height: 200px;
-  width: 70%;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 32px;
-  line-height: 30px;
-  row-gap: 4px;
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
-  .discoveryqueuewidget_LaunchAction_1V7ho {
-  display: flex;
-  column-gap: 4px;
-  align-items: center;
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
-  .discoveryqueuewidget_LaunchAction_1V7ho
-  svg {
-  width: 24px;
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover,
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus {
-  box-shadow: 0px 6px 12px 0px #0000003d;
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_,
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_ {
-  filter: brightness(1.2);
-}
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7:hover
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
-  .discoveryqueuewidget_LaunchAction_1V7ho,
-.discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7.gpfocus
-  .discoveryqueuewidget_WidgetHeaderCtn_3u5R_
-  .discoveryqueuewidget_LaunchAction_1V7ho {
-  column-gap: 8px;
-}
-.discoveryqueuewidget_AppCarouselPosition_3bu52 {
-  width: 420px;
-  margin-left: auto;
-  overflow: hidden;
-  position: relative;
-}
-.discoveryqueuewidget_AppCarouselCtn_29s_c {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.discoveryqueuewidget_WidgetHeaderText_uUpem {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.3;
-  color: #fff;
-  width: 80%;
-}
-.discoveryqueuewidget_AppCapsuleCtn_2dIBN {
-  width: 320px;
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-shrink: 0;
-  gap: 8px;
-  align-items: flex-end;
-  padding: 12px;
-  box-sizing: border-box;
-  font-size: 80%;
-}
-.discoveryqueuewidget_LibraryImage_2C3wb {
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
-  display: flex;
-}
-.discoveryqueuewidget_LibraryImage_2C3wb img {
-  width: 50px;
-}
-.discoveryqueuewidget_AppName_2t1rR {
-  color: #fff;
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-.discoveryqueuewidget_LoginButton_24bCZ {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 8px 16px;
-  background: #1a9fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  color: #fff;
-}
-.discoveryqueuewidget_Placeholder_3rUZ- {
-  height: 200px;
 }
 .salequestdisplay_description_22ryq {
   padding-left: 5em;
