@@ -29816,6 +29816,8 @@ a {
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw {
+  margin-top: 30px;
+  margin-bottom: 15px;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -29826,38 +29828,43 @@ a {
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_AllDays_nwkeQ {
-  height: 50px;
-  font-size: 15px;
-  color: #fff;
-  font-family: "Reaver", serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-  padding: 0px 25px;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #28282e;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border-bottom: none;
+  height: 45px;
+  padding: 0px 25px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  font-family: "Radiance", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #2e3339;
   cursor: pointer;
   user-select: none;
+  transition-property: all;
+  transition-duration: 0.13s;
+  transition-timing-function: ease-in-out;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_AllDays_nwkeQ.schedulepage_Selected_3XenX {
-  background-color: #222;
+  background-color: #5e6976;
+  color: #fff;
+}
+.schedulepage_DPCScheduleHeader_1-Phy
+  .schedulepage_InternationalDaySelector_bsIjw
+  .schedulepage_AllDays_nwkeQ:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.2);
+  box-shadow: 0px 4px 8px #000000a4;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_EventStageContainer_1MBg8 {
-  height: 100px;
-  font-size: 12px;
-  color: #fff;
-  font-family: "Reaver", serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -29868,20 +29875,21 @@ a {
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_EventStageContainer_1MBg8
   .schedulepage_Title_2Pvkg {
-  font-family: "Reaver", serif;
-  color: #a7a7a7;
-  font-size: 13px;
+  font-size: 12px;
+  color: #9099a3;
+  font-family: "Radiance", sans-serif;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_EventStageContainer_1MBg8
   .schedulepage_DayList_2wZOM {
-  height: 50px;
+  height: 45px;
   display: flex;
   flex-direction: row;
-  gap: 6px;
+  gap: 3px;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
@@ -29895,19 +29903,29 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid #28282e;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border-bottom: none;
+  border-radius: 4px;
+  background-color: #2e3339;
   cursor: pointer;
   user-select: none;
+  transition-property: all;
+  transition-duration: 0.13s;
+  transition-timing-function: ease-in-out;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
   .schedulepage_EventStageContainer_1MBg8
   .schedulepage_DayList_2wZOM
   .schedulepage_DayContainer_1adcC.schedulepage_Selected_3XenX {
-  background-color: #28282e;
+  background-color: #5e6976;
+}
+.schedulepage_DPCScheduleHeader_1-Phy
+  .schedulepage_InternationalDaySelector_bsIjw
+  .schedulepage_EventStageContainer_1MBg8
+  .schedulepage_DayList_2wZOM
+  .schedulepage_DayContainer_1adcC:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.2);
+  box-shadow: 0px 4px 8px #000000a4;
 }
 .schedulepage_DPCScheduleHeader_1-Phy
   .schedulepage_InternationalDaySelector_bsIjw
@@ -29915,9 +29933,9 @@ a {
   .schedulepage_DayList_2wZOM
   .schedulepage_DayContainer_1adcC
   .schedulepage_DayNumber_1Jl04 {
-  font-size: 15px;
+  font-size: 18px;
   color: #fff;
-  font-family: "Reaver", serif;
+  font-family: "Radiance", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -29928,8 +29946,8 @@ a {
   .schedulepage_DayList_2wZOM
   .schedulepage_DayContainer_1adcC
   .schedulepage_DayOfWeek_2SKaX {
-  font-size: 12px;
-  color: #a7a7a7;
+  font-size: 10px;
+  color: #a2acb8;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -30236,31 +30254,28 @@ a {
   .schedulepage_Body_3vxUU
   .schedulepage_RightSection_1VXoP
   .schedulepage_MatchDetailsButton_3egRQ {
-  padding: 8px 30px;
-  background-color: #2e3339;
-  color: #9099a3;
-  font-size: 12px;
-  font-weight: 700;
+  padding: 8px 20px;
+  background-color: #5e6976;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  border-radius: 3px;
   cursor: pointer;
   user-select: none;
-  transition-property: background-color, color;
+  transition-property: all;
+  transition-duration: 0.13s;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
 }
 .schedulepage_DPCScheduleEntry_3y0l2
   .schedulepage_Body_3vxUU
   .schedulepage_RightSection_1VXoP
-  .schedulepage_MatchDetailsButton_3egRQ:hover,
-.schedulepage_DPCScheduleEntry_3y0l2
-  .schedulepage_Body_3vxUU
-  .schedulepage_RightSection_1VXoP
-  .schedulepage_MatchDetailsButton_3egRQ.schedulepage_Expanded_16zY4 {
-  color: #fff;
-  background-color: #41474e;
+  .schedulepage_MatchDetailsButton_3egRQ:hover {
+  background-color: #707e8f;
+  transform: translateY(-1px);
+  filter: drop-shadow(0px 3px 6px #00000085);
 }
 .schedulepage_DPCScheduleEntry_3y0l2 .schedulepage_Expansion_30W3U {
   width: 100%;
@@ -30405,37 +30420,27 @@ a {
 .schedulepage_DPCScheduleGameDetails_34rHh
   .schedulepage_RightSection_1VXoP
   .schedulepage_WatchVODButton_3BXoh {
-  padding: 8px 30px;
-  width: 60%;
+  padding: 10px 20px;
   background-color: #2e3339;
-  font-size: 12px;
-  color: #0f1113;
-  font-weight: 700;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  border-color: #2e3339;
-  border-radius: 3px;
+  cursor: pointer;
   user-select: none;
-  pointer-events: none;
-  transition-property: background-color, color;
+  transition-property: all;
+  transition-duration: 0.13s;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
 }
 .schedulepage_DPCScheduleGameDetails_34rHh
   .schedulepage_RightSection_1VXoP
-  .schedulepage_WatchVODButton_3BXoh.schedulepage_Enabled_1ES5B {
-  border: 1px solid #2e3339;
-  color: #9099a3;
-  cursor: pointer;
-  pointer-events: initial;
-}
-.schedulepage_DPCScheduleGameDetails_34rHh
-  .schedulepage_RightSection_1VXoP
-  .schedulepage_WatchVODButton_3BXoh.schedulepage_Enabled_1ES5B:hover {
-  color: #fff;
-  background-color: #41474e;
-  cursor: pointer;
+  .schedulepage_WatchVODButton_3BXoh:hover {
+  background-color: #3a3f44;
+  transform: translateY(-1px);
+  filter: drop-shadow(0px 3px 6px #00000085);
 }
 .schedulepage_DPCScheduleGameDetails_34rHh::after {
   width: calc(100% - 48px);
@@ -34885,6 +34890,7 @@ a {
   filter: drop-shadow(0px 0px 10px black);
 }
 .international2022_InternationalCountdownContainer_3ACB8 {
+  border-top: 2px solid #952e46;
   width: 100%;
   height: 100%;
   padding-top: 40px;
@@ -34900,8 +34906,6 @@ a {
   background-position-x: 50%;
   background-position-y: 60%;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/dpc/lcq_countdown_bg.jpg");
-  border-top: 2px solid #952e46;
-  border-bottom: 2px solid #952e46;
 }
 .international2022_InternationalCountdownContainer_3ACB8
   .international2022_InternationalCountdown_1RzSd {
@@ -35157,185 +35161,427 @@ a {
   letter-spacing: 2px;
   color: #a3a3a3;
 }
-.international2022_InternationalBPBanner_3FFCp {
+.international2022_TheInternational2022Plugs_1X7CB {
+  border-top: 2px solid #952e46;
+  padding: 80px 80px 80px 80px;
   width: 100%;
-  height: auto;
-  position: relative;
-  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
-  background-size: cover;
-  background-position: center top;
+  max-width: 2200px;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  display: block;
-}
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Sparkles_1lcVX {
-  position: absolute;
-  width: 100%;
-  animation-duration: 10s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-name: international2022_PortraitIn_2D8IA;
-}
-@keyframes international2022_PortraitIn_2D8IA {
-  0% {
-    transform: translateY(-10px);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateY(30px);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-10px);
-    opacity: 0.5;
-  }
-}
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc {
-  width: 100%;
-  height: auto;
-  background-color: #00000060;
-  overflow: visible;
-  background-position: center bottom;
+  justify-content: center;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react///dpc/ti11/plugs_bg.jpg");
   background-size: 100% auto;
-  background-repeat: no-repeat;
-  border-top: 2px solid #952e46;
+  background-position: 50% 50%;
+  background-repeat: repeat-y;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR {
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_PlugsSmallHead_2Qj06 {
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_PlugsHeader_1KI2q {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_PlugsDesc_AS8jU {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  text-align: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1280px;
-  height: auto;
-  margin: 0 auto;
-  overflow: visible;
+  justify-content: center;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_ImageContainer_1LmkZ {
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G {
   width: 50%;
-  overflow: visible;
-  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPOverline_3Vxr4 {
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPHeader_3ka4J {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPDetails_1E4dh {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 750px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_BPPlugBtn_28xhI {
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  margin-top: 40px;
+  display: inline-block;
+  text-shadow: none;
+  color: #fffbcd;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #ffa192;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugTextContainer_1Wg-G
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_BPPlugBtn_28xhI:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugImgContainer_3LiYw {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_BattlePassPlug__dqBQ
+  .international2022_BPPlugImgContainer_3LiYw
+  .international2022_BPPlugImg_3oPcF {
+  width: 100%;
+  height: 100%;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV {
+  margin: 60px 0px 60px 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugImgContainer_1orGW {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugImgContainer_1orGW
+  .international2022_StickersPlugImg_OaDTc {
+  width: 100%;
+  height: 100%;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugTextContainer_2A16A {
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
-  margin-left: 20%;
+  justify-content: center;
+  z-index: 2;
 }
-@media (max-width: 900px) {
-  .international2022_InternationalBPBanner_3FFCp
-    .international2022_Background_2zobc
-    .international2022_TI11BPContent_2zYPR
-    .international2022_ImageContainer_1LmkZ {
-    display: none;
-  }
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugTextContainer_2A16A
+  .international2022_BPPlugText_2Q6iJ {
+  width: 100%;
+  max-width: 700px;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_ImageContainer_1LmkZ
-  .international2022_StatueImage_3Bs1A {
-  width: 200%;
-  margin-top: 30px;
-  z-index: 10;
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugTextContainer_2A16A
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPOverline_3Vxr4 {
+  letter-spacing: 3px;
+  font-size: 20px;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs {
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugTextContainer_2A16A
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPHeader_3ka4J {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_StickersPlug_1w4GV
+  .international2022_StickersPlugTextContainer_2A16A
+  .international2022_BPPlugText_2Q6iJ
+  .international2022_TI11BPDetails_1E4dh {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 750px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_FantasyContainer_3NWvt {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_FantasyContainer_3NWvt
+  .international2022_PlugImg_WfH9N {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_FantasyContainer_3NWvt
+  .international2022_PlugText_1zbFs {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 10;
-  width: 50%;
-  padding: 0px 70px 0px 70px;
-  margin-left: -20%;
+  justify-content: center;
+  text-align: left;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_TI11BPOverline_3Vxr4 {
-  letter-spacing: 1px;
-  font-size: 20px;
-}
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_TI11BPHeader_3ka4J {
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_FantasyContainer_3NWvt
+  .international2022_PlugText_1zbFs
+  .international2022_TI11BPDetails_1E4dh {
   margin-top: 10px;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_Underline_4WHxx {
-  width: 300px;
-  height: 1px;
-  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
-  margin: 20px 0px;
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_SupportersClubContainer_YEYSQ {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_SupportersClubContainer_YEYSQ
+  .international2022_PlugImg_WfH9N {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_SupportersClubContainer_YEYSQ
+  .international2022_PlugText_1zbFs {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_SupportersClubContainer_YEYSQ
+  .international2022_PlugText_1zbFs
   .international2022_TI11BPDetails_1E4dh {
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_TI11BPDetails2_2YkwC {
-  margin-top: 20px;
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_PredictionsContainer_1vDZZ {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_LearnMoreButton_2kSGo {
-  border: 1px solid #bb9a4a;
-  border-radius: 3px;
-  padding: 10px 35px;
-  background-color: transparent;
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_PredictionsContainer_1vDZZ
+  .international2022_PlugImg_WfH9N {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_PredictionsContainer_1vDZZ
+  .international2022_PlugText_1zbFs {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.international2022_TheInternational2022Plugs_1X7CB
+  .international2022_FantasyPlug_RNqEj
+  .international2022_PlugContainers_2Jxuf
+  .international2022_PredictionsContainer_1vDZZ
+  .international2022_PlugText_1zbFs
+  .international2022_TI11BPDetails_1E4dh {
+  margin-top: 10px;
+}
+.international2022_InternationalTeamListTeam_3Ps_n {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px #000000aa;
+  border-radius: 10px;
+  border: 1.5px solid #e34b4b;
+  background-color: #e34b4b4e;
+}
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_TeamName_1wOTn {
+  padding-left: 12px;
+  padding-right: 12px;
   color: #fff;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition-property: color, border-color, background-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
-  cursor: pointer;
-  user-select: none;
+  text-align: center;
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_TI11BPContent_2zYPR
-  .international2022_TI11BPText_FVSAs
-  .international2022_LearnMoreButton_2kSGo:hover {
-  border-color: #e6c373;
-  color: #fff;
-  background-color: #ffffff1a;
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_LavaTeamLogo_15PKr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 10px #e1261c);
 }
-.international2022_InternationalBPBanner_3FFCp
-  .international2022_Background_2zobc
-  .international2022_Rewardline_37_bU {
-  width: 100%;
-  margin-top: 0px;
+.international2022_InternationalTeamListTeam_3Ps_n
+  .international2022_TeamRegion_3A3y_ {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 .international2022_InternationalTeamList_2a1qB {
   width: 100%;
-  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/grout_bg.jpg");
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti11/swirl_bg_02.jpg");
   padding-bottom: 100px;
   background-size: cover;
   display: flex;
@@ -35348,13 +35594,6 @@ a {
   margin-bottom: 40px;
 }
 .international2022_InternationalTeamList_2a1qB
-  .international2022_Underline_4WHxx {
-  width: 300px;
-  height: 2px;
-  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
-  margin-bottom: 40px;
-}
-.international2022_InternationalTeamList_2a1qB
   .international2022_TeamGrid_ZTq5g {
   width: 100%;
   max-width: 1280px;
@@ -35363,142 +35602,7 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-}
-.international2022_InternationalTeamListTeam_3Ps_n {
-  width: 180px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  box-shadow: 0px 0px 30px #000000aa;
-  border: 2px solid #000;
-  background-color: #00000090;
-}
-.international2022_InternationalTeamListTeam_3Ps_n
-  .international2022_GoldTeamLogo_1T0M_ {
-  width: 90px;
-  height: 90px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.international2022_InternationalTeamListTeam_3Ps_n
-  .international2022_TeamName_1wOTn {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
-  color: #fff;
-}
-.international2022_InternationalTeamListTeam_3Ps_n
-  .international2022_TeamRegion_3A3y_ {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #a3a3a3;
-}
-.international2022_Fantasy_2lbFd {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 1px;
-  border-top: 2px solid #952e46;
-  position: relative;
-}
-.international2022_FantasyImageContainer_3yec9 {
-  width: 45%;
-  height: 100%;
-}
-@media (max-width: 1200px) {
-  .international2022_FantasyImageContainer_3yec9 {
-    width: 100%;
-    height: 70%;
-  }
-}
-.international2022_FantasyImageContainer_3yec9 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.international2022_FantasyTextContainer_2xZdP {
-  width: 55%;
-  height: 100%;
-  padding: 0 10%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-@media (max-width: 1200px) {
-  .international2022_FantasyTextContainer_2xZdP {
-    width: 100%;
-    height: 30%;
-    padding: 3vw 10vw;
-  }
-}
-.international2022_FantasyTextContainerTitle_3n3lV {
-  margin-top: 10px;
-}
-.international2022_FantasyTextContainerDesc_vceNJ {
-  margin-top: 20px;
-}
-.international2022_SupportersClub_372J4 {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 1px;
-  border-top: 2px solid #952e46;
-  position: relative;
-}
-.international2022_SupportersClubImageContainer_1jEwH {
-  width: 45%;
-  height: 100%;
-}
-@media (max-width: 1200px) {
-  .international2022_SupportersClubImageContainer_1jEwH {
-    width: 100%;
-    height: 70%;
-  }
-}
-.international2022_SupportersClubImageContainer_1jEwH img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.international2022_SupportersClubTextContainer_3Yagn {
-  width: 55%;
-  height: 100%;
-  padding: 0 10%;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-@media (max-width: 1200px) {
-  .international2022_SupportersClubTextContainer_3Yagn {
-    width: 100%;
-    height: 30%;
-    padding: 3vw 10vw;
-  }
-}
-.international2022_SupportersClubTextContainerTitle_1vzmB {
-  margin-top: 10px;
-}
-.international2022_SupportersClubTextContainerDesc_2eOF- {
-  margin-top: 20px;
+  gap: 15px;
 }
 .nextmatchbanner_DPCNextMatchBanner_2UcZ1 {
   width: 100%;
@@ -53676,6 +53780,9 @@ html:not(.touch)
   display: flex;
   flex-direction: row;
 }
+.partnereventshared_FlexRowContainer_ObERh.partnereventshared_Centered_1ui9Q {
+  justify-content: center;
+}
 .partnereventshared_FlexContainSpaceBetween_2hZlk {
   justify-content: space-between;
   position: absolute;
@@ -54644,7 +54751,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_BetaContainer_Tn_YQ {
+  .newlogindialog_MessagingContainer_1Ss-O {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -54652,7 +54759,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_BetaTag_39Efe {
+  .newlogindialog_MessagingTag_YCGcS {
   color: #1999ff;
   font-weight: 500;
   font-size: 12px;
@@ -54663,7 +54770,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_BetaSubtitleWithQR_MzMZF {
+  .newlogindialog_MessagingSubtitleCtn_21Q4o {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -54671,13 +54778,13 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_PhoneIcon_1WeMU {
+  .newlogindialog_MessagingIcon_3Pfxq {
   width: 120px;
   fill: #afafaf;
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_BetaSubtitle_3hBsI {
+  .newlogindialog_MessagingSubtitle_36kpt {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -54686,7 +54793,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_JoinBetaButton_myLli {
+  .newlogindialog_MessagingButton_eCMTs {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   font-weight: 700;
@@ -54698,7 +54805,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_ShowQRLink_KvLRB {
+  .newlogindialog_MessagingLink_ZepVY {
   text-align: center;
   text-decoration-line: underline;
   font-weight: 400;
@@ -54711,17 +54818,12 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_1sORI
     .newlogindialog_QRSection_3yeMc
-    .newlogindialog_BetaContainer_Tn_YQ {
+    .newlogindialog_MessagingContainer_1Ss-O {
     align-items: center;
   }
   .newlogindialog_Login_1sORI
     .newlogindialog_QRSection_3yeMc
-    .newlogindialog_PhoneIcon_1WeMU {
-    display: none;
-  }
-  .newlogindialog_Login_1sORI
-    .newlogindialog_QRSection_3yeMc
-    .newlogindialog_BetaSubtitle_3hBsI {
+    .newlogindialog_MessagingSubtitle_36kpt {
     text-align: center;
   }
 }
@@ -54763,7 +54865,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   .newlogindialog_Login_1sORI
     .newlogindialog_QRSection_3yeMc
     .newlogindialog_QRCodeContainer_18JxK {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -54794,16 +54896,15 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_QRSection_3yeMc
-  .newlogindialog_ShowQR_3lBDy {
-  display: flex;
-  flex-direction: column;
-}
-.newlogindialog_Login_1sORI
-  .newlogindialog_QRSection_3yeMc
   .newlogindialog_UseMobileAppForQR_3s39E {
   text-align: center;
   font-size: 12px;
   color: #afafaf;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_QRSection_3yeMc
+  .newlogindialog_UseMobileAppForQR_3s39E
+  :not(.newlogindialog_InClient_2_z8K) {
   padding: 12px 0px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_TextField_2x9JJ {
@@ -54906,7 +55007,9 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 .newlogindialog_Login_1sORI .newlogindialog_SignInButtonContainer_QYZ5y button {
   width: 270px;
 }
-.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg {
+.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg,
+.newlogindialog_Login_1sORI .newlogindialog_OfferOfflineButton_1l7am,
+.newlogindialog_Login_1sORI .newlogindialog_TryAgainButton_3SalL {
   background: #3d4450;
   color: #fff;
   padding: 12px;
@@ -54915,15 +55018,21 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   font-family: inherit;
   text-align: center;
   letter-spacing: 0.03em;
-  width: 50%;
   border: none;
   border-radius: 2px;
 }
-.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg:hover {
+.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg:hover,
+.newlogindialog_Login_1sORI .newlogindialog_OfferOfflineButton_1l7am:hover,
+.newlogindialog_Login_1sORI .newlogindialog_TryAgainButton_3SalL:hover {
   background: #525b6a;
 }
-.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg:active {
+.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg:active,
+.newlogindialog_Login_1sORI .newlogindialog_OfferOfflineButton_1l7am:active,
+.newlogindialog_Login_1sORI .newlogindialog_TryAgainButton_3SalL:active {
   background: #2f343e;
+}
+.newlogindialog_Login_1sORI .newlogindialog_RefreshQuitButton_2jfZg {
+  width: 50%;
 }
 .newlogindialog_Login_1sORI .newlogindialog_SubmitButton_1fgOu {
   position: relative;
@@ -55373,11 +55482,6 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   color: #afafaf;
   font-size: 12px;
 }
-.newlogindialog_Login_1sORI
-  .newlogindialog_EmbeddedRoot_EKQN-
-  .newlogindialog_EmbeddedRootFooter_1t0uA:not(.newlogindialog_InClient_2_z8K) {
-  padding-top: 15px;
-}
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_1sORI
     .newlogindialog_EmbeddedRoot_EKQN-
@@ -55431,11 +55535,17 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   margin-bottom: 24px;
   text-align: center;
 }
+.newlogindialog_FailureButtons_710iC {
+  gap: 12px;
+}
 .newlogindialog_OfferOffline_3n4pJ {
   color: #fff;
   font-size: 16px;
-  margin-bottom: 24px;
   text-align: center;
+}
+.newlogindialog_OfferOfflineButton_1l7am.newlogindialog_OfferOfflineButton_1l7am,
+.newlogindialog_TryAgainButton_3SalL.newlogindialog_TryAgainButton_3SalL {
+  padding: 12px 24px;
 }
 .newlogindialog_LoadingSpinner_3w3PN {
   border-radius: 50%;
@@ -55515,6 +55625,17 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .IN_CLIENT .newlogindialog_MutedErrorReference_2vwQi {
   position: fixed;
+}
+.newlogindialog_WaitingForTokenContainer_5AnG1.newlogindialog_Client_1xvNu {
+  padding-top: 80px;
+}
+.newlogindialog_WaitingForTokenContainer_5AnG1
+  .newlogindialog_Description_3NQDK {
+  padding-top: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
 }
 .qrcode_QRBits_22VuG {
   display: grid;
