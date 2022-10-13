@@ -6774,7 +6774,10 @@
           } 100%)`;
         return a.createElement(
           "div",
-          { className: an.questionCtn, style: { background: m } },
+          {
+            className: (0, D.Z)(an.questionCtn, "questionCtn"),
+            style: { background: m },
+          },
           a.createElement(
             en.__,
             null,
