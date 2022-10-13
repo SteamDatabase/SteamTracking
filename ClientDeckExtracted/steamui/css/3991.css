@@ -8322,6 +8322,43 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
     opacity: 1;
   }
 }
+.actionbuttonlegenditem_ActionButtonLegend_Mbyhb {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.actionbuttonlegenditem_ActionButtonLegend_Mbyhb
+  .actionbuttonlegenditem_ActionButtonGlyph_3Jfd8 {
+  display: flex;
+  color: #0e141b;
+}
+.actionbuttonlegenditem_ActionButtonLegend_Mbyhb
+  .actionbuttonlegenditem_ActionButtonLabel_31Jnn {
+  margin-left: 8px;
+  display: flex;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #b8bcbf;
+}
+.actionbuttonlegenditem_FooterGlyphSize_223Oc {
+  width: auto;
+  height: 25px;
+}
 .lockscreen_Container_3rFFU {
   background: #0e141b;
   position: absolute;
@@ -14235,43 +14272,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   height: 100%;
   width: 100%;
   position: relative;
-}
-.actionbuttonlegenditem_ActionButtonLegend_Mbyhb {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-.actionbuttonlegenditem_ActionButtonLegend_Mbyhb
-  .actionbuttonlegenditem_ActionButtonGlyph_3Jfd8 {
-  display: flex;
-  color: #0e141b;
-}
-.actionbuttonlegenditem_ActionButtonLegend_Mbyhb
-  .actionbuttonlegenditem_ActionButtonLabel_31Jnn {
-  margin-left: 8px;
-  display: flex;
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #b8bcbf;
-}
-.actionbuttonlegenditem_FooterGlyphSize_223Oc {
-  width: auto;
-  height: 25px;
 }
 @keyframes virtualkeyboard_ItemFocusAnim-darkerGrey-nocolor_pL31G {
   from {
