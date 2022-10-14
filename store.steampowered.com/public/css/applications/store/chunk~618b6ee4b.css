@@ -5373,6 +5373,13 @@ html.responsive.touch
   box-shadow: 4px 4px 0px #0097c9;
   color: #0097c9;
 }
+.salesocialsharedisplay_DoorOptionsContainer_cP3hd > :first-child {
+  display: flex;
+  flex-direction: column;
+}
+.salesocialsharedisplay_DoorOption_2syb_ {
+  display: none;
+}
 :root {
   --basicui-header-height: 0px;
 }

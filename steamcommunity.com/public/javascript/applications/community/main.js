@@ -12096,6 +12096,7 @@
               m_bIsNotNumeric: !1,
               m_bIsInvalidURL: !1,
               m_bIsInvalidEmail: !1,
+              m_bAboveMaxChars: !1,
             });
         }
         componentDidUpdate(e) {
@@ -12143,6 +12144,9 @@
             m_bIsInvalidEmail:
               1 == this.props.mustBeEmail &&
               !q.validateEmail(this.m_elInput.value),
+            m_bAboveMaxChars:
+              null !== this.props.maxChars &&
+              this.m_elInput.value.length > this.props.maxChars,
           });
         }
         OnChanged(e) {
@@ -12351,6 +12355,18 @@
                         null,
                         " ",
                         (0, c.Xx)("#Input_Error_MustBeNumber"),
+                        " "
+                      )
+                    : null,
+                  this.state.m_bAboveMaxChars
+                    ? i.createElement(
+                        "div",
+                        null,
+                        " ",
+                        (0, c.kQ)(
+                          "#Input_Error_TooManyCharacters",
+                          this.props.maxChars
+                        ),
                         " "
                       )
                     : null

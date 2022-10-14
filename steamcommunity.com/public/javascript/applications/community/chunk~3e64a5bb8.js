@@ -567,8 +567,8 @@
         F = a(15396),
         L = a(95598),
         x = a(28268),
-        P = a(11539),
-        M = a(41311),
+        M = a(11539),
+        P = a(41311),
         O = a(47808),
         R = a(64839),
         H = (a(19663), a(3389)),
@@ -613,7 +613,7 @@
           i.createElement(
             "div",
             null,
-            (0, M.Xx)(
+            (0, P.Xx)(
               o.GetName().length > 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
                   0
@@ -632,7 +632,7 @@
               i.createElement(
                 "a",
                 { href: d, target: S.De.IN_CLIENT ? "" : "_blank" },
-                (0, M.Xx)("#SalePage_WatchForDrop_LearnMore")
+                (0, P.Xx)("#SalePage_WatchForDrop_LearnMore")
               )
           )
         );
@@ -1055,7 +1055,7 @@
                       !this.state.bExpanded &&
                         i.createElement("div", {
                           className: W().broadcast_settings_icon,
-                          "data-tooltip-text": (0, M.Xx)(
+                          "data-tooltip-text": (0, P.Xx)(
                             "#StoreBroadcast_Change_store_Broadcast_settings"
                           ),
                           onClick: () =>
@@ -1067,7 +1067,7 @@
                         className: this.state.bExpanded
                           ? W().bordered_corner_expanded
                           : W().bordered_corner_shrinked,
-                        "data-tooltip-text": (0, M.Xx)(
+                        "data-tooltip-text": (0, P.Xx)(
                           "#StoreBroadcast_Hide_Tooltip"
                         ),
                         onClick: this.ToggleBroadcastExpandShrink,
@@ -1162,7 +1162,7 @@
             "div",
             { className: W().wrapper },
             i.createElement(
-              P.h,
+              M.h,
               { onEnter: this.OnEnter, onLeave: this.OnLeave },
               i.createElement(
                 "div",
@@ -1225,7 +1225,7 @@
             i.createElement(
               "a",
               { href: e },
-              (0, M.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+              (0, P.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
             )
           );
         }
@@ -1234,7 +1234,7 @@
           return i.createElement(
             x.HP,
             {
-              toolTipContent: (0, M.Xx)("#BroadcastWatch_View_Broadcast_Page"),
+              toolTipContent: (0, P.Xx)("#BroadcastWatch_View_Broadcast_Page"),
             },
             i.createElement(
               "a",
@@ -1299,7 +1299,7 @@
                       className: W().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    (0, M.Xx)("#sale_three_section_show_streams")
+                    (0, P.Xx)("#sale_three_section_show_streams")
                   )
                 ),
               e &&
@@ -1314,7 +1314,7 @@
                       className: W().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    (0, M.Xx)(
+                    (0, P.Xx)(
                       t
                         ? "#sale_three_section_show_chat"
                         : "#sale_three_section_hide_chat"
@@ -1339,13 +1339,13 @@
                           (0, ie.RA)(e)
                         ),
                     },
-                    (0, M.Xx)("#Broadcast_ShareBroadcast")
+                    (0, P.Xx)("#Broadcast_ShareBroadcast")
                   )
                 ),
               i.createElement(
                 x.HP,
                 {
-                  toolTipContent: (0, M.Xx)(
+                  toolTipContent: (0, P.Xx)(
                     "#StoreBroadcast_Change_store_Broadcast_settings"
                   ),
                 },
@@ -1395,18 +1395,18 @@
             ? i.createElement(
                 h._,
                 { type: "app", id: a, className: W().PopOutVideoTitleText },
-                (0, M.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, P.Xx)("#StoreBroadcast_Detault_popout_Title")
               )
             : i.createElement(
                 "div",
                 { className: W().PopOutVideoTitleText },
-                (0, M.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, P.Xx)("#StoreBroadcast_Detault_popout_Title")
               ),
           i.createElement(
             "button",
             {
               className: W().PopOutVideoCloseButton,
-              "data-tooltip-text": (0, M.Xx)(
+              "data-tooltip-text": (0, P.Xx)(
                 "#StoreBroadcast_close_broadcast_popup"
               ),
               onClick: e.OnPreventPopup,
@@ -1603,6 +1603,7 @@
         kQm: () => s.kQ,
         Xxn: () => R.Xx,
         L7r: () => s.L7,
+        NWM: () => H.NW,
       });
       var n = a(54698),
         r = a(7200),
@@ -1637,8 +1638,8 @@
         F = a(95598),
         L = a(28268),
         x = a(72258),
-        P = a(77520),
-        M = a(7573),
+        M = a(77520),
+        P = a(7573),
         O = a(53622),
         R = a(41311),
         H = a(64839),
@@ -1800,7 +1801,7 @@
               p.createElement(
                 "div",
                 {
-                  className: (0, M.Z)(
+                  className: (0, P.Z)(
                     A().FlexRowContainer,
                     J().CuratorInfoTitleCtn
                   ),
@@ -1820,7 +1821,7 @@
             );
           return p.createElement(
             "div",
-            { className: (0, M.Z)(A().FlexRowWrapSpaceBetweenContainer, o) },
+            { className: (0, P.Z)(A().FlexRowWrapSpaceBetweenContainer, o) },
             t
               ? p.createElement(
                   N.S,
@@ -1842,7 +1843,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   A().FlexRowContainer,
                   J().CuratorInfoActionCtn
                 ),
@@ -1928,7 +1929,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   re().SpecialEvent,
                   t && re().SpecialEventOnPage,
                   a && re().SpecialEventActive
@@ -2173,7 +2174,7 @@
             },
             p.createElement(
               "div",
-              { className: (0, M.Z)(re().FilterOption, re().FilterEventType) },
+              { className: (0, P.Z)(re().FilterOption, re().FilterEventType) },
               p.createElement(G.ji, {
                 label: (0, R.Xx)("#EventCalendar_EventTypeGroup_" + e),
                 checked: t,
@@ -2202,7 +2203,7 @@
             },
             p.createElement(
               "div",
-              { className: (0, M.Z)(re().FilterOption, re().FilterGameSource) },
+              { className: (0, P.Z)(re().FilterOption, re().FilterGameSource) },
               p.createElement(G.ji, {
                 label: (0, R.Xx)("#EventCalendar_GameSource_" + e),
                 checked: a,
@@ -2447,7 +2448,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   re().SidebarContainer,
                   a && re().SidebarCollapsed
                 ),
@@ -2506,7 +2507,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(re().FilterLink, re().OpenFilterSettings),
+                className: (0, P.Z)(re().FilterLink, re().OpenFilterSettings),
                 onClick: () => e.fnOpenFilterSettings(!0),
               },
               p.createElement(F.Zrf, null),
@@ -2517,7 +2518,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(re().SidebarLink, re().ForceResponsiveLink),
+                className: (0, P.Z)(re().SidebarLink, re().ForceResponsiveLink),
                 onClick: n,
               },
               (0, R.Xx)("#EventCalendar_ShowResponsiveView")
@@ -2533,7 +2534,7 @@
               "curators" == e.corpus
                 ? (a = "group/" + e.id)
                 : "games" == e.corpus &&
-                  ((0, P.X)((0, n.mU)(e.type), "Unexpected app type " + e.type),
+                  ((0, M.X)((0, n.mU)(e.type), "Unexpected app type " + e.type),
                   (a = "app/" + e.id)),
               p.createElement(
                 T.rU,
@@ -2557,7 +2558,7 @@
       De = (0, l.gn)([d.Pi], De);
       function we(e, t) {
         const a = (0, y.W)(e);
-        if (((0, P.X)(!!a, "Must define collection " + e), !a)) return null;
+        if (((0, M.X)(!!a, "Must define collection " + e), !a)) return null;
         let n,
           r = (0, b.vY)().GetCollectionID() == e;
         switch (e) {
@@ -2642,7 +2643,7 @@
               p.createElement(
                 "div",
                 {
-                  className: (0, M.Z)(
+                  className: (0, P.Z)(
                     re().MobileNavButton,
                     r && re().MobileNavButtonActive
                   ),
@@ -2684,7 +2685,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   re().SettingsPanel,
                   e && re().SearchExpanded
                 ),
@@ -2703,7 +2704,7 @@
                 p.createElement(
                   "div",
                   {
-                    className: (0, M.Z)(
+                    className: (0, P.Z)(
                       re().SearchBox,
                       e && re().SearchExpanded
                     ),
@@ -2744,7 +2745,7 @@
               p.createElement(
                 "div",
                 {
-                  className: (0, M.Z)(
+                  className: (0, P.Z)(
                     re().NewsChannel,
                     l && re().NewsChannelOnPage,
                     i && A().ValveOnlyBackground
@@ -2752,7 +2753,7 @@
                 },
                 Boolean(c) &&
                   p.createElement("img", {
-                    className: (0, M.Z)(re().NewsChannelIcon),
+                    className: (0, P.Z)(re().NewsChannelIcon),
                     src: c,
                   }),
                 p.createElement(
@@ -2818,7 +2819,7 @@
             ? p.createElement(
                 "div",
                 {
-                  className: (0, M.Z)(
+                  className: (0, P.Z)(
                     re().NewsChannelGroup,
                     re().DiscoverGroup
                   ),
@@ -2838,9 +2839,9 @@
         }
       }
       var xe = a(80533),
-        Pe = (a(990), a(92663)),
-        Me = a(17170),
-        Oe = a.n(Me);
+        Me = (a(990), a(92663)),
+        Pe = a(17170),
+        Oe = a.n(Pe);
       const Re = {
         include_assets: !0,
         include_release: !0,
@@ -2855,7 +2856,7 @@
             } = e,
             s = "-500px",
             l = Oe()[`EventType${t.event_type}`],
-            o = (0, M.Z)(Oe().TileContainer, l),
+            o = (0, P.Z)(Oe().TileContainer, l),
             i = "carousel" === n;
           return p.createElement(
             xe.h,
@@ -2887,7 +2888,7 @@
               { className: o },
               p.createElement(
                 "div",
-                { className: (0, M.Z)(Oe().Tile, Oe().LoadingTile) },
+                { className: (0, P.Z)(Oe().Tile, Oe().LoadingTile) },
                 i && p.createElement(X.V, null)
               ),
               p.createElement("div", { className: Oe().Footer })
@@ -2912,7 +2913,7 @@
             o = (0, H.NW)();
           return s
             ? p.createElement(
-                Pe.V,
+                Me.V,
                 Object.assign({ eventModel: r, calendarEvent: a }, n)
               )
             : p.createElement(
@@ -3084,7 +3085,7 @@
         return p.createElement(
           "div",
           {
-            className: (0, M.Z)(
+            className: (0, P.Z)(
               $e().CommonHeaderStyles,
               $e().SimpleTitleHeaderCtn,
               e.largeHeader && $e().LargeHeader
@@ -3094,7 +3095,7 @@
           p.createElement(
             "div",
             {
-              className: (0, M.Z)(
+              className: (0, P.Z)(
                 $e().CollectionBannerGroup,
                 r ? $e().HeaderImg : $e().NoHeaderImg
               ),
@@ -3138,7 +3139,7 @@
       function tt(e) {
         const t = (0, y.W)(e);
         return (
-          (0, P.X)(!!t, "Must define collection " + e),
+          (0, M.X)(!!t, "Must define collection " + e),
           {
             collection: e,
             smallHeight: Number($e().simpleTitleSmallHeight),
@@ -3265,7 +3266,7 @@
             p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   ot().EventTileCarousel,
                   "EventTileCarouselCtn"
                 ),
@@ -3385,7 +3386,7 @@
         if (e && "none" != getComputedStyle(e).display) return e;
         const t = document.getElementsByClassName("responsive_header");
         if (
-          ((0, P.X)(t.length <= 1, "Must have at most one responsive_header"),
+          ((0, M.X)(t.length <= 1, "Must have at most one responsive_header"),
           1 == t.length)
         ) {
           return t[0];
@@ -3917,7 +3918,7 @@
                 p.createElement(
                   "div",
                   {
-                    className: (0, M.Z)(
+                    className: (0, P.Z)(
                       re().ReserveControlSpace,
                       !this.state.bControlBarIsCollapsed && re().WideLeftGutter
                     ),
@@ -4031,7 +4032,7 @@
             return r ? r.component(t, a, n) : null;
           })(n, e.bLargeMode, t, s);
           if (!l) return null;
-          const i = (0, M.Z)(re().HubBanner, Xe().WideBanner);
+          const i = (0, P.Z)(re().HubBanner, Xe().WideBanner);
           return p.createElement(
             "div",
             {
@@ -4059,7 +4060,7 @@
             });
           })(c, e.bLargeMode);
           if (!t) return null;
-          const a = (0, M.Z)(re().HubBanner, Xe().WideBanner);
+          const a = (0, P.Z)(re().HubBanner, Xe().WideBanner);
           return p.createElement(
             "div",
             {
@@ -4070,7 +4071,7 @@
           );
         }
         if (d) {
-          const t = (0, M.Z)(
+          const t = (0, P.Z)(
             re().HubBanner,
             Xe().WideBanner,
             e.bLargeMode && re().LargeMode,
@@ -4162,7 +4163,7 @@
                       nRenderedHeight: v,
                     } = e,
                     E = a < u,
-                    S = (0, M.Z)(re().PastSection, m && re().DarkerBackground);
+                    S = (0, P.Z)(re().PastSection, m && re().DarkerBackground);
                   v > 0 &&
                     ((m = !m),
                     void 0 !== _.nInlineOffset &&
@@ -4221,7 +4222,7 @@
                 {
                   key: "link-back",
                   toolTipContent: (0, R.Xx)("#EventCalendar_ResetFilters_ttip"),
-                  className: (0, M.Z)(re().BackToThePast, re().NoCount),
+                  className: (0, P.Z)(re().BackToThePast, re().NoCount),
                   onClick: s,
                 },
                 (0, R.Xx)("#EventCalendar_ResetFiltersButton")
@@ -4266,7 +4267,7 @@
                   "div",
                   {
                     key: "no-more-events",
-                    className: (0, M.Z)(re().EndOfRows, re().CalendarRow),
+                    className: (0, P.Z)(re().EndOfRows, re().CalendarRow),
                   },
                   p.createElement(
                     "div",
@@ -4344,7 +4345,7 @@
                 p.createElement(
                   "div",
                   {
-                    className: (0, M.Z)(
+                    className: (0, P.Z)(
                       re().HorizontalTileContainer,
                       "HorizontalTileCtn"
                     ),
@@ -4383,7 +4384,7 @@
           ? p.createElement(
               "div",
               { className: re().EventListTitle },
-              p.createElement(Pe.a, {
+              p.createElement(Me.a, {
                 eventModel: n,
                 calendarEvent: t,
                 bSuppressHoverEffects: a,
@@ -4574,7 +4575,7 @@
             (d = p.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, P.Z)(
                   re().GroupHeader,
                   re().CalendarRow,
                   e && re().HeaderAtTop
@@ -4662,7 +4663,7 @@
           p.createElement(
             "div",
             {
-              className: (0, M.Z)(
+              className: (0, P.Z)(
                 re().LogInFeedRow,
                 !e.bLargeMode && re().LogInSmallMode
               ),
@@ -6750,7 +6751,7 @@
           };
         if (b) return (0, u.Ij)(t, u.Ue.k_eCommunityAdminPage);
         const x = w == o.ac.k_EEventStateVisible,
-          P = w == o.ac.k_EEventStateStaged;
+          M = w == o.ac.k_EEventStateStaged;
         if ((F.can_edit || F.support_user) && !v.De.IN_GAMEPADUI) {
           const e = [];
           if (void 0 !== y)
@@ -6810,7 +6811,7 @@
                         className: (0, _.Z)(m.Button, E.AdminButton),
                       },
                       (0, g.Xx)(
-                        P
+                        M
                           ? "#EventEditor_Publish_VisibleNow"
                           : "#Button_Publish"
                       )
@@ -7157,8 +7158,8 @@
         F = a(64839),
         L = a(35092),
         x = a(90666),
-        P = a(69472),
-        M = a(59650),
+        M = a(69472),
+        P = a(59650),
         O = (a(72258), a(17170)),
         R = a.n(O),
         H = a(23937);
@@ -7166,9 +7167,9 @@
         OnMuteButton(e) {
           const { calendarEvent: t } = this.props;
           let a = t.GetEntityName();
-          (0, M.AM)(
+          (0, P.AM)(
             o.createElement(
-              P.uH,
+              M.uH,
               {
                 strTitle: (0, A.Xx)("#EventCalendar_MuteApp_Title", a),
                 strDescription: (0, A.Xx)("#EventCalendar_MuteApp_details", a),
@@ -7696,8 +7697,8 @@
             ),
             F = v && "carousel" !== n,
             L = a && 14 != e.GetEventType() && !F,
-            P = L && k,
-            M = !L && k,
+            M = L && k,
+            P = !L && k,
             O = "wide" !== n || a,
             V =
               28 !== e.type &&
@@ -7751,7 +7752,7 @@
                     o.createElement(
                       "div",
                       { className: R().EventTitleCtn },
-                      P,
+                      M,
                       !this.props.bHideGameTitle &&
                         o.createElement(
                           "div",
@@ -7794,7 +7795,7 @@
                     ),
                     !O && V
                   ),
-                  M
+                  P
                 )
               )
             ),
@@ -8121,7 +8122,7 @@
         PI: () => w,
         hj: () => B,
         j: () => H,
-        mR: () => M,
+        mR: () => P,
         ow: () => U,
       });
       var n = a(70655),
@@ -9437,7 +9438,7 @@
           return i.createElement(
             "div",
             { className: b.FacetedBrowseCtn },
-            P() &&
+            M() &&
               i.createElement(x, {
                 buttonColor: r,
                 bShowControls: l,
@@ -9448,7 +9449,7 @@
             i.createElement(
               "div",
               { className: b.FacetedBrowseInnerCtn },
-              l || !P()
+              l || !M()
                 ? i.createElement(
                     N,
                     Object.assign(
@@ -9507,8 +9508,8 @@
                 )
           );
         }),
-        P = () => window.innerWidth < parseInt(b.strWidescreenWidth),
-        M = (0, o.Pi)((e) => {
+        M = () => window.innerWidth < parseInt(b.strWidescreenWidth),
+        P = (0, o.Pi)((e) => {
           const { section: t } = e;
           return i.createElement(
             L,
@@ -9800,8 +9801,8 @@
         F = a(34948),
         L = a(30100),
         x = a(34133),
-        P = a.n(x),
-        M = a(58687),
+        M = a.n(x),
+        P = a(58687),
         O = a(85732),
         R = a(93612),
         H = a(87541),
@@ -9958,7 +9959,7 @@
                           i.createElement(
                             "a",
                             {
-                              className: (0, E.Z)(P().Button, "LinkButton"),
+                              className: (0, E.Z)(M().Button, "LinkButton"),
                               href: (0, q.OL)(t.GetSaleURL()),
                             },
                             (0, z.Xx)("#Event_Button_VisitSalePage")
@@ -9978,13 +9979,13 @@
                       i.createElement(
                         X.ns,
                         {
-                          className: (0, E.Z)(P().Button),
+                          className: (0, E.Z)(M().Button),
                           href: t.jsondata.read_more_link,
                         },
                         (0, z.Xx)("#EventEmail_Button_ClickForMoreDetails")
                       )
                     ),
-                  i.createElement("span", { className: P().Clear }),
+                  i.createElement("span", { className: M().Clear }),
                   i.createElement(
                     y.S,
                     null,
@@ -10066,7 +10067,7 @@
               className: (0, E.Z)(
                 A().EventDetailsPageContainer,
                 u,
-                P().PartnerEventFont,
+                M().PartnerEventFont,
                 d
                   ? A().DetailArtworkAgeAppropriate
                   : A().DetailArtworkAgeNotAppropriate,
@@ -10304,16 +10305,16 @@
               "div",
               {
                 className: (0, E.Z)(
-                  P().FlexColumnContainer,
-                  P().ValveOnlyBackground
+                  M().FlexColumnContainer,
+                  M().ValveOnlyBackground
                 ),
               },
               i.createElement(
                 "div",
                 {
                   className: (0, E.Z)(
-                    P().EventEditorTextTitle,
-                    P().ValveSupportOnly
+                    M().EventEditorTextTitle,
+                    M().ValveSupportOnly
                   ),
                 },
                 "Valve Support Tools (VO)"
@@ -10408,7 +10409,7 @@
                 "div",
                 { className: A().EditorStatsCtn },
                 (0, z.Xx)("#EventDashBoard_SummaryStats_Admin_Title"),
-                i.createElement(M.y, {
+                i.createElement(P.y, {
                   summary: a.m_stats,
                   bIsAllowedInLibrary: t,
                   bEventIsInModerationQueue: (0, u.Kt)(e),
@@ -10951,15 +10952,15 @@
             `${B.De.STORE_BASE_URL}${k}/${a.id}${o ? `?${o}` : ""}`,
             G
           );
-        let P,
-          M = null;
+        let M,
+          P = null;
         if (g && 0 == (null == T ? void 0 : T.GetStoreItemType()))
-          M = n.createElement(b.r, { appid: T.GetAppID(), bIsMuted: N });
+          P = n.createElement(b.r, { appid: T.GetAppID(), bIsMuted: N });
         else if (S);
         else {
           const e = F && r,
             t = L;
-          M = n.createElement(_.Hl, {
+          P = n.createElement(_.Hl, {
             info: a,
             bShowAsMuted: t,
             bHidePrice: f,
@@ -10970,7 +10971,7 @@
         }
         return (
           "overrideNavigation" in a &&
-            (P = (e) => (
+            (M = (e) => (
               a.overrideNavigation(),
               e.preventDefault(),
               e.stopPropagation(),
@@ -10979,10 +10980,10 @@
           n.createElement(
             s.IS,
             {
-              href: P ? null : x,
+              href: M ? null : x,
               style: { display: "block" },
               preferredFocus: h,
-              onClick: P,
+              onClick: M,
             },
             n.createElement(E.vs, { appids: A, hide_status_banners: l }),
             n.createElement(_.a4, { imageType: m, info: a }),
@@ -10994,7 +10995,7 @@
                   : t.steam_deck_compat_category,
             }),
             Boolean(N && !(0, p.Hu)()) && n.createElement(v.v, { appInfo: a }),
-            M
+            P
           )
         );
       }

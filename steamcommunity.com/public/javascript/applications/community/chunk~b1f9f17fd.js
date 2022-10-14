@@ -280,6 +280,13 @@
           "salesection_FacetedBrowseLoadThrobber_1hNUt",
       };
     },
+    49660: (e) => {
+      e.exports = {
+        DoorOptionsContainer:
+          "salesocialsharedisplay_DoorOptionsContainer_cP3hd",
+        DoorOption: "salesocialsharedisplay_DoorOption_2syb_",
+      };
+    },
     31066: (e) => {
       e.exports = {
         strMediumWidth: "800px",
@@ -2848,9 +2855,9 @@
         );
       }
     },
-    64042: (e, t, n) => {
+    10312: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => Xi, o: () => Fi });
+      n.d(t, { C: () => Yi, o: () => Qi });
       var a = n(67294),
         i = n(78587),
         r = n(26149),
@@ -11452,10 +11459,145 @@
           a.createElement("div", null, (0, k.Xx)("#Sale_SectionDisabled"))
         );
       }
-      var Si = n(38297),
+      var Si = n(49660),
         bi = n.n(Si),
-        yi = n(84038);
-      const Ci = (0, gt.Pi)((e) => {
+        yi = n(55285),
+        Ci = n.n(yi),
+        fi = n(56175),
+        Gi = n(78853);
+      function Di(e) {
+        const { bIsPreview: t, event: n, section: i, language: r } = e;
+        return i.social_share
+          ? a.createElement(
+              y.ZP,
+              { feature: "salesocialshare" },
+              a.createElement(
+                S.Y,
+                {
+                  placeholderHeight: "100vh",
+                  rootMargin: o.HG,
+                  className: (0, f.Z)(g.SaleSection, _().SaleSectionCtn),
+                  style: (0, p.V)(i, n),
+                },
+                a.createElement(
+                  "div",
+                  { className: bi().DoorOptionsContainer },
+                  i.social_share.content_options.map((e) =>
+                    a.createElement(Ti, {
+                      key: e.door,
+                      platforms: i.social_share.platforms,
+                      contentOption: e,
+                      bIsPreview: t,
+                      language: r,
+                      event: n,
+                    })
+                  )
+                )
+              )
+            )
+          : null;
+      }
+      function Ti(e) {
+        var t;
+        const {
+          platforms: n,
+          contentOption: i,
+          bIsPreview: r,
+          language: l,
+          event: o,
+        } = e;
+        if (!(0, vt._4)(i.door)) return null;
+        const s = k.LJ.GetELanguageFallback(l),
+          c =
+            (null === (t = i.localized_option_fields.localized_header) ||
+            void 0 === t
+              ? void 0
+              : t.length) > 0
+              ? i.localized_option_fields.localized_header[l] ||
+                i.localized_option_fields.localized_header[s] ||
+                ""
+              : void 0;
+        return a.createElement(
+          "div",
+          { className: bi().DoorOption },
+          c &&
+            a.createElement(et.d, {
+              text: c,
+              partnerEventStore: Ye.j1,
+              showErrorInfo: r,
+              event: o,
+              languageOverride: l,
+            }),
+          a.createElement(
+            "div",
+            { className: (0, f.Z)(Ot().FlexRowContainer, Ot().Centered) },
+            n.map((e) =>
+              e.checked
+                ? a.createElement(
+                    Ua.HP,
+                    {
+                      direction: "top",
+                      key: e.label,
+                      toolTipContent: (0, k.Xx)(Ii(e.label)),
+                    },
+                    a.createElement(
+                      ge.ns,
+                      { href: Ai(e.label, i.door), className: Ci().ShareBtn },
+                      a.createElement("img", {
+                        className: Ot().Button,
+                        src: wi(e.label),
+                      })
+                    )
+                  )
+                : null
+            )
+          )
+        );
+      }
+      function wi(e) {
+        switch (e) {
+          case l.zf.Facebook:
+            return fi.Z;
+          case l.zf.Twitter:
+            return Gi.Z;
+          default:
+            return "";
+        }
+      }
+      function Ii(e) {
+        switch (e) {
+          case l.zf.Facebook:
+            return "#EventDisplay_Share_OnFaceBook";
+          case l.zf.Twitter:
+            return "#EventDisplay_Share_OnTwitter";
+          default:
+            return "";
+        }
+      }
+      function Ai(e, t) {
+        const n = `${window.location}?shareOption=${t}`,
+          a = new URLSearchParams({});
+        switch (e) {
+          case l.zf.Facebook:
+            return (
+              a.append("u", n),
+              `http://www.facebook.com/sharer.php?${a.toString()}`
+            );
+          case l.zf.Twitter:
+            return (
+              a.append("url", n),
+              a.append("via", "steam"),
+              a.append("hashtags", "gaming_news"),
+              `https://twitter.com/intent/tweet/?${a.toString()}`
+            );
+          default:
+            return "";
+        }
+      }
+      var Bi = n(38297),
+        ki = n.n(Bi),
+        xi = n(84038);
+      const Ni = (0, gt.Pi)((e) => {
         const {
             section: t,
             fnGetCapsules: n,
@@ -11525,7 +11667,7 @@
               )
             );
       });
-      class fi {
+      class Mi {
         constructor(e) {
           (this.m_nMaxTiers = 0),
             (this.m_nDefaultTier = 0),
@@ -11561,10 +11703,10 @@
           for (const t of n) (0, Nt.LQ)(t), e.push(...t);
         }
       }
-      function Gi(e, t) {
-        new fi(e).RandomizeCapsules(t);
+      function Ri(e, t) {
+        new Mi(e).RandomizeCapsules(t);
       }
-      function Di(e, t, n, a, i, r, l) {
+      function Li(e, t, n, a, i, r, l) {
         if (t.use_random_order && r.length > 1) {
           const o = si(
             e,
@@ -11600,7 +11742,7 @@
         }
         return r;
       }
-      function Ti(e, t, n, a) {
+      function Oi(e, t, n, a) {
         var i;
         if (t.use_random_order) {
           const r = si(e, t, n, "section");
@@ -11611,7 +11753,7 @@
               if (t.rtime32_last_modified == e.rtime32_last_modified) return t;
             }
             a ||
-              (Gi(e, t.capsules),
+              (Ri(e, t.capsules),
               (0, Nt.LQ)(t.links),
               (0, Nt.LQ)(
                 null === (i = t.events) || void 0 === i
@@ -11625,22 +11767,22 @@
         }
         return t;
       }
-      function wi(e, t, n) {
+      function Pi(e, t, n) {
         if (null == e || null == t) return null;
         let a = e + "_" + t;
         return n && (a += "_" + n), a;
       }
-      class Ii {
+      class Fi {
         constructor() {
           (this.m_rgRecentEvent = new Map()), (this.m_mapPromises = new Map());
         }
         static Get() {
           return (
-            Ii.s_Singleton ||
-              ((Ii.s_Singleton = new Ii()),
+            Fi.s_Singleton ||
+              ((Fi.s_Singleton = new Fi()),
               "dev" == G.De.WEB_UNIVERSE &&
-                (window.g_EventListSaleStore = Ii.s_Singleton)),
-            Ii.s_Singleton
+                (window.g_EventListSaleStore = Fi.s_Singleton)),
+            Fi.s_Singleton
           );
         }
         Init(e, t) {
@@ -11694,7 +11836,7 @@
         GetRecentEventsForSalesPage(e, t, n) {
           var a, i, r;
           return (0, D.mG)(this, void 0, void 0, function* () {
-            const l = wi(
+            const l = Pi(
               "recent_events",
               null == t ? void 0 : t.unique_id,
               null == n ? void 0 : n.unique_id
@@ -11744,7 +11886,7 @@
         }
         GetRecentTaggedEventsForSalesPage(e, t, n) {
           return (0, D.mG)(this, void 0, void 0, function* () {
-            const a = wi(
+            const a = Pi(
               "recent_tagged_events",
               null == t ? void 0 : t.unique_id,
               null == n ? void 0 : n.unique_id
@@ -11822,7 +11964,7 @@
           });
         }
         GetLiveSaleEvents(e, t, n) {
-          const a = wi(
+          const a = Pi(
             "live_sale_events",
             null == t ? void 0 : t.unique_id,
             null == n ? void 0 : n.unique_id
@@ -11885,21 +12027,21 @@
           }
         }
       }
-      (0, D.gn)([ht.LO], Ii.prototype, "m_rgRecentEvent", void 0),
-        (0, D.gn)([ht.aD], Ii.prototype, "Init", null),
-        (0, D.gn)([ht.aD], Ii.prototype, "AddAllRecentEvents", null);
-      var Ai = n(38045);
-      class Bi {
+      (0, D.gn)([ht.LO], Fi.prototype, "m_rgRecentEvent", void 0),
+        (0, D.gn)([ht.aD], Fi.prototype, "Init", null),
+        (0, D.gn)([ht.aD], Fi.prototype, "AddAllRecentEvents", null);
+      var Xi = n(38045);
+      class Ui {
         constructor() {
           this.m_mapMasterAppToBenefitApps = new Map();
         }
         static Get() {
           return (
-            Bi.s_SubscriptStore ||
-              ((Bi.s_SubscriptStore = new Bi()),
-              Bi.s_SubscriptStore.Init(),
-              (window.g_SubscriptionStore = Bi.s_SubscriptStore)),
-            Bi.s_SubscriptStore
+            Ui.s_SubscriptStore ||
+              ((Ui.s_SubscriptStore = new Ui()),
+              Ui.s_SubscriptStore.Init(),
+              (window.g_SubscriptionStore = Ui.s_SubscriptStore)),
+            Ui.s_SubscriptStore
           );
         }
         Init() {
@@ -11962,10 +12104,10 @@
           });
         }
       }
-      function ki(e, t) {
+      function ji(e, t) {
         return e ? t.filter((t) => e.ShouldShowOnTab(t)) : t;
       }
-      function xi(e, t, n, a, i, r, o) {
+      function Hi(e, t, n, a, i, r, o) {
         var s;
         return (0, D.mG)(this, void 0, void 0, function* () {
           const {
@@ -11978,7 +12120,7 @@
             p = d || 24;
           if ("tag" === c) {
             return {
-              capsules: ki(
+              capsules: ji(
                 t,
                 (yield j
                   .Get()
@@ -11994,7 +12136,7 @@
           }
           if ("category" === c) {
             return {
-              capsules: ki(
+              capsules: ji(
                 t,
                 (yield j
                   .Get()
@@ -12010,7 +12152,7 @@
           }
           if ("top_n" === c) {
             return {
-              capsules: ki(t, yield j.Get().GetTopN(i, p)).map((e) => ({
+              capsules: ji(t, yield j.Get().GetTopN(i, p)).map((e) => ({
                 id: e,
                 type: "game",
               })),
@@ -12029,7 +12171,7 @@
                   : s.store_filter
               );
             return {
-              capsules: ki(t, e.rgAppIDs).map((e) => ({ id: e, type: "game" })),
+              capsules: ji(t, e.rgAppIDs).map((e) => ({ id: e, type: "game" })),
               bMoreRemaining: !1,
               facetCounts: e.rgSolrFacetCounts,
               nMatchCount: e.nMatchCount,
@@ -12054,7 +12196,7 @@
               return (
                 (i = n.BUsesContentHubForItemSource()
                   ? d.appids
-                  : ki(t, d.appids)),
+                  : ji(t, d.appids)),
                 {
                   capsules: i.map((e) => ({ id: e, type: "game" })),
                   bMoreRemaining: d.bHasPossibleMoreResults,
@@ -12115,7 +12257,7 @@
                   "wishlist" === c
                     ? P.jg.Get().GetWishlistGamesInUserOrder()
                     : P.jg.Get().GetRecommendedGamesInIRPriorityOrder(),
-                s = ki(t, r);
+                s = ji(t, r);
               for (const t of s)
                 if (
                   e.has(t) &&
@@ -12180,7 +12322,7 @@
                 case "ir_subscription":
                   i = "game";
                   const l = 402931,
-                    s = Bi.Get();
+                    s = Ui.Get();
                   yield s.LoadSubscriptionInfo(l);
                   const c = s.GetAllAppForMaster(l);
                   r = Array.from(c).filter((e) =>
@@ -12190,11 +12332,11 @@
                 case "deck_compatibility":
                   i = "game";
                   const d = a.smart_section_data_source || "library";
-                  yield Ai.U.Get().LoadCompatabilityAppList(d);
+                  yield Xi.U.Get().LoadCompatabilityAppList(d);
                   const m =
                     "library" == d
-                      ? Ai.U.Get().GetUserLibraryCompatList()
-                      : Ai.U.Get().GetUserWishlistCompatList();
+                      ? Xi.U.Get().GetUserLibraryCompatList()
+                      : Xi.U.Get().GetUserWishlistCompatList();
                   let u = a.smart_section_deck_compatibility;
                   switch (((null != u && null != u) || (u = 3), u)) {
                     case 3:
@@ -12218,7 +12360,7 @@
                   }
               }
               return (
-                (r = ki(t, r)),
+                (r = ji(t, r)),
                 {
                   capsules: r.slice(0, p).map((e) => ({ id: e, type: i })),
                   bMoreRemaining: !1,
@@ -12232,7 +12374,7 @@
           );
         });
       }
-      function Ni(
+      function Vi(
         e,
         t,
         n,
@@ -12253,7 +12395,7 @@
         y = null
       ) {
         return (0, D.mG)(this, void 0, void 0, function* () {
-          const C = Ti(e, t, n);
+          const C = Oi(e, t, n);
           if (
             (C.enable_faceted_browsing && r.SetFromURLParam(y),
             C.enable_faceted_browsing && b)
@@ -12272,7 +12414,7 @@
             yield P.jg.Get().HintLoad();
             let _ = !1;
             if (C.smart_section) {
-              const t = yield xi(
+              const t = yield Hi(
                 n,
                 a,
                 e,
@@ -12286,11 +12428,11 @@
               (u = t.capsules),
                 (_ = t.bMoreRemaining && u.length < C.smart_section_max_apps),
                 C.enable_faceted_browsing ||
-                  (u = Di(e, C, n, a, "capsules", u, Gi)),
+                  (u = Li(e, C, n, a, "capsules", u, Ri)),
                 C.enable_faceted_browsing &&
                   (r.SetFacetCounts(t.facetCounts),
                   r.SetSolrMatchCount(t.nMatchCount));
-            } else (u = C.capsules), (u = Di(e, C, n, a, "capsules", u, Gi));
+            } else (u = C.capsules), (u = Li(e, C, n, a, "capsules", u, Ri));
             e.BUsesContentHubForItemSource() ||
               (u = u.filter((e) => a.ShouldShowCapsule(e))),
               (u = (0, U.K)(u, i)),
@@ -12374,19 +12516,19 @@
             if (C.smart_section) {
               let n = [];
               "recent_events" === C.smart_section_type
-                ? (n = yield Ii.Get().GetRecentEventsForSalesPage(
+                ? (n = yield Fi.Get().GetRecentEventsForSalesPage(
                     e,
                     C,
                     null == a ? void 0 : a.GetTab()
                   ))
                 : "recent_tagged_events" === C.smart_section_type
-                ? (n = yield Ii.Get().GetRecentTaggedEventsForSalesPage(
+                ? (n = yield Fi.Get().GetRecentTaggedEventsForSalesPage(
                     e,
                     C,
                     null == a ? void 0 : a.GetTab()
                   ))
                 : "sale_events_only" === C.smart_section_type
-                ? (n = yield Ii.Get().GetLiveSaleEvents(
+                ? (n = yield Fi.Get().GetLiveSaleEvents(
                     e,
                     C,
                     null == a ? void 0 : a.GetTab()
@@ -12410,7 +12552,7 @@
                     .map((e) => e.announcement_gid)
                 );
             let i = t.map((e) => e.GID);
-            (i = Di(e, C, n, a, "events2", i, (e, t) => (0, Nt.LQ)(t))),
+            (i = Li(e, C, n, a, "events2", i, (e, t) => (0, Nt.LQ)(t))),
               (t = i.map((e) => Ye.j1.GetClanEventModel(e)));
             let r = t.filter(
               (t) =>
@@ -12451,13 +12593,13 @@
                 localized_link_capsule: void 0,
                 materialized_link_capsule: e.square,
               }))),
-                (t = Di(e, C, n, a, "links", t, (e, t) => (0, Nt.LQ)(t)));
+                (t = Li(e, C, n, a, "links", t, (e, t) => (0, Nt.LQ)(t)));
             }
             _(t), g(!0);
           }
         });
       }
-      function Mi(e, t, n) {
+      function zi(e, t, n) {
         const [i] = (0, a.useState)(
             (function (e, t, n) {
               if (t.enable_faceted_browsing) {
@@ -12478,7 +12620,7 @@
           i
         );
       }
-      function Ri(e) {
+      function Wi(e) {
         var t;
         const {
             event: n,
@@ -12497,7 +12639,7 @@
           [B, x] = (0, a.useState)([]),
           [N, M] = (0, a.useState)(void 0),
           [R, L] = (0, a.useState)([]),
-          O = Mi(n, e.section, r),
+          O = zi(n, e.section, r),
           { nMaxCapsulesPerRow: P, bScreenIsWide: X } = (0, o.zs)(
             e.section.section_type
           );
@@ -12524,7 +12666,7 @@
         const U = (0, We.ks)(e.history, "facets" + e.section.unique_id);
         (0, a.useEffect)(() => {
           const t = e.section.enable_faceted_browsing && !m;
-          Ni(n, e.section, l, s, c, O, d, i, A, x, L, M, G, u, w, g, t, U);
+          Vi(n, e.section, l, s, c, O, d, i, A, x, L, M, G, u, w, g, t, U);
         }, [
           s,
           i,
@@ -12565,7 +12707,7 @@
                   ) + 1;
               le._.Get().AddInteraction(V.unique_id, t), h(e);
             }),
-          V = Ti(n, e.section, l, !0),
+          V = Oi(n, e.section, l, !0),
           z = (0, p.V)(V, n).background;
         let Z = null;
         if (m) {
@@ -12595,7 +12737,7 @@
                 "div",
                 {
                   className: (0, f.Z)(
-                    bi().ShowContentsContainer,
+                    ki().ShowContentsContainer,
                     "ShowContentsContainer"
                   ),
                 },
@@ -12610,7 +12752,7 @@
                         {
                           onClick: j,
                           className: (0, f.Z)(
-                            bi().ShowContentsButton,
+                            ki().ShowContentsButton,
                             "ShowContentsButton"
                           ),
                         },
@@ -12641,7 +12783,7 @@
           Z = V.enable_faceted_browsing
             ? a.createElement(
                 "div",
-                { className: bi().FacetedBrowseLoadThrobber },
+                { className: ki().FacetedBrowseLoadThrobber },
                 a.createElement(C.V, null)
               )
             : a.createElement(J, {
@@ -12696,7 +12838,7 @@
           y.ZP,
           { feature: q, depth: Q },
           Boolean(V.dynamic_reveal && l) &&
-            a.createElement(Ci, {
+            a.createElement(Ni, {
               section: V,
               fnGetCapsules: () => B,
               fnSetCapsules: x,
@@ -12766,21 +12908,21 @@
                   Z
                 )
               : a.createElement(a.Fragment, null, Z),
-            a.createElement(yi.r, { section: V })
+            a.createElement(xi.r, { section: V })
           )
         );
       }
-      (0, D.gn)([ht.LO], Bi.prototype, "m_mapMasterAppToBenefitApps", void 0);
-      var Li = n(50166),
-        Oi = n.n(Li);
-      function Pi(e) {
+      (0, D.gn)([ht.LO], Ui.prototype, "m_mapMasterAppToBenefitApps", void 0);
+      var Zi = n(50166),
+        qi = n.n(Zi);
+      function Ji(e) {
         const { event: t, language: n, url: i } = e;
         return a.createElement("div", {
-          className: Oi().SaleBackgroundOverlay,
+          className: qi().SaleBackgroundOverlay,
           style: { backgroundImage: `url('${i}')` },
         });
       }
-      function Fi(e) {
+      function Qi(e) {
         const {
             promotionName: t,
             eventModel: n,
@@ -12869,7 +13011,7 @@
               a.createElement(
                 qe.M2,
                 { event: n, language: r, bIsPreview: i },
-                _ && a.createElement(Pi, { event: n, language: r, url: g }),
+                _ && a.createElement(Ji, { event: n, language: r, url: g }),
                 a.createElement(
                   "div",
                   {
@@ -12885,7 +13027,7 @@
                     event: n,
                     broadcastEmbedContext: e,
                   }),
-                  a.createElement(Ui, {
+                  a.createElement(Ki, {
                     bIsPreview: i,
                     event: n,
                     language: r,
@@ -12915,7 +13057,7 @@
           })
         );
       }
-      function Xi(e) {
+      function Yi(e) {
         var t;
         const { event: n, section: i, activeTab: r, language: l } = e;
         switch (i.section_type) {
@@ -12923,7 +13065,7 @@
           case "events":
           case "sale_events":
           case "links":
-            return a.createElement(Ri, Object.assign({}, e));
+            return a.createElement(Wi, Object.assign({}, e));
           case "itemdef":
             return a.createElement(ct.R, Object.assign({}, e));
           case "broadcast":
@@ -13134,12 +13276,14 @@
             return a.createElement(ba, Object.assign({}, e));
           case "rewards":
             return a.createElement(Aa.C, Object.assign({}, e));
+          case "social_share":
+            return a.createElement(Di, Object.assign({}, e));
           case "unselected_empty":
             return null;
         }
         return null;
       }
-      const Ui = (0, i.EN)(function (e) {
+      const Ki = (0, i.EN)(function (e) {
         const { event: t, language: n, nSaleDayIndex: r } = e,
           [l, c] = a.useState((0, o._)()),
           d = a.useMemo(() => new ga(), []),
@@ -13226,7 +13370,7 @@
               h.push({ activeTab: e, elements: [] });
             }
             E = a.createElement(
-              Xi,
+              Yi,
               Object.assign({}, e, {
                 section: i,
                 activeTab: t,
@@ -29039,7 +29183,7 @@
         );
       };
       var ca = n(82097),
-        da = n(74226),
+        da = n(52833),
         ma = n(28981),
         ua = n(73285),
         _a = n(50489),
@@ -31310,7 +31454,7 @@
         g = n.n(p),
         E = n(60972),
         v = n.n(E),
-        h = n(64042),
+        h = n(10312),
         S = n(41311),
         b = n(69697),
         y = n.n(b),

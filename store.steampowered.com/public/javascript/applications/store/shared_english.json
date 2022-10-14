@@ -61,6 +61,7 @@
     "Input_Error_MustBeURL": "Field is not a valid URL.",
     "Input_Error_MustBeEmail": "Field is not a valid Email.",
     "Input_Error_MustBeNumber": "Field must be a number.",
+    "Input_Error_TooManyCharacters": "Field excedes maximum characters ( %1$s ).",
     "Loading": "Loading...",
     "Updating": "Updating...",
     "Uploading": "Uploading...",

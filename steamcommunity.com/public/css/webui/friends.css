@@ -7473,6 +7473,9 @@ span.suggestdialog_mentionSearchMatch_XUU81 {
   display: flex;
   flex-direction: row;
 }
+.partnereventshared_FlexRowContainer_2BJlp.partnereventshared_Centered_e-I-o {
+  justify-content: center;
+}
 .partnereventshared_FlexContainSpaceBetween_G6HRE {
   justify-content: space-between;
   position: absolute;

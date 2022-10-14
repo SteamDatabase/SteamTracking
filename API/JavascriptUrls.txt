@@ -1620,6 +1620,7 @@ https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners
 https://confluence.valve.org/display/etc...
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
+https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/

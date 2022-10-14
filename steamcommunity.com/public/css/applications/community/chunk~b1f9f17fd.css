@@ -1673,18 +1673,6 @@ html.responsive.touch
     padding-right: 1em;
   }
 }
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu {
-  margin-bottom: 10px;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > div {
-  display: inline;
-}
-.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > span {
-  display: block;
-}
-.eventmoderationaudit_ExpandModActions_2alYM {
-  cursor: pointer;
-}
 .salequiz_description_5YDkS {
   padding-left: 5em;
   padding-right: 5em;
@@ -1777,57 +1765,17 @@ html.responsive.touch
     padding-right: 0em;
   }
 }
-.tabbar_GraphicalAssetsTabs_36r8g {
-  display: flex;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #67c1f5;
-  align-items: flex-end;
-  text-align: center;
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu {
+  margin-bottom: 10px;
 }
-.tabbar_GraphicalAssetsTab_K1_Tp {
-  margin: 0 16px;
-  padding: 4px 12px;
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > div {
+  display: inline;
+}
+.eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu > span {
+  display: block;
+}
+.eventmoderationaudit_ExpandModActions_2alYM {
   cursor: pointer;
-  border-bottom: 4px solid transparent;
-  transition: all 0.25s;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #fff;
-  text-transform: uppercase;
-}
-html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
-  font-size: 12px;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_K1_Tp {
-    font-size: 12px;
-  }
-}
-.tabbar_GraphicalAssetsTab_K1_Tp:first-child {
-  margin-left: 0;
-}
-.tabbar_GraphicalAssetsTab_K1_Tp.tabbar_Active_37f6M,
-.tabbar_GraphicalAssetsTab_K1_Tp:hover {
-  border-bottom-color: #67c1f5;
-  cursor: default;
-  cursor: pointer;
-}
-.tabbar_GraphicalAssetStatus_ojMj8 {
-  text-transform: uppercase;
-  font-size: 9px;
-}
-.tabbar_VOWarning_21XR- {
-  font-size: 9px;
-  color: #b22222;
-}
-.tabbar_StatusSuccess_1HWSe {
-  color: #a4d007;
-}
-.tabbar_StatusDanger_2jgbN {
-  color: #e24044;
-}
-.tabbar_StatusCaution_31Lxu {
-  color: #e76e34;
 }
 .salesectioneventschedule_SaleSchedCtn_3yzeu {
   height: 480px;
@@ -2334,6 +2282,166 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #fff;
   margin-bottom: 32px;
 }
+.tabbar_GraphicalAssetsTabs_36r8g {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #67c1f5;
+  align-items: flex-end;
+  text-align: center;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp {
+  margin: 0 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+  transition: all 0.25s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
+  font-size: 12px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_K1_Tp {
+    font-size: 12px;
+  }
+}
+.tabbar_GraphicalAssetsTab_K1_Tp:first-child {
+  margin-left: 0;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp.tabbar_Active_37f6M,
+.tabbar_GraphicalAssetsTab_K1_Tp:hover {
+  border-bottom-color: #67c1f5;
+  cursor: default;
+  cursor: pointer;
+}
+.tabbar_GraphicalAssetStatus_ojMj8 {
+  text-transform: uppercase;
+  font-size: 9px;
+}
+.tabbar_VOWarning_21XR- {
+  font-size: 9px;
+  color: #b22222;
+}
+.tabbar_StatusSuccess_1HWSe {
+  color: #a4d007;
+}
+.tabbar_StatusDanger_2jgbN {
+  color: #e24044;
+}
+.tabbar_StatusCaution_31Lxu {
+  color: #e76e34;
+}
+.salesectionsubscription_MainBlock_2xkU3 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+.salesectionsubscription_SelectAPlan_1_1rg {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 10px;
+}
+.salesectionsubscription_SubscriptionListBlock_3uiYO {
+  display: flex;
+  flex-direction: row;
+}
+.salesectionsubscription_SubscriptionListBlock_3uiYO
+  .salesectionsubscription_SubscriptionBlock_3CBOd {
+  display: flex;
+  flex-flow: column;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(
+    -35deg,
+    rgba(255, 255, 255, 0.1) 5%,
+    rgba(255, 255, 255, 0.2) 78.58%
+  );
+  margin: 10px;
+}
+@media screen and (max-width: 650px) {
+  .salesectionsubscription_SubscriptionListBlock_3uiYO {
+    flex-direction: column;
+  }
+  .salesectionsubscription_SubscriptionListBlock_3uiYO
+    .salesectionsubscription_SubscriptionBlock_3CBOd {
+    width: unset;
+  }
+}
+.salesectionsubscription_LogoImg_35tYH {
+  width: 160px;
+  height: 49px;
+  margin-bottom: 10px;
+}
+.salesectionsubscription_LogoImg_35tYH img {
+  width: 160px;
+  height: 50px;
+}
+.salesectionsubscription_PriceBlock_3Zsq8 {
+  display: flex;
+  flex-direction: row;
+}
+.salesectionsubscription_PriceDisplay_3Ri16 {
+  color: #fff;
+  font-size: 22px;
+}
+.salesectionsubscription_PriceDisplay_3Ri16.salesectionsubscription_LimitedDiscount_bLDez {
+  color: #c0f500;
+}
+.salesectionsubscription_SavingsDisplay_Fm8U- {
+  margin-left: 10px;
+  color: #c0f500;
+  font-size: 22px;
+}
+.salesectionsubscription_BodyTextBlock_1Q6Ei {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  flex-grow: 1;
+  font-size: 17px;
+  font-weight: 200;
+  white-space: pre-line;
+}
+.salesectionsubscription_ExpirationTextBlock_r6Ezf {
+  margin-top: 2px;
+  color: #fff;
+  flex-grow: 1;
+  font-size: 12px;
+  font-weight: 200;
+}
+.salesectionsubscription_PurchaseButton_2ZO-4 {
+  color: #fff;
+  width: 280px;
+  height: 35px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 13px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.salesectionsubscription_PurchaseButton_2ZO-4:hover {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.salesectionsubscription_AlreadyOwnedPackage_31QUZ {
+  background-color: #676285;
+}
+.salesectionsubscription_AlreadyOwnedApp_2vxOX {
+  background-color: #676285;
+}
+.salesectionsubscription_UnOwned_1DMzI {
+  background-color: #2682d7;
+}
+.salesectionsubscription_UnOwned_1DMzI:hover {
+  cursor: pointer;
+  background-color: #3692f7;
+}
+.salesectionsubscription_DiscountPriceBlock_2wQcn {
+  display: inline-block;
+}
 :root {
   --basicui-header-height: 0px;
 }
@@ -2581,249 +2689,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     width: 100%;
     margin-top: 10px;
   }
-}
-.salesectionsubscription_MainBlock_2xkU3 {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 940px;
-}
-.salesectionsubscription_SelectAPlan_1_1rg {
-  color: #fff;
-  text-transform: uppercase;
-  margin: 10px;
-}
-.salesectionsubscription_SubscriptionListBlock_3uiYO {
-  display: flex;
-  flex-direction: row;
-}
-.salesectionsubscription_SubscriptionListBlock_3uiYO
-  .salesectionsubscription_SubscriptionBlock_3CBOd {
-  display: flex;
-  flex-flow: column;
-  width: calc(50% - 20px);
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-image: linear-gradient(
-    -35deg,
-    rgba(255, 255, 255, 0.1) 5%,
-    rgba(255, 255, 255, 0.2) 78.58%
-  );
-  margin: 10px;
-}
-@media screen and (max-width: 650px) {
-  .salesectionsubscription_SubscriptionListBlock_3uiYO {
-    flex-direction: column;
-  }
-  .salesectionsubscription_SubscriptionListBlock_3uiYO
-    .salesectionsubscription_SubscriptionBlock_3CBOd {
-    width: unset;
-  }
-}
-.salesectionsubscription_LogoImg_35tYH {
-  width: 160px;
-  height: 49px;
-  margin-bottom: 10px;
-}
-.salesectionsubscription_LogoImg_35tYH img {
-  width: 160px;
-  height: 50px;
-}
-.salesectionsubscription_PriceBlock_3Zsq8 {
-  display: flex;
-  flex-direction: row;
-}
-.salesectionsubscription_PriceDisplay_3Ri16 {
-  color: #fff;
-  font-size: 22px;
-}
-.salesectionsubscription_PriceDisplay_3Ri16.salesectionsubscription_LimitedDiscount_bLDez {
-  color: #c0f500;
-}
-.salesectionsubscription_SavingsDisplay_Fm8U- {
-  margin-left: 10px;
-  color: #c0f500;
-  font-size: 22px;
-}
-.salesectionsubscription_BodyTextBlock_1Q6Ei {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #fff;
-  flex-grow: 1;
-  font-size: 17px;
-  font-weight: 200;
-  white-space: pre-line;
-}
-.salesectionsubscription_ExpirationTextBlock_r6Ezf {
-  margin-top: 2px;
-  color: #fff;
-  flex-grow: 1;
-  font-size: 12px;
-  font-weight: 200;
-}
-.salesectionsubscription_PurchaseButton_2ZO-4 {
-  color: #fff;
-  width: 280px;
-  height: 35px;
-  text-align: center;
-  font-size: 14px;
-  padding-top: 13px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-.salesectionsubscription_PurchaseButton_2ZO-4:hover {
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-}
-.salesectionsubscription_AlreadyOwnedPackage_31QUZ {
-  background-color: #676285;
-}
-.salesectionsubscription_AlreadyOwnedApp_2vxOX {
-  background-color: #676285;
-}
-.salesectionsubscription_UnOwned_1DMzI {
-  background-color: #2682d7;
-}
-.salesectionsubscription_UnOwned_1DMzI:hover {
-  cursor: pointer;
-  background-color: #3692f7;
-}
-.salesectionsubscription_DiscountPriceBlock_2wQcn {
-  display: inline-block;
-}
-.partnereventbroadcast_AddTitleButton_XKHg8 {
-  width: 100px;
-}
-.partnereventbroadcast_CustomTitleCtn_1qoSQ {
-  padding-top: 8px;
-  padding-bottom: 4px;
-}
-.partnereventbroadcast_LanguageContainer_3WmqO {
-  width: 300px;
-}
-.partnereventbroadcast_LanguageContainer_3WmqO > div {
-  margin-bottom: 0px;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V
-  .partnereventbroadcast_TitleRowCtn_96im4 {
-  background: rgba(59, 63, 72, 0.5);
-  color: #dfe3e6;
-  font-size: 14px;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  margin-bottom: 4px;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
-  transition: all 0.2s ease-in-out;
-}
-.partnereventbroadcast_customTitleOptionsCtn_zhH_V
-  .partnereventbroadcast_TitleRowCtn_96im4:hover {
-  background: rgba(67, 73, 83, 0.6);
-}
-.partnereventbroadcast_AccountRow_2uIyv {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.partnereventdates_EventTimeSection_O7lDS:first-child {
-  margin-bottom: 12px;
-}
-.partnereventdates_EventTimeSection_O7lDS:last-child {
-  margin-bottom: 0px;
-}
-.partnereventdates_EventTimeTitle_1-4F8 {
-  font-size: 11px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-}
-.partnereventdates_EventVisibilityItem_Z5DNw {
-  line-height: 24px;
-}
-.partnereventdates_EventEditorInputPaneContainer_3Fhef
-  input.partnereventdates_TimeWidth_3_7ku {
-  font-size: 15px;
-}
-.partnereventdates_EventPublishTimeCtn_3mtSl {
-  margin-left: 20px;
-  margin-top: 8px;
-}
-.partnereventdates_TimeWidth_3_7ku {
-  max-width: 200px;
-}
-.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
-  margin-right: 8px;
-}
-.partnereventdates_TimeRowContainer_2cnMo {
-  justify-content: flex-start;
-  padding: 10px;
-  border-radius: 3px;
-  background-color: rgba(57, 61, 71, 0.5);
-}
-.partnereventdates_TimeRowDropDown_VlpIL {
-  margin-top: 5px;
-  padding-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid;
-}
-.partnereventdates_TimeRowDropDown_VlpIL
-  > .partnereventdates_EndDateAmountCtn_1Xbr7 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 8px;
-  width: 50%;
-}
-.partnereventdates_TimeRowDropDown_VlpIL
-  > .partnereventdates_EndRound_1ppi6
-  > span {
-  margin-bottom: 0px;
-}
-.partnereventdates_VisibilityItemList_1Cnd3 {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventdates_VisibilityItems_1m6k3 {
-  padding: 10px;
-  border-radius: 3px;
-  background: rgba(57, 61, 71, 0.5);
-}
-.partnereventdates_EventEditorVisibilityCtn_3hqZR {
-  margin-top: 12px;
-}
-.partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.partnereventassociatedbuild_AssociatedBuildBody_1rnVU button.DialogButton {
-  margin-left: auto;
-  max-width: 200px;
-}
-.partnereventassociatedbuild_BuildDisplay_1HwK4 {
-  font-size: 16px;
-}
-.partnereventassociatedbuild_BuildUnlinked_1cg3t {
-  color: #ff0;
-}
-.partnereventassociatedbuild_BuildLinkedBranch_2ssXJ,
-.partnereventassociatedbuild_BuildLinkedDefault_fHJYY {
-  color: #fff;
-}
-.partnereventassociatedbuild_BuildIDLink_2-Syn:hover {
-  text-decoration: underline;
 }
 .SaleSectionCtn.vo_internal.cyoa_story {
   position: absolute;
@@ -3252,6 +3117,265 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     opacity: 1;
   }
 }
+.partnereventbroadcast_AddTitleButton_XKHg8 {
+  width: 100px;
+}
+.partnereventbroadcast_CustomTitleCtn_1qoSQ {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.partnereventbroadcast_LanguageContainer_3WmqO {
+  width: 300px;
+}
+.partnereventbroadcast_LanguageContainer_3WmqO > div {
+  margin-bottom: 0px;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V
+  .partnereventbroadcast_TitleRowCtn_96im4 {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+  transition: all 0.2s ease-in-out;
+}
+.partnereventbroadcast_customTitleOptionsCtn_zhH_V
+  .partnereventbroadcast_TitleRowCtn_96im4:hover {
+  background: rgba(67, 73, 83, 0.6);
+}
+.partnereventbroadcast_AccountRow_2uIyv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.partnereventdates_EventTimeSection_O7lDS:first-child {
+  margin-bottom: 12px;
+}
+.partnereventdates_EventTimeSection_O7lDS:last-child {
+  margin-bottom: 0px;
+}
+.partnereventdates_EventTimeTitle_1-4F8 {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.partnereventdates_EventVisibilityItem_Z5DNw {
+  line-height: 24px;
+}
+.partnereventdates_EventEditorInputPaneContainer_3Fhef
+  input.partnereventdates_TimeWidth_3_7ku {
+  font-size: 15px;
+}
+.partnereventdates_EventPublishTimeCtn_3mtSl {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.partnereventdates_TimeWidth_3_7ku {
+  max-width: 200px;
+}
+.partnereventdates_InputBorder_2-wu6.partnereventdates_TimeBlock_9q9ZA {
+  margin-right: 8px;
+}
+.partnereventdates_TimeRowContainer_2cnMo {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.partnereventdates_TimeRowDropDown_VlpIL {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventdates_TimeRowDropDown_VlpIL
+  > .partnereventdates_EndDateAmountCtn_1Xbr7 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.partnereventdates_TimeRowDropDown_VlpIL
+  > .partnereventdates_EndRound_1ppi6
+  > span {
+  margin-bottom: 0px;
+}
+.partnereventdates_VisibilityItemList_1Cnd3 {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventdates_VisibilityItems_1m6k3 {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventdates_EventEditorVisibilityCtn_3hqZR {
+  margin-top: 12px;
+}
+.partnereventassociatedbuild_AssociatedBuildBody_1rnVU {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.partnereventassociatedbuild_AssociatedBuildBody_1rnVU button.DialogButton {
+  margin-left: auto;
+  max-width: 200px;
+}
+.partnereventassociatedbuild_BuildDisplay_1HwK4 {
+  font-size: 16px;
+}
+.partnereventassociatedbuild_BuildUnlinked_1cg3t {
+  color: #ff0;
+}
+.partnereventassociatedbuild_BuildLinkedBranch_2ssXJ,
+.partnereventassociatedbuild_BuildLinkedDefault_fHJYY {
+  color: #fff;
+}
+.partnereventassociatedbuild_BuildIDLink_2-Syn:hover {
+  text-decoration: underline;
+}
+.salebadgeprogressdisplay_OuterCtn_3yY4b {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS {
+  width: 140px;
+  margin-left: 7px;
+  top: 10px;
+  position: relative;
+  margin-right: 30px;
+  height: 140px;
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img {
+  width: 120px;
+  height: 120px;
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img:first-child {
+  position: absolute;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+.salebadgeprogressdisplay_ImgSpread_47-JS img:last-child {
+  position: absolute;
+  opacity: 0.5;
+  filter: saturate(0.4);
+  left: 20px;
+  z-index: 1;
+}
+.salebadgeprogressdisplay_TextCtn_trimY a {
+  margin-left: 4px;
+  margin-right: 0px;
+  text-decoration: underline;
+}
+.salebadgeprogressdisplay_TextCtn_trimY a:hover {
+  cursor: pointer;
+}
+.salebadgeprogressdisplay_Title_1gx7w {
+  font-size: 21px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  min-width: 125px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
+  .salebadgeprogressdisplay_BadgeDesc_2OhKt {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
+  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
+  .salebadgeprogressdisplay_BadgeTierCtn_34vW4:last-child
+  img {
+  opacity: 0.5;
+  filter: saturate(0.5);
+  border: 1px dashed;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ img {
+  width: 100px;
+  height: 100px;
+  margin-top: 6px;
+}
+.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ svg {
+  height: 60px;
+  margin-top: 13%;
+}
+.salebadgeprogressdisplay_FinalBadge_t2T3x {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+.salebadgeprogressdisplay_FinalBadge_t2T3x
+  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
+  margin-top: 4px;
+}
+@media screen and (max-width: 940px) {
+  .salebadgeprogressdisplay_OuterCtn_3yY4b {
+    flex-direction: column;
+  }
+}
+.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a {
+  z-index: 3;
+  margin-bottom: 0;
+}
+.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a:after {
+  top: 100%;
+  left: 10%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #1e1e1e;
+  border-width: 20px;
+  margin-left: -20px;
+}
 .partnereventemails_CenterAlign_cMmai {
   display: flex;
   justify-content: center;
@@ -3651,209 +3775,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   color: #679dff;
   text-decoration: underline;
 }
-.salebadgeprogressdisplay_OuterCtn_3yY4b {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS {
-  width: 140px;
-  margin-left: 7px;
-  top: 10px;
-  position: relative;
-  margin-right: 30px;
-  height: 140px;
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS img {
-  width: 120px;
-  height: 120px;
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS img:first-child {
-  position: absolute;
-  z-index: 2;
-  transform: rotate(-25deg);
-}
-.salebadgeprogressdisplay_ImgSpread_47-JS img:last-child {
-  position: absolute;
-  opacity: 0.5;
-  filter: saturate(0.4);
-  left: 20px;
-  z-index: 1;
-}
-.salebadgeprogressdisplay_TextCtn_trimY a {
-  margin-left: 4px;
-  margin-right: 0px;
-  text-decoration: underline;
-}
-.salebadgeprogressdisplay_TextCtn_trimY a:hover {
-  cursor: pointer;
-}
-.salebadgeprogressdisplay_Title_1gx7w {
-  font-size: 21px;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 125px;
-  min-width: 125px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
-  .salebadgeprogressdisplay_BadgeDesc_2OhKt {
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4
-  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.7);
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ
-  .salebadgeprogressdisplay_BadgeTierCtn_34vW4:last-child
-  img {
-  opacity: 0.5;
-  filter: saturate(0.5);
-  border: 1px dashed;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ img {
-  width: 100px;
-  height: 100px;
-  margin-top: 6px;
-}
-.salebadgeprogressdisplay_ImgCtnWithArrow_2GlcZ svg {
-  height: 60px;
-  margin-top: 13%;
-}
-.salebadgeprogressdisplay_FinalBadge_t2T3x {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 16px;
-}
-.salebadgeprogressdisplay_FinalBadge_t2T3x
-  .salebadgeprogressdisplay_BadgeLevel_2vVmr {
-  margin-top: 4px;
-}
-@media screen and (max-width: 940px) {
-  .salebadgeprogressdisplay_OuterCtn_3yY4b {
-    flex-direction: column;
-  }
-}
-.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a {
-  z-index: 3;
-  margin-bottom: 0;
-}
-.salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a:after {
-  top: 100%;
-  left: 10%;
-  border: solid transparent;
-  content: "";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(136, 183, 213, 0);
-  border-top-color: #1e1e1e;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
-  background-color: #473991;
-  margin-bottom: 20px;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_SteamAwardCategoryOptions_1wsxj {
-  background: #473991;
-  color: #fff;
-  display: flex;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_event_nomination_banner_ctn_-WzN3 {
-  display: flex;
-  position: relative;
-  margin-bottom: 15px;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_CategoryTextCtn_3vRv1 {
-  display: flex;
-  flex-direction: column;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_SteamAwardTitle_3Sq0j {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 36px;
-  margin: 20px 0;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_event_nomination_trophy_3kVDt {
-  width: 80px;
-  margin-right: 30px;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_RadioBtnCtn_1Y6BP {
-  margin-bottom: 10px;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_RadioBtnCtn_1Y6BP
-  * {
-  cursor: pointer;
-}
-.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
-  .partnereventspecialcategories_CategoryTitle_25wr6 {
-  font-weight: bold;
-}
-.partnereventspecialcategories_Halloween_1etNG {
-  padding: 10px;
-  background-color: #6d5934;
-  color: #dbe2e6;
-  margin-bottom: 12px;
-}
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventTitle_6NPnW {
-  font-size: 16px;
-  font-weight: 600;
-}
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventDesc_2aLMq {
-  margin-bottom: 12px;
-}
-.partnereventspecialcategories_Halloween_1etNG
-  .partnereventspecialcategories_EventDesc_2aLMq
-  a {
-  text-decoration: underline;
-}
-.partnereventspecialcategories_Halloween_1etNG .EventCategory {
-  background-color: #393d47;
-}
-.progressutils_ErrorMessaage_13sZc {
-  color: red;
-  font-weight: bold;
-}
-.progressutils_UpdatingMessage_3baPw {
-  color: #fff;
-  font-weight: bold;
-}
 .discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7 {
   height: 200px;
   display: flex;
@@ -3972,6 +3893,111 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 .discoveryqueuewidget_Placeholder_3rUZ- {
   height: 200px;
 }
+.partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk {
+  background-color: #473991;
+  margin-bottom: 20px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_SteamAwardCategoryOptions_1wsxj {
+  background: #473991;
+  color: #fff;
+  display: flex;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_event_nomination_banner_ctn_-WzN3 {
+  display: flex;
+  position: relative;
+  margin-bottom: 15px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_CategoryTextCtn_3vRv1 {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_SteamAwardTitle_3Sq0j {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 20px 0;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_event_nomination_trophy_3kVDt {
+  width: 80px;
+  margin-right: 30px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_RadioBtnCtn_1Y6BP {
+  margin-bottom: 10px;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_RadioBtnCtn_1Y6BP
+  * {
+  cursor: pointer;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_CategoryTitle_25wr6 {
+  font-weight: bold;
+}
+.partnereventspecialcategories_Halloween_1etNG {
+  padding: 10px;
+  background-color: #6d5934;
+  color: #dbe2e6;
+  margin-bottom: 12px;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventTitle_6NPnW {
+  font-size: 16px;
+  font-weight: 600;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventDesc_2aLMq {
+  margin-bottom: 12px;
+}
+.partnereventspecialcategories_Halloween_1etNG
+  .partnereventspecialcategories_EventDesc_2aLMq
+  a {
+  text-decoration: underline;
+}
+.partnereventspecialcategories_Halloween_1etNG .EventCategory {
+  background-color: #393d47;
+}
+.progressutils_ErrorMessaage_13sZc {
+  color: red;
+  font-weight: bold;
+}
+.progressutils_UpdatingMessage_3baPw {
+  color: #fff;
+  font-weight: bold;
+}
+.salequestdisplay_description_22ryq {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 2em;
+  padding-top: 0em;
+  color: #fff;
+}
+.salequestdisplay_description2_xidiW {
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.salequestdisplay_questCtn_14UQz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 2em 1em 2em;
+  color: #fff;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .partnereventoptions_ThemedCtn_3JuTN {
   background-image: url("https://community.cloudflare.steamstatic.com/public/images//events/halloween_art_tile.png");
 }
@@ -4004,49 +4030,6 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   display: block;
   margin-right: 101px;
 }
-.salequestdisplay_description_22ryq {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 2em;
-  padding-top: 0em;
-  color: #fff;
-}
-.salequestdisplay_description2_xidiW {
-  padding-left: 5em;
-  padding-right: 5em;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  max-width: 670px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.salequestdisplay_questCtn_14UQz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 2em 1em 2em;
-  color: #fff;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
-  background-color: #abb2bd;
-  padding: 12px;
-  color: #000;
-  display: flex;
-  flex-direction: row;
-}
-.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
-  .requirevalvepublishapproval_Right_184Cy {
-  border-left: 1px solid #000;
-  padding-left: 18px;
-  margin-left: 18px;
-  min-width: 200px;
-}
-.requirevalvepublishapproval_Title_1TI4b {
-  font-weight: bold;
-}
 :root {
   --basicui-header-height: 0px;
 }
@@ -4071,8 +4054,22 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
     margin-bottom: 0px;
   }
 }
-.partnereventpublishingcontrols_PublishContainer_2tCY6 {
-  max-width: 30%;
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
+  background-color: #abb2bd;
+  padding: 12px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+}
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
+  .requirevalvepublishapproval_Right_184Cy {
+  border-left: 1px solid #000;
+  padding-left: 18px;
+  margin-left: 18px;
+  min-width: 200px;
+}
+.requirevalvepublishapproval_Title_1TI4b {
+  font-weight: bold;
 }
 .debugmatchesdialog_DiscrepancyDialogRow_3UBBZ {
   width: 100%;
@@ -4099,84 +4096,8 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
 .debugmatchesdialog_DiscrepancyDialogTooltip_28KnO {
   z-index: 2000;
 }
-.partnereventpublishingtab_SummaryItems_12a_L,
-.partnereventpublishingtab_ReachItems_H_jRC {
-  padding: 10px;
-  border-radius: 3px;
-  background: rgba(57, 61, 71, 0.5);
-}
-.partnereventpublishingtab_SummaryItems_12a_L
-  .partnereventpublishingtab_StatusRow_SZwFX,
-.partnereventpublishingtab_ReachItems_H_jRC
-  .partnereventpublishingtab_StatusRow_SZwFX {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 33px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), transparent);
-  padding: 10px;
-  margin: -10px -10px 10px -10px;
-}
-.partnereventpublishingtab_SummaryItems_12a_L
-  .partnereventpublishingtab_StatusRow_SZwFX
-  .partnereventpublishingtab_StatusText_1NUKt,
-.partnereventpublishingtab_ReachItems_H_jRC
-  .partnereventpublishingtab_StatusRow_SZwFX
-  .partnereventpublishingtab_StatusText_1NUKt {
-  font-size: 18px;
-  color: #fff;
-  margin-right: 20px;
-}
-.partnereventpublishingtab_SummaryItems_12a_L
-  .partnereventpublishingtab_StatusRow_SZwFX
-  .partnereventpublishingtab_StatusText_1NUKt
-  .StatusVisibleText,
-.partnereventpublishingtab_ReachItems_H_jRC
-  .partnereventpublishingtab_StatusRow_SZwFX
-  .partnereventpublishingtab_StatusText_1NUKt
-  .StatusVisibleText {
-  color: #a4d007;
-}
-.partnereventpublishingtab_SummaryItems_12a_L
-  .partnereventpublishingtab_LinkRow_1WnQ1 {
-  margin-top: 10px;
-}
-.partnereventpublishingtab_VisibilityNote_2UnJc {
-  line-height: 17px;
-  max-width: 900px;
-}
-.partnereventpublishingtab_ReachSubject_3EQb8 {
-  background: rgba(60, 65, 73, 0.5);
-  padding: 4px 8px;
-  margin-top: 4px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.partnereventpublishingtab_ReachSubject_3EQb8.partnereventpublishingtab_Future_5EyH7 {
-  opacity: 0.5;
-}
-.partnereventpublishingtab_ReachColumnTitles_6VhIV {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-.partnereventpublishingtab_ReachColumnName_3ORkB {
-  font-size: 11px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.partnereventpublishingtab_ReachSubjectOptional_aXhwG {
-  display: flex;
-  flex-direction: row;
-}
-.partnereventpublishingtab_ReactSubjectOptionalText_2CIfG {
-  padding-left: 10px;
-}
-.partnereventpublishingtab_ReachPendingVisibilityText_n1wAj {
-  color: orange;
+.partnereventpublishingcontrols_PublishContainer_2tCY6 {
+  max-width: 30%;
 }
 :root {
   --basicui-header-height: 0px;
@@ -4493,6 +4414,149 @@ html.responsive.touch
 .saleitembrowser_ResetItemsCtn_1XX4L:hover .saleitembrowser_ResetItems_1Yy62 {
   opacity: 100%;
 }
+.partnereventpublishingtab_SummaryItems_12a_L,
+.partnereventpublishingtab_ReachItems_H_jRC {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventpublishingtab_SummaryItems_12a_L
+  .partnereventpublishingtab_StatusRow_SZwFX,
+.partnereventpublishingtab_ReachItems_H_jRC
+  .partnereventpublishingtab_StatusRow_SZwFX {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 33px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), transparent);
+  padding: 10px;
+  margin: -10px -10px 10px -10px;
+}
+.partnereventpublishingtab_SummaryItems_12a_L
+  .partnereventpublishingtab_StatusRow_SZwFX
+  .partnereventpublishingtab_StatusText_1NUKt,
+.partnereventpublishingtab_ReachItems_H_jRC
+  .partnereventpublishingtab_StatusRow_SZwFX
+  .partnereventpublishingtab_StatusText_1NUKt {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 20px;
+}
+.partnereventpublishingtab_SummaryItems_12a_L
+  .partnereventpublishingtab_StatusRow_SZwFX
+  .partnereventpublishingtab_StatusText_1NUKt
+  .StatusVisibleText,
+.partnereventpublishingtab_ReachItems_H_jRC
+  .partnereventpublishingtab_StatusRow_SZwFX
+  .partnereventpublishingtab_StatusText_1NUKt
+  .StatusVisibleText {
+  color: #a4d007;
+}
+.partnereventpublishingtab_SummaryItems_12a_L
+  .partnereventpublishingtab_LinkRow_1WnQ1 {
+  margin-top: 10px;
+}
+.partnereventpublishingtab_VisibilityNote_2UnJc {
+  line-height: 17px;
+  max-width: 900px;
+}
+.partnereventpublishingtab_ReachSubject_3EQb8 {
+  background: rgba(60, 65, 73, 0.5);
+  padding: 4px 8px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.partnereventpublishingtab_ReachSubject_3EQb8.partnereventpublishingtab_Future_5EyH7 {
+  opacity: 0.5;
+}
+.partnereventpublishingtab_ReachColumnTitles_6VhIV {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.partnereventpublishingtab_ReachColumnName_3ORkB {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.partnereventpublishingtab_ReachSubjectOptional_aXhwG {
+  display: flex;
+  flex-direction: row;
+}
+.partnereventpublishingtab_ReactSubjectOptionalText_2CIfG {
+  padding-left: 10px;
+}
+.partnereventpublishingtab_ReachPendingVisibilityText_n1wAj {
+  color: orange;
+}
+.saleminigames_Ctn_1SGWR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+}
+.saleminigames_DetailText_aLmWP {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #e6c32c;
+}
+.saleminigames_RewardText_38NeV {
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 0.8em;
+  color: #e6c32c;
+}
+.saleminigames_PostText_24LOx {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 0.8em;
+  color: #e6c32c;
+}
+.saleminigames_ImgFullBagde_2Sm-- {
+  width: 80px;
+  height: 80px;
+}
+.SummerSale2022 .ModalPosition_TopBar {
+  height: 4px;
+  background: #fb5034;
+}
+.SummerSale2022 .DialogContent {
+  background: #2d3194;
+  box-shadow: 4px 4px 0px #2be742;
+}
+.SummerSale2022 .DialogContent .DialogHeader {
+  background: #fb5034;
+  color: #e7c42b;
+  box-shadow: 4px 4px 0px #e7c42b;
+  padding-left: 6px;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+.SummerSale2022 .DialogContent ._DialogColLayout {
+  padding-bottom: 4px;
+}
+.SummerSale2022 .DialogContent button.DialogButton {
+  background: #4247b4;
+  color: #dadee5;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.SummerSale2022 .DialogContent button.DialogButton.Primary {
+  background: #2be742;
+  color: #2d3194;
+  box-shadow: 4px 2px 0px #0097c9;
+  border-radius: 0px;
+}
+.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:hover,
+.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:active {
+  background: #2be742;
+  box-shadow: 4px 4px 0px #0097c9;
+  color: #0097c9;
+}
 .saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB {
   background-color: #2e3138;
   border: 1px solid #761f28;
@@ -4561,69 +4625,12 @@ html.responsive.touch
   text-transform: uppercase;
   padding-top: 24px;
 }
-.saleminigames_Ctn_1SGWR {
+.salesocialsharedisplay_DoorOptionsContainer_cP3hd > :first-child {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1em;
+  flex-direction: column;
 }
-.saleminigames_DetailText_aLmWP {
-  font-weight: 600;
-  margin-top: 10px;
-  color: #e6c32c;
-}
-.saleminigames_RewardText_38NeV {
-  font-size: 18px;
-  font-weight: 300;
-  padding-bottom: 0.8em;
-  color: #e6c32c;
-}
-.saleminigames_PostText_24LOx {
-  font-size: 18px;
-  font-weight: 300;
-  padding-top: 0.8em;
-  color: #e6c32c;
-}
-.saleminigames_ImgFullBagde_2Sm-- {
-  width: 80px;
-  height: 80px;
-}
-.SummerSale2022 .ModalPosition_TopBar {
-  height: 4px;
-  background: #fb5034;
-}
-.SummerSale2022 .DialogContent {
-  background: #2d3194;
-  box-shadow: 4px 4px 0px #2be742;
-}
-.SummerSale2022 .DialogContent .DialogHeader {
-  background: #fb5034;
-  color: #e7c42b;
-  box-shadow: 4px 4px 0px #e7c42b;
-  padding-left: 6px;
-  padding-bottom: 2px;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent ._DialogColLayout {
-  padding-bottom: 4px;
-}
-.SummerSale2022 .DialogContent button.DialogButton {
-  background: #4247b4;
-  color: #dadee5;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary {
-  background: #2be742;
-  color: #2d3194;
-  box-shadow: 4px 2px 0px #0097c9;
-  border-radius: 0px;
-}
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:hover,
-.SummerSale2022 .DialogContent button.DialogButton.Primary:enabled:active {
-  background: #2be742;
-  box-shadow: 4px 4px 0px #0097c9;
-  color: #0097c9;
+.salesocialsharedisplay_DoorOption_2syb_ {
+  display: none;
 }
 .partnereventrevisionhistory_VersionListCtn_32hnY {
   max-height: 500px;

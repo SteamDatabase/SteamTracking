@@ -55,6 +55,7 @@
         EventOptions: "partnereventshared_EventOptions_ShLAX",
         FlexColumnContainer: "partnereventshared_FlexColumnContainer_WmMRF",
         FlexRowContainer: "partnereventshared_FlexRowContainer_elLwm",
+        Centered: "partnereventshared_Centered_1HqKt",
         FlexContainSpaceBetween:
           "partnereventshared_FlexContainSpaceBetween_2MHtA",
         FlexRowWrapSpaceBetweenContainer:
