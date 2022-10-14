@@ -12210,8 +12210,9 @@
               focusOnMount: v,
               tooltip: b,
               inlineControls: w,
+              maxChars: C,
             } = e,
-            C = (0, r._T)(e, [
+            E = (0, r._T)(e, [
               "label",
               "description",
               "requiredLabel",
@@ -12227,18 +12228,19 @@
               "focusOnMount",
               "tooltip",
               "inlineControls",
+              "maxChars",
             ]);
-          let E =
+          let S =
               "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-              (C.className ? " " + C.className : ""),
-            S = "copiedAnimation",
-            y = this.state.m_bCompletedCopiedAnimation;
-          this.m_CopiedAnimation && (S = "copiedAnimation animationPlaying"),
-            y && (S = "copiedAnimation animationComplete");
-          let D = {};
+              (E.className ? " " + E.className : ""),
+            y = "copiedAnimation",
+            D = this.state.m_bCompletedCopiedAnimation;
+          this.m_CopiedAnimation && (y = "copiedAnimation animationPlaying"),
+            D && (y = "copiedAnimation animationComplete");
+          let M = {};
           void 0 !== this.state.m_CopiedYPos &&
-            (D.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let M = i.createElement(
+            (M.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+          let B = i.createElement(
             i.Fragment,
             null,
             i.createElement(
@@ -12249,8 +12251,8 @@
               },
               i.createElement(
                 $,
-                Object.assign({ type: m ? "password" : "text" }, C, {
-                  className: E,
+                Object.assign({ type: m ? "password" : "text" }, E, {
+                  className: S,
                   ref: this.OnInputRef,
                   onChange: this.OnChanged,
                 })
@@ -12269,11 +12271,11 @@
                   ),
                   i.createElement(
                     "div",
-                    { style: D, className: S },
+                    { style: M, className: y },
                     "Link Copied"
                   )
                 ),
-              (d || (u && C.value)) &&
+              (d || (u && E.value)) &&
                 i.createElement(
                   "div",
                   {
@@ -12312,7 +12314,7 @@
                     ),
                     " "
                   ),
-                  M,
+                  B,
                   this.state.m_bNumberBelowMinRange
                     ? i.createElement(
                         "div",
@@ -12363,16 +12365,13 @@
                         "div",
                         null,
                         " ",
-                        (0, c.kQ)(
-                          "#Input_Error_TooManyCharacters",
-                          this.props.maxChars
-                        ),
+                        (0, c.kQ)("#Input_Error_TooManyCharacters", C),
                         " "
                       )
                     : null
                 )
               )
-            : M;
+            : B;
         }
       }
       (0, r.gn)([z.ak], q.prototype, "OnInputRef", null),

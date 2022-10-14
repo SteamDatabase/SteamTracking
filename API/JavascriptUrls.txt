@@ -779,6 +779,7 @@ ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
 ${STORE_BASE_URL}developer/${m_strVanity}/
+${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
 ${STORE_BASE_URL}dynamicstore/userdata/
 ${STORE_BASE_URL}email/PartnerAppOptIn/?

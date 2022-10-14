@@ -80975,6 +80975,7 @@ object-assign
           /* harmony export */ Coupon: () => /* binding */ Coupon,
           /* harmony export */ Crown: () => /* binding */ Crown,
           /* harmony export */ CutArrow: () => /* binding */ CutArrow,
+          /* harmony export */ DLCIcon: () => /* binding */ DLCIcon,
           /* harmony export */ DeleteUserNews: () =>
             /* binding */ DeleteUserNews,
           /* harmony export */ DialogCheck: () => /* binding */ DialogCheck,
@@ -81102,6 +81103,7 @@ object-assign
           /* harmony export */ SmallX: () => /* binding */ SmallX,
           /* harmony export */ Snowball: () => /* binding */ Snowball,
           /* harmony export */ SortBy: () => /* binding */ SortBy,
+          /* harmony export */ SortBy_V2: () => /* binding */ SortBy_V2,
           /* harmony export */ Star: () => /* binding */ Star,
           /* harmony export */ SteamDeckCompatLogo: () =>
             /* binding */ SteamDeckCompatLogo,
@@ -83598,6 +83600,39 @@ object-assign
                 }
               )
             )
+          );
+        }
+        function SortBy_V2(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            {
+              width: "19",
+              height: "19",
+              viewBox: "0 0 19 19",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: (0,
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+                "SVGIcon_Button",
+                props.className
+              ),
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M7.7976 11.7352L5.2516 14.2793C5.2003 14.3306 5.1433 14.3781 5.0844 14.418C5.0749 14.4237 5.0654 14.4294 5.0559 14.4351C5.0293 14.4522 5.0027 14.4693 4.9761 14.4826C4.9438 14.4997 4.9096 14.5149 4.8773 14.5301C4.8735 14.5301 4.8697 14.532 4.8659 14.5339C4.8336 14.5453 4.8013 14.5567 4.7709 14.5662C4.7348 14.5776 4.6987 14.5852 4.6626 14.5928C4.5923 14.6061 4.5182 14.6137 4.446 14.6137C4.3358 14.6137 4.2275 14.5985 4.1211 14.5662C4.0888 14.5567 4.0565 14.5453 4.0261 14.5339C4.0223 14.532 4.0185 14.5301 4.0147 14.5301C3.9805 14.5149 3.9482 14.4997 3.9159 14.4826C3.8893 14.4693 3.8627 14.4541 3.8361 14.4351C3.7677 14.3933 3.7012 14.342 3.6404 14.2793H3.6385L1.0944 11.7352C0.647896 11.2887 0.647896 10.5667 1.0944 10.1221C1.539 9.67754 2.261 9.67754 2.7056 10.1221L3.306 10.7225L3.30599 3.3529C3.30599 2.724 3.81519 2.2129 4.44599 2.2129C5.07489 2.2129 5.58599 2.724 5.58599 3.3529L5.586 10.7206L6.1845 10.1221C6.631 9.67754 7.3511 9.67754 7.7976 10.1221C8.2422 10.5667 8.2422 11.2887 7.7976 11.7352Z",
+              fill: "currentColor",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M17.1001 4.51535H10.3036C9.6741 4.51535 9.16357 4.00482 9.16357 3.37535C9.16357 2.74588 9.6741 2.23535 10.3036 2.23535H17.1001C17.7295 2.23535 18.2401 2.74588 18.2401 3.37535C18.2401 4.00482 17.7295 4.51535 17.1001 4.51535Z",
+              fill: "currentColor",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M15.7408 9.54465H10.3036C9.6741 9.54465 9.16357 9.03412 9.16357 8.40465C9.16357 7.77518 9.6741 7.26465 10.3036 7.26465H15.7408C16.3703 7.26465 16.8808 7.77518 16.8808 8.40465C16.8808 9.03412 16.3703 9.54465 15.7408 9.54465Z",
+              fill: "currentColor",
+            }),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              d: "M14.3814 14.5739H10.3036C9.6741 14.5739 9.16357 14.0634 9.16357 13.4339C9.16357 12.8045 9.6741 12.2939 10.3036 12.2939H14.3815C15.011 12.2939 15.5215 12.8045 15.5215 13.4339C15.5215 14.0634 15.011 14.5739 14.3814 14.5739Z",
+              fill: "currentColor",
+            })
           );
         }
         function RecentClock() {
@@ -89961,6 +89996,24 @@ object-assign
             })
           );
         }
+        function DLCIcon(props) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              props,
+              { preserveAspectRatio: "xMidYMid meet" }
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+              fill: "currentColor",
+              d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
+            })
+          );
+        }
 
         /***/
       },
@@ -92028,6 +92081,14 @@ object-assign
           SetPreferredLocales(rgLocales) {
             this.m_rgLocalesToUse = rgLocales;
           }
+          BLooksLikeToken(strToken) {
+            return strToken && strToken.length > 0 && strToken.charAt(0) == "#";
+          }
+          LocalizeIfToken(strTokenOrString, bFailSilently) {
+            return this.BLooksLikeToken(strTokenOrString)
+              ? this.LocalizeString(strTokenOrString, bFailSilently)
+              : strTokenOrString;
+          }
           LocalizeString(strToken, bFailSilently) {
             if (true) {
               (0, _assert__WEBPACK_IMPORTED_MODULE_5__.AssertMsg)(
@@ -92036,8 +92097,7 @@ object-assign
               );
             }
             // must start with #
-            if (!strToken || strToken.length == 0 || strToken.charAt(0) != "#")
-              return undefined;
+            if (!this.BLooksLikeToken(strToken)) return undefined;
             let strValue = this.m_mapTokens.get(strToken.substring(1));
             if (strValue === undefined) {
               if (
@@ -92133,7 +92193,7 @@ object-assign
          * 		let str = LocalizeInlineReact( '#TestToken', <span style={ {color: 'red'} } /> ) }
          */
         function LocalizeInlineReact(strToken, ...args) {
-          let strValue = LocalizationManager.LocalizeString(strToken);
+          let strValue = LocalizationManager.LocalizeIfToken(strToken);
           if (strValue === undefined) return strToken;
           return LocalizeInlineReactHelper(strValue, ...args);
         }
@@ -96240,4 +96300,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=6fe31e833746a5fa70ed
+//# sourceMappingURL=friends.js.map?contenthash=c4656a5431fa2d95f2ac
