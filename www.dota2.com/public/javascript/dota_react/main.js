@@ -29819,12 +29819,179 @@
             )
           );
         }),
-        Qr = n(93504),
+        Qr = n(7773),
         $r = n.n(Qr),
-        ei = n(56879),
-        ti = n(27079),
+        ei = (0, d.Pi)(function () {
+          var e = Uo(),
+            t = ar.f.Get().GetEventInfo(e),
+            n = (0, o.useState)(0),
+            a = n[0],
+            r = n[1],
+            i = ar.f
+              .Get()
+              .GetDPCStandings(null == t ? void 0 : t.registration_period);
+          return o.createElement(
+            "div",
+            { className: $r().DPCTIStandingsPage },
+            0 == (null == i ? void 0 : i.results.length) &&
+              o.createElement(
+                "div",
+                { className: $r().NoResults },
+                (0, E.Jr)("#dpc_ti_results_empty")
+              ),
+            null == i
+              ? void 0
+              : i.results.map(function (t) {
+                  var n = a == t.team_id;
+                  return o.createElement(
+                    "div",
+                    {
+                      key: "".concat(t.team_id),
+                      className: $r().TeamEntry,
+                      onClick: function () {
+                        return r(a == t.team_id ? 0 : t.team_id);
+                      },
+                    },
+                    o.createElement(
+                      "div",
+                      { className: $r().TeamBody },
+                      o.createElement(Tr, {
+                        nTeamID: t.team_id,
+                        nSize: 48,
+                        bTooltip: !0,
+                      }),
+                      o.createElement(
+                        "div",
+                        { className: $r().TeamName },
+                        t.team_name
+                      ),
+                      o.createElement(
+                        "div",
+                        { className: $r().Points },
+                        t.total_points
+                      )
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          $r().TeamExpansion,
+                          n && $r().Expanded
+                        ),
+                      },
+                      t.league_results.map(function (a) {
+                        var r = n
+                          ? ar.f.Get().GetLeagueData(e, a.league_id)
+                          : void 0;
+                        if (2 == a.audit_action) {
+                          var i = n
+                            ? ar.f.Get().GetDPCPlayerInfo(a.audit_data)
+                            : void 0;
+                          return o.createElement(
+                            "div",
+                            {
+                              key: "p15_".concat(a.timestamp),
+                              className: $r().LeagueResult,
+                            },
+                            o.createElement(pr(), {
+                              className: $r().Timestamp,
+                              date: 1e3 * a.timestamp,
+                              format: "MMM DD YYYY",
+                            }),
+                            o.createElement(
+                              "div",
+                              { className: $r().PlayerLeft },
+                              (0, E.Jr)("#dpc_player_left"),
+                              o.createElement(
+                                "div",
+                                { className: $r().PlayerName },
+                                null == i ? void 0 : i.name
+                              )
+                            ),
+                            o.createElement(
+                              "div",
+                              { className: $r().PointPenalty },
+                              (0, E.Jr)("#dpc_penalty_15pct")
+                            )
+                          );
+                        }
+                        return 20 == a.audit_action
+                          ? o.createElement(
+                              "div",
+                              {
+                                key: "p20_".concat(a.timestamp),
+                                className: $r().LeagueResult,
+                              },
+                              o.createElement(pr(), {
+                                className: $r().Timestamp,
+                                date: 1e3 * a.timestamp,
+                                format: "MMM DD YYYY",
+                              }),
+                              o.createElement(
+                                "div",
+                                { className: $r().PlayerLeft },
+                                (0, E.Jr)("#dpc_penalty")
+                              ),
+                              o.createElement(
+                                "div",
+                                { className: $r().PointPenalty },
+                                (0, E.Jr)("#dpc_penalty_20pct")
+                              )
+                            )
+                          : a.league_id
+                          ? o.createElement(
+                              "div",
+                              {
+                                key: "l_"
+                                  .concat(t.team_id, "_")
+                                  .concat(a.timestamp),
+                                className: $r().LeagueResult,
+                              },
+                              o.createElement(pr(), {
+                                className: $r().Timestamp,
+                                date: 1e3 * a.timestamp,
+                                format: "MMM DD YYYY",
+                              }),
+                              o.createElement("div", {
+                                className: $r().LeagueLogo,
+                                style: {
+                                  backgroundImage: "url( "
+                                    .concat(
+                                      h.Y.CDN_URL,
+                                      "apps/dota2/images/leagues/"
+                                    )
+                                    .concat(a.league_id, "/images/image_8.png"),
+                                },
+                              }),
+                              o.createElement(
+                                "div",
+                                { className: $r().LeaguePlace },
+                                (0, Wr.jc)(a.standing)
+                              ),
+                              o.createElement(
+                                "div",
+                                { className: $r().LeagueName },
+                                (0, E.Jr)(null == r ? void 0 : r.info.name)
+                              ),
+                              o.createElement(
+                                "div",
+                                { className: $r().Points },
+                                a.points
+                              )
+                            )
+                          : null;
+                      })
+                    )
+                  );
+                })
+          );
+        }),
+        ti = n(93504),
         ni = n.n(ti),
-        ai = (0, d.Pi)(function (e) {
+        ai = n(56879),
+        ri = n(27079),
+        ii = n.n(ri),
+        oi = (0, d.Pi)(function (e) {
           var t = Uo(),
             n = ar.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             a = ar.f.Get().GetSpoilerBlockState(t) == ir.rE.BLOCKED,
@@ -29896,10 +30063,10 @@
                   .Get()
                   .GetNodeTypeGameCount(null == n ? void 0 : n.node_type),
             R = 115 + 30 * D,
-            L = B ? 1.5 * ei.OQ : ei.OQ,
-            A = B ? R : ei.GJ,
-            M = B ? -ei.OQ / 3 : 0,
-            G = B ? -ei.GJ / 2 : 0,
+            L = B ? 1.5 * ai.OQ : ai.OQ,
+            A = B ? R : ai.GJ,
+            M = B ? -ai.OQ / 3 : 0,
+            G = B ? -ai.GJ / 2 : 0,
             k = ar.f.Get().GetNodeTypeString(null == n ? void 0 : n.node_type);
           return t === ir._A.INTERNATIONAL_2022_LASTCHANCE &&
             "#dpc_bracket_grand_final_abbrev" === e.strNodeTitle
@@ -29913,11 +30080,11 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    ni().BracketNode,
-                    B && ni().Expanded,
-                    N && ni().OtherExpanded,
-                    e.strBackgroundColor && ni().ShowingColor,
-                    I && ni().IsLive
+                    ii().BracketNode,
+                    B && ii().Expanded,
+                    N && ii().OtherExpanded,
+                    e.strBackgroundColor && ii().ShowingColor,
+                    I && ii().IsLive
                   ),
                   style: {
                     background: e.strBackgroundColor
@@ -29942,7 +30109,7 @@
                 o.createElement(
                   "div",
                   {
-                    className: ni().NodeHeader,
+                    className: ii().NodeHeader,
                     style: {
                       borderBottomColor: e.strBackgroundColor
                         ? e.strBackgroundColor
@@ -29960,100 +30127,100 @@
                   !e.strBackgroundColor && (0, E.Jr)(e.strNodeTitle),
                   e.strBackgroundColor &&
                     o.createElement(pr(), {
-                      className: ni().Timestamp,
+                      className: ii().Timestamp,
                       date: 1e3 * v,
                       format: "MMM DD LT",
                     }),
                   o.createElement(
                     "div",
-                    { className: ni().BestOf },
+                    { className: ii().BestOf },
                     (0, E.Jr)(k)
                   ),
                   o.createElement(
                     "div",
-                    { className: ni().Live },
+                    { className: ii().Live },
                     (0, E.Jr)("#dpc_live")
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: ni().ContentsContainer },
+                  { className: ii().ContentsContainer },
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(ni().Teams, B && ni().Hidden) },
+                    { className: (0, b.Z)(ii().Teams, B && ii().Hidden) },
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ni().Team, c && i && ni().Winner) },
+                      { className: (0, b.Z)(ii().Team, c && i && ii().Winner) },
                       o.createElement(Tr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_1) : 0,
-                        className: ni().TeamLogo,
+                        className: ii().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ni().TeamName },
+                        { className: ii().TeamName },
                         (0, E.Jr)(T)
                       ),
-                      o.createElement("div", { className: ni().Score }, C)
+                      o.createElement("div", { className: ii().Score }, C)
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ni().Team, d && i && ni().Winner) },
+                      { className: (0, b.Z)(ii().Team, d && i && ii().Winner) },
                       o.createElement(Tr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_2) : 0,
-                        className: ni().TeamLogo,
+                        className: ii().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ni().TeamName },
+                        { className: ii().TeamName },
                         (0, E.Jr)(S)
                       ),
-                      o.createElement("div", { className: ni().Score }, w)
+                      o.createElement("div", { className: ii().Score }, w)
                     )
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(ni().Details, !B && ni().Hidden) },
+                    { className: (0, b.Z)(ii().Details, !B && ii().Hidden) },
                     0 !== v &&
                       o.createElement(pr(), {
-                        className: ni().Timestamp,
+                        className: ii().Timestamp,
                         date: 1e3 * v,
                         format: "MMM DD LT",
                       }),
                     0 === v && "",
-                    o.createElement("div", { className: ni().Separator }),
+                    o.createElement("div", { className: ii().Separator }),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ni().Team, c && i && ni().Winner) },
+                      { className: (0, b.Z)(ii().Team, c && i && ii().Winner) },
                       o.createElement(Tr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_1) : 0,
-                        className: ni().TeamLogo,
+                        className: ii().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ni().TeamName },
+                        { className: ii().TeamName },
                         (0, E.Jr)(T)
                       ),
-                      o.createElement("div", { className: ni().Score }, C)
+                      o.createElement("div", { className: ii().Score }, C)
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ni().Team, d && i && ni().Winner) },
+                      { className: (0, b.Z)(ii().Team, d && i && ii().Winner) },
                       o.createElement(Tr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_2) : 0,
-                        className: ni().TeamLogo,
+                        className: ii().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ni().TeamName },
+                        { className: ii().TeamName },
                         (0, E.Jr)(S)
                       ),
-                      o.createElement("div", { className: ni().Score }, w)
+                      o.createElement("div", { className: ii().Score }, w)
                     ),
-                    o.createElement("div", { className: ni().Separator }),
+                    o.createElement("div", { className: ii().Separator }),
                     !I &&
                       (0, Wr.bE)(1, D).map(function (a) {
                         var r =
@@ -30086,13 +30253,13 @@
                           {
                             key: "SG".concat(a),
                             className: (0, b.Z)(
-                              ni().SeriesGame,
-                              !r && ni().Disabled
+                              ii().SeriesGame,
+                              !r && ii().Disabled
                             ),
                           },
                           o.createElement(
                             "div",
-                            { className: ni().GameNumber },
+                            { className: ii().GameNumber },
                             (0, E.Jr)("#dpc_game_".concat(a - 1))
                           ),
                           o.createElement(
@@ -30102,7 +30269,7 @@
                                 state: { bAutoScroll: !0 },
                                 pathname: I ? c : l,
                               },
-                              className: ni().DetailsButton,
+                              className: ii().DetailsButton,
                             },
                             (0, E.Jr)(d)
                           )
@@ -30111,7 +30278,7 @@
                     I &&
                       o.createElement(
                         "div",
-                        { className: ni().LiveContainer },
+                        { className: ii().LiveContainer },
                         o.createElement(
                           m.rU,
                           {
@@ -30124,7 +30291,7 @@
                                 (0, rr.k8)(0, rr.Uz.SERIES)
                               ),
                             },
-                            className: ni().DetailsButton,
+                            className: ii().DetailsButton,
                           },
                           (0, E.Jr)("#dpc_watch_live")
                         )
@@ -30134,9 +30301,9 @@
               )
             : null;
         }),
-        ri = n(58111),
-        ii = n.n(ri);
-      var oi = (0, d.Pi)(function (e) {
+        si = n(58111),
+        li = n.n(si);
+      var ci = (0, d.Pi)(function (e) {
           var t = Uo(),
             n = ar.f.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID),
             a = Math.pow(
@@ -30150,27 +30317,27 @@
             switch ("".concat(e, "_").concat(t)) {
               case "".concat(ir.L$.BRACKET_DOUBLE_SEED_LOSER, "_").concat(12):
                 return {
-                  nLeftOffset: ei.OQ + ei.Bq,
+                  nLeftOffset: ai.OQ + ai.Bq,
                   nWidth: 1160,
                   nHeight: 780,
-                  arrBracketNodeLocations: ei._1,
-                  arrBracketNodeConnectors: ei.oJ,
+                  arrBracketNodeLocations: ai._1,
+                  arrBracketNodeConnectors: ai.oJ,
                 };
               case "".concat(ir.L$.BRACKET_DOUBLE_SEED_LOSER, "_").concat(16):
                 return {
                   nLeftOffset: 0,
                   nWidth: 1350,
                   nHeight: 780,
-                  arrBracketNodeLocations: ei._1,
-                  arrBracketNodeConnectors: ei.oJ,
+                  arrBracketNodeLocations: ai._1,
+                  arrBracketNodeConnectors: ai.oJ,
                 };
               case "".concat(ir.L$.BRACKET_DOUBLE_ALL_WINNER, "_").concat(4):
                 return {
                   nLeftOffset: 0,
                   nWidth: 610,
                   nHeight: 370,
-                  arrBracketNodeLocations: ei.TR,
-                  arrBracketNodeConnectors: ei.bf,
+                  arrBracketNodeLocations: ai.TR,
+                  arrBracketNodeConnectors: ai.bf,
                 };
             }
           })(n.node_group_type, a);
@@ -30203,7 +30370,7 @@
           return o.createElement(
             "div",
             {
-              className: ii().DPCStandingsBracketTree,
+              className: li().DPCStandingsBracketTree,
               style: { width: r.nWidth, height: r.nHeight },
               onClick: function () {
                 return u;
@@ -30229,14 +30396,14 @@
                     "div",
                     {
                       key: "".concat(e.nLeagueID, "_").concat(t.node_id),
-                      className: ii().BracketNodeContainer,
+                      className: li().BracketNodeContainer,
                       style: {
                         left:
                           r.arrBracketNodeLocations[n].nPosX - r.nLeftOffset,
                         top: r.arrBracketNodeLocations[n].nPosY,
                       },
                     },
-                    o.createElement(ai, {
+                    o.createElement(oi, {
                       nLeagueID: e.nLeagueID,
                       nNodeID: t.node_id,
                       strNodeTitle: "".concat(
@@ -30245,7 +30412,7 @@
                       ),
                       nExpandedNodeID: e.nExpandedNodeID,
                       setExpandedNodeID: e.setExpandedNodeID,
-                      strBackgroundColor: ei.jr[s],
+                      strBackgroundColor: ai.jr[s],
                       bAlwaysRender: c,
                     })
                   );
@@ -30276,7 +30443,7 @@
                       "div",
                       {
                         key: "connector_".concat(a),
-                        className: ii().BracketConnectorContainer,
+                        className: li().BracketConnectorContainer,
                         style: {
                           left: e.nPosX - r.nLeftOffset,
                           top: e.nPosY,
@@ -30284,55 +30451,55 @@
                           height: e.nHeight,
                         },
                       },
-                      e.bStraight && o.createElement(li, null),
-                      !e.bStraight && o.createElement(si, null)
+                      e.bStraight && o.createElement(di, null),
+                      !e.bStraight && o.createElement(ui, null)
                     )
                 : null;
             })
           );
         }),
-        si = function () {
+        ui = function () {
           return o.createElement(
             "div",
-            { className: $r().BracketConnectorCombine },
+            { className: ni().BracketConnectorCombine },
             o.createElement(
               "div",
-              { className: $r().Segment1, style: { width: ei.Bq / 2 } },
+              { className: ni().Segment1, style: { width: ai.Bq / 2 } },
               o.createElement("div", {
-                className: $r().ConnectorLineTop,
-                style: { top: ei.GJ / 2 },
+                className: ni().ConnectorLineTop,
+                style: { top: ai.GJ / 2 },
               }),
               o.createElement("div", {
-                className: $r().ConnectorLineBottom,
-                style: { bottom: ei.GJ / 2 },
+                className: ni().ConnectorLineBottom,
+                style: { bottom: ai.GJ / 2 },
               })
             ),
             o.createElement("div", {
-              className: $r().ConnectorLineVertical,
+              className: ni().ConnectorLineVertical,
               style: {
-                height: "calc( 100% - ".concat(ei.GJ, "px )"),
-                top: ei.GJ / 2,
-                left: ei.Bq / 2,
+                height: "calc( 100% - ".concat(ai.GJ, "px )"),
+                top: ai.GJ / 2,
+                left: ai.Bq / 2,
               },
             }),
             o.createElement(
               "div",
-              { className: $r().Segment3 },
-              o.createElement("div", { className: $r().ConnectorLineCombined })
+              { className: ni().Segment3 },
+              o.createElement("div", { className: ni().ConnectorLineCombined })
             )
           );
         },
-        li = function () {
+        di = function () {
           return o.createElement(
             "div",
-            { className: $r().BracketConnectorStraight },
+            { className: ni().BracketConnectorStraight },
             o.createElement("div", {
-              className: $r().ConnectorLine,
-              style: { top: ei.GJ / 2 },
+              className: ni().ConnectorLine,
+              style: { top: ai.GJ / 2 },
             })
           );
         },
-        ci = (0, d.Pi)(function (e) {
+        mi = (0, d.Pi)(function (e) {
           var t = Uo(),
             n = (0, o.useState)(!1),
             a = n[0],
@@ -30367,40 +30534,40 @@
           return o.createElement(
             "div",
             {
-              className: (0, b.Z)($r().DPCStandingsBracket, !h && $r().NoData),
+              className: (0, b.Z)(ni().DPCStandingsBracket, !h && ni().NoData),
             },
             o.createElement(
               "div",
-              { className: (0, b.Z)($r().BracketBody, g && $r().NodeExpanded) },
+              { className: (0, b.Z)(ni().BracketBody, g && ni().NodeExpanded) },
               o.createElement(
                 "div",
-                { className: $r().BracketHeader },
+                { className: ni().BracketHeader },
                 (0, E.Jr)("#dpc_bracket")
               ),
               o.createElement(
                 "div",
                 {
-                  className: $r().DayDisplayContainer,
+                  className: ni().DayDisplayContainer,
                   onClick: function () {
                     return r(!a);
                   },
                 },
                 o.createElement(
                   "div",
-                  { className: $r().DayDisplayLabel },
+                  { className: ni().DayDisplayLabel },
                   (0, E.Jr)("#dpc_show_days")
                 ),
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)($r().DayDisplayValue, a && $r().On) },
+                  { className: (0, b.Z)(ni().DayDisplayValue, a && ni().On) },
                   (0, E.Jr)(a ? "#dpc_show_days_on" : "#dpc_show_days_off")
                 ),
                 o.createElement(nr, { bEnabled: a, setEnabled: r })
               ),
               o.createElement(
                 _r.Z,
-                { className: $r().BracketScroller, hideScrollbars: !1 },
-                o.createElement(oi, {
+                { className: ni().BracketScroller, hideScrollbars: !1 },
+                o.createElement(ci, {
                   nLeagueID: u,
                   nNodeGroupID: d,
                   bShowingDays: a,
@@ -30411,18 +30578,18 @@
             ),
             o.createElement(
               "div",
-              { className: (0, b.Z)($r().DayLegend, a && $r().Show) },
+              { className: (0, b.Z)(ni().DayLegend, a && ni().Show) },
               _.map(function (e, t) {
                 return o.createElement(
                   "div",
-                  { key: "time".concat(e), className: $r().Timestamp },
+                  { key: "time".concat(e), className: ni().Timestamp },
                   o.createElement("div", {
-                    className: $r().GradientSquare,
+                    className: ni().GradientSquare,
                     style: {
-                      borderTop: "1px solid ".concat(ei.jr[t + 1]),
+                      borderTop: "1px solid ".concat(ai.jr[t + 1]),
                       background: "linear-gradient( to bottom, "
-                        .concat(ei.jr[t + 1], "66, ")
-                        .concat(ei.jr[t + 1], "22 )"),
+                        .concat(ai.jr[t + 1], "66, ")
+                        .concat(ai.jr[t + 1], "22 )"),
                     },
                   }),
                   o.createElement(pr(), { date: 1e3 * e, format: "MMMM DD" })
@@ -30431,24 +30598,24 @@
             )
           );
         }),
-        ui = n(8776),
-        di = n.n(ui),
-        mi = (0, d.Pi)(function (e) {
+        pi = n(8776),
+        _i = n.n(pi),
+        gi = (0, d.Pi)(function (e) {
           var t = e.bStyleStopThree && 1 == e.nStanding,
             n = e.bStyleStopThree && 2 == e.nStanding,
             a = e.bStyleStopThree && 3 == e.nStanding,
             r = ar.f.Get().GetTeamNames(e.nTeamID);
           return o.createElement(
             "div",
-            { className: di().StandingsResult },
+            { className: _i().StandingsResult },
             o.createElement(
               "div",
               {
                 className: (0, b.Z)(
-                  di().Placement,
-                  t && di().First,
-                  n && di().Second,
-                  a && di().Third
+                  _i().Placement,
+                  t && _i().First,
+                  n && _i().Second,
+                  a && _i().Third
                 ),
               },
               (0, Wr.jc)(e.nStanding)
@@ -30460,22 +30627,22 @@
             }),
             o.createElement(
               "div",
-              { className: di().TeamName },
+              { className: _i().TeamName },
               (0, E.Jr)(
                 0 == e.nTeamID ? "#dpc_tbd" : null == r ? void 0 : r.name
               )
             ),
             o.createElement(
               "div",
-              { className: di().EarningsContainer },
+              { className: _i().EarningsContainer },
               o.createElement(
                 "div",
-                { className: di().Title },
+                { className: _i().Title },
                 (0, E.Jr)("#dpc_earnings")
               ),
               o.createElement(
                 "div",
-                { className: di().Value },
+                { className: _i().Value },
                 "$".concat(
                   e.nEarnings ? e.nEarnings.toLocaleString() : "0",
                   " USD"
@@ -30484,21 +30651,21 @@
             ),
             o.createElement(
               "div",
-              { className: di().PointsContainer },
+              { className: _i().PointsContainer },
               o.createElement(
                 "div",
-                { className: di().Title },
+                { className: _i().Title },
                 (0, E.Jr)("#dpc_points")
               ),
               o.createElement(
                 "div",
-                { className: di().Value },
+                { className: _i().Value },
                 "".concat(e.nPoints ? e.nPoints.toLocaleString() : "0")
               )
             )
           );
         }),
-        pi = (0, d.Pi)(function (e) {
+        hi = (0, d.Pi)(function (e) {
           var t,
             n = Uo(),
             a = ar.f.Get().GetEventInfo(n),
@@ -30531,10 +30698,10 @@
             c = 0;
           return o.createElement(
             "div",
-            { className: (0, b.Z)(di().DPCStandingsResults) },
+            { className: (0, b.Z)(_i().DPCStandingsResults) },
             (0, Wr.bE)(1, s).map(function (t) {
               if (t < l)
-                return o.createElement(mi, {
+                return o.createElement(gi, {
                   key: "".concat(r, "_").concat(t),
                   nStanding: t,
                   nTeamID: 0,
@@ -30545,7 +30712,7 @@
               var n = null == i ? void 0 : i.results[c];
               return n
                 ? ((c += 1),
-                  o.createElement(mi, {
+                  o.createElement(gi, {
                     key: "".concat(r, "_").concat(t),
                     nStanding: n.standing,
                     nTeamID: n.team_id,
@@ -30557,11 +30724,11 @@
             })
           );
         }),
-        _i = n(4595),
-        gi = n.n(_i),
-        hi = n(70290),
-        fi = n.n(hi),
-        vi = (0, d.Pi)(function (e) {
+        fi = n(4595),
+        vi = n.n(fi),
+        bi = n(70290),
+        Ei = n.n(bi),
+        yi = (0, d.Pi)(function (e) {
           var t,
             n,
             a,
@@ -30679,28 +30846,28 @@
             P = f.length > 0;
           return o.createElement(
             "div",
-            { className: (0, b.Z)(fi().DPCStandingsGrid, !P && fi().NoData) },
+            { className: (0, b.Z)(Ei().DPCStandingsGrid, !P && Ei().NoData) },
             o.createElement(
               "div",
-              { className: fi().GridMain, style: { width: k, height: 40 + k } },
+              { className: Ei().GridMain, style: { width: k, height: 40 + k } },
               o.createElement(
                 "div",
-                { className: fi().Header },
+                { className: Ei().Header },
                 (0, E.Jr)("#dpc_grid")
               ),
               o.createElement(
                 "div",
-                { className: fi().GridContainer },
+                { className: Ei().GridContainer },
                 o.createElement(
                   "div",
-                  { className: fi().GridBody },
+                  { className: Ei().GridBody },
                   (0, Wr.bE)(-1, f.length - 1).map(function (e) {
                     var t = -1 == e,
                       n = e == f.length - 1,
                       a = t ? 0 : f[e];
                     return o.createElement(
                       "div",
-                      { className: fi().GridRow, key: "r".concat(e) },
+                      { className: Ei().GridRow, key: "r".concat(e) },
                       (0, Wr.bE)(-1, f.length - 1).map(function (s) {
                         var l = -1 == s,
                           d = s == f.length - 1,
@@ -30786,14 +30953,14 @@
                             rr.RL,
                             {
                               key: "c".concat(s),
-                              className: fi().LinkWrapper,
+                              className: Ei().LinkWrapper,
                               condition: null != v,
                               to: w,
                             },
                             o.createElement(
                               "div",
                               {
-                                className: fi().GridCell,
+                                className: Ei().GridCell,
                                 onMouseEnter: function () {
                                   return c({
                                     nRow: e,
@@ -30834,7 +31001,7 @@
                                 T &&
                                 o.createElement(
                                   "div",
-                                  { className: fi().Record },
+                                  { className: Ei().Record },
                                   T
                                 ),
                               !t &&
@@ -30844,7 +31011,7 @@
                                 S &&
                                 o.createElement(
                                   "div",
-                                  { className: fi().Date },
+                                  { className: Ei().Date },
                                   S
                                 ),
                               !t &&
@@ -30852,10 +31019,10 @@
                                 C &&
                                 o.createElement(
                                   "div",
-                                  { className: fi().GridMatch },
+                                  { className: Ei().GridMatch },
                                   o.createElement(
                                     "div",
-                                    { className: fi().Live },
+                                    { className: Ei().Live },
                                     (0, E.Jr)("#dpc_live")
                                   )
                                 )
@@ -30870,12 +31037,12 @@
                   o.createElement(
                     "div",
                     {
-                      className: fi().RowHighlightContainer,
+                      className: Ei().RowHighlightContainer,
                       style: { height: 56 * (f.length + 1), right: 0 },
                     },
                     A &&
                       o.createElement("div", {
-                        className: fi().RowHighlight,
+                        className: Ei().RowHighlight,
                         style: {
                           top: 56 * (l.nRow + 1),
                           opacity: l.nRow >= 0 ? 1 : 0,
@@ -30891,12 +31058,12 @@
                   o.createElement(
                     "div",
                     {
-                      className: fi().ColumnHighlightContainer,
+                      className: Ei().ColumnHighlightContainer,
                       style: { width: 56 * (f.length + 1), top: 0 },
                     },
                     M &&
                       o.createElement("div", {
-                        className: fi().ColumnHighlight,
+                        className: Ei().ColumnHighlight,
                         style: {
                           left: 56 * (l.nColumn + 1),
                           opacity: l.nColumn >= 0 ? 1 : 0,
@@ -30913,15 +31080,15 @@
             e.bShowLegend &&
               o.createElement(
                 "div",
-                { className: fi().LegendContainer },
+                { className: Ei().LegendContainer },
                 o.createElement(
                   "div",
-                  { className: fi().LegendCenter },
+                  { className: Ei().LegendCenter },
                   o.createElement(
                     "div",
-                    { className: fi().LegendItem },
+                    { className: Ei().LegendItem },
                     o.createElement("div", {
-                      className: fi().ColorSquare,
+                      className: Ei().ColorSquare,
                       style: {
                         background: "linear-gradient( "
                           .concat(C, "30, ")
@@ -30931,16 +31098,16 @@
                     }),
                     o.createElement(
                       "div",
-                      { className: fi().Description },
+                      { className: Ei().Description },
                       (0, E.Jr)("#dpc_win")
                     )
                   ),
                   G &&
                     o.createElement(
                       "div",
-                      { className: fi().LegendItem },
+                      { className: Ei().LegendItem },
                       o.createElement("div", {
-                        className: fi().ColorSquare,
+                        className: Ei().ColorSquare,
                         style: {
                           background: "linear-gradient( "
                             .concat(B, "30, ")
@@ -30950,15 +31117,15 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: fi().Description },
+                        { className: Ei().Description },
                         (0, E.Jr)("#dpc_draw")
                       )
                     ),
                   o.createElement(
                     "div",
-                    { className: fi().LegendItem },
+                    { className: Ei().LegendItem },
                     o.createElement("div", {
-                      className: fi().ColorSquare,
+                      className: Ei().ColorSquare,
                       style: {
                         background: "linear-gradient( "
                           .concat(w, "30, ")
@@ -30968,7 +31135,7 @@
                     }),
                     o.createElement(
                       "div",
-                      { className: fi().Description },
+                      { className: Ei().Description },
                       (0, E.Jr)("#dpc_loss")
                     )
                   )
@@ -30976,11 +31143,11 @@
               )
           );
         }),
-        bi = n(54969),
-        Ei = n.n(bi),
-        yi = n(71793),
-        Ti = n.n(yi),
-        Si = (0, d.Pi)(function (e) {
+        Ti = n(54969),
+        Si = n.n(Ti),
+        Ci = n(71793),
+        wi = n.n(Ci),
+        Bi = (0, d.Pi)(function (e) {
           var t,
             n,
             a,
@@ -31063,15 +31230,15 @@
             "div",
             {
               className: (0, b.Z)(
-                Ti().DPCStandingsTeamList,
-                !h && Ti().NoData,
-                e.bNarrow && Ti().Narrow
+                wi().DPCStandingsTeamList,
+                !h && wi().NoData,
+                e.bNarrow && wi().Narrow
               ),
             },
             o.createElement(
               "div",
-              { className: Ti().Teams },
-              o.createElement(Ci, {
+              { className: wi().Teams },
+              o.createElement(Ni, {
                 key: "".concat(e.eDivision, "_").concat(e.eRegion, "_header"),
                 bHeader: !0,
                 nLeagueID: l.nLeagueID,
@@ -31080,7 +31247,7 @@
                 bNarrow: e.bNarrow,
               }),
               g.map(function (t) {
-                return o.createElement(Ci, {
+                return o.createElement(Ni, {
                   key: ""
                     .concat(e.eDivision, "_")
                     .concat(e.eRegion, "_")
@@ -31116,7 +31283,7 @@
                         ? null
                         : o.createElement("div", {
                             key: "h".concat(t, "_").concat(n),
-                            className: Ti().HighlightOverlay,
+                            className: wi().HighlightOverlay,
                             style: {
                               background: "linear-gradient( "
                                 .concat(e.strColor, "33, ")
@@ -31134,16 +31301,16 @@
               e.bShowLegend &&
               o.createElement(
                 "div",
-                { className: Ti().LegendContainer },
+                { className: wi().LegendContainer },
                 o.createElement(
                   "div",
-                  { className: Ti().LegendCenter },
+                  { className: wi().LegendCenter },
                   e.arrHighlights.map(function (e, t) {
                     return o.createElement(
                       "div",
-                      { key: "hl".concat(t), className: Ti().LegendItem },
+                      { key: "hl".concat(t), className: wi().LegendItem },
                       o.createElement("div", {
-                        className: Ti().ColorSquare,
+                        className: wi().ColorSquare,
                         style: {
                           background: "linear-gradient( "
                             .concat(e.strColor, "30, ")
@@ -31153,7 +31320,7 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: Ti().Description },
+                        { className: wi().Description },
                         (0, E.Jr)(
                           p || !e.strDescriptionInProgress
                             ? e.strDescription
@@ -31166,7 +31333,7 @@
               )
           );
         }),
-        Ci = (0, d.Pi)(function (e) {
+        Ni = (0, d.Pi)(function (e) {
           var t = Uo(),
             n = ar.f.Get().GetSpoilerBlockState(t) == ir.rE.BLOCKED,
             a = ar.f
@@ -31176,33 +31343,33 @@
           return e.bHeader
             ? o.createElement(
                 "div",
-                { className: (0, b.Z)(Ti().DPCStandingsTeam, Ti().Header) },
+                { className: (0, b.Z)(wi().DPCStandingsTeam, wi().Header) },
                 o.createElement(
                   "div",
-                  { className: Ti().Standing },
+                  { className: wi().Standing },
                   (0, E.Jr)("#dpc_rank")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ti().TeamName },
+                  { className: wi().TeamName },
                   (0, E.Jr)("#dpc_team")
                 ),
                 e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().WinsLosses },
+                    { className: wi().WinsLosses },
                     (0, E.Jr)("#dpc_record")
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().Wins },
+                    { className: wi().Wins },
                     (0, E.Jr)("#dpc_wins")
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().Losses },
+                    { className: wi().Losses },
                     (0, E.Jr)("#dpc_losses")
                   )
               )
@@ -31210,46 +31377,46 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    Ti().DPCStandingsTeam,
-                    e.bNarrow && Ti().Narrow
+                    wi().DPCStandingsTeam,
+                    e.bNarrow && wi().Narrow
                   ),
                 },
                 o.createElement(
                   "div",
-                  { className: Ti().Standing },
+                  { className: wi().Standing },
                   n ? "" : (0, Wr.jc)(null == a ? void 0 : a.standing)
                 ),
                 o.createElement(Tr, {
-                  className: Ti().TeamLogo,
+                  className: wi().TeamLogo,
                   nTeamID: e.nTeamID,
                   nSize: 32,
                 }),
                 o.createElement(
                   "div",
-                  { className: Ti().TeamName },
+                  { className: wi().TeamName },
                   null == r ? void 0 : r.name
                 ),
                 e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().WinsLosses },
+                    { className: wi().WinsLosses },
                     n || !a ? "" : "".concat(a.wins, " - ").concat(a.losses)
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().Wins },
+                    { className: wi().Wins },
                     n ? "" : null == a ? void 0 : a.wins
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: Ti().Losses },
+                    { className: wi().Losses },
                     n ? "" : null == a ? void 0 : a.losses
                   )
               );
         }),
-        wi = (0, d.Pi)(function (e) {
+        Ii = (0, d.Pi)(function (e) {
           var t,
             n = Uo(),
             a = ar.f
@@ -31284,15 +31451,15 @@
                   }).length) > 0;
           return o.createElement(
             "div",
-            { className: Ei().DPCStandingsRoundRobin },
+            { className: Si().DPCStandingsRoundRobin },
             e.bShowHeader &&
-              o.createElement("div", { className: Ei().Title }, (0, E.Jr)(s)),
+              o.createElement("div", { className: Si().Title }, (0, E.Jr)(s)),
             o.createElement(
               "div",
-              { className: Ei().Standings },
+              { className: Si().Standings },
               c &&
                 e.bShowList &&
-                o.createElement(Si, {
+                o.createElement(Bi, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
                   eDivision: e.eDivision,
@@ -31302,7 +31469,7 @@
                 }),
               c &&
                 e.bShowGrid &&
-                o.createElement(vi, {
+                o.createElement(yi, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
                   eDivision: e.eDivision,
@@ -31315,17 +31482,17 @@
               (0, Wr.bE)(0, l - 1).map(function (t) {
                 return o.createElement(
                   "div",
-                  { key: t, className: Ei().Tiebreakers },
+                  { key: t, className: Si().Tiebreakers },
                   o.createElement(
                     "div",
-                    { className: Ei().Title },
+                    { className: Si().Title },
                     (0, E.Jr)("#dpc_tiebreakers")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ei().Standings },
+                    { className: Si().Standings },
                     e.bShowList &&
-                      o.createElement(Si, {
+                      o.createElement(Bi, {
                         ePhase: e.ePhase,
                         eRegion: e.eRegion,
                         eDivision: e.eDivision,
@@ -31334,7 +31501,7 @@
                         nTiebreak: t,
                       }),
                     e.bShowGrid &&
-                      o.createElement(vi, {
+                      o.createElement(yi, {
                         ePhase: e.ePhase,
                         eRegion: e.eRegion,
                         eDivision: e.eDivision,
@@ -31346,7 +31513,7 @@
               })
           );
         }),
-        Bi = (0, d.Pi)(function () {
+        Di = (0, d.Pi)(function () {
           var e = Uo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
@@ -31407,10 +31574,10 @@
             });
           return o.createElement(
             "div",
-            { className: gi().DPCStandingsPageLeague },
+            { className: vi().DPCStandingsPageLeague },
             o.createElement(
               "div",
-              { className: gi().Header },
+              { className: vi().Header },
               o.createElement(er, {
                 options: r,
                 selectedOption: c,
@@ -31455,7 +31622,7 @@
               })
             ),
             a == ir.BY.OVERALL &&
-              o.createElement(wi, {
+              o.createElement(Ii, {
                 ePhase: a,
                 eDivision: d,
                 eRegion: c,
@@ -31467,14 +31634,14 @@
                 bShowTiebreakers: !0,
               }),
             a == ir.BY.RESULTS &&
-              o.createElement(pi, {
+              o.createElement(hi, {
                 eDivision: d,
                 eRegion: c,
                 bStyleTopThree: !1,
               })
           );
         }),
-        Ni = (0, d.Pi)(function () {
+        Ri = (0, d.Pi)(function () {
           for (
             var e = Uo(),
               t = (0, p.k6)(),
@@ -31554,10 +31721,10 @@
             : ir.BY[g] && g != ir.BY.INVALID
             ? o.createElement(
                 "div",
-                { className: gi().DPCStandingsPageMajor },
+                { className: vi().DPCStandingsPageMajor },
                 o.createElement(
                   "div",
-                  { className: gi().Header },
+                  { className: vi().Header },
                   o.createElement(er, {
                     eStyle: ja.NORMAL,
                     options: _,
@@ -31568,7 +31735,7 @@
                   })
                 ),
                 g == ir.BY.WILD_CARD &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.WILD_CARD,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31594,7 +31761,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == ir.BY.GROUP_STAGE &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.GROUP_STAGE,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31607,7 +31774,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == ir.BY.GROUP_A &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.GROUP_A,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31620,7 +31787,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == ir.BY.GROUP_B &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.GROUP_B,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31633,13 +31800,13 @@
                     bShowTiebreakers: !0,
                   }),
                 g == ir.BY.PLAYOFF &&
-                  o.createElement(ci, {
+                  o.createElement(mi, {
                     ePhase: ir.BY.PLAYOFF,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
                   }),
                 g == ir.BY.RESULTS &&
-                  o.createElement(pi, {
+                  o.createElement(hi, {
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
                     bStyleTopThree: !0,
@@ -31655,7 +31822,7 @@
                 },
               });
         }),
-        Ii = (0, d.Pi)(function () {
+        Li = (0, d.Pi)(function () {
           var e = Uo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
@@ -31694,10 +31861,10 @@
                 })
               : o.createElement(
                   "div",
-                  { className: gi().DPCStandingsPageTIQualifiers },
+                  { className: vi().DPCStandingsPageTIQualifiers },
                   o.createElement(
                     "div",
-                    { className: gi().Header },
+                    { className: vi().Header },
                     o.createElement(er, {
                       eStyle: ja.NORMAL,
                       options: a,
@@ -31713,7 +31880,7 @@
                       },
                     })
                   ),
-                  o.createElement(ci, {
+                  o.createElement(mi, {
                     ePhase: ir.BY.PLAYOFF,
                     eRegion: r,
                     eDivision: ir.sd.UNSET,
@@ -31727,7 +31894,7 @@
                 ),
               });
         }),
-        Di = (0, d.Pi)(function () {
+        Ai = (0, d.Pi)(function () {
           var e = Uo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
@@ -31765,10 +31932,10 @@
                 })
               : o.createElement(
                   "div",
-                  { className: gi().DPCStandingsPageLeagueFinals },
+                  { className: vi().DPCStandingsPageLeagueFinals },
                   o.createElement(
                     "div",
-                    { className: gi().Header },
+                    { className: vi().Header },
                     o.createElement(er, {
                       eStyle: ja.NORMAL,
                       options: a,
@@ -31784,7 +31951,7 @@
                       },
                     })
                   ),
-                  o.createElement(ci, {
+                  o.createElement(mi, {
                     ePhase: ir.BY.PLAYOFF,
                     eRegion: r,
                     eDivision: ir.sd.UNSET,
@@ -31798,7 +31965,7 @@
                 ),
               });
         }),
-        Ri = (0, d.Pi)(function () {
+        Mi = (0, d.Pi)(function () {
           var e = Uo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
@@ -31812,6 +31979,12 @@
               },
             ],
             r = [
+              e === ir._A.INTERNATIONAL_2022
+                ? {
+                    value: ir.BY.DPC_POINT_STANDINGS,
+                    strLabel: "#dpc_point_standings",
+                  }
+                : void 0,
               { value: ir.BY.GROUP_A, strLabel: "#dpc_group_a" },
               { value: ir.BY.GROUP_B, strLabel: "#dpc_group_b" },
               { value: ir.BY.PLAYOFF, strLabel: "#dpc_playoff" },
@@ -31823,10 +31996,10 @@
             : ir.BY[i] && i != ir.BY.INVALID
             ? o.createElement(
                 "div",
-                { className: gi().DPCStandingsPageMajor },
+                { className: vi().DPCStandingsPageMajor },
                 o.createElement(
                   "div",
-                  { className: gi().Header },
+                  { className: vi().Header },
                   o.createElement(er, {
                     eStyle: ja.NORMAL,
                     options: r,
@@ -31836,8 +32009,9 @@
                     },
                   })
                 ),
+                i == ir.BY.DPC_POINT_STANDINGS && o.createElement(ei, null),
                 i == ir.BY.GROUP_A &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.GROUP_A,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31850,7 +32024,7 @@
                     bShowTiebreakers: !0,
                   }),
                 i == ir.BY.GROUP_B &&
-                  o.createElement(wi, {
+                  o.createElement(Ii, {
                     ePhase: ir.BY.GROUP_B,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
@@ -31863,27 +32037,31 @@
                     bShowTiebreakers: !0,
                   }),
                 i == ir.BY.PLAYOFF &&
-                  o.createElement(ci, {
+                  o.createElement(mi, {
                     ePhase: ir.BY.PLAYOFF,
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
                   }),
                 i == ir.BY.RESULTS &&
-                  o.createElement(pi, {
+                  o.createElement(hi, {
                     eRegion: ir.dO.UNSET,
                     eDivision: ir.sd.UNSET,
                     bStyleTopThree: !0,
                   })
               )
+            : new Date().getTime() < 16661088e5
+            ? o.createElement(p.l_, {
+                to: u._.dpc_standings((0, rr.B2)(e), (0, rr.o5)(ir.BY.GROUP_A)),
+              })
             : o.createElement(p.l_, {
                 to: u._.dpc_standings((0, rr.B2)(e), (0, rr.o5)(ir.BY.PLAYOFF)),
               });
         }),
-        Li = (0, d.Pi)(function () {
+        Gi = (0, d.Pi)(function () {
           return o.createElement(
             "div",
             {
-              className: gi().DPCStandingsPage,
+              className: vi().DPCStandingsPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -31891,179 +32069,12 @@
                 ),
               },
             },
-            o.createElement(Bi, null),
             o.createElement(Di, null),
-            o.createElement(Ni, null),
-            o.createElement(Ii, null),
+            o.createElement(Ai, null),
             o.createElement(Ri, null),
+            o.createElement(Li, null),
+            o.createElement(Mi, null),
             o.createElement(Jr, null)
-          );
-        }),
-        Ai = n(7773),
-        Mi = n.n(Ai),
-        Gi = (0, d.Pi)(function () {
-          var e = Uo(),
-            t = ar.f.Get().GetEventInfo(e),
-            n = (0, o.useState)(0),
-            a = n[0],
-            r = n[1],
-            i = ar.f
-              .Get()
-              .GetDPCStandings(null == t ? void 0 : t.registration_period);
-          return o.createElement(
-            "div",
-            { className: Mi().DPCTIStandingsPage },
-            0 == (null == i ? void 0 : i.results.length) &&
-              o.createElement(
-                "div",
-                { className: Mi().NoResults },
-                (0, E.Jr)("#dpc_ti_results_empty")
-              ),
-            null == i
-              ? void 0
-              : i.results.map(function (t) {
-                  var n = a == t.team_id;
-                  return o.createElement(
-                    "div",
-                    {
-                      key: "".concat(t.team_id),
-                      className: Mi().TeamEntry,
-                      onClick: function () {
-                        return r(a == t.team_id ? 0 : t.team_id);
-                      },
-                    },
-                    o.createElement(
-                      "div",
-                      { className: Mi().TeamBody },
-                      o.createElement(Tr, {
-                        nTeamID: t.team_id,
-                        nSize: 48,
-                        bTooltip: !0,
-                      }),
-                      o.createElement(
-                        "div",
-                        { className: Mi().TeamName },
-                        t.team_name
-                      ),
-                      o.createElement(
-                        "div",
-                        { className: Mi().Points },
-                        t.total_points
-                      )
-                    ),
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, b.Z)(
-                          Mi().TeamExpansion,
-                          n && Mi().Expanded
-                        ),
-                      },
-                      t.league_results.map(function (a) {
-                        var r = n
-                          ? ar.f.Get().GetLeagueData(e, a.league_id)
-                          : void 0;
-                        if (2 == a.audit_action) {
-                          var i = n
-                            ? ar.f.Get().GetDPCPlayerInfo(a.audit_data)
-                            : void 0;
-                          return o.createElement(
-                            "div",
-                            {
-                              key: "p15_".concat(a.timestamp),
-                              className: Mi().LeagueResult,
-                            },
-                            o.createElement(pr(), {
-                              className: Mi().Timestamp,
-                              date: 1e3 * a.timestamp,
-                              format: "MMM DD YYYY",
-                            }),
-                            o.createElement(
-                              "div",
-                              { className: Mi().PlayerLeft },
-                              (0, E.Jr)("#dpc_player_left"),
-                              o.createElement(
-                                "div",
-                                { className: Mi().PlayerName },
-                                null == i ? void 0 : i.name
-                              )
-                            ),
-                            o.createElement(
-                              "div",
-                              { className: Mi().PointPenalty },
-                              (0, E.Jr)("#dpc_penalty_15pct")
-                            )
-                          );
-                        }
-                        return 20 == a.audit_action
-                          ? o.createElement(
-                              "div",
-                              {
-                                key: "p20_".concat(a.timestamp),
-                                className: Mi().LeagueResult,
-                              },
-                              o.createElement(pr(), {
-                                className: Mi().Timestamp,
-                                date: 1e3 * a.timestamp,
-                                format: "MMM DD YYYY",
-                              }),
-                              o.createElement(
-                                "div",
-                                { className: Mi().PlayerLeft },
-                                (0, E.Jr)("#dpc_penalty")
-                              ),
-                              o.createElement(
-                                "div",
-                                { className: Mi().PointPenalty },
-                                (0, E.Jr)("#dpc_penalty_20pct")
-                              )
-                            )
-                          : a.league_id
-                          ? o.createElement(
-                              "div",
-                              {
-                                key: "l_"
-                                  .concat(t.team_id, "_")
-                                  .concat(a.timestamp),
-                                className: Mi().LeagueResult,
-                              },
-                              o.createElement(pr(), {
-                                className: Mi().Timestamp,
-                                date: 1e3 * a.timestamp,
-                                format: "MMM DD YYYY",
-                              }),
-                              o.createElement("div", {
-                                className: Mi().LeagueLogo,
-                                style: {
-                                  backgroundImage: "url( "
-                                    .concat(
-                                      h.Y.CDN_URL,
-                                      "apps/dota2/images/leagues/"
-                                    )
-                                    .concat(a.league_id, "/images/image_8.png"),
-                                },
-                              }),
-                              o.createElement(
-                                "div",
-                                { className: Mi().LeaguePlace },
-                                (0, Wr.jc)(a.standing)
-                              ),
-                              o.createElement(
-                                "div",
-                                { className: Mi().LeagueName },
-                                (0, E.Jr)(null == r ? void 0 : r.info.name)
-                              ),
-                              o.createElement(
-                                "div",
-                                { className: Mi().Points },
-                                a.points
-                              )
-                            )
-                          : null;
-                      })
-                    )
-                  );
-                })
           );
         }),
         ki = n(74730),
@@ -35950,7 +35961,7 @@
               { className: (0, b.Z)(Lo().TeamLists, !s && Lo().NoData) },
               Object.values(ir.dO).map(function (e) {
                 return ar.f.Get().BEventHasRegion(a, e)
-                  ? o.createElement(wi, {
+                  ? o.createElement(Ii, {
                       key: e,
                       ePhase: t,
                       eRegion: e,
@@ -37639,7 +37650,7 @@
                       ":strPhase?",
                       ":strSelection?"
                     ),
-                    component: Li,
+                    component: Gi,
                   }),
                   o.createElement(Lr, {
                     path: u._.dpc_schedule(
@@ -37655,7 +37666,7 @@
                   }),
                   o.createElement(Lr, {
                     path: u._.dpc_ti_standings(":strEvent?"),
-                    component: Gi,
+                    component: ei,
                   }),
                   o.createElement(p.l_, { from: u._.dpc_root(), to: v })
                 ),
@@ -63362,7 +63373,8 @@
             (e[(e.GROUP_B = 4)] = "GROUP_B"),
             (e[(e.OVERALL = 5)] = "OVERALL"),
             (e[(e.PLAYOFF = 6)] = "PLAYOFF"),
-            (e[(e.RESULTS = 7)] = "RESULTS");
+            (e[(e.RESULTS = 7)] = "RESULTS"),
+            (e[(e.DPC_POINT_STANDINGS = 8)] = "DPC_POINT_STANDINGS");
         })(_ || (_ = {})),
         (function (e) {
           (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
@@ -64255,6 +64267,8 @@
             return i.BY.PLAYOFF;
           case "results":
             return i.BY.RESULTS;
+          case "tistandings":
+            return i.BY.DPC_POINT_STANDINGS;
         }
         return i.BY.INVALID;
       }
@@ -64274,6 +64288,8 @@
             return "playoff";
           case i.BY.RESULTS:
             return "results";
+          case i.BY.DPC_POINT_STANDINGS:
+            return "tistandings";
         }
         return "";
       }
