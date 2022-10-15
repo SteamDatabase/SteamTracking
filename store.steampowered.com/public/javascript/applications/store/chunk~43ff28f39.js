@@ -22028,7 +22028,8 @@
               nAccumScrollDown: 0,
             }),
             (this.m_refControlBar = d.createRef()),
-            (this.m_cancelSignal = s().CancelToken.source());
+            (this.m_cancelSignal = s().CancelToken.source()),
+            (this.m_prevLocation = "");
         }
         componentDidMount() {
           this.InitEventCalendarStore(),
@@ -22068,11 +22069,23 @@
             const e = we
               .Get()
               .UpdateLocation(() => this.props.history, this.props.location);
-            (("desktop_navigation" != e && this.state.bControlBarIsCollapsed) ||
-              ("desktop_navigation" == e &&
-                !this.state.bControlBarIsCollapsed &&
-                Wt())) &&
-              this.ToggleControlBarCollapsed();
+            if (
+              ((("desktop_navigation" != e &&
+                this.state.bControlBarIsCollapsed) ||
+                ("desktop_navigation" == e &&
+                  !this.state.bControlBarIsCollapsed &&
+                  Wt())) &&
+                this.ToggleControlBarCollapsed(),
+              U.De.IN_MOBILE_WEBVIEW && "linux" == U.De.PLATFORM)
+            ) {
+              const e = JSON.stringify(this.props.location);
+              if (e != this.m_prevLocation) {
+                this.m_prevLocation = e;
+                const t = Reflect.get(window, "ReactNativeWebView");
+                (null == t ? void 0 : t.postMessage) &&
+                  (null == t || t.postMessage("RefreshNavigationState"));
+              }
+            }
           }
         }
         componentWillUnmount() {
