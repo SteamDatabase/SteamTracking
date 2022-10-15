@@ -32008,8 +32008,20 @@
             n = (0, p.UO)(),
             a = [
               {
+                nMin: 1,
+                nMax: 4,
+                strColor: "#117C30",
+                strDescription: "#dpc_advance_to_upper_bracket",
+              },
+              {
+                nMin: 5,
+                nMax: 8,
+                strColor: "#929820",
+                strDescription: "#dpc_advance_to_lower_bracket",
+              },
+              {
                 nMin: 9,
-                nMax: 9,
+                nMax: 10,
                 strColor: "#922820",
                 strDescription: "#dpc_eliminated",
                 strDescriptionInProgress: "#dpc_elimination_risk",
