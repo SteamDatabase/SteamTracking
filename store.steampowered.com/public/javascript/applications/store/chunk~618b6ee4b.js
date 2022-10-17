@@ -11247,11 +11247,12 @@
             a.createElement(
               "div",
               {
-                className: (0, D.Z)(
-                  rt().SaleSectionContainer,
-                  S().SaleSectionTabsRow,
-                  "SaleSectionCtn_Trgt"
-                ),
+                className: (0, D.Z)({
+                  [rt().SaleSectionContainer]: !0,
+                  [S().SaleSectionTabsRow]: !0,
+                  SaleSectionCtn_Trgt: !0,
+                  SaleTabCtn: !0,
+                }),
                 ref: c,
               },
               l.map((e) =>
