@@ -9627,6 +9627,7 @@
       n.d(t, {
         Nh: () => h,
         Pe: () => b,
+        Q5: () => f,
         Qr: () => g,
         Zb: () => _,
         _4: () => E,
@@ -9645,7 +9646,7 @@
         m = n(90666),
         u = n(5525),
         p = n(22925);
-      const h = 12;
+      const h = 6;
       class _ {
         constructor() {
           (this.m_bLoadedDuringInit = !1),
@@ -9666,9 +9667,10 @@
         }
         BIsDoorOpened(e) {
           return (
+            null != e &&
+            null != e &&
             !!this.m_userData &&
-            e < this.m_userData.length &&
-            this.m_userData[e].opened
+            Boolean(e < this.m_userData.length && this.m_userData[e].opened)
           );
         }
         BCanUserOpenDoor(e) {
@@ -9720,6 +9722,14 @@
               this.GetDoorStateChangeCallback(t).Dispatch(n));
           }
           this.RecomputeState();
+        }
+        SetInMemorySpecificDoorState(e, t) {
+          e < h
+            ? this.m_userData[e].opened != t &&
+              ((this.m_userData[e].opened = t),
+              this.GetDoorStateChangeCallback(e).Dispatch(t),
+              this.RecomputeState())
+            : console.error("CDoorStore: Wrong door being set " + e);
         }
         RecomputeState() {
           var e;
@@ -9943,8 +9953,12 @@
       function b(e) {
         _.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
+      function f(e, t) {
+        _.Get().SetInMemorySpecificDoorState(e, t);
+      }
       (0, a.gn)([i.LO], _.prototype, "m_bIsAnyDoorOpened", void 0),
         (0, a.gn)([i.LO], _.prototype, "m_nHighestDoorOpened", void 0),
+        (0, a.gn)([d.ak], _.prototype, "BIsDoorOpened", null),
         (0, a.gn)([d.ak], _.prototype, "OpenDoor", null);
     },
     35577: (e, t, n) => {
@@ -17516,21 +17530,40 @@
           : null;
       }
       function R(e) {
-        const { eventModel: t } = e,
-          [n, a] = (0, s.useState)(!1),
-          r = (0, T.wB)();
+        var t;
+        const { eventModel: n } = e,
+          [a, r] = (0, s.useState)(!1),
+          i = (0, T.wB)();
         if (
           ((0, s.useEffect)(() => {
             T.Zb.Get()
               .LoadDoorData()
-              .then(() => a(!0));
+              .then(() => r(!0));
           }, []),
-          !n)
+          !a)
         )
           return null;
-        const i = [];
-        for (let e = -1; e <= T.Zb.Get().GetMaxDoor(); ++e)
-          i.push({ label: "Doors Opened " + (e + 1), data: e });
+        const o = n.GetSaleSectionsByType("quiz"),
+          c = [],
+          u =
+            1 == (null == o ? void 0 : o.length) &&
+            "scenario" == o[0].quiz.quiz_type &&
+            (null === (t = o[0].quiz.answer_categories) || void 0 === t
+              ? void 0
+              : t.length) > 0;
+        if (u)
+          c.push({ label: "State: Take the Quiz", data: -1 }),
+            c.push(
+              ...o[0].quiz.answer_categories.map((e) => ({
+                label: "State: " + e.category_name,
+                data: e.door_index,
+              }))
+            );
+        else {
+          const e = T.Zb.Get().GetMaxDoor();
+          for (let t = -1; t <= e; ++t)
+            c.push({ label: "Doors Opened " + (t + 1), data: t });
+        }
         return s.createElement(
           s.Fragment,
           null,
@@ -17561,9 +17594,15 @@
               y.DropDownScroll,
               y.ValveOnlyBackground
             ),
-            rgOptions: i,
-            selectedOption: r,
-            onChange: (e) => (0, T.Pe)(e.data),
+            rgOptions: c,
+            selectedOption: i,
+            label: "Minigame States:",
+            onChange: (e) => {
+              u
+                ? ((0, T.Pe)(-1),
+                  -1 != e.data && ((0, T.Q5)(0, !0), (0, T.Q5)(e.data, !0)))
+                : (0, T.Pe)(e.data);
+            },
           })
         );
       }

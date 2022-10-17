@@ -1323,7 +1323,7 @@
           { className: v },
           o.createElement(
             "div",
-            { className: V().QuestionCtn },
+            { className: (0, M.Z)(V().QuestionCtn, "questionCtn") },
             o.createElement(Y, { accountID: l.posterAccountID }),
             o.createElement(
               "div",

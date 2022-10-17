@@ -263,6 +263,7 @@ ${COMMUNITY_BASE_URL}questions/${VANITY_ID}/view/${globalQandASessionID}
 ${COMMUNITY_BASE_URL}sale/ajaxdiscounteventdetails
 ${COMMUNITY_BASE_URL}sale/ajaxdiscountevents
 ${COMMUNITY_BASE_URL}sale/ajaxgetcategoriesbytag
+${COMMUNITY_BASE_URL}sale/ajaxgetcommunityitemsfordrops
 ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetactiveoptins
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetoptintagids
