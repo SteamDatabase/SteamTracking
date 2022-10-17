@@ -1493,9 +1493,9 @@
     },
     55989: (e, t, n) => {
       "use strict";
-      n.d(t, { Z: () => i });
+      n.d(t, { Z: () => s });
       var r = n(70655);
-      class i extends class {
+      class i {
         GetObject(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             try {
@@ -1511,7 +1511,8 @@
             return this.StoreString(e, JSON.stringify(t));
           });
         }
-      } {
+      }
+      class s extends i {
         GetString(e) {
           return Promise.resolve(localStorage.getItem(e));
         }
@@ -21369,6 +21370,7 @@
         StoreGameAdminRoot: () => "/admin/game/",
         StoreAdminRoot: () => "/admin/store/",
         AppLandingPage: (e = ":appid") => `/apps/landing/${e}`,
+        AppCommunityItems: (e = ":appid") => `/apps/communityitems/${e}`,
       };
       function s() {
         let e = document.createElement("a");
@@ -21734,9 +21736,13 @@
           ]).then(n.bind(n, 62491))
         ),
         O = o.lazy(() =>
-          Promise.all([n.e(7940), n.e(3069), n.e(9060), n.e(8974)]).then(
-            n.bind(n, 68400)
-          )
+          Promise.all([
+            n.e(7940),
+            n.e(3069),
+            n.e(2120),
+            n.e(9060),
+            n.e(8974),
+          ]).then(n.bind(n, 48366))
         );
       function F(e) {
         return o.createElement(
@@ -21793,6 +21799,10 @@
                     }),
                     o.createElement(b.AW, {
                       path: r.Z.AppLandingPage(),
+                      component: O,
+                    }),
+                    o.createElement(b.AW, {
+                      path: r.Z.AppCommunityItems(),
                       component: O,
                     }),
                     o.createElement(b.AW, {
@@ -22119,7 +22129,7 @@
         "./main_tchinese.json": [49272, 2942],
         "./main_thai.json": [46815, 7890],
         "./main_turkish.json": [97951, 9663],
-        "./main_ukrainian.json": [85990, 2848],
+        "./main_ukrainian.json": [50538, 2848],
         "./main_vietnamese.json": [79280, 8168],
       };
       function i(e) {
@@ -22162,7 +22172,7 @@
         "./main_tchinese.json": [49272, 2942],
         "./main_thai.json": [46815, 7890],
         "./main_turkish.json": [97951, 9663],
-        "./main_ukrainian.json": [85990, 2848],
+        "./main_ukrainian.json": [50538, 2848],
         "./main_vietnamese.json": [79280, 8168],
       };
       function i(e) {
