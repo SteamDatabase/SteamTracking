@@ -3909,11 +3909,12 @@ html.responsive.touch
   position: absolute;
   bottom: 0px;
 }
-.salequiz_answerBox_3Pax1 {
-  padding-top: 1em;
-}
 @media screen and (max-width: 940px) {
   .salequiz_description_5YDkS {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+  .salequiz_description2_h6YBi {
     padding-left: 0em;
     padding-right: 0em;
   }
