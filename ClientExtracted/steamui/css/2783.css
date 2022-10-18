@@ -14167,15 +14167,54 @@ p.appactivitydlc_Tooltip_3MRzL:first-child {
   margin-top: 4px;
 }
 .appactivitydlc_CarouselItem_78Pwy {
-  display: block;
-  width: 222px;
-  box-shadow: 2px 2px 6px #000000ac;
+  display: flex;
+}
+.appactivitydlc_CarouselItem_78Pwy,
+.appactivitydlc_CarouselItem_78Pwy:active,
+.appactivitydlc_CarouselItem_78Pwy:hover,
+.appactivitydlc_CarouselItem_78Pwy:visited {
+  text-decoration: none;
+}
+.appactivitydlc_CarouselItem_78Pwy.appactivitydlc_FillParent_-q2cv {
+  flex: 0 0 100%;
 }
 .appactivitydlc_CarouselItem_78Pwy:not(:first-child) {
   margin-left: 10px;
 }
 .appactivitydlc_CarouselItem_78Pwy:last-child {
   margin-right: 10px;
+}
+.appactivitydlc_CarouselItem_78Pwy .appactivitydlc_CarouselImage_3gB_g {
+  width: 222px;
+  box-shadow: 2px 2px 6px #000000ac;
+  flex-shrink: 0;
+}
+.appactivitydlc_CarouselItem_78Pwy .appactivitydlc_CarouselDescription_1XMxx {
+  margin-top: 8px;
+  margin-left: 18px;
+  max-width: 600px;
+}
+.appactivitydlc_CarouselItem_78Pwy:not(.appactivitydlc_FillParent_-q2cv)
+  .appactivitydlc_CarouselItem_78Pwy
+  .appactivitydlc_CarouselDescription_1XMxx {
+  max-width: 300px;
+}
+.appactivitydlc_CarouselItem_78Pwy
+  .appactivitydlc_CarouselDescription_1XMxx
+  .appactivitydlc_CarouselHeader_3hubF {
+  color: #cacbcd;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.appactivitydlc_CarouselItem_78Pwy
+  .appactivitydlc_CarouselDescription_1XMxx
+  .appactivitydlc_CarouselBody_1M3pi {
+  color: #a0a0a0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .appactivitydlc_CarouselControlsPadding_1V-tj {
   margin-right: 6px;

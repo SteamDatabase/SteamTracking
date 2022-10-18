@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7590679";
+var CLSTAMP = "7591642";
 (() => {
   "use strict";
   var e,
@@ -8,11 +8,11 @@ var CLSTAMP = "7590679";
     n,
     a,
     i = {
-      529: (e, t, n) => {
+      395: (e, t, n) => {
         n.d(t, { B: () => s });
         var a = n(655),
-          i = n(608),
-          r = n(970);
+          i = n(790),
+          r = n(687);
         let o = [
           { index: 0, type: i.eV.OK, category: "action" },
           { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -77,11 +77,11 @@ var CLSTAMP = "7590679";
         (0, a.gn)([r.a], s.prototype, "PollGamepads", null),
           (0, a.gn)([r.a], s.prototype, "OnWindowRegainedFocus", null);
       },
-      608: (e, t, n) => {
+      790: (e, t, n) => {
         n.d(t, { eV: () => a, Rr: () => i, oH: () => c });
         var a,
           i,
-          r = n(86);
+          r = n(735);
         class o {
           constructor(e) {
             this.m_config = e;
@@ -263,7 +263,7 @@ var CLSTAMP = "7590679";
           }
         }
       },
-      777: (e, t, n) => {
+      991: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             let n = e.findIndex(t);
@@ -272,7 +272,7 @@ var CLSTAMP = "7590679";
         }
         n.d(t, { Zf: () => a });
       },
-      970: (e, t, n) => {
+      687: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -287,11 +287,11 @@ var CLSTAMP = "7590679";
         }
         n.d(t, { a: () => a });
       },
-      86: (e, t, n) => {
+      735: (e, t, n) => {
         n.d(t, { pB: () => o, vq: () => c });
         var a = n(655),
-          i = n(777),
-          r = n(970);
+          i = n(991),
+          r = n(687);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -359,7 +359,7 @@ var CLSTAMP = "7590679";
           null
         );
       },
-      816: (e, t, n) => {
+      549: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -466,7 +466,7 @@ var CLSTAMP = "7590679";
     (o.e = (e) =>
       Promise.all(Object.keys(o.f).reduce((t, n) => (o.f[n](e, t), t), []))),
     (o.u = (e) =>
-      "javascript/legacy_web/gamepad.js?contenthash=088de2838aa7e26f6dda"),
+      "javascript/legacy_web/gamepad.js?contenthash=f7ac30f3ea6214bb5642"),
     (o.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=6e6111865655343f0b1a"),
     (o.g = (function () {
@@ -490,12 +490,12 @@ var CLSTAMP = "7590679";
             u < l.length;
             u++
           ) {
-            var p = l[u];
+            var d = l[u];
             if (
-              p.getAttribute("src") == n ||
-              p.getAttribute("data-webpack") == t + i
+              d.getAttribute("src") == n ||
+              d.getAttribute("data-webpack") == t + i
             ) {
-              s = p;
+              s = d;
               break;
             }
           }
@@ -507,7 +507,7 @@ var CLSTAMP = "7590679";
           s.setAttribute("data-webpack", t + i),
           (s.src = n)),
           (e[n] = [a]);
-        var d = (t, a) => {
+        var p = (t, a) => {
             (s.onerror = s.onload = null), clearTimeout(h);
             var i = e[n];
             if (
@@ -519,11 +519,11 @@ var CLSTAMP = "7590679";
               return t(a);
           },
           h = setTimeout(
-            d.bind(null, void 0, { type: "timeout", target: s }),
+            p.bind(null, void 0, { type: "timeout", target: s }),
             12e4
           );
-        (s.onerror = d.bind(null, s.onerror)),
-          (s.onload = d.bind(null, s.onload)),
+        (s.onerror = p.bind(null, s.onerror)),
+          (s.onload = p.bind(null, s.onload)),
           c && document.head.appendChild(s);
       }
     }),
@@ -663,14 +663,14 @@ var CLSTAMP = "7590679";
     })(),
     (() => {
       var e = o(655),
-        t = (o(816), o(311)),
+        t = (o(549), o(311)),
         n = o.n(t),
-        a = o(529);
+        a = o(395);
       function i(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield o
             .e(511)
-            .then(o.bind(o, 246));
+            .then(o.bind(o, 518));
           e(t);
         });
       }
