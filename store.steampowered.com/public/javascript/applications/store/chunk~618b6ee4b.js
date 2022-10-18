@@ -11258,7 +11258,12 @@
           },
           a.createElement(
             Aa.O,
-            { className: S().SaleSectionTabContainer },
+            {
+              className: (0, D.Z)({
+                [S().SaleSectionTabContainer]: !0,
+                SaleSectionTabContainer: !0,
+              }),
+            },
             a.createElement(
               "div",
               {
