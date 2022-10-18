@@ -7855,29 +7855,31 @@
           ]),
           c = (0, a.useMemo)(() => {
             const e = new Array();
-            let t = new Array();
-            for (let n = 0; n < s.length; ++n) {
-              n > 0 && n % 5 == 0 && (e.push(t), (t = new Array()));
-              const o = s[n];
-              t.push(
+            let o = new Array();
+            for (let l = 0; l < s.length; ++l) {
+              l > 0 && l % 5 == 0 && (e.push(o), (o = new Array()));
+              const c = s[l];
+              o.push(
                 I.L7.logged_in
                   ? a.createElement(Wn, {
-                      key: "reward" + n,
+                      key: "reward" + l,
                       section: i,
-                      rewardDef: o,
+                      rewardDef: c,
                       language: r,
+                      eventModel: n,
+                      bIsPreview: t,
                     })
                   : a.createElement(
                       "div",
                       {
-                        key: "hiddenreward" + n,
+                        key: "hiddenreward" + l,
                         className: "reward_hidden_entry",
                       },
                       a.createElement(jn, { section: i })
                     )
               );
             }
-            return t.length > 0 && e.push(t), e;
+            return o.length > 0 && e.push(o), e;
           }, [r, s, i]);
         return l && !I.L7.logged_in
           ? null
@@ -7915,14 +7917,20 @@
       }
       function Wn(e) {
         var t;
-        const { section: n, rewardDef: i, language: r } = e,
-          s = L.LJ.GetELanguageFallback(r),
-          { communityItem: o, bLoaded: l } = (0, On.mo)(
+        const {
+            section: n,
+            rewardDef: i,
+            language: r,
+            eventModel: s,
+            bIsPreview: o,
+          } = e,
+          l = L.LJ.GetELanguageFallback(r),
+          { communityItem: c, bLoaded: d } = (0, On.mo)(
             i.appid,
             i.community_item_type
           ),
-          [c] = (0, vt.SZ)(() => [n.rewards.only_show_gratned_items]);
-        return c && !o
+          [u] = (0, vt.SZ)(() => [n.rewards.only_show_gratned_items]);
+        return u && !c
           ? null
           : a.createElement(
               "div",
@@ -7930,11 +7938,11 @@
               a.createElement(
                 "div",
                 {
-                  className: Boolean(!o)
+                  className: Boolean(!c)
                     ? "reward_visible_entry"
                     : "reward_hidden_entry",
                 },
-                Boolean(!o)
+                Boolean(!c)
                   ? a.createElement(jn, { section: n })
                   : a.createElement(qn, {
                       section: n,
@@ -7949,9 +7957,16 @@
                   a.createElement(
                     "div",
                     { className: "reward_def_desc" },
-                    i.localized_reward_description[r] ||
-                      i.localized_reward_description[s] ||
-                      ""
+                    a.createElement(kt.d, {
+                      text:
+                        i.localized_reward_description[r] ||
+                        i.localized_reward_description[l] ||
+                        "",
+                      partnerEventStore: Dt.j1,
+                      showErrorInfo: o,
+                      event: s,
+                      languageOverride: r,
+                    })
                   )
               )
             );

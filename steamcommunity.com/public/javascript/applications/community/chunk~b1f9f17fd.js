@@ -285,8 +285,6 @@
         DoorOptionsContainer:
           "salesocialsharedisplay_DoorOptionsContainer_cP3hd",
         DoorOption: "salesocialsharedisplay_DoorOption_2syb_",
-        SocialShareButton: "salesocialsharedisplay_SocialShareButton_3bcGB",
-        ShareTooltipContent: "salesocialsharedisplay_ShareTooltipContent_CcuHR",
       };
     },
     31066: (e) => {
@@ -10575,7 +10573,12 @@
                 },
                 a.createElement(
                   "div",
-                  { className: Ga().DoorOptionsContainer },
+                  {
+                    className: (0, G.Z)(
+                      Ga().DoorOptionsContainer,
+                      "DoorOptionsCtn"
+                    ),
+                  },
                   i.social_share.content_options.map((e) =>
                     a.createElement(ka, {
                       key: e.door,
@@ -10613,7 +10616,7 @@
               : void 0;
         return a.createElement(
           "div",
-          { className: Ga().DoorOption },
+          { className: (0, G.Z)(Ga().DoorOption, "DoorLinkedOption") },
           d &&
             a.createElement(tt.d, {
               text: d,
@@ -10624,7 +10627,13 @@
             }),
           a.createElement(
             "div",
-            { className: (0, G.Z)(ln().FlexRowContainer, ln().Centered) },
+            {
+              className: (0, G.Z)(
+                ln().FlexRowContainer,
+                ln().Centered,
+                "SocialBtnsCtn"
+              ),
+            },
             n.map((e) =>
               e.checked
                 ? a.createElement(
@@ -10637,7 +10646,7 @@
                         {
                           className: (0, G.Z)(
                             Ia().TextToolTip,
-                            Ga().ShareTooltipContent
+                            "ShareTooltipContent"
                           ),
                         },
                         (0, k.Xx)(Ma(e.label))
@@ -10648,10 +10657,7 @@
                       {
                         bDisableContextMenu: !0,
                         href: Ra(e.label, i.door),
-                        className: (0, G.Z)(
-                          Ta().ShareBtn,
-                          Ga().SocialShareButton
-                        ),
+                        className: (0, G.Z)(Ta().ShareBtn, "SocialShareButton"),
                       },
                       a.createElement("img", {
                         className: ln().Button,

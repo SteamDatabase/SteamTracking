@@ -6220,50 +6220,52 @@
     },
     85963: (e, t, a) => {
       "use strict";
-      a.d(t, { C: () => b, x: () => y });
+      a.d(t, { C: () => f, x: () => C });
       var n = a(13271),
         i = a(67294),
         r = (a(26149), a(54698), a(49186), a(26273)),
-        l = (a(21205), a(35175)),
-        o = a(13871),
-        s = a(15396),
-        c = a(77569),
-        d = a.n(c),
-        m = a(88624),
-        u = a(514),
-        _ = a(65924),
-        p = a(7573),
-        g = a(41311),
-        h = a(35092),
-        v = a(90666),
-        S = a(60972),
-        E = a(24108);
-      function y(e) {
+        l = (a(21205), a(7200)),
+        o = a(35175),
+        s = a(13871),
+        c = a(15396),
+        d = a(77569),
+        m = a.n(d),
+        u = a(88624),
+        _ = a(514),
+        p = a(65924),
+        g = a(7573),
+        h = a(41311),
+        v = a(35092),
+        S = a(90666),
+        E = a(26111),
+        y = a(60972),
+        b = a(24108);
+      function C(e) {
         const { appid: t, community_item_type: a } = e,
-          n = (0, o.mn)(t, a);
+          n = (0, s.mn)(t, a);
         if (
           (null == n ? void 0 : n.item_movie_mp4) &&
           (null == n ? void 0 : n.item_movie_webm)
         ) {
-          const e = `${v.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+          const e = `${S.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == n ? void 0 : n.item_image_large
             }`,
-            a = `${v.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+            a = `${S.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == n ? void 0 : n.item_movie_webm
             }`,
-            r = `${v.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+            r = `${S.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
               null == n ? void 0 : n.item_movie_mp4
             }`;
           return i.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             i.createElement("source", { src: a, type: "video/webm" }),
-            Boolean(!v.De.IN_CLIENT) &&
+            Boolean(!S.De.IN_CLIENT) &&
               i.createElement("source", { src: r, type: "video/mp4" })
           );
         }
         if (n) {
-          const a = `${v.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
+          const a = `${S.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
             (null == n ? void 0 : n.item_image_small) ||
             (null == n ? void 0 : n.item_image_large)
           }`;
@@ -6275,61 +6277,63 @@
         }
         return null;
       }
-      function b(e) {
+      function f(e) {
         const { bIsPreview: t, event: a, section: l, language: o } = e,
-          [c, g] = (0, n.SZ)(() => [
+          [s, d] = (0, n.SZ)(() => [
             l.rewards.reward_items,
             l.rewards.only_show_gratned_items,
           ]),
           h = (0, i.useMemo)(() => {
             const e = new Array();
-            let t = new Array();
-            for (let a = 0; a < c.length; ++a) {
-              a > 0 && a % 5 == 0 && (e.push(t), (t = new Array()));
-              const n = c[a];
-              t.push(
-                v.L7.logged_in
-                  ? i.createElement(f, {
-                      key: "reward" + a,
+            let n = new Array();
+            for (let r = 0; r < s.length; ++r) {
+              r > 0 && r % 5 == 0 && (e.push(n), (n = new Array()));
+              const c = s[r];
+              n.push(
+                S.L7.logged_in
+                  ? i.createElement(I, {
+                      key: "reward" + r,
                       section: l,
-                      rewardDef: n,
+                      rewardDef: c,
                       language: o,
+                      eventModel: a,
+                      bIsPreview: t,
                     })
                   : i.createElement(
                       "div",
                       {
-                        key: "hiddenreward" + a,
+                        key: "hiddenreward" + r,
                         className: "reward_hidden_entry",
                       },
-                      i.createElement(C, { section: l })
+                      i.createElement(T, { section: l })
                     )
               );
             }
-            return t.length > 0 && e.push(t), e;
-          }, [o, c, l]);
-        return g && !v.L7.logged_in
+            return n.length > 0 && e.push(n), e;
+          }, [o, s, l]);
+        return d && !S.L7.logged_in
           ? null
           : i.createElement(
-              _.ZP,
+              p.ZP,
               { feature: "rewardshelf" },
               i.createElement(
-                s.Y,
+                c.Y,
                 {
                   placeholderHeight: "100vh",
                   rootMargin: r.HG,
-                  className: (0, p.Z)(
-                    S.SaleSection,
-                    d().SaleSectionCtn,
+                  className: (0, g.Z)(
+                    y.SaleSection,
+                    m().SaleSectionCtn,
                     "SaleRewardShelfCSS"
                   ),
-                  style: (0, u.V)(l, a),
+                  style: (0, _.V)(l, a),
                 },
-                i.createElement(m.AO, { section: l, event: a, language: o }),
-                i.createElement("div", { className: E.RewardContainer }, h)
+                i.createElement(u.AO, { section: l, event: a, language: o }),
+                i.createElement("div", { className: b.RewardContainer }, h)
               )
             );
       }
-      function C(e) {
+      function T(e) {
         const { section: t } = e,
           [a] = (0, n.SZ)(() => {
             var e;
@@ -6339,35 +6343,41 @@
                 : e.hidden_reward_image,
             ];
           });
-        return i.createElement("img", { src: (0, h.et)(a) });
+        return i.createElement("img", { src: (0, v.et)(a) });
       }
-      function f(e) {
+      function I(e) {
         var t;
-        const { section: a, rewardDef: r, language: o } = e,
-          s = g.LJ.GetELanguageFallback(o),
-          { communityItem: c, bLoaded: d } = (0, l.mo)(
+        const {
+            section: a,
+            rewardDef: r,
+            language: s,
+            eventModel: c,
+            bIsPreview: d,
+          } = e,
+          m = h.LJ.GetELanguageFallback(s),
+          { communityItem: u, bLoaded: _ } = (0, o.mo)(
             r.appid,
             r.community_item_type
           ),
-          [m] = (0, n.SZ)(() => [a.rewards.only_show_gratned_items]);
-        return m && !c
+          [p] = (0, n.SZ)(() => [a.rewards.only_show_gratned_items]);
+        return p && !u
           ? null
           : i.createElement(
               "div",
-              { className: (0, p.Z)(E.RewardShelfCtn, "RewardShelfCtn") },
+              { className: (0, g.Z)(b.RewardShelfCtn, "RewardShelfCtn") },
               i.createElement(
                 "div",
                 {
-                  className: Boolean(!c)
+                  className: Boolean(!u)
                     ? "reward_visible_entry"
                     : "reward_hidden_entry",
                 },
-                Boolean(!c)
-                  ? i.createElement(C, { section: a })
-                  : i.createElement(T, {
+                Boolean(!u)
+                  ? i.createElement(T, { section: a })
+                  : i.createElement(D, {
                       section: a,
                       rewardDef: r,
-                      language: o,
+                      language: s,
                     }),
                 Boolean(
                   (null === (t = r.localized_reward_description) || void 0 === t
@@ -6377,17 +6387,24 @@
                   i.createElement(
                     "div",
                     { className: "reward_def_desc" },
-                    r.localized_reward_description[o] ||
-                      r.localized_reward_description[s] ||
-                      ""
+                    i.createElement(E.d, {
+                      text:
+                        r.localized_reward_description[s] ||
+                        r.localized_reward_description[m] ||
+                        "",
+                      partnerEventStore: l.j1,
+                      showErrorInfo: d,
+                      event: c,
+                      languageOverride: s,
+                    })
                   )
               )
             );
       }
-      function T(e) {
+      function D(e) {
         const { section: t, rewardDef: a, language: r } = e,
-          l = (0, o.mn)(a.appid, a.community_item_type),
-          [s] = (0, n.SZ)(() => {
+          l = (0, s.mn)(a.appid, a.community_item_type),
+          [o] = (0, n.SZ)(() => {
             var e;
             return [
               Boolean(
@@ -6401,29 +6418,29 @@
         switch (a.community_class) {
           case 14:
           case 15:
-            c = `${v.De.COMMUNITY_BASE_URL}my/edit/avatar`;
+            c = `${S.De.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
           case 1:
-            c = `${v.De.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            c = `${S.De.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
           case 3:
           case 8:
-            c = `${v.De.COMMUNITY_BASE_URL}my/edit/background`;
+            c = `${S.De.COMMUNITY_BASE_URL}my/edit/background`;
             break;
           case 13:
-            c = `${v.De.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            c = `${S.De.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
           case 11:
-            c = `${v.De.COMMUNITY_BASE_URL}chat`;
+            c = `${S.De.COMMUNITY_BASE_URL}chat`;
         }
         return i.createElement(
           "a",
           { href: c },
-          i.createElement(y, {
+          i.createElement(C, {
             appid: null == a ? void 0 : a.appid,
             community_item_type: null == a ? void 0 : a.community_item_type,
           }),
-          Boolean(s) &&
+          Boolean(o) &&
             i.createElement("span", null, null == l ? void 0 : l.item_name)
         );
       }
@@ -21641,7 +21658,19 @@
           l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
             (e) => ({ label: (0, Qe.Hi)(e), data: e })
           ),
-          o = (0, c.SZ)(() => {
+          o = (0, d.useCallback)(
+            (e) => {
+              (a.localized_reward_description = (0, z.LG)(
+                a.localized_reward_description || [],
+                30,
+                null
+              )),
+                (a.localized_reward_description[r] = e),
+                t();
+            },
+            [t, r, a]
+          ),
+          s = (0, d.useCallback)(() => {
             var e;
             return (null === (e = a.localized_reward_description) ||
             void 0 === e
@@ -21649,7 +21678,7 @@
               : e.length) > r
               ? a.localized_reward_description[r]
               : "";
-          });
+          }, [r, a.localized_reward_description]);
         return d.createElement(
           "div",
           null,
@@ -21698,26 +21727,25 @@
                     (0, u.Xx)("#Sale_Section_RewardShelf_MarkInActive")
                   )
                 ),
-                d.createElement(m.II, {
-                  type: "text",
-                  label: (0, u.Xx)("#Sale_Section_RewardShelf_Item_Desc"),
-                  tooltip: (0, u.Xx)(
-                    "#Sale_Section_RewardShelf_Item_Desc_ttip"
-                  ),
-                  value: o,
-                  onChange: (e) => {
-                    var n;
-                    (a.localized_reward_description = (0, z.LG)(
-                      a.localized_reward_description || [],
-                      30,
-                      null
-                    )),
-                      (a.localized_reward_description[r] =
-                        (null === (n = e.currentTarget) || void 0 === n
-                          ? void 0
-                          : n.value) || null),
-                      t();
+                d.createElement(
+                  X.HP,
+                  {
+                    toolTipContent: (0, u.Xx)(
+                      "#Sale_Section_RewardShelf_Item_Desc_ttip"
+                    ),
                   },
+                  d.createElement(
+                    m.__,
+                    null,
+                    (0, u.Xx)("#Sale_Section_RewardShelf_Item_Desc")
+                  )
+                ),
+                d.createElement(Ee.R, {
+                  strPlaceholder: "",
+                  fnGetCurText: s,
+                  fnOnTextChange: (e) => o(e.currentTarget.value),
+                  fnSetText: o,
+                  bSupportHTMLImport: !0,
                 })
               )
             : d.createElement(

@@ -63164,7 +63164,13 @@
                         var o = r.actual_time
                           ? r.actual_time
                           : r.scheduled_time;
-                        if (!(o < n - 32400 || o > n + 7200))
+                        if (
+                          !(
+                            o < n - 32400 ||
+                            (r.is_completed && o < n - 18e3) ||
+                            o > n + 7200
+                          )
+                        )
                           if (null != i) {
                             var s = t.GetLeagueNode(i.nLeagueID, i.nNodeID),
                               l = s.has_started && !s.is_completed,
