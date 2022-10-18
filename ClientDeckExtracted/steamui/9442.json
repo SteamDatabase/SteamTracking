@@ -2503,6 +2503,8 @@
     "Settings_Display_Resolution_ConfirmChange_Accept": "Keep Settings",
     "Settings_Display_Resolution_ConfirmChange_Revert": "Revert",
     "Settings_Display_Resolution_Auto_Resolution": "Automatically Set Resolution",
+    "Settings_Display_CompatibilityMode_Label": "External display safe mode",
+    "Settings_Display_CompatibilityMode_Description": "Forces a low resolution configuration when plugging in an external monitor to improve compatibility",
     "Settings_Controller_NoControllers": "No controllers detected",
     "Settings_Controller_Settings": "Settings",
     "Settings_ExternalController_Settings": "External Gamepad Settings",

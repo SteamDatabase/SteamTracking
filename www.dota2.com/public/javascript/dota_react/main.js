@@ -34125,24 +34125,22 @@
                           return t.stream_id == e.stream_id;
                         });
                   if (n) {
-                    var a = void 0,
-                      i = n.language;
+                    var a = n.language;
                     switch (
                       (11 == n.language && (n.language = 22),
                       n.broadcast_provider)
                     ) {
                       case ir.eQ.LEAGUE_BROADCAST_STEAM:
-                        a = "#dpc_steam";
+                        "#dpc_steam";
                         break;
                       case ir.eQ.LEAGUE_BROADCAST_TWITCH:
-                        a = "#dpc_twitch";
+                        "#dpc_twitch";
                     }
                     c.push({
                       value: t,
-                      strLabel: ""
-                        .concat((0, E.Jr)(a))
-                        .concat(a && " - ")
-                        .concat((0, E.Jr)("#Language_".concat((0, yt.j_)(i)))),
+                      strLabel: "".concat(
+                        (0, E.Jr)("#Language_".concat((0, yt.j_)(a)))
+                      ),
                     });
                   }
                 }),
