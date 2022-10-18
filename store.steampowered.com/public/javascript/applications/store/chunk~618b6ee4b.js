@@ -11683,7 +11683,9 @@
         }
       }
       function mi(e, t) {
-        const n = `${window.location}?shareOption=${t}`,
+        const n = `${window.location}${
+            window.location.search ? "&" : "?"
+          }shareOption=${t}`,
           a = new URLSearchParams({});
         switch (e) {
           case s.zf.Facebook:
