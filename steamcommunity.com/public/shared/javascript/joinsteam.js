@@ -231,7 +231,6 @@ function InitJoinSteamJS( sBaseURL )
     }
 }
 
- 
 function CreateAccount()
 {
 	// if we are disabled due to a weak password, we will have the "btn_checkout_gray" class;
@@ -254,7 +253,7 @@ function FinishFormVerification( bCaptchaIsValid )
 {
 		var errorString = '';
 
-		var rgBadFields = { 
+		var rgBadFields = {
 		email: false,
 		reenter_email: false,
 		captcha_text: false,
@@ -269,14 +268,14 @@ function FinishFormVerification( bCaptchaIsValid )
 		rgBadFields.email = true;
 		rgBadFields.reenter_email = true;
 	}
-	
+
 	var reenter_email = $('reenter_email').value;
 	if ( reenter_email == '' )
 	{
 		errorString += 'Please fill in the Confirm email address field.<br/>';
 		rgBadFields.reenter_email = true;
 	}
-	else if ( email != reenter_email )
+	else if ( email.toLowerCase() != reenter_email.toLowerCase() )
 	{
 		errorString += 'Please enter the same address in both email address fields.<br/>';
 		rgBadFields.email = true;
@@ -285,7 +284,7 @@ function FinishFormVerification( bCaptchaIsValid )
 
 	if ( !bCaptchaIsValid )
 	{
-	
+
 		errorString += 'Bad captcha response. Please re-verify your humanity below.<br/>';
 		rgBadFields.captcha_text = true;
 	}
@@ -512,7 +511,7 @@ function ReallyCreateAccount()
 	++iAjaxCalls;
 		new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
-		type: 'POST', 	    parameters: { accountname : $('accountname').value, 
+		type: 'POST', 	    parameters: { accountname : $('accountname').value,
 	    			  password : $('password').value,
 	    			  count : iAjaxCalls,
 	    			  lt : $('lt').value,
@@ -660,7 +659,7 @@ function CalculatePasswordStrength( pass )
 	var bHasLowercase = false;
 	var bHasNumbers = false;
 	var bHasSymbols = false;
-		
+
 	for( var i = 0; i < pass.length; ++i )
 	{
 		if ( pass.charAt(i) >= 'a' && pass.charAt(i) <= 'z' )
@@ -672,7 +671,7 @@ function CalculatePasswordStrength( pass )
 		else
 			bHasSymbols = true;
 	}
-		
+
 	var nTypesOfChars = 0;
 	if ( bHasUppercase ) nTypesOfChars++;
 	if ( bHasLowercase ) nTypesOfChars++;
@@ -851,25 +850,24 @@ function UpdateCaptcha(data)
 	}
 }
 
- 
 function RefreshCaptcha()
 {
 	++iAjaxCalls;
-	
+
 	new Ajax.Request( g_sBaseURL + 'join/refreshcaptcha/',
 	  {
 	  	type: 'POST',
 	    parameters: { count : iAjaxCalls },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
-	        
+
 	        try {
 	      	  var result = transport.responseText.evalJSON(true);
 	      	} catch ( e ) {
 	      	  //alert(e);
 	      	  return;
 	      	}
-	      	
+
 			UpdateCaptcha(result);
 		  }
 	    }

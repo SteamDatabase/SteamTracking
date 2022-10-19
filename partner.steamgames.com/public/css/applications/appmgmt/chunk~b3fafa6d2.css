@@ -61,6 +61,9 @@
   display: flex;
   flex-direction: row;
 }
+.partnereventshared_FlexRowContainer_elLwm.partnereventshared_Centered_1HqKt {
+  justify-content: center;
+}
 .partnereventshared_FlexContainSpaceBetween_2MHtA {
   justify-content: space-between;
   position: absolute;

@@ -1808,9 +1808,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   top: 0;
   visibility: hidden;
 }
-.gamepadslider_EditableValueSuffix_1nsD9 {
-  margin-left: 1ch;
-}
 @keyframes gamepadslider_error-shake_3HxdO {
   0% {
     transform: translateX(0);

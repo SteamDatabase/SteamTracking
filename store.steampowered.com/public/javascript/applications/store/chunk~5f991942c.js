@@ -60,30 +60,329 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    93981: (e, a, t) => {
+    86605: (e, t, a) => {
       "use strict";
-      t.d(a, { Pv: () => _, sB: () => c });
-      var n = t(70655),
-        s = t(22188),
-        r = t(27661),
-        i = t(86605),
-        o = t(41311),
-        m = (t(54698), t(21205), t(90666)),
-        l = (t(3389), t(43359));
-      function c(e) {
-        let a = "offline";
+      a.d(t, { Q8: () => A });
+      var n = a(70655),
+        s = a(22188),
+        r = a(26149),
+        i = a(58114),
+        o = a(40252),
+        m = a(22154),
+        c = (a(64010), a(68002)),
+        l = a(77520),
+        p = a(99533),
+        h = a(90666);
+      class _ {
+        constructor() {
+          (this.m_mapAppInfo = s.LO.map()),
+            (this.m_mapRichPresenceLoc = s.LO.map()),
+            (this.m_cAppInfoRequestsInFlight = 0),
+            (this.m_setPendingAppInfo = new Set()),
+            (this.m_CacheStorage = null),
+            (this.m_fnCallbackOnAppInfoLoaded = new p.pB());
+        }
+        Init(e) {
+          this.m_CMInterface = e;
+        }
+        BHavePendingAppInfoRequests() {
+          return (
+            this.m_setPendingAppInfo.size > 0 ||
+            this.m_cAppInfoRequestsInFlight > 0
+          );
+        }
+        get CMInterface() {
+          return this.m_CMInterface;
+        }
+        RegisterCallbackOnLoad(e) {
+          if (!this.BHavePendingAppInfoRequests())
+            return (
+              (0, l.X)(
+                !1,
+                "Registering for callback on appinfo load, but nothing queued"
+              ),
+              void e()
+            );
+          this.m_fnCallbackOnAppInfoLoaded.Register(e);
+        }
+        IsLoadingAppID(e) {
+          return this.m_setPendingAppInfo.has(e);
+        }
+        GetAppInfo(e) {
+          if (
+            ((0, l.X)(
+              this.m_CMInterface,
+              "CAppInfoStore.GetAppInfo called before Init"
+            ),
+            !this.m_mapAppInfo.has(e))
+          ) {
+            let t = new o.Am(e);
+            this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
+          }
+          return this.m_mapAppInfo.get(e);
+        }
+        QueueAppInfoRequest(e) {
+          return e
+            ? (this.m_setPendingAppInfo.size ||
+                ((this.m_PendingAppInfoPromise = new Promise(
+                  (e) => (this.m_PendingAppInfoResolve = e)
+                )),
+                window.setTimeout(() => this.FlushPendingAppInfo(), 25)),
+              this.m_setPendingAppInfo.add(e),
+              this.m_PendingAppInfoPromise)
+            : Promise.resolve();
+        }
+        FlushPendingAppInfo() {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            const e = this.m_PendingAppInfoResolve,
+              t = Array.from(this.m_setPendingAppInfo);
+            (this.m_PendingAppInfoPromise = void 0),
+              (this.m_PendingAppInfoResolve = void 0),
+              this.m_setPendingAppInfo.clear(),
+              yield this.LoadAppInfoBatch(t),
+              e();
+          });
+        }
+        LoadAppInfoBatch(e) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            this.m_cAppInfoRequestsInFlight++;
+            let t = yield this.LoadAppInfoBatchFromLocalCache(e);
+            if (t.length) {
+              console.log("Loading batch of App Info from Steam: ", t),
+                yield this.m_CMInterface.WaitUntilLoggedOn();
+              let e = i.gA.Init(c.Fi);
+              e.Body().set_language((0, r.jM)(h.De.LANGUAGE));
+              const a = 50;
+              for (; t.length > 0; ) {
+                const n = Math.min(a, t.length),
+                  s = t.slice(0, n);
+                (t = t.slice(n)), e.Body().set_appids(s);
+                const r = yield c.AE.GetApps(
+                  this.m_CMInterface.GetServiceTransport(),
+                  e
+                );
+                1 == r.GetEResult()
+                  ? this.OnGetAppsResponse(r)
+                  : console.error(
+                      `Error when calling CommunityService.GetApps: EResult=${r.GetEResult()}, AppIDs:`,
+                      s
+                    );
+              }
+            }
+            0 == --this.m_cAppInfoRequestsInFlight &&
+              0 == this.m_setPendingAppInfo.size &&
+              (this.m_fnCallbackOnAppInfoLoaded.Dispatch(),
+              this.m_fnCallbackOnAppInfoLoaded.ClearAllCallbacks());
+          });
+        }
+        OnGetAppsResponse(e) {
+          let t = [];
+          for (let a of e.Body().apps()) {
+            let e = this.m_mapAppInfo.get(a.appid());
+            (0, l.X)(
+              e,
+              `Got AppInfo response for unrequested AppID: ${a.appid()}`
+            ),
+              e &&
+                ((e = new o.Am(a.appid())),
+                e.DeserializeFromMessage(a),
+                this.m_mapAppInfo.set(a.appid(), e),
+                t.push(e));
+          }
+          this.SaveAppInfoBatchToLocalCache(t);
+        }
+        OnAppOverviewChange(e) {
+          for (let t of e) {
+            const e = new o.Am(t.appid());
+            e.DeserializeFromAppOverview(t),
+              this.m_mapAppInfo.set(t.appid(), e);
+          }
+        }
+        EnsureAppInfoForAppIDs(e) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let t = !1;
+            return (
+              e.forEach((e) => {
+                let a = this.m_mapAppInfo.get(e);
+                a
+                  ? a.is_valid || (t = !0)
+                  : ((a = new o.Am(e)),
+                    this.m_mapAppInfo.set(e, a),
+                    this.QueueAppInfoRequest(e),
+                    (t = !0));
+              }),
+              t && void 0 !== this.m_PendingAppInfoPromise
+                ? this.m_PendingAppInfoPromise
+                : Promise.resolve()
+            );
+          });
+        }
+        SetCacheStorage(e) {
+          this.m_CacheStorage = e;
+        }
+        GetCacheKeyForAppID(e) {
+          return "APPINFO_" + e;
+        }
+        LoadAppInfoBatchFromLocalCache(e) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            if (!this.m_CacheStorage) return e;
+            console.log("Loading batch of App Info from Local Cache: ", e);
+            const t = new Date(new Date().getTime() - 12096e5),
+              a = (e) =>
+                (0, n.mG)(this, void 0, void 0, function* () {
+                  const a = yield this.m_CacheStorage.GetObject(
+                    this.GetCacheKeyForAppID(e)
+                  );
+                  if (!a) return e;
+                  let n = this.m_mapAppInfo.get(e);
+                  return (
+                    (0, l.X)(
+                      n,
+                      "Didn't find AppInfo in our map when loading from cache but it should've been there?"
+                    ),
+                    n
+                      ? ((n = new o.Am(e)),
+                        n.DeserializeFromCacheObject(a),
+                        n.is_initialized
+                          ? (this.m_mapAppInfo.set(e, n),
+                            n.time_updated_from_server < t ? e : null)
+                          : (console.warn(
+                              "Failed to deserialize cached App Info: ",
+                              e,
+                              a
+                            ),
+                            e))
+                      : e
+                  );
+                });
+            let s = e.map((e) => a(e));
+            return (yield Promise.all(s)).filter((e) => null !== e);
+          });
+        }
+        SaveAppInfoBatchToLocalCache(e) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            if (this.m_CacheStorage) {
+              console.log(
+                "Saving batch of App Info to Local Cache: ",
+                e.map((e) => e.appid)
+              );
+              for (const t of e) {
+                const e = t.SerializeToCacheObject();
+                e &&
+                  this.m_CacheStorage.StoreObject(
+                    this.GetCacheKeyForAppID(t.appid),
+                    e
+                  );
+              }
+            }
+          });
+        }
+        Localize(e, t, a) {
+          const n = this.GetRichPresenceLoc(e);
+          return n
+            ? n.Localize(t, a)
+            : 1 != h.De.EUNIVERSE
+            ? (console.log(
+                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`
+              ),
+              t)
+            : "";
+        }
+        GetRichPresenceLoc(e) {
+          if (this.m_mapRichPresenceLoc.has(e.toString())) {
+            let t = this.m_mapRichPresenceLoc.get(e.toString());
+            return (
+              t.m_nLastUpdated + 6e4 * o.x3 < Date.now() &&
+                this.QueueRichPresenceLocRequest(t),
+              t
+            );
+          }
+          let t = new m.v(e);
+          return (
+            this.m_mapRichPresenceLoc.set(e.toString(), t),
+            this.QueueRichPresenceLocRequest(t),
+            t
+          );
+        }
+        GetRichPresenceLocAsync(e) {
+          let t = this.GetRichPresenceLoc(e);
+          return t.m_nLastUpdated ? Promise.resolve(t) : t.m_fetching;
+        }
+        OnRichPresenceLocUpdate(e, t) {
+          e.m_nLastUpdated = Date.now();
+          for (let a of t) {
+            let t = a.language(),
+              n = e.m_mapLanguages.get(t);
+            n
+              ? n.clear()
+              : (e.m_mapLanguages.set(t, new Map()),
+                (n = e.m_mapLanguages.get(t)));
+            for (let e of a.tokens()) n.set(e.name().toLowerCase(), e.value());
+          }
+        }
+        QueueRichPresenceLocRequest(e) {
+          return (
+            e.m_fetching ||
+              ((e.m_fetching = this.m_CMInterface
+                .WaitUntilLoggedOn()
+                .then(() => {
+                  let t = i.gA.Init(c.tj);
+                  return (
+                    t.Body().set_appid(e.GetAppID()),
+                    t.Body().set_language(h.De.LANGUAGE),
+                    c.AE.GetAppRichPresenceLocalization(
+                      this.m_CMInterface.GetServiceTransport(),
+                      t
+                    )
+                  );
+                })
+                .then(
+                  (t) => (
+                    (e.m_fetching = null),
+                    1 != t.GetEResult()
+                      ? Promise.reject()
+                      : (this.OnRichPresenceLocUpdate(
+                          e,
+                          t.Body().token_lists()
+                        ),
+                        Promise.resolve(e))
+                  )
+                )),
+              e.m_fetching.catch(() => {
+                e.m_fetching = null;
+              })),
+            e.m_fetching
+          );
+        }
+      }
+      (0, n.gn)([s.aD], _.prototype, "OnGetAppsResponse", null),
+        (0, n.gn)([s.aD], _.prototype, "OnRichPresenceLocUpdate", null);
+      const A = new _();
+    },
+    93981: (e, t, a) => {
+      "use strict";
+      a.d(t, { Pv: () => p, sB: () => l });
+      var n = a(70655),
+        s = a(22188),
+        r = a(27661),
+        i = a(86605),
+        o = a(41311),
+        m = (a(54698), a(21205), a(90666)),
+        c = (a(3389), a(43359));
+      function l(e) {
+        let t = "offline";
         return (
           e &&
             (e.is_ingame
-              ? (a = "ingame")
+              ? (t = "ingame")
               : e.m_broadcastAccountId
-              ? (a = "watchingbroadcast")
-              : e.is_online && (a = "online"),
-            e.is_awayOrSnooze && (a += " awayOrSnooze")),
-          a
+              ? (t = "watchingbroadcast")
+              : e.is_online && (t = "online"),
+            e.is_awayOrSnooze && (t += " awayOrSnooze")),
+          t
         );
       }
-      class _ {
+      class p {
         constructor(e) {
           (this.m_bInitialized = !1),
             (this.m_ePersonaState = 0),
@@ -91,7 +390,7 @@
             (this.m_gameid = "0"),
             (this.m_unPersonaStateFlags = 0),
             (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = l.W),
+            (this.m_strAvatarHash = c.W),
             (this.m_strAccountName = ""),
             (this.m_rtLastSeenOnline = 0),
             (this.m_strGameExtraInfo = ""),
@@ -214,8 +513,8 @@
           if (this.HasCurrentGameRichPresence()) {
             let e = i.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);
             if (e) {
-              let a = this.m_mapRichPresence.get("steam_display");
-              return e.Localize(a, this.m_mapRichPresence);
+              let t = this.m_mapRichPresence.get("steam_display");
+              return e.Localize(t, this.m_mapRichPresence);
             }
           } else if (this.HasStateFlag(8))
             return (0, o.Xx)("#PersonaStateRemotePlayTogether");
@@ -224,19 +523,19 @@
         GetOfflineStatusUpdateRate() {
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
-          let a = 1e3;
-          const t = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return (a *= t > 86400 ? e : t > 7200 ? 60 : 15), a;
+          let t = 1e3;
+          const a = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return (t *= a > 86400 ? e : a > 7200 ? 60 : 15), t;
         }
         GetOfflineStatusTime() {
           if (0 == this.last_seen_online)
             return (0, o.Xx)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
           (!m.De.IN_MOBILE || e <= 60) && (0, r.zO)(e);
-          let a = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return a < 60
+          let t = i.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return t < 60
             ? (0, o.Xx)("#PersonaStateLastSeen_JustNow")
-            : (0, o.Xx)("#PersonaStateLastSeen", (0, o.yW)(a));
+            : (0, o.Xx)("#PersonaStateLastSeen", (0, o.yW)(t));
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
@@ -284,81 +583,81 @@
             : "offline";
         }
         BHasAvatarSet() {
-          return this.m_strAvatarHash != l.W;
+          return this.m_strAvatarHash != c.W;
         }
         get avatar_url() {
-          return (0, l.U)(this.m_strAvatarHash);
+          return (0, c.U)(this.m_strAvatarHash);
         }
         get avatar_url_medium() {
-          return (0, l.U)(this.m_strAvatarHash, "medium");
+          return (0, c.U)(this.m_strAvatarHash, "medium");
         }
         get avatar_url_full() {
-          return (0, l.U)(this.m_strAvatarHash, "full");
+          return (0, c.U)(this.m_strAvatarHash, "full");
         }
-        static SortStatusComparator(e, a, t) {
-          if (a.has_public_party_beacon) {
-            if (!t.has_public_party_beacon) return -1;
+        static SortStatusComparator(e, t, a) {
+          if (t.has_public_party_beacon) {
+            if (!a.has_public_party_beacon) return -1;
           } else {
-            if (t.has_public_party_beacon) return 1;
-            if (a.is_ingame) {
-              if (!t.is_ingame) return -1;
+            if (a.has_public_party_beacon) return 1;
+            if (t.is_ingame) {
+              if (!a.is_ingame) return -1;
               if (!e) return 0;
-              if (a.is_awayOrSnooze) {
-                if (!t.is_awayOrSnooze) return 1;
-              } else if (t.is_awayOrSnooze) return -1;
-            } else if (t.is_ingame) return 1;
+              if (t.is_awayOrSnooze) {
+                if (!a.is_awayOrSnooze) return 1;
+              } else if (a.is_awayOrSnooze) return -1;
+            } else if (a.is_ingame) return 1;
           }
-          if (a.is_online) {
-            if (!t.is_online) return -1;
-          } else if (t.is_online) return 1;
+          if (t.is_online) {
+            if (!a.is_online) return -1;
+          } else if (a.is_online) return 1;
           if (e)
-            if (a.is_awayOrSnooze) {
-              if (!t.is_awayOrSnooze) return 1;
-            } else if (t.is_awayOrSnooze) return -1;
+            if (t.is_awayOrSnooze) {
+              if (!a.is_awayOrSnooze) return 1;
+            } else if (a.is_awayOrSnooze) return -1;
           return 0;
         }
       }
-      (0, n.gn)([s.LO], _.prototype, "m_bInitialized", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_ePersonaState", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_unGamePlayedAppID", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_gameid", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_unPersonaStateFlags", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_strPlayerName", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_strAvatarHash", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_strAccountName", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_rtLastSeenOnline", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_strGameExtraInfo", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_unGameServerIP", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_unGameServerPort", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_game_lobby_id", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_bPlayerNamePending", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_bAvatarPending", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_broadcastId", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_broadcastAccountId", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_broadcastAppId", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_broadcastViewerCount", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_strBroadcastTitle", void 0),
-        (0, n.gn)([s.LO], _.prototype, "m_bCommunityBanned", void 0);
+      (0, n.gn)([s.LO], p.prototype, "m_bInitialized", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_ePersonaState", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_gameid", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strPlayerName", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strAvatarHash", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strAccountName", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_unGameServerIP", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_unGameServerPort", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_game_lobby_id", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_bAvatarPending", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_broadcastId", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_broadcastAccountId", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_broadcastAppId", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, n.gn)([s.LO], p.prototype, "m_bCommunityBanned", void 0);
     },
-    65409: (e, a, t) => {
+    65409: (e, t, a) => {
       "use strict";
-      t.d(a, { o: () => B });
-      var n = t(70655),
-        s = t(67294),
-        r = t(29323),
-        i = t(41311),
-        o = t(26149),
-        m = t(93981),
-        l = t(7573),
-        c = t(59445),
-        _ = t.n(c);
-      let p = class extends s.Component {
+      a.d(t, { o: () => S });
+      var n = a(70655),
+        s = a(67294),
+        r = a(29323),
+        i = a(41311),
+        o = a(26149),
+        m = a(93981),
+        c = a(7573),
+        l = a(59445),
+        p = a.n(l);
+      let h = class extends s.Component {
         static get hoverClass() {
-          return _().hoverParent;
+          return p().hoverParent;
         }
         render() {
           const e = this.props,
-            { persona: a, animating: t, className: r, size: i, dim: o } = e,
+            { persona: t, animating: a, className: r, size: i, dim: o } = e,
             m = (0, n._T)(e, [
               "persona",
               "animating",
@@ -366,57 +665,57 @@
               "size",
               "dim",
             ]);
-          let c = "";
+          let l = "";
           return (
-            "medium" == i ? (c = _().Medium) : "large" == i && (c = _().Large),
+            "medium" == i ? (l = p().Medium) : "large" == i && (l = p().Large),
             s.createElement(
               "div",
               Object.assign(
                 {
-                  className: (0, l.Z)(
-                    _().SnoozeContainer,
-                    a.online_state,
+                  className: (0, c.Z)(
+                    p().SnoozeContainer,
+                    t.online_state,
                     r,
-                    t && _().animating,
-                    c,
-                    o && _().Dim
+                    a && p().animating,
+                    l,
+                    o && p().Dim
                   ),
                 },
                 m
               ),
               s.createElement(
                 "div",
-                { "data-text": "Z", className: (0, l.Z)(_().SnoozeZ, _().Z1) },
+                { "data-text": "Z", className: (0, c.Z)(p().SnoozeZ, p().Z1) },
                 "Z"
               ),
               s.createElement(
                 "div",
-                { "data-text": "Z", className: (0, l.Z)(_().SnoozeZ, _().Z2) },
+                { "data-text": "Z", className: (0, c.Z)(p().SnoozeZ, p().Z2) },
                 "Z"
               ),
               s.createElement(
                 "div",
-                { "data-text": "Z", className: (0, l.Z)(_().SnoozeZ, _().Z3) },
+                { "data-text": "Z", className: (0, c.Z)(p().SnoozeZ, p().Z3) },
                 "Z"
               )
             )
           );
         }
       };
-      p = (0, n.gn)([r.Pi], p);
-      t(21205);
-      var A = t(95598),
-        u = t(82202),
-        d = t.n(u),
-        h = t(5827);
+      h = (0, n.gn)([r.Pi], h);
+      a(21205);
+      var _ = a(95598),
+        A = a(82202),
+        u = a.n(A),
+        d = a(5827);
       const g = (0, r.Pi)((e) => {
-        const { persona: a, className: t } = e,
+        const { persona: t, className: a } = e,
           r = (0, n._T)(e, ["persona", "className"]);
-        if (!a) return null;
-        if (!a.is_online) return null;
-        const o = a.HasStateFlag(512),
-          c = a.HasStateFlag(2048),
-          _ = !c && a.HasStateFlag(1024);
+        if (!t) return null;
+        if (!t.is_online) return null;
+        const o = t.HasStateFlag(512),
+          l = t.HasStateFlag(2048),
+          p = !l && t.HasStateFlag(1024);
         return s.createElement(
           s.Fragment,
           null,
@@ -425,94 +724,94 @@
               "div",
               Object.assign(
                 {
-                  className: (0, l.Z)(
-                    t,
-                    d().PersonaStatusIcon,
-                    d().MobilePhoneIcon,
-                    (0, m.sB)(a)
+                  className: (0, c.Z)(
+                    a,
+                    u().PersonaStatusIcon,
+                    u().MobilePhoneIcon,
+                    (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_Mobile"),
                 },
                 r
               ),
-              s.createElement(h.Mr, null)
+              s.createElement(d.Mr, null)
             ),
-          c &&
+          l &&
             s.createElement(
               "div",
               Object.assign(
                 {
-                  className: (0, l.Z)(
-                    t,
-                    d().PersonaStatusIcon,
-                    d().VRIcon,
-                    (0, m.sB)(a)
+                  className: (0, c.Z)(
+                    a,
+                    u().PersonaStatusIcon,
+                    u().VRIcon,
+                    (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_VR"),
                 },
                 r
               ),
-              s.createElement(A.VR, null)
+              s.createElement(_.VR, null)
             ),
-          _ &&
+          p &&
             s.createElement(
               "div",
               Object.assign(
                 {
-                  className: (0, l.Z)(
-                    t,
-                    d().PersonaStatusIcon,
-                    d().BigPictureIcon,
-                    (0, m.sB)(a)
+                  className: (0, c.Z)(
+                    a,
+                    u().PersonaStatusIcon,
+                    u().BigPictureIcon,
+                    (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_BigPicture"),
                 },
                 r
               ),
-              s.createElement(A.Ucz, null)
+              s.createElement(_.Ucz, null)
             )
         );
       });
-      var P = t(24194),
-        S = t.n(P);
-      function v(e) {
+      var f = a(24194),
+        I = a.n(f);
+      function P(e) {
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "span",
-            { className: S().partyBeaconJoin },
+            { className: I().partyBeaconJoin },
             (0, i.Xx)("#User_WantsToPlay")
           ),
           " – ",
           e.persona.GetCurrentGameName()
         );
       }
-      let B = class extends s.Component {
+      let S = class extends s.Component {
         render() {
           const e = this.props,
             {
-              className: a,
-              onContextMenu: t,
+              className: t,
+              onContextMenu: a,
               persona: r,
-              eFriendRelationship: c,
-              bIsSelf: _,
-              bParenthesizeNicknames: u,
-              strNickname: d,
-              bCompactView: h,
-              bHideGameName: P,
-              bHideEnhancedRichPresenceLabel: B,
-              bHideSnooze: N,
-              bHideStatus: b,
+              eFriendRelationship: l,
+              bIsSelf: p,
+              bParenthesizeNicknames: A,
+              strNickname: u,
+              bCompactView: d,
+              bHideGameName: f,
+              bHideEnhancedRichPresenceLabel: S,
+              bHideSnooze: v,
+              bHideStatus: B,
               renderStatus: y,
-              renderRichPresence: f,
-              bHidePersona: I,
+              renderRichPresence: C,
+              bHidePersona: b,
               bDNDSet: E,
-              bHasPartyBeacon: C,
-              bHasGamePrivacy: Q,
-              bNoMask: G,
+              bHasPartyBeacon: N,
+              bHasGamePrivacy: L,
+              bNoMask: R,
             } = e,
-            D = (0, n._T)(e, [
+            G = (0, n._T)(e, [
               "className",
               "onContextMenu",
               "persona",
@@ -533,72 +832,72 @@
               "bHasGamePrivacy",
               "bNoMask",
             ]);
-          let L = null,
-            R = null,
-            k = null,
-            z = [
-              a,
-              S().personaNameAndStatusLabel,
+          let D = null,
+            Q = null,
+            O = null,
+            w = [
+              t,
+              I().personaNameAndStatusLabel,
               (0, m.sB)(r),
-              h && S().compactView,
-              G && S().NoMask,
+              d && I().compactView,
+              R && I().NoMask,
             ];
-          C || r.has_public_party_beacon
-            ? (R = s.createElement(v, { persona: r }))
-            : (0, o.fk)(c)
-            ? ((R = (0, i.Xx)("#PersonaStateBlocked")), z.push(S().blocked))
+          N || r.has_public_party_beacon
+            ? (Q = s.createElement(P, { persona: r }))
+            : (0, o.fk)(l)
+            ? ((Q = (0, i.Xx)("#PersonaStateBlocked")), w.push(I().blocked))
             : r.is_ingame
-            ? ((R =
-                !r.is_in_nonsteam_game || _ || (0, o.my)(c)
+            ? ((Q =
+                !r.is_in_nonsteam_game || p || (0, o.my)(l)
                   ? r.GetCurrentGameName()
                   : (0, i.Xx)("#PersonaStateInNonSteamGame")),
-              _ || I
-                ? _ && r.is_awayOrSnooze && (k = (0, i.Xx)("#PersonaStateAway"))
-                : (k = r.GetCurrentGameRichPresence()))
+              p || b
+                ? p && r.is_awayOrSnooze && (O = (0, i.Xx)("#PersonaStateAway"))
+                : (O = r.GetCurrentGameRichPresence()))
             : r.m_broadcastAccountId &&
-              (R = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
-            R || (R = r.GetLocalizedOnlineStatus()),
-            y && (R = y());
-          let H = !I && !N;
-          !1 === N && (H = !0),
-            r.is_awayOrSnooze && H && (L = s.createElement(p, { persona: r }));
-          let O = null;
-          t
-            ? (O = s.createElement(
+              (Q = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
+            Q || (Q = r.GetLocalizedOnlineStatus()),
+            y && (Q = y());
+          let k = !b && !v;
+          !1 === v && (k = !0),
+            r.is_awayOrSnooze && k && (D = s.createElement(h, { persona: r }));
+          let z = null;
+          a
+            ? (z = s.createElement(
                 "div",
-                { className: "ContextMenuButton", onClick: t },
-                s.createElement(A.$gZ, null)
+                { className: "ContextMenuButton", onClick: a },
+                s.createElement(_.$gZ, null)
               ))
-            : z.push(S().noContextMenu),
-            I && z.push(S().hidePersona),
-            f && (k = f()),
-            (!P && k) || z.push(S().twoLine);
-          const T = !r.is_ingame && !b,
-            U = !B && k,
-            w = R && (!P || !U);
-          let Z = d && !u,
-            x = Z ? d : r.m_strPlayerName,
-            F = !I && (w || T) && U;
+            : w.push(I().noContextMenu),
+            b && w.push(I().hidePersona),
+            C && (O = C()),
+            (!f && O) || w.push(I().twoLine);
+          const U = !r.is_ingame && !B,
+            F = !S && O,
+            M = Q && (!f || !F);
+          let T = u && !A,
+            H = T ? u : r.m_strPlayerName,
+            Z = !b && (M || U) && F;
           return s.createElement(
             "div",
-            Object.assign({}, D, {
-              className: (0, l.Z)(...z),
-              onContextMenu: t,
+            Object.assign({}, G, {
+              className: (0, c.Z)(...w),
+              onContextMenu: a,
             }),
             s.createElement(
               "div",
-              { className: (0, l.Z)(S().statusAndName, F && S().threeLines) },
+              { className: (0, c.Z)(I().statusAndName, Z && I().threeLines) },
               s.createElement(
                 "div",
-                { className: S().playerName },
-                x || " ",
-                u &&
-                  d &&
+                { className: I().playerName },
+                H || " ",
+                A &&
+                  u &&
                   s.createElement(
                     "span",
-                    { className: S().playerNickname },
+                    { className: I().playerNickname },
                     "(",
-                    d,
+                    u,
                     ")"
                   )
               ),
@@ -606,75 +905,75 @@
                 s.createElement(
                   "div",
                   {
-                    className: S().DNDContainer,
+                    className: I().DNDContainer,
                     title: (0, i.Xx)("#User_ToggleDoNotDisturb"),
                   },
-                  s.createElement(A.YVR, null)
+                  s.createElement(_.YVR, null)
                 ),
-              Z &&
+              T &&
                 s.createElement(
                   "span",
                   {
-                    className: S().playerNicknameBracket,
+                    className: I().playerNicknameBracket,
                     title: (0, i.Xx)("#isNickname"),
                   },
                   " *"
                 ),
               s.createElement(g, { persona: r }),
-              L,
+              D,
               (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
                 s.createElement(
                   "div",
                   {
-                    className: S().PendingPersona,
+                    className: I().PendingPersona,
                     title: (0, i.Xx)("#SteamChina_PendingPersonaName"),
                   },
-                  s.createElement(A.SUY, null)
+                  s.createElement(_.SUY, null)
                 ),
-              O
+              z
             ),
-            !I &&
+            !b &&
               s.createElement(
                 "div",
-                { className: S().richPresenceContainer },
-                (w || T) &&
+                { className: I().richPresenceContainer },
+                (M || U) &&
                   s.createElement(
                     "div",
                     {
-                      className: (0, l.Z)(
-                        S().gameName,
-                        F && S().threeLines,
-                        S().richPresenceLabel,
+                      className: (0, c.Z)(
+                        I().gameName,
+                        Z && I().threeLines,
+                        I().richPresenceLabel,
                         "no-drag"
                       ),
                     },
-                    Q &&
+                    L &&
                       s.createElement(
                         "div",
                         {
-                          className: S().gameIsPrivateIcon,
+                          className: I().gameIsPrivateIcon,
                           title: (0, i.Xx)("#User_GameInfoHidden"),
                         },
-                        s.createElement(A._GE, null)
+                        s.createElement(_._GE, null)
                       ),
-                    R
+                    Q
                   ),
-                U &&
+                F &&
                   s.createElement(
                     "div",
-                    { className: (0, l.Z)(S().richPresenceLabel, "no-drag") },
-                    k,
+                    { className: (0, c.Z)(I().richPresenceLabel, "no-drag") },
+                    O,
                     " "
                   )
               )
           );
         }
       };
-      B = (0, n.gn)([r.Pi], B);
+      S = (0, n.gn)([r.Pi], S);
       (0, r.Pi)((e) => {
         const {
-            persona: a,
-            bParenthesizeNicknames: t,
+            persona: t,
+            bParenthesizeNicknames: a,
             strNickname: r,
             className: i,
           } = e,
@@ -684,19 +983,19 @@
             "strNickname",
             "className",
           ]);
-        let c = r && !t ? r : a.m_strPlayerName;
+        let l = r && !a ? r : t.m_strPlayerName;
         return s.createElement(
           "span",
-          Object.assign({}, o, { className: (0, l.Z)(i, (0, m.sB)(a)) }),
+          Object.assign({}, o, { className: (0, c.Z)(i, (0, m.sB)(t)) }),
           s.createElement(
             "span",
-            { className: S().playerName },
-            c || " ",
-            t &&
+            { className: I().playerName },
+            l || " ",
+            a &&
               r &&
               s.createElement(
                 "span",
-                { className: S().playerNickname },
+                { className: I().playerNickname },
                 "(",
                 r,
                 ")"
@@ -705,33 +1004,33 @@
         );
       });
     },
-    44298: (e, a, t) => {
+    44298: (e, t, a) => {
       "use strict";
-      t.d(a, { o: () => A, _1: () => h, DY: () => d, vV: () => u });
-      var n = t(70655),
-        s = t(67294),
-        r = t(29323),
-        i = t(93981),
-        o = t(7573),
-        m = (t(18330), t(90666)),
-        l = t(60501);
-      const c =
-        t.p +
+      a.d(t, { o: () => _, _1: () => d, DY: () => u, vV: () => A });
+      var n = a(70655),
+        s = a(67294),
+        r = a(29323),
+        i = a(93981),
+        o = a(7573),
+        m = (a(18330), a(90666)),
+        c = a(60501);
+      const l =
+        a.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = t(25130),
-        p = t.n(_);
-      class A extends s.Component {
+      var p = a(25130),
+        h = a.n(p);
+      class _ extends s.Component {
         render() {
           const e = this.props,
             {
-              strAvatarURL: a,
-              size: t,
+              strAvatarURL: t,
+              size: a,
               className: r,
               statusStyle: i,
               statusPosition: m,
-              children: _,
+              children: p,
             } = e,
-            A = (0, n._T)(e, [
+            _ = (0, n._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -739,10 +1038,10 @@
               "statusPosition",
               "children",
             ]),
-            u = [];
+            A = [];
           return (
-            a && u.push(a),
-            u.push(
+            t && A.push(t),
+            A.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -754,93 +1053,93 @@
                   case "Large":
                   case "X-Large":
                   case "FillArea":
-                    return c;
+                    return l;
                 }
-              })(t)
+              })(a)
             ),
             s.createElement(
               "div",
               Object.assign(
                 {
                   className: (0, o.Z)(
-                    p().avatarHolder,
+                    h().avatarHolder,
                     "avatarHolder",
                     "no-drag",
-                    t || "Medium",
+                    a || "Medium",
                     r
                   ),
                 },
-                A
+                _
               ),
               s.createElement("div", {
-                className: (0, o.Z)(p().avatarStatus, "avatarStatus", m),
+                className: (0, o.Z)(h().avatarStatus, "avatarStatus", m),
                 style: i,
               }),
-              s.createElement(l.j, {
-                className: (0, o.Z)(p().avatar, "avatar"),
-                rgSources: u,
+              s.createElement(c.j, {
+                className: (0, o.Z)(h().avatar, "avatar"),
+                rgSources: A,
                 draggable: !1,
               }),
-              _
+              p
             )
           );
         }
       }
-      let u = class extends s.Component {
+      let A = class extends s.Component {
         render() {
           const e = this.props,
-            { persona: a, size: t, animatedAvatar: r, className: l } = e,
-            c = (0, n._T)(e, [
+            { persona: t, size: a, animatedAvatar: r, className: c } = e,
+            l = (0, n._T)(e, [
               "persona",
               "size",
               "animatedAvatar",
               "className",
             ]);
-          let _ = "";
+          let p = "";
           return (
             r && r.image_small && 0 != r.image_small.length
-              ? (_ = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
-              : a &&
-                ((_ = a.avatar_url_medium),
-                "Small" == t || "X-Small" == t
-                  ? (_ = a.avatar_url)
-                  : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                    (_ = a.avatar_url_full)),
+              ? (p = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
+              : t &&
+                ((p = t.avatar_url_medium),
+                "Small" == a || "X-Small" == a
+                  ? (p = t.avatar_url)
+                  : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
+                    (p = t.avatar_url_full)),
             s.createElement(
-              A,
+              _,
               Object.assign(
                 {
-                  strAvatarURL: _,
-                  size: t,
-                  className: (0, o.Z)((0, i.sB)(a), l),
+                  strAvatarURL: p,
+                  size: a,
+                  className: (0, o.Z)((0, i.sB)(t), c),
                 },
-                c
+                l
               )
             )
           );
         }
       };
-      u = (0, n.gn)([r.Pi], u);
-      const d = (0, r.Pi)((e) => {
-        const { profileItem: a, className: t, bDisableAnimation: r } = e,
+      A = (0, n.gn)([r.Pi], A);
+      const u = (0, r.Pi)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: r } = e,
           i = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
-        if (!a || !a.image_small || 0 == a.image_small.length) return null;
-        let l = r ? a.image_large : a.image_small;
+        if (!t || !t.image_small || 0 == t.image_small.length) return null;
+        let c = r ? t.image_large : t.image_small;
         return (
-          l || (l = a.image_small),
-          l.startsWith("https://") ||
-            (l = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + l),
+          c || (c = t.image_small),
+          c.startsWith("https://") ||
+            (c = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + c),
           s.createElement(
             "div",
             Object.assign(
-              { className: (0, o.Z)(p().avatarFrame, t, "avatarFrame") },
+              { className: (0, o.Z)(h().avatarFrame, a, "avatarFrame") },
               i
             ),
-            s.createElement("img", { className: p().avatarFrameImg, src: l })
+            s.createElement("img", { className: h().avatarFrameImg, src: c })
           )
         );
       });
-      let h = class extends s.Component {
+      let d = class extends s.Component {
         constructor(e) {
           super(e),
             (this.state = { bAnimate: "None" != this.props.loopDuration }),
@@ -884,8 +1183,8 @@
         render() {
           let e = this.props,
             {
-              loopDuration: a,
-              animatedAvatar: t,
+              loopDuration: t,
+              animatedAvatar: a,
               avatarFrame: r,
               children: i,
               style: o,
@@ -900,12 +1199,12 @@
           return (
             m.onClick &&
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
-            this.state.bAnimate || (t = null),
+            this.state.bAnimate || (a = null),
             s.createElement(
-              u,
-              Object.assign({ animatedAvatar: t }, m),
+              A,
+              Object.assign({ animatedAvatar: a }, m),
               i,
-              s.createElement(d, {
+              s.createElement(u, {
                 profileItem: r,
                 bDisableAnimation: "None" === this.props.loopDuration,
               })
@@ -913,7 +1212,92 @@
           );
         }
       };
-      h = (0, n.gn)([r.Pi], h);
+      d = (0, n.gn)([r.Pi], d);
+    },
+    5827: (e, t, a) => {
+      "use strict";
+      a.d(t, { Mr: () => o, tk: () => m });
+      var n = a(67294),
+        s = a(95598),
+        r = a(57376),
+        i = a(90666);
+      function o() {
+        return i.De.IN_GAMEPADUI, n.createElement(s.MrB, null);
+      }
+      function m() {
+        return i.De.IN_GAMEPADUI
+          ? n.createElement(r.tkI, null)
+          : n.createElement(s.tkI, null);
+      }
+    },
+    60501: (e, t, a) => {
+      "use strict";
+      a.d(t, { j: () => i });
+      var n = a(70655),
+        s = a(67294),
+        r = a(64839);
+      class i extends s.Component {
+        constructor(e) {
+          super(e),
+            (this.m_refImage = s.createRef()),
+            (this.state = { nImage: 0 });
+        }
+        componentDidUpdate(e) {
+          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
+            this.setState({ nImage: 0 });
+        }
+        get src() {
+          let e = "";
+          return (
+            this.props.rgSources &&
+              this.props.rgSources.length > this.state.nImage &&
+              (e = this.props.rgSources[this.state.nImage]),
+            e ||
+              (console.warn(
+                "MultiSourceImage created with no image src",
+                this.props,
+                this.state.nImage
+              ),
+              (e =
+                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+            e
+          );
+        }
+        get imgRef() {
+          return this.m_refImage;
+        }
+        OnImageError(e) {
+          this.props.onIncrementalError &&
+            this.props.onIncrementalError(
+              e,
+              this.props.rgSources[this.state.nImage],
+              this.state.nImage
+            );
+          let t = this.state.nImage + 1;
+          t >= this.props.rgSources.length &&
+            this.props.onError &&
+            this.props.onError(e),
+            t < this.props.rgSources.length && this.setState({ nImage: t });
+        }
+        render() {
+          const e = this.props,
+            { src: t, rgSources: a, onIncrementalError: r, onError: i } = e,
+            o = (0, n._T)(e, [
+              "src",
+              "rgSources",
+              "onIncrementalError",
+              "onError",
+            ]),
+            m = this.src;
+          return s.createElement(
+            "img",
+            Object.assign({ src: m, ref: this.m_refImage }, o, {
+              onError: this.OnImageError,
+            })
+          );
+        }
+      }
+      (0, n.gn)([r.ak], i.prototype, "OnImageError", null);
     },
   },
 ]);

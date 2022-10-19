@@ -1161,23 +1161,58 @@ function LocUpdateLangThatHaveText( id )
 	}
 }
 
-
-function OnAdditionalLanguageSelect( id )
+function ShowAdditionalLanguage( selectId, selectValue )
 {
-	var select = $( id + '_select' );
+	var langContainer = $( 'additional_language_' + selectValue );
+	langContainer.style.display = 'block';
+
+	var option = $( selectId + '_option_' + selectValue );
+	option.style.display = 'none';
+}
+
+function OnAdditionalLanguageSelect( selectId )
+{
+	var select = $( selectId + '_select' );
 
 	if ( select.value == '_none_' )
 		return;
 
-	var langContainer = $( 'additional_language_' + select.value );
-	langContainer.style.display = 'block';
-
-	var option = $( id + '_option_' + select.value );
-	option.style.display = 'none';
+	ShowAdditionalLanguage( selectId, select.value );
 
 	select.value = "_none_";
 }
 
+function OnClickShowAllAdditionalLanguages( selectId )
+{
+	var select = $J( '#' + selectId + '_select' );
+	var children = select.children().each( function() {
+		var optionValue = $J( this ).val();
+		if ( optionValue == '_none_' )
+			return;
+
+		ShowAdditionalLanguage( selectId, optionValue );
+	});
+}
+
+function SetAllLanguageCheck( checked )
+{
+	$J( '.languages' ).find( '.checkboxGrid > a' ).each( function(){
+		var a = $J( this );
+		SetFancyCheckboxState( a.attr('id') , checked );
+	});
+}
+
+function OnClickAllLanguages( selectId )
+{
+	OnClickShowAllAdditionalLanguages( selectId );
+	SetAllLanguageCheck( true );
+}
+
+function OnClickNoLanguages( selectId )
+{
+	OnClickShowAllAdditionalLanguages( selectId );
+	SetAllLanguageCheck( false );
+}
 
 function InferBBCodeInTextArea( id )
 {

@@ -476,12 +476,12 @@
         const [e, t] = (0, l.useState)(!m.Get().BIsLoaded());
         return (
           (0, l.useEffect)(() => {
-            m.Get().BIsLoaded() ||
+            e &&
               m
                 .Get()
                 .HintLoad()
                 .finally(() => t(!m.Get().BIsLoaded()));
-          }, []),
+          }, [e]),
           [e, m.Get()]
         );
       }
@@ -719,7 +719,7 @@
                     o.render(e, n),
                     yield s;
                   let r = document;
-                  h.De.IN_LIBRARY && r.fonts && (yield r.fonts.ready);
+                  h.De.IN_STEAMUI && r.fonts && (yield r.fonts.ready);
                   const i = n.getBoundingClientRect(),
                     a = Math.ceil(i.height),
                     d = Math.ceil(i.width);

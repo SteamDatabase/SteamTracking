@@ -198,6 +198,7 @@
     "SteamCharts_TopSellers_TablePeakInGame": "Peak Today",
     "SteamCharts_TopSellers_TablePeakInGame_Tooltip": "Peak number of players simultaneously in this game in the past 24 hours",
     "SteamCharts_TopSellers_TableNew": "New",
+    "SteamCharts_TopSellers_TableReturning": "Returning",
     "SteamCharts_TopSellers_TableFree": "Free",
     "SteamCharts_TopSellers_ChangeTooltip": "Change in this game's rank since last week",
     "SteamCharts_TopSellers_NumTooltip": "Number of weeks in a row that this game has appeared on this chart",

@@ -15,14 +15,14 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    947: (t, e, n) => {
+    695: (t, e, n) => {
       "use strict";
       n.r(e), n.d(e, { InitializeGamepadNavigation: () => te });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(194);
+        a = n(965);
       !(function (t) {
         (t[(t.GAMEPAD = 0)] = "GAMEPAD"),
           (t[(t.KEYBOARD = 1)] = "KEYBOARD"),
@@ -91,8 +91,8 @@
             : console.assert(!!t, e, ...n)
           : t || console.warn(e, ...n);
       }
-      var _ = n(479),
-        v = n(234);
+      var _ = n(862),
+        v = n(107);
       class f extends class {
         GetObject(t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -369,7 +369,9 @@
       }
       (A.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
         (A.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
-        (A.s_Singleton = null);
+        (A.s_Singleton = null),
+        (window.EnableSteamConsole = (t = !0) =>
+          A.Get().SetDebugLogEnabled("SteamClient", t));
       class R {
         constructor(t) {
           this.m_root = t;
@@ -463,7 +465,7 @@
           );
         }
       }
-      var D = n(913);
+      var D = n(514);
       function S(t) {
         return null != t && void 0 !== t.focus;
       }
@@ -2813,7 +2815,7 @@
         }
       }
       (0, o.gn)([_.a], Tt.prototype, "OnMessage", null);
-      n(466);
+      n(471);
       class Ot extends a.oH {
         constructor(t) {
           super(),

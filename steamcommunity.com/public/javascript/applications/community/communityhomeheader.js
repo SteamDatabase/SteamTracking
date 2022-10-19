@@ -3,6 +3,49 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [312],
   {
+    50732: (e) => {
+      e.exports = {
+        LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
+        Static: "throbber_Static_kwzRJ",
+        none: "throbber_none_2iT5l",
+        bottomCircle: "throbber_bottomCircle_3-sjx",
+        noString: "throbber_noString_M4pF_",
+        Throbber: "throbber_Throbber_7MdwT",
+        throbber_small: "throbber_throbber_small_29-XT",
+        throbber_medium: "throbber_throbber_medium_1yqSo",
+        throbber_large: "throbber_throbber_large_1u2tL",
+        throbber_center_wrapper: "throbber_throbber_center_wrapper_Yi4EM",
+        ThrobberText: "throbber_ThrobberText_1Zlvf",
+        blur: "throbber_blur_3ebLc",
+        ThrobberRoundLoop: "throbber_ThrobberRoundLoop_3SEk8",
+        roundOuterOutline: "throbber_roundOuterOutline_3M8Ar",
+        roundOuter: "throbber_roundOuter_3H7At",
+        roundFill: "throbber_roundFill_2FWWt",
+        ThrobberFillLoop: "throbber_ThrobberFillLoop_1-rlb",
+        topCircle: "throbber_topCircle_3znUF",
+        circlePulse: "throbber_circlePulse_1oQUO",
+        ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_3oqZE",
+        ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_3veQr",
+        roundThrobber15: "throbber_roundThrobber15_1gQte",
+        roundThrobber14: "throbber_roundThrobber14_3DXeR",
+        roundThrobber13: "throbber_roundThrobber13_5VEyI",
+        roundThrobber12: "throbber_roundThrobber12_wOdFm",
+        roundThrobber11: "throbber_roundThrobber11_3Jmyz",
+        roundThrobber10: "throbber_roundThrobber10_3QwXn",
+        roundThrobber09: "throbber_roundThrobber09_2Yhvq",
+        roundThrobber08: "throbber_roundThrobber08_3HcIU",
+        roundThrobber07: "throbber_roundThrobber07__2fn3",
+        roundThrobber06: "throbber_roundThrobber06_2gCCI",
+        roundThrobber05: "throbber_roundThrobber05_1SrtW",
+        roundThrobber04: "throbber_roundThrobber04_2P5xs",
+        roundThrobber03: "throbber_roundThrobber03_3zYDa",
+        roundThrobber02: "throbber_roundThrobber02_2_KYJ",
+        roundThrobber01: "throbber_roundThrobber01_3N41H",
+        ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
+        throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
+        throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+      };
+    },
     9033: (e) => {
       e.exports = {
         CommunityHomeHeader: "communityhomeheader_CommunityHomeHeader_1C-zu",
@@ -38,309 +81,533 @@
         SortIcon: "communityhomeheader_SortIcon_2g7dI",
       };
     },
-    34425: (e, t, r) => {
+    34425: (e, r, t) => {
       "use strict";
-      r.d(t, { p: () => c });
-      var n = r(70655),
-        a = r(67294),
-        o = r(7707),
-        i = r(27745),
-        s = r(64839),
-        m = r(90666);
-      function c(e) {
-        const { children: t, navTreeRef: r } = e,
-          c = (0, n._T)(e, ["children", "navTreeRef"]),
-          l = a.useRef(),
-          u = (0, s.BE)(l, r);
-        if (m.De.IN_GAMEPADUI) {
+      t.d(r, { p: () => s });
+      var o = t(70655),
+        c = t(67294),
+        n = t(7707),
+        a = t(27745),
+        i = t(64839),
+        l = t(90666);
+      function s(e) {
+        const { children: r, navTreeRef: t } = e,
+          s = (0, o._T)(e, ["children", "navTreeRef"]),
+          m = c.useRef(),
+          b = (0, i.BE)(m, t);
+        if (l.De.IN_GAMEPADUI) {
           const e = window.__nav_tree_root;
-          return a.createElement(
-            o.Fe,
-            Object.assign({}, c, {
-              navTreeRef: u,
+          return c.createElement(
+            n.Fe,
+            Object.assign({}, s, {
+              navTreeRef: b,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            a.createElement(i.O, null, t)
+            c.createElement(a.O, null, r)
           );
         }
-        return a.createElement(a.Fragment, null, t);
+        return c.createElement(c.Fragment, null, r);
       }
     },
-    31933: (e, t, r) => {
+    31933: (e, r, t) => {
       "use strict";
-      r.d(t, { Ar: () => m, Wo: () => c, i9: () => s, ks: () => o });
-      var n = r(67294),
-        a = r(78587);
-      function o(e, t) {
-        let r;
+      t.d(r, { Ar: () => l, Wo: () => s, i9: () => i, ks: () => n });
+      var o = t(67294),
+        c = t(78587);
+      function n(e, r) {
+        let t;
         "string" == typeof e
-          ? (r = e)
+          ? (t = e)
           : "location" in e
-          ? (r = e.location.search)
-          : "search" in e && (r = e.search);
-        const n = new URLSearchParams(r.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+          ? (t = e.location.search)
+          : "search" in e && (t = e.search);
+        const o = new URLSearchParams(t.substring(1));
+        if (o.has(r)) {
+          const e = o.getAll(r);
           return e[e.length - 1];
         }
       }
-      const i = (e) => null != e;
-      function s(e, t, r) {
-        const n = new URLSearchParams(e.location.search.substring(1));
-        n.delete(t), i(r) && n.append(t, r), e.push(`?${n.toString()}`);
+      const a = (e) => null != e;
+      function i(e, r, t) {
+        const o = new URLSearchParams(e.location.search.substring(1));
+        o.delete(r), a(t) && o.append(r, t), e.push(`?${o.toString()}`);
       }
-      function m(e, t) {
-        const r = (0, a.k6)(),
-          m = (0, a.TH)(),
-          c = (0, n.useMemo)(() => {
-            const r = o(m.search, e);
-            return i(r)
-              ? i(t)
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== r)
-                  : t.constructor(r)
-                : r
-              : t;
-          }, [m.search, e, t]),
-          l = (0, n.useCallback)(
-            (t) => {
-              s(r, e, i(t) ? String(t) : null);
+      function l(e, r) {
+        const t = (0, c.k6)(),
+          l = (0, c.TH)(),
+          s = (0, o.useMemo)(() => {
+            const t = n(l.search, e);
+            return a(t)
+              ? a(r)
+                ? "boolean" == typeof r
+                  ? r.constructor("false" !== t)
+                  : r.constructor(t)
+                : t
+              : r;
+          }, [l.search, e, r]),
+          m = (0, o.useCallback)(
+            (r) => {
+              i(t, e, a(r) ? String(r) : null);
             },
-            [r, e]
+            [t, e]
           );
-        return [c, l];
+        return [s, m];
       }
-      function c(e, t) {
-        const r = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const n = t[e];
-            r.delete(e), i(n) && r.append(e, n);
+      function s(e, r) {
+        const t = new URLSearchParams(e.location.search.substring(1));
+        for (const e in r)
+          if (r.hasOwnProperty(e)) {
+            const o = r[e];
+            t.delete(e), a(o) && t.append(e, o);
           }
-        e.push(`?${r.toString()}`);
+        e.push(`?${t.toString()}`);
       }
     },
-    13596: (e, t, r) => {
+    13596: (e, r, t) => {
       "use strict";
-      r.d(t, { V: () => s });
-      var n = r(67294),
-        a = r(95598),
-        o = r(50732),
-        i = r.n(o);
-      class s extends n.PureComponent {
+      t.d(r, { V: () => a });
+      var o = t(67294),
+        c = t(50732),
+        n = t.n(c);
+      class a extends o.PureComponent {
         constructor(e) {
           super(e);
         }
         AddSizeClass(e) {
           "small" == this.props.size
-            ? e.push(i().throbber_small)
+            ? e.push(n().throbber_small)
             : "medium" == this.props.size
-            ? e.push(i().throbber_medium)
+            ? e.push(n().throbber_medium)
             : "xlarge" == this.props.size
-            ? e.push(i().throbber_xlarge)
+            ? e.push(n().throbber_xlarge)
             : "xxlarge" == this.props.size
-            ? e.push(i().throbber_xxlarge)
-            : e.push(i().throbber_large);
+            ? e.push(n().throbber_xxlarge)
+            : e.push(n().throbber_large);
         }
         render() {
-          let e = [i().LoadingWrapper, "SteamLogoThrobber"];
+          let e = [n().LoadingWrapper, "SteamLogoThrobber"];
           this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(i().noString),
+            void 0 === this.props.string && e.push(n().noString),
             this.props.className && e.push(this.props.className),
-            this.props.static && e.push(i().Static);
-          let t = n.createElement(
+            this.props.static && e.push(n().Static);
+          let r = o.createElement(
             "div",
             { className: e.join(" ") },
-            n.createElement(
+            o.createElement(
               "div",
-              { className: i().Throbber },
-              n.createElement(a.wUs, { className: i().base }),
-              n.createElement(a.wUs, { className: i().blur })
+              { className: n().Throbber },
+              o.createElement(i, { className: n().base }),
+              o.createElement(i, { className: n().blur })
             )
           );
-          return n.createElement(
+          return o.createElement(
             "div",
             {
               className:
                 "center" == this.props.position
-                  ? i().throbber_center_wrapper
+                  ? n().throbber_center_wrapper
                   : "",
             },
-            t,
+            r,
             Boolean(this.props.string) &&
-              n.createElement(
+              o.createElement(
                 "div",
-                { className: i().ThrobberText },
+                { className: n().ThrobberText },
                 this.props.string
               )
           );
         }
       }
-    },
-    2840: (e, t, r) => {
-      "use strict";
-      r.r(t), r.d(t, { default: () => E });
-      var n = r(70655),
-        a = r(67294),
-        o = r(41311),
-        i = r(9033),
-        s = r.n(i),
-        m = r(7707),
-        c = r(90666),
-        l = r(95598),
-        u = r(48341),
-        d = r(13596),
-        h = r(9669),
-        p = r.n(h),
-        _ = r(52114);
-      var b = r(7573),
-        H = r(159),
-        S = r(31933),
-        y = r(78587),
-        C = r(35921),
-        v = r(34425),
-        f = r(71174);
-      r(17010);
-      function E() {
-        const e = (0, f.L)(),
-          t = (0, a.useRef)();
+      function i(e) {
+        let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
-          (0, a.useEffect)(() => {
-            t.current && t.current.TakeFocus();
-          }, []),
-          a.createElement(
-            v.p,
-            { navID: "CommunityHomeHeader", NavigationManager: e },
-            a.createElement(
-              C.s,
-              { navRef: t, className: s().CommunityHomeHeader },
-              a.createElement(
-                "div",
-                { className: s().CommunityHomeHeaderTitleSection },
-                a.createElement(
-                  "div",
-                  null,
-                  a.createElement(
-                    "div",
-                    { className: s().CommunityHomeHeaderTitle },
-                    (0, o.Xx)("#Community_Home_Header_Title")
-                  ),
-                  a.createElement(
-                    "div",
-                    { className: s().CommunityHomeHeaderSubtitle },
-                    (0, o.Xx)("#Community_Home_Header_Subtitle")
-                  )
-                ),
-                a.createElement(
-                  m.IS,
-                  {
-                    className: s().AddFriendBtn,
-                    href: `${c.De.COMMUNITY_BASE_URL}search/users/`,
-                  },
-                  (0, o.Xx)("#Community_Home_Header_AddFriend_Button")
-                )
-              ),
-              a.createElement(g, null),
-              a.createElement(w, null)
+          e.className && (r += e.className),
+          o.createElement(
+            "svg",
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: r,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            o.createElement(
+              "g",
+              { className: n().partCircle },
+              o.createElement("path", {
+                className: n().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+              }),
+              o.createElement("path", {
+                className: n().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M201.432,101.166",
+              }),
+              o.createElement("path", {
+                className: n().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+              })
+            ),
+            o.createElement(
+              "g",
+              { className: n().mainOutline },
+              o.createElement("path", {
+                className: n().roundFill,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundOuterOutline,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber01,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber02,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber03,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber04,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber05,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber06,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber07,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber08,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber09,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber10,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber11,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber12,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber13,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber14,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              o.createElement("path", {
+                className: n().roundThrobber15,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              })
+            ),
+            o.createElement(
+              "g",
+              { className: n().bottomCircle },
+              o.createElement("path", {
+                fill: "#ffffff",
+                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+              })
+            ),
+            o.createElement(
+              "g",
+              { className: n().topCircle },
+              o.createElement("circle", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                cx: "161.731",
+                cy: "101.274",
+                r: "23.019",
+              })
             )
           )
         );
       }
-      function g() {
-        const [e, t] = (0, a.useState)(""),
-          [r, i] = (0, a.useState)([]),
-          [h, b] = (0, a.useState)(!1),
-          H = (function () {
-            const e = (0, a.useMemo)(
-                () => (0, c.ip)("personalapps", "application_config") || [],
+    },
+    2840: (e, r, t) => {
+      "use strict";
+      t.r(r), t.d(r, { default: () => C });
+      var o = t(70655),
+        c = t(67294),
+        n = t(41311),
+        a = t(9033),
+        i = t.n(a),
+        l = t(7707),
+        s = t(90666),
+        m = t(95598),
+        b = t(48341),
+        u = t(13596),
+        h = t(9669),
+        d = t.n(h),
+        _ = t(52114);
+      var p = t(7573),
+        f = t(159),
+        T = t(31933),
+        k = t(78587),
+        S = t(35921),
+        E = t(34425),
+        H = t(71174);
+      t(17010);
+      function C() {
+        const e = (0, H.L)(),
+          r = (0, c.useRef)();
+        return (
+          (0, c.useEffect)(() => {
+            r.current && r.current.TakeFocus();
+          }, []),
+          c.createElement(
+            E.p,
+            { navID: "CommunityHomeHeader", NavigationManager: e },
+            c.createElement(
+              S.s,
+              { navRef: r, className: i().CommunityHomeHeader },
+              c.createElement(
+                "div",
+                { className: i().CommunityHomeHeaderTitleSection },
+                c.createElement(
+                  "div",
+                  null,
+                  c.createElement(
+                    "div",
+                    { className: i().CommunityHomeHeaderTitle },
+                    (0, n.Xx)("#Community_Home_Header_Title")
+                  ),
+                  c.createElement(
+                    "div",
+                    { className: i().CommunityHomeHeaderSubtitle },
+                    (0, n.Xx)("#Community_Home_Header_Subtitle")
+                  )
+                ),
+                c.createElement(
+                  l.IS,
+                  {
+                    className: i().AddFriendBtn,
+                    href: `${s.De.COMMUNITY_BASE_URL}search/users/`,
+                  },
+                  (0, n.Xx)("#Community_Home_Header_AddFriend_Button")
+                )
+              ),
+              c.createElement(y, null),
+              c.createElement(M, null)
+            )
+          )
+        );
+      }
+      function y() {
+        const [e, r] = (0, c.useState)(""),
+          [t, a] = (0, c.useState)([]),
+          [h, p] = (0, c.useState)(!1),
+          f = (function () {
+            const e = (0, c.useMemo)(
+                () => (0, s.ip)("personalapps", "application_config") || [],
                 []
               ),
-              t = (0, a.useMemo)(
-                () => (0, c.ip)("popularapps", "application_config") || [],
+              r = (0, c.useMemo)(
+                () => (0, s.ip)("popularapps", "application_config") || [],
                 []
               ),
-              r = [...e, ...t];
-            if (r.length)
+              t = [...e, ...r];
+            if (t.length)
               return {
-                isLoading: 1 === (0, _.wZ)(r, { include_assets: !0 }),
-                data: { personalAppIds: e, popularAppIds: t },
+                isLoading: 1 === (0, _.wZ)(t, { include_assets: !0 }),
+                data: { personalAppIds: e, popularAppIds: r },
               };
             return {
               isLoading: !1,
-              data: { personalAppIds: e, popularAppIds: t },
+              data: { personalAppIds: e, popularAppIds: r },
             };
           })();
-        if (H.isLoading) return a.createElement(d.V, { position: "center" });
-        return a.createElement(
+        if (f.isLoading) return c.createElement(u.V, { position: "center" });
+        return c.createElement(
           "div",
-          { className: s().CommunityHomeHeaderContent },
-          a.createElement(
-            C.s,
-            { className: s().AppHubsCtn },
-            a.createElement(A, {
-              appShortcuts: H.data.personalAppIds,
-              sectionTitle: (0, o.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: H.data.popularAppIds.length > 0,
+          { className: i().CommunityHomeHeaderContent },
+          c.createElement(
+            S.s,
+            { className: i().AppHubsCtn },
+            c.createElement(L, {
+              appShortcuts: f.data.personalAppIds,
+              sectionTitle: (0, n.Xx)("#Community_Home_Header_GameHubs_ForYou"),
+              withDivider: f.data.popularAppIds.length > 0,
             }),
-            a.createElement(A, {
-              appShortcuts: H.data.popularAppIds,
-              sectionTitle: (0, o.Xx)(
+            c.createElement(L, {
+              appShortcuts: f.data.popularAppIds,
+              sectionTitle: (0, n.Xx)(
                 "#Community_Home_Header_GameHubs_Popular"
               ),
             })
           ),
-          a.createElement(
-            C.s,
+          c.createElement(
+            S.s,
             {
-              onFocus: () => b(!0),
+              onFocus: () => p(!0),
               onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || b(!1);
+                e.currentTarget.contains(e.relatedTarget) || p(!1);
               },
-              className: s().Search,
+              className: i().Search,
             },
-            a.createElement(
-              C.s,
-              { className: s().SearchBar },
-              a.createElement(
+            c.createElement(
+              S.s,
+              { className: i().SearchBar },
+              c.createElement(
                 "div",
-                { className: s().InputContainer },
-                a.createElement(u.II, {
+                { className: i().InputContainer },
+                c.createElement(b.II, {
                   onChange: (e) =>
-                    (0, n.mG)(this, void 0, void 0, function* () {
-                      t(e.target.value);
-                      const r = yield (function (e) {
-                        return (0, n.mG)(this, void 0, void 0, function* () {
-                          const t = `${c.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
-                          return (yield p().get(t)).data;
+                    (0, o.mG)(this, void 0, void 0, function* () {
+                      r(e.target.value);
+                      const t = yield (function (e) {
+                        return (0, o.mG)(this, void 0, void 0, function* () {
+                          const r = `${s.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                          return (yield d().get(r)).data;
                         });
                       })(e.target.value);
-                      i(r);
+                      a(t);
                     }),
                   value: e,
-                  className: s().Input,
-                  placeholder: (0, o.Xx)(
+                  className: i().Input,
+                  placeholder: (0, n.Xx)(
                     "#Community_Home_Header_FindGame_Placeholder"
                   ),
                 })
               ),
-              a.createElement(
+              c.createElement(
                 "div",
-                { className: s().SearchIcon },
-                a.createElement(l.YtI, null)
+                { className: i().SearchIcon },
+                c.createElement(m.YtI, null)
               )
             ),
             h &&
-              a.createElement(
-                C.s,
-                { className: s().SearchResultsCtn },
-                r.map((e) =>
-                  a.createElement(
-                    m.IS,
+              c.createElement(
+                S.s,
+                { className: i().SearchResultsCtn },
+                t.map((e) =>
+                  c.createElement(
+                    l.IS,
                     {
-                      href: `${c.De.COMMUNITY_BASE_URL}app/${e.appid}`,
+                      href: `${s.De.COMMUNITY_BASE_URL}app/${e.appid}`,
                       key: e.appid,
-                      className: s().SearchResult,
+                      className: i().SearchResult,
                     },
                     e.name
                   )
@@ -349,70 +616,70 @@
           )
         );
       }
-      function A(e) {
-        const { appShortcuts: t, sectionTitle: r, withDivider: n } = e;
-        return t && t.length
-          ? a.createElement(
+      function L(e) {
+        const { appShortcuts: r, sectionTitle: t, withDivider: o } = e;
+        return r && r.length
+          ? c.createElement(
               "div",
-              { className: s().AppHubShortcutsCtn },
-              a.createElement("div", { className: s().AppHubTitle }, r),
-              a.createElement(
+              { className: i().AppHubShortcutsCtn },
+              c.createElement("div", { className: i().AppHubTitle }, t),
+              c.createElement(
                 "div",
                 {
                   "flow-children": "row",
-                  className: (0, b.Z)(
-                    s().AppHubShortcutLinks,
-                    n ? s().Divider : null
+                  className: (0, p.Z)(
+                    i().AppHubShortcutLinks,
+                    o ? i().Divider : null
                   ),
                 },
-                t.map((e, t) => a.createElement(T, { key: t, appId: e }))
+                r.map((e, r) => c.createElement(g, { key: r, appId: e }))
               )
             )
           : null;
       }
-      function T(e) {
-        const t = H.Z.Get().GetApp(e.appId);
-        return t
-          ? a.createElement(
-              m.IS,
+      function g(e) {
+        const r = f.Z.Get().GetApp(e.appId);
+        return r
+          ? c.createElement(
+              l.IS,
               {
-                className: s().ShortcutLink,
-                href: `${c.De.COMMUNITY_BASE_URL}app/${e.appId}`,
+                className: i().ShortcutLink,
+                href: `${s.De.COMMUNITY_BASE_URL}app/${e.appId}`,
               },
-              a.createElement("img", {
-                className: s().ShortcutImage,
-                src: t.GetAssets().GetLibraryCapsuleURL(),
+              c.createElement("img", {
+                className: i().ShortcutImage,
+                src: r.GetAssets().GetLibraryCapsuleURL(),
               })
             )
           : null;
       }
-      const I = "subsection",
-        N = "browsefilter";
-      function w() {
-        const e = (0, y.k6)(),
-          t = (0, S.ks)(e, I),
-          r = (0, S.ks)(e, N);
-        return a.createElement(
+      const N = "subsection",
+        v = "browsefilter";
+      function M() {
+        const e = (0, k.k6)(),
+          r = (0, T.ks)(e, N),
+          t = (0, T.ks)(e, v);
+        return c.createElement(
           "div",
           null,
-          a.createElement(k, { activeTab: t, activeSort: r }),
-          a.createElement(L, { activeTab: t, activeSort: r })
+          c.createElement(A, { activeTab: r, activeSort: t }),
+          c.createElement(I, { activeTab: r, activeSort: t })
         );
       }
-      function k(e) {
-        const { activeTab: t, activeSort: r } = e,
-          n = a.useRef();
-        a.useEffect(() => {
-          const e = document.getElementById(t);
-          if (e && (null == n ? void 0 : n.current)) {
-            const t = e.offsetLeft + e.clientWidth;
-            t > window.innerWidth &&
-              n.current.scrollBy(t - window.innerWidth, 0);
+      function A(e) {
+        const { activeTab: r, activeSort: t } = e,
+          o = c.useRef();
+        c.useEffect(() => {
+          const e = document.getElementById(r);
+          if (e && (null == o ? void 0 : o.current)) {
+            const r = e.offsetLeft + e.clientWidth;
+            r > window.innerWidth &&
+              o.current.scrollBy(r - window.innerWidth, 0);
           }
-        }, [null == n ? void 0 : n.current]);
-        return a.createElement(
-          C.s,
-          { "flow-children": "row", className: s().TabContainer, ref: n },
+        }, [null == o ? void 0 : o.current]);
+        return c.createElement(
+          S.s,
+          { "flow-children": "row", className: i().TabContainer, ref: o },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -429,35 +696,35 @@
             { label: "#Community_Home_Header_Filter_News", id: "news" },
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
-          ].map((e, n) => {
-            const i = t ? t === e.id : 0 === n,
-              l = e.id ? `subsection=${e.id}` : "",
-              u = r ? `browsefilter=${r}` : "",
-              d = `${c.De.COMMUNITY_BASE_URL}${u || l ? "?" : ""}${u}${
-                l ? "&" : ""
-              }${l}`;
-            return a.createElement(
-              m.IS,
+          ].map((e, o) => {
+            const a = r ? r === e.id : 0 === o,
+              m = e.id ? `subsection=${e.id}` : "",
+              b = t ? `browsefilter=${t}` : "",
+              u = `${s.De.COMMUNITY_BASE_URL}${b || m ? "?" : ""}${b}${
+                m ? "&" : ""
+              }${m}`;
+            return c.createElement(
+              l.IS,
               {
                 id: e.id,
-                href: d,
+                href: u,
                 key: e.id,
-                className: (0, b.Z)(s().Tab, i ? s().ActiveTab : null),
+                className: (0, p.Z)(i().Tab, a ? i().ActiveTab : null),
               },
-              (0, o.Xx)(e.label)
+              (0, n.Xx)(e.label)
             );
           })
         );
       }
-      function L(e) {
-        const { activeTab: t, activeSort: r } = e;
-        return a.createElement(
-          C.s,
-          { "flow-children": "row", className: s().SortContainer },
-          a.createElement(
+      function I(e) {
+        const { activeTab: r, activeSort: t } = e;
+        return c.createElement(
+          S.s,
+          { "flow-children": "row", className: i().SortContainer },
+          c.createElement(
             "div",
-            { className: s().SortIcon },
-            a.createElement(l.iS8, null)
+            { className: i().SortIcon },
+            c.createElement(m.iS8, null)
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -465,21 +732,21 @@
               label: "#Community_Home_Header_BrowseFilter_Recent",
               id: "mostrecent",
             },
-          ].map((e, n) => {
-            const i = r ? r === e.id : 0 === n,
-              l = t ? `subsection=${t}` : "",
-              u = e.id ? `browsefilter=${e.id}` : "",
-              d = `${c.De.COMMUNITY_BASE_URL}${u || l ? "?" : ""}${u}${
-                l ? "&" : ""
-              }${l}`;
-            return a.createElement(
-              m.IS,
+          ].map((e, o) => {
+            const a = t ? t === e.id : 0 === o,
+              m = r ? `subsection=${r}` : "",
+              b = e.id ? `browsefilter=${e.id}` : "",
+              u = `${s.De.COMMUNITY_BASE_URL}${b || m ? "?" : ""}${b}${
+                m ? "&" : ""
+              }${m}`;
+            return c.createElement(
+              l.IS,
               {
-                href: d,
+                href: u,
                 key: e.id,
-                className: (0, b.Z)(s().Sort, i ? s().ActiveSort : null),
+                className: (0, p.Z)(i().Sort, a ? i().ActiveSort : null),
               },
-              (0, o.Xx)(e.label)
+              (0, n.Xx)(e.label)
             );
           })
         );

@@ -277,9 +277,6 @@
   .chartscommon_HoverMask_23Aj1 {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   cursor: pointer;
   z-index: 6;
 }
@@ -289,6 +286,14 @@
     .chartscommon_HoverCell_2-85m
     .chartscommon_HoverSource_ueQE3 {
     width: 25%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .chartscommon_ChartTable_37mz_
+    .chartscommon_TableRow_1e_nc
+    .chartscommon_HoverCell_2-85m
+    .chartscommon_HoverSource_ueQE3 {
+    width: 0%;
   }
 }
 .chartscommon_ChartTable_37mz_
@@ -356,14 +361,29 @@
 .chartscommon_ChartTable_37mz_
   .chartscommon_TableRow_1e_nc
   .chartscommon_ChangeCell_5XCIf
-  .chartscommon_ListWeeksDebut_2MncB {
-  background-color: #76dbfb;
+  .chartscommon_ListWeeksDebut_2MncB,
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf
+  .chartscommon_ListWeeksReturning_1aZmr {
   color: #202327;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 2px;
   padding: 2px 6px;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf
+  .chartscommon_ListWeeksDebut_2MncB {
+  background-color: #76dbfb;
+}
+.chartscommon_ChartTable_37mz_
+  .chartscommon_TableRow_1e_nc
+  .chartscommon_ChangeCell_5XCIf
+  .chartscommon_ListWeeksReturning_1aZmr {
+  background-color: #41ffcb;
 }
 .chartscommon_ChartTable_37mz_
   .chartscommon_TableRow_1e_nc
@@ -1306,9 +1326,6 @@ div#global_header .content {
   .weeklytopsellers_HoverMask_N8w56 {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   cursor: pointer;
   z-index: 6;
 }
@@ -1318,6 +1335,14 @@ div#global_header .content {
     .weeklytopsellers_HoverCell_3Jiuz
     .weeklytopsellers_HoverSource_1oW6Q {
     width: 25%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .weeklytopsellers_ChartTable_3arZn
+    .weeklytopsellers_TableRow_2-RN6
+    .weeklytopsellers_HoverCell_3Jiuz
+    .weeklytopsellers_HoverSource_1oW6Q {
+    width: 0%;
   }
 }
 .weeklytopsellers_ChartTable_3arZn
@@ -1385,14 +1410,29 @@ div#global_header .content {
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_TableRow_2-RN6
   .weeklytopsellers_ChangeCell_1ZdIh
-  .weeklytopsellers_ListWeeksDebut_3VOg1 {
-  background-color: #76dbfb;
+  .weeklytopsellers_ListWeeksDebut_3VOg1,
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh
+  .weeklytopsellers_ListWeeksReturning_CQijl {
   color: #202327;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 2px;
   padding: 2px 6px;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh
+  .weeklytopsellers_ListWeeksDebut_3VOg1 {
+  background-color: #76dbfb;
+}
+.weeklytopsellers_ChartTable_3arZn
+  .weeklytopsellers_TableRow_2-RN6
+  .weeklytopsellers_ChangeCell_1ZdIh
+  .weeklytopsellers_ListWeeksReturning_CQijl {
+  background-color: #41ffcb;
 }
 .weeklytopsellers_ChartTable_3arZn
   .weeklytopsellers_TableRow_2-RN6

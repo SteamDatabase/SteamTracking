@@ -4,6 +4,49 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8974],
   {
+    50732: (e) => {
+      e.exports = {
+        LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
+        Static: "throbber_Static_kwzRJ",
+        none: "throbber_none_2iT5l",
+        bottomCircle: "throbber_bottomCircle_3-sjx",
+        noString: "throbber_noString_M4pF_",
+        Throbber: "throbber_Throbber_7MdwT",
+        throbber_small: "throbber_throbber_small_29-XT",
+        throbber_medium: "throbber_throbber_medium_1yqSo",
+        throbber_large: "throbber_throbber_large_1u2tL",
+        throbber_center_wrapper: "throbber_throbber_center_wrapper_Yi4EM",
+        ThrobberText: "throbber_ThrobberText_1Zlvf",
+        blur: "throbber_blur_3ebLc",
+        ThrobberRoundLoop: "throbber_ThrobberRoundLoop_3SEk8",
+        roundOuterOutline: "throbber_roundOuterOutline_3M8Ar",
+        roundOuter: "throbber_roundOuter_3H7At",
+        roundFill: "throbber_roundFill_2FWWt",
+        ThrobberFillLoop: "throbber_ThrobberFillLoop_1-rlb",
+        topCircle: "throbber_topCircle_3znUF",
+        circlePulse: "throbber_circlePulse_1oQUO",
+        ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_3oqZE",
+        ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_3veQr",
+        roundThrobber15: "throbber_roundThrobber15_1gQte",
+        roundThrobber14: "throbber_roundThrobber14_3DXeR",
+        roundThrobber13: "throbber_roundThrobber13_5VEyI",
+        roundThrobber12: "throbber_roundThrobber12_wOdFm",
+        roundThrobber11: "throbber_roundThrobber11_3Jmyz",
+        roundThrobber10: "throbber_roundThrobber10_3QwXn",
+        roundThrobber09: "throbber_roundThrobber09_2Yhvq",
+        roundThrobber08: "throbber_roundThrobber08_3HcIU",
+        roundThrobber07: "throbber_roundThrobber07__2fn3",
+        roundThrobber06: "throbber_roundThrobber06_2gCCI",
+        roundThrobber05: "throbber_roundThrobber05_1SrtW",
+        roundThrobber04: "throbber_roundThrobber04_2P5xs",
+        roundThrobber03: "throbber_roundThrobber03_3zYDa",
+        roundThrobber02: "throbber_roundThrobber02_2_KYJ",
+        roundThrobber01: "throbber_roundThrobber01_3N41H",
+        ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
+        throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
+        throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+      };
+    },
     4687: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "releasedateinfo_ReleaseDateInfoCtn_2mHXb",
@@ -35,7 +78,7 @@
         HTMLErrorBoxAppear: "releasedaterequest_HTMLErrorBoxAppear_bXT6n",
       };
     },
-    46700: (e, t, a) => {
+    46700: (e, t, r) => {
       var n = {
         "./af": 42786,
         "./af.js": 42786,
@@ -308,36 +351,36 @@
         "./zh-tw": 74152,
         "./zh-tw.js": 74152,
       };
-      function s(e) {
-        var t = r(e);
-        return a(t);
+      function a(e) {
+        var t = s(e);
+        return r(t);
       }
-      function r(e) {
-        if (!a.o(n, e)) {
+      function s(e) {
+        if (!r.o(n, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
         return n[e];
       }
-      (s.keys = function () {
+      (a.keys = function () {
         return Object.keys(n);
       }),
-        (s.resolve = r),
-        (e.exports = s),
-        (s.id = 46700);
+        (a.resolve = s),
+        (e.exports = a),
+        (a.id = 46700);
     },
-    5525: (e, t, a) => {
+    5525: (e, t, r) => {
       "use strict";
-      a.d(t, { F_: () => p, JW: () => d, kl: () => E, zD: () => h });
-      var n = a(70655),
-        s = a(22188),
-        r = a(30381),
-        l = a.n(r),
-        o = a(67294),
-        i = a(54698),
-        c = a(74163),
-        u = a(90666);
-      class m {
+      r.d(t, { F_: () => b, JW: () => m, kl: () => p, zD: () => g });
+      var n = r(70655),
+        a = r(22188),
+        s = r(30381),
+        o = r.n(s),
+        l = r(67294),
+        c = r(54698),
+        i = r(74163),
+        u = r(90666);
+      class d {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -347,10 +390,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return u.De.EREALM != i.IN.k_ESteamRealmChina;
+          return u.De.EREALM != c.IN.k_ESteamRealmChina;
         }
         get bIsCuratorsEnabled() {
-          return u.De.EREALM != i.IN.k_ESteamRealmChina;
+          return u.De.EREALM != c.IN.k_ESteamRealmChina;
         }
         get bIncludeCurators() {
           return !0;
@@ -376,119 +419,118 @@
             ("dev" == u.De.WEB_UNIVERSE || "beta" == u.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let a = /^\d+$/.test(e) ? l().unix(Number.parseInt(e)) : l()(e);
-            (this.nOverrideDateNow = Math.floor(a.unix())),
+            let r = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
+            (this.nOverrideDateNow = Math.floor(r.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  a.format()
+                  r.format()
               );
           }
         }
       }
-      (0, n.gn)([s.LO], m.prototype, "nOverrideDateNow", void 0);
-      const d = new m();
-      function p(e = 1) {
-        const [t, a] = o.useState(() => j()),
-          n = (0, c.T)("useTimeNowWithOverride"),
-          s = o.useCallback(() => {
-            n.token.reason || a(j());
+      (0, n.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
+      const m = new d();
+      function b(e = 1) {
+        const [t, r] = l.useState(() => f()),
+          n = (0, i.T)("useTimeNowWithOverride"),
+          a = l.useCallback(() => {
+            n.token.reason || r(f());
           }, []);
         return (
-          o.useEffect(() => {
+          l.useEffect(() => {
             const t = 1e3 * e,
-              a = t - (Date.now() % t),
-              n = window.setTimeout(s, a);
+              r = t - (Date.now() % t),
+              n = window.setTimeout(a, r);
             return () => {
               window.clearTimeout(n);
             };
-          }, [t, e, s]),
+          }, [t, e, a]),
           t
         );
       }
-      window.g_EventCalendarDevFeatures = d;
-      const _ = new Date(),
-        g = Math.floor(_.getTime() / 1e3);
-      function j() {
+      window.g_EventCalendarDevFeatures = m;
+      const h = new Date(),
+        _ = Math.floor(h.getTime() / 1e3);
+      function f() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - g) : e;
+        return m.nOverrideDateNow ? m.nOverrideDateNow + (e - _) : e;
       }
-      function E() {
+      function p() {
         var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : g;
+        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : _;
       }
-      function h() {
-        return o.useMemo(() => E(), []);
+      function g() {
+        return l.useMemo(() => p(), []);
       }
     },
-    50647: (e, t, a) => {
+    50647: (e, t, r) => {
       "use strict";
-      a.d(t, { M: () => l, y: () => r });
-      var n = a(41311),
-        s = a(74891);
-      function r(e) {
-        return l(
+      r.d(t, { M: () => o, y: () => s });
+      var n = r(41311),
+        a = r(74891);
+      function s(e) {
+        return o(
           e.coming_soon_display,
           e.steam_release_date,
           e.custom_release_date_message
         );
       }
-      function l(e, t, a) {
+      function o(e, t, r) {
         switch (e) {
           case "date_full":
             return (0, n.vX)(t);
           case "date_month":
-            return (0, s.LO)(new Date(1e3 * t));
+            return (0, a.LO)(new Date(1e3 * t));
           case "date_quarter":
-            return (0, s.Kb)(new Date(1e3 * t));
+            return (0, a.Kb)(new Date(1e3 * t));
           case "date_year":
-            return (0, s.Np)(new Date(1e3 * t));
+            return (0, a.Np)(new Date(1e3 * t));
           case "text_comingsoon":
-            return a || (0, n.Xx)("#Store_ComingSoon_ComingSoon");
+            return r || (0, n.Xx)("#Store_ComingSoon_ComingSoon");
           case "text_tba":
-            return a || (0, n.Xx)("#Store_ComingSoon_TBA");
+            return r || (0, n.Xx)("#Store_ComingSoon_TBA");
           default:
             return "";
         }
       }
     },
-    13596: (e, t, a) => {
+    13596: (e, t, r) => {
       "use strict";
-      a.d(t, { V: () => o });
-      var n = a(67294),
-        s = a(95598),
-        r = a(50732),
-        l = a.n(r);
+      r.d(t, { V: () => o });
+      var n = r(67294),
+        a = r(50732),
+        s = r.n(a);
       class o extends n.PureComponent {
         constructor(e) {
           super(e);
         }
         AddSizeClass(e) {
           "small" == this.props.size
-            ? e.push(l().throbber_small)
+            ? e.push(s().throbber_small)
             : "medium" == this.props.size
-            ? e.push(l().throbber_medium)
+            ? e.push(s().throbber_medium)
             : "xlarge" == this.props.size
-            ? e.push(l().throbber_xlarge)
+            ? e.push(s().throbber_xlarge)
             : "xxlarge" == this.props.size
-            ? e.push(l().throbber_xxlarge)
-            : e.push(l().throbber_large);
+            ? e.push(s().throbber_xxlarge)
+            : e.push(s().throbber_large);
         }
         render() {
-          let e = [l().LoadingWrapper, "SteamLogoThrobber"];
+          let e = [s().LoadingWrapper, "SteamLogoThrobber"];
           this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(l().noString),
+            void 0 === this.props.string && e.push(s().noString),
             this.props.className && e.push(this.props.className),
-            this.props.static && e.push(l().Static);
+            this.props.static && e.push(s().Static);
           let t = n.createElement(
             "div",
             { className: e.join(" ") },
             n.createElement(
               "div",
-              { className: l().Throbber },
-              n.createElement(s.wUs, { className: l().base }),
-              n.createElement(s.wUs, { className: l().blur })
+              { className: s().Throbber },
+              n.createElement(l, { className: s().base }),
+              n.createElement(l, { className: s().blur })
             )
           );
           return n.createElement(
@@ -496,48 +538,273 @@
             {
               className:
                 "center" == this.props.position
-                  ? l().throbber_center_wrapper
+                  ? s().throbber_center_wrapper
                   : "",
             },
             t,
             Boolean(this.props.string) &&
               n.createElement(
                 "div",
-                { className: l().ThrobberText },
+                { className: s().ThrobberText },
                 this.props.string
               )
           );
         }
       }
-    },
-    74163: (e, t, a) => {
-      "use strict";
-      a.d(t, { T: () => l });
-      var n = a(9669),
-        s = a.n(n),
-        r = a(67294);
       function l(e) {
-        const t = r.useRef(s().CancelToken.source());
+        let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
-          r.useEffect(() => {
-            const a = t.current;
-            return () => a.cancel(e ? `${e}: unmounting` : "unmounting");
+          e.className && (t += e.className),
+          n.createElement(
+            "svg",
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            n.createElement(
+              "g",
+              { className: s().partCircle },
+              n.createElement("path", {
+                className: s().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+              }),
+              n.createElement("path", {
+                className: s().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M201.432,101.166",
+              }),
+              n.createElement("path", {
+                className: s().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+              })
+            ),
+            n.createElement(
+              "g",
+              { className: s().mainOutline },
+              n.createElement("path", {
+                className: s().roundFill,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundOuterOutline,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber01,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber02,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber03,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber04,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber05,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber06,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber07,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber08,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber09,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber10,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber11,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber12,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber13,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber14,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              n.createElement("path", {
+                className: s().roundThrobber15,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              })
+            ),
+            n.createElement(
+              "g",
+              { className: s().bottomCircle },
+              n.createElement("path", {
+                fill: "#ffffff",
+                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+              })
+            ),
+            n.createElement(
+              "g",
+              { className: s().topCircle },
+              n.createElement("circle", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                cx: "161.731",
+                cy: "101.274",
+                r: "23.019",
+              })
+            )
+          )
+        );
+      }
+    },
+    74163: (e, t, r) => {
+      "use strict";
+      r.d(t, { T: () => o });
+      var n = r(9669),
+        a = r.n(n),
+        s = r(67294);
+      function o(e) {
+        const t = s.useRef(a().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const r = t.current;
+            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
           t.current
         );
       }
     },
-    48366: (e, t, a) => {
+    48366: (e, t, r) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => H });
-      var n = a(67294),
-        s = a(50647),
-        r = a(22453),
-        l = a(41311);
-      function o(e) {
-        const { rtSteamReleaseDate: t, value: a, onChange: o } = e,
-          i = !!t,
-          c = n.useMemo(
+      r.r(t), r.d(t, { default: () => H });
+      var n = r(67294),
+        a = r(50647),
+        s = r(22453),
+        o = r(41311);
+      function l(e) {
+        const { rtSteamReleaseDate: t, value: r, onChange: l } = e,
+          c = !!t,
+          i = n.useMemo(
             () =>
               [
                 "date_full",
@@ -546,56 +813,56 @@
                 "date_year",
                 "text_comingsoon",
                 "text_tba",
-              ].map((e) => ({ label: (0, s.M)(e, t), data: e })),
+              ].map((e) => ({ label: (0, a.M)(e, t), data: e })),
             [t]
           ),
           u = n.useCallback(
             (e) => {
-              o(e.data);
+              l(e.data);
             },
-            [o]
+            [l]
           );
-        return n.createElement(r.TW, {
-          disabled: !i,
-          strDefaultLabel: (0, l.Xx)("#App_Landing_NoDateSelected"),
-          rgOptions: c,
-          selectedOption: i ? a : null,
+        return n.createElement(s.TW, {
+          disabled: !c,
+          strDefaultLabel: (0, o.Xx)("#App_Landing_NoDateSelected"),
+          rgOptions: i,
+          selectedOption: c ? r : null,
           onChange: u,
         });
       }
-      let i = (e, t) => `/admin/game/${e}/${t}`,
-        c = (e) => `/apps/landing/${e}`,
+      let c = (e, t) => `/admin/game/${e}/${t}`,
+        i = (e) => `/apps/landing/${e}`,
         u = (e) => `/apps/communityitems/${e}`;
-      const m = ["edit", "diff", "revert", "prepare", "publish"];
-      var d = a(5977),
-        p = a(74091),
-        _ = a(74891),
-        g = a(4687),
-        j = a(95598),
-        E = a(70655),
-        h = a(9669),
-        b = a.n(h),
-        f = a(42795),
-        v = a(88767),
-        C = (a(26149), a(25333)),
-        D = a(56525),
-        S = a(13596),
-        R = a(23989),
-        N = a(35092),
-        w = a(90666),
-        x = a(13634);
-      function k(e) {
-        const { appid: t, onClose: a, onCommit: s } = e,
-          [r, o] = n.useState(null),
+      const d = ["edit", "diff", "revert", "prepare", "publish"];
+      var m = r(5977),
+        b = r(74091),
+        h = r(74891),
+        _ = r(4687),
+        f = r(95598),
+        p = r(70655),
+        g = r(9669),
+        E = r.n(g),
+        j = r(42795),
+        k = r(88767),
+        C = (r(26149), r(25333)),
+        v = r(56525),
+        S = r(13596),
+        D = r(23989),
+        T = r(35092),
+        L = r(90666),
+        N = r(13634);
+      function x(e) {
+        const { appid: t, onClose: r, onCommit: a } = e,
+          [s, l] = n.useState(null),
           {
-            data: i,
-            isLoading: c,
+            data: c,
+            isLoading: i,
             isLoadingError: u,
           } = (function (e) {
-            return (0, v.useQuery)(["ReleaseRequest", e], () =>
-              (0, E.mG)(this, void 0, void 0, function* () {
-                const t = yield b().get(
-                  `${w.De.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`
+            return (0, k.useQuery)(["ReleaseRequest", e], () =>
+              (0, p.mG)(this, void 0, void 0, function* () {
+                const t = yield E().get(
+                  `${L.De.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`
                 );
                 if ("string" == typeof t.data)
                   throw "Error loading release status";
@@ -603,228 +870,228 @@
               })
             );
           })(t),
-          m = n.useCallback(
-            (e, a) => {
-              R.U.invalidateQueries(["ReleaseRequest", t]), s(e, a);
+          d = n.useCallback(
+            (e, r) => {
+              D.U.invalidateQueries(["ReleaseRequest", t]), a(e, r);
             },
-            [t, s]
+            [t, a]
           );
-        let d = n.createElement(y, { setOnOKButton: o, onCommit: m });
+        let m = n.createElement(M, { setOnOKButton: l, onCommit: d });
         return (
           u
-            ? (d = n.createElement(T, {
-                strError: (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+            ? (m = n.createElement(z, {
+                strError: (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!c && i) || (d = n.createElement(S.V, null)),
+            : (!i && c) || (m = n.createElement(S.V, null)),
           n.createElement(
-            A.Provider,
-            { value: i },
-            n.createElement(B, { fnSubmit: r, fnCloseModal: a }, d)
+            R.Provider,
+            { value: c },
+            n.createElement(y, { fnSubmit: s, fnCloseModal: r }, m)
           )
         );
       }
-      const A = n.createContext(null);
-      function L() {
-        return n.useContext(A);
+      const R = n.createContext(null);
+      function w() {
+        return n.useContext(R);
       }
-      const y = n.memo(function (e) {
+      const M = n.memo(function (e) {
         const {
             appid: t,
-            bCanUpdateComingSoonDate: a,
-            rtReleaseDate: s,
-            strComingSoonDisplay: i,
-          } = L(),
-          { setOnOKButton: c, onCommit: u } = e,
-          [m, d] = n.useState(s),
-          [p, _] = n.useState(i || "date_full"),
-          [g, j] = n.useState("none"),
-          [h, f] = n.useState(),
-          v = n.useCallback(() => {
-            j("submitting"),
-              f(null),
+            bCanUpdateComingSoonDate: r,
+            rtReleaseDate: a,
+            strComingSoonDisplay: c,
+          } = w(),
+          { setOnOKButton: i, onCommit: u } = e,
+          [d, m] = n.useState(a),
+          [b, h] = n.useState(c || "date_full"),
+          [_, f] = n.useState("none"),
+          [g, j] = n.useState(),
+          k = n.useCallback(() => {
+            f("submitting"),
+              j(null),
               (function (e) {
-                var t, a;
-                return (0, E.mG)(this, void 0, void 0, function* () {
+                var t, r;
+                return (0, p.mG)(this, void 0, void 0, function* () {
                   const {
                       unAppID: n,
-                      rtReleaseDate: s,
-                      strComingSoonDisplay: r,
+                      rtReleaseDate: a,
+                      strComingSoonDisplay: s,
                     } = e,
-                    o = `${w.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${n}`,
-                    i = new FormData();
-                  i.append("sessionid", w.De.SESSIONID),
-                    i.append("release_date", s.toString()),
-                    i.append("coming_soon_display", r);
-                  const c = yield b().post(o, i);
-                  if (!c.data || 1 != c.data.success)
-                    throw (0, l.Xx)(
+                    l = `${L.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${n}`,
+                    c = new FormData();
+                  c.append("sessionid", L.De.SESSIONID),
+                    c.append("release_date", a.toString()),
+                    c.append("coming_soon_display", s);
+                  const i = yield E().post(l, c);
+                  if (!i.data || 1 != i.data.success)
+                    throw (0, o.Xx)(
                       "#Error_Description",
-                      null === (t = c.data) || void 0 === t
+                      null === (t = i.data) || void 0 === t
                         ? void 0
                         : t.success,
-                      (null === (a = c.data) || void 0 === a
+                      (null === (r = i.data) || void 0 === r
                         ? void 0
-                        : a.error_message) || "unknown"
+                        : r.error_message) || "unknown"
                     );
                 });
-              })({ unAppID: t, rtReleaseDate: m, strComingSoonDisplay: p })
+              })({ unAppID: t, rtReleaseDate: d, strComingSoonDisplay: b })
                 .then(() => {
-                  j("refreshing"), u(m, p);
+                  f("refreshing"), u(d, b);
                 })
                 .catch((e) => {
-                  j("none"), f(e);
+                  f("none"), j(e);
                 });
-          }, [t, m, p, u]);
+          }, [t, d, b, u]);
         return (
           n.useLayoutEffect(() => {
-            c(a && "none" == g ? () => v : null);
-          }, [v, a, g, c]),
+            i(r && "none" == _ ? () => k : null);
+          }, [k, r, _, i]),
           n.createElement(
             n.Fragment,
             null,
-            h && n.createElement(T, { strError: h }),
+            g && n.createElement(z, { strError: g }),
             n.createElement(O, null),
             n.createElement(
-              r.Uq,
+              s.Uq,
               null,
               n.createElement(
-                z,
-                { label: (0, l.Xx)("#App_Landing_IntendedReleaseDateTitle") },
-                n.createElement(I, { rtSelectedDate: m, setSelectedDate: d }),
-                n.createElement(X, null)
+                A,
+                { label: (0, o.Xx)("#App_Landing_IntendedReleaseDateTitle") },
+                n.createElement(W, { rtSelectedDate: d, setSelectedDate: m }),
+                n.createElement(B, null)
               ),
               n.createElement(
-                z,
-                { label: (0, l.Xx)("#App_Landing_PublicDateDisplayTitle") },
-                n.createElement(o, {
-                  rtSteamReleaseDate: m,
-                  value: p,
-                  onChange: _,
+                A,
+                { label: (0, o.Xx)("#App_Landing_PublicDateDisplayTitle") },
+                n.createElement(l, {
+                  rtSteamReleaseDate: d,
+                  value: b,
+                  onChange: h,
                 }),
                 n.createElement(
                   "p",
                   null,
-                  (0, l.Xx)("#App_Landing_ReleaseDateStorePage")
+                  (0, o.Xx)("#App_Landing_ReleaseDateStorePage")
                 ),
                 n.createElement(
                   "p",
                   null,
-                  (0, l.Xx)("#App_Landing_ReleaseDateStoreListing")
+                  (0, o.Xx)("#App_Landing_ReleaseDateStoreListing")
                 )
               )
             ),
             n.createElement(
               "div",
-              { className: x.ReleaseColumnFooter },
-              (0, l.yu)(
+              { className: N.ReleaseColumnFooter },
+              (0, o.yu)(
                 "#App_Landing_NeedHelpWithReleaseDates",
                 n.createElement("a", {
                   target: "_blank",
-                  href: `${w.De.PARTNER_BASE_URL}doc/store/coming_soon`,
+                  href: `${L.De.PARTNER_BASE_URL}doc/store/coming_soon`,
                 }),
                 n.createElement("a", {
                   target: "_blank",
-                  href: `${(0, N.iv)()}wizard/HelpWithPublishing`,
+                  href: `${(0, T.iv)()}wizard/HelpWithPublishing`,
                 })
               )
             ),
-            n.createElement(q, null)
+            n.createElement(F, null)
           )
         );
       });
-      function T(e) {
+      function z(e) {
         const { strError: t } = e;
-        return n.createElement("div", { className: x.ErrorBox }, t);
+        return n.createElement("div", { className: N.ErrorBox }, t);
       }
       function O() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
-          bIsWaitingForBuildReview: a,
-          bIsFirstSelfPublishingApp: s,
-          rtEarliestDate: r,
-        } = L();
+          bIsWaitingForBuildReview: r,
+          bIsFirstSelfPublishingApp: a,
+          rtEarliestDate: s,
+        } = w();
         return e && t
-          ? a
+          ? r
             ? n.createElement(
-                U,
+                I,
                 null,
-                (0, l.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
+                (0, o.Xx)("#App_Landing_Release_EarliestDate_BuildReview")
               )
             : n.createElement(
-                U,
+                I,
                 null,
-                (0, l.Xx)("#App_Landing_Release_EarliestDate", (0, l.vX)(r))
+                (0, o.Xx)("#App_Landing_Release_EarliestDate", (0, o.vX)(s))
               )
-          : s
+          : a
           ? n.createElement(
-              U,
+              I,
               null,
-              (0, l.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
+              (0, o.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days")
             )
           : n.createElement(
-              U,
+              I,
               null,
-              (0, l.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
+              (0, o.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks")
             );
       }
-      function B(e) {
-        const { fnCloseModal: t, fnSubmit: a, children: s } = e,
-          { bCanUpdateComingSoonDate: o } = L() || {
+      function y(e) {
+        const { fnCloseModal: t, fnSubmit: r, children: a } = e,
+          { bCanUpdateComingSoonDate: l } = w() || {
             bCanUpdateComingSoonDate: !0,
           };
         return n.createElement(
-          D.On,
-          { active: !0, className: x.ReleaseDateModal, onDismiss: t },
+          v.On,
+          { active: !0, className: N.ReleaseDateModal, onDismiss: t },
           n.createElement(
-            r.h4,
+            s.h4,
             null,
-            (0, l.Xx)(
-              o
+            (0, o.Xx)(
+              l
                 ? "#App_Landing_Set_Release_Date"
                 : "#App_Landing_Change_Release_Date"
             )
           ),
-          n.createElement(r.uT, { className: x.ReleaseDateRequestBody }, s),
-          n.createElement(r.o9, {
-            bOKDisabled: !a,
+          n.createElement(s.uT, { className: N.ReleaseDateRequestBody }, a),
+          n.createElement(s.o9, {
+            bOKDisabled: !r,
             onCancel: t,
-            strCancelText: (0, l.Xx)("#App_Landing_Requested_Date_Cancel"),
-            onOK: a,
-            strOKText: (0, l.Xx)("#App_Landing_Requested_Date_Update"),
+            strCancelText: (0, o.Xx)("#App_Landing_Requested_Date_Cancel"),
+            onOK: r,
+            strOKText: (0, o.Xx)("#App_Landing_Requested_Date_Update"),
           })
         );
       }
-      function z(e) {
-        const { label: t, children: a } = e;
+      function A(e) {
+        const { label: t, children: r } = e;
         return n.createElement(
-          r.sg,
-          { className: x.Column },
-          n.createElement("div", { className: x.ColumnLabel }, t, ":"),
-          n.createElement("div", { className: x.ColumnContent }, a)
+          s.sg,
+          { className: N.Column },
+          n.createElement("div", { className: N.ColumnLabel }, t, ":"),
+          n.createElement("div", { className: N.ColumnContent }, r)
         );
       }
-      function I(e) {
-        const { rtSelectedDate: t, setSelectedDate: a } = e,
-          { bCanUpdateComingSoonDate: s, rtEarliestDate: r } = L();
+      function W(e) {
+        const { rtSelectedDate: t, setSelectedDate: r } = e,
+          { bCanUpdateComingSoonDate: a, rtEarliestDate: s } = w();
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(C.A, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
-            disabled: !s,
-            nEarliestTime: r,
+            disabled: !a,
+            nEarliestTime: s,
             fnGetTimeToUpdate: () => t,
-            fnSetTimeToUpdate: a,
-            className: x.DatePicker,
+            fnSetTimeToUpdate: r,
+            className: N.DatePicker,
             bShowTimeZone: !0,
-            strAlsoShowTimeZone: f.$,
+            strAlsoShowTimeZone: j.$,
           })
         );
       }
-      function X(e) {
-        const { bCanUpdateComingSoonDate: t, rtReleaseDate: a } = L();
+      function B(e) {
+        const { bCanUpdateComingSoonDate: t, rtReleaseDate: r } = w();
         return t
           ? n.createElement(
               n.Fragment,
@@ -832,128 +1099,128 @@
               n.createElement(
                 "p",
                 null,
-                (0, l.Xx)("#App_Landing_Set_Release_Date_SetIntended")
+                (0, o.Xx)("#App_Landing_Set_Release_Date_SetIntended")
               ),
               n.createElement(
                 "p",
                 null,
-                (0, l.Xx)("#App_Landing_Set_Release_Date_Weekends")
+                (0, o.Xx)("#App_Landing_Set_Release_Date_Weekends")
               ),
               n.createElement(
                 "p",
                 null,
-                (0, l.Xx)("#App_Landing_Set_Release_Date_PacificTime")
+                (0, o.Xx)("#App_Landing_Set_Release_Date_PacificTime")
               )
             )
           : n.createElement(
               "p",
               null,
-              (0, l.yu)(
-                (0, l.Xx)(
+              (0, o.yu)(
+                (0, o.Xx)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-                  (0, l.vX)(a)
+                  (0, o.vX)(r)
                 ),
                 n.createElement("a", {
-                  href: `${(0, N.iv)()}wizard/HelpWithPublishing?issueid=905`,
+                  href: `${(0, T.iv)()}wizard/HelpWithPublishing?issueid=905`,
                 })
               )
             );
       }
-      function U(e) {
-        return n.createElement("span", { className: x.BlueNote }, e.children);
+      function I(e) {
+        return n.createElement("span", { className: N.BlueNote }, e.children);
       }
-      function q(e) {
+      function F(e) {
         const {
           rtEarliestDate: t,
-          strReleaseState: a,
-          bCanUpdateComingSoonDate: s,
-        } = L();
-        return "prerelease" != a
+          strReleaseState: r,
+          bCanUpdateComingSoonDate: a,
+        } = w();
+        return "prerelease" != r
           ? null
           : n.createElement(
               "div",
-              { className: x.PublishNowWarning },
-              s
-                ? (0, l.Xx)("#App_Landing_Set_Release_Date_ComingSoonWarning")
-                : (0, l.Xx)(
+              { className: N.PublishNowWarning },
+              a
+                ? (0, o.Xx)("#App_Landing_Set_Release_Date_ComingSoonWarning")
+                : (0, o.Xx)(
                     "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
-                    (0, l.vX)(t)
+                    (0, o.vX)(t)
                   )
             );
       }
-      var W = a(7573);
-      function F(e) {
-        const { bIsGameEdit: t, unAppID: a } = e,
-          [r, o] = n.useState(e.rtReleaseDate),
-          [i, c] = n.useState(e.strComingSoonDisplay),
-          [u, m] = n.useState(!1),
-          d = n.useCallback(() => m(!0), []),
-          p = n.useCallback(() => m(!1), []),
-          E = n.useCallback((e, t) => {
-            o(e), c(t), m(!1);
+      var X = r(7573);
+      function q(e) {
+        const { bIsGameEdit: t, unAppID: r } = e,
+          [s, l] = n.useState(e.rtReleaseDate),
+          [c, i] = n.useState(e.strComingSoonDisplay),
+          [u, d] = n.useState(!1),
+          m = n.useCallback(() => d(!0), []),
+          b = n.useCallback(() => d(!1), []),
+          p = n.useCallback((e, t) => {
+            l(e), i(t), d(!1);
           }, []);
         return n.createElement(
           n.Fragment,
           null,
-          u && n.createElement(k, { appid: a, onClose: p, onCommit: E }),
+          u && n.createElement(x, { appid: r, onClose: b, onCommit: p }),
           n.createElement(
             "div",
-            { className: (0, W.Z)(g.ReleaseDateInfoCtn, t && g.GameEditCtn) },
+            { className: (0, X.Z)(_.ReleaseDateInfoCtn, t && _.GameEditCtn) },
             n.createElement(
               "div",
-              { className: g.ReleaseDateContent },
+              { className: _.ReleaseDateContent },
               n.createElement(
-                P,
-                { label: (0, l.Xx)("#App_Landing_SpecifiedReleaseDate") },
+                U,
+                { label: (0, o.Xx)("#App_Landing_SpecifiedReleaseDate") },
                 n.createElement(
                   "div",
-                  { className: (0, W.Z)(g.BigField, g.Set) },
-                  (0, l.vX)(r)
+                  { className: (0, X.Z)(_.BigField, _.Set) },
+                  (0, o.vX)(s)
                 ),
                 n.createElement(
                   "div",
-                  { className: (0, W.Z)(g.SubField, g.Set) },
-                  (0, _.Sc)(r, {}, { timeZoneName: "short" })
+                  { className: (0, X.Z)(_.SubField, _.Set) },
+                  (0, h.Sc)(s, {}, { timeZoneName: "short" })
                 )
               ),
               n.createElement(
-                P,
-                { label: (0, l.Xx)("#App_Landing_CustomersSeeReleaseDate") },
+                U,
+                { label: (0, o.Xx)("#App_Landing_CustomersSeeReleaseDate") },
                 n.createElement(
                   "div",
-                  { className: (0, W.Z)(g.BigField, i ? g.Set : g.Unset) },
-                  i
-                    ? (0, s.M)(i, r)
-                    : (0, l.Xx)("#App_Landing_UnsetReleaseDate")
+                  { className: (0, X.Z)(_.BigField, c ? _.Set : _.Unset) },
+                  c
+                    ? (0, a.M)(c, s)
+                    : (0, o.Xx)("#App_Landing_UnsetReleaseDate")
                 )
               )
             ),
             n.createElement(
               "div",
-              { className: g.EditButton, onClick: d },
-              n.createElement("div", { className: (0, W.Z)(g.Spacer, g.Top) }),
+              { className: _.EditButton, onClick: m },
+              n.createElement("div", { className: (0, X.Z)(_.Spacer, _.Top) }),
               n.createElement(
                 "div",
-                { className: g.EditButtonIcon },
-                n.createElement(j.I8b, null)
+                { className: _.EditButtonIcon },
+                n.createElement(f.I8b, null)
               ),
               n.createElement("div", {
-                className: (0, W.Z)(g.Spacer, g.Bottom),
+                className: (0, X.Z)(_.Spacer, _.Bottom),
               })
             )
           )
         );
       }
-      function P(e) {
+      function U(e) {
         return n.createElement(
           "div",
-          { className: g.LabelField },
-          n.createElement("div", { className: g.Label }, e.label),
+          { className: _.LabelField },
+          n.createElement("div", { className: _.Label }, e.label),
           e.children
         );
       }
-      var $ = a(42940),
-        M = a(64839);
+      var P = r(42940),
+        $ = r(64839);
       class G extends n.Component {
         constructor() {
           super(...arguments),
@@ -969,17 +1236,17 @@
           this.setState({ color: t }), this.props.onChange(t);
         }
         render() {
-          return n.createElement($.AI, {
+          return n.createElement(P.AI, {
             onChange: this.OnColorChange,
             color: this.state.color,
           });
         }
       }
-      (0, E.gn)([M.ak], G.prototype, "OnColorChange", null);
-      var Z = a(57287);
+      (0, p.gn)([$.ak], G.prototype, "OnColorChange", null);
+      var Z = r(57287);
       function K(e) {
         const { rgGameProfileColorDefs: t } = e,
-          a = t.map((e) =>
+          r = t.map((e) =>
             n.createElement(
               "div",
               { key: e.strProfileColorKey, className: "form_row_flex" },
@@ -993,29 +1260,29 @@
                 "div",
                 { className: "form_data_flex" },
                 (function (e) {
-                  let [t, a] = n.useState(e.strCurrentColor);
-                  const s = n.useRef(),
-                    r = (e) => {
-                      const s = (e) => {
-                        a(e);
+                  let [t, r] = n.useState(e.strCurrentColor);
+                  const a = n.useRef(),
+                    s = (e) => {
+                      const a = (e) => {
+                        r(e);
                       };
                       (0, Z.yV)(
-                        n.createElement(G, { onChange: s, color: t }),
+                        n.createElement(G, { onChange: a, color: t }),
                         e,
                         { bDisablePopTop: !0 }
                       );
                     },
-                    l = () => {
-                      a(s.current.value);
+                    o = () => {
+                      r(a.current.value);
                     };
                   return n.createElement(
                     n.Fragment,
                     null,
                     n.createElement("input", {
-                      ref: s,
+                      ref: a,
                       type: "text",
                       name: `item[profile_colors][${e.strProfileColorKey}]`,
-                      onChange: l,
+                      onChange: o,
                       placeholder: "rgba(255, 255, 255, .5)",
                       size: 20,
                       value: t,
@@ -1023,43 +1290,43 @@
                     n.createElement("div", {
                       className: "profile_color_preview",
                       style: { backgroundColor: `${t}` },
-                      onClick: r,
+                      onClick: s,
                     })
                   );
                 })(e)
               )
             )
           );
-        return n.createElement("div", { className: "profile_colors_ctn" }, a);
+        return n.createElement("div", { className: "profile_colors_ctn" }, r);
       }
       function H(e) {
         return n.createElement(
-          d.rs,
+          m.rs,
           null,
           n.createElement(
-            d.AW,
-            { path: i(`:action(${m.join("|")})`, ":itemid") },
-            n.createElement(p.d, {
+            m.AW,
+            { path: c(`:action(${d.join("|")})`, ":itemid") },
+            n.createElement(b.d, {
               config: {
                 "storeadmin-releasedateinfo": (e) =>
-                  n.createElement(F, Object.assign({ bIsGameEdit: !0 }, e)),
+                  n.createElement(q, Object.assign({ bIsGameEdit: !0 }, e)),
               },
             })
           ),
-          n.createElement(d.AW, {
-            path: c(":appid"),
+          n.createElement(m.AW, {
+            path: i(":appid"),
             render: (e) =>
-              n.createElement(p.d, {
+              n.createElement(b.d, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
-                    n.createElement(F, Object.assign({}, e)),
+                    n.createElement(q, Object.assign({}, e)),
                 },
               }),
           }),
-          n.createElement(d.AW, {
+          n.createElement(m.AW, {
             path: u(":appid"),
             render: (e) =>
-              n.createElement(p.d, {
+              n.createElement(b.d, {
                 config: {
                   "storeadmin-profilecolors": (e) =>
                     n.createElement(K, Object.assign({}, e)),
@@ -1069,12 +1336,12 @@
         );
       }
     },
-    42795: (e, t, a) => {
+    42795: (e, t, r) => {
       "use strict";
-      a.d(t, { $: () => n, _: () => s });
+      r.d(t, { $: () => n, _: () => a });
       const n = "America/Los_Angeles";
-      function s(e) {
-        const t = a(80008).unix(e).tz(n);
+      function a(e) {
+        const t = r(80008).unix(e).tz(n);
         return (
           t.seconds(0),
           t.minutes(0),

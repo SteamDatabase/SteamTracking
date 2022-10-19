@@ -243,7 +243,7 @@
     "Chat_StillInVoiceDialog_KeepChatting": "Continue",
     "Chat_CloseTooltip": "Close this tab",
     "Chat_Tooltip_FindGamesToPlay_UserCountRestriction_ChatGroup": "You need %1$s-%2$s people in the chat to use this feature",
-    "Chat_Tooltip_FindGamesToPlay_UserCountRestriction_Channel": "You need %1$s-%2$s people in the voice channel to use this feature",
+    "Chat_Tooltip_FindGamesToPlay_UserCountRestriction_Channel": "You need %1$s-%2$s people in the channel to use this feature",
     "Chat_Actions_InviteFriend": "Invite to Group Chat",
     "Chat_Actions_InviteFriend_Capital": "INVITE TO GROUP CHAT",
     "Chat_Actions_InviteFriend_StartChatting": "Start chatting",

@@ -5732,7 +5732,7 @@
         o = n(34133);
       function l(e) {
         const { children: t } = e;
-        return s.De.IN_GAMEPADUI && !s.De.IN_LIBRARY
+        return s.De.IN_GAMEPADUI && !s.De.IN_STEAMUI
           ? a.createElement(
               r.TN,
               { className: o.GamepadOnlyScrollPanel },

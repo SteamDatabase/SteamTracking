@@ -5421,6 +5421,14 @@ html.responsive.touch
   padding-left: 8px;
   padding-right: 8px;
 }
+@media screen and (max-width: 910px) {
+  .partnersaledisplay_CarouselPage_1_ViR {
+    min-width: 320px;
+  }
+}
+.BasicUI .partnersaledisplay_CarouselPage_1_ViR {
+  min-width: unset;
+}
 .partnersaledisplay_TabButtonsCtn_2jMTe {
   display: flex;
   flex-direction: row;

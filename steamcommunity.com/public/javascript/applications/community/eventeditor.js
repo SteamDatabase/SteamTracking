@@ -175,7 +175,7 @@
     },
     88569: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => vt });
+      n.r(t), n.d(t, { default: () => pt });
       var a = n(9355),
         i = n(10669),
         r = n(13748),
@@ -235,7 +235,7 @@
                                 )
                               ),
                               (0, w.AM)(
-                                d.createElement(U, {
+                                d.createElement(R, {
                                   langs: a,
                                   locData: t,
                                   fnOnGotoPage: n,
@@ -276,7 +276,7 @@
         }
         e(null, "clone");
       }
-      function U(e) {
+      function R(e) {
         const { langs: t, locData: n, closeModal: a, fnOnGotoPage: i } = e,
           r = (0, G.jM)(x.De.LANGUAGE),
           [l, o] = d.useState(new Set(t.filter((e) => e != r)));
@@ -321,7 +321,7 @@
           )
         );
       }
-      var R = n(72710),
+      var U = n(72710),
         V = n(78587),
         W = n(5525),
         j = n(159),
@@ -612,7 +612,7 @@
             .LoadEditorModel(t.clanSteamID, t.GID)
             .then(() => {
               (0, w.AM)(
-                d.createElement(R.b, {
+                d.createElement(U.b, {
                   editModel: i.wk.GetEditModel(),
                   OnPublishSuccess: this.OnPublishSuccess,
                 }),
@@ -1448,7 +1448,7 @@
         }),
         Ee = (0, k.M)(pe);
       var he = n(91799),
-        ge = n(70562),
+        ge = n(21077),
         Se = n(70882),
         De = n(65902),
         we = n(86605),
@@ -1771,17 +1771,17 @@
         (0, l.gn)([f.ak], Oe.prototype, "UpdateTimer", null),
         (Oe = (0, l.gn)([c.Pi], Oe));
       var Xe = n(68941),
-        Ue = n(11108),
-        Re = n(95598),
+        Re = n(11108),
+        Ue = n(95598),
         Ve = n(9410),
         We = n(55310),
         je = n(15986),
         Fe = n(46713),
-        He = n(38895),
+        He = n(1329),
         ze = n(6843);
       function qe(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
-          a = (0, Ue.oS)(n);
+          a = (0, Re.oS)(n);
         if ((null == a ? void 0 : a.level) > 0) {
           let e = a.level;
           if (null == t ? void 0 : t.BHasSaleEnabled()) {
@@ -1866,7 +1866,7 @@
                 d.Fragment,
                 null,
                 Boolean(r) && d.createElement(b.V, { size: "small" }),
-                Boolean(a) && d.createElement(Re.JrY, null),
+                Boolean(a) && d.createElement(Ue.JrY, null),
                 n
               )
         );
@@ -2048,9 +2048,9 @@
         }
         return d.createElement(d.Fragment, null);
       }
-      var ut = n(26111);
-      n(69491), n(55038);
-      function vt(e) {
+      var ut = n(26111),
+        vt = (n(69491), n(55038), n(92244));
+      function pt(e) {
         const [t, n] = d.useState(!0);
         return (
           d.useEffect(() => {
@@ -2258,15 +2258,10 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, { component: pt })
+                  d.createElement(V.AW, { component: vt.R })
                 )
               )
         );
-      }
-      function pt(e) {
-        return "dev" !== x.De.WEB_UNIVERSE
-          ? d.createElement(V.l_, { push: !0, to: "/" })
-          : d.createElement("div", null, "Unknown route");
       }
     },
   },

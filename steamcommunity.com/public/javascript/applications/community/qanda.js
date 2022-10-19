@@ -4,39 +4,39 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [908],
   {
-    2388: (e, r, t) => {
-      t.d(r, { Gr: () => p, Jq: () => _, y$: () => g });
-      var s = t(70655),
-        o = t(9669),
-        a = t.n(o),
-        n = t(22188),
-        i = t(67294),
-        l = (t(26149), t(54698), t(43359)),
-        u = t(3389),
-        c = (t(82946), t(77520)),
-        m = t(93976),
-        d = t(90666);
+    2388: (e, r, s) => {
+      s.d(r, { Gr: () => p, Jq: () => _, y$: () => g });
+      var t = s(70655),
+        o = s(9669),
+        a = s.n(o),
+        n = s(22188),
+        i = s(67294),
+        l = (s(26149), s(54698), s(43359)),
+        m = s(3389),
+        u = (s(82946), s(77520)),
+        c = s(93976),
+        d = s(90666);
       class f {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
         LoadProfiles(e, r) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
+          return (0, t.mG)(this, void 0, void 0, function* () {
             (0,
-            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let t = e.filter(
+            u.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let s = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
-            if (0 == t.length) return this.m_mapProfilesLoading.get(e[0]);
-            let s = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              o = a().get(s, {
-                params: { steamids: t.join(",") },
+            if (0 == s.length) return this.m_mapProfilesLoading.get(e[0]);
+            let t = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              o = a().get(t, {
+                params: { steamids: s.join(",") },
                 withCredentials: !0,
                 cancelToken: null == r ? void 0 : r.token,
               });
-            t.forEach((e) => this.m_mapProfilesLoading.set(e, o));
+            s.forEach((e) => this.m_mapProfilesLoading.set(e, o));
             let n = yield o;
             n.data &&
               200 == n.status &&
@@ -55,7 +55,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            u.K.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         GetProfileBySteamID(e) {
@@ -66,7 +66,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            u.K.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString()
           );
         }
         BHasProfileBySteamID(e) {
@@ -86,14 +86,14 @@
           return r && r.persona_name ? r.persona_name : "";
         }
       }
-      (0, s.gn)([n.LO], f.prototype, "m_mapProfiles", void 0);
+      (0, t.gn)([n.LO], f.prototype, "m_mapProfiles", void 0);
       const g = new f();
       function p(e) {
         const r = i.useMemo(
-            () => (e ? ("string" == typeof e ? new u.K(e) : e) : null),
+            () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
             [e]
           ),
-          [t, s] = (0, i.useState)(!!r && !g.BHasProfileBySteamID(r));
+          [s, t] = (0, i.useState)(!!r && !g.BHasProfileBySteamID(r));
         (0, i.useEffect)(() => {
           const e = a().CancelToken.source();
           return (
@@ -102,34 +102,34 @@
               g
                 .LoadProfiles([r.ConvertTo64BitString()])
                 .catch((e) => {
-                  const t = (0, m.l)(e);
+                  const s = (0, c.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       r.ConvertTo64BitString() +
                       ": " +
-                      t.strErrorMsg,
-                    t
+                      s.strErrorMsg,
+                    s
                   );
                 })
                 .finally(() => {
-                  e.token.reason || s(!1);
+                  e.token.reason || t(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [t, !!r && g.GetProfileBySteamID(r)];
+        return [s, !!r && g.GetProfileBySteamID(r)];
       }
       function _(e) {
-        return p(i.useMemo(() => u.K.InitFromAccountID(e), [e]));
+        return p(i.useMemo(() => m.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = g;
     },
-    93976: (e, r, t) => {
-      t.d(r, { l: () => n });
-      t(26149);
-      var s = t(9669),
-        o = t.n(s),
-        a = t(58114);
+    93976: (e, r, s) => {
+      s.d(r, { l: () => n });
+      s(26149);
+      var t = s(9669),
+        o = s.n(t),
+        a = s(58114);
       function n(e) {
         if (o().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -190,18 +190,18 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    69761: (e, r, t) => {
-      t.r(r), t.d(r, { QAndARoutes: () => l, default: () => u });
-      var s = t(69382),
-        o = t(67294),
-        a = t(78587),
-        n = t(74091),
-        i = t(90666);
+    69761: (e, r, s) => {
+      s.r(r), s.d(r, { QAndARoutes: () => l, default: () => m });
+      var t = s(69382),
+        o = s(67294),
+        a = s(78587),
+        n = s(74091),
+        i = s(92244);
       const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
         FullPageView: (e, r) => `/questions/${e}/view/${r}`,
       };
-      const u = function (e) {
+      const m = function (e) {
         return o.createElement(
           a.rs,
           null,
@@ -212,7 +212,7 @@
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: r } = e.match.params;
-                    return o.createElement(s.A, { vanity_str: r });
+                    return o.createElement(t.A, { vanity_str: r });
                   },
                 },
               }),
@@ -223,24 +223,15 @@
               o.createElement(n.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: r, session_gid: t } = e.match.params;
-                    return o.createElement(s.EI, { gidSession: t });
+                    const { vanity_str: r, session_gid: s } = e.match.params;
+                    return o.createElement(t.EI, { gidSession: s });
                   },
                 },
               }),
           }),
-          o.createElement(a.AW, { component: c })
+          o.createElement(a.AW, { component: i.R })
         );
       };
-      function c(e) {
-        return "dev" !== i.De.WEB_UNIVERSE
-          ? o.createElement(a.l_, { to: "/" })
-          : o.createElement(
-              "div",
-              null,
-              "Unknown Route - Check ui/routes/questions.tsx to see if this page has been added to the list of routes."
-            );
-      }
     },
   },
 ]);

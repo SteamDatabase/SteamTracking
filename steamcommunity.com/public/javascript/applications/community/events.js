@@ -139,7 +139,7 @@
     },
     2218: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => H });
+      n.r(t), n.d(t, { default: () => F });
       var a = n(9355),
         o = n(91799),
         s = n(67294),
@@ -543,12 +543,12 @@
       (0, S.gn)([b.ak], y.prototype, "ShowModal", null),
         (0, S.gn)([b.ak], y.prototype, "ShowLatestUpdateModal", null),
         (0, S.gn)([b.ak], y.prototype, "CloseModal", null);
-      var W = n(10669),
-        j = n(5525);
-      class x extends s.Component {
+      var j = n(10669),
+        x = n(5525);
+      class H extends s.Component {
         render() {
           const { appid: e } = this.props;
-          let t = j.JW.GetTimeNowWithOverrideAsDate(),
+          let t = x.JW.GetTimeNowWithOverrideAsDate(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
           return s.createElement(
@@ -559,7 +559,7 @@
             },
             s.createElement(y, {
               appid: e,
-              partnerEventStore: W.wk,
+              partnerEventStore: j.wk,
               event_customization: {
                 require_tags: ["workshop"],
                 rtime_oldestevent: a,
@@ -571,7 +571,8 @@
           );
         }
       }
-      function H(e) {
+      var W = n(92244);
+      function F(e) {
         const [t, n] = s.useState(!0),
           u = (0, E.T)();
         return (
@@ -624,7 +625,7 @@
                     path: a.W3.WorkshopHub(":appid(\\d+)"),
                     render: (e) =>
                       s.createElement(
-                        x,
+                        H,
                         Object.assign({}, e, {
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
@@ -653,15 +654,10 @@
                         })
                       ),
                   }),
-                  s.createElement(r.AW, { component: F })
+                  s.createElement(r.AW, { component: W.R })
                 )
               )
         );
-      }
-      function F(e) {
-        return "dev" !== w.De.WEB_UNIVERSE
-          ? s.createElement(r.l_, { push: !0, to: "/" })
-          : s.createElement("div", null, "Unknown route");
       }
     },
   },

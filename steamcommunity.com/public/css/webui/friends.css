@@ -211,397 +211,6 @@ html.contextmenu_ContextMenuPopup_5N6bg .contextmenu_contextMenuItem_1LSq5 {
   opacity: 1;
   word-wrap: break-word;
 }
-.throbber_LoadingWrapper_1HyRg {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy {
-  animation-name: throbber_none_3dXVh;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy * {
-  animation-name: throbber_none_3dXVh !important;
-  stroke-dasharray: initial !important;
-  stroke-dashoffset: initial !important;
-  stroke-width: 5px !important;
-  opacity: 1 !important;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy
-  .throbber_bottomCircle_25ip-
-  path {
-  stroke-width: 0 !important;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_noString_25hUI {
-  flex-direction: row;
-}
-.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva,
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber,
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva {
-  align-self: center;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
-  .throbber_Throbber_v2Wva {
-  width: 32px;
-  height: 32px;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
-  .throbber_Throbber_v2Wva {
-  width: 64px;
-  height: 64px;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_throbber_large_3nisx
-  .throbber_Throbber_v2Wva {
-  width: 92px;
-  height: 92px;
-}
-.throbber_throbber_center_wrapper_3hIjC {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.throbber_ThrobberText_2LAFw,
-.throbber_LoadingWrapper_1HyRg .throbber_ThrobberText_2LAFw {
-  color: #3d85c8;
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: center;
-  flex: 1;
-  user-select: none;
-  margin-top: 8px;
-  font-weight: 500;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
-  .throbber_ThrobberText_2LAFw {
-  margin-top: 4px;
-}
-.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
-  .throbber_ThrobberText_2LAFw {
-  margin-top: 2px;
-}
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U {
-  filter: blur(3px);
-  position: absolute;
-  left: 0;
-  top: 0px;
-}
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U path {
-  stroke: #4375fd;
-}
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
-  stroke: #67c1f5;
-  animation-name: throbber_ThrobberRoundLoop_1PbAa;
-  animation-duration: 0.7s;
-  stroke-linecap: butt;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  opacity: 0;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundOuterOutline_TrexM,
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 116;
-  stroke-width: 6px;
-}
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
-  opacity: 1;
-  stroke: #3b8bb9;
-  stroke-width: 6px;
-  transform-origin: 50% 50%;
-  stroke-linecap: round;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundOuterOutline_TrexM {
-  display: none;
-}
-@keyframes throbber_ThrobberRoundLoop_1PbAa {
-  to {
-    stroke-dashoffset: -232;
-  }
-}
-.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundFill_3rrUj {
-  animation-name: throbber_ThrobberFillLoop_HAZ1M;
-  animation-duration: 3s;
-  animation-delay: -1.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  opacity: 1;
-  stroke-width: 0;
-}
-@keyframes throbber_ThrobberFillLoop_HAZ1M {
-  0% {
-    fill: rgba(103, 193, 245, 0);
-  }
-  50% {
-    fill: rgba(103, 193, 245, 0.05);
-  }
-  100% {
-    fill: rgba(103, 193, 245, 0);
-  }
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_topCircle__EJ7b
-  .throbber_circlePulse_379p5,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_topCircle__EJ7b
-  circle {
-  stroke: #67c1f5;
-  animation-name: throbber_ThrobberTopCircleLoop_2GFtS;
-  animation-duration: 3s;
-  animation-delay: -1.2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 67% 36%;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_topCircle__EJ7b
-  circle {
-  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_bottomCircle_25ip-
-  path {
-  fill: #67c1f5;
-  stroke-width: 0;
-  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
-  animation-duration: 3s;
-  animation-delay: -0.6s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes throbber_ThrobberTopCircleLoop_2GFtS {
-  0% {
-    opacity: 0;
-    transform: scale(0.75);
-    stroke-width: 4px;
-  }
-  20% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: scale(5);
-    stroke-width: 0px;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(5);
-    stroke-width: 0px;
-  }
-}
-@keyframes throbber_ThrobberBottomCircleLoop_7qnpn {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber15_3Xmey,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber14_3Bz3S,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber13_3He3o,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber12_1wN9D,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber11_6i7GD,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber10_12Nu_,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber09_2tK3N,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber08_3ARjZ,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber07_2O6v6,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber06_3IwAT,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber05_2PAW0,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber04_3GvQ1,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber03_SCH1y,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber02_1OqfY,
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber01_1VNop {
-  animation-name: throbber_ThrobberRoundLoopThickness_2cif1;
-  animation-duration: 3s;
-  stroke-dasharray: 150 950;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber01_1VNop {
-  animation-delay: 0s;
-  opacity: 0.06;
-  stroke-width: 0.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber02_1OqfY {
-  animation-delay: -0.1s;
-  opacity: 0.13;
-  stroke-width: 1px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber03_SCH1y {
-  animation-delay: -0.2s;
-  opacity: 0.2;
-  stroke-width: 1.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber04_3GvQ1 {
-  animation-delay: -0.3s;
-  opacity: 0.26;
-  stroke-width: 2px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber05_2PAW0 {
-  animation-delay: -0.4s;
-  opacity: 0.33;
-  stroke-width: 2.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber06_3IwAT {
-  animation-delay: -0.5s;
-  opacity: 0.4;
-  stroke-width: 3px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber07_2O6v6 {
-  animation-delay: -0.6s;
-  opacity: 0.46;
-  stroke-width: 3.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber08_3ARjZ {
-  animation-delay: -0.7s;
-  opacity: 0.53;
-  stroke-width: 4px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber09_2tK3N {
-  animation-delay: -0.8s;
-  opacity: 0.6;
-  stroke-width: 4.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber10_12Nu_ {
-  animation-delay: -0.9s;
-  opacity: 0.66;
-  stroke-width: 5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber11_6i7GD {
-  animation-delay: -1s;
-  opacity: 0.73;
-  stroke-width: 5.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber12_1wN9D {
-  animation-delay: -1.1s;
-  opacity: 0.8;
-  stroke-width: 6px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber13_3He3o {
-  animation-delay: -1.2s;
-  opacity: 0.86;
-  stroke-width: 6.5px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber14_3Bz3S {
-  animation-delay: -1.3s;
-  opacity: 0.93;
-  stroke-width: 7px;
-}
-.throbber_LoadingWrapper_1HyRg
-  .SVGIcon_Throbber
-  .throbber_roundThrobber15_3Xmey {
-  animation-delay: -1.4s;
-  opacity: 1;
-  stroke-width: 7.5px;
-}
-@keyframes throbber_ThrobberRoundLoopThickness_2cif1 {
-  100% {
-    stroke-dashoffset: -1100;
-  }
-}
-.throbber_throbber_small_4dIL2 {
-  width: 36px;
-  height: 36px;
-}
-.throbber_throbber_medium_QXu8P {
-  width: 64px;
-  height: 64px;
-}
-.throbber_throbber_large_3nisx {
-  width: 92px;
-  height: 92px;
-}
-.throbber_throbber_xlarge_3LxJj {
-  width: 120px;
-  height: 120px;
-}
-.throbber_throbber_xxlarge_1mUb9 {
-  width: 240px;
-  height: 240px;
-}
 .SVGIcon_Button {
   fill: #fff;
   overflow: visible;
@@ -2254,9 +1863,6 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2PmTF svg {
   left: 0;
   top: 0;
   visibility: hidden;
-}
-.gamepadslider_EditableValueSuffix_1J8z8 {
-  margin-left: 1ch;
 }
 @keyframes gamepadslider_error-shake_3pjt6 {
   0% {
@@ -4156,6 +3762,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2PmTF svg {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
+}
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
@@ -5130,6 +4740,397 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2PmTF svg {
 }
 .steamavatar_avatarHolder_1qjsP .steamavatar_avatarFrame_g4RXu {
   transform: scale(1.2);
+}
+.throbber_LoadingWrapper_1HyRg {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy {
+  animation-name: throbber_none_3dXVh;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy * {
+  animation-name: throbber_none_3dXVh !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_Static_18ooy
+  .throbber_bottomCircle_25ip-
+  path {
+  stroke-width: 0 !important;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_noString_25hUI {
+  flex-direction: row;
+}
+.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.throbber_LoadingWrapper_1HyRg .throbber_Throbber_v2Wva {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
+  .throbber_Throbber_v2Wva {
+  width: 32px;
+  height: 32px;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
+  .throbber_Throbber_v2Wva {
+  width: 64px;
+  height: 64px;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_large_3nisx
+  .throbber_Throbber_v2Wva {
+  width: 92px;
+  height: 92px;
+}
+.throbber_throbber_center_wrapper_3hIjC {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.throbber_ThrobberText_2LAFw,
+.throbber_LoadingWrapper_1HyRg .throbber_ThrobberText_2LAFw {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_medium_QXu8P
+  .throbber_ThrobberText_2LAFw {
+  margin-top: 4px;
+}
+.throbber_LoadingWrapper_1HyRg.throbber_throbber_small_4dIL2
+  .throbber_ThrobberText_2LAFw {
+  margin-top: 2px;
+}
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber.throbber_blur_1Zb5U path {
+  stroke: #4375fd;
+}
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberRoundLoop_1PbAa;
+  animation-duration: 0.7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundOuterOutline_TrexM,
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundOuter_5ck73 {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundOuterOutline_TrexM {
+  display: none;
+}
+@keyframes throbber_ThrobberRoundLoop_1PbAa {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.throbber_LoadingWrapper_1HyRg .SVGIcon_Throbber .throbber_roundFill_3rrUj {
+  animation-name: throbber_ThrobberFillLoop_HAZ1M;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes throbber_ThrobberFillLoop_HAZ1M {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_topCircle__EJ7b
+  .throbber_circlePulse_379p5,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_topCircle__EJ7b
+  circle {
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberTopCircleLoop_2GFtS;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_topCircle__EJ7b
+  circle {
+  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_bottomCircle_25ip-
+  path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: throbber_ThrobberBottomCircleLoop_7qnpn;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes throbber_ThrobberTopCircleLoop_2GFtS {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes throbber_ThrobberBottomCircleLoop_7qnpn {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber15_3Xmey,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber14_3Bz3S,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber13_3He3o,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber12_1wN9D,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber11_6i7GD,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber10_12Nu_,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber09_2tK3N,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber08_3ARjZ,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber07_2O6v6,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber06_3IwAT,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber05_2PAW0,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber04_3GvQ1,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber03_SCH1y,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber02_1OqfY,
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber01_1VNop {
+  animation-name: throbber_ThrobberRoundLoopThickness_2cif1;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber01_1VNop {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: 0.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber02_1OqfY {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber03_SCH1y {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber04_3GvQ1 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber05_2PAW0 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber06_3IwAT {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber07_2O6v6 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber08_3ARjZ {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber09_2tK3N {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber10_12Nu_ {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber11_6i7GD {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber12_1wN9D {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber13_3He3o {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber14_3Bz3S {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.throbber_LoadingWrapper_1HyRg
+  .SVGIcon_Throbber
+  .throbber_roundThrobber15_3Xmey {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes throbber_ThrobberRoundLoopThickness_2cif1 {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_throbber_small_4dIL2 {
+  width: 36px;
+  height: 36px;
+}
+.throbber_throbber_medium_QXu8P {
+  width: 64px;
+  height: 64px;
+}
+.throbber_throbber_large_3nisx {
+  width: 92px;
+  height: 92px;
+}
+.throbber_throbber_xlarge_3LxJj {
+  width: 120px;
+  height: 120px;
+}
+.throbber_throbber_xxlarge_1mUb9 {
+  width: 240px;
+  height: 240px;
 }
 .friendsnooze_SnoozeContainer_37Qst {
   position: relative;
@@ -15853,6 +15854,10 @@ a.bbcodes_LinkButton_20PWd:hover {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
+}
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
@@ -17799,6 +17804,10 @@ a.bbcodes_LinkButton_20PWd:hover {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
+}
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
@@ -19734,6 +19743,10 @@ a.bbcodes_LinkButton_20PWd:hover {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
@@ -22330,6 +22343,10 @@ a.bbcodes_LinkButton_20PWd:hover {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
@@ -25772,6 +25789,10 @@ svg.reorderablelist_ReorderArrow_WYXZC {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
@@ -29608,6 +29629,10 @@ div:hover > .BBCodeCollapseControl {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
+}
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
@@ -31298,6 +31323,10 @@ div:hover > .BBCodeCollapseControl {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
@@ -33108,6 +33137,10 @@ div:hover > .BBCodeCollapseControl {
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
 }
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
+}
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
   font-size: 16px;
@@ -34807,6 +34840,10 @@ div:hover > .BBCodeCollapseControl {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {
@@ -38571,6 +38608,10 @@ body.in_global_drag .title-area {
 }
 .ChatRoomList_Empty_Description {
   padding-bottom: 1em;
+}
+.chatRoomGroupHeader.GamepadMode,
+.GamepadMode .chatRoomGroupHeader {
+  max-width: calc(100vw - 240px - 20px);
 }
 .chatRoomGroupHeader.GamepadMode .ChatRoomGroupAvatar_initials,
 .GamepadMode .chatRoomGroupHeader .ChatRoomGroupAvatar_initials {

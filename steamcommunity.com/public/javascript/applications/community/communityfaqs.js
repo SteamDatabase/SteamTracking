@@ -154,9 +154,200 @@
         EscapeLink: "faqviewpage_EscapeLink_19Bjj",
       };
     },
+    15396: (e, t, a) => {
+      "use strict";
+      a.d(t, { Y: () => r });
+      var o = a(70655),
+        i = a(67294),
+        s = a(64839),
+        n = a(54452);
+      class r extends i.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              bRenderChildren: !1,
+              nPrevRenderWidth: 0,
+              nPrevRenderHeight: 0,
+            }),
+            (this.m_refContainer = i.createRef());
+        }
+        BLoadAndUnload() {
+          return "LoadAndUnload" == (this.props.mode || "JustLoad");
+        }
+        OnVisibilityChange(e) {
+          let t = this.state.bRenderChildren;
+          if (t == e) return;
+          if (t && !this.BLoadAndUnload()) return;
+          let a = 0,
+            o = 0;
+          if (this.m_refContainer.current) {
+            const e = this.m_refContainer.current.GetBoundingClientRect();
+            e && ((a = e.width), (o = e.height));
+          }
+          this.setState({
+            bRenderChildren: e,
+            nPrevRenderWidth: a,
+            nPrevRenderHeight: o,
+          }),
+            e && this.props.onRender && this.props.onRender();
+        }
+        render() {
+          const e = this.props,
+            {
+              placeholderWidth: t,
+              placeholderHeight: a,
+              onRender: s,
+              style: r,
+              mode: l,
+            } = e,
+            p = (0, o._T)(e, [
+              "placeholderWidth",
+              "placeholderHeight",
+              "onRender",
+              "style",
+              "mode",
+            ]),
+            d = this.state.bRenderChildren;
+          let h = r;
+          if (!d) {
+            const e = this.state.nPrevRenderWidth || t,
+              o = this.state.nPrevRenderHeight || a;
+            (void 0 === o && void 0 === e) ||
+              (h = Object.assign(Object.assign({}, r), {
+                minHeight: o,
+                minWidth: e,
+              }));
+          }
+          const c = this.BLoadAndUnload() ? "repeated" : "once";
+          return i.createElement(
+            n.U,
+            Object.assign({ ref: this.m_refContainer, style: h }, p, {
+              onVisibilityChange: this.OnVisibilityChange,
+              trigger: c,
+            }),
+            d && this.props.children
+          );
+        }
+      }
+      (0, o.gn)([s.ak], r.prototype, "OnVisibilityChange", null);
+    },
+    54452: (e, t, a) => {
+      "use strict";
+      a.d(t, { U: () => r });
+      var o = a(70655),
+        i = a(67294),
+        s = a(53622),
+        n = a(64839);
+      class r extends i.Component {
+        constructor() {
+          super(...arguments),
+            (this.m_observer = null),
+            (this.m_refElement = i.createRef()),
+            (this.m_elTracked = null),
+            (this.m_bPreviouslyIntersecting = !1);
+        }
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(e) {
+          this.UpdateObserver(e);
+        }
+        UpdateObserver(e) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            e &&
+            e.rootMargin != this.m_observer.rootMargin &&
+            this.DestroyObserver();
+          let t = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              t != this.m_elTracked &&
+              (this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && t)
+          ) {
+            let e = { root: this.FindScrollableAncestor(t) };
+            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
+              (this.m_observer = new IntersectionObserver(
+                this.OnIntersection,
+                e
+              ));
+          }
+          this.m_observer &&
+            t &&
+            t != this.m_elTracked &&
+            (this.m_observer.observe(t), (this.m_elTracked = t));
+        }
+        FindScrollableAncestor(e) {
+          return s.Jk(e, (e) => {
+            const t = this.props.bHorizontal
+              ? window.getComputedStyle(e).overflowX
+              : window.getComputedStyle(e).overflowY;
+            return (
+              "scroll" == t ||
+              "auto" == t ||
+              !!e.classList.contains(r.GetScrollableClassname())
+            );
+          });
+        }
+        OnIntersection(e, t) {
+          let a = !1;
+          for (const t of e)
+            if (t.isIntersecting) {
+              a = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != a &&
+            ((this.m_bPreviouslyIntersecting = a),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(a),
+            a && this.BTriggerOnce() && this.DestroyObserver());
+        }
+        render() {
+          let e = this.props,
+            {
+              onVisibilityChange: t,
+              rootMargin: a,
+              trigger: s,
+              bHorizontal: n,
+            } = e,
+            r = (0, o._T)(e, [
+              "onVisibilityChange",
+              "rootMargin",
+              "trigger",
+              "bHorizontal",
+            ]);
+          return i.createElement(
+            "div",
+            Object.assign({ ref: this.m_refElement }, r),
+            this.props.children
+          );
+        }
+      }
+      (0, o.gn)([n.ak], r.prototype, "OnIntersection", null);
+    },
     24723: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { FAQRoutes: () => St, default: () => kt });
+      a.r(t), a.d(t, { FAQRoutes: () => kt, default: () => xt });
       var o,
         i = a(70655),
         s = a(29323),
@@ -7554,9 +7745,9 @@
         E = a(73604),
         W = a(93320),
         F = a.n(W),
-        R = a(22188),
-        O = (a(27394), a(13679)),
-        N = a.n(O),
+        O = a(22188),
+        R = (a(27394), a(13679)),
+        N = a.n(R),
         L = a(3389),
         H = a(2388),
         V = a(34133),
@@ -7583,7 +7774,7 @@
                   const o = new Set(),
                     i = t.GetSortedTokenList();
                   return (
-                    (0, R.z)(() => {
+                    (0, O.z)(() => {
                       a.forEach((a) => {
                         let s = !1;
                         i.forEach((o) => {
@@ -8409,11 +8600,11 @@
                     ? void 0
                     : t.length) > 0
                 ) ||
-                (e.pathname != St.DashboardFAQ(m.JA.VANITY_ID) &&
+                (e.pathname != kt.DashboardFAQ(m.JA.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        St.ViewFAQ(m.JA.VANITY_ID, "").slice(0, -1)
+                        kt.ViewFAQ(m.JA.VANITY_ID, "").slice(0, -1)
                       ))) ||
                 (0, z.Xx)("#EventEditor_UnsavedChanges")
               );
@@ -8800,8 +8991,8 @@
             )
           );
         };
-      var Re = a(49165);
-      const Oe = (0, s.Pi)((e) => {
+      var Oe = a(49165);
+      const Re = (0, s.Pi)((e) => {
           var t, a, o, i, s;
           const { draft: r, eLanguage: l } = e,
             p = r.GetFAQID(),
@@ -8846,25 +9037,25 @@
             null,
             n.createElement(
               "div",
-              { className: Re.LeftMenu },
+              { className: Oe.LeftMenu },
               n.createElement(
                 "div",
-                { className: Re.Section },
+                { className: Oe.Section },
                 n.createElement(
                   "div",
-                  { className: Re.SectionTitle },
+                  { className: Oe.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_VisibilityColumn"),
                   " "
                 ),
                 n.createElement(
                   "div",
-                  { className: Re.SectionContents },
+                  { className: Oe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Re.VisibilityCtn },
+                    { className: Oe.VisibilityCtn },
                     n.createElement(
                       "div",
-                      { className: (0, y.Z)(Re.StatusRow, Re.Global) },
+                      { className: (0, y.Z)(Oe.StatusRow, Oe.Global) },
                       (0, z.Xx)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       n.createElement(Se, {
@@ -8873,7 +9064,7 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: (0, y.Z)(Re.StatusRow, Re.China) },
+                      { className: (0, y.Z)(Oe.StatusRow, Oe.China) },
                       (0, z.Xx)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       n.createElement(Se, {
@@ -8882,27 +9073,27 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: Re.StatusBtnCtn },
+                      { className: Oe.StatusBtnCtn },
                       n.createElement(We, { draft: r })
                     )
                   ),
                   n.createElement(
                     "div",
-                    { className: Re.PublishCtn },
+                    { className: Oe.PublishCtn },
                     m
                       ? n.createElement(
                           "div",
-                          { className: Re.PublishStatus },
+                          { className: Oe.PublishStatus },
                           (0, z.Xx)("#FAQStatus_DraftVersionsDesc")
                         )
                       : n.createElement(
                           "div",
-                          { className: Re.PublishStatus },
+                          { className: Oe.PublishStatus },
                           (0, z.Xx)("#FAQStatus_NothingToPublish")
                         ),
                     n.createElement(
                       "div",
-                      { className: Re.PublishBtn },
+                      { className: Oe.PublishBtn },
                       n.createElement(ze, { draft: r, bDisabled: !m })
                     )
                   )
@@ -8910,29 +9101,29 @@
               ),
               n.createElement(
                 "div",
-                { className: Re.Section },
+                { className: Oe.Section },
                 n.createElement(
                   "div",
-                  { className: Re.SectionTitle },
+                  { className: Oe.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_LocalizationSection"),
                   " "
                 ),
                 n.createElement(
                   "div",
-                  { className: Re.SectionContents },
+                  { className: Oe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Re.SectionDescription },
+                    { className: Oe.SectionDescription },
                     (0, z.Xx)("#FAQDashboard_LocalizationSectionDesc")
                   ),
                   n.createElement(J, { draft: r, eLanguage: l })
                 ),
                 n.createElement(
                   "div",
-                  { className: Re.SectionContents },
+                  { className: Oe.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Re.SectionDescription },
+                    { className: Oe.SectionDescription },
                     (0, z.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc")
                   ),
                   n.createElement(Z, { draft: r })
@@ -8940,15 +9131,15 @@
               ),
               n.createElement(
                 "div",
-                { className: Re.Section },
+                { className: Oe.Section },
                 n.createElement(
                   "div",
-                  { className: Re.SectionTitle },
+                  { className: Oe.SectionTitle },
                   (0, z.Xx)("#FAQStatus_LocalizedVersionStatusHeader")
                 ),
                 n.createElement(
                   "table",
-                  { className: Re.FaqStatusTable },
+                  { className: Oe.FaqStatusTable },
                   n.createElement(
                     "thead",
                     null,
@@ -8973,7 +9164,7 @@
               ),
               n.createElement(
                 "div",
-                { className: Re.Section },
+                { className: Oe.Section },
                 n.createElement(qe, { draft: r })
               )
             )
@@ -9330,7 +9521,7 @@
               n.createElement(
                 "div",
                 { className: De().FAQMenuCtn },
-                n.createElement(Oe, { draft: a, eLanguage: s })
+                n.createElement(Re, { draft: a, eLanguage: s })
               ),
               n.createElement(
                 "div",
@@ -9758,15 +9949,16 @@
               );
         });
       var wt = a(9915),
-        vt = a(74091);
-      const St = {
+        vt = a(74091),
+        St = a(92244);
+      const kt = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
           ImportTool: (e) => `/faqs/${e}/import`,
         },
-        kt = (0, s.Pi)((e) => {
+        xt = (0, s.Pi)((e) => {
           const [t, a] = n.useState(!0);
           return (
             n.useEffect(() => {
@@ -9788,7 +9980,7 @@
                     u.rs,
                     null,
                     n.createElement(u.AW, {
-                      path: St.ViewFAQ(":vanity_str", ":faqid"),
+                      path: kt.ViewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
                         n.createElement(vt.d, {
                           config: {
@@ -9801,7 +9993,7 @@
                         }),
                     }),
                     n.createElement(u.AW, {
-                      path: St.EditFAQ(":vanity_str", ":faqid"),
+                      path: kt.EditFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
                         n.createElement(vt.d, {
                           config: {
@@ -9822,7 +10014,7 @@
                         }),
                     }),
                     n.createElement(u.AW, {
-                      path: St.DashboardFAQ(":vanity_str"),
+                      path: kt.DashboardFAQ(":vanity_str"),
                       render: (e) =>
                         n.createElement(vt.d, {
                           config: {
@@ -9831,7 +10023,7 @@
                         }),
                     }),
                     n.createElement(u.AW, {
-                      path: St.PreviewFAQ(":vanity_str", ":faqid"),
+                      path: kt.PreviewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
                         n.createElement(vt.d, {
                           config: {
@@ -9844,23 +10036,14 @@
                         }),
                     }),
                     n.createElement(u.AW, {
-                      path: St.ImportTool(":vanity_str"),
+                      path: kt.ImportTool(":vanity_str"),
                       component: k,
                     }),
-                    n.createElement(u.AW, { component: xt })
+                    n.createElement(u.AW, { component: St.R })
                   )
                 )
           );
         });
-      function xt(e) {
-        return "dev" !== m.De.WEB_UNIVERSE
-          ? n.createElement(u.l_, { to: "/" })
-          : n.createElement(
-              "div",
-              null,
-              "Unknown Route - Check routes/faqs.tsx to see if this page has been added to the list of routes."
-            );
-      }
     },
   },
 ]);

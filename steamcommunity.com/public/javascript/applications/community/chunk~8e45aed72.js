@@ -2118,7 +2118,7 @@
             (this.m_bHasFAQEdit = !1),
             (this.m_steamInterface = null),
             "dev" == f.De.WEB_UNIVERSE && (window.g_FAQStore = this),
-            f.De.IN_LIBRARY ||
+            f.De.IN_STEAMUI ||
               (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
         }
         static Get() {

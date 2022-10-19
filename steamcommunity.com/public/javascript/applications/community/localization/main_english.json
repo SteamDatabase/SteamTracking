@@ -1376,6 +1376,8 @@
     "Sale_CapsulesPerRow_Pattern_3t23": "Vary per row: 3 Tall/2/3",
     "Sale_CapsulesPerRow_Pattern_5t": "5 Tall",
     "Sale_CapsulesPerRow_Pattern_3t": "3 Tall",
+    "Sale_CapsulesPerRow_Pattern_23": "Vary per row: 2/3",
+    "Sale_CapsulesPerRow_Pattern_232": "Vary per row: 2/3/2",
     "Sale_VOInternalSection_SubscriptionPricing": "Subscription - Pricing",
     "Sale_SectionType_EventSchedule": "Event Schedule",
     "Sale_SectionType_EventSchedule_ttip": "Event Schedule automatically pulls and displays events from featured games to appear on the sales page ordered by their event start time. Useful for showing broadcasts that occur during the sale.",

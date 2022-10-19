@@ -541,12 +541,12 @@ body.login .page_content {
 	width: 100%;
 }
 
-body.login.global .page_content {
-	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;}
+body.login.china .page_content .login_left_col {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china.jpg' ) center top no-repeat, #181A21;
 }
 
-body.login.china {
-	background: radial-gradient(30% 40% at 40% 30%, #454D52 0%, rgba(69, 77, 82, 0) 100%) no-repeat, #212429;
+body.login.global .page_content {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;}
 }
 
 .login #checkout_steam_logo {
@@ -914,14 +914,6 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		width: 100%;
 		margin: 0 auto;
 	}
-
-	html.responsive body.v6.global .page_content {
-		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
-	}
-
-	html.responsive body.v6.china .page_content {
-		background: #181A21;
-	}
 }
 
 @media screen and ( max-width: 700px ) {
@@ -938,8 +930,8 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 
-	html.responsive body.login.china .page_content {
-		background: #181A21;
+	html.responsive body.login.china .page_content .login_left_col {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 }
 

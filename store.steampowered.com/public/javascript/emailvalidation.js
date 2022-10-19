@@ -25,13 +25,13 @@ function ToggleEmailValidationSuccess()
 {
 	$('emailvalidation_status_sent').hide();
 	$('emailvalidation_status_success').show();
-	
+
 	$('emailvalidation_purchase_pending').hide();
 	$('emailvalidation_purchase_success').show();
-	
+
 	$('emailvalidation_buttons_disabled').hide();
 	$('emailvalidation_buttons_enabled').show();
-	
+
 	$('emailvalidation_show_update_link').hide();
 }
 
@@ -77,7 +77,7 @@ function PollEmailValidationStatus()
 			window.clearTimeout( g_timeout );
 			g_timeout = false;
 		}
-		
+
 		g_bValidationPollInFlight = true;
 		g_bShortPollPending = false;
 		g_cPolls++;
@@ -102,7 +102,7 @@ function PollEmailStatusResponse( response )
 		//didn't get a response, poll again
 		if ( g_bShortPollPending )
 		{
-			// user interacted with the page 
+			// user interacted with the page
 			g_timeout = setTimeout( PollEmailValidationStatus, DEFAULT_POLL_INTERVAL_MS );
 		}
 		else if ( g_cPolls < 20 )
@@ -120,7 +120,7 @@ function CheckEmailUpdateForm()
 	ValidationMarkFieldOk( $('password_input' ) );
 	ValidationMarkFieldOk( $('email_input' ) );
 	ValidationMarkFieldOk( $('reenter_email_input' ) );
-	
+
 	if ( !$('password_input').value )
 	{
 		bValid = false;
@@ -141,14 +141,14 @@ function CheckEmailUpdateForm()
 		strError = ( strError ? strError + '<br>' : '' ) + 'Please fill in the Confirm email address field.';
 		ValidationMarkFieldBad( $('reenter_email_input' ) );
 	}
-	else if ( $('reenter_email_input').value != $('email_input').value )
+	else if ( $('reenter_email_input').value.toLowerCase() != $('email_input').value.toLowerCase() )
 	{
 		bValid = false;
 		strError = ( strError ? strError + '<br>' : '' ) + 'Please enter the same address in both email address fields.';
 		ValidationMarkFieldBad( $('email_input' ) );
 		ValidationMarkFieldBad( $('reenter_email_input' ) );
 	}
-	
+
 	if ( !bValid && strError )
 	{
 		DisplayErrorMessage( strError );
@@ -165,7 +165,7 @@ function SubmitEmailUpdateForm()
 {
 	if ( !CheckEmailUpdateForm() )
 		return;
-	
+
 	new Ajax.Request( 'https://store.steampowered.com/checkout/updateemail', {
 		method: 'post',
 		parameters: $('email_updateform').serialize(true),
@@ -193,7 +193,7 @@ function DisplayErrorMessage( strMessage )
 	$('error_display').innerHTML = strMessage;
 	$('error_display').show();
 	Effect.ScrollTo( 'error_display' );
-	
+
 	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 

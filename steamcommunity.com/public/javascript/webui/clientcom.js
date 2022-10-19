@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7591892";
+var CLSTAMP = "7595061";
 (() => {
   "use strict";
   function e(e) {
@@ -198,8 +198,9 @@ var CLSTAMP = "7591892";
       FRIENDSUI_BETA: !1,
       STEAM_TV: !1,
       DEV_MODE: !1,
-      IN_LIBRARY: !1,
+      IN_STEAMUI: !1,
       IN_GAMEPADUI: !1,
+      GAMEPADUI_WINDOWED: !1,
       LEGACY_GAMEPADUI_MODE: 0,
       LEGACY_CONTROLLER_CONFIG_APPID: 0,
       ON_DECK: !1,
@@ -325,7 +326,7 @@ var CLSTAMP = "7591892";
     return y(e, t, !0);
   }
   let h = { success: !0, result: 1 };
-  class R {
+  class T {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -436,9 +437,9 @@ var CLSTAMP = "7591892";
       );
     }
   }
-  let T = new (class {
+  let R = new (class {
     constructor() {
-      (this.m_connection = new R()),
+      (this.m_connection = new T()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -523,8 +524,8 @@ var CLSTAMP = "7591892";
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = T),
+  (window.ClientConnectionAPI = R),
     document.addEventListener("DOMContentLoaded", function () {
-      g(), (window.ClientConnectionAPI = T);
+      g(), (window.ClientConnectionAPI = R);
     });
 })();
