@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2025],
+  [6661],
   {
     98953: (e) => {
       e.exports = {
@@ -11521,126 +11521,127 @@
     },
     44741: (e, t, r) => {
       "use strict";
-      r.d(t, { Gh: () => y, Jc: () => f, x1: () => b });
-      var i = r(9669),
-        a = r.n(i),
-        n = r(67294),
-        s = r(37723),
-        o = r(54698),
-        l = (r(91891), r(990), r(39388)),
-        d = (r(14146), r(48116)),
-        c = r(52114),
-        m = r(97024),
-        u = r(49754),
-        p = r(84282),
-        _ = r(85732),
-        h = r(88335),
-        g = r.n(h),
-        S = r(51483),
-        v = r(7573),
-        B = r(41311);
-      function b(e) {
+      r.d(t, { Gh: () => f, Jc: () => E, nk: () => C, x1: () => w });
+      var i = r(70655),
+        a = r(9669),
+        n = r.n(a),
+        s = r(67294),
+        o = r(37723),
+        l = r(54698),
+        d = (r(91891), r(990), r(39388)),
+        c = (r(14146), r(48116)),
+        m = r(52114),
+        u = r(97024),
+        p = r(49754),
+        _ = r(84282),
+        h = r(85732),
+        g = r(88335),
+        S = r.n(g),
+        v = r(51483),
+        B = r(7573),
+        b = r(41311);
+      function w(e) {
         const {
             info: t,
             bShowDemoButton: r,
             bShowPurchaseOptionsButton: i,
-            fnOnPurchaseOptionsClick: s,
-            bHidePrice: _,
+            fnOnPurchaseOptionsClick: a,
+            bHidePrice: o,
             bHideWishlistButton: h,
-            bShowDeckCompatibilityDialog: v,
+            bShowDeckCompatibilityDialog: g,
           } = e,
-          B = (0, n.useRef)({ include_release: !0 }),
-          [b] = (0, c.jk)(t.id, (0, d.TM)(t.type), B.current),
-          y = (0, o.mU)(t.type),
-          [E, C] = n.useState(r && y && l.ZP.Get().BHasDemoAppID(t.id));
+          B = (0, s.useRef)({ include_release: !0 }),
+          [b] = (0, m.jk)(t.id, (0, c.TM)(t.type), B.current),
+          w = (0, l.mU)(t.type),
+          [f, C] = s.useState(r && w && d.ZP.Get().BHasDemoAppID(t.id));
         return (
-          n.useEffect(() => {
-            const e = a().CancelToken.source();
+          s.useEffect(() => {
+            const e = n().CancelToken.source();
             return (
               r &&
-                y &&
-                l.ZP.Get()
+                w &&
+                d.ZP.Get()
                   .LoadAppIDsBatch([t.id])
                   .then(() => {
-                    e.token.reason || C(l.ZP.Get().BHasDemoAppID(t.id));
+                    e.token.reason || C(d.ZP.Get().BHasDemoAppID(t.id));
                   }),
               () =>
                 null == e
                   ? void 0
                   : e.cancel("StoreSalePriceActionWidget: unmounting")
             );
-          }, [r, y, t.id]),
+          }, [r, w, t.id]),
           b
-            ? n.createElement(
+            ? s.createElement(
                 "div",
-                { className: g().StoreActionWidgetContainer },
-                n.createElement(
+                { className: S().StoreActionWidgetContainer },
+                s.createElement(
                   "div",
-                  { className: g().StoreSalePriceActionWidgetContainer },
-                  Boolean(!h && (0, o.mU)(t.type)) &&
-                    n.createElement(S.s, {
+                  { className: S().StoreSalePriceActionWidgetContainer },
+                  Boolean(!h && (0, l.mU)(t.type)) &&
+                    s.createElement(v.s, {
                       appid: t.id,
                       bIsFree: b.BIsFree(),
                       bIsComingSoon: b.BIsComingSoon(),
                       className: "WishlistBtn",
                     }),
-                  Boolean(E) &&
-                    n.createElement(p.f, { info: t, className: g().Action }),
-                  Boolean(!_) &&
+                  Boolean(f) &&
+                    s.createElement(_.f, { info: t, className: S().Action }),
+                  Boolean(!o) &&
                     (Boolean(i)
-                      ? n.createElement(w, { fnOnPurchaseOptionsClick: s })
-                      : n.createElement(u.a, {
+                      ? s.createElement(y, { fnOnPurchaseOptionsClick: a })
+                      : s.createElement(p.a, {
                           info: t,
                           className: "CartBtn",
                         })),
-                  Boolean(!_) && n.createElement(f, { info: t }),
-                  Boolean(v) && n.createElement(m.Ws, { nAppID: t.id })
+                  Boolean(!o) && s.createElement(E, { info: t }),
+                  Boolean(g) && s.createElement(u.Ws, { nAppID: t.id })
                 )
               )
             : null
         );
       }
-      const w = (e) =>
-        n.createElement(
+      const y = (e) =>
+        s.createElement(
           "div",
-          { className: g().Action, onClick: e.fnOnPurchaseOptionsClick },
-          n.createElement(
+          { className: S().Action, onClick: e.fnOnPurchaseOptionsClick },
+          s.createElement(
             "span",
             null,
-            (0, B.Xx)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button")
+            (0, b.Xx)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button")
           )
         );
-      function y(e) {
+      function f(e) {
         const {
             storeItem: t,
             bPurchaseOptionsExpanded: r,
             fnCollapseOptions: i,
           } = e,
           a = null == t ? void 0 : t.GetAllPurchaseOptions();
-        return n.createElement(
-          s.Z,
+        return s.createElement(
+          o.Z,
           {
             in: r,
             mountOnEnter: !0,
             unmountOnExit: !0,
             timeout: 2e3,
             classNames: {
-              enterActive: g().Expanding,
-              enterDone: g().Expanded,
-              exit: g().Expanded,
-              exitActive: g().Collapsing,
+              enterActive: S().Expanding,
+              enterDone: S().Expanded,
+              exit: S().Expanded,
+              exitActive: S().Collapsing,
             },
           },
-          n.createElement(
+          s.createElement(
             "div",
-            { className: g().BundleContentsCtnTransition },
-            n.createElement(
+            { className: S().BundleContentsCtnTransition },
+            s.createElement(
               "div",
-              { className: g().BundleContentsCtn },
+              { className: S().BundleContentsCtn },
               null == a
                 ? void 0
                 : a.map((e) =>
-                    n.createElement(
+                    s.createElement(
                       "div",
                       {
                         key:
@@ -11648,9 +11649,9 @@
                           (null == t ? void 0 : t.GetID()) +
                           "_" +
                           e.packageid,
-                        className: g().BundleContentItem,
+                        className: S().BundleContentItem,
                       },
-                      n.createElement(_.ju, {
+                      s.createElement(h.ju, {
                         id: e.packageid,
                         type: "sub",
                         bForceSmallCapsuleArt: !0,
@@ -11658,151 +11659,156 @@
                     )
                   )
             ),
-            n.createElement(
+            s.createElement(
               "div",
-              { onClick: i, className: g().BundleShowButton },
-              n.createElement(
+              { onClick: i, className: S().BundleShowButton },
+              s.createElement(
                 "button",
-                { className: g().ShowContentsButton },
-                (0, B.Xx)("#Button_Close")
+                { className: S().ShowContentsButton },
+                (0, b.Xx)("#Button_Close")
               )
             )
           )
         );
       }
-      function f(e) {
-        var t, r;
-        const { info: i, bSingleLineMode: a } = e,
-          s = (0, n.useRef)({ include_release: !0 }),
-          [o] = (0, c.jk)(
-            null == i ? void 0 : i.id,
-            (0, d.TM)(null == i ? void 0 : i.type),
-            s.current
+      function E(e) {
+        const { info: t } = e,
+          r = (0, i._T)(e, ["info"]),
+          a = (0, s.useRef)({ include_release: !0 }),
+          [n] = (0, m.jk)(
+            null == t ? void 0 : t.id,
+            (0, c.TM)(null == t ? void 0 : t.type),
+            a.current
           );
-        if (!o) return null;
-        const l = (0, v.Z)(
-            g().StoreSalePriceWidgetContainer,
-            a && g().SingleLineMode,
+        return s.createElement(C, Object.assign({}, r, { storeItem: n }));
+      }
+      function C(e) {
+        var t, r;
+        const { bSingleLineMode: i, storeItem: a } = e;
+        if (!a) return null;
+        const n = (0, B.Z)(
+            S().StoreSalePriceWidgetContainer,
+            i && S().SingleLineMode,
             "StoreSalePriceWidgetContainer"
           ),
-          m =
-            2 == o.GetStoreItemType() &&
-            (null === (t = o.GetBestPurchaseOption()) || void 0 === t
+          o =
+            2 == a.GetStoreItemType() &&
+            (null === (t = a.GetBestPurchaseOption()) || void 0 === t
               ? void 0
               : t.bundle_discount_pct);
         if (e.bShowInLibrary)
-          return n.createElement(
+          return s.createElement(
             "div",
-            { className: l },
-            n.createElement(
+            { className: n },
+            s.createElement(
               "div",
-              { className: g().StoreSalePriceBox },
-              (0, B.Xx)("#EventDisplay_CallToAction_InLibrary")
+              { className: S().StoreSalePriceBox },
+              (0, b.Xx)("#EventDisplay_CallToAction_InLibrary")
             )
           );
         if (
-          o.BIsComingSoon() &&
-          !(null === (r = o.GetBestPurchaseOption()) || void 0 === r
+          a.BIsComingSoon() &&
+          !(null === (r = a.GetBestPurchaseOption()) || void 0 === r
             ? void 0
             : r.packageid)
         )
-          return n.createElement(
+          return s.createElement(
             "div",
-            { className: l },
-            n.createElement(
+            { className: n },
+            s.createElement(
               "div",
-              { className: g().StoreSalePriceBox },
-              (0, B.Xx)("#EventDisplay_CallToAction_ComingSoon")
+              { className: S().StoreSalePriceBox },
+              (0, b.Xx)("#EventDisplay_CallToAction_ComingSoon")
             )
           );
-        if (o.BIsFree())
-          return 0 == o.GetStoreItemType() &&
-            4 != o.GetAppType() &&
-            11 != o.GetAppType() &&
-            o.GetParentAppID()
-            ? n.createElement(
+        if (a.BIsFree())
+          return 0 == a.GetStoreItemType() &&
+            4 != a.GetAppType() &&
+            11 != a.GetAppType() &&
+            a.GetParentAppID()
+            ? s.createElement(
                 "div",
-                { className: l },
-                n.createElement(
+                { className: n },
+                s.createElement(
                   "div",
-                  { className: g().StoreSalePriceBox },
-                  (0, B.Xx)("#EventDisplay_CallToAction_FreeDemo")
+                  { className: S().StoreSalePriceBox },
+                  (0, b.Xx)("#EventDisplay_CallToAction_FreeDemo")
                 )
               )
-            : n.createElement(
+            : s.createElement(
                 "div",
-                { className: l },
-                n.createElement(
+                { className: n },
+                s.createElement(
                   "div",
-                  { className: g().StoreSalePriceBox },
-                  (0, B.Xx)("#EventDisplay_CallToAction_FreeToPlay")
+                  { className: S().StoreSalePriceBox },
+                  (0, b.Xx)("#EventDisplay_CallToAction_FreeToPlay")
                 )
               );
-        if (!o.GetBestPurchasePriceFormatted() || !o.GetBestPurchaseOption())
+        if (!a.GetBestPurchasePriceFormatted() || !a.GetBestPurchaseOption())
           return null;
-        const u = o.GetBestPurchaseOption().discount_pct || m,
-          p = u && m && u > m && m;
-        o.GetBestPurchaseOption().packageid;
-        return n.createElement(
+        const l = a.GetBestPurchaseOption().discount_pct || o,
+          d = l && o && l > o && o;
+        a.GetBestPurchaseOption().packageid;
+        return s.createElement(
           "div",
           {
-            className: (0, v.Z)(
-              l,
-              u && g().Discounted,
+            className: (0, B.Z)(
+              n,
+              l && S().Discounted,
               "StoreSalePriceWidgetContainer"
             ),
           },
-          Boolean(o.BIsPrePurchase()) &&
-            n.createElement(
+          Boolean(a.BIsPrePurchase()) &&
+            s.createElement(
               "div",
               {
-                className: (0, v.Z)(
-                  g().StoreSalePriceBox,
-                  g().StoreSalePrepurchaseLabel
+                className: (0, B.Z)(
+                  S().StoreSalePriceBox,
+                  S().StoreSalePrepurchaseLabel
                 ),
               },
-              (0, B.Xx)("#EventDisplay_CallToAction_Prepurchase_Short")
+              (0, b.Xx)("#EventDisplay_CallToAction_Prepurchase_Short")
             ),
-          Boolean(p) &&
-            n.createElement(
+          Boolean(d) &&
+            s.createElement(
               "span",
-              { className: (0, v.Z)(g().BaseDiscount) },
-              `-${p}%`
+              { className: (0, B.Z)(S().BaseDiscount) },
+              `-${d}%`
             ),
-          Boolean(u) &&
-            n.createElement(
+          Boolean(l) &&
+            s.createElement(
               "div",
-              { className: g().StoreSaleDiscountBox },
-              `-${u}%`
+              { className: S().StoreSaleDiscountBox },
+              `-${l}%`
             ),
-          u && o.GetBestPurchaseOriginalPriceFormatted()
-            ? n.createElement(
+          l && a.GetBestPurchaseOriginalPriceFormatted()
+            ? s.createElement(
                 "div",
-                { className: (0, v.Z)(g().StoreSaleDiscountedPriceCtn) },
-                n.createElement(
+                { className: (0, B.Z)(S().StoreSaleDiscountedPriceCtn) },
+                s.createElement(
                   "div",
                   {
-                    className: a
-                      ? g().SingleLineOriginalPrice
-                      : g().StoreOriginalPrice,
+                    className: i
+                      ? S().SingleLineOriginalPrice
+                      : S().StoreOriginalPrice,
                   },
-                  o.GetBestPurchaseOriginalPriceFormatted()
+                  a.GetBestPurchaseOriginalPriceFormatted()
                 ),
-                n.createElement(
+                s.createElement(
                   "div",
                   {
-                    className: (0, v.Z)(
-                      g().StoreSalePriceBox,
-                      a && g().SingleLineMode
+                    className: (0, B.Z)(
+                      S().StoreSalePriceBox,
+                      i && S().SingleLineMode
                     ),
                   },
-                  o.GetBestPurchasePriceFormatted()
+                  a.GetBestPurchasePriceFormatted()
                 )
               )
-            : n.createElement(
+            : s.createElement(
                 "div",
-                { className: g().StoreSalePriceBox },
-                o.GetBestPurchasePriceFormatted()
+                { className: S().StoreSalePriceBox },
+                a.GetBestPurchasePriceFormatted()
               )
         );
       }

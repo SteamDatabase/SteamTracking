@@ -44,74 +44,76 @@
         ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
         throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
         throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+        ThrobberDelayAppear: "throbber_ThrobberDelayAppear_34XSs",
+        Visible: "throbber_Visible_1ziaT",
       };
     },
     5194: (e, t, r) => {
       "use strict";
-      r.d(t, { AY: () => l, KQ: () => a, _v: () => n, q8: () => c });
+      r.d(t, { AY: () => l, KQ: () => a, _v: () => s, q8: () => c });
       var i = r(33019),
         o = r(40110);
-      const s = i.Message;
-      class n extends s {
+      const n = i.Message;
+      class s extends n {
         constructor(e = null) {
           super(),
-            n.prototype.sale_filter || o.aR(n.M()),
-            s.initialize(this, e, 0, -1, [3], null);
+            s.prototype.sale_filter || o.aR(s.M()),
+            n.initialize(this, e, 0, -1, [3], null);
         }
         static M() {
           return (
-            n.sm_m ||
-              (n.sm_m = {
-                proto: n,
+            s.sm_m ||
+              (s.sm_m = {
+                proto: s,
                 fields: {
                   sale_filter: { n: 1, c: a },
                   content_hub_filter: { n: 2, c: l },
                   store_filters: { n: 3, c: b, r: !0, q: !0 },
                 },
               }),
-            n.sm_m
+            s.sm_m
           );
         }
         static MBF() {
-          return n.sm_mbf || (n.sm_mbf = o.Bh(n.M())), n.sm_mbf;
+          return s.sm_mbf || (s.sm_mbf = o.Bh(s.M())), s.sm_mbf;
         }
         toObject(e = !1) {
-          return n.toObject(e, this);
+          return s.toObject(e, this);
         }
         static toObject(e, t) {
-          return o.TA(n.M(), e, t);
+          return o.TA(s.M(), e, t);
         }
         static fromObject(e) {
-          return o.aD(n.M(), e);
+          return o.aD(s.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new n();
-          return n.deserializeBinaryFromReader(r, t);
+            r = new s();
+          return s.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return o.F(n.MBF(), e, t);
+          return o.F(s.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return s.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          o.l2(n.M(), e, t);
+          o.l2(s.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return n.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter";
         }
       }
-      class a extends s {
+      class a extends n {
         constructor(e = null) {
           super(),
             a.prototype.sale_tagid || o.aR(a.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -164,11 +166,11 @@
           return "CStorePageFilter_SalePageFilter";
         }
       }
-      class l extends s {
+      class l extends n {
         constructor(e = null) {
           super(),
             l.prototype.hub_type || o.aR(l.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -233,11 +235,11 @@
           return "CStorePageFilter_ContentHubFilter";
         }
       }
-      class c extends s {
+      class c extends n {
         constructor(e = null) {
           super(),
             c.prototype.name || o.aR(c.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -296,11 +298,11 @@
           return "CStorePageFilter_ContentHubFilter_OptInInfo";
         }
       }
-      class b extends s {
+      class b extends n {
         constructor(e = null) {
           super(),
             b.prototype.filter_json || o.aR(b.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -364,8 +366,8 @@
       r.d(t, { e1: () => l.e1, x1: () => p, BR: () => _, AM: () => f });
       var i = r(70655),
         o = r(67294),
-        s = r(73935),
-        n = r(53157),
+        n = r(73935),
+        s = r(53157),
         a = r(10847),
         l = r(84351),
         c = r(95598),
@@ -462,13 +464,13 @@
       function p(e, t, r) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const o = !0 === (null == r ? void 0 : r.bNeverPopOut),
-            n = !o && g(null, t),
+            s = !o && g(null, t),
             a =
               (null == r ? void 0 : r.bForcePopOut) &&
               (null == r ? void 0 : r.popupWidth) &&
               (null == r ? void 0 : r.popupHeight),
             l =
-              n &&
+              s &&
               !a &&
               (yield (function (e, t, r) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
@@ -476,15 +478,15 @@
                   (i.style.position = "absolute"),
                     (i.style.visibility = "hidden"),
                     t.document.body.appendChild(i),
-                    s.render(e, i),
+                    n.render(e, i),
                     yield r;
                   let o = document;
                   m.De.IN_STEAMUI && o.fonts && (yield o.fonts.ready);
-                  const n = i.getBoundingClientRect(),
-                    a = Math.ceil(n.height),
-                    l = Math.ceil(n.width);
+                  const s = i.getBoundingClientRect(),
+                    a = Math.ceil(s.height),
+                    l = Math.ceil(s.width);
                   return (
-                    s.unmountComponentAtNode(i),
+                    n.unmountComponentAtNode(i),
                     t.document.body.removeChild(i),
                     { height: a, width: l }
                   );
@@ -526,7 +528,7 @@
           return p(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, r));
         });
       }
-      function _(e, t, r, i, s, n, a) {
+      function _(e, t, r, i, n, s, a) {
         let c, b;
         const d = e.props.closeModal,
           h = () => {
@@ -551,7 +553,7 @@
             b = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, i), { fnOnClose: h }),
-            d = new M(t, r, e, m, s, n);
+            d = new M(t, r, e, m, n, s);
           d.Show(), (c = d);
         } else c = a.ShowModal(m);
         return c;
@@ -561,8 +563,8 @@
           (e = e || (0, l.BL)(t || window)), m.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class M extends n.K3 {
-        constructor(e, t, r, i, o, s) {
+      class M extends s.K3 {
+        constructor(e, t, r, i, o, n) {
           super(t, {
             title: r.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
@@ -576,7 +578,7 @@
             (this.m_windowOpener = e),
             (this.m_modalProps = r),
             (this.m_modalElement = i),
-            (this.m_options = s);
+            (this.m_options = n);
         }
         Update(e) {
           (0, h.X)(!1, "NYI");
@@ -584,8 +586,8 @@
         UpdateParamsBeforeShow(e) {
           var t, r, i;
           let o,
-            s,
             n,
+            s,
             a = this.m_modalProps.popupWidth || 500,
             l = this.m_modalProps.popupHeight || 400;
           if (
@@ -602,25 +604,25 @@
               ? void 0
               : i.GetBrowserID)
           )
-            n = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            s = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (o = (e.availWidth - a) / 2), (s = (e.availHeight - l) / 2);
+            (o = (e.availWidth - a) / 2), (n = (e.availHeight - l) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((o += t.availLeft), (s += t.availTop));
+              ((o += t.availLeft), (n += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: a, height: l, left: o, top: s },
-            window_opener_id: n,
+            dimensions: { width: a, height: l, left: o, top: n },
+            window_opener_id: s,
           });
         }
         OnLoad() {}
         OnResize() {}
         OnClose() {
           this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
-            s.unmountComponentAtNode(this.m_element);
+            n.unmountComponentAtNode(this.m_element);
         }
         Render(e, t) {
           if (
@@ -633,7 +635,7 @@
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
-            s.render(
+            n.render(
               o.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: a.T },
@@ -654,60 +656,71 @@
     },
     13596: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => n });
+      r.d(t, { V: () => a });
       var i = r(67294),
-        o = r(50732),
-        s = r.n(o);
-      class n extends i.PureComponent {
-        constructor(e) {
-          super(e);
-        }
-        AddSizeClass(e) {
-          "small" == this.props.size
-            ? e.push(s().throbber_small)
-            : "medium" == this.props.size
-            ? e.push(s().throbber_medium)
-            : "xlarge" == this.props.size
-            ? e.push(s().throbber_xlarge)
-            : "xxlarge" == this.props.size
-            ? e.push(s().throbber_xxlarge)
-            : e.push(s().throbber_large);
-        }
-        render() {
-          let e = [s().LoadingWrapper, "SteamLogoThrobber"];
-          this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(s().noString),
-            this.props.className && e.push(this.props.className),
-            this.props.static && e.push(s().Static);
-          let t = i.createElement(
-            "div",
-            { className: e.join(" ") },
-            i.createElement(
-              "div",
-              { className: s().Throbber },
-              i.createElement(a, { className: s().base }),
-              i.createElement(a, { className: s().blur })
-            )
-          );
-          return i.createElement(
+        o = r(7573),
+        n = r(50732),
+        s = r.n(n);
+      const a = i.memo(function (e) {
+        const {
+          className: t,
+          size: r,
+          string: n,
+          position: a,
+          static: b,
+          msDelayAppear: d,
+        } = e;
+        let h = [s().LoadingWrapper, "SteamLogoThrobber", l(r)];
+        const [u, m] = i.useState(!d);
+        return (
+          (0, i.useEffect)(() => {
+            if (u) return;
+            const e = setTimeout(() => m(!0), d);
+            return () => clearTimeout(e);
+          }, [d, u]),
+          void 0 === n && h.push(s().noString),
+          t && h.push(t),
+          b && h.push(s().Static),
+          i.createElement(
             "div",
             {
-              className:
-                "center" == this.props.position
-                  ? s().throbber_center_wrapper
-                  : "",
+              className: (0, o.Z)(
+                "center" == a && s().throbber_center_wrapper,
+                d && s().ThrobberDelayAppear,
+                u && s().Visible
+              ),
             },
-            t,
-            Boolean(this.props.string) &&
+            u &&
               i.createElement(
                 "div",
-                { className: s().ThrobberText },
-                this.props.string
-              )
-          );
+                { className: h.join(" ") },
+                i.createElement(
+                  "div",
+                  { className: s().Throbber },
+                  i.createElement(c, { className: s().base }),
+                  i.createElement(c, { className: s().blur })
+                )
+              ),
+            Boolean(n) &&
+              i.createElement("div", { className: s().ThrobberText }, n)
+          )
+        );
+      });
+      function l(e) {
+        switch (e) {
+          case "small":
+            return s().throbber_small;
+          case "medium":
+            return s().throbber_medium;
+          case "xlarge":
+            return s().throbber_xlarge;
+          case "xxlarge":
+            return s().throbber_xxlarge;
+          default:
+            return s().throbber_large;
         }
       }
-      function a(e) {
+      function c(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),

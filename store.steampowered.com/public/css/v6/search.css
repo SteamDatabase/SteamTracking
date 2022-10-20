@@ -463,8 +463,15 @@
 }
 
 .col.search_price.discounted {
-	padding-top: 9px;
+	padding-top: 5px;
 	height: 36px;
+    color: #BEEE11;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.col.search_price.discounted strike {
+    font-size: 11px;
 }
 
 .col.search_discount {
@@ -472,13 +479,14 @@
 }
 
 .col.search_discount span {
-	color: #8bc53f;
+	color: #BEEE11;
 	font-size: 12px;
 	padding: 5px;
 	background-color: #4c6b22;
 	display: block;
 	margin-top: 10px;
 	text-align: center;
+    font-weight: 500;
 }
 
 .page_content {

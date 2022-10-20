@@ -89,6 +89,8 @@
         ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
         throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
         throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+        ThrobberDelayAppear: "throbber_ThrobberDelayAppear_34XSs",
+        Visible: "throbber_Visible_1ziaT",
       };
     },
     16390: (e, t, r) => {
@@ -103,17 +105,17 @@
         o = (r(46321), r(9669)),
         n = r.n(o),
         s = r(29323),
-        i = r(67294),
-        c = (r(26149), r(58114)),
+        c = r(67294),
+        i = (r(26149), r(58114)),
         l = r(7707),
         d = r(35921),
         m = r(88272),
         b = r(65902),
-        h = r(14974),
-        u = r(43720),
-        _ = r.n(u),
-        p = r(22188),
-        f = r(90666);
+        u = r(14974),
+        h = r(43720),
+        _ = r.n(h),
+        f = r(22188),
+        p = r(90666);
       r(54698);
       class g {
         constructor(e) {
@@ -125,7 +127,7 @@
             (this.m_transport = e);
         }
         BIsLoggedIn() {
-          return f.L7.logged_in;
+          return p.L7.logged_in;
         }
         SetTarget(e, t) {
           (this.m_targetID = e),
@@ -136,14 +138,14 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn())
               return { eResult: 21, strMessage: "Not logged on" };
-            let t = c.gA.Init(h.HW);
+            let t = i.gA.Init(u.HW);
             t.Body().set_target_type(this.m_eTargetType),
               t.Body().set_targetid(this.m_targetID),
               t.Body().set_reactionid(e),
               console.log(" ProtoBuf sending..."),
               console.log(t),
               console.log("Target ID is..." + t.Body().targetid());
-            let r = yield h.pQ.AddReaction(this.m_transport, t);
+            let r = yield u.pQ.AddReaction(this.m_transport, t);
             return (
               1 != r.GetEResult()
                 ? console.error(
@@ -165,9 +167,9 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return Promise.resolve(null);
             this.m_bPointsBalanceLoadedOrInFlight = !0;
-            const e = c.gA.Init(h.aO);
-            e.SetBodyFields({ steamid: f.L7.steamid });
-            let t = yield h.pQ.GetSummary(this.m_transport, e);
+            const e = i.gA.Init(u.aO);
+            e.SetBodyFields({ steamid: p.L7.steamid });
+            let t = yield u.pQ.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = _().fromString(
                   t.Body().summary().points()
@@ -187,8 +189,8 @@
         LoadAwardsConfiguration() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             this.m_bReactionConfigurationLoadedOrInFlight = !0;
-            const e = c.gA.Init(h.f_);
-            let t = yield h.pQ.GetReactionConfig(this.m_transport, e);
+            const e = i.gA.Init(u.f_);
+            let t = yield u.pQ.GetReactionConfig(this.m_transport, e);
             if (1 == t.GetEResult()) {
               let e = t.Body().toObject().reactions;
               for (const t of e)
@@ -202,10 +204,10 @@
         LoadExistingReactions() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             this.m_mapExistingReactions.clear();
-            const e = c.gA.Init(h.Yl);
+            const e = i.gA.Init(u.Yl);
             e.Body().set_target_type(this.m_eTargetType),
               e.Body().set_targetid(this.m_targetID);
-            let t = yield h.pQ.GetReactions(this.m_transport, e);
+            let t = yield u.pQ.GetReactions(this.m_transport, e);
             1 == t.GetEResult()
               ? t
                   .Body()
@@ -217,24 +219,24 @@
           });
         }
       }
-      (0, a.gn)([p.LO.ref], g.prototype, "m_lPointsAvailable", void 0),
+      (0, a.gn)([f.LO.ref], g.prototype, "m_lPointsAvailable", void 0),
         (0, a.gn)(
-          [p.LO.deep],
+          [f.LO.deep],
           g.prototype,
           "m_mapReactionConfiguration",
           void 0
         ),
-        (0, a.gn)([p.LO.deep], g.prototype, "m_mapExistingReactions", void 0);
+        (0, a.gn)([f.LO.deep], g.prototype, "m_mapExistingReactions", void 0);
       var E = r(48341),
         w = r(84351),
         T = r(95598),
         L = r(13596),
         k = r(7573),
         S = r(41311),
-        C = r(64839),
-        N = r(74767),
-        v = r(26189);
-      function y(e) {
+        N = r(64839),
+        y = r(74767),
+        C = r(26189);
+      function v(e) {
         return (0, S.Xx)(`#RewardsReaction_${e}`);
       }
       var A,
@@ -249,7 +251,7 @@
           (e[(e.ERROR = 4)] = "ERROR");
       })(R || (R = {}));
       const G = (e) =>
-        i.createElement(
+        c.createElement(
           "svg",
           Object.assign(
             {
@@ -259,14 +261,14 @@
             },
             e
           ),
-          i.createElement("path", {
+          c.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
           })
         );
-      class I extends i.PureComponent {
+      class I extends c.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -282,11 +284,11 @@
             (r =
               !this.props.bDisableAnimation &&
               (this.state.bHovered || this.props.bForceAnimated)),
-            `${f.De.STORE_CDN_URL}public/images/loyalty/reactions/${
+            `${p.De.STORE_CDN_URL}public/images/loyalty/reactions/${
               r ? "animated" : "still"
             }/${t}.png`);
           var t, r;
-          return i.createElement("img", {
+          return c.createElement("img", {
             className: this.props.className,
             src: e,
             onMouseEnter: this.handleMouseOver,
@@ -294,9 +296,9 @@
           });
         }
       }
-      (0, a.gn)([C.ak], I.prototype, "handleMouseOver", null),
-        (0, a.gn)([C.ak], I.prototype, "handleMouseOut", null);
-      let O = (A = class extends i.Component {
+      (0, a.gn)([N.ak], I.prototype, "handleMouseOver", null),
+        (0, a.gn)([N.ak], I.prototype, "handleMouseOut", null);
+      let O = (A = class extends c.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (t, r, a, o, n) => {
@@ -317,12 +319,12 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             if (A.s_LoyaltyAwardModalStore) return;
             if (e) return void (A.s_LoyaltyAwardModalStore = new g(e));
-            const t = (0, f.kQ)("loyaltystore", "application_config"),
+            const t = (0, p.kQ)("loyaltystore", "application_config"),
               r = yield (function () {
                 return (0, a.mG)(this, void 0, void 0, function* () {
                   try {
                     const e = yield n().get(
-                      `${(0, f.Kc)()}pointssummary/ajaxgetasyncconfig`,
+                      `${(0, p.Kc)()}pointssummary/ajaxgetasyncconfig`,
                       { withCredentials: !0 }
                     );
                     return 1 === e.data.success
@@ -342,7 +344,7 @@
                 });
               })(),
               o = Object.assign(Object.assign({}, t), r),
-              s = new b.J(f.De.WEBAPI_BASE_URL, o.webapi_token);
+              s = new b.J(p.De.WEBAPI_BASE_URL, o.webapi_token);
             (A.s_LoyaltyAwardModalStore = new g(s.GetServiceTransport())),
               this.setState({ bLoading: !1 });
           });
@@ -357,30 +359,30 @@
               ugcType: n,
               initialSelectedReaction: s,
             } = this.state,
-            c = A.s_LoyaltyAwardModalStore;
+            i = A.s_LoyaltyAwardModalStore;
           if (!t) return null;
           if (e)
-            return i.createElement(
+            return c.createElement(
               w.On,
               {
-                className: v.GrantAwardModal,
+                className: C.GrantAwardModal,
                 active: !0,
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
-              i.createElement(D, null),
-              i.createElement(W, null),
-              i.createElement(
+              c.createElement(F, null),
+              c.createElement(X, null),
+              c.createElement(
                 "div",
-                { className: v.InitialLoading },
-                i.createElement(
+                { className: C.InitialLoading },
+                c.createElement(
                   "div",
-                  { className: (0, k.Z)(v.LoadingContainer, v.Visible) },
-                  i.createElement(U, null)
+                  { className: (0, k.Z)(C.LoadingContainer, C.Visible) },
+                  c.createElement(U, null)
                 )
               )
             );
-          c.GetAwardConfigurations();
-          return i.createElement(F, {
+          i.GetAwardConfigurations();
+          return c.createElement(D, {
             key: o,
             targetid: o,
             active: t,
@@ -395,7 +397,7 @@
       });
       (O.defaultProps = { targetType: 1 }), (O = A = (0, a.gn)([s.Pi], O));
       const B = O;
-      let P = (M = class extends i.Component {
+      let P = (M = class extends c.Component {
         constructor(e) {
           super(e);
         }
@@ -416,7 +418,7 @@
           if (null === s)
             return console.log("Store not initialized yet."), null;
           s.GetAwardConfigurations();
-          return i.createElement(F, {
+          return c.createElement(D, {
             key: t,
             targetid: t,
             active: r,
@@ -430,7 +432,7 @@
         }
       });
       (P.s_LoyaltyAwardModalStore = null), (P = M = (0, a.gn)([s.Pi], P));
-      let F = class extends i.Component {
+      let D = class extends c.Component {
         constructor(e) {
           super(e),
             e.store.SetTarget(e.targetid, e.targetType),
@@ -447,12 +449,12 @@
               store: a,
               onDismiss: o,
             } = this.props,
-            { selectedReaction: n, ePhase: s, celebrate: c } = this.state;
+            { selectedReaction: n, ePhase: s, celebrate: i } = this.state;
           if (!e) return null;
           const d = a.GetExistingReactions(),
             b = a.GetAwardConfigurations(),
-            h = a.GetUserPointBalance(),
-            u = (function (e, t, r) {
+            u = a.GetUserPointBalance(),
+            h = (function (e, t, r) {
               let a = [];
               return (
                 e.forEach(function (e) {
@@ -472,7 +474,7 @@
               );
             })(b, t, r),
             _ = 0 === n ? null : b.get(n),
-            p = _ ? _.points_cost : 0,
+            f = _ ? _.points_cost : 0,
             g = _ ? _.points_transferred : 0;
           let T,
             L = "";
@@ -496,8 +498,8 @@
             case R.SELECTING:
               {
                 const e = 0 === n || d.get(n),
-                  t = !h || h.greaterThanOrEqual(p),
-                  r = i.createElement(
+                  t = !u || u.greaterThanOrEqual(f),
+                  r = c.createElement(
                     E.KM,
                     {
                       onClick: () => this.setState({ ePhase: R.CONFIRM }),
@@ -513,30 +515,30 @@
                       e ? "#GrantAward_SelectAward" : "#GrantAward_Next"
                     )
                   );
-                T = i.createElement(
-                  i.Fragment,
+                T = c.createElement(
+                  c.Fragment,
                   null,
-                  i.createElement(D, { description: L }),
-                  i.createElement(W, null),
-                  0 === u.length &&
-                    i.createElement(
+                  c.createElement(F, { description: L }),
+                  c.createElement(X, null),
+                  0 === h.length &&
+                    c.createElement(
                       "div",
-                      { className: v.InitialLoading },
-                      i.createElement(
+                      { className: C.InitialLoading },
+                      c.createElement(
                         "div",
-                        { className: (0, k.Z)(v.LoadingContainer, v.Visible) },
-                        i.createElement(U, null)
+                        { className: (0, k.Z)(C.LoadingContainer, C.Visible) },
+                        c.createElement(U, null)
                       )
                     ),
-                  i.createElement(
+                  c.createElement(
                     m.P8,
                     {
-                      className: v.ButtonContainer,
+                      className: C.ButtonContainer,
                       scrollDirection: "y",
                       "flow-children": "grid",
                     },
-                    u.map((e, t) =>
-                      i.createElement(X, {
+                    h.map((e, t) =>
+                      c.createElement(W, {
                         autoFocus: 0 == t,
                         key: e,
                         reaction: e,
@@ -552,28 +554,28 @@
                       })
                     )
                   ),
-                  i.createElement(W, null),
-                  i.createElement(
+                  c.createElement(X, null),
+                  c.createElement(
                     z,
                     { store: a },
                     e || t
                       ? r
                       : [
-                          i.createElement(
+                          c.createElement(
                             "div",
-                            { key: "msg", className: v.NotEnoughPoints },
+                            { key: "msg", className: C.NotEnoughPoints },
                             (0, S.Xx)(
                               "#GrantAward_CantAfford",
-                              h.negate().add(p).toNumber().toLocaleString()
+                              u.negate().add(f).toNumber().toLocaleString()
                             )
                           ),
-                          i.createElement(
+                          c.createElement(
                             l.IS,
                             {
                               key: "button",
-                              href: `${f.De.STORE_BASE_URL}points/howitworks`,
+                              href: `${p.De.STORE_BASE_URL}points/howitworks`,
                             },
-                            i.createElement(
+                            c.createElement(
                               E.zx,
                               { key: "button" },
                               (0, S.Xx)("#GrantAward_HowToGetPoints")
@@ -587,91 +589,91 @@
             case R.CONFIRM:
             case R.SUBMITTING:
             case R.DONE:
-              T = i.createElement(
-                i.Fragment,
+              T = c.createElement(
+                c.Fragment,
                 null,
-                i.createElement(D, { description: L }),
-                i.createElement(W, null),
-                i.createElement(
+                c.createElement(F, { description: L }),
+                c.createElement(X, null),
+                c.createElement(
                   "div",
                   { style: { position: "relative" } },
-                  i.createElement(
+                  c.createElement(
                     "div",
                     {
                       className: (0, k.Z)(
-                        v.ConfirmContainer,
-                        s === R.CONFIRM && v.Visible
+                        C.ConfirmContainer,
+                        s === R.CONFIRM && C.Visible
                       ),
                     },
-                    i.createElement(I, {
-                      className: v.ConfirmAwardImage,
+                    c.createElement(I, {
+                      className: C.ConfirmAwardImage,
                       reactionType: n,
                     }),
-                    i.createElement(
+                    c.createElement(
                       "div",
-                      { className: v.ConfirmTextCtn },
-                      i.createElement(
+                      { className: C.ConfirmTextCtn },
+                      c.createElement(
                         "div",
-                        { className: v.ConfirmText },
+                        { className: C.ConfirmText },
                         (0, S.kQ)(
                           "#GrantAward_Confirm",
-                          i.createElement(Z, null, p.toLocaleString()),
-                          i.createElement(
+                          c.createElement(V, null, f.toLocaleString()),
+                          c.createElement(
                             "span",
-                            { className: v.AwardName },
-                            y(n)
+                            { className: C.AwardName },
+                            v(n)
                           )
                         )
                       ),
-                      i.createElement(
+                      c.createElement(
                         "div",
-                        { className: v.ConfirmText },
+                        { className: C.ConfirmText },
                         (0, S.kQ)(
                           "#GrantAward_Confirm_Details",
-                          i.createElement(Z, null, g.toLocaleString()),
-                          i.createElement(
+                          c.createElement(V, null, g.toLocaleString()),
+                          c.createElement(
                             "span",
-                            { className: v.TimePeriod },
+                            { className: C.TimePeriod },
                             (0, S.Xx)("#GrantAward_Confirm_DetailsTimePeriod")
                           )
                         )
                       )
                     )
                   ),
-                  i.createElement(
+                  c.createElement(
                     "div",
                     {
                       className: (0, k.Z)(
-                        v.LoadingContainer,
-                        s === R.SUBMITTING && v.Visible
+                        C.LoadingContainer,
+                        s === R.SUBMITTING && C.Visible
                       ),
                     },
-                    i.createElement(U, null)
+                    c.createElement(U, null)
                   ),
-                  i.createElement(
+                  c.createElement(
                     "div",
                     {
                       className: (0, k.Z)(
-                        v.SuccessContainer,
-                        s === R.DONE && v.Visible
+                        C.SuccessContainer,
+                        s === R.DONE && C.Visible
                       ),
                     },
-                    i.createElement(I, {
-                      className: v.ConfirmAwardImage,
+                    c.createElement(I, {
+                      className: C.ConfirmAwardImage,
                       reactionType: n,
                     }),
-                    i.createElement(
+                    c.createElement(
                       "div",
-                      { className: v.SuccessText },
+                      { className: C.SuccessText },
                       (0, S.Xx)("#GrantAward_Success")
                     )
                   )
                 ),
-                i.createElement(W, null),
-                i.createElement(
+                c.createElement(X, null),
+                c.createElement(
                   z,
                   { store: a },
-                  i.createElement(
+                  c.createElement(
                     E.zx,
                     {
                       onClick: () => this.setState({ ePhase: R.SELECTING }),
@@ -679,7 +681,7 @@
                     },
                     (0, S.Xx)("#GrantAward_Back")
                   ),
-                  i.createElement(
+                  c.createElement(
                     E.KM,
                     {
                       onClick: this.GrantAward,
@@ -718,25 +720,25 @@
                 default:
                   e = (0, S.Xx)("#GrantAwardError_Fail");
               }
-              T = i.createElement(
-                i.Fragment,
+              T = c.createElement(
+                c.Fragment,
                 null,
-                i.createElement(D, { description: L }),
-                i.createElement(W, null),
-                i.createElement(
+                c.createElement(F, { description: L }),
+                c.createElement(X, null),
+                c.createElement(
                   "div",
                   { style: { position: "relative" } },
-                  i.createElement(
+                  c.createElement(
                     "div",
-                    { className: v.ErrorContainer },
-                    i.createElement("div", { className: v.ErrorText }, e)
+                    { className: C.ErrorContainer },
+                    c.createElement("div", { className: C.ErrorText }, e)
                   )
                 ),
-                i.createElement(W, null),
-                i.createElement(
+                c.createElement(X, null),
+                c.createElement(
                   z,
                   { store: a },
-                  i.createElement(
+                  c.createElement(
                     E.zx,
                     { onClick: () => this.setState({ ePhase: R.SELECTING }) },
                     (0, S.Xx)("#GrantAward_Back")
@@ -745,13 +747,13 @@
               );
             }
           }
-          return i.createElement(
+          return c.createElement(
             w.On,
-            { className: v.GrantAwardModal, active: e, onDismiss: o },
-            i.createElement(
+            { className: C.GrantAwardModal, active: e, onDismiss: o },
+            c.createElement(
               w.Pv,
               { navID: "GrantAward", closeModal: o },
-              c && i.createElement(N.DI, { eType: N.sS.Default }),
+              i && c.createElement(y.DI, { eType: y.sS.Default }),
               T
             )
           );
@@ -773,63 +775,63 @@
             }));
         }
       };
-      (0, a.gn)([C.ak], F.prototype, "GrantAward", null),
-        (F = (0, a.gn)([s.Pi], F));
-      const D = ({ description: e }) =>
-          i.createElement(
+      (0, a.gn)([N.ak], D.prototype, "GrantAward", null),
+        (D = (0, a.gn)([s.Pi], D));
+      const F = ({ description: e }) =>
+          c.createElement(
             "div",
-            { className: v.Header },
-            i.createElement(
+            { className: C.Header },
+            c.createElement(
               "div",
-              { className: v.Title },
+              { className: C.Title },
               (0, S.Xx)("#GrantAwardTitle")
             ),
-            i.createElement("div", { className: v.Description }, e)
+            c.createElement("div", { className: C.Description }, e)
           ),
         z = (0, s.Pi)(({ store: e, children: t }) => {
           const r = e.GetUserPointBalance(),
             a = r && r.toNumber().toLocaleString();
-          return i.createElement(
+          return c.createElement(
             "div",
-            { className: v.Footer },
-            i.createElement(
+            { className: C.Footer },
+            c.createElement(
               "div",
-              { className: v.Left },
-              i.createElement(T.doA, { className: v.BalanceIcon }),
-              i.createElement(
+              { className: C.Left },
+              c.createElement(T.doA, { className: C.BalanceIcon }),
+              c.createElement(
                 "div",
-                { className: v.BalanceDetails },
-                i.createElement(
+                { className: C.BalanceDetails },
+                c.createElement(
                   "div",
-                  { className: v.BalanceLabel },
+                  { className: C.BalanceLabel },
                   (0, S.Xx)("#YourBalance")
                 ),
-                i.createElement("div", { className: v.BalanceAmount }, a)
+                c.createElement("div", { className: C.BalanceAmount }, a)
               )
             ),
-            i.createElement(
+            c.createElement(
               "div",
-              { className: v.Right },
-              i.createElement(
+              { className: C.Right },
+              c.createElement(
                 d.s,
-                { className: v.Actions, "flow-children": "row" },
-                i.Children.map(t, (e) =>
-                  i.createElement("div", { className: v.Action }, e)
+                { className: C.Actions, "flow-children": "row" },
+                c.Children.map(t, (e) =>
+                  c.createElement("div", { className: C.Action }, e)
                 )
               ),
-              i.createElement(
+              c.createElement(
                 "a",
                 {
-                  className: v.FooterLink,
-                  href: `${f.De.STORE_BASE_URL}points/howitworks`,
+                  className: C.FooterLink,
+                  href: `${p.De.STORE_BASE_URL}points/howitworks`,
                 },
                 (0, S.Xx)("#GrantAward_PointsLink")
               )
             )
           );
         }),
-        W = () => i.createElement("div", { className: v.Divider });
-      class X extends i.PureComponent {
+        X = () => c.createElement("div", { className: C.Divider });
+      class W extends c.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -848,115 +850,126 @@
               cost: n,
               autoFocus: s,
             } = e,
-            c = (0, a._T)(e, [
+            i = (0, a._T)(e, [
               "reaction",
               "selected",
               "alreadyAwarded",
               "cost",
               "autoFocus",
             ]);
-          return i.createElement(
+          return c.createElement(
             x.k,
             Object.assign(
               {
                 type: "button",
                 onMouseEnter: this.handleMouseOver,
                 onMouseLeave: this.handleMouseOut,
-                className: (0, k.Z)(v.Button, r && v.Selected, o && v.Disabled),
+                className: (0, k.Z)(C.Button, r && C.Selected, o && C.Disabled),
                 autoFocus: s,
               },
-              c
+              i
             ),
-            i.createElement(
+            c.createElement(
               "div",
-              { className: v.IconCtn },
-              i.createElement(I, {
+              { className: C.IconCtn },
+              c.createElement(I, {
                 reactionType: t,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: o,
               })
             ),
-            i.createElement(
+            c.createElement(
               "div",
-              { className: v.LabelCtn },
-              i.createElement("div", { className: v.Label }, y(t)),
-              i.createElement(Z, { className: v.Points }, n.toLocaleString())
+              { className: C.LabelCtn },
+              c.createElement("div", { className: C.Label }, v(t)),
+              c.createElement(V, { className: C.Points }, n.toLocaleString())
             ),
-            o && i.createElement(G, { className: v.IconCheckMark })
+            o && c.createElement(G, { className: C.IconCheckMark })
           );
         }
       }
-      (0, a.gn)([C.ak], X.prototype, "handleMouseOver", null),
-        (0, a.gn)([C.ak], X.prototype, "handleMouseOut", null);
+      (0, a.gn)([N.ak], W.prototype, "handleMouseOver", null),
+        (0, a.gn)([N.ak], W.prototype, "handleMouseOut", null);
       const U = () =>
-          i.createElement(L.V, { size: "large", className: v.Loading }),
-        Z = (e) => {
+          c.createElement(L.V, { size: "large", className: C.Loading }),
+        V = (e) => {
           const { children: t, className: r } = e,
             o = (0, a._T)(e, ["children", "className"]);
-          return i.createElement(
+          return c.createElement(
             "span",
-            Object.assign({}, o, { className: (0, k.Z)(r, v.PointsAmount) }),
-            i.createElement(T.doA, { className: v.PointsAmountIcon }),
+            Object.assign({}, o, { className: (0, k.Z)(r, C.PointsAmount) }),
+            c.createElement(T.doA, { className: C.PointsAmountIcon }),
             t
           );
         };
     },
     13596: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => s });
+      r.d(t, { V: () => c });
       var a = r(67294),
-        o = r(50732),
-        n = r.n(o);
-      class s extends a.PureComponent {
-        constructor(e) {
-          super(e);
-        }
-        AddSizeClass(e) {
-          "small" == this.props.size
-            ? e.push(n().throbber_small)
-            : "medium" == this.props.size
-            ? e.push(n().throbber_medium)
-            : "xlarge" == this.props.size
-            ? e.push(n().throbber_xlarge)
-            : "xxlarge" == this.props.size
-            ? e.push(n().throbber_xxlarge)
-            : e.push(n().throbber_large);
-        }
-        render() {
-          let e = [n().LoadingWrapper, "SteamLogoThrobber"];
-          this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(n().noString),
-            this.props.className && e.push(this.props.className),
-            this.props.static && e.push(n().Static);
-          let t = a.createElement(
-            "div",
-            { className: e.join(" ") },
-            a.createElement(
-              "div",
-              { className: n().Throbber },
-              a.createElement(i, { className: n().base }),
-              a.createElement(i, { className: n().blur })
-            )
-          );
-          return a.createElement(
+        o = r(7573),
+        n = r(50732),
+        s = r.n(n);
+      const c = a.memo(function (e) {
+        const {
+          className: t,
+          size: r,
+          string: n,
+          position: c,
+          static: d,
+          msDelayAppear: m,
+        } = e;
+        let b = [s().LoadingWrapper, "SteamLogoThrobber", i(r)];
+        const [u, h] = a.useState(!m);
+        return (
+          (0, a.useEffect)(() => {
+            if (u) return;
+            const e = setTimeout(() => h(!0), m);
+            return () => clearTimeout(e);
+          }, [m, u]),
+          void 0 === n && b.push(s().noString),
+          t && b.push(t),
+          d && b.push(s().Static),
+          a.createElement(
             "div",
             {
-              className:
-                "center" == this.props.position
-                  ? n().throbber_center_wrapper
-                  : "",
+              className: (0, o.Z)(
+                "center" == c && s().throbber_center_wrapper,
+                m && s().ThrobberDelayAppear,
+                u && s().Visible
+              ),
             },
-            t,
-            Boolean(this.props.string) &&
+            u &&
               a.createElement(
                 "div",
-                { className: n().ThrobberText },
-                this.props.string
-              )
-          );
+                { className: b.join(" ") },
+                a.createElement(
+                  "div",
+                  { className: s().Throbber },
+                  a.createElement(l, { className: s().base }),
+                  a.createElement(l, { className: s().blur })
+                )
+              ),
+            Boolean(n) &&
+              a.createElement("div", { className: s().ThrobberText }, n)
+          )
+        );
+      });
+      function i(e) {
+        switch (e) {
+          case "small":
+            return s().throbber_small;
+          case "medium":
+            return s().throbber_medium;
+          case "xlarge":
+            return s().throbber_xlarge;
+          case "xxlarge":
+            return s().throbber_xxlarge;
+          default:
+            return s().throbber_large;
         }
       }
-      function i(e) {
+      function l(e) {
         let t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -975,9 +988,9 @@
             },
             a.createElement(
               "g",
-              { className: n().partCircle },
+              { className: s().partCircle },
               a.createElement("path", {
-                className: n().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -985,7 +998,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               a.createElement("path", {
-                className: n().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -993,7 +1006,7 @@
                 d: "M201.432,101.166",
               }),
               a.createElement("path", {
-                className: n().roundOuter,
+                className: s().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -1003,9 +1016,9 @@
             ),
             a.createElement(
               "g",
-              { className: n().mainOutline },
+              { className: s().mainOutline },
               a.createElement("path", {
-                className: n().roundFill,
+                className: s().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -1013,7 +1026,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundOuterOutline,
+                className: s().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1022,7 +1035,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber01,
+                className: s().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1031,7 +1044,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber02,
+                className: s().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1040,7 +1053,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber03,
+                className: s().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1049,7 +1062,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber04,
+                className: s().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1058,7 +1071,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber05,
+                className: s().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1067,7 +1080,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber06,
+                className: s().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1076,7 +1089,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber07,
+                className: s().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1085,7 +1098,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber08,
+                className: s().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1094,7 +1107,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber09,
+                className: s().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1103,7 +1116,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber10,
+                className: s().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1112,7 +1125,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber11,
+                className: s().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1121,7 +1134,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber12,
+                className: s().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1130,7 +1143,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber13,
+                className: s().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1139,7 +1152,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber14,
+                className: s().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1148,7 +1161,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               a.createElement("path", {
-                className: n().roundThrobber15,
+                className: s().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -1159,7 +1172,7 @@
             ),
             a.createElement(
               "g",
-              { className: n().bottomCircle },
+              { className: s().bottomCircle },
               a.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -1167,7 +1180,7 @@
             ),
             a.createElement(
               "g",
-              { className: n().topCircle },
+              { className: s().topCircle },
               a.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",

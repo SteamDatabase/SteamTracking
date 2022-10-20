@@ -30,6 +30,7 @@
 
 .recommended_creators_ctn .store_capsule .discount_block {
 	min-height: 18px;
+    justify-content: flex-end;
 }
 
 .recommended_creators_ctn .carousel_container .arrow {

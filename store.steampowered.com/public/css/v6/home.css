@@ -445,10 +445,6 @@ a.home_block_footer_btn:hover {
 	white-space: nowrap;
 }
 
-.special_discount .discount_block_inline {
-	display: inline-block;
-}
-
 .home_specials_grid .special.special_img_ctn .ds_flag {
 	top: 34px;
 	left: 16px;
@@ -4756,6 +4752,10 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	height: 135px;
 }
 
+.more_apps_by_curators_capsule .discount_block {
+    justify-content: flex-end;
+}
+
 .more_apps_by_curators_capsule .arrow {
 	top: 20%
 }
@@ -4811,23 +4811,6 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 }
 .daily_deal.store_capsule .bundle_base_discount {
     display: none;
-}
-
-.discount_block > .discount_prices {
-	background-color: rgba(0,0,0,0.6);
-}
-
-
-.discount_block .discount_final_price {
-	color: #acdbf5;
-}
-
-.discount_block_inline .discount_prices .discount_final_price {
-    font-size: 13px;
-}
-
-.discount_block .discount_original_price {
-	color: #7193a6;
 }
 
 .main_cluster_content {
