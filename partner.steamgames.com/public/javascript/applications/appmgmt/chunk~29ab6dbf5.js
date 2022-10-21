@@ -77,6 +77,7 @@
         UnknownValue: "gridcomponents_UnknownValue_3ovtf",
         PackageName: "gridcomponents_PackageName_t8fSj",
         PackageType: "gridcomponents_PackageType_3LZvj",
+        LastRow: "gridcomponents_LastRow_18dUc",
         AppCount: "gridcomponents_AppCount_2J3kN",
         PackageID: "gridcomponents_PackageID_1E3TV",
       };
@@ -13919,7 +13920,8 @@
       function h(e) {
         const t = e.getCell("packageType"),
           i = t && "function" == typeof t.getValue && t.getValue();
-        i && e.getElement().classList.add(i);
+        i && e.getElement().classList.add(i),
+          e.getNextRow() || e.getElement().classList.add(l().LastRow);
       }
       function b(e) {
         var t;

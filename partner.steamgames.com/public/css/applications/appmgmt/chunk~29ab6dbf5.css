@@ -550,6 +550,11 @@
   .tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #a465a4;
 }
+.PendingVisible
+  .tabulator.tabulator
+  .tabulator-row.tabulator-row.gridcomponents_LastRow_18dUc {
+  margin-bottom: 74px;
+}
 .tabulator.tabulator .tabulator-cell.tabulator-cell {
   border: none;
   height: 100% !important;

@@ -6,6 +6,7 @@
   padding: 40px 0px 0px 0px;
   box-sizing: border-box;
   position: relative;
+  flex-grow: 1;
 }
 .pricingdashboard_DashTitle_3GHz1 {
   font-size: 32px;
@@ -61,10 +62,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 250px);
+  flex-grow: 1;
 }
-.pricinggrid_PricingGridCtn_2j-z9.pricinggrid_PendingVisible_vwVxp {
-  max-height: calc(100vh - 303px);
+.pricinggrid_PricingGridCtn_2j-z9 .pricinggrid_PricingGridWrapper_185dc {
+  flex-grow: 1;
+  position: relative;
 }
 .pricinggrid_PricingGridCtn_2j-z9 .pricinggrid_PricingGrid_fKA16 {
   background: #303238;
@@ -72,8 +74,12 @@
   color: #fff;
   font-size: 13px;
   flex-shrink: 1;
-  min-height: 200px;
   display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .pricinggrid_PricingGridCtn_2j-z9
   .pricinggrid_PricingGrid_fKA16
@@ -489,29 +495,12 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   fill: #fff;
   cursor: pointer;
 }
-.saveprices_ToolbarCtn_3lAEz {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 16px;
-  background-color: #9297a5;
-  transform: translateY(94px);
-  transition: transform 0.3s ease-in;
-}
-.saveprices_ToolbarCtn_3lAEz.saveprices_Visible_CLKT9 {
-  transform: translateY(0);
-}
-.saveprices_ToolbarPlaceHolder_OUjJM {
-  height: 0px;
-}
-.saveprices_ToolbarPlaceHolder_OUjJM.saveprices_Visible_CLKT9 {
-  height: 70px;
-}
 .saveprices_ToolbarInfo_1bPMN {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
   padding: 8px 24px;
   max-width: 800px;
-  margin: auto;
   background-color: #303238;
   border: 1px dashed;
   box-shadow: 0 0 10px #000;
@@ -520,6 +509,11 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+  transform: translate(-50%, 120px);
+  transition: transform 0.3s ease-in;
+}
+.saveprices_ToolbarInfo_1bPMN.saveprices_Visible_CLKT9 {
+  transform: translate(-50%, 0);
 }
 .saveprices_ChangeCount_1fN8w {
   color: #cfbf61;
