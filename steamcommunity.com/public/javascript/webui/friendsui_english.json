@@ -308,6 +308,7 @@
     "Chat_ChatRoomGroup_Requesting": "Requesting group chat information...",
     "Chat_ChatRoomGroup_Options": "Options",
     "Chat_ChatRoomGroup_StartVoiceChat": "Create Voice Channel",
+    "Chat_ChatRoomGroup_ViewVoiceChats": "View Voice Channels",
     "Chat_ChatRoomGroup_JoinVoiceChat": "Join Voice Channel",
     "Chat_ChatRoomGroup_EndVoiceChat": "Leave Voice Channel",
     "Chat_ChatRoomListO_OpenGroupExpand": "More voice channel information",
