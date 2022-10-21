@@ -26,5 +26,12 @@ gameoverlay.styles
 			font-style=uppercase
 			textcolor="80 154 191 255"
 		}
+
+		"OverlayWebPopup"
+		{
+			bgcolor=none
+			render_bg {}
+			render {}
+		}
 	}
 }

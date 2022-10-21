@@ -26,6 +26,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_HardwareSurvey = 21;
 	k_EClientNotificationType_LowDiskSpace = 22;
 	k_EClientNotificationType_BatteryTemperature = 23;
+	k_EClientNotificationType_DockUnsupportedFirmware = 24;
 }
 
 enum ESystemUpdateNotificationType {
@@ -98,6 +99,7 @@ message CClientNotificationFriendMessage {
 	optional string body = 4;
 	optional string icon = 5;
 	optional uint32 notificationid = 6;
+	optional string response_steamurl = 7;
 }
 
 message CClientNotificationGroupChatMessage {
@@ -157,4 +159,7 @@ message CClientNotificationLowDiskSpace {
 message CClientNotificationBatteryTemperature {
 	optional uint32 temperature = 1;
 	optional string notification_type = 2;
+}
+
+message CClientNotificationDockUnsupportedFirmware {
 }

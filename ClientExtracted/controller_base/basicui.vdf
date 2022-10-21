@@ -2621,7 +2621,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press UP_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_UP, #Action_Up"
 						}
 						"settings"
 						{
@@ -2638,7 +2638,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press DOWN_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_DOWN, #Action_Down"
 						}
 						"settings"
 						{
@@ -2655,7 +2655,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press RIGHT_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_RIGHT, #Action_Right"
 						}
 						"settings"
 						{
@@ -2672,7 +2672,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press LEFT_ARROW"
+							"binding"		"game_action Keyboard LEFTSTICK_LEFT, #Action_Left"
 						}
 						"settings"
 						{

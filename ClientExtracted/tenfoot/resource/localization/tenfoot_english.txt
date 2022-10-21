@@ -3674,7 +3674,6 @@
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyGuide"	"Guide Button"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyY"	"Y Button"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone"	"Disabled"
-	"Settings_RemoteClients_EnableTouchController"	"Enable Touch Controls"
 	"Settings_RemoteClients_StreamingSupport"	"View support info"
 
 	"Settings_RemoteClients_Connected" "Computer connected"

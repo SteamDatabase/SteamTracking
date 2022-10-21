@@ -123,7 +123,8 @@
 "Steam_ForgottenPassword_EmailCode" "Κωδικός email"
 "Steam_ForgottenPassword_EmailCode_Incorrect" "Ο κωδικός email που εισαγάγατε ήταν λανθασμένος."
 
-"Steam_Login_Title"		"Είσοδος στο Steam"
+"Steam_Login_Title"		"Σύνδεση στο Steam"
+"Steam_RefreshLogin_Title"		"Ανανέωση σύνδεσης στο Steam"
 "Steam_Login_CreateNewAccount"	"ΔΗΜΙΟΥΡΓΙΑ ΝΕΟΥ ΛΟΓΑΡΙΑΣΜΟΥ..."
 "Steam_Login_RetrievePassword"	"ΔΕΝ ΜΠΟΡΩ ΝΑ ΣΥΝΔΕΘΩ…"
 "Steam_Login_NoAccount"		"Δεν έχετε λογαριασμό Steam;"
@@ -189,7 +190,6 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Εκκίνηση"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"ΕΚΚΙΝΗΣΗ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Εκκίνηση παιχνιδιού"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"Εκκίνηση παιχνιδιού"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Ενημέρωση αργότερα"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Εκκίνηση demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ΕΚΤΕΛΕΣΗ ΕΡΓΑΛΕΙΟΥ"
@@ -211,7 +211,6 @@
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Εκκίνηση εφαρμογής μόλις είναι έτοιμη"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Εκκίνηση παιχνιδιού μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Εκκίνηση παιχνιδιού μόλις είναι έτοιμο"
-"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"Εκκίνηση παιχνιδιού μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Εκκίνηση demo μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Εκτέλεση εργαλείου μόλις είναι έτοιμο"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Αναπαραγωγή soundtrack μόλις είναι έτοιμο"
@@ -777,7 +776,7 @@
 "SteamUI_Russian"		"Ρωσικά"
 "SteamUI_Thai"			"Ταϊλανδικά"
 "SteamUI_Japanese"		"Ιαπωνικά"
-"SteamUI_Portuguese"	"Πορτογαλικά"
+"SteamUI_Portuguese"	"Πορτογαλικά – Πορτογαλία"
 "SteamUI_Brazilian"	 	"Πορτογαλικά-Βραζιλία"
 "SteamUI_Polish"		"Πολωνικά"
 "SteamUI_Danish"		"Δανικά"
@@ -806,7 +805,7 @@
 "SteamUI_Selection_Russian"		"Русский (Ρώσικα)"
 "SteamUI_Selection_Thai"			"ไทย (Ταϊλανδικά)"
 "SteamUI_Selection_Japanese"		"日本語 (Ιαπωνικά)"
-"SteamUI_Selection_Portuguese"		"Português (Πορτογαλικά)"
+"SteamUI_Selection_Portuguese"		"Português (Πορτογαλικά – Πορτογαλία)"
 "SteamUI_Selection_Brazilian"	 "Português-Brasil (Πορτογαλικά-Βραζιλία)"
 "SteamUI_Selection_Polish"		"Polski (Πολωνικά)"
 "SteamUI_Selection_Danish"		"Dansk (Δανικά)"
@@ -2122,7 +2121,6 @@
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Όλα τα αρχεία για αυτή την εφαρμογή θα ληφθούν τώρα μέσω του Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Όλα τα αρχεία για αυτό το παιχνίδι θα ληφθούν τώρα μέσω του Steam."
-"Steam_Install_WillDownloadAllFiles$appType=beta"	"Όλα τα αρχεία για αυτό το παιχνίδι θα ληφθούν τώρα μέσω του Steam."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"Όλα τα αρχεία για αυτό το demo θα ληφθούν τώρα μέσω του Steam."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Όλα τα αρχεία για αυτά τα πολυμέσα θα ληφθούν τώρα μέσω Steam."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Όλα τα αρχεία για αυτό το soundtrack θα ληφθούν τώρα μέσω του Steam."
@@ -2131,7 +2129,6 @@
 "Steam_Install_StartCacheLoading$appType=application"		"Δημιουργία τοπικών αρχείων εφαρμογής..."
 "Steam_Install_StartCacheLoading$appType=game"		"Δημιουργία τοπικών αρχείων παιχνιδιού..."
 "Steam_Install_StartCacheLoading$appType=demo"		"Δημιουργία τοπικών αρχείων demo..."
-"Steam_Install_StartCacheLoading$appType=beta"		"Δημιουργία τοπικών αρχείων παιχνιδιού…"
 "Steam_Install_StartCacheLoading$appType=media"		"Δημιουργία τοπικών αρχείων πολυμέσου..."
 "Steam_Install_StartCacheLoading$appType=music"		"Δημιουργία τοπικών αρχείων..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Δημιουργία τοπικών αρχείων εργαλείου..."
@@ -2381,7 +2378,6 @@
 "Steam_status_decrypting"			"Αποκρυπτογράφηση: "
 "Steam_status_validating"			"Επικύρωση:"
 "Steam_status_verifying"			"Επαλήθευση: "
-"Steam_status_finalizing"			"Οριστικοποίηση…"
 
 "steam_status_launching"				"Εκκίνηση"
 "steam_status_launching_progress"		"Εκκίνηση:"
@@ -3112,10 +3108,6 @@
 "SteamUI_InstallScript_Failed_Text" "Η εγκατάσταση του παιχνιδιού απέτυχε να εγκαταστήσει στοιχεία συστήματος. Όταν τρέξετε αυτό το παιχνίδι για πρώτη φορά, είναι απαραίτητο να είστε συνδεδεμένος στα Windows ως διαχειριστής.
 Αν συνεχίσετε, μπορεί να αντιμετωπίσετε προβλήματα κατά την εκτέλεση του παιχνιδιού."
 "SteamUI_InstallScript_Continue" "Συνέχεια πάραυτα"
-
-"SteamUI_3rdPartyRemapper_Title"		"Εντοπίστηκε διαμορφωτής χειριστηρίου"
-"SteamUI_3rdPartyRemapper_Description"	"Φαίνεται ότι χρησιμοποιείτε ένα εργαλείο διαμόρφωσης για το χειριστήριο PS4 σας. Αυτό το παιχνίδι χρησιμοποιεί το Steam Input και δεν απαιτεί κάποιο λογισμικό διαμόρφωσης. Μπορεί να υπάρξει διένεξη των δύο αν δεν απενεργοποιηθεί ο διαμορφωτής."
-
 
 "Steam_CPUSSERequired_Title"	"Steam - εντοπίστηκε μη υποστηριζόμενη CPU"
 "Steam_CPUSSERequired_Info"	"To %game% απαιτεί μια CPU που να υποστηρίζει το σύνολο εντολών SSE.

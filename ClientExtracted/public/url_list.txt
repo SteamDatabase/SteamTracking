@@ -333,6 +333,18 @@ HelpWithLogin
 	Method		"internal"
 }
 
+HelpWithLoginInfo
+{
+	url			"%help%wizard/HelpWithLoginInfo?lost=8&issueid=402"
+	Method		"internal"
+}
+
+HelpWithSteamGuardCode
+{
+	url			"%help%wizard/HelpWithSteamGuardCode?redir=clientlogin"
+	Method		"internal"
+}
+
 HelpVacBans
 {
 	url			"%help%wizard/VacBans"
@@ -567,6 +579,18 @@ StoreWebMicroTxnPage
 StoreJoinPage
 {
 	url			"%store%/join/?l=%language%"
+	method		"internal"
+}
+
+StoreMarketingMessages
+{
+	url			"%store%/marketingmessages/list/?client_package_version=%p1%&os_type=%p2%"
+	method		"internal"
+}
+
+StoreMarketingMessagesAll
+{
+	url			"%store%/marketingmessages/list/?client_package_version=%p1%&os_type=%p2%&include_seen=1"
 	method		"internal"
 }
 
@@ -1289,6 +1313,12 @@ StoreGreatOnDeck
 HardwareSurvey
 {
 	url			"%store%/hwsurvey"
+	method		"internal"
+	filter		"store"
+}
+Mobile
+{
+	url			"%store%/mobile"
 	method		"internal"
 	filter		"store"
 }

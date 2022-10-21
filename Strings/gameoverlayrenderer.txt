@@ -1153,8 +1153,9 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Invalid Mouse Restore Mode: %d
 Enabling overlay
 Warning: Could not enable cursor visibility: %u
-STEAM_OVERLAY_LOGGING
 STEAM_OVERLAY_FRAME_TIME_LOGGING
+STEAM_OVERLAY_LOGGING_FLUSH
+STEAM_OVERLAY_LOGGING
 /tmp/gameoverlayrenderer.%d.log
 ####### Log failed to open %s ##############
 logfile opened early, s_Pid == 0 (Init has not been called yet)
@@ -1479,6 +1480,7 @@ A_MTLCreateSystemDefaultDevice
 @_dup
 @_fclose
 @_fcntl$UNIX2003
+@_fflush
 @_fopen$UNIX2003
 @_fprintf
 @_fputc
@@ -1603,7 +1605,7 @@ L d\8
 xFRh
 '35(I&R5&.%%
 "*."
-d40	<
+d60	<
 T0W[8 
 _BOverlayNeedsPresent
 _IsOverlayEnabled
@@ -1732,6 +1734,7 @@ _dlsym
 _dup
 _fclose
 _fcntl$UNIX2003
+_fflush
 _fopen$UNIX2003
 _fprintf
 _fputc
@@ -1847,41 +1850,41 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-bh	O
-hGp/
-f\o('v\3
-[p^4;
-!92XI
-H\-FT
-n6 X
-WtW@j
-zwb;c8
-.e%(
-aR}Z1
-@ZT<
-vC"I
+!o0'
+bk[lk
+MEq=
+<BIO
+_7+_,
+3W)z
+9&ybJ
+0:xQ
+i8P]9
+)e6Fy
+Z}%&6
+FbU}$wV
+jPeQ
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-;B!`
-:IghK=
-e&A%
-NJF=
-^>fpW"s
-ZQaH
-ut):
-@n[D1
-J'2io1"
-{ os,"P
-UG{]
-|U}y
-X-&U
-&~*\
-/,#`"
-.}Xs	
-@2HB
-!CFd
+3NI({
+RTj*
+	_&/
+W}Yu
+w4Hu_)
+~bOJ8Y}
+lD6/D{
+Mkv-
+qz4}X
+zv/o
+yw! z
+$%;]`b
+$Tki
+k:<6m
+M<S3
+<~*m$"R$
+UhaT
+Xf*?
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1937,10 +1940,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005545Z0/
-_acQ4
-@LU0-
-l(QM+0
+221021204708Z0/
+!20[
+c0'A0whS
+b`F0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1948,37 +1951,43 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		6uYZ/+1SgKn5wmfE6UKveMFATFU=
+		YzAnQTB3aFOh5Z0jexOyNfViYEY=
 		</data>
 		<data>
-		cAB2XZgBI6/ch8HshCiXS0usUy8=
+		xKJiSfwtl8QkkCuyn2vCEy7WQKU=
 		</data>
 	</array>
 </dict>
 </plist>
-D^71
-{TWz%
-)W,r}
-20221019005547Z0
+ee$0n
+yRQJ
+qlUDQJ
+:cKK
+JS,F
+D@J^+
+20221021204726Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-220927162002Z
-221108162001Z0B1
-Timestamp Signer NWK21
+220927163003Z
+221108163002Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-.10V(\
-uC](
-r.Vk
+!mCy
+9#4~,
+%VXt
+Li+b
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-Q/`$
-S^"pdN
-fVHc
-c[.o
+dv4H
+}KYM
+]k?<
+!_6[
+ptr+
+yLr)
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2017,14 +2026,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005547Z0#
-pi!R
-j};Z
-SIsA
-)9bv
-KD.D2
-?NLy
-FjVD
+221021204726Z0#
+_7/z\
+mW	:
 __TEXT
 __text
 __TEXT
@@ -2086,6 +2090,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+RAu$
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -2317,7 +2322,6 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y-u|
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
@@ -2367,7 +2371,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-(%M_
+(%m_
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2575,12 +2579,12 @@ AVS1
 AWAVSH
 H92u
 ([A^A_]
+H9=:c
 AWAVSPI
 [A^A_]
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-Wj
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2886,7 +2890,6 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D95W
 UAWAVAUATSH
 D$`H
 D$8H
@@ -3361,8 +3364,9 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Invalid Mouse Restore Mode: %d
 Enabling overlay
 Warning: Could not enable cursor visibility: %u
-STEAM_OVERLAY_LOGGING
 STEAM_OVERLAY_FRAME_TIME_LOGGING
+STEAM_OVERLAY_LOGGING_FLUSH
+STEAM_OVERLAY_LOGGING
 /tmp/gameoverlayrenderer.%d.log
 ####### Log failed to open %s ##############
 logfile opened early, s_Pid == 0 (Init has not been called yet)
@@ -3957,6 +3961,7 @@ A_dispatch_once_f
 @_dup
 @_fclose
 @_fcntl
+@_fflush
 @_fopen
 @_fprintf
 @_fputc
@@ -4217,6 +4222,7 @@ _dlsym
 _dup
 _fclose
 _fcntl
+_fflush
 _fopen
 _fprintf
 _fputc
@@ -4340,32 +4346,46 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-dkq%
-qYll
-xn"yGV"b
-P%V(	b
-2Ho$
-!Cwm
-0yVf
+o5TW
+08Zh
+"2)q
+C/:k$f
+wFX^c
+PF2wC
+I@($
+)Ud0
+>cW>%
+j+*C
+x0UO
+^s92v
+jO}zlP!
+9hP=
+"\;K
+,O)]&W
+>e9p
+@) Wy
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-AP<;?
-g4Dr
-4iS:
-CPE8
-Y+ge
-#~=h
-E+W[
-/`P))
-<>A68
-5f4|
-qoS(
-LA@(
-74;n4
-h$QT
-I=R9
+udL)nJ
+fHp=
+&q7MxG
+%	{^
+8cdk
+$c'&
+67'JX7
+#z#P
+vP ?d
+\A60
+.J}^
+RBYV
+et_s:
+fQ9L
+,IEw
+jXQ8hW
+3h G
+?|;`
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4421,7 +4441,11 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005545Z0/
+221021204708Z0/
+ l&3
+r~0[
+W#-b
+bi2b0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4429,16 +4453,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		t0d5SagFlYd6+twP4RwokGkPDWM=
+		8ttXIy1i3V/tgaEEZ7Ct/2JpMmI=
 		</data>
 		<data>
-		9JssvL/JC3g2cvFrQKJ2UCH/XBM=
+		8itNqSp1T94+2o7cHsc/wwf43Uk=
 		</data>
 	</array>
 </dict>
 </plist>
- l'Y
-20221019005547Z0
+^$k7
+E#\Z8
+_J	'YV
+20221021204726Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4499,9 +4525,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005547Z0#
-?6=]jg
-7(t^
+221021204726Z0#
+y1F>
+(Fl`o
 __TEXT
 __text
 __TEXT
@@ -4562,7 +4588,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-b>2s
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4592,7 +4617,9 @@ ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
+@9j%
 h&B)
+19`b
 56P@
 @9h*
 h&E9
@@ -4607,8 +4634,9 @@ $E9H
 &E9h
 h&A)
 (	29
+45:	0
 jh8)	
-29:3	
+29:;	
 h"@9
 Th*@
 Th.@
@@ -4619,15 +4647,19 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9
-[)5A
+C9a"C9b&C9c*C9 A
+[)GA
+tR	0
+vR	0
 aBA9
-E)}@
 h&D)
+++	P
+,*	P
 =h"@9
 h"@9
 yi:@
-4`o	p
+4@r	
+`q	p
 bD9h
 Th#@
 hbN9
@@ -4659,7 +4691,6 @@ Z-x-
 Z-x+
 Z+x+
 Z+x)
-T(#D
 hbD9
 T	%A
 X`2A
@@ -4689,6 +4720,7 @@ a2G9
 XavB
 X`nB
 X`jB
+		X 
 	Am 8`
 9hRC9
 #V)h
@@ -4741,9 +4773,8 @@ hfA9
 Th&@
 Th&@
 Rh:@
-TV7	
- 4	X
-A2	XA
+T6:	
+!5	XA
 T`*@
 4a*@
 4hrA9
@@ -4751,16 +4782,16 @@ T`*@
 RivA9
 Th&@
 T*+A
-Qf9h
+1f9h
 	aE9?
-	Qf9
+	1f9
 Tl=A
 hBD9H
 hrD9h
 hrD9
 hBD9
 hBD9h
-iJ9(
+IJ9(
 !IzH
 +ih8J	
 	1G9
@@ -5223,8 +5254,9 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Invalid Mouse Restore Mode: %d
 Enabling overlay
 Warning: Could not enable cursor visibility: %u
-STEAM_OVERLAY_LOGGING
 STEAM_OVERLAY_FRAME_TIME_LOGGING
+STEAM_OVERLAY_LOGGING_FLUSH
+STEAM_OVERLAY_LOGGING
 /tmp/gameoverlayrenderer.%d.log
 ####### Log failed to open %s ##############
 logfile opened early, s_Pid == 0 (Init has not been called yet)
@@ -5722,6 +5754,7 @@ A_dispatch_once_f
 @_dup
 @_fclose
 @_fcntl
+@_fflush
 @_fopen
 @_fprintf
 @_fread
@@ -5978,6 +6011,7 @@ _dlsym
 _dup
 _fclose
 _fcntl
+_fflush
 _fopen
 _fprintf
 _fread
@@ -6094,36 +6128,40 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-|7ccW
-y#?f
-r)vY2
-4X!P|
-)RxE
-8,%$
-[':N
+|`]l8{
+=zmx
+#"I`}
+@5gb
+xG'&
+pf]Tb*
+v$?x
+&Dy\{
+/xE:'
+SyFq`%
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-WdK0`
-rl6AGd)
-&~\N
-G6bt
-tC.7
-)&*;
-mr]O
-G]m9<B
-$,dU
-m`-i
-	P8+r
-]a0d
-/66;
-7%m:K
-A@fO
-oaQ:
-<'~-
-azP!
-kS^Ob
+4B!|
+.-[]
+itSED
+r<*x
+doNC
+9v.@9
+8tA*
+_ltM
+WY D
+0A&jkT5)am
+UKMi{
+!TvJ>;
+.-4+
+@2;9xc;
+av4>eF
+$,.g
+1G}o
+i0|$>
+<<G2
+fMI+
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6179,7 +6217,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005545Z0/
+221021204708Z0/
+Zkhf
+/#?7
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6187,17 +6227,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		KudM+M8KgT2wC/42TMXvSvLozuY=
+		86X3eTeTM8G7Fi8tUObb81ZxCik=
 		</data>
 		<data>
-		iJ31tSiZOuM0u2eulHVfvBy9ZCA=
+		1yg88VpraGbdPublmHKJFOVhT7I=
 		</data>
 	</array>
 </dict>
 </plist>
-9Q~W
-.2DaA
-20221019005547Z0
+@@h("
+]-eh
+n{WHWH5a
+20221021204726Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -6255,9 +6296,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221019005547Z0#
-J_0+
+221021204726Z0#
 pi!R
-*fL^:
-.;o6
-;\]B
+|u5$D
+~r,t
+ qwa
+jY~v

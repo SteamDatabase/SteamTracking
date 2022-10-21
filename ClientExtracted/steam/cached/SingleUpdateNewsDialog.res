@@ -1,0 +1,35 @@
+"steam/cached/UpdateNewsDialog.res"
+{
+	"SingleProductMarketingDialog"
+	{
+		"ControlName"		"CSingleProductMarketingDialog"
+		"fieldName"		"SingleProductMarketingDialog"
+		"xpos"		"610"
+		"ypos"		"519"
+		"wide"		"706"
+		"tall"		"780"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"0"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"settitlebarvisible"		"1"
+		"title"		"#Steam_UpdateNews_Title"
+	}
+	"HTMLSellPage"
+	{
+		"ControlName"		"HTML"
+		"fieldName"		"HTMLSellPage"
+		"xpos"		"8"
+		"ypos"		"30"
+		"wide"		"690"
+		"tall"		"732"
+		"AutoResize"		"3"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+	}
+}

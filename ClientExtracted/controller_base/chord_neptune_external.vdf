@@ -21,6 +21,19 @@
 		"description"		""
 		"inputs"
 		{
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action controller_poweroff"
+						}
+					}
+				}
+			}
 			"button_b"
 			{
 				"activators"

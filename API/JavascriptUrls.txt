@@ -289,6 +289,7 @@ ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/fireworks/${}
 ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/snowball/
+${COMMUNITY_CDN_URL}economy/boosterpack/${}?l=${LANGUAGE}
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
@@ -494,7 +495,6 @@ ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${LOGIN_BASE_URL}jwt/ajaxrefresh
-${LOGIN_BASE_URL}jwt/checkdevice
 ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
 ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
@@ -666,6 +666,7 @@ ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
 ${PARTNER_BASE_URL}user/ajaxgetusers
 ${PUBLIC_SHARED_URL}images/
+${PUBLIC_SHARED_URL}images/${}
 ${PUBLIC_SHARED_URL}images/responsive/youtube_16x9_placeholder.gif
 ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/
@@ -863,6 +864,7 @@ ${STORE_BASE_URL}points/howitworks
 ${STORE_BASE_URL}points/shop/c/chateffects
 ${STORE_BASE_URL}points/shop/c/emoticons
 ${STORE_BASE_URL}points/shop/c/stickers
+${STORE_BASE_URL}points/shop/event/${}/reward/${defid}
 ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement
 ${STORE_BASE_URL}prizes/nextdraw/${}
@@ -949,6 +951,7 @@ ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webAp
 ${WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMList/v1/?cellid=0
+${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets
 ${WEBAPI_BASE_URL}ISteamUserOAuth/GetUserSummaries/v2/
 ${_url}${}${}
 ${agreement_session_url}&redir=${href}
@@ -1192,7 +1195,6 @@ ${strSearchBaseURL}Home
 ${strURL}${_ ? '&' : '?'}insideModal=1
 ${strURL}&l=${key}
 ${strURL}&l=english
-${strURL}?json=1&origin=${}
 ${strWidgetURL}?t=${}
 ${strWizardBaseURL}${strQueryParam}
 ${survey_link_url}${}
@@ -1910,7 +1912,6 @@ https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/eng
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_2.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_3.jpg
 https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/spotlight_example_4.jpg
-https://steamcommunity-a.akamaihd.net/economy/boosterpack/${}?l=${LANGUAGE}
 https://steamcommunity-a.akamaihd.net/economy/image/IzMF03bk9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdA3g5gMEPvUZZEaiHLrVJRsl8vGuCUY7Cjc9ehDNVzDMAfnStiiQrcex4NM6b9Az2pKmoHWDyenHNIiDeGQNqGeZZN23bqzWk7bmXFGmYROl-QFpXL6ZQoGVKOMCOP0A00YUCqTe52U5tGVAqfddCdR2Ew3kSNrh4n3gRJpsAzCamJJSLhlsxPhNuU7rvXr7DbIPzkionWRNgTKRPYtqcvDuspsDnLPqHrcIm1Wk
 https://steamcommunity.com
 https://steamcommunity.com/
@@ -2440,10 +2441,9 @@ steam://checkout_return/paypal_success/
 steam://close
 steam://close${}
 steam://close/${}
-steam://close/authorize${}
-steam://close/cancel${}
+steam://close/authorize
+steam://close/cancel
 steam://controllerconfig/${appid}/${publishedFileID}
-steam://currentcontrollerconfig/${appid}
 steam://currentcontrollerconfig/${}
 steam://friends/joinchat/${steamid}
 steam://friends/message/${steamid}
@@ -2458,6 +2458,7 @@ steam://open/games/details/
 steam://open/games/details/${id}
 steam://open/goonline
 steam://open/library/shared-apps/${}
+steam://open/screenshots
 steam://open/screenshots/${}
 steam://open/settings/audio
 steam://open/workshop

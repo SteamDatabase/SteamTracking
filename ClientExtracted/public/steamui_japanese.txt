@@ -129,7 +129,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ForgottenPassword_EmailCode" "メールコード"
 "Steam_ForgottenPassword_EmailCode_Incorrect" "入力されたメールコードが間違っています。"
 
-"Steam_Login_Title"		"Steamログイン"
+"Steam_Login_Title"		"Steamサインイン"
+"Steam_RefreshLogin_Title"		"Steamサインインを更新"
 "Steam_Login_CreateNewAccount"	"新しいアカウントの作成..."
 "Steam_Login_RetrievePassword"	"サインインできません..."
 "Steam_Login_NoAccount"		"アカウントを未登録ですか?"
@@ -195,7 +196,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"起動"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"ゲームをプレイ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"ゲームをプレイ"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"ゲームをプレイ"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"後でアップデートする"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"デモをプレイ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ツールを起動"
@@ -217,7 +217,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"アプリケーションの準備完了次第起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"準備ができ次第ゲームを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"準備ができ次第ゲームを開始"
-"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"準備ができ次第ゲームを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"準備ができ次第デモを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"準備ができ次第ツールを起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"準備ができたらすぐにサウンドトラックを再生"
@@ -783,7 +782,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_Russian"		"ロシア語"
 "SteamUI_Thai"			"タイ語"
 "SteamUI_Japanese"		"日本語"
-"SteamUI_Portuguese"	"ポルトガル語"
+"SteamUI_Portuguese"	"ポルトガル語－ポルトガル"
 "SteamUI_Brazilian"	 	"ブラジルポルトガル語"
 "SteamUI_Polish"		"ポーランド語"
 "SteamUI_Danish"		"デンマーク語"
@@ -801,7 +800,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 // selection strings, pre-localized
 // do not localize these strings!
 "SteamUI_Selection_English"			"English（英語）"
-"SteamUI_Selection_Spanish"			"Español（スペイン語 - スペイン）"
+"SteamUI_Selection_Spanish"			"Español - España（スペイン語－スペイン）"
 "SteamUI_Selection_French"			"Français（フランス語）"
 "SteamUI_Selection_Italian"			"Italiano（イタリア語）"
 "SteamUI_Selection_German"			"Deutsch（ドイツ語）"
@@ -812,8 +811,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_Selection_Russian"		"Русский（ロシア語）"
 "SteamUI_Selection_Thai"			"ไทย（タイ語）"
 "SteamUI_Selection_Japanese"		"日本語（Japanese）"
-"SteamUI_Selection_Portuguese"		"Português（ポルトガル語）"
-"SteamUI_Selection_Brazilian"	 "Português-Brasil (ブラジルポルトガル語)"
+"SteamUI_Selection_Portuguese"		"Português（ポルトガル語－ポルトガル）"
+"SteamUI_Selection_Brazilian"	 "Português - Brasil（ポルトガル語－ブラジル）"
 "SteamUI_Selection_Polish"		"Polski（ポーランド語）"
 "SteamUI_Selection_Danish"		"Dansk（デンマーク語）"
 "SteamUI_Selection_Dutch"			"Nederlands（オランダ語）"
@@ -2124,7 +2123,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"このアプリケーション向けのすべてのファイルは今後Steamを通してダウンロードされます。"
 "Steam_Install_WillDownloadAllFiles$appType=game"	"このゲームのすべてのファイルをSteamでダウンロードします。"
-"Steam_Install_WillDownloadAllFiles$appType=beta"	"このゲームのすべてのファイルをSteamでダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"このデモのすべてのファイルを Steam でダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=media"	"このメディアのすべてのファイルをSteamでダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=music"	"このサウンドトラックのすべてのファイルをSteamでダウンロードします。"
@@ -2133,7 +2131,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Install_StartCacheLoading$appType=application"		"ローカルアプリケーションファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=game"		"ローカルゲームファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=demo"		"ローカルデモファイルを作成中..."
-"Steam_Install_StartCacheLoading$appType=beta"		"ローカルゲームファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=media"		"ローカルメディアファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=music"		"ローカルファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=tool"		"ローカルツールファイルを作成中..."
@@ -2383,7 +2380,6 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_status_decrypting"			"暗号化解除中: "
 "Steam_status_validating"			"確認中： "
 "Steam_status_verifying"			"確認中: "
-"Steam_status_finalizing"			"完了中"
 
 "steam_status_launching"				"起動中"
 "steam_status_launching_progress"		"起動中： "
@@ -3116,10 +3112,6 @@ Mac OS X バージョン 10.6以上に更新しなければなりません。"
 Administrator権限のあるアカウントでWindowsにログインする必要があります。
 このまま続行すると、ゲームの起動時に問題が発生する可能性があります。"
 "SteamUI_InstallScript_Continue" "無視して続ける"
-
-"SteamUI_3rdPartyRemapper_Title"		"コントローラの再マップツールが検出されました"
-"SteamUI_3rdPartyRemapper_Description"	"PS4コントローラ用の再マップツールが使用されているようです。このゲームはSteam入力を使用するため、再マップソフトウェアは必要ありません。競合を避けるため、再マップツールを無効にしてください。"
-
 
 "Steam_CPUSSERequired_Title"	"Steam - サポート外のCPUが検出されました"
 "Steam_CPUSSERequired_Info"	"%game%の実行にはSSE機能を持つCPUが必要です。

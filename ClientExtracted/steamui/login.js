@@ -17,9 +17,9 @@
         a = n.n(o),
         s = n(7952),
         u = n(78869),
-        i = n(37764),
-        r = (n(74963), n(40792), n(38440)),
-        c = n(70655),
+        i = n(15641),
+        r = (n(74963), n(40792)),
+        c = (n(38440), n(70655)),
         m = n(27194),
         f = n(86487);
       n(29669);
@@ -35,8 +35,8 @@
           m.Yt.InitFromObjects(l, o, null, null);
         });
       }
-      var g = n(21645),
-        h = (n(10708), n(63709));
+      var h = n(96794),
+        g = (n(10708), n(63709));
       function E(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
@@ -66,42 +66,51 @@
             );
       }
       function v(e) {
-        let t = new r.J(u.De.WEBAPI_BASE_URL).GetServiceTransport(),
-          [n, o] = (0, l.useState)(null);
-        const [s, c] = (0, l.useState)(!1);
+        let [t, n] = (0, l.useState)(null);
+        const [o, s] = (0, l.useState)(!1),
+          [c, m] = (0, l.useState)(!1);
+        let f = new r.zn(),
+          S = f.GetServiceTransport();
         !(function (e) {
           (0, l.useEffect)(() => {
-            (0, h.Uh)().Init("Client Login", CLSTAMP, e);
+            (0, g.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
-        })(t),
+        })(S),
           (0, l.useEffect)(() => {
             u.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
-                1 != e.reason ? o(e) : o(null);
+                1 != e.reason ? n(e) : n(null);
               }),
               SteamClient.Auth.GetLoginUIStyle().then((e) => {
-                c(e == g.cL.k_ELoginUIStyleNew);
+                s(e == h.cL.k_ELoginUIStyleNew);
               });
           }, []);
-        const [m, f] = (0, l.useState)(void 0),
-          [S, d] = (0, l.useState)(0),
-          E = `${null == n ? void 0 : n.account_name}${
-            null == n ? void 0 : n.reason
-          }${S.toString()}`;
+        const [d, E] = (0, l.useState)(void 0),
+          [v, L] = (0, l.useState)(0);
+        if (
+          (f.Connect().then(() => {
+            m(!0);
+          }),
+          !c)
+        )
+          return null;
+        const I = `${null == t ? void 0 : t.account_name}${
+          null == t ? void 0 : t.reason
+        }${v.toString()}`;
         return l.createElement(
           "div",
           { className: a().Login },
-          l.createElement(L, null),
+          l.createElement(C, null),
           l.createElement(i.i9, {
-            key: E,
+            key: I,
             autoFocus: !0,
-            transport: t,
+            transport: S,
             onSuccess: (e) => {
               var t;
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                f(null),
+                E(null),
                 SteamClient.Auth.SetLoginToken(
                   e.strRefreshToken,
                   e.strAccountName
@@ -109,8 +118,8 @@
                   const t = e.result,
                     n = e.message;
                   console.log(`client login returned ${t} (${n})`),
-                    f(t),
-                    1 != t && d(S + 1);
+                    E(t),
+                    1 != t && L(v + 1);
                 });
               const n =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
@@ -118,13 +127,13 @@
             },
             platform: 1,
             embedded: !0,
-            refreshInfo: n,
-            disableQR: !s,
-            lastResult: m,
+            refreshInfo: t,
+            disableQR: !o,
+            lastResult: d,
           })
         );
       }
-      function L(e) {
+      function C(e) {
         return l.createElement(
           "div",
           { className: a().TitleBar },

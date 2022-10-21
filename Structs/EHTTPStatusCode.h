@@ -17,6 +17,7 @@ typedef enum EHTTPStatusCode
     k_EHTTPStatusCodeNotModified = 304,
     k_EHTTPStatusCodeUseProxy = 305,
     k_EHTTPStatusCodeTemporaryRedirect = 307,
+    k_EHTTPStatusCodePermanentRedirect = 308,
     k_EHTTPStatusCodeBadRequest = 400,
     k_EHTTPStatusCodeUnauthorized = 401,
     k_EHTTPStatusCodePaymentRequired = 402,

@@ -778,7 +778,7 @@
 "Broadcast_Upload_Result_3"  "неуспешен кадър"
 "Broadcast_Upload_Result_4"  "просрочено време за връзка"
 "Broadcast_Upload_Result_5"  "прекалено много данни"
-"Broadcast_Upload_Result_6"  "ниски К/С"
+"Broadcast_Upload_Result_6"  "ниски к/сек."
 "Broadcast_Upload_Result_7"  "липсващи ключови кадри"
 "Broadcast_Upload_Result_8"  "няма връзка"
 "Broadcast_Upload_Result_9"  "неуспешен предавател"

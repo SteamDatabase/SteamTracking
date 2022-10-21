@@ -786,7 +786,7 @@
 "Broadcast_Upload_Result_11" "sem áudio"
 "Broadcast_Upload_Result_12" "atraso muito grande"
 
-"Steam_Settings_Browser"	"Browser da Web"
+"Steam_Settings_Browser"	"Browser da web"
 "Overlay_SettingsBrowserDesc" "As seguintes definições aplicam-se ao browser da web utilizado dentro do Steam e no Painel Steam durante um jogo."
 "Steam_SettingsBrowserDeleteAllData"	"Eliminar dados do browser"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Eliminar todos os cookies, ficheiros em cache e histórico do browser do Steam?"

@@ -45,8 +45,8 @@
 "Steam_Settings_Library_IconInGameList_Title" "Mostrar ícones de jogos na coluna esq."
 
 
-"Overlay_WebBrowserTitle"	"Browser da Web durante o jogo"
-"Overlay_WebBrowserTitleApp"	"Browser da Web durante aplicações"
+"Overlay_WebBrowserTitle"	"Browser da web dentro do jogo"
+"Overlay_WebBrowserTitleApp"	"Browser da web dentro da aplicação"
 "Overlay_Settings_Title"		"Steam - Definições"
 "Overlay_WebBrowser_OpenInNewTab" "Abrir link num separador novo"
 "Overlay_SettingsHomepageLabel"	"Página inicial do browser"
@@ -63,7 +63,7 @@
 "Overlay_Taskbar_Forums"	"Discussões"
 "Overlay_Taskbar_Close"		"Clica aqui para voltares ao jogo"
 "Overlay_Taskbar_CloseApp"		"Clica aqui para voltares à aplicação"
-"Overlay_Taskbar_WebBrowser"	"Browser da Web"
+"Overlay_Taskbar_WebBrowser"	"Browser da web"
 "Overlay_Taskbar_Screenshots"	"Capturas de ecrã"
 "Overlay_Taskbar_DLC"		"DLC"
 "Overlay_Taskbar_Guide"		"Guia"

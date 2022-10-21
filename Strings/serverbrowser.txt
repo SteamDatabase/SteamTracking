@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+`p
+`p
 __stubs
 __TEXT
 __stub_helper
@@ -34,20 +36,20 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-18
+Q8
 __thread_vars
 __DATA
+(I'
 0
+(I'
 __thread_data
 __DATA
-@I'
 @
-@I'
 __thread_bss
 __DATA
 __bss
 __DATA
-B.
+J.
 __common
 __DATA
 H
@@ -86,6 +88,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+>(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -201,24 +204,23 @@ H
 8
 9
 (
-P
-X
-`
 h
 p
 x
 0
+H
 
 
 I
 J
 K
 0
-L
-P
-M
-N
-O
+T
+X
+U
+V
+W
+H
 0
 (
 I
@@ -260,7 +262,7 @@ p
 @
 @
 P
-X
+`
 P
 P
 P
@@ -372,7 +374,9 @@ X
 @
 H
 $
+$
 (
+,
 $
 (
 ,
@@ -404,12 +408,12 @@ $
 $
 (
 $
-4
-8
-$
-(
+<
+@
 ,
 0
+4
+8
 $
 (
 ,
@@ -551,7 +555,7 @@ H
 8
 0
 (
-@
+H
 (
 (
 (
@@ -1212,6 +1216,7 @@ ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -2108,6 +2113,8 @@ google.protobuf.FileOptions.php_class_prefix
 google.protobuf.FileOptions.php_namespace
 google.protobuf.FileOptions.php_metadata_namespace
 google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FieldOptions.boxed_type
 google.protobuf.UninterpretedOption.NamePart.name_part
 google.protobuf.UninterpretedOption.identifier_value
 google.protobuf.UninterpretedOption.aggregate_value
@@ -2825,6 +2832,7 @@ BrowserDisabledKBLink
 #Steam_Browser_Disabled_KB_URL
 DefaultFixed
 HTML::Paint()
+%s (%d,%d,%d,%d)
 ShowPanel
 HTML.SearchInsetY
 HTML.SearchInsetX
@@ -3826,8 +3834,10 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
+H&
+>&
 0
-#&
+,&
 j
 j
 j
@@ -3836,6 +3846,10 @@ j
 j
 j
 j
+Y&
+&
+&
+&
 p
 0
 p
@@ -3867,8 +3881,6 @@ j
 j
 j
 j
-u%
-4%
 0
 0
 AT=
@@ -3913,7 +3925,10 @@ IcE
 V
 =
 =
+"
+!
 @
+&
 @
 M9e
 @
@@ -3935,14 +3950,17 @@ M9e
 ?
 @
 @
+i
+<
+
+}
+2
 
 
 
+j
 d
-#
 A+M
-
-
 j
 j
 j
@@ -3987,7 +4005,6 @@ d
 &
 &
 d
-d
 0
 A+4$A+u
 ~m=
@@ -3995,7 +4012,6 @@ A+4$A+u
 =
 =
 @
-G
 j
 j
 j

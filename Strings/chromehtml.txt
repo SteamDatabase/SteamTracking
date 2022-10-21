@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-i
-i
+@_
+@_
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-8e
+0e
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -149,7 +149,9 @@ X
 @
 H
 $
+$
 (
+,
 $
 (
 ,
@@ -181,12 +183,12 @@ $
 $
 (
 $
-4
-8
-$
-(
+<
+@
 ,
 0
+4
+8
 $
 (
 ,
@@ -328,7 +330,7 @@ H
 8
 0
 (
-@
+H
 (
 (
 (
@@ -557,6 +559,7 @@ P
 24CMsgSetProtocolBlockList
 29CMsgSetForceDeviceScaleFactor
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+
 15CHTMLController
 21IHTMLChromeController
 10CUtlString
@@ -702,24 +705,23 @@ H
 8
 9
 (
-P
-X
-`
 h
 p
 x
 0
+H
 
 
 I
 J
 K
 0
-L
-P
-M
-N
-O
+T
+X
+U
+V
+W
+H
 0
 (
 I
@@ -761,7 +763,7 @@ p
 @
 @
 P
-X
+`
 P
 P
 P
@@ -1073,6 +1075,8 @@ Disable early-out for known page loads
 -cef-disable-delaypageload
 -cef-enable-samesite-by-default-cookies
 Treat unspecified samesite as samesite=lax
+-cef-disable-renderer-restart
+Disable auto-restart of renderer process for existing browsers
 -store
 -community
 -clientui
@@ -1111,6 +1115,7 @@ clientui
 --ignore-certificate-errors
 -browser-offline
 -fakeoffline
+-disablerendererrestart
 ResizeObserver
 Worklet
 AudioWorklet
@@ -1715,6 +1720,8 @@ google.protobuf.FileOptions.php_class_prefix
 google.protobuf.FileOptions.php_namespace
 google.protobuf.FileOptions.php_metadata_namespace
 google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FieldOptions.boxed_type
 google.protobuf.UninterpretedOption.NamePart.name_part
 google.protobuf.UninterpretedOption.identifier_value
 google.protobuf.UninterpretedOption.aggregate_value
@@ -2341,16 +2348,10 @@ sc_schinese
 
 @
 @
-
-
+g
 @
-]
-E
-}
-b
-i
-
-
+N
+J
 
 0
 0
@@ -2400,7 +2401,9 @@ IcE
 V
 =
 =
+!
 @
+&
 @
 M9e
 @
@@ -2417,12 +2420,10 @@ M9e
 ?
 ?
 :
-I
 ?
 ?
 ?
 
-8
 Ic
 @
 @

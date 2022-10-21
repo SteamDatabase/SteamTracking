@@ -136,6 +136,11 @@ message CPlayer_GetProfileBackground_Request {
 }
 
 message ProfileItem {
+	message ProfileColor {
+		optional string style_name = 1 [(description) = "EProfileColorStyle string version"];
+		optional string color = 2 [(description) = "hex color to apply"];
+	}
+
 	optional uint64 communityitemid = 1;
 	optional string image_small = 2 [(description) = "small image used in backpack or selection"];
 	optional string image_large = 3 [(description) = "the image itself"];
@@ -150,6 +155,7 @@ message ProfileItem {
 	optional string movie_webm_small = 13 [(description) = "URL to small webm, if any"];
 	optional string movie_mp4_small = 14 [(description) = "URL to small mp4, if any"];
 	optional uint32 equipped_flags = 12 [(description) = "Special flags set when equipped (EProfileItemEquippedFlag)"];
+	repeated .ProfileItem.ProfileColor profile_colors = 15 [(description) = "Game profile css colors"];
 }
 
 message CPlayer_GetProfileBackground_Response {
@@ -239,6 +245,7 @@ message CPlayer_GetProfileItemsOwned_Response {
 	repeated .ProfileItem animated_avatars = 4;
 	repeated .ProfileItem profile_modifiers = 5;
 	repeated .ProfileItem steam_deck_keyboard_skins = 6;
+	repeated .ProfileItem steam_deck_startup_movies = 7;
 }
 
 message CPlayer_GetProfileItemsEquipped_Request {

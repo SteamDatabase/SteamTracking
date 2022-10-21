@@ -61,7 +61,7 @@
 		"Broadcast_Notification_AvailableToWatch_Public" "所有蒸汽平台用户都可随时加入您的直播。"
 		"Steam_Settings_Broadcast_HelpURL_URL" "https://help.steamchina.com/zh/kb/6730-TOAK-6497"
 		"Steam_Settings_Broadcast_Disabled_System" "蒸汽平台直播目前不支持此操作系统。"
-		"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用蒸汽平台界面才能进行直播。"
+		"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用蒸汽平台界面才能进行实况直播。"
 		"Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "蒸汽平台无法在这台机器上开始直播。\n\nWindows 目前正在以 Windows 兼容模式运行蒸汽平台，这可能会阻止直播功能的正常运行。如果这台机器是 Windows 7 或更高版本系统，请按照以下支持页面的说明移除兼容模式。"
 		"Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://help.steamchina.com/zh/kb/7153-AHJV-4256"
 		"Broadcast_RecordingError_NoAudio" "蒸汽平台无法录制此直播的音频"

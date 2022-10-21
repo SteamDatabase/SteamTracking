@@ -8,6 +8,7 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+6
 __const
 __TEXT
 __objc_methname
@@ -50,7 +51,7 @@ __data
 __DATA
 __bss
 __DATA
-`9
+P9
 __common
 __DATA
 H
@@ -1350,6 +1351,7 @@ Error: texture file '%s' does not exist or is invalid
 bad 2x texture: %s is %dx%d, expected %dx%d
 %s.tga
 %s.png
+panel != 0
 CBaseSurface::AreAnyPopupsViewable
 CBaseSurface::InternalSolveTraverse()
 CBaseSurface::InternalThinkTraverse() dispatch
@@ -1401,6 +1403,7 @@ FontManager()
 !pszString || pszString[nChars] == '\0'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui/ISurface.h
 m_iStart <= m_iEnd
+(unsigned)elem <= (unsigned)m_Size
 IsInList(after)
 !"Current texture not set"
 wide && tall
@@ -2242,6 +2245,7 @@ A;E
 
 0
 PPj
+(
 `
 `
 !

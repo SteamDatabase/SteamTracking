@@ -394,7 +394,7 @@ message CStreamingClientConfig {
 	optional bool enable_performance_icons = 14 [default = true];
 	optional bool enable_microphone_streaming = 15 [default = false];
 	optional string controller_overlay_hotkey = 16;
-	optional bool enable_touch_controller = 17 [default = false];
+	optional bool enable_touch_controller_OBSOLETE = 17 [default = false];
 	optional .EStreamP2PScope p2p_scope = 19 [default = k_EStreamP2PScopeAutomatic];
 }
 

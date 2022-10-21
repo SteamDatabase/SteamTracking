@@ -63346,6 +63346,9 @@ object-assign
           }
           OnClose() {
             super.OnClose();
+            react_dom__WEBPACK_IMPORTED_MODULE_1__.unmountComponentAtNode(
+              this.m_element
+            );
             window.parent.postMessage(
               { message: "ErrorPopupClosed" },
               "https://steamloopback.host"
@@ -63466,6 +63469,8 @@ object-assign
             /* binding */ EClanRelationship,
           /* harmony export */ ECommunityPrivacyState: () =>
             /* binding */ ECommunityPrivacyState,
+          /* harmony export */ ECommunityProfileItemProperty: () =>
+            /* binding */ ECommunityProfileItemProperty,
           /* harmony export */ EConnectivityTestResult: () =>
             /* binding */ EConnectivityTestResult,
           /* harmony export */ EEconTradeResponse: () =>
@@ -63500,6 +63505,8 @@ object-assign
             /* binding */ EPostGameSummaryType,
           /* harmony export */ EPublishedFileInfoMatchingFileType: () =>
             /* binding */ EPublishedFileInfoMatchingFileType,
+          /* harmony export */ ERaiseGameWindowResult: () =>
+            /* binding */ ERaiseGameWindowResult,
           /* harmony export */ ERecommendationIgnoreReason: () =>
             /* binding */ ERecommendationIgnoreReason,
           /* harmony export */ ERemoteStoragePublishedFileVisibility: () =>
@@ -65890,6 +65897,83 @@ object-assign
           ELoginUIStyle[(ELoginUIStyle["k_ELoginUIStyleNew"] = 2)] =
             "k_ELoginUIStyleNew";
         })(ELoginUIStyle || (ELoginUIStyle = {}));
+        var ECommunityProfileItemProperty;
+        (function (ECommunityProfileItemProperty) {
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_ImageSmall"
+            ] = 0)
+          ] = "k_ECommunityProfileItemProperty_ImageSmall";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_ImageLarge"
+            ] = 1)
+          ] = "k_ECommunityProfileItemProperty_ImageLarge";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_InternalName"
+            ] = 2)
+          ] = "k_ECommunityProfileItemProperty_InternalName";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_Title"
+            ] = 3)
+          ] = "k_ECommunityProfileItemProperty_Title";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_Description"
+            ] = 4)
+          ] = "k_ECommunityProfileItemProperty_Description";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_AppID"
+            ] = 5)
+          ] = "k_ECommunityProfileItemProperty_AppID";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_TypeID"
+            ] = 6)
+          ] = "k_ECommunityProfileItemProperty_TypeID";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_Class"
+            ] = 7)
+          ] = "k_ECommunityProfileItemProperty_Class";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_MovieWebM"
+            ] = 8)
+          ] = "k_ECommunityProfileItemProperty_MovieWebM";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_MovieMP4"
+            ] = 9)
+          ] = "k_ECommunityProfileItemProperty_MovieMP4";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_MovieWebMSmall"
+            ] = 10)
+          ] = "k_ECommunityProfileItemProperty_MovieWebMSmall";
+          ECommunityProfileItemProperty[
+            (ECommunityProfileItemProperty[
+              "k_ECommunityProfileItemProperty_MovieMP4Small"
+            ] = 11)
+          ] = "k_ECommunityProfileItemProperty_MovieMP4Small";
+        })(
+          ECommunityProfileItemProperty || (ECommunityProfileItemProperty = {})
+        );
+        var ERaiseGameWindowResult;
+        (function (ERaiseGameWindowResult) {
+          ERaiseGameWindowResult[
+            (ERaiseGameWindowResult["k_ERaiseGameWindowResult_NotRunning"] = 1)
+          ] = "k_ERaiseGameWindowResult_NotRunning";
+          ERaiseGameWindowResult[
+            (ERaiseGameWindowResult["k_ERaiseGameWindowResult_Success"] = 2)
+          ] = "k_ERaiseGameWindowResult_Success";
+          ERaiseGameWindowResult[
+            (ERaiseGameWindowResult["k_ERaiseGameWindowResult_Failure"] = 3)
+          ] = "k_ERaiseGameWindowResult_Failure";
+        })(ERaiseGameWindowResult || (ERaiseGameWindowResult = {}));
 
         /***/
       },
@@ -66311,8 +66395,8 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ OverlayChatBrowserInfo: () =>
-            /* binding */ OverlayChatBrowserInfo,
+          /* harmony export */ OverlayBrowserInfo: () =>
+            /* binding */ OverlayBrowserInfo,
           /* harmony export */ PushToTalkInfo: () =>
             /* binding */ PushToTalkInfo,
           /* harmony export */
@@ -66322,7 +66406,8 @@ object-assign
             /*! ./clientuitypes */ "../../../web_src/shared/js/clienttypes/clientuitypes.ts"
           );
 
-        class OverlayChatBrowserInfo {}
+        // @note Tom Bui: this is no longer chat specific.  maybe move to another file?
+        class OverlayBrowserInfo {}
         class PushToTalkInfo {}
 
         /***/
@@ -66349,6 +66434,8 @@ object-assign
             /* binding */ ESystemUISystemKey,
           /* harmony export */ EUIComposition: () =>
             /* binding */ EUIComposition,
+          /* harmony export */ HIDKeyboardKeys: () =>
+            /* binding */ HIDKeyboardKeys,
           /* harmony export */ SendTextSpecialKeys: () =>
             /* binding */ SendTextSpecialKeys,
           /* harmony export */ k_nSteamClientBetaNone: () =>
@@ -66465,8 +66552,166 @@ object-assign
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_NONE"] = "\0";
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ENTER"] = "\u0001";
           SendTextSpecialKeys["SENDTEXT_SPECIALKEY_BACKSPACE"] = "\u0002";
-          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_LAST"] = "\u0003";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_LEFT"] = "\u0003";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_ARROW_RIGHT"] = "\u0004";
+          SendTextSpecialKeys["SENDTEXT_SPECIALKEY_LAST"] = "\u0005";
         })(SendTextSpecialKeys || (SendTextSpecialKeys = {}));
+        // Scan codes for HID keyboards - taken from controller_constants.h
+        var HIDKeyboardKeys;
+        (function (HIDKeyboardKeys) {
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_INVALID"] = 0)] = "KEY_INVALID";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_FIRST"] = 4)] = "KEY_FIRST";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_A"] = 4)] = "KEY_A";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_B"] = 5)] = "KEY_B";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_C"] = 6)] = "KEY_C";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_D"] = 7)] = "KEY_D";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_E"] = 8)] = "KEY_E";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F"] = 9)] = "KEY_F";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_G"] = 10)] = "KEY_G";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_H"] = 11)] = "KEY_H";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_I"] = 12)] = "KEY_I";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_J"] = 13)] = "KEY_J";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_K"] = 14)] = "KEY_K";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_L"] = 15)] = "KEY_L";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_M"] = 16)] = "KEY_M";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_N"] = 17)] = "KEY_N";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_O"] = 18)] = "KEY_O";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_P"] = 19)] = "KEY_P";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Q"] = 20)] = "KEY_Q";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_R"] = 21)] = "KEY_R";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_S"] = 22)] = "KEY_S";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_T"] = 23)] = "KEY_T";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_U"] = 24)] = "KEY_U";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_V"] = 25)] = "KEY_V";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_W"] = 26)] = "KEY_W";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_X"] = 27)] = "KEY_X";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Y"] = 28)] = "KEY_Y";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_Z"] = 29)] = "KEY_Z";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_1"] = 30)] = "KEY_1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_2"] = 31)] = "KEY_2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_3"] = 32)] = "KEY_3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_4"] = 33)] = "KEY_4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_5"] = 34)] = "KEY_5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_6"] = 35)] = "KEY_6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_7"] = 36)] = "KEY_7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_8"] = 37)] = "KEY_8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_9"] = 38)] = "KEY_9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_0"] = 39)] = "KEY_0";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RETURN"] = 40)] = "KEY_RETURN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_ESCAPE"] = 41)] = "KEY_ESCAPE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACKSPACE"] = 42)] =
+            "KEY_BACKSPACE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_TAB"] = 43)] = "KEY_TAB";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SPACE"] = 44)] = "KEY_SPACE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DASH"] = 45)] = "KEY_DASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_EQUALS"] = 46)] = "KEY_EQUALS";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LEFT_BRACKET"] = 47)] =
+            "KEY_LEFT_BRACKET";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RIGHT_BRACKET"] = 48)] =
+            "KEY_RIGHT_BRACKET";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACKSLASH"] = 49)] =
+            "KEY_BACKSLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_UNUSED1"] = 50)] =
+            "KEY_UNUSED1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SEMICOLON"] = 51)] =
+            "KEY_SEMICOLON";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SINGLE_QUOTE"] = 52)] =
+            "KEY_SINGLE_QUOTE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BACK_TICK"] = 53)] =
+            "KEY_BACK_TICK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_COMMA"] = 54)] = "KEY_COMMA";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PERIOD"] = 55)] = "KEY_PERIOD";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_FORWARD_SLASH"] = 56)] =
+            "KEY_FORWARD_SLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_CAPSLOCK"] = 57)] =
+            "KEY_CAPSLOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F1"] = 58)] = "KEY_F1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F2"] = 59)] = "KEY_F2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F3"] = 60)] = "KEY_F3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F4"] = 61)] = "KEY_F4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F5"] = 62)] = "KEY_F5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F6"] = 63)] = "KEY_F6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F7"] = 64)] = "KEY_F7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F8"] = 65)] = "KEY_F8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F9"] = 66)] = "KEY_F9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F10"] = 67)] = "KEY_F10";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F11"] = 68)] = "KEY_F11";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_F12"] = 69)] = "KEY_F12";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PRINT_SCREEN"] = 70)] =
+            "KEY_PRINT_SCREEN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_SCROLL_LOCK"] = 71)] =
+            "KEY_SCROLL_LOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_BREAK"] = 72)] = "KEY_BREAK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_INSERT"] = 73)] = "KEY_INSERT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_HOME"] = 74)] = "KEY_HOME";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PAGE_UP"] = 75)] =
+            "KEY_PAGE_UP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DELETE"] = 76)] = "KEY_DELETE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_END"] = 77)] = "KEY_END";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PAGE_DOWN"] = 78)] =
+            "KEY_PAGE_DOWN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RIGHT_ARROW"] = 79)] =
+            "KEY_RIGHT_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LEFT_ARROW"] = 80)] =
+            "KEY_LEFT_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_DOWN_ARROW"] = 81)] =
+            "KEY_DOWN_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_UP_ARROW"] = 82)] =
+            "KEY_UP_ARROW";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_NUM_LOCK"] = 83)] =
+            "KEY_NUM_LOCK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_FORWARD_SLASH"] = 84)] =
+            "KEY_KEYPAD_FORWARD_SLASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_ASTERISK"] = 85)] =
+            "KEY_KEYPAD_ASTERISK";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_DASH"] = 86)] =
+            "KEY_KEYPAD_DASH";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_PLUS"] = 87)] =
+            "KEY_KEYPAD_PLUS";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_ENTER"] = 88)] =
+            "KEY_KEYPAD_ENTER";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_1"] = 89)] =
+            "KEY_KEYPAD_1";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_2"] = 90)] =
+            "KEY_KEYPAD_2";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_3"] = 91)] =
+            "KEY_KEYPAD_3";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_4"] = 92)] =
+            "KEY_KEYPAD_4";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_5"] = 93)] =
+            "KEY_KEYPAD_5";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_6"] = 94)] =
+            "KEY_KEYPAD_6";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_7"] = 95)] =
+            "KEY_KEYPAD_7";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_8"] = 96)] =
+            "KEY_KEYPAD_8";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_9"] = 97)] =
+            "KEY_KEYPAD_9";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_0"] = 98)] =
+            "KEY_KEYPAD_0";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_KEYPAD_PERIOD"] = 99)] =
+            "KEY_KEYPAD_PERIOD";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LALT"] = 100)] = "KEY_LALT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LSHIFT"] = 101)] = "KEY_LSHIFT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LWIN"] = 102)] = "KEY_LWIN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LCONTROL"] = 103)] =
+            "KEY_LCONTROL";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RALT"] = 104)] = "KEY_RALT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RSHIFT"] = 105)] = "KEY_RSHIFT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RWIN"] = 106)] = "KEY_RWIN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_RCONTROL"] = 107)] =
+            "KEY_RCONTROL";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_VOLUP"] = 108)] = "KEY_VOLUP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_VOLDOWN"] = 109)] =
+            "KEY_VOLDOWN";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_MUTE"] = 110)] = "KEY_MUTE";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PLAY"] = 111)] = "KEY_PLAY";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_STOP"] = 112)] = "KEY_STOP";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_NEXT"] = 113)] = "KEY_NEXT";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PREV"] = 114)] = "KEY_PREV";
+          HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LAST"] = 114)] = "KEY_LAST";
+        })(HIDKeyboardKeys || (HIDKeyboardKeys = {}));
 
         /***/
       },
@@ -67405,10 +67650,6 @@ object-assign
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.AppLifetimeNotification,
           /* harmony export */ AppTag: () =>
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.AppTag,
-          /* harmony export */ AppTypeForEProtoAppType: () =>
-            /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.AppTypeForEProtoAppType,
-          /* harmony export */ AppTypeForEStoreAppType: () =>
-            /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.AppTypeForEStoreAppType,
           /* harmony export */ AudioDevice: () =>
             /* reexport safe */ _audiotypes__WEBPACK_IMPORTED_MODULE_2__.AudioDevice,
           /* harmony export */ AudioDevices: () =>
@@ -67515,6 +67756,8 @@ object-assign
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.EClientUsedInputType,
           /* harmony export */ ECommunityPrivacyState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ECommunityPrivacyState,
+          /* harmony export */ ECommunityProfileItemProperty: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ECommunityProfileItemProperty,
           /* harmony export */ ECompatPriority: () =>
             /* reexport safe */ _appdetailstypes__WEBPACK_IMPORTED_MODULE_1__.ECompatPriority,
           /* harmony export */ EComputerActiveState: () =>
@@ -67597,12 +67840,16 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EOverlayToStoreFlag,
           /* harmony export */ EParentalFeature: () =>
             /* reexport safe */ _parentaltypes__WEBPACK_IMPORTED_MODULE_17__.EParentalFeature,
+          /* harmony export */ EPerfDisplayCorner: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.EPerfDisplayCorner,
           /* harmony export */ EPersonaState: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EPersonaState,
           /* harmony export */ EPostGameSummaryType: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EPostGameSummaryType,
           /* harmony export */ EPublishedFileInfoMatchingFileType: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EPublishedFileInfoMatchingFileType,
+          /* harmony export */ ERaiseGameWindowResult: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ERaiseGameWindowResult,
           /* harmony export */ ERecommendationIgnoreReason: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.ERecommendationIgnoreReason,
           /* harmony export */ ERemoteClientLaunchResult: () =>
@@ -67665,6 +67912,8 @@ object-assign
             /* reexport safe */ _gameactiontypes__WEBPACK_IMPORTED_MODULE_11__.GameActionDetails,
           /* harmony export */ GameLaunchOption: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.GameLaunchOption,
+          /* harmony export */ HIDKeyboardKeys: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.HIDKeyboardKeys,
           /* harmony export */ InstallAppAndCreateShortcutData: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.InstallAppAndCreateShortcutData,
           /* harmony export */ InstallFolderInfo: () =>
@@ -67701,8 +67950,8 @@ object-assign
             /* reexport safe */ _musictypes__WEBPACK_IMPORTED_MODULE_14__.MusicPlaybackState,
           /* harmony export */ NotificationCounts: () =>
             /* reexport safe */ _notificationtypes__WEBPACK_IMPORTED_MODULE_16__.NotificationCounts,
-          /* harmony export */ OverlayChatBrowserInfo: () =>
-            /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.OverlayChatBrowserInfo,
+          /* harmony export */ OverlayBrowserInfo: () =>
+            /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.OverlayBrowserInfo,
           /* harmony export */ PchLanguageToELanguage: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.PchLanguageToELanguage,
           /* harmony export */ PushToTalkInfo: () =>
@@ -68290,6 +68539,8 @@ object-assign
             /* binding */ EGraphicsPerfOverlayState,
           /* harmony export */ ELibraryDisplaySize: () =>
             /* binding */ ELibraryDisplaySize,
+          /* harmony export */ EPerfDisplayCorner: () =>
+            /* binding */ EPerfDisplayCorner,
           /* harmony export */ FamilySettings: () =>
             /* binding */ FamilySettings,
           /* harmony export */ FamilySharingUser: () =>
@@ -68416,6 +68667,18 @@ object-assign
             featuresEnabled: {},
           };
         }
+        var EPerfDisplayCorner;
+        (function (EPerfDisplayCorner) {
+          EPerfDisplayCorner[(EPerfDisplayCorner["k_None"] = 0)] = "k_None";
+          EPerfDisplayCorner[(EPerfDisplayCorner["k_TopLeft"] = 1)] =
+            "k_TopLeft";
+          EPerfDisplayCorner[(EPerfDisplayCorner["k_TopRight"] = 2)] =
+            "k_TopRight";
+          EPerfDisplayCorner[(EPerfDisplayCorner["k_BottomRight"] = 3)] =
+            "k_BottomRight";
+          EPerfDisplayCorner[(EPerfDisplayCorner["k_BottomLeft"] = 4)] =
+            "k_BottomLeft";
+        })(EPerfDisplayCorner || (EPerfDisplayCorner = {}));
 
         /***/
       },
@@ -68432,10 +68695,6 @@ object-assign
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ AppTypeForEProtoAppType: () =>
-            /* binding */ AppTypeForEProtoAppType,
-          /* harmony export */ AppTypeForEStoreAppType: () =>
-            /* binding */ AppTypeForEStoreAppType,
           /* harmony export */ BDoesSaleItemTypeHaveParent: () =>
             /* binding */ BDoesSaleItemTypeHaveParent,
           /* harmony export */ BIsSaleItemType: () =>
@@ -68448,15 +68707,6 @@ object-assign
             /* binding */ StorePreferences,
           /* harmony export */
         });
-        /* harmony import */ var shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! shared/steammessages/steammessages_appoverview_pb */ "../../../web_src/shared/js/steammessages/steammessages_appoverview_pb.ts"
-          );
-        /* harmony import */ var shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/steammessages/steammessages_storebrowse_pb */ "../../../web_src/shared/js/steammessages/steammessages_storebrowse_pb.ts"
-          );
-
         class MarketingMessage {
           constructor() {
             this.unAppID = 0;
@@ -68468,84 +68718,6 @@ object-assign
           }
         }
         class StorePreferences {}
-        function AppTypeForEProtoAppType(eProtoAppType) {
-          switch (eProtoAppType) {
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeGame:
-              return "game";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeApplication:
-              return "software";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeTool:
-              return "tool";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeDemo:
-              return "demo";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeDLC:
-              return "dlc";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeDriver:
-              return "driver";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeConfig:
-              return "config";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeVideo:
-              return "video";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeMusicAlbum:
-              return "music";
-            case shared_steammessages_steammessages_appoverview_pb__WEBPACK_IMPORTED_MODULE_0__
-              .EProtoAppType.k_EAppTypeBeta:
-              return "beta";
-          }
-          // Expected unhandled cases that we don't expect to be live as of this writing:
-          //		k_EAppTypeDeprected
-          //		k_EAppTypeGuide
-          //		k_EAppTypeHardware
-          //		k_EAppTypeFranchise
-          //		k_EAppTypePlugin
-          //		k_EAppTypeSeries
-          //		k_EAppTypeComic
-          //
-          // Tragically, AssertMsg() is not available in all projects that include clienttypes, currently.
-          //AssertMsg( eProtoAppType == EProtoAppType.k_EAppTypeInvalid, `Unhandled EProtoAppType ${eProtoAppType} for AppType conversion.` );
-          return "invalid";
-        }
-        function AppTypeForEStoreAppType(eStoreAppType) {
-          switch (eStoreAppType) {
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Game:
-              return "game";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Software:
-              return "software";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Demo:
-              return "demo";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_DLC:
-              return "dlc";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Video:
-              return "video";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Movie:
-              return "video";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Music:
-              return "music";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Beta:
-              return "beta";
-            case shared_steammessages_steammessages_storebrowse_pb__WEBPACK_IMPORTED_MODULE_1__
-              .EStoreAppType.k_EStoreAppType_Mod:
-              return "mod";
-          }
-          return "invalid";
-        }
         // If we ever change this, make sure to update the server code -> YldExtractAppsPackagesAndBundlesFromCapsule
         function BIsSaleItemType(input) {
           return (
@@ -68703,6 +68875,9 @@ object-assign
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ EOSType: () => /* binding */ EOSType,
+          /* harmony export */ EPlatformType: () => /* binding */ EPlatformType,
+          /* harmony export */ GetNameFromOSType: () =>
+            /* binding */ GetNameFromOSType,
           /* harmony export */
         });
         // this enum needs to match the reference in osversion.h
@@ -68831,6 +69006,8 @@ object-assign
           EOSType[(EOSType["k_eMacOS12"] = -74)] = "k_eMacOS12";
           EOSType[(EOSType["k_eMacOS1018"] = -70)] = "k_eMacOS1018";
           EOSType[(EOSType["k_eMacOS13"] = -69)] = "k_eMacOS13";
+          EOSType[(EOSType["k_eMacOS14"] = -68)] = "k_eMacOS14";
+          EOSType[(EOSType["k_eMacOS15"] = -67)] = "k_eMacOS15";
           // NOTE: if you are about to add a new enum here, please add it to enum_names.cpp
           EOSType[(EOSType["k_eMacOSMax"] = -2)] = "k_eMacOSMax";
           EOSType[(EOSType["k_eOSUnknown"] = -1)] = "k_eOSUnknown";
@@ -68859,6 +69036,260 @@ object-assign
           EOSType[(EOSType["k_eWinMAX"] = 21)] = "k_eWinMAX";
           EOSType[(EOSType["k_eOSTypeMax"] = 32)] = "k_eOSTypeMax"; // win types + other ifdef'd types
         })(EOSType || (EOSType = {}));
+        function GetNameFromOSType(eOSType) {
+          switch (eOSType) {
+            case EOSType.k_eWinUnknown:
+              return "Windows";
+            case EOSType.k_eWin311:
+              return "Windows 3.11";
+            case EOSType.k_eWin95:
+              return "Windows 95";
+            case EOSType.k_eWin98:
+              return "Windows 98";
+            case EOSType.k_eWinME:
+              return "Windows ME";
+            case EOSType.k_eWinNT:
+              return "Windows NT";
+            case EOSType.k_eWin2000:
+              return "Windows 2000";
+            case EOSType.k_eWinXP:
+              return "Windows XP";
+            case EOSType.k_eWin2003:
+              return "Windows 2003";
+            case EOSType.k_eWinVista:
+              return "Windows Vista";
+            case EOSType.k_eWindows7:
+              return "Windows 7";
+            case EOSType.k_eWin2008:
+              return "Windows 2008";
+            case EOSType.k_eWin2012:
+              return "Windows 2012";
+            case EOSType.k_eWin2012R2:
+              return "Windows 2012 R2";
+            case EOSType.k_eWindows8:
+              return "Windows 8";
+            case EOSType.k_eWindows81:
+              return "Windows 8.1";
+            case EOSType.k_eWindows10:
+              return "Windows 10";
+            case EOSType.k_eWin2016:
+              return "Windows 2016";
+            case EOSType.k_eWin2019:
+              return "Windows 2019";
+            case EOSType.k_eWin2022:
+              return "Windows 2022";
+            case EOSType.k_eWindows11:
+              return "Windows 11";
+            case EOSType.k_eMacOSUnknown:
+              return "Mac OS";
+            case EOSType.k_eMacOS104:
+              return "MacOS 10.4";
+            case EOSType.k_eMacOS105:
+              return "MacOS 10.5";
+            case EOSType.k_eMacOS1058:
+              return "MacOS 10.5.8";
+            case EOSType.k_eMacOS106:
+              return "MacOS 10.6";
+            case EOSType.k_eMacOS1063:
+              return "MacOS 10.6.3";
+            case EOSType.k_eMacOS1064_slgu:
+              return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
+            case EOSType.k_eMacOS1067:
+              return "MacOS 10.6.7";
+            case EOSType.k_eMacOS107:
+              return "MacOS 10.7";
+            case EOSType.k_eMacOS108:
+              return "MacOS 10.8";
+            case EOSType.k_eMacOS109:
+              return "MacOS 10.9";
+            case EOSType.k_eMacOS1010:
+              return "MacOS 10.10";
+            case EOSType.k_eMacOS1011:
+              return "MacOS 10.11";
+            case EOSType.k_eMacOS1012:
+              return "MacOS 10.12";
+            case EOSType.k_eMacOS1013:
+              return "MacOS 10.13";
+            case EOSType.k_eMacOS1014:
+              return "MacOS 10.14";
+            case EOSType.k_eMacOS1015:
+              return "MacOS 10.15";
+            case EOSType.k_eMacOS1016:
+              return "MacOS 11 (as 10.16)";
+            case EOSType.k_eMacOS1017:
+              return "MacOS 12 (as 10.17)";
+            case EOSType.k_eMacOS1018:
+              return "MacOS 13 (as 10.18)";
+            case EOSType.k_eMacOS11:
+              return "MacOS 11";
+            case EOSType.k_eMacOS11_1:
+              return "MacOS 11.1";
+            case EOSType.k_eMacOS12:
+              return "MacOS 12";
+            case EOSType.k_eMacOS13:
+              return "MacOS 13";
+            case EOSType.k_eMacOS14:
+              return "MacOS 14";
+            case EOSType.k_eMacOS15:
+              return "MacOS 15";
+            case EOSType.k_eLinuxUnknown:
+              return "Linux";
+            case EOSType.k_eLinux22:
+              return "Linux 2.2";
+            case EOSType.k_eLinux24:
+              return "Linux 2.4";
+            case EOSType.k_eLinux26:
+              return "Linux 2.6";
+            case EOSType.k_eLinux32:
+              return "Linux 3.2";
+            case EOSType.k_eLinux35:
+              return "Linux 3.5";
+            case EOSType.k_eLinux36:
+              return "Linux 3.6";
+            case EOSType.k_eLinux310:
+              return "Linux 3.10";
+            case EOSType.k_eLinux316:
+              return "Linux 3.16";
+            case EOSType.k_eLinux318:
+              return "Linux 3.18";
+            case EOSType.k_eLinux3Unknown:
+              return "Linux 3.x";
+            case EOSType.k_eLinux41:
+              return "Linux 4.1";
+            case EOSType.k_eLinux44:
+              return "Linux 4.4";
+            case EOSType.k_eLinux49:
+              return "Linux 4.9";
+            case EOSType.k_eLinux414:
+              return "Linux 4.14";
+            case EOSType.k_eLinux419:
+              return "Linux 4.19";
+            case EOSType.k_eLinux4Unknown:
+              return "Linux 4.x";
+            case EOSType.k_eLinux5Unknown:
+              return "Linux 5.x";
+            case EOSType.k_eLinux54:
+              return "Linux 5.4";
+            case EOSType.k_eLinux6Unknown:
+              return "Linux 6.x";
+            case EOSType.k_eLinux7Unknown:
+              return "Linux 7.x";
+            case EOSType.k_eLinux510:
+              return "Linux 5.10";
+            case EOSType.k_eOSPS3:
+              return "PS3";
+            case EOSType.k_eOSWebClient:
+              return "Web Client";
+            case EOSType.k_eAndroidUnknown:
+              return "Android";
+            case EOSType.k_eAndroid6:
+              return "Android 6.x";
+            case EOSType.k_eAndroid7:
+              return "Android 7.x";
+            case EOSType.k_eAndroid8:
+              return "Android 8.x";
+            case EOSType.k_eAndroid9:
+              return "Android 9.x";
+            case EOSType.k_eIOSUnknown:
+              return "iOS";
+            case EOSType.k_eIOS1:
+              return "iOS 1";
+            case EOSType.k_eIOS2:
+              return "iOS 2";
+            case EOSType.k_eIOS3:
+              return "iOS 3";
+            case EOSType.k_eIOS4:
+              return "iOS 4";
+            case EOSType.k_eIOS5:
+              return "iOS 5";
+            case EOSType.k_eIOS6:
+              return "iOS 6";
+            case EOSType.k_eIOS6_1:
+              return "iOS 6.1";
+            case EOSType.k_eIOS7:
+              return "iOS 7";
+            case EOSType.k_eIOS7_1:
+              return "iOS 7.1";
+            case EOSType.k_eIOS8:
+              return "iOS 8";
+            case EOSType.k_eIOS8_1:
+              return "iOS 8.1";
+            case EOSType.k_eIOS8_2:
+              return "iOS 8.2";
+            case EOSType.k_eIOS8_3:
+              return "iOS 8.3";
+            case EOSType.k_eIOS8_4:
+              return "iOS 8.4";
+            case EOSType.k_eIOS9:
+              return "iOS 9";
+            case EOSType.k_eIOS9_1:
+              return "iOS 9.1";
+            case EOSType.k_eIOS9_2:
+              return "iOS 9.2";
+            case EOSType.k_eIOS9_3:
+              return "iOS 9_.3";
+            case EOSType.k_eIOS10:
+              return "iOS 10";
+            case EOSType.k_eIOS10_1:
+              return "iOS 10.1";
+            case EOSType.k_eIOS10_2:
+              return "iOS 10.2";
+            case EOSType.k_eIOS10_3:
+              return "iOS 10.3";
+            case EOSType.k_eIOS11:
+              return "iOS 11";
+            case EOSType.k_eIOS11_1:
+              return "iOS 11.1";
+            case EOSType.k_eIOS11_2:
+              return "iOS 11.2";
+            case EOSType.k_eIOS11_3:
+              return "iOS 11.3";
+            case EOSType.k_eIOS11_4:
+              return "iOS 11.4";
+            case EOSType.k_eIOS12:
+              return "iOS 12";
+            case EOSType.k_eIOS12_1:
+              return "iOS 12.1";
+            default:
+            case EOSType.k_eOSUnknown:
+              return "Unknown";
+          }
+        }
+        // EPlatformType
+        // This enumerates the type of platform (OS) we might run on
+        var EPlatformType;
+        (function (EPlatformType) {
+          EPlatformType[(EPlatformType["k_EPlatformTypeUnknown"] = 0)] =
+            "k_EPlatformTypeUnknown";
+          EPlatformType[(EPlatformType["k_EPlatformTypeWin32"] = 1)] =
+            "k_EPlatformTypeWin32";
+          EPlatformType[(EPlatformType["k_EPlatformTypeWin64"] = 2)] =
+            "k_EPlatformTypeWin64";
+          EPlatformType[(EPlatformType["k_EPlatformTypeLinux64"] = 3)] =
+            "k_EPlatformTypeLinux64";
+          EPlatformType[(EPlatformType["k_EPlatformTypeOSX"] = 4)] =
+            "k_EPlatformTypeOSX";
+          EPlatformType[(EPlatformType["k_EPlatformTypePS3"] = 5)] =
+            "k_EPlatformTypePS3";
+          EPlatformType[(EPlatformType["k_EPlatformTypeLinux32"] = 6)] =
+            "k_EPlatformTypeLinux32";
+          EPlatformType[(EPlatformType["k_EPlatformTypeAndroid32"] = 7)] =
+            "k_EPlatformTypeAndroid32";
+          EPlatformType[(EPlatformType["k_EPlatformTypeAndroid64"] = 8)] =
+            "k_EPlatformTypeAndroid64";
+          EPlatformType[(EPlatformType["k_EPlatformTypeIOS32"] = 9)] =
+            "k_EPlatformTypeIOS32";
+          EPlatformType[(EPlatformType["k_EPlatformTypeIOS64"] = 10)] =
+            "k_EPlatformTypeIOS64";
+          EPlatformType[(EPlatformType["k_EPlatformTypeTVOS"] = 11)] =
+            "k_EPlatformTypeTVOS";
+          EPlatformType[(EPlatformType["k_EPlatformTypeEmbeddedClient"] = 12)] =
+            "k_EPlatformTypeEmbeddedClient";
+          EPlatformType[(EPlatformType["k_EPlatformTypeBrowser"] = 13)] =
+            "k_EPlatformTypeBrowser";
+          EPlatformType[(EPlatformType["k_EPlatformTypeMax"] = 14)] =
+            "k_EPlatformTypeMax";
+        })(EPlatformType || (EPlatformType = {}));
 
         /***/
       },
@@ -69271,6 +69702,8 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ BIsVRBrowserInfo: () =>
             /* binding */ BIsVRBrowserInfo,
+          /* harmony export */ BrowserContext: () =>
+            /* binding */ BrowserContext,
           /* harmony export */ CPopup: () => /* binding */ CPopup,
           /* harmony export */ CSavedDimensionsPopup: () =>
             /* binding */ CSavedDimensionsPopup,
@@ -69278,6 +69711,8 @@ object-assign
             /* binding */ EPopupCreationFlags,
           /* harmony export */ g_PopupManager: () =>
             /* binding */ g_PopupManager,
+          /* harmony export */ useBrowserContext: () =>
+            /* binding */ useBrowserContext,
           /* harmony export */
         });
         /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_10__ =
@@ -69286,13 +69721,11 @@ object-assign
           __webpack_require__(
             /*! mobx */ "./node_modules/mobx/lib/mobx.module.js"
           );
-        /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! react-dom */ "./node_modules/react-dom/index.js"
-          );
-        /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default =
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(/*! react */ "./node_modules/react/index.js");
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default =
           /*#__PURE__*/ __webpack_require__.n(
-            react_dom__WEBPACK_IMPORTED_MODULE_1__
+            react__WEBPACK_IMPORTED_MODULE_1__
           );
         /* harmony import */ var shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
@@ -69337,7 +69770,25 @@ object-assign
             "ContextMenu";
           EPopupCreationFlags[(EPopupCreationFlags["Resizable"] = 16)] =
             "Resizable";
+          EPopupCreationFlags[(EPopupCreationFlags["ScalePosition"] = 32)] =
+            "ScalePosition";
+          EPopupCreationFlags[(EPopupCreationFlags["ScaleSize"] = 64)] =
+            "ScaleSize";
+          EPopupCreationFlags[(EPopupCreationFlags["Maximized"] = 128)] =
+            "Maximized";
+          EPopupCreationFlags[
+            (EPopupCreationFlags["BackgroundTransparent"] = 256)
+          ] = "BackgroundTransparent";
+          EPopupCreationFlags[(EPopupCreationFlags["NotFocusable"] = 512)] =
+            "NotFocusable";
+          EPopupCreationFlags[(EPopupCreationFlags["FullScreen"] = 1024)] =
+            "FullScreen";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
+        const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
+          {}
+        );
+        const useBrowserContext = () =>
+          react__WEBPACK_IMPORTED_MODULE_1__.useContext(BrowserContext);
         function BIsVRBrowserInfo(context) {
           return (
             context.m_eBrowserType ==
@@ -69362,7 +69813,7 @@ object-assign
             this.m_rgParams = rgParams;
             // TODO: have popup manager track ids by browser?
             if (this.m_rgParams.target_browser)
-              this.m_strName += "_pid" + this.m_rgParams.target_browser.m_unPID;
+              this.m_strName += "_uid" + this.m_rgParams.target_browser.m_unPID;
             // save off title, we'll manage it from here
             this.m_strTitle = rgParams.title;
             delete this.m_rgParams.title;
@@ -69470,6 +69921,8 @@ object-assign
             g_PopupManager.AddTrackedPopup(this);
             if (existingPopup) {
               if (bFocus) this.Focus();
+            } else {
+              this.OnCreate();
             }
           }
           RemoveEventListeners() {
@@ -69499,6 +69952,7 @@ object-assign
               }
             }
           }
+          OnCreate() {}
           OnResizeEvent() {
             this.OnResize();
           }
@@ -69509,9 +69963,7 @@ object-assign
             this.RemoveEventListeners();
             g_PopupManager.RemoveTrackedPopup(this);
             this.OnClose();
-            react_dom__WEBPACK_IMPORTED_MODULE_1__.unmountComponentAtNode(
-              this.m_element
-            );
+            this.m_popup = undefined;
           }
           get browser_info() {
             return this.m_rgParams.target_browser;
@@ -69782,6 +70234,7 @@ object-assign
             // TODO: popup manager doesn't do much in mobile
             if (!{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD) {
               window.addEventListener("beforeunload", (event) => {
+                var _a;
                 this.m_bShuttingDown = true;
                 for (let fnCallback of this.m_rgShutdownCallbacks) fnCallback();
                 // popups will remove themselves from the map as they close, put them in a separate array to avoid any wonkiness.
@@ -69790,7 +70243,14 @@ object-assign
                   if (popup.BIsValid() && !popup.BIsClosed())
                     rgPopupsToClose.push(popup);
                 });
-                for (let popup of rgPopupsToClose) popup.Close();
+                for (let popup of rgPopupsToClose) {
+                  (_a = popup.window) === null || _a === void 0
+                    ? void 0
+                    : _a.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
+                        false
+                      );
+                  popup.Close();
+                }
                 if (this.m_bSaveRequired) {
                   this.SaveSavedDimensionStore();
                 }
@@ -69806,9 +70266,12 @@ object-assign
                   const styleSheetLinks =
                     shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.GetStyleSheetLinks();
                   this.m_mapPopups.forEach((popup) => {
-                    shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.AddMissingStylesheetsToWindow(
-                      popup.window,
-                      styleSheetLinks
+                    // @note Tom Bui & Al Farnsworth: we don't want to blow away styles sheets links in the popup
+                    // this was happening when the virtual keyboard was shown in chat, screwing up all the added friendsui styles
+                    shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.AddStylesheetsToDocument(
+                      popup.window.document,
+                      styleSheetLinks,
+                      false
                     );
                   });
                 });
@@ -69882,9 +70345,13 @@ object-assign
               rgQueryParams.push(
                 "browser=" + rgParams.target_browser.m_nBrowserID
               );
-              rgQueryParams.push(
-                "browserType=" + rgParams.target_browser.m_eBrowserType
-              );
+              if (rgParams.target_browser.m_eBrowserType) {
+                rgQueryParams.push(
+                  "browserType=" + rgParams.target_browser.m_eBrowserType
+                );
+              } else if (rgParams.browserType) {
+                rgQueryParams.push("browserType=" + rgParams.browserType);
+              }
               if (rgParams.availscreenwidth && rgParams.availscreenheight) {
                 rgQueryParams.push(
                   "screenavailwidth=" + rgParams.availscreenwidth
@@ -69923,7 +70390,10 @@ object-assign
             let strBodyClass = "";
             if (rgParams.body_class)
               strBodyClass = `class="${rgParams.body_class}"`;
-            let strPopupContent = `<!DOCTYPE html><html ${strHTMLClass}><head><title></title></head><body ${strBodyClass}><div id="popup_target"></div></body></html>`;
+            let strPopupClass = "";
+            if (rgParams.popup_class)
+              strPopupClass = `class="${rgParams.popup_class}"`;
+            let strPopupContent = `<!DOCTYPE html><html ${strHTMLClass}><head><title></title></head><body ${strBodyClass}><div id="popup_target" ${strPopupClass}></div></body></html>`;
             popup.document.write(strPopupContent);
             popup.document.title = title;
             shared_utils_domutils__WEBPACK_IMPORTED_MODULE_2__.AddMissingStylesheetsToWindow(
@@ -70300,3502 +70770,6 @@ object-assign
         /***/
       },
 
-    /***/ "../../../web_src/shared/js/steammessages/enums_pb.ts":
-      /*!************************************************************!*\
-  !*** ../../../web_src/shared/js/steammessages/enums_pb.ts ***!
-  \************************************************************/
-      /***/ (
-        __unused_webpack_module,
-        __webpack_exports__,
-        __webpack_require__
-      ) => {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ EACState: () => /* binding */ EACState,
-          /* harmony export */ EACStateToString: () =>
-            /* binding */ EACStateToString,
-          /* harmony export */ EBatteryState: () => /* binding */ EBatteryState,
-          /* harmony export */ EBatteryStateToString: () =>
-            /* binding */ EBatteryStateToString,
-          /* harmony export */ EBluetoothDeviceType: () =>
-            /* binding */ EBluetoothDeviceType,
-          /* harmony export */ EBluetoothDeviceTypeToString: () =>
-            /* binding */ EBluetoothDeviceTypeToString,
-          /* harmony export */ ECPUGovernor: () => /* binding */ ECPUGovernor,
-          /* harmony export */ ECPUGovernorToString: () =>
-            /* binding */ ECPUGovernorToString,
-          /* harmony export */ ECloudStoragePersistState: () =>
-            /* binding */ ECloudStoragePersistState,
-          /* harmony export */ ECloudStoragePersistStateToString: () =>
-            /* binding */ ECloudStoragePersistStateToString,
-          /* harmony export */ EColorProfile: () => /* binding */ EColorProfile,
-          /* harmony export */ EColorProfileToString: () =>
-            /* binding */ EColorProfileToString,
-          /* harmony export */ ECommunityItemClass: () =>
-            /* binding */ ECommunityItemClass,
-          /* harmony export */ ECommunityItemClassToString: () =>
-            /* binding */ ECommunityItemClassToString,
-          /* harmony export */ EContentCheckProvider: () =>
-            /* binding */ EContentCheckProvider,
-          /* harmony export */ EContentCheckProviderToString: () =>
-            /* binding */ EContentCheckProviderToString,
-          /* harmony export */ EGPUPerformanceLevel: () =>
-            /* binding */ EGPUPerformanceLevel,
-          /* harmony export */ EGPUPerformanceLevelToString: () =>
-            /* binding */ EGPUPerformanceLevelToString,
-          /* harmony export */ EGraphicsPerfOverlayLevel: () =>
-            /* binding */ EGraphicsPerfOverlayLevel,
-          /* harmony export */ EGraphicsPerfOverlayLevelToString: () =>
-            /* binding */ EGraphicsPerfOverlayLevelToString,
-          /* harmony export */ EOSBranch: () => /* binding */ EOSBranch,
-          /* harmony export */ EOSBranchToString: () =>
-            /* binding */ EOSBranchToString,
-          /* harmony export */ EPersonaStateFlag: () =>
-            /* binding */ EPersonaStateFlag,
-          /* harmony export */ EPersonaStateFlagToString: () =>
-            /* binding */ EPersonaStateFlagToString,
-          /* harmony export */ EProfileCustomizationType: () =>
-            /* binding */ EProfileCustomizationType,
-          /* harmony export */ EProfileCustomizationTypeToString: () =>
-            /* binding */ EProfileCustomizationTypeToString,
-          /* harmony export */ EProvideDeckFeedbackPreference: () =>
-            /* binding */ EProvideDeckFeedbackPreference,
-          /* harmony export */ EProvideDeckFeedbackPreferenceToString: () =>
-            /* binding */ EProvideDeckFeedbackPreferenceToString,
-          /* harmony export */ EPublishedFileInappropriateProvider: () =>
-            /* binding */ EPublishedFileInappropriateProvider,
-          /* harmony export */ EPublishedFileInappropriateProviderToString:
-            () => /* binding */ EPublishedFileInappropriateProviderToString,
-          /* harmony export */ EPublishedFileInappropriateResult: () =>
-            /* binding */ EPublishedFileInappropriateResult,
-          /* harmony export */ EPublishedFileInappropriateResultToString: () =>
-            /* binding */ EPublishedFileInappropriateResultToString,
-          /* harmony export */ EPublishedFileQueryType: () =>
-            /* binding */ EPublishedFileQueryType,
-          /* harmony export */ EPublishedFileQueryTypeToString: () =>
-            /* binding */ EPublishedFileQueryTypeToString,
-          /* harmony export */ EPublishedFileStorageSystem: () =>
-            /* binding */ EPublishedFileStorageSystem,
-          /* harmony export */ EPublishedFileStorageSystemToString: () =>
-            /* binding */ EPublishedFileStorageSystemToString,
-          /* harmony export */ ESDCardFormatStage: () =>
-            /* binding */ ESDCardFormatStage,
-          /* harmony export */ ESDCardFormatStageToString: () =>
-            /* binding */ ESDCardFormatStageToString,
-          /* harmony export */ EScalingFilter: () =>
-            /* binding */ EScalingFilter,
-          /* harmony export */ EScalingFilterToString: () =>
-            /* binding */ EScalingFilterToString,
-          /* harmony export */ ESessionPersistence: () =>
-            /* binding */ ESessionPersistence,
-          /* harmony export */ ESessionPersistenceToString: () =>
-            /* binding */ ESessionPersistenceToString,
-          /* harmony export */ ESteamDeckCompatibilityCategory: () =>
-            /* binding */ ESteamDeckCompatibilityCategory,
-          /* harmony export */ ESteamDeckCompatibilityCategoryToString: () =>
-            /* binding */ ESteamDeckCompatibilityCategoryToString,
-          /* harmony export */ ESteamDeckCompatibilityFeedback: () =>
-            /* binding */ ESteamDeckCompatibilityFeedback,
-          /* harmony export */ ESteamDeckCompatibilityFeedbackToString: () =>
-            /* binding */ ESteamDeckCompatibilityFeedbackToString,
-          /* harmony export */ ESteamDeckCompatibilityResultDisplayType: () =>
-            /* binding */ ESteamDeckCompatibilityResultDisplayType,
-          /* harmony export */ ESteamDeckCompatibilityResultDisplayTypeToString:
-            () =>
-              /* binding */ ESteamDeckCompatibilityResultDisplayTypeToString,
-          /* harmony export */ EStorageBlockContentType: () =>
-            /* binding */ EStorageBlockContentType,
-          /* harmony export */ EStorageBlockContentTypeToString: () =>
-            /* binding */ EStorageBlockContentTypeToString,
-          /* harmony export */ EStorageBlockFileSystemType: () =>
-            /* binding */ EStorageBlockFileSystemType,
-          /* harmony export */ EStorageBlockFileSystemTypeToString: () =>
-            /* binding */ EStorageBlockFileSystemTypeToString,
-          /* harmony export */ ESystemAudioChannel: () =>
-            /* binding */ ESystemAudioChannel,
-          /* harmony export */ ESystemAudioChannelToString: () =>
-            /* binding */ ESystemAudioChannelToString,
-          /* harmony export */ ESystemAudioDirection: () =>
-            /* binding */ ESystemAudioDirection,
-          /* harmony export */ ESystemAudioDirectionToString: () =>
-            /* binding */ ESystemAudioDirectionToString,
-          /* harmony export */ ESystemAudioPortDirection: () =>
-            /* binding */ ESystemAudioPortDirection,
-          /* harmony export */ ESystemAudioPortDirectionToString: () =>
-            /* binding */ ESystemAudioPortDirectionToString,
-          /* harmony export */ ESystemAudioPortType: () =>
-            /* binding */ ESystemAudioPortType,
-          /* harmony export */ ESystemAudioPortTypeToString: () =>
-            /* binding */ ESystemAudioPortTypeToString,
-          /* harmony export */ ESystemFanControlMode: () =>
-            /* binding */ ESystemFanControlMode,
-          /* harmony export */ ESystemFanControlModeToString: () =>
-            /* binding */ ESystemFanControlModeToString,
-          /* harmony export */ ESystemServiceState: () =>
-            /* binding */ ESystemServiceState,
-          /* harmony export */ ESystemServiceStateToString: () =>
-            /* binding */ ESystemServiceStateToString,
-          /* harmony export */ ETouchGesture: () => /* binding */ ETouchGesture,
-          /* harmony export */ ETouchGestureToString: () =>
-            /* binding */ ETouchGestureToString,
-          /* harmony export */ EUpdaterState: () => /* binding */ EUpdaterState,
-          /* harmony export */ EUpdaterStateToString: () =>
-            /* binding */ EUpdaterStateToString,
-          /* harmony export */ EUpdaterType: () => /* binding */ EUpdaterType,
-          /* harmony export */ EUpdaterTypeToString: () =>
-            /* binding */ EUpdaterTypeToString,
-          /* harmony export */
-        });
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! google-protobuf */ "./node_modules/google-protobuf/google-protobuf.js"
-          );
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0___default =
-          /*#__PURE__*/ __webpack_require__.n(
-            google_protobuf__WEBPACK_IMPORTED_MODULE_0__
-          );
-        /* harmony import */ var shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/common/protohelpers */ "../../../web_src/shared/js/common/protohelpers.ts"
-          );
-        /* tslint:disable */
-        // GENERATED FILE - generated from enums.proto
-
-        const jspb_Message =
-          google_protobuf__WEBPACK_IMPORTED_MODULE_0__.Message; // for better minification
-        var EPublishedFileQueryType;
-        (function (EPublishedFileQueryType) {
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByVote"
-            ] = 0)
-          ] = "k_PublishedFileQueryType_RankedByVote";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByPublicationDate"
-            ] = 1)
-          ] = "k_PublishedFileQueryType_RankedByPublicationDate";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate"
-            ] = 2)
-          ] = "k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByTrend"
-            ] = 3)
-          ] = "k_PublishedFileQueryType_RankedByTrend";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate"
-            ] = 4)
-          ] =
-            "k_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate"
-            ] = 5)
-          ] =
-            "k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByNumTimesReported"
-            ] = 6)
-          ] = "k_PublishedFileQueryType_RankedByNumTimesReported";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate"
-            ] = 7)
-          ] =
-            "k_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_NotYetRated"
-            ] = 8)
-          ] = "k_PublishedFileQueryType_NotYetRated";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions"
-            ] = 9)
-          ] = "k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByTotalVotesAsc"
-            ] = 10)
-          ] = "k_PublishedFileQueryType_RankedByTotalVotesAsc";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByVotesUp"
-            ] = 11)
-          ] = "k_PublishedFileQueryType_RankedByVotesUp";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByTextSearch"
-            ] = 12)
-          ] = "k_PublishedFileQueryType_RankedByTextSearch";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByPlaytimeTrend"
-            ] = 13)
-          ] = "k_PublishedFileQueryType_RankedByPlaytimeTrend";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByTotalPlaytime"
-            ] = 14)
-          ] = "k_PublishedFileQueryType_RankedByTotalPlaytime";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByAveragePlaytimeTrend"
-            ] = 15)
-          ] = "k_PublishedFileQueryType_RankedByAveragePlaytimeTrend";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime"
-            ] = 16)
-          ] = "k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend"
-            ] = 17)
-          ] = "k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions"
-            ] = 18)
-          ] = "k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByInappropriateContentRating"
-            ] = 19)
-          ] = "k_PublishedFileQueryType_RankedByInappropriateContentRating";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByBanContentCheck"
-            ] = 20)
-          ] = "k_PublishedFileQueryType_RankedByBanContentCheck";
-          EPublishedFileQueryType[
-            (EPublishedFileQueryType[
-              "k_PublishedFileQueryType_RankedByLastUpdatedDate"
-            ] = 21)
-          ] = "k_PublishedFileQueryType_RankedByLastUpdatedDate";
-        })(EPublishedFileQueryType || (EPublishedFileQueryType = {}));
-        function EPublishedFileQueryTypeToString(ePublishedFileQueryType) {
-          if (true) {
-            switch (ePublishedFileQueryType) {
-              case 0:
-                return "k_PublishedFileQueryType_RankedByVote";
-              case 1:
-                return "k_PublishedFileQueryType_RankedByPublicationDate";
-              case 2:
-                return "k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate";
-              case 3:
-                return "k_PublishedFileQueryType_RankedByTrend";
-              case 4:
-                return "k_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate";
-              case 5:
-                return "k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate";
-              case 6:
-                return "k_PublishedFileQueryType_RankedByNumTimesReported";
-              case 7:
-                return "k_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate";
-              case 8:
-                return "k_PublishedFileQueryType_NotYetRated";
-              case 9:
-                return "k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions";
-              case 10:
-                return "k_PublishedFileQueryType_RankedByTotalVotesAsc";
-              case 11:
-                return "k_PublishedFileQueryType_RankedByVotesUp";
-              case 12:
-                return "k_PublishedFileQueryType_RankedByTextSearch";
-              case 13:
-                return "k_PublishedFileQueryType_RankedByPlaytimeTrend";
-              case 14:
-                return "k_PublishedFileQueryType_RankedByTotalPlaytime";
-              case 15:
-                return "k_PublishedFileQueryType_RankedByAveragePlaytimeTrend";
-              case 16:
-                return "k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime";
-              case 17:
-                return "k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend";
-              case 18:
-                return "k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions";
-              case 19:
-                return "k_PublishedFileQueryType_RankedByInappropriateContentRating";
-              case 20:
-                return "k_PublishedFileQueryType_RankedByBanContentCheck";
-              case 21:
-                return "k_PublishedFileQueryType_RankedByLastUpdatedDate";
-            }
-          }
-          return (
-            "unknown EPublishedFileQueryType ( " +
-            ePublishedFileQueryType +
-            " )"
-          );
-        }
-        var EPublishedFileInappropriateProvider;
-        (function (EPublishedFileInappropriateProvider) {
-          EPublishedFileInappropriateProvider[
-            (EPublishedFileInappropriateProvider[
-              "k_EPublishedFileInappropriateProvider_Invalid"
-            ] = 0)
-          ] = "k_EPublishedFileInappropriateProvider_Invalid";
-          EPublishedFileInappropriateProvider[
-            (EPublishedFileInappropriateProvider[
-              "k_EPublishedFileInappropriateProvider_Google"
-            ] = 1)
-          ] = "k_EPublishedFileInappropriateProvider_Google";
-          EPublishedFileInappropriateProvider[
-            (EPublishedFileInappropriateProvider[
-              "k_EPublishedFileInappropriateProvider_Amazon"
-            ] = 2)
-          ] = "k_EPublishedFileInappropriateProvider_Amazon";
-        })(
-          EPublishedFileInappropriateProvider ||
-            (EPublishedFileInappropriateProvider = {})
-        );
-        function EPublishedFileInappropriateProviderToString(
-          ePublishedFileInappropriateProvider
-        ) {
-          if (true) {
-            switch (ePublishedFileInappropriateProvider) {
-              case 0:
-                return "k_EPublishedFileInappropriateProvider_Invalid";
-              case 1:
-                return "k_EPublishedFileInappropriateProvider_Google";
-              case 2:
-                return "k_EPublishedFileInappropriateProvider_Amazon";
-            }
-          }
-          return (
-            "unknown EPublishedFileInappropriateProvider ( " +
-            ePublishedFileInappropriateProvider +
-            " )"
-          );
-        }
-        var EPublishedFileInappropriateResult;
-        (function (EPublishedFileInappropriateResult) {
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_NotScanned"
-            ] = 0)
-          ] = "k_EPublishedFileInappropriateResult_NotScanned";
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_VeryUnlikely"
-            ] = 1)
-          ] = "k_EPublishedFileInappropriateResult_VeryUnlikely";
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_Unlikely"
-            ] = 30)
-          ] = "k_EPublishedFileInappropriateResult_Unlikely";
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_Possible"
-            ] = 50)
-          ] = "k_EPublishedFileInappropriateResult_Possible";
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_Likely"
-            ] = 75)
-          ] = "k_EPublishedFileInappropriateResult_Likely";
-          EPublishedFileInappropriateResult[
-            (EPublishedFileInappropriateResult[
-              "k_EPublishedFileInappropriateResult_VeryLikely"
-            ] = 100)
-          ] = "k_EPublishedFileInappropriateResult_VeryLikely";
-        })(
-          EPublishedFileInappropriateResult ||
-            (EPublishedFileInappropriateResult = {})
-        );
-        function EPublishedFileInappropriateResultToString(
-          ePublishedFileInappropriateResult
-        ) {
-          if (true) {
-            switch (ePublishedFileInappropriateResult) {
-              case 0:
-                return "k_EPublishedFileInappropriateResult_NotScanned";
-              case 1:
-                return "k_EPublishedFileInappropriateResult_VeryUnlikely";
-              case 30:
-                return "k_EPublishedFileInappropriateResult_Unlikely";
-              case 50:
-                return "k_EPublishedFileInappropriateResult_Possible";
-              case 75:
-                return "k_EPublishedFileInappropriateResult_Likely";
-              case 100:
-                return "k_EPublishedFileInappropriateResult_VeryLikely";
-            }
-          }
-          return (
-            "unknown EPublishedFileInappropriateResult ( " +
-            ePublishedFileInappropriateResult +
-            " )"
-          );
-        }
-        var EPersonaStateFlag;
-        (function (EPersonaStateFlag) {
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_HasRichPresence"] = 1)
-          ] = "k_EPersonaStateFlag_HasRichPresence";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_InJoinableGame"] = 2)
-          ] = "k_EPersonaStateFlag_InJoinableGame";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_Golden"] = 4)
-          ] = "k_EPersonaStateFlag_Golden";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_RemotePlayTogether"] = 8)
-          ] = "k_EPersonaStateFlag_RemotePlayTogether";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_ClientTypeWeb"] = 256)
-          ] = "k_EPersonaStateFlag_ClientTypeWeb";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_ClientTypeMobile"] = 512)
-          ] = "k_EPersonaStateFlag_ClientTypeMobile";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_ClientTypeTenfoot"] = 1024)
-          ] = "k_EPersonaStateFlag_ClientTypeTenfoot";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_ClientTypeVR"] = 2048)
-          ] = "k_EPersonaStateFlag_ClientTypeVR";
-          EPersonaStateFlag[
-            (EPersonaStateFlag["k_EPersonaStateFlag_LaunchTypeGamepad"] = 4096)
-          ] = "k_EPersonaStateFlag_LaunchTypeGamepad";
-          EPersonaStateFlag[
-            (EPersonaStateFlag[
-              "k_EPersonaStateFlag_LaunchTypeCompatTool"
-            ] = 8192)
-          ] = "k_EPersonaStateFlag_LaunchTypeCompatTool";
-        })(EPersonaStateFlag || (EPersonaStateFlag = {}));
-        function EPersonaStateFlagToString(ePersonaStateFlag) {
-          if (true) {
-            switch (ePersonaStateFlag) {
-              case 1:
-                return "k_EPersonaStateFlag_HasRichPresence";
-              case 2:
-                return "k_EPersonaStateFlag_InJoinableGame";
-              case 4:
-                return "k_EPersonaStateFlag_Golden";
-              case 8:
-                return "k_EPersonaStateFlag_RemotePlayTogether";
-              case 256:
-                return "k_EPersonaStateFlag_ClientTypeWeb";
-              case 512:
-                return "k_EPersonaStateFlag_ClientTypeMobile";
-              case 1024:
-                return "k_EPersonaStateFlag_ClientTypeTenfoot";
-              case 2048:
-                return "k_EPersonaStateFlag_ClientTypeVR";
-              case 4096:
-                return "k_EPersonaStateFlag_LaunchTypeGamepad";
-              case 8192:
-                return "k_EPersonaStateFlag_LaunchTypeCompatTool";
-            }
-          }
-          return "unknown EPersonaStateFlag ( " + ePersonaStateFlag + " )";
-        }
-        var EContentCheckProvider;
-        (function (EContentCheckProvider) {
-          EContentCheckProvider[
-            (EContentCheckProvider["k_EContentCheckProvider_Invalid"] = 0)
-          ] = "k_EContentCheckProvider_Invalid";
-          EContentCheckProvider[
-            (EContentCheckProvider["k_EContentCheckProvider_Google"] = 1)
-          ] = "k_EContentCheckProvider_Google";
-          EContentCheckProvider[
-            (EContentCheckProvider["k_EContentCheckProvider_Amazon"] = 2)
-          ] = "k_EContentCheckProvider_Amazon";
-          EContentCheckProvider[
-            (EContentCheckProvider["k_EContentCheckProvider_Local"] = 3)
-          ] = "k_EContentCheckProvider_Local";
-        })(EContentCheckProvider || (EContentCheckProvider = {}));
-        function EContentCheckProviderToString(eContentCheckProvider) {
-          if (true) {
-            switch (eContentCheckProvider) {
-              case 0:
-                return "k_EContentCheckProvider_Invalid";
-              case 1:
-                return "k_EContentCheckProvider_Google";
-              case 2:
-                return "k_EContentCheckProvider_Amazon";
-              case 3:
-                return "k_EContentCheckProvider_Local";
-            }
-          }
-          return (
-            "unknown EContentCheckProvider ( " + eContentCheckProvider + " )"
-          );
-        }
-        var EProfileCustomizationType;
-        (function (EProfileCustomizationType) {
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeInvalid"
-            ] = 0)
-          ] = "k_EProfileCustomizationTypeInvalid";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeRareAchievementShowcase"
-            ] = 1)
-          ] = "k_EProfileCustomizationTypeRareAchievementShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeGameCollector"
-            ] = 2)
-          ] = "k_EProfileCustomizationTypeGameCollector";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeItemShowcase"
-            ] = 3)
-          ] = "k_EProfileCustomizationTypeItemShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeTradeShowcase"
-            ] = 4)
-          ] = "k_EProfileCustomizationTypeTradeShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType["k_EProfileCustomizationTypeBadges"] = 5)
-          ] = "k_EProfileCustomizationTypeBadges";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeFavoriteGame"
-            ] = 6)
-          ] = "k_EProfileCustomizationTypeFavoriteGame";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeScreenshotShowcase"
-            ] = 7)
-          ] = "k_EProfileCustomizationTypeScreenshotShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeCustomText"
-            ] = 8)
-          ] = "k_EProfileCustomizationTypeCustomText";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeFavoriteGroup"
-            ] = 9)
-          ] = "k_EProfileCustomizationTypeFavoriteGroup";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeRecommendation"
-            ] = 10)
-          ] = "k_EProfileCustomizationTypeRecommendation";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeWorkshopItem"
-            ] = 11)
-          ] = "k_EProfileCustomizationTypeWorkshopItem";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeMyWorkshop"
-            ] = 12)
-          ] = "k_EProfileCustomizationTypeMyWorkshop";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeArtworkShowcase"
-            ] = 13)
-          ] = "k_EProfileCustomizationTypeArtworkShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeVideoShowcase"
-            ] = 14)
-          ] = "k_EProfileCustomizationTypeVideoShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeGuides"
-            ] = 15)
-          ] = "k_EProfileCustomizationTypeGuides";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeMyGuides"
-            ] = 16)
-          ] = "k_EProfileCustomizationTypeMyGuides";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeAchievements"
-            ] = 17)
-          ] = "k_EProfileCustomizationTypeAchievements";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeGreenlight"
-            ] = 18)
-          ] = "k_EProfileCustomizationTypeGreenlight";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeMyGreenlight"
-            ] = 19)
-          ] = "k_EProfileCustomizationTypeMyGreenlight";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeSalien"
-            ] = 20)
-          ] = "k_EProfileCustomizationTypeSalien";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeLoyaltyRewardReactions"
-            ] = 21)
-          ] = "k_EProfileCustomizationTypeLoyaltyRewardReactions";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeSingleArtworkShowcase"
-            ] = 22)
-          ] = "k_EProfileCustomizationTypeSingleArtworkShowcase";
-          EProfileCustomizationType[
-            (EProfileCustomizationType[
-              "k_EProfileCustomizationTypeAchievementsCompletionist"
-            ] = 23)
-          ] = "k_EProfileCustomizationTypeAchievementsCompletionist";
-        })(EProfileCustomizationType || (EProfileCustomizationType = {}));
-        function EProfileCustomizationTypeToString(eProfileCustomizationType) {
-          if (true) {
-            switch (eProfileCustomizationType) {
-              case 0:
-                return "k_EProfileCustomizationTypeInvalid";
-              case 1:
-                return "k_EProfileCustomizationTypeRareAchievementShowcase";
-              case 2:
-                return "k_EProfileCustomizationTypeGameCollector";
-              case 3:
-                return "k_EProfileCustomizationTypeItemShowcase";
-              case 4:
-                return "k_EProfileCustomizationTypeTradeShowcase";
-              case 5:
-                return "k_EProfileCustomizationTypeBadges";
-              case 6:
-                return "k_EProfileCustomizationTypeFavoriteGame";
-              case 7:
-                return "k_EProfileCustomizationTypeScreenshotShowcase";
-              case 8:
-                return "k_EProfileCustomizationTypeCustomText";
-              case 9:
-                return "k_EProfileCustomizationTypeFavoriteGroup";
-              case 10:
-                return "k_EProfileCustomizationTypeRecommendation";
-              case 11:
-                return "k_EProfileCustomizationTypeWorkshopItem";
-              case 12:
-                return "k_EProfileCustomizationTypeMyWorkshop";
-              case 13:
-                return "k_EProfileCustomizationTypeArtworkShowcase";
-              case 14:
-                return "k_EProfileCustomizationTypeVideoShowcase";
-              case 15:
-                return "k_EProfileCustomizationTypeGuides";
-              case 16:
-                return "k_EProfileCustomizationTypeMyGuides";
-              case 17:
-                return "k_EProfileCustomizationTypeAchievements";
-              case 18:
-                return "k_EProfileCustomizationTypeGreenlight";
-              case 19:
-                return "k_EProfileCustomizationTypeMyGreenlight";
-              case 20:
-                return "k_EProfileCustomizationTypeSalien";
-              case 21:
-                return "k_EProfileCustomizationTypeLoyaltyRewardReactions";
-              case 22:
-                return "k_EProfileCustomizationTypeSingleArtworkShowcase";
-              case 23:
-                return "k_EProfileCustomizationTypeAchievementsCompletionist";
-            }
-          }
-          return (
-            "unknown EProfileCustomizationType ( " +
-            eProfileCustomizationType +
-            " )"
-          );
-        }
-        var EPublishedFileStorageSystem;
-        (function (EPublishedFileStorageSystem) {
-          EPublishedFileStorageSystem[
-            (EPublishedFileStorageSystem[
-              "k_EPublishedFileStorageSystemInvalid"
-            ] = 0)
-          ] = "k_EPublishedFileStorageSystemInvalid";
-          EPublishedFileStorageSystem[
-            (EPublishedFileStorageSystem[
-              "k_EPublishedFileStorageSystemLegacyCloud"
-            ] = 1)
-          ] = "k_EPublishedFileStorageSystemLegacyCloud";
-          EPublishedFileStorageSystem[
-            (EPublishedFileStorageSystem[
-              "k_EPublishedFileStorageSystemDepot"
-            ] = 2)
-          ] = "k_EPublishedFileStorageSystemDepot";
-          EPublishedFileStorageSystem[
-            (EPublishedFileStorageSystem[
-              "k_EPublishedFileStorageSystemUGCCloud"
-            ] = 3)
-          ] = "k_EPublishedFileStorageSystemUGCCloud";
-        })(EPublishedFileStorageSystem || (EPublishedFileStorageSystem = {}));
-        function EPublishedFileStorageSystemToString(
-          ePublishedFileStorageSystem
-        ) {
-          if (true) {
-            switch (ePublishedFileStorageSystem) {
-              case 0:
-                return "k_EPublishedFileStorageSystemInvalid";
-              case 1:
-                return "k_EPublishedFileStorageSystemLegacyCloud";
-              case 2:
-                return "k_EPublishedFileStorageSystemDepot";
-              case 3:
-                return "k_EPublishedFileStorageSystemUGCCloud";
-            }
-          }
-          return (
-            "unknown EPublishedFileStorageSystem ( " +
-            ePublishedFileStorageSystem +
-            " )"
-          );
-        }
-        var ECloudStoragePersistState;
-        (function (ECloudStoragePersistState) {
-          ECloudStoragePersistState[
-            (ECloudStoragePersistState[
-              "k_ECloudStoragePersistStatePersisted"
-            ] = 0)
-          ] = "k_ECloudStoragePersistStatePersisted";
-          ECloudStoragePersistState[
-            (ECloudStoragePersistState[
-              "k_ECloudStoragePersistStateForgotten"
-            ] = 1)
-          ] = "k_ECloudStoragePersistStateForgotten";
-          ECloudStoragePersistState[
-            (ECloudStoragePersistState[
-              "k_ECloudStoragePersistStateDeleted"
-            ] = 2)
-          ] = "k_ECloudStoragePersistStateDeleted";
-        })(ECloudStoragePersistState || (ECloudStoragePersistState = {}));
-        function ECloudStoragePersistStateToString(eCloudStoragePersistState) {
-          if (true) {
-            switch (eCloudStoragePersistState) {
-              case 0:
-                return "k_ECloudStoragePersistStatePersisted";
-              case 1:
-                return "k_ECloudStoragePersistStateForgotten";
-              case 2:
-                return "k_ECloudStoragePersistStateDeleted";
-            }
-          }
-          return (
-            "unknown ECloudStoragePersistState ( " +
-            eCloudStoragePersistState +
-            " )"
-          );
-        }
-        var ESDCardFormatStage;
-        (function (ESDCardFormatStage) {
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Invalid"] = 0)
-          ] = "k_ESDCardFormatStage_Invalid";
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Starting"] = 1)
-          ] = "k_ESDCardFormatStage_Starting";
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Testing"] = 2)
-          ] = "k_ESDCardFormatStage_Testing";
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Rescuing"] = 3)
-          ] = "k_ESDCardFormatStage_Rescuing";
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Formatting"] = 4)
-          ] = "k_ESDCardFormatStage_Formatting";
-          ESDCardFormatStage[
-            (ESDCardFormatStage["k_ESDCardFormatStage_Finalizing"] = 5)
-          ] = "k_ESDCardFormatStage_Finalizing";
-        })(ESDCardFormatStage || (ESDCardFormatStage = {}));
-        function ESDCardFormatStageToString(eSDCardFormatStage) {
-          if (true) {
-            switch (eSDCardFormatStage) {
-              case 0:
-                return "k_ESDCardFormatStage_Invalid";
-              case 1:
-                return "k_ESDCardFormatStage_Starting";
-              case 2:
-                return "k_ESDCardFormatStage_Testing";
-              case 3:
-                return "k_ESDCardFormatStage_Rescuing";
-              case 4:
-                return "k_ESDCardFormatStage_Formatting";
-              case 5:
-                return "k_ESDCardFormatStage_Finalizing";
-            }
-          }
-          return "unknown ESDCardFormatStage ( " + eSDCardFormatStage + " )";
-        }
-        var ESystemFanControlMode;
-        (function (ESystemFanControlMode) {
-          ESystemFanControlMode[
-            (ESystemFanControlMode["k_SystemFanControlMode_Invalid"] = 0)
-          ] = "k_SystemFanControlMode_Invalid";
-          ESystemFanControlMode[
-            (ESystemFanControlMode["k_SystemFanControlMode_Disabled"] = 1)
-          ] = "k_SystemFanControlMode_Disabled";
-          ESystemFanControlMode[
-            (ESystemFanControlMode["k_SystemFanControlMode_Default"] = 2)
-          ] = "k_SystemFanControlMode_Default";
-        })(ESystemFanControlMode || (ESystemFanControlMode = {}));
-        function ESystemFanControlModeToString(eSystemFanControlMode) {
-          if (true) {
-            switch (eSystemFanControlMode) {
-              case 0:
-                return "k_SystemFanControlMode_Invalid";
-              case 1:
-                return "k_SystemFanControlMode_Disabled";
-              case 2:
-                return "k_SystemFanControlMode_Default";
-            }
-          }
-          return (
-            "unknown ESystemFanControlMode ( " + eSystemFanControlMode + " )"
-          );
-        }
-        var EColorProfile;
-        (function (EColorProfile) {
-          EColorProfile[(EColorProfile["k_EColorProfile_Invalid"] = 0)] =
-            "k_EColorProfile_Invalid";
-          EColorProfile[(EColorProfile["k_EColorProfile_Native"] = 1)] =
-            "k_EColorProfile_Native";
-          EColorProfile[(EColorProfile["k_EColorProfile_Standard"] = 2)] =
-            "k_EColorProfile_Standard";
-          EColorProfile[(EColorProfile["k_EColorProfile_Vivid"] = 3)] =
-            "k_EColorProfile_Vivid";
-        })(EColorProfile || (EColorProfile = {}));
-        function EColorProfileToString(eColorProfile) {
-          if (true) {
-            switch (eColorProfile) {
-              case 0:
-                return "k_EColorProfile_Invalid";
-              case 1:
-                return "k_EColorProfile_Native";
-              case 2:
-                return "k_EColorProfile_Standard";
-              case 3:
-                return "k_EColorProfile_Vivid";
-            }
-          }
-          return "unknown EColorProfile ( " + eColorProfile + " )";
-        }
-        var EBluetoothDeviceType;
-        (function (EBluetoothDeviceType) {
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Invalid"] = 0)
-          ] = "k_BluetoothDeviceType_Invalid";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Unknown"] = 1)
-          ] = "k_BluetoothDeviceType_Unknown";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Phone"] = 2)
-          ] = "k_BluetoothDeviceType_Phone";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Computer"] = 3)
-          ] = "k_BluetoothDeviceType_Computer";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Headset"] = 4)
-          ] = "k_BluetoothDeviceType_Headset";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Headphones"] = 5)
-          ] = "k_BluetoothDeviceType_Headphones";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Speakers"] = 6)
-          ] = "k_BluetoothDeviceType_Speakers";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_OtherAudio"] = 7)
-          ] = "k_BluetoothDeviceType_OtherAudio";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Mouse"] = 8)
-          ] = "k_BluetoothDeviceType_Mouse";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Joystick"] = 9)
-          ] = "k_BluetoothDeviceType_Joystick";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Gamepad"] = 10)
-          ] = "k_BluetoothDeviceType_Gamepad";
-          EBluetoothDeviceType[
-            (EBluetoothDeviceType["k_BluetoothDeviceType_Keyboard"] = 11)
-          ] = "k_BluetoothDeviceType_Keyboard";
-        })(EBluetoothDeviceType || (EBluetoothDeviceType = {}));
-        function EBluetoothDeviceTypeToString(eBluetoothDeviceType) {
-          if (true) {
-            switch (eBluetoothDeviceType) {
-              case 0:
-                return "k_BluetoothDeviceType_Invalid";
-              case 1:
-                return "k_BluetoothDeviceType_Unknown";
-              case 2:
-                return "k_BluetoothDeviceType_Phone";
-              case 3:
-                return "k_BluetoothDeviceType_Computer";
-              case 4:
-                return "k_BluetoothDeviceType_Headset";
-              case 5:
-                return "k_BluetoothDeviceType_Headphones";
-              case 6:
-                return "k_BluetoothDeviceType_Speakers";
-              case 7:
-                return "k_BluetoothDeviceType_OtherAudio";
-              case 8:
-                return "k_BluetoothDeviceType_Mouse";
-              case 9:
-                return "k_BluetoothDeviceType_Joystick";
-              case 10:
-                return "k_BluetoothDeviceType_Gamepad";
-              case 11:
-                return "k_BluetoothDeviceType_Keyboard";
-            }
-          }
-          return (
-            "unknown EBluetoothDeviceType ( " + eBluetoothDeviceType + " )"
-          );
-        }
-        var ESystemAudioDirection;
-        (function (ESystemAudioDirection) {
-          ESystemAudioDirection[
-            (ESystemAudioDirection["k_SystemAudioDirection_Invalid"] = 0)
-          ] = "k_SystemAudioDirection_Invalid";
-          ESystemAudioDirection[
-            (ESystemAudioDirection["k_SystemAudioDirection_Input"] = 1)
-          ] = "k_SystemAudioDirection_Input";
-          ESystemAudioDirection[
-            (ESystemAudioDirection["k_SystemAudioDirection_Output"] = 2)
-          ] = "k_SystemAudioDirection_Output";
-        })(ESystemAudioDirection || (ESystemAudioDirection = {}));
-        function ESystemAudioDirectionToString(eSystemAudioDirection) {
-          if (true) {
-            switch (eSystemAudioDirection) {
-              case 0:
-                return "k_SystemAudioDirection_Invalid";
-              case 1:
-                return "k_SystemAudioDirection_Input";
-              case 2:
-                return "k_SystemAudioDirection_Output";
-            }
-          }
-          return (
-            "unknown ESystemAudioDirection ( " + eSystemAudioDirection + " )"
-          );
-        }
-        var ESystemAudioChannel;
-        (function (ESystemAudioChannel) {
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_Invalid"] = 0)
-          ] = "k_SystemAudioChannel_Invalid";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_Aggregated"] = 1)
-          ] = "k_SystemAudioChannel_Aggregated";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_FrontLeft"] = 2)
-          ] = "k_SystemAudioChannel_FrontLeft";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_FrontRight"] = 3)
-          ] = "k_SystemAudioChannel_FrontRight";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_LFE"] = 4)
-          ] = "k_SystemAudioChannel_LFE";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_BackLeft"] = 5)
-          ] = "k_SystemAudioChannel_BackLeft";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_BackRight"] = 6)
-          ] = "k_SystemAudioChannel_BackRight";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_FrontCenter"] = 7)
-          ] = "k_SystemAudioChannel_FrontCenter";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_Unknown"] = 8)
-          ] = "k_SystemAudioChannel_Unknown";
-          ESystemAudioChannel[
-            (ESystemAudioChannel["k_SystemAudioChannel_Mono"] = 9)
-          ] = "k_SystemAudioChannel_Mono";
-        })(ESystemAudioChannel || (ESystemAudioChannel = {}));
-        function ESystemAudioChannelToString(eSystemAudioChannel) {
-          if (true) {
-            switch (eSystemAudioChannel) {
-              case 0:
-                return "k_SystemAudioChannel_Invalid";
-              case 1:
-                return "k_SystemAudioChannel_Aggregated";
-              case 2:
-                return "k_SystemAudioChannel_FrontLeft";
-              case 3:
-                return "k_SystemAudioChannel_FrontRight";
-              case 4:
-                return "k_SystemAudioChannel_LFE";
-              case 5:
-                return "k_SystemAudioChannel_BackLeft";
-              case 6:
-                return "k_SystemAudioChannel_BackRight";
-              case 7:
-                return "k_SystemAudioChannel_FrontCenter";
-              case 8:
-                return "k_SystemAudioChannel_Unknown";
-              case 9:
-                return "k_SystemAudioChannel_Mono";
-            }
-          }
-          return "unknown ESystemAudioChannel ( " + eSystemAudioChannel + " )";
-        }
-        var ESystemAudioPortType;
-        (function (ESystemAudioPortType) {
-          ESystemAudioPortType[
-            (ESystemAudioPortType["k_SystemAudioPortType_Invalid"] = 0)
-          ] = "k_SystemAudioPortType_Invalid";
-          ESystemAudioPortType[
-            (ESystemAudioPortType["k_SystemAudioPortType_Unknown"] = 1)
-          ] = "k_SystemAudioPortType_Unknown";
-          ESystemAudioPortType[
-            (ESystemAudioPortType["k_SystemAudioPortType_Audio32f"] = 2)
-          ] = "k_SystemAudioPortType_Audio32f";
-          ESystemAudioPortType[
-            (ESystemAudioPortType["k_SystemAudioPortType_Midi8b"] = 3)
-          ] = "k_SystemAudioPortType_Midi8b";
-          ESystemAudioPortType[
-            (ESystemAudioPortType["k_SystemAudioPortType_Video32RGBA"] = 4)
-          ] = "k_SystemAudioPortType_Video32RGBA";
-        })(ESystemAudioPortType || (ESystemAudioPortType = {}));
-        function ESystemAudioPortTypeToString(eSystemAudioPortType) {
-          if (true) {
-            switch (eSystemAudioPortType) {
-              case 0:
-                return "k_SystemAudioPortType_Invalid";
-              case 1:
-                return "k_SystemAudioPortType_Unknown";
-              case 2:
-                return "k_SystemAudioPortType_Audio32f";
-              case 3:
-                return "k_SystemAudioPortType_Midi8b";
-              case 4:
-                return "k_SystemAudioPortType_Video32RGBA";
-            }
-          }
-          return (
-            "unknown ESystemAudioPortType ( " + eSystemAudioPortType + " )"
-          );
-        }
-        var ESystemAudioPortDirection;
-        (function (ESystemAudioPortDirection) {
-          ESystemAudioPortDirection[
-            (ESystemAudioPortDirection[
-              "k_SystemAudioPortDirection_Invalid"
-            ] = 0)
-          ] = "k_SystemAudioPortDirection_Invalid";
-          ESystemAudioPortDirection[
-            (ESystemAudioPortDirection["k_SystemAudioPortDirection_Input"] = 1)
-          ] = "k_SystemAudioPortDirection_Input";
-          ESystemAudioPortDirection[
-            (ESystemAudioPortDirection["k_SystemAudioPortDirection_Output"] = 2)
-          ] = "k_SystemAudioPortDirection_Output";
-        })(ESystemAudioPortDirection || (ESystemAudioPortDirection = {}));
-        function ESystemAudioPortDirectionToString(eSystemAudioPortDirection) {
-          if (true) {
-            switch (eSystemAudioPortDirection) {
-              case 0:
-                return "k_SystemAudioPortDirection_Invalid";
-              case 1:
-                return "k_SystemAudioPortDirection_Input";
-              case 2:
-                return "k_SystemAudioPortDirection_Output";
-            }
-          }
-          return (
-            "unknown ESystemAudioPortDirection ( " +
-            eSystemAudioPortDirection +
-            " )"
-          );
-        }
-        var ESystemServiceState;
-        (function (ESystemServiceState) {
-          ESystemServiceState[
-            (ESystemServiceState["k_ESystemServiceState_Unavailable"] = 0)
-          ] = "k_ESystemServiceState_Unavailable";
-          ESystemServiceState[
-            (ESystemServiceState["k_ESystemServiceState_Disabled"] = 1)
-          ] = "k_ESystemServiceState_Disabled";
-          ESystemServiceState[
-            (ESystemServiceState["k_ESystemServiceState_Enabled"] = 2)
-          ] = "k_ESystemServiceState_Enabled";
-        })(ESystemServiceState || (ESystemServiceState = {}));
-        function ESystemServiceStateToString(eSystemServiceState) {
-          if (true) {
-            switch (eSystemServiceState) {
-              case 0:
-                return "k_ESystemServiceState_Unavailable";
-              case 1:
-                return "k_ESystemServiceState_Disabled";
-              case 2:
-                return "k_ESystemServiceState_Enabled";
-            }
-          }
-          return "unknown ESystemServiceState ( " + eSystemServiceState + " )";
-        }
-        var EGraphicsPerfOverlayLevel;
-        (function (EGraphicsPerfOverlayLevel) {
-          EGraphicsPerfOverlayLevel[
-            (EGraphicsPerfOverlayLevel[
-              "k_EGraphicsPerfOverlayLevel_Hidden"
-            ] = 0)
-          ] = "k_EGraphicsPerfOverlayLevel_Hidden";
-          EGraphicsPerfOverlayLevel[
-            (EGraphicsPerfOverlayLevel["k_EGraphicsPerfOverlayLevel_Basic"] = 1)
-          ] = "k_EGraphicsPerfOverlayLevel_Basic";
-          EGraphicsPerfOverlayLevel[
-            (EGraphicsPerfOverlayLevel[
-              "k_EGraphicsPerfOverlayLevel_Medium"
-            ] = 2)
-          ] = "k_EGraphicsPerfOverlayLevel_Medium";
-          EGraphicsPerfOverlayLevel[
-            (EGraphicsPerfOverlayLevel["k_EGraphicsPerfOverlayLevel_Full"] = 3)
-          ] = "k_EGraphicsPerfOverlayLevel_Full";
-          EGraphicsPerfOverlayLevel[
-            (EGraphicsPerfOverlayLevel[
-              "k_EGraphicsPerfOverlayLevel_Minimal"
-            ] = 4)
-          ] = "k_EGraphicsPerfOverlayLevel_Minimal";
-        })(EGraphicsPerfOverlayLevel || (EGraphicsPerfOverlayLevel = {}));
-        function EGraphicsPerfOverlayLevelToString(eGraphicsPerfOverlayLevel) {
-          if (true) {
-            switch (eGraphicsPerfOverlayLevel) {
-              case 0:
-                return "k_EGraphicsPerfOverlayLevel_Hidden";
-              case 1:
-                return "k_EGraphicsPerfOverlayLevel_Basic";
-              case 2:
-                return "k_EGraphicsPerfOverlayLevel_Medium";
-              case 3:
-                return "k_EGraphicsPerfOverlayLevel_Full";
-              case 4:
-                return "k_EGraphicsPerfOverlayLevel_Minimal";
-            }
-          }
-          return (
-            "unknown EGraphicsPerfOverlayLevel ( " +
-            eGraphicsPerfOverlayLevel +
-            " )"
-          );
-        }
-        var EGPUPerformanceLevel;
-        (function (EGPUPerformanceLevel) {
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_Invalid"] = 0)
-          ] = "k_EGPUPerformanceLevel_Invalid";
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_Auto"] = 1)
-          ] = "k_EGPUPerformanceLevel_Auto";
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_Manual"] = 2)
-          ] = "k_EGPUPerformanceLevel_Manual";
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_Low"] = 3)
-          ] = "k_EGPUPerformanceLevel_Low";
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_High"] = 4)
-          ] = "k_EGPUPerformanceLevel_High";
-          EGPUPerformanceLevel[
-            (EGPUPerformanceLevel["k_EGPUPerformanceLevel_Profiling"] = 5)
-          ] = "k_EGPUPerformanceLevel_Profiling";
-        })(EGPUPerformanceLevel || (EGPUPerformanceLevel = {}));
-        function EGPUPerformanceLevelToString(eGPUPerformanceLevel) {
-          if (true) {
-            switch (eGPUPerformanceLevel) {
-              case 0:
-                return "k_EGPUPerformanceLevel_Invalid";
-              case 1:
-                return "k_EGPUPerformanceLevel_Auto";
-              case 2:
-                return "k_EGPUPerformanceLevel_Manual";
-              case 3:
-                return "k_EGPUPerformanceLevel_Low";
-              case 4:
-                return "k_EGPUPerformanceLevel_High";
-              case 5:
-                return "k_EGPUPerformanceLevel_Profiling";
-            }
-          }
-          return (
-            "unknown EGPUPerformanceLevel ( " + eGPUPerformanceLevel + " )"
-          );
-        }
-        var EScalingFilter;
-        (function (EScalingFilter) {
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_Invalid"] = 0)] =
-            "k_EScalingFilter_Invalid";
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_FSR"] = 1)] =
-            "k_EScalingFilter_FSR";
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_Nearest"] = 2)] =
-            "k_EScalingFilter_Nearest";
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_Integer"] = 3)] =
-            "k_EScalingFilter_Integer";
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_Linear"] = 4)] =
-            "k_EScalingFilter_Linear";
-          EScalingFilter[(EScalingFilter["k_EScalingFilter_NIS"] = 5)] =
-            "k_EScalingFilter_NIS";
-        })(EScalingFilter || (EScalingFilter = {}));
-        function EScalingFilterToString(eScalingFilter) {
-          if (true) {
-            switch (eScalingFilter) {
-              case 0:
-                return "k_EScalingFilter_Invalid";
-              case 1:
-                return "k_EScalingFilter_FSR";
-              case 2:
-                return "k_EScalingFilter_Nearest";
-              case 3:
-                return "k_EScalingFilter_Integer";
-              case 4:
-                return "k_EScalingFilter_Linear";
-              case 5:
-                return "k_EScalingFilter_NIS";
-            }
-          }
-          return "unknown EScalingFilter ( " + eScalingFilter + " )";
-        }
-        var ECPUGovernor;
-        (function (ECPUGovernor) {
-          ECPUGovernor[(ECPUGovernor["k_ECPUGovernor_Invalid"] = 0)] =
-            "k_ECPUGovernor_Invalid";
-          ECPUGovernor[(ECPUGovernor["k_ECPUGovernor_Perf"] = 1)] =
-            "k_ECPUGovernor_Perf";
-          ECPUGovernor[(ECPUGovernor["k_ECPUGovernor_Powersave"] = 2)] =
-            "k_ECPUGovernor_Powersave";
-          ECPUGovernor[(ECPUGovernor["k_ECPUGovernor_Manual"] = 3)] =
-            "k_ECPUGovernor_Manual";
-        })(ECPUGovernor || (ECPUGovernor = {}));
-        function ECPUGovernorToString(eCPUGovernor) {
-          if (true) {
-            switch (eCPUGovernor) {
-              case 0:
-                return "k_ECPUGovernor_Invalid";
-              case 1:
-                return "k_ECPUGovernor_Perf";
-              case 2:
-                return "k_ECPUGovernor_Powersave";
-              case 3:
-                return "k_ECPUGovernor_Manual";
-            }
-          }
-          return "unknown ECPUGovernor ( " + eCPUGovernor + " )";
-        }
-        var EUpdaterType;
-        (function (EUpdaterType) {
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Invalid"] = 0)] =
-            "k_EUpdaterType_Invalid";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Client"] = 1)] =
-            "k_EUpdaterType_Client";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_OS"] = 2)] =
-            "k_EUpdaterType_OS";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_BIOS"] = 3)] =
-            "k_EUpdaterType_BIOS";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Aggregated"] = 4)] =
-            "k_EUpdaterType_Aggregated";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Test1"] = 5)] =
-            "k_EUpdaterType_Test1";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Test2"] = 6)] =
-            "k_EUpdaterType_Test2";
-          EUpdaterType[(EUpdaterType["k_EUpdaterType_Dummy"] = 7)] =
-            "k_EUpdaterType_Dummy";
-        })(EUpdaterType || (EUpdaterType = {}));
-        function EUpdaterTypeToString(eUpdaterType) {
-          if (true) {
-            switch (eUpdaterType) {
-              case 0:
-                return "k_EUpdaterType_Invalid";
-              case 1:
-                return "k_EUpdaterType_Client";
-              case 2:
-                return "k_EUpdaterType_OS";
-              case 3:
-                return "k_EUpdaterType_BIOS";
-              case 4:
-                return "k_EUpdaterType_Aggregated";
-              case 5:
-                return "k_EUpdaterType_Test1";
-              case 6:
-                return "k_EUpdaterType_Test2";
-              case 7:
-                return "k_EUpdaterType_Dummy";
-            }
-          }
-          return "unknown EUpdaterType ( " + eUpdaterType + " )";
-        }
-        var EUpdaterState;
-        (function (EUpdaterState) {
-          EUpdaterState[(EUpdaterState["k_EUpdaterState_Invalid"] = 0)] =
-            "k_EUpdaterState_Invalid";
-          EUpdaterState[(EUpdaterState["k_EUpdaterState_UpToDate"] = 2)] =
-            "k_EUpdaterState_UpToDate";
-          EUpdaterState[(EUpdaterState["k_EUpdaterState_Checking"] = 3)] =
-            "k_EUpdaterState_Checking";
-          EUpdaterState[(EUpdaterState["k_EUpdaterState_Available"] = 4)] =
-            "k_EUpdaterState_Available";
-          EUpdaterState[(EUpdaterState["k_EUpdaterState_Applying"] = 5)] =
-            "k_EUpdaterState_Applying";
-          EUpdaterState[
-            (EUpdaterState["k_EUpdaterState_ClientRestartPending"] = 6)
-          ] = "k_EUpdaterState_ClientRestartPending";
-          EUpdaterState[
-            (EUpdaterState["k_EUpdaterState_SystemRestartPending"] = 7)
-          ] = "k_EUpdaterState_SystemRestartPending";
-        })(EUpdaterState || (EUpdaterState = {}));
-        function EUpdaterStateToString(eUpdaterState) {
-          if (true) {
-            switch (eUpdaterState) {
-              case 0:
-                return "k_EUpdaterState_Invalid";
-              case 2:
-                return "k_EUpdaterState_UpToDate";
-              case 3:
-                return "k_EUpdaterState_Checking";
-              case 4:
-                return "k_EUpdaterState_Available";
-              case 5:
-                return "k_EUpdaterState_Applying";
-              case 6:
-                return "k_EUpdaterState_ClientRestartPending";
-              case 7:
-                return "k_EUpdaterState_SystemRestartPending";
-            }
-          }
-          return "unknown EUpdaterState ( " + eUpdaterState + " )";
-        }
-        var EStorageBlockContentType;
-        (function (EStorageBlockContentType) {
-          EStorageBlockContentType[
-            (EStorageBlockContentType["k_EStorageBlockContentType_Invalid"] = 0)
-          ] = "k_EStorageBlockContentType_Invalid";
-          EStorageBlockContentType[
-            (EStorageBlockContentType["k_EStorageBlockContentType_Unknown"] = 1)
-          ] = "k_EStorageBlockContentType_Unknown";
-          EStorageBlockContentType[
-            (EStorageBlockContentType[
-              "k_EStorageBlockContentType_FileSystem"
-            ] = 2)
-          ] = "k_EStorageBlockContentType_FileSystem";
-          EStorageBlockContentType[
-            (EStorageBlockContentType["k_EStorageBlockContentType_Crypto"] = 3)
-          ] = "k_EStorageBlockContentType_Crypto";
-          EStorageBlockContentType[
-            (EStorageBlockContentType["k_EStorageBlockContentType_Raid"] = 4)
-          ] = "k_EStorageBlockContentType_Raid";
-        })(EStorageBlockContentType || (EStorageBlockContentType = {}));
-        function EStorageBlockContentTypeToString(eStorageBlockContentType) {
-          if (true) {
-            switch (eStorageBlockContentType) {
-              case 0:
-                return "k_EStorageBlockContentType_Invalid";
-              case 1:
-                return "k_EStorageBlockContentType_Unknown";
-              case 2:
-                return "k_EStorageBlockContentType_FileSystem";
-              case 3:
-                return "k_EStorageBlockContentType_Crypto";
-              case 4:
-                return "k_EStorageBlockContentType_Raid";
-            }
-          }
-          return (
-            "unknown EStorageBlockContentType ( " +
-            eStorageBlockContentType +
-            " )"
-          );
-        }
-        var EStorageBlockFileSystemType;
-        (function (EStorageBlockFileSystemType) {
-          EStorageBlockFileSystemType[
-            (EStorageBlockFileSystemType[
-              "k_EStorageBlockFileSystemType_Invalid"
-            ] = 0)
-          ] = "k_EStorageBlockFileSystemType_Invalid";
-          EStorageBlockFileSystemType[
-            (EStorageBlockFileSystemType[
-              "k_EStorageBlockFileSystemType_Unknown"
-            ] = 1)
-          ] = "k_EStorageBlockFileSystemType_Unknown";
-          EStorageBlockFileSystemType[
-            (EStorageBlockFileSystemType[
-              "k_EStorageBlockFileSystemType_VFat"
-            ] = 2)
-          ] = "k_EStorageBlockFileSystemType_VFat";
-          EStorageBlockFileSystemType[
-            (EStorageBlockFileSystemType[
-              "k_EStorageBlockFileSystemType_Ext4"
-            ] = 3)
-          ] = "k_EStorageBlockFileSystemType_Ext4";
-        })(EStorageBlockFileSystemType || (EStorageBlockFileSystemType = {}));
-        function EStorageBlockFileSystemTypeToString(
-          eStorageBlockFileSystemType
-        ) {
-          if (true) {
-            switch (eStorageBlockFileSystemType) {
-              case 0:
-                return "k_EStorageBlockFileSystemType_Invalid";
-              case 1:
-                return "k_EStorageBlockFileSystemType_Unknown";
-              case 2:
-                return "k_EStorageBlockFileSystemType_VFat";
-              case 3:
-                return "k_EStorageBlockFileSystemType_Ext4";
-            }
-          }
-          return (
-            "unknown EStorageBlockFileSystemType ( " +
-            eStorageBlockFileSystemType +
-            " )"
-          );
-        }
-        var ESteamDeckCompatibilityCategory;
-        (function (ESteamDeckCompatibilityCategory) {
-          ESteamDeckCompatibilityCategory[
-            (ESteamDeckCompatibilityCategory[
-              "k_ESteamDeckCompatibilityCategory_Unknown"
-            ] = 0)
-          ] = "k_ESteamDeckCompatibilityCategory_Unknown";
-          ESteamDeckCompatibilityCategory[
-            (ESteamDeckCompatibilityCategory[
-              "k_ESteamDeckCompatibilityCategory_Unsupported"
-            ] = 1)
-          ] = "k_ESteamDeckCompatibilityCategory_Unsupported";
-          ESteamDeckCompatibilityCategory[
-            (ESteamDeckCompatibilityCategory[
-              "k_ESteamDeckCompatibilityCategory_Playable"
-            ] = 2)
-          ] = "k_ESteamDeckCompatibilityCategory_Playable";
-          ESteamDeckCompatibilityCategory[
-            (ESteamDeckCompatibilityCategory[
-              "k_ESteamDeckCompatibilityCategory_Verified"
-            ] = 3)
-          ] = "k_ESteamDeckCompatibilityCategory_Verified";
-        })(
-          ESteamDeckCompatibilityCategory ||
-            (ESteamDeckCompatibilityCategory = {})
-        );
-        function ESteamDeckCompatibilityCategoryToString(
-          eSteamDeckCompatibilityCategory
-        ) {
-          if (true) {
-            switch (eSteamDeckCompatibilityCategory) {
-              case 0:
-                return "k_ESteamDeckCompatibilityCategory_Unknown";
-              case 1:
-                return "k_ESteamDeckCompatibilityCategory_Unsupported";
-              case 2:
-                return "k_ESteamDeckCompatibilityCategory_Playable";
-              case 3:
-                return "k_ESteamDeckCompatibilityCategory_Verified";
-            }
-          }
-          return (
-            "unknown ESteamDeckCompatibilityCategory ( " +
-            eSteamDeckCompatibilityCategory +
-            " )"
-          );
-        }
-        var ESteamDeckCompatibilityResultDisplayType;
-        (function (ESteamDeckCompatibilityResultDisplayType) {
-          ESteamDeckCompatibilityResultDisplayType[
-            (ESteamDeckCompatibilityResultDisplayType[
-              "k_ESteamDeckCompatibilityResultDisplayType_Invisible"
-            ] = 0)
-          ] = "k_ESteamDeckCompatibilityResultDisplayType_Invisible";
-          ESteamDeckCompatibilityResultDisplayType[
-            (ESteamDeckCompatibilityResultDisplayType[
-              "k_ESteamDeckCompatibilityResultDisplayType_Informational"
-            ] = 1)
-          ] = "k_ESteamDeckCompatibilityResultDisplayType_Informational";
-          ESteamDeckCompatibilityResultDisplayType[
-            (ESteamDeckCompatibilityResultDisplayType[
-              "k_ESteamDeckCompatibilityResultDisplayType_Unsupported"
-            ] = 2)
-          ] = "k_ESteamDeckCompatibilityResultDisplayType_Unsupported";
-          ESteamDeckCompatibilityResultDisplayType[
-            (ESteamDeckCompatibilityResultDisplayType[
-              "k_ESteamDeckCompatibilityResultDisplayType_Playable"
-            ] = 3)
-          ] = "k_ESteamDeckCompatibilityResultDisplayType_Playable";
-          ESteamDeckCompatibilityResultDisplayType[
-            (ESteamDeckCompatibilityResultDisplayType[
-              "k_ESteamDeckCompatibilityResultDisplayType_Verified"
-            ] = 4)
-          ] = "k_ESteamDeckCompatibilityResultDisplayType_Verified";
-        })(
-          ESteamDeckCompatibilityResultDisplayType ||
-            (ESteamDeckCompatibilityResultDisplayType = {})
-        );
-        function ESteamDeckCompatibilityResultDisplayTypeToString(
-          eSteamDeckCompatibilityResultDisplayType
-        ) {
-          if (true) {
-            switch (eSteamDeckCompatibilityResultDisplayType) {
-              case 0:
-                return "k_ESteamDeckCompatibilityResultDisplayType_Invisible";
-              case 1:
-                return "k_ESteamDeckCompatibilityResultDisplayType_Informational";
-              case 2:
-                return "k_ESteamDeckCompatibilityResultDisplayType_Unsupported";
-              case 3:
-                return "k_ESteamDeckCompatibilityResultDisplayType_Playable";
-              case 4:
-                return "k_ESteamDeckCompatibilityResultDisplayType_Verified";
-            }
-          }
-          return (
-            "unknown ESteamDeckCompatibilityResultDisplayType ( " +
-            eSteamDeckCompatibilityResultDisplayType +
-            " )"
-          );
-        }
-        var EACState;
-        (function (EACState) {
-          EACState[(EACState["k_EACState_Unknown"] = 0)] = "k_EACState_Unknown";
-          EACState[(EACState["k_EACState_Disconnected"] = 1)] =
-            "k_EACState_Disconnected";
-          EACState[(EACState["k_EACState_Connected"] = 2)] =
-            "k_EACState_Connected";
-          EACState[(EACState["k_EACState_ConnectedSlow"] = 3)] =
-            "k_EACState_ConnectedSlow";
-        })(EACState || (EACState = {}));
-        function EACStateToString(eACState) {
-          if (true) {
-            switch (eACState) {
-              case 0:
-                return "k_EACState_Unknown";
-              case 1:
-                return "k_EACState_Disconnected";
-              case 2:
-                return "k_EACState_Connected";
-              case 3:
-                return "k_EACState_ConnectedSlow";
-            }
-          }
-          return "unknown EACState ( " + eACState + " )";
-        }
-        var EBatteryState;
-        (function (EBatteryState) {
-          EBatteryState[(EBatteryState["k_EBatteryState_Unknown"] = 0)] =
-            "k_EBatteryState_Unknown";
-          EBatteryState[(EBatteryState["k_EBatteryState_Discharging"] = 1)] =
-            "k_EBatteryState_Discharging";
-          EBatteryState[(EBatteryState["k_EBatteryState_Charging"] = 2)] =
-            "k_EBatteryState_Charging";
-          EBatteryState[(EBatteryState["k_EBatteryState_Full"] = 3)] =
-            "k_EBatteryState_Full";
-        })(EBatteryState || (EBatteryState = {}));
-        function EBatteryStateToString(eBatteryState) {
-          if (true) {
-            switch (eBatteryState) {
-              case 0:
-                return "k_EBatteryState_Unknown";
-              case 1:
-                return "k_EBatteryState_Discharging";
-              case 2:
-                return "k_EBatteryState_Charging";
-              case 3:
-                return "k_EBatteryState_Full";
-            }
-          }
-          return "unknown EBatteryState ( " + eBatteryState + " )";
-        }
-        var EOSBranch;
-        (function (EOSBranch) {
-          EOSBranch[(EOSBranch["k_EOSBranch_Unknown"] = 0)] =
-            "k_EOSBranch_Unknown";
-          EOSBranch[(EOSBranch["k_EOSBranch_Release"] = 1)] =
-            "k_EOSBranch_Release";
-          EOSBranch[(EOSBranch["k_EOSBranch_ReleaseCandidate"] = 2)] =
-            "k_EOSBranch_ReleaseCandidate";
-          EOSBranch[(EOSBranch["k_EOSBranch_Beta"] = 3)] = "k_EOSBranch_Beta";
-          EOSBranch[(EOSBranch["k_EOSBranch_BetaCandidate"] = 4)] =
-            "k_EOSBranch_BetaCandidate";
-          EOSBranch[(EOSBranch["k_EOSBranch_Main"] = 5)] = "k_EOSBranch_Main";
-        })(EOSBranch || (EOSBranch = {}));
-        function EOSBranchToString(eOSBranch) {
-          if (true) {
-            switch (eOSBranch) {
-              case 0:
-                return "k_EOSBranch_Unknown";
-              case 1:
-                return "k_EOSBranch_Release";
-              case 2:
-                return "k_EOSBranch_ReleaseCandidate";
-              case 3:
-                return "k_EOSBranch_Beta";
-              case 4:
-                return "k_EOSBranch_BetaCandidate";
-              case 5:
-                return "k_EOSBranch_Main";
-            }
-          }
-          return "unknown EOSBranch ( " + eOSBranch + " )";
-        }
-        var ECommunityItemClass;
-        (function (ECommunityItemClass) {
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Invalid"] = 0)
-          ] = "k_ECommunityItemClass_Invalid";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Badge"] = 1)
-          ] = "k_ECommunityItemClass_Badge";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_GameCard"] = 2)
-          ] = "k_ECommunityItemClass_GameCard";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_ProfileBackground"] = 3)
-          ] = "k_ECommunityItemClass_ProfileBackground";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Emoticon"] = 4)
-          ] = "k_ECommunityItemClass_Emoticon";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_BoosterPack"] = 5)
-          ] = "k_ECommunityItemClass_BoosterPack";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Consumable"] = 6)
-          ] = "k_ECommunityItemClass_Consumable";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_GameGoo"] = 7)
-          ] = "k_ECommunityItemClass_GameGoo";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_ProfileModifier"] = 8)
-          ] = "k_ECommunityItemClass_ProfileModifier";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Scene"] = 9)
-          ] = "k_ECommunityItemClass_Scene";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_SalienItem"] = 10)
-          ] = "k_ECommunityItemClass_SalienItem";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_Sticker"] = 11)
-          ] = "k_ECommunityItemClass_Sticker";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_ChatEffect"] = 12)
-          ] = "k_ECommunityItemClass_ChatEffect";
-          ECommunityItemClass[
-            (ECommunityItemClass[
-              "k_ECommunityItemClass_MiniProfileBackground"
-            ] = 13)
-          ] = "k_ECommunityItemClass_MiniProfileBackground";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_AvatarFrame"] = 14)
-          ] = "k_ECommunityItemClass_AvatarFrame";
-          ECommunityItemClass[
-            (ECommunityItemClass["k_ECommunityItemClass_AnimatedAvatar"] = 15)
-          ] = "k_ECommunityItemClass_AnimatedAvatar";
-          ECommunityItemClass[
-            (ECommunityItemClass[
-              "k_ECommunityItemClass_SteamDeckKeyboardSkin"
-            ] = 16)
-          ] = "k_ECommunityItemClass_SteamDeckKeyboardSkin";
-        })(ECommunityItemClass || (ECommunityItemClass = {}));
-        function ECommunityItemClassToString(eCommunityItemClass) {
-          if (true) {
-            switch (eCommunityItemClass) {
-              case 0:
-                return "k_ECommunityItemClass_Invalid";
-              case 1:
-                return "k_ECommunityItemClass_Badge";
-              case 2:
-                return "k_ECommunityItemClass_GameCard";
-              case 3:
-                return "k_ECommunityItemClass_ProfileBackground";
-              case 4:
-                return "k_ECommunityItemClass_Emoticon";
-              case 5:
-                return "k_ECommunityItemClass_BoosterPack";
-              case 6:
-                return "k_ECommunityItemClass_Consumable";
-              case 7:
-                return "k_ECommunityItemClass_GameGoo";
-              case 8:
-                return "k_ECommunityItemClass_ProfileModifier";
-              case 9:
-                return "k_ECommunityItemClass_Scene";
-              case 10:
-                return "k_ECommunityItemClass_SalienItem";
-              case 11:
-                return "k_ECommunityItemClass_Sticker";
-              case 12:
-                return "k_ECommunityItemClass_ChatEffect";
-              case 13:
-                return "k_ECommunityItemClass_MiniProfileBackground";
-              case 14:
-                return "k_ECommunityItemClass_AvatarFrame";
-              case 15:
-                return "k_ECommunityItemClass_AnimatedAvatar";
-              case 16:
-                return "k_ECommunityItemClass_SteamDeckKeyboardSkin";
-            }
-          }
-          return "unknown ECommunityItemClass ( " + eCommunityItemClass + " )";
-        }
-        var ESteamDeckCompatibilityFeedback;
-        (function (ESteamDeckCompatibilityFeedback) {
-          ESteamDeckCompatibilityFeedback[
-            (ESteamDeckCompatibilityFeedback[
-              "k_ESteamDeckCompatibilityFeedback_Unset"
-            ] = 0)
-          ] = "k_ESteamDeckCompatibilityFeedback_Unset";
-          ESteamDeckCompatibilityFeedback[
-            (ESteamDeckCompatibilityFeedback[
-              "k_ESteamDeckCompatibilityFeedback_Agree"
-            ] = 1)
-          ] = "k_ESteamDeckCompatibilityFeedback_Agree";
-          ESteamDeckCompatibilityFeedback[
-            (ESteamDeckCompatibilityFeedback[
-              "k_ESteamDeckCompatibilityFeedback_Disagree"
-            ] = 2)
-          ] = "k_ESteamDeckCompatibilityFeedback_Disagree";
-          ESteamDeckCompatibilityFeedback[
-            (ESteamDeckCompatibilityFeedback[
-              "k_ESteamDeckCompatibilityFeedback_Ignore"
-            ] = 3)
-          ] = "k_ESteamDeckCompatibilityFeedback_Ignore";
-        })(
-          ESteamDeckCompatibilityFeedback ||
-            (ESteamDeckCompatibilityFeedback = {})
-        );
-        function ESteamDeckCompatibilityFeedbackToString(
-          eSteamDeckCompatibilityFeedback
-        ) {
-          if (true) {
-            switch (eSteamDeckCompatibilityFeedback) {
-              case 0:
-                return "k_ESteamDeckCompatibilityFeedback_Unset";
-              case 1:
-                return "k_ESteamDeckCompatibilityFeedback_Agree";
-              case 2:
-                return "k_ESteamDeckCompatibilityFeedback_Disagree";
-              case 3:
-                return "k_ESteamDeckCompatibilityFeedback_Ignore";
-            }
-          }
-          return (
-            "unknown ESteamDeckCompatibilityFeedback ( " +
-            eSteamDeckCompatibilityFeedback +
-            " )"
-          );
-        }
-        var EProvideDeckFeedbackPreference;
-        (function (EProvideDeckFeedbackPreference) {
-          EProvideDeckFeedbackPreference[
-            (EProvideDeckFeedbackPreference[
-              "k_EProvideDeckFeedbackPreference_Unset"
-            ] = 0)
-          ] = "k_EProvideDeckFeedbackPreference_Unset";
-          EProvideDeckFeedbackPreference[
-            (EProvideDeckFeedbackPreference[
-              "k_EProvideDeckFeedbackPreference_Yes"
-            ] = 1)
-          ] = "k_EProvideDeckFeedbackPreference_Yes";
-          EProvideDeckFeedbackPreference[
-            (EProvideDeckFeedbackPreference[
-              "k_EProvideDeckFeedbackPreference_No"
-            ] = 2)
-          ] = "k_EProvideDeckFeedbackPreference_No";
-        })(
-          EProvideDeckFeedbackPreference ||
-            (EProvideDeckFeedbackPreference = {})
-        );
-        function EProvideDeckFeedbackPreferenceToString(
-          eProvideDeckFeedbackPreference
-        ) {
-          if (true) {
-            switch (eProvideDeckFeedbackPreference) {
-              case 0:
-                return "k_EProvideDeckFeedbackPreference_Unset";
-              case 1:
-                return "k_EProvideDeckFeedbackPreference_Yes";
-              case 2:
-                return "k_EProvideDeckFeedbackPreference_No";
-            }
-          }
-          return (
-            "unknown EProvideDeckFeedbackPreference ( " +
-            eProvideDeckFeedbackPreference +
-            " )"
-          );
-        }
-        var ETouchGesture;
-        (function (ETouchGesture) {
-          ETouchGesture[(ETouchGesture["k_ETouchGestureNone"] = 0)] =
-            "k_ETouchGestureNone";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureTouch"] = 1)] =
-            "k_ETouchGestureTouch";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureTap"] = 2)] =
-            "k_ETouchGestureTap";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureDoubleTap"] = 3)] =
-            "k_ETouchGestureDoubleTap";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureShortPress"] = 4)] =
-            "k_ETouchGestureShortPress";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureLongPress"] = 5)] =
-            "k_ETouchGestureLongPress";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureLongTap"] = 6)] =
-            "k_ETouchGestureLongTap";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureTwoFingerTap"] = 7)] =
-            "k_ETouchGestureTwoFingerTap";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureTapCancelled"] = 8)] =
-            "k_ETouchGestureTapCancelled";
-          ETouchGesture[(ETouchGesture["k_ETouchGesturePinchBegin"] = 9)] =
-            "k_ETouchGesturePinchBegin";
-          ETouchGesture[(ETouchGesture["k_ETouchGesturePinchUpdate"] = 10)] =
-            "k_ETouchGesturePinchUpdate";
-          ETouchGesture[(ETouchGesture["k_ETouchGesturePinchEnd"] = 11)] =
-            "k_ETouchGesturePinchEnd";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureFlingStart"] = 12)] =
-            "k_ETouchGestureFlingStart";
-          ETouchGesture[(ETouchGesture["k_ETouchGestureFlingCancelled"] = 13)] =
-            "k_ETouchGestureFlingCancelled";
-        })(ETouchGesture || (ETouchGesture = {}));
-        function ETouchGestureToString(eTouchGesture) {
-          if (true) {
-            switch (eTouchGesture) {
-              case 0:
-                return "k_ETouchGestureNone";
-              case 1:
-                return "k_ETouchGestureTouch";
-              case 2:
-                return "k_ETouchGestureTap";
-              case 3:
-                return "k_ETouchGestureDoubleTap";
-              case 4:
-                return "k_ETouchGestureShortPress";
-              case 5:
-                return "k_ETouchGestureLongPress";
-              case 6:
-                return "k_ETouchGestureLongTap";
-              case 7:
-                return "k_ETouchGestureTwoFingerTap";
-              case 8:
-                return "k_ETouchGestureTapCancelled";
-              case 9:
-                return "k_ETouchGesturePinchBegin";
-              case 10:
-                return "k_ETouchGesturePinchUpdate";
-              case 11:
-                return "k_ETouchGesturePinchEnd";
-              case 12:
-                return "k_ETouchGestureFlingStart";
-              case 13:
-                return "k_ETouchGestureFlingCancelled";
-            }
-          }
-          return "unknown ETouchGesture ( " + eTouchGesture + " )";
-        }
-        var ESessionPersistence;
-        (function (ESessionPersistence) {
-          ESessionPersistence[
-            (ESessionPersistence["k_ESessionPersistence_Invalid"] = -1)
-          ] = "k_ESessionPersistence_Invalid";
-          ESessionPersistence[
-            (ESessionPersistence["k_ESessionPersistence_Ephemeral"] = 0)
-          ] = "k_ESessionPersistence_Ephemeral";
-          ESessionPersistence[
-            (ESessionPersistence["k_ESessionPersistence_Persistent"] = 1)
-          ] = "k_ESessionPersistence_Persistent";
-        })(ESessionPersistence || (ESessionPersistence = {}));
-        function ESessionPersistenceToString(eSessionPersistence) {
-          if (true) {
-            switch (eSessionPersistence) {
-              case -1:
-                return "k_ESessionPersistence_Invalid";
-              case 0:
-                return "k_ESessionPersistence_Ephemeral";
-              case 1:
-                return "k_ESessionPersistence_Persistent";
-            }
-          }
-          return "unknown ESessionPersistence ( " + eSessionPersistence + " )";
-        }
-
-        /***/
-      },
-
-    /***/ "../../../web_src/shared/js/steammessages/enums_productinfo_pb.ts":
-      /*!************************************************************************!*\
-  !*** ../../../web_src/shared/js/steammessages/enums_productinfo_pb.ts ***!
-  \************************************************************************/
-      /***/ (
-        __unused_webpack_module,
-        __webpack_exports__,
-        __webpack_require__
-      ) => {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ EContentDescriptorID: () =>
-            /* binding */ EContentDescriptorID,
-          /* harmony export */ EContentDescriptorIDToString: () =>
-            /* binding */ EContentDescriptorIDToString,
-          /* harmony export */
-        });
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! google-protobuf */ "./node_modules/google-protobuf/google-protobuf.js"
-          );
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0___default =
-          /*#__PURE__*/ __webpack_require__.n(
-            google_protobuf__WEBPACK_IMPORTED_MODULE_0__
-          );
-        /* harmony import */ var shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/common/protohelpers */ "../../../web_src/shared/js/common/protohelpers.ts"
-          );
-        /* tslint:disable */
-        // GENERATED FILE - generated from enums_productinfo.proto
-
-        const jspb_Message =
-          google_protobuf__WEBPACK_IMPORTED_MODULE_0__.Message; // for better minification
-        var EContentDescriptorID;
-        (function (EContentDescriptorID) {
-          EContentDescriptorID[
-            (EContentDescriptorID[
-              "k_EContentDescriptor_FrequentNudityOrSexualContent"
-            ] = 1)
-          ] = "k_EContentDescriptor_FrequentNudityOrSexualContent";
-          EContentDescriptorID[
-            (EContentDescriptorID[
-              "k_EContentDescriptor_FrequentViolenceOrGore"
-            ] = 2)
-          ] = "k_EContentDescriptor_FrequentViolenceOrGore";
-          EContentDescriptorID[
-            (EContentDescriptorID[
-              "k_EContentDescriptor_StrongSexualContent"
-            ] = 3)
-          ] = "k_EContentDescriptor_StrongSexualContent";
-          EContentDescriptorID[
-            (EContentDescriptorID["k_EContentDescriptor_UNUSED_4"] = 4)
-          ] = "k_EContentDescriptor_UNUSED_4";
-          EContentDescriptorID[
-            (EContentDescriptorID["k_EContentDescriptor_AnyMatureContent"] = 5)
-          ] = "k_EContentDescriptor_AnyMatureContent";
-        })(EContentDescriptorID || (EContentDescriptorID = {}));
-        function EContentDescriptorIDToString(eContentDescriptorID) {
-          if (true) {
-            switch (eContentDescriptorID) {
-              case 1:
-                return "k_EContentDescriptor_FrequentNudityOrSexualContent";
-              case 2:
-                return "k_EContentDescriptor_FrequentViolenceOrGore";
-              case 3:
-                return "k_EContentDescriptor_StrongSexualContent";
-              case 4:
-                return "k_EContentDescriptor_UNUSED_4";
-              case 5:
-                return "k_EContentDescriptor_AnyMatureContent";
-            }
-          }
-          return (
-            "unknown EContentDescriptorID ( " + eContentDescriptorID + " )"
-          );
-        }
-
-        /***/
-      },
-
-    /***/ "../../../web_src/shared/js/steammessages/steammessages_appoverview_pb.ts":
-      /*!********************************************************************************!*\
-  !*** ../../../web_src/shared/js/steammessages/steammessages_appoverview_pb.ts ***!
-  \********************************************************************************/
-      /***/ (
-        __unused_webpack_module,
-        __webpack_exports__,
-        __webpack_require__
-      ) => {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ CAppBootstrapData: () =>
-            /* binding */ CAppBootstrapData,
-          /* harmony export */ CAppOverview: () => /* binding */ CAppOverview,
-          /* harmony export */ CAppOverview_AppAssociation: () =>
-            /* binding */ CAppOverview_AppAssociation,
-          /* harmony export */ CAppOverview_Change: () =>
-            /* binding */ CAppOverview_Change,
-          /* harmony export */ CAppOverview_PerClientData: () =>
-            /* binding */ CAppOverview_PerClientData,
-          /* harmony export */ CLibraryBootstrapData: () =>
-            /* binding */ CLibraryBootstrapData,
-          /* harmony export */ EAppAssociationType: () =>
-            /* binding */ EAppAssociationType,
-          /* harmony export */ EAppAssociationTypeToString: () =>
-            /* binding */ EAppAssociationTypeToString,
-          /* harmony export */ EAppCloudStatus: () =>
-            /* binding */ EAppCloudStatus,
-          /* harmony export */ EAppCloudStatusToString: () =>
-            /* binding */ EAppCloudStatusToString,
-          /* harmony export */ EAppControllerSupportLevel: () =>
-            /* binding */ EAppControllerSupportLevel,
-          /* harmony export */ EAppControllerSupportLevelToString: () =>
-            /* binding */ EAppControllerSupportLevelToString,
-          /* harmony export */ EAppGamepadGyroTrackpadSupportLevel: () =>
-            /* binding */ EAppGamepadGyroTrackpadSupportLevel,
-          /* harmony export */ EAppGamepadGyroTrackpadSupportLevelToString:
-            () => /* binding */ EAppGamepadGyroTrackpadSupportLevelToString,
-          /* harmony export */ EDisplayStatus: () =>
-            /* binding */ EDisplayStatus,
-          /* harmony export */ EDisplayStatusToString: () =>
-            /* binding */ EDisplayStatusToString,
-          /* harmony export */ EProtoAppType: () => /* binding */ EProtoAppType,
-          /* harmony export */ EProtoAppTypeToString: () =>
-            /* binding */ EProtoAppTypeToString,
-          /* harmony export */
-        });
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! google-protobuf */ "./node_modules/google-protobuf/google-protobuf.js"
-          );
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0___default =
-          /*#__PURE__*/ __webpack_require__.n(
-            google_protobuf__WEBPACK_IMPORTED_MODULE_0__
-          );
-        /* harmony import */ var shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/common/protohelpers */ "../../../web_src/shared/js/common/protohelpers.ts"
-          );
-        /* harmony import */ var _enums_pb__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! ./enums_pb */ "../../../web_src/shared/js/steammessages/enums_pb.ts"
-          );
-        /* tslint:disable */
-        // GENERATED FILE - generated from steammessages_appoverview.proto
-
-        const jspb_Message =
-          google_protobuf__WEBPACK_IMPORTED_MODULE_0__.Message; // for better minification
-        var EDisplayStatus;
-        (function (EDisplayStatus) {
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusInvalid"] = 0)] =
-            "k_EDisplayStatusInvalid";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusLaunching"] = 1)] =
-            "k_EDisplayStatusLaunching";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusUninstalling"] = 2)] =
-            "k_EDisplayStatusUninstalling";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusInstalling"] = 3)] =
-            "k_EDisplayStatusInstalling";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusRunning"] = 4)] =
-            "k_EDisplayStatusRunning";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusValidating"] = 5)] =
-            "k_EDisplayStatusValidating";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusUpdating"] = 6)] =
-            "k_EDisplayStatusUpdating";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusDownloading"] = 7)] =
-            "k_EDisplayStatusDownloading";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusSynchronizing"] = 8)
-          ] = "k_EDisplayStatusSynchronizing";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusReadyToInstall"] = 9)
-          ] = "k_EDisplayStatusReadyToInstall";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusReadyToPreload"] = 10)
-          ] = "k_EDisplayStatusReadyToPreload";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusReadyToLaunch"] = 11)
-          ] = "k_EDisplayStatusReadyToLaunch";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusRegionRestricted"] = 12)
-          ] = "k_EDisplayStatusRegionRestricted";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusPresaleOnly"] = 13)] =
-            "k_EDisplayStatusPresaleOnly";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusInvalidPlatform"] = 14)
-          ] = "k_EDisplayStatusInvalidPlatform";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusPreloadComplete"] = 16)
-          ] = "k_EDisplayStatusPreloadComplete";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusBorrowerLocked"] = 17)
-          ] = "k_EDisplayStatusBorrowerLocked";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusUpdatePaused"] = 18)
-          ] = "k_EDisplayStatusUpdatePaused";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusUpdateQueued"] = 19)
-          ] = "k_EDisplayStatusUpdateQueued";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusUpdateRequired"] = 20)
-          ] = "k_EDisplayStatusUpdateRequired";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusUpdateDisabled"] = 21)
-          ] = "k_EDisplayStatusUpdateDisabled";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusDownloadPaused"] = 22)
-          ] = "k_EDisplayStatusDownloadPaused";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusDownloadQueued"] = 23)
-          ] = "k_EDisplayStatusDownloadQueued";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusDownloadRequired"] = 24)
-          ] = "k_EDisplayStatusDownloadRequired";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusDownloadDisabled"] = 25)
-          ] = "k_EDisplayStatusDownloadDisabled";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusLicensePending"] = 26)
-          ] = "k_EDisplayStatusLicensePending";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusLicenseExpired"] = 27)
-          ] = "k_EDisplayStatusLicenseExpired";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusAvailForFree"] = 28)
-          ] = "k_EDisplayStatusAvailForFree";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusAvailToBorrow"] = 29)
-          ] = "k_EDisplayStatusAvailToBorrow";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusAvailGuestPass"] = 30)
-          ] = "k_EDisplayStatusAvailGuestPass";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusPurchase"] = 31)] =
-            "k_EDisplayStatusPurchase";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusUnavailable"] = 32)] =
-            "k_EDisplayStatusUnavailable";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusNotLaunchable"] = 33)
-          ] = "k_EDisplayStatusNotLaunchable";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusCloudError"] = 34)] =
-            "k_EDisplayStatusCloudError";
-          EDisplayStatus[
-            (EDisplayStatus["k_EDisplayStatusCloudOutOfDate"] = 35)
-          ] = "k_EDisplayStatusCloudOutOfDate";
-          EDisplayStatus[(EDisplayStatus["k_EDisplayStatusTerminating"] = 36)] =
-            "k_EDisplayStatusTerminating";
-        })(EDisplayStatus || (EDisplayStatus = {}));
-        function EDisplayStatusToString(eDisplayStatus) {
-          if (true) {
-            switch (eDisplayStatus) {
-              case 0:
-                return "k_EDisplayStatusInvalid";
-              case 1:
-                return "k_EDisplayStatusLaunching";
-              case 2:
-                return "k_EDisplayStatusUninstalling";
-              case 3:
-                return "k_EDisplayStatusInstalling";
-              case 4:
-                return "k_EDisplayStatusRunning";
-              case 5:
-                return "k_EDisplayStatusValidating";
-              case 6:
-                return "k_EDisplayStatusUpdating";
-              case 7:
-                return "k_EDisplayStatusDownloading";
-              case 8:
-                return "k_EDisplayStatusSynchronizing";
-              case 9:
-                return "k_EDisplayStatusReadyToInstall";
-              case 10:
-                return "k_EDisplayStatusReadyToPreload";
-              case 11:
-                return "k_EDisplayStatusReadyToLaunch";
-              case 12:
-                return "k_EDisplayStatusRegionRestricted";
-              case 13:
-                return "k_EDisplayStatusPresaleOnly";
-              case 14:
-                return "k_EDisplayStatusInvalidPlatform";
-              case 16:
-                return "k_EDisplayStatusPreloadComplete";
-              case 17:
-                return "k_EDisplayStatusBorrowerLocked";
-              case 18:
-                return "k_EDisplayStatusUpdatePaused";
-              case 19:
-                return "k_EDisplayStatusUpdateQueued";
-              case 20:
-                return "k_EDisplayStatusUpdateRequired";
-              case 21:
-                return "k_EDisplayStatusUpdateDisabled";
-              case 22:
-                return "k_EDisplayStatusDownloadPaused";
-              case 23:
-                return "k_EDisplayStatusDownloadQueued";
-              case 24:
-                return "k_EDisplayStatusDownloadRequired";
-              case 25:
-                return "k_EDisplayStatusDownloadDisabled";
-              case 26:
-                return "k_EDisplayStatusLicensePending";
-              case 27:
-                return "k_EDisplayStatusLicenseExpired";
-              case 28:
-                return "k_EDisplayStatusAvailForFree";
-              case 29:
-                return "k_EDisplayStatusAvailToBorrow";
-              case 30:
-                return "k_EDisplayStatusAvailGuestPass";
-              case 31:
-                return "k_EDisplayStatusPurchase";
-              case 32:
-                return "k_EDisplayStatusUnavailable";
-              case 33:
-                return "k_EDisplayStatusNotLaunchable";
-              case 34:
-                return "k_EDisplayStatusCloudError";
-              case 35:
-                return "k_EDisplayStatusCloudOutOfDate";
-              case 36:
-                return "k_EDisplayStatusTerminating";
-            }
-          }
-          return "unknown EDisplayStatus ( " + eDisplayStatus + " )";
-        }
-        var EAppCloudStatus;
-        (function (EAppCloudStatus) {
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusInvalid"] = 0)] =
-            "k_EAppCloudStatusInvalid";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusDisabled"] = 1)] =
-            "k_EAppCloudStatusDisabled";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusUnknown"] = 2)] =
-            "k_EAppCloudStatusUnknown";
-          EAppCloudStatus[
-            (EAppCloudStatus["k_EAppCloudStatusSynchronized"] = 3)
-          ] = "k_EAppCloudStatusSynchronized";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusChecking"] = 4)] =
-            "k_EAppCloudStatusChecking";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusOutOfSync"] = 5)] =
-            "k_EAppCloudStatusOutOfSync";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusUploading"] = 6)] =
-            "k_EAppCloudStatusUploading";
-          EAppCloudStatus[
-            (EAppCloudStatus["k_EAppCloudStatusDownloading"] = 7)
-          ] = "k_EAppCloudStatusDownloading";
-          EAppCloudStatus[
-            (EAppCloudStatus["k_EAppCloudStatusSyncFailed"] = 8)
-          ] = "k_EAppCloudStatusSyncFailed";
-          EAppCloudStatus[(EAppCloudStatus["k_EAppCloudStatusConflict"] = 9)] =
-            "k_EAppCloudStatusConflict";
-          EAppCloudStatus[
-            (EAppCloudStatus["k_EAppCloudStatusPendingElsewhere"] = 10)
-          ] = "k_EAppCloudStatusPendingElsewhere";
-        })(EAppCloudStatus || (EAppCloudStatus = {}));
-        function EAppCloudStatusToString(eAppCloudStatus) {
-          if (true) {
-            switch (eAppCloudStatus) {
-              case 0:
-                return "k_EAppCloudStatusInvalid";
-              case 1:
-                return "k_EAppCloudStatusDisabled";
-              case 2:
-                return "k_EAppCloudStatusUnknown";
-              case 3:
-                return "k_EAppCloudStatusSynchronized";
-              case 4:
-                return "k_EAppCloudStatusChecking";
-              case 5:
-                return "k_EAppCloudStatusOutOfSync";
-              case 6:
-                return "k_EAppCloudStatusUploading";
-              case 7:
-                return "k_EAppCloudStatusDownloading";
-              case 8:
-                return "k_EAppCloudStatusSyncFailed";
-              case 9:
-                return "k_EAppCloudStatusConflict";
-              case 10:
-                return "k_EAppCloudStatusPendingElsewhere";
-            }
-          }
-          return "unknown EAppCloudStatus ( " + eAppCloudStatus + " )";
-        }
-        var EProtoAppType;
-        (function (EProtoAppType) {
-          EProtoAppType[(EProtoAppType["k_EAppTypeInvalid"] = 0)] =
-            "k_EAppTypeInvalid";
-          EProtoAppType[(EProtoAppType["k_EAppTypeGame"] = 1)] =
-            "k_EAppTypeGame";
-          EProtoAppType[(EProtoAppType["k_EAppTypeApplication"] = 2)] =
-            "k_EAppTypeApplication";
-          EProtoAppType[(EProtoAppType["k_EAppTypeTool"] = 4)] =
-            "k_EAppTypeTool";
-          EProtoAppType[(EProtoAppType["k_EAppTypeDemo"] = 8)] =
-            "k_EAppTypeDemo";
-          EProtoAppType[(EProtoAppType["k_EAppTypeDeprected"] = 16)] =
-            "k_EAppTypeDeprected";
-          EProtoAppType[(EProtoAppType["k_EAppTypeDLC"] = 32)] =
-            "k_EAppTypeDLC";
-          EProtoAppType[(EProtoAppType["k_EAppTypeGuide"] = 64)] =
-            "k_EAppTypeGuide";
-          EProtoAppType[(EProtoAppType["k_EAppTypeDriver"] = 128)] =
-            "k_EAppTypeDriver";
-          EProtoAppType[(EProtoAppType["k_EAppTypeConfig"] = 256)] =
-            "k_EAppTypeConfig";
-          EProtoAppType[(EProtoAppType["k_EAppTypeHardware"] = 512)] =
-            "k_EAppTypeHardware";
-          EProtoAppType[(EProtoAppType["k_EAppTypeFranchise"] = 1024)] =
-            "k_EAppTypeFranchise";
-          EProtoAppType[(EProtoAppType["k_EAppTypeVideo"] = 2048)] =
-            "k_EAppTypeVideo";
-          EProtoAppType[(EProtoAppType["k_EAppTypePlugin"] = 4096)] =
-            "k_EAppTypePlugin";
-          EProtoAppType[(EProtoAppType["k_EAppTypeMusicAlbum"] = 8192)] =
-            "k_EAppTypeMusicAlbum";
-          EProtoAppType[(EProtoAppType["k_EAppTypeSeries"] = 16384)] =
-            "k_EAppTypeSeries";
-          EProtoAppType[(EProtoAppType["k_EAppTypeComic"] = 32768)] =
-            "k_EAppTypeComic";
-          EProtoAppType[(EProtoAppType["k_EAppTypeBeta"] = 65536)] =
-            "k_EAppTypeBeta";
-          EProtoAppType[(EProtoAppType["k_EAppTypeShortcut"] = 1073741824)] =
-            "k_EAppTypeShortcut";
-          EProtoAppType[(EProtoAppType["k_EAppTypeDepotOnly"] = -2147483648)] =
-            "k_EAppTypeDepotOnly";
-        })(EProtoAppType || (EProtoAppType = {}));
-        function EProtoAppTypeToString(eProtoAppType) {
-          if (true) {
-            switch (eProtoAppType) {
-              case 0:
-                return "k_EAppTypeInvalid";
-              case 1:
-                return "k_EAppTypeGame";
-              case 2:
-                return "k_EAppTypeApplication";
-              case 4:
-                return "k_EAppTypeTool";
-              case 8:
-                return "k_EAppTypeDemo";
-              case 16:
-                return "k_EAppTypeDeprected";
-              case 32:
-                return "k_EAppTypeDLC";
-              case 64:
-                return "k_EAppTypeGuide";
-              case 128:
-                return "k_EAppTypeDriver";
-              case 256:
-                return "k_EAppTypeConfig";
-              case 512:
-                return "k_EAppTypeHardware";
-              case 1024:
-                return "k_EAppTypeFranchise";
-              case 2048:
-                return "k_EAppTypeVideo";
-              case 4096:
-                return "k_EAppTypePlugin";
-              case 8192:
-                return "k_EAppTypeMusicAlbum";
-              case 16384:
-                return "k_EAppTypeSeries";
-              case 32768:
-                return "k_EAppTypeComic";
-              case 65536:
-                return "k_EAppTypeBeta";
-              case 1073741824:
-                return "k_EAppTypeShortcut";
-              case -2147483648:
-                return "k_EAppTypeDepotOnly";
-            }
-          }
-          return "unknown EProtoAppType ( " + eProtoAppType + " )";
-        }
-        var EAppAssociationType;
-        (function (EAppAssociationType) {
-          EAppAssociationType[
-            (EAppAssociationType["k_EAppAssociationTypeInvalid"] = 0)
-          ] = "k_EAppAssociationTypeInvalid";
-          EAppAssociationType[
-            (EAppAssociationType["k_EAppAssociationTypePublisher"] = 1)
-          ] = "k_EAppAssociationTypePublisher";
-          EAppAssociationType[
-            (EAppAssociationType["k_EAppAssociationTypeDeveloper"] = 2)
-          ] = "k_EAppAssociationTypeDeveloper";
-          EAppAssociationType[
-            (EAppAssociationType["k_EAppAssociationTypeFranchise"] = 3)
-          ] = "k_EAppAssociationTypeFranchise";
-        })(EAppAssociationType || (EAppAssociationType = {}));
-        function EAppAssociationTypeToString(eAppAssociationType) {
-          if (true) {
-            switch (eAppAssociationType) {
-              case 0:
-                return "k_EAppAssociationTypeInvalid";
-              case 1:
-                return "k_EAppAssociationTypePublisher";
-              case 2:
-                return "k_EAppAssociationTypeDeveloper";
-              case 3:
-                return "k_EAppAssociationTypeFranchise";
-            }
-          }
-          return "unknown EAppAssociationType ( " + eAppAssociationType + " )";
-        }
-        var EAppControllerSupportLevel;
-        (function (EAppControllerSupportLevel) {
-          EAppControllerSupportLevel[
-            (EAppControllerSupportLevel["k_EAppControllerSupportLevelNone"] = 0)
-          ] = "k_EAppControllerSupportLevelNone";
-          EAppControllerSupportLevel[
-            (EAppControllerSupportLevel[
-              "k_EAppControllerSupportLevelPartial"
-            ] = 1)
-          ] = "k_EAppControllerSupportLevelPartial";
-          EAppControllerSupportLevel[
-            (EAppControllerSupportLevel["k_EAppControllerSupportLevelFull"] = 2)
-          ] = "k_EAppControllerSupportLevelFull";
-        })(EAppControllerSupportLevel || (EAppControllerSupportLevel = {}));
-        function EAppControllerSupportLevelToString(
-          eAppControllerSupportLevel
-        ) {
-          if (true) {
-            switch (eAppControllerSupportLevel) {
-              case 0:
-                return "k_EAppControllerSupportLevelNone";
-              case 1:
-                return "k_EAppControllerSupportLevelPartial";
-              case 2:
-                return "k_EAppControllerSupportLevelFull";
-            }
-          }
-          return (
-            "unknown EAppControllerSupportLevel ( " +
-            eAppControllerSupportLevel +
-            " )"
-          );
-        }
-        var EAppGamepadGyroTrackpadSupportLevel;
-        (function (EAppGamepadGyroTrackpadSupportLevel) {
-          EAppGamepadGyroTrackpadSupportLevel[
-            (EAppGamepadGyroTrackpadSupportLevel[
-              "k_EAppGamepadGyroTrackpadSupportLevelUnknown"
-            ] = -1)
-          ] = "k_EAppGamepadGyroTrackpadSupportLevelUnknown";
-          EAppGamepadGyroTrackpadSupportLevel[
-            (EAppGamepadGyroTrackpadSupportLevel[
-              "k_EAppGamepadGyroTrackpadSupportLevelNoGamepad"
-            ] = 0)
-          ] = "k_EAppGamepadGyroTrackpadSupportLevelNoGamepad";
-          EAppGamepadGyroTrackpadSupportLevel[
-            (EAppGamepadGyroTrackpadSupportLevel[
-              "k_EAppGamepadGyroTrackpadSupportLevelGamepad"
-            ] = 1)
-          ] = "k_EAppGamepadGyroTrackpadSupportLevelGamepad";
-          EAppGamepadGyroTrackpadSupportLevel[
-            (EAppGamepadGyroTrackpadSupportLevel[
-              "k_EAppGamepadGyroTrackpadSupportLevelSimultaneous"
-            ] = 2)
-          ] = "k_EAppGamepadGyroTrackpadSupportLevelSimultaneous";
-        })(
-          EAppGamepadGyroTrackpadSupportLevel ||
-            (EAppGamepadGyroTrackpadSupportLevel = {})
-        );
-        function EAppGamepadGyroTrackpadSupportLevelToString(
-          eAppGamepadGyroTrackpadSupportLevel
-        ) {
-          if (true) {
-            switch (eAppGamepadGyroTrackpadSupportLevel) {
-              case -1:
-                return "k_EAppGamepadGyroTrackpadSupportLevelUnknown";
-              case 0:
-                return "k_EAppGamepadGyroTrackpadSupportLevelNoGamepad";
-              case 1:
-                return "k_EAppGamepadGyroTrackpadSupportLevelGamepad";
-              case 2:
-                return "k_EAppGamepadGyroTrackpadSupportLevelSimultaneous";
-            }
-          }
-          return (
-            "unknown EAppGamepadGyroTrackpadSupportLevel ( " +
-            eAppGamepadGyroTrackpadSupportLevel +
-            " )"
-          );
-        }
-        class CAppOverview_AppAssociation extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CAppOverview_AppAssociation.prototype.type)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CAppOverview_AppAssociation.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!CAppOverview_AppAssociation.sm_m) {
-              CAppOverview_AppAssociation.sm_m = {
-                proto: CAppOverview_AppAssociation,
-                fields: {
-                  type: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  name: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return CAppOverview_AppAssociation.sm_m;
-          }
-          static MBF() {
-            if (!CAppOverview_AppAssociation.sm_mbf) {
-              CAppOverview_AppAssociation.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CAppOverview_AppAssociation.M()
-                );
-            }
-            return CAppOverview_AppAssociation.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CAppOverview_AppAssociation.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CAppOverview_AppAssociation.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CAppOverview_AppAssociation.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CAppOverview_AppAssociation();
-            return CAppOverview_AppAssociation.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CAppOverview_AppAssociation.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_AppAssociation.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CAppOverview_AppAssociation.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_AppAssociation.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CAppOverview_AppAssociation";
-          }
-        }
-        class CAppOverview_PerClientData extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CAppOverview_PerClientData.prototype.clientid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CAppOverview_PerClientData.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!CAppOverview_PerClientData.sm_m) {
-              CAppOverview_PerClientData.sm_m = {
-                proto: CAppOverview_PerClientData,
-                fields: {
-                  clientid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  client_name: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  display_status: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  status_percentage: {
-                    n: 4,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  active_beta: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  installed: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  bytes_downloaded: {
-                    n: 7,
-                    d: "0",
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  bytes_total: {
-                    n: 8,
-                    d: "0",
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  streaming_to_local_client: {
-                    n: 9,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_available_on_current_platform: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_invalid_os_type: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  playtime_left: {
-                    n: 12,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  cloud_status: {
-                    n: 13,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                },
-              };
-            }
-            return CAppOverview_PerClientData.sm_m;
-          }
-          static MBF() {
-            if (!CAppOverview_PerClientData.sm_mbf) {
-              CAppOverview_PerClientData.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CAppOverview_PerClientData.M()
-                );
-            }
-            return CAppOverview_PerClientData.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CAppOverview_PerClientData.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CAppOverview_PerClientData.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CAppOverview_PerClientData.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CAppOverview_PerClientData();
-            return CAppOverview_PerClientData.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CAppOverview_PerClientData.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_PerClientData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CAppOverview_PerClientData.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_PerClientData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CAppOverview_PerClientData";
-          }
-        }
-        class CAppOverview extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CAppOverview.prototype.appid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CAppOverview.M()
-              );
-            jspb_Message.initialize(
-              this,
-              opt_data,
-              0,
-              -1,
-              [19, 20, 23, 43],
-              null
-            );
-          }
-          static M() {
-            if (!CAppOverview.sm_m) {
-              CAppOverview.sm_m = {
-                proto: CAppOverview,
-                fields: {
-                  appid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  display_name: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  visible_in_game_list: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  sort_as: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  app_type: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  mru_index: {
-                    n: 13,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  rt_recent_activity_time: {
-                    n: 14,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  minutes_playtime_forever: {
-                    n: 16,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  minutes_playtime_last_two_weeks: {
-                    n: 17,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  rt_last_time_played: {
-                    n: 18,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  store_tag: {
-                    n: 19,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  association: {
-                    n: 20,
-                    c: CAppOverview_AppAssociation,
-                    r: true,
-                    q: true,
-                  },
-                  store_category: {
-                    n: 23,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  rt_original_release_date: {
-                    n: 25,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  rt_steam_release_date: {
-                    n: 26,
-                    d: 0,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  icon_hash: {
-                    n: 27,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  controller_support: {
-                    n: 31,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  vr_supported: {
-                    n: 32,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  metacritic_score: {
-                    n: 36,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  size_on_disk: {
-                    n: 37,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  third_party_mod: {
-                    n: 38,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  icon_data: {
-                    n: 39,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  icon_data_format: {
-                    n: 40,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  gameid: {
-                    n: 41,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  library_capsule_filename: {
-                    n: 42,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  per_client_data: {
-                    n: 43,
-                    c: CAppOverview_PerClientData,
-                    r: true,
-                    q: true,
-                  },
-                  most_available_clientid: {
-                    n: 44,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  selected_clientid: {
-                    n: 45,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint64String,
-                  },
-                  rt_store_asset_mtime: {
-                    n: 46,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  rt_custom_image_mtime: {
-                    n: 47,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  optional_parent_app_id: {
-                    n: 48,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  owner_account_id: {
-                    n: 49,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  review_score_with_bombs: {
-                    n: 53,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  review_percentage_with_bombs: {
-                    n: 54,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  review_score_without_bombs: {
-                    n: 55,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  review_percentage_without_bombs: {
-                    n: 56,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  library_id: {
-                    n: 57,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  vr_only: {
-                    n: 58,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  mastersub_appid: {
-                    n: 59,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  mastersub_includedwith_logo: {
-                    n: 60,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  site_license_site_name: {
-                    n: 62,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  shortcut_override_appid: {
-                    n: 63,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  steam_deck_compat_category: {
-                    n: 64,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  rt_last_time_locally_played: {
-                    n: 65,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  rt_purchased_time: {
-                    n: 66,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  header_filename: {
-                    n: 67,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return CAppOverview.sm_m;
-          }
-          static MBF() {
-            if (!CAppOverview.sm_mbf) {
-              CAppOverview.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CAppOverview.M()
-                );
-            }
-            return CAppOverview.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CAppOverview.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CAppOverview.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CAppOverview.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CAppOverview();
-            return CAppOverview.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CAppOverview.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CAppOverview.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CAppOverview";
-          }
-        }
-        class CAppOverview_Change extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CAppOverview_Change.prototype.app_overview)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CAppOverview_Change.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1, 2], null);
-          }
-          static M() {
-            if (!CAppOverview_Change.sm_m) {
-              CAppOverview_Change.sm_m = {
-                proto: CAppOverview_Change,
-                fields: {
-                  app_overview: { n: 1, c: CAppOverview, r: true, q: true },
-                  removed_appid: {
-                    n: 2,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  complete_update: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return CAppOverview_Change.sm_m;
-          }
-          static MBF() {
-            if (!CAppOverview_Change.sm_mbf) {
-              CAppOverview_Change.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CAppOverview_Change.M()
-                );
-            }
-            return CAppOverview_Change.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CAppOverview_Change.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CAppOverview_Change.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CAppOverview_Change.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CAppOverview_Change();
-            return CAppOverview_Change.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CAppOverview_Change.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_Change.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CAppOverview_Change.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppOverview_Change.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CAppOverview_Change";
-          }
-        }
-        class CAppBootstrapData extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CAppBootstrapData.prototype.appid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CAppBootstrapData.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [3], null);
-          }
-          static M() {
-            if (!CAppBootstrapData.sm_m) {
-              CAppBootstrapData.sm_m = {
-                proto: CAppBootstrapData,
-                fields: {
-                  appid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  hidden: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  user_tag: {
-                    n: 3,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedString,
-                  },
-                },
-              };
-            }
-            return CAppBootstrapData.sm_m;
-          }
-          static MBF() {
-            if (!CAppBootstrapData.sm_mbf) {
-              CAppBootstrapData.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CAppBootstrapData.M()
-                );
-            }
-            return CAppBootstrapData.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CAppBootstrapData.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CAppBootstrapData.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CAppBootstrapData.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CAppBootstrapData();
-            return CAppBootstrapData.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CAppBootstrapData.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppBootstrapData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CAppBootstrapData.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CAppBootstrapData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CAppBootstrapData";
-          }
-        }
-        class CLibraryBootstrapData extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CLibraryBootstrapData.prototype.app_data)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CLibraryBootstrapData.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1], null);
-          }
-          static M() {
-            if (!CLibraryBootstrapData.sm_m) {
-              CLibraryBootstrapData.sm_m = {
-                proto: CLibraryBootstrapData,
-                fields: {
-                  app_data: { n: 1, c: CAppBootstrapData, r: true, q: true },
-                },
-              };
-            }
-            return CLibraryBootstrapData.sm_m;
-          }
-          static MBF() {
-            if (!CLibraryBootstrapData.sm_mbf) {
-              CLibraryBootstrapData.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CLibraryBootstrapData.M()
-                );
-            }
-            return CLibraryBootstrapData.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CLibraryBootstrapData.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CLibraryBootstrapData.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CLibraryBootstrapData.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CLibraryBootstrapData();
-            return CLibraryBootstrapData.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CLibraryBootstrapData.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CLibraryBootstrapData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CLibraryBootstrapData.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CLibraryBootstrapData.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CLibraryBootstrapData";
-          }
-        }
-
-        /***/
-      },
-
     /***/ "../../../web_src/shared/js/steammessages/steammessages_controllerconfiguration_enums_pb.ts":
       /*!**************************************************************************************************!*\
   !*** ../../../web_src/shared/js/steammessages/steammessages_controllerconfiguration_enums_pb.ts ***!
@@ -73819,6 +70793,10 @@ object-assign
             /* binding */ EControllerActivationType,
           /* harmony export */ EControllerActivationTypeToString: () =>
             /* binding */ EControllerActivationTypeToString,
+          /* harmony export */ EControllerDigitalIO: () =>
+            /* binding */ EControllerDigitalIO,
+          /* harmony export */ EControllerDigitalIOToString: () =>
+            /* binding */ EControllerDigitalIOToString,
           /* harmony export */ EControllerLEDSettingType: () =>
             /* binding */ EControllerLEDSettingType,
           /* harmony export */ EControllerLEDSettingTypeToString: () =>
@@ -76872,4031 +73850,455 @@ object-assign
             "unknown EFlickStickSnapAngles ( " + eFlickStickSnapAngles + " )"
           );
         }
-
-        /***/
-      },
-
-    /***/ "../../../web_src/shared/js/steammessages/steammessages_storebrowse_pb.ts":
-      /*!********************************************************************************!*\
-  !*** ../../../web_src/shared/js/steammessages/steammessages_storebrowse_pb.ts ***!
-  \********************************************************************************/
-      /***/ (
-        __unused_webpack_module,
-        __webpack_exports__,
-        __webpack_require__
-      ) => {
-        "use strict";
-        __webpack_require__.r(__webpack_exports__);
-        /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-          /* harmony export */ CStoreBrowse_GetItems_Request: () =>
-            /* binding */ CStoreBrowse_GetItems_Request,
-          /* harmony export */ CStoreBrowse_GetItems_Response: () =>
-            /* binding */ CStoreBrowse_GetItems_Response,
-          /* harmony export */ CStoreBrowse_GetStoreCategories_Request: () =>
-            /* binding */ CStoreBrowse_GetStoreCategories_Request,
-          /* harmony export */ CStoreBrowse_GetStoreCategories_Response: () =>
-            /* binding */ CStoreBrowse_GetStoreCategories_Response,
-          /* harmony export */ CStoreBrowse_GetStoreCategories_Response_Category:
-            () =>
-              /* binding */ CStoreBrowse_GetStoreCategories_Response_Category,
-          /* harmony export */ EStoreAppType: () => /* binding */ EStoreAppType,
-          /* harmony export */ EStoreAppTypeToString: () =>
-            /* binding */ EStoreAppTypeToString,
-          /* harmony export */ EStoreCategoryType: () =>
-            /* binding */ EStoreCategoryType,
-          /* harmony export */ EStoreCategoryTypeToString: () =>
-            /* binding */ EStoreCategoryTypeToString,
-          /* harmony export */ EStoreItemType: () =>
-            /* binding */ EStoreItemType,
-          /* harmony export */ EStoreItemTypeToString: () =>
-            /* binding */ EStoreItemTypeToString,
-          /* harmony export */ EUserReviewScore: () =>
-            /* binding */ EUserReviewScore,
-          /* harmony export */ EUserReviewScoreToString: () =>
-            /* binding */ EUserReviewScoreToString,
-          /* harmony export */ StoreBrowseContext: () =>
-            /* binding */ StoreBrowseContext,
-          /* harmony export */ StoreBrowseItemDataRequest: () =>
-            /* binding */ StoreBrowseItemDataRequest,
-          /* harmony export */ StoreBrowseService: () =>
-            /* binding */ StoreBrowseService,
-          /* harmony export */ StoreGameRating: () =>
-            /* binding */ StoreGameRating,
-          /* harmony export */ StoreItem: () => /* binding */ StoreItem,
-          /* harmony export */ StoreItemID: () => /* binding */ StoreItemID,
-          /* harmony export */ StoreItem_Assets: () =>
-            /* binding */ StoreItem_Assets,
-          /* harmony export */ StoreItem_BasicInfo: () =>
-            /* binding */ StoreItem_BasicInfo,
-          /* harmony export */ StoreItem_BasicInfo_CreatorHomeLink: () =>
-            /* binding */ StoreItem_BasicInfo_CreatorHomeLink,
-          /* harmony export */ StoreItem_Categories: () =>
-            /* binding */ StoreItem_Categories,
-          /* harmony export */ StoreItem_FreeWeekend: () =>
-            /* binding */ StoreItem_FreeWeekend,
-          /* harmony export */ StoreItem_Platforms: () =>
-            /* binding */ StoreItem_Platforms,
-          /* harmony export */ StoreItem_Platforms_VRSupport: () =>
-            /* binding */ StoreItem_Platforms_VRSupport,
-          /* harmony export */ StoreItem_PurchaseOption: () =>
-            /* binding */ StoreItem_PurchaseOption,
-          /* harmony export */ StoreItem_PurchaseOption_Discount: () =>
-            /* binding */ StoreItem_PurchaseOption_Discount,
-          /* harmony export */ StoreItem_RelatedItems: () =>
-            /* binding */ StoreItem_RelatedItems,
-          /* harmony export */ StoreItem_ReleaseInfo: () =>
-            /* binding */ StoreItem_ReleaseInfo,
-          /* harmony export */ StoreItem_Reviews: () =>
-            /* binding */ StoreItem_Reviews,
-          /* harmony export */ StoreItem_Reviews_StoreReviewSummary: () =>
-            /* binding */ StoreItem_Reviews_StoreReviewSummary,
-          /* harmony export */ StoreItem_Screenshots: () =>
-            /* binding */ StoreItem_Screenshots,
-          /* harmony export */ StoreItem_Screenshots_Screenshot: () =>
-            /* binding */ StoreItem_Screenshots_Screenshot,
-          /* harmony export */ StoreItem_SupportedLanguage: () =>
-            /* binding */ StoreItem_SupportedLanguage,
-          /* harmony export */ StoreItem_Tag: () => /* binding */ StoreItem_Tag,
-          /* harmony export */ StoreItem_Trailers: () =>
-            /* binding */ StoreItem_Trailers,
-          /* harmony export */ StoreItem_Trailers_Trailer: () =>
-            /* binding */ StoreItem_Trailers_Trailer,
-          /* harmony export */ StoreItem_Trailers_VideoSource: () =>
-            /* binding */ StoreItem_Trailers_VideoSource,
-          /* harmony export */
-        });
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0__ =
-          __webpack_require__(
-            /*! google-protobuf */ "./node_modules/google-protobuf/google-protobuf.js"
-          );
-        /* harmony import */ var google_protobuf__WEBPACK_IMPORTED_MODULE_0___default =
-          /*#__PURE__*/ __webpack_require__.n(
-            google_protobuf__WEBPACK_IMPORTED_MODULE_0__
-          );
-        /* harmony import */ var shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/common/protohelpers */ "../../../web_src/shared/js/common/protohelpers.ts"
-          );
-        /* harmony import */ var _enums_productinfo_pb__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! ./enums_productinfo_pb */ "../../../web_src/shared/js/steammessages/enums_productinfo_pb.ts"
-          );
-        /* harmony import */ var _enums_pb__WEBPACK_IMPORTED_MODULE_3__ =
-          __webpack_require__(
-            /*! ./enums_pb */ "../../../web_src/shared/js/steammessages/enums_pb.ts"
-          );
-        /* tslint:disable */
-        // GENERATED FILE - generated from steammessages_storebrowse.proto
-
-        const jspb_Message =
-          google_protobuf__WEBPACK_IMPORTED_MODULE_0__.Message; // for better minification
-        var EStoreItemType;
-        (function (EStoreItemType) {
-          EStoreItemType[(EStoreItemType["k_EStoreItemType_Invalid"] = -1)] =
-            "k_EStoreItemType_Invalid";
-          EStoreItemType[(EStoreItemType["k_EStoreItemType_App"] = 0)] =
-            "k_EStoreItemType_App";
-          EStoreItemType[(EStoreItemType["k_EStoreItemType_Package"] = 1)] =
-            "k_EStoreItemType_Package";
-          EStoreItemType[(EStoreItemType["k_EStoreItemType_Bundle"] = 2)] =
-            "k_EStoreItemType_Bundle";
-          EStoreItemType[(EStoreItemType["k_EStoreItemType_Mtx"] = 3)] =
-            "k_EStoreItemType_Mtx";
-        })(EStoreItemType || (EStoreItemType = {}));
-        function EStoreItemTypeToString(eStoreItemType) {
+        var EControllerDigitalIO;
+        (function (EControllerDigitalIO) {
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonNone"] = -1)
+          ] = "k_EControllerDigitalInput_ButtonNone";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonRightTrigger"
+            ] = 0)
+          ] = "k_EControllerDigitalInput_ButtonRightTrigger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftTrigger"
+            ] = 1)
+          ] = "k_EControllerDigitalInput_ButtonLeftTrigger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button1"] = 2)
+          ] = "k_EControllerDigitalInput_Button1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonY"] = 2)
+          ] = "k_EControllerDigitalInput_ButtonY";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button2"] = 3)
+          ] = "k_EControllerDigitalInput_Button2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonB"] = 3)
+          ] = "k_EControllerDigitalInput_ButtonB";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button3"] = 4)
+          ] = "k_EControllerDigitalInput_Button3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonX"] = 4)
+          ] = "k_EControllerDigitalInput_ButtonX";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Button4"] = 5)
+          ] = "k_EControllerDigitalInput_Button4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonA"] = 5)
+          ] = "k_EControllerDigitalInput_ButtonA";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonRightBumper"
+            ] = 6)
+          ] = "k_EControllerDigitalInput_ButtonRightBumper";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftBumper"
+            ] = 7)
+          ] = "k_EControllerDigitalInput_ButtonLeftBumper";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonLeftJoystickClick"
+            ] = 8)
+          ] = "k_EControllerDigitalInput_ButtonLeftJoystickClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonEscape"] = 9)
+          ] = "k_EControllerDigitalInput_ButtonEscape";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonSteam"] = 10)
+          ] = "k_EControllerDigitalInput_ButtonSteam";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonMenu"] = 11)
+          ] = "k_EControllerDigitalInput_ButtonMenu";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickUp"] = 12)
+          ] = "k_EControllerDigitalInput_StickUp";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickDown"] = 13)
+          ] = "k_EControllerDigitalInput_StickDown";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickLeft"] = 14)
+          ] = "k_EControllerDigitalInput_StickLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_StickRight"] = 15)
+          ] = "k_EControllerDigitalInput_StickRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch1"] = 16)
+          ] = "k_EControllerDigitalInput_Touch1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonUp"] = 16)
+          ] = "k_EControllerDigitalInput_ButtonUp";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch2"] = 17)
+          ] = "k_EControllerDigitalInput_Touch2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonRight"] = 17)
+          ] = "k_EControllerDigitalInput_ButtonRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch3"] = 18)
+          ] = "k_EControllerDigitalInput_Touch3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonLeft"] = 18)
+          ] = "k_EControllerDigitalInput_ButtonLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Touch4"] = 19)
+          ] = "k_EControllerDigitalInput_Touch4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_ButtonDown"] = 19)
+          ] = "k_EControllerDigitalInput_ButtonDown";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackLeft"
+            ] = 20)
+          ] = "k_EControllerDigitalInput_ButtonBackLeft";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackRight"
+            ] = 21)
+          ] = "k_EControllerDigitalInput_ButtonBackRight";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadN"
+            ] = 22)
+          ] = "k_EControllerDigitalInput_LeftTrackpadN";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadNe"
+            ] = 23)
+          ] = "k_EControllerDigitalInput_LeftTrackpadNe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadE"
+            ] = 24)
+          ] = "k_EControllerDigitalInput_LeftTrackpadE";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadSe"
+            ] = 25)
+          ] = "k_EControllerDigitalInput_LeftTrackpadSe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadS"
+            ] = 26)
+          ] = "k_EControllerDigitalInput_LeftTrackpadS";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadSw"
+            ] = 27)
+          ] = "k_EControllerDigitalInput_LeftTrackpadSw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadW"
+            ] = 28)
+          ] = "k_EControllerDigitalInput_LeftTrackpadW";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadNw"
+            ] = 29)
+          ] = "k_EControllerDigitalInput_LeftTrackpadNw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadN"
+            ] = 30)
+          ] = "k_EControllerDigitalInput_RightTrackpadN";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadNe"
+            ] = 31)
+          ] = "k_EControllerDigitalInput_RightTrackpadNe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadE"
+            ] = 32)
+          ] = "k_EControllerDigitalInput_RightTrackpadE";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadSe"
+            ] = 33)
+          ] = "k_EControllerDigitalInput_RightTrackpadSe";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadS"
+            ] = 34)
+          ] = "k_EControllerDigitalInput_RightTrackpadS";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadSw"
+            ] = 35)
+          ] = "k_EControllerDigitalInput_RightTrackpadSw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadW"
+            ] = 36)
+          ] = "k_EControllerDigitalInput_RightTrackpadW";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadNw"
+            ] = 37)
+          ] = "k_EControllerDigitalInput_RightTrackpadNw";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadDoubleTap"
+            ] = 38)
+          ] = "k_EControllerDigitalInput_LeftTrackpadDoubleTap";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadDoubleTap"
+            ] = 39)
+          ] = "k_EControllerDigitalInput_RightTrackpadDoubleTap";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadOuterRadius"
+            ] = 40)
+          ] = "k_EControllerDigitalInput_LeftTrackpadOuterRadius";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadOuterRadius"
+            ] = 41)
+          ] = "k_EControllerDigitalInput_RightTrackpadOuterRadius";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTrackpadClick"
+            ] = 42)
+          ] = "k_EControllerDigitalInput_LeftTrackpadClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTrackpadClick"
+            ] = 43)
+          ] = "k_EControllerDigitalInput_RightTrackpadClick";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_BatteryLow"] = 44)
+          ] = "k_EControllerDigitalInput_BatteryLow";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_LeftTriggerThreshold"
+            ] = 45)
+          ] = "k_EControllerDigitalInput_LeftTriggerThreshold";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_RightTriggerThreshold"
+            ] = 46)
+          ] = "k_EControllerDigitalInput_RightTriggerThreshold";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackLeft2"
+            ] = 47)
+          ] = "k_EControllerDigitalInput_ButtonBackLeft2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonBackRight2"
+            ] = 48)
+          ] = "k_EControllerDigitalInput_ButtonBackRight2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonAlwaysOn"
+            ] = 49)
+          ] = "k_EControllerDigitalInput_ButtonAlwaysOn";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonAncillary1"
+            ] = 50)
+          ] = "k_EControllerDigitalInput_ButtonAncillary1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro0"
+            ] = 51)
+          ] = "k_EControllerDigitalInput_ButtonMacro0";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro1"
+            ] = 52)
+          ] = "k_EControllerDigitalInput_ButtonMacro1";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro2"
+            ] = 53)
+          ] = "k_EControllerDigitalInput_ButtonMacro2";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro3"
+            ] = 54)
+          ] = "k_EControllerDigitalInput_ButtonMacro3";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro4"
+            ] = 55)
+          ] = "k_EControllerDigitalInput_ButtonMacro4";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro5"
+            ] = 56)
+          ] = "k_EControllerDigitalInput_ButtonMacro5";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro6"
+            ] = 57)
+          ] = "k_EControllerDigitalInput_ButtonMacro6";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro7"
+            ] = 58)
+          ] = "k_EControllerDigitalInput_ButtonMacro7";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro1Finger"
+            ] = 59)
+          ] = "k_EControllerDigitalInput_ButtonMacro1Finger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO[
+              "k_EControllerDigitalInput_ButtonMacro2Finger"
+            ] = 60)
+          ] = "k_EControllerDigitalInput_ButtonMacro2Finger";
+          EControllerDigitalIO[
+            (EControllerDigitalIO["k_EControllerDigitalInput_Count"] = 61)
+          ] = "k_EControllerDigitalInput_Count";
+        })(EControllerDigitalIO || (EControllerDigitalIO = {}));
+        function EControllerDigitalIOToString(eControllerDigitalIO) {
           if (true) {
-            switch (eStoreItemType) {
+            switch (eControllerDigitalIO) {
               case -1:
-                return "k_EStoreItemType_Invalid";
+                return "k_EControllerDigitalInput_ButtonNone";
               case 0:
-                return "k_EStoreItemType_App";
+                return "k_EControllerDigitalInput_ButtonRightTrigger";
               case 1:
-                return "k_EStoreItemType_Package";
+                return "k_EControllerDigitalInput_ButtonLeftTrigger";
+              // value 2 could also be k_EControllerDigitalInput_Button1
               case 2:
-                return "k_EStoreItemType_Bundle";
+                return "k_EControllerDigitalInput_ButtonY";
+              // value 3 could also be k_EControllerDigitalInput_Button2
               case 3:
-                return "k_EStoreItemType_Mtx";
-            }
-          }
-          return "unknown EStoreItemType ( " + eStoreItemType + " )";
-        }
-        var EStoreAppType;
-        (function (EStoreAppType) {
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Game"] = 0)] =
-            "k_EStoreAppType_Game";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Demo"] = 1)] =
-            "k_EStoreAppType_Demo";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Mod"] = 2)] =
-            "k_EStoreAppType_Mod";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Movie"] = 3)] =
-            "k_EStoreAppType_Movie";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_DLC"] = 4)] =
-            "k_EStoreAppType_DLC";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Guide"] = 5)] =
-            "k_EStoreAppType_Guide";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Software"] = 6)] =
-            "k_EStoreAppType_Software";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Video"] = 7)] =
-            "k_EStoreAppType_Video";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Series"] = 8)] =
-            "k_EStoreAppType_Series";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Episode"] = 9)] =
-            "k_EStoreAppType_Episode";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Hardware"] = 10)] =
-            "k_EStoreAppType_Hardware";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Music"] = 11)] =
-            "k_EStoreAppType_Music";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Beta"] = 12)] =
-            "k_EStoreAppType_Beta";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Tool"] = 13)] =
-            "k_EStoreAppType_Tool";
-          EStoreAppType[(EStoreAppType["k_EStoreAppType_Advertising"] = 14)] =
-            "k_EStoreAppType_Advertising";
-        })(EStoreAppType || (EStoreAppType = {}));
-        function EStoreAppTypeToString(eStoreAppType) {
-          if (true) {
-            switch (eStoreAppType) {
-              case 0:
-                return "k_EStoreAppType_Game";
-              case 1:
-                return "k_EStoreAppType_Demo";
-              case 2:
-                return "k_EStoreAppType_Mod";
-              case 3:
-                return "k_EStoreAppType_Movie";
+                return "k_EControllerDigitalInput_ButtonB";
+              // value 4 could also be k_EControllerDigitalInput_Button3
               case 4:
-                return "k_EStoreAppType_DLC";
+                return "k_EControllerDigitalInput_ButtonX";
+              // value 5 could also be k_EControllerDigitalInput_Button4
               case 5:
-                return "k_EStoreAppType_Guide";
+                return "k_EControllerDigitalInput_ButtonA";
               case 6:
-                return "k_EStoreAppType_Software";
+                return "k_EControllerDigitalInput_ButtonRightBumper";
               case 7:
-                return "k_EStoreAppType_Video";
+                return "k_EControllerDigitalInput_ButtonLeftBumper";
               case 8:
-                return "k_EStoreAppType_Series";
+                return "k_EControllerDigitalInput_ButtonLeftJoystickClick";
               case 9:
-                return "k_EStoreAppType_Episode";
+                return "k_EControllerDigitalInput_ButtonEscape";
               case 10:
-                return "k_EStoreAppType_Hardware";
+                return "k_EControllerDigitalInput_ButtonSteam";
               case 11:
-                return "k_EStoreAppType_Music";
+                return "k_EControllerDigitalInput_ButtonMenu";
               case 12:
-                return "k_EStoreAppType_Beta";
+                return "k_EControllerDigitalInput_StickUp";
               case 13:
-                return "k_EStoreAppType_Tool";
+                return "k_EControllerDigitalInput_StickDown";
               case 14:
-                return "k_EStoreAppType_Advertising";
+                return "k_EControllerDigitalInput_StickLeft";
+              case 15:
+                return "k_EControllerDigitalInput_StickRight";
+              // value 16 could also be k_EControllerDigitalInput_Touch1
+              case 16:
+                return "k_EControllerDigitalInput_ButtonUp";
+              // value 17 could also be k_EControllerDigitalInput_Touch2
+              case 17:
+                return "k_EControllerDigitalInput_ButtonRight";
+              // value 18 could also be k_EControllerDigitalInput_Touch3
+              case 18:
+                return "k_EControllerDigitalInput_ButtonLeft";
+              // value 19 could also be k_EControllerDigitalInput_Touch4
+              case 19:
+                return "k_EControllerDigitalInput_ButtonDown";
+              case 20:
+                return "k_EControllerDigitalInput_ButtonBackLeft";
+              case 21:
+                return "k_EControllerDigitalInput_ButtonBackRight";
+              case 22:
+                return "k_EControllerDigitalInput_LeftTrackpadN";
+              case 23:
+                return "k_EControllerDigitalInput_LeftTrackpadNe";
+              case 24:
+                return "k_EControllerDigitalInput_LeftTrackpadE";
+              case 25:
+                return "k_EControllerDigitalInput_LeftTrackpadSe";
+              case 26:
+                return "k_EControllerDigitalInput_LeftTrackpadS";
+              case 27:
+                return "k_EControllerDigitalInput_LeftTrackpadSw";
+              case 28:
+                return "k_EControllerDigitalInput_LeftTrackpadW";
+              case 29:
+                return "k_EControllerDigitalInput_LeftTrackpadNw";
+              case 30:
+                return "k_EControllerDigitalInput_RightTrackpadN";
+              case 31:
+                return "k_EControllerDigitalInput_RightTrackpadNe";
+              case 32:
+                return "k_EControllerDigitalInput_RightTrackpadE";
+              case 33:
+                return "k_EControllerDigitalInput_RightTrackpadSe";
+              case 34:
+                return "k_EControllerDigitalInput_RightTrackpadS";
+              case 35:
+                return "k_EControllerDigitalInput_RightTrackpadSw";
+              case 36:
+                return "k_EControllerDigitalInput_RightTrackpadW";
+              case 37:
+                return "k_EControllerDigitalInput_RightTrackpadNw";
+              case 38:
+                return "k_EControllerDigitalInput_LeftTrackpadDoubleTap";
+              case 39:
+                return "k_EControllerDigitalInput_RightTrackpadDoubleTap";
+              case 40:
+                return "k_EControllerDigitalInput_LeftTrackpadOuterRadius";
+              case 41:
+                return "k_EControllerDigitalInput_RightTrackpadOuterRadius";
+              case 42:
+                return "k_EControllerDigitalInput_LeftTrackpadClick";
+              case 43:
+                return "k_EControllerDigitalInput_RightTrackpadClick";
+              case 44:
+                return "k_EControllerDigitalInput_BatteryLow";
+              case 45:
+                return "k_EControllerDigitalInput_LeftTriggerThreshold";
+              case 46:
+                return "k_EControllerDigitalInput_RightTriggerThreshold";
+              case 47:
+                return "k_EControllerDigitalInput_ButtonBackLeft2";
+              case 48:
+                return "k_EControllerDigitalInput_ButtonBackRight2";
+              case 49:
+                return "k_EControllerDigitalInput_ButtonAlwaysOn";
+              case 50:
+                return "k_EControllerDigitalInput_ButtonAncillary1";
+              case 51:
+                return "k_EControllerDigitalInput_ButtonMacro0";
+              case 52:
+                return "k_EControllerDigitalInput_ButtonMacro1";
+              case 53:
+                return "k_EControllerDigitalInput_ButtonMacro2";
+              case 54:
+                return "k_EControllerDigitalInput_ButtonMacro3";
+              case 55:
+                return "k_EControllerDigitalInput_ButtonMacro4";
+              case 56:
+                return "k_EControllerDigitalInput_ButtonMacro5";
+              case 57:
+                return "k_EControllerDigitalInput_ButtonMacro6";
+              case 58:
+                return "k_EControllerDigitalInput_ButtonMacro7";
+              case 59:
+                return "k_EControllerDigitalInput_ButtonMacro1Finger";
+              case 60:
+                return "k_EControllerDigitalInput_ButtonMacro2Finger";
+              case 61:
+                return "k_EControllerDigitalInput_Count";
             }
           }
-          return "unknown EStoreAppType ( " + eStoreAppType + " )";
+          return (
+            "unknown EControllerDigitalIO ( " + eControllerDigitalIO + " )"
+          );
         }
-        var EStoreCategoryType;
-        (function (EStoreCategoryType) {
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_Category"] = 0)
-          ] = "k_EStoreCategoryType_Category";
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_SupportedPlayers"] = 1)
-          ] = "k_EStoreCategoryType_SupportedPlayers";
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_Feature"] = 2)
-          ] = "k_EStoreCategoryType_Feature";
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_ControllerSupport"] = 3)
-          ] = "k_EStoreCategoryType_ControllerSupport";
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_CloudGaming"] = 4)
-          ] = "k_EStoreCategoryType_CloudGaming";
-          EStoreCategoryType[
-            (EStoreCategoryType["k_EStoreCategoryType_MAX"] = 5)
-          ] = "k_EStoreCategoryType_MAX";
-        })(EStoreCategoryType || (EStoreCategoryType = {}));
-        function EStoreCategoryTypeToString(eStoreCategoryType) {
-          if (true) {
-            switch (eStoreCategoryType) {
-              case 0:
-                return "k_EStoreCategoryType_Category";
-              case 1:
-                return "k_EStoreCategoryType_SupportedPlayers";
-              case 2:
-                return "k_EStoreCategoryType_Feature";
-              case 3:
-                return "k_EStoreCategoryType_ControllerSupport";
-              case 4:
-                return "k_EStoreCategoryType_CloudGaming";
-              case 5:
-                return "k_EStoreCategoryType_MAX";
-            }
-          }
-          return "unknown EStoreCategoryType ( " + eStoreCategoryType + " )";
-        }
-        var EUserReviewScore;
-        (function (EUserReviewScore) {
-          EUserReviewScore[(EUserReviewScore["k_EUserReviewScore_None"] = 0)] =
-            "k_EUserReviewScore_None";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_OverwhelminglyNegative"] = 1)
-          ] = "k_EUserReviewScore_OverwhelminglyNegative";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_VeryNegative"] = 2)
-          ] = "k_EUserReviewScore_VeryNegative";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_Negative"] = 3)
-          ] = "k_EUserReviewScore_Negative";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_MostlyNegative"] = 4)
-          ] = "k_EUserReviewScore_MostlyNegative";
-          EUserReviewScore[(EUserReviewScore["k_EUserReviewScore_Mixed"] = 5)] =
-            "k_EUserReviewScore_Mixed";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_MostlyPositive"] = 6)
-          ] = "k_EUserReviewScore_MostlyPositive";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_Positive"] = 7)
-          ] = "k_EUserReviewScore_Positive";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_VeryPositive"] = 8)
-          ] = "k_EUserReviewScore_VeryPositive";
-          EUserReviewScore[
-            (EUserReviewScore["k_EUserReviewScore_OverwhelminglyPositive"] = 9)
-          ] = "k_EUserReviewScore_OverwhelminglyPositive";
-        })(EUserReviewScore || (EUserReviewScore = {}));
-        function EUserReviewScoreToString(eUserReviewScore) {
-          if (true) {
-            switch (eUserReviewScore) {
-              case 0:
-                return "k_EUserReviewScore_None";
-              case 1:
-                return "k_EUserReviewScore_OverwhelminglyNegative";
-              case 2:
-                return "k_EUserReviewScore_VeryNegative";
-              case 3:
-                return "k_EUserReviewScore_Negative";
-              case 4:
-                return "k_EUserReviewScore_MostlyNegative";
-              case 5:
-                return "k_EUserReviewScore_Mixed";
-              case 6:
-                return "k_EUserReviewScore_MostlyPositive";
-              case 7:
-                return "k_EUserReviewScore_Positive";
-              case 8:
-                return "k_EUserReviewScore_VeryPositive";
-              case 9:
-                return "k_EUserReviewScore_OverwhelminglyPositive";
-            }
-          }
-          return "unknown EUserReviewScore ( " + eUserReviewScore + " )";
-        }
-        class StoreGameRating extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreGameRating.prototype.type)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreGameRating.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [3], null);
-          }
-          static M() {
-            if (!StoreGameRating.sm_m) {
-              StoreGameRating.sm_m = {
-                proto: StoreGameRating,
-                fields: {
-                  type: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  rating: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  descriptors: {
-                    n: 3,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedString,
-                  },
-                  interactive_elements: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  required_age: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  use_age_gate: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  image_url: {
-                    n: 20,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  image_target: {
-                    n: 21,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreGameRating.sm_m;
-          }
-          static MBF() {
-            if (!StoreGameRating.sm_mbf) {
-              StoreGameRating.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreGameRating.M()
-                );
-            }
-            return StoreGameRating.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreGameRating.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreGameRating.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreGameRating.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreGameRating();
-            return StoreGameRating.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreGameRating.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreGameRating.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreGameRating.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreGameRating.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreGameRating";
-          }
-        }
-        class StoreItem extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem.prototype.item_type)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem.M()
-              );
-            jspb_Message.initialize(
-              this,
-              opt_data,
-              0,
-              -1,
-              [11, 12, 20, 21, 25, 41, 42, 52],
-              null
-            );
-          }
-          static M() {
-            if (!StoreItem.sm_m) {
-              StoreItem.sm_m = {
-                proto: StoreItem,
-                fields: {
-                  item_type: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  id: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  success: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  visible: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  unvailable_for_country_restriction: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  name: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  store_url_path: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  appid: {
-                    n: 9,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  type: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  included_types: {
-                    n: 11,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedEnum,
-                  },
-                  included_appids: {
-                    n: 12,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  is_free: {
-                    n: 13,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_early_access: {
-                    n: 14,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  related_items: { n: 15, c: StoreItem_RelatedItems },
-                  content_descriptorids: {
-                    n: 20,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedEnum,
-                  },
-                  tagids: {
-                    n: 21,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  categories: { n: 22, c: StoreItem_Categories },
-                  reviews: { n: 23, c: StoreItem_Reviews },
-                  basic_info: { n: 24, c: StoreItem_BasicInfo },
-                  tags: { n: 25, c: StoreItem_Tag, r: true, q: true },
-                  assets: { n: 30, c: StoreItem_Assets },
-                  release: { n: 31, c: StoreItem_ReleaseInfo },
-                  platforms: { n: 32, c: StoreItem_Platforms },
-                  game_rating: { n: 33, c: StoreGameRating },
-                  best_purchase_option: { n: 40, c: StoreItem_PurchaseOption },
-                  purchase_options: {
-                    n: 41,
-                    c: StoreItem_PurchaseOption,
-                    r: true,
-                    q: true,
-                  },
-                  accessories: {
-                    n: 42,
-                    c: StoreItem_PurchaseOption,
-                    r: true,
-                    q: true,
-                  },
-                  screenshots: { n: 50, c: StoreItem_Screenshots },
-                  trailers: { n: 51, c: StoreItem_Trailers },
-                  supported_languages: {
-                    n: 52,
-                    c: StoreItem_SupportedLanguage,
-                    r: true,
-                    q: true,
-                  },
-                  store_url_path_override: {
-                    n: 53,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  free_weekend: { n: 54, c: StoreItem_FreeWeekend },
-                },
-              };
-            }
-            return StoreItem.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem.sm_mbf) {
-              StoreItem.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem.M()
-                );
-            }
-            return StoreItem.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem();
-            return StoreItem.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem";
-          }
-        }
-        class StoreItem_RelatedItems extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_RelatedItems.prototype.parent_appid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_RelatedItems.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_RelatedItems.sm_m) {
-              StoreItem_RelatedItems.sm_m = {
-                proto: StoreItem_RelatedItems,
-                fields: {
-                  parent_appid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_RelatedItems.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_RelatedItems.sm_mbf) {
-              StoreItem_RelatedItems.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_RelatedItems.M()
-                );
-            }
-            return StoreItem_RelatedItems.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_RelatedItems.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_RelatedItems.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_RelatedItems.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_RelatedItems();
-            return StoreItem_RelatedItems.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_RelatedItems.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_RelatedItems.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_RelatedItems.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_RelatedItems.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_RelatedItems";
-          }
-        }
-        class StoreItem_Categories extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Categories.prototype.supported_player_categoryids)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Categories.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [2, 3, 4], null);
-          }
-          static M() {
-            if (!StoreItem_Categories.sm_m) {
-              StoreItem_Categories.sm_m = {
-                proto: StoreItem_Categories,
-                fields: {
-                  supported_player_categoryids: {
-                    n: 2,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  feature_categoryids: {
-                    n: 3,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                  controller_categoryids: {
-                    n: 4,
-                    r: true,
-                    q: true,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeRepeatedUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_Categories.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Categories.sm_mbf) {
-              StoreItem_Categories.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Categories.M()
-                );
-            }
-            return StoreItem_Categories.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Categories.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Categories.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Categories.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Categories();
-            return StoreItem_Categories.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Categories.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Categories.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Categories.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Categories.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Categories";
-          }
-        }
-        class StoreItem_Reviews extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Reviews.prototype.summary_filtered)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Reviews.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Reviews.sm_m) {
-              StoreItem_Reviews.sm_m = {
-                proto: StoreItem_Reviews,
-                fields: {
-                  summary_filtered: {
-                    n: 1,
-                    c: StoreItem_Reviews_StoreReviewSummary,
-                  },
-                  summary_unfiltered: {
-                    n: 2,
-                    c: StoreItem_Reviews_StoreReviewSummary,
-                  },
-                },
-              };
-            }
-            return StoreItem_Reviews.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Reviews.sm_mbf) {
-              StoreItem_Reviews.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Reviews.M()
-                );
-            }
-            return StoreItem_Reviews.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Reviews.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Reviews.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Reviews.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Reviews();
-            return StoreItem_Reviews.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Reviews.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Reviews.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Reviews.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Reviews.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Reviews";
-          }
-        }
-        class StoreItem_Reviews_StoreReviewSummary extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Reviews_StoreReviewSummary.prototype.review_count)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Reviews_StoreReviewSummary.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Reviews_StoreReviewSummary.sm_m) {
-              StoreItem_Reviews_StoreReviewSummary.sm_m = {
-                proto: StoreItem_Reviews_StoreReviewSummary,
-                fields: {
-                  review_count: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  percent_positive: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  review_score: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  review_score_label: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreItem_Reviews_StoreReviewSummary.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Reviews_StoreReviewSummary.sm_mbf) {
-              StoreItem_Reviews_StoreReviewSummary.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Reviews_StoreReviewSummary.M()
-                );
-            }
-            return StoreItem_Reviews_StoreReviewSummary.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Reviews_StoreReviewSummary.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Reviews_StoreReviewSummary.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Reviews_StoreReviewSummary.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Reviews_StoreReviewSummary();
-            return StoreItem_Reviews_StoreReviewSummary.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Reviews_StoreReviewSummary.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Reviews_StoreReviewSummary.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Reviews_StoreReviewSummary.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Reviews_StoreReviewSummary.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Reviews_StoreReviewSummary";
-          }
-        }
-        class StoreItem_BasicInfo extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_BasicInfo.prototype.short_description)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_BasicInfo.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [2, 3, 4], null);
-          }
-          static M() {
-            if (!StoreItem_BasicInfo.sm_m) {
-              StoreItem_BasicInfo.sm_m = {
-                proto: StoreItem_BasicInfo,
-                fields: {
-                  short_description: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  publishers: {
-                    n: 2,
-                    c: StoreItem_BasicInfo_CreatorHomeLink,
-                    r: true,
-                    q: true,
-                  },
-                  developers: {
-                    n: 3,
-                    c: StoreItem_BasicInfo_CreatorHomeLink,
-                    r: true,
-                    q: true,
-                  },
-                  franchises: {
-                    n: 4,
-                    c: StoreItem_BasicInfo_CreatorHomeLink,
-                    r: true,
-                    q: true,
-                  },
-                  capsule_headline: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreItem_BasicInfo.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_BasicInfo.sm_mbf) {
-              StoreItem_BasicInfo.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_BasicInfo.M()
-                );
-            }
-            return StoreItem_BasicInfo.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_BasicInfo.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_BasicInfo.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_BasicInfo.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_BasicInfo();
-            return StoreItem_BasicInfo.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_BasicInfo.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_BasicInfo.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_BasicInfo.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_BasicInfo.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_BasicInfo";
-          }
-        }
-        class StoreItem_BasicInfo_CreatorHomeLink extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_BasicInfo_CreatorHomeLink.prototype.name)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_BasicInfo_CreatorHomeLink.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_BasicInfo_CreatorHomeLink.sm_m) {
-              StoreItem_BasicInfo_CreatorHomeLink.sm_m = {
-                proto: StoreItem_BasicInfo_CreatorHomeLink,
-                fields: {
-                  name: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  creator_clan_account_id: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_BasicInfo_CreatorHomeLink.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_BasicInfo_CreatorHomeLink.sm_mbf) {
-              StoreItem_BasicInfo_CreatorHomeLink.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_BasicInfo_CreatorHomeLink.M()
-                );
-            }
-            return StoreItem_BasicInfo_CreatorHomeLink.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_BasicInfo_CreatorHomeLink.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_BasicInfo_CreatorHomeLink.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_BasicInfo_CreatorHomeLink.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_BasicInfo_CreatorHomeLink();
-            return StoreItem_BasicInfo_CreatorHomeLink.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_BasicInfo_CreatorHomeLink.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_BasicInfo_CreatorHomeLink.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_BasicInfo_CreatorHomeLink.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_BasicInfo_CreatorHomeLink.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_BasicInfo_CreatorHomeLink";
-          }
-        }
-        class StoreItem_Tag extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Tag.prototype.tagid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Tag.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Tag.sm_m) {
-              StoreItem_Tag.sm_m = {
-                proto: StoreItem_Tag,
-                fields: {
-                  tagid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  weight: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_Tag.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Tag.sm_mbf) {
-              StoreItem_Tag.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Tag.M()
-                );
-            }
-            return StoreItem_Tag.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Tag.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Tag.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Tag.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Tag();
-            return StoreItem_Tag.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Tag.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Tag.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Tag.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Tag.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Tag";
-          }
-        }
-        class StoreItem_Assets extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Assets.prototype.asset_url_format)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Assets.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Assets.sm_m) {
-              StoreItem_Assets.sm_m = {
-                proto: StoreItem_Assets,
-                fields: {
-                  asset_url_format: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  main_capsule: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  small_capsule: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  header: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  package_header: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  page_background: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  hero_capsule: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  hero_capsule_2x: {
-                    n: 8,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  library_capsule: {
-                    n: 9,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  library_capsule_2x: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  library_hero: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  library_hero_2x: {
-                    n: 12,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  community_icon: {
-                    n: 13,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreItem_Assets.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Assets.sm_mbf) {
-              StoreItem_Assets.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Assets.M()
-                );
-            }
-            return StoreItem_Assets.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Assets.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Assets.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Assets.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Assets();
-            return StoreItem_Assets.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Assets.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Assets.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Assets.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Assets.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Assets";
-          }
-        }
-        class StoreItem_ReleaseInfo extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_ReleaseInfo.prototype.steam_release_date)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_ReleaseInfo.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_ReleaseInfo.sm_m) {
-              StoreItem_ReleaseInfo.sm_m = {
-                proto: StoreItem_ReleaseInfo,
-                fields: {
-                  steam_release_date: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  original_release_date: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  original_steam_release_date: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  is_coming_soon: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_preload: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  custom_release_date_message: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  is_abridged_release_date: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_early_access: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  mac_release_date: {
-                    n: 20,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  linux_release_date: {
-                    n: 21,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_ReleaseInfo.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_ReleaseInfo.sm_mbf) {
-              StoreItem_ReleaseInfo.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_ReleaseInfo.M()
-                );
-            }
-            return StoreItem_ReleaseInfo.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_ReleaseInfo.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_ReleaseInfo.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_ReleaseInfo.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_ReleaseInfo();
-            return StoreItem_ReleaseInfo.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_ReleaseInfo.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_ReleaseInfo.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_ReleaseInfo.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_ReleaseInfo.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_ReleaseInfo";
-          }
-        }
-        class StoreItem_Platforms extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Platforms.prototype.windows)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Platforms.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Platforms.sm_m) {
-              StoreItem_Platforms.sm_m = {
-                proto: StoreItem_Platforms,
-                fields: {
-                  windows: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  mac: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  linux: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  vr_support: { n: 10, c: StoreItem_Platforms_VRSupport },
-                  steam_deck_compat_category: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                },
-              };
-            }
-            return StoreItem_Platforms.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Platforms.sm_mbf) {
-              StoreItem_Platforms.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Platforms.M()
-                );
-            }
-            return StoreItem_Platforms.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Platforms.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Platforms.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Platforms.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Platforms();
-            return StoreItem_Platforms.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Platforms.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Platforms.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Platforms.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Platforms.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Platforms";
-          }
-        }
-        class StoreItem_Platforms_VRSupport extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Platforms_VRSupport.prototype.vrhmd)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Platforms_VRSupport.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Platforms_VRSupport.sm_m) {
-              StoreItem_Platforms_VRSupport.sm_m = {
-                proto: StoreItem_Platforms_VRSupport,
-                fields: {
-                  vrhmd: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  vrhmd_only: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  htc_vive: {
-                    n: 40,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  oculus_rift: {
-                    n: 41,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  windows_mr: {
-                    n: 42,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  valve_index: {
-                    n: 43,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return StoreItem_Platforms_VRSupport.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Platforms_VRSupport.sm_mbf) {
-              StoreItem_Platforms_VRSupport.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Platforms_VRSupport.M()
-                );
-            }
-            return StoreItem_Platforms_VRSupport.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Platforms_VRSupport.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Platforms_VRSupport.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Platforms_VRSupport.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Platforms_VRSupport();
-            return StoreItem_Platforms_VRSupport.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Platforms_VRSupport.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Platforms_VRSupport.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Platforms_VRSupport.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Platforms_VRSupport.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Platforms_VRSupport";
-          }
-        }
-        class StoreItem_PurchaseOption extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_PurchaseOption.prototype.packageid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_PurchaseOption.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [20, 21, 22], null);
-          }
-          static M() {
-            if (!StoreItem_PurchaseOption.sm_m) {
-              StoreItem_PurchaseOption.sm_m = {
-                proto: StoreItem_PurchaseOption,
-                fields: {
-                  packageid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  bundleid: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  purchase_option_name: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  final_price_in_cents: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt64String,
-                  },
-                  original_price_in_cents: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt64String,
-                  },
-                  user_final_price_in_cents: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt64String,
-                  },
-                  formatted_final_price: {
-                    n: 8,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  formatted_original_price: {
-                    n: 9,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  discount_pct: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  user_discount_pct: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  bundle_discount_pct: {
-                    n: 12,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  active_discounts: {
-                    n: 20,
-                    c: StoreItem_PurchaseOption_Discount,
-                    r: true,
-                    q: true,
-                  },
-                  user_active_discounts: {
-                    n: 21,
-                    c: StoreItem_PurchaseOption_Discount,
-                    r: true,
-                    q: true,
-                  },
-                  inactive_discounts: {
-                    n: 22,
-                    c: StoreItem_PurchaseOption_Discount,
-                    r: true,
-                    q: true,
-                  },
-                  user_can_purchase: {
-                    n: 30,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  user_can_purchase_as_gift: {
-                    n: 31,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  is_commercial_license: {
-                    n: 40,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  should_suppress_discount_pct: {
-                    n: 41,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return StoreItem_PurchaseOption.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_PurchaseOption.sm_mbf) {
-              StoreItem_PurchaseOption.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_PurchaseOption.M()
-                );
-            }
-            return StoreItem_PurchaseOption.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_PurchaseOption.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_PurchaseOption.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_PurchaseOption.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_PurchaseOption();
-            return StoreItem_PurchaseOption.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_PurchaseOption.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_PurchaseOption.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_PurchaseOption.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_PurchaseOption.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_PurchaseOption";
-          }
-        }
-        class StoreItem_PurchaseOption_Discount extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_PurchaseOption_Discount.prototype.discount_amount)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_PurchaseOption_Discount.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_PurchaseOption_Discount.sm_m) {
-              StoreItem_PurchaseOption_Discount.sm_m = {
-                proto: StoreItem_PurchaseOption_Discount,
-                fields: {
-                  discount_amount: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt64String,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt64String,
-                  },
-                  discount_description: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  discount_end_date: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItem_PurchaseOption_Discount.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_PurchaseOption_Discount.sm_mbf) {
-              StoreItem_PurchaseOption_Discount.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_PurchaseOption_Discount.M()
-                );
-            }
-            return StoreItem_PurchaseOption_Discount.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_PurchaseOption_Discount.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_PurchaseOption_Discount.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_PurchaseOption_Discount.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_PurchaseOption_Discount();
-            return StoreItem_PurchaseOption_Discount.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_PurchaseOption_Discount.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_PurchaseOption_Discount.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_PurchaseOption_Discount.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_PurchaseOption_Discount.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_PurchaseOption_Discount";
-          }
-        }
-        class StoreItem_Screenshots extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Screenshots.prototype.all_ages_screenshots)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Screenshots.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [2, 3], null);
-          }
-          static M() {
-            if (!StoreItem_Screenshots.sm_m) {
-              StoreItem_Screenshots.sm_m = {
-                proto: StoreItem_Screenshots,
-                fields: {
-                  all_ages_screenshots: {
-                    n: 2,
-                    c: StoreItem_Screenshots_Screenshot,
-                    r: true,
-                    q: true,
-                  },
-                  mature_content_screenshots: {
-                    n: 3,
-                    c: StoreItem_Screenshots_Screenshot,
-                    r: true,
-                    q: true,
-                  },
-                },
-              };
-            }
-            return StoreItem_Screenshots.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Screenshots.sm_mbf) {
-              StoreItem_Screenshots.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Screenshots.M()
-                );
-            }
-            return StoreItem_Screenshots.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Screenshots.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Screenshots.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Screenshots.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Screenshots();
-            return StoreItem_Screenshots.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Screenshots.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Screenshots.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Screenshots.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Screenshots.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Screenshots";
-          }
-        }
-        class StoreItem_Screenshots_Screenshot extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Screenshots_Screenshot.prototype.filename)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Screenshots_Screenshot.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Screenshots_Screenshot.sm_m) {
-              StoreItem_Screenshots_Screenshot.sm_m = {
-                proto: StoreItem_Screenshots_Screenshot,
-                fields: {
-                  filename: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  ordinal: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                },
-              };
-            }
-            return StoreItem_Screenshots_Screenshot.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Screenshots_Screenshot.sm_mbf) {
-              StoreItem_Screenshots_Screenshot.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Screenshots_Screenshot.M()
-                );
-            }
-            return StoreItem_Screenshots_Screenshot.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Screenshots_Screenshot.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Screenshots_Screenshot.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Screenshots_Screenshot.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Screenshots_Screenshot();
-            return StoreItem_Screenshots_Screenshot.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Screenshots_Screenshot.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Screenshots_Screenshot.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Screenshots_Screenshot.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Screenshots_Screenshot.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Screenshots_Screenshot";
-          }
-        }
-        class StoreItem_Trailers extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Trailers.prototype.highlights)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Trailers.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1, 2], null);
-          }
-          static M() {
-            if (!StoreItem_Trailers.sm_m) {
-              StoreItem_Trailers.sm_m = {
-                proto: StoreItem_Trailers,
-                fields: {
-                  highlights: {
-                    n: 1,
-                    c: StoreItem_Trailers_Trailer,
-                    r: true,
-                    q: true,
-                  },
-                  other_trailers: {
-                    n: 2,
-                    c: StoreItem_Trailers_Trailer,
-                    r: true,
-                    q: true,
-                  },
-                },
-              };
-            }
-            return StoreItem_Trailers.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Trailers.sm_mbf) {
-              StoreItem_Trailers.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Trailers.M()
-                );
-            }
-            return StoreItem_Trailers.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Trailers.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Trailers.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Trailers.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Trailers();
-            return StoreItem_Trailers.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Trailers.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Trailers.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Trailers";
-          }
-        }
-        class StoreItem_Trailers_VideoSource extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Trailers_VideoSource.prototype.filename)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Trailers_VideoSource.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_Trailers_VideoSource.sm_m) {
-              StoreItem_Trailers_VideoSource.sm_m = {
-                proto: StoreItem_Trailers_VideoSource,
-                fields: {
-                  filename: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreItem_Trailers_VideoSource.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Trailers_VideoSource.sm_mbf) {
-              StoreItem_Trailers_VideoSource.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Trailers_VideoSource.M()
-                );
-            }
-            return StoreItem_Trailers_VideoSource.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Trailers_VideoSource.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Trailers_VideoSource.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Trailers_VideoSource.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Trailers_VideoSource();
-            return StoreItem_Trailers_VideoSource.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Trailers_VideoSource.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers_VideoSource.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Trailers_VideoSource.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers_VideoSource.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Trailers_VideoSource";
-          }
-        }
-        class StoreItem_Trailers_Trailer extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_Trailers_Trailer.prototype.trailer_name)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_Trailers_Trailer.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [3, 4, 5], null);
-          }
-          static M() {
-            if (!StoreItem_Trailers_Trailer.sm_m) {
-              StoreItem_Trailers_Trailer.sm_m = {
-                proto: StoreItem_Trailers_Trailer,
-                fields: {
-                  trailer_name: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  trailer_url_format: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  trailer_480p: {
-                    n: 3,
-                    c: StoreItem_Trailers_VideoSource,
-                    r: true,
-                    q: true,
-                  },
-                  trailer_max: {
-                    n: 4,
-                    c: StoreItem_Trailers_VideoSource,
-                    r: true,
-                    q: true,
-                  },
-                  microtrailer: {
-                    n: 5,
-                    c: StoreItem_Trailers_VideoSource,
-                    r: true,
-                    q: true,
-                  },
-                  screenshot_medium: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  screenshot_full: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  trailer_base_id: {
-                    n: 12,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                },
-              };
-            }
-            return StoreItem_Trailers_Trailer.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_Trailers_Trailer.sm_mbf) {
-              StoreItem_Trailers_Trailer.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_Trailers_Trailer.M()
-                );
-            }
-            return StoreItem_Trailers_Trailer.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_Trailers_Trailer.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_Trailers_Trailer.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_Trailers_Trailer.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_Trailers_Trailer();
-            return StoreItem_Trailers_Trailer.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_Trailers_Trailer.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers_Trailer.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_Trailers_Trailer.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_Trailers_Trailer.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_Trailers_Trailer";
-          }
-        }
-        class StoreItem_SupportedLanguage extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_SupportedLanguage.prototype.elanguage)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_SupportedLanguage.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_SupportedLanguage.sm_m) {
-              StoreItem_SupportedLanguage.sm_m = {
-                proto: StoreItem_SupportedLanguage,
-                fields: {
-                  elanguage: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  supported: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  full_audio: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  subtitles: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return StoreItem_SupportedLanguage.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_SupportedLanguage.sm_mbf) {
-              StoreItem_SupportedLanguage.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_SupportedLanguage.M()
-                );
-            }
-            return StoreItem_SupportedLanguage.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_SupportedLanguage.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_SupportedLanguage.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_SupportedLanguage.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_SupportedLanguage();
-            return StoreItem_SupportedLanguage.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_SupportedLanguage.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_SupportedLanguage.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_SupportedLanguage.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_SupportedLanguage.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_SupportedLanguage";
-          }
-        }
-        class StoreItem_FreeWeekend extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItem_FreeWeekend.prototype.start_time)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItem_FreeWeekend.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItem_FreeWeekend.sm_m) {
-              StoreItem_FreeWeekend.sm_m = {
-                proto: StoreItem_FreeWeekend,
-                fields: {
-                  start_time: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  end_time: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  text: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                },
-              };
-            }
-            return StoreItem_FreeWeekend.sm_m;
-          }
-          static MBF() {
-            if (!StoreItem_FreeWeekend.sm_mbf) {
-              StoreItem_FreeWeekend.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItem_FreeWeekend.M()
-                );
-            }
-            return StoreItem_FreeWeekend.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItem_FreeWeekend.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItem_FreeWeekend.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItem_FreeWeekend.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItem_FreeWeekend();
-            return StoreItem_FreeWeekend.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItem_FreeWeekend.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_FreeWeekend.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItem_FreeWeekend.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItem_FreeWeekend.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItem_FreeWeekend";
-          }
-        }
-        class StoreBrowseItemDataRequest extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreBrowseItemDataRequest.prototype.include_assets)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreBrowseItemDataRequest.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreBrowseItemDataRequest.sm_m) {
-              StoreBrowseItemDataRequest.sm_m = {
-                proto: StoreBrowseItemDataRequest,
-                fields: {
-                  include_assets: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_release: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_platforms: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_all_purchase_options: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_screenshots: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_trailers: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_ratings: {
-                    n: 7,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_tag_count: {
-                    n: 8,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  include_reviews: {
-                    n: 9,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_basic_info: {
-                    n: 10,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                  include_supported_languages: {
-                    n: 11,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return StoreBrowseItemDataRequest.sm_m;
-          }
-          static MBF() {
-            if (!StoreBrowseItemDataRequest.sm_mbf) {
-              StoreBrowseItemDataRequest.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreBrowseItemDataRequest.M()
-                );
-            }
-            return StoreBrowseItemDataRequest.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreBrowseItemDataRequest.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreBrowseItemDataRequest.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreBrowseItemDataRequest.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreBrowseItemDataRequest();
-            return StoreBrowseItemDataRequest.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreBrowseItemDataRequest.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreBrowseItemDataRequest.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreBrowseItemDataRequest.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreBrowseItemDataRequest.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreBrowseItemDataRequest";
-          }
-        }
-        class StoreBrowseContext extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreBrowseContext.prototype.language)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreBrowseContext.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreBrowseContext.sm_m) {
-              StoreBrowseContext.sm_m = {
-                proto: StoreBrowseContext,
-                fields: {
-                  language: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  elanguage: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                  country_code: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  steam_realm: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                },
-              };
-            }
-            return StoreBrowseContext.sm_m;
-          }
-          static MBF() {
-            if (!StoreBrowseContext.sm_mbf) {
-              StoreBrowseContext.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreBrowseContext.M()
-                );
-            }
-            return StoreBrowseContext.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreBrowseContext.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreBrowseContext.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreBrowseContext.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreBrowseContext();
-            return StoreBrowseContext.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreBrowseContext.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreBrowseContext.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreBrowseContext.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreBrowseContext.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreBrowseContext";
-          }
-        }
-        class StoreItemID extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!StoreItemID.prototype.appid)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                StoreItemID.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!StoreItemID.sm_m) {
-              StoreItemID.sm_m = {
-                proto: StoreItemID,
-                fields: {
-                  appid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  packageid: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  bundleid: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                },
-              };
-            }
-            return StoreItemID.sm_m;
-          }
-          static MBF() {
-            if (!StoreItemID.sm_mbf) {
-              StoreItemID.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  StoreItemID.M()
-                );
-            }
-            return StoreItemID.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return StoreItemID.toObject(opt_includeInstance, this);
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              StoreItemID.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              StoreItemID.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new StoreItemID();
-            return StoreItemID.deserializeBinaryFromReader(msg, reader);
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              StoreItemID.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItemID.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              StoreItemID.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            StoreItemID.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "StoreItemID";
-          }
-        }
-        class CStoreBrowse_GetItems_Request extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CStoreBrowse_GetItems_Request.prototype.ids)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CStoreBrowse_GetItems_Request.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1], null);
-          }
-          static M() {
-            if (!CStoreBrowse_GetItems_Request.sm_m) {
-              CStoreBrowse_GetItems_Request.sm_m = {
-                proto: CStoreBrowse_GetItems_Request,
-                fields: {
-                  ids: { n: 1, c: StoreItemID, r: true, q: true },
-                  context: { n: 2, c: StoreBrowseContext },
-                  data_request: { n: 3, c: StoreBrowseItemDataRequest },
-                },
-              };
-            }
-            return CStoreBrowse_GetItems_Request.sm_m;
-          }
-          static MBF() {
-            if (!CStoreBrowse_GetItems_Request.sm_mbf) {
-              CStoreBrowse_GetItems_Request.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CStoreBrowse_GetItems_Request.M()
-                );
-            }
-            return CStoreBrowse_GetItems_Request.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CStoreBrowse_GetItems_Request.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CStoreBrowse_GetItems_Request.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CStoreBrowse_GetItems_Request.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CStoreBrowse_GetItems_Request();
-            return CStoreBrowse_GetItems_Request.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CStoreBrowse_GetItems_Request.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetItems_Request.serializeBinaryToWriter(this, writer);
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CStoreBrowse_GetItems_Request.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetItems_Request.serializeBinaryToWriter(this, writer);
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CStoreBrowse_GetItems_Request";
-          }
-        }
-        class CStoreBrowse_GetItems_Response extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CStoreBrowse_GetItems_Response.prototype.store_items)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CStoreBrowse_GetItems_Response.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1], null);
-          }
-          static M() {
-            if (!CStoreBrowse_GetItems_Response.sm_m) {
-              CStoreBrowse_GetItems_Response.sm_m = {
-                proto: CStoreBrowse_GetItems_Response,
-                fields: {
-                  store_items: { n: 1, c: StoreItem, r: true, q: true },
-                },
-              };
-            }
-            return CStoreBrowse_GetItems_Response.sm_m;
-          }
-          static MBF() {
-            if (!CStoreBrowse_GetItems_Response.sm_mbf) {
-              CStoreBrowse_GetItems_Response.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CStoreBrowse_GetItems_Response.M()
-                );
-            }
-            return CStoreBrowse_GetItems_Response.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CStoreBrowse_GetItems_Response.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CStoreBrowse_GetItems_Response.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CStoreBrowse_GetItems_Response.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CStoreBrowse_GetItems_Response();
-            return CStoreBrowse_GetItems_Response.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CStoreBrowse_GetItems_Response.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetItems_Response.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CStoreBrowse_GetItems_Response.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetItems_Response.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CStoreBrowse_GetItems_Response";
-          }
-        }
-        class CStoreBrowse_GetStoreCategories_Request extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CStoreBrowse_GetStoreCategories_Request.prototype.language)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CStoreBrowse_GetStoreCategories_Request.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!CStoreBrowse_GetStoreCategories_Request.sm_m) {
-              CStoreBrowse_GetStoreCategories_Request.sm_m = {
-                proto: CStoreBrowse_GetStoreCategories_Request,
-                fields: {
-                  language: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  elanguage: {
-                    n: 2,
-                    d: -1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readInt32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeInt32,
-                  },
-                },
-              };
-            }
-            return CStoreBrowse_GetStoreCategories_Request.sm_m;
-          }
-          static MBF() {
-            if (!CStoreBrowse_GetStoreCategories_Request.sm_mbf) {
-              CStoreBrowse_GetStoreCategories_Request.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CStoreBrowse_GetStoreCategories_Request.M()
-                );
-            }
-            return CStoreBrowse_GetStoreCategories_Request.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CStoreBrowse_GetStoreCategories_Request.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CStoreBrowse_GetStoreCategories_Request.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CStoreBrowse_GetStoreCategories_Request.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CStoreBrowse_GetStoreCategories_Request();
-            return CStoreBrowse_GetStoreCategories_Request.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CStoreBrowse_GetStoreCategories_Request.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Request.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CStoreBrowse_GetStoreCategories_Request.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Request.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CStoreBrowse_GetStoreCategories_Request";
-          }
-        }
-        class CStoreBrowse_GetStoreCategories_Response extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (!CStoreBrowse_GetStoreCategories_Response.prototype.categories)
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CStoreBrowse_GetStoreCategories_Response.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, [1], null);
-          }
-          static M() {
-            if (!CStoreBrowse_GetStoreCategories_Response.sm_m) {
-              CStoreBrowse_GetStoreCategories_Response.sm_m = {
-                proto: CStoreBrowse_GetStoreCategories_Response,
-                fields: {
-                  categories: {
-                    n: 1,
-                    c: CStoreBrowse_GetStoreCategories_Response_Category,
-                    r: true,
-                    q: true,
-                  },
-                },
-              };
-            }
-            return CStoreBrowse_GetStoreCategories_Response.sm_m;
-          }
-          static MBF() {
-            if (!CStoreBrowse_GetStoreCategories_Response.sm_mbf) {
-              CStoreBrowse_GetStoreCategories_Response.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CStoreBrowse_GetStoreCategories_Response.M()
-                );
-            }
-            return CStoreBrowse_GetStoreCategories_Response.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CStoreBrowse_GetStoreCategories_Response.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CStoreBrowse_GetStoreCategories_Response.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CStoreBrowse_GetStoreCategories_Response.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CStoreBrowse_GetStoreCategories_Response();
-            return CStoreBrowse_GetStoreCategories_Response.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CStoreBrowse_GetStoreCategories_Response.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Response.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CStoreBrowse_GetStoreCategories_Response.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Response.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CStoreBrowse_GetStoreCategories_Response";
-          }
-        }
-        class CStoreBrowse_GetStoreCategories_Response_Category extends jspb_Message {
-          constructor(opt_data = null) {
-            super();
-            if (
-              !CStoreBrowse_GetStoreCategories_Response_Category.prototype
-                .categoryid
-            )
-              shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.AddAccessors(
-                CStoreBrowse_GetStoreCategories_Response_Category.M()
-              );
-            jspb_Message.initialize(this, opt_data, 0, -1, undefined, null);
-          }
-          static M() {
-            if (!CStoreBrowse_GetStoreCategories_Response_Category.sm_m) {
-              CStoreBrowse_GetStoreCategories_Response_Category.sm_m = {
-                proto: CStoreBrowse_GetStoreCategories_Response_Category,
-                fields: {
-                  categoryid: {
-                    n: 1,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readUint32,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeUint32,
-                  },
-                  type: {
-                    n: 2,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readEnum,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeEnum,
-                  },
-                  internal_name: {
-                    n: 3,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  display_name: {
-                    n: 4,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  image_url: {
-                    n: 5,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readString,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeString,
-                  },
-                  show_in_search: {
-                    n: 6,
-                    br: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .ReaderProto.readBool,
-                    bw: shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__
-                      .WriterProto.writeBool,
-                  },
-                },
-              };
-            }
-            return CStoreBrowse_GetStoreCategories_Response_Category.sm_m;
-          }
-          static MBF() {
-            if (!CStoreBrowse_GetStoreCategories_Response_Category.sm_mbf) {
-              CStoreBrowse_GetStoreCategories_Response_Category.sm_mbf =
-                shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.RemapMetadataByField(
-                  CStoreBrowse_GetStoreCategories_Response_Category.M()
-                );
-            }
-            return CStoreBrowse_GetStoreCategories_Response_Category.sm_mbf;
-          }
-          toObject(opt_includeInstance = false) {
-            return CStoreBrowse_GetStoreCategories_Response_Category.toObject(
-              opt_includeInstance,
-              this
-            );
-          }
-          static toObject(opt_includeInstance, msg) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.ToObject(
-              CStoreBrowse_GetStoreCategories_Response_Category.M(),
-              opt_includeInstance,
-              msg
-            );
-          }
-          static fromObject(obj) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.FromObject(
-              CStoreBrowse_GetStoreCategories_Response_Category.M(),
-              obj
-            );
-          }
-          static deserializeBinary(bytes) {
-            let reader =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryReader(
-                bytes
-              );
-            let msg = new CStoreBrowse_GetStoreCategories_Response_Category();
-            return CStoreBrowse_GetStoreCategories_Response_Category.deserializeBinaryFromReader(
-              msg,
-              reader
-            );
-          }
-          static deserializeBinaryFromReader(msg, reader) {
-            return shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.DeserializeBinary(
-              CStoreBrowse_GetStoreCategories_Response_Category.MBF(),
-              msg,
-              reader
-            );
-          }
-          serializeBinary() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Response_Category.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBuffer();
-          }
-          static serializeBinaryToWriter(msg, writer) {
-            shared_common_protohelpers__WEBPACK_IMPORTED_MODULE_1__.SerializeBinary(
-              CStoreBrowse_GetStoreCategories_Response_Category.M(),
-              msg,
-              writer
-            );
-          }
-          serializeBase64String() {
-            var writer =
-              new google_protobuf__WEBPACK_IMPORTED_MODULE_0__.BinaryWriter();
-            CStoreBrowse_GetStoreCategories_Response_Category.serializeBinaryToWriter(
-              this,
-              writer
-            );
-            return writer.getResultBase64String();
-          }
-          getClassName() {
-            return "CStoreBrowse_GetStoreCategories_Response_Category";
-          }
-        }
-        var StoreBrowseService;
-        (function (StoreBrowseService) {
-          function GetItems(transport, msg) {
-            return transport.SendMsg(
-              "StoreBrowse.GetItems#1",
-              msg,
-              CStoreBrowse_GetItems_Response,
-              { bConstMethod: true, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
-            );
-          }
-          StoreBrowseService.GetItems = GetItems;
-          function GetStoreCategories(transport, msg) {
-            return transport.SendMsg(
-              "StoreBrowse.GetStoreCategories#1",
-              msg,
-              CStoreBrowse_GetStoreCategories_Response,
-              { bConstMethod: true, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
-            );
-          }
-          StoreBrowseService.GetStoreCategories = GetStoreCategories;
-        })(StoreBrowseService || (StoreBrowseService = {}));
 
         /***/
       },
@@ -81127,7 +74529,6 @@ object-assign
           /* harmony export */ TextChat: () => /* binding */ TextChat,
           /* harmony export */ TextRoom: () => /* binding */ TextRoom,
           /* harmony export */ ThickChevron: () => /* binding */ ThickChevron,
-          /* harmony export */ ThrobberInner: () => /* binding */ ThrobberInner,
           /* harmony export */ ThumbsUp: () => /* binding */ ThumbsUp,
           /* harmony export */ ThumbsUpUserNews: () =>
             /* binding */ ThumbsUpUserNews,
@@ -81159,7 +74560,7 @@ object-assign
           /* harmony export */ YouTube: () => /* binding */ YouTube,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_6__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -81167,31 +74568,23 @@ object-assign
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! ./throbber.scss */ "../../../web_src/shared/js/ui/throbber.scss"
-          );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default =
-          /*#__PURE__*/ __webpack_require__.n(
-            _throbber_scss__WEBPACK_IMPORTED_MODULE_1__
-          );
-        /* harmony import */ var shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__ =
+        /* harmony import */ var shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! shared/utils/classnames */ "../../../web_src/shared/js/utils/classnames.ts"
           );
-        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
             /*! shared/utils/mathutils */ "../../../web_src/shared/js/utils/mathutils.ts"
           );
-        /* harmony import */ var _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4__ =
+        /* harmony import */ var _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3__ =
           __webpack_require__(
             /*! ./shared_svg_library.scss */ "../../../web_src/shared/js/ui/shared_svg_library.scss"
           );
-        /* harmony import */ var _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default =
+        /* harmony import */ var _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default =
           /*#__PURE__*/ __webpack_require__.n(
-            _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4__
+            _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3__
           );
-        /* harmony import */ var shared_webui_config__WEBPACK_IMPORTED_MODULE_5__ =
+        /* harmony import */ var shared_webui_config__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(
             /*! shared/webui/config */ "../../../web_src/shared/js/webui/config.ts"
           );
@@ -81203,7 +74596,7 @@ object-assign
             {
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 className,
                 "SVGIcon_Button SVGIcon_Hyperlink"
               ),
@@ -81320,7 +74713,7 @@ object-assign
         }
         function ChatSettings() {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -81709,7 +75102,7 @@ object-assign
         }
         function MicrophoneGamepadUI(props) {
           const { off } = props,
-            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "off",
             ]);
           if (off) {
@@ -81827,7 +75220,7 @@ object-assign
         function Submit(props) {
           /* Plan to unify these across platforms eventually. Riiiiiight. */
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -82064,7 +75457,7 @@ object-assign
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button SVGIcon_Plus",
                 className
               ),
@@ -82102,7 +75495,7 @@ object-assign
         }
         function VoiceRoom(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -82466,7 +75859,7 @@ object-assign
         }
         function HeadphonesGamepadUI(props) {
           const { off } = props,
-            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "off",
             ]);
           if (off) {
@@ -82586,7 +75979,7 @@ object-assign
         function Group(props) {
           /* Plan to unify these across platforms eventually. Riiiiiight. */
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -82783,7 +76176,7 @@ object-assign
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button SVGIcon_PlusCircle",
                 className
               ),
@@ -82835,7 +76228,7 @@ object-assign
         }
         function AddFriend(props) {
           if (
-            shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config.IN_GAMEPADUI
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config.IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -82955,7 +76348,7 @@ object-assign
         }
         function Invite(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -83095,7 +76488,7 @@ object-assign
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button",
                 "SVGIcon_Volume",
                 className
@@ -83612,7 +77005,7 @@ object-assign
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button",
                 props.className
               ),
@@ -84122,351 +77515,6 @@ object-assign
             })
           );
         }
-        function ThrobberInner(props) {
-          let strClasses = "SVGIcon_Button SVGIcon_Throbber ";
-          if (props.className) strClasses += props.className;
-          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: strClasses,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-              "g",
-              {
-                className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                    .partCircle,
-              },
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M201.432,101.166",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-                }
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-              "g",
-              {
-                className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                    .mainOutline,
-              },
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundFill,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundOuterOutline,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber01,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber02,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber03,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber04,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber05,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber06,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber07,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber08,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber09,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber10,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber11,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber12,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber13,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber14,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              ),
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                      .roundThrobber15,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-              "g",
-              {
-                className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                    .bottomCircle,
-              },
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "path",
-                {
-                  fill: "#ffffff",
-                  d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-                }
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-              "g",
-              {
-                className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                    .topCircle,
-              },
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "circle",
-                {
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  cx: "161.731",
-                  cy: "101.274",
-                  r: "23.019",
-                }
-              )
-            )
-          );
-        }
         function Video() {
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
@@ -84516,7 +77564,7 @@ object-assign
         }
         function Bell(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -84680,7 +77728,7 @@ object-assign
         }
         function ArrowGamepadUI(props) {
           const { direction } = props,
-            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "direction",
             ]);
           switch (direction) {
@@ -84837,7 +77885,7 @@ object-assign
         }
         function ThickChevron(props) {
           const { angle } = props,
-            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "angle",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -85391,7 +78439,7 @@ object-assign
         }
         function FriendIcon(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -85785,7 +78833,7 @@ object-assign
         }
         function SteamLogo(props) {
           const className = (0,
-          shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+          shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
             props && props.className
@@ -86226,7 +79274,7 @@ object-assign
               id: "Layer_2",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button",
                 "SVGIcon_MobilePhone",
                 className
@@ -86876,7 +79924,7 @@ object-assign
         }
         function Star(props) {
           const className = (0,
-          shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+          shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
             "SVGIcon_Button",
             props.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
           );
@@ -87108,7 +80156,7 @@ object-assign
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 "SVGIcon_Button",
                 "SVGIcon_Achievement",
                 className
@@ -87284,7 +80332,7 @@ object-assign
         }
         function ProgressCircle(props) {
           let nDashOffset =
-            shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_3__.RemapVal(
+            shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_2__.RemapVal(
               props.percentComplete,
               0,
               100,
@@ -88218,7 +81266,7 @@ object-assign
         }
         function CommentThread(props, className) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_5__.Config
+            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
               .IN_GAMEPADUI
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88626,7 +81674,7 @@ object-assign
         }
         function EmoticonBow(props) {
           let strClasses =
-            _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+            _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
               .EmoticonBow;
           if (props.className) strClasses += " " + props.className;
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88650,7 +81698,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st0,
                     points:
                       "26.54,63.08 47,38.88 47,50.98 36.77,63.08                               ",
@@ -88660,7 +81708,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "23,63.08 47,35.08 47,49.08 35,63.08                            ",
@@ -88670,7 +81718,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st0,
                     points:
                       "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                ",
@@ -88680,7 +81728,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "24.22,16.08 0,44.08 0,30.08 12.11,16.08                    ",
@@ -88690,7 +81738,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "34.45,10.49 44.06,21.71 38.45,21.71 37.39,27.36 26.92,15.14 28.76,10.49                        ",
@@ -88700,7 +81748,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "27.81,6.41 40.57,0 44.35,0 44.9,11.7 39.23,12.84 35.49,8.17 35.49,8.17 28.83,8                                 ",
@@ -88710,7 +81758,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st0,
                     points:
                       "12.09,16.08 5.15,24.12 9.58,24.08 10.72,30.29 22.99,16.08                               ",
@@ -88720,7 +81768,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "14.17,10.49 4.55,21.71 10.16,21.71 11.23,27.36 21.7,15.14 19.86,10.49                                 ",
@@ -88730,7 +81778,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "20.71,6.41 7.95,0 4.17,0 3.62,11.7 9.28,12.84 13.02,8.17 13.02,8.17 19.68,8                                 ",
@@ -88740,7 +81788,7 @@ object-assign
                   "polygon",
                   {
                     className:
-                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                      _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                         .EmoticonBow_st1,
                     points:
                       "25.78,7.22 24.52,7.22 24.05,7.22 22.79,7.22 21.99,8.67 24.05,13.98 24.52,13.98 26.58,8.67                  ",
@@ -88752,14 +81800,14 @@ object-assign
         }
         function ChatSticker(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 className,
                 "SVGIcon_Button"
               ),
@@ -88779,7 +81827,7 @@ object-assign
         }
         function Coupon(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88788,7 +81836,7 @@ object-assign
               {
                 viewBox: "0 0 69 41",
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 fill: "none",
@@ -88805,7 +81853,7 @@ object-assign
         }
         function ChatEmoticon(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88813,7 +81861,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "60px",
@@ -88834,7 +81882,7 @@ object-assign
         }
         function ChatEffect(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88842,7 +81890,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "60px",
@@ -88863,7 +81911,7 @@ object-assign
         }
         function Effect(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88871,7 +81919,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "46",
@@ -88892,7 +81940,7 @@ object-assign
         }
         function Backgrounds(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88900,7 +81948,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "78px",
@@ -88921,7 +81969,7 @@ object-assign
         }
         function Avatar(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88929,7 +81977,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "34px",
@@ -88950,7 +81998,7 @@ object-assign
         }
         function Profile(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88958,7 +82006,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 viewBox: "0 0 40 57",
@@ -89004,14 +82052,14 @@ object-assign
         }
         function Badge(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
             "svg",
             {
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 className,
                 "SVGIcon_Button"
               ),
@@ -89053,7 +82101,7 @@ object-assign
         }
         function RewardsIcon(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89061,7 +82109,7 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(className, "SVGIcon_Button"),
                 width: "1em",
@@ -89383,7 +82431,7 @@ object-assign
             "svg",
             {
               className: (0,
-              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__["default"])(
+              shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__["default"])(
                 className
               ),
               width: "13",
@@ -89408,7 +82456,7 @@ object-assign
         }
         function LoyaltyCoinIcon(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89807,7 +82855,7 @@ object-assign
         }
         function SteamDeckCompatLogo(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89815,10 +82863,10 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatLogo,
                   className
                 ),
@@ -89841,7 +82889,7 @@ object-assign
         }
         function SteamDeckCompatVerified(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89849,12 +82897,12 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatIcon,
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatVerified,
                   className
                 ),
@@ -89876,7 +82924,7 @@ object-assign
         }
         function SteamDeckCompatPlayable(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89884,12 +82932,12 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatIcon,
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatPlayable,
                   className
                 ),
@@ -89911,7 +82959,7 @@ object-assign
         }
         function SteamDeckCompatUnsupported(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89919,12 +82967,12 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatIcon,
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatUnsupported,
                   className
                 ),
@@ -89946,7 +82994,7 @@ object-assign
         }
         function SteamDeckCompatUnknown(props) {
           const { className } = props,
-            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_6__.__rest)(props, [
+            rest = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
               "className",
             ]);
           return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -89954,12 +83002,12 @@ object-assign
             Object.assign(
               {
                 className: (0,
-                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_2__[
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
                   "default"
                 ])(
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatIcon,
-                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_4___default()
+                  _shared_svg_library_scss__WEBPACK_IMPORTED_MODULE_3___default()
                     .SteamDeckCompatUnknown,
                   className
                 ),
@@ -90039,17 +83087,13 @@ object-assign
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__ =
-          __webpack_require__(
-            /*! shared/ui/shared_svg_library */ "../../../web_src/shared/js/ui/shared_svg_library.tsx"
-          );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_2__ =
+        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! ./throbber.scss */ "../../../web_src/shared/js/ui/throbber.scss"
           );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default =
+        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default =
           /*#__PURE__*/ __webpack_require__.n(
-            _throbber_scss__WEBPACK_IMPORTED_MODULE_2__
+            _throbber_scss__WEBPACK_IMPORTED_MODULE_1__
           );
 
         class Throbber extends react__WEBPACK_IMPORTED_MODULE_0___default()
@@ -90060,45 +83104,45 @@ object-assign
           AddSizeClass(vecClasses) {
             if (this.props.size == "small")
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                   .throbber_small
               );
             else if (this.props.size == "medium")
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                   .throbber_medium
               );
             else if (this.props.size == "xlarge")
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                   .throbber_xlarge
               );
             else if (this.props.size == "xxlarge")
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                   .throbber_xxlarge
               );
             else
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                   .throbber_large
               );
           }
           render() {
             let vecClasses = [
-              _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+              _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                 .LoadingWrapper,
               "SteamLogoThrobber",
             ];
             this.AddSizeClass(vecClasses);
             if (this.props.string === undefined)
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default().noString
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default().noString
               );
             if (this.props.className) vecClasses.push(this.props.className);
             if (this.props.static)
               vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default().Static
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default().Static
               );
             // generate panels for the throbber
             let throbber =
@@ -90109,22 +83153,22 @@ object-assign
                   "div",
                   {
                     className:
-                      _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                      _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                         .Throbber,
                   },
                   react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                    shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.ThrobberInner,
+                    ThrobberInner,
                     {
                       className:
-                        _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                        _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                           .base,
                     }
                   ),
                   react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                    shared_ui_shared_svg_library__WEBPACK_IMPORTED_MODULE_1__.ThrobberInner,
+                    ThrobberInner,
                     {
                       className:
-                        _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                        _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                           .blur,
                     }
                   )
@@ -90135,7 +83179,7 @@ object-assign
               {
                 className:
                   this.props.position == "center"
-                    ? _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                    ? _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                         .throbber_center_wrapper
                     : "",
               },
@@ -90145,13 +83189,358 @@ object-assign
                   "div",
                   {
                     className:
-                      _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                      _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
                         .ThrobberText,
                   },
                   this.props.string
                 )
             );
           }
+        }
+        function ThrobberInner(props) {
+          let strClasses = "SVGIcon_Button SVGIcon_Throbber ";
+          if (props.className) strClasses += props.className;
+          return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+            "svg",
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: strClasses,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              {
+                className:
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    .partCircle,
+              },
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundOuter,
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundOuter,
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M201.432,101.166",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundOuter,
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                }
+              )
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              {
+                className:
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    .mainOutline,
+              },
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundFill,
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundOuterOutline,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber01,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber02,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber03,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber04,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber05,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber06,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber07,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber08,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber09,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber10,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber11,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber12,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber13,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber14,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              ),
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  className:
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      .roundThrobber15,
+                  strokeLinecap: "butt",
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                }
+              )
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              {
+                className:
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    .bottomCircle,
+              },
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "path",
+                {
+                  fill: "#ffffff",
+                  d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                }
+              )
+            ),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+              "g",
+              {
+                className:
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    .topCircle,
+              },
+              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                "circle",
+                {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "6",
+                  strokeMiterlimit: "10",
+                  cx: "161.731",
+                  cy: "101.274",
+                  r: "23.019",
+                }
+              )
+            )
+          );
         }
 
         /***/
@@ -92562,8 +85951,12 @@ object-assign
             /* binding */ BDoesLocaleUse24Hourclock,
           /* harmony export */ ETimeSinceSuffix: () =>
             /* binding */ ETimeSinceSuffix,
+          /* harmony export */ LocalizeCalendarMonth: () =>
+            /* binding */ LocalizeCalendarMonth,
           /* harmony export */ LocalizeCalendarMonthAndYear: () =>
             /* binding */ LocalizeCalendarMonthAndYear,
+          /* harmony export */ LocalizeCalendarQuarter: () =>
+            /* binding */ LocalizeCalendarQuarter,
           /* harmony export */ LocalizeCalendarTime: () =>
             /* binding */ LocalizeCalendarTime,
           /* harmony export */ LocalizeCalendarTimeLessGranular: () =>
@@ -92584,12 +85977,18 @@ object-assign
             /* binding */ LocalizeRtime32ToShortDate,
           /* harmony export */ LocalizeRtime32ToShorterDate: () =>
             /* binding */ LocalizeRtime32ToShorterDate,
+          /* harmony export */ LocalizeShortCalendarMonth: () =>
+            /* binding */ LocalizeShortCalendarMonth,
           /* harmony export */ LocalizeTimeRemaining: () =>
             /* binding */ LocalizeTimeRemaining,
           /* harmony export */ LocalizeTimeSince: () =>
             /* binding */ LocalizeTimeSince,
           /* harmony export */
         });
+        /* harmony import */ var mobx_utils__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! mobx-utils */ "./node_modules/mobx-utils/mobx-utils.module.js"
+          );
         /* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
             /*! ../localization */ "../../../web_src/shared/js/utils/localization.ts"
@@ -92597,10 +85996,6 @@ object-assign
         /* harmony import */ var _time__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
             /*! ../time */ "../../../web_src/shared/js/utils/time.ts"
-          );
-        /* harmony import */ var mobx_utils__WEBPACK_IMPORTED_MODULE_2__ =
-          __webpack_require__(
-            /*! mobx-utils */ "./node_modules/mobx-utils/mobx-utils.module.js"
           );
 
         // some of these functions return an observable value, some don't.  Look for references to MobxUtils.now().
@@ -92638,13 +86033,16 @@ object-assign
             strLocPrefix = "#TimeSince_";
           else if (options.eSuffix == ETimeSinceSuffix.Remaining)
             strLocPrefix = "#TimeRemaining_";
+          let fnNumberFormatter = (num) => Math.floor(num);
+          if (options.bAllowDecimal)
+            fnNumberFormatter = (num) => Math.round(num * 10) / 10;
           if (
             nSeconds >=
             _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerYear * 2
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "XYears",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerYear
               )
             );
@@ -92659,7 +86057,7 @@ object-assign
             )
               return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
                 strLocPrefix + "1YearXMonths",
-                Math.floor(
+                fnNumberFormatter(
                   nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMonth
                 )
               );
@@ -92673,7 +86071,7 @@ object-assign
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "XMonths",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMonth
               )
             );
@@ -92683,7 +86081,7 @@ object-assign
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "XWeeks",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerWeek
               )
             );
@@ -92692,7 +86090,7 @@ object-assign
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "1Week",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerWeek
               )
             );
@@ -92702,7 +86100,7 @@ object-assign
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "XDays",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerDay
               )
             );
@@ -92717,7 +86115,7 @@ object-assign
             )
               return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
                 strLocPrefix + "1DayXHours",
-                Math.floor(
+                fnNumberFormatter(
                   nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerHour
                 )
               );
@@ -92731,7 +86129,7 @@ object-assign
           ) {
             return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
               strLocPrefix + "XHours",
-              Math.floor(
+              fnNumberFormatter(
                 nSeconds / _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerHour
               )
             );
@@ -92746,7 +86144,7 @@ object-assign
             )
               return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
                 strLocPrefix + "1HourXMinutes",
-                Math.floor(
+                fnNumberFormatter(
                   nSeconds /
                     _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMinute
                 )
@@ -92767,7 +86165,10 @@ object-assign
             if (!options.bHighGranularity || nSecondsRemaining == 0) {
               return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
                 strLocPrefix + "XMinutes",
-                nMinutes
+                fnNumberFormatter(
+                  nSeconds /
+                    _time__WEBPACK_IMPORTED_MODULE_1__.Seconds.PerMinute
+                )
               );
             }
             if (nSecondsRemaining == 1) {
@@ -92816,18 +86217,34 @@ object-assign
             );
           }
         }
-        /**
-         * Purpose: Localize the date to a human readable string, e.g. Fri, October 26, 2018 in English
-         *  Input is unix time in seconds (or rtime32)
-         */
-        function LocalizeDateHumanReadable(rtime, bHideYear, bShowFullWeekday) {
+        function LocalizeDateHumanReadable(
+          rtime,
+          bHideYearOrOpts,
+          bShowFullWeekday
+        ) {
+          let baseOpts;
+          if (
+            bHideYearOrOpts === undefined ||
+            bHideYearOrOpts === true ||
+            bHideYearOrOpts === false
+          ) {
+            baseOpts = {
+              weekday: bShowFullWeekday ? "long" : "short",
+              year: bHideYearOrOpts ? undefined : "numeric",
+            };
+          } else {
+            baseOpts = bHideYearOrOpts;
+          }
           let date = new Date(rtime * 1000);
-          const dateOptions = {
-            weekday: bShowFullWeekday ? "long" : "short",
-            month: "long",
-            day: "numeric",
-            year: bHideYear ? undefined : "numeric",
-          };
+          const dateOptions = Object.assign(
+            {
+              weekday: "short",
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            },
+            baseOpts
+          );
           let strDate = date.toLocaleDateString(
             _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
             dateOptions
@@ -92838,22 +86255,25 @@ object-assign
          * Purpose: Localize the date to a short form string, e.g. Oct 26, 2018 in English
          *  Input is unix time in seconds (or rtime32)
          */
-        function LocalizeRtime32ToShortDate(rtime) {
+        function LocalizeRtime32ToShortDate(rtime, opts) {
           let date = new Date(rtime * 1000);
-          // Canonicalize the date and check the cache.
-          const nKey = date.setHours(0, 0, 0, 0);
-          let strDate = g_mapCachedLocalizedShortDate.get(nKey);
-          if (strDate) return strDate;
-          const dateOptions = {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          };
+          let strDate, nKey;
+          if (!opts) {
+            // Canonicalize the date and check the cache.
+            const nKey = date.setHours(0, 0, 0, 0);
+            let strDate = g_mapCachedLocalizedShortDate.get(nKey);
+            if (strDate) return strDate;
+          }
+          const dateOptions = Object.assign(
+            { year: "numeric", month: "short", day: "numeric" },
+            opts
+          );
           strDate = date.toLocaleDateString(
             _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
             dateOptions
           );
-          g_mapCachedLocalizedShortDate.set(nKey, strDate);
+          if (nKey !== undefined)
+            g_mapCachedLocalizedShortDate.set(nKey, strDate);
           return strDate;
         }
         const g_mapCachedRtime32LocalizedMonthYear = new Map();
@@ -92902,7 +86322,7 @@ object-assign
         /**
          * Purpose: Localizes the time into a short hour and minutes format in the correct timezone. e.g. "7:00 PM" or "19:00".
          */
-        function LocalizeRTimeToHourAndMinutes(rtime, options) {
+        function LocalizeRTimeToHourAndMinutes(rtime, options, formatOptions) {
           const date = new Date(rtime * 1000);
           const options24HourClock = {
             hour: "numeric",
@@ -92915,10 +86335,14 @@ object-assign
           const bUse24HourClock =
             options.bForce24HourClock ||
             BDoesLocaleUse24Hourclock(rgLocales[0]); // Just check the first locale.
-          return date.toLocaleTimeString(
-            rgLocales,
-            bUse24HourClock ? options24HourClock : options12HourClock
+          const mergedFormatOptions = Object.assign(
+            Object.assign(
+              {},
+              bUse24HourClock ? options24HourClock : options12HourClock
+            ),
+            formatOptions
           );
+          return date.toLocaleTimeString(rgLocales, mergedFormatOptions);
         }
         /** Caches date strings for MMM, DD, YYYY */
         const g_mapCachedLocalizedShortDate = new Map();
@@ -93210,6 +86634,7 @@ object-assign
         const g_mapCachedLocalizedYear = new Map();
         const g_mapCachedLocalizedMonthAndYear = new Map();
         const g_mapCachedLocalizedWeekdayAndDayMonth = new Map();
+        const g_mapCachedLocalizedShortMonth = new Map();
         /** @returns e.g. "Friday, May 22 " */
         function LocalizeCalendarWeekdayAndDayMonth(
           date,
@@ -93253,11 +86678,21 @@ object-assign
           g_mapCachedLocalizedMonth.set(date.getMonth(), strMonth);
           return strMonth;
         }
+        function LocalizeShortCalendarMonth(date) {
+          let strMonth = g_mapCachedLocalizedShortMonth.get(date.getMonth());
+          if (strMonth) return strMonth;
+          strMonth = date.toLocaleDateString(
+            _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
+            { month: "short" }
+          );
+          g_mapCachedLocalizedShortMonth.set(date.getMonth(), strMonth);
+          return strMonth;
+        }
         /** Returns just 4 digit year as a string */
         function LocalizeCalendarYear(date) {
           let strYear = g_mapCachedLocalizedYear.get(date.getFullYear());
           if (strYear) return strYear;
-          // BUGBUG Is this ever more complicated than just dt.getFullYear().toString() ?
+          // This will be formatted in some languages, like "2022年" in japanese
           strYear = date.toLocaleDateString(
             _localization__WEBPACK_IMPORTED_MODULE_0__.LocalizationManager.GetPreferredLocales(),
             { year: "numeric" }
@@ -93275,6 +86710,40 @@ object-assign
           );
           g_mapCachedLocalizedMonthAndYear.set(nMapKey, strMonthAndYear);
           return strMonthAndYear;
+        }
+        // return a string like "Q3 2022"
+        function LocalizeCalendarQuarter(date) {
+          switch (date.getUTCMonth()) {
+            case 0: // january
+            case 1:
+            case 2:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q1",
+                date.getUTCFullYear()
+              );
+            case 3:
+            case 4:
+            case 5:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q2",
+                date.getUTCFullYear()
+              );
+            case 6:
+            case 7:
+            case 8:
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q3",
+                date.getUTCFullYear()
+              );
+            case 9:
+            case 10:
+            case 11:
+            default: // not expected for getUTCMonth not to return a 0-11 value
+              return (0, _localization__WEBPACK_IMPORTED_MODULE_0__.Localize)(
+                "#Time_QuarterOfYear_Q4",
+                date.getUTCFullYear()
+              );
+          }
         }
         /** Return a string representing time remaining for the given number of seconds. In English:
          * Greater than 1 year: "> 1 year"
@@ -93377,6 +86846,8 @@ function TestLocalizeCalendarTime()
           /* harmony export */ Clamp: () => /* binding */ Clamp,
           /* harmony export */ RandomInt: () => /* binding */ RandomInt,
           /* harmony export */ RemapVal: () => /* binding */ RemapVal,
+          /* harmony export */ RemapValClamped: () =>
+            /* binding */ RemapValClamped,
           /* harmony export */ isNumeric: () => /* binding */ isNumeric,
           /* harmony export */
         });
@@ -93402,6 +86873,16 @@ function TestLocalizeCalendarTime()
         //-----------------------------------------------------------------------------
         function RemapVal(value, min1, max1, min2, max2) {
           return min2 + ((max2 - min2) * (value - min1)) / (max1 - min1);
+        }
+        //-----------------------------------------------------------------------------
+        // Purpose: Remap a value in the range [min1,max1] to [min2,max2].
+        //-----------------------------------------------------------------------------
+        function RemapValClamped(value, min1, max1, min2, max2) {
+          return Clamp(
+            min2 + ((max2 - min2) * (value - min1)) / (max1 - min1),
+            min2,
+            max2
+          );
         }
         //-----------------------------------------------------------------------------
         // Purpose: To check if a string is Numeric - copied from https://stackoverflow.com/questions/175739/built-in-way-in-javascript-to-check-if-a-string-is-a-valid-number
@@ -93815,7 +87296,11 @@ function TestLocalizeCalendarTime()
               refIsUnmounted.current = true;
             };
           }, []);
-          return () => refIsUnmounted.current;
+          const fnIsInmounted = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(
+            () => refIsUnmounted.current,
+            []
+          );
+          return fnIsInmounted;
         }
         /**
          * Hook that computes the cumulative zoom (based on the "zoom" chromium css style) at the
@@ -94335,9 +87820,12 @@ function TestLocalizeCalendarTime()
               if (!elem) return undefined;
               // Even though the browser API returns multiple elements, we're just going to tell
               // our callback about the first entry.
-              const observer = fnNewObserver((entryList) => {
-                callback(entryList[0]);
-              });
+              const observer = fnNewObserver(
+                elem.ownerDocument.defaultView,
+                (entryList) => {
+                  callback(entryList[0]);
+                }
+              );
               observer.observe(elem);
               return () => observer.unobserve(elem);
             },
@@ -94355,9 +87843,9 @@ function TestLocalizeCalendarTime()
          */
         function useResizeObserver(callback) {
           const fnNewObserver = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(
-            (fnCallback) => {
-              if (typeof ResizeObserver != "undefined") {
-                return new ResizeObserver(fnCallback);
+            (ownerWindow, fnCallback) => {
+              if (ownerWindow.ResizeObserver) {
+                return new ownerWindow.ResizeObserver(fnCallback);
               } else {
                 // legacy browsers- functionality is not available, but return a ResizeObserver-shaped thing so code will still run
                 // Mostly iOS devices - iPhone 6 and original iPad Air or earlier cannot update to an iOS with ResizeObserver
@@ -94378,8 +87866,8 @@ function TestLocalizeCalendarTime()
         }
         function useIntersectionObserver(callback, options) {
           const fnNewObserver = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(
-            (fnCallback) => {
-              return new IntersectionObserver(fnCallback, options);
+            (ownerWindow, fnCallback) => {
+              return new ownerWindow.IntersectionObserver(fnCallback, options);
             },
             [options]
           );
@@ -94649,6 +88137,7 @@ function TestLocalizeCalendarTime()
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
           IMG_URL: "",
           STEAMTV_BASE_URL: "",
@@ -94687,12 +88176,14 @@ function TestLocalizeCalendarTime()
           STEAM_TV: false,
           DEV_MODE: false,
           // steamui specific, could move to a narrower config
-          IN_LIBRARY: false,
+          IN_STEAMUI: false,
           IN_GAMEPADUI: false,
+          GAMEPADUI_WINDOWED: false,
+          LEGACY_GAMEPADUI_MODE: 0,
+          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
-          IN_STANDALONE_KEYBOARD: false,
         };
         /** User info, mostly populated by GetWebUICurrentUserInfo and GetWebUICurrentUserInfoForStore */
         const UserConfig = {
@@ -96300,4 +89791,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=c4656a5431fa2d95f2ac
+//# sourceMappingURL=friends.js.map?contenthash=037901ec8982baccadd5

@@ -122,12 +122,12 @@
 
 "Overlay_LowBattery_Message"	"Você tem %batteryTime% minutos de bateria restantes"
 
-"Overlay_CDKeyNotification_Message" "Este jogo Steam requer um código de produto especial, exibido abaixo. Quando o jogo o pedir, insira-o como exibido aqui."
-"Overlay_CDKeyNotification_Message_MultipleKey" "Este jogo Steam requer múltiplos códigos de produto. Quando o jogo pedir algum, você pode pressionar %hotkey% para ver os seus códigos de produto."
-"Overlay_CDKeyNotification_MessageApp" "Este aplicativo Steam requer um código de produto especial, exibido abaixo. Quando o aplicativo o pedir, insira-o como exibido aqui."
-"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Este aplicativo Steam requer múltiplos códigos de produto. Quando o aplicativo pedir algum, você pode pressionar %hotkey% para ver os seus códigos de produto."
+"Overlay_CDKeyNotification_Message" "Este jogo requer um código de produto especial exibido abaixo. Quando solicitado, digite-o como exibido aqui."
+"Overlay_CDKeyNotification_Message_MultipleKey" "Este jogo requer múltiplos códigos de produto. Quando solicitados, pressione %hotkey% para vê-los."
+"Overlay_CDKeyNotification_MessageApp" "Este aplicativo requer um código de produto especial exibido abaixo. Quando solicitado, digite-o como exibido aqui."
+"Overlay_CDKeyNotification_Message_MultipleKeyApp" "Este aplicativo requer múltiplos códigos de produto. Quando solicitados, pressione %hotkey% para vê-los."
 "Overlay_CDKeyNotification_CDKey"   "%cdkey%"
-"Overlay_CDKeyNotification_Hotkey"  "Pressione %hotkey% para fechar essa mensagem"
+"Overlay_CDKeyNotification_Hotkey"  "Pressione %hotkey% para fechar"
 "Overlay_CDKeyNotification_Title"	"Código de produto (CD Key) de %gamename%"
 
 "Overlay_DontNotifyAgain"		"Não me avise sobre isso novamente"

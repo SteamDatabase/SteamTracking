@@ -660,7 +660,7 @@
 "friends_giftreceived_info"		"hat Ihnen ein Geschenk gesendet"
 "friends_itemreceived_info"		"Sie haben 1 neuen Gegenstand in Ihrem Inventar"
 "friends_itemsreceived_info"	"Sie haben %items% neue Gegenstände"
-"friends_setnickname"			"Nickname hinzufügen"
+"friends_setnickname"			"Spitzname hinzufügen"
 "friends_setnickname_title"		"Freunde - %friend%"
 "friends_setnickname_info"		"Geben Sie diesem Spieler einen dauerhaften Spitznamen, um stets zu wissen, um wen es sich handelt."
 "friends_managefriends"			"Freunde verwalten"

@@ -86,6 +86,7 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
+ Plat_IsGamescope
  Plat_IsInDebugSession
  Plat_MSTime
  Plat_MSTime64
@@ -268,6 +269,7 @@
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_ParseSteamOpenURLExternalProtocol
+ V_ParseURLQueryString
  V_RemoveDotSlashes
  V_SetExtension
  V_SplitNumbers
@@ -309,6 +311,7 @@
  V_strncmp
  V_strncpy
  V_strnicmp
+ V_strristr
  V_strtoui64
  V_tolower
  V_towlower32

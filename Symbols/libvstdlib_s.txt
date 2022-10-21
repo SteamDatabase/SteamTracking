@@ -144,6 +144,7 @@
  T V_JoinNumbersUint
  T V_JoinNumbersUint64
  T V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
+ T V_LevenshteinDistance
  T V_MakeAbsolutePath
  T V_MakeFileSafeName
  T V_MakeRelativePath
@@ -200,6 +201,7 @@
  T V_URLDecodeRaw
  T V_URLEncode
  T V_URLEncodeRaw
+ T V_URLEncodeToUtlString
  T V_URLParse
  T V_URLPartsToString
  T V_UTF16ToUChar32

@@ -8497,21 +8497,22 @@
         });
       const xt = new jA.s("ControllerConfigurator"),
         Ht = (0, W.Pi)(function (A) {
-          var e, t, n, o, a, l, c;
+          var e, t, n, o, a, l, c, s;
           const {
-              appid: s,
-              sourcesFilter: g,
-              actionset_section: u,
-              rgBackupSources: m,
+              appid: g,
+              sourcesFilter: u,
+              actionset_section: m,
+              rgBackupSources: C,
             } = A,
-            C = (0, $.k6)(),
-            E =
+            E = (0, Mt.Wy)(),
+            p = (0, $.k6)(),
+            B =
               null !== (e = nA._A.EditingConfigurationControllerIndex) &&
               void 0 !== e
                 ? e
                 : k.hq.MostRecentlyActiveControllerIndex,
-            p =
-              null === (t = _.tH.Get().GetController(E)) || void 0 === t
+            v =
+              null === (t = _.tH.Get().GetController(B)) || void 0 === t
                 ? void 0
                 : t.eControllerType;
           iA.cS.settings.bSteamInputErrorMsgEnabled &&
@@ -8531,66 +8532,66 @@
                     : a.error_msg,
                 bAlertDialog: !0,
               }),
-              window
+              null !== (l = E.ownerWindow) && void 0 !== l ? l : window
             );
-          const B =
-              null !== (l = nA._A.ControllerConfiguratorBaseSetIndex) &&
-              void 0 !== l
-                ? l
+          const h =
+              null !== (c = nA._A.ControllerConfiguratorBaseSetIndex) &&
+              void 0 !== c
+                ? c
                 : 0,
-            v = nA._A.ControllerConfiguratorLayerSetIndex,
-            h =
-              null === (c = nA._A.EditingConfiguration) || void 0 === c
+            f = nA._A.ControllerConfiguratorLayerSetIndex,
+            b =
+              null === (s = nA._A.EditingConfiguration) || void 0 === s
                 ? void 0
-                : c.sets[B],
-            f = null == h ? void 0 : h.layers[v],
-            b = null != f ? f : h;
+                : s.sets[h],
+            D = null == b ? void 0 : b.layers[f],
+            w = null != D ? D : b;
           xt.Debug(
             "ControllerConfiguratorSources appid:",
-            s,
+            g,
             (0, d.ZN)(nA._A.EditingConfiguration),
-            B,
-            (0, d.ZN)(h),
-            v,
-            (0, d.ZN)(f)
+            h,
+            (0, d.ZN)(b),
+            f,
+            (0, d.ZN)(D)
           );
-          let D =
-            null == g
-              ? null == b
+          let Q =
+            null == u
+              ? null == w
                 ? void 0
-                : b.source_bindings
-              : g(null == b ? void 0 : b.source_bindings);
-          null == m ||
-            m.forEach((A) => {
-              if ((0, aA.AZ)(p, A)) {
+                : w.source_bindings
+              : u(null == w ? void 0 : w.source_bindings);
+          null == C ||
+            C.forEach((A) => {
+              if ((0, aA.AZ)(v, A)) {
                 let e = { key: A };
-                (null == D
+                (null == Q
                   ? void 0
-                  : D.findIndex((e) => (null == e ? void 0 : e.key) == A)) <
-                  0 && D.push(e);
+                  : Q.findIndex((e) => (null == e ? void 0 : e.key) == A)) <
+                  0 && Q.push(e);
               }
             }),
             i.useEffect(() => {
-              void 0 === D &&
-                C.replace(r.Z5.GamepadUI.ControllerConfigurator.Main(s));
-            }, [D, s, C]);
-          const w = UA;
-          if (null == b) return null;
-          const Q =
-            null == D
+              void 0 === Q &&
+                p.replace(r.Z5.GamepadUI.ControllerConfigurator.Main(g));
+            }, [Q, g, p]);
+          const y = UA;
+          if (null == w) return null;
+          const N =
+            null == Q
               ? void 0
-              : D.map((A, e) => {
+              : Q.map((A, e) => {
                   var t, n, o, a, r;
                   return i.createElement(
                     i.Fragment,
                     { key: e },
                     i.createElement(Vt, {
-                      baseActionSet: h,
-                      layerActionSet: f,
+                      baseActionSet: b,
+                      layerActionSet: D,
                       eControllerSource: A.key,
                       group: null == A ? void 0 : A.active_group,
-                      appid: s,
-                      actionset_section: u,
+                      appid: g,
+                      actionset_section: m,
                       showInputs: !tA.ce.includes(
                         null === (t = A.active_group) || void 0 === t
                           ? void 0
@@ -8603,16 +8604,16 @@
                         ? void 0
                         : n.mode_shift_source_group) &&
                       i.createElement(Vt, {
-                        baseActionSet: h,
-                        layerActionSet: f,
+                        baseActionSet: b,
+                        layerActionSet: D,
                         eControllerSource: A.key,
                         group:
                           null === (o = null == A ? void 0 : A.active_group) ||
                           void 0 === o
                             ? void 0
                             : o.mode_shift_source_group,
-                        appid: s,
-                        actionset_section: u,
+                        appid: g,
+                        actionset_section: m,
                         showInputs: !tA.ce.includes(
                           null ===
                             (r =
@@ -8629,7 +8630,7 @@
           return i.createElement(
             "div",
             null,
-            i.createElement(X.s, { onButtonDown: w, retainFocus: !0 }, Q)
+            i.createElement(X.s, { onButtonDown: y, retainFocus: !0 }, N)
           );
         });
       Array.from({ length: 22 }, (A, e) => ({ eMode: e }));
@@ -8690,18 +8691,19 @@
               appid: E,
               modeShift: p,
             } = A,
-            B = (0, $.k6)(),
-            v = rA.d.GetAppDetails(E),
-            h =
+            B = (0, Mt.Wy)(),
+            v = (0, $.k6)(),
+            h = rA.d.GetAppDetails(E),
+            f =
               null !== (e = nA._A.EditingConfigurationControllerIndex) &&
               void 0 !== e
                 ? e
                 : k.hq.MostRecentlyActiveControllerIndex,
-            f =
-              null === (t = _.tH.Get().GetController(h)) || void 0 === t
+            b =
+              null === (t = _.tH.Get().GetController(f)) || void 0 === t
                 ? void 0
                 : t.eControllerType,
-            b = u
+            D = u
               ? null ===
                   (o =
                     null === (n = g.source_bindings) || void 0 === n
@@ -8710,40 +8712,40 @@
                 ? void 0
                 : o.active_group
               : void 0,
-            D = 5 != d,
-            w = D && (0, tA.TG)(d, g, u, C, m),
-            Q = D && (0, tA.br)(d, g, u, E, C, m),
-            y = (0, tA.mf)(d),
-            S = C ? w.concat(Q) : w.concat(y.concat(Q)),
-            G = null != (null == b ? void 0 : b.mode),
-            M = (null == b ? void 0 : b.mode)
+            w = 5 != d,
+            Q = w && (0, tA.TG)(d, g, u, C, m),
+            y = w && (0, tA.br)(d, g, u, E, C, m),
+            S = (0, tA.mf)(d),
+            G = C ? Q.concat(y) : Q.concat(S.concat(y)),
+            M = null != (null == D ? void 0 : D.mode),
+            T = (null == D ? void 0 : D.mode)
               ? null !==
                   (r =
                     null ===
-                      (a = S.find(
-                        (A) => A.eMode == (null == b ? void 0 : b.mode)
+                      (a = G.find(
+                        (A) => A.eMode == (null == D ? void 0 : D.mode)
                       )) || void 0 === a
                       ? void 0
                       : a.strDisplay) && void 0 !== r
                 ? r
-                : (0, tA.QK)(tA.k3[null == b ? void 0 : b.mode].id)
+                : (0, tA.QK)(tA.k3[null == D ? void 0 : D.mode].id)
               : "",
-            T = D && (0, tA.XN)(d, g, u, M),
-            P = w.shift && T.concat(S),
-            F = b && 0 == (null == m ? void 0 : m.mode) ? b : m,
-            R = F ? tA.U8[F.mode] : void 0,
-            Y = F ? (0, tA.AT)(F.settings, R, d, f) : void 0,
-            O = null != Y && Y.length > 0,
-            L =
-              (null == b ? void 0 : b.mode) &&
-              (!m || 0 == (null == m ? void 0 : m.mode)),
+            P = w && (0, tA.XN)(d, g, u, T),
+            F = Q.shift && P.concat(G),
+            R = D && 0 == (null == m ? void 0 : m.mode) ? D : m,
+            Y = R ? tA.U8[R.mode] : void 0,
+            O = R ? (0, tA.AT)(R.settings, Y, d, b) : void 0,
+            L = null != O && O.length > 0,
             x =
-              (null == b ? void 0 : b.mode) &&
-              (null == b ? void 0 : b.mode) == (null == m ? void 0 : m.mode),
-            H = x || L ? eA().BindingFromParentSet : "";
-          let U =
-            P &&
-            P.map(function (A) {
+              (null == D ? void 0 : D.mode) &&
+              (!m || 0 == (null == m ? void 0 : m.mode)),
+            H =
+              (null == D ? void 0 : D.mode) &&
+              (null == D ? void 0 : D.mode) == (null == m ? void 0 : m.mode),
+            U = H || x ? eA().BindingFromParentSet : "";
+          let V =
+            F &&
+            F.map(function (A) {
               return (function (A, e, t, n, o, a, r) {
                 var s;
                 const g = e.gameAction,
@@ -8786,21 +8788,21 @@
                   data: e,
                   strOptionClass: eA().HideOnMinified,
                 };
-              })(E, A, d, v, 0, L || x ? eA().ModeFromParentSet : "", p);
+              })(E, A, d, h, 0, x || H ? eA().ModeFromParentSet : "", p);
             });
-          const V =
-            null === (s = (0, l.Zt)(U).find((A) => (0, tA.xU)(m, A.data))) ||
+          const z =
+            null === (s = (0, l.Zt)(V).find((A) => (0, tA.xU)(m, A.data))) ||
             void 0 === s
               ? void 0
               : s.data;
           if (!p) {
             const A = {
               label: (0, I.Xx)("#ControllerBinding_ModeShift_Create"),
-              data: { eMode: V.eMode, bLowPriority: !0, modeShift: !0 },
+              data: { eMode: z.eMode, bLowPriority: !0, modeShift: !0 },
             };
-            U.push(A);
+            V.push(A);
           }
-          const z =
+          const j =
               10 == d
                 ? function (A) {
                     return (
@@ -8814,13 +8816,13 @@
                     );
                   }
                 : void 0,
-            j = (A, e) => {
+            W = (A, e) => {
               var t;
               const n = {
                 action_set_key: g.key,
                 action_set_layer_key: null == u ? void 0 : u.key,
                 source_binding_key: d,
-                mode_shift: null == F ? void 0 : F.mode_shift,
+                mode_shift: null == R ? void 0 : R.mode_shift,
               };
               (n.new_mode = A.data.eMode),
                 (n.modeid = A.data.modeid),
@@ -8839,7 +8841,7 @@
               xt.Debug("onChangeModeOption", A.data, n),
                 nA._A.SetControllerSourceMode(E, n);
             },
-            W = (A) => {
+            J = (A) => {
               var e;
               (null === (e = A.data) || void 0 === e ? void 0 : e.modeShift)
                 ? ((A, e) => {
@@ -8848,7 +8850,7 @@
                       action_set_key: g.key,
                       action_set_layer_key: null == u ? void 0 : u.key,
                       source_binding_key: d,
-                      mode_shift: null == F ? void 0 : F.mode_shift,
+                      mode_shift: null == R ? void 0 : R.mode_shift,
                     };
                     (n.new_mode =
                       0 == A.data.eMode || (0, aA.XY)(A.data.eMode)
@@ -8874,7 +8876,8 @@
                   })(A, void 0)
                 : (0, aA.eO)() && (0, aA.XY)(A.data.eMode) && !A.data.modeid
                 ? ((A) => {
-                    const e = i.createElement(zA.J1, {
+                    var e;
+                    const t = i.createElement(zA.J1, {
                       title: (0, I.Xx)(
                         "#ControllerConfigurator_CreateVirtualMenuDialog_Title_1"
                       ),
@@ -8884,17 +8887,21 @@
                       initialText: "",
                       isValid: (A) => 0 != A.length,
                       onResult: (e) => {
-                        j(A, e);
+                        W(A, e);
                       },
                       onCancel: () => {},
                     });
-                    (0, gA.AM)(e, window, {});
+                    (0, gA.AM)(
+                      t,
+                      null !== (e = B.ownerWindow) && void 0 !== e ? e : window,
+                      {}
+                    );
                   })(A)
-                : j(A, void 0);
+                : W(A, void 0);
             },
-            J = () => {
+            K = () => {
               var A;
-              const e = (0, aA.XY)(b.mode) ? (0, aA.Km)(b.modeid) : void 0,
+              const e = (0, aA.XY)(D.mode) ? (0, aA.Km)(D.modeid) : void 0,
                 t =
                   (null == e ? void 0 : e.friendlyname) &&
                   (null == e ? void 0 : e.friendlyname.length)
@@ -8911,9 +8918,9 @@
                       t
                     )
                   : void 0;
-              j(
-                (0, l.Zt)(U).find((A) =>
-                  (0, tA.xU)(b, A.data, (0, aA.XY)(b.mode))
+              W(
+                (0, l.Zt)(V).find((A) =>
+                  (0, tA.xU)(D, A.data, (0, aA.XY)(D.mode))
                 ),
                 n
               );
@@ -8923,15 +8930,15 @@
             {
               className: (0, N.Z)(eA().BindingButtons),
               navEntryPreferPosition: Z.c4.PREFERRED_CHILD,
-              onSecondaryButton: G
-                ? L
-                  ? J
+              onSecondaryButton: M
+                ? x
+                  ? K
                   : () => {
-                      W({ label: "", data: { eMode: 0 } });
+                      J({ label: "", data: { eMode: 0 } });
                     }
                 : null,
-              onSecondaryActionDescription: G
-                ? L
+              onSecondaryActionDescription: M
+                ? x
                   ? (0, I.Xx)(
                       "#ControllerConfigurator_SourceMode_Group_ConvertToEditable"
                     )
@@ -8941,19 +8948,19 @@
                 : null,
             },
             i.createElement(l.TW, {
-              rgOptions: U,
-              onChange: W,
-              selectedOption: V,
-              onMenuWillOpen: z,
+              rgOptions: V,
+              onChange: J,
+              selectedOption: z,
+              onMenuWillOpen: j,
               menuLabel: A.menuLabel,
-              strDropDownButtonClassName: H,
+              strDropDownButtonClassName: U,
             }),
-            (O || L) &&
+            (L || x) &&
               i.createElement(
                 l.zx,
                 {
                   className: eA().BindingOptionsButton,
-                  onClick: (A) => (O ? void Nt(E, B, g, u, m, d, R, f) : J()),
+                  onClick: (A) => (L ? void Nt(E, v, g, u, m, d, Y, b) : K()),
                 },
                 i.createElement(c.Zrf, null)
               )
@@ -8981,12 +8988,13 @@
               null === (n = _.tH.Get().GetController(G)) || void 0 === n
                 ? void 0
                 : n.eControllerType,
-            T = (0, $.k6)(),
-            P =
+            T = (0, Mt.Wy)(),
+            P = (0, $.k6)(),
+            F =
               null !== (o = null == b ? void 0 : b.inputs) && void 0 !== o
                 ? o
                 : [],
-            F = P.filter((A, e) => {
+            R = F.filter((A, e) => {
               var t, n, o, a, r;
               return (
                 !(null === (t = tA.Af[A.key]) || void 0 === t
@@ -9007,7 +9015,7 @@
                     ? void 0
                     : a.only_show_if_bound
                 ) &&
-                e === P.findIndex((e) => e.key === A.key) &&
+                e === F.findIndex((e) => e.key === A.key) &&
                 !(0, aA.dj)(A) &&
                 (Q ||
                   (!Q &&
@@ -9021,13 +9029,13 @@
                     (0, aA.yU)(f, b.mode, b.settings, A.key)))
               );
             }).sort((A, e) => ((0, aA.jL)(A.key) > (0, aA.jL)(e.key) ? 1 : -1)),
-            R = null === (a = tA.CV[f]) || void 0 === a ? void 0 : a.id,
-            Y = Q
+            Y = null === (a = tA.CV[f]) || void 0 === a ? void 0 : a.id,
+            O = Q
               ? (0, I.Xx)("#ControllerConfigurator_VirtualMenu_MenuType")
-              : null !== (c = (0, tA.QK)(R)) && void 0 !== c
+              : null !== (c = (0, tA.QK)(Y)) && void 0 !== c
               ? c
-              : (0, aA.NU)(R),
-            O = h
+              : (0, aA.NU)(Y),
+            L = h
               ? null ===
                   (u =
                     null === (g = v.source_bindings) || void 0 === g
@@ -9036,15 +9044,15 @@
                 ? void 0
                 : u.active_group
               : void 0,
-            L =
-              (null == O ? void 0 : O.mode) &&
+            x =
+              (null == L ? void 0 : L.mode) &&
               (!b ||
                 0 == (null == b ? void 0 : b.mode) ||
-                ((null == O ? void 0 : O.mode) ==
+                ((null == L ? void 0 : L.mode) ==
                   (null == b ? void 0 : b.mode) &&
-                  (null == O ? void 0 : O.modeid) !=
+                  (null == L ? void 0 : L.modeid) !=
                     (null == b ? void 0 : b.modeid))),
-            x = F.map((A, e) =>
+            H = R.map((A, e) =>
               i.createElement(
                 i.Fragment,
                 { key: e },
@@ -9057,19 +9065,19 @@
                   input: A,
                   eControllerMode: b.mode,
                   indentLevel: 1,
-                  bModeInherited: L,
+                  bModeInherited: x,
                   modeid: b.modeid,
                   modeShift: y,
                 })
               )
             ),
-            H = (0, tA.dN)(Q, R, Y, y),
-            X = (0, aA.XY)(null == b ? void 0 : b.mode),
-            Z = (0, aA.eO)() && X;
-          let U,
-            V,
-            z = !1;
-          if (X) {
+            X = (0, tA.dN)(Q, Y, O, y),
+            Z = (0, aA.XY)(null == b ? void 0 : b.mode),
+            U = (0, aA.eO)() && Z;
+          let V,
+            z,
+            j = !1;
+          if (Z) {
             const A =
                 11 == b.mode
                   ? null ===
@@ -9080,21 +9088,21 @@
                     ? void 0
                     : m.int_value
                   : 0,
-              e = Rt(b.modeid, null == O ? void 0 : O.modeid);
+              e = Rt(b.modeid, null == L ? void 0 : L.modeid);
             let t =
                 null === (C = null == b ? void 0 : b.settings) || void 0 === C
                   ? void 0
                   : C.find((A) => 73 == (null == A ? void 0 : A.key)),
               n = 14 == b.mode ? 30 : 29;
-            z = e >= 29 && (0 == A || e - n < A);
+            j = e >= 29 && (0 == A || e - n < A);
             const o =
               11 == b.mode && 0 != (null == t ? void 0 : t.int_value)
                 ? (null == t ? void 0 : t.int_value) + n
                 : 79;
-            V = P.filter(
+            z = F.filter(
               (A) => (0, aA.dj)(A) && (null == A ? void 0 : A.key) < o
             ).sort((A, e) => ((0, aA.jL)(A.key) > (0, aA.jL)(e.key) ? 1 : -1));
-            const a = V.some((A) => {
+            const a = z.some((A) => {
               var e;
               return null === (e = null == A ? void 0 : A.activators) ||
                 void 0 === e
@@ -9155,7 +9163,7 @@
                   });
             });
             if (!a)
-              for (let A of V)
+              for (let A of z)
                 for (let e of null !==
                   (E = null == A ? void 0 : A.activators) && void 0 !== E
                   ? E
@@ -9171,7 +9179,7 @@
                         : B.icon_data) &&
                       ((A.key_binding_data.icon_data.color_background = ""),
                       (A.key_binding_data.icon_data.color_foreground = ""));
-            U = V.map((A, e) =>
+            V = z.map((A, e) =>
               i.createElement(
                 i.Fragment,
                 { key: e },
@@ -9184,7 +9192,7 @@
                   input: A,
                   eControllerMode: b.mode,
                   indentLevel: 0,
-                  bModeInherited: L,
+                  bModeInherited: x,
                   modeid: b.modeid,
                   modeShift: y,
                 })
@@ -9197,16 +9205,16 @@
             5 != f &&
               i.createElement(
                 Xt,
-                { label: H },
+                { label: X },
                 !Q &&
-                  R &&
+                  Y &&
                   i.createElement(Ut, {
                     baseActionSet: v,
                     layerActionSet: h,
                     eControllerSource: f,
                     group: b,
                     appid: D,
-                    menuLabel: H,
+                    menuLabel: X,
                     modeShift: y,
                   }),
                 Q &&
@@ -9216,7 +9224,7 @@
                     eControllerSource: f,
                     group: b,
                     appid: D,
-                    menuLabel: H,
+                    menuLabel: X,
                     modeid: null == b ? void 0 : b.modeid,
                     modeShift: y,
                   })
@@ -9225,8 +9233,8 @@
               i.createElement(
                 i.Fragment,
                 null,
-                X && U,
-                Z &&
+                Z && V,
+                U &&
                   i.createElement(
                     i.Fragment,
                     null,
@@ -9236,11 +9244,11 @@
                       i.createElement(
                         l.zx,
                         {
-                          disabled: !z,
+                          disabled: !j,
                           onClick: () => {
                             const A = Rt(
                               b.modeid,
-                              null == O ? void 0 : O.modeid
+                              null == L ? void 0 : L.modeid
                             );
                             if (A) {
                               const e = {
@@ -9266,7 +9274,7 @@
                                 nA._A.EnsureEditingConfiguration(),
                                 nA._A.SetEditedInputBinding(e),
                                 nA._A.SetActiveInputBinding(t),
-                                T.push(
+                                P.push(
                                   r.Z5.GamepadUI.ControllerConfigurator.ChooseBinding(
                                     D
                                   )
@@ -9290,6 +9298,7 @@
                         l.zx,
                         {
                           onClick: () => {
+                            var A;
                             (0, gA.AM)(
                               i.createElement(on, {
                                 appid: D,
@@ -9298,9 +9307,11 @@
                                 controllerType: M,
                                 source: f,
                                 group: b,
-                                filteredInputs: V,
+                                filteredInputs: z,
                               }),
-                              window
+                              null !== (A = T.ownerWindow) && void 0 !== A
+                                ? A
+                                : window
                             );
                           },
                           className: (0, N.Z)(
@@ -9319,7 +9330,7 @@
                       ),
                     })
                   ),
-                x
+                H
               )
           );
         }),
@@ -13276,8 +13287,16 @@
         );
         if (
           (i.useEffect(() => {
-            null == C || C.SteamClient.Browser.NotifyUserActivation();
-          }, [C]),
+            C &&
+              (C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed &&
+                C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!0),
+              C.SteamClient.Browser.NotifyUserActivation());
+          }, [
+            C,
+            null == C
+              ? void 0
+              : C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed,
+          ]),
           !E)
         )
           return null;
@@ -13309,7 +13328,7 @@
           { initialX: n, initialY: o } = t.params,
           { popup: a, element: r } = ka("SP Keyboard", t, {
             title: "SP Keyboard",
-            dimensions: { width: 1280, height: 375, left: n, top: o },
+            dimensions: { width: 1280, height: 200, left: n, top: o },
             replace_existing_popup: !1,
             target_browser: t.params.browserInfo,
             eCreationFlags:
@@ -13321,7 +13340,11 @@
               i.createElement(
                 Ma,
                 { ownerWindow: a, instance: A.instance },
-                i.createElement($y, { cm: e, mode: U.iZ.StandaloneKeyboard })
+                i.createElement(
+                  oa.S,
+                  null,
+                  i.createElement($y, { cm: e, mode: U.iZ.StandaloneKeyboard })
+                )
               ),
               r
             )
@@ -13355,11 +13378,15 @@
               i.createElement(
                 Ma,
                 { ownerWindow: r, instance: A.instance },
-                i.createElement($y, {
-                  cm: e,
-                  mode: U.iZ.ControllerConfigurator,
-                  forcedAppID: n,
-                })
+                i.createElement(
+                  oa.S,
+                  null,
+                  i.createElement($y, {
+                    cm: e,
+                    mode: U.iZ.ControllerConfigurator,
+                    forcedAppID: n,
+                  })
+                )
               ),
               l
             )
@@ -24767,7 +24794,12 @@
         });
       }
       function Ds() {
-        (0, gA.AM)(i.createElement(bs, null), window);
+        var A;
+        const e = (0, Mt.Wy)();
+        (0, gA.AM)(
+          i.createElement(bs, null),
+          null !== (A = e.ownerWindow) && void 0 !== A ? A : window
+        );
       }
       function ws() {
         return (0, m.SZ)(() => {
@@ -27292,33 +27324,34 @@
       }
       function Zg(A) {
         const { systemInfo: e } = A,
-          [t] = (0, iA.bT)("b24HourClock"),
-          n = (0, u.e1)(iA.cS.CurrentTimeZoneID),
-          o = (0, u.fJ)(() => SteamClient.Settings.GetAvailableTimeZones(), []),
-          a = null == o ? void 0 : o.find((A) => A.timezoneID == n),
-          c = a ? Mg(a) : "",
-          s = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          g = parseInt(1666305827),
-          d = g && Hg(g, t, c),
-          m = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
-          C = (0, ig.l)(1024 * e.nSystemRAMSizeMB * 1024),
-          E = (0, ig.l)(1024 * e.nVideoRAMSizeMB * 1024);
-        let p = _.tH
+          t = (0, Mt.Wy)(),
+          [n] = (0, iA.bT)("b24HourClock"),
+          o = (0, u.e1)(iA.cS.CurrentTimeZoneID),
+          a = (0, u.fJ)(() => SteamClient.Settings.GetAvailableTimeZones(), []),
+          c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
+          s = c ? Mg(c) : "",
+          g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
+          d = parseInt(1666384643),
+          m = d && Hg(d, n, s),
+          C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
+          E = (0, ig.l)(1024 * e.nSystemRAMSizeMB * 1024),
+          p = (0, ig.l)(1024 * e.nVideoRAMSizeMB * 1024);
+        let B = _.tH
           .Get()
           .GetControllers()
           .find((A) => 4 == A.eControllerType);
-        const B = e.sSteamBuildDate,
-          v = "linux" == Vn.De.PLATFORM ? " GMT+0000" : " GMT-0800",
-          h = Date.parse(B + v) / 1e3,
-          f = h ? Hg(h, t, c) : B,
-          b = null == p ? void 0 : p.strFirmwareBuildTime,
-          D = Math.floor(Date.parse(b + " GMT+0000") / 1e3),
-          w = D ? Hg(D, t, c) : b,
-          Q = (0, r.BN)(
+        const v = e.sSteamBuildDate,
+          h = "linux" == Vn.De.PLATFORM ? " GMT+0000" : " GMT-0800",
+          f = Date.parse(v + h) / 1e3,
+          b = f ? Hg(f, n, s) : v,
+          D = null == B ? void 0 : B.strFirmwareBuildTime,
+          w = Math.floor(Date.parse(D + " GMT+0000") / 1e3),
+          Q = w ? Hg(w, n, s) : D,
+          y = (0, r.BN)(
             qA.de.ResolveURL("StoreAccount") +
               `steamdeckcomponents/?serialnumber=${
-                null == p ? void 0 : p.strSerialNumber
-              }&componentcode=${null == p ? void 0 : p.strChipID}`
+                null == B ? void 0 : B.strSerialNumber
+              }&componentcode=${null == B ? void 0 : B.strChipID}`
           );
         return i.createElement(
           i.Fragment,
@@ -27352,20 +27385,20 @@
               name: (0, I.Xx)("#Settings_System_KernalVersion"),
               value: e.sKernelVersion,
             }),
-            p &&
+            B &&
               i.createElement(l.Z5, {
                 name: (0, I.Xx)("#Settings_System_DeckControllerVersion"),
-                value: w,
+                value: Q,
               }),
-            p &&
+            B &&
               i.createElement(l.Z5, {
                 name: (0, I.Xx)("#Settings_System_DeckSerialNumber"),
-                value: p.strSerialNumber,
+                value: B.strSerialNumber,
               }),
-            p &&
+            B &&
               i.createElement(l.Z5, {
                 name: (0, I.Xx)("#Settings_System_DeckChipID"),
-                value: p.strChipID,
+                value: B.strChipID,
               }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_BIOSVersion"),
@@ -27380,16 +27413,16 @@
             i.createElement(l.dQ, null, (0, I.Xx)("#Settings_System_Steam")),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_SteamVersion"),
-              value: s,
+              value: g,
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_SteamBuildDate"),
-              value: f,
+              value: b,
             }),
-            d &&
+            m &&
               i.createElement(l.Z5, {
                 name: (0, I.Xx)("#Settings_System_SteamWebBuildDate"),
-                value: d,
+                value: m,
               }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_SteamAPIVersion"),
@@ -27398,7 +27431,13 @@
             i.createElement(
               l.sT,
               {
-                onClick: () => (0, gA.AM)(i.createElement(nu, null), window),
+                onClick: () => {
+                  var A;
+                  return (0, gA.AM)(
+                    i.createElement(nu, null),
+                    null !== (A = t.ownerWindow) && void 0 !== A ? A : window
+                  );
+                },
                 bottomSeparator: "standard",
               },
               (0, I.Xx)("#ThirdPartyLicenses_Header")
@@ -27408,10 +27447,10 @@
             l.Aw,
             null,
             i.createElement(l.dQ, null, (0, I.Xx)("#Settings_System_Hardware")),
-            p &&
+            B &&
               i.createElement(
                 l.sT,
-                { onClick: Q, bottomSeparator: "standard" },
+                { onClick: y, bottomSeparator: "standard" },
                 (0, I.Xx)("#Settings_System_Components")
               ),
             i.createElement(l.Z5, {
@@ -27424,7 +27463,7 @@
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_CPUFrequency"),
-              value: m,
+              value: C,
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_CPUPhysicalCores"),
@@ -27436,7 +27475,7 @@
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_RAMSize"),
-              value: C,
+              value: E,
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_VideoCard"),
@@ -27448,7 +27487,7 @@
             }),
             i.createElement(l.Z5, {
               name: (0, I.Xx)("#Settings_System_VRAMSize"),
-              value: E,
+              value: p,
               bottomSeparator: "standard",
             })
           )
@@ -27717,7 +27756,8 @@
       }
       function Au(A) {
         const [e, t] = i.useState(!1),
-          o = i.useCallback(
+          o = (0, Mt.Wy)(),
+          a = i.useCallback(
             () =>
               (0, n.mG)(this, void 0, void 0, function* () {
                 1 != (yield SteamClient.System.FactoryReset()).result
@@ -27726,9 +27766,13 @@
               }),
             []
           ),
-          a = i.useCallback(() => {
-            (0, gA.AM)(i.createElement($g, { onConfirm: o }), window);
-          }, [o]);
+          r = i.useCallback(() => {
+            var A;
+            (0, gA.AM)(
+              i.createElement($g, { onConfirm: a }),
+              null !== (A = o.ownerWindow) && void 0 !== A ? A : window
+            );
+          }, [o.ownerWindow, a]);
         return i.createElement(
           l.sT,
           {
@@ -27736,7 +27780,7 @@
             description: e
               ? (0, I.Xx)("#Settings_System_Factory_Reset_Failed")
               : (0, I.Xx)("#Settings_System_Factory_Reset_Description"),
-            onClick: a,
+            onClick: r,
             bottomSeparator: A.bottomSeparator,
           },
           (0, I.Xx)("#Settings_System_Factory_Reset")
@@ -38145,9 +38189,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Oct 20 2022 : 15:43:47",
-              BUILD_TIME_UTC: "Oct 20 2022 : 22:43:47",
-              BUILD_RTIME_UTC: 1666305827,
+              BUILD_TIME_LOCAL: "Oct 21 2022 : 13:37:23",
+              BUILD_TIME_UTC: "Oct 21 2022 : 20:37:23",
+              BUILD_RTIME_UTC: 1666384643,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -41682,23 +41726,26 @@
         }),
         JB = (0, W.Pi)(function (A) {
           const { controllerSettings: e, setControllerSettings: t } = A,
-            n = (0, r.SN)(),
-            o = _.tH.Get().GetController(n),
-            a = 0 != (262144 & o.unCapabilities);
-          if (!o) return i.createElement(i.Fragment, null);
-          const c = 2 == o.eControllerType,
-            s = (A) =>
-              (0, gA.AM)(
+            n = (0, Mt.Wy)(),
+            o = (0, r.SN)(),
+            a = _.tH.Get().GetController(o),
+            c = 0 != (262144 & a.unCapabilities);
+          if (!a) return i.createElement(i.Fragment, null);
+          const s = 2 == a.eControllerType,
+            g = (A) => {
+              var e;
+              return (0, gA.AM)(
                 i.createElement(UB, {
-                  controllerIdx: n,
+                  controllerIdx: o,
                   bHWGyroCalibration: A,
                 }),
-                window
-              ),
-            g = i.createElement(
+                null !== (e = n.ownerWindow) && void 0 !== e ? e : window
+              );
+            },
+            u = i.createElement(
               i.Fragment,
               null,
-              c &&
+              s &&
                 i.createElement(
                   l.sT,
                   {
@@ -41706,12 +41753,12 @@
                       "#Settings_ControllerCalibration_CalibrateTrackpad"
                     ),
                     onClick: () => {
-                      SteamClient.Input.CalibrateControllerTrackpads(n);
+                      SteamClient.Input.CalibrateControllerTrackpads(o);
                     },
                   },
                   (0, I.Xx)("#Settings_ControllerCalibration_Start")
                 ),
-              c &&
+              s &&
                 i.createElement(
                   l.sT,
                   {
@@ -41719,12 +41766,12 @@
                       "#Settings_ControllerCalibration_CalibrateJoystick"
                     ),
                     onClick: () => {
-                      SteamClient.Input.CalibrateControllerJoystick(n);
+                      SteamClient.Input.CalibrateControllerJoystick(o);
                     },
                   },
                   (0, I.Xx)("#Settings_ControllerCalibration_Start")
                 ),
-              c &&
+              s &&
                 i.createElement(
                   l.sT,
                   {
@@ -41732,12 +41779,12 @@
                       "#Settings_ControllerCalibration_CalibrateIMU"
                     ),
                     onClick: () => {
-                      s(!0);
+                      g(!0);
                     },
                   },
                   (0, I.Xx)("#Settings_ControllerCalibration_Start")
                 ),
-              a &&
+              c &&
                 i.createElement(
                   l.sT,
                   {
@@ -41746,14 +41793,14 @@
                       "#Settings_ControllerCalibration_CalibrateIMU"
                     ),
                     onClick: () => {
-                      s(!1);
+                      g(!1);
                     },
                   },
                   "\t",
                   (0, I.Xx)("#Settings_ControllerCalibration_Calibrate"),
                   " "
                 ),
-              a &&
+              c &&
                 i.createElement(l.fp, {
                   onChange: () => {
                     let A = e;
@@ -41769,7 +41816,7 @@
             i.createElement(
               l.Aw,
               null,
-              i.createElement(X.s, { "flow-children": "column" }, g)
+              i.createElement(X.s, { "flow-children": "column" }, u)
             )
           );
         }),
@@ -44941,7 +44988,8 @@
           ),
         nf = (A) => {
           const { bIsDeviceAuthorizedForFamilySharing: e } = A.settings,
-            t = i.useRef();
+            t = i.useRef(),
+            n = (0, Mt.Wy)();
           return i.createElement(l.gE, {
             ref: t,
             checked: e,
@@ -44949,17 +44997,18 @@
             onChange: (A) => {
               A
                 ? SteamClient.FamilySharing.AuthorizeLocalDevice().then((e) => {
+                    var o;
                     if (1 != e) {
-                      let n;
+                      let a;
                       switch (e) {
                         case 18:
-                          n = (0, I.Xx)(
+                          a = (0, I.Xx)(
                             "#FamilySettings_SteamGuardRequired",
                             e
                           );
                           break;
                         case 25:
-                          n = (0, I.Xx)("#FamilySettings_LimitExceeded", e);
+                          a = (0, I.Xx)("#FamilySettings_LimitExceeded", e);
                           break;
                         default:
                           (0, I.Xx)("#FamilySettings_FailedToAuthorize", e);
@@ -44967,9 +45016,11 @@
                       (0, gA.AM)(
                         i.createElement(uA.JX, {
                           strTitle: (0, I.Xx)("#Error_Generic"),
-                          strDescription: n,
+                          strDescription: a,
                         }),
-                        window,
+                        null !== (o = n.ownerWindow) && void 0 !== o
+                          ? o
+                          : window,
                         {
                           strTitle: (0, I.Xx)("#Error_Generic"),
                           bForcePopOut: !0,
@@ -44980,6 +45031,7 @@
                   })
                 : SteamClient.FamilySharing.DeauthorizeLocalDevice().then(
                     (e) => {
+                      var o;
                       1 != e &&
                         ((0, gA.AM)(
                           i.createElement(uA.JX, {
@@ -44989,7 +45041,9 @@
                               e
                             ),
                           }),
-                          window,
+                          null !== (o = n.ownerWindow) && void 0 !== o
+                            ? o
+                            : window,
                           {
                             strTitle: (0, I.Xx)("#Error_Generic"),
                             bForcePopOut: !0,
@@ -45011,7 +45065,8 @@
         },
         af = (0, W.Pi)((A) => {
           const e = Pn.i8.GetFriendState(A.user.nAccountID),
-            t = i.useRef();
+            t = i.useRef(),
+            n = (0, Mt.Wy)();
           if (!e.displayName) return null;
           return i.createElement(l.gE, {
             ref: t,
@@ -45023,8 +45078,9 @@
               SteamClient.FamilySharing.UpdateAuthorizedBorrower(
                 A.user.nAccountID,
                 e
-              ).then((n) => {
-                25 == n
+              ).then((o) => {
+                var a, r;
+                25 == o
                   ? ((0, gA.AM)(
                       i.createElement(uA.JX, {
                         strTitle: (0, I.Xx)("#Error_Generic"),
@@ -45033,23 +45089,23 @@
                           A.nMaxBorrowers
                         ),
                       }),
-                      window,
+                      null !== (a = n.ownerWindow) && void 0 !== a ? a : window,
                       {
                         strTitle: (0, I.Xx)("#Error_Generic"),
                         bForcePopOut: !0,
                       }
                     ),
                     t.current.SetChecked(!e, !1))
-                  : 1 != n &&
+                  : 1 != o &&
                     ((0, gA.AM)(
                       i.createElement(uA.JX, {
                         strTitle: (0, I.Xx)("#Error_Generic"),
                         strDescription: (0, I.Xx)(
                           "FamilySettings_FailedToUpdateBorrower",
-                          n
+                          o
                         ),
                       }),
-                      window,
+                      null !== (r = n.ownerWindow) && void 0 !== r ? r : window,
                       {
                         strTitle: (0, I.Xx)("#Error_Generic"),
                         bForcePopOut: !0,
@@ -48087,6 +48143,11 @@
               iD,
               { path: r.Z5.AppProperties.Root() },
               i.createElement(fB.nu, null)
+            ),
+            i.createElement(
+              $.AW,
+              { path: r.Z5.GamepadUI.ControllerConfigurator.Standalone() },
+              null
             ),
             i.createElement(
               $.AW,
@@ -53214,22 +53275,23 @@
               else if (o.endsWith("123"))
                 this.setState({ layoutState: Qy.Layout_Numeric });
               else if (o.endsWith("Steam"))
-                if (this.props.bStandalone) {
-                  let A = 0;
-                  this.setState({
-                    layoutState: Qy.Layout_Emoji,
-                    curEmojiCategoryIndex: A,
-                  });
-                } else
-                  this.WithEmojiStore((A) => {
-                    let e =
+                this.WithEmojiStore((A) => {
+                  if (this.props.bStandalone) {
+                    let A = 0;
+                    this.setState({
+                      layoutState: Qy.Layout_Emoji,
+                      curEmojiCategoryIndex: A,
+                    });
+                  } else {
+                    let A =
                       By.s_rgSteamItemCategories.indexOf("RecentSteamItems") +
                       this.m_emojiCategories.length;
                     this.setState({
                       layoutState: Qy.Layout_SteamItems,
-                      curEmojiCategoryIndex: e,
+                      curEmojiCategoryIndex: A,
                     });
-                  });
+                  }
+                });
               else if (o.endsWith("Layout")) (0, jf.n1)(this.OnLayoutChanged);
               else if (o.endsWith("Emoji"))
                 this.setState({ layoutState: Qy.Layout_Emoji });
@@ -55461,7 +55523,9 @@
                 break;
               case U.iZ.ControllerConfigurator:
                 setTimeout(() => {
-                  k.hq.Navigate(r.Z5.Library.Home()),
+                  k.hq.Navigate(
+                    r.Z5.GamepadUI.ControllerConfigurator.Standalone()
+                  ),
                     k.hq.Navigate(
                       r.Z5.GamepadUI.ControllerConfigurator.Main(
                         this.props.forcedAppID

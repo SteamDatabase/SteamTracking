@@ -42,7 +42,7 @@ __bss
 __DATA
 __common
 __DATA
-xC
+PC
 H
 __LINKEDIT
 
@@ -228,6 +228,7 @@ ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -572,6 +573,8 @@ find
 find substrings in console commands
 set_spew_level
 <SpewLevel LogLevel> Sets spew and log level for all groups
+set_var
+<name> <value>- Set the value of a Cvar
 quit
 Stops Steam client console
 help
@@ -586,6 +589,9 @@ http_test
 profile
 <seconds> profile for N seconds
 FCVAR_NEVER_AS_STRING
+Usage: set_var <name> <value>
+set_var used with no parameters
+set_var variable is not found
 runscript <scriptfile> - runs console script file
 Usage: api_logging <enabled> <verbose>
 Logging set (%s/%s).
@@ -1193,9 +1199,11 @@ Missing game files
 Compat tool failed
 Install path removed
 Logged Off
+Connecting
+Connected
 Logging On
-Logging Off
 Logged On
+Logging Off
 broadcast
 PS3
 @bEnableSpewThrottle
@@ -1284,6 +1292,11 @@ bitNum >= 0 && bitNum < this->Size()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 0
+
+
+
+
+
 @
 =
 0

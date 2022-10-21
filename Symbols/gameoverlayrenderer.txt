@@ -152,6 +152,7 @@
  fclose
  fcntl
  fcntl$UNIX2003
+ fflush
  fopen
  fopen$UNIX2003
  fprintf

@@ -4583,7 +4583,7 @@
         D = a(86782),
         G = a(22093),
         w = a(65499),
-        I = a(26111),
+        I = a(81664),
         T = a(23937),
         B = a(90110),
         A = a(63543),
@@ -5712,7 +5712,7 @@
     },
     55310: (e, t, a) => {
       "use strict";
-      a.d(t, { C: () => rr, o: () => ir });
+      a.d(t, { C: () => sr, o: () => rr });
       var n = a(67294),
         i = a(78587),
         r = a(26149),
@@ -8403,7 +8403,7 @@
         Ke = a(7200),
         $e = a(22335),
         et = a.n($e),
-        tt = a(26111),
+        tt = a(81664),
         at = a(28741),
         nt = a(34531),
         it = a(12411),
@@ -16013,7 +16013,8 @@
           style: { backgroundImage: `url('${i}')` },
         });
       }
-      function ir(e) {
+      var ir = a(92798);
+      function rr(e) {
         const {
             promotionName: t,
             eventModel: a,
@@ -16118,7 +16119,7 @@
                     event: a,
                     broadcastEmbedContext: e,
                   }),
-                  n.createElement(sr, {
+                  n.createElement(lr, {
                     bIsPreview: i,
                     event: a,
                     language: r,
@@ -16148,7 +16149,7 @@
           })
         );
       }
-      function rr(e) {
+      function sr(e) {
         var t;
         const { event: a, section: i, activeTab: r, language: s } = e;
         switch (i.section_type) {
@@ -16159,6 +16160,8 @@
             return n.createElement(ln, Object.assign({}, e));
           case "itemdef":
             return n.createElement(dt.R, Object.assign({}, e));
+          case "point_shop_smart":
+            return n.createElement(ir.j, Object.assign({}, e));
           case "broadcast":
             if (a.BEventCanShowBroadcastWidget()) {
               if (
@@ -16371,10 +16374,16 @@
             return n.createElement(Nn, Object.assign({}, e));
           case "unselected_empty":
             return null;
+          default:
+            ("dev" != G.De.WEB_UNIVERSE && "beta" != G.De.WEB_UNIVERSE) ||
+              console.error(
+                "DisplaySingleSaleSection: this section type is not implemented: " +
+                  i.section_type
+              );
         }
         return null;
       }
-      const sr = (0, i.EN)(function (e) {
+      const lr = (0, i.EN)(function (e) {
         const { event: t, language: a, nSaleDayIndex: r } = e,
           [s, c] = n.useState((0, l._)()),
           d = n.useMemo(() => new er(), []),
@@ -16461,7 +16470,7 @@
               h.push({ activeTab: e, elements: [] });
             }
             v = n.createElement(
-              rr,
+              sr,
               Object.assign({}, e, {
                 section: i,
                 activeTab: t,
@@ -16477,7 +16486,7 @@
               He.S,
               { key: "SaleSectionIndex_" + i.unique_id + "_" + r },
               n.createElement(
-                lr,
+                or,
                 {
                   visibility_by_door_index_state:
                     i.visibility_by_door_index_state,
@@ -16525,7 +16534,7 @@
           S
         );
       });
-      function lr(e) {
+      function or(e) {
         const {
           visibility_by_door_index_state: t,
           door_index_visibility: a,
@@ -16533,13 +16542,13 @@
         } = e;
         return t
           ? n.createElement(
-              or,
+              cr,
               { visibility_by_door_index_state: t, door_index_visibility: a },
               i
             )
           : n.createElement(n.Fragment, null, i);
       }
-      function or(e) {
+      function cr(e) {
         const {
             visibility_by_door_index_state: t,
             door_index_visibility: a,
@@ -22741,7 +22750,7 @@
         N = a(461),
         M = a(9915),
         R = a(32548),
-        L = a(26111),
+        L = a(81664),
         O = a(34133),
         P = a.n(O),
         F = a(12538),
@@ -31081,7 +31090,7 @@
         );
       };
       var gn = a(82097),
-        En = a(73644),
+        En = a(85889),
         vn = a(28981),
         hn = a(73285),
         Sn = a(50489),

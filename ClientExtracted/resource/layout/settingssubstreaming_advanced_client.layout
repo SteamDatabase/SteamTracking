@@ -34,8 +34,6 @@
 
 		"EnableHardwareDecoding" { ControlName="CheckButton" fieldName="EnableHardwareDecoding" labelText="#Steam_Settings_Streaming_EnableHardwareDecoding" }
 
-		"EnableTouchController" { ControlName="CheckButton" fieldName="EnableTouchController" labelText="#Steam_Settings_Streaming_EnableTouchController" }
-		
 		"SupportInformationLabel"
 		{
 			ControlName="URLLabel"
@@ -65,7 +63,7 @@
 
 		place
 		{
-			control="PerformanceOverlayLabel,PerformanceOverlay,BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,EnableHardwareDecoding,EnableTouchController"
+			control="PerformanceOverlayLabel,PerformanceOverlay,BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,EnableHardwareDecoding"
 			dir=down
 			width=max
 			margin-left=20

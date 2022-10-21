@@ -694,7 +694,7 @@
 "Broadcast_FirstTime_Cancel" "Cancelar"
 "Broadcast_FirstTime_ViewerRequest" "A %friend% le gustaría verte jugar a %gamename%"
 "Broadcast_FirstTime_CompleteText" "Gracias por seleccionar tus permisos de retransmisión."
-"Broadcast_FirstTime_Configuration" "Para opciones adicionales de configuración como grabación de micrófono y resoluciones de vídeo, visita:"
+"Broadcast_FirstTime_Configuration" "Para opciones adicionales de configuración como grabación de micrófono y resoluciones de video, visita:"
 "Broadcast_FirstTime_ConfigurationLink" "Ajustes de retransmisión"
 
 "Broadcast_Chat_Show_Profile" "Mostrar perfil"

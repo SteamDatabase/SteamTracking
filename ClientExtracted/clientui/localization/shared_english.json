@@ -48,6 +48,7 @@
 	"Button_Go": "Go",
 	"Button_Got_It": "Got it",
 	"Button_Hide": "Hide",
+	"Button_Load": "Load",
 
 	"StoreLink_Label": "Store",
 	"CommunityLink_Label": "Community",
@@ -68,6 +69,7 @@
 	"Input_Error_MustBeURL": "Field is not a valid URL.",
 	"Input_Error_MustBeEmail": "Field is not a valid Email.",
 	"Input_Error_MustBeNumber": "Field must be a number.",
+	"Input_Error_TooManyCharacters": "Field excedes maximum characters ( %1$s ).",
 
 	"Loading": "Loading...",
 	"Updating": "Updating...",
@@ -1188,6 +1190,9 @@
 	"Login_BetaTesterScanQR_Subtitle": "Steam Mobile App beta testers can sign in by scanning a QR code.",
 	"Login_JoinBeta_Button": "Learn more",
 	"Login_InBetaShowQR_Link": "I'm in the beta, show me a QR code",
+	"Login_MobileFlow_New": "New!",
+	"Login_MobileFlow_SignIn_ScanQR": "Steam Mobile App users can sign in by scanning a QR code.",
+	"Login_MobileFlow_ShowMeQR_Button": "Show me a QR code",
 	"Login_ScanAQRCode_Button": "Scan a QR code",
 	"Login_CheckCredentials": "Please check your password and account name and try again.",
 	"Login_IncorrectSteamGuard": "Incorrect code, please try again",
@@ -1344,6 +1349,7 @@
 	"sale_three_section_show_chat": "Show Chat",
 	"sale_three_section_show_streams": "Show Available Streams",
 	"btn_live_streams_all": "View all",
+	"Broadcast_ShareBroadcast": "Share Broadcast",
 
 	"Broadcast_default_title_simple": "Now broadcasting",
 	"Broadcast_default_title_dev": "Now broadcasting: Watch the developer play",
@@ -1426,6 +1432,7 @@
 	"Sale_Minigame_ContineQuest": "Go to Quest Page",
 	"Sale_ReserveNow": "Reserve Now %1$s",
 	"Sale_ReserveExhausted": "Out of stock",
+	"Sale_ReserveUnavailable": "Unavailable in your Country",
 	"Sale_ReserveEditor": "Reservation Widget Editor",
 	"Sale_ReserveEditor_Add": "Add Reservation Option",
 	"Sale_ReserveEditor_EditTitle": "Edit Description",
@@ -1731,7 +1738,12 @@
 	"SalePage_Tabs_MobileSelectorLabel": "VIEWING:",
 	"SalePage_Tabs_MobileSelectorShortcut": "MORE CATEGORIES",
 	"SalePage_Question": "Question #%1$s",
+	"SalePage_Quiz_Scenario": "Scenario #%1$s",
 	"SalePage_Answers": "Choose your Answer",
+	"SalePage_Quiz_Response": "Your Response",
+	"SalePage_Quiz_SubmitResponse": "Submit Responses",
+	"SalePage_Quiz_SubmitResponse_Confirm": "Once you submit, you get your prize. However, you cannot go back and change your answers. Are you sure?",
+	"SalePage_Quiz_RedoResponse": "Redo Responsess",
 	"SalePage_Correct": "Correct",
 	"SalePage_Wrong": "Wrong!",
 	"SalePage_TryAgain": "Try Again",
@@ -1752,6 +1764,7 @@
 	"Sale_Reservation_ExpectedDate": "Expected order availability:",
 	"__STEAM_DECK_IN_STOCK__": {
 		"Sale_Reservation_ExpectedShipDate": "Expected Ship Date:",
+		"Sale_Reservation_ExpectedDeliveryDate": "Expected Delivery Date:",
 
 		"dummy_for_ease_of_use":"dummy"
 	},
@@ -1801,6 +1814,7 @@
 	"Sale_BrowserSortOption_ContentHub_All": "All Items",
 	"Sale_BrowserSortOption_ContentHub_All_ttip": "All matching items, sorted by sales rank",
 	"Sale_BrowserSortOption_ContentHub_Suffix": "Content Hub",
+	"Sale_ItemBrowser_ShowFromBeginning": "Click here to view all matches from the beginning",
 	"SalePage_WatchForDrop_Minutes_Developer": "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
 	"SalePage_WatchForDrop_Minutes_CreatorNamed": "Watch the stream for %1$s minutes and get item drops from %2$s when the event is over!",
 	"SalePage_WatchForDrop_Hours_Developer": "Watch the stream for %1$s hours and get item drops from the developer when the event is over!",
@@ -2361,6 +2375,10 @@
 	"DiscoveryQueue_WidgetHeader": "A new way to discover top-selling, new and similar products to what you play and use on Steam.",
 	"DiscoveryQueue_WidgetHeader_LoggedOut": "Sign in to discover top-selling, new and similar products to what you play and use on Steam.",
 	"DiscoveryQueue_LaunchAction": "Launch Discovery Queue",
+	"DiscoveryQueue_SalePage_Exhausted": "You have completed this discovery queue. Please come back later to see if there are new games to discover.",
+
+	"DiscoveryQueue_BadgeGrant": "Congrats, you've unlocked this lovely badge for completing the discovery queue. Continue your queue to level up the badge further.",
+	"DiscoveryQueue_BadgeGrant_Final": "Congrats, you've unlocked the highest level of this badge! You can discover more games by continuing to explore your queue.",
 
 	"StoreTrailer_AutoPlayVideos": "Autoplay Videos",
 

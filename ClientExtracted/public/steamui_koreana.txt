@@ -129,6 +129,7 @@
 "Steam_ForgottenPassword_EmailCode_Incorrect" "입력하신 이메일 코드가 맞지 않습니다."
 
 "Steam_Login_Title"		"Steam 로그인"
+"Steam_RefreshLogin_Title"		"Steam 로그인 새로 고침"
 "Steam_Login_CreateNewAccount"	"새 계정 만들기..."
 "Steam_Login_RetrievePassword"	"로그인할 수 없습니다..."
 "Steam_Login_NoAccount"		"Steam 계정이 없으신가요?"
@@ -194,7 +195,6 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"시작"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"게임 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"게임 플레이"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"게임 플레이"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"나중에 업데이트"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"체험판 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"도구 시작"
@@ -216,7 +216,6 @@
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"준비되는 대로 애플리케이션 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"게임이 준비되면 바로 시작"
-"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"체험판이 준비되는 대로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"도구가 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"준비되면 사운드트랙 재생하기"
@@ -783,7 +782,7 @@
 "SteamUI_Russian"		"러시아어"
 "SteamUI_Thai"			"태국어"
 "SteamUI_Japanese"		"일본어"
-"SteamUI_Portuguese"	"포르투갈어"
+"SteamUI_Portuguese"	"포르투갈어 - 포르투갈"
 "SteamUI_Brazilian"	 	"포르투갈어-브라질"
 "SteamUI_Polish"		"폴란드어"
 "SteamUI_Danish"		"덴마크어"
@@ -812,7 +811,7 @@
 "SteamUI_Selection_Russian"		"Русский (러시아어)"
 "SteamUI_Selection_Thai"			"ไทย (태국어)"
 "SteamUI_Selection_Japanese"		"日本語 (일본어)"
-"SteamUI_Selection_Portuguese"		"Português (포르투갈어)"
+"SteamUI_Selection_Portuguese"		"Português (포르투갈어 - 포르투갈)"
 "SteamUI_Selection_Brazilian"	 "Português-Brasil (포르투갈어-브라질)"
 "SteamUI_Selection_Polish"		"Polski (폴란드어)"
 "SteamUI_Selection_Danish"		"Dansk (덴마크어)"
@@ -1277,7 +1276,7 @@
 "Steam_Printing" "인쇄 중..."
 
 "Steam_CyberCafe_FeatureLocked_Title" "Steam - 오류"
-"Steam_CyberCafe_FeatureLocked" "이 기능은 현재 사용할 수 없습니다.\n이에 액세스하려면 Pc방 계정으로 Steam에 다시 로그인하세요.\n이 때, '비밀번호 저장'이 선택 표시되어 있는지 확인하세요."
+"Steam_CyberCafe_FeatureLocked" "이 기능은 현재 사용할 수 없습니다.\n이에 액세스하려면 PC방 계정으로 Steam에 다시 로그인하세요.\n이 때, '비밀번호 저장'이 선택 표시되어 있는지 확인하세요."
 
 "Steam_RegisterCDKey_Info"	"Steam 라이브러리에 등록할 제품 코드를 입력하세요."
 "Steam_RegisterCDKey_Example"	"키는 다음과 같은 방식으로 표시됩니다:\n    AAAAA-BBBBB-CCCCC\n    AAAAA-BBBBB-CCCCC-DDDDD-EEEEE\n    237ABCDGHJLPRST 23"
@@ -2128,7 +2127,6 @@
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"이 애플리케이션의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"이 게임의 모든 파일은 이제 Steam을 통해 다운로드합니다."
-"Steam_Install_WillDownloadAllFiles$appType=beta"	"이 게임의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"이 체험판의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"이 매체의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"이 사운드트랙의 모든 파일은 이제 Steam을 통해 다운로드합니다."
@@ -2137,7 +2135,6 @@
 "Steam_Install_StartCacheLoading$appType=application"		"로컬 애플리케이션 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=game"		"로컬 게임 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=demo"		"체험판 로컬 파일 생성하는 중..."
-"Steam_Install_StartCacheLoading$appType=beta"		"로컬 게임 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=media"		"로컬 미디어 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=music"		"로컬 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=tool"		"로컬 도구 파일 생성하는 중..."
@@ -2387,7 +2384,6 @@
 "Steam_status_decrypting"			"암호 해제 중: "
 "Steam_status_validating"			"확인: "
 "Steam_status_verifying"			"확인 중: "
-"Steam_status_finalizing"			"완료 중"
 
 "steam_status_launching"				"시작"
 "steam_status_launching_progress"		"시작: "
@@ -2463,8 +2459,8 @@
 "SteamUI_GameExplorer_AddGame_Failure" "게임 탐색기에 게임을 추가하지 못했습니다."
 "SteamUI_GameExplorer_AddGame" "게임 탐색기에 추가"
 "SteamUI_GameExplorer_RemoveGame" "게임 탐색기에서 삭제"
-"SteamUI_PlatformParentalControl_Title" "Windows 자녀 보호 설정"
-"SteamUI_PlatformParentalControl_Blocked" "Windows 자녀 보호 설정에 의해 현재 사용자에게 게임이 차단되었습니다."
+"SteamUI_PlatformParentalControl_Title" "Windows 가족 모드 설정"
+"SteamUI_PlatformParentalControl_Blocked" "Windows 가족 모드 설정에 의해 현재 사용자에게 게임이 차단되었습니다."
 
 "SteamUI_ShortcutName"			"이름:"
 "SteamUI_ShortcutTarget"			"대상:"
@@ -3121,10 +3117,6 @@ SSE 명령 집합을 포함하지 않는 CPU에 대한 %game% 지원이 종료�
 Windows에 관리자로 로그인해야 합니다.
 계속할 경우 게임 실행 도중 문제가 발생할 수 있습니다."
 "SteamUI_InstallScript_Continue" "계속 실행"
-
-"SteamUI_3rdPartyRemapper_Title"		"컨트롤러 재매핑 감지됨"
-"SteamUI_3rdPartyRemapper_Description"	"PS4 컨트롤러에 컨트롤러 재매핑 도구를 사용하고 계신 것으로 보입니다. 이 게임은 Steam Input을 사용하며 재매핑 소프트웨어가 필요하지 않습니다. 재매핑 도구를 비활성화되지 않은 경우 두 개가 충돌할 수 있습니다."
-
 
 "Steam_CPUSSERequired_Title"	"Steam - 지원되지 않는 CPU 검색"
 "Steam_CPUSSERequired_Info"	"%game% 게임을 실행하려면 SSE 명령 집합을 지원하는 CPU가 필요합니다.
@@ -4172,7 +4164,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AppUpdateError_42"		"다운로드 파일 누락"
 "Steam_AppUpdateError_43"		"사용자를 위한 디스크 여유 공간이 부족합니다. 운영체제 디스크 할당량 설정을 확인하세요."
 "Steam_AppUpdateError_44"		"사업장 라이선스 잠김"
-"Steam_AppUpdateError_45"		"자녀 보호 기능에 의해 차단됨"
+"Steam_AppUpdateError_45"		"가족 모드에 의해 차단됨"
 "Steam_AppUpdateError_46"		"생성 프로세스 실패"
 "Steam_AppUpdateError_47"		"Steam 클라이언트가 최신 버전이 아닙니다."
 "Steam_AppUpdateError_48"		"허용한 플레이 시간 초과"
@@ -4261,8 +4253,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Family_Sharing_Borrowers" "인증된 컴퓨터에서 라이브러리에 접근할 수 있는 최대 %maxborrowers%명의 사용자를 선택하세요:"
 "Steam_Settings_Family_Show_Notifications" "공유 라이브러리가 다시 사용 가능해지면 알림을 보여줌"
 
-"Steam_Settings_Family_Options_Title" "자녀 보호"
-"Steam_Settings_Family_Options_Text" "PIN으로 보호된 자녀 보호를 이용해 콘텐츠 및 기능에 대한 접근을 제한할 수 있습니다."
+"Steam_Settings_Family_Options_Title" "가족 모드"
+"Steam_Settings_Family_Options_Text" "PIN으로 보호된 가족 모드를 이용해 콘텐츠 및 기능에 대한 접근을 제한할 수 있습니다."
 
 "Steam_Game_Family_Sharing_Unsupported" "현재 이 타이틀은 Steam 가족 공유를 지원하지 않습니다."
 
@@ -4298,28 +4290,28 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AllowGameLaunch_Info_Prompt" "이 실행을 요청하지 않았거나 이러한 옵션을 이해하지 못한다면 취소를 선택하십시오."
 "Steam_AllowGameLaunch_Title"	"게임 실행을 허용하시겠습니까?"
 
-"Steam_Parental_UnlockTitle"			"자녀 보호"
-"Steam_Parental_UnlockInstructions"		"자녀 보호를 끄려면 아래에 PIN을 입력하세요"
+"Steam_Parental_UnlockTitle"			"가족 모드"
+"Steam_Parental_UnlockInstructions"		"가족 모드를 끄려면 아래에 PIN을 입력하세요"
 "Steam_Parental_ForgotPIN"				"PIN을 잊어버렸습니다"
 "Steam_Parental_NoRecoveryEmail"		"복구 이메일 설정 안됨"
-"Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 자녀 보호를 끄신 후 자녀 보호 설정을 다시 실행하십시오."
-"Steam_Parental_UnlockFailureTitle"		"자녀 보호"
+"Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 가족 모드를 끄신 후 가족 모드 설정을 다시 실행하십시오."
+"Steam_Parental_UnlockFailureTitle"		"가족 모드"
 "Steam_Parental_UnlockFailure"			"아쉽게도 실수하셨군요. 정확한 PIN을 입력하시고 다시 시도해보세요."
 "Steam_Parental_UnlockFailureExceeded"	"실패한 시도가 너무 많습니다. Steam을 재시작하고 다시 시도해주세요."
-"Steam_Parental_GameBlocked_Title"		"자녀 보호"
-"Steam_Parental_GameBlocked"			"이 게임은 자녀 보호에서는 이용할 수 없습니다"
+"Steam_Parental_GameBlocked_Title"		"가족 모드"
+"Steam_Parental_GameBlocked"			"이 게임은 가족 모드에서는 이용할 수 없습니다"
 
-"Steam_Parental_LockTitle"				"자녀 보호"
-"Steam_Parental_LockInstructions"		"정말로 자신의 계정을 잠그고 자녀 보호로 돌아가시고 싶으신가요?"
+"Steam_Parental_LockTitle"				"가족 모드"
+"Steam_Parental_LockInstructions"		"정말로 자신의 계정을 잠그고 가족 모드로 돌아가시고 싶으신가요?"
 
 "Steam_SiteLicense_Tip_Lock"			"현재 사용 제한 모드가 실행 중입니다. 더 많은 정보를 보려면 선택해주세요."
 "Steam_SiteLicense_LockTitle"			"사용 제한"
 "Steam_SiteLicense_LockInfo"			"네트워크 운영자가 Steam 사용에 대한 제한을 추가했습니다. 이 위치에서 실행하는 동안 일부 기능을 사용하지 못할 수 있습니다."
 
-"SteamUI_ParentalControl_Tip_Locked"	"자녀 보호를 사용 중입니다. 변경하려면 선택하세요."
-"SteamUI_ParentalControl_Tip_Unlocked"	"자녀 보호를 사용하지 않고 있습니다. 변경하려면 선택하세요."
+"SteamUI_ParentalControl_Tip_Locked"	"가족 모드를 사용 중입니다. 변경하려면 선택하세요."
+"SteamUI_ParentalControl_Tip_Unlocked"	"가족 모드를 사용하지 않고 있습니다. 변경하려면 선택하세요."
 
-"Steam_Parental_Manage"					"자녀 보호 설정"
+"Steam_Parental_Manage"					"가족 모드 설정"
 
 "steam_inbox_asyncgame"			"1개의 새로운 차례 대기 중"
 "steam_inbox_asyncgames"		"%count%개의 새로운 차례 대기 중"

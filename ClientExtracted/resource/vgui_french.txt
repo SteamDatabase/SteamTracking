@@ -82,8 +82,8 @@
 "vgui_FileCopy_Ovewwrite_Title"	"Écraser le(s) fichier(s)"
 "vgui_FileCopy_Ovewwrite_Prompt" "Écraser « %filename% » ?"
 
-"SMPEvent_AppLaunch"		"Lancer l'application"
-"SMPEvent_AppExit"		"Quitter l'application"
+"SMPEvent_AppLaunch"		"Lancer l’application"
+"SMPEvent_AppExit"		"Quitter l’application"
 "SMPEvent_Close"		"Fermer"
 "SMPEvent_FadeOut"		"Faire disparaître"
 "SMPEvent_MediaBegin"		"Début du média"
@@ -116,7 +116,7 @@
 "vgui_Accept"	"Accepter"
 "vgui_Decline"	"Refuser"
 
-"vgui_TimeLeftYearOrMore"		"plus d'un an"
+"vgui_TimeLeftYearOrMore"		"plus d’un an"
 "vgui_TimeLeftDay"			"%days% jour"
 "vgui_TimeLeftDays"			"%days% jours"
 "vgui_TimeLeftDayRemaining"		"%days% jour restant"
@@ -158,7 +158,7 @@
 "vgui_TimeLeftMinuteSecondsRemaining"	"Plus que %minutes% minute %seconds% secondes"
 "vgui_TimeLeftMinuteSecondRemaining"	"Plus que %minutes% minute %seconds% seconde"
 
-"vgui_Today"				"Aujourd'hui"
+"vgui_Today"				"Aujourd’hui"
 "vgui_Yesterday"			"Hier"
 "vgui_Tomorrow"				"Demain"
 
@@ -171,7 +171,7 @@
 "vgui_OnForMinute"		"En ligne depuis %minutes% minute"
 "vgui_OnForSecond"		"En ligne depuis %seconds% seconde"
 
-"vgui_LastOnYearOrMore"		"Dernière connexion : il y a plus d'un an"
+"vgui_LastOnYearOrMore"		"Dernière connexion : il y a plus d’un an"
 "vgui_LastOnDays"			"Dernière connexion : il y a %days% jours"
 "vgui_LastOnHours"		"Dernière connexion : il y a %hours% heures"
 "vgui_LastOnMinutes"		"Dernière connexion : il y a %minutes% minutes"
@@ -181,7 +181,7 @@
 "vgui_LastOnMinute"		"Dernière connexion : il y a %minutes% minute"
 "vgui_LastOnSecond"		"Dernière connexion : il y a %seconds% seconde"
 
-"vgui_TimeAgoYearOrMore"	"il y a plus d'un an"
+"vgui_TimeAgoYearOrMore"	"il y a plus d’un an"
 "vgui_TimeAgoDays"		"il y a %days% jours"
 "vgui_TimeAgoHours"		"il y a %hours% heures"
 "vgui_TimeAgoMinutes"		"il y a %minutes% minutes"
@@ -206,10 +206,10 @@
 "FileOpenDialog_NewFolder_DefaultName" "Nouveau dossier"
 
 "vgui_Webkit_error_title" "Erreur"
-"vgui_Webkit_error_header" "Code d'erreur"
+"vgui_Webkit_error_header" "Code d’erreur"
 "vgui_Webkit_pagetypeunsupported" "Impossible de charger la page. Format non pris en charge."
 "vgui_Webkit_cachemiss" "Votre demande a expiré. Veuillez actualiser la page pour soumettre à nouveau les données du formulaire."
-"vgui_Webkit_badurl" "Impossible de charger l'URL : hôte ou format non valide"
+"vgui_Webkit_badurl" "Impossible de charger l’URL : hôte ou format non valide"
 "vgui_Webkit_connectionproblem" "Impossible de se connecter au serveur. Il se peut que le serveur soit hors ligne ou que votre ordinateur ne soit pas connecté à Internet."
 "vgui_Webkit_proxyconnectionproblem" "Impossible de se connecter au proxy HTTP. Votre proxy peut être mal configuré ou hors ligne."
 "vgui_Webkit_unknown" "Échec du chargement de la page Internet (erreur inconnue)."
@@ -217,14 +217,14 @@
 "vgui_HTMLForward" "Suivant"
 "vgui_HTMLReload" "Recharger"
 "vgui_HTMLStop" "Arrêter"
-"vgui_HTMLCopyUrl" "Copier l'adresse de la page"
+"vgui_HTMLCopyUrl" "Copier l’adresse de la page"
 "vgui_HTMLViewSource" "Afficher le code source..."
-"vgui_HTMLCopyLink" "Copier l'adresse du lien"
+"vgui_HTMLCopyLink" "Copier l’adresse du lien"
 "vgui_HTMLSearchMatch" "%findactive% sur %findcount%"
 "vgui_HTMLSearchThisPage" "Rechercher :"
 "vgui_choosedirectoryname"	"Choisissez le nom du répertoire"
 "vgui_HTMLCloseDevTools"	"Fermer les outils de développement"
 "vgui_HTMLOpenDevTools"		"Ouvrir les outils de développement"
-"vgui_HTMLInspectElement"	"Inspecter l'élément"
+"vgui_HTMLInspectElement"	"Inspecter l’élément"
 }
 }

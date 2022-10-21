@@ -57,6 +57,7 @@ __DATA
 P
 __data
 __DATA
+HT
 __thread_vars
 __DATA
 0
@@ -81,6 +82,7 @@ __LINKEDIT
 0\
 (Y
 P
+"?
 
 *
 8
@@ -150,33 +152,30 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-8W
+HW
 )
 HB
+F=
+<4
 1
-1
-1
-1
-1
-1
+=
+=
+=
+=
 =
 =
 0
-1
-1
 
 
-1
-1
 
 
 
 @
 
-:
-%
+1
 @
 @
+l'
 @
 8
 HC
@@ -230,7 +229,9 @@ X
 @
 H
 $
+$
 (
+,
 $
 (
 ,
@@ -262,12 +263,12 @@ $
 $
 (
 $
-4
-8
-$
-(
+<
+@
 ,
 0
+4
+8
 $
 (
 ,
@@ -409,7 +410,7 @@ H
 8
 0
 (
-@
+H
 (
 (
 (
@@ -1520,8 +1521,6 @@ H
 18CMsgDrawTextRegion
 20CMsgRenderTextRegion
 25CMsgRequestRenderCallback
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 ?
 ?
 C
@@ -2046,24 +2045,23 @@ H
 8
 9
 (
-P
-X
-`
 h
 p
 x
 0
+H
 
 
 I
 J
 K
 0
-L
-P
-M
-N
-O
+T
+X
+U
+V
+W
+H
 0
 (
 I
@@ -2105,7 +2103,7 @@ p
 @
 @
 P
-X
+`
 P
 P
 P
@@ -2141,6 +2139,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -2570,30 +2569,30 @@ Logger
 12CDynamicFuncIPFi10SDL_GLattrPiEE
 12CDynamicFuncIPFi10SDL_GLattriEE
 @
-H
-L
+P
+T
 (
-h
+p
 0
 @
-@P
-d
+@X
 l
-T
-`
-X
-p
-m
 t
+\
+h
+`
+x
+u
 |
 8
-x
+@
 
 
-<
-0
-,
+D
+(
 8
+4
+@
 <
 =
 >
@@ -2680,16 +2679,16 @@ $
 4
 8
 (
-4
-Q
-X
 (
-Z
-`
-a
-m
-@
-t
+>
+\
+c
+(
+e
+k
+l
+y
+H
 H
 0
 `
@@ -2701,6 +2700,7 @@ h
 (
 13CMsgIPAddress
 19CMsgIPAddressBucket
+27CMsgGCRoutingProtoBufHeader
 18CMsgProtoBufHeader
 9CMsgMulti
 19CMsgProtobufWrapped
@@ -2717,7 +2717,8 @@ h
 25CPackageReservationStatus
 16CMsgKeyValuePair
 15CMsgKeyValueSet
-NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 14CWSASendThread
 N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
 6CTHashIP14CTCPConnectionjE
@@ -2776,8 +2777,6 @@ IsValid()
 src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
-Qanba Obsidian Arcade Joystick
-Qanba Dragon Arcade Joystick
 Xbox 360 Controller
 Xbox 360 Wireless Controller
 PDP Xbox 360 Afterglow
@@ -2898,6 +2897,7 @@ ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
@@ -5203,6 +5203,7 @@ See Other
 Not Modified
 Use Proxy
 Temporary Redirect
+Permanent Redirect
 Bad Request
 Unauthorized
 Payment Required
@@ -5376,8 +5377,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Oct 18 2022
-17:58:38
+Oct 21 2022
+13:49:56
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -6607,6 +6608,8 @@ google.protobuf.FileOptions.php_class_prefix
 google.protobuf.FileOptions.php_namespace
 google.protobuf.FileOptions.php_metadata_namespace
 google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FieldOptions.boxed_type
 google.protobuf.UninterpretedOption.NamePart.name_part
 google.protobuf.UninterpretedOption.identifier_value
 google.protobuf.UninterpretedOption.aggregate_value
@@ -7795,6 +7798,8 @@ m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsAlertThreshold
 @nJobInteryieldMillisecondsLogThreshold
 100
+@nJobNetSendsInsaneThreshold
+15000
 @cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
@@ -8266,60 +8271,57 @@ SSE is required.
 src.IsValid()
 
 HB
-1
-1
-1
-1
-1
+F=
+<4
 1
 =
 =
+=
+=
+=
+=
 0
-1
-1
 
 
-1
-1
 
 
 
 @
 
-:
-%
+1
 @
 @
-b'
-0
-:
-&
-/
-$
-.
-%
-.
-:
-p.
-i-
--
+l'
+x/
 9
+&
+.
+G#
+&
+-
+{-
+y,
+-
 7
 7
 7
-7
-^,
+6
+s,
+t,
 ,
 ,
 ,
 ,
+,
+,
+,
+,
+,
+,
+/
 j
-&,
 "
 "
-,
-,
-,
 ?
 )
 >
@@ -8327,21 +8329,36 @@ j
 F
 ,
 -
+/
+/
+/
 +
 !
 &
-J(
-'(
--
--
-1
-+
-+
-+
+U+
+W
 j
 Ic
-e*
-g6
+w'
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+,
 @
 @
 @
@@ -8372,31 +8389,21 @@ g6
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-*
-*
-@
-@
-@
-@
-@
-@
-@
-@
--
--
 d
+(6
 Uk/
+'6
 K
+&6
+%6
+z*
+@
+@
+@
+@
+@
+@
+'
 @
 @
 @
@@ -8419,9 +8426,27 @@ K
 @
 @
 @
+0
+6
+6
+I-
 @
 @
-$4
+z&
+e)
+h)
+B)
+;)
+)
+)
+&
+&
+&
+)
+@
+@
+@
+@
 @
 @
 @
@@ -8429,138 +8454,110 @@ $4
 0
 @
 @
-;&
-&
-&
-&
-&
-@
-@
-@
-@
-@
-@
-@
-@
-2
-2
+{(
 0
-@
-@
+)
 0
-0
-\(
 =
-E%
 @
 @
-4
-4
+*
+(
+(
 H=
-4
-1
-(
-(
+5(
+b'
 )
 )
 )
-'
-'
 $
-u'
+'
+'
+'
+v'
+&
 1
-#
 @
 =
-_%
-f1
-%
+2
+2
+2
+2
 @
 @
-0
 %
-$
-%/
+1
+q%
+/
 @
 @
 ?
+C#
+-
 ^
-#
-#
-#
+.
+.
+.
+.
+.
 @
 #
-&
+#
+#
 P
-!
-0
+T
 (
 (
 P
 j
-,
-]#
 A
 A
 A
 A
 (
-~"
-l"
-{&
-#
-P&
-#
-+%
-$"
+\#
+N"
 @
 E9u
 E9u
 "
 "
-@
-A
-A
-A
-A
-A
-A
-A
-A
-+
-n"
-p#
-".
 "
-!
-|-
-q-
-q
-a-
-3!
-
+"
+"
+t
 @
-!+
+A
+A
+A
+A
+A
+A
+A
+A
+o"
+{$
+0,
+@
+#
 -
 -
-,
-)!
-'
-!
-!
-!
-!
-!
-h
+(
+"
+v
 }
 "
+&
 @
 (
-&
-I$
+z%
+'
+*%
 Hi
 (
-`"
+#
+$
+$
 @
 @
 0
@@ -8568,13 +8565,10 @@ Hi
 
 
 
+0
 
 
 0
-
-0
-%
-%
 IcE
 @
 @
@@ -8744,6 +8738,20 @@ IcE
 @
 @
 @
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 #
 @
 @
@@ -8853,29 +8861,14 @@ IcE
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-u"
-!
+y"
+fD;=q!
 @
 j
 @
 @
 j
 @
-$
 @
 @
 j
@@ -8967,15 +8960,12 @@ IcE
 V
 =
 =
-
-
-
+!
 @
+&
 
 
 
-
-2
 
 
 @
@@ -9036,6 +9026,8 @@ I;E
 I;E
 B
 ?
+q
+p
 `
 `
 !
@@ -9090,11 +9082,12 @@ E
 0
 0
 0
+0
+@
 @
 @
 @
 
-@
 
 
 
@@ -9103,4 +9096,4 @@ E
 0
 [
 L
-X
+\

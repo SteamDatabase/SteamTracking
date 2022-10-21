@@ -9037,8 +9037,9 @@
             highlightOnFocus: f,
             indentLevel: b,
             verticalAlignment: C,
+            tooltip: D,
           } = e,
-          D = (0, i._T)(e, [
+          S = (0, i._T)(e, [
             "label",
             "description",
             "icon",
@@ -9054,69 +9055,70 @@
             "highlightOnFocus",
             "indentLevel",
             "verticalAlignment",
+            "tooltip",
           ]),
-          S = null != u ? u : "inline",
-          E = "inline" == S && !!c,
-          T = "below" == S && !!c,
-          w = null != d ? d : "shift-children-below",
-          O = !!(D.onClick || D.onActivate || D.focusable),
-          I = null != a || null != n || (E && null != c),
-          R = null != h ? h : "min",
-          y = null != m ? m : "standard",
-          N = null != p ? p : "standard",
-          A = null != _ ? _ : "standard",
-          M = null == f || f,
-          L = null != b ? b : 0,
-          F = null != C ? C : "center",
-          P = o.useRef(),
-          x = (0, K.BE)(P, e.navRef),
-          B = o.useCallback(
+          E = null != u ? u : "inline",
+          T = "inline" == E && !!c,
+          w = "below" == E && !!c,
+          O = null != d ? d : "shift-children-below",
+          I = !!(S.onClick || S.onActivate || S.focusable),
+          R = null != a || null != n || (T && null != c),
+          y = null != h ? h : "min",
+          N = null != m ? m : "standard",
+          A = null != p ? p : "standard",
+          M = null != _ ? _ : "standard",
+          L = null == f || f,
+          F = null != b ? b : 0,
+          P = null != C ? C : "center",
+          x = o.useRef(),
+          B = (0, K.BE)(x, e.navRef),
+          k = o.useCallback(
             (e) => {
               var t;
-              null === (t = P.current) || void 0 === t || t.TakeFocus(),
+              null === (t = x.current) || void 0 === t || t.TakeFocus(),
                 e.preventDefault();
             },
-            [P]
+            [x]
           );
         return o.createElement(
           r.s,
           Object.assign(
             {
-              focusable: O,
+              focusable: I,
               noFocusRing: !0,
               scrollIntoViewWhenChildFocused: !0,
-              onActivate: D.onClick,
+              onActivate: S.onClick,
               ref: t,
-              onMouseDown: O ? void 0 : B,
+              onMouseDown: I ? void 0 : k,
             },
-            D,
+            S,
             {
-              navRef: x,
+              navRef: B,
               className: (0, l.Z)(
                 v,
                 $e().Field,
                 g && $e().Disabled,
-                I && $e().WithFirstRow,
-                E && $e().WithChildrenInline,
-                T && $e().WithChildrenBelow,
-                "center" == F && $e().VerticalAlignCenter,
-                "shift-children-below" == w &&
+                R && $e().WithFirstRow,
+                T && $e().WithChildrenInline,
+                w && $e().WithChildrenBelow,
+                "center" == P && $e().VerticalAlignCenter,
+                "shift-children-below" == O &&
                   $e().InlineWrapShiftsChildrenBelow,
                 !!s && $e().WithDescription,
-                "standard" == A && $e().WithBottomSeparatorStandard,
-                "thick" == A && $e().WithBottomSeparatorThick,
-                "fixed" == R && $e().ChildrenWidthFixed,
-                "max" == R && $e().ChildrenWidthGrow,
-                "standard" == y && $e().ExtraPaddingOnChildrenBelow,
-                "standard" == N && $e().StandardPadding,
-                "compact" == N && $e().CompactPadding,
-                O && $e().Clickable,
-                M && $e().HighlightOnFocus
+                "standard" == M && $e().WithBottomSeparatorStandard,
+                "thick" == M && $e().WithBottomSeparatorThick,
+                "fixed" == y && $e().ChildrenWidthFixed,
+                "max" == y && $e().ChildrenWidthGrow,
+                "standard" == N && $e().ExtraPaddingOnChildrenBelow,
+                "standard" == A && $e().StandardPadding,
+                "compact" == A && $e().CompactPadding,
+                I && $e().Clickable,
+                L && $e().HighlightOnFocus
               ),
-              style: { "--indent-level": L },
+              style: { "--indent-level": F },
             }
           ),
-          I &&
+          R &&
             o.createElement(
               "div",
               { className: $e().FieldLabelRow },
@@ -9125,11 +9127,12 @@
                 { className: $e().FieldLabel },
                 a &&
                   o.createElement("div", { className: $e().FieldLeadIcon }, a),
-                n
+                n,
+                D && o.createElement("span", { "data-tooltip-text": D }, " (?)")
               ),
-              E && o.createElement("div", { className: $e().FieldChildren }, c)
+              T && o.createElement("div", { className: $e().FieldChildren }, c)
             ),
-          T && o.createElement("div", { className: $e().FieldChildren }, c),
+          w && o.createElement("div", { className: $e().FieldChildren }, c),
           s && o.createElement("div", { className: $e().FieldDescription }, s)
         );
       });

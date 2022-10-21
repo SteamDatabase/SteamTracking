@@ -21,6 +21,7 @@ message CTwoFactor_Status_Response {
 	optional string classified_agent = 11 [(description) = "Agent that added the authenticator (e.g., ios / android / other)"];
 	optional bool allow_external_authenticator = 12 [(description) = "Allow a third-party authenticator (in addition to two-factor)"];
 	optional uint32 time_transferred = 13 [(description) = "When the token was transferred from another device, if applicable"];
+	optional uint32 version = 14 [(description) = "Current token version"];
 }
 
 message CTwoFactor_AddAuthenticator_Request {
@@ -128,6 +129,7 @@ message CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response {
 message CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request {
 	optional string sms_code = 1 [(description) = "Code from SMS"];
 	optional bool generate_new_token = 2 [(description) = "Generate new token (instead of removing old one)"];
+	optional uint32 version = 3 [default = 1, (description) = "What the version of our token should be"];
 }
 
 message CRemoveAuthenticatorViaChallengeContinue_Replacement_Token {

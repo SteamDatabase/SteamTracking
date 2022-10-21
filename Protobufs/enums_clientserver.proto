@@ -553,6 +553,8 @@ enum EMsg {
 	k_EMsgGCHAppCheersReceived = 2242;
 	k_EMsgGCHAppCheersGetAllowedTypes = 2243;
 	k_EMsgGCHAppCheersGetAllowedTypesResponse = 2244;
+	k_EMsgGCHRoutingRulesFromGCHtoGM = 2245;
+	k_EMsgGCHRoutingRulesToGCHfromGM = 2246;
 	k_EMsgBaseP2P = 2500;
 	k_EMsgP2PIntroducerMessage = 2502;
 	k_EMsgBaseSM = 2900;
@@ -699,8 +701,6 @@ enum EMsg {
 	k_EMsgAMSendQueuedEmails = 4152;
 	k_EMsgAMSetLicenseFlags = 4153;
 	k_EMsgCommunityDeleteUserNews = 4155;
-	k_EMsgAMAllowUserFilesRequest = 4156;
-	k_EMsgAMAllowUserFilesResponse = 4157;
 	k_EMsgAMGetAccountStatus = 4158;
 	k_EMsgAMGetAccountStatusResponse = 4159;
 	k_EMsgAMEditBanReason = 4160;
@@ -755,7 +755,6 @@ enum EMsg {
 	k_EMsgAMCreateFinancialAdjustment = 4265;
 	k_EMsgAMPlayerNicknameList = 4266;
 	k_EMsgAMPlayerNicknameListResponse = 4267;
-	k_EMsgAMSetDRMTestConfig = 4268;
 	k_EMsgAMGetUserCurrentGameInfo = 4269;
 	k_EMsgAMGetUserCurrentGameInfoResponse = 4270;
 	k_EMsgAMGetGSPlayerList = 4271;
@@ -886,6 +885,7 @@ enum EMsg {
 	k_EMsgAMPerfectWorldPaymentResponse = 4422;
 	k_EMsgAMECommPayPayment = 4423;
 	k_EMsgAMECommPayPaymentResponse = 4424;
+	k_EMsgAMSetRemoteClientID = 4425;
 	k_EMsgBasePSRange = 5000;
 	k_EMsgPSCreateShoppingCart = 5001;
 	k_EMsgPSCreateShoppingCartResponse = 5002;
@@ -1015,8 +1015,8 @@ enum EMsg {
 	k_EMsgClientOGSEndSession = 5492;
 	k_EMsgClientOGSEndSessionResponse = 5493;
 	k_EMsgClientOGSWriteRow = 5494;
-	k_EMsgClientDRMTest = 5495;
-	k_EMsgClientDRMTestResult = 5496;
+	k_EMsgClientStartPeerContentServer = 5497;
+	k_EMsgClientStartPeerContentServerResponse = 5498;
 	k_EMsgClientServerUnavailable = 5500;
 	k_EMsgClientServersAvailable = 5501;
 	k_EMsgClientRegisterAuthTicketWithCM = 5502;
@@ -1241,8 +1241,6 @@ enum EMsg {
 	k_EMsgClientUCMUpdatePublishedFileResponse = 7326;
 	k_EMsgUCMUpdatePublishedFile = 7327;
 	k_EMsgUCMUpdatePublishedFileResponse = 7328;
-	k_EMsgUCMDeletePublishedFile = 7329;
-	k_EMsgUCMDeletePublishedFileResponse = 7330;
 	k_EMsgUCMUpdatePublishedFileStat = 7331;
 	k_EMsgUCMReloadPublishedFile = 7337;
 	k_EMsgUCMReloadUserFileListCaches = 7338;
@@ -1474,6 +1472,8 @@ enum EMsg {
 	k_EMsgClientLANP2PBase = 9900;
 	k_EMsgClientLANP2PRequestChunk = 9900;
 	k_EMsgClientLANP2PRequestChunkResponse = 9901;
+	k_EMsgClientPeerChunkRequest = 9902;
+	k_EMsgClientPeerChunkResponse = 9903;
 	k_EMsgClientLANP2PMax = 9999;
 	k_EMsgBaseWatchdogServer = 10000;
 	k_EMsgNotifyWatchdog = 10000;

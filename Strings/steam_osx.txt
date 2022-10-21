@@ -6,17 +6,19 @@ __TEXT
 
 __text
 __TEXT
-P
-P
+@
+@
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-0$2
-0$2
+| 2
+| 2
 __const
 __TEXT
+@Z3
+@Z3
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -25,12 +27,8 @@ __TEXT
 0
 __cstring
 __TEXT
->7
->7
 __unwind_info
 __TEXT
-LR;
-LR;
 __DATA
 <
 <
@@ -51,27 +49,25 @@ __DATA
 __cfstring
 __DATA
 __objc_classlist__DATA
-@=?
-@=?
 __objc_imageinfo__DATA
-P=?
-P=?
 __objc_const
 __DATA
-X=?
-X=?
 __objc_selrefs
 __DATA
-X??
-X??
 __objc_classrefs__DATA
-C?
-C?
+PD?
+PD?
 __objc_superrefs__DATA
+0E?
+0E?
 __objc_ivar
 __DATA
+8E?
+8E?
 __objc_data
 __DATA
+@E?
+@E?
 __data
 __DATA
 __thread_vars
@@ -86,14 +82,14 @@ __bss
 __DATA
 __common
 __DATA
+@}A
 H
 __LINKEDIT
 @B
 @
 "
 @
-x0@
-p2@
+x2@
 h%
 h
 80
@@ -134,37 +130,44 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@e@
+He@
 :
 )
-`A
-?
+?
+?
+?
+?
+?
 0
-D(
-t7f9
 9
 0
 @
 @
-l6
+(
+|6
+n6
 @
 @
 @
 @
-1
-1
 $
+u.
 1
+G*
+9
 p.
-k.
 Hi
 Hi
 Hi
-&
-&
-?'
+>
 6
-'
+&
+&
+6
+6
+6
+U'
+4'
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -302,24 +305,23 @@ H
 8
 9
 (
-P
-X
-`
 h
 p
 x
 0
+H
 
 
 I
 J
 K
 0
-L
-P
-M
-N
-O
+T
+X
+U
+V
+W
+H
 0
 (
 I
@@ -361,7 +363,7 @@ p
 @
 @
 P
-X
+`
 P
 P
 P
@@ -397,6 +399,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1665,30 +1668,30 @@ EXTRACTOR-dtls_srtp
 14CUtlLinkedListI14CScheduledItemiE
 System
 @
-H
-L
+P
+T
 (
-h
+p
 0
 @
-@P
-d
+@X
 l
-T
-`
-X
-p
-m
 t
+\
+h
+`
+x
+u
 |
 8
-x
+@
 
 
-<
-0
-,
+D
+(
 8
+4
+@
 <
 =
 >
@@ -1775,16 +1778,16 @@ $
 4
 8
 (
-4
-Q
-X
 (
-Z
-`
-a
-m
-@
-t
+>
+\
+c
+(
+e
+k
+l
+y
+H
 H
 0
 `
@@ -1796,6 +1799,7 @@ h
 (
 13CMsgIPAddress
 19CMsgIPAddressBucket
+27CMsgGCRoutingProtoBufHeader
 18CMsgProtoBufHeader
 9CMsgMulti
 19CMsgProtobufWrapped
@@ -1812,7 +1816,6 @@ h
 25CPackageReservationStatus
 16CMsgKeyValuePair
 15CMsgKeyValueSet
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 28IStreamParserMessageCallback
@@ -2180,6 +2183,7 @@ Documents/Steam%s Content
 -chromeos
 -chromeosdiskmanagement
 -noreactlogin
+-gamepadnewauth
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2222,7 +2226,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Oct 18 2022 17:57:33
+Startup - updater built Oct 21 2022 13:48:55
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2509,8 +2513,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Oct 18 2022
-17:57:34
+Oct 21 2022
+13:48:56
 crashhandler003
 steam
 Steam Executable Crash
@@ -2607,7 +2611,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-17:57:32
+13:48:54
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -3149,6 +3153,8 @@ google.protobuf.FileOptions.php_class_prefix
 google.protobuf.FileOptions.php_namespace
 google.protobuf.FileOptions.php_metadata_namespace
 google.protobuf.FileOptions.ruby_package
+google.protobuf.FileOptions.additional_includes
+google.protobuf.FieldOptions.boxed_type
 google.protobuf.UninterpretedOption.NamePart.name_part
 google.protobuf.UninterpretedOption.identifier_value
 google.protobuf.UninterpretedOption.aggregate_value
@@ -3428,8 +3434,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -10372,7 +10376,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-17:55:37
+13:47:04
 Jan
 Feb
 Mar
@@ -10832,6 +10836,7 @@ Found
 See Other
 Use Proxy
 Temporary Redirect
+Permanent Redirect
 Bad Request
 Unauthorized
 Payment Required
@@ -11063,10 +11068,13 @@ Range
 Set-Cookie
 localhost
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
+Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 https://
 wss://
 *pchQueryString == '?'
+Bad absolute URL to CHTTPClientRequest constructor, empty hostnamed
+Request host %s with absolute URL %s appears invalid
 Bad absolute URL to CHTTPClientRequest constructor, must start with protocol://
 Parameters were changed after calculating the POST body
 You can't set a body manually AND set POST params
@@ -11467,12 +11475,16 @@ m_vecIPFilterRangesV6
 200
 @nJobInteryieldMillisecondsLogThreshold
 100
+@nJobNetSendsInsaneThreshold
+15000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
 Long interyield runtime - %s job ran for %lu milliseconds without yielding:
 UnknownJob
+Insane net sends -  %u jobs sent over %d threshold and spew was rate limited since last output
+Insane net sends - %s job has made %u net sends so far:
 this == g_pJobCur
 m_STimeSwitched.LTime() == CSTime::LServerTimeCur()
 k_EMsgServiceMethodResponse
@@ -11565,6 +11577,8 @@ k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientServerTimestampRequest
 k_EMsgClientLANP2PRequestChunk
 k_EMsgClientLANP2PRequestChunkResponse
+k_EMsgClientPeerChunkRequest
+k_EMsgClientPeerChunkResponse
 k_EMsgClientHello
 k_EMsgClientLogon
 k_EMsgClientLogOn_Deprecated
@@ -11665,6 +11679,8 @@ k_EMsgClientSetClientAppUpdateState
 k_EMsgClientSetClientAppUpdateStateResponse
 k_EMsgClientEnableOrDisableDownloads
 k_EMsgClientEnableOrDisableDownloadsResponse
+k_EMsgClientStartPeerContentServer
+k_EMsgClientStartPeerContentServerResponse
 k_EMsgChannelEncryptRequest
 k_EMsgChannelEncryptResponse
 k_EMsgFileXferRequest
@@ -11813,8 +11829,6 @@ k_EMsgClientOGSEndSessionResponse
 k_EMsgClientOGSWriteRow
 k_EMsgClientPersonaChangeResponse
 k_EMsgClientSentLogs
-k_EMsgClientDRMTest
-k_EMsgClientDRMTestResult
 k_EMsgClientChatDeclined
 k_EMsgClientFriendMsgIncoming
 k_EMsgClientFriendMsgEchoToSender
@@ -12082,6 +12096,7 @@ Bad packet received: EMsg would be %u
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
+CClientStructNetPacket->GetGCRouting() not valid.
 CStructNetPacket->GetSteamID() not valid.
 CStructNetPacket->SetSteamID() not valid.
 CStructNetPacket->GetSessionID() not valid.
@@ -12090,6 +12105,8 @@ CStructNetPacket->GetHdrIP() not valid.
 CStructNetPacket->SetHdrIP() not valid.
 CStructNetPacket->GetRealm() not valid.
 CStructNetPacket->SetRealm() not valid.
+CStructNetPacket->GetGCRouting() not valid.
+CStructNetPacket->SetGCRouting() not valid.
 @nCallerDeadlineHopLatencyMS
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 @bLogMessageToProtobufClass
@@ -12160,14 +12177,14 @@ uNetFlags & k_uNetFlagNoIOCP
 pvCallback != NULL
 !pvCallbackCur
 pvCallbackUDPCur || pvCallbackTCPCur
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+g_pJobCur != NULL
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CNetConnectionImmediateDisconnectWorkItem
 CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
-g_pJobCur != NULL
 *pvRecord
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
 m_pBucket == NULL
@@ -12435,7 +12452,7 @@ HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 CBaseScheduledFunction
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
-nMicroSeconds >= 0
+Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
 pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
@@ -12744,69 +12761,73 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-C?7
+3=7
 
-&f7
-.f7
-T`7
+&d7
+.d7
+D^7
 
 0
-?
+?
+?
+?
+?
+?
 0
-D(
-t7f9
 9
 0
 @
 @
-l6
+(
+|6
+n6
 @
 @
 @
 @
-1
-1
 $
+u.
 1
+G*
+9
 p.
-k.
 Hi
 Hi
 Hi
-&
-&
-?'
+>
 6
-'
+&
+&
+6
+6
+6
+U'
+4'
 
 %
 '
 '
 '
+'
 &
 &
+0
 8
-0
-0
-0
-&5
-+5
-&
-15
+?5
 
 0
 5
-5
-5
-5
-m9
-x/
+R)
+|/
+i7
 &
-o<
-^&
+&
 
+$
 0
 Ic
+/
+/
 0
 0
 AT=
@@ -12817,11 +12838,11 @@ AT=
 D
 @
 @
-+4
 0
+-4
 4
 4
-4
+v8
 @
 Hc
 Hc
@@ -12853,53 +12874,44 @@ IcE
 IcE
 @
 @
+8
 .
-.
-.
-.
-3
 V
-<-
--
--
 =
-w,
-v,
-2
-2
-2
-,
+u,
+j,
+*,
+6
 ,
 ,
 ,
 =
-9
-`+
-R+
-13
+-
+-
+Y+
+E+
 +
-+
-40
-s*
-0
+!
+t*
+g*
 @
-["
+"
 @
-I/
 /
-/
-c
-*
-w(
-M.
+&
+b.
+"*
+P.
+.
+.
+.
 (
-^-
->-
+@'
 '
 '
 a&
-]&
 @
+'&
 M9e
 @
 @
@@ -12915,6 +12927,7 @@ M9e
 ?
 ?
 :
+j+
 ?
 ?
 ?
@@ -12927,15 +12940,18 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
+C.
 %
-&
-&
 `
 `
 @
-
+2
+2
+2
+$
 *
-,
+*
+*
 j
 j
 Pj
@@ -12943,11 +12959,12 @@ ARj
 j
 0
 0
+Q#
+;'
 IcU
 E;e
-P)
-G)
 M)u
+8
 =
 =
 @
@@ -13245,16 +13262,19 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-6
+%
 =
 @
 
 @
 @
 @
+
+
+
 0
 *
-*
+&
 H=
 Ic]
 j
@@ -13263,26 +13283,20 @@ j
 j
 &
 &
-&
-&
 j
 j
 
-J!
-,$
 t$I;M
+$
 $
 e
 W
 ,7~5d
 H
 0
-#
-#
-#
-#
 
 
+S%
 
 
 
@@ -13292,13 +13306,13 @@ H
 
 
 Hc
-H;5\z$
-L)5[t$
+$
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
+V%
 @
 ,
 *
@@ -13306,12 +13320,18 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-C"
-#
-#
-#
 0
 0
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 N
 N
 N
@@ -13529,13 +13549,14 @@ H=
 
 =
 @
+H
 =
 @
 =*.*
 
 @
 @
-z
+0
 @
 @
 @
@@ -13566,7 +13587,7 @@ E
 0
 Hi
 E
-0
+p
 
 
 
@@ -13577,13 +13598,19 @@ E
 
 0
 0
-g
+q
+/
 @
 @
 @
 @
 0
 0
+
+
+
+s
+
 
 Hc
 0
@@ -13606,12 +13633,13 @@ P
 
 @
 @
-e
 0
 =a
+
 
 0
 Hi
 $
 $
 $
+

@@ -104,6 +104,18 @@ message CMarketingMessages_GetMarketingMessagesForUser_Response {
 	repeated .CMarketingMessages_GetMarketingMessagesForUser_Response.MarketingMessageForUser messages = 1;
 }
 
+message CMarketingMessages_DoesUserHavePendingMarketingMessages_Request {
+	optional string country_code = 2;
+	optional int32 elanguage = 3;
+	optional int32 operating_system = 4 [(description) = "EOSType from client"];
+	optional int32 client_package_version = 5;
+}
+
+message CMarketingMessages_DoesUserHavePendingMarketingMessages_Response {
+	optional bool has_pending_messages = 1;
+	optional int32 pending_message_count = 2;
+}
+
 message CMarketingMessages_GetDisplayMarketingMessage_Request {
 	optional fixed64 gid = 1;
 	optional .StoreBrowseContext context = 2;
@@ -170,6 +182,10 @@ service MarketingMessages {
 
 	rpc GetMarketingMessagesForUser (.CMarketingMessages_GetMarketingMessagesForUser_Request) returns (.CMarketingMessages_GetMarketingMessagesForUser_Response) {
 		option (method_description) = "Get a list of active marketing messages filtered for a specific user.";
+	}
+
+	rpc DoesUserHavePendingMarketingMessages (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request) returns (.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response) {
+		option (method_description) = "Returns a boolean if the user has pending marketing messages.  Intended to be fast.";
 	}
 
 	rpc GetDisplayMarketingMessage (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {

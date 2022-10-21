@@ -4655,7 +4655,6 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide Button"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y Button"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Disabled"
-"Steam_Settings_Streaming_EnableTouchController"	"Enable Touch Controls"
 
 "Steam_Settings_Streaming_StreamingSupport"	"View support information"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

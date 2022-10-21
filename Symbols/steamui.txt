@@ -190,8 +190,6 @@
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- D typeinfo for void ()
- D typeinfo for void (*)()
  D vtable for ASWAVCapture
  D vtable for ASWAVCaptureCodec
  D vtable for ASWAVCaptureCodecFactory
@@ -357,8 +355,6 @@
  R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
- R typeinfo name for void ()
- R typeinfo name for void (*)()
  RAWToARGB
  RGB24ToARGB
  RGB565ToARGB

@@ -11,6 +11,8 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/broadcastupload.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/cdncache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/client_capi.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientapp.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdeviceauth.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdfsconnection.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/clientdrm.cpp
@@ -83,8 +85,10 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/music/playbackcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/music/spotifycontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/music/sqlitecontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/networkdevicemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/networkdevicemanager_osx.mm
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/p2pnetworkingsession.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/peercontentserver.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/remoteclientjobs.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.h
@@ -182,6 +186,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net_misc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
@@ -234,6 +239,8 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/vjson/vjson.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/vjson/vjson.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/mathlib/mathlib_base.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemdrop.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp

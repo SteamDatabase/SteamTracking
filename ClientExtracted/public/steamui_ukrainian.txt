@@ -127,7 +127,8 @@
 "Steam_ForgottenPassword_EmailCode" "Код із листа"
 "Steam_ForgottenPassword_EmailCode_Incorrect" "Уведений вами код з електронного листа є хибним."
 
-"Steam_Login_Title"		"Вхід до Steam"
+"Steam_Login_Title"		"Вхід у Steam"
+"Steam_RefreshLogin_Title"		"Повторний вхід у Steam"
 "Steam_Login_CreateNewAccount"	"Зареєструвати новий акаунт…"
 "Steam_Login_RetrievePassword"	"Я не можу авторизуватися…"
 "Steam_Login_NoAccount"		"Не маєте акаунта Steam?"
@@ -193,7 +194,6 @@
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Запустити"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Розпочати гру"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Грати"
-"SteamUI_JoinDialog_PlayGame_Btn$apptype=beta"    	"Грати"
 "SteamUI_JoinDialog_UpdateLater_Btn"								"Оновити пізніше"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Запустити демоверсію"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Запустити інструмент"
@@ -215,7 +215,6 @@
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Запустити програму, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Запустити гру, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Запустити гру, щойно вона буде готова"
-"SteamUI_JoinDialog_LaunchGameReady$appType=beta"	"Запустити гру, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Запустити демоверсію, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Запустити інструмент, щойно він буде готовий"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Відтворити саундтрек за готовності"
@@ -2125,7 +2124,6 @@
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Усі файли цієї програми зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Усі файли цієї гри зараз будуть завантажені через Steam."
-"Steam_Install_WillDownloadAllFiles$appType=beta"	"Усі файли цієї гри зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=demo"	"Усі файли цієї демоверсії зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Усі файли цього медіа зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Усі файли цього саундтрека зараз будуть завантажені через Steam."
@@ -2134,7 +2132,6 @@
 "Steam_Install_StartCacheLoading$appType=application"		"Створення локальних файлів застосунку…"
 "Steam_Install_StartCacheLoading$appType=game"		"Створення локальних файлів гри…"
 "Steam_Install_StartCacheLoading$appType=demo"		"Створення локальних файлів демоверсії…"
-"Steam_Install_StartCacheLoading$appType=beta"		"Створення локальних файлів гри…"
 "Steam_Install_StartCacheLoading$appType=media"		"Створення локальних медіафайлів…"
 "Steam_Install_StartCacheLoading$appType=music"		"Створення локальних файлів…"
 "Steam_Install_StartCacheLoading$appType=tool"		"Створення локальних файлів інструмента…"
@@ -2384,7 +2381,6 @@
 "Steam_status_decrypting"			"Розшифрування:"
 "Steam_status_validating"			"Перевірка: "
 "Steam_status_verifying"			"Перевірка: "
-"Steam_status_finalizing"			"Завершення"
 
 "steam_status_launching"				"Триває запуск"
 "steam_status_launching_progress"		"Триває запуск:"
@@ -2513,7 +2509,7 @@
 "Steam_Country_BD"		"Бангладеш"
 "Steam_Country_BB"		"Барбадос"
 "Steam_Country_BY"		"Білорусь"
-"Steam_Country_BE"		"Бельґія"
+"Steam_Country_BE"		"Бельгія"
 "Steam_Country_BZ"		"Беліз"
 "Steam_Country_BJ"		"Бенін"
 "Steam_Country_BM"		"Бермудські острови"
@@ -2649,7 +2645,7 @@
 "Steam_Country_NU"		"Ніуе"
 "Steam_Country_NF"		"Острів Норфолк"
 "Steam_Country_MP"		"Північні Маріанські острови"
-"Steam_Country_NO"		"Норвеґія"
+"Steam_Country_NO"		"Норвегія"
 "Steam_Country_OM"		"Оман"
 "Steam_Country_PK"		"Пакистан"
 "Steam_Country_PW"		"Палау"
@@ -3116,10 +3112,6 @@
 "SteamUI_InstallScript_Failed_Title" "Steam — помилка встановлення"
 "SteamUI_InstallScript_Failed_Text" "Не вдалося встановити системні компоненти. Якщо це перший запуск цієї гри, то вам необхідно мати права адміністратора Windows. Якщо ви продовжите, в вас можуть бути проблеми в процесі роботи гри."
 "SteamUI_InstallScript_Continue" "Усе одно продовжити"
-
-"SteamUI_3rdPartyRemapper_Title"		"Виявлено перепризначувач клавіш"
-"SteamUI_3rdPartyRemapper_Description"	"Схоже, ви використовуєте інструмент перепризначення клавіш для вашого контролера PS4. Ця гра використовує Steam Input, який не потребує жодного програмного забезпечення для перепризначення. Вони можуть конфліктувати між собою, якщо інструмент перепризначення не вимкнено."
-
 
 "Steam_CPUSSERequired_Title"	"Steam — виявлено ЦП, який не підтримується"
 "Steam_CPUSSERequired_Info"	"%game% вимагає процесор, який підтримує інструкцію даних SSE. Аби грати в цю гру, ви повинні оновити свій комп’ютер або скористатися іншим."

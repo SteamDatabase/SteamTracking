@@ -774,3 +774,14 @@ message CMsgBadgeCraftedNotification {
 	optional uint32 appid = 1;
 	optional uint32 badge_level = 2;
 }
+
+message CMsgClientStartPeerContentServer {
+	optional fixed64 steamid = 1;
+	optional fixed64 client_remote_id = 2;
+	optional uint32 app_id = 3;
+}
+
+message CMsgClientStartPeerContentServerResponse {
+	optional uint32 result = 1;
+	optional uint32 server_port = 2;
+}

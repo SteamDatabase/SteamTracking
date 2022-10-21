@@ -249,6 +249,20 @@ enum EStorageBlockFileSystemType {
 	k_EStorageBlockFileSystemType_Ext4 = 3;
 }
 
+enum EStorageDriveMediaType {
+	k_EStorageDriveMediaType_Invalid = 0;
+	k_EStorageDriveMediaType_Unknown = 1;
+	k_EStorageDriveMediaType_HDD = 2;
+	k_EStorageDriveMediaType_SSD = 3;
+	k_EStorageDriveMediaType_Removable = 4;
+}
+
+enum ESystemDisplayCompatibilityMode {
+	k_ESystemDisplayCompatibilityMode_Invalid = 0;
+	k_ESystemDisplayCompatibilityMode_None = 1;
+	k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2;
+}
+
 enum ESteamDeckCompatibilityCategory {
 	k_ESteamDeckCompatibilityCategory_Unknown = 0;
 	k_ESteamDeckCompatibilityCategory_Unsupported = 1;
@@ -305,6 +319,7 @@ enum ECommunityItemClass {
 	k_ECommunityItemClass_AvatarFrame = 14;
 	k_ECommunityItemClass_AnimatedAvatar = 15;
 	k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;
+	k_ECommunityItemClass_SteamDeckStartupMovie = 17;
 }
 
 enum ESteamDeckCompatibilityFeedback {

@@ -85,9 +85,6 @@
                 <Label id="none" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone" />
               </DropDown>
             </Panel>
-            <Panel class="Spacer" />
-            <Panel class="Spacer" />
-            <ToggleButton class="CheckBox" id="EnableTouchController" onactivate="ToggleTouchController()" text="#Settings_RemoteClients_EnableTouchController" />
           </Panel>
         </Panel>
 			</Panel>
