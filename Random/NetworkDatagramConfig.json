@@ -1,5 +1,5 @@
 {
-  "revision": 1666284527,
+  "revision": 1666378159,
   "certs": [
     "Ii4IARIgSJbwDpn/07/GHiGMKio0Vh18VN3D/hKzQGh6n0Yx9qpFHfAYY00dMh91KT6tfJIvitz8MkB8abvDa50KdIaizx/eKZL26MQ5is+3Xbt8YN6k3FeSImzcPPWE84v77+8n0GbkZaBj+uPJHbXgxZQmjOy9HokH",
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFHfAYY00dMh91KT6tfJIvitz8MkBkR1T/xN6234O5xVdANVkvztOFOg4C2u5x4SirXUjSxOxBbso7JSh6f/HorajFsL2WT0r/7pVQ/I8InxhMvG0I",
@@ -432,42 +432,34 @@
       "partners": 3,
       "relays": [
         {
-          "hostname": "sdr1-hkg1.valve.net",
           "ipv4": "103.28.54.164",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr10-hkg1.valve.net",
           "ipv4": "103.28.54.166",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr11-hkg1.valve.net",
           "ipv4": "103.28.54.167",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr12-hkg1.valve.net",
           "ipv4": "103.28.54.168",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr2-hkg1.valve.net",
           "ipv4": "103.28.54.180",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr7-hkg1.valve.net",
           "ipv4": "103.28.54.182",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr8-hkg1.valve.net",
           "ipv4": "103.28.54.183",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr9-hkg1.valve.net",
           "ipv4": "103.28.54.184",
           "port_range": [ 27015, 27060 ]
         }
@@ -701,12 +693,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr2-dfw-mplay.valve.net",
           "ipv4": "162.213.192.58",
           "port_range": [ 27015, 27044 ]
         },
         {
-          "hostname": "sdr1-dfw-mplay.valve.net",
           "ipv4": "162.213.192.66",
           "port_range": [ 27015, 27044 ]
         }
@@ -725,12 +715,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr2-lux-mplay.valve.net",
           "ipv4": "188.42.190.28",
           "port_range": [ 27015, 27052 ]
         },
         {
-          "hostname": "sdr1-lux-mplay.valve.net",
           "ipv4": "188.42.190.100",
           "port_range": [ 27015, 27052 ]
         }
@@ -749,12 +737,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr1-mia-mplay.valve.net",
           "ipv4": "23.251.100.126",
           "port_range": [ 27015, 27052 ]
         },
         {
-          "hostname": "sdr2-mia-mplay.valve.net",
           "ipv4": "23.251.100.186",
           "port_range": [ 27015, 27052 ]
         }
@@ -773,12 +759,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr1-nyc-mplay.valve.net",
           "ipv4": "74.201.228.148",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr2-nyc-mplay.valve.net",
           "ipv4": "74.201.228.149",
           "port_range": [ 27015, 27060 ]
         }
@@ -797,12 +781,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr1-slc-mplay.valve.net",
           "ipv4": "68.169.42.221",
           "port_range": [ 27015, 27052 ]
         },
         {
-          "hostname": "sdr2-slc-mplay.valve.net",
           "ipv4": "68.169.42.222",
           "port_range": [ 27015, 27052 ]
         }
@@ -821,12 +803,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr2-sjc-mplay.valve.net",
           "ipv4": "173.237.41.20",
           "port_range": [ 27015, 27052 ]
         },
         {
-          "hostname": "sdr1-sjc-mplay.valve.net",
           "ipv4": "173.237.51.204",
           "port_range": [ 27015, 27052 ]
         }
@@ -845,12 +825,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr1-stl-mplay.valve.net",
           "ipv4": "148.72.168.4",
           "port_range": [ 27015, 27060 ]
         },
         {
-          "hostname": "sdr2-stl-mplay.valve.net",
           "ipv4": "148.72.174.135",
           "port_range": [ 27015, 27060 ]
         }
@@ -869,12 +847,10 @@
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
         {
-          "hostname": "sdr1-sxb-mplay.valve.net",
           "ipv4": "134.119.207.105",
           "port_range": [ 27015, 27044 ]
         },
         {
-          "hostname": "sdr2-sxb-mplay.valve.net",
           "ipv4": "151.106.18.227",
           "port_range": [ 27015, 27044 ]
         }
@@ -903,7 +879,7 @@
       "relays": [
         {
           "ipv4": "162.254.193.71",
-          "port_range": [ 27015, 27036 ]
+          "port_range": [ 27015, 27060 ]
         },
         {
           "ipv4": "162.254.193.72",
@@ -915,7 +891,7 @@
         },
         {
           "ipv4": "162.254.193.77",
-          "port_range": [ 27015, 27036 ]
+          "port_range": [ 27015, 27060 ]
         },
         {
           "ipv4": "162.254.193.98",
@@ -1758,13 +1734,12 @@
   "typical_pings": [
     [ "ams", "fra", 6 ],
     [ "ams", "gew1", 4 ],
-    [ "ams", "jnb", 165 ],
     [ "ams", "lhr", 5 ],
     [ "ams", "mad", 30 ],
     [ "ams", "mlx1", 11 ],
-    [ "ams", "mst1", 9 ],
+    [ "ams", "mst1", 18 ],
     [ "ams", "oln1", 7 ],
-    [ "ams", "ord", 91 ],
+    [ "ams", "ord", 92 ],
     [ "ams", "par", 10 ],
     [ "ams", "sto", 20 ],
     [ "ams", "sto2", 20 ],
@@ -1781,12 +1756,12 @@
     [ "atl", "mdf1", 25 ],
     [ "atl", "mmi1", 14 ],
     [ "atl", "mny1", 17 ],
-    [ "atl", "msl1", 14 ],
+    [ "atl", "msl1", 26 ],
     [ "atl", "ord", 19 ],
     [ "bom", "dxb", 26 ],
-    [ "bom", "fra", 364 ],
     [ "bom", "hkg", 80 ],
-    [ "bom", "maa", 17 ],
+    [ "bom", "jnb", 360 ],
+    [ "bom", "maa", 18 ],
     [ "bom", "sgp", 50 ],
     [ "bom", "syd", 138 ],
     [ "can", "canm", 0 ],
@@ -1808,25 +1783,25 @@
     [ "canu", "hkg", 8 ],
     [ "canu", "pwg", 3 ],
     [ "dfw", "eat", 49 ],
-    [ "dfw", "fra", 119 ],
+    [ "dfw", "fra", 120 ],
     [ "dfw", "guc1", 19 ],
     [ "dfw", "guw1", 50 ],
-    [ "dfw", "iad", 42 ],
+    [ "dfw", "iad", 34 ],
     [ "dfw", "lax", 32 ],
     [ "dfw", "mas1", 37 ],
     [ "dfw", "mat1", 23 ],
     [ "dfw", "mdc1", 37 ],
-    [ "dfw", "mdf1", 0 ],
+    [ "dfw", "mdf1", 1 ],
     [ "dfw", "mmi1", 28 ],
-    [ "dfw", "mny1", 42 ],
+    [ "dfw", "mny1", 45 ],
     [ "dfw", "msa1", 28 ],
-    [ "dfw", "msj1", 43 ],
-    [ "dfw", "msl1", 17 ],
-    [ "dfw", "ord", 21 ],
+    [ "dfw", "msj1", 39 ],
+    [ "dfw", "msl1", 24 ],
+    [ "dfw", "ord", 39 ],
     [ "dfw", "sea", 47 ],
     [ "dxb", "hkg", 106 ],
+    [ "dxb", "jnb", 295 ],
     [ "dxb", "maa", 42 ],
-    [ "dxb", "ord", 298 ],
     [ "dxb", "sgp", 76 ],
     [ "eat", "fra", 162 ],
     [ "eat", "guw1", 4 ],
@@ -1845,23 +1820,23 @@
     [ "fra", "guc1", 149 ],
     [ "fra", "guw1", 166 ],
     [ "fra", "hkg", 182 ],
-    [ "fra", "iad", 85 ],
+    [ "fra", "iad", 86 ],
     [ "fra", "jnb", 173 ],
     [ "fra", "lax", 145 ],
     [ "fra", "lhr", 14 ],
-    [ "fra", "maa", 347 ],
-    [ "fra", "mad", 31 ],
+    [ "fra", "maa", 348 ],
+    [ "fra", "mad", 30 ],
     [ "fra", "mas1", 131 ],
     [ "fra", "mat1", 148 ],
     [ "fra", "mdc1", 130 ],
-    [ "fra", "mlx1", 9 ],
+    [ "fra", "mlx1", 10 ],
     [ "fra", "mny1", 77 ],
     [ "fra", "msa1", 167 ],
     [ "fra", "msj1", 183 ],
-    [ "fra", "msl1", 147 ],
+    [ "fra", "msl1", 110 ],
     [ "fra", "mst1", 3 ],
     [ "fra", "oln1", 12 ],
-    [ "fra", "ord", 97 ],
+    [ "fra", "ord", 98 ],
     [ "fra", "par", 9 ],
     [ "fra", "pwg", 180 ],
     [ "fra", "pwj", 158 ],
@@ -1869,14 +1844,13 @@
     [ "fra", "pww", 169 ],
     [ "fra", "pwz", 178 ],
     [ "fra", "sea", 142 ],
-    [ "fra", "sgp", 315 ],
     [ "fra", "sha", 176 ],
     [ "fra", "sham", 176 ],
     [ "fra", "shat", 176 ],
     [ "fra", "shau", 176 ],
     [ "fra", "shb", 176 ],
-    [ "fra", "sto", 25 ],
-    [ "fra", "sto2", 25 ],
+    [ "fra", "sto", 29 ],
+    [ "fra", "sto2", 28 ],
     [ "fra", "tsn", 156 ],
     [ "fra", "tsnm", 156 ],
     [ "fra", "tsnt", 156 ],
@@ -1885,19 +1859,21 @@
     [ "fra", "waw", 16 ],
     [ "gew1", "lhr", 5 ],
     [ "gew1", "mlx1", 3 ],
-    [ "gew1", "mst1", 7 ],
+    [ "gew1", "mst1", 10 ],
     [ "gew1", "oln1", 5 ],
     [ "gew1", "ord", 133 ],
     [ "gew1", "par", 4 ],
-    [ "gru", "jnb", 389 ],
+    [ "gru", "jnb", 357 ],
     [ "gru", "lim", 82 ],
     [ "gru", "mdf1", 164 ],
     [ "gru", "mmi1", 110 ],
     [ "gru", "ord", 168 ],
     [ "gru", "scl", 52 ],
     [ "guc1", "iad", 31 ],
-    [ "guc1", "mdf1", 19 ],
-    [ "guc1", "msl1", 11 ],
+    [ "guc1", "mdf1", 17 ],
+    [ "guc1", "msa1", 24 ],
+    [ "guc1", "msj1", 37 ],
+    [ "guc1", "msl1", 13 ],
     [ "guc1", "ord", 13 ],
     [ "guw1", "lax", 26 ],
     [ "guw1", "msa1", 18 ],
@@ -1905,7 +1881,7 @@
     [ "guw1", "ord", 54 ],
     [ "guw1", "sea", 4 ],
     [ "hkg", "maa", 64 ],
-    [ "hkg", "pwg", 7 ],
+    [ "hkg", "pwg", 6 ],
     [ "hkg", "pwj", 39 ],
     [ "hkg", "pwu", 45 ],
     [ "hkg", "pww", 40 ],
@@ -1919,10 +1895,10 @@
     [ "hkg", "shb", 27 ],
     [ "hkg", "syd", 119 ],
     [ "hkg", "tsn", 39 ],
-    [ "hkg", "tsnm", 56 ],
+    [ "hkg", "tsnm", 57 ],
     [ "hkg", "tsnt", 43 ],
     [ "hkg", "tsnu", 38 ],
-    [ "hkg", "tyo", 53 ],
+    [ "hkg", "tyo", 52 ],
     [ "hkg", "tyo1", 52 ],
     [ "iad", "lax", 65 ],
     [ "iad", "mas1", 0 ],
@@ -1931,12 +1907,13 @@
     [ "iad", "mdf1", 33 ],
     [ "iad", "mmi1", 26 ],
     [ "iad", "mny1", 8 ],
-    [ "iad", "msl1", 22 ],
+    [ "iad", "msl1", 24 ],
     [ "iad", "ord", 19 ],
-    [ "jnb", "lhr", 160 ],
-    [ "jnb", "par", 168 ],
-    [ "jnb", "sto", 185 ],
-    [ "jnb", "syd", 441 ],
+    [ "jnb", "mad", 182 ],
+    [ "jnb", "sgp", 173 ],
+    [ "jnb", "syd", 440 ],
+    [ "jnb", "vie", 186 ],
+    [ "jnb", "waw", 192 ],
     [ "lax", "lim", 102 ],
     [ "lax", "msj1", 8 ],
     [ "lax", "ord", 47 ],
@@ -1945,8 +1922,9 @@
     [ "lhr", "mad", 27 ],
     [ "lhr", "mlx1", 18 ],
     [ "lhr", "oln1", 0 ],
-    [ "lhr", "ord", 99 ],
+    [ "lhr", "ord", 100 ],
     [ "lhr", "par", 8 ],
+    [ "lhr", "sto", 25 ],
     [ "lhr", "sto2", 24 ],
     [ "lim", "ord", 148 ],
     [ "lim", "scl", 30 ],
@@ -1956,46 +1934,47 @@
     [ "mad", "par", 20 ],
     [ "mas1", "mat1", 17 ],
     [ "mas1", "mdc1", 0 ],
+    [ "mas1", "mmi1", 24 ],
     [ "mas1", "mny1", 7 ],
     [ "mas1", "ord", 18 ],
     [ "mat1", "mdc1", 17 ],
-    [ "mat1", "msl1", 15 ],
+    [ "mat1", "mdf1", 19 ],
+    [ "mat1", "mmi1", 15 ],
+    [ "mat1", "mny1", 20 ],
+    [ "mat1", "msl1", 18 ],
     [ "mat1", "ord", 18 ],
+    [ "mdc1", "mmi1", 26 ],
     [ "mdc1", "mny1", 6 ],
     [ "mdc1", "ord", 19 ],
-    [ "mdf1", "mmi1", 30 ],
-    [ "mdf1", "mny1", 36 ],
-    [ "mdf1", "msa1", 27 ],
+    [ "mdf1", "msa1", 30 ],
     [ "mdf1", "ord", 20 ],
-    [ "mlx1", "mst1", 3 ],
     [ "mlx1", "oln1", 9 ],
     [ "mlx1", "ord", 114 ],
     [ "mlx1", "par", 20 ],
     [ "mlx1", "vie", 21 ],
-    [ "mmi1", "mny1", 33 ],
     [ "mmi1", "ord", 40 ],
-    [ "mny1", "ord", 18 ],
+    [ "mny1", "ord", 21 ],
     [ "msa1", "msj1", 17 ],
     [ "msa1", "ord", 37 ],
     [ "msa1", "sea", 32 ],
-    [ "msj1", "ord", 48 ],
-    [ "msj1", "sea", 17 ],
-    [ "msl1", "ord", 8 ],
-    [ "mst1", "ord", 140 ],
-    [ "mst1", "par", 7 ],
-    [ "mst1", "vie", 12 ],
+    [ "msj1", "ord", 49 ],
+    [ "msj1", "sea", 22 ],
+    [ "msl1", "ord", 5 ],
+    [ "mst1", "ord", 106 ],
+    [ "mst1", "par", 10 ],
+    [ "mst1", "vie", 18 ],
     [ "oln1", "ord", 127 ],
     [ "oln1", "par", 6 ],
-    [ "ord", "par", 97 ],
+    [ "ord", "par", 96 ],
     [ "ord", "scl", 178 ],
     [ "ord", "sea", 47 ],
     [ "ord", "seo", 167 ],
-    [ "ord", "sto", 112 ],
-    [ "ord", "sto2", 112 ],
+    [ "ord", "sto", 111 ],
+    [ "ord", "sto2", 111 ],
     [ "ord", "tyo", 143 ],
     [ "ord", "tyo1", 140 ],
-    [ "ord", "vie", 107 ],
-    [ "ord", "waw", 112 ],
+    [ "ord", "vie", 109 ],
+    [ "ord", "waw", 113 ],
     [ "par", "vie", 21 ],
     [ "pwj", "pwu", 9 ],
     [ "pwj", "tsn", 2 ],
@@ -2011,14 +1990,14 @@
     [ "pww", "shb", 16 ],
     [ "pwz", "sha", 11 ],
     [ "pwz", "sham", 13 ],
-    [ "pwz", "shat", 9 ],
+    [ "pwz", "shat", 10 ],
     [ "pwz", "shb", 9 ],
     [ "seo", "sgp", 67 ],
     [ "seo", "tyo", 30 ],
     [ "seo", "tyo1", 30 ],
     [ "sgp", "syd", 89 ],
     [ "sgp", "tyo", 82 ],
-    [ "sgp", "tyo1", 82 ],
+    [ "sgp", "tyo1", 81 ],
     [ "sha", "sham", 0 ],
     [ "sha", "shat", 0 ],
     [ "sha", "shau", 0 ],
