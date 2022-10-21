@@ -1949,52 +1949,6 @@ span:focus {
   width: 240px;
   height: 240px;
 }
-.SVGIcon_Button {
-  fill: #fff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px;
-}
-.shared_svg_library_EmoticonBow_S9_rt {
-  position: absolute;
-  top: -15px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.shared_svg_library_EmoticonBow_st0_1MS_8 {
-  opacity: 0.4;
-  fill: #231f20;
-}
-.shared_svg_library_EmoticonBow_st1_3nqUN {
-  fill: #e41e25;
-}
-.shared_svg_library_SteamDeckCompatInfo_2LcFI {
-  display: flex;
-  background-color: #0e141b;
-  padding: 2px;
-  border-radius: 20px;
-}
-.shared_svg_library_SteamDeckCompatLogo_Tplfb {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatIcon_2hEWY {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatVerified_3mvZq {
-  color: #59bf40;
-}
-.shared_svg_library_SteamDeckCompatPlayable_S7BDm {
-  color: #ffc82c;
-}
-.shared_svg_library_SteamDeckCompatUnsupported_1SeOP,
-.shared_svg_library_SteamDeckCompatUnknown_15dEs {
-  color: #dcdedf;
-}
 @keyframes steamdeckbootupthrobber_ItemFocusAnim-darkerGrey-nocolor_p-Xec {
   from {
     background: #3d4450;
@@ -2117,6 +2071,16 @@ span:focus {
   width: 100%;
   height: 100%;
   z-index: 10;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_Exit_3hvZo {
+  opacity: 1;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_ExitActive_1uR4A {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_ExitDone_2T7oN {
+  display: none;
 }
 @keyframes steamdeckbootupthrobber_fade_2V_oo {
   0% {

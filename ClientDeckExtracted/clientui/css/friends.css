@@ -1,3 +1,61 @@
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/shared_svg_library.scss ***!
+  \******************************************************************************************************************************************************************************************************/
+.SVGIcon_Button {
+  fill: #ffffff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
+}
+
+.shared_svg_library_EmoticonBow_3pZfA {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.shared_svg_library_EmoticonBow_st0_qBW44 {
+  opacity: 0.4;
+  fill: #231f20;
+}
+
+.shared_svg_library_EmoticonBow_st1_23IlE {
+  fill: #e41e25;
+}
+
+.shared_svg_library_SteamDeckCompatInfo_3TbPV {
+  display: flex;
+  background-color: #0e141b;
+  padding: 2px;
+  border-radius: 20px;
+}
+
+.shared_svg_library_SteamDeckCompatLogo_Q6MwZ {
+  width: 20px;
+  height: 20px;
+}
+
+.shared_svg_library_SteamDeckCompatIcon_2hKXi {
+  width: 20px;
+  height: 20px;
+}
+
+.shared_svg_library_SteamDeckCompatVerified_1PZiH {
+  color: #59bf40;
+}
+
+.shared_svg_library_SteamDeckCompatPlayable_uTOLJ {
+  color: #ffc82c;
+}
+
+.shared_svg_library_SteamDeckCompatUnsupported_3XLWD,
+.shared_svg_library_SteamDeckCompatUnknown_53DS6 {
+  color: #dcdedf;
+}
 /*!********************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/throbber.scss ***!
   \********************************************************************************************************************************************************************************************/
@@ -474,64 +532,6 @@
 }
 
 /* stylelint-enable selector-class-pattern */
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!../../../web_src/shared/js/ui/shared_svg_library.scss ***!
-  \******************************************************************************************************************************************************************************************************/
-.SVGIcon_Button {
-  fill: #ffffff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px;
-}
-
-.shared_svg_library_EmoticonBow_3pZfA {
-  position: absolute;
-  top: -15px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.shared_svg_library_EmoticonBow_st0_qBW44 {
-  opacity: 0.4;
-  fill: #231f20;
-}
-
-.shared_svg_library_EmoticonBow_st1_23IlE {
-  fill: #e41e25;
-}
-
-.shared_svg_library_SteamDeckCompatInfo_3TbPV {
-  display: flex;
-  background-color: #0e141b;
-  padding: 2px;
-  border-radius: 20px;
-}
-
-.shared_svg_library_SteamDeckCompatLogo_Q6MwZ {
-  width: 20px;
-  height: 20px;
-}
-
-.shared_svg_library_SteamDeckCompatIcon_2hKXi {
-  width: 20px;
-  height: 20px;
-}
-
-.shared_svg_library_SteamDeckCompatVerified_1PZiH {
-  color: #59bf40;
-}
-
-.shared_svg_library_SteamDeckCompatPlayable_uTOLJ {
-  color: #ffc82c;
-}
-
-.shared_svg_library_SteamDeckCompatUnsupported_3XLWD,
-.shared_svg_library_SteamDeckCompatUnknown_53DS6 {
-  color: #dcdedf;
-}
 /*!************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../web_src/shared/js/ui/shared_dialog.css ***!
   \************************************************************************************************************************************************************************************************/
@@ -2650,4 +2650,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=c6b9b506df388f0242f6*/
+/*# sourceMappingURL=friends.css.map?contenthash=0f27859b0722f4ebf74c*/
