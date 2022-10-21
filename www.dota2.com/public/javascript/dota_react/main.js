@@ -2688,6 +2688,11 @@
         QuoteText: "homepage_QuoteText_19K41",
         QuoteCredit: "homepage_QuoteCredit_gcx17",
         PlayButtonPositioner: "homepage_PlayButtonPositioner_19TjK",
+        TheInternationalFeat: "homepage_TheInternationalFeat_1tu0W",
+        TIFeatImgContainer: "homepage_TIFeatImgContainer_2R4xt",
+        TIFeatImg: "homepage_TIFeatImg_1JYO7",
+        TIFeatButton: "homepage_TIFeatButton_GU6_x",
+        TIFeatText: "homepage_TIFeatText_1W4qR",
         NewsSection: "homepage_NewsSection_2qquN",
         NewsTop: "homepage_NewsTop_2Lzj9",
         Latest: "homepage_Latest_1w0mx",
@@ -3234,6 +3239,7 @@
     29489: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_2HBjO",
+        QRLoginDeck: "qrlogin_QRLoginDeck_AZCmv",
         Blur: "qrlogin_Blur_1Ga3O",
         Overlay: "qrlogin_Overlay_5iKPL",
         Box: "qrlogin_Box_2hPoE",
@@ -3483,7 +3489,6 @@
         EditableValue: "gamepadslider_EditableValue_1jD_v",
         FakeEditableValue: "gamepadslider_FakeEditableValue_ZQ0Hf",
         RedBorder: "gamepadslider_RedBorder_376Wv",
-        EditableValueSuffix: "gamepadslider_EditableValueSuffix_1lSH8",
         ErrorShake: "gamepadslider_ErrorShake_2ve0H",
         "error-shake": "gamepadslider_error-shake_OOvXe",
         CompoundSlider: "gamepadslider_CompoundSlider_32YoA",
@@ -3804,6 +3809,8 @@
         ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_3Ve7-",
         throbber_xlarge: "throbber_throbber_xlarge_2XWPE",
         throbber_xxlarge: "throbber_throbber_xxlarge_QooXb",
+        ThrobberDelayAppear: "throbber_ThrobberDelayAppear_2lV2G",
+        Visible: "throbber_Visible_2sPa3",
       };
     },
     18478: (e) => {
@@ -21865,29 +21872,41 @@
             );
           }),
           (e.prototype.GetFormattedSteamReleaseDate = function () {
-            var e, t, n;
+            var e, t, n, a, r;
             if (
               (this.BCheckDataRequestIncluded({ include_release: !0 }),
-              (null === (e = this.m_ReleaseInfo) || void 0 === e
+              null === (e = this.m_ReleaseInfo) || void 0 === e
                 ? void 0
-                : e.is_coming_soon) &&
-                (null === (t = this.m_ReleaseInfo) || void 0 === t
+                : e.is_coming_soon)
+            ) {
+              if (
+                null === (t = this.m_ReleaseInfo) || void 0 === t
                   ? void 0
-                  : t.coming_soon_display))
-            )
-              return sa(this.m_ReleaseInfo);
-            var a = this.GetReleaseDateRTime();
-            return (
-              null === (n = this.m_ReleaseInfo) || void 0 === n
-                ? void 0
-                : n.is_abridged_release_date
-            )
-              ? a
-                ? (0, oa.LO)(new Date(1e3 * a))
-                : ""
-              : a
-              ? (0, ia.vX)(a)
-              : "";
+                  : t.coming_soon_display
+              )
+                return sa(this.m_ReleaseInfo);
+              if (
+                null === (n = this.m_ReleaseInfo) || void 0 === n
+                  ? void 0
+                  : n.custom_release_date_message
+              )
+                return this.m_ReleaseInfo.custom_release_date_message;
+              var i =
+                null === (a = this.m_ReleaseInfo) || void 0 === a
+                  ? void 0
+                  : a.steam_release_date;
+              return i
+                ? (
+                    null === (r = this.m_ReleaseInfo) || void 0 === r
+                      ? void 0
+                      : r.is_abridged_release_date
+                  )
+                  ? (0, oa.LO)(new Date(1e3 * i))
+                  : (0, ia.vX)(i)
+                : "";
+            }
+            var o = this.GetReleaseDateRTime();
+            return o ? (0, ia.vX)(o) : "";
           }),
           (e.prototype.BIsComingSoon = function () {
             var e;
@@ -21896,6 +21915,21 @@
               null === (e = this.m_ReleaseInfo) || void 0 === e
                 ? void 0
                 : e.is_coming_soon
+            );
+          }),
+          (e.prototype.BIsCustomComingSoonDisplay = function () {
+            var e;
+            return (
+              !!this.BIsComingSoon() &&
+              ((
+                null === (e = this.m_ReleaseInfo) || void 0 === e
+                  ? void 0
+                  : e.coming_soon_display
+              )
+                ? ["text_tba", "text_comingsoon"].includes(
+                    this.m_ReleaseInfo.coming_soon_display
+                  )
+                : !!this.m_ReleaseInfo.custom_release_date_message)
             );
           }),
           (e.prototype.BIsPrePurchase = function () {
@@ -40342,6 +40376,53 @@
               ),
               o.createElement("div", { className: Gs().BottomFade })
             ),
+            new Date().getTime() < 1667232e6 &&
+              o.createElement(
+                "div",
+                { className: Gs().TheInternationalFeat },
+                o.createElement(
+                  "div",
+                  {
+                    className: Gs().TIFeatImgContainer,
+                    style: {
+                      backgroundImage: "url( ".concat(
+                        h.Y.IMG_URL,
+                        "/home/ti11_plug_img.jpg )"
+                      ),
+                    },
+                  },
+                  o.createElement("img", {
+                    className: Gs().TIFeatImg,
+                    src: "".concat(
+                      h.Y.IMG_URL,
+                      "/home/logo_the_international_white.png"
+                    ),
+                  }),
+                  o.createElement(
+                    m.rU,
+                    { to: u._.dpc_watch_root() },
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Gs().StandardButton,
+                          Gs().TIFeatButton
+                        ),
+                      },
+                      o.createElement(
+                        "div",
+                        { className: Gs().ButtonText },
+                        (0, E.Jr)("#home_ti11_feat_btn")
+                      )
+                    )
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Gs().TIFeatText },
+                    (0, E.Jr)("#home_ti11_feat_desc")
+                  )
+                )
+              ),
             o.createElement(
               "div",
               { className: Gs().NewsSection },
@@ -57950,76 +58031,75 @@
         var t = e.transport,
           n = e.onComplete,
           a = e.onStatusChange,
-          r =
-            (e.platform,
-            (function (e) {
-              var t = (0, o.useState)(new sm(e)),
-                n = t[0],
-                a = t[1];
-              return (
-                (0, o.useEffect)(
-                  function () {
-                    return (
-                      n.Start(),
-                      function () {
-                        n.Stop();
-                      }
-                    );
+          r = (e.platform, e.deckStyling),
+          i = (function (e) {
+            var t = (0, o.useState)(new sm(e)),
+              n = t[0],
+              a = t[1];
+            return (
+              (0, o.useEffect)(
+                function () {
+                  return (
+                    n.Start(),
+                    function () {
+                      n.Stop();
+                    }
+                  );
+                },
+                [n]
+              ),
+              (0, Rd.SZ)(function () {
+                return {
+                  strChallengeURL: n.GetChallengeURL(),
+                  eFailureState: n.GetFailureState(),
+                  eStatus: n.GetStatus(),
+                  bHadRemoteInteraction: n.BHadRemoteInteraction(),
+                  reset: function () {
+                    return a(new sm(e));
                   },
-                  [n]
-                ),
-                (0, Rd.SZ)(function () {
-                  return {
-                    strChallengeURL: n.GetChallengeURL(),
-                    eFailureState: n.GetFailureState(),
-                    eStatus: n.GetStatus(),
-                    bHadRemoteInteraction: n.BHadRemoteInteraction(),
-                    reset: function () {
-                      return a(new sm(e));
-                    },
-                    setTokenToRevoke: n.SetTokenToRevoke,
-                  };
-                })
-              );
-            })({
-              transport: t,
-              onComplete: n,
-              onDeviceDetails: Nt.De.IN_CLIENT ? Em : ym,
-            })),
-          i = r.eStatus,
-          s = r.strChallengeURL,
-          l = r.bHadRemoteInteraction,
-          c = r.reset,
-          u = r.setTokenToRevoke;
+                  setTokenToRevoke: n.SetTokenToRevoke,
+                };
+              })
+            );
+          })({
+            transport: t,
+            onComplete: n,
+            onDeviceDetails: Nt.De.IN_CLIENT ? Em : ym,
+          }),
+          s = i.eStatus,
+          l = i.strChallengeURL,
+          c = i.bHadRemoteInteraction,
+          u = i.reset,
+          d = i.setTokenToRevoke;
         (0, o.useEffect)(
           function () {
-            return a && a(i);
+            return a && a(s);
           },
-          [a, i]
+          [a, s]
         );
-        var d,
-          m,
-          p = 2 === i ? s : Nt.De.STORE_BASE_URL,
-          _ = 0 === i || 1 === i || l,
-          g = 4 === i,
-          h = 3 === i,
-          f = h
+        var m,
+          p,
+          _ = 2 === s ? l : Nt.De.STORE_BASE_URL,
+          g = 0 === s || 1 === s || c,
+          h = 4 === s,
+          f = 3 === s,
+          v = f
             ? o.createElement(pm, null)
+            : h
+            ? o.createElement(mm, { reset: u })
             : g
-            ? o.createElement(mm, { reset: c })
-            : _
             ? o.createElement(dm, { size: "small" })
             : null,
-          v = _ || g || h;
+          E = g || h || f;
         return (
           (0, o.useEffect)(
             function () {
               var t;
               (null === (t = e.refreshInfo) || void 0 === t
                 ? void 0
-                : t.login_token_id) && u(e.refreshInfo.login_token_id);
+                : t.login_token_id) && d(e.refreshInfo.login_token_id);
             },
-            [e.refreshInfo, u]
+            [e.refreshInfo, d]
           ),
           o.createElement(
             "div",
@@ -58033,16 +58113,20 @@
                   borderWidth: 0,
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
-                  quality: ((d = p), (m = d.length <= 90 ? Qd.Q : void 0), m),
-                  className: (0, b.Z)(cm().LoginQR, v && cm().Blur),
+                  quality: ((m = _), (p = m.length <= 90 ? Qd.Q : void 0), p),
+                  className: (0, b.Z)(
+                    cm().LoginQR,
+                    r && cm().QRLoginDeck,
+                    E && cm().Blur
+                  ),
                 },
-                p
+                _
               ),
-              v &&
+              E &&
                 o.createElement(
                   "div",
                   { className: cm().Overlay },
-                  o.createElement("div", { className: cm().Box }, f)
+                  o.createElement("div", { className: cm().Box }, v)
                 )
             )
           )
@@ -58137,70 +58221,74 @@
           t.current = e;
           var n = (0, o.useState)(!0),
             a = n[0],
-            i = n[1];
+            i = n[1],
+            s = (0, p.TH)(),
+            l = new URLSearchParams(s.search);
           return (
             (0, o.useEffect)(
               function () {
-                t.current &&
-                  (function (e) {
-                    var t;
-                    return (0, r.mG)(this, void 0, void 0, function () {
-                      var n, a, i, o, s, l, c, u;
-                      return (0, r.Jh)(this, function (d) {
-                        switch (d.label) {
-                          case 0:
-                            return (
-                              (n = new FormData()).append("redir", e),
-                              [
-                                4,
-                                Ct().post(
-                                  "".concat(
-                                    Nt.De.LOGIN_BASE_URL,
-                                    "jwt/ajaxrefresh"
+                l.get("need_password")
+                  ? i(!1)
+                  : t.current &&
+                    (function (e) {
+                      var t;
+                      return (0, r.mG)(this, void 0, void 0, function () {
+                        var n, a, i, o, s, l, c, u;
+                        return (0, r.Jh)(this, function (d) {
+                          switch (d.label) {
+                            case 0:
+                              return (
+                                (n = new FormData()).append("redir", e),
+                                [
+                                  4,
+                                  Ct().post(
+                                    "".concat(
+                                      Nt.De.LOGIN_BASE_URL,
+                                      "jwt/ajaxrefresh"
+                                    ),
+                                    n,
+                                    { timeout: 1e4, withCredentials: !0 }
                                   ),
-                                  n,
-                                  { timeout: 1e4, withCredentials: !0 }
-                                ),
-                              ]
-                            );
-                          case 1:
-                            return 200 === (a = d.sent()).status &&
-                              (null === (t = null == a ? void 0 : a.data) ||
-                              void 0 === t
-                                ? void 0
-                                : t.success)
-                              ? ((i = a.data),
-                                i.success,
-                                (o = i.login_url),
-                                i.error,
-                                (s = (0, r._T)(i, [
-                                  "success",
-                                  "login_url",
-                                  "error",
-                                ])),
-                                (l = new FormData()),
-                                Object.keys(s).forEach(function (e) {
-                                  return l.append(e, s[e]);
-                                }),
-                                [4, Ct().post(o, l)])
-                              : [2, !1];
-                          case 2:
-                            return (
-                              (c = d.sent()),
-                              (u = 200 === c.status && 1 === c.data.result) &&
-                                window.location.assign(e),
-                              [2, u]
-                            );
-                        }
+                                ]
+                              );
+                            case 1:
+                              return 200 === (a = d.sent()).status &&
+                                (null === (t = null == a ? void 0 : a.data) ||
+                                void 0 === t
+                                  ? void 0
+                                  : t.success)
+                                ? ((i = a.data),
+                                  i.success,
+                                  (o = i.login_url),
+                                  i.error,
+                                  (s = (0, r._T)(i, [
+                                    "success",
+                                    "login_url",
+                                    "error",
+                                  ])),
+                                  (l = new FormData()),
+                                  Object.keys(s).forEach(function (e) {
+                                    return l.append(e, s[e]);
+                                  }),
+                                  [4, Ct().post(o, l)])
+                                : [2, !1];
+                            case 2:
+                              return (
+                                (c = d.sent()),
+                                (u = 200 === c.status && 1 === c.data.result) &&
+                                  window.location.assign(e),
+                                [2, u]
+                              );
+                          }
+                        });
                       });
-                    });
-                  })(t.current)
-                    .then(function (e) {
-                      i(e);
-                    })
-                    .catch(function (e) {
-                      console.warn("PerformRefresh exception", e), i(!1);
-                    });
+                    })(t.current)
+                      .then(function (e) {
+                        i(e);
+                      })
+                      .catch(function (e) {
+                        console.warn("PerformRefresh exception", e), i(!1);
+                      });
               },
               [t]
             ),
@@ -68974,7 +69062,8 @@
           (e[(e.ScaleSize = 64)] = "ScaleSize"),
           (e[(e.Maximized = 128)] = "Maximized"),
           (e[(e.BackgroundTransparent = 256)] = "BackgroundTransparent"),
-          (e[(e.NotFocusable = 512)] = "NotFocusable");
+          (e[(e.NotFocusable = 512)] = "NotFocusable"),
+          (e[(e.FullScreen = 1024)] = "FullScreen");
       })(a || (a = {}));
       o.createContext({});
       var h = (function () {
@@ -69340,20 +69429,27 @@
                   .MOBILE_BUILD)
               ) {
                 window.addEventListener("beforeunload", function (t) {
+                  var n;
                   e.m_bShuttingDown = !0;
                   for (
-                    var n = 0, a = e.m_rgShutdownCallbacks;
-                    n < a.length;
-                    n++
+                    var a = 0, r = e.m_rgShutdownCallbacks;
+                    a < r.length;
+                    a++
                   ) {
-                    (0, a[n])();
+                    (0, r[a])();
                   }
-                  var r = [];
+                  var i = [];
                   e.m_mapPopups.forEach(function (e) {
-                    e.BIsValid() && !e.BIsClosed() && r.push(e);
+                    e.BIsValid() && !e.BIsClosed() && i.push(e);
                   });
-                  for (var i = 0, o = r; i < o.length; i++) {
-                    o[i].Close();
+                  for (var o = 0, s = i; o < s.length; o++) {
+                    var l = s[o];
+                    null === (n = l.window) ||
+                      void 0 === n ||
+                      n.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
+                        !1
+                      ),
+                      l.Close();
                   }
                   e.m_bSaveRequired && e.SaveSavedDimensionStore(),
                     e.m_mapPopups.clear();
@@ -69365,7 +69461,7 @@
                       function () {
                         var t = s.Mv();
                         e.m_mapPopups.forEach(function (e) {
-                          s.V2(e.window, t);
+                          s.b$(e.window.document, t, !1);
                         });
                       }
                     )),
@@ -74206,6 +74302,11 @@
                           br: i.FE.readBytes,
                           bw: i.Xc.writeBytes,
                         },
+                        server_secret: {
+                          n: 8,
+                          br: i.FE.readBytes,
+                          bw: i.Xc.writeBytes,
+                        },
                       },
                     }),
                   t.sm_m
@@ -78517,7 +78618,8 @@
                   e.focusOnMount,
                   e.tooltip,
                   e.inlineControls),
-                p = (0, a._T)(e, [
+                p = e.maxChars,
+                _ = (0, a._T)(e, [
                   "label",
                   "description",
                   "requiredLabel",
@@ -78533,19 +78635,20 @@
                   "focusOnMount",
                   "tooltip",
                   "inlineControls",
+                  "maxChars",
                 ]),
-                _ =
+                g =
                   "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-                  (p.className ? " " + p.className : ""),
-                g = "copiedAnimation",
-                h = this.state.m_bCompletedCopiedAnimation;
+                  (_.className ? " " + _.className : ""),
+                h = "copiedAnimation",
+                f = this.state.m_bCompletedCopiedAnimation;
               this.m_CopiedAnimation &&
-                (g = "copiedAnimation animationPlaying"),
-                h && (g = "copiedAnimation animationComplete");
-              var f = {};
+                (h = "copiedAnimation animationPlaying"),
+                f && (h = "copiedAnimation animationComplete");
+              var v = {};
               void 0 !== this.state.m_CopiedYPos &&
-                (f.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-              var v = r.createElement(
+                (v.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+              var b = r.createElement(
                 r.Fragment,
                 null,
                 r.createElement(
@@ -78556,8 +78659,8 @@
                   },
                   r.createElement(
                     J,
-                    (0, a.pi)({ type: d ? "password" : "text" }, p, {
-                      className: _,
+                    (0, a.pi)({ type: d ? "password" : "text" }, _, {
+                      className: g,
                       ref: this.OnInputRef,
                       onChange: this.OnChanged,
                     })
@@ -78576,11 +78679,11 @@
                       ),
                       r.createElement(
                         "div",
-                        { style: f, className: g },
+                        { style: v, className: h },
                         "Link Copied"
                       )
                     ),
-                  (u || (l && p.value)) &&
+                  (u || (l && _.value)) &&
                     r.createElement(
                       "div",
                       {
@@ -78623,7 +78726,7 @@
                         ),
                         " "
                       ),
-                      v,
+                      b,
                       this.state.m_bNumberBelowMinRange
                         ? r.createElement(
                             "div",
@@ -78674,16 +78777,13 @@
                             "div",
                             null,
                             " ",
-                            (0, c.kQ)(
-                              "#Input_Error_TooManyCharacters",
-                              this.props.maxChars
-                            ),
+                            (0, c.kQ)("#Input_Error_TooManyCharacters", p),
                             " "
                           )
                         : null
                     )
                   )
-                : v;
+                : b;
             }),
             (0, a.gn)([U.ak], t.prototype, "OnInputRef", null),
             (0, a.gn)([U.ak], t.prototype, "OnChanged", null),
@@ -78785,8 +78885,12 @@
               (0, a.gn)([U.ak], t.prototype, "OnInputFocus", null),
               (0, a.gn)([U.ak], t.prototype, "OnInputBlur", null);
           })(Y),
-          function (e) {
-            return "" + (null != e ? Number.parseFloat(e.toFixed(2)) : null);
+          function (e, t) {
+            return (
+              "" +
+              (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
+              (null != t ? t : "")
+            );
           }),
         X =
           ((function (e) {
@@ -78959,9 +79063,7 @@
                     r.createElement(
                       "div",
                       { className: "DialogLabelExplainer" },
-                      u(this.props.value),
-                      " ",
-                      this.props.valueSuffix
+                      u(this.props.value, this.props.valueSuffix)
                     ),
                   l &&
                     r.createElement(
@@ -80387,7 +80489,8 @@
             b = e.highlightOnFocus,
             E = e.indentLevel,
             y = e.verticalAlignment,
-            T = (0, a._T)(e, [
+            T = e.tooltip,
+            S = (0, a._T)(e, [
               "label",
               "description",
               "icon",
@@ -80403,69 +80506,70 @@
               "highlightOnFocus",
               "indentLevel",
               "verticalAlignment",
+              "tooltip",
             ]),
-            S = null != d ? d : "inline",
-            C = "inline" == S && !!u,
-            w = "below" == S && !!u,
-            B = null != m ? m : "shift-children-below",
-            N = !!(T.onClick || T.onActivate || T.focusable),
-            I = null != c || null != i || (C && null != u),
-            D = null != p ? p : "min",
-            R = null != _ ? _ : "standard",
-            L = null != g ? g : "standard",
-            A = null != f ? f : "standard",
-            M = null == b || b,
-            G = null != E ? E : 0,
-            k = null != y ? y : "center",
-            P = r.useRef(),
-            F = (0, U.BE)(P, e.navRef),
-            O = r.useCallback(
+            C = null != d ? d : "inline",
+            w = "inline" == C && !!u,
+            B = "below" == C && !!u,
+            N = null != m ? m : "shift-children-below",
+            I = !!(S.onClick || S.onActivate || S.focusable),
+            D = null != c || null != i || (w && null != u),
+            R = null != p ? p : "min",
+            L = null != _ ? _ : "standard",
+            A = null != g ? g : "standard",
+            M = null != f ? f : "standard",
+            G = null == b || b,
+            k = null != E ? E : 0,
+            P = null != y ? y : "center",
+            F = r.useRef(),
+            O = (0, U.BE)(F, e.navRef),
+            x = r.useCallback(
               function (e) {
                 var t;
-                null === (t = P.current) || void 0 === t || t.TakeFocus(),
+                null === (t = F.current) || void 0 === t || t.TakeFocus(),
                   e.preventDefault();
               },
-              [P]
+              [F]
             );
           return r.createElement(
             o.s,
             (0, a.pi)(
               {
-                focusable: N,
+                focusable: I,
                 noFocusRing: !0,
                 scrollIntoViewWhenChildFocused: !0,
-                onActivate: T.onClick,
+                onActivate: S.onClick,
                 ref: t,
-                onMouseDown: N ? void 0 : O,
+                onMouseDown: I ? void 0 : x,
               },
-              T,
+              S,
               {
-                navRef: F,
+                navRef: O,
                 className: (0, l.Z)(
                   v,
                   Oe().Field,
                   h && Oe().Disabled,
-                  I && Oe().WithFirstRow,
-                  C && Oe().WithChildrenInline,
-                  w && Oe().WithChildrenBelow,
-                  "center" == k && Oe().VerticalAlignCenter,
-                  "shift-children-below" == B &&
+                  D && Oe().WithFirstRow,
+                  w && Oe().WithChildrenInline,
+                  B && Oe().WithChildrenBelow,
+                  "center" == P && Oe().VerticalAlignCenter,
+                  "shift-children-below" == N &&
                     Oe().InlineWrapShiftsChildrenBelow,
                   !!s && Oe().WithDescription,
-                  "standard" == A && Oe().WithBottomSeparatorStandard,
-                  "thick" == A && Oe().WithBottomSeparatorThick,
-                  "fixed" == D && Oe().ChildrenWidthFixed,
-                  "max" == D && Oe().ChildrenWidthGrow,
-                  "standard" == R && Oe().ExtraPaddingOnChildrenBelow,
-                  "standard" == L && Oe().StandardPadding,
-                  "compact" == L && Oe().CompactPadding,
-                  N && Oe().Clickable,
-                  M && Oe().HighlightOnFocus
+                  "standard" == M && Oe().WithBottomSeparatorStandard,
+                  "thick" == M && Oe().WithBottomSeparatorThick,
+                  "fixed" == R && Oe().ChildrenWidthFixed,
+                  "max" == R && Oe().ChildrenWidthGrow,
+                  "standard" == L && Oe().ExtraPaddingOnChildrenBelow,
+                  "standard" == A && Oe().StandardPadding,
+                  "compact" == A && Oe().CompactPadding,
+                  I && Oe().Clickable,
+                  G && Oe().HighlightOnFocus
                 ),
-                style: ((n = {}), (n["--indent-level"] = G), n),
+                style: ((n = {}), (n["--indent-level"] = k), n),
               }
             ),
-            I &&
+            D &&
               r.createElement(
                 "div",
                 { className: Oe().FieldLabelRow },
@@ -80478,12 +80582,14 @@
                       { className: Oe().FieldLeadIcon },
                       c
                     ),
-                  i
+                  i,
+                  T &&
+                    r.createElement("span", { "data-tooltip-text": T }, " (?)")
                 ),
-                C &&
+                w &&
                   r.createElement("div", { className: Oe().FieldChildren }, u)
               ),
-            w && r.createElement("div", { className: Oe().FieldChildren }, u),
+            B && r.createElement("div", { className: Oe().FieldChildren }, u),
             s && r.createElement("div", { className: Oe().FieldDescription }, s)
           );
         });
@@ -83487,27 +83593,24 @@
     25320: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $gZ: () => c,
-        JrY: () => m,
-        Uos: () => g,
-        YqJ: () => h,
-        gR: () => f,
-        mKE: () => p,
-        pVO: () => d,
-        r6F: () => v,
-        ret: () => u,
-        ui7: () => b,
-        vT2: () => E,
-        wUs: () => _,
-        wr9: () => y,
+        $gZ: () => s,
+        JrY: () => u,
+        Uos: () => m,
+        YqJ: () => p,
+        gR: () => _,
+        mKE: () => d,
+        pVO: () => c,
+        r6F: () => g,
+        ret: () => l,
+        ui7: () => h,
+        vT2: () => f,
+        wr9: () => v,
       });
       var a = n(70655),
         r = n(67294),
-        i = n(67555),
-        o = n.n(i),
-        s = n(67506),
-        l = (n(59608), n(46811));
-      function c() {
+        i = n(67506),
+        o = (n(59608), n(46811));
+      function s() {
         return r.createElement(
           "svg",
           {
@@ -83524,7 +83627,7 @@
           })
         );
       }
-      function u(e) {
+      function l(e) {
         return r.createElement(
           "svg",
           {
@@ -83543,7 +83646,7 @@
           })
         );
       }
-      function d(e) {
+      function c(e) {
         var t = e.color || "#FFFFFF";
         return r.createElement(
           "svg",
@@ -83580,7 +83683,7 @@
           })
         );
       }
-      function m(e) {
+      function u(e) {
         var t;
         return r.createElement(
           "svg",
@@ -83609,7 +83712,7 @@
           })
         );
       }
-      function p(e) {
+      function d(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff",
           a = (0, r.useState)(Math.random().toString())[0];
@@ -83694,233 +83797,8 @@
           })
         );
       }
-      function _(e) {
-        var t = "SVGIcon_Button SVGIcon_Throbber ";
-        return (
-          e.className && (t += e.className),
-          r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: t,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: o().partCircle },
-              r.createElement("path", {
-                className: o().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
-              }),
-              r.createElement("path", {
-                className: o().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M201.432,101.166",
-              }),
-              r.createElement("path", {
-                className: o().roundOuter,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              })
-            ),
-            r.createElement(
-              "g",
-              { className: o().mainOutline },
-              r.createElement("path", {
-                className: o().roundFill,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundOuterOutline,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber01,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber02,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber03,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber04,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber05,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber06,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber07,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber08,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber09,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber10,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber11,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber12,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber13,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber14,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              }),
-              r.createElement("path", {
-                className: o().roundThrobber15,
-                strokeLinecap: "butt",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              })
-            ),
-            r.createElement(
-              "g",
-              { className: o().bottomCircle },
-              r.createElement("path", {
-                fill: "#ffffff",
-                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-              })
-            ),
-            r.createElement(
-              "g",
-              { className: o().topCircle },
-              r.createElement("circle", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "6",
-                strokeMiterlimit: "10",
-                cx: "161.731",
-                cy: "101.274",
-                r: "23.019",
-              })
-            )
-          )
-        );
-      }
-      function g(e) {
-        return l.De.IN_GAMEPADUI
+      function m(e) {
+        return o.De.IN_GAMEPADUI
           ? r.createElement(
               "svg",
               (0, a.pi)(
@@ -83957,7 +83835,7 @@
               })
             );
       }
-      function h() {
+      function p() {
         return r.createElement(
           "svg",
           {
@@ -83993,7 +83871,7 @@
           })
         );
       }
-      function f() {
+      function _() {
         return r.createElement(
           "svg",
           {
@@ -84019,7 +83897,7 @@
           })
         );
       }
-      function v() {
+      function g() {
         return r.createElement(
           "svg",
           {
@@ -84052,8 +83930,8 @@
           })
         );
       }
-      function b(e) {
-        var t = (0, s.Z)(
+      function h(e) {
+        var t = (0, i.Z)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
           e && e.className
@@ -84083,7 +83961,7 @@
           })
         );
       }
-      function E() {
+      function f() {
         return r.createElement(
           "svg",
           {
@@ -84128,7 +84006,7 @@
           })
         );
       }
-      function y() {
+      function v() {
         return r.createElement(
           "svg",
           {
@@ -84273,65 +84151,303 @@
     },
     41411: (e, t, n) => {
       "use strict";
-      n.d(t, { V: () => l });
-      var a = n(70655),
-        r = n(67294),
-        i = n(25320),
-        o = n(67555),
-        s = n.n(o),
-        l = (function (e) {
-          function t(t) {
-            return e.call(this, t) || this;
-          }
+      n.d(t, { V: () => s });
+      var a = n(67294),
+        r = n(67506),
+        i = n(67555),
+        o = n.n(i),
+        s = a.memo(function (e) {
+          var t = e.className,
+            n = e.size,
+            i = e.string,
+            s = e.position,
+            u = e.static,
+            d = e.msDelayAppear,
+            m = [o().LoadingWrapper, "SteamLogoThrobber", l(n)],
+            p = a.useState(!d),
+            _ = p[0],
+            g = p[1];
           return (
-            (0, a.ZT)(t, e),
-            (t.prototype.AddSizeClass = function (e) {
-              "small" == this.props.size
-                ? e.push(s().throbber_small)
-                : "medium" == this.props.size
-                ? e.push(s().throbber_medium)
-                : "xlarge" == this.props.size
-                ? e.push(s().throbber_xlarge)
-                : "xxlarge" == this.props.size
-                ? e.push(s().throbber_xxlarge)
-                : e.push(s().throbber_large);
-            }),
-            (t.prototype.render = function () {
-              var e = [s().LoadingWrapper, "SteamLogoThrobber"];
-              this.AddSizeClass(e),
-                void 0 === this.props.string && e.push(s().noString),
-                this.props.className && e.push(this.props.className),
-                this.props.static && e.push(s().Static);
-              var t = r.createElement(
-                "div",
-                { className: e.join(" ") },
-                r.createElement(
+            (0, a.useEffect)(
+              function () {
+                if (!_) {
+                  var e = setTimeout(function () {
+                    return g(!0);
+                  }, d);
+                  return function () {
+                    return clearTimeout(e);
+                  };
+                }
+              },
+              [d, _]
+            ),
+            void 0 === i && m.push(o().noString),
+            t && m.push(t),
+            u && m.push(o().Static),
+            a.createElement(
+              "div",
+              {
+                className: (0, r.Z)(
+                  "center" == s && o().throbber_center_wrapper,
+                  d && o().ThrobberDelayAppear,
+                  _ && o().Visible
+                ),
+              },
+              _ &&
+                a.createElement(
                   "div",
-                  { className: s().Throbber },
-                  r.createElement(i.wUs, { className: s().base }),
-                  r.createElement(i.wUs, { className: s().blur })
-                )
-              );
-              return r.createElement(
-                "div",
-                {
-                  className:
-                    "center" == this.props.position
-                      ? s().throbber_center_wrapper
-                      : "",
-                },
-                t,
-                Boolean(this.props.string) &&
-                  r.createElement(
+                  { className: m.join(" ") },
+                  a.createElement(
                     "div",
-                    { className: s().ThrobberText },
-                    this.props.string
+                    { className: o().Throbber },
+                    a.createElement(c, { className: o().base }),
+                    a.createElement(c, { className: o().blur })
                   )
-              );
-            }),
-            t
+                ),
+              Boolean(i) &&
+                a.createElement("div", { className: o().ThrobberText }, i)
+            )
           );
-        })(r.PureComponent);
+        });
+      function l(e) {
+        switch (e) {
+          case "small":
+            return o().throbber_small;
+          case "medium":
+            return o().throbber_medium;
+          case "xlarge":
+            return o().throbber_xlarge;
+          case "xxlarge":
+            return o().throbber_xxlarge;
+          default:
+            return o().throbber_large;
+        }
+      }
+      function c(e) {
+        var t = "SVGIcon_Button SVGIcon_Throbber ";
+        return (
+          e.className && (t += e.className),
+          a.createElement(
+            "svg",
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            a.createElement(
+              "g",
+              { className: o().partCircle },
+              a.createElement("path", {
+                className: o().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+              }),
+              a.createElement("path", {
+                className: o().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M201.432,101.166",
+              }),
+              a.createElement("path", {
+                className: o().roundOuter,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+              })
+            ),
+            a.createElement(
+              "g",
+              { className: o().mainOutline },
+              a.createElement("path", {
+                className: o().roundFill,
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundOuterOutline,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber01,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber02,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber03,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber04,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber05,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber06,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber07,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber08,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber09,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber10,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber11,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber12,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber13,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber14,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              }),
+              a.createElement("path", {
+                className: o().roundThrobber15,
+                strokeLinecap: "butt",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+              })
+            ),
+            a.createElement(
+              "g",
+              { className: o().bottomCircle },
+              a.createElement("path", {
+                fill: "#ffffff",
+                d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+              })
+            ),
+            a.createElement(
+              "g",
+              { className: o().topCircle },
+              a.createElement("circle", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "6",
+                strokeMiterlimit: "10",
+                cx: "161.731",
+                cy: "101.274",
+                r: "23.019",
+              })
+            )
+          )
+        );
+      }
     },
     75435: (e, t, n) => {
       "use strict";
@@ -85582,6 +85698,7 @@
         V2: () => f,
         _J: () => m,
         __: () => d,
+        b$: () => v,
         dw: () => o,
         kR: () => c,
         ni: () => i,
@@ -86688,6 +86805,11 @@
               console.error.apply(console, f);
           }
       }
+      window.EnableSteamConsole = function (e) {
+        return (
+          void 0 === e && (e = !0), u.Get().SetDebugLogEnabled("SteamClient", e)
+        );
+      };
     },
     87591: (e, t, n) => {
       "use strict";
@@ -86769,7 +86891,7 @@
         return (0, s.xK)(
           function (n) {
             if (n) {
-              var a = t(function (t) {
+              var a = t(n.ownerDocument.defaultView, function (t) {
                 e(t[0]);
               });
               return (
@@ -86786,9 +86908,9 @@
       function u(e) {
         return c(
           e,
-          a.useCallback(function (e) {
-            return "undefined" != typeof ResizeObserver
-              ? new ResizeObserver(e)
+          a.useCallback(function (e, t) {
+            return e.ResizeObserver
+              ? new e.ResizeObserver(t)
               : ((0, l.X)(!1, "ResizeObserver is not available"),
                 {
                   observe: function () {},
@@ -86950,6 +87072,7 @@
           DEV_MODE: !1,
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
+          GAMEPADUI_WINDOWED: !1,
           LEGACY_GAMEPADUI_MODE: 0,
           LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: !1,

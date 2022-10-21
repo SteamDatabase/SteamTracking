@@ -2079,51 +2079,12 @@
   width: 240px;
   height: 240px;
 }
-.SVGIcon_Button {
-  fill: #fff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px;
+.throbber_ThrobberDelayAppear_2lV2G {
+  opacity: 0;
+  transition: opacity 1s;
 }
-.shared_svg_library_EmoticonBow_3vBI6 {
-  position: absolute;
-  top: -15px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.shared_svg_library_EmoticonBow_st0_3EB-7 {
-  opacity: 0.4;
-  fill: #231f20;
-}
-.shared_svg_library_EmoticonBow_st1_2NIMu {
-  fill: #e41e25;
-}
-.shared_svg_library_SteamDeckCompatInfo_1t9l5 {
-  display: flex;
-  background-color: #0e141b;
-  padding: 2px;
-  border-radius: 20px;
-}
-.shared_svg_library_SteamDeckCompatLogo_1Ly8Y {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatIcon_1wEdn {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatVerified_1x-dZ {
-  color: #59bf40;
-}
-.shared_svg_library_SteamDeckCompatPlayable_1f6j0 {
-  color: #ffc82c;
-}
-.shared_svg_library_SteamDeckCompatUnsupported_wUjbD,
-.shared_svg_library_SteamDeckCompatUnknown_2b1JZ {
-  color: #dcdedf;
+.throbber_ThrobberDelayAppear_2lV2G.throbber_Visible_2sPa3 {
+  opacity: 1;
 }
 .teamlogo_colorBlack_1gyoR {
   color: #0f1417;
