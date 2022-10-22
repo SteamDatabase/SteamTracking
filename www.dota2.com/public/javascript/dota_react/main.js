@@ -63266,12 +63266,12 @@
                                 var u = s.is_completed,
                                   d = r.is_completed;
                                 if (u || !d)
-                                  if (d || !u) {
-                                    var m = s.actual_time
-                                      ? s.actual_time
-                                      : s.scheduled_time;
-                                    n - o < n - m && (i = e);
-                                  } else i = e;
+                                  if (d || !u)
+                                    o <
+                                      (s.actual_time
+                                        ? s.actual_time
+                                        : s.scheduled_time) && (i = e);
+                                  else i = e;
                               } else i = e;
                           } else i = e;
                       }
