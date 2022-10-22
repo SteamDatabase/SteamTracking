@@ -27325,7 +27325,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1666384704),
+          d = parseInt(1666398931),
           m = d && Hg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, ig.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -37895,16 +37895,13 @@
           [f, b] = i.useState(performance.now()),
           [D, w] = i.useState(!1),
           Q = c || (e == g.rB && (D || n != ro.MA.None));
+        n == ro.MA.Main && (Q = !0), (0, k.Vg)(!Q);
+        const y = (0, La.ub)(),
+          N = (0, U.iR)();
         if (
-          (n == ro.MA.Main && (Q = !0),
-          (0, k.Vg)(!Q),
-          i.useEffect(() => {
-            l ||
-              !u ||
-              B.current ||
-              ((B.current = !0),
-              Rn.g4.NavigateBack() || Rn.g4.NavigateToHome());
-          }, [l, u]),
+          (i.useEffect(() => {
+            l || !u || B.current || ((B.current = !0), y(), N());
+          }, [l, u, N, y]),
           i.useEffect(() => {
             e != v && (h(e), b(performance.now()), w(!1));
             const A = () => {
@@ -37923,13 +37920,13 @@
           l && !E)
         )
           return i.createElement(Fe, { appID: I });
-        let y = n == ro.MA.Main,
-          N = d.length > 0;
+        let S = n == ro.MA.Main,
+          G = d.length > 0;
         return !t ||
           o == s.s7.Hidden ||
           n == ro.MA.QuickAccess ||
-          y ||
-          N ||
+          S ||
+          G ||
           (null == C ? void 0 : C.mode) == U.iZ.Overlay
           ? null
           : i.createElement(_I, { enableAbort: D });
@@ -38183,9 +38180,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Oct 21 2022 : 13:38:24",
-              BUILD_TIME_UTC: "Oct 21 2022 : 20:38:24",
-              BUILD_RTIME_UTC: 1666384704,
+              BUILD_TIME_LOCAL: "Oct 21 2022 : 17:35:31",
+              BUILD_TIME_UTC: "Oct 22 2022 : 00:35:31",
+              BUILD_RTIME_UTC: 1666398931,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
