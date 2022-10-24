@@ -30254,12 +30254,19 @@
                     "div",
                     { className: (0, b.Z)(ii().Details, !B && ii().Hidden) },
                     0 !== v &&
+                      !e.strBackgroundColor &&
                       o.createElement(pr(), {
                         className: ii().Timestamp,
                         date: 1e3 * v,
                         format: "MMM DD LT",
                       }),
-                    0 === v && "",
+                    0 === v && !e.strBackgroundColor && "",
+                    e.strBackgroundColor &&
+                      o.createElement(
+                        "div",
+                        { className: ii().Timestamp },
+                        (0, E.Jr)(e.strNodeTitle)
+                      ),
                     o.createElement("div", { className: ii().Separator }),
                     o.createElement(
                       "div",
@@ -30572,7 +30579,7 @@
         },
         mi = (0, d.Pi)(function (e) {
           var t = Wo(),
-            n = (0, o.useState)(!1),
+            n = (0, o.useState)(!0),
             a = n[0],
             r = n[1],
             i = (0, o.useState)(0),
@@ -64050,6 +64057,8 @@
           "#EE6707",
           "#EEEEEF",
           "#19bc42",
+          "#1942bc",
+          "#bcbc19",
         ],
         l = [
           {
