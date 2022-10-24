@@ -397,7 +397,6 @@
  SDL_GetPlatform
  SDL_GetQueuedAudioSize
  SDL_GetRevision
- SDL_GetVersion
  SDL_GetWindowFromID
  SDL_GetWindowSize
  SDL_GetWindowWMInfo
