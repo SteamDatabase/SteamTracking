@@ -1789,6 +1789,7 @@ body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn
 	html.responsive .tab_item.focus {
 		padding-left: 0;
 		margin-right: 0;
+        padding-right: 0;
 	}
 
 	html.responsive .home_smallcaps,
@@ -2133,6 +2134,7 @@ html.responsive .store_main_capsule,
 	html.responsive.tablet .tab_item.focus {
 		padding-left: 0;
 		margin-right: 0;
+        padding-right: 0;
 	}
 
 	html.responsive.tablet .home_smallcaps,
@@ -3226,12 +3228,6 @@ body.v6 .recommended_by_steam_labs_ctn .recommended_by_deep_dive_method {
 body.v6 .recommended_by_deep_dive_method {
 	color: #9099a1;
 	float:unset;
-}
-
-@media screen and (max-width: 910px) {
-	html.responsive .carousel_container.maincap .discount_block {
-		display: block;
-	}
 }
 
 @media screen and ( max-width: 500px ) {

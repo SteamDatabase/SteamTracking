@@ -885,6 +885,15 @@
 .BasicUI .salepreviewwidgets_StoreSaleWidgetRight_1lRFu {
   padding: 12px 16px;
 }
+@media screen and (max-width: 910px) {
+  .salepreviewwidgets_StoreSaleWidgetRight_1lRFu.salepreviewwidgets_Bundle_1k4up {
+    padding: 8px 3px 0px 12px;
+  }
+  .salepreviewwidgets_StoreSaleWidgetRight_1lRFu.salepreviewwidgets_Bundle_1k4up
+    .salepreviewwidgets_BundleContentPreview_1mH6d {
+    width: 98%;
+  }
+}
 .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
   .salepreviewwidgets_TitleCtn_1F4bc {
   display: flex;
@@ -1010,8 +1019,6 @@
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   padding: 0 3px;
   line-height: normal;
-  background: var(--gpColor-Green);
-  color: #fff;
   border-radius: 1px;
 }
 .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0.salepreviewwidgets_SingleLineMode_31Sy5
@@ -1023,7 +1030,6 @@
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
   padding: 0;
   line-height: normal;
-  color: #fff;
 }
 .BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0 {
   min-height: unset;
@@ -1058,6 +1064,9 @@
   flex-direction: column;
 }
 @media screen and (max-width: 910px) {
+  .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
+    position: relative;
+  }
   .salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91
     .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
     .salepreviewwidgets_Action_3Af0S,
@@ -1157,6 +1166,7 @@
   position: absolute;
   top: 50%;
   border-bottom: 1px solid #b2b5bb;
+  transform: skewY(-15deg);
 }
 .salepreviewwidgets_StoreOriginalPrice_1EKGZ {
   color: #738895;
@@ -1211,6 +1221,11 @@
   display: flex;
   align-items: center;
   background: #344654;
+}
+@media screen and (max-width: 910px) {
+  .salepreviewwidgets_Discounted_35-Ub {
+    margin-right: 0;
+  }
 }
 .salepreviewwidgets_Discounted_35-Ub .salepreviewwidgets_BaseDiscount_Kxr-3 {
   padding: 6px;
@@ -2730,11 +2745,6 @@ html.touch
   width: 100%;
   max-width: 550px;
   margin-bottom: 4px;
-}
-@media screen and (max-width: 560px) {
-  .salepreviewwidgets_BundleContentPreview_1mH6d {
-    margin-bottom: 18px;
-  }
 }
 .salepreviewwidgets_BundleContentPreview_1mH6d
   .salepreviewwidgets_ContentsCount_1SkQs {

@@ -225,6 +225,7 @@
         SaleItemFullCapsuleDisplay:
           "salepreviewwidgets_SaleItemFullCapsuleDisplay_BBioJ",
         Tag: "salepreviewwidgets_Tag_172zD",
+        BundleContentPreview: "salepreviewwidgets_BundleContentPreview_1mH6d",
         StoreSaleBroadcastWidgetRight:
           "salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1",
         StoreSalePriceActionWidgetContainer:
@@ -281,7 +282,6 @@
         ShowContentsButton: "salepreviewwidgets_ShowContentsButton_DwWQq",
         ShowContentsSection: "salepreviewwidgets_ShowContentsSection_2cdrh",
         BundleContentItem: "salepreviewwidgets_BundleContentItem_tXp5G",
-        BundleContentPreview: "salepreviewwidgets_BundleContentPreview_1mH6d",
         StoreSaleWidgetOuterContainer:
           "salepreviewwidgets_StoreSaleWidgetOuterContainer_38DqR",
         ContentsCount: "salepreviewwidgets_ContentsCount_1SkQs",

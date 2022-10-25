@@ -3933,18 +3933,15 @@ a.pulldown_mobile {
 
 	html.responsive .tab_item_discount .discount_pct,
 	html.responsive .tab_item_discount.no_discount .bundle_base_discount {
-		display: inline-block;
 		float: none;
 		margin-top: 0;
+        margin-right: 2px;
 	}
 
-	html.responsive .tab_item_discount:not(.no_discount) {
-		margin-top: 10px;
+	html.responsive .tab_item_discount {
+		margin-top: 19px;
 		width: auto;
-	}
-
-	html.responsive .tab_item_discount .discount_prices {
-		display: block;
+        margin-right: 4px;
 	}
 }
 
