@@ -4002,7 +4002,7 @@
         return (
           n.push(Bt(Oe.B.Featured, e)),
           n.push(Bt(Oe.B.Steam, e)),
-          w.JW.GetTimeNowWithOverride() < 1636653600 &&
+          w.JW.GetTimeNowWithOverride() < 1668160800 &&
             n.push(Bt(Oe.B.Halloween, e)),
           n
         );
