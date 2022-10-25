@@ -86911,6 +86911,10 @@ function TestLocalizeCalendarTime()
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ CreateIntersectionObserver: () =>
+            /* reexport safe */ _useresizeobserver__WEBPACK_IMPORTED_MODULE_2__.CreateIntersectionObserver,
+          /* harmony export */ CreateResizeObserver: () =>
+            /* reexport safe */ _useresizeobserver__WEBPACK_IMPORTED_MODULE_2__.CreateResizeObserver,
           /* harmony export */ MergeRefs: () =>
             /* reexport safe */ _refutils__WEBPACK_IMPORTED_MODULE_1__.MergeRefs,
           /* harmony export */ bind: () =>
@@ -87786,6 +87790,10 @@ function TestLocalizeCalendarTime()
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ CreateIntersectionObserver: () =>
+            /* binding */ CreateIntersectionObserver,
+          /* harmony export */ CreateResizeObserver: () =>
+            /* binding */ CreateResizeObserver,
           /* harmony export */ useForceUpdateOnResizeObserved: () =>
             /* binding */ useForceUpdateOnResizeObserved,
           /* harmony export */ useIntersectionObserver: () =>
@@ -87882,6 +87890,26 @@ function TestLocalizeCalendarTime()
           const forceUpdate = (0,
           _reactutils__WEBPACK_IMPORTED_MODULE_2__.useForceUpdate)();
           return useResizeObserver(forceUpdate);
+        }
+        /**
+         * Helper for legacy react components.  Creates resize observer in correct window context for observing element
+         */
+        function CreateResizeObserver(element, ...args) {
+          const ownerWindow = element.ownerDocument.defaultView;
+          const resizeObserver = new ownerWindow.ResizeObserver(...args);
+          resizeObserver.observe(element);
+          return resizeObserver;
+        }
+        /**
+         * Helper for legacy react components.  Creates intersection observer in correct window context for observing element
+         */
+        function CreateIntersectionObserver(element, ...args) {
+          const ownerWindow = element.ownerDocument.defaultView;
+          const intersectionObserver = new ownerWindow.IntersectionObserver(
+            ...args
+          );
+          intersectionObserver.observe(element);
+          return intersectionObserver;
         }
 
         /***/
@@ -89791,4 +89819,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=037901ec8982baccadd5
+//# sourceMappingURL=friends.js.map?contenthash=80577f50e4163c1b6a0f

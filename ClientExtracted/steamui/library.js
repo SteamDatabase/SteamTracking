@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7605899";
+var CLSTAMP = "7608867";
 (() => {
   var e,
     t,
@@ -6197,8 +6197,10 @@ var CLSTAMP = "7605899";
       31535: (e, t, r) => {
         "use strict";
         r.d(t, {
+          Gt: () => d,
+          it: () => u,
           dn: () => i.dn,
-          ak: () => m.a,
+          ak: () => h.a,
           L8: () => n.L8,
           B8: () => n.B8,
           k$: () => i.k$,
@@ -6212,7 +6214,7 @@ var CLSTAMP = "7605899";
           Yz: () => n.Yz,
           Sd: () => n.Sd,
           BE: () => i.BE,
-          $T: () => d,
+          $T: () => _,
           zP: () => n.zP,
           fJ: () => n.fJ,
           ww: () => i.ww,
@@ -6224,7 +6226,7 @@ var CLSTAMP = "7605899";
           KS: () => n.KS,
           J7: () => n.J7,
           B: () => n.B,
-          kc: () => u,
+          kc: () => m,
         });
         var n = r(92245),
           i = r(77993),
@@ -6262,7 +6264,15 @@ var CLSTAMP = "7605899";
         function c() {
           return l((0, n.NW)());
         }
-        function u() {
+        function u(e, ...t) {
+          const r = new e.ownerDocument.defaultView.ResizeObserver(...t);
+          return r.observe(e), r;
+        }
+        function d(e, ...t) {
+          const r = new e.ownerDocument.defaultView.IntersectionObserver(...t);
+          return r.observe(e), r;
+        }
+        function m() {
           const [e, t] = (0, s.useState)(!1),
             r = o(
               (0, s.useCallback)((e) => t(e.isIntersecting), []),
@@ -6283,7 +6293,7 @@ var CLSTAMP = "7605899";
             u = !a || "hidden" !== a.visibility;
           return { bVisible: e && u, ref: c };
         }
-        function d() {
+        function _() {
           const [e, t] = s.useState(0),
             r = s.useCallback(
               (r) => {
@@ -6294,7 +6304,7 @@ var CLSTAMP = "7605899";
             );
           return { strMinHeightStyle: e + "px", refForResizeObserver: l(r) };
         }
-        var m = r(29786);
+        var h = r(29786);
       },
       14966: (e, t, r) => {
         "use strict";
@@ -6774,9 +6784,9 @@ var CLSTAMP = "7605899";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 21 2022 : 17:35:31",
-                    BUILD_TIME_UTC: "Oct 22 2022 : 00:35:31",
-                    BUILD_RTIME_UTC: 1666398931,
+                    BUILD_TIME_LOCAL: "Oct 24 2022 : 13:55:31",
+                    BUILD_TIME_UTC: "Oct 24 2022 : 20:55:31",
+                    BUILD_RTIME_UTC: 1666644931,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -6954,7 +6964,7 @@ var CLSTAMP = "7605899";
           ),
           y = n.lazy(() =>
             Promise.all([r.e(1517), r.e(156), r.e(9462), r.e(5742)]).then(
-              r.bind(r, 56925)
+              r.bind(r, 25622)
             )
           ),
           w = document.getElementById("root"),
