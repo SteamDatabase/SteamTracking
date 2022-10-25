@@ -8714,17 +8714,21 @@
                     !!i.Body().voted_up() ||
                     (!i.Body().voted_down() && void 0));
               } else {
-                let i =
-                    m.De.COMMUNITY_BASE_URL +
-                    "ogg/" +
-                    e.appid +
-                    "/announcements/ajaxgetmyvote/" +
-                    e.AnnouncementGID,
-                  a = yield n().get(i, {
+                const i = "store" == (0, m.Zv)(),
+                  a = i
+                    ? m.De.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
+                    : m.De.COMMUNITY_BASE_URL +
+                      "ogg/" +
+                      e.appid +
+                      "/announcements/ajaxgetmyvote/" +
+                      e.AnnouncementGID,
+                  s = { gid: i ? e.AnnouncementGID : void 0 },
+                  o = yield n().get(a, {
                     withCredentials: !0,
                     cancelToken: t.token,
+                    params: s,
                   });
-                r = !!a.data.voted_up || (!a.data.voted_down && void 0);
+                r = !!o.data.voted_up || (!o.data.voted_down && void 0);
               }
               return this.m_mapAnnounceGIDToVote.set(e.AnnouncementGID, r), r;
             }
@@ -11588,7 +11592,7 @@
                   Boolean(f) &&
                     s.createElement(_.f, { info: t, className: S().Action }),
                   Boolean(!o) &&
-                    (Boolean(i)
+                    (Boolean(i && !b.BIsFree())
                       ? s.createElement(y, { fnOnPurchaseOptionsClick: a })
                       : s.createElement(p.a, {
                           info: t,
@@ -11601,8 +11605,8 @@
             : null
         );
       }
-      const y = (e) =>
-        s.createElement(
+      function y(e) {
+        return s.createElement(
           "div",
           { className: S().Action, onClick: e.fnOnPurchaseOptionsClick },
           s.createElement(
@@ -11611,6 +11615,7 @@
             (0, b.Xx)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button")
           )
         );
+      }
       function f(e) {
         const {
             storeItem: t,
@@ -12050,24 +12055,25 @@
         d = r(90666),
         c = r(60972),
         m = r.n(c);
-      const u = (e) => {
-        const t = (0, o.bJ)(),
-          r = (0, l.md)(e.url, d.De.STORE_BASE_URL);
-        if (r) {
-          const a = (0, s.Hf)(r, t);
+      function u(e) {
+        const { className: t, url: r, style: a, children: c } = e,
+          m = (0, o.bJ)(),
+          u = (0, l.md)(r, d.De.STORE_BASE_URL);
+        if (u) {
+          const e = (0, s.Hf)(u, m);
           return i.createElement(
             n.IS,
             {
-              href: a,
+              href: e,
               target: d.De.IN_CLIENT ? void 0 : "_blank",
-              className: e.className,
-              style: e.style,
+              className: t,
+              style: a,
             },
-            e.children
+            c
           );
         }
         return i.createElement(i.Fragment, null, e.children);
-      };
+      }
       function p(e) {
         const { section: t } = e;
         return t.label_link && !t.label_link_style

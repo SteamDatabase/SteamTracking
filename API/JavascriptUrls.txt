@@ -720,6 +720,7 @@ ${STORE_BASE_URL}actions/
 ${STORE_BASE_URL}actions/addappformastersubscription
 ${STORE_BASE_URL}actions/ajaxgetbadgeinfo
 ${STORE_BASE_URL}actions/ajaxgetdiscounts
+${STORE_BASE_URL}actions/ajaxgetmyannouncementvote
 ${STORE_BASE_URL}actions/ajaxgetstorecategories
 ${STORE_BASE_URL}actions/ajaxgetstoretags
 ${STORE_BASE_URL}actions/ajaxgetwatchvodtoken

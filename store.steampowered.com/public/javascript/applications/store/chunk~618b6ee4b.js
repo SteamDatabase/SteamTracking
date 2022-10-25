@@ -29092,7 +29092,7 @@
           C = null;
         if (
           t.label_link &&
-          ((y = a.createElement(d.K, { url: t.label_link }, l)),
+          ((y = a.createElement(d.K, { url: t.label_link }, v)),
           "browseall" === t.label_link_style)
         ) {
           const e = (0, m.Xx)("#Sale_SectionLink_BrowseAll");
