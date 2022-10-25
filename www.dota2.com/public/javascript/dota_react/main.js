@@ -288,6 +288,7 @@
         TeamLogo: "bracketnode_TeamLogo_9FdZ6",
         TeamName: "bracketnode_TeamName_1A0H3",
         Score: "bracketnode_Score_1d0Wi",
+        TeamsSmallerPadding: "bracketnode_TeamsSmallerPadding_3fJ0B",
         Details: "bracketnode_Details_2_SCU",
         Timestamp: "bracketnode_Timestamp_1nn90",
         Separator: "bracketnode_Separator_3xF8H",
@@ -30133,7 +30134,7 @@
               : ar.f
                   .Get()
                   .GetNodeTypeGameCount(null == n ? void 0 : n.node_type),
-            R = 115 + 30 * D,
+            R = 115 + 30 * D + (e.strBackgroundColor ? 12 : 0),
             L = B ? 1.5 * ai.OQ : ai.OQ,
             A = B ? R : ai.GJ,
             M = B ? -ai.OQ / 3 : 0,
@@ -30195,7 +30196,7 @@
                         : "#36363E",
                     },
                   },
-                  !e.strBackgroundColor && (0, E.Jr)(e.strNodeTitle),
+                  o.createElement("div", null, (0, E.Jr)(e.strNodeTitle)),
                   e.strBackgroundColor &&
                     o.createElement(pr(), {
                       className: ii().Timestamp,
@@ -30218,7 +30219,13 @@
                   { className: ii().ContentsContainer },
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(ii().Teams, B && ii().Hidden) },
+                    {
+                      className: (0, b.Z)(
+                        ii().Teams,
+                        B && ii().Hidden,
+                        e.strBackgroundColor && ii().TeamsSmallerPadding
+                      ),
+                    },
                     o.createElement(
                       "div",
                       { className: (0, b.Z)(ii().Team, c && i && ii().Winner) },
@@ -30397,7 +30404,7 @@
                 return {
                   nLeftOffset: ai.OQ + ai.Bq,
                   nWidth: 1160,
-                  nHeight: 780,
+                  nHeight: 860,
                   arrBracketNodeLocations: ai._1,
                   arrBracketNodeConnectors: ai.oJ,
                 };
@@ -30405,7 +30412,7 @@
                 return {
                   nLeftOffset: 0,
                   nWidth: 1350,
-                  nHeight: 780,
+                  nHeight: 860,
                   arrBracketNodeLocations: ai._1,
                   arrBracketNodeConnectors: ai.oJ,
                 };
@@ -64046,7 +64053,7 @@
         oJ: () => c,
       });
       var a = 150,
-        r = 80,
+        r = 90,
         i = 20,
         o = 40,
         s = [

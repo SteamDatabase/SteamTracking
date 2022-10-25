@@ -31141,6 +31141,13 @@ a {
   text-align: left;
   padding: 2px 5px;
 }
+.bracketnode_BracketNode_nYREa .bracketnode_NodeHeader_1Qtwc time {
+  font-size: 10px;
+  color: #959596;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
 .bracketnode_BracketNode_nYREa
   .bracketnode_NodeHeader_1Qtwc
   .bracketnode_Live_10DK3 {
@@ -31227,6 +31234,9 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.bracketnode_BracketNode_nYREa .bracketnode_TeamsSmallerPadding_3fJ0B {
+  padding-top: 3px;
 }
 .bracketnode_BracketNode_nYREa .bracketnode_Details_2_SCU {
   width: 100%;
