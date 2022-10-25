@@ -5430,6 +5430,14 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   color: #ffffff6b;
   font-style: italic;
 }
+@media screen and (max-width: 620px) {
+  .salepointshopsmartdisplay_RewardName_1F3Ev {
+    font-size: 14px;
+  }
+  .salepointshopsmartdisplay_RewardCtn_2iyxZ .AppCapsuleCtn {
+    top: 0px;
+  }
+}
 :root {
   --basicui-header-height: 0px;
 }

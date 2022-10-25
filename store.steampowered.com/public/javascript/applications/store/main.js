@@ -11164,6 +11164,8 @@
                                           "/points/shop/c/games",
                                         LoyaltyGiveawayRules: () =>
                                           "/points/giveawayrules",
+                                        LoyaltyEvents: (e) =>
+                                          `/points/shop/event/${e}`,
                                       }
                                     ),
                                     {

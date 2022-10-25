@@ -690,6 +690,7 @@ ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxrecentsaleevents" : "saleaction/ajaxrecenttaggedsaleevents"}
+${STORE_BASE_URL}${_ ? _ : _}
 ${STORE_BASE_URL}${image_url}
 ${STORE_BASE_URL}${logged_in ? "reservation/ajaxgetuserstate" : "reservation/ajaxgetdefaultstate"}
 ${STORE_BASE_URL}${m_strStoreURLPath}
@@ -859,6 +860,7 @@ ${STORE_BASE_URL}newshub/sale/${}
 ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}points/
+${STORE_BASE_URL}points/ajaxgeteventdetails?event_name=${}
 ${STORE_BASE_URL}points/heroimage?appid=${}
 ${STORE_BASE_URL}points/howitworks
 ${STORE_BASE_URL}points/shop/c/chateffects
