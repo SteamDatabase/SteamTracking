@@ -1427,12 +1427,24 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_SliderTrack_2htJF::before {
   content: "";
   position: absolute;
-  left: 0;
+  --normalized-fill-start: calc(
+    (100%) *
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
+  );
+  --normalized-fill-end: calc(
+    (100%) *
+      max(var(--normalized-slider-value), var(--normalized-slider-origin))
+  );
+  --normalized-width-handle: calc(
+    var(--normalized-fill-end) - var(--normalized-fill-start)
+  );
+  left: var(--normalized-fill-start);
   right: 0;
   top: 0;
   bottom: 0;
   background: var(--left-track-color);
-  transform: translateX(calc(-100% * var(--inverse-normalized-value)));
+  width: var(--normalized-width-handle);
+  border-radius: 3px;
 }
 .gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_Disabled_DE-u8
   .gamepadslider_SliderTrack_2htJF::before {
@@ -18631,6 +18643,150 @@ a {
   .battlepasspageinternational2022_Dot_n0v2W.carousel__dot--selected {
   background-color: #c79123;
 }
+.battlepasspageinternational2022_BattlePassNonBundle_N44RM {
+  width: 100%;
+  margin: 30px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  z-index: 99;
+}
+.battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU {
+  padding: 30px 0px 0px 0px;
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU
+  .battlepasspageinternational2022_NonBundleTitle_fB07n {
+  margin: 10px 0px 0px 0px;
+}
+.battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU
+  .battlepasspageinternational2022_NonBundleDesc_tsQkx {
+  margin: 20px 0px 0px 0px;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border-top: 2px solid #952e46;
+  border-bottom: 2px solid #952e46;
+  z-index: 99;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX {
+  width: 100%;
+  max-width: 1600px;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt {
+  width: 45%;
+  height: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_BattlePassIntroSmallHeader_2Bu7S {
+  width: 100%;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_BattlePassIntroTitle_n49sw {
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_BattlePassIntroDesc_3vAGt {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_NonBundleLinkDesc_AGMsk {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_ViewBlogButton_2LrvI {
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  margin-top: 40px;
+  text-shadow: none;
+  color: #fffbcd;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #ffa192;
+  letter-spacing: 1px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroTextContainer_atbLt
+  .battlepasspageinternational2022_ViewBlogButton_2LrvI:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroImgCont_1PSTk {
+  width: 55%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.battlepasspageinternational2022_BattlePassIntro_3vawA
+  .battlepasspageinternational2022_BattlePassIntroContent_9s7WX
+  .battlepasspageinternational2022_BattlePassIntroImgCont_1PSTk
+  .battlepasspageinternational2022_BattlePassIntroImg_36U5M {
+  width: 800px;
+  height: auto;
+  padding: 0px 40px 0px 40px;
+}
 .battlepasspageinternational2022_BuyBattlePassCapsule_C7Wxj {
   width: 411px;
   height: 272px;
@@ -18689,6 +18845,59 @@ a {
   cursor: pointer;
 }
 .battlepasspageinternational2022_BuyBattlePassCapsule_C7Wxj
+  .battlepasspageinternational2022_CapsulePurchaseButton_1BHQj:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH {
+  width: 411px;
+  height: 272px;
+  padding: 10px 0px 10px 0px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 5px 15px #000000d9;
+}
+.battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH
+  .battlepasspageinternational2022_CapsuleTitle_3JuCT {
+  width: 80%;
+  max-width: 370px;
+  margin: 0px;
+  padding: 0px;
+}
+.battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH
+  .battlepasspageinternational2022_CapsuleLevelBundle_2RsFD {
+  margin: 10px 0px 50px 0px;
+  padding: 0px;
+  font-size: 28px;
+  color: #9fa2a3;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0px 2px 8px #000;
+}
+.battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH
+  .battlepasspageinternational2022_CapsulePurchaseButton_1BHQj {
+  padding: 18px 40px;
+  margin: 0px 0px 5px 0px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 10px #00000057;
+  text-shadow: none;
+  color: #fffbcd;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.battlepasspageinternational2022_BuyBattlePassLevelsCapsule_3X4uH
   .battlepasspageinternational2022_CapsulePurchaseButton_1BHQj:hover {
   filter: brightness(1.2);
   transform: translateY(-2px);
@@ -55091,7 +55300,6 @@ span.partnereventshared_tooltip_Ctn_RQL5G {
   color: #fff;
 }
 .partnereventshared_SaleSectionSubtitle_1-hMZ {
-  text-transform: lowercase;
   font-size: 16px;
 }
 .partnereventshared_SaleSectionContainer_1In5l {
