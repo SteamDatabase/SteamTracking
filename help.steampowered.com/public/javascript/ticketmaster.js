@@ -1380,7 +1380,7 @@ CTextAutoComplete.prototype.TryShowPopup = function()
 	{
 		var strKey = this.m_rgSortedKeys[i];
 		strKey = strKey.substr(0, strWord.length);
-		if (strKey == strWord)
+		if (strKey.toLowerCase() == strWord.toLowerCase())
 		{
 			rgMatches.push(this.m_rgSortedKeys[i]);
 			rgMatchesContent.push( this.m_rgPlaceholders[this.m_rgSortedKeys[i]] );
