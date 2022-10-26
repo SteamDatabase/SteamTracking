@@ -16001,17 +16001,6 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            Pe().TextStyleSmallHeading,
-                            Pe().TextColorYellowGradient,
-                            Pe().BPPurchaseHeader
-                          ),
-                        },
-                        (0, E.Jr)("#battlepass_non_bundle_smallhead")
-                      ),
-                      o.createElement(
-                        "div",
-                        {
-                          className: (0, b.Z)(
                             Pe().TextStyleHeading,
                             Pe().TextColorWhite,
                             Pe().BPPurchaseTitle
