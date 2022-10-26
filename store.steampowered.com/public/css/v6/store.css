@@ -990,6 +990,7 @@ a#store_search_link img {
     flex-direction: column;
     align-items: end;
     justify-content: center;
+    padding-left: 4px;
 }
 
 
