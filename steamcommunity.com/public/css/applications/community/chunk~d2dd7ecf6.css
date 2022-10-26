@@ -2607,7 +2607,12 @@ input.clanimagepicker_SearchInput_lwt4u {
   min-width: 180px;
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: 0px 16px 0px 0px;
+  margin: 0px 8px 0px 8px;
+}
+@media screen and (max-width: 910px) {
+  .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
+    margin: 0px 16px 0px 0px;
+  }
 }
 .BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: unset;
@@ -7562,6 +7567,14 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .salepointshopsmartdisplay_RewardClass_194Jt {
   color: #ffffff6b;
   font-style: italic;
+}
+@media screen and (max-width: 620px) {
+  .salepointshopsmartdisplay_RewardName_1F3Ev {
+    font-size: 14px;
+  }
+  .salepointshopsmartdisplay_RewardCtn_2iyxZ .AppCapsuleCtn {
+    top: 0px;
+  }
 }
 .salerewardshelfdisplay_RewardContainer_10sVo {
   display: flex;

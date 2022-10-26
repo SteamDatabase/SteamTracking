@@ -593,6 +593,30 @@ function Forum_ReportPost( gidTopic, author, gidComment )
 		g_rgForumTopics[ gidTopic ].ReportPost( author, gidComment );
 }
 
+// block a user, with confirmation
+function Forum_BlockUser( author, strPersonaName )
+{
+	ShowConfirmDialog( 'Block All Communication',
+		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
+		'Yes, block them'
+	).done( function() {
+		$J.post(
+			'https://steamcommunity.com/actions/BlockUserAjax',
+			{sessionID: g_sessionID, steamid: author, block: 1 }
+		).done( function() {
+			ShowAlertDialog( 'Block All Communication',
+				'You have blocked all communications with this player.'
+			).done( function() {
+				location.reload();
+			} );
+		} ).fail( function() {
+			ShowAlertDialog( 'Block All Communication',
+				'Error processing your request. Please try again.'
+			);
+		} );
+	} );
+}
+
 function Forum_MoveTopic( gidTopic )
 {
 	if ( g_rgForumTopics[ gidTopic ] )

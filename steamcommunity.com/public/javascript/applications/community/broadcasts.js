@@ -571,7 +571,7 @@
               src: n.GetAssets().GetSmallCapsuleURL(),
             })
           ),
-          !a &&
+          Boolean(!a && !n.BIsFree()) &&
             i.createElement(
               "span",
               { className: x().AppCapsulePrice },
@@ -581,8 +581,7 @@
                   { className: R().StoreSaleDiscountBox },
                   `-${null == o ? void 0 : o.discount_pct}%`
                 ),
-              !n.BIsFree() &&
-                o.final_price_in_cents &&
+              Boolean(o.final_price_in_cents) &&
                 i.createElement(
                   "span",
                   { className: R().StoreSalePriceBox },
@@ -1469,7 +1468,7 @@
                         selectedOption: r,
                         onChange: (e) => o(e.data),
                       }),
-                      Boolean(s) && n.createElement(oe.V, null, " "),
+                      Boolean(s) && n.createElement(oe.V, null),
                       Boolean(m) &&
                         n.createElement(
                           "div",
@@ -1561,7 +1560,7 @@
                     n.createElement(
                       "div",
                       null,
-                      Boolean(t) && n.createElement(oe.V, null, " "),
+                      Boolean(t) && n.createElement(oe.V, null),
                       Boolean(r) &&
                         n.createElement(
                           "div",

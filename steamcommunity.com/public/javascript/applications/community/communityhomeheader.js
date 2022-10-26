@@ -44,6 +44,8 @@
         ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1wAwc",
         throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
         throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+        ThrobberDelayAppear: "throbber_ThrobberDelayAppear_34XSs",
+        Visible: "throbber_Visible_1ziaT",
       };
     },
     9033: (e) => {
@@ -166,60 +168,71 @@
     },
     13596: (e, r, t) => {
       "use strict";
-      t.d(r, { V: () => a });
+      t.d(r, { V: () => i });
       var o = t(67294),
-        c = t(50732),
-        n = t.n(c);
-      class a extends o.PureComponent {
-        constructor(e) {
-          super(e);
-        }
-        AddSizeClass(e) {
-          "small" == this.props.size
-            ? e.push(n().throbber_small)
-            : "medium" == this.props.size
-            ? e.push(n().throbber_medium)
-            : "xlarge" == this.props.size
-            ? e.push(n().throbber_xlarge)
-            : "xxlarge" == this.props.size
-            ? e.push(n().throbber_xxlarge)
-            : e.push(n().throbber_large);
-        }
-        render() {
-          let e = [n().LoadingWrapper, "SteamLogoThrobber"];
-          this.AddSizeClass(e),
-            void 0 === this.props.string && e.push(n().noString),
-            this.props.className && e.push(this.props.className),
-            this.props.static && e.push(n().Static);
-          let r = o.createElement(
-            "div",
-            { className: e.join(" ") },
-            o.createElement(
-              "div",
-              { className: n().Throbber },
-              o.createElement(i, { className: n().base }),
-              o.createElement(i, { className: n().blur })
-            )
-          );
-          return o.createElement(
+        c = t(7573),
+        n = t(50732),
+        a = t.n(n);
+      const i = o.memo(function (e) {
+        const {
+          className: r,
+          size: t,
+          string: n,
+          position: i,
+          static: m,
+          msDelayAppear: b,
+        } = e;
+        let u = [a().LoadingWrapper, "SteamLogoThrobber", l(t)];
+        const [h, d] = o.useState(!b);
+        return (
+          (0, o.useEffect)(() => {
+            if (h) return;
+            const e = setTimeout(() => d(!0), b);
+            return () => clearTimeout(e);
+          }, [b, h]),
+          void 0 === n && u.push(a().noString),
+          r && u.push(r),
+          m && u.push(a().Static),
+          o.createElement(
             "div",
             {
-              className:
-                "center" == this.props.position
-                  ? n().throbber_center_wrapper
-                  : "",
+              className: (0, c.Z)(
+                "center" == i && a().throbber_center_wrapper,
+                b && a().ThrobberDelayAppear,
+                h && a().Visible
+              ),
             },
-            r,
-            Boolean(this.props.string) &&
+            h &&
               o.createElement(
                 "div",
-                { className: n().ThrobberText },
-                this.props.string
-              )
-          );
+                { className: u.join(" ") },
+                o.createElement(
+                  "div",
+                  { className: a().Throbber },
+                  o.createElement(s, { className: a().base }),
+                  o.createElement(s, { className: a().blur })
+                )
+              ),
+            Boolean(n) &&
+              o.createElement("div", { className: a().ThrobberText }, n)
+          )
+        );
+      });
+      function l(e) {
+        switch (e) {
+          case "small":
+            return a().throbber_small;
+          case "medium":
+            return a().throbber_medium;
+          case "xlarge":
+            return a().throbber_xlarge;
+          case "xxlarge":
+            return a().throbber_xxlarge;
+          default:
+            return a().throbber_large;
         }
       }
-      function i(e) {
+      function s(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -238,9 +251,9 @@
             },
             o.createElement(
               "g",
-              { className: n().partCircle },
+              { className: a().partCircle },
               o.createElement("path", {
-                className: n().roundOuter,
+                className: a().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -248,7 +261,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               o.createElement("path", {
-                className: n().roundOuter,
+                className: a().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -256,7 +269,7 @@
                 d: "M201.432,101.166",
               }),
               o.createElement("path", {
-                className: n().roundOuter,
+                className: a().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -266,9 +279,9 @@
             ),
             o.createElement(
               "g",
-              { className: n().mainOutline },
+              { className: a().mainOutline },
               o.createElement("path", {
-                className: n().roundFill,
+                className: a().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -276,7 +289,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundOuterOutline,
+                className: a().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -285,7 +298,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber01,
+                className: a().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -294,7 +307,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber02,
+                className: a().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -303,7 +316,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber03,
+                className: a().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -312,7 +325,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber04,
+                className: a().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -321,7 +334,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber05,
+                className: a().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -330,7 +343,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber06,
+                className: a().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -339,7 +352,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber07,
+                className: a().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -348,7 +361,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber08,
+                className: a().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -357,7 +370,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber09,
+                className: a().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -366,7 +379,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber10,
+                className: a().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -375,7 +388,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber11,
+                className: a().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -384,7 +397,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber12,
+                className: a().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -393,7 +406,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber13,
+                className: a().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -402,7 +415,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber14,
+                className: a().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -411,7 +424,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber15,
+                className: a().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -422,7 +435,7 @@
             ),
             o.createElement(
               "g",
-              { className: n().bottomCircle },
+              { className: a().bottomCircle },
               o.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -430,7 +443,7 @@
             ),
             o.createElement(
               "g",
-              { className: n().topCircle },
+              { className: a().topCircle },
               o.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",
@@ -447,7 +460,7 @@
     },
     2840: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => C });
+      t.r(r), t.d(r, { default: () => H });
       var o = t(70655),
         c = t(67294),
         n = t(41311),
@@ -461,16 +474,16 @@
         h = t(9669),
         d = t.n(h),
         _ = t(52114);
-      var p = t(7573),
-        f = t(159),
+      var f = t(7573),
+        p = t(159),
         T = t(31933),
         k = t(78587),
         S = t(35921),
         E = t(34425),
-        H = t(71174);
+        y = t(71174);
       t(17010);
-      function C() {
-        const e = (0, H.L)(),
+      function H() {
+        const e = (0, y.L)(),
           r = (0, c.useRef)();
         return (
           (0, c.useEffect)(() => {
@@ -508,17 +521,17 @@
                   (0, n.Xx)("#Community_Home_Header_AddFriend_Button")
                 )
               ),
-              c.createElement(y, null),
+              c.createElement(C, null),
               c.createElement(M, null)
             )
           )
         );
       }
-      function y() {
+      function C() {
         const [e, r] = (0, c.useState)(""),
           [t, a] = (0, c.useState)([]),
-          [h, p] = (0, c.useState)(!1),
-          f = (function () {
+          [h, f] = (0, c.useState)(!1),
+          p = (function () {
             const e = (0, c.useMemo)(
                 () => (0, s.ip)("personalapps", "application_config") || [],
                 []
@@ -538,7 +551,7 @@
               data: { personalAppIds: e, popularAppIds: r },
             };
           })();
-        if (f.isLoading) return c.createElement(u.V, { position: "center" });
+        if (p.isLoading) return c.createElement(u.V, { position: "center" });
         return c.createElement(
           "div",
           { className: i().CommunityHomeHeaderContent },
@@ -546,12 +559,12 @@
             S.s,
             { className: i().AppHubsCtn },
             c.createElement(L, {
-              appShortcuts: f.data.personalAppIds,
+              appShortcuts: p.data.personalAppIds,
               sectionTitle: (0, n.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: f.data.popularAppIds.length > 0,
+              withDivider: p.data.popularAppIds.length > 0,
             }),
             c.createElement(L, {
-              appShortcuts: f.data.popularAppIds,
+              appShortcuts: p.data.popularAppIds,
               sectionTitle: (0, n.Xx)(
                 "#Community_Home_Header_GameHubs_Popular"
               ),
@@ -560,9 +573,9 @@
           c.createElement(
             S.s,
             {
-              onFocus: () => p(!0),
+              onFocus: () => f(!0),
               onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || p(!1);
+                e.currentTarget.contains(e.relatedTarget) || f(!1);
               },
               className: i().Search,
             },
@@ -627,18 +640,18 @@
                 "div",
                 {
                   "flow-children": "row",
-                  className: (0, p.Z)(
+                  className: (0, f.Z)(
                     i().AppHubShortcutLinks,
                     o ? i().Divider : null
                   ),
                 },
-                r.map((e, r) => c.createElement(g, { key: r, appId: e }))
+                r.map((e, r) => c.createElement(N, { key: r, appId: e }))
               )
             )
           : null;
       }
-      function g(e) {
-        const r = f.Z.Get().GetApp(e.appId);
+      function N(e) {
+        const r = p.Z.Get().GetApp(e.appId);
         return r
           ? c.createElement(
               l.IS,
@@ -653,17 +666,17 @@
             )
           : null;
       }
-      const N = "subsection",
+      const g = "subsection",
         v = "browsefilter";
       function M() {
         const e = (0, k.k6)(),
-          r = (0, T.ks)(e, N),
+          r = (0, T.ks)(e, g),
           t = (0, T.ks)(e, v);
         return c.createElement(
           "div",
           null,
           c.createElement(A, { activeTab: r, activeSort: t }),
-          c.createElement(I, { activeTab: r, activeSort: t })
+          c.createElement(w, { activeTab: r, activeSort: t })
         );
       }
       function A(e) {
@@ -709,14 +722,14 @@
                 id: e.id,
                 href: u,
                 key: e.id,
-                className: (0, p.Z)(i().Tab, a ? i().ActiveTab : null),
+                className: (0, f.Z)(i().Tab, a ? i().ActiveTab : null),
               },
               (0, n.Xx)(e.label)
             );
           })
         );
       }
-      function I(e) {
+      function w(e) {
         const { activeTab: r, activeSort: t } = e;
         return c.createElement(
           S.s,
@@ -744,7 +757,7 @@
               {
                 href: u,
                 key: e.id,
-                className: (0, p.Z)(i().Sort, a ? i().ActiveSort : null),
+                className: (0, f.Z)(i().Sort, a ? i().ActiveSort : null),
               },
               (0, n.Xx)(e.label)
             );

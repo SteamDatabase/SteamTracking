@@ -162,7 +162,12 @@
   min-width: 180px;
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: 0px 16px 0px 0px;
+  margin: 0px 8px 0px 8px;
+}
+@media screen and (max-width: 910px) {
+  .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
+    margin: 0px 16px 0px 0px;
+  }
 }
 .BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: unset;

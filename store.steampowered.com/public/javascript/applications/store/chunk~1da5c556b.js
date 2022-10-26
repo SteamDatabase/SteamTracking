@@ -133,14 +133,14 @@
         GS: () => O,
         HC: () => M,
         LW: () => L,
-        MJ: () => V,
+        MJ: () => F,
         R6: () => I,
         YC: () => U,
         aV: () => P,
         im: () => R,
-        jj: () => H,
+        jj: () => G,
         pu: () => A,
-        qy: () => G,
+        qy: () => H,
         vZ: () => T,
         zV: () => w,
       });
@@ -159,8 +159,8 @@
         h = n(95598),
         E = n(65924),
         b = n(7573),
-        y = n(41311),
-        v = n(35092),
+        v = n(41311),
+        y = n(35092),
         g = n(90666),
         f = n(49727),
         D = n(10126),
@@ -265,7 +265,7 @@
                   className: (0, b.Z)(S().Spoiler, t && S().Revealed),
                   focusable: !0,
                   onActivate: a,
-                  onOKActionDescription: (0, y.Xx)(
+                  onOKActionDescription: (0, v.Xx)(
                     t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show"
                   ),
                 },
@@ -476,7 +476,7 @@
                 i.createElement(
                   "div",
                   { className: S().ExpandSectionHeader, onClick: () => a(!n) },
-                  (0, y.Xx)(n ? o.expanded : o.collapsed),
+                  (0, v.Xx)(n ? o.expanded : o.collapsed),
                   i.createElement(
                     "div",
                     { className: S().EmbedArrow },
@@ -529,10 +529,10 @@
         ],
       ]);
       new Map([
-        ["looping_media", { Constructor: H, autocloses: !1 }],
-        ["video", { Constructor: G, autocloses: !1 }],
+        ["looping_media", { Constructor: G, autocloses: !1 }],
+        ["video", { Constructor: H, autocloses: !1 }],
         ["youtubeorvideo", { Constructor: U, autocloses: !1 }],
-        ["previewyoutube", { Constructor: V, autocloses: !1 }],
+        ["previewyoutube", { Constructor: F, autocloses: !1 }],
       ]);
       function T(e, t, n = 0) {
         const a = g.De.MEDIA_CDN_COMMUNITY_URL + "images/clans/";
@@ -557,11 +557,11 @@
       function N(e, t) {
         if (e.startsWith("steam://")) return !1;
         if (e.startsWith("/")) return !1;
-        const n = (0, v.FM)(e).toLowerCase(),
-          a = (0, v.FM)(g.De.COMMUNITY_BASE_URL).toLowerCase(),
-          i = (0, v.FM)(g.De.STORE_BASE_URL).toLowerCase(),
-          o = (0, v.FM)(g.De.HELP_BASE_URL).toLowerCase(),
-          r = (0, v.FM)(g.De.PARTNER_BASE_URL || "").toLowerCase();
+        const n = (0, y.FM)(e).toLowerCase(),
+          a = (0, y.FM)(g.De.COMMUNITY_BASE_URL).toLowerCase(),
+          i = (0, y.FM)(g.De.STORE_BASE_URL).toLowerCase(),
+          o = (0, y.FM)(g.De.HELP_BASE_URL).toLowerCase(),
+          r = (0, y.FM)(g.De.PARTNER_BASE_URL || "").toLowerCase();
         return (
           n !== a &&
           n !== i &&
@@ -624,7 +624,7 @@
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, v.XW)(t)
+            ? (0, y.XW)(t)
             : void 0;
         return i.createElement(
           s.IS,
@@ -641,7 +641,7 @@
             i.createElement(
               "div",
               { className: S().QuoteAuthor },
-              (0, y.Xx)("#Bbcode_Originally_Posted_By") + " ",
+              (0, v.Xx)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               i.createElement("b", null, t + ":")
             ),
@@ -673,7 +673,7 @@
           )
         );
       }
-      function V(e) {
+      function F(e) {
         if (g.De.EREALM === r.IN.k_ESteamRealmChina) return null;
         let t = R(e.args);
         if (t) {
@@ -698,15 +698,15 @@
         }
         return i.createElement(i.Fragment, null);
       }
-      function F(e) {
+      function V(e) {
         let t = R(e.args, "poster");
-        t && (t = (0, v.et)(t));
+        t && (t = (0, y.et)(t));
         const n = new Array();
         {
           const t = R(e.args, "mp4");
-          t && n.push({ sURL: (0, v.et)(t), sFormat: "video/mp4" });
+          t && n.push({ sURL: (0, y.et)(t), sFormat: "video/mp4" });
           const a = R(e.args, "webm");
-          a && n.push({ sURL: (0, v.et)(a), sFormat: "video/webm" });
+          a && n.push({ sURL: (0, y.et)(a), sFormat: "video/webm" });
         }
         const a = (0, o.jM)(g.De.LANGUAGE),
           i = 0 != a,
@@ -715,7 +715,7 @@
           const n = R(e.args, "sub_" + (0, r.dt)(t));
           n &&
             s.push({
-              sURL: (0, v.et)(n),
+              sURL: (0, y.et)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: i && t == a,
@@ -723,7 +723,7 @@
           const o = R(e.args, "cap_" + (0, r.dt)(t));
           o &&
             s.push({
-              sURL: (0, v.et)(o),
+              sURL: (0, y.et)(o),
               eLanguage: t,
               sKind: "captions",
               bDefault: i && t == a,
@@ -731,8 +731,8 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function H(e) {
-        const t = F(e);
+      function G(e) {
+        const t = V(e);
         return i.createElement(_.Y, {
           video: t,
           bAutoPlay: !0,
@@ -740,12 +740,12 @@
           bLoop: !0,
         });
       }
-      function G(e) {
-        const t = F(e),
+      function H(e) {
+        const t = V(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, v.et)(n), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, y.et)(n), sFormat: "video/webm" });
         const a = R(e.args, "autoplay"),
           o = "0" !== a && "off" !== a && "false" !== a,
           r = R(e.args, "controls"),
@@ -762,7 +762,7 @@
           g.De.EREALM === r.IN.k_ESteamRealmChina ||
           "CN" == g.De.COUNTRY.toLocaleUpperCase()
         )
-          return G(e);
+          return H(e);
         const t = R(e.args, "youtubeid"),
           n = R(e.args, "size"),
           a = R(e.args, "seconds");
@@ -779,12 +779,31 @@
     },
     50153: (e, t, n) => {
       "use strict";
-      n.d(t, { Mx: () => l, XC: () => s });
+      n.d(t, { Me: () => l, Mx: () => c, XC: () => d });
       var a = n(67294),
         i = (n(54698), n(37662), n(7200)),
         o = n(74163),
-        r = n(3389);
-      function s(e) {
+        r = n(3389),
+        s = n(90666);
+      function l(e, t = 0, n) {
+        const [l, d] = (0, a.useState)(i.j1.GetClanEventFromAnnouncementGID(e)),
+          c = (0, o.T)("usePartnerEventByAnnouncementGID");
+        return (
+          (0, a.useEffect)(() => {
+            if ((null == l ? void 0 : l.AnnouncementGID) != e) {
+              i.j1.Init();
+              const a = new r.K(s.JA.CLANSTEAMID);
+              i.j1
+                .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(a, e, t, n)
+                .then((e) => {
+                  e && !c.token.reason && d(e);
+                });
+            }
+          }, [e, t, n, l, c]),
+          l
+        );
+      }
+      function d(e) {
         const [t, n] = (0, a.useState)(i.j1.GetClanEventModel(e)),
           r = (0, o.T)("usePartnerEventByEventGID");
         return (
@@ -803,7 +822,7 @@
           t
         );
       }
-      function l(e, t, n) {
+      function c(e, t, n) {
         const [s, l] = (0, a.useState)(i.j1.GetClanEventModel(t)),
           d = (0, o.T)("usePartnerEventByClanAccountAndEventGID");
         return (
@@ -928,7 +947,7 @@
             classNameSize: E,
             classNameAlign: b,
           } = e,
-          [y, v] = (0, a.useState)(!n),
+          [v, y] = (0, a.useState)(!n),
           [g, f] = (0, a.useState)(!1),
           D = (0, r.T)("YouTubeInlineSnippet"),
           [S, C] = (0, a.useState)({
@@ -938,7 +957,7 @@
             views: "0",
           });
         (0, a.useEffect)(() => {
-          y &&
+          v &&
             i.A.LoadYouTubeDynamicData([t], D)
               .then((e) => {
                 !D.token.reason && e.length > 0 && (C(e[0]), f(!0));
@@ -948,20 +967,20 @@
                   "YouTubeInlineSnippet: " + (0, s.l)(e).strErrorMsg
                 )
               );
-        }, [y, D, t]);
+        }, [v, D, t]);
         const T = !1;
         if (
           (a.useEffect(() => {
             n && (0, u.m)(() => {});
           }, [n, T]),
-          y)
+          v)
         ) {
           const e = S.title,
             n = S.views,
             i = S.description;
           return a.createElement(
             "div",
-            { className: _().DynamicLinkBox, onClick: () => v(!1) },
+            { className: _().DynamicLinkBox, onClick: () => y(!1) },
             a.createElement("img", {
               className: _().DynamicLink_Preview,
               src: "https://img.youtube.com/vi/" + t + "/0.jpg",
@@ -1013,7 +1032,7 @@
     },
     50949: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => U, m: () => G });
+      n.d(t, { C: () => U, m: () => H });
       var a = n(70655),
         i = n(29323),
         o = n(30381),
@@ -1029,8 +1048,8 @@
         h = n(22188),
         E = n(90666),
         b = (n(82946), n(9669)),
-        y = n.n(b);
-      class v {
+        v = n.n(b);
+      class y {
         constructor() {
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
@@ -1081,7 +1100,7 @@
         InternalLoad() {
           return (0, a.mG)(this, void 0, void 0, function* () {
             const e = E.De.STORE_BASE_URL + "notification/ajaxusersettings",
-              t = yield y().get(e, { withCredentials: !0 });
+              t = yield v().get(e, { withCredentials: !0 });
             return (
               1 == t.data.success &&
                 (0, h.z)(() => {
@@ -1094,9 +1113,9 @@
           });
         }
       }
-      (0, a.gn)([h.LO], v.prototype, "m_bValidatedEmail", void 0),
-        (0, a.gn)([h.LO], v.prototype, "m_nMobileDeviceCount", void 0);
-      let g = new v();
+      (0, a.gn)([h.LO], y.prototype, "m_bValidatedEmail", void 0),
+        (0, a.gn)([h.LO], y.prototype, "m_nMobileDeviceCount", void 0);
+      let g = new y();
       var f = n(16156),
         D = n(48341),
         S = n(96602),
@@ -1114,10 +1133,10 @@
         P = n(77569),
         O = n.n(P),
         M = n(38600),
-        V = n(62209),
-        F = n(34133),
-        H = n(23211);
-      let G = class extends r.Component {
+        F = n(62209),
+        V = n(34133),
+        G = n(23211);
+      let H = class extends r.Component {
         constructor() {
           super(...arguments),
             (this.m_elDropDownRef = r.createRef()),
@@ -1171,7 +1190,7 @@
                     "#EventDisplay_Share_NotLoggedIn_Description"
                   ),
                   strOKButtonText: (0, w.Xx)("#MobileLogin_SignIn"),
-                  onOK: () => (0, H.Xt)(),
+                  onOK: () => (0, G.Xt)(),
                 }),
                 window
               );
@@ -1192,8 +1211,8 @@
                 bDisablePopTop: !0,
                 bMatchWidth: !0,
                 strClassName: (0, I.Z)(
-                  V.ReminderDialog,
-                  V.ReminderOptions,
+                  F.ReminderDialog,
+                  F.ReminderOptions,
                   f.contextMenu
                 ),
               };
@@ -1243,10 +1262,10 @@
             "div",
             {
               className: (0, I.Z)({
-                [V.ReminderCheckBox]: !0,
+                [F.ReminderCheckBox]: !0,
                 [O().ReminderCtn]: !0,
-                [V.IconMode]: e,
-                [V.TextMode]: !e,
+                [F.IconMode]: e,
+                [F.TextMode]: !e,
                 ReminderSet: t,
                 RemindMeWidget: !0,
               }),
@@ -1256,21 +1275,21 @@
             t &&
               r.createElement(
                 "div",
-                { className: V.RemindCheck },
+                { className: F.RemindCheck },
                 r.createElement(N.JrY, null)
               ),
             e &&
               r.createElement(
                 "div",
-                { className: V.RemindBell },
+                { className: F.RemindBell },
                 r.createElement(N.Uos, null)
               ),
             r.createElement(
               "div",
-              { className: V.ReminderDefault },
+              { className: F.ReminderDefault },
               (0, w.Xx)("#EventDisplay_Reminder_SetReminder")
             ),
-            r.createElement("div", { className: V.ReminderOptions })
+            r.createElement("div", { className: F.ReminderOptions })
           );
         }
       };
@@ -1281,17 +1300,17 @@
         if (!i) return null;
         const o = (0, s.jM)(E.De.LANGUAGE);
         return r.createElement(
-          G,
+          H,
           Object.assign({ lang: o }, n, { eventModel: i })
         );
       }
       function Y(e) {
         return o.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, a.gn)([B.ak], G.prototype, "ToggleMenu", null),
-        (0, a.gn)([B.ak], G.prototype, "ShowMenu", null),
-        (0, a.gn)([B.ak], G.prototype, "HideMenu", null),
-        (G = (0, a.gn)([i.Pi], G));
+      (0, a.gn)([B.ak], H.prototype, "ToggleMenu", null),
+        (0, a.gn)([B.ak], H.prototype, "ShowMenu", null),
+        (0, a.gn)([B.ak], H.prototype, "HideMenu", null),
+        (H = (0, a.gn)([i.Pi], H));
       let W = class extends r.Component {
         constructor() {
           super(...arguments), (this.state = { bIsRequestInFlight: !1 });
@@ -1408,8 +1427,8 @@
               "div",
               {
                 className: (0, I.Z)(
-                  V.ReminderCheckBox,
-                  a ? V.IconMode : V.TextMode,
+                  F.ReminderCheckBox,
+                  a ? F.IconMode : F.TextMode,
                   "RemindMeWidget"
                 ),
                 onClick: o,
@@ -1417,41 +1436,41 @@
               i() &&
                 r.createElement(
                   "div",
-                  { className: V.RemindCheck },
+                  { className: F.RemindCheck },
                   r.createElement(N.JrY, null)
                 ),
               a &&
                 r.createElement(
                   "div",
-                  { className: V.RemindBell },
+                  { className: F.RemindBell },
                   r.createElement(N.Uos, null)
                 ),
               r.createElement(
                 "div",
-                { className: V.ReminderDefault },
+                { className: F.ReminderDefault },
                 (0, w.Xx)("#EventDisplay_Reminder_SetReminder")
               ),
-              r.createElement("div", { className: V.ReminderOpennedOptions })
+              r.createElement("div", { className: F.ReminderOpennedOptions })
             ),
             r.createElement(
               "div",
               {
                 className: (0, I.Z)(
-                  V.FlexColumnContainer,
-                  V.ReminderBackground,
-                  n && V.ReminderExpandsLeft
+                  F.FlexColumnContainer,
+                  F.ReminderBackground,
+                  n && F.ReminderExpandsLeft
                 ),
               },
               this.state.bIsRequestInFlight &&
                 r.createElement(R.V, {
-                  className: V.RpcThrobber,
+                  className: F.RpcThrobber,
                   size: "xlarge",
                   position: "center",
                 }),
               d &&
                 r.createElement(
                   "div",
-                  { className: V.FullStartTime },
+                  { className: F.FullStartTime },
                   (0, w.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     (0, w.$1)(
@@ -1466,17 +1485,17 @@
                 ),
               r.createElement(
                 "div",
-                { className: V.ReminderOptionsHeader },
+                { className: F.ReminderOptionsHeader },
                 (0, w.Xx)("#EventDisplay_Reminder_GetNotification_Via")
               ),
               r.createElement(
                 "div",
-                { className: (0, I.Z)(V.ReminderOption, !s && V.Unverified) },
+                { className: (0, I.Z)(F.ReminderOption, !s && F.Unverified) },
                 r.createElement(
                   L.HP,
                   {
-                    className: V.CheckboxWrapper,
-                    strTooltipClassname: V.ReminderOptionTooltip,
+                    className: F.CheckboxWrapper,
+                    strTooltipClassname: F.ReminderOptionTooltip,
                     toolTipContent: (0, w.Xx)(
                       s
                         ? "#EventReminder_NotifyByEmail_ttip"
@@ -1499,7 +1518,7 @@
                 !s &&
                   r.createElement(
                     "div",
-                    { className: F.FlexColumnContainer },
+                    { className: V.FlexColumnContainer },
                     r.createElement(
                       "a",
                       {
@@ -1516,12 +1535,12 @@
               ),
               r.createElement(
                 "div",
-                { className: (0, I.Z)(V.ReminderOption, !l && V.Unverified) },
+                { className: (0, I.Z)(F.ReminderOption, !l && F.Unverified) },
                 r.createElement(
                   L.HP,
                   {
-                    className: V.CheckboxWrapper,
-                    strTooltipClassname: V.ReminderOptionTooltip,
+                    className: F.CheckboxWrapper,
+                    strTooltipClassname: F.ReminderOptionTooltip,
                     toolTipContent: (0, w.Xx)(
                       l
                         ? "#EventReminder_NotifyByMobile_ttip"
@@ -1544,7 +1563,7 @@
                 !l &&
                   r.createElement(
                     "div",
-                    { className: F.FlexColumnContainer },
+                    { className: V.FlexColumnContainer },
                     r.createElement(
                       "a",
                       {
@@ -1564,16 +1583,16 @@
                 null,
                 r.createElement(
                   "div",
-                  { className: V.ReminderOptionsHeader },
+                  { className: F.ReminderOptionsHeader },
                   (0, w.Xx)("#EventDisplay_Reminder_AddToCalendar")
                 ),
                 r.createElement(
                   "div",
-                  { className: V.ReminderCalendarOptions },
+                  { className: F.ReminderCalendarOptions },
                   r.createElement(
                     "a",
                     {
-                      className: V.ReminderOption,
+                      className: F.ReminderOption,
                       href: this.GetICSDownloadLink("ics"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarApple),
@@ -1583,7 +1602,7 @@
                   r.createElement(
                     "a",
                     {
-                      className: V.ReminderOption,
+                      className: F.ReminderOption,
                       target: E.De.IN_CLIENT ? void 0 : "_blank",
                       href: this.GetGoogleCalendarLink(),
                       onClick: () =>
@@ -1594,7 +1613,7 @@
                   r.createElement(
                     "a",
                     {
-                      className: V.ReminderOption,
+                      className: F.ReminderOption,
                       href: this.GetICSDownloadLink("outlook"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarOutlook),
@@ -1677,7 +1696,7 @@
                 type: e.sFormat,
               })
             ),
-          y = t.rgVideoTracks
+          v = t.rgVideoTracks
             ? t.rgVideoTracks.map((e) => {
                 let n = e.eLanguage;
                 if (d.De.EREALM === r.IN.k_ESteamRealmChina)
@@ -1706,7 +1725,7 @@
                 });
               })
             : null,
-          v = (function (e) {
+          y = (function (e) {
             return !(
               !(0, l.dK)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -1716,7 +1735,7 @@
             );
           })(t);
         let g;
-        (!v || (p && "public" == d.De.WEB_UNIVERSE)) && (g = "anonymous");
+        (!y || (p && "public" == d.De.WEB_UNIVERSE)) && (g = "anonymous");
         const f = u || (n && m.Get().BVolumePreferenceMuted()),
           D = t.sPoster ? E(t.sPoster) : "";
         return i.createElement(
@@ -1752,18 +1771,18 @@
             },
           },
           b,
-          y
+          v
         );
       };
     },
     96602: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => y,
+        Ai: () => v,
         H6: () => E,
         Kj: () => _,
         Zg: () => b,
-        uv: () => v,
+        uv: () => y,
         w$: () => h,
       });
       var a = n(70655),
@@ -1864,7 +1883,7 @@
             e.children
           );
         };
-      let y = class extends i.Component {
+      let v = class extends i.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
@@ -1964,8 +1983,8 @@
           );
         }
       };
-      y = (0, a.gn)([s.Pi], y);
-      let v = class extends i.Component {
+      v = (0, a.gn)([s.Pi], v);
+      let y = class extends i.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -2044,12 +2063,12 @@
               )
             ));
           let E = null;
-          const y = _ ? t - s : t - e;
-          if (y <= d._H.PerDay) {
+          const v = _ ? t - s : t - e;
+          if (v <= d._H.PerDay) {
             const e = i.createElement(
               "div",
               { className: a.ShortDateAndTime },
-              (0, r.yW)(y, !0)
+              (0, r.yW)(v, !0)
             );
             E =
               t < s
@@ -2090,11 +2109,11 @@
               )
             );
           }
-          const v = i.createElement(b, { rtFullDate: t, stylesmodule: a }, E);
-          return i.createElement("div", { className: a.ShortDateRange }, p, v);
+          const y = i.createElement(b, { rtFullDate: t, stylesmodule: a }, E);
+          return i.createElement("div", { className: a.ShortDateRange }, p, y);
         }
       };
-      v = (0, a.gn)([s.Pi], v);
+      y = (0, a.gn)([s.Pi], y);
     },
     90844: (e, t, n) => {
       "use strict";

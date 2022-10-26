@@ -13263,61 +13263,62 @@
       })();
       function Pa(A) {
         const { cm: e, instance: t } = A,
-          [n, o] = i.useState(Ta),
-          a = i.useCallback(() => o(!1), []);
-        (0, u.KS)(a, 3e4, []);
-        const r = (0, Un.rZ)(),
-          l = (0, Na.dh)(ya.Z);
-        let c = s.i_.EBrowserType_DirectHWND_Borderless,
-          g = { width: 1280, height: 800, left: 0, top: 0 };
+          n = Vn.De.ON_DECK ? ya.Z : null,
+          o = (0, Un.rZ)(),
+          a = (0, Na.dh)(n),
+          [r, l] = i.useState(Ta && null != n),
+          c = i.useCallback(() => l(!1), []);
+        (0, u.KS)(c, 3e4, []);
+        let g = s.i_.EBrowserType_DirectHWND_Borderless,
+          d = { width: 1280, height: 800, left: 0, top: 0 };
         (Vn.De.ON_DECK && "linux" === Vn.De.PLATFORM) ||
-          ((c = s.i_.EBrowserType_DirectHWND), (g.left = 10), (g.top = 30));
-        let d = Ga;
-        Vn.De.GAMEPADUI_WINDOWED || (d |= Mt.eL.FullScreen);
-        const { popup: m, element: C } = ka("SP", t, {
+          ((g = s.i_.EBrowserType_DirectHWND), (d.left = 10), (d.top = 30));
+        let m = Ga;
+        Vn.De.GAMEPADUI_WINDOWED || (m |= Mt.eL.FullScreen);
+        const { popup: C, element: E } = ka("SP", t, {
           title: "SP",
-          dimensions: g,
+          dimensions: d,
           replace_existing_popup: !1,
           target_browser: t.params.browserInfo,
-          browserType: c,
-          eCreationFlags: d,
+          browserType: g,
+          eCreationFlags: m,
         });
         if (
           (i.useEffect(() => {
-            m &&
-              (m.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed &&
-                m.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!0),
-              m.SteamClient.Browser.NotifyUserActivation());
+            C &&
+              (C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed &&
+                C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(!0),
+              C.SteamClient.Browser.NotifyUserActivation());
           }, [
-            m,
-            null == m
+            C,
+            null == C
               ? void 0
-              : m.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed,
+              : C.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed,
           ]),
-          !C)
+          !E)
         )
           return null;
-        if (r.isLoading || l.isLoading) return null;
-        let E = r.isSuccess && r.data.bIsOverride ? r : l;
+        if (n && (o.isLoading || a.isLoading)) return null;
+        let I = o.isSuccess && o.data.bIsOverride ? o : a;
         return Ne.createPortal(
           i.createElement(
             Ma,
-            { ownerWindow: m, instance: A.instance },
+            { ownerWindow: C, instance: A.instance },
             i.createElement(Qa.x, {
-              bPlayingMovie: n,
-              strOverrideStartupMovie: E.data.strUrl,
-              bFullscreenVideo: E.data.bIsOverride,
-              onVideoComplete: a,
-              onVideoError: a,
+              bPlayingMovie: r,
+              strOverrideStartupMovie: I.data.strUrl,
+              bFullscreenVideo: I.data.bIsOverride,
+              onVideoComplete: c,
+              onVideoError: c,
             }),
             i.createElement(AN, {
               cm: e,
               mode: U.iZ.Full,
-              bPlayingStartupMovie: n,
-              fnCancelStartupMove: a,
+              bPlayingStartupMovie: r,
+              fnCancelStartupMove: c,
             })
           ),
-          C
+          E
         );
       }
       function Fa(A) {
@@ -26323,23 +26324,28 @@
           e = (0, r.df)(),
           t = nA._A.BControllerConfigCloudConflict,
           n = !nA._A.BControllerConfigCloudSyncPending,
-          [o, a] = i.useState(!1);
+          [o, a] = i.useState(!1),
+          c = (0, Mt.Wy)(),
+          s = (null == c ? void 0 : c.ownerWindow) || window;
         return (
           i.useEffect(() => {
             t &&
               !o &&
               (a(!0),
-              (0, vs.Np)({
-                bOnAppLaunch: !0,
-                appid: tA.qu,
-                onCancel: () => Rn.g4.NavigateBack(),
-                keepLocal: () => nA._A.ResolveControllerConfig(!0),
-                keepRemote: () => {
-                  nA._A.ResolveControllerConfig(!1), Rn.g4.NavigateBack();
+              (0, vs.Np)(
+                {
+                  bOnAppLaunch: !0,
+                  appid: tA.qu,
+                  onCancel: () => Rn.g4.NavigateBack(),
+                  keepLocal: () => nA._A.ResolveControllerConfig(!0),
+                  keepRemote: () => {
+                    nA._A.ResolveControllerConfig(!1), Rn.g4.NavigateBack();
+                  },
+                  onOK: () => Rn.g4.NavigateBack(),
                 },
-                onOK: () => Rn.g4.NavigateBack(),
-              }));
-          }, [A, e, n, t, o]),
+                s
+              ));
+          }, [A, e, n, t, o, s]),
           i.createElement(
             X.s,
             { className: Vl.ControllerConfiguratorBackgroundContainer },
@@ -27335,7 +27341,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1666644931),
+          d = parseInt(1666715224),
           m = d && Hg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, ig.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -38200,9 +38206,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Oct 24 2022 : 13:55:31",
-              BUILD_TIME_UTC: "Oct 24 2022 : 20:55:31",
-              BUILD_RTIME_UTC: 1666644931,
+              BUILD_TIME_LOCAL: "Oct 25 2022 : 09:27:04",
+              BUILD_TIME_UTC: "Oct 25 2022 : 16:27:04",
+              BUILD_RTIME_UTC: 1666715224,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -46305,11 +46311,12 @@
       }
       function sb(A) {
         let { movie: e, bSelected: t } = A,
-          n = ab(e.image_large),
-          o = ab(e.movie_webm);
+          n = 0 != e.communityitemid.length,
+          o = n ? ab(e.image_large) : null,
+          a = n ? ab(e.movie_webm) : e.movie_webm;
         return i.createElement(lb, {
-          strImageURL: n,
-          strMovieURL: o,
+          strImageURL: o,
+          strMovieURL: a,
           onActivate: () => {
             Un.Pg.SetStartupMovie(e);
           },
@@ -46319,7 +46326,37 @@
       }
       function gb(A) {
         const e = (0, Un._v)(),
-          t = (0, m.SZ)(() => Un.Pg.GetStartupMovies());
+          t = (0, Un.rZ)(),
+          n = (0, m.SZ)(() => Un.Pg.GetStartupMovies()),
+          o = i.useCallback(
+            (A) =>
+              0 != A.communityitemid.length
+                ? e.isSuccess && e.data == A.communityitemid
+                : A.movie_webm == t.data.strUrl,
+            [e, t]
+          ),
+          a = i.useCallback(
+            (A) => {
+              let e =
+                0 != A.communityitemid.length
+                  ? (0, I.Xx)(
+                      "#Settings_Customization_StartupVideo_Type_PointsShop"
+                    )
+                  : (0, I.Xx)(
+                      "#Settings_Customization_StartupVideo_Type_Local"
+                    );
+              return o(A)
+                ? i.createElement(
+                    i.Fragment,
+                    null,
+                    e,
+                    i.createElement("br", null),
+                    (0, I.Xx)("#Settings_Customization_StartupVideo_Current")
+                  )
+                : e;
+            },
+            [o]
+          );
         return i.createElement(
           X.s,
           null,
@@ -46339,21 +46376,11 @@
             },
             i.createElement(cb, { bSelected: e.isSuccess && null == e.data })
           ),
-          t.map((A, t) =>
+          n.map((A, e) =>
             i.createElement(
               l.VC,
-              {
-                key: t,
-                label: A.item_title,
-                description:
-                  e.isSuccess && e.data == A.communityitemid
-                    ? (0, I.Xx)("#Settings_Customization_StartupVideo_Current")
-                    : null,
-              },
-              i.createElement(sb, {
-                movie: A,
-                bSelected: e.isSuccess && e.data == A.communityitemid,
-              })
+              { key: e, label: A.item_title, description: a(A) },
+              i.createElement(sb, { movie: A, bSelected: o(A) })
             )
           )
         );

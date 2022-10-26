@@ -3128,7 +3128,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   min-width: 180px;
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: 0px 16px 0px 0px;
+  margin: 0px 8px 0px 8px;
+}
+@media screen and (max-width: 910px) {
+  .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
+    margin: 0px 16px 0px 0px;
+  }
 }
 .BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: unset;
@@ -5721,7 +5726,12 @@ html.tablet
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 16px 0 0;
+  margin: 8px;
+}
+@media screen and (max-width: 910px) {
+  .contenthubshared_SpotlightsColumn_1g97e {
+    margin: 0 16px 0 0;
+  }
 }
 .contenthubshared_SpotlightsColumn_1g97e .CapsuleBottomBar {
   height: 54px;

@@ -12854,21 +12854,6 @@ A:active {
   .newloginpanel_QRSection_Hdqev
   .newloginpanel_UseMobileAppForQR_lG0sA
   .newloginpanel_TextLink_2Ocpi {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  color: #b8bcbf;
   text-decoration: underline;
 }
 .newloginpanel_Login_1sc-B .newloginpanel_TextField_yHtrP {
@@ -13072,9 +13057,12 @@ A:active {
 .newloginpanel_Login_1sc-B .newloginpanel_TextLink_2Ocpi:hover {
   color: #c9c9c9;
 }
+.newloginpanel_Login_1sc-B .newloginpanel_TextLink_2Ocpi.gpfocus {
+  color: #fff;
+}
 .newloginpanel_Login_1sc-B .newloginpanel_FormError_106wj {
   color: #c15755;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
 }
@@ -13171,6 +13159,11 @@ A:active {
   color: #b8bcbf;
   text-decoration: underline;
   font-weight: 500;
+}
+.newloginpanel_Login_1sc-B
+  .newloginpanel_LinkContainer_3qxJ5
+  .newloginpanel_TextLink_2Ocpi.gpfocus {
+  color: #fff;
 }
 .newloginpanel_Login_1sc-B .newloginpanel_EnterCodeInsteadLink_1sxov {
   font-size: 12px;
@@ -13482,7 +13475,6 @@ A:active {
   width: 100%;
 }
 .newloginpanel_LoginContainer_3_1Il .DialogTwoColLayout > * {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

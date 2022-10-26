@@ -288,10 +288,7 @@
           ) {
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              (this.m_observer = new IntersectionObserver(
-                this.OnIntersection,
-                e
-              ));
+              (this.m_observer = (0, n.Gt)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -7745,9 +7742,9 @@
         E = a(73604),
         W = a(93320),
         F = a.n(W),
-        O = a(22188),
-        R = (a(27394), a(13679)),
-        N = a.n(R),
+        R = a(22188),
+        O = (a(27394), a(13679)),
+        N = a.n(O),
         L = a(3389),
         H = a(2388),
         V = a(34133),
@@ -7774,7 +7771,7 @@
                   const o = new Set(),
                     i = t.GetSortedTokenList();
                   return (
-                    (0, O.z)(() => {
+                    (0, R.z)(() => {
                       a.forEach((a) => {
                         let s = !1;
                         i.forEach((o) => {
@@ -8991,8 +8988,8 @@
             )
           );
         };
-      var Oe = a(49165);
-      const Re = (0, s.Pi)((e) => {
+      var Re = a(49165);
+      const Oe = (0, s.Pi)((e) => {
           var t, a, o, i, s;
           const { draft: r, eLanguage: l } = e,
             p = r.GetFAQID(),
@@ -9037,25 +9034,25 @@
             null,
             n.createElement(
               "div",
-              { className: Oe.LeftMenu },
+              { className: Re.LeftMenu },
               n.createElement(
                 "div",
-                { className: Oe.Section },
+                { className: Re.Section },
                 n.createElement(
                   "div",
-                  { className: Oe.SectionTitle },
+                  { className: Re.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_VisibilityColumn"),
                   " "
                 ),
                 n.createElement(
                   "div",
-                  { className: Oe.SectionContents },
+                  { className: Re.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Oe.VisibilityCtn },
+                    { className: Re.VisibilityCtn },
                     n.createElement(
                       "div",
-                      { className: (0, y.Z)(Oe.StatusRow, Oe.Global) },
+                      { className: (0, y.Z)(Re.StatusRow, Re.Global) },
                       (0, z.Xx)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       n.createElement(Se, {
@@ -9064,7 +9061,7 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: (0, y.Z)(Oe.StatusRow, Oe.China) },
+                      { className: (0, y.Z)(Re.StatusRow, Re.China) },
                       (0, z.Xx)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       n.createElement(Se, {
@@ -9073,27 +9070,27 @@
                     ),
                     n.createElement(
                       "div",
-                      { className: Oe.StatusBtnCtn },
+                      { className: Re.StatusBtnCtn },
                       n.createElement(We, { draft: r })
                     )
                   ),
                   n.createElement(
                     "div",
-                    { className: Oe.PublishCtn },
+                    { className: Re.PublishCtn },
                     m
                       ? n.createElement(
                           "div",
-                          { className: Oe.PublishStatus },
+                          { className: Re.PublishStatus },
                           (0, z.Xx)("#FAQStatus_DraftVersionsDesc")
                         )
                       : n.createElement(
                           "div",
-                          { className: Oe.PublishStatus },
+                          { className: Re.PublishStatus },
                           (0, z.Xx)("#FAQStatus_NothingToPublish")
                         ),
                     n.createElement(
                       "div",
-                      { className: Oe.PublishBtn },
+                      { className: Re.PublishBtn },
                       n.createElement(ze, { draft: r, bDisabled: !m })
                     )
                   )
@@ -9101,29 +9098,29 @@
               ),
               n.createElement(
                 "div",
-                { className: Oe.Section },
+                { className: Re.Section },
                 n.createElement(
                   "div",
-                  { className: Oe.SectionTitle },
+                  { className: Re.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_LocalizationSection"),
                   " "
                 ),
                 n.createElement(
                   "div",
-                  { className: Oe.SectionContents },
+                  { className: Re.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Oe.SectionDescription },
+                    { className: Re.SectionDescription },
                     (0, z.Xx)("#FAQDashboard_LocalizationSectionDesc")
                   ),
                   n.createElement(J, { draft: r, eLanguage: l })
                 ),
                 n.createElement(
                   "div",
-                  { className: Oe.SectionContents },
+                  { className: Re.SectionContents },
                   n.createElement(
                     "div",
-                    { className: Oe.SectionDescription },
+                    { className: Re.SectionDescription },
                     (0, z.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc")
                   ),
                   n.createElement(Z, { draft: r })
@@ -9131,15 +9128,15 @@
               ),
               n.createElement(
                 "div",
-                { className: Oe.Section },
+                { className: Re.Section },
                 n.createElement(
                   "div",
-                  { className: Oe.SectionTitle },
+                  { className: Re.SectionTitle },
                   (0, z.Xx)("#FAQStatus_LocalizedVersionStatusHeader")
                 ),
                 n.createElement(
                   "table",
-                  { className: Oe.FaqStatusTable },
+                  { className: Re.FaqStatusTable },
                   n.createElement(
                     "thead",
                     null,
@@ -9164,7 +9161,7 @@
               ),
               n.createElement(
                 "div",
-                { className: Oe.Section },
+                { className: Re.Section },
                 n.createElement(qe, { draft: r })
               )
             )
@@ -9521,7 +9518,7 @@
               n.createElement(
                 "div",
                 { className: De().FAQMenuCtn },
-                n.createElement(Re, { draft: a, eLanguage: s })
+                n.createElement(Oe, { draft: a, eLanguage: s })
               ),
               n.createElement(
                 "div",

@@ -1313,7 +1313,12 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .SaleSectionCarouselPadding .salepreviewwidgets_CapsuleContainer_1-sO3 {
-  margin: 0px 16px 0px 0px;
+  margin: 0px 8px 0px 8px;
+}
+@media screen and (max-width: 910px) {
+  .SaleSectionCarouselPadding .salepreviewwidgets_CapsuleContainer_1-sO3 {
+    margin: 0px 16px 0px 0px;
+  }
 }
 .salepreviewwidgets_EventRow_3tDFI {
   padding: 4px;

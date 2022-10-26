@@ -9,8 +9,8 @@
       var n = r(70655),
         s = r(22188),
         o = (r(26149), r(49186), r(54698), r(3389)),
-        i = (r(55546), r(5525)),
-        a = r(7200);
+        a = (r(55546), r(5525)),
+        i = r(7200);
       class d {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
@@ -27,15 +27,15 @@
             const n = t.exec(e);
             if (null === n) break;
             const s = n[1],
-              i = n[2],
-              a = d.GetBBCodeParam(s, "steamid"),
+              a = n[2],
+              i = d.GetBBCodeParam(s, "steamid"),
               c = {
-                steamID: a ? new o.K(a) : void 0,
+                steamID: i ? new o.K(i) : void 0,
                 name: d.GetBBCodeParam(s, "name"),
                 title: d.GetBBCodeParam(s, "title"),
                 company: d.GetBBCodeParam(s, "company"),
                 photo: d.GetBBCodeParam(s, "photo"),
-                bio: i,
+                bio: a,
               };
             r.push(c);
           }
@@ -70,12 +70,12 @@
         }
         BuildBroadcasterSteamIDToActiveEventMap(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = i.JW.GetTimeNowWithOverride(),
+            const t = a.JW.GetTimeNowWithOverride(),
               r = e.GetCalendarItemsInTimeRange(t - 3600, t);
             for (const e of r.rgCalendarItems)
-              a.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+              i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
             const n = r.rgCalendarItems.map((e) =>
-                a.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
                   0
@@ -164,12 +164,12 @@
       const c = new d();
     },
     15396: (e, t, r) => {
-      r.d(t, { Y: () => a });
+      r.d(t, { Y: () => i });
       var n = r(70655),
         s = r(67294),
         o = r(64839),
-        i = r(54452);
-      class a extends s.Component {
+        a = r(54452);
+      class i extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -205,7 +205,7 @@
               placeholderWidth: t,
               placeholderHeight: r,
               onRender: o,
-              style: a,
+              style: i,
               mode: d,
             } = e,
             c = (0, n._T)(e, [
@@ -216,19 +216,19 @@
               "mode",
             ]),
             l = this.state.bRenderChildren;
-          let m = a;
+          let m = i;
           if (!l) {
             const e = this.state.nPrevRenderWidth || t,
               n = this.state.nPrevRenderHeight || r;
             (void 0 === n && void 0 === e) ||
-              (m = Object.assign(Object.assign({}, a), {
+              (m = Object.assign(Object.assign({}, i), {
                 minHeight: n,
                 minWidth: e,
               }));
           }
           const h = this.BLoadAndUnload() ? "repeated" : "once";
           return s.createElement(
-            i.U,
+            a.U,
             Object.assign({ ref: this.m_refContainer, style: m }, c, {
               onVisibilityChange: this.OnVisibilityChange,
               trigger: h,
@@ -237,15 +237,15 @@
           );
         }
       }
-      (0, n.gn)([o.ak], a.prototype, "OnVisibilityChange", null);
+      (0, n.gn)([o.ak], i.prototype, "OnVisibilityChange", null);
     },
     54452: (e, t, r) => {
-      r.d(t, { U: () => a });
+      r.d(t, { U: () => i });
       var n = r(70655),
         s = r(67294),
         o = r(53622),
-        i = r(64839);
-      class a extends s.Component {
+        a = r(64839);
+      class i extends s.Component {
         constructor() {
           super(...arguments),
             (this.m_observer = null),
@@ -295,10 +295,7 @@
           ) {
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              (this.m_observer = new IntersectionObserver(
-                this.OnIntersection,
-                e
-              ));
+              (this.m_observer = (0, a.Gt)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -313,7 +310,7 @@
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(a.GetScrollableClassname())
+              !!e.classList.contains(i.GetScrollableClassname())
             );
           });
         }
@@ -335,9 +332,9 @@
               onVisibilityChange: t,
               rootMargin: r,
               trigger: o,
-              bHorizontal: i,
+              bHorizontal: a,
             } = e,
-            a = (0, n._T)(e, [
+            i = (0, n._T)(e, [
               "onVisibilityChange",
               "rootMargin",
               "trigger",
@@ -345,12 +342,12 @@
             ]);
           return s.createElement(
             "div",
-            Object.assign({ ref: this.m_refElement }, a),
+            Object.assign({ ref: this.m_refElement }, i),
             this.props.children
           );
         }
       }
-      (0, n.gn)([i.ak], a.prototype, "OnIntersection", null);
+      (0, n.gn)([a.ak], i.prototype, "OnIntersection", null);
     },
     11539: (e, t, r) => {
       r.d(t, { h: () => o });

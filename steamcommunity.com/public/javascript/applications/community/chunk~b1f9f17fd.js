@@ -37,11 +37,7 @@
         SpotlightWeeklongTextCtn:
           "contenthubshared_SpotlightWeeklongTextCtn_4Hq08",
         SpotlightItemCount: "contenthubshared_SpotlightItemCount_2-5Ew",
-        DiscountBlock: "contenthubshared_DiscountBlock_tnGNQ",
-        DiscountPercent: "contenthubshared_DiscountPercent_ZqOva",
-        Prices: "contenthubshared_Prices_vPuz8",
-        OriginalPrice: "contenthubshared_OriginalPrice_3hBh3",
-        FinalPrice: "contenthubshared_FinalPrice_F_tGv",
+        BottomBarPriceInfo: "contenthubshared_BottomBarPriceInfo_10UCX",
         BroadcastPage: "contenthubshared_BroadcastPage_2u01c",
         BroadcastCtn: "contenthubshared_BroadcastCtn_3WaND",
         BroadcastImageCtn: "contenthubshared_BroadcastImageCtn_1MlNi",
@@ -7894,10 +7890,14 @@
               { className: W.SpotlightTextCtn },
               n.createElement("div", { className: W.SpotlightTitle }, t.title),
               n.createElement("div", { className: W.SpotlightBody }, t.body),
-              n.createElement(fe, {
-                discountBlock: t.discount_block,
-                bIsSalePage: t.is_sale_page,
-              })
+              n.createElement(
+                "div",
+                { className: W.BottomBarPriceInfo },
+                n.createElement(fe, {
+                  discountBlock: t.discount_block,
+                  bIsSalePage: t.is_sale_page,
+                })
+              )
             )
           );
         },
@@ -7910,10 +7910,15 @@
                 : null == t.discount_min || t.discount_min <= 0
                 ? n.createElement(
                     "div",
-                    { className: W.DiscountBlock },
+                    {
+                      className: (0, D.Z)(
+                        ge().StoreSalePriceWidgetContainer,
+                        ge().Discounted
+                      ),
+                    },
                     n.createElement(
                       "div",
-                      { className: W.DiscountPercent },
+                      { className: ge().StoreSaleDiscountBox },
                       "Up to -",
                       t.discount_max,
                       "%"
@@ -7921,18 +7926,23 @@
                   )
                 : n.createElement(
                     "div",
-                    { className: W.DiscountBlock },
+                    {
+                      className: (0, D.Z)(
+                        ge().StoreSalePriceWidgetContainer,
+                        ge().Discounted
+                      ),
+                    },
                     t.discount_min === t.discount_max
                       ? n.createElement(
                           "div",
-                          { className: W.DiscountPercent },
+                          { className: ge().StoreSaleDiscountBox },
                           "-",
                           t.discount_min,
                           "%"
                         )
                       : n.createElement(
                           "div",
-                          { className: W.DiscountPercent },
+                          { className: ge().StoreSaleDiscountBox },
                           "-",
                           t.discount_min,
                           " - ",
@@ -7957,38 +7967,43 @@
               : null != t.discount_percent && t.discount_percent > 0
               ? n.createElement(
                   "div",
-                  { className: W.DiscountBlock },
+                  {
+                    className: (0, D.Z)(
+                      ge().StoreSalePriceWidgetContainer,
+                      ge().Discounted
+                    ),
+                  },
                   n.createElement(
                     "div",
-                    { className: W.DiscountPercent },
+                    { className: ge().StoreSaleDiscountBox },
                     "-",
                     t.discount_percent,
                     "%"
                   ),
                   n.createElement(
                     "div",
-                    { className: W.Prices },
+                    { className: ge().StoreSaleDiscountedPriceCtn },
                     n.createElement(
                       "div",
-                      { className: W.OriginalPrice },
+                      { className: ge().StoreOriginalPrice },
                       t.orig_price
                     ),
                     n.createElement(
                       "div",
-                      { className: W.FinalPrice },
+                      { className: ge().StoreSalePriceBox },
                       t.final_price
                     )
                   )
                 )
               : n.createElement(
                   "div",
-                  { className: W.DiscountBlock },
+                  { className: (0, D.Z)(ge().StoreSalePriceWidgetContainer) },
                   n.createElement(
                     "div",
-                    { className: W.Prices },
+                    { className: ge().StoreSaleDiscountedPriceCtn },
                     n.createElement(
                       "div",
-                      { className: W.FinalPrice },
+                      { className: ge().StoreSalePriceBox },
                       t.final_price
                     )
                   )
@@ -9368,6 +9383,7 @@
         if ("events" == a.section_type) {
           if (!i) return null;
           if (!t.BUsesContentHubForItemSource()) return null;
+          if (!a.smart_section) return null;
           r = G.De.STORE_BASE_URL + "news/" + i;
         } else
           "sale_events" == a.section_type &&
@@ -12136,7 +12152,7 @@
             i = Oa((0, h.tT)(V), t, e.capsules.length);
           i < t && V.smart_section && (e.nShowAdditionalRows -= t - i);
           let { content: o, bAdditionalContent: l } = (0, h.Rs)(e);
-          if (((W = o), (W && l && V.cap_section_content) || S)) {
+          if (((W = o), (W && l) || S)) {
             const t = Pa(V, _),
               a = Oa((0, h.tT)(V), t, e.capsules.length) < t;
             W = n.createElement(
@@ -12157,6 +12173,7 @@
                       string: (0, x.Xx)("#Loading"),
                     })
                   : !a &&
+                      V.cap_section_content &&
                       n.createElement(
                         $.wl,
                         {
@@ -25396,14 +25413,10 @@
                   d.createElement(
                     "option",
                     { key: "CallToActionThrobber" },
-                    d.createElement(
-                      E.V,
-                      {
-                        string: (0, v.Xx)("#EventEmail_LoadingDLC"),
-                        size: "small",
-                      },
-                      " "
-                    )
+                    d.createElement(E.V, {
+                      string: (0, v.Xx)("#EventEmail_LoadingDLC"),
+                      size: "small",
+                    })
                   )
                 )
               : this.state.dlcs.forEach((t) => {

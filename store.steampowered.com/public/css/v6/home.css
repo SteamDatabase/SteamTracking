@@ -148,6 +148,7 @@ html.responsive .fullscreen-bg__video_mobile {
 
 a.gutter_item {
 	display: block;
+	width: fit-content;
 	color: #c7d5e0;
 	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;

@@ -1314,6 +1314,13 @@
   width: 240px;
   height: 240px;
 }
+.throbber_ThrobberDelayAppear_34XSs {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
+  opacity: 1;
+}
 .qrlogin_LoginQR_1wtS3 {
   position: relative;
   width: calc(200px - 2.5em);
@@ -1322,6 +1329,14 @@
   border-color: #fff;
   border-width: 1.25em;
   border-radius: 0.625em;
+}
+.qrlogin_LoginQR_1wtS3.qrlogin_QRLoginDeck_3pzmh {
+  width: 8em;
+  height: 8em;
+  padding: 1em;
+  border-color: #23262e;
+  border-radius: 0;
+  background-color: #fff;
 }
 .qrlogin_LoginQR_1wtS3.qrlogin_Blur_3j1v- {
   filter: blur(5px);

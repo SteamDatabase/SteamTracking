@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7610897";
+var CLSTAMP = "7612700";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7610897";
     i,
     s,
     r = {
-      65943: (e, t, n) => {
+      86314: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7610897";
         }
         Object.create;
         Object.create;
-        n(14478);
+        n(59043);
         var r = n(87363),
           o = n(61533);
         function a(e) {
@@ -756,7 +756,7 @@ var CLSTAMP = "7610897";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(H || (H = {}));
         var V, z, q;
-        n(88124);
+        n(8134);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1323,7 +1323,7 @@ var CLSTAMP = "7610897";
           }
         }
         var pe = n(42238);
-        n(19892);
+        n(35944);
         class fe extends _e {
           BIsExpired() {
             return Ee.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1691,7 +1691,7 @@ var CLSTAMP = "7610897";
             });
           });
       },
-      6087: (e, t, n) => {
+      77990: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1858,7 +1858,7 @@ var CLSTAMP = "7610897";
               };
         }
       },
-      14478: (e, t, n) => {
+      59043: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1981,7 +1981,7 @@ var CLSTAMP = "7610897";
           "./shared_norwegian.json": [65115, 4108],
           "./shared_polish.json": [35330, 3252],
           "./shared_portuguese.json": [37943, 5849],
-          "./shared_romanian.json": [16520, 4823],
+          "./shared_romanian.json": [79486, 4823],
           "./shared_russian.json": [56532, 9062],
           "./shared_sc_schinese.json": [86735, 2029],
           "./shared_schinese.json": [88804, 2537],
@@ -2026,7 +2026,7 @@ var CLSTAMP = "7610897";
           "./shared_norwegian.json": [65115, 4108],
           "./shared_polish.json": [35330, 3252],
           "./shared_portuguese.json": [37943, 5849],
-          "./shared_romanian.json": [16520, 4823],
+          "./shared_romanian.json": [79486, 4823],
           "./shared_russian.json": [56532, 9062],
           "./shared_sc_schinese.json": [86735, 2029],
           "./shared_schinese.json": [88804, 2537],
@@ -2185,66 +2185,66 @@ var CLSTAMP = "7610897";
       }[e] +
       ".js?contenthash=" +
       {
-        699: "b4ea570016c8a43308be",
-        1162: "888561c4b16417586f14",
-        1313: "ee82750fc0d2add1ee5a",
-        1471: "3e16505fbe7dbc6bb6a5",
-        1635: "d0fb212646ef8bb5b05f",
+        699: "9d8f9cccec56cb1ced25",
+        1162: "d7510abc6dd378bc9975",
+        1313: "260b2ae8efdd7db4baee",
+        1471: "ed406064863809d562ba",
+        1635: "de571c2eefa9c2acae63",
         2029: "4e0c023f0b10c2b1a44f",
         2431: "cbd2760e1ccf9ea63610",
-        2443: "6433b75e36230e7d8829",
-        2537: "fe3c45c737a2dfd98b08",
-        2822: "e47f632abdf184379a92",
-        2844: "25a5bbdbdd2bf1602622",
-        2862: "303ac22c0eb5d6fdd9d9",
-        2913: "760e6e788afa5dae6593",
-        3112: "05ccac317832b8b8695f",
+        2443: "15d67fb70ba740ffa546",
+        2537: "fdae6b0352572bdc483c",
+        2822: "68ba7ea44de5e54d160a",
+        2844: "f2acbd7032fd072f7ac8",
+        2862: "c255389d2daafb10d760",
+        2913: "e3d449631cc79836e068",
+        3112: "4eaef50898879cc9fe57",
         3140: "c270affe4fba5daf7515",
-        3182: "5a9e7fffc307b786e9fe",
-        3252: "58f5fe84d8998cbc3e83",
-        3471: "e9e521dc40692466ecac",
-        3500: "e5e146367ac73a6cae16",
-        3557: "32b8210c8c60b63d37a6",
-        4108: "358e8c8ff1062ca5c86d",
-        4189: "832faa4c8906a28209c9",
-        4264: "271efc825d559e7c0c9e",
-        4297: "f3cdb4c6bac1554ff2be",
-        4448: "4a8c329c9773447c00b7",
-        4596: "aa256702a90a3bba8981",
-        4716: "c5e4c878e7efaf91dfc8",
-        4823: "e3fc913a0de84ea2f710",
-        4964: "ae29eea64626a0eac1c0",
-        4989: "b3d2f53f7317e3d3869e",
-        5438: "acc9fd367a483d377610",
-        5625: "c0523cbc94f336fe8f08",
-        5632: "a415fa5b45989e850bf1",
-        5802: "8f64087807c7b78d4ec5",
-        5849: "4466216e2001f220c1e8",
-        5925: "c736730f868aa630e229",
-        5933: "6e37227c46b362499da3",
-        5948: "0946507e0e510a361efd",
-        6007: "17c17777634f2a632fa1",
-        6492: "b5a2834faf5478eed330",
-        6542: "eae9d584f6e1a273bb35",
-        6727: "82ab501de6b4db6dfd16",
-        6986: "0977e8ac65a8f08a48f9",
+        3182: "1784d0d5822eab7ec19f",
+        3252: "364c7a5204442a754f36",
+        3471: "ef1a891fa603de8db221",
+        3500: "c79697a9b12173d1651f",
+        3557: "97785c158f01b117c485",
+        4108: "3fac791b8ead19da2b60",
+        4189: "abb592a4c600c3823e14",
+        4264: "75cfa7b6abfbb48d413a",
+        4297: "6f04a0f5bd0ba3c237cf",
+        4448: "2a4a09de873dd118f73b",
+        4596: "761e9f7b3fca1af058d8",
+        4716: "e2c9d09a34da46a5b1f4",
+        4823: "0efe9da73b448425a0e0",
+        4964: "439862ff03a9b0fa9c6f",
+        4989: "5ba7127b4eed5ed984a7",
+        5438: "e550c9c30cf95aa4a4a4",
+        5625: "b55e1544bc90ccb17135",
+        5632: "f4bce4f3fd7f2ebe507a",
+        5802: "0945683045263555dd34",
+        5849: "de70b9881d07efbc0027",
+        5925: "653fb553df12cd28199c",
+        5933: "c6de6d60afc9702c5514",
+        5948: "26eea5239405ad6b4cb5",
+        6007: "335a65c64dad5748b3bd",
+        6492: "d6b2eea02a6b87c62c0a",
+        6542: "081f8fdaae6ba0ed6298",
+        6727: "f325b7ea43c7f86df913",
+        6986: "0b738d9d3bf6d078681a",
         6992: "6fe9e58c28cba14f3d5b",
-        7340: "764daa1cc39a67cfa2f8",
-        7575: "72ad17f9a7a3b5f525ca",
-        7602: "c569987e8eb8886626fa",
-        7651: "a3fa12a146caaf8df6ed",
-        7706: "4beafe5ac6c01eeab0a4",
-        7781: "cb4eb4094d50fe1c55ae",
-        7975: "df2b2ffa4ac71331c2d2",
+        7340: "bf81b697e6b24339b9bb",
+        7575: "612dae0fed50a4a395d8",
+        7602: "0af12fd6aa62e09d48ce",
+        7651: "e4963d1211a5e685a7bc",
+        7706: "d365fab0ca9a88819335",
+        7781: "562ba9baf48c314607fc",
+        7975: "fd688773caea1f146923",
         8247: "26221f1b1d2b0e222912",
-        8385: "98a3cc9beff65da802b0",
-        8518: "6a2210a54e1c17800228",
-        8815: "2fdeff4ff094b62c9bf7",
-        9062: "ebd68d7d982e7e48e04c",
-        9263: "c289dff10c6a6a4c3c19",
-        9753: "0a8a47a9ac0006ab3e6d",
-        9775: "ab570ce7ac0bb97482cf",
-        9818: "3eea8746855c7f3d5f10",
+        8385: "a9b834641c07375ae5ca",
+        8518: "941d24d799178eb55859",
+        8815: "59cf1041aa1db8225057",
+        9062: "916ed8099edde2dc53fd",
+        9263: "3c699a76b274f4306e28",
+        9753: "125572d8dfc33a4fe353",
+        9775: "c4711e6b95caf69a1029",
+        9818: "f1b5a37d6a32a151f8a8",
       }[e]),
     (a.miniCssF = (e) => {}),
     (a.g = (function () {
@@ -2378,6 +2378,6 @@ var CLSTAMP = "7610897";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(65943));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(86314));
   c = a.O(c);
 })();

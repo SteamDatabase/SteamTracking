@@ -1752,6 +1752,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   font-size: 25px;
   padding: 1px 5px;
   height: 100%;
+  box-sizing: border-box;
 }
 .BasicUI
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
@@ -2282,6 +2283,15 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 .BasicUI .salepreviewwidgets_StoreSaleWidgetRight_1lRFu {
   padding: 12px 16px;
 }
+@media screen and (max-width: 910px) {
+  .salepreviewwidgets_StoreSaleWidgetRight_1lRFu.salepreviewwidgets_Bundle_1k4up {
+    padding: 8px 3px 0px 12px;
+  }
+  .salepreviewwidgets_StoreSaleWidgetRight_1lRFu.salepreviewwidgets_Bundle_1k4up
+    .salepreviewwidgets_BundleContentPreview_1mH6d {
+    width: 98%;
+  }
+}
 .salepreviewwidgets_StoreSaleWidgetRight_1lRFu
   .salepreviewwidgets_TitleCtn_1F4bc {
   display: flex;
@@ -2407,8 +2417,6 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   padding: 0 3px;
   line-height: normal;
-  background: var(--gpColor-Green);
-  color: #fff;
   border-radius: 1px;
 }
 .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0.salepreviewwidgets_SingleLineMode_31Sy5
@@ -2420,7 +2428,6 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   .salepreviewwidgets_StoreSalePriceBox_Wh0L8 {
   padding: 0;
   line-height: normal;
-  color: #fff;
 }
 .BasicUI .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0 {
   min-height: unset;
@@ -2455,6 +2462,9 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   flex-direction: column;
 }
 @media screen and (max-width: 910px) {
+  .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
+    position: relative;
+  }
   .salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91
     .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
     .salepreviewwidgets_Action_3Af0S,
@@ -2492,8 +2502,8 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .BasicUI .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ {
   padding: unset;
@@ -2505,7 +2515,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   padding: 0px;
   line-height: 16px;
   font-size: 15px;
-  color: #cbf240;
+  color: #beee11;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 .BasicUI
@@ -2517,14 +2527,16 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   color: #fff;
 }
 .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
   line-height: 16px;
   padding: 4px 8px;
+  height: 100%;
+  box-sizing: border-box;
   color: #beee11;
   display: flex;
   align-items: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background: #4c6b22;
 }
 .BasicUI .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   font-weight: 400;
@@ -2552,10 +2564,11 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   position: absolute;
   top: 50%;
   border-bottom: 1px solid #b2b5bb;
+  transform: skewY(-15deg);
 }
 .salepreviewwidgets_StoreOriginalPrice_1EKGZ {
-  color: #b2b5bb;
-  font-size: 10px;
+  color: #738895;
+  font-size: 11px;
   letter-spacing: 1px;
   line-height: 11px;
   margin-top: 2px;
@@ -2576,7 +2589,8 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   right: 0px;
   position: absolute;
   top: 40%;
-  border-bottom: 1px solid darkred;
+  border-bottom: 1px solid #738895;
+  box-shadow: 0 0 2px #000;
   transform: skewY(-15deg);
 }
 .BasicUI .salepreviewwidgets_StoreOriginalPrice_1EKGZ::before {
@@ -2601,9 +2615,15 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   color: var(--gpColor-GreenHi);
 }
 .salepreviewwidgets_Discounted_35-Ub {
-  margin: 0 6px 0 0;
+  margin: 0;
   display: flex;
   align-items: center;
+  background: #344654;
+}
+@media screen and (max-width: 910px) {
+  .salepreviewwidgets_Discounted_35-Ub {
+    margin-right: 0;
+  }
 }
 .salepreviewwidgets_Discounted_35-Ub .salepreviewwidgets_BaseDiscount_Kxr-3 {
   padding: 6px;
@@ -2626,7 +2646,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   right: 6px;
   position: absolute;
   top: 50%;
-  border-bottom: 1.5px solid darkred;
+  border-bottom: 1.5px solid #738895;
   transform: skewY(-25deg);
 }
 .BasicUI
@@ -2691,7 +2711,12 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 .SaleSectionCarouselPadding .salepreviewwidgets_CapsuleContainer_1-sO3 {
-  margin: 0px 16px 0px 0px;
+  margin: 0px 8px 0px 8px;
+}
+@media screen and (max-width: 910px) {
+  .SaleSectionCarouselPadding .salepreviewwidgets_CapsuleContainer_1-sO3 {
+    margin: 0px 16px 0px 0px;
+  }
 }
 .salepreviewwidgets_EventRow_3tDFI {
   padding: 4px;
@@ -4123,11 +4148,6 @@ html.touch
   width: 100%;
   max-width: 550px;
   margin-bottom: 4px;
-}
-@media screen and (max-width: 560px) {
-  .salepreviewwidgets_BundleContentPreview_1mH6d {
-    margin-bottom: 18px;
-  }
 }
 .salepreviewwidgets_BundleContentPreview_1mH6d
   .salepreviewwidgets_ContentsCount_1SkQs {

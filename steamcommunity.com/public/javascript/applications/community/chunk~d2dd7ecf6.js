@@ -5754,7 +5754,7 @@
               src: n.GetAssets().GetSmallCapsuleURL(),
             })
           ),
-          !a &&
+          Boolean(!a && !n.BIsFree()) &&
             s.createElement(
               "span",
               { className: B().AppCapsulePrice },
@@ -5764,8 +5764,7 @@
                   { className: F().StoreSaleDiscountBox },
                   `-${null == r ? void 0 : r.discount_pct}%`
                 ),
-              !n.BIsFree() &&
-                r.final_price_in_cents &&
+              Boolean(r.final_price_in_cents) &&
                 s.createElement(
                   "span",
                   { className: F().StoreSalePriceBox },
@@ -9439,7 +9438,7 @@
           C = null;
         if (
           t.label_link &&
-          ((b = n.createElement(d.K, { url: t.label_link }, s)),
+          ((b = n.createElement(d.K, { url: t.label_link }, h)),
           "browseall" === t.label_link_style)
         ) {
           const e = (0, m.Xx)("#Sale_SectionLink_BrowseAll");
@@ -9777,7 +9776,7 @@
               );
             }
             return n.length > 0 && e.push(n), e;
-          }, [o, s, l]);
+          }, [t, a, o, s, l]);
         return d && !S.L7.logged_in
           ? null
           : i.createElement(
@@ -11895,9 +11894,10 @@
         v = a(39746),
         S = (a(21205), a(7573)),
         E = a(58985),
-        y = a(41311);
-      const b = (e) => {
-          const t = ((a = e.category), f[a] || p.z5E);
+        y = a(41311),
+        b = a(90666);
+      const f = (e) => {
+          const t = ((a = e.category), C[a] || p.z5E);
           var a;
           return r.createElement(
             "div",
@@ -11906,13 +11906,12 @@
             r.createElement(t, { className: E.SteamDeckCompatIcon })
           );
         },
-        f = { 1: p.vyu, 2: p.KKY, 3: p.YVI, 0: p.z5E };
-      var C = a(67833),
-        T = a(39388),
-        I = (a(26149), a(58114)),
-        D = a(65902),
-        w = a(65497),
-        x = a(90666);
+        C = { 1: p.vyu, 2: p.KKY, 3: p.YVI, 0: p.z5E };
+      var T = a(67833),
+        I = a(39388),
+        D = (a(26149), a(58114)),
+        w = a(65902),
+        x = a(65497);
       class A {
         constructor() {
           (this.m_transport = void 0),
@@ -11935,14 +11934,14 @@
                 864e5 *
                   Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
                 this.m_dateSaleStart.getTime(),
-              n = I.gA.Init(w.GZ);
-            let i = yield w.Ts.GetNumTradingCardsEarned(this.m_transport, n),
+              n = D.gA.Init(x.GZ);
+            let i = yield x.Ts.GetNumTradingCardsEarned(this.m_transport, n),
               r = i.GetEResult();
             return 1 !== r
               ? ((e.eresult = r), e)
               : ((e.earned_lifetime = i.Body().num_trading_cards()),
                 n.Body().set_timestamp_start(a / 1e3),
-                (i = yield w.Ts.GetNumTradingCardsEarned(this.m_transport, n)),
+                (i = yield x.Ts.GetNumTradingCardsEarned(this.m_transport, n)),
                 (r = i.GetEResult()),
                 1 != r
                   ? ((e.eresult = r), e)
@@ -11955,17 +11954,17 @@
           return (
             A.s_Singleton ||
               ((A.s_Singleton = new A()),
-              "dev" == x.De.WEB_UNIVERSE &&
+              "dev" == b.De.WEB_UNIVERSE &&
                 (window.g_SeasonalSaleStore = A.s_Singleton)),
             A.s_Singleton
           );
         }
         LazyInitTransport() {
           if (!this.m_transport) {
-            const e = (0, x.kQ)("loyalty_webapi_token", "application_config");
+            const e = (0, b.kQ)("loyalty_webapi_token", "application_config");
             "string" == typeof e
-              ? (this.m_transport = new D.J(
-                  x.De.WEBAPI_BASE_URL,
+              ? (this.m_transport = new w.J(
+                  b.De.WEBAPI_BASE_URL,
                   e
                 ).GetServiceTransport())
               : console.error("CSeasonalSaleStore failed to load webapi token");
@@ -12007,7 +12006,6 @@
             (this.m_refContainer = r.createRef()),
             (this.m_refGrid = void 0),
             (this.m_refGridElement = void 0),
-            (this.m_resizeObserver = new ResizeObserver(this.OnResize)),
             (this.m_scrollAnimation = null),
             (this.m_mapRefs = new Map()),
             (this.m_iStart = 0),
@@ -12249,7 +12247,10 @@
         }
         componentDidMount() {
           this.m_refContainer.current &&
-            (this.m_resizeObserver.observe(this.m_refContainer.current),
+            ((this.m_resizeObserver = (0, F.it)(
+              this.m_refContainer.current,
+              this.OnResize
+            )),
             V(
               "componentDidMount Setting width to",
               this.m_refContainer.current.clientWidth
@@ -12264,7 +12265,10 @@
             this.m_refGrid.recomputeGridSize());
         }
         componentWillUnmount() {
-          this.m_resizeObserver.disconnect();
+          var e;
+          null === (e = this.m_resizeObserver) ||
+            void 0 === e ||
+            e.disconnect();
         }
         OnResize() {
           const e = this.m_refContainer.current.clientWidth;
@@ -12451,7 +12455,7 @@
                   scrollToAlignment: this.alignment,
                   scrollToColumn: c,
                   tabIndex: null,
-                  autoHeight: !x.De.IN_GAMEPADUI,
+                  autoHeight: !b.De.IN_GAMEPADUI,
                 })
             )
           );
@@ -12537,7 +12541,7 @@
         });
       }
       const ue = (e) =>
-        x.De.IN_STEAMUI
+        b.De.IN_STEAMUI
           ? r.createElement(g.O, null, e.children)
           : r.createElement(
               Q.Pv,
@@ -12555,10 +12559,10 @@
           } = e,
           [u, m] = r.useState([]),
           [g, h] = r.useState(1),
-          [E, b] = r.useState(800),
-          [f, C] = r.useState("DiscoveryQueue"),
-          [T, I] = r.useState(!0),
-          [D, w] = r.useState(!1),
+          [E, f] = r.useState(800),
+          [C, T] = r.useState("DiscoveryQueue"),
+          [I, D] = r.useState(!0),
+          [w, x] = r.useState(!1),
           [A, k] = r.useState(!1),
           M = r.useRef(),
           G = (0, Y.T)("DiscoveryQueueWizard");
@@ -12578,7 +12582,7 @@
                 1400,
                 window.innerWidth / 1.3 - 2 * L - 48 + 220
               );
-              b(t);
+              f(t);
             },
             [L]
           ),
@@ -12618,10 +12622,10 @@
         r.useEffect(() => {
           X(!0).then(() => k(!0)),
             c.jg.Get().HintLoad(),
-            C(
+            T(
               (() => {
                 const e = Math.floor(1e6 * Math.random());
-                return `DiscoveryQueue_${x.L7.accountid}_${e}`;
+                return `DiscoveryQueue_${b.L7.accountid}_${e}`;
               })()
             ),
             B();
@@ -12695,7 +12699,7 @@
             [t, z, u, g, R, i, X, P]
           ),
           Z = r.useCallback((e, t) => {
-            x.De.IN_GAMEPADUI || (w(e), I(t));
+            b.De.IN_GAMEPADUI || (x(e), D(t));
           }, []),
           q = r.useCallback((e) => 1 !== u[e], [u]),
           te = r.useCallback(
@@ -12766,7 +12770,7 @@
                         "flow-children": "row",
                         className: (0, S.Z)(
                           re().TopBarCtn,
-                          x.De.IN_GAMEPADUI && re().TopMargin
+                          b.De.IN_GAMEPADUI && re().TopMargin
                         ),
                       },
                       r.createElement(
@@ -12776,7 +12780,7 @@
                           "#DiscoveryQueue_LearnMore_Default",
                           r.createElement(_.IS, {
                             className: re().LearnMoreLink,
-                            href: ge(x.De.STORE_BASE_URL + "explore"),
+                            href: ge(b.De.STORE_BASE_URL + "explore"),
                           })
                         )
                       ),
@@ -12815,13 +12819,13 @@
                           className: (0, S.Z)(
                             re().QueueNavArrow,
                             re().LeftArrow,
-                            D && re().Enable
+                            w && re().Enable
                           ),
                         },
                         r.createElement(p.BKy, { angle: 180 })
                       ),
                       r.createElement(W, {
-                        name: f,
+                        name: C,
                         className: re().DiscoveryQueueCarousel,
                         ref: M,
                         fnDoesItemTakeFocus: q,
@@ -12849,12 +12853,12 @@
                           className: (0, S.Z)(
                             re().QueueNavArrow,
                             re().RightArrow,
-                            T && re().Enable
+                            I && re().Enable
                           ),
                         },
                         r.createElement(p.BKy, { angle: 0 })
                       ),
-                      !x.De.IN_GAMEPADUI &&
+                      !b.De.IN_GAMEPADUI &&
                         r.createElement(
                           o.s,
                           { "flow-children": "row" },
@@ -12876,7 +12880,7 @@
                           r.createElement(_.IS, {
                             className: re().LearnMoreLink,
                             href: ge(
-                              x.De.COMMUNITY_BASE_URL +
+                              b.De.COMMUNITY_BASE_URL +
                                 "groups/SteamLabs/discussions/17/"
                             ),
                           })
@@ -12903,59 +12907,60 @@
             bShowMinimizedDisplay: h,
           } = e,
           [v] = (0, u.vs)(t, ce),
-          E = (0, T.nQ)(null == v ? void 0 : v.GetAppID()),
-          f = (0, i.SZ)(() => c.jg.Get().BIsGameWishlisted(t)),
-          C = (0, i.SZ)(() => c.jg.Get().BIsGameIgnored(t)),
-          I = (0, M.Eq)(null == v ? void 0 : v.GetTagIDs()),
-          D = x.De.IN_GAMEPADUI,
-          w = (0, J.bJ)(),
-          A = r.useMemo(() => (0, ee.Pf)(g), [g]),
-          L = r.useMemo(() => "?inqueue=" + _ + (g ? "_" + A : ""), [_, g, A]),
-          O = r.useCallback(() => {
-            window.location.href = ge(v.GetStorePageURL() + L, w);
-          }, [v]),
+          E = (0, I.nQ)(null == v ? void 0 : v.GetAppID()),
+          C = (0, i.SZ)(() => c.jg.Get().BIsGameWishlisted(t)),
+          T = (0, i.SZ)(() => c.jg.Get().BIsGameIgnored(t)),
+          D = (0, M.Eq)(null == v ? void 0 : v.GetTagIDs()),
+          w = b.De.IN_GAMEPADUI,
+          x = (0, J.bJ)(),
+          A = b.De.ON_DECK && b.De.IN_GAMEPADUI,
+          L = r.useMemo(() => (0, ee.Pf)(g), [g]),
+          O = r.useMemo(() => "?inqueue=" + _ + (g ? "_" + L : ""), [_, g, L]),
           F = r.useCallback(() => {
-            c.jg.Get().UpdateAppIgnore(v.GetAppID(), !C);
-          }, [C]);
+            window.location.href = ge(v.GetStorePageURL() + O, x);
+          }, [v]),
+          R = r.useCallback(() => {
+            c.jg.Get().UpdateAppIgnore(v.GetAppID(), !T);
+          }, [T]);
         if (!v)
           return console.warn("Error: missing store item for appid ", t), null;
         r.useEffect(() => {
           oe("Index Focused: ", d, " Focus? ", m), m && s(d);
         }, [m]);
-        const R = { width: n || void 0, height: a || void 0 },
-          P = () => {
+        const P = { width: n || void 0, height: a || void 0 },
+          X = () => {
             c.jg
               .Get()
-              .UpdateGameWishlist(t, !f, se)
+              .UpdateGameWishlist(t, !C, se)
               .then((e) => {
                 e && e.success;
               });
           },
-          X = v.GetAssets().GetLibraryCapsuleURL();
+          j = v.GetAssets().GetLibraryCapsuleURL();
         return r.createElement(
           o.s,
           {
             focusable: !0,
-            style: R,
+            style: P,
             onFocus: () => s(d),
             className: (0, S.Z)(re().DiscoveryQueueApp, m && re().Focused),
-            onOptionsActionDescription: f
+            onOptionsActionDescription: C
               ? (0, y.Xx)("#DiscoveryQueue_RemoveFromWishlist")
               : (0, y.Xx)("#DiscoveryQueue_AddToWishlist"),
-            onOptionsButton: P,
+            onOptionsButton: X,
             onOKActionDescription: (0, y.Xx)("#DiscoveryQueue_ViewStorePage"),
-            onOKButton: O,
-            onSecondaryActionDescription: C
+            onOKButton: F,
+            onSecondaryActionDescription: T
               ? (0, y.Xx)("#DiscoveryQueue_Undo")
               : (0, y.Xx)("#DiscoveryQueue_IgnoreLink"),
-            onSecondaryButton: F,
+            onSecondaryButton: R,
           },
           r.createElement(
             "div",
-            { className: (0, S.Z)(re().IgnoredCtn, C && re().Active) },
+            { className: (0, S.Z)(re().IgnoredCtn, T && re().Active) },
             r.createElement(
               "div",
-              { className: (0, S.Z)(re().IgnoredInfo, C && re().Active) },
+              { className: (0, S.Z)(re().IgnoredInfo, T && re().Active) },
               r.createElement(
                 "div",
                 { className: re().IgnoredTitle },
@@ -12970,9 +12975,9 @@
                 o.s,
                 {
                   className: (0, S.Z)(re().QueueButton, re().UndoIgnoreButton),
-                  onClick: F,
+                  onClick: R,
                 },
-                x.De.IN_GAMEPADUI &&
+                b.De.IN_GAMEPADUI &&
                   r.createElement(N.VC, {
                     button: te.FX.X,
                     type: N.yV.Light,
@@ -12987,11 +12992,11 @@
             { className: re().AppVideoCtn },
             r.createElement(
               "div",
-              { className: (0, S.Z)(re().WishlistBadge, f && re().Active) },
+              { className: (0, S.Z)(re().WishlistBadge, C && re().Active) },
               (0, y.Xx)("#Sale_OnWishlist")
             ),
-            x.De.IN_GAMEPADUI &&
-              r.createElement(b, {
+            A &&
+              r.createElement(f, {
                 className: re().DeckVerifiedLogo,
                 category: v.GetPlatforms().steam_deck_compat_category,
               }),
@@ -12999,7 +13004,7 @@
               key: t,
               storeItem: v,
               bCurrentlyActive: m,
-              bMainCapOnly: C,
+              bMainCapOnly: T,
               autoplayCheckboxPosition: "top",
             })
           ),
@@ -13012,10 +13017,10 @@
               r.createElement(
                 "div",
                 { className: re().AppDetailsHeader },
-                X &&
+                j &&
                   r.createElement("img", {
                     className: re().AppLibraryHero,
-                    src: X,
+                    src: j,
                   }),
                 r.createElement(
                   "div",
@@ -13031,7 +13036,7 @@
                   })
                 )
               ),
-              r.createElement(_e, { rgTagNames: I }),
+              r.createElement(_e, { rgTagNames: D }),
               r.createElement(
                 "div",
                 { className: re().AppReviews },
@@ -13052,7 +13057,7 @@
                 })
               )
             ),
-            !x.De.IN_GAMEPADUI &&
+            !b.De.IN_GAMEPADUI &&
               r.createElement(
                 "div",
                 { className: re().AppActionButtonsCtn },
@@ -13075,9 +13080,9 @@
                     "a",
                     {
                       className: (0, S.Z)(re().QueueButton, re().Primary),
-                      href: ge(v.GetStorePageURL() + L, w),
+                      href: ge(v.GetStorePageURL() + O, x),
                     },
-                    D &&
+                    w &&
                       r.createElement(N.VC, {
                         button: te.FX.Y,
                         type: N.yV.Light,
@@ -13095,9 +13100,9 @@
                       {
                         focusable: !0,
                         className: re().QueueButton,
-                        onClick: P,
+                        onClick: X,
                       },
-                      D &&
+                      w &&
                         r.createElement(N.VC, {
                           button: te.FX.Y,
                           type: N.yV.Light,
@@ -13105,7 +13110,7 @@
                           additionalClassName: re().YGlyph,
                         }),
                       " ",
-                      f
+                      C
                         ? (0, y.Xx)("#DiscoveryQueue_RemoveFromWishlist")
                         : (0, y.Xx)("#DiscoveryQueue_AddToWishlist")
                     ),
@@ -13114,7 +13119,7 @@
                       {
                         focusable: !0,
                         className: re().QueueButton,
-                        onClick: F,
+                        onClick: R,
                       },
                       (0, y.Xx)("#DiscoveryQueue_IgnoreLink")
                     )
@@ -13151,8 +13156,8 @@
         );
       }
       function ge(e, t) {
-        const a = (0, C.B1)(e, t);
-        return x.De.IN_GAMEPADUI ? "steam://openurl/" + a : a;
+        const a = (0, T.B1)(e, t);
+        return b.De.IN_GAMEPADUI ? "steam://openurl/" + a : a;
       }
       function he(e) {
         var t;
@@ -13170,17 +13175,17 @@
           } = e,
           g = { width: n || void 0, height: a || void 0 },
           [v, E] = r.useState(),
-          b = d && null == v;
+          f = d && null == v;
         r.useEffect(() => {
-          b &&
+          f &&
             c.jg
               .Get()
               .HintLoad()
               .then(() => {
                 ee.Wb.Get().LoadSkippedApps(i, m).then(E);
               });
-        }, [b, i, m]);
-        const f = r.useMemo(
+        }, [f, i, m]);
+        const C = r.useMemo(
             () =>
               (null == v
                 ? void 0
@@ -13190,7 +13195,7 @@
                   )) || 0,
             [v]
           ),
-          C = r.useMemo(
+          T = r.useMemo(
             () =>
               (null == v
                 ? void 0
@@ -13200,17 +13205,17 @@
                   )) || 0,
             [v]
           ),
-          [T, I] = r.useState(!1),
-          D = (0, J.bJ)(),
-          w = (0, ee.hc)(i, m),
+          [I, D] = r.useState(!1),
+          w = (0, J.bJ)(),
+          x = (0, ee.hc)(i, m),
           k = (0, Y.T)("DiscoveryQueueSummary"),
           M = r.useCallback(() => {
-            I(!0),
+            D(!0),
               u(!1).then(() => {
                 var e;
                 (null === (e = null == k ? void 0 : k.token) || void 0 === e
                   ? void 0
-                  : e.reason) || I(!0);
+                  : e.reason) || D(!0);
               });
           }, [
             null === (t = null == k ? void 0 : k.token) || void 0 === t
@@ -13231,7 +13236,7 @@
               "#DiscoveryQueue_ViewWishlist"
             ),
             onOptionsButton: () => {
-              window.location.href = ge(x.De.STORE_BASE_URL + "wishlist", D);
+              window.location.href = ge(b.De.STORE_BASE_URL + "wishlist", w);
             },
             onOKActionDescription: (0, y.Xx)("#Button_Continue"),
             onOKButton: M,
@@ -13284,13 +13289,13 @@
                 r.createElement(
                   "div",
                   { className: re().GridNumber },
-                  f.toLocaleString()
+                  C.toLocaleString()
                 ),
                 r.createElement(
                   "a",
                   {
                     className: (0, S.Z)(re().GridSubTitle, re().TextLink),
-                    href: ge(x.De.STORE_BASE_URL + "wishlist", D),
+                    href: ge(b.De.STORE_BASE_URL + "wishlist", w),
                   },
                   (0, y.Xx)("#DiscoveryQueue_ViewWishlist")
                 )
@@ -13306,19 +13311,19 @@
                 r.createElement(
                   "div",
                   { className: re().GridNumber },
-                  C.toLocaleString()
+                  T.toLocaleString()
                 ),
                 r.createElement(
                   "a",
                   {
                     className: (0, S.Z)(re().GridSubTitle, re().TextLink),
-                    href: ge(x.De.STORE_BASE_URL + "account/notinterested", D),
+                    href: ge(b.De.STORE_BASE_URL + "account/notinterested", w),
                   },
                   (0, y.Xx)("#DiscoveryQueue_ViewIgnored")
                 )
               )
             ),
-            !x.De.IN_GAMEPADUI &&
+            !b.De.IN_GAMEPADUI &&
               r.createElement(
                 o.s,
                 { className: re().SummaryActionButtonsCtn },
@@ -13330,23 +13335,23 @@
                   },
                   (0, y.Xx)("#ActionButtonLabelDone")
                 ),
-                !w &&
+                !x &&
                   r.createElement(
                     o.s,
                     {
                       className: (0, S.Z)(
-                        T && re().Disabled,
+                        I && re().Disabled,
                         re().QueueButton,
                         re().Primary,
                         re().Wide
                       ),
                       onClick: M,
                     },
-                    T ? (0, y.Xx)("#Loading") : (0, y.Xx)("#Button_Continue")
+                    I ? (0, y.Xx)("#Loading") : (0, y.Xx)("#Button_Continue")
                   )
               )
           ),
-          Boolean(!w) &&
+          Boolean(!x) &&
             r.createElement(
               r.Fragment,
               null,
@@ -13371,7 +13376,7 @@
               });
         }, [t, a]);
         const l = (0, J.bJ)(),
-          s = ge(x.De.STORE_BASE_URL + "sale/summersaletradingcards", l);
+          s = ge(b.De.STORE_BASE_URL + "sale/summersaletradingcards", l);
         return i
           ? r.createElement(
               o.s,
@@ -13379,7 +13384,7 @@
               r.createElement("img", {
                 className: re().TradingCardImage,
                 src:
-                  x.De.MEDIA_CDN_URL +
+                  b.De.MEDIA_CDN_URL +
                   "store/promo/summer2022/card_stack.png?v-1",
               }),
               r.createElement(
@@ -13432,11 +13437,11 @@
         let [u, _] = (0, r.useState)([]);
         const [g, h] = (0, r.useState)(!1),
           [v, E] = (0, r.useState)(!1),
-          [b, f] = (0, r.useState)(!x.De.IN_GAMEPADUI),
-          C = r.useRef(),
-          T = r.useRef(0),
-          I = r.useRef(performance.now()),
-          [D, w] = (0, r.useState)([]),
+          [f, C] = (0, r.useState)(!b.De.IN_GAMEPADUI),
+          T = r.useRef(),
+          I = r.useRef(0),
+          D = r.useRef(performance.now()),
+          [w, x] = (0, r.useState)([]),
           A = (0, Y.T)("DiscoveryQueueWidget"),
           k = (0, ee.hc)(a, i);
         let M = (function (e) {
@@ -13452,15 +13457,15 @@
             { reactQuery: { enabled: e, staleTime: 1 / 0 } }
           );
           return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
-        })(!x.L7.logged_in);
-        u || x.L7.logged_in || (u = M),
+        })(!b.L7.logged_in);
+        u || b.L7.logged_in || (u = M),
           r.useEffect(() => {
             v ||
               (() => {
                 (0, n.mG)(this, void 0, void 0, function* () {
                   var e, t, n;
                   let l = !1;
-                  if (x.L7.logged_in && !u.length) {
+                  if (b.L7.logged_in && !u.length) {
                     const { appids: t, exhausted: n } =
                       yield ee.Wb.Get().GetDiscoveryQueueAppsOfType(a, !0, i);
                     (null === (e = null == A ? void 0 : A.token) || void 0 === e
@@ -13485,7 +13490,7 @@
                       (null === (t = null == A ? void 0 : A.token) ||
                       void 0 === t
                         ? void 0
-                        : t.reason) || (w(a), E(!0));
+                        : t.reason) || (x(a), E(!0));
                   }
                   l &&
                     !(null === (n = null == A ? void 0 : A.token) ||
@@ -13505,29 +13510,29 @@
               : t.reason,
           ]),
           r.useEffect(() => {
-            if (!v || !b || g) return void cancelAnimationFrame(T.current);
+            if (!v || !f || g) return void cancelAnimationFrame(I.current);
             const e = () => {
-              if (!C.current) return;
+              if (!T.current) return;
               const t =
-                ((performance.now() - I.current) / 40) %
-                (C.current.offsetWidth - 320);
-              (C.current.style.transform = `translateX( -${t}px )`),
-                (T.current = requestAnimationFrame(e));
+                ((performance.now() - D.current) / 40) %
+                (T.current.offsetWidth - 320);
+              (T.current.style.transform = `translateX( -${t}px )`),
+                (I.current = requestAnimationFrame(e));
             };
             return (
-              (T.current = requestAnimationFrame(e)),
-              () => cancelAnimationFrame(T.current)
+              (I.current = requestAnimationFrame(e)),
+              () => cancelAnimationFrame(I.current)
             );
-          }, [C, v, b, g, T]);
+          }, [T, v, f, g, I]);
         const G = r.useCallback((e) => {
-          x.De.IN_GAMEPADUI || f(e);
+          b.De.IN_GAMEPADUI || C(e);
         }, []);
-        if (!v || !D || 0 === D.length) return null;
+        if (!v || !w || 0 === w.length) return null;
         const L = () => {
-            x.L7.logged_in
+            b.L7.logged_in
               ? k || h(!0)
               : (window.location.href = `${
-                  x.De.STORE_BASE_URL
+                  b.De.STORE_BASE_URL
                 }login?redir=${encodeURIComponent(document.location.href)}`);
           },
           B = null != s ? s : (0, y.Xx)("#DiscoveryQueue_WidgetHeader");
@@ -13538,8 +13543,8 @@
             o.s,
             {
               focusable: !0,
-              onGamepadFocus: () => f(!0),
-              onGamepadBlur: () => f(!1),
+              onGamepadFocus: () => C(!0),
+              onGamepadBlur: () => C(!1),
               onOKButton: L,
               onOKActionDescription: (0, y.Xx)("#DiscoveryQueue_OpenWizard"),
               onClick: L,
@@ -13560,11 +13565,11 @@
                   r.createElement(
                     "div",
                     { className: be().WidgetHeaderText },
-                    x.L7.logged_in
+                    b.L7.logged_in
                       ? B
                       : (0, y.Xx)("#DiscoveryQueue_WidgetHeader_LoggedOut")
                   ),
-                  x.L7.logged_in &&
+                  b.L7.logged_in &&
                     r.createElement(
                       "div",
                       {
@@ -13574,7 +13579,7 @@
                       " ",
                       r.createElement(p.wx$, { direction: "right" })
                     ),
-                  !x.L7.logged_in &&
+                  !b.L7.logged_in &&
                     r.createElement(
                       "div",
                       { className: be().LoginButton },
@@ -13587,10 +13592,10 @@
                   r.createElement(
                     "div",
                     {
-                      ref: C,
+                      ref: T,
                       className: (0, S.Z)(be().AppCarouselCtn, "vt-scrollable"),
                     },
-                    D
+                    w
                   )
                 )
               ),

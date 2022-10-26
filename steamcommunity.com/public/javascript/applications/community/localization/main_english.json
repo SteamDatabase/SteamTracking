@@ -1663,7 +1663,7 @@
     "Sale_Section_RewardShelf_NoItems": "No Items Loaded",
     "Sale_Section_RewardShelf_Items": "Virtual Items for %1$s",
     "Sale_Section_RewardShelf_MarkInActive": "Mark Virtual Item Reward InActive",
-    "Sale_Section_RewardShelf_MarkInActive_ttip": "This removes this item from being reward to user. Are you sure you want to do this?",
+    "Sale_Section_RewardShelf_MarkInActive_ttip": "This prevents this item from being awarded to users. This will not remove any items already granted but only prevents this item from being granted in the future related to this event/minigame. Are you sure you want to do this?",
     "Sale_Section_RewardShelf_OnlyShowGranted": "Only Show Granted Rewards",
     "Sale_Section_RewardShelf_OnlyShowGranted_ttip": "Use in the instances where there are multiple awards but a user will not get them all by completing the quest / minigame.",
     "Sale_Section_RewardShelf_Item_Desc": "Optional Reward Description",

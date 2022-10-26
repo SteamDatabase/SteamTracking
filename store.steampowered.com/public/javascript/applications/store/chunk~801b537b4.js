@@ -1449,7 +1449,9 @@
       function q(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
-          : 4;
+          : e.cap_section_content
+          ? 4
+          : 0;
       }
       function X(e) {
         return Boolean(null == e ? void 0 : e.store_filter)

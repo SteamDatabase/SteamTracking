@@ -12315,7 +12315,7 @@
               src: a.GetAssets().GetSmallCapsuleURL(),
             })
           ),
-          !n &&
+          Boolean(!n && !a.BIsFree()) &&
             l.createElement(
               "span",
               { className: x().AppCapsulePrice },
@@ -12325,8 +12325,7 @@
                   { className: P().StoreSaleDiscountBox },
                   `-${null == i ? void 0 : i.discount_pct}%`
                 ),
-              !a.BIsFree() &&
-                i.final_price_in_cents &&
+              Boolean(i.final_price_in_cents) &&
                 l.createElement(
                   "span",
                   { className: P().StoreSalePriceBox },
@@ -17844,7 +17843,7 @@
         qe = n(31933),
         Qe = n(80533),
         Ye = n(15530),
-        Ke = n(29757),
+        Ke = n(7929),
         Je = n(28976);
       const $e = a.lazy(() =>
           Promise.all([
@@ -20376,7 +20375,7 @@
               );
             }
             return s.length > 0 && e.push(s), e;
-          }, [i, o, r]);
+          }, [t, n, i, o, r]);
         return l && !w.L7.logged_in
           ? null
           : a.createElement(
@@ -22417,7 +22416,7 @@
             r = ca((0, E.tT)(W), t, e.capsules.length);
           r < t && W.smart_section && (e.nShowAdditionalRows -= t - r);
           let { content: s, bAdditionalContent: l } = (0, E.Rs)(e);
-          if (((Z = s), (Z && l && W.cap_section_content) || v)) {
+          if (((Z = s), (Z && l) || v)) {
             const t = da(W, p),
               n = ca((0, E.tT)(W), t, e.capsules.length) < t;
             Z = a.createElement(
@@ -22438,6 +22437,7 @@
                       string: (0, N.Xx)("#Loading"),
                     })
                   : !n &&
+                      W.cap_section_content &&
                       a.createElement(
                         ee.wl,
                         {

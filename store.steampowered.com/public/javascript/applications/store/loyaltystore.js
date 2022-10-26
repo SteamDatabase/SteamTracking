@@ -1573,10 +1573,7 @@
           ) {
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              (this.m_observer = new IntersectionObserver(
-                this.OnIntersection,
-                e
-              ));
+              (this.m_observer = (0, o.Gt)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&

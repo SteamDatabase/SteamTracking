@@ -3,8 +3,8 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [511],
   {
-    222: (t) => {
-      t.exports = {
+    222: (e) => {
+      e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3m2Fo",
         FocusRing: "focusring_FocusRing_1sTuv",
         flash: "focusring_flash_15zi-",
@@ -15,19 +15,19 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    780: (t, e, n) => {
+    231: (e, t, n) => {
       "use strict";
-      n.r(e), n.d(e, { InitializeGamepadNavigation: () => te });
+      n.r(t), n.d(t, { InitializeGamepadNavigation: () => et });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(435);
-      !(function (t) {
-        (t[(t.GAMEPAD = 0)] = "GAMEPAD"),
-          (t[(t.KEYBOARD = 1)] = "KEYBOARD"),
-          (t[(t.APPLICATION = 2)] = "APPLICATION"),
-          (t[(t.BROWSER = 3)] = "BROWSER");
+        a = n(148);
+      !(function (e) {
+        (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
+          (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
+          (e[(e.APPLICATION = 2)] = "APPLICATION"),
+          (e[(e.BROWSER = 3)] = "BROWSER");
       })(i || (i = {}));
       let l = {
         [a.eV.OK]: "vgp_onok",
@@ -36,46 +36,46 @@
         [a.eV.OPTIONS]: "vgp_onoptions",
         [a.eV.START]: "vgp_onmenu",
       };
-      function c(t, e, n) {
+      function c(e, t, n) {
         return (
-          t.addEventListener(e, n),
+          e.addEventListener(t, n),
           () =>
-            (function (t, e, n) {
-              t.removeEventListener(e, n);
-            })(t, e, n)
+            (function (e, t, n) {
+              e.removeEventListener(t, n);
+            })(e, t, n)
         );
       }
-      function u(t, e) {
-        return c(t, "vgp_ondirection", d(e));
+      function u(e, t) {
+        return c(e, "vgp_ondirection", d(t));
       }
-      function h(t, e, n) {
-        let i = t;
+      function h(e, t, n) {
+        let i = e;
         if (null === i || !i.ownerDocument || !i.ownerDocument.defaultView)
           return !0;
-        let o = new i.ownerDocument.defaultView.CustomEvent(e, {
+        let o = new i.ownerDocument.defaultView.CustomEvent(t, {
           bubbles: !0,
           cancelable: !0,
           detail: n,
         });
-        return t.dispatchEvent(o);
+        return e.dispatchEvent(o);
       }
-      function d(t) {
-        return (e) => {
-          !1 !== t(e) && (e.stopPropagation(), e.preventDefault());
+      function d(e) {
+        return (t) => {
+          !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
         };
       }
-      function m(t) {
+      function m(e) {
         const {
-            onOKActionDescription: e,
+            onOKActionDescription: t,
             onCancelActionDescription: n,
             onSecondaryActionDescription: i,
             onOptionsActionDescription: o,
             onMenuActionDescription: s,
             actionDescriptionMap: r,
-          } = t,
+          } = e,
           l = Object.assign({}, r);
         return (
-          void 0 !== e && (l[a.eV.OK] = e),
+          void 0 !== t && (l[a.eV.OK] = t),
           void 0 !== n && (l[a.eV.CANCEL] = n),
           void 0 !== i && (l[a.eV.SECONDARY] = i),
           void 0 !== o && (l[a.eV.OPTIONS] = o),
@@ -84,43 +84,43 @@
         );
       }
       const g = { x: "y", y: "x" };
-      function p(t, e, ...n) {
+      function _(e, t, ...n) {
         console.assert
           ? 0 == n.length
-            ? console.assert(!!t, e)
-            : console.assert(!!t, e, ...n)
-          : t || console.warn(e, ...n);
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...n)
+          : e || console.warn(t, ...n);
       }
-      var _ = n(687),
-        v = n(570);
+      var p = n(426),
+        v = n(133);
       class f extends class {
-        GetObject(t) {
+        GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
             try {
-              const e = yield this.GetString(t);
-              return e ? JSON.parse(e) : null;
-            } catch (t) {
+              const t = yield this.GetString(e);
+              return t ? JSON.parse(t) : null;
+            } catch (e) {
               return null;
             }
           });
         }
-        StoreObject(t, e) {
+        StoreObject(e, t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            return this.StoreString(t, JSON.stringify(e));
+            return this.StoreString(e, JSON.stringify(t));
           });
         }
       } {
-        GetString(t) {
-          return Promise.resolve(localStorage.getItem(t));
+        GetString(e) {
+          return Promise.resolve(localStorage.getItem(e));
         }
-        StoreString(t, e) {
-          return localStorage.setItem(t, e), Promise.resolve();
+        StoreString(e, t) {
+          return localStorage.setItem(e, t), Promise.resolve();
         }
-        RemoveObject(t) {
-          return localStorage.removeItem(t), Promise.resolve();
+        RemoveObject(e) {
+          return localStorage.removeItem(e), Promise.resolve();
         }
       }
-      const b = [
+      const C = [
         "ActionDescription",
         "Backstack",
         "BrowserBackstack",
@@ -146,38 +146,38 @@
         "FriendsUI/RemotePlay",
         "SalePage",
       ];
-      var C;
-      !(function (t) {
-        (t[(t.Debug = 0)] = "Debug"),
-          (t[(t.Info = 1)] = "Info"),
-          (t[(t.Warning = 2)] = "Warning"),
-          (t[(t.Error = 3)] = "Error");
-      })(C || (C = {}));
+      var b;
+      !(function (e) {
+        (e[(e.Debug = 0)] = "Debug"),
+          (e[(e.Info = 1)] = "Info"),
+          (e[(e.Warning = 2)] = "Warning"),
+          (e[(e.Error = 3)] = "Error");
+      })(b || (b = {}));
       class F {
-        constructor(t, e) {
+        constructor(e, t) {
           (this.m_fnIdGenerator = null),
-            (this.m_sName = t),
-            (this.m_fnIdGenerator = e),
-            A.Get().RegisterLogName(t);
+            (this.m_sName = e),
+            (this.m_fnIdGenerator = t),
+            A.Get().RegisterLogName(e);
         }
-        Debug(...t) {
-          this.Log(C.Debug, ...t);
+        Debug(...e) {
+          this.Log(b.Debug, ...e);
         }
-        Info(...t) {
-          this.Log(C.Info, ...t);
+        Info(...e) {
+          this.Log(b.Info, ...e);
         }
-        Warning(...t) {
-          this.Log(C.Warning, ...t);
+        Warning(...e) {
+          this.Log(b.Warning, ...e);
         }
-        Error(...t) {
-          this.Log(C.Error, ...t);
+        Error(...e) {
+          this.Log(b.Error, ...e);
         }
-        Assert(t, ...e) {
-          t || this.Log(C.Error, "Assertion failed:", ...e);
+        Assert(e, ...t) {
+          e || this.Log(b.Error, "Assertion failed:", ...t);
         }
-        Log(t, ...e) {
+        Log(e, ...t) {
           var n, i;
-          if (t == C.Debug && !A.Get().IsDebugLogEnabled(this.m_sName)) return;
+          if (e == b.Debug && !A.Get().IsDebugLogEnabled(this.m_sName)) return;
           let o = this.m_sName;
           const s =
             null !==
@@ -188,14 +188,14 @@
               ? i
               : null;
           null != s && (o += " (" + s + ")");
-          w(t, A.Get().IncludeBacktraceInLog, o, this.m_sName, ...e);
+          w(e, A.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
         }
       }
-      (0, o.gn)([_.a], F.prototype, "Debug", null),
-        (0, o.gn)([_.a], F.prototype, "Info", null),
-        (0, o.gn)([_.a], F.prototype, "Warning", null),
-        (0, o.gn)([_.a], F.prototype, "Error", null),
-        (0, o.gn)([_.a], F.prototype, "Assert", null);
+      (0, o.gn)([p.a], F.prototype, "Debug", null),
+        (0, o.gn)([p.a], F.prototype, "Info", null),
+        (0, o.gn)([p.a], F.prototype, "Warning", null),
+        (0, o.gn)([p.a], F.prototype, "Error", null),
+        (0, o.gn)([p.a], F.prototype, "Assert", null);
       class A {
         constructor() {
           (this.m_Storage = null),
@@ -205,16 +205,16 @@
             (this.m_SettingsChangedCallback = new v.pB()),
             (this.m_bLoading = !1),
             (this.m_Storage = new f()),
-            (this.m_rgLogNames = b.slice()),
+            (this.m_rgLogNames = C.slice()),
             this.LoadSettings();
         }
-        LogAsLogManager(...t) {
+        LogAsLogManager(...e) {
           w(
-            C.Info,
+            b.Info,
             this.IncludeBacktraceInLog,
             "LogManager",
             "LogManager",
-            ...t
+            ...e
           );
         }
         LoadSettings() {
@@ -224,11 +224,11 @@
                 !!(yield this.m_Storage.GetObject(
                   A.k_IncludeBacktraceInLog_StorageKey
                 )));
-            const t = yield this.m_Storage.GetObject(
+            const e = yield this.m_Storage.GetObject(
               A.k_EnabledLogNames_StorageKey
             );
-            Array.isArray(t) &&
-              ((this.m_setEnabledDebugLogs = new Set(t)),
+            Array.isArray(e) &&
+              ((this.m_setEnabledDebugLogs = new Set(e)),
               this.LogAsLogManager(
                 "Loaded debug enabled log names. Will print log messages for:",
                 Array.from(this.m_setEnabledDebugLogs)
@@ -264,78 +264,78 @@
         get LogNames() {
           return this.m_rgLogNames;
         }
-        RegisterLogName(t) {
-          this.m_rgLogNames.includes(t) || this.m_rgLogNames.push(t);
+        RegisterLogName(e) {
+          this.m_rgLogNames.includes(e) || this.m_rgLogNames.push(e);
         }
-        IsLogName(t) {
-          return this.m_rgLogNames.includes(t);
+        IsLogName(e) {
+          return this.m_rgLogNames.includes(e);
         }
-        IsDebugLogEnabled(t) {
-          return this.m_setEnabledDebugLogs.has(t);
+        IsDebugLogEnabled(e) {
+          return this.m_setEnabledDebugLogs.has(e);
         }
-        ToggleDebugLogEnabled(t) {
+        ToggleDebugLogEnabled(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            this.SetDebugLogEnabled(t, !this.IsDebugLogEnabled(t));
+            this.SetDebugLogEnabled(e, !this.IsDebugLogEnabled(e));
           });
         }
-        SetDebugLogEnabled(t, e) {
+        SetDebugLogEnabled(e, t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            e
-              ? this.m_setEnabledDebugLogs.add(t)
-              : this.m_setEnabledDebugLogs.delete(t),
+            t
+              ? this.m_setEnabledDebugLogs.add(e)
+              : this.m_setEnabledDebugLogs.delete(e),
               this.m_SettingsChangedCallback.Dispatch(),
               yield this.SaveSettings();
           });
         }
-        SetAllDebugLogsEnabled(t) {
+        SetAllDebugLogsEnabled(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            (this.m_setEnabledDebugLogs = new Set(t ? b : [])),
+            (this.m_setEnabledDebugLogs = new Set(e ? C : [])),
               this.m_SettingsChangedCallback.Dispatch(),
               yield this.SaveSettings();
           });
         }
-        RegisterForSettingsChanges(t) {
-          return this.m_SettingsChangedCallback.Register(t);
+        RegisterForSettingsChanges(e) {
+          return this.m_SettingsChangedCallback.Register(e);
         }
         get IncludeBacktraceInLog() {
           return this.m_bIncludeBacktraceInLog;
         }
-        SetIncludeBacktraceInLog(t) {
+        SetIncludeBacktraceInLog(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            (this.m_bIncludeBacktraceInLog = t),
+            (this.m_bIncludeBacktraceInLog = e),
               this.m_SettingsChangedCallback.Dispatch(),
               yield this.SaveSettings();
           });
         }
       }
-      function w(t, e, n, i, ...o) {
-        const s = (function (t) {
-            let e = 0;
-            for (let n = 0; n < t.length; n++)
-              e = t.charCodeAt(n) + ((e << 5) - e);
-            return [(e >> 0) & 255, (e >> 8) & 255, (e >> 16) & 255];
-          })(i).map((t, e) =>
+      function w(e, t, n, i, ...o) {
+        const s = (function (e) {
+            let t = 0;
+            for (let n = 0; n < e.length; n++)
+              t = e.charCodeAt(n) + ((t << 5) - t);
+            return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
+          })(i).map((e, t) =>
             Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (t / 255 - 0.5) + 0.15)))
+              Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)))
             )
           ),
           r = (299 * (a = s)[0] + 587 * a[1] + 114 * a[2]) / 1e3 >= 128;
         var a;
         let l = n;
-        e &&
+        t &&
           (l =
-            (function (t) {
-              switch (t) {
-                case C.Debug:
+            (function (e) {
+              switch (e) {
+                case b.Debug:
                   return String.fromCodePoint(128027);
-                case C.Info:
+                case b.Info:
                   return String.fromCodePoint(8505);
-                case C.Warning:
+                case b.Warning:
                   return String.fromCodePoint(9888);
-                case C.Error:
+                case b.Error:
                   return String.fromCodePoint(128165);
               }
-            })(t) +
+            })(e) +
             " " +
             l);
         const c =
@@ -350,88 +350,88 @@
             ...(c ? [""] : []),
             ...o,
           ];
-        if (e)
+        if (t)
           console.groupCollapsed(...h),
             console.trace("Callstack"),
             console.groupEnd();
         else
-          switch (t) {
-            case C.Debug:
-            case C.Info:
+          switch (e) {
+            case b.Debug:
+            case b.Info:
               console.log(...h);
               break;
-            case C.Warning:
+            case b.Warning:
               console.warn(...h);
               break;
-            case C.Error:
+            case b.Error:
               console.error(...h);
           }
       }
       (A.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
         (A.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
         (A.s_Singleton = null),
-        (window.EnableSteamConsole = (t = !0) =>
-          A.Get().SetDebugLogEnabled("SteamClient", t));
+        (window.EnableSteamConsole = (e = !0) =>
+          A.Get().SetDebugLogEnabled("SteamClient", e));
       class R {
-        constructor(t) {
-          this.m_root = t;
+        constructor(e) {
+          this.m_root = e;
         }
-        static SerializeNavState(t, e = !0, n = !0) {
+        static SerializeNavState(e, t = !0, n = !0) {
           return {
-            root: R.SerializeNavNode(t, e, n),
-            bHadFocus: t.BFocusWithin(),
+            root: R.SerializeNavNode(e, t, n),
+            bHadFocus: e.BFocusWithin(),
           };
         }
-        static SerializeNavNode(t, e = !0, n = !0) {
+        static SerializeNavNode(e, t = !0, n = !0) {
           let i = null;
-          const [o, s] = t.GetChildren();
+          const [o, s] = e.GetChildren();
           return (
             o.length &&
               -1 != s &&
-              e &&
-              (i = o.map((t, e) => R.SerializeNavNode(t, e == s || n, n))),
-            { sNavKey: t.NavKey, iActiveChild: s, rgChildren: i }
+              t &&
+              (i = o.map((e, t) => R.SerializeNavNode(e, t == s || n, n))),
+            { sNavKey: e.NavKey, iActiveChild: s, rgChildren: i }
           );
         }
-        static RestoreSerializedNavState(t, e, n = 0) {
-          const { root: o, bHadFocus: s } = e;
-          t.Tree.Controller.RestoreHistoryTransaction(() => {
-            R.RestoreSerializedNavNode(t, o),
-              (1 == n || (0 == n && s)) && t.BTakeFocus(i.APPLICATION);
+        static RestoreSerializedNavState(e, t, n = 0) {
+          const { root: o, bHadFocus: s } = t;
+          e.Tree.Controller.RestoreHistoryTransaction(() => {
+            R.RestoreSerializedNavNode(e, o),
+              (1 == n || (0 == n && s)) && e.BTakeFocus(i.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(t, e) {
+        static RestoreSerializedNavNode(e, t) {
           var n;
-          const { sNavKey: i, iActiveChild: o, rgChildren: s } = e;
+          const { sNavKey: i, iActiveChild: o, rgChildren: s } = t;
           if (
-            (i && p(i == t.NavKey, "navkey mismatch"),
-            t.SetActiveChild(o),
+            (i && _(i == e.NavKey, "navkey mismatch"),
+            e.SetActiveChild(o),
             s && s.length)
           ) {
-            const [e] = t.GetChildren();
+            const [t] = e.GetChildren();
             let i = new Map();
-            e.forEach((t) => {
-              t.NavKey && i.set(t.NavKey, t);
+            t.forEach((e) => {
+              e.NavKey && i.set(e.NavKey, e);
             });
-            for (const t of s) {
-              if (!t.sNavKey) continue;
-              const e = i.get(t.sNavKey);
-              e && R.RestoreSerializedNavNode(e, t);
+            for (const e of s) {
+              if (!e.sNavKey) continue;
+              const t = i.get(e.sNavKey);
+              t && R.RestoreSerializedNavNode(t, e);
             }
             if (
               -1 != o &&
               (null === (n = s[o]) || void 0 === n ? void 0 : n.sNavKey)
             ) {
               const n = i.get(s[o].sNavKey);
-              n && t.SetActiveChild(e.indexOf(n));
+              n && e.SetActiveChild(t.indexOf(n));
             }
             let r = 0,
               a = 0;
-            for (; r < e.length && a < s.length; ) {
-              for (; r < e.length && e[r].NavKey; ) r++;
+            for (; r < t.length && a < s.length; ) {
+              for (; r < t.length && t[r].NavKey; ) r++;
               for (; a < s.length && s[a].sNavKey; ) a++;
-              if (r >= e.length || a >= s.length) break;
-              R.RestoreSerializedNavNode(e[r], s[a]), r++, a++;
+              if (r >= t.length || a >= s.length) break;
+              R.RestoreSerializedNavNode(t[r], s[a]), r++, a++;
             }
           }
         }
@@ -443,54 +443,54 @@
         PushState() {
           this.m_rgHistory.push(R.SerializeNavState(this.m_root));
         }
-        PopState(t = 0) {
+        PopState(e = 0) {
           this.m_rgHistory.length &&
-            R.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), t);
+            R.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
         }
       }
       class I extends R {
         constructor() {
           super(...arguments), (this.m_mapHistory = new Map());
         }
-        SaveState(t) {
-          this.m_mapHistory.set(t, R.SerializeNavState(this.m_root));
+        SaveState(e) {
+          this.m_mapHistory.set(e, R.SerializeNavState(this.m_root));
         }
-        RestoreState(t, e = 0) {
-          const n = this.m_mapHistory.get(t);
+        RestoreState(e, t = 0) {
+          const n = this.m_mapHistory.get(e);
           return (
             !!n &&
-            (console.log(`Restoring history for state ${t}`),
-            R.RestoreSerializedNavState(this.m_root, n, e),
+            (console.log(`Restoring history for state ${e}`),
+            R.RestoreSerializedNavState(this.m_root, n, t),
             !0)
           );
         }
       }
-      var D = n(594);
-      function S(t) {
-        return null != t && void 0 !== t.focus;
+      var D = n(6);
+      function S(e) {
+        return null != e && void 0 !== e.focus;
       }
-      function T(t) {
-        let e;
-        return t && (e = t.ownerDocument.defaultView), e;
+      function T(e) {
+        let t;
+        return e && (t = e.ownerDocument.defaultView), t;
       }
-      function O(t, e) {
-        let n = t.parentElement;
+      function O(e, t) {
+        let n = e.parentElement;
         for (; n; ) {
-          if (!e || "x" == e) {
-            let t = window.getComputedStyle(n);
+          if (!t || "x" == t) {
+            let e = window.getComputedStyle(n);
             if (
-              "scroll" == t.overflowX ||
-              "auto" == t.overflowX ||
-              "fixed" == t.position
+              "scroll" == e.overflowX ||
+              "auto" == e.overflowX ||
+              "fixed" == e.position
             )
               break;
           }
-          if (!e || "y" == e) {
-            let t = window.getComputedStyle(n);
+          if (!t || "y" == t) {
+            let e = window.getComputedStyle(n);
             if (
-              "scroll" == t.overflowY ||
-              "auto" == t.overflowY ||
-              "fixed" == t.position
+              "scroll" == e.overflowY ||
+              "auto" == e.overflowY ||
+              "fixed" == e.position
             )
               break;
           }
@@ -498,46 +498,46 @@
         }
         return n;
       }
-      function y(t, e) {
-        if (!("ownerDocument" in t)) return !0;
-        const n = t.ownerDocument.defaultView.getComputedStyle(t),
-          i = "x" === e ? n.overflowX : n.overflowY;
+      function y(e, t) {
+        if (!("ownerDocument" in e)) return !0;
+        const n = e.ownerDocument.defaultView.getComputedStyle(e),
+          i = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === i || "scroll" === i;
       }
-      function E(t, e, n) {
-        if ("childList" === t.type) {
-          for (let n = 0; n < t.addedNodes.length; n++) {
-            const i = t.addedNodes[n];
+      function E(e, t, n) {
+        if ("childList" === e.type) {
+          for (let n = 0; n < e.addedNodes.length; n++) {
+            const i = e.addedNodes[n];
             if (i.nodeType === Node.ELEMENT_NODE) {
-              const t = i;
-              t.parentElement && e(t);
+              const e = i;
+              e.parentElement && t(e);
             }
           }
-          for (let e = 0; e < t.removedNodes.length; e++) {
-            const i = t.removedNodes[e];
+          for (let t = 0; t < e.removedNodes.length; t++) {
+            const i = e.removedNodes[t];
             i.nodeType === Node.ELEMENT_NODE && n(i);
           }
         }
       }
       const L = new F("FocusNavigation").Debug,
         P = new F("GamepadEvents").Debug;
-      class M {
-        constructor(t, e, n) {
+      class B {
+        constructor(e, t, n) {
           (this.m_onActivateCallbacks = new v.pB()),
             (this.m_onDeactivateCallbacks = new v.pB()),
             (this.m_onActiveFocusStateChangedCallbacks = new v.pB()),
-            (this.m_lastFocusNodeXMovement = new B()),
-            (this.m_lastFocusNodeYMovement = new B()),
+            (this.m_lastFocusNodeXMovement = new M()),
+            (this.m_lastFocusNodeYMovement = new M()),
             (this.m_DeferredFocus = new G(this)),
-            (this.m_Controller = t),
-            (this.m_ownerWindow = e),
+            (this.m_Controller = e),
+            (this.m_ownerWindow = t),
             (this.m_ID = n),
-            (this.m_Root = new wt(this, null, null)),
-            this.m_Root.SetProperties({ layout: bt.COLUMN }),
+            (this.m_Root = new we(this, null, null)),
+            this.m_Root.SetProperties({ layout: Ce.COLUMN }),
             (window.GamepadNavTree = this);
         }
-        SetUseVirtualFocus(t) {
-          this.m_bVirtualFocus = t;
+        SetUseVirtualFocus(e) {
+          this.m_bVirtualFocus = e;
         }
         get id() {
           return this.m_ID;
@@ -554,23 +554,26 @@
         BUseVirtualFocus() {
           return this.m_bVirtualFocus;
         }
-        CreateNode(t, e) {
-          return new wt(this, t, e);
+        BIsContextActive() {
+          return this.m_Controller.BIsInActiveContext(this);
         }
-        RegisterNavigationItem(t, e) {
-          return t.OnMount(e), () => t.OnUnmount();
+        CreateNode(e, t) {
+          return new we(this, e, t);
         }
-        OnChildActivated(t) {
+        RegisterNavigationItem(e, t) {
+          return e.OnMount(t), () => e.OnUnmount();
+        }
+        OnChildActivated(e) {
           this.m_bIsMounted &&
-            this.m_Controller.OnGamepadNavigationTreeFocused(this, t);
+            this.m_Controller.OnGamepadNavigationTreeFocused(this, e);
         }
         GetLastFocusedNode() {
           return this.m_lastFocusNode;
         }
-        GetLastFocusedMovementRect(t) {
-          return "x" == t
+        GetLastFocusedMovementRect(e) {
+          return "x" == e
             ? this.m_lastFocusNodeXMovement.GetRect()
-            : "y" == t
+            : "y" == e
             ? this.m_lastFocusNodeYMovement.GetRect()
             : void 0;
         }
@@ -583,28 +586,28 @@
         get OnActiveStateChangedCallbacks() {
           return this.m_onActiveFocusStateChangedCallbacks;
         }
-        OnActivate(t) {
-          this.m_onActivateCallbacks.Dispatch(this, t),
+        OnActivate(e) {
+          this.m_onActivateCallbacks.Dispatch(this, e),
             this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
         }
-        OnDeactivate(t) {
-          this.m_onDeactivateCallbacks.Dispatch(this, t),
+        OnDeactivate(e) {
+          this.m_onDeactivateCallbacks.Dispatch(this, e),
             this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
             (this.m_bWasActiveForLastFocusChange = !1);
         }
         IsActiveFocusNavTree() {
           return this.m_Controller.IsActiveFocusNavTree(this);
         }
-        TakeFocus(t, e = !1) {
+        TakeFocus(e, t = !1) {
           let n = !1;
-          e
-            ? (n = this.Root.BVisibleChildTakeFocus(t))
-            : this.m_lastFocusNode && (n = this.m_lastFocusNode.BTakeFocus(t)),
-            n || (n = this.Root.BTakeFocus(t)),
-            n || this.TransferFocus(t, this.Root);
+          t
+            ? (n = this.Root.BVisibleChildTakeFocus(e))
+            : this.m_lastFocusNode && (n = this.m_lastFocusNode.BTakeFocus(e)),
+            n || (n = this.Root.BTakeFocus(e)),
+            n || this.TransferFocus(e, this.Root);
         }
-        Activate(t = !1) {
-          this.m_Controller.OnGamepadNavigationTreeActivated(this, t);
+        Activate(e = !1) {
+          this.m_Controller.OnGamepadNavigationTreeActivated(this, e);
         }
         Deactivate() {
           this.m_Controller.BlurNavTree(this);
@@ -622,23 +625,23 @@
           );
         }
         SetIsMounted() {
-          const t = this.m_Root.Element;
-          (t.__nav_tree = this),
-            t.__nav_wrapper && t.__nav_wrapper.BindTree(this),
+          const e = this.m_Root.Element;
+          (e.__nav_tree = this),
+            e.__nav_wrapper && e.__nav_wrapper.BindTree(this),
             (this.m_bIsMounted = !0);
         }
-        SetParentEmbeddedNavTree(t) {
-          this.m_ParentEmbeddedNavTree = t;
+        SetParentEmbeddedNavTree(e) {
+          this.m_ParentEmbeddedNavTree = e;
         }
         GetParentEmbeddedNavTree() {
           return this.m_ParentEmbeddedNavTree;
         }
-        SetOnUnhandledButtonCallback(t) {
-          this.m_onUnhandledButton = t;
+        SetOnUnhandledButtonCallback(e) {
+          this.m_onUnhandledButton = e;
         }
-        HandleButtonDownEventAsLogicalEvent(t) {
-          let { bUnhandled: e, bHadLogicalEventMapping: n } = (function (t) {
-            const e = [
+        HandleButtonDownEventAsLogicalEvent(e) {
+          let { bUnhandled: t, bHadLogicalEventMapping: n } = (function (e) {
+            const t = [
               a.eV.DIR_UP,
               a.eV.DIR_DOWN,
               a.eV.DIR_LEFT,
@@ -646,129 +649,131 @@
             ];
             let n = !0,
               i = !1,
-              o = l[t.detail.button];
+              o = l[e.detail.button];
             return (
               o
-                ? ((i = !0), (n = h(t.target, o, t.detail)))
-                : -1 !== e.indexOf(t.detail.button) &&
-                  ((i = !0), (n = h(t.target, "vgp_ondirection", t.detail))),
+                ? ((i = !0), (n = h(e.target, o, e.detail)))
+                : -1 !== t.indexOf(e.detail.button) &&
+                  ((i = !0), (n = h(e.target, "vgp_ondirection", e.detail))),
               { bUnhandled: n, bHadLogicalEventMapping: i }
             );
-          })(t);
+          })(e);
           return (
             P(
               `Logical gamepad Event fired: ${
-                a.eV[t.detail.button]
-              }, had logical event: ${n}, was handled: ${!e}`
+                a.eV[e.detail.button]
+              }, had logical event: ${n}, was handled: ${!t}`
             ),
-            e && this.m_onUnhandledButton && (e = this.m_onUnhandledButton(t)),
-            e && (e = this.m_Controller.FireUnhandledGamepadEventCallbacks(t)),
-            t.stopPropagation(),
-            e
+            t && this.m_onUnhandledButton && (t = this.m_onUnhandledButton(e)),
+            t && (t = this.m_Controller.FireUnhandledGamepadEventCallbacks(e)),
+            e.stopPropagation(),
+            t
           );
         }
         get DeferredFocus() {
           return this.m_DeferredFocus;
         }
-        TransferFocus(t, e, n) {
+        TransferFocus(e, t, n) {
           this.m_Controller.BatchedUpdate(() =>
-            this.TransferFocusInternal(t, e, n)
+            this.TransferFocusInternal(e, t, n)
           );
         }
-        TransferFocusInternal(t, e, n) {
+        TransferFocusInternal(e, t, n) {
           const o = this.m_lastFocusNode;
           if (
-            o == e &&
+            o == t &&
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
           )
             return;
           L(
-            `Transfer focus in ${this.id}, source: ${i[t]}, from/to:`,
+            `Transfer focus in ${this.id}, source: ${i[e]}, from/to:`,
             null == o ? void 0 : o.m_element,
-            null == e ? void 0 : e.m_element
+            null == t ? void 0 : t.m_element
           );
-          const s = { blurredNode: o, focusedNode: e, source: t },
-            r = (function (t, e) {
-              if (!e || !t) return null;
-              let n = e,
-                i = t;
+          const s = { blurredNode: o, focusedNode: t, source: e },
+            r = (function (e, t) {
+              if (!t || !e) return null;
+              let n = t,
+                i = e;
               for (; n.GetDepth() > i.GetDepth() && n.Parent; ) n = n.Parent;
               for (; i.GetDepth() > n.GetDepth() && i.Parent; ) i = i.Parent;
               for (; n != i && n && i; ) (n = n.Parent), (i = i.Parent);
               return n;
-            })(o, e);
+            })(o, t);
           if (o) {
             o.SetHasFocus(!1);
-            for (let t = o; t && t != r; t = t.Parent) t.SetFocusWithin(!1);
+            for (let e = o; e && e != r; e = e.Parent) e.SetFocusWithin(!1);
           }
-          if (e) {
-            e.SetHasFocus(!0);
-            for (let t = e; t && t != r; t = t.Parent) t.SetFocusWithin(!0);
+          if (t) {
+            t.SetHasFocus(!0);
+            for (let e = t; e && e != r; e = e.Parent) e.SetFocusWithin(!0);
           }
-          let a = this.m_Controller.OnFocusChangeStart(t, this, o, e);
-          e && e.SetDOMFocusAndScroll(t, o),
+          let a = this.m_Controller.OnFocusChangeStart(e, this, o, t);
+          t && t.SetDOMFocusAndScroll(e, o),
             o &&
               (h(o.Element, "vgp_onblur", s),
               !o.m_FocusRing ||
-                (e && o.m_FocusRing == e.m_FocusRing) ||
-                o.m_FocusRing.OnBlur(t, o, e)),
-            e &&
-              (h(e.Element, "vgp_onfocus", s),
-              e.m_FocusRing &&
-                (o && e.m_FocusRing == o.m_FocusRing
-                  ? e.m_FocusRing.OnFocusChange(t, o, e)
-                  : e.m_FocusRing.OnFocus(t, e, o))),
-            (this.m_lastFocusNode = e),
+                (t && o.m_FocusRing == t.m_FocusRing) ||
+                o.m_FocusRing.OnBlur(e, o, t)),
+            t &&
+              (h(t.Element, "vgp_onfocus", s),
+              t.m_FocusRing &&
+                (o && t.m_FocusRing == o.m_FocusRing
+                  ? t.m_FocusRing.OnFocusChange(e, o, t)
+                  : t.m_FocusRing.OnFocus(e, t, o))),
+            (this.m_lastFocusNode = t),
             (this.m_bWasActiveForLastFocusChange = this.BIsActive()),
             "x" == n
-              ? this.m_lastFocusNodeXMovement.SetNode(e.Element)
+              ? this.m_lastFocusNodeXMovement.SetNode(t.Element)
               : "y" == n
-              ? this.m_lastFocusNodeYMovement.SetNode(e.Element)
+              ? this.m_lastFocusNodeYMovement.SetNode(t.Element)
               : (this.m_lastFocusNodeXMovement.Reset(),
                 this.m_lastFocusNodeYMovement.Reset()),
             this.m_Controller.OnFocusChangeComplete(a);
         }
       }
-      class B {
-        SetNode(t) {
-          (this.m_element = t),
-            (this.m_rect = t ? t.getBoundingClientRect() : void 0);
+      class M {
+        SetNode(e) {
+          (this.m_element = e),
+            (this.m_rect = e ? e.getBoundingClientRect() : void 0);
         }
         Reset() {
           this.SetNode(void 0);
         }
         GetRect() {
-          var t;
+          var e;
           return (
-            null === (t = this.m_element) || void 0 === t
+            null === (e = this.m_element) || void 0 === e
               ? void 0
-              : t.isConnected
+              : e.isConnected
           )
             ? this.m_element.getBoundingClientRect()
             : this.m_rect;
         }
       }
       class G {
-        constructor(t) {
-          (this.m_bSuppressed = !1), (this.m_tree = t);
+        constructor(e) {
+          (this.m_schExecuteQueuedFocus = new v.Ar()),
+            (this.m_bSuppressed = !1),
+            (this.m_tree = e);
         }
-        RequestFocus(t, e) {
-          t
-            ? ((this.m_target = Object.assign(Object.assign({}, e), {
-                node: t,
+        RequestFocus(e, t) {
+          e
+            ? ((this.m_target = Object.assign(Object.assign({}, t), {
+                node: e,
               })),
               this.m_interval ||
                 this.m_bSuppressed ||
-                (this.m_interval = window.setTimeout(() => {
+                this.m_schExecuteQueuedFocus.Schedule(1, () => {
                   (this.m_interval = void 0), this.ExecuteQueuedFocus();
-                }, 1)))
+                }))
             : (this.m_target = void 0);
         }
         BHasQueuedFocusNode() {
           return !!this.m_target;
         }
-        BIsQueuedFocusNode(t) {
-          return this.m_target && this.m_target.node == t;
+        BIsQueuedFocusNode(e) {
+          return this.m_target && this.m_target.node == e;
         }
         SuppressFocus() {
           this.m_bSuppressed = !0;
@@ -779,70 +784,74 @@
             this.ClearInterval();
         }
         ClearInterval() {
-          this.m_interval &&
-            (window.clearInterval(this.m_interval), (this.m_interval = void 0));
+          this.m_schExecuteQueuedFocus.Cancel();
         }
         ExecuteQueuedFocus() {
           if (((this.m_bSuppressed = !1), this.m_target)) {
-            const { node: t, bFocusDescendant: e } = this.m_target;
+            const { node: e, bFocusDescendant: t } = this.m_target;
             (this.m_target = void 0),
               L(
                 `DeferredFocus in ${this.m_tree.id} - focusing ${
-                  e ? "descendant of" : "node"
-                } ${t.NavKey}`
+                  t ? "descendant of" : "node"
+                } ${e.NavKey}`
               ),
-              e
-                ? t.BChildTakeFocus(i.APPLICATION) ||
-                  this.m_tree.TransferFocus(i.APPLICATION, t)
-                : t.BTakeFocus(i.APPLICATION);
+              t
+                ? e.BChildTakeFocus(i.APPLICATION) ||
+                  this.m_tree.TransferFocus(i.APPLICATION, e)
+                : e.BTakeFocus(i.APPLICATION);
           }
         }
       }
       const k = new F("FocusNavigation").Debug,
         V = (new F("GamepadEvents").Debug, "focus-nav-show-debug-focus-ring");
       class x {
-        constructor(t) {
+        constructor(e) {
           (this.m_rgGamepadNavigationTrees = []),
             (this.m_LastActiveNavTree = null),
             (this.m_LastActiveFocusNavTree = null),
-            (this.m_ownerWindow = t);
+            (this.m_schDeferredActivate = new v.Ar()),
+            (this.m_ownerWindow = e);
         }
-        SetActiveNavTree(t, e = !1) {
-          if (t && this.m_LastActiveNavTree == t) return;
+        SetActiveNavTree(e, t = !1) {
+          if (e && this.m_LastActiveNavTree == e) return;
           const n = this.m_LastActiveNavTree;
           n && D.Zf(this.m_rgGamepadNavigationTrees, n),
-            t ||
+            e ||
               (this.m_rgGamepadNavigationTrees.length &&
-                (t =
+                (e =
                   this.m_rgGamepadNavigationTrees[
                     this.m_rgGamepadNavigationTrees.length - 1
                   ]));
-          const o = this.m_LastActiveFocusNavTree == t;
-          t && D.Zf(this.m_rgGamepadNavigationTrees, t),
-            (this.m_LastActiveNavTree = t),
-            (t && t.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = t),
+          const o = this.m_LastActiveFocusNavTree == e;
+          e && D.Zf(this.m_rgGamepadNavigationTrees, e),
+            (this.m_LastActiveNavTree = e),
+            (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
             k(
-              `Move from nav tree ${null == n ? void 0 : n.id} to nav tree ${
-                null == t ? void 0 : t.id
-              } ${e ? "taking focus" : "no focus"}`
+              `(${this.m_ownerWindow.name}) Move from nav tree ${
+                null == n ? void 0 : n.id
+              } to nav tree ${null == e ? void 0 : e.id} ${
+                t ? "taking focus" : "no focus"
+              }`
             ),
             n && this.m_rgGamepadNavigationTrees.push(n),
-            t &&
-              (this.m_rgGamepadNavigationTrees.push(t),
-              !o && e && t.TakeFocus(i.APPLICATION)),
-            n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(t),
-            t && !o && t.OnActivate(n);
+            e &&
+              (this.m_rgGamepadNavigationTrees.push(e),
+              !o && t && e.TakeFocus(i.APPLICATION)),
+            n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(e),
+            e && !o && e.OnActivate(n);
         }
-        BlurNavTree(t) {
-          this.m_LastActiveNavTree == t && this.SetActiveNavTree(null, !0),
-            D.Zf(this.m_rgGamepadNavigationTrees, t),
-            this.m_rgGamepadNavigationTrees.unshift(t);
+        BlurNavTree(e) {
+          this.m_LastActiveNavTree == e && this.SetActiveNavTree(null, !0),
+            D.Zf(this.m_rgGamepadNavigationTrees, e),
+            this.m_rgGamepadNavigationTrees.unshift(e);
         }
-        UnregisterGamepadNavigationTree(t) {
-          D.Zf(this.m_rgGamepadNavigationTrees, t),
-            this.m_LastActiveNavTree == t &&
+        UnregisterGamepadNavigationTree(e) {
+          D.Zf(this.m_rgGamepadNavigationTrees, e),
+            this.m_LastActiveNavTree == e &&
               ((this.m_LastActiveNavTree = null),
-              this.SetActiveNavTree(null, !0));
+              this.m_schDeferredActivate.Schedule(1, () =>
+                this.SetActiveNavTree(null, !0)
+              ));
         }
       }
       class W {
@@ -860,36 +869,36 @@
             })),
             (this.m_bShowDebugFocusRing = (0, v.vq)(!1)),
             (this.m_bRestoringHistory = !1),
-            (this.m_fnGamepadEventUpdateBatcher = (t) => t()),
+            (this.m_fnGamepadEventUpdateBatcher = (e) => e()),
             (this.m_iFocusChangeStack = 0),
             (window.FocusNavController = this),
             this.m_bShowDebugFocusRing.Set(
               "shown" == sessionStorage.getItem(V)
             );
         }
-        GetOrCreateContext(t) {
+        GetOrCreateContext(e) {
           return (
-            this.m_mapContexts.has(t) || this.m_mapContexts.set(t, new x(t)),
-            this.m_mapContexts.get(t)
+            this.m_mapContexts.has(e) || this.m_mapContexts.set(e, new x(e)),
+            this.m_mapContexts.get(e)
           );
         }
-        SetShowDebugFocusRing(t) {
-          this.m_bShowDebugFocusRing.Set(t),
-            (function (t) {
-              sessionStorage.setItem(V, t ? "shown" : void 0);
-            })(t);
+        SetShowDebugFocusRing(e) {
+          this.m_bShowDebugFocusRing.Set(e),
+            (function (e) {
+              sessionStorage.setItem(V, e ? "shown" : void 0);
+            })(e);
         }
         GetShowDebugFocusRing() {
           return this.m_bShowDebugFocusRing;
         }
-        RegisterInputSource(t) {
-          this.m_rgGamepadInputSources.push(t),
-            t.RegisterForGamepadButtonDown(this.OnButtonDown),
-            t.RegisterForGamepadButtonUp(this.OnButtonUp),
-            t.RegisterForNavigationTypeChange(this.OnNavigationTypeChange);
+        RegisterInputSource(e) {
+          this.m_rgGamepadInputSources.push(e),
+            e.RegisterForGamepadButtonDown(this.OnButtonDown),
+            e.RegisterForGamepadButtonUp(this.OnButtonUp),
+            e.RegisterForNavigationTypeChange(this.OnNavigationTypeChange);
         }
-        SetGamepadEventUpdateBatcher(t) {
-          this.m_fnGamepadEventUpdateBatcher = t;
+        SetGamepadEventUpdateBatcher(e) {
+          this.m_fnGamepadEventUpdateBatcher = e;
         }
         get FocusChangedCallbacks() {
           return this.m_FocusChangedCallbacks;
@@ -897,30 +906,30 @@
         get NavigationSource() {
           return this.m_navigationSource;
         }
-        DispatchVirtualButtonPress(t) {
-          this.OnButtonDown(t, a.Rr.UNKNOWN, -1);
+        DispatchVirtualButtonPress(e) {
+          this.OnButtonDown(e, a.Rr.UNKNOWN, -1);
         }
-        DispatchVirtualButtonClick(t) {
-          this.OnButtonDown(t, a.Rr.GAMEPAD, -1),
-            this.OnButtonUp(t, a.Rr.GAMEPAD, -1);
+        DispatchVirtualButtonClick(e) {
+          this.OnButtonDown(e, a.Rr.GAMEPAD, -1),
+            this.OnButtonUp(e, a.Rr.GAMEPAD, -1);
         }
-        DispatchVirtualGamepad(t, e) {
-          switch (t) {
+        DispatchVirtualGamepad(e, t) {
+          switch (e) {
             case "vgp_onbuttondown":
-              this.OnButtonDown(e.button, e.source, -1, e.is_repeat);
+              this.OnButtonDown(t.button, t.source, -1, t.is_repeat);
               break;
             case "vgp_onbuttonup":
-              this.OnButtonUp(e.button, e.source, -1);
+              this.OnButtonUp(t.button, t.source, -1);
           }
         }
-        BGlobalGamepadButton(t) {
+        BGlobalGamepadButton(e) {
           return (
-            t === a.eV.STEAM_GUIDE ||
-            t === a.eV.STEAM_QUICK_MENU ||
-            t === a.eV.CANCEL
+            e === a.eV.STEAM_GUIDE ||
+            e === a.eV.STEAM_QUICK_MENU ||
+            e === a.eV.CANCEL
           );
         }
-        GetEventTarget(t, e = !1) {
+        GetEventTarget(e, t = !1) {
           const n = this.m_ActiveContext;
           let o = null == n ? void 0 : n.m_ownerWindow.document.activeElement;
           if (null == n ? void 0 : n.m_LastActiveNavTree) {
@@ -929,8 +938,8 @@
               !(
                 n.m_LastActiveNavTree.GetLastFocusedNode() ||
                 (s != a.Rr.GAMEPAD && s != a.Rr.KEYBOARD) ||
-                (e && n.m_LastActiveNavTree.TakeFocus(i.GAMEPAD, !0),
-                this.BGlobalGamepadButton(t))
+                (t && n.m_LastActiveNavTree.TakeFocus(i.GAMEPAD, !0),
+                this.BGlobalGamepadButton(e))
               )
             )
               return null;
@@ -939,26 +948,26 @@
           }
           return o;
         }
-        ChangeNavigationSource(t, e) {
+        ChangeNavigationSource(e, t) {
           let n = this.m_navigationSource.Value,
             i = n.nLastActiveGamepadIndex;
           n.nActiveGamepadIndex >= 0 && (i = n.nActiveGamepadIndex),
             this.m_navigationSource.Set({
-              eActivationSourceType: t,
-              nActiveGamepadIndex: e,
+              eActivationSourceType: e,
+              nActiveGamepadIndex: t,
               nLastActiveGamepadIndex: i,
             });
         }
-        OnButtonDown(t, e, n, i) {
+        OnButtonDown(e, t, n, i) {
           var o, s;
-          if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(t))
+          if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(e))
             return void k(
               "Ignoring button press - gamepad input is suppressed by parent window"
             );
-          this.ChangeNavigationSource(e, n);
-          const r = this.GetEventTarget(t, !0);
+          this.ChangeNavigationSource(t, n);
+          const r = this.GetEventTarget(e, !0);
           k(
-            `Firing ${a.eV[t]} in tree ${
+            `Firing ${a.eV[e]} in tree ${
               null ===
                 (s =
                   null === (o = this.m_ActiveContext) || void 0 === o
@@ -970,43 +979,43 @@
             r
           ),
             this.BatchedUpdate(() =>
-              h(r, "vgp_onbuttondown", { button: t, source: e, is_repeat: i })
+              h(r, "vgp_onbuttondown", { button: e, source: t, is_repeat: i })
             );
         }
-        OnButtonUp(t, e, n) {
+        OnButtonUp(e, t, n) {
           if (this.m_fnCatchAllGamepadInput) return;
-          this.ChangeNavigationSource(e, n);
+          this.ChangeNavigationSource(t, n);
           const i = this.GetEventTarget();
           this.BatchedUpdate(() =>
-            h(i, "vgp_onbuttonup", { button: t, source: e, is_repeat: !1 })
+            h(i, "vgp_onbuttonup", { button: e, source: t, is_repeat: !1 })
           );
         }
-        BatchedUpdate(t) {
-          this.m_fnGamepadEventUpdateBatcher(t);
+        BatchedUpdate(e) {
+          this.m_fnGamepadEventUpdateBatcher(e);
         }
-        OnNavigationTypeChange(t) {
-          var e, n;
+        OnNavigationTypeChange(e) {
+          var t, n;
           if (
-            (this.ChangeNavigationSource(t, -1),
+            (this.ChangeNavigationSource(e, -1),
             document.hasFocus() &&
-              (t == a.Rr.MOUSE || t == a.Rr.TOUCH) &&
-              (null === (e = this.m_ActiveContext) || void 0 === e
+              (e == a.Rr.MOUSE || e == a.Rr.TOUCH) &&
+              (null === (t = this.m_ActiveContext) || void 0 === t
                 ? void 0
-                : e.m_LastActiveNavTree))
+                : t.m_LastActiveNavTree))
           ) {
-            const t =
+            const e =
                 this.m_ActiveContext.m_LastActiveNavTree.GetLastFocusedNode(),
-              e = (function (t) {
-                if (!S(t)) return !1;
-                const e = t.tagName,
-                  n = ((i = t), "INPUT" === i.nodeName ? t.type : null);
+              t = (function (e) {
+                if (!S(e)) return !1;
+                const t = e.tagName,
+                  n = ((i = e), "INPUT" === i.nodeName ? e.type : null);
                 var i;
-                return (function (t, e) {
-                  switch (t) {
+                return (function (e, t) {
+                  switch (e) {
                     case "TEXTAREA":
                       return !0;
                     case "INPUT":
-                      switch (e) {
+                      switch (t) {
                         case "date":
                         case "datetime-local":
                         case "datetime":
@@ -1027,168 +1036,168 @@
                     default:
                       return !1;
                   }
-                })(e, n);
-              })(null == t ? void 0 : t.Element)
-                ? t
+                })(t, n);
+              })(null == e ? void 0 : e.Element)
+                ? e
                 : null;
             null === (n = this.m_ActiveContext.m_LastActiveNavTree) ||
               void 0 === n ||
-              n.TransferFocus(i.BROWSER, e);
+              n.TransferFocus(i.BROWSER, t);
           }
         }
-        NewGamepadNavigationTree(t, e) {
-          return new M(this, t, e);
+        NewGamepadNavigationTree(e, t) {
+          return new B(this, e, t);
         }
-        RegisterGamepadNavigationTree(t, e) {
-          const n = this.GetOrCreateContext(t.ownerWindow);
+        RegisterGamepadNavigationTree(e, t) {
+          const n = this.GetOrCreateContext(e.ownerWindow);
           return (
-            t.SetIsMounted(),
-            e
-              ? n.m_rgGamepadNavigationTrees.unshift(t)
+            e.SetIsMounted(),
+            t
+              ? n.m_rgGamepadNavigationTrees.unshift(e)
               : ((this.m_ActiveContext = n),
-                n.m_rgGamepadNavigationTrees.push(t),
-                n.SetActiveNavTree(t, !0)),
+                n.m_rgGamepadNavigationTrees.push(e),
+                n.SetActiveNavTree(e, !0)),
             this.m_bGlobalEventsInitialized || this.BindGlobalEventHandlers(),
-            () => n.UnregisterGamepadNavigationTree(t)
+            () => n.UnregisterGamepadNavigationTree(e)
           );
         }
-        OnGamepadNavigationTreeActivated(t, e = !1) {
-          this.m_mapContexts.get(t.ownerWindow).SetActiveNavTree(t, e);
+        OnGamepadNavigationTreeActivated(e, t = !1) {
+          this.m_mapContexts.get(e.ownerWindow).SetActiveNavTree(e, t);
         }
-        OnGamepadNavigationTreeFocused(t, e, n = !1) {
-          const o = this.m_mapContexts.get(t.ownerWindow);
+        OnGamepadNavigationTreeFocused(e, t, n = !1) {
+          const o = this.m_mapContexts.get(e.ownerWindow);
           o != this.m_ActiveContext &&
-            (k(
-              `Changing context to window ${o.m_ownerWindow.name} as tree saw a focus event`
-            ),
-            (this.m_ActiveContext = o)),
-            t != o.m_LastActiveFocusNavTree &&
-              t != o.m_LastActiveNavTree &&
-              (o.m_LastActiveFocusNavTree.GetParentEmbeddedNavTree() == t ||
-              t.GetParentEmbeddedNavTree() == o.m_LastActiveFocusNavTree
+            k(`(${o.m_ownerWindow.name}) Focus event in inactive window`),
+            e != o.m_LastActiveFocusNavTree &&
+              e != o.m_LastActiveNavTree &&
+              (o.m_LastActiveFocusNavTree.GetParentEmbeddedNavTree() == e ||
+              e.GetParentEmbeddedNavTree() == o.m_LastActiveFocusNavTree
                 ? (k(
-                    `There was a focus event in ${t.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`
+                    `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`
                   ),
-                  t.Activate())
+                  e.Activate())
                 : k(
-                    `There was a focus event in ${t.id}, but the active nav tree is ${o.m_LastActiveFocusNavTree.id} so it is being ignored.  Source: ${i[e]}.`
+                    `There was a focus event in ${e.id}, but the active nav tree is ${o.m_LastActiveFocusNavTree.id} so it is being ignored.  Source: ${i[t]}.`
                   ));
         }
-        BlurNavTree(t) {
-          this.m_mapContexts.get(t.ownerWindow).BlurNavTree(t);
+        BlurNavTree(e) {
+          this.m_mapContexts.get(e.ownerWindow).BlurNavTree(e);
         }
-        IsActiveFocusNavTree(t) {
-          var e;
+        IsActiveFocusNavTree(e) {
+          var t;
           return (
-            t &&
-            t ==
-              (null === (e = this.m_ActiveContext) || void 0 === e
+            e &&
+            e ==
+              (null === (t = this.m_ActiveContext) || void 0 === t
                 ? void 0
-                : e.m_LastActiveFocusNavTree)
+                : t.m_LastActiveFocusNavTree)
           );
         }
-        IsActiveNavTree(t) {
-          var e;
+        IsActiveNavTree(e) {
+          var t;
           return (
-            t &&
-            t ==
-              (null === (e = this.m_ActiveContext) || void 0 === e
+            e &&
+            e ==
+              (null === (t = this.m_ActiveContext) || void 0 === t
                 ? void 0
-                : e.m_LastActiveNavTree)
+                : t.m_LastActiveNavTree)
           );
+        }
+        BIsInActiveContext(e) {
+          return e && e.ownerWindow == this.m_ActiveContext.m_ownerWindow;
         }
         BindGlobalEventHandlers() {
           this.m_bGlobalEventsInitialized ||
             (this.m_bGlobalEventsInitialized = !0);
         }
-        OnFocusChangeStart(t, e, n, i) {
+        OnFocusChangeStart(e, t, n, i) {
           return (
             0 == this.m_iFocusChangeStack
-              ? (this.m_ActiveFocusChange = { source: t, from: n, to: i })
+              ? (this.m_ActiveFocusChange = { source: e, from: n, to: i })
               : !this.m_ActiveFocusChange.from &&
                 n &&
                 (this.m_ActiveFocusChange.from = n),
             this.m_iFocusChangeStack++
           );
         }
-        OnFocusChangeComplete(t) {
+        OnFocusChangeComplete(e) {
           if (
             (this.m_iFocusChangeStack--,
-            p(t == this.m_iFocusChangeStack, "out of order focus pop"),
+            _(e == this.m_iFocusChangeStack, "out of order focus pop"),
             0 == this.m_iFocusChangeStack)
           ) {
-            const { source: t, from: e, to: n } = this.m_ActiveFocusChange;
-            this.m_FocusChangedCallbacks.Dispatch(t, e, n);
+            const { source: e, from: t, to: n } = this.m_ActiveFocusChange;
+            this.m_FocusChangedCallbacks.Dispatch(e, t, n);
           }
         }
-        RegisterForUnhandledButtonDownEvents(t) {
-          return this.m_UnhandledButtonEventsCallbacks.Register(t);
+        RegisterForUnhandledButtonDownEvents(e) {
+          return this.m_UnhandledButtonEventsCallbacks.Register(e);
         }
-        FireUnhandledGamepadEventCallbacks(t) {
+        FireUnhandledGamepadEventCallbacks(e) {
           return (
             !this.m_UnhandledButtonEventsCallbacks.CountRegistered() ||
-            (this.m_UnhandledButtonEventsCallbacks.Dispatch(t), !1)
+            (this.m_UnhandledButtonEventsCallbacks.Dispatch(e), !1)
           );
         }
-        SetSuppressGamepadInput(t) {
-          this.m_fnCatchAllGamepadInput = t ? () => !0 : null;
+        SetSuppressGamepadInput(e) {
+          this.m_fnCatchAllGamepadInput = e ? () => !0 : null;
         }
-        SetCatchAllGamepadInput(t) {
-          this.m_fnCatchAllGamepadInput = t;
+        SetCatchAllGamepadInput(e) {
+          this.m_fnCatchAllGamepadInput = e;
         }
         TakeFocusChangingIFrame() {
           window.focus();
-          let t =
+          let e =
             this.m_ActiveContext.m_LastActiveFocusNavTree ||
             this.m_ActiveContext.m_LastActiveNavTree;
-          t && t.TakeFocus(i.APPLICATION);
+          e && e.TakeFocus(i.APPLICATION);
         }
-        OnContextActivated(t) {
-          var e;
-          (this.m_ActiveContext = this.m_mapContexts.get(t)),
+        OnContextActivated(e) {
+          var t;
+          (this.m_ActiveContext = this.m_mapContexts.get(e)),
             k(
-              `Activating context for window ${t.name}, there are ${
-                null === (e = this.m_ActiveContext) || void 0 === e
+              `(${e.name}) Activating context, there are ${
+                null === (t = this.m_ActiveContext) || void 0 === t
                   ? void 0
-                  : e.m_rgGamepadNavigationTrees.length
+                  : t.m_rgGamepadNavigationTrees.length
               } trees in this context`
             );
         }
-        OnContextDeactivated(t) {
-          k(`Deactivate context for window ${t.name}`);
+        OnContextDeactivated(e) {
+          k(`(${e.name}) Deactivate context for window`);
         }
         BIsRestoringHistory() {
           return this.m_bRestoringHistory;
         }
-        RestoreHistoryTransaction(t) {
+        RestoreHistoryTransaction(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
             this.m_bRestoringHistory = !0;
             try {
-              yield t();
+              yield e();
             } finally {
               this.m_bRestoringHistory = !1;
             }
           });
         }
       }
-      (0, o.gn)([_.a], W.prototype, "OnButtonDown", null),
-        (0, o.gn)([_.a], W.prototype, "OnButtonUp", null),
-        (0, o.gn)([_.a], W.prototype, "OnNavigationTypeChange", null);
+      (0, o.gn)([p.a], W.prototype, "OnButtonDown", null),
+        (0, o.gn)([p.a], W.prototype, "OnButtonUp", null),
+        (0, o.gn)([p.a], W.prototype, "OnNavigationTypeChange", null);
       class U {
-        constructor(t) {
-          this.m_node = t;
+        constructor(e) {
+          this.m_node = e;
         }
-        TakeFocus(t) {
-          return this.m_node.BTakeFocus(t ? i.GAMEPAD : i.APPLICATION, t);
+        TakeFocus(e) {
+          return this.m_node.BTakeFocus(e ? i.GAMEPAD : i.APPLICATION, e);
         }
-        ParentTakeFocus(t) {
-          this.m_node.Parent.BTakeFocus(t ? i.GAMEPAD : i.APPLICATION, t);
+        ParentTakeFocus(e) {
+          this.m_node.Parent.BTakeFocus(e ? i.GAMEPAD : i.APPLICATION, e);
         }
-        ChildTakeFocus(t) {
-          return this.m_node.BChildTakeFocus(t ? i.GAMEPAD : i.APPLICATION, t);
+        ChildTakeFocus(e) {
+          return this.m_node.BChildTakeFocus(e ? i.GAMEPAD : i.APPLICATION, e);
         }
-        FocusVisibleChild(t) {
-          return this.m_node.BVisibleChildTakeFocus(t);
+        FocusVisibleChild(e) {
+          return this.m_node.BVisibleChildTakeFocus(e);
         }
         BHasFocus() {
           return this.m_node.BHasFocus();
@@ -1203,16 +1212,16 @@
           this.m_History || (this.m_History = new N(this.m_node)),
             this.m_History.PushState();
         }
-        PopState(t = 0) {
-          this.m_History && this.m_History.PopState(t);
+        PopState(e = 0) {
+          this.m_History && this.m_History.PopState(e);
         }
-        SaveState(t) {
+        SaveState(e) {
           this.m_StateHistory || (this.m_StateHistory = new I(this.m_node)),
-            this.m_StateHistory.SaveState(t);
+            this.m_StateHistory.SaveState(e);
         }
-        RestoreState(t, e = 0) {
+        RestoreState(e, t = 0) {
           return (
-            !!this.m_StateHistory && this.m_StateHistory.RestoreState(t, e)
+            !!this.m_StateHistory && this.m_StateHistory.RestoreState(e, t)
           );
         }
         NavTree() {
@@ -1222,65 +1231,65 @@
           return this.m_node;
         }
       }
-      function H(t, e, n, i = 0.001) {
-        return "x" == t
-          ? e.x + e.width > n.x + i && e.x + i < n.x + n.width
-          : "y" == t
-          ? e.y + e.height > n.y + i && e.y + i < n.y + n.height
-          : (p(!1, `Invalid axis ${t}`), !1);
+      function H(e, t, n, i = 0.001) {
+        return "x" == e
+          ? t.x + t.width > n.x + i && t.x + i < n.x + n.width
+          : "y" == e
+          ? t.y + t.height > n.y + i && t.y + i < n.y + n.height
+          : (_(!1, `Invalid axis ${e}`), !1);
       }
-      function K(t, e, n) {
+      function K(e, t, n) {
         let i;
         return (
-          "x" == t
-            ? (i = Math.min(e.x + e.width, n.x + n.width) - Math.max(e.x, n.x))
-            : "y" == t
+          "x" == e
+            ? (i = Math.min(t.x + t.width, n.x + n.width) - Math.max(t.x, n.x))
+            : "y" == e
             ? (i =
-                Math.min(e.y + e.height, n.y + n.height) - Math.max(e.y, n.y))
-            : (p(!1, `Invalid axis ${t}`), (i = 0)),
+                Math.min(t.y + t.height, n.y + n.height) - Math.max(t.y, n.y))
+            : (_(!1, `Invalid axis ${e}`), (i = 0)),
           i < 0 ? 0 : i
         );
       }
-      function $(t, e, n) {
-        const i = e[t],
-          o = (function (t, e) {
-            return "x" == t
-              ? { min: e.x, max: e.x + e.width }
-              : "y" == t
-              ? { min: e.y, max: e.y + e.height }
-              : void p(!1, `Invalid axis ${t}`);
-          })(t, n);
+      function $(e, t, n) {
+        const i = t[e],
+          o = (function (e, t) {
+            return "x" == e
+              ? { min: t.x, max: t.x + t.width }
+              : "y" == e
+              ? { min: t.y, max: t.y + t.height }
+              : void _(!1, `Invalid axis ${e}`);
+          })(e, n);
         return i < o.min ? o.min - i : i > o.max ? i - o.max : 0;
       }
-      function j(t) {
-        if (!t) return bt.NONE;
-        const e = t.ownerDocument.defaultView,
-          n = e.getComputedStyle(t);
+      function j(e) {
+        if (!e) return Ce.NONE;
+        const t = e.ownerDocument.defaultView,
+          n = t.getComputedStyle(e);
         if ("flex" == n.display)
           switch (n.flexDirection) {
             case "row":
-              return "wrap" == n.flexWrap ? bt.GRID : bt.ROW;
+              return "wrap" == n.flexWrap ? Ce.GRID : Ce.ROW;
             case "row-reverse":
-              return bt.ROW_REVERSE;
+              return Ce.ROW_REVERSE;
             case "column":
-              return bt.COLUMN;
+              return Ce.COLUMN;
             case "column-reverse":
-              return bt.COLUMN_REVERSE;
+              return Ce.COLUMN_REVERSE;
           }
         else {
-          if ("grid" == n.display) return bt.GRID;
-          if (t.childElementCount > 0) {
-            const n = e.getComputedStyle(t.firstElementChild);
-            if ("left" === n.float) return bt.ROW;
-            if ("right" === n.float) return bt.ROW_REVERSE;
+          if ("grid" == n.display) return Ce.GRID;
+          if (e.childElementCount > 0) {
+            const n = t.getComputedStyle(e.firstElementChild);
+            if ("left" === n.float) return Ce.ROW;
+            if ("right" === n.float) return Ce.ROW_REVERSE;
             if ("inline" === n.display || "inline-block" === n.display)
-              return bt.GRID;
+              return Ce.GRID;
           }
         }
-        return bt.COLUMN;
+        return Ce.COLUMN;
       }
-      function Y(t) {
-        switch (t) {
+      function Y(e) {
+        switch (e) {
           case a.eV.DIR_UP:
           case a.eV.DIR_DOWN:
             return "y";
@@ -1291,55 +1300,55 @@
             return;
         }
       }
-      function z(t, e, n) {
+      function z(e, t, n) {
         const i = [],
-          [o, s] = t.GetChildren(),
-          r = t.GetActiveChild();
+          [o, s] = e.GetChildren(),
+          r = e.GetActiveChild();
         let a;
         const l = r ? r.Element.getBoundingClientRect() : null;
         if (r) {
-          const t = J(r, e, n);
+          const e = J(r, t, n);
           if (
-            t &&
-            !t.offScreen &&
-            ((a = X(r, t, t.overlap, n)), a && !a.visibility.offScreen)
+            e &&
+            !e.offScreen &&
+            ((a = X(r, e, e.overlap, n)), a && !a.visibility.offScreen)
           )
             return a;
-          t && i.push({ child: r, visibility: t });
+          e && i.push({ child: r, visibility: e });
         }
         const c = n || l;
-        for (let t = 0; t < o.length; t++) {
-          const n = o[t];
+        for (let e = 0; e < o.length; e++) {
+          const n = o[e];
           if (n == r) continue;
-          const s = J(n, e, c);
+          const s = J(n, t, c);
           s && i.push({ child: n, visibility: s });
         }
         let u;
         i.sort(q);
-        for (const t of i) {
-          const { child: n, visibility: i } = t;
+        for (const e of i) {
+          const { child: n, visibility: i } = e;
           if (i.offScreen && u) {
             if (!u.visibility.offScreen) break;
             if (i.distance > u.visibility.distance) break;
           }
-          const o = n == r ? a : X(n, i, i.overlap || e, c);
+          const o = n == r ? a : X(n, i, i.overlap || t, c);
           o && (!u || q(o, u) < 0) && (u = o);
         }
         return u;
       }
-      function X(t, e, n, i) {
-        switch (t.GetFocusable()) {
+      function X(e, t, n, i) {
+        switch (e.GetFocusable()) {
           case "none":
             return null;
           case "children":
-            return z(t, e.overlap || n, i);
+            return z(e, t.overlap || n, i);
           case "self":
-            return { child: t, visibility: e };
+            return { child: e, visibility: t };
         }
       }
-      function q(t, e) {
-        const n = t.visibility,
-          i = e.visibility;
+      function q(e, t) {
+        const n = e.visibility,
+          i = t.visibility;
         return n.offScreen
           ? i.offScreen
             ? n.distance - i.distance
@@ -1348,103 +1357,103 @@
           ? -1
           : n.distance - i.distance;
       }
-      function J(t, e, n) {
-        const i = t.Element.getBoundingClientRect(),
-          o = t.GetFocusable();
+      function J(e, t, n) {
+        const i = e.Element.getBoundingClientRect(),
+          o = e.GetFocusable();
         let s;
         if ("none" == o) return null;
         if ("self" == o) {
           if (
-            i.top < e.top ||
-            i.right > e.right ||
-            i.bottom > e.bottom ||
-            i.left < e.left
+            i.top < t.top ||
+            i.right > t.right ||
+            i.bottom > t.bottom ||
+            i.left < t.left
           ) {
-            const t = i.top + i.height / 2,
+            const e = i.top + i.height / 2,
               n = i.left + i.width / 2;
-            if (t < e.top) return { offScreen: "top", distance: e.top - t };
-            if (n > e.right)
-              return { offScreen: "right", distance: n - e.right };
-            if (t > e.bottom)
-              return { offScreen: "bottom", distance: t - e.bottom };
-            if (n < e.left) return { offScreen: "left", distance: e.left - n };
+            if (e < t.top) return { offScreen: "top", distance: t.top - e };
+            if (n > t.right)
+              return { offScreen: "right", distance: n - t.right };
+            if (e > t.bottom)
+              return { offScreen: "bottom", distance: e - t.bottom };
+            if (n < t.left) return { offScreen: "left", distance: t.left - n };
           }
           n &&
-            (s = (function (t, e) {
+            (s = (function (e, t) {
               let n = 0,
                 i = 0;
               return (
-                e.right < t.left
-                  ? (n = t.left - e.right)
-                  : e.left > t.right && (n = e.left - t.right),
-                e.bottom < t.top
-                  ? (i = t.top - e.bottom)
-                  : e.top > t.bottom && (i = e.top - t.bottom),
+                t.right < e.left
+                  ? (n = e.left - t.right)
+                  : t.left > e.right && (n = t.left - e.right),
+                t.bottom < e.top
+                  ? (i = e.top - t.bottom)
+                  : t.top > e.bottom && (i = t.top - e.bottom),
                 Math.sqrt(n * n + i * i)
               );
             })(i, n));
         } else if ("children" == o) {
-          const n = t.Element;
+          const n = e.Element;
           if (n.scrollHeight > i.height || n.scrollWidth > i.width) {
-            const t = n.ownerDocument.defaultView.getComputedStyle(n);
-            if ("visible" == t.overflowX || "visible" == t.overflowY)
-              return { overlap: e };
+            const e = n.ownerDocument.defaultView.getComputedStyle(n);
+            if ("visible" == e.overflowX || "visible" == e.overflowY)
+              return { overlap: t };
           }
-          if (i.bottom < e.top)
-            return { offScreen: "top", distance: e.top - i.bottom };
-          if (i.left > e.right)
-            return { offScreen: "right", distance: i.left - e.right };
-          if (i.top > e.bottom)
-            return { offScreen: "bottom", distance: i.top - e.bottom };
-          if (i.right < e.left)
-            return { offScreen: "left", distance: e.left - i.right };
+          if (i.bottom < t.top)
+            return { offScreen: "top", distance: t.top - i.bottom };
+          if (i.left > t.right)
+            return { offScreen: "right", distance: i.left - t.right };
+          if (i.top > t.bottom)
+            return { offScreen: "bottom", distance: i.top - t.bottom };
+          if (i.right < t.left)
+            return { offScreen: "left", distance: t.left - i.right };
         }
         return {
           overlap: {
-            top: Math.max(i.top, e.top),
-            right: Math.min(i.right, e.right),
-            bottom: Math.min(i.bottom, e.bottom),
-            left: Math.max(i.left, e.left),
+            top: Math.max(i.top, t.top),
+            right: Math.min(i.right, t.right),
+            bottom: Math.min(i.bottom, t.bottom),
+            left: Math.max(i.left, t.left),
           },
           distance: s,
         };
       }
-      function Q(t, e, n) {
-        return null == t || isNaN(t) ? t : Math.max(e, Math.min(n, t));
+      function Q(e, t, n) {
+        return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
       }
       class Z {
-        constructor(t, e) {
+        constructor(e, t) {
           (this.m_bActive = !1),
             (this.m_fnBoundAnimationFunc = void 0),
-            (this.m_window = t),
-            (this.m_options = Object.assign({ timing: "sine" }, e));
+            (this.m_window = e),
+            (this.m_options = Object.assign({ timing: "sine" }, t));
         }
         Start() {
-          let t;
+          let e;
           switch (
             ((this.m_msStart = performance.now()),
             (this.m_msEnd = this.m_msStart + this.m_options.msDuration),
             this.m_options.timing)
           ) {
             case "linear":
-              t = function (t) {
-                return t;
+              e = function (e) {
+                return e;
               };
               break;
             case "cubic-in-out":
-              t = function (t) {
-                return t < 0.5
-                  ? 4 * t * t * t
-                  : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+              e = function (e) {
+                return e < 0.5
+                  ? 4 * e * e * e
+                  : (e - 1) * (2 * e - 2) * (2 * e - 2) + 1;
               };
               break;
             default:
-              t = function (t) {
-                return 0.5 - Math.cos(t * Math.PI) / 2;
+              e = function (e) {
+                return 0.5 - Math.cos(e * Math.PI) / 2;
               };
           }
           (this.m_bActive = !0),
-            (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, t)),
+            (this.m_fnBoundAnimationFunc = this.OnInterval.bind(this, e)),
             this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
         }
         BIsActive() {
@@ -1454,7 +1463,7 @@
           if (this.m_bActive) {
             try {
               this.Update(1);
-            } catch (t) {}
+            } catch (e) {}
             this.ClearInterval(), this.FireOnComplete();
           }
         }
@@ -1464,96 +1473,96 @@
         Cancel() {
           this.m_bActive = !1;
         }
-        OnInterval(t) {
+        OnInterval(e) {
           if (!this.m_bActive) return;
-          let e = performance.now() - this.m_msStart;
-          if (e >= this.m_options.msDuration) return void this.End();
-          let n = e / this.m_options.msDuration;
+          let t = performance.now() - this.m_msStart;
+          if (t >= this.m_options.msDuration) return void this.End();
+          let n = t / this.m_options.msDuration;
           try {
-            this.Update(t(n));
-          } catch (t) {}
+            this.Update(e(n));
+          } catch (e) {}
           this.m_window.requestAnimationFrame(this.m_fnBoundAnimationFunc);
         }
         ClearInterval() {
           this.m_bActive = !1;
         }
       }
-      class tt extends Z {
-        constructor(t, e, n) {
-          super(t, e), (this.m_fnCallback = n);
+      class ee extends Z {
+        constructor(e, t, n) {
+          super(e, t), (this.m_fnCallback = n);
         }
-        Update(t) {
-          this.m_fnCallback(t);
+        Update(e) {
+          this.m_fnCallback(e);
         }
       }
-      class et extends Z {
-        constructor(t, e, n) {
-          super("ownerDocument" in t ? T(t) : t, n),
+      class te extends Z {
+        constructor(e, t, n) {
+          super("ownerDocument" in e ? T(e) : e, n),
             (this.m_props = {}),
-            (this.m_object = t),
-            (this.m_propTargets = e);
+            (this.m_object = e),
+            (this.m_propTargets = t);
         }
         Start() {
           this.m_props = {};
-          for (let t in this.m_propTargets) {
-            let e = parseFloat(this.m_object[t]) || 0,
-              n = this.m_propTargets[t];
-            e != n && (this.m_props[t] = { start: e, end: n });
+          for (let e in this.m_propTargets) {
+            let t = parseFloat(this.m_object[e]) || 0,
+              n = this.m_propTargets[e];
+            t != n && (this.m_props[e] = { start: t, end: n });
           }
           super.Start();
         }
-        Update(t) {
-          for (let e in this.m_props) {
-            let n = this.m_props[e],
-              i = n.start + (n.end - n.start) * t;
-            this.m_object[e] = i;
+        Update(e) {
+          for (let t in this.m_props) {
+            let n = this.m_props[t],
+              i = n.start + (n.end - n.start) * e;
+            this.m_object[t] = i;
           }
         }
       }
-      const nt = new F("ScrollSnap").Debug;
-      let it = !1;
-      let ot;
-      function st(t) {
-        if (!t) return { left: 0, top: 0, right: 0, bottom: 0 };
-        if (!("ownerDocument" in t))
+      const ne = new F("ScrollSnap").Debug;
+      let ie = !1;
+      let oe;
+      function se(e) {
+        if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
+        if (!("ownerDocument" in e))
           return {
             left: 0,
-            right: t.innerWidth,
+            right: e.innerWidth,
             top: 0,
-            bottom: t.innerHeight,
+            bottom: e.innerHeight,
           };
-        let e = 0,
+        let t = 0,
           n = 0,
-          i = t;
+          i = e;
         for (; i; ) {
-          if (((e += i.offsetTop), (n += i.offsetLeft), "ownerDocument" in i)) {
+          if (((t += i.offsetTop), (n += i.offsetLeft), "ownerDocument" in i)) {
             if ("fixed" === window.getComputedStyle(i).position) break;
           }
           i = i.offsetParent;
         }
-        for (i = null == t ? void 0 : t.parentElement; i; ) {
-          const { scrollTop: t, scrollLeft: o } = vt(i);
-          if (((e -= t), (n -= o), "ownerDocument" in i)) {
+        for (i = null == e ? void 0 : e.parentElement; i; ) {
+          const { scrollTop: e, scrollLeft: o } = ve(i);
+          if (((t -= e), (n -= o), "ownerDocument" in i)) {
             if ("fixed" === window.getComputedStyle(i).position) break;
           }
           i = i.parentElement;
         }
         return {
           left: n,
-          top: e,
-          right: n + t.offsetWidth,
-          bottom: e + t.offsetHeight,
+          top: t,
+          right: n + e.offsetWidth,
+          bottom: t + e.offsetHeight,
         };
       }
-      function rt(t, e) {
-        return "x" == e
-          ? [t.left, t.right, t.right - t.left]
-          : [t.top, t.bottom, t.bottom - t.top];
+      function re(e, t) {
+        return "x" == t
+          ? [e.left, e.right, e.right - e.left]
+          : [e.top, e.bottom, e.bottom - e.top];
       }
-      function at(t, e, n, i) {
-        let [o, s, r] = rt(t, i),
-          [a, l, c] = rt(e, i),
-          [u, h] = rt(n, i);
+      function ae(e, t, n, i) {
+        let [o, s, r] = re(e, i),
+          [a, l, c] = re(t, i),
+          [u, h] = re(n, i);
         return o < a && s > l
           ? 0
           : (o < a && r <= c) || (s > l && r > c)
@@ -1562,72 +1571,72 @@
           ? s - l + h
           : 0;
       }
-      function lt(t) {
-        return "auto" == t
+      function le(e) {
+        return "auto" == e
           ? 0
-          : t.endsWith("px")
-          ? parseInt(t)
-          : (console.log("Unsupported length", t), 0);
+          : e.endsWith("px")
+          ? parseInt(e)
+          : (console.log("Unsupported length", e), 0);
       }
-      function ct(t) {
-        if (!("ownerDocument" in t))
+      function ce(e) {
+        if (!("ownerDocument" in e))
           return { left: 0, right: 0, top: 0, bottom: 0 };
-        const e = t.ownerDocument.defaultView.getComputedStyle(t);
+        const t = e.ownerDocument.defaultView.getComputedStyle(e);
         return {
-          left: lt(e.scrollMarginLeft),
-          right: lt(e.scrollMarginRight),
-          top: lt(e.scrollMarginTop),
-          bottom: lt(e.scrollMarginBottom),
+          left: le(t.scrollMarginLeft),
+          right: le(t.scrollMarginRight),
+          top: le(t.scrollMarginTop),
+          bottom: le(t.scrollMarginBottom),
         };
       }
-      function ut(t, e) {
-        let n = (function (t) {
-          let e;
+      function ue(e, t) {
+        let n = (function (e) {
+          let t;
           return (
-            (e =
-              "ownerDocument" in t
-                ? t.ownerDocument.defaultView.getComputedStyle(t)
-                : t.document.defaultView.getComputedStyle(
+            (t =
+              "ownerDocument" in e
+                ? e.ownerDocument.defaultView.getComputedStyle(e)
+                : e.document.defaultView.getComputedStyle(
                     window.document.documentElement
                   )),
             {
-              left: lt(e.scrollPaddingLeft),
-              right: lt(e.scrollPaddingRight),
-              top: lt(e.scrollPaddingTop),
-              bottom: lt(e.scrollPaddingBottom),
+              left: le(t.scrollPaddingLeft),
+              right: le(t.scrollPaddingRight),
+              top: le(t.scrollPaddingTop),
+              bottom: le(t.scrollPaddingBottom),
             }
           );
-        })(t);
+        })(e);
         return {
-          left: Math.max(0, e.left + n.left),
-          right: Math.max(0, e.right - n.right),
-          top: Math.max(0, e.top + n.top),
-          bottom: Math.max(0, e.bottom - n.bottom),
+          left: Math.max(0, t.left + n.left),
+          right: Math.max(0, t.right - n.right),
+          top: Math.max(0, t.top + n.top),
+          bottom: Math.max(0, t.bottom - n.bottom),
         };
       }
-      function ht(t) {
-        return t > -1 && t < 1;
+      function he(e) {
+        return e > -1 && e < 1;
       }
-      function dt(t, e, n, i, o) {
-        nt(
+      function de(e, t, n, i, o) {
+        ne(
           "----------------------------------------------------------------------------------"
         ),
-          nt("Scrolling Into View:", e);
+          ne("Scrolling Into View:", t);
         let s = [],
-          r = e,
-          a = st(e),
+          r = t,
+          a = se(t),
           l = null != o ? o : Number.MAX_VALUE;
         for (; r; ) {
-          let t = O(r);
-          t || (t = T(r));
-          let e = ct(r),
-            n = ut(t, st(t)),
-            c = _t(t),
-            u = { element: t, left: 0, top: 0 };
+          let e = O(r);
+          e || (e = T(r));
+          let t = ce(r),
+            n = ue(e, se(e)),
+            c = pe(e),
+            u = { element: e, left: 0, top: 0 };
           if (
-            (nt(
+            (ne(
               "Checking scroll div",
-              t,
+              e,
               `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${
                 c.scrollLeft
               } of ${c.MaxScrollLeft()}, adjusted =>`,
@@ -1636,16 +1645,16 @@
               a
             ),
             (i && "y" != i) ||
-              !y(t, "y") ||
-              ((u.top = at(a, n, e, "y")),
+              !y(e, "y") ||
+              ((u.top = ae(a, n, t, "y")),
               (u.top = Q(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
               o &&
                 ((u.top = Math.min(l, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
                 (l -= Math.abs(u.top))),
-              nt(`- checked y: ${u.top}`)),
+              ne(`- checked y: ${u.top}`)),
             (i && "x" != i) ||
-              !y(t, "x") ||
-              ((u.left = at(a, n, e, "x")),
+              !y(e, "x") ||
+              ((u.left = ae(a, n, t, "x")),
               (u.left = Q(
                 u.left,
                 -c.scrollLeft,
@@ -1655,15 +1664,15 @@
                 ((u.left =
                   Math.min(l, Math.abs(u.left)) * (u.left < 0 ? -1 : 1)),
                 (l -= Math.abs(u.left))),
-              nt(`- checked x: ${u.left}`)),
+              ne(`- checked x: ${u.left}`)),
             s.push(u),
             o && !l)
           )
             break;
-          if (!("ownerDocument" in t)) break;
-          const h = window.getComputedStyle(t);
+          if (!("ownerDocument" in e)) break;
+          const h = window.getComputedStyle(e);
           if ("fixed" === h.position || "sticky" === h.position) break;
-          (r = t),
+          (r = e),
             (a = {
               top: a.top - u.top,
               right: a.right - u.left,
@@ -1672,65 +1681,65 @@
             });
         }
         let c = !1;
-        for (let t of s) {
-          if (ht(t.left) && ht(t.top)) continue;
-          let e = _t(t.element),
-            i = e.scrollTop + t.top,
-            o = e.scrollLeft + t.left;
-          (o = Q(o, 0, e.MaxScrollLeft())),
-            (i = Q(i, 0, e.MaxScrollTop())),
-            (ht(e.scrollLeft - o) && ht(e.scrollTop - i)) ||
-              (e.scrollTo({ left: o, top: i, behavior: n }),
-              c || (nt("Scrolling:"), (c = !0)),
-              nt(
-                `- ${t.top},${t.left} => ${i}, ${o}, behavior: ${n}`,
-                t.element
+        for (let e of s) {
+          if (he(e.left) && he(e.top)) continue;
+          let t = pe(e.element),
+            i = t.scrollTop + e.top,
+            o = t.scrollLeft + e.left;
+          (o = Q(o, 0, t.MaxScrollLeft())),
+            (i = Q(i, 0, t.MaxScrollTop())),
+            (he(t.scrollLeft - o) && he(t.scrollTop - i)) ||
+              (t.scrollTo({ left: o, top: i, behavior: n }),
+              c || (ne("Scrolling:"), (c = !0)),
+              ne(
+                `- ${e.top},${e.left} => ${i}, ${o}, behavior: ${n}`,
+                e.element
               ));
         }
       }
-      function mt(t, e) {
-        const { top: n, left: i, behavior: o } = e,
-          s = _t(t);
+      function me(e, t) {
+        const { top: n, left: i, behavior: o } = t,
+          s = pe(e);
         s.scrollTo({
           top: s.scrollTop + (null != n ? n : 0),
           left: s.scrollLeft + (null != i ? i : 0),
           behavior: o,
         });
       }
-      class gt {
-        constructor(t) {
+      class ge {
+        constructor(e) {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
             (this.m_animation = void 0),
-            "ownerDocument" in t
-              ? ((this.m_element = t),
-                (this.m_fnOriginalScrollTo = t.scrollTo),
-                (this.m_element.scrollTo = (t, e) => {
-                  "number" == typeof t
-                    ? this.scrollTo({ left: t, top: e })
-                    : this.scrollTo(t);
+            "ownerDocument" in e
+              ? ((this.m_element = e),
+                (this.m_fnOriginalScrollTo = e.scrollTo),
+                (this.m_element.scrollTo = (e, t) => {
+                  "number" == typeof e
+                    ? this.scrollTo({ left: e, top: t })
+                    : this.scrollTo(e);
                 }))
-              : ((this.m_window = t),
-                (this.m_element = t.document.documentElement));
+              : ((this.m_window = e),
+                (this.m_element = e.document.documentElement));
         }
         ResetScrollState() {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
             this.m_window || (this.m_element.style.scrollSnapType = "");
         }
-        scrollTo(t) {
-          var e, n;
-          if ("auto" == t.behavior)
+        scrollTo(e) {
+          var t, n;
+          if ("auto" == e.behavior)
             this.m_animation &&
               (this.m_animation.Cancel(), (this.m_animation = void 0)),
               this.m_window
-                ? this.m_window.scrollTo(t)
-                : this.m_fnOriginalScrollTo.apply(this.m_element, [t]),
+                ? this.m_window.scrollTo(e)
+                : this.m_fnOriginalScrollTo.apply(this.m_element, [e]),
               this.ResetScrollState();
           else {
             const i =
-                null !== (e = t.left) && void 0 !== e ? e : this.scrollLeft,
-              o = null !== (n = t.top) && void 0 !== n ? n : this.scrollTop;
+                null !== (t = e.left) && void 0 !== t ? t : this.scrollLeft,
+              o = null !== (n = e.top) && void 0 !== n ? n : this.scrollTop;
             let s = "sine";
             this.m_animation && (this.m_animation.Cancel(), (s = "linear"));
             if (
@@ -1739,27 +1748,27 @@
                 Math.abs(this.currentScrollLeft - i)
               ) > 0
             ) {
-              const t = {
+              const e = {
                 msDuration: 200,
                 timing: s,
                 onComplete: this.ResetScrollState,
               };
               if (this.m_window) {
-                const e = this.currentScrollLeft,
+                const t = this.currentScrollLeft,
                   n = this.currentScrollTop;
-                this.m_animation = new tt(this.m_window, t, (t) => {
+                this.m_animation = new ee(this.m_window, e, (e) => {
                   this.m_window.scrollTo({
-                    left: e + (i - e) * t,
-                    top: n + (o - n) * t,
+                    left: t + (i - t) * e,
+                    top: n + (o - n) * e,
                     behavior: "auto",
                   });
                 });
               } else
                 (this.m_element.style.scrollSnapType = "initial"),
-                  (this.m_animation = new et(
+                  (this.m_animation = new te(
                     this.m_element,
                     { scrollTop: o, scrollLeft: i },
-                    t
+                    e
                   ));
               (this.m_scrollLeftTarget = i),
                 (this.m_scrollTopTarget = o),
@@ -1788,15 +1797,15 @@
             : this.m_element.scrollTop;
         }
         get scrollLeft() {
-          var t;
-          return null !== (t = this.m_scrollLeftTarget) && void 0 !== t
-            ? t
+          var e;
+          return null !== (e = this.m_scrollLeftTarget) && void 0 !== e
+            ? e
             : this.currentScrollLeft;
         }
         get scrollTop() {
-          var t;
-          return null !== (t = this.m_scrollTopTarget) && void 0 !== t
-            ? t
+          var e;
+          return null !== (e = this.m_scrollTopTarget) && void 0 !== e
+            ? e
             : this.currentScrollTop;
         }
         get scrollWidth() {
@@ -1812,48 +1821,48 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, o.gn)([_.a], gt.prototype, "ResetScrollState", null);
-      const pt = new WeakMap();
-      function _t(t) {
-        let e = pt.get(t);
-        return e || ((e = new gt(t)), pt.set(t, e)), e;
+      (0, o.gn)([p.a], ge.prototype, "ResetScrollState", null);
+      const _e = new WeakMap();
+      function pe(e) {
+        let t = _e.get(e);
+        return t || ((t = new ge(e)), _e.set(e, t)), t;
       }
-      function vt(t) {
-        const e = pt.get(t);
-        return e
-          ? { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop }
-          : { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop };
+      function ve(e) {
+        const t = _e.get(e);
+        return t
+          ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
+          : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const ft = new F("FocusNavigationMovement").Debug;
-      var bt, Ct, Ft, At;
-      !(function (t) {
-        (t[(t.NONE = 0)] = "NONE"),
-          (t[(t.COLUMN = 1)] = "COLUMN"),
-          (t[(t.ROW = 2)] = "ROW"),
-          (t[(t.COLUMN_REVERSE = 3)] = "COLUMN_REVERSE"),
-          (t[(t.ROW_REVERSE = 4)] = "ROW_REVERSE"),
-          (t[(t.GRID = 5)] = "GRID"),
-          (t[(t.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(bt || (bt = {})),
-        (function (t) {
-          (t[(t.FIRST = 0)] = "FIRST"),
-            (t[(t.LAST = 1)] = "LAST"),
-            (t[(t.MAINTAIN_X = 2)] = "MAINTAIN_X"),
-            (t[(t.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
-            (t[(t.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-        })(Ct || (Ct = {})),
-        (function (t) {
-          (t[(t.Standard = 0)] = "Standard"),
-            (t[(t.NoTransform = 1)] = "NoTransform"),
-            (t[(t.NoTransformSparseContent = 2)] = "NoTransformSparseContent");
-        })(Ft || (Ft = {})),
-        (function (t) {
-          (t[(t.INVALID = 0)] = "INVALID"),
-            (t[(t.FORWARD = 1)] = "FORWARD"),
-            (t[(t.BACKWARD = 2)] = "BACKWARD");
-        })(At || (At = {}));
-      class wt {
-        constructor(t, e, n) {
+      const fe = new F("FocusNavigationMovement").Debug;
+      var Ce, be, Fe, Ae;
+      !(function (e) {
+        (e[(e.NONE = 0)] = "NONE"),
+          (e[(e.COLUMN = 1)] = "COLUMN"),
+          (e[(e.ROW = 2)] = "ROW"),
+          (e[(e.COLUMN_REVERSE = 3)] = "COLUMN_REVERSE"),
+          (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
+          (e[(e.GRID = 5)] = "GRID"),
+          (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
+      })(Ce || (Ce = {})),
+        (function (e) {
+          (e[(e.FIRST = 0)] = "FIRST"),
+            (e[(e.LAST = 1)] = "LAST"),
+            (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
+            (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
+            (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
+        })(be || (be = {})),
+        (function (e) {
+          (e[(e.Standard = 0)] = "Standard"),
+            (e[(e.NoTransform = 1)] = "NoTransform"),
+            (e[(e.NoTransformSparseContent = 2)] = "NoTransformSparseContent");
+        })(Fe || (Fe = {})),
+        (function (e) {
+          (e[(e.INVALID = 0)] = "INVALID"),
+            (e[(e.FORWARD = 1)] = "FORWARD"),
+            (e[(e.BACKWARD = 2)] = "BACKWARD");
+        })(Ae || (Ae = {}));
+      class we {
+        constructor(e, t, n) {
           (this.m_rgChildren = []),
             (this.m_iLastActiveChildIndex = -1),
             (this.m_bChildrenSorted = !1),
@@ -1867,10 +1876,10 @@
             (this.m_RetainFocusParent = null),
             (this.m_rgNavigationHandlers = []),
             (this.m_rgFocusHandlers = []),
-            (this.m_Tree = t),
-            (this.m_Parent = e),
+            (this.m_Tree = e),
+            (this.m_Parent = t),
             (this.m_FocusRing = n),
-            (this.m_nDepth = e ? e.m_nDepth + 1 : 0);
+            (this.m_nDepth = t ? t.m_nDepth + 1 : 0);
         }
         CreateHandle() {
           return new U(this);
@@ -1879,12 +1888,12 @@
           return this.m_Tree;
         }
         get NavKey() {
-          var t, e;
+          var e, t;
           return (
-            null === (t = this.m_Properties) || void 0 === t ? void 0 : t.navKey
+            null === (e = this.m_Properties) || void 0 === e ? void 0 : e.navKey
           )
             ? this.m_Properties.navKey
-            : (null === (e = this.m_element) || void 0 === e ? void 0 : e.id)
+            : (null === (t = this.m_element) || void 0 === t ? void 0 : t.id)
             ? this.m_element.id
             : void 0;
         }
@@ -1894,21 +1903,21 @@
         get Parent() {
           return this.m_Parent;
         }
-        SetProperties(t) {
-          var e, n, o, s, r;
+        SetProperties(e) {
+          var t, n, o, s, r;
           const a =
             ((l =
-              null === (e = this.m_Properties) || void 0 === e
+              null === (t = this.m_Properties) || void 0 === t
                 ? void 0
-                : e.actionDescriptionMap),
-            (c = null == t ? void 0 : t.actionDescriptionMap),
+                : t.actionDescriptionMap),
+            (c = null == e ? void 0 : e.actionDescriptionMap),
             !(null == l || null == c
               ? l === c
               : "object" == typeof l &&
                 "object" == typeof c &&
                 Object.keys(l).length === Object.keys(c).length &&
                 Object.keys(l).every(
-                  (t) => c.hasOwnProperty(t) && l[t] === c[t]
+                  (e) => c.hasOwnProperty(e) && l[e] === c[e]
                 )));
           var l, c;
           const u =
@@ -1919,7 +1928,7 @@
               null === (o = this.m_Properties) || void 0 === o
                 ? void 0
                 : o.noFocusRing;
-          (this.m_Properties = t || {}),
+          (this.m_Properties = e || {}),
             a && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
             this.m_Properties.retainFocus && !u
               ? this.PropagateRetainFocusParentToChildren(this)
@@ -1955,19 +1964,19 @@
         GetBoundingRect() {
           return this.m_element && this.m_element.getBoundingClientRect();
         }
-        SetHasFocus(t) {
-          t != this.m_bFocused &&
-            ((this.m_bFocused = t),
+        SetHasFocus(e) {
+          e != this.m_bFocused &&
+            ((this.m_bFocused = e),
             this.m_FocusCallbackList.Dispatch(this.m_bFocused));
         }
-        SetFocusWithin(t) {
-          var e;
-          t != this.m_bFocusWithin &&
-            ((this.m_bFocusWithin = t),
+        SetFocusWithin(e) {
+          var t;
+          e != this.m_bFocusWithin &&
+            ((this.m_bFocusWithin = e),
             this.m_FocusWithinCallbackList.Dispatch(this.m_bFocusWithin),
-            (null === (e = this.m_Properties) || void 0 === e
+            (null === (t = this.m_Properties) || void 0 === t
               ? void 0
-              : e.onFocusWithin) &&
+              : t.onFocusWithin) &&
               this.m_Properties.onFocusWithin(this.m_bFocusWithin));
         }
         BHasFocus() {
@@ -1983,10 +1992,10 @@
           return this.m_FocusWithinCallbackList;
         }
         ForceMeasureFocusRing() {
-          var t;
-          null === (t = this.m_FocusRing) ||
-            void 0 === t ||
-            t.OnForceMeasureFocusRing();
+          var e;
+          null === (e = this.m_FocusRing) ||
+            void 0 === e ||
+            e.OnForceMeasureFocusRing();
         }
         get ActionDescriptionChangedCallbackList() {
           return this.m_ActionDescriptionsChangedCallbackList;
@@ -1994,61 +2003,61 @@
         GetActiveActionDescriptions() {
           return this.BuildConsolidatedActionDescriptionMap({});
         }
-        BuildConsolidatedActionDescriptionMap(t) {
-          var e;
+        BuildConsolidatedActionDescriptionMap(e) {
+          var t;
           const n =
-            null === (e = this.m_Properties) || void 0 === e
+            null === (t = this.m_Properties) || void 0 === t
               ? void 0
-              : e.actionDescriptionMap;
+              : t.actionDescriptionMap;
           if (n)
-            for (const e in n) {
-              const i = e;
-              void 0 === t[i] && (t[i] = n[i]);
+            for (const t in n) {
+              const i = t;
+              void 0 === e[i] && (e[i] = n[i]);
             }
           return this.m_Parent
-            ? this.m_Parent.BuildConsolidatedActionDescriptionMap(t)
-            : t;
+            ? this.m_Parent.BuildConsolidatedActionDescriptionMap(e)
+            : e;
         }
-        AddChild(t) {
-          var e;
-          this.m_rgChildren.push(t),
+        AddChild(e) {
+          var t;
+          this.m_rgChildren.push(e),
             (this.m_bChildrenSorted = !1),
             this.m_element && this.RegisterDOMEvents(),
             (
-              null === (e = this.m_Properties) || void 0 === e
+              null === (t = this.m_Properties) || void 0 === t
                 ? void 0
-                : e.retainFocus
+                : t.retainFocus
             )
-              ? t.SetRetainFocusParent(this)
+              ? e.SetRetainFocusParent(this)
               : this.m_RetainFocusParent &&
-                t.SetRetainFocusParent(this.m_RetainFocusParent),
+                e.SetRetainFocusParent(this.m_RetainFocusParent),
             this.m_bMounted &&
-              t.BFocusWithin() &&
-              (p(
+              e.BFocusWithin() &&
+              (_(
                 !this.m_ActiveChild && this.BFocusWithin(),
                 "Invalid focus state in AddChild"
               ),
               this.SetActiveChild(this.m_rgChildren.length - 1));
         }
-        OnMount(t) {
-          (this.m_element = t),
+        OnMount(e) {
+          (this.m_element = e),
             this.m_Parent
               ? this.m_Parent.AddChild(this)
-              : p(this == this.m_Tree.Root, "Only root should have no parent"),
+              : _(this == this.m_Tree.Root, "Only root should have no parent"),
             (this.m_bMounted = !0),
             this.RegisterDOMEvents();
-          const e =
+          const t =
               this.m_RetainFocusParent && this.m_RetainFocusParent.BHasFocus(),
-            n = this.m_Properties.autoFocus || e;
+            n = this.m_Properties.autoFocus || t;
           if (this.BWantsAutoFocus() || n) {
-            let t = -1;
+            let e = -1;
             this.m_rgChildren.length &&
               (this.EnsureChildrenSorted(),
-              (t = this.m_rgChildren.findIndex((t) => t.BWantsAutoFocus()))),
-              (this.m_Properties.autoFocus || n || -1 !== t) &&
-                (this.SetActiveChild(t),
+              (e = this.m_rgChildren.findIndex((e) => e.BWantsAutoFocus()))),
+              (this.m_Properties.autoFocus || n || -1 !== e) &&
+                (this.SetActiveChild(e),
                 !this.m_Parent || this.m_Parent.m_element
-                  ? e
+                  ? t
                     ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
                       this.m_Tree.DeferredFocus.RequestFocus(
                         this.m_RetainFocusParent,
@@ -2057,10 +2066,10 @@
                     : this.Tree.DeferredFocus.RequestFocus(this)
                   : (this.m_Parent.m_bAutoFocusChild = !0));
           } else if (this.m_rgChildren.length) {
-            const t = this.m_rgChildren.findIndex((t) => t.BFocusWithin());
-            -1 != t &&
-              (this.SetActiveChild(t),
-              p(
+            const e = this.m_rgChildren.findIndex((e) => e.BFocusWithin());
+            -1 != e &&
+              (this.SetActiveChild(e),
+              _(
                 this.m_bFocusWithin,
                 "Child has focus, we should be m_bFocusWithin"
               ));
@@ -2068,22 +2077,22 @@
         }
         DEV_SetDebugPropsOnElement() {}
         OnUnmount() {
-          var t;
-          (null === (t = this.m_Properties) || void 0 === t
+          var e;
+          (null === (e = this.m_Properties) || void 0 === e
             ? void 0
-            : t.retainFocus) &&
+            : e.retainFocus) &&
             this.PropagateRetainFocusParentToChildren(this.m_RetainFocusParent),
             (this.m_bMounted = !1);
-          const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-          (this.m_bFocused || e) &&
-            (ft(
+          const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
+          (this.m_bFocused || t) &&
+            (fe(
               `The focused node is unmounting, ${
                 this.m_RetainFocusParent
                   ? "will transfer to retain focus ancestor"
                   : "will blur"
               }.`
             ),
-            e && this.Tree.DeferredFocus.RequestFocus(void 0),
+            t && this.Tree.DeferredFocus.RequestFocus(void 0),
             this.m_RetainFocusParent
               ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
               : this.m_bFocused &&
@@ -2091,12 +2100,12 @@
             this.UnregisterDOMEvents(),
             this.m_Parent
               ? this.m_Parent.RemoveChild(this)
-              : p(this == this.m_Tree.Root, "Only root should have no parent");
+              : _(this == this.m_Tree.Root, "Only root should have no parent");
         }
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != bt.NONE ||
+              this.m_Properties.layout != Ce.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -2113,25 +2122,25 @@
                     this.m_element.removeEventListener("blur", this.OnDOMBlur);
                 })));
         }
-        RemoveChild(t) {
-          let e = this.m_rgChildren.indexOf(t);
-          p(-1 !== e, "Child was not found to remove"),
-            -1 !== e &&
-              (this.m_ActiveChild == t && (this.m_ActiveChild = void 0),
-              this.m_rgChildren.splice(e, 1));
+        RemoveChild(e) {
+          let t = this.m_rgChildren.indexOf(e);
+          _(-1 !== t, "Child was not found to remove"),
+            -1 !== t &&
+              (this.m_ActiveChild == e && (this.m_ActiveChild = void 0),
+              this.m_rgChildren.splice(t, 1));
         }
         UnregisterDOMEvents() {
-          this.m_rgNavigationHandlers.forEach((t) => t()),
+          this.m_rgNavigationHandlers.forEach((e) => e()),
             (this.m_rgNavigationHandlers = []),
-            this.m_rgFocusHandlers.forEach((t) => t()),
+            this.m_rgFocusHandlers.forEach((e) => e()),
             (this.m_rgFocusHandlers = []);
         }
         GetActiveDescendant() {
-          const t = this.GetActiveChild();
-          return t ? t.GetActiveDescendant() : this;
+          const e = this.GetActiveChild();
+          return e ? e.GetActiveDescendant() : this;
         }
-        IsValidChildIndex(t) {
-          return t >= 0 && t < this.m_rgChildren.length;
+        IsValidChildIndex(e) {
+          return e >= 0 && e < this.m_rgChildren.length;
         }
         GetActiveChild() {
           return this.m_ActiveChild
@@ -2155,11 +2164,11 @@
           }
           return this.m_iLastActiveChildIndex;
         }
-        EnsureChildrenSorted(t = !1) {
-          (this.m_bChildrenSorted && !t) ||
-            (this.m_rgChildren.sort((t, e) => {
-              const n = t.m_element,
-                i = e.m_element;
+        EnsureChildrenSorted(e = !1) {
+          (this.m_bChildrenSorted && !e) ||
+            (this.m_rgChildren.sort((e, t) => {
+              const n = e.m_element,
+                i = t.m_element;
               if (!n) return i ? 1 : 0;
               if (!i) return -1;
               const o = n.compareDocumentPosition(i);
@@ -2176,13 +2185,13 @@
             (this.m_bChildrenSorted = !0));
         }
         GetLastFocusElement() {
-          const t = this.GetActiveChild();
-          return t ? t.GetLastFocusElement() : this.m_element;
+          const e = this.GetActiveChild();
+          return e ? e.GetLastFocusElement() : this.m_element;
         }
-        OnDOMFocus(t) {
+        OnDOMFocus(e) {
           this.m_bFocused || this.m_Tree.TransferFocus(i.BROWSER, this);
         }
-        OnDOMBlur(t) {
+        OnDOMBlur(e) {
           this.m_bFocused &&
             this.m_element.ownerDocument.hasFocus() &&
             this.m_Tree.TransferFocus(i.BROWSER, null);
@@ -2194,57 +2203,57 @@
         }
         GetFocusable() {
           const {
-            focusable: t,
-            focusableIfNoChildren: e,
+            focusable: e,
+            focusableIfNoChildren: t,
             childFocusDisabled: n,
             fnCanTakeFocus: i,
           } = this.m_Properties;
           return this.m_bMounted
             ? i && !i(this)
               ? "none"
-              : t || (e && (n || 0 == this.m_rgChildren.length))
+              : e || (t && (n || 0 == this.m_rgChildren.length))
               ? "self"
               : !n && this.m_rgChildren.length
               ? "children"
               : "none"
             : "none";
         }
-        BTakeFocus(t, e) {
-          const n = this.FindFocusableNode(e);
-          return this.InternalFocusDescendant(n, t, e);
+        BTakeFocus(e, t) {
+          const n = this.FindFocusableNode(t);
+          return this.InternalFocusDescendant(n, e, t);
         }
-        FindFocusableNode(t, e) {
+        FindFocusableNode(e, t) {
           switch (this.GetFocusable()) {
             case "none":
               return null;
             case "self":
               return this;
             case "children":
-              return this.FindFocusableDescendant(t, e);
+              return this.FindFocusableDescendant(e, t);
           }
         }
-        BChildTakeFocus(t, e) {
-          const n = this.FindFocusableDescendant(e);
-          return this.InternalFocusDescendant(n, t, e);
+        BChildTakeFocus(e, t) {
+          const n = this.FindFocusableDescendant(t);
+          return this.InternalFocusDescendant(n, e, t);
         }
-        BFocusFirstChild(t) {
-          const e = this.FindNextFocusableChildInDirection(
+        BFocusFirstChild(e) {
+          const t = this.FindNextFocusableChildInDirection(
             -1,
-            At.FORWARD,
+            Ae.FORWARD,
             a.eV.INVALID
           );
-          return this.InternalFocusDescendant(e, t);
+          return this.InternalFocusDescendant(t, e);
         }
-        BFocusLastChild(t) {
-          const e = this.FindNextFocusableChildInDirection(
+        BFocusLastChild(e) {
+          const t = this.FindNextFocusableChildInDirection(
             this.m_rgChildren.length,
-            At.BACKWARD,
+            Ae.BACKWARD,
             a.eV.INVALID
           );
-          return this.InternalFocusDescendant(e, t);
+          return this.InternalFocusDescendant(t, e);
         }
-        FindFocusableDescendant(t, e) {
-          const n = Y(t),
+        FindFocusableDescendant(e, t) {
+          const n = Y(e),
             { focusableIfNoChildren: i, childFocusDisabled: o } =
               this.m_Properties;
           if (o) return null;
@@ -2254,68 +2263,68 @@
               this.m_Properties;
             let r,
               a = this.GetActiveChildIndex();
-            if ((s && void 0 !== t && (a = -1), !this.IsValidChildIndex(a))) {
-              const t = this.GetLayout();
+            if ((s && void 0 !== e && (a = -1), !this.IsValidChildIndex(a))) {
+              const e = this.GetLayout();
               a =
                 a >= this.m_rgChildren.length ||
-                t == bt.ROW_REVERSE ||
-                t == bt.COLUMN_REVERSE ||
-                o == Ct.LAST
+                e == Ce.ROW_REVERSE ||
+                e == Ce.COLUMN_REVERSE ||
+                o == be.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
             }
-            if ((o == Ct.MAINTAIN_X || o == Ct.MAINTAIN_Y || e) && n) {
+            if ((o == be.MAINTAIN_X || o == be.MAINTAIN_Y || t) && n) {
               let i, s;
-              o == Ct.MAINTAIN_X ? (i = "x") : o == Ct.MAINTAIN_Y && (i = "y"),
+              o == be.MAINTAIN_X ? (i = "x") : o == be.MAINTAIN_Y && (i = "y"),
                 i == g[n] && (s = this.m_Tree.GetLastFocusedMovementRect(g[n])),
-                ft(
-                  `Taking focus while preserving ${Ct[o]} preserved: ${i} movement: ${n}, node:`,
-                  s || e
+                fe(
+                  `Taking focus while preserving ${be[o]} preserved: ${i} movement: ${n}, node:`,
+                  s || t
                 );
-              const a = this.ComputeRelativeDirection(t, bt.GRID);
-              if (s || e) {
-                const o = a == At.BACKWARD ? this.m_rgChildren.length - 1 : 0;
+              const a = this.ComputeRelativeDirection(e, Ce.GRID);
+              if (s || t) {
+                const o = a == Ae.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 r = this.FindClosestChildInNextAxiallyAlignedSet(
                   i || g[n],
                   a,
-                  t,
-                  s || e,
+                  e,
+                  s || t,
                   o,
                   this.m_rgChildren[o].GetBoundingRect()
                 );
               } else if (i != g[n]) {
-                const e = a == At.BACKWARD ? this.m_rgChildren.length : -1;
-                r = this.FindNextFocusableChildInDirection(e, a, t);
+                const t = a == Ae.BACKWARD ? this.m_rgChildren.length : -1;
+                r = this.FindNextFocusableChildInDirection(t, a, e);
               }
-            } else if (o == Ct.PREFERRED_CHILD) {
-              for (const e of this.m_rgChildren)
+            } else if (o == be.PREFERRED_CHILD) {
+              for (const t of this.m_rgChildren)
                 if (
-                  ((r = e.BWantsPreferredFocus() && e.FindFocusableNode(t)), r)
+                  ((r = t.BWantsPreferredFocus() && t.FindFocusableNode(e)), r)
                 )
                   return r;
             } else
-              o == Ct.LAST &&
+              o == be.LAST &&
                 (r = this.FindNextFocusableChildInDirection(
                   a + 1,
-                  At.BACKWARD,
-                  t
+                  Ae.BACKWARD,
+                  e
                 ));
             return (
               r ||
                 (r = this.FindNextFocusableChildInDirection(
                   a - 1,
-                  At.FORWARD,
-                  t
+                  Ae.FORWARD,
+                  e
                 )),
               r ||
-                (r = this.FindNextFocusableChildInDirection(a, At.BACKWARD, t)),
+                (r = this.FindNextFocusableChildInDirection(a, Ae.BACKWARD, e)),
               r || (i ? this : null)
             );
           }
           return null;
         }
-        BVisibleChildTakeFocus(t) {
-          var e;
+        BVisibleChildTakeFocus(e) {
+          var t;
           const n = z(
             this,
             this.Element
@@ -2323,24 +2332,24 @@
               : document.body.getBoundingClientRect()
           );
           return (
-            ft(
+            fe(
               `Focusing visible child, best child match is ${
-                null === (e = null == n ? void 0 : n.child) || void 0 === e
+                null === (t = null == n ? void 0 : n.child) || void 0 === t
                   ? void 0
-                  : e.Element.className
+                  : t.Element.className
               } - ${JSON.stringify(null == n ? void 0 : n.visibility)}`
             ),
-            !!n && n.child.BTakeFocus(t)
+            !!n && n.child.BTakeFocus(e)
           );
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return bt.NONE;
+          if (this.m_rgChildren.length < 2) return Ce.NONE;
           return j(this.m_element);
         }
-        OnNavigationEvent(t) {
-          const e = t.detail.button;
-          if (this.BTryInternalNavigation(e, t.detail.is_repeat)) return !0;
+        OnNavigationEvent(e) {
+          const t = e.detail.button;
+          if (this.BTryInternalNavigation(t, e.detail.is_repeat)) return !0;
           const {
             onMoveUp: n,
             onMoveRight: i,
@@ -2348,68 +2357,68 @@
             onMoveLeft: s,
           } = this.m_Properties;
           let r = !1;
-          switch (e) {
+          switch (t) {
             case a.eV.DIR_UP:
-              n && (r = n(t.detail, this));
+              n && (r = n(e.detail, this));
               break;
             case a.eV.DIR_RIGHT:
-              i && (r = i(t.detail, this));
+              i && (r = i(e.detail, this));
               break;
             case a.eV.DIR_DOWN:
-              o && (r = o(t.detail, this));
+              o && (r = o(e.detail, this));
               break;
             case a.eV.DIR_LEFT:
-              s && (r = s(t.detail, this));
+              s && (r = s(e.detail, this));
           }
           return r;
         }
-        InternalFocusDescendant(t, e, n) {
-          return !!t && (this.m_Tree.TransferFocus(e, t, Y(n)), !0);
+        InternalFocusDescendant(e, t, n) {
+          return !!e && (this.m_Tree.TransferFocus(t, e, Y(n)), !0);
         }
-        BTryInternalNavigation(t, e) {
+        BTryInternalNavigation(e, t) {
           const n = this.GetLayout();
           let o,
-            s = this.ComputeRelativeDirection(t, n);
+            s = this.ComputeRelativeDirection(e, n);
           if (
-            (ft(
-              `Handling navigation event ${a.eV[t]} - ${bt[n]} - ${At[s]}`,
+            (fe(
+              `Handling navigation event ${a.eV[e]} - ${Ce[n]} - ${Ae[s]}`,
               this.m_element
             ),
-            s == At.INVALID)
+            s == Ae.INVALID)
           )
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
-            return ft("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), n == bt.GRID))
+            return fe("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), n == Ce.GRID))
             o = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
-              t
+              e
             );
           else {
-            let e = this.GetActiveChildIndex();
-            this.IsValidChildIndex(e) ||
-              (e = s == At.FORWARD ? -1 : this.m_rgChildren.length),
-              (o = this.FindNextFocusableChildInDirection(e, s, t));
+            let t = this.GetActiveChildIndex();
+            this.IsValidChildIndex(t) ||
+              (t = s == Ae.FORWARD ? -1 : this.m_rgChildren.length),
+              (o = this.FindNextFocusableChildInDirection(t, s, e));
           }
           if (o) {
-            const n = Y(t);
-            if (this.GetScrollIntoViewType() == Ft.NoTransformSparseContent) {
-              const t =
+            const n = Y(e);
+            if (this.GetScrollIntoViewType() == Fe.NoTransformSparseContent) {
+              const e =
                   ("y" == n ? window.innerHeight : window.innerWidth) /
-                  (e ? 4.5 : 3.33),
-                i = st(o.Element);
+                  (t ? 4.5 : 3.33),
+                i = se(o.Element);
               if (
                 (i.top > window.innerHeight &&
-                  i.bottom > window.innerHeight + t) ||
-                (i.bottom < 0 && i.top < -t) ||
+                  i.bottom > window.innerHeight + e) ||
+                (i.bottom < 0 && i.top < -e) ||
                 (i.left > window.innerWidth &&
-                  i.right > window.innerWidth + t) ||
-                (i.right < 0 && i.left < -t)
+                  i.right > window.innerWidth + e) ||
+                (i.right < 0 && i.left < -e)
               )
                 return (
-                  ft(`Element too far away, scrolling ${t} on ${n} axis `),
-                  dt(o.Element, o.Element, "smooth", n, t),
+                  fe(`Element too far away, scrolling ${e} on ${n} axis `),
+                  de(o.Element, o.Element, "smooth", n, e),
                   !0
                 );
             }
@@ -2418,81 +2427,81 @@
           return !1;
         }
         GetScrollIntoViewType() {
-          var t;
+          var e;
           return (
-            null === (t = this.m_Properties) || void 0 === t
+            null === (e = this.m_Properties) || void 0 === e
               ? void 0
-              : t.scrollIntoViewType
+              : e.scrollIntoViewType
           )
             ? this.m_Properties.scrollIntoViewType
             : this.m_Parent
             ? this.m_Parent.GetScrollIntoViewType()
-            : Ft.Standard;
+            : Fe.Standard;
         }
-        GetRelativeDirection(t) {
-          return this.ComputeRelativeDirection(t, this.GetLayout());
+        GetRelativeDirection(e) {
+          return this.ComputeRelativeDirection(e, this.GetLayout());
         }
-        ComputeRelativeDirection(t, e) {
-          let n = e == bt.ROW_REVERSE || e == bt.COLUMN_REVERSE;
-          switch (e) {
-            case bt.ROW:
-            case bt.ROW_REVERSE:
-              switch (t) {
+        ComputeRelativeDirection(e, t) {
+          let n = t == Ce.ROW_REVERSE || t == Ce.COLUMN_REVERSE;
+          switch (t) {
+            case Ce.ROW:
+            case Ce.ROW_REVERSE:
+              switch (e) {
                 case a.eV.DIR_LEFT:
-                  return n ? At.FORWARD : At.BACKWARD;
+                  return n ? Ae.FORWARD : Ae.BACKWARD;
                 case a.eV.DIR_RIGHT:
-                  return n ? At.BACKWARD : At.FORWARD;
+                  return n ? Ae.BACKWARD : Ae.FORWARD;
                 default:
-                  return At.INVALID;
+                  return Ae.INVALID;
               }
-            case bt.COLUMN:
-            case bt.COLUMN_REVERSE:
-              switch (t) {
+            case Ce.COLUMN:
+            case Ce.COLUMN_REVERSE:
+              switch (e) {
                 case a.eV.DIR_UP:
-                  return n ? At.FORWARD : At.BACKWARD;
+                  return n ? Ae.FORWARD : Ae.BACKWARD;
                 case a.eV.DIR_DOWN:
-                  return n ? At.BACKWARD : At.FORWARD;
+                  return n ? Ae.BACKWARD : Ae.FORWARD;
                 default:
-                  return At.INVALID;
+                  return Ae.INVALID;
               }
-            case bt.GRID:
-              switch (t) {
+            case Ce.GRID:
+              switch (e) {
                 case a.eV.DIR_LEFT:
                 case a.eV.DIR_UP:
-                  return n ? At.FORWARD : At.BACKWARD;
+                  return n ? Ae.FORWARD : Ae.BACKWARD;
                 case a.eV.DIR_RIGHT:
                 case a.eV.DIR_DOWN:
-                  return n ? At.BACKWARD : At.FORWARD;
+                  return n ? Ae.BACKWARD : Ae.FORWARD;
                 default:
-                  return At.INVALID;
+                  return Ae.INVALID;
               }
             default:
-              return At.INVALID;
+              return Ae.INVALID;
           }
         }
-        AdvanceIndex(t, e) {
-          return t + (e == At.FORWARD ? 1 : -1);
+        AdvanceIndex(e, t) {
+          return e + (t == Ae.FORWARD ? 1 : -1);
         }
-        FindNextFocusableChildInDirection(t, e, n) {
-          let i = e == At.FORWARD ? 1 : -1;
-          for (let e = t + i; e >= 0 && e < this.m_rgChildren.length; e += i) {
-            const t = this.m_rgChildren[e].FindFocusableNode(n);
-            if (t) return t;
+        FindNextFocusableChildInDirection(e, t, n) {
+          let i = t == Ae.FORWARD ? 1 : -1;
+          for (let t = e + i; t >= 0 && t < this.m_rgChildren.length; t += i) {
+            const e = this.m_rgChildren[t].FindFocusableNode(n);
+            if (e) return e;
           }
           return null;
         }
-        ScanChildren(t, e, n) {
-          let i = e == At.FORWARD ? 1 : -1;
-          for (let e = t; e >= 0 && e < this.m_rgChildren.length; e += i)
-            if (n(this.m_rgChildren[e], e)) return e;
+        ScanChildren(e, t, n) {
+          let i = t == Ae.FORWARD ? 1 : -1;
+          for (let t = e; t >= 0 && t < this.m_rgChildren.length; t += i)
+            if (n(this.m_rgChildren[t], t)) return t;
           return -1;
         }
-        FindNextFocusableChildInGrid(t, e, n) {
+        FindNextFocusableChildInGrid(e, t, n) {
           const i = n == a.eV.DIR_UP || n == a.eV.DIR_DOWN,
             o = this.GetLastFocusElement();
           if (!o || o == this.m_element)
             return (
-              p(
+              _(
                 !1,
                 "No active child for grid navigation",
                 this.m_iLastActiveChildIndex,
@@ -2503,66 +2512,66 @@
             );
           const s = this.GetActiveDescendant().GetBoundingRect();
           if (n == a.eV.DIR_UP || n == a.eV.DIR_DOWN) {
-            const t = this.m_Tree.GetLastFocusedMovementRect("x");
-            t && ((s.x = t.x), (s.width = t.width));
+            const e = this.m_Tree.GetLastFocusedMovementRect("x");
+            e && ((s.x = e.x), (s.width = e.width));
           }
           if (i) {
-            let i = t;
+            let i = e;
             for (; -1 != i; ) {
-              const t = this.ScanChildren(
-                this.AdvanceIndex(i, e),
-                e,
-                (t) => !H("y", s, t.GetBoundingRect())
+              const e = this.ScanChildren(
+                this.AdvanceIndex(i, t),
+                t,
+                (e) => !H("y", s, e.GetBoundingRect())
               );
-              if (-1 != t) {
-                const i = this.m_rgChildren[t].GetBoundingRect(),
+              if (-1 != e) {
+                const i = this.m_rgChildren[e].GetBoundingRect(),
                   o = this.FindClosestChildInNextAxiallyAlignedSet(
                     "x",
-                    e,
+                    t,
                     n,
                     s,
-                    t,
+                    e,
                     i
                   );
                 if (o) return o;
               }
-              i = t;
+              i = e;
             }
           } else {
-            let i = e == At.FORWARD ? 1 : -1;
+            let i = t == Ae.FORWARD ? 1 : -1;
             for (
-              let o = this.AdvanceIndex(t, e);
+              let o = this.AdvanceIndex(e, t);
               o >= 0 && o < this.m_rgChildren.length;
               o += i
             ) {
-              const t = this.m_rgChildren[o];
-              if (!H("y", s, t.GetBoundingRect())) return null;
-              let e = t.FindFocusableNode(n);
-              if (e) return e;
+              const e = this.m_rgChildren[o];
+              if (!H("y", s, e.GetBoundingRect())) return null;
+              let t = e.FindFocusableNode(n);
+              if (t) return t;
             }
           }
           return null;
         }
-        FindClosestChildInNextAxiallyAlignedSet(t, e, n, i, o, s) {
+        FindClosestChildInNextAxiallyAlignedSet(e, t, n, i, o, s) {
           (!o || o < 0) && (o = 0);
           let r = [];
           const a = { x: (l = i).x, y: l.y };
           var l;
-          this.ScanChildren(o, e, (e) => {
-            const n = e.GetBoundingRect();
+          this.ScanChildren(o, t, (t) => {
+            const n = t.GetBoundingRect();
             return (
-              !(!s || H(g[t], s, n)) ||
-              (r.push({ child: e, overlap: K(t, i, n), dist: $(t, a, n) }), !1)
+              !(!s || H(g[e], s, n)) ||
+              (r.push({ child: t, overlap: K(e, i, n), dist: $(e, a, n) }), !1)
             );
           }),
-            e == At.BACKWARD && r.reverse(),
-            r.sort((t, e) => {
-              const n = e.overlap - t.overlap;
-              return 0 != n ? n : t.dist - e.dist;
+            t == Ae.BACKWARD && r.reverse(),
+            r.sort((e, t) => {
+              const n = t.overlap - e.overlap;
+              return 0 != n ? n : e.dist - t.dist;
             });
-          for (const { child: t } of r) {
-            const e = t.FindFocusableNode(n, i);
-            if (e) return e;
+          for (const { child: e } of r) {
+            const t = e.FindFocusableNode(n, i);
+            if (t) return t;
           }
           return null;
         }
@@ -2572,53 +2581,53 @@
             [this.m_rgChildren, this.m_iLastActiveChildIndex]
           );
         }
-        SetActiveChild(t) {
-          t instanceof wt
+        SetActiveChild(e) {
+          e instanceof we
             ? (this.EnsureChildrenSorted(),
-              (this.m_ActiveChild = t),
-              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(t)))
-            : (this.IsValidChildIndex(t) &&
-                (this.m_ActiveChild = this.m_rgChildren[t]),
-              (this.m_iLastActiveChildIndex = t));
+              (this.m_ActiveChild = e),
+              (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
+            : (this.IsValidChildIndex(e) &&
+                (this.m_ActiveChild = this.m_rgChildren[e]),
+              (this.m_iLastActiveChildIndex = e));
         }
         GetDepth() {
           return this.m_nDepth;
         }
-        SetRetainFocusParent(t) {
-          (this.m_RetainFocusParent = t),
+        SetRetainFocusParent(e) {
+          (this.m_RetainFocusParent = e),
             this.m_Properties.retainFocus ||
-              this.PropagateRetainFocusParentToChildren(t);
+              this.PropagateRetainFocusParentToChildren(e);
         }
-        PropagateRetainFocusParentToChildren(t) {
-          for (let e = 0; e < this.m_rgChildren.length; e++)
-            this.m_rgChildren[e].SetRetainFocusParent(t);
+        PropagateRetainFocusParentToChildren(e) {
+          for (let t = 0; t < this.m_rgChildren.length; t++)
+            this.m_rgChildren[t].SetRetainFocusParent(e);
         }
-        OnFocusedDecendantRemoved(t) {
+        OnFocusedDecendantRemoved(e) {
           this.m_Tree.DeferredFocus.RequestFocus(this, {
             bFocusDescendant: !0,
           });
         }
-        SetDOMFocusAndScroll(t, e) {
+        SetDOMFocusAndScroll(e, t) {
           this.UpdateParentActiveChild(),
             this.m_Tree.BIsActiveFocus()
-              ? (p(
+              ? (_(
                   !this.m_Tree.BUseVirtualFocus(),
                   "Virtual focus tree should not have browser focus"
                 ),
                 this.m_element.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                ft(
+                fe(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`
                 ),
-            (function (t, e) {
+            (function (e, t) {
               var n, i, o;
-              const s = t.Element;
+              const s = e.Element;
               if (!s) return;
-              let r = [t];
-              for (let e = t.Parent; e; e = e.Parent)
-                (null === (n = e.m_Properties) || void 0 === n
+              let r = [e];
+              for (let t = e.Parent; t; t = t.Parent)
+                (null === (n = t.m_Properties) || void 0 === n
                   ? void 0
-                  : n.scrollIntoViewWhenChildFocused) && r.push(e);
+                  : n.scrollIntoViewWhenChildFocused) && r.push(t);
               for (; r.length; ) {
                 let n = r.pop(),
                   s = 0 == r.length,
@@ -2627,132 +2636,132 @@
                       ? void 0
                       : i.scrollIntoViewType;
                 if (
-                  (void 0 === a && (a = it ? Ft.NoTransform : Ft.Standard),
+                  (void 0 === a && (a = ie ? Fe.NoTransform : Fe.Standard),
                   (null === (o = n.m_Properties) || void 0 === o
                     ? void 0
                     : o.fnScrollIntoViewHandler) &&
-                    !1 !== n.m_Properties.fnScrollIntoViewHandler(t, e, n))
+                    !1 !== n.m_Properties.fnScrollIntoViewHandler(e, t, n))
                 )
                   continue;
                 const l = n.m_element,
                   c =
-                    a == Ft.NoTransform ||
-                    a == Ft.NoTransformSparseContent ||
+                    a == Fe.NoTransform ||
+                    a == Fe.NoTransformSparseContent ||
                     !s;
-                if (e) {
-                  const e = c ? st(l) : l.getBoundingClientRect();
+                if (t) {
+                  const t = c ? se(l) : l.getBoundingClientRect();
                   let n = !1;
-                  const i = Math.max(1.4 * (e.bottom - e.top), 40);
-                  ((ot && performance.now() - ot < 500) ||
-                    e.bottom < -i ||
-                    e.top > window.innerHeight + i) &&
+                  const i = Math.max(1.4 * (t.bottom - t.top), 40);
+                  ((oe && performance.now() - oe < 500) ||
+                    t.bottom < -i ||
+                    t.top > window.innerHeight + i) &&
                     (n = !0);
                   let o = n ? "auto" : "smooth";
-                  n && (ot = performance.now()),
-                    t.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
+                  n && (oe = performance.now()),
+                    e.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
                     c
-                      ? dt(0, l, o)
+                      ? de(0, l, o)
                       : l.scrollIntoView({ behavior: o, block: "nearest" });
                 } else
                   c
-                    ? dt(0, l, "auto")
+                    ? de(0, l, "auto")
                     : l.scrollIntoView({
                         behavior: "auto",
                         block: "nearest",
                         inline: "nearest",
                       });
               }
-            })(this, e),
-            this.m_Tree.OnChildActivated(t);
+            })(this, t),
+            this.m_Tree.OnChildActivated(e);
         }
       }
-      (0, o.gn)([_.a], wt.prototype, "OnDOMFocus", null),
-        (0, o.gn)([_.a], wt.prototype, "OnDOMBlur", null),
-        (0, o.gn)([_.a], wt.prototype, "OnNavigationEvent", null);
-      const Rt = "GamepadInput";
-      var Nt;
-      function It(t) {
-        const [e, n] = t.split(".", 2);
+      (0, o.gn)([p.a], we.prototype, "OnDOMFocus", null),
+        (0, o.gn)([p.a], we.prototype, "OnDOMBlur", null),
+        (0, o.gn)([p.a], we.prototype, "OnNavigationEvent", null);
+      const Re = "GamepadInput";
+      var Ne;
+      function Ie(e) {
+        const [t, n] = e.split(".", 2);
         return (
-          e &&
+          t &&
           n &&
-          (function (t) {
-            return "object" == typeof SteamClient && t in SteamClient;
-          })(e) &&
-          n in SteamClient[e]
+          (function (e) {
+            return "object" == typeof SteamClient && e in SteamClient;
+          })(t) &&
+          n in SteamClient[t]
         );
       }
-      !(function (t) {
-        (t[(t.PageUnloading = 0)] = "PageUnloading"),
-          (t[(t.Unknown = 1)] = "Unknown"),
-          (t[(t.None = 2)] = "None"),
-          (t[(t.Basic = 3)] = "Basic"),
-          (t[(t.Full = 4)] = "Full");
-      })(Nt || (Nt = {}));
-      class Dt {
-        constructor(t) {
+      !(function (e) {
+        (e[(e.PageUnloading = 0)] = "PageUnloading"),
+          (e[(e.Unknown = 1)] = "Unknown"),
+          (e[(e.None = 2)] = "None"),
+          (e[(e.Basic = 3)] = "Basic"),
+          (e[(e.Full = 4)] = "Full");
+      })(Ne || (Ne = {}));
+      class De {
+        constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
-            (this.m_NavigationController = t),
-            It("BrowserView.RegisterForMessageFromParent") &&
-            It("BrowserView.PostMessageToParent")
+            (this.m_NavigationController = e),
+            Ie("BrowserView.RegisterForMessageFromParent") &&
+            Ie("BrowserView.PostMessageToParent")
               ? ((this.m_bIsGamepadInputExternallyControlled = !0),
-                (this.m_postMessage = new Tt()))
+                (this.m_postMessage = new Te()))
               : ((this.m_bIsGamepadInputExternallyControlled =
                   window.top != window.self),
-                (this.m_postMessage = new St(window.top))),
+                (this.m_postMessage = new Se(window.top))),
             this.m_postMessage.RegisterForMessage(this.OnMessage),
             window.addEventListener("unload", this.PostPageUnloading),
             this.m_NavigationController.RegisterForUnhandledButtonDownEvents(
-              (t) => this.PostButtonPressToSteam(t.detail.button)
+              (e) => this.PostButtonPressToSteam(e.detail.button)
             ),
-            t.FocusChangedCallbacks.Register(this.OnFocusChanged),
+            e.FocusChangedCallbacks.Register(this.OnFocusChanged),
             this.UpdateActionDescriptions({}),
             this.SendGameInputState("CGamepadWebBridgeClient constructor");
         }
         BIsGamepadInputExternallyControlled() {
           return this.m_bIsGamepadInputExternallyControlled;
         }
-        BFromActiveNavTree(t, e) {
-          let n = null == e ? void 0 : e.Tree;
+        BFromActiveNavTree(e, t) {
+          let n = null == t ? void 0 : t.Tree;
           return (
-            n || (n = null == t ? void 0 : t.Tree),
+            n || (n = null == e ? void 0 : e.Tree),
             n && n.Controller.IsActiveFocusNavTree(n)
           );
         }
-        OnFocusChanged(t, e, n) {
+        OnFocusChanged(e, t, n) {
           const i = n ? n.GetActiveActionDescriptions() : {};
-          this.BFromActiveNavTree(e, n) && this.UpdateActionDescriptions(i);
+          this.BFromActiveNavTree(t, n) && this.UpdateActionDescriptions(i);
         }
-        UpdateActionDescriptions(t) {
+        UpdateActionDescriptions(e) {
           this.m_postMessage.PostMessage({
             type: "UpdateActionDescriptions",
-            data: { descriptions: t },
+            data: { descriptions: e },
           });
         }
-        OnMessage(t) {
-          switch (t.type) {
+        OnMessage(e) {
+          switch (e.type) {
             case "TakeFocus":
               this.m_NavigationController.TakeFocusChangingIFrame();
               break;
             case "ForwardedGameEventDetail":
               this.m_NavigationController.DispatchVirtualGamepad(
-                t.data.event,
-                t.data.details
+                e.data.event,
+                e.data.details
               );
           }
         }
-        SendGameInputState(t) {
-          let e = Nt.Basic;
-          window.bSupportsGamepadUI && (e = Nt.Full),
+        SendGameInputState(e) {
+          let t = Ne.Basic;
+          window.bSupportsGamepadUI && (t = Ne.Full),
             this.m_postMessage.PostMessage({
               type: "GameInputState",
-              data: { source: t, support: e },
+              data: { source: e, support: t },
             });
         }
-        PostButtonPressToSteam(t) {
+        PostButtonPressToSteam(e) {
           this.m_postMessage.PostMessage({
             type: "ButtonPressed",
-            data: { button: t },
+            data: { button: e },
           });
         }
         PostPageUnloading() {
@@ -2762,100 +2771,100 @@
           });
         }
       }
-      (0, o.gn)([_.a], Dt.prototype, "OnFocusChanged", null),
-        (0, o.gn)([_.a], Dt.prototype, "OnMessage", null),
-        (0, o.gn)([_.a], Dt.prototype, "PostPageUnloading", null);
-      class St {
-        constructor(t) {
-          (this.m_postWindow = t),
+      (0, o.gn)([p.a], De.prototype, "OnFocusChanged", null),
+        (0, o.gn)([p.a], De.prototype, "OnMessage", null),
+        (0, o.gn)([p.a], De.prototype, "PostPageUnloading", null);
+      class Se {
+        constructor(e) {
+          (this.m_postWindow = e),
             window.addEventListener("message", this.OnMessage);
         }
-        RegisterForMessage(t) {
-          this.m_fnCallback = t;
+        RegisterForMessage(e) {
+          this.m_fnCallback = e;
         }
-        PostMessage(t) {
-          let e = JSON.stringify(t);
-          this.m_postWindow.postMessage({ gamepadMessage: Rt, args: e }, "*");
+        PostMessage(e) {
+          let t = JSON.stringify(e);
+          this.m_postWindow.postMessage({ gamepadMessage: Re, args: t }, "*");
         }
-        OnMessage(t) {
-          let e = null == t ? void 0 : t.data;
-          if (e && e.gamepadMessage == Rt && e.args) {
-            const t = JSON.parse(e.args);
-            this.m_fnCallback(t);
+        OnMessage(e) {
+          let t = null == e ? void 0 : e.data;
+          if (t && t.gamepadMessage == Re && t.args) {
+            const e = JSON.parse(t.args);
+            this.m_fnCallback(e);
           }
         }
       }
-      (0, o.gn)([_.a], St.prototype, "OnMessage", null);
-      class Tt {
+      (0, o.gn)([p.a], Se.prototype, "OnMessage", null);
+      class Te {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
         }
-        RegisterForMessage(t) {
-          this.m_fnCallback = t;
+        RegisterForMessage(e) {
+          this.m_fnCallback = e;
         }
-        PostMessage(t) {
-          let e = JSON.stringify(t);
-          SteamClient.BrowserView.PostMessageToParent(Rt, e);
+        PostMessage(e) {
+          let t = JSON.stringify(e);
+          SteamClient.BrowserView.PostMessageToParent(Re, t);
         }
-        OnMessage(t, e) {
-          if (t == Rt) {
-            const t = JSON.parse(e);
-            this.m_fnCallback(t);
-          } else if ("Checkout" == t) {
-            var n = JSON.parse(e);
+        OnMessage(e, t) {
+          if (e == Re) {
+            const e = JSON.parse(t);
+            this.m_fnCallback(e);
+          } else if ("Checkout" == e) {
+            var n = JSON.parse(t);
             if ("paypal_success" == n.action)
               try {
                 window.OnPayPalSuccess(n.transid);
-              } catch (t) {}
+              } catch (e) {}
             else if ("paypal_cancel" == n.action)
               try {
                 window.OnPayPalCancel(n.transid);
-              } catch (t) {}
+              } catch (e) {}
           }
         }
       }
-      (0, o.gn)([_.a], Tt.prototype, "OnMessage", null);
-      n(476);
-      class Ot extends a.oH {
-        constructor(t) {
+      (0, o.gn)([p.a], Te.prototype, "OnMessage", null);
+      n(176);
+      class Oe extends a.oH {
+        constructor(e) {
           super(),
             (this.m_lastButtonDown = a.eV.INVALID),
             this.SetSourceType(a.Rr.KEYBOARD),
-            t.addEventListener("keydown", this.OnKeyDown),
-            t.addEventListener("keyup", this.OnKeyUp),
-            t.addEventListener("blur", this.Reset);
+            e.addEventListener("keydown", this.OnKeyDown),
+            e.addEventListener("keyup", this.OnKeyUp),
+            e.addEventListener("blur", this.Reset);
         }
-        OnKeyDown(t) {
-          const e = this.TranslateKey(t);
-          e != a.eV.INVALID &&
-            (t.preventDefault(),
-            e != this.m_lastButtonDown &&
+        OnKeyDown(e) {
+          const t = this.TranslateKey(e);
+          t != a.eV.INVALID &&
+            (e.preventDefault(),
+            t != this.m_lastButtonDown &&
               (this.Reset(),
-              this.OnButtonDown(e),
-              (this.m_lastButtonDown = e)));
+              this.OnButtonDown(t),
+              (this.m_lastButtonDown = t)));
         }
-        OnKeyUp(t) {
-          const e = this.TranslateKey(t);
-          e != a.eV.INVALID &&
-            (this.OnButtonUp(e),
+        OnKeyUp(e) {
+          const t = this.TranslateKey(e);
+          t != a.eV.INVALID &&
+            (this.OnButtonUp(t),
             (this.m_lastButtonDown = a.eV.INVALID),
-            t.preventDefault());
+            e.preventDefault());
         }
         Reset() {
           this.m_lastButtonDown != a.eV.INVALID &&
             (this.OnButtonUp(this.m_lastButtonDown),
             (this.m_lastButtonDown = a.eV.INVALID));
         }
-        TranslateKey(t) {
-          const e = t.code,
-            n = t.ctrlKey,
-            i = t.shiftKey,
+        TranslateKey(e) {
+          const t = e.code,
+            n = e.ctrlKey,
+            i = e.shiftKey,
             o =
-              S(t.target) &&
-              ("INPUT" === t.target.nodeName ||
-                "TEXTAREA" === t.target.nodeName);
+              S(e.target) &&
+              ("INPUT" === e.target.nodeName ||
+                "TEXTAREA" === e.target.nodeName);
           if (n && i)
-            switch (e) {
+            switch (t) {
               case "Digit4":
                 return a.eV.TRIGGER_LEFT;
               case "Digit5":
@@ -2864,7 +2873,7 @@
                 return a.eV.INVALID;
             }
           if (n)
-            switch (e) {
+            switch (t) {
               case "Digit1":
                 return a.eV.STEAM_GUIDE;
               case "Digit2":
@@ -2885,7 +2894,7 @@
               case "Digit0":
                 return a.eV.START;
             }
-          switch (e) {
+          switch (t) {
             case "Escape":
               return a.eV.CANCEL;
             case "Enter":
@@ -2904,34 +2913,34 @@
           return a.eV.INVALID;
         }
       }
-      (0, o.gn)([_.a], Ot.prototype, "OnKeyDown", null),
-        (0, o.gn)([_.a], Ot.prototype, "OnKeyUp", null),
-        (0, o.gn)([_.a], Ot.prototype, "Reset", null);
-      class yt extends wt {
-        constructor(t, e) {
-          super(e.m_Tree, e, e.m_FocusRing),
+      (0, o.gn)([p.a], Oe.prototype, "OnKeyDown", null),
+        (0, o.gn)([p.a], Oe.prototype, "OnKeyUp", null),
+        (0, o.gn)([p.a], Oe.prototype, "Reset", null);
+      class ye extends we {
+        constructor(e, t) {
+          super(t.m_Tree, t, t.m_FocusRing),
             (this.m_rgCallbackRegistrations = []);
         }
-        OnMount(t) {
-          super.OnMount(t), (t.__nav_wrapper = this);
-          const e = t.__nav_tree;
-          e && this.BindTree(e);
+        OnMount(e) {
+          super.OnMount(e), (e.__nav_wrapper = this);
+          const t = e.__nav_tree;
+          t && this.BindTree(t);
         }
         OnUnmount() {
-          for (const t of this.m_rgCallbackRegistrations) t.Unregister();
+          for (const e of this.m_rgCallbackRegistrations) e.Unregister();
           this.m_rgCallbackRegistrations = [];
         }
-        BindTree(t) {
-          t.GetParentEmbeddedNavTree() &&
-            ((this.m_wrappedTree = t),
+        BindTree(e) {
+          e.GetParentEmbeddedNavTree() &&
+            ((this.m_wrappedTree = e),
             this.m_rgCallbackRegistrations.push(
-              t.OnActivateCallbacks.Register(this.OnWrappedTreeActivated)
+              e.OnActivateCallbacks.Register(this.OnWrappedTreeActivated)
             ),
             this.m_rgCallbackRegistrations.push(
-              t.OnDeactivateCallbacks.Register(this.OnWrappedTreeDeactivated)
+              e.OnDeactivateCallbacks.Register(this.OnWrappedTreeDeactivated)
             ),
-            t.BIsActive() && this.OnWrappedTreeActivated(),
-            t.SetOnUnhandledButtonCallback(this.OnWrappedTreeUnhandledButton));
+            e.BIsActive() && this.OnWrappedTreeActivated(),
+            e.SetOnUnhandledButtonCallback(this.OnWrappedTreeUnhandledButton));
         }
         OnWrappedTreeActivated() {
           this.BHasFocus() || this.m_Tree.TransferFocus(i.APPLICATION, this);
@@ -2939,81 +2948,81 @@
         OnWrappedTreeDeactivated() {
           this.m_wrappedTree.TransferFocus(i.APPLICATION, null);
         }
-        OnWrappedTreeUnhandledButton(t) {
-          return h(this.m_Parent.Element, "vgp_onbuttondown", t.detail), !1;
+        OnWrappedTreeUnhandledButton(e) {
+          return h(this.m_Parent.Element, "vgp_onbuttondown", e.detail), !1;
         }
-        SetDOMFocusAndScroll(t, e) {
+        SetDOMFocusAndScroll(e, t) {
           this.UpdateParentActiveChild(),
             this.m_wrappedTree.BIsActive() ||
-              (this.m_wrappedTree.Activate(), this.m_wrappedTree.TakeFocus(t));
+              (this.m_wrappedTree.Activate(), this.m_wrappedTree.TakeFocus(e));
         }
-        SetProperties(t) {
+        SetProperties(e) {
           super.SetProperties(
-            Object.assign(Object.assign({}, t), {
+            Object.assign(Object.assign({}, e), {
               noFocusRing: !0,
               focusable: !0,
             })
           );
         }
       }
-      (0, o.gn)([_.a], yt.prototype, "OnWrappedTreeActivated", null),
-        (0, o.gn)([_.a], yt.prototype, "OnWrappedTreeDeactivated", null),
-        (0, o.gn)([_.a], yt.prototype, "OnWrappedTreeUnhandledButton", null);
-      const Et = "VirtualKeyboardMessage";
-      function Lt(t) {
-        return t && t.type === Et;
+      (0, o.gn)([p.a], ye.prototype, "OnWrappedTreeActivated", null),
+        (0, o.gn)([p.a], ye.prototype, "OnWrappedTreeDeactivated", null),
+        (0, o.gn)([p.a], ye.prototype, "OnWrappedTreeUnhandledButton", null);
+      const Ee = "VirtualKeyboardMessage";
+      function Le(e) {
+        return e && e.type === Ee;
       }
-      class Pt {
+      class Pe {
         constructor() {
           window.addEventListener("message", this.OnMessage);
         }
         ShowVirtualKeyboard() {
           this.SendMessage({ message: "ShowVirtualKeyboard" });
         }
-        HideVirtualKeyboard(t) {
-          this.SendMessage({ message: "HideVirtualKeyboard", msDelay: t });
+        HideVirtualKeyboard(e) {
+          this.SendMessage({ message: "HideVirtualKeyboard", msDelay: e });
         }
-        OnBrowserViewMessage(t, e) {
-          t == Et && this.InternalDispatchMessage(JSON.parse(e));
+        OnBrowserViewMessage(e, t) {
+          e == Ee && this.InternalDispatchMessage(JSON.parse(t));
         }
-        OnMessage(t) {
-          this.InternalDispatchMessage(t.data);
+        OnMessage(e) {
+          this.InternalDispatchMessage(e.data);
         }
-        InternalDispatchMessage(t) {
-          Lt(t) && t.message;
+        InternalDispatchMessage(e) {
+          Le(e) && e.message;
         }
-        SendMessage(t) {
-          const e = Object.assign({ type: "VirtualKeyboardMessage" }, t);
-          It("BrowserView.PostMessageToParent")
+        SendMessage(e) {
+          const t = Object.assign({ type: "VirtualKeyboardMessage" }, e);
+          Ie("BrowserView.PostMessageToParent")
             ? SteamClient.BrowserView.PostMessageToParent(
-                e.type,
-                JSON.stringify(e)
+                t.type,
+                JSON.stringify(t)
               )
-            : (p(
+            : (_(
                 window.parent && window.parent != window,
                 "No parent window to post to"
               ),
-              window.parent.postMessage(e, "*"));
+              window.parent.postMessage(t, "*"));
         }
       }
-      (0, o.gn)([_.a], Pt.prototype, "OnBrowserViewMessage", null),
-        (0, o.gn)([_.a], Pt.prototype, "OnMessage", null);
+      (0, o.gn)([p.a], Pe.prototype, "OnBrowserViewMessage", null),
+        (0, o.gn)([p.a], Pe.prototype, "OnMessage", null);
       (0, o.gn)(
-        [_.a],
+        [p.a],
         class {
-          constructor(t, e) {
-            (this.m_refKeyboard = e), t.on("message", this.OnMessage);
+          constructor(e, t) {
+            (this.m_refKeyboard = t), e.on("message", this.OnMessage);
           }
-          OnMessage(t, e, n) {
-            if (t == Et) {
-              const t = JSON.parse(e);
-              if (Lt(t))
-                switch (t.message) {
+          OnMessage(e, t, n) {
+            if (e == Ee) {
+              const e = JSON.parse(t);
+              if (Le(e))
+                switch (e.message) {
                   case "ShowVirtualKeyboard":
                     this.m_refKeyboard.ShowVirtualKeyboard();
                     break;
                   case "HideVirtualKeyboard":
-                    this.m_refKeyboard.DelayHideVirtualKeyboard(t.msDelay);
+                    this.m_refKeyboard.DelayHideVirtualKeyboard(e.msDelay);
                 }
             }
           }
@@ -3021,20 +3030,20 @@
         "OnMessage",
         null
       );
-      var Mt = n(222),
-        Bt = n.n(Mt);
-      function Gt(t) {
-        let e = 0;
-        t.children().each(function () {
-          const t = r()(this),
-            n = t.css("zIndex");
+      var Be = n(222),
+        Me = n.n(Be);
+      function Ge(e) {
+        let t = 0;
+        e.children().each(function () {
+          const e = r()(this),
+            n = e.css("zIndex");
           "auto" === n
-            ? t.css("zIndex", 0)
-            : isNaN(parseInt(n)) || (e = Math.max(e, parseInt(n)));
+            ? e.css("zIndex", 0)
+            : isNaN(parseInt(n)) || (t = Math.max(t, parseInt(n)));
         });
         const n = r()("<div/>", {
           style: `position: absolute; pointer-events: none; top: 0; left: 0; z-index: ${
-            (e || 100) + 1
+            (t || 100) + 1
           }; width: 0; height: 0; padding: 0; margin: 0; background: none; overflow: visible; display: block;`,
         });
         let i = null,
@@ -3044,317 +3053,317 @@
           l = 0,
           c = 0,
           u = 0;
-        t.prepend(n);
-        const h = (t) => {
-            const e = t.GetBoundingRect(),
+        e.prepend(n);
+        const h = (e) => {
+            const t = e.GetBoundingRect(),
               i = n[0].getBoundingClientRect();
             return {
-              left: e.x - i.x - 0,
-              top: e.y - i.y - 0,
-              height: e.height,
-              width: e.width,
+              left: t.x - i.x - 0,
+              top: t.y - i.y - 0,
+              height: t.height,
+              width: t.width,
             };
           },
-          d = (t) => {
-            (a = t.left),
-              (l = t.top),
-              (c = t.height),
-              (u = t.width),
+          d = (e) => {
+            (a = e.left),
+              (l = e.top),
+              (c = e.height),
+              (u = e.width),
               i.css({ left: a, top: l, height: c, width: u });
           },
-          m = (t) => {
-            if (t && t.BWantsFocusRing() && i) {
-              let e = h(t);
-              (e.left == a && e.top == l && e.height == c && e.width == u) ||
-                d(e);
+          m = (e) => {
+            if (e && e.BWantsFocusRing() && i) {
+              let t = h(e);
+              (t.left == a && t.top == l && t.height == c && t.width == u) ||
+                d(t);
             }
           },
-          g = (t) => {
+          g = (e) => {
             if (
-              ((o = t),
+              ((o = e),
               i && (i.remove(), (i = null)),
               s && (window.clearInterval(s), (s = null)),
-              t && t.BWantsFocusRing())
+              e && e.BWantsFocusRing())
             ) {
               i = r()("<div/>", {
                 style: "position: absolute; pointer-events: none; ",
-                class: Bt().FocusRing,
+                class: Me().FocusRing,
               });
-              let e = h(t);
-              d(e), n.append(i), (s = window.setInterval(() => m(t), 200));
+              let t = h(e);
+              d(t), n.append(i), (s = window.setInterval(() => m(e), 200));
             }
           };
         return {
           OnBlur: () => g(null),
-          OnFocus: (t, e) => g(e),
-          OnFocusChange: (t, e, n) => g(n),
+          OnFocus: (e, t) => g(t),
+          OnFocusChange: (e, t, n) => g(n),
           OnForceMeasureFocusRing: () => m(o),
         };
       }
-      function kt(t) {
-        return !!t.is_repeat;
+      function ke(e) {
+        return !!e.is_repeat;
       }
-      Object.seal({ onMoveUp: Vt, onMoveDown: Vt }),
-        Object.seal({ onMoveRight: Vt, onMoveLeft: Vt });
-      function Vt(t, e) {
-        if (t.is_repeat) return !1;
-        const n = e.GetRelativeDirection(t.button);
-        return n == At.FORWARD
-          ? e.BFocusFirstChild(i.GAMEPAD)
-          : n == At.BACKWARD && e.BFocusLastChild(i.GAMEPAD);
+      Object.seal({ onMoveUp: Ve, onMoveDown: Ve }),
+        Object.seal({ onMoveRight: Ve, onMoveLeft: Ve });
+      function Ve(e, t) {
+        if (e.is_repeat) return !1;
+        const n = t.GetRelativeDirection(e.button);
+        return n == Ae.FORWARD
+          ? t.BFocusFirstChild(i.GAMEPAD)
+          : n == Ae.BACKWARD && t.BFocusLastChild(i.GAMEPAD);
       }
-      function xt(t) {
-        return t ? Function("event", t) : null;
+      function xe(e) {
+        return e ? Function("event", e) : null;
       }
-      function Wt() {
+      function We() {
         return !0;
       }
-      function Ut(t) {
-        return "BlockMovement" == t
-          ? Wt
-          : "RepeatNavigationBoundary" == t
-          ? kt
-          : t
-          ? Function("detail", t)
+      function Ue(e) {
+        return "BlockMovement" == e
+          ? We
+          : "RepeatNavigationBoundary" == e
+          ? ke
+          : e
+          ? Function("detail", e)
           : null;
       }
-      function Ht(t) {
-        this.click(), t.stopPropagation();
+      function He(e) {
+        this.click(), e.stopPropagation();
       }
-      function Kt(t) {
+      function Ke(e) {
         r()(this).find('a, input[type="checkbox"]')[0].click();
       }
-      function $t(t) {
-        const e = t.currentTarget;
-        if (!S(e)) return !1;
-        const n = t.detail.is_repeat ? 4.5 : 3.33,
+      function $e(e) {
+        const t = e.currentTarget;
+        if (!S(t)) return !1;
+        const n = e.detail.is_repeat ? 4.5 : 3.33,
           i = "smooth",
-          o = e.ownerDocument,
+          o = t.ownerDocument,
           s = o.defaultView;
-        switch (t.detail.button) {
+        switch (e.detail.button) {
           case a.eV.DIR_UP:
             if (s.scrollY > 3)
-              return mt(s, { top: -s.innerHeight / n, behavior: i }), !0;
+              return me(s, { top: -s.innerHeight / n, behavior: i }), !0;
             break;
           case a.eV.DIR_RIGHT:
             if (s.scrollX + s.innerWidth < o.body.clientWidth - 3)
-              return mt(s, { left: s.innerWidth / n, behavior: i }), !0;
+              return me(s, { left: s.innerWidth / n, behavior: i }), !0;
             break;
           case a.eV.DIR_DOWN:
             if (s.scrollY + s.innerHeight < o.body.clientHeight - 3)
-              return mt(s, { top: s.innerHeight / n, behavior: i }), !0;
+              return me(s, { top: s.innerHeight / n, behavior: i }), !0;
             break;
           case a.eV.DIR_LEFT:
             if (s.scrollX > 3)
-              return mt(s, { left: s.innerWidth / n, behavior: i }), !0;
+              return me(s, { left: s.innerWidth / n, behavior: i }), !0;
         }
         return !1;
       }
-      function jt(t, e) {
+      function je(e, t) {
         const n = window.history.state;
-        if (n && n[t]) {
-          const i = n[t];
-          !(function (t, e, n = 0) {
-            R.RestoreSerializedNavState(t, e, n);
-          })(e, i);
+        if (n && n[e]) {
+          const i = n[e];
+          !(function (e, t, n = 0) {
+            R.RestoreSerializedNavState(e, t, n);
+          })(t, i);
         }
       }
-      var Yt;
-      !(function (t) {
-        (t[(t.Unknown = 0)] = "Unknown"),
-          (t[(t.NotNeeded = 1)] = "NotNeeded"),
-          (t[(t.InReactTree = 2)] = "InReactTree");
-      })(Yt || (Yt = {}));
-      const zt = new Pt();
-      let Xt,
-        qt = !1,
-        Jt = null,
-        Qt = null,
-        Zt = null;
-      function te(t) {
-        qt ||
-          ((Jt = new W()),
-          (window.legacyWebFocusNavController = Jt),
-          (Xt = new Dt(Jt)),
-          Xt.BIsGamepadInputExternallyControlled() || Jt.RegisterInputSource(t),
-          (function (t) {
+      var Ye;
+      !(function (e) {
+        (e[(e.Unknown = 0)] = "Unknown"),
+          (e[(e.NotNeeded = 1)] = "NotNeeded"),
+          (e[(e.InReactTree = 2)] = "InReactTree");
+      })(Ye || (Ye = {}));
+      const ze = new Pe();
+      let Xe,
+        qe = !1,
+        Je = null,
+        Qe = null,
+        Ze = null;
+      function et(e) {
+        qe ||
+          ((Je = new W()),
+          (window.legacyWebFocusNavController = Je),
+          (Xe = new De(Je)),
+          Xe.BIsGamepadInputExternallyControlled() || Je.RegisterInputSource(e),
+          (function (e) {
             r()("html").addClass("gpnav_active");
-            const e = r()("body"),
-              n = t.NewGamepadNavigationTree(window, "legacy"),
-              i = Gt(e);
+            const t = r()("body"),
+              n = e.NewGamepadNavigationTree(window, "legacy"),
+              i = Ge(t);
             (n.Root.m_FocusRing = i),
               n.Root.SetProperties({
-                scrollIntoViewType: Ft.NoTransformSparseContent,
+                scrollIntoViewType: Fe.NoTransformSparseContent,
               }),
               (window.__nav_tree_root = n),
-              ne.set(document.body, n.Root),
-              se(document.body, n.Root),
-              ce(void 0, !0),
-              t.RegisterGamepadNavigationTree(n, !1),
-              r()(document.body).on("vgp_onbuttondown", function (t) {
-                n.HandleButtonDownEventAsLogicalEvent(t.originalEvent);
+              nt.set(document.body, n.Root),
+              st(document.body, n.Root),
+              ct(void 0, !0),
+              e.RegisterGamepadNavigationTree(n, !1),
+              r()(document.body).on("vgp_onbuttondown", function (e) {
+                n.HandleButtonDownEventAsLogicalEvent(e.originalEvent);
               }),
-              u(document.body, $t);
-            new MutationObserver(ee).observe(document.body, {
+              u(document.body, $e);
+            new MutationObserver(tt).observe(document.body, {
               childList: !0,
               subtree: !0,
             }),
               (a = !0),
-              (it = a),
+              (ie = a),
               (o = "legacy_web_root"),
               (s = n.Root),
-              window.addEventListener("popstate", () => jt(o, s)),
+              window.addEventListener("popstate", () => je(o, s)),
               s.Tree.Controller.FocusChangedCallbacks.Register(() => {
-                var t;
+                var e;
                 window.history.replaceState(
                   Object.assign(Object.assign({}, window.history.state), {
-                    [o]: ((t = s), R.SerializeNavState(t, !0, !1)),
+                    [o]: ((e = s), R.SerializeNavState(e, !0, !1)),
                   }),
                   null
                 );
               }),
-              jt(o, s),
-              Object.assign(window, pe),
+              je(o, s),
+              Object.assign(window, _t),
               window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
             var o, s;
             var a;
-          })(Jt)),
-          (qt = !0);
+          })(Je)),
+          (qe = !0);
       }
-      function ee(t) {
-        for (const e of t) {
-          const t = [],
+      function tt(e) {
+        for (const t of e) {
+          const e = [],
             n = [];
           E(
-            e,
-            (e) => t.push(e),
-            (t) => n.push(t)
+            t,
+            (t) => e.push(t),
+            (e) => n.push(e)
           ),
-            t.length && ce(r()(t)),
-            n.length && le(r()(n));
+            e.length && ct(r()(e)),
+            n.length && lt(r()(n));
         }
       }
-      const ne = new WeakMap(),
-        ie = new WeakMap();
-      let oe = [];
-      function se(t, e) {
-        if (e instanceof wt) {
-          const n = e.GetDepth();
-          oe[n] || (oe[n] = []), oe[n].push([t, e]);
+      const nt = new WeakMap(),
+        it = new WeakMap();
+      let ot = [];
+      function st(e, t) {
+        if (t instanceof we) {
+          const n = t.GetDepth();
+          ot[n] || (ot[n] = []), ot[n].push([e, t]);
         }
-        ne.set(t, e);
+        nt.set(e, t);
       }
-      function re(t, e) {
-        const n = ie.has(t) ? ie.get(t) : [];
-        n.push(e), ie.set(t, n);
+      function rt(e, t) {
+        const n = it.has(e) ? it.get(e) : [];
+        n.push(t), it.set(e, n);
       }
-      function ae(t) {
-        return "jquery" in t
-          ? ne.get(t[0]) || Yt.Unknown
-          : ne.get(t) || Yt.Unknown;
+      function at(e) {
+        return "jquery" in e
+          ? nt.get(e[0]) || Ye.Unknown
+          : nt.get(e) || Ye.Unknown;
       }
-      function le(t) {
-        t.find("*")
+      function lt(e) {
+        e.find("*")
           .addBack()
           .each(function () {
-            var t;
-            null === (t = ie.get(this)) ||
-              void 0 === t ||
-              t.forEach((t) => t()),
-              ne.delete(this),
-              ie.delete(this),
-              r()(this).attr("data-nav-modal") && ge();
+            var e;
+            null === (e = it.get(this)) ||
+              void 0 === e ||
+              e.forEach((e) => e()),
+              nt.delete(this),
+              it.delete(this),
+              r()(this).attr("data-nav-modal") && gt();
           });
       }
-      function ce(t, e = !1) {
+      function ct(e, t = !1) {
         performance.now();
         const n =
           "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
-        r()(n, t)
+        r()(n, e)
           .addBack(n)
           .each(function () {
-            var t;
-            (function (t) {
-              return "jquery" in t ? ne.has(t[0]) : ne.has(t);
-            })((t = this)) || de(t);
+            var e;
+            (function (e) {
+              return "jquery" in e ? nt.has(e[0]) : nt.has(e);
+            })((e = this)) || dt(e);
           }),
           (function () {
-            for (let t = oe.length - 1; t >= 0; t--)
-              if (oe[t])
-                for (let [e, n] of oe[t])
-                  re(e, n.Tree.RegisterNavigationItem(n, e));
-            oe = [];
+            for (let e = ot.length - 1; e >= 0; e--)
+              if (ot[e])
+                for (let [t, n] of ot[e])
+                  rt(t, n.Tree.RegisterNavigationItem(n, t));
+            ot = [];
           })();
       }
-      function ue(t) {
-        le(r()(t)), ce(r()(t));
+      function ut(e) {
+        lt(r()(e)), ct(r()(e));
       }
-      function he(t) {
-        const e = r()(t.Element);
+      function ht(e) {
+        const t = r()(e.Element);
         return (
-          !e.data("gpFocusDisabled") &&
-          e.is(":visible") &&
-          "hidden" != e.css("visibility") &&
-          ((e.outerWidth() > 0 && e.outerHeight() > 0) ||
-            "hidden" !== e.css("overflow"))
+          !t.data("gpFocusDisabled") &&
+          t.is(":visible") &&
+          "hidden" != t.css("visibility") &&
+          ((t.outerWidth() > 0 && t.outerHeight() > 0) ||
+            "hidden" !== t.css("overflow"))
         );
       }
-      function de(t) {
-        var e, n, s, a, l, h, g;
-        const _ = r()(t),
-          v = me(t);
-        if (v instanceof yt || v == Yt.InReactTree)
-          return se(t, Yt.InReactTree), Yt.InReactTree;
+      function dt(e) {
+        var t, n, s, a, l, h, g;
+        const p = r()(e),
+          v = mt(e);
+        if (v instanceof ye || v == Ye.InReactTree)
+          return st(e, Ye.InReactTree), Ye.InReactTree;
         const f = v.Tree;
-        let b = _.data("reactNavRoot")
-            ? new yt(_.data("reactNavRoot"), v)
+        let C = p.data("reactNavRoot")
+            ? new ye(p.data("reactNavRoot"), v)
             : f.CreateNode(v, v.m_FocusRing),
-          C = _.data("panel") || {};
+          b = p.data("panel") || {};
         if (
-          (r()(t).attr("data-nav-modal") &&
-            (function (t) {
-              Qt &&
-                (p(
+          (r()(e).attr("data-nav-modal") &&
+            (function (e) {
+              Qe &&
+                (_(
                   !1,
                   "Creating a new modal nav tree while one already exists. A modal opening another modal is not currently supported."
                 ),
-                ge());
-              Qt = Jt.NewGamepadNavigationTree(window, "modal_dialog");
-              const e = Gt(r()("body"));
-              (Qt.Root.m_FocusRing = e),
-                Qt.Root.SetProperties({}),
-                se(t, Qt.Root),
-                ce(t),
-                u(Qt.Root.m_element, (t) => !0),
-                (Zt = Jt.RegisterGamepadNavigationTree(Qt, !1));
-            })(t),
-          "A" == t.tagName || "BUTTON" == t.tagName || "LABEL" == t.tagName)
+                gt());
+              Qe = Je.NewGamepadNavigationTree(window, "modal_dialog");
+              const t = Ge(r()("body"));
+              (Qe.Root.m_FocusRing = t),
+                Qe.Root.SetProperties({}),
+                st(e, Qe.Root),
+                ct(e),
+                u(Qe.Root.m_element, (e) => !0),
+                (Ze = Je.RegisterGamepadNavigationTree(Qe, !1));
+            })(e),
+          "A" == e.tagName || "BUTTON" == e.tagName || "LABEL" == e.tagName)
         )
-          (C.focusable = null === (e = C.focusable) || void 0 === e || e),
-            (C.clickOnActivate =
-              null === (n = C.clickOnActivate) || void 0 === n || n);
-        else if ("INPUT" == t.tagName)
+          (b.focusable = null === (t = b.focusable) || void 0 === t || t),
+            (b.clickOnActivate =
+              null === (n = b.clickOnActivate) || void 0 === n || n);
+        else if ("INPUT" == e.tagName)
           switch (
-            ((C.focusable = null === (s = C.focusable) || void 0 === s || s),
-            t.getAttribute("type"))
+            ((b.focusable = null === (s = b.focusable) || void 0 === s || s),
+            e.getAttribute("type"))
           ) {
             case "radio":
             case "checkbox":
-              C.clickOnActivate =
-                null === (a = C.clickOnActivate) || void 0 === a || a;
+              b.clickOnActivate =
+                null === (a = b.clickOnActivate) || void 0 === a || a;
               break;
             case "text":
             case "password":
-              C.enableVirtualKeyboard =
-                null === (l = C.enableVirtualKeyboard) || void 0 === l || l;
+              b.enableVirtualKeyboard =
+                null === (l = b.enableVirtualKeyboard) || void 0 === l || l;
           }
         else
-          "TEXTAREA" == t.tagName &&
-            ((C.focusable = null === (h = C.focusable) || void 0 === h || h),
-            (C.enableVirtualKeyboard =
-              null === (g = C.enableVirtualKeyboard) || void 0 === g || g));
-        const F = C["flow-children"];
-        delete C["flow-children"];
+          "TEXTAREA" == e.tagName &&
+            ((b.focusable = null === (h = b.focusable) || void 0 === h || h),
+            (b.enableVirtualKeyboard =
+              null === (g = b.enableVirtualKeyboard) || void 0 === g || g));
+        const F = b["flow-children"];
+        delete b["flow-children"];
         let {
             clickOnActivate: A,
             maintainX: w,
@@ -3369,8 +3378,8 @@
             actionDescriptionMap: E,
             onOKButton: L,
             onCancelButton: P,
-            onSecondaryButton: M,
-            onOptionsButton: B,
+            onSecondaryButton: B,
+            onOptionsButton: M,
             onMenuButton: G,
             onMoveUp: k,
             onMoveRight: V,
@@ -3379,8 +3388,8 @@
             onGamepadDirection: U,
             bFocusRingRoot: H,
             type: K,
-          } = C,
-          $ = (0, o._T)(C, [
+          } = b,
+          $ = (0, o._T)(b, [
             "clickOnActivate",
             "maintainX",
             "maintainY",
@@ -3405,146 +3414,146 @@
             "bFocusRingRoot",
             "type",
           ]),
-          j = xt(L),
-          Y = xt(P),
-          z = xt(M),
-          X = xt(B),
-          q = xt(G),
-          J = xt(U);
+          j = xe(L),
+          Y = xe(P),
+          z = xe(B),
+          X = xe(M),
+          q = xe(G),
+          J = xe(U);
         K || (K = "Panel"),
           "PanelGroup" == K &&
             ({ onOKButtonHandler: j, onCancelButtonHandler: Y } = (function (
-              t,
-              e
+              e,
+              t
             ) {
               const {
                 onOKButtonHandler: n,
                 onCancelButtonHandler: o,
                 navNode: s,
-              } = t;
+              } = e;
               return (
-                (e.focusable = !1 !== e.focusable),
+                (t.focusable = !1 !== t.focusable),
                 {
-                  onOKButtonHandler: (t) =>
+                  onOKButtonHandler: (e) =>
                     !(
                       !s.BHasFocus() ||
-                      !s.BChildTakeFocus(i.GAMEPAD, t.detail.button)
+                      !s.BChildTakeFocus(i.GAMEPAD, e.detail.button)
                     ) ||
-                    (!!n && n(t)),
-                  onCancelButtonHandler: (t) =>
+                    (!!n && n(e)),
+                  onCancelButtonHandler: (e) =>
                     !(
                       !s.BFocusWithin() ||
                       s.BHasFocus() ||
-                      !s.BTakeFocus(i.GAMEPAD, t.detail.button)
+                      !s.BTakeFocus(i.GAMEPAD, e.detail.button)
                     ) ||
-                    (!!o && o(t)),
+                    (!!o && o(e)),
                 }
               );
             })(
-              { onOKButtonHandler: j, onCancelButtonHandler: Y, navNode: b },
+              { onOKButtonHandler: j, onCancelButtonHandler: Y, navNode: C },
               $
             )),
           j &&
-            re(
-              _[0],
-              (function (t, e) {
-                return c(t, "vgp_onok", d(e));
-              })(_[0], j)
+            rt(
+              p[0],
+              (function (e, t) {
+                return c(e, "vgp_onok", d(t));
+              })(p[0], j)
             ),
           Y &&
-            re(
-              _[0],
-              (function (t, e) {
-                return c(t, "vgp_oncancel", d(e));
-              })(_[0], Y)
+            rt(
+              p[0],
+              (function (e, t) {
+                return c(e, "vgp_oncancel", d(t));
+              })(p[0], Y)
             ),
           z &&
             T &&
-            re(
-              _[0],
-              (function (t, e) {
-                return c(t, "vgp_onsecondaryaction", d(e));
-              })(_[0], z)
+            rt(
+              p[0],
+              (function (e, t) {
+                return c(e, "vgp_onsecondaryaction", d(t));
+              })(p[0], z)
             ),
           X &&
             O &&
-            re(
-              _[0],
-              (function (t, e) {
-                return c(t, "vgp_onoptions", d(e));
-              })(_[0], X)
+            rt(
+              p[0],
+              (function (e, t) {
+                return c(e, "vgp_onoptions", d(t));
+              })(p[0], X)
             ),
           q &&
             y &&
-            re(
-              _[0],
-              (function (t, e) {
-                return c(t, "vgp_onmenu", d(e));
-              })(_[0], q)
+            rt(
+              p[0],
+              (function (e, t) {
+                return c(e, "vgp_onmenu", d(t));
+              })(p[0], q)
             ),
-          J && re(_[0], u(_[0], J));
-        const Q = (function (t, e, n, i) {
+          J && rt(p[0], u(p[0], J));
+        const Q = (function (e, t, n, i) {
             const o = {};
             return (
-              t && (o.onMoveUp = Ut(t)),
-              e && (o.onMoveRight = Ut(e)),
-              n && (o.onMoveDown = Ut(n)),
-              i && (o.onMoveLeft = Ut(i)),
+              e && (o.onMoveUp = Ue(e)),
+              t && (o.onMoveRight = Ue(t)),
+              n && (o.onMoveDown = Ue(n)),
+              i && (o.onMoveLeft = Ue(i)),
               o
             );
           })(k, V, x, W),
           Z = F
-            ? (function (t) {
-                switch (t) {
+            ? (function (e) {
+                switch (e) {
                   case "column":
-                    return bt.COLUMN;
+                    return Ce.COLUMN;
                   case "column-reverse":
-                    return bt.COLUMN_REVERSE;
+                    return Ce.COLUMN_REVERSE;
                   case "row":
-                    return bt.ROW;
+                    return Ce.ROW;
                   case "row-reverse":
-                    return bt.ROW_REVERSE;
+                    return Ce.ROW_REVERSE;
                   case "grid":
-                    return bt.GRID;
+                    return Ce.GRID;
                   default:
-                    return bt.NONE;
+                    return Ce.NONE;
                 }
               })(F)
-            : bt.NONE;
-        Z != bt.NONE && ($.layout = Z),
+            : Ce.NONE;
+        Z != Ce.NONE && ($.layout = Z),
           w
-            ? ($.navEntryPreferPosition = Ct.MAINTAIN_X)
+            ? ($.navEntryPreferPosition = be.MAINTAIN_X)
             : R
-            ? ($.navEntryPreferPosition = Ct.MAINTAIN_Y)
-            : I && ($.navEntryPreferPosition = Ct.PREFERRED_CHILD),
+            ? ($.navEntryPreferPosition = be.MAINTAIN_Y)
+            : I && ($.navEntryPreferPosition = be.PREFERRED_CHILD),
           A &&
             (!1 !== $.focusable && ($.focusable = !0),
-            _.on("vgp_onok", "firstChild" === A ? Kt : Ht),
-            re(t, () => {
-              _.off("vgp_onok");
+            p.on("vgp_onok", "firstChild" === A ? Ke : He),
+            rt(e, () => {
+              p.off("vgp_onok");
             })),
           N &&
-            (_.on("vgp_onok.vkbindings", () => zt.ShowVirtualKeyboard()),
-            _.on("click.vkbindings", () => zt.ShowVirtualKeyboard()),
-            _.on("blur.vkbindings", () => {
+            (p.on("vgp_onok.vkbindings", () => ze.ShowVirtualKeyboard()),
+            p.on("click.vkbindings", () => ze.ShowVirtualKeyboard()),
+            p.on("blur.vkbindings", () => {
               document.hasFocus() &&
-                document.activeElement != t &&
-                zt.HideVirtualKeyboard();
+                document.activeElement != e &&
+                ze.HideVirtualKeyboard();
             }),
-            re(t, () => {
-              _.off(".vkbindings");
+            rt(e, () => {
+              p.off(".vkbindings");
             })),
-          $.focusable && void 0 === _.attr("tabIndex") && _.attr("tabIndex", 0),
+          $.focusable && void 0 === p.attr("tabIndex") && p.attr("tabIndex", 0),
           $.focusable &&
-            b.FocusCallbackList.Register((e) =>
-              (function (t, e) {
-                e ? r()(t).addClass("gpfocus") : r()(t).removeClass("gpfocus");
-              })(t, e)
+            C.FocusCallbackList.Register((t) =>
+              (function (e, t) {
+                t ? r()(e).addClass("gpfocus") : r()(e).removeClass("gpfocus");
+              })(e, t)
             ),
           H &&
-            ((b.m_FocusRing = Gt(_)),
-            "static" == _.css("position") && _.css("position", "relative"));
-        const tt = m({
+            ((C.m_FocusRing = Ge(p)),
+            "static" == p.css("position") && p.css("position", "relative"));
+        const ee = m({
             onOKActionDescription: D,
             onCancelActionDescription: S,
             onSecondaryActionDescription: T,
@@ -3552,66 +3561,66 @@
             onMenuActionDescription: y,
             actionDescriptionMap: E,
           }),
-          et = Object.assign(
-            Object.assign({ fnCanTakeFocus: he, actionDescriptionMap: tt }, Q),
+          te = Object.assign(
+            Object.assign({ fnCanTakeFocus: ht, actionDescriptionMap: ee }, Q),
             $
           );
-        return b.SetProperties(et), se(t, b), b;
+        return C.SetProperties(te), st(e, C), C;
       }
-      function me(t) {
-        const e = t.parentElement;
-        if (!e) return console.error("no parent"), null;
-        let n = ae(e);
-        if (n == Yt.Unknown)
-          n = (function (t) {
-            let e = !1;
-            switch (t.tagName) {
+      function mt(e) {
+        const t = e.parentElement;
+        if (!t) return console.error("no parent"), null;
+        let n = at(t);
+        if (n == Ye.Unknown)
+          n = (function (e) {
+            let t = !1;
+            switch (e.tagName) {
               case "A":
               case "INPUT":
               case "TEXTAREA":
-                e = !0;
+                t = !0;
                 break;
               case "DIV":
-                if (j(t) != bt.COLUMN) e = !0;
+                if (j(e) != Ce.COLUMN) t = !0;
                 else {
-                  const n = j(t.parentElement);
-                  (n != bt.ROW && n != bt.ROW_REVERSE) || (e = !0);
+                  const n = j(e.parentElement);
+                  (n != Ce.ROW && n != Ce.ROW_REVERSE) || (t = !0);
                 }
             }
-            let n = Yt.NotNeeded;
-            return e ? (n = de(t)) : se(t, n), n;
-          })(e);
-        else if (n == Yt.InReactTree) return n;
-        return n instanceof wt ? n : me(e);
+            let n = Ye.NotNeeded;
+            return t ? (n = dt(e)) : st(e, n), n;
+          })(t);
+        else if (n == Ye.InReactTree) return n;
+        return n instanceof we ? n : mt(t);
       }
-      function ge(t) {
-        Zt && (Zt(), (Zt = null), (Qt = null)),
-          t && r()(t).removeAttr("data-nav-modal");
+      function gt(e) {
+        Ze && (Ze(), (Ze = null), (Qe = null)),
+          e && r()(e).removeAttr("data-nav-modal");
       }
-      const pe = {
-        InstrumentFocusElements: ce,
-        ForceUpdateFocusElements: ue,
-        GPNavFocusChild: function (t) {
-          let e = ae(t[0]);
+      const _t = {
+        InstrumentFocusElements: ct,
+        ForceUpdateFocusElements: ut,
+        GPNavFocusChild: function (e) {
+          let t = at(e[0]);
           return (
-            e instanceof wt || (e = me(t[0])),
-            e instanceof wt && e.BTakeFocus(i.APPLICATION),
+            t instanceof we || (t = mt(e[0])),
+            t instanceof we && t.BTakeFocus(i.APPLICATION),
             !1
           );
         },
-        GPOnShowingModalWindow: function (t) {
-          const e = t;
-          return r()(e).attr("data-nav-modal", "true"), ue(e), () => ge(e);
+        GPOnShowingModalWindow: function (e) {
+          const t = e;
+          return r()(t).attr("data-nav-modal", "true"), ut(t), () => gt(t);
         },
-        GPShowVirtualKeyboard: function (t = !0) {
-          t ? zt.ShowVirtualKeyboard() : zt.HideVirtualKeyboard();
+        GPShowVirtualKeyboard: function (e = !0) {
+          e ? ze.ShowVirtualKeyboard() : ze.HideVirtualKeyboard();
         },
-        GPNavUpdateActionDescriptions: function (t, e) {
-          const n = ae(t);
-          n instanceof wt &&
+        GPNavUpdateActionDescriptions: function (e, t) {
+          const n = at(e);
+          n instanceof we &&
             n.SetProperties(
               Object.assign(Object.assign({}, n.m_Properties), {
-                actionDescriptionMap: m(e),
+                actionDescriptionMap: m(t),
               })
             );
         },
