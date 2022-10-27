@@ -50546,7 +50546,7 @@
     },
     62491: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OptInRoutes: () => Ai, default: () => Ri });
+      n.r(t), n.d(t, { OptInRoutes: () => Ri, default: () => ki });
       var a = n(9355),
         i = n(92244),
         r = n(9669),
@@ -51598,7 +51598,7 @@
               d.createElement(
                 m.rU,
                 {
-                  to: Ai.OptinAdminEdit(r.pageid),
+                  to: Ri.OptinAdminEdit(r.pageid),
                   className: (0, S.Z)(h().Button, h().Primary),
                 },
                 "Edit Opt-In Definition"
@@ -51610,7 +51610,7 @@
                     href:
                       D.De.PARTNER_BASE_URL +
                       "optin" +
-                      Ai.OptInAppReview(r.pageid),
+                      Ri.OptInAppReview(r.pageid),
                     className: (0, S.Z)(h().Button),
                     target: "_blank",
                   },
@@ -54241,7 +54241,7 @@
               d.createElement(
                 "p",
                 null,
-                "Relative URL used by the point shop to link to the store event"
+                "Relative URL used by the point shop to link to the store event. This is used by the point shop event specific page to point back to the sale page."
               ),
               d.createElement(u.II, {
                 type: "text",
@@ -60403,7 +60403,7 @@
               { className: fe().BasicButtonSize },
               d.createElement(
                 m.rU,
-                { to: Ai.OptinAdminDashboard() },
+                { to: Ri.OptinAdminDashboard() },
                 "Dashboard"
               )
             ),
@@ -60610,11 +60610,14 @@
         SetCheckedTrailerUsage(e) {
           this.m_registration.jsondata.trailer_permission != e &&
             ((this.m_registration.jsondata.trailer_permission = e),
-            (this.m_registration.jsondata.rtime_granting_trailer = Math.floor(
-              new Date().getTime() / 1e3
-            )),
-            (this.m_registration.jsondata.accountid_granting_trailer =
-              D.L7.accountid),
+            e
+              ? ((this.m_registration.jsondata.rtime_granting_trailer =
+                  Math.floor(new Date().getTime() / 1e3)),
+                (this.m_registration.jsondata.accountid_granting_trailer =
+                  D.L7.accountid))
+              : ((this.m_registration.jsondata.rtime_granting_trailer = void 0),
+                (this.m_registration.jsondata.accountid_granting_trailer =
+                  void 0)),
             this.SetDirty(!0));
         }
         BHasCheckedDemoUsage() {
@@ -60623,11 +60626,15 @@
         SetCheckedDemorUsage(e) {
           this.m_registration.jsondata.demo_permission != e &&
             ((this.m_registration.jsondata.demo_permission = e),
-            (this.m_registration.jsondata.rtime_granting_demo = Math.floor(
-              new Date().getTime() / 1e3
-            )),
-            (this.m_registration.jsondata.accountid_granting_demo =
-              D.L7.accountid),
+            e
+              ? ((this.m_registration.jsondata.rtime_granting_demo = Math.floor(
+                  new Date().getTime() / 1e3
+                )),
+                (this.m_registration.jsondata.accountid_granting_demo =
+                  D.L7.accountid))
+              : ((this.m_registration.jsondata.rtime_granting_demo = void 0),
+                (this.m_registration.jsondata.accountid_granting_demo =
+                  void 0)),
             this.SetDirty(!0));
         }
         BHasCheckedNoPlannedDiscounts() {
@@ -61119,7 +61126,12 @@
         const { optInDefinition: t } = e,
           n = t.event_title[D.De.LANGUAGE] || t.event_title.english,
           a = t.do_anytime.enter_discounts,
-          i = t.launch_demo.enabled;
+          i = t.launch_demo.enabled,
+          [r, s, o] = (0, Me.SZ)(() => [
+            Ua.Get().GetModel().jsondata.trailer_permission,
+            Ua.Get().GetModel().jsondata.rtime_granting_trailer,
+            Ua.Get().GetModel().jsondata.accountid_granting_trailer,
+          ]);
         return d.createElement(
           "div",
           null,
@@ -61187,17 +61199,43 @@
                 )
               )
           ),
-          d.createElement(u.ji, {
-            label: (0, b.Xx)("#OptIn_Collect_Trailer_check_label"),
-            checked: Ua.Get().BHasCheckedTrailerUsage(),
-            onChange: (e) => Ua.Get().SetCheckedTrailerUsage,
-          })
+          d.createElement("input", {
+            type: "checkbox",
+            id: "GatherTrailerPermission",
+            onClick: () => Ua.Get().SetCheckedTrailerUsage(!r),
+            checked: r,
+            name: "trailer_permission",
+          }),
+          d.createElement(
+            "label",
+            { htmlFor: "GatherTrailerPermission" },
+            (0, b.Xx)("#OptIn_Collect_Trailer_check_label")
+          ),
+          Boolean(s) &&
+            d.createElement("input", {
+              type: "hidden",
+              value: s,
+              name: "rtime_granting_trailer",
+            }),
+          Boolean(o) &&
+            d.createElement("input", {
+              type: "hidden",
+              value: o,
+              name: "accountid_granting_trailer",
+            }),
+          d.createElement("br", null),
+          d.createElement("br", null)
         );
       }
       function ri(e) {
         const { optInDefinition: t } = e,
           n = t.event_title[D.De.LANGUAGE] || t.event_title.english,
-          a = t.do_anytime.enter_discounts;
+          a = t.do_anytime.enter_discounts,
+          [i, r, s] = (0, Me.SZ)(() => [
+            Ua.Get().GetModel().jsondata.demo_permission,
+            Ua.Get().GetModel().jsondata.rtime_granting_demo,
+            Ua.Get().GetModel().jsondata.accountid_granting_demo,
+          ]);
         return d.createElement(
           "div",
           null,
@@ -61261,11 +61299,32 @@
                 )
               )
           ),
-          d.createElement(u.ji, {
-            label: (0, b.Xx)("#OptIn_Collect_Demo_check_label"),
-            checked: Ua.Get().BHasCheckedDemoUsage(),
-            onChange: (e) => Ua.Get().SetCheckedDemorUsage,
-          })
+          d.createElement("input", {
+            type: "checkbox",
+            id: "GatherDemoPermission",
+            onClick: () => Ua.Get().SetCheckedDemorUsage(!i),
+            checked: i,
+            name: "demo_permission",
+          }),
+          d.createElement(
+            "label",
+            { htmlFor: "GatherDemoPermission" },
+            (0, b.Xx)("#OptIn_Collect_Demo_check_label")
+          ),
+          Boolean(r) &&
+            d.createElement("input", {
+              type: "hidden",
+              value: r,
+              name: "rtime_granting_demo",
+            }),
+          Boolean(s) &&
+            d.createElement("input", {
+              type: "hidden",
+              value: s,
+              name: "accountid_granting_demo",
+            }),
+          d.createElement("br", null),
+          d.createElement("br", null)
         );
       }
       function si(e) {
@@ -61446,7 +61505,7 @@
           d.createElement(fn.NL, {
             message: (e) =>
               !l.On.Get().BIsDirty() ||
-              e.pathname != Ai.OptinAdminDashboard() ||
+              e.pathname != Ri.OptinAdminDashboard() ||
               "Do you want to discard unsaved changes?",
           });
       var ci = n(99533);
@@ -61589,14 +61648,19 @@
           var i;
           return (0, R.mG)(this, void 0, void 0, function* () {
             let r = null;
-            const o = t.filter((e) => this.m_nInvitedAppIDs.includes(e));
-            if (!a || o.length != t.length)
-              return (
-                console.error(
-                  "ChangeAppAdditionalFeaturingState: Not all app are already invited. Cannot change to featuring."
-                ),
-                11
-              );
+            if (!a) {
+              const e = t.filter((e) => this.m_nInvitedAppIDs.includes(e));
+              if (e.length != t.length)
+                return (
+                  console.error(
+                    "ChangeAppAdditionalFeaturingState: Not all app are already invited. Cannot change to featuring.",
+                    t,
+                    e,
+                    this.m_nInvitedAppIDs
+                  ),
+                  11
+                );
+            }
             try {
               const a = new FormData();
               a.append("sessionid", D.De.SESSIONID),
@@ -61652,7 +61716,7 @@
             di.s_Singleton ||
               ((di.s_Singleton = new di()),
               ("dev" != D.De.WEB_UNIVERSE && "beta" != D.De.WEB_UNIVERSE) ||
-                (window.g_OptInDemoAppStores = di.s_Singleton)),
+                (window.g_OptInAppReviewStores = di.s_Singleton)),
             di.s_Singleton
           );
         }
@@ -61756,13 +61820,14 @@
             )
         );
       }
-      const fi = {
+      var fi = n(74163);
+      const Si = {
         include_basic_info: !0,
         include_assets: !0,
         include_tag_count: 10,
         include_release: !0,
       };
-      function Si(e) {
+      function yi(e) {
         const {
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: n,
@@ -61770,37 +61835,40 @@
             pageid: i,
           } = e,
           [r, s] = d.useState(!0),
-          { fnQueueMultipleTagLoads: o } = (0, pi.KI)();
+          { fnQueueMultipleTagLoads: o } = (0, pi.KI)(),
+          l = (0, fi.T)("OptInAppReviewFilter");
         d.useEffect(() => {
           Ve.Z.Get()
             .QueueMultipleAppRequests(
               (null == t ? void 0 : t.slice(0, 100)) || [],
-              fi
+              Si
             )
             .then(() => {
               Ve.Z.Get()
                 .QueueMultipleAppRequests(
                   (null == t ? void 0 : t.slice(100)) || [],
-                  fi
+                  Si
                 )
                 .then(() => {
-                  const e = bi(t).map((e) => e.tagid);
-                  o(e).then(() => s(!1));
+                  const e = Di(t).map((e) => e.tagid);
+                  o(e).then(() => {
+                    l.token.reason || s(!1);
+                  });
                 });
             });
-        }, [o, i, t]);
-        const [l, c] = d.useState(new Set()),
-          [m, p] = d.useState(""),
-          [_, h] = d.useState(0),
-          [g, v] = d.useState(!1),
-          [E, f] = d.useState(0);
+        }, [l.token.reason, o, i, t]);
+        const [c, m] = d.useState(new Set()),
+          [p, _] = d.useState(""),
+          [h, g] = d.useState(0),
+          [v, E] = d.useState(!1),
+          [f, S] = d.useState(0);
         return (
           d.useEffect(() => {
-            const e = (null == m ? void 0 : m.trim().length) > 2,
-              i = null == m ? void 0 : m.toLocaleLowerCase(),
-              r = Array.from(l),
+            const e = (null == p ? void 0 : p.trim().length) > 2,
+              i = null == p ? void 0 : p.toLocaleLowerCase(),
+              r = Array.from(c),
               s = new Set(a || []);
-            if (t.length > 0 && (l.size > 0 || e || _ || E)) {
+            if (t.length > 0 && (c.size > 0 || e || h || f)) {
               const a = t
                 .filter((t) => {
                   var n, a, r, s, o;
@@ -61851,21 +61919,21 @@
                   return !0;
                 })
                 .filter((e) => {
-                  if (_ > 0) {
+                  if (h > 0) {
                     const t = Ve.Z.Get().GetApp(e);
                     return (
                       t &&
                       ((null == t ? void 0 : t.BIsComingSoon()) ||
                         (null == t ? void 0 : t.GetOriginalReleaseDateRTime()) >
-                          _)
+                          h)
                     );
                   }
                   return !0;
                 })
-                .filter((e) => !(g && s.size > 0) || !s.has(e));
-              n(a);
+                .filter((e) => !(v && s.size > 0) || !s.has(e));
+              l.token.reason || n(a);
             }
-          }, [g, n, E, _, a, t, l, m]),
+          }, [v, l.token.reason, n, f, h, a, t, c, p]),
           d.createElement(
             Se.ug,
             { title: "Filter Options", bStartMinimized: !0 },
@@ -61892,15 +61960,15 @@
                     type: "text",
                     label: (0, b.Xx)("#EventCalendar_UniversalSearch"),
                     placeholder: "search by app name, description",
-                    value: m,
+                    value: p,
                     onChange: (e) => {
-                      p(e.target.value), f(1);
+                      _(e.target.value), S(1);
                     },
                   }),
-                  d.createElement(yi, {
-                    setFilterTagIDs: l,
+                  d.createElement(bi, {
+                    setFilterTagIDs: c,
                     fnUpdateSetFilterTagIDs: (e) => {
-                      c(e), f(1);
+                      m(e), S(1);
                     },
                     rgAppIDs: t,
                     bLoading: r,
@@ -61910,16 +61978,16 @@
                     strDescToolTip:
                       "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
                     nEarliestTime: 0,
-                    fnGetTimeToUpdate: () => _,
+                    fnGetTimeToUpdate: () => h,
                     fnSetTimeToUpdate: (e) => {
-                      h(e), f(1);
+                      g(e), S(1);
                     },
                   }),
                   Boolean((null == a ? void 0 : a.length) > 0) &&
                     d.createElement(u.ji, {
-                      checked: g,
+                      checked: v,
                       onChange: (e) => {
-                        v(e), f(1);
+                        E(e), S(1);
                       },
                       tooltip:
                         "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
@@ -61929,7 +61997,7 @@
           )
         );
       }
-      function yi(e) {
+      function bi(e) {
         const {
             setFilterTagIDs: t,
             fnUpdateSetFilterTagIDs: n,
@@ -61938,7 +62006,7 @@
           } = e,
           { fnGetTagID: r } = (0, pi.Hc)(),
           s = d.useMemo(
-            () => (i ? [] : bi(a).sort((e, t) => (e.count < t.count ? 1 : -1))),
+            () => (i ? [] : Di(a).sort((e, t) => (e.count < t.count ? 1 : -1))),
             [a, i]
           ),
           o = d.useMemo(
@@ -61981,7 +62049,7 @@
           })
         );
       }
-      function bi(e) {
+      function Di(e) {
         const t = new Map();
         return (
           e.forEach((e) => {
@@ -61996,7 +62064,7 @@
           Array.from(t.values())
         );
       }
-      function Di(e) {
+      function Bi(e) {
         const { pageid: t } = e,
           n = (0, D.kQ)("optin_title", "application_config"),
           {
@@ -62071,7 +62139,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Bi, {
+                d.createElement(wi, {
                   key: "reviewapp",
                   rgOrderedAppIDs: r,
                   pageid: t,
@@ -62090,7 +62158,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Bi, {
+                d.createElement(wi, {
                   key: "invitedapps",
                   rgOrderedAppIDs: a,
                   pageid: t,
@@ -62110,7 +62178,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Bi, {
+                d.createElement(wi, {
                   key: "prunedapps",
                   rgOrderedAppIDs: i,
                   pageid: t,
@@ -62137,7 +62205,7 @@
           d.createElement(T.n, { tabs: c })
         );
       }
-      function Bi(e) {
+      function wi(e) {
         const {
             rgOrderedAppIDs: t,
             pageid: n,
@@ -62151,7 +62219,7 @@
           "div",
           null,
           Boolean(r) && d.createElement(vi, { strOptInName: n, rgAppIDs: l }),
-          d.createElement(Si, {
+          d.createElement(yi, {
             pageid: n,
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: o,
@@ -62162,7 +62230,7 @@
                 d.Fragment,
                 null,
                 l.map((e, t) =>
-                  d.createElement(wi, {
+                  d.createElement(Ci, {
                     key: (a ? "prune" : "invited") + e,
                     pageid: n,
                     appid: e,
@@ -62179,14 +62247,14 @@
               )
         );
       }
-      function wi(e) {
+      function Ci(e) {
         return d.createElement(
           hi.Y,
           { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-          d.createElement(Ci, Object.assign({}, e))
+          d.createElement(Ii, Object.assign({}, e))
         );
       }
-      function Ci(e) {
+      function Ii(e) {
         const {
             appid: t,
             bInvited: n,
@@ -62194,7 +62262,7 @@
             index: i,
             bPendingReview: r,
           } = e,
-          [s, o] = (0, He.vs)(t, fi),
+          [s, o] = (0, He.vs)(t, Si),
           { fnChangeAppPruneState: l } = mi(),
           c = d.useMemo(() => ({ type: "game", id: t }), [t]);
         switch (o) {
@@ -62265,7 +62333,7 @@
               { className: gi.Desc },
               s.GetShortDescription()
             ),
-            d.createElement(Ti, { storeItem: s })
+            d.createElement(Ai, { storeItem: s })
           ),
           d.createElement(
             "div",
@@ -62284,7 +62352,7 @@
                 (0, b.Xx)("#OptIn_AppReview_Invite")
               ),
             Boolean(D.L7.is_support && n) &&
-              d.createElement(Ii, { appid: t, pageid: a })
+              d.createElement(Ti, { appid: t, pageid: a })
           ),
           d.createElement(
             "div",
@@ -62293,7 +62361,7 @@
           )
         );
       }
-      function Ii(e) {
+      function Ti(e) {
         const { appid: t, pageid: n } = e,
           a = (function (e) {
             const [t, n] = (0, d.useState)(di.Get().GetStateForApp(e));
@@ -62308,7 +62376,29 @@
           { className: xa().ValveOnlyBackground },
           d.createElement(
             u.zx,
-            { onClick: () => i(n, [t], !a.additionally_featured) },
+            {
+              onClick: () => {
+                i(n, [t], !a.additionally_featured)
+                  .then((e) => {
+                    1 != e &&
+                      (0, E.AM)(
+                        d.createElement(v.JX, {
+                          strDescription:
+                            "Check the console for error messages",
+                        }),
+                        window
+                      );
+                  })
+                  .catch(() =>
+                    (0, E.AM)(
+                      d.createElement(v.JX, {
+                        strDescription: "Check the console for error messages",
+                      }),
+                      window
+                    )
+                  );
+              },
+            },
             (0, b.Xx)(
               a.additionally_featured
                 ? "Remove App Featuring"
@@ -62317,7 +62407,7 @@
           )
         );
       }
-      function Ti(e) {
+      function Ai(e) {
         const { storeItem: t } = e,
           n = d.useMemo(
             () => (null == t ? void 0 : t.GetTags().map((e) => e.tagid)),
@@ -62339,14 +62429,14 @@
           )
         );
       }
-      const Ai = {
+      const Ri = {
         OptinAdminDashboard: () => "/admin/",
         OptinAdminEdit: (e) => `/admin/edit/${e}`,
         OptinAdminSupport: (e) => `/admin/support/${e}`,
         OptInApp: (e, t) => `/sale*/${e}/${t}`,
         OptInAppReview: (e) => `/appreview/${e}`,
       };
-      function Ri(e) {
+      function ki(e) {
         return (0, ui.NX)()
           ? d.createElement(
               m.VK,
@@ -62368,25 +62458,25 @@
                 }),
                 d.createElement(fn.AW, {
                   exact: !0,
-                  path: Ai.OptinAdminDashboard(),
+                  path: Ri.OptinAdminDashboard(),
                   component: J,
                 }),
                 d.createElement(fn.AW, {
                   exact: !0,
-                  path: Ai.OptinAdminEdit(":pageid"),
+                  path: Ri.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     d.createElement(Pa, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(fn.AW, {
                   exact: !0,
-                  path: Ai.OptinAdminSupport(":appid"),
+                  path: Ri.OptinAdminSupport(":appid"),
                   render: (e) =>
                     d.createElement(za, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 d.createElement(fn.AW, {
-                  path: Ai.OptInApp(":partialpageid", ":appid"),
+                  path: Ri.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
                     d.createElement(oi, {
                       appid: e.match.params.appid,
@@ -62394,9 +62484,9 @@
                     }),
                 }),
                 d.createElement(fn.AW, {
-                  path: Ai.OptInAppReview(":pageid"),
+                  path: Ri.OptInAppReview(":pageid"),
                   render: (e) =>
-                    d.createElement(Di, { pageid: e.match.params.pageid }),
+                    d.createElement(Bi, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(fn.AW, { component: i.R })
               )
