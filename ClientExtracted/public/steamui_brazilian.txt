@@ -4633,7 +4633,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Botão Guia"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Botão Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Desativado"
-"Steam_Settings_Streaming_EnableTouchController"	"Ativar controle por toque"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Ver informações de suporte"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=brazilian"

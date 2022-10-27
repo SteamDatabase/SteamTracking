@@ -299,6 +299,7 @@ enum EOSBranch {
 	k_EOSBranch_Beta = 3;
 	k_EOSBranch_BetaCandidate = 4;
 	k_EOSBranch_Main = 5;
+	k_EOSBranch_Staging = 6;
 }
 
 enum ECommunityItemClass {

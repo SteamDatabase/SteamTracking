@@ -4614,7 +4614,6 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide gomb"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y gomb"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Kikapcsolva"
-"Steam_Settings_Streaming_EnableTouchController"	"Érintéses vezérlés engedélyezése"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Támogatási információk megnézése"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=hungarian"

@@ -4638,7 +4638,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"ガイドボタン"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Yボタン"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"無効"
-"Steam_Settings_Streaming_EnableTouchController"	"タッチコントロールを有効にする"
 
 "Steam_Settings_Streaming_StreamingSupport"	"サポート情報を表示"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

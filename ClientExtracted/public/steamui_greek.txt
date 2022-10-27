@@ -4632,7 +4632,6 @@
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Κουμπί Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Κουμπί Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Ανενεργό"
-"Steam_Settings_Streaming_EnableTouchController"	"Ενεργοποίηση ελέγχων αφής"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Προβολή πληροφοριών υποστήριξης"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

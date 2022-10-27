@@ -4642,7 +4642,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Tlačítko Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Tlačítko Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Zakázáno"
-"Steam_Settings_Streaming_EnableTouchController"	"Povolit dotykový ovladač"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Zobrazit časté dotazy"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

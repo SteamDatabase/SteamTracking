@@ -61,7 +61,7 @@
 "Overlay_Taskbar_ChatRoom"	"채팅방"
 "Overlay_Taskbar_WebSite"	"웹사이트"
 "Overlay_Taskbar_Forums"	"토론"
-"Overlay_Taskbar_Close"		"게임으로 돌아가려면 여기를 클릭하십시오."
+"Overlay_Taskbar_Close"		"게임으로 돌아가려면 여기를 클릭하세요."
 "Overlay_Taskbar_CloseApp"		"애플리케이션으로 돌아가려면 여기를 클릭하세요"
 "Overlay_Taskbar_WebBrowser"	"웹 브라우저"
 "Overlay_Taskbar_Screenshots"	"스크린샷"
@@ -148,7 +148,7 @@
 "Overlay_FriendChangeConfirmation_Button_RequestIgnore"		"요청 무시"
 
 "Overlay_LobbyInvite_WrongGame_Title"	"게임 초대"
-"Overlay_LobbyInvite_WrongGame_Message" "이 초대는 현재 플레이하고 있는 게임이 아닌 다른 게임에 대한 초대입니다.\n현재 게임을 닫고 바탕 화면에서 초대를 수락하십시오."
+"Overlay_LobbyInvite_WrongGame_Message" "이 초대는 현재 플레이하고 있는 게임이 아닌 다른 게임에 대한 초대입니다.\n현재 게임을 닫고 바탕 화면에서 초대를 수락하세요."
 
 "Overlay_MicroTxnAuth_Title"		"Steam 거래"
 "Overlay_MicroTxnAuth_Authorize"	"승인"

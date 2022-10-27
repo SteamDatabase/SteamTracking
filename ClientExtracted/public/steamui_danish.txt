@@ -4633,7 +4633,6 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide-knap"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y-knap"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Slået fra"
-"Steam_Settings_Streaming_EnableTouchController"	"Slå touch-controller til"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Vis supportinformation"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

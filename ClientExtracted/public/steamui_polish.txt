@@ -4624,7 +4624,6 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Przycisk Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Przycisk Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Wył."
-"Steam_Settings_Streaming_EnableTouchController"	"Włącz sterowanie dotykowe"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Sprawdź informacje pomocy"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=polish"

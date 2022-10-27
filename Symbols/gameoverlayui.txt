@@ -484,6 +484,7 @@
  remove
  rename
  rindex
+ roundf
  scandir$INODE64
  sem_close
  sem_open

@@ -3445,7 +3445,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "SteamUI_VerifyEmail_Verified" " | Verificată"
 "SteamUI_VerifyEmail_Unverified" " | Neverificată"
 
-"SteamUI_ManageSecurityButton" "Administrează securitatea Steam Guard a contului..."
+"SteamUI_ManageSecurityButton" "Gestionează securitatea Steam Guard a contului..."
 "SteamUI_ManageSecurity_Title" "Gestionează Steam Guard"
 
 "SteamUI_Settings_Security_Status_Label" "Stare de securitate:"
@@ -3467,7 +3467,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "SteamUI_ManageSecurity_DoNothing2" "Pentru o securitate sporită, te rugăm să fii sigur că parola adresei de e-mail este diferită de cea a contului Steam."
 
 "SteamUI_ManageSecurity_UnlockAccount_Success" "Te poți conecta folosind contul tău Steam de pe orice browser sau PC, dacă informațiile de autentificare sunt corecte."
-"SteamUI_ManageSecurity_Reenable" "Pentru reactivarea Steam Guard, clic pe 'Configurare Securitate Cont' din Setările Steam."
+"SteamUI_ManageSecurity_Reenable" "Pentru a reactiva Steam Guard, accesează opțiunea „Gestionează securitatea Steam Guard a contului” din setările Steam."
 
 "SteamUI_ManageSecurity_CodeSent" "Am trimis pe adresa ta de e-mail un mesaj cu un cod special.\nFolosește acest cod când vrei să te autentifici de pe un nou PC."
 "SteamUI_ManageSecurity_OtherComputersDenied" "Toate PC-urile care nu au fost autorizate pentru acest cont Steam vor avea nevoie de aprobarea ta via e-mail înainte de conectare."
@@ -3482,7 +3482,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "SteamUI_ManageSecurity_UnlockRadio" "Dezactivează Steam Guard (Nerecomandat)"
 "SteamUI_ManageSecurity_UnlockWarning" "Notă: Schimburile Steam și Piața Comunitară Steam nu vor fi disponibile cât timp Steam Guard este oprit și vor continua să fie indisponibile timp de 15 zile după reactivarea Steam Guard."
 
-"SteamUI_ManageSecurity_RemoveOtherComputersButton" "Anulează toate autorizările existente"
+"SteamUI_ManageSecurity_RemoveOtherComputersButton" "Revocă acum accesul pentru toate celelalte dispozitive"
 
 "SteamUI_ManageSecurity_NotLockedInfo" "Contul tău Steam poate fi securizat cu Steam Guard, pentru a preveni accesul neautorizat."
 "SteamUI_ManageSecurity_NotLockedInfo2" "Folosind Steam Guard, Steam va trimite un mesaj e-mail pe adresa ta de contact prima dată când încerci să te autentifici de pe un PC sau browser neautorizat. Mesajul va conține un cod special necesar pentru a-ți accesa contul Steam."
@@ -4629,7 +4629,6 @@ Artiști"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Butonul Ghid"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Buton Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Dezactivat"
-"Steam_Settings_Streaming_EnableTouchController"	"Activează comenzile tactile"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Vezi informațiile de asistență"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

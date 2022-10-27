@@ -31,7 +31,7 @@
 "WelcomeToSteamEmailRepeat"	"메일 주소를 다시 입력하세요."
 "WelcomeToSteamPrivacyInfo1" "자세한 내용은"
 "WelcomeToSteamPrivacyInfo2" "개인정보 보호정책"
-"WelcomeToSteamPrivacyInfo3" "참조하십시오."
+"WelcomeToSteamPrivacyInfo3" "참조하세요."
 "Underline" "       _______________________"
 "Underline2" "       _______________________"
 "WelcomeToSteamPasswordInfo" "비밀번호를 입력하세요. 최소 8자 이상의 다른 사람들이 추측하기 어려운 것이어야 합니다."
@@ -39,7 +39,7 @@
 "WelcomeToSteamRetypePassword" "비밀번호 재입력"
 "WelcomeAccountCreateComplete" "모든 설정이 끝났습니다! Steam을 이용해 주셔서 
 감사합니다. 이 프로그램은 화면 오른쪽 아래에 위치한 
-작업 표시줄의 알림 영역에 표시됩니다. Steam에 접속하려면 Steam 아이콘을 오른쪽 버튼으로 클릭하십시오."
+작업 표시줄의 알림 영역에 표시됩니다. Steam에 접속하려면 Steam 아이콘을 오른쪽 버튼으로 클릭하세요."
 
 "SteamApp_Description"	"Steam에 있는 게임을 관리하고 플레이할 수 있는 응용 프로그램"
 
@@ -62,24 +62,24 @@
 "SteamRootLabel7" "새 게임 찾기"
 
 "Steam_trayHint" "Steam은 작업 표시줄의 알림 영역에 표시됩니다. Steam에
-접속하거나 종료하려면 아이콘을 마우스 오른쪽 버튼으로 클릭하십시오."
+접속하거나 종료하려면 아이콘을 마우스 오른쪽 버튼으로 클릭하세요."
 
-"Steam_SubscribeUserInfo" "신용카드에 표시되어 있는 이름을 정확하게 입력해 주십시오."
+"Steam_SubscribeUserInfo" "신용카드에 표시되어 있는 이름을 정확하게 입력해 주세요."
 "Steam_EmailAddress" "메일 주소"
 "Steam_EmailAddressVerification" "(구매 확인 및 영수증 발송용)"
 "Steam_FirstName" "이름"
 "Steam_LastName" "성"
-"Steam_SubscribeCardInfo" "신용카드에 표시되어 있는 카드 번호와 유효기간을 입력해 주십시오."
+"Steam_SubscribeCardInfo" "신용카드에 표시되어 있는 카드 번호와 유효기간을 입력해 주세요."
 "Steam_CreditCardType" "신용카드 종류"
 "Steam_CreditCardNumber" "%cardtype% 신용카드 번호"
 "Steam_CreditCardExpiration" "카드 유효기간"
-"Steam_SubscribeBillingInfo" "신용카드 청구지 주소를 입력해 주십시오."
+"Steam_SubscribeBillingInfo" "신용카드 청구지 주소를 입력해 주세요."
 "Steam_City" "시"
 "Steam_StateOrProvince" "도"
 "Steam_Country" "국가"
 "Steam_PostCode" "우편번호"
 "Steam_CountryOfResidence"	"위에서 선택한 국가에 현재 살고 있습니다."
-"Steam_SubscribeReviewInfo" "주문 내역을 검토하십시오. 아래에 오류가 있으면 \"뒤로\"를 클릭하여 수정하십시오. 그렇지 않으면 \"구매\"를 클릭하여 거래를 완료하십시오."
+"Steam_SubscribeReviewInfo" "주문 내역을 검토하세요. 아래에 오류가 있으면 \"뒤로\"를 클릭하여 수정하세요. 그렇지 않으면 \"구매\"를 클릭하여 거래를 완료하세요."
 "Steam_ProductCostLabel"	"가격"
 "Steam_TaxLabel"	"부가세"
 "Steam_TotalLabel"	"합계"
@@ -87,12 +87,12 @@
 이 작업은 1분 안에 처리됩니다."
 "Steam_SubscribeCompleteInfo" "감사합니다! %s1의 구매가 완료되었습니다. \n\n이제 게임 라이브러리에서 원하는 게임을 두 번 클릭하거나 게임 제목을 마우스 오른쪽 버튼으로 클릭한 후 메뉴에서 '플레이'를 선택하여 플레이를 시작할 수 있습니다."
 "Steam_PreorderCompleteInfo" "감사합니다! %s1의 예약 주문이 완료되었습니다. \n\n이제 게임이 공식적으로 출시되면 바로 플레이하실 수 있습니다!"
-"Steam_SubscribeFailedInfo"	"구매가 완료되지 않았습니다. 입력하신 \n신용카드 정보가 유효하지 않습니다.\n\n자세한 내용이 기록된 메일이 \n발송되었습니다. 다른 신용카드 정보를 입력하려면 \n구매를 다시 시도해 주십시오."
+"Steam_SubscribeFailedInfo"	"구매가 완료되지 않았습니다. 입력하신 \n신용카드 정보가 유효하지 않습니다.\n\n자세한 내용이 기록된 메일이 \n발송되었습니다. 다른 신용카드 정보를 입력하려면 \n구매를 다시 시도해 주세요."
 
 "Steam_ErrorPasswordNotSet" "비밀번호를 설정하지 못했습니다. \n비밀 질문에 대한 대답이 틀렸거나 계정이 존재하지 않습니다."
 "Steam_ErrorPasswordTooShort" "새로운 비밀번호는 8자 이상이어야 합니다."
-"Steam_ErrorPasswordsDontMatch" "입력하신 비밀번호가 서로 일치하지 않습니다.\n두 칸에 동일한 비밀번호를 입력해 주십시오."
-"Steam_ErrorCantStartGame" "이 게임은 현재 이용할 수 없습니다.\n나중에 다시 시도해 주십시오."
+"Steam_ErrorPasswordsDontMatch" "입력하신 비밀번호가 서로 일치하지 않습니다.\n두 칸에 동일한 비밀번호를 입력해 주세요."
+"Steam_ErrorCantStartGame" "이 게임은 현재 이용할 수 없습니다.\n나중에 다시 시도해 주세요."
 "Steam_ErrorCantStartGameDetailed" "게임을 시작할 수 없습니다(%error%)."
 "Steam_ErrorCantRunBecauseRequires64bitOS"	"32비트 Windows가 실행 중이기 때문에 게임을 시작할 수 없습니다. 게임을 시작하려면 64비트 버전이 필요합니다. \n\n게임에 32비트용 시작 옵션이 있다면 선택해 주세요. 옵션이 없다면 64비트 Windows 컴퓨터가 필요합니다. \n64비트 Windows 컴퓨터가 없다면 아래를 클릭하여 환불 요청에 대해 알아보세요.\n"
 "Steam_ErrorCantStartGameDependency" "공유 콘텐츠가 포함된 게임을 실행하는 데 실패했습니다. 게임을 먼저 업데이트하세요.\n\n %detail%"
@@ -110,13 +110,13 @@
 "Steam_ErrorPasswordTooWeak" "너무 쉬운 비밀번호입니다."
 "Steam_ErrorPasswordContainsAccountName" "비밀번호에 계정 이름이 포함되어 있습니다."
 
-"Steam_NewPassword_Enter" "새로운 비밀번호를 입력해 주십시오.\n최소 8자 이상이어야 합니다."
+"Steam_NewPassword_Enter" "새로운 비밀번호를 입력해 주세요.\n최소 8자 이상이어야 합니다."
 "Steam_NewPassword_Label" "새 비밀번호"
 "Steam_NewPassword_Confirm" "비밀번호 확인"
 
 "Steam_ForgottenPassword_Title" "계정 정보 찾기 - Steam"
-"Steam_ForgottenPassword_VerifyIdentity" "비밀번호를 변경하기 전에 먼저 본인 확인을 해야 합니다. 계정 이름을 입력해 주십시오."
-"Steam_ForgottenPassword_Incorrect" "비밀번호를 변경하지 못했습니다.\n확인 코드를 잘못 입력하였거나\n새로운 비밀번호가 잘못되었습니다.\n\n'뒤로'를 클릭한 다음 다시 시도하십시오. \n"
+"Steam_ForgottenPassword_VerifyIdentity" "비밀번호를 변경하기 전에 먼저 본인 확인을 해야 합니다. 계정 이름을 입력해 주세요."
+"Steam_ForgottenPassword_Incorrect" "비밀번호를 변경하지 못했습니다.\n확인 코드를 잘못 입력하였거나\n새로운 비밀번호가 잘못되었습니다.\n\n'뒤로'를 클릭한 다음 다시 시도하세요. \n"
 "Steam_ForgottenPassword_Success" "비밀번호가 변경되었습니다.\n\n'마침'을 클릭하면 로그인 화면으로 돌아갑니다."
 "Steam_ForgottenPassword_SamePassword" "입력하신 비밀번호가 현재 사용 중인 비밀번호와 같습니다. 뒤로 돌아가서 다른 비밀번호를 입력하거나 비밀번호 변경을 취소하고 현재 사용 중인 비밀번호로 로그인하세요\n"
 "Steam_ForgottenPassword_EnterAuthCodeDescription" "귀하의 휴대전화에 설치된 Steam 모바일 앱의 현재 Steam Guard 인증 코드를 입력하세요."
@@ -141,7 +141,7 @@
 "SteamUI_CreateAccount_FirstName" "이름"
 "SteamUI_CreateAccount_LastName"	"성"
 "SteamUI_CreateAccount_Error"	"Steam - 계정 만들기 오류"
-"SteamUI_CreateAccount_CacheDir"	"게임을 저장할 위치를 선택하십시오.\n1GB 이상의 여유 공간이 있는 드라이브를\n선택하는 것이 좋습니다."
+"SteamUI_CreateAccount_CacheDir"	"게임을 저장할 위치를 선택하세요.\n1GB 이상의 여유 공간이 있는 드라이브를\n선택하는 것이 좋습니다."
 
 "SteamUI_CreateAccount_ContactEmail"	"연락 메일 주소"
 "SteamUI_CreateAccount_ContactEmailConfirm"	"메일 주소 확인"
@@ -149,8 +149,8 @@
 "SteamUI_CreateAccount_CopyAndPaste"	"이 코드를 복사하고 아래 칸에 붙여넣으십시오."
 "SteamUI_CreateAccount_Response"	"Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다."
 "SteamUI_CreateAccount_SentTo"	"다음 주소로 확인 메일 발송됨:"
-"SteamUI_CreateAccount_EnterCodeAgain"	"코드를 다시 입력하거나 다른 메일 주소를 제공하려면 \n'뒤로'를 클릭하십시오."
-"SteamUI_CreateAccount_DoesNotMatch"	"이 코드는 Steam이 보유한 코드와 일치하지 않습니다.\n메일 메시지를 참조하고 코드를 정확하게 입력했는지 \n확인하십시오. \n제목이 \"Steam account - Please verify your email address\"인 \n메일에 코드가 포함되어 \n발송되었습니다. 메일 주소를 확인해 주십시오. 코드는 8문자로 구성되어 있습니다."
+"SteamUI_CreateAccount_EnterCodeAgain"	"코드를 다시 입력하거나 다른 메일 주소를 제공하려면 \n'뒤로'를 클릭하세요."
+"SteamUI_CreateAccount_DoesNotMatch"	"이 코드는 Steam이 보유한 코드와 일치하지 않습니다.\n메일 메시지를 참조하고 코드를 정확하게 입력했는지 \n확인하세요. \n제목이 \"Steam account - Please verify your email address\"인 \n메일에 코드가 포함되어 \n발송되었습니다. 메일 주소를 확인해 주세요. 코드는 8문자로 구성되어 있습니다."
 
 "SteamUI_SteamProgress_Title"	"Steam - 처리 중"
 "SteamUI_CreatingAccount"	"계정을 만드는 중..."
@@ -244,12 +244,12 @@
 "SteamUI_JoinDialog_Connecting_Text" "Steam에 연결 중..."
 
 "SteamUI_SetCustomImage_Title" "%gamename% - 사용자 임의 사진 설정"
-"SteamUI_SetCustomImage_ChooseImage" "Steam의 게임 목록에서 표시될 %gamename%의 사진을 선택해 주십시오."
+"SteamUI_SetCustomImage_ChooseImage" "Steam의 게임 목록에서 표시될 %gamename%의 사진을 선택해 주세요."
 "SteamUI_SetCustomImage_ImagePrescription" "해당 파일은 JPEG, PNG 또는 TGA 형식의 460x215 크기여야 합니다."
 "SteamUI_SetCustomImage_ThisFile" "사용자 임의 설정 사진 파일:"
 "SteamUI_SetCustomImage_Browse" "찾아보기..."
-"SteamUI_SetCustomImage_TryAgain" "유효한 파일 이름을 입력해 주십시오."
-"SteamUI_SetCustomImage_LocateImage" "등록할 사진을 선택해 주십시오"
+"SteamUI_SetCustomImage_TryAgain" "유효한 파일 이름을 입력해 주세요."
+"SteamUI_SetCustomImage_LocateImage" "등록할 사진을 선택해 주세요"
 "SteamUI_SetCustomImage_SetImage" "사진 등록"
 "SteamUI_SetCustomImage_Cancel" "취소"
 "SteamUI_DeleteCustomImage_Title" "%gamename% - 사용자 임의 사진 삭제"
@@ -366,7 +366,7 @@
 
 "Steam_AccountDialog_Logout"			"로그아웃..."
 "Steam_RunGame_Title_Error"			"Steam - 오류"
-"Steam_RunGame_AnotherGameIsBeingRan"	"게임을 실행할 수 없습니다. 현재 다른 게임을 시작하는 중입니다.\n해당 게임이 시작될 때까지 기다려 주십시오."
+"Steam_RunGame_AnotherGameIsBeingRan"	"게임을 실행할 수 없습니다. 현재 다른 게임을 시작하는 중입니다.\n해당 게임이 시작될 때까지 기다려 주세요."
 "Steam_RunGame_Title_ConvertingToSteam3Content"		"Steam 콘텐츠 시스템"
 "Steam_RunGame_ConvertingToSteam3Content"			"게임을 Steam의 새 콘텐츠 시스템으로 변환하는 중입니다"
 
@@ -375,7 +375,7 @@
 "Steam_ScanCDKey_RetailProductFound"	"컴퓨터에 이미 %s1 게임이 \n설치되어 있습니다. 제품 코드를 입력하면 \n다음 게임을 가입할 수 있습니다."
 "Steam_ScanCDKey_SpaceRequired"		"필요한 디스크 공간:"
 "Steam_ScanCDKey_SpaceAvailable"		"여유 디스크 공간:"
-"Steam_ScanCDKey_SelectGames"			"라이브러리에 추가할 게임을 선택하십시오."
+"Steam_ScanCDKey_SelectGames"			"라이브러리에 추가할 게임을 선택하세요."
 "Steam_UncheckAnyGamesNotConvert"		"변환하지 않을 게임을 선택 해제합니다."
 
 "Steam_Working_Title"				"Steam - 작동 중"
@@ -391,13 +391,13 @@
 "Steam_Working_InitTxn"				"구매를 초기화하는 중..."
 "Steam_Working_GetFinalPrice"		"최종 가격을 가져오는 중..."
 "Steam_PurchaseFailedTitle"			"Steam - 오류"
-"Steam_PurchaseFailedMessage"			"처리를 진행하는 동안 오류가 발생하여 구매 절차를\n완료할 수 없습니다. 나중에 다시 시도하십시오."
-"Steam_CVV2_Info"					"신용카드의 보안번호를 입력해 주십시오."
+"Steam_PurchaseFailedMessage"			"처리를 진행하는 동안 오류가 발생하여 구매 절차를\n완료할 수 없습니다. 나중에 다시 시도하세요."
+"Steam_CVV2_Info"					"신용카드의 보안번호를 입력해 주세요."
 "Steam_CardSecurityInstruction"		"이 번호는 신용카드 뒷면의 서명란에 있습니다. 서명란에 표시된 마지막 세 자리 숫자입니다."
 "Steam_Working_ContactingSvr"		"서버에 접속 중..."
-"Steam_PayPalIntroToBrowser"		"%provider% 웹사이트에서 %provider% 거래가 승인되었습니다. 아래 버튼을 클릭하여 웹 브라우저에서 거래를 시작하십시오."
+"Steam_PayPalIntroToBrowser"		"%provider% 웹사이트에서 %provider% 거래가 승인되었습니다. 아래 버튼을 클릭하여 웹 브라우저에서 거래를 시작하세요."
 "Steam_PayPalOpenBrowserButton"		"%provider% 구매 시작"
-"Steam_PayPalWaiting"				"%provider% 웹사이트에 연결되었습니다. 로그인을 하거나 계정을 만들어 구매 세부 사항을 확인한 후 승인하십시오."
+"Steam_PayPalWaiting"				"%provider% 웹사이트에 연결되었습니다. 로그인을 하거나 계정을 만들어 구매 세부 사항을 확인한 후 승인하세요."
 "Steam_PayPalNotAcceptedInGermany"	"현재 독일에서는 PayPal이 인정되지 않습니다. 다른 결제 수단을 선택하세요."
 
 "Steam_CancelPurchase_Title"			"구매 - %subscription%"
@@ -468,7 +468,7 @@
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - 오류"
 "Steam_ErrorFilesystemNotExecutable"		"선택한 파일 시스템은 파일 실행을 허용하지 않습니다.\n시작 옵션과 함께 다시 마운트한 다음 다시 시도하세요."
 "Steam_ErrorNotEnoughDiskSpace_Title"		"Steam - 오류"
-"Steam_ErrorNotEnoughDiskSpace"				"디스크 공간이 부족하여 게임을 실행할 수 없습니다.\n디스크 공간을 확보한 다음 다시 시도하십시오."
+"Steam_ErrorNotEnoughDiskSpace"				"디스크 공간이 부족하여 게임을 실행할 수 없습니다.\n디스크 공간을 확보한 다음 다시 시도하세요."
 "Steam_DeleteApplicationConfirmation_Title"	"애플리케이션 파일을 삭제하시겠습니까?"
 "Steam_DeleteApplicationConfirmation_Text"	"이 컴퓨터에서 %s1 애플리케이션의\n모든 콘텐츠를 삭제합니다.\n\n애플리케이션은 소프트웨어 라이브러리에 계속 남아있지만,\n나중에 이를 플레이하려면 콘텐츠를 다시 다운로드해야 합니다."
 "Steam_DeleteCacheConfirmation_Title"		"게임 파일을 삭제하시겠습니까?"
@@ -495,7 +495,7 @@
 "Steam_ReAddToMyGames_Info"			"%s1 프로그램은 %s2 MB의 디스크 공간을 사용하게 됩니다.\nSteam은 이제 콘텐츠를 다운로드하거나\n설치된 기존 게임을 변환할 것입니다."
 
 "Steam_ConversionNotEnoughDiskSpace_Title"	"Steam - 디스크 공간 부족"
-"Steam_ConversionNotEnoughDiskSpace_Info"	"선택한 게임을 설치할 디스크 공간이 부족합니다.\n디스크 공간을 확보하거나, '뒤로'를 누른 다음 일부 항목을 선택 해제해 주십시오."
+"Steam_ConversionNotEnoughDiskSpace_Info"	"선택한 게임을 설치할 디스크 공간이 부족합니다.\n디스크 공간을 확보하거나, '뒤로'를 누른 다음 일부 항목을 선택 해제해 주세요."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"선택한 게임을 Steam용으로 변환하는 데 필요한 디스크 공간이 부족합니다.\n디스크에서 %s1MB를 확보한 다음 다시 시도해 주세요."
 "Steam_Interface"				"인터페이스"
 "Steam_EnableGPUWebViews_Option"		"웹 보기에서 GPU 가속 렌더링 사용(다시 시작 시 적용)"
@@ -504,15 +504,15 @@
 "Steam_ShowOnlineStatusOptions"	"표시할 온라인 옵션을 선택하세요."
 "Steam_ShowDestinationOptions"	"표시할 메뉴를 선택하세요."
 "Steam_MustRestartToTakeEffect"			"변경한 설정은 Steam을 재시작할 때\n적용됩니다."
-"Steam_LanguageSelect"				"Steam에서 사용할 언어를 선택하십시오(Steam을 다시 시작해야 합니다.)."
+"Steam_LanguageSelect"				"Steam에서 사용할 언어를 선택하세요(Steam을 다시 시작해야 합니다.)."
 "Steam_SteamChinaLanguageSelect"	"중국어 간체로만 Steam을 사용할 수 있습니다"
-"Steam_SelectSkinToUse"				"Steam에서 사용할 스킨을 선택하십시오(Steam을 다시 시작해야 합니다.)."
+"Steam_SelectSkinToUse"				"Steam에서 사용할 스킨을 선택하세요(Steam을 다시 시작해야 합니다.)."
 "Steam_CreateShortcut_Title"			"Steam - 바로 가기 만들기"
 "Steam_CreateShortcut_Info"			"바탕 화면에 바로 가기가 만들어졌습니다."
 "Steam_CreateShortcut_FailedInfo"		"바로 가기를 만들 수 없습니다.\n이 게임의 바로 가기가 이미 바탕 화면에 있는 것 같습니다."
 "Steam_CDKeyLabel"				"제품 코드"
 "Steam_GetCDKeyError_Title"			"Steam - 유효하지 않은 제품 코드"
-"Steam_GetCDKeyError_Info"			"입력한 제품 코드가 올바르지 않습니다.\n\n키를 잘못 입력하지 않았는지 확인하십시오. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다.\n자세한 도움말은 http://www.steampowered.com을 참조하십시오."
+"Steam_GetCDKeyError_Info"			"입력한 제품 코드가 올바르지 않습니다.\n\n키를 잘못 입력하지 않았는지 확인하세요. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다.\n자세한 도움말은 http://www.steampowered.com을 참조하세요."
 "Steam_PasswordRequiredToContinue_Title"	"Steam - 비밀번호 입력"
 "Steam_PasswordRequiredToContinue"		"계속하려면 Steam 비밀번호를 입력해야 합니다."
 "Steam_InvalidPassword_Title"			"Steam - 오류"
@@ -534,10 +534,10 @@
 "Steam_ChangePasswordConfirmNewPassword"	"새 비밀번호를 다시 입력하세요."
 "Steam_ChangePasswordMismatchedNewPasswords"	"죄송합니다. 입력하신 두 비밀번호가 일치하지 않습니다. 원하는 비밀번호를 다시 입력하세요."
 "Steam_ChangePasswordPasswordNotNew"	"현재 비밀번호가 입력하신 새 비밀번호와 동일합니다.\n원하는 비밀번호를 다시 입력하세요."
-"Steam_ChangePasswordFailed"			"비밀번호를 변경하지 못했습니다.\n기존 비밀번호를 올바르게 입력했는지 확인하십시오."
+"Steam_ChangePasswordFailed"			"비밀번호를 변경하지 못했습니다.\n기존 비밀번호를 올바르게 입력했는지 확인하세요."
 "Steam_ChangePasswordFailedTwoFactorMismatch"	"암호 변경에 실패했습니다.\nSteam Guard 인증 코드를 정확히 입력하셨는지 확인해보세요."
 "Steam_ChangePasswordFailedSmsFailed"			"암호 변경에 실패했습니다.\nSMS 코드를 정확히 입력하셨는지 확인해보세요."
-"Steam_ChangePasswordSuccessful"		"비밀번호가 변경되었습니다.\nSteam에 로그인할 때마다 새 비밀번호를 사용하십시오."
+"Steam_ChangePasswordSuccessful"		"비밀번호가 변경되었습니다.\nSteam에 로그인할 때마다 새 비밀번호를 사용하세요."
 "Steam_ForceChangePassword"				"고객님의 계정에 새로운 비밀번호가 필요합니다. 현재 비밀번호가 Steam의 복잡성 요구 사항을 더 이상 충족하지 못하거나, Steam 고객지원을 통해 분실되었거나 해킹된 계정을 찾아서 임시 비밀번호를 발급받은 경우 새로운 비밀번호가 필요합니다.\n\n새로운 비밀번호를 설정하는 과정을 안내해드립니다."
 "Steam_ChangePasswordFailedIllegal"		"비밀번호를 변경하는 데 실패했습니다.\n입력하신 비밀번호는 비밀번호 규칙에 맞지 않습니다. 다른 비밀번호를 입력해주세요."
 "Steam_ChangePasswordFailedReuse"		"비밀번호를 변경하는 데 실패했습니다.\n기존 비밀번호를 다시 사용하면 안됩니다. 다른 비밀번호를 입력해주세요."
@@ -554,24 +554,24 @@
 "Steam_ChangeBeta_Button"		"베타 변경"
 
 "Steam_CSConnectionLost_Title"	"Steam - 연결이 끊어짐"
-"Steam_CSConnectionLost_Info"	"Steam 콘텐츠 서버와의 연결이 끊어져서 \nSteam을 실행할 수 없습니다.\n인터넷 연결이 문제일 수도 있고 Steam 서버 자체의 문제일 수도 \n있습니다. 자세한 정보는 www.steampowered.com을 참조하십시오."
+"Steam_CSConnectionLost_Info"	"Steam 콘텐츠 서버와의 연결이 끊어져서 \nSteam을 실행할 수 없습니다.\n인터넷 연결이 문제일 수도 있고 Steam 서버 자체의 문제일 수도 \n있습니다. 자세한 정보는 www.steampowered.com을 참조하세요."
 "Steam_CSConnectionLost_Button"	"Steam 끝내기"
 
-"Steam_ErrorCouldNotConnect" 	"Steam 네트워크에 접속할 수 없습니다.\n현재 Steam 네트워크가 작동하고 있지 않거나 인터넷 연결에 문제가\n있는 것 같습니다. 자세한 정보는 www.steampowered.com을 참조하십시오."
+"Steam_ErrorCouldNotConnect" 	"Steam 네트워크에 접속할 수 없습니다.\n현재 Steam 네트워크가 작동하고 있지 않거나 인터넷 연결에 문제가\n있는 것 같습니다. 자세한 정보는 www.steampowered.com을 참조하세요."
 
 "steam_preload_title"			"%game% 미리받기"
 "steam_preloading_title"		"%game% 미리받는 중 (%preload_amount%%% 완료)"
 "steam_sellpage_title"			"%subscription%"
 
 "Steam_GamesDialog_ComingSoon"	"출시 예정 게임"
-"Steam_ErrorEnteredEmailMismatch"	"메일 주소가 일치하지 않습니다.\n메일 주소와 확인 메일 주소가 같은지 확인하십시오."
+"Steam_ErrorEnteredEmailMismatch"	"메일 주소가 일치하지 않습니다.\n메일 주소와 확인 메일 주소가 같은지 확인하세요."
 "Steam_ReenterEmailAddress"		"메일 주소 확인"
 "Steam_PurchaseProgress_Title"		"Steam - 작동 중"
 "Steam_PurchaseProgress_Info"		"Steam에 키를 등록하는 중..."
 
-"Steam_PurchaseFailedBadCDKey"		"Steam에서 CD 키를 등록할 수 없습니다.\n\n제품 CD 키가 이미 데이터베이스에 등록되어 사용 중인 CD 키와 일치하거나 유효하지 않은 CD 키입니다. 키를 잘못 입력하지 않았는지 확인하십시오. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다."
+"Steam_PurchaseFailedBadCDKey"		"Steam에서 CD 키를 등록할 수 없습니다.\n\n제품 CD 키가 이미 데이터베이스에 등록되어 사용 중인 CD 키와 일치하거나 유효하지 않은 CD 키입니다. 키를 잘못 입력하지 않았는지 확인하세요. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다."
 
-"Steam_PleaseVisitSupportPage"		"추가 도움말 또는 제품 지원은 다음 사이트를 방문하십시오."
+"Steam_PleaseVisitSupportPage"		"추가 도움말 또는 제품 지원은 다음 사이트를 방문하세요."
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
 "Steam_PurchaseCDKeySuccess"		"축하합니다! %subscription% 복사본이 %account% 계정에 성공적으로 등록되었습니다.\n\n%game% 게임을 실행하려면 이 계정으로 Steam에 로그인해야 합니다."
 "Steam_PurchaseAccount"			"%account%"
@@ -594,7 +594,7 @@
 "Steam_PreloadCancel"		"미리받기 취소를 선택하셨습니다. 취소하실 경우 지금까지 다운로드한 데이터가 모두 삭제됩니다.\n\n계속하시려면 \"확인\"을 선택하시고, 데이터를 보존하려면 \"취소\"를 클릭하세요."
 "Steam_CancelPreloading"		"미리받기 취소"
 "Steam_PreloadProgressNotes"	"%game% 게임을 컴퓨터에 미리받고 있습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
-"Steam_PreloadProgressNotesPayed"	"%game% 게임을 컴퓨터로 미리받고 있습니다.\n\n잠시 기다려 주십시오. 미리받기 작업은 오래 걸릴 수 있습니다."
+"Steam_PreloadProgressNotesPayed"	"%game% 게임을 컴퓨터로 미리받고 있습니다.\n\n잠시 기다려 주세요. 미리받기 작업은 오래 걸릴 수 있습니다."
 "Steam_PreloadProgressNotesStart"	"%game% 게임을 컴퓨터로 미리받을 준비가 되었습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
 "Steam_PreloadProgressNotesStartPayed"	"%game% 게임을 컴퓨터로 미리받을 준비가 되었습니다."
 
@@ -637,7 +637,7 @@
 
 "Steam_ChangeCred_ClickNext"		"비밀번호를 변경하려면 '다음'을 클릭하세요."
 "Steam_ChangeCred_EmailCodeForPassword"		"비밀번호 업데이트 절차를 시작하려면 '다음'을 클릭하세요. 확인 코드가 포함된 이메일이 다음 계정으로 발송됩니다."
-"Steam_ChangeCred_EmailCodeForEmail"		"연락 메일 주소 업데이트 절차를 시작하려면 '다음'을 클릭하십시오. 확인 코드가 포함된 메일 메시지가 %s1 계정으로 발송됩니다."
+"Steam_ChangeCred_EmailCodeForEmail"		"연락 메일 주소 업데이트 절차를 시작하려면 '다음'을 클릭하세요. 확인 코드가 포함된 메일 메시지가 %s1 계정으로 발송됩니다."
 "Steam_ChangeCred_EmailProgress"	"Steam 서버에 접속하여 다음 계정으로 확인 메시지를 발송합니다."
 "Steam_ChangeCred_ForgotPassword"	"비밀번호를 잊어버리셨나요?"
 "Steam_ChangeCred_LostEmail"		"이메일을 사용할 수 없나요?"
@@ -647,24 +647,24 @@
 "Steam_ChangeCred_EnterTwoFactorCode"		"Steam Guard 모바일 인증기에서 코드를 입력하세요."
 "Steam_ChangeCred_EnterPassword"		"기존 비밀번호 입력"
 "Steam_ChangeCred_IncorrectPassword"		"비밀번호가 잘못되었습니다. 비밀번호를 입력하세요."
-"Steam_ChangeCred_IncorrectVerificationCode"			"비밀번호를 변경하지 못했습니다.\n확인 코드를 올바로 입력했는지 확인하십시오."
+"Steam_ChangeCred_IncorrectVerificationCode"			"비밀번호를 변경하지 못했습니다.\n확인 코드를 올바로 입력했는지 확인하세요."
 
-"Steam_ChangeEmail_IncorrectVerificationCode"		"연락 메일을 변경하지 못했습니다.\n인증 코드를 올바로 입력했는지 확인하십시오."
-"Steam_ChangeEmail_IncorrectTwoFactorCode"		"연락 메일을 변경하지 못했습니다.\nSteam Guard 모바일 인증기 코드를 올바로 입력했는지 확인하십시오."
+"Steam_ChangeEmail_IncorrectVerificationCode"		"연락 메일을 변경하지 못했습니다.\n인증 코드를 올바로 입력했는지 확인하세요."
+"Steam_ChangeEmail_IncorrectTwoFactorCode"		"연락 메일을 변경하지 못했습니다.\nSteam Guard 모바일 인증기 코드를 올바로 입력했는지 확인하세요."
 "Steam_ChangeEmail_EnterSMSCode"	"더 나은 보안을 위해, 귀하의 계정에 등록된 전화번호로 문자 메세지가 발송되었습니다. 코드를 입력하세요:"
 
 "Steam_ChangeContactEmailError_Title"			"메일 인증 오류"
 "Steam_ChangeContactEmailError_MismatchedEmails"	"죄송합니다. 입력하신 두 주소가 일치하지 않습니다.\n원하는 연락 메일 주소를 다시 입력하세요."
-"Steam_ChangeContactEmailError_InvalidEmail"		"입력하신 메일 주소가 유효한 주소 \n형식이 아닙니다. 다시 시도하십시오."
-"Steam_ChangeContactEmailError_SteamNotAvailable"	"Steam은 현재 요청을 처리할 수 없습니다. 나중에 다시 시도하십시오."
-"Steam_ChangeContactEmailError_SteamNotAvailable2"	"Steam이 현재 요청을 처리할 수 없습니다.\n나중에 다시 시도하십시오."
+"Steam_ChangeContactEmailError_InvalidEmail"		"입력하신 메일 주소가 유효한 주소 \n형식이 아닙니다. 다시 시도하세요."
+"Steam_ChangeContactEmailError_SteamNotAvailable"	"Steam은 현재 요청을 처리할 수 없습니다. 나중에 다시 시도하세요."
+"Steam_ChangeContactEmailError_SteamNotAvailable2"	"Steam이 현재 요청을 처리할 수 없습니다.\n나중에 다시 시도하세요."
 "Steam_ProductUnavailableForPurchase"			"현재 이 제품을 다운로드하거나 구매할 수 없습니다."
 "Steam_ChangeContactEmailError_SameEmail"	"입력하신 주소가 현재 연락 메일 주소와\n동일합니다. 이를 변경하려면  새 주소를\n입력하세요."
 
-"Steam_RequestingEmailVerificationFailed" "메일 인증을 요청할 수 없습니다. 나중에 다시 시도하십시오."
+"Steam_RequestingEmailVerificationFailed" "메일 인증을 요청할 수 없습니다. 나중에 다시 시도하세요."
 "SteamUI_CreateAccount_TheName" "이 이름은"
 "SteamUI_CreateAccount_AlreadyTaken" "이미 다른 Steam 사용자가 쓰고 있습니다."
-"SteamUI_CreateAccount_DifferentNames" "다른 이름을 사용하려면 '뒤로'를 클릭하거나 \n아래 제안된 이름 하나를 선택하고 '다음'을 클릭하십시오."
+"SteamUI_CreateAccount_DifferentNames" "다른 이름을 사용하려면 '뒤로'를 클릭하거나 \n아래 제안된 이름 하나를 선택하고 '다음'을 클릭하세요."
 "SteamUI_CreateAccount_SuggestedNames" "제안하는 계정 이름:"
 "SteamUI_CreateAccount_Names" "이름"
 "Steam_ForgottenPassword_MarketRestriction" "참고: 비밀번호를 초기화하면, 일시적으로 거래 및 장터 이용이 제한됩니다."
@@ -691,13 +691,13 @@
 
 
 "Steam_PurchaseEmail_Add" "현재"
-"Steam_PurchaseEmail_MyGames" "게임을 라이브러리에 추가하도록 선택했습니다. 계속하려면 '다음'을 클릭하십시오."
+"Steam_PurchaseEmail_MyGames" "게임을 라이브러리에 추가하도록 선택했습니다. 계속하려면 '다음'을 클릭하세요."
 "Steam_PurchaseEmail_EnterCurrentAddress" "귀하는 아직 메일 주소를 Steam에 등록하지 않으셨습니다.\n아래 칸에 현재 사용 중인 메일 주소를 입력하세요."
 "Steam_PurchaseEmail_ContactEmail" "연락 메일 주소"
 "Steam_PurchaseEmail_ValidationCode" "인증 코드"
 "Steam_PurchaseEmail_Confirmation" "다음 주소로 확인 메일 발송됨:"
 "Steam_PurchaseEmail_Response" "Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다.\n\n이 코드를 복사하고 아래 칸에 붙여넣으십시오."
-"Steam_PurchaseEmail_BadCode" "이 코드는 Steam이 보유한 코드와 일치하지 않습니다. \n코드를 정확하게 입력했는지 \n확인하십시오. 제목이 \"Steam account - Please \nverify your email address\"인 메일에 코드가 포함되어 발송되었습니다. \n메일 주소를 확인해 주십시오. 코드는 8문자로 구성되어 있습니다. \n\n코드를 다시 입력하거나 다른 메일 주소를 \n입력하려면 '뒤로'를 클릭하십시오."
+"Steam_PurchaseEmail_BadCode" "이 코드는 Steam이 보유한 코드와 일치하지 않습니다. \n코드를 정확하게 입력했는지 \n확인하세요. 제목이 \"Steam account - Please \nverify your email address\"인 메일에 코드가 포함되어 발송되었습니다. \n메일 주소를 확인해 주세요. 코드는 8문자로 구성되어 있습니다. \n\n코드를 다시 입력하거나 다른 메일 주소를 \n입력하려면 '뒤로'를 클릭하세요."
 "Steam_PurchaseEmail_Code" "입력된 인증 코드"
 
 "Steam_Logout_Exit" 	"끝내기 및 로그아웃"
@@ -705,7 +705,7 @@
 "Steam_Logout_ExitOff" "이런 방법으로 Steam을 끝내면 다음에 Steam을 시작할 때\n'오프라인 모드'를 사용할 수 있습니다."
 "Steam_Logout_PersonalInfo" "사용자의 개인 정보 중 일부가 이 컴퓨터에 \n저장됩니다. 공용 컴퓨터를 사용하고 있는\n경우 보다 안전한 '끝내기 및 로그아웃'\n옵션을 사용하는 것이 좋습니다."
 "Steam_Logout_Secure" "'끝내기 및 로그아웃'은 Steam을 종료하는 \n가장 안전한 방법입니다(공용 컴퓨터인 경우 \n권장). 그러나 이럴 경우'오프라인 모드'를 \n사용하려면 다시 Steam에 로그인해야 합니다."
-"Steam_Logout_AllowOffline" "다음에 Steam을 시작할 때 '오프라인 모드'를 \n사용하려면 '취소'를 클릭하고 Steam 메뉴에서 \n'끝내기'를 선택하십시오."
+"Steam_Logout_AllowOffline" "다음에 Steam을 시작할 때 '오프라인 모드'를 \n사용하려면 '취소'를 클릭하고 Steam 메뉴에서 \n'끝내기'를 선택하세요."
 "Steam_Logout_Title" "끝내기"
 "Steam_Logout_TitleLogout" "끝내기 및 로그아웃"
 "Steam_OptionsForAdvancedUsersOnly"		"이 옵션은 고급 사용자만 사용할 수 있습니다."
@@ -716,7 +716,7 @@
 "SteamUI_OfflineMode_AppearOffline" "현재 인터넷에 연결되어 있지 않거나\n인터넷 연결이 Steam 사용에 적합하게\n구성되어 있지 않습니다."
 "SteamUI_OfflineMode_SteamOffline" "현재 Steam을 사용할 수 없습니다.\n\n\n'재시도'를 클릭해 다시 시도하거나 '오프라인 모드'로 Steam을 시작해주세요.\n"
 "SteamUI_OfflineMode_ChosenOffline" "Steam이 현재 오프라인 모드로 설정되었습니다. 오프라인에서는 친구 및 서버 브라우저와 같은 다양한 기능을 이용할 수 없습니다."
-"SteamUI_OfflineMode_Choose" "연결을 확인하고 '재시도'를 클릭하거나\nSteam을 '오프라인 모드'로 시작하십시오."
+"SteamUI_OfflineMode_Choose" "연결을 확인하고 '재시도'를 클릭하거나\nSteam을 '오프라인 모드'로 시작하세요."
 "SteamUI_OfflineMode_ChooseConnectionOnly" "네트워크 연결 상태를 확인하고 '재시도'를 클릭하세요."
 "SteamUI_OfflineMode_GoOnlineButton" "온라인으로 전환"
 "SteamUI_OfflineMode_Retry" "재시도"
@@ -847,7 +847,7 @@
 
 "SteamUI_ValveSurvey_PrivacyButton"							"Valve 개인정보 보호정책 보기"
 
-"SteamUI_ValveSurvey_InternetLabel"							"본 설문 조사에 응해 주셔서 대단히 감사합니다.\n\n가장 먼저 필요한 정보는 귀하의 인터넷 연결 속도입니다. 아래 선택 항목 중에서 귀하의 속도를 선택하십시오.\n\n인터넷 연결 속도:"
+"SteamUI_ValveSurvey_InternetLabel"							"본 설문 조사에 응해 주셔서 대단히 감사합니다.\n\n가장 먼저 필요한 정보는 귀하의 인터넷 연결 속도입니다. 아래 선택 항목 중에서 귀하의 속도를 선택하세요.\n\n인터넷 연결 속도:"
 "SteamUI_ValveSurvey_InternetDontKnow"						"모름"
 
 "SteamUI_ValveSurvey_SummaryLabel"							"본 설문 조사는 귀하의 컴퓨터에서 진단 정보 일부를 수집했으며, 수집된 정보는 다음과 같습니다.\n\n('다음' 버튼을 클릭하면 이 정보가 Valve로 전송됩니다.)"
@@ -1081,9 +1081,9 @@
 "SteamUI_ValveSurvey_Summary_NoIP"		"IP 주소 없음"
 "SteamUI_ValveSurvey_Summary_NetworkSpeed"	"네트워크 속도:  %s1"
 "SteamUI_ValveSurvey_Summary_UploadFailed"	"업로드 실패"
-"SteamUI_ValveSurvey_Summary_UploadFailedText"	"귀하의 데이터를 전송받지 못했습니다.  나중에 다시 시도하십시오."
+"SteamUI_ValveSurvey_Summary_UploadFailedText"	"귀하의 데이터를 전송받지 못했습니다.  나중에 다시 시도하세요."
 "SteamUI_ValveSurvey_Summary_UploadProgress"	"업로드 진행율:"
-"SteamUI_ValveSurvey_Summary_NoCSERServers"	"현재 통계 표시 서버를 찾을 수 없습니다.  나중에 다시 시도하십시오."
+"SteamUI_ValveSurvey_Summary_NoCSERServers"	"현재 통계 표시 서버를 찾을 수 없습니다.  나중에 다시 시도하세요."
 
 "Steam_UnableToPreload_NotSubscribed" "사용자가 가입되어 있지 않아 이 응용 프로그램을 미리받을 수 없습니다."
 
@@ -1126,24 +1126,24 @@
 "SteamUI_CZ_InitialPage" "steam/html/condition-zero_preorder_korean.html"
 "SteamUI_CZ_PreloadPage" "steam/html/condition-zero_preloaded_korean.html"
 
-"Steam_PackageChoice"        "%game%는 서로 다른 두 가지 패키지 중에서 선택할 수 있습니다. 주문할 패키지를 선택하십시오."
+"Steam_PackageChoice"        "%game%는 서로 다른 두 가지 패키지 중에서 선택할 수 있습니다. 주문할 패키지를 선택하세요."
 "Steam_PackageIncludes"       "포함 내용:"
 
 "Steam_CreditCardEncrypted"	"신용카드 정보가 전송되고 처리되는 동안 암호화됩니다."
 
 "SteamUI_AccountNameInUse" "계정을 만들지 못했습니다.\n계정 이름이 이미 사용 중입니다.\n다른 계정 이름으로 다시 시도해 보십시오."
 "Steam_ErrorValidEmailRequired" "유효한 메일 주소를 입력해야 합니다."
-"Steam_ForgottenPassword_CouldNotFindEmail" "계정을 찾을 수 없습니다.\nSteam에 로그인할 때 사용하는 계정 이름을 입력해 주십시오."
+"Steam_ForgottenPassword_CouldNotFindEmail" "계정을 찾을 수 없습니다.\nSteam에 로그인할 때 사용하는 계정 이름을 입력해 주세요."
 "SteamUI_CreateAccountFailedPasswordIllegal" "계정 생성에 실패하였습니다.\n입력하신 비밀번호는 안정성 요구치를 충족하지 않습니다. 다른 비밀번호로 시도해보십시오."
 
 "SteamUI_ChosenCreateNewAccountHeadline" "Steam 계정은 매우 중요합니다!"
 "SteamUI_ChosenCreateNewAccount" "사용자 이름과 비밀번호는 게임을 시작하기 위해 로그인할 때 필요하므로 반드시 기억하고 있어야 합니다. 사용 중인 컴퓨터에 Steam이 게임을 다운로드합니다."
-"SteamUI_ForMoreInformation" "자세한 내용은 다음 사이트를 방문해 주십시오."
+"SteamUI_ForMoreInformation" "자세한 내용은 다음 사이트를 방문해 주세요."
 
 "SteamUI_ChosenCreateMultipleHeadline" "Steam 계정에 관한 중요한 정보"
 "SteamUI_ChosenCreateDuplicate" "계정이 없는 경우에만 새 Steam 계정을 만드십시오. 이미 Steam 계정이 있는 경우 가입된 모든 게임은 해당 계정으로 로그인해야만 플레이할 수 있습니다. \n\nSteam 계정이 없는 경우 \"다음\"을 누르십시오."
 
-"SteamUI_CCWarning_Duplicate"	"이 구매 요청을 전송하기 전에:\n\n현재 구매 요청에는 이미 전송된 구매 요청과 똑같은(또는 매우 유사한) 정보가 포함되어 있습니다. 신용카드에 문제가 없는 상태에서 거절되었다고 확신한 경우에만 구매 요청을 다시 시도하십시오.\n\n중요: 해당 신용카드 업체가 구매 요청을 거부한 경우 일정 시간 동안 신용카드를 사용할 수 없게 될 수도 있습니다."
+"SteamUI_CCWarning_Duplicate"	"이 구매 요청을 전송하기 전에:\n\n현재 구매 요청에는 이미 전송된 구매 요청과 똑같은(또는 매우 유사한) 정보가 포함되어 있습니다. 신용카드에 문제가 없는 상태에서 거절되었다고 확신한 경우에만 구매 요청을 다시 시도하세요.\n\n중요: 해당 신용카드 업체가 구매 요청을 거부한 경우 일정 시간 동안 신용카드를 사용할 수 없게 될 수도 있습니다."
 "SteamUI_CCWarning" "Steam - 주의"
 
 "SteamUI_ForgottenPasswordResetType" "Steam 계정의 로그인 정보를 검색하려면 계정 이름부터 알아야 합니다."
@@ -1162,7 +1162,7 @@
 "SteamUI_ForgottenPasswordOtherText" "계정 정보를 검색하려면 연락 메일 주소 또는 계정을 등록할 때 사용한 제품 코드가 필요합니다."
 "SteamUI_ForgottenPasswordSentEmailEmail" "Steam 계정 이름이 포함된 메일이 발송되었습니다.\n\n메일을 수신하면 \"분실된 계정 찾기\" 버튼을 클릭하여 사용자의 비밀번호를 초기화할 수 있습니다."
 "SteamUI_ForgottenPasswordSentEmailCDKey" "입력한 제품 코드의 소유자에게 메일이 발송되었습니다. 계정 이름을 받으면 \"분실된 계정 찾기\" 버튼을 사용하여 사용자의 비밀번호를 초기화할 수 있습니다."
-"Steam_ForgottenPassword_RequestFailed" "실패했습니다. 다시 시도하십시오."
+"Steam_ForgottenPassword_RequestFailed" "실패했습니다. 다시 시도하세요."
 
 "Steam_CreateNewAccount_EmailAddrAlreadyInUse" "이 연락 메일 주소로 등록된 Steam 계정이 이미 있습니다. 이전에 Steam 계정을 만든 경우 새로 만들지 않고 기존 계정을 사용해야 합니다."
 
@@ -1175,7 +1175,7 @@
 "SteamUI_GamesDialog_RightClick_Manual" "플레이어 매뉴얼 보기"
 
 "Steam_SubscriptionCancelled_Title"	"Steam - 구매 오류"
-"Steam_TroubleshooterLink" "자세한 내용은 Steam 고객지원 사이트를 참조하십시오."
+"Steam_TroubleshooterLink" "자세한 내용은 Steam 고객지원 사이트를 참조하세요."
 "Steam_SubscriptionPrintConfirmation" "예약 주문 인쇄 "
 "Steam_SubscriptionPrintReceipt" "영수증 인쇄"
 "Steam_SubscriptionCardHolder" "카드 소유자"
@@ -1199,14 +1199,14 @@
 "Steam_Subscription_RateLimitedCDKey" "최근 이 계정 또는 인터넷 주소에서 제품 코드를 등록하려는 시도가 너무 잦았습니다. 잠시 기다렸다가 나중에 다시 시도해 주세요."
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "유효하지 않은 제품 코드"
-"Steam_SubscriptionCancelled_InvalidCDKey" "입력한 제품 코드가 올바르지 않습니다.\n\n키를 잘못 입력하지 않았는지 확인하십시오. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다."
+"Steam_SubscriptionCancelled_InvalidCDKey" "입력한 제품 코드가 올바르지 않습니다.\n\n키를 잘못 입력하지 않았는지 확인하세요. I, L, 1은 유사하게 보일 수 있으며, V와 Y, 그리고 0과 O도 마찬가지입니다."
 "Steam_SubscriptionCancelled_InvalidCDKey2" "Steam 지갑 코드나 기프트 카드를 등록하려면, 여기를 클릭해 Steam 상점에 등록하세요."
 
-"Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp_Headline" "먼저 원래 게임을 활성화하십시오."
-"Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "입력하신 제품 코드를 활성화하려면 먼저 다른 제품의 소유권이 필요합니다.\n\n확장팩 또는 다운로드할 수 있는 콘텐츠를 활성화하려는 경우에는 먼저 원래 게임을 활성화한 다음 이러한 추가 콘텐츠를 활성화하십시오."
+"Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp_Headline" "먼저 원래 게임을 활성화하세요."
+"Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "입력하신 제품 코드를 활성화하려면 먼저 다른 제품의 소유권이 필요합니다.\n\n확장팩 또는 다운로드할 수 있는 콘텐츠를 활성화하려는 경우에는 먼저 원래 게임을 활성화한 다음 이러한 추가 콘텐츠를 활성화하세요."
 
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3_Headline" "귀하는 %gamename% 게임을 아직 PlayStation®3 시스템에서 플레이하지 않으셨습니다."
-"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "귀하께서 입력하신 %gamename% 게임의 제품 코드는 이 게임을 PlayStation®3 시스템에서 한 번이라도 먼저 실행하셔야 Steam에 등록이 가능합니다.\n\n다음을 따라 주십시오.\n\n-귀하의 PlayStation®3 시스템에서 %gamename% 게임을 실행하십시오.\n\n- 귀하의 Steam 계정을 PlayStation®3 Network 계정과 연동하십시오.\n\n- PlayStation®3 시스템에서 %gamename% 게임을 실행한 상태에서 Steam에 접속하십시오.\n\n- Steam에 제품 코드를 다시 한 번 등록하십시오."
+"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "귀하께서 입력하신 %gamename% 게임의 제품 코드는 이 게임을 PlayStation®3 시스템에서 한 번이라도 먼저 실행하셔야 Steam에 등록이 가능합니다.\n\n다음을 따라 주세요.\n\n-귀하의 PlayStation®3 시스템에서 %gamename% 게임을 실행하세요.\n\n- 귀하의 Steam 계정을 PlayStation®3 Network 계정과 연동하세요.\n\n- PlayStation®3 시스템에서 %gamename% 게임을 실행한 상태에서 Steam에 접속하세요.\n\n- Steam에 제품 코드를 다시 한 번 등록하세요."
 
 "Steam_SubscriptionSuccess_Headline" "감사합니다. 거래가 완료되었습니다."
 "Steam_SubscriptionSuccess$purchasetype=regular" "%subscription%에 대한 등록 절차가 완료되었습니다. %accountname% Steam 계정으로 등록되었습니다. 게임을 플레이하려면 이 계정으로 로그인해야 합니다. 주문해 주셔서 감사합니다!"
@@ -1214,7 +1214,7 @@
 "Steam_SubscriptionSuccess$purchasetype=unknown" "%subscription% 구매가 성공적으로 완료되었습니다. 주문해 주셔서 감사합니다!"
 
 "Steam_SubscriptionCancelled_PaymentCardDeclined_Headline" "신용카드 거부"
-"Steam_SubscriptionCancelled_PaymentCardDeclined" "%subscription%에 대한 가입 절차가 완료되지 않았습니다. 사용자의 신용카드 정보가 해당 신용카드 업체에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지는 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하십시오."
+"Steam_SubscriptionCancelled_PaymentCardDeclined" "%subscription%에 대한 가입 절차가 완료되지 않았습니다. 사용자의 신용카드 정보가 해당 신용카드 업체에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지는 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 
 "Steam_SubscriptionSuccess_Preorder_Headline" "주문 완료 - 신용카드 미청구"
 "Steam_SubscriptionSuccess_Preorder" "%subscription%에 대한 예약 주문이 성공적으로 완료되었습니다.\n게임이 공식적으로 출시될 때까지 결제는 처리되지 않습니다. 결제가 처리되면 영수증을 보내 드립니다. 주문해 주셔서 감사합니다!"
@@ -1223,7 +1223,7 @@
 "Steam_Subscription_Preorder_CcardSuccess" "최근에 %subscription% 게임을 예약 주문하셨습니다. 게임이 공식으로 출시되어 사용자의 신용카드가 처리되고 청구되었습니다. 주문해 주셔서 감사합니다!"
 
 "Steam_Subscription_Preorder_CcardDeclined_Headline" "예약 주문 - 신용카드 거부"
-"Steam_Subscription_Preorder_CcardDeclined" "최근에 %subscription%에 대한 예약 주문을 시도하셨습니다. 게임이 공식으로 출시되어 Steam은 사용자의 신용카드 정보를 처리했습니다.\n\n신용카드가 거부된 관계로 신용카드로 청구되지 않았습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하십시오."
+"Steam_Subscription_Preorder_CcardDeclined" "최근에 %subscription%에 대한 예약 주문을 시도하셨습니다. 게임이 공식으로 출시되어 Steam은 사용자의 신용카드 정보를 처리했습니다.\n\n신용카드가 거부된 관계로 신용카드로 청구되지 않았습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 
 "Steam_Subscription_Preorder_PreProcess_Headline" "귀하의 예약 주문이 처리되었습니다."
 "Steam_Subscription_Preorder_PreProcess" "%subscription%에 대한 예약 주문이 완료되었으며 게임은 빠른 시일 내에 공식적으로 출시됩니다. 결제가 처리되었습니다.\n\n게임이 출시되는 즉시 알려드리겠습니다. 주문해 주셔서 감사합니다!"
@@ -1238,10 +1238,10 @@
 "Steam_SubscriptionCancelled_Cancelled"	"사용자의 %subscription% 구독이 취소되었습니다. 이 조치는 Steam 계정 소유자의 요청 또는 Steam 이용 약관에 따라 Valve에 의해 수행되었습니다."
 
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "Steam 서버가 현재 혼잡합니다."
-"Steam_SubscriptionCancelled_ServerFailed" "%subscription%에 대한 가입 절차가 완료되지 않았습니다. Steam 서버는 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n불편을 드려 대단히 죄송합니다. 몇 시간 후에 다시 시도하십시오."
+"Steam_SubscriptionCancelled_ServerFailed" "%subscription%에 대한 가입 절차가 완료되지 않았습니다. Steam 서버는 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n불편을 드려 대단히 죄송합니다. 몇 시간 후에 다시 시도하세요."
 
 "Steam_Subscription_ContactSupport_Headline" "구매 오류"
-"Steam_Subscription_ContactSupport" "오류가 발생했습니다. %subscription%에 대한 가입 절차가 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하십시오."
+"Steam_Subscription_ContactSupport" "오류가 발생했습니다. %subscription%에 대한 가입 절차가 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하세요."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "구독 구매 보류 중"
 "Steam_SubscriptionFailure_Timeout" "%subscription%의 구독 구매가 완료되지 않았습니다. Steam은 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n그러나, 그 동안 %subscription% 게임을 실행할 수 있습니다. 거래가 처리되면 거래 결과를 바로 알려드리겠습니다."
@@ -1315,8 +1315,8 @@
 "Steam_GamesDialog_RightClick_UpdateNews"	"업데이트 뉴스 보기"
 
 "Steam_ContentServersBusy_Title"	"Steam - 오류"
-"Steam_ContentServersBusy_Info"		"Steam은 현재 요청을 처리하기에는 너무 혼잡합니다.\n몇 분 후에 다시 시도하십시오."
-"Steam_NoContentServers_Info"		"현재 이 게임 콘텐츠를 제공할 Steam 콘텐츠 서버가 구성되어 있지 않습니다.\n이 문제는 곧 해결됩니다. 몇 분 후에 다시 시도하십시오."
+"Steam_ContentServersBusy_Info"		"Steam은 현재 요청을 처리하기에는 너무 혼잡합니다.\n몇 분 후에 다시 시도하세요."
+"Steam_NoContentServers_Info"		"현재 이 게임 콘텐츠를 제공할 Steam 콘텐츠 서버가 구성되어 있지 않습니다.\n이 문제는 곧 해결됩니다. 몇 분 후에 다시 시도하세요."
 
 "Steam_UpdateNewsButton"		"업데이트 보기"
 
@@ -1363,7 +1363,7 @@
 "SteamUI_ProductRegistrationWizard_Title"	"제품 등록"
 "Steam_Install_AutoLaunchGame"		"지금 %game% 플레이하기"
 
-"Steam_UnableToPreload" "Steam은 현재 이 이상의 %game% 미리받기 요청을 처리하기에는 너무 혼잡합니다.\n몇 시간 후에 다시 시도하십시오."
+"Steam_UnableToPreload" "Steam은 현재 이 이상의 %game% 미리받기 요청을 처리하기에는 너무 혼잡합니다.\n몇 시간 후에 다시 시도하세요."
 "Steam_Error_Preload_Title" "미리받기 - 오류"
 "Steam_PreloadProgress"			"%preload_amount%%% 완료"
 
@@ -1375,7 +1375,7 @@
 
 "Steam_CacheDecryption_Title"		"Steam 파일 암호 해제 중 - %progress%%% 완료"
 "Steam_DecryptingSteamCaches"		"%cache_name% 게임 파일 암호 해제 중"
-"Steam_DecryptingSteamCaches_Label"	"Steam이 게임 파일의 잠금을 푸는 동안 잠시 기다려 주십시오."
+"Steam_DecryptingSteamCaches_Label"	"Steam이 게임 파일의 잠금을 푸는 동안 잠시 기다려 주세요."
 
 "SteamUI_Enable_Proprietary_Drivers_Title" "독점 드라이버 패키지 활성화"
 "SteamUI_Enable_Proprietary_Drivers_Info" "Steam은 최고의 성능을 위해 공급 업체에서 제공하는 독점 드라이버가 필요합니다. 시스템 설정에서 독점 드라이버 패키지를 활성화해 주세요."
@@ -1419,13 +1419,13 @@
 "SteamUI_VidDriverVersion"		"버전:"
 
 "SteamUI_DriverOutdated_Title"		"이전 버전의 동영상 드라이버"
-"SteamUI_DriverOutdated_Info"		"동영상 드라이버가 최신 버전이 아니므로 게임 실행을 계속할 경우 문제가 발생할 수 있습니다.  아래 링크로 이동하여 해당 드라이버 제조업체 페이지에서 최신 동영상 드라이버로 업그레이드하십시오."
+"SteamUI_DriverOutdated_Info"		"동영상 드라이버가 최신 버전이 아니므로 게임 실행을 계속할 경우 문제가 발생할 수 있습니다.  아래 링크로 이동하여 해당 드라이버 제조업체 페이지에서 최신 동영상 드라이버로 업그레이드하세요."
 "SteamUI_OutdatedUrlLabel"		"드라이버 업데이트 페이지로 가기..."
 "SteamUI_ContinueOutdated"		"계속 실행"
 "SteamUI_SuppressOutdated"		"이 경고 메시지를 다시 표시 안 함"
 
 "SteamUI_DriverUnsupported_Title"	"지원되지 않는 동영상 카드"
-"SteamUI_DriverUnsupported_Info"	"동영상 하드웨어는 게임이 설정한 최소 요구 사항을 충족하지 않습니다.  게임을 계속 실행할 경우 게임의 안정성 또는 성능에 문제가 발생할 수 있습니다.  아래 링크로 이동하여 해당 드라이버 제조업체 페이지에서 최신 동영상 드라이버로 업그레이드하십시오."
+"SteamUI_DriverUnsupported_Info"	"동영상 하드웨어는 게임이 설정한 최소 요구 사항을 충족하지 않습니다.  게임을 계속 실행할 경우 게임의 안정성 또는 성능에 문제가 발생할 수 있습니다.  아래 링크로 이동하여 해당 드라이버 제조업체 페이지에서 최신 동영상 드라이버로 업그레이드하세요."
 "SteamUI_DriverDenied_Info"		"동영상 하드웨어가 최소 사양에 미치지 못합니다. 이 게임은 이 하드웨어에서는 돌아가지 않습니다."
 "SteamUI_UnsupportedUrlLabel"		"최소 사양 보기..."
 "SteamUI_ContinueUnsupported"		"계속 실행"
@@ -1465,7 +1465,7 @@
 "SteamUI_PleaseInsertRetailCDRom_Info"	"드라이브에 %subscription% CD 또는 DVD를 넣으십시오."
 
 "Steam_ErrorPurchasePending_Title"	"Steam - 구매 대기 중"
-"Steam_ErrorPurchasePending_Info"	"구매 요청을 현재 처리 중입니다. - 거래가 완료되면 바로 결과를 알려드리겠습니다.\n처리되는 동안 이 게임을 플레이할 수 없다는 점을 유의하십시오."
+"Steam_ErrorPurchasePending_Info"	"구매 요청을 현재 처리 중입니다. - 거래가 완료되면 바로 결과를 알려드리겠습니다.\n처리되는 동안 이 게임을 플레이할 수 없다는 점을 유의하세요."
 "SteamUI_FSMode_ShortExplanation"	"Steam이 오프라인 모드로만 사용 가능"
 "SteamUI_FSMode_Explanation"		"Steam 네트워크는 현재 오프라인 모드만 지원합니다. 즉, 게임을 이용할 수는 있지만 대부분의 Steam 네트워크 서비스를 사용할 수 없습니다."
 "SteamUI_FSMode_Explanation2"		"Steam 팀은 모든 네트워크 서비스를 최대한 빠르게 복구하기 위해 최선을 다하고 있습니다. 불편을 드리게 되어 대단히 죄송합니다."
@@ -1474,7 +1474,7 @@
 
 "Steam_ShippingAddressSameAsBillingAddress_Check" "배송 주소가 청구지 주소와 동일합니다."
 "Steam_ShippingName"	"이름"
-"Steam_SubscribeShippingInfo"	"현재 배송 주소를 알려주십시오."
+"Steam_SubscribeShippingInfo"	"현재 배송 주소를 알려주세요."
 
 "Steam_ChangeUser" "다른 사용자로 로그인..."
 "Steam_NoSavePersonalInfoCheck" "이 컴퓨터에 계정 개인 정보 저장 안 함"
@@ -1518,10 +1518,10 @@
 "Steam_SubscriptionFailure_Timeout_CantPlay_Headline"	"구독 구매 보류 중"
 "Steam_SubscriptionFailure_Timeout_CantPlay"	"%subscription%의 구독 구매가 완료되지 않았습니다. 현재 Steam 서버가 거래를 처리할 수 없습니다.\n\n구독 구매가 완료되어야만 %subscription%(을)를 플레이할 수 있습니다. 불편을 끼쳐 죄송합니다. Steam 팀에서 이 상황을 해결하기 위해 노력하고 있으며 거래가 완료되는 대로 바로 알려드리겠습니다."
 
-"Steam_CannotStartSecondPurchase"	"이미 구매 절차가 진행 중이므로 다른 제품의 구매를 시작할 수 없습니다. 현재 진행 중인 구매를 완료 또는 취소하여 주십시오."
+"Steam_CannotStartSecondPurchase"	"이미 구매 절차가 진행 중이므로 다른 제품의 구매를 시작할 수 없습니다. 현재 진행 중인 구매를 완료 또는 취소하여 주세요."
 
-"SteamUI_PleaseInstallRetailFiles_Title"	"%subscription% 파일을 설치한 후에 계속 진행하십시오."
-"SteamUI_PleaseInstallRetailFiles_Info"		"계속하기 전에 %subscription% 파일을 설치해야 합니다.\n드라이브에 %subscription%의 CD/DVD를 넣은 후 자동 실행 메뉴에서 \"설치\"를 선택하십시오."
+"SteamUI_PleaseInstallRetailFiles_Title"	"%subscription% 파일을 설치한 후에 계속 진행하세요."
+"SteamUI_PleaseInstallRetailFiles_Info"		"계속하기 전에 %subscription% 파일을 설치해야 합니다.\n드라이브에 %subscription%의 CD/DVD를 넣은 후 자동 실행 메뉴에서 \"설치\"를 선택하세요."
 
 "Steam_PhoneNumber"		"전화 번호"
 
@@ -1541,7 +1541,7 @@
 "Steam_Legal_SSACheckbox"	"Steam 이용 약관 및 여기서 설명된 묶음의 조건은 본 구매 항목에 적용된다는 것에 동의합니다."
 "Steam_Legal_SSANext"	"동의"
 "Steam_Legal_SSADisagree"	"동의하지 않음"
-"SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하십시오."
+"SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하세요."
 "Steam_HardwarePromo_Intro" "축하합니다! 행사 대상 자격을 갖추셨군요. 제공되는 혜택은 단 하나의 Steam 계정에만 사용할 수 있으며, 어느 컴퓨터에서든 Steam 계정에 로그인하기만 하면 해당 게임을 플레이할 수 있습니다."
 "Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르십시오."
 "Steam_Working_HardwarePromo" "등록 요청..."
@@ -1569,7 +1569,7 @@
 
 "Steam_SelectRestoreDirectory_Title" 	"백업 파일 찾기"
 
-"Steam_ChooseBackupDirectory_Info"	"백업 파일을 만들 디렉토리를 선택하십시오."
+"Steam_ChooseBackupDirectory_Info"	"백업 파일을 만들 디렉토리를 선택하세요."
 "Steam_BackupDirectory"			"백업 위치"
 "Steam_ChangeDirectory"			"찾아보기..."
 "Steam_BackingUpFiles_Info"		"백업 아카이브를 압축하고 저장하는 동안 잠시 기다리십시오..."
@@ -1657,7 +1657,7 @@
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
-"SteamUI_SSA_Agree"				"이 약관를 처음부터 끝까지 숙독해 주십시오. 계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
+"SteamUI_SSA_Agree"				"이 약관를 처음부터 끝까지 숙독해 주세요. 계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
 "SteamUI_SSA_CybercafeAgree"		"사용 허가를 받은 PC방 운영자이며 모든 조항에 동의합니다."
 "SteamUI_SSA_ActivateProduct"		"Steam에 제품을 등록하고 Steam 라이브러리에 추가하려면 소매점에서 구입한 CD/DVD의 제품 코드 또는 기타 Steam 제품 코드를 여기 입력하세요. 계속하려면 '다음'을 클릭하세요."
 "SteamUI_ActivateProductLockedDown"		"고객님의 계정이 고객님에 의해 잠겼거나 Steam 고객지원에 의해 잠겼습니다. 해당 문제가 해결될 때까지 이 계정에서 새 제품을 활성화할 수 없습니다."
@@ -1944,14 +1944,14 @@
 "steam_monitor_totaldownloaded"		"이 세션에서 다운로드한 총 바이트 수"
 
 "Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 계정에 잔고가 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하십시오."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 
 "ServerBrowser_ModNotInstalled" "이 타사 MOD가 설치되지 않았습니다."
 "ServerBrowser_AppNotFound" "서버에 연결할 수 없습니다.\n 서버에서 지정한 APP ID가 잘못되었습니다."
-"ServerBrowser_NotInitialized" "Steam이 초기화되지 않았습니다. 다시 시도하십시오."
+"ServerBrowser_NotInitialized" "Steam이 초기화되지 않았습니다. 다시 시도하세요."
 
 "SteamUI_SSAUpdatedInfo"	"Steam 이용 약관이 %SSA_date%에 갱신되었습니다. Steam 및 Steam 게임을 이용하는 것은 귀하께서 변경된 조항을 숙지하고 이에 동의함을 공표하는 것입니다."
-"Steam_SSAUpdated_Link"	"업데이트된 동의서를 보려면 여기를 클릭하십시오."
+"Steam_SSAUpdated_Link"	"업데이트된 동의서를 보려면 여기를 클릭하세요."
 
 "Steam_Settings_Title"		"설정"
 "Steam_Preferences_Title"		"환경 설정"
@@ -2177,10 +2177,10 @@
 "Steam_minigamescolumn_media"			"미디어"
 "SteamUI_GamesDialog_RightClick_BackupMedia" "미디어 파일 백업..."
 "SteamUI_CantRunMediaDueToOSVersion"		"%osversion% 운영체제에서는 지원되지 않기 때문에 %game% 게임을 시작할 수 없습니다."
-"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "윈도우 미디어 플레이어의 현재 버전은 [%detectedVersion%]입니다. [%requiredVersion%] 버전에서만 미디어 실행이 가능하므로 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 윈도우 미디어 플레이어의 최신 버전을 설치하십시오."
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Windows Media Player가 설치되어 있지 않기 때문에 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 Windows Media Player의 최신 버전을 설치하십시오."
+"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "윈도우 미디어 플레이어의 현재 버전은 [%detectedVersion%]입니다. [%requiredVersion%] 버전에서만 미디어 실행이 가능하므로 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 윈도우 미디어 플레이어의 최신 버전을 설치하세요."
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Windows Media Player가 설치되어 있지 않기 때문에 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 Windows Media Player의 최신 버전을 설치하세요."
 "SteamUI_WindowsMediaPlayerInstallURL"		"http://www.microsoft.com/windows/windowsmedia/default.mspx"
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "QuickTime용 윈도우 미디어 구성 요소가 설치되어 있지 않기 때문에 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 QuickTime용 윈도우 미디어 구성 요소의 최신 버전을 설치하십시오."
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "QuickTime용 윈도우 미디어 구성 요소가 설치되어 있지 않기 때문에 %game% 게임을 시작할 수 없습니다.\n다음 사이트에서 QuickTime용 윈도우 미디어 구성 요소의 최신 버전을 설치하세요."
 "SteamUI_WindowsMediaPlayerInstallURLOSX"	"http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx"
 
 "Steam_UnknownErrorLaunchingMedia"		"미디어 실행 도중 오류 발생."
@@ -2281,7 +2281,7 @@
 
 "Steam_AllAppsInstalled_Title"		"Steam - 설치"
 
-"Steam_Install_SelectGames"		"설치할 게임을 선택하십시오."
+"Steam_Install_SelectGames"		"설치할 게임을 선택하세요."
 
 "Steam_InsertNextDisk_Title"		"Steam - 다음 디스크를 넣으십시오."
 "Steam_InsertNextDisk_Info"		"%disk% 디스크를 넣으십시오."
@@ -2398,7 +2398,7 @@
 "Steam_RetailAccountChoices"		"등록한 후 해당 Steam 계정으로 로그인하면 언제든지 어느 컴퓨터에서나 게임을 이용할 수 있습니다."
 
 "Steam_RetailInstallLocked_Title"		"Steam - 게임 잠김"
-"Steam_RetailInstallLocked_Info"		"%product% 제품은 공식적으로 출시되지 않았으므로 현재 잠금을 해제할 수 없습니다. Steam 뉴스에서 출시 시기를 확인하십시오.\n게임의 잠금이 해제되면 Steam에서 알려드립니다."
+"Steam_RetailInstallLocked_Info"		"%product% 제품은 공식적으로 출시되지 않았으므로 현재 잠금을 해제할 수 없습니다. Steam 뉴스에서 출시 시기를 확인하세요.\n게임의 잠금이 해제되면 Steam에서 알려드립니다."
 "Steam_RetailInstallLocked_LinkText"	"%product%에 대한 자세한 정보"
 
 "Steam_SystemRebootRequired_Title"	"Steam - 재부팅 필요"
@@ -2416,7 +2416,7 @@
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
 "SteamUI_GamesDialog_RightClick_LaunchMediaAppWithAssociatedViewer" "연결된 뷰어로 미디어 플레이..."
 
-"Steam_CCDeclined_SupportLink"	"자세한 내용은 Steam 고객 지원 웹사이트를 방문하십시오."
+"Steam_CCDeclined_SupportLink"	"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
 
 "Steam_RetailInstall_InstallingFromDisk"	"디스크에서 설치 중..."
 
@@ -2433,7 +2433,7 @@
 
 "Steam_RegionRestricted_Title"			"Steam - 이용할 수 없는 게임"
 "Steam_RegionRestrictedPurchase_Info"				"이 게임은 특정 지역에서만 유효한 제품 코드로 활성화되었습니다. 현재 사용자는 해당 지역에 있지 않으므로, %game% 게임을 실행 할 수 없습니다."
-"Steam_RegionRestricted_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하십시오."
+"Steam_RegionRestricted_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"%game% 게임은 사용자의 지역에서 사용할 수 없습니다."
 "Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
@@ -2754,20 +2754,20 @@
 
 
 "Steam_Media_GenericFailure"				"목록에 미디어를 추가하지 못했습니다."
-"Steam_Media_ErrorNotEnoughDiskSpace"		"이 미디어를 플레이할 디스크 공간이 부족합니다.\n디스크 공간을 확보한 후 다시 시도하십시오."
+"Steam_Media_ErrorNotEnoughDiskSpace"		"이 미디어를 플레이할 디스크 공간이 부족합니다.\n디스크 공간을 확보한 후 다시 시도하세요."
 
 "Steam_UserNameReserved"		"계정 이름에 'Valve' 또는 'Steam'을 사용할 수 없습니다."
 "SteamUI_SendEmail"			"이메일 주소(옵션)"
-"Steam_PurchaseError_MissingRequiredApp"	"%subscription%의 실행에는 %app% 프로그램이 있어야 합니다.\n %app%의 구매 옵션을 보려면 확인을 클릭하십시오."
+"Steam_PurchaseError_MissingRequiredApp"	"%subscription%의 실행에는 %app% 프로그램이 있어야 합니다.\n %app%의 구매 옵션을 보려면 확인을 클릭하세요."
 
 "Steam_Ubisoft_EmailPrompt"			"%subscription%의 배급사인 Ubisoft가 정기적으로 뉴스레터를 보내 드리고자 합니다. 아래에 개인 정보를 입력해 주시면 출시 예정 게임에 대한 정보를 정기적으로 보내 드릴 것입니다."
-"Steam_TellTale_EmailPrompt"			"%subscription%의 배급사인 Telltale이 정기적으로 뉴스레터를 보내 드리고자 합니다. 새 게임 소식, 개발 과정 뒷 이야기 엿보기, 만화, 조언 칼럼 및 특별 이벤트 등이 포함된 Telltale의 뉴스레터를 받아 보시려면 아래에 메일 주소를 입력하십시오. 후회하지 않을 것입니다!"
+"Steam_TellTale_EmailPrompt"			"%subscription%의 배급사인 Telltale이 정기적으로 뉴스레터를 보내 드리고자 합니다. 새 게임 소식, 개발 과정 뒷 이야기 엿보기, 만화, 조언 칼럼 및 특별 이벤트 등이 포함된 Telltale의 뉴스레터를 받아 보시려면 아래에 메일 주소를 입력하세요. 후회하지 않을 것입니다!"
 
 "Steam_ManageGuestPasses"		"선물 및 게스트 패스 관리"
 "Steam_GuestPasses_Title"		"선물 및 게스트 패스"
 "Steam_GuestPasses_Description"		"선물은 친구에게 줄 수 있는 풀 버전의 게임입니다.\n\n게스트 패스를 통해 일시적인 게임 시험판을 친구에게 보내 친구가 게임을 직접 경험해 볼 수 있도록 하고 온라인에서 함께 플레이할 수도 있습니다."
 "Steam_GuestPasses_NoneAvailable"	"현재 사용 가능한 선물 또는 게스트 패스가 없습니다."
-"Steam_GuestPasses_LoadingList"		"Steam이 선물 목록을 불러오는 중입니다. 잠시 기다려 주십시오..."
+"Steam_GuestPasses_LoadingList"		"Steam이 선물 목록을 불러오는 중입니다. 잠시 기다려 주세요..."
 "Steam_GuestPasses_Offline"		"오프라인 모드에서는 선물을 사용할 수 없습니다."
 "Steam_GuestPasses_PackageNameColumn"	"게임"
 "Steam_GuestPasses_StatusColumn"	"상태"
@@ -2791,13 +2791,13 @@
 "Steam_SendGuestPass_AccountLockedError$type=guestpass"	"귀하의 계정은 잠겨 있습니다. 체험권을 보내거나 받을 수 없습니다."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=guestpass"	"본인에게 게스트 패스를 보낼 수는 없습니다!"
-"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"본인에게 패스를 보내려고 합니다. 게스트 패스로 친구들과 게임을 공유합니다. %package% 무료 구독으로 친구를 초대하십시오!"
+"Steam_SendGuestPass_DuplicateNameError$type=guestpass"	"본인에게 패스를 보내려고 합니다. 게스트 패스로 친구들과 게임을 공유합니다. %package% 무료 구독으로 친구를 초대하세요!"
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=guestpass" "게스트 패스 이미 전송됨"
-"Steam_SendGuestPass_PendingError$type=guestpass"	"지난 24시간 이내에 %search%에게 이미 게스트 패스를 보냈습니다. 가장 최근의 시도 이후 24시간이 지나기 전에는 이 주소로 게스트 패스를 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하십시오."
+"Steam_SendGuestPass_PendingError$type=guestpass"	"지난 24시간 이내에 %search%에게 이미 게스트 패스를 보냈습니다. 가장 최근의 시도 이후 24시간이 지나기 전에는 이 주소로 게스트 패스를 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하세요."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "게스트 패스 보내는 중..."
-"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"게스트 패스를 %search%에게 보내는 중입니다.\n잠시 기다려 주십시오..."
+"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"게스트 패스를 %search%에게 보내는 중입니다.\n잠시 기다려 주세요..."
 "Steam_SendGuestPass_NoFriends"			"아직 Steam 커뮤니티 친구가 한 명도 없습니다!
 아는 사람에게 이메일로 선물을 보내 Steam 커뮤니티 친구로 만드십시오."
 
@@ -2809,12 +2809,12 @@
 
 "Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"이 게스트 패스를 이미 활성화했습니다."
 "Steam_GuestPassAccept_TextAlreadyRedeemed"	"패스가 만료됐으니, %package% 게임을 계속 실행하려면 정품을 구매해 주시기 바랍니다."
-"Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Steam 상점을 방문하려면 여기를 클릭하십시오."
+"Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Steam 상점을 방문하려면 여기를 클릭하세요."
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
 
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"게스트 패스 승인 실패"
-"Steam_GuestPassAccept_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
-"Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"선물에 관한 문제를 해결하려면 이 지원 페이지를 참조하십시오."
+"Steam_GuestPassAccept_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하세요."
+"Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"선물에 관한 문제를 해결하려면 이 지원 페이지를 참조하세요."
 "Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"이 게스트 패스는 취소되었습니다."
@@ -2824,7 +2824,7 @@
 "Steam_GuestPassAccept_TextExpired"	"만료 날짜가 지났기 때문에 이 게스트 패스를 받을 수 없습니다."
 
 "Steam_GuestPassAccept_HeadlineSelfRedeem$type=guestpass"	"본인에게 게스트 패스를 보낼 수는 없습니다!"
-"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"본인에게 보낸 패스를 받으려고 하고 있습니다. 게스트 패스는 친구와 게임을 공유하기 위한 것입니다. 새 게임을 무료로 즐길 수 있도록 친구를 초대하십시오!"
+"Steam_GuestPassAccept_TextSelfRedeem$type=guestpass"	"본인에게 보낸 패스를 받으려고 하고 있습니다. 게스트 패스는 친구와 게임을 공유하기 위한 것입니다. 새 게임을 무료로 즐길 수 있도록 친구를 초대하세요!"
 
 "Steam_GuestPassRedeemed_TitleFailed$type=guestpass"	"게스트 패스 활성화 실패"
 
@@ -2832,17 +2832,17 @@
 "Steam_GuestPassRedeemed_TextFailed$type=guestpass"	"교환하려는 게스트 패스가 더 이상 유효하지 않습니다. 이 패스는 이미 다른 사람이 사용했거나, 만료되었거나, 보낸 사람이 취소했을 수 있습니다."
 
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"게스트 패스 활성화 실패"
-"Steam_GuestPassRedeemed_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
-"Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"게스트 패스에 대한 문제를 해결하려면 이 지원 페이지를 참조하십시오."
+"Steam_GuestPassRedeemed_TextServiceUnavailable"	"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하세요."
+"Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"게스트 패스에 대한 문제를 해결하려면 이 지원 페이지를 참조하세요."
 "Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"이 제품에 대한 게스트 패스를 이미 사용했습니다."
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"%package%의 게스트 패스를 이미 받았기 때문에 더 받을 수 없습니다. 이 게임을 계속 플레이하려면 정품을 구매해 주시기 바랍니다."
-"Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Steam 상점을 방문하려면 여기를 클릭하십시오."
+"Steam_GuestPassRedeemed_LinkTextLimitExceeded"	"Steam 상점을 방문하려면 여기를 클릭하세요."
 "Steam_GuestPassRedeemed_LinkURLLimitExceeded"	"steam://store"
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=guestpass"	"이 게임을 이미 가지고 있습니다"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"정식 게임을 이미 가지고 있기 때문에 %package%의 게스트 패스를 받을 수 없습니다! 정식 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하십시오."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=guestpass"	"정식 게임을 이미 가지고 있기 때문에 %package%의 게스트 패스를 받을 수 없습니다! 정식 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하세요."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=guestpass"	"이 게스트 패스는 추가적인 필요 사항이 있습니다."
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=guestpass"	"%package%의 게스트 패스를 등록하기 위해서는, 계정 내에 %appname%을 가지고 있어야 합니다. 먼저 구매하신 뒤 게스트 패스를 다시 등록해보세요."
@@ -2897,12 +2897,12 @@
 "SteamUI_ValveSurvey_Linux_Runtime_Info" "Steam Linux 런타임 정보:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Steam 서버 사용 불가"
-"Steam_SubscriptionFailure_ServiceUnavailable" "사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
+"Steam_SubscriptionFailure_ServiceUnavailable" "사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하세요."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 주소에 문제가 있습니다. 문제를 %provider%에서 해결하거나 '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 결제 수단에 문제가 있습니다. 문제를 %provider%에서 해결하거나 '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"%subscription%에 대한 구매가 완료되지 않았습니다.\n\n%provider% 인증에 실패했습니다. '뒤로'를 클릭하여 다른 결제 수단을 선택하세요."
-"Steam_PayPalDeclined_SupportLink"									"자세한 내용은 Steam 고객 지원 웹사이트를 방문하십시오."
+"Steam_PayPalDeclined_SupportLink"									"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "지원하지 않는 결제 수단입니다."
 "Steam_SubscriptionCancelled_RegionNotSupported" "%subscription%에 대한 구매가 완료되지 않았습니다.\n\n현재 선택한 결제 수단은 해당 국가에서 사용할 수 없습니다. '뒤로'를 클릭하고 다른 결제 수단을 선택하세요."
@@ -2919,16 +2919,16 @@
 "Steam_LaunchEULA_Info"			"%game% 최종 사용자 사용권 계약(EULA)"
 "Steam_LaunchEULA_Agree"			"동의"
 "Steam_LaunchEULA_Decline"		"취소"
-"Steam_LaunchEULA_Text"			"이 동의서를 처음부터 끝까지 숙독해 주십시오. %game% 최종 사용자 사용권 계약(EULA)의 내용에 동의해야 합니다."
+"Steam_LaunchEULA_Text"			"이 동의서를 처음부터 끝까지 숙독해 주세요. %game% 최종 사용자 사용권 계약(EULA)의 내용에 동의해야 합니다."
 
 "Steam_GuestPasses_LinkText"		"선물 및 게스트 패스 상세 정보"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam - 시작할 수 없습니다."
-"Steam_AlreadyRunningError_Info"			"이 시스템에서 이미 다른 사용자 계정으로 Steam이 실행 중인 경우에는 다시 시작하기 전에 다른 사용자 계정의 Steam을 종료하십시오."
-"Steam_AlreadyRunningError_SupportLink"	"자세한 내용은 Steam 고객지원 사이트를 참조하십시오."
+"Steam_AlreadyRunningError_Info"			"이 시스템에서 이미 다른 사용자 계정으로 Steam이 실행 중인 경우에는 다시 시작하기 전에 다른 사용자 계정의 Steam을 종료하세요."
+"Steam_AlreadyRunningError_SupportLink"	"자세한 내용은 Steam 고객지원 사이트를 참조하세요."
 "Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
-"Steam_AlreadyRunningError_SupportTicket"	"가능한 한 빨리 Steam 고객지원으로 문의하십시오."
+"Steam_AlreadyRunningError_SupportTicket"	"가능한 한 빨리 Steam 고객지원으로 문의하세요."
 
 "Steam_LoggedInElsewhere_Title"		"Steam - 다른 사용자가 로그인"
 "Steam_LoggedInElsewhere_Info"		"다른 컴퓨터에서 이 Steam 계정으로 로그인했습니다."
@@ -2976,12 +2976,12 @@
 "Steam_VideoDriverAvailableDownloaded"			"동영상 드라이버 업데이트 다운로드가 끝났습니다."
 "Steam_InstallVideoDriverNow"					"지금 설치하기"
 "Steam_VideoDriverDownloadFailed_Title"			"Steam - 경고"
-"Steam_VideoDriverDownloadFailed_Text"			"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
+"Steam_VideoDriverDownloadFailed_Text"			"사용 중인 컴퓨터가 Steam 서버에 접속할 수 없거나 일시적으로 서비스를 사용할 수 없는 상태입니다. 나중에 다시 시도하세요."
 "Steam_VideoDriverInvokeFailed_Title"			"Steam - 오류"
 "Steam_VideoDriverInvokeFailed_Text"			"동영상 드라이버 업데이터 시작 과정에 문제가 있습니다."
 
 "Steam_InOfflineModeButNeedToLogIn" "Steam 네트워크에 연결할 수 없습니다. \n이 컴퓨터에 보관된 Steam 로그인 정보가 없기 때문에 \n'오프라인 모드'를 이용할 수 없습니다.\n\nSteam을 이용하려면 Steam 네트워크에 \n다시 연결해야 합니다."
-"Steam_InOfflineModeButNeedToLogIn_Link"			"Steam 네트워크 상태를 확인하려면 여기를 클릭하십시오."
+"Steam_InOfflineModeButNeedToLogIn_Link"			"Steam 네트워크 상태를 확인하려면 여기를 클릭하세요."
 
 "Skin_By_Random_n"			"Steam 스킨은 random_n의 디자인을 기반으로 구성되었습니다."
 "Steam_PackageVersion"			"Steam 패키지 버전: %package_version%"
@@ -3130,15 +3130,15 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_UserCantSetBeta" "%electedbeta%\n(Steam을 설치한 사용자만이 베타 프로그램에 참여할 수 있습니다.)"
 "Steam_BetaReportBug"	"버그 신고"
 "Steam_ChooseBetaDlgTitle" "베타 참여 - Steam"
-"Steam_ChooseBetaExplanation"	"Steam은 게임이나 Steam 그 자체의 업데이트가 공식으로 공개되기 전에 사용자들이 직접 체험해볼 기회를 자주 제공하고 있습니다. 이런 베타 프로그램에 참여하시려면, 아래 목록에서 원하시는 베타 프로그램을 선택하신 후 \"확인\"을 눌러주십시오. (모든 베타 프로그램 체험을 그만두시려면 \"없음\"을 선택하십시오.)"
+"Steam_ChooseBetaExplanation"	"Steam은 게임이나 Steam 그 자체의 업데이트가 공식으로 공개되기 전에 사용자들이 직접 체험해볼 기회를 자주 제공하고 있습니다. 이런 베타 프로그램에 참여하시려면, 아래 목록에서 원하시는 베타 프로그램을 선택하신 후 \"확인\"을 눌러주세요. (모든 베타 프로그램 체험을 그만두시려면 \"없음\"을 선택하세요.)"
 
 "Steam_ReadMoreAboutBetas"	"Steam의 베타 프로그램에 대한 추가 정보 살펴 보기"
 "Steam_SelectNoBeta"	"없음 - 베타 프로그램에 참여하지 않음"
 "Steam_BetaIsOver" "Steam의 %betaname% 베타에 참가해 주셔서 감사합니다. 
 
-베타가 이제 종료되었습니다. 현재 출시 내용으로 돌아 오려면 Steam을 다시 시작해 주십시오."
+베타가 이제 종료되었습니다. 현재 출시 내용으로 돌아 오려면 Steam을 다시 시작해 주세요."
 
-"Steam_ChooseGameLanguage"	"이 게임에서 사용할 언어를 선택하십시오"
+"Steam_ChooseGameLanguage"	"이 게임에서 사용할 언어를 선택하세요"
 "Steam_GameProperties_LanguageTab" "언어"
 
 "Steam_GameProperties_BetasTab" "베타"
@@ -3195,13 +3195,13 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SendGuestPass_AccountLockedError$type=gift"	"귀하의 계정은 잠겨 있습니다. 선물을 보내거나 받을 수 없습니다."
 
 "Steam_SendGuestPass_DuplicateNameErrorHeadline$type=gift"	"본인에게 선물을 보낼 수는 없습니다!"
-"Steam_SendGuestPass_DuplicateNameError$type=gift"	"본인에게 선물을 보내고 있습니다. 선물은 친구와 게임을 공유하기 위한 것입니다. %package% 게임을 무료로 즐길 수 있도록 친구를 초대하십시오!"
+"Steam_SendGuestPass_DuplicateNameError$type=gift"	"본인에게 선물을 보내고 있습니다. 선물은 친구와 게임을 공유하기 위한 것입니다. %package% 게임을 무료로 즐길 수 있도록 친구를 초대하세요!"
 
 "Steam_SendGuestPass_PendingErrorHeadline$type=gift" "선물을 이미 보냈습니다."
-"Steam_SendGuestPass_PendingError$type=gift"	"지난 24시간 이내에 %search%에게 이미 선물을 보냈습니다. 가장 최근에 보낸 이후 24시간이 지나기 전에는 이 주소로 선물을 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하십시오."
+"Steam_SendGuestPass_PendingError$type=gift"	"지난 24시간 이내에 %search%에게 이미 선물을 보냈습니다. 가장 최근에 보낸 이후 24시간이 지나기 전에는 이 주소로 선물을 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하세요."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=gift" "선물 보내는 중..."
-"Steam_SendGuestPass_InvitingFriend$type=gift"	"선물을 %search%에게 보내는 중입니다.\n잠시 기다려 주십시오..."
+"Steam_SendGuestPass_InvitingFriend$type=gift"	"선물을 %search%에게 보내는 중입니다.\n잠시 기다려 주세요..."
 
 "Steam_GuestPassAccept_TitleOK$type=gift"	"선물이 준비되었습니다."
 "Steam_GuestPassAccept_TitleFailed$type=gift"	"선물 받기 실패"
@@ -3215,7 +3215,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_GuestPassAccept_TextRevoked$type=gift"	"선물을 보낸 친구가 이를 취소하고 새로운 교환 코드를 다시 보냈습니다. 새 버전이 도착하지 않았다면 업데이트된 코드가 있는 다른 이메일을 받게 될 것입니다."
 
 "Steam_GuestPassAccept_HeadlineSelfRedeem$type=gift"	"본인에게 선물을 보낼 수는 없습니다!"
-"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"본인에게 보낸 패스를 받으려고 하고 있습니다. 선물은 친구와 게임을 공유하기 위한 것입니다. 새 게임을 무료로 즐길 수 있도록 친구를 초대하십시오!"
+"Steam_GuestPassAccept_TextSelfRedeem$type=gift"	"본인에게 보낸 패스를 받으려고 하고 있습니다. 선물은 친구와 게임을 공유하기 위한 것입니다. 새 게임을 무료로 즐길 수 있도록 친구를 초대하세요!"
 
 "Steam_GuestPassRedeemed_TitleFailed$type=gift"	"선물 활성화 실패"
 
@@ -3225,7 +3225,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=gift"	"선물을 활성화하지 못했습니다."
 
 "Steam_GuestPassRedeemed_HeadlineAlreadyOwned$type=gift"	"이 게임을 이미 가지고 있습니다"
-"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"게임을 이미 가지고 있기 때문에 %package%의 선물을 받을 수 없습니다! 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하십시오."
+"Steam_GuestPassRedeemed_TextAlreadyOwned$type=gift"	"게임을 이미 가지고 있기 때문에 %package%의 선물을 받을 수 없습니다! 게임을 플레이하려면 게임을 설치한 후 게임 라이브러리에서 실행하세요."
 
 "Steam_GuestPassRedeemed_HeadlineMustOwnApp$type=gift"	"이 선물은 추가적인 필요 사항이 있습니다"
 "Steam_GuestPassRedeemed_TextMustOwnApp$type=gift"		"%package%의 선물을 등록하기 위해서는, 계정 내에 %appname%을 가지고 있어야 합니다. 먼저 구매하신 뒤 선물을 다시 등록해보세요."
@@ -3247,7 +3247,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Purchase_IncludesDiscount"	"(할인 포함)"
 "Steam_Purchase_YourSteamAccount"	"Steam 계정"
 "Steam_Purchase_GamePackage"		"게임 패키지"
-"Steam_Purchase_PleaseReviewYourOrder"		"주문 내역을 검토하십시오."
+"Steam_Purchase_PleaseReviewYourOrder"		"주문 내역을 검토하세요."
 "Steam_Purchase_IsGift"				"선물입니까?"
 "Steam_Purchase_YesItIsGift"		"예. 선물입니다."
 
@@ -3258,7 +3258,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Legal_PackageDetails_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다."
 "Steam_Legal_PackageDetails_Shipping" "%subscription% 패키지에 포함된 사은품은 배송에 6-8주 정도 걸립니다."
 
-"Steam_ForcedGiftPurchase_Next"	"이 품목을 선물로 구매하려면 \"다음\"을 클릭하여 계속하십시오."
+"Steam_ForcedGiftPurchase_Next"	"이 품목을 선물로 구매하려면 \"다음\"을 클릭하여 계속하세요."
 
 "Steam_Gift_Sentiment_BestWishes"	"정성을 담아"
 "Steam_Gift_Sentiment_BuckleUp"		"안전띠를 매."
@@ -3290,8 +3290,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SendGuestPass_AlreadyOwnsGame"		"%s1 님은 이 게임을 갖고 있습니다."
 
 "Steam_GiftRevoked_Title"			"Steam - 선물 취소됨"
-"Steam_GiftRevoked"					"%gifter% 님으로부터 최근에 받은 %package% 선물은 이 품목의 결제 처리 관련 문제로 인해 취소되었습니다.\n\n따라서 이 선물과 관련된 게임을 더 이상 플레이할 수 없습니다. 이 품목을 구매하려면 Steam 상점을 방문하십시오. 그렇지 않은 경우 이 선물과 관련된 로컬 콘텐츠를 삭제하셔도 좋습니다."
-"Steam_GiftRevoked_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하십시오."
+"Steam_GiftRevoked"					"%gifter% 님으로부터 최근에 받은 %package% 선물은 이 품목의 결제 처리 관련 문제로 인해 취소되었습니다.\n\n따라서 이 선물과 관련된 게임을 더 이상 플레이할 수 없습니다. 이 품목을 구매하려면 Steam 상점을 방문하세요. 그렇지 않은 경우 이 선물과 관련된 로컬 콘텐츠를 삭제하셔도 좋습니다."
+"Steam_GiftRevoked_SupportLink"		"자세한 내용은 Steam 고객 지원 웹사이트를 방문하세요."
 
 "Steam_ExternalSignupButton" "지금 %s1 웹사이트로 이동하기"
 "Steam_ExternalSignupHeadline"	"내 %game% 계정"
@@ -3325,7 +3325,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RetailChooseLoginToExistingAccount"		"기존 Steam 계정으로 로그인"
 
 "Steam_WaitingForCloudSyncTitle" "Steam Cloud - 동기화 중"
-"Steam_WaitingForCloudSyncDebrief" "현재 Steam이 게임 파일을 Steam Cloud와 동기화하는 중입니다. 동기화가 완료되면 Steam은 자동으로 종료됩니다.\n\n파일을 동기화하지 않고 Steam을 종료하려면 '지금 끝내기'를 클릭하십시오."
+"Steam_WaitingForCloudSyncDebrief" "현재 Steam이 게임 파일을 Steam Cloud와 동기화하는 중입니다. 동기화가 완료되면 Steam은 자동으로 종료됩니다.\n\n파일을 동기화하지 않고 Steam을 종료하려면 '지금 끝내기'를 클릭하세요."
 "Steam_CloudSyncForceQuit" "지금 끝내기"
 
 "Steam_ModNeedsFullGame_Title"	"Steam - %game% 설치 불가"
@@ -3339,8 +3339,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AccountEmail_Email"		"연락 이메일 주소:"
 "Steam_AccountEmail_Print"		"여기를 클릭하여 지금 인쇄"
 
-"Steam_SubscriptionCancelled_PaymentCardDeclinedCart" "다음 항목에 대한 등록 절차가 완료되지 않았습니다. 사용자의 신용카드 정보가 해당 신용카드 업체에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지는 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하십시오."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하십시오."
+"Steam_SubscriptionCancelled_PaymentCardDeclinedCart" "다음 항목에 대한 등록 절차가 완료되지 않았습니다. 사용자의 신용카드 정보가 해당 신용카드 업체에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지는 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 "Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 계정에 잔고가 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
 "Steam_Subscription_Preorder_PreProcessCart" "예약 주문이 완료되었으며 게임은 빠른 시일 내에 공식적으로 출시됩니다. 결제가 처리되었습니다.\n\n게임이 출시되는 즉시 알려드리겠습니다. 주문해 주셔서 감사합니다!"
 "Steam_SubscriptionSuccessCart$purchasetype=regular" "다음 항목에 대한 등록 절차가 완료되었습니다. %accountname% Steam 계정으로 등록되었습니다. 게임을 플레이하려면 이 계정으로 로그인해야 합니다. 주문해 주셔서 감사합니다!"
@@ -3351,7 +3351,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"다음 선물이 %giftee%에게 전송되었습니다. 사은품 또는 경품이 배달되면 바로 확인 메일을 받게 될 것입니다. 주문해 주셔서 감사합니다!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"다음 항목에 대한 구매가 완료되었습니다. 사은품 또는 경품이 배달되면 바로 확인 메일을 받게 될 것입니다. 주문해 주셔서 감사합니다!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"아래 신용카드가 Steam에서 과도하게 사용되어 거래가 처리되지 않았습니다.\n\n이 정책은 신용카드 사기 피해로부터 고객을 보호하기 위해 마련한 것입니다. 사기 범죄가 적발될 경우 최대한의 조치를 취하여 이를 고발할 것입니다."
-"Steam_Subscription_ContactSupportCart" "오류가 발생했습니다. 다음 항목에 대한 등록 절차가 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하십시오."
+"Steam_Subscription_ContactSupportCart" "오류가 발생했습니다. 다음 항목에 대한 등록 절차가 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하세요."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 인증에 실패했습니다. 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 주소에 문제가 있습니다. 문제를 %provider%에서 해결하거나 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 지불 방법에 문제가 있습니다. 문제를 %provider%에서 해결하거나 다른 결제 수단을 사용하여 다시 시도해주세요."
@@ -3360,7 +3360,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerifiedCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n구매를 완료하기 위해서는 %provider% 계정이 확인되거나 잔액이 더 많아야 한다고 %provider% 회사가 보고했습니다. %provider%에 문의하여 지원을 받거나 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_Subscription_RefundedCart" "다음 항목에 대한 구매 금액이 환불되었습니다. 영업일 기준으로 2일 이내에 거래 결과가 계정에 나타날 것입니다."
 "Steam_Subscription_RestrictedCountryCart" "죄송합니다. 이 국가에서는 다음 항목을 구매할 수 없습니다. 구매가 취소되었습니다."
-"Steam_SubscriptionCancelled_ServerFailedCart" "다음 항목에 대한 등록 절차가 완료되지 않았습니다. Steam 서버는 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n불편을 드려 대단히 죄송합니다. 몇 시간 후에 다시 시도하십시오."
+"Steam_SubscriptionCancelled_ServerFailedCart" "다음 항목에 대한 등록 절차가 완료되지 않았습니다. Steam 서버는 현재 요청을 처리하기에는 너무 혼잡합니다. \n\n불편을 드려 대단히 죄송합니다. 몇 시간 후에 다시 시도하세요."
 "Steam_SubscriptionCancelled_RegionNotSupportedCart" "다음 항목에 대한 구매가 완료되지 않았습니다.\n\n현재 선택한 결제 수단은 해당 국가에서 사용할 수 없습니다. 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionFailure_Timeout_CantPlayCart"	"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 현재 Steam 서버가 거래를 처리할 수 없습니다.\n\n등록 절차가 완료되어야만 게임을 플레이할 수 있습니다. 불편을 끼쳐 죄송합니다. Steam 팀에서 이 상황을 해결하기 위해 노력하고 있으며 거래가 완료되는 대로 바로 알려드리겠습니다."
 
@@ -3446,8 +3446,8 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam 하드 디스크 사용량:  %s1MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"시스템 정보 수집 중..."
 
-"SteamUI_ValidateEmailDescriptionAlt" "이메일 주소가 확인되지 않았습니다.\n'다음'을 눌러서 이메일 주소를 확인하십시오.\n확인된 이메일 주소로 Steam 계정 인증에 관련된 사항을 바꾸려 할 때 확인 메일을 보냅니다. 따라서 오직 귀하만 비밀 질문 또는 비밀번호를 변경할 수 있게 됩니다."
-"SteamUI_ValidateEmailDescription" "Steam 메일 주소를 확인하려면 '다음'을 클릭하십시오.\n확인된 주소는 Steam 계정 증명에 대한 모든 변경 사항을 확인하는 데 사용됩니다. 따라서, 여러분 자신만이 비밀 질문 또는 비밀번호를 변경할 수 있습니다."
+"SteamUI_ValidateEmailDescriptionAlt" "이메일 주소가 확인되지 않았습니다.\n'다음'을 눌러서 이메일 주소를 확인하세요.\n확인된 이메일 주소로 Steam 계정 인증에 관련된 사항을 바꾸려 할 때 확인 메일을 보냅니다. 따라서 오직 귀하만 비밀 질문 또는 비밀번호를 변경할 수 있게 됩니다."
+"SteamUI_ValidateEmailDescription" "Steam 메일 주소를 확인하려면 '다음'을 클릭하세요.\n확인된 주소는 Steam 계정 증명에 대한 모든 변경 사항을 확인하는 데 사용됩니다. 따라서, 여러분 자신만이 비밀 질문 또는 비밀번호를 변경할 수 있습니다."
 "SteamUI_ValidateEmailSent" "다음 주소로 메시지가 발송됨: %s1.\n메일을 확인하고 메일에 포함된 링크를 클릭하여 Steam에서 사용할 메일 주소 확인을 완료합니다."
 "SteamUI_ValidateEmailNotReceived" "메시지를 받지 못하셨나요?"
 "SteamUI_VisitSteamSupport" "Steam 고객지원에 문의하기"
@@ -3469,13 +3469,13 @@ Windows에 관리자로 로그인해야 합니다.
 
 "SteamUI_Settings_Security_Status_TwoFactor" "Steam Guard 모바일 인증기로 보호됨"
 "SteamUI_Settings_Security_ManageTwoFactor_Title" "Steam Guard 모바일 인증기 관리"
-"SteamUI_Settings_Security_ManageTwoFactor" "Steam Guard 모바일 인증기를 사용하고 있습니다. Steam Guard 설정을 관리하시려면, 귀하의 스마트폰에서 Steam 애플리케이션을 실행하십시오."
-"SteamUI_Settings_Security_ManageTwoFactor_2" "만약 귀하의 스마트폰이 영구히 사용 불가하다면, Steam 고객지원에 도움을 요청하십시오."
+"SteamUI_Settings_Security_ManageTwoFactor" "Steam Guard 모바일 인증기를 사용하고 있습니다. Steam Guard 설정을 관리하시려면, 귀하의 스마트폰에서 Steam 애플리케이션을 실행하세요."
+"SteamUI_Settings_Security_ManageTwoFactor_2" "만약 귀하의 스마트폰이 영구히 사용 불가하다면, Steam 고객지원에 도움을 요청하세요."
 
 "SteamUI_ManageSecurity_ChooseName" "이 기기에게 애칭을 지어주세요:"
 
 "SteamUI_ManageSecurity_DoNothing" "잘 생각하셨습니다! 비록 다른 컴퓨터를 이용해 Steam에 접속하실 경우 이메일이 필요하시겠지만, Steam Guard를 활성화함으로써 계정을 훨씬 안전하게 지킬 수 있습니다."
-"SteamUI_ManageSecurity_DoNothing2" "보안을 위해 Steam 계정과 이메일의 비밀번호를 다르게 설정하십시오."
+"SteamUI_ManageSecurity_DoNothing2" "보안을 위해 Steam 계정과 이메일의 비밀번호를 다르게 설정하세요."
 
 "SteamUI_ManageSecurity_UnlockAccount_Success" "이제 다른 어떤 컴퓨터나 웹 브라우저에서도 귀하의 계정 ID와 비밀번호를 이용해 로그인하실 수 있습니다."
 "SteamUI_ManageSecurity_Reenable" "Steam Guard를 다시 활성화하려면, Steam 설정에 있는 'Steam Guard 계정 보안 관리'를 누르세요."
@@ -3508,9 +3508,9 @@ Windows에 관리자로 로그인해야 합니다.
 
 "SteamUI_SteamGuardNotifyNewMachinesTitle" "Steam Guard 알림"
 "SteamUI_SteamGuardNotifyNewMachinesDetails" "이 컴퓨터에 마지막으로 로그인한 이후 다른 곳에서 계정 자격 증명이 사용되었으며 Steam Guard가 이를 승인하였습니다.\n\n다음 세션을 승인한 적이 있었는지 확인해주시기 바랍니다."
-"SteamUI_SteamGuardNotifyNewMachinesExplainButtons" "나열된 세션 중에 다른 사람이 승인한 것으로 보이는 세션이 있을 경우 '아니요, 제가 아닙니다'를 선택하여 Steam 비밀번호와 이메일 주소를 변경하고 다른 위치에서의 승인을 해제하십시오."
+"SteamUI_SteamGuardNotifyNewMachinesExplainButtons" "나열된 세션 중에 다른 사람이 승인한 것으로 보이는 세션이 있을 경우 '아니요, 제가 아닙니다'를 선택하여 Steam 비밀번호와 이메일 주소를 변경하고 다른 위치에서의 승인을 해제하세요."
 "SteamUI_SteamGuardNotifyNewMachinesTurnedOff" "이 컴퓨터에 마지막으로 로그인한 이후 다른 곳에서 계정 자격 증명이 사용되었으며 Steam Guard가 해제되었습니다.\n\n다음 세션을 승인한 적이 있었는지 확인해주시기 바랍니다."
-"SteamUI_SteamGuardNotifyNewMachinesExplainButtons2" "나열된 세션 중에 다른 사람이 승인한 것으로 보이는 세션이 있을 경우 '아니요, 제가 아닙니다'를 선택하여 Steam 비밀번호와 이메일 주소를 변경하고 다른 위치에서의 승인을 해제한 다음 Steam Guard를 다시 활성화 하십시오."
+"SteamUI_SteamGuardNotifyNewMachinesExplainButtons2" "나열된 세션 중에 다른 사람이 승인한 것으로 보이는 세션이 있을 경우 '아니요, 제가 아닙니다'를 선택하여 Steam 비밀번호와 이메일 주소를 변경하고 다른 위치에서의 승인을 해제한 다음 Steam Guard를 다시 활성화 하세요."
 "SteamUI_SteamGuardNotifyNewMachines_WebBrowserAt" "웹 브라우저 IP"
 "SteamUI_SteamGuardNotifyNewMachines_ComputerAt" "컴퓨터 IP"
 "SteamUI_SteamGuardNotifyNewMachines_CloseButton" "네, 제가 맞습니다."
@@ -3550,7 +3550,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_NoEmailDetails2" "코드를 찾으셨으면 뒤로 가셔서 코드를 다시 입력 하세요, 아니면 다음을 누르시고 현재 컴퓨터로부터 귀하의 Steam 계정에 로그인할 수 있는 도움을 받으세요."
 "Steam_RecoverLocked_StartRecovery" "문제가 있으셨다니 죄송합니다 - 저희가 도와드리도록 하죠!"
 "Steam_RecoverLocked_StartRecovery2" "귀하에게 Steam 계정이 얼마나 소중한지 알고 있기 때문에, 저희는 귀하의 계정이 다른 사람에게 넘어가지 않도록 최선을 다하겠습니다."
-"Steam_RecoverLocked_StartRecovery3" "문제를 해결하기 위해 Steam 고객지원으로 문의하십시오. 저희는 고객님의 계정 접속에 관련된 정당한 요청에 대하여 도움을 드리는 것을 최우선순위로 여기고 있습니다."
+"Steam_RecoverLocked_StartRecovery3" "문제를 해결하기 위해 Steam 고객지원으로 문의하세요. 저희는 고객님의 계정 접속에 관련된 정당한 요청에 대하여 도움을 드리는 것을 최우선순위로 여기고 있습니다."
 "Steam_RecoverLocked_RecoverySupportLink" "Steam 고객지원에 문의"
 "Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
 "Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technology에 대해 더 알아보기"
@@ -3560,7 +3560,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_SuccessDetails" "Steam Guard가 이 컴퓨터를 귀하의 계정에 접근할 수 있는 기기의 목록에 추가했습니다. 이제 앞으로도 이 컴퓨터에서 귀하의 계정에 접근할 수 있습니다."
 "Steam_RecoverLocked_ResultWorking" "Steam - 확인 중..."
 "Steam_RecoverLocked_ResultFailure" "Steam 서버 연결에 실패했습니다"
-"Steam_RecoverLocked_ResultFailureDetails" "현재 Steam 서버에 접속할 수 없습니다. 나중에 다시 시도하십시오."
+"Steam_RecoverLocked_ResultFailureDetails" "현재 Steam 서버에 접속할 수 없습니다. 나중에 다시 시도하세요."
 "Steam_RecoverLocked_MachineNameLabel" "애칭"
 "Steam_RecoverLocked_MachineNameBox" "Steam Guard 컴퓨터 이름"
 "Steam_RecoverLocked_MachineNameBoxText" "이 컴퓨터에 최소 6자 이상의 이름을 붙여주세요."
@@ -3569,12 +3569,12 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_GetTwoFactorCode_EnterCode" "나의 Steam Guard 코드는:"
 "Steam_GetTwoFactorCode_EnterCodeDetails" "추가적인 보안 절차로서, 귀하의 스마트폰에 설치된 Steam 인증기에 현재 보이는 Steam Guard 코드를 입력해 주세요."
 "Steam_GetTwoFactorCode_WrongCode" "죄송합니다, 코드가 틀렸습니다."
-"Steam_GetTwoFactorCode_WrongCodeDetails" "귀하의 모바일 앱에 보이는 새 코드를 입력하십시오."
+"Steam_GetTwoFactorCode_WrongCodeDetails" "귀하의 모바일 앱에 보이는 새 코드를 입력하세요."
 "Steam_GetTwoFactorCode_ResultFailure" "Steam 서버 접속에 실패했습니다."
 "Steam_GetTwoFactorCode_ResultFailureDetails" "Steam 서버 접속에 실패했습니다. 잠시 뒤 다시 시도해 주세요."
 
 "Steam_SpokenLanguageTestTitle"	"Left 4 Dead - 음성 오디오 언어"
-"Steam_SpokenLanguageTestExplanation"	"Left 4 Dead의 음성 오디오는 <현재 언어>로 또는 영어와 <현재 언어> 자막과 함께 재생될 수 있습니다. 원하는 언어를 선택하십시오.\n(나중에 게임 내에서 이러한 설정을 변경할 수 있습니다.)"
+"Steam_SpokenLanguageTestExplanation"	"Left 4 Dead의 음성 오디오는 <현재 언어>로 또는 영어와 <현재 언어> 자막과 함께 재생될 수 있습니다. 원하는 언어를 선택하세요.\n(나중에 게임 내에서 이러한 설정을 변경할 수 있습니다.)"
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"음성 오디오를 <현재 언어>로 재생"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"음성을 영어와 < 현재 언어 > (설정) 자막과 함께 재생\n(1GB 크기의 파일을 다운로드해야 합니다.)"
 
@@ -3806,7 +3806,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_welcomeaction_launch$apptype=shortcut" "%gamename% 게임을 실행하시려면, 위의 플레이 버튼을 클릭하세요."
 "steam_welcomeaction_launch$apptype=tool" "%gamename% 게임을 실행하려면, 위의 플레이 버튼을 누르세요."
 "steam_welcomeaction_launch$apptype=demo" "%gamename% 게임을 실행하려면 상단의 플레이 버튼을 클릭하세요."
-"steam_welcomeaction_install" "%gamename% 게임을 설치하려면 위쪽의 설치 버튼을 클릭하십시오."
+"steam_welcomeaction_install" "%gamename% 게임을 설치하려면 위쪽의 설치 버튼을 클릭하세요."
 "steam_welcomeaction_preload" "출시일에 바로 플레이할 수 있도록 %gamename% 게임을 미리 받으려면 위쪽의 미리받기 버튼을 클릭하세요."
 "steam_welcomeaction_comingsoon" "%gamename% 게임이 출시 예정입니다."
 "steam_welcomeaction_platformwrong" "%gamename% 게임은 현재 플랫폼에서 이용할 수 없습니다."
@@ -3939,7 +3939,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_recentlyplayed_previously"		"이전"
 
 "steam_AppSupport_Title" "응용 프로그램 지원 문제"
-"steam_AppSupport_Info" "귀하의 컴퓨터에 본 응용 프로그램을 설치하려면 추가적인 조건을 충족시켜야 합니다. 아래 URL을 눌러 자세한 사항을 확인하십시오."
+"steam_AppSupport_Info" "귀하의 컴퓨터에 본 응용 프로그램을 설치하려면 추가적인 조건을 충족시켜야 합니다. 아래 URL을 눌러 자세한 사항을 확인하세요."
 
 "steam_menu_minimode"		"작게 보기"
 "steam_menu_largemode"	"크게 보기"
@@ -4008,7 +4008,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Login_ErrorTitle"			"Steam - 오류"
 "Steam_Login_DisabledTitle"			"Steam - 문의하기"
 "Steam_ErrorAccountDisabled"		"Steam 고객지원팀이 이 계정을 동결시켰습니다.\n\n계정이 다른 사람에 의해 사용되거나, 부정 결제로 인한 논란이 있을 경우\n계정이 동결되는 경우가 흔히 있습니다."
-"Steam_Login_ContactSupport"		"문제를 해결하려면 Steam 고객지원으로 문의하십시오."
+"Steam_Login_ContactSupport"		"문제를 해결하려면 Steam 고객지원으로 문의하세요."
 "Steam_ErrorAccountIPLoginRestricted"		"이 계정은 현재 위치에서 사용할 수 없습니다.\n"
 
 "steam_tradedialog_title"			"거래"
@@ -4287,14 +4287,14 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_AllowGameLaunch_Info"	"%game% 게임이 다음의 선택적 명령줄을 실행하려고 합니다."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
-"Steam_AllowGameLaunch_Info_Prompt" "이 실행을 요청하지 않았거나 이러한 옵션을 이해하지 못한다면 취소를 선택하십시오."
+"Steam_AllowGameLaunch_Info_Prompt" "이 실행을 요청하지 않았거나 이러한 옵션을 이해하지 못한다면 취소를 선택하세요."
 "Steam_AllowGameLaunch_Title"	"게임 실행을 허용하시겠습니까?"
 
 "Steam_Parental_UnlockTitle"			"가족 모드"
 "Steam_Parental_UnlockInstructions"		"가족 모드를 끄려면 아래에 PIN을 입력하세요"
 "Steam_Parental_ForgotPIN"				"PIN을 잊어버렸습니다"
 "Steam_Parental_NoRecoveryEmail"		"복구 이메일 설정 안됨"
-"Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 가족 모드를 끄신 후 가족 모드 설정을 다시 실행하십시오."
+"Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 가족 모드를 끄신 후 가족 모드 설정을 다시 실행하세요."
 "Steam_Parental_UnlockFailureTitle"		"가족 모드"
 "Steam_Parental_UnlockFailure"			"아쉽게도 실수하셨군요. 정확한 PIN을 입력하시고 다시 시도해보세요."
 "Steam_Parental_UnlockFailureExceeded"	"실패한 시도가 너무 많습니다. Steam을 재시작하고 다시 시도해주세요."
@@ -4639,7 +4639,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"가이드 버튼"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y 버튼"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"사용 안 함"
-"Steam_Settings_Streaming_EnableTouchController"	"터치 컨트롤 사용"
 
 "Steam_Settings_Streaming_StreamingSupport"	"고객지원 정보 보기"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"
@@ -4680,7 +4679,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_UpdateControllerFirmware_Intro"	"귀하의 Steam Controller에 설치 가능한 새 펌웨어가 있습니다. 업데이트 과정을 진행하려 합니다."
 "SteamUI_UpdateControllerFirmware_Install"	"새 펌웨어가 컨트롤러에 설치되고 있습니다.\n컨트롤러의 연결을 해제하지 마십시오."
 "SteamUI_UpdateControllerFirmware_Finished"	"귀하의 Steam Controller 펌웨어가 업데이트되었습니다."
-"SteamUI_UpdateControllerFirmware_Fallback"	"Steam이 귀하의 컨트롤러에 펌웨어를 설치하기 위해 복구 모드로 들어가야 합니다:\n\n 1) 컨트롤러에 연결된 USB 케이블을 뽑으십시오\n 2) 우측 트리거를 누른 채로 컨트롤러를 다시 연결하십시오\n 3) OS가 컨트롤러의 펌웨어 업데이트 영역을 발견하여 마운트할 때까지 잠시 기다립니다(이 작업은 30초에서 60초 정도 소요될 수 있습니다).\n\n일단 위 단계가 완료되면 컨트롤러는 펌웨어 업데이트 모드로 재연결되어 다음 단계로 진행하게 됩니다."
+"SteamUI_UpdateControllerFirmware_Fallback"	"Steam이 귀하의 컨트롤러에 펌웨어를 설치하기 위해 복구 모드로 들어가야 합니다:\n\n 1) 컨트롤러에 연결된 USB 케이블을 뽑으십시오\n 2) 우측 트리거를 누른 채로 컨트롤러를 다시 연결하세요\n 3) OS가 컨트롤러의 펌웨어 업데이트 영역을 발견하여 마운트할 때까지 잠시 기다립니다(이 작업은 30초에서 60초 정도 소요될 수 있습니다).\n\n일단 위 단계가 완료되면 컨트롤러는 펌웨어 업데이트 모드로 재연결되어 다음 단계로 진행하게 됩니다."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "펌웨어가 업데이트되었습니다. 다음 지시 사항을 따르세요:\n\n 1) 컨트롤러에 연결된 USB 케이블 뽑기\n 2) 아무 버튼도 누르지 말고 USB 케이블을 다시 연결\n 3) 아래의 확인을 눌러 이 진행 마법사 종료"
 "SteamUI_UpdateControllerFirmware_Disconnect"	"Steam Controller가 펌웨어 업데이트 과정 중 연결이 해제 되었습니다. 다시 연결되면 펌웨어를 업그레이드할 수 있습니다."
 "SteamUI_UpdateControllerFirmware_WiredUpdate"	"귀하의 Steam Controller에 사용 가능한 펌웨어 업데이트가 있습니다. 업데이트를 위해 한 번 유선 연결을 해야 합니다.\n준비가 됐다면, 컨트롤러를 USB로 연결하세요. 자동으로 업데이트 절차가 시작됩니다."
@@ -4761,7 +4760,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 
 "Steam_VGUIControllerWarning_Title" "Steam Input"
-"Steam_VGUIControllerWarning" "컨트롤러를 최대한으로 활용하려면 Big Picture 상태로 Steam을 실행해 주십시오."
+"Steam_VGUIControllerWarning" "컨트롤러를 최대한으로 활용하려면 Big Picture 상태로 Steam을 실행해 주세요."
 "Steam_VGUIControllerWarningHeader" "컨트롤러를 사용하고 계시나요?"
 
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"

@@ -1,6 +1,6 @@
 typedef enum EResult
 {
-    k_EResultX4edT4eX4DePT4f = 0,
+    k_EResultNoResult = 0,
     k_EResultOK = 1,
     k_EResultFailure = 2,
     k_EResultNoConnection = 3,

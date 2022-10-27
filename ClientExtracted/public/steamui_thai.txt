@@ -4636,7 +4636,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"ปุ่มไกด์"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"ปุ่ม Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"ปิดการใช้งาน"
-"Steam_Settings_Streaming_EnableTouchController"	"เปิดการใช้งานการควบคุมระบบสัมผัส"
 
 "Steam_Settings_Streaming_StreamingSupport"	"ดูข้อมูลสนับสนุน"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=thai"

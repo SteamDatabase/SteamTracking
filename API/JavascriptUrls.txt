@@ -668,7 +668,6 @@ ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
 ${PARTNER_BASE_URL}user/ajaxgetusers
 ${PUBLIC_SHARED_URL}images/
-${PUBLIC_SHARED_URL}images/${}
 ${PUBLIC_SHARED_URL}images/responsive/youtube_16x9_placeholder.gif
 ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/

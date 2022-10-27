@@ -445,7 +445,6 @@
 	"Steam_MacOSX106_SupportURL" "https://help.steamchina.com/zh/kb/5953-QTIO-1764"
 	"Steam_CPUSSEWarning_Title" "蒸汽平台 - 检测到不支持的 CPU"
 	"SteamUI_InstallScript_Failed_Title" "蒸汽平台 - 安装失败"
-	"SteamUI_3rdPartyRemapper_Description" "您似乎正在您的 PS4 控制器上使用控制器重映射工具。此游戏使用蒸汽平台输入，并不需要任何重映射软件。如果不禁用重映射工具，两者可能会发生冲突。"
 	"Steam_CPUSSERequired_Title" "蒸汽平台 - 检测到不支持的 CPU"
 	"Steam_NoBetaChosenNonAdmin" "目前有 %numbetas% 项测试可用\n（只有安装了蒸汽平台客户端的用户才能更改是否参与测试。）"
 	"Steam_UserCantSetBeta" "%electedbeta%\n（只有安装了蒸汽平台客户端的用户才能更改是否参与测试。)"

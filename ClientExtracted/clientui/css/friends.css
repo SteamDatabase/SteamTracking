@@ -532,6 +532,13 @@
 }
 
 /* stylelint-enable selector-class-pattern */
+.throbber_ThrobberDelayAppear_25iLt {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.throbber_ThrobberDelayAppear_25iLt.throbber_Visible_19Akj {
+  opacity: 1;
+}
 /*!************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../../../web_src/shared/js/ui/shared_dialog.css ***!
   \************************************************************************************************************************************************************************************************/
@@ -2650,4 +2657,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=6ee5f3fb3e33565ee989*/
+/*# sourceMappingURL=friends.css.map?contenthash=746caf736c010fa2bb24*/

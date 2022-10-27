@@ -4631,7 +4631,6 @@
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Кнопка Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Кнопка Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Выключено"
-"Steam_Settings_Streaming_EnableTouchController"	"Включить сенсорное управление"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Просмотреть информацию о поддержке"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=russian"

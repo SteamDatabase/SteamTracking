@@ -4629,7 +4629,6 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Botão Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Botão Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Desativado"
-"Steam_Settings_Streaming_EnableTouchController"	"Ativar controlos tácteis"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Ver informações no Suporte Steam"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=portuguese"

@@ -4,7 +4,6 @@ __TEXT
 __text
 __TEXT
 p
-Lk"
 p
 __stubs
 __TEXT
@@ -15,13 +14,10 @@ __const
 __TEXT
 __cstring
 __TEXT
-p('
-p('
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-xp
 __DATA
 @*
 @*
@@ -102,10 +98,9 @@ hu-
 0
 0
 '
-Q"
+&#
 Hi
 H=
-&
 Hc
 Hc
 Hc
@@ -8244,8 +8239,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Oct 25 2022
-09:27:56
+Oct 27 2022
+10:06:27
 Jan
 Feb
 Mar
@@ -8511,6 +8506,7 @@ RequestHeaders
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 @bEnableHTTP2OnAllCHTTPClients
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
+@bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 Cache-Control
 Connection
 Content-Disposition
@@ -8812,25 +8808,28 @@ Failed to create first worker thread in AddWorkItem()
 CWorkThreadPool - Signal Thread Event
 CWorkThreadPool - SetEvent()
 pWorkThread != NULL
+CWorkThread -- GetNextWorkItemToProcess
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 UNKNOWN
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
+CWorkThread -- OnWorkItemCompleted - unordered
+CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
 0,
 0
 0
 '
-Q"
+&#
 Hi
 H=
-&
 Hc
 Hc
 Hc
+(
 0
 0
 AT=
@@ -8841,9 +8840,10 @@ AT=
 D
 @
 @
-y%
+A!
 !
 6(
+!%
 @
 Hc
 Hc
@@ -8876,22 +8876,21 @@ IcE
 @
 @
 ]
-f$
-$
+Q
 V
 =
 #
 #
-#
 =
+#
+#
 ]%
-N"
+["
 %
 %
+'$
 !
 @
-9!
-&!
 @
 &
 @
@@ -9281,6 +9280,7 @@ RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
 $
+j
 $
 
 
@@ -9341,7 +9341,6 @@ I
 0
 
 
-
 Ic
 @
 @
@@ -9355,3 +9354,4 @@ Ic
 0
 
 Hi
+?

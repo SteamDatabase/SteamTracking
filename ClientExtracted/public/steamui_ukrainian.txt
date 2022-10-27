@@ -4634,7 +4634,6 @@
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Кнопка «Гід»"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Кнопка Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Вимкнено"
-"Steam_Settings_Streaming_EnableTouchController"	"Увімкнути сенсорне керування"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Переглянути довідку"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

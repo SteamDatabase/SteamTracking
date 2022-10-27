@@ -4638,7 +4638,6 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Pulsante Guida"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Pulsante Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Disabilitato"
-"Steam_Settings_Streaming_EnableTouchController"	"Abilita i controlli touch"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Mostra le informazioni dell'Assistenza"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

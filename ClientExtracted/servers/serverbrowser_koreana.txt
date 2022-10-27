@@ -127,7 +127,7 @@
 "ServerBrowser_NotResponding"		"< 응답 없음 >"
 "ServerBrowser_FiltersActive"		"필터 활성화"
 "ServerBrowser_ServerOutOfDate"		"서버가 구버전입니다."
-"ServerBrowser_ClientOutOfDate"		"사용자의 버전이 서버 버전과 일치하지 않습니다.\n게임을 다시 시작하십시오."
+"ServerBrowser_ClientOutOfDate"		"사용자의 버전이 서버 버전과 일치하지 않습니다.\n게임을 다시 시작하세요."
 "ServerBrowser_PlayerName"		"플레이어 이름"
 "ServerBrowser_Score"			"점수"
 "ServerBrowser_Time"			"시간"
@@ -157,7 +157,7 @@
 "Steam_ValidLoginRequiredTitle"	"적합한 Steam 로그인 필요"
 
 // need to remove the VAC line from this when we have our authentication system going via the Steam servers (when it should change to a login failure)
-"Steam_ValidLoginRequired"	"Steam VAC 서버에 연결할 수 없습니다. 네트워크 문제를 해결하려면 아래 링크를 클릭하십시오."
+"Steam_ValidLoginRequired"	"Steam VAC 서버에 연결할 수 없습니다. 네트워크 문제를 해결하려면 아래 링크를 클릭하세요."
 "VAC_ConnectionIssuesSupport_Title"	"보안 연결 실패"
 "VAC_ConnectionIssuesSupportSite"	"Steam 고객지원으로 이동하려면 여기를 클릭"
 "VAC_ConnectionIssuesSupportURL"	"https://support.steampowered.com/kb/7579-RPSX-6098/"

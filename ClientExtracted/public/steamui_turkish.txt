@@ -4641,7 +4641,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Rehber Butonu"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y Butonu"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Devre Dışı"
-"Steam_Settings_Streaming_EnableTouchController"	"Dokunmatik kontrolleri etkinleştir"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Destek bilgilerini görüntüle"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

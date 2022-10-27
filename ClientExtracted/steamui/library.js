@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7610823";
+var CLSTAMP = "7618469";
 (() => {
   var e,
     t,
@@ -51,6 +51,8 @@ var CLSTAMP = "7610823";
             "throbber_ThrobberRoundLoopThickness_1wAwc",
           throbber_xlarge: "throbber_throbber_xlarge_2jzZM",
           throbber_xxlarge: "throbber_throbber_xxlarge_1DFOT",
+          ThrobberDelayAppear: "throbber_ThrobberDelayAppear_34XSs",
+          Visible: "throbber_Visible_1ziaT",
         };
       },
       72026: (e) => {
@@ -5074,60 +5076,71 @@ var CLSTAMP = "7610823";
       },
       62081: (e, t, r) => {
         "use strict";
-        r.d(t, { V: () => o });
+        r.d(t, { V: () => a });
         var n = r(67294),
-          i = r(61500),
-          s = r.n(i);
-        class o extends n.PureComponent {
-          constructor(e) {
-            super(e);
-          }
-          AddSizeClass(e) {
-            "small" == this.props.size
-              ? e.push(s().throbber_small)
-              : "medium" == this.props.size
-              ? e.push(s().throbber_medium)
-              : "xlarge" == this.props.size
-              ? e.push(s().throbber_xlarge)
-              : "xxlarge" == this.props.size
-              ? e.push(s().throbber_xxlarge)
-              : e.push(s().throbber_large);
-          }
-          render() {
-            let e = [s().LoadingWrapper, "SteamLogoThrobber"];
-            this.AddSizeClass(e),
-              void 0 === this.props.string && e.push(s().noString),
-              this.props.className && e.push(this.props.className),
-              this.props.static && e.push(s().Static);
-            let t = n.createElement(
-              "div",
-              { className: e.join(" ") },
-              n.createElement(
-                "div",
-                { className: s().Throbber },
-                n.createElement(a, { className: s().base }),
-                n.createElement(a, { className: s().blur })
-              )
-            );
-            return n.createElement(
+          i = r(45520),
+          s = r(61500),
+          o = r.n(s);
+        const a = n.memo(function (e) {
+          const {
+            className: t,
+            size: r,
+            string: s,
+            position: a,
+            static: u,
+            msDelayAppear: d,
+          } = e;
+          let m = [o().LoadingWrapper, "SteamLogoThrobber", l(r)];
+          const [_, h] = n.useState(!d);
+          return (
+            (0, n.useEffect)(() => {
+              if (_) return;
+              const e = setTimeout(() => h(!0), d);
+              return () => clearTimeout(e);
+            }, [d, _]),
+            void 0 === s && m.push(o().noString),
+            t && m.push(t),
+            u && m.push(o().Static),
+            n.createElement(
               "div",
               {
-                className:
-                  "center" == this.props.position
-                    ? s().throbber_center_wrapper
-                    : "",
+                className: (0, i.Z)(
+                  "center" == a && o().throbber_center_wrapper,
+                  d && o().ThrobberDelayAppear,
+                  _ && o().Visible
+                ),
               },
-              t,
-              Boolean(this.props.string) &&
+              _ &&
                 n.createElement(
                   "div",
-                  { className: s().ThrobberText },
-                  this.props.string
-                )
-            );
+                  { className: m.join(" ") },
+                  n.createElement(
+                    "div",
+                    { className: o().Throbber },
+                    n.createElement(c, { className: o().base }),
+                    n.createElement(c, { className: o().blur })
+                  )
+                ),
+              Boolean(s) &&
+                n.createElement("div", { className: o().ThrobberText }, s)
+            )
+          );
+        });
+        function l(e) {
+          switch (e) {
+            case "small":
+              return o().throbber_small;
+            case "medium":
+              return o().throbber_medium;
+            case "xlarge":
+              return o().throbber_xlarge;
+            case "xxlarge":
+              return o().throbber_xxlarge;
+            default:
+              return o().throbber_large;
           }
         }
-        function a(e) {
+        function c(e) {
           let t = "SVGIcon_Button SVGIcon_Throbber ";
           return (
             e.className && (t += e.className),
@@ -5146,9 +5159,9 @@ var CLSTAMP = "7610823";
               },
               n.createElement(
                 "g",
-                { className: s().partCircle },
+                { className: o().partCircle },
                 n.createElement("path", {
-                  className: s().roundOuter,
+                  className: o().roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
                   strokeWidth: "6",
@@ -5156,7 +5169,7 @@ var CLSTAMP = "7610823";
                   d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
                 }),
                 n.createElement("path", {
-                  className: s().roundOuter,
+                  className: o().roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
                   strokeWidth: "6",
@@ -5164,7 +5177,7 @@ var CLSTAMP = "7610823";
                   d: "M201.432,101.166",
                 }),
                 n.createElement("path", {
-                  className: s().roundOuter,
+                  className: o().roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
                   strokeWidth: "6",
@@ -5174,9 +5187,9 @@ var CLSTAMP = "7610823";
               ),
               n.createElement(
                 "g",
-                { className: s().mainOutline },
+                { className: o().mainOutline },
                 n.createElement("path", {
-                  className: s().roundFill,
+                  className: o().roundFill,
                   fill: "none",
                   stroke: "#ffffff",
                   strokeWidth: "6",
@@ -5184,7 +5197,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundOuterOutline,
+                  className: o().roundOuterOutline,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5193,7 +5206,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber01,
+                  className: o().roundThrobber01,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5202,7 +5215,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber02,
+                  className: o().roundThrobber02,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5211,7 +5224,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber03,
+                  className: o().roundThrobber03,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5220,7 +5233,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber04,
+                  className: o().roundThrobber04,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5229,7 +5242,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber05,
+                  className: o().roundThrobber05,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5238,7 +5251,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber06,
+                  className: o().roundThrobber06,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5247,7 +5260,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber07,
+                  className: o().roundThrobber07,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5256,7 +5269,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber08,
+                  className: o().roundThrobber08,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5265,7 +5278,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber09,
+                  className: o().roundThrobber09,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5274,7 +5287,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber10,
+                  className: o().roundThrobber10,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5283,7 +5296,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber11,
+                  className: o().roundThrobber11,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5292,7 +5305,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber12,
+                  className: o().roundThrobber12,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5301,7 +5314,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber13,
+                  className: o().roundThrobber13,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5310,7 +5323,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber14,
+                  className: o().roundThrobber14,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5319,7 +5332,7 @@ var CLSTAMP = "7610823";
                   d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
                 }),
                 n.createElement("path", {
-                  className: s().roundThrobber15,
+                  className: o().roundThrobber15,
                   strokeLinecap: "butt",
                   fill: "none",
                   stroke: "#ffffff",
@@ -5330,7 +5343,7 @@ var CLSTAMP = "7610823";
               ),
               n.createElement(
                 "g",
-                { className: s().bottomCircle },
+                { className: o().bottomCircle },
                 n.createElement("path", {
                   fill: "#ffffff",
                   d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -5338,7 +5351,7 @@ var CLSTAMP = "7610823";
               ),
               n.createElement(
                 "g",
-                { className: s().topCircle },
+                { className: o().topCircle },
                 n.createElement("circle", {
                   fill: "none",
                   stroke: "#ffffff",
@@ -6859,6 +6872,7 @@ var CLSTAMP = "7610823";
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             GAMEPADUI_WINDOWED: !1,
+            DECK_DISPLAY_MODE: !1,
             LEGACY_GAMEPADUI_MODE: 0,
             LEGACY_CONTROLLER_CONFIG_APPID: 0,
             ON_DECK: !1,
@@ -6921,9 +6935,9 @@ var CLSTAMP = "7610823";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 25 2022 : 09:27:04",
-                    BUILD_TIME_UTC: "Oct 25 2022 : 16:27:04",
-                    BUILD_RTIME_UTC: 1666715224,
+                    BUILD_TIME_LOCAL: "Oct 27 2022 : 10:43:44",
+                    BUILD_TIME_UTC: "Oct 27 2022 : 17:43:44",
+                    BUILD_RTIME_UTC: 1666892624,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -7102,7 +7116,7 @@ var CLSTAMP = "7610823";
           ),
           E = n.lazy(() =>
             Promise.all([r.e(1517), r.e(156), r.e(9462), r.e(5742)]).then(
-              r.bind(r, 25622)
+              r.bind(r, 53117)
             )
           ),
           w = document.getElementById("root"),
@@ -7354,6 +7368,10 @@ var CLSTAMP = "7610823";
           }
           GetControllerTypeString(e) {
             if (this.m_controllerList.length > 0) {
+              if (!e)
+                return (0, l.Xx)(
+                  "#" + u[this.m_controllerList[0].eControllerType]
+                );
               let t;
               return (
                 this.m_controllerList.forEach((r) => {
@@ -7364,6 +7382,16 @@ var CLSTAMP = "7610823";
               );
             }
             return "";
+          }
+          HasGyro(e) {
+            return (
+              this.m_controllerList.length > 0 &&
+              this.m_controllerList.some(
+                (t) =>
+                  (!e || t.nControllerIndex == e) &&
+                  0 != (2048 & t.unCapabilities)
+              )
+            );
           }
           GetControllers() {
             return this.m_controllerList;

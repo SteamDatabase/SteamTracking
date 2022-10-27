@@ -4,8 +4,8 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"인터넷 연결 속도"
-"TrackerUI_FavoriteWindowLabel_Windows"	"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하십시오."
-"TrackerUI_FavoriteWindowLabel"			"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하십시오."
+"TrackerUI_FavoriteWindowLabel_Windows"	"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하세요."
+"TrackerUI_FavoriteWindowLabel"			"프로그램을 시작할 때와 알림 영역의 아이콘을 두 번 클릭했을 때 표시할 Steam 창을 선택하세요."
 "TrackerUI_FavoriteWindow"			"윈도우 설정"
 
 
@@ -111,7 +111,7 @@
 "Friends_NotConnectedToFriendsNetwork"		"친구 네트워크에 연결하지 못했습니다. 서비스를 이용할 수 있을 때까지 자동으로 연결을 재시도합니다."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Steam에 다시 로그인해야 친구 네트워크를 사용할 수 있습니다."
 "Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"다른 사용자가 이 계정을 사용하고 있어 친구 네트워크에서 로그아웃되었습니다.\n"
-"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Steam 버전이 너무 오래 되었기 때문에 친구 네트워크에 연결할 수 없습니다. 최신 업데이트를 다운로드하려면 Steam을 다시 시작하십시오."
+"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Steam 버전이 너무 오래 되었기 때문에 친구 네트워크에 연결할 수 없습니다. 최신 업데이트를 다운로드하려면 Steam을 다시 시작하세요."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Steam 서버를 정기 점검 중입니다. 이용 가능해지는 즉시 친구 네트워크에 자동으로 다시 연결됩니다."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Steam 서버에 연결할 수 없습니다. 서비스를 이용할 수 있을 때까지 자동으로 연결을 재시도합니다."
 "Friends_NotAvailableInOfflineMode"			"친구 네트워크 기능은 오프라인 모드에서는 사용할 수 없습니다."
@@ -158,16 +158,16 @@
 
 "Friends_TargetBlocked"				"이 사용자의 프로필 설정으로 인해 지금 메시지를 보낼 수 없습니다."
 "Friends_TargetIgnored"				"%search% 님께서 귀하를 차단 중입니다."
-"Friends_TooManyFriends"				"친구 목록이 다 찼습니다. 친구를 일부 삭제한 다음 다시 시도하십시오."
+"Friends_TooManyFriends"				"친구 목록이 다 찼습니다. 친구를 일부 삭제한 다음 다시 시도하세요."
 "Friends_TargetHasTooManyFriends"		"%search% 친구 목록이 다 찼습니다."
 "Friends_DefaultAddError"	 			"친구 목록에 %search% 님을 추가하는 도중에 문제가 발생했습니다."
-"Friends_UnableToFindFriendByThatNameInvitePrompt"		"%search% 전자 메일 주소로 Steam 사용자를 찾을 수 없습니다.\n\n%search% 님을 초대하여 Steam에 참가하도록 알림과 동시에 친구 목록에 추가하시려면 '다음'을 누르거나 '뒤로'를 눌러 다시 검색하십시오."
+"Friends_UnableToFindFriendByThatNameInvitePrompt"		"%search% 전자 메일 주소로 Steam 사용자를 찾을 수 없습니다.\n\n%search% 님을 초대하여 Steam에 참가하도록 알림과 동시에 친구 목록에 추가하시려면 '다음'을 누르거나 '뒤로'를 눌러 다시 검색하세요."
 "Friends_InvitingFriend"				"%search% 계정으로 초대장을 보내는 중..."
 "Friends_InvitationPending"			"%search% 님이 Steam에 참가하라는 초대를 받았으며 수락하면 사용자의 친구 목록에 추가됩니다."
 "Friends_InvitationSent"				"%search%에게 이메일 초대장을 보냈으며 수락하면 사용자의 친구 목록에 추가됩니다.\n"
 "Friends_DefaultInviteError"			"%search% 계정으로 초대장을 보내는 중 문제가 발생했습니다." 
 "Friends_TooManyPendingInvitations"   "최근에 초대장을 너무 많이 보냈습니다. 며칠 후에 %search% 님을 다시 초대해 보십시오."
-"Friends_InvitationBlocking"		"이 사용자의 모든 통신을 차단 중입니다. 다시 통신하려면 Steam 커뮤니티 페이지를 방문하여 차단을 해제하십시오."
+"Friends_InvitationBlocking"		"이 사용자의 모든 통신을 차단 중입니다. 다시 통신하려면 Steam 커뮤니티 페이지를 방문하여 차단을 해제하세요."
 
 "Friends_DontGiveOutPassword"			"절대로 남에게 비밀번호를 알려주지 마세요.\n"
 "Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
@@ -175,7 +175,7 @@
 "Friends_ChatFilterBlockWarning"		"보안을 위해 다음 메시지에서 링크가 제거되었습니다."
 
 "Friends_invalidname_title"			"친구 - 예약된 이름"
-"Friends_invalidname_info"			"친구 이름에는 '[unknown] 또는 'Valve', 'Steam', 'Support' 등의 단어가 포함될 수 없습니다. 다른 이름을 선택하십시오."
+"Friends_invalidname_info"			"친구 이름에는 '[unknown] 또는 'Valve', 'Steam', 'Support' 등의 단어가 포함될 수 없습니다. 다른 이름을 선택하세요."
 
 "Friends_JoinGame_Dialog"				"%friend%에 대한 게임 찾기에 실패했습니다."
 "Friends_Friendlist_Friends"			"친구"
@@ -504,13 +504,13 @@
 "Friends_ChatIntro_Request"	"이 채팅 요청을 수락하시겠습니까?"		
 "Friends_ChatIntro_DontShowCheckBox" "이 사용자의 채팅 요청을 항상 수락합니다."
 
-"Friends_ChatIntro_WarningInfo" "알림: Steam 고객지원팀에서는 어떠한 이유로도 비밀번호를 묻지 않습니다. 모든 비밀번호 요청을 무시하십시오."
+"Friends_ChatIntro_WarningInfo" "알림: Steam 고객지원팀에서는 어떠한 이유로도 비밀번호를 묻지 않습니다. 모든 비밀번호 요청을 무시하세요."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"녹음(오디오 입력) 장치"
 "Friends_Voice_ChangeDevice"			"장치 변경..."
 "Friends_Voice_ChangeDeviceNote"		"(Windows 음성 제어판이 열립니다.)"
 "Friends_Voice_ChangingDevice_Title"	"Steam - 녹음 장치 변경"
-"Friends_Voice_ChangingDevice_Info"		"Windows 오디오 제어판이 열립니다. 설정 변경이 완료되었으면 확인'을 클릭하십시오."
+"Friends_Voice_ChangingDevice_Info"		"Windows 오디오 제어판이 열립니다. 설정 변경이 완료되었으면 확인'을 클릭하세요."
 "Friends_Voice_ChangingDevice_Button"	"예, 설정 변경을 완료했습니다."
 "Friends_Voice_NoDeviceDetected"		"[ 검색된 녹음 장치가 없습니다 ]"
 "Friends_Voice_PushToTalkKey"			"PTT(Push-To-Talk) 키"
@@ -555,7 +555,7 @@
 "Limited_OpenChat"	"채팅 열기"
 "Friends_SteamCommunity"	"Steam 커뮤니티"
 "Limited_Explanation"	"귀하의 계정은 이 기능을 사용하기 위한 필요 조건을 만족하지 못합니다."
-"Limited_ForDetails"	"자세한 내용은 Steam 고객지원을 방문하십시오."
+"Limited_ForDetails"	"자세한 내용은 Steam 고객지원을 방문하세요."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"%member_making_change% 님이 해당 채팅방을 운영자 전용 채팅으로 설정했습니다.\n"

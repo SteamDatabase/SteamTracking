@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-`p
-`p
 __stubs
 __TEXT
 __stub_helper
@@ -88,7 +86,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
->(
+@>(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -374,9 +372,7 @@ X
 @
 H
 $
-$
 (
-,
 $
 (
 ,
@@ -3834,10 +3830,7 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-H&
->&
 0
-,&
 j
 j
 j
@@ -3846,8 +3839,6 @@ j
 j
 j
 j
-Y&
-&
 &
 &
 p
@@ -3950,15 +3941,11 @@ M9e
 ?
 @
 @
-i
-<
-
-}
-2
 
 
 
-j
+
+k
 d
 A+M
 j
@@ -4207,6 +4194,7 @@ d
 @
 @
 V
+y
 @
 @
 @

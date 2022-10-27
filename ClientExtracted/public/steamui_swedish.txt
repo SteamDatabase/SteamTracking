@@ -3457,7 +3457,7 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "SteamUI_VerifyEmail_Verified" " | Verifierad"
 "SteamUI_VerifyEmail_Unverified" " | Ej verifierad"
 
-"SteamUI_ManageSecurityButton" "Hantera Steam Guard Kontosäkerhet..."
+"SteamUI_ManageSecurityButton" "Hantera Steam Guard-kontosäkerhet ..."
 "SteamUI_ManageSecurity_Title" "Hantera Steam Guard"
 
 "SteamUI_Settings_Security_Status_Label" "Säkerhetsstatus:"
@@ -3479,7 +3479,7 @@ Skaffa dig en ny vän på Steam genom att skicka en gåva via e-post till någon
 "SteamUI_ManageSecurity_DoNothing2" "För din säkerhets skull, se till att lösenorden till ditt Steam-konto och e-postadress är olika."
 
 "SteamUI_ManageSecurity_UnlockAccount_Success" "Vilken dator eller webbläsare som helst kan nu ha tillgång till ditt Steam-konto, förutsatt att ditt kontonamn och lösenord tillhandahålls."
-"SteamUI_ManageSecurity_Reenable" "För att återaktivera Steam Guard, klicka på 'Hantera Steam Guard Kontosäkerhet\" i Steam-inställningarna."
+"SteamUI_ManageSecurity_Reenable" "För att återaktivera Steam Guard, klicka på 'Hantera Steam Guard-kontosäkerhet\" i Steam-inställningarna."
 
 "SteamUI_ManageSecurity_CodeSent" "En e-post med en kod har skickats till din e-postadress.\nAnvänd denna kod när du loggar in på en ny dator."
 "SteamUI_ManageSecurity_OtherComputersDenied" "Alla andra datorer har nu ingen behörighet att komma åt detta Steam-konto utan ditt medgivande via e-post."
@@ -4642,7 +4642,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guideknapp"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y-knapp"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Inaktiverad"
-"Steam_Settings_Streaming_EnableTouchController"	"Aktivera Touch-kontroll"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Visa supportinformation"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

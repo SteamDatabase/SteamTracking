@@ -4639,7 +4639,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Bouton Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Bouton Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Désactivé"
-"Steam_Settings_Streaming_EnableTouchController"	"Activer les commandes tactiles"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Consulter la FAQ"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617&l=french"

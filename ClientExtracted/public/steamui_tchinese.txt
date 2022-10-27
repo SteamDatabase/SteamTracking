@@ -4635,7 +4635,6 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"導覽鍵"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y 鍵"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"已停用"
-"Steam_Settings_Streaming_EnableTouchController"	"啟用觸控控制"
 
 "Steam_Settings_Streaming_StreamingSupport"	"檢視支援資訊"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

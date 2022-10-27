@@ -4638,7 +4638,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Nút Guide"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Nút Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Vô hiệu"
-"Steam_Settings_Streaming_EnableTouchController"	"Bật điều khiển cảm ứng"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Xem thông tin hỗ trợ"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

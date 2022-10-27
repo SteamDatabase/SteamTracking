@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-@_
-@_
 __stubs
 __TEXT
 __stub_helper
@@ -149,9 +147,7 @@ X
 @
 H
 $
-$
 (
-,
 $
 (
 ,
@@ -2348,7 +2344,6 @@ sc_schinese
 
 @
 @
-g
 @
 N
 J
@@ -2400,6 +2395,7 @@ IcE
 @
 V
 =
+/
 =
 !
 @

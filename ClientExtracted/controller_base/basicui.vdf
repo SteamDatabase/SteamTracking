@@ -2018,10 +2018,10 @@
 	"group"
 	{
 		"id"		"6"
-		"mode"		"absolute_mouse"
+		"mode"		"dpad"
 		"inputs"
 		{
-			"click"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -2029,11 +2029,46 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+							"binding"		"game_action WebBrowser LEFTSTICK_UP, Move Up"
 						}
-						"settings"
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
 						{
-							"haptic_intensity"		"1"
+							"binding"		"game_action WebBrowser LEFTSTICK_DOWN, Move Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_RIGHT, Move Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_LEFT, Move Left"
 						}
 					}
 				}
@@ -2041,12 +2076,6 @@
 		}
 		"settings"
 		{
-			"virtual_mode"		"1"
-			"friction"		"1"
-		}
-		"gameactions"
-		{
-			"WebBrowser"		"Scroll"
 		}
 	}
 	"group"

@@ -12008,6 +12008,8 @@
             "throbber_ThrobberRoundLoopThickness_2cif1",
           throbber_xlarge: "throbber_throbber_xlarge_3LxJj",
           throbber_xxlarge: "throbber_throbber_xxlarge_1mUb9",
+          ThrobberDelayAppear: "throbber_ThrobberDelayAppear_25iLt",
+          Visible: "throbber_Visible_19Akj",
         };
 
         /***/
@@ -70646,6 +70648,10 @@ object-assign
           __webpack_require__(
             /*! ./common/ostype */ "../../../web_src/shared/js/common/ostype.ts"
           );
+        /* harmony import */ var _clienttypes__WEBPACK_IMPORTED_MODULE_2__ =
+          __webpack_require__(
+            /*! ./clienttypes */ "../../../web_src/shared/js/clienttypes/index.ts"
+          );
         //
         // contains definitions for all methods and objects exposed from C++ Steam Client
         //
@@ -70716,6 +70722,7 @@ object-assign
                 if (typeof args[0] === "function") {
                   // looks like a callback
                   const fnCallback = args[0];
+                  const strFuncName = fnCallback.name;
                   const nCallbackRegistration = nMethodCallCount; // give each caller a unique number
                   let nCallbackCount = 0;
                   args[0] = (...argsCallback) => {
@@ -70725,11 +70732,11 @@ object-assign
                       const start = performance.now();
                       fnCallback.apply(window, argsCallback);
                       console.log(
-                        `SteamClient invoked callback ${fullName}${
+                        `SteamClient invoked callback ${strFuncName} ( ${strMethodName}${
                           nMethodCallCount > 1
                             ? `-${nCallbackRegistration}`
                             : ""
-                        } #${nCallbackCount++} took ${
+                        } ) #${nCallbackCount++} took ${
                           performance.now() - start
                         }ms`
                       );
@@ -75871,7 +75878,7 @@ object-assign
                   viewBox: "0 0 36 36",
                   fill: "none",
                 },
-                props
+                svgProps
               ),
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
@@ -75897,7 +75904,7 @@ object-assign
                   viewBox: "0 0 36 36",
                   fill: "none",
                 },
-                props
+                svgProps
               ),
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
@@ -83087,114 +83094,133 @@ object-assign
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_0__
           );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1__ =
+        /* harmony import */ var shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__ =
+          __webpack_require__(
+            /*! shared/utils/classnames */ "../../../web_src/shared/js/utils/classnames.ts"
+          );
+        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
             /*! ./throbber.scss */ "../../../web_src/shared/js/ui/throbber.scss"
           );
-        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default =
+        /* harmony import */ var _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default =
           /*#__PURE__*/ __webpack_require__.n(
-            _throbber_scss__WEBPACK_IMPORTED_MODULE_1__
+            _throbber_scss__WEBPACK_IMPORTED_MODULE_2__
           );
 
-        class Throbber extends react__WEBPACK_IMPORTED_MODULE_0___default()
-          .PureComponent {
-          constructor(props) {
-            super(props);
-          }
-          AddSizeClass(vecClasses) {
-            if (this.props.size == "small")
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                  .throbber_small
-              );
-            else if (this.props.size == "medium")
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                  .throbber_medium
-              );
-            else if (this.props.size == "xlarge")
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                  .throbber_xlarge
-              );
-            else if (this.props.size == "xxlarge")
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                  .throbber_xxlarge
-              );
-            else
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                  .throbber_large
-              );
-          }
-          render() {
+        const Throbber = react__WEBPACK_IMPORTED_MODULE_0___default().memo(
+          function Throbber(props) {
+            const {
+              className,
+              size,
+              string,
+              position,
+              static: isStatic,
+              msDelayAppear,
+            } = props;
             let vecClasses = [
-              _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+              _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                 .LoadingWrapper,
               "SteamLogoThrobber",
+              GetSizeClass(size),
             ];
-            this.AddSizeClass(vecClasses);
-            if (this.props.string === undefined)
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default().noString
+            const [bVisible, setVisible] =
+              react__WEBPACK_IMPORTED_MODULE_0___default().useState(
+                !msDelayAppear
               );
-            if (this.props.className) vecClasses.push(this.props.className);
-            if (this.props.static)
-              vecClasses.push(
-                _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default().Static
+            (0, react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+              if (bVisible) return undefined;
+              const iTimeout = setTimeout(
+                () => setVisible(true),
+                msDelayAppear
               );
-            // generate panels for the throbber
-            let throbber =
-              react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                "div",
-                { className: vecClasses.join(" ") },
-                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                  "div",
-                  {
-                    className:
-                      _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                        .Throbber,
-                  },
-                  react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                    ThrobberInner,
-                    {
-                      className:
-                        _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                          .base,
-                    }
-                  ),
-                  react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
-                    ThrobberInner,
-                    {
-                      className:
-                        _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                          .blur,
-                    }
-                  )
-                )
+              return () => clearTimeout(iTimeout);
+            }, [msDelayAppear, bVisible]);
+            if (string === undefined)
+              vecClasses.push(
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default().noString
+              );
+            if (className) vecClasses.push(className);
+            if (isStatic)
+              vecClasses.push(
+                _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default().Static
               );
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "div",
               {
-                className:
-                  this.props.position == "center"
-                    ? _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
-                        .throbber_center_wrapper
-                    : "",
+                className: (0,
+                shared_utils_classnames__WEBPACK_IMPORTED_MODULE_1__[
+                  "default"
+                ])(
+                  position == "center" &&
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                      .throbber_center_wrapper,
+                  msDelayAppear &&
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                      .ThrobberDelayAppear,
+                  bVisible &&
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                      .Visible
+                ),
               },
-              throbber,
-              Boolean(this.props.string) &&
+              bVisible &&
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                  "div",
+                  { className: vecClasses.join(" ") },
+                  react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                    "div",
+                    {
+                      className:
+                        _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                          .Throbber,
+                    },
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                      ThrobberInner,
+                      {
+                        className:
+                          _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                            .base,
+                      }
+                    ),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
+                      ThrobberInner,
+                      {
+                        className:
+                          _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                            .blur,
+                      }
+                    )
+                  )
+                ),
+              Boolean(string) &&
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                   "div",
                   {
                     className:
-                      _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                      _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                         .ThrobberText,
                   },
-                  this.props.string
+                  string
                 )
             );
+          }
+        );
+        function GetSizeClass(size) {
+          switch (size) {
+            case "small":
+              return _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                .throbber_small;
+            case "medium":
+              return _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                .throbber_medium;
+            case "xlarge":
+              return _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                .throbber_xlarge;
+            case "xxlarge":
+              return _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                .throbber_xxlarge;
+            default:
+              return _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
+                .throbber_large;
           }
         }
         function ThrobberInner(props) {
@@ -83217,14 +83243,14 @@ object-assign
               "g",
               {
                 className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                     .partCircle,
               },
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
@@ -83237,7 +83263,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
@@ -83250,7 +83276,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundOuter,
                   fill: "none",
                   stroke: "#ffffff",
@@ -83264,14 +83290,14 @@ object-assign
               "g",
               {
                 className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                     .mainOutline,
               },
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundFill,
                   fill: "none",
                   stroke: "#ffffff",
@@ -83284,7 +83310,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundOuterOutline,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83298,7 +83324,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber01,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83312,7 +83338,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber02,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83326,7 +83352,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber03,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83340,7 +83366,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber04,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83354,7 +83380,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber05,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83368,7 +83394,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber06,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83382,7 +83408,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber07,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83396,7 +83422,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber08,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83410,7 +83436,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber09,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83424,7 +83450,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber10,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83438,7 +83464,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber11,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83452,7 +83478,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber12,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83466,7 +83492,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber13,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83480,7 +83506,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber14,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83494,7 +83520,7 @@ object-assign
                 "path",
                 {
                   className:
-                    _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                    _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                       .roundThrobber15,
                   strokeLinecap: "butt",
                   fill: "none",
@@ -83509,7 +83535,7 @@ object-assign
               "g",
               {
                 className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                     .bottomCircle,
               },
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -83524,7 +83550,7 @@ object-assign
               "g",
               {
                 className:
-                  _throbber_scss__WEBPACK_IMPORTED_MODULE_1___default()
+                  _throbber_scss__WEBPACK_IMPORTED_MODULE_2___default()
                     .topCircle,
               },
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -88154,6 +88180,7 @@ function TestLocalizeCalendarTime()
           LANGUAGE: "english",
           SUPPORTED_LANGUAGES: [],
           COUNTRY: "",
+          /** CDNStorage based URL scheme, https://<host>/<hash>(_<size>)?.jpg - no two-character URL subdir */
           AVATAR_BASE_URL: "",
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
@@ -88162,6 +88189,7 @@ function TestLocalizeCalendarTime()
           STORE_CDN_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
+          /** usually same as community_base_url, but will be steam-chat.com in client or steam.tv in broadcast mode */
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           LOGIN_BASE_URL: "",
@@ -88171,20 +88199,25 @@ function TestLocalizeCalendarTime()
           STEAMTV_BASE_URL: "",
           HELP_BASE_URL: "",
           PARTNER_BASE_URL: "",
+          /** public stats, e.g. partner.steampowered.com */
           STATS_BASE_URL: "",
+          /** internal stats, e.g. steamstats.valvesoftware.com */
           INTERNAL_STATS_BASE_URL: "",
           BASE_URL_STORE_CDN_ASSETS: "",
+          /** Whether or not we are running in the client. NOTE: This is also true in React web pages running in the client. */
           IN_CLIENT: false,
           USE_POPUPS: false,
           IN_MOBILE: false,
           IN_MOBILE_WEBVIEW: false,
           IN_TENFOOT: false,
           PLATFORM: "",
+          /** SNR code if available for the current page. It should be appended to all outward links */
           SNR: "",
           LAUNCHER_TYPE:
             shared_clientenums__WEBPACK_IMPORTED_MODULE_2__.ELauncherType
               .k_ELauncherTypeDefault,
           EREALM: 0,
+          /** technically Linux underneath, so needs its own flag to distinguish */
           IN_CHROMEOS: false,
           // client-only parameters:
           LOCAL_HOSTNAME: "",
@@ -88192,8 +88225,11 @@ function TestLocalizeCalendarTime()
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           BUILD_TIMESTAMP: 0,
+          /** when the page was rendered */
           PAGE_TIMESTAMP: 0,
+          /** true only set from webui_util.php, indicating we are running reactjs hosted from our web servers. */
           FROM_WEB: false,
+          /** stringified EMachineAuthWebDomain - note that this includes 'Client' and 'Mobile' */
           WEBSITE_ID: "Unknown",
           // this used to be part of config, but reading the cookie is best.  Defined as a getter for backwards compatibility.
           get SESSIONID() {
@@ -88204,9 +88240,14 @@ function TestLocalizeCalendarTime()
           STEAM_TV: false,
           DEV_MODE: false,
           // steamui specific, could move to a narrower config
+          /** Whether we're directly a SteamUI context (which includes being GamepadUI). Never true for Community, FriendsUI, etc. */
           IN_STEAMUI: false,
+          /** Whether we're displaying in GamepadUI visual mode. Also true for Store/Community/FriendsUI shown inside of GamepadUI, even if not in the SteamUI context. */
           IN_GAMEPADUI: false,
+          /** Whether the main GamepadUI window should be windowed or fullscreen */
           GAMEPADUI_WINDOWED: false,
+          /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
+          DECK_DISPLAY_MODE: false,
           LEGACY_GAMEPADUI_MODE: 0,
           LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: false,
@@ -89819,4 +89860,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=3060ae8a71f3a0c8e247
+//# sourceMappingURL=friends.js.map?contenthash=12cc26e552b4a8e589ce

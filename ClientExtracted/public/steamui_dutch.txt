@@ -4642,7 +4642,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide-knop"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y-knop"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Uitgeschakeld"
-"Steam_Settings_Streaming_EnableTouchController"	"Aanraakbediening inschakelen"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Ondersteuningsinformatie bekijken"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

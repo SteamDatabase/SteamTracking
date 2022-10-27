@@ -319,6 +319,7 @@
  OBJC_METACLASS_$_NSMenuItem
  OBJC_METACLASS_$_NSObject
  OSAtomicAdd32Barrier
+ OSIsCompatible
  OSTypesAreCompatible
  Plat_CommandLineParamExists
  Plat_CommandLineParamValue

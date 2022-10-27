@@ -3332,7 +3332,7 @@
 		"mode"		"dpad"
 		"inputs"
 		{
-			"click"
+			"dpad_north"
 			{
 				"activators"
 				{
@@ -3340,7 +3340,46 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+							"binding"		"game_action WebBrowser LEFTSTICK_UP, #Action_Up"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_DOWN, #Action_Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_RIGHT, #Action_Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_LEFT, #Action_Left"
 						}
 					}
 				}

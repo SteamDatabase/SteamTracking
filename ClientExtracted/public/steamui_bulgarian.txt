@@ -4645,7 +4645,6 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Бутон „Ръководство“"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Бутон Y"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Преустановено"
-"Steam_Settings_Streaming_EnableTouchController"	"Включване на сензорни контроли"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Преглед на информацията за поддръжка"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

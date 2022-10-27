@@ -1072,7 +1072,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action CHANGE_PRESET 2 0 1"
+							"binding"		"controller_action CHANGE_PRESET 2 1 1"
 						}
 					}
 				}
@@ -1233,7 +1233,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action CHANGE_PRESET 1 0 1"
+							"binding"		"controller_action CHANGE_PRESET 1 1 1"
 						}
 					}
 				}

@@ -4638,7 +4638,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Opaspainike"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y-painike"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Ei käytössä"
-"Steam_Settings_Streaming_EnableTouchController"	"Ota kosketusohjaimet käyttöön"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Näytä tukitiedot"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

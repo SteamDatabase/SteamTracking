@@ -4641,7 +4641,6 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide-knapp"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y-knapp"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Slått av"
-"Steam_Settings_Streaming_EnableTouchController"	"Slå på berøringskontroller"
 
 "Steam_Settings_Streaming_StreamingSupport"	"Vis støtteinformasjon"
 "Steam_Settings_Streaming_StreamingSupportLink"	"https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617"

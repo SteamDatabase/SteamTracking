@@ -1008,6 +1008,7 @@ true
 EPersonaState
 EAppUpdateError
 ELogonState
+No Result
 Failure
 No Connection
 Invalid Password
