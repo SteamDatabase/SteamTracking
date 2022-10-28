@@ -685,6 +685,7 @@ ${ROOT_URL}/puzzleinfolist
 ${ROOT_URL}/puzzleleaderboarddata
 ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
+${STATS_BASE_URL}${type}
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
 ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
 ${STORE_BASE_URL}
@@ -757,6 +758,8 @@ ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
+${STORE_BASE_URL}category/${category}
+${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/topnewreleases/${}
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
@@ -821,6 +824,8 @@ ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}friends/recommendgame
+${STORE_BASE_URL}genre/Early%20Access/
+${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
 ${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/
@@ -932,6 +937,7 @@ ${STORE_BASE_URL}subscriber_agreement
 ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
+${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0

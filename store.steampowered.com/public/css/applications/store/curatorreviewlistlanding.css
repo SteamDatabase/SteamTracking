@@ -431,20 +431,23 @@
   font-size: 12px;
   line-height: 17px;
   padding: 0px 8px;
+  box-sizing: border-box;
+  width: 100%;
 }
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span {
   font-size: unset;
   line-height: unset;
 }
 .eventrow_AppCapsulePrice_Jq75m span:first-child {
-  padding-top: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span:first-child {
   padding-top: unset;
 }
 .eventrow_AppCapsulePrice_Jq75m span:last-child {
-  padding-bottom: 6px;
-  color: #fff;
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span:last-child {
   padding-bottom: unset;

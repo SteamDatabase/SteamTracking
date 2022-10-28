@@ -12318,7 +12318,14 @@
           Boolean(!n && !a.BIsFree()) &&
             l.createElement(
               "span",
-              { className: x().AppCapsulePrice },
+              {
+                className: (0, A.Z)(
+                  x().AppCapsulePrice,
+                  Boolean(null == i ? void 0 : i.discount_pct)
+                    ? P().Discounted
+                    : ""
+                ),
+              },
               Boolean(null == i ? void 0 : i.discount_pct) &&
                 l.createElement(
                   "span",
@@ -22240,7 +22247,9 @@
                     .map((e) => e.announcement_gid)
                 );
             let r = t.map((e) => e.GID);
-            (r = va(e, b, n, a, "events2", r, (e, t) => (0, Dn.LQ)(t))),
+            (r = va(e, b, n, a, "events" + t.length, r, (e, t) =>
+              (0, Dn.LQ)(t)
+            )),
               (t = r.map((e) => It.j1.GetClanEventModel(e)));
             let i = t.filter(
               (t) =>
@@ -29092,7 +29101,7 @@
           C = null;
         if (
           t.label_link &&
-          ((y = a.createElement(d.K, { url: t.label_link }, v)),
+          ((y = a.createElement(d.K, { url: t.label_link }, y)),
           "browseall" === t.label_link_style)
         ) {
           const e = (0, m.Xx)("#Sale_SectionLink_BrowseAll");
