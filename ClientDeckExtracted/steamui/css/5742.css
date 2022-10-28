@@ -7561,28 +7561,6 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
     background-position: 50% 0%;
   }
 }
-.systemsettings_SystemInfoContainer_1LZnk {
-  padding-top: var(--basicui-header-height);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: scroll;
-  animation-name: systemsettings_slideInAnimation_bii4M;
-  animation-duration: 0.75s;
-  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
-  animation-fill-mode: both;
-}
-@keyframes systemsettings_slideInAnimation_bii4M {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .systemsettings_LicensesDialog_1wvG6 {
   width: 660px;
 }
@@ -8795,20 +8773,18 @@ A:active {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   color: #56707f;
-  margin-bottom: 3px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 8px;
   text-align: left;
-  width: 570px;
-  margin-top: 6px;
 }
-.image_ButtonContainer_2sWLp {
+.image_MessageFooter_2h7_p {
   position: relative;
   width: auto;
-  height: 59px;
-  background: rgba(0, 0, 0, 0.2);
-  padding-top: 8px;
+  min-height: 45px;
+  margin-top: 11px;
+  display: flex;
+}
+.image_MessageFooter_2h7_p .image_Legal_7NnVB {
+  flex: auto;
+  align-self: center;
 }
 .image_Btn_2utr- {
   font-family: "Motiva Sans", Sans-serif;

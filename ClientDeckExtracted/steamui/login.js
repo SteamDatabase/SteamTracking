@@ -11,7 +11,7 @@
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => E });
+      n.r(t), n.d(t, { default: () => g });
       var l = n(67294),
         o = n(8199),
         a = n.n(o),
@@ -23,11 +23,11 @@
         m = n(27194),
         f = n(86487);
       n(29669);
-      let S = !1;
-      function d() {
+      let E = !1;
+      function S() {
         return (0, c.mG)(this, void 0, void 0, function* () {
-          if (S) return;
-          S = !0;
+          if (E) return;
+          E = !0;
           const e = u.De.LANGUAGE,
             t = m.LJ.GetLanguageFallback(e),
             n = e === t,
@@ -36,57 +36,64 @@
         });
       }
       var h = n(96794),
-        g = (n(10708), n(63709));
-      function E(e) {
+        d = (n(10708), n(63709));
+      function g(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
             const [e, t] = l.useState(!1);
             return (
               l.useEffect(() => {
-                Promise.all([d()]).then(() => {
+                Promise.all([S()]).then(() => {
                   t(!0);
                 });
               }, []),
               e
             );
           })();
-        return t
-          ? o
-            ? l.createElement(v, null)
-            : null
-          : l.createElement(
-              "div",
-              {
-                style: { color: "white" },
-                onClick: () => {
-                  n(!0);
+        return (
+          console.log("Realm is", u.De.EREALM),
+          console.log("Launcher is", u.De.LAUNCHER_TYPE),
+          t
+            ? o
+              ? l.createElement(L, null)
+              : null
+            : l.createElement(
+                "div",
+                {
+                  style: { color: "white" },
+                  onClick: () => {
+                    n(!0);
+                  },
                 },
-              },
-              "Initiate"
-            );
+                "Initiate"
+              )
+        );
       }
-      function v(e) {
+      function L(e) {
         let [t, n] = (0, l.useState)(null);
         const [o, s] = (0, l.useState)(!1),
           [c, m] = (0, l.useState)(!1);
         let f = new r.zn(),
-          S = f.GetServiceTransport();
+          E = f.GetServiceTransport();
         !(function (e) {
           (0, l.useEffect)(() => {
-            (0, g.Uh)().Init("Client Login", CLSTAMP, e);
+            (0, d.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
-        })(S),
+        })(E),
           (0, l.useEffect)(() => {
             u.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
                 1 != e.reason ? n(e) : n(null);
               }),
               SteamClient.Auth.GetLoginUIStyle().then((e) => {
-                s(e == h.cL.k_ELoginUIStyleNew);
+                s(
+                  e == h.cL.k_ELoginUIStyleNew &&
+                    u.De.EREALM != h.IN.k_ESteamRealmChina
+                );
               });
           }, []);
-        const [d, E] = (0, l.useState)(void 0),
-          [v, L] = (0, l.useState)(0);
+        const [S, g] = (0, l.useState)(void 0),
+          [L, v] = (0, l.useState)(0);
         if (
           (f.Connect().then(() => {
             m(!0);
@@ -96,7 +103,7 @@
           return null;
         const I = `${null == t ? void 0 : t.account_name}${
           null == t ? void 0 : t.reason
-        }${v.toString()}`;
+        }${L.toString()}`;
         return l.createElement(
           "div",
           { className: a().Login },
@@ -104,13 +111,13 @@
           l.createElement(i.i9, {
             key: I,
             autoFocus: !0,
-            transport: S,
+            transport: E,
             onSuccess: (e) => {
               var t;
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                E(null),
+                g(null),
                 SteamClient.Auth.SetLoginToken(
                   e.strRefreshToken,
                   e.strAccountName
@@ -118,8 +125,8 @@
                   const t = e.result,
                     n = e.message;
                   console.log(`client login returned ${t} (${n})`),
-                    E(t),
-                    1 != t && L(v + 1);
+                    g(t),
+                    1 != t && v(L + 1);
                 });
               const n =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
@@ -129,7 +136,7 @@
             embedded: !0,
             refreshInfo: t,
             disableQR: !o,
-            lastResult: d,
+            lastResult: S,
           })
         );
       }
