@@ -40590,53 +40590,6 @@
               ),
               o.createElement("div", { className: Gs().BottomFade })
             ),
-            new Date().getTime() < 1667232e6 &&
-              o.createElement(
-                "div",
-                { className: Gs().TheInternationalFeat },
-                o.createElement(
-                  "div",
-                  {
-                    className: Gs().TIFeatImgContainer,
-                    style: {
-                      backgroundImage: "url( ".concat(
-                        h.Y.IMG_URL,
-                        "/home/ti11_plug_img.jpg )"
-                      ),
-                    },
-                  },
-                  o.createElement("img", {
-                    className: Gs().TIFeatImg,
-                    src: "".concat(
-                      h.Y.IMG_URL,
-                      "/home/logo_the_international_white.png"
-                    ),
-                  }),
-                  o.createElement(
-                    m.rU,
-                    { to: u._.dpc_watch_root() },
-                    o.createElement(
-                      "div",
-                      {
-                        className: (0, b.Z)(
-                          Gs().StandardButton,
-                          Gs().TIFeatButton
-                        ),
-                      },
-                      o.createElement(
-                        "div",
-                        { className: Gs().ButtonText },
-                        (0, E.Jr)("#home_ti11_feat_btn")
-                      )
-                    )
-                  ),
-                  o.createElement(
-                    "div",
-                    { className: Gs().TIFeatText },
-                    (0, E.Jr)("#home_ti11_feat_desc")
-                  )
-                )
-              ),
             o.createElement(
               "div",
               { className: Gs().NewsSection },
