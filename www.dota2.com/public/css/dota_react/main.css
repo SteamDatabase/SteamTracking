@@ -28974,7 +28974,7 @@ a {
   .dpcroot_TI11PrizePoolBox_geMi9
   .dpcroot_PrizePoolTitle_JYJRh {
   margin-right: 120px;
-  margin-left: 40px;
+  margin-left: 150px;
   font-family: "Radiance", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -28999,7 +28999,7 @@ a {
   .dpcroot_TI11PrizePoolBox_geMi9
   .dpcroot_PrizePoolValue_2SztN {
   margin-right: 120px;
-  margin-left: 40px;
+  margin-left: 150px;
   margin-top: 3px;
   font-family: "Reaver", serif;
   font-size: 45px;
@@ -29026,7 +29026,7 @@ a {
   .dpcroot_TI11PrizePoolBox_geMi9
   .dpcroot_PrizePoolDesc_3P5rQ {
   margin-right: 120px;
-  margin-left: 40px;
+  margin-left: 150px;
   margin-top: 15px;
   color: #b9c0c2;
   font-family: "Radiance", sans-serif;
@@ -29041,6 +29041,71 @@ a {
     .dpcroot_TI11BannerContent_KDMFs
     .dpcroot_TI11PrizePoolBox_geMi9
     .dpcroot_PrizePoolDesc_3P5rQ {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_EventResultsTitle_1ReEx {
+  margin-left: 150px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11PrizePoolBox_geMi9
+    .dpcroot_EventResultsTitle_1ReEx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_EventResultsButton_3yzbY {
+  margin-top: 15px;
+  margin-left: 150px;
+  margin-right: 180px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px #00000057;
+  border-top: 2px solid #ffa192;
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderTI2022_1W8FK
+  .dpcroot_TI11BannerContainer_1GXzb
+  .dpcroot_TI11BannerContent_KDMFs
+  .dpcroot_TI11PrizePoolBox_geMi9
+  .dpcroot_EventResultsButton_3yzbY:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2022_1W8FK
+    .dpcroot_TI11BannerContainer_1GXzb
+    .dpcroot_TI11BannerContent_KDMFs
+    .dpcroot_TI11PrizePoolBox_geMi9
+    .dpcroot_EventResultsButton_3yzbY {
     display: none;
   }
 }

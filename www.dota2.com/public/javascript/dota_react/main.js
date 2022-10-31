@@ -38073,7 +38073,7 @@
                   o.createElement(
                     "div",
                     { className: xr().PrizePoolTitle },
-                    (0, E.Jr)("#ti11_bp_prizepool_title")
+                    (0, E.Jr)("#dpc_prizepool")
                   ),
                   o.createElement(
                     "div",
@@ -38082,8 +38082,22 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: xr().PrizePoolDesc },
-                    (0, E.Jr)("#ti11_bp_prizepool_desc")
+                    { className: xr().EventResultsTitle },
+                    (0, E.Jr)("#dpc_event_results_ti11")
+                  ),
+                  o.createElement(
+                    m.rU,
+                    {
+                      to: {
+                        state: { bAutoScroll: !0 },
+                        pathname: u._.dpc_standings(
+                          (0, rr.B2)(t),
+                          (0, rr.o5)(ir.BY.RESULTS)
+                        ),
+                      },
+                      className: xr().EventResultsButton,
+                    },
+                    (0, E.Jr)("#dpc_results")
                   )
                 )
               )
