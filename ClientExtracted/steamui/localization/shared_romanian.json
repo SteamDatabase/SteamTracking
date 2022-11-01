@@ -1105,6 +1105,7 @@
     "Login_MobileFlow_ShowMeQR_Button": "Arată-mi un cod QR",
     "Login_ScanAQRCode_Button": "Scanează un cod QR",
     "Login_CheckCredentials": "Te rugăm să verifici parola și numele contului și să încerci din nou.",
+    "Login_CheckCredentials_Short": "Parolă incorectă, te rugăm să încerci din nou.",
     "Login_IncorrectSteamGuard": "Cod incorect, te rugăm să încerci din nou",
     "Login_Help_SignIn": "Ajutor! Nu mă pot conecta",
     "Login_Help_AccessMobileApp": "Ajutor! Nu mai am acces la aplicația mea Steam pentru dispozitive mobile",

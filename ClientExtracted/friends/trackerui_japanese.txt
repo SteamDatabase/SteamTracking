@@ -524,6 +524,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "は次のゲームのダウンロードを完了しました"
 
+"Friends_SteamInputActionSetChangedTitle"	"コントローラアクションセット"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"コントローラ切り替えスロット"
 "Friends_SteamInputControllerPlayerNumberChanged"	"はプレイヤー%player_number%です"
 "Friends_SteamInputControllerConnectedNotification_Info" "次の設定を使用："
@@ -685,7 +687,7 @@
 "Friends_BroadcastApprove_Or" "または"
 "Friends_BroadcastApprove_Ignore" "無視"
 
-"Broadcast_FirstTime_Header" "Steam ブロードキャストにようこそ！他のプレイヤーのプレイを視聴したり、自分のSteam ライブラリ内のゲームプレイを配信することができます。"
+"Broadcast_FirstTime_Header" "Steamブロードキャストにようこそ！他のプレイヤーのプレイを視聴したり、自分のSteam ライブラリ内のゲームプレイを配信することができます。"
 "Broadcast_FirstTime_PermissionHeader" "設定のため少々お時間を頂きます..."
 "Broadcast_FirstTime_DesktopOnly" "デフォルトでは、ゲームコンテンツのみ視聴可能です。デスクトップは配信されません。"
 "Broadcast_FirstTime_FAQ" "Steam ブロードキャストに関してよくある質問をお読みください"

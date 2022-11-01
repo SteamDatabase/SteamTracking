@@ -83,6 +83,7 @@
         Compact: "newlogindialog_Compact_9CHmB",
         HeaderLogo: "newlogindialog_HeaderLogo_1rtyT",
         EmbeddedRoot: "newlogindialog_EmbeddedRoot_2Vbrf",
+        Universe: "newlogindialog_Universe_1RSkd",
         EmbeddedRootFooter: "newlogindialog_EmbeddedRootFooter_1HRJ1",
         AccountCreation: "newlogindialog_AccountCreation_19yGb",
         AccountCreationPrompt: "newlogindialog_AccountCreationPrompt_1h5_x",
@@ -1208,7 +1209,7 @@
         l = r(10708),
         u = r(29786),
         m = (r(65030), r(71993), r(78869)),
-        d = r(74963),
+        d = r(36378),
         h = (r(62689), r(79742));
       function g(e) {
         const {
@@ -1473,7 +1474,7 @@
           i = h.encrypt(e, r);
         return !1 === i ? null : i;
       }
-      var p = r(74963),
+      var p = r(36378),
         f = (r(21151), r(38440)),
         w = r(62689);
       class _ extends u.io {
@@ -1982,7 +1983,7 @@
         n = r(67294),
         a = r(22188),
         s = (r(71993), r(10708)),
-        o = (r(65030), r(74963)),
+        o = (r(65030), r(36378)),
         c = r(13271),
         l = r(61673),
         u = r(78869);
@@ -2111,7 +2112,7 @@
         l = r(9050),
         u = r(65030),
         m = r(61673),
-        d = (r(74963), r(78869)),
+        d = (r(36378), r(78869)),
         h = r(27194),
         g = r(62081),
         p = r(9669),
@@ -2307,19 +2308,19 @@
           onGetMachineAuth: b,
         });
         const [W, j] = (0, n.useState)(0),
-          [V, D] = (0, n.useState)(
+          [V, U] = (0, n.useState)(
             null !== (t = null == g ? void 0 : g.account_name) && void 0 !== t
               ? t
               : ""
           ),
-          [U, G] = (0, n.useState)(""),
+          [D, G] = (0, n.useState)(""),
           [X, H] = (0, n.useState)(!0),
           P = v(),
           Z = !(0 === B || 1 === B || 2 === B),
-          q = () => (V && U ? T(V, U, X) : Promise.resolve(0)),
+          q = () => (V && D ? T(V, D, X) : Promise.resolve(0)),
           J = () => {
             console.log(`Logging in offline with username ${V}`),
-              SteamClient.User.SetLoginCredentials(V, U, X);
+              SteamClient.User.SetLoginCredentials(V, D, X);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -2335,7 +2336,7 @@
               null === (t = (e = SteamClient.Auth).GetCommandLineCredentials) ||
                 void 0 === t ||
                 t.call(e).then((e) => {
-                  if ((e.username && D(e.username), e.password)) {
+                  if ((e.username && U(e.username), e.password)) {
                     const t = !1;
                     T(e.username, e.password, t);
                   }
@@ -2356,11 +2357,11 @@
         if (!Z) {
           const t = n.createElement(
             "div",
-            { className: c().SideBySide },
+            { className: (0, a.Z)(c().SideBySide, P && c().Embedded) },
             n.createElement(z, {
               strAccountName: V,
-              onAccountNameChange: D,
-              strPassword: U,
+              onAccountNameChange: U,
+              strPassword: D,
               onPasswordChange: G,
               bRememberMe: X,
               onRememberMeChange: H,
@@ -2379,88 +2380,76 @@
               })
           );
           if (P) {
-            let e = d.De.IN_STEAMUI,
-              r = 0;
-            return (
-              d.De.IN_LOGIN && (r = 36),
-              console.log(d.De),
+            let e = d.De.IN_STEAMUI;
+            return n.createElement(
+              ge,
+              { className: (0, a.Z)(c().EmbeddedRoot, e && c().InClient) },
+              !e && !1,
+              n.createElement(be, {
+                realm: d.De.EREALM,
+                className: c().HeaderLogo,
+              }),
+              n.createElement(F, { refreshInfo: g }),
+              t,
               n.createElement(
-                ge,
+                "div",
                 {
-                  gap: r,
-                  className: (0, a.Z)(c().EmbeddedRoot, e && c().InClient),
+                  className: (0, a.Z)(
+                    c().EmbeddedRootFooter,
+                    e && c().InClient
+                  ),
                 },
-                !e && !1,
-                d.De.IN_LOGIN &&
-                  n.createElement(be, {
-                    realm: d.De.EREALM,
-                    className: c().HeaderLogo,
-                  }),
-                n.createElement(F, { refreshInfo: g }),
-                t,
+                (function (e) {
+                  return e
+                    ? n.createElement(
+                        de,
+                        {
+                          onClick: () => {
+                            SteamClient.LoginUI.ShowAccountRecovery();
+                          },
+                        },
+                        (0, h.Xx)("#Login_Help_SignIn")
+                      )
+                    : n.createElement(
+                        de,
+                        {
+                          href: `${
+                            d.De.HELP_BASE_URL
+                          }wizard/HelpWithLogin?redir=${encodeURIComponent(
+                            document.location.href
+                          )}`,
+                        },
+                        (0, h.Xx)("#Login_Help_SignIn")
+                      );
+                })(e),
                 n.createElement(
                   "div",
                   {
-                    className: (0, a.Z)(
-                      c().EmbeddedRootFooter,
-                      e && c().InClient
-                    ),
+                    className: (0, a.Z)(c().AccountCreation, e && c().InClient),
                   },
+                  n.createElement(
+                    "span",
+                    { className: c().AccountCreationPrompt },
+                    (0, h.Xx)("#Login_NoSteamAccount")
+                  ),
                   (function (e) {
                     return e
                       ? n.createElement(
                           de,
                           {
+                            inline: !0,
                             onClick: () => {
-                              SteamClient.LoginUI.ShowAccountRecovery();
+                              SteamClient.LoginUI.ShowAccountCreation();
                             },
                           },
-                          (0, h.Xx)("#Login_Help_SignIn")
+                          (0, h.Xx)("#Login_CreateAccount")
                         )
                       : n.createElement(
                           de,
-                          {
-                            href: `${
-                              d.De.HELP_BASE_URL
-                            }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                              document.location.href
-                            )}`,
-                          },
-                          (0, h.Xx)("#Login_Help_SignIn")
+                          { inline: !0, href: `${d.De.STORE_BASE_URL}join/` },
+                          (0, h.Xx)("#Login_CreateAccount")
                         );
-                  })(e),
-                  n.createElement(
-                    "div",
-                    {
-                      className: (0, a.Z)(
-                        c().AccountCreation,
-                        e && c().InClient
-                      ),
-                    },
-                    n.createElement(
-                      "span",
-                      { className: c().AccountCreationPrompt },
-                      (0, h.Xx)("#Login_NoSteamAccount")
-                    ),
-                    (function (e) {
-                      return e
-                        ? n.createElement(
-                            de,
-                            {
-                              inline: !0,
-                              onClick: () => {
-                                SteamClient.LoginUI.ShowAccountCreation();
-                              },
-                            },
-                            (0, h.Xx)("#Login_CreateAccount")
-                          )
-                        : n.createElement(
-                            de,
-                            { inline: !0, href: `${d.De.STORE_BASE_URL}join/` },
-                            (0, h.Xx)("#Login_CreateAccount")
-                          );
-                    })(e)
-                  )
+                  })(e)
                 )
               )
             );
@@ -2658,7 +2647,7 @@
             type: "password",
             autoFocus: E,
           }),
-          n.createElement(D, {
+          n.createElement(U, {
             label: (0, h.Xx)("#Login_RememberMe_Short"),
             value: m,
             onChange: g,
@@ -2904,7 +2893,7 @@
           t
         );
       }
-      function D(e) {
+      function U(e) {
         const { label: t, onChange: r, value: i } = e;
         let a = () => {
           r && r(!i);
@@ -2918,11 +2907,11 @@
               " " == e.key && (a(), e.preventDefault());
             },
           },
-          n.createElement(U, { value: i }),
+          n.createElement(D, { value: i }),
           n.createElement("div", { className: c().CheckboxFieldLabel }, t)
         );
       }
-      function U(e) {
+      function D(e) {
         const { value: t } = e;
         return n.createElement(
           "div",
@@ -3816,7 +3805,7 @@
         n = r(14344),
         a = r(45520),
         s = (r(10708), r(78869)),
-        o = (r(74963), r(12369)),
+        o = (r(36378), r(12369)),
         c = (r(61673), r(43921)),
         l = r.n(c),
         u = (r(96794), r(15641));
@@ -4766,7 +4755,7 @@
         }
       }
     },
-    74963: (e, t, r) => {
+    36378: (e, t, r) => {
       "use strict";
       r.d(t, {
         $h: () => W,
@@ -8568,7 +8557,7 @@
         MrB: () => K,
         NP6: () => T,
         OWX: () => Te,
-        P9w: () => U,
+        P9w: () => D,
         Q0U: () => Ee,
         S2L: () => xe,
         SUY: () => g,
@@ -8583,8 +8572,8 @@
         VwZ: () => Fe,
         X: () => w,
         XBH: () => Z,
-        YVI: () => Ue,
-        YVR: () => D,
+        YVI: () => De,
+        YVR: () => U,
         YqJ: () => A,
         YtI: () => h,
         Yz9: () => S,
@@ -8603,7 +8592,7 @@
         ffh: () => B,
         gR: () => N,
         gf_: () => ze,
-        j7C: () => De,
+        j7C: () => Ue,
         k4K: () => f,
         lsH: () => X,
         m4d: () => fe,
@@ -8804,7 +8793,7 @@
         );
       }
       function f(e) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? n.createElement(
               "svg",
               Object.assign(
@@ -9270,7 +9259,7 @@
         );
       }
       function F(e) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? n.createElement(
               "svg",
               Object.assign(
@@ -9699,30 +9688,33 @@
         );
       }
       function V(e) {
-        return l.De.IN_GAMEPADUI
+        let { bPending: t, bShowArm: r } = e,
+          a = (0, i._T)(e, ["bPending", "bShowArm"]);
+        return (0, l.id)()
           ? n.createElement(
               "svg",
-              {
-                width: "36",
-                height: "36",
-                className: "SVGIcon_Button SVGIcon_FriendIcon",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-              },
+              Object.assign(
+                {
+                  className: "SVGIcon_Button SVGIcon_FriendIcon",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg",
+                },
+                a
+              ),
               n.createElement("path", {
                 d: "M18 17C15.6131 17 13.3239 17.9482 11.636 19.636C9.94821 21.3239 9 23.6131 9 26V31H27V26C27 23.6131 26.0518 21.3239 24.364 19.636C22.6761 17.9482 20.3869 17 18 17ZM18 14C18.9889 14 19.9556 13.7068 20.7779 13.1573C21.6001 12.6079 22.241 11.827 22.6194 10.9134C22.9978 9.99979 23.0969 8.99446 22.9039 8.02455C22.711 7.05465 22.2348 6.16373 21.5355 5.46447C20.8363 4.76521 19.9454 4.289 18.9755 4.09608C18.0055 3.90315 17.0002 4.00217 16.0866 4.3806C15.173 4.75904 14.3921 5.39991 13.8427 6.22215C13.2932 7.0444 13 8.0111 13 9C13 10.3261 13.5268 11.5979 14.4645 12.5355C15.4021 13.4732 16.6739 14 18 14Z",
                 fill: "currentColor",
               }),
               n.createElement("path", {
                 className: "WavingArm",
-                opacity: e.bShowArm ? "1" : "0",
+                opacity: r ? "1" : "0",
                 d: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
                 fill: "currentColor",
                 strokeWidth: "0",
               }),
               n.createElement("path", {
-                opacity: e.bShowArm ? "1" : "0",
+                opacity: r ? "1" : "0",
                 d: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
                 fill: "currentColor",
                 strokeWidth: "0",
@@ -9735,7 +9727,7 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 className:
                   "SVGIcon_Button SVGIcon_FriendIcon" +
-                  (e.bPending ? " SVGIcon_FriendIcon_Pending" : ""),
+                  (t ? " SVGIcon_FriendIcon_Pending" : ""),
                 x: "0px",
                 y: "0px",
                 width: "256px",
@@ -9759,7 +9751,7 @@
                 }),
                 n.createElement("path", {
                   className: "WavingArm",
-                  opacity: e.bPending ? "1" : "0",
+                  opacity: t ? "1" : "0",
                   d: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
                 })
               ),
@@ -9784,13 +9776,13 @@
                 }),
                 n.createElement("path", {
                   className: "WavingArm",
-                  opacity: e.bPending ? "1" : "0",
+                  opacity: t ? "1" : "0",
                   d: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
                 })
               )
             );
       }
-      function D() {
+      function U() {
         return n.createElement(
           "svg",
           {
@@ -9825,7 +9817,7 @@
           })
         );
       }
-      function U(e) {
+      function D(e) {
         return n.createElement(
           "svg",
           {
@@ -10922,7 +10914,7 @@
         );
       }
       function Me(e, t) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? n.createElement(
               "svg",
               Object.assign(
@@ -11436,7 +11428,7 @@
           })
         );
       }
-      function De(e) {
+      function Ue(e) {
         const { className: t } = e,
           r = (0, i._T)(e, ["className"]);
         return n.createElement(
@@ -11459,7 +11451,7 @@
           })
         );
       }
-      function Ue(e) {
+      function De(e) {
         const { className: t } = e,
           r = (0, i._T)(e, ["className"]);
         return n.createElement(

@@ -524,6 +524,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "已完成下載"
 
+"Friends_SteamInputActionSetChangedTitle"	"控制器操作組合"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"控制器切換欄位"
 "Friends_SteamInputControllerPlayerNumberChanged"	"目前為玩家編號 %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "正使用的配置來自"

@@ -9062,6 +9062,12 @@ A:active {
   align-items: center;
   padding: 16px 24px;
 }
+.marketingmessages_BrowserWrapper_2Pg6X {
+  display: flex;
+  flex-direction: column;
+  width: 624px;
+  height: 100%;
+}
 @keyframes deskjobpromo_ItemFocusAnim-darkerGrey-nocolor_3HVm- {
   from {
     background: #3d4450;

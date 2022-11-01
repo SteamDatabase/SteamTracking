@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "A Steam"
 "Friends_DownloadNotification_Info" "befejezte a letöltést:"
 
+"Friends_SteamInputActionSetChangedTitle"	"Játékvezérlő-műveletkészlet"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"A játékvezérlő száma felcserélve"
 "Friends_SteamInputControllerPlayerNumberChanged"	"mostantól a(z) %player_number%. játékos"
 "Friends_SteamInputControllerConnectedNotification_Info" "Konfiguráció tőle:"

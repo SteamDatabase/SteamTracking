@@ -7706,7 +7706,7 @@
 	"Library_Details_FieldLabel_FlickStickDepressionSpeed" "释放抑制速度"
 	"Library_Details_FieldLabel_FlickStickSnapMode" "对齐模式"
 	
-	"Library_Controller_Property_Value_EFlickStickSnapAngles_NoSnap" "无对齐"
+	"Library_Controller_Property_Value_EFlickStickSnapAngles_NoSnap" "不对齐"
 	"ControllerBinding_FlickStickSnapMode_NoSnap" "无对齐"
 	"ControllerBinding_FlickStickSnapMode_NoSnap_Description" "选择快速转向对齐的角度，以获得更为一致的转向。完全关闭此功能可以进行单纯的转向。也可以使用前向死区值来仅对齐可调的前角。"
 	"Library_Controller_Property_Value_EFlickStickSnapAngles_Half" "二等分对齐"

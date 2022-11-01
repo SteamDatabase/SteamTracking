@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "er ferdig med å laste ned"
 
+"Friends_SteamInputActionSetChangedTitle"	"Kontrollerhandlingssett"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Kontroller byttet plass"
 "Friends_SteamInputControllerPlayerNumberChanged"	"er nå spiller %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Bruker konfigurasjoner fra"

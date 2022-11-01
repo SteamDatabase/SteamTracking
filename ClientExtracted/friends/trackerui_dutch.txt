@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "is klaar met het downloaden van"
 
+"Friends_SteamInputActionSetChangedTitle"	"Controlleractieset"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Controller is van positie gewisseld"
 "Friends_SteamInputControllerPlayerNumberChanged"	"is nu speler %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Gebruikt configuraties van"

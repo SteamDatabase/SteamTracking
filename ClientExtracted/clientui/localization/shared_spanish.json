@@ -1105,6 +1105,7 @@
 	"Login_MobileFlow_ShowMeQR_Button": "Ver código QR",
 	"Login_ScanAQRCode_Button": "Escanear código QR",
 	"Login_CheckCredentials": "Comprueba tu contraseña y nombre de cuenta e inténtalo de nuevo.",
+	"Login_CheckCredentials_Short": "Contraseña incorrecta. Inténtalo de nuevo.",
 	"Login_IncorrectSteamGuard": "Código incorrecto. Inténtalo de nuevo.",
 	"Login_Help_SignIn": "Ayuda, no puedo iniciar sesión",
 	"Login_Help_AccessMobileApp": "Ayuda, ya no tengo acceso a mi aplicación Steam Mobile",

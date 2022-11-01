@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "приключи свалянето на"
 
+"Friends_SteamInputActionSetChangedTitle"	"Набор от действия за контролера"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Контролерът размени слотове"
 "Friends_SteamInputControllerPlayerNumberChanged"	"вече е играч %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Използване на конфигурации от"

@@ -1105,6 +1105,7 @@
 	"Login_MobileFlow_ShowMeQR_Button": "Mostrar um código QR",
 	"Login_ScanAQRCode_Button": "Ler um código QR",
 	"Login_CheckCredentials": "Verifique a sua senha e nome de usuário e tente novamente.",
+	"Login_CheckCredentials_Short": "Senha incorreta, tente novamente.",
 	"Login_IncorrectSteamGuard": "Código incorreto, tente novamente.",
 	"Login_Help_SignIn": "Não consigo iniciar a sessão",
 	"Login_Help_AccessMobileApp": "Não tenho mais acesso ao aplicativo móvel do Steam",

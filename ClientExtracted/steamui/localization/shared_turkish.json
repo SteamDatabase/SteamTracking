@@ -1105,6 +1105,7 @@
     "Login_MobileFlow_ShowMeQR_Button": "QR kodunu göster",
     "Login_ScanAQRCode_Button": "Bir QR kodu tara",
     "Login_CheckCredentials": "Lütfen hesap adınızı ve parolanızı kontrol edip tekrar deneyin.",
+    "Login_CheckCredentials_Short": "Hatalı parola, lütfen tekrar deneyin.",
     "Login_IncorrectSteamGuard": "Hatalı kod, lütfen tekrar deneyin",
     "Login_Help_SignIn": "Yardım edin, giriş yapamıyorum",
     "Login_Help_AccessMobileApp": "Yardım edin, Steam mobil uygulamasına artık erişemiyorum",

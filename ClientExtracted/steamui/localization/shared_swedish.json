@@ -1105,6 +1105,7 @@
     "Login_MobileFlow_ShowMeQR_Button": "Visa mig en QR-kod",
     "Login_ScanAQRCode_Button": "Skanna en QR-kod",
     "Login_CheckCredentials": "Kontrollera ditt lösenord och kontonamn och försök igen.",
+    "Login_CheckCredentials_Short": "Fel lösenord. Försök igen.",
     "Login_IncorrectSteamGuard": "Fel kod. Försök igen",
     "Login_Help_SignIn": "Hjälp, jag kan inte logga in",
     "Login_Help_AccessMobileApp": "Hjälp, jag har inte längre tillgång till Steams mobilapp",

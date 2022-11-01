@@ -66,7 +66,7 @@
 "Overlay_Taskbar_WebBrowser"	"Webový prohlížeč"
 "Overlay_Taskbar_Screenshots"	"Snímky"
 "Overlay_Taskbar_DLC"		"DLC (stáhnutelný obsah)"
-"Overlay_Taskbar_Guide"		"Průvodce"
+"Overlay_Taskbar_Guide"		"Návod"
 "Overlay_Taskbar_legacycdkey"	"CD klíč"
 "Overlay_Taskbar_Recommend"	"Doporučit"
 "Overlay_Taskbar_Workshop"	"Workshop"

@@ -1105,6 +1105,7 @@
 	"Login_MobileFlow_ShowMeQR_Button": "显示二维码",
 	"Login_ScanAQRCode_Button": "扫描二维码",
 	"Login_CheckCredentials": "请核对您的密码和帐户名称并重试。",
+	"Login_CheckCredentials_Short": "密码不正确，请重试。",
 	"Login_IncorrectSteamGuard": "代码错误，请重试",
 	"Login_Help_SignIn": "请求帮助，我无法登录。",
 	"Login_Help_AccessMobileApp": "请求帮助，我已无法访问我的 Steam 手机应用。",

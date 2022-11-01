@@ -163,6 +163,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsortvector.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
@@ -228,6 +229,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/libraryassetcache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/newlibrarypage.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/overlay/overlaymanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.cpp

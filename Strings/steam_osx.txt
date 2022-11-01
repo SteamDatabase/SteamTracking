@@ -48,8 +48,8 @@ __const
 __DATA
 __cfstring
 __DATA
-0<?
-0<?
+@<?
+@<?
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -57,23 +57,19 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
-pD?
-pD?
 __objc_superrefs__DATA
-PE?
-PE?
+`E?
+`E?
 __objc_ivar
 __DATA
-XE?
-XE?
+hE?
+hE?
 __objc_data
 __DATA
-`E?
-`E?
+pE?
+pE?
 __data
 __DATA
-F?
-F?
 __thread_vars
 __DATA
 0
@@ -165,7 +161,6 @@ Hi
 &
 &
 n&
-36
 2
 6
 6
@@ -2186,6 +2181,7 @@ Documents/Steam%s Content
 -noreactlogin
 -gamepadnewauth
 -nogamepadnewauth
+-nogamepaduipopups
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2228,7 +2224,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Oct 27 2022 15:03:40
+Startup - updater built Oct 31 2022 15:12:06
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2515,8 +2511,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Oct 27 2022
-15:03:41
+Oct 31 2022
+15:12:07
 crashhandler003
 steam
 Steam Executable Crash
@@ -2613,7 +2609,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:03:39
+15:12:05
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10378,7 +10374,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-15:01:46
+15:10:17
 Jan
 Feb
 Mar
@@ -12770,7 +12766,6 @@ n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 s>7
 
-xe7
 
 0
 ?
@@ -12802,7 +12797,6 @@ Hi
 &
 &
 n&
-36
 2
 6
 6
@@ -12815,14 +12809,14 @@ j0
 '
 '
 &
-N8
 &
 t&
 8
 8
-8
+Z5
 
 0
+5
 5
 5
 #&
@@ -12849,9 +12843,7 @@ AT=
 D
 @
 @
-u4
-B4
-44
+t4
 0
 4
 4
@@ -12888,38 +12880,38 @@ IcE
 IcE
 @
 @
-r3
-"3
+3
+=3
 V
 $-
 7
-x2
+=
+2
+,
+,
+,
 =
 ,
 ,
-,
-=
-,
-,
-O1
+T1
+g1
 m+
 1
+=3
 =+
 +
-=0
 !
 @
 0
 0
+0
 A"
 "
+/
 "
 @
-/
 &
-&3
-f.
-s.
+83
 .
 .
 .
@@ -12933,8 +12925,8 @@ s.
 x&
 u&
 m&
+Z,
 >&
-*,
 @
 M9e
 @
@@ -12964,11 +12956,11 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
-Y*
 %
 `
 `
 @
+#*
 2
 2
 2
@@ -12998,6 +12990,8 @@ M)u
 =
 &
 &
+h(
+D(
 (
 (
 (
@@ -13317,8 +13311,6 @@ j
 j
 
 9!
-I$
-2$
 t$I;M
 $
 ~%
@@ -13635,6 +13627,7 @@ Q
 @
 @
 @
+3
 0
 0
 
@@ -13642,7 +13635,6 @@ Q
 
 
 
-t
 
 Hc
 0
@@ -13656,8 +13648,6 @@ Hc
 P
 P
 @
-y
-w
 @
 @
 @

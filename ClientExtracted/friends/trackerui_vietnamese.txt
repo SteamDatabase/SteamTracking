@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "đã tải xong"
 
+"Friends_SteamInputActionSetChangedTitle"	"Bộ hành động tay cầm"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Các ô tay cầm được đổi"
 "Friends_SteamInputControllerPlayerNumberChanged"	"giờ là người chơi số %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Sử dụng thiết lập của"

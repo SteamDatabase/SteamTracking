@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "Ολοκληρώθηκε η λήψη του"
 
+"Friends_SteamInputActionSetChangedTitle"	"Σετ ενεργειών χειριστηρίου"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Χειριστήριο άλλαξε θέσεις"
 "Friends_SteamInputControllerPlayerNumberChanged"	"είναι τώρα Παίκτης %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Χρήση διαμορφώσεων από"

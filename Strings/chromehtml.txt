@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+`^
+`^
 __stubs
 __TEXT
 __stub_helper
@@ -19,7 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-0e
+,e
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -1066,6 +1068,8 @@ Don't use ANGLE for rendering backend on Linux
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 -cef-disable-gpu
 Disable GPU usage in CEF (force software rendering/compositing)
+-cef-force-gpu
+Force enable GPU acceleration
 -cef-delaypageload
 Disable early-out for known page loads
 -cef-disable-delaypageload
@@ -1138,6 +1142,8 @@ CalculateNativeWinOcclusion
 -dev
 --single-process
 --in-process-gpu
+--ignore-gpu-blocklist
+--ignore-gpu-blacklist
 --disable-d3d11
 -disablejslogging
 -verbosejslogging
@@ -2344,10 +2350,12 @@ sc_schinese
 
 @
 @
-@
-N
-J
 
+E
+@
+Y
+j
+s
 0
 0
 Hi
@@ -2395,7 +2403,6 @@ IcE
 @
 V
 =
-/
 =
 !
 @

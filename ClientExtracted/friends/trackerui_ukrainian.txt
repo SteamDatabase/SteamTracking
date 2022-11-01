@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "завершив завантаження"
 
+"Friends_SteamInputActionSetChangedTitle"	"Набір дій контролера"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Змінений номер контролера"
 "Friends_SteamInputControllerPlayerNumberChanged"	"— тепер гравець %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Використовується конфігурація"

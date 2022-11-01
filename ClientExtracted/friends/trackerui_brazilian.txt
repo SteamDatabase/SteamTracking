@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "terminou de baixar"
 
+"Friends_SteamInputActionSetChangedTitle"	"Conjunto de ação do controle"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Jogadores trocados"
 "Friends_SteamInputControllerPlayerNumberChanged"	"agora é o jogador nº %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Usando configurações de"

@@ -1105,6 +1105,7 @@
 	"Login_MobileFlow_ShowMeQR_Button": "QR 코드 표시",
 	"Login_ScanAQRCode_Button": "QR 코드 스캔",
 	"Login_CheckCredentials": "비밀번호와 계정 이름이 맞는지 확인하고 다시 시도하세요.",
+	"Login_CheckCredentials_Short": "잘못된 비밀번호입니다. 다시 시도해 주세요.",
 	"Login_IncorrectSteamGuard": "잘못된 코드입니다. 다시 시도해 주세요.",
 	"Login_Help_SignIn": "로그인 관련 문제",
 	"Login_Help_AccessMobileApp": "Steam 모바일 앱을 더 이상 사용할 수 없습니다.",

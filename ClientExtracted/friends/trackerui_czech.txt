@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "dokončil stahování"
 
+"Friends_SteamInputActionSetChangedTitle"	"Rozvržení ovladače"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Byl změněn slot ovladače"
 "Friends_SteamInputControllerPlayerNumberChanged"	"je nyní hráč %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Jsou používána nastavení z účtu"

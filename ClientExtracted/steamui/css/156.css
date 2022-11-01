@@ -782,6 +782,12 @@
   background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
   padding: 34px 40px 15px 40px;
   box-sizing: border-box;
+  gap: 36px;
+}
+@media screen and (max-width: 796px) {
+  .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf {
+    gap: 12px;
+  }
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf.IN_CLIENT {
   width: 630px;
@@ -794,6 +800,22 @@
   .newlogindialog_Login_ZOBYq
     .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
     min-width: 0px;
+  }
+}
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EmbeddedRoot_2Vbrf
+  .newlogindialog_Universe_1RSkd {
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  right: 118px;
+  top: 46px;
+}
+@media screen and (max-width: 796px) {
+  .newlogindialog_Login_ZOBYq
+    .newlogindialog_EmbeddedRoot_2Vbrf
+    .newlogindialog_Universe_1RSkd {
+    display: none;
   }
 }
 .newlogindialog_Login_ZOBYq
@@ -959,6 +981,9 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #fff;
+}
+.centerPrimaryHeader .newlogindialog_PrimaryHeader_39uMK {
+  text-align: center;
 }
 .qrcode_QRBits_3FhhK {
   display: grid;

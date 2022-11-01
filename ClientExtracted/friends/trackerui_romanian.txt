@@ -523,6 +523,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "a terminat descărcarea"
 
+"Friends_SteamInputActionSetChangedTitle"	"Setul de acțiuni ale controlerului"
+"Friends_SteamInputActionSetChanged"	"%action_set%"
 "Friends_SteamInputControllerPlayerNumberTitle"	"Controlerul a schimbat numărul de jucător"
 "Friends_SteamInputControllerPlayerNumberChanged"	"este acum jucătorul cu numărul %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Folosește configurarea de la"

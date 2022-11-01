@@ -1105,6 +1105,7 @@
 	"Login_MobileFlow_ShowMeQR_Button": "Mutass egy QR-kódot",
 	"Login_ScanAQRCode_Button": "QR-kód beolvasása",
 	"Login_CheckCredentials": "Ellenőrizd a jelszavad és fiókneved, majd próbáld újra.",
+	"Login_CheckCredentials_Short": "Helytelen jelszó, kérjük, próbáld újra.",
 	"Login_IncorrectSteamGuard": "Helytelen kód, próbáld újra.",
 	"Login_Help_SignIn": "Segítség, nem tudok bejelentkezni",
 	"Login_Help_AccessMobileApp": "Segítség, már nincs hozzáférésem a Steam mobilalkalmazásomhoz",
