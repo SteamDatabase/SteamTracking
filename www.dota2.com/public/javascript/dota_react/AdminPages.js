@@ -32,16 +32,17 @@
         Link: "teamdetails_Link_3Gjo1",
         MediumTextField: "teamdetails_MediumTextField_2IXLM",
         SmallTextField: "teamdetails_SmallTextField_1y2t9",
+        SmoothLine: "teamdetails_SmoothLine_3YaqJ",
       };
     },
     84437: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => L });
+      n.r(t), n.d(t, { default: () => D });
       var a,
         r = n(70655),
-        o = n(9669),
-        c = n.n(o),
-        i = n(26016),
+        i = n(9669),
+        o = n.n(i),
+        c = n(26016),
         l = n(5977),
         m = n(67294),
         u = n(64593),
@@ -49,19 +50,20 @@
         d = n(12814),
         _ = n(8460),
         f = n(5550),
-        A = n(28856),
-        p = n(48278),
-        g = n.n(p),
+        p = n(28856),
+        A = n(48278),
+        g = n.n(A),
         v = "public",
-        E = function (e) {
+        E = 5e3,
+        T = function (e) {
           return m.createElement(
             "a",
             {
               href: ""
-                .concat(i.Y.BASE_URL, "persona/showplayer/")
+                .concat(c.Y.BASE_URL, "persona/showplayer/")
                 .concat(e, "?u=")
                 .concat(v, "&appid=")
-                .concat(i.Y.DOTA_APP_ID),
+                .concat(c.Y.DOTA_APP_ID),
             },
             e
           );
@@ -86,7 +88,7 @@
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
       })(a || (a = {}));
-      var T = {
+      var y = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -106,7 +108,7 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        y = [
+        k = [
           {
             enum: a.kTRAA_RegisterTeam,
             formatFunction: function () {
@@ -326,7 +328,7 @@
             },
           },
         ],
-        k = [
+        h = [
           {
             key: "pro",
             displayName: "Pro?",
@@ -359,12 +361,12 @@
             },
           },
         ],
-        h = [
+        R = [
           {
             key: "account_id",
             displayName: "Account ID",
             formatFunction: function (e) {
-              return E(e);
+              return T(e);
             },
           },
           { key: "name", displayName: "Name" },
@@ -396,7 +398,7 @@
                       return (0, r.Jh)(this, function (n) {
                         switch (n.label) {
                           case 0:
-                            return [4, c().get("".concat(e))];
+                            return [4, o().get("".concat(e))];
                           case 1:
                             return (
                               n.sent(),
@@ -429,7 +431,7 @@
                         return (0, r.Jh)(this, function (n) {
                           switch (n.label) {
                             case 0:
-                              return [4, c().get("".concat(e))];
+                              return [4, o().get("".concat(e))];
                             case 1:
                               return (
                                 n.sent(),
@@ -449,17 +451,17 @@
             },
           },
         ],
-        R = [
+        N = [
           {
             key: "manager_account_id",
             displayName: "Manager Account ID",
             formatFunction: function (e) {
-              return E(e);
+              return T(e);
             },
           },
           { key: "manager_email", displayName: "Manager Email" },
         ],
-        N = [
+        F = [
           {
             key: "color_primary",
             displayName: "Color (Primary)",
@@ -528,12 +530,12 @@
                           var t = e.currentTarget;
                           (t.onerror = null),
                             (t.src = "".concat(
-                              i.Y.IMG_URL,
+                              c.Y.IMG_URL,
                               "teams_override/team_unknown_web.png"
                             ));
                         },
                         src: ""
-                          .concat(i.Y.CDN_URL, "apps/dota2/teamlogos/")
+                          .concat(c.Y.CDN_URL, "apps/dota2/teamlogos/")
                           .concat(t, ".png"),
                       })
                     )
@@ -542,7 +544,7 @@
             },
           },
         ],
-        F = [
+        I = [
           {
             key: "ugc_logo_url",
             displayName: "Logo",
@@ -621,7 +623,7 @@
             key: "account_id",
             displayName: "Account ID",
             formatFunction: function (e) {
-              return E(e);
+              return T(e);
             },
           },
           {
@@ -635,7 +637,7 @@
             key: "action",
             displayName: "Action Enum",
             formatFunction: function (e) {
-              return "".concat(T[e], " (").concat(e, ")");
+              return "".concat(y[e], " (").concat(e, ")");
             },
           },
           {
@@ -645,7 +647,7 @@
               return (
                 void 0 === t && (t = ""),
                 void 0 === n && (n = ""),
-                y
+                k
                   .find(function (t) {
                     return t.enum === e;
                   })
@@ -654,7 +656,7 @@
             },
           },
         ],
-        I = [
+        S = [
           { key: "workshop_account_id", displayName: "Workshop Account ID" },
           {
             key: "comment",
@@ -722,7 +724,7 @@
                   "a",
                   {
                     href: ""
-                      .concat(i.Y.BASE_URL)
+                      .concat(c.Y.BASE_URL)
                       .concat(f._.teamdetails(n).substr(1)),
                   },
                   n
@@ -747,10 +749,10 @@
                         {
                           key: t,
                           href: ""
-                            .concat(i.Y.BASE_URL)
+                            .concat(c.Y.BASE_URL)
                             .concat("matches/match/".concat(t), "?u=")
                             .concat(v, "&appid=")
-                            .concat(i.Y.DOTA_APP_ID),
+                            .concat(c.Y.DOTA_APP_ID),
                         },
                         t
                       )),
@@ -768,58 +770,100 @@
             },
           },
         ],
-        S = function (e) {
+        L = function (e) {
           var t = (0, l.UO)().id,
             n = (0, m.useState)([]),
-            o = n[0],
+            i = n[0],
             f = n[1],
-            p = (0, m.useState)(!1),
-            E = p[0],
-            T = p[1],
-            y = (0, m.useState)(!1),
-            S = y[0],
-            L = y[1],
-            D = (0, m.useState)({}),
-            O = D[0],
-            G = D[1],
+            A = (0, m.useState)(!1),
+            T = A[0],
+            y = A[1],
+            k = (0, m.useState)(!1),
+            L = k[0],
+            D = k[1],
+            O = (0, m.useState)({}),
+            U = O[0],
+            G = O[1],
             w = (0, m.useState)(!1),
-            U = w[0],
-            P = w[1],
-            Y = (0, m.useState)(!1),
-            M = Y[0],
-            B = Y[1],
-            x = (0, m.useState)({}),
-            j = x[0],
-            J = x[1],
-            H = (0, m.useState)([]),
-            V = H[0],
-            W = H[1],
-            K = (0, m.useState)(!0),
-            Z = K[0],
-            q = K[1],
-            z = (0, m.useState)([]),
-            X = z[0],
-            Q = z[1];
-          function $() {
+            P = w[0],
+            Y = w[1],
+            M = (0, m.useState)(!1),
+            x = M[0],
+            B = M[1],
+            J = (0, m.useState)({}),
+            j = J[0],
+            H = J[1],
+            V = (0, m.useState)([]),
+            W = V[0],
+            K = V[1],
+            Z = (0, m.useState)(!0),
+            q = Z[0],
+            z = Z[1],
+            X = (0, m.useState)([]),
+            Q = X[0],
+            $ = X[1];
+          function ee() {
+            var e, t;
+            return (0, r.mG)(this, void 0, void 0, function () {
+              var n, a, i;
+              return (0, r.Jh)(this, function (r) {
+                switch (r.label) {
+                  case 0:
+                    return c.Y.DOTA_APP_ID &&
+                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+                      ? ((n = {
+                          appid: c.Y.DOTA_APP_ID,
+                          registration_period:
+                            c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                        }),
+                        [
+                          4,
+                          o().get(
+                            c.Y.BASE_URL +
+                              "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
+                            { params: n }
+                          ),
+                        ])
+                      : [2];
+                  case 1:
+                    return (
+                      (a = r.sent()),
+                      (i =
+                        (null ===
+                          (t =
+                            null === (e = null == a ? void 0 : a.data) ||
+                            void 0 === e
+                              ? void 0
+                              : e.result) || void 0 === t
+                          ? void 0
+                          : t.teams) || []).length && f(i),
+                      y(!0),
+                      [2]
+                    );
+                }
+              });
+            });
+          }
+          function te() {
             return (0, r.mG)(this, void 0, void 0, function () {
               var e,
                 n,
                 a,
-                o,
+                i,
                 l,
                 m,
                 u = this;
               return (0, r.Jh)(this, function (s) {
                 switch (s.label) {
                   case 0:
-                    return i.Y.DOTA_APP_ID &&
-                      i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
+                    return c.Y.DOTA_APP_ID &&
+                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
                       t
-                      ? ((e = { appid: i.Y.DOTA_APP_ID, u: v, team_id: t }),
+                      ? ((e = { appid: c.Y.DOTA_APP_ID, u: v, team_id: t }),
                         [
                           4,
-                          c().get(
-                            i.Y.BASE_URL +
+                          o().get(
+                            c.Y.BASE_URL +
                               "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
                             { params: e }
                           ),
@@ -828,14 +872,14 @@
                   case 1:
                     (n = s.sent()),
                       (a = null == n ? void 0 : n.data),
-                      (o = a.members || []),
+                      (i = a.members || []),
                       (s.label = 2);
                   case 2:
                     return (
                       s.trys.push([2, 5, , 6]),
                       [
                         4,
-                        c().get(i.Y.BASE_URL + "teams/getugcfilelinks/", {
+                        o().get(c.Y.BASE_URL + "teams/getugcfilelinks/", {
                           params: { team_id: t },
                         }),
                       ]
@@ -846,7 +890,7 @@
                       [
                         4,
                         Promise.all(
-                          o.map(function (e, t) {
+                          i.map(function (e, t) {
                             return (0, r.mG)(u, void 0, void 0, function () {
                               var n, a, l, m;
                               return (0, r.Jh)(this, function (r) {
@@ -854,8 +898,8 @@
                                   case 0:
                                     return [
                                       4,
-                                      c().get(
-                                        i.Y.BASE_URL +
+                                      o().get(
+                                        c.Y.BASE_URL +
                                           "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
                                         { params: { account_id: e.account_id } }
                                       ),
@@ -863,12 +907,12 @@
                                   case 1:
                                     return (
                                       (n = r.sent()),
-                                      (o[t].is_pro = !!(null ===
+                                      (i[t].is_pro = !!(null ===
                                         (l = null == n ? void 0 : n.data) ||
                                       void 0 === l
                                         ? void 0
                                         : l.is_pro)),
-                                      (o[t].name =
+                                      (i[t].name =
                                         (null ===
                                           (m = null == n ? void 0 : n.data) ||
                                         void 0 === m
@@ -876,8 +920,8 @@
                                           : m.name) || ""),
                                       [
                                         4,
-                                        c().get(
-                                          i.Y.BASE_URL +
+                                        o().get(
+                                          c.Y.BASE_URL +
                                             "teams/getpersonaname/",
                                           {
                                             params: {
@@ -890,7 +934,7 @@
                                   case 2:
                                     return (
                                       (a = r.sent()),
-                                      (o[t].persona_name =
+                                      (i[t].persona_name =
                                         (null == a ? void 0 : a.data) || ""),
                                       [2]
                                     );
@@ -920,7 +964,7 @@
                           ? -1
                           : 0;
                       }),
-                      o.sort(m),
+                      i.sort(m),
                       [3, 6]
                     );
                   case 5:
@@ -930,7 +974,7 @@
                       [3, 6]
                     );
                   case 6:
-                    return n && n.data && G(a), P(!0), [2];
+                    return n && n.data && G(a), Y(!0), [2];
                 }
               });
             });
@@ -941,18 +985,18 @@
                 !(function () {
                   var e;
                   (0, r.mG)(this, void 0, void 0, function () {
-                    var n, a, o, l;
+                    var n, a, i, l;
                     return (0, r.Jh)(this, function (r) {
                       switch (r.label) {
                         case 0:
-                          return i.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON
+                          return c.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON
                             ? ((n = {
-                                season: i.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON,
+                                season: c.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON,
                               }),
                               [
                                 4,
-                                c().get(
-                                  i.Y.BASE_URL +
+                                o().get(
+                                  c.Y.BASE_URL +
                                     "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
                                   { params: n }
                                 ),
@@ -961,16 +1005,16 @@
                         case 1:
                           return (
                             (a = r.sent()),
-                            (o =
+                            (i =
                               (null === (e = null == a ? void 0 : a.data) ||
                               void 0 === e
                                 ? void 0
                                 : e.team_status_list) || []).length &&
                               t &&
-                              (l = o.find(function (e) {
+                              (l = i.find(function (e) {
                                 return e.team_id.toString() == t;
                               })) &&
-                              J(l),
+                              H(l),
                             [2]
                           );
                       }
@@ -985,56 +1029,15 @@
           ),
             (0, m.useEffect)(function () {
               try {
-                !(function () {
-                  var e, t;
-                  (0, r.mG)(this, void 0, void 0, function () {
-                    var n, a, o;
-                    return (0, r.Jh)(this, function (r) {
-                      switch (r.label) {
-                        case 0:
-                          return i.Y.DOTA_APP_ID &&
-                            i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
-                            ? ((n = {
-                                appid: i.Y.DOTA_APP_ID,
-                                registration_period:
-                                  i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                              }),
-                              [
-                                4,
-                                c().get(
-                                  i.Y.BASE_URL +
-                                    "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
-                                  { params: n }
-                                ),
-                              ])
-                            : [2];
-                        case 1:
-                          return (
-                            (a = r.sent()),
-                            (o =
-                              (null ===
-                                (t =
-                                  null === (e = null == a ? void 0 : a.data) ||
-                                  void 0 === e
-                                    ? void 0
-                                    : e.result) || void 0 === t
-                                ? void 0
-                                : t.teams) || []).length && f(o),
-                            T(!0),
-                            [2]
-                          );
-                      }
-                    });
-                  });
-                })();
+                ee();
               } catch (e) {
-                console.log("Could not fetch registered teams."), L(!0);
+                console.log("Could not fetch registered teams."), D(!0);
               }
             }, []),
             (0, m.useEffect)(
               function () {
                 try {
-                  $();
+                  te();
                 } catch (e) {
                   console.log("Could not fetch single team info."), B(!0);
                 }
@@ -1048,24 +1051,24 @@
                     (0, r.mG)(this, void 0, void 0, function () {
                       var e,
                         n,
-                        o,
+                        i,
                         l,
                         m = this;
                       return (0, r.Jh)(this, function (u) {
                         switch (u.label) {
                           case 0:
-                            return i.Y.DOTA_APP_ID &&
-                              i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
+                            return c.Y.DOTA_APP_ID &&
+                              c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD &&
                               t
                               ? ((e = {
                                   team_id: t,
                                   registration_period:
-                                    i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                                    c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
                                 }),
                                 [
                                   4,
-                                  c().get(
-                                    i.Y.BASE_URL +
+                                  o().get(
+                                    c.Y.BASE_URL +
                                       "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
                                     { params: e }
                                   ),
@@ -1074,8 +1077,8 @@
                           case 1:
                             return (
                               (n = u.sent()),
-                              (o = null == n ? void 0 : n.data),
-                              (l = (null == o ? void 0 : o.actions) || []),
+                              (i = null == n ? void 0 : n.data),
+                              (l = (null == i ? void 0 : i.actions) || []),
                               [
                                 4,
                                 Promise.all(
@@ -1091,8 +1094,8 @@
                                               e.account_id
                                               ? [
                                                   4,
-                                                  c().get(
-                                                    i.Y.BASE_URL +
+                                                  o().get(
+                                                    c.Y.BASE_URL +
                                                       "teams/getpersonaname/",
                                                     {
                                                       params: {
@@ -1121,7 +1124,7 @@
                           case 2:
                             return (
                               u.sent(),
-                              n && n.data && o.actions && Q(o.actions),
+                              n && n.data && i.actions && $(i.actions),
                               [2]
                             );
                         }
@@ -1138,17 +1141,17 @@
               function () {
                 var e;
                 try {
-                  e = JSON.parse(i.Y.DPC_DATA).events;
+                  e = JSON.parse(c.Y.DPC_DATA).events;
                 } catch (e) {}
                 if (e) {
                   e = e.filter(function (e) {
                     return (
                       e.registration_period ===
-                      i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+                      c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
                     );
                   });
-                  for (var n = [], a = 0, o = e; a < o.length; a++) {
-                    var l = o[a].leagues.map(function (e) {
+                  for (var n = [], a = 0, i = e; a < i.length; a++) {
+                    var l = i[a].leagues.map(function (e) {
                       return e.league_id;
                     });
                     n.push.apply(n, l);
@@ -1162,7 +1165,7 @@
                       (0, r.mG)(this, void 0, void 0, function () {
                         var e,
                           a,
-                          o,
+                          i,
                           l,
                           m,
                           u,
@@ -1170,8 +1173,8 @@
                           d,
                           _,
                           f,
-                          A,
                           p,
+                          A,
                           g,
                           v,
                           E,
@@ -1186,8 +1189,8 @@
                                 ? ((e = { league_ids: n.join(",") }),
                                   [
                                     4,
-                                    c().get(
-                                      i.Y.BASE_URL +
+                                    o().get(
+                                      c.Y.BASE_URL +
                                         "webapi/IDOTA2League/GetLeaguesData/v001",
                                       { params: e }
                                     ),
@@ -1196,8 +1199,8 @@
                             case 1:
                               for (
                                 a = R.sent(),
-                                  o = null == a ? void 0 : a.data,
-                                  l = null == o ? void 0 : o.leagues,
+                                  i = null == a ? void 0 : a.data,
+                                  l = null == i ? void 0 : i.leagues,
                                   m = [],
                                   u = 0,
                                   s = l;
@@ -1210,12 +1213,12 @@
                                   _++
                                 )
                                   for (
-                                    A = f[_], p = 0, g = A.node_groups;
-                                    p < g.length;
-                                    p++
+                                    p = f[_], A = 0, g = p.node_groups;
+                                    A < g.length;
+                                    A++
                                   )
                                     for (
-                                      v = g[p], E = 0, T = v.nodes;
+                                      v = g[A], E = 0, T = v.nodes;
                                       E < T.length;
                                       E++
                                     )
@@ -1268,7 +1271,7 @@
                                     r.pi)((0, r.pi)({}, e), (((a = {})[n[t]] = (0, r.ev)((0, r.ev)([], e[n[t]] || [], !0), [n], !1)), a));
                                   }, {});
                                 }),
-                                m.length && W(h(m, "league_name")),
+                                m.length && K(h(m, "league_name")),
                                 [2]
                               );
                           }
@@ -1282,28 +1285,28 @@
               },
               [t]
             );
-          var ee,
-            te =
-              o.find(function (e) {
+          var ne,
+            ae =
+              i.find(function (e) {
                 return e.team_id == t;
               }) || {};
           if (
-            ((E && U) || (ee = m.createElement("div", null, "Loading...")),
-            E &&
-              (0 == o.length || S) &&
-              (ee = m.createElement(
+            ((T && P) || (ne = m.createElement("div", null, "Loading...")),
+            T &&
+              (0 == i.length || L) &&
+              (ne = m.createElement(
                 "div",
                 null,
                 "Error loading registered teams..."
               )),
-            U &&
-              (0 == Object.keys(O).length || M) &&
-              (ee = m.createElement(
+            P &&
+              (0 == Object.keys(U).length || x) &&
+              (ne = m.createElement(
                 "div",
                 null,
                 "Error loading single team info for teamId ".concat(t, " ")
               )),
-            ee)
+            ne)
           )
             return m.createElement(
               "div",
@@ -1314,22 +1317,22 @@
                 null,
                 m.createElement("title", null, "Dota 2 - Team Details")
               ),
-              m.createElement(A.Z, null),
-              m.createElement("div", { className: g().ContentFrame }, ee),
+              m.createElement(p.Z, null),
+              m.createElement("div", { className: g().ContentFrame }, ne),
               m.createElement(_.U, null)
             );
-          var ne = O.members || [];
-          ne.forEach(function (e) {
+          var re = U.members || [];
+          re.forEach(function (e) {
             (e.kick_link = ""
               .concat(
                 "".concat(
-                  i.Y.BASE_URL,
+                  c.Y.BASE_URL,
                   "webapi/IDOTA2Teams/RemoveTeamMember/v0001"
                 ),
                 "?u="
               )
               .concat(v, "&appid=")
-              .concat(i.Y.DOTA_APP_ID, "&team_id=")
+              .concat(c.Y.DOTA_APP_ID, "&team_id=")
               .concat(t, "&account_id=")
               .concat(e.account_id)),
               (e.make_admin_link = e.admin
@@ -1337,19 +1340,19 @@
                 : ""
                     .concat(
                       "".concat(
-                        i.Y.BASE_URL,
+                        c.Y.BASE_URL,
                         "webapi/IDOTA2Teams/SetTeamAdmin/v0001"
                       ),
                       "?u="
                     )
                     .concat(v, "&appid=")
-                    .concat(i.Y.DOTA_APP_ID, "&team_id=")
+                    .concat(c.Y.DOTA_APP_ID, "&team_id=")
                     .concat(t, "&account_id=")
                     .concat(e.account_id));
           });
-          var ae,
-            re = function (e) {
-              var t = o.find(function (t) {
+          var ie,
+            oe = function (e) {
+              var t = i.find(function (t) {
                 return t.team_id == e;
               });
               return t ? t.team_name : "";
@@ -1363,7 +1366,7 @@
               null,
               m.createElement("title", null, "Dota 2 - Team Details")
             ),
-            m.createElement(A.Z, null),
+            m.createElement(p.Z, null),
             m.createElement(
               "div",
               { className: g().ContentFrame },
@@ -1371,13 +1374,13 @@
                 "h1",
                 { className: g().Header },
                 "Team Details for "
-                  .concat(null == O ? void 0 : O.name, " (")
-                  .concat(O.team_id, ")")
+                  .concat(null == U ? void 0 : U.name, " (")
+                  .concat(U.team_id, ")")
               ),
               m.createElement(
                 "div",
                 { className: g().MiscInfoGrid },
-                k.map(function (e) {
+                h.map(function (e) {
                   return m.createElement(
                     m.Fragment,
                     { key: "".concat(e.key, "-misc-row") },
@@ -1386,15 +1389,15 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, O[e.key])
-                        : JSON.stringify(O[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, U[e.key])
+                        : JSON.stringify(U[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
                     )
                   );
                 }),
-                !Z &&
+                !q &&
                   m.createElement(
                     m.Fragment,
                     null,
@@ -1403,7 +1406,7 @@
                       {
                         className: g().Link,
                         onClick: function () {
-                          return q(!0);
+                          return z(!0);
                         },
                       },
                       "Update Info / Add Member"
@@ -1411,26 +1414,26 @@
                     m.createElement("div", null)
                   )
               ),
-              Z &&
+              q &&
                 m.createElement(
                   m.Fragment,
                   null,
-                  m.createElement("br", null),
+                  m.createElement("div", { className: g().SmoothLine }),
                   m.createElement(
                     function (e) {
                       var t = e.strTeamId,
                         n = (0, m.useState)(""),
                         a = n[0],
-                        o = n[1],
+                        i = n[1],
                         l = (0, m.useState)(""),
                         u = l[0],
                         s = l[1],
                         d = (0, m.useState)(""),
                         _ = d[0],
                         f = d[1],
-                        A = (0, m.useState)(!1),
-                        p = A[0],
-                        v = A[1];
+                        p = (0, m.useState)(!1),
+                        A = p[0],
+                        v = p[1];
                       return m.createElement(
                         "form",
                         {
@@ -1456,9 +1459,9 @@
                                             }),
                                             [
                                               4,
-                                              c().get(
+                                              o().get(
                                                 "".concat(
-                                                  i.Y.BASE_URL,
+                                                  c.Y.BASE_URL,
                                                   "webapi/IDOTA2Teams/EditTeamName/v0001"
                                                 ),
                                                 { params: n }
@@ -1469,10 +1472,10 @@
                                     case 1:
                                       return (
                                         r.sent(),
-                                        $(),
+                                        te(),
                                         setTimeout(function () {
                                           return v(!1);
-                                        }, 5e3),
+                                        }, E),
                                         [2]
                                       );
                                   }
@@ -1481,6 +1484,11 @@
                             );
                           },
                         },
+                        m.createElement(
+                          "h2",
+                          { className: g().Header },
+                          "Update Team Information"
+                        ),
                         m.createElement(
                           "div",
                           { className: g().EditInfoGrid },
@@ -1491,7 +1499,7 @@
                             name: "teamName",
                             maxLength: 32,
                             onChange: function (e) {
-                              return o(e.target.value);
+                              return i(e.target.value);
                             },
                           }),
                           m.createElement("div", null, "Tag"),
@@ -1514,24 +1522,27 @@
                               return f(e.target.value);
                             },
                           }),
-                          m.createElement("div", null),
                           m.createElement(
-                            "button",
-                            { className: g().SubmitButton, disabled: p },
-                            p ? "Updating..." : "Update"
+                            "div",
+                            null,
+                            m.createElement(
+                              "button",
+                              { className: g().SubmitButton, disabled: A },
+                              A ? "Updating..." : "Update"
+                            )
                           )
                         )
                       );
                     },
                     { strTeamId: t }
                   ),
-                  m.createElement("br", null),
+                  m.createElement("div", { className: g().SmoothLine }),
                   m.createElement(
                     function (e) {
                       var t = e.strTeamId,
                         n = (0, m.useState)(""),
                         a = n[0],
-                        o = n[1],
+                        i = n[1],
                         l = (0, m.useState)(!1),
                         u = l[0],
                         s = l[1];
@@ -1555,9 +1566,9 @@
                                             (n = { team_id: t, account_id: a }),
                                             [
                                               4,
-                                              c().get(
+                                              o().get(
                                                 "".concat(
-                                                  i.Y.BASE_URL,
+                                                  c.Y.BASE_URL,
                                                   "webapi/IDOTA2Teams/AddTeamMember/v0001"
                                                 ),
                                                 { params: n }
@@ -1568,10 +1579,10 @@
                                     case 1:
                                       return (
                                         r.sent(),
-                                        $(),
+                                        te(),
                                         setTimeout(function () {
                                           return s(!1);
-                                        }, 5e3),
+                                        }, E),
                                         [2]
                                       );
                                   }
@@ -1580,6 +1591,11 @@
                             );
                           },
                         },
+                        m.createElement(
+                          "h2",
+                          { className: g().Header },
+                          "Add Team Member"
+                        ),
                         m.createElement(
                           "div",
                           { className: g().EditInfoGrid },
@@ -1590,14 +1606,17 @@
                             name: "accountId",
                             maxLength: 20,
                             onChange: function (e) {
-                              return o(e.target.value);
+                              return i(e.target.value);
                             },
                           }),
-                          m.createElement("div", null),
                           m.createElement(
-                            "button",
-                            { className: g().SubmitButton, disabled: u },
-                            u ? "Adding..." : "Add Account"
+                            "div",
+                            null,
+                            m.createElement(
+                              "button",
+                              { className: g().SubmitButton, disabled: u },
+                              u ? "Adding..." : "Add Account"
+                            )
                           )
                         )
                       );
@@ -1605,59 +1624,12 @@
                     { strTeamId: t }
                   )
                 ),
+              m.createElement("div", { className: g().SmoothLine }),
               m.createElement("h2", { className: g().Header }, "Members"),
               m.createElement(
                 "div",
                 {
                   className: g().MembersGrid,
-                  style: {
-                    gridTemplateColumns: "250px repeat(".concat(
-                      h.length - 1,
-                      ", auto)"
-                    ),
-                  },
-                },
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  h.map(function (e) {
-                    return m.createElement(
-                      "div",
-                      { key: "".concat(e.key, "-members-grid-header}") },
-                      m.createElement("b", null, e.displayName || e.key)
-                    );
-                  })
-                ),
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  !!ne.length &&
-                    ne.map(function (e) {
-                      return h.map(function (t) {
-                        return m.createElement(
-                          "div",
-                          {
-                            key: ""
-                              .concat(t.key, "-member-row-")
-                              .concat(e.account_id),
-                          },
-                          t.formatFunction
-                            ? t.formatFunction.call(null, e[t.key], $)
-                            : JSON.stringify(e[t.key] || "", null, 2).replace(
-                                /['"]+/g,
-                                ""
-                              )
-                        );
-                      });
-                    }),
-                  !ne.length && m.createElement("div", null, "No team members.")
-                )
-              ),
-              m.createElement("br", null),
-              m.createElement(
-                "div",
-                {
-                  className: g().ManagerGrid,
                   style: {
                     gridTemplateColumns: "250px repeat(".concat(
                       R.length - 1,
@@ -1671,6 +1643,54 @@
                   R.map(function (e) {
                     return m.createElement(
                       "div",
+                      { key: "".concat(e.key, "-members-grid-header}") },
+                      m.createElement("b", null, e.displayName || e.key)
+                    );
+                  })
+                ),
+                m.createElement(
+                  m.Fragment,
+                  null,
+                  !!re.length &&
+                    re.map(function (e) {
+                      return R.map(function (t) {
+                        return m.createElement(
+                          "div",
+                          {
+                            key: ""
+                              .concat(t.key, "-member-row-")
+                              .concat(e.account_id),
+                          },
+                          t.formatFunction
+                            ? t.formatFunction.call(null, e[t.key], te)
+                            : JSON.stringify(e[t.key] || "", null, 2).replace(
+                                /['"]+/g,
+                                ""
+                              )
+                        );
+                      });
+                    }),
+                  !re.length && m.createElement("div", null, "No team members.")
+                )
+              ),
+              m.createElement("br", null),
+              m.createElement(
+                "div",
+                {
+                  className: g().ManagerGrid,
+                  style: {
+                    gridTemplateColumns: "250px repeat(".concat(
+                      N.length - 1,
+                      ", auto)"
+                    ),
+                  },
+                },
+                m.createElement(
+                  m.Fragment,
+                  null,
+                  N.map(function (e) {
+                    return m.createElement(
+                      "div",
                       { key: "".concat(e.key, "-manager-grid-header}") },
                       m.createElement("b", null, e.displayName || e.key)
                     );
@@ -1679,7 +1699,7 @@
                 m.createElement(
                   m.Fragment,
                   null,
-                  R.map(function (e) {
+                  N.map(function (e) {
                     return m.createElement(
                       m.Fragment,
                       { key: "".concat(e.key, "-manager-row") },
@@ -1687,18 +1707,132 @@
                         "div",
                         null,
                         e.formatFunction
-                          ? e.formatFunction.call(null, te[e.key])
-                          : JSON.stringify(te[e.key] || "", null, 2).replace(
+                          ? e.formatFunction.call(null, ae[e.key])
+                          : JSON.stringify(ae[e.key] || "", null, 2).replace(
                               /['"]+/g,
                               ""
                             )
                       )
                     );
                   }),
-                  !R.length && m.createElement("div", null, "No manager.")
+                  !N.length && m.createElement("div", null, "No manager.")
                 )
               ),
-              m.createElement("br", null),
+              q &&
+                m.createElement(
+                  m.Fragment,
+                  null,
+                  m.createElement("div", { className: g().SmoothLine }),
+                  m.createElement(
+                    function (e) {
+                      e.strTeamId;
+                      var t = (0, m.useState)(""),
+                        n = t[0],
+                        a = t[1],
+                        i = (0, m.useState)(""),
+                        l = i[0],
+                        u = i[1],
+                        s = (0, m.useState)(!1),
+                        d = s[0],
+                        _ = s[1];
+                      return m.createElement(
+                        "form",
+                        {
+                          onSubmit: function (e) {
+                            return (0, r.mG)(
+                              void 0,
+                              void 0,
+                              void 0,
+                              function () {
+                                var t;
+                                return (0, r.Jh)(this, function (a) {
+                                  switch (a.label) {
+                                    case 0:
+                                      return (
+                                        e.preventDefault(),
+                                        n && l
+                                          ? (_(!0),
+                                            (t = {
+                                              admin_account_id: parseInt(n),
+                                              admin_email: l,
+                                              registration_period:
+                                                c.Y
+                                                  .DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                                            }),
+                                            [
+                                              4,
+                                              o().post(
+                                                ""
+                                                  .concat(
+                                                    c.Y.BASE_URL,
+                                                    "webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u="
+                                                  )
+                                                  .concat(v, "&appid=")
+                                                  .concat(c.Y.DOTA_APP_ID),
+                                                { params: t }
+                                              ),
+                                            ])
+                                          : [2]
+                                      );
+                                    case 1:
+                                      return (
+                                        a.sent(),
+                                        ee(),
+                                        setTimeout(function () {
+                                          return _(!1);
+                                        }, E),
+                                        [2]
+                                      );
+                                  }
+                                });
+                              }
+                            );
+                          },
+                        },
+                        m.createElement(
+                          "h2",
+                          { className: g().Header },
+                          "Update Manager Email"
+                        ),
+                        m.createElement(
+                          "div",
+                          { className: g().EditInfoGrid },
+                          m.createElement("div", null, "Manager Account ID"),
+                          m.createElement("input", {
+                            className: g().MediumTextField,
+                            type: "text",
+                            name: "adminAccountId",
+                            maxLength: 20,
+                            onChange: function (e) {
+                              return a(e.target.value);
+                            },
+                          }),
+                          m.createElement("div", null, "Manager Email"),
+                          m.createElement("input", {
+                            className: g().MediumTextField,
+                            type: "email",
+                            name: "adminEmail",
+                            maxLength: 255,
+                            onChange: function (e) {
+                              return u(e.target.value);
+                            },
+                          }),
+                          m.createElement(
+                            "div",
+                            null,
+                            m.createElement(
+                              "button",
+                              { className: g().SubmitButton, disabled: d },
+                              d ? "Updating..." : "Update Manager Email"
+                            )
+                          )
+                        )
+                      );
+                    },
+                    { strTeamId: t }
+                  )
+                ),
+              m.createElement("div", { className: g().SmoothLine }),
               m.createElement(
                 "h2",
                 { className: g().Header },
@@ -1707,7 +1841,7 @@
               m.createElement(
                 "div",
                 { className: g().LogoAndColorsGrid },
-                N.map(function (e) {
+                F.map(function (e) {
                   return m.createElement(
                     m.Fragment,
                     { key: "".concat(e.key, "-logo-colors-row") },
@@ -1716,8 +1850,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, O[e.key], O.team_id)
-                        : JSON.stringify(O[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, U[e.key], U.team_id)
+                        : JSON.stringify(U[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
@@ -1731,13 +1865,13 @@
                 {
                   className: g().UGCLogosGrid,
                   style: {
-                    gridTemplateColumns: "repeat(".concat(F.length, ", auto)"),
+                    gridTemplateColumns: "repeat(".concat(I.length, ", auto)"),
                   },
                 },
                 m.createElement(
                   m.Fragment,
                   null,
-                  F.map(function (e) {
+                  I.map(function (e) {
                     return m.createElement(
                       "div",
                       { key: "".concat(e.key, "-ugc-grid-header}") },
@@ -1748,13 +1882,13 @@
                 m.createElement(
                   m.Fragment,
                   null,
-                  F.map(function (e) {
+                  I.map(function (e) {
                     return m.createElement(
                       "div",
                       { key: "".concat(e.key, "-ugc-logo") },
                       e.formatFunction
-                        ? e.formatFunction.call(null, O[e.key])
-                        : JSON.stringify(O[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, U[e.key])
+                        : JSON.stringify(U[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             ""
                           )
@@ -1762,7 +1896,7 @@
                   })
                 )
               ),
-              m.createElement("br", null),
+              m.createElement("div", { className: g().SmoothLine }),
               m.createElement(
                 "h2",
                 { className: g().Header },
@@ -1794,8 +1928,8 @@
                 m.createElement(
                   m.Fragment,
                   null,
-                  !!X.length &&
-                    X.map(function (e) {
+                  !!Q.length &&
+                    Q.map(function (e) {
                       return C.map(function (t) {
                         return m.createElement(
                           "div",
@@ -1819,10 +1953,10 @@
                         );
                       });
                     }),
-                  !X.length && m.createElement("div", null, "No audit actions.")
+                  !Q.length && m.createElement("div", null, "No audit actions.")
                 )
               ),
-              m.createElement("br", null),
+              m.createElement("div", { className: g().SmoothLine }),
               m.createElement(
                 "h2",
                 { className: g().Header },
@@ -1831,7 +1965,7 @@
               m.createElement(
                 "div",
                 { className: g().WorkshopStatusGrid },
-                I.map(function (e) {
+                S.map(function (e) {
                   return m.createElement(
                     m.Fragment,
                     { key: "".concat(e.key, "-workshop-status-row") },
@@ -1849,12 +1983,12 @@
                   );
                 })
               ),
-              m.createElement("br", null),
+              m.createElement("div", { className: g().SmoothLine }),
               m.createElement(
                 "h2",
                 { className: (0, s.Z)(g().Header, g().SeasonMatchHeader) },
                 "Season ".concat(
-                  i.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                  c.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
                   " Matches"
                 )
               ),
@@ -1869,9 +2003,9 @@
                 m.createElement(
                   m.Fragment,
                   null,
-                  ((ae = []),
-                  Object.keys(V).forEach(function (e, t) {
-                    ae.push(
+                  ((ie = []),
+                  Object.keys(W).forEach(function (e, t) {
+                    ie.push(
                       m.createElement(
                         "h3",
                         {
@@ -1881,7 +2015,7 @@
                         m.createElement("b", null, e)
                       )
                     ),
-                      ae.push(
+                      ie.push(
                         b.map(function (e) {
                           return m.createElement(
                             "div",
@@ -1900,7 +2034,7 @@
                       );
                     for (
                       var n = function (e) {
-                          ae.push(
+                          ie.push(
                             b.map(function (t) {
                               return m.createElement(
                                 "div",
@@ -1914,7 +2048,7 @@
                                   ? t.formatFunction.call(
                                       null,
                                       e[t.key],
-                                      re(e.opponent_team_id)
+                                      oe(e.opponent_team_id)
                                     )
                                   : JSON.stringify(
                                       e[t.key] || "",
@@ -1926,14 +2060,14 @@
                           );
                         },
                         a = 0,
-                        r = V[e];
+                        r = W[e];
                       a < r.length;
                       a++
                     )
                       n(r[a]);
                   }),
-                  ae),
-                  !Object.keys(V).length &&
+                  ie),
+                  !Object.keys(W).length &&
                     m.createElement("div", null, "No league matches.")
                 )
               ),
@@ -1942,14 +2076,14 @@
             m.createElement(_.U, null)
           );
         };
-      const L = (function (e) {
+      const D = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           (0, r.ZT)(t, e),
           (t.prototype.render = function () {
-            return m.createElement(S, null);
+            return m.createElement(L, null);
           }),
           t
         );
