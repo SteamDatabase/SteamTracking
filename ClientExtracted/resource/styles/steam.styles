@@ -286,6 +286,8 @@ steam.styles
     TextEntry.IMEBGColor        "225 225 225 255"
     TextEntry.IMEFGColor        "black"
 
+	// Login frame colors
+	Login.BGTop					"33 35 40 255"
 
     // Friends List colors
     Friends.InGameColor       "144 186 60 255"

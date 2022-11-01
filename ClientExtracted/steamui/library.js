@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7628290";
+var CLSTAMP = "7629908";
 (() => {
   var e,
     t,
@@ -115,8 +115,8 @@ var CLSTAMP = "7628290";
           dt: () => E,
           eV: () => w,
           fk: () => i,
-          gg: () => D,
-          gt: () => O,
+          gg: () => O,
+          gt: () => D,
           hz: () => M,
           jA: () => b,
           jM: () => k,
@@ -374,7 +374,7 @@ var CLSTAMP = "7628290";
           }
           return !1;
         }
-        var v, T, R, F, L, I, O, D, A, U, P;
+        var v, T, R, F, L, I, D, O, A, U, P;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -452,7 +452,7 @@ var CLSTAMP = "7628290";
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(O || (O = {})),
+          })(D || (D = {})),
           (function (e) {
             (e[(e.k_EGamingDeviceType_Unknown = 0)] =
               "k_EGamingDeviceType_Unknown"),
@@ -470,7 +470,7 @@ var CLSTAMP = "7628290";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(D || (D = {})),
+          })(O || (O = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
@@ -602,8 +602,8 @@ var CLSTAMP = "7628290";
           oW: () => R,
           fu: () => w,
           t$: () => b,
-          XM: () => D,
-          L2: () => O,
+          XM: () => O,
+          L2: () => D,
           eT: () => h,
           r7: () => n.r7,
           qu: () => n.qu,
@@ -893,10 +893,10 @@ var CLSTAMP = "7628290";
             "advertising" === e
           );
         }
-        function O(e) {
+        function D(e) {
           return e;
         }
-        function D(e) {
+        function O(e) {
           return e;
         }
         var A, U;
@@ -2572,8 +2572,8 @@ var CLSTAMP = "7628290";
         }
         (0, n.gn)([_.aD], L.prototype, "OnLogonInfoChanged", null);
         var I = r(99591),
-          O = r(9669),
-          D = r.n(O);
+          D = r(9669),
+          O = r.n(D);
         class A {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
@@ -2792,12 +2792,12 @@ var CLSTAMP = "7628290";
             return (0, n.mG)(this, void 0, void 0, function* () {
               let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
                 r = performance.now();
-              const n = D().CancelToken.source();
+              const n = O().CancelToken.source();
               let i = window.setTimeout(() => {
                 e.strHost, n.cancel();
               }, 1e3);
               try {
-                let s = yield D().head(t, { cancelToken: n.token });
+                let s = yield O().head(t, { cancelToken: n.token });
                 e.strHost, window.clearTimeout(i);
                 let o = performance.now() - r,
                   a = s.headers["x-steam-cmload"]
@@ -2805,7 +2805,7 @@ var CLSTAMP = "7628290";
                     : void 0;
                 e.strHost, (e.msPing = o), (e.nCMLoad = a);
               } catch (t) {
-                D().isCancel(t) ? e.strHost : window.clearTimeout(i),
+                O().isCancel(t) ? e.strHost : window.clearTimeout(i),
                   (e.msPing = 1e4),
                   (e.nCMLoad = 0);
               }
@@ -2818,7 +2818,7 @@ var CLSTAMP = "7628290";
             const e =
                 a.De.WEBAPI_BASE_URL +
                 "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets",
-              t = (yield D().get(e)).data,
+              t = (yield O().get(e)).data,
               r = (t && t.response && t.response.serverlist) || [];
             return (
               r.length, r.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
@@ -6952,9 +6952,9 @@ var CLSTAMP = "7628290";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 31 2022 : 16:01:52",
-                    BUILD_TIME_UTC: "Oct 31 2022 : 23:01:52",
-                    BUILD_RTIME_UTC: 1667257312,
+                    BUILD_TIME_LOCAL: "Nov 1 2022 : 10:17:03",
+                    BUILD_TIME_UTC: "Nov 1 2022 : 17:17:03",
+                    BUILD_RTIME_UTC: 1667323023,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)

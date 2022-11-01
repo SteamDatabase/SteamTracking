@@ -4,33 +4,33 @@ __text
 __TEXT
 __stubs
 __TEXT
+J<'
+J<'
 __stub_helper
 __TEXT
+<F'
+<F'
 __cstring
 __TEXT
-W'
-W'
 __gcc_except_tab__TEXT
-\|)
-\|)
+,|)
+,|)
 __const
 __TEXT
 __objc_methname
 __TEXT
-sq-
-sq-
+Cq-
+Cq-
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
 __unwind_info
 __TEXT
-,x-
-,x-
 __eh_frame
 __TEXT
-Pp.
-Pp.
+p.
+p.
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -8393,6 +8393,7 @@ true
 &IN_CHROMEOS=true
 LoginDialog
 -dev
+resource/layout/login_dialog.layout
 #Steam_Login_Title
 HTMLRoot
 steamui
@@ -9918,7 +9919,7 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Nov  1 2022
-08:18:09
+13:45:31
 crashhandler003
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13808,12 +13809,10 @@ p
 0
 p
 0
-v-
-9&
+!
+q-
 &
 &
-%
-0!
 j
 j
 j
@@ -13823,9 +13822,12 @@ j
 j
 j
 j
-m%
+}A
+`%
+$
 0
-x%
+Z$
+%%
 p
 0
 %
@@ -13833,27 +13835,23 @@ p
 %
 %
 %
+j
+j
+j
+A
+A
+j
+A
+A
+j
+A
+A
+j
+@%
+j
+j
 %
-&$
-j
-j
-j
-T%
-j
-A
-A
-j
-A
-A
-j
-j
-j
-/%
-%
-$%
-%
-$
-f$
+@#
 #
 #
 j
@@ -13902,15 +13900,14 @@ j
 j
 j
 j
+_@
 j
 j
-`#
+$$
 j
 j
 j
 j
-$
-$
 j
 j
 j
@@ -13932,9 +13929,13 @@ j
 j
 +
 0
+$
+$
 A9]
 d
-)#
+"
+"
+,#
 j
 j
 j
@@ -13947,8 +13948,7 @@ j
 j
 j
 j
-?
-?
+&?
 
 
 
@@ -13973,7 +13973,6 @@ p
 0
 p
 0
->#
 p
 0
 p
@@ -13984,11 +13983,20 @@ p
 
 "
 "
+"
+"
 0
 0
 \
 )
-~-
+}/
+j
+j
+j
+j
+j
+j
+`"
 j
 j
 j
@@ -14012,17 +14020,10 @@ j
 j
 j
 j
-j
-j
-j
-j
-j
-j
-s!
-~=
-L!
+""
 0
 0
+"
 Hi
 !
 !
@@ -14032,10 +14033,7 @@ Hi
 !
 !
 !
-!
-!
-!
-!
+)1
 (
 j
 j
@@ -14053,9 +14051,6 @@ j
 0
 p
 0
-|<
-i<
-[
 #
 #
 #
@@ -14083,7 +14078,6 @@ j
 j
 j
 j
-?<
 0
 0
 AT=
@@ -14094,10 +14088,9 @@ AT=
 D
 @
 @
-t
-j
-N
-6
+?1
+@
+;
 @
 Hc
 Hc
@@ -14130,12 +14123,13 @@ IcE
 @
 @
 V
+T:
 =
 =
 !
 -
+{,
 @
-r6
 ,
 &
 *
@@ -14337,9 +14331,8 @@ P
 )
 d
 
-fD9%J;(
-fD9-#6(
-X
+fD9-c6(
+fD9-O5(
 O
 
 
@@ -14347,6 +14340,7 @@ O
 A+M
 
 
+;'
 j
 j
 j
@@ -14355,7 +14349,7 @@ j
 j
 =
 0
-(
+A
 j
 j
 j
@@ -14390,6 +14384,9 @@ j
 j
 j
 
+&
+&
+&
 d
 &
 &
@@ -14402,6 +14399,7 @@ A+4$A+u
 =
 @
 
+
 j
 j
 j
@@ -14413,6 +14411,7 @@ j
 j
 j
 j
+k$
 j
 j
 j
@@ -14478,6 +14477,7 @@ j
 j
 j
 j
+l!
 j
 j
 j
@@ -14522,6 +14522,7 @@ j
 j
 j
 j
+>!
 j
 j
 j
@@ -14582,6 +14583,7 @@ j
 @
 @
 @
+K
 j
 j
 j
@@ -14629,9 +14631,8 @@ d
 Hc
 0
 E
-{
 0
-o
+t
 0
 0
 p
