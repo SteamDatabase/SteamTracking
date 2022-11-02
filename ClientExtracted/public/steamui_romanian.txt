@@ -2026,7 +2026,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Actualizează întotdeauna acest instrument"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Actualizează această aplicație numai când o lansez"
-"Steam_DoNotUpdateThisGame$appType=game"			"Actualizează jocul acesta doar când îl lansez"
+"Steam_DoNotUpdateThisGame$appType=game"			"Actualizează acest joc doar atunci când îl lansez"
 "Steam_DoNotUpdateThisGame$appType=demo"			"Actualizează acest demo numai când îl lansez"
 "Steam_DoNotUpdateThisGame$appType=media"			"Actualizează aceste fișiere media când le lansez"
 "Steam_DoNotUpdateThisGame$appType=music"			"Nu actualiza automat această coloană sonoră"

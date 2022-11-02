@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "このコンピューターに記憶させる",
 	"Login_RememberMe_Short": "このアカウントを記憶する",
 	"Login_ForgotPassword": "Steamアカウント名またはパスワードをお忘れですか？",
+	"Login_NoSteamworksAccount": "Steamworksを初めて使用？",
+	"Login_CreateSteamworksAccount": "詳細を表示",
 	"Login_NoSteamAccount": "アカウントを未登録ですか?",
 	"Login_CreateAccount": "無料アカウントの作成",
 	"Login_CaptchaVerification": "表示される文字を再入力して画像認証を行ってください。",

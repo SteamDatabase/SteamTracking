@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "Husk meg på denne datamaskinen",
 	"Login_RememberMe_Short": "Husk meg",
 	"Login_ForgotPassword": "Glemt kontonavnet eller passordet?",
+	"Login_NoSteamworksAccount": "Ny på Steamworks?",
+	"Login_CreateSteamworksAccount": "Les mer",
 	"Login_NoSteamAccount": "Har du ikke en Steam-konto?",
 	"Login_CreateAccount": "Opprett en gratis konto",
 	"Login_CaptchaVerification": "Bekreft at du er et menneske ved å skrive inn tegnene på nytt i CAPTCHA-feltet.",

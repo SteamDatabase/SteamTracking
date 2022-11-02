@@ -878,7 +878,7 @@
 "SteamUI_ValveSurvey_Summary_NoTouchInputDevices"			"Сенсорный ввод не поддерживается"
 
 "SteamUI_ValveSurvey_Summary_CPUVendor"						"Производитель процессора: %s1"
-"SteamUI_ValveSurvey_Summary_CPUBrand"						"Производитель процессора: %s1"
+"SteamUI_ValveSurvey_Summary_CPUBrand"						"Бренд процессора: %s1"
 "SteamUI_ValveSurvey_Summary_CPUSpeed"						"Тактовая частота: %s1 МГц"
 "SteamUI_ValveSurvey_Summary_RAM"							"Оперативная память:  %s1 МБ"
 

@@ -143,8 +143,8 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          BroadcastEmbeddablePopoutHeader: () => mr,
-          default: () => nr,
+          BroadcastEmbeddablePopoutHeader: () => dr,
+          default: () => ir,
         });
       var a = r(70655),
         i = r(9669),
@@ -4398,7 +4398,7 @@
         (0, a.gn)([Ce.a], Ie.prototype, "MuteUserForSession", null);
       const ze = new Oe();
       window.g_BroadcastChatStore = ze;
-      r(57550), r(93300);
+      r(874), r(93300);
       var Pe = r(48062),
         xe = r(86037);
       class ke {
@@ -5561,10 +5561,9 @@
       function er(e, t) {
         return we.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
-      var tr,
-        rr = r(40331),
-        ar = r(90396);
-      const ir = {
+      var tr = r(40331),
+        rr = r(90396);
+      const ar = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },
           { appid: 386360, url: "https://steam.tv/smite" },
@@ -5591,7 +5590,15 @@
           },
         ],
       };
-      let sr = (tr = class extends l.Component {
+      function ir(e) {
+        return (function () {
+          const e = (0, we.id)();
+          return we.De.EREALM != Ct.IN.k_ESteamRealmChina && !e;
+        })()
+          ? l.createElement(sr, Object.assign({}, e))
+          : null;
+      }
+      let sr = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.m_cancelSignal = s().CancelToken.source()),
@@ -5613,15 +5620,9 @@
               bStartMuted: !0,
             });
         }
-        static IsBroadcastAllowed() {
-          return (
-            we.De.EREALM != Ct.IN.k_ESteamRealmChina && !we.De.IN_GAMEPADUI
-          );
-        }
         componentDidMount() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            tr.IsBroadcastAllowed() &&
-              ((0, Tt.nf)(null),
+            (0, Tt.nf)(null),
               yield Et.ai
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
@@ -5659,7 +5660,7 @@
                       maxHeight: "100vh",
                     }),
                   });
-              }, 10));
+              }, 10);
           });
         }
         componentWillUnmount() {
@@ -5730,9 +5731,9 @@
             s = l.createElement(
               "div",
               { className: Nt().rightPanel },
-              l.createElement(dr, { key: "right" + i, ImgUrl: e.right_panel })
+              l.createElement(cr, { key: "right" + i, ImgUrl: e.right_panel })
             ),
-            n = l.createElement(dr, { key: "left" + i, ImgUrl: e.left_panel });
+            n = l.createElement(cr, { key: "left" + i, ImgUrl: e.left_panel });
           if (i < 11) {
             const t = We.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (i = t[0]);
@@ -5753,7 +5754,7 @@
               })),
               (r.bRightPanelArtworkOrEmpty = !1)),
             a && !t
-              ? ((r.leftPanel = l.createElement(hr, {
+              ? ((r.leftPanel = l.createElement(ur, {
                   broadcastEmbedContext: this.props,
                   key: "selector" + i,
                   curStream: e,
@@ -5764,7 +5765,7 @@
                 (r.rightPanel = s))
               : t
               ? ((r.leftPanel = l.createElement("div", null)),
-                (r.rightPanel = l.createElement(br, {
+                (r.rightPanel = l.createElement(pr, {
                   stream: e,
                   orientation: "rightside",
                 })),
@@ -5779,8 +5780,7 @@
             (0, wt.X)() && (0, wt.X)().AddEvent(1004));
         }
         render() {
-          if (!tr.IsBroadcastAllowed() || this.state.bLoadingPreference)
-            return null;
+          if (this.state.bLoadingPreference) return null;
           let e = Et.ai.Get().GetPlayReadyStream(this.props);
           if (e) {
             this.MarkBroadcastSeen();
@@ -5892,7 +5892,7 @@
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
                       s.leftPanel,
-                      l.createElement(or, {
+                      l.createElement(nr, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
                         fnRenderBroadcastContext: i,
@@ -5901,7 +5901,7 @@
                       }),
                       s.rightPanel,
                       this.state.bExpanded &&
-                        l.createElement(cr, { stream: e, bMultistream: o })
+                        l.createElement(lr, { stream: e, bMultistream: o })
                     )
                 ),
                 Boolean(
@@ -5911,7 +5911,7 @@
                   l.createElement(
                     "div",
                     { className: `${r ? Nt().Event : ""}` },
-                    l.createElement(cr, { stream: e, bMultistream: o })
+                    l.createElement(lr, { stream: e, bMultistream: o })
                   ),
                 l.createElement("div", { className: Nt().clear_div })
               )
@@ -5919,14 +5919,13 @@
           }
           return l.createElement("div", { className: "NoBroadcastAvailable" });
         }
-      });
+      };
       (0, a.gn)([Qe.ak], sr.prototype, "ToggleBroadcastExpandShrink", null),
         (0, a.gn)([Qe.ak], sr.prototype, "OnShrinkTransitionEnd", null),
         (0, a.gn)([Qe.ak], sr.prototype, "onStreamSelect", null),
         (0, a.gn)([Qe.ak], sr.prototype, "PlayTopNonVOD", null),
-        (sr = tr = (0, a.gn)([n.Pi], sr));
-      const nr = sr;
-      class or extends l.Component {
+        (sr = (0, a.gn)([n.Pi], sr));
+      class nr extends l.Component {
         constructor(e) {
           super(e),
             (this.m_iVideoContainerRef = l.createRef()),
@@ -5978,7 +5977,7 @@
                       : Nt().video_container,
                   },
                   this.state.bPopout &&
-                    l.createElement(mr, {
+                    l.createElement(dr, {
                       steamIDBroadcast: this.props.stream.steamid,
                       OnPreventPopup: this.CloseBroadcastPopup,
                     }),
@@ -6001,11 +6000,11 @@
           );
         }
       }
-      function lr(e) {
+      function or(e) {
         const { stream: t } = e,
           [r] = (0, o.SZ)(() => [t.steamid]),
           a = Mt.c9.GetOrCreateBroadcastInfo(r).m_nAppID,
-          i = ir.list.find(
+          i = ar.list.find(
             (e) =>
               e.appid == a &&
               (!e.broadcasterAccountID || e.broadcasterAccountID == t.accountid)
@@ -6040,10 +6039,10 @@
           );
         }
       }
-      (0, a.gn)([Qe.ak], or.prototype, "CloseBroadcastPopup", null),
-        (0, a.gn)([Qe.ak], or.prototype, "OnEnter", null),
-        (0, a.gn)([Qe.ak], or.prototype, "OnLeave", null);
-      let cr = class extends l.Component {
+      (0, a.gn)([Qe.ak], nr.prototype, "CloseBroadcastPopup", null),
+        (0, a.gn)([Qe.ak], nr.prototype, "OnEnter", null),
+        (0, a.gn)([Qe.ak], nr.prototype, "OnLeave", null);
+      let lr = class extends l.Component {
         OnToggleChat(e) {
           e.preventDefault();
           const t = Mt.c9.GetOrCreateBroadcastInfo(
@@ -6128,11 +6127,11 @@
                       href: "#",
                       className: Nt().ChatToggle,
                       onClick: (e) =>
-                        (0, ar.AM)(
+                        (0, rr.AM)(
                           l.createElement(Jt, {
                             steamid: this.props.stream.steamid,
                           }),
-                          (0, rr.RA)(e)
+                          (0, tr.RA)(e)
                         ),
                     },
                     (0, ve.Xx)("#Broadcast_ShareBroadcast")
@@ -6157,15 +6156,15 @@
                   l.createElement(Je.Zrf, null)
                 )
               ),
-              r && l.createElement(lr, Object.assign({}, this.props))
+              r && l.createElement(or, Object.assign({}, this.props))
             )
           );
         }
       };
-      (0, a.gn)([Qe.ak], cr.prototype, "OnToggleChat", null),
-        (0, a.gn)([Qe.ak], cr.prototype, "onWatchBroadcastPage", null),
-        (cr = (0, a.gn)([n.Pi], cr));
-      class dr extends l.Component {
+      (0, a.gn)([Qe.ak], lr.prototype, "OnToggleChat", null),
+        (0, a.gn)([Qe.ak], lr.prototype, "onWatchBroadcastPage", null),
+        (lr = (0, a.gn)([n.Pi], lr));
+      class cr extends l.Component {
         render() {
           let e = this.props.ImgUrl;
           return l.createElement(
@@ -6180,7 +6179,7 @@
           );
         }
       }
-      const mr = (0, n.Pi)((e) => {
+      const dr = (0, n.Pi)((e) => {
         const { steamIDBroadcast: t } = e,
           r = Mt.c9.GetOrCreateBroadcastInfo(t).m_nAppID,
           [a] = (0, _t.vs)(r, {});
@@ -6211,7 +6210,7 @@
           )
         );
       });
-      function ur(e, t) {
+      function mr(e, t) {
         var r;
         const a = Mt.c9.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
           i = Ft.Z.Get().GetApp(a);
@@ -6222,7 +6221,7 @@
           ? parseInt(Nt().strStreamIconCapsuleArtHeight)
           : parseInt(Nt().strStreamIconScreenshotArtHeight);
       }
-      function hr(e) {
+      function ur(e) {
         const {
             curStream: t,
             onStreamSelect: r,
@@ -6251,7 +6250,7 @@
                     let e = 0;
                     for (const r of o) {
                       if (t.accountid == r.accountid) break;
-                      e += ur(i, r);
+                      e += mr(i, r);
                     }
                     n.current.scrollTop = e;
                   }
@@ -6271,7 +6270,7 @@
             },
             o.map((e) => {
               var a;
-              return l.createElement(_r, {
+              return l.createElement(hr, {
                 key: null !== (a = e.accountid) && void 0 !== a ? a : e.steamid,
                 stream: e,
                 bSelected: t.accountid == e.accountid,
@@ -6282,7 +6281,7 @@
           )
         );
       }
-      function _r(e) {
+      function hr(e) {
         var t;
         const {
             onStreamSelect: r,
@@ -6321,7 +6320,7 @@
                 onClick: () => r && r(i),
                 rootMargin: "100px 0px 100px 0px",
               },
-              l.createElement(pr, {
+              l.createElement(_r, {
                 strThumbnail: i.thumbnail_http_address,
                 bSelected: a,
                 strCapsuleArtURL: d,
@@ -6344,7 +6343,7 @@
           )
         );
       }
-      function pr(e) {
+      function _r(e) {
         const { strCapsuleArtURL: t, strThumbnail: r, bSelected: a } = e,
           i = a ? Nt().stream_icon_selected : Nt().stream_icon;
         if (t) {
@@ -6364,7 +6363,7 @@
         }
         return l.createElement("img", { className: i, src: r });
       }
-      function br(e) {
+      function pr(e) {
         const { stream: t, orientation: r } = e,
           a = "below" == r,
           i = (0, o.SZ)(() => Mt.c9.GetBroadcast(t.steamid));

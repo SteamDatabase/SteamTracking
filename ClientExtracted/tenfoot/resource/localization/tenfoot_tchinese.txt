@@ -1122,7 +1122,7 @@
 	"SettingController_HapticSound_7"					"晉級"
 	"SettingController_HapticSound_8"					"動起來"
 	"SettingController_HapticSound_9"					"存取遭拒"
-	"SettingController_HapticSound_10"					"關機"
+	"SettingController_HapticSound_10"					"停用"
 	"SettingController_HapticSound_11"					"探索"
 	"SettingController_HapticSound_12"					"凱旋"
 	"SettingController_HapticSound_13"					"曼恩"

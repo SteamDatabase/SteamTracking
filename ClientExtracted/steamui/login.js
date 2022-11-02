@@ -11,13 +11,13 @@
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => d });
+      n.r(t), n.d(t, { default: () => g });
       var l = n(67294),
         o = n(8199),
-        s = n.n(o),
+        u = n.n(o),
         a = (n(7952), n(78869)),
         i = n(15641),
-        u = (n(36378), n(40792)),
+        s = (n(36378), n(40792)),
         r = (n(38440), n(70655)),
         c = n(27194),
         m = n(86487);
@@ -34,9 +34,9 @@
           c.Yt.InitFromObjects(l, o, null, null);
         });
       }
-      var g = n(96794),
-        h = (n(10708), n(63709));
-      function d(e) {
+      var h = n(96794),
+        d = (n(10708), n(63709));
+      function g(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
             const [e, t] = l.useState(!1);
@@ -49,34 +49,30 @@
               e
             );
           })();
-        return (
-          console.log("Realm is", a.De.EREALM),
-          console.log("Launcher is", a.De.LAUNCHER_TYPE),
-          t
-            ? o
-              ? l.createElement(E, null)
-              : null
-            : l.createElement(
-                "div",
-                {
-                  style: { color: "white" },
-                  onClick: () => {
-                    n(!0);
-                  },
+        return t
+          ? o
+            ? l.createElement(C, null)
+            : null
+          : l.createElement(
+              "div",
+              {
+                style: { color: "white" },
+                onClick: () => {
+                  n(!0);
                 },
-                "Initiate"
-              )
-        );
+              },
+              "Initiate"
+            );
       }
-      function E(e) {
+      function C(e) {
         let [t, n] = (0, l.useState)(null);
         const [o, r] = (0, l.useState)(!1),
           [c, m] = (0, l.useState)(!1);
-        let f = new u.zn(),
+        let f = new s.zn(),
           S = f.GetServiceTransport();
         !(function (e) {
           (0, l.useEffect)(() => {
-            (0, h.Uh)().Init("Client Login", CLSTAMP, e);
+            (0, d.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
         })(S),
           (0, l.useEffect)(() => {
@@ -86,13 +82,13 @@
               }),
               SteamClient.Auth.GetLoginUIStyle().then((e) => {
                 r(
-                  e == g.cL.k_ELoginUIStyleNew &&
-                    a.De.EREALM != g.IN.k_ESteamRealmChina
+                  e == h.cL.k_ELoginUIStyleNew &&
+                    a.De.EREALM != h.IN.k_ESteamRealmChina
                 );
               });
           }, []);
-        const [d, E] = (0, l.useState)(void 0),
-          [L, C] = (0, l.useState)(0);
+        const [g, C] = (0, l.useState)(void 0),
+          [E, L] = (0, l.useState)(0);
         if (
           (f.Connect().then(() => {
             m(!0);
@@ -102,10 +98,10 @@
           return null;
         const v = `${null == t ? void 0 : t.account_name}${
           null == t ? void 0 : t.reason
-        }${L.toString()}`;
+        }${E.toString()}`;
         return l.createElement(
           "div",
-          { className: s().Login },
+          { className: u().Login },
           l.createElement(i.i9, {
             key: v,
             autoFocus: !0,
@@ -115,7 +111,7 @@
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                E(null),
+                C(null),
                 SteamClient.Auth.SetLoginToken(
                   e.strRefreshToken,
                   e.strAccountName
@@ -123,8 +119,8 @@
                   const t = e.result,
                     n = e.message;
                   console.log(`client login returned ${t} (${n})`),
-                    E(t),
-                    1 != t && C(L + 1);
+                    C(t),
+                    1 != t && L(E + 1);
                 });
               const n =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
@@ -134,7 +130,7 @@
             embedded: !0,
             refreshInfo: t,
             disableQR: !o,
-            lastResult: d,
+            lastResult: g,
           })
         );
       }

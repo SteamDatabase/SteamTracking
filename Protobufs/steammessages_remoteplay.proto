@@ -105,6 +105,7 @@ enum EStreamControlMessage {
 	k_EStreamControlSetBitrateOverride = 135;
 	k_EStreamControlShowOnScreenKeyboard = 136;
 	k_EStreamControlControllerConfigMsg = 137;
+	k_EStreamControlControllerPersonalizationUpdate = 138;
 }
 
 enum EStreamVersion {
@@ -789,6 +790,12 @@ message CSetBitrateOverrideMsg {
 }
 
 message CShowOnScreenKeyboardMsg {
+}
+
+message CControllerPersonalizationUpdateMsg {
+	optional string controller_path = 1;
+	optional string controller_name = 2;
+	optional bool reverse_diamond_button_layout = 3;
 }
 
 message CStreamDataLostMsg {

@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "Ține-mă minte pe calculatorul acesta",
 	"Login_RememberMe_Short": "Ține-mă minte",
 	"Login_ForgotPassword": "Ți-ai uitat numele contului sau parola?",
+	"Login_NoSteamworksAccount": "Ești nou în Steamworks?",
+	"Login_CreateSteamworksAccount": "Află mai multe",
 	"Login_NoSteamAccount": "Nu ai un cont Steam?",
 	"Login_CreateAccount": "Creează un cont gratuit",
 	"Login_CaptchaVerification": "Te rugăm să îți confirmi umanitatea prin reintroducerea caracterelor de mai jos.",

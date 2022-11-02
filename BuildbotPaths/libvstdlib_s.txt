@@ -6,6 +6,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp

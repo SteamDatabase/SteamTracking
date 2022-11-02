@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "在這台電腦上記住我",
 	"Login_RememberMe_Short": "記住我",
 	"Login_ForgotPassword": "忘了帳戶名稱或密碼？",
+	"Login_NoSteamworksAccount": "初次使用 Steamworks？",
+	"Login_CreateSteamworksAccount": "深入了解",
 	"Login_NoSteamAccount": "沒有 Steam 帳戶嗎？",
 	"Login_CreateAccount": "建立免費帳戶",
 	"Login_CaptchaVerification": "請重新輸入驗證碼內的文字以證明您是人類。",

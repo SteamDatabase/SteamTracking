@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "Muista minut tällä tietokoneella",
     "Login_RememberMe_Short": "Muista minut",
     "Login_ForgotPassword": "Unohditko tilinimen tai salasanan?",
+    "Login_NoSteamworksAccount": "Oletko uusi Steamworksin käyttäjä?",
+    "Login_CreateSteamworksAccount": "Lisätietoja",
     "Login_NoSteamAccount": "Eikö sinulla ole vielä Steam-tiliä?",
     "Login_CreateAccount": "Luo ilmainen tili",
     "Login_CaptchaVerification": "Todista, ettet ole robotti kirjoittamalla alla näkyvät merkit.",

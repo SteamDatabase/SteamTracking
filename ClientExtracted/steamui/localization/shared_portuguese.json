@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "Lembrar-me neste computador",
     "Login_RememberMe_Short": "Lembrar-me",
     "Login_ForgotPassword": "Esqueceste-te da palavra-passe ou nome da tua conta?",
+    "Login_NoSteamworksAccount": "Primeira vez no Steamworks?",
+    "Login_CreateSteamworksAccount": "Saiba mais",
     "Login_NoSteamAccount": "Não tens uma conta Steam?",
     "Login_CreateAccount": "Criar uma conta grátis",
     "Login_CaptchaVerification": "Comprova que és humano reintroduzindo os caracteres do captcha.",

@@ -1122,7 +1122,7 @@
 	"SettingController_HapticSound_7"					"下一级"
 	"SettingController_HapticSound_8"					"甩甩甩"
 	"SettingController_HapticSound_9"					"拒绝访问"
-	"SettingController_HapticSound_10"					"反激活"
+	"SettingController_HapticSound_10"					"停用"
 	"SettingController_HapticSound_11"					"探索"
 	"SettingController_HapticSound_12"					"凯旋"
 	"SettingController_HapticSound_13"					"曼恩"

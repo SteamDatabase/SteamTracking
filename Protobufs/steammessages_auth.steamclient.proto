@@ -273,6 +273,7 @@ message CAuthenticationSupport_QueryRefreshTokenByID_Response {
 
 message CAuthenticationSupport_RevokeToken_Request {
 	optional fixed64 token_id = 1 [(description) = "Token ID of the token to revoke (required)"];
+	optional fixed64 steamid = 2 [(description) = "Steam ID of the owner of that token (required)"];
 }
 
 message CAuthenticationSupport_RevokeToken_Response {

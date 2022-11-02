@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "在这台电脑上记住我",
     "Login_RememberMe_Short": "记住我",
     "Login_ForgotPassword": "忘记了帐户名称或密码？",
+    "Login_NoSteamworksAccount": "Steamworks 新手？",
+    "Login_CreateSteamworksAccount": "了解更多",
     "Login_NoSteamAccount": "还没有 Steam 帐户？",
     "Login_CreateAccount": "创建免费帐户",
     "Login_CaptchaVerification": "请重新输入以下验证码中的字符来验证此操作为人工操作。",

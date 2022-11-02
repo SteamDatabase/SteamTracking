@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "Emlékezz rám ezen a számítógépen",
     "Login_RememberMe_Short": "Emlékezz rám",
     "Login_ForgotPassword": "Elfelejtetted a felhasználóneved vagy jelszavad?",
+    "Login_NoSteamworksAccount": "Új vagy a Steamworksön?",
+    "Login_CreateSteamworksAccount": "Tudj meg többet",
     "Login_NoSteamAccount": "Nincs Steam fiókod?",
     "Login_CreateAccount": "Hozz létre ingyenes fiókot",
     "Login_CaptchaVerification": "Kérjük, emberi mivoltod bizonyítására add meg ismét a lenti karaktereket.",

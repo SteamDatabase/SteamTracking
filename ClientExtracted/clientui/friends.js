@@ -74928,7 +74928,7 @@ object-assign
                 {
                   className: "ColorSelector",
                   d: "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
-                  fill: "#ffffff",
+                  fill: "currentColor",
                   fillOpacity: "1",
                   stroke: "none",
                   visibility: "visible",
@@ -88321,8 +88321,6 @@ function TestLocalizeCalendarTime()
           GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
-          LEGACY_GAMEPADUI_MODE: 0,
-          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
@@ -89933,4 +89931,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=aeb3e150666d9eedcf75
+//# sourceMappingURL=friends.js.map?contenthash=4f9a12beb573608bde22

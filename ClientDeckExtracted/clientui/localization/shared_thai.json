@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "จดจำฉันบนคอมพิวเตอร์นี้",
 	"Login_RememberMe_Short": "จดจำฉัน",
 	"Login_ForgotPassword": "ลืมชื่อบัญชีหรือรหัสผ่านของคุณหรือ?",
+	"Login_NoSteamworksAccount": "ใช้ Steamworks เป็นครั้งแรกใช่ไหม?",
+	"Login_CreateSteamworksAccount": "เรียนรู้เพิ่มเติม",
 	"Login_NoSteamAccount": "ไม่มีบัญชี Steam หรือ?",
 	"Login_CreateAccount": "สร้างบัญชีใหม่ฟรี",
 	"Login_CaptchaVerification": "กรุณายืนยันความเป็นมนุษย์ของคุณ โดยกรอกตัวอักษรในแคปต์ชาอีกครั้ง",

@@ -1269,8 +1269,6 @@ enum EMsg {
 	k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse = 7379;
 	k_EMsgUCMPublishedFileContentUpdated = 7380;
 	k_EMsgClientUCMPublishedFileUpdated = 7381;
-	k_EMsgClientWorkshopItemChangesRequest = 7382;
-	k_EMsgClientWorkshopItemChangesResponse = 7383;
 	k_EMsgFSBase = 7500;
 	k_EMsgClientRichPresenceUpload = 7501;
 	k_EMsgClientRichPresenceRequest = 7502;

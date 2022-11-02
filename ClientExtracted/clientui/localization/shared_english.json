@@ -1155,6 +1155,8 @@
 	"Login_RememberMe": "Remember me on this computer",
 	"Login_RememberMe_Short": "Remember me",
 	"Login_ForgotPassword": "Forgot your account name or password?",
+	"Login_NoSteamworksAccount": "New to Steamworks?",
+	"Login_CreateSteamworksAccount": "Learn more",
 	"Login_NoSteamAccount": "Don't have a Steam account?",
 	"Login_CreateAccount": "Create a Free Account",
 	"Login_CaptchaVerification": "Please verify your humanity by re-entering the characters in the captcha.",

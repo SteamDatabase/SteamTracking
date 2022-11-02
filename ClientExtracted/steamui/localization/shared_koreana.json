@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "이 컴퓨터에서 자동으로 로그인",
     "Login_RememberMe_Short": "내 로그인 정보 저장",
     "Login_ForgotPassword": "계정 이름 또는 비밀번호를 잊으셨나요?",
+    "Login_NoSteamworksAccount": "Steamworks에 처음 오셨나요?",
+    "Login_CreateSteamworksAccount": "자세히 알아보기",
     "Login_NoSteamAccount": "Steam 계정이 없으신가요?",
     "Login_CreateAccount": "무료 계정 만들기",
     "Login_CaptchaVerification": "CAPTCHA 글자들을 다시 입력해서 자신이 인간이라는 걸 증명하세요.",

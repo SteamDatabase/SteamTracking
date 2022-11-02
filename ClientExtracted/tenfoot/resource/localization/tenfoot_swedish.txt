@@ -1122,7 +1122,7 @@
 	"SettingController_HapticSound_7"					"Nästa nivå"
 	"SettingController_HapticSound_8"					"Skaka av det"
 	"SettingController_HapticSound_9"					"Åtkomst nekad"
-	"SettingController_HapticSound_10"					"Avaktivera"
+	"SettingController_HapticSound_10"					"Inaktivera"
 	"SettingController_HapticSound_11"					"Upptäckt"
 	"SettingController_HapticSound_12"					"Triumf"
 	"SettingController_HapticSound_13"					"The Mann"

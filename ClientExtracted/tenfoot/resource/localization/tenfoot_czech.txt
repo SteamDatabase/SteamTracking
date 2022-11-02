@@ -3665,7 +3665,7 @@
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyAuto"	"Výchozí tlačítko"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyStart"	"Tlačítko Start"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyBack"	"Tlačítko Zpět"
-	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyGuide"	"Tlačítko Guide"
+	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyGuide"	"Prostřední tlačítko"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyY"	"Tlačítko Y"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone"	"Zakázáno"
 	"Settings_RemoteClients_StreamingSupport"	"Zobrazit časté dotazy"

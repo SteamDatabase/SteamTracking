@@ -66432,6 +66432,8 @@ object-assign
           /* harmony export */ EBrowserType: () => /* binding */ EBrowserType,
           /* harmony export */ EClientBetaState: () =>
             /* binding */ EClientBetaState,
+          /* harmony export */ ESteamUIWindowType: () =>
+            /* binding */ ESteamUIWindowType,
           /* harmony export */ ESystemUISystemKey: () =>
             /* binding */ ESystemUISystemKey,
           /* harmony export */ EUIComposition: () =>
@@ -66440,6 +66442,8 @@ object-assign
             /* binding */ HIDKeyboardKeys,
           /* harmony export */ SendTextSpecialKeys: () =>
             /* binding */ SendTextSpecialKeys,
+          /* harmony export */ SteamUIBrowserWindow_t: () =>
+            /* binding */ SteamUIBrowserWindow_t,
           /* harmony export */ k_nSteamClientBetaNone: () =>
             /* binding */ k_nSteamClientBetaNone,
           /* harmony export */
@@ -66714,6 +66718,20 @@ object-assign
           HIDKeyboardKeys[(HIDKeyboardKeys["KEY_PREV"] = 114)] = "KEY_PREV";
           HIDKeyboardKeys[(HIDKeyboardKeys["KEY_LAST"] = 114)] = "KEY_LAST";
         })(HIDKeyboardKeys || (HIDKeyboardKeys = {}));
+        var ESteamUIWindowType;
+        (function (ESteamUIWindowType) {
+          ESteamUIWindowType[(ESteamUIWindowType["MainGamepadUI"] = 0)] =
+            "MainGamepadUI";
+          ESteamUIWindowType[(ESteamUIWindowType["Overlay"] = 1)] = "Overlay";
+          ESteamUIWindowType[(ESteamUIWindowType["Keyboard"] = 2)] = "Keyboard";
+          ESteamUIWindowType[
+            (ESteamUIWindowType["ControllerConfigurator"] = 3)
+          ] = "ControllerConfigurator";
+          ESteamUIWindowType[(ESteamUIWindowType["VR"] = 4)] = "VR";
+          ESteamUIWindowType[(ESteamUIWindowType["SteamLibrary"] = 5)] =
+            "SteamLibrary";
+        })(ESteamUIWindowType || (ESteamUIWindowType = {}));
+        class SteamUIBrowserWindow_t {}
 
         /***/
       },
@@ -67868,6 +67886,8 @@ object-assign
             /* reexport safe */ _communitytypes__WEBPACK_IMPORTED_MODULE_8__.ESocialDropTypes,
           /* harmony export */ ESteamRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.ESteamRealm,
+          /* harmony export */ ESteamUIWindowType: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.ESteamUIWindowType,
           /* harmony export */ EStoreCategory: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EStoreCategory,
           /* harmony export */ EStoreCuratorRecommendationState: () =>
@@ -67976,6 +67996,8 @@ object-assign
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.ShortcutScanData,
           /* harmony export */ ShortcutScanResults: () =>
             /* reexport safe */ _systemtypes__WEBPACK_IMPORTED_MODULE_21__.ShortcutScanResults,
+          /* harmony export */ SteamUIBrowserWindow_t: () =>
+            /* reexport safe */ _clientuitypes__WEBPACK_IMPORTED_MODULE_7__.SteamUIBrowserWindow_t,
           /* harmony export */ StorePreferences: () =>
             /* reexport safe */ _storetypes__WEBPACK_IMPORTED_MODULE_20__.StorePreferences,
           /* harmony export */ SurveyEntry: () =>
@@ -69785,6 +69807,12 @@ object-assign
             "NotFocusable";
           EPopupCreationFlags[(EPopupCreationFlags["FullScreen"] = 1024)] =
             "FullScreen";
+          EPopupCreationFlags[
+            (EPopupCreationFlags["Fullscreen_Exclusive"] = 2048)
+          ] = "Fullscreen_Exclusive";
+          EPopupCreationFlags[
+            (EPopupCreationFlags["ApplyBrowserScaleToDimensions"] = 4096)
+          ] = "ApplyBrowserScaleToDimensions";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
         const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
           {}
@@ -70236,7 +70264,7 @@ object-assign
             // TODO: popup manager doesn't do much in mobile
             if (!{ NODE_ENV: "development", STEAM_BUILD: "dev" }.MOBILE_BUILD) {
               window.addEventListener("beforeunload", (event) => {
-                var _a;
+                var _a, _b;
                 this.m_bShuttingDown = true;
                 for (let fnCallback of this.m_rgShutdownCallbacks) fnCallback();
                 // popups will remove themselves from the map as they close, put them in a separate array to avoid any wonkiness.
@@ -70246,11 +70274,17 @@ object-assign
                     rgPopupsToClose.push(popup);
                 });
                 for (let popup of rgPopupsToClose) {
-                  (_a = popup.window) === null || _a === void 0
-                    ? void 0
-                    : _a.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
-                        false
-                      );
+                  if (
+                    (_b =
+                      (_a = popup.window) === null || _a === void 0
+                        ? void 0
+                        : _a.SteamClient.Browser) === null || _b === void 0
+                      ? void 0
+                      : _b.SetShouldExitSteamOnBrowserClosed
+                  )
+                    popup.window.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(
+                      false
+                    );
                   popup.Close();
                 }
                 if (this.m_bSaveRequired) {
@@ -74720,8 +74754,8 @@ object-assign
         }
         function ChatSettings() {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -74894,7 +74928,7 @@ object-assign
                 {
                   className: "ColorSelector",
                   d: "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
-                  fill: "#ffffff",
+                  fill: "currentColor",
                   fillOpacity: "1",
                   stroke: "none",
                   visibility: "visible",
@@ -75227,8 +75261,8 @@ object-assign
         function Submit(props) {
           /* Plan to unify these across platforms eventually. Riiiiiight. */
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -75502,8 +75536,8 @@ object-assign
         }
         function VoiceRoom(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -75986,8 +76020,8 @@ object-assign
         function Group(props) {
           /* Plan to unify these across platforms eventually. Riiiiiight. */
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -76235,7 +76269,8 @@ object-assign
         }
         function AddFriend(props) {
           if (
-            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config.IN_GAMEPADUI
+            (0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -76355,8 +76390,8 @@ object-assign
         }
         function Invite(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -77571,8 +77606,8 @@ object-assign
         }
         function Bell(props) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -78445,9 +78480,14 @@ object-assign
           );
         }
         function FriendIcon(props) {
+          let { bPending, bShowArm } = props,
+            svgProps = (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__rest)(props, [
+              "bPending",
+              "bShowArm",
+            ]);
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -78456,7 +78496,7 @@ object-assign
                 xmlns: "http://www.w3.org/2000/svg",
                 className:
                   "SVGIcon_Button SVGIcon_FriendIcon" +
-                  (props.bPending ? " SVGIcon_FriendIcon_Pending" : ""),
+                  (bPending ? " SVGIcon_FriendIcon_Pending" : ""),
                 x: "0px",
                 y: "0px",
                 width: "256px",
@@ -78488,7 +78528,7 @@ object-assign
                   "path",
                   {
                     className: "WavingArm",
-                    opacity: props.bPending ? "1" : "0",
+                    opacity: bPending ? "1" : "0",
                     d: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
                   }
                 )
@@ -78522,7 +78562,7 @@ object-assign
                   "path",
                   {
                     className: "WavingArm",
-                    opacity: props.bPending ? "1" : "0",
+                    opacity: bPending ? "1" : "0",
                     d: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
                   }
                 )
@@ -78531,14 +78571,15 @@ object-assign
           } else {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
-              {
-                width: "36",
-                height: "36",
-                className: "SVGIcon_Button SVGIcon_FriendIcon",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-              },
+              Object.assign(
+                {
+                  className: "SVGIcon_Button SVGIcon_FriendIcon",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                  xmlns: "http://www.w3.org/2000/svg",
+                },
+                svgProps
+              ),
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
                 {
@@ -78550,7 +78591,7 @@ object-assign
                 "path",
                 {
                   className: "WavingArm",
-                  opacity: props.bShowArm ? "1" : "0",
+                  opacity: bShowArm ? "1" : "0",
                   d: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
                   fill: "currentColor",
                   strokeWidth: "0",
@@ -78559,7 +78600,7 @@ object-assign
               react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
                 "path",
                 {
-                  opacity: props.bShowArm ? "1" : "0",
+                  opacity: bShowArm ? "1" : "0",
                   d: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
                   fill: "currentColor",
                   strokeWidth: "0",
@@ -81273,8 +81314,8 @@ object-assign
         }
         function CommentThread(props, className) {
           if (
-            !shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.Config
-              .IN_GAMEPADUI
+            !(0,
+            shared_webui_config__WEBPACK_IMPORTED_MODULE_4__.useInGamepadUI)()
           ) {
             return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "svg",
@@ -88138,6 +88179,7 @@ function TestLocalizeCalendarTime()
           /* harmony export */ CommunityConfig: () =>
             /* binding */ CommunityConfig,
           /* harmony export */ Config: () => /* binding */ Config,
+          /* harmony export */ ConfigContext: () => /* binding */ ConfigContext,
           /* harmony export */ EventConfig: () => /* binding */ EventConfig,
           /* harmony export */ GET_BASE_URL: () => /* binding */ GET_BASE_URL,
           /* harmony export */ GET_BASE_WEB_PROPERTY: () =>
@@ -88151,9 +88193,13 @@ function TestLocalizeCalendarTime()
           /* harmony export */ InitConfigAsync: () =>
             /* binding */ InitConfigAsync,
           /* harmony export */ UserConfig: () => /* binding */ UserConfig,
+          /* harmony export */ useConfigContext: () =>
+            /* binding */ useConfigContext,
+          /* harmony export */ useInGamepadUI: () =>
+            /* binding */ useInGamepadUI,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_3__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
@@ -88167,7 +88213,32 @@ function TestLocalizeCalendarTime()
           __webpack_require__(
             /*! shared/clientenums */ "../../../web_src/shared/js/clientenums.ts"
           );
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ =
+          __webpack_require__(/*! react */ "./node_modules/react/index.js");
+        /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default =
+          /*#__PURE__*/ __webpack_require__.n(
+            react__WEBPACK_IMPORTED_MODULE_3__
+          );
 
+        const ConfigContext =
+          react__WEBPACK_IMPORTED_MODULE_3___default().createContext({});
+        const useConfigContext = () =>
+          react__WEBPACK_IMPORTED_MODULE_3___default().useContext(
+            ConfigContext
+          );
+        /**
+         * Helper function to determine whether we are in the gamepadui context
+         * @note Tom Bui: eventually remove Config.IN_GAMEPADUI check?  still need it around for how we wrap friendsui in GamepadUI...
+         * @returns boolean
+         */
+        function useInGamepadUI() {
+          const configContext = useConfigContext();
+          return (
+            (configContext === null || configContext === void 0
+              ? void 0
+              : configContext.IN_GAMEPADUI) || Config.IN_GAMEPADUI
+          );
+        }
         /**
          * Global configuration constants.
          * Populated by GetWebUIConfig on websites.
@@ -88242,14 +88313,14 @@ function TestLocalizeCalendarTime()
           // steamui specific, could move to a narrower config
           /** Whether we're directly a SteamUI context (which includes being GamepadUI). Never true for Community, FriendsUI, etc. */
           IN_STEAMUI: false,
-          /** Whether we're displaying in GamepadUI visual mode. Also true for Store/Community/FriendsUI shown inside of GamepadUI, even if not in the SteamUI context. */
+          /** @note Tom Bui: deprecated--only true for friendsui now. */
           IN_GAMEPADUI: false,
+          /** Whether we're using a shared js context or not.  Always true for gamepadui. */
+          IN_STEAMUI_SHARED_CONTEXT: false,
           /** Whether the main GamepadUI window should be windowed or fullscreen */
           GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
-          LEGACY_GAMEPADUI_MODE: 0,
-          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
@@ -88419,7 +88490,7 @@ function TestLocalizeCalendarTime()
           return rgConfigsLoaded;
         }
         function InitConfigAsync(axios, baseUrl, options) {
-          return (0, tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(
+          return (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__awaiter)(
             this,
             void 0,
             void 0,
@@ -89860,4 +89931,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=12cc26e552b4a8e589ce
+//# sourceMappingURL=friends.js.map?contenthash=4f9a12beb573608bde22

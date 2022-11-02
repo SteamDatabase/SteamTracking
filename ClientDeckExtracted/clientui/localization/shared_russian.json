@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "Запомнить на этом устройстве",
 	"Login_RememberMe_Short": "Запомнить меня",
 	"Login_ForgotPassword": "Не помните имя или пароль своего аккаунта?",
+	"Login_NoSteamworksAccount": "Первый раз в Steamworks?",
+	"Login_CreateSteamworksAccount": "Подробности",
 	"Login_NoSteamAccount": "Нет аккаунта Steam?",
 	"Login_CreateAccount": "Создайте бесплатный аккаунт",
 	"Login_CaptchaVerification": "Подтвердите, что вы не робот, введя приведённые ниже символы.",

@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "Onthoud mij op deze computer",
 	"Login_RememberMe_Short": "Onthoud me",
 	"Login_ForgotPassword": "Ben je je accountnaam of wachtwoord vergeten?",
+	"Login_NoSteamworksAccount": "Nieuw op Steamworks?",
+	"Login_CreateSteamworksAccount": "Meer informatie",
 	"Login_NoSteamAccount": "Heb je geen Steam-account?",
 	"Login_CreateAccount": "Gratis account maken",
 	"Login_CaptchaVerification": "Bewijs dat je een mens bent door de tekens van de captcha opnieuw in te voeren.",

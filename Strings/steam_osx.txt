@@ -20,15 +20,17 @@ __TEXT
 __objc_methname
 __TEXT
 __objc_classname__TEXT
+r<7
+r<7
 __objc_methtype
 __TEXT
 0
 __cstring
 __TEXT
-0=7
-0=7
 __unwind_info
 __TEXT
+XT;
+XT;
 __DATA
 <
 <
@@ -48,8 +50,8 @@ __const
 __DATA
 __cfstring
 __DATA
-@<?
-@<?
+0<?
+0<?
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -57,19 +59,23 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+pD?
+pD?
 __objc_superrefs__DATA
-`E?
-`E?
+PE?
+PE?
 __objc_ivar
 __DATA
-hE?
-hE?
+XE?
+XE?
 __objc_data
 __DATA
-pE?
-pE?
+`E?
+`E?
 __data
 __DATA
+F?
+F?
 __thread_vars
 __DATA
 0
@@ -82,6 +88,7 @@ __bss
 __DATA
 __common
 __DATA
+@}A
 H
 __LINKEDIT
 @B
@@ -154,6 +161,7 @@ u2
 @
 @
 $
+W6
 Hi
 Hi
 Hi
@@ -1522,7 +1530,6 @@ N16CCookieContainer11CCookieInfoE
 17CHTTPRequestParam
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
-<html><body>Fake captive portal</body></html>
 33CHTTPDefaultRedirectEnableHandler
 20IHTTPRedirectHandler
 18CHTTPClientRequest
@@ -2181,7 +2188,6 @@ Documents/Steam%s Content
 -noreactlogin
 -gamepadnewauth
 -nogamepadnewauth
--nogamepaduipopups
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2224,7 +2230,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Nov  1 2022 13:45:01
+Startup - updater built Nov  2 2022 14:55:01
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2511,8 +2517,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Nov  1 2022
-13:45:02
+Nov  2 2022
+14:55:02
 crashhandler003
 steam
 Steam Executable Crash
@@ -2609,7 +2615,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-13:44:58
+14:55:00
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10374,7 +10380,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-13:42:43
+14:53:11
 Jan
 Feb
 Mar
@@ -11972,8 +11978,6 @@ k_EMsgClientUCMEnumeratePublishedFilesByUserAction
 k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse
 k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
-k_EMsgClientWorkshopItemChangesRequest
-k_EMsgClientWorkshopItemChangesResponse
 k_EMsgClientUCMPublishedFileUpdated
 k_EMsgCREItemVoteSummary
 k_EMsgCREItemVoteSummaryResponse
@@ -12764,9 +12768,12 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-s>7
+ud7
 
+e7
+$_7
 
+t:
 0
 ?
 ?
@@ -12790,6 +12797,7 @@ u2
 @
 @
 $
+W6
 Hi
 Hi
 Hi
@@ -12813,11 +12821,9 @@ j0
 t&
 8
 8
-Z5
+8
 
 0
-5
-5
 5
 #&
 &
@@ -12843,12 +12849,9 @@ AT=
 D
 @
 @
-t4
 0
 4
 4
-4
-4
 @
 Hc
 Hc
@@ -12880,39 +12883,34 @@ IcE
 IcE
 @
 @
-3
-=3
+$3
 V
 $-
 7
 =
-2
 ,
 ,
 ,
 =
 ,
 ,
-T1
-g1
+z1
 m+
-1
-=3
 =+
 +
 !
 @
 0
 0
-0
 A"
 "
-/
 "
 @
+/
 &
-83
-.
+&3
+l.
+v.
 .
 .
 .
@@ -12925,7 +12923,6 @@ A"
 x&
 u&
 m&
-Z,
 >&
 @
 M9e
@@ -12960,8 +12957,6 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-#*
-2
 2
 2
 $
@@ -12983,6 +12978,7 @@ r-
 0
 IcU
 E;e
+Q)
 M)u
 =
 =
@@ -12990,9 +12986,6 @@ M)u
 =
 &
 &
-h(
-D(
-(
 (
 (
 =
@@ -13307,18 +13300,21 @@ j
 j
 j
 j
+&
+&
 j
 j
 
 9!
 t$I;M
 $
+$
 ~%
 e
 W
 ,7~5d
-#L)
-#/)
+#mH)
+#m$)
 H
 0
 
@@ -13347,6 +13343,7 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
+#
 #
 #
 #
@@ -13627,10 +13624,8 @@ Q
 @
 @
 @
-3
 0
 0
-
 
 
 
@@ -13659,6 +13654,8 @@ P
 @
 0
 =a
+$
+
 
 0
 Hi

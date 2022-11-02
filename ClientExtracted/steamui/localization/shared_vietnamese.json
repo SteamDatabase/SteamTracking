@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "Nhớ tôi trên máy tính này",
     "Login_RememberMe_Short": "Ghi nhớ tôi",
     "Login_ForgotPassword": "Quên tên tài khoản hoặc mật khẩu?",
+    "Login_NoSteamworksAccount": "Chưa biết nhiều về Steamworks?",
+    "Login_CreateSteamworksAccount": "Tìm hiểu thêm",
     "Login_NoSteamAccount": "Chưa có tài khoản Steam?",
     "Login_CreateAccount": "Tạo tài khoản miễn phí",
     "Login_CaptchaVerification": "Hãy xác minh bạn không phải là máy tính bằng cách nhập lại các ký tự trong ô.",

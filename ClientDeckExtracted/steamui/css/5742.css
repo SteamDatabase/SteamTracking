@@ -3892,6 +3892,355 @@ button.controllerconfiguratorvirtualmenus_MainOptionsButton_1OVab svg {
   .hardwaresurveydialog_HardwareSurveySection_RRhNQ {
   padding-bottom: 5px;
 }
+@keyframes gamepadui_ItemFocusAnim-darkerGrey-nocolor_2K5n7 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadui_ItemFocusAnim-darkerGrey_1j50D {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadui_ItemFocusAnim-darkGrey_Uw7dg {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadui_ItemFocusAnim-grey_20y-A {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadui_ItemFocusAnimBorder-darkGrey_V_1Ah {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadui_ItemFocusAnim-green_2-Gwv {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepadui_focusAnimation_3Nek3 {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepadui_hoverAnimation_1XRHv {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.ModalDialogPopup .ModalDialogBody .PopupFullWindow .TitleBar {
+  height: 2px;
+}
+.BasicUI ::-webkit-scrollbar {
+  display: none;
+}
+html.gamepadui_GamepadPopupHTML_2qoER {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+}
+body.gamepadui_GamepaduiPopupWindowBody_PQL-c {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+body.gamepadui_GamepaduiPopupWindowBody_PQL-c ::-webkit-scrollbar {
+  display: none;
+}
+body.gamepadui_GamepaduiPopupWindowBody_PQL-c
+  .gamepadui_GamepaduiPopupWindow_3_IJG {
+  width: 100%;
+  height: 100%;
+}
+* {
+  user-select: none;
+}
+.gamepadui_BasicUiRoot_gbo6E {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  z-index: 5;
+}
+.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneConfigurator_1oZO8,
+.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneKeyboard_1uyWM {
+  zoom: 1.5;
+}
+.gamepadui_MainNavMenuMainSplit_2Y_Mr {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.gamepadui_BasicHome_3LYP1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  user-select: none;
+  color: #dcdedf;
+}
+.gamepadui_BasicHome_3LYP1.gamepadui_OpaqueBackground_b084m {
+  background: radial-gradient(
+    155.42% 100% at 0% 0%,
+    #151f25 0 0%,
+    #152533 100%
+  );
+}
+.gamepadui_BasicHome_3LYP1.gamepadui_TransparentBackground_3vBmc {
+  background: transparent;
+}
+.gamepadui_BasicHome_3LYP1 .gamepadui_Content_1FxmN {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+.gamepadui_MainNavMenuAnchor_vI9jJ {
+  width: 0px;
+  min-width: 0px;
+  max-width: 0px;
+  height: 100%;
+  background-color: transparent;
+  flex-basis: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.gamepadui_QuickAccessMenuAnchor_1zGXS {
+  width: 0px;
+  min-width: 0px;
+  max-width: 0px;
+  height: 100%;
+  background-color: transparent;
+  flex-basis: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.gamepadui_GamepadDialogOverlay_34Euf.FullModalOverlay,
+.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayContent {
+  position: absolute;
+}
+.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayBackground {
+  background: rgba(14, 20, 27, 0.85);
+  backdrop-filter: blur(3px);
+}
+.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_Content {
+  box-shadow: none;
+}
+.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_TopBar {
+  display: none;
+}
+.ErrorBoundary {
+  padding-top: 40px;
+}
+@keyframes gamepadui_ContinuousRenderPixelBlink_3drkl {
+  50% {
+    opacity: 0.5;
+  }
+}
+.gamepadui_ContinuousRenderPixel_uLkXY {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9001;
+  width: 0.5vw;
+  height: 0.5vw;
+  pointer-events: none;
+  background: red;
+  contain: strict;
+  animation: gamepadui_ContinuousRenderPixelBlink_3drkl 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnim-darkerGrey-nocolor_p-Xec {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnim-darkerGrey_2zGWv {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnim-darkGrey_2-3TO {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnim-grey_IFP1W {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnimBorder-darkGrey_1w_pm {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes steamdeckbootupthrobber_ItemFocusAnim-green_2nv8F {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes steamdeckbootupthrobber_focusAnimation_3_tSH {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes steamdeckbootupthrobber_hoverAnimation_1NqZd {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.steamdeckbootupthrobber_Container_j78ib {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e141b;
+  z-index: 10;
+}
+.steamdeckbootupthrobber_Container_j78ib::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  z-index: 1;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_MoviePlaying_3aJvw::after {
+  animation: steamdeckbootupthrobber_fade_2V_oo;
+  animation-duration: 1500ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-delay: 50ms;
+}
+.steamdeckbootupthrobber_Container_j78ib img {
+  flex-grow: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+}
+.steamdeckbootupthrobber_Container_j78ib video {
+  flex-grow: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 10;
+}
+.steamdeckbootupthrobber_Container_j78ib
+  video.steamdeckbootupthrobber_FullscreenVideo_2XDIx {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_Exit_3hvZo {
+  opacity: 1;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_ExitActive_1uR4A {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_ExitDone_2T7oN {
+  display: none;
+}
+@keyframes steamdeckbootupthrobber_fade_2V_oo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes basiccontextmenu_ItemFocusAnim-darkerGrey-nocolor_82mxd {
   from {
     background: #3d4450;
@@ -4254,214 +4603,6 @@ button.controllerconfiguratorvirtualmenus_MainOptionsButton_1OVab svg {
   left: -4px;
   margin-top: 0px;
   display: none;
-}
-@keyframes gamepadui_ItemFocusAnim-darkerGrey-nocolor_2K5n7 {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes gamepadui_ItemFocusAnim-darkerGrey_1j50D {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes gamepadui_ItemFocusAnim-darkGrey_Uw7dg {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes gamepadui_ItemFocusAnim-grey_20y-A {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes gamepadui_ItemFocusAnimBorder-darkGrey_V_1Ah {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes gamepadui_ItemFocusAnim-green_2-Gwv {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes gamepadui_focusAnimation_3Nek3 {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes gamepadui_hoverAnimation_1XRHv {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.ModalDialogPopup .ModalDialogBody .PopupFullWindow .TitleBar {
-  height: 2px;
-}
-.BasicUI ::-webkit-scrollbar {
-  display: none;
-}
-html.gamepadui_GamepadPopupHTML_2qoER {
-  width: 100%;
-  height: 100%;
-}
-body {
-  font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
-}
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c ::-webkit-scrollbar {
-  display: none;
-}
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c
-  .gamepadui_GamepaduiPopupWindow_3_IJG {
-  width: 100%;
-  height: 100%;
-}
-* {
-  user-select: none;
-}
-.gamepadui_BasicUiRoot_gbo6E {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: none;
-  z-index: 5;
-}
-.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneConfigurator_1oZO8,
-.gamepadui_BasicUiRoot_gbo6E.gamepadui_StandaloneKeyboard_1uyWM {
-  zoom: 1.5;
-}
-.gamepadui_MainNavMenuMainSplit_2Y_Mr {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.gamepadui_BasicHome_3LYP1 {
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-height: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  user-select: none;
-  color: #dcdedf;
-}
-.gamepadui_BasicHome_3LYP1.gamepadui_OpaqueBackground_b084m {
-  background: radial-gradient(
-    155.42% 100% at 0% 0%,
-    #151f25 0 0%,
-    #152533 100%
-  );
-}
-.gamepadui_BasicHome_3LYP1.gamepadui_TransparentBackground_3vBmc {
-  background: transparent;
-}
-.gamepadui_BasicHome_3LYP1 .gamepadui_Content_1FxmN {
-  flex: 1;
-  display: flex;
-  min-height: 0;
-}
-.gamepadui_MainNavMenuAnchor_vI9jJ {
-  width: 0px;
-  min-width: 0px;
-  max-width: 0px;
-  height: 100%;
-  background-color: transparent;
-  flex-basis: auto;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-.gamepadui_QuickAccessMenuAnchor_1zGXS {
-  width: 0px;
-  min-width: 0px;
-  max-width: 0px;
-  height: 100%;
-  background-color: transparent;
-  flex-basis: auto;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-.gamepadui_GamepadDialogOverlay_34Euf.FullModalOverlay,
-.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayContent {
-  position: absolute;
-}
-.gamepadui_GamepadDialogOverlay_34Euf .ModalOverlayBackground {
-  background: rgba(14, 20, 27, 0.85);
-  backdrop-filter: blur(3px);
-}
-.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_Content {
-  box-shadow: none;
-}
-.gamepadui_GamepadDialogOverlay_34Euf .ModalPosition_TopBar {
-  display: none;
-}
-.ErrorBoundary {
-  padding-top: 40px;
-}
-@keyframes gamepadui_ContinuousRenderPixelBlink_3drkl {
-  50% {
-    opacity: 0.5;
-  }
-}
-.gamepadui_ContinuousRenderPixel_uLkXY {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9001;
-  width: 0.5vw;
-  height: 0.5vw;
-  pointer-events: none;
-  background: red;
-  contain: strict;
-  animation: gamepadui_ContinuousRenderPixelBlink_3drkl 1s;
-  animation-iteration-count: infinite;
 }
 @keyframes overlaydialogs_ItemFocusAnim-darkerGrey-nocolor_2QCoK {
   from {
@@ -9062,6 +9203,12 @@ A:active {
   align-items: center;
   padding: 16px 24px;
 }
+.marketingmessages_BrowserWrapper_2Pg6X {
+  display: flex;
+  flex-direction: column;
+  width: 624px;
+  height: 100%;
+}
 @keyframes deskjobpromo_ItemFocusAnim-darkerGrey-nocolor_3HVm- {
   from {
     background: #3d4450;
@@ -9616,258 +9763,6 @@ A:active {
 }
 .gamepadhomerecommended_DiscoveryQueueWidgetCtn_2bLlN {
   margin-bottom: 20px;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-@media only screen and (max-width: 768px) {
-  .facetedbrowse_FacetedBrowseInnerCtn_hWbTI {
-    display: grid;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .facetedbrowse_FacetedBrowseInnerCtn_hWbTI {
-    display: flex;
-  }
-}
-@media only screen and (min-width: 1420px) {
-  .facetedbrowse_FacetedBrowseInnerCtn_hWbTI {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .facetedbrowse_FacetedBrowseControls_3fHFf {
-    width: 200px;
-    padding: 20px;
-    grid-row-start: 2;
-    grid-column-start: 1;
-    z-index: 10;
-    opacity: 95%;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .facetedbrowse_FacetedBrowseControls_3fHFf {
-    width: 200px;
-    padding: 20px;
-    margin-right: 20px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
-  }
-}
-@media only screen and (min-width: 1420px) {
-  .facetedbrowse_FacetedBrowseControls_3fHFf {
-    padding: 10px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-    flex-basis: 200px;
-    padding-right: 20px;
-    margin-right: 16px;
-  }
-}
-.BasicUI .facetedbrowse_FacetedBrowseControls_3fHFf {
-  display: none;
-}
-.facetedbrowse_FacetMenuTitle_3K6Uu {
-  text-transform: uppercase;
-  font-size: 16px;
-  letter-spacing: 0.03em;
-  padding-bottom: 4px;
-}
-.facetedbrowse_FacetedBrowseMatchCount_3jXlH {
-  text-transform: uppercase;
-  font-size: 13px;
-  opacity: 70%;
-  margin: 4px 0;
-}
-.facetedbrowse_FacetedBrowseReset_CtoEO {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 13px;
-  margin: 4px 0;
-  padding-bottom: 4px;
-  cursor: pointer;
-  opacity: 85%;
-}
-.facetedbrowse_FacetedBrowseControls_3fHFf h2 {
-  margin-top: 25px !important;
-  margin-bottom: 0px !important;
-}
-.facetedbrowse_Facet_2i4LT {
-  margin-top: 12px;
-  margin-bottom: 16px;
-}
-.facetedbrowse_FacetTitleCtn_3W_uV {
-  display: flex;
-}
-.facetedbrowse_FacetTitleCtn_3W_uV svg {
-  height: 10px;
-  margin-top: 10px;
-  fill: rgba(255, 255, 255, 0.75);
-  stroke: rgba(255, 255, 255, 0.75);
-}
-.facetedbrowse_FacetTitle_3L67O {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  padding: 4px 0;
-  width: fit-content;
-  opacity: 70%;
-  flex-grow: 1;
-}
-.facetedbrowse_FacetTitle_3L67O:hover {
-  cursor: pointer;
-  opacity: 85%;
-}
-.facetedbrowse_FacetValue_Qu-ZC {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding-left: 12px;
-  opacity: 85%;
-}
-.facetedbrowse_FacetValue_Qu-ZC:hover {
-  opacity: 100%;
-}
-.facetedbrowse_FacetValueEnabled_2kNes {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  font-weight: bold;
-  padding-left: 8px;
-  opacity: 100%;
-}
-.facetedbrowse_FacetValueEnabled_2kNes:hover {
-  opacity: 85%;
-}
-.facetedbrowse_FacetValueDeactivated_1J6AZ {
-  display: flex;
-  align-items: baseline;
-  padding-left: 12px;
-  opacity: 40%;
-}
-.facetedbrowse_FacetValueDeactivated_1J6AZ a {
-  cursor: default;
-}
-.facetedbrowse_FacetValueName_3WMvo {
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  flex-grow: 1;
-}
-.facetedbrowse_FacetValueDescription_1Su6Q {
-  font-size: 11px;
-  font-weight: normal;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  opacity: 50%;
-}
-.facetedbrowse_FacetValueShowMore_230Th {
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding-left: 12px;
-  flex-grow: 1;
-  opacity: 40%;
-  cursor: pointer;
-}
-.facetedbrowse_FacetValueShowMore_230Th:hover {
-  opacity: 60%;
-  cursor: pointer;
-}
-.facetedbrowse_FacetedBrowseItems_NO-IP {
-  display: block;
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .facetedbrowse_FacetedBrowseItems_NO-IP {
-    grid-row-start: 2;
-    grid-column-start: 1;
-  }
-}
-@media only screen and (min-width: 1420px) {
-  .facetedbrowse_FacetedBrowseItems_NO-IP {
-    flex-shrink: 0;
-    flex-basis: 100%;
-  }
-}
-.BasicUI .facetedbrowse_FacetedBrowseItems_NO-IP {
-  display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-}
-.facetedbrowse_FacetedBrowsePopupCtn_Vyowz {
-  height: 24px;
-  margin-bottom: 16px;
-  display: flex;
-  cursor: pointer;
-}
-.BasicUI .facetedbrowse_FacetedBrowsePopupCtn_Vyowz {
-  display: none;
-}
-.facetedbrowse_FacetedBrowsePopupLabel_1voIo {
-  margin-right: 8px;
-  text-transform: uppercase;
-  padding-top: 3px;
-  padding-left: 6px;
-}
-.facetedbrowse_FacetedBrowsePopup_35kqo {
-  width: 24px;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
-}
-.facetedbrowse_FacetedBrowsePopup_35kqo svg {
-  fill: currentColor;
-}
-.facetedbrowse_FacetedBrowseFeedbackLink_3B2jY {
-  margin-top: 32px;
-}
-.facetedbrowse_Facet_2i4LT .facetedbrowse_FacetValuePriceSlider_h8tqf {
-  background: none;
-}
-.facetedbrowse_SelectedFacetValuesTitle_1rCTF {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 13px;
-  margin: 4px 0;
-  opacity: 85%;
-}
-.facetedbrowse_SelectedFacetValuesList_17tCW {
-  display: flex;
-  flex-wrap: wrap;
-}
-.facetedbrowse_SelectedFacetValuesList_17tCW
-  .facetedbrowse_SelectedFacetValueCtn_1whZi {
-  padding: 4px;
-  padding-right: 6px;
-  margin: 2px;
-  font-size: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  cursor: pointer;
-}
-.facetedbrowse_SelectedFacetValuesList_17tCW
-  .facetedbrowse_SelectedFacetValueCtn_1whZi
-  svg {
-  width: 8px;
-  height: 8px;
-  fill: rgba(0, 0, 0, 0.5);
-  margin-right: 4px;
-}
-.facetedbrowse_SelectedFacetValuesList_17tCW
-  .facetedbrowse_SelectedFacetValueCtn_1whZi
-  span {
-  flex-grow: 0;
-}
-.facetedbrowse_FacetValueSearch_1nSEf .DialogInput {
-  padding: 4px 10px;
-  margin: 8px 0;
 }
 .appcarouseltrailer_AppCarouselTrailerCtn_3hJp_ {
   position: relative;
@@ -15973,9 +15868,6 @@ A:active {
     background-position: 50% 0%;
   }
 }
-.controllersettings_NintendoSwitchLayoutToggle_3Q8Vc {
-  padding-left: 10px;
-}
 .controllersettings_NintendoSwitchLayoutToggle_3Q8Vc
   .controllersettings_NintendoSwitchLayoutToggleDesc_3J9Od {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -15992,12 +15884,6 @@ A:active {
   color: #fff;
   font-size: 12px;
   line-height: 16px;
-}
-.controllersettings_NintendoSwitchLayoutToggle_3Q8Vc
-  .controllersettings_NintendoButtonLayoutImg_E3Ic8 {
-  opacity: 0.8;
-  width: 50%;
-  margin: 10px;
 }
 .controllersettings_Rumble_3r25x {
   animation: controllersettings_rumble-shake__a49l;

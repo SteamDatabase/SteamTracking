@@ -154,7 +154,6 @@ h
 HW
 )
 HB
-D=
 .
 0
 
@@ -164,9 +163,9 @@ D=
 
 @
 
+<
 @
 @
-:
 ]'
 @
 8
@@ -687,7 +686,7 @@ N8panorama18CMouseCursorRenderE
 @
 N8panorama23CSteamGameControllerNewE
 N8panorama23CSteamGameControllerNew53CCallbackInternal_OnReceivedControllerPersonalizationE
-13CCallbackImplILi80EE
+13CCallbackImplILi88EE
 13CCallbackBase
 N8panorama23CSteamGameControllerNew42CCallbackInternal_OnControllerDisconnectedE
 13CCallbackImplILi4EE
@@ -5364,8 +5363,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov  1 2022
-13:46:28
+Nov  2 2022
+14:55:51
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8259,7 +8258,6 @@ SSE is required.
 src.IsValid()
 
 HB
-D=
 .
 0
 
@@ -8269,9 +8267,9 @@ D=
 
 @
 
+<
 @
 @
-:
 ]'
 
 0
@@ -8279,16 +8277,14 @@ I/
 u$
 &
 W'
-'
 9
-r:
+'
 /
 &
 :
 &
 #
 N.
-8
 %
 %
 ^-
@@ -8297,12 +8293,12 @@ N.
 7
 7
 7
+7
 v,
 C,
 ,
 ,
 ,
-o5
 ,
 ,
 ,
@@ -8344,6 +8340,7 @@ o*
 @
 @
 @
+S6
 @
 @
 4'
@@ -8385,8 +8382,10 @@ o*
 @
 d
 Uk/
+'6
 K
 &6
+%6
 @
 @
 @
@@ -8404,7 +8403,6 @@ K
 @
 @
 @
-K3
 @
 @
 @
@@ -8437,7 +8435,6 @@ K3
 @
 @
 0
-2
 @
 @
 0
@@ -8455,17 +8452,24 @@ o$
 )
 '
 S'
+1
 @
 =
+2
+2
+2
 2
 @
 @
 %
+1
 %
+/
 @
 @
 ?
 -
+.
 .
 .
 .
@@ -8487,7 +8491,7 @@ A
 A
 A
 (
-P-
+,
 ,
 q"
 @
@@ -8511,13 +8515,19 @@ A
 A
 R!
 t!
+.,
 3!
 #
 *"
+y+
+b-
 -
 -
 -
 -
+-
+-
+.
 @
 #
 D"
@@ -8528,18 +8538,20 @@ v
 "
 }
 "
-&
 @
 (
-'
+V$
 Hi
 (
 #
 #
 $
 $
+m"
+$
 @
 @
+f&
 0
 0
 
@@ -8549,6 +8561,7 @@ $
 
 
 0
+&%
 IcE
 @
 @
@@ -8730,8 +8743,6 @@ IcE
 @
 @
 @
-@
-@
 #
 @
 @
@@ -8841,10 +8852,11 @@ IcE
 @
 @
 @
-y
-fD;=1!
+@
+@
 @
 j
+!
 !
 @
 @
@@ -9078,4 +9090,4 @@ E
 0
 [
 L
-j
+Lc5cQ

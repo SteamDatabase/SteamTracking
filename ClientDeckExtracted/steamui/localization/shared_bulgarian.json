@@ -1067,6 +1067,8 @@
     "Login_RememberMe": "Запомнете ме на този компютър",
     "Login_RememberMe_Short": "Запомняне на информацията ми за вход",
     "Login_ForgotPassword": "Забравили сте името или паролата на своя акаунт?",
+    "Login_NoSteamworksAccount": "Нови сте в Steamworks?",
+    "Login_CreateSteamworksAccount": "Научете още",
     "Login_NoSteamAccount": "Нямате Steam акаунт?",
     "Login_CreateAccount": "Създайте безплатен акаунт",
     "Login_CaptchaVerification": "Моля, потвърдете че сте човек, въвеждайки символите по-долу.",

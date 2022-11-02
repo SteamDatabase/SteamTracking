@@ -1067,6 +1067,8 @@
 	"Login_RememberMe": "Beni bu bilgisayarda hatırla",
 	"Login_RememberMe_Short": "Beni hatırla",
 	"Login_ForgotPassword": "Kullanıcı adınızı veya parolanızı mı unuttunuz?",
+	"Login_NoSteamworksAccount": "Steamworks'te yeni misiniz?",
+	"Login_CreateSteamworksAccount": "Daha fazlasını öğrenin",
 	"Login_NoSteamAccount": "Steam hesabınız yok mu?",
 	"Login_CreateAccount": "Ücretsiz hesap oluştur",
 	"Login_CaptchaVerification": "Lütfen aşağıdaki Captcha'daki karakterleri tekrar girerek insan olduğunuzu kanıtlayın.",
