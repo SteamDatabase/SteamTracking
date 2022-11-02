@@ -548,14 +548,15 @@
       function F(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, h.vs)(t, m.bk),
-          r = (0, G.bJ)();
+          r = (0, G.bJ)(),
+          o = (0, T.id)();
         if (!n) return null;
-        const o = n.GetBestPurchaseOption();
+        const l = n.GetBestPurchaseOption();
         return i.createElement(
           d.s,
           Object.assign(
             { className: (0, A.Z)(x().AppCapsuleCtn, "AppCapsuleCtn") },
-            (0, b.h)(n, r)
+            (0, b.h)(n, r, o)
           ),
           i.createElement(
             P.ll,
@@ -574,18 +575,25 @@
           Boolean(!a && !n.BIsFree()) &&
             i.createElement(
               "span",
-              { className: x().AppCapsulePrice },
-              Boolean(null == o ? void 0 : o.discount_pct) &&
+              {
+                className: (0, A.Z)(
+                  x().AppCapsulePrice,
+                  Boolean(null == l ? void 0 : l.discount_pct)
+                    ? R().Discounted
+                    : ""
+                ),
+              },
+              Boolean(null == l ? void 0 : l.discount_pct) &&
                 i.createElement(
                   "span",
                   { className: R().StoreSaleDiscountBox },
-                  `-${null == o ? void 0 : o.discount_pct}%`
+                  `-${null == l ? void 0 : l.discount_pct}%`
                 ),
-              Boolean(o.final_price_in_cents) &&
+              Boolean(l.final_price_in_cents) &&
                 i.createElement(
                   "span",
                   { className: R().StoreSalePriceBox },
-                  o.formatted_final_price
+                  l.formatted_final_price
                 )
             )
         );
@@ -1213,7 +1221,7 @@
       };
       var Z = a(13271),
         j = a(52114),
-        q = a(9410),
+        q = a(23211),
         Y = a(95598),
         $ = a(72258),
         Q = a(35092),
@@ -1323,7 +1331,7 @@
                               "#EventDisplay_Share_NotLoggedIn_Description"
                             ),
                             strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
-                            onOK: () => (0, q.Xt)(),
+                            onOK: () => (0, q.X)(),
                           }),
                           (0, M.RA)(e)
                         );

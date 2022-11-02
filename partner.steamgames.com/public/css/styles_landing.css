@@ -2201,6 +2201,10 @@ input.datepicker {
 	font-family: arial, tahoma, sans-serif;
 }
 
+.release_body h1 {
+    font-weight: 600;
+}
+
 .release_body h2 em {
 	font-style: normal;
 	font-weight: bold;
@@ -2539,8 +2543,34 @@ div#appHeaderFindSuggestions
 	white-space: normal;
 }
 
+.landingTable.releaseActions td {
+    font-size: 14px;
+}
+
+.releaseAreYouSure {
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    margin-top: 20px;
+}
+
+.publishNowInstructions {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
 .publishNowWarningOMG {
-	color: #ff7b00;
+	color: #ffda98;
+}
+
+.launchDiscountBlocked {
+    padding-left: 8px;
+    color: orange;
+    display: none;
 }
 
 .publishOptions_pri {

@@ -185,6 +185,7 @@
     "AppFilter_Label": "Filter by Game",
     "AppFilter_FilterByRecentlyPlayed": "Filter by Recently Played Games",
     "AppFilter_NoMatches": "No further matches",
+    "SearchTerm_PlaceholderPrompt": "Search",
     "HowItWorks_Introducing": "Introducing",
     "HowItWorks_SteamPoints": "Steam Points",
     "HowItWorks_SteamPoints_Desc1": "Get points for shopping on Steam or by contributing to the Steam Community.",

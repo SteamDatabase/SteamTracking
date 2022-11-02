@@ -31,7 +31,7 @@
           l = (0, a._T)(e, ["children", "navTreeRef"]),
           u = r.useRef(),
           m = (0, s.BE)(u, n);
-        if (i.De.IN_GAMEPADUI) {
+        if ((0, i.id)()) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
@@ -59,9 +59,9 @@
         u = n(15396),
         m = n(7573),
         g = n(90666),
-        E = n(66472);
+        p = n(66472);
       n(37662);
-      class p {
+      class E {
         constructor() {
           this.m_rgSections = (0, g.kQ)("categories", "application_config");
         }
@@ -69,7 +69,7 @@
           return this.m_rgSections;
         }
         static Get() {
-          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
+          return E.s_singleton || (E.s_singleton = new E()), E.s_singleton;
         }
       }
       function _(e) {
@@ -79,16 +79,16 @@
           { placeholderHeight: "150px" },
           a.createElement(
             "div",
-            { className: E.CategorySection },
+            { className: p.CategorySection },
             a.createElement(
               "span",
-              { className: E.CategorySectionName },
+              { className: p.CategorySectionName },
               t.name
             ),
             a.createElement(
               s.P8,
               {
-                className: E.CategoriesCtn,
+                className: p.CategoriesCtn,
                 scrollDirection: "x",
                 navEntryPreferPosition: i.c4.MAINTAIN_X,
               },
@@ -113,13 +113,13 @@
             {
               href: g.De.STORE_BASE_URL + t.url,
               className: (0, m.Z)({
-                [E.Category]: !0,
-                [E.TopLevelCategory]: t.is_toplevel_genre,
+                [p.Category]: !0,
+                [p.TopLevelCategory]: t.is_toplevel_genre,
               }),
             },
             a.createElement(
               "span",
-              { className: E.CategoryName },
+              { className: p.CategoryName },
               a.createElement("span", null, t.name)
             ),
             a.createElement(N, Object.assign({}, e))
@@ -130,17 +130,17 @@
         let { category: t } = e;
         return a.createElement(
           "div",
-          { className: E.GridOuter },
+          { className: p.GridOuter },
           a.createElement(
             "div",
-            { className: E.Grid },
+            { className: p.Grid },
             a.createElement("img", { src: g.De.STORE_BASE_URL + t.image_url })
           )
         );
       }
       const d = function () {
         const { sections: e } = (function () {
-            const e = p.Get(),
+            const e = E.Get(),
               [t, n] = (0, a.useState)(e.GetSections());
             return { sections: t };
           })(),
@@ -158,7 +158,7 @@
             { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
             a.createElement(
               "div",
-              { className: E.CategorySectionsCtn },
+              { className: p.CategorySectionsCtn },
               e.map((e, t) =>
                 a.createElement(_, {
                   key: "section" + e.name,
@@ -184,8 +184,8 @@
         u = n(70966),
         m = n(69491),
         g = n.n(m),
-        E = n(13596),
-        p = n(41311),
+        p = n(13596),
+        E = n(41311),
         _ = n(90666),
         C = n(54086);
       function N(e) {
@@ -222,9 +222,9 @@
           return a.createElement(
             "div",
             { className: g().FlexCenter, style: { height: "500px" } },
-            a.createElement(E.V, {
+            a.createElement(p.V, {
               size: "medium",
-              string: (0, p.Xx)("#Loading"),
+              string: (0, E.Xx)("#Loading"),
             })
           );
         const d = m.visibility_state !== o.ac.k_EEventStateVisible;

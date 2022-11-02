@@ -5,15 +5,15 @@
   [4233],
   {
     77636: (e, t, s) => {
-      s.d(t, { LA: () => c, jg: () => m });
+      s.d(t, { LA: () => u, jg: () => m });
       var n = s(70655),
         r = s(9669),
         o = s.n(r),
         i = s(22188),
         a = (s(26149), s(54698), s(3389), s(82946), s(93976)),
         d = s(90666),
-        l = s(67294);
-      const p = "unUserdataVersion";
+        p = s(67294);
+      const l = "unUserdataVersion";
       class m {
         constructor() {
           (this.m_setWishList = new Set()),
@@ -175,7 +175,7 @@
         }
         InternalLoad() {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(p) || "0",
+            let e = window.localStorage.getItem(l) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + d.L7.accountid,
@@ -456,9 +456,9 @@
         }
         InvalidateCache() {
           window.localStorage.setItem(
-            p,
+            l,
             (
-              Number.parseInt(window.localStorage.getItem(p) || "0") + 1
+              Number.parseInt(window.localStorage.getItem(l) || "0") + 1
             ).toString()
           );
         }
@@ -472,10 +472,10 @@
           );
         }
       }
-      function c() {
-        const [e, t] = (0, l.useState)(!m.Get().BIsLoaded());
+      function u() {
+        const [e, t] = (0, p.useState)(!m.Get().BIsLoaded());
         return (
-          (0, l.useEffect)(() => {
+          (0, p.useEffect)(() => {
             e &&
               m
                 .Get()
@@ -524,68 +524,51 @@
         (0, n.gn)([i.aD], m.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
-      s.d(t, { Xt: () => h, _I: () => g });
+      s.d(t, { X: () => u, _: () => c });
       var n = s(67294),
-        r = (s(55914), s(3786)),
-        o = s(59650),
-        i = s(41311),
-        a = s(90666),
-        d = s(51167),
-        l = (s(88514), s(65902)),
+        r = s(59650),
+        o = s(41311),
+        i = s(90666),
+        a = s(51167),
+        d = (s(88514), s(65902)),
         p = s(92742),
-        m = s(54698);
-      function c(e) {
-        const t = (t) =>
-          (window.location.href =
-            e.redirectURL && e.redirectURL !== (0, a.Kc)() + "login"
-              ? e.redirectURL
-              : a.De.COMMUNITY_BASE_URL);
-        return a.De.EREALM !== m.IN.k_ESteamRealmChina
-          ? n.createElement(_, Object.assign({}, e))
-          : a.L7 && a.L7.logged_in
-          ? (t(), null)
-          : n.createElement(
-              "div",
-              null,
-              n.createElement(r.f, { baseURL: (0, a.Kc)(), onLoginComplete: t })
-            );
-      }
-      function u(e) {
+        l = s(54698);
+      function m(e) {
         return n.createElement(
-          o.e1,
+          r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(c, { redirectURL: e.redirectURL })
+          n.createElement(h, { redirectURL: e.redirectURL })
         );
       }
-      function h() {
-        (0, o.AM)(
-          n.createElement(u, {
+      function u() {
+        (0, r.AM)(
+          n.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, i.Xx)("#Login_SignIn") }
+          { strTitle: (0, o.Xx)("#Login_SignIn") }
         );
       }
-      function g(e) {
-        (0, o.AM)(
-          n.createElement(u, { ownerWin: window, redirectURL: e }),
+      function c(e) {
+        (0, r.AM)(
+          n.createElement(m, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, i.Xx)("#Login_SignIn") }
+          { strTitle: (0, o.Xx)("#Login_SignIn") }
         );
       }
-      function _(e) {
+      function h(e) {
         const { redirectURL: t } = e,
           [s] = (0, n.useState)(
-            new l.J(a.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new d.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
           [r, o] = (0, n.useState)(!1);
         return n.createElement(
           "div",
           null,
           r
-            ? n.createElement(d.pT, null)
-            : n.createElement(d.wK, {
+            ? n.createElement(a.pT, null)
+            : n.createElement(a.wK, {
                 autoFocus: !0,
                 transport: s,
                 platform: 2,
@@ -596,6 +579,7 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
+                disableQR: i.De.EREALM === l.IN.k_ESteamRealmChina,
               })
         );
       }
@@ -608,8 +592,8 @@
         i = s(53157),
         a = s(10847),
         d = s(84351),
-        l = s(95598),
-        p = s(64839);
+        p = s(95598),
+        l = s(64839);
       class m extends r.Component {
         constructor(e) {
           super(e), (this.state = { maximized: this.BIsMaximized() });
@@ -665,7 +649,7 @@
                         e && e.close();
                       },
                     },
-                    r.createElement(l.pVO, null)
+                    r.createElement(p.pVO, null)
                   ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -676,8 +660,8 @@
                           e.SteamClient.Window.ToggleMaximize();
                         },
                       },
-                      this.state.maximized && r.createElement(l.r6F, null),
-                      !this.state.maximized && r.createElement(l.YqJ, null)
+                      this.state.maximized && r.createElement(p.r6F, null),
+                      !this.state.maximized && r.createElement(p.YqJ, null)
                     ),
                   !this.props.hideMinMax &&
                     r.createElement(
@@ -688,16 +672,16 @@
                           e.SteamClient.Window.Minimize();
                         },
                       },
-                      r.createElement(l.gR, null)
+                      r.createElement(p.gR, null)
                     )
                 )
             )
           );
         }
       }
-      (0, n.gn)([p.ak], m.prototype, "UpdateMaximizeState", null);
-      var c = s(77520),
-        u = s(41311),
+      (0, n.gn)([l.ak], m.prototype, "UpdateMaximizeState", null);
+      var u = s(77520),
+        c = s(41311),
         h = s(90666);
       function g(e, t, s) {
         return (0, n.mG)(this, void 0, void 0, function* () {
@@ -730,16 +714,16 @@
                   );
                 });
               })(e, t, null == s ? void 0 : s.promiseRenderComplete)),
-            l =
+            p =
               d &&
               d.height / t.innerHeight < 0.9 &&
               d.width / t.innerWidth < 0.8;
-          if (r || (!(null == s ? void 0 : s.bForcePopOut) && l))
+          if (r || (!(null == s ? void 0 : s.bForcePopOut) && p))
             return w(e, t);
-          const p = {
+          const l = {
               strTitle:
                 (null == s ? void 0 : s.strTitle) ||
-                (0, u.Xx)("#Dialog_DefaultWindowTitle"),
+                (0, c.Xx)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == s ? void 0 : s.fnOnClose,
               popupWidth:
                 (null == s ? void 0 : s.popupWidth) ||
@@ -754,8 +738,8 @@
           return w(
             e,
             t,
-            p.strTitle,
-            p,
+            l.strTitle,
+            l,
             null == s ? void 0 : s.browserContext,
             m
           );
@@ -767,34 +751,34 @@
         });
       }
       function w(e, t, s, n, o, i, a) {
-        let l, p;
+        let p, l;
         const m = e.props.closeModal,
-          c = () => {
-            p && p.Close(),
+          u = () => {
+            l && l.Close(),
               m && m(),
               (null == n ? void 0 : n.fnOnClose) && n.fnOnClose();
           },
-          u = () => {
-            l && l.Close(), c();
+          c = () => {
+            p && p.Close(), u();
           },
-          h = r.cloneElement(e, { closeModal: u });
+          h = r.cloneElement(e, { closeModal: c });
         if (I((a = a || (0, d.BL)(t)), t) && n && s) {
           if (n.bHideMainWindowForPopouts) {
             const e = r.createElement(
               d.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !h.props.bDisableBackgroundDismiss && u,
+                onEscKeypress: !h.props.bDisableBackgroundDismiss && c,
               },
               r.createElement("div", null)
             );
-            p = a.ShowModal(e);
+            l = a.ShowModal(e);
           }
-          const e = Object.assign(Object.assign({}, n), { fnOnClose: c }),
+          const e = Object.assign(Object.assign({}, n), { fnOnClose: u }),
             m = new C(t, s, e, h, o, i);
-          m.Show(), (l = m);
-        } else l = a.ShowModal(h);
-        return l;
+          m.Show(), (p = m);
+        } else p = a.ShowModal(h);
+        return p;
       }
       function I(e, t) {
         return (
@@ -819,7 +803,7 @@
             (this.m_options = o);
         }
         Update(e) {
-          (0, c.X)(!1, "NYI");
+          (0, u.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
           var t, s, n;

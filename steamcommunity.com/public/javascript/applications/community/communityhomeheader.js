@@ -97,7 +97,7 @@
           s = (0, o._T)(e, ["children", "navTreeRef"]),
           m = c.useRef(),
           b = (0, i.BE)(m, t);
-        if (l.De.IN_GAMEPADUI) {
+        if ((0, l.id)()) {
           const e = window.__nav_tree_root;
           return c.createElement(
             n.Fe,
@@ -645,12 +645,12 @@
                     o ? i().Divider : null
                   ),
                 },
-                r.map((e, r) => c.createElement(N, { key: r, appId: e }))
+                r.map((e, r) => c.createElement(g, { key: r, appId: e }))
               )
             )
           : null;
       }
-      function N(e) {
+      function g(e) {
         const r = p.Z.Get().GetApp(e.appId);
         return r
           ? c.createElement(
@@ -666,12 +666,12 @@
             )
           : null;
       }
-      const g = "subsection",
-        v = "browsefilter";
+      const v = "subsection",
+        N = "browsefilter";
       function M() {
         const e = (0, k.k6)(),
-          r = (0, T.ks)(e, g),
-          t = (0, T.ks)(e, v);
+          r = (0, T.ks)(e, v),
+          t = (0, T.ks)(e, N);
         return c.createElement(
           "div",
           null,

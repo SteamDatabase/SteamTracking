@@ -67,15 +67,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .bundle_ShellHeader_kOC36 .bundle_AppFilterContainer_2h5QB {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB
-  .bundle_HeaderVerticalDivider_1FaU7 {
-  height: 30px;
-  margin-right: 14px;
+  .bundle_SearchTermContainer_1vqtw {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB
@@ -83,6 +85,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchTerm_u6k6E {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchTerm_u6k6E::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchIconContainer_OsLH8 {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchIcon_H8YKM {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchTermClearButton_3BWU2 {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchTermClearIcon_LCByT {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_SearchTermClearIcon_LCByT:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterIconContainerNoBorder_333Rt {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB
@@ -95,7 +169,7 @@ body.v6.rewards .ModalPosition_Content {
   .bundle_AppFilterIcon_HCNAj {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -104,6 +178,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_AppFilterIconNoBorder_24IGx {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.bundle_ShellHeader_kOC36
+  .bundle_AppFilterContainer_2h5QB
+  .bundle_FilterInUseNoBorder_2IhKK {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB

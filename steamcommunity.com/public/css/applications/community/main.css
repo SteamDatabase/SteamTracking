@@ -1664,12 +1664,24 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadslider_SliderTrack_Mq25N::before {
   content: "";
   position: absolute;
-  left: 0;
+  --normalized-fill-start: calc(
+    (100%) *
+      min(var(--normalized-slider-value), var(--normalized-slider-origin))
+  );
+  --normalized-fill-end: calc(
+    (100%) *
+      max(var(--normalized-slider-value), var(--normalized-slider-origin))
+  );
+  --normalized-width-handle: calc(
+    var(--normalized-fill-end) - var(--normalized-fill-start)
+  );
+  left: var(--normalized-fill-start);
   right: 0;
   top: 0;
   bottom: 0;
   background: var(--left-track-color);
-  transform: translateX(calc(-100% * var(--inverse-normalized-value)));
+  width: var(--normalized-width-handle);
+  border-radius: 3px;
 }
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderTrack_Mq25N::before {

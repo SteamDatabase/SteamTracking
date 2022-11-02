@@ -320,6 +320,10 @@ body.v6 {
 		url( 'https://help.steampowered.com/public/images/blue_body_repeat.jpg?v=2' ) center top repeat-y #000000;
 }
 
+body.v6.china .page_body_ctn.login {
+	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_steam_china.jpg' ) center top no-repeat, #181A21;
+}
+
 .page_body_ctn.login {
 	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg' ) center top no-repeat, #181A21;
 	padding: 0px 8px;
@@ -327,7 +331,12 @@ body.v6 {
 	height: 100vh;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
+
+	body.v6.china .page_body_ctn.login {
+		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg' ) center top no-repeat, #181A21;
+	}
+
 	.page_body_ctn.login {
 		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://help.steampowered.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
 		padding: 0px 8px;

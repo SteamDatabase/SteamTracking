@@ -3018,7 +3018,11 @@ html, body { height:100%; }
 	max-height: 64px;
 }
 
-/* For Bulk Approve Pricing Tool */
+/* For Bulk Review Pricing Tool */
+.AdminPageContent.BulkReviewPricingTool {
+    min-height: unset;
+}
+
 .pending_package_item>td {
 	vertical-align: top;
 	border-top: 1px solid #444;
@@ -3033,12 +3037,17 @@ html, body { height:100%; }
 }
 
 .pending_pricing_admin_table th {
-    width: 46px;
+    width: 2%;
     max-width: 46px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: right;
+}
+@media screen and (max-width: 2400px) {
+    body .pending_pricing_admin_table th {
+        width: 26px;
+    }
 }
 .pending_pricing_admin_table th.wide {
     width: 70px;
@@ -3058,11 +3067,17 @@ html, body { height:100%; }
     width: unset;
 }
 
-
+.priceChangedNew:hover {
+    position: absolute;
+    z-index: 10;
+    background: black;
+    cursor: default;
+}
 
 .priceChangedNew
 {
 	color: #82a6d7;
+    overflow: hidden;
 }
 
 .priceChangedHigher

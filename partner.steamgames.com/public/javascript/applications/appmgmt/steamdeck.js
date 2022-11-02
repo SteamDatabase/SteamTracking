@@ -8,7 +8,7 @@
     99752: (l, e, n) => {
       n.r(e), n.d(e, { default: () => a });
       var t = n(67294),
-        u = (n(44396), n(27327));
+        u = (n(44396), n(78507));
       function a(l) {
         var e, n;
         const { dataprops: a, results: s } = l;

@@ -224,12 +224,12 @@ function ShowTicketControls()
 	$J( '#show_ticket_controls' ).slideUp();
 }
 
-function SubmitReplyForm( form )
+function SubmitReplyForm( form, bHeldTicket = false )
 {
 	// if ticket is held, want to prompt for changing state
 	var $HeldDialog = $J( '#held_ticket_form' );
 	var strExtraParams = '';
-	if ( $HeldDialog.length > 0 )
+	if ( bHeldTicket )
 	{
 		var $DialogContents = $HeldDialog.clone();
 		var $Dialog = ShowConfirmDialog( 'Ticketmaster', $DialogContents.show(), 'Submit', 'Cancel' )
@@ -815,21 +815,21 @@ function PerformTicketAction( elSelect )
 		var strFailed = 'Failed to mark ticket as held. Please try again.';
 		if ( $J('[contenteditable]').text() && strSelected == 'markheld' )
 		{
-			var $Dialog = ShowConfirmDialog( strHeader, 'Hold Ticket?', 'Hold Ticket', 'Cancel', 'Hold and send my response' )
-				.done( function( andSend )
-				{
-					if ( andSend == 'SECONDARY' )
-					{
-						SubmitFormAndCallFunction_WaitDialog('#togglemarkheld_form', strHeader, strUpdate, strFailed, function (){
-							SubmitReplyForm_Internal( $J( '.RespondToTicketForm' ) );
-						});
-					}
-					else
-					{
-						SubmitFormAndReload_WaitDialog('#togglemarkheld_form', strHeader, strUpdate, strFailed);
-					}
-
-				});
+            var $HeldDialog = $J( '#held_ticket_form' );
+            var $DialogContents = $HeldDialog.clone();
+            var $Dialog = ShowConfirmDialog( 'Ticketmaster', $DialogContents.show(), 'Submit', 'Cancel' )
+            $Dialog.done( function()
+            {
+                var strSerialized = $DialogContents.first().serialize();
+                if ( $DialogContents.find( 'input[name="held_ticket"]:checked' ).val() != 'hold_no_response' )
+                {
+                    SubmitReplyForm_Internal( $J('.RespondToTicketForm'), strSerialized );
+                }
+                else
+                {
+                    SubmitFormAndReload_WaitDialog('#togglemarkheld_form', strHeader, strUpdate, strFailed);
+                }
+            });
 		}
 		else
 		{

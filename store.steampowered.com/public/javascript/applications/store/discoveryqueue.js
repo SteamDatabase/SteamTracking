@@ -28,7 +28,7 @@
           a = (0, n._T)(e, ["children", "navTreeRef"]),
           c = o.useRef(),
           d = (0, s.BE)(c, r);
-        if (l.De.IN_GAMEPADUI) {
+        if ((0, l.id)()) {
           const e = window.__nav_tree_root;
           return o.createElement(
             i.Fe,
@@ -57,15 +57,15 @@
         d = r(99946),
         p = r(27717),
         v = r(41311),
-        g = r(90666),
-        _ = r(57237),
-        m = r.n(_);
+        g = r(57237),
+        m = r.n(g),
+        _ = r(90666);
       function y(e) {
         const { appID: t } = e,
           r = (0, p.g)(),
-          [_] = (0, a.Ar)("inqueue", "0"),
-          [y, D] = (0, n.useState)(!1),
-          [E, f] = (0, n.useState)(!1),
+          [g] = (0, a.Ar)("inqueue", "0"),
+          [y, f] = (0, n.useState)(!1),
+          [D, E] = (0, n.useState)(!1),
           [C] = (0, l.vs)(t, { include_assets: !0 }),
           T = (0, u.L)(),
           b = n.useRef();
@@ -75,10 +75,11 @@
             ? void 0
             : e.Activate(!0);
         }, []);
-        const { eStoreDiscoveryQueueType: x, storePageFilter: Q } =
+        const x = (0, _.id)(),
+          { eStoreDiscoveryQueueType: Q, storePageFilter: S } =
             n.useMemo(() => {
-              if ((null == _ ? void 0 : _.length) > 0) {
-                const e = _.split("_"),
+              if ((null == g ? void 0 : g.length) > 0) {
+                const e = g.split("_"),
                   t = Number(e[0]);
                 let r;
                 return (
@@ -87,16 +88,16 @@
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [_]),
-          S = n.useCallback(() => {
+            }, [g]),
+          W = n.useCallback(() => {
+            E(!0);
+          }, []),
+          w = n.useCallback(() => {
             f(!0);
           }, []),
-          W = n.useCallback(() => {
-            D(!0);
-          }, []),
-          w = (0, s.ZP)(x, Q);
+          h = (0, s.ZP)(Q, S);
         return r && C
-          ? E
+          ? D
             ? null
             : n.createElement(
                 o.p,
@@ -110,8 +111,8 @@
                   {
                     focusable: !0,
                     className: m().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: S,
-                    onOKButton: W,
+                    onSecondaryButton: W,
+                    onOKButton: w,
                     onOKActionDescription: (0, v.Xx)(
                       "#DiscoveryQueue_ResumeWizard"
                     ),
@@ -124,23 +125,23 @@
                   }),
                   n.createElement(
                     "div",
-                    { onClick: W, className: m().WidgetText },
+                    { onClick: w, className: m().WidgetText },
                     (0, v.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == w ? void 0 : w.length) > 0 && ": " + w
+                    (null == h ? void 0 : h.length) > 0 && ": " + h
                   ),
-                  !g.De.IN_GAMEPADUI &&
+                  !x &&
                     n.createElement(
                       "div",
-                      { className: m().CloseButton, onClick: S },
+                      { className: m().CloseButton, onClick: W },
                       n.createElement(c.X, null)
                     ),
                   y &&
                     n.createElement(d.MS, {
                       includeAppID: t,
                       bWizardVisible: y,
-                      fnCloseModal: () => D(!1),
-                      eStoreDiscoveryQueueType: x,
-                      storePageFilter: Q,
+                      fnCloseModal: () => f(!1),
+                      eStoreDiscoveryQueueType: Q,
+                      storePageFilter: S,
                     })
                 )
               )

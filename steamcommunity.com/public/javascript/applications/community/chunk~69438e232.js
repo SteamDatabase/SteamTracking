@@ -2660,7 +2660,7 @@
     },
     86782: (e, t, n) => {
       "use strict";
-      n.d(t, { m$: () => ee, v6: () => oe, Xy: () => ne });
+      n.d(t, { m$: () => ee, v6: () => ie, Xy: () => ne });
       var a = n(70655),
         r = n(22188),
         o = n(29323),
@@ -2942,7 +2942,7 @@
             (this.m_nCurrentRenderCount = 0),
             !this.props.bShowOnlyInitialEvent &&
               this.props.initialEvent &&
-              ((this.m_loader = new re(this.props.partnerEventStore)),
+              ((this.m_loader = new oe(this.props.partnerEventStore)),
               this.m_loader.InitAroundEvent(
                 this.props.initialEvent,
                 this.props.additionalParams
@@ -3160,7 +3160,7 @@
               ref: this.m_refPage,
             },
             this.props.showAppHeader &&
-              i.createElement(oe, { appId: l, clanId: c }),
+              i.createElement(ie, { appId: l, clanId: c }),
             i.createElement(
               "div",
               {
@@ -3296,22 +3296,29 @@
         (0, a.gn)([Z.ak], ee.prototype, "OnWheel", null),
         (ee = (0, a.gn)([o.Pi], ee));
       const te = (0, o.Pi)((e) => {
-        let t = e.loader.GetNewerState(),
-          n = e.loader.GetOlderState();
-        return t == ae.Loading && n == ae.Loading
-          ? null
-          : ("top" == e.location ? t : n) == ae.Loading
-          ? i.createElement(
-              "div",
-              { className: M().DirectionState },
-              i.createElement(V.V, {
-                position: "center",
-                string: (0, y.Xx)("#Loading"),
-              })
-            )
-          : null;
-      });
-      let ne = class extends i.Component {
+          let t = e.loader.GetNewerState(),
+            n = e.loader.GetOlderState();
+          return t == re.Loading && n == re.Loading
+            ? null
+            : ("top" == e.location ? t : n) == re.Loading
+            ? i.createElement(
+                "div",
+                { className: M().DirectionState },
+                i.createElement(V.V, {
+                  position: "center",
+                  string: (0, y.Xx)("#Loading"),
+                })
+              )
+            : null;
+        }),
+        ne = i.forwardRef((e, t) => {
+          const n = (0, f.id)();
+          return i.createElement(
+            ae,
+            Object.assign({ ref: t }, e, { bInGamepadUI: n })
+          );
+        });
+      let ae = class extends i.Component {
         constructor(e) {
           super(e),
             (this.m_refContent = i.createRef()),
@@ -3458,7 +3465,7 @@
                       onLeave: this.OnLeaveVisible,
                       bottomOffset: "300px",
                     }),
-                  f.De.IN_GAMEPADUI
+                  this.props.bInGamepadUI
                     ? i.createElement(
                         "div",
                         { className: G().EventDetailTitle },
@@ -3567,22 +3574,22 @@
           );
         }
       };
-      var ae;
-      (0, a.gn)([Z.ak], ne.prototype, "OnEnterVisible", null),
-        (0, a.gn)([Z.ak], ne.prototype, "OnLeaveVisible", null),
-        (ne = (0, a.gn)([o.Pi], ne)),
+      var re;
+      (0, a.gn)([Z.ak], ae.prototype, "OnEnterVisible", null),
+        (0, a.gn)([Z.ak], ae.prototype, "OnLeaveVisible", null),
+        (ae = (0, a.gn)([o.Pi], ae)),
         (function (e) {
           (e[(e.Idle = 1)] = "Idle"),
             (e[(e.Loading = 2)] = "Loading"),
             (e[(e.EndOfContent = 3)] = "EndOfContent");
-        })(ae || (ae = {}));
-      class re {
+        })(re || (re = {}));
+      class oe {
         constructor(e) {
           (this.k_nMaxPerDirection = 3),
             (this.m_nAppID = 0),
             (this.m_rgEvents = []),
-            (this.m_eOlderDirection = ae.Idle),
-            (this.m_eNewerDirection = ae.Idle),
+            (this.m_eOlderDirection = re.Idle),
+            (this.m_eNewerDirection = re.Idle),
             (this.m_partnerEventStore = e);
         }
         GetEvents() {
@@ -3603,8 +3610,8 @@
             (this.m_nAppID = e.appid),
               (this.m_clanSteamID = e.clanSteamID),
               (this.m_rgEvents = []),
-              (this.m_eOlderDirection = ae.Loading),
-              (this.m_eNewerDirection = ae.Loading),
+              (this.m_eOlderDirection = re.Loading),
+              (this.m_eNewerDirection = re.Loading),
               (this.m_additionalParams = t),
               this.m_rgEvents.push(e);
             let a = null;
@@ -3621,26 +3628,26 @@
             (0, r.z)(() => {
               if (!a || 0 == a.length)
                 return (
-                  (this.m_eOlderDirection = ae.EndOfContent),
-                  void (this.m_eNewerDirection = ae.EndOfContent)
+                  (this.m_eOlderDirection = re.EndOfContent),
+                  void (this.m_eNewerDirection = re.EndOfContent)
                 );
               let t = a.findIndex((t) => t.GID == e.GID),
                 n = t,
                 r = t >= 0 ? a.length - t - 1 : 0;
               (this.m_eNewerDirection =
-                n >= this.k_nMaxPerDirection ? ae.Idle : ae.EndOfContent),
+                n >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent),
                 (this.m_eOlderDirection =
-                  r >= this.k_nMaxPerDirection ? ae.Idle : ae.EndOfContent),
+                  r >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent),
                 (this.m_rgEvents = a);
             });
           });
         }
         LoadMoreAtEnd() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            if (this.m_eOlderDirection != ae.Idle) return;
+            if (this.m_eOlderDirection != re.Idle) return;
             if (0 == this.m_rgEvents.length) return;
             let e = this.m_rgEvents[this.m_rgEvents.length - 1];
-            this.m_eOlderDirection = ae.Loading;
+            this.m_eOlderDirection = re.Loading;
             let t = null;
             try {
               const n = this.m_partnerEventStore;
@@ -3654,21 +3661,21 @@
               );
             } catch (e) {}
             (0, r.z)(() => {
-              if (!t) return void (this.m_eOlderDirection = ae.Idle);
+              if (!t) return void (this.m_eOlderDirection = re.Idle);
               const e = new Set(this.m_rgEvents.map((e) => e.GID));
               for (let n of t)
                 e.has(n.GID) || (this.m_rgEvents.push(n), e.add(n.GID));
               this.m_eOlderDirection =
-                t.length >= this.k_nMaxPerDirection ? ae.Idle : ae.EndOfContent;
+                t.length >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent;
             });
           });
         }
         LoadMoreAtBeginning() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            if (this.m_eNewerDirection != ae.Idle) return;
+            if (this.m_eNewerDirection != re.Idle) return;
             if (0 == this.m_rgEvents.length) return;
             let e = this.m_rgEvents[0];
-            this.m_eNewerDirection = ae.Loading;
+            this.m_eNewerDirection = re.Loading;
             let t = null;
             try {
               const n = this.m_partnerEventStore;
@@ -3681,20 +3688,20 @@
               );
             } catch (e) {}
             (0, r.z)(() => {
-              if (!t) return void (this.m_eNewerDirection = ae.Idle);
+              if (!t) return void (this.m_eNewerDirection = re.Idle);
               const e = new Set(this.m_rgEvents.map((e) => e.GID));
               for (let n of t.reverse())
                 e.has(n.GID) || (this.m_rgEvents.unshift(n), e.add(n.GID));
               this.m_eNewerDirection =
-                t.length >= this.k_nMaxPerDirection ? ae.Idle : ae.EndOfContent;
+                t.length >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent;
             });
           });
         }
       }
-      (0, a.gn)([r.LO.shallow], re.prototype, "m_rgEvents", void 0),
-        (0, a.gn)([r.LO], re.prototype, "m_eOlderDirection", void 0),
-        (0, a.gn)([r.LO], re.prototype, "m_eNewerDirection", void 0);
-      const oe = (0, o.Pi)((e) =>
+      (0, a.gn)([r.LO.shallow], oe.prototype, "m_rgEvents", void 0),
+        (0, a.gn)([r.LO], oe.prototype, "m_eOlderDirection", void 0),
+        (0, a.gn)([r.LO], oe.prototype, "m_eNewerDirection", void 0);
+      const ie = (0, o.Pi)((e) =>
         i.createElement(
           "div",
           {
@@ -3874,7 +3881,7 @@
     },
     65499: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => F, L: () => H });
+      n.d(t, { Q: () => U, L: () => H });
       var a = n(70655),
         r = n(67294),
         o = n(29323),
@@ -3895,7 +3902,7 @@
         C = n(93976),
         D = n(9915),
         I = n(95598),
-        y = n(9410),
+        y = n(23211),
         T = n(14745),
         f = n(76776),
         A = n(54698),
@@ -4232,12 +4239,11 @@
           )
         );
       });
-      var O,
-        R = n(35921),
-        G = n(7707),
-        P = n(47808),
-        U = n(97118);
-      function F(e, t) {
+      var O = n(35921),
+        R = n(7707),
+        G = n(47808),
+        P = n(97118);
+      function U(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
             i.De.IN_CLIENT
@@ -4251,7 +4257,7 @@
                       "#EventDisplay_Share_NotLoggedIn_Description"
                     ),
                     strOKButtonText: (0, s.Xx)("#MobileLogin_SignIn"),
-                    onOK: () => (0, y.Xt)(),
+                    onOK: () => (0, y.X)(),
                   }),
                   window
                 ),
@@ -4262,15 +4268,20 @@
           ((0, d.AM)(r.createElement(T.r, null), window), !1)
         );
       }
-      let H = (O = class extends r.Component {
+      function F(e) {
+        let t;
+        return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
+      }
+      const H = (e) => {
+        const t = (0, i.id)();
+        return r.createElement(V, Object.assign({}, e, { bInGamepadUI: t }));
+      };
+      let V = class extends r.Component {
         constructor(e) {
           super(e), (this.m_cancelSignal = S().CancelToken.source());
           const t = D.cb.Get().BHasMyVote(e.eventModel);
           let n;
-          t &&
-            (n = O.ConvertMyVoteRaw(
-              D.cb.Get().GetPreviouslyLoadedVote(e.eventModel)
-            )),
+          t && (n = F(D.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: n });
         }
         HandleRefreshMyVotingInformation() {
@@ -4281,7 +4292,7 @@
                 .Get()
                 .LoadMyVote(e, this.m_cancelSignal)
                 .then((e) => {
-                  let t = O.ConvertMyVoteRaw(e);
+                  let t = F(e);
                   this.setState({ myVote: t, bLoadedVote: !0 });
                 })
                 .catch((e) => {
@@ -4301,10 +4312,6 @@
           this.props.eventModel.GID != e.eventModel.GID &&
             this.HandleRefreshMyVotingInformation();
         }
-        static ConvertMyVoteRaw(e) {
-          let t;
-          return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
-        }
         componentWillUnmount() {
           this.m_cancelSignal.cancel(
             "EventDiscussionWidget is being unmounted"
@@ -4318,7 +4325,7 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          F(t, D.cb.Get()) &&
+          U(t, D.cb.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
@@ -4342,7 +4349,7 @@
         }
         OnShareDialog(e) {
           (0, d.AM)(
-            r.createElement(U.t, {
+            r.createElement(P.t, {
               eventModel: this.props.eventModel,
               emoticonStore: this.props.emoticonStore,
               partnerEventStore: this.props.partnerEventStore,
@@ -4378,7 +4385,7 @@
             a = i.De.EREALM === A.IN.k_ESteamRealmChina,
             o = i.L7.logged_in && N.Get().BCanRepostPartnerEvent();
           return r.createElement(
-            R.s,
+            O.s,
             { className: g().Container, "flow-children": "row", focusable: !1 },
             r.createElement(
               "div",
@@ -4390,10 +4397,10 @@
                   "div",
                   { className: g().VoteCount },
                   r.createElement(I.KJh, { className: g().VoteUpStaticIcon }),
-                  (0, P.AV)(t)
+                  (0, G.AV)(t)
                 ),
                 r.createElement(
-                  R.s,
+                  O.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4417,7 +4424,7 @@
                   )
                 ),
                 r.createElement(
-                  R.s,
+                  O.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4437,7 +4444,7 @@
                 )
               ),
               !a &&
-                r.createElement(V, {
+                r.createElement(X, {
                   commentCount: e.nCommentCount,
                   discussionURL: n,
                   gotoDiscussion: this.GotoDiscussion,
@@ -4447,7 +4454,7 @@
                   "div",
                   { className: g().VoteContainer },
                   r.createElement(
-                    R.s,
+                    O.s,
                     {
                       focusable: !0,
                       className: (0, u.Z)(
@@ -4467,9 +4474,9 @@
             r.createElement(
               "div",
               { className: g().ShareContainer },
-              !i.De.IN_GAMEPADUI &&
+              !this.props.bInGamepadUI &&
                 r.createElement(
-                  R.s,
+                  O.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4489,8 +4496,8 @@
             )
           );
         }
-      });
-      function V(e) {
+      };
+      function X(e) {
         const { commentCount: t, discussionURL: n, gotoDiscussion: a } = e;
         return r.createElement(
           "div",
@@ -4499,11 +4506,11 @@
             "div",
             { className: g().DiscussionCount },
             r.createElement(I.IWH, null),
-            (0, P.AV)(t)
+            (0, G.AV)(t)
           ),
           n &&
             r.createElement(
-              G.IS,
+              R.IS,
               { href: (0, M.OL)(n) },
               r.createElement(
                 "div",
@@ -4524,7 +4531,7 @@
             ),
           !n &&
             r.createElement(
-              R.s,
+              O.s,
               {
                 focusable: !0,
                 onActivate: a,
@@ -4539,12 +4546,12 @@
             )
         );
       }
-      (0, a.gn)([l.ak], H.prototype, "OnVoteUp", null),
-        (0, a.gn)([l.ak], H.prototype, "OnVoteDown", null),
-        (0, a.gn)([l.ak], H.prototype, "OnShareDialog", null),
-        (0, a.gn)([l.ak], H.prototype, "GotoDiscussion", null),
-        (0, a.gn)([l.ak], H.prototype, "OpenRepostDialogs", null),
-        (H = O = (0, a.gn)([o.Pi], H));
+      (0, a.gn)([l.ak], V.prototype, "OnVoteUp", null),
+        (0, a.gn)([l.ak], V.prototype, "OnVoteDown", null),
+        (0, a.gn)([l.ak], V.prototype, "OnShareDialog", null),
+        (0, a.gn)([l.ak], V.prototype, "GotoDiscussion", null),
+        (0, a.gn)([l.ak], V.prototype, "OpenRepostDialogs", null),
+        (V = (0, a.gn)([o.Pi], V));
     },
     3044: (e, t, n) => {
       "use strict";
@@ -4564,7 +4571,15 @@
         g = n(13596),
         v = n(93976),
         _ = n(90666);
-      let E = class extends s.Component {
+      const E = (e) => {
+        let { bShowOnlyInitialEvent: t } = e;
+        const n = (0, _.id)();
+        return s.createElement(
+          S,
+          Object.assign({}, e, { bShowOnlyInitialEvent: t || n })
+        );
+      };
+      let S = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = { bLoading: !1, eventModel: this.props.eventModel }),
@@ -4642,8 +4657,9 @@
           });
         }
         render() {
-          const { bLoading: e, eventModel: t } = this.state;
-          if (e)
+          const { bShowOnlyInitialEvent: e } = this.props,
+            { bLoading: t, eventModel: n } = this.state;
+          if (t)
             return s.createElement(
               d.D2,
               null,
@@ -4654,47 +4670,46 @@
               )
             );
           const {
-              closeModal: n,
-              appid: a,
-              clanSteamID: r,
-              className: o,
-              partnerEventStore: i,
-              showAppHeader: l,
-              bPrimaryPageFeature: m,
-              additionalParams: u,
-              eventClassName: v,
+              closeModal: a,
+              appid: r,
+              clanSteamID: o,
+              className: i,
+              partnerEventStore: l,
+              showAppHeader: m,
+              bPrimaryPageFeature: u,
+              additionalParams: v,
+              eventClassName: _,
             } = this.props,
-            E = _.De.IN_GAMEPADUI,
-            S = s.createElement(
+            E = s.createElement(
               "div",
               null,
               s.createElement(p.m$, {
-                initialEvent: t,
-                appid: a,
-                clanSteamID: r,
-                partnerEventStore: i,
+                initialEvent: n,
+                appid: r,
+                clanSteamID: o,
+                partnerEventStore: l,
                 emoticonStore: c.F,
-                closeModal: !m && n,
-                showAppHeader: l,
-                bShowOnlyInitialEvent: E,
-                additionalParams: u,
-                eventClassName: v,
+                closeModal: !u && a,
+                showAppHeader: m,
+                bShowOnlyInitialEvent: e,
+                additionalParams: v,
+                eventClassName: _,
               })
             );
-          return m
-            ? S
+          return u
+            ? E
             : s.createElement(
                 d.D2,
-                { className: o },
+                { className: i },
                 s.createElement(
                   d.Pv,
-                  { navID: "WebRowEventInfiniteScroll", closeModal: n },
-                  S
+                  { navID: "WebRowEventInfiniteScroll", closeModal: a },
+                  E
                 )
               );
         }
       };
-      E = (0, a.gn)([i.Pi], E);
+      S = (0, a.gn)([i.Pi], S);
     },
     31933: (e, t, n) => {
       "use strict";
@@ -4776,7 +4791,7 @@
         y = n.n(I),
         T = n(96944),
         f = n.n(T),
-        A = n(9410);
+        A = n(23211);
       function M(e) {
         return _.L7.logged_in
           ? !_.L7.is_limited ||
@@ -4796,7 +4811,7 @@
                   "#EventDisplay_Share_NotLoggedIn_Description"
                 ),
                 strOKButtonText: (0, g.Xx)("#MobileLogin_SignIn"),
-                onOK: A.Xt,
+                onOK: A.X,
               }),
               window
             ),
@@ -5724,7 +5739,7 @@
         s = (n(7200), n(23937)),
         l = n(34133),
         c = n.n(l),
-        p = n(9410),
+        p = n(23211),
         d = n(7573),
         m = n(41311),
         u = n(64839),
@@ -5972,7 +5987,7 @@
                 ),
                 strOKButtonText: (0, m.Xx)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, p.Xt)(),
+                onOK: () => (0, p.X)(),
               })
             : this.state.bShareOnSteamDialog
             ? r.createElement(U, {

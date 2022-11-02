@@ -74,15 +74,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .styles_ShellHeader_yV5Uz .styles_AppFilterContainer_3FDv4 {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .styles_ShellHeader_yV5Uz
   .styles_AppFilterContainer_3FDv4
-  .styles_HeaderVerticalDivider_1TtYk {
-  height: 30px;
-  margin-right: 14px;
+  .styles_SearchTermContainer_3f6Lg {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .styles_ShellHeader_yV5Uz
   .styles_AppFilterContainer_3FDv4
@@ -90,6 +92,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchTerm_2bDOX {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchTerm_2bDOX::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchIconContainer_2sHSZ {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchIcon_2nhTc {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchTermClearButton_B8B9A {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchTermClearIcon_8Rt8u {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_SearchTermClearIcon_8Rt8u:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_AppFilterIconContainerNoBorder_SKEZG {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .styles_ShellHeader_yV5Uz
   .styles_AppFilterContainer_3FDv4
@@ -102,7 +176,7 @@ body.v6.rewards .ModalPosition_Content {
   .styles_AppFilterIcon_3McBd {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -111,6 +185,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_AppFilterIconNoBorder_tZkl2 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.styles_ShellHeader_yV5Uz
+  .styles_AppFilterContainer_3FDv4
+  .styles_FilterInUseNoBorder_1PMni {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .styles_ShellHeader_yV5Uz
   .styles_AppFilterContainer_3FDv4
@@ -478,359 +577,6 @@ body.v6.rewards .ModalPosition_Content {
   color: #fff;
   background-position: 0 0;
 }
-.login_LoginDialog_2y6W_ {
-  background-color: #101114;
-  background-image: linear-gradient(to bottom, #101114, #1f2127);
-  min-height: 512px;
-  position: relative;
-}
-.login_AccountPasswordPanel_3hiT2
-  .DialogCheckbox_Container
-  .DialogToggle_Label {
-  color: #969696;
-  font-size: 12px;
-  line-height: 22px;
-  font-weight: 300;
-}
-.login_LoginPanelBackground_3rFou {
-  position: absolute;
-  overflow: hidden;
-  pointer-events: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.login_LoginPanelBackground_3rFou .SVGIcon_SteamLogo {
-  pointer-events: none;
-  position: absolute;
-  bottom: -128px;
-  left: -64px;
-  opacity: 0.02;
-  width: 800px;
-  height: 800px;
-  max-width: 500px;
-  max-height: 500px;
-}
-.login_LoginPanelContent_1dgRm {
-  padding: 32px;
-}
-.login_ErrorMessage_Xp7bS {
-  user-select: none;
-  color: #ff9696;
-  font-size: 12px;
-  margin: 0px;
-}
-.login_AccountPasswordForm_3M0na {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24px;
-}
-.login_AccountPasswordForm_3M0na .DialogInputLabelGroup {
-  margin-bottom: 16px;
-}
-.login_AccountPasswordForm_3M0na .DialogTextInputBase {
-  font-size: 24px;
-  height: 24px;
-  width: 100%;
-  max-width: 398px;
-  color: #bfc6d4;
-  box-sizing: content-box;
-  background: #32353c;
-}
-@media screen and (max-width: 700px) {
-  .login_AccountPasswordForm_3M0na .DialogTextInputBase {
-    font-size: 18px;
-    height: 20px;
-    width: 70vw;
-  }
-}
-.login_AuthenticationPanel_1mvos
-  .login_AccountPasswordForm_3M0na
-  .DialogTextInputBase {
-  text-transform: uppercase;
-}
-.login_AccountPasswordForm_3M0na .DialogTextInputBase:hover {
-  background: #3a3e46;
-}
-.login_AccountPasswordForm_3M0na .DialogTextInputBase:focus {
-  background: #464a53;
-}
-.login_AccountPasswordForm_3M0na
-  .login_AccountNameLabel_2mGS5.login_MedName_2J9dc {
-  font-size: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.login_AccountPasswordForm_3M0na
-  .login_AccountNameLabel_2mGS5.login_LargeName_26ejp {
-  font-size: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY {
-  font-size: 36px;
-  font-family: monospace;
-}
-.login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY.login_MedPass_3dfHR {
-  font-size: 32px;
-}
-.login_AccountPasswordForm_3M0na
-  .login_PasswordDots_2hvaY.login_LargePass_3iXGb {
-  font-size: 19px;
-}
-@media screen and (max-width: 700px) {
-  .login_AccountPasswordForm_3M0na .login_PasswordDots_2hvaY,
-  .login_AccountPasswordForm_3M0na
-    .login_PasswordDots_2hvaY.login_MedPass_3dfHR,
-  .login_AccountPasswordForm_3M0na
-    .login_PasswordDots_2hvaY.login_LargePass_3iXGb {
-    font-size: 19px;
-  }
-}
-.login_AccountPasswordForm_3M0na input:-webkit-autofill,
-.login_AccountPasswordForm_3M0na input:-webkit-autofill:hover,
-.login_AccountPasswordForm_3M0na
-  input:-webkit-autofill:focus
-  textarea:-webkit-autofill,
-.login_AccountPasswordForm_3M0na
-  textarea:-webkit-autofill:hover
-  textarea:-webkit-autofill:focus,
-.login_AccountPasswordForm_3M0na select:-webkit-autofill,
-.login_AccountPasswordForm_3M0na select:-webkit-autofill:hover,
-.login_AccountPasswordForm_3M0na select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #d3eaeb;
-  -webkit-box-shadow: 0 0 0px 100px #53523f inset;
-  box-shadow: 0 0 0px 100px #53523f inset;
-}
-.login_AccountPasswordForm_3M0na .DialogButton.Primary {
-  height: 44px;
-  width: 50%;
-  align-self: flex-end;
-}
-.login_AccountFieldHeader_ItWep {
-  margin-top: 10px;
-}
-.login_PasswordFieldHeader_2GJed {
-  margin-top: 10px;
-}
-.login_NeedHelpLink_3nqR4 {
-  color: #969696;
-  margin: 10px 0px 20px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
-  transition: all 0.21s ease-in-out;
-}
-.login_NeedHelpLink_3nqR4.login_NeedHelpHighlight_25N0C {
-  color: #ff7300;
-  text-decoration-color: #8f5100;
-}
-.login_NeedHelpLink_3nqR4:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
-}
-.login_NeedHelpLink_3nqR4:visited {
-  color: #969696;
-}
-.login_CreateAccountLink_r1OCj a {
-  color: #bfc6d4;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
-}
-.login_CreateAccountLink_r1OCj a:visited {
-  color: #bfc6d4;
-}
-.login_CreateAccountLink_r1OCj a:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
-}
-.login_LoginCreateSeperator_25iPN {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 16px;
-  height: 24px;
-}
-.login_RefreshCaptchaText_28Gin {
-  color: #67c1f5;
-  margin: 10px 0px 20px 0px;
-  font-size: 12px;
-  cursor: pointer;
-}
-.login_RefreshCaptchaText_28Gin:visited {
-  color: #67c1f5;
-}
-.login_SigningInAccountName_2Bjab,
-.login_SigninTitle_Pk26- {
-  user-select: none;
-  font-size: 28px;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #bfc6d4;
-  margin-top: 28px;
-  margin-bottom: 12px;
-}
-@media screen and (max-width: 700px) {
-  .login_SigningInAccountName_2Bjab,
-  .login_SigninTitle_Pk26- {
-    margin-top: 0px;
-  }
-}
-.login_RememberMeCheck_zkf30 {
-  margin-top: -8px;
-}
-.login_RememberMeCheck_zkf30._DialogLayout {
-  padding-left: 0px;
-}
-.login_RememberMeCheck_zkf30._DialogLayout .DialogCheckbox {
-  background: #32353c;
-}
-.login_RememberMeCheck_zkf30._DialogLayout:hover
-  > .DialogCheckbox:not(.Disabled),
-.login_RememberMeCheck_zkf30._DialogLayout:focus
-  > .DialogCheckbox:not(.Disabled) {
-  background: #3a3e46;
-}
-.login_SteamUpsellContainer_1bNqn {
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.login_SteamUpsellContainer_1bNqn div {
-  width: fit-content;
-  align-self: center;
-}
-.login_SteamUpsell_3MQ_K {
-  color: #969696;
-  font-size: 12px;
-}
-.login_CaptchaContainer_2nqhJ .login_CaptchaBlock_1iLPO {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid dotted;
-}
-.login_CaptchaContainer_2nqhJ
-  .login_CaptchaBlock_1iLPO
-  .login_CaptchaImageAndInput_2Frvv {
-  display: flex;
-  flex-direction: column;
-}
-.login_CaptchaContainer_2nqhJ
-  .login_CaptchaBlock_1iLPO
-  .login_ErrorMessage_Xp7bS {
-  position: relative;
-  padding-left: 16px;
-  margin: 0;
-}
-.login_CaptchaContainer_2nqhJ .login_CaptchaImageBox_uMoA_ {
-  border: 1px solid #000;
-  border-radius: 3px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  overflow: hidden;
-  width: 203px;
-  height: 37px;
-}
-.login_CaptchaContainer_2nqhJ .login_CaptchaImage_2tJ2w {
-  margin-top: -2px;
-  margin-left: -2px;
-}
-.login_CaptchaContainer_2nqhJ .login_CaptchaInput_1hrke {
-  text-transform: uppercase;
-  color: #6dc7fb;
-  letter-spacing: 10px;
-  max-width: 159px;
-  background-color: #2a3649;
-  padding: 6px 14px 6px 30px;
-  font-family: monospace;
-  font-size: 28px;
-  border: 1px solid #000;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top-width: 0px;
-  overflow: hidden;
-  box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.75) inset;
-}
-.login_CaptchaContainer_2nqhJ .login_CaptchaInput_1hrke:focus {
-  padding: 6px 14px 6px 30px;
-}
-.login_AuthenticationPanel_1mvos .DialogLabel {
-  margin-top: 16px;
-  margin-bottom: 0px;
-}
-.login_AuthenticationPanel_1mvos .DialogBodyText {
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-.login_AuthenticationPanel_1mvos .DialogBodyText .SVGIcon_Caution {
-  width: 20px;
-  height: 20px;
-  margin-bottom: -5px;
-}
-.login_AuthenticationPanel_1mvos
-  .DialogBodyText
-  .SVGIcon_Caution
-  .triangle
-  path {
-  fill: #bd6500;
-}
-.login_AuthenticationPanel_1mvos .login_NeedHelpLink_3nqR4 {
-  margin-top: 32px;
-  display: block;
-}
-.login_AuthenticatorInputcontainer_2YRk7 {
-  position: relative;
-  height: 180px;
-}
-.login_AuthenticatorInputcontainer_2YRk7 .SVGIcon_LargeMobilePhone {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 180px;
-  width: 90px;
-  filter: brightness(0.6);
-}
-.login_AuthenticatorInputcontainer_2YRk7 .SVGIcon_Envelope {
-  position: absolute;
-  top: -22px;
-  left: 0px;
-  height: 92px;
-  width: 92px;
-  filter: brightness(0.6);
-}
-.login_AuthenticatorInputcontainer_2YRk7 .login_AccountPasswordForm_3M0na {
-  z-index: 2;
-  position: relative;
-  margin-left: 24px;
-  margin-bottom: 0px;
-  height: 100%;
-}
-.login_AuthenticatorInputcontainer_2YRk7
-  .login_AccountPasswordForm_3M0na
-  .DialogButton.Primary {
-  width: calc(50% + 12px);
-  position: absolute;
-  bottom: 0px;
-}
-.login_AuthenticatorInputcontainer_2YRk7 .DialogInputLabelGroup {
-  margin-top: 10px;
-}
-.login_SigningInAccountName_2Bjab {
-  text-transform: none;
-  color: #3ea5f1;
-  margin-top: -6px;
-  letter-spacing: 1px;
-}
-.login_Highlight_1Ea3M {
-  color: #dde1e4;
-  font-style: italic;
-}
-.login_LoginComplete_KmQja {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .layout_InlineContainer_3nHer {
   display: flex;
   justify-content: flex-start;
@@ -999,15 +745,17 @@ body.v6.rewards .ModalPosition_Content {
 .rewarditemsection_ShellHeader_1rWvB
   .rewarditemsection_AppFilterContainer_1pCqF {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .rewarditemsection_ShellHeader_1rWvB
   .rewarditemsection_AppFilterContainer_1pCqF
-  .rewarditemsection_HeaderVerticalDivider_1-daE {
-  height: 30px;
-  margin-right: 14px;
+  .rewarditemsection_SearchTermContainer_oDQ6_ {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .rewarditemsection_ShellHeader_1rWvB
   .rewarditemsection_AppFilterContainer_1pCqF
@@ -1015,6 +763,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchTerm_2WGOz {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchTerm_2WGOz::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchIconContainer_1k9Xr {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchIcon_1ng9B {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchTermClearButton_1jjw9 {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchTermClearIcon_5r_p7 {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_SearchTermClearIcon_5r_p7:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_AppFilterIconContainerNoBorder_116hP {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .rewarditemsection_ShellHeader_1rWvB
   .rewarditemsection_AppFilterContainer_1pCqF
@@ -1027,7 +847,7 @@ body.v6.rewards .ModalPosition_Content {
   .rewarditemsection_AppFilterIcon_ZDxAf {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -1036,6 +856,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_AppFilterIconNoBorder_P4tCa {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditemsection_ShellHeader_1rWvB
+  .rewarditemsection_AppFilterContainer_1pCqF
+  .rewarditemsection_FilterInUseNoBorder_3KLYo {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .rewarditemsection_ShellHeader_1rWvB
   .rewarditemsection_AppFilterContainer_1pCqF
@@ -1268,15 +1113,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .loyaltypoints_ShellHeader_3JsJ9 .loyaltypoints_AppFilterContainer_3MeGW {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .loyaltypoints_ShellHeader_3JsJ9
   .loyaltypoints_AppFilterContainer_3MeGW
-  .loyaltypoints_HeaderVerticalDivider_1LPPt {
-  height: 30px;
-  margin-right: 14px;
+  .loyaltypoints_SearchTermContainer_20Hq0 {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .loyaltypoints_ShellHeader_3JsJ9
   .loyaltypoints_AppFilterContainer_3MeGW
@@ -1284,6 +1131,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchTerm_1uF8V {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchTerm_1uF8V::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchIconContainer_386Cq {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchIcon_j6QDD {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchTermClearButton_1G59i {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchTermClearIcon_8ixLp {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_SearchTermClearIcon_8ixLp:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_AppFilterIconContainerNoBorder_39VPI {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .loyaltypoints_ShellHeader_3JsJ9
   .loyaltypoints_AppFilterContainer_3MeGW
@@ -1296,7 +1215,7 @@ body.v6.rewards .ModalPosition_Content {
   .loyaltypoints_AppFilterIcon_3HzcH {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -1305,6 +1224,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_AppFilterIconNoBorder_23pro {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.loyaltypoints_ShellHeader_3JsJ9
+  .loyaltypoints_AppFilterContainer_3MeGW
+  .loyaltypoints_FilterInUseNoBorder_1_aSs {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .loyaltypoints_ShellHeader_3JsJ9
   .loyaltypoints_AppFilterContainer_3MeGW
@@ -1467,15 +1411,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
-  .rewarditem_HeaderVerticalDivider_2XfnQ {
-  height: 30px;
-  margin-right: 14px;
+  .rewarditem_SearchTermContainer_1dkCd {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1483,6 +1429,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIconContainer_22onf {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIcon_2UE4d {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearButton_2b_Ws {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconContainerNoBorder_1NN52 {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1495,7 +1513,7 @@ body.v6.rewards .ModalPosition_Content {
   .rewarditem_AppFilterIcon_s_r3v {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -1504,6 +1522,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconNoBorder_3xQe0 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_FilterInUseNoBorder_1rxgM {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1647,15 +1690,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
-  .rewarditem_HeaderVerticalDivider_2XfnQ {
-  height: 30px;
-  margin-right: 14px;
+  .rewarditem_SearchTermContainer_1dkCd {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1663,6 +1708,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIconContainer_22onf {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIcon_2UE4d {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearButton_2b_Ws {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconContainerNoBorder_1NN52 {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1675,7 +1792,7 @@ body.v6.rewards .ModalPosition_Content {
   .rewarditem_AppFilterIcon_s_r3v {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -1684,6 +1801,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconNoBorder_3xQe0 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_FilterInUseNoBorder_1rxgM {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1877,15 +2019,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .rewarditem_ShellHeader_3Pva4 .rewarditem_AppFilterContainer_3P7pL {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
-  .rewarditem_HeaderVerticalDivider_2XfnQ {
-  height: 30px;
-  margin-right: 14px;
+  .rewarditem_SearchTermContainer_1dkCd {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1893,6 +2037,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTerm_2BhNb::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIconContainer_22onf {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchIcon_2UE4d {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearButton_2b_Ws {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_SearchTermClearIcon_3GDWY:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconContainerNoBorder_1NN52 {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -1905,7 +2121,7 @@ body.v6.rewards .ModalPosition_Content {
   .rewarditem_AppFilterIcon_s_r3v {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -1914,6 +2130,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_AppFilterIconNoBorder_3xQe0 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.rewarditem_ShellHeader_3Pva4
+  .rewarditem_AppFilterContainer_3P7pL
+  .rewarditem_FilterInUseNoBorder_1rxgM {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .rewarditem_ShellHeader_3Pva4
   .rewarditem_AppFilterContainer_3P7pL
@@ -3051,15 +3292,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .itembox_ShellHeader_1B30P .itembox_AppFilterContainer_1DdJC {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .itembox_ShellHeader_1B30P
   .itembox_AppFilterContainer_1DdJC
-  .itembox_HeaderVerticalDivider_3cP6H {
-  height: 30px;
-  margin-right: 14px;
+  .itembox_SearchTermContainer_1Ryf6 {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .itembox_ShellHeader_1B30P
   .itembox_AppFilterContainer_1DdJC
@@ -3067,6 +3310,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchTerm_2MSk3 {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchTerm_2MSk3::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchIconContainer_1UOy0 {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchIcon_1uUCD {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchTermClearButton_2vqwM {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchTermClearIcon_1kf9M {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_SearchTermClearIcon_1kf9M:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_AppFilterIconContainerNoBorder_1Esmo {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .itembox_ShellHeader_1B30P
   .itembox_AppFilterContainer_1DdJC
@@ -3079,7 +3394,7 @@ body.v6.rewards .ModalPosition_Content {
   .itembox_AppFilterIcon_3-KRc {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -3088,6 +3403,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_AppFilterIconNoBorder_2QzYF {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.itembox_ShellHeader_1B30P
+  .itembox_AppFilterContainer_1DdJC
+  .itembox_FilterInUseNoBorder_3SUp4 {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .itembox_ShellHeader_1B30P
   .itembox_AppFilterContainer_1DdJC
@@ -3293,15 +3633,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .bundle_ShellHeader_1axcM .bundle_AppFilterContainer_2kksR {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .bundle_ShellHeader_1axcM
   .bundle_AppFilterContainer_2kksR
-  .bundle_HeaderVerticalDivider_2-cHX {
-  height: 30px;
-  margin-right: 14px;
+  .bundle_SearchTermContainer_1xpZQ {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .bundle_ShellHeader_1axcM
   .bundle_AppFilterContainer_2kksR
@@ -3309,6 +3651,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchTerm_3XI3T {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchTerm_3XI3T::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchIconContainer_3r56r {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchIcon_1Y8cp {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchTermClearButton_11DW7 {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchTermClearIcon_36CFp {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_SearchTermClearIcon_36CFp:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_AppFilterIconContainerNoBorder_sFoB4 {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .bundle_ShellHeader_1axcM
   .bundle_AppFilterContainer_2kksR
@@ -3321,7 +3735,7 @@ body.v6.rewards .ModalPosition_Content {
   .bundle_AppFilterIcon_3GvhN {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -3330,6 +3744,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_AppFilterIconNoBorder_3DcNK {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.bundle_ShellHeader_1axcM
+  .bundle_AppFilterContainer_2kksR
+  .bundle_FilterInUseNoBorder_2yB8f {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .bundle_ShellHeader_1axcM
   .bundle_AppFilterContainer_2kksR
@@ -3559,15 +3998,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .profilebundle_ShellHeader_3Bsg9 .profilebundle_AppFilterContainer_cmv-r {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .profilebundle_ShellHeader_3Bsg9
   .profilebundle_AppFilterContainer_cmv-r
-  .profilebundle_HeaderVerticalDivider_yT6pL {
-  height: 30px;
-  margin-right: 14px;
+  .profilebundle_SearchTermContainer_3mc9h {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .profilebundle_ShellHeader_3Bsg9
   .profilebundle_AppFilterContainer_cmv-r
@@ -3575,6 +4016,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchTerm_2lZlW {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchTerm_2lZlW::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchIconContainer_ZDKDK {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchIcon_109ST {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchTermClearButton_3XgqT {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchTermClearIcon_2Q0lo {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_SearchTermClearIcon_2Q0lo:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_AppFilterIconContainerNoBorder_3pelo {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .profilebundle_ShellHeader_3Bsg9
   .profilebundle_AppFilterContainer_cmv-r
@@ -3587,7 +4100,7 @@ body.v6.rewards .ModalPosition_Content {
   .profilebundle_AppFilterIcon_1NOda {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -3596,6 +4109,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_AppFilterIconNoBorder_2MW2h {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.profilebundle_ShellHeader_3Bsg9
+  .profilebundle_AppFilterContainer_cmv-r
+  .profilebundle_FilterInUseNoBorder_oTrK3 {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .profilebundle_ShellHeader_3Bsg9
   .profilebundle_AppFilterContainer_cmv-r
@@ -3838,15 +4376,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .fadedbackground_ShellHeader_2COAS .fadedbackground_AppFilterContainer_1nV0Z {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .fadedbackground_ShellHeader_2COAS
   .fadedbackground_AppFilterContainer_1nV0Z
-  .fadedbackground_HeaderVerticalDivider_2uKsy {
-  height: 30px;
-  margin-right: 14px;
+  .fadedbackground_SearchTermContainer_1yPid {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .fadedbackground_ShellHeader_2COAS
   .fadedbackground_AppFilterContainer_1nV0Z
@@ -3854,6 +4394,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchTerm_2GtUy {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchTerm_2GtUy::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchIconContainer_1L0T0 {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchIcon_hzMMl {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchTermClearButton_W7yfX {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchTermClearIcon_3lsnA {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_SearchTermClearIcon_3lsnA:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_AppFilterIconContainerNoBorder_1XqCl {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .fadedbackground_ShellHeader_2COAS
   .fadedbackground_AppFilterContainer_1nV0Z
@@ -3866,7 +4478,7 @@ body.v6.rewards .ModalPosition_Content {
   .fadedbackground_AppFilterIcon_1cWKZ {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -3875,6 +4487,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_AppFilterIconNoBorder_10CMY {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.fadedbackground_ShellHeader_2COAS
+  .fadedbackground_AppFilterContainer_1nV0Z
+  .fadedbackground_FilterInUseNoBorder_2j58p {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .fadedbackground_ShellHeader_2COAS
   .fadedbackground_AppFilterContainer_1nV0Z
@@ -4442,15 +5079,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .herogroup_ShellHeader_1Ke_2 .herogroup_AppFilterContainer_sVAn7 {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .herogroup_ShellHeader_1Ke_2
   .herogroup_AppFilterContainer_sVAn7
-  .herogroup_HeaderVerticalDivider_3H6QP {
-  height: 30px;
-  margin-right: 14px;
+  .herogroup_SearchTermContainer_320t8 {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .herogroup_ShellHeader_1Ke_2
   .herogroup_AppFilterContainer_sVAn7
@@ -4458,6 +5097,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchTerm_2GY5F {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchTerm_2GY5F::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchIconContainer_1VM1f {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchIcon_rZ-AS {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchTermClearButton_1Zp7n {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchTermClearIcon_1Uy8U {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_SearchTermClearIcon_1Uy8U:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_AppFilterIconContainerNoBorder_1GE-W {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .herogroup_ShellHeader_1Ke_2
   .herogroup_AppFilterContainer_sVAn7
@@ -4470,7 +5181,7 @@ body.v6.rewards .ModalPosition_Content {
   .herogroup_AppFilterIcon_BMm9o {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -4479,6 +5190,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_AppFilterIconNoBorder_NQ6y1 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.herogroup_ShellHeader_1Ke_2
+  .herogroup_AppFilterContainer_sVAn7
+  .herogroup_FilterInUseNoBorder_PjnXP {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .herogroup_ShellHeader_1Ke_2
   .herogroup_AppFilterContainer_sVAn7
@@ -4645,15 +5381,17 @@ body.v6.rewards .ModalPosition_Content {
 .redeempointsmodal_ShellHeader_2I8Eu
   .redeempointsmodal_AppFilterContainer_xEgIP {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .redeempointsmodal_ShellHeader_2I8Eu
   .redeempointsmodal_AppFilterContainer_xEgIP
-  .redeempointsmodal_HeaderVerticalDivider_tFryt {
-  height: 30px;
-  margin-right: 14px;
+  .redeempointsmodal_SearchTermContainer_3GwWV {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .redeempointsmodal_ShellHeader_2I8Eu
   .redeempointsmodal_AppFilterContainer_xEgIP
@@ -4661,6 +5399,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchTerm_3v4Vt {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchTerm_3v4Vt::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchIconContainer_3JNET {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchIcon_15jMV {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchTermClearButton_10hCs {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchTermClearIcon_150Zn {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_SearchTermClearIcon_150Zn:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_AppFilterIconContainerNoBorder_1Pmi7 {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .redeempointsmodal_ShellHeader_2I8Eu
   .redeempointsmodal_AppFilterContainer_xEgIP
@@ -4673,7 +5483,7 @@ body.v6.rewards .ModalPosition_Content {
   .redeempointsmodal_AppFilterIcon_1ZU44 {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -4682,6 +5492,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_AppFilterIconNoBorder_3bhD0 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.redeempointsmodal_ShellHeader_2I8Eu
+  .redeempointsmodal_AppFilterContainer_xEgIP
+  .redeempointsmodal_FilterInUseNoBorder_2Y5X_ {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .redeempointsmodal_ShellHeader_2I8Eu
   .redeempointsmodal_AppFilterContainer_xEgIP
@@ -5900,15 +6735,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .page_ShellHeader_2zzZm
   .page_AppFilterContainer_trIsu
-  .page_HeaderVerticalDivider_eRymC {
-  height: 30px;
-  margin-right: 14px;
+  .page_SearchTermContainer_1L4NY {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .page_ShellHeader_2zzZm
   .page_AppFilterContainer_trIsu
@@ -5916,6 +6753,74 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_SearchTerm_3AsNy {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_SearchTerm_3AsNy::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_SearchIconContainer_3PfDs {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_SearchIcon_2kIDK {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_SearchTermClearButton_2C01B {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_SearchTermClearIcon_Xfuei {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_SearchTermClearIcon_Xfuei:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_AppFilterIconContainerNoBorder_2d2hr {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .page_ShellHeader_2zzZm
   .page_AppFilterContainer_trIsu
@@ -5928,7 +6833,7 @@ body.v6.rewards .ModalPosition_Content {
   .page_AppFilterIcon_3udHN {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -5937,6 +6842,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_AppFilterIconNoBorder_3HVir {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.page_ShellHeader_2zzZm
+  .page_AppFilterContainer_trIsu
+  .page_FilterInUseNoBorder_2osaF {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .page_ShellHeader_2zzZm .page_AppFilterContainer_trIsu .page_FilterInUse_12wdJ {
   width: 11px;
@@ -10099,15 +11029,17 @@ body.v6.rewards .ModalPosition_Content {
 .salerewarditemhero_ShellHeader_3yEbX
   .salerewarditemhero_AppFilterContainer_31WPb {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .salerewarditemhero_ShellHeader_3yEbX
   .salerewarditemhero_AppFilterContainer_31WPb
-  .salerewarditemhero_HeaderVerticalDivider_1sesQ {
-  height: 30px;
-  margin-right: 14px;
+  .salerewarditemhero_SearchTermContainer_1IpoU {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .salerewarditemhero_ShellHeader_3yEbX
   .salerewarditemhero_AppFilterContainer_31WPb
@@ -10115,6 +11047,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchTerm_1FLOS {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchTerm_1FLOS::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchIconContainer_2RSWz {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchIcon_2cLf2 {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchTermClearButton_2qUXJ {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchTermClearIcon_3rz-L {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_SearchTermClearIcon_3rz-L:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_AppFilterIconContainerNoBorder_-08Ec {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .salerewarditemhero_ShellHeader_3yEbX
   .salerewarditemhero_AppFilterContainer_31WPb
@@ -10127,7 +11131,7 @@ body.v6.rewards .ModalPosition_Content {
   .salerewarditemhero_AppFilterIcon_2LksH {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -10136,6 +11140,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_AppFilterIconNoBorder_FrCu5 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.salerewarditemhero_ShellHeader_3yEbX
+  .salerewarditemhero_AppFilterContainer_31WPb
+  .salerewarditemhero_FilterInUseNoBorder_13L8Q {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .salerewarditemhero_ShellHeader_3yEbX
   .salerewarditemhero_AppFilterContainer_31WPb
@@ -10386,15 +11415,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .index_ShellHeader_1iZtn .index_AppFilterContainer_26hNv {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .index_ShellHeader_1iZtn
   .index_AppFilterContainer_26hNv
-  .index_HeaderVerticalDivider_Igxd2 {
-  height: 30px;
-  margin-right: 14px;
+  .index_SearchTermContainer_x535y {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .index_ShellHeader_1iZtn
   .index_AppFilterContainer_26hNv
@@ -10402,6 +11433,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchTerm_3FMy7 {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchTerm_3FMy7::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchIconContainer_3_lO3 {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchIcon_2CBUM {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchTermClearButton_2xbBy {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchTermClearIcon_WMLXK {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_SearchTermClearIcon_WMLXK:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_AppFilterIconContainerNoBorder_2b-tL {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .index_ShellHeader_1iZtn
   .index_AppFilterContainer_26hNv
@@ -10414,7 +11517,7 @@ body.v6.rewards .ModalPosition_Content {
   .index_AppFilterIcon_3-SYz {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -10423,6 +11526,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_AppFilterIconNoBorder_M70wP {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.index_ShellHeader_1iZtn
+  .index_AppFilterContainer_26hNv
+  .index_FilterInUseNoBorder_13ZU5 {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .index_ShellHeader_1iZtn
   .index_AppFilterContainer_26hNv
@@ -11005,15 +12133,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .index_ShellHeader_k366j .index_AppFilterContainer_1Dh9O {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .index_ShellHeader_k366j
   .index_AppFilterContainer_1Dh9O
-  .index_HeaderVerticalDivider_24TsD {
-  height: 30px;
-  margin-right: 14px;
+  .index_SearchTermContainer_1A4pk {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .index_ShellHeader_k366j
   .index_AppFilterContainer_1Dh9O
@@ -11021,6 +12151,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchTerm_2WsGB {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchTerm_2WsGB::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchIconContainer_3fEgb {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchIcon_1v8L6 {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchTermClearButton_35md8 {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchTermClearIcon_1Izbw {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_SearchTermClearIcon_1Izbw:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_AppFilterIconContainerNoBorder_3YNMV {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .index_ShellHeader_k366j
   .index_AppFilterContainer_1Dh9O
@@ -11033,7 +12235,7 @@ body.v6.rewards .ModalPosition_Content {
   .index_AppFilterIcon_1Mpes {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -11042,6 +12244,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_AppFilterIconNoBorder_2lvA4 {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.index_ShellHeader_k366j
+  .index_AppFilterContainer_1Dh9O
+  .index_FilterInUseNoBorder_28eQp {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .index_ShellHeader_k366j
   .index_AppFilterContainer_1Dh9O
@@ -11209,15 +12436,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .globals_ShellHeader_3M7bf .globals_AppFilterContainer_3G7_B {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .globals_ShellHeader_3M7bf
   .globals_AppFilterContainer_3G7_B
-  .globals_HeaderVerticalDivider_3xw1C {
-  height: 30px;
-  margin-right: 14px;
+  .globals_SearchTermContainer_2WAs5 {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .globals_ShellHeader_3M7bf
   .globals_AppFilterContainer_3G7_B
@@ -11225,6 +12454,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchTerm_2mYVC {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchTerm_2mYVC::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchIconContainer_3yyRx {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchIcon_39qXC {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchTermClearButton_3vuPv {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchTermClearIcon_1OIw1 {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_SearchTermClearIcon_1OIw1:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_AppFilterIconContainerNoBorder_2ZWAb {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .globals_ShellHeader_3M7bf
   .globals_AppFilterContainer_3G7_B
@@ -11237,7 +12538,7 @@ body.v6.rewards .ModalPosition_Content {
   .globals_AppFilterIcon_CFiLd {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -11246,6 +12547,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_AppFilterIconNoBorder_3oYaZ {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.globals_ShellHeader_3M7bf
+  .globals_AppFilterContainer_3G7_B
+  .globals_FilterInUseNoBorder_2_8w3 {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .globals_ShellHeader_3M7bf
   .globals_AppFilterContainer_3G7_B
@@ -11389,15 +12715,17 @@ body.v6.rewards .ModalPosition_Content {
 }
 .appfilterpopup_ShellHeader_2rgA4 .appfilterpopup_AppFilterContainer_13WnQ {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .appfilterpopup_ShellHeader_2rgA4
   .appfilterpopup_AppFilterContainer_13WnQ
-  .appfilterpopup_HeaderVerticalDivider_3Sv_F {
-  height: 30px;
-  margin-right: 14px;
+  .appfilterpopup_SearchTermContainer_2aBtB {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .appfilterpopup_ShellHeader_2rgA4
   .appfilterpopup_AppFilterContainer_13WnQ
@@ -11405,6 +12733,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchTerm_2Dud5 {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchTerm_2Dud5::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchIconContainer_1CDlQ {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchIcon_1UuO3 {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchTermClearButton_3xUC_ {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchTermClearIcon_5r7st {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_SearchTermClearIcon_5r7st:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_AppFilterIconContainerNoBorder_3F5yg {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .appfilterpopup_ShellHeader_2rgA4
   .appfilterpopup_AppFilterContainer_13WnQ
@@ -11417,7 +12817,7 @@ body.v6.rewards .ModalPosition_Content {
   .appfilterpopup_AppFilterIcon_1zRO6 {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -11426,6 +12826,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_AppFilterIconNoBorder_3n65o {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.appfilterpopup_ShellHeader_2rgA4
+  .appfilterpopup_AppFilterContainer_13WnQ
+  .appfilterpopup_FilterInUseNoBorder_2PoGa {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .appfilterpopup_ShellHeader_2rgA4
   .appfilterpopup_AppFilterContainer_13WnQ
@@ -11770,15 +13195,17 @@ body.v6.rewards .ModalPosition_Content {
 .loyaltyprimarynav_ShellHeader_2VMec
   .loyaltyprimarynav_AppFilterContainer_5SId0 {
   margin-top: 2px;
-  margin-left: 25px;
+  margin-right: 25px;
   flex: 1;
   align-items: center;
+  justify-content: flex-end;
 }
 .loyaltyprimarynav_ShellHeader_2VMec
   .loyaltyprimarynav_AppFilterContainer_5SId0
-  .loyaltyprimarynav_HeaderVerticalDivider_JRz64 {
-  height: 30px;
-  margin-right: 14px;
+  .loyaltyprimarynav_SearchTermContainer_nNfIq {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .loyaltyprimarynav_ShellHeader_2VMec
   .loyaltyprimarynav_AppFilterContainer_5SId0
@@ -11786,6 +13213,78 @@ body.v6.rewards .ModalPosition_Content {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   color: #d0d0d0;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchTerm_3Z1tD {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchTerm_3Z1tD::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchIconContainer_12qnB {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchIcon_5Ffhq {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchTermClearButton_2Apt1 {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchTermClearIcon_1-93x {
+  height: 12px;
+  padding: px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_SearchTermClearIcon_1-93x:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_AppFilterIconContainerNoBorder_1ITwT {
+  position: absolute;
+  right: 6px;
+  top: 2px;
 }
 .loyaltyprimarynav_ShellHeader_2VMec
   .loyaltyprimarynav_AppFilterContainer_5SId0
@@ -11798,7 +13297,7 @@ body.v6.rewards .ModalPosition_Content {
   .loyaltyprimarynav_AppFilterIcon_3c-oe {
   height: 24px;
   width: 24px;
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   color: #c5cbd8;
   stroke: currentColor;
@@ -11807,6 +13306,31 @@ body.v6.rewards .ModalPosition_Content {
   transition-duration: 0.15s;
   transition-timing-function: ease-in;
   position: relative;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_AppFilterIconNoBorder_10phS {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.loyaltyprimarynav_ShellHeader_2VMec
+  .loyaltyprimarynav_AppFilterContainer_5SId0
+  .loyaltyprimarynav_FilterInUseNoBorder_1lJd3 {
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
+  background-color: #4a9ce7;
+  position: absolute;
+  top: 0px;
+  right: -2px;
 }
 .loyaltyprimarynav_ShellHeader_2VMec
   .loyaltyprimarynav_AppFilterContainer_5SId0

@@ -1561,7 +1561,7 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          (0, A.Xt)();
+          (0, A.X)();
         }
         render() {
           return s.L7.logged_in

@@ -2167,6 +2167,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 #searchIcon svg {
   width: 24px;
   height: 24px;
+  color: #fff;
 }
 .managefriends_FriendCodeSelector_35N5F .managefriends_SendInviteButton_3Izq1 {
   width: fit-content;
@@ -3376,6 +3377,7 @@ html.responsive.touch
   svg {
   height: 24px;
   margin: 0;
+  color: #fff;
 }
 .saleitembrowser_SaleItemBrowserContainer_2wLns
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9

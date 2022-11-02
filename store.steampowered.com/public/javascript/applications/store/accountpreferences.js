@@ -31,7 +31,7 @@
           l = (0, s._T)(e, ["children", "navTreeRef"]),
           _ = i.useRef(),
           m = (0, o.BE)(_, r);
-        if (c.De.IN_GAMEPADUI) {
+        if ((0, c.id)()) {
           const e = window.__nav_tree_root;
           return i.createElement(
             n.Fe,
@@ -48,7 +48,7 @@
     },
     86531: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { AccountPreferencesRoutes: () => R, default: () => F });
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => G, default: () => F });
       var s = r(67294),
         i = r(78587),
         n = r(70655),
@@ -78,8 +78,8 @@
                     bw: m.Xc.writeEnum,
                   },
                   content_customization: { n: 3, c: y },
-                  valve_analytics: { n: 4, c: g },
-                  third_party_analytics: { n: 5, c: d },
+                  valve_analytics: { n: 4, c: d },
+                  third_party_analytics: { n: 5, c: g },
                   third_party_content: { n: 6, c: h },
                   utm_enabled: {
                     n: 7,
@@ -180,67 +180,10 @@
           return "CAccountPrivacyCookiePreferences_ContentCustomization";
         }
       }
-      class g extends u {
-        constructor(e = null) {
-          super(),
-            g.prototype.product_impressions_tracking || m.aR(g.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = {
-                proto: g,
-                fields: {
-                  product_impressions_tracking: {
-                    n: 1,
-                    br: m.FE.readBool,
-                    bw: m.Xc.writeBool,
-                  },
-                },
-              }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = m.Bh(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(g.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new _.BinaryReader(e),
-            r = new g();
-          return g.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(g.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new _.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(g.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new _.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
-        }
-      }
       class d extends u {
         constructor(e = null) {
           super(),
-            d.prototype.google_analytics || m.aR(d.M()),
+            d.prototype.product_impressions_tracking || m.aR(d.M()),
             u.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -249,7 +192,7 @@
               (d.sm_m = {
                 proto: d,
                 fields: {
-                  google_analytics: {
+                  product_impressions_tracking: {
                     n: 1,
                     br: m.FE.readBool,
                     bw: m.Xc.writeBool,
@@ -289,6 +232,63 @@
         serializeBase64String() {
           var e = new _.BinaryWriter();
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+        }
+      }
+      class g extends u {
+        constructor(e = null) {
+          super(),
+            g.prototype.google_analytics || m.aR(g.M()),
+            u.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  google_analytics: {
+                    n: 1,
+                    br: m.FE.readBool,
+                    bw: m.Xc.writeBool,
+                  },
+                },
+              }),
+            g.sm_m
+          );
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = m.Bh(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return m.TA(g.M(), e, t);
+        }
+        static fromObject(e) {
+          return m.aD(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new _.BinaryReader(e),
+            r = new g();
+          return g.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return m.F(g.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new _.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          m.l2(g.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new _.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
@@ -645,9 +645,9 @@
                   (0, k.Xx)("#CookiePref_AcceptAll")
                 )
               ),
-              s.createElement(A, { settings: e }),
               s.createElement(X, { settings: e }),
               s.createElement(x, { settings: e }),
+              s.createElement(A, { settings: e }),
               s.createElement(D, { settings: e })
             ),
             s.createElement(
@@ -806,12 +806,12 @@
             s.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(G, { settings: e })
+              s.createElement(R, { settings: e })
             ),
             null
           );
         }),
-        A = (0, C.Pi)((e) => {
+        X = (0, C.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleRecentApps();
@@ -841,7 +841,7 @@
             )
           );
         }),
-        X = (0, C.Pi)((e) => {
+        x = (0, C.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleImpressions();
@@ -871,7 +871,7 @@
             )
           );
         }),
-        x = (0, C.Pi)((e) => {
+        A = (0, C.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleGoogleAnalytics();
@@ -951,7 +951,7 @@
             )
           );
         }),
-        G = (0, C.Pi)((e) => {
+        R = (0, C.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleUTMEnabled();
@@ -981,10 +981,10 @@
             )
           );
         }),
-        R = { CookieSettings: () => "/cookiepreferences" },
+        G = { CookieSettings: () => "/cookiepreferences" },
         F = (e) => {
           const t = e.match.url,
-            r = R;
+            r = G;
           return s.createElement(
             i.rs,
             null,

@@ -541,7 +541,7 @@ body.login .page_content {
 	width: 100%;
 }
 
-body.login.china .page_content .login_left_col {
+body.login.china .page_content {
 	background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china.jpg' ) center top no-repeat, #181A21;
 }
 
@@ -930,7 +930,7 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 
-	html.responsive body.login.china .page_content .login_left_col {
+	html.responsive body.login.china .page_content {
 		background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url( 'https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg' ) center top no-repeat, #181A21;
 	}
 }

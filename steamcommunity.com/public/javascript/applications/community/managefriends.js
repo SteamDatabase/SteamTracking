@@ -511,11 +511,12 @@
         (0, r.gn)([a.ak], C.prototype, "OnActionClick", null);
       const S = (e) => {
         const {
-          searchResult: t,
-          invite_status: n,
-          bShowStatus: r,
-          children: a,
-        } = e;
+            searchResult: t,
+            invite_status: n,
+            bShowStatus: r,
+            children: a,
+          } = e,
+          i = (0, m.id)();
         return Boolean(t)
           ? s.createElement(
               "div",
@@ -545,7 +546,7 @@
                     s.createElement(
                       h.IS,
                       {
-                        target: m.De.IN_GAMEPADUI ? void 0 : "_blank",
+                        target: i ? void 0 : "_blank",
                         href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
                       (0, l.Xx)("#ManageFriends_ProfileLink")
@@ -580,7 +581,7 @@
                     s.createElement(
                       h.IS,
                       {
-                        target: m.De.IN_GAMEPADUI ? void 0 : "_blank",
+                        target: i ? void 0 : "_blank",
                         href:
                           m.De.COMMUNITY_BASE_URL +
                           "profiles/" +

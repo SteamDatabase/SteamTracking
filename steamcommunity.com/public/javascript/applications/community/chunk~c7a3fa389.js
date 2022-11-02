@@ -1728,6 +1728,11 @@
                     pbr: a.FE.readPackedUint32,
                     bw: a.Xc.writeRepeatedUint32,
                   },
+                  search_term: {
+                    n: 19,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
                 },
               }),
             O.sm_m

@@ -62,7 +62,7 @@
     },
     86605: (e, t, a) => {
       "use strict";
-      a.d(t, { Q8: () => A });
+      a.d(t, { Q8: () => u });
       var n = a(70655),
         s = a(22188),
         r = a(26149),
@@ -357,7 +357,7 @@
       }
       (0, n.gn)([s.aD], _.prototype, "OnGetAppsResponse", null),
         (0, n.gn)([s.aD], _.prototype, "OnRichPresenceLocUpdate", null);
-      const A = new _();
+      const u = new _();
     },
     93981: (e, t, a) => {
       "use strict";
@@ -705,8 +705,8 @@
       h = (0, n.gn)([r.Pi], h);
       a(21205);
       var _ = a(95598),
-        A = a(82202),
-        u = a.n(A),
+        u = a(82202),
+        A = a.n(u),
         d = a(5827);
       const g = (0, r.Pi)((e) => {
         const { persona: t, className: a } = e,
@@ -726,8 +726,8 @@
                 {
                   className: (0, c.Z)(
                     a,
-                    u().PersonaStatusIcon,
-                    u().MobilePhoneIcon,
+                    A().PersonaStatusIcon,
+                    A().MobilePhoneIcon,
                     (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_Mobile"),
@@ -743,8 +743,8 @@
                 {
                   className: (0, c.Z)(
                     a,
-                    u().PersonaStatusIcon,
-                    u().VRIcon,
+                    A().PersonaStatusIcon,
+                    A().VRIcon,
                     (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_VR"),
@@ -760,8 +760,8 @@
                 {
                   className: (0, c.Z)(
                     a,
-                    u().PersonaStatusIcon,
-                    u().BigPictureIcon,
+                    A().PersonaStatusIcon,
+                    A().BigPictureIcon,
                     (0, m.sB)(t)
                   ),
                   title: (0, i.Xx)("#Platform_Hint_BigPicture"),
@@ -796,8 +796,8 @@
               persona: r,
               eFriendRelationship: l,
               bIsSelf: p,
-              bParenthesizeNicknames: A,
-              strNickname: u,
+              bParenthesizeNicknames: u,
+              strNickname: A,
               bCompactView: d,
               bHideGameName: f,
               bHideEnhancedRichPresenceLabel: S,
@@ -807,8 +807,8 @@
               renderRichPresence: C,
               bHidePersona: b,
               bDNDSet: E,
-              bHasPartyBeacon: N,
-              bHasGamePrivacy: L,
+              bHasPartyBeacon: L,
+              bHasGamePrivacy: N,
               bNoMask: R,
             } = e,
             G = (0, n._T)(e, [
@@ -842,7 +842,7 @@
               d && I().compactView,
               R && I().NoMask,
             ];
-          N || r.has_public_party_beacon
+          L || r.has_public_party_beacon
             ? (Q = s.createElement(P, { persona: r }))
             : (0, o.fk)(l)
             ? ((Q = (0, i.Xx)("#PersonaStateBlocked")), w.push(I().blocked))
@@ -874,10 +874,10 @@
             (!f && O) || w.push(I().twoLine);
           const U = !r.is_ingame && !B,
             F = !S && O,
-            M = Q && (!f || !F);
-          let T = u && !A,
-            H = T ? u : r.m_strPlayerName,
-            Z = !b && (M || U) && F;
+            T = Q && (!f || !F);
+          let H = A && !u,
+            M = H ? A : r.m_strPlayerName,
+            Z = !b && (T || U) && F;
           return s.createElement(
             "div",
             Object.assign({}, G, {
@@ -890,14 +890,14 @@
               s.createElement(
                 "div",
                 { className: I().playerName },
-                H || " ",
-                A &&
-                  u &&
+                M || " ",
+                u &&
+                  A &&
                   s.createElement(
                     "span",
                     { className: I().playerNickname },
                     "(",
-                    u,
+                    A,
                     ")"
                   )
               ),
@@ -910,7 +910,7 @@
                   },
                   s.createElement(_.YVR, null)
                 ),
-              T &&
+              H &&
                 s.createElement(
                   "span",
                   {
@@ -936,7 +936,7 @@
               s.createElement(
                 "div",
                 { className: I().richPresenceContainer },
-                (M || U) &&
+                (T || U) &&
                   s.createElement(
                     "div",
                     {
@@ -947,7 +947,7 @@
                         "no-drag"
                       ),
                     },
-                    L &&
+                    N &&
                       s.createElement(
                         "div",
                         {
@@ -1006,7 +1006,7 @@
     },
     44298: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => _, _1: () => d, DY: () => u, vV: () => A });
+      a.d(t, { o: () => _, _1: () => d, DY: () => A, vV: () => u });
       var n = a(70655),
         s = a(67294),
         r = a(29323),
@@ -1038,10 +1038,10 @@
               "statusPosition",
               "children",
             ]),
-            A = [];
+            u = [];
           return (
-            t && A.push(t),
-            A.push(
+            t && u.push(t),
+            u.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -1077,7 +1077,7 @@
               }),
               s.createElement(c.j, {
                 className: (0, o.Z)(h().avatar, "avatar"),
-                rgSources: A,
+                rgSources: u,
                 draggable: !1,
               }),
               p
@@ -1085,7 +1085,7 @@
           );
         }
       }
-      let A = class extends s.Component {
+      let u = class extends s.Component {
         render() {
           const e = this.props,
             { persona: t, size: a, animatedAvatar: r, className: c } = e,
@@ -1119,8 +1119,8 @@
           );
         }
       };
-      A = (0, n.gn)([r.Pi], A);
-      const u = (0, r.Pi)((e) => {
+      u = (0, n.gn)([r.Pi], u);
+      const A = (0, r.Pi)((e) => {
         const { profileItem: t, className: a, bDisableAnimation: r } = e,
           i = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
@@ -1201,10 +1201,10 @@
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
             this.state.bAnimate || (a = null),
             s.createElement(
-              A,
+              u,
               Object.assign({ animatedAvatar: a }, m),
               i,
-              s.createElement(u, {
+              s.createElement(A, {
                 profileItem: r,
                 bDisableAnimation: "None" === this.props.loopDuration,
               })
@@ -1222,10 +1222,10 @@
         r = a(57376),
         i = a(90666);
       function o() {
-        return i.De.IN_GAMEPADUI, n.createElement(s.MrB, null);
+        return (0, i.id)(), n.createElement(s.MrB, null);
       }
       function m() {
-        return i.De.IN_GAMEPADUI
+        return (0, i.id)()
           ? n.createElement(r.tkI, null)
           : n.createElement(s.tkI, null);
       }

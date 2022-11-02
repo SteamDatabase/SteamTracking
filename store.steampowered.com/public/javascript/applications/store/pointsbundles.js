@@ -12,10 +12,19 @@
         ShellHeaderBrandLink: "bundle_ShellHeaderBrandLink_O1wfr",
         PointsContainer: "bundle_PointsContainer_3fuIW",
         AppFilterContainer: "bundle_AppFilterContainer_2h5QB",
-        HeaderVerticalDivider: "bundle_HeaderVerticalDivider_1FaU7",
+        SearchTermContainer: "bundle_SearchTermContainer_1vqtw",
         AppFilterLabel: "bundle_AppFilterLabel_14xpP",
+        SearchTerm: "bundle_SearchTerm_u6k6E",
+        SearchIconContainer: "bundle_SearchIconContainer_OsLH8",
+        SearchIcon: "bundle_SearchIcon_H8YKM",
+        SearchTermClearButton: "bundle_SearchTermClearButton_3BWU2",
+        SearchTermClearIcon: "bundle_SearchTermClearIcon_LCByT",
+        AppFilterIconContainerNoBorder:
+          "bundle_AppFilterIconContainerNoBorder_333Rt",
         AppFilterIconContainer: "bundle_AppFilterIconContainer_3Krp-",
         AppFilterIcon: "bundle_AppFilterIcon_HCNAj",
+        AppFilterIconNoBorder: "bundle_AppFilterIconNoBorder_24IGx",
+        FilterInUseNoBorder: "bundle_FilterInUseNoBorder_2IhKK",
         FilterInUse: "bundle_FilterInUse_20mcP",
         RewardsPointsIcon: "bundle_RewardsPointsIcon_2fLKs",
         YourBalanceLabel: "bundle_YourBalanceLabel_3Lsyi",
@@ -31,44 +40,44 @@
         AlreadyOwnedText: "bundle_AlreadyOwnedText_1E4uc",
       };
     },
-    99332: (e, n, t) => {
+    99332: (e, n, r) => {
       "use strict";
-      t.r(n), t.d(n, { default: () => B });
-      var l = t(67294),
-        r = t(78587),
-        a = t(9355),
-        d = (t(14974), t(29323)),
-        i = t(25251),
-        o = t(25381),
-        c = t(52286),
-        u = t(41368),
-        s = t(41311),
-        _ = t(23327),
-        m = t(49533),
-        b = t(75057),
-        p = t(48828),
-        f = t(88586),
-        C = t(7573),
-        h = t(46347);
-      const B = (0, d.Pi)((e) => {
+      r.r(n), r.d(n, { default: () => B });
+      var t = r(67294),
+        l = r(78587),
+        a = r(9355),
+        o = (r(14974), r(29323)),
+        d = r(25251),
+        c = r(25381),
+        i = r(52286),
+        u = r(41368),
+        _ = r(41311),
+        s = r(23327),
+        m = r(49533),
+        b = r(75057),
+        p = r(48828),
+        h = r(88586),
+        C = r(7573),
+        I = r(46347);
+      const B = (0, o.Pi)((e) => {
           const { bundleid: n } = e.match.params,
-            t = parseInt(n),
-            d = l.createElement(r.l_, { to: a.Z.LoyaltyStore() });
-          if (isNaN(t)) return d;
-          const [o] = i.Vb.Get().GetRewardDefinitions(t);
-          return o
-            ? 5 !== o.type && 6 !== o.type
-              ? d
-              : l.createElement(I, { bundle: o })
+            r = parseInt(n),
+            o = t.createElement(l.l_, { to: a.Z.LoyaltyStore() });
+          if (isNaN(r)) return o;
+          const [c] = d.Vb.Get().GetRewardDefinitions(r);
+          return c
+            ? 5 !== c.type && 6 !== c.type
+              ? o
+              : t.createElement(S, { bundle: c })
             : null;
         }),
-        I = (0, d.Pi)((e) => {
+        S = (0, o.Pi)((e) => {
           const { bundle: n } = e,
-            t = i.Vb.Get().GetBundleOfferForUser(n);
-          return l.createElement(
-            o.OC,
+            r = d.Vb.Get().GetBundleOfferForUser(n);
+          return t.createElement(
+            c.OC,
             null,
-            l.createElement(
+            t.createElement(
               u.xu,
               {
                 paddingY: "xlarge",
@@ -76,58 +85,58 @@
                 flexDirection: "column",
                 alignItems: "center",
               },
-              l.createElement(E, { bundle: n, offer: t }),
-              0 === t.point_cost
-                ? l.createElement(P, { className: f.PrimaryRedeemButton })
-                : l.createElement(c.D9, {
-                    cost: t.point_cost,
-                    discount: t.discount,
-                    originalCost: t.original_point_cost,
-                    className: f.PrimaryRedeemButton,
-                    onClick: (e) => (0, c.s1)(e, n),
+              t.createElement(f, { bundle: n, offer: r }),
+              0 === r.point_cost
+                ? t.createElement(A, { className: h.PrimaryRedeemButton })
+                : t.createElement(i.D9, {
+                    cost: r.point_cost,
+                    discount: r.discount,
+                    originalCost: r.original_point_cost,
+                    className: h.PrimaryRedeemButton,
+                    onClick: (e) => (0, i.s1)(e, n),
                   }),
-              l.createElement(w, { offer: t })
+              t.createElement(E, { offer: r })
             )
           );
         }),
-        E = (0, d.Pi)(({ bundle: e, offer: n }) => {
-          const t = (0, _.h)(e),
-            r = (0, s.Xx)("#RewardBundle_OfferDescription", n.discount);
-          return l.createElement(
+        f = (0, o.Pi)(({ bundle: e, offer: n }) => {
+          const r = (0, s.h)(e),
+            l = (0, _.Xx)("#RewardBundle_OfferDescription", n.discount);
+          return t.createElement(
             u.xu,
             { paddingBottom: "xlarge" },
-            l.createElement(o._f, { title: t, subtitle: r })
+            t.createElement(c._f, { title: r, subtitle: l })
           );
         }),
-        P = ({ className: e }) =>
-          l.createElement(
+        A = ({ className: e }) =>
+          t.createElement(
             "div",
-            { className: (0, C.Z)(e, f.AlreadyOwned) },
-            l.createElement(h.Zg, { className: f.CheckmarkCircle }),
-            l.createElement(
+            { className: (0, C.Z)(e, h.AlreadyOwned) },
+            t.createElement(I.Zg, { className: h.CheckmarkCircle }),
+            t.createElement(
               "span",
-              { className: f.AlreadyOwnedText },
-              (0, s.Xx)("#Redeem_BundleItemOwned")
+              { className: h.AlreadyOwnedText },
+              (0, _.Xx)("#Redeem_BundleItemOwned")
             )
           ),
-        w = (0, d.Pi)((e) => {
+        E = (0, o.Pi)((e) => {
           const { offer: n } = e;
-          return l.createElement(
+          return t.createElement(
             m.iS,
-            { title: (0, s.Xx)("#RewardBundle_BundleContentsSection_Title") },
-            l.createElement(b.c, {
-              getItems: (e, t) => ({
-                rewards: n.items.slice(e, t),
+            { title: (0, _.Xx)("#RewardBundle_BundleContentsSection_Title") },
+            t.createElement(b.c, {
+              getItems: (e, r) => ({
+                rewards: n.items.slice(e, r),
                 bLoadingMore: !1,
                 cTotalMatching: n.items.length,
                 cMaxToReturn: n.items.length,
               }),
               renderItem: (e) =>
-                l.createElement(p.h_, {
+                t.createElement(p.h_, {
                   key: e.defid,
                   definition: e,
                   purchaseable: !1,
-                  onClick: (n) => (0, c.u4)(n, e),
+                  onClick: (n) => (0, i.u4)(n, e),
                 }),
             })
           );

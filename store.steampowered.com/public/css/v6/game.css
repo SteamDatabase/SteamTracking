@@ -476,7 +476,7 @@ img.game_header_image_full {
 	position: relative;
 }
 .game_area_comingsoon .wishlist_add_reminder {
-    height: 32px;
+    min-height: 32px;
     padding: 16px;
     color: #90a0ad;
     display: flex;
@@ -505,7 +505,7 @@ img.game_header_image_full {
 	font-size: 24px;
     font-weight: normal;
     color: #d5d6d8;
-    line-height: 26px;
+    line-height: 28px;
     max-height: 54px;
     overflow: hidden;
 }

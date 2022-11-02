@@ -3,44 +3,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5253],
   {
-    73175: (e) => {
-      e.exports = {
-        LoginDialog: "login_LoginDialog_2y6W_",
-        AccountPasswordPanel: "login_AccountPasswordPanel_3hiT2",
-        LoginPanelBackground: "login_LoginPanelBackground_3rFou",
-        LoginPanelContent: "login_LoginPanelContent_1dgRm",
-        ErrorMessage: "login_ErrorMessage_Xp7bS",
-        AccountPasswordForm: "login_AccountPasswordForm_3M0na",
-        AuthenticationPanel: "login_AuthenticationPanel_1mvos",
-        AccountNameLabel: "login_AccountNameLabel_2mGS5",
-        MedName: "login_MedName_2J9dc",
-        LargeName: "login_LargeName_26ejp",
-        PasswordDots: "login_PasswordDots_2hvaY",
-        MedPass: "login_MedPass_3dfHR",
-        LargePass: "login_LargePass_3iXGb",
-        AccountFieldHeader: "login_AccountFieldHeader_ItWep",
-        PasswordFieldHeader: "login_PasswordFieldHeader_2GJed",
-        NeedHelpLink: "login_NeedHelpLink_3nqR4",
-        NeedHelpHighlight: "login_NeedHelpHighlight_25N0C",
-        CreateAccountLink: "login_CreateAccountLink_r1OCj",
-        LoginCreateSeperator: "login_LoginCreateSeperator_25iPN",
-        RefreshCaptchaText: "login_RefreshCaptchaText_28Gin",
-        SigningInAccountName: "login_SigningInAccountName_2Bjab",
-        SigninTitle: "login_SigninTitle_Pk26-",
-        RememberMeCheck: "login_RememberMeCheck_zkf30",
-        SteamUpsellContainer: "login_SteamUpsellContainer_1bNqn",
-        SteamUpsell: "login_SteamUpsell_3MQ_K",
-        CaptchaContainer: "login_CaptchaContainer_2nqhJ",
-        CaptchaBlock: "login_CaptchaBlock_1iLPO",
-        CaptchaImageAndInput: "login_CaptchaImageAndInput_2Frvv",
-        CaptchaImageBox: "login_CaptchaImageBox_uMoA_",
-        CaptchaImage: "login_CaptchaImage_2tJ2w",
-        CaptchaInput: "login_CaptchaInput_1hrke",
-        AuthenticatorInputcontainer: "login_AuthenticatorInputcontainer_2YRk7",
-        Highlight: "login_Highlight_1Ea3M",
-        LoginComplete: "login_LoginComplete_KmQja",
-      };
-    },
     34133: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -163,7 +125,7 @@
       };
     },
     46700: (e, t, n) => {
-      var a = {
+      var r = {
         "./af": 42786,
         "./af.js": 42786,
         "./ar": 30867,
@@ -435,37 +397,37 @@
         "./zh-tw": 74152,
         "./zh-tw.js": 74152,
       };
-      function r(e) {
+      function a(e) {
         var t = s(e);
         return n(t);
       }
       function s(e) {
-        if (!n.o(a, e)) {
+        if (!n.o(r, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return a[e];
+        return r[e];
       }
-      (r.keys = function () {
-        return Object.keys(a);
+      (a.keys = function () {
+        return Object.keys(r);
       }),
-        (r.resolve = s),
-        (e.exports = r),
-        (r.id = 46700);
+        (a.resolve = s),
+        (e.exports = a),
+        (a.id = 46700);
     },
     43359: (e, t, n) => {
       "use strict";
-      n.d(t, { U: () => s, W: () => r });
-      var a = n(90666);
-      const r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      n.d(t, { U: () => s, W: () => a });
+      var r = n(90666);
+      const a = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function s(e, t) {
         let n = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = r),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = a),
           44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-        let s = a.De.AVATAR_BASE_URL;
+        let s = r.De.AVATAR_BASE_URL;
         return (
           s ||
-            ((s = a.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            ((s = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
             (s += e.substr(0, 2) + "/")),
           (s += e),
           t && "small" != t && (s += "_" + t),
@@ -476,16 +438,16 @@
     },
     5525: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => u, JW: () => h, zD: () => v });
-      var a = n(70655),
-        r = n(22188),
+      n.d(t, { F_: () => u, JW: () => v, zD: () => E });
+      var r = n(70655),
+        a = n(22188),
         s = n(30381),
         i = n.n(s),
-        o = n(67294),
-        l = n(54698),
-        m = n(74163),
-        d = n(90666);
-      class c {
+        l = n(67294),
+        o = n(54698),
+        d = n(74163),
+        c = n(90666);
+      class m {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -495,10 +457,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return d.De.EREALM != l.IN.k_ESteamRealmChina;
+          return c.De.EREALM != o.IN.k_ESteamRealmChina;
         }
         get bIsCuratorsEnabled() {
-          return d.De.EREALM != l.IN.k_ESteamRealmChina;
+          return c.De.EREALM != o.IN.k_ESteamRealmChina;
         }
         get bIncludeCurators() {
           return !0;
@@ -521,7 +483,7 @@
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == d.De.WEB_UNIVERSE || "beta" == d.De.WEB_UNIVERSE)
+            ("dev" == c.De.WEB_UNIVERSE || "beta" == c.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
             let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
@@ -535,638 +497,91 @@
           }
         }
       }
-      (0, a.gn)([r.LO], c.prototype, "nOverrideDateNow", void 0);
-      const h = new c();
+      (0, r.gn)([a.LO], m.prototype, "nOverrideDateNow", void 0);
+      const v = new m();
       function u(e = 1) {
-        const [t, n] = o.useState(() => g()),
-          a = (0, m.T)("useTimeNowWithOverride"),
-          r = o.useCallback(() => {
-            a.token.reason || n(g());
+        const [t, n] = l.useState(() => h()),
+          r = (0, d.T)("useTimeNowWithOverride"),
+          a = l.useCallback(() => {
+            r.token.reason || n(h());
           }, []);
         return (
-          o.useEffect(() => {
+          l.useEffect(() => {
             const t = 1e3 * e,
               n = t - (Date.now() % t),
-              a = window.setTimeout(r, n);
+              r = window.setTimeout(a, n);
             return () => {
-              window.clearTimeout(a);
+              window.clearTimeout(r);
             };
-          }, [t, e, r]),
+          }, [t, e, a]),
           t
         );
       }
-      window.g_EventCalendarDevFeatures = h;
+      window.g_EventCalendarDevFeatures = v;
       const p = new Date(),
         _ = Math.floor(p.getTime() / 1e3);
-      function g() {
+      function h() {
         const e = Math.floor(Date.now() / 1e3);
-        return h.nOverrideDateNow ? h.nOverrideDateNow + (e - _) : e;
+        return v.nOverrideDateNow ? v.nOverrideDateNow + (e - _) : e;
       }
-      function v() {
-        return o.useMemo(() => {
-          return null !== (e = h.nOverrideDateNow) && void 0 !== e ? e : _;
+      function E() {
+        return l.useMemo(() => {
+          return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : _;
           var e;
         }, []);
       }
     },
-    9410: (e, t, n) => {
+    23211: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => x });
-      var a = n(67294),
-        r = n(70655),
-        s = n(22188),
-        i = n(75255),
-        o = n(81130),
-        l = n(41311);
-      var m, d;
-      !(function (e) {
-        (e[(e.Invalid = 0)] = "Invalid"),
-          (e[(e.AccountName = 1)] = "AccountName"),
-          (e[(e.EmailCode = 2)] = "EmailCode"),
-          (e[(e.TwoFactorCode = 3)] = "TwoFactorCode"),
-          (e[(e.Complete = 4)] = "Complete");
-      })(m || (m = {})),
-        (function (e) {
-          (e[(e.None = 0)] = "None"), (e[(e.InvalidCode = 1)] = "InvalidCode");
-        })(d || (d = {}));
-      class c {
-        constructor(e, t) {
-          (this.m_strBaseURL = ""),
-            (this.m_strOAuthClientID = ""),
-            (this.m_fnLoginComplete = null),
-            (this.m_bRequestInFlight = !1),
-            (this.m_eCurrentStep = m.AccountName),
-            (this.m_strErrorMessage = ""),
-            (this.m_strEmailDomain = ""),
-            (this.m_strCaptchaURL = ""),
-            (this.m_eSteamGuardCodeError = d.None),
-            (this.m_strBaseURL = e),
-            (this.m_strOAuthClientID = t),
-            (this.m_userFields = {
-              strUserName: "",
-              strPassword: "",
-              strTwoFactorCode: "",
-              strEmailAuthCode: "",
-              emailSteamID: "",
-              gidCaptcha: "",
-              strCaptchaText: "",
-              bRememberLogin: !1,
-            });
-        }
-        Shutdown() {
-          this.m_fnLoginComplete = null;
-        }
-        SetLoginCompleteCallback(e) {
-          this.m_fnLoginComplete = e;
-        }
-        SetUserName(e) {
-          this.m_userFields.strUserName = e;
-        }
-        GetUserName() {
-          return this.m_userFields.strUserName;
-        }
-        SetPassword(e) {
-          this.m_userFields.strPassword = e;
-        }
-        GetPassword() {
-          return this.m_userFields.strPassword;
-        }
-        SetRememberPassword(e) {
-          this.m_userFields.bRememberLogin = e;
-        }
-        GetRememberPassword() {
-          return this.m_userFields.bRememberLogin;
-        }
-        SetEmailAuthCode(e) {
-          this.m_userFields.strEmailAuthCode = e;
-        }
-        GetEmailAuthCode() {
-          return this.m_userFields.strEmailAuthCode;
-        }
-        GetEmailDomain() {
-          return this.m_strEmailDomain;
-        }
-        SetTwoFactorCode(e) {
-          this.m_userFields.strTwoFactorCode = e;
-        }
-        GetTwoFactorCode() {
-          return this.m_userFields.strTwoFactorCode;
-        }
-        SetCaptchaText(e) {
-          this.m_userFields.strCaptchaText = e;
-        }
-        GetCaptchaText() {
-          return this.m_userFields.strCaptchaText;
-        }
-        IsRequestInFlight() {
-          return this.m_bRequestInFlight;
-        }
-        GetCurrentStep() {
-          return this.m_eCurrentStep;
-        }
-        GetErrorMessage() {
-          return this.m_strErrorMessage;
-        }
-        SetInitialErrorMessage(e) {
-          this.m_strErrorMessage = e;
-        }
-        GetSteamGuardCodeError() {
-          return this.m_eSteamGuardCodeError;
-        }
-        GetCaptchaURL() {
-          return this.m_strCaptchaURL;
-        }
-        DoLogin() {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            if (this.m_bRequestInFlight) return;
-            (0, s.z)(() => {
-              (this.m_bRequestInFlight = !0), (this.m_strErrorMessage = "");
-            });
-            let e = yield (0, i.He)(
-              this.m_strBaseURL,
-              this.m_strOAuthClientID,
-              this.m_userFields
-            );
-            (0, s.z)(() => {
-              (this.m_bRequestInFlight = !1), this.UpdateLoginResult(e);
-            });
-          });
-        }
-        UpdateLoginResult(e) {
-          if (!e)
-            return (
-              console.log("Login timeout"),
-              void (this.m_strErrorMessage = (0, l.Xx)(
-                "#ConnectionTrouble_FailedToConnect"
-              ))
-            );
-          if (e.login_complete) {
-            if (((this.m_eCurrentStep = m.Complete), this.m_fnLoginComplete)) {
-              let t = {
-                steamID: e.oauth ? e.oauth.steamid : "",
-                strAccountName: e.oauth ? e.oauth.account_name : "",
-                strOAuthToken: e.oauth ? e.oauth.oauth_token : "",
-              };
-              this.m_fnLoginComplete(t);
-            }
-          } else
-            (this.m_strErrorMessage = e.message || ""),
-              (this.m_eSteamGuardCodeError = d.None),
-              e.requires_twofactor
-                ? (this.UpdateCaptchaURL("-1"),
-                  this.m_eCurrentStep != m.TwoFactorCode ||
-                    this.m_strErrorMessage ||
-                    ((this.m_strErrorMessage = (0, l.Xx)(
-                      "#MobileLogin_IncorrectSteamGuard"
-                    )),
-                    (this.m_eSteamGuardCodeError = d.InvalidCode),
-                    (this.m_userFields.strTwoFactorCode = "")),
-                  (this.m_eCurrentStep = m.TwoFactorCode))
-                : e.captcha_needed && e.captcha_gid
-                ? ((this.m_eCurrentStep = m.AccountName),
-                  this.UpdateCaptchaURL(e.captcha_gid))
-                : e.emailauth_needed
-                ? (e.emaildomain && (this.m_strEmailDomain = e.emaildomain),
-                  e.emailsteamid &&
-                    (this.m_userFields.emailSteamID = e.emailsteamid),
-                  this.m_eCurrentStep != m.EmailCode ||
-                    this.m_strErrorMessage ||
-                    ((this.m_strErrorMessage = (0, l.Xx)(
-                      "#MobileLogin_IncorrectSteamGuard"
-                    )),
-                    (this.m_eSteamGuardCodeError = d.InvalidCode),
-                    (this.m_userFields.strEmailAuthCode = "")),
-                  (this.m_eCurrentStep = m.EmailCode))
-                : e.agreement_session_url
-                ? (this.Shutdown(),
-                  console.log(window.location.href),
-                  (window.location.href =
-                    e.agreement_session_url + "&redir=" + window.location.href))
-                : console.log("Unhandled login error");
-        }
-        RefreshCaptcha() {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            let e = yield (0, i.p1)(this.m_strBaseURL);
-            e ? this.UpdateCaptchaURL(e) : console.log("Failed to get captcha");
-          });
-        }
-        UpdateCaptchaURL(e) {
-          (this.m_userFields.gidCaptcha = e),
-            (this.m_userFields.strCaptchaText = ""),
-            (this.m_strCaptchaURL =
-              "-1" != e ? (0, i.yI)(this.m_strBaseURL, e) : "");
-        }
-      }
-      (0, r.gn)([s.LO], c.prototype, "m_bRequestInFlight", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_userFields", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_eCurrentStep", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_strErrorMessage", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_strEmailDomain", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_strCaptchaURL", void 0),
-        (0, r.gn)([s.LO], c.prototype, "m_eSteamGuardCodeError", void 0),
-        (0, r.gn)([o.a], c.prototype, "DoLogin", null),
-        (0, r.gn)([s.aD.bound], c.prototype, "UpdateCaptchaURL", null);
-      var h = n(48341),
-        u = n(95598),
-        p = n(29323),
-        _ = n(64839),
-        g = n(7573),
-        v = n(73175),
-        E = n.n(v),
-        C = n(13596),
-        S = n(90666);
-      let T = class extends a.Component {
-        constructor(e) {
-          super(e),
-            (this.m_manager = new c(this.props.baseURL)),
-            this.props.onLoginComplete &&
-              this.m_manager.SetLoginCompleteCallback(
-                this.props.onLoginComplete
-              );
-        }
-        componentWillUnmount() {
-          this.m_manager.Shutdown();
-        }
-        render() {
-          let e = this.props,
-            { baseURL: t, onLoginComplete: n, className: s } = e,
-            i = (0, r._T)(e, ["baseURL", "onLoginComplete", "className"]),
-            o = (0, g.Z)(E().LoginDialog, s),
-            l = this.m_manager.GetCurrentStep(),
-            d = this.m_manager.GetErrorMessage();
-          return a.createElement(
-            "div",
-            Object.assign({ className: o }, i),
-            a.createElement(
-              "div",
-              { className: E().LoginPanelBackground },
-              a.createElement(u.ui7, null)
-            ),
-            a.createElement(
-              "div",
-              { className: E().LoginPanelContent },
-              d && a.createElement(D, { text: d }),
-              l == m.AccountName &&
-                a.createElement(b, {
-                  manager: this.m_manager,
-                  autoFocus: this.props.autoFocus,
-                }),
-              l == m.TwoFactorCode &&
-                a.createElement(j, {
-                  manager: this.m_manager,
-                  authtype: m.TwoFactorCode,
-                }),
-              l == m.EmailCode &&
-                a.createElement(j, {
-                  manager: this.m_manager,
-                  authtype: m.EmailCode,
-                }),
-              l == m.Complete &&
-                a.createElement(
-                  "div",
-                  { className: E().LoginComplete },
-                  a.createElement(C.V, null)
-                )
-            )
-          );
-        }
-      };
-      function D(e) {
-        return a.createElement("div", { className: E().ErrorMessage }, e.text);
-      }
-      T = (0, r.gn)([p.Pi], T);
-      let b = class extends a.Component {
-        constructor(e) {
-          super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
-        }
-        OnSubmit(e) {
-          e.preventDefault(), this.props.manager.DoLogin();
-        }
-        OnChangeName(e) {
-          let t = e.target.value || "";
-          this.props.manager.SetUserName(e.target.value),
-            t.length > 24 && t.length < 39
-              ? this.setState({ nNameSize: 1 })
-              : t.length > 38
-              ? this.setState({ nNameSize: 2 })
-              : this.setState({ nNameSize: 0 });
-        }
-        OnChangePassword(e) {
-          let t = e.target.value || "";
-          (t = t.replace(/[^\x00-\x7F]/g, "")),
-            this.props.manager.SetPassword(t),
-            t.length > 19 && t.length < 39
-              ? this.setState({ nPassSize: 1 })
-              : t.length > 38
-              ? this.setState({ nPassSize: 2 })
-              : this.setState({ nPassSize: 0 });
-        }
-        OnChangeRememberPass(e) {
-          this.props.manager.SetRememberPassword(e.target.checked);
-        }
-        render() {
-          let e,
-            t,
-            n = this.props.manager;
-          return (
-            (t =
-              1 == this.state.nPassSize
-                ? E().MedPass
-                : 2 == this.state.nPassSize
-                ? E().LargePass
-                : E().DefaultPass),
-            (e =
-              1 == this.state.nNameSize
-                ? E().MedName
-                : 2 == this.state.nNameSize
-                ? E().LargeName
-                : E().DefaultNAme),
-            a.createElement(
-              "div",
-              { className: E().AccountPasswordPanel },
-              a.createElement(
-                "div",
-                { className: E().SigninTitle },
-                (0, l.Xx)("#Login_SignIn")
-              ),
-              a.createElement(
-                "form",
-                { className: E().AccountPasswordForm, onSubmit: this.OnSubmit },
-                a.createElement(h.II, {
-                  autoFocus: this.props.autoFocus,
-                  className: (0, g.Z)(E().AccountNameLabel, e),
-                  label: (0, l.Xx)("#Login_AccountName"),
-                  type: "text",
-                  value: n.GetUserName(),
-                  focusOnMount: !0,
-                  maxLength: 64,
-                  onChange: this.OnChangeName,
-                }),
-                a.createElement(h.II, {
-                  bIsPassword: !0,
-                  className: (0, g.Z)(E().PasswordDots, t),
-                  label: (0, l.Xx)("#Login_Password"),
-                  type: "password",
-                  autoComplete: "off",
-                  maxLength: 64,
-                  size: 64,
-                  value: n.GetPassword(),
-                  onChange: this.OnChangePassword,
-                }),
-                a.createElement(h.ji, {
-                  className: E().RememberMeCheck,
-                  label: (0, l.Xx)("#Login_RememberMe"),
-                  disabled: !1,
-                  onChange: () => this.OnChangeRememberPass,
-                  checked: n.GetRememberPassword(),
-                }),
-                n.GetCaptchaURL() && a.createElement(N, { manager: n }),
-                a.createElement(
-                  h.KM,
-                  { disabled: this.props.manager.IsRequestInFlight() },
-                  (0, l.Xx)("#Login_SignIn").toLocaleUpperCase()
-                )
-              ),
-              a.createElement(
-                "a",
-                { className: E().NeedHelpLink, href: S.De.HELP_BASE_URL },
-                (0, l.Xx)("#Login_ForgotPassword")
-              ),
-              a.createElement("div", { className: E().LoginCreateSeperator }),
-              a.createElement(
-                "div",
-                { className: E().SteamUpsellContainer },
-                a.createElement(
-                  "div",
-                  { className: E().SteamUpsell },
-                  (0, l.Xx)("#Login_NoSteamAccount")
-                ),
-                a.createElement(
-                  "div",
-                  { className: E().CreateAccountLink },
-                  a.createElement(
-                    "a",
-                    { href: `${S.De.STORE_BASE_URL}join/` },
-                    (0, l.Xx)("#Login_CreateAccount")
-                  )
-                )
-              )
-            )
-          );
-        }
-      };
-      (0, r.gn)([_.ak], b.prototype, "OnSubmit", null),
-        (0, r.gn)([_.ak], b.prototype, "OnChangeName", null),
-        (0, r.gn)([_.ak], b.prototype, "OnChangePassword", null),
-        (0, r.gn)([_.ak], b.prototype, "OnChangeRememberPass", null),
-        (b = (0, r.gn)([p.Pi], b));
-      let N = class extends a.Component {
-        OnCaptchaText(e) {
-          this.props.manager.SetCaptchaText(e.target.value);
-        }
-        RefreshCaptcha(e) {
-          this.props.manager.RefreshCaptcha();
-        }
-        render() {
-          let e = this.props.manager;
-          return a.createElement(
-            "div",
-            { className: E().CaptchaContainer },
-            a.createElement(
-              "div",
-              { className: E().CaptchaBlock },
-              a.createElement(
-                "div",
-                { className: E().CaptchaImageAndInput },
-                a.createElement(
-                  "div",
-                  { className: E().CaptchaImageBox },
-                  a.createElement("img", {
-                    className: E().CaptchaImage,
-                    src: e.GetCaptchaURL(),
-                  })
-                ),
-                a.createElement(h.II, {
-                  className: E().CaptchaInput,
-                  type: "text",
-                  autoComplete: "off",
-                  maxLength: 6,
-                  value: e.GetCaptchaText(),
-                  onChange: this.OnCaptchaText,
-                })
-              ),
-              a.createElement(
-                "div",
-                { className: E().ErrorMessage },
-                (0, l.Xx)("#Login_CaptchaVerification")
-              )
-            ),
-            a.createElement(
-              "div",
-              null,
-              a.createElement(
-                "span",
-                {
-                  className: E().RefreshCaptchaText,
-                  onClick: this.RefreshCaptcha,
-                },
-                (0, l.Xx)("#Login_RefreshCaptcha")
-              )
-            )
-          );
-        }
-      };
-      (0, r.gn)([_.ak], N.prototype, "OnCaptchaText", null),
-        (0, r.gn)([_.ak], N.prototype, "RefreshCaptcha", null),
-        (N = (0, r.gn)([p.Pi], N));
-      let j = class extends a.Component {
-        OnSubmit(e) {
-          e.preventDefault(), this.props.manager.DoLogin();
-        }
-        OnChangeAuthCode(e) {
-          this.props.authtype == m.TwoFactorCode
-            ? this.props.manager.SetTwoFactorCode(e.target.value)
-            : this.props.manager.SetEmailAuthCode(e.target.value);
-        }
-        render() {
-          let e,
-            t = this.props.manager,
-            n = "",
-            r = null,
-            s = "",
-            i = t.GetSteamGuardCodeError() == d.InvalidCode;
-          switch (this.props.authtype) {
-            case m.TwoFactorCode:
-              (n = t.GetTwoFactorCode()),
-                (r = (0, l.Xx)("#Login_Enter2FA")),
-                (e = a.createElement(u.vT2, null)),
-                (s = (0, l.Xx)("#Login_Enter2FAHelp"));
-              break;
-            case m.EmailCode:
-              (n = t.GetEmailAuthCode()),
-                (r = (0, l.kQ)(
-                  "#Login_SentSteamguard",
-                  a.createElement(
-                    "span",
-                    { className: E().Highlight },
-                    "@",
-                    t.GetEmailDomain()
-                  )
-                )),
-                (s = (0, l.Xx)("#Login_EnterSteamguard")),
-                (e = a.createElement(u.wr9, null));
-          }
-          return a.createElement(
-            "div",
-            { className: E().AuthenticationPanel },
-            a.createElement(h.__, null, (0, l.Xx)("#Login_SigningIn")),
-            a.createElement(
-              "div",
-              { className: E().SigningInAccountName },
-              t.GetUserName()
-            ),
-            a.createElement(h.Ac, null, r),
-            a.createElement(
-              "div",
-              { className: E().AuthenticatorInputcontainer },
-              e,
-              a.createElement(
-                "form",
-                { className: E().AccountPasswordForm, onSubmit: this.OnSubmit },
-                a.createElement(h.II, {
-                  className: (0, g.Z)(E().AccountName),
-                  label: "Steam Guard Code",
-                  type: "text",
-                  autoComplete: "off",
-                  focusOnMount: !0,
-                  maxLength: 64,
-                  value: n,
-                  onChange: this.OnChangeAuthCode,
-                }),
-                a.createElement(
-                  h.KM,
-                  { disabled: this.props.manager.IsRequestInFlight() },
-                  (0, l.Xx)("#Login_SteamguardSubmit").toLocaleUpperCase()
-                )
-              )
-            ),
-            a.createElement(
-              "a",
-              {
-                className: (0, g.Z)(
-                  E().NeedHelpLink,
-                  i ? E().NeedHelpHighlight : null
-                ),
-                href: "http://help.steampowered.com/",
-              },
-              s
-            )
-          );
-        }
-      };
-      (0, r.gn)([_.ak], j.prototype, "OnSubmit", null),
-        (0, r.gn)([_.ak], j.prototype, "OnChangeAuthCode", null),
-        (j = (0, r.gn)([p.Pi], j));
-      var f = n(59650),
-        L = n(51167),
-        w = (n(88514), n(65902)),
-        A = n(92742),
-        R = n(54698);
-      function y(e) {
-        const t = (t) =>
-          (window.location.href =
-            e.redirectURL && e.redirectURL !== (0, S.Kc)() + "login"
-              ? e.redirectURL
-              : S.De.COMMUNITY_BASE_URL);
-        return S.De.EREALM !== R.IN.k_ESteamRealmChina
-          ? a.createElement(F, Object.assign({}, e))
-          : S.L7 && S.L7.logged_in
-          ? (t(), null)
-          : a.createElement(
-              "div",
-              null,
-              a.createElement(T, { baseURL: (0, S.Kc)(), onLoginComplete: t })
-            );
-      }
-      function O(e) {
-        return a.createElement(
-          f.e1,
+      n.d(t, { X: () => v });
+      var r = n(67294),
+        a = n(59650),
+        s = n(41311),
+        i = n(90666),
+        l = n(94486),
+        o = (n(88514), n(65902)),
+        d = n(92742),
+        c = n(54698);
+      function m(e) {
+        return r.createElement(
+          a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(y, { redirectURL: e.redirectURL })
+          r.createElement(u, { redirectURL: e.redirectURL })
         );
       }
-      function x() {
-        (0, f.AM)(
-          a.createElement(O, {
+      function v() {
+        (0, a.AM)(
+          r.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, l.Xx)("#Login_SignIn") }
+          { strTitle: (0, s.Xx)("#Login_SignIn") }
         );
       }
-      function F(e) {
+      function u(e) {
         const { redirectURL: t } = e,
-          [n] = (0, a.useState)(
-            new w.J(S.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+          [n] = (0, r.useState)(
+            new o.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
-          [r, s] = (0, a.useState)(!1);
-        return a.createElement(
+          [a, s] = (0, r.useState)(!1);
+        return r.createElement(
           "div",
           null,
-          r
-            ? a.createElement(L.pT, null)
-            : a.createElement(L.wK, {
+          a
+            ? r.createElement(l.pT, null)
+            : r.createElement(l.wK, {
                 autoFocus: !0,
                 transport: n,
                 platform: 2,
                 onComplete: (e) => {
-                  e == A.TG.k_PrimaryDomainFail
+                  e == d.TG.k_PrimaryDomainFail
                     ? s(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,
                 theme: "modal",
+                disableQR: i.De.EREALM === c.IN.k_ESteamRealmChina,
               })
         );
       }
@@ -1174,99 +589,99 @@
     96602: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => E,
-        H6: () => g,
+        Ai: () => j,
+        H6: () => h,
         Kj: () => p,
-        Sw: () => S,
-        Zg: () => v,
-        uv: () => C,
+        Sw: () => T,
+        Zg: () => E,
+        uv: () => g,
         w$: () => _,
       });
-      var a = n(70655),
-        r = n(67294),
+      var r = n(70655),
+        a = n(67294),
         s = n(28268),
         i = n(41311),
-        o = n(29323),
-        l = n(7573),
-        m = n(30600),
-        d = n(95906),
-        c = n.n(d),
-        h = n(5525);
+        l = n(29323),
+        o = n(7573),
+        d = n(30600),
+        c = n(95906),
+        m = n.n(c),
+        v = n(5525);
       const u = n(80008);
       function p(e) {
         const t = u.tz.guess(),
           n = u.unix(e).tz(t),
-          a = (0, i.CE)();
-        return a && n.locale(a), n.format("LT");
+          r = (0, i.CE)();
+        return r && n.locale(r), n.format("LT");
       }
       function _(e, t) {
         const n = u.tz.guess(),
-          a = u.unix(e).tz(n),
+          r = u.unix(e).tz(n),
           s = (0, i.CE)();
         return (
-          s && a.locale(s),
-          r.createElement(
-            r.Fragment,
+          s && r.locale(s),
+          a.createElement(
+            a.Fragment,
             null,
-            a.format("LT"),
+            r.format("LT"),
             t
-              ? r.createElement(
+              ? a.createElement(
                   "span",
-                  { "data-tooltip-text": a.format("Z") + ", " + n },
+                  { "data-tooltip-text": r.format("Z") + ", " + n },
                   " ",
-                  a.zoneAbbr()
+                  r.zoneAbbr()
                 )
               : null
           )
         );
       }
-      const g = (0, o.Pi)((e) => {
+      const h = (0, l.Pi)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: n,
-              bOnlyTime: a,
+              bOnlyTime: r,
               bOnlyDate: s,
             } = e,
-            o = !a && Boolean(t),
-            l = !s && Boolean(t),
-            m = o && (0, i.$1)(t),
-            d = e.stylesmodule
-              ? Object.assign(Object.assign({}, c()), e.stylesmodule)
-              : c();
+            l = !r && Boolean(t),
+            o = !s && Boolean(t),
+            d = l && (0, i.$1)(t),
+            c = e.stylesmodule
+              ? Object.assign(Object.assign({}, m()), e.stylesmodule)
+              : m();
           return n
-            ? r.createElement(
+            ? a.createElement(
                 "span",
-                { className: a || s ? d.DateAndTimeInline : d.DateAndTime },
-                o && m,
-                r.createElement("span", null, " "),
-                Boolean(t && l) && _(t, !0)
+                { className: r || s ? c.DateAndTimeInline : c.DateAndTime },
+                l && d,
+                a.createElement("span", null, " "),
+                Boolean(t && o) && _(t, !0)
               )
-            : r.createElement(
+            : a.createElement(
                 "div",
-                { className: d.DateAndTime },
-                o &&
-                  r.createElement(
-                    r.Fragment,
+                { className: c.DateAndTime },
+                l &&
+                  a.createElement(
+                    a.Fragment,
                     null,
-                    r.createElement("div", { className: d.LocalizedDate }, m),
+                    a.createElement("div", { className: c.LocalizedDate }, d),
                     " ",
-                    r.createElement("span", { className: d.At }, "@")
+                    a.createElement("span", { className: c.At }, "@")
                   ),
-                r.createElement(
+                a.createElement(
                   "div",
-                  { className: d.LocalizedTime },
-                  Boolean(t && l) && _(t, !0)
+                  { className: c.LocalizedTime },
+                  Boolean(t && o) && _(t, !0)
                 )
               );
         }),
-        v = (e) => {
+        E = (e) => {
           var t;
-          const n = r.createElement(g, {
+          const n = a.createElement(h, {
             dateAndTime: e.rtFullDate,
             bSingleLine: !0,
             stylesmodule: e.stylesmodule,
           });
-          return r.createElement(
+          return a.createElement(
             s.HP,
             {
               toolTipContent: n,
@@ -1280,33 +695,33 @@
             e.children
           );
         };
-      let E = class extends r.Component {
+      let j = class extends a.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, c()), this.props.stylesmodule)
-              : c();
-          let a =
+              ? Object.assign(Object.assign({}, m()), this.props.stylesmodule)
+              : m();
+          let r =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == e || 0 == e)
-            return r.createElement(
+            return a.createElement(
               "div",
               { className: n.DateAndTime },
-              r.createElement(
+              a.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, i.Xx)("#EventDisplay_TimeRange")
               ),
               (0, i.Xx)("#EventDisplay_TimeDisplayNone")
             );
-          let s = h.JW.GetTimeNowWithOverride();
-          if (a)
-            return r.createElement(
+          let s = v.JW.GetTimeNowWithOverride();
+          if (r)
+            return a.createElement(
               "div",
               { className: n.StartDate },
-              r.createElement(
+              a.createElement(
                 "div",
                 { className: n.RightSideTitles },
                 (0, i.Xx)(
@@ -1316,17 +731,17 @@
                 ),
                 " "
               ),
-              r.createElement(g, { stylesmodule: n, dateAndTime: e })
+              a.createElement(h, { stylesmodule: n, dateAndTime: e })
             );
-          let o = e <= s && s <= t;
-          const d = (0, m.yK)(new Date(1e3 * e), new Date(1e3 * t));
-          return r.createElement(
+          let l = e <= s && s <= t;
+          const c = (0, d.yK)(new Date(1e3 * e), new Date(1e3 * t));
+          return a.createElement(
             "div",
             { className: n.MultiDateAndTime },
-            r.createElement(
+            a.createElement(
               "div",
               { className: n.StartDate },
-              r.createElement(
+              a.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, i.Xx)(
@@ -1337,16 +752,16 @@
                     : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
                 )
               ),
-              r.createElement(g, {
+              a.createElement(h, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 dateAndTime: e,
               })
             ),
-            r.createElement(
+            a.createElement(
               "div",
               { className: n.EndDate },
-              r.createElement(
+              a.createElement(
                 "span",
                 { className: n.RightSideTitles },
                 (0, i.Xx)(
@@ -1355,21 +770,21 @@
                     : "#EventDisplay_TimeEndsOn"
                 )
               ),
-              r.createElement(g, {
+              a.createElement(h, {
                 stylesmodule: n,
                 bSingleLine: !0,
-                bOnlyTime: d,
+                bOnlyTime: c,
                 dateAndTime: t,
               })
             ),
-            o &&
-              r.createElement(
+            l &&
+              a.createElement(
                 "span",
                 { className: n.ActiveEvent },
-                r.createElement(
+                a.createElement(
                   "span",
                   {
-                    className: (0, l.Z)(
+                    className: (0, o.Z)(
                       n.RightSideTitles,
                       n.ActiveEventCallOut
                     ),
@@ -1380,65 +795,65 @@
           );
         }
       };
-      E = (0, a.gn)([o.Pi], E);
-      let C = class extends r.Component {
+      j = (0, r.gn)([l.Pi], j);
+      let g = class extends a.Component {
         render() {
           const {
               startDateAndTime: e,
               endDateAndTime: t,
               bHideEndTime: n,
             } = this.props,
-            a = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, c()), this.props.stylesmodule)
-              : c();
+            r = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, m()), this.props.stylesmodule)
+              : m();
           if (null == e || 0 == e)
-            return r.createElement(
+            return a.createElement(
               "div",
-              { className: a.DateAndTime },
-              r.createElement(
+              { className: r.DateAndTime },
+              a.createElement(
                 "span",
-                { className: a.RightSideTitles },
+                { className: r.RightSideTitles },
                 (0, i.Xx)("#EventDisplay_TimeRange")
               ),
               (0, i.Xx)("#EventDisplay_TimeDisplayNone")
             );
-          const s = h.JW.GetTimeNowWithOverrideAsDate(),
-            o = h.JW.GetTimeNowWithOverride(),
-            l = (0, m.U8)(new Date(1e3 * e), s),
-            d = r.createElement(
+          const s = v.JW.GetTimeNowWithOverrideAsDate(),
+            l = v.JW.GetTimeNowWithOverride(),
+            o = (0, d.U8)(new Date(1e3 * e), s),
+            c = a.createElement(
               "div",
-              { className: a.ShortDateAndTime },
-              (0, i.$1)(e, l)
+              { className: r.ShortDateAndTime },
+              (0, i.$1)(e, o)
             );
-          let u = r.createElement(
-            v,
-            { rtFullDate: e, stylesmodule: a },
-            r.createElement(
+          let u = a.createElement(
+            E,
+            { rtFullDate: e, stylesmodule: r },
+            a.createElement(
               "div",
-              { className: a.RightSideTitles },
+              { className: r.RightSideTitles },
               (0, i.Xx)(
-                e < o
+                e < l
                   ? "#EventDisplay_TimeInPast"
                   : "#EventDisplay_TimeUpcoming"
               )
             ),
-            d
+            c
           );
           if (
-            (o < e &&
-              e < o + m._H.PerWeek &&
-              (u = r.createElement(
-                v,
-                { rtFullDate: e, stylesmodule: a },
-                r.createElement(
+            (l < e &&
+              e < l + d._H.PerWeek &&
+              (u = a.createElement(
+                E,
+                { rtFullDate: e, stylesmodule: r },
+                a.createElement(
                   "div",
-                  { className: a.RightSideTitles },
+                  { className: r.RightSideTitles },
                   (0, i.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    d,
-                    r.createElement(
+                    c,
+                    a.createElement(
                       "div",
-                      { className: a.ShortDateAndTime },
+                      { className: r.ShortDateAndTime },
                       _(e),
                       " "
                     )
@@ -1448,36 +863,36 @@
             n || null == t || t < 1)
           )
             return u;
-          const p = e <= o && o <= t;
+          const p = e <= l && l <= t;
           p &&
-            (u = r.createElement(
-              v,
-              { rtFullDate: e, className: a.ActiveEvent, stylesmodule: a },
-              r.createElement(
+            (u = a.createElement(
+              E,
+              { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
+              a.createElement(
                 "span",
-                { className: a.ActiveEventCallOut },
+                { className: r.ActiveEventCallOut },
                 (0, i.Xx)("#Time_Now")
               )
             ));
-          let g = null;
-          const E = p ? t - o : t - e;
-          if (E <= m._H.PerDay) {
-            const e = r.createElement(
+          let h = null;
+          const j = p ? t - l : t - e;
+          if (j <= d._H.PerDay) {
+            const e = a.createElement(
               "div",
-              { className: a.ShortDateAndTime },
-              (0, i.yW)(E, !0)
+              { className: r.ShortDateAndTime },
+              (0, i.yW)(j, !0)
             );
-            g =
-              t < o
-                ? r.createElement(
+            h =
+              t < l
+                ? a.createElement(
                     "div",
-                    { className: a.RightSideTitles },
+                    { className: r.RightSideTitles },
                     (0, i.Xx)("#EventDisplay_TimeEndsOn_Ran"),
                     e
                   )
-                : r.createElement(
+                : a.createElement(
                     "div",
-                    { className: a.RightSideTitles },
+                    { className: r.RightSideTitles },
                     (0, i.kQ)(
                       p
                         ? "#EventDisplay_TimeLeft"
@@ -1487,79 +902,79 @@
                   );
           } else {
             const e = s.getFullYear() == new Date(1e3 * t).getFullYear();
-            g = r.createElement(
-              r.Fragment,
+            h = a.createElement(
+              a.Fragment,
               null,
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: a.RightSideTitles },
+                { className: r.RightSideTitles },
                 (0, i.Xx)(
-                  t < o
+                  t < l
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn"
                 )
               ),
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: a.ShortDateAndTime },
+                { className: r.ShortDateAndTime },
                 (0, i.$1)(t, e)
               )
             );
           }
-          const C = r.createElement(v, { rtFullDate: t, stylesmodule: a }, g);
-          return r.createElement("div", { className: a.ShortDateRange }, u, C);
+          const g = a.createElement(E, { rtFullDate: t, stylesmodule: r }, h);
+          return a.createElement("div", { className: r.ShortDateRange }, u, g);
         }
       };
-      function S(e) {
+      function T(e) {
         const {
           rtStartDate: t,
           rtEndDate: n,
-          strMonthFormat: a,
+          strMonthFormat: r,
           className: s,
         } = e;
-        return r.createElement(
+        return a.createElement(
           "div",
           { className: s },
           (function (e, t, n) {
-            const a = h.JW.GetTimeNowWithOverrideAsDate(),
-              r = new Date(1e3 * e),
+            const r = v.JW.GetTimeNowWithOverrideAsDate(),
+              a = new Date(1e3 * e),
               s = new Date(1e3 * t),
-              o = a.getFullYear() == r.getFullYear(),
-              l = a.getFullYear() == s.getFullYear(),
-              m = r.getFullYear() == s.getFullYear(),
-              d = m && r.getMonth() == s.getMonth(),
-              c = d && r.getDate() == s.getDate(),
+              l = r.getFullYear() == a.getFullYear(),
+              o = r.getFullYear() == s.getFullYear(),
+              d = a.getFullYear() == s.getFullYear(),
+              c = d && a.getMonth() == s.getMonth(),
+              m = c && a.getDate() == s.getDate(),
               u = {
                 day: "numeric",
                 month: null != n ? n : "long",
-                year: o ? void 0 : "numeric",
+                year: l ? void 0 : "numeric",
               },
-              p = r.toLocaleDateString(i.Yt.GetPreferredLocales(), u);
-            if (c) return p;
+              p = a.toLocaleDateString(i.Yt.GetPreferredLocales(), u);
+            if (m) return p;
             {
               const e = {
                 day: "numeric",
-                month: d && l ? void 0 : null != n ? n : "long",
-                year: m ? void 0 : "numeric",
+                month: c && o ? void 0 : null != n ? n : "long",
+                year: d ? void 0 : "numeric",
               };
               return (
                 p + " - " + s.toLocaleDateString(i.Yt.GetPreferredLocales(), e)
               );
             }
-          })(t, n, a),
+          })(t, n, r),
           " "
         );
       }
-      C = (0, a.gn)([o.Pi], C);
+      g = (0, r.gn)([l.Pi], g);
     },
     74163: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => i });
-      var a = n(9669),
-        r = n.n(a),
+      var r = n(9669),
+        a = n.n(r),
         s = n(67294);
       function i(e) {
-        const t = s.useRef(r().CancelToken.source());
+        const t = s.useRef(a().CancelToken.source());
         return (
           s.useEffect(() => {
             const n = t.current;
@@ -1575,11 +990,11 @@
     },
     73604: (e, t, n) => {
       "use strict";
-      function a(e, t) {
+      function r(e, t) {
         return e < t ? -1 : e > t ? 1 : 0;
       }
-      function r(e, t) {
-        return a(e.toLocaleLowerCase(), t.toLocaleLowerCase());
+      function a(e, t) {
+        return r(e.toLocaleLowerCase(), t.toLocaleLowerCase());
       }
       function s(e) {
         if (!e) return "";
@@ -1592,40 +1007,40 @@
       function i(e, t = "") {
         return e.replace(/\bhttps?:\/\/\S+/gi, t);
       }
-      function o(e, t, n = !0) {
-        let a = e.trim();
-        if (((a = a.replace(n ? /\s+/g : /[ \t]+/g, " ")), a.length > t)) {
-          a = a.substring(0, t);
-          let e = a.replace(/^(.*([.!?])) .*$/, "$1"),
-            r = e.length;
-          (r < 0.6 * t || r == t) && (e = a.replace(/ [^ ]*$/, "...")),
-            (a = n ? e.replace(/(\r\n|\n|\r)/gm, "") : e);
+      function l(e, t, n = !0) {
+        let r = e.trim();
+        if (((r = r.replace(n ? /\s+/g : /[ \t]+/g, " ")), r.length > t)) {
+          r = r.substring(0, t);
+          let e = r.replace(/^(.*([.!?])) .*$/, "$1"),
+            a = e.length;
+          (a < 0.6 * t || a == t) && (e = r.replace(/ [^ ]*$/, "...")),
+            (r = n ? e.replace(/(\r\n|\n|\r)/gm, "") : e);
         }
-        return a;
+        return r;
       }
-      function l(e) {
+      function o(e) {
         let t,
           n,
-          a = 0;
-        if (0 === e.length) return a;
+          r = 0;
+        if (0 === e.length) return r;
         for (t = 0; t < e.length; t++)
-          (n = e.charCodeAt(t)), (a = (a << 5) - a + n), (a |= 0);
-        return a;
+          (n = e.charCodeAt(t)), (r = (r << 5) - r + n), (r |= 0);
+        return r;
       }
-      function m(e) {
+      function d(e) {
         return btoa(e)
           .replace(/\+/g, "-")
           .replace("///g", "_")
           .replace(/=/g, "");
       }
       n.d(t, {
-        GM: () => m,
+        GM: () => d,
         HA: () => s,
-        JD: () => l,
+        JD: () => o,
         W5: () => i,
-        eT: () => a,
-        oU: () => o,
-        tN: () => r,
+        eT: () => r,
+        oU: () => l,
+        tN: () => a,
       });
     },
   },

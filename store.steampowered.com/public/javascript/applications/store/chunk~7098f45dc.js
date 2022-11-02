@@ -287,7 +287,7 @@
     },
     97024: (e, t, r) => {
       "use strict";
-      r.d(t, { Rd: () => K, _R: () => T, $g: () => B, Ws: () => x });
+      r.d(t, { Rd: () => K, _R: () => T, $g: () => B, Ws: () => I });
       var l = r(67294),
         n = (r(54698), r(7707)),
         o = (r(21205), r(33019));
@@ -409,15 +409,15 @@
         w = (r(23816), r(62639)),
         L = r.n(w),
         h = r(59650),
-        E = r(53622),
-        V = r(88272),
-        k = r(73604),
-        _ = r(48341),
-        b = r(13596),
-        M = r(95598),
-        N = r(24432),
-        D = r(36705),
-        y = (r(10767), r(1245));
+        V = r(53622),
+        E = r(73604),
+        k = r(48341),
+        _ = r(13596),
+        b = r(95598),
+        M = (r(10767), r(1245)),
+        N = r(88272),
+        y = r(24432),
+        D = r(36705);
       function R(e) {
         var t, r;
         const {
@@ -430,7 +430,7 @@
           [s, C] = l.useState(!1),
           u = l.useCallback(() => s, [s]),
           d = l.useRef(),
-          p = m.De.IN_GAMEPADUI;
+          p = (0, m.id)();
         if (
           (l.useEffect(() => {
             var e, t;
@@ -504,7 +504,7 @@
                 className: L().CompatibilityDetailsSeparator,
               }),
               l.createElement(
-                V.TN,
+                N.TN,
                 {
                   ref: d,
                   className: u()
@@ -527,7 +527,7 @@
                           key: e.loc_token + e.display_type,
                           className: L().CompatibilityDetailsRow,
                         },
-                        l.createElement(I, { displaytype: e.display_type }),
+                        l.createElement(x, { displaytype: e.display_type }),
                         l.createElement("span", null, (0, g.Xx)(e.loc_token))
                       )
                     ),
@@ -594,9 +594,10 @@
             );
       }
       function Z(e) {
-        const { blogURL: t } = e;
+        const { blogURL: t } = e,
+          r = (0, m.id)();
         return t
-          ? m.De.IN_GAMEPADUI
+          ? r
             ? l.createElement(
                 "div",
                 { className: L().CompatibilityDetailRatingSummary },
@@ -604,7 +605,7 @@
                 l.createElement(
                   "div",
                   { className: L().DeveloperBlogYButton },
-                  l.createElement(N.VC, { button: D.FX.Y, type: N.yV.Knockout })
+                  l.createElement(y.VC, { button: D.FX.Y, type: y.yV.Knockout })
                 )
               )
             : l.createElement(
@@ -621,23 +622,23 @@
               )
           : null;
       }
-      function I(e) {
+      function x(e) {
         const { displaytype: t } = e;
         switch (t) {
           case 4:
-            return l.createElement(M.YVI, {
+            return l.createElement(b.YVI, {
               className: L().CompatibilityDetailsResultIcon,
             });
           case 3:
-            return l.createElement(M.KKY, {
+            return l.createElement(b.KKY, {
               className: L().CompatibilityDetailsResultIcon,
             });
           case 2:
-            return l.createElement(M.vyu, {
+            return l.createElement(b.vyu, {
               className: L().CompatibilityDetailsResultIcon,
             });
           case 0:
-            return l.createElement(M.z5E, {
+            return l.createElement(b.z5E, {
               className: L().CompatibilityDetailsResultIcon,
             });
           case 1:
@@ -650,7 +651,7 @@
             );
         }
       }
-      function x(e) {
+      function I(e) {
         const { nAppID: t } = e;
         return l.createElement(
           "div",
@@ -661,7 +662,7 @@
               onClick: (e) =>
                 (function (e, t) {
                   (0, h.AM)(l.createElement(A, { nAppID: t }), e);
-                })((0, E.RA)(e), t),
+                })((0, V.RA)(e), t),
             },
             l.createElement(
               "span",
@@ -673,21 +674,21 @@
       }
       function B(e) {
         const { appID: t, results: r, appName: n } = e,
-          o = m.De.IN_GAMEPADUI
+          o = m.id,
+          a = o
             ? (0, g.Xx)(
                 "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI"
               )
             : (0, g.Xx)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
-          a = m.De.IN_GAMEPADUI,
           c = r.steam_deck_blog_url;
         return r
           ? l.createElement(
               "div",
               { className: L().BannerContainer },
-              l.createElement("div", { className: L().BannerHeader }, o),
+              l.createElement("div", { className: L().BannerHeader }, a),
               l.createElement(
                 "div",
-                { className: a ? L().BannerContent : L().BannerContentDesktop },
+                { className: o ? L().BannerContent : L().BannerContentDesktop },
                 l.createElement(
                   "div",
                   null,
@@ -770,14 +771,14 @@
             onCancel: r,
           },
           l.createElement(
-            _.uT,
+            k.uT,
             null,
             l.createElement(
               f.s,
               { focusable: !1, "flow-children": "column" },
               Boolean(n)
                 ? l.createElement(R, { results: n })
-                : l.createElement(b.V, {
+                : l.createElement(_.V, {
                     size: "medium",
                     position: "center",
                     string: (0, g.Xx)("#Loading"),
@@ -799,7 +800,7 @@
         }, [a]);
         let u = l.useCallback(
           (e) => {
-            (0, y.X)() && (0, y.X)().AddEvent(1003), s(!0);
+            (0, M.X)() && (0, M.X)().AddEvent(1003), s(!0);
           },
           [s]
         );
@@ -855,13 +856,13 @@
         const { category: t } = e;
         switch (t) {
           case 3:
-            return l.createElement(M.YVI, { className: L().CategoryIcon });
+            return l.createElement(b.YVI, { className: L().CategoryIcon });
           case 2:
-            return l.createElement(M.KKY, { className: L().CategoryIcon });
+            return l.createElement(b.KKY, { className: L().CategoryIcon });
           case 1:
-            return l.createElement(M.vyu, { className: L().CategoryIcon });
+            return l.createElement(b.vyu, { className: L().CategoryIcon });
           case 0:
-            return l.createElement(M.z5E, { className: L().CategoryIcon });
+            return l.createElement(b.z5E, { className: L().CategoryIcon });
         }
       }
       function T(e) {
@@ -873,7 +874,7 @@
             r
               ? (0, g.kQ)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  l.createElement("b", null, (0, k.HA)(r))
+                  l.createElement("b", null, (0, E.HA)(r))
                 )
               : (0, g.Xx)("#SteamDeckVerified_DescriptionHeader_Unknown")
           );
@@ -901,7 +902,7 @@
           s = r
             ? (0, g.kQ)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                l.createElement("b", null, (0, k.HA)(r)),
+                l.createElement("b", null, (0, E.HA)(r)),
                 c,
                 i
               )
@@ -993,9 +994,9 @@
           case c.FX.Down:
             return a.createElement(w, { bIsKnockout: r, className: t });
           case c.FX.HomeMenu:
-            return a.createElement(E, { bIsKnockout: r, className: t });
-          case c.FX.QuickMenu:
             return a.createElement(V, { bIsKnockout: r, className: t });
+          case c.FX.QuickMenu:
+            return a.createElement(E, { bIsKnockout: r, className: t });
           case c.FX.Select:
             return a.createElement(k, { bIsKnockout: r, className: t });
           case c.FX.Start:
@@ -1007,13 +1008,13 @@
           case c.FX.LeftTrigger:
             return a.createElement(N, { bIsKnockout: r, className: t });
           case c.FX.RightTrigger:
-            return a.createElement(D, { bIsKnockout: r, className: t });
+            return a.createElement(y, { bIsKnockout: r, className: t });
           case c.FX.LeftStick:
-            return a.createElement(I, { bIsKnockout: r, className: t });
+            return a.createElement(x, { bIsKnockout: r, className: t });
           case c.FX.RightStick:
             return a.createElement(Z, { bIsKnockout: r, className: t });
           case c.FX.LeftStickClick:
-            return a.createElement(y, { bIsKnockout: r, className: t });
+            return a.createElement(D, { bIsKnockout: r, className: t });
           case c.FX.RightStickClick:
             return a.createElement(R, { bIsKnockout: r, className: t });
           case c.FX.LeftTrackpad:
@@ -1025,7 +1026,7 @@
           case c.FX.RightTrackpadClick:
             return a.createElement(O, { bIsKnockout: r, className: t });
           case c.FX.RearLeftUpper:
-            return a.createElement(x, { bIsKnockout: r, className: t });
+            return a.createElement(I, { bIsKnockout: r, className: t });
           case c.FX.RearRightUpper:
             return a.createElement(S, { bIsKnockout: r, className: t });
           case c.FX.RearLeftLower:
@@ -1396,7 +1397,7 @@
               })
             );
       }
-      function E(e) {
+      function V(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t
@@ -1459,7 +1460,7 @@
               })
             );
       }
-      function V(e) {
+      function E(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t
@@ -1776,7 +1777,7 @@
               })
             );
       }
-      function D(e) {
+      function y(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t
@@ -1824,7 +1825,7 @@
               })
             );
       }
-      function y(e) {
+      function D(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t
@@ -2017,7 +2018,7 @@
               })
             );
       }
-      function I(e) {
+      function x(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t
@@ -2072,7 +2073,7 @@
               })
             );
       }
-      function x(e) {
+      function I(e) {
         var { bIsKnockout: t } = e,
           r = (0, o._T)(e, ["bIsKnockout"]);
         return t

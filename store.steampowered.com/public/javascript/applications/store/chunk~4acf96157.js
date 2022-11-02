@@ -709,11 +709,11 @@
       function U(e) {
         return e.recent_emoticons;
       }
-      function G(e) {
+      function H(e) {
         return e.recent_stickers;
       }
-      function H(e) {
-        return U(e).length + G(e).length > 0;
+      function G(e) {
+        return U(e).length + H(e).length > 0;
       }
       const z = (0, r.Pi)((e) => {
         const {
@@ -741,7 +741,7 @@
         })(t);
         const m = [];
         return (
-          H(t) &&
+          G(t) &&
             m.push({
               renderTab: (e) =>
                 s.createElement(
@@ -851,7 +851,7 @@
             } = this.props,
             r = [];
           return (
-            H(e) &&
+            G(e) &&
               r.push({
                 renderTab: (e) =>
                   s.createElement(
@@ -1048,10 +1048,10 @@
                         )
                   ),
               }),
-            G(e).length &&
+            H(e).length &&
               r.push({
                 title: (0, u.Xx)("#AddonPicker_RecentStickers"),
-                items: l.u.FilterStickers(G(e), i),
+                items: l.u.FilterStickers(H(e), i),
                 onItemSelect: o,
                 renderItem: (e) => s.createElement($, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
@@ -1495,7 +1495,7 @@
         }
       }
       function re(e) {
-        return _.De.IN_GAMEPADUI
+        return (0, _.id)()
           ? s.createElement(
               "svg",
               Object.assign(
@@ -1557,7 +1557,7 @@
             );
       }
       function se(e) {
-        return _.De.IN_GAMEPADUI
+        return (0, _.id)()
           ? s.createElement(
               "svg",
               Object.assign(
@@ -1589,7 +1589,7 @@
             );
       }
       function ce(e) {
-        return _.De.IN_GAMEPADUI
+        return (0, _.id)()
           ? s.createElement(
               "svg",
               Object.assign(

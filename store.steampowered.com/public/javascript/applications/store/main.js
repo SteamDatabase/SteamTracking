@@ -102,7 +102,7 @@
     },
     35402: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => E, Y: () => w });
+      n.d(t, { C: () => E, Y: () => S });
       var r = n(70655),
         i = n(9669),
         s = n.n(i),
@@ -120,8 +120,8 @@
         f = n(15845),
         y = n(49875);
       n(54891);
-      const w = 5,
-        S = "auto";
+      const S = 5,
+        w = "auto";
       var v;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
@@ -972,7 +972,7 @@
           if (!this.m_mpd) return 0;
           let t = this.GetAvailableVideoStartTime(),
             n = this.GetBufferedLiveEdgeTime();
-          (e = d.Lh(e, t, n)), (this.m_bUserLiveEdgeChoice = e >= n - w);
+          (e = d.Lh(e, t, n)), (this.m_bUserLiveEdgeChoice = e >= n - S);
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -1076,7 +1076,7 @@
           let e = [];
           if (
             (e.push({
-              id: S,
+              id: w,
               displayName: "Auto",
               selected: null === this.m_videoRepSelected,
             }),
@@ -1112,7 +1112,7 @@
         SetVideoRepresentation(e) {
           let t = !0,
             n = this.GetVideoLoader();
-          if (e && e.id != S) {
+          if (e && e.id != w) {
             let r = n.GetRepresentationByID(e.id);
             r &&
               ((t = !1),
@@ -1246,7 +1246,7 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new S());
+            (this.m_fpsMonitor = new w());
         }
         GetBytesReceivedToDisplay() {
           return (0, u.l)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -1778,12 +1778,12 @@
         (0, r.gn)([i.LO], y.prototype, "m_nFramesDecoded", void 0),
         (0, r.gn)([i.LO], y.prototype, "m_nFramesDropped", void 0),
         (0, r.gn)([i.aD], y.prototype, "SegmentReceived", null);
-      class w {
+      class S {
         reset(e, t) {
           (this.bDropReading = e), (this.nTotalDecodedFrames = t);
         }
       }
-      class S {
+      class w {
         constructor() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -1858,14 +1858,14 @@
           (n =
             this.m_rgResultsWindow.length >= this.k_nSlidingWindow
               ? this.m_rgResultsWindow.shift()
-              : new w()),
+              : new S()),
             n.reset(e, t),
             this.m_rgResultsWindow.push(n);
         }
       }
-      (0, r.gn)([i.LO], S.prototype, "m_bDroppingFrameDetected", void 0),
-        (0, r.gn)([i.LO], S.prototype, "m_nCurrentFPS", void 0),
-        (0, r.gn)([i.aD.bound], S.prototype, "TakeReading", null);
+      (0, r.gn)([i.LO], w.prototype, "m_bDroppingFrameDetected", void 0),
+        (0, r.gn)([i.LO], w.prototype, "m_nCurrentFPS", void 0),
+        (0, r.gn)([i.aD.bound], w.prototype, "TakeReading", null);
     },
     15845: (e, t, n) => {
       "use strict";
@@ -1873,7 +1873,7 @@
         BE: () => y,
         FH: () => _,
         Jn: () => h,
-        MS: () => w,
+        MS: () => S,
         QA: () => g,
         Y6: () => p,
         v2: () => f,
@@ -1960,7 +1960,7 @@
           (n - t.segmentTemplate.nStartNumber) * r - e.GetDurationSinceStarted()
         );
       }
-      class w {
+      class S {
         constructor() {
           (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
@@ -2141,9 +2141,9 @@
           if (!y.strID || null === y.nStart)
             return (0, i.yv)("MPD - Missing Period Information."), !1;
           (this.m_rgPeriods = []), this.m_rgPeriods.push(y);
-          let w = f.getElementsByTagName("AdaptationSet");
-          for (let e = 0; e < w.length; e++) {
-            let t = w[e],
+          let S = f.getElementsByTagName("AdaptationSet");
+          for (let e = 0; e < S.length; e++) {
+            let t = S[e],
               n = d(t, "description"),
               s = d(t, "lang"),
               o = {
@@ -2876,7 +2876,7 @@
         dt: () => l,
         eV: () => c,
         fk: () => i,
-        gg: () => S,
+        gg: () => w,
         jM: () => d,
         j_: () => m,
         my: () => r,
@@ -3088,7 +3088,7 @@
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35,
       ];
-      var h, p, _, g, f, y, w, S, v, E, C;
+      var h, p, _, g, f, y, S, w, v, E, C;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -3166,7 +3166,7 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(w || (w = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
@@ -3183,7 +3183,7 @@
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
               "k_EGamingDeviceType_SteamDeck");
-        })(S || (S = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
@@ -3242,7 +3242,7 @@
       "use strict";
       n.d(t, {
         e7: () => a.e7,
-        mU: () => v,
+        mU: () => E,
         i_: () => l,
         De: () => r.De,
         j_: () => r.j_,
@@ -3251,7 +3251,7 @@
         Xg: () => c,
         eV: () => r.eV,
         jM: () => r.jM,
-        t$: () => d,
+        t$: () => u,
       });
       var r = n(26149);
       var i, s;
@@ -3295,7 +3295,7 @@
           (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
             "k_BluetoothDeviceType_Keyboard");
       })(o || (o = {}));
-      var l, c, m;
+      var l, c, m, d;
       !(function (e) {
         (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
           (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -3331,15 +3331,23 @@
             (e[(e.Overlay = 2)] = "Overlay"),
             (e[(e.Opaque = 3)] = "Opaque"),
             (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-        })(m || (m = {}));
-      class d {}
-      var u;
+        })(m || (m = {})),
+        (function (e) {
+          (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
+            (e[(e.Overlay = 1)] = "Overlay"),
+            (e[(e.Keyboard = 2)] = "Keyboard"),
+            (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
+            (e[(e.VR = 4)] = "VR"),
+            (e[(e.SteamLibrary = 5)] = "SteamLibrary");
+        })(d || (d = {}));
+      class u {}
+      var h;
       !(function (e) {
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(u || (u = {}));
-      var h, p, _;
+      })(h || (h = {}));
+      var p, _, g;
       n(13447);
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
@@ -3358,7 +3366,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(h || (h = {}));
+      })(p || (p = {}));
       !(function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -3413,7 +3421,7 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(p || (p = {}));
+      })(_ || (_ = {}));
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -3421,14 +3429,14 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(_ || (_ = {}));
-      var g, f, y, w, S;
+      })(g || (g = {}));
+      var f, y, S, w, v;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(g || (g = {})),
+      })(f || (f = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -3437,14 +3445,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(f || (f = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(y || (y = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3461,8 +3469,8 @@
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(S || (S = {}));
-      function v(e) {
+        })(v || (v = {}));
+      function E(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -3477,7 +3485,7 @@
           "advertising" === e
         );
       }
-      var E, C;
+      var C, k;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -3485,7 +3493,7 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(E || (E = {})),
+      })(C || (C = {})),
         (function (e) {
           (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
             "k_EClientUsedInputTypeKeyboard"),
@@ -3495,7 +3503,7 @@
               "k_EClientUsedInputTypeController"),
             (e[(e.k_EClientUsedInputTypeMax = 3)] =
               "k_EClientUsedInputTypeMax");
-        })(C || (C = {}));
+        })(k || (k = {}));
     },
     58114: (e, t, n) => {
       "use strict";
@@ -5543,22 +5551,22 @@
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
       let f,
         y = [],
-        w = (e, t) => y.push({ error: e, cCallsitesToIgnore: t });
-      const S = !0;
+        S = (e, t) => y.push({ error: e, cCallsitesToIgnore: t });
+      const w = !0;
       {
         const e = console.assert;
         console.assert = (t, n, ...r) => {
-          t || w(new Error(C(n, ...r)), 2), e.apply(console, [t, n, ...r]);
+          t || S(new Error(C(n, ...r)), 2), e.apply(console, [t, n, ...r]);
         };
         const t = console.error;
         (console.error = (e, ...n) => {
-          w(new Error(C(e, ...n)), 1), t.apply(console, [e, ...n]);
+          S(new Error(C(e, ...n)), 1), t.apply(console, [e, ...n]);
         }),
           g("error", (e) => {
-            w(e.error, 0);
+            S(e.error, 0);
           }),
           (f = window.setTimeout(() => {
-            (y = []), (w = () => {});
+            (y = []), (S = () => {});
           }, 3e4));
       }
       const v = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 };
@@ -5573,8 +5581,8 @@
               ? (y.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t })
                 ),
-                (w = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (w = () => {}),
+                (S = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (S = () => {}),
             (y = []),
             clearTimeout(f),
             window.setTimeout(() => {
@@ -5770,7 +5778,7 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return S;
+          return w;
         }
       }
       function C(e, ...t) {
@@ -6171,10 +6179,10 @@
             [e]
           );
         })(t);
-        let w = null;
+        let S = null;
         return (
           _ && _.length
-            ? (w = _.map((e) =>
+            ? (S = _.map((e) =>
                 e instanceof m.kv
                   ? i.createElement(h, {
                       key: e.key,
@@ -6197,7 +6205,7 @@
             i.createElement("div", {
               className: "ModalOverlayContent ModalOverlayBackground",
             }),
-            w
+            S
           )
         );
       }
@@ -6481,7 +6489,7 @@
         BKy: () => G,
         BNo: () => _e,
         Bh5: () => le,
-        Cts: () => Se,
+        Cts: () => we,
         Ehc: () => T,
         GhU: () => v,
         IWH: () => z,
@@ -6498,7 +6506,7 @@
         Q1v: () => fe,
         SK8: () => se,
         SUY: () => h,
-        SjW: () => we,
+        SjW: () => Se,
         Ucz: () => Z,
         Uos: () => D,
         V7n: () => N,
@@ -6519,7 +6527,7 @@
         doA: () => Ce,
         dzL: () => k,
         faS: () => M,
-        ffh: () => S,
+        ffh: () => w,
         g0p: () => ve,
         gR: () => I,
         j7C: () => xe,
@@ -6535,7 +6543,7 @@
         miF: () => Le,
         opd: () => ke,
         pVO: () => y,
-        pkz: () => w,
+        pkz: () => S,
         r6F: () => F,
         ret: () => d,
         shV: () => E,
@@ -6641,7 +6649,7 @@
               i.createElement("path", {
                 className: "ColorSelector",
                 d: "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
-                fill: "#ffffff",
+                fill: "currentColor",
                 fillOpacity: "1",
                 stroke: "none",
                 visibility: "visible",
@@ -6725,7 +6733,7 @@
         );
       }
       function _(e) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? i.createElement(
               "svg",
               Object.assign(
@@ -6859,7 +6867,7 @@
           })
         );
       }
-      function w() {
+      function S() {
         return i.createElement(
           "svg",
           {
@@ -6882,7 +6890,7 @@
           })
         );
       }
-      function S(e) {
+      function w(e) {
         const { muted: t, className: n } = e;
         return i.createElement(
           "svg",
@@ -7166,7 +7174,7 @@
         );
       }
       function D(e) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? i.createElement(
               "svg",
               Object.assign(
@@ -8279,7 +8287,7 @@
         );
       }
       function he(e, t) {
-        return l.De.IN_GAMEPADUI
+        return (0, l.id)()
           ? i.createElement(
               "svg",
               Object.assign(
@@ -8439,7 +8447,7 @@
           })
         );
       }
-      function we(e) {
+      function Se(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -8463,7 +8471,7 @@
           })
         );
       }
-      function Se(e) {
+      function we(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -9663,12 +9671,12 @@
         Eu: () => k,
         GB: () => r,
         J$: () => c,
-        Jk: () => w,
+        Jk: () => S,
         Lh: () => f,
         Mv: () => v,
         RA: () => o,
         RD: () => d,
-        U0: () => S,
+        U0: () => w,
         V2: () => E,
         _J: () => _,
         __: () => p,
@@ -9714,13 +9722,13 @@
         }
         return n;
       }
-      function w(e, t) {
+      function S(e, t) {
         for (; e; ) {
           if (t(e)) return e;
           e = e.parentElement;
         }
       }
-      function S(e, t) {
+      function w(e, t) {
         if (!("ownerDocument" in e)) return !0;
         const n = e.ownerDocument.defaultView.getComputedStyle(e),
           r = "x" === t ? n.overflowX : n.overflowY;
@@ -9790,7 +9798,7 @@
         Xx: () => d,
         Yt: () => C,
         eH: () => E,
-        is: () => S,
+        is: () => w,
         jr: () => c.jr,
         kQ: () => u,
         kb: () => g,
@@ -9990,7 +9998,7 @@
           return null;
         }
       }
-      const w = {
+      const S = {
           english: "en",
           german: "de",
           french: "fr",
@@ -10023,7 +10031,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        S = {
+        w = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -10055,7 +10063,7 @@
           "vi-VN": 28,
         };
       function v() {
-        return w[a.De.LANGUAGE] || null;
+        return S[a.De.LANGUAGE] || null;
       }
       function E(e) {
         let t,
@@ -10352,8 +10360,8 @@
         return n.getFullYear() == r.getFullYear() ? b(n) : B(n);
       }
       const y = new Map(),
-        w = new Map(),
         S = new Map(),
+        w = new Map(),
         v = new Map(),
         E = new Map();
       new Map();
@@ -10384,24 +10392,24 @@
         );
       }
       function b(e) {
-        let t = w.get(e.getMonth());
+        let t = S.get(e.getMonth());
         return (
           t ||
           ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             month: "long",
           })),
-          w.set(e.getMonth(), t),
+          S.set(e.getMonth(), t),
           t)
         );
       }
       function M(e) {
-        let t = S.get(e.getFullYear());
+        let t = w.get(e.getFullYear());
         return (
           t ||
           ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
             year: "numeric",
           })),
-          S.set(e.getFullYear(), t),
+          w.set(e.getFullYear(), t),
           t)
         );
       }
@@ -10780,24 +10788,31 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => a,
-        Ek: () => p,
-        JA: () => c,
-        Kc: () => S,
-        L7: () => o,
-        Wj: () => m,
-        Zv: () => v,
-        dk: () => l,
-        ip: () => y,
-        kQ: () => f,
-        x: () => _,
-        y9: () => h,
+        De: () => c,
+        E_: () => o,
+        Ek: () => f,
+        JA: () => u,
+        Kc: () => C,
+        L7: () => m,
+        Wj: () => h,
+        Zv: () => k,
+        dk: () => d,
+        id: () => l,
+        ip: () => v,
+        kQ: () => w,
+        x: () => y,
+        y9: () => g,
       });
       var r = n(70655),
         i = n(48899),
-        s = n(61939);
-      n(26149);
-      const a = {
+        s = n(61939),
+        a = (n(26149), n(67294));
+      const o = a.createContext({});
+      function l() {
+        const e = a.useContext(o);
+        return (null == e ? void 0 : e.IN_GAMEPADUI) || c.IN_GAMEPADUI;
+      }
+      const c = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -10842,9 +10857,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, s.t$)()) return d || (d = u()), d;
+              if (!(0, s.t$)()) return p || (p = _()), p;
               let e = (0, s.bG)("sessionid");
-              e || (e = u());
+              e || (e = _());
               return e;
             })();
           },
@@ -10853,14 +10868,16 @@
           DEV_MODE: !1,
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
+          IN_STEAMUI_SHARED_CONTEXT: !1,
           GAMEPADUI_WINDOWED: !1,
+          DECK_DISPLAY_MODE: !1,
           LEGACY_GAMEPADUI_MODE: 0,
           LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        o = {
+        m = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -10875,8 +10892,8 @@
           short_url: "",
           country_code: "",
         },
-        l = { steamid: "", clanid: 0, listid: 0 },
-        c = {
+        d = { steamid: "", clanid: 0, listid: 0 },
+        u = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -10893,9 +10910,9 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        m = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let d;
-      function u() {
+        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+      let p;
+      function _() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
@@ -10903,44 +10920,44 @@
         })();
         return (0, s.I1)("sessionid", e, 0), e;
       }
-      function h() {
+      function g() {
         let e = null;
         return (
           (0, s.t$)() && (e = (0, s.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function p(e = "webui_config") {
+      function f(e = "webui_config") {
         const t = {},
-          n = f("config", e);
-        n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
-        const r = f("userinfo", e);
+          n = w("config", e);
+        n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
+        const r = w("userinfo", e);
         r &&
-          (Object.assign(o, r),
+          (Object.assign(m, r),
           (t.userConfig = !0),
-          o.is_support && h() && (o.is_support = !1));
-        const i = f("broadcast", e);
-        i && (Object.assign(l, i), (t.broadcastConfig = !0));
-        const s = f("community", e);
-        s && (Object.assign(c, s), (t.communityConfig = !0));
-        const d = f("event", e);
-        return d && (Object.assign(m, d), (t.eventConfig = !0)), t;
+          m.is_support && g() && (m.is_support = !1));
+        const i = w("broadcast", e);
+        i && (Object.assign(d, i), (t.broadcastConfig = !0));
+        const s = w("community", e);
+        s && (Object.assign(u, s), (t.communityConfig = !0));
+        const a = w("event", e);
+        return a && (Object.assign(h, a), (t.eventConfig = !0)), t;
       }
-      function _(e, t, n) {
+      function y(e, t, n) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           if (n.config) {
             const n = (yield e.get(t + "ajaxgetconfig")).data;
-            n && (delete n.SESSIONID, Object.assign(a, n));
+            n && (delete n.SESSIONID, Object.assign(c, n));
           }
           if (n.userConfig) {
             const n = (yield e.get(t + "ajaxgetuserconfig", {
               withCredentials: !0,
             })).data;
-            n && Object.assign(o, n);
+            n && Object.assign(m, n);
           }
         });
       }
-      function g(e, t = "webui_config", n) {
+      function S(e, t = "webui_config", n) {
         let r;
         if (
           ((r =
@@ -10960,52 +10977,52 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function f(e, t = "webui_config") {
-        return g(e, t, !0);
+      function w(e, t = "webui_config") {
+        return S(e, t, !0);
       }
-      function y(e, t = "webui_config") {
-        return g(e, t, !1);
+      function v(e, t = "webui_config") {
+        return S(e, t, !1);
       }
-      function w(e, t) {
+      function E(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function S() {
+      function C() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return w(e, a.STORE_BASE_URL)
-          ? a.STORE_BASE_URL
-          : w(e, a.COMMUNITY_BASE_URL)
-          ? a.COMMUNITY_BASE_URL
-          : w(e, a.CHAT_BASE_URL)
-          ? a.CHAT_BASE_URL
-          : w(e, a.PARTNER_BASE_URL)
-          ? a.PARTNER_BASE_URL
-          : w(e, a.HELP_BASE_URL)
-          ? a.HELP_BASE_URL
-          : w(e, a.STEAMTV_BASE_URL)
-          ? a.STEAMTV_BASE_URL
-          : w(e, a.STATS_BASE_URL)
-          ? a.STATS_BASE_URL
-          : w(e, a.INTERNAL_STATS_BASE_URL)
-          ? a.INTERNAL_STATS_BASE_URL
-          : w(e, "https://steamloopback.host")
+        return E(e, c.STORE_BASE_URL)
+          ? c.STORE_BASE_URL
+          : E(e, c.COMMUNITY_BASE_URL)
+          ? c.COMMUNITY_BASE_URL
+          : E(e, c.CHAT_BASE_URL)
+          ? c.CHAT_BASE_URL
+          : E(e, c.PARTNER_BASE_URL)
+          ? c.PARTNER_BASE_URL
+          : E(e, c.HELP_BASE_URL)
+          ? c.HELP_BASE_URL
+          : E(e, c.STEAMTV_BASE_URL)
+          ? c.STEAMTV_BASE_URL
+          : E(e, c.STATS_BASE_URL)
+          ? c.STATS_BASE_URL
+          : E(e, c.INTERNAL_STATS_BASE_URL)
+          ? c.INTERNAL_STATS_BASE_URL
+          : E(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function v() {
+      function k() {
         const e = window.location.href;
-        return w(e, a.STORE_BASE_URL)
+        return E(e, c.STORE_BASE_URL)
           ? "store"
-          : w(e, a.COMMUNITY_BASE_URL)
+          : E(e, c.COMMUNITY_BASE_URL)
           ? "community"
-          : w(e, a.PARTNER_BASE_URL)
+          : E(e, c.PARTNER_BASE_URL)
           ? "partnerweb"
-          : w(e, a.HELP_BASE_URL)
+          : E(e, c.HELP_BASE_URL)
           ? "help"
-          : w(e, a.STEAMTV_BASE_URL)
+          : E(e, c.STEAMTV_BASE_URL)
           ? "steamtv"
-          : w(e, a.STATS_BASE_URL) || w(e, a.INTERNAL_STATS_BASE_URL)
+          : E(e, c.STATS_BASE_URL) || E(e, c.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -11279,8 +11296,8 @@
         }
       }
       var y = n(27515),
-        w = n(484),
-        S = n(53622),
+        S = n(484),
+        w = n(53622),
         v = n(48780),
         E = n(53477);
       function C({ config: e, isDynamic: t }) {
@@ -11332,7 +11349,7 @@
             const o = new MutationObserver((t) => {
               let i = !1;
               for (const r of t)
-                S.Eu(
+                w.Eu(
                   r,
                   (t) => {
                     B(t, e).forEach((e) => {
@@ -11793,12 +11810,10 @@
               n.e(7319),
               n.e(5903),
               n.e(6601),
-              n.e(701),
-              n.e(2509),
               n.e(8049),
+              n.e(2509),
               n.e(4233),
               n.e(2823),
-              n.e(5666),
               n.e(7898),
               n.e(4680),
               n.e(8626),
@@ -11810,6 +11825,8 @@
               n.e(6720),
               n.e(3238),
               n.e(1979),
+              n.e(2420),
+              n.e(9211),
               n.e(691),
               n.e(2136),
             ])
@@ -11834,12 +11851,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -11859,7 +11874,6 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
             n.e(4233),
             n.e(9682),
           ]).then(n.bind(n, 82910))
@@ -11873,11 +11887,9 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
-            n.e(5666),
             n.e(4680),
             n.e(8626),
             n.e(4466),
@@ -11908,12 +11920,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -11932,12 +11942,11 @@
             n.e(5354),
             n.e(7319),
             n.e(5903),
-            n.e(701),
             n.e(2509),
             n.e(2823),
             n.e(8626),
             n.e(2814),
-          ]).then(n.bind(n, 93609))
+          ]).then(n.bind(n, 26554))
         ),
         de = s.lazy(() =>
           Promise.all([
@@ -11948,15 +11957,14 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
             n.e(7898),
             n.e(4680),
             n.e(3038),
-            n.e(40),
+            n.e(2420),
           ]).then(n.bind(n, 63543))
         ),
         ue = s.lazy(() =>
@@ -11965,9 +11973,7 @@
           )
         ),
         he = s.lazy(() =>
-          Promise.all([n.e(5354), n.e(8049), n.e(5666), n.e(1918)]).then(
-            n.bind(n, 23879)
-          )
+          Promise.all([n.e(5354), n.e(8049), n.e(1918)]).then(n.bind(n, 23879))
         ),
         pe = s.lazy(() =>
           Promise.all([
@@ -11980,12 +11986,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -11993,6 +11997,7 @@
             n.e(1134),
             n.e(6661),
             n.e(9332),
+            n.e(9211),
             n.e(3207),
           ]).then(n.bind(n, 53881))
         ),
@@ -12019,12 +12024,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12036,6 +12039,8 @@
             n.e(6720),
             n.e(3238),
             n.e(1979),
+            n.e(2420),
+            n.e(9211),
             n.e(691),
             n.e(2136),
           ]).then(n.bind(n, 60693))
@@ -12054,12 +12059,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12071,6 +12074,8 @@
             n.e(6720),
             n.e(3238),
             n.e(1979),
+            n.e(2420),
+            n.e(9211),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 66480))
@@ -12089,12 +12094,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12106,43 +12109,11 @@
             n.e(6720),
             n.e(3238),
             n.e(1979),
+            n.e(2420),
+            n.e(9211),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 52008))
-        ),
-        we = s.lazy(() =>
-          Promise.all([
-            n.e(3349),
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
-            n.e(9177),
-            n.e(3661),
-            n.e(5354),
-            n.e(7319),
-            n.e(5903),
-            n.e(6601),
-            n.e(701),
-            n.e(2509),
-            n.e(8049),
-            n.e(4233),
-            n.e(2823),
-            n.e(5666),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
-            n.e(6720),
-            n.e(3238),
-            n.e(1979),
-            n.e(691),
-            n.e(680),
-          ]).then(n.bind(n, 41135))
         ),
         Se = s.lazy(() =>
           Promise.all([
@@ -12157,12 +12128,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12174,6 +12143,42 @@
             n.e(6720),
             n.e(3238),
             n.e(1979),
+            n.e(2420),
+            n.e(9211),
+            n.e(691),
+            n.e(680),
+          ]).then(n.bind(n, 41135))
+        ),
+        we = s.lazy(() =>
+          Promise.all([
+            n.e(3349),
+            n.e(8065),
+            n.e(8103),
+            n.e(5633),
+            n.e(8535),
+            n.e(9177),
+            n.e(3661),
+            n.e(5354),
+            n.e(7319),
+            n.e(5903),
+            n.e(6601),
+            n.e(8049),
+            n.e(2509),
+            n.e(4233),
+            n.e(2823),
+            n.e(7898),
+            n.e(4680),
+            n.e(8626),
+            n.e(3038),
+            n.e(1134),
+            n.e(6661),
+            n.e(4466),
+            n.e(9332),
+            n.e(6720),
+            n.e(3238),
+            n.e(1979),
+            n.e(2420),
+            n.e(9211),
             n.e(691),
             n.e(680),
           ]).then(n.bind(n, 31970))
@@ -12198,12 +12203,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12226,12 +12229,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12253,12 +12254,10 @@
             n.e(7319),
             n.e(5903),
             n.e(6601),
-            n.e(701),
-            n.e(2509),
             n.e(8049),
+            n.e(2509),
             n.e(4233),
             n.e(2823),
-            n.e(5666),
             n.e(7898),
             n.e(4680),
             n.e(8626),
@@ -12385,7 +12384,7 @@
                         return s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: `sale_${t}`,
                                 promotionName: `sale_${t}`,
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12414,7 +12413,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key:
                                   "salecreator_" +
                                   e.match.params.creatorPageName +
@@ -12434,7 +12433,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key:
                                   "subscription_plan_" +
                                   e.match.params.salePageName,
@@ -12451,7 +12450,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "sale_remoteplaylanding",
                                 promotionName: "remoteplaylanding",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12465,7 +12464,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "sale_together",
                                 promotionName: "sale_together",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12479,7 +12478,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "sale_vrhardware",
                                 promotionName: "vrhardware",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12493,7 +12492,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "sale_steamdeck",
                                 promotionName: "steamdeck",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12507,7 +12506,7 @@
                         s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "sale_steamdeckdock",
                                 promotionName: "steamdeckdock",
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12607,7 +12606,7 @@
                         return s.createElement(C, {
                           config: {
                             "sale-display": () =>
-                              s.createElement(we, {
+                              s.createElement(Se, {
                                 key: "contenthub_" + t,
                                 promotionName: "contenthub_" + t,
                                 language: (0, _.jM)(l.De.LANGUAGE),
@@ -12618,7 +12617,7 @@
                     }),
                     s.createElement(p.AW, {
                       path: m.Z.Categories(),
-                      render: (e) => s.createElement(Se, null),
+                      render: (e) => s.createElement(we, null),
                     }),
                     s.createElement(p.AW, {
                       path: m.Z.AccountPreferences(),
@@ -12661,14 +12660,14 @@
           s.createElement(
             J,
             null,
-            s.createElement(w.Y0, { bRenderOverlayAtRoot: !0 }, t)
+            s.createElement(S.Y0, { bRenderOverlayAtRoot: !0 }, t)
           )
         );
       }
       var Be = n(65902),
         Le = n(75362);
       n(69491);
-      S.Dj(function () {
+      w.Dj(function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
           (0, l.Ek)("application_config").userConfig ||
             (yield (0, l.x)(o(), l.De.STORE_BASE_URL + "actions/", {
