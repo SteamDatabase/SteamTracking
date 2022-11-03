@@ -1,6 +1,7 @@
 
-@media screen and ( min-width: 501px) and ( max-width: 910px ) {
 
+@media screen and (' . TABLET_RESPONSIVE_CSS_MINWIDTH . ') and (' . RESPONSIVE_CSS_MAXWIDTH . ' )
+{
 	/* Make the age gate drop-downs readable on tablet screens */
 	html.responsive #app_agegate select {
 		appearance: none;
@@ -16,7 +17,24 @@
 	html.responsive #app_agegate .agegate_btn_ctn span {
 		font-size: 16px;
 	}
+
 }
+	/* Make the age gate drop-downs readable on tablet screens */
+	html.responsive.rn_mobile_app #app_agegate select {
+		appearance: none;
+		-webkit-appearance: none;
+		background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
+		background-repeat: no-repeat;
+		background-position: right;
+		padding-right: 30px;
+		font-size: 16px;
+		height: 30px;
+		padding-left: 15px;
+	}
+	html.responsive.rn_mobile_app #app_agegate .agegate_btn_ctn span {
+		font-size: 16px;
+	}
+
 
 @media screen and (max-width: 500px) {
 	html.responsive div, html.responsive span {
