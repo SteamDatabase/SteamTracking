@@ -958,7 +958,7 @@ ${VIDEO_URL}international2020/bp_aegis_header2.webm
 ${VIDEO_URL}international2022/aegis_loop.mp4
 ${VIDEO_URL}international2022/aegis_loop.webm
 ${VIDEO_URL}international2022/diretide/diretide_snow_loop.mp4
-${VIDEO_URL}international2022/diretide/diretide_snow_loop.webm
+${VIDEO_URL}international2022/diretide/diretide_snow_loop2.webm
 ${VIDEO_URL}international2022/misc/shader.mp4
 ${VIDEO_URL}international2022/misc/shader.webm
 ${VIDEO_URL}international2022/misc/versus_screen.mp4

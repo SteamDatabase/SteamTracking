@@ -12328,7 +12328,7 @@
                           type: "video/webm",
                           src:
                             h.Y.VIDEO_URL +
-                            "international2022/diretide/diretide_snow_loop.webm",
+                            "international2022/diretide/diretide_snow_loop2.webm",
                         }),
                       o.createElement("source", {
                         type: "video/mp4",

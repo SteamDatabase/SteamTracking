@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7634749";
+var CLSTAMP = "7639056";
 (() => {
   var e,
     t,
@@ -6870,6 +6870,7 @@ var CLSTAMP = "7634749";
             GAMEPADUI_WINDOWED: !1,
             DECK_DISPLAY_MODE: !1,
             ON_DECK: !1,
+            IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
             IN_LOGIN_REFRESH: !1,
           },
@@ -6929,9 +6930,9 @@ var CLSTAMP = "7634749";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 2 2022 : 14:25:55",
-                    BUILD_TIME_UTC: "Nov 2 2022 : 21:25:55",
-                    BUILD_RTIME_UTC: 1667424355,
+                    BUILD_TIME_LOCAL: "Nov 3 2022 : 13:30:36",
+                    BUILD_TIME_UTC: "Nov 3 2022 : 20:30:36",
+                    BUILD_RTIME_UTC: 1667507436,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
