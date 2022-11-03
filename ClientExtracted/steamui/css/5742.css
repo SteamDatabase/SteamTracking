@@ -11407,6 +11407,16 @@ A:active {
   height: 100%;
   text-align: center;
 }
+.loginpanel_LoginStatusContainer_1TR3C .loginpanel_Progress_191qx {
+  margin-top: 20px;
+  width: 35%;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.loginpanel_LoginStatusContainer_1TR3C
+  .loginpanel_Progress_191qx.loginpanel_Visible_1RZtA {
+  opacity: 1;
+}
 .loginpanel_LoginError_uRCcu {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;

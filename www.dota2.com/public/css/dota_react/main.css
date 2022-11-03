@@ -10352,7 +10352,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpimmortalcarouselti11_TextColorYellowGradient_1n90y {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
@@ -10368,6 +10368,13 @@ a {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
+.bpimmortalcarouselti11_TextColorPurpleGradient_2iZzN {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
 .bpimmortalcarouselti11_TextColorGreenGradient_3PHdv {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
@@ -10376,11 +10383,11 @@ a {
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bpimmortalcarouselti11_TextColorBlueGradient_yO1WP {
-  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+  filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bpimmortalcarouselti11_TextColorPhantomGradient_2HX_g {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
@@ -10390,11 +10397,11 @@ a {
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bpimmortalcarouselti11_TextColorBlueShadowGradient_1jntG {
-  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpimmortalcarouselti11_TextColorGoldGradient_1Ayvq {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
@@ -11395,7 +11402,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bprivervialcarousel_TextColorYellowGradient_1k346 {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
@@ -11411,6 +11418,13 @@ a {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
+.bprivervialcarousel_TextColorPurpleGradient_2z-th {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
 .bprivervialcarousel_TextColorGreenGradient_6_dzx {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
@@ -11419,11 +11433,11 @@ a {
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bprivervialcarousel_TextColorBlueGradient_1iq7d {
-  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+  filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bprivervialcarousel_TextColorPhantomGradient_1wS4C {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
@@ -11433,11 +11447,11 @@ a {
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bprivervialcarousel_TextColorBlueShadowGradient_1PaT2 {
-  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bprivervialcarousel_TextColorGoldGradient_1ZW8m {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
@@ -12312,7 +12326,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpcountdownti11_TextColorYellowGradient_1jnFa {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
@@ -12328,6 +12342,13 @@ a {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
+.bpcountdownti11_TextColorPurpleGradient_3siPE {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
 .bpcountdownti11_TextColorGreenGradient_WsI4_ {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
@@ -12336,11 +12357,11 @@ a {
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .bpcountdownti11_TextColorBlueGradient_6zMtl {
-  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+  filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .bpcountdownti11_TextColorPhantomGradient_7RVUu {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
@@ -12350,11 +12371,11 @@ a {
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .bpcountdownti11_TextColorBlueShadowGradient_1IbTD {
-  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .bpcountdownti11_TextColorGoldGradient_gNktw {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
@@ -14780,7 +14801,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .battlepasspageinternational2022_TextColorYellowGradient_Fm6A9 {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
@@ -14796,6 +14817,13 @@ a {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
+.battlepasspageinternational2022_TextColorPurpleGradient_2kPSZ {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
 .battlepasspageinternational2022_TextColorGreenGradient_BprGh {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
@@ -14804,11 +14832,11 @@ a {
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .battlepasspageinternational2022_TextColorBlueGradient_1LBz6 {
-  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+  filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .battlepasspageinternational2022_TextColorPhantomGradient_20-8v {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
@@ -14818,11 +14846,11 @@ a {
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .battlepasspageinternational2022_TextColorBlueShadowGradient_dOSaK {
-  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .battlepasspageinternational2022_TextColorGoldGradient_FluGY {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
@@ -14866,7 +14894,9 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa {
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14875,68 +14905,124 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_Title_1edha {
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPLogo_3mRGg {
+  width: 100%;
+  max-width: 500px;
   margin: 0px auto;
   margin-top: max(31vw, 410px);
-  width: 60%;
-  max-width: 500px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB {
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
-  .battlepasspageinternational2022_BPPurchaseBody_3iwtB {
-  margin-top: 1.25em;
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_BPDescription_3jSsW {
+  width: 100%;
+  height: 100%;
   max-width: 790px;
-  color: #ffffffb6;
+  margin-top: 20px;
   font-size: 16;
   font-size: clamp(16px, -0.6382978723vw + 28.2553191489px, 22px);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
-  .battlepasspageinternational2022_TitleDates_2wX5t {
-  font-size: 18;
-  font-size: clamp(18px, -0.6382978723vw + 30.2553191489px, 24px);
-  margin-top: 2em;
-  margin-bottom: 2em;
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  z-index: 99;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 980px) {
-  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_TopHeader_X_YpI
-    .battlepasspageinternational2022_TitleAndDates_2KDAa
-    .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
-    .battlepasspageinternational2022_TitleDates_2wX5t {
-    white-space: normal;
-  }
+  text-align: center;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
-  .battlepasspageinternational2022_TitleDates_2wX5t
-  .battlepasspageinternational2022_TitleLeftDates_2rAot {
-  margin-right: 1.5em;
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_TitleAndDates_2KDAa
-  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
-  .battlepasspageinternational2022_TitleDates_2wX5t
-  .battlepasspageinternational2022_TitleRightDates_31YRH {
-  margin-left: 1.5em;
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnLabel_mYgar {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_TopHeader_X_YpI
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnDates_1fsIW {
+  font-size: 15px;
+  margin-top: 2px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_TopHeader_X_YpI
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_TopHeader_X_YpI
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnLabel_cdJPd {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_TopHeader_X_YpI
+  .battlepasspageinternational2022_LogoAndDescContainer_1lmGD
+  .battlepasspageinternational2022_BPDescriptionCont_JS09F
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnDates_2I5h9 {
+  font-size: 15px;
+  margin-top: 2px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TopHeader_X_YpI
@@ -14987,10 +15073,10 @@ a {
   .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
   .battlepasspageinternational2022_BuyBattlepassSection_3KG1s {
   z-index: 1;
-  margin-top: 1.25em;
-  margin-bottom: 40px;
   width: 100%;
   max-width: 1500px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15005,22 +15091,6 @@ a {
     width: 60%;
     min-width: 500px;
     margin-top: 0;
-  }
-}
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_TopHeader_X_YpI
-  .battlepasspageinternational2022_BuyBattlePassContainerBottom_1_MN2 {
-  margin-top: 0;
-  border-top: 2px solid #952e46;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position-x: center;
-}
-@media (max-width: 1200px) {
-  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_TopHeader_X_YpI
-    .battlepasspageinternational2022_BuyBattlePassContainerBottom_1_MN2 {
-    background-size: auto 100%;
   }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -15039,7 +15109,7 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_InternationalCountdownContainer_dRVD5
   .battlepasspageinternational2022_InternationalCountdown_HgBr_ {
-  margin-top: 1.5em;
+  margin-top: 3em;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_InternationalCountdownContainer_dRVD5
@@ -15149,6 +15219,142 @@ a {
   transform: translateY(-2px);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 107px;
+  position: fixed;
+  bottom: 40px;
+  margin-top: 0;
+  z-index: 101;
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh {
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+  border: 3px solid #c14c4d;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ea6a5340, #952e4640);
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnLabel_mYgar {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnDates_1fsIW {
+  font-size: 15px;
+  margin-top: 2px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0px 0px 10px #e1261cb7);
+  box-shadow: 0px 4px 6px #00000063;
+  background: linear-gradient(to right, #ea6a5359, #952e4659);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+  border: 3px solid #3195ad;
+  border-radius: 10px;
+  background: linear-gradient(to right, #34ccc340, #2e579540);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnLabel_cdJPd {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnDates_2I5h9 {
+  font-size: 15px;
+  margin-top: 2px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_BPNavBarFixed_3GcdW
+  .battlepasspageinternational2022_BPNavBarSubNavContainer_3r_WD
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0px 0px 10px #008ad8b7);
+  box-shadow: 0px 4px 6px #00000063;
+  background: linear-gradient(to right, #34ccc359, #2e579559);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PrizePoolContainer_1efaU {
   z-index: 1;
   display: grid;
@@ -15219,6 +15425,8 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_StickersHeight_n299E {
   border-top: 2px solid #952e46;
+  height: 95vw;
+  max-height: 1125px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_StickersHeight_n299E
@@ -16294,6 +16502,256 @@ a {
   border-image-slice: 1;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalPersonaHeight_2U0dA {
+  width: 100%;
+  height: 55vw;
+  min-height: 550px;
+  border-top: 2px solid #00a3d7;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalPersonaHeight_2U0dA
+  .battlepasspageinternational2022_CrystalPersonaCont_1dY0J {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalPersonaHeight_2U0dA
+  .battlepasspageinternational2022_CrystalPersonaCont_1dY0J
+  .battlepasspageinternational2022_CrystalLogoCont_3-bj6 {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalPersonaHeight_2U0dA
+  .battlepasspageinternational2022_CrystalPersonaCont_1dY0J
+  .battlepasspageinternational2022_CrystalLogoCont_3-bj6
+  .battlepasspageinternational2022_CrystalLogo_30MEo {
+  width: 800px;
+  height: auto;
+  filter: drop-shadow(0px 0px 10px #0091ffaf);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L {
+  width: 100%;
+  height: 1000px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L
+  .battlepasspageinternational2022_CrystalLoreCont_1_q7F {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L
+  .battlepasspageinternational2022_CrystalLoreCont_1_q7F
+  .battlepasspageinternational2022_CrystalShowcaseVideo_wXncu {
+  width: 100%;
+  max-width: 1000px;
+  z-index: 1;
+  margin: 40px 0px 0px 0px;
+  margin-top: 3em;
+  border: 2px solid;
+  border-image: linear-gradient(to top, #008deb, #e573e9);
+  border-image-slice: 1;
+  filter: drop-shadow(0px 0px 20px #000);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L
+  .battlepasspageinternational2022_CrystalLoreCont_1_q7F
+  .battlepasspageinternational2022_CrystalLoreText_3tcGi {
+  width: 100%;
+  max-width: 1000px;
+  z-index: 3;
+  padding: 20px;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L
+  .battlepasspageinternational2022_CrystalLoreCont_1_q7F
+  .battlepasspageinternational2022_CrystalLoreText_3tcGi
+  .battlepasspageinternational2022_CrystalLoreSubtitle_1zvsp {
+  margin-top: 0.5em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalLoreHeight_1198L
+  .battlepasspageinternational2022_CrystalLoreCont_1_q7F
+  .battlepasspageinternational2022_CrystalLoreText_3tcGi
+  .battlepasspageinternational2022_CrystalLoreDesc_2-Tug {
+  margin-top: 1em;
+  max-width: 750px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl {
+  width: 100%;
+  height: 1425px;
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl {
+    height: 1730px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW {
+  padding: 0px 10vw;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 900px;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+    .battlepasspageinternational2022_CrystalBreakdown_45BzW {
+    padding: 0px 20px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownVideo_2Jd7p {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: clamp(-550px, 35vw - 900px, 0px);
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+    .battlepasspageinternational2022_CrystalBreakdown_45BzW
+    .battlepasspageinternational2022_CrystalBreakdownVideo_2Jd7p {
+    left: -650px;
+  }
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+    .battlepasspageinternational2022_CrystalBreakdown_45BzW
+    .battlepasspageinternational2022_CrystalBreakdownVideo_2Jd7p {
+    left: -750px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb {
+  margin-left: 60%;
+  padding: 10em 0px;
+  max-width: 700px;
+  z-index: 3;
+  position: relative;
+  text-align: left;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalBreakdownHead_22FVu {
+  margin-bottom: 1em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalFeatureTitle_3QhBN {
+  margin-bottom: 0.3em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalFeatureDesc_B8xZK {
+  text-align: left;
+  margin-bottom: 2em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalFeatureImgs_3zag8 {
+  max-width: 488px;
+  width: 100%;
+  margin-bottom: 20px;
+  filter: drop-shadow(2px 3px 5px #000000);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalWallpapersContainer_2YeRu {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+    .battlepasspageinternational2022_CrystalBreakdown_45BzW
+    .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+    .battlepasspageinternational2022_CrystalWallpapersContainer_2YeRu {
+    flex-wrap: wrap;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalWallpapersContainer_2YeRu
+  .battlepasspageinternational2022_CrystalWallpaperLink_2PR3f {
+  height: 130px;
+  margin-right: 15px;
+  margin-top: 15px;
+  background-color: #222;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  border: 2px solid;
+  border-image: linear-gradient(to top, #008ddf, #2ab1ff);
+  border-image-slice: 1;
+  filter: drop-shadow(0px 1px 15px #000);
+  transition: 0.15s;
+  transition-property: all;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CrystalBreakdownHeight_3f3Tl
+  .battlepasspageinternational2022_CrystalBreakdown_45BzW
+  .battlepasspageinternational2022_CrystalBreakdownText_3S_Tb
+  .battlepasspageinternational2022_CrystalWallpapersContainer_2YeRu
+  .battlepasspageinternational2022_CrystalWallpaperLink_2PR3f:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0px 0px 10px #005bd1c2);
+  border: 2px solid;
+  border-image: linear-gradient(to top, #5cc3ff, #d794f1);
+  border-image-slice: 1;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_WallpapersContainer_2Klm_ {
   display: flex;
   flex-direction: row;
@@ -16521,50 +16979,90 @@ a {
   filter: drop-shadow(2px 3px 5px #000000);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeHeight_1VOJN {
-  height: 45vw;
-  min-height: 750px;
-}
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK {
+  .battlepasspageinternational2022_DiretideCont_1AmF8 {
   height: 100%;
   max-width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0d0f13;
+  background-color: #030915;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeLogo_2e12a {
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideSnowLoop_g0Uxq {
+  width: 100%;
+  height: auto;
+  margin-top: -250px;
+  position: absolute;
+  top: -150px;
+  background-position-y: 50%;
+  background-position-x: 50%;
+  background-color: #030915;
+  background-repeat: no-repeat;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideSnowLoop_g0Uxq
+  video {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideLogoCont_1BNzZ {
   width: 45%;
   min-width: 750px;
+  margin-top: 150px;
   z-index: 1;
 }
 @media (max-width: 1200px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-    .battlepasspageinternational2022_SpecialModeLogo_2e12a {
+    .battlepasspageinternational2022_DiretideCont_1AmF8
+    .battlepasspageinternational2022_DiretideLogoCont_1BNzZ {
     padding-bottom: 60px;
   }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeLogo_2e12a
-  .battlepasspageinternational2022_SpecialModeLogoImg_3fV9t {
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideLogoCont_1BNzZ
+  .battlepasspageinternational2022_DiretideLogo_Yj1X5 {
   max-width: 100%;
   max-height: 100%;
+  margin: 0px auto;
   filter: drop-shadow(0px 3px 5px #000);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeTextContainer_1lyFH {
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideLogoCont_1BNzZ
+  .battlepasspageinternational2022_Part2BPLogo_17Hqj {
   width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0px auto;
+  filter: drop-shadow(0px 3px 5px #000);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideNowLive_TONsV {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideTextCont_2D2wM {
+  width: 100%;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16573,71 +17071,607 @@ a {
   z-index: 3;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeTextContainer_1lyFH
-  .battlepasspageinternational2022_SpecialModeTitle_1HYoX {
-  margin-top: 1em;
-}
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeTextContainer_1lyFH
-  .battlepasspageinternational2022_SpecialModeSubtitle_3eUWL {
-  margin-top: 0.3em;
-}
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_SpecialModeContainer_3oXIK
-  .battlepasspageinternational2022_SpecialModeTextContainer_1lyFH
-  .battlepasspageinternational2022_SpecialModeDesc_2_kjO {
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_DiretideTextCont_2D2wM
+  .battlepasspageinternational2022_DiretideDesc_aPGX- {
   margin-top: 1em;
   max-width: 750px;
   text-shadow: 0px 2px 3px #000, 0px 0px 5px #000;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopHeight_1C5CL {
-  height: 55vw;
-  min-height: 900px;
-  max-height: 1200px;
-  border-top: 2px solid #5cadd8;
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-top: 10px;
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf {
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh {
   width: 100%;
-  height: 100%;
-  max-width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnLabel_mYgar {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkLeft_3zkJh
+  .battlepasspageinternational2022_LeftBtnDates_1fsIW {
+  font-size: 15px;
+  margin-top: 2px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px 30px;
+  font-family: "Radiance", sans-serif;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnLabel_cdJPd {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_JumpLinkButtons_tlnLI
+  .battlepasspageinternational2022_JumpLinkRight_28KSd
+  .battlepasspageinternational2022_RightBtnDates_2I5h9 {
+  font-size: 15px;
+  margin-top: 2px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BattlePassNonBundle_N44RM {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #171a22;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
+  z-index: 99;
+  margin-top: 10px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf
-  .battlepasspageinternational2022_CandyShopLogo_-Ycuf {
-  transform: translateY(-40px);
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU {
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-@media (max-width: 1200px) {
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU
+  .battlepasspageinternational2022_NonBundleTitle_fB07n {
+  margin: 10px 0px 0px 0px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BattlePassNonBundle_N44RM
+  .battlepasspageinternational2022_NonBundleTextCont_34eAU
+  .battlepasspageinternational2022_NonBundleDesc_tsQkx {
+  margin: 20px 0px 0px 0px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB {
+  text-align: center;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
+  .battlepasspageinternational2022_BPPurchaseHeader_2kbeW {
+  margin-top: 2em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
+  .battlepasspageinternational2022_BPPurchaseTitle_9yBVU {
+  margin-top: 50px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+  .battlepasspageinternational2022_BPPurchaseDescriptionContainer_1vBqB
+  .battlepasspageinternational2022_BPPurchaseBody_3iwtB {
+  margin-top: 1.25em;
+  max-width: 790px;
+  color: #ffffffb6;
+  text-align: center;
+  font-size: 16px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_DiretideCont_1AmF8
+  .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+  .battlepasspageinternational2022_BuyBattlepassSection_3KG1s {
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 980px) {
   .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-    .battlepasspageinternational2022_CandyShopContainer_39Lzf
-    .battlepasspageinternational2022_CandyShopLogo_-Ycuf {
-    transform: translateY(0px);
+    .battlepasspageinternational2022_DiretideCont_1AmF8
+    .battlepasspageinternational2022_BuyBattlePassContainer_H4OZR
+    .battlepasspageinternational2022_BuyBattlepassSection_3KG1s {
+    width: 60%;
+    min-width: 500px;
+    margin-top: 0;
   }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf
-  .battlepasspageinternational2022_CandyShopLogo_-Ycuf
-  .battlepasspageinternational2022_CandyShopLogoImg_17c6w {
-  max-width: 1000px;
+  .battlepasspageinternational2022_HowToPlayHeight_1OKLS {
+  height: 2100px;
+  border-top: 2px solid #5cadd8;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayHeight_1OKLS {
+    height: 2500px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa {
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: repeat-y;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayTitleCont_2ovQc {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayTitleCont_2ovQc
+  .battlepasspageinternational2022_HowToPlaySmallHead_2v3f9 {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayTitleCont_2ovQc
+  .battlepasspageinternational2022_HowToPlayHead_2d2iw {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayTitleCont_2ovQc
+  .battlepasspageinternational2022_HowToPlayHeading_DVxEb {
+  width: 100%;
+  font-size: 35px;
+  text-transform: none;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayTitleCont_2ovQc
+  .battlepasspageinternational2022_HowToPlayDesc_3covx {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowOne_1y2hD,
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ {
+    flex-direction: column;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop {
+  width: 60%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+    .battlepasspageinternational2022_HowToPlayImgCont_lhjop,
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+    .battlepasspageinternational2022_HowToPlayImgCont_lhjop {
+    order: -1;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop
+  .battlepasspageinternational2022_HowToPlayImg_3nI4v,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop
+  .battlepasspageinternational2022_HowToPlayImg_3nI4v {
+  width: 800px;
   height: auto;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf
-  .battlepasspageinternational2022_CandyShopTextContainer_xKRAq {
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj {
+  width: 40%;
+  height: 100%;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj,
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj {
+    width: 70%;
+    padding-top: 20px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayTitle_1K4Ld,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayTitle_1K4Ld {
   width: 100%;
-  transform: translateY(-40px);
+  text-align: left;
+  font-size: 35px;
+  text-transform: none;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayTitle_1K4Ld,
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayTitle_1K4Ld {
+    text-align: center;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayBlurb_dRUox,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayBlurb_dRUox {
+  width: 100%;
+  margin-top: 3px;
+  text-align: left;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #caf2ff;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowOne_1y2hD
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayBlurb_dRUox,
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowThree_UVbZZ
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayBlurb_dRUox {
+    text-align: center;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowTwo_ludDM {
+    flex-direction: column;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop {
+  width: 60%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+    .battlepasspageinternational2022_HowToPlayImgCont_lhjop {
+    order: -1;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+  .battlepasspageinternational2022_HowToPlayImgCont_lhjop
+  .battlepasspageinternational2022_HowToPlayImg_3nI4v {
+  width: 800px;
+  height: auto;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj {
+  width: 40%;
+  height: 100%;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj {
+    width: 70%;
+    padding-top: 20px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayTitle_1K4Ld {
+  width: 100%;
+  text-align: left;
+  font-size: 35px;
+  text-transform: none;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayTitle_1K4Ld {
+    text-align: center;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_HowToPlayCont_cuqOa
+  .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+  .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+  .battlepasspageinternational2022_HowToPlayBlurb_dRUox {
+  width: 100%;
+  margin-top: 3px;
+  text-align: left;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #caf2ff;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_HowToPlayCont_cuqOa
+    .battlepasspageinternational2022_HowToPlayRowTwo_ludDM
+    .battlepasspageinternational2022_HowToPlayTextCont_OZgLj
+    .battlepasspageinternational2022_HowToPlayBlurb_dRUox {
+    text-align: center;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksHeight_3PKW3 {
+  height: 55vw;
+  min-height: 1000px;
+  max-height: 1100px;
+  border-top: 2px solid #00a3d7;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksHeight_3PKW3 {
+    height: 1250px;
+    min-height: 1250px;
+    max-height: 1250px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksTitleCont_3YR6C {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksTitleCont_3YR6C
+  .battlepasspageinternational2022_CandyWorksHead_DYZwr {
+  margin-top: 10px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_ {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+    .battlepasspageinternational2022_CandyWorksContent_1WRd_ {
+    flex-direction: column;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksImgCont_1c0Ml {
+  width: 100%;
+  z-index: 3;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+    .battlepasspageinternational2022_CandyWorksContent_1WRd_
+    .battlepasspageinternational2022_CandyWorksImgCont_1c0Ml {
+    transform: translateY(0px);
+    width: 90%;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksImgCont_1c0Ml
+  .battlepasspageinternational2022_CandyWorksImg_2ViD2 {
+  max-width: 950px;
+  height: auto;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm {
+  width: 100%;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16645,28 +17679,457 @@ a {
   text-align: center;
   z-index: 3;
 }
-.battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf
-  .battlepasspageinternational2022_CandyShopTextContainer_xKRAq
-  .battlepasspageinternational2022_CandyShopSubtitle_2eWwq {
-  margin-top: 0.3em;
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+    .battlepasspageinternational2022_CandyWorksContent_1WRd_
+    .battlepasspageinternational2022_CandyWorksTextCont_25Cnm {
+    text-align: center;
+    transform: none;
+    width: 90%;
+    order: -1;
+  }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
-  .battlepasspageinternational2022_CandyShopContainer_39Lzf
-  .battlepasspageinternational2022_CandyShopTextContainer_xKRAq
-  .battlepasspageinternational2022_CandyShopDesc_2Gj6u {
-  margin-top: 1em;
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksIntro_qeL-K {
+  width: 100%;
+  color: #00a3d7;
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksDesc_3sZA4,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksDesc01_2r28q,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksDesc02_1aqIP,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksDesc03_3NH-g,
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksContainer_2O6ZV
+  .battlepasspageinternational2022_CandyWorksContent_1WRd_
+  .battlepasspageinternational2022_CandyWorksTextCont_25Cnm
+  .battlepasspageinternational2022_CandyWorksDesc04_2rCPb {
+  width: 100%;
+  margin-top: 30px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #000;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyWorksLootTextCont_ucZD4 {
+  width: 100%;
   max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyWorksLootTextCont_ucZD4
+  .battlepasspageinternational2022_CandyWorksLootTitle_tFRtl {
+  width: 100%;
+  font-family: "Reaver", serif;
+  font-size: 35px;
+  text-transform: none;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyWorksLootTextCont_ucZD4
+  .battlepasspageinternational2022_CandyWorksLootSubTitle_1VJS2 {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #caf2ff;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+  .battlepasspageinternational2022_BattlePointsImgCont_3YgBy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_BattlePointsImgCont_3YgBy {
+    width: 25%;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+  .battlepasspageinternational2022_BattlePointsImgCont_3YgBy
+  .battlepasspageinternational2022_CWBattlePointsAmt_WGmAO {
+  position: absolute;
+  transform: translateY(60px);
+  font-size: 55px;
+  font-weight: 700;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+  .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+  .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+  .battlepasspageinternational2022_BattlePointsImgCont_3YgBy
+  .battlepasspageinternational2022_CWBattlePointsNote_3HIsg {
+  position: absolute;
+  transform: translateY(110px);
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_BattlePointsImgCont_3YgBy
+    img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_CandyWorksLinaImgCont_3-wTq {
+    width: 50%;
+  }
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_CandyWorksLinaImgCont_3-wTq
+    img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_CandyWorksCourierImgCont_2Lb4R {
+    width: 25%;
+  }
+}
+@media (max-width: 1600px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_CandyWorksLootHeight_ctJ3R
+    .battlepasspageinternational2022_CandyWorksLootCont_2KROq
+    .battlepasspageinternational2022_CandyworksLootImgCont_2PZiU
+    .battlepasspageinternational2022_CandyWorksCourierImgCont_2Lb4R
+    img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PurchaseLevelsBottomHeight_370ku {
+  border-top: 2px solid #952e46;
+  border-bottom: 2px solid #952e46;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PurchaseLevelsBottomCont_2Ei8h {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  z-index: 3;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PurchaseLevelsBottomCont_2Ei8h
+  .battlepasspageinternational2022_PurchaseLevelsTextCont_1b2tx {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PurchaseLevelsBottomCont_2Ei8h
+  .battlepasspageinternational2022_PurchaseLevelsTextCont_1b2tx
+  .battlepasspageinternational2022_PurchaseLevelsTitle_1WKKc {
+  width: 100%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_PurchaseLevelsBottomCont_2Ei8h
+  .battlepasspageinternational2022_PurchaseLevelsBottom_1jRr6 {
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_PurchaseLevelsBottomCont_2Ei8h
+    .battlepasspageinternational2022_PurchaseLevelsBottom_1jRr6 {
+    width: 60%;
+    min-width: 500px;
+    margin-top: 0;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst {
+  height: 930px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2 {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 100%;
+  border-top: 2px solid #00a3d7;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+  .battlepasspageinternational2022_ShaderEffectVideo_31K9h {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 5em;
+  z-index: 1;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #caf2ff, #00a3d7);
+  border-image-slice: 1;
+  box-shadow: 0px 5px 20px #000;
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+    .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+    .battlepasspageinternational2022_ShaderEffectVideo_31K9h {
+    margin-top: 0px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+  .battlepasspageinternational2022_ShaderEffectTextContainer_2Q8vY {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 3;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+    .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+    .battlepasspageinternational2022_ShaderEffectTextContainer_2Q8vY {
+    margin-bottom: 40px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+  .battlepasspageinternational2022_ShaderEffectTextContainer_2Q8vY
+  .battlepasspageinternational2022_ShaderEffectTitle_1dxKZ {
+  margin-top: 2em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+  .battlepasspageinternational2022_ShaderEffectTextContainer_2Q8vY
+  .battlepasspageinternational2022_ShaderEffectSubtitle_2LDFb {
+  margin-top: 0.5em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ShaderEffectHeight_1YHst
+  .battlepasspageinternational2022_ShaderEffectContainer_23AJ2
+  .battlepasspageinternational2022_ShaderEffectTextContainer_2Q8vY
+  .battlepasspageinternational2022_ShaderEffectDesc_8eRH7 {
+  margin-top: 1em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm {
+  height: 930px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  border-top: 2px solid #00a3d7;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD
+  .battlepasspageinternational2022_VersusScreenVideo_9zmJt {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 5em;
+  z-index: 1;
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #caf2ff, #00a3d7);
+  border-image-slice: 1;
+  box-shadow: 0px 5px 20px #000;
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+    .battlepasspageinternational2022_VersusScreenContainer_3otQD
+    .battlepasspageinternational2022_VersusScreenVideo_9zmJt {
+    margin-top: 0px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD
+  .battlepasspageinternational2022_VersusScreenTextContainer_igGsi {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  z-index: 3;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+    .battlepasspageinternational2022_VersusScreenContainer_3otQD
+    .battlepasspageinternational2022_VersusScreenTextContainer_igGsi {
+    margin-bottom: 40px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD
+  .battlepasspageinternational2022_VersusScreenTextContainer_igGsi
+  .battlepasspageinternational2022_VersusScreenTitle_3R-MZ {
+  margin-top: 2em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD
+  .battlepasspageinternational2022_VersusScreenTextContainer_igGsi
+  .battlepasspageinternational2022_VersusScreenSubtitle_2SRkt {
+  margin-top: 0.5em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_VersusScreenHeight_3F9sm
+  .battlepasspageinternational2022_VersusScreenContainer_3otQD
+  .battlepasspageinternational2022_VersusScreenTextContainer_igGsi
+  .battlepasspageinternational2022_VersusScreenDesc_39-QX {
+  margin-top: 1em;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PBPrestigeHeight_2hcZ_ {
   width: 100%;
   height: 650px;
-  border-top: 2px solid #952e46;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_PBPrestigeHeight_2hcZ_
   .battlepasspageinternational2022_PBPrestige_3eEet {
+  border-top: 2px solid #952e46;
   width: 100%;
   height: 100%;
   display: flex;
@@ -16807,6 +18270,10 @@ a {
   margin-top: 1em;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_TowersHeight_2dbk4 {
+  height: 930px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TowersHeight_2dbk4
   .battlepasspageinternational2022_TowersContainer_V5ud- {
   width: 100%;
@@ -16897,6 +18364,15 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_WardsCourierHeight_wYg4Z {
   border-top: 2px solid #952e46;
+  height: 75vw;
+  max-height: 1100px;
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_WardsCourierHeight_wYg4Z {
+    height: 2100px;
+    max-height: 2100px;
+  }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_WardsCourierHeight_wYg4Z
@@ -16994,6 +18470,9 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_RiverVialsHeight_RTOWK {
+  height: 95vw;
+  max-height: 1250px;
+  min-height: 1015px;
   border-top: 2px solid #952e46;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -17044,7 +18523,14 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_RewardMontageHeight_2VQzv {
+  height: 1950px;
   border-top: 2px solid #952e46;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_RewardMontageHeight_2VQzv {
+    height: 4350px;
+  }
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_RewardMontageHeight_2VQzv
@@ -17375,12 +18861,12 @@ a {
   margin-top: 2em;
   display: inline-block;
   text-shadow: none;
-  color: #cefcff;
+  color: #caf2ff;
   font-size: 18px;
   font-weight: 600;
-  background: linear-gradient(90deg, #77afce 0%, #2a748b 100%);
+  background: linear-gradient(90deg, #77afce 0%, #006586 100%);
   box-shadow: 0px 6px 10px #00000057;
-  border-top: 2px solid #cefcff;
+  border-top: 2px solid #caf2ff;
   letter-spacing: 1px;
   transition: 0.15s;
   transition-property: all;
@@ -17476,8 +18962,13 @@ a {
   transform: translateY(-20px);
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_ImmortalsHeight_3j3ge {
+  height: 68vw;
+  max-height: 1320px;
+  min-height: 1090px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Immortals_1lRo1 {
-  border-top: 2px solid #952e46;
   width: 100%;
   height: 100%;
   position: relative;
@@ -17508,6 +18999,8 @@ a {
   .battlepasspageinternational2022_RazorArcanaHeight_11aIM {
   height: 60vw;
   min-height: 550px;
+  border-top: 2px solid #00a3d7;
+  border-bottom: 2px solid #00a3d7;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_RazorArcana_336jL {
@@ -17756,7 +19249,10 @@ a {
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_TauntsHeight_3lYi0 {
-  border-top: 2px solid #952e46;
+  border-top: 2px solid #00a3d7;
+  height: 100vw;
+  max-height: 1225px;
+  min-height: 1000px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Taunts_2m-25 {
@@ -17811,7 +19307,7 @@ a {
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  border-right: 2px solid #ff8c78;
+  border-right: 2px solid #1f88ff3f;
   padding: 0px 20px 0px 0;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
@@ -17932,6 +19428,7 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_SpraysHeight_2N2cm {
   border-top: 2px solid #952e46;
+  height: 1000px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Sprays_2rXiR {
@@ -18032,6 +19529,9 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_ConsumablesHeight_38wPF {
   border-top: 2px solid #952e46;
+  height: 91vw;
+  max-height: 1215px;
+  min-height: 980px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Consumables_2VFlD {
@@ -18154,6 +19654,7 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_EmoticonsHeight_B3wo7 {
   border-top: 2px solid #952e46;
+  height: 590px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Emoticons_1P6E_ {
@@ -18223,6 +19724,9 @@ a {
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_ChatWheelHeight_3ynEo {
   border-top: 2px solid #952e46;
+  height: 95vw;
+  max-height: 1300px;
+  min-height: 1200px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_ChatWheel_2aFJ2 {
@@ -18475,6 +19979,102 @@ a {
   max-width: 600px;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk {
+  height: 64vw;
+  min-height: 1050px;
+  max-height: 1350px;
+  border-top: 2px solid #00a3d7;
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk {
+    height: 925px;
+    min-height: 925px;
+    max-height: 925px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0%;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerImgCont_2C3T7 {
+  width: 100%;
+  max-width: 1600px;
+  position: absolute;
+  margin-top: -150px;
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+    .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+    .battlepasspageinternational2022_AnnouncerImgCont_2C3T7 {
+    margin-top: -20px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerImgCont_2C3T7
+  .battlepasspageinternational2022_AnnouncerImg_1LEqD {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0px 2px 3px #000);
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerTextContainer_3hkLh {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  filter: drop-shadow(0px 1px 5px #000);
+}
+@media (max-width: 1200px) {
+  .battlepasspageinternational2022_BattlepassPage2022_2MNrt
+    .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+    .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+    .battlepasspageinternational2022_AnnouncerTextContainer_3hkLh {
+    bottom: 30px;
+  }
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerTextContainer_3hkLh
+  .battlepasspageinternational2022_AnnouncerTitle_3N9q0 {
+  margin-top: 1em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerTextContainer_3hkLh
+  .battlepasspageinternational2022_AnnouncerSubtitle_vHUpe {
+  margin-top: 0.5em;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
+  .battlepasspageinternational2022_AnnouncerPackHeight_1GwLk
+  .battlepasspageinternational2022_AnnouncerContainer_x0Uai
+  .battlepasspageinternational2022_AnnouncerTextContainer_3hkLh
+  .battlepasspageinternational2022_AnnouncerDesc_2Eq_a {
+  margin-top: 1em;
+  max-width: 600px;
+  padding-bottom: 20px;
+}
+.battlepasspageinternational2022_BattlepassPage2022_2MNrt
   .battlepasspageinternational2022_Part2BadgeContainer_37EQo {
   position: absolute;
   right: 3em;
@@ -18642,38 +20242,6 @@ a {
 .battlepasspageinternational2022_CarouselDots_2bJax
   .battlepasspageinternational2022_Dot_n0v2W.carousel__dot--selected {
   background-color: #c79123;
-}
-.battlepasspageinternational2022_BattlePassNonBundle_N44RM {
-  width: 100%;
-  margin: 30px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;
-  z-index: 99;
-}
-.battlepasspageinternational2022_BattlePassNonBundle_N44RM
-  .battlepasspageinternational2022_NonBundleTextCont_34eAU {
-  padding: 30px 0px 0px 0px;
-  width: 100%;
-  max-width: 750px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.battlepasspageinternational2022_BattlePassNonBundle_N44RM
-  .battlepasspageinternational2022_NonBundleTextCont_34eAU
-  .battlepasspageinternational2022_NonBundleTitle_fB07n {
-  margin: 10px 0px 0px 0px;
-}
-.battlepasspageinternational2022_BattlePassNonBundle_N44RM
-  .battlepasspageinternational2022_NonBundleTextCont_34eAU
-  .battlepasspageinternational2022_NonBundleDesc_tsQkx {
-  margin: 20px 0px 0px 0px;
 }
 .battlepasspageinternational2022_BattlePassIntro_3vawA {
   width: 100%;
@@ -18930,12 +20498,12 @@ a {
   margin-top: 0.2em;
 }
 .battlepasspageinternational2022_MajorHeaderDividerIce_3uZmG {
-  z-index: 10;
+  z-index: 99;
   width: 100%;
   height: 13vw;
   min-height: 175px;
   max-height: 215px;
-  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2022/sect_div_ice.jpg");
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2022/major_header_blue.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -19122,10 +20690,18 @@ a {
   background-size: 100% 100%;
   z-index: 10;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   .battlepasspageinternational2022_BattlepassSegment_E6PrO
     .battlepasspageinternational2022_LevelReward_2T43R {
-    top: 20px;
+    top: 30px;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 980px) {
+  .battlepasspageinternational2022_BattlepassSegment_E6PrO
+    .battlepasspageinternational2022_LevelReward_2T43R {
+    top: 15px;
     padding-left: 20px;
     padding-right: 30px;
   }
@@ -34728,7 +36304,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2022_TextColorYellowGradient_2tmeV {
   background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
@@ -34744,6 +36320,13 @@ a {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 5px #721fd1);
 }
+.international2022_TextColorPurpleGradient_1Xdaa {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
 .international2022_TextColorGreenGradient_IoO50 {
   background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
   background-clip: text;
@@ -34752,11 +36335,11 @@ a {
   filter: drop-shadow(0px 0px 5px #106618);
 }
 .international2022_TextColorBlueGradient_3Z6Ls {
-  background: -webkit-linear-gradient(#cefcff 10%, #2a748b 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 0px 5px #00a2ffaf);
+  filter: drop-shadow(0px 0px 5px #0089d8);
 }
 .international2022_TextColorPhantomGradient_2hc8W {
   background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
@@ -34766,11 +36349,11 @@ a {
   filter: drop-shadow(0px 0px 7px #debfff);
 }
 .international2022_TextColorBlueShadowGradient_2HkIu {
-  background: -webkit-linear-gradient(#fff 10%, #6eb2ff 90%);
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 3px #0000009c);
+  filter: drop-shadow(0px 2px 2px #000000);
 }
 .international2022_TextColorGoldGradient_1IAzS {
   background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
@@ -55421,359 +57004,6 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   height: 100vh;
   overflow-y: scroll;
 }
-.login_LoginDialog_1_Y5v {
-  background-color: #101114;
-  background-image: linear-gradient(to bottom, #101114, #1f2127);
-  min-height: 512px;
-  position: relative;
-}
-.login_AccountPasswordPanel_2E527
-  .DialogCheckbox_Container
-  .DialogToggle_Label {
-  color: #969696;
-  font-size: 12px;
-  line-height: 22px;
-  font-weight: 300;
-}
-.login_LoginPanelBackground_1C-nb {
-  position: absolute;
-  overflow: hidden;
-  pointer-events: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.login_LoginPanelBackground_1C-nb .SVGIcon_SteamLogo {
-  pointer-events: none;
-  position: absolute;
-  bottom: -128px;
-  left: -64px;
-  opacity: 0.02;
-  width: 800px;
-  height: 800px;
-  max-width: 500px;
-  max-height: 500px;
-}
-.login_LoginPanelContent_2XI0P {
-  padding: 32px;
-}
-.login_ErrorMessage_21UKT {
-  user-select: none;
-  color: #ff9696;
-  font-size: 12px;
-  margin: 0px;
-}
-.login_AccountPasswordForm_3Xvha {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24px;
-}
-.login_AccountPasswordForm_3Xvha .DialogInputLabelGroup {
-  margin-bottom: 16px;
-}
-.login_AccountPasswordForm_3Xvha .DialogTextInputBase {
-  font-size: 24px;
-  height: 24px;
-  width: 100%;
-  max-width: 398px;
-  color: #bfc6d4;
-  box-sizing: content-box;
-  background: #32353c;
-}
-@media screen and (max-width: 700px) {
-  .login_AccountPasswordForm_3Xvha .DialogTextInputBase {
-    font-size: 18px;
-    height: 20px;
-    width: 70vw;
-  }
-}
-.login_AuthenticationPanel_3Qiil
-  .login_AccountPasswordForm_3Xvha
-  .DialogTextInputBase {
-  text-transform: uppercase;
-}
-.login_AccountPasswordForm_3Xvha .DialogTextInputBase:hover {
-  background: #3a3e46;
-}
-.login_AccountPasswordForm_3Xvha .DialogTextInputBase:focus {
-  background: #464a53;
-}
-.login_AccountPasswordForm_3Xvha
-  .login_AccountNameLabel_3cfTI.login_MedName_xteP3 {
-  font-size: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.login_AccountPasswordForm_3Xvha
-  .login_AccountNameLabel_3cfTI.login_LargeName_FzTck {
-  font-size: 14px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.login_AccountPasswordForm_3Xvha .login_PasswordDots_2WRxO {
-  font-size: 36px;
-  font-family: monospace;
-}
-.login_AccountPasswordForm_3Xvha .login_PasswordDots_2WRxO.login_MedPass_3-bHS {
-  font-size: 32px;
-}
-.login_AccountPasswordForm_3Xvha
-  .login_PasswordDots_2WRxO.login_LargePass_3zjrH {
-  font-size: 19px;
-}
-@media screen and (max-width: 700px) {
-  .login_AccountPasswordForm_3Xvha .login_PasswordDots_2WRxO,
-  .login_AccountPasswordForm_3Xvha
-    .login_PasswordDots_2WRxO.login_MedPass_3-bHS,
-  .login_AccountPasswordForm_3Xvha
-    .login_PasswordDots_2WRxO.login_LargePass_3zjrH {
-    font-size: 19px;
-  }
-}
-.login_AccountPasswordForm_3Xvha input:-webkit-autofill,
-.login_AccountPasswordForm_3Xvha input:-webkit-autofill:hover,
-.login_AccountPasswordForm_3Xvha
-  input:-webkit-autofill:focus
-  textarea:-webkit-autofill,
-.login_AccountPasswordForm_3Xvha
-  textarea:-webkit-autofill:hover
-  textarea:-webkit-autofill:focus,
-.login_AccountPasswordForm_3Xvha select:-webkit-autofill,
-.login_AccountPasswordForm_3Xvha select:-webkit-autofill:hover,
-.login_AccountPasswordForm_3Xvha select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #d3eaeb;
-  -webkit-box-shadow: 0 0 0px 100px #53523f inset;
-  box-shadow: 0 0 0px 100px #53523f inset;
-}
-.login_AccountPasswordForm_3Xvha .DialogButton.Primary {
-  height: 44px;
-  width: 50%;
-  align-self: flex-end;
-}
-.login_AccountFieldHeader_2oEX7 {
-  margin-top: 10px;
-}
-.login_PasswordFieldHeader_5-l63 {
-  margin-top: 10px;
-}
-.login_NeedHelpLink_3aEuj {
-  color: #969696;
-  margin: 10px 0px 20px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
-  transition: all 0.21s ease-in-out;
-}
-.login_NeedHelpLink_3aEuj.login_NeedHelpHighlight_7tANN {
-  color: #ff7300;
-  text-decoration-color: #8f5100;
-}
-.login_NeedHelpLink_3aEuj:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
-}
-.login_NeedHelpLink_3aEuj:visited {
-  color: #969696;
-}
-.login_CreateAccountLink_1Z8dj a {
-  color: #bfc6d4;
-  text-decoration: underline;
-  text-decoration-color: #4b4b4b;
-}
-.login_CreateAccountLink_1Z8dj a:visited {
-  color: #bfc6d4;
-}
-.login_CreateAccountLink_1Z8dj a:hover {
-  color: #fff;
-  text-decoration-color: #b6b6b6;
-}
-.login_LoginCreateSeperator_2CV0x {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 16px;
-  height: 24px;
-}
-.login_RefreshCaptchaText_wE-YA {
-  color: #67c1f5;
-  margin: 10px 0px 20px 0px;
-  font-size: 12px;
-  cursor: pointer;
-}
-.login_RefreshCaptchaText_wE-YA:visited {
-  color: #67c1f5;
-}
-.login_SigningInAccountName_1L9Va,
-.login_SigninTitle_7Rc9V {
-  user-select: none;
-  font-size: 28px;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #bfc6d4;
-  margin-top: 28px;
-  margin-bottom: 12px;
-}
-@media screen and (max-width: 700px) {
-  .login_SigningInAccountName_1L9Va,
-  .login_SigninTitle_7Rc9V {
-    margin-top: 0px;
-  }
-}
-.login_RememberMeCheck_1t51R {
-  margin-top: -8px;
-}
-.login_RememberMeCheck_1t51R._DialogLayout {
-  padding-left: 0px;
-}
-.login_RememberMeCheck_1t51R._DialogLayout .DialogCheckbox {
-  background: #32353c;
-}
-.login_RememberMeCheck_1t51R._DialogLayout:hover
-  > .DialogCheckbox:not(.Disabled),
-.login_RememberMeCheck_1t51R._DialogLayout:focus
-  > .DialogCheckbox:not(.Disabled) {
-  background: #3a3e46;
-}
-.login_SteamUpsellContainer_J4cId {
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.login_SteamUpsellContainer_J4cId div {
-  width: fit-content;
-  align-self: center;
-}
-.login_SteamUpsell_2GTkz {
-  color: #969696;
-  font-size: 12px;
-}
-.login_CaptchaContainer_3-gMp .login_CaptchaBlock_3NzFT {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid dotted;
-}
-.login_CaptchaContainer_3-gMp
-  .login_CaptchaBlock_3NzFT
-  .login_CaptchaImageAndInput_3FMuB {
-  display: flex;
-  flex-direction: column;
-}
-.login_CaptchaContainer_3-gMp
-  .login_CaptchaBlock_3NzFT
-  .login_ErrorMessage_21UKT {
-  position: relative;
-  padding-left: 16px;
-  margin: 0;
-}
-.login_CaptchaContainer_3-gMp .login_CaptchaImageBox_1dvuq {
-  border: 1px solid #000;
-  border-radius: 3px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  overflow: hidden;
-  width: 203px;
-  height: 37px;
-}
-.login_CaptchaContainer_3-gMp .login_CaptchaImage_fyMi9 {
-  margin-top: -2px;
-  margin-left: -2px;
-}
-.login_CaptchaContainer_3-gMp .login_CaptchaInput_2OjX3 {
-  text-transform: uppercase;
-  color: #6dc7fb;
-  letter-spacing: 10px;
-  max-width: 159px;
-  background-color: #2a3649;
-  padding: 6px 14px 6px 30px;
-  font-family: monospace;
-  font-size: 28px;
-  border: 1px solid #000;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top-width: 0px;
-  overflow: hidden;
-  box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.75) inset;
-}
-.login_CaptchaContainer_3-gMp .login_CaptchaInput_2OjX3:focus {
-  padding: 6px 14px 6px 30px;
-}
-.login_AuthenticationPanel_3Qiil .DialogLabel {
-  margin-top: 16px;
-  margin-bottom: 0px;
-}
-.login_AuthenticationPanel_3Qiil .DialogBodyText {
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-.login_AuthenticationPanel_3Qiil .DialogBodyText .SVGIcon_Caution {
-  width: 20px;
-  height: 20px;
-  margin-bottom: -5px;
-}
-.login_AuthenticationPanel_3Qiil
-  .DialogBodyText
-  .SVGIcon_Caution
-  .triangle
-  path {
-  fill: #bd6500;
-}
-.login_AuthenticationPanel_3Qiil .login_NeedHelpLink_3aEuj {
-  margin-top: 32px;
-  display: block;
-}
-.login_AuthenticatorInputcontainer_1oepR {
-  position: relative;
-  height: 180px;
-}
-.login_AuthenticatorInputcontainer_1oepR .SVGIcon_LargeMobilePhone {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 180px;
-  width: 90px;
-  filter: brightness(0.6);
-}
-.login_AuthenticatorInputcontainer_1oepR .SVGIcon_Envelope {
-  position: absolute;
-  top: -22px;
-  left: 0px;
-  height: 92px;
-  width: 92px;
-  filter: brightness(0.6);
-}
-.login_AuthenticatorInputcontainer_1oepR .login_AccountPasswordForm_3Xvha {
-  z-index: 2;
-  position: relative;
-  margin-left: 24px;
-  margin-bottom: 0px;
-  height: 100%;
-}
-.login_AuthenticatorInputcontainer_1oepR
-  .login_AccountPasswordForm_3Xvha
-  .DialogButton.Primary {
-  width: calc(50% + 12px);
-  position: absolute;
-  bottom: 0px;
-}
-.login_AuthenticatorInputcontainer_1oepR .DialogInputLabelGroup {
-  margin-top: 10px;
-}
-.login_SigningInAccountName_1L9Va {
-  text-transform: none;
-  color: #3ea5f1;
-  margin-top: -6px;
-  letter-spacing: 1px;
-}
-.login_Highlight_2Ef4C {
-  color: #dde1e4;
-  font-style: italic;
-}
-.login_LoginComplete_1sD7m {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .newlogindialog_Login_1sORI {
   position: relative;
 }
@@ -56469,7 +57699,7 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
 }
 .newlogindialog_Login_1sORI
   .newlogindialog_StandardLayout_23HHn.newlogindialog_Embedded_uif43 {
-  background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
+  background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
   padding: 40px 32px 15px 32px;
   width: inherit;
 }
@@ -56509,9 +57739,19 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   width: 153px;
 }
 .newlogindialog_Login_1sORI .newlogindialog_EmbeddedRoot_EKQN- {
-  background: linear-gradient(346.08deg, #212328 71.83%, #191a1e 95.99%);
+  background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
   padding: 34px 40px 15px 40px;
   box-sizing: border-box;
+  gap: 36px;
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_EmbeddedRoot_EKQN-.newlogindialog_InClient_2_z8K {
+  padding-top: 8px;
+}
+@media screen and (max-width: 796px) {
+  .newlogindialog_Login_1sORI .newlogindialog_EmbeddedRoot_EKQN- {
+    gap: 12px;
+  }
 }
 .newlogindialog_Login_1sORI .newlogindialog_EmbeddedRoot_EKQN-.IN_CLIENT {
   width: 630px;
@@ -56524,6 +57764,22 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   .newlogindialog_Login_1sORI
     .newlogindialog_EmbeddedRoot_EKQN-:not(.IN_CLIENT) {
     min-width: 0px;
+  }
+}
+.newlogindialog_Login_1sORI
+  .newlogindialog_EmbeddedRoot_EKQN-
+  .newlogindialog_Universe_u4K7l {
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  right: 118px;
+  top: 46px;
+}
+@media screen and (max-width: 796px) {
+  .newlogindialog_Login_1sORI
+    .newlogindialog_EmbeddedRoot_EKQN-
+    .newlogindialog_Universe_u4K7l {
+    display: none;
   }
 }
 .newlogindialog_Login_1sORI
@@ -56689,6 +57945,9 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #fff;
+}
+.centerPrimaryHeader .newlogindialog_PrimaryHeader_3Ze3S {
+  text-align: center;
 }
 .qrcode_QRBits_22VuG {
   display: grid;

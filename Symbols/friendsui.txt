@@ -51,6 +51,7 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
+ Plat_IsGamescope
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_MSTime64

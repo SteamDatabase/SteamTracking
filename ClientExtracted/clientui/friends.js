@@ -88321,7 +88321,10 @@ function TestLocalizeCalendarTime()
           GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
+          /** Whether we are running on the Steam Deck device (in gamepadui mode or not).  Can be emulated with -steamdeck. */
           ON_DECK: false,
+          /** Whether Gamescope is running (with gamepadui) or not */
+          IN_GAMESCOPE: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
         };
@@ -89931,4 +89934,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=4f9a12beb573608bde22
+//# sourceMappingURL=friends.js.map?contenthash=b792436ed47da44c2ca4

@@ -957,6 +957,12 @@ ${VIDEO_URL}international2020/bp_aegis_header.mp4
 ${VIDEO_URL}international2020/bp_aegis_header2.webm
 ${VIDEO_URL}international2022/aegis_loop.mp4
 ${VIDEO_URL}international2022/aegis_loop.webm
+${VIDEO_URL}international2022/diretide/diretide_snow_loop.mp4
+${VIDEO_URL}international2022/diretide/diretide_snow_loop.webm
+${VIDEO_URL}international2022/misc/shader.mp4
+${VIDEO_URL}international2022/misc/shader.webm
+${VIDEO_URL}international2022/misc/versus_screen.mp4
+${VIDEO_URL}international2022/misc/versus_screen.webm
 ${WEBAPI_BASE_URL}${}/${}/v000${}
 ${WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webApiToken}
