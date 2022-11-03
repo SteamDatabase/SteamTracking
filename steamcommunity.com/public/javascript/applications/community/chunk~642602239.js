@@ -5156,7 +5156,7 @@
           return -1 != this.vecTags.indexOf(e);
         }
         BIsOGGEvent() {
-          return 0 !== this.appid;
+          return Boolean(this.appid) && this.appid > 0;
         }
         BShowLibrarySpotlight() {
           return Boolean(this.jsondata.library_spotlight);
