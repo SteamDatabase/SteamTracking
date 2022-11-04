@@ -5665,9 +5665,10 @@
     },
     85121: (e, t, r) => {
       "use strict";
-      r.d(t, { k: () => i });
+      r.d(t, { k: () => n, m: () => i });
       r(22220), r(26273), r(21205), r(54698);
-      const i = "questdoor_";
+      const i = "terminal",
+        n = "questdoor_";
     },
     40252: (e, t, r) => {
       "use strict";
