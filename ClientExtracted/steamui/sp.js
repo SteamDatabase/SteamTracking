@@ -13108,8 +13108,9 @@
             () => ({ fnNavigateToSteamWeb: g, fnNavigateToExternalWeb: u }),
             [g, u]
           );
-        return l
-          ? Se.createPortal(
+        return !l || Fn.g4.IsGamepadUIActive
+          ? null
+          : Se.createPortal(
               i.createElement(
                 zn.E_.Provider,
                 { value: { IN_GAMEPADUI: !1 } },
@@ -13132,8 +13133,7 @@
                 )
               ),
               l
-            )
-          : null;
+            );
       }
       function wa(A) {
         const { cm: e, instance: t } = A,
@@ -27204,7 +27204,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? fg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1667507438),
+          d = parseInt(1667601449),
           m = d && kg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, qs.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -28037,10 +28037,13 @@
             s = (0, V.pv)(),
             g =
               ((u = s.BrowserWindow),
-              (d = gu().CarouselHorizontalPadding).endsWith("vw")
-                ? (parseFloat(d) * u.innerWidth) / 100
-                : ((0, Uo.X)(d.endsWith("px"), "Unhandled width string"),
-                  parseInt(d)));
+              (d = gu().CarouselHorizontalPadding),
+              u
+                ? d.endsWith("vw")
+                  ? (parseFloat(d) * u.innerWidth) / 100
+                  : ((0, Uo.X)(d.endsWith("px"), "Unhandled width string"),
+                    parseInt(d))
+                : 0);
           var u, d;
           let m = 0;
           return (
@@ -36612,9 +36615,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 3 2022 : 13:30:38",
-              BUILD_TIME_UTC: "Nov 3 2022 : 20:30:38",
-              BUILD_RTIME_UTC: 1667507438,
+              BUILD_TIME_LOCAL: "Nov 4 2022 : 15:37:29",
+              BUILD_TIME_UTC: "Nov 4 2022 : 22:37:29",
+              BUILD_RTIME_UTC: 1667601449,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -38805,12 +38808,12 @@
               Z.s,
               {
                 className: xB().ImageContainer,
-                onMenuButton: () => {
+                onMenuButton: (e) => {
                   (0, cA.yV)(
                     i.createElement(jB, {
                       screenshotHandle: A.screenshotHandle,
                     }),
-                    null
+                    e
                   );
                 },
                 focusable: !0,
@@ -39157,20 +39160,20 @@
               return [n, o];
             })(),
             c = Mn.g_(A),
-            s = () => {
+            s = (A) => {
               (0, cA.yV)(
                 i.createElement(ep, {
                   currentFilterAppID: r,
                   setFilterAppID: l,
                   activeTab: h,
                 }),
-                null
+                A
               );
             },
-            g = () => {
+            g = (A) => {
               (0, cA.yV)(
                 i.createElement(Ap, { currentSortOrder: o, setSortOrder: a }),
-                null
+                A
               );
             },
             u = (t) => {
@@ -41824,17 +41827,21 @@
           {
             focusable: !0,
             disabled: e,
-            onActivate: () => {
-              var e;
-              (e = A.device).bPairing
-                ? e.CancelPairing()
-                : e.bWaitingOnAction ||
-                  (e.bPaired
-                    ? (0, cA.yV)(i.createElement(Jp, { device: e }), null)
-                    : e.Pair());
+            onActivate: (e) => {
+              return (
+                (t = A.device),
+                (n = e),
+                void (t.bPairing
+                  ? t.CancelPairing()
+                  : t.bWaitingOnAction ||
+                    (t.bPaired
+                      ? (0, cA.yV)(i.createElement(Jp, { device: t }), n)
+                      : t.Pair()))
+              );
+              var t, n;
             },
-            onMenuButton: () => {
-              (0, cA.yV)(i.createElement(Jp, { device: A.device }), null);
+            onMenuButton: (e) => {
+              (0, cA.yV)(i.createElement(Jp, { device: A.device }), e);
             },
             onMenuActionDescription: (0, I.Xx)(
               "#QuickAccess_Tab_Bluetooth_Options"

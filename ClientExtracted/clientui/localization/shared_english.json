@@ -473,7 +473,7 @@
 	"EventDisplay_Share_Event": "%1$s Event",
 	"EventDisplay_Share_NotLoggedIn": "Not signed in",
 	"EventDisplay_Share_NotLoggedIn_Description": "To use this feature, you first need to sign into Steam",
-	"EventDisplay_Share_CommentMigrationInProcess": "Discussion for this event are queued to be migrated to the events system. They are temporarily unaccessible. Please come back later.",
+	"EventDisplay_Share_CommentMigrationInProcess": "Discussions for this event are queued to be migrated to the events system. They are temporarily unaccessible. Please come back later.",
 	"EventDisplay_Share_OpenActivityFeed": "Open my activity feed",
 
 	"EventDisplay_AreYouSure": "Are you sure you want to delete this event (%1$s)? This action cannot be undone.",
