@@ -452,6 +452,7 @@
  realloc
  realpath$DARWIN_EXTSN
  rindex
+ round
  roundf
  scandir$INODE64
  setjmp

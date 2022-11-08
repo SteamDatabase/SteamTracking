@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+`w
+`w
 __stubs
 __TEXT
 __stub_helper
@@ -34,28 +36,29 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-Q8
 __thread_vars
 __DATA
-(I'
 0
-(I'
 __thread_data
 __DATA
 @
 __thread_bss
 __DATA
+J'
 __bss
 __DATA
+N'
 J.
 __common
 __DATA
+P|'
 H
 __LINKEDIT
 
 @
 @loader_path/serverbrowser.dylib
 "
+!
 P
 
 
@@ -86,7 +89,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@>(
+p>(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -371,14 +374,13 @@ X
 8
 @
 H
-$
 (
-$
+0
 (
-,
-@
 0
 8
+@
+H
 ,
 $
 (
@@ -489,10 +491,10 @@ P
 0
 $
 (
-$
 (
-,
 0
+8
+@
 0
 (
 8
@@ -528,10 +530,10 @@ p
 H
 X
 (
-(
-(
 0
-H
+0
+@
+X
 0
 0
 (
@@ -600,7 +602,7 @@ X
 0
 8
 (
-8
+P
 (
 8
 P
@@ -3830,7 +3832,6 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-0
 j
 j
 j
@@ -3839,8 +3840,6 @@ j
 j
 j
 j
-&
-&
 p
 0
 p
@@ -3868,11 +3867,12 @@ j
 0
 p
 0
+#
 j
 j
 j
 j
->%
+$
 0
 0
 AT=
@@ -3917,7 +3917,6 @@ IcE
 V
 =
 =
-"
 !
 @
 &
@@ -3942,7 +3941,7 @@ M9e
 ?
 @
 @
-
+x
 
 
 
@@ -3992,6 +3991,7 @@ d
 &
 &
 d
+0
 0
 A+4$A+u
 ~m=
@@ -4193,7 +4193,6 @@ d
 @
 @
 @
-y
 @
 @
 @

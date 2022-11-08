@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7639056";
+var CLSTAMP = "7647459";
 (() => {
   var e,
     t,
@@ -6930,9 +6930,9 @@ var CLSTAMP = "7639056";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 3 2022 : 13:30:36",
-                    BUILD_TIME_UTC: "Nov 3 2022 : 20:30:36",
-                    BUILD_RTIME_UTC: 1667507436,
+                    BUILD_TIME_LOCAL: "Nov 7 2022 : 15:08:55",
+                    BUILD_TIME_UTC: "Nov 7 2022 : 23:08:55",
+                    BUILD_RTIME_UTC: 1667862535,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -7072,10 +7072,6 @@ var CLSTAMP = "7639056";
             )
           ),
           p = document.getElementById("root");
-        !(function () {
-          const e = "steam-firstclientrun-legacy";
-          null == sessionStorage.getItem(e) && sessionStorage.setItem(e, "ran");
-        })();
         function y(e) {
           return n.createElement(
             "div",

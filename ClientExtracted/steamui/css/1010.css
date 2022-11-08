@@ -3292,6 +3292,184 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   padding: 4px 10px;
   margin: 8px 0;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.pininput_ErrorText_1E9uc.pininput_ErrorText_1E9uc {
+  color: #de3618;
+}
+.pininput_DigitInputField_2oT1n {
+  margin: auto;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.parentalpindialog_ErrorText_2YNCc.parentalpindialog_ErrorText_2YNCc {
+  color: #de3618;
+}
+.parentalpindialog_DigitInputField_1C0nn {
+  margin: auto;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l {
+  width: 80vw;
+}
+.BasicUI .cloudconflict_CloudConflictModalContent_3Ps1l {
+  width: 660px;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l.cloudconflict_Popup_2Ngsf {
+  width: auto;
+}
+.DialogBodyText.cloudconflict_CloudConflictWarning_2iPYW {
+  text-align: left;
+  font-weight: bold;
+}
+.cloudconflict_CloudConflictText_2ZX5N {
+  text-align: left;
+}
+.BasicUI .gpfocus .cloudconflict_LastModified_3CKEa,
+.BasicUI .gpfocus .cloudconflict_Title_369FN {
+  color: #000;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  .cloudconflict_DialogChoiceDescription_3x3S4
+  .cloudconflict_Newer_1AaLs {
+  color: #59bf40;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  .cloudconflict_DialogChoiceDescription_3x3S4 {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  .cloudconflict_DialogChoiceDescription_3x3S4
+  .DialogBodyText {
+  margin-bottom: 8px;
+}
+.cloudconflict_RadioButton_2SNqC {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  align-self: center;
+  margin-bottom: 0px;
+  background-color: #0e141b;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 0px 0px rgba(26, 159, 255, 0);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cloudconflict_Active_2hegS .cloudconflict_RadioButton_2SNqC,
+.cloudconflict_Active_2hegS .cloudconflict_RadioButton_2SNqC:hover {
+  box-shadow: inset 0px 0px 0px 6px #1a9fff;
+  background-color: #fff;
+}
+.cloudconflict_DialogChoiceRow_1e3aA {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+}
+.BasicUI .cloudconflict_DialogChoiceRow_1e3aA {
+  margin: 4px 0;
+  align-items: center;
+  height: auto;
+}
+.cloudconflict_DialogChoiceRow_1e3aA .cloudconflict_DialogChoiceButton_1NanE {
+  margin-right: 0px;
+  margin-bottom: 24px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceIcon_2SbOu {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  align-self: center;
+  margin-bottom: 0px;
+}
+.cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceText_1sNmt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  align-self: center;
+  height: flex;
+}
+.cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceText_1sNmt
+  .cloudconflict_Title_369FN {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.BasicUI
+  .cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceText_1sNmt
+  .cloudconflict_Title_369FN {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+.cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceText_1sNmt
+  .cloudconflict_LastModified_3CKEa {
+  width: 100%;
+  display: flex;
+}
+.BasicUI
+  .cloudconflict_DialogChoiceRow_1e3aA
+  .cloudconflict_DialogChoiceButton_1NanE
+  .cloudconflict_ConflictChoiceText_1sNmt
+  .cloudconflict_LastModified_3CKEa {
+  font-size: 14px;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_ChoiceNote_3p0kE {
+  margin-top: 6px;
+  width: 100%;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  .cloudconflict_ContinueButton_3IEn9 {
+  margin-right: 10px;
+  width: 160px;
+  height: 40px;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  .cloudconflict_CancelButton_1prk5 {
+  margin-right: 10px;
+  width: 160px;
+  height: 40px;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_Footer_JGzJI {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l
+  button.cloudconflict_FooterButtons_2Z1a3 {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_FooterNote_1kIuO {
+  margin-top: 2px;
+}
+.cloudconflict_TitleWarningIcon_2xmJK {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0px;
+}
 .friendsnooze_SnoozeContainer_3EzTy {
   position: relative;
   overflow: hidden;
@@ -3654,15 +3832,6 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   .SVGIcon_BigPicture
   path {
   fill: #4cb4ff;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.pininput_ErrorText_1E9uc.pininput_ErrorText_1E9uc {
-  color: #de3618;
-}
-.pininput_DigitInputField_2oT1n {
-  margin: auto;
 }
 .miniprofile_miniProfile_1AMAp {
   width: fit-content;
@@ -4379,175 +4548,6 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 }
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.parentalpindialog_ErrorText_2YNCc.parentalpindialog_ErrorText_2YNCc {
-  color: #de3618;
-}
-.parentalpindialog_DigitInputField_1C0nn {
-  margin: auto;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l {
-  width: 80vw;
-}
-.BasicUI .cloudconflict_CloudConflictModalContent_3Ps1l {
-  width: 660px;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l.cloudconflict_Popup_2Ngsf {
-  width: auto;
-}
-.DialogBodyText.cloudconflict_CloudConflictWarning_2iPYW {
-  text-align: left;
-  font-weight: bold;
-}
-.cloudconflict_CloudConflictText_2ZX5N {
-  text-align: left;
-}
-.BasicUI .gpfocus .cloudconflict_LastModified_3CKEa,
-.BasicUI .gpfocus .cloudconflict_Title_369FN {
-  color: #000;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_DialogChoiceDescription_3x3S4
-  .cloudconflict_Newer_1AaLs {
-  color: #59bf40;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_DialogChoiceDescription_3x3S4 {
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_DialogChoiceDescription_3x3S4
-  .DialogBodyText {
-  margin-bottom: 8px;
-}
-.cloudconflict_RadioButton_2SNqC {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  margin-left: 15px;
-  align-self: center;
-  margin-bottom: 0px;
-  background-color: #0e141b;
-  border-radius: 12px;
-  box-shadow: inset 0px 0px 0px 0px rgba(26, 159, 255, 0);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-.cloudconflict_Active_2hegS .cloudconflict_RadioButton_2SNqC,
-.cloudconflict_Active_2hegS .cloudconflict_RadioButton_2SNqC:hover {
-  box-shadow: inset 0px 0px 0px 6px #1a9fff;
-  background-color: #fff;
-}
-.cloudconflict_DialogChoiceRow_1e3aA {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100px;
-}
-.BasicUI .cloudconflict_DialogChoiceRow_1e3aA {
-  margin: 4px 0;
-  align-items: center;
-  height: auto;
-}
-.cloudconflict_DialogChoiceRow_1e3aA .cloudconflict_DialogChoiceButton_1NanE {
-  margin-right: 0px;
-  margin-bottom: 24px;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-}
-.cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceIcon_2SbOu {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  margin-left: 15px;
-  align-self: center;
-  margin-bottom: 0px;
-}
-.cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceText_1sNmt {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15px;
-  align-self: center;
-  height: flex;
-}
-.cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceText_1sNmt
-  .cloudconflict_Title_369FN {
-  width: 100%;
-  display: flex;
-  margin-top: 25px;
-  margin-bottom: 5px;
-}
-.BasicUI
-  .cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceText_1sNmt
-  .cloudconflict_Title_369FN {
-  font-size: 20px;
-  margin-top: 0;
-  margin-bottom: 0px;
-}
-.cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceText_1sNmt
-  .cloudconflict_LastModified_3CKEa {
-  width: 100%;
-  display: flex;
-}
-.BasicUI
-  .cloudconflict_DialogChoiceRow_1e3aA
-  .cloudconflict_DialogChoiceButton_1NanE
-  .cloudconflict_ConflictChoiceText_1sNmt
-  .cloudconflict_LastModified_3CKEa {
-  font-size: 14px;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_ChoiceNote_3p0kE {
-  margin-top: 6px;
-  width: 100%;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_ContinueButton_3IEn9 {
-  margin-right: 10px;
-  width: 160px;
-  height: 40px;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  .cloudconflict_CancelButton_1prk5 {
-  margin-right: 10px;
-  width: 160px;
-  height: 40px;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_Footer_JGzJI {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l
-  button.cloudconflict_FooterButtons_2Z1a3 {
-  margin-top: 8px;
-  display: flex;
-  flex-direction: row;
-}
-.cloudconflict_CloudConflictModalContent_3Ps1l .cloudconflict_FooterNote_1kIuO {
-  margin-top: 2px;
-}
-.cloudconflict_TitleWarningIcon_2xmJK {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0px;
 }
 .youtubeembed_DynamicLinkBox_5Ycv2 {
   position: relative;
@@ -7809,6 +7809,12 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 .perf_PerfProfileInfoBasic_1nXii .perf_Name_3NjfZ {
   font-weight: bold;
   text-transform: uppercase;
+}
+.perf_FramerateLimitWarning_ygZEg {
+  color: #ef806c;
+}
+.perf_LimitFramerateSlider_1bbNe.perf_Warning_3uqGt {
+  color: #ef806c;
 }
 .progressbar_ProgressBar_1-nHj {
   border-radius: 10px;

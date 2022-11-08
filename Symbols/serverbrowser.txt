@@ -259,6 +259,7 @@
  readdir$INODE64
  realpath$DARWIN_EXTSN
  rindex
+ round
  roundf
  scandir$INODE64
  setlocale
