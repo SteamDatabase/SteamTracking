@@ -4220,7 +4220,7 @@ body.gamepadui_GamepaduiPopupWindowBody_PQL-c
   video.steamdeckbootupthrobber_FullscreenVideo_2XDIx {
   flex-grow: 1;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 10;
 }
 .steamdeckbootupthrobber_Container_j78ib.steamdeckbootupthrobber_Exit_3hvZo {
