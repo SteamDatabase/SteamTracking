@@ -531,8 +531,8 @@
 		margin-bottom: unset;
 	}
 
-	html.tablet body.v6 .home_content_ctn .page_content_ctn.dark {
-		padding: unset;
+	html.responsive.tablet body.v6 .home_content_ctn .page_content_ctn.dark {
+		padding: 0 var(--gpSpace-Gutter);
 	}
 
 	html.tablet .page_content_ctn.dark .home_content {
@@ -570,10 +570,6 @@
 
 	html.tablet #content_more .home_content h2 a.gpfocus {
 		border-radius: 0px;
-	}
-
-	html.tablet .gp_contiguous_singles {
-		margin-bottom: 24px;
 	}
 
 	html.tablet .home_content_items {
@@ -1037,7 +1033,14 @@
 		box-sizing: content-box;
 		display: flex;
 		flex-wrap: nowrap;
+		margin-bottom: 24px;
 	}
+
+	html.tablet .home_page_content.gp_contiguous_singles {
+		margin-left: unset;
+		margin-right: unset;
+	}
+
 
 	html.tablet .responsive_app_menu {
 		display: none;

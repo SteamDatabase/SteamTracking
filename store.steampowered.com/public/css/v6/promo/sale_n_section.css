@@ -36,7 +36,7 @@ body.v6 h2.pageheader {
 }
 
 .btn_ico_thumbs_up {
-	background-image: url(/public/images/promo/greenlight/ico_btn_rateup_green.png);
+	background-image: url(/store/public/images/promo/greenlight/ico_btn_rateup_green.png);
 	margin:  2px 0 0 2px;
 	background-color: #3c3d3e;
 	float: left;
@@ -462,7 +462,7 @@ body.iframe #ChatWindow {
 	font-size: 14px;
 	margin: 8px 0px 0px 8px;
 	padding-left: 28px;
-	background-image: url('/public/images/broadcast/icon_viewers.png' );
+	background-image: url('/store/public/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 32px; /* 22 -> 32 make it line up with the hide/show button */

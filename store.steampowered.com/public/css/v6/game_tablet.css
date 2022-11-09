@@ -1099,14 +1099,14 @@ html.tablet #appLinksAndInfoCtn {
 
 /* apply a right chevron to the right side of the element's background  */
 html.tablet .responsive_chevron_right {
-	background-image: url('/public/images//v6/chevron_right.png');
+	background-image: url('/store/public/images//v6/chevron_right.png');
 	background-repeat: no-repeat;
 	background-position: calc(100% - 7px);
 }
 
 /* a plus image that changes to minus when section is expanded*/
 html.tablet .expand_section {
-	background-image: url('/public/shared/images//v6/icon_plus.svg');
+	background-image: url('/store/public/shared/images//v6/icon_plus.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	width: 16px;
@@ -1114,7 +1114,7 @@ html.tablet .expand_section {
 	padding-right: 20px;
 }
 html.tablet .expand_section.expanded {
-	background-image: url('/public/shared/images//v6/icon_minus.svg');
+	background-image: url('/store/public/shared/images//v6/icon_minus.svg');
 }
 
 /* show summary of supported languages and expand it when clicked */

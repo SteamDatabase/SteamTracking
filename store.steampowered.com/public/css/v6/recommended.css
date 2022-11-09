@@ -143,7 +143,7 @@
 }
 
 .more_like_arrow {
-    background-image: url( /public/images/v6/recommended/morelikethis_borderbottom.png );
+    background-image: url( /store/public/images/v6/recommended/morelikethis_borderbottom.png );
     background-position: top left;
     background-repeat: no-repeat;
     height: 19px;
@@ -264,21 +264,21 @@
 .recommendation_carousel .scroll_btn.left {
 	left: 0px;
 	border-right: 1px solid #1a4058;
-	background-image: url( /public/images/recommended/carousel_scroll_left.png );
+	background-image: url( /store/public/images/recommended/carousel_scroll_left.png );
 }
 
 .recommendation_carousel .scroll_btn.right {
 	right: 0px;
 	border-left: 1px solid #1a4058;
-	background-image: url( /public/images/recommended/carousel_scroll_right.png );
+	background-image: url( /store/public/images/recommended/carousel_scroll_right.png );
 }
 
 .recommendation_carousel .scroll_btn.left.disabled {
-	background-image: url( /public/images/recommended/carousel_scroll_left_disabled.png );
+	background-image: url( /store/public/images/recommended/carousel_scroll_left_disabled.png );
 }
 
 .recommendation_carousel .scroll_btn.right.disabled {
-	background-image: url( /public/images/recommended/carousel_scroll_right_disabled.png );
+	background-image: url( /store/public/images/recommended/carousel_scroll_right_disabled.png );
 }
 
 .recommendation_area_ctn
@@ -398,7 +398,7 @@
 	width: 17px;
 	height: 18px;
 	background-repeat: no-repeat;
-	background-image: url( /public/images/recommended/quotearrow_graybg.png);
+	background-image: url( /store/public/images/recommended/quotearrow_graybg.png);
 }
 
 .recommendation_detail .quote_arrow
@@ -421,13 +421,13 @@
 .game_page_recommendation .quote_arrow {
 	left: 40px;
 	top: 12px;
-	background-image: url( /public/images/recommended/quotearrow_gamepage.png );
+	background-image: url( /store/public/images/recommended/quotearrow_gamepage.png );
 }
 
 .recommendation_makeyourown .quote_arrow {
 	left: 100px;
 	top: 13px;
-	background-image: url( /public/images/recommended/quotearrow_white.png );
+	background-image: url( /store/public/images/recommended/quotearrow_white.png );
 }
 
 .recommendation_row .quote_arrow {
@@ -518,15 +518,15 @@
 }
 
 .friend_status_offline .friend_block_avatar_92 {
-	background-image: url( /public/images/communitylink/iconholder_92_offline.gif );
+	background-image: url( /store/public/images/communitylink/iconholder_92_offline.gif );
 }
 
 .friend_status_online .friend_block_avatar_92 {
-	background-image: url( /public/images/communitylink/iconholder_92_online.gif );
+	background-image: url( /store/public/images/communitylink/iconholder_92_online.gif );
 }
 
 .friend_status_in-game .friend_block_avatar_92 {
-	background-image: url( /public/images/communitylink/iconholder_92_ingame.gif );
+	background-image: url( /store/public/images/communitylink/iconholder_92_ingame.gif );
 }
 
 .friend_block_avatar_92 img {
@@ -635,7 +635,7 @@
 	left: 57px;
 	top: 13px;
 	background-repeat: no-repeat;
-	background-image: url( /public/images/recommended/quotearrow_blackbg.png);
+	background-image: url( /store/public/images/recommended/quotearrow_blackbg.png);
 }
 
 .comment_btn {
@@ -672,7 +672,7 @@ textarea.comment_input
 	min-height: 102px;
 	position: relative;
     margin-bottom: 16px;
-    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/store/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -795,7 +795,7 @@ textarea.comment_input
 	float: left;
 	width: 294px;
 	margin-right: 14px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	background-position-y: 50px;
 	box-shadow: 0 0 5px #000;
 }
@@ -1191,7 +1191,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommended_login_button .leftcap, .recommended_login_button .rightcap, .recommended_login_button .content
 {
-	background-image: url( /public/images/recommended/recommended_login_btns.png );
+	background-image: url( /store/public/images/recommended/recommended_login_btns.png );
 }
 
 .recommended_login_button .leftcap {
@@ -1593,7 +1593,7 @@ html.touch .similar_grid_item .buttons {
 .user_reviews_header {
 	padding-bottom: 4px;
     margin-top: 40px;
-    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/store/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: bottom left;
 }
@@ -1911,7 +1911,7 @@ html.touch .similar_grid_item .buttons {
 .review_box {
     background-color: rgba( 0, 0, 0, 0.2 );
 	margin-bottom: 26px;
-    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
+    background-image: url('/store/public/images/v6/maincol_gradient_rule.png' );
     background-repeat: no-repeat;
     background-position: top left;
 }
@@ -1932,7 +1932,7 @@ html.touch .similar_grid_item .buttons {
 .review_box .header .commentCount a {
 	text-decoration: none;
 	color: #66c0f4;
-	background-image: url(/public/shared/images/comment_quoteicon_blue.png);
+	background-image: url(/store/public/shared/images/comment_quoteicon_blue.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 20px;
@@ -1942,7 +1942,7 @@ html.touch .similar_grid_item .buttons {
 }
 .review_box .header .commentCount a:hover {
 	color: #ffffff;
-	background-image: url(/public/shared/images/comment_quoteicon_bright.png);
+	background-image: url(/store/public/shared/images/comment_quoteicon_bright.png);
 }
 */
 
@@ -1961,7 +1961,7 @@ html.touch .similar_grid_item .buttons {
 .review_box .vote_info .commentCount a {
 	text-decoration: none;
 	color: #66c0f4;
-	background-image: url(/public/shared/images/comment_quoteicon_blue.png);
+	background-image: url(/store/public/shared/images/comment_quoteicon_blue.png);
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 20px;
@@ -1971,7 +1971,7 @@ html.touch .similar_grid_item .buttons {
 }
 .review_box .vote_info .commentCount a:hover {
 	color: #ffffff;
-	background-image: url(/public/shared/images/comment_quoteicon_bright.png);
+	background-image: url(/store/public/shared/images/comment_quoteicon_bright.png);
 }
 
 .review_box .vote_info.valve_only {
@@ -2555,7 +2555,7 @@ html.touch .similar_grid_item .buttons {
 
 .recommendation_highlight.morelikethis_border {
 	margin-bottom: 0px;
-	background-image: url( /public/images//v6/recommended/morelikethis_borderbottom.png );
+	background-image: url( /store/public/images//v6/recommended/morelikethis_borderbottom.png );
 	background-position: bottom left;
 	background-repeat: no-repeat;
 	padding-bottom: 22px;
@@ -2601,7 +2601,7 @@ body.recommendgame #review_create h1  {
 	border-radius: 2px;
 	cursor: pointer;
 	background-repeat: no-repeat;
-	background-image: url(/public/images/v6/deleteSearchTerm.png);
+	background-image: url(/store/public/images/v6/deleteSearchTerm.png);
 	background-position: right 5px center;
 	display: inline-block;
 }
@@ -2809,7 +2809,7 @@ div.graph_toggle_icon {
 	height: 16px;
 	margin-right: 7px;
 	margin-top: 4px;
-	background: url('/public/images/v6/app/review_graph_expander.png');
+	background: url('/store/public/images/v6/app/review_graph_expander.png');
 	background-repeat: no-repeat;
 	background-size: 14px 26px;
 	display: inline-block;
@@ -2855,14 +2855,14 @@ div.graph_toggle_icon.down {
 	padding: 10px;
 	padding-right: 20px;
 	cursor: pointer;
-	background-image: url(/public/images/v6/btn_arrow_down_padded.png);
+	background-image: url(/store/public/images/v6/btn_arrow_down_padded.png);
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-position-x: right;
 }
 .user_reviews_filter_menu:hover .title,
 .user_reviews_filter_menu_flyout:hover .user_reviews_filter_menu .title {
-	background-image: url(/public/images/v6/btn_arrow_down_padded_black.png);
+	background-image: url(/store/public/images/v6/btn_arrow_down_padded_black.png);
 }
 .user_reviews_filter_menu.beta .title span {
 	background: #a3cf06;

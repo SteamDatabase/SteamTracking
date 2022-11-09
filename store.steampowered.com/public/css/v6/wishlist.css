@@ -607,7 +607,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 			display: inline-block;
 	margin: 0px 5px 10px  0;
 	padding: 3px 24px 3px 7px;
-	background: url(/public/images/v6/deleteSearchTerm.png), rgba(255,255,255,0.2);
+	background: url(/store/public/images/v6/deleteSearchTerm.png), rgba(255,255,255,0.2);
 	background-repeat: no-repeat;
 	background-position: right 6px top 5px;
 	border-radius: 3px;
@@ -618,7 +618,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 }
 #filters_container > div:hover {
-	background: url(/public/images/v6/deleteSearchTerm.png), rgba(255,255,255,0.4);
+	background: url(/store/public/images/v6/deleteSearchTerm.png), rgba(255,255,255,0.4);
 	background-repeat: no-repeat;
 	background-position: right 6px top 5px;
 }
@@ -933,7 +933,7 @@ body.v6.game_bg {
     height: 92px;
     width: 75px;
     margin-right: 8px;
-    background: url("/public/images/promo/summer2019/wishlist_podium_1.jpg");
+    background: url("/store/public/images/promo/summer2019/wishlist_podium_1.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 40px;
@@ -942,7 +942,7 @@ body.v6.game_bg {
     height: 75px;
     width: 75px;
     margin-right: 8px;
-    background: url("/public/images/promo/summer2019/wishlist_podium_2.jpg");
+    background: url("/store/public/images/promo/summer2019/wishlist_podium_2.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 40px;
@@ -950,7 +950,7 @@ body.v6.game_bg {
 .steps .spot_3 {
     height: 56px;
     width: 75px;
-    background: url("/public/images/promo/summer2019/wishlist_podium_3.jpg");
+    background: url("/store/public/images/promo/summer2019/wishlist_podium_3.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 40px;
@@ -1003,7 +1003,7 @@ body.v6.game_bg {
     background: rgba(255,255,255,0.6);
 }
 .racegfx {
-    background: url("/public/images/promo/summer2019/img_receipt_token.png?v2");
+    background: url("/store/public/images/promo/summer2019/img_receipt_token.png?v2");
     position: absolute;
     bottom: 6px;
     right: 30px;

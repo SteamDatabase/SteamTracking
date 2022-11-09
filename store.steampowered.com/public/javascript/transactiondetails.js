@@ -97,7 +97,7 @@ function VerifyShippingAddress()
 	{
 				g_bVerifyShippingAddressCallRunning = true;
 
-		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/store/checkout/verifyshippingaddress/',
 			{
 				onSuccess: function( result ) {
 					g_bVerifyShippingAddressCallRunning = false;
@@ -228,7 +228,7 @@ function SubmitUpdateShippingAddress()
 	{
 				g_bUpdateShippingAddress = true;
 
-		new Ajax.Request('https://store.steampowered.com/account/updateshippingaddress/',
+		new Ajax.Request('https://store.steampowered.com/store/account/updateshippingaddress/',
 		{
 		    method:'post',
 		    parameters: { 

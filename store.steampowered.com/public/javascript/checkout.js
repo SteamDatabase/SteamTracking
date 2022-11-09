@@ -83,7 +83,7 @@ function PerformPayPalAuthorization()
 		{
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
@@ -154,7 +154,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	$J('#purchase_button_bottom').hide();
 	$J('#purchase_button_inprogress_bottom').show();
 
-	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
+	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/store/qiwi/launchauth', 'qiwiWindow' );
 
 	g_bCreateQiwiInvoiceRunning = true;
 
@@ -171,7 +171,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		// add the country code back
 		phoneNumber = m + phoneNumber;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/qiwiinvoice/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/qiwiinvoice/',
 		{
 		    method:'post',
 		    parameters: {
@@ -329,15 +329,15 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 
 			if ( g_bInReactMobileApp )
 			{
-				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID );
+				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/checkout/externallink/?transid=' + transID );
 			}
 			else if ( bOpenURLInSteamExternalWindow )
 			{
-				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/store/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
 			}
 			else
 			{
-				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
+				g_winExternal = window.open( 'https://store.steampowered.com/store/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
 			}
 
 						if ( displayPendingReceipt )
@@ -351,7 +351,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
 			if ( method.value != 'paypal' && method.value != 'storedpaypal' && method.value != 'updatepaypal' )
 			{
 				PollForTransactionStatus( $('transaction_id').value, 80, 15 );
@@ -378,7 +378,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 
-				window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+				window.open( 'https://store.steampowered.com/store//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	}
 	catch( e )
 	{
@@ -536,7 +536,7 @@ function OnSaveBillingAddressSuccess()
 	if ( $('cache_return_url') )
 		form.action = $('cache_return_url').value;
 	else
-		form.action = 'https://store.steampowered.com/account/';
+		form.action = 'https://store.steampowered.com/store/account/';
 
 	var address = {
 		'FirstName' : $('first_name').value,
@@ -573,7 +573,7 @@ function SaveBillingAddress()
 
 	try
 	{
-		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/checkout/updatebillingaddress/',
+		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/store/checkout/updatebillingaddress/',
 		{
 		    onSuccess: function(result){
 				// Success...
@@ -640,7 +640,7 @@ function InitializeTransaction()
 			$('transaction_id').value = -1;
 			$('paypaltoken').value = '';
 
-									new Ajax.Request('https://store.steampowered.com/checkout/canceltransaction/',
+									new Ajax.Request('https://store.steampowered.com/store/checkout/canceltransaction/',
 			{
 			    method:'post',
 			    parameters: {
@@ -768,7 +768,7 @@ function InitializeTransaction()
 			}
 		}
 
-		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/inittransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -1020,7 +1020,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
 					break;
 				case 57:
-					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'https://store.steampowered.com/account\'>account</a> page.';
+					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'https://store.steampowered.com/store/account\'>account</a> page.';
 					break;
 				case 31:
 					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
@@ -1055,7 +1055,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
 					break;
 				case 23:
-					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/store/cart/country_changed\'>here</a>, or change your payment method below.';
 					break;
 				case 8:
 					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
@@ -1067,7 +1067,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'This card number is not valid for the payment method you selected.';
 					break;
 				case 56:
-					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
+					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/store/cart\'>edit the contents of your cart</a> and try again.';
 					break;
 				case 53:
 					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
@@ -1266,7 +1266,7 @@ function GetFinalPriceAndUpdateReviewTab()
 		var microtxnid = $('microtxn_id') ? $('microtxn_id').value : -1;
 		var cart = $J('#shopping_cart_gid' ).val() || -1;
 		var gidReplayOfTransID = $J('#gid_replay' ).val() || -1;
-		new Ajax.Request('https://store.steampowered.com/checkout/getfinalprice/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/getfinalprice/',
 		{
 		    method:'get',
 		    parameters: {
@@ -2754,7 +2754,7 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
 				break;
 			case 56:
-				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
+				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/store/cart\'>edit the contents of your cart</a> and try again.';
 				break;
 			case 17:
 				var method = $('payment_method');
@@ -3685,7 +3685,7 @@ function VerifyShippingAddress()
 
 				AnimateSubmitPaymentInfoButton();
 
-		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/store/checkout/verifyshippingaddress/',
 			{
 				onSuccess: function( result ) {
 					g_bVerifyShippingAddressCallRunning = false;
@@ -5359,7 +5359,7 @@ function OnPurchaseSuccess( result )
 						if ( $('cache_return_url') )
 				window.location = $('cache_return_url').value;
 			else
-				window.location = 'https://store.steampowered.com/account/';
+				window.location = 'https://store.steampowered.com/store/account/';
 			return true;
 		}
 
@@ -5588,7 +5588,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 	{
 		try
 		{
-			new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
+			new Ajax.Request('https://store.steampowered.com/store/checkout/authenticationdetails/',
 			{
 			    method:'get',
 			    parameters: {
@@ -5717,7 +5717,7 @@ function HandlePollForTransactionStatusFailure()
 		}
 
 		var error_text = '';
-		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="https://store.steampowered.com//account/history/">account status page</a> or your email for a confirmation receipt.';
+		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="https://store.steampowered.com/store//account/history/">account status page</a> or your email for a confirmation receipt.';
 	}
 	catch(e)
 	{
@@ -5764,7 +5764,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 
 	try
 	{
-		new Ajax.Request('https://store.steampowered.com/checkout/transactionstatus/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/transactionstatus/',
 		{
 		    method:'get',
 		    parameters: {
@@ -5922,7 +5922,7 @@ function FinalizeTransaction()
 			screenWidth: screen.width
 		};
 
-		new Ajax.Request('https://store.steampowered.com/checkout/finalizetransaction/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/finalizetransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -5989,19 +5989,19 @@ function FinalizeTransaction()
 
 function SSAPopup()
 {
-		var win = window.open( 'https://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
+		var win = window.open( 'https://store.steampowered.com/store/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
 	win.focus();
 }
 
 function RefundPaymentMethodsPopup()
 {
-		var win = window.open( 'https://store.steampowered.com/steam_refunds_methods','steam_refund_details','width=1024,height=768');
+		var win = window.open( 'https://store.steampowered.com/store/steam_refunds_methods','steam_refund_details','width=1024,height=768');
 	win.focus();
 }
 
 function HardwareAgreementPopup()
 {
-		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/hardware_order_terms','steam_hardwareterms' );
+		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/hardware_order_terms','steam_hardwareterms' );
 	win.focus();
 }
 
@@ -6133,7 +6133,7 @@ function SendGift()
 
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/sendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/sendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {
@@ -6225,7 +6225,7 @@ function UnsendGift()
 	{
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/checkout/unsendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/store/checkout/unsendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {

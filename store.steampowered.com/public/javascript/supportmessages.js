@@ -69,7 +69,7 @@ function CloseSupportMessageWindow()
 {
 	if ( BAreAllMessagesAcked() )
 	{
-		new Ajax.Request( 'https://store.steampowered.com/supportmessages/ackmessages',
+		new Ajax.Request( 'https://store.steampowered.com/store/supportmessages/ackmessages',
 			{
 			method: 'post',
 			parameters: { 'sessionid' : g_sessionID },

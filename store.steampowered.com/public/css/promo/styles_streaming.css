@@ -5,7 +5,7 @@ body {
 }
 
 .new_page_bg {
-	background:  url(/public/images/promo/streaming/bg.jpg) no-repeat;
+	background:  url(/store/public/images/promo/streaming/bg.jpg) no-repeat;
 	background-position: center 0px;
 	height: 1401px;
 	min-width: 1125px;

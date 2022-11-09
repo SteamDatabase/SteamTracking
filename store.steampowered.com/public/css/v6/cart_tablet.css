@@ -227,7 +227,7 @@ html.tablet .cart_item_price .remove_link {
 	border-radius: var(--gpCorner-Medium);
 	padding: 8px 40px 8px 12px;
 	text-decoration: none;
-	background-image: url('/public/shared/images/glyphs/shared_button_x.svg');
+	background-image: url('/store/public/shared/images/glyphs/shared_button_x.svg');
 	background-size: 24px 24px;
 	background-repeat: no-repeat;
 	background-position-x: calc(100% - 8px);

@@ -425,7 +425,7 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 		{
 			event.stopPropagation ();
 			$J.ajax ( {
-				url: "https:\/\/store.steampowered.com\/explore\/recommendedreason\/",
+				url: "https:\/\/store.steampowered.com\/store\/explore\/recommendedreason\/",
 				data: {
 					appid: unAppID
 				},
@@ -452,7 +452,7 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 					strTooltipContent += '<div class="reasonheader">' + "Similar tags to games you play:" +'</div>';
 					for ( var i = 0; i < data.tags.length; i++ )
 					{
-						strTooltipContent += '<a href="https://store.steampowered.com/tag/en/'+data.tags[ i ].name+'/">' + data.tags[ i ].name + '</a>';
+						strTooltipContent += '<a href="https://store.steampowered.com/store/tag/en/'+data.tags[ i ].name+'/">' + data.tags[ i ].name + '</a>';
 					}
 				}
 
