@@ -1,0 +1,69 @@
+{
+    "name": "IVACManagementService",
+    "methods": [
+        {
+            "name": "GameModuleLoadReport",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "GameModuleLoadReport",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "file_report",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "total_files",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "process_id",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "internal_error",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "command_line",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "insecure",
+                    "type": "bool",
+                    "optional": false
+                },
+                {
+                    "name": "launch_report",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "diagnostics",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}
