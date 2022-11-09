@@ -2098,6 +2098,7 @@
     "Steam_ErrorCondition_Offline": "This operation cannot be completed while Steam is offline.",
     "Steam_ErrorCondition_LoggedInElsewhere": "Your account is currently in use at another machine.\nYou will need to shut down Steam on your other computer in order to log in here.",
     "Steam_ErrorCondition_RefreshLogin": "You will need to re-login to continue.",
+    "Steam_ErrorCondition_UnhandledMailTo": "Sending an email is not currently supported on Steam Deck.",
     "Steam_ErrorCondition_OK": "OK",
     "Steam_RefreshLogin_InfoTicketExpired": "Your Steam ticket has expired.",
     "Steam_RefreshLogin_AccountAlreadyLoggedInNeedPassword": "This account is currently logged in elsewhere.",

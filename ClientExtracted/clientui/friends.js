@@ -68881,6 +68881,9 @@ object-assign
           ] = "k_ErrorCondition_AccountDisabled";
           ErrorCondition[(ErrorCondition["k_ErrorCondition_Offline"] = 5)] =
             "k_ErrorCondition_Offline";
+          ErrorCondition[
+            (ErrorCondition["k_ErrorCondition_UnhandledMailTo"] = 6)
+          ] = "k_ErrorCondition_UnhandledMailTo";
         })(ErrorCondition || (ErrorCondition = {}));
 
         /***/
@@ -89934,4 +89937,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=a9557d48b30e553f34f3
+//# sourceMappingURL=friends.js.map?contenthash=6804f49ed46f4475833f

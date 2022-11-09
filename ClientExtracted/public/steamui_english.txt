@@ -4685,6 +4685,9 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_StreamLaunch_ServerProgress"			"Preparing to stream %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"Preparing to stream %game%..."
 
+"SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"
+"SteamUI_RemoteDeviceAuthorization_Text"		"Enter the authorization code showing on %devicename% to allow it to connect and play games."
+
 "SteamUI_UpdateControllerFirmware_Cancel"	"Not Now"
 "SteamUI_UpdateControllerFirmware_Continue"	"Next"
 "SteamUI_UpdateControllerFirmware_Done"		"OK"
