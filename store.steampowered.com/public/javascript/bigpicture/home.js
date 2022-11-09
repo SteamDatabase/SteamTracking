@@ -109,7 +109,7 @@ CStoreHome.prototype.OnCartButtonFocused = function()
 CStoreHome.prototype.OnShoppingCartChanged = function()
 {
 	var _store = this;
-	$.AsyncWebRequest( 'https://store.steampowered.com/store/cart/getcartstate',
+	$.AsyncWebRequest( 'https://store.steampowered.com/cart/getcartstate',
 	{
 		type: 'GET',
 		success: function( data )
@@ -165,20 +165,20 @@ CStoreHome.prototype.ToggleFeatureAllGames = function()
 function ShowStoreContents( strURL, strName )
 {
 	if ( strURL.substr( 0, 7 ) != 'http://' && strURL.substr( 0, 8 ) != 'https://' )
-		strURL = 'https://store.steampowered.com/store/' + strURL;
+		strURL = 'https://store.steampowered.com/' + strURL;
 
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 
 function ShowAppPage( nAppID, strName )
 {
-	var strURL = 'https://store.steampowered.com/store/app/' + nAppID;
+	var strURL = 'https://store.steampowered.com/app/' + nAppID;
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 
 function ShowShoppingCart()
 {
-	var strURL = 'https://store.steampowered.com/store/cart/';
+	var strURL = 'https://store.steampowered.com/cart/';
 	$.DispatchEvent( 'OpenRemoteContent', strURL, 'Your Shopping Cart', 2  );
 }
 
@@ -194,26 +194,26 @@ function OpenProfileContent( strURL, strName )
 
 function ShowPurchaseOptions( nAppID, strAppName )
 {
-	var strURL = 'https://store.steampowered.com/store/purchaseoptions/' + nAppID + '/?ver=nx';
+	var strURL = 'https://store.steampowered.com/purchaseoptions/' + nAppID + '/?ver=nx';
 	var strName = 'Buy %appname%'.replace( '%appname%', strAppName );
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 
 function ShowPackagePage( nPackageID, strPackageName )
 {
-	var strURL = 'https://store.steampowered.com/store/sub/' + nPackageID;
+	var strURL = 'https://store.steampowered.com/sub/' + nPackageID;
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strPackageName, 2  );
 }
 
 function ShowBundlePage( nBundleID, strName )
 {
-	var strURL = 'https://store.steampowered.com/store/bundle/' + nBundleID;
+	var strURL = 'https://store.steampowered.com/bundle/' + nBundleID;
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 
 function ShowSeasonsAndEpisodes( nAppID, strAppName )
 {
-	var strURL = 'https://store.steampowered.com/store/seasonsandepisodes/' + nAppID + '/?ver=nx';
+	var strURL = 'https://store.steampowered.com/seasonsandepisodes/' + nAppID + '/?ver=nx';
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strAppName, 2  );
 }
 
@@ -224,7 +224,7 @@ function ShowAppLibraryPage( nAppID )
 
 function ShowDiscoveryQueuePage()
 {
-	var strURL = 'https://store.steampowered.com/store/explore/';
+	var strURL = 'https://store.steampowered.com/explore/';
 	$.DispatchEvent( 'OpenRemoteContent', strURL, 'Your Discovery Queue', 2  );
 }
 
@@ -252,7 +252,7 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 	if ( !nViewedAppID )
 		nViewedAppID = 0;
 
-	var pScript = "\r\n\t\tvar nViewedAppID = %viewed_app%;\r\n\t\tvar postData = {};\r\n\t\tpostData.sessionid = %sessionid%;\r\n\t\tif ( nViewedAppID != 0 )\r\n\t\t\tpostData.appid_to_clear_from_queue = nViewedAppID;\r\n\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/store\/explore\/next',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: postData,\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tif ( data.empty_queue )\r\n\t\t\t\t{\r\n\t\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/store\/explore';\r\n\t\t\t\t\t$.DispatchEvent( 'OpenRemoteContent', strURL , 'Your Discovery Queue', 2 );\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tif ( !data.appid )\r\n\t\t\t\t{\r\n\t\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/store\/app\/' + data.appid + '\/?browsingqueue=1';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + data.name + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEvent( 'SetContentTitle', $.GetContextPanel(), data.name );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\tvar nViewedAppID = %viewed_app%;\r\n\t\tvar postData = {};\r\n\t\tpostData.sessionid = %sessionid%;\r\n\t\tif ( nViewedAppID != 0 )\r\n\t\t\tpostData.appid_to_clear_from_queue = nViewedAppID;\r\n\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/explore\/next',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: postData,\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tif ( data.empty_queue )\r\n\t\t\t\t{\r\n\t\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/explore';\r\n\t\t\t\t\t$.DispatchEvent( 'OpenRemoteContent', strURL , 'Your Discovery Queue', 2 );\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tif ( !data.appid )\r\n\t\t\t\t{\r\n\t\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t\t\treturn;\r\n\t\t\t\t}\r\n\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/app\/' + data.appid + '\/?browsingqueue=1';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + data.name + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEvent( 'SetContentTitle', $.GetContextPanel(), data.name );\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'There was an error loading your next queue item. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%viewed_app%', nViewedAppID );
 
@@ -276,7 +276,7 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 function GenerateNewDiscoveryQueue( strSessionID, eQueueType )
 {
 	$( '#DiscoveryQueue' ).AddClass( 'Loading' );
-	$.AsyncWebRequest( 'https://store.steampowered.com/store/explore/generatenewdiscoveryqueue',
+	$.AsyncWebRequest( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue',
 	{
 		type: 'POST',
 		data: { sessionid: strSessionID, queuetype: eQueueType },
@@ -385,7 +385,7 @@ function AddBundleToCart( strSessionID, nBundleID )
 function AddPackageToCartInternal( strSessionID, strType, nItemID )
 {
 	
-	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/store\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/store\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\r\n\t\t\t\ttry\r\n\t\t\t\t{\r\n\t\t\t\t\t\/\/ new event\r\n\t\t\t\t\tvar cItems = (data && data.itemcount) ? data.itemcount : 0;\r\n\t\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartItemCount', cItems );\r\n\t\t\t\t}\r\n\t\t\t\tcatch( e )\r\n\t\t\t\t{\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
+	var pScript = "\r\n\t\t$.AsyncWebRequest( 'https:\/\/store.steampowered.com\/cart\/addtocart',\r\n\t\t{\r\n\t\t\ttype: 'POST',\r\n\t\t\tdata: {\r\n\t\t\t\tsessionid: '%sessionid%',\r\n\t\t\t\taction: 'add_to_cart',\r\n\t\t\t\t%typeid%: %itemid%\r\n\t\t\t},\r\n\t\t\tsuccess: function (data)\r\n\t\t\t{\r\n\t\t\t\tvar strURL = 'https:\/\/store.steampowered.com\/cart';\r\n\t\t\t\tvar strTitle = 'Your Shopping Cart';\r\n\t\t\t\tvar pContentParent = $.TenfootController($.GetContextPanel()).GetContentParent();\r\n\r\n\t\t\t\t$.PushBackStack( $.GetContextPanel(), 'OpenRemoteContent( ' + strURL + ', ' + strTitle + ', 2 )', pContentParent );\r\n\t\t\t\t$.GetContextPanel().LoadPanelAsyncWithWebAuth( strURL, true );\r\n\t\t\t\t$.GetContextPanel().SetFocus();\r\n\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartChanged' );\r\n\r\n\t\t\t\ttry\r\n\t\t\t\t{\r\n\t\t\t\t\t\/\/ new event\r\n\t\t\t\t\tvar cItems = (data && data.itemcount) ? data.itemcount : 0;\r\n\t\t\t\t\t$.DispatchEventAsync( 0.0, 'ShoppingCartItemCount', cItems );\r\n\t\t\t\t}\r\n\t\t\t\tcatch( e )\r\n\t\t\t\t{\r\n\t\t\t\t}\r\n\t\t\t},\r\n\t\t\terror: function()\r\n\t\t\t{\r\n\t\t\t\t$.GetContextPanel().ShowError( 'Steam was unable to add this item to your cart. Please try again later.');\r\n\t\t\t}\r\n\t\t});";
 	pScript = pScript.replace( '%sessionid%', strSessionID );
 	pScript = pScript.replace( '%typeid%', strType );
 	pScript = pScript.replace( '%itemid%', nItemID );
@@ -416,7 +416,7 @@ function AddFreeLicense( strSessionID, strPanelID, subid, strDisplayName )
 
 	pPanel.AddClass( 'AddingLicense' );
 
-	$.AsyncWebRequest( 'https://store.steampowered.com/store/checkout/addfreelicense/' + subid,
+	$.AsyncWebRequest( 'https://store.steampowered.com/checkout/addfreelicense/' + subid,
 	{
 		type: 'POST',
 		data: { sessionid: strSessionID, 'ajax': true },
@@ -447,7 +447,7 @@ function ToggleWishlist( strSessionID, strPanelID, nAppID )
 
 	pPanel.AddClass( 'Requesting' );
 	var bAdd = pPanel.IsSelected();
-	var strURL = bAdd ? 'https://store.steampowered.com/store/api/addtowishlist/' : 'https://store.steampowered.com/store/api/removefromwishlist/';
+	var strURL = bAdd ? 'https://store.steampowered.com/api/addtowishlist/' : 'https://store.steampowered.com/api/removefromwishlist/';
 
 	// insert throbber
 	var pThrobber = $.CreatePanel( 'LoadingThrobber', pPanel, '' );
@@ -500,7 +500,7 @@ function ToggleIgnoreRecommendation( strSessionID, strPanelID, nAppID )
 	if ( !bChecked )
 		rgData.remove = 1;
 
-	$.AsyncWebRequest( 'https://store.steampowered.com/store/recommended/ignorerecommendation/',
+	$.AsyncWebRequest( 'https://store.steampowered.com/recommended/ignorerecommendation/',
 	{
 		type: 'POST',
 		data: rgData,

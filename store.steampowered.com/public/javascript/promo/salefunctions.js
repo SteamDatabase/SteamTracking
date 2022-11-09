@@ -285,7 +285,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		if ( g_AccountID )
 		{
 			new CScrollOffsetWatcher( $UserArea, function() {
-				$J.get( 'https://store.steampowered.com/store/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
+				$J.get( 'https://store.steampowered.com/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
 					GStoreItemData.AddStoreItemDataSet( data.StoreItemData );
 					RenderWishlistAndDLCArea( $UserArea, data.rgWishlistOnSale, data.rgDLCOnSale );
 				}).fail( function() {
@@ -1146,7 +1146,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 				'You need to log in first before you can vote.',
 				'Login'
 			).done( function() {
-				window.location = 'https://store.steampowered.com/store/login/?redir=app%2F__APPID__'.replace( /__APPID__/, nominatedid );
+				window.location = 'https://store.steampowered.com/login/?redir=app%2F__APPID__'.replace( /__APPID__/, nominatedid );
 			});
 			return;
 		}
@@ -1221,7 +1221,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 		var $Dialog = $J('<div/>');
 		$Dialog.append( $J('<p/>', {'class': 'steamawards_nomination_intro'}).html( 'Which award would you like to nominate %s for?'.replace( /%s/, appname ) ) );
 		$Dialog.append( $Form );
-		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'https://store.steampowered.com/store/steamawards/nominations/'}).text( 'Learn more about the Steam Awards' ) ) );
+		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'https://store.steampowered.com/steamawards/nominations/'}).text( 'Learn more about the Steam Awards' ) ) );
 
 		var fnSubmit = function()
 		{
@@ -1234,7 +1234,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 				return;
 			}
 
-			$J.post( 'https://store.steampowered.com/store/steamawards/nominategame', {
+			$J.post( 'https://store.steampowered.com/steamawards/nominategame', {
 				sessionid: g_sessionID,
 				nominatedid: nominatedid,
 				categoryid: categoryid,

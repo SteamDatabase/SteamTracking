@@ -132,7 +132,7 @@ function SavePreferences()
 	};
 
 	$J.post(
-		'https://store.steampowered.com/store/communityrecommendations/ajaxsavetrendingreviewspreferences/',
+		'https://store.steampowered.com/communityrecommendations/ajaxsavetrendingreviewspreferences/',
 		rgParams
 	).done( function( data ) {
 		if ( data.success == 1 )
@@ -191,12 +191,12 @@ function GetRecentReviews( bTreatAsFirstTimeLoad )
 
 	if ( !bTreatAsFirstTimeLoad && window.history && window.history.replaceState )
 	{
-		var strNewURL = 'https://store.steampowered.com/store/communityrecommendations/trendingreviews/?' + $J.param( rgParams );
+		var strNewURL = 'https://store.steampowered.com/communityrecommendations/trendingreviews/?' + $J.param( rgParams );
 		window.history.pushState( null, null, strNewURL );
 	}
 
 	gCurrentRequest = $J.get(
-		'https://store.steampowered.com/store/communityrecommendations/ajaxgetrecentreviews',
+		'https://store.steampowered.com/communityrecommendations/ajaxgetrecentreviews',
 		rgParams
 	)
 	.done( function( data ) {
