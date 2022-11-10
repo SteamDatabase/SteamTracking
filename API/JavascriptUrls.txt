@@ -577,6 +577,7 @@ ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/event_tools/moderation
+${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/broadcast
 ${PARTNER_BASE_URL}doc/store/coming_soon

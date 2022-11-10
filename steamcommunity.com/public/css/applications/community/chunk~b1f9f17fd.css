@@ -3099,6 +3099,15 @@ input.partnereventemails_HeadlineInput_2lHX9::placeholder {
   .partnereventspecialcategories_CategoryTitle_25wr6 {
   font-weight: bold;
 }
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_DocText_1Gmmx {
+  margin: 10px 0;
+}
+.partnereventspecialcategories_SteamAwardCategoryPicker_2LfKB
+  .partnereventspecialcategories_DocText_1Gmmx
+  a {
+  text-decoration: underline;
+}
 .partnereventspecialcategories_Halloween_1etNG {
   padding: 10px;
   background-color: #6d5934;
