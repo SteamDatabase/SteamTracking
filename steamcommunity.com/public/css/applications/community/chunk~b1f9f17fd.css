@@ -2521,6 +2521,33 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #fff;
   font-weight: 600;
 }
+.quiz .QuizScenarioSubmitCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  margin-bottom: 1em;
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton.Disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.2);
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton:enabled:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton:enabled:active:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+.quiz .QuizScenarioSubmitCtn .DialogButton:enabled:active.gpfocus {
+  background: rgba(255, 255, 255, 0.35);
+}
 .quiz .SaleSectionLabelCtn {
   flex-direction: column;
   align-items: center;
@@ -3563,6 +3590,8 @@ html.responsive.touch
 .salesocialsharedisplay_DoorOptionsContainer_cP3hd > :first-child {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .salesocialsharedisplay_DoorOption_2syb_ {
   display: none;

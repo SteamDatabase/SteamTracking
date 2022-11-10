@@ -1,42 +1,42 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7653581";
+var CLSTAMP = "7654182";
 (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []).push([
   [5140],
   {
-    85789: (e, r, t) => {
+    72423: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    14374: (e, r, t) => {
+    38965: (e, r, t) => {
       t.d(r, { SR: () => a });
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
       function a(e) {
         return "unknown EMsg ( " + e + " )";
       }
     },
-    74114: (e, r, t) => {
+    53506: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    49152: (e, r, t) => {
+    49377: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    45298: (e, r, t) => {
+    94842: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    53034: (e, r, t) => {
+    32770: (e, r, t) => {
       t.d(r, { Lj: () => B, nS: () => m });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -420,12 +420,12 @@ var CLSTAMP = "7653581";
         };
       })(B || (B = {}));
     },
-    15837: (e, r, t) => {
+    10287: (e, r, t) => {
       var i = t(33019);
-      t(89942), t(74114);
+      t(21529), t(53506);
       i.Message;
     },
-    9866: (e, r, t) => {
+    16562: (e, r, t) => {
       t.d(r, {
         $h: () => P,
         Am: () => F,
@@ -436,8 +436,8 @@ var CLSTAMP = "7653581";
         up: () => c,
       });
       var i = t(33019),
-        a = t(89942),
-        n = (t(74114), t(36423));
+        a = t(21529),
+        n = (t(53506), t(17287));
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -2481,7 +2481,7 @@ var CLSTAMP = "7653581";
             });
         })(I || (I = {}));
     },
-    36423: (e, r, t) => {
+    17287: (e, r, t) => {
       t.d(r, {
         Cu: () => l,
         VJ: () => u,
@@ -2490,7 +2490,7 @@ var CLSTAMP = "7653581";
         uV: () => d,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -3110,7 +3110,7 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    6601: (e, r, t) => {
+    89655: (e, r, t) => {
       t.d(r, {
         $m: () => T,
         Mr: () => ne,
@@ -3121,7 +3121,7 @@ var CLSTAMP = "7653581";
         qZ: () => d,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -6611,7 +6611,7 @@ var CLSTAMP = "7653581";
             });
         })(se || (se = {}));
     },
-    22251: (e, r, t) => {
+    80859: (e, r, t) => {
       t.d(r, {
         $n: () => J,
         $r: () => or,
@@ -6672,8 +6672,8 @@ var CLSTAMP = "7653581";
         zw: () => je,
       });
       var i = t(33019),
-        a = t(89942),
-        n = t(48481);
+        a = t(21529),
+        n = t(51861);
       const s = i.Message;
       function o(e) {
         return "unknown EChatRoomMemberStateChange ( " + e + " )";
@@ -15620,10 +15620,10 @@ var CLSTAMP = "7653581";
           };
         })(Lr || (Lr = {}));
     },
-    79845: (e, r, t) => {
+    70960: (e, r, t) => {
       t.d(r, { NA: () => s, Zh: () => u });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -15861,7 +15861,7 @@ var CLSTAMP = "7653581";
           });
       })(u || (u = {}));
     },
-    6955: (e, r, t) => {
+    18849: (e, r, t) => {
       t.d(r, {
         $4: () => u,
         kb: () => m,
@@ -15872,7 +15872,7 @@ var CLSTAMP = "7653581";
         TF: () => d,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -16284,7 +16284,7 @@ var CLSTAMP = "7653581";
           });
       })(d || (d = {}));
     },
-    61559: (e, r, t) => {
+    68141: (e, r, t) => {
       t.d(r, {
         $Z: () => s,
         RI: () => o,
@@ -16293,7 +16293,7 @@ var CLSTAMP = "7653581";
         tj: () => m,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -16697,7 +16697,7 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    48481: (e, r, t) => {
+    51861: (e, r, t) => {
       t.d(r, {
         $K: () => u,
         Ek: () => F,
@@ -16718,7 +16718,7 @@ var CLSTAMP = "7653581";
         wr: () => y,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -18257,7 +18257,7 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    44479: (e, r, t) => {
+    7856: (e, r, t) => {
       t.d(r, {
         Cm: () => d,
         Rt: () => b,
@@ -18268,8 +18268,8 @@ var CLSTAMP = "7653581";
         p$: () => m,
       });
       var i = t(33019),
-        a = t(89942),
-        n = t(36423);
+        a = t(21529),
+        n = t(17287);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -19163,11 +19163,11 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    6970: (e, r, t) => {
+    13509: (e, r, t) => {
       t.d(r, { BQ: () => s });
       var i = t(33019),
-        a = t(89942);
-      t(36423);
+        a = t(21529);
+      t(17287);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -19233,7 +19233,7 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    97789: (e, r, t) => {
+    55621: (e, r, t) => {
       t.d(r, {
         x0: () => c,
         Km: () => m,
@@ -19242,8 +19242,8 @@ var CLSTAMP = "7653581";
         f9: () => o,
       });
       var i = t(33019),
-        a = t(89942);
-      t(36423);
+        a = t(21529);
+      t(17287);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -19974,10 +19974,10 @@ var CLSTAMP = "7653581";
         }
       }
     },
-    6406: (e, r, t) => {
+    68743: (e, r, t) => {
       var i = t(33019),
-        a = t(89942);
-      t(74114);
+        a = t(21529);
+      t(53506);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -22002,7 +22002,7 @@ var CLSTAMP = "7653581";
             });
         })(I || (I = {}));
     },
-    19962: (e, r, t) => {
+    16137: (e, r, t) => {
       t.d(r, {
         AE: () => I,
         DI: () => U,
@@ -22013,8 +22013,8 @@ var CLSTAMP = "7653581";
         tj: () => c,
       });
       var i = t(33019),
-        a = t(89942),
-        n = t(36423);
+        a = t(21529),
+        n = t(17287);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -24000,15 +24000,15 @@ var CLSTAMP = "7653581";
           });
       })(I || (I = {}));
     },
-    23469: (e, r, t) => {
+    10943: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    58137: (e, r, t) => {
+    89823: (e, r, t) => {
       t.d(r, { $n: () => w, OE: () => d, T4: () => y });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -24850,10 +24850,10 @@ var CLSTAMP = "7653581";
           });
       })(w || (w = {}));
     },
-    67405: (e, r, t) => {
+    5797: (e, r, t) => {
       t.d(r, { KZ: () => l, XX: () => s });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -24976,7 +24976,7 @@ var CLSTAMP = "7653581";
         };
       })(l || (l = {}));
     },
-    78324: (e, r, t) => {
+    17298: (e, r, t) => {
       t.d(r, {
         F5: () => _,
         Pt: () => M,
@@ -24988,7 +24988,7 @@ var CLSTAMP = "7653581";
         yq: () => s,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -26130,7 +26130,7 @@ var CLSTAMP = "7653581";
             });
         })(R || (R = {}));
     },
-    22731: (e, r, t) => {
+    66351: (e, r, t) => {
       t.d(r, {
         Fi: () => _,
         Zi: () => m,
@@ -26140,8 +26140,8 @@ var CLSTAMP = "7653581";
         u: () => l,
       });
       var i = t(33019),
-        a = t(89942),
-        n = t(48481);
+        a = t(21529),
+        n = t(51861);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -26692,10 +26692,10 @@ var CLSTAMP = "7653581";
           };
         })(z || (z = {}));
     },
-    1406: (e, r, t) => {
+    66700: (e, r, t) => {
       var i = t(33019),
-        a = t(89942),
-        n = t(71576);
+        a = t(21529),
+        n = t(19339);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -27498,12 +27498,12 @@ var CLSTAMP = "7653581";
           });
       })(z || (z = {}));
     },
-    391: (e, r, t) => {
+    5640: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    85230: (e, r, t) => {
+    2215: (e, r, t) => {
       t.d(r, {
         DB: () => _,
         LD: () => b,
@@ -27512,7 +27512,7 @@ var CLSTAMP = "7653581";
         pR: () => h,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -28481,11 +28481,11 @@ var CLSTAMP = "7653581";
             });
         })(p || (p = {}));
     },
-    5572: (e, r, t) => {
+    95164: (e, r, t) => {
       t.d(r, { n: () => l, z: () => o });
       var i = t(33019),
-        a = t(89942),
-        n = t(71576);
+        a = t(21529),
+        n = t(19339);
       const s = i.Message;
       class o extends (1856 != t.j ? s : null) {
         constructor(e = null) {
@@ -28555,7 +28555,7 @@ var CLSTAMP = "7653581";
         };
       })(l || (l = {}));
     },
-    69889: (e, r, t) => {
+    90667: (e, r, t) => {
       t.d(r, {
         AP: () => Fe,
         B: () => l,
@@ -28574,8 +28574,8 @@ var CLSTAMP = "7653581";
         pl: () => Be,
       });
       var i = t(33019),
-        a = t(89942);
-      t(74114), t(36423);
+        a = t(21529);
+      t(53506), t(17287);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -33879,9 +33879,9 @@ var CLSTAMP = "7653581";
             });
         })(Ge || (Ge = {}));
     },
-    32836: (e, r, t) => {
+    31139: (e, r, t) => {
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -34599,20 +34599,20 @@ var CLSTAMP = "7653581";
           });
       })(_ || (_ = {}));
     },
-    71093: (e, r, t) => {
+    48184: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    66405: (e, r, t) => {
+    49884: (e, r, t) => {
       var i = t(33019);
-      t(89942), t(74114);
+      t(21529), t(53506);
       i.Message;
     },
-    26053: (e, r, t) => {
+    58049: (e, r, t) => {
       t.d(r, { Ly: () => ne, kX: () => X, mm: () => T, q5: () => N });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -37841,11 +37841,11 @@ var CLSTAMP = "7653581";
           });
       })(ne || (ne = {}));
     },
-    85467: (e, r, t) => {
+    59394: (e, r, t) => {
       t.d(r, { HU: () => m, Ug: () => p, d6: () => E });
       var i = t(33019),
-        a = t(89942);
-      t(85789), t(74114);
+        a = t(21529);
+      t(72423), t(53506);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -39668,7 +39668,7 @@ var CLSTAMP = "7653581";
           };
         })(X || (X = {}));
     },
-    71576: (e, r, t) => {
+    19339: (e, r, t) => {
       t.d(r, {
         Qn: () => v,
         VJ: () => U,
@@ -39679,8 +39679,8 @@ var CLSTAMP = "7653581";
         oY: () => T,
       });
       var i = t(33019),
-        a = t(89942);
-      t(49152), t(74114);
+        a = t(21529);
+      t(49377), t(53506);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -41757,10 +41757,10 @@ var CLSTAMP = "7653581";
           });
       })(U || (U = {}));
     },
-    77690: (e, r, t) => {
+    30481: (e, r, t) => {
       var i = t(33019),
-        a = t(89942),
-        n = (t(49152), t(85789), t(71576));
+        a = t(21529),
+        n = (t(49377), t(72423), t(19339));
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -42016,9 +42016,9 @@ var CLSTAMP = "7653581";
           });
       })(m || (m = {}));
     },
-    36958: (e, r, t) => {
+    59246: (e, r, t) => {
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -42272,10 +42272,10 @@ var CLSTAMP = "7653581";
           };
         })(m || (m = {}));
     },
-    93545: (e, r, t) => {
+    20507: (e, r, t) => {
       t.d(r, { AX: () => _, Sz: () => F, _w: () => b });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -43190,14 +43190,14 @@ var CLSTAMP = "7653581";
           });
       })(F || (F = {}));
     },
-    45152: (e, r, t) => {
+    86654: (e, r, t) => {
       var i = t(33019);
-      t(89942);
+      t(21529);
       i.Message;
     },
-    26494: (e, r, t) => {
+    51747: (e, r, t) => {
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -44247,10 +44247,10 @@ var CLSTAMP = "7653581";
           };
         })(h || (h = {}));
     },
-    85556: (e, r, t) => {
+    5844: (e, r, t) => {
       t.d(r, { A_: () => u, Q_: () => c, kI: () => d });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -44653,7 +44653,7 @@ var CLSTAMP = "7653581";
           };
         })(b || (b = {}));
     },
-    89826: (e, r, t) => {
+    84037: (e, r, t) => {
       t.d(r, {
         Jv: () => g,
         Ky: () => b,
@@ -44666,7 +44666,7 @@ var CLSTAMP = "7653581";
         zQ: () => s,
       });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
@@ -45943,10 +45943,10 @@ var CLSTAMP = "7653581";
             });
         })(W || (W = {}));
     },
-    31040: (e, r, t) => {
+    14761: (e, r, t) => {
       t.d(r, { Kp: () => B, Mm: () => s, VG: () => m, dF: () => b });
       var i = t(33019),
-        a = t(89942);
+        a = t(21529);
       const n = i.Message;
       class s extends (1856 != t.j ? n : null) {
         constructor(e = null) {
