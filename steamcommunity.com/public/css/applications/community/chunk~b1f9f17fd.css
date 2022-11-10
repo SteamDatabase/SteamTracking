@@ -2343,6 +2343,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   margin-left: auto;
   margin-right: auto;
 }
+.salequestdisplay_questCtn_14UQz img {
+  max-width: 100%;
+}
 .storesuggest_SuggestContainer_2n5ab ._DialogLayout {
   margin-bottom: 2px;
 }
@@ -2445,6 +2448,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   text-decoration: underline;
 }
 .salequiz_description_5YDkS {
+  display: flex;
+  flex-direction: column;
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 2em;
@@ -2452,6 +2457,9 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #fff;
 }
 .salequiz_description2_h6YBi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 3em;
@@ -2470,6 +2478,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   max-width: 670px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 .salequiz_questionCtn_3VzRv .DialogButton {
   width: 250px;
@@ -2505,6 +2515,41 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .DialogRoundCheckboxField_Control.Active
   .DialogRoundCheckboxField_InnerCircle {
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff61 80%);
+}
+.salequiz_questionCtn_3VzRv .DialogLabel {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+.quiz .SaleSectionLabelCtn {
+  flex-direction: column;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+.quiz .SaleSectionLabelCtn .SaleSectionHeader {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+}
+.quiz .SaleSectionLabelCtn .SaleSectionSubtitle {
+  text-align: center;
+}
+.quest .SaleSectionLabelCtn {
+  flex-direction: column;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+.quest .SaleSectionLabelCtn .SaleSectionHeader {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+}
+.quest .SaleSectionLabelCtn .SaleSectionSubtitle {
+  text-align: center;
 }
 .salequiz_answerCtn_BiPrj {
   padding-bottom: 1em;

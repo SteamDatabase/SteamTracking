@@ -7358,7 +7358,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .salerewardshelfdisplay_RewardContainer_10sVo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1em;
 }
 .salerewardshelfdisplay_RewardShelfCtn_2u8Xp {
@@ -7366,6 +7366,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   flex-direction: row;
   justify-content: space-evenly;
   gap: 1em;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp img {
+  max-width: 100%;
+}
+.salerewardshelfdisplay_RewardShelfCtn_2u8Xp video {
+  max-width: 100%;
 }
 .partnereventshared_ErrorPage_1HZBl {
   padding: 24px;
