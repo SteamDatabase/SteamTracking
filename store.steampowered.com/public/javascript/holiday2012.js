@@ -127,7 +127,7 @@ function ScrollPromoCaps( name, delta, pageSize, totalCount, params )
 		params.country = 'US';
 		new Ajax.Updater(
 			targetid,
-			'https://store.steampowered.com/search/tab',
+			'https://store.steampowered.com/store/search/tab',
 			{ parameters: params, method: 'get', insertion: 'bottom', onComplete: UpdateSmallCapControl.bind( window, targetid, delta, pageSize, totalCount ) } );
 	}
 	else

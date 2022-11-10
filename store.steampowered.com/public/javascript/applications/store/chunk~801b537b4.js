@@ -14043,7 +14043,8 @@
       }
       const f = { include_tag_count: 20, include_basic_info: !0 };
       function b(e) {
-        const t = o.jg.Get();
+        const t = o.jg.Get(),
+          r = e.GetAllLanguagesWithSomeSupport() || [];
         return (
           !e ||
           (0 == e.GetStoreItemType() &&
@@ -14053,8 +14054,9 @@
           t.BExcludeTagIDs(e.GetTagIDs()) ||
           e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)) ||
           !(
+            0 == r.length ||
             e.BHasSomeLanguageSupport(0) ||
-            t.BIsAnyLanguageEnabled(e.GetAllLanguagesWithSomeSupport())
+            t.BIsAnyLanguageEnabled(r)
           )
         );
       }

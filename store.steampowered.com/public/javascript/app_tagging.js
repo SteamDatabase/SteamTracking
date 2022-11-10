@@ -1,7 +1,7 @@
 
 function TagLink( tag, language )
 {
-	var url = 'https://store.steampowered.com/tags/';
+	var url = 'https://store.steampowered.com/store/tags/';
 	if ( language )
 		url += language + '/';
 	else
@@ -278,7 +278,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			{
 				bYourPopularTagsRequested = true;
 
-				var url = 'https://store.steampowered.com/tagdata/myfrequenttags';
+				var url = 'https://store.steampowered.com/store/tagdata/myfrequenttags';
 				var mytag_version = WebStorage.GetLocal( 'mytag_version', true );
 				if ( mytag_version )
 					url += '?v=' + parseInt( mytag_version );
@@ -294,7 +294,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				});
 
 				// also load the global popular tags, to populate the autocomplete with
-				$J.get( 'https://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
+				$J.get( 'https://store.steampowered.com/store/tagdata/populartags/english').done( function ( data ) {
 					for ( var i = 0; i < data.length; i++ )
 						rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy
 				});
@@ -413,7 +413,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		else if ( eReportType )
 			rgParams['reporttype'] = eReportType;
 
-		$J.post( 'https://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
+		$J.post( 'https://store.steampowered.com/store/tagdata/tagapp', rgParams ).done( function( data ) {
 
 			bAppliedTag = true;
 
@@ -938,7 +938,7 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 			$Element.append( $J('<div/>', {'class':'browse_tag_game_total'}).html( '&nbsp;' ) );
 			var rgParams = $J.extend( { name: strTagName }, rgDefaultGetParams );
 
-			$J.get( 'https://store.steampowered.com/tagdata/gettaggames/' + strTagLanguage + '/' + unTagID + '/', rgParams ).done( function ( html ) {
+			$J.get( 'https://store.steampowered.com/store/tagdata/gettaggames/' + strTagLanguage + '/' + unTagID + '/', rgParams ).done( function ( html ) {
 				$Element.html( html );
 				$Element.InstrumentLinks();
 				if ( typeof GDynamicStore != 'undefined' )
@@ -1074,7 +1074,7 @@ function InitBannedTagModal( appid, $BanModal )
 						reporttype: -1,
 						unban: 1
 					};
-					$J.post( 'https://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
+					$J.post( 'https://store.steampowered.com/store/tagdata/tagapp', rgParams ).done( function( data ) {
 						$Row.hide( 'fast' );
 					}).fail( function () {
 						ShowAlertDialog( 'Unban Tag', 'There was a problem banning or unbanning this tag.  Please try again later.' );
@@ -1148,7 +1148,7 @@ CTagAutoComplete.prototype.LoadPopularTags = function( bForce )
 	if( !bForce && g_rgGlobalPopularTags.length > 0 )
 		return;
 
-	$J.get( 'https://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
+	$J.get( 'https://store.steampowered.com/store/tagdata/populartags/english').done( function ( data ) {
 		for ( var i = 0; i < data.length; i++ )
 		{
 			g_rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy

@@ -9615,7 +9615,8 @@
             a + 1,
             null
           )),
-            (this.m_rgAnswerToCategoryID[a] = t);
+            (this.m_rgAnswerToCategoryID[a] =
+              (null == t ? void 0 : t.length) > 0 ? t : null);
         }
         SetAnswer(e, t) {
           const a = Math.min(e, 64);
@@ -9627,7 +9628,14 @@
             (this.m_rgAnswerChosen[a] = t);
         }
         GetAnswerCategories() {
-          return this.m_rgAnswerToCategoryID;
+          const e = new Array();
+          return (
+            this.m_rgAnswerToCategoryID.forEach((t) => {
+              (null == t ? void 0 : t.length) > 0 &&
+                t.filter(Boolean).forEach((t) => e.push(t));
+            }),
+            e
+          );
         }
         GetAnswers() {
           return this.m_rgAnswerChosen;
@@ -9988,8 +9996,8 @@
               n.createElement(jt.BQ, {
                 checked: t === f,
                 onChange: (a) => {
-                  e.category_id &&
-                    oa.Get().SetAnswerCategory(l, a ? e.category_id : null),
+                  e.category_ids &&
+                    oa.Get().SetAnswerCategory(l, a ? e.category_ids : null),
                     D(a ? t : null);
                 },
                 disabled: t === f,
@@ -10246,10 +10254,22 @@
                 const e = oa.Get().GetAnswerCategories(),
                   n = new Map();
                 e.forEach((e) => {
-                  null != e && n.set(e, 1 + (n.has(e) ? n.get(e) : 0));
+                  null != e &&
+                    null != e &&
+                    n.set(e, 1 + (n.has(e) ? n.get(e) : 0));
                 }),
                   "dev" == G.De.WEB_UNIVERSE &&
-                    (console.log("rgSelection", (0, vt.ZN)(e)),
+                    (console.log(
+                      "rgSelection",
+                      (0, vt.ZN)(
+                        e
+                          .filter(Boolean)
+                          .map((e) =>
+                            t.answer_categories.find((t) => t.category_id == e)
+                          )
+                          .map((e) => e.category_name)
+                      )
+                    ),
                     console.log(
                       "rgCategories",
                       (0, vt.ZN)(t.answer_categories)
@@ -10265,7 +10285,8 @@
                   console.log(
                     "Winning Category: " +
                       (null == m ? void 0 : m.category_name),
-                    (0, vt.ZN)(m)
+                    (0, vt.ZN)(m),
+                    m.door_index
                   ),
                   c.Zb.Get()
                     .OpenDoor(m.door_index, !0, "", a)

@@ -1620,6 +1620,7 @@
     "Sale_Section_Quiz_Scenario_Add": "Add new Scenario Category",
     "Sale_Section_Quiz_ScenarioTitle": "Scenario Categories/Outcomes",
     "Sale_Section_Quiz_Answer_Category": "Scenario Category for this Answer",
+    "Sale_Section_Quiz_Answer_Category_ttip": "You can choose more than one category per answer. At the end, the category with the most choices will be the result.",
     "Sale_Section_Quiz_Choose_Question_Branch": "Question to Reveal on Answer Selection",
     "Sale_Section_Quiz_AnswerTerminal": "Terminal Answer",
     "Sale_Section_Quiz_AnswerTerminal_ttip": "This answer does not reveal another question. Instead after choosing this answer the user get the opportunity to complete and submit their quiz or to retake it.",

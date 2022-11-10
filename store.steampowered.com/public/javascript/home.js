@@ -128,7 +128,7 @@ GHomepage = {
 
 		if ( InitUsabilityTracker )
 		{
-			var tracker = InitUsabilityTracker( "https:\/\/store.steampowered.com\/default\/usabilitytracking\/" );
+			var tracker = InitUsabilityTracker( "https:\/\/store.steampowered.com\/store\/default\/usabilitytracking\/" );
 			tracker.SetPostCallback( this.UsabilityTrackerPostCallback );
 		}
 	},
@@ -259,7 +259,7 @@ GHomepage = {
 			if ( g_AccountID != 0 || GHomepage.bShowAllRecentlyUpdated )
 			{
 				$J.ajax( {
-					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
+					url: "https:\/\/store.steampowered.com\/store\/default\/home_additional\/",
 					data: {
 						bNeedRecommendedCurators: 0
 					},
@@ -466,7 +466,7 @@ GHomepage = {
 		// More Content
 		if( bHaveUser )
 		{
-			$J('#content_more').autoloader({template_url: 'https://store.steampowered.com/explore/render/', recommendations_url: 'https://store.steampowered.com/explore/recommended/', additional_url: 'https://store.steampowered.com/explore/more'});
+			$J('#content_more').autoloader({template_url: 'https://store.steampowered.com/store/explore/render/', recommendations_url: 'https://store.steampowered.com/store/explore/recommended/', additional_url: 'https://store.steampowered.com/store/explore/more'});
 		}
 		else
 		{
@@ -1078,7 +1078,7 @@ GHomepage = {
 
 							for( var i=0; i<rgData.tags.length; i++)
 							{
-								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab_preview' );
+								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab_preview' );
 								$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
 							}
 							$elInfoDiv.append($elTagContainer);
@@ -2186,7 +2186,7 @@ GHomepage = {
 			var rgTag = GDynamicStore.s_rgRecommendedTags[i];
 			if ( rgGenreTags.indexOf( rgTag.tagid ) == -1 )
 			{
-				var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgTag.name ) ), 'gutter' );
+				var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgTag.name ) ), 'gutter' );
 				$TagList.append( $J('<a/>', {'class': 'gutter_item', 'href' : url}).text( rgTag.name ) );
 
 				if ( ++cTagsFound >= 5 )
@@ -2458,7 +2458,7 @@ CHomeSettings.prototype.OnCheckboxToggle = function( strSettingName, $Checkbox )
 	this.m_Settings[strSettingName] = !bEnabled;
 
 	var _this = this;
-	$J.post( 'https://store.steampowered.com/dynamicstore/updatehomeviewsettings', {
+	$J.post( 'https://store.steampowered.com/store/dynamicstore/updatehomeviewsettings', {
 		sessionid: g_sessionID,
 		section: this.m_strSectionName,
 		settings: V_ToJSON( this.m_Settings )
@@ -2906,7 +2906,7 @@ var g_bDisableAutoloader = false;
 					if ( nLastViewCalc < scrollTop )
 					{
 						bLoggedView = true;
-						$J.post( 'https://store.steampowered.com/explore/logfeedview/')
+						$J.post( 'https://store.steampowered.com/store/explore/logfeedview/')
 					}
 				}
 			}
@@ -3380,7 +3380,7 @@ function InitTopSellersControls( $Controls, RangeInitData )
 
 		bAJAXInFlight = true;
 		$TabItems.addClass('loading');
-		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P } ).done( function( data ) {
+		$J.get( 'https://store.steampowered.com/store/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P } ).done( function( data ) {
 			if ( data.storeitemdata && data.html )
 			{
 				GStoreItemData.AddStoreItemDataSet( data.storeitemdata );

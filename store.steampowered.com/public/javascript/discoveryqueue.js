@@ -41,7 +41,7 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 	this.m_rgItems = [];
 	this.m_$Queue.empty();
 	this.m_iActiveItem = 0;
-	this.m_$Overlay.attr( 'href', 'https://store.steampowered.com/explore/next/');
+	this.m_$Overlay.attr( 'href', 'https://store.steampowered.com/store/explore/next/');
 
 	for ( var i = 0; i < rgDiscoveryQueue.length; i++ )
 	{
@@ -303,7 +303,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 	CDiscoveryQueue.sm_bCustomizeDialogVisible = true;
 
 	// pass the queue type if it's set so we guarentee which queue to get the settings from
-	var strSettingsURL = 'https://store.steampowered.com/explore/discoveryqueuesettings/';
+	var strSettingsURL = 'https://store.steampowered.com/store/explore/discoveryqueuesettings/';
 	if ( typeof g_eDiscoveryQueueType !== "undefined" )
 		strSettingsURL += g_eDiscoveryQueueType;
 
@@ -412,7 +412,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 			if ( typeof g_eDiscoveryQueueType !== "undefined" )
 				nQueueType = g_eDiscoveryQueueType;
 
-			$J.post( 'https://store.steampowered.com/explore/updatediscoveryqueuesettings',{
+			$J.post( 'https://store.steampowered.com/store/explore/updatediscoveryqueuesettings',{
 				sessionid: g_sessionID,
 				settings: V_ToJSON(oSettings),
 				queuetype: nQueueType,
@@ -439,11 +439,11 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 CDiscoveryQueue.prototype.GenerateNewQueue = function()
 {
 	var _this = this;
-	$J.post( 'https://store.steampowered.com/explore/generatenewdiscoveryqueue', {
+	$J.post( 'https://store.steampowered.com/store/explore/generatenewdiscoveryqueue', {
 		sessionid: g_sessionID,
 		queuetype: this.m_eQueueType,
 	}).done( function ( data ) {
-		window.location = 'https://store.steampowered.com/explore/next';
+		window.location = 'https://store.steampowered.com/store/explore/next';
 	}).fail( function() {
 		ShowAlertDialog( 'Start another queue >>', 'There was a problem saving your preferences.  Please try again later.' );
 	} );

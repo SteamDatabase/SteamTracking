@@ -26975,37 +26975,45 @@
         const { quiz_section: t, answer: a, fnOnDirty: n } = e,
           [i, r, o] = (0, c.SZ)(() => [
             t.quiz_type,
-            a.category_id,
+            a.category_ids || [],
             t.answer_categories,
           ]),
           l = (0, d.useMemo)(() => {
             if ((null == o ? void 0 : o.length) > 0) {
-              const e = o.map((e) => ({
+              return o.map((e) => ({
                 label: e.category_name,
-                data: e.category_id,
+                value: e.category_id,
               }));
-              return (
-                e.push({
-                  label: (0, u.Xx)("#EventEditor_NoneLanguage"),
-                  data: null,
-                }),
-                e
-              );
             }
             return [];
           }, [o]);
         return Boolean("scenario" == i || "branching" == i)
-          ? d.createElement(m.ry, {
-              strDropDownClassName: (0, _.Z)(h().DropDownScroll),
-              label: (0, u.Xx)("#Sale_Section_Quiz_Answer_Category"),
-              rgOptions: l,
-              selectedOption: r,
-              onChange: (e) => {
-                a.category_id != e.data && ((a.category_id = e.data), n());
+          ? d.createElement(
+              X.HP,
+              {
+                toolTipContent: (0, u.Xx)(
+                  "#Sale_Section_Quiz_Answer_Category_ttip"
+                ),
               },
-              bDisableMouseOverlay: !0,
-              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-            })
+              d.createElement(
+                m.__,
+                null,
+                (0, u.Xx)("#Sale_Section_Quiz_Answer_Category")
+              ),
+              d.createElement(bt.ZP, {
+                isSearchable: !0,
+                isMulti: !0,
+                isClearable: !0,
+                onChange: (e) => {
+                  const t = (null == e ? void 0 : e.map((e) => e.value)) || [];
+                  (a.category_ids = t), n();
+                },
+                value: r.map((e) => l.find((t) => t.value == e)),
+                options: l,
+                defaultMenuIsOpen: !1,
+                menuPlacement: "top",
+              })
+            )
           : null;
       }
       function Kt(e) {
