@@ -233,7 +233,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 
-function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgTagGenres = null )
+function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
@@ -320,17 +320,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
-
-	// Order and display the tag / genre section (a carousel of square box that lead you to custom genre/tag sale pages, based
-	// on the users preference, otherwise, fallback to the random order that they were provided to us in.
-	var $elTagGenreBlock = $J('#sale_tag_genre');
-	if( rgTagGenres && $elTagGenreBlock.length )
-	{
-		new CScrollOffsetWatcher( $elTagGenreBlock, function() {
-			const rgPriorityOrderTagGenre = PrioritizeTagGenreList( rgTagGenres );
-			RenderTagGenreBlock( rgPriorityOrderTagGenre );
-		} );
-	}
 
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
@@ -1167,9 +1156,9 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 			if ( oCategory.categoryid == -1 )
 				continue;
 
-			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 63;
+			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 74;
 
-			if ( oCategory.categoryid == 63 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
+			if ( oCategory.categoryid == 74 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
 				bHideCategory = true;
 
 			if ( bHideCategory )

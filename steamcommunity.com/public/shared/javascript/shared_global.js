@@ -3220,6 +3220,12 @@ function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	});
 }
 
+function UseSmallScreenMenu()
+{
+	// the new mobile app uses the small screen menu regardless of screen size
+	return ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) || ( window.UseNewMobileAppMode && window.UseNewMobileAppMode() );
+}
+
 function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
 {
 	var $Link = $JFromIDOrElement(elemLink);
@@ -3227,7 +3233,7 @@ function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlt
 
 	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
 	{
-		if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
+		if ( $Popup.hasClass( 'responsive_slidedown') && UseSmallScreenMenu() )
 		{
 			$Popup.stop().slideDown();
 		}
@@ -3265,7 +3271,7 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 	}
 	// start hiding in a little bit, have to let the fade in animation start before we can cancel it
 
-	if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
+	if ( $Popup.hasClass( 'responsive_slidedown') && UseSmallScreenMenu() )
 		$Popup.stop().slideUp();
 	else
 		window.setTimeout( function() { HideWithFade( $Popup ); }, 33 );
@@ -3387,7 +3393,7 @@ function BindAutoFlyoutEvents()
 	var fnShowFlyout = function( $Tab, bIsHover, bTakeFocus )
 	{
 		var $Content = $J('#' + $Tab.data('flyout') );
-		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
+		var bResponsiveSlidedownMenu = UseSmallScreenMenu() && $Content.hasClass('responsive_slidedown');
 
 		if ( !$Content.length || $Content.data('flyout-event-running') ||
 			(bIsHover && bResponsiveSlidedownMenu ) )
@@ -3407,7 +3413,7 @@ function BindAutoFlyoutEvents()
 		if ( !$Content.data('flyout-events-bound') )
 		{
 			$Content.on('mouseleave.Flyout', function( e ) {
-				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown') )
+				if ( UseSmallScreenMenu() && $Content.hasClass('responsive_slidedown') )
 					return;
 
 				if ( $Tab.is( e.relatedTarget ) || $J.contains( $Tab[0], e.relatedTarget ) )
@@ -3488,7 +3494,7 @@ function BindAutoFlyoutEvents()
 	$J(document).on('mouseleave.Flyout', '.flyout_tab', function(e) {
 		var $Tab = $J(this);
 		var $Content = $J('#' + $Tab.data('flyout') );
-		var bResponsiveSlidedownMenu = window.UseSmallScreenMode && window.UseSmallScreenMode() && $Content.hasClass('responsive_slidedown');
+		var bResponsiveSlidedownMenu = UseSmallScreenMenu() && $Content.hasClass('responsive_slidedown');
 
 		if ( !$Content.length || $Content.data('flyout-event-running') || bResponsiveSlidedownMenu ||
 			$Content.is( e.relatedTarget ) || $J.contains( $Content[0], e.relatedTarget ) )

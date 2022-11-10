@@ -10,35 +10,13 @@
   position: relative;
   box-shadow: 0 0 10px #000;
   font-size: 0px;
+  transition: box-shadow 0.25s ease-out;
+}
+.image_GameImage_2imw0:hover {
+  box-shadow: 0 0 15px #68c0f2;
 }
 .image_GameImage_2imw0 img {
   max-width: 570px;
-}
-.image_TextTop_76FjT {
-  position: absolute;
-  top: 0px;
-  width: 570px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: #fff;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.image_TextBottom_otBhX {
-  position: absolute;
-  bottom: 0px;
-  height: 233px;
-  width: 570px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: #fff;
-  display: block;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 20px;
 }
 A:visited {
   color: #fff;
@@ -57,9 +35,10 @@ A:active {
   text-decoration: none;
 }
 .image_Legal_7NnVB {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  color: #56707f;
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 11px;
+  width: 100%;
+  color: #58636a;
   text-align: left;
 }
 .image_MessageFooter_2h7_p {
@@ -68,34 +47,60 @@ A:active {
   min-height: 45px;
   margin-top: 11px;
   display: flex;
+  flex-direction: column;
 }
-.image_MessageFooter_2h7_p .image_Legal_7NnVB {
-  flex: auto;
-  align-self: center;
+.image_MessageFooter_2h7_p .image_ButtonAndPriceCtn_39vPn {
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.image_NoButton_2FsuD {
+  flex-direction: row-reverse;
+}
+.image_NoButton_2FsuD .image_Btn_2utr- {
+  display: none;
+}
+.image_NoButton_2FsuD .image_Legal_7NnVB {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .image_Btn_2utr- {
+  position: relative;
   font-family: "Motiva Sans", Sans-serif;
   font-size: 20px;
+  letter-spacing: 2px;
   color: #fff;
   text-transform: uppercase;
-  background: linear-gradient(to right, #233c50 0%, #233c50 90%);
+  background-color: #56627b;
   border-radius: 3px;
   font-weight: 400;
-  margin: 2px auto;
-  padding: 16px 20px 0px;
+  padding: 16px 30px 0px;
   height: 30px;
   width: fit-content;
+  flex-grow: 1;
   line-height: 15px;
-  transition: background 0.15s ease-out;
-}
-.image_Btn_2utr- a,
-.image_Btn_2utr- a:hover {
-  color: #fff;
+  transition: box-shadow 0.25s ease-out, background-color 0.25s ease-out;
 }
 .image_Btn_2utr-:hover {
-  background: linear-gradient(to right, #68c0f2 0%, #427d9f 90%);
+  background-color: #427d9f;
   box-shadow: 2px 2px 10px #000;
-  transition: background 0.25s ease-in;
+  cursor: pointer;
+}
+.image_MessagePriceCtn_uhCE2 {
+  margin-left: 12px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.image_MessagePriceCtn_uhCE2 .StoreSalePriceWidgetContainer {
+  height: 46px;
+  margin-top: 0px;
+  background: rgba(0, 0, 0, 0.3);
 }
 .image_Price_3TzbJ {
   height: 59px;
@@ -106,9 +111,8 @@ A:active {
   text-align: center;
   right: 0px;
 }
-.image_NoPrice_1oXJH,
-.image_Price_3TzbJ {
-  width: 140px;
+.image_NoPrice_1oXJH {
+  width: 0px;
   float: right;
 }
 .image_PriceReal_1IET- {
@@ -227,6 +231,7 @@ A:active {
     padding-bottom: 5px;
     width: 100%;
     margin-top: 4px;
+    flex-grow: 1;
   }
 }
 html.responsive
@@ -241,6 +246,7 @@ html.responsive
   right: 0;
   bottom: 0;
   left: 0;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
   display: flex;
   flex-direction: column;
 }
@@ -251,14 +257,13 @@ html.responsive
 }
 .messagelist_CarouselBar_O7VJK {
   background: linear-gradient(180deg, #111318 0%, rgba(14, 16, 20, 0.46) 100%);
-  border: 1px solid #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .messagelist_CarouselBar_O7VJK .messagelist_Content_1qtg3 {
   max-width: 570px;
   padding: 8px 20px;
   margin: 0 auto;
-  height: 32px;
+  height: 40px;
   display: flex;
 }
 .messagelist_CarouselBar_O7VJK
@@ -267,9 +272,9 @@ html.responsive
 .messagelist_CarouselBar_O7VJK
   .messagelist_Content_1qtg3
   .messagelist_RightArrow_2WuPu {
-  visibility: hidden;
-  width: 32px;
-  height: 32px;
+  opacity: 0.1;
+  width: 42px;
+  height: 42px;
   color: #c6d4df;
 }
 .messagelist_CarouselBar_O7VJK
@@ -279,7 +284,7 @@ html.responsive
   .messagelist_Content_1qtg3
   .messagelist_RightArrow_2WuPu.messagelist_Active_cwA5j {
   cursor: pointer;
-  visibility: visible;
+  opacity: 1;
 }
 .messagelist_CarouselBar_O7VJK
   .messagelist_Content_1qtg3

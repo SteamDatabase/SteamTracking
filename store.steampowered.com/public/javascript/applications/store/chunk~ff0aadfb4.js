@@ -41,9 +41,9 @@
       "use strict";
       n.d(e, {
         Bo: () => L,
-        FG: () => y,
+        FG: () => D,
         N: () => I,
-        P4: () => D,
+        P4: () => y,
         mb: () => C,
         yS: () => S,
       });
@@ -52,7 +52,7 @@
         i = n.n(o),
         r = n(22188),
         l = n(67294),
-        s = (n(26149), n(54698), n(37662), n(3389)),
+        s = (n(26149), n(92398), n(37662), n(3389)),
         c = n(76776),
         u = n(39388),
         d = n(77636),
@@ -60,8 +60,8 @@
         p = n(89673),
         m = (n(82946), n(48780)),
         v = n(77520),
-        E = n(93976),
-        g = n(64839),
+        g = n(93976),
+        E = n(64839),
         f = n(90666);
       function h(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
@@ -171,7 +171,7 @@
                 );
               }
             } catch (t) {
-              const e = (0, E.l)(t);
+              const e = (0, g.l)(t);
               console.error(
                 "CCuratorListStore.LoadListDetails: error on load: " +
                   e.strErrorMsg,
@@ -265,7 +265,7 @@
                 );
               }
             } catch (t) {
-              const e = (0, E.l)(t);
+              const e = (0, g.l)(t);
               console.error(n + ": error on load: " + e.strErrorMsg, e);
             }
             return [];
@@ -290,7 +290,7 @@
         }
       }
       function I(t, e) {
-        const n = (0, g.NW)();
+        const n = (0, E.NW)();
         return (
           (0, l.useEffect)(() => {
             if (L.Get().GetListDetails(e) || !t) return;
@@ -334,7 +334,7 @@
           L.Get().GetListDetails(e)
         );
       }
-      function D(t) {
+      function y(t) {
         const e = t && c.sV.GetClanInfoByClanAccountID(t),
           [n, a] = (0, l.useState)(!!e);
         return (
@@ -349,19 +349,19 @@
           e
         );
       }
-      function y(t) {
+      function D(t) {
         return (
           Boolean(null == t ? void 0 : t.sale_clan_event_gid) &&
           Boolean(null == t ? void 0 : t.sale_clan_steamid)
         );
       }
       function S(t) {
-        const e = (0, g.NW)(),
-          n = y(t) ? t.sale_clan_event_gid : null,
+        const e = (0, E.NW)(),
+          n = D(t) ? t.sale_clan_event_gid : null,
           o = n && _.j1.GetClanEventModel(n);
         return (
           (0, l.useEffect)(() => {
-            if (o || !y(t)) return;
+            if (o || !D(t)) return;
             const r = i().CancelToken.source();
             return (
               (() => {
@@ -385,7 +385,7 @@
     },
     87541: (t, e, n) => {
       "use strict";
-      n.d(e, { B: () => G, O: () => w });
+      n.d(e, { B: () => w, O: () => G });
       var a = n(67294),
         o = n(77442),
         i = n(7707),
@@ -399,20 +399,20 @@
         p = n(67777),
         m = n(85732),
         v = n(88335),
-        E = n.n(v),
-        g = n(88592),
+        g = n.n(v),
+        E = n(88592),
         f = n(9487),
         h = (n(45031), n(75896)),
         C = n(72062),
         b = n(72842),
         L = n(5146),
         I = n(65160),
-        D = n(65924),
-        y = n(7573),
+        y = n(65924),
+        D = n(7573),
         S = n(41311),
         A = n(90666);
-      const w = "capsule_index_";
-      function G(t) {
+      const G = "capsule_index_";
+      function w(t) {
         const {
             capsule: e,
             bShowParentApp: n,
@@ -421,19 +421,19 @@
             index: m,
             bAutoFocus: v,
           } = t,
-          [g, f] = a.useState(!1),
+          [E, f] = a.useState(!1),
           [b] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
           [I] = (0, d.vs)(n && (null == b ? void 0 : b.GetParentAppID()), o.bk),
-          G = (0, D.bJ)(),
+          w = (0, y.bJ)(),
           O = (0, A.id)();
         if (!b) return null;
         const P = Boolean(I);
         return a.createElement(
           r.s,
           {
-            className: (0, y.Z)({
-              [E().OuterCapsuleContainer]: !0,
-              [w + m]: 0 == m,
+            className: (0, D.Z)({
+              [g().OuterCapsuleContainer]: !0,
+              [G + m]: 0 == m,
             }),
             navEntryPreferPosition: l.c4.PREFERRED_CHILD,
             autoFocus: v,
@@ -444,7 +444,7 @@
             a.createElement(
               p.ll,
               {
-                className: E().CapsuleContainer,
+                className: g().CapsuleContainer,
                 item: e,
                 elElementToAppend: t.elElementToAppendToHover,
                 bShowDemoButton: t.bShowDemoButton,
@@ -459,7 +459,7 @@
                 T,
                 Object.assign({}, t, {
                   info: e,
-                  bIsHovered: g,
+                  bIsHovered: E,
                   bHasParentAppToDisplay: P,
                 })
               )
@@ -470,15 +470,15 @@
             a.createElement(
               i.Ks,
               Object.assign(
-                { className: E().CapsuleParentInfo },
-                (0, h.h)(I, G, O, t.strExtraParams)
+                { className: g().CapsuleParentInfo },
+                (0, h.h)(I, w, O, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
                 { appid: I.GetAppID() },
                 a.createElement(
                   "div",
-                  { className: E().ParentType },
+                  { className: g().ParentType },
                   (0, S.Xx)(
                     11 == b.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
@@ -518,21 +518,22 @@
             strExtraParams: l,
             imageType: _,
             bHasParentAppToDisplay: v,
-            bUseSubscriptionLayout: E,
+            bUseSubscriptionLayout: g,
             elElementToAppendToHover: h,
             bHidePrice: L,
-            bHidePlatforms: y,
+            bHidePlatforms: D,
             creatorAccountID: S,
-            bIsHovered: w,
+            bIsHovered: A,
           } = t,
           [G] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
-          T = (0, D.bJ)(),
-          O = (0, C.Dt)(n.type),
-          P = (0, a.useMemo)(
-            () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
-            [G]
-          ),
-          z =
+          w = (0, y.bJ)(),
+          T =
+            ((0, C.Dt)(n.type),
+            (0, a.useMemo)(
+              () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
+              [G]
+            )),
+          O =
             G &&
             (null == G
               ? void 0
@@ -540,31 +541,28 @@
                   c.jg.Get().BOwnsApp(t)
                 ));
         if (!G) return null;
-        const H = z && !r,
-          j = (0, s.Hf)(
-            `${A.De.STORE_BASE_URL}${O}/${n.id}${l ? `?${l}` : ""}`,
-            T
-          );
-        let k,
-          x = null;
-        if (E && 0 == (null == G ? void 0 : G.GetStoreItemType()))
-          x = a.createElement(b.r, { appid: G.GetAppID(), bIsMuted: w });
+        const P = O && !r,
+          z = (0, s.Hf)(`${G.GetStorePageURL()}${l || ""}`, w);
+        let H,
+          j = null;
+        if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
+          j = a.createElement(b.r, { appid: G.GetAppID(), bIsMuted: A });
         else if (h);
         else {
-          const t = z && o,
-            e = H;
-          x = a.createElement(m.Hl, {
+          const t = O && o,
+            e = P;
+          j = a.createElement(m.Hl, {
             info: n,
             bShowAsMuted: e,
             bHidePrice: L,
             bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: y,
+            bHidePlatforms: D,
             creatorAccountID: S,
           });
         }
         return (
           "overrideNavigation" in n &&
-            (k = (t) => (
+            (H = (t) => (
               n.overrideNavigation(),
               t.preventDefault(),
               t.stopPropagation(),
@@ -573,12 +571,12 @@
           a.createElement(
             i.IS,
             {
-              href: k ? null : j,
+              href: H ? null : z,
               style: { display: "block" },
               preferredFocus: v,
-              onClick: k,
+              onClick: H,
             },
-            a.createElement(f.vs, { appids: P, hide_status_banners: r }),
+            a.createElement(f.vs, { appids: T, hide_status_banners: r }),
             a.createElement(m.a4, { imageType: _, info: n }),
             a.createElement(I.y, {
               eDeckCompatibilityCategory:
@@ -587,8 +585,8 @@
                   ? void 0
                   : e.steam_deck_compat_category,
             }),
-            Boolean(w && !(0, p.Hu)()) && a.createElement(g.v, { appInfo: n }),
-            x
+            Boolean(A && !(0, p.Hu)()) && a.createElement(E.v, { appInfo: n }),
+            j
           )
         );
       }

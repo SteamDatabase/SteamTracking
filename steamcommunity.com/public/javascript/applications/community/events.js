@@ -19,24 +19,32 @@
     },
     34425: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => c });
+      n.d(t, { p: () => d });
       var a = n(70655),
         o = n(67294),
         s = n(7707),
         r = n(27745),
         i = n(64839),
-        l = n(90666);
-      function c(e) {
+        l = n(90666),
+        c = n(9198);
+      function d(e) {
         const { children: t, navTreeRef: n } = e,
-          c = (0, a._T)(e, ["children", "navTreeRef"]),
-          d = o.useRef(),
-          p = (0, i.BE)(d, n);
-        if ((0, l.id)()) {
+          d = (0, a._T)(e, ["children", "navTreeRef"]),
+          p = o.useRef(),
+          m = (0, i.BE)(p, n),
+          u = (0, l.id)(),
+          v = window.__virtual_keyboard_client;
+        if (
+          ((0, o.useEffect)(() => {
+            c.Wz.SetHookFactory(() => v);
+          }, [v]),
+          u)
+        ) {
           const e = window.__nav_tree_root;
           return o.createElement(
             s.Fe,
-            Object.assign({}, c, {
-              navTreeRef: p,
+            Object.assign({}, d, {
+              navTreeRef: m,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -158,7 +166,7 @@
         w = n(90666),
         S = n(70655),
         b = n(29323),
-        I = (n(54698), n(64839)),
+        I = (n(92398), n(64839)),
         D = n(3044),
         L = n(76776),
         g = (n(49186), n(3389), n(22188));
@@ -554,11 +562,11 @@
         (0, S.gn)([I.ak], U.prototype, "ShowLatestUpdateModal", null),
         (0, S.gn)([I.ak], U.prototype, "CloseModal", null);
       var T = n(10669),
-        j = n(5525);
-      class H extends s.Component {
+        H = n(5525);
+      class W extends s.Component {
         render() {
           const { appid: e } = this.props;
-          let t = j.JW.GetTimeNowWithOverrideAsDate(),
+          let t = H.JW.GetTimeNowWithOverrideAsDate(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
           return s.createElement(
@@ -581,7 +589,7 @@
           );
         }
       }
-      var W = n(92244);
+      var j = n(92244);
       function F(e) {
         const [t, n] = s.useState(!0),
           u = (0, E.T)();
@@ -635,7 +643,7 @@
                     path: a.W3.WorkshopHub(":appid(\\d+)"),
                     render: (e) =>
                       s.createElement(
-                        H,
+                        W,
                         Object.assign({}, e, {
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
@@ -664,7 +672,7 @@
                         })
                       ),
                   }),
-                  s.createElement(r.AW, { component: W.R })
+                  s.createElement(r.AW, { component: j.R })
                 )
               )
         );

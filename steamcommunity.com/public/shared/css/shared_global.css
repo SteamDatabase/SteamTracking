@@ -666,11 +666,18 @@ span.popup_menu_pulldown_indicator {
 
 @media screen and (max-width: 910px)
 {
+
 	html.responsive .popup_block_new.responsive_slidedown {
 		position: static;
 		box-shadow: none;
 	}
+
 }
+
+	html.responsive.rn_mobile_app .popup_block_new.responsive_slidedown {
+		position: static;
+		box-shadow: none;
+	}
 
 .popup_block_new .popup_body {
 	border: 1px solid #171a21;

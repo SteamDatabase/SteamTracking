@@ -196,10 +196,11 @@
       "use strict";
       r.d(t, { Me: () => i, Mx: () => m, XC: () => c });
       var a = r(67294),
-        n = (r(54698), r(37662), r(7200)),
+        n = (r(92398), r(37662), r(7200)),
         s = r(74163),
         l = r(3389),
         o = r(90666);
+      r(40252);
       function i(e, t = 0, r) {
         const [i, c] = (0, a.useState)(n.j1.GetClanEventFromAnnouncementGID(e)),
           m = (0, s.T)("usePartnerEventByAnnouncementGID");

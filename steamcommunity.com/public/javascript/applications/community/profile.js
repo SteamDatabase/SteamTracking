@@ -2608,7 +2608,7 @@
         (0, n.gn)([c.aD], ce.prototype, "RevertBasicInfoChanges", null),
         (0, n.gn)([c.aD], ce.prototype, "SetAvatarHash", null),
         (0, n.gn)([c.aD], ce.prototype, "RevertToComittedAvatarHash", null);
-      var de = r(54698),
+      var de = r(92398),
         pe = (r(69491), r(73935)),
         ue = r(7273),
         he = r(48341),

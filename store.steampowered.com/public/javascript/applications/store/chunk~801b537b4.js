@@ -506,7 +506,7 @@
         ml: () => m,
         q2: () => c,
       });
-      var a = r(54698),
+      var a = r(92398),
         i = (r(990), r(28875), r(77636)),
         n = (r(14146), r(159)),
         s = r(48116),
@@ -520,6 +520,7 @@
         include_trailers: !0,
         include_reviews: !0,
         include_screenshots: !0,
+        include_supported_languages: !0,
       };
       function d() {
         return { width: 231, height: 87 };
@@ -813,7 +814,7 @@
       r.d(t, { W: () => p });
       var a = r(70655),
         i = (r(3389), r(22188)),
-        n = (r(54698), r(91891), r(461), r(90666)),
+        n = (r(92398), r(91891), r(461), r(90666)),
         s = r(33019),
         o = r(40110);
       const l = s.Message;
@@ -1204,7 +1205,7 @@
       var a,
         i = r(70655),
         n = r(22188),
-        s = (r(26149), r(54698), r(4224)),
+        s = (r(26149), r(92398), r(4224)),
         o = (r(3389), r(24399)),
         l = r(41311),
         d = r(81130);
@@ -1543,7 +1544,7 @@
       var a = r(70655),
         i = r(22188),
         n = r(49727),
-        s = (r(26149), r(54698));
+        s = (r(26149), r(92398));
       r(92685);
       const o = {
         bBroadcastEnabled: !1,
@@ -2482,7 +2483,7 @@
           return -1 != this.vecTags.indexOf(e);
         }
         BIsOGGEvent() {
-          return 0 !== this.appid;
+          return Boolean(this.appid) && this.appid > 0;
         }
         BShowLibrarySpotlight() {
           return Boolean(this.jsondata.library_spotlight);
@@ -2914,18 +2915,22 @@
         return window.innerWidth >= 940;
       }
       function l(e = 940) {
-        const [t, r] = (0, i.useState)(window.innerWidth >= e);
         return (
-          (0, i.useEffect)(() => {
-            const t = () => {
-              r(window.innerWidth >= e);
-            };
+          (function () {
+            const [e, t] = (0, i.useState)(window.innerWidth);
             return (
-              window.addEventListener("resize", t),
-              () => window.removeEventListener("resize", t)
+              (0, i.useEffect)(() => {
+                const e = () => {
+                  t(window.innerWidth);
+                };
+                return (
+                  window.addEventListener("resize", e),
+                  () => window.removeEventListener("resize", e)
+                );
+              }, []),
+              e
             );
-          }, [e]),
-          t
+          })() >= e
         );
       }
       function d(e) {
@@ -2957,14 +2962,14 @@
     85121: (e, t, r) => {
       "use strict";
       r.d(t, { m: () => a });
-      r(22220), r(26273), r(21205), r(54698);
+      r(22220), r(26273), r(21205), r(92398);
       const a = "terminal";
     },
     91891: (e, t, r) => {
       "use strict";
       var a = r(70655),
         i = r(22188),
-        n = (r(26149), r(54698), r(21205), r(83090), r(77636), r(35092)),
+        n = (r(26149), r(92398), r(21205), r(83090), r(77636), r(35092)),
         s = r(90666);
       class o {
         InitFrom(e) {
@@ -7779,7 +7784,7 @@
         (0, a.gn)([s.aD.bound], v.prototype, "CaptureStatsForDisplay", null),
         (0, a.gn)([g.a], v.prototype, "OnVideoPause", null),
         (0, a.gn)([g.a], v.prototype, "OnVideoResize", null);
-      r(54698), r(69765);
+      r(92398), r(69765);
       var y = r(48780),
         B = r(77520),
         S = r(41311),
@@ -8895,7 +8900,7 @@
         n = r.n(i),
         s = r(22188),
         o = r(26149),
-        l = (r(54698), r(92685)),
+        l = (r(92398), r(92685)),
         d = r(3389),
         c = (r(68002), r(82946), r(48780)),
         u = r(77520),
@@ -9712,7 +9717,7 @@
         n = r.n(i),
         s = r(22188),
         o = r(67294),
-        l = (r(26149), r(54698), r(3389)),
+        l = (r(26149), r(92398), r(3389)),
         d = (r(82946), r(77520)),
         c = r(90666),
         u = r(461);
@@ -10101,7 +10106,7 @@
         s = r.n(n),
         o = r(22188),
         l = r(67294),
-        d = (r(54698), r(65323)),
+        d = (r(92398), r(65323)),
         c = (r(91891), r(3389)),
         u = (r(82946), r(90666));
       class m {
@@ -10519,7 +10524,7 @@
         i = r(9669),
         n = r.n(i),
         s = r(67294),
-        o = (r(26149), r(54698), r(82946), r(93976)),
+        o = (r(26149), r(92398), r(82946), r(93976)),
         l = r(99533),
         d = r(64839),
         c = r(90666);
@@ -10768,7 +10773,7 @@
         n = r(30381),
         s = r.n(n),
         o = r(67294),
-        l = r(54698),
+        l = r(92398),
         d = (r(74163), r(90666));
       class c {
         constructor() {
@@ -10838,7 +10843,7 @@
         s = r(22188),
         o = r(27661),
         l = r(26149),
-        d = (r(54698), r(52411), r(37662)),
+        d = (r(92398), r(52411), r(37662)),
         c = r(3389),
         u = (r(39799), r(24020)),
         m = (r(82946), r(48780)),
@@ -12018,7 +12023,7 @@
       r.d(t, { Eq: () => h, OT: () => m, wj: () => _ });
       var a = r(70655),
         i = r(67294),
-        n = (r(54698), r(58114)),
+        n = (r(92398), r(58114)),
         s = (r(46321), r(10767)),
         o = r(74163),
         l = r(77520),
@@ -12264,7 +12269,7 @@
         i = r(9669),
         n = r.n(i),
         s = r(22188),
-        o = (r(26149), r(54698), r(78913), r(93976)),
+        o = (r(26149), r(92398), r(78913), r(93976)),
         l = r(90666),
         d = r(99386);
       class c {
@@ -12343,7 +12348,7 @@
         l = r(13271),
         d = r(67294),
         c = r(26149),
-        u = r(54698),
+        u = r(92398),
         m = r(37662),
         _ = r(77636),
         h = r(159),
@@ -12744,7 +12749,9 @@
                     .BIncludesContentDescriptor(e.facetValue.contentDescriptor)
                 : e.facetValue.type === m.HL.k_ELanguage
                 ? !_.jg.Get().BIsLoaded() ||
-                  (0 !== _.jg.Get().GetSecondaryLanguages().size &&
+                  0 === e.facetValue.language ||
+                  ((0 !== _.jg.Get().GetSecondaryLanguages().size ||
+                    0 !== _.jg.Get().GetPrimaryLanguage()) &&
                     (_.jg.Get().GetPrimaryLanguage() ===
                       e.facetValue.language ||
                       _.jg
@@ -13932,20 +13939,21 @@
     89673: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A$: () => b,
+        A$: () => v,
         K$: () => u,
-        MN: () => v,
-        NC: () => g,
+        MN: () => y,
+        NC: () => f,
         Ot: () => m,
-        TR: () => f,
-        dw: () => p,
+        TR: () => b,
+        dw: () => g,
         kD: () => _,
-        qr: () => h,
+        ph: () => h,
+        qr: () => p,
       });
       var a = r(70655),
         i = r(77442),
         n = r(48116),
-        s = r(54698),
+        s = r(92398),
         o = (r(37662), r(990), r(77636)),
         l = (r(14146), r(159)),
         d = r(37694),
@@ -13972,7 +13980,13 @@
             : t.discount_pct) > 0
         );
       }
-      function h(e, t, r) {
+      function h(e) {
+        const t = l.Z.Get().GetStoreItem(e.id, (0, n.TM)(e.type));
+        return o.jg
+          .Get()
+          .BIsAnyLanguageEnabled(t.GetAllLanguagesWithSomeSupport());
+      }
+      function p(e, t, r) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           if (!e || 0 == e.length) return [];
           const a = e.filter((e) => (0, s.mU)(e.type)).map((e) => e.id),
@@ -14015,7 +14029,7 @@
           });
         });
       }
-      function p(e) {
+      function g(e) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const t = new Set();
           e
@@ -14027,8 +14041,8 @@
             yield d.OT.Get().QueueMultipleTagLoads(Array.from(t));
         });
       }
-      const g = { include_tag_count: 20, include_basic_info: !0 };
-      function f(e) {
+      const f = { include_tag_count: 20, include_basic_info: !0 };
+      function b(e) {
         const t = o.jg.Get();
         return (
           !e ||
@@ -14037,15 +14051,19 @@
               t.BIsGameIgnored(e.GetParentAppID()))) ||
           t.BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
           t.BExcludeTagIDs(e.GetTagIDs()) ||
-          e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e))
+          e.GetAllCreatorClanIDs().some((e) => t.BIsIgnoringCurator(e)) ||
+          !(
+            e.BHasSomeLanguageSupport(0) ||
+            t.BIsAnyLanguageEnabled(e.GetAllLanguagesWithSomeSupport())
+          )
         );
       }
-      function b(e, t, r, s) {
+      function v(e, t, r, s) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           let a = 0,
             o = 0;
           const d = [];
-          yield h(e, i.bk, t);
+          yield p(e, i.bk, t);
           for (const i of e) {
             const e = l.Z.Get().GetStoreItem(i.id, (0, n.TM)(i.type));
             if (!e) {
@@ -14065,7 +14083,7 @@
                   .filter(Boolean);
               t && c.push(...t);
             }
-            c.some(s || f) ? (o++, r && r.push(i)) : d.push(i);
+            c.some(s || b) ? (o++, r && r.push(i)) : d.push(i);
           }
           return (
             "dev" === c.De.WEB_UNIVERSE &&
@@ -14081,9 +14099,9 @@
           );
         });
       }
-      function v(e, t, r, i, s, d, c) {
+      function y(e, t, r, i, s, d, c) {
         return (0, a.mG)(this, void 0, void 0, function* () {
-          let a = yield b(
+          let a = yield v(
             e,
             t,
             c,
@@ -14094,7 +14112,7 @@
                     .Get()
                     .BExcludesContentDescriptor(e.GetContentDescriptorIDs()) ||
                   o.jg.Get().BExcludeTagIDs(e.GetTagIDs())
-              : f
+              : b
           );
           const u = [];
           for (const e of a) {
@@ -14138,7 +14156,7 @@
     46713: (e, t, r) => {
       "use strict";
       r.d(t, { K: () => i, u: () => n });
-      r(54698), r(37662);
+      r(92398), r(37662);
       var a = r(63466);
       function i(e, t) {
         return e.filter(

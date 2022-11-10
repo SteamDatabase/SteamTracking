@@ -18,6 +18,10 @@ jQuery( function($) {
 	window.UseTabletScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'tablet' );
 	};
+	window.UseNewMobileAppMode = function() {
+		// the new mobile app can run on screen widths wider than responsive_css_maxwidth
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'rn_mobile_app' );
+	};
 
 	// main menu
 

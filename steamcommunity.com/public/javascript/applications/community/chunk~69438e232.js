@@ -394,7 +394,7 @@
         o = n.n(r),
         i = n(22188),
         s = n(67294),
-        l = (n(26149), n(54698), n(43359)),
+        l = (n(26149), n(92398), n(43359)),
         c = n(3389),
         p = (n(82946), n(77520)),
         d = n(93976),
@@ -2667,7 +2667,7 @@
         i = n(67294),
         s = n(80533),
         l = n(26149),
-        c = n(54698),
+        c = n(92398),
         p = n(35921),
         d = n(49186),
         m = n(3389),
@@ -3905,7 +3905,7 @@
         y = n(23211),
         T = n(14745),
         f = n(76776),
-        A = n(54698),
+        A = n(92398),
         M = n(35092),
         x = n(22188),
         L = (n(26149), n(3389));
@@ -4382,8 +4382,9 @@
               Number.MAX_SAFE_INTEGER
             ),
             n = e.GetForumTopicURL(),
-            a = i.De.EREALM === A.IN.k_ESteamRealmChina,
-            o = i.L7.logged_in && N.Get().BCanRepostPartnerEvent();
+            a = i.De.IN_CLIENT ? "steam://openurl/" + n : n,
+            o = i.De.EREALM === A.IN.k_ESteamRealmChina,
+            l = i.L7.logged_in && N.Get().BCanRepostPartnerEvent();
           return r.createElement(
             O.s,
             { className: g().Container, "flow-children": "row", focusable: !1 },
@@ -4443,13 +4444,13 @@
                   })
                 )
               ),
-              !a &&
+              !o &&
                 r.createElement(X, {
                   commentCount: e.nCommentCount,
-                  discussionURL: n,
+                  discussionURL: a,
                   gotoDiscussion: this.GotoDiscussion,
                 }),
-              o &&
+              l &&
                 r.createElement(
                   "div",
                   { className: g().VoteContainer },
@@ -4561,7 +4562,7 @@
         o = n.n(r),
         i = n(29323),
         s = n(67294),
-        l = (n(54698), n(49186), n(3389), n(68002), n(9915)),
+        l = (n(92398), n(49186), n(3389), n(68002), n(9915)),
         c = (n(7200), n(89694)),
         p = n(86782),
         d = n(69472),
@@ -4774,7 +4775,7 @@
         i = n(22188),
         s = n(29323),
         l = n(67294),
-        c = (n(26149), n(54698), n(49186), n(12453), n(159)),
+        c = (n(26149), n(92398), n(49186), n(12453), n(159)),
         p = n(48341),
         d = n(34133),
         m = n.n(d),
@@ -4993,7 +4994,7 @@
           });
         }
         render() {
-          var e;
+          var e, t;
           if (
             !this.m_nominationEventDetails ||
             !(null ===
@@ -5003,7 +5004,7 @@
               : e.length)
           )
             return null;
-          let t = Math.floor(Date.now() / 1e3);
+          let n = Math.floor(Date.now() / 1e3);
           if (
             !this.props.previewMode &&
             !this.m_nominationEventDetails.bIsAutumnSaleActive
@@ -5015,28 +5016,28 @@
               (0, g.Xx)("#SteamAwards_ExpiredEvent"),
               " "
             );
-          let n = {};
+          let a = {};
           this.m_nominationEventDetails.strBackgroundCSS.length &&
-            (n.backgroundColor =
+            (a.backgroundColor =
               this.m_nominationEventDetails.strBackgroundCSS),
             this.m_nominationEventDetails.strBackgroundImage.length &&
-              (n.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
-          const a = this.props.event.GetSteamAwardCategory(),
-            r =
-              a >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
-              a < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
+              (a.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
+          const r = this.props.event.GetSteamAwardCategory(),
             o =
-              this.state.eCategoryLoaded == a &&
-              this.state.nomineeAppID == this.props.event.appid,
+              r >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
+              r < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
             i =
+              this.state.eCategoryLoaded == r &&
+              this.state.nomineeAppID == this.props.event.appid,
+            s =
               this.props.event.BIsEventActionEnabled() ||
-              t < this.props.event.GetStartTimeAndDateUnixSeconds(),
-            s = r && (i || o),
-            c = new Date().getFullYear();
+              n < this.props.event.GetStartTimeAndDateUnixSeconds(),
+            c = o && (s || i),
+            d = new Date().getFullYear();
           return l.createElement(
             "div",
             {
-              style: n,
+              style: a,
               className: (0, h.Z)(
                 y().SteamAwardContainer,
                 m().PartnerEventFont
@@ -5062,10 +5063,10 @@
                 l.createElement(
                   "div",
                   { className: y().SteamAwardSubTitle },
-                  i
+                  s
                     ? (0, g.Xx)("#SteamAwards_EventCallToAction")
-                    : (0, g.Xx)("#SteamAwards_EventVotingDateTeaser", c),
-                  i &&
+                    : (0, g.Xx)("#SteamAwards_EventVotingDateTeaser", d),
+                  s &&
                     l.createElement(
                       "a",
                       {
@@ -5080,8 +5081,8 @@
                 l.createElement(
                   "div",
                   { className: y().SteamAwardHeaderText },
-                  i
-                    ? r
+                  s
+                    ? o
                       ? (0, g.Xx)(
                           "#SteamAwards_EventNominateGamePrompt_Long",
                           this.props.event.GetGameTitle(this.props.lang)
@@ -5102,19 +5103,28 @@
                 )
               )
             ),
-            s &&
+            c &&
               l.createElement(
                 "div",
                 { className: y().SteamAwardVoteWidget },
                 l.createElement(
                   "div",
-                  { className: y().SteamAwardNominateButton },
+                  {
+                    style: {
+                      background:
+                        null === (t = this.m_nominationEventDetails) ||
+                        void 0 === t
+                          ? void 0
+                          : t.strNominateButtonBGColor,
+                    },
+                    className: y().SteamAwardNominateButton,
+                  },
                   l.createElement(p.ji, {
                     ref: this.m_refCheckbox,
                     className: y().SteamAwardVoteCheckBox,
-                    checked: o,
+                    checked: i,
                     onChange: this.OnNominateClick,
-                    disabled: !i,
+                    disabled: !s,
                     color: "#FFFFFF",
                     highlightColor: "white",
                     label: l.createElement(
@@ -5135,7 +5145,7 @@
                     ),
                   })
                 ),
-                i && a != this.m_nominationEventDetails.eLaborOfLove
+                s && r != this.m_nominationEventDetails.eLaborOfLove
                   ? l.createElement(
                       "div",
                       { className: y().SteamAwardLinkToNominationPage },
@@ -5543,7 +5553,7 @@
       n.d(t, { HQ: () => _, wM: () => S, jd: () => C });
       var a = n(13271),
         r = n(67294),
-        o = n(54698),
+        o = n(92398),
         i = (n(49186), n(83090)),
         s = n(90666),
         l = n(58114),
@@ -5734,7 +5744,7 @@
       n.d(t, { A: () => V, t: () => F });
       var a = n(70655),
         r = n(67294),
-        o = n(54698),
+        o = n(92398),
         i = (n(49186), n(29139), n(9915)),
         s = (n(7200), n(23937)),
         l = n(34133),

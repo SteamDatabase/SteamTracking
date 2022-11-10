@@ -1080,17 +1080,6 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   width: calc(100% - 20px);
   height: 200px;
 }
-.partnereventreferencedapps_ReferencedApps_2xZM7 {
-  font-size: 14px;
-  color: #cfd2d3;
-  border-top: 1px solid #4d525b;
-  padding-top: 7px;
-  margin-right: 24px;
-}
-.partnereventreferencedapps_ReferencedApps_2xZM7 a {
-  color: #80bcd2;
-  text-decoration: none;
-}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -1240,6 +1229,17 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   bottom: 0;
   left: 0;
   background-color: #f4f4f4;
+}
+.partnereventreferencedapps_ReferencedApps_2xZM7 {
+  font-size: 14px;
+  color: #cfd2d3;
+  border-top: 1px solid #4d525b;
+  padding-top: 7px;
+  margin-right: 24px;
+}
+.partnereventreferencedapps_ReferencedApps_2xZM7 a {
+  color: #80bcd2;
+  text-decoration: none;
 }
 :root {
   --basicui-header-height: 0px;
@@ -1431,6 +1431,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .carousel_DisableSliderMotion_3la_1 {
   transition: none;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
 }
 :root {
   --basicui-header-height: 0px;
@@ -3765,12 +3771,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .screenshotpopout_PopupScreenshot_1q7Ow {
   width: 100%;
   height: 100%;
-}
-.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  display: flex;
-  flex-wrap: nowrap;
 }
 .salepointshopsmartdisplay_RewardCtn_2iyxZ {
   display: flex;

@@ -19,24 +19,32 @@
     },
     34425: (e, t, r) => {
       "use strict";
-      r.d(t, { p: () => l });
+      r.d(t, { p: () => _ });
       var s = r(70655),
         i = r(67294),
         n = r(7707),
         a = r(27745),
         o = r(64839),
-        c = r(90666);
-      function l(e) {
+        c = r(90666),
+        l = r(9198);
+      function _(e) {
         const { children: t, navTreeRef: r } = e,
-          l = (0, s._T)(e, ["children", "navTreeRef"]),
-          _ = i.useRef(),
-          m = (0, o.BE)(_, r);
-        if ((0, c.id)()) {
+          _ = (0, s._T)(e, ["children", "navTreeRef"]),
+          m = i.useRef(),
+          u = (0, o.BE)(m, r),
+          f = (0, c.id)(),
+          y = window.__virtual_keyboard_client;
+        if (
+          ((0, i.useEffect)(() => {
+            l.Wz.SetHookFactory(() => y);
+          }, [y]),
+          f)
+        ) {
           const e = window.__nav_tree_root;
           return i.createElement(
             n.Fe,
-            Object.assign({}, l, {
-              navTreeRef: m,
+            Object.assign({}, _, {
+              navTreeRef: u,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),

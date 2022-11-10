@@ -415,6 +415,9 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 	var hide_filtered_results_warning = rgParameters['hide_filtered_results_warning'];
 	delete rgParameters['hide_filtered_results_warning'];
 
+	// don't default the language filter even if doing a hard page refresh
+	rgParameters['ndl'] = 1;
+
 	if ( ( bInitialLoad && g_bUseHistoryAPI ) || !bOnLocationChange )
 		UpdateUrl( rgParameters, {}, !bOnLocationChange );
 

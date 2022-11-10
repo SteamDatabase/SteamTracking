@@ -530,7 +530,7 @@ ${MEDIA_CDN_URL}steam/apps/${}/${}
 ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}steam/marketing/${id}/${}?t=${_ ? _ : _}
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
-${MEDIA_CDN_URL}store/promo/autumn2021/trophy.png?v=2
+${MEDIA_CDN_URL}store/promo/autumn2022/trophy.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
@@ -612,6 +612,7 @@ ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
 ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
+${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}

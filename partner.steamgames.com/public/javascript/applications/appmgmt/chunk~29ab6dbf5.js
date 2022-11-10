@@ -5114,7 +5114,7 @@
         s = i(30381),
         a = i.n(s),
         o = i(67294),
-        l = i(54698),
+        l = i(92398),
         c = i(74163),
         u = i(90666);
       class d {
@@ -5210,7 +5210,7 @@
         s = i.n(n),
         a = i(22188),
         o = i(67294),
-        l = (i(26149), i(54698), i(43359)),
+        l = (i(26149), i(92398), i(43359)),
         c = i(3389),
         u = (i(82946), i(77520)),
         d = i(93976),
@@ -5415,7 +5415,7 @@
       "use strict";
       i.d(t, { Z: () => u });
       var r = i(22188),
-        n = (i(26149), i(54698), i(13328), i(990), i(48116)),
+        n = (i(26149), i(92398), i(13328), i(990), i(48116)),
         s = i(77520),
         a = i(41311),
         o = i(74891),
@@ -6352,7 +6352,7 @@
       i.d(t, { Z: () => P });
       var r = i(70655),
         n = i(22188),
-        s = (i(26149), i(54698)),
+        s = (i(26149), i(92398)),
         a = i(58114),
         o = i(65902),
         l = (i(46321), i(33019)),
@@ -7326,7 +7326,7 @@
         y: () => m,
       });
       var r;
-      i(54698), i(39722), i(990);
+      i(92398), i(39722), i(990);
       function n(e) {
         return "app" == e ? 0 : "sub" == e ? 1 : 2;
       }
@@ -7497,7 +7497,7 @@
       });
       var r = i(70655),
         n = i(67294),
-        s = (i(54698), i(58114)),
+        s = (i(92398), i(58114)),
         a = (i(46321), i(10767)),
         o = i(74163),
         l = i(77520),
@@ -7849,29 +7849,36 @@
       var r,
         n,
         s = i(26149);
-      i(54698), i(53481);
-      function a(e) {
-        var t, i, r, n, s;
-        return (
-          e &&
-          Boolean(
-            (null === (t = e.categories) || void 0 === t
+      i(92398), i(53481), i(73914);
+      function a(e, t) {
+        var i, r, n, s, a;
+        if (e) {
+          const o =
+            e.collect_trailer_permissions ||
+            e.collect_demo_permissions ||
+            e.collect_game_profile_intent;
+          return Boolean(
+            (null === (i = e.categories) || void 0 === i
               ? void 0
-              : t.enabled) ||
-              (null === (i = e.artist_statement) || void 0 === i
-                ? void 0
-                : i.enabled) ||
-              (null === (r = e.primary_country) || void 0 === r
+              : i.enabled) ||
+              (null === (r = e.artist_statement) || void 0 === r
                 ? void 0
                 : r.enabled) ||
-              (null === (n = e.press_contact) || void 0 === n
+              (null === (n = e.primary_country) || void 0 === n
                 ? void 0
                 : n.enabled) ||
-              (null === (s = e.dynamic_sections) || void 0 === s
+              (null === (s = e.press_contact) || void 0 === s
                 ? void 0
-                : s.length) > 0
-          )
-        );
+                : s.enabled) ||
+              (null === (a = e.dynamic_sections) || void 0 === a
+                ? void 0
+                : a.length) > 0 ||
+              (e.additional_featuring_section_enabled &&
+                o &&
+                (!t || t.additional_featuring))
+          );
+        }
+        return !1;
       }
       function o(e, t, i = "") {
         if (e) {
@@ -8451,11 +8458,11 @@
     },
     73914: (e, t, i) => {
       "use strict";
-      i(54698);
+      i(92398);
     },
     36845: (e, t, i) => {
       "use strict";
-      i(30892), i(54698), i(49017), i(97789);
+      i(30892), i(92398), i(49017), i(97789);
     },
     85261: (e, t, i) => {
       "use strict";
@@ -8846,7 +8853,7 @@
         n = i(9669),
         s = i.n(n),
         a = (i(46994), i(22188), i(88767)),
-        o = (i(54698), i(82946), i(93976), i(90666));
+        o = (i(92398), i(82946), i(93976), i(90666));
       function l(e, t, i) {
         const { isLoading: n, data: l } = (0, a.useQuery)(
           ["useOptedInAppWithDiscounts", e, t, i],
@@ -8917,7 +8924,7 @@
         o = i(53481),
         l = (i(36845), i(22188)),
         c = i(67294),
-        u = i(54698),
+        u = i(92398),
         d = i(78468),
         m = (i(22453), i(82946), i(48780)),
         _ = i(93976),
@@ -10801,6 +10808,7 @@
         QQ: () => v,
         V7: () => B,
         ZW: () => f,
+        py: () => D,
         qh: () => h,
       });
       var r = i(70655),
@@ -10809,7 +10817,7 @@
         a = (i(97789), i(73914), i(22188)),
         o = i(67294),
         l = i(88767),
-        c = (i(54698), i(82946), i(48780)),
+        c = (i(92398), i(82946), i(48780)),
         u = i(77520),
         d = i(93976),
         m = i(81130),
@@ -11099,46 +11107,43 @@
         }
         RegisterAppForOptIn(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const i = t.startsWith("sale_") ? t : "sale_" + t,
-              r = h.Get().CreateOrGetRegistration(e, i);
-            return (
-              (r.accountid_add = g.L7.accountid),
-              (r.opt_in = !0),
-              (r.accountid_lastmod = g.L7.accountid),
-              this.UpdateOptInRegistration(r)
-            );
+            const i = {
+              opt_in_name: t.startsWith("sale_") ? t : "sale_" + t,
+              opt_in: !0,
+            };
+            return this.UpdateOptInRegistration(e, i);
           });
         }
-        UpdateOptInRegistration(e) {
-          var t;
+        UpdateOptInRegistration(e, t) {
+          var i;
           return (0, r.mG)(this, void 0, void 0, function* () {
-            let i = null;
+            let r = null;
             try {
-              const r = new FormData();
-              r.append("sessionid", g.De.SESSIONID),
-                Object.keys(e).forEach((t) => r.append(t, e[t]));
-              const n =
+              const n = new FormData();
+              n.append("sessionid", g.De.SESSIONID),
+                Object.keys(t).forEach((e) => n.append(e, t[e]));
+              const a =
                   g.De.PARTNER_BASE_URL +
                   "optin/ajaxupdateoptinregistration/" +
-                  e.appid,
-                a = yield s().post(n, r, { withCredentials: !0 });
+                  e,
+                o = yield s().post(a, n, { withCredentials: !0 });
               if (
-                200 == (null == a ? void 0 : a.status) &&
+                200 == (null == o ? void 0 : o.status) &&
                 1 ==
-                  (null === (t = a.data) || void 0 === t ? void 0 : t.success)
+                  (null === (i = o.data) || void 0 === i ? void 0 : i.success)
               )
                 return null;
-              i = (0, d.l)(a);
+              r = (0, d.l)(o);
             } catch (e) {
-              i = (0, d.l)(e);
+              r = (0, d.l)(e);
             }
             return (
               console.error(
                 "COptInRegistrations::UpdateOptInRegistration error " +
-                  i.strErrorMsg,
-                i
+                  r.strErrorMsg,
+                r
               ),
-              i.strErrorMsg
+              r.strErrorMsg
             );
           });
         }
@@ -11302,6 +11307,10 @@
         );
         return i.isLoading ? null : i.data;
       }
+      function D(e, t) {
+        const i = S(e, !1);
+        return null == i ? void 0 : i.find((e) => e.appid == t);
+      }
       (0, r.gn)(
         [m.a],
         h.prototype,
@@ -11341,7 +11350,7 @@
         n = i(9669),
         s = i.n(n),
         a = i(67294),
-        o = (i(54698), i(5525)),
+        o = (i(92398), i(5525)),
         l = (i(82946), i(93976)),
         c = i(99533),
         u = i(64839),
@@ -11871,7 +11880,7 @@
         z: () => u,
       });
       var r = i(67294),
-        n = (i(54698), i(99533)),
+        n = (i(92398), i(99533)),
         s = i(64839),
         a = i(90666);
       const o = "pn";
@@ -11995,7 +12004,7 @@
         s = i.n(n),
         a = i(67294),
         o = i(22188),
-        l = (i(54698), i(82946), i(93976)),
+        l = (i(92398), i(82946), i(93976)),
         c = i(99533),
         u = i(64839),
         d = i(73604),
@@ -12876,7 +12885,7 @@
         o = i(23088),
         l = i(42795),
         c = i(67294),
-        u = (i(54698), i(5525)),
+        u = (i(92398), i(5525)),
         d = (i(81238), i(18388)),
         m = i(99533),
         _ = i(64839),
@@ -13581,7 +13590,7 @@
         y4: () => B,
       });
       var r = i(67294),
-        n = (i(54698), i(5525)),
+        n = (i(92398), i(5525)),
         s = i(99533),
         a = i(64839),
         o = i(90666),
@@ -13852,6 +13861,7 @@
         l = i.n(o),
         c = i(30892),
         u = i(31481);
+      i(88767);
       function d(e) {
         var t;
         const { fnBLocalChangesExist: i, fnWarnUser: n, cell: o } = e,
@@ -14151,7 +14161,7 @@
       "use strict";
       i.d(t, { R1: () => l, Sx: () => a, xs: () => u });
       var r = i(70655),
-        n = (i(9669), i(54698), i(990), i(81238), i(18388)),
+        n = (i(9669), i(92398), i(990), i(81238), i(18388)),
         s = i(41311);
       const a = new Set([0, 2, 6, 13]),
         o = new Set([4, 7, 11]);

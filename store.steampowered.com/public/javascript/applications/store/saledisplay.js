@@ -19,24 +19,32 @@
     },
     34425: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => l });
+      n.d(t, { p: () => u });
       var a = n(70655),
         r = n(67294),
         o = n(7707),
         c = n(27745),
         s = n(64839),
-        i = n(90666);
-      function l(e) {
+        i = n(90666),
+        l = n(9198);
+      function u(e) {
         const { children: t, navTreeRef: n } = e,
-          l = (0, a._T)(e, ["children", "navTreeRef"]),
-          u = r.useRef(),
-          m = (0, s.BE)(u, n);
-        if ((0, i.id)()) {
+          u = (0, a._T)(e, ["children", "navTreeRef"]),
+          m = r.useRef(),
+          g = (0, s.BE)(m, n),
+          E = (0, i.id)(),
+          p = window.__virtual_keyboard_client;
+        if (
+          ((0, r.useEffect)(() => {
+            l.Wz.SetHookFactory(() => p);
+          }, [p]),
+          E)
+        ) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
-            Object.assign({}, l, {
-              navTreeRef: m,
+            Object.assign({}, u, {
+              navTreeRef: g,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -48,7 +56,7 @@
     },
     31970: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => d });
+      n.r(t), n.d(t, { default: () => N });
       var a = n(67294),
         r = n(7707),
         o = n(34425),
@@ -59,9 +67,9 @@
         u = n(15396),
         m = n(7573),
         g = n(90666),
-        p = n(66472);
+        E = n(66472);
       n(37662);
-      class E {
+      class p {
         constructor() {
           this.m_rgSections = (0, g.kQ)("categories", "application_config");
         }
@@ -69,7 +77,7 @@
           return this.m_rgSections;
         }
         static Get() {
-          return E.s_singleton || (E.s_singleton = new E()), E.s_singleton;
+          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
         }
       }
       function _(e) {
@@ -79,21 +87,21 @@
           { placeholderHeight: "150px" },
           a.createElement(
             "div",
-            { className: p.CategorySection },
+            { className: E.CategorySection },
             a.createElement(
               "span",
-              { className: p.CategorySectionName },
+              { className: E.CategorySectionName },
               t.name
             ),
             a.createElement(
               s.P8,
               {
-                className: p.CategoriesCtn,
+                className: E.CategoriesCtn,
                 scrollDirection: "x",
                 navEntryPreferPosition: i.c4.MAINTAIN_X,
               },
               t.categories.map((t, n) =>
-                a.createElement(C, {
+                a.createElement(d, {
                   key: "category" + t.name,
                   category: t,
                   autoFocus: e.autoFocus && 0 === n,
@@ -103,7 +111,7 @@
           )
         );
       }
-      function C(e) {
+      function d(e) {
         const { category: t } = e;
         return a.createElement(
           c.s,
@@ -113,34 +121,34 @@
             {
               href: g.De.STORE_BASE_URL + t.url,
               className: (0, m.Z)({
-                [p.Category]: !0,
-                [p.TopLevelCategory]: t.is_toplevel_genre,
+                [E.Category]: !0,
+                [E.TopLevelCategory]: t.is_toplevel_genre,
               }),
             },
             a.createElement(
               "span",
-              { className: p.CategoryName },
+              { className: E.CategoryName },
               a.createElement("span", null, t.name)
             ),
-            a.createElement(N, Object.assign({}, e))
+            a.createElement(C, Object.assign({}, e))
           )
         );
       }
-      function N(e) {
+      function C(e) {
         let { category: t } = e;
         return a.createElement(
           "div",
-          { className: p.GridOuter },
+          { className: E.GridOuter },
           a.createElement(
             "div",
-            { className: p.Grid },
+            { className: E.Grid },
             a.createElement("img", { src: g.De.STORE_BASE_URL + t.image_url })
           )
         );
       }
-      const d = function () {
+      const N = function () {
         const { sections: e } = (function () {
-            const e = E.Get(),
+            const e = p.Get(),
               [t, n] = (0, a.useState)(e.GetSections());
             return { sections: t };
           })(),
@@ -158,7 +166,7 @@
             { navID: "CategoriesApp", NavigationManager: t, navTreeRef: n },
             a.createElement(
               "div",
-              { className: p.CategorySectionsCtn },
+              { className: E.CategorySectionsCtn },
               e.map((e, t) =>
                 a.createElement(_, {
                   key: "section" + e.name,
@@ -173,7 +181,7 @@
     },
     41135: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => N });
+      n.r(t), n.d(t, { default: () => C });
       var a = n(67294),
         r = (n(26149), n(34425)),
         o = n(37662),
@@ -184,23 +192,23 @@
         u = n(70966),
         m = n(69491),
         g = n.n(m),
-        p = n(13596),
-        E = n(41311),
+        E = n(13596),
+        p = n(41311),
         _ = n(90666),
-        C = n(54086);
-      function N(e) {
+        d = n(54086);
+      function C(e) {
         return a.createElement(
-          C.n,
+          d.n,
           { bSalePage: !0 },
-          a.createElement(d, Object.assign({}, e))
+          a.createElement(N, Object.assign({}, e))
         );
       }
-      function d(e) {
+      function N(e) {
         const { promotionName: t, language: n } = e,
-          [m, C] = a.useState(
+          [m, d] = a.useState(
             i.j1.GetClanEventFromAnnouncementGID(_.Wj.ANNOUNCEMENT_GID)
           ),
-          N = (0, s.L)();
+          C = (0, s.L)();
         if (
           (a.useEffect(() => {
             if (
@@ -213,7 +221,7 @@
                   _.Wj.ANNOUNCEMENT_GID,
                   null
                 )
-                .then(C);
+                .then(d);
             }
             (0, l.nf)(null);
           }, [m]),
@@ -222,20 +230,20 @@
           return a.createElement(
             "div",
             { className: g().FlexCenter, style: { height: "500px" } },
-            a.createElement(p.V, {
+            a.createElement(E.V, {
               size: "medium",
-              string: (0, E.Xx)("#Loading"),
+              string: (0, p.Xx)("#Loading"),
             })
           );
-        const d = m.visibility_state !== o.ac.k_EEventStateVisible;
+        const N = m.visibility_state !== o.ac.k_EEventStateVisible;
         return a.createElement(
           r.p,
-          { navID: "StoreSalePageRoot", NavigationManager: N },
+          { navID: "StoreSalePageRoot", NavigationManager: C },
           a.createElement(u.o, {
             promotionName: t,
             language: n,
             eventModel: m,
-            bIsPreview: d,
+            bIsPreview: N,
           })
         );
       }

@@ -132,7 +132,7 @@
     },
     76083: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { PricingRoutes: () => We, default: () => Le });
+      t.r(r), t.d(r, { PricingRoutes: () => Le, default: () => Fe });
       var n = t(9355),
         i = t(92244),
         a = t(67294),
@@ -163,7 +163,7 @@
         w = t(28268),
         X = t(89042),
         B = t(31481),
-        y = (t(54698), t(79822)),
+        y = (t(92398), t(79822)),
         A = t(23153),
         O = t(95598),
         G = t(57287),
@@ -1158,7 +1158,8 @@
             (e[(e.Failed = 3)] = "Failed");
         })(be || (be = {}));
       t(5559), t(854), t(69491);
-      function De(e) {
+      var De = t(88767);
+      function ve(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
           : e.contains_game
@@ -1167,7 +1168,7 @@
           ? "DLC"
           : null;
       }
-      function ve(e) {
+      function Ce(e) {
         const { cell: r } = e,
           t = r.getValue(),
           n = (0, P.Dt)(t),
@@ -1194,11 +1195,11 @@
             a.createElement(z, {
               hoverKey: t,
               className: x().CurrencyMore,
-              renderHover: () => a.createElement(Se, { priceKey: t }),
+              renderHover: () => a.createElement(Ie, { priceKey: t }),
             })
         );
       }
-      function Ce(e) {
+      function xe(e) {
         const { fnBLocalChangesExist: r, fnWarnUser: t, cell: n } = e,
           i = n.getRow().getData().packageID,
           c = (0, P.df)(i),
@@ -1279,11 +1280,11 @@
             a.createElement(z, {
               hoverKey: m,
               className: x().PackageMore,
-              renderHover: () => a.createElement(Ie, { packageID: i }),
+              renderHover: () => a.createElement(ke, { packageID: i }),
             })
         );
       }
-      function xe(e) {
+      function Ne(e) {
         const r = (0, P.We)(),
           t = a.useCallback(
             (e, r) =>
@@ -1293,24 +1294,25 @@
               ),
             []
           ),
-          n = a.useMemo(
-            () => ({ fnBLocalChangesExist: r, fnWarnUser: t }),
-            [r, t]
+          n = (0, De.useQueryClient)(),
+          i = a.useMemo(
+            () => ({ client: n, fnBLocalChangesExist: r, fnWarnUser: t }),
+            [r, t, n]
           ),
-          i = (0, X.zV)(n),
-          c = (0, X.zQ)(n),
-          l = (0, X.O7)(n),
-          o = (0, X.Ii)(n),
-          s = (0, X.UA)(n),
-          d =
-            ((u = n),
+          c = (0, X.zV)(i),
+          l = (0, X.zQ)(i),
+          o = (0, X.O7)(i),
+          s = (0, X.Ii)(i),
+          d = (0, X.UA)(i),
+          u =
+            ((g = i),
             a.useMemo(
               () => ({
                 title: (0, E.Xx)("#PricingDashboard_Column_PriceProposalState"),
                 field: "proposalState",
                 headerSort: !1,
                 formatter: (0, I.reactFormatter)(
-                  a.createElement(Ce, Object.assign({}, u))
+                  a.createElement(xe, Object.assign({}, g))
                 ),
                 cssClass: x().PriceProposalState,
                 width: 150,
@@ -1319,27 +1321,27 @@
                   "#PricingDashboard_Column_PriceProposalState_ttip"
                 ),
               }),
-              [u]
+              [g]
             ));
-        var u;
-        const { rgSupportedPriceKeys: g } = (0, P.OB)();
+        var g;
+        const { rgSupportedPriceKeys: m } = (0, P.OB)();
         return a.useMemo(() => {
-          const r = [i, c, l, o, s, d];
-          for (const t of g)
+          const r = [c, l, o, s, d, u];
+          for (const t of m)
             r.push({
               field: t,
               title: t,
               frozen: "USD" == t,
               width: e ? 72 : 200,
               headerSort: !1,
-              titleFormatter: (0, I.reactFormatter)(a.createElement(ve, null)),
+              titleFormatter: (0, I.reactFormatter)(a.createElement(Ce, null)),
               formatter: (0, I.reactFormatter)(a.createElement(j, null)),
               cssClass: x().PricingGridDataColumn,
             });
           return r;
-        }, [i, c, l, o, s, d, g, e]);
+        }, [c, l, o, s, d, u, m, e]);
       }
-      function Ne(e) {
+      function fe(e) {
         var r;
         const t = (0, P.OG)(),
           n =
@@ -1351,16 +1353,16 @@
           {
             className: (0, v.Z)(x().PricingGridCtn, n > 0 && "PendingVisible"),
           },
-          a.createElement(fe, Object.assign({}, e))
+          a.createElement(Se, Object.assign({}, e))
         );
       }
-      const fe = a.memo(function (e) {
+      const Se = a.memo(function (e) {
         const { packageData: r } = e,
           [t, n] = a.useState(!1),
           [i, c] = a.useState("all"),
           l = a.useRef(null);
         "dev" == D.De.WEB_UNIVERSE && (window.g_PricingGridTableRef = l);
-        const o = xe(t),
+        const o = Ne(t),
           d = (function (e, r) {
             const { rgSupportedPriceKeys: t } = (0, P.OB)();
             return a.useMemo(() => {
@@ -1382,7 +1384,7 @@
                   appName: e,
                   packageID: i.packageid,
                   packageName: i.package_name || "",
-                  packageType: De(i),
+                  packageType: ve(i),
                 };
                 for (const e of t) a[e] = e;
                 n.push(a);
@@ -1478,7 +1480,7 @@
           )
         );
       });
-      function Se(e) {
+      function Ie(e) {
         const { priceKey: r } = e,
           t = (0, P.Dt)(r);
         let n = (0, P.yh)(r);
@@ -1496,7 +1498,7 @@
           )
         );
       }
-      function Ie(e) {
+      function ke(e) {
         const { packageID: r } = e,
           t = (0, P.df)(r);
         let n = (0, P.bS)(r);
@@ -1523,15 +1525,15 @@
           )
         );
       }
-      var ke = t(30381),
-        Te = t.n(ke),
-        we = t(50489),
-        Xe = t(71706),
-        Be = t.n(Xe);
-      function ye(e) {
+      var Te = t(30381),
+        we = t.n(Te),
+        Xe = t(50489),
+        Be = t(71706),
+        ye = t.n(Be);
+      function Ae(e) {
         const { closeModal: r } = e,
           t = (0, g.$D)(),
-          n = Te()().format("YYYY-MM-DDTHH-mm-ss"),
+          n = we()().format("YYYY-MM-DDTHH-mm-ss"),
           i = (0, g.z)(),
           c = (0, g.AM)(),
           l = `prices_all_${t}_${n}.csv`,
@@ -1564,19 +1566,19 @@
           ),
           a.createElement(
             "div",
-            { className: Be().Instructions },
+            { className: ye().Instructions },
             (0, E.Xx)("#PricingDashboard_ImportExport_DownloadInstructions")
           ),
           a.createElement(
             "div",
-            { className: Be().ButtonRows },
+            { className: ye().ButtonRows },
             c.length != i.length &&
               a.createElement(
                 "div",
-                { className: Be().OptionCtn },
+                { className: ye().OptionCtn },
                 a.createElement(
                   "span",
-                  { className: Be().OptionDesc },
+                  { className: ye().OptionDesc },
                   (0, E.Xx)(
                     "#PricingDashboard_ImportExport_DownloadVisible_Desc"
                   )
@@ -1584,9 +1586,9 @@
                 a.createElement(
                   s.zx,
                   {
-                    className: Be().Button,
+                    className: ye().Button,
                     disabled: d,
-                    onClick: () => Ae(c, o),
+                    onClick: () => Oe(c, o),
                   },
                   (0, E.Xx)(
                     "#PricingDashboard_ImportExport_DownloadVisible_Button"
@@ -1600,18 +1602,18 @@
               ),
             a.createElement(
               "div",
-              { className: Be().OptionCtn },
+              { className: ye().OptionCtn },
               a.createElement(
                 "span",
-                { className: Be().OptionDesc },
+                { className: ye().OptionDesc },
                 (0, E.Xx)("#PricingDashboard_ImportExport_DownloadAll_Desc")
               ),
               a.createElement(
                 s.zx,
                 {
-                  className: Be().Button,
+                  className: ye().Button,
                   disabled: d,
-                  onClick: () => Ae(i, l),
+                  onClick: () => Oe(i, l),
                 },
                 (0, E.Xx)("#PricingDashboard_ImportExport_DownloadAll_Button"),
                 a.createElement(
@@ -1631,27 +1633,27 @@
           ),
           a.createElement(
             "div",
-            { className: Be().Instructions },
+            { className: ye().Instructions },
             (0, E.Xx)("#PricingDashboard_ImportExport_UploadInstructions")
           ),
           a.createElement(
             "div",
-            { className: Be().ButtonRows },
+            { className: ye().ButtonRows },
             a.createElement(
               "div",
-              { className: Be().OptionCtn },
+              { className: ye().OptionCtn },
               a.createElement(
                 "span",
-                { className: Be().OptionDesc },
+                { className: ye().OptionDesc },
                 (0, E.Xx)("#PricingDashboard_ImportExport_Upload_Desc")
               ),
               a.createElement(
                 s.zx,
-                { className: Be().Button, disabled: d },
+                { className: ye().Button, disabled: d },
                 a.createElement(
                   "label",
                   {
-                    className: Be().ImportButtonLabel,
+                    className: ye().ImportButtonLabel,
                     htmlFor: "import-price-input",
                   },
                   (0, E.Xx)("#PricingDashboard_ImportExport_Upload_Button"),
@@ -1665,9 +1667,9 @@
                           if (e.target.files.length >= 1) {
                             const t = (0, b.RA)(e),
                               n = e.target.files[0],
-                              i = yield we.K.ParseCSVFile(n);
+                              i = yield Xe.K.ParseCSVFile(n);
                             (0, _.x1)(
-                              a.createElement(Ge, {
+                              a.createElement(He, {
                                 strFilename: n.name,
                                 parseResult: i,
                               }),
@@ -1684,7 +1686,7 @@
           )
         );
       }
-      function Ae(e, r) {
+      function Oe(e, r) {
         const t = [],
           n = (0, P.on)(),
           i = [(0, E.Xx)("#PackageGrid_Column_PackageName"), "ID"];
@@ -1699,13 +1701,13 @@
           }
           t.push(e);
         }
-        we.K.WriteCSVToFile(t, r);
+        Xe.K.WriteCSVToFile(t, r);
       }
-      function Oe(e, r) {
+      function Ge(e, r) {
         let t = Number(e);
         return Number.isNaN(t) ? null : Math.round(100 * t);
       }
-      function Ge(e) {
+      function He(e) {
         var r, t;
         const { closeModal: n, strFilename: i, parseResult: c } = e,
           l = (0, g.z)(),
@@ -1731,7 +1733,7 @@
                   a.push(e);
                   for (const i of t) {
                     const t = r[i],
-                      a = !!(null == t ? void 0 : t.length) && Oe(t);
+                      a = !!(null == t ? void 0 : t.length) && Ge(t);
                     if (!(null == t ? void 0 : t.length) || Number.isNaN(a))
                       continue;
                     const c = n(e, i, a);
@@ -1770,7 +1772,7 @@
           },
           a.createElement(
             "div",
-            { className: Be().ParseResultCount },
+            { className: ye().ParseResultCount },
             (0, E.Xx)("#PricingDashboard_ImportExport_UploadResults", d.length)
           ),
           b &&
@@ -1783,7 +1785,7 @@
               null,
               a.createElement(
                 "div",
-                { className: Be().ErrorHeader },
+                { className: ye().ErrorHeader },
                 (0, E.Xx)(
                   "#PricingDashboard_ImportExport_UploadErrorsHeader",
                   null === (t = c.errors) || void 0 === t ? void 0 : t.length
@@ -1791,12 +1793,12 @@
               ),
               a.createElement(
                 "div",
-                { className: Be().ParseErrors },
+                { className: ye().ParseErrors },
                 c.errors.map((e, r) => {
                   var t;
                   return a.createElement(
                     "div",
-                    { key: `${e.message}-${r}`, className: Be().Error },
+                    { key: `${e.message}-${r}`, className: ye().Error },
                     `${null !== (t = e.row) && void 0 !== t ? t : "-"} ${
                       e.message
                     }`
@@ -1806,7 +1808,7 @@
             )
         );
       }
-      function He(e) {
+      function Re(e) {
         (0, m.j)((0, P.We)());
         const r = (0, g.NR)(),
           t = D.De.PARTNER_BASE_URL + "doc/store/pricing",
@@ -1843,7 +1845,7 @@
                 s.zx,
                 {
                   onClick: (e) =>
-                    (0, _.AM)(a.createElement(Re, null), (0, b.RA)(e)),
+                    (0, _.AM)(a.createElement(Me, null), (0, b.RA)(e)),
                 },
                 (0, E.Xx)("#PricingDashboard_ApplyGuidelinesDialog_Button")
               ),
@@ -1851,7 +1853,7 @@
                 s.zx,
                 {
                   onClick: (e) =>
-                    (0, _.AM)(a.createElement(ye, null), (0, b.RA)(e)),
+                    (0, _.AM)(a.createElement(Ae, null), (0, b.RA)(e)),
                 },
                 (0, E.Xx)("#PricingDashboard_ImportExportButton")
               ),
@@ -1877,12 +1879,12 @@
             a.createElement(
               a.Fragment,
               null,
-              a.createElement(Ne, { packageData: r }),
+              a.createElement(fe, { packageData: r }),
               a.createElement(oe, null)
             )
         );
       }
-      function Re(e) {
+      function Me(e) {
         const { closeModal: r } = e,
           t = (0, P.Ol)();
         return a.createElement(
@@ -1923,10 +1925,10 @@
           )
         );
       }
-      var Me = t(27991);
-      const We = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
-      function Le(e) {
-        return (0, Me.NX)()
+      var We = t(27991);
+      const Le = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
+      function Fe(e) {
+        return (0, We.NX)()
           ? a.createElement(
               c.VK,
               { basename: (0, n.l)() + "pricing/" },
@@ -1945,8 +1947,8 @@
                     ),
                 }),
                 a.createElement(l.AW, {
-                  path: We.PricingDashboard(),
-                  render: (e) => a.createElement(He, null),
+                  path: Le.PricingDashboard(),
+                  render: (e) => a.createElement(Re, null),
                 }),
                 a.createElement(l.AW, { component: i.R })
               )

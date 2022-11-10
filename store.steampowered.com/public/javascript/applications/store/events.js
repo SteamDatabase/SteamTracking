@@ -385,24 +385,32 @@
     },
     34425: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => c });
+      n.d(t, { p: () => d });
       var a = n(70655),
         r = n(67294),
         l = n(7707),
         o = n(27745),
         s = n(64839),
-        i = n(90666);
-      function c(e) {
+        i = n(90666),
+        c = n(9198);
+      function d(e) {
         const { children: t, navTreeRef: n } = e,
-          c = (0, a._T)(e, ["children", "navTreeRef"]),
-          d = r.useRef(),
-          m = (0, s.BE)(d, n);
-        if ((0, i.id)()) {
+          d = (0, a._T)(e, ["children", "navTreeRef"]),
+          m = r.useRef(),
+          u = (0, s.BE)(m, n),
+          p = (0, i.id)(),
+          _ = window.__virtual_keyboard_client;
+        if (
+          ((0, r.useEffect)(() => {
+            c.Wz.SetHookFactory(() => _);
+          }, [_]),
+          p)
+        ) {
           const e = window.__nav_tree_root;
           return r.createElement(
             l.Fe,
-            Object.assign({}, c, {
-              navTreeRef: m,
+            Object.assign({}, d, {
+              navTreeRef: u,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -566,7 +574,7 @@
         i = n.n(s),
         c = n(29323),
         d = n(26149),
-        m = (n(54698), n(39388)),
+        m = (n(92398), n(39388)),
         u = n(7200),
         p = n(89694),
         _ = n(27535),
@@ -1039,7 +1047,7 @@
         d = n.n(c),
         m = n(29323),
         u = n(26149),
-        p = n(54698),
+        p = n(92398),
         _ = n(37662),
         v = (n(68002), n(76776)),
         g = n(35577),
@@ -5381,7 +5389,7 @@
         );
       }
       var In,
-        wn = n(23331),
+        wn = n(29670),
         Tn = n(5726),
         Nn = n.n(Tn);
       let Gn = class extends r.Component {
@@ -5498,6 +5506,7 @@
                   useTestScrollbar: !0,
                   bLazyRenderChildren: !0,
                   disableEdgeWrap: !0,
+                  screenIsWide: this.state.bScreenIsWide,
                 },
                 o
               )

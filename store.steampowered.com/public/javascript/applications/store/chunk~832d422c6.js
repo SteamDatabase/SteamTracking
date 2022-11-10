@@ -169,19 +169,19 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ConfirmOverwriteVoteOrNominationDialog: () => B,
-          EventDisplaySteamAwardNomination: () => L,
+          ConfirmOverwriteVoteOrNominationDialog: () => L,
+          EventDisplaySteamAwardNomination: () => B,
           EventDisplaySteamAwardVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => x,
           default: () => I,
         });
       var n = a(70655),
-        r = a(9669),
-        i = a.n(r),
+        i = a(9669),
+        r = a.n(i),
         o = a(22188),
         s = a(29323),
         l = a(67294),
-        d = (a(26149), a(54698), a(37662), a(12453), a(159)),
+        d = (a(26149), a(92398), a(37662), a(12453), a(159)),
         p = a(48341),
         m = a(34133),
         v = a.n(m),
@@ -225,13 +225,13 @@
             !1);
       }
       function f(e, t) {
-        var a, r;
+        var a, i;
         return (0, n.mG)(this, void 0, void 0, function* () {
           const n =
               u.De.STORE_BASE_URL + "steamawards/ajaxgetsteamawardeventdetails",
             o = { rgCategories: e };
           try {
-            const e = yield i().get(n, {
+            const e = yield r().get(n, {
               params: o,
               withCredentials: !1,
               cancelToken: t.token,
@@ -242,9 +242,9 @@
                 (null === (a = null == e ? void 0 : e.data) || void 0 === a
                   ? void 0
                   : a.success) &&
-              (null === (r = null == e ? void 0 : e.data) || void 0 === r
+              (null === (i = null == e ? void 0 : e.data) || void 0 === i
                 ? void 0
-                : r.event_details)
+                : i.event_details)
             )
               return e.data.event_details;
           } catch (e) {
@@ -257,12 +257,12 @@
           return null;
         });
       }
-      let L = class extends l.Component {
+      let B = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
             (this.m_strPreviousNomineeTitle = null),
-            (this.m_cancelSignal = i().CancelToken.source()),
+            (this.m_cancelSignal = r().CancelToken.source()),
             (this.m_refCheckbox = l.createRef()),
             (this.m_nominationEventDetails = null);
         }
@@ -298,7 +298,7 @@
               u.De.STORE_BASE_URL + "steamawards/ajaxgetusernominations";
             if (u.L7.logged_in)
               try {
-                const a = yield i().get(t, {
+                const a = yield r().get(t, {
                   withCredentials: !0,
                   cancelToken: this.m_cancelSignal.token,
                 });
@@ -324,19 +324,19 @@
           return (0, n.mG)(this, void 0, void 0, function* () {
             const a = this.props.event.GetSteamAwardCategory(),
               n = e[a],
-              r = n && n.appid;
+              i = n && n.appid;
             if (
-              (this.setState({ eCategoryLoaded: a, nomineeAppID: r }),
-              r && r != this.props.event.appid)
+              (this.setState({ eCategoryLoaded: a, nomineeAppID: i }),
+              i && i != this.props.event.appid)
             ) {
               if (
-                (yield d.Z.Get().QueueAppRequest(r, {}),
+                (yield d.Z.Get().QueueAppRequest(i, {}),
                 this.m_cancelSignal.token.reason)
               )
                 return;
               this.props.event.GetSteamAwardCategory() == a &&
                 (this.m_strPreviousNomineeTitle =
-                  null === (t = d.Z.Get().GetApp(r)) || void 0 === t
+                  null === (t = d.Z.Get().GetApp(i)) || void 0 === t
                     ? void 0
                     : t.GetName());
             }
@@ -355,7 +355,7 @@
         }
         HandleConflict(e) {
           (0, y.AM)(
-            l.createElement(B, {
+            l.createElement(L, {
               strLocTokenInfix: "Nomination",
               strNewGameTitle: this.props.event.GetGameTitle(this.props.lang),
               fnGetOldGameTitle: () => this.m_strPreviousNomineeTitle,
@@ -379,14 +379,14 @@
             )
               return;
             const n = u.De.STORE_BASE_URL + "steamawards/ajaxnominategame",
-              r = new URLSearchParams();
-            r.append("sessionid", u.De.SESSIONID),
-              r.append("categoryid", e.toString()),
-              r.append("nominatedid", t.toString()),
-              r.append("rescind", a ? "0" : "1"),
-              r.append("source", "4");
+              i = new URLSearchParams();
+            i.append("sessionid", u.De.SESSIONID),
+              i.append("categoryid", e.toString()),
+              i.append("nominatedid", t.toString()),
+              i.append("rescind", a ? "0" : "1"),
+              i.append("source", "4");
             try {
-              const e = yield i().post(n, r, {
+              const e = yield r().post(n, i, {
                 withCredentials: !0,
                 cancelToken: this.m_cancelSignal.token,
               });
@@ -400,7 +400,7 @@
           });
         }
         render() {
-          var e;
+          var e, t;
           if (
             !this.m_nominationEventDetails ||
             !(null ===
@@ -410,7 +410,7 @@
               : e.length)
           )
             return null;
-          let t = Math.floor(Date.now() / 1e3);
+          let a = Math.floor(Date.now() / 1e3);
           if (
             !this.props.previewMode &&
             !this.m_nominationEventDetails.bIsAutumnSaleActive
@@ -422,28 +422,28 @@
               (0, g.Xx)("#SteamAwards_ExpiredEvent"),
               " "
             );
-          let a = {};
+          let n = {};
           this.m_nominationEventDetails.strBackgroundCSS.length &&
-            (a.backgroundColor =
+            (n.backgroundColor =
               this.m_nominationEventDetails.strBackgroundCSS),
             this.m_nominationEventDetails.strBackgroundImage.length &&
-              (a.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
-          const n = this.props.event.GetSteamAwardCategory(),
+              (n.backgroundImage = `url( ${this.m_nominationEventDetails.strBackgroundImage} )`);
+          const i = this.props.event.GetSteamAwardCategory(),
             r =
-              n >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
-              n < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
-            i =
-              this.state.eCategoryLoaded == n &&
-              this.state.nomineeAppID == this.props.event.appid,
+              i >= this.m_nominationEventDetails.eSteamAwardCategoryIDMin &&
+              i < this.m_nominationEventDetails.eSteamAwardCategoryIDMax,
             o =
+              this.state.eCategoryLoaded == i &&
+              this.state.nomineeAppID == this.props.event.appid,
+            s =
               this.props.event.BIsEventActionEnabled() ||
-              t < this.props.event.GetStartTimeAndDateUnixSeconds(),
-            s = r && (o || i),
-            d = new Date().getFullYear();
+              a < this.props.event.GetStartTimeAndDateUnixSeconds(),
+            d = r && (s || o),
+            m = new Date().getFullYear();
           return l.createElement(
             "div",
             {
-              style: a,
+              style: n,
               className: (0, _.Z)(
                 w().SteamAwardContainer,
                 v().PartnerEventFont
@@ -469,10 +469,10 @@
                 l.createElement(
                   "div",
                   { className: w().SteamAwardSubTitle },
-                  o
+                  s
                     ? (0, g.Xx)("#SteamAwards_EventCallToAction")
-                    : (0, g.Xx)("#SteamAwards_EventVotingDateTeaser", d),
-                  o &&
+                    : (0, g.Xx)("#SteamAwards_EventVotingDateTeaser", m),
+                  s &&
                     l.createElement(
                       "a",
                       {
@@ -487,7 +487,7 @@
                 l.createElement(
                   "div",
                   { className: w().SteamAwardHeaderText },
-                  o
+                  s
                     ? r
                       ? (0, g.Xx)(
                           "#SteamAwards_EventNominateGamePrompt_Long",
@@ -509,19 +509,28 @@
                 )
               )
             ),
-            s &&
+            d &&
               l.createElement(
                 "div",
                 { className: w().SteamAwardVoteWidget },
                 l.createElement(
                   "div",
-                  { className: w().SteamAwardNominateButton },
+                  {
+                    style: {
+                      background:
+                        null === (t = this.m_nominationEventDetails) ||
+                        void 0 === t
+                          ? void 0
+                          : t.strNominateButtonBGColor,
+                    },
+                    className: w().SteamAwardNominateButton,
+                  },
                   l.createElement(p.ji, {
                     ref: this.m_refCheckbox,
                     className: w().SteamAwardVoteCheckBox,
-                    checked: i,
+                    checked: o,
                     onChange: this.OnNominateClick,
-                    disabled: !o,
+                    disabled: !s,
                     color: "#FFFFFF",
                     highlightColor: "white",
                     label: l.createElement(
@@ -542,7 +551,7 @@
                     ),
                   })
                 ),
-                o && n != this.m_nominationEventDetails.eLaborOfLove
+                s && i != this.m_nominationEventDetails.eLaborOfLove
                   ? l.createElement(
                       "div",
                       { className: w().SteamAwardLinkToNominationPage },
@@ -564,12 +573,12 @@
           );
         }
       };
-      (0, n.gn)([o.LO], L.prototype, "m_strPreviousNomineeTitle", void 0),
-        (0, n.gn)([o.LO], L.prototype, "m_nominationEventDetails", void 0),
-        (0, n.gn)([S.ak], L.prototype, "OnNominateClick", null),
-        (0, n.gn)([S.ak], L.prototype, "SaveNomination", null),
-        (L = (0, n.gn)([s.Pi], L));
-      let B = class extends l.Component {
+      (0, n.gn)([o.LO], B.prototype, "m_strPreviousNomineeTitle", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_nominationEventDetails", void 0),
+        (0, n.gn)([S.ak], B.prototype, "OnNominateClick", null),
+        (0, n.gn)([S.ak], B.prototype, "SaveNomination", null),
+        (B = (0, n.gn)([s.Pi], B));
+      let L = class extends l.Component {
         OnConfirm() {
           this.props.fnOnConfirm(), this.props.closeModal();
         }
@@ -610,15 +619,15 @@
           });
         }
       };
-      (0, n.gn)([S.ak], B.prototype, "OnConfirm", null),
-        (0, n.gn)([S.ak], B.prototype, "OnCancel", null),
-        (B = (0, n.gn)([s.Pi], B));
+      (0, n.gn)([S.ak], L.prototype, "OnConfirm", null),
+        (0, n.gn)([S.ak], L.prototype, "OnCancel", null),
+        (L = (0, n.gn)([s.Pi], L));
       let V = class extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = { eCategoryLoaded: null, votedForAppID: null }),
             (this.m_strPreviousVotedForAppTitle = null),
-            (this.m_cancelSignal = i().CancelToken.source());
+            (this.m_cancelSignal = r().CancelToken.source());
         }
         componentDidMount() {
           this.FetchVoteState();
@@ -638,7 +647,7 @@
             const t = u.De.STORE_BASE_URL + "steamawards/ajaxgetuservotes";
             if (u.L7.logged_in)
               try {
-                const a = yield i().get(t, {
+                const a = yield r().get(t, {
                   withCredentials: !0,
                   cancelToken: this.m_cancelSignal.token,
                 });
@@ -695,7 +704,7 @@
         HandleConflict(e) {
           const t = d.Z.Get().GetApp(this.props.appID);
           (0, y.AM)(
-            l.createElement(B, {
+            l.createElement(L, {
               strLocTokenInfix: "Vote",
               strNewGameTitle: null == t ? void 0 : t.GetName(),
               fnGetOldGameTitle: () => this.m_strPreviousVotedForAppTitle,
@@ -718,7 +727,7 @@
               n.append("categoryid", e.toString()),
               n.append("appid", t.toString());
             try {
-              const e = yield i().post(a, n, {
+              const e = yield r().post(a, n, {
                 withCredentials: !0,
                 cancelToken: this.m_cancelSignal.token,
               });
@@ -814,7 +823,7 @@
       let x = class extends l.Component {
         constructor(e) {
           super(e),
-            (this.m_cancelSignal = i().CancelToken.source()),
+            (this.m_cancelSignal = r().CancelToken.source()),
             (this.m_awardEventDetails = null),
             (this.state = { bAppInfoLoaded: !1 });
         }

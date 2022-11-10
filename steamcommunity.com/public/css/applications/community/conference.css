@@ -807,6 +807,11 @@ body.qanda {
   position: relative;
   box-sizing: border-box;
 }
+@media screen and (max-width: 910px) {
+  .eventcalendartile_TileContainer_27AwJ {
+    scroll-snap-align: start;
+  }
+}
 .eventcalendartile_TileContainer_27AwJ .YoutubePlayer iframe {
   width: 500px;
   height: 300px;

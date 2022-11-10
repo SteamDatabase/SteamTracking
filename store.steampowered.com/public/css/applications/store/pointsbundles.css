@@ -131,14 +131,13 @@ body.v6.rewards .ModalPosition_Content {
   .bundle_AppFilterContainer_2h5QB
   .bundle_SearchTermClearButton_3BWU2 {
   position: absolute;
-  right: 30px;
+  right: 6px;
   top: 8px;
 }
 .bundle_ShellHeader_kOC36
   .bundle_AppFilterContainer_2h5QB
   .bundle_SearchTermClearIcon_LCByT {
   height: 12px;
-  padding: px;
   cursor: pointer;
   color: #939393;
   stroke: currentColor;

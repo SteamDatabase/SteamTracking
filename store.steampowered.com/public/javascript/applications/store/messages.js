@@ -7,11 +7,12 @@
       e.exports = {
         MessageContent: "image_MessageContent_1N2Wd",
         GameImage: "image_GameImage_2imw0",
-        TextTop: "image_TextTop_76FjT",
-        TextBottom: "image_TextBottom_otBhX",
         Legal: "image_Legal_7NnVB",
         MessageFooter: "image_MessageFooter_2h7_p",
+        ButtonAndPriceCtn: "image_ButtonAndPriceCtn_39vPn",
+        NoButton: "image_NoButton_2FsuD",
         Btn: "image_Btn_2utr-",
+        MessagePriceCtn: "image_MessagePriceCtn_uhCE2",
         Price: "image_Price_3TzbJ",
         NoPrice: "image_NoPrice_1oXJH",
         PriceReal: "image_PriceReal_1IET-",
@@ -20,6 +21,8 @@
         Strike: "image_Strike_2hlJo",
         ShareLinks: "image_ShareLinks_2_buK",
         All: "image_All_2A3DH",
+        TextTop: "image_TextTop_76FjT",
+        TextBottom: "image_TextBottom_otBhX",
         ButtonContainer: "image_ButtonContainer_2sWLp",
       };
     },
@@ -89,16 +92,16 @@
         return (0, a.kQ)("store_user_config", "application_config");
       }
     },
-    53546: (e, t, s) => {
+    9212: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { MarketingMessageRoutes: () => z, default: () => ee });
+      s.r(t), s.d(t, { MarketingMessageRoutes: () => ee, default: () => te });
       var a = s(67294),
         n = s(9355),
         r = s(78587),
         i = s(65924),
         l = s(70655),
-        c = s(88767),
-        o = s(26149),
+        o = s(88767),
+        c = s(26149),
         m = s(58114),
         g = (s(46321), s(39722)),
         u = s(90666),
@@ -123,7 +126,7 @@
             if (!u.L7.logged_in) return [];
             const s = m.gA.Init(g.Pe);
             s.Body().set_country_code(u.De.COUNTRY),
-              s.Body().set_elanguage((0, o.jM)(u.De.LANGUAGE)),
+              s.Body().set_elanguage((0, c.jM)(u.De.LANGUAGE)),
               s.Body().set_client_package_version(e.nClientPackageVersion),
               s.Body().set_operating_system(e.eOSType),
               t && s.Body().set_include_seen_messages(!0),
@@ -217,9 +220,9 @@
           r = (0, l._T)(t, ["bIncludeSeenMessages"]),
           {
             data: i,
-            isLoading: o,
+            isLoading: c,
             isError: m,
-          } = (0, c.useQuery)(
+          } = (0, o.useQuery)(
             ["MarketingMessages", "List", r, { bIncludeSeenMessages: !!n }],
             () => e.GetMessageList(r, n),
             s
@@ -228,15 +231,14 @@
             () => (null == i ? void 0 : i.map((e) => new p(e.message()))),
             [i]
           );
-        return { rgMessages: o ? null : g, isError: m };
+        return { rgMessages: c ? null : g, isError: m };
       }
-      var v = s(48341),
-        h = s(41311),
+      var h = s(48341),
+        v = s(41311),
         S = s(35921),
-        k = s(67833),
-        A = s(32548),
-        C = s(44741);
-      function P(e) {
+        k = s(32548),
+        A = s(44741);
+      function C(e) {
         var t;
         const { path: s, message: n } = e,
           r = (0, l._T)(e, ["path", "message"]);
@@ -252,85 +254,135 @@
         );
       }
       s(72258);
-      var x = s(53622),
-        y = s(76197);
-      const G = a.createContext(null);
-      function L() {
-        return a.useContext(G);
-      }
+      var P = s(53622),
+        b = s(76197),
+        x = s(7573);
+      const y = a.createContext({ show_button: !1 });
       function N(e) {
+        const [t, s] = a.useState(),
+          n = (0, r.TH)(),
+          i = a.useMemo(() => {
+            const e = new URLSearchParams(n.search);
+            return {
+              show_button: e.has("exp_show_button")
+                ? "1" === e.get("exp_show_button")
+                : void 0,
+            };
+          }, [n.search]);
+        return (
+          a.useLayoutEffect(() => {
+            const e = (0, u.kQ)(
+              "marketingmessage_config",
+              "application_config"
+            );
+            let t;
+            (t =
+              e && e.button_cohort
+                ? 1 === e.button_cohort
+                : 1 == Math.floor(2 * Math.random())),
+              void 0 !== i.show_button && (t = i.show_button),
+              s({ show_button: t });
+          }, [i]),
+          t ? a.createElement(y.Provider, { value: t }, e.children, " ") : null
+        );
+      }
+      const L = a.createContext(null);
+      function G() {
+        return a.useContext(L);
+      }
+      function B(e) {
         const { message: t } = e;
         return a.createElement(
-          G.Provider,
+          L.Provider,
           { value: t },
           a.createElement(
             "div",
-            { className: y.All },
+            { className: b.All },
             a.createElement(
               "div",
-              { className: y.MessageContent },
-              a.createElement(b, null),
-              a.createElement(I, null),
+              { className: b.MessageContent },
+              a.createElement(w, null),
+              a.createElement(D, null),
               a.createElement("div", { style: { clear: "both" } })
             )
           )
         );
       }
-      function T(e) {
-        const t = (0, i.bJ)(),
-          s = e.GetTemplateVars();
-        let n = (0, k.OL)(s.linkurl, t);
+      function T(e, t) {
+        const s = e.GetTemplateVars();
+        let n = (0, i.YR)(s.linkurl, t);
         return (
           n.startsWith("steam://") || (n = `steam://openurl/${n}`),
           a.useCallback(
             (e) => {
-              (0, x.RA)(e).location.href = n;
+              (0, P.RA)(e).location.href = n;
             },
             [n]
           )
         );
       }
-      function b(e) {
-        const t = L(),
-          s = T(t),
+      function w(e) {
+        const t = G(),
+          s = T(t, "image"),
           n = t.GetTemplateImage();
         return a.createElement(
           S.s,
           {
             focusable: !0,
             noFocusRing: !0,
-            className: y.GameImage,
+            className: b.GameImage,
             onActivate: s,
           },
-          n && a.createElement(P, { message: t, path: n })
+          n && a.createElement(C, { message: t, path: n })
         );
       }
-      function I(e) {
-        const t = L();
-        T(t),
-          t.GetTemplateVars().button_text_custom ||
+      function D(e) {
+        const t = G(),
+          s = T(t, "button"),
+          n = a.useContext(y).show_button,
+          r =
+            t.GetTemplateVars().button_text_custom ||
             t.GetTemplateVars().button_text;
         return a.createElement(
           "div",
-          { className: y.MessageFooter },
-          a.createElement(D, null),
-          a.createElement(A.S, null, a.createElement(B, null))
+          { className: (0, x.Z)(b.MessageFooter, !n && b.NoButton) },
+          a.createElement(
+            "div",
+            { className: b.ButtonAndPriceCtn },
+            n &&
+              a.createElement(
+                S.s,
+                {
+                  focusable: !0,
+                  noFocusRing: !0,
+                  className: b.Btn,
+                  onActivate: s,
+                },
+                r
+              ),
+            a.createElement(k.S, null, a.createElement(I, null))
+          ),
+          a.createElement(R, null)
         );
       }
-      function B() {
-        const e = L().associated_item;
+      function I() {
+        const e = G().associated_item;
         if (
           e &&
           e.GetBestPurchaseOption() &&
           e.GetBestPurchaseOption().formatted_final_price
         ) {
           e.GetBestPurchaseOption();
-          return a.createElement(C.nk, { storeItem: e });
+          return a.createElement(
+            "div",
+            { className: b.MessagePriceCtn },
+            a.createElement(A.nk, { storeItem: e })
+          );
         }
-        return a.createElement("div", { className: y.NoPrice });
+        return a.createElement("div", { className: b.NoPrice });
       }
-      function D(e) {
-        const t = L();
+      function R(e) {
+        const t = G();
         let s = a.createElement(
           a.Fragment,
           null,
@@ -347,16 +399,16 @@
               null,
               t.GetTemplateVars().custom_legal_text
             )),
-          a.createElement("div", { className: y.Legal }, s)
+          a.createElement("div", { className: b.Legal }, s)
         );
       }
-      function R(e) {
+      function V(e) {
         const { message: t } = e;
         return "image" === t.GetTemplateType()
-          ? a.createElement(N, { message: t })
+          ? a.createElement(B, { message: t })
           : null;
       }
-      function w(e) {
+      function O(e) {
         const t = new URLSearchParams();
         return (
           e.bIncludeSeenMessages && t.append("include_seen", "1"),
@@ -369,13 +421,12 @@
           t.toString()
         );
       }
-      var V = s(74992),
-        O = s(95598),
-        $ = s(7573),
-        W = s(37723),
-        Z = s(57649),
-        F = s(13596);
-      function U(e) {
+      var Z = s(74992),
+        $ = s(95598),
+        F = s(37723),
+        W = s(57649),
+        U = s(13596);
+      function X(e) {
         const { MarketingMessagesStore: t } = e,
           s = (function () {
             const e = (0, r.TH)();
@@ -391,9 +442,9 @@
             }, [e.search]);
           })(),
           { rgMessages: n, isError: i } = f(t, s),
-          [l, c] = a.useState(!1),
-          [o, m] = a.useState(0);
-        (0, Z.h)(V.MarketingMessagePage);
+          [l, o] = a.useState(!1),
+          [c, m] = a.useState(0);
+        (0, W.h)(Z.MarketingMessagePage);
         const g = (0, r.k6)();
         if (
           (a.useEffect(() => {
@@ -401,10 +452,10 @@
               n.length ||
               i ||
               (s.bIncludeSeenMessages
-                ? c(!0)
+                ? o(!0)
                 : g.replace(
                     Object.assign(Object.assign({}, g.location), {
-                      search: w(
+                      search: O(
                         Object.assign(Object.assign({}, s), {
                           bIncludeSeenMessages: !0,
                         })
@@ -417,13 +468,13 @@
           return a.createElement(
             q,
             null,
-            (0, h.Xx)("#Error_ErrorCommunicatingWithNetwork")
+            (0, v.Xx)("#Error_ErrorCommunicatingWithNetwork")
           );
         if (l)
           return a.createElement(
             q,
             null,
-            (0, h.Xx)("#MarketingMessages_NoneAvailable")
+            (0, v.Xx)("#MarketingMessages_NoneAvailable")
           );
         const u = s.bIncludeSeenMessages
           ? n
@@ -432,24 +483,24 @@
           : n.slice(0, 8);
         return a.createElement(
           "div",
-          { className: V.MessageListPage },
+          { className: Z.MessageListPage },
           a.createElement(
             "div",
-            { className: V.MessageListScroll },
-            a.createElement(X, {
+            { className: Z.MessageListScroll },
+            a.createElement(j, {
               MarketingMessagesStore: t,
               rgMessages: u,
-              iActiveMessage: o,
+              iActiveMessage: c,
             })
           ),
-          a.createElement(j, {
+          a.createElement(H, {
             cMessages: null == u ? void 0 : u.length,
-            iMessage: o,
+            iMessage: c,
             setMessage: m,
           })
         );
       }
-      function X(e) {
+      function j(e) {
         const {
           MarketingMessagesStore: t,
           rgMessages: s,
@@ -458,11 +509,11 @@
         return s
           ? a.createElement(
               "div",
-              { className: V.MessageListContainer },
+              { className: Z.MessageListContainer },
               null == s
                 ? void 0
                 : s.map((e, s) =>
-                    a.createElement(H, {
+                    a.createElement(Q, {
                       key: e.id,
                       message: e,
                       MarketingMessagesStore: t,
@@ -473,11 +524,11 @@
             )
           : a.createElement(
               "div",
-              { className: (0, $.Z)(V.MessageListContainer, V.Loading) },
-              a.createElement(F.V, { size: "xxlarge", msDelayAppear: 500 })
+              { className: (0, x.Z)(Z.MessageListContainer, Z.Loading) },
+              a.createElement(U.V, { size: "xxlarge", msDelayAppear: 500 })
             );
       }
-      function j(e) {
+      function H(e) {
         const { cMessages: t, iMessage: s, setMessage: n } = e,
           r = a.useCallback(() => n(s - 1), [n, s]),
           i = a.useCallback(() => n(s + 1), [n, s]),
@@ -491,34 +542,34 @@
               setMessage: n,
             })
           );
-        const c = s > 0 ? r : void 0,
-          o = s < t - 1 ? i : void 0;
+        const o = s > 0 ? r : void 0,
+          c = s < t - 1 ? i : void 0;
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement("div", { className: V.CarouselSpacer }),
+          a.createElement("div", { className: Z.CarouselSpacer }),
           a.createElement(
             "div",
-            { className: V.CarouselBar },
+            { className: Z.CarouselBar },
             a.createElement(
               "div",
-              { className: V.Content },
+              { className: Z.Content },
               a.createElement(
                 "div",
-                { className: (0, $.Z)(V.LeftArrow, c && V.Active), onClick: c },
-                a.createElement(O.BKy, { angle: 180 })
+                { className: (0, x.Z)(Z.LeftArrow, o && Z.Active), onClick: o },
+                a.createElement($.BKy, { angle: 180 })
               ),
-              a.createElement("div", { className: V.Spacer }),
+              a.createElement("div", { className: Z.Spacer }),
               a.createElement(
                 "div",
-                { className: V.PipContainer },
-                a.createElement("div", { className: V.Pips }, l)
+                { className: Z.PipContainer },
+                a.createElement("div", { className: Z.Pips }, l)
               ),
-              a.createElement("div", { className: V.Spacer }),
+              a.createElement("div", { className: Z.Spacer }),
               a.createElement(
                 "div",
-                { className: (0, $.Z)(V.LeftArrow, o && V.Active), onClick: o },
-                a.createElement(O.BKy, { angle: 0 })
+                { className: (0, x.Z)(Z.LeftArrow, c && Z.Active), onClick: c },
+                a.createElement($.BKy, { angle: 0 })
               )
             )
           )
@@ -528,7 +579,7 @@
         const { active: t, iMessage: s, setMessage: n } = e,
           r = a.useCallback(() => n(s), [n, s]);
         return a.createElement("div", {
-          className: (0, $.Z)(V.Pip, t && V.Active),
+          className: (0, x.Z)(Z.Pip, t && Z.Active),
           onClick: r,
         });
       }
@@ -536,7 +587,7 @@
         const { MarketingMessagesStore: t } = e,
           s = (0, r.$B)(),
           { message: n, isError: i } = (function (e, t) {
-            const { data: s, isError: n } = (0, c.useQuery)(
+            const { data: s, isError: n } = (0, o.useQuery)(
               ["MarketingMessages", "Single", t],
               () => e.GetSingleMessage(t),
               { enabled: !!t }
@@ -544,33 +595,33 @@
             return { message: a.useMemo(() => s && new p(s), [s]), isError: n };
           })(t, s.params.messageid);
         return (
-          (0, Z.h)(V.MarketingMessagePage),
+          (0, W.h)(Z.MarketingMessagePage),
           i
             ? a.createElement(
                 q,
                 null,
-                (0, h.Xx)("#Error_ErrorCommunicatingWithNetwork")
+                (0, v.Xx)("#Error_ErrorCommunicatingWithNetwork")
               )
             : s.params.messageid
             ? n
-              ? a.createElement(R, { message: n })
+              ? a.createElement(V, { message: n })
               : null
             : a.createElement(
                 q,
                 null,
-                (0, h.Xx)("#MarketingMessages_NoneAvailable")
+                (0, v.Xx)("#MarketingMessages_NoneAvailable")
               )
         );
       }
       function q(e) {
         return a.createElement(
-          v.VY,
+          h.VY,
           { style: { maxWidth: "400px", margin: "0 auto" } },
-          a.createElement(v.h4, null, (0, h.Xx)("#Error_Generic"), " "),
-          a.createElement(v.uT, null, e.children)
+          a.createElement(h.h4, null, (0, v.Xx)("#Error_Generic"), " "),
+          a.createElement(h.uT, null, e.children)
         );
       }
-      function H(e) {
+      function Q(e) {
         const { message: t, MarketingMessagesStore: s, active: n, next: r } = e,
           i = a.useRef(),
           l = a.useRef(n || r);
@@ -584,51 +635,51 @@
           !l.current)
         )
           return null;
-        let c = {
-          enter: V.Enter,
-          enterActive: V.EnterActive,
-          enterDone: V.EnterDone,
-          exit: V.Exit,
-          exitActive: V.ExitActive,
-          exitDone: V.ExitDone,
+        let o = {
+          enter: Z.Enter,
+          enterActive: Z.EnterActive,
+          enterDone: Z.EnterDone,
+          exit: Z.Exit,
+          exitActive: Z.ExitActive,
+          exitDone: Z.ExitDone,
         };
         return a.createElement(
-          W.Z,
+          F.Z,
           {
             in: n,
             nodeRef: i,
-            classNames: c,
+            classNames: o,
             timeout: 300,
             mountOnEnter: !r,
             unmountOnExit: !r,
           },
           a.createElement(
             "div",
-            { className: (0, $.Z)(V.MessageWrapper, n && V.Active), ref: i },
-            a.createElement(R, { message: t })
+            { className: (0, x.Z)(Z.MessageWrapper, n && Z.Active), ref: i },
+            a.createElement(V, { message: t })
           )
         );
       }
-      var Q = s(70695),
-        Y = s(65902);
-      const z = {
+      var Y = s(70695),
+        z = s(65902);
+      const ee = {
         List: () => `${n.Z.MarketingMessages()}list/`,
         Message: (e) => `${n.Z.MarketingMessages()}${e}`,
       };
-      function ee(e) {
+      function te(e) {
         const t = (function () {
           const [e, t] = a.useState(null);
           return (
-            a.useEffect(() => {
+            a.useLayoutEffect(() => {
               e ||
                 t(
                   (function () {
-                    if (!te) {
-                      const e = (0, Q.T)(),
-                        t = new Y.J(u.De.WEBAPI_BASE_URL, e.webapi_token);
-                      te = new E(t);
+                    if (!se) {
+                      const e = (0, Y.T)(),
+                        t = new z.J(u.De.WEBAPI_BASE_URL, e.webapi_token);
+                      se = new E(t);
                     }
-                    return te;
+                    return se;
                   })()
                 );
             }, [e]),
@@ -638,30 +689,38 @@
         return t
           ? a.createElement(
               i.ZP,
-              { domain: "store.steampowered.com", controller: "messages" },
+              {
+                domain: "store.steampowered.com",
+                controller: "messages",
+                method: "default",
+              },
               a.createElement(
-                r.rs,
+                N,
                 null,
                 a.createElement(
-                  r.AW,
-                  { path: `${z.List()}` },
-                  a.createElement(U, { MarketingMessagesStore: t })
-                ),
-                a.createElement(
-                  r.AW,
-                  { path: `${z.Message(":messageid")}` },
-                  a.createElement(K, { MarketingMessagesStore: t })
-                ),
-                a.createElement(
-                  r.AW,
+                  r.rs,
                   null,
-                  a.createElement(r.l_, { to: `${z.List()}` })
+                  a.createElement(
+                    r.AW,
+                    { path: `${ee.List()}` },
+                    a.createElement(X, { MarketingMessagesStore: t })
+                  ),
+                  a.createElement(
+                    r.AW,
+                    { path: `${ee.Message(":messageid")}` },
+                    a.createElement(K, { MarketingMessagesStore: t })
+                  ),
+                  a.createElement(
+                    r.AW,
+                    null,
+                    a.createElement(r.l_, { to: `${ee.List()}` })
+                  )
                 )
               )
             )
           : null;
       }
-      let te;
+      let se;
     },
   },
 ]);

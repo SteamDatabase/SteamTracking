@@ -2882,8 +2882,8 @@
         my: () => r,
       });
       const s = 1,
-        a = 4,
-        o = "18446744073709551615";
+        a = 4;
+      const o = "18446744073709551615";
       function l(e, t = "en") {
         switch (e) {
           case 0:
@@ -3238,11 +3238,11 @@
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(r || (r = {}));
     },
-    54698: (e, t, n) => {
+    92398: (e, t, n) => {
       "use strict";
       n.d(t, {
         e7: () => a.e7,
-        mU: () => E,
+        mU: () => C,
         i_: () => l,
         De: () => r.De,
         j_: () => r.j_,
@@ -3347,8 +3347,10 @@
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
       })(h || (h = {}));
-      var p, _, g;
-      n(13447);
+      var p = n(33019);
+      n(40110);
+      p.Message;
+      var _, g, f;
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -3366,7 +3368,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(p || (p = {}));
+      })(_ || (_ = {}));
       !(function (e) {
         (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
           (e[(e.k_ERemoteClientLaunchFail = 2)] = "k_ERemoteClientLaunchFail"),
@@ -3421,7 +3423,7 @@
             "k_ERemoteClientLaunchInvisible"),
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
-      })(_ || (_ = {}));
+      })(g || (g = {}));
       !(function (e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
@@ -3429,14 +3431,14 @@
             "k_EClientUINotificationFriendChatMessage"),
           (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
             "k_EClientUINotificationFriendPersonaState");
-      })(g || (g = {}));
-      var f, y, S, w, v;
+      })(f || (f = {}));
+      var y, S, w, v, E;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
           (e[(e.Wireless = 2)] = "Wireless"),
           (e[(e.Virtual = 3)] = "Virtual");
-      })(f || (f = {})),
+      })(y || (y = {})),
         (function (e) {
           (e[(e.NotPresent = 0)] = "NotPresent"),
             (e[(e.Failed = 1)] = "Failed"),
@@ -3445,14 +3447,14 @@
             (e[(e.Connecting = 4)] = "Connecting"),
             (e[(e.Connected = 5)] = "Connected"),
             (e[(e.Retrying = 6)] = "Retrying");
-        })(y || (y = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Weak = 1)] = "Weak"),
             (e[(e.Ok = 2)] = "Ok"),
             (e[(e.Good = 3)] = "Good"),
             (e[(e.Excellent = 4)] = "Excellent");
-        })(S || (S = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.StaticWep = 1)] = "StaticWep"),
@@ -3462,15 +3464,15 @@
             (e[(e.Wpa2 = 16)] = "Wpa2"),
             (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
             (e[(e.Unsupported = 32768)] = "Unsupported");
-        })(w || (w = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
             (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
             (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
             (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
               "k_EHTTPProxyMode_Automatic");
-        })(v || (v = {}));
-      function E(e) {
+        })(E || (E = {}));
+      function C(e) {
         return (
           "game" === e ||
           "dlc" === e ||
@@ -3485,7 +3487,7 @@
           "advertising" === e
         );
       }
-      var C, k;
+      var k, b;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -3493,7 +3495,7 @@
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(C || (C = {})),
+      })(k || (k = {})),
         (function (e) {
           (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
             "k_EClientUsedInputTypeKeyboard"),
@@ -3503,13 +3505,13 @@
               "k_EClientUsedInputTypeController"),
             (e[(e.k_EClientUsedInputTypeMax = 3)] =
               "k_EClientUsedInputTypeMax");
-        })(k || (k = {}));
+        })(b || (b = {}));
     },
     58114: (e, t, n) => {
       "use strict";
       n.d(t, { gA: () => o, lq: () => a });
       var r = n(33019),
-        i = (n(26149), n(54698), n(3389), n(36039), n(39799)),
+        i = (n(26149), n(92398), n(3389), n(36039), n(39799)),
         s = n(76188);
       class a {
         constructor(e, t, n, s, a) {
@@ -3903,7 +3905,7 @@
         o = n(81130),
         l = n(9669),
         c = n.n(l),
-        m = (n(26149), n(54698), n(76188)),
+        m = (n(26149), n(92398), n(76188)),
         d = (n(36039), n(3389));
       n(46321), n(40110);
       s.Message;
@@ -4218,7 +4220,7 @@
     },
     46321: (e, t, n) => {
       "use strict";
-      n(54698);
+      n(92398);
     },
     36039: (e, t, n) => {
       "use strict";
@@ -4791,12 +4793,6 @@
           return "CClanMatchEventByRange";
         }
       }
-    },
-    13447: (e, t, n) => {
-      "use strict";
-      var r = n(33019);
-      n(40110);
-      r.Message;
     },
     78913: (e, t, n) => {
       "use strict";
@@ -5852,7 +5848,7 @@
       var r = n(70655),
         i = n(9669),
         s = n.n(i),
-        a = (n(22188), n(26149), n(54698), n(58114)),
+        a = (n(22188), n(26149), n(92398), n(58114)),
         o = n(65902),
         l = n(78913),
         c = (n(82946), n(93976)),
@@ -6161,10 +6157,7 @@
         })(g),
           (function (e) {
             const t = (0, l.NW)();
-            i.useLayoutEffect(() => {
-              const n = { forceUpdate: t };
-              return e.RegisterOverlay(n), () => e.UnregisterOverlay(n);
-            }, [e, t]);
+            i.useEffect(() => e.RegisterOverlay(t), [e, t]);
           })(t);
         const y = (function (e) {
           return (0, l.xK)(
@@ -6365,24 +6358,19 @@
       var r = n(90067),
         i = n(77520),
         s = n(99533),
-        a = n(57423);
+        a = (n(64839), n(57423));
       n(484);
       class o {
         constructor() {
           (this.m_bUsePopups = !0),
             (this.m_rgModals = []),
-            (this.m_ActiveOverlay = null),
+            (this.m_OnModalCountChangedCallbacks = new s.pB()),
             (this.m_OnModalShownCallbacks = new s.pB()),
-            (this.m_OnModalHiddenCallbacks = new s.pB());
+            (this.m_OnModalHiddenCallbacks = new s.pB()),
+            (this.m_cMountedOverlays = 0);
         }
-        RegisterOverlay(e) {
-          (0, i.X)(!this.m_ActiveOverlay, "Registering second overlay"),
-            (this.m_ActiveOverlay = e),
-            this.ForceUpdate();
-        }
-        UnregisterOverlay(e) {
-          (0, i.X)(this.m_ActiveOverlay == e, "Active overlay mismatch"),
-            this.m_ActiveOverlay == e && (this.m_ActiveOverlay = null);
+        get ModalCountChangedCallbacks() {
+          return this.m_OnModalCountChangedCallbacks;
         }
         RegisterOnModalShownCallback(e) {
           return this.m_OnModalShownCallbacks.Register(e);
@@ -6390,21 +6378,33 @@
         RegisterOnModalHiddenCallback(e) {
           return this.m_OnModalHiddenCallbacks.Register(e);
         }
-        get hasOverlay() {
-          return null != this.m_ActiveOverlay;
+        RegisterOverlay(e) {
+          (0, i.X)(
+            0 == this.m_cMountedOverlays,
+            "Duplicate modal DialogOverlay; modals will appear in both"
+          ),
+            this.m_cMountedOverlays++;
+          const t = this.m_OnModalCountChangedCallbacks.Register(e);
+          return () => {
+            this.m_cMountedOverlays--, t.Unregister();
+          };
         }
-        ForceUpdate() {
-          this.m_ActiveOverlay
-            ? window.setTimeout(() => {
-                var e;
-                null === (e = this.m_ActiveOverlay) ||
-                  void 0 === e ||
-                  e.forceUpdate();
-              }, 1)
-            : (0, i.X)(
-                !1,
-                "Modal action was taken, but there is no <DialogOverlay> element to show it in.  Will retry when one is ready."
+        OnModalCountChanged(e) {
+          "show" == e &&
+            0 == this.m_cMountedOverlays &&
+            window.setTimeout(() => {
+              (0, i.X)(
+                this.m_cMountedOverlays > 0,
+                "Modal was shown but ModalManager has no associated DialogOverlay"
               );
+            }, 50),
+            this.m_OnModalCountChangedCallbacks.Dispatch(
+              this.m_rgModals.length
+            ),
+            "show" == e
+              ? this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length)
+              : "hide" == e &&
+                this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length);
         }
         get modals() {
           return this.m_rgModals;
@@ -6420,12 +6420,11 @@
         RemoveModal(e) {
           let t = this.m_rgModals.indexOf(e);
           -1 != t && this.m_rgModals.splice(t, 1),
-            this.ForceUpdate(),
-            this.m_OnModalHiddenCallbacks.Dispatch(this.m_rgModals.length);
+            this.OnModalCountChanged("hide");
         }
         ShowModalInternal(e) {
           const t = new a.kv(e);
-          this.m_rgModals.push(t), this.ForceUpdate();
+          this.m_rgModals.push(t);
           const n = {
             Close: () => {
               this.RemoveModal(t);
@@ -6434,16 +6433,13 @@
               t.UpdateModal(e);
             },
           };
-          return (
-            this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length), n
-          );
+          return this.OnModalCountChanged("show"), n;
         }
         ShowPortalModal() {
           const e = new a.QA();
           return (
             this.m_rgModals.push(e),
-            this.ForceUpdate(),
-            this.m_OnModalShownCallbacks.Dispatch(this.m_rgModals.length),
+            this.OnModalCountChanged("show"),
             {
               key: e.key,
               Close: () => {
@@ -9810,7 +9806,7 @@
       });
       var r = n(67294),
         i = n(26149),
-        s = n(54698),
+        s = n(92398),
         a = n(90666),
         o = n(48780),
         l = n(99533),
@@ -10869,11 +10865,11 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           IN_STEAMUI_SHARED_CONTEXT: !1,
+          ONE_STEAMUI_SHARED_CONTEXT: !1,
           GAMEPADUI_WINDOWED: !1,
           DECK_DISPLAY_MODE: !1,
-          LEGACY_GAMEPADUI_MODE: 0,
-          LEGACY_CONTROLLER_CONFIG_APPID: 0,
           ON_DECK: !1,
+          IN_GAMESCOPE: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
@@ -11260,7 +11256,7 @@
         u = n.n(d),
         h = n(73727),
         p = n(78587),
-        _ = n(54698);
+        _ = n(92398);
       class g extends s.Component {
         render() {
           if ("dev" !== l.De.WEB_UNIVERSE) return null;
@@ -12265,7 +12261,7 @@
             n.e(1134),
             n.e(6661),
             n.e(4158),
-          ]).then(n.bind(n, 53546))
+          ]).then(n.bind(n, 9212))
         );
       class be extends s.Component {
         componentDidMount() {

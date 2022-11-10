@@ -85,24 +85,32 @@
     },
     34425: (e, r, t) => {
       "use strict";
-      t.d(r, { p: () => s });
+      t.d(r, { p: () => m });
       var o = t(70655),
         c = t(67294),
         n = t(7707),
         a = t(27745),
         i = t(64839),
-        l = t(90666);
-      function s(e) {
+        l = t(90666),
+        s = t(9198);
+      function m(e) {
         const { children: r, navTreeRef: t } = e,
-          s = (0, o._T)(e, ["children", "navTreeRef"]),
-          m = c.useRef(),
-          b = (0, i.BE)(m, t);
-        if ((0, l.id)()) {
+          m = (0, o._T)(e, ["children", "navTreeRef"]),
+          b = c.useRef(),
+          u = (0, i.BE)(b, t),
+          h = (0, l.id)(),
+          d = window.__virtual_keyboard_client;
+        if (
+          ((0, c.useEffect)(() => {
+            s.Wz.SetHookFactory(() => d);
+          }, [d]),
+          h)
+        ) {
           const e = window.__nav_tree_root;
           return c.createElement(
             n.Fe,
-            Object.assign({}, s, {
-              navTreeRef: b,
+            Object.assign({}, m, {
+              navTreeRef: u,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
@@ -645,12 +653,12 @@
                     o ? i().Divider : null
                   ),
                 },
-                r.map((e, r) => c.createElement(g, { key: r, appId: e }))
+                r.map((e, r) => c.createElement(v, { key: r, appId: e }))
               )
             )
           : null;
       }
-      function g(e) {
+      function v(e) {
         const r = p.Z.Get().GetApp(e.appId);
         return r
           ? c.createElement(
@@ -666,11 +674,11 @@
             )
           : null;
       }
-      const v = "subsection",
+      const g = "subsection",
         N = "browsefilter";
       function M() {
         const e = (0, k.k6)(),
-          r = (0, T.ks)(e, v),
+          r = (0, T.ks)(e, g),
           t = (0, T.ks)(e, N);
         return c.createElement(
           "div",
