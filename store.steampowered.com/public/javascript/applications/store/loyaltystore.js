@@ -12973,12 +12973,8 @@
         constructor() {
           super(...arguments), (this.state = { cVisible: 5 });
         }
-        componentDidMount() {
-          _.Vb.Get().SetIsUsingAppIDFilters(!0);
-        }
-        componentWillUnmount() {
-          _.Vb.Get().SetIsUsingAppIDFilters(!1);
-        }
+        componentDidMount() {}
+        componentWillUnmount() {}
         render() {
           const { cVisible: e } = this.state,
             t = _.Vb.Get().GetAppIDFilters();
