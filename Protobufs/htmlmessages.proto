@@ -1000,3 +1000,7 @@ message CMsgSetProtocolBlockList {
 message CMsgSetForceDeviceScaleFactor {
 	optional double scale_factor = 1;
 }
+
+message CMsgSetUIMode {
+	optional int32 ui_mode = 1;
+}

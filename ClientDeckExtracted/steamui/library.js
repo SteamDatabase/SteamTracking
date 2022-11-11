@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7650684";
+var CLSTAMP = "7658201";
 (() => {
   var e,
     t,
@@ -81,7 +81,7 @@ var CLSTAMP = "7650684";
           QS: () => s,
           RI: () => c,
           Uv: () => l,
-          Vq: () => z,
+          Vq: () => P,
           YO: () => a,
           Z3: () => E,
           Zv: () => F,
@@ -92,13 +92,13 @@ var CLSTAMP = "7650684";
           eV: () => k,
           fk: () => i,
           gg: () => A,
-          gt: () => D,
+          gt: () => I,
           hz: () => M,
           jA: () => b,
-          jM: () => C,
-          j_: () => B,
+          jM: () => B,
+          j_: () => C,
           kg: () => v,
-          lb: () => I,
+          lb: () => D,
           m2: () => y,
           my: () => n,
           p6: () => o,
@@ -195,7 +195,7 @@ var CLSTAMP = "7650684";
           }
         }
         const k = (e) => ("koreana" === e ? "korean" : e);
-        function B(e, t = "") {
+        function C(e, t = "") {
           switch (e) {
             case 0:
               return "english";
@@ -261,7 +261,7 @@ var CLSTAMP = "7650684";
               return t;
           }
         }
-        function C(e, t = 0) {
+        function B(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -351,7 +351,7 @@ var CLSTAMP = "7650684";
           }
           return !1;
         }
-        var v, R, F, L, O, I, D, A, U, z, P;
+        var v, R, F, L, O, D, I, A, U, P, z;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -423,13 +423,13 @@ var CLSTAMP = "7650684";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(I || (I = {})),
+          })(D || (D = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(D || (D = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.k_EGamingDeviceType_Unknown = 0)] =
               "k_EGamingDeviceType_Unknown"),
@@ -479,7 +479,7 @@ var CLSTAMP = "7650684";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(z || (z = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -487,7 +487,7 @@ var CLSTAMP = "7650684";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(P || (P = {}));
+          })(z || (z = {}));
       },
       4778: (e, t, r) => {
         "use strict";
@@ -563,8 +563,8 @@ var CLSTAMP = "7650684";
           dt: () => n.dt,
           cL: () => n.cL,
           F8: () => n.F8,
-          a: () => C,
-          e9: () => B,
+          a: () => B,
+          e9: () => C,
           ue: () => f,
           IN: () => o.IN,
           y8: () => _,
@@ -579,8 +579,8 @@ var CLSTAMP = "7650684";
           oW: () => R,
           fu: () => S,
           t$: () => b,
-          XM: () => D,
-          L2: () => I,
+          XM: () => I,
+          L2: () => D,
           eT: () => h,
           r7: () => n.r7,
           qu: () => n.qu,
@@ -779,13 +779,13 @@ var CLSTAMP = "7650684";
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
         })(p || (p = {}));
-        var B, C, M, T, v;
+        var C, B, M, T, v;
         !(function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Wired = 1)] = "Wired"),
             (e[(e.Wireless = 2)] = "Wireless"),
             (e[(e.Virtual = 3)] = "Virtual");
-        })(B || (B = {})),
+        })(C || (C = {})),
           (function (e) {
             (e[(e.NotPresent = 0)] = "NotPresent"),
               (e[(e.Failed = 1)] = "Failed"),
@@ -794,7 +794,7 @@ var CLSTAMP = "7650684";
               (e[(e.Connecting = 4)] = "Connecting"),
               (e[(e.Connected = 5)] = "Connected"),
               (e[(e.Retrying = 6)] = "Retrying");
-          })(C || (C = {})),
+          })(B || (B = {})),
           (function (e) {
             (e[(e.None = 0)] = "None"),
               (e[(e.Weak = 1)] = "Weak"),
@@ -872,10 +872,10 @@ var CLSTAMP = "7650684";
             "advertising" === e
           );
         }
-        function I(e) {
+        function D(e) {
           return e;
         }
-        function D(e) {
+        function I(e) {
           return e;
         }
         var A, U;
@@ -1949,71 +1949,11 @@ var CLSTAMP = "7650684";
         }
         a.Message;
         const k = a.Message;
-        class B extends k {
-          constructor(e = null) {
-            super(),
-              B.prototype.server_types_available || b.aR(B.M()),
-              k.initialize(this, e, 0, -1, [1], null);
-          }
-          static M() {
-            return (
-              B.sm_m ||
-                (B.sm_m = {
-                  proto: B,
-                  fields: {
-                    server_types_available: { n: 1, c: C, r: !0, q: !0 },
-                    server_type_for_auth_services: {
-                      n: 2,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                  },
-                }),
-              B.sm_m
-            );
-          }
-          static MBF() {
-            return B.sm_mbf || (B.sm_mbf = b.Bh(B.M())), B.sm_mbf;
-          }
-          toObject(e = !1) {
-            return B.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(B.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(B.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new B();
-            return B.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(B.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(B.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              B.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientServersAvailable";
-          }
-        }
         class C extends k {
           constructor(e = null) {
             super(),
-              C.prototype.server || b.aR(C.M()),
-              k.initialize(this, e, 0, -1, void 0, null);
+              C.prototype.server_types_available || b.aR(C.M()),
+              k.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
             return (
@@ -2021,8 +1961,12 @@ var CLSTAMP = "7650684";
                 (C.sm_m = {
                   proto: C,
                   fields: {
-                    server: { n: 1, br: b.FE.readUint32, bw: b.Xc.writeUint32 },
-                    changed: { n: 2, br: b.FE.readBool, bw: b.Xc.writeBool },
+                    server_types_available: { n: 1, c: B, r: !0, q: !0 },
+                    server_type_for_auth_services: {
+                      n: 2,
+                      br: b.FE.readUint32,
+                      bw: b.Xc.writeUint32,
+                    },
                   },
                 }),
               C.sm_m
@@ -2059,6 +2003,62 @@ var CLSTAMP = "7650684";
             var e = new a.BinaryWriter();
             return (
               C.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientServersAvailable";
+          }
+        }
+        class B extends k {
+          constructor(e = null) {
+            super(),
+              B.prototype.server || b.aR(B.M()),
+              k.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              B.sm_m ||
+                (B.sm_m = {
+                  proto: B,
+                  fields: {
+                    server: { n: 1, br: b.FE.readUint32, bw: b.Xc.writeUint32 },
+                    changed: { n: 2, br: b.FE.readBool, bw: b.Xc.writeBool },
+                  },
+                }),
+              B.sm_m
+            );
+          }
+          static MBF() {
+            return B.sm_mbf || (B.sm_mbf = b.Bh(B.M())), B.sm_mbf;
+          }
+          toObject(e = !1) {
+            return B.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return b.TA(B.M(), e, t);
+          }
+          static fromObject(e) {
+            return b.aD(B.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new a.BinaryReader(e),
+              r = new B();
+            return B.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return b.F(B.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new a.BinaryWriter();
+            return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            b.l2(B.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new a.BinaryWriter();
+            return (
+              B.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -2127,7 +2127,7 @@ var CLSTAMP = "7650684";
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              (this.ClientServersAvailableHandler = (0, i.OW)(5501, B, (e) => {
+              (this.ClientServersAvailableHandler = (0, i.OW)(5501, C, (e) => {
                 let t = new Set(this.m_setConnectedServers);
                 for (let r of e.Body().server_types_available()) {
                   let e = r.server();
@@ -2376,7 +2376,8 @@ var CLSTAMP = "7650684";
           constructor() {
             super(...arguments),
               (this.m_setEMsgHandlers = new Set()),
-              (this.m_setServiceMethodHandlers = new Set());
+              (this.m_setServiceMethodHandlers = new Set()),
+              (this.m_bShouldChangePersonaStatusOnDisconnect = !0);
           }
           SendMsgAndAwaitResponse(e, t) {
             return new Promise((r, n) => {
@@ -2529,11 +2530,13 @@ var CLSTAMP = "7650684";
           }
           Disconnect() {
             if (this.m_hSharedConnection) {
-              let e = c.gA.Init(m.bx, 716);
-              e.Body().set_persona_state(0),
-                e.Body().set_persona_set_by_user(!1),
-                this.Send(e),
-                SteamClient.SharedConnection.Close(this.m_hSharedConnection),
+              if (this.m_bShouldChangePersonaStatusOnDisconnect) {
+                let e = c.gA.Init(m.bx, 716);
+                e.Body().set_persona_state(0),
+                  e.Body().set_persona_set_by_user(!1),
+                  this.Send(e);
+              }
+              SteamClient.SharedConnection.Close(this.m_hSharedConnection),
                 this.OnSharedConnectionClosed();
             }
           }
@@ -2548,11 +2551,14 @@ var CLSTAMP = "7650684";
           SendHeartbeat() {}
           ClearHeartbeatInterval() {}
           ResetHeartbeatInterval() {}
+          SetShouldChangePersonaStatusOnDisconnect(e) {
+            this.m_bShouldChangePersonaStatusOnDisconnect = e;
+          }
         }
         (0, n.gn)([_.aD], L.prototype, "OnLogonInfoChanged", null);
         var O = r(99591),
-          I = r(9669),
-          D = r.n(I);
+          D = r(9669),
+          I = r.n(D);
         class A {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
@@ -2664,7 +2670,7 @@ var CLSTAMP = "7650684";
               t = [];
             const r = {};
             for (const n of this.m_CMList.rgCMList) {
-              const i = z(n),
+              const i = P(n),
                 s = !i || n.rtLastCheck < e;
               s && t.length < 20 && t.push(n),
                 (s && !o.De.IN_MOBILE) || (i && i < 1e4 && (r[n.strHost] = n));
@@ -2681,7 +2687,7 @@ var CLSTAMP = "7650684";
                   ) {
                     const r = Object.keys(t)
                       .map((e) => t[e])
-                      .sort((e, t) => z(e) - z(t));
+                      .sort((e, t) => P(e) - P(t));
                     if (
                       (r.length,
                       r.length && r[0].strHost,
@@ -2771,12 +2777,12 @@ var CLSTAMP = "7650684";
             return (0, n.mG)(this, void 0, void 0, function* () {
               let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
                 r = performance.now();
-              const n = D().CancelToken.source();
+              const n = I().CancelToken.source();
               let i = window.setTimeout(() => {
                 e.strHost, n.cancel();
               }, 1e3);
               try {
-                let s = yield D().head(t, { cancelToken: n.token });
+                let s = yield I().head(t, { cancelToken: n.token });
                 e.strHost, window.clearTimeout(i);
                 let a = performance.now() - r,
                   o = s.headers["x-steam-cmload"]
@@ -2784,7 +2790,7 @@ var CLSTAMP = "7650684";
                     : void 0;
                 e.strHost, (e.msPing = a), (e.nCMLoad = o);
               } catch (t) {
-                D().isCancel(t) ? e.strHost : window.clearTimeout(i),
+                I().isCancel(t) ? e.strHost : window.clearTimeout(i),
                   (e.msPing = 1e4),
                   (e.nCMLoad = 0);
               }
@@ -2797,14 +2803,14 @@ var CLSTAMP = "7650684";
             const e =
                 o.De.WEBAPI_BASE_URL +
                 "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets",
-              t = (yield D().get(e)).data,
+              t = (yield I().get(e)).data,
               r = (t && t.response && t.response.serverlist) || [];
             return (
               r.length, r.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
             );
           });
         }
-        function z(e) {
+        function P(e) {
           return (e.msPing || 0) + (e.nCMLoad || 0);
         }
         (0, n.gn)(
@@ -5629,7 +5635,7 @@ var CLSTAMP = "7650684";
           Qw: () => d,
           XG: () => l.XG,
           Xx: () => m,
-          Yt: () => B,
+          Yt: () => C,
           ek: () => l.ek,
           is: () => S,
           jr: () => l.jr,
@@ -5755,14 +5761,14 @@ var CLSTAMP = "7650684";
           }
         }
         function d(e) {
-          return null != B.LocalizeString(e, !0);
+          return null != C.LocalizeString(e, !0);
         }
         function m(e, ...t) {
-          let r = B.LocalizeString(e);
+          let r = C.LocalizeString(e);
           return void 0 === r ? e : y(r, ...t);
         }
         function _(e, ...t) {
-          let r = B.LocalizeString(e);
+          let r = C.LocalizeString(e);
           if (void 0 === r) return e;
           let i,
             s = [],
@@ -5781,7 +5787,7 @@ var CLSTAMP = "7650684";
             : _(e + "_Plural", t, ...r);
         }
         function b(e, ...t) {
-          let r = B.LocalizeIfToken(e);
+          let r = C.LocalizeIfToken(e);
           return void 0 === r ? e : f(r, ...t);
         }
         function g(e, t, ...r) {
@@ -5908,8 +5914,8 @@ var CLSTAMP = "7650684";
         function k() {
           return w[a.De.LANGUAGE] || null;
         }
-        const B = new u();
-        window.LocalizationManager = B;
+        const C = new u();
+        window.LocalizationManager = C;
       },
       32588: (e, t, r) => {
         "use strict";
@@ -5918,7 +5924,7 @@ var CLSTAMP = "7650684";
           Kb: () => T,
           LO: () => M,
           Mh: () => k,
-          Np: () => C,
+          Np: () => B,
           Sc: () => d,
           U$: () => n,
           XG: () => S,
@@ -6118,7 +6124,7 @@ var CLSTAMP = "7650684";
             if (!o.bGranularFutureTime)
               return (
                 i.zO(r.getTime() - n.getTime()),
-                r.getFullYear() == n.getFullYear() ? B(r) : M(r)
+                r.getFullYear() == n.getFullYear() ? C(r) : M(r)
               );
             i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
             let e = new Date();
@@ -6174,7 +6180,7 @@ var CLSTAMP = "7650684";
               ? (0, s.Xx)("#TimeSince_1Week")
               : (0, s.Xx)("#TimeSince_XWeeks", e);
           }
-          return r.getFullYear() == n.getFullYear() ? B(r) : M(r);
+          return r.getFullYear() == n.getFullYear() ? C(r) : M(r);
         }
         function g(e) {
           const t = new Date(1e3 * e),
@@ -6187,10 +6193,10 @@ var CLSTAMP = "7650684";
             t >= n
               ? (0, s.Xx)("#Time_Recent")
               : t.getFullYear() == r.getFullYear()
-              ? B(t)
+              ? C(t)
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
               ? M(t)
-              : C(t)
+              : B(t)
           );
         }
         const f = new Map(),
@@ -6225,7 +6231,7 @@ var CLSTAMP = "7650684";
             t)
           );
         }
-        function B(e) {
+        function C(e) {
           let t = p.get(e.getMonth());
           return (
             t ||
@@ -6236,7 +6242,7 @@ var CLSTAMP = "7650684";
             t)
           );
         }
-        function C(e) {
+        function B(e) {
           let t = y.get(e.getFullYear());
           return (
             t ||
@@ -6867,6 +6873,7 @@ var CLSTAMP = "7650684";
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
             IN_STEAMUI_SHARED_CONTEXT: !1,
+            ONE_STEAMUI_SHARED_CONTEXT: !1,
             GAMEPADUI_WINDOWED: !1,
             DECK_DISPLAY_MODE: !1,
             ON_DECK: !1,
@@ -6930,9 +6937,9 @@ var CLSTAMP = "7650684";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 8 2022 : 15:23:12",
-                    BUILD_TIME_UTC: "Nov 8 2022 : 23:23:12",
-                    BUILD_RTIME_UTC: 1667949792,
+                    BUILD_TIME_LOCAL: "Nov 10 2022 : 18:18:40",
+                    BUILD_TIME_UTC: "Nov 11 2022 : 02:18:40",
+                    BUILD_RTIME_UTC: 1668133120,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -7061,14 +7068,14 @@ var CLSTAMP = "7650684";
           _ = r(14966),
           h = r(27715);
         const b = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(156), r.e(1010)]).then(r.bind(r, 5888))
+            Promise.all([r.e(1517), r.e(156), r.e(1010)]).then(r.bind(r, 49476))
           ),
           g = n.lazy(() =>
             Promise.all([r.e(1517), r.e(156), r.e(4535)]).then(r.bind(r, 87964))
           ),
           f = n.lazy(() =>
             Promise.all([r.e(1517), r.e(156), r.e(1010), r.e(5742)]).then(
-              r.bind(r, 98321)
+              r.bind(r, 69160)
             )
           ),
           p = document.getElementById("root");

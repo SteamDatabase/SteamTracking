@@ -5429,7 +5429,7 @@
         Ut = r(56175),
         jt = r(47077),
         Xt = r(78853),
-        Ht = r(7874),
+        Ht = r(1028),
         qt = r(71488),
         $t = r(2280),
         Kt = r(51990),
@@ -5562,7 +5562,7 @@
         return we.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
       var tr = r(40331),
-        rr = r(90396);
+        rr = r(95002);
       const ar = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },

@@ -38123,7 +38123,7 @@ div.LowPerfMode
 .gamelistentry_Container_2-O4Z
   .gamelistentry_GameListEntryContainer_1vO6B
   svg:not(.SVGIcon_FriendIcon)
-  circle {
+  circle:not(.SVGIcon_ProgressCircle &) {
   stroke: rgba(255, 255, 255, 0.25);
   fill: rgba(255, 255, 255, 0.24);
   stroke-width: 12px;
@@ -45378,6 +45378,35 @@ img {
   cursor: pointer;
   width: 16px;
   height: 16px;
+}
+.marketingmessagesdialog_BrowserViewHost_2JQwV {
+  flex: 1;
+}
+.marketingmessagesdialog_MarketingMessagesDialog_31Kke.DialogContent {
+  padding: 32px 8px 8px 8px;
+}
+.marketingmessagesdialog_FooterControls_1dkSc {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  align-items: center;
+}
+.marketingmessagesdialog_FooterControls_1dkSc
+  .marketingmessagesdialog_Legal_1XA-6 {
+  flex: 1;
+  font-size: 10px;
+  height: fit-content;
+}
+.marketingmessagesdialog_FooterControls_1dkSc
+  .marketingmessagesdialog_ButtonWrapper_3ifn- {
+  height: fit-content;
+}
+.marketingmessagesdialog_FooterControls_1dkSc
+  .marketingmessagesdialog_ButtonWrapper_3ifn-
+  button.DialogButton {
+  padding: 0 12px;
+  box-sizing: content-box;
+  width: auto;
 }
 
 /*# sourceMappingURL=css\1010.css.map*/

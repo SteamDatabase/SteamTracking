@@ -88320,6 +88320,8 @@ function TestLocalizeCalendarTime()
           IN_GAMEPADUI: false,
           /** Whether we're using a shared js context or not.  Always true for gamepadui. */
           IN_STEAMUI_SHARED_CONTEXT: false,
+          /** Whether there is only one shared js context.  To be removed once we ship -steamuisharedjscontext. */
+          ONE_STEAMUI_SHARED_CONTEXT: false,
           /** Whether the main GamepadUI window should be windowed or fullscreen */
           GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
@@ -89937,4 +89939,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=6804f49ed46f4475833f
+//# sourceMappingURL=friends.js.map?contenthash=5e166a85d8f579fb3375

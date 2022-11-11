@@ -181,6 +181,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/InstallSubConvertApps.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/JoinGameDialog.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/Main.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/MarketingController.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamApp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamDoc.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamPurchaseReceipt.cpp

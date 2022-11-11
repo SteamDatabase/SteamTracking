@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-`w
-`w
 __stubs
 __TEXT
 __stub_helper
@@ -38,20 +36,22 @@ __data
 __DATA
 __thread_vars
 __DATA
+xJ'
 0
+xJ'
 __thread_data
 __DATA
 @
 __thread_bss
 __DATA
-J'
+K'
 __bss
 __DATA
-N'
-J.
+O'
+Z.
 __common
 __DATA
-P|'
+`}'
 H
 __LINKEDIT
 
@@ -89,7 +89,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-p>(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -781,6 +780,7 @@ P
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
 29CMsgSetForceDeviceScaleFactor
+13CMsgSetUIMode
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 25CPanelAnimationDictionary
@@ -3832,6 +3832,7 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
+0
 j
 j
 j
@@ -3840,6 +3841,12 @@ j
 j
 j
 j
+&
+&
+&
+&
+&
+&
 p
 0
 p
@@ -3867,12 +3874,11 @@ j
 0
 p
 0
-#
 j
 j
 j
 j
-$
+>%
 0
 0
 AT=
@@ -3919,6 +3925,7 @@ V
 =
 !
 @
+
 &
 @
 M9e
@@ -3941,11 +3948,10 @@ M9e
 ?
 @
 @
-x
-
 
 
 d
+a
 A+M
 j
 j
@@ -3991,7 +3997,6 @@ d
 &
 &
 d
-0
 0
 A+4$A+u
 ~m=

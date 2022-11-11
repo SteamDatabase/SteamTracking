@@ -43285,6 +43285,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     hue-rotate(349deg) brightness(97%) contrast(89%);
 }
 .virtualkeyboard_Keyboard_45rH7 {
+  max-width: 1280px;
+  flex-grow: 1;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -47862,6 +47865,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   overflow: hidden;
 }
 .virtualkeyboardcontainer_VirtualKeyboardContainer_Oel3O {
+  display: flex;
+  justify-content: center;
   position: relative;
   z-index: 6000;
   flex-shrink: 0;

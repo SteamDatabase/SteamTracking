@@ -3799,7 +3799,7 @@
           n.OT.Initialize(new o.J(a.De.WEBAPI_BASE_URL, A));
       }
     },
-    98321: (A, e, t) => {
+    24218: (A, e, t) => {
       "use strict";
       t.r(e), t.d(e, { default: () => yy });
       var n = t(70655),
@@ -4298,8 +4298,8 @@
         cA = t(44660),
         sA = t(72459),
         gA = t(75818),
-        uA = t(90396),
-        dA = t(7874),
+        uA = t(95002),
+        dA = t(1028),
         mA = t(61076),
         CA = (t(93035), t(71097)),
         EA = t.n(CA),
@@ -12651,7 +12651,7 @@
       }
       function Wo(A) {
         const e = (0, Zo.Bs)();
-        return e.isSuccess && e.data.bAvailble
+        return (0, Zo.fB)() && e.isSuccess && e.data.bAvailble
           ? i.createElement(l.fp, {
               label: (0, I.Xx)("#Settings_Display_CompatibilityMode_Label"),
               description: (0, I.Xx)(
@@ -12697,42 +12697,9 @@
         );
       }
       var ea = t(61992),
-        ta = t.n(ea);
-      class na extends Tt.K3 {
-        constructor(A, e, t) {
-          super(A, e), (this.m_fnReadyToRender = t);
-        }
-        DoCallback(A) {
-          this.m_callbacks &&
-            this.m_callbacks[A] &&
-            this.m_callbacks[A](this.m_popup, this.m_element);
-        }
-        OnCreate() {
-          var A;
-          (null === (A = this.m_callbacks) || void 0 === A
-            ? void 0
-            : A.onCreate) && this.m_callbacks.onCreate(this.m_popup);
-        }
-        OnBlur() {
-          this.DoCallback("onBlur");
-        }
-        OnFocus() {
-          this.DoCallback("onFocus");
-        }
-        OnLoad() {
-          this.DoCallback("onLoad");
-        }
-        OnResize() {
-          this.DoCallback("onResize");
-        }
-        OnClose() {
-          this.DoCallback("onClose");
-        }
-        Render(A, e) {
-          this.m_fnReadyToRender(e);
-        }
-      }
-      var oa = t(60947),
+        ta = t.n(ea),
+        na = t(36609),
+        oa = t(60947),
         aa = t(88715),
         ra = t(72798),
         ia = (t(64121), t(51244));
@@ -12803,7 +12770,7 @@
         }),
         ua = "/movies/deck_startup.webm";
       var da = t(64388),
-        ma = t(5888),
+        ma = t(49476),
         Ca = t(35570),
         Ea = t(3903),
         Ia = t.n(Ea);
@@ -13057,24 +13024,7 @@
         Tt.eL.ScaleSize |
         Tt.eL.BackgroundTransparent;
       function wa(A, e, t, n) {
-        return (function (A, e, t) {
-          const n = i.useRef(),
-            [o, a] = i.useState(void 0);
-          return (
-            n.current || (n.current = new na(A, e, a)),
-            (n.current.m_callbacks = t),
-            i.useEffect(
-              () => (
-                n.current.Show(),
-                () => {
-                  (n.current.m_callbacks = void 0), n.current.Close();
-                }
-              ),
-              []
-            ),
-            { popup: n.current.window, element: o }
-          );
-        })(
+        return (0, na.B)(
           A,
           Object.assign(
             {
@@ -16721,6 +16671,7 @@
           m_eInputMode: 0,
           m_unSubmittedText: 0,
           m_eLineInputMode: 0,
+          nAppID: 0,
         },
         Al = (0, J.Pi)(() => {
           const A = (0, M._T)(),
@@ -27415,7 +27366,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Sg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1667946790),
+          d = parseInt(1668125367),
           m = d && Og(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, ng.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -29204,8 +29155,9 @@
           : null;
       };
       var Bd = t(62018),
-        pd = t(87478),
-        vd = t(18728);
+        pd = t(87478);
+      i.createContext({ setLegalText: void 0 });
+      var vd = t(18728);
       function hd(A) {
         var e;
         const { path: t, message: o } = A,
@@ -29298,10 +29250,7 @@
               [r]
             ),
             s = i.useCallback(() => {
-              const A = Math.round((Date.now() - l.current) / 1e3);
-              Bd.N8.Get().MarkMessageSeen(a.id),
-                SteamClient.Apps.ReportMarketingMessageSeen(a.id, A),
-                r(void 0);
+              Bd.N8.Get().MarkMessageSeen(a.id), r(void 0);
             }, [r, a]),
             g = i.useCallback(
               (A, t, n, o) => {
@@ -36821,9 +36770,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 8 2022 : 14:33:10",
-              BUILD_TIME_UTC: "Nov 8 2022 : 22:33:10",
-              BUILD_RTIME_UTC: 1667946790,
+              BUILD_TIME_LOCAL: "Nov 10 2022 : 16:09:27",
+              BUILD_TIME_UTC: "Nov 11 2022 : 00:09:27",
+              BUILD_RTIME_UTC: 1668125367,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -43518,9 +43467,9 @@
                 i.createElement(Cg, { bOnAC: !0 }),
                 i.createElement(Cg, { bOnAC: !1 }),
                 i.createElement(oh, null)
-              ),
-              i.createElement(th, null)
-            )
+              )
+            ),
+          i.createElement(th, null)
         );
       }
       var rh = t(1565),
@@ -50100,10 +50049,9 @@
         const C = (0, ro.iR)();
         let E = (0, M.K6)();
         const I = (0, AA.k6)(),
-          B = i.useCallback(
-            () => I.replace(r.Z5.GamepadUI.AppOverlay.Keyboard()),
-            [I]
-          );
+          B = i.useCallback(() => {
+            I.replace(r.Z5.GamepadUI.AppOverlay.Keyboard());
+          }, [I]);
         i.useEffect(() => {
           l();
         }, [u]);
@@ -50169,7 +50117,7 @@
                         className: Rw().KeyboardButton,
                         focusable: !0,
                         onActivate: () => {
-                          B(), C();
+                          C(), B();
                         },
                       },
                       i.createElement(c.Fo8, null)
@@ -53504,21 +53452,21 @@
           },
           {
             key: "SwitchKeys_Emoticons",
-            label: gQ.Q1,
+            label: () => i.createElement(gQ.Q1, null),
             type: gf.vn.Character,
             emojiCategoryIndex: 10,
             bSteamItemCategory: !0,
           },
           {
             key: "SwitchKeys_Stickers",
-            label: gQ.sU,
+            label: () => i.createElement(gQ.sU, null),
             type: gf.vn.Character,
             emojiCategoryIndex: 11,
             bSteamItemCategory: !0,
           },
           {
             key: "SwitchKeys_ChatFX",
-            label: gQ.Qm,
+            label: () => i.createElement(gQ.Qm, null),
             type: gf.vn.Character,
             emojiCategoryIndex: 12,
             bSteamItemCategory: !0,
@@ -53742,13 +53690,14 @@
           t = (0, V.Nb)(),
           n = (0, V.pv)(),
           o = n.VirtualKeyboardManager,
-          a = (0, Qt.oL)();
+          a = (0, Qt.oL)(),
+          r = hw();
         i.useEffect(() => {
           a &&
             e.current &&
             (console.log("giving focus to keyboard 2"), e.current.Activate());
         });
-        const r = i.useCallback(
+        const l = i.useCallback(
           (A) => {
             A &&
               a &&
@@ -53762,13 +53711,14 @@
           },
           [a]
         );
-        if (((0, u.Qg)(o.OnActiveElementChanged, r), !a)) return null;
-        const l = t.mode == V.iZ.StandaloneKeyboard;
+        if (((0, u.Qg)(o.OnActiveElementChanged, l), !a)) return null;
+        const c = t.mode == V.iZ.StandaloneKeyboard;
         return i.createElement(
           vA.Fe,
           {
             navID: "virtual keyboard",
             NavigationManager: M.hq.NavigationManager,
+            onButtonDown: r,
             navTreeRef: e,
             virtualFocus: !0,
             className:
@@ -53787,7 +53737,7 @@
             cQ.Kj,
             { name: "Virtual Keyboard" },
             i.createElement(ay, {
-              bStandalone: l,
+              bStandalone: c,
               windowInstance: n,
               VirtualKeyboardManager: o,
             })

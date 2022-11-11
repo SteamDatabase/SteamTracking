@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-f
-f
+_
+_
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-,e
+|e
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -49,7 +49,7 @@ __DATA
 P
 __data
 __DATA
-0'
+P'
 __thread_vars
 __DATA
 __thread_data
@@ -556,6 +556,7 @@ P
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
 29CMsgSetForceDeviceScaleFactor
+13CMsgSetUIMode
 NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 
 15CHTMLController
@@ -635,6 +636,7 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI22CMsgAuthedSteamDomainsE
 16CHTMLProtoBufMsgI29CMsgSetForceDeviceScaleFactorE
+16CHTMLProtoBufMsgI13CMsgSetUIModeE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
@@ -1080,6 +1082,7 @@ Disable auto-restart of renderer process for existing browsers
 -store
 -community
 -clientui
+-gamepadui
 -no-browser
 unconditionally disables CEF
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
@@ -1095,7 +1098,6 @@ wt
 -steamid=%llu
 -logdir=%s
 -composer-mode=%d
--gamepadui
 -steamdeck
 -steamos3
 -chromeos
@@ -2350,13 +2352,12 @@ sc_schinese
 
 @
 @
-
 @
-]
+e
+
 
 0
 0
-
 Hi
 `
 0
@@ -2369,6 +2370,7 @@ AT=
 D
 @
 @
+S
 @
 Hc
 Hc

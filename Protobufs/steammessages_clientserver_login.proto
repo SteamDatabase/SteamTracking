@@ -84,6 +84,7 @@ message CMsgClientLogon {
 	optional bool disable_partner_autogrants = 106;
 	optional bool is_steam_deck = 107;
 	optional string access_token = 108;
+	optional bool is_chrome_os = 109;
 }
 
 message CMsgClientLogonResponse {
