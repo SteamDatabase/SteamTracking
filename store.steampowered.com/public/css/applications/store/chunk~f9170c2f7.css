@@ -132,59 +132,6 @@
 .hoverposition_HoverAboveModal_1SHX2 {
   z-index: 2000;
 }
-.focusring_FocusRingRoot_3PH_X {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-}
-.focusring_FocusRing_1IZrQ {
-  position: absolute;
-  pointer-events: none;
-  outline-offset: 2px;
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_1YTKZ 0.5s ease,
-    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
-    focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
-}
-.focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {
-  outline-color: #ff0;
-}
-.focusring_FocusRingOnHiddenItem_2OusV.focusring_DebugFocusRing_YxeOZ {
-  outline-offset: 2px;
-  outline-color: red;
-  background-color: red;
-}
-@keyframes focusring_flash_1YTKZ {
-  0% {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0);
-  }
-}
-@keyframes focusring_growOutline_Z3LxS {
-  0% {
-    outline: 12px solid;
-  }
-  100% {
-    outline: 2px solid;
-  }
-}
-@keyframes focusring_fadeOutline_2hZu3 {
-  0% {
-    outline-color: rgba(255, 255, 255, 0);
-  }
-  100% {
-    outline-color: rgba(255, 255, 255, 0.6);
-  }
-}
-@keyframes focusring_blinker_3wFMM {
-  50% {
-    opacity: 0.4;
-  }
-}
 .contextmenu_ContextMenuMouseOverlay_pu9cO {
   position: fixed;
   top: 0;
@@ -1978,6 +1925,59 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   color: #8b929a;
   width: 16px;
   margin-top: -12px;
+}
+.focusring_FocusRingRoot_3PH_X {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.focusring_FocusRing_1IZrQ {
+  position: absolute;
+  pointer-events: none;
+  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  animation: focusring_flash_1YTKZ 0.5s ease,
+    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
+    focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
+}
+.focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {
+  outline-color: #ff0;
+}
+.focusring_FocusRingOnHiddenItem_2OusV.focusring_DebugFocusRing_YxeOZ {
+  outline-offset: 2px;
+  outline-color: red;
+  background-color: red;
+}
+@keyframes focusring_flash_1YTKZ {
+  0% {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes focusring_growOutline_Z3LxS {
+  0% {
+    outline: 12px solid;
+  }
+  100% {
+    outline: 2px solid;
+  }
+}
+@keyframes focusring_fadeOutline_2hZu3 {
+  0% {
+    outline-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    outline-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@keyframes focusring_blinker_3wFMM {
+  50% {
+    opacity: 0.4;
+  }
 }
 .scrollpanel_ScrollPanel_1CXdi {
   position: relative;

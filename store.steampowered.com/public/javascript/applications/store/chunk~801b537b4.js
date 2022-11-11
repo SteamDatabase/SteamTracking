@@ -6759,7 +6759,7 @@
         s = r.n(n),
         o = r(22188),
         l = (r(26149), r(1351), r(37662), r(3389)),
-        d = (r(58185), r(7929)),
+        d = (r(58185), r(29757)),
         c = r(5525),
         u = r(89694),
         m = r(93976),
@@ -7294,7 +7294,7 @@
       "use strict";
       r(37662), r(28976), r(1351), r(26149), r(82946);
     },
-    7929: (e, t, r) => {
+    29757: (e, t, r) => {
       "use strict";
       r.d(t, { c9: () => j, _d: () => T, QO: () => F, id: () => D });
       var a = r(70655),
@@ -7790,18 +7790,8 @@
         S = r(41311),
         I = r(93976),
         w = r(50498),
-        C = r(99386);
-      function E(e) {
-        const [t, r] = e.split(".", 2);
-        return (
-          t &&
-          r &&
-          (function (e) {
-            return "object" == typeof SteamClient && e in SteamClient;
-          })(t) &&
-          r in SteamClient[t]
-        );
-      }
+        C = r(99386),
+        E = r(67119);
       const D = 7;
       var T, F;
       !(function (e) {
@@ -7816,7 +7806,7 @@
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new b.Ar());
         }
         UnlockH264(e, t) {
-          E("RemotePlay.UnlockH264")
+          (0, E.U5)("RemotePlay.UnlockH264")
             ? (e.SetState(T.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
               SteamClient.RemotePlay.UnlockH264(),
@@ -13873,7 +13863,7 @@
       "use strict";
       r.d(t, { r: () => o });
       var a = r(67294),
-        i = r(84351),
+        i = r(22119),
         n = r(41311),
         s = r(90666);
       const o = (e) => {

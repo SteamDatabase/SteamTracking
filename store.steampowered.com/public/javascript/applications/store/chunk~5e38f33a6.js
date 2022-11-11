@@ -5,16 +5,16 @@
   [4233],
   {
     77636: (e, t, s) => {
-      s.d(t, { LA: () => u, jg: () => m });
-      var n = s(70655),
-        r = s(9669),
-        o = s.n(r),
+      s.d(t, { LA: () => u, jg: () => l });
+      var r = s(70655),
+        n = s(9669),
+        o = s.n(n),
         i = s(22188),
         a = (s(26149), s(92398), s(3389), s(82946), s(93976)),
         d = s(90666),
         p = s(67294);
-      const l = "unUserdataVersion";
-      class m {
+      const m = "unUserdataVersion";
+      class l {
         constructor() {
           (this.m_setWishList = new Set()),
             (this.m_wishlistInOrder = Array()),
@@ -166,7 +166,7 @@
           return this.m_mapRecommendingCuratorsForApp.get(e);
         }
         HintLoad() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             return (
               this.m_promise || (this.m_promise = this.InternalLoad()),
               this.m_promise
@@ -174,8 +174,8 @@
           });
         }
         InternalLoad() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(l) || "0",
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let e = window.localStorage.getItem(m) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + d.L7.accountid,
@@ -279,8 +279,8 @@
                   )
                     for (const t of Object.keys(e.data.rgCurations)) {
                       const s = [];
-                      for (const n of Object.keys(e.data.rgCurations[t]))
-                        0 === e.data.rgCurations[t][n] && s.push(Number(n));
+                      for (const r of Object.keys(e.data.rgCurations[t]))
+                        0 === e.data.rgCurations[t][r] && s.push(Number(r));
                       this.m_mapRecommendingCuratorsForApp.set(Number(t), s);
                     }
                 });
@@ -292,39 +292,39 @@
           });
         }
         UpdateFollowOrIgnoreCurator(e, t, s) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n =
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let r =
               d.De.STORE_BASE_URL +
               "curators/" +
               (t ? "ajaxfollow/" : "ajaxignore/");
-            const r = e.GetAccountID(),
+            const n = e.GetAccountID(),
               i = new FormData();
-            i.append("clanid", "" + r),
+            i.append("clanid", "" + n),
               i.append("sessionid", d.De.SESSIONID),
               i.append(t ? "follow" : "ignore", s ? "1" : "0");
-            let a = yield o().post(n, i, { withCredentials: !0 });
+            let a = yield o().post(r, i, { withCredentials: !0 });
             if (a && 200 == a.status) {
               this.InvalidateCache();
               const e = t
                 ? this.m_setCuratorsFollowed
                 : this.m_setCuratorsIgnored;
-              s ? e.add(r) : e.delete(r);
+              s ? e.add(n) : e.delete(n);
             }
             return a.data;
           });
         }
         UpdateAppIgnore(e, t, s = 0) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n = d.De.STORE_BASE_URL + "recommended/ignorerecommendation";
-            const r = new FormData();
-            r.append("sessionid", d.De.SESSIONID),
-              r.append("appid", "" + e),
-              r.append("remove", t ? "0" : "1"),
-              r.append("snr", d.De.SNR),
-              r.append("ignore_reason", "" + s);
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let r = d.De.STORE_BASE_URL + "recommended/ignorerecommendation";
+            const n = new FormData();
+            n.append("sessionid", d.De.SESSIONID),
+              n.append("appid", "" + e),
+              n.append("remove", t ? "0" : "1"),
+              n.append("snr", d.De.SNR),
+              n.append("ignore_reason", "" + s);
             try {
               this.m_bAjaxInFlight = !0;
-              let a = yield o().post(n, r, { withCredentials: !0 });
+              let a = yield o().post(r, n, { withCredentials: !0 });
               return (
                 a &&
                   200 == a.status &&
@@ -344,9 +344,9 @@
             return (this.m_bAjaxInFlight = !1), { success: 2 };
           });
         }
-        UpdateGameWishlist(e, t, s, r) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let n =
+        UpdateGameWishlist(e, t, s, n) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let r =
               d.De.STORE_BASE_URL +
               "api/" +
               (t ? "addtowishlist" : "removefromwishlist");
@@ -355,11 +355,11 @@
               i.append("sessionid", d.De.SESSIONID),
               s && i.append("snr", s),
               (this.m_bAjaxInFlight = !0);
-            let a = yield o().post(n, i, {
+            let a = yield o().post(r, i, {
               withCredentials: !0,
-              cancelToken: r ? r.token : void 0,
+              cancelToken: n ? n.token : void 0,
             });
-            if (((this.m_bAjaxInFlight = !1), r && r.token.reason))
+            if (((this.m_bAjaxInFlight = !1), n && n.token.reason))
               return { success: 52 };
             if (
               ((a.data.success = 1 == a.data.success ? 1 : 2),
@@ -378,19 +378,19 @@
             return a.data;
           });
         }
-        AddToCart(e, t, s, r, i, a) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const n = new FormData();
-            n.append("action", "add_to_cart"),
+        AddToCart(e, t, s, n, i, a) {
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            const r = new FormData();
+            r.append("action", "add_to_cart"),
               a
-                ? n.append("bundleid", a.toString())
-                : n.append("subid", "" + t),
-              i && n.append("snr", i),
-              n.append("sessionid", d.De.SESSIONID),
-              n.append("quantity", "1");
+                ? r.append("bundleid", a.toString())
+                : r.append("subid", "" + t),
+              i && r.append("snr", i),
+              r.append("sessionid", d.De.SESSIONID),
+              r.append("quantity", "1");
             try {
-              yield o().post(s, n, { withCredentials: !0 });
-              let t = d.De.IN_CLIENT ? "steam://url/StoreCart" : r;
+              yield o().post(s, r, { withCredentials: !0 });
+              let t = d.De.IN_CLIENT ? "steam://url/StoreCart" : n;
               e.preventDefault(),
                 this.InvalidateCache(),
                 (window.location.href = t);
@@ -400,7 +400,7 @@
           });
         }
         AddLicenseForFreeGame(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             if (this.BOwnsApp(e)) return 1;
             try {
               const t = new FormData();
@@ -409,12 +409,12 @@
                 t.append("cc", d.De.COUNTRY);
               let s =
                   d.De.STORE_BASE_URL + "actions/addappformastersubscription",
-                n = yield o().post(s, t, { withCredentials: !0 });
+                r = yield o().post(s, t, { withCredentials: !0 });
               if (
                 (this.InvalidateCache(),
-                !n.data.success || 1 !== n.data.success)
+                !r.data.success || 1 !== r.data.success)
               )
-                return n.data.success ? n.data.success : 2;
+                return r.data.success ? r.data.success : 2;
               this.m_setOwnedApps.add(Number(e));
             } catch (e) {
               let t = (0, a.l)(e);
@@ -426,15 +426,15 @@
           });
         }
         UpdateFollowingApp(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, r.mG)(this, void 0, void 0, function* () {
             try {
               const s = d.De.STORE_BASE_URL + "explore/followgame",
-                n = new FormData();
-              n.append("appid", "" + e),
-                n.append("sessionid", d.De.SESSIONID),
-                t || n.append("unfollow", "1");
-              const r = yield o().post(s, n, { withCredentials: !0 });
-              if (!r.data) return 2;
+                r = new FormData();
+              r.append("appid", "" + e),
+                r.append("sessionid", d.De.SESSIONID),
+                t || r.append("unfollow", "1");
+              const n = yield o().post(s, r, { withCredentials: !0 });
+              if (!n.data) return 2;
               this.InvalidateCache(),
                 t
                   ? this.m_setFollowedApps.add(Number(e))
@@ -456,93 +456,93 @@
         }
         InvalidateCache() {
           window.localStorage.setItem(
-            l,
+            m,
             (
-              Number.parseInt(window.localStorage.getItem(l) || "0") + 1
+              Number.parseInt(window.localStorage.getItem(m) || "0") + 1
             ).toString()
           );
         }
         static Get() {
           return (
-            m.s_globalSingletonStore ||
-              ((m.s_globalSingletonStore = new m()),
+            l.s_globalSingletonStore ||
+              ((l.s_globalSingletonStore = new l()),
               "dev" == d.De.WEB_UNIVERSE &&
-                (window.DUS = m.s_globalSingletonStore)),
-            m.s_globalSingletonStore
+                (window.DUS = l.s_globalSingletonStore)),
+            l.s_globalSingletonStore
           );
         }
       }
       function u() {
-        const [e, t] = (0, p.useState)(!m.Get().BIsLoaded());
+        const [e, t] = (0, p.useState)(!l.Get().BIsLoaded());
         return (
           (0, p.useEffect)(() => {
             e &&
-              m
+              l
                 .Get()
                 .HintLoad()
-                .finally(() => t(!m.Get().BIsLoaded()));
+                .finally(() => t(!l.Get().BIsLoaded()));
           }, [e]),
-          [e, m.Get()]
+          [e, l.Get()]
         );
       }
-      (0, n.gn)([i.LO], m.prototype, "m_setWishList", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setOwnedPackages", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setOwnedApps", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setFollowedApps", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setExcludedTagsIds", void 0),
-        (0, n.gn)(
+      (0, r.gn)([i.LO], l.prototype, "m_setWishList", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setExcludedTagsIds", void 0),
+        (0, r.gn)(
           [i.LO],
-          m.prototype,
+          l.prototype,
           "m_setExcludedContentDescriptors",
           void 0
         ),
-        (0, n.gn)([i.LO], m.prototype, "m_setRecommendedApps", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_mapIgnoredApps", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_mapIgnoredPackages", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setCuratorsFollowed", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setCuratorsIgnored", void 0),
-        (0, n.gn)(
+        (0, r.gn)([i.LO], l.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)(
           [i.LO],
-          m.prototype,
+          l.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0
         ),
-        (0, n.gn)([i.LO], m.prototype, "m_primaryLanguage", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_secondaryLanguages", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setRecommendedTags", void 0),
-        (0, n.gn)(
+        (0, r.gn)([i.LO], l.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)(
           [i.LO],
-          m.prototype,
+          l.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0
         ),
-        (0, n.gn)([i.LO], m.prototype, "m_setPackagesInCart", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_setAppsInCart", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_nCartLineItemCount", void 0),
-        (0, n.gn)([i.LO], m.prototype, "m_bAjaxInFlight", void 0),
-        (0, n.gn)([i.Fl], m.prototype, "ExcludedContentDescriptor", null),
-        (0, n.gn)([i.aD], m.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([i.LO], l.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([i.LO], l.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([i.Fl], l.prototype, "ExcludedContentDescriptor", null),
+        (0, r.gn)([i.aD], l.prototype, "UpdateAppIgnore", null);
     },
     23211: (e, t, s) => {
       s.d(t, { X: () => u, _: () => c });
-      var n = s(67294),
-        r = s(59650),
+      var r = s(67294),
+        n = s(41414),
         o = s(41311),
         i = s(90666),
         a = s(51167),
         d = (s(88514), s(65902)),
         p = s(92742),
-        l = s(92398);
-      function m(e) {
-        return n.createElement(
-          r.e1,
+        m = s(92398);
+      function l(e) {
+        return r.createElement(
+          n.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(h, { redirectURL: e.redirectURL })
+          r.createElement(h, { redirectURL: e.redirectURL })
         );
       }
       function u() {
-        (0, r.AM)(
-          n.createElement(m, {
+        (0, n.AM)(
+          r.createElement(l, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -551,24 +551,24 @@
         );
       }
       function c(e) {
-        (0, r.AM)(
-          n.createElement(m, { ownerWin: window, redirectURL: e }),
+        (0, n.AM)(
+          r.createElement(l, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, o.Xx)("#Login_SignIn") }
         );
       }
       function h(e) {
         const { redirectURL: t } = e,
-          [s] = (0, n.useState)(
+          [s] = (0, r.useState)(
             new d.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
           ),
-          [r, o] = (0, n.useState)(!1);
-        return n.createElement(
+          [n, o] = (0, r.useState)(!1);
+        return r.createElement(
           "div",
           null,
-          r
-            ? n.createElement(a.pT, null)
-            : n.createElement(a.wK, {
+          n
+            ? r.createElement(a.pT, null)
+            : r.createElement(a.wK, {
                 autoFocus: !0,
                 transport: s,
                 platform: 2,
@@ -579,114 +579,27 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-                disableQR: i.De.EREALM === l.IN.k_ESteamRealmChina,
+                disableQR: i.De.EREALM === m.IN.k_ESteamRealmChina,
               })
         );
       }
     },
-    59650: (e, t, s) => {
-      s.d(t, { e1: () => d.e1, x1: () => g, BR: () => w, AM: () => _ });
-      var n = s(70655),
-        r = s(67294),
+    41414: (e, t, s) => {
+      s.d(t, { AM: () => h, BR: () => g, e1: () => d.e1, x1: () => c });
+      var r = s(70655),
+        n = s(67294),
         o = s(73935),
         i = s(53157),
         a = s(10847),
-        d = s(84351),
-        p = s(95598),
-        l = s(64839);
-      class m extends r.Component {
-        constructor(e) {
-          super(e), (this.state = { maximized: this.BIsMaximized() });
-        }
-        BIsMaximized() {
-          let e =
-              this.props.popup.screen.availWidth - this.props.popup.innerWidth,
-            t =
-              this.props.popup.screen.availHeight -
-              this.props.popup.innerHeight;
-          return 0 === e && 0 === t;
-        }
-        componentDidMount() {
-          this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
-        }
-        componentWillUnmount() {
-          this.props.popup.removeEventListener(
-            "resize",
-            this.UpdateMaximizeState
-          );
-        }
-        UpdateMaximizeState() {
-          let e = this.BIsMaximized();
-          e != this.state.maximized && this.setState({ maximized: e });
-        }
-        render() {
-          let e = this.props.popup,
-            t = "title-area-icon";
-          this.state.maximized
-            ? (t += " restoreButton")
-            : (t += " maximizeButton");
-          let s = "TitleBar title-area";
-          return (
-            this.props.className && (s = s + " " + this.props.className),
-            r.createElement(
-              "div",
-              { className: s, style: this.props.style },
-              r.createElement("div", { className: "title-area-highlight" }),
-              r.createElement(
-                "div",
-                { className: "title-area-children" },
-                this.props.children
-              ),
-              !this.props.hideActions &&
-                r.createElement(
-                  "div",
-                  { className: "title-bar-actions" },
-                  r.createElement(
-                    "div",
-                    {
-                      className: "title-area-icon closeButton",
-                      onClick: () => {
-                        e && e.close();
-                      },
-                    },
-                    r.createElement(p.pVO, null)
-                  ),
-                  !this.props.hideMinMax &&
-                    r.createElement(
-                      "div",
-                      {
-                        className: t,
-                        onClick: () => {
-                          e.SteamClient.Window.ToggleMaximize();
-                        },
-                      },
-                      this.state.maximized && r.createElement(p.r6F, null),
-                      !this.state.maximized && r.createElement(p.YqJ, null)
-                    ),
-                  !this.props.hideMinMax &&
-                    r.createElement(
-                      "div",
-                      {
-                        className: "title-area-icon minimizeButton",
-                        onClick: () => {
-                          e.SteamClient.Window.Minimize();
-                        },
-                      },
-                      r.createElement(p.gR, null)
-                    )
-                )
-            )
-          );
-        }
-      }
-      (0, n.gn)([l.ak], m.prototype, "UpdateMaximizeState", null);
-      var u = s(77520),
-        c = s(41311),
-        h = s(90666);
-      function g(e, t, s) {
-        return (0, n.mG)(this, void 0, void 0, function* () {
-          const r = !0 === (null == s ? void 0 : s.bNeverPopOut),
-            i = !r && I(null, t),
+        d = s(22119),
+        p = s(28609),
+        m = s(77520),
+        l = s(41311),
+        u = s(90666);
+      function c(e, t, s) {
+        return (0, r.mG)(this, void 0, void 0, function* () {
+          const n = !0 === (null == s ? void 0 : s.bNeverPopOut),
+            i = !n && _(null, t),
             a =
               (null == s ? void 0 : s.bForcePopOut) &&
               (null == s ? void 0 : s.popupWidth) &&
@@ -695,21 +608,21 @@
               i &&
               !a &&
               (yield (function (e, t, s) {
-                return (0, n.mG)(this, void 0, void 0, function* () {
-                  const n = t.document.createElement("div");
-                  (n.style.position = "absolute"),
-                    (n.style.visibility = "hidden"),
-                    t.document.body.appendChild(n),
-                    o.render(e, n),
+                return (0, r.mG)(this, void 0, void 0, function* () {
+                  const r = t.document.createElement("div");
+                  (r.style.position = "absolute"),
+                    (r.style.visibility = "hidden"),
+                    t.document.body.appendChild(r),
+                    o.render(e, r),
                     yield s;
-                  let r = document;
-                  h.De.IN_STEAMUI && r.fonts && (yield r.fonts.ready);
-                  const i = n.getBoundingClientRect(),
+                  let n = document;
+                  u.De.IN_STEAMUI && n.fonts && (yield n.fonts.ready);
+                  const i = r.getBoundingClientRect(),
                     a = Math.ceil(i.height),
                     d = Math.ceil(i.width);
                   return (
-                    o.unmountComponentAtNode(n),
-                    t.document.body.removeChild(n),
+                    o.unmountComponentAtNode(r),
+                    t.document.body.removeChild(r),
                     { height: a, width: d }
                   );
                 });
@@ -718,12 +631,12 @@
               d &&
               d.height / t.innerHeight < 0.9 &&
               d.width / t.innerWidth < 0.8;
-          if (r || (!(null == s ? void 0 : s.bForcePopOut) && p))
-            return w(e, t);
-          const l = {
+          if (n || (!(null == s ? void 0 : s.bForcePopOut) && p))
+            return g(e, t);
+          const m = {
               strTitle:
                 (null == s ? void 0 : s.strTitle) ||
-                (0, c.Xx)("#Dialog_DefaultWindowTitle"),
+                (0, l.Xx)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == s ? void 0 : s.fnOnClose,
               popupWidth:
                 (null == s ? void 0 : s.popupWidth) ||
@@ -734,109 +647,109 @@
               bHideMainWindowForPopouts:
                 null == s ? void 0 : s.bHideMainWindowForPopouts,
             },
-            m = { bHideActions: null == s ? void 0 : s.bHideActionIcons };
-          return w(
+            c = { bHideActions: null == s ? void 0 : s.bHideActionIcons };
+          return g(
             e,
             t,
-            l.strTitle,
-            l,
+            m.strTitle,
+            m,
             null == s ? void 0 : s.browserContext,
-            m
+            c
           );
         });
       }
-      function _(e, t, s) {
-        return (0, n.mG)(this, void 0, void 0, function* () {
-          return g(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, s));
+      function h(e, t, s) {
+        return (0, r.mG)(this, void 0, void 0, function* () {
+          return c(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, s));
         });
       }
-      function w(e, t, s, n, o, i, a) {
-        let p, l;
-        const m = e.props.closeModal,
+      function g(e, t, s, r, o, i, a) {
+        let p, m;
+        const l = e.props.closeModal,
           u = () => {
-            l && l.Close(),
-              m && m(),
-              (null == n ? void 0 : n.fnOnClose) && n.fnOnClose();
+            m && m.Close(),
+              l && l(),
+              (null == r ? void 0 : r.fnOnClose) && r.fnOnClose();
           },
           c = () => {
             p && p.Close(), u();
           },
-          h = r.cloneElement(e, { closeModal: c });
-        if (I((a = a || (0, d.BL)(t)), t) && n && s) {
-          if (n.bHideMainWindowForPopouts) {
-            const e = r.createElement(
+          h = n.cloneElement(e, { closeModal: c });
+        if (_((a = a || (0, d.BL)(t)), t) && r && s) {
+          if (r.bHideMainWindowForPopouts) {
+            const e = n.createElement(
               d.e1,
               {
                 className: "Hidden",
                 onEscKeypress: !h.props.bDisableBackgroundDismiss && c,
               },
-              r.createElement("div", null)
+              n.createElement("div", null)
             );
-            l = a.ShowModal(e);
+            m = a.ShowModal(e);
           }
-          const e = Object.assign(Object.assign({}, n), { fnOnClose: u }),
-            m = new C(t, s, e, h, o, i);
-          m.Show(), (p = m);
+          const e = Object.assign(Object.assign({}, r), { fnOnClose: u }),
+            l = new w(t, s, e, h, o, i);
+          l.Show(), (p = l);
         } else p = a.ShowModal(h);
         return p;
       }
-      function I(e, t) {
+      function _(e, t) {
         return (
-          (e = e || (0, d.BL)(t || window)), h.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, d.BL)(t || window)), u.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class C extends i.K3 {
-        constructor(e, t, s, n, r, o) {
+      class w extends i.K3 {
+        constructor(e, t, s, r, n, o) {
           super(t, {
             title: s.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
             body_class: "fullheight ModalDialogBody",
             owner_window: void 0,
             replace_existing_popup: !0,
-            target_browser: r,
+            target_browser: n,
             availscreenwidth: e.screen.availWidth,
             availscreenheight: e.screen.availHeight,
           }),
             (this.m_windowOpener = e),
             (this.m_modalProps = s),
-            (this.m_modalElement = n),
+            (this.m_modalElement = r),
             (this.m_options = o);
         }
         Update(e) {
-          (0, u.X)(!1, "NYI");
+          (0, m.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
-          var t, s, n;
-          let r,
+          var t, s, r;
+          let n,
             o,
             i,
             a = this.m_modalProps.popupWidth || 500,
             d = this.m_modalProps.popupHeight || 400;
           if (
-            h.De.IN_CLIENT &&
+            u.De.IN_CLIENT &&
             (null ===
-              (n =
+              (r =
                 null ===
                   (s =
                     null === (t = this.m_windowOpener) || void 0 === t
                       ? void 0
                       : t.SteamClient) || void 0 === s
                   ? void 0
-                  : s.Window) || void 0 === n
+                  : s.Window) || void 0 === r
               ? void 0
-              : n.GetBrowserID)
+              : r.GetBrowserID)
           )
             i = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (r = (e.availWidth - a) / 2), (o = (e.availHeight - d) / 2);
+            (n = (e.availWidth - a) / 2), (o = (e.availHeight - d) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((r += t.availLeft), (o += t.availTop));
+              ((n += t.availLeft), (o += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: a, height: d, left: r, top: o },
+            dimensions: { width: a, height: d, left: n, top: o },
             window_opener_id: i,
           });
         }
@@ -852,22 +765,22 @@
             this.m_modalElement)
           ) {
             const s = this.m_options ? this.m_options.bHideActions : void 0,
-              n =
+              r =
                 this.m_options &&
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
             o.render(
-              r.createElement(
+              n.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: a.T },
-                r.createElement(m, {
+                n.createElement(p.T, {
                   hideMinMax: !0,
                   popup: e,
                   hideActions: s,
-                  style: n,
+                  style: r,
                 }),
-                r.createElement(d.t9, { ModalManager: (0, d.BL)(e) }),
+                n.createElement(d.t9, { ModalManager: (0, d.BL)(e) }),
                 this.m_modalElement
               ),
               t
