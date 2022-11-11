@@ -14031,7 +14031,11 @@
             yield d.OT.Get().QueueMultipleTagLoads(Array.from(t));
         });
       }
-      const f = { include_tag_count: 20, include_basic_info: !0 };
+      const f = {
+        include_tag_count: 20,
+        include_basic_info: !0,
+        include_supported_languages: !0,
+      };
       function b(e) {
         const t = o.jg.Get(),
           r = e.GetAllLanguagesWithSomeSupport() || [];
