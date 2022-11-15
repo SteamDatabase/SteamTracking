@@ -156,7 +156,6 @@
  fprintf
  free
  ftruncate
- fwrite
  g_ClockSpeed
  g_VProfProfilesRunningCount
  g_VProfile

@@ -6608,6 +6608,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   margin: 0px -24px;
   padding: 24px;
   scroll-padding: 0px 24px;
+  overflow: hidden;
 }
 .awardmodal_GrantAwardModal_2vlF5
   .awardmodal_ButtonContainer_1SCKZ

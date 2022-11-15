@@ -6608,6 +6608,7 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   margin: 0px -24px;
   padding: 24px;
   scroll-padding: 0px 24px;
+  overflow: hidden;
 }
 .awardmodal_GrantAwardModal_2vlF5
   .awardmodal_ButtonContainer_1SCKZ
@@ -45380,6 +45381,7 @@ img {
 }
 .marketingmessagesdialog_BrowserViewHost_2JQwV {
   flex: 1;
+  background: linear-gradient(180deg, #2a303c 0%, #222630 100%);
 }
 .marketingmessagesdialog_MarketingMessagesDialog_31Kke.DialogContent {
   padding: 32px 8px 8px 8px;

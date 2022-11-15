@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-_
-_
+`_
+`_
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-|e
+xe
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -65,7 +65,7 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
-h
+`
 P
 
 
@@ -1090,7 +1090,8 @@ GetCPUInformation().m_bSSE2 || IsARM()
 !"Failed to kill existing helper process"
 m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
-[Config]# Product information.ProductName=cefwebhelperProductVersion=%u
+[Config]# Product information.ProductName=cefwebhelperProductVersion=%u# Required to enable crash dump upload.ServerURL=%s# Disable rate limiting so that all crashes are uploaded.RateLimitEnabled=trueMaxUploadsPerDay=5[CrashKeys]Vendor=smallUserID=smallBuildID=smallSteamUniverse=small
+https://crash.steampowered.com/submit
 -lang=%s
 -cachedir=%s
 -steampid=%u
@@ -2352,9 +2353,13 @@ sc_schinese
 
 @
 @
+=
+:
 @
-e
+m
+R
 
+W
 
 0
 0
@@ -2370,7 +2375,6 @@ AT=
 D
 @
 @
-S
 @
 Hc
 Hc
@@ -2402,6 +2406,7 @@ IcE
 IcE
 @
 @
+c
 V
 =
 =
@@ -2424,12 +2429,10 @@ M9e
 ?
 ?
 :
-I
 ?
 ?
 ?
 
-8
 Ic
 @
 @
