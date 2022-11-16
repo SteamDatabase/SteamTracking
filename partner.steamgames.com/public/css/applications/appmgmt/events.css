@@ -2068,6 +2068,9 @@ html:not(.touch)
   font-size: 16px;
   line-height: 22px;
 }
+.bbcodes_CenterSpan_3RAiC {
+  align-items: center;
+}
 .bbcodes_SmallText_UvZC_ {
   color: #fff;
   font-size: 11px;

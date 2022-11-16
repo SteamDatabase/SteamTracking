@@ -8,18 +8,18 @@
 		 }
 
 body.v6.steamaward_nominations_modal {
-	background: #473991;
+	background: #0f1522;
 }
 
 .nominate_modal_header {
 	background-color: #ddcfc6;
-	border-bottom: 3px solid black;
+	/* border-bottom: 3px solid black; */
 }
 
 .nominate_modal_header_desc {
-	background-color: #ddcfc6;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_title_bg.jpg' ) no-repeat;
     padding: 15px;
-    border: 3px solid black;
+    /* border: 3px solid black; */
 }
 
 body.v6.steamaward_nominations_modal .fade {
@@ -27,7 +27,7 @@ body.v6.steamaward_nominations_modal .fade {
 }
 
 body.v6.steamaward_nominations_faq .newmodal_buttons span {
-	background: #ffffff;
+	background: #c6d5e0;
 }
 
 body.v6.steamaward_nominations_faq .modal_top_bar {
@@ -35,22 +35,22 @@ body.v6.steamaward_nominations_faq .modal_top_bar {
 }
 
 body.v6.steamaward_nominations_faq .searchbox {
-	background: #ffffff;
+	background: #c6d5e0
 	padding: 3px;
 	max-width: 300px;
 	margin: 15px auto;
 }
 
 body.v6.steamaward_nominations_faq .searchbox input {
-	color: #000000;
+	color: #0f1522;
 	width: 100%;
 }
 
 .nominations_header_ctn {
 	position: relative;
-    background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/SA_2021_header_still.png?v=2' ) no-repeat;
+    background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/SA_2022_header_still.png?v=2' ) no-repeat;
 	background-position: center;
-	background-color: #f13215;
+	background-color: #0f1522;
 }
 
 .nominations_video_ctn {
@@ -83,14 +83,14 @@ body.v6.steamaward_nominations_faq .searchbox input {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #FFFFFF;
+	background-color: #c6d5e0;
 	border-radius: 4px;
 }
 
 .nominate_modal_yournomination {
 	text-align: center;
 	padding-top: 10px;
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .steamaward_suggestion_contents .match_img {
@@ -100,12 +100,12 @@ body.v6.steamaward_nominations_faq .searchbox input {
 .steamaward_nominations_somethingelse {
 	margin-top: 50px;
 	text-align: center;
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .steamaward_search_suggestion_noresults {
 	text-align: center;
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .steamawards_callout {
@@ -132,7 +132,7 @@ a.steamawards_banner_ctn:hover .steamawards_banner .writein_title {
 }
 
 .steamawards_banner_ctn .steamawards_header {
-	color: #ffffff;
+	color: #c6d5e0;
 	font-size: 13px;
 	letter-spacing: 0.06em;
 	text-shadow: 1px 1px #000000;
@@ -611,11 +611,11 @@ form.steamward_nominate_form span {
 
 .steamaward_nomination_row.selected {
 	background: linear-gradient(209deg, rgba(0, 0, 0, 0.3), #000000);
-	border: 1px solid #ffffff;
+	border: 1px solid #c6d5e0;
 }
 .steamaward_nomination_row.selected label,
 .steamaward_nomination_row.selected label span {
-	color: #FFFFFF;
+	color: #d0e8f2;
 }
 
 html.responsive.touch .steamaward_nomination_row {
@@ -624,7 +624,7 @@ html.responsive.touch .steamaward_nomination_row {
 
 .steamawards_nomination_intro {
 	font-size: 15px;
-	color: #FFFFFF;
+	color: #d0e8f2;
 }
 
 .writein_ctn {
@@ -651,12 +651,13 @@ html.responsive.touch .steamaward_nomination_row {
 .steamaward_nominate_gamepage_ctn {
 	padding: 15px 15px 15px 83px;
 	position: relative;
-	color: #ffffff;
+	color: #c6d5e0;
 	margin-top: 32px;
 	margin-bottom: 32px;
 	background: url(https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_event_bg.png);
 	background-color: #000000;
-	border: 3px solid black;
+	/* border: 3px solid black; */
+	box-shadow: 4px 4px 4px #0f1522;
 }
 
 .steamaward_nominate_award {
@@ -670,9 +671,8 @@ html.responsive.touch .steamaward_nomination_row {
 
 
 .btn_nominate {
-	background: #ffffff;
+	background: #b2cad4;
 	padding: 15px;
-	border: 3px solid black;
 	cursor: pointer;
 }
 
@@ -694,14 +694,14 @@ html.responsive.touch .steamaward_nomination_row {
 }
 
 .btn_nominate span, body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui > span {
-	color: #000000;
+	color: #0f1522;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
 
 .btn_nominate:hover span{
-	color: #1A2C34;
+	color: #0f1522;
 }
 
 .btn_nominate:hover, body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui:hover > span {
@@ -738,7 +738,7 @@ html.responsive.touch .steamaward_nomination_row {
 
 .game_nominate {
 	display: block;
-	background-color: #561439;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_title_bg.jpg' ) no-repeat;
 	width: calc( 49% - 57px );
 	float: left;
 	min-height: 70px;
@@ -754,7 +754,7 @@ html.responsive.touch .steamaward_nomination_row {
 .steamaward_nominate_gamepage_ctn:not(.homepage):not(.gamewinner) .steamaward_nominate_right:not(.disabled):hover {
 	transform: scale(1.01);
 	box-shadow: 5px 6px 0 rgb(0 0 0 / 40%);
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .game_nominate.steamaward_nominate_full {
@@ -774,7 +774,7 @@ html.responsive.touch .steamaward_nomination_row {
 	justify-content: center;
 	transition: all .1s ease-in-out;
 	box-shadow: 3px 4px 0 rgb(0 0 0 / 40%);
-	border: 3px solid black;
+	border-radius: 2px;
 }
 
 .nominate_check_ctn {
@@ -784,14 +784,14 @@ html.responsive.touch .steamaward_nomination_row {
 	min-width: 30px;
 	height: 30px;
 	vertical-align: middle;
-	border: 3px solid black;
+	border: 3px solid #c6d5e0;
 	margin-right: 10px;
 }
 
 .nominate_check {
 	width: 30px;
 	height: 30px;
-	background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2019.414l-6.707-6.707l1.414-1.414L9%2016.586L20.293%205.293l1.414%201.414z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
+	background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2019.414l-6.707-6.707l1.414-1.414L9%2016.586L20.293%205.293l1.414%201.414z%22%20fill%3D%22white%22%2F%3E%3C%2Fsvg%3E') no-repeat center;
 	background-size: cover;
 }
 
@@ -853,7 +853,7 @@ html.responsive.touch .steamaward_nomination_row {
 }
 
 .steamaward_nominate_gamepage_ctn:not(.homepage) .game_nominate:not(:hover) .hover_highlight {
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .game_nominate_yournomination {
@@ -872,11 +872,12 @@ html.responsive.touch .steamaward_nomination_row {
 .game_nominate_nonomination {
 	text-align: center;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: 500; /* medium */
 
 			font-size: 17px;
 	text-transform: uppercase;
 	letter-spacing: 0.03em;
+	color: #0f1522;
 }
 
 .game_nominate .game_nominate_collapsed_only {
@@ -971,7 +972,7 @@ a.steamaward_nominate_gamepage_ctn.gamewinner {
 a.steamaward_nominate_gamepage_ctn.homepage:hover,
 a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
 	border-color: #ac5999;
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 .homepage .game_nominate.steamaward_nominate_left {
@@ -983,7 +984,7 @@ a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
 }
 
 .steamaward_nominate_gamepage_ctn.homepage .hover_highlight {
-	color: #ffffff;
+	color: #c6d5e0;
 }
 
 /* homepage */
@@ -1022,7 +1023,7 @@ a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
 }
 
 .faq_header_area {
-	padding: 30px 3% 0 3%;
+	padding: 30px 3% 30px 3%;
 	min-height: calc( 687px - 30px );
 	margin:0 auto;
 	display: flex;
@@ -1056,7 +1057,7 @@ iframe {
 
 .faq_content {
 	padding: 0 18px;
-	color: #FFFFFF;
+	color: #C6D5E0;
 }
 
 .page_content_gallery {
@@ -1098,7 +1099,6 @@ img.faq_section_title {
 }
 
 .faq_nameanddates {
-	text-align: end;
 	max-width: 440px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
@@ -1106,25 +1106,23 @@ img.faq_section_title {
 			font-size: 16px;
 	line-height: 150%;
 	text-transform: uppercase;
-	background: purple;
-	border: 3px solid black;
 	padding: 15px;
 }
 
 .faq_salename {
-	color: #ffffff;
+	color: #d0e8f2;
 	letter-spacing: 6px;
 	font-weight: bold;
 }
 
 .faq_featuring {
-	color: #ffffff;
+	color: #d0e8f2;
 	letter-spacing: 3px;
 }
 
 .faq_saledates {
 	letter-spacing: 1px;
-	color: #FFFFFF;
+	color: #d0e8f2;
 }
 
 .faq_nameanddates sup {
@@ -1137,21 +1135,20 @@ img.faq_section_title {
 	justify-content: flex-end;
 	max-width: 70%;
 	margin: auto 0;
-	background: #ddcfc6;
-    border: 3px solid black;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_title_bg.jpg' ) no-repeat;
     padding: 20px;
 	font-family: "Motiva Sans", Sans-serif;
     font-weight: 500;
-    color: black;
+    color: #0f1522;
 }
 
 .faq_saletitle {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 900; /* black */
 
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 	font-size: 80px;
-	color: #000000;
+	color: #0f1522;
 	line-height: 71px;
 	margin: 15px 0;
 }
@@ -1163,7 +1160,7 @@ img.faq_section_title {
 .faq_comingsoon {
 	text-transform: uppercase;
 	font-size: 16px;
-	color: #000000;
+	color: #0f1522;
 	letter-spacing: 3px;
 	margin: 3px 0;
 }
@@ -1187,8 +1184,7 @@ img.faq_section_title {
 }
 
 .faq_section.darkteal {
-	border-top: 3px solid rgb(0, 0, 0);
-	background: #06a8b3;
+	background: #101420;
 }
 
 .faq_section.yellow {
@@ -1197,8 +1193,7 @@ img.faq_section_title {
 }
 
 .faq_section.teal {
-	background: #473991;
-	border-top: 3px solid black;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_bg_tile.jpg' ) repeat;
 }
 
 
@@ -1214,11 +1209,7 @@ img.faq_section_title {
 	padding: 25px;
 	min-height: 194px;
 	display: flex;
-	background-color: #b298fb;
-	border: 3px solid black;
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: cover;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_nom_row_bg.jpg' ) no-repeat;
 }
 
 .nomination_row_left {
@@ -1226,16 +1217,13 @@ img.faq_section_title {
 	vertical-align: middle;
 	width: 420px;
 	flex-grow: 2;
-	background: #b298fb;
     padding: 10px;
-    border: 3px solid black;
-
+	color: #b2cad4;
 }
 
 .has_nomination .nomination_row_left {
-	background: #ffb900;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_nom_row_bg.jpg' ) no-repeat;
     padding: 10px;
-    border: 3px solid black;
 }
 
 .center_space {
@@ -1250,6 +1238,9 @@ img.faq_section_title {
 }
 
 .nominate_btn_ctn {
+	display: flex;
+	justify-content: flex-end;
+	gap: 5px;
 	margin-top: 15px;
 }
 
@@ -1258,8 +1249,8 @@ img.faq_section_title {
 }
 
 .nomination_row.has_nomination {
-	background: #ffb900;
-	border: 3px solid black;
+	/* background: #ffb900;
+	border: 3px solid black; */
 }
 
 .category_title {
@@ -1270,10 +1261,11 @@ img.faq_section_title {
 	line-height: normal;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	color: #c6d5e0;
 }
 
 .nothingnominated {
-	color: #000000;
+	color: #d0e8f2;
 	font-size: 14px;
 	font-weight: 700;
 	margin-bottom: 7px;
@@ -1292,9 +1284,9 @@ img.faq_section_title {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	clear: both;
-	background: #8ebd31;
     padding: 5px;
-    border: 3px solid black;
+	color: #0f1522;
+    background: #c6d5e0;
 }
 
 .nominate_modal_yournomination .younominated {
@@ -1302,12 +1294,12 @@ img.faq_section_title {
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
-	color: #000000;
+	color: #c6d5e0;
 }
 
 a.younominated_game, a.younominated_developer  {
 	display: inline-block;
-	border: 2px solid #ffffff;
+	border: 2px solid #d0e8f2;
 	box-shadow: 0 5px 10px #000000;
 	height: 151px;
 	max-width: 324px;
@@ -1367,7 +1359,7 @@ body.v6.steamaward h3
 
 			text-transform: uppercase;
 	font-size: 19px;
-	color: #ffffff;
+	color: #0f1522;
 	letter-spacing: 1px;
 	margin-bottom: 20px;
 }
@@ -1385,7 +1377,7 @@ body.v6.steamaward h3
 }
 
 .badge_task .nominate_check_ctn {
-	border: 3px solid white;
+	border: 3px solid #c6d5e0;
 }
 
 .badge_tasks_left {
@@ -1407,15 +1399,15 @@ body.v6.steamaward h3
 }
 
 .badge_showcase {
-	background: rgb(142 189 49);
-	border: 3px solid black;
-	color: #000000;
+	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_bg_tile.jpg' ) repeat;
+	/* border: 3px solid black; */
+	color: #0f1522;
 	padding: 30px 20px;
 	margin: 32px 0;
 }
 
 .badge_showcase_title {
-	color: #000000;
+	color: #0f1522;
 	font-size: 20px;
 	margin-bottom: 10px;
 }
@@ -1469,7 +1461,7 @@ body.v6.steamaward h3
 	font-size: 13px;
 	line-height: 18px;
 	margin-top: 4px;
-	color: #ffffff;
+	color: #d0e8f2;
 }
 
 .faqentry {
@@ -2167,7 +2159,7 @@ a.votenow_btn:hover {
 
 .writein_title {
 	font-size: 30px;
-	color: #ffffff;
+	color: #c6d5e0;
 	letter-spacing: 0.075em;
 }
 
@@ -2820,7 +2812,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 	margin-top: 20px;
 	font-family: Motiva Sans, sans-serif;
 	font-size: 14px;
-	color: #FFFFFF;
+	color: #d0e8f2;
 }
 
 .steamaward_options {
@@ -2874,8 +2866,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 
 .share_link_section {
 	padding: 20px;
-	background: rgb(244 168 204);
-	border: 3px solid black;
+	background: #0f1522;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -2886,7 +2877,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 		font-weight: 300; /* light */
 
 			font-size: 14px;
-	color: #c1c1c1;
+	color: #0f1522;
 	text-transform: uppercase;
 }
 
@@ -2900,9 +2891,9 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 #share_link {
 	margin-right: 15px;
 	flex-grow: 1;
-	color: #FFFFFF;
-	border: 1px black solid;
-	background: #130e03;
+	color: #0f1522;
+	/* border: 1px black solid; */
+	background: #b2cad4;
 	padding: 3px;
 	font-size: 16px;
 	font-weight: bold;
@@ -2924,12 +2915,12 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	color: #ffffff;
+	color: #0f1522;
 }
 
 .share_friend_avatar {
 	display: inline-block;
-	border: 3px solid #ffffff;
+	border: 3px solid #d0e8f2;
 	width: 64px;
 	height: 64px;
 	margin-right: 15px;
@@ -2942,7 +2933,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 
 .share_makeown {
 	text-align: right;
-	color: #ffffff;
+	color: #0f1522;
 }
 
 .share_makeown_block {

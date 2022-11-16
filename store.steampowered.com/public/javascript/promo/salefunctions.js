@@ -1149,7 +1149,7 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 		var $Form = $J('<form/>', {'class': 'steamward_nominate_form'});
 
 		var bFoundCurrentApp = false;
-		var rgPreviousLaborOfLoveWinners = [230410,271590,730];
+		var rgPreviousLaborOfLoveWinners = [230410,271590,730,105600];
 		for ( var i = 0; i < rgCategories.length; i++ )
 		{
 			var oCategory = rgCategories[i];

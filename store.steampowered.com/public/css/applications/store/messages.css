@@ -347,7 +347,7 @@ html.responsive
 }
 .messagelist_MessageWrapper_152h7.messagelist_Enter_DZICE {
   display: block;
-  opacity: 0;
+  opacity: 1;
 }
 .messagelist_MessageWrapper_152h7.messagelist_EnterActive_RU-xm {
   display: block;
@@ -365,6 +365,7 @@ html.responsive
   left: 0;
   top: 0;
   opacity: 1;
+  z-index: 1;
 }
 .messagelist_MessageWrapper_152h7.messagelist_ExitActive_32DFH {
   opacity: 0;

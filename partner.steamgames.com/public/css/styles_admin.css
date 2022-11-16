@@ -1975,9 +1975,38 @@ html, body { height:100%; }
 	display: inline-block;
 }
 
+.SysReqRowDescription
+{
+	font-style: italic;
+}
+
 .Music .SysReqRowLabel
 {
 	width: 160px;
+}
+
+.jsTooltip .SysReqLargeTooltipContent 
+{
+	white-space: normal;
+}
+
+.SysReqLargeTooltipContent
+{
+}
+
+.SysReqLargeTooltipContent ul
+{
+	list-style-type: disc;
+	list-style-position: inside;
+	padding-left: 0px;
+    text-indent: -17px;
+    margin-left: 20px;
+}
+
+.SysReqLargeTooltipContent ul li
+{
+	list-style-type: disc;
+	list-style-position: inside;
 }
 
 .SysReqRow input

@@ -254,110 +254,23 @@
         Active: "steamlearn_routing_Active_vb7ei",
       };
     },
-    59650: (e, t, a) => {
+    41414: (e, t, a) => {
       "use strict";
-      a.d(t, { e1: () => c.e1, x1: () => g, BR: () => S, AM: () => f });
+      a.d(t, { AM: () => p, BR: () => g, e1: () => c.e1, x1: () => _ });
       var r = a(70655),
         n = a(67294),
         i = a(73935),
         s = a(53157),
         o = a(10847),
-        c = a(39065),
-        l = a(95598),
-        m = a(64839);
-      class d extends n.Component {
-        constructor(e) {
-          super(e), (this.state = { maximized: this.BIsMaximized() });
-        }
-        BIsMaximized() {
-          let e =
-              this.props.popup.screen.availWidth - this.props.popup.innerWidth,
-            t =
-              this.props.popup.screen.availHeight -
-              this.props.popup.innerHeight;
-          return 0 === e && 0 === t;
-        }
-        componentDidMount() {
-          this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
-        }
-        componentWillUnmount() {
-          this.props.popup.removeEventListener(
-            "resize",
-            this.UpdateMaximizeState
-          );
-        }
-        UpdateMaximizeState() {
-          let e = this.BIsMaximized();
-          e != this.state.maximized && this.setState({ maximized: e });
-        }
-        render() {
-          let e = this.props.popup,
-            t = "title-area-icon";
-          this.state.maximized
-            ? (t += " restoreButton")
-            : (t += " maximizeButton");
-          let a = "TitleBar title-area";
-          return (
-            this.props.className && (a = a + " " + this.props.className),
-            n.createElement(
-              "div",
-              { className: a, style: this.props.style },
-              n.createElement("div", { className: "title-area-highlight" }),
-              n.createElement(
-                "div",
-                { className: "title-area-children" },
-                this.props.children
-              ),
-              !this.props.hideActions &&
-                n.createElement(
-                  "div",
-                  { className: "title-bar-actions" },
-                  n.createElement(
-                    "div",
-                    {
-                      className: "title-area-icon closeButton",
-                      onClick: () => {
-                        e && e.close();
-                      },
-                    },
-                    n.createElement(l.pVO, null)
-                  ),
-                  !this.props.hideMinMax &&
-                    n.createElement(
-                      "div",
-                      {
-                        className: t,
-                        onClick: () => {
-                          e.SteamClient.Window.ToggleMaximize();
-                        },
-                      },
-                      this.state.maximized && n.createElement(l.r6F, null),
-                      !this.state.maximized && n.createElement(l.YqJ, null)
-                    ),
-                  !this.props.hideMinMax &&
-                    n.createElement(
-                      "div",
-                      {
-                        className: "title-area-icon minimizeButton",
-                        onClick: () => {
-                          e.SteamClient.Window.Minimize();
-                        },
-                      },
-                      n.createElement(l.gR, null)
-                    )
-                )
-            )
-          );
-        }
-      }
-      (0, r.gn)([m.ak], d.prototype, "UpdateMaximizeState", null);
-      var u = a(77520),
-        _ = a(41311),
-        p = a(90666);
-      function g(e, t, a) {
+        c = a(56306),
+        l = a(28609),
+        m = a(77520),
+        d = a(41311),
+        u = a(90666);
+      function _(e, t, a) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const n = !0 === (null == a ? void 0 : a.bNeverPopOut),
-            s = !n && E(null, t),
+            s = !n && f(null, t),
             o =
               (null == a ? void 0 : a.bForcePopOut) &&
               (null == a ? void 0 : a.popupWidth) &&
@@ -374,7 +287,7 @@
                     i.render(e, r),
                     yield a;
                   let n = document;
-                  p.De.IN_STEAMUI && n.fonts && (yield n.fonts.ready);
+                  u.De.IN_STEAMUI && n.fonts && (yield n.fonts.ready);
                   const s = r.getBoundingClientRect(),
                     o = Math.ceil(s.height),
                     c = Math.ceil(s.width);
@@ -390,11 +303,11 @@
               c.height / t.innerHeight < 0.9 &&
               c.width / t.innerWidth < 0.8;
           if (n || (!(null == a ? void 0 : a.bForcePopOut) && l))
-            return S(e, t);
+            return g(e, t);
           const m = {
               strTitle:
                 (null == a ? void 0 : a.strTitle) ||
-                (0, _.Xx)("#Dialog_DefaultWindowTitle"),
+                (0, d.Xx)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == a ? void 0 : a.fnOnClose,
               popupWidth:
                 (null == a ? void 0 : a.popupWidth) ||
@@ -405,23 +318,23 @@
               bHideMainWindowForPopouts:
                 null == a ? void 0 : a.bHideMainWindowForPopouts,
             },
-            d = { bHideActions: null == a ? void 0 : a.bHideActionIcons };
-          return S(
+            _ = { bHideActions: null == a ? void 0 : a.bHideActionIcons };
+          return g(
             e,
             t,
             m.strTitle,
             m,
             null == a ? void 0 : a.browserContext,
-            d
+            _
           );
         });
       }
-      function f(e, t, a) {
+      function p(e, t, a) {
         return (0, r.mG)(this, void 0, void 0, function* () {
-          return g(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, a));
+          return _(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, a));
         });
       }
-      function S(e, t, a, r, i, s, o) {
+      function g(e, t, a, r, i, s, o) {
         let l, m;
         const d = e.props.closeModal,
           u = () => {
@@ -433,7 +346,7 @@
             l && l.Close(), u();
           },
           p = n.cloneElement(e, { closeModal: _ });
-        if (E((o = o || (0, c.BL)(t)), t) && r && a) {
+        if (f((o = o || (0, c.BL)(t)), t) && r && a) {
           if (r.bHideMainWindowForPopouts) {
             const e = n.createElement(
               c.e1,
@@ -446,17 +359,17 @@
             m = o.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, r), { fnOnClose: u }),
-            d = new v(t, a, e, p, i, s);
+            d = new S(t, a, e, p, i, s);
           d.Show(), (l = d);
         } else l = o.ShowModal(p);
         return l;
       }
-      function E(e, t) {
+      function f(e, t) {
         return (
-          (e = e || (0, c.BL)(t || window)), p.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, c.BL)(t || window)), u.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class v extends s.K3 {
+      class S extends s.K3 {
         constructor(e, t, a, r, n, i) {
           super(t, {
             title: a.strTitle,
@@ -474,7 +387,7 @@
             (this.m_options = i);
         }
         Update(e) {
-          (0, u.X)(!1, "NYI");
+          (0, m.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
           var t, a, r;
@@ -484,7 +397,7 @@
             o = this.m_modalProps.popupWidth || 500,
             c = this.m_modalProps.popupHeight || 400;
           if (
-            p.De.IN_CLIENT &&
+            u.De.IN_CLIENT &&
             (null ===
               (r =
                 null ===
@@ -532,7 +445,7 @@
               n.createElement(
                 "div",
                 { className: "PopupFullWindow", onContextMenu: o.T },
-                n.createElement(d, {
+                n.createElement(l.T, {
                   hideMinMax: !0,
                   popup: e,
                   hideActions: a,
@@ -944,7 +857,7 @@
                   },
                   data_source_element_usages: { n: 5, c: S, r: !0, q: !0 },
                   project_nodes: { n: 6, c: O, r: !0, q: !0 },
-                  snapshot_filter: { n: 11, c: N },
+                  snapshot_filter: { n: 11, c: h },
                   snapshot_config: { n: 7, c: B },
                   train_config: { n: 8, c: j },
                   fetch_script: {
@@ -1057,17 +970,17 @@
           return "CMsgSteamLearnProjectSnapshotFilterComparison";
         }
       }
-      class h extends _ {
+      class N extends _ {
         constructor(e = null) {
           super(),
-            h.prototype.data_element_path || u.aR(h.M()),
+            N.prototype.data_element_path || u.aR(N.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
                 fields: {
                   data_element_path: {
                     n: 1,
@@ -1081,65 +994,6 @@
                     br: u.FE.readUint32,
                     bw: u.Xc.writeUint32,
                   },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = u.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return u.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return u.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new d.BinaryReader(e),
-            a = new h();
-          return h.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return u.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new d.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          u.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new d.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnProjectSnapshotFilterHistogram";
-        }
-      }
-      class N extends _ {
-        constructor(e = null) {
-          super(),
-            N.prototype.sample_reduce_percent || u.aR(N.M()),
-            _.initialize(this, e, 0, -1, [3], null);
-        }
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  sample_reduce_percent: {
-                    n: 1,
-                    br: u.FE.readUint32,
-                    bw: u.Xc.writeUint32,
-                  },
-                  histogram: { n: 2, c: h },
-                  comparisons: { n: 3, c: b, r: !0, q: !0 },
                 },
               }),
             N.sm_m
@@ -1175,6 +1029,65 @@
         serializeBase64String() {
           var e = new d.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnProjectSnapshotFilterHistogram";
+        }
+      }
+      class h extends _ {
+        constructor(e = null) {
+          super(),
+            h.prototype.sample_reduce_percent || u.aR(h.M()),
+            _.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  sample_reduce_percent: {
+                    n: 1,
+                    br: u.FE.readUint32,
+                    bw: u.Xc.writeUint32,
+                  },
+                  histogram: { n: 2, c: N },
+                  comparisons: { n: 3, c: b, r: !0, q: !0 },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = u.Bh(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return u.TA(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return u.aD(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new d.BinaryReader(e),
+            a = new h();
+          return h.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return u.F(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new d.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          u.l2(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new d.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnProjectSnapshotFilter";
@@ -3744,10 +3657,10 @@
       function be(e) {
         return `handle_${e}`;
       }
-      function he(e) {
+      function Ne(e) {
         return `node_${e}`;
       }
-      function Ne(e) {
+      function he(e) {
         return parseInt(e.replace("handle_", ""));
       }
       function Be(e) {
@@ -4532,7 +4445,7 @@
         };
       var ot = a(49634),
         ct = a(22453),
-        lt = a(59650),
+        lt = a(41414),
         mt = a(82744);
       a(95598);
       const dt = () => {
@@ -4753,9 +4666,9 @@
               )
             : n.createElement(ft, { steamLearnContext: {} }, e.children);
         };
-      var bt = a(39065),
-        ht = a(23185);
-      const Nt = (e) => {
+      var bt = a(56306),
+        Nt = a(23185);
+      const ht = (e) => {
         const t = (0, s.k6)(),
           {
             msgProject: a,
@@ -4788,22 +4701,22 @@
           b = () => {
             r.set_project_description(f), He(r), g(!1);
           },
-          h = a && r && r.serializeBase64String() != a.serializeBase64String(),
-          N = 0 == o;
+          N = a && r && r.serializeBase64String() != a.serializeBase64String(),
+          h = 0 == o;
         return n.createElement(
           "div",
-          { className: ht.ProjectHeader },
+          { className: Nt.ProjectHeader },
           n.createElement(
             "div",
-            { className: ht.LeftSection },
+            { className: Nt.LeftSection },
             n.createElement(
               "div",
-              { className: ht.ProjectName },
+              { className: Nt.ProjectName },
               c &&
                 n.createElement("input", {
                   type: "text",
                   autoFocus: !0,
-                  className: (0, l.Z)(ht.ValueInput),
+                  className: (0, l.Z)(Nt.ValueInput),
                   value: u,
                   onChange: (e) => _(e.target.value),
                   onBlur: v,
@@ -4821,8 +4734,8 @@
               !c &&
                 n.createElement("div", {
                   className: (0, l.Z)(
-                    ht.IconMedium,
-                    ht.EditIcon,
+                    Nt.IconMedium,
+                    Nt.EditIcon,
                     "icon_steamworks"
                   ),
                   onClick: () => {
@@ -4832,11 +4745,11 @@
             ),
             n.createElement(
               "div",
-              { className: ht.Description },
+              { className: Nt.Description },
               p &&
                 n.createElement("textarea", {
                   autoFocus: !0,
-                  className: (0, l.Z)(ht.InputAreaWide),
+                  className: (0, l.Z)(Nt.InputAreaWide),
                   value: f,
                   onChange: (e) => S(e.target.value),
                   onBlur: b,
@@ -4857,8 +4770,8 @@
               !p &&
                 n.createElement("div", {
                   className: (0, l.Z)(
-                    ht.IconSmall,
-                    ht.EditIcon,
+                    Nt.IconSmall,
+                    Nt.EditIcon,
                     "icon_steamworks"
                   ),
                   onClick: () => {
@@ -4869,19 +4782,19 @@
           ),
           n.createElement(
             "div",
-            { className: ht.RightSection },
+            { className: Nt.RightSection },
             n.createElement(
               "div",
-              { className: ht.PublishInfo },
+              { className: Nt.PublishInfo },
               0 == o &&
                 n.createElement(
                   "div",
                   {
                     className: (0, l.Z)(
-                      ht.SteamLearnButton,
-                      ht.Blue,
-                      ht.Large,
-                      h && ht.Hidden
+                      Nt.SteamLearnButton,
+                      Nt.Blue,
+                      Nt.Large,
+                      N && Nt.Hidden
                     ),
                     onClick: () => {
                       (0, lt.AM)(
@@ -4930,7 +4843,7 @@
               n.createElement(
                 "select",
                 {
-                  className: ht.InputSelect,
+                  className: Nt.InputSelect,
                   value: o,
                   onChange: (e) => _a(t, i, o, parseInt(e.target.value)),
                 },
@@ -4943,15 +4856,15 @@
                 )
               )
             ),
-            N &&
+            h &&
               n.createElement(
                 "div",
                 {
                   className: (0, l.Z)(
-                    ht.SteamLearnButton,
-                    ht.Blue,
-                    ht.Large,
-                    !h && "btn_disabled"
+                    Nt.SteamLearnButton,
+                    Nt.Blue,
+                    Nt.Large,
+                    !N && "btn_disabled"
                   ),
                   onClick: () => {
                     !(function (e) {
@@ -4975,15 +4888,15 @@
                 },
                 (0, qe.Xx)("#SteamLearn_Project_Save")
               ),
-            N &&
+            h &&
               n.createElement(
                 "div",
                 {
                   className: (0, l.Z)(
-                    ht.SteamLearnButton,
-                    ht.Red,
-                    ht.Large,
-                    !h && ht.Hidden
+                    Nt.SteamLearnButton,
+                    Nt.Red,
+                    Nt.Large,
+                    !N && Nt.Hidden
                   ),
                   onClick: () => {
                     (0, lt.AM)(
@@ -5038,7 +4951,7 @@
           return n.createElement(
             "div",
             { className: Bt.ProjectDataSourcesPage },
-            n.createElement(Nt, { nProjectID: a }),
+            n.createElement(ht, { nProjectID: a }),
             n.createElement(
               "div",
               { className: Bt.ProjectConfigBody },
@@ -5241,7 +5154,7 @@
             [g, f] = n.useState(""),
             [S, E] = n.useState(!1),
             [v, b] = n.useState(!1),
-            [h, N] = n.useState(""),
+            [N, h] = n.useState(""),
             [B, y] = n.useState(!1),
             [C, j] = n.useState(!1),
             D = 0 == r;
@@ -5258,7 +5171,7 @@
                 b(!0)),
               B ||
                 (y(!0),
-                N(o.std_dev().toFixed(2 == i.data_type() ? 2 : 0)),
+                h(o.std_dev().toFixed(2 == i.data_type() ? 2 : 0)),
                 j(!0)));
           }, [d, S, B, o, i]);
           const L = (e, t, a, r) => {
@@ -5567,9 +5480,9 @@
                     type: "text",
                     className: (0, l.Z)(Bt.ValueInput, !C && Bt.Invalid),
                     disabled: !D,
-                    value: h,
+                    value: N,
                     onChange: (e) =>
-                      L(e.target.value, N, j, (t) =>
+                      L(e.target.value, h, j, (t) =>
                         t.set_std_dev(parseFloat(e.target.value))
                       ),
                   })
@@ -6178,7 +6091,7 @@
             n.useEffect(() => {
               setTimeout(() => {
                 for (const e of r.project_nodes())
-                  8 == e.type() && o(he(e.node_id()));
+                  8 == e.type() && o(Ne(e.node_id()));
               }, 0.1);
             }, [r, o]),
             n.createElement(
@@ -6392,7 +6305,7 @@
           n.useEffect(() => {
             setTimeout(() => {
               for (const e of i.project_nodes())
-                6 == e.type() && c(he(e.node_id()));
+                6 == e.type() && c(Ne(e.node_id()));
             }, 0.1);
           }, [i, c]);
           const m = Math.max(180, 20 * a.length);
@@ -6574,7 +6487,7 @@
             [g, f] = n.useState(e.msgNode.train().batch_size().toString()),
             [S, E] = n.useState(!0),
             [v, b] = n.useState(!0),
-            [h, N] = n.useState(!0),
+            [N, h] = n.useState(!0),
             [B, y] = n.useState(!0),
             C = Math.floor(
               e.msgNode.connectors().filter((e) => e.is_input_connector())
@@ -6898,9 +6811,9 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, l.Z)(Tt.OptionInput, !h && Tt.Invalid),
+                  className: (0, l.Z)(Tt.OptionInput, !N && Tt.Invalid),
                   value: g,
-                  onChange: (e) => j(f, N, e.target.value, 100),
+                  onChange: (e) => j(f, h, e.target.value, 100),
                 })
               )
             ),
@@ -6908,7 +6821,7 @@
               "div",
               { className: Tt.ButtonsContainer },
               n.createElement(ct.o9, {
-                bOKDisabled: !(S && B && v && h),
+                bOKDisabled: !(S && B && v && N),
                 onOK: () =>
                   (() => {
                     const a = parseInt(t);
@@ -7819,7 +7732,7 @@
           n.useEffect(() => {
             setTimeout(() => {
               for (const e of r.project_nodes())
-                10 == e.type() && o(he(e.node_id()));
+                10 == e.type() && o(Ne(e.node_id()));
             }, 0.1);
           }, [r, o]);
           const c = t.connectors().filter((e) => e.is_input_connector()),
@@ -8367,7 +8280,7 @@
             l != c && He(a),
               setTimeout(() => {
                 for (const e of r.project_nodes())
-                  12 == e.type() && o(he(e.node_id()));
+                  12 == e.type() && o(Ne(e.node_id()));
               }, 0.1);
           }, [a, r, t, o]);
           const c = t.connectors().filter((e) => e.is_input_connector()),
@@ -8664,7 +8577,7 @@
           n.useEffect(() => {
             setTimeout(() => {
               for (const e of r.project_nodes())
-                7 == e.type() && s(he(e.node_id()));
+                7 == e.type() && s(Ne(e.node_id()));
             }, 0.1);
           }, [r, s]);
           const _ = Math.max(78, 20 * c.length);
@@ -9092,7 +9005,7 @@
           return n.createElement(
             "div",
             { className: Mt.ProjectModelPage },
-            n.createElement(Nt, { nProjectID: e }),
+            n.createElement(ht, { nProjectID: e }),
             n.createElement(oa, null)
           );
         },
@@ -9134,10 +9047,10 @@
               e.dataTransfer.setData("application/reactflow", t),
                 (e.dataTransfer.effectAllowed = "move");
             }, []),
-            h = n.useCallback((e) => {
+            N = n.useCallback((e) => {
               e.preventDefault(), (e.dataTransfer.dropEffect = "move");
             }, []),
-            N = n.useCallback(
+            h = n.useCallback(
               (a) => {
                 a.preventDefault();
                 const n = e.current.getBoundingClientRect(),
@@ -9267,9 +9180,9 @@
             D = n.useCallback(
               (e, t) => {
                 const a = Be(t.source),
-                  n = Ne(t.sourceHandle),
+                  n = he(t.sourceHandle),
                   s = Be(t.target),
-                  o = Ne(t.targetHandle);
+                  o = he(t.targetHandle);
                 Ie(r, i, a, n, s, o);
               },
               [r, i]
@@ -9277,9 +9190,9 @@
             L = n.useCallback(
               (e, t) => {
                 const a = Be(t.source),
-                  n = Ne(t.sourceHandle),
+                  n = he(t.sourceHandle),
                   s = Be(t.target),
-                  o = Ne(t.targetHandle);
+                  o = he(t.targetHandle);
                 !(function (e, t, a, r, n, i) {
                   let s = t.project_nodes().find((e) => e.node_id() == a),
                     o = t.project_nodes().find((e) => e.node_id() == n);
@@ -9320,9 +9233,9 @@
             w = n.useCallback(
               (e) => {
                 const t = Be(e.source),
-                  a = Ne(e.sourceHandle),
+                  a = he(e.sourceHandle),
                   n = Be(e.target),
-                  s = Ne(e.targetHandle);
+                  s = he(e.targetHandle);
                 Ie(r, i, t, a, n, s);
               },
               [i, r]
@@ -9445,8 +9358,8 @@
                   onNodeDragStop: y,
                   onConnect: w,
                   onInit: a,
-                  onDrop: N,
-                  onDragOver: h,
+                  onDrop: h,
+                  onDragOver: N,
                   onEdgeUpdate: D,
                   onEdgeUpdateStart: j,
                   onEdgeUpdateEnd: L,
@@ -9498,7 +9411,7 @@
           a = [];
         for (const r of e.project_nodes()) {
           t.push({
-            id: he(r.node_id()),
+            id: Ne(r.node_id()),
             type: ca(r.type()),
             position: { x: r.location_x(), y: r.location_y() },
             data: { msgNode: r },
@@ -9514,9 +9427,9 @@
               i
                 ? a.push({
                     id: ye(t.connector_id(), n),
-                    source: he(r.node_id()),
+                    source: Ne(r.node_id()),
                     sourceHandle: be(t.connector_id()),
-                    target: he(i.node_id()),
+                    target: Ne(i.node_id()),
                     targetHandle: be(n),
                   })
                 : console.error(
@@ -9549,8 +9462,8 @@
             [E, v] = n.useState(
               t.snapshot_filter().histogram().num_buckets().toString()
             ),
-            [b, h] = n.useState(!0),
-            [N, B] = n.useState(
+            [b, N] = n.useState(!0),
+            [h, B] = n.useState(
               t
                 .snapshot_filter()
                 .comparisons()
@@ -9575,9 +9488,9 @@
               n &&
                 (t.snapshot_filter().comparisons()[a].set_value(parseFloat(r)),
                 He(e)),
-                (N[a] = r),
+                (h[a] = r),
                 (y[a] = n),
-                B([...N]),
+                B([...h]),
                 C([...y]);
             },
             M = (a) => {
@@ -9593,13 +9506,13 @@
                 t.snapshot_filter().comparisons()[r].set_comparator(1),
                 t.snapshot_filter().comparisons()[r].set_value(0),
                 t.snapshot_filter().comparisons()[r].set_exclusion(a),
-                N.push("0"),
+                h.push("0"),
                 y.push(!0),
                 He(e);
             },
             x = (a) => {
               t.snapshot_filter().comparisons().splice(a, 1),
-                N.splice(a, 1),
+                h.splice(a, 1),
                 y.splice(a, 1),
                 He(e);
             };
@@ -9627,7 +9540,7 @@
           return n.createElement(
             "div",
             { className: ma.ProjectSnapshotFilterPage },
-            n.createElement(Nt, { nProjectID: a }),
+            n.createElement(ht, { nProjectID: a }),
             n.createElement(
               "div",
               { className: ma.ProjectConfigBody },
@@ -9792,7 +9705,7 @@
                             .histogram()
                             .set_max_value(parseInt(a)),
                           He(e)),
-                          h(r),
+                          N(r),
                           v(a);
                       })(a.target.value),
                   })
@@ -9856,7 +9769,7 @@
                             !y[t] && ma.Invalid
                           ),
                           disabled: !j,
-                          value: N[t],
+                          value: h[t],
                           onChange: (e) => w(t, e.target.value),
                         }),
                         n.createElement(
@@ -9938,7 +9851,7 @@
                             !y[t] && ma.Invalid
                           ),
                           disabled: !j,
-                          value: N[t],
+                          value: h[t],
                           onChange: (e) => w(t, e.target.value),
                         }),
                         n.createElement(

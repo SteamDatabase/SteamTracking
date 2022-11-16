@@ -49,174 +49,87 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    59650: (e, t, r) => {
+    41414: (e, r, t) => {
       "use strict";
-      r.d(t, { e1: () => s.e1, x1: () => u, BR: () => _, AM: () => f });
-      var o = r(70655),
-        i = r(67294),
-        l = r(73935),
-        n = r(53157),
-        c = r(10847),
-        s = r(39065),
-        a = r(95598),
-        b = r(64839);
-      class h extends i.Component {
-        constructor(e) {
-          super(e), (this.state = { maximized: this.BIsMaximized() });
-        }
-        BIsMaximized() {
-          let e =
-              this.props.popup.screen.availWidth - this.props.popup.innerWidth,
-            t =
-              this.props.popup.screen.availHeight -
-              this.props.popup.innerHeight;
-          return 0 === e && 0 === t;
-        }
-        componentDidMount() {
-          this.props.popup.addEventListener("resize", this.UpdateMaximizeState);
-        }
-        componentWillUnmount() {
-          this.props.popup.removeEventListener(
-            "resize",
-            this.UpdateMaximizeState
-          );
-        }
-        UpdateMaximizeState() {
-          let e = this.BIsMaximized();
-          e != this.state.maximized && this.setState({ maximized: e });
-        }
-        render() {
-          let e = this.props.popup,
-            t = "title-area-icon";
-          this.state.maximized
-            ? (t += " restoreButton")
-            : (t += " maximizeButton");
-          let r = "TitleBar title-area";
-          return (
-            this.props.className && (r = r + " " + this.props.className),
-            i.createElement(
-              "div",
-              { className: r, style: this.props.style },
-              i.createElement("div", { className: "title-area-highlight" }),
-              i.createElement(
-                "div",
-                { className: "title-area-children" },
-                this.props.children
-              ),
-              !this.props.hideActions &&
-                i.createElement(
-                  "div",
-                  { className: "title-bar-actions" },
-                  i.createElement(
-                    "div",
-                    {
-                      className: "title-area-icon closeButton",
-                      onClick: () => {
-                        e && e.close();
-                      },
-                    },
-                    i.createElement(a.pVO, null)
-                  ),
-                  !this.props.hideMinMax &&
-                    i.createElement(
-                      "div",
-                      {
-                        className: t,
-                        onClick: () => {
-                          e.SteamClient.Window.ToggleMaximize();
-                        },
-                      },
-                      this.state.maximized && i.createElement(a.r6F, null),
-                      !this.state.maximized && i.createElement(a.YqJ, null)
-                    ),
-                  !this.props.hideMinMax &&
-                    i.createElement(
-                      "div",
-                      {
-                        className: "title-area-icon minimizeButton",
-                        onClick: () => {
-                          e.SteamClient.Window.Minimize();
-                        },
-                      },
-                      i.createElement(a.gR, null)
-                    )
-                )
-            )
-          );
-        }
-      }
-      (0, o.gn)([b.ak], h.prototype, "UpdateMaximizeState", null);
-      var d = r(77520),
-        m = r(41311),
-        p = r(90666);
-      function u(e, t, r) {
+      t.d(r, { AM: () => f, BR: () => m, e1: () => s.e1, x1: () => u });
+      var o = t(70655),
+        c = t(67294),
+        i = t(73935),
+        l = t(53157),
+        n = t(10847),
+        s = t(56306),
+        a = t(28609),
+        b = t(77520),
+        h = t(41311),
+        d = t(90666);
+      function u(e, r, t) {
         return (0, o.mG)(this, void 0, void 0, function* () {
-          const i = !0 === (null == r ? void 0 : r.bNeverPopOut),
-            n = !i && T(null, t),
-            c =
-              (null == r ? void 0 : r.bForcePopOut) &&
-              (null == r ? void 0 : r.popupWidth) &&
-              (null == r ? void 0 : r.popupHeight),
+          const c = !0 === (null == t ? void 0 : t.bNeverPopOut),
+            l = !c && p(null, r),
+            n =
+              (null == t ? void 0 : t.bForcePopOut) &&
+              (null == t ? void 0 : t.popupWidth) &&
+              (null == t ? void 0 : t.popupHeight),
             s =
-              n &&
-              !c &&
-              (yield (function (e, t, r) {
+              l &&
+              !n &&
+              (yield (function (e, r, t) {
                 return (0, o.mG)(this, void 0, void 0, function* () {
-                  const o = t.document.createElement("div");
+                  const o = r.document.createElement("div");
                   (o.style.position = "absolute"),
                     (o.style.visibility = "hidden"),
-                    t.document.body.appendChild(o),
-                    l.render(e, o),
-                    yield r;
-                  let i = document;
-                  p.De.IN_STEAMUI && i.fonts && (yield i.fonts.ready);
-                  const n = o.getBoundingClientRect(),
-                    c = Math.ceil(n.height),
-                    s = Math.ceil(n.width);
+                    r.document.body.appendChild(o),
+                    i.render(e, o),
+                    yield t;
+                  let c = document;
+                  d.De.IN_STEAMUI && c.fonts && (yield c.fonts.ready);
+                  const l = o.getBoundingClientRect(),
+                    n = Math.ceil(l.height),
+                    s = Math.ceil(l.width);
                   return (
-                    l.unmountComponentAtNode(o),
-                    t.document.body.removeChild(o),
-                    { height: c, width: s }
+                    i.unmountComponentAtNode(o),
+                    r.document.body.removeChild(o),
+                    { height: n, width: s }
                   );
                 });
-              })(e, t, null == r ? void 0 : r.promiseRenderComplete)),
+              })(e, r, null == t ? void 0 : t.promiseRenderComplete)),
             a =
               s &&
-              s.height / t.innerHeight < 0.9 &&
-              s.width / t.innerWidth < 0.8;
-          if (i || (!(null == r ? void 0 : r.bForcePopOut) && a))
-            return _(e, t);
+              s.height / r.innerHeight < 0.9 &&
+              s.width / r.innerWidth < 0.8;
+          if (c || (!(null == t ? void 0 : t.bForcePopOut) && a))
+            return m(e, r);
           const b = {
               strTitle:
-                (null == r ? void 0 : r.strTitle) ||
-                (0, m.Xx)("#Dialog_DefaultWindowTitle"),
-              fnOnClose: null == r ? void 0 : r.fnOnClose,
+                (null == t ? void 0 : t.strTitle) ||
+                (0, h.Xx)("#Dialog_DefaultWindowTitle"),
+              fnOnClose: null == t ? void 0 : t.fnOnClose,
               popupWidth:
-                (null == r ? void 0 : r.popupWidth) ||
+                (null == t ? void 0 : t.popupWidth) ||
                 (null == s ? void 0 : s.width),
               popupHeight:
-                (null == r ? void 0 : r.popupHeight) ||
+                (null == t ? void 0 : t.popupHeight) ||
                 (null == s ? void 0 : s.height),
               bHideMainWindowForPopouts:
-                null == r ? void 0 : r.bHideMainWindowForPopouts,
+                null == t ? void 0 : t.bHideMainWindowForPopouts,
             },
-            h = { bHideActions: null == r ? void 0 : r.bHideActionIcons };
-          return _(
+            u = { bHideActions: null == t ? void 0 : t.bHideActionIcons };
+          return m(
             e,
-            t,
+            r,
             b.strTitle,
             b,
-            null == r ? void 0 : r.browserContext,
-            h
+            null == t ? void 0 : t.browserContext,
+            u
           );
         });
       }
-      function f(e, t, r) {
+      function f(e, r, t) {
         return (0, o.mG)(this, void 0, void 0, function* () {
-          return u(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, r));
+          return u(e, r, Object.assign({ bHideMainWindowForPopouts: !0 }, t));
         });
       }
-      function _(e, t, r, o, l, n, c) {
+      function m(e, r, t, o, i, l, n) {
         let a, b;
         const h = e.props.closeModal,
           d = () => {
@@ -224,201 +137,201 @@
               h && h(),
               (null == o ? void 0 : o.fnOnClose) && o.fnOnClose();
           },
-          m = () => {
+          u = () => {
             a && a.Close(), d();
           },
-          p = i.cloneElement(e, { closeModal: m });
-        if (T((c = c || (0, s.BL)(t)), t) && o && r) {
+          f = c.cloneElement(e, { closeModal: u });
+        if (p((n = n || (0, s.BL)(r)), r) && o && t) {
           if (o.bHideMainWindowForPopouts) {
-            const e = i.createElement(
+            const e = c.createElement(
               s.e1,
               {
                 className: "Hidden",
-                onEscKeypress: !p.props.bDisableBackgroundDismiss && m,
+                onEscKeypress: !f.props.bDisableBackgroundDismiss && u,
               },
-              i.createElement("div", null)
+              c.createElement("div", null)
             );
-            b = c.ShowModal(e);
+            b = n.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, o), { fnOnClose: d }),
-            h = new k(t, r, e, p, l, n);
+            h = new _(r, t, e, f, i, l);
           h.Show(), (a = h);
-        } else a = c.ShowModal(p);
+        } else a = n.ShowModal(f);
         return a;
       }
-      function T(e, t) {
+      function p(e, r) {
         return (
-          (e = e || (0, s.BL)(t || window)), p.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, s.BL)(r || window)), d.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class k extends n.K3 {
-        constructor(e, t, r, o, i, l) {
-          super(t, {
-            title: r.strTitle,
+      class _ extends l.K3 {
+        constructor(e, r, t, o, c, i) {
+          super(r, {
+            title: t.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
             body_class: "fullheight ModalDialogBody",
             owner_window: void 0,
             replace_existing_popup: !0,
-            target_browser: i,
+            target_browser: c,
             availscreenwidth: e.screen.availWidth,
             availscreenheight: e.screen.availHeight,
           }),
             (this.m_windowOpener = e),
-            (this.m_modalProps = r),
+            (this.m_modalProps = t),
             (this.m_modalElement = o),
-            (this.m_options = l);
+            (this.m_options = i);
         }
         Update(e) {
-          (0, d.X)(!1, "NYI");
+          (0, b.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
-          var t, r, o;
-          let i,
+          var r, t, o;
+          let c,
+            i,
             l,
-            n,
-            c = this.m_modalProps.popupWidth || 500,
+            n = this.m_modalProps.popupWidth || 500,
             s = this.m_modalProps.popupHeight || 400;
           if (
-            p.De.IN_CLIENT &&
+            d.De.IN_CLIENT &&
             (null ===
               (o =
                 null ===
-                  (r =
-                    null === (t = this.m_windowOpener) || void 0 === t
+                  (t =
+                    null === (r = this.m_windowOpener) || void 0 === r
                       ? void 0
-                      : t.SteamClient) || void 0 === r
+                      : r.SteamClient) || void 0 === t
                   ? void 0
-                  : r.Window) || void 0 === o
+                  : t.Window) || void 0 === o
               ? void 0
               : o.GetBrowserID)
           )
-            n = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            l = this.m_windowOpener.SteamClient.Window.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (i = (e.availWidth - c) / 2), (l = (e.availHeight - s) / 2);
-            let t = e;
-            void 0 !== t.availLeft &&
-              void 0 !== t.availTop &&
-              ((i += t.availLeft), (l += t.availTop));
+            (c = (e.availWidth - n) / 2), (i = (e.availHeight - s) / 2);
+            let r = e;
+            void 0 !== r.availLeft &&
+              void 0 !== r.availTop &&
+              ((c += r.availLeft), (i += r.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: c, height: s, left: i, top: l },
-            window_opener_id: n,
+            dimensions: { width: n, height: s, left: c, top: i },
+            window_opener_id: l,
           });
         }
         OnLoad() {}
         OnResize() {}
         OnClose() {
           this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
-            l.unmountComponentAtNode(this.m_element);
+            i.unmountComponentAtNode(this.m_element);
         }
-        Render(e, t) {
+        Render(e, r) {
           if (
-            (t.setAttribute("class", "fullheight popup_chat_frame"),
+            (r.setAttribute("class", "fullheight popup_chat_frame"),
             this.m_modalElement)
           ) {
-            const r = this.m_options ? this.m_options.bHideActions : void 0,
+            const t = this.m_options ? this.m_options.bHideActions : void 0,
               o =
                 this.m_options &&
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
                   : void 0;
-            l.render(
-              i.createElement(
+            i.render(
+              c.createElement(
                 "div",
-                { className: "PopupFullWindow", onContextMenu: c.T },
-                i.createElement(h, {
+                { className: "PopupFullWindow", onContextMenu: n.T },
+                c.createElement(a.T, {
                   hideMinMax: !0,
                   popup: e,
-                  hideActions: r,
+                  hideActions: t,
                   style: o,
                 }),
-                i.createElement(s.t9, { ModalManager: (0, s.BL)(e) }),
+                c.createElement(s.t9, { ModalManager: (0, s.BL)(e) }),
                 this.m_modalElement
               ),
-              t
+              r
             );
           }
         }
       }
     },
-    13596: (e, t, r) => {
+    13596: (e, r, t) => {
       "use strict";
-      r.d(t, { V: () => c });
-      var o = r(67294),
-        i = r(7573),
-        l = r(50732),
-        n = r.n(l);
-      const c = o.memo(function (e) {
+      t.d(r, { V: () => n });
+      var o = t(67294),
+        c = t(7573),
+        i = t(50732),
+        l = t.n(i);
+      const n = o.memo(function (e) {
         const {
-          className: t,
-          size: r,
-          string: l,
-          position: c,
+          className: r,
+          size: t,
+          string: i,
+          position: n,
           static: b,
           msDelayAppear: h,
         } = e;
-        let d = [n().LoadingWrapper, "SteamLogoThrobber", s(r)];
-        const [m, p] = o.useState(!h);
+        let d = [l().LoadingWrapper, "SteamLogoThrobber", s(t)];
+        const [u, f] = o.useState(!h);
         return (
           (0, o.useEffect)(() => {
-            if (m) return;
-            const e = setTimeout(() => p(!0), h);
+            if (u) return;
+            const e = setTimeout(() => f(!0), h);
             return () => clearTimeout(e);
-          }, [h, m]),
-          void 0 === l && d.push(n().noString),
-          t && d.push(t),
-          b && d.push(n().Static),
+          }, [h, u]),
+          void 0 === i && d.push(l().noString),
+          r && d.push(r),
+          b && d.push(l().Static),
           o.createElement(
             "div",
             {
-              className: (0, i.Z)(
-                "center" == c && n().throbber_center_wrapper,
-                h && n().ThrobberDelayAppear,
-                m && n().Visible
+              className: (0, c.Z)(
+                "center" == n && l().throbber_center_wrapper,
+                h && l().ThrobberDelayAppear,
+                u && l().Visible
               ),
             },
-            m &&
+            u &&
               o.createElement(
                 "div",
                 { className: d.join(" ") },
                 o.createElement(
                   "div",
-                  { className: n().Throbber },
-                  o.createElement(a, { className: n().base }),
-                  o.createElement(a, { className: n().blur })
+                  { className: l().Throbber },
+                  o.createElement(a, { className: l().base }),
+                  o.createElement(a, { className: l().blur })
                 )
               ),
-            Boolean(l) &&
-              o.createElement("div", { className: n().ThrobberText }, l)
+            Boolean(i) &&
+              o.createElement("div", { className: l().ThrobberText }, i)
           )
         );
       });
       function s(e) {
         switch (e) {
           case "small":
-            return n().throbber_small;
+            return l().throbber_small;
           case "medium":
-            return n().throbber_medium;
+            return l().throbber_medium;
           case "xlarge":
-            return n().throbber_xlarge;
+            return l().throbber_xlarge;
           case "xxlarge":
-            return n().throbber_xxlarge;
+            return l().throbber_xxlarge;
           default:
-            return n().throbber_large;
+            return l().throbber_large;
         }
       }
       function a(e) {
-        let t = "SVGIcon_Button SVGIcon_Throbber ";
+        let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
-          e.className && (t += e.className),
+          e.className && (r += e.className),
           o.createElement(
             "svg",
             {
               version: "1.1",
               id: "base",
               xmlns: "http://www.w3.org/2000/svg",
-              className: t,
+              className: r,
               x: "0px",
               y: "0px",
               width: "256px",
@@ -427,9 +340,9 @@
             },
             o.createElement(
               "g",
-              { className: n().partCircle },
+              { className: l().partCircle },
               o.createElement("path", {
-                className: n().roundOuter,
+                className: l().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -437,7 +350,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               o.createElement("path", {
-                className: n().roundOuter,
+                className: l().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -445,7 +358,7 @@
                 d: "M201.432,101.166",
               }),
               o.createElement("path", {
-                className: n().roundOuter,
+                className: l().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -455,9 +368,9 @@
             ),
             o.createElement(
               "g",
-              { className: n().mainOutline },
+              { className: l().mainOutline },
               o.createElement("path", {
-                className: n().roundFill,
+                className: l().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -465,7 +378,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundOuterOutline,
+                className: l().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -474,7 +387,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber01,
+                className: l().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -483,7 +396,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber02,
+                className: l().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -492,7 +405,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber03,
+                className: l().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -501,7 +414,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber04,
+                className: l().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -510,7 +423,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber05,
+                className: l().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -519,7 +432,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber06,
+                className: l().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -528,7 +441,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber07,
+                className: l().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -537,7 +450,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber08,
+                className: l().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -546,7 +459,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber09,
+                className: l().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -555,7 +468,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber10,
+                className: l().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -564,7 +477,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber11,
+                className: l().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -573,7 +486,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber12,
+                className: l().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -582,7 +495,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber13,
+                className: l().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -591,7 +504,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber14,
+                className: l().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -600,7 +513,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               o.createElement("path", {
-                className: n().roundThrobber15,
+                className: l().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -611,7 +524,7 @@
             ),
             o.createElement(
               "g",
-              { className: n().bottomCircle },
+              { className: l().bottomCircle },
               o.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -619,7 +532,7 @@
             ),
             o.createElement(
               "g",
-              { className: n().topCircle },
+              { className: l().topCircle },
               o.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",
@@ -634,22 +547,22 @@
         );
       }
     },
-    49686: (e, t, r) => {
+    49686: (e, r, t) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => b });
-      var o = r(67294),
-        i = r(59650),
-        l = r(39065),
-        n = r(94486),
-        c = (r(88514), r(65902)),
-        s = r(90666),
-        a = r(92742);
+      t.r(r), t.d(r, { default: () => b });
+      var o = t(67294),
+        c = t(41414),
+        i = t(56306),
+        l = t(94486),
+        n = (t(88514), t(65902)),
+        s = t(90666),
+        a = t(92742);
       function b() {
         return (
           (0, o.useEffect)(
             () => (
               (window.g_ShowLoginDialog = (e) =>
-                (0, i.AM)(o.createElement(h, { redirectUrl: e }), window, {
+                (0, c.AM)(o.createElement(h, { redirectUrl: e }), window, {
                   popupWidth: 700,
                   popupHeight: 440,
                 })),
@@ -664,31 +577,31 @@
       }
       function h(e) {
         const {
-            redirectUrl: t = s.De.PARTNER_BASE_URL,
-            disableQR: r,
-            closeModal: i,
+            redirectUrl: r = s.De.PARTNER_BASE_URL,
+            disableQR: t,
+            closeModal: c,
           } = e,
           b = (0, o.useRef)(
-            new c.J(s.De.WEBAPI_BASE_URL).GetServiceTransport()
+            new n.J(s.De.WEBAPI_BASE_URL).GetServiceTransport()
           ).current,
           [h, d] = (0, o.useState)(!1);
         return o.createElement(
-          l.e1,
-          { onEscKeypress: i, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
+          i.e1,
+          { onEscKeypress: c, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
           h
-            ? o.createElement(n.pT, null)
-            : o.createElement(n.wK, {
+            ? o.createElement(l.pT, null)
+            : o.createElement(l.wK, {
                 platform: 2,
                 transport: b,
                 onComplete: (e) => {
                   e == a.TG.k_PrimaryDomainFail
                     ? d(!0)
-                    : window.location.assign(t);
+                    : window.location.assign(r);
                 },
                 autoFocus: !0,
                 theme: "modal",
-                redirectUrl: t,
-                disableQR: r,
+                redirectUrl: r,
+                disableQR: t,
               })
         );
       }

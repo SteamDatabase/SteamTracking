@@ -2570,7 +2570,10 @@ div#appHeaderFindSuggestions
 .launchDiscountBlocked {
     padding-left: 8px;
     color: orange;
-    display: none;
+}
+
+.label_strikethrough {
+	text-decoration: line-through;
 }
 
 .publishOptions_pri {

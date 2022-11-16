@@ -4191,20 +4191,27 @@
           );
         }
         BHasSomeLanguageSupport(e) {
+          var t;
           return (
             this.BCheckDataRequestIncluded({ include_supported_languages: !0 }),
-            this.m_rgSupportedLanguages.some(
-              (t) =>
-                t.elanguage == e && (t.supported || t.subtitles || t.full_audio)
-            )
+            (null === (t = this.m_rgSupportedLanguages) || void 0 === t
+              ? void 0
+              : t.some(
+                  (t) =>
+                    t.elanguage == e &&
+                    (t.supported || t.subtitles || t.full_audio)
+                )) || !1
           );
         }
         GetAllLanguagesWithSomeSupport() {
+          var e;
           return (
             this.BCheckDataRequestIncluded({ include_supported_languages: !0 }),
-            this.m_rgSupportedLanguages
-              .filter((e) => e.supported || e.subtitles || e.full_audio)
-              .map((e) => e.elanguage)
+            (null === (e = this.m_rgSupportedLanguages) || void 0 === e
+              ? void 0
+              : e
+                  .filter((e) => e.supported || e.subtitles || e.full_audio)
+                  .map((e) => e.elanguage)) || []
           );
         }
         GetDataRequest() {

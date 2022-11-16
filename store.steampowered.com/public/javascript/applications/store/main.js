@@ -6505,14 +6505,14 @@
         SjW: () => Se,
         Ucz: () => Z,
         Uos: () => D,
-        V7n: () => N,
+        V7n: () => O,
         VR: () => q,
         Vgm: () => ne,
         WWB: () => ue,
         X: () => f,
         XBH: () => W,
         YVI: () => Re,
-        YVR: () => O,
+        YVR: () => N,
         YqJ: () => P,
         YtI: () => u,
         ZJH: () => ce,
@@ -7520,7 +7520,7 @@
           })
         );
       }
-      function N(e) {
+      function O(e) {
         return i.createElement(
           "svg",
           {
@@ -7541,7 +7541,7 @@
           })
         );
       }
-      function O() {
+      function N() {
         return i.createElement(
           "svg",
           {
@@ -10824,6 +10824,7 @@
           COMMUNITY_BASE_URL: "",
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
           LOGIN_BASE_URL: "",
           SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
@@ -11002,13 +11003,15 @@
           ? c.STATS_BASE_URL
           : E(e, c.INTERNAL_STATS_BASE_URL)
           ? c.INTERNAL_STATS_BASE_URL
+          : E(e, c.STORE_CHECKOUT_BASE_URL)
+          ? c.STORE_CHECKOUT_BASE_URL
           : E(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
       function k() {
         const e = window.location.href;
-        return E(e, c.STORE_BASE_URL)
+        return E(e, c.STORE_BASE_URL) || E(e, c.STORE_CHECKOUT_BASE_URL)
           ? "store"
           : E(e, c.COMMUNITY_BASE_URL)
           ? "community"
@@ -11550,8 +11553,8 @@
         (0, r.gn)([P.ak], I.prototype, "UserInputRecieved", null);
       var F = n(13271),
         V = n(7573),
-        N = n(73604);
-      const O = parseInt(R().nTimelineHoverEdgePadding);
+        O = n(73604);
+      const N = parseInt(R().nTimelineHoverEdgePadding);
       function U(e) {
         let { manifest: t, forcePause: n } = e,
           [r, i] = (function (e) {
@@ -11655,7 +11658,7 @@
                     l = t.current.getBoundingClientRect(),
                     c = r.right - r.left,
                     m = l.right - l.left,
-                    d = T.Lh(i - m / 2, 0 + O, c - m - O);
+                    d = T.Lh(i - m / 2, 0 + N, c - m - N);
                   a({ nTickOffset: i, nHoverOffset: d, nPlaybackSeconds: o });
                 },
                 [e, a]
@@ -11697,7 +11700,7 @@
           s.createElement(
             "div",
             { ref: a, className: (0, V.Z)(R().HoverTime), style: _ },
-            (0, N.I8)(h, !0)
+            (0, O.I8)(h, !0)
           )
         );
       }

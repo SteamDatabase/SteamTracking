@@ -83,7 +83,7 @@ function PerformPayPalAuthorization()
 		{
 			var paypal_url = encodeURIComponent( 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s'.replace( "%s", $('paypaltoken').value ) );
 			var transID = $('transaction_id').value;
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+paypal_url + GetAdditionalParametersForExternalPaymentProcessor( 'paypal' ) + '&s=' + g_sessionID );
 			$('external_payment_processor_notice').innerHTML = 'A new window has been opened to the PayPal web site.  Please login or create an account there to review your purchase details and authorize the transaction.  If you do not see a new window check that your browser is not blocking it as a pop-up.';
 			g_bPayPalAuthInFlight = true;
 		}
@@ -154,7 +154,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	$J('#purchase_button_bottom').hide();
 	$J('#purchase_button_inprogress_bottom').show();
 
-	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/store/qiwi/launchauth', 'qiwiWindow' );
+	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
 
 	g_bCreateQiwiInvoiceRunning = true;
 
@@ -171,7 +171,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		// add the country code back
 		phoneNumber = m + phoneNumber;
 
-		new Ajax.Request('https://store.steampowered.com/store/checkout/qiwiinvoice/',
+		new Ajax.Request('https://store.steampowered.com/checkout/qiwiinvoice/',
 		{
 		    method:'post',
 		    parameters: {
@@ -329,15 +329,15 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 
 			if ( g_bInReactMobileApp )
 			{
-				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/checkout/externallink/?transid=' + transID );
+				OpenUrlInNewBlankWindow( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID );
 			}
 			else if ( bOpenURLInSteamExternalWindow )
 			{
-				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/store/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
+				g_winExternal = window.open( 'steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=' + transID, '_external_provider', '' );
 			}
 			else
 			{
-				g_winExternal = window.open( 'https://store.steampowered.com/store/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
+				g_winExternal = window.open( 'https://store.steampowered.com/checkout/externallink/?transid=' + transID, '_external_provider', 'width=1280,height=900' );
 			}
 
 						if ( displayPendingReceipt )
@@ -351,7 +351,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		}
 		else
 		{
-			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
+			OpenUrlInNewBlankWindow( 'https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + transID + '&authurl='+escapedUrl + '&s=' + g_sessionID );
 			if ( method.value != 'paypal' && method.value != 'storedpaypal' && method.value != 'updatepaypal' )
 			{
 				PollForTransactionStatus( $('transaction_id').value, 80, 15 );
@@ -378,7 +378,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 
-				window.open( 'https://store.steampowered.com/store//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+				window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	}
 	catch( e )
 	{
@@ -536,7 +536,7 @@ function OnSaveBillingAddressSuccess()
 	if ( $('cache_return_url') )
 		form.action = $('cache_return_url').value;
 	else
-		form.action = 'https://store.steampowered.com/store/account/';
+		form.action = 'https://store.steampowered.com/account/';
 
 	var address = {
 		'FirstName' : $('first_name').value,
@@ -573,7 +573,7 @@ function SaveBillingAddress()
 
 	try
 	{
-		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/store/checkout/updatebillingaddress/',
+		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/checkout/updatebillingaddress/',
 		{
 		    onSuccess: function(result){
 				// Success...
@@ -640,7 +640,7 @@ function InitializeTransaction()
 			$('transaction_id').value = -1;
 			$('paypaltoken').value = '';
 
-									new Ajax.Request('https://store.steampowered.com/store/checkout/canceltransaction/',
+									new Ajax.Request('https://store.steampowered.com/checkout/canceltransaction/',
 			{
 			    method:'post',
 			    parameters: {
@@ -768,7 +768,7 @@ function InitializeTransaction()
 			}
 		}
 
-		new Ajax.Request('https://store.steampowered.com/store/checkout/inittransaction/',
+		new Ajax.Request('https://store.steampowered.com/checkout/inittransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -954,7 +954,7 @@ function OnInitializeTransactionSuccess( result )
 
 			return;
 		}
-		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 122				)
+		else if ( ( result.paymentmethod == 4 && method.value != 'storedpaypal' ) || result.paymentmethod == 3					|| result.paymentmethod == 5 || result.paymentmethod == 6					|| result.paymentmethod == 7 || result.paymentmethod == 9					|| result.paymentmethod == 10					|| result.paymentmethod == 11 || result.paymentmethod == 78					|| result.paymentmethod == 12					|| result.paymentmethod == 14					|| result.paymentmethod == 33					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29					|| result.paymentmethod == 45 || result.paymentmethod == 46					|| result.paymentmethod == 47 || result.paymentmethod == 121					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 127					|| result.paymentmethod == 135					|| result.paymentmethod == 136					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 137					|| result.paymentmethod == 138					|| result.paymentmethod == 139					|| result.paymentmethod == 140					|| result.paymentmethod == 141					|| result.paymentmethod == 142					|| result.paymentmethod == 143					|| result.paymentmethod == 144					|| result.paymentmethod == 145					|| result.paymentmethod == 146					|| result.paymentmethod == 147					|| result.paymentmethod == 148					|| result.paymentmethod == 149					|| result.paymentmethod == 150					|| result.paymentmethod == 151					|| result.paymentmethod == 152					|| result.paymentmethod == 153					|| result.paymentmethod == 122				)
 		{
 			
 						$('is_external_finalize_transaction').value = 1;
@@ -1020,7 +1020,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
 					break;
 				case 57:
-					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'https://store.steampowered.com/store/account\'>account</a> page.';
+					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'https://store.steampowered.com/account\'>account</a> page.';
 					break;
 				case 31:
 					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
@@ -1055,7 +1055,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
 					break;
 				case 23:
-					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/store/cart/country_changed\'>here</a>, or change your payment method below.';
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
 					break;
 				case 8:
 					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
@@ -1067,7 +1067,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'This card number is not valid for the payment method you selected.';
 					break;
 				case 56:
-					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/store/cart\'>edit the contents of your cart</a> and try again.';
+					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 					break;
 				case 53:
 					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
@@ -1266,7 +1266,7 @@ function GetFinalPriceAndUpdateReviewTab()
 		var microtxnid = $('microtxn_id') ? $('microtxn_id').value : -1;
 		var cart = $J('#shopping_cart_gid' ).val() || -1;
 		var gidReplayOfTransID = $J('#gid_replay' ).val() || -1;
-		new Ajax.Request('https://store.steampowered.com/store/checkout/getfinalprice/',
+		new Ajax.Request('https://store.steampowered.com/checkout/getfinalprice/',
 		{
 		    method:'get',
 		    parameters: {
@@ -2663,6 +2663,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
+				else if ( method.value == 'alipayhk' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'AliPayHK transactions are authorized through the AliPayHK website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to AliPayHK';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for AliPayHK customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the AliPayHK website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the AliPayHK window before the process is complete.';
+					}
+				}
 			}
 			else
 			{
@@ -2754,7 +2764,7 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
 				break;
 			case 56:
-				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/store/cart\'>edit the contents of your cart</a> and try again.';
+				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 				break;
 			case 17:
 				var method = $('payment_method');
@@ -3441,7 +3451,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'gcash' || method.value == 'kakaopay' || method.value == 'dana' || method.value == 'truemoney'
 			|| method.value == 'touchngo' || method.value == 'linepay' || method.value == 'merpay' || method.value == 'paypay'
 			|| method.value == 'sberbank' || method.value == 'yoomoney' || method.value == 'tinkoff' || method.value == 'cashincis'
-			|| method.value == 'aupay'
+			|| method.value == 'aupay' || method.value == 'alipayhk'
 		)
 		{
 			bShowCountryVerification = true;
@@ -3685,7 +3695,7 @@ function VerifyShippingAddress()
 
 				AnimateSubmitPaymentInfoButton();
 
-		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/store/checkout/verifyshippingaddress/',
+		Shipping_VerifyShippingAddress( g_sessionID, 'https://store.steampowered.com/checkout/verifyshippingaddress/',
 			{
 				onSuccess: function( result ) {
 					g_bVerifyShippingAddressCallRunning = false;
@@ -4721,6 +4731,10 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			{
 				$('payment_method_review_text').innerHTML = 'au PAY';
 			}
+			else if ( method.value == 'alipayhk' && providerPaymentMethod == 153 )
+			{
+				$('payment_method_review_text').innerHTML = 'AliPayHK';
+			}
 		}
 
 		$J('#review_address_body').text( $('first_name').value+' '+$('last_name').value+' ' );
@@ -5359,7 +5373,7 @@ function OnPurchaseSuccess( result )
 						if ( $('cache_return_url') )
 				window.location = $('cache_return_url').value;
 			else
-				window.location = 'https://store.steampowered.com/store/account/';
+				window.location = 'https://store.steampowered.com/account/';
 			return true;
 		}
 
@@ -5588,7 +5602,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 	{
 		try
 		{
-			new Ajax.Request('https://store.steampowered.com/store/checkout/authenticationdetails/',
+			new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
 			{
 			    method:'get',
 			    parameters: {
@@ -5717,7 +5731,7 @@ function HandlePollForTransactionStatusFailure()
 		}
 
 		var error_text = '';
-		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="https://store.steampowered.com/store//account/history/">account status page</a> or your email for a confirmation receipt.';
+		error_text = 'Your purchase may have been completed, but there was a problem checking on the status of this transaction.  Please check your <a href="https://store.steampowered.com//account/history/">account status page</a> or your email for a confirmation receipt.';
 	}
 	catch(e)
 	{
@@ -5764,7 +5778,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 
 	try
 	{
-		new Ajax.Request('https://store.steampowered.com/store/checkout/transactionstatus/',
+		new Ajax.Request('https://store.steampowered.com/checkout/transactionstatus/',
 		{
 		    method:'get',
 		    parameters: {
@@ -5922,7 +5936,7 @@ function FinalizeTransaction()
 			screenWidth: screen.width
 		};
 
-		new Ajax.Request('https://store.steampowered.com/store/checkout/finalizetransaction/',
+		new Ajax.Request('https://store.steampowered.com/checkout/finalizetransaction/',
 		{
 		    method:'post',
 		    parameters: {
@@ -5989,19 +6003,19 @@ function FinalizeTransaction()
 
 function SSAPopup()
 {
-		var win = window.open( 'https://store.steampowered.com/store/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
+		var win = window.open( 'https://store.steampowered.com/checkout/ssapopup','steam_ssa','width=536,height=546,resize=yes,scrollbars=yes');
 	win.focus();
 }
 
 function RefundPaymentMethodsPopup()
 {
-		var win = window.open( 'https://store.steampowered.com/store/steam_refunds_methods','steam_refund_details','width=1024,height=768');
+		var win = window.open( 'https://store.steampowered.com/steam_refunds_methods','steam_refund_details','width=1024,height=768');
 	win.focus();
 }
 
 function HardwareAgreementPopup()
 {
-		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/store/hardware_order_terms','steam_hardwareterms' );
+		var win = OpenUrlInNewBlankWindow( 'https://store.steampowered.com/hardware_order_terms','steam_hardwareterms' );
 	win.focus();
 }
 
@@ -6133,7 +6147,7 @@ function SendGift()
 
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/store/checkout/sendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/checkout/sendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {
@@ -6225,7 +6239,7 @@ function UnsendGift()
 	{
 				g_bSendGiftCallRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/store/checkout/unsendgiftsubmit/',
+		new Ajax.Request('https://store.steampowered.com/checkout/unsendgiftsubmit/',
 		{
 		    method:'post',
 		    parameters: {

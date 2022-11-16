@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7662224";
+var CLSTAMP = "7665485";
 (() => {
   "use strict";
   var e = {};
@@ -174,6 +174,7 @@ var CLSTAMP = "7662224";
       COMMUNITY_BASE_URL: "",
       CHAT_BASE_URL: "",
       STORE_BASE_URL: "",
+      STORE_CHECKOUT_BASE_URL: "",
       LOGIN_BASE_URL: "",
       SUPPORT_BASE_URL: "",
       STORE_ICON_BASE_URL: "",
@@ -293,9 +294,9 @@ var CLSTAMP = "7662224";
   }
   function A(e = "webui_config") {
     const o = {},
-      i = T("config", e);
+      i = h("config", e);
     i && (delete i.SESSIONID, Object.assign(p, i), (o.config = !0));
-    const _ = T("userinfo", e);
+    const _ = h("userinfo", e);
     _ &&
       (Object.assign(S, _),
       (o.userConfig = !0),
@@ -308,14 +309,14 @@ var CLSTAMP = "7662224";
           );
         })() &&
         (S.is_support = !1));
-    const s = T("broadcast", e);
+    const s = h("broadcast", e);
     s && (Object.assign(C, s), (o.broadcastConfig = !0));
-    const a = T("community", e);
+    const a = h("community", e);
     a && (Object.assign(k, a), (o.communityConfig = !0));
-    const r = T("event", e);
+    const r = h("event", e);
     return r && (Object.assign(I, r), (o.eventConfig = !0)), o;
   }
-  function h(e, t = "webui_config", n) {
+  function T(e, t = "webui_config", n) {
     let o;
     if (
       ((o =
@@ -338,8 +339,8 @@ var CLSTAMP = "7662224";
       }
     else n && console.error("Missing config element #", t);
   }
-  function T(e, t = "webui_config") {
-    return h(e, t, !0);
+  function h(e, t = "webui_config") {
+    return T(e, t, !0);
   }
   let R = { success: !0, result: 1 };
   class P {

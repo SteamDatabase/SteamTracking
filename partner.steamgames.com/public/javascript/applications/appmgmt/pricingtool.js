@@ -145,8 +145,8 @@
         g = t(51477),
         P = t(47842),
         m = t(39399),
-        p = t(39065),
-        _ = t(59650),
+        p = t(56306),
+        _ = t(41414),
         h = t(72258),
         b = t(53622),
         E = t(41311),
@@ -886,18 +886,18 @@
           { priceIncrease: t, nextDiscount: n } = e;
         return t
           ? ((r =
-              n < 28
+              n < 30
                 ? (0, E.Xx)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    28
+                    30
                   )
                 : n < 40
                 ? (0, E.Xx)(
                     "#PricingDashboard_SavePrice_FutureDiscountSoon",
                     n,
-                    28
+                    30
                   )
-                : (0, E.Xx)("#PricingDashboard_SavePrice_CooldownWarning", 28)),
+                : (0, E.Xx)("#PricingDashboard_SavePrice_CooldownWarning", 30)),
             a.createElement(
               "div",
               { className: re().PriceChangeSaveWarning },
@@ -918,7 +918,7 @@
       }
       function me(e) {
         let { value: r, onChange: t } = e,
-          n = e.nextDiscount <= 28;
+          n = e.nextDiscount <= 30;
         return a.createElement(
           "div",
           { className: re().AutoPublishCheckBox },

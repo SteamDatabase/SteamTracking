@@ -1036,8 +1036,8 @@
         O = n(92202),
         R = n(34133),
         G = n.n(R),
-        P = n(69472),
-        U = n(59650),
+        P = n(59253),
+        U = n(41414),
         F = n(4821),
         H = n.n(F),
         V = n(53622),
@@ -1047,8 +1047,8 @@
         W = n(13596),
         Y = n(28268),
         Z = n(64129),
-        K = n.n(Z),
-        Q = (n(26149), n(92685), n(68002), n(77520)),
+        Q = n.n(Z),
+        K = (n(26149), n(92685), n(68002), n(77520)),
         J = n(58191),
         $ = n(11002),
         q = n(76236);
@@ -1165,7 +1165,7 @@
                             if (
                               n &&
                               n.length > 0 &&
-                              ((0, Q.X)(
+                              ((0, K.X)(
                                 1 == n.length,
                                 "ClanImagePickForCertainSize expected size 1, got " +
                                   n.length
@@ -1366,9 +1366,9 @@
               "div",
               {
                 className: (0, D.Z)(
-                  K().DescriptionCtn,
-                  K().BBCodeEditorInputStyles,
-                  this.state.bShowDragTarget ? K().DragTarget : ""
+                  Q().DescriptionCtn,
+                  Q().BBCodeEditorInputStyles,
+                  this.state.bShowDragTarget ? Q().DragTarget : ""
                 ),
               },
               l.createElement(w, {
@@ -1376,7 +1376,7 @@
                 rows: this.props.nOverridesRows || 42,
                 maxLength: 32e3,
                 className: (0, D.Z)(
-                  K().DefaultEditor,
+                  Q().DefaultEditor,
                   this.props.classNameForTextArea
                     ? this.props.classNameForTextArea
                     : ""
@@ -1569,7 +1569,7 @@
                 ? l.createElement(
                     "span",
                     {
-                      className: (0, D.Z)("ttip", K().ActionGetHelp),
+                      className: (0, D.Z)("ttip", Q().ActionGetHelp),
                       "data-tooltip-text": (0, B.Xx)(
                         "#EventEditor_FormattingHelp_GetHelpLink"
                       ),
@@ -1589,7 +1589,7 @@
                     "span",
                     {
                       onClick: this.ShowHelpDialog,
-                      className: (0, D.Z)("ttip", K().ActionGetHelp),
+                      className: (0, D.Z)("ttip", Q().ActionGetHelp),
                       "data-tooltip-text": (0, B.Xx)(
                         "#EventEditor_FormattingHelp_GetHelpLink"
                       ),
@@ -1600,7 +1600,7 @@
                   )),
             l.createElement(
               "div",
-              { className: K().TextEditorToolBarContainer },
+              { className: Q().TextEditorToolBarContainer },
               this.BSupports("b") &&
                 l.createElement(
                   "span",
@@ -1743,7 +1743,7 @@
                 this.props.emoticonStore &&
                   l.createElement(O.Z, {
                     title: " ",
-                    className: (0, D.Z)(K().EmoteOuter),
+                    className: (0, D.Z)(Q().EmoteOuter),
                     disabled: !1,
                     OnEmoticonSelected: this.OnEmoticonSelected,
                     rtLastAckedNewEmoticons: Number.MAX_VALUE,
@@ -1787,7 +1787,7 @@
                   "span",
                   {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
-                    className: K().ActionImportHTML,
+                    className: Q().ActionImportHTML,
                     "data-tooltip-text": (0, B.Xx)(
                       "#EventEditor_ImportFromHTML_ttip"
                     ),
@@ -1881,11 +1881,11 @@
               onCancel: this.props.closeModal,
               onOK: this.OnYoutubeInsertLink,
               strOKButtonText: (0, B.Xx)("#EventEditor_InsertYouTube"),
-              className: K().BBCodeEditorInputStyles,
+              className: Q().BBCodeEditorInputStyles,
             },
             l.createElement(
               "div",
-              { className: K().YouTubeInput },
+              { className: Q().YouTubeInput },
               l.createElement(
                 "div",
                 { className: "DialogInputLabelGroup" },
@@ -1924,7 +1924,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: K().YouTubePreviewInsertOption,
+                    className: Q().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   l.createElement("input", {
@@ -1948,7 +1948,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: K().YouTubePreviewInsertOption,
+                    className: Q().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   l.createElement("input", {
@@ -1972,7 +1972,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: K().YouTubePreviewInsertOption,
+                    className: Q().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   l.createElement("input", {
@@ -1996,7 +1996,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: K().YouTubePreviewInsertOption,
+                    className: Q().YouTubePreviewInsertOption,
                     onClick: this.OnOuterDivClickPassDown,
                   },
                   l.createElement("input", {
@@ -2068,11 +2068,11 @@
               onOK: this.onInsertLink,
               onCancel: this.props.closeModal,
               strOKButtonText: (0, B.Xx)("#EventEditor_InsertLinkURL"),
-              className: K().BBCodeEditorInputStyles,
+              className: Q().BBCodeEditorInputStyles,
             },
             l.createElement(
               "div",
-              { className: K().EventEditorLinkInput },
+              { className: Q().EventEditorLinkInput },
               l.createElement(
                 "div",
                 { className: "DialogInputLabelGroup" },
@@ -2163,11 +2163,11 @@
               onCancel: this.props.closeModal,
               onOK: this.OnImageInsert,
               strOKButtonText: (0, B.Xx)("#EventEditor_InsertImage_Title"),
-              className: K().BBCodeEditorInputStyles,
+              className: Q().BBCodeEditorInputStyles,
             },
             l.createElement(
               "div",
-              { className: K().EventEditorLinkInput },
+              { className: Q().EventEditorLinkInput },
               l.createElement(
                 "p",
                 null,
@@ -2268,7 +2268,7 @@
         const M = 0 != n.trim().length && 0 != _.trim().length,
           x = l.createElement(
             "div",
-            { className: K().DropDownScroll },
+            { className: Q().DropDownScroll },
             y.map((e) =>
               l.createElement(
                 j.Zo,
@@ -2309,11 +2309,11 @@
                 (t += `]${_}[/speaker]`),
                 ie.replaceSelection(e.textareaRef.current, t);
             },
-            className: K().BBCodeEditorInputStyles,
+            className: Q().BBCodeEditorInputStyles,
           },
           l.createElement(
             "div",
-            { className: K().InsertSpeakerCtn },
+            { className: Q().InsertSpeakerCtn },
             l.createElement(b.II, {
               type: "text",
               label: (0, B.Xx)("#EventEditor_AddSpeaker_Name"),
@@ -2323,7 +2323,7 @@
             }),
             l.createElement(
               "div",
-              { className: K().TitleGroup },
+              { className: Q().TitleGroup },
               l.createElement(b.II, {
                 type: "text",
                 label: (0, B.Xx)("#EventEditor_AddSpeaker_Title"),
@@ -2379,7 +2379,7 @@
                 ),
               l.createElement(
                 "div",
-                { className: K().AssociateRowCtn },
+                { className: Q().AssociateRowCtn },
                 l.createElement(
                   b.zx,
                   { onClick: () => I(new m.K(X.L7.steamid)) },
@@ -2399,7 +2399,7 @@
             ),
             l.createElement(
               "div",
-              { className: K().PhotoCtn },
+              { className: Q().PhotoCtn },
               l.createElement(
                 "div",
                 { className: "DialogLabel" },
@@ -2415,7 +2415,7 @@
             ),
             l.createElement(
               "div",
-              { className: K().AboutCtn },
+              { className: Q().AboutCtn },
               l.createElement(
                 "div",
                 { className: "DialogLabel" },
@@ -2434,7 +2434,7 @@
             ),
             l.createElement(
               "div",
-              { className: K().PreviewCtn },
+              { className: Q().PreviewCtn },
               l.createElement(
                 "div",
                 { className: "DialogLabel" },
@@ -2555,7 +2555,7 @@
                 {
                   onOK: this.OnConvertAndOverriteHTML,
                   onCancel: e,
-                  className: K().BBCodeEditorInputStyles,
+                  className: Q().BBCodeEditorInputStyles,
                 },
                 l.createElement(
                   b.h4,
@@ -2575,7 +2575,7 @@
                       {
                         className: (0, D.Z)(
                           G().FlexColumnContainer,
-                          K().ImportHTMLCtn
+                          Q().ImportHTMLCtn
                         ),
                       },
                       l.createElement(
@@ -2600,13 +2600,13 @@
                         placeholder: (0, B.Xx)(
                           "#EventEditor_ImportFromHTML_Instruction"
                         ),
-                        className: K().ImportHTMLTextArea,
+                        className: Q().ImportHTMLTextArea,
                         onChange: this.OnTextAreaChange,
                         ref: (e) => e && e.focus(),
                       }),
                       l.createElement(
                         "div",
-                        { className: K().ImportHTMLCheckBoxLine },
+                        { className: Q().ImportHTMLCheckBoxLine },
                         l.createElement("input", {
                           id: "ImportFromHTMLNewLines",
                           type: "checkbox",
@@ -2916,8 +2916,8 @@
         W = n(99533),
         Y = n(53622),
         Z = n(64839),
-        K = n(90110),
-        Q = n(30100),
+        Q = n(90110),
+        K = n(30100),
         J = n(28578),
         $ = n(93612);
       const q = i.lazy(() =>
@@ -3450,7 +3450,7 @@
                       i.createElement(
                         "div",
                         { className: M().ReminderContainer },
-                        i.createElement(K.m, {
+                        i.createElement(Q.m, {
                           eventModel: e,
                           lang: v,
                           bExpandLeft: !0,
@@ -3534,7 +3534,7 @@
                   }),
                   i.createElement("span", { className: F().Clear })
                 ),
-                i.createElement(Q.D, { event: this.props.event }),
+                i.createElement(K.D, { event: this.props.event }),
                 Boolean(e.jsondata.read_more_link) &&
                   i.createElement(
                     "div",
@@ -3724,7 +3724,7 @@
         s = (n(3389), n(24399)),
         l = n(48341),
         c = n(32548),
-        p = n(69472),
+        p = n(59253),
         d = n(41311),
         m = n(13596),
         u = n(7324);
@@ -3881,7 +3881,7 @@
     },
     65499: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => U, L: () => H });
+      n.d(t, { Q: () => F, L: () => V });
       var a = n(70655),
         r = n(67294),
         o = n(29323),
@@ -3890,12 +3890,12 @@
         l = (n(7200), n(64839)),
         c = n(34133),
         p = n.n(c),
-        d = n(59650),
+        d = n(41414),
         m = n(53622),
         u = n(7573),
         h = n(55285),
         g = n.n(h),
-        v = n(69472),
+        v = n(59253),
         _ = (n(29139), n(48899)),
         E = n(9669),
         S = n.n(E),
@@ -4242,8 +4242,9 @@
       var O = n(35921),
         R = n(7707),
         G = n(47808),
-        P = n(97118);
-      function U(e, t) {
+        P = n(97118),
+        U = n(23937);
+      function F(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
             i.De.IN_CLIENT
@@ -4268,20 +4269,20 @@
           ((0, d.AM)(r.createElement(T.r, null), window), !1)
         );
       }
-      function F(e) {
+      function H(e) {
         let t;
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
-      const H = (e) => {
+      const V = (e) => {
         const t = (0, i.id)();
-        return r.createElement(V, Object.assign({}, e, { bInGamepadUI: t }));
+        return r.createElement(X, Object.assign({}, e, { bInGamepadUI: t }));
       };
-      let V = class extends r.Component {
+      let X = class extends r.Component {
         constructor(e) {
           super(e), (this.m_cancelSignal = S().CancelToken.source());
           const t = D.cb.Get().BHasMyVote(e.eventModel);
           let n;
-          t && (n = F(D.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
+          t && (n = H(D.cb.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: n });
         }
         HandleRefreshMyVotingInformation() {
@@ -4292,7 +4293,7 @@
                 .Get()
                 .LoadMyVote(e, this.m_cancelSignal)
                 .then((e) => {
-                  let t = F(e);
+                  let t = H(e);
                   this.setState({ myVote: t, bLoadedVote: !0 });
                 })
                 .catch((e) => {
@@ -4325,7 +4326,7 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          U(t, D.cb.Get()) &&
+          F(t, D.cb.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
@@ -4348,9 +4349,12 @@
             );
         }
         OnShareDialog(e) {
+          const t = (0, U.wK)(this.props.eventModel);
           (0, d.AM)(
             r.createElement(P.t, {
-              eventModel: this.props.eventModel,
+              eventLink: t,
+              fnGetSharePageUrl: (e) => (0, U.jV)(this.props.eventModel, e),
+              appid: this.props.eventModel.appid,
               emoticonStore: this.props.emoticonStore,
               partnerEventStore: this.props.partnerEventStore,
             }),
@@ -4445,7 +4449,7 @@
                 )
               ),
               !o &&
-                r.createElement(X, {
+                r.createElement(j, {
                   commentCount: e.nCommentCount,
                   discussionURL: a,
                   gotoDiscussion: this.GotoDiscussion,
@@ -4498,7 +4502,7 @@
           );
         }
       };
-      function X(e) {
+      function j(e) {
         const { commentCount: t, discussionURL: n, gotoDiscussion: a } = e;
         return r.createElement(
           "div",
@@ -4547,12 +4551,12 @@
             )
         );
       }
-      (0, a.gn)([l.ak], V.prototype, "OnVoteUp", null),
-        (0, a.gn)([l.ak], V.prototype, "OnVoteDown", null),
-        (0, a.gn)([l.ak], V.prototype, "OnShareDialog", null),
-        (0, a.gn)([l.ak], V.prototype, "GotoDiscussion", null),
-        (0, a.gn)([l.ak], V.prototype, "OpenRepostDialogs", null),
-        (V = (0, a.gn)([o.Pi], V));
+      (0, a.gn)([l.ak], X.prototype, "OnVoteUp", null),
+        (0, a.gn)([l.ak], X.prototype, "OnVoteDown", null),
+        (0, a.gn)([l.ak], X.prototype, "OnShareDialog", null),
+        (0, a.gn)([l.ak], X.prototype, "GotoDiscussion", null),
+        (0, a.gn)([l.ak], X.prototype, "OpenRepostDialogs", null),
+        (X = (0, a.gn)([o.Pi], X));
     },
     3044: (e, t, n) => {
       "use strict";
@@ -4565,7 +4569,7 @@
         l = (n(92398), n(49186), n(3389), n(68002), n(9915)),
         c = (n(7200), n(89694)),
         p = n(86782),
-        d = n(69472),
+        d = n(59253),
         m = n(86178),
         u = n(69491),
         h = n.n(u),
@@ -4784,8 +4788,8 @@
         g = n(41311),
         v = n(64839),
         _ = n(90666),
-        E = n(69472),
-        S = n(59650),
+        E = n(59253),
+        S = n(41414),
         C = n(13596),
         D = n(14745),
         I = n(80510),
@@ -5745,7 +5749,7 @@
       var a = n(70655),
         r = n(67294),
         o = n(92398),
-        i = (n(49186), n(29139), n(9915)),
+        i = (n(29139), n(9915)),
         s = (n(7200), n(23937)),
         l = n(34133),
         c = n.n(l),
@@ -5758,7 +5762,7 @@
       var v = n(56175),
         _ = n(47077),
         E = n(78853),
-        S = n(69472),
+        S = n(59253),
         C = n(28268),
         D = n(72258),
         I = n(55285),
@@ -5779,42 +5783,41 @@
         G = n(21461),
         P = n.n(G);
       const U = (0, A.Pi)((e) => {
-        const { eventModel: t } = e,
-          n = r.useRef(null),
-          [o, i] = (0, k.Gr)(h.L7.steamid),
+        const { appid: t, eventLink: n } = e,
+          o = r.useRef(null),
+          [i, s] = (0, k.Gr)(h.L7.steamid),
           [l, p] = r.useState(""),
           [u, g] = r.useState(!1),
           [v, _] = r.useState(""),
           [E, C] = r.useState(!1);
         r.useEffect(
           () => () =>
-            n.current &&
-            n.current("ShareEventOnFriendsActivityFeed: unmounting"),
+            o.current &&
+            o.current("ShareEventOnFriendsActivityFeed: unmounting"),
           []
         );
-        const D = i ? i.avatar_url : null,
-          I = (0, s.wK)(t),
-          y = N.K.InitFromAccountID(h.L7.accountid),
-          T = () =>
+        const D = s ? s.avatar_url : null,
+          I = N.K.InitFromAccountID(h.L7.accountid),
+          y = () =>
             (0, a.mG)(void 0, void 0, void 0, function* () {
               var e, a;
-              n.current &&
-                n.current(
+              o.current &&
+                o.current(
                   "ShareEventOnFriendsActivityFeed: cancel previous..."
                 );
               const r = f().CancelToken.source();
-              (n.current = r.cancel), g(!0);
-              let o = l;
-              0 != o.trim().length && (o += "\n\n"), (o += I);
-              const i =
+              (o.current = r.cancel), g(!0);
+              let i = l;
+              0 != i.trim().length && (i += "\n\n"), (i += n);
+              const s =
                 h.De.COMMUNITY_BASE_URL +
                 "profiles/" +
-                y.ConvertTo64BitString() +
+                I.ConvertTo64BitString() +
                 "/ajaxpostuserstatus";
               try {
                 if (h.De.IN_STEAMUI) {
                   let e = x.gA.Init(B.Sv);
-                  e.Body().set_appid(t.appid), e.Body().set_status_text(o);
+                  e.Body().set_appid(t), e.Body().set_status_text(i);
                   let n = yield B.lk.PostStatusToFriends(
                     L.Q8.CMInterface.GetServiceTransport(),
                     e
@@ -5831,14 +5834,14 @@
                   }
                 } else {
                   const n = new FormData();
-                  n.append("appid", "" + t.appid),
-                    n.append("status_text", o),
+                  n.append("appid", "" + t),
+                    n.append("status_text", i),
                     n.append("sessionid", h.De.SESSIONID);
-                  const s = yield f().post(i, n, { withCredentials: !0 });
+                  const o = yield f().post(s, n, { withCredentials: !0 });
                   if (
-                    200 != s.status ||
+                    200 != o.status ||
                     1 !=
-                      (null === (e = null == s ? void 0 : s.data) ||
+                      (null === (e = null == o ? void 0 : o.data) ||
                       void 0 === e
                         ? void 0
                         : e.success)
@@ -5846,7 +5849,7 @@
                     const e =
                       (0, m.Xx)("#EventDisplay_Share_Failure") +
                       "\n\n" +
-                      (null === (a = null == s ? void 0 : s.data) ||
+                      (null === (a = null == o ? void 0 : o.data) ||
                       void 0 === a
                         ? void 0
                         : a.message);
@@ -5895,7 +5898,7 @@
                         href:
                           h.De.COMMUNITY_BASE_URL +
                           "profiles/" +
-                          y.ConvertTo64BitString() +
+                          I.ConvertTo64BitString() +
                           "/home",
                         target: h.De.IN_CLIENT ? void 0 : "_blank",
                       },
@@ -5910,7 +5913,7 @@
                 strDescription: "",
                 strTitle: (0, m.Xx)("#Button_Share"),
                 onCancel: e.closeModal,
-                onOK: T,
+                onOK: y,
                 strOKButtonText: (0, m.Xx)("#Button_Post"),
               },
               r.createElement(
@@ -5957,7 +5960,7 @@
                     "div",
                     null,
                     r.createElement(R.d, {
-                      text: I,
+                      text: n,
                       partnerEventStore: e.partnerEventStore,
                     })
                   )
@@ -5984,10 +5987,12 @@
         }
         render() {
           const {
-            eventModel: e,
-            closeModal: t,
-            emoticonStore: n,
-            partnerEventStore: a,
+            eventLink: e,
+            fnGetSharePageUrl: t,
+            appid: n,
+            closeModal: a,
+            emoticonStore: o,
+            partnerEventStore: i,
           } = this.props;
           return this.state.bRequireLoginToShare
             ? r.createElement(S.uH, {
@@ -6001,10 +6006,11 @@
               })
             : this.state.bShareOnSteamDialog
             ? r.createElement(U, {
-                eventModel: e,
-                emoticonStore: n,
-                partnerEventStore: a,
-                closeModal: t,
+                eventLink: e,
+                appid: n,
+                emoticonStore: o,
+                partnerEventStore: i,
+                closeModal: a,
               })
             : r.createElement(
                 S.uH,
@@ -6017,7 +6023,8 @@
                   modalClassName: "EventDisplay_Share_Dialog",
                 },
                 r.createElement(H, {
-                  eventModel: e,
+                  eventLink: e,
+                  fnGetSharePageUrl: t,
                   fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
                 })
               );
@@ -6025,8 +6032,12 @@
       }
       (0, a.gn)([u.ak], F.prototype, "ShareOnSteamActivityFeed", null);
       const H = (e) => {
-          const { eventModel: t } = e,
-            n = h.De.EREALM === o.IN.k_ESteamRealmChina;
+          const {
+              eventLink: t,
+              fnGetSharePageUrl: n,
+              fnShareOnSteamActivityFeed: a,
+            } = e,
+            i = h.De.EREALM === o.IN.k_ESteamRealmChina;
           return r.createElement(
             "div",
             {
@@ -6035,7 +6046,7 @@
                 y().share_controls_ctn
               ),
             },
-            !n &&
+            !i &&
               r.createElement(
                 r.Fragment,
                 null,
@@ -6056,7 +6067,7 @@
                     r.createElement(
                       "div",
                       {
-                        onClick: e.fnShareOnSteamActivityFeed,
+                        onClick: a,
                         className: (0, d.Z)(
                           c().Button,
                           y().ShareBtn,
@@ -6083,10 +6094,7 @@
                     },
                     r.createElement(
                       D.ns,
-                      {
-                        href: (0, s.jV)(t, s.u_.k_eFacebook),
-                        className: y().ShareBtn,
-                      },
+                      { href: n(s.u_.k_eFacebook), className: y().ShareBtn },
                       r.createElement("img", {
                         className: (0, d.Z)(c().Button),
                         src: v.Z,
@@ -6102,10 +6110,7 @@
                     },
                     r.createElement(
                       D.ns,
-                      {
-                        href: (0, s.jV)(t, s.u_.k_eTwitter),
-                        className: y().ShareBtn,
-                      },
+                      { href: n(s.u_.k_eTwitter), className: y().ShareBtn },
                       r.createElement("img", {
                         className: (0, d.Z)(c().Button),
                         src: E.Z,
@@ -6119,10 +6124,7 @@
                     },
                     r.createElement(
                       D.ns,
-                      {
-                        href: (0, s.jV)(t, s.u_.k_eReddit),
-                        className: y().ShareBtn,
-                      },
+                      { href: n(s.u_.k_eReddit), className: y().ShareBtn },
                       r.createElement("img", {
                         className: (0, d.Z)(c().Button),
                         src: _.Z,
@@ -6132,7 +6134,7 @@
                 ),
                 r.createElement("div", { className: c().Divider })
               ),
-            r.createElement(V, { eventModel: t })
+            r.createElement(V, { eventLink: t })
           );
         },
         V = (e) => {
@@ -6161,7 +6163,7 @@
               r.createElement("textarea", {
                 className: y().LinkInput,
                 ref: t,
-                value: (0, s.wK)(e.eventModel),
+                value: e.eventLink,
                 readOnly: !0,
               }),
               document.queryCommandSupported("copy") &&
@@ -6196,7 +6198,7 @@
         o = n(92685),
         i = (n(68002), n(24399), n(48341)),
         s = n(57148),
-        l = n(69472),
+        l = n(59253),
         c = n(7573),
         p = n(41311),
         d = n(64839),

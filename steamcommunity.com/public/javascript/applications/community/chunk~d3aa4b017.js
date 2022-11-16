@@ -213,7 +213,7 @@
         q = a(56175),
         $ = a(47077),
         z = a(78853),
-        J = a(69472),
+        J = a(59253),
         K = a(72258),
         Q = a(23937),
         ee = a(55285),
@@ -339,7 +339,7 @@
         return g.De.COMMUNITY_BASE_URL + "broadcast/share/" + e + "?site=" + t;
       }
       var oe = a(53622),
-        ie = a(59650);
+        ie = a(41414);
       const le = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },

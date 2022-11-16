@@ -3319,7 +3319,7 @@
           { TopSellers: s, status: l } = N(a, a.GetPreviousWeek(), n, 100),
           c = (0, o.cs)(
             "SteamCharts Live Top Sellers",
-            { sort: 10, start: 0, count: 100 },
+            { sort: n ? 10 : 11, start: 0, count: 100 },
             re,
             { override_country_code: n, content_descriptors_excluded: [] }
           ),
