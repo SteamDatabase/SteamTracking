@@ -13111,55 +13111,66 @@
         const { cm: e, instance: t } = A,
           n = (0, o.xY)(),
           a = (0, m.SZ)(() => (0, o.gV)().LoginState),
-          r = (0, m.SZ)(() => t.BIsGamepadApplicationUIInitialized()),
-          l = jn.De.ON_DECK ? da : ma,
-          c = (0, zn.rZ)(),
-          g = (0, Ca.dh)(l),
-          [d, C] = i.useState((Sa || !jn.De.ON_DECK) && null != l),
-          E = i.useCallback(() => C(!1), []);
-        (0, u.KS)(E, 3e4, []);
-        let I = s.i_.EBrowserType_DirectHWND_Borderless,
-          B = { width: 1280, height: 800, left: 0, top: 0 };
+          l = (0, m.SZ)(() => t.BIsGamepadApplicationUIInitialized()),
+          [c, g] = i.useState(!1),
+          d = jn.De.ON_DECK ? da : ma,
+          C = (0, zn.rZ)(),
+          E = (0, Ca.dh)(d),
+          [I, B] = i.useState((Sa || !jn.De.ON_DECK) && null != d),
+          p = i.useCallback(() => B(!1), []);
+        (0, u.KS)(p, 3e4, []);
+        let v = s.i_.EBrowserType_DirectHWND_Borderless,
+          h = { width: 1280, height: 800, left: 0, top: 0 };
         (jn.De.ON_DECK && "linux" === jn.De.PLATFORM) ||
-          ((B.left = Da), (B.top = Da), (I = s.i_.EBrowserType_DirectHWND));
-        let p = Qa;
-        jn.De.GAMEPADUI_WINDOWED || (p |= Pt.eL.FullScreen),
+          ((h.left = Da), (h.top = Da), (v = s.i_.EBrowserType_DirectHWND));
+        let f = Qa;
+        jn.De.GAMEPADUI_WINDOWED || (f |= Pt.eL.FullScreen),
           jn.De.DECK_DISPLAY_MODE &&
-            ((B.width = 1280), (B.height = 800), (p &= ~Pt.eL.Resizable));
-        let v = {
+            ((h.width = 1280), (h.height = 800), (f &= ~Pt.eL.Resizable));
+        let b = {
           onClose: () => T.hq.WindowStore.NotifyGamepadUIMainWindowClosed(),
         };
-        const { popup: h, element: f } = ya(
+        const { popup: D, element: w } = ya(
           "SP",
           t,
           {
             title: "SP",
-            dimensions: B,
+            dimensions: h,
             replace_existing_popup: !1,
             target_browser: t.params.browserInfo,
-            browserType: I,
-            eCreationFlags: p,
+            browserType: v,
+            eCreationFlags: f,
           },
-          v
+          b
         );
         if (
           (i.useEffect(() => {
-            if (h) {
+            if (D) {
               let A = !n;
-              h.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed &&
-                h.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(A),
-                h.SteamClient.Browser.NotifyUserActivation();
+              D.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed &&
+                D.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed(A),
+                D.SteamClient.Browser.NotifyUserActivation();
             }
           }, [
             n,
-            h,
-            null == h
+            D,
+            null == D
               ? void 0
-              : h.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed,
+              : D.SteamClient.Browser.SetShouldExitSteamOnBrowserClosed,
           ]),
           i.useEffect(() => {
-            r && t.NavigateToInitialRoute(a);
-          }, [t, r, a]),
+            if (l)
+              switch (a) {
+                case 0:
+                case 10:
+                  break;
+                case 7:
+                  t.Navigate(r.Z5.Library.Home(), !0);
+                  break;
+                default:
+                  c || (t.Navigate(r.Z5.GamepadUI.Login(), !0), g(!0));
+              }
+          }, [t, l, a, c]),
           i.useEffect(
             () => (
               sA.Oo.SetContextMenuConstructor(window, ha),
@@ -13167,31 +13178,31 @@
             ),
             []
           ),
-          !f)
+          !w)
         )
           return null;
-        if (l && (c.isLoading || g.isLoading)) return null;
-        let b = c.isSuccess && c.data.bIsOverride ? c : g,
-          D = b.data.bIsOverride || !jn.De.ON_DECK;
+        if (d && (C.isLoading || E.isLoading)) return null;
+        let Q = C.isSuccess && C.data.bIsOverride ? C : E,
+          y = Q.data.bIsOverride || !jn.De.ON_DECK;
         return Ge.createPortal(
           i.createElement(
             Na,
-            { ownerWindow: h, instance: A.instance },
+            { ownerWindow: D, instance: A.instance },
             i.createElement(ga, {
-              bPlayingMovie: d,
-              strOverrideStartupMovie: b.data.strUrl,
-              bFullscreenVideo: D,
-              onVideoComplete: E,
-              onVideoError: E,
+              bPlayingMovie: I,
+              strOverrideStartupMovie: Q.data.strUrl,
+              bFullscreenVideo: y,
+              onVideoComplete: p,
+              onVideoError: p,
             }),
             i.createElement(wy, {
               cm: e,
               mode: z.iZ.Full,
-              bPlayingStartupMovie: d,
-              fnCancelStartupMove: E,
+              bPlayingStartupMovie: I,
+              fnCancelStartupMove: p,
             })
           ),
-          f
+          w
         );
       }
       const ka = (A) => null;
@@ -15668,7 +15679,11 @@
           return i.createElement(
             l.gN,
             {
-              label: (0, I.Xx)("#Settings_Internet_In_Offline_Mode"),
+              label: (0, I.Xx)(
+                jn.De.ON_DECK
+                  ? "#Settings_Internet_In_Offline_Mode_SteamDeck"
+                  : "#Settings_Internet_In_Offline_Mode"
+              ),
               childrenContainerWidth: "fixed",
             },
             i.createElement(
@@ -27391,7 +27406,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1668478180),
+          d = parseInt(1668571560),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36798,9 +36813,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 14 2022 : 18:09:40",
-              BUILD_TIME_UTC: "Nov 15 2022 : 02:09:40",
-              BUILD_RTIME_UTC: 1668478180,
+              BUILD_TIME_LOCAL: "Nov 15 2022 : 20:06:00",
+              BUILD_TIME_UTC: "Nov 16 2022 : 04:06:00",
+              BUILD_RTIME_UTC: 1668571560,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {

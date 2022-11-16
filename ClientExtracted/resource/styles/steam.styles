@@ -86,8 +86,10 @@ steam.styles
     HeaderClient="42 49 63 255" // the color of the List box header in the main client window
     HeaderDialog="87 90 97 255" // the color of the list box header in other windows
 
-    TitleBar="21 24 31 255"
-    TitleBarFocus="14 31 56 255"
+    TitleBar="21 24 31 80"
+    TitleBarFocus="14 31 56 80"
+    ToolWindowTitleBar="35 40 45 255"
+    ToolWindowTitleBarFocus="33 40 50 255"
     MenuBG="57 62 70 255"
 
     Focus0="23 51 77 255" // used in window frame borders
@@ -1077,7 +1079,7 @@ steam.styles
 		textcolor="texthover" [$OSX]
 	  render_bg
 	    {
-		     2="gradient( x0, y0, x1, y0 + 48, TitleBarfocus, none )"
+		     2="gradient( x0, y0, x1, y0 + 48, TitleBarFocus, none )"
 	    }
     }
 

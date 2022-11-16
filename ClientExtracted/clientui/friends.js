@@ -70399,6 +70399,8 @@ object-assign
                   "screenavailheight=" + rgParams.availscreenheight
                 );
               }
+            } else if (rgParams.browserType) {
+              rgQueryParams.push("browserType=" + rgParams.browserType);
             }
             if (rgParams.strVROverlayKey) {
               rgQueryParams.push("vrOverlayKey=" + rgParams.strVROverlayKey);
@@ -89939,4 +89941,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=5e166a85d8f579fb3375
+//# sourceMappingURL=friends.js.map?contenthash=fed56721d40f85250474

@@ -532,8 +532,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 14 2022
-19:45:53
+Nov 15 2022
+20:05:19
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -936,19 +936,19 @@ MXGJJ98X76
 ~,jNSN
 cgcs
 |YN22
-vg(F3
 9oQX
 Zpr[Y
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-GG^j
+nriL
 Z#a^
 $r\]r&
 R*B9:
 ao3)v
 3s.%
+k#;)
 /tMY
 c<r%
 Apple Inc.1&0$
@@ -1006,8 +1006,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221115034615Z0/
-8Vii
+221116040546Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1015,18 +1014,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		EPF89lUZ/VWJm3kl0XBLdfITcB8=
+		LWDwGmI36oL4P5ZLHAJNaADpAoQ=
 		</data>
 		<data>
-		wNxZieuEZM2vhWx1eZxIf5Of6bI=
+		YKWCbK/riPzFKzfngzyxVaqzCrU=
 		</data>
 	</array>
 </dict>
 </plist>
-%t}\	
-z2#~e
-[ *M
-20221115034733Z0
+-ig(
+hxb^l`
+20221116040710Z0
 GLlD}0
 0|100.
 'Apple Timestamp Certification Authority1&0$
@@ -1087,11 +1085,11 @@ uu!1
 Apple Certification Authority1
 Apple Inc.1
 GLlD}0	
-221115034733Z0#
--pWs
-[xpR
-^,lu
-b#C5
+221116040710Z0#
+Hv70
+*:+8
+:95Pb
+D`(}F
 __TEXT
 __text
 __TEXT
@@ -1813,8 +1811,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 14 2022
-19:45:53
+Nov 15 2022
+20:05:20
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2249,6 +2247,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+</	#
 0g|f<(
 6 fB2
 Idb0#l
@@ -2258,14 +2257,14 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-cQ' "
+q@97<
 ]AMW
 2oZL
 (t8S
 _fCp
 Ez'M
 Wn>L
-5wjGg4q
+Ix)'
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2321,9 +2320,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221115034616Z0/
-v&NMu
-/b&|
+221116040546Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2331,20 +2328,22 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nc0BvrpbX9qKCj/b/5wvYiZ8GIs=
+		fQ7orXSoC31ICijQK75D6pi76uY=
 		</data>
 		<data>
-		fRH0zmz3+HWIlCYKg45lrO0gGYE=
+		YSmjmnVS6v2Pe1SjuHweZQPbvDs=
 		</data>
 	</array>
 </dict>
 </plist>
-EW,M
-*-<c
- ph(
-bLd#
-ABdCS
-20221115034734Z0
+=#eGu4
+vY\9
+XYE6
+c~`CO
+\j8N
+4\nu(
+T+aH
+20221116040710Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2402,12 +2401,13 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221115034734Z0#
+221116040710Z0#
+cN2lM
 JUkI
-6eGU
-#/b>
-%2+R
-8LkB
+[xE)
+d!sbz
+GNFx
+w@~MB
 __TEXT
 __text
 __TEXT
@@ -2706,8 +2706,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Nov 14 2022
-19:45:54
+Nov 15 2022
+20:05:20
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3150,8 +3150,7 @@ x168#
 }kpyM
 2@CI*n
 #t)[cs
-{Jh7h
-TKdO
+{Jh9
  t8!
 MXB^@
 eF1]
@@ -3210,8 +3209,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221115034616Z0/
-htFn
+221116040546Z0/
+lkni
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3219,20 +3218,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		aHRGbhOTVwhnl/soOunbDij1Afo=
+		EIa/79jn4Ge7jZGpUH/Fo/2bhhU=
 		</data>
 		<data>
-		26Gx86tTiNiuLrpf9Z1E/EjlAfE=
+		NT+f7WoSv1+vqIpdF5OI5qkw96E=
 		</data>
 	</array>
 </dict>
 </plist>
-8H)~
-vq>GG
-`q:jn
-*E[	K=
-K$x 
-20221115034734Z0
+ne[8R
+tke|
+n	8#
+}~Q"
+mi#1L
+20221116040710Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3290,8 +3289,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221115034734Z0#
+221116040710Z0#
+u60+
 JUkI
-a{4&
-D	($
-oK66
+?lODqNL
+&K_i
+T.	&

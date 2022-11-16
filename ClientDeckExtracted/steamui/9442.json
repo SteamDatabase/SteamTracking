@@ -189,6 +189,7 @@
     "GameList_Category_Hidden_Tooltip": "Hidden games will not show in your library unless searched for. You can view all hidden games from the top 'View' menu.",
     "GameList_Category_YourCollections": "Your Collections",
     "GameList_Category_SharedLibraries": "Shared Libraries",
+    "GameList_Category_RemotePlay": "Remote Play Optimized",
     "GameList_Category_EAAccess_Trademark": "EA Play",
     "GameList_SectionHeader_SearchResults": "Results from Search and Filter",
     "GameList_SectionHeader_AddedManually": "Manually Added",
@@ -2481,7 +2482,8 @@
     "Settings_Internet_Connected_To_Network_But_Not_Internet": "Steam Deck can't reach the Internet.",
     "Settings_Internet_Connected_To_Internet_But_Not_Steam": "Steam Deck can't reach the Steam servers.",
     "Settings_Internet_Go_Offline": "Offline Mode",
-    "Settings_Internet_In_Offline_Mode": "Steam Deck is in Offline Mode.",
+    "Settings_Internet_In_Offline_Mode_SteamDeck": "Steam Deck is in Offline Mode.",
+    "Settings_Internet_In_Offline_Mode": "Steam is in Offline Mode.",
     "Settings_Internet_Offline_Mode_Disabled": "Offline Mode setting cannot currently be changed without an Internet connection",
     "Settings_Internet_Use_Network_Anyway": "Use without internet",
     "Settings_Internet_Try_Another_Network": "Try another network",
@@ -5988,6 +5990,7 @@
     "LibraryTab_DeckGames": "Great On Deck",
     "LibraryTab_Installed": "Installed",
     "LibraryTab_Favorites": "Favorites",
+    "LibraryTab_RemotePlay": "Great For Remote Play",
     "LibraryTab_Collections": "Collections",
     "LibraryTab_NonSteam": "Non-Steam",
     "MediaTab_Recent": "Recent",
@@ -6107,6 +6110,7 @@
     "AppControllerConfiguration_Configuration_Details_ID": "Layout ID",
     "AppControllerConfiguration_Configuration_Details_Link": "Link",
     "AppControllerConfiguration_Configuration_LinkInfo": "Link to Layout Copied to Clipboard",
+    "AppControllerConfiguration_Configuration_NoLinkInfo": "Layout Unavailable in Cloud",
     "AppControllerConfiguration_Download": "Download",
     "AppControllerConfiguration_Select": "Select",
     "AppControllerConfiguration_Downloading": "Downloading...",
@@ -6485,5 +6489,6 @@
     "SteamUI_ValveSurvey_Summary_UnknownMedia": "Undetermined",
     "SteamUI_ValveSurvey_Summary_HDAvail": "Total Hard Disk Space Available:  %1$s Mb",
     "SteamUI_ValveSurvey_Summary_FreeHDBlock": "Largest Free Hard Disk Block:  %1$s Mb",
-    "SteamUI_ValveSurvey_Summary_InstallDate": "OS Install Date: %1$s"
+    "SteamUI_ValveSurvey_Summary_InstallDate": "OS Install Date: %1$s",
+    "Steam_AppMustBeClosedToQuit_Info": "Please close %1$s before exiting Steam."
 }
