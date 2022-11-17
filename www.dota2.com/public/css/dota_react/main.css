@@ -19365,8 +19365,8 @@ a {
   filter: drop-shadow(0px 0px 20px #000);
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2022/arcana/razor_alt.jpg");
   background-size: cover;
-  background-position-x: 100%;
-  background-position-y: 50%;
+  background-position-x: 0%;
+  background-position-y: 0%;
   background-repeat: no-repeat;
 }
 .battlepasspageinternational2022_BattlepassPage2022_2MNrt
