@@ -13140,6 +13140,7 @@
             target_browser: t.params.browserInfo,
             browserType: v,
             eCreationFlags: f,
+            strUserAgent: A.instance.params.strUserAgent,
           },
           b
         );
@@ -13220,6 +13221,7 @@
               target_browser: t.params.browserInfo,
               browserType: n,
               eCreationFlags: o,
+              strUserAgent: A.instance.params.strUserAgent,
             },
             {}
           ),
@@ -13282,6 +13284,7 @@
             eCreationFlags:
               Qa | Pt.eL.Hidden | Pt.eL.Tooltip | Pt.eL.NotFocusable,
             browserType: s.i_.EBrowserType_DirectHWND_Borderless,
+            strUserAgent: A.instance.params.strUserAgent,
           });
         return r
           ? Ge.createPortal(
@@ -13315,6 +13318,7 @@
               replace_existing_popup: !1,
               target_browser: t.params.browserInfo,
               browserType: o,
+              strUserAgent: A.instance.params.strUserAgent,
             },
             l
           ),
@@ -13397,6 +13401,7 @@
                 Pt.eL.BackgroundTransparent |
                 Pt.eL.ApplyBrowserScaleToDimensions,
               browserType: o,
+              strUserAgent: A.instance.params.strUserAgent,
             },
             r
           );
@@ -27406,7 +27411,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1668571560),
+          d = parseInt(1668641975),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36813,9 +36818,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 15 2022 : 20:06:00",
-              BUILD_TIME_UTC: "Nov 16 2022 : 04:06:00",
-              BUILD_RTIME_UTC: 1668571560,
+              BUILD_TIME_LOCAL: "Nov 16 2022 : 15:39:35",
+              BUILD_TIME_UTC: "Nov 16 2022 : 23:39:35",
+              BUILD_RTIME_UTC: 1668641975,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -54115,7 +54120,7 @@
                     "BasicUI",
                     "GamepadMode",
                     na().BasicUiRoot,
-                    "windows" === jn.De.PLATFORM && na().StandaloneKeyboard
+                    na().StandaloneKeyboard
                   ),
                 },
                 i.createElement(

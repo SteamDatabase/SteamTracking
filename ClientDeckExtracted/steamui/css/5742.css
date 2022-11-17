@@ -43303,6 +43303,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   align-items: stretch;
   background: var(--background-color);
   padding: 3px 3px 1px 1px;
+  overflow: hidden;
 }
 .virtualkeyboard_NumericKeypad__gv6b {
   display: flex;
@@ -43964,7 +43965,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   justify-content: center;
   align-items: center;
   width: 55%;
-  height: 100%;
+  top: 0;
+  bottom: 0;
   z-index: 2;
 }
 .virtualkeyboard_TouchpadPointerContainer_1nlEa.virtualkeyboard_LeftTrackpad_2g-R0 {

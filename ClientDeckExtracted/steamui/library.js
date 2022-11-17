@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7666214";
+var CLSTAMP = "7668456";
 (() => {
   var e,
     t,
@@ -76,39 +76,40 @@ var CLSTAMP = "7666214";
           return 5 == e || 6 == e;
         }
         r.d(t, {
-          F8: () => R,
+          F8: () => F,
+          MR: () => M,
           Mq: () => _,
           QS: () => s,
           RI: () => c,
           Uv: () => l,
-          Vq: () => P,
+          Vq: () => z,
           YO: () => a,
           Z3: () => E,
-          Zv: () => F,
+          Zv: () => L,
           aM: () => p,
           aX: () => f,
-          cL: () => U,
+          cL: () => P,
           dt: () => S,
           eV: () => k,
           fk: () => i,
-          gg: () => A,
-          gt: () => I,
-          hz: () => M,
+          gg: () => U,
+          gt: () => A,
+          hz: () => T,
           jA: () => b,
           jM: () => B,
           j_: () => C,
-          kg: () => v,
-          lb: () => D,
+          kg: () => R,
+          lb: () => I,
           m2: () => y,
           my: () => n,
           p6: () => o,
           pv: () => d,
-          px: () => T,
+          px: () => v,
           qu: () => m,
           r7: () => w,
           sG: () => u,
           us: () => g,
-          wr: () => O,
+          wr: () => D,
           xM: () => h,
         });
         const s = 1,
@@ -330,6 +331,31 @@ var CLSTAMP = "7666214";
         }
         function M(e) {
           switch (e) {
+            case 0:
+            default:
+              return "default";
+            case 1:
+              return "pw_dota2";
+            case 2:
+              return "nexon_dota2";
+            case 3:
+              return "steamcmd";
+            case 4:
+              return "pw_csgo";
+            case 5:
+              return "clientui";
+            case 6:
+              return "steamhdl";
+            case 7:
+              return "steamchina";
+            case 8:
+              return "singleapp";
+            case 9:
+              return "gameserver";
+          }
+        }
+        function T(e) {
+          switch (e) {
             default:
               break;
             case 4:
@@ -340,7 +366,7 @@ var CLSTAMP = "7666214";
           }
           return !1;
         }
-        function T(e) {
+        function v(e) {
           switch (e) {
             default:
               break;
@@ -351,7 +377,7 @@ var CLSTAMP = "7666214";
           }
           return !1;
         }
-        var v, R, F, L, O, D, I, A, U, P, z;
+        var R, F, L, O, D, I, A, U, P, z, N;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -367,7 +393,7 @@ var CLSTAMP = "7666214";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(v || (v = {})),
+        })(R || (R = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -381,7 +407,7 @@ var CLSTAMP = "7666214";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(R || (R = {})),
+          })(F || (F = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -395,7 +421,7 @@ var CLSTAMP = "7666214";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(F || (F = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -405,7 +431,7 @@ var CLSTAMP = "7666214";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(L || (L = {})),
+          })(O || (O = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -415,7 +441,7 @@ var CLSTAMP = "7666214";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(O || (O = {})),
+          })(D || (D = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -423,13 +449,13 @@ var CLSTAMP = "7666214";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(D || (D = {})),
+          })(I || (I = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(I || (I = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.k_EGamingDeviceType_Unknown = 0)] =
               "k_EGamingDeviceType_Unknown"),
@@ -447,13 +473,13 @@ var CLSTAMP = "7666214";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(A || (A = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(U || (U = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -479,7 +505,7 @@ var CLSTAMP = "7666214";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(P || (P = {})),
+          })(z || (z = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -487,7 +513,7 @@ var CLSTAMP = "7666214";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(z || (z = {}));
+          })(N || (N = {}));
       },
       4778: (e, t, r) => {
         "use strict";
@@ -576,6 +602,7 @@ var CLSTAMP = "7666214";
           sh: () => i,
           eV: () => n.eV,
           jM: () => n.jM,
+          MR: () => n.MR,
           oW: () => R,
           fu: () => S,
           t$: () => b,
@@ -6937,9 +6964,9 @@ var CLSTAMP = "7666214";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 15 2022 : 20:06:00",
-                    BUILD_TIME_UTC: "Nov 16 2022 : 04:06:00",
-                    BUILD_RTIME_UTC: 1668571560,
+                    BUILD_TIME_LOCAL: "Nov 16 2022 : 15:39:35",
+                    BUILD_TIME_UTC: "Nov 16 2022 : 23:39:35",
+                    BUILD_RTIME_UTC: 1668641975,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)

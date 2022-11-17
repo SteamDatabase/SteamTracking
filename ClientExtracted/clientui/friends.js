@@ -63535,6 +63535,8 @@ object-assign
             /* binding */ MapKoreanaToKorean,
           /* harmony export */ PchLanguageToELanguage: () =>
             /* binding */ PchLanguageToELanguage,
+          /* harmony export */ PchNameFromELauncherType: () =>
+            /* binding */ PchNameFromELauncherType,
           /* harmony export */ k_GIDNil: () => /* binding */ k_GIDNil,
           /* harmony export */ k_RTime32Infinite: () =>
             /* binding */ k_RTime32Infinite,
@@ -65364,9 +65366,36 @@ object-assign
             "k_ELauncherTypeSteamChina";
           ELauncherType[(ELauncherType["k_ELauncherTypeSingleApp"] = 8)] =
             "k_ELauncherTypeSingleApp";
-          ELauncherType[(ELauncherType["k_ELauncherTypeMax"] = 9)] =
+          ELauncherType[(ELauncherType["k_ELauncherTypeGameServer"] = 9)] =
+            "k_ELauncherTypeGameServer";
+          ELauncherType[(ELauncherType["k_ELauncherTypeMax"] = 10)] =
             "k_ELauncherTypeMax";
         })(ELauncherType || (ELauncherType = {}));
+        function PchNameFromELauncherType(launcherType) {
+          switch (launcherType) {
+            case ELauncherType.k_ELauncherTypeDefault:
+            default:
+              return "default";
+            case ELauncherType.k_ELauncherTypePerfectWorld:
+              return "pw_dota2";
+            case ELauncherType.k_ELauncherTypeNexon:
+              return "nexon_dota2";
+            case ELauncherType.k_ELauncherTypeCmdLine:
+              return "steamcmd";
+            case ELauncherType.k_ELauncherTypeCSGO:
+              return "pw_csgo";
+            case ELauncherType.k_ELauncherTypeClientUI:
+              return "clientui";
+            case ELauncherType.k_ELauncherTypeHeadless:
+              return "steamhdl";
+            case ELauncherType.k_ELauncherTypeSteamChina:
+              return "steamchina";
+            case ELauncherType.k_ELauncherTypeSingleApp:
+              return "singleapp";
+            case ELauncherType.k_ELauncherTypeGameServer:
+              return "gameserver";
+          }
+        }
         //
         // Returns whether the specified launchr type is a "china launcher" for the purposes of
         // features like anti addiction. This includes steam china, the steam china government review
@@ -67976,6 +68005,8 @@ object-assign
             /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.OverlayBrowserInfo,
           /* harmony export */ PchLanguageToELanguage: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.PchLanguageToELanguage,
+          /* harmony export */ PchNameFromELauncherType: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.PchNameFromELauncherType,
           /* harmony export */ PushToTalkInfo: () =>
             /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.PushToTalkInfo,
           /* harmony export */ RemoteClientInputSettings: () =>
@@ -70412,6 +70443,18 @@ object-assign
             }
             if (rgParams.window_opener_id) {
               rgQueryParams.push("openerid=" + rgParams.window_opener_id);
+            }
+            if (rgParams.strUserAgent) {
+              rgQueryParams.push(
+                "useragent=" +
+                  rgParams.strUserAgent +
+                  "/" +
+                  (0,
+                  shared_clienttypes__WEBPACK_IMPORTED_MODULE_5__.PchNameFromELauncherType)(
+                    shared_webui_config__WEBPACK_IMPORTED_MODULE_7__.Config
+                      .LAUNCHER_TYPE
+                  )
+              );
             }
             if (rgQueryParams) {
               strPopupURL += "?" + rgQueryParams.join("&");
@@ -89941,4 +89984,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=fed56721d40f85250474
+//# sourceMappingURL=friends.js.map?contenthash=511e393db55b58e18688
