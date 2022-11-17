@@ -1832,6 +1832,8 @@
         ArcanaBreakdown:
           "battlepasspageinternational2022_ArcanaBreakdown_2ho3Q",
         ArcanaVideo: "battlepasspageinternational2022_ArcanaVideo_2XACF",
+        RazorArcanaVideo:
+          "battlepasspageinternational2022_RazorArcanaVideo_2jsyG",
         BreakdownText: "battlepasspageinternational2022_BreakdownText_1pU_2",
         BreakdownHead: "battlepasspageinternational2022_BreakdownHead_ivtj3",
         FeatureTitle: "battlepasspageinternational2022_FeatureTitle_1l-Do",
@@ -2094,6 +2096,37 @@
           "battlepasspageinternational2022_RazorArcanaTitle_2x1Qw",
         RazorArcanaDesc:
           "battlepasspageinternational2022_RazorArcanaDesc_3Z9Vi",
+        RazorLogo: "battlepasspageinternational2022_RazorLogo_1moOf",
+        RazorLoreHeight:
+          "battlepasspageinternational2022_RazorLoreHeight_3aHcg",
+        RazorLore: "battlepasspageinternational2022_RazorLore_1aaSH",
+        RazorLoreShowcaseVideo:
+          "battlepasspageinternational2022_RazorLoreShowcaseVideo_2oOCu",
+        RazorLoreTextContainer:
+          "battlepasspageinternational2022_RazorLoreTextContainer_2K7Oj",
+        RazorLoreSubtitle:
+          "battlepasspageinternational2022_RazorLoreSubtitle_2fEFX",
+        RazorLoreDesc: "battlepasspageinternational2022_RazorLoreDesc_7hpVv",
+        RazorBreakdownHeight:
+          "battlepasspageinternational2022_RazorBreakdownHeight_2kD2g",
+        RazorWallpaperContainer:
+          "battlepasspageinternational2022_RazorWallpaperContainer_3kp5G",
+        RazorWallpaperLink:
+          "battlepasspageinternational2022_RazorWallpaperLink_1NQ8K",
+        RazorSecondStyleHeight:
+          "battlepasspageinternational2022_RazorSecondStyleHeight_9e2qX",
+        RazorSecondStyle:
+          "battlepasspageinternational2022_RazorSecondStyle_1HK5I",
+        RazorSecondStyleRow:
+          "battlepasspageinternational2022_RazorSecondStyleRow_1xso6",
+        RazorSecondStyleRowElement:
+          "battlepasspageinternational2022_RazorSecondStyleRowElement_CuRNo",
+        RazorSecondStyleTextContainer:
+          "battlepasspageinternational2022_RazorSecondStyleTextContainer_3OMwe",
+        RazorAltHead: "battlepasspageinternational2022_RazorAltHead_3CMo_",
+        RazorAltDesc: "battlepasspageinternational2022_RazorAltDesc_38bfV",
+        RazorSecondStyleImageContainer:
+          "battlepasspageinternational2022_RazorSecondStyleImageContainer_1EhcI",
         CMPersonaHeight:
           "battlepasspageinternational2022_CMPersonaHeight_3oH_T",
         CMPersona: "battlepasspageinternational2022_CMPersona_1g978",
@@ -2437,6 +2470,7 @@
         DoubleHigh: "aboutpage_DoubleHigh_17ZeM",
         EmptyBottom: "aboutpage_EmptyBottom_3atlj",
         DayOfWeek: "aboutpage_DayOfWeek_1v21E",
+        WithBonus: "aboutpage_WithBonus_3OOlV",
         Region: "aboutpage_Region_6Dn3c",
       };
     },
@@ -3245,6 +3279,7 @@
         Header3: "bbcodes_Header3_2q6Vr",
         Header4: "bbcodes_Header4_1zThg",
         Header5: "bbcodes_Header5_3c6Cp",
+        CenterSpan: "bbcodes_CenterSpan_33gKK",
         SmallText: "bbcodes_SmallText_38kjs",
         Underline: "bbcodes_Underline_2r-_U",
         Strike: "bbcodes_Strike_2Maum",
@@ -4314,9 +4349,9 @@
         e && Object.assign(r, e);
       }
     },
-    86576: (e, t, n) => {
+    89683: (e, t, n) => {
       "use strict";
-      n.d(t, { P: () => fp });
+      n.d(t, { P: () => Ep });
       var a,
         r = n(70655),
         i = (n(99543), n(73935)),
@@ -5469,7 +5504,7 @@
               "div",
               {
                 onClick: function () {
-                  return fp.PurchaseOnSteamStore(c, 1, window.location.href);
+                  return Ep.PurchaseOnSteamStore(c, 1, window.location.href);
                 },
                 className: (0, b.Z)(
                   v().TextStyleButton,
@@ -5583,7 +5618,7 @@
           }),
           (t.prototype.render = function () {
             var e = this,
-              t = fp.getPrizePool();
+              t = Ep.getPrizePool();
             return o.createElement(
               "div",
               { className: v().BattlepassPage },
@@ -11670,10 +11705,10 @@
                     Ge().CapsuleDiscount
                   ),
                 },
-                fp.GetBPDiscount(36, l) &&
+                Ep.GetBPDiscount(36, l) &&
                   (0, E.Jr)(
                     "#battlepass_purchase_discount",
-                    fp.GetBPDiscount(36, l),
+                    Ep.GetBPDiscount(36, l),
                     s
                   )
               ),
@@ -11681,7 +11716,7 @@
                 "div",
                 {
                   onClick: function () {
-                    return fp.PurchaseOnSteamStore(l, 1, window.location.href);
+                    return Ep.PurchaseOnSteamStore(l, 1, window.location.href);
                   },
                   className: (0, b.Z)(
                     Ge().TextStyleButton,
@@ -11697,7 +11732,7 @@
                 },
                 (0, E.Jr)(
                   "#battlepass_purchase_label",
-                  "undefined" !== fp.GetBPPrice(l) ? fp.GetBPPrice(l) : ""
+                  "undefined" !== Ep.GetBPPrice(l) ? Ep.GetBPPrice(l) : ""
                 )
               )
             );
@@ -11787,7 +11822,7 @@
               "div",
               {
                 onClick: function () {
-                  return fp.PurchaseOnSteamStore(l, 1, window.location.href);
+                  return Ep.PurchaseOnSteamStore(l, 1, window.location.href);
                 },
                 className: (0, b.Z)(
                   Ge().TextStyleButton,
@@ -11803,7 +11838,7 @@
               },
               (0, E.Jr)(
                 "#battlepass_purchase_label",
-                "undefined" !== fp.GetBPPrice(l) ? fp.GetBPPrice(l) : ""
+                "undefined" !== Ep.GetBPPrice(l) ? Ep.GetBPPrice(l) : ""
               )
             )
           );
@@ -12283,7 +12318,7 @@
         return (
           (0, r.ZT)(t, e),
           (t.prototype.render = function () {
-            var e = fp.getPrizePool(),
+            var e = Ep.getPrizePool(),
               t = De(Fe);
             return o.createElement(
               "div",
@@ -12677,8 +12712,8 @@
                   o.createElement(N.p, {
                     bottom: !0,
                     color: "#000000",
-                    startPct: 70,
-                    endPct: 90,
+                    startPct: 75,
+                    endPct: 100,
                   }),
                   o.createElement(
                     "div",
@@ -12915,14 +12950,14 @@
                 o.createElement(N.p, {
                   top: !0,
                   color: "#000000",
-                  startPct: 60,
+                  startPct: 70,
                   midPct: 80,
                   endPct: 100,
                 }),
                 o.createElement(N.p, {
                   bottom: !0,
                   color: "#000000",
-                  startPct: 60,
+                  startPct: 70,
                   endPct: 90,
                 }),
                 o.createElement(
@@ -13291,8 +13326,9 @@
               o.createElement(
                 Ke,
                 {
-                  heightClassName: Ge().RazorArcanaHeight,
                   levelReward: 383,
+                  heightClassName: Ge().RazorArcanaHeight,
+                  justifyContent: Ne.CenterTop,
                   showPart2Badge: !0,
                 },
                 o.createElement(
@@ -13302,48 +13338,112 @@
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
-                        "international2022/arcana/razor_keyart.png)"
+                        "international2022/arcana/razor_keyart.png )"
                       ),
                     },
                   },
                   o.createElement(N.p, {
                     bottom: !0,
                     color: "#000000",
-                    startPct: 45,
-                    midPct: 75,
+                    startPct: 75,
+                    midPct: 90,
                     endPct: 100,
                   }),
                   o.createElement(
                     "div",
-                    { className: Ge().RazorArcanaContainer },
+                    { className: Ge().RazorContainer },
                     o.createElement("img", {
-                      className: Ge().RazorArcanaLogo,
+                      className: Ge().RazorLogo,
                       onError: function (e) {
                         return (e.target.src = "".concat(
                           h.Y.IMG_URL,
-                          "international2022/logos/razor_logo_english.png"
+                          "/international2022/logos/razor_logo_english.png"
                         ));
                       },
                       src: ""
                         .concat(
                           h.Y.IMG_URL,
-                          "international2022/logos/razor_logo_"
+                          "/international2022/logos/razor_logo_"
                         )
                         .concat(h.Y.LANGUAGE, ".png"),
                       "data-aos": "fade-up",
                       "data-aos-duration": "1000",
+                    })
+                  )
+                )
+              ),
+              o.createElement(
+                Ke,
+                {
+                  heightClassName: Ge().RazorLoreHeight,
+                  justifyContent: Ne.CenterTop,
+                },
+                o.createElement(
+                  "div",
+                  {
+                    className: Ge().RazorLore,
+                    style: {
+                      backgroundImage: "url( ".concat(
+                        h.Y.IMG_URL,
+                        "international2022/backgrounds/razor_bg.jpg )"
+                      ),
+                    },
+                  },
+                  o.createElement(N.p, {
+                    top: !0,
+                    color: "#000000",
+                    startPct: 60,
+                    midPct: 80,
+                    endPct: 100,
+                  }),
+                  o.createElement(
+                    "video",
+                    {
+                      className: Ge().RazorLoreShowcaseVideo,
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana.png"
+                      ),
+                      "data-aos": "fade-in",
+                      "data-aos-duration": "1000",
+                    },
+                    o.createElement("source", {
+                      type: "video/webm",
+                      src: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana.webm"
+                      ),
                     }),
+                    o.createElement("source", {
+                      type: "video/mp4",
+                      src: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana.mp4"
+                      ),
+                    })
+                  ),
+                  o.createElement(
+                    "div",
+                    {
+                      className: Ge().RazorLoreTextContainer,
+                      "data-aos": "fade-in",
+                      "data-aos-duration": "1000",
+                    },
                     o.createElement(
                       "div",
                       {
                         className: (0, b.Z)(
                           Ge().TextStyleSmallHeading,
                           Ge().TextColorPurpleGradient,
-                          Ge().RazorArcanaSubtitle
+                          Ge().RazorLoreTitle
                         ),
                       },
-                      " ",
-                      (0, E.Jr)("#battlepass_coming_soon")
+                      (0, E.Jr)("#battlepass_new")
                     ),
                     o.createElement(
                       "div",
@@ -13351,10 +13451,9 @@
                         className: (0, b.Z)(
                           Ge().TextStyleHeading,
                           Ge().TextColorWhite,
-                          Ge().RazorArcanaTitle
+                          Ge().RazorLoreSubtitle
                         ),
                       },
-                      " ",
                       (0, E.Jr)("#ti11_bp_razor_head")
                     ),
                     o.createElement(
@@ -13363,10 +13462,343 @@
                         className: (0, b.Z)(
                           Ge().TextStyleBody,
                           Ge().TextColorLightestGrey,
-                          Ge().RazorArcanaDesc
+                          Ge().RazorLoreDesc
                         ),
                       },
                       (0, E.Jr)("#ti11_bp_razor_small_desc")
+                    )
+                  ),
+                  o.createElement(N.p, {
+                    bottom: !0,
+                    color: "#000000",
+                    startPct: 60,
+                    endPct: 90,
+                  })
+                )
+              ),
+              o.createElement(
+                Ke,
+                {
+                  heightClassName: (0, b.Z)(
+                    Ge().ArcanaBreakdownHeight,
+                    Ge().RazorBreakdownHeight
+                  ),
+                  headerPrefix: "",
+                  headerText: "",
+                  bodyText: "",
+                  justifyContent: Ne.CenterTop,
+                },
+                o.createElement(
+                  "div",
+                  { className: Ge().ArcanaBreakdown },
+                  o.createElement(N.p, {
+                    right: !0,
+                    color: "#000000",
+                    startPct: 45,
+                    midPct: 60,
+                    endPct: 100,
+                    zIndex: 2,
+                  }),
+                  o.createElement(N.p, {
+                    top: !0,
+                    color: "#000000",
+                    startPct: 80,
+                    midPct: 90,
+                    endPct: 100,
+                    zIndex: 2,
+                  }),
+                  o.createElement(N.p, {
+                    bottom: !0,
+                    color: "#000000",
+                    startPct: 70,
+                    endPct: 88,
+                    zIndex: 2,
+                  }),
+                  o.createElement(
+                    "video",
+                    {
+                      className: (0, b.Z)(
+                        Ge().ArcanaVideo,
+                        Ge().RazorArcanaVideo
+                      ),
+                      autoPlay: !0,
+                      preload: "auto",
+                      muted: !0,
+                      loop: !0,
+                      playsInline: !0,
+                      poster: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana_turntable.png"
+                      ),
+                    },
+                    o.createElement("source", {
+                      type: "video/webm",
+                      src: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana_turntable.webm"
+                      ),
+                    }),
+                    o.createElement("source", {
+                      type: "video/mp4",
+                      src: "".concat(
+                        h.Y.VIDEO_URL,
+                        "international2022/razor_arcana_turntable.mp4"
+                      ),
+                    })
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ge().BreakdownText },
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleHeading,
+                          Ge().TextColorWhite,
+                          Ge().BreakdownHead
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_head")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().FeatureTitle
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat1_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleBody,
+                          Ge().TextColorLightestGrey,
+                          Ge().FeatureDesc
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat1_desc")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().FeatureTitle
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat2_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleBody,
+                          Ge().TextColorLightestGrey,
+                          Ge().FeatureDesc
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat2_desc")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().FeatureTitle
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat3_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleBody,
+                          Ge().TextColorLightstGrey,
+                          Ge().FeatureDesc
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat3_desc")
+                    ),
+                    o.createElement("img", {
+                      className: Ge().FeatureImgs,
+                      src: "".concat(
+                        h.Y.IMG_URL,
+                        "international2022/arcana/razor_icons.png"
+                      ),
+                    }),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().FeatureTitle
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat4_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleBody,
+                          Ge().TextColorLightestGrey,
+                          Ge().FeatureDesc
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat4_desc")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().FeatureTitle
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat5_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleBody,
+                          Ge().TextColorLightestGrey,
+                          Ge().FeatureDesc
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat5_desc")
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().TextStyleSmallHeading,
+                          Ge().TextColorPurpleGradient,
+                          Ge().WallpaperHead
+                        ),
+                      },
+                      (0, E.Jr)("#ti11_bp_razor_arcana_feat6_title")
+                    ),
+                    o.createElement(
+                      "div",
+                      { className: Ge().RazorWallpaperContainer },
+                      o.createElement(
+                        "a",
+                        {
+                          href: "".concat(
+                            h.Y.IMG_URL,
+                            "international2022/arcana/razor_wallpaper.jpg"
+                          ),
+                        },
+                        o.createElement("img", {
+                          className: Ge().RazorWallpaperLink,
+                          src: "".concat(
+                            h.Y.IMG_URL,
+                            "international2022/arcana/razor_thumb.jpg"
+                          ),
+                        })
+                      ),
+                      o.createElement(
+                        "a",
+                        {
+                          href: "".concat(
+                            h.Y.IMG_URL,
+                            "international2022/arcana/razor_mobile.jpg"
+                          ),
+                        },
+                        o.createElement("img", {
+                          className: Ge().RazorWallpaperLink,
+                          src: "".concat(
+                            h.Y.IMG_URL,
+                            "international2022/arcana/mobile_razor_thumb.jpg"
+                          ),
+                        })
+                      )
+                    )
+                  )
+                )
+              ),
+              o.createElement(
+                Ke,
+                {
+                  heightClassName: Ge().RazorSecondStyleHeight,
+                  justifyContent: Ne.CenterTop,
+                },
+                o.createElement(
+                  "div",
+                  { className: Ge().RazorSecondStyle },
+                  o.createElement(
+                    "div",
+                    {
+                      className: Ge().RazorSecondStyleRow,
+                      "data-aos": "fade-in",
+                      "data-aos-duration": "1000",
+                    },
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().RazorSecondStyleRowElement,
+                          Ge().RazorSecondStyleTextContainer
+                        ),
+                      },
+                      o.createElement(
+                        "div",
+                        {
+                          className: (0, b.Z)(
+                            Ge().TextStyleSmallHeading,
+                            Ge().TextColorPurpleGradient,
+                            Ge().RazorAltSmallHead
+                          ),
+                        },
+                        (0, E.Jr)("#ti11_bp_razor_alt_small_head")
+                      ),
+                      o.createElement(
+                        "div",
+                        {
+                          className: (0, b.Z)(
+                            Ge().TextStyleHeading,
+                            Ge().TextColorWhite,
+                            Ge().RazorAltHead
+                          ),
+                        },
+                        (0, E.Jr)("#ti11_bp_razor_alt_head")
+                      ),
+                      o.createElement(
+                        "div",
+                        {
+                          className: (0, b.Z)(
+                            Ge().TextStyleThumbnailBody,
+                            Ge().TextColorLightestGrey,
+                            Ge().RazorAltDesc
+                          ),
+                        },
+                        (0, E.Jr)("#ti11_bp_razor_alt_desc")
+                      )
+                    ),
+                    o.createElement(
+                      "div",
+                      {
+                        className: (0, b.Z)(
+                          Ge().RazorSecondStyleRowElement,
+                          Ge().RazorSecondStyleImageContainer
+                        ),
+                      },
+                      o.createElement(N.p, {
+                        left: !0,
+                        color: "#000000",
+                        startPct: 65,
+                        endPct: 100,
+                      })
                     )
                   )
                 )
@@ -13749,8 +14181,7 @@
                   o.createElement(N.p, {
                     top: !0,
                     color: "#000000",
-                    startPct: 40,
-                    midPct: 90,
+                    startPct: 90,
                     endPct: 100,
                   }),
                   o.createElement(
@@ -13825,8 +14256,7 @@
                   o.createElement(N.p, {
                     bottom: !0,
                     color: "#000000",
-                    startPct: 40,
-                    midPct: 90,
+                    startPct: 90,
                     endPct: 100,
                   })
                 )
@@ -23254,30 +23684,36 @@
             );
           }),
           (e.prototype.BHasSomeLanguageSupport = function (e) {
+            var t;
             return (
               this.BCheckDataRequestIncluded({
                 include_supported_languages: !0,
               }),
-              this.m_rgSupportedLanguages.some(function (t) {
-                return (
-                  t.elanguage == e &&
-                  (t.supported || t.subtitles || t.full_audio)
-                );
-              })
+              (null === (t = this.m_rgSupportedLanguages) || void 0 === t
+                ? void 0
+                : t.some(function (t) {
+                    return (
+                      t.elanguage == e &&
+                      (t.supported || t.subtitles || t.full_audio)
+                    );
+                  })) || !1
             );
           }),
           (e.prototype.GetAllLanguagesWithSomeSupport = function () {
+            var e;
             return (
               this.BCheckDataRequestIncluded({
                 include_supported_languages: !0,
               }),
-              this.m_rgSupportedLanguages
-                .filter(function (e) {
-                  return e.supported || e.subtitles || e.full_audio;
-                })
-                .map(function (e) {
-                  return e.elanguage;
-                })
+              (null === (e = this.m_rgSupportedLanguages) || void 0 === e
+                ? void 0
+                : e
+                    .filter(function (e) {
+                      return e.supported || e.subtitles || e.full_audio;
+                    })
+                    .map(function (e) {
+                      return e.elanguage;
+                    })) || []
             );
           }),
           (e.prototype.GetDataRequest = function () {
@@ -24556,7 +24992,10 @@
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
         })(Ea || (Ea = {})),
         (function (e) {
-          (e.Facebook = "Facebook"), (e.Twitter = "Twitter");
+          (e.Steam = "Steam"),
+            (e.Facebook = "Facebook"),
+            (e.Twitter = "Twitter"),
+            (e.Reddit = "Reddit");
         })(ya || (ya = {})),
         (function (e) {
           (e.Summary = "summary"),
@@ -27797,7 +28236,7 @@
         tr = n(68917),
         nr = n(75435),
         ar = (0, d.Pi)(function () {
-          var e = xo(),
+          var e = zo(),
             t = $a.f.Get().GetEventInfo(e),
             n = t && t.is_event_completed,
             a = $a.f.Get().GetSpoilerBlockState(e) == tr.rE.BLOCKED;
@@ -27860,7 +28299,7 @@
           );
         }),
         rr = function () {
-          var e = xo(),
+          var e = zo(),
             t = $a.f.Get().GetWatchPageContext(),
             n = $a.f.Get().GetEventInfo(e),
             a = (0, p.k6)(),
@@ -28332,7 +28771,7 @@
         yr = (0, d.Pi)(function (e) {
           var t = e.eDivision,
             n = e.setDivision,
-            a = xo(),
+            a = zo(),
             r = $a.f.Get().GetEventInfo(a),
             i = $a.f.Get().GetWatchPageContext(),
             s = [
@@ -28397,7 +28836,7 @@
             a = e.nNodeID,
             r = e.arrTimestamps,
             i = e.nOverrideTimestamp,
-            s = xo(),
+            s = zo(),
             l = (0, p.TH)(),
             c = $a.f.Get().GetWatchPageContext(),
             d = 0 == a,
@@ -28658,7 +29097,7 @@
           );
         }),
         Cr = (0, d.Pi)(function () {
-          var e = xo(),
+          var e = zo(),
             t = $a.f.Get().GetEventInfo(e),
             n = $a.f.Get().GetWatchPageContext(),
             a = (0, o.useState)(tr.sd.UNSET),
@@ -29047,71 +29486,135 @@
       });
       var Ir = n(40951),
         Dr = n.n(Ir),
-        Rr = [
-          { nTimestamp: 1636444800, eRegion: tr.dO.CN },
-          { nTimestamp: 1636455600, eRegion: tr.dO.CN },
-          { nTimestamp: 1636466400, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636477200, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636488e3, eRegion: tr.dO.NA },
-          { nTimestamp: 1636531200, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636542e3, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636552800, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636574400, eRegion: tr.dO.NA },
-          { nTimestamp: 1636585200, eRegion: tr.dO.NA },
-          { nTimestamp: 1636628400, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636639200, eRegion: tr.dO.EEU },
-          { nTimestamp: 163665e4, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636671600, eRegion: tr.dO.SA },
-          { nTimestamp: 1636704e3, eRegion: tr.dO.CN },
-          { nTimestamp: 1636714800, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636747200, eRegion: tr.dO.SA },
-          { nTimestamp: 1636758e3, eRegion: tr.dO.SA },
-          { nTimestamp: 1636790400, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636801200, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636812e3, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636822800, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636833600, eRegion: tr.dO.NA },
-          { nTimestamp: 1636844400, eRegion: tr.dO.NA },
-          { nTimestamp: 1636876800, eRegion: tr.dO.CN },
-          { nTimestamp: 1636887600, eRegion: tr.dO.CN },
-          { nTimestamp: 1636898400, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636909200, eRegion: tr.dO.EEU },
-          { nTimestamp: 163692e4, eRegion: tr.dO.SA },
-          { nTimestamp: 1636930800, eRegion: tr.dO.SA },
+        Rr = 1668931200,
+        Lr = 1669104e3,
+        Ar = [
+          { eRegion: tr.dO.CN, nTimestamp: Rr },
+          { eRegion: tr.dO.CN, nTimestamp: 1668942e3 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1668952800 },
+          { eRegion: tr.dO.SA, nTimestamp: 1668963600 },
+          { eRegion: tr.dO.SA, nTimestamp: 1668974400 },
+          { eRegion: tr.dO.SA, nTimestamp: 1668985200 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669006800 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669017600 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669028400 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669039200 },
+          { eRegion: tr.dO.WEU, nTimestamp: 166905e4 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669060800 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669071600 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669082400 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669093200 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669104e3 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669114800 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669125600 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669136400 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669147200 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669158e3 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669179600 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669190400 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669201200 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669212e3 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669222800 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669233600 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669244400 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669255200 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669266e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669276800 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669287600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669298400 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669309200 },
+          { eRegion: tr.dO.SA, nTimestamp: 166932e4 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669330800 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669352400 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669363200 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669374e3 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669384800 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669395600 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669406400 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669417200 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669428e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669438800 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669449600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669460400 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669471200 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669482e3 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669492800 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669503600 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669514400 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669525200 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669536e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669546800 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669557600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669568400 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669579200 },
+          { eRegion: tr.dO.SA, nTimestamp: 166959e4 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669600800 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669611600 },
         ],
-        Lr = [
-          { nTimestamp: 1636358400, eRegion: tr.dO.CN },
-          { nTimestamp: 1636369200, eRegion: tr.dO.SEA },
-          { nTimestamp: 163638e4, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636390800, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636401600, eRegion: tr.dO.NA },
-          { nTimestamp: 1636412400, eRegion: tr.dO.SA },
-          { nTimestamp: 1636434e3, eRegion: tr.dO.CN },
-          { nTimestamp: 1636455600, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636498800, eRegion: tr.dO.NA },
-          { nTimestamp: 1636520400, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636563600, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636574400, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636606800, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636617600, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636628400, eRegion: tr.dO.EEU },
-          { nTimestamp: 163665e4, eRegion: tr.dO.SA },
-          { nTimestamp: 1636660800, eRegion: tr.dO.SA },
-          { nTimestamp: 1636693200, eRegion: tr.dO.CN },
-          { nTimestamp: 1636725600, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636736400, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636747200, eRegion: tr.dO.NA },
-          { nTimestamp: 1636779600, eRegion: tr.dO.SEA },
-          { nTimestamp: 1636801200, eRegion: tr.dO.WEU },
-          { nTimestamp: 1636822800, eRegion: tr.dO.SA },
-          { nTimestamp: 1636866e3, eRegion: tr.dO.CN },
-          { nTimestamp: 1636887600, eRegion: tr.dO.EEU },
-          { nTimestamp: 1636909200, eRegion: tr.dO.SA },
-          { nTimestamp: 163692e4, eRegion: tr.dO.NA },
-          { nTimestamp: 1636930800, eRegion: tr.dO.NA },
-          { nTimestamp: 1636952400, eRegion: tr.dO.CN },
+        Mr = [
+          { eRegion: tr.dO.CN, nTimestamp: Lr },
+          { eRegion: tr.dO.CN, nTimestamp: 1669114800 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669125600 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669136400 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669147200 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669158e3 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669179600 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669190400 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669201200 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669212e3 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669222800 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669233600 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669244400 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669255200 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669266e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669276800 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669287600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669298400 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669309200 },
+          { eRegion: tr.dO.SA, nTimestamp: 166932e4 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669330800 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669352400 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669363200 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669374e3 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669384800 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669395600 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669406400 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669417200 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669428e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669438800 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669449600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669460400 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669471200 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669482e3 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669492800 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669503600 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669525200 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669536e3 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669546800 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669557600 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669568400 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669579200 },
+          { eRegion: tr.dO.NA, nTimestamp: 166959e4 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669600800 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669611600 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669622400 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669633200 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669644e3 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669654800 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669665600 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669676400 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669687200 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669698e3 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669708800 },
+          { eRegion: tr.dO.CN, nTimestamp: 1669719600 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669730400 },
+          { eRegion: tr.dO.EEU, nTimestamp: 1669741200 },
+          { eRegion: tr.dO.WEU, nTimestamp: 1669752e3 },
+          { eRegion: tr.dO.SA, nTimestamp: 1669762800 },
+          { eRegion: tr.dO.NA, nTimestamp: 1669773600 },
+          { eRegion: tr.dO.SEA, nTimestamp: 1669784400 },
         ];
-      var Ar = function (e) {
+      var Gr = function (e) {
           for (
             var t = Math.min.apply(
                 Math,
@@ -29123,7 +29626,7 @@
               a = n + ((t - n) % 10800),
               r = [],
               i = 0;
-            i < 56;
+            i < 64;
             i++
           )
             r.push(a + 3 * i * 60 * 60);
@@ -29169,7 +29672,16 @@
                     !a && Dr().EmptyBottom
                   ),
                 },
+                n % 56 == 0 &&
+                  0 !== n &&
+                  o.createElement(
+                    "div",
+                    { className: (0, b.Z)(Dr().WithBonus) },
+                    (0, E.Jr)("#dpc_about_bonus_day"),
+                    o.createElement(cr(), { format: "ddd ", date: 1e3 * t })
+                  ),
                 n % 8 == 0 &&
+                  !(n % 56 == 0 && 0 !== n) &&
                   o.createElement(cr(), {
                     format: "ddd ",
                     date: 1e3 * t,
@@ -29185,7 +29697,11 @@
             })
           );
         },
-        Mr = (0, d.Pi)(function () {
+        kr = (0, d.Pi)(function () {
+          var e = (0, E.Wd)("#dpc_event_2022season"),
+            t = (0, E.Wd)("#dpc_event_ti12"),
+            n = (0, E.Wd)("#dpc_event_ti11"),
+            a = (0, E.Wd)("#dpc_event_2022season_reg_roster_lock");
           return o.createElement(
             "div",
             {
@@ -29374,7 +29890,7 @@
                 o.createElement(
                   "div",
                   { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_faq_answer2")
+                  (0, E.Jr)("#dpc_about_faq_answer2", e)
                 )
               ),
               o.createElement(
@@ -29439,12 +29955,12 @@
                 o.createElement(
                   "div",
                   { className: Dr().Question },
-                  (0, E.Jr)("#dpc_about_faq_question7")
+                  (0, E.Jr)("#dpc_about_faq_question7", t)
                 ),
                 o.createElement(
                   "div",
                   { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_faq_answer7")
+                  (0, E.Jr)("#dpc_about_faq_answer7", t)
                 )
               ),
               o.createElement(
@@ -29458,21 +29974,7 @@
                 o.createElement(
                   "div",
                   { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_faq_answer8")
-                )
-              ),
-              o.createElement(
-                "div",
-                { className: Dr().FAQEntry },
-                o.createElement(
-                  "div",
-                  { className: Dr().Question },
-                  (0, E.Jr)("#dpc_about_faq_question20")
-                ),
-                o.createElement(
-                  "div",
-                  { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_faq_answer20")
+                  (0, E.Jr)("#dpc_about_faq_answer8", t)
                 )
               ),
               o.createElement(
@@ -29556,7 +30058,7 @@
                 o.createElement(
                   "div",
                   { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_faq_answer14")
+                  (0, E.Jr)("#dpc_about_faq_answer14", e, a)
                 )
               ),
               o.createElement(
@@ -29664,7 +30166,7 @@
                 o.createElement(
                   "div",
                   { className: Dr().Answer },
-                  (0, E.Jr)("#dpc_about_reg_faq_answer2")
+                  (0, E.Jr)("#dpc_about_reg_faq_answer2", e, a)
                 )
               ),
               o.createElement(
@@ -29701,7 +30203,7 @@
                 o.createElement(
                   "div",
                   { className: Dr().Question },
-                  (0, E.Jr)("#dpc_about_reg_faq_question5")
+                  (0, E.Jr)("#dpc_about_reg_faq_question5", n)
                 ),
                 o.createElement(
                   "div",
@@ -30003,7 +30505,13 @@
                   { className: Dr().Subtitle },
                   (0, E.Jr)("#dpc_about_weekly_schedule_i")
                 ),
-                o.createElement(Ar, { arrMatches: Rr })
+                o.createElement(Gr, { arrMatches: Ar }),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: Dr().Body },
+                  (0, E.Jr)("#dpc_about_weekly_schedule_i_tiebreakers")
+                )
               ),
               o.createElement(
                 "div",
@@ -30013,7 +30521,13 @@
                   { className: Dr().Subtitle },
                   (0, E.Jr)("#dpc_about_weekly_schedule_ii")
                 ),
-                o.createElement(Ar, { arrMatches: Lr })
+                o.createElement(Gr, { arrMatches: Mr }),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: Dr().Body },
+                  (0, E.Jr)("#dpc_about_weekly_schedule_ii_tiebreakers")
+                )
               ),
               o.createElement(
                 "div",
@@ -30107,23 +30621,23 @@
             )
           );
         }),
-        Gr = n(85754),
-        kr = n.n(Gr),
-        Pr = n(68107),
+        Pr = n(85754),
         Fr = n.n(Pr),
-        Or = n(70889),
-        xr = n(34215),
-        Ur = n(94361),
-        zr = n.n(Ur),
-        Hr = (0, d.Pi)(function () {
-          var e = xo();
+        Or = n(68107),
+        xr = n.n(Or),
+        Ur = n(70889),
+        zr = n(34215),
+        Hr = n(94361),
+        Wr = n.n(Hr),
+        jr = (0, d.Pi)(function () {
+          var e = zo();
           return o.createElement(
             "div",
-            { className: zr().DPCAboutBanner },
+            { className: Wr().DPCAboutBanner },
             o.createElement(
               "div",
               {
-                className: (0, b.Z)(zr().Background, zr().International),
+                className: (0, b.Z)(Wr().Background, Wr().International),
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -30133,15 +30647,15 @@
               },
               o.createElement(
                 "div",
-                { className: zr().Content },
+                { className: Wr().Content },
                 o.createElement(
                   "div",
-                  { className: zr().Title },
+                  { className: Wr().Title },
                   (0, E.Jr)("#dpc_about_banner_title")
                 ),
                 o.createElement(
                   "div",
-                  { className: zr().Body },
+                  { className: Wr().Body },
                   (0, E.Jr)("#dpc_about_banner_body")
                 ),
                 o.createElement(
@@ -30151,7 +30665,7 @@
                       state: { bAutoScroll: !0 },
                       pathname: "".concat(u._.dpc_about((0, er.B2)(e))),
                     },
-                    className: zr().Button,
+                    className: Wr().Button,
                   },
                   (0, E.Jr)("#dpc_about_button")
                 )
@@ -30159,8 +30673,8 @@
             )
           );
         }),
-        Wr = (0, d.Pi)(function (e) {
-          var t = xo(),
+        Vr = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetEventInfo(t),
             a = $a.f.Get().GetEventDates(t).sort(),
             r = !1,
@@ -30238,20 +30752,20 @@
             "div",
             {
               className: (0, b.Z)(
-                Fr().DPCScheduleHeader,
-                n.is_event_completed && Fr().IsEventCompleted
+                xr().DPCScheduleHeader,
+                n.is_event_completed && xr().IsEventCompleted
               ),
             },
             (null == n ? void 0 : n.event_type) == tr.f5.INTERNATIONAL &&
               o.createElement(
                 "div",
-                { className: Fr().InternationalDaySelector },
+                { className: xr().InternationalDaySelector },
                 o.createElement(
                   "div",
                   {
                     className: (0, b.Z)(
-                      Fr().AllDays,
-                      0 == e.nDayFilter && Fr().Selected
+                      xr().AllDays,
+                      0 == e.nDayFilter && xr().Selected
                     ),
                     onClick: function () {
                       return e.setDayFilter(0);
@@ -30261,22 +30775,22 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Fr().EventStageContainer },
+                  { className: xr().EventStageContainer },
                   o.createElement(
                     "div",
-                    { className: Fr().Title },
+                    { className: xr().Title },
                     (0, E.Jr)("#dpc_group_stage")
                   ),
                   o.createElement(
                     "div",
-                    { className: Fr().DayList },
+                    { className: xr().DayList },
                     c.map(function (t) {
                       return o.createElement(
                         "div",
                         {
                           className: (0, b.Z)(
-                            Fr().DayContainer,
-                            t == e.nDayFilter && Fr().Selected
+                            xr().DayContainer,
+                            t == e.nDayFilter && xr().Selected
                           ),
                           key: t,
                           onClick: function () {
@@ -30286,12 +30800,12 @@
                         o.createElement(cr(), {
                           format: "DD ",
                           date: 1e3 * t,
-                          className: Fr().DayNumber,
+                          className: xr().DayNumber,
                         }),
                         o.createElement(cr(), {
                           format: "ddd ",
                           date: 1e3 * t,
-                          className: Fr().DayOfWeek,
+                          className: xr().DayOfWeek,
                         })
                       );
                     })
@@ -30300,22 +30814,22 @@
                 !!u.length &&
                   o.createElement(
                     "div",
-                    { className: Fr().EventStageContainer },
+                    { className: xr().EventStageContainer },
                     o.createElement(
                       "div",
-                      { className: Fr().Title },
+                      { className: xr().Title },
                       (0, E.Jr)("#dpc_main_event")
                     ),
                     o.createElement(
                       "div",
-                      { className: Fr().DayList },
+                      { className: xr().DayList },
                       u.map(function (t) {
                         return o.createElement(
                           "div",
                           {
                             className: (0, b.Z)(
-                              Fr().DayContainer,
-                              t == e.nDayFilter && Fr().Selected
+                              xr().DayContainer,
+                              t == e.nDayFilter && xr().Selected
                             ),
                             key: t,
                             onClick: function () {
@@ -30325,12 +30839,12 @@
                           o.createElement(cr(), {
                             format: "DD ",
                             date: 1e3 * t,
-                            className: Fr().DayNumber,
+                            className: xr().DayNumber,
                           }),
                           o.createElement(cr(), {
                             format: "ddd ",
                             date: 1e3 * t,
-                            className: Fr().DayOfWeek,
+                            className: xr().DayOfWeek,
                           })
                         );
                       })
@@ -30339,7 +30853,7 @@
               ),
             o.createElement(
               "div",
-              { className: Fr().Filters },
+              { className: xr().Filters },
               r &&
                 o.createElement(qa, {
                   eStyle: Ua.NORMAL,
@@ -30361,8 +30875,8 @@
             )
           );
         }),
-        jr = (0, d.Pi)(function (e) {
-          var t = xo(),
+        Jr = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetEventInfo(t),
             a = (0, p.k6)(),
             r = (0, o.useState)({ nLeagueID: 0, nNodeID: 0 }),
@@ -30501,7 +31015,7 @@
             ),
             o.createElement(
               "div",
-              { className: Fr().DPCScheduleList },
+              { className: xr().DPCScheduleList },
               l.map(function (e) {
                 var t = c.filter(function (t) {
                   var n = $a.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
@@ -30518,29 +31032,29 @@
                   ? null
                   : o.createElement(
                       "div",
-                      { key: "day_".concat(e), className: Fr().DaySection },
+                      { key: "day_".concat(e), className: xr().DaySection },
                       o.createElement(
                         "div",
                         {
                           className: (0, b.Z)(
-                            Fr().DayHeader,
-                            n.is_event_completed && Fr().IsEventCompleted
+                            xr().DayHeader,
+                            n.is_event_completed && xr().IsEventCompleted
                           ),
                         },
                         o.createElement(cr(), {
                           date: 1e3 * e,
                           format: "dddd, MMMM Do",
-                          className: Fr().DateLabel,
+                          className: xr().DateLabel,
                         })
                       ),
                       o.createElement(
                         "div",
-                        { className: Fr().DayNodeList },
+                        { className: xr().DayNodeList },
                         t.map(function (t) {
                           var n =
                             t.nLeagueID == i.nLeagueID &&
                             t.nNodeID == i.nNodeID;
-                          return o.createElement(Vr, {
+                          return o.createElement(Yr, {
                             key: ""
                               .concat(e, "_")
                               .concat(t.nLeagueID, "_")
@@ -30557,8 +31071,8 @@
             )
           );
         }),
-        Vr = (0, d.Pi)(function (e) {
-          var t = xo(),
+        Yr = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             a = $a.f.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID),
             r = (null == n ? void 0 : n.actual_time)
@@ -30636,17 +31150,17 @@
             "div",
             {
               className: (0, b.Z)(
-                Fr().DPCScheduleEntry,
-                f && Fr().Live,
-                e.bExpanded && Fr().Expanded
+                xr().DPCScheduleEntry,
+                f && xr().Live,
+                e.bExpanded && xr().Expanded
               ),
             },
             o.createElement(
               "div",
-              { className: Fr().Body },
+              { className: xr().Body },
               o.createElement(
                 "div",
-                { className: Fr().LeftSection },
+                { className: xr().LeftSection },
                 s.map(function (t, n) {
                   var a = s.length > 1 && 0 == n,
                     r = s.length > 1 && 1 == n;
@@ -30658,9 +31172,9 @@
                         .concat(e.nNodeID, "_")
                         .concat(n),
                       className: (0, b.Z)(
-                        Fr().NodeType,
-                        a && Fr().Upper,
-                        r && Fr().Lower
+                        xr().NodeType,
+                        a && xr().Upper,
+                        r && xr().Lower
                       ),
                     },
                     (0, E.Jr)(t),
@@ -30669,7 +31183,7 @@
                 }),
                 o.createElement(
                   "div",
-                  { className: Fr().TimeLabel },
+                  { className: xr().TimeLabel },
                   o.createElement(cr(), { date: 1e3 * r, format: "LT" }),
                   Intl.DateTimeFormat(void 0, { timeZoneName: "short" })
                     .formatToParts(new Date())
@@ -30680,34 +31194,34 @@
               ),
               o.createElement(
                 "div",
-                { className: Fr().CenterSection },
+                { className: xr().CenterSection },
                 o.createElement(
                   "div",
                   {
                     className: (0, b.Z)(
-                      Fr().TeamSection,
-                      Fr().Left,
-                      y && !S && Fr().Winner
+                      xr().TeamSection,
+                      xr().Left,
+                      y && !S && xr().Winner
                     ),
                   },
                   o.createElement(
                     "div",
-                    { className: Fr().TeamName },
+                    { className: xr().TeamName },
                     (0, E.Jr)(N)
                   ),
                   i &&
                     !S &&
-                    o.createElement("div", { className: Fr().Record }, _)
+                    o.createElement("div", { className: xr().Record }, _)
                 ),
                 o.createElement(vr, {
-                  className: Fr().TeamLogo,
+                  className: xr().TeamLogo,
                   nTeamID: C ? (null == n ? void 0 : n.team_id_1) : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
                 o.createElement(
                   "div",
-                  { className: Fr().CenterContainer },
+                  { className: xr().CenterContainer },
                   f &&
                     o.createElement(
                       m.rU,
@@ -30721,19 +31235,19 @@
                             (0, er.k8)(0, er.Uz.SERIES)
                           ),
                         },
-                        className: Fr().LiveBanner,
+                        className: xr().LiveBanner,
                       },
                       (0, E.Jr)("#dpc_live"),
-                      o.createElement("div", { className: Fr().Dot })
+                      o.createElement("div", { className: xr().Dot })
                     ),
                   o.createElement(
                     "div",
-                    { className: Fr().Score },
+                    { className: xr().Score },
                     (0, E.Jr)(B)
                   )
                 ),
                 o.createElement(vr, {
-                  className: Fr().TeamLogo,
+                  className: xr().TeamLogo,
                   nTeamID: C ? (null == n ? void 0 : n.team_id_2) : 0,
                   nSize: 52,
                   bTooltip: !0,
@@ -30742,31 +31256,31 @@
                   "div",
                   {
                     className: (0, b.Z)(
-                      Fr().TeamSection,
-                      Fr().Right,
-                      T && !S && Fr().Winner
+                      xr().TeamSection,
+                      xr().Right,
+                      T && !S && xr().Winner
                     ),
                   },
                   o.createElement(
                     "div",
-                    { className: Fr().TeamName },
+                    { className: xr().TeamName },
                     (0, E.Jr)(I)
                   ),
                   i &&
                     !S &&
-                    o.createElement("div", { className: Fr().Record }, h)
+                    o.createElement("div", { className: xr().Record }, h)
                 )
               ),
               o.createElement(
                 "div",
-                { className: Fr().RightSection },
+                { className: xr().RightSection },
                 v &&
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        Fr().MatchDetailsButton,
-                        e.bExpanded && Fr().Expanded
+                        xr().MatchDetailsButton,
+                        e.bExpanded && xr().Expanded
                       ),
                       onClick: function () {
                         return e.setExpanded({
@@ -30783,18 +31297,18 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Fr().Expansion,
-                  e.bExpanded && Fr().Expanded
+                  xr().Expansion,
+                  e.bExpanded && xr().Expanded
                 ),
                 style: {
                   height: e.bExpanded ? 120 * D : 0,
                   minHeight: e.bExpanded ? 120 * D : 0,
                 },
               },
-              (0, xr.bE)(1, D).map(function (t) {
+              (0, zr.bE)(1, D).map(function (t) {
                 if (t <= (null == n ? void 0 : n.matches.length)) {
                   var a = n.matches[t - 1];
-                  return o.createElement(Jr, {
+                  return o.createElement(Zr, {
                     key: "m".concat(a.match_id),
                     nLeagueID: e.nLeagueID,
                     nNodeID: e.nNodeID,
@@ -30804,7 +31318,7 @@
                     bExpanded: e.bExpanded,
                   });
                 }
-                return o.createElement(Jr, {
+                return o.createElement(Zr, {
                   key: "m_stub".concat(t),
                   nLeagueID: e.nLeagueID,
                   nNodeID: e.nNodeID,
@@ -30817,8 +31331,8 @@
             )
           );
         }),
-        Jr = (0, d.Pi)(function (e) {
-          var t = xo(),
+        Zr = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = e.nLeagueID,
             a = e.nNodeID,
             r = e.match,
@@ -30832,7 +31346,7 @@
               ? $a.f.Get().GetMatchData(n, null == r ? void 0 : r.match_id)
               : void 0,
             g = $a.f.Get().GetLeagueNode(n, a),
-            f = Or.L.Get().getHeroList();
+            f = Ur.L.Get().getHeroList();
           l && !d && p(!0);
           var v = $a.f.Get().IsGameWatched(n, a, i),
             y = $a.f.Get().GetSpoilerBlockState(t) == tr.rE.BLOCKED && !v,
@@ -30857,25 +31371,25 @@
             "div",
             {
               className: (0, b.Z)(
-                Fr().DPCScheduleGameDetails,
-                s && Fr().IsLast
+                xr().DPCScheduleGameDetails,
+                s && xr().IsLast
               ),
             },
             o.createElement(
               "div",
-              { className: Fr().LeftSection },
-              !y && o.createElement("div", { className: Fr().Time }, N),
+              { className: xr().LeftSection },
+              !y && o.createElement("div", { className: xr().Time }, N),
               v &&
                 o.createElement(
                   "div",
-                  { className: Fr().WatchedBox },
+                  { className: xr().WatchedBox },
                   (0, E.Jr)("#dpc_watched")
                 ),
               !v &&
                 o.createElement(
                   "div",
                   {
-                    className: Fr().MarkWatchedButton,
+                    className: xr().MarkWatchedButton,
                     onClick: function () {
                       return $a.f.Get().SetGameWatched(n, a, i);
                     },
@@ -30885,7 +31399,7 @@
             ),
             o.createElement(
               "div",
-              { className: Fr().HeroList },
+              { className: xr().HeroList },
               null == _
                 ? void 0
                 : _.players
@@ -30908,7 +31422,7 @@
                       return y
                         ? o.createElement("div", {
                             key: "h".concat(t),
-                            className: Fr().HeroIcon,
+                            className: xr().HeroIcon,
                             style: {
                               backgroundImage: "url( ".concat(
                                 h.Y.IMG_URL,
@@ -30918,7 +31432,7 @@
                           })
                         : o.createElement("div", {
                             key: "0h".concat(t),
-                            className: Fr().HeroIcon,
+                            className: xr().HeroIcon,
                             style: {
                               backgroundImage: "url( "
                                 .concat(h.Y.IMG_URL, "heroes/icons/")
@@ -30928,10 +31442,10 @@
                     }),
               y &&
                 !_ &&
-                (0, xr.bE)(1, 5).map(function (e) {
+                (0, zr.bE)(1, 5).map(function (e) {
                   return o.createElement("div", {
                     key: "1h".concat(e),
-                    className: Fr().HeroIcon,
+                    className: xr().HeroIcon,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -30943,7 +31457,7 @@
             ),
             o.createElement(
               "div",
-              { className: Fr().Center },
+              { className: xr().Center },
               o.createElement(
                 m.rU,
                 {
@@ -30956,25 +31470,25 @@
                       (0, er.k8)(i, er.Uz.GAME)
                     ),
                   },
-                  className: Fr().FirstLine,
+                  className: xr().FirstLine,
                 },
                 !y && o.createElement(vr, { nTeamID: w, nSize: 32 }),
                 o.createElement(
                   "div",
-                  { className: Fr().GameNumber },
+                  { className: xr().GameNumber },
                   (0, E.Jr)("#dpc_game_number", i)
                 )
               ),
               !y &&
                 o.createElement(
                   "div",
-                  { className: Fr().WinningTeam },
+                  { className: xr().WinningTeam },
                   B && (0, E.Jr)("#dpc_team_win", B.name)
                 ),
               !y &&
                 o.createElement(
                   "div",
-                  { className: Fr().Duration },
+                  { className: xr().Duration },
                   _ &&
                     o.createElement(cr(), {
                       date: 1e3 * _.duration,
@@ -30984,7 +31498,7 @@
             ),
             o.createElement(
               "div",
-              { className: Fr().HeroList },
+              { className: xr().HeroList },
               null == _
                 ? void 0
                 : _.players
@@ -31007,7 +31521,7 @@
                       return y
                         ? o.createElement("div", {
                             key: "1h".concat(t),
-                            className: Fr().HeroIcon,
+                            className: xr().HeroIcon,
                             style: {
                               backgroundImage: "url( ".concat(
                                 h.Y.IMG_URL,
@@ -31017,7 +31531,7 @@
                           })
                         : o.createElement("div", {
                             key: "1h".concat(t),
-                            className: Fr().HeroIcon,
+                            className: xr().HeroIcon,
                             style: {
                               backgroundImage: "url( "
                                 .concat(h.Y.IMG_URL, "heroes/icons/")
@@ -31027,10 +31541,10 @@
                     }),
               y &&
                 !_ &&
-                (0, xr.bE)(1, 5).map(function (e) {
+                (0, zr.bE)(1, 5).map(function (e) {
                   return o.createElement("div", {
                     key: "1h".concat(e),
-                    className: Fr().HeroIcon,
+                    className: xr().HeroIcon,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -31042,7 +31556,7 @@
             ),
             o.createElement(
               "div",
-              { className: Fr().RightSection },
+              { className: xr().RightSection },
               o.createElement(
                 m.rU,
                 {
@@ -31055,15 +31569,15 @@
                       (0, er.k8)(i, S ? er.Uz.VOD : er.Uz.GAME)
                     ),
                   },
-                  className: (0, b.Z)(Fr().WatchVODButton, C && Fr().Enabled),
+                  className: (0, b.Z)(xr().WatchVODButton, C && xr().Enabled),
                 },
                 (0, E.Jr)(C ? "#dpc_watch_vod" : "#dpc_no_vod")
               )
             )
           );
         }),
-        Yr = (0, d.Pi)(function () {
-          var e = xo(),
+        Xr = (0, d.Pi)(function () {
+          var e = zo(),
             t = (0, o.useState)(""),
             n = t[0],
             a = t[1],
@@ -31102,7 +31616,7 @@
             o.createElement(
               "div",
               {
-                className: Fr().DPCSchedulePage,
+                className: xr().DPCSchedulePage,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -31110,7 +31624,7 @@
                   ),
                 },
               },
-              o.createElement(Wr, {
+              o.createElement(Vr, {
                 eDivision: i,
                 setDivision: s,
                 eRegion: c,
@@ -31120,7 +31634,7 @@
                 nDayFilter: m,
                 setDayFilter: _,
               }),
-              o.createElement(jr, {
+              o.createElement(Jr, {
                 eDivision: i,
                 eRegion: c,
                 strTeamSearch: n,
@@ -31131,21 +31645,21 @@
               o.createElement(
                 "div",
                 {
-                  className: Fr().ScrollToTopButton,
+                  className: xr().ScrollToTopButton,
                   onClick: function () {
                     return window.scrollTo({ top: 510, behavior: "smooth" });
                   },
                 },
                 (0, E.Jr)("#dpc_scroll_to_top")
               ),
-              o.createElement(Hr, null)
+              o.createElement(jr, null)
             )
           );
         }),
-        Zr = n(7773),
-        Xr = n.n(Zr),
-        qr = (0, d.Pi)(function () {
-          var e = xo(),
+        qr = n(7773),
+        Kr = n.n(qr),
+        Qr = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetEventInfo(e),
             n = (0, o.useState)(0),
             a = n[0],
@@ -31155,11 +31669,11 @@
               .GetDPCStandings(null == t ? void 0 : t.registration_period);
           return o.createElement(
             "div",
-            { className: Xr().DPCTIStandingsPage },
+            { className: Kr().DPCTIStandingsPage },
             0 == (null == i ? void 0 : i.results.length) &&
               o.createElement(
                 "div",
-                { className: Xr().NoResults },
+                { className: Kr().NoResults },
                 (0, E.Jr)("#dpc_ti_results_empty")
               ),
             null == i
@@ -31170,14 +31684,14 @@
                     "div",
                     {
                       key: "".concat(t.team_id),
-                      className: Xr().TeamEntry,
+                      className: Kr().TeamEntry,
                       onClick: function () {
                         return r(a == t.team_id ? 0 : t.team_id);
                       },
                     },
                     o.createElement(
                       "div",
-                      { className: Xr().TeamBody },
+                      { className: Kr().TeamBody },
                       o.createElement(vr, {
                         nTeamID: t.team_id,
                         nSize: 48,
@@ -31185,12 +31699,12 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: Xr().TeamName },
+                        { className: Kr().TeamName },
                         t.team_name
                       ),
                       o.createElement(
                         "div",
-                        { className: Xr().Points },
+                        { className: Kr().Points },
                         t.total_points
                       )
                     ),
@@ -31198,8 +31712,8 @@
                       "div",
                       {
                         className: (0, b.Z)(
-                          Xr().TeamExpansion,
-                          n && Xr().Expanded
+                          Kr().TeamExpansion,
+                          n && Kr().Expanded
                         ),
                       },
                       t.league_results.map(function (a) {
@@ -31214,26 +31728,26 @@
                             "div",
                             {
                               key: "p15_".concat(a.timestamp),
-                              className: Xr().LeagueResult,
+                              className: Kr().LeagueResult,
                             },
                             o.createElement(cr(), {
-                              className: Xr().Timestamp,
+                              className: Kr().Timestamp,
                               date: 1e3 * a.timestamp,
                               format: "MMM DD YYYY",
                             }),
                             o.createElement(
                               "div",
-                              { className: Xr().PlayerLeft },
+                              { className: Kr().PlayerLeft },
                               (0, E.Jr)("#dpc_player_left"),
                               o.createElement(
                                 "div",
-                                { className: Xr().PlayerName },
+                                { className: Kr().PlayerName },
                                 null == i ? void 0 : i.name
                               )
                             ),
                             o.createElement(
                               "div",
-                              { className: Xr().PointPenalty },
+                              { className: Kr().PointPenalty },
                               (0, E.Jr)("#dpc_penalty_15pct")
                             )
                           );
@@ -31243,21 +31757,21 @@
                               "div",
                               {
                                 key: "p20_".concat(a.timestamp),
-                                className: Xr().LeagueResult,
+                                className: Kr().LeagueResult,
                               },
                               o.createElement(cr(), {
-                                className: Xr().Timestamp,
+                                className: Kr().Timestamp,
                                 date: 1e3 * a.timestamp,
                                 format: "MMM DD YYYY",
                               }),
                               o.createElement(
                                 "div",
-                                { className: Xr().PlayerLeft },
+                                { className: Kr().PlayerLeft },
                                 (0, E.Jr)("#dpc_penalty")
                               ),
                               o.createElement(
                                 "div",
-                                { className: Xr().PointPenalty },
+                                { className: Kr().PointPenalty },
                                 (0, E.Jr)("#dpc_penalty_20pct")
                               )
                             )
@@ -31268,15 +31782,15 @@
                                 key: "l_"
                                   .concat(t.team_id, "_")
                                   .concat(a.timestamp),
-                                className: Xr().LeagueResult,
+                                className: Kr().LeagueResult,
                               },
                               o.createElement(cr(), {
-                                className: Xr().Timestamp,
+                                className: Kr().Timestamp,
                                 date: 1e3 * a.timestamp,
                                 format: "MMM DD YYYY",
                               }),
                               o.createElement("div", {
-                                className: Xr().LeagueLogo,
+                                className: Kr().LeagueLogo,
                                 style: {
                                   backgroundImage: "url( "
                                     .concat(
@@ -31288,17 +31802,17 @@
                               }),
                               o.createElement(
                                 "div",
-                                { className: Xr().LeaguePlace },
-                                (0, xr.jc)(a.standing)
+                                { className: Kr().LeaguePlace },
+                                (0, zr.jc)(a.standing)
                               ),
                               o.createElement(
                                 "div",
-                                { className: Xr().LeagueName },
+                                { className: Kr().LeagueName },
                                 (0, E.Jr)(null == r ? void 0 : r.info.name)
                               ),
                               o.createElement(
                                 "div",
-                                { className: Xr().Points },
+                                { className: Kr().Points },
                                 a.points
                               )
                             )
@@ -31309,13 +31823,13 @@
                 })
           );
         }),
-        Kr = n(93504),
-        Qr = n.n(Kr),
-        $r = n(56879),
-        ei = n(27079),
-        ti = n.n(ei),
-        ni = (0, d.Pi)(function (e) {
-          var t = xo(),
+        $r = n(93504),
+        ei = n.n($r),
+        ti = n(56879),
+        ni = n(27079),
+        ai = n.n(ni),
+        ri = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             a = $a.f.Get().GetSpoilerBlockState(t) == tr.rE.BLOCKED,
             r = !a || $a.f.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
@@ -31386,10 +31900,10 @@
                   .Get()
                   .GetNodeTypeGameCount(null == n ? void 0 : n.node_type),
             R = 115 + 30 * D + (e.strBackgroundColor ? 12 : 0),
-            L = B ? 1.5 * $r.OQ : $r.OQ,
-            A = B ? R : $r.GJ,
-            M = B ? -$r.OQ / 3 : 0,
-            G = B ? -$r.GJ / 2 : 0,
+            L = B ? 1.5 * ti.OQ : ti.OQ,
+            A = B ? R : ti.GJ,
+            M = B ? -ti.OQ / 3 : 0,
+            G = B ? -ti.GJ / 2 : 0,
             k = $a.f.Get().GetNodeTypeString(null == n ? void 0 : n.node_type);
           return t === tr._A.INTERNATIONAL_2022_LASTCHANCE &&
             "#dpc_bracket_grand_final_abbrev" === e.strNodeTitle
@@ -31403,11 +31917,11 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    ti().BracketNode,
-                    B && ti().Expanded,
-                    N && ti().OtherExpanded,
-                    e.strBackgroundColor && ti().ShowingColor,
-                    I && ti().IsLive
+                    ai().BracketNode,
+                    B && ai().Expanded,
+                    N && ai().OtherExpanded,
+                    e.strBackgroundColor && ai().ShowingColor,
+                    I && ai().IsLive
                   ),
                   style: {
                     background: e.strBackgroundColor
@@ -31432,7 +31946,7 @@
                 o.createElement(
                   "div",
                   {
-                    className: ti().NodeHeader,
+                    className: ai().NodeHeader,
                     style: {
                       borderBottomColor: e.strBackgroundColor
                         ? e.strBackgroundColor
@@ -31450,71 +31964,71 @@
                   o.createElement("div", null, (0, E.Jr)(e.strNodeTitle)),
                   e.strBackgroundColor &&
                     o.createElement(cr(), {
-                      className: ti().Timestamp,
+                      className: ai().Timestamp,
                       date: 1e3 * v,
                       format: "MMM DD LT",
                     }),
                   o.createElement(
                     "div",
-                    { className: ti().BestOf },
+                    { className: ai().BestOf },
                     (0, E.Jr)(k)
                   ),
                   o.createElement(
                     "div",
-                    { className: ti().Live },
+                    { className: ai().Live },
                     (0, E.Jr)("#dpc_live")
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: ti().ContentsContainer },
+                  { className: ai().ContentsContainer },
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        ti().Teams,
-                        B && ti().Hidden,
-                        e.strBackgroundColor && ti().TeamsSmallerPadding
+                        ai().Teams,
+                        B && ai().Hidden,
+                        e.strBackgroundColor && ai().TeamsSmallerPadding
                       ),
                     },
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ti().Team, c && i && ti().Winner) },
+                      { className: (0, b.Z)(ai().Team, c && i && ai().Winner) },
                       o.createElement(vr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_1) : 0,
-                        className: ti().TeamLogo,
+                        className: ai().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ti().TeamName },
+                        { className: ai().TeamName },
                         (0, E.Jr)(T)
                       ),
-                      o.createElement("div", { className: ti().Score }, C)
+                      o.createElement("div", { className: ai().Score }, C)
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ti().Team, d && i && ti().Winner) },
+                      { className: (0, b.Z)(ai().Team, d && i && ai().Winner) },
                       o.createElement(vr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_2) : 0,
-                        className: ti().TeamLogo,
+                        className: ai().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ti().TeamName },
+                        { className: ai().TeamName },
                         (0, E.Jr)(S)
                       ),
-                      o.createElement("div", { className: ti().Score }, w)
+                      o.createElement("div", { className: ai().Score }, w)
                     )
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(ti().Details, !B && ti().Hidden) },
+                    { className: (0, b.Z)(ai().Details, !B && ai().Hidden) },
                     0 !== v &&
                       !e.strBackgroundColor &&
                       o.createElement(cr(), {
-                        className: ti().Timestamp,
+                        className: ai().Timestamp,
                         date: 1e3 * v,
                         format: "MMM DD LT",
                       }),
@@ -31522,43 +32036,43 @@
                     e.strBackgroundColor &&
                       o.createElement(
                         "div",
-                        { className: ti().Timestamp },
+                        { className: ai().Timestamp },
                         (0, E.Jr)(e.strNodeTitle)
                       ),
-                    o.createElement("div", { className: ti().Separator }),
+                    o.createElement("div", { className: ai().Separator }),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ti().Team, c && i && ti().Winner) },
+                      { className: (0, b.Z)(ai().Team, c && i && ai().Winner) },
                       o.createElement(vr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_1) : 0,
-                        className: ti().TeamLogo,
+                        className: ai().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ti().TeamName },
+                        { className: ai().TeamName },
                         (0, E.Jr)(T)
                       ),
-                      o.createElement("div", { className: ti().Score }, C)
+                      o.createElement("div", { className: ai().Score }, C)
                     ),
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(ti().Team, d && i && ti().Winner) },
+                      { className: (0, b.Z)(ai().Team, d && i && ai().Winner) },
                       o.createElement(vr, {
                         nTeamID: r ? (null == n ? void 0 : n.team_id_2) : 0,
-                        className: ti().TeamLogo,
+                        className: ai().TeamLogo,
                         nSize: 20,
                       }),
                       o.createElement(
                         "div",
-                        { className: ti().TeamName },
+                        { className: ai().TeamName },
                         (0, E.Jr)(S)
                       ),
-                      o.createElement("div", { className: ti().Score }, w)
+                      o.createElement("div", { className: ai().Score }, w)
                     ),
-                    o.createElement("div", { className: ti().Separator }),
+                    o.createElement("div", { className: ai().Separator }),
                     !I &&
-                      (0, xr.bE)(1, D).map(function (a) {
+                      (0, zr.bE)(1, D).map(function (a) {
                         var r =
                             !i ||
                             a - 1 < (null == n ? void 0 : n.matches.length),
@@ -31589,13 +32103,13 @@
                           {
                             key: "SG".concat(a),
                             className: (0, b.Z)(
-                              ti().SeriesGame,
-                              !r && ti().Disabled
+                              ai().SeriesGame,
+                              !r && ai().Disabled
                             ),
                           },
                           o.createElement(
                             "div",
-                            { className: ti().GameNumber },
+                            { className: ai().GameNumber },
                             (0, E.Jr)("#dpc_game_".concat(a - 1))
                           ),
                           o.createElement(
@@ -31605,7 +32119,7 @@
                                 state: { bAutoScroll: !0 },
                                 pathname: I ? c : l,
                               },
-                              className: ti().DetailsButton,
+                              className: ai().DetailsButton,
                             },
                             (0, E.Jr)(d)
                           )
@@ -31614,7 +32128,7 @@
                     I &&
                       o.createElement(
                         "div",
-                        { className: ti().LiveContainer },
+                        { className: ai().LiveContainer },
                         o.createElement(
                           m.rU,
                           {
@@ -31627,7 +32141,7 @@
                                 (0, er.k8)(0, er.Uz.SERIES)
                               ),
                             },
-                            className: ti().DetailsButton,
+                            className: ai().DetailsButton,
                           },
                           (0, E.Jr)("#dpc_watch_live")
                         )
@@ -31637,10 +32151,10 @@
               )
             : null;
         }),
-        ai = n(58111),
-        ri = n.n(ai);
-      var ii = (0, d.Pi)(function (e) {
-          var t = xo(),
+        ii = n(58111),
+        oi = n.n(ii);
+      var si = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID),
             a = Math.pow(
               2,
@@ -31653,27 +32167,27 @@
             switch ("".concat(e, "_").concat(t)) {
               case "".concat(tr.L$.BRACKET_DOUBLE_SEED_LOSER, "_").concat(12):
                 return {
-                  nLeftOffset: $r.OQ + $r.Bq,
+                  nLeftOffset: ti.OQ + ti.Bq,
                   nWidth: 1160,
                   nHeight: 860,
-                  arrBracketNodeLocations: $r._1,
-                  arrBracketNodeConnectors: $r.oJ,
+                  arrBracketNodeLocations: ti._1,
+                  arrBracketNodeConnectors: ti.oJ,
                 };
               case "".concat(tr.L$.BRACKET_DOUBLE_SEED_LOSER, "_").concat(16):
                 return {
                   nLeftOffset: 0,
                   nWidth: 1350,
                   nHeight: 860,
-                  arrBracketNodeLocations: $r._1,
-                  arrBracketNodeConnectors: $r.oJ,
+                  arrBracketNodeLocations: ti._1,
+                  arrBracketNodeConnectors: ti.oJ,
                 };
               case "".concat(tr.L$.BRACKET_DOUBLE_ALL_WINNER, "_").concat(4):
                 return {
                   nLeftOffset: 0,
                   nWidth: 610,
                   nHeight: 370,
-                  arrBracketNodeLocations: $r.TR,
-                  arrBracketNodeConnectors: $r.bf,
+                  arrBracketNodeLocations: ti.TR,
+                  arrBracketNodeConnectors: ti.bf,
                 };
             }
           })(n.node_group_type, a);
@@ -31706,7 +32220,7 @@
           return o.createElement(
             "div",
             {
-              className: ri().DPCStandingsBracketTree,
+              className: oi().DPCStandingsBracketTree,
               style: { width: r.nWidth, height: r.nHeight },
               onClick: function () {
                 return u;
@@ -31732,14 +32246,14 @@
                     "div",
                     {
                       key: "".concat(e.nLeagueID, "_").concat(t.node_id),
-                      className: ri().BracketNodeContainer,
+                      className: oi().BracketNodeContainer,
                       style: {
                         left:
                           r.arrBracketNodeLocations[n].nPosX - r.nLeftOffset,
                         top: r.arrBracketNodeLocations[n].nPosY,
                       },
                     },
-                    o.createElement(ni, {
+                    o.createElement(ri, {
                       nLeagueID: e.nLeagueID,
                       nNodeID: t.node_id,
                       strNodeTitle: "".concat(
@@ -31748,7 +32262,7 @@
                       ),
                       nExpandedNodeID: e.nExpandedNodeID,
                       setExpandedNodeID: e.setExpandedNodeID,
-                      strBackgroundColor: $r.jr[s],
+                      strBackgroundColor: ti.jr[s],
                       bAlwaysRender: c,
                     })
                   );
@@ -31779,7 +32293,7 @@
                       "div",
                       {
                         key: "connector_".concat(a),
-                        className: ri().BracketConnectorContainer,
+                        className: oi().BracketConnectorContainer,
                         style: {
                           left: e.nPosX - r.nLeftOffset,
                           top: e.nPosY,
@@ -31787,56 +32301,56 @@
                           height: e.nHeight,
                         },
                       },
-                      e.bStraight && o.createElement(si, null),
-                      !e.bStraight && o.createElement(oi, null)
+                      e.bStraight && o.createElement(ci, null),
+                      !e.bStraight && o.createElement(li, null)
                     )
                 : null;
             })
           );
         }),
-        oi = function () {
+        li = function () {
           return o.createElement(
             "div",
-            { className: Qr().BracketConnectorCombine },
+            { className: ei().BracketConnectorCombine },
             o.createElement(
               "div",
-              { className: Qr().Segment1, style: { width: $r.Bq / 2 } },
+              { className: ei().Segment1, style: { width: ti.Bq / 2 } },
               o.createElement("div", {
-                className: Qr().ConnectorLineTop,
-                style: { top: $r.GJ / 2 },
+                className: ei().ConnectorLineTop,
+                style: { top: ti.GJ / 2 },
               }),
               o.createElement("div", {
-                className: Qr().ConnectorLineBottom,
-                style: { bottom: $r.GJ / 2 },
+                className: ei().ConnectorLineBottom,
+                style: { bottom: ti.GJ / 2 },
               })
             ),
             o.createElement("div", {
-              className: Qr().ConnectorLineVertical,
+              className: ei().ConnectorLineVertical,
               style: {
-                height: "calc( 100% - ".concat($r.GJ, "px )"),
-                top: $r.GJ / 2,
-                left: $r.Bq / 2,
+                height: "calc( 100% - ".concat(ti.GJ, "px )"),
+                top: ti.GJ / 2,
+                left: ti.Bq / 2,
               },
             }),
             o.createElement(
               "div",
-              { className: Qr().Segment3 },
-              o.createElement("div", { className: Qr().ConnectorLineCombined })
+              { className: ei().Segment3 },
+              o.createElement("div", { className: ei().ConnectorLineCombined })
             )
           );
         },
-        si = function () {
+        ci = function () {
           return o.createElement(
             "div",
-            { className: Qr().BracketConnectorStraight },
+            { className: ei().BracketConnectorStraight },
             o.createElement("div", {
-              className: Qr().ConnectorLine,
-              style: { top: $r.GJ / 2 },
+              className: ei().ConnectorLine,
+              style: { top: ti.GJ / 2 },
             })
           );
         },
-        li = (0, d.Pi)(function (e) {
-          var t = xo(),
+        ui = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = (0, o.useState)(!0),
             a = n[0],
             r = n[1],
@@ -31870,40 +32384,40 @@
           return o.createElement(
             "div",
             {
-              className: (0, b.Z)(Qr().DPCStandingsBracket, !h && Qr().NoData),
+              className: (0, b.Z)(ei().DPCStandingsBracket, !h && ei().NoData),
             },
             o.createElement(
               "div",
-              { className: (0, b.Z)(Qr().BracketBody, g && Qr().NodeExpanded) },
+              { className: (0, b.Z)(ei().BracketBody, g && ei().NodeExpanded) },
               o.createElement(
                 "div",
-                { className: Qr().BracketHeader },
+                { className: ei().BracketHeader },
                 (0, E.Jr)("#dpc_bracket")
               ),
               o.createElement(
                 "div",
                 {
-                  className: Qr().DayDisplayContainer,
+                  className: ei().DayDisplayContainer,
                   onClick: function () {
                     return r(!a);
                   },
                 },
                 o.createElement(
                   "div",
-                  { className: Qr().DayDisplayLabel },
+                  { className: ei().DayDisplayLabel },
                   (0, E.Jr)("#dpc_show_days")
                 ),
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)(Qr().DayDisplayValue, a && Qr().On) },
+                  { className: (0, b.Z)(ei().DayDisplayValue, a && ei().On) },
                   (0, E.Jr)(a ? "#dpc_show_days_on" : "#dpc_show_days_off")
                 ),
                 o.createElement(Qa, { bEnabled: a, setEnabled: r })
               ),
               o.createElement(
                 ur.Z,
-                { className: Qr().BracketScroller, hideScrollbars: !1 },
-                o.createElement(ii, {
+                { className: ei().BracketScroller, hideScrollbars: !1 },
+                o.createElement(si, {
                   nLeagueID: u,
                   nNodeGroupID: d,
                   bShowingDays: a,
@@ -31914,18 +32428,18 @@
             ),
             o.createElement(
               "div",
-              { className: (0, b.Z)(Qr().DayLegend, a && Qr().Show) },
+              { className: (0, b.Z)(ei().DayLegend, a && ei().Show) },
               _.map(function (e, t) {
                 return o.createElement(
                   "div",
-                  { key: "time".concat(e), className: Qr().Timestamp },
+                  { key: "time".concat(e), className: ei().Timestamp },
                   o.createElement("div", {
-                    className: Qr().GradientSquare,
+                    className: ei().GradientSquare,
                     style: {
-                      borderTop: "1px solid ".concat($r.jr[t + 1]),
+                      borderTop: "1px solid ".concat(ti.jr[t + 1]),
                       background: "linear-gradient( to bottom, "
-                        .concat($r.jr[t + 1], "66, ")
-                        .concat($r.jr[t + 1], "22 )"),
+                        .concat(ti.jr[t + 1], "66, ")
+                        .concat(ti.jr[t + 1], "22 )"),
                     },
                   }),
                   o.createElement(cr(), { date: 1e3 * e, format: "MMMM DD" })
@@ -31934,27 +32448,27 @@
             )
           );
         }),
-        ci = n(8776),
-        ui = n.n(ci),
-        di = (0, d.Pi)(function (e) {
+        di = n(8776),
+        mi = n.n(di),
+        pi = (0, d.Pi)(function (e) {
           var t = e.bStyleStopThree && 1 == e.nStanding,
             n = e.bStyleStopThree && 2 == e.nStanding,
             a = e.bStyleStopThree && 3 == e.nStanding,
             r = $a.f.Get().GetTeamNames(e.nTeamID);
           return o.createElement(
             "div",
-            { className: ui().StandingsResult },
+            { className: mi().StandingsResult },
             o.createElement(
               "div",
               {
                 className: (0, b.Z)(
-                  ui().Placement,
-                  t && ui().First,
-                  n && ui().Second,
-                  a && ui().Third
+                  mi().Placement,
+                  t && mi().First,
+                  n && mi().Second,
+                  a && mi().Third
                 ),
               },
-              (0, xr.jc)(e.nStanding)
+              (0, zr.jc)(e.nStanding)
             ),
             o.createElement(vr, {
               nTeamID: e.nTeamID,
@@ -31963,22 +32477,22 @@
             }),
             o.createElement(
               "div",
-              { className: ui().TeamName },
+              { className: mi().TeamName },
               (0, E.Jr)(
                 0 == e.nTeamID ? "#dpc_tbd" : null == r ? void 0 : r.name
               )
             ),
             o.createElement(
               "div",
-              { className: ui().EarningsContainer },
+              { className: mi().EarningsContainer },
               o.createElement(
                 "div",
-                { className: ui().Title },
+                { className: mi().Title },
                 (0, E.Jr)("#dpc_earnings")
               ),
               o.createElement(
                 "div",
-                { className: ui().Value },
+                { className: mi().Value },
                 "$".concat(
                   e.nEarnings ? e.nEarnings.toLocaleString() : "0",
                   " USD"
@@ -31987,23 +32501,23 @@
             ),
             o.createElement(
               "div",
-              { className: ui().PointsContainer },
+              { className: mi().PointsContainer },
               o.createElement(
                 "div",
-                { className: ui().Title },
+                { className: mi().Title },
                 (0, E.Jr)("#dpc_points")
               ),
               o.createElement(
                 "div",
-                { className: ui().Value },
+                { className: mi().Value },
                 "".concat(e.nPoints ? e.nPoints.toLocaleString() : "0")
               )
             )
           );
         }),
-        mi = (0, d.Pi)(function (e) {
+        _i = (0, d.Pi)(function (e) {
           var t,
-            n = xo(),
+            n = zo(),
             a = $a.f.Get().GetEventInfo(n),
             r =
               null ===
@@ -32034,10 +32548,10 @@
             c = 0;
           return o.createElement(
             "div",
-            { className: (0, b.Z)(ui().DPCStandingsResults) },
-            (0, xr.bE)(1, s).map(function (t) {
+            { className: (0, b.Z)(mi().DPCStandingsResults) },
+            (0, zr.bE)(1, s).map(function (t) {
               if (t < l)
-                return o.createElement(di, {
+                return o.createElement(pi, {
                   key: "".concat(r, "_").concat(t),
                   nStanding: t,
                   nTeamID: 0,
@@ -32048,7 +32562,7 @@
               var n = null == i ? void 0 : i.results[c];
               return n
                 ? ((c += 1),
-                  o.createElement(di, {
+                  o.createElement(pi, {
                     key: "".concat(r, "_").concat(t),
                     nStanding: n.standing,
                     nTeamID: n.team_id,
@@ -32060,15 +32574,15 @@
             })
           );
         }),
-        pi = n(4595),
-        _i = n.n(pi),
-        gi = n(70290),
+        gi = n(4595),
         hi = n.n(gi),
-        fi = (0, d.Pi)(function (e) {
+        fi = n(70290),
+        vi = n.n(fi),
+        bi = (0, d.Pi)(function (e) {
           var t,
             n,
             a,
-            r = xo(),
+            r = zo(),
             i = $a.f.Get().GetSpoilerBlockState(r) == tr.rE.BLOCKED,
             s = (0, o.useState)({
               nRow: -1,
@@ -32182,29 +32696,29 @@
             P = f.length > 0;
           return o.createElement(
             "div",
-            { className: (0, b.Z)(hi().DPCStandingsGrid, !P && hi().NoData) },
+            { className: (0, b.Z)(vi().DPCStandingsGrid, !P && vi().NoData) },
             o.createElement(
               "div",
-              { className: hi().GridMain, style: { width: k, height: 40 + k } },
+              { className: vi().GridMain, style: { width: k, height: 40 + k } },
               o.createElement(
                 "div",
-                { className: hi().Header },
+                { className: vi().Header },
                 (0, E.Jr)("#dpc_grid")
               ),
               o.createElement(
                 "div",
-                { className: hi().GridContainer },
+                { className: vi().GridContainer },
                 o.createElement(
                   "div",
-                  { className: hi().GridBody },
-                  (0, xr.bE)(-1, f.length - 1).map(function (e) {
+                  { className: vi().GridBody },
+                  (0, zr.bE)(-1, f.length - 1).map(function (e) {
                     var t = -1 == e,
                       n = e == f.length - 1,
                       a = t ? 0 : f[e];
                     return o.createElement(
                       "div",
-                      { className: hi().GridRow, key: "r".concat(e) },
-                      (0, xr.bE)(-1, f.length - 1).map(function (s) {
+                      { className: vi().GridRow, key: "r".concat(e) },
+                      (0, zr.bE)(-1, f.length - 1).map(function (s) {
                         var l = -1 == s,
                           d = s == f.length - 1,
                           m = l ? 0 : f[s],
@@ -32289,14 +32803,14 @@
                             er.RL,
                             {
                               key: "c".concat(s),
-                              className: hi().LinkWrapper,
+                              className: vi().LinkWrapper,
                               condition: null != v,
                               to: w,
                             },
                             o.createElement(
                               "div",
                               {
-                                className: hi().GridCell,
+                                className: vi().GridCell,
                                 onMouseEnter: function () {
                                   return c({
                                     nRow: e,
@@ -32337,7 +32851,7 @@
                                 T &&
                                 o.createElement(
                                   "div",
-                                  { className: hi().Record },
+                                  { className: vi().Record },
                                   T
                                 ),
                               !t &&
@@ -32347,7 +32861,7 @@
                                 S &&
                                 o.createElement(
                                   "div",
-                                  { className: hi().Date },
+                                  { className: vi().Date },
                                   S
                                 ),
                               !t &&
@@ -32355,10 +32869,10 @@
                                 C &&
                                 o.createElement(
                                   "div",
-                                  { className: hi().GridMatch },
+                                  { className: vi().GridMatch },
                                   o.createElement(
                                     "div",
-                                    { className: hi().Live },
+                                    { className: vi().Live },
                                     (0, E.Jr)("#dpc_live")
                                   )
                                 )
@@ -32373,12 +32887,12 @@
                   o.createElement(
                     "div",
                     {
-                      className: hi().RowHighlightContainer,
+                      className: vi().RowHighlightContainer,
                       style: { height: 56 * (f.length + 1), right: 0 },
                     },
                     A &&
                       o.createElement("div", {
-                        className: hi().RowHighlight,
+                        className: vi().RowHighlight,
                         style: {
                           top: 56 * (l.nRow + 1),
                           opacity: l.nRow >= 0 ? 1 : 0,
@@ -32394,12 +32908,12 @@
                   o.createElement(
                     "div",
                     {
-                      className: hi().ColumnHighlightContainer,
+                      className: vi().ColumnHighlightContainer,
                       style: { width: 56 * (f.length + 1), top: 0 },
                     },
                     M &&
                       o.createElement("div", {
-                        className: hi().ColumnHighlight,
+                        className: vi().ColumnHighlight,
                         style: {
                           left: 56 * (l.nColumn + 1),
                           opacity: l.nColumn >= 0 ? 1 : 0,
@@ -32416,15 +32930,15 @@
             e.bShowLegend &&
               o.createElement(
                 "div",
-                { className: hi().LegendContainer },
+                { className: vi().LegendContainer },
                 o.createElement(
                   "div",
-                  { className: hi().LegendCenter },
+                  { className: vi().LegendCenter },
                   o.createElement(
                     "div",
-                    { className: hi().LegendItem },
+                    { className: vi().LegendItem },
                     o.createElement("div", {
-                      className: hi().ColorSquare,
+                      className: vi().ColorSquare,
                       style: {
                         background: "linear-gradient( "
                           .concat(C, "30, ")
@@ -32434,16 +32948,16 @@
                     }),
                     o.createElement(
                       "div",
-                      { className: hi().Description },
+                      { className: vi().Description },
                       (0, E.Jr)("#dpc_win")
                     )
                   ),
                   G &&
                     o.createElement(
                       "div",
-                      { className: hi().LegendItem },
+                      { className: vi().LegendItem },
                       o.createElement("div", {
-                        className: hi().ColorSquare,
+                        className: vi().ColorSquare,
                         style: {
                           background: "linear-gradient( "
                             .concat(B, "30, ")
@@ -32453,15 +32967,15 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: hi().Description },
+                        { className: vi().Description },
                         (0, E.Jr)("#dpc_draw")
                       )
                     ),
                   o.createElement(
                     "div",
-                    { className: hi().LegendItem },
+                    { className: vi().LegendItem },
                     o.createElement("div", {
-                      className: hi().ColorSquare,
+                      className: vi().ColorSquare,
                       style: {
                         background: "linear-gradient( "
                           .concat(w, "30, ")
@@ -32471,7 +32985,7 @@
                     }),
                     o.createElement(
                       "div",
-                      { className: hi().Description },
+                      { className: vi().Description },
                       (0, E.Jr)("#dpc_loss")
                     )
                   )
@@ -32479,15 +32993,15 @@
               )
           );
         }),
-        vi = n(54969),
-        bi = n.n(vi),
-        Ei = n(71793),
+        Ei = n(54969),
         yi = n.n(Ei),
-        Ti = (0, d.Pi)(function (e) {
+        Ti = n(71793),
+        Si = n.n(Ti),
+        Ci = (0, d.Pi)(function (e) {
           var t,
             n,
             a,
-            r = xo(),
+            r = zo(),
             i = $a.f.Get().GetSpoilerBlockState(r) == tr.rE.BLOCKED,
             s = e.nTiebreak >= 0,
             l = $a.f
@@ -32566,15 +33080,15 @@
             "div",
             {
               className: (0, b.Z)(
-                yi().DPCStandingsTeamList,
-                !h && yi().NoData,
-                e.bNarrow && yi().Narrow
+                Si().DPCStandingsTeamList,
+                !h && Si().NoData,
+                e.bNarrow && Si().Narrow
               ),
             },
             o.createElement(
               "div",
-              { className: yi().Teams },
-              o.createElement(Si, {
+              { className: Si().Teams },
+              o.createElement(wi, {
                 key: "".concat(e.eDivision, "_").concat(e.eRegion, "_header"),
                 bHeader: !0,
                 nLeagueID: l.nLeagueID,
@@ -32583,7 +33097,7 @@
                 bNarrow: e.bNarrow,
               }),
               g.map(function (t) {
-                return o.createElement(Si, {
+                return o.createElement(wi, {
                   key: ""
                     .concat(e.eDivision, "_")
                     .concat(e.eRegion, "_")
@@ -32619,7 +33133,7 @@
                         ? null
                         : o.createElement("div", {
                             key: "h".concat(t, "_").concat(n),
-                            className: yi().HighlightOverlay,
+                            className: Si().HighlightOverlay,
                             style: {
                               background: "linear-gradient( "
                                 .concat(e.strColor, "33, ")
@@ -32637,16 +33151,16 @@
               e.bShowLegend &&
               o.createElement(
                 "div",
-                { className: yi().LegendContainer },
+                { className: Si().LegendContainer },
                 o.createElement(
                   "div",
-                  { className: yi().LegendCenter },
+                  { className: Si().LegendCenter },
                   e.arrHighlights.map(function (e, t) {
                     return o.createElement(
                       "div",
-                      { key: "hl".concat(t), className: yi().LegendItem },
+                      { key: "hl".concat(t), className: Si().LegendItem },
                       o.createElement("div", {
-                        className: yi().ColorSquare,
+                        className: Si().ColorSquare,
                         style: {
                           background: "linear-gradient( "
                             .concat(e.strColor, "30, ")
@@ -32656,7 +33170,7 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: yi().Description },
+                        { className: Si().Description },
                         (0, E.Jr)(
                           p || !e.strDescriptionInProgress
                             ? e.strDescription
@@ -32669,8 +33183,8 @@
               )
           );
         }),
-        Si = (0, d.Pi)(function (e) {
-          var t = xo(),
+        wi = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetSpoilerBlockState(t) == tr.rE.BLOCKED,
             a = $a.f
               .Get()
@@ -32679,33 +33193,33 @@
           return e.bHeader
             ? o.createElement(
                 "div",
-                { className: (0, b.Z)(yi().DPCStandingsTeam, yi().Header) },
+                { className: (0, b.Z)(Si().DPCStandingsTeam, Si().Header) },
                 o.createElement(
                   "div",
-                  { className: yi().Standing },
+                  { className: Si().Standing },
                   (0, E.Jr)("#dpc_rank")
                 ),
                 o.createElement(
                   "div",
-                  { className: yi().TeamName },
+                  { className: Si().TeamName },
                   (0, E.Jr)("#dpc_team")
                 ),
                 e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().WinsLosses },
+                    { className: Si().WinsLosses },
                     (0, E.Jr)("#dpc_record")
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().Wins },
+                    { className: Si().Wins },
                     (0, E.Jr)("#dpc_wins")
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().Losses },
+                    { className: Si().Losses },
                     (0, E.Jr)("#dpc_losses")
                   )
               )
@@ -32713,48 +33227,48 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    yi().DPCStandingsTeam,
-                    e.bNarrow && yi().Narrow
+                    Si().DPCStandingsTeam,
+                    e.bNarrow && Si().Narrow
                   ),
                 },
                 o.createElement(
                   "div",
-                  { className: yi().Standing },
-                  n ? "" : (0, xr.jc)(null == a ? void 0 : a.standing)
+                  { className: Si().Standing },
+                  n ? "" : (0, zr.jc)(null == a ? void 0 : a.standing)
                 ),
                 o.createElement(vr, {
-                  className: yi().TeamLogo,
+                  className: Si().TeamLogo,
                   nTeamID: e.nTeamID,
                   nSize: 32,
                 }),
                 o.createElement(
                   "div",
-                  { className: yi().TeamName },
+                  { className: Si().TeamName },
                   null == r ? void 0 : r.name
                 ),
                 e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().WinsLosses },
+                    { className: Si().WinsLosses },
                     n || !a ? "" : "".concat(a.wins, " - ").concat(a.losses)
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().Wins },
+                    { className: Si().Wins },
                     n ? "" : null == a ? void 0 : a.wins
                   ),
                 !e.bNarrow &&
                   o.createElement(
                     "div",
-                    { className: yi().Losses },
+                    { className: Si().Losses },
                     n ? "" : null == a ? void 0 : a.losses
                   )
               );
         }),
-        Ci = (0, d.Pi)(function (e) {
+        Bi = (0, d.Pi)(function (e) {
           var t,
-            n = xo(),
+            n = zo(),
             a = $a.f
               .Get()
               .GetEventPhaseNodeGroupID(n, e.ePhase, e.eDivision, e.eRegion),
@@ -32787,15 +33301,15 @@
                   }).length) > 0;
           return o.createElement(
             "div",
-            { className: bi().DPCStandingsRoundRobin },
+            { className: yi().DPCStandingsRoundRobin },
             e.bShowHeader &&
-              o.createElement("div", { className: bi().Title }, (0, E.Jr)(s)),
+              o.createElement("div", { className: yi().Title }, (0, E.Jr)(s)),
             o.createElement(
               "div",
-              { className: bi().Standings },
+              { className: yi().Standings },
               c &&
                 e.bShowList &&
-                o.createElement(Ti, {
+                o.createElement(Ci, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
                   eDivision: e.eDivision,
@@ -32805,7 +33319,7 @@
                 }),
               c &&
                 e.bShowGrid &&
-                o.createElement(fi, {
+                o.createElement(bi, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
                   eDivision: e.eDivision,
@@ -32815,20 +33329,20 @@
             e.bShowTiebreakers &&
               c &&
               l > 0 &&
-              (0, xr.bE)(0, l - 1).map(function (t) {
+              (0, zr.bE)(0, l - 1).map(function (t) {
                 return o.createElement(
                   "div",
-                  { key: t, className: bi().Tiebreakers },
+                  { key: t, className: yi().Tiebreakers },
                   o.createElement(
                     "div",
-                    { className: bi().Title },
+                    { className: yi().Title },
                     (0, E.Jr)("#dpc_tiebreakers")
                   ),
                   o.createElement(
                     "div",
-                    { className: bi().Standings },
+                    { className: yi().Standings },
                     e.bShowList &&
-                      o.createElement(Ti, {
+                      o.createElement(Ci, {
                         ePhase: e.ePhase,
                         eRegion: e.eRegion,
                         eDivision: e.eDivision,
@@ -32837,7 +33351,7 @@
                         nTiebreak: t,
                       }),
                     e.bShowGrid &&
-                      o.createElement(fi, {
+                      o.createElement(bi, {
                         ePhase: e.ePhase,
                         eRegion: e.eRegion,
                         eDivision: e.eDivision,
@@ -32849,8 +33363,8 @@
               })
           );
         }),
-        wi = (0, d.Pi)(function () {
-          var e = xo(),
+        Ni = (0, d.Pi)(function () {
+          var e = zo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
             a = (0, er.UP)(n.strPhase);
@@ -32910,10 +33424,10 @@
             });
           return o.createElement(
             "div",
-            { className: _i().DPCStandingsPageLeague },
+            { className: hi().DPCStandingsPageLeague },
             o.createElement(
               "div",
-              { className: _i().Header },
+              { className: hi().Header },
               o.createElement(qa, {
                 options: r,
                 selectedOption: c,
@@ -32958,7 +33472,7 @@
               })
             ),
             a == tr.BY.OVERALL &&
-              o.createElement(Ci, {
+              o.createElement(Bi, {
                 ePhase: a,
                 eDivision: d,
                 eRegion: c,
@@ -32970,16 +33484,16 @@
                 bShowTiebreakers: !0,
               }),
             a == tr.BY.RESULTS &&
-              o.createElement(mi, {
+              o.createElement(_i, {
                 eDivision: d,
                 eRegion: c,
                 bStyleTopThree: !1,
               })
           );
         }),
-        Bi = (0, d.Pi)(function () {
+        Ii = (0, d.Pi)(function () {
           for (
-            var e = xo(),
+            var e = zo(),
               t = (0, p.k6)(),
               n = (0, p.UO)(),
               a = $a.f.Get().GetEventInfo(e),
@@ -33057,10 +33571,10 @@
             : tr.BY[g] && g != tr.BY.INVALID
             ? o.createElement(
                 "div",
-                { className: _i().DPCStandingsPageMajor },
+                { className: hi().DPCStandingsPageMajor },
                 o.createElement(
                   "div",
-                  { className: _i().Header },
+                  { className: hi().Header },
                   o.createElement(qa, {
                     eStyle: Ua.NORMAL,
                     options: _,
@@ -33071,7 +33585,7 @@
                   })
                 ),
                 g == tr.BY.WILD_CARD &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.WILD_CARD,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33097,7 +33611,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == tr.BY.GROUP_STAGE &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.GROUP_STAGE,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33110,7 +33624,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == tr.BY.GROUP_A &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.GROUP_A,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33123,7 +33637,7 @@
                     bShowTiebreakers: !0,
                   }),
                 g == tr.BY.GROUP_B &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.GROUP_B,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33136,13 +33650,13 @@
                     bShowTiebreakers: !0,
                   }),
                 g == tr.BY.PLAYOFF &&
-                  o.createElement(li, {
+                  o.createElement(ui, {
                     ePhase: tr.BY.PLAYOFF,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
                   }),
                 g == tr.BY.RESULTS &&
-                  o.createElement(mi, {
+                  o.createElement(_i, {
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
                     bStyleTopThree: !0,
@@ -33158,8 +33672,8 @@
                 },
               });
         }),
-        Ni = (0, d.Pi)(function () {
-          var e = xo(),
+        Di = (0, d.Pi)(function () {
+          var e = zo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
             a = [
@@ -33197,10 +33711,10 @@
                 })
               : o.createElement(
                   "div",
-                  { className: _i().DPCStandingsPageTIQualifiers },
+                  { className: hi().DPCStandingsPageTIQualifiers },
                   o.createElement(
                     "div",
-                    { className: _i().Header },
+                    { className: hi().Header },
                     o.createElement(qa, {
                       eStyle: Ua.NORMAL,
                       options: a,
@@ -33216,7 +33730,7 @@
                       },
                     })
                   ),
-                  o.createElement(li, {
+                  o.createElement(ui, {
                     ePhase: tr.BY.PLAYOFF,
                     eRegion: r,
                     eDivision: tr.sd.UNSET,
@@ -33230,8 +33744,8 @@
                 ),
               });
         }),
-        Ii = (0, d.Pi)(function () {
-          var e = xo(),
+        Ri = (0, d.Pi)(function () {
+          var e = zo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
             a = [
@@ -33268,10 +33782,10 @@
                 })
               : o.createElement(
                   "div",
-                  { className: _i().DPCStandingsPageLeagueFinals },
+                  { className: hi().DPCStandingsPageLeagueFinals },
                   o.createElement(
                     "div",
-                    { className: _i().Header },
+                    { className: hi().Header },
                     o.createElement(qa, {
                       eStyle: Ua.NORMAL,
                       options: a,
@@ -33287,7 +33801,7 @@
                       },
                     })
                   ),
-                  o.createElement(li, {
+                  o.createElement(ui, {
                     ePhase: tr.BY.PLAYOFF,
                     eRegion: r,
                     eDivision: tr.sd.UNSET,
@@ -33301,8 +33815,8 @@
                 ),
               });
         }),
-        Di = (0, d.Pi)(function () {
-          var e = xo(),
+        Li = (0, d.Pi)(function () {
+          var e = zo(),
             t = (0, p.k6)(),
             n = (0, p.UO)(),
             a = [
@@ -33344,10 +33858,10 @@
             : tr.BY[i] && i != tr.BY.INVALID
             ? o.createElement(
                 "div",
-                { className: _i().DPCStandingsPageMajor },
+                { className: hi().DPCStandingsPageMajor },
                 o.createElement(
                   "div",
-                  { className: _i().Header },
+                  { className: hi().Header },
                   o.createElement(qa, {
                     eStyle: Ua.NORMAL,
                     options: r,
@@ -33357,9 +33871,9 @@
                     },
                   })
                 ),
-                i == tr.BY.DPC_POINT_STANDINGS && o.createElement(qr, null),
+                i == tr.BY.DPC_POINT_STANDINGS && o.createElement(Qr, null),
                 i == tr.BY.GROUP_A &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.GROUP_A,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33372,7 +33886,7 @@
                     bShowTiebreakers: !0,
                   }),
                 i == tr.BY.GROUP_B &&
-                  o.createElement(Ci, {
+                  o.createElement(Bi, {
                     ePhase: tr.BY.GROUP_B,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
@@ -33385,13 +33899,13 @@
                     bShowTiebreakers: !0,
                   }),
                 i == tr.BY.PLAYOFF &&
-                  o.createElement(li, {
+                  o.createElement(ui, {
                     ePhase: tr.BY.PLAYOFF,
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
                   }),
                 i == tr.BY.RESULTS &&
-                  o.createElement(mi, {
+                  o.createElement(_i, {
                     eRegion: tr.dO.UNSET,
                     eDivision: tr.sd.UNSET,
                     bStyleTopThree: !0,
@@ -33405,11 +33919,11 @@
                 to: u._.dpc_standings((0, er.B2)(e), (0, er.o5)(tr.BY.PLAYOFF)),
               });
         }),
-        Ri = (0, d.Pi)(function () {
+        Ai = (0, d.Pi)(function () {
           return o.createElement(
             "div",
             {
-              className: _i().DPCStandingsPage,
+              className: hi().DPCStandingsPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -33417,36 +33931,36 @@
                 ),
               },
             },
-            o.createElement(wi, null),
-            o.createElement(Ii, null),
-            o.createElement(Bi, null),
             o.createElement(Ni, null),
+            o.createElement(Ri, null),
+            o.createElement(Ii, null),
             o.createElement(Di, null),
-            o.createElement(Hr, null)
+            o.createElement(Li, null),
+            o.createElement(jr, null)
           );
         }),
-        Li = n(74730),
-        Ai = n.n(Li),
-        Mi =
+        Mi = n(74730),
+        Gi = n.n(Mi),
+        ki =
           ((0, d.Pi)(function () {
-            var e = xo(),
+            var e = zo(),
               t = $a.f.Get().GetEventInfo(e);
             if (t.event != tr._A.INTERNATIONAL_2021) return null;
             var n = $a.f.Get().GetLeagueData(e, t.leagues[0].league_id);
             return o.createElement(
               "div",
-              { className: Ai().InternationalPrizePoolBanner },
+              { className: Gi().InternationalPrizePoolBanner },
               o.createElement(
                 "div",
-                { className: Ai().Background },
+                { className: Gi().Background },
                 o.createElement(
                   "div",
-                  { className: Ai().PrizePoolLabel },
+                  { className: Gi().PrizePoolLabel },
                   (0, E.Jr)("#dpc_total_prize_pool")
                 ),
                 o.createElement(
                   "div",
-                  { className: Ai().PrizePoolValue },
+                  { className: Gi().PrizePoolValue },
                   n
                     ? "$".concat(n.prize_pool.total_prize_pool.toLocaleString())
                     : "-"
@@ -33455,7 +33969,7 @@
             );
           }),
           (0, d.Pi)(function () {
-            var e = xo(),
+            var e = zo(),
               t = $a.f.Get().GetEventInfo(e);
             if (t.event != tr._A.INTERNATIONAL_2021) return null;
             var n = $a.f.Get().GetLeagueData(e, t.leagues[0].league_id),
@@ -33476,320 +33990,320 @@
                 }),
               o.createElement(
                 "div",
-                { className: Ai().InternationalPrizeSplits },
-                o.createElement("div", { className: Ai().DividerTop }),
+                { className: Gi().InternationalPrizeSplits },
+                o.createElement("div", { className: Gi().DividerTop }),
                 o.createElement(
                   "div",
                   {
-                    className: Ai().PrizeGridContain,
+                    className: Gi().PrizeGridContain,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   o.createElement(
                     "div",
-                    { className: Ai().PrizePoolLabel },
+                    { className: Gi().PrizePoolLabel },
                     (0, E.Jr)("#dpc_total_prize_pool")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().PrizePoolValue },
+                    { className: Gi().PrizePoolValue },
                     (0, E.Jr)("#dpc_total_prize_pool_amt")
                   ),
-                  o.createElement("div", { className: Ai().Underline }),
+                  o.createElement("div", { className: Gi().Underline }),
                   o.createElement(
                     "div",
-                    { className: Ai().Title },
+                    { className: Gi().Title },
                     (0, E.Jr)("#dpc_placement_prizes")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().Grid },
+                    { className: Gi().Grid },
                     o.createElement(
                       "div",
-                      { className: Ai().GridRow },
+                      { className: Gi().GridRow },
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[0] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_1")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Ai().GridRow },
+                      { className: Gi().GridRow },
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[1] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_2")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[2] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_3")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[3] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_4")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Ai().GridRow },
+                      { className: Gi().GridRow },
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[4] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_5")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[5] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_6")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[6] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_7")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[7] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_8")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Ai().GridRow },
+                      { className: Gi().GridRow },
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[8] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_9")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[9] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_10")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[10] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_11")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[11] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_12")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[12] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_13")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: Ai().GridRow },
+                      { className: Gi().GridRow },
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[13] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_14")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[14] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_15")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[15] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_16")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[16] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_17")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().GridEntry },
+                        { className: Gi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: Ai().PrizeValue },
+                          { className: Gi().PrizeValue },
                           n ? a[17] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: Ai().Place },
+                          { className: Gi().Place },
                           (0, E.Jr)("#place_18")
                         )
                       )
@@ -33799,34 +34313,34 @@
               )
             );
           })),
-        Gi = (0, d.Pi)(function () {
-          var e = xo();
+        Pi = (0, d.Pi)(function () {
+          var e = zo();
           return $a.f.Get().GetEventInfo(e).event != tr._A.INTERNATIONAL_2021
             ? null
             : o.createElement(
                 "div",
-                { className: Ai().InternationalCompendiumBanner },
+                { className: Gi().InternationalCompendiumBanner },
                 o.createElement(
                   "div",
-                  { className: Ai().Intro },
+                  { className: Gi().Intro },
                   o.createElement(
                     "div",
-                    { className: Ai().IntroHeader },
+                    { className: Gi().IntroHeader },
                     (0, E.Jr)("#dpc_ti_intro_header")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().IntroTI },
+                    { className: Gi().IntroTI },
                     (0, E.Jr)("#dpc_ti_intro_title")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().IntroKickoff },
+                    { className: Gi().IntroKickoff },
                     (0, E.Jr)("#dpc_ti_intro_kickoff")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().IntroDesc },
+                    { className: Gi().IntroDesc },
                     (0, E.Jr)("#dpc_ti_intro_details")
                   ),
                   o.createElement(
@@ -33838,23 +34352,23 @@
                           (0, er.B2)(tr._A.INTERNATIONAL_2021)
                         ),
                       },
-                      className: Ai().LearnMoreButton,
+                      className: Gi().LearnMoreButton,
                     },
                     (0, E.Jr)("#dpc_ti_intro_schedule")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().FollowTitle },
+                    { className: Gi().FollowTitle },
                     (0, E.Jr)("#dpc_ti_intro_social")
                   ),
                   o.createElement(
                     "div",
-                    { className: Ai().FollowSection },
+                    { className: Gi().FollowSection },
                     o.createElement(
                       "a",
                       { href: "https://twitter.com/dota2ti" },
                       o.createElement("img", {
-                        className: Ai().Follow,
+                        className: Gi().Follow,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti10/twitter.png"),
                       })
                     ),
@@ -33862,7 +34376,7 @@
                       "a",
                       { href: "https://www.facebook.com/dota2/" },
                       o.createElement("img", {
-                        className: Ai().Follow,
+                        className: Gi().Follow,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti10/facebook.png"),
                       })
                     ),
@@ -33870,7 +34384,7 @@
                       "a",
                       { href: "https://www.instagram.com/dota2" },
                       o.createElement("img", {
-                        className: Ai().Follow,
+                        className: Gi().Follow,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti10/insta.png"),
                       })
                     ),
@@ -33878,7 +34392,7 @@
                       "a",
                       { href: "https://www.youtube.com/user/dota2" },
                       o.createElement("img", {
-                        className: Ai().Follow,
+                        className: Gi().Follow,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti10/youtube.png"),
                       })
                     ),
@@ -33886,7 +34400,7 @@
                       "a",
                       { href: "https://www.twitch.tv/directory/game/Dota%202" },
                       o.createElement("img", {
-                        className: Ai().Follow,
+                        className: Gi().Follow,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti10/twitch.png"),
                       })
                     )
@@ -33894,20 +34408,20 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Ai().Background },
-                  o.createElement("div", { className: Ai().DividerTop }),
+                  { className: Gi().Background },
+                  o.createElement("div", { className: Gi().DividerTop }),
                   o.createElement(
                     "div",
-                    { className: Ai().CompendiumContent },
+                    { className: Gi().CompendiumContent },
                     o.createElement(
                       "div",
                       {
-                        className: Ai().ImageContainer,
+                        className: Gi().ImageContainer,
                         "data-aos": "fade-right",
                         "data-aos-duration": "2500",
                       },
                       o.createElement("img", {
-                        className: Ai().StatueImage,
+                        className: Gi().StatueImage,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/dpc/ti10/winners_statue.png"
@@ -33916,27 +34430,27 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Ai().CompendiumText },
+                      { className: Gi().CompendiumText },
                       o.createElement(
                         "div",
-                        { className: Ai().CompendiumHeader },
+                        { className: Gi().CompendiumHeader },
                         (0, E.Jr)("#dpc_compendium_header")
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().CompendiumDetails },
+                        { className: Gi().CompendiumDetails },
                         (0, E.Jr)("#dpc_compendium_details")
                       ),
                       o.createElement(
                         "div",
-                        { className: Ai().CompendiumDetails },
+                        { className: Gi().CompendiumDetails },
                         (0, E.Jr)("#dpc_compendium_details2")
                       ),
                       o.createElement(
                         "a",
                         {
                           href: "https://www.dota2.com/newsentry/2870472829293831072",
-                          className: Ai().LearnMoreButton,
+                          className: Gi().LearnMoreButton,
                         },
                         (0, E.Jr)("#battlepass_learn_more")
                       )
@@ -33945,27 +34459,27 @@
                 )
               );
         }),
-        ki = (0, d.Pi)(function (e) {
+        Fi = (0, d.Pi)(function (e) {
           var t = e.nTeamID,
             n = e.strName,
             a = e.strRegion;
           return o.createElement(
             "div",
-            { className: Ai().IternationalTeamListTeam },
+            { className: Gi().IternationalTeamListTeam },
             o.createElement("div", {
-              className: Ai().GoldTeamLogo,
+              className: Gi().GoldTeamLogo,
               style: {
                 backgroundImage: "url( "
                   .concat(h.Y.IMG_URL, "international2020/teams_gold/")
                   .concat(t, ".png )"),
               },
             }),
-            o.createElement("div", { className: Ai().TeamName }, n),
-            o.createElement("div", { className: Ai().TeamRegion }, (0, E.Jr)(a))
+            o.createElement("div", { className: Gi().TeamName }, n),
+            o.createElement("div", { className: Gi().TeamRegion }, (0, E.Jr)(a))
           );
         }),
-        Pi = (0, d.Pi)(function () {
-          var e = xo();
+        Oi = (0, d.Pi)(function () {
+          var e = zo();
           if ($a.f.Get().GetEventInfo(e).event != tr._A.INTERNATIONAL_2021)
             return null;
           var t = [
@@ -34070,22 +34584,22 @@
             })(t),
             o.createElement(
               "div",
-              { className: Ai().InternationalTeamList },
-              o.createElement("div", { className: Ai().DividerTop }),
+              { className: Gi().InternationalTeamList },
+              o.createElement("div", { className: Gi().DividerTop }),
               o.createElement(
                 "div",
-                { className: Ai().Title },
+                { className: Gi().Title },
                 (0, E.Jr)("#dpc_participating_teams")
               ),
               o.createElement(
                 "div",
                 {
-                  className: Ai().TeamGrid,
+                  className: Gi().TeamGrid,
                   "data-aos": "fade-up",
                   "data-aos-duration": "1500",
                 },
                 t.map(function (e) {
-                  return o.createElement(ki, {
+                  return o.createElement(Fi, {
                     key: e.nTeamID,
                     nTeamID: e.nTeamID,
                     strName: e.strTeamName,
@@ -34096,21 +34610,21 @@
             )
           );
         }),
-        Fi = (0, d.Pi)(function () {
+        xi = (0, d.Pi)(function () {
           return o.createElement(
             o.Fragment,
             null,
-            o.createElement(Mi, null),
-            o.createElement(Gi, null),
-            o.createElement(Pi, null)
+            o.createElement(ki, null),
+            o.createElement(Pi, null),
+            o.createElement(Oi, null)
           );
         }),
-        Oi = n(80410),
-        xi = n.n(Oi),
-        Ui = 1665799200,
-        zi = (0, d.Pi)(function () {
+        Ui = n(80410),
+        zi = n.n(Ui),
+        Hi = 1665799200,
+        Wi = (0, d.Pi)(function () {
           var e,
-            t = xo(),
+            t = zo(),
             n = $a.f.Get().GetEventInfo(t);
           if (n.event != tr._A.INTERNATIONAL_2022) return null;
           var a = $a.f.Get().GetLeagueData(t, n.leagues[0].league_id),
@@ -34118,13 +34632,13 @@
               (null === (e = null == a ? void 0 : a.prize_pool) ||
                 void 0 === e ||
                 e.total_prize_pool,
-              De(Ui));
+              De(Hi));
           return o.createElement(
             "div",
-            { className: (0, b.Z)(xi().InternationalCountdownContainer) },
+            { className: (0, b.Z)(zi().InternationalCountdownContainer) },
             o.createElement(
               "div",
-              { className: xi().InternationalCountdown },
+              { className: zi().InternationalCountdown },
               !r &&
                 o.createElement(
                   o.Fragment,
@@ -34133,8 +34647,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        xi().TextStyleOverline,
-                        xi().CountdownPreHeader
+                        zi().TextStyleOverline,
+                        zi().CountdownPreHeader
                       ),
                     },
                     (0, E.Jr)("#ti11_bp_countdown_preheader")
@@ -34143,9 +34657,9 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        xi().TextStyleOverline,
-                        xi().TextColorWhite,
-                        xi().CountdownHeader
+                        zi().TextStyleOverline,
+                        zi().TextColorWhite,
+                        zi().CountdownHeader
                       ),
                     },
                     (0, E.Jr)("#ti11_bp_countdown_header")
@@ -34155,9 +34669,9 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    xi().TextStyleBody,
-                    xi().TextColorLighterGrey,
-                    xi().CountdownDesc
+                    zi().TextStyleBody,
+                    zi().TextColorLighterGrey,
+                    zi().CountdownDesc
                   ),
                 },
                 (0, E.Jr)("#ti11_bp_countdown_desc")
@@ -34167,31 +34681,31 @@
                   "div",
                   {
                     className: (0, b.Z)(
-                      xi().CountdownTimer,
-                      xi().TextStyleDisplay,
-                      xi().TextColorYellowGradient
+                      zi().CountdownTimer,
+                      zi().TextStyleDisplay,
+                      zi().TextColorYellowGradient
                     ),
                   },
-                  o.createElement(Le, { timestampNoMs: Ui })
+                  o.createElement(Le, { timestampNoMs: Hi })
                 ),
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    xi().TextStyleOverline,
-                    xi().KeepUpHeader
+                    zi().TextStyleOverline,
+                    zi().KeepUpHeader
                   ),
                 },
                 (0, E.Jr)("#ti11_bp_social_title")
               ),
               o.createElement(
                 "div",
-                { className: (0, b.Z)(xi().SocialIcons) },
+                { className: (0, b.Z)(zi().SocialIcons) },
                 o.createElement(
                   "a",
                   { href: "https://twitter.com/dota2ti" },
                   o.createElement("img", {
-                    className: xi().IconImg,
+                    className: zi().IconImg,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "international2022/icons/social_twitter.png"
@@ -34202,7 +34716,7 @@
                   "a",
                   { href: "https://facebook.com/dota2/" },
                   o.createElement("img", {
-                    className: xi().IconImg,
+                    className: zi().IconImg,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "international2022/icons/social_fb.png"
@@ -34213,7 +34727,7 @@
                   "a",
                   { href: "https://instagram.com/dota2" },
                   o.createElement("img", {
-                    className: xi().IconImg,
+                    className: zi().IconImg,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "international2022/icons/social_insta.png"
@@ -34224,7 +34738,7 @@
                   "a",
                   { href: "https://twitch.tv/directory/game/Dota%202" },
                   o.createElement("img", {
-                    className: xi().IconImg,
+                    className: zi().IconImg,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "international2022/icons/social_twitch.png"
@@ -34235,7 +34749,7 @@
                   "a",
                   { href: "https://youtube.com/user/dota2" },
                   o.createElement("img", {
-                    className: xi().IconImg,
+                    className: zi().IconImg,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "international2022/icons/social_yt.png"
@@ -34246,10 +34760,10 @@
             )
           );
         }),
-        Hi =
+        ji =
           ((0, d.Pi)(function () {
             var e,
-              t = xo(),
+              t = zo(),
               n = $a.f.Get().GetEventInfo(t);
             if (n.event != tr._A.INTERNATIONAL_2022) return null;
             var a = $a.f.Get().GetLeagueData(t, n.leagues[0].league_id),
@@ -34275,320 +34789,320 @@
                 }),
               o.createElement(
                 "div",
-                { className: xi().InternationalPrizeSplits },
-                o.createElement("div", { className: xi().DividerTop }),
+                { className: zi().InternationalPrizeSplits },
+                o.createElement("div", { className: zi().DividerTop }),
                 o.createElement(
                   "div",
                   {
-                    className: xi().PrizeGridContain,
+                    className: zi().PrizeGridContain,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   o.createElement(
                     "div",
-                    { className: xi().PrizePoolLabel },
+                    { className: zi().PrizePoolLabel },
                     (0, E.Jr)("#dpc_total_prize_pool")
                   ),
                   o.createElement(
                     "div",
-                    { className: xi().PrizePoolValue },
+                    { className: zi().PrizePoolValue },
                     i > 0 ? "$" + i.toLocaleString() : ""
                   ),
-                  o.createElement("div", { className: xi().Underline }),
+                  o.createElement("div", { className: zi().Underline }),
                   o.createElement(
                     "div",
-                    { className: xi().Title },
+                    { className: zi().Title },
                     (0, E.Jr)("#dpc_placement_prizes")
                   ),
                   o.createElement(
                     "div",
-                    { className: xi().Grid },
+                    { className: zi().Grid },
                     o.createElement(
                       "div",
-                      { className: xi().GridRow },
+                      { className: zi().GridRow },
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[0] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_1")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().GridRow },
+                      { className: zi().GridRow },
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[1] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_2")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[2] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_3")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[3] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_4")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().GridRow },
+                      { className: zi().GridRow },
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[4] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_5")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[5] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_6")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[6] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_7")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[7] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_8")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().GridRow },
+                      { className: zi().GridRow },
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[8] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_9")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[9] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_10")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[10] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_11")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[11] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_12")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[12] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_13")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().GridRow },
+                      { className: zi().GridRow },
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[13] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_14")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[14] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_15")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[15] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_16")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[16] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_17")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: xi().GridEntry },
+                        { className: zi().GridEntry },
                         o.createElement(
                           "div",
-                          { className: xi().PrizeValue },
+                          { className: zi().PrizeValue },
                           a ? r[17] : "",
                           " "
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().Place },
+                          { className: zi().Place },
                           (0, E.Jr)("#place_18")
                         )
                       )
@@ -34599,19 +35113,19 @@
             );
           }),
           (0, d.Pi)(function () {
-            var e = xo();
+            var e = zo();
             return $a.f.Get().GetEventInfo(e).event != tr._A.INTERNATIONAL_2022
               ? null
               : o.createElement(
                   "div",
-                  { className: xi().TheInternational2022Plugs },
+                  { className: zi().TheInternational2022Plugs },
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        xi().TextStyleSmallHeading,
-                        xi().TextColorYellowGradient,
-                        xi().PlugsSmallHead
+                        zi().TextStyleSmallHeading,
+                        zi().TextColorYellowGradient,
+                        zi().PlugsSmallHead
                       ),
                     },
                     (0, E.Jr)("#dpc_ti11_plugs_small_head")
@@ -34620,9 +35134,9 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        xi().TextStyleHeading,
-                        xi().TextColorWhite,
-                        xi().PlugsHeader
+                        zi().TextStyleHeading,
+                        zi().TextColorWhite,
+                        zi().PlugsHeader
                       ),
                     },
                     (0, E.Jr)("#dpc_ti11_plugs_header")
@@ -34631,9 +35145,9 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        xi().TextStyleBody,
-                        xi().TextColorLightestGrey,
-                        xi().PlugsDesc
+                        zi().TextStyleBody,
+                        zi().TextColorLightestGrey,
+                        zi().PlugsDesc
                       ),
                     },
                     (0, E.Jr)("#dpc_ti11_bp_desc")
@@ -34641,23 +35155,23 @@
                   o.createElement(
                     "div",
                     {
-                      className: xi().BattlePassPlug,
+                      className: zi().BattlePassPlug,
                       "data-aos": "fade-up",
                       "data-aos-duration": "2500",
                     },
                     o.createElement(
                       "div",
-                      { className: xi().BPPlugTextContainer },
+                      { className: zi().BPPlugTextContainer },
                       o.createElement(
                         "div",
-                        { className: xi().BPPlugText },
+                        { className: zi().BPPlugText },
                         o.createElement(
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleSmallHeading,
-                              xi().TextColorYellowGradient,
-                              xi().TI11BPOverline
+                              zi().TextStyleSmallHeading,
+                              zi().TextColorYellowGradient,
+                              zi().TI11BPOverline
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_bp_small_head")
@@ -34666,9 +35180,9 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleHeading,
-                              xi().TextColorWhite,
-                              xi().TI11BPHeader
+                              zi().TextStyleHeading,
+                              zi().TextColorWhite,
+                              zi().TI11BPHeader
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_bp_header")
@@ -34677,21 +35191,21 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleBody,
-                              xi().TextColorLightestGrey,
-                              xi().TI11BPDetails
+                              zi().TextStyleBody,
+                              zi().TextColorLightestGrey,
+                              zi().TI11BPDetails
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_bp_details")
                         ),
                         o.createElement(
                           "div",
-                          { className: xi().BPPlugBtn },
+                          { className: zi().BPPlugBtn },
                           o.createElement(
                             "a",
                             {
                               href: "https://www.dota2.com/battlepass2022",
-                              className: xi().LearnMoreButton,
+                              className: zi().LearnMoreButton,
                             },
                             (0, E.Jr)("#dpc_ti11_bp_btn")
                           )
@@ -34700,9 +35214,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().BPPlugImgContainer },
+                      { className: zi().BPPlugImgContainer },
                       o.createElement("img", {
-                        className: xi().BPPlugImg,
+                        className: zi().BPPlugImg,
                         src: "".concat(h.Y.IMG_URL, "/dpc/ti11/key_heroes.png"),
                       })
                     )
@@ -34710,15 +35224,15 @@
                   o.createElement(
                     "div",
                     {
-                      className: xi().StickersPlug,
+                      className: zi().StickersPlug,
                       "data-aos": "fade-up",
                       "data-aos-duration": "2500",
                     },
                     o.createElement(
                       "div",
-                      { className: xi().StickersPlugImgContainer },
+                      { className: zi().StickersPlugImgContainer },
                       o.createElement("img", {
-                        className: xi().StickersPlugImg,
+                        className: zi().StickersPlugImg,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/international2022/sticker_book_main.png"
@@ -34727,17 +35241,17 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: xi().StickersPlugTextContainer },
+                      { className: zi().StickersPlugTextContainer },
                       o.createElement(
                         "div",
-                        { className: xi().BPPlugText },
+                        { className: zi().BPPlugText },
                         o.createElement(
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleSmallHeading,
-                              xi().TextColorYellowGradient,
-                              xi().TI11BPOverline
+                              zi().TextStyleSmallHeading,
+                              zi().TextColorYellowGradient,
+                              zi().TI11BPOverline
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_stickers")
@@ -34746,9 +35260,9 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleHeading,
-                              xi().TextColorWhite,
-                              xi().TI11BPHeader
+                              zi().TextStyleHeading,
+                              zi().TextColorWhite,
+                              zi().TI11BPHeader
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_stickers_header")
@@ -34757,9 +35271,9 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              xi().TextStyleBody,
-                              xi().TextColorLightestGrey,
-                              xi().TI11BPDetails
+                              zi().TextStyleBody,
+                              zi().TextColorLightestGrey,
+                              zi().TI11BPDetails
                             ),
                           },
                           (0, E.Jr)("#dpc_ti11_stickers_details")
@@ -34769,31 +35283,31 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: xi().FantasyPlug },
+                    { className: zi().FantasyPlug },
                     o.createElement(
                       "div",
-                      { className: xi().PlugContainers },
+                      { className: zi().PlugContainers },
                       o.createElement(
                         "div",
                         {
-                          className: xi().FantasyContainer,
+                          className: zi().FantasyContainer,
                           "data-aos": "fade-up",
                           "data-aos-duration": "2500",
                         },
                         o.createElement("img", {
-                          className: xi().PlugImg,
+                          className: zi().PlugImg,
                           src: "".concat(h.Y.IMG_URL, "/dpc/ti11/fantasy.png"),
                         }),
                         o.createElement(
                           "div",
-                          { className: xi().PlugText },
+                          { className: zi().PlugText },
                           o.createElement(
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleSmallHeading,
-                                xi().TextColorYellowGradient,
-                                xi().TI11BPOverline
+                                zi().TextStyleSmallHeading,
+                                zi().TextColorYellowGradient,
+                                zi().TI11BPOverline
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_fantasy_header")
@@ -34802,9 +35316,9 @@
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleBody,
-                                xi().TextColorLightestGrey,
-                                xi().TI11BPDetails
+                                zi().TextStyleBody,
+                                zi().TextColorLightestGrey,
+                                zi().TI11BPDetails
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_fantasy_details")
@@ -34814,12 +35328,12 @@
                       o.createElement(
                         "div",
                         {
-                          className: xi().SupportersClubContainer,
+                          className: zi().SupportersClubContainer,
                           "data-aos": "fade-up",
                           "data-aos-duration": "2500",
                         },
                         o.createElement("img", {
-                          className: xi().PlugImg,
+                          className: zi().PlugImg,
                           src: "".concat(
                             h.Y.IMG_URL,
                             "/dpc/ti11/supporters_club.png"
@@ -34827,14 +35341,14 @@
                         }),
                         o.createElement(
                           "div",
-                          { className: xi().PlugText },
+                          { className: zi().PlugText },
                           o.createElement(
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleSmallHeading,
-                                xi().TextColorYellowGradient,
-                                xi().TI11BPOverline
+                                zi().TextStyleSmallHeading,
+                                zi().TextColorYellowGradient,
+                                zi().TI11BPOverline
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_supporters_header")
@@ -34843,9 +35357,9 @@
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleBody,
-                                xi().TextColorLightestGrey,
-                                xi().TI11BPDetails
+                                zi().TextStyleBody,
+                                zi().TextColorLightestGrey,
+                                zi().TI11BPDetails
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_supporters_details")
@@ -34855,12 +35369,12 @@
                       o.createElement(
                         "div",
                         {
-                          className: xi().PredictionsContainer,
+                          className: zi().PredictionsContainer,
                           "data-aos": "fade-up",
                           "data-aos-duration": "2500",
                         },
                         o.createElement("img", {
-                          className: xi().PlugImg,
+                          className: zi().PlugImg,
                           src: "".concat(
                             h.Y.IMG_URL,
                             "/dpc/ti11/predictions.png"
@@ -34868,14 +35382,14 @@
                         }),
                         o.createElement(
                           "div",
-                          { className: xi().PlugText },
+                          { className: zi().PlugText },
                           o.createElement(
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleSmallHeading,
-                                xi().TextColorYellowGradient,
-                                xi().TI11BPOverline
+                                zi().TextStyleSmallHeading,
+                                zi().TextColorYellowGradient,
+                                zi().TI11BPOverline
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_predictions_header")
@@ -34884,9 +35398,9 @@
                             "div",
                             {
                               className: (0, b.Z)(
-                                xi().TextStyleBody,
-                                xi().TextColorLightestGrey,
-                                xi().TI11BPDetails
+                                zi().TextStyleBody,
+                                zi().TextColorLightestGrey,
+                                zi().TI11BPDetails
                               ),
                             },
                             (0, E.Jr)("#dpc_ti11_predictions_details")
@@ -34897,14 +35411,14 @@
                   )
                 );
           })),
-        Wi = (0, d.Pi)(function (e) {
+        Vi = (0, d.Pi)(function (e) {
           var t = e.nTeamID,
             n = e.strName,
             a = e.strRegion;
           return o.createElement(
             "div",
             {
-              className: xi().InternationalTeamListTeam,
+              className: zi().InternationalTeamListTeam,
               "data-aos": "fade-up",
               "data-aos-duration": "2500",
             },
@@ -34912,15 +35426,15 @@
               "div",
               {
                 className: (0, b.Z)(
-                  xi().TeamName,
-                  xi().TextColorWhite,
-                  xi().TextStyleHeading
+                  zi().TeamName,
+                  zi().TextColorWhite,
+                  zi().TextStyleHeading
                 ),
               },
               n
             ),
             o.createElement("div", {
-              className: xi().LavaTeamLogo,
+              className: zi().LavaTeamLogo,
               style: {
                 backgroundImage: "url( "
                   .concat(h.Y.CDN_URL, "apps/dota2/teamlogos/")
@@ -34931,17 +35445,17 @@
               "div",
               {
                 className: (0, b.Z)(
-                  xi().TeamRegion,
-                  xi().TextColorYellowGradient,
-                  xi().TextStyleSmallHeading
+                  zi().TeamRegion,
+                  zi().TextColorYellowGradient,
+                  zi().TextStyleSmallHeading
                 ),
               },
               (0, E.Jr)(a)
             )
           );
         }),
-        ji = (0, d.Pi)(function () {
-          var e = xo();
+        Ji = (0, d.Pi)(function () {
+          var e = zo();
           if ($a.f.Get().GetEventInfo(e).event != tr._A.INTERNATIONAL_2022)
             return null;
           var t = [
@@ -35056,14 +35570,14 @@
             })(t),
             o.createElement(
               "div",
-              { className: xi().InternationalTeamList },
+              { className: zi().InternationalTeamList },
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    xi().TextStyleHeading,
-                    xi().TextColorWhite,
-                    xi().Title
+                    zi().TextStyleHeading,
+                    zi().TextColorWhite,
+                    zi().Title
                   ),
                 },
                 (0, E.Jr)("#dpc_participating_teams")
@@ -35071,12 +35585,12 @@
               o.createElement(
                 "div",
                 {
-                  className: xi().TeamGrid,
+                  className: zi().TeamGrid,
                   "data-aos": "fade-up",
                   "data-aos-duration": "1500",
                 },
                 t.map(function (e) {
-                  return o.createElement(Wi, {
+                  return o.createElement(Vi, {
                     key: e.nTeamID,
                     nTeamID: e.nTeamID,
                     strName: e.strTeamName,
@@ -35087,19 +35601,19 @@
             )
           );
         }),
-        Vi = (0, d.Pi)(function () {
+        Yi = (0, d.Pi)(function () {
           return o.createElement(
             o.Fragment,
             null,
-            o.createElement(zi, null),
-            o.createElement(Hi, null),
-            o.createElement(ji, null)
+            o.createElement(Wi, null),
+            o.createElement(ji, null),
+            o.createElement(Ji, null)
           );
         }),
-        Ji = n(34757),
-        Yi = n.n(Ji),
-        Zi = (0, d.Pi)(function () {
-          var e = xo(),
+        Zi = n(34757),
+        Xi = n.n(Zi),
+        qi = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetNextLeagueNode(e, null, null),
             n = t.nLeagueID,
             a = t.nNodeID,
@@ -35114,67 +35628,67 @@
             .toString();
           return o.createElement(
             "div",
-            { className: Yi().DPCNextMatchBanner },
+            { className: Xi().DPCNextMatchBanner },
             o.createElement(
               "div",
-              { className: Yi().BannerContents },
+              { className: Xi().BannerContents },
               o.createElement(
                 "div",
-                { className: Yi().LeftLabels },
+                { className: Xi().LeftLabels },
                 o.createElement(
                   "div",
-                  { className: Yi().ComingUp },
+                  { className: Xi().ComingUp },
                   (0, E.Jr)("#dpc_coming_up")
                 ),
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)(Yi().TeamNames, r && Yi().Visible) },
+                  { className: (0, b.Z)(Xi().TeamNames, r && Xi().Visible) },
                   o.createElement(
                     "div",
-                    { className: Yi().TeamName },
+                    { className: Xi().TeamName },
                     null == i ? void 0 : i.name
                   ),
                   o.createElement(
                     "div",
-                    { className: Yi().Versus },
+                    { className: Xi().Versus },
                     (0, E.Jr)("#dpc_vs")
                   ),
                   o.createElement(
                     "div",
-                    { className: Yi().TeamName },
+                    { className: Xi().TeamName },
                     null == s ? void 0 : s.name
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)(Yi().WatchLive, r && Yi().Visible) },
+                  { className: (0, b.Z)(Xi().WatchLive, r && Xi().Visible) },
                   (0, E.Jr)("#dpc_watch_live")
                 ),
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)(Yi().Timestamp, r && Yi().Visible) },
+                  { className: (0, b.Z)(Xi().Timestamp, r && Xi().Visible) },
                   l
                 )
               ),
               o.createElement(
                 "div",
-                { className: (0, b.Z)(Yi().TeamWrapper, Yi().First) },
+                { className: (0, b.Z)(Xi().TeamWrapper, Xi().First) },
                 o.createElement(vr, {
-                  className: Yi().TeamDiagonal,
+                  className: Xi().TeamDiagonal,
                   nTeamID: r.team_id_1,
                 })
               ),
               o.createElement(
                 "div",
-                { className: (0, b.Z)(Yi().TeamWrapper, Yi().Second) },
+                { className: (0, b.Z)(Xi().TeamWrapper, Xi().Second) },
                 o.createElement(vr, {
-                  className: Yi().TeamDiagonal,
+                  className: Xi().TeamDiagonal,
                   nTeamID: r.team_id_2,
                 })
               ),
               o.createElement(
                 "div",
-                { className: Yi().ScheduleButtonContainer },
+                { className: Xi().ScheduleButtonContainer },
                 o.createElement(
                   m.rU,
                   {
@@ -35183,11 +35697,11 @@
                       "".concat(n),
                       "".concat(a)
                     ),
-                    className: Yi().ScheduleButton,
+                    className: Xi().ScheduleButton,
                   },
                   o.createElement(
                     "div",
-                    { className: Yi().Label },
+                    { className: Xi().Label },
                     (0, E.Jr)("#dpc_view_schedule")
                   )
                 )
@@ -35195,30 +35709,30 @@
             )
           );
         }),
-        Xi = n(5260),
-        qi = n(60589),
-        Ki = n.n(qi);
-      function Qi(e, t) {
+        Ki = n(5260),
+        Qi = n(60589),
+        $i = n.n(Qi);
+      function eo(e, t) {
         return Array.from(
           Array.from(Array(t - e + 1).keys()).map(function (t) {
             return t + e;
           })
         );
       }
-      var $i = (0, o.createContext)(null),
-        eo = function () {
-          return (0, o.useContext)($i);
+      var to = (0, o.createContext)(null),
+        no = function () {
+          return (0, o.useContext)(to);
         };
-      function to(e) {
+      function ao(e) {
         return o.createElement(
-          $i.Provider,
+          to.Provider,
           { value: e.seriesDetailsContext },
           e.children
         );
       }
-      var no,
-        ao = (0, d.Pi)(function () {
-          var e = xo(),
+      var ro,
+        io = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetEventInfo(e),
             n = $a.f.Get().GetWatchPageContext(),
             a = (0, p.k6)(),
@@ -35277,7 +35791,7 @@
                           .Get()
                           .AreAllGamesWatched(e.nLeagueID, e.nNodeID);
                       }),
-                      s = Qi(1, 5).find(function (e) {
+                      s = eo(1, 5).find(function (e) {
                         return !$a.f
                           .Get()
                           .IsGameWatched(
@@ -35306,14 +35820,14 @@
                 ? null
                 : o.createElement(
                     "div",
-                    { className: Ki().DPCSeriesDetails },
+                    { className: $i().DPCSeriesDetails },
                     o.createElement(
                       "div",
                       {
                         className: (0, b.Z)(
-                          Ki().BGContainer,
-                          i && E && Ki().Large,
-                          c && Ki().ShowChat
+                          $i().BGContainer,
+                          i && E && $i().Large,
+                          c && $i().ShowChat
                         ),
                         style: {
                           backgroundImage: "url( ".concat(
@@ -35324,9 +35838,9 @@
                       },
                       o.createElement(
                         "div",
-                        { className: Ki().Container },
+                        { className: $i().Container },
                         o.createElement(
-                          to,
+                          ao,
                           {
                             seriesDetailsContext: {
                               bLarge: i && E,
@@ -35334,11 +35848,11 @@
                               bShowChat: c,
                             },
                           },
-                          o.createElement(io, null),
-                          o.createElement(oo, null),
-                          o.createElement(lo, null)
+                          o.createElement(so, null),
+                          o.createElement(lo, null),
+                          o.createElement(uo, null)
                         ),
-                        o.createElement(ro, {
+                        o.createElement(oo, {
                           bLarge: i,
                           setLarge: s,
                           bShowChat: c,
@@ -35360,9 +35874,9 @@
               : null
           );
         }),
-        ro = (0, d.Pi)(function (e) {
+        oo = (0, d.Pi)(function (e) {
           var t,
-            n = xo(),
+            n = zo(),
             a = $a.f.Get().GetWatchPageContext(),
             r = $a.f.Get().GetLeagueData(n, a.nLeagueID),
             i = 0 == a.nSeriesGame ? 1 : a.nSeriesGame,
@@ -35473,42 +35987,42 @@
                 : t.broadcast_provider) == tr.eQ.LEAGUE_BROADCAST_TWITCH;
           return o.createElement(
             "div",
-            { className: Ki().DPCSeriesFooter },
+            { className: $i().DPCSeriesFooter },
             o.createElement(
               "div",
-              { className: (0, b.Z)(Ki().LeftTabs, d && Ki().Hidden) },
+              { className: (0, b.Z)($i().LeftTabs, d && $i().Hidden) },
               o.createElement(
                 er.RL,
                 {
                   to: v,
                   condition: g,
                   className: (0, b.Z)(
-                    Ki().SeriesViewTab,
-                    f && Ki().Selected,
-                    g && Ki().Valid
+                    $i().SeriesViewTab,
+                    f && $i().Selected,
+                    g && $i().Valid
                   ),
                 },
-                o.createElement(ja.Od, { className: Ki().SeriesViewTabImage })
+                o.createElement(ja.Od, { className: $i().SeriesViewTabImage })
               ),
               o.createElement(
                 m.rU,
                 {
                   to: T,
                   className: (0, b.Z)(
-                    Ki().SeriesViewTab,
-                    y && Ki().Selected,
-                    Ki().Valid
+                    $i().SeriesViewTab,
+                    y && $i().Selected,
+                    $i().Valid
                   ),
                 },
-                o.createElement(ja.sz, { className: Ki().SeriesViewTabImage })
+                o.createElement(ja.sz, { className: $i().SeriesViewTabImage })
               )
             ),
             o.createElement(
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().CenterOptions,
-                  0 == c.length && Ki().Hidden
+                  $i().CenterOptions,
+                  0 == c.length && $i().Hidden
                 ),
               },
               o.createElement(qa, {
@@ -35520,13 +36034,13 @@
               }),
               o.createElement(
                 "a",
-                { href: _, className: Ki().OutlineButton },
+                { href: _, className: $i().OutlineButton },
                 o.createElement(
                   "div",
-                  { className: Ki().Contents },
+                  { className: $i().Contents },
                   (0, E.Jr)(p),
                   o.createElement("div", {
-                    className: Ki().ExternalLinkIcon,
+                    className: $i().ExternalLinkIcon,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -35541,9 +36055,9 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().RightTabs,
-                  !e.bLargeAllowed && Ki().Hidden,
-                  S && Ki().HasChatOption
+                  $i().RightTabs,
+                  !e.bLargeAllowed && $i().Hidden,
+                  S && $i().HasChatOption
                 ),
               },
               S &&
@@ -35551,49 +36065,49 @@
                   "div",
                   {
                     className: (0, b.Z)(
-                      Ki().SizeTab,
-                      e.bShowChat && Ki().Selected,
-                      Ki().RightGap
+                      $i().SizeTab,
+                      e.bShowChat && $i().Selected,
+                      $i().RightGap
                     ),
                     onClick: function () {
                       return e.setShowChat(!e.bShowChat);
                     },
                   },
-                  o.createElement(ja.kB, { className: Ki().SizeTabImage })
+                  o.createElement(ja.kB, { className: $i().SizeTabImage })
                 ),
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    Ki().SizeTab,
-                    (!e.bLarge || !e.bLargeAllowed) && Ki().Selected
+                    $i().SizeTab,
+                    (!e.bLarge || !e.bLargeAllowed) && $i().Selected
                   ),
                   onClick: function () {
                     return e.setLarge(!1);
                   },
                 },
-                o.createElement(ja.xw, { className: Ki().SizeTabImage })
+                o.createElement(ja.xw, { className: $i().SizeTabImage })
               ),
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    Ki().SizeTab,
-                    e.bLarge && e.bLargeAllowed && Ki().Selected,
-                    !e.bLargeAllowed && Ki().NotAllowed
+                    $i().SizeTab,
+                    e.bLarge && e.bLargeAllowed && $i().Selected,
+                    !e.bLargeAllowed && $i().NotAllowed
                   ),
                   onClick: function () {
                     return e.setLarge(!0);
                   },
                 },
-                o.createElement(ja._n, { className: Ki().SizeTabImage })
+                o.createElement(ja._n, { className: $i().SizeTabImage })
               )
             )
           );
         }),
-        io = (0, d.Pi)(function () {
-          var e = xo(),
-            t = eo(),
+        so = (0, d.Pi)(function () {
+          var e = zo(),
+            t = no(),
             n = $a.f.Get().GetWatchPageContext(),
             a = $a.f.Get().GetLeagueNode(n.nLeagueID, n.nNodeID),
             r = $a.f.Get().GetLeagueNodeInfo(n.nLeagueID, n.nNodeID),
@@ -35629,11 +36143,11 @@
             "div",
             {
               className: (0, b.Z)(
-                Ki().DPCSeriesDetailsHeader,
-                t.bLarge && Ki().Large
+                $i().DPCSeriesDetailsHeader,
+                t.bLarge && $i().Large
               ),
             },
-            o.createElement(so, {
+            o.createElement(co, {
               nTeamID: null == a ? void 0 : a.team_id_1,
               bLeft: !0,
               bWinner: s,
@@ -35650,7 +36164,7 @@
                   "".concat(n.nLeagueID),
                   "".concat(n.nNodeID)
                 ),
-                className: Ki().CenterSection,
+                className: $i().CenterSection,
               },
               p.map(function (e, t) {
                 return o.createElement(
@@ -35661,8 +36175,8 @@
                       .concat(n.nNodeID, "_")
                       .concat(t),
                     className: (0, b.Z)(
-                      0 == t && Ki().Header1,
-                      1 == t && Ki().Header2
+                      0 == t && $i().Header1,
+                      1 == t && $i().Header2
                     ),
                   },
                   (0, E.Jr)(e)
@@ -35671,26 +36185,26 @@
               _ &&
                 !g &&
                 o.createElement(cr(), {
-                  className: Ki().Timestamp,
+                  className: $i().Timestamp,
                   date: 1e3 * (null == a ? void 0 : a.scheduled_time),
                   format: "MMM DD LT",
                 }),
               h &&
                 !g &&
                 o.createElement(cr(), {
-                  className: Ki().Timestamp,
+                  className: $i().Timestamp,
                   date: 1e3 * (null == a ? void 0 : a.actual_time),
                   format: "MMM DD LT",
                 }),
               g &&
                 o.createElement(
                   "div",
-                  { className: (0, b.Z)(Ki().LiveBanner) },
+                  { className: (0, b.Z)($i().LiveBanner) },
                   (0, E.Jr)("#dpc_live"),
-                  o.createElement("div", { className: Ki().Dot })
+                  o.createElement("div", { className: $i().Dot })
                 )
             ),
-            o.createElement(so, {
+            o.createElement(co, {
               nTeamID: null == a ? void 0 : a.team_id_2,
               bLeft: !1,
               bWinner: l,
@@ -35701,8 +36215,8 @@
             })
           );
         }),
-        oo = (0, d.Pi)(function () {
-          var e = xo(),
+        lo = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetWatchPageContext(),
             n = $a.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             a = null == n ? void 0 : n.is_completed,
@@ -35716,11 +36230,11 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().DPCSeriesGameSelector,
-                  !a && Ki().Collapse
+                  $i().DPCSeriesGameSelector,
+                  !a && $i().Collapse
                 ),
               },
-              Qi(1, r).map(function (n) {
+              eo(1, r).map(function (n) {
                 var a = t.nSeriesGame == n,
                   i =
                     t.eSeriesDisplay == er.Uz.SERIES
@@ -35738,15 +36252,15 @@
                     ),
                     key: "match_".concat(n),
                     className: (0, b.Z)(
-                      Ki().GameOption,
-                      a && Ki().Selected,
-                      1 == n && Ki().First,
-                      n == r && Ki().Last
+                      $i().GameOption,
+                      a && $i().Selected,
+                      1 == n && $i().First,
+                      n == r && $i().Last
                     ),
                   },
                   o.createElement(
                     "div",
-                    { className: Ki().Label },
+                    { className: $i().Label },
                     (0, E.Jr)("#dpc_game_number", n)
                   )
                 );
@@ -35754,7 +36268,7 @@
             )
           );
         }),
-        so = (0, d.Pi)(function (e) {
+        co = (0, d.Pi)(function (e) {
           var t = e.nTeamID,
             n = e.bLeft,
             a = e.bWinner,
@@ -35762,8 +36276,8 @@
             i = e.nPossibleWins,
             s = e.bShowRecord,
             l = e.bHideTeams,
-            c = xo(),
-            u = eo(),
+            c = zo(),
+            u = no(),
             d = $a.f.Get().GetWatchPageContext(),
             m = $a.f.Get().GetLeagueNodeInfo(d.nLeagueID, d.nNodeID),
             p = $a.f
@@ -35788,59 +36302,59 @@
             "div",
             {
               className: (0, b.Z)(
-                Ki().DPCSeriesDetailsHeaderTeam,
-                n && Ki().Left,
-                !n && Ki().Right,
-                a && !f && Ki().Winner,
-                u.bLarge && Ki().Large,
-                u.bShowChat && Ki().ShowChat
+                $i().DPCSeriesDetailsHeaderTeam,
+                n && $i().Left,
+                !n && $i().Right,
+                a && !f && $i().Winner,
+                u.bLarge && $i().Large,
+                u.bShowChat && $i().ShowChat
               ),
             },
             o.createElement(
               "div",
-              { className: Ki().TopSection },
+              { className: $i().TopSection },
               o.createElement(
                 "div",
-                { className: Ki().Labels },
+                { className: $i().Labels },
                 o.createElement(
                   "div",
-                  { className: Ki().TeamName },
+                  { className: $i().TeamName },
                   null == _ ? void 0 : _.name
                 ),
-                s && !f && o.createElement("div", { className: Ki().Record }, h)
+                s && !f && o.createElement("div", { className: $i().Record }, h)
               ),
               !l && o.createElement(vr, { nTeamID: t, bTooltip: !0 }),
               o.createElement(
                 "div",
-                { className: Ki().Pips },
+                { className: $i().Pips },
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    Ki().Pip,
-                    r > 0 && !f && Ki().Filled,
-                    i > 0 && Ki().Visible
+                    $i().Pip,
+                    r > 0 && !f && $i().Filled,
+                    i > 0 && $i().Visible
                   ),
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    Ki().Pip,
-                    r > 1 && !f && Ki().Filled,
-                    i > 1 && Ki().Visible
+                    $i().Pip,
+                    r > 1 && !f && $i().Filled,
+                    i > 1 && $i().Visible
                   ),
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    Ki().Pip,
-                    r > 2 && !f && Ki().Filled,
-                    i > 2 && Ki().Visible
+                    $i().Pip,
+                    r > 2 && !f && $i().Filled,
+                    i > 2 && $i().Visible
                   ),
                 })
               )
             )
           );
         }),
-        lo = (0, d.Pi)(function () {
-          var e = xo(),
-            t = eo(),
+        uo = (0, d.Pi)(function () {
+          var e = zo(),
+            t = no(),
             n = $a.f.Get().GetWatchPageContext();
           return (
             $a.f.Get().GetSpoilerBlockState(e) == tr.rE.UNBLOCKED &&
@@ -35849,20 +36363,20 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().DPCSeriesDetailsBody,
-                  t.bLarge && Ki().Large
+                  $i().DPCSeriesDetailsBody,
+                  t.bLarge && $i().Large
                 ),
               },
-              o.createElement(co, null),
-              o.createElement(uo, null),
               o.createElement(mo, null),
-              o.createElement(ho, null),
-              o.createElement(fo, null)
+              o.createElement(po, null),
+              o.createElement(_o, null),
+              o.createElement(vo, null),
+              o.createElement(bo, null)
             )
           );
         }),
-        co = (0, d.Pi)(function () {
-          var e = xo(),
+        mo = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetWatchPageContext(),
             n = $a.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             a =
@@ -35899,8 +36413,8 @@
                   "div",
                   {
                     className: (0, b.Z)(
-                      Ki().DPCSeriesDetailsOverview,
-                      a && Ki().Visible
+                      $i().DPCSeriesDetailsOverview,
+                      a && $i().Visible
                     ),
                     style: {
                       backgroundImage: "url( ".concat(
@@ -35911,22 +36425,22 @@
                   },
                   o.createElement(
                     "div",
-                    { className: Ki().CenterContainer },
+                    { className: $i().CenterContainer },
                     !m &&
                       o.createElement(
                         "div",
-                        { className: Ki().ResultsAllowSpoilers },
+                        { className: $i().ResultsAllowSpoilers },
                         o.createElement(
                           "div",
-                          { className: Ki().Results },
+                          { className: $i().Results },
                           (0, E.Jr)(i)
                         ),
                         o.createElement(
                           "div",
                           {
                             className: (0, b.Z)(
-                              Ki().TeamsDraw,
-                              r && Ki().Visible
+                              $i().TeamsDraw,
+                              r && $i().Visible
                             ),
                           },
                           o.createElement(vr, {
@@ -35942,28 +36456,28 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              Ki().TeamWinner,
-                              !r && Ki().Visible
+                              $i().TeamWinner,
+                              !r && $i().Visible
                             ),
                           },
                           o.createElement(vr, { nTeamID: s, nSize: 64 })
                         ),
                         o.createElement(
                           "div",
-                          { className: Ki().WinningTeamName },
+                          { className: $i().WinningTeamName },
                           d
                         ),
                         !r &&
                           o.createElement(
                             "div",
-                            { className: Ki().WinningRecord },
+                            { className: $i().WinningRecord },
                             (0, E.Jr)("#dpc_wins_score", l, c)
                           )
                       ),
                     m &&
                       o.createElement(
                         "div",
-                        { className: Ki().ResultsSpoilersBlocked },
+                        { className: $i().ResultsSpoilersBlocked },
                         o.createElement(vr, {
                           nTeamID: null == n ? void 0 : n.team_id_1,
                           nSize: 90,
@@ -35978,8 +36492,8 @@
                 )
             : null;
         }),
-        uo = (0, d.Pi)(function () {
-          var e = xo(),
+        po = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetWatchPageContext(),
             n = $a.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             a =
@@ -36013,7 +36527,7 @@
           return o.createElement(
             "div",
             {
-              className: Ki().DPCSeriesDetailsGameOverview,
+              className: $i().DPCSeriesDetailsGameOverview,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -36023,22 +36537,22 @@
             },
             o.createElement(
               "div",
-              { className: Ki().CenterContainer },
+              { className: $i().CenterContainer },
               o.createElement(
                 "div",
-                { className: Ki().Game },
+                { className: $i().Game },
                 (0, E.Jr)("#dpc_game_number", t.nSeriesGame)
               ),
               p &&
                 o.createElement(
                   "div",
-                  { className: Ki().TeamWinner },
+                  { className: $i().TeamWinner },
                   o.createElement(vr, { nTeamID: l, nSize: 64 })
                 ),
               p &&
                 o.createElement(
                   "div",
-                  { className: Ki().WinningTeamName },
+                  { className: $i().WinningTeamName },
                   null == c ? void 0 : c.name
                 ),
               o.createElement(
@@ -36050,7 +36564,7 @@
                     "".concat(t.nNodeID),
                     (0, er.k8)(t.nSeriesGame, er.Uz.VOD)
                   ),
-                  className: (0, b.Z)(Ki().WatchVod, !d && Ki().Disabled),
+                  className: (0, b.Z)($i().WatchVod, !d && $i().Disabled),
                 },
                 (0, E.Jr)(d ? "#dpc_watch_vod" : "#dpc_no_vod")
               ),
@@ -36063,15 +36577,15 @@
                     "".concat(t.nNodeID),
                     (0, er.k8)(t.nSeriesGame, er.Uz.DETAILS)
                   ),
-                  className: Ki().Details,
+                  className: $i().Details,
                 },
                 (0, E.Jr)("#dpc_game_details")
               )
             )
           );
         }),
-        mo = (0, d.Pi)(function () {
-          var e = xo(),
+        _o = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetWatchPageContext(),
             n = $a.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             a =
@@ -36088,7 +36602,7 @@
               : o.createElement(
                   "div",
                   {
-                    className: Ki().DPCSeriesDetailsGameDetails,
+                    className: $i().DPCSeriesDetailsGameDetails,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -36099,39 +36613,39 @@
                   !l &&
                     o.createElement(
                       "div",
-                      { className: Ki().Body },
-                      o.createElement(_o, {
+                      { className: $i().Body },
+                      o.createElement(ho, {
                         nTeamID: null == n ? void 0 : n.team_id_1,
                         bLeft: !0,
                         nSelectedAccountID: i,
                         setSelectedAccountID: s,
                       }),
-                      o.createElement(_o, {
+                      o.createElement(ho, {
                         nTeamID: null == n ? void 0 : n.team_id_2,
                         bLeft: !1,
                         nSelectedAccountID: i,
                         setSelectedAccountID: s,
                       }),
-                      o.createElement(po, { bLeft: !0, nAccountID: i }),
-                      o.createElement(po, { bLeft: !1, nAccountID: i })
+                      o.createElement(go, { bLeft: !0, nAccountID: i }),
+                      o.createElement(go, { bLeft: !1, nAccountID: i })
                     ),
                   l &&
                     o.createElement(
                       "div",
-                      { className: Ki().NoGame },
+                      { className: $i().NoGame },
                       (0, E.Jr)("#dpc_no_game_num", t.nSeriesGame)
                     )
                 )
             : null;
         }),
-        po = (0, d.Pi)(function (e) {
+        go = (0, d.Pi)(function (e) {
           var t,
             n,
             a = e.bLeft,
             r = e.nAccountID,
             i = $a.f.Get().GetWatchPageContext(),
             s = (0, o.useRef)(),
-            l = Or.L.Get().getItemList(),
+            l = Ur.L.Get().getItemList(),
             c = $a.f.Get().GetLeagueNode(i.nLeagueID, i.nNodeID),
             u =
               c && (null == c ? void 0 : c.matches.length) > 0
@@ -36166,7 +36680,7 @@
               ? void 0
               : u.tourney.dire_team_id,
             f = $a.f.Get().GetTeamNames(g),
-            v = Or.L.Get().getHeroList(),
+            v = Ur.L.Get().getHeroList(),
             E =
               null == v
                 ? void 0
@@ -36189,20 +36703,20 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().MatchSectionDetailsOverlay,
-                  _ && Ki().Visible,
-                  a && Ki().Left,
-                  !a && Ki().Right
+                  $i().MatchSectionDetailsOverlay,
+                  _ && $i().Visible,
+                  a && $i().Left,
+                  !a && $i().Right
                 ),
               },
               o.createElement(
                 "div",
-                { className: Ki().TopSection },
+                { className: $i().TopSection },
                 y &&
                   o.createElement(
                     "video",
                     {
-                      className: Ki().HeroPortraitContainer,
+                      className: $i().HeroPortraitContainer,
                       ref: s,
                       autoPlay: !0,
                       preload: "auto",
@@ -36224,19 +36738,19 @@
                   ),
                 o.createElement(
                   "div",
-                  { className: Ki().Player },
+                  { className: $i().Player },
                   o.createElement(
                     "div",
-                    { className: Ki().PlayerName },
+                    { className: $i().PlayerName },
                     null == m ? void 0 : m.pro_name
                   ),
                   o.createElement(
                     "div",
-                    { className: Ki().TeamName },
+                    { className: $i().TeamName },
                     null == f ? void 0 : f.name
                   ),
                   o.createElement("div", {
-                    className: Ki().PlayerImage,
+                    className: $i().PlayerImage,
                     style: {
                       backgroundImage: "url( "
                         .concat(h.Y.CDN_URL, "apps/dota2/players/")
@@ -36248,7 +36762,7 @@
               ),
               o.createElement(
                 "div",
-                { className: Ki().ItemSection },
+                { className: $i().ItemSection },
                 null == m
                   ? void 0
                   : m.items.map(function (e, t) {
@@ -36261,7 +36775,7 @@
                       return n
                         ? o.createElement("div", {
                             key: "".concat(r, "_").concat(t),
-                            className: Ki().ItemIcon,
+                            className: $i().ItemIcon,
                             style: {
                               backgroundImage: "url( "
                                 .concat(h.Y.IMG_URL, "items/")
@@ -36276,17 +36790,17 @@
                         : null;
                     })
               ),
-              o.createElement("div", { className: Ki().PlaystyleSection })
+              o.createElement("div", { className: $i().PlaystyleSection })
             )
           );
         }),
-        _o = (0, d.Pi)(function (e) {
+        ho = (0, d.Pi)(function (e) {
           var t,
             n = e.nTeamID,
             a = e.bLeft,
             r = e.nSelectedAccountID,
             i = e.setSelectedAccountID,
-            s = xo(),
+            s = zo(),
             l = $a.f.Get().GetWatchPageContext(),
             c = $a.f.Get().GetLeagueNode(l.nLeagueID, l.nNodeID),
             u =
@@ -36357,19 +36871,19 @@
               "div",
               {
                 className: (0, b.Z)(
-                  Ki().MatchSectionTeam,
-                  a && Ki().Left,
-                  !a && Ki().Right
+                  $i().MatchSectionTeam,
+                  a && $i().Left,
+                  !a && $i().Right
                 ),
               },
               o.createElement(
                 "div",
-                { className: (0, b.Z)(Ki().TeamHeading, p && Ki().Winner) },
-                o.createElement("div", { className: Ki().Team }, (0, E.Jr)(_)),
+                { className: (0, b.Z)($i().TeamHeading, p && $i().Winner) },
+                o.createElement("div", { className: $i().Team }, (0, E.Jr)(_)),
                 !g &&
                   o.createElement(
                     "div",
-                    { className: Ki().Score },
+                    { className: $i().Score },
                     m
                       ? null == u
                         ? void 0
@@ -36382,9 +36896,9 @@
               5 == (null == h ? void 0 : h.length) &&
                 o.createElement(
                   "div",
-                  { className: Ki().PlayerList },
+                  { className: $i().PlayerList },
                   h.map(function (e) {
-                    return o.createElement(go, {
+                    return o.createElement(fo, {
                       key: "".concat(e.nAccountID),
                       nSelectedAccountID: r,
                       setSelectedAccountID: i,
@@ -36402,7 +36916,7 @@
             )
           );
         }),
-        go = (0, d.Pi)(function (e) {
+        fo = (0, d.Pi)(function (e) {
           var t,
             n = e.bLeft,
             a = e.nHoveredAccountID,
@@ -36416,9 +36930,9 @@
             m = e.nKills,
             p = e.nDeaths,
             _ = e.nAssists,
-            g = xo(),
+            g = zo(),
             f = $a.f.Get().GetWatchPageContext(),
-            v = Or.L.Get().getHeroList(),
+            v = Ur.L.Get().getHeroList(),
             y =
               null == v
                 ? void 0
@@ -36440,10 +36954,10 @@
             "div",
             {
               className: (0, b.Z)(
-                Ki().MatchSectionPlayer,
-                n && Ki().Left,
-                !n && Ki().Right,
-                w && Ki().Selected
+                $i().MatchSectionPlayer,
+                n && $i().Left,
+                !n && $i().Right,
+                w && $i().Selected
               ),
               onClick: function () {
                 return s(i == c ? 0 : c);
@@ -36458,12 +36972,12 @@
             !B &&
               o.createElement(
                 "div",
-                { className: (0, b.Z)(Ki().HeroAndLevel) },
-                o.createElement("div", { className: Ki().HeroName }, T),
-                o.createElement("div", { className: Ki().Level }, C)
+                { className: (0, b.Z)($i().HeroAndLevel) },
+                o.createElement("div", { className: $i().HeroName }, T),
+                o.createElement("div", { className: $i().Level }, C)
               ),
             o.createElement("div", {
-              className: Ki().HeroIcon,
+              className: $i().HeroIcon,
               style: {
                 backgroundImage: "url( "
                   .concat(h.Y.CDN_URL, "apps/dota2/players/")
@@ -36472,17 +36986,17 @@
             }),
             o.createElement(
               "div",
-              { className: Ki().NameAndStats },
-              o.createElement("div", { className: Ki().PlayerName }, l),
-              !B && u && o.createElement("div", { className: Ki().Stats }, S)
+              { className: $i().NameAndStats },
+              o.createElement("div", { className: $i().PlayerName }, l),
+              !B && u && o.createElement("div", { className: $i().Stats }, S)
             )
           );
         }),
-        ho = (0, d.Pi)(function () {
+        vo = (0, d.Pi)(function () {
           var e,
-            t = xo(),
+            t = zo(),
             n = (0, p.k6)(),
-            a = eo(),
+            a = no(),
             r = $a.f.Get().GetWatchPageContext(),
             i = $a.f.Get().GetLeagueNode(r.nLeagueID, r.nNodeID),
             s = $a.f
@@ -36536,19 +37050,19 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        Ki().DPCSeriesDetailsGameVOD,
-                        a.bLarge && Ki().Large
+                        $i().DPCSeriesDetailsGameVOD,
+                        a.bLarge && $i().Large
                       ),
                     },
                     o.createElement(
                       "div",
                       {
                         key: "".concat(e, "_").concat(c),
-                        className: Ki().VideoContainer,
+                        className: $i().VideoContainer,
                       },
                       e &&
-                        o.createElement(Xi.e, {
-                          classnames: Ki().YouTubePlayer,
+                        o.createElement(Ki.e, {
+                          classnames: $i().YouTubePlayer,
                           video: e,
                           autoplay: !1,
                           playsInline: !0,
@@ -36560,7 +37074,7 @@
                         !e &&
                         o.createElement(
                           "div",
-                          { className: Ki().NoVOD },
+                          { className: $i().NoVOD },
                           (0, E.Jr)("#dpc_no_vod_long")
                         )
                     )
@@ -36568,11 +37082,11 @@
               : null
           );
         }),
-        fo = (0, d.Pi)(function () {
+        bo = (0, d.Pi)(function () {
           var e,
             t,
-            n = xo(),
-            a = eo(),
+            n = zo(),
+            a = no(),
             r = $a.f.Get().GetWatchPageContext(),
             i = $a.f.Get().IsLeagueNodeLive(n, r.nLeagueID, r.nNodeID),
             s = $a.f.Get().GetLeagueNodeLiveStreams(n, r.nLeagueID, r.nNodeID),
@@ -36630,13 +37144,13 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        Ki().DPCSeriesDetailsGameLive,
-                        a.bLarge && Ki().Large
+                        $i().DPCSeriesDetailsGameLive,
+                        a.bLarge && $i().Large
                       ),
                     },
                     o.createElement(
                       "div",
-                      { key: e, className: Ki().VideoContainer },
+                      { key: e, className: $i().VideoContainer },
                       o.createElement("iframe", {
                         src: e,
                         height: "100%",
@@ -36650,8 +37164,8 @@
                       {
                         key: "".concat(e, "_chat"),
                         className: (0, b.Z)(
-                          Ki().Chat,
-                          t && a.bShowChat && Ki().Shown
+                          $i().Chat,
+                          t && a.bShowChat && $i().Shown
                         ),
                       },
                       o.createElement("iframe", {
@@ -36665,17 +37179,17 @@
               : null
           );
         }),
-        vo = n(36763),
-        bo = n.n(vo);
+        Eo = n(36763),
+        yo = n.n(Eo);
       !(function (e) {
         (e[(e.POPULAR = 1)] = "POPULAR"),
           (e[(e.FAVORITE = 2)] = "FAVORITE"),
           (e[(e.ALL = 3)] = "ALL");
-      })(no || (no = {}));
-      var Eo = (0, d.Pi)(function () {
+      })(ro || (ro = {}));
+      var To = (0, d.Pi)(function () {
           var e,
             t,
-            n = xo(),
+            n = zo(),
             a = (0, o.useState)(8),
             r = a[0],
             i = a[1],
@@ -36688,38 +37202,38 @@
                     return Number(e);
                   }),
             u = (null == c ? void 0 : c.length) || 0,
-            d = (0, o.useState)(no.POPULAR),
+            d = (0, o.useState)(ro.POPULAR),
             m = d[0],
             p = d[1];
           (0, o.useEffect)(
             function () {
-              u > 0 && u <= 20 && (p(no.ALL), u > 8 && u <= 12 && i(u));
+              u > 0 && u <= 20 && (p(ro.ALL), u > 8 && u <= 12 && i(u));
             },
             [u]
           );
           var _ = [
-              { value: no.POPULAR, strLabel: "#dpc_popular" },
-              { value: no.FAVORITE, strLabel: "#dpc_following" },
-              { value: no.ALL, strLabel: "#dpc_all" },
+              { value: ro.POPULAR, strLabel: "#dpc_popular" },
+              { value: ro.FAVORITE, strLabel: "#dpc_following" },
+              { value: ro.ALL, strLabel: "#dpc_all" },
             ],
             g =
-              null === (t = m == no.ALL ? c : m == no.POPULAR ? l : s) ||
+              null === (t = m == ro.ALL ? c : m == ro.POPULAR ? l : s) ||
               void 0 === t
                 ? void 0
                 : t.filter(function (e) {
                     return null == c ? void 0 : c.includes(e);
                   }),
             f = r < (null == g ? void 0 : g.length);
-          return (g && 0 != g.length) || m === no.FAVORITE
+          return (g && 0 != g.length) || m === ro.FAVORITE
             ? n === tr._A.INTERNATIONAL_2022
               ? null
               : o.createElement(
                   "div",
-                  { className: bo().DPCTeamList },
+                  { className: yo().DPCTeamList },
                   o.createElement(
                     "div",
                     {
-                      className: bo().DPCTeamList,
+                      className: yo().DPCTeamList,
                       style: {
                         backgroundImage: "url( ".concat(
                           h.Y.IMG_URL,
@@ -36729,10 +37243,10 @@
                     },
                     o.createElement(
                       "div",
-                      { className: bo().Header },
+                      { className: yo().Header },
                       o.createElement(
                         "div",
-                        { className: bo().Title },
+                        { className: yo().Title },
                         (0, E.Jr)("#dpc_header_teams")
                       ),
                       o.createElement(qa, {
@@ -36744,23 +37258,23 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: bo().TeamList },
+                      { className: yo().TeamList },
                       null == g
                         ? void 0
                         : g.map(function (e, t) {
                             return (
                               t < r &&
-                              o.createElement(yo, {
+                              o.createElement(So, {
                                 key: "Team_".concat(e),
                                 nTeamID: e,
                               })
                             );
                           }),
-                      m === no.FAVORITE &&
+                      m === ro.FAVORITE &&
                         (!g || 0 == g.length) &&
                         o.createElement(
                           "div",
-                          { className: bo().NoFollowedTeams },
+                          { className: yo().NoFollowedTeams },
                           (0, E.Jr)("#dpc_no_followed_teams_playing")
                         )
                     ),
@@ -36768,7 +37282,7 @@
                       o.createElement(
                         "div",
                         {
-                          className: bo().ShowMoreButton,
+                          className: yo().ShowMoreButton,
                           onClick: function () {
                             return i(r + 4);
                           },
@@ -36779,9 +37293,9 @@
                 )
             : null;
         }),
-        yo = (0, d.Pi)(function (e) {
+        So = (0, d.Pi)(function (e) {
           var t = e.nTeamID,
-            n = xo(),
+            n = zo(),
             a = $a.f.Get().GetEventInfo(n),
             r = $a.f.Get().GetFavoriteTeams(),
             i = $a.f.Get().GetTeamNames(t),
@@ -36930,17 +37444,17 @@
               )),
             o.createElement(
               "div",
-              { className: bo().TeamEntry },
+              { className: yo().TeamEntry },
               o.createElement(
                 "div",
-                { className: bo().FavoriteSection },
+                { className: yo().FavoriteSection },
                 o.createElement(
                   "div",
                   {
                     className: (0, b.Z)(
-                      bo().FollowingLine,
-                      O && bo().IsFollowing,
-                      x && bo().CanFollow
+                      yo().FollowingLine,
+                      O && yo().IsFollowing,
+                      x && yo().CanFollow
                     ),
                     onClick: function () {
                       x && $a.f.Get().ToggleFavoriteTeam(t);
@@ -36957,10 +37471,10 @@
                         )
                       ),
                       direction: "top",
-                      strTooltipClassname: bo().ToolTip,
+                      strTooltipClassname: yo().ToolTip,
                     },
                     o.createElement("div", {
-                      className: bo().Star,
+                      className: yo().Star,
                       style: {
                         backgroundImage: "url( "
                           .concat(h.Y.IMG_URL, "icons/")
@@ -36971,39 +37485,39 @@
                 )
               ),
               o.createElement(vr, {
-                className: bo().TeamLogo,
+                className: yo().TeamLogo,
                 nTeamID: t,
                 nSize: 64,
               }),
               o.createElement(
                 "div",
-                { className: bo().TeamInfoSection },
+                { className: yo().TeamInfoSection },
                 o.createElement(
                   "div",
-                  { className: bo().TeamInfo },
+                  { className: yo().TeamInfo },
                   o.createElement(
                     "div",
-                    { className: bo().TeamName },
+                    { className: yo().TeamName },
                     null == i ? void 0 : i.name
                   ),
-                  o.createElement("div", { className: bo().Record }, g)
+                  o.createElement("div", { className: yo().Record }, g)
                 ),
                 (null == f ? void 0 : f.length) > 0 &&
                   o.createElement(
                     "div",
-                    { className: bo().Region },
+                    { className: yo().Region },
                     (0, E.Jr)(f)
                   ),
                 (null == v ? void 0 : v.length) > 0 &&
                   o.createElement(
                     "div",
-                    { className: bo().Division },
+                    { className: yo().Division },
                     (0, E.Jr)(v)
                   )
               ),
               o.createElement(
                 "div",
-                { className: bo().PlayerSection },
+                { className: yo().PlayerSection },
                 null == _
                   ? void 0
                   : _.map(function (e) {
@@ -37011,13 +37525,13 @@
                         "div",
                         {
                           key: "".concat(e),
-                          className: bo().PlayerImageContainer,
+                          className: yo().PlayerImageContainer,
                         },
                         o.createElement(
                           "div",
-                          { className: bo().PlayerGradient },
+                          { className: yo().PlayerGradient },
                           o.createElement(gr, {
-                            className: bo().PlayerImage,
+                            className: yo().PlayerImage,
                             nAccountID: e,
                           })
                         )
@@ -37027,12 +37541,12 @@
               o.createElement(
                 m.rU,
                 {
-                  className: bo().MatchSection,
+                  className: yo().MatchSection,
                   to: { state: { bAutoScroll: !0 }, pathname: j },
                 },
                 o.createElement(
                   "div",
-                  { className: bo().TopBar },
+                  { className: yo().TopBar },
                   !z &&
                     !S &&
                     R &&
@@ -37057,25 +37571,25 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: bo().BottomSectionWrapper },
+                  { className: yo().BottomSectionWrapper },
                   !z &&
                     !S &&
                     R &&
                     o.createElement(
                       "div",
-                      { className: bo().BottomSection },
+                      { className: yo().BottomSection },
                       o.createElement(vr, {
-                        className: bo().VSTeamLogo,
+                        className: yo().VSTeamLogo,
                         nTeamID: L,
                         bTooltip: !0,
                       }),
                       o.createElement(
                         "div",
-                        { className: bo().Labels },
-                        o.createElement("div", { className: bo().TeamName }, M),
+                        { className: yo().Labels },
+                        o.createElement("div", { className: yo().TeamName }, M),
                         o.createElement(
                           "div",
-                          { className: bo().Context },
+                          { className: yo().Context },
                           W && (0, E.Jr)(D[D.length - 1])
                         )
                       )
@@ -37084,19 +37598,19 @@
                     S &&
                     o.createElement(
                       "div",
-                      { className: bo().BottomSection },
+                      { className: yo().BottomSection },
                       o.createElement(vr, {
-                        className: bo().VSTeamLogo,
+                        className: yo().VSTeamLogo,
                         nTeamID: C,
                         bTooltip: !0,
                       }),
                       o.createElement(
                         "div",
-                        { className: bo().Labels },
-                        o.createElement("div", { className: bo().TeamName }, B),
+                        { className: yo().Labels },
+                        o.createElement("div", { className: yo().TeamName }, B),
                         o.createElement(
                           "div",
-                          { className: bo().Context },
+                          { className: yo().Context },
                           W && (0, E.Jr)(I[I.length - 1])
                         )
                       )
@@ -37106,10 +37620,10 @@
             )
           );
         }),
-        To = n(41280),
-        So = n.n(To),
-        Co = (0, d.Pi)(function () {
-          var e = xo(),
+        Co = n(41280),
+        wo = n.n(Co),
+        Bo = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetFavoriteTeams(),
             n = $a.f
               .Get()
@@ -37140,7 +37654,7 @@
             : o.createElement(
                 "div",
                 {
-                  className: So().DPCFollowedTeamMatches,
+                  className: wo().DPCFollowedTeamMatches,
                   style: {
                     backgroundImage: "url( ".concat(
                       h.Y.IMG_URL,
@@ -37150,15 +37664,15 @@
                 },
                 o.createElement(
                   "div",
-                  { className: So().MatchesContainer },
+                  { className: wo().MatchesContainer },
                   o.createElement(
                     "div",
-                    { className: So().Header },
+                    { className: wo().Header },
                     (0, E.Jr)("#dpc_recent_series_followed")
                   ),
                   o.createElement(
                     "div",
-                    { className: So().SeriesList },
+                    { className: wo().SeriesList },
                     n.map(function (e, n) {
                       if (n >= 3) return null;
                       var a = $a.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
@@ -37169,7 +37683,7 @@
                           : null == a
                           ? void 0
                           : a.team_id_2;
-                      return o.createElement(wo, {
+                      return o.createElement(No, {
                         key: "".concat(e.nLeagueID, "_").concat(e.nNodeID),
                         nLeagueID: e.nLeagueID,
                         nNodeID: e.nNodeID,
@@ -37180,8 +37694,8 @@
                 )
               );
         }),
-        wo = (0, d.Pi)(function (e) {
-          var t = xo(),
+        No = (0, d.Pi)(function (e) {
+          var t = zo(),
             n = $a.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             a = null == n ? void 0 : n.actual_time,
             r = $a.f
@@ -37206,11 +37720,11 @@
                 : 0;
           return o.createElement(
             "div",
-            { className: So().DPCFollowedTeamSeries },
+            { className: wo().DPCFollowedTeamSeries },
             o.createElement(
               "div",
               {
-                className: So().Gradient,
+                className: wo().Gradient,
                 style: {
                   background: "linear-gradient( to right, "
                     .concat(null == i ? void 0 : i.color_primary, "22, ")
@@ -37219,19 +37733,19 @@
               },
               o.createElement(
                 "div",
-                { className: So().Header },
+                { className: wo().Header },
                 o.createElement(cr(), {
-                  className: So().Timestamp,
+                  className: wo().Timestamp,
                   date: 1e3 * a,
                   format: "MMMM DD, LT",
                 })
               ),
               o.createElement(
                 "div",
-                { className: So().Body },
+                { className: wo().Body },
                 o.createElement(
                   "div",
-                  { className: So().TeamsVS },
+                  { className: wo().TeamsVS },
                   o.createElement(vr, { nTeamID: p, nSize: 64 }),
                   (0, E.Jr)("#dpc_vs"),
                   o.createElement(vr, { nTeamID: _, nSize: 64 })
@@ -37240,14 +37754,14 @@
                   r.length > 0 &&
                   o.createElement(
                     "div",
-                    { className: So().Description1 },
+                    { className: wo().Description1 },
                     (0, E.Jr)(r[0])
                   ),
                 (d || !l) &&
                   r.length > 1 &&
                   o.createElement(
                     "div",
-                    { className: So().Description2 },
+                    { className: wo().Description2 },
                     (0, E.Jr)(r[1])
                   ),
                 o.createElement(
@@ -37262,7 +37776,7 @@
                         (0, er.k8)(1, er.Uz.VOD)
                       ),
                     },
-                    className: So().WatchVod,
+                    className: wo().WatchVod,
                   },
                   (0, E.Jr)("#dpc_watch_vod")
                 )
@@ -37270,12 +37784,12 @@
             )
           );
         }),
-        Bo = n(74572),
-        No = n.n(Bo),
-        Io = (0, d.Pi)(function (e) {
+        Io = n(74572),
+        Do = n.n(Io),
+        Ro = (0, d.Pi)(function (e) {
           var t = e.ePhase,
             n = e.eDivision,
-            a = xo(),
+            a = zo(),
             r = [];
           n == tr.sd.DIVISION_I &&
             r.push({
@@ -37301,13 +37815,13 @@
             s = i.length > 0;
           return o.createElement(
             "div",
-            { className: No().DPCStandingsDivision },
+            { className: Do().DPCStandingsDivision },
             o.createElement(
               "div",
-              { className: (0, b.Z)(No().TeamLists, !s && No().NoData) },
+              { className: (0, b.Z)(Do().TeamLists, !s && Do().NoData) },
               Object.values(tr.dO).map(function (e) {
                 return $a.f.Get().BEventHasRegion(a, e)
-                  ? o.createElement(Ci, {
+                  ? o.createElement(Bi, {
                       key: e,
                       ePhase: t,
                       eRegion: e,
@@ -37326,16 +37840,16 @@
             i.length > 0 &&
               o.createElement(
                 "div",
-                { className: No().LegendContainer },
+                { className: Do().LegendContainer },
                 o.createElement(
                   "div",
-                  { className: No().LegendCenter },
+                  { className: Do().LegendCenter },
                   r.map(function (e, t) {
                     return o.createElement(
                       "div",
-                      { key: "hl".concat(t), className: No().LegendItem },
+                      { key: "hl".concat(t), className: Do().LegendItem },
                       o.createElement("div", {
-                        className: No().ColorSquare,
+                        className: Do().ColorSquare,
                         style: {
                           background: "linear-gradient( "
                             .concat(e.strColor, "35, ")
@@ -37345,7 +37859,7 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: No().Description },
+                        { className: Do().Description },
                         (0, E.Jr)(e.strDescription)
                       )
                     );
@@ -37354,10 +37868,10 @@
               )
           );
         }),
-        Do = n(8875),
-        Ro = n.n(Do),
-        Lo = (0, d.Pi)(function () {
-          var e = xo(),
+        Lo = n(8875),
+        Ao = n.n(Lo),
+        Mo = (0, d.Pi)(function () {
+          var e = zo(),
             t = $a.f.Get().GetEventInfo(e),
             n = (0, o.useState)(tr.sd.DIVISION_I),
             a = n[0],
@@ -37372,7 +37886,7 @@
           return o.createElement(
             "div",
             {
-              className: Ro().DPCLeagueStandingsSummary,
+              className: Ao().DPCLeagueStandingsSummary,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -37382,10 +37896,10 @@
             },
             o.createElement(
               "div",
-              { className: Ro().Header },
+              { className: Ao().Header },
               o.createElement(
                 "div",
-                { className: Ro().Label },
+                { className: Ao().Label },
                 (0, E.Jr)("#dpc_header_standings")
               ),
               o.createElement(qa, {
@@ -37395,7 +37909,7 @@
                 setOption: r,
               })
             ),
-            o.createElement(Io, { ePhase: tr.BY.OVERALL, eDivision: a }),
+            o.createElement(Ro, { ePhase: tr.BY.OVERALL, eDivision: a }),
             o.createElement(N.p, {
               bottom: !0,
               color: "#161618",
@@ -37405,11 +37919,11 @@
             })
           );
         }),
-        Ao = n(85397),
-        Mo = n.n(Ao),
-        Go = (0, d.Pi)(function () {
+        Go = n(85397),
+        ko = n.n(Go),
+        Po = (0, d.Pi)(function () {
           var e = (0, p.UO)(),
-            t = xo();
+            t = zo();
           if (!e.strLeagueID || !e.strNodeID || !e.strSeriesDisplay)
             return o.createElement(p.l_, {
               to: u._.dpc_watch(
@@ -37443,25 +37957,25 @@
               }),
             o.createElement(
               "div",
-              { className: Mo().DPCHomePage },
-              o.createElement(ao, null),
-              o.createElement(Zi, null),
-              o.createElement(Lo, null),
-              o.createElement(Co, null),
-              o.createElement(Eo, null),
-              o.createElement(Fi, null),
-              o.createElement(Vi, null),
-              o.createElement(Hr, null)
+              { className: ko().DPCHomePage },
+              o.createElement(io, null),
+              o.createElement(qi, null),
+              o.createElement(Mo, null),
+              o.createElement(Bo, null),
+              o.createElement(To, null),
+              o.createElement(xi, null),
+              o.createElement(Yi, null),
+              o.createElement(jr, null)
             )
           );
         }),
-        ko = n(37921),
-        Po = n.n(ko),
-        Fo = (0, d.Pi)(function () {
+        Fo = n(37921),
+        Oo = n.n(Fo),
+        xo = (0, d.Pi)(function () {
           return o.createElement(
             "div",
             {
-              className: Po().InternationalRulesPage,
+              className: Oo().InternationalRulesPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -37472,7 +37986,7 @@
             o.createElement(
               "div",
               {
-                className: Po().Header,
+                className: Oo().Header,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -37482,17 +37996,17 @@
               },
               o.createElement(
                 "div",
-                { className: Po().Title },
+                { className: Oo().Title },
                 ""
                   .concat((0, E.Jr)("#dpc_event_ti11"), " ")
                   .concat((0, E.Jr)("#dpc_tirules_header"))
               ),
               o.createElement(
                 "div",
-                { className: Po().Content },
+                { className: Oo().Content },
                 o.createElement(
                   "div",
-                  { className: Po().SubHeader },
+                  { className: Oo().SubHeader },
                   (0, E.Jr)("#dpc_group_stage")
                 ),
                 o.createElement(
@@ -37503,7 +38017,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_2022_two_groups")
                     )
                   ),
@@ -37512,7 +38026,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_match_format")
                     )
                   ),
@@ -37521,7 +38035,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_match_selection_priority")
                     )
                   ),
@@ -37530,7 +38044,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_match_win_points")
                     )
                   ),
@@ -37539,7 +38053,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_2022_groups_top_4")
                     )
                   ),
@@ -37548,7 +38062,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_2022_groups_5_to_8")
                     )
                   ),
@@ -37557,14 +38071,14 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_2022_groups_bottom_2")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().SubHeader },
+                  { className: Oo().SubHeader },
                   "".concat((0, E.Jr)("#dpc_tiebreakers"))
                 ),
                 o.createElement(
@@ -37575,14 +38089,14 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_tiebreaker_elim_rules")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().TiebreakerList },
+                  { className: Oo().TiebreakerList },
                   o.createElement(
                     "ul",
                     null,
@@ -37591,7 +38105,7 @@
                       null,
                       o.createElement(
                         "div",
-                        { className: Po().Description },
+                        { className: Oo().Description },
                         (0, E.Jr)(
                           "#dpc_tirules_groups_tiebreaker_elim_format_1"
                         )
@@ -37599,13 +38113,13 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Po().AdditionalIndent },
+                      { className: Oo().AdditionalIndent },
                       o.createElement(
                         "li",
                         null,
                         o.createElement(
                           "div",
-                          { className: Po().Description },
+                          { className: Oo().Description },
                           (0, E.Jr)(
                             "#dpc_tirules_groups_tiebreaker_elim_format_2"
                           )
@@ -37617,7 +38131,7 @@
                       null,
                       o.createElement(
                         "div",
-                        { className: Po().Description },
+                        { className: Oo().Description },
                         (0, E.Jr)(
                           "#dpc_tirules_groups_tiebreaker_elim_format_3"
                         )
@@ -37625,13 +38139,13 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Po().AdditionalIndent },
+                      { className: Oo().AdditionalIndent },
                       o.createElement(
                         "li",
                         null,
                         o.createElement(
                           "div",
-                          { className: Po().Description },
+                          { className: Oo().Description },
                           (0, E.Jr)(
                             "#dpc_tirules_groups_tiebreaker_elim_format_4"
                           )
@@ -37640,13 +38154,13 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Po().AdditionalIndent },
+                      { className: Oo().AdditionalIndent },
                       o.createElement(
                         "li",
                         null,
                         o.createElement(
                           "div",
-                          { className: Po().Description },
+                          { className: Oo().Description },
                           (0, E.Jr)(
                             "#dpc_tirules_groups_tiebreaker_elim_format_5"
                           )
@@ -37655,13 +38169,13 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: Po().AdditionalIndent },
+                      { className: Oo().AdditionalIndent },
                       o.createElement(
                         "li",
                         null,
                         o.createElement(
                           "div",
-                          { className: Po().Description },
+                          { className: Oo().Description },
                           (0, E.Jr)(
                             "#dpc_tirules_groups_tiebreaker_elim_format_6"
                           )
@@ -37678,14 +38192,14 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_tiebreaker_other_rules")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().TiebreakerList },
+                  { className: Oo().TiebreakerList },
                   o.createElement(
                     "ol",
                     null,
@@ -37694,7 +38208,7 @@
                       null,
                       o.createElement(
                         "div",
-                        { className: Po().Description },
+                        { className: Oo().Description },
                         (0, E.Jr)("#dpc_tirules_groups_tiebreaker_other_rules1")
                       )
                     ),
@@ -37703,7 +38217,7 @@
                       null,
                       o.createElement(
                         "div",
-                        { className: Po().Description },
+                        { className: Oo().Description },
                         (0, E.Jr)("#dpc_tirules_groups_tiebreaker_other_rules2")
                       )
                     ),
@@ -37712,7 +38226,7 @@
                       null,
                       o.createElement(
                         "div",
-                        { className: Po().Description },
+                        { className: Oo().Description },
                         (0, E.Jr)("#dpc_tirules_groups_tiebreaker_other_rules3")
                       )
                     )
@@ -37720,7 +38234,7 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().SubHeader },
+                  { className: Oo().SubHeader },
                   ""
                     .concat((0, E.Jr)("#dpc_main_event"), " (")
                     .concat((0, E.Jr)("#dpc_upper_bracket"), ")")
@@ -37733,7 +38247,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_upper_bracket_format")
                     )
                   ),
@@ -37742,7 +38256,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_first_place_selection")
                     )
                   ),
@@ -37751,7 +38265,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_upper_bracket_a")
                     )
                   ),
@@ -37760,7 +38274,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_upper_bracket_b")
                     )
                   ),
@@ -37769,7 +38283,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_upper_bracket_c")
                     )
                   ),
@@ -37778,7 +38292,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_upper_bracket_d")
                     )
                   ),
@@ -37787,7 +38301,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)(
                         "#dpc_tirules_main_event_upper_bracket_r1_priority"
                       )
@@ -37798,14 +38312,14 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_other_rounds_priority")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().SubHeader },
+                  { className: Oo().SubHeader },
                   ""
                     .concat((0, E.Jr)("#dpc_main_event"), " (")
                     .concat((0, E.Jr)("#dpc_lower_bracket"), ")")
@@ -37818,7 +38332,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_lower_bracket_format")
                     )
                   ),
@@ -37827,7 +38341,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_groups_fifth_place_selection")
                     )
                   ),
@@ -37836,7 +38350,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_lower_bracket_a")
                     )
                   ),
@@ -37845,7 +38359,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_lower_bracket_b")
                     )
                   ),
@@ -37854,7 +38368,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_lower_bracket_c")
                     )
                   ),
@@ -37863,7 +38377,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_lower_bracket_d")
                     )
                   ),
@@ -37872,7 +38386,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)(
                         "#dpc_tirules_main_event_lower_bracket_r1_priority"
                       )
@@ -37883,14 +38397,14 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_main_event_other_rounds_priority")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: Po().SubHeader },
+                  { className: Oo().SubHeader },
                   "".concat((0, E.Jr)("#dpc_bracket_grand_final"))
                 ),
                 o.createElement(
@@ -37901,7 +38415,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_grand_finals_format")
                     )
                   ),
@@ -37910,7 +38424,7 @@
                     null,
                     o.createElement(
                       "div",
-                      { className: Po().Description },
+                      { className: Oo().Description },
                       (0, E.Jr)("#dpc_tirules_grand_finals_priority")
                     )
                   )
@@ -37920,50 +38434,50 @@
           );
         });
       cr().globalLocale = Wt().locale(window.navigator.language);
-      var Oo = (0, o.createContext)(null),
-        xo = function () {
-          return (0, o.useContext)(Oo);
+      var Uo = (0, o.createContext)(null),
+        zo = function () {
+          return (0, o.useContext)(Uo);
         };
-      function Uo(e) {
+      function Ho(e) {
         return o.createElement(
-          Oo.Provider,
+          Uo.Provider,
           { value: e.eventContext },
           e.children
         );
       }
-      var zo = (0, d.Pi)(function () {
-          var e = xo();
+      var Wo = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.SPRING_2021_LEAGUE
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderSpring2021League },
+                { className: Fr().DPCHeaderSpring2021League },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_spring")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2020season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_league_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 1618272e6,
                       format: "DD MMMM YYYY",
@@ -37971,12 +38485,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_league_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 1621728e6,
                       format: "DD MMMM YYYY",
@@ -37984,7 +38498,7 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventResultsTitle },
+                    { className: Fr().EventResultsTitle },
                     (0, E.Jr)("#dpc_event_results_spring21")
                   ),
                   o.createElement(
@@ -38000,54 +38514,54 @@
                             .concat(tr.sd.DIVISION_I)
                         ),
                       },
-                      className: kr().EventResultsButton,
+                      className: Fr().EventResultsButton,
                     },
                     (0, E.Jr)("#dpc_results")
                   )
                 )
               );
         }),
-        Ho = (0, d.Pi)(function () {
-          var e = xo();
+        jo = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.SPRING_2021_MAJOR
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderSpring2021Major },
+                { className: Fr().DPCHeaderSpring2021Major },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_animajor")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventPresented },
+                    { className: Fr().EventPresented },
                     (0, E.Jr)("#dpc_event_springmajor21_presented")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_spring")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2020season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventLoc },
+                    { className: Fr().EventLoc },
                     (0, E.Jr)("#dpc_event_springmajor21_loc")
                   ),
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhaseWildcard
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhaseWildcard
                       ),
                     },
                     (0, E.Jr)("#dpc_wild_card")
@@ -38056,8 +38570,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhaseWildcardTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhaseWildcardTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38069,8 +38583,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhaseGroup
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhaseGroup
                       ),
                     },
                     (0, E.Jr)("#dpc_group_stage")
@@ -38079,8 +38593,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhaseGroupTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhaseGroupTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38092,8 +38606,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhasePlayoffs
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhasePlayoffs
                       ),
                     },
                     (0, E.Jr)("#dpc_playoff")
@@ -38102,8 +38616,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhasePlayoffsTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhasePlayoffsTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38113,17 +38627,17 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolTitle },
+                    { className: Fr().PrizePoolTitle },
                     (0, E.Jr)("#dpc_prizepool")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolValue },
+                    { className: Fr().PrizePoolValue },
                     "$500,000 USD"
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventResultsTitle },
+                    { className: Fr().EventResultsTitle },
                     (0, E.Jr)("#dpc_event_results_springmajor21")
                   ),
                   o.createElement(
@@ -38139,23 +38653,23 @@
                             .concat(tr.sd.DIVISION_I)
                         ),
                       },
-                      className: kr().EventResultsButton,
+                      className: Fr().EventResultsButton,
                     },
                     (0, E.Jr)("#dpc_results")
                   )
                 )
               );
         }),
-        Wo = (0, d.Pi)(function () {
-          var e = xo();
+        Vo = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.INTERNATIONAL_2021_QUALIFIERS
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderTI2021Quals },
+                { className: Fr().DPCHeaderTI2021Quals },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     m.rU,
                     {
@@ -38163,37 +38677,37 @@
                         state: { bAutoScroll: !0 },
                         pathname: u._.dpc_watch((0, er.B2)(e)),
                       },
-                      className: kr().CenterContent,
+                      className: Fr().CenterContent,
                       "data-aos": "zoom-out",
                       "data-aos-duration": "1500",
                     },
                     o.createElement("img", {
-                      className: kr().TILogo,
+                      className: Fr().TILogo,
                       src: "".concat(
                         h.Y.IMG_URL,
                         "/dpc/ti10/ti_short_logo.png"
                       ),
                     }),
-                    o.createElement("div", { className: kr().Underline }),
+                    o.createElement("div", { className: Fr().Underline }),
                     o.createElement(
                       "div",
-                      { className: kr().EventTitle },
+                      { className: Fr().EventTitle },
                       (0, E.Jr)("#dpc_event_qualifiers")
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().EventSubTitle },
+                      { className: Fr().EventSubTitle },
                       (0, E.Jr)("#dpc_event_2020season")
                     )
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_ti10quals_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 1625058e6,
                       format: "DD MMMM YYYY",
@@ -38201,12 +38715,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_ti10quals_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 16253172e5,
                       format: "DD MMMM YYYY",
@@ -38214,7 +38728,7 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventResultsTitle },
+                    { className: Fr().EventResultsTitle },
                     (0, E.Jr)("#dpc_event_results_ti10quals")
                   ),
                   o.createElement(
@@ -38230,23 +38744,23 @@
                             .concat(tr.sd.DIVISION_I)
                         ),
                       },
-                      className: kr().EventResultsButton,
+                      className: Fr().EventResultsButton,
                     },
                     (0, E.Jr)("#dpc_results")
                   )
                 )
               );
         }),
-        jo = (0, d.Pi)(function () {
-          var e = xo();
+        Jo = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.INTERNATIONAL_2021
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderTI2021 },
+                { className: Fr().DPCHeaderTI2021 },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     m.rU,
                     {
@@ -38254,26 +38768,26 @@
                         state: { bAutoScroll: !0 },
                         pathname: u._.dpc_watch((0, er.B2)(e)),
                       },
-                      className: kr().CenterContent,
+                      className: Fr().CenterContent,
                       "data-aos": "zoom-out",
                       "data-aos-duration": "1500",
                     },
                     o.createElement("img", {
-                      className: kr().TILogo,
+                      className: Fr().TILogo,
                       src: "".concat(
                         h.Y.IMG_URL,
                         "/dpc/ti10/ti_short_logo.png"
                       ),
                     }),
-                    o.createElement("div", { className: kr().Underline }),
+                    o.createElement("div", { className: Fr().Underline }),
                     o.createElement(
                       "div",
-                      { className: kr().EventTitle },
+                      { className: Fr().EventTitle },
                       (0, E.Jr)("#dpc_event_decade")
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().EventSubTitle },
+                      { className: Fr().EventSubTitle },
                       (0, E.Jr)("#dpc_event_2020season")
                     )
                   ),
@@ -38281,8 +38795,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhaseGroup
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhaseGroup
                       ),
                     },
                     (0, E.Jr)("#dpc_group_stage")
@@ -38291,8 +38805,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhaseGroupTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhaseGroupTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38304,8 +38818,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhasePlayoffs
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhasePlayoffs
                       ),
                     },
                     (0, E.Jr)("#dpc_main_event")
@@ -38314,8 +38828,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhasePlayoffsTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhasePlayoffsTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38325,49 +38839,49 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolTitle },
+                    { className: Fr().PrizePoolTitle },
                     (0, E.Jr)("#dpc_prizepool")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolValue },
+                    { className: Fr().PrizePoolValue },
                     "$40,018,195 USD"
                   )
                 )
               );
         }),
-        Vo = (0, d.Pi)(function () {
-          return xo() != tr._A.WINTER_2021_LEAGUE
+        Yo = (0, d.Pi)(function () {
+          return zo() != tr._A.WINTER_2021_LEAGUE
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderGenericLeague },
+                { className: Fr().DPCHeaderGenericLeague },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_winter")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_league_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 16381728e5,
                       format: "DD MMMM YYYY",
@@ -38375,12 +38889,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_league_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 16429248e5,
                       format: "DD MMMM YYYY",
@@ -38389,38 +38903,38 @@
                 )
               );
         }),
-        Jo = (0, d.Pi)(function () {
-          return xo() != tr._A.WINTER_2021_LEAGUE_FINALS
+        Zo = (0, d.Pi)(function () {
+          return zo() != tr._A.WINTER_2021_LEAGUE_FINALS
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderGenericLeague },
+                { className: Fr().DPCHeaderGenericLeague },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league_finals")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_winter")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_league_finals_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 16445592e5,
                       format: "DD MMMM YYYY",
@@ -38428,12 +38942,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_league_finals_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 1645344e6,
                       format: "DD MMMM YYYY",
@@ -38442,38 +38956,38 @@
                 )
               );
         }),
-        Yo = (0, d.Pi)(function () {
-          return xo() != tr._A.SPRING_2022_LEAGUE
+        Xo = (0, d.Pi)(function () {
+          return zo() != tr._A.SPRING_2022_LEAGUE
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderGenericLeague },
+                { className: Fr().DPCHeaderGenericLeague },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_spring")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_league_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 16472412e5,
                       format: "DD MMMM YYYY",
@@ -38481,12 +38995,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_league_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 16507836e5,
                       format: "DD MMMM YYYY",
@@ -38495,46 +39009,46 @@
                 )
               );
         }),
-        Zo = (0, d.Pi)(function () {
-          return xo() != tr._A.SPRING_2022_MAJOR
+        qo = (0, d.Pi)(function () {
+          return zo() != tr._A.SPRING_2022_MAJOR
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderSpring2022Major },
+                { className: Fr().DPCHeaderSpring2022Major },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventLoc },
+                    { className: Fr().EventLoc },
                     (0, E.Jr)("#dpc_event_springmajor22_location")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_springmajor22")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventPresented },
+                    { className: Fr().EventPresented },
                     (0, E.Jr)("#dpc_event_springmajor22_presented")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_spring")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
-                    (0, E.Jr)("#dpc_event_2022season")
+                    { className: Fr().EventSubTitle },
+                    (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhaseGroup
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhaseGroup
                       ),
                     },
                     (0, E.Jr)("#dpc_group_stage")
@@ -38543,8 +39057,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhaseGroupTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhaseGroupTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38556,8 +39070,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().EventPhasePlayoffs
+                        Fr().EventPhaseTitle,
+                        Fr().EventPhasePlayoffs
                       ),
                     },
                     (0, E.Jr)("#dpc_playoff")
@@ -38566,8 +39080,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTime,
-                        kr().EventPhasePlayoffsTime
+                        Fr().EventPhaseTime,
+                        Fr().EventPhasePlayoffsTime
                       ),
                     },
                     o.createElement(cr(), {
@@ -38577,49 +39091,49 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolTitle },
+                    { className: Fr().PrizePoolTitle },
                     (0, E.Jr)("#dpc_prizepool")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolValue },
+                    { className: Fr().PrizePoolValue },
                     "$500,000 USD"
                   )
                 )
               );
         }),
-        Xo = (0, d.Pi)(function () {
-          return xo() != tr._A.CHINA_SPRING_2022_LEAGUE_FINALS
+        Ko = (0, d.Pi)(function () {
+          return zo() != tr._A.CHINA_SPRING_2022_LEAGUE_FINALS
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderGenericLeague },
+                { className: Fr().DPCHeaderGenericLeague },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league_finals_cn")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_spring")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTitle },
+                    { className: Fr().EventStartTitle },
                     (0, E.Jr)("#dpc_event_league_finals_start")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventStartTime },
+                    { className: Fr().EventStartTime },
                     o.createElement(cr(), {
                       date: 16517952e5,
                       format: "DD MMMM YYYY",
@@ -38627,12 +39141,12 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTitle },
+                    { className: Fr().EventEndTitle },
                     (0, E.Jr)("#dpc_event_league_finals_end")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventEndTime },
+                    { className: Fr().EventEndTime },
                     o.createElement(cr(), {
                       date: 1651968e6,
                       format: "DD MMMM YYYY",
@@ -38641,45 +39155,45 @@
                 )
               );
         }),
-        qo = (0, d.Pi)(function () {
-          var e = xo();
+        Qo = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.SUMMER_2022_LEAGUE
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderSummer2022League },
+                { className: Fr().DPCHeaderSummer2022League },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_league")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_summer")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
+                    { className: Fr().EventSubTitle },
                     (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventTextContainer },
+                    { className: Fr().EventTextContainer },
                     o.createElement(
                       "div",
-                      { className: kr().EventPhaseBox },
+                      { className: Fr().EventPhaseBox },
                       o.createElement(
                         "div",
-                        { className: kr().EventStartTitle },
+                        { className: Fr().EventStartTitle },
                         (0, E.Jr)("#dpc_event_league_start")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().EventStartTime },
+                        { className: Fr().EventStartTime },
                         o.createElement(cr(), {
                           date: 16545024e5,
                           format: "DD MMMM YYYY",
@@ -38687,12 +39201,12 @@
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().EventEndTitle },
+                        { className: Fr().EventEndTitle },
                         (0, E.Jr)("#dpc_event_league_end")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().EventEndTime },
+                        { className: Fr().EventEndTime },
                         o.createElement(cr(), {
                           date: 16580448e5,
                           format: "DD MMMM YYYY",
@@ -38701,10 +39215,10 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().PrizePoolBox },
+                      { className: Fr().PrizePoolBox },
                       o.createElement(
                         "div",
-                        { className: kr().EventResultsTitle },
+                        { className: Fr().EventResultsTitle },
                         (0, E.Jr)("#dpc_event_summer22_results")
                       ),
                       o.createElement(
@@ -38720,7 +39234,7 @@
                                 .concat(tr.sd.DIVISION_I)
                             ),
                           },
-                          className: kr().EventResultsButton,
+                          className: Fr().EventResultsButton,
                         },
                         (0, E.Jr)("#dpc_results")
                       )
@@ -38729,53 +39243,53 @@
                 )
               );
         }),
-        Ko = (0, d.Pi)(function () {
-          var e = xo();
+        $o = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.SUMMER_2022_MAJOR
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderSummer2022Major },
+                { className: Fr().DPCHeaderSummer2022Major },
                 o.createElement(
                   "div",
-                  { className: kr().TextContainer },
+                  { className: Fr().TextContainer },
                   o.createElement(
                     "div",
-                    { className: kr().EventLoc },
+                    { className: Fr().EventLoc },
                     (0, E.Jr)("#dpc_event_summermajor22_loc")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventTitle },
+                    { className: Fr().EventTitle },
                     (0, E.Jr)("#dpc_event_summermajor22")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventPresented },
+                    { className: Fr().EventPresented },
                     (0, E.Jr)("#dpc_event_summermajor22_presented")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSegment },
+                    { className: Fr().EventSegment },
                     (0, E.Jr)("#dpc_event_summer")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventSubTitle },
-                    (0, E.Jr)("#dpc_event_2022season")
+                    { className: Fr().EventSubTitle },
+                    (0, E.Jr)("#dpc_event_2021season")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventTextContainer },
+                    { className: Fr().EventTextContainer },
                     o.createElement(
                       "div",
-                      { className: kr().EventPhaseBox },
+                      { className: Fr().EventPhaseBox },
                       o.createElement(
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTitle,
-                            kr().EventPhaseGroup
+                            Fr().EventPhaseTitle,
+                            Fr().EventPhaseGroup
                           ),
                         },
                         (0, E.Jr)("#dpc_group_stage")
@@ -38784,8 +39298,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTime,
-                            kr().EventPhaseGroupTime
+                            Fr().EventPhaseTime,
+                            Fr().EventPhaseGroupTime
                           ),
                         },
                         o.createElement(cr(), {
@@ -38797,8 +39311,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTitle,
-                            kr().EventPhasePlayoffs
+                            Fr().EventPhaseTitle,
+                            Fr().EventPhasePlayoffs
                           ),
                         },
                         (0, E.Jr)("#dpc_playoff")
@@ -38807,8 +39321,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTime,
-                            kr().EventPhasePlayoffsTime
+                            Fr().EventPhaseTime,
+                            Fr().EventPhasePlayoffsTime
                           ),
                         },
                         o.createElement(cr(), {
@@ -38820,8 +39334,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTitle,
-                            kr().EventPhaseMainEvent
+                            Fr().EventPhaseTitle,
+                            Fr().EventPhaseMainEvent
                           ),
                         },
                         (0, E.Jr)("#dpc_main_event")
@@ -38830,8 +39344,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTime,
-                            kr().EventPhaseMainEventTime
+                            Fr().EventPhaseTime,
+                            Fr().EventPhaseMainEventTime
                           ),
                         },
                         o.createElement(cr(), {
@@ -38842,20 +39356,20 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().PrizePoolBox },
+                      { className: Fr().PrizePoolBox },
                       o.createElement(
                         "div",
-                        { className: kr().PrizePoolTitle },
+                        { className: Fr().PrizePoolTitle },
                         (0, E.Jr)("#dpc_prizepool")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().PrizePoolValue },
+                        { className: Fr().PrizePoolValue },
                         "$500,000 USD"
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().EventResultsTitle },
+                        { className: Fr().EventResultsTitle },
                         (0, E.Jr)("#dpc_event_summermajor22_results")
                       ),
                       o.createElement(
@@ -38871,7 +39385,7 @@
                                 .concat(tr.sd.DIVISION_I)
                             ),
                           },
-                          className: kr().EventResultsButton,
+                          className: Fr().EventResultsButton,
                         },
                         (0, E.Jr)("#dpc_results")
                       )
@@ -38880,32 +39394,32 @@
                 )
               );
         }),
-        Qo = (0, d.Pi)(function () {
-          var e = xo();
+        es = (0, d.Pi)(function () {
+          var e = zo();
           return e != tr._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
             : o.createElement(
                 "div",
-                { className: kr().DPCHeaderTI2022LastChance },
+                { className: Fr().DPCHeaderTI2022LastChance },
                 o.createElement(
                   "div",
-                  { className: kr().LCQTextContainer },
+                  { className: Fr().LCQTextContainer },
                   o.createElement(
                     "div",
                     {
-                      className: kr().LCQEventTextContainer,
+                      className: Fr().LCQEventTextContainer,
                       "data-aos": "zoom-out",
                       "data-aos-duration": "1500",
                     },
                     o.createElement(
                       "div",
-                      { className: kr().LCQEventPhaseBox },
+                      { className: Fr().LCQEventPhaseBox },
                       o.createElement(
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTitle,
-                            kr().LCQEventStartTitle
+                            Fr().EventPhaseTitle,
+                            Fr().LCQEventStartTitle
                           ),
                         },
                         (0, E.Jr)("#dpc_event_ti10quals_start")
@@ -38914,8 +39428,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTime,
-                            kr().LCQEventStartDate
+                            Fr().EventPhaseTime,
+                            Fr().LCQEventStartDate
                           ),
                         },
                         o.createElement(cr(), {
@@ -38927,8 +39441,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTitle,
-                            kr().LCQEventEndTitle
+                            Fr().EventPhaseTitle,
+                            Fr().LCQEventEndTitle
                           ),
                         },
                         (0, E.Jr)("#dpc_event_ti10quals_end")
@@ -38937,8 +39451,8 @@
                         "div",
                         {
                           className: (0, b.Z)(
-                            kr().EventPhaseTime,
-                            kr().LCQEventEndDate
+                            Fr().EventPhaseTime,
+                            Fr().LCQEventEndDate
                           ),
                         },
                         o.createElement(cr(), {
@@ -38949,7 +39463,7 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().LCQCenterText },
+                      { className: Fr().LCQCenterText },
                       o.createElement(
                         m.rU,
                         {
@@ -38957,30 +39471,30 @@
                             state: { bAutoScroll: !0 },
                             pathname: u._.dpc_watch((0, er.B2)(e)),
                           },
-                          className: kr().CenterContent,
+                          className: Fr().CenterContent,
                         },
                         o.createElement("img", {
-                          className: kr().LCQLogo,
+                          className: Fr().LCQLogo,
                           src: "".concat(h.Y.IMG_URL, "/dpc/logo_lc_quals.png"),
                         })
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().LCQEventTitle },
+                        { className: Fr().LCQEventTitle },
                         (0, E.Jr)("#dpc_event_ti11lastchance")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().LCQEventSubTitle },
-                        (0, E.Jr)("#dpc_event_2022season")
+                        { className: Fr().LCQEventSubTitle },
+                        (0, E.Jr)("#dpc_event_2021season")
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: kr().PrizePoolBox },
+                      { className: Fr().PrizePoolBox },
                       o.createElement(
                         "div",
-                        { className: kr().EventResultsTitle },
+                        { className: Fr().EventResultsTitle },
                         (0, E.Jr)("#dpc_event_results_ti11quals")
                       ),
                       o.createElement(
@@ -38993,7 +39507,7 @@
                               (0, er.o5)(tr.BY.PLAYOFF)
                             ),
                           },
-                          className: kr().EventResultsButton,
+                          className: Fr().EventResultsButton,
                         },
                         (0, E.Jr)("#dpc_results")
                       )
@@ -39002,9 +39516,9 @@
                 )
               );
         }),
-        $o = (0, d.Pi)(function () {
+        ts = (0, d.Pi)(function () {
           var e,
-            t = xo();
+            t = zo();
           if (t != tr._A.INTERNATIONAL_2022) return null;
           var n = $a.f.Get().GetEventInfo(t);
           if (n.event != tr._A.INTERNATIONAL_2022) return null;
@@ -39015,33 +39529,33 @@
                 : e.total_prize_pool) || 0;
           return o.createElement(
             "div",
-            { className: kr().DPCHeaderTI2022 },
+            { className: Fr().DPCHeaderTI2022 },
             o.createElement(
               "div",
-              { className: kr().TI11BannerContainer },
+              { className: Fr().TI11BannerContainer },
               o.createElement(
                 "div",
                 {
-                  className: kr().TI11BannerContent,
+                  className: Fr().TI11BannerContent,
                   "data-aos": "zoom-out",
                   "data-aos-duration": "1500",
                 },
                 o.createElement(
                   "div",
-                  { className: kr().TI11EventPhaseBox },
+                  { className: Fr().TI11EventPhaseBox },
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().TI11GroupTitle
+                        Fr().EventPhaseTitle,
+                        Fr().TI11GroupTitle
                       ),
                     },
                     (0, E.Jr)("#dpc_group_stage")
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(kr().TI11GroupStartDate) },
+                    { className: (0, b.Z)(Fr().TI11GroupStartDate) },
                     o.createElement(cr(), {
                       date: 16657992e5,
                       format: "MMM DD",
@@ -39053,15 +39567,15 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().TI11PlayoffTitle
+                        Fr().EventPhaseTitle,
+                        Fr().TI11PlayoffTitle
                       ),
                     },
                     (0, E.Jr)("#dpc_playoff")
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(kr().TI11PlayoffStartDate) },
+                    { className: (0, b.Z)(Fr().TI11PlayoffStartDate) },
                     o.createElement(cr(), {
                       date: 16662312e5,
                       format: "MMM DD",
@@ -39073,15 +39587,15 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        kr().EventPhaseTitle,
-                        kr().TI11FinalsTitle
+                        Fr().EventPhaseTitle,
+                        Fr().TI11FinalsTitle
                       ),
                     },
                     (0, E.Jr)("#dpc_finals")
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(kr().TI11FinalsStartDate) },
+                    { className: (0, b.Z)(Fr().TI11FinalsStartDate) },
                     o.createElement(cr(), {
                       date: 16670088e5,
                       format: "MMM DD",
@@ -39092,7 +39606,7 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: kr().TI11CenterBox },
+                  { className: Fr().TI11CenterBox },
                   o.createElement(
                     m.rU,
                     {
@@ -39100,12 +39614,12 @@
                         state: { bAutoScroll: !0 },
                         pathname: u._.dpc_watch((0, er.B2)(t)),
                       },
-                      className: kr().CenterContent,
+                      className: Fr().CenterContent,
                       "data-aos": "zoom-out",
                       "data-aos-duration": "1500",
                     },
                     o.createElement("img", {
-                      className: kr().TILogo,
+                      className: Fr().TILogo,
                       src: "".concat(
                         h.Y.IMG_URL,
                         "international2022/logos/ti_logo.png"
@@ -39114,26 +39628,26 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().TI11Season },
+                    { className: Fr().TI11Season },
                     (0, E.Jr)("#dpc_event_2021season")
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: kr().TI11PrizePoolBox },
+                  { className: Fr().TI11PrizePoolBox },
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolTitle },
+                    { className: Fr().PrizePoolTitle },
                     (0, E.Jr)("#dpc_prizepool")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().PrizePoolValue },
+                    { className: Fr().PrizePoolValue },
                     r > 0 ? "$" + r.toLocaleString() : ""
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().EventResultsTitle },
+                    { className: Fr().EventResultsTitle },
                     (0, E.Jr)("#dpc_event_results_ti11")
                   ),
                   o.createElement(
@@ -39146,7 +39660,7 @@
                           (0, er.o5)(tr.BY.RESULTS)
                         ),
                       },
-                      className: kr().EventResultsButton,
+                      className: Fr().EventResultsButton,
                     },
                     (0, E.Jr)("#dpc_results")
                   )
@@ -39155,8 +39669,8 @@
             )
           );
         }),
-        es = (0, d.Pi)(function () {
-          var e = xo(),
+        ns = (0, d.Pi)(function () {
+          var e = zo(),
             t = "#212026",
             n = "#212026";
           switch (e) {
@@ -39196,7 +39710,7 @@
           return o.createElement(
             "div",
             {
-              className: kr().DPCHeaderImage,
+              className: Fr().DPCHeaderImage,
               style: {
                 height: 400,
                 backgroundImage: "url( "
@@ -39206,8 +39720,6 @@
                   .concat(n, " 51% )"),
               },
             },
-            o.createElement(zo, null),
-            o.createElement(Ho, null),
             o.createElement(Wo, null),
             o.createElement(jo, null),
             o.createElement(Vo, null),
@@ -39218,20 +39730,22 @@
             o.createElement(qo, null),
             o.createElement(Ko, null),
             o.createElement(Qo, null),
-            o.createElement($o, null)
+            o.createElement($o, null),
+            o.createElement(es, null),
+            o.createElement(ts, null)
           );
         }),
-        ts = (0, d.Pi)(function () {
-          var e = xo();
+        as = (0, d.Pi)(function () {
+          var e = zo();
           return $a.f.Get().GetSpoilerBlockState(e) != tr.rE.UNKNOWN
             ? null
             : o.createElement(
                 "div",
-                { className: kr().SpoilerBlockPopup },
+                { className: Fr().SpoilerBlockPopup },
                 o.createElement(
                   "div",
                   {
-                    className: kr().Box,
+                    className: Fr().Box,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -39241,43 +39755,43 @@
                   },
                   o.createElement(
                     "div",
-                    { className: kr().ModalImg },
+                    { className: Fr().ModalImg },
                     o.createElement("img", {
-                      className: kr().DPCLogo,
+                      className: Fr().DPCLogo,
                       src: "".concat(h.Y.IMG_URL, "/dpc/dpc_logo.png"),
                     })
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().Header },
+                    { className: Fr().Header },
                     (0, E.Jr)("#dpc_spoiler_popup_header")
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().Options },
+                    { className: Fr().Options },
                     o.createElement(
                       "div",
-                      { className: (0, b.Z)(kr().Option, kr().OptionStandard) },
+                      { className: (0, b.Z)(Fr().Option, Fr().OptionStandard) },
                       o.createElement(
                         "div",
-                        { className: kr().Label },
+                        { className: Fr().Label },
                         (0, E.Jr)("#dpc_spoiler_popup_label")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().Title },
+                        { className: Fr().Title },
                         o.createElement(ja.Hs, null),
                         (0, E.Jr)("#dpc_spoiler_popup_standard_title")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().Desc },
+                        { className: Fr().Desc },
                         (0, E.Jr)("#dpc_spoiler_popup_standard_desc")
                       ),
                       o.createElement(
                         "div",
                         {
-                          className: kr().Button,
+                          className: Fr().Button,
                           onClick: function () {
                             return $a.f.Get().SetSpoilerBlockEnabled(!1);
                           },
@@ -39285,31 +39799,31 @@
                         (0, E.Jr)("#dpc_spoiler_popup_standard_btn")
                       )
                     ),
-                    o.createElement("div", { className: kr().Divider }),
+                    o.createElement("div", { className: Fr().Divider }),
                     o.createElement(
                       "div",
                       {
                         className: (0, b.Z)(
-                          kr().Option,
-                          kr().OptionSpoilerFree
+                          Fr().Option,
+                          Fr().OptionSpoilerFree
                         ),
                       },
-                      o.createElement("div", { className: kr().Label }),
+                      o.createElement("div", { className: Fr().Label }),
                       o.createElement(
                         "div",
-                        { className: kr().Title },
+                        { className: Fr().Title },
                         o.createElement(ja.mD, null),
                         (0, E.Jr)("#dpc_spoiler_popup_spoiler_title")
                       ),
                       o.createElement(
                         "div",
-                        { className: kr().Desc },
+                        { className: Fr().Desc },
                         (0, E.Jr)("#dpc_spoiler_popup_spoiler_desc")
                       ),
                       o.createElement(
                         "div",
                         {
-                          className: kr().Button,
+                          className: Fr().Button,
                           onClick: function () {
                             return $a.f.Get().SetSpoilerBlockEnabled(!0);
                           },
@@ -39320,13 +39834,13 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: kr().Note },
+                    { className: Fr().Note },
                     (0, E.Jr)("#dpc_spoiler_popup_change")
                   ),
                   o.createElement(
                     "div",
                     {
-                      className: kr().Skip,
+                      className: Fr().Skip,
                       onClick: function () {
                         return $a.f.Get().SetSpoilerBlockEnabled(!1);
                       },
@@ -39336,7 +39850,7 @@
                 )
               );
         }),
-        ns = (0, d.Pi)(function () {
+        rs = (0, d.Pi)(function () {
           var e = (function () {
               var e = (0, o.useState)(!0),
                 t = e[0],
@@ -39435,24 +39949,24 @@
           var b = $a.f.Get().IsGCDown();
           return o.createElement(
             "div",
-            { className: kr().DPCRoot },
+            { className: Fr().DPCRoot },
             o.createElement(
               L.q,
               null,
               o.createElement("title", null, (0, E.Jr)("#dpc_page_title"))
             ),
             o.createElement(
-              Uo,
+              Ho,
               { eventContext: h },
               o.createElement(Ae.j, { bOverlapping: !1 }),
-              o.createElement(ts, null),
+              o.createElement(as, null),
               o.createElement(Cr, null),
-              o.createElement(es, null),
+              o.createElement(ns, null),
               o.createElement(rr, null),
               b &&
                 o.createElement(
                   "div",
-                  { className: kr().GCDown },
+                  { className: Fr().GCDown },
                   (0, E.Jr)("#dpc_gc_down")
                 ),
               !b &&
@@ -39466,7 +39980,7 @@
                       ":strNodeID?",
                       ":strSeriesDisplay?"
                     ),
-                    component: Go,
+                    component: Po,
                   }),
                   o.createElement(Nr, {
                     path: u._.dpc_standings(
@@ -39474,7 +39988,7 @@
                       ":strPhase?",
                       ":strSelection?"
                     ),
-                    component: Ri,
+                    component: Ai,
                   }),
                   o.createElement(Nr, {
                     path: u._.dpc_schedule(
@@ -39482,19 +39996,19 @@
                       ":strMonthOrLeague?",
                       ":strDayOrNode?"
                     ),
-                    component: Yr,
+                    component: Xr,
                   }),
                   o.createElement(Nr, {
                     path: u._.dpc_about(":strEvent?"),
-                    component: Mr,
+                    component: kr,
                   }),
                   o.createElement(Nr, {
                     path: u._.dpc_ti_standings(":strEvent?"),
-                    component: qr,
+                    component: Qr,
                   }),
                   o.createElement(Nr, {
                     path: u._.dpc_ti_rules(":strEvent?"),
-                    component: Fo,
+                    component: xo,
                   }),
                   o.createElement(p.l_, { from: u._.dpc_root(), to: v })
                 ),
@@ -39502,16 +40016,16 @@
             )
           );
         }),
-        as = n(10145),
-        rs = n.n(as);
-      function is() {
+        is = n(10145),
+        os = n.n(is);
+      function ss() {
         var e = oe(),
           t = (e.height, e.width),
           n = 5;
         return t < 1300 && (n = 4), t < 1e3 && (n = 3), t < 600 && (n = 2), n;
       }
-      var os,
-        ss = function (e) {
+      var ls,
+        cs = function (e) {
           var t = e.hero,
             n = e.hidden,
             a = e.pos,
@@ -39526,14 +40040,14 @@
             case 2:
               r = "intelligence";
           }
-          var i = is(),
+          var i = ss(),
             s = Math.max(0, a % i),
             l = Math.max(0, Math.floor(a / i));
           return o.createElement(
             m.rU,
             {
               to: u._.hero(t.name_english_loc.replace(/ /g, "").toLowerCase()),
-              className: (0, b.Z)(rs().HeroIcon, n && rs().Hidden),
+              className: (0, b.Z)(os().HeroIcon, n && os().Hidden),
               style: {
                 backgroundImage: "url( "
                   .concat(h.Y.IMG_URL, "heroes/")
@@ -39541,28 +40055,28 @@
                 left: "calc( ( 5 - "
                   .concat(i, " ) * 122px + ")
                   .concat(s, " * ( 100% - ")
-                  .concat(rs().heroIconWidth, "px ) / 4 )"),
+                  .concat(os().heroIconWidth, "px ) / 4 )"),
                 top: "calc( "
                   .concat(l, " * ")
-                  .concat(rs().heroIconPaddedHeight, "px )"),
+                  .concat(os().heroIconPaddedHeight, "px )"),
               },
             },
             o.createElement(
               "div",
-              { className: rs().HeroNameContainer },
+              { className: os().HeroNameContainer },
               o.createElement("img", {
                 src: "".concat(h.Y.IMG_URL, "icons/hero_").concat(r, ".png"),
-                className: rs().PrimaryStatIcon,
+                className: os().PrimaryStatIcon,
               }),
               o.createElement(
                 "div",
-                { className: rs().HeroName },
+                { className: os().HeroName },
                 (0, E.Jr)(t.name_loc)
               )
             ),
             o.createElement(
               "div",
-              { className: rs().FadeContainer },
+              { className: os().FadeContainer },
               o.createElement(N.p, {
                 bottom: !0,
                 color: "#000000",
@@ -39573,7 +40087,7 @@
             )
           );
         },
-        ls = function (e) {
+        us = function (e) {
           var t = e.heroList,
             n = (0, o.useState)(0),
             a = n[0],
@@ -39600,13 +40114,13 @@
             t.heroes.forEach(function (e) {
               return (p += m(e) ? 1 : 0);
             });
-          var _ = is(),
-            g = parseInt(rs().heroIconPaddedHeight),
+          var _ = ss(),
+            g = parseInt(os().heroIconPaddedHeight),
             f = 0;
           return o.createElement(
             "div",
             {
-              className: rs().HeroGrid,
+              className: os().HeroGrid,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -39617,42 +40131,42 @@
             o.createElement(
               "div",
               {
-                className: rs().Header,
+                className: os().Header,
                 "data-aos": "fade-in",
                 "data-aos-duration": "1000",
               },
-              o.createElement("div", { className: rs().Trapezoid }),
+              o.createElement("div", { className: os().Trapezoid }),
               o.createElement(
                 "div",
-                { className: rs().TitleText },
+                { className: os().TitleText },
                 (0, E.Jr)("#herogrid_choose")
               ),
               o.createElement(
                 "div",
-                { className: rs().SubtitleText },
+                { className: os().SubtitleText },
                 (0, E.Jr)("#home_choose_body")
               )
             ),
             o.createElement(
               "div",
-              { className: rs().FilterContainer },
+              { className: os().FilterContainer },
               o.createElement(
                 "div",
-                { className: rs().FilterLabel },
+                { className: os().FilterLabel },
                 (0, E.Jr)("#herogrid_filter")
               ),
               o.createElement(
                 "div",
-                { className: rs().SpecificFilterContainer },
+                { className: os().SpecificFilterContainer },
                 o.createElement(
                   "div",
-                  { className: rs().SelectorLabel },
+                  { className: os().SelectorLabel },
                   (0, E.Jr)("#herogrid_attribute")
                 ),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    1 == a && 0 == u.length && rs().Selected
+                    os().Filter,
+                    1 == a && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39666,8 +40180,8 @@
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    2 == a && 0 == u.length && rs().Selected
+                    os().Filter,
+                    2 == a && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39681,8 +40195,8 @@
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    3 == a && 0 == u.length && rs().Selected
+                    os().Filter,
+                    3 == a && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39697,16 +40211,16 @@
               ),
               o.createElement(
                 "div",
-                { className: rs().SpecificFilterContainer },
+                { className: os().SpecificFilterContainer },
                 o.createElement(
                   "div",
-                  { className: rs().SelectorLabel },
+                  { className: os().SelectorLabel },
                   (0, E.Jr)("#herogrid_complexity")
                 ),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    s >= 1 && 0 == u.length && rs().Selected
+                    os().Filter,
+                    s >= 1 && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39720,8 +40234,8 @@
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    s >= 2 && 0 == u.length && rs().Selected
+                    os().Filter,
+                    s >= 2 && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39735,8 +40249,8 @@
                 }),
                 o.createElement("div", {
                   className: (0, b.Z)(
-                    rs().Filter,
-                    s >= 3 && 0 == u.length && rs().Selected
+                    os().Filter,
+                    s >= 3 && 0 == u.length && os().Selected
                   ),
                   style: {
                     backgroundImage: "url( ".concat(
@@ -39751,12 +40265,12 @@
               ),
               o.createElement(
                 "div",
-                { className: rs().SearchBarContainer },
+                { className: os().SearchBarContainer },
                 o.createElement(
                   "div",
-                  { className: rs().SearchBar },
+                  { className: os().SearchBar },
                   o.createElement("div", {
-                    className: rs().MagnifyingGlass,
+                    className: os().MagnifyingGlass,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -39780,18 +40294,18 @@
             ),
             o.createElement(
               "div",
-              { className: (0, b.Z)(rs().StateLoading, !t && rs().Show) },
+              { className: (0, b.Z)(os().StateLoading, !t && os().Show) },
               (0, E.Jr)("#loading")
             ),
             o.createElement(
               "div",
-              { className: (0, b.Z)(rs().NoHeroes, t && 0 == p && rs().Show) },
+              { className: (0, b.Z)(os().NoHeroes, t && 0 == p && os().Show) },
               (0, E.Jr)("#herogrid_noheroes")
             ),
             o.createElement(
               "div",
               {
-                className: rs().GridList,
+                className: os().GridList,
                 style: { height: Math.ceil(p / _) * g + 40 },
               },
               t &&
@@ -39804,7 +40318,7 @@
                     var t = m(e);
                     return (
                       (f += t ? 1 : 0),
-                      o.createElement(ss, {
+                      o.createElement(cs, {
                         key: e.id,
                         hero: e,
                         hidden: !t,
@@ -39815,11 +40329,11 @@
             )
           );
         },
-        cs = (0, d.Pi)(function (e) {
-          var t = Or.L.Get().getHeroList();
+        ds = (0, d.Pi)(function (e) {
+          var t = Ur.L.Get().getHeroList();
           return o.createElement(
             "div",
-            { className: rs().HeroGridPage },
+            { className: os().HeroGridPage },
             o.createElement(Ae.j, { bOverlapping: !0 }),
             o.createElement(Ha.Z, null),
             o.createElement(
@@ -39827,13 +40341,13 @@
               null,
               o.createElement("title", null, (0, E.Jr)("#herogrid_title"))
             ),
-            o.createElement(ls, { heroList: t }),
+            o.createElement(us, { heroList: t }),
             o.createElement(B.U, null)
           );
         }),
-        us = n(47341),
-        ds = n.n(us),
-        ms = [
+        ms = n(47341),
+        ps = n.n(ms),
+        _s = [
           "#hero_carry",
           "#hero_support",
           "#hero_nuker",
@@ -39844,16 +40358,16 @@
           "#hero_pusher",
           "#hero_initiator",
         ],
-        ps = function (e) {
+        gs = function (e) {
           var t = e.heroname.split("npc_dota_hero_").pop();
           return t
             ? o.createElement(
                 "div",
-                { className: (0, b.Z)(ds().HeroPortraitContainer, t) },
+                { className: (0, b.Z)(ps().HeroPortraitContainer, t) },
                 o.createElement(
                   "video",
                   {
-                    className: ds().HeroPortrait,
+                    className: ps().HeroPortrait,
                     poster: ""
                       .concat(h.Y.VIDEO_URL, "heroes/renders/")
                       .concat(t, ".png"),
@@ -39878,7 +40392,7 @@
               )
             : null;
         },
-        _s = function (e) {
+        hs = function (e) {
           var t = e.heroData,
             n = (0, o.useState)(!1),
             a = n[0],
@@ -39906,37 +40420,37 @@
           var l = t.bio_loc.replace(/\n/g, "");
           return o.createElement(
             "div",
-            { className: ds().HeroSummary },
+            { className: ps().HeroSummary },
             o.createElement(
               "div",
-              { className: ds().HeroTypeTitle },
+              { className: ps().HeroTypeTitle },
               o.createElement("img", {
                 src: "".concat(h.Y.IMG_URL, "icons/hero_").concat(i, ".png"),
-                className: ds().PrimaryStatIcon,
+                className: ps().PrimaryStatIcon,
               }),
               o.createElement(
                 "div",
-                { className: ds().PrimaryStat },
+                { className: ps().PrimaryStat },
                 (0, E.Jr)("#hero_".concat(i))
               )
             ),
-            o.createElement("div", { className: ds().HeroName }, t.name_loc),
+            o.createElement("div", { className: ps().HeroName }, t.name_loc),
             o.createElement(
               "div",
-              { className: ds().HeroOneLiner },
+              { className: ps().HeroOneLiner },
               t.npe_desc_loc
             ),
             o.createElement(
               "div",
-              { className: ds().BioOrSummaryContainer },
+              { className: ps().BioOrSummaryContainer },
               o.createElement(
                 "div",
-                { className: (0, b.Z)(ds().BioContainer, !a && ds().Hidden) },
+                { className: (0, b.Z)(ps().BioContainer, !a && ps().Hidden) },
                 (0, E.Jr)(l),
                 o.createElement(
                   "div",
                   {
-                    className: ds().ShowBio,
+                    className: ps().ShowBio,
                     onClick: function () {
                       return r(!1);
                     },
@@ -39947,16 +40461,16 @@
               o.createElement(
                 "div",
                 {
-                  className: (0, b.Z)(ds().SummaryContainer, a && ds().Hidden),
+                  className: (0, b.Z)(ps().SummaryContainer, a && ps().Hidden),
                 },
                 o.createElement(
                   "div",
-                  { className: ds().Lore },
+                  { className: ps().Lore },
                   (0, E.Jr)(t.hype_loc),
                   o.createElement(
                     "div",
                     {
-                      className: ds().ShowBio,
+                      className: ps().ShowBio,
                       onClick: function () {
                         return r(!0);
                       },
@@ -39966,63 +40480,63 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().AttackTypeContainer },
+                  { className: ps().AttackTypeContainer },
                   o.createElement(
                     "div",
-                    { className: ds().Title },
+                    { className: ps().Title },
                     (0, E.Jr)("#hero_attack_type")
                   ),
                   o.createElement(
                     "div",
-                    { className: ds().AttackTypeDetail },
+                    { className: ps().AttackTypeDetail },
                     o.createElement("img", {
-                      className: ds().AttackTypeIcon,
+                      className: ps().AttackTypeIcon,
                       src: "".concat(h.Y.IMG_URL, "icons/").concat(s, ".svg"),
                     }),
                     o.createElement(
                       "div",
-                      { className: ds().Value },
+                      { className: ps().Value },
                       (0, E.Jr)("#hero_attack_type_".concat(s))
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().ComplexityContainer },
+                  { className: ps().ComplexityContainer },
                   o.createElement(
                     "div",
-                    { className: ds().Title },
+                    { className: ps().Title },
                     (0, E.Jr)("#hero_complexity")
                   ),
                   o.createElement(
                     "div",
-                    { className: ds().PipContainer },
+                    { className: ps().PipContainer },
                     o.createElement("div", {
                       className: (0, b.Z)(
-                        ds().DiamondPip,
-                        t.complexity >= 1 && ds().Filled
+                        ps().DiamondPip,
+                        t.complexity >= 1 && ps().Filled
                       ),
                     }),
                     o.createElement("div", {
                       className: (0, b.Z)(
-                        ds().DiamondPip,
-                        t.complexity >= 2 && ds().Filled
+                        ps().DiamondPip,
+                        t.complexity >= 2 && ps().Filled
                       ),
                     }),
                     o.createElement("div", {
                       className: (0, b.Z)(
-                        ds().DiamondPip,
-                        t.complexity >= 3 && ds().Filled
+                        ps().DiamondPip,
+                        t.complexity >= 3 && ps().Filled
                       ),
                     })
                   )
                 ),
-                o.createElement(fs, { heroData: t })
+                o.createElement(bs, { heroData: t })
               )
             )
           );
         },
-        gs = function (e, t) {
+        fs = function (e, t) {
           var n = e.talents[t],
             a = e.talents[t].name_loc;
           return (
@@ -40053,7 +40567,7 @@
             a
           );
         },
-        hs = function (e) {
+        vs = function (e) {
           var t = e.heroData;
           if (!t) return null;
           var n = "";
@@ -40069,54 +40583,54 @@
           }
           return o.createElement(
             "div",
-            { className: ds().HeroVerticalBar },
+            { className: ps().HeroVerticalBar },
             o.createElement("img", {
               src: "".concat(h.Y.IMG_URL, "icons/hero_").concat(n, ".png"),
-              className: ds().PrimaryStatIcon,
+              className: ps().PrimaryStatIcon,
             }),
-            o.createElement("div", { className: ds().HeroName }, t.name_loc),
-            o.createElement("div", { className: ds().HeroID }, t.order_id),
-            o.createElement("div", { className: ds().Line })
+            o.createElement("div", { className: ps().HeroName }, t.name_loc),
+            o.createElement("div", { className: ps().HeroID }, t.order_id),
+            o.createElement("div", { className: ps().Line })
           );
         },
-        fs = function (e) {
+        bs = function (e) {
           var t = e.heroData;
           return t
             ? o.createElement(
                 "div",
-                { className: ds().TopAbilitySelector },
+                { className: ps().TopAbilitySelector },
                 o.createElement(
                   "div",
-                  { className: ds().Title },
+                  { className: ps().Title },
                   (0, E.Jr)("#hero_abilities")
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().AbilityList },
+                  { className: ps().AbilityList },
                   o.createElement(
                     "div",
-                    { className: ds().TopAbilityContainer },
+                    { className: ps().TopAbilityContainer },
                     o.createElement("img", {
-                      className: ds().AttackTypeIcon,
+                      className: ps().AttackTypeIcon,
                       src: "".concat(h.Y.IMG_URL, "icons/talents.svg"),
                     }),
                     o.createElement(
                       "div",
                       {
-                        className: (0, b.Z)(ds().AbilityTooltip, ds().Talents),
+                        className: (0, b.Z)(ps().AbilityTooltip, ps().Talents),
                       },
                       o.createElement(
                         "div",
-                        { className: (0, b.Z)(ds().TooltipBody, ds().Talents) },
+                        { className: (0, b.Z)(ps().TooltipBody, ps().Talents) },
                         o.createElement(
                           "div",
-                          { className: ds().TalentContainer },
+                          { className: ps().TalentContainer },
                           o.createElement(
                             "div",
-                            { className: ds().TalentTitle },
+                            { className: ps().TalentTitle },
                             (0, E.Jr)("#hero_talent_tree")
                           ),
-                          (0, xr.bE)(0, t.talents.length / 2 - 1)
+                          (0, zr.bE)(0, t.talents.length / 2 - 1)
                             .reverse()
                             .map(function (e) {
                               t.talents[2 * e + 1], t.talents[2 * e];
@@ -40124,24 +40638,24 @@
                                 "div",
                                 {
                                   key: "talentrow_".concat(e),
-                                  className: ds().TalentRow,
+                                  className: ps().TalentRow,
                                 },
                                 o.createElement(
                                   "div",
                                   {
                                     className: (0, b.Z)(
-                                      ds().TalentEntry,
-                                      ds().Left
+                                      ps().TalentEntry,
+                                      ps().Left
                                     ),
                                   },
-                                  gs(t, 2 * e + 1)
+                                  fs(t, 2 * e + 1)
                                 ),
                                 o.createElement(
                                   "div",
-                                  { className: ds().TalentLevelContainer },
+                                  { className: ps().TalentLevelContainer },
                                   o.createElement(
                                     "div",
-                                    { className: ds().TalentLevel },
+                                    { className: ps().TalentLevel },
                                     10 + 5 * e
                                   )
                                 ),
@@ -40149,11 +40663,11 @@
                                   "div",
                                   {
                                     className: (0, b.Z)(
-                                      ds().TalentEntry,
-                                      ds().Right
+                                      ps().TalentEntry,
+                                      ps().Right
                                     ),
                                   },
-                                  gs(t, 2 * e)
+                                  fs(t, 2 * e)
                                 )
                               );
                             })
@@ -40188,35 +40702,35 @@
                         "div",
                         {
                           key: e.name,
-                          className: ds().TopAbilityContainer,
+                          className: ps().TopAbilityContainer,
                           onClick: function () {
                             window.scrollTo({
                               top: document.body.scrollHeight,
                               behavior: "smooth",
                             }),
-                              fp.setSelectedAbilityIndex(n);
+                              Ep.setSelectedAbilityIndex(n);
                           },
                         },
                         o.createElement("img", {
-                          className: ds().AbilitySelectable,
+                          className: ps().AbilitySelectable,
                           src: ""
                             .concat(h.Y.IMG_URL, "abilities/")
                             .concat(e.name, ".png"),
                         }),
                         o.createElement(
                           "div",
-                          { className: ds().AbilityTooltip },
+                          { className: ps().AbilityTooltip },
                           o.createElement(
                             "div",
-                            { className: ds().TooltipBody },
+                            { className: ps().TooltipBody },
                             o.createElement(
                               "div",
-                              { className: ds().Video },
+                              { className: ps().Video },
                               o.createElement(
                                 "video",
                                 {
                                   key: e.name,
-                                  className: ds().HeroPortrait,
+                                  className: ps().HeroPortrait,
                                   autoPlay: !0,
                                   preload: "auto",
                                   muted: !0,
@@ -40245,16 +40759,16 @@
                             ),
                             o.createElement(
                               "div",
-                              { className: ds().Description },
+                              { className: ps().Description },
                               o.createElement(
                                 "div",
-                                { className: ds().TooltipTitle },
+                                { className: ps().TooltipTitle },
                                 e.name_loc,
                                 " "
                               ),
                               o.createElement(
                                 "div",
-                                { className: ds().TooltipDescription },
+                                { className: ps().TooltipDescription },
                                 (0, E.Jr)(a),
                                 " "
                               )
@@ -40267,51 +40781,51 @@
               )
             : null;
         },
-        vs = function (e) {
+        Es = function (e) {
           var t = e.heroData;
           return t
             ? o.createElement(
                 "div",
-                { className: ds().DetailsAttributes },
+                { className: ps().DetailsAttributes },
                 o.createElement(
                   "div",
-                  { className: ds().TopAttributesSection },
+                  { className: ps().TopAttributesSection },
                   o.createElement(
                     "div",
-                    { className: ds().PortraitContainer },
+                    { className: ps().PortraitContainer },
                     o.createElement("img", {
                       key: t.id,
-                      className: ds().Portrait,
+                      className: ps().Portrait,
                       src: ""
                         .concat(h.Y.IMG_URL, "heroes/")
                         .concat(t.name.replace("npc_dota_hero_", ""), ".png"),
                     }),
                     o.createElement(
                       "div",
-                      { className: ds().HealthBar },
+                      { className: ps().HealthBar },
                       o.createElement(
                         "div",
-                        { className: ds().BarNumberMajor },
+                        { className: ps().BarNumberMajor },
                         t.max_health
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().BarNumberMinor },
+                        { className: ps().BarNumberMinor },
                         "+",
                         t.health_regen.toFixed(1)
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ManaBar },
+                      { className: ps().ManaBar },
                       o.createElement(
                         "div",
-                        { className: ds().BarNumberMajor },
+                        { className: ps().BarNumberMajor },
                         t.max_mana
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().BarNumberMinor },
+                        { className: ps().BarNumberMinor },
                         "+",
                         t.mana_regen.toFixed(1)
                       )
@@ -40319,50 +40833,50 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: ds().AttributesContainer },
+                    { className: ps().AttributesContainer },
                     o.createElement(
                       "div",
-                      { className: ds().SingleAttributeContainer },
+                      { className: ps().SingleAttributeContainer },
                       o.createElement("img", {
-                        className: ds().AttributeIcon,
+                        className: ps().AttributeIcon,
                         src: "".concat(h.Y.IMG_URL, "icons/hero_strength.png"),
                       }),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeValue },
+                        { className: ps().AttributeValue },
                         t.str_base
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeGain },
+                        { className: ps().AttributeGain },
                         "+",
                         t.str_gain.toFixed(1)
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().SingleAttributeContainer },
+                      { className: ps().SingleAttributeContainer },
                       o.createElement("img", {
-                        className: ds().AttributeIcon,
+                        className: ps().AttributeIcon,
                         src: "".concat(h.Y.IMG_URL, "icons/hero_agility.png"),
                       }),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeValue },
+                        { className: ps().AttributeValue },
                         t.agi_base
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeGain },
+                        { className: ps().AttributeGain },
                         "+",
                         t.agi_gain.toFixed(1)
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().SingleAttributeContainer },
+                      { className: ps().SingleAttributeContainer },
                       o.createElement("img", {
-                        className: ds().AttributeIcon,
+                        className: ps().AttributeIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "icons/hero_intelligence.png"
@@ -40370,12 +40884,12 @@
                       }),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeValue },
+                        { className: ps().AttributeValue },
                         t.int_base
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().AttributeGain },
+                        { className: ps().AttributeGain },
                         "+",
                         t.int_gain.toFixed(1)
                       )
@@ -40384,41 +40898,41 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().DetailsSectionHeader },
+                  { className: ps().DetailsSectionHeader },
                   (0, E.Jr)("#hero_attributes")
                 )
               )
             : null;
         },
-        bs = function (e) {
+        ys = function (e) {
           var t = e.name,
             n = e.value;
           return o.createElement(
             "div",
-            { className: ds().Role },
-            o.createElement("div", { className: ds().RoleName }, (0, E.Jr)(t)),
+            { className: ps().Role },
+            o.createElement("div", { className: ps().RoleName }, (0, E.Jr)(t)),
             o.createElement(
               "div",
-              { className: ds().BarContainer },
-              o.createElement("div", { className: ds().BarBackground }),
+              { className: ps().BarContainer },
+              o.createElement("div", { className: ps().BarBackground }),
               o.createElement("div", {
-                className: ds().BarFilled,
+                className: ps().BarFilled,
                 style: { width: "".concat(33.3 * n, "%") },
               })
             )
           );
         },
-        Es = function (e) {
+        Ts = function (e) {
           var t = e.heroData;
           return t
             ? o.createElement(
                 "div",
-                { className: ds().DetailsRoles },
+                { className: ps().DetailsRoles },
                 o.createElement(
                   "div",
-                  { className: ds().RolesList },
-                  ms.map(function (e, n) {
-                    return o.createElement(bs, {
+                  { className: ps().RolesList },
+                  _s.map(function (e, n) {
+                    return o.createElement(ys, {
                       key: e,
                       name: e,
                       value: t.role_levels[n],
@@ -40427,34 +40941,34 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().DetailsSectionHeader },
+                  { className: ps().DetailsSectionHeader },
                   (0, E.Jr)("#hero_roles")
                 )
               )
             : null;
         },
-        ys = function (e) {
+        Ss = function (e) {
           var t = e.heroData;
           return t
             ? o.createElement(
                 "div",
-                { className: ds().DetailsStats },
+                { className: ps().DetailsStats },
                 o.createElement(
                   "div",
-                  { className: ds().StatsList },
+                  { className: ps().StatsList },
                   o.createElement(
                     "div",
-                    { className: ds().HeroValuesSection },
+                    { className: ps().HeroValuesSection },
                     o.createElement(
                       "div",
-                      { className: ds().HeroValueTitle },
+                      { className: ps().HeroValueTitle },
                       (0, E.Jr)("#hero_attack")
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_damage.png"
@@ -40464,9 +40978,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_attack_time.png"
@@ -40476,9 +40990,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_attack_range.png"
@@ -40490,9 +41004,9 @@
                       t.projectile_speed > 0 &&
                       o.createElement(
                         "div",
-                        { className: ds().ValueElement },
+                        { className: ps().ValueElement },
                         o.createElement("img", {
-                          className: ds().SwordIcon,
+                          className: ps().SwordIcon,
                           src: "".concat(
                             h.Y.IMG_URL,
                             "/heroes/stats/icon_projectile_speed.png"
@@ -40505,18 +41019,18 @@
                   o.createElement(
                     "div",
                     {
-                      className: (0, b.Z)(ds().HeroValuesSection, ds().Lighter),
+                      className: (0, b.Z)(ps().HeroValuesSection, ps().Lighter),
                     },
                     o.createElement(
                       "div",
-                      { className: ds().HeroValueTitle },
+                      { className: ps().HeroValueTitle },
                       (0, E.Jr)("#hero_defense")
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_armor.png"
@@ -40526,9 +41040,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_magic_resist.png"
@@ -40539,17 +41053,17 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: ds().HeroValuesSection },
+                    { className: ps().HeroValuesSection },
                     o.createElement(
                       "div",
-                      { className: ds().HeroValueTitle },
+                      { className: ps().HeroValueTitle },
                       (0, E.Jr)("#hero_mobility")
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_movement_speed.png"
@@ -40559,9 +41073,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_turn_rate.png"
@@ -40571,9 +41085,9 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().ValueElement },
+                      { className: ps().ValueElement },
                       o.createElement("img", {
-                        className: ds().SwordIcon,
+                        className: ps().SwordIcon,
                         src: "".concat(
                           h.Y.IMG_URL,
                           "/heroes/stats/icon_vision.png"
@@ -40587,31 +41101,31 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().DetailsSectionHeader },
+                  { className: ps().DetailsSectionHeader },
                   (0, E.Jr)("#hero_stats")
                 )
               )
             : null;
         },
-        Ts = function (e) {
+        Cs = function (e) {
           var t = e.heroData;
           return o.createElement(
             "div",
-            { className: ds().DetailsBar },
-            o.createElement(vs, { heroData: t }),
-            o.createElement("div", { className: ds().VerticalSeperator }),
+            { className: ps().DetailsBar },
             o.createElement(Es, { heroData: t }),
-            o.createElement("div", { className: ds().VerticalSeperator }),
-            o.createElement(ys, { heroData: t })
+            o.createElement("div", { className: ps().VerticalSeperator }),
+            o.createElement(Ts, { heroData: t }),
+            o.createElement("div", { className: ps().VerticalSeperator }),
+            o.createElement(Ss, { heroData: t })
           );
         },
-        Ss = (0, d.Pi)(function (e) {
+        ws = (0, d.Pi)(function (e) {
           var t = e.heroData,
             n = (0, o.useState)(!1),
             a = n[0],
             r = n[1];
           if (!t) return null;
-          var i = fp.getSelectedAbilityIndex(),
+          var i = Ep.getSelectedAbilityIndex(),
             s =
               t.abilities.filter(function (e) {
                 return e.ability_is_granted_by_shard;
@@ -40741,7 +41255,7 @@
           u && !c.ability_is_granted_by_shard && (w = T),
             d && !c.ability_is_granted_by_scepter && (w = y);
           var B = function (e) {
-              fp.setSelectedAbilityIndex(e), r(!0);
+              Ep.setSelectedAbilityIndex(e), r(!0);
             },
             N = d && c.ability_has_scepter && !c.ability_is_granted_by_scepter,
             I = u && c.ability_has_shard && !c.ability_is_granted_by_shard,
@@ -40749,15 +41263,15 @@
             R = u && c.ability_is_granted_by_shard;
           return o.createElement(
             "div",
-            { className: ds().HeroAbilities },
+            { className: ps().HeroAbilities },
             o.createElement(
               "div",
-              { className: ds().AbilityLeft },
+              { className: ps().AbilityLeft },
               o.createElement(
                 "div",
-                { className: ds().VideoContainer },
+                { className: ps().VideoContainer },
                 o.createElement("div", {
-                  className: (0, b.Z)(ds().FadeUp, a && ds().DoFadeAnim),
+                  className: (0, b.Z)(ps().FadeUp, a && ps().DoFadeAnim),
                   onAnimationEnd: function () {
                     return r(!1);
                   },
@@ -40766,7 +41280,7 @@
                   "video",
                   {
                     key: C,
-                    className: ds().HeroPortrait,
+                    className: ps().HeroPortrait,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -40795,7 +41309,7 @@
               ),
               o.createElement(
                 "div",
-                { className: ds().AbilitySelector },
+                { className: ps().AbilitySelector },
                 t.abilities.map(function (e, t) {
                   return e.ability_is_granted_by_scepter ||
                     e.ability_is_granted_by_shard ||
@@ -40805,8 +41319,8 @@
                     : o.createElement("div", {
                         key: e.name,
                         className: (0, b.Z)(
-                          ds().AbilitySelectable,
-                          t != i && ds().NotSelected
+                          ps().AbilitySelectable,
+                          t != i && ps().NotSelected
                         ),
                         style: {
                           backgroundImage: "url( "
@@ -40824,9 +41338,9 @@
                     {
                       key: s.name + "_shard",
                       className: (0, b.Z)(
-                        ds().AbilitySelectable,
-                        ds().Shard,
-                        -1 != i && ds().NotSelected
+                        ps().AbilitySelectable,
+                        ps().Shard,
+                        -1 != i && ps().NotSelected
                       ),
                       style: {
                         backgroundImage: "url( "
@@ -40838,7 +41352,7 @@
                       },
                     },
                     o.createElement("div", {
-                      className: ds().SubIcon,
+                      className: ps().SubIcon,
                       style: {
                         backgroundImage: "url( ".concat(
                           h.Y.IMG_URL,
@@ -40853,9 +41367,9 @@
                     {
                       key: l.name + "_scepter",
                       className: (0, b.Z)(
-                        ds().AbilitySelectable,
-                        ds().Scepter,
-                        -2 != i && ds().NotSelected
+                        ps().AbilitySelectable,
+                        ps().Scepter,
+                        -2 != i && ps().NotSelected
                       ),
                       style: {
                         backgroundImage: "url( "
@@ -40867,7 +41381,7 @@
                       },
                     },
                     o.createElement("div", {
-                      className: ds().SubIcon,
+                      className: ps().SubIcon,
                       style: {
                         backgroundImage: "url( ".concat(
                           h.Y.IMG_URL,
@@ -40880,108 +41394,108 @@
             ),
             o.createElement(
               "div",
-              { className: ds().AbilityRight },
+              { className: ps().AbilityRight },
               o.createElement(
                 "div",
-                { className: ds().AbilityInfoContainer },
+                { className: ps().AbilityInfoContainer },
                 o.createElement(
                   "div",
-                  { className: ds().AbilityMain },
+                  { className: ps().AbilityMain },
                   o.createElement("img", {
-                    className: ds().AbilityImage,
+                    className: ps().AbilityImage,
                     src: ""
                       .concat(h.Y.IMG_URL, "abilities/")
                       .concat(c.name, ".png"),
                   }),
                   o.createElement(
                     "div",
-                    { className: ds().AbilityInfo },
+                    { className: ps().AbilityInfo },
                     o.createElement(
                       "div",
-                      { className: ds().AbilityName },
+                      { className: ps().AbilityName },
                       c.name_loc
                     ),
                     N &&
                       o.createElement(
                         "div",
-                        { className: ds().AghType },
+                        { className: ps().AghType },
                         (0, E.Jr)("#ability_upgrade_scepter")
                       ),
                     I &&
                       o.createElement(
                         "div",
-                        { className: ds().AghType },
+                        { className: ps().AghType },
                         (0, E.Jr)("#ability_upgrade_shard")
                       ),
                     D &&
                       o.createElement(
                         "div",
-                        { className: ds().AghType },
+                        { className: ps().AghType },
                         (0, E.Jr)("#ability_new_scepter")
                       ),
                     R &&
                       o.createElement(
                         "div",
-                        { className: ds().AghType },
+                        { className: ps().AghType },
                         (0, E.Jr)("#ability_new_shard")
                       ),
                     o.createElement(
                       "div",
-                      { className: ds().AbilityDesc },
+                      { className: ps().AbilityDesc },
                       (0, E.Jr)(w)
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: ds().AbilityDetails },
+                  { className: ps().AbilityDetails },
                   o.createElement(
                     "div",
                     {
                       className: (0, b.Z)(
-                        ds().GenericValues,
-                        (N || I) && ds().Hidden
+                        ps().GenericValues,
+                        (N || I) && ps().Hidden
                       ),
                     },
                     o.createElement(
                       "div",
-                      { className: ds().Column },
+                      { className: ps().Column },
                       o.createElement(
                         "div",
-                        { className: ds().DetailsValues },
+                        { className: ps().DetailsValues },
                         m &&
                           o.createElement(
                             "div",
-                            { className: ds().ValueElement },
+                            { className: ps().ValueElement },
                             (0, E.Jr)("#hero_ability"),
                             ":",
                             o.createElement(
                               "div",
-                              { className: ds().ValueValue },
+                              { className: ps().ValueValue },
                               (0, E.Jr)(m)
                             )
                           ),
                         _ &&
                           o.createElement(
                             "div",
-                            { className: ds().ValueElement },
+                            { className: ps().ValueElement },
                             (0, E.Jr)("#hero_affects"),
                             ":",
                             o.createElement(
                               "div",
-                              { className: ds().ValueValue },
+                              { className: ps().ValueValue },
                               (0, E.Jr)(_)
                             )
                           ),
                         g &&
                           o.createElement(
                             "div",
-                            { className: ds().ValueElement },
+                            { className: ps().ValueElement },
                             (0, E.Jr)("#ability_damage"),
                             ":",
                             o.createElement(
                               "div",
-                              { className: ds().ValueValue },
+                              { className: ps().ValueValue },
                               (0, E.Jr)(g)
                             )
                           )
@@ -40989,31 +41503,31 @@
                     ),
                     o.createElement(
                       "div",
-                      { className: ds().Column },
+                      { className: ps().Column },
                       o.createElement(
                         "div",
-                        { className: ds().DetailsValues },
+                        { className: ps().DetailsValues },
                         p &&
                           o.createElement(
                             "div",
-                            { className: ds().ValueElement },
+                            { className: ps().ValueElement },
                             (0, E.Jr)("#hero_spell_immunity"),
                             ":",
                             o.createElement(
                               "div",
-                              { className: ds().ValueValue },
+                              { className: ps().ValueValue },
                               (0, E.Jr)(p)
                             )
                           ),
                         f &&
                           o.createElement(
                             "div",
-                            { className: ds().ValueElement },
+                            { className: ps().ValueElement },
                             (0, E.Jr)("#hero_dispellable"),
                             ":",
                             o.createElement(
                               "div",
-                              { className: ds().ValueValue },
+                              { className: ps().ValueValue },
                               (0, E.Jr)(f)
                             )
                           )
@@ -41024,8 +41538,8 @@
                     "div",
                     {
                       className: (0, b.Z)(
-                        ds().SpecificValues,
-                        (N || I) && ds().Hidden
+                        ps().SpecificValues,
+                        (N || I) && ps().Hidden
                       ),
                     },
                     c.damages.reduce(function (e, t) {
@@ -41033,11 +41547,11 @@
                     }) > 0 &&
                       o.createElement(
                         "div",
-                        { className: ds().SpecialElement },
+                        { className: ps().SpecialElement },
                         (0, E.Jr)("#hero_damage"),
                         o.createElement(
                           "div",
-                          { className: ds().SpecialValue },
+                          { className: ps().SpecialValue },
                           c.damages.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(0);
                           })
@@ -41048,11 +41562,11 @@
                         ? null
                         : o.createElement(
                             "div",
-                            { key: e.name, className: ds().SpecialElement },
+                            { key: e.name, className: ps().SpecialElement },
                             (0, E.Jr)(e.heading_loc),
                             o.createElement(
                               "div",
-                              { className: ds().SpecialValue },
+                              { className: ps().SpecialValue },
                               e.values_float.map(function (t, n) {
                                 return (
                                   (n > 0 ? " / " : "") +
@@ -41074,15 +41588,15 @@
                       "div",
                       {
                         className: (0, b.Z)(
-                          ds().BottomValues,
-                          (I || I) && ds().Hidden
+                          ps().BottomValues,
+                          (I || I) && ps().Hidden
                         ),
                       },
                       o.createElement(
                         "div",
-                        { className: ds().CooldownContainer },
+                        { className: ps().CooldownContainer },
                         o.createElement("div", {
-                          className: ds().CooldownIcon,
+                          className: ps().CooldownIcon,
                           style: {
                             backgroundImage: "url( ".concat(
                               h.Y.IMG_URL,
@@ -41092,7 +41606,7 @@
                         }),
                         o.createElement(
                           "div",
-                          { className: ds().CooldownText },
+                          { className: ps().CooldownText },
                           c.cooldowns.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(1);
                           })
@@ -41100,11 +41614,11 @@
                       ),
                       o.createElement(
                         "div",
-                        { className: ds().ManaContainer },
-                        o.createElement("div", { className: ds().ManaIcon }),
+                        { className: ps().ManaContainer },
+                        o.createElement("div", { className: ps().ManaIcon }),
                         o.createElement(
                           "div",
-                          { className: ds().ManaText },
+                          { className: ps().ManaText },
                           c.mana_costs.map(function (e, t) {
                             return (t > 0 ? " / " : "") + e.toFixed(0);
                           })
@@ -41113,7 +41627,7 @@
                     ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(ds().Lore, (I || I) && ds().Hidden) },
+                    { className: (0, b.Z)(ps().Lore, (I || I) && ps().Hidden) },
                     c.lore_loc
                   )
                 )
@@ -41121,29 +41635,29 @@
             )
           );
         }),
-        Cs = function (e) {
+        Bs = function (e) {
           var t = e.heroData;
           return o.createElement(
             "div",
-            { className: ds().AbilityDetailsSection },
+            { className: ps().AbilityDetailsSection },
             t &&
               o.createElement(
                 "div",
-                { className: ds().AbilityDetailsHeader },
+                { className: ps().AbilityDetailsHeader },
                 (0, E.Jr)("#hero_ability_details")
               ),
-            o.createElement(Ss, { heroData: t })
+            o.createElement(ws, { heroData: t })
           );
         },
-        ws = function (e) {
+        Ns = function (e) {
           var t = e.prevhero,
             n = e.nexthero;
           return o.createElement(
             "div",
-            { className: ds().HeroNavigator },
+            { className: ps().HeroNavigator },
             o.createElement(m.rU, {
               to: u._.hero(t),
-              className: (0, b.Z)(ds().NavigatorArrow, ds().Left),
+              className: (0, b.Z)(ps().NavigatorArrow, ps().Left),
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -41153,17 +41667,17 @@
             }),
             o.createElement(
               m.rU,
-              { to: u._.herogrid(), className: ds().CenterGrid },
-              o.createElement("div", { className: ds().GridDot }),
-              o.createElement("div", { className: ds().GridDot }),
-              o.createElement("div", { className: ds().GridDot }),
-              o.createElement("div", { className: ds().GridDot }),
-              o.createElement("div", { className: ds().GridDot }),
-              o.createElement("div", { className: ds().GridDot })
+              { to: u._.herogrid(), className: ps().CenterGrid },
+              o.createElement("div", { className: ps().GridDot }),
+              o.createElement("div", { className: ps().GridDot }),
+              o.createElement("div", { className: ps().GridDot }),
+              o.createElement("div", { className: ps().GridDot }),
+              o.createElement("div", { className: ps().GridDot }),
+              o.createElement("div", { className: ps().GridDot })
             ),
             o.createElement(m.rU, {
               to: u._.hero(n),
-              className: (0, b.Z)(ds().NavigatorArrow, ds().Right),
+              className: (0, b.Z)(ps().NavigatorArrow, ps().Right),
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -41173,7 +41687,7 @@
             })
           );
         },
-        Bs = function (e) {
+        Is = function (e) {
           var t = e.heroData,
             n = e.left,
             a = "";
@@ -41196,7 +41710,7 @@
               r = "ranged";
           }
           var i = "",
-            s = Or.L.Get().getHeroList();
+            s = Ur.L.Get().getHeroList();
           return (
             null == s ||
               s.heroes.forEach(function (e) {
@@ -41207,7 +41721,7 @@
               m.rU,
               {
                 to: u._.hero(i),
-                className: (0, b.Z)(ds().BottomSectionHero, n && ds().Left),
+                className: (0, b.Z)(ps().BottomSectionHero, n && ps().Left),
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41216,32 +41730,32 @@
                 },
               },
               o.createElement("img", {
-                className: ds().HeroPortrait,
+                className: ps().HeroPortrait,
                 src: ""
                   .concat(h.Y.IMG_URL, "heroes/crops/")
                   .concat(t.name.replace("npc_dota_hero_", ""), ".png"),
               }),
               o.createElement(
                 "div",
-                { className: ds().HeroLabels },
+                { className: ps().HeroLabels },
                 o.createElement(
                   "div",
-                  { className: ds().TopHeader },
+                  { className: ps().TopHeader },
                   (0, E.Jr)(n ? "#hero_previous" : "#hero_next")
                 ),
-                o.createElement("div", { className: ds().Name }, t.name_loc),
+                o.createElement("div", { className: ps().Name }, t.name_loc),
                 o.createElement(
                   "div",
-                  { className: ds().Details },
+                  { className: ps().Details },
                   o.createElement("img", {
                     src: ""
                       .concat(h.Y.IMG_URL, "icons/hero_")
                       .concat(a, ".png"),
-                    className: ds().PrimaryStatIcon,
+                    className: ps().PrimaryStatIcon,
                   }),
                   o.createElement(
                     "div",
-                    { className: ds().AttackType },
+                    { className: ps().AttackType },
                     (0, E.Jr)("#hero_attack_type_".concat(r))
                   )
                 )
@@ -41249,50 +41763,50 @@
             )
           );
         },
-        Ns = function (e) {
+        Ds = function (e) {
           var t = e.nPrevHeroID,
             n = e.nNextHeroID,
-            a = Or.L.Get().getHeroData(t),
-            r = Or.L.Get().getHeroData(n);
+            a = Ur.L.Get().getHeroData(t),
+            r = Ur.L.Get().getHeroData(n);
           return a && r
             ? o.createElement(
                 "div",
-                { className: ds().BottomSection },
-                o.createElement(Bs, { heroData: a, left: !0 }),
+                { className: ps().BottomSection },
+                o.createElement(Is, { heroData: a, left: !0 }),
                 o.createElement(
                   m.rU,
-                  { to: u._.herogrid(), className: ds().AllHeroesContainer },
+                  { to: u._.herogrid(), className: ps().AllHeroesContainer },
                   o.createElement(
                     "div",
-                    { className: ds().Boxes },
-                    o.createElement("div", { className: ds().Box }),
-                    o.createElement("div", { className: ds().Box }),
-                    o.createElement("div", { className: ds().Box }),
-                    o.createElement("div", { className: ds().Box }),
-                    o.createElement("div", { className: ds().Box }),
-                    o.createElement("div", { className: ds().Box })
+                    { className: ps().Boxes },
+                    o.createElement("div", { className: ps().Box }),
+                    o.createElement("div", { className: ps().Box }),
+                    o.createElement("div", { className: ps().Box }),
+                    o.createElement("div", { className: ps().Box }),
+                    o.createElement("div", { className: ps().Box }),
+                    o.createElement("div", { className: ps().Box })
                   ),
                   o.createElement(
                     "div",
-                    { className: ds().AllHeroesLabel },
+                    { className: ps().AllHeroesLabel },
                     (0, E.Jr)("#hero_allheroes"),
                     " "
                   )
                 ),
-                o.createElement(Bs, { heroData: r, left: !1 })
+                o.createElement(Is, { heroData: r, left: !1 })
               )
             : null;
         },
-        Is = (0, d.Pi)(function (e) {
+        Rs = (0, d.Pi)(function (e) {
           var t = (0, p.UO)().id,
-            n = Or.L.Get().getHeroList(),
+            n = Ur.L.Get().getHeroList(),
             a = 0;
           n &&
             n.heroes.forEach(function (e) {
               e.name_english_loc.replace(/ /g, "").toLowerCase() ==
                 t.toLowerCase() && (a = e.id);
             });
-          var r = Or.L.Get().getHeroData(a),
+          var r = Ur.L.Get().getHeroData(a),
             i = (function (e, t) {
               if (!t) return ["", ""];
               var n = t.heroes.slice().sort(function (e, t) {
@@ -41334,19 +41848,19 @@
                 e.name_english_loc.replace(/ /g, "").toLowerCase() == l &&
                   (u = e.id);
             }),
-            Or.L.Get().getHeroData(c),
-            Or.L.Get().getHeroData(u);
+            Ur.L.Get().getHeroData(c),
+            Ur.L.Get().getHeroData(u);
           var d = (0, p.TH)();
           return (
             (0, o.useEffect)(
               function () {
-                return fp.setSelectedAbilityIndex(0);
+                return Ep.setSelectedAbilityIndex(0);
               },
               [d.pathname]
             ),
             o.createElement(
               "div",
-              { className: ds().HeroPage },
+              { className: ps().HeroPage },
               o.createElement(
                 L.q,
                 null,
@@ -41360,10 +41874,10 @@
               o.createElement(Ha.Z, null),
               o.createElement(
                 "div",
-                { className: ds().UpperSection },
-                o.createElement("div", { className: ds().BackgroundGradient }),
-                o.createElement(ws, { prevhero: s, nexthero: l }),
-                o.createElement(ps, {
+                { className: ps().UpperSection },
+                o.createElement("div", { className: ps().BackgroundGradient }),
+                o.createElement(Ns, { prevhero: s, nexthero: l }),
+                o.createElement(gs, {
                   key: r ? r.name : "",
                   heroname: r ? r.name : "",
                 }),
@@ -41374,22 +41888,22 @@
                   midPct: 100,
                   endPct: 100,
                 }),
-                o.createElement(_s, {
+                o.createElement(hs, {
                   key: null == r ? void 0 : r.id,
                   heroData: r,
                 }),
-                o.createElement(hs, { heroData: r }),
-                o.createElement(fs, { heroData: r })
+                o.createElement(vs, { heroData: r }),
+                o.createElement(bs, { heroData: r })
               ),
               o.createElement(
                 "div",
-                { className: ds().DetailsBarContainer },
-                o.createElement(Ts, { heroData: r })
+                { className: ps().DetailsBarContainer },
+                o.createElement(Cs, { heroData: r })
               ),
               o.createElement(
                 "div",
                 {
-                  className: ds().UnderBarSection,
+                  className: ps().UnderBarSection,
                   style: {
                     backgroundImage: "url( ".concat(
                       h.Y.IMG_URL,
@@ -41397,24 +41911,24 @@
                     ),
                   },
                 },
-                o.createElement(Cs, { heroData: r }),
-                o.createElement(Ns, { nNextHeroID: u, nPrevHeroID: c })
+                o.createElement(Bs, { heroData: r }),
+                o.createElement(Ds, { nNextHeroID: u, nPrevHeroID: c })
               ),
               o.createElement(B.U, null)
             )
           );
         }),
-        Ds = n(71073),
-        Rs = n.n(Ds),
-        Ls = function () {
+        Ls = n(71073),
+        As = n.n(Ls),
+        Ms = function () {
           return o.createElement(
             "a",
             { href: "https://store.steampowered.com/app/570/Dota_2/" },
             o.createElement(
               "div",
-              { className: Rs().PlayButton },
+              { className: As().PlayButton },
               o.createElement("div", {
-                className: Rs().SteamLogo,
+                className: As().SteamLogo,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41424,55 +41938,55 @@
               }),
               o.createElement(
                 "div",
-                { className: Rs().RightSide },
+                { className: As().RightSide },
                 o.createElement(
                   "div",
-                  { className: Rs().PlayForFree },
+                  { className: As().PlayForFree },
                   (0, E.Jr)("#play_for_free")
                 ),
                 o.createElement(
                   "div",
-                  { className: Rs().Download },
+                  { className: As().Download },
                   (0, E.Jr)("#download_on_steam")
                 )
               )
             )
           );
         },
-        As = function (e) {
+        Gs = function (e) {
           return e.link
             ? o.createElement(
                 m.rU,
-                { to: e.link, className: Rs().StandardButton },
+                { to: e.link, className: As().StandardButton },
                 o.createElement(
                   "div",
-                  { className: Rs().ButtonText },
+                  { className: As().ButtonText },
                   (0, E.Jr)(e.text)
                 )
               )
             : o.createElement(
                 "div",
-                { className: Rs().StandardButton },
+                { className: As().StandardButton },
                 o.createElement(
                   "div",
-                  { className: Rs().ButtonText },
+                  { className: As().ButtonText },
                   (0, E.Jr)(e.text)
                 )
               );
         },
-        Ms = function () {
-          return o.createElement("div", { className: Rs().HorizBar });
+        ks = function () {
+          return o.createElement("div", { className: As().HorizBar });
         },
-        Gs = function () {
+        Ps = function () {
           return o.createElement("div", {
-            className: Rs().RightArrow,
+            className: As().RightArrow,
             style: {
               backgroundImage: "url( ".concat(h.Y.IMG_URL, "/arrow_left.png )"),
             },
           });
         },
-        ks = (0, d.Pi)(function () {
-          var e = Or.L.Get().getHeroList(),
+        Fs = (0, d.Pi)(function () {
+          var e = Ur.L.Get().getHeroList(),
             t = [];
           return (
             e &&
@@ -41486,14 +42000,14 @@
             }),
             o.createElement(
               "div",
-              { className: Rs().HeroGrid },
+              { className: As().HeroGrid },
               e &&
                 t.map(function (e, t) {
                   return o.createElement(
                     "div",
                     {
                       key: "Row" + t,
-                      className: (0, b.Z)(Rs().HeroGridRow, "Row".concat(t)),
+                      className: (0, b.Z)(As().HeroGridRow, "Row".concat(t)),
                       style: {
                         width: 255 * (e.length + 2),
                         animationDuration:
@@ -41520,7 +42034,7 @@
                           to: u._.hero(
                             e.name_english_loc.replace(/ /g, "").toLowerCase()
                           ),
-                          className: Rs().HeroIcon,
+                          className: As().HeroIcon,
                           style: {
                             backgroundImage: "url( "
                               .concat(h.Y.IMG_URL, "heroes/")
@@ -41532,22 +42046,22 @@
                         },
                         o.createElement(
                           "div",
-                          { className: Rs().HeroNameContainer },
+                          { className: As().HeroNameContainer },
                           o.createElement("img", {
                             src: ""
                               .concat(h.Y.IMG_URL, "icons/hero_")
                               .concat(n, ".png"),
-                            className: Rs().PrimaryStatIcon,
+                            className: As().PrimaryStatIcon,
                           }),
                           o.createElement(
                             "div",
-                            { className: Rs().HeroName },
+                            { className: As().HeroName },
                             (0, E.Jr)(e.name_loc)
                           )
                         ),
                         o.createElement(
                           "div",
-                          { className: Rs().FadeContainer },
+                          { className: As().FadeContainer },
                           o.createElement(N.p, {
                             bottom: !0,
                             color: "#000000",
@@ -41563,7 +42077,7 @@
             )
           );
         }),
-        Ps = function (e) {
+        Os = function (e) {
           var t = (0, o.useState)(void 0),
             n = t[0],
             a = t[1];
@@ -41589,7 +42103,7 @@
             }
           return o.createElement(
             "div",
-            { className: Rs().HomePage },
+            { className: As().HomePage },
             o.createElement(Ae.j, { bOverlapping: !0 }),
             o.createElement(
               L.q,
@@ -41598,14 +42112,14 @@
             ),
             o.createElement(
               "div",
-              { className: Rs().HeaderSection },
+              { className: As().HeaderSection },
               o.createElement(
                 "div",
-                { className: Rs().BackgroundVideoContainer },
+                { className: As().BackgroundVideoContainer },
                 o.createElement(
                   "video",
                   {
-                    className: Rs().BackgroundVideo,
+                    className: As().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -41631,62 +42145,62 @@
               o.createElement(
                 "div",
                 {
-                  className: Rs().QuoteContainer,
+                  className: As().QuoteContainer,
                   "data-aos": "fade-right",
                   "data-aos-delay": "1000",
                   "data-aos-duration": "2500",
                 },
                 o.createElement(
                   "div",
-                  { className: Rs().Quote },
+                  { className: As().Quote },
                   o.createElement(
                     "div",
-                    { className: Rs().QuoteText },
+                    { className: As().QuoteText },
                     (0, E.Jr)("#quote_destructoid_quote")
                   ),
                   o.createElement(
                     "div",
-                    { className: Rs().QuoteCredit },
+                    { className: As().QuoteCredit },
                     (0, E.Jr)("#quote_destructoid_credit")
                   )
                 ),
-                o.createElement(Ms, null),
-                o.createElement(Ls, null)
+                o.createElement(ks, null),
+                o.createElement(Ms, null)
               ),
-              o.createElement("div", { className: Rs().BottomFade })
+              o.createElement("div", { className: As().BottomFade })
             ),
             o.createElement(
               "div",
-              { className: Rs().NewsSection },
+              { className: As().NewsSection },
               o.createElement(
                 "div",
-                { className: Rs().NewsTop },
+                { className: As().NewsTop },
                 o.createElement(
                   "div",
-                  { className: Rs().Latest },
+                  { className: As().Latest },
                   (0, E.Jr)("#home_latest_news")
                 ),
                 o.createElement(
                   m.rU,
-                  { to: u._.news(), className: Rs().ViewAll },
+                  { to: u._.news(), className: As().ViewAll },
                   (0, E.Jr)("#home_view_all"),
-                  o.createElement(Gs, null)
+                  o.createElement(Ps, null)
                 )
               ),
-              o.createElement("div", { className: Rs().NewsCapsules }, r)
+              o.createElement("div", { className: As().NewsCapsules }, r)
             ),
             o.createElement(
               "div",
-              { className: Rs().BattleSection },
+              { className: As().BattleSection },
               o.createElement(
                 "div",
-                { className: Rs().BattleBG },
+                { className: As().BattleBG },
                 o.createElement("img", {
-                  className: Rs().BattleImg,
+                  className: As().BattleImg,
                   src: "".concat(h.Y.IMG_URL, "/home/radiant_dire5.jpg"),
                 }),
                 o.createElement("img", {
-                  className: (0, b.Z)(Rs().BattleImg, Rs().BattleImgMobile),
+                  className: (0, b.Z)(As().BattleImg, As().BattleImgMobile),
                   src: "".concat(h.Y.IMG_URL, "/home/battle_mobile.jpg"),
                 }),
                 o.createElement(N.p, {
@@ -41699,30 +42213,30 @@
               ),
               o.createElement(
                 "div",
-                { className: Rs().LeftHalf },
+                { className: As().LeftHalf },
                 o.createElement(
                   "div",
                   {
-                    className: Rs().HeaderText,
+                    className: As().HeaderText,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   (0, E.Jr)("#home_battle_join")
                 ),
-                o.createElement(Ms, null),
+                o.createElement(ks, null),
                 o.createElement(
                   "div",
-                  { className: Rs().BodyText },
+                  { className: As().BodyText },
                   (0, E.Jr)("#home_battle_body"),
                   o.createElement(
                     m.rU,
                     { to: u._.news() },
                     o.createElement(
                       "div",
-                      { className: Rs().StandardButton },
+                      { className: As().StandardButton },
                       o.createElement(
                         "div",
-                        { className: Rs().ButtonText },
+                        { className: As().ButtonText },
                         (0, E.Jr)("#home_battle_button")
                       )
                     )
@@ -41732,7 +42246,7 @@
             ),
             o.createElement(
               "div",
-              { className: Rs().ChooseSection },
+              { className: As().ChooseSection },
               o.createElement(N.p, {
                 top: !0,
                 color: "#000000",
@@ -41750,37 +42264,37 @@
               o.createElement(
                 "div",
                 {
-                  className: Rs().HeaderText,
+                  className: As().HeaderText,
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 (0, E.Jr)("#home_choose_header")
               ),
-              o.createElement(Ms, null),
+              o.createElement(ks, null),
               o.createElement(
                 "div",
-                { className: Rs().BodyText },
+                { className: As().BodyText },
                 (0, E.Jr)("#home_choose_body"),
                 o.createElement(
                   m.rU,
                   { to: u._.herogrid() },
                   o.createElement(
                     "div",
-                    { className: Rs().StandardButton },
+                    { className: As().StandardButton },
                     o.createElement(
                       "div",
-                      { className: Rs().ButtonText },
+                      { className: As().ButtonText },
                       (0, E.Jr)("#home_choose_button")
                     )
                   )
                 )
               ),
-              o.createElement(ks, null)
+              o.createElement(Fs, null)
             ),
             o.createElement(
               "div",
               {
-                className: Rs().ProCircuitSection,
+                className: As().ProCircuitSection,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41790,23 +42304,23 @@
               },
               o.createElement(
                 "div",
-                { className: Rs().DPCSmImgs },
+                { className: As().DPCSmImgs },
                 o.createElement("img", {
-                  className: (0, b.Z)(Rs().DPCSmImg, Rs().Img1),
+                  className: (0, b.Z)(As().DPCSmImg, As().Img1),
                   src: "".concat(h.Y.IMG_URL, "/home/dpc_ti9_1.jpg"),
                   "data-aos": "fade-up",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2500",
                 }),
                 o.createElement("img", {
-                  className: (0, b.Z)(Rs().DPCSmImg, Rs().Img2),
+                  className: (0, b.Z)(As().DPCSmImg, As().Img2),
                   src: "".concat(h.Y.IMG_URL, "/home/dpc_ti9_2.jpg"),
                   "data-aos": "fade-up",
                   "data-aos-delay": "600",
                   "data-aos-duration": "2500",
                 }),
                 o.createElement("img", {
-                  className: (0, b.Z)(Rs().DPCSmImg, Rs().Img3),
+                  className: (0, b.Z)(As().DPCSmImg, As().Img3),
                   src: "".concat(h.Y.IMG_URL, "/home/dpc_ti9_3.jpg"),
                   "data-aos": "fade-up",
                   "data-aos-delay": "1000",
@@ -41814,7 +42328,7 @@
                 })
               ),
               o.createElement("div", {
-                className: Rs().DPCIcon,
+                className: As().DPCIcon,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41824,20 +42338,20 @@
               }),
               o.createElement(
                 "div",
-                { className: Rs().HeaderText },
+                { className: As().HeaderText },
                 (0, E.Jr)("#home_dpc_header")
               ),
-              o.createElement(Ms, null),
+              o.createElement(ks, null),
               o.createElement(
                 "div",
-                { className: Rs().BodyText },
+                { className: As().BodyText },
                 (0, E.Jr)("#home_dpc_body")
               )
             ),
             o.createElement(
               "div",
               {
-                className: Rs().JoinBattleSection,
+                className: As().JoinBattleSection,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41847,36 +42361,36 @@
               },
               o.createElement(
                 "div",
-                { className: Rs().HeaderText },
+                { className: As().HeaderText },
                 (0, E.Jr)("#home_join_header")
               ),
-              o.createElement(Ms, null),
+              o.createElement(ks, null),
               o.createElement(
                 "a",
                 { href: "https://store.steampowered.com/app/570/Dota_2/" },
-                o.createElement(As, { text: "#home_play_free_now" })
+                o.createElement(Gs, { text: "#home_play_free_now" })
               )
             ),
             o.createElement(B.U, null)
           );
         },
-        Fs = n(31927),
-        Os = n.n(Fs),
-        xs = function (e) {
+        xs = n(31927),
+        Us = n.n(xs),
+        zs = function (e) {
           return o.createElement(
             "div",
-            { className: (0, b.Z)(Os().Capsule, e.large && Os().Large) },
+            { className: (0, b.Z)(Us().Capsule, e.large && Us().Large) },
             e.image &&
               !e.video &&
               o.createElement("img", {
-                className: Os().Image,
+                className: Us().Image,
                 src: "".concat(h.Y.IMG_URL).concat(e.image),
               }),
             e.video &&
               o.createElement(
                 "video",
                 {
-                  className: Os().Video,
+                  className: Us().Video,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -41893,30 +42407,30 @@
                   src: "".concat(h.Y.VIDEO_URL).concat(e.video, ".mp4"),
                 })
               ),
-            o.createElement("div", { className: Os().Title }, e.title),
+            o.createElement("div", { className: Us().Title }, e.title),
             o.createElement(
               "div",
-              { className: Os().Description },
+              { className: Us().Description },
               e.description
             )
           );
         },
-        Us = function (e) {
+        Hs = function (e) {
           return o.createElement(
             "div",
-            { className: Os().EntryList },
-            o.createElement("div", { className: Os().Title }, e.title),
+            { className: Us().EntryList },
+            o.createElement("div", { className: Us().Title }, e.title),
             e.entrySections.map(function (e, t) {
               return o.createElement(
                 "ul",
                 {
                   key: t,
-                  className: (0, b.Z)(Os().EntrySection, e.bold && Os().Bold),
+                  className: (0, b.Z)(Us().EntrySection, e.bold && Us().Bold),
                 },
                 e.entries.map(function (e, t) {
                   return o.createElement(
                     "li",
-                    { key: t, className: Os().Entry },
+                    { key: t, className: Us().Entry },
                     e
                   );
                 })
@@ -41924,10 +42438,10 @@
             })
           );
         },
-        zs = function () {
+        Ws = function () {
           return o.createElement(
             "div",
-            { className: Os().SpringCleaningPage },
+            { className: Us().SpringCleaningPage },
             o.createElement(
               L.q,
               null,
@@ -41936,7 +42450,7 @@
             o.createElement(Ae.j, { bOverlapping: !0 }),
             o.createElement(Ha.Z, null),
             o.createElement("div", {
-              className: Os().HeaderImage,
+              className: Us().HeaderImage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -41946,22 +42460,22 @@
             }),
             o.createElement(
               "div",
-              { className: Os().HeaderText },
+              { className: Us().HeaderText },
               o.createElement(
                 "div",
-                { className: Os().MainTitle },
+                { className: Us().MainTitle },
                 (0, E.Jr)("#springcleaning_title")
               ),
               o.createElement(
                 "div",
-                { className: Os().MainDesc },
+                { className: Us().MainDesc },
                 (0, E.Jr)("#springcleaning22_desc")
               )
             ),
             o.createElement(
               "div",
               {
-                className: Os().CapsuleSection,
+                className: Us().CapsuleSection,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -41971,8 +42485,8 @@
               },
               o.createElement(
                 "div",
-                { className: Os().CapuleList },
-                o.createElement(xs, {
+                { className: Us().CapuleList },
+                o.createElement(zs, {
                   image: "springcleaning22/aghs_tooltips.png",
                   title: (0, E.Jr)("#springcleaning22_aghs_tooltips"),
                   description: (0, E.Jr)(
@@ -41980,21 +42494,21 @@
                   ),
                   large: !0,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/mute.jpg",
                   video: "springcleaning22/mute",
                   title: (0, E.Jr)("#springcleaning22_muting_ui"),
                   description: (0, E.Jr)("#springcleaning22_muting_ui_desc"),
                   large: !0,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/shop_search.jpg",
                   video: "springcleaning22/shop_search",
                   title: (0, E.Jr)("#springcleaning22_shop_search"),
                   description: (0, E.Jr)("#springcleaning22_shop_search_desc"),
                   large: !0,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/hero_demo.jpg",
                   video: "springcleaning22/hero_demo",
                   title: (0, E.Jr)("#springcleaning22_demo_hero"),
@@ -42049,7 +42563,7 @@
                   ),
                   large: !0,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/expanded_stat_tooltips.png",
                   title: (0, E.Jr)("#springcleaning22_item_tooltips"),
                   description: (0, E.Jr)(
@@ -42057,7 +42571,7 @@
                   ),
                   large: !1,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/damage_colors.png",
                   title: (0, E.Jr)("#springcleaning22_colored_ability_damage"),
                   description: (0, E.Jr)(
@@ -42065,7 +42579,7 @@
                   ),
                   large: !1,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/plural_strings.png",
                   title: (0, E.Jr)("#springcleaning22_pluralized_strings"),
                   description: (0, E.Jr)(
@@ -42073,7 +42587,7 @@
                   ),
                   large: !1,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/permanent_buffs.png",
                   title: (0, E.Jr)("#springcleaning22_permanent_debuffs"),
                   description: (0, E.Jr)(
@@ -42081,7 +42595,7 @@
                   ),
                   large: !1,
                 }),
-                o.createElement(xs, {
+                o.createElement(zs, {
                   image: "springcleaning22/post_game.jpg",
                   video: "springcleaning22/post_game",
                   title: (0, E.Jr)("#springcleaning22_post_game_sortable"),
@@ -42095,7 +42609,7 @@
             o.createElement(
               "div",
               {
-                className: Os().ListSection,
+                className: Us().ListSection,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -42105,8 +42619,8 @@
               },
               o.createElement(
                 "div",
-                { className: Os().ListList },
-                o.createElement(Us, {
+                { className: Us().ListList },
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#gameplay"),
                   entrySections: [
                     {
@@ -42245,7 +42759,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#rubick"),
                   entrySections: [
                     {
@@ -42304,7 +42818,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#user_interface"),
                   entrySections: [
                     {
@@ -42359,7 +42873,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#cosmetics"),
                   entrySections: [
                     {
@@ -42425,7 +42939,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#performance"),
                   entrySections: [
                     {
@@ -42449,7 +42963,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#dota_plus"),
                   entrySections: [
                     {
@@ -42555,7 +43069,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#custom_games"),
                   entrySections: [
                     {
@@ -42575,7 +43089,7 @@
                     },
                   ],
                 }),
-                o.createElement(Us, {
+                o.createElement(Hs, {
                   title: (0, E.Jr)("#workshop"),
                   entrySections: [
                     {
@@ -42591,8 +43105,8 @@
             o.createElement(B.U, null)
           );
         },
-        Hs = n(87758),
-        Ws = n.n(Hs);
+        js = n(87758),
+        Vs = n.n(js);
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.PENDING = 1)] = "PENDING"),
@@ -42602,21 +43116,21 @@
           (e[(e.ALREADY_BOUND = 5)] = "ALREADY_BOUND"),
           (e[(e.ALREADY_SELF_BOUND = 6)] = "ALREADY_SELF_BOUND"),
           (e[(e.ERROR_UNKNOWN = 7)] = "ERROR_UNKNOWN");
-      })(os || (os = {}));
-      var js = function () {
+      })(ls || (ls = {}));
+      var Js = function () {
           var e = (0, o.useState)([]),
             t = e[0],
             n = e[1],
             a = (0, o.useState)(""),
             r = a[0],
             i = a[1],
-            s = (0, o.useState)(os.NONE),
+            s = (0, o.useState)(ls.NONE),
             l = s[0],
             c = s[1],
             d = 3e3;
           (0, o.useEffect)(
             function () {
-              (l != os.NONE && l != os.SUCCESS) ||
+              (l != ls.NONE && l != ls.SUCCESS) ||
                 Et()
                   .get(
                     h.Y.BASE_URL +
@@ -42642,7 +43156,7 @@
           return o.createElement(
             "div",
             {
-              className: Ws().InternationalBadgeBindingPage,
+              className: Vs().InternationalBadgeBindingPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -42661,7 +43175,7 @@
               )
             ),
             o.createElement("div", {
-              className: Ws().HeaderImage,
+              className: Vs().HeaderImage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -42671,14 +43185,14 @@
             }),
             o.createElement(
               "div",
-              { className: Ws().Body },
+              { className: Vs().Body },
               0 == h.Y.ACCOUNT_ID &&
                 o.createElement(
                   "div",
-                  { className: Ws().NeedToLogin },
+                  { className: Vs().NeedToLogin },
                   o.createElement(
                     "div",
-                    { className: Ws().Message },
+                    { className: Vs().Message },
                     (0, E.Jr)("#ti_badgebinding_needtologin")
                   ),
                   o.createElement(
@@ -42688,7 +43202,7 @@
                         .concat(h.Y.COMMUNITY_URL, "oauth/login?client_id=")
                         .concat(h.Y.CLIENT_ID, "&response_type=token&state=")
                         .concat(location.pathname.substr(1)),
-                      className: Ws().SignInButton,
+                      className: Vs().SignInButton,
                     },
                     (0, E.Jr)("#sign_in")
                   )
@@ -42696,26 +43210,26 @@
               0 != h.Y.ACCOUNT_ID &&
                 o.createElement(
                   "div",
-                  { className: Ws().SignedIn },
+                  { className: Vs().SignedIn },
                   "\\",
                   (null == t ? void 0 : t.length) > 0 &&
                     o.createElement(
                       "div",
-                      { className: Ws().BoundBadges },
+                      { className: Vs().BoundBadges },
                       (0, E.Jr)("#ti_badgebinding_existing_binds"),
                       null == t
                         ? void 0
                         : t.map(function (e) {
                             return o.createElement(
                               "div",
-                              { key: e, className: Ws().BadgeID },
+                              { key: e, className: Vs().BadgeID },
                               e
                             );
                           })
                     ),
                   o.createElement(
                     "div",
-                    { className: Ws().BadgeDescription },
+                    { className: Vs().BadgeDescription },
                     (0, E.Jr)(
                       (null == t ? void 0 : t.length) > 0
                         ? "#ti_badgebinding_desc_multi"
@@ -42724,29 +43238,29 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: Ws().BadgeWarning },
+                    { className: Vs().BadgeWarning },
                     (0, E.Jr)("#ti_badgebinding_warning")
                   ),
                   o.createElement("input", {
                     type: "text",
                     autoFocus: !0,
                     placeholder: (0, ta.Xx)("#ti_badgebinding_placeholder"),
-                    className: Ws().BadgeIDInput,
+                    className: Vs().BadgeIDInput,
                     value: r,
                     onChange: function (e) {
                       return i(e.target.value);
                     },
                   }),
-                  l == os.NONE &&
+                  l == ls.NONE &&
                     o.createElement(
                       "div",
                       {
                         className: (0, b.Z)(
-                          Ws().SubmitButton,
-                          r.length > 0 && Ws().ValidBadgeIDLength
+                          Vs().SubmitButton,
+                          r.length > 0 && Vs().ValidBadgeIDLength
                         ),
                         onClick: function () {
-                          c(os.PENDING),
+                          c(ls.PENDING),
                             Et()
                               .post(
                                 h.Y.BASE_URL +
@@ -42767,39 +43281,39 @@
                                     : t.result
                                 ) {
                                   case 0:
-                                    c(os.SUCCESS),
+                                    c(ls.SUCCESS),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, 5e3);
                                     break;
                                   case 1:
-                                    c(os.INVALID_BADGE),
+                                    c(ls.INVALID_BADGE),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, d);
                                     break;
                                   case 2:
-                                    c(os.COOLDOWN),
+                                    c(ls.COOLDOWN),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, d);
                                     break;
                                   case 3:
-                                    c(os.ALREADY_BOUND),
+                                    c(ls.ALREADY_BOUND),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, d);
                                     break;
                                   case 4:
-                                    c(os.ALREADY_SELF_BOUND),
+                                    c(ls.ALREADY_SELF_BOUND),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, d);
                                     break;
                                   default:
-                                    c(os.ERROR_UNKNOWN),
+                                    c(ls.ERROR_UNKNOWN),
                                       setTimeout(function () {
-                                        return c(os.NONE);
+                                        return c(ls.NONE);
                                       }, d);
                                 }
                                 i("");
@@ -42808,15 +43322,15 @@
                       },
                       (0, E.Jr)("#ti_badgebinding_bind")
                     ),
-                  l != os.NONE &&
+                  l != ls.NONE &&
                     o.createElement(
                       "div",
                       {
                         className: (0, b.Z)(
-                          Ws().BindState,
-                          l == os.PENDING && Ws().Pending,
-                          l == os.SUCCESS && Ws().Success,
-                          l != os.SUCCESS && l != os.PENDING && Ws().Failure
+                          Vs().BindState,
+                          l == ls.PENDING && Vs().Pending,
+                          l == ls.SUCCESS && Vs().Success,
+                          l != ls.SUCCESS && l != ls.PENDING && Vs().Failure
                         ),
                       },
                       (0, E.Jr)(
@@ -42837,13 +43351,13 @@
             o.createElement(B.U, null)
           );
         },
-        Vs = n(91401),
-        Js = n.n(Vs),
-        Ys = (0, d.Pi)(function (e) {
+        Ys = n(91401),
+        Zs = n.n(Ys),
+        Xs = (0, d.Pi)(function (e) {
           return o.createElement(
             "div",
             {
-              className: Js().InternationalFAQPage,
+              className: Zs().InternationalFAQPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -42858,7 +43372,7 @@
               o.createElement("title", null, (0, E.Jr)("#ti_2021_faq_title"))
             ),
             o.createElement("div", {
-              className: Js().HeaderImage,
+              className: Zs().HeaderImage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -42868,123 +43382,123 @@
             }),
             o.createElement(
               "div",
-              { className: Js().Body },
+              { className: Zs().Body },
               o.createElement(
                 "div",
-                { className: Js().TopHeader },
+                { className: Zs().TopHeader },
                 (0, E.Jr)("#ti_2021_ticket_header")
               ),
               o.createElement(
                 "div",
-                { className: Js().TopBody },
+                { className: Zs().TopBody },
                 (0, E.Jr)("#ti_2021_body")
               ),
               o.createElement(
                 "div",
-                { className: Js().FAQ },
+                { className: Zs().FAQ },
                 o.createElement(
                   "div",
-                  { className: Js().FAQLabel },
+                  { className: Zs().FAQLabel },
                   (0, E.Jr)("#dpc_about_faq")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_6")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_6")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_7")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_7")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_8")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_8")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_9")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_9")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQQuestion },
+                  { className: Zs().FAQQuestion },
                   (0, E.Jr)("#ti_2021_faq_q_10")
                 ),
                 o.createElement(
                   "div",
-                  { className: Js().FAQAnswer },
+                  { className: Zs().FAQAnswer },
                   (0, E.Jr)("#ti_2021_faq_a_10")
                 )
               )
@@ -42992,14 +43506,14 @@
             o.createElement(B.U, null)
           );
         }),
-        Zs = n(68298),
-        Xs = n.n(Zs),
-        qs = function () {
+        qs = n(68298),
+        Ks = n.n(qs),
+        Qs = function () {
           return (
             console.log(h.Y.IMG_URL),
             o.createElement(
               "div",
-              { className: Xs().RequestForProposalPage },
+              { className: Ks().RequestForProposalPage },
               o.createElement(Ae.j, { bOverlapping: !1 }),
               o.createElement(
                 L.q,
@@ -43013,24 +43527,24 @@
               o.createElement(Ha.Z, null),
               o.createElement(
                 "div",
-                { className: Xs().Background },
+                { className: Ks().Background },
                 o.createElement(
                   "div",
-                  { className: Xs().ContentFrame },
+                  { className: Ks().ContentFrame },
                   o.createElement(
                     "div",
-                    { className: Xs().PageTop },
+                    { className: Ks().PageTop },
                     o.createElement(
                       "div",
-                      { className: Xs().Title },
+                      { className: Ks().Title },
                       (0, E.Jr)("#dpc_rfp_title"),
                       o.createElement("br", null),
                       (0, E.Jr)("#dpc_rfp_subtitle")
                     ),
-                    o.createElement("div", { className: Xs().SmoothLine }),
+                    o.createElement("div", { className: Ks().SmoothLine }),
                     o.createElement(
                       "div",
-                      { className: Xs().TextBody },
+                      { className: Ks().TextBody },
                       o.createElement("div", null, (0, E.Jr)("#dpc_rfp_body")),
                       o.createElement("br", null),
                       o.createElement(
@@ -43073,9 +43587,9 @@
             )
           );
         },
-        Ks = n(39340),
-        Qs = n.n(Ks),
-        $s = function () {
+        $s = n(39340),
+        el = n.n($s),
+        tl = function () {
           var e = (0, o.useState)([]),
             t = e[0],
             n = e[1],
@@ -43357,10 +43871,10 @@
               }
               return o.createElement(
                 "div",
-                { className: Qs().PlayerAutographContainer },
+                { className: el().PlayerAutographContainer },
                 o.createElement(
                   "div",
-                  { className: s ? Qs().NoZoom : Qs().ClickZoom },
+                  { className: s ? el().NoZoom : el().ClickZoom },
                   o.createElement(
                     "label",
                     null,
@@ -43380,19 +43894,19 @@
                     o.createElement("img", {
                       src: t,
                       className: s
-                        ? Qs().AutographImagePlaceholder
-                        : (0, b.Z)(Qs().AutographImage, Qs().Checkered),
+                        ? el().AutographImagePlaceholder
+                        : (0, b.Z)(el().AutographImage, el().Checkered),
                     })
                   )
                 ),
                 o.createElement(
                   "span",
-                  { className: Qs().PlayerProName },
+                  { className: el().PlayerProName },
                   n || "(missing pro name)"
                 ),
                 o.createElement(
                   "span",
-                  { className: Qs().PlayerAccountId },
+                  { className: el().PlayerAccountId },
                   a ? "(".concat(a, ")") : "(missing account id)"
                 )
               );
@@ -43412,7 +43926,7 @@
             Y = 0 == h.Y.ACCOUNT_ID && !h.Y.VALVE_INTERNAL;
           return o.createElement(
             "div",
-            { className: Qs().MajorsRegistrationAutographsPage },
+            { className: el().MajorsRegistrationAutographsPage },
             o.createElement(Ae.j, { bOverlapping: !1 }),
             o.createElement(
               L.q,
@@ -43426,32 +43940,32 @@
             o.createElement(Ha.Z, null),
             o.createElement(
               "div",
-              { className: Qs().Background },
+              { className: el().Background },
               o.createElement(
                 "div",
-                { className: Qs().ContentFrame },
+                { className: el().ContentFrame },
                 o.createElement(
                   "div",
-                  { className: Qs().PageTop },
+                  { className: el().PageTop },
                   o.createElement(
                     "div",
-                    { className: Qs().Title },
+                    { className: el().Title },
                     "Dota 2 2021-2022 Season",
                     o.createElement("br", null),
                     "Dota Pro Circuit Registration"
                   ),
                   o.createElement(
                     "div",
-                    { className: (0, b.Z)(Qs().Header) },
+                    { className: (0, b.Z)(el().Header) },
                     "Player Autographs"
                   ),
                   Y &&
                     o.createElement(
                       "div",
-                      { className: Qs().NeedToLogin },
+                      { className: el().NeedToLogin },
                       o.createElement(
                         "div",
-                        { className: Qs().SignInMessage },
+                        { className: el().SignInMessage },
                         "Please sign in to your Steam account"
                       ),
                       o.createElement(
@@ -43466,7 +43980,7 @@
                             .concat(
                               u._.majorsregistration_autographs().substr(1)
                             ),
-                          className: Qs().SignInButton,
+                          className: el().SignInButton,
                         },
                         "Sign in"
                       )
@@ -43474,13 +43988,13 @@
                   !Y &&
                     o.createElement(
                       "div",
-                      { className: Qs().SubmitAutographs },
+                      { className: el().SubmitAutographs },
                       o.createElement(
                         "div",
                         null,
                         o.createElement(
                           "h3",
-                          { className: Qs().Requirements },
+                          { className: el().Requirements },
                           "Requirements"
                         ),
                         o.createElement(
@@ -43510,7 +44024,7 @@
                         ),
                         o.createElement(
                           "h3",
-                          { className: Qs().Notes },
+                          { className: el().Notes },
                           "Notes"
                         ),
                         o.createElement(
@@ -43532,10 +44046,10 @@
                           )
                         )
                       ),
-                      o.createElement("div", { className: Qs().SmoothLine }),
+                      o.createElement("div", { className: el().SmoothLine }),
                       o.createElement(
                         "h3",
-                        { className: Qs().ImageUploadHeader },
+                        { className: el().ImageUploadHeader },
                         "Image Upload"
                       ),
                       o.createElement(
@@ -43598,7 +44112,7 @@
                           },
                         },
                         o.createElement("input", {
-                          className: Qs().FileInput,
+                          className: el().FileInput,
                           type: "file",
                           name: "autograph",
                           id: "autographFiles",
@@ -43626,10 +44140,10 @@
                             0 === W.length &&
                               o.createElement(
                                 "div",
-                                { className: Qs().FileInput },
+                                { className: el().FileInput },
                                 "Ready to upload",
                                 o.createElement("img", {
-                                  className: Qs().CheckmarkIcon,
+                                  className: el().CheckmarkIcon,
                                   src: "".concat(
                                     h.Y.IMG_URL,
                                     "international2020/icon_check.png"
@@ -43643,7 +44157,7 @@
                                 null,
                                 "Fix the following errors:",
                                 o.createElement("img", {
-                                  className: Qs().XIcon,
+                                  className: el().XIcon,
                                   src: "".concat(
                                     h.Y.IMG_URL,
                                     "international2020/icon_x.png"
@@ -43654,7 +44168,7 @@
                             W.length > 0 &&
                               o.createElement(
                                 "div",
-                                { className: Qs().FileErrors },
+                                { className: el().FileErrors },
                                 o.createElement("br", null),
                                 W
                               )
@@ -43668,20 +44182,20 @@
                                 ? "hidden"
                                 : "submit",
                             value: "Upload Files",
-                            className: (0, b.Z)(Qs().SubmitButton),
+                            className: (0, b.Z)(el().SubmitButton),
                           })
                         )
                       ),
                       o.createElement("div", null, j),
                       o.createElement("br", null),
-                      o.createElement("div", { className: Qs().SmoothLine })
+                      o.createElement("div", { className: el().SmoothLine })
                     ),
                   o.createElement("canvas", { id: "canvas", hidden: !0 })
                 ),
                 !Y &&
                   o.createElement(
                     "div",
-                    { className: Qs().ViewAutographs },
+                    { className: el().ViewAutographs },
                     o.createElement("br", null),
                     o.createElement(
                       "div",
@@ -43713,7 +44227,7 @@
                               { key: "".concat(e.team_id, "Container") },
                               o.createElement(
                                 "div",
-                                { className: Qs().TeamName },
+                                { className: el().TeamName },
                                 e.name || "(Team name)",
                                 e.team_id ? " (".concat(e.team_id, ")") : ""
                               ),
@@ -43721,7 +44235,7 @@
                                 "div",
                                 {
                                   key: "".concat(e.team_id, "Row"),
-                                  className: Qs().TeamAutographRow,
+                                  className: el().TeamAutographRow,
                                 },
                                 e.autographs.map(function (e, t) {
                                   e.name;
@@ -43753,16 +44267,16 @@
             o.createElement(B.U, null)
           );
         },
-        el = n(71050),
-        tl = n.n(el),
-        nl = [
+        nl = n(71050),
+        al = n.n(nl),
+        rl = [
           {
             imageName: "sign-signature-postit-note.jpg",
             locIdentifier: "sign",
             bullets: 4,
           },
         ],
-        al = [
+        il = [
           {
             imageName: "photograph-signature.jpg",
             locIdentifier: "photograph",
@@ -43814,15 +44328,15 @@
             bullets: 5,
           },
         ],
-        rl = function (e) {
+        ol = function (e) {
           var t = e.rowInfo,
             n = e.orderedListStart;
           return o.createElement(
             "div",
-            { className: tl().ImagePreparationContainer },
+            { className: al().ImagePreparationContainer },
             o.createElement(
               "div",
-              { className: tl().ClickZoom },
+              { className: al().ClickZoom },
               o.createElement(
                 "label",
                 null,
@@ -43831,19 +44345,19 @@
                   src: ""
                     .concat(h.Y.IMG_URL, "dpc/autograph_guidelines/")
                     .concat(t.imageName),
-                  className: tl().ImagePreparationImage,
+                  className: al().ImagePreparationImage,
                 })
               )
             ),
             o.createElement(
               "div",
-              { className: tl().ImagePreparationDetails },
+              { className: al().ImagePreparationDetails },
               o.createElement(
                 "ol",
                 { start: n },
                 o.createElement(
                   "li",
-                  { className: tl().ImagePreparationHeader },
+                  { className: al().ImagePreparationHeader },
                   (0, E.Jr)(
                     "#autograph_preparation_".concat(t.locIdentifier, "_header")
                   )
@@ -43859,7 +44373,7 @@
                         "li",
                         {
                           key: "".concat(e, "-").concat(a),
-                          className: tl().ImagePreparationBulletText,
+                          className: al().ImagePreparationBulletText,
                         },
                         (0, E.Jr)(
                           "#autograph_preparation_"
@@ -43874,10 +44388,10 @@
             )
           );
         },
-        il = function () {
+        sl = function () {
           return o.createElement(
             "div",
-            { className: tl().AutographGuidelines },
+            { className: al().AutographGuidelines },
             o.createElement(Ae.j, { bOverlapping: !1 }),
             o.createElement(
               L.q,
@@ -43891,78 +44405,78 @@
             o.createElement(Ha.Z, null),
             o.createElement(
               "div",
-              { className: tl().Background },
+              { className: al().Background },
               o.createElement(
                 "div",
-                { className: tl().ContentFrame },
+                { className: al().ContentFrame },
                 o.createElement(
                   "div",
-                  { className: tl().Page },
+                  { className: al().Page },
                   o.createElement("img", {
                     src: "".concat(h.Y.IMG_URL, "dpc/dpc_logo.png"),
-                    className: tl().DPCLogo,
+                    className: al().DPCLogo,
                   }),
                   o.createElement(
                     "div",
-                    { className: tl().Header },
+                    { className: al().Header },
                     (0, E.Jr)("#autograph_guidelines_top_header")
                   ),
-                  o.createElement("div", { className: tl().SmoothLine }),
+                  o.createElement("div", { className: al().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: tl().Subheader },
+                    { className: al().Subheader },
                     (0, E.Jr)("#autograph_examples_header")
                   ),
                   o.createElement(
                     "div",
-                    { className: tl().ExamplesRow },
+                    { className: al().ExamplesRow },
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/example-signature-1.jpg"
                       ),
-                      className: tl().ExamplesImage,
+                      className: al().ExamplesImage,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/check-mark.png"
                       ),
-                      className: tl().CheckMarkLeft,
+                      className: al().CheckMarkLeft,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/example-signature-2.jpg"
                       ),
-                      className: tl().ExamplesImage,
+                      className: al().ExamplesImage,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/check-mark.png"
                       ),
-                      className: tl().CheckMarkRight,
+                      className: al().CheckMarkRight,
                     })
                   ),
                   o.createElement(
                     "div",
-                    { className: tl().ExamplesDescription },
+                    { className: al().ExamplesDescription },
                     (0, E.Jr)("#autograph_examples_format_and_details")
                   ),
                   o.createElement(
                     "div",
-                    { className: tl().ExamplesDescription },
+                    { className: al().ExamplesDescription },
                     (0, E.Jr)("#autograph_examples_size")
                   ),
-                  o.createElement("div", { className: tl().SmoothLine }),
+                  o.createElement("div", { className: al().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: tl().Subheader },
+                    { className: al().Subheader },
                     (0, E.Jr)("#autograph_creation_header")
                   ),
-                  nl.map(function (e, t) {
-                    return o.createElement(rl, {
+                  rl.map(function (e, t) {
+                    return o.createElement(ol, {
                       key: "ImagePreparationContainer".concat(t),
                       rowInfo: e,
                       orderedListStart: t + 1,
@@ -43970,67 +44484,67 @@
                   }),
                   o.createElement(
                     "div",
-                    { className: tl().SignatureCreationRules },
+                    { className: al().SignatureCreationRules },
                     o.createElement(
                       "div",
-                      { className: tl().SignatureRulesContainer },
+                      { className: al().SignatureRulesContainer },
                       o.createElement("img", {
                         src: "".concat(
                           h.Y.IMG_URL,
                           "dpc/autograph_guidelines/guidelines-clarity.jpg"
                         ),
-                        className: tl().SignatureRulesImage,
+                        className: al().SignatureRulesImage,
                       }),
                       o.createElement(
                         "div",
-                        { className: tl().SignatureRulesDetails },
+                        { className: al().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_1")
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: tl().SignatureRulesContainer },
+                      { className: al().SignatureRulesContainer },
                       o.createElement("img", {
                         src: "".concat(
                           h.Y.IMG_URL,
                           "dpc/autograph_guidelines/guidelines-thickness.jpg"
                         ),
-                        className: tl().SignatureRulesImage,
+                        className: al().SignatureRulesImage,
                       }),
                       o.createElement(
                         "div",
-                        { className: tl().SignatureRulesDetails },
+                        { className: al().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_2")
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: tl().SignatureRulesContainerLast },
+                      { className: al().SignatureRulesContainerLast },
                       o.createElement("img", {
                         src: "".concat(
                           h.Y.IMG_URL,
                           "dpc/autograph_guidelines/guidelines-imagery.jpg"
                         ),
-                        className: tl().SignatureRulesImage,
+                        className: al().SignatureRulesImage,
                       }),
                       o.createElement(
                         "div",
-                        { className: tl().SignatureRulesDetails },
+                        { className: al().SignatureRulesDetails },
                         (0, E.Jr)("#autograph_creation_rule_3")
                       )
                     )
                   ),
-                  o.createElement("div", { className: tl().SmoothLine }),
+                  o.createElement("div", { className: al().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: tl().Subheader },
+                    { className: al().Subheader },
                     (0, E.Jr)("#autograph_preparation_header")
                   ),
-                  al.map(function (e, t) {
-                    return o.createElement(rl, {
+                  il.map(function (e, t) {
+                    return o.createElement(ol, {
                       key: "ImagePreparationContainer".concat(t),
                       rowInfo: e,
-                      orderedListStart: t + nl.length + 1,
+                      orderedListStart: t + rl.length + 1,
                     });
                   })
                 )
@@ -44039,30 +44553,30 @@
             o.createElement(B.U, null)
           );
         },
-        ol = n(11259),
-        sl = n.n(ol),
-        ll = [
+        ll = n(11259),
+        cl = n.n(ll),
+        ul = [
           {
             imageName: "example-player-silhouette.jpg",
             locIdentifier: "general_guidelines",
             bullets: 6,
           },
         ],
-        cl = [
+        dl = [
           {
             imageName: "photography-lighting-setup.png",
             locIdentifier: "lighting_guidelines",
             bullets: 4,
           },
         ],
-        ul = function (e) {
+        ml = function (e) {
           var t = e.rowInfo;
           return o.createElement(
             "div",
-            { className: sl().PortraitGuidelineContainer },
+            { className: cl().PortraitGuidelineContainer },
             o.createElement(
               "div",
-              { className: sl().ClickZoom },
+              { className: cl().ClickZoom },
               o.createElement(
                 "label",
                 null,
@@ -44071,13 +44585,13 @@
                   src: ""
                     .concat(h.Y.IMG_URL, "dpc/portrait_guidelines/")
                     .concat(t.imageName),
-                  className: sl().GuidelinesImage,
+                  className: cl().GuidelinesImage,
                 })
               )
             ),
             o.createElement(
               "div",
-              { className: sl().GuidelinesDetails },
+              { className: cl().GuidelinesDetails },
               o.createElement(
                 "ul",
                 null,
@@ -44088,7 +44602,7 @@
                         "li",
                         {
                           key: "".concat(e, "-").concat(a),
-                          className: sl().GuidelinesBulletText,
+                          className: cl().GuidelinesBulletText,
                         },
                         (0, E.Jr)("#portrait_".concat(e, "_bullet_").concat(a))
                       )
@@ -44099,10 +44613,10 @@
             )
           );
         },
-        dl = function () {
+        pl = function () {
           return o.createElement(
             "div",
-            { className: sl().PortraitGuidelines },
+            { className: cl().PortraitGuidelines },
             o.createElement(Ae.j, { bOverlapping: !1 }),
             o.createElement(
               L.q,
@@ -44116,85 +44630,85 @@
             o.createElement(Ha.Z, null),
             o.createElement(
               "div",
-              { className: sl().Background },
+              { className: cl().Background },
               o.createElement(
                 "div",
-                { className: sl().ContentFrame },
+                { className: cl().ContentFrame },
                 o.createElement(
                   "div",
-                  { className: sl().Page },
+                  { className: cl().Page },
                   o.createElement("img", {
                     src: "".concat(h.Y.IMG_URL, "dpc/dpc_logo.png"),
-                    className: sl().DPCLogo,
+                    className: cl().DPCLogo,
                   }),
                   o.createElement(
                     "div",
-                    { className: sl().Header },
+                    { className: cl().Header },
                     (0, E.Jr)("#portrait_guidelines_top_header")
                   ),
-                  o.createElement("div", { className: sl().SmoothLine }),
+                  o.createElement("div", { className: cl().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: sl().Subheader },
+                    { className: cl().Subheader },
                     (0, E.Jr)("#portrait_examples_header")
                   ),
                   o.createElement(
                     "div",
-                    { className: sl().ExamplesRow },
+                    { className: cl().ExamplesRow },
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/portrait_guidelines/example-player-1.jpg"
                       ),
-                      className: sl().ExamplesImage,
+                      className: cl().ExamplesImage,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/check-mark.png"
                       ),
-                      className: sl().CheckMarkLeft,
+                      className: cl().CheckMarkLeft,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/portrait_guidelines/example-player-2.jpg"
                       ),
-                      className: sl().ExamplesImage,
+                      className: cl().ExamplesImage,
                     }),
                     o.createElement("img", {
                       src: "".concat(
                         h.Y.IMG_URL,
                         "dpc/autograph_guidelines/check-mark.png"
                       ),
-                      className: sl().CheckMarkRight,
+                      className: cl().CheckMarkRight,
                     })
                   ),
                   o.createElement(
                     "div",
-                    { className: sl().ExamplesDescription },
+                    { className: cl().ExamplesDescription },
                     (0, E.Jr)("#portrait_examples_description")
                   ),
-                  o.createElement("div", { className: sl().SmoothLine }),
+                  o.createElement("div", { className: cl().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: sl().Subheader },
+                    { className: cl().Subheader },
                     (0, E.Jr)("#portrait_general_guidelines_header")
                   ),
-                  ll.map(function (e, t) {
-                    return o.createElement(ul, {
+                  ul.map(function (e, t) {
+                    return o.createElement(ml, {
                       key: "PortraitGuidelineContainerTop".concat(t),
                       rowInfo: e,
                     });
                   }),
-                  o.createElement("div", { className: sl().SmoothLine }),
+                  o.createElement("div", { className: cl().SmoothLine }),
                   o.createElement(
                     "div",
-                    { className: sl().Subheader },
+                    { className: cl().Subheader },
                     (0, E.Jr)("#portrait_lighting_guidelines_header")
                   ),
-                  cl.map(function (e, t) {
-                    return o.createElement(ul, {
+                  dl.map(function (e, t) {
+                    return o.createElement(ml, {
                       key: "PortraitGuidelineContaineBottomr".concat(t),
                       rowInfo: e,
                     });
@@ -44205,13 +44719,13 @@
             o.createElement(B.U, null)
           );
         },
-        ml = n(38273),
-        pl = n.n(ml),
-        _l = (0, d.Pi)(function (e) {
+        _l = n(38273),
+        gl = n.n(_l),
+        hl = (0, d.Pi)(function (e) {
           return o.createElement(
             "div",
             {
-              className: pl().ControllerFAQPage,
+              className: gl().ControllerFAQPage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -44226,7 +44740,7 @@
               o.createElement("title", null, (0, E.Jr)("#controller_faq_title"))
             ),
             o.createElement("div", {
-              className: pl().HeaderImage,
+              className: gl().HeaderImage,
               style: {
                 backgroundImage: "url( ".concat(
                   h.Y.IMG_URL,
@@ -44236,78 +44750,78 @@
             }),
             o.createElement(
               "div",
-              { className: pl().Body },
+              { className: gl().Body },
               o.createElement(
                 "div",
-                { className: pl().TopHeader },
+                { className: gl().TopHeader },
                 (0, E.Jr)("#controller_faq_title")
               ),
               o.createElement(
                 "div",
-                { className: pl().TopBody },
+                { className: gl().TopBody },
                 (0, E.Jr)("#controller_faq_body")
               ),
               o.createElement(
                 "div",
-                { className: pl().FAQ },
+                { className: gl().FAQ },
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_1")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_2")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_3")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_4")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_5")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQQuestion },
+                  { className: gl().FAQQuestion },
                   (0, E.Jr)("#controller_faq_q_6")
                 ),
                 o.createElement(
                   "div",
-                  { className: pl().FAQAnswer },
+                  { className: gl().FAQAnswer },
                   (0, E.Jr)("#controller_faq_a_6")
                 )
               )
@@ -44315,9 +44829,9 @@
             o.createElement(B.U, null)
           );
         }),
-        gl = n(60597),
-        hl = n.n(gl);
-      const fl = (function (e) {
+        fl = n(60597),
+        vl = n.n(fl);
+      const bl = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -44327,7 +44841,7 @@
             return o.createElement(
               "div",
               {
-                className: hl().PastUpdates,
+                className: vl().PastUpdates,
                 style: {
                   backgroundImage: "url( ".concat(
                     h.Y.IMG_URL,
@@ -44347,16 +44861,16 @@
               ),
               o.createElement(
                 "div",
-                { className: hl().HeaderSection },
+                { className: vl().HeaderSection },
                 o.createElement(
                   "div",
-                  { className: hl().Headline },
+                  { className: vl().Headline },
                   (0, E.Jr)("#header_previous_updates")
                 )
               ),
               o.createElement(
                 "div",
-                { className: hl().UpdatesContainer },
+                { className: vl().UpdatesContainer },
                 o.createElement(
                   "a",
                   {
@@ -44364,7 +44878,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44379,7 +44893,7 @@
                   "a",
                   { href: "https://www.dota2.com/labyrinth", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44394,7 +44908,7 @@
                   "a",
                   { href: "https://www.dota2.com/marci", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44409,7 +44923,7 @@
                   "a",
                   { href: "https://www.dota2.com/nemestice", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44427,7 +44941,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44442,7 +44956,7 @@
                   "a",
                   { href: "https://www.dota2.com/mistwoods", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44457,7 +44971,7 @@
                   "a",
                   { href: "https://www.dota2.com/diretide", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44475,7 +44989,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44490,7 +45004,7 @@
                   "a",
                   { href: "https://www.dota2.com/aghanim", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44508,7 +45022,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44526,7 +45040,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44544,7 +45058,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44562,7 +45076,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44580,7 +45094,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44598,7 +45112,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44616,7 +45130,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44634,7 +45148,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44652,7 +45166,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44667,7 +45181,7 @@
                   "a",
                   { href: "https://www.dota2.com/mars", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44682,7 +45196,7 @@
                   "a",
                   { href: "http://www.dota2.com/frosthaven", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44697,7 +45211,7 @@
                   "a",
                   { href: "https://www.dota2.com/720", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44715,7 +45229,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44733,7 +45247,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44751,7 +45265,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44766,7 +45280,7 @@
                   "a",
                   { href: "http://www.dota2.com/plus", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44784,7 +45298,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44802,7 +45316,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44820,7 +45334,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44835,7 +45349,7 @@
                   "a",
                   { href: "http://www.dota2.com/700", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44850,7 +45364,7 @@
                   "a",
                   { href: "http://www.dota2.com/darkrift", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44868,7 +45382,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44886,7 +45400,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44901,7 +45415,7 @@
                   "a",
                   { href: "http://www.dota2.com/winter2016", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44919,7 +45433,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44934,7 +45448,7 @@
                   "a",
                   { href: "http://www.dota2.com/reborn", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44952,7 +45466,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44970,7 +45484,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -44988,7 +45502,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45006,7 +45520,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45024,7 +45538,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45042,7 +45556,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45057,7 +45571,7 @@
                   "a",
                   { href: "http://www.dota2.com/techies/", target: "_blank" },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45075,7 +45589,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45093,7 +45607,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45111,7 +45625,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45129,7 +45643,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45147,7 +45661,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45165,7 +45679,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45183,7 +45697,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45201,7 +45715,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45219,7 +45733,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45237,7 +45751,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45255,7 +45769,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45273,7 +45787,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45291,7 +45805,7 @@
                     target: "_blank",
                   },
                   o.createElement("div", {
-                    className: hl().UpdateBlock,
+                    className: vl().UpdateBlock,
                     style: {
                       backgroundImage: "url( ".concat(
                         h.Y.IMG_URL,
@@ -45309,18 +45823,18 @@
           t
         );
       })(o.Component);
-      var vl = n(15705),
-        bl = n(77970),
-        El = n.n(bl),
-        yl = function () {
+      var El = n(15705),
+        yl = n(77970),
+        Tl = n.n(yl),
+        Sl = function () {
           return o.createElement("div", {
-            className: El().RightArrow,
+            className: Tl().RightArrow,
             style: {
               backgroundImage: "url( ".concat(h.Y.IMG_URL, "/arrow_left.png )"),
             },
           });
         },
-        Tl = function (e) {
+        Cl = function (e) {
           var t = e.shouldShow,
             n = e.showFunc,
             a = e.className,
@@ -45330,8 +45844,8 @@
             "div",
             {
               className: (0, b.Z)(
-                El().PopupPanelContainer,
-                t && El().ShowPopupPanel
+                Tl().PopupPanelContainer,
+                t && Tl().ShowPopupPanel
               ),
               onClick: function () {
                 return n(!1);
@@ -45340,7 +45854,7 @@
             o.createElement(
               "div",
               {
-                className: (0, b.Z)(El().PopupPanel, a),
+                className: (0, b.Z)(Tl().PopupPanel, a),
                 onClick: function (e) {
                   return e.stopPropagation();
                 },
@@ -45349,7 +45863,7 @@
                 o.createElement(
                   "div",
                   {
-                    className: El().CloseButton,
+                    className: Tl().CloseButton,
                     onClick: function () {
                       return n(!1);
                     },
@@ -45362,12 +45876,12 @@
             )
           );
         };
-      const Sl = (function (e) {
+      const wl = (function (e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
             (n.handleClick = function (e) {
-              if (fp.getShortFilmOwnership()) {
+              if (Ep.getShortFilmOwnership()) {
                 var t =
                   h.Y.BASE_URL +
                   u._.shortfilm() +
@@ -45376,7 +45890,7 @@
               } else n.setState({ bPopupVisible: e });
             }),
             (n.handleAccepted = function () {
-              fp.grantShortFilmAppIDOwnership();
+              Ep.grantShortFilmAppIDOwnership();
               var e =
                 h.Y.BASE_URL +
                 u._.shortfilm() +
@@ -45384,7 +45898,7 @@
               history.pushState("", "", e), history.go();
             }),
             (n.BGetOwnsApp = function () {
-              return fp.getShortFilmOwnership();
+              return Ep.getShortFilmOwnership();
             }),
             (n.state = { bPopupVisible: !1 }),
             n
@@ -45398,7 +45912,7 @@
               this.BGetOwnsApp(),
               o.createElement(
                 "div",
-                { className: El().HomePage },
+                { className: Tl().HomePage },
                 o.createElement(Ae.j, { bOverlapping: !0 }),
                 o.createElement(
                   L.q,
@@ -45411,14 +45925,14 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: El().HeaderSection },
+                  { className: Tl().HeaderSection },
                   o.createElement(
                     "div",
-                    { className: El().BackgroundVideoContainer },
+                    { className: Tl().BackgroundVideoContainer },
                     o.createElement(
                       "video",
                       {
-                        className: El().BackgroundVideo,
+                        className: Tl().BackgroundVideo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -45447,14 +45961,14 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: El().TitleContainer },
+                    { className: Tl().TitleContainer },
                     o.createElement(
                       "div",
-                      { className: El().TopRow },
+                      { className: Tl().TopRow },
                       o.createElement(
                         "video",
                         {
-                          className: El().HeroLogo,
+                          className: Tl().HeroLogo,
                           autoPlay: !0,
                           preload: "auto",
                           muted: !0,
@@ -45475,10 +45989,10 @@
                       ),
                       o.createElement(
                         "div",
-                        { className: El().ButtonRow },
+                        { className: Tl().ButtonRow },
                         o.createElement(
                           "div",
-                          { className: El().CommunityDesc },
+                          { className: Tl().CommunityDesc },
                           (0, E.Jr)("#filmcontest_submit_label")
                         ),
                         0 == h.Y.ACCOUNT_ID &&
@@ -45499,17 +46013,17 @@
                               "div",
                               {
                                 className: (0, b.Z)(
-                                  El().FilmButton,
-                                  El().SteamButton
+                                  Tl().FilmButton,
+                                  Tl().SteamButton
                                 ),
                               },
                               o.createElement(
                                 "div",
-                                { className: El().ButtonText },
+                                { className: Tl().ButtonText },
                                 (0, E.Jr)("#filmcontest_login_steam")
                               ),
                               o.createElement("div", {
-                                className: El().SteamLogo,
+                                className: Tl().SteamLogo,
                               })
                             )
                           ),
@@ -45521,20 +46035,20 @@
                                 return e.handleClick(!0);
                               },
                               className: (0, b.Z)(
-                                El().FilmButton,
-                                El().SteamButton
+                                Tl().FilmButton,
+                                Tl().SteamButton
                               ),
                             },
                             o.createElement(
                               "div",
-                              { className: El().ButtonText },
+                              { className: Tl().ButtonText },
                               (0, E.Jr)("#filmcontest_button_submit")
                             ),
-                            o.createElement(yl, null)
+                            o.createElement(Sl, null)
                           ),
                         o.createElement(
                           "div",
-                          { className: El().CommunityDesc },
+                          { className: Tl().CommunityDesc },
                           (0, E.Jr)("#filmcontest_community")
                         ),
                         o.createElement(
@@ -45544,102 +46058,102 @@
                           },
                           o.createElement(
                             "div",
-                            { className: El().FilmButton },
+                            { className: Tl().FilmButton },
                             o.createElement(
                               "div",
-                              { className: El().ButtonText },
+                              { className: Tl().ButtonText },
                               (0, E.Jr)("#filmcontest_submissions")
                             ),
-                            o.createElement(yl, null)
+                            o.createElement(Sl, null)
                           )
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: El().Introduction },
+                      { className: Tl().Introduction },
                       (0, E.Jr)("#filmcontest22_intro")
                     ),
                     o.createElement(
                       "div",
-                      { className: El().Prizes },
+                      { className: Tl().Prizes },
                       o.createElement(
                         "div",
-                        { className: (0, b.Z)(El().Prize, El().Prize1) },
+                        { className: (0, b.Z)(Tl().Prize, Tl().Prize1) },
                         o.createElement(
                           "div",
-                          { className: El().PrizeAmount },
+                          { className: Tl().PrizeAmount },
                           (0, E.Jr)("#filmcontest_prize1_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: El().PrizeLabel },
+                          { className: Tl().PrizeLabel },
                           (0, E.Jr)("#filmcontest_prize1_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, b.Z)(El().Prize, El().Prize2) },
+                        { className: (0, b.Z)(Tl().Prize, Tl().Prize2) },
                         o.createElement(
                           "div",
-                          { className: El().PrizeAmount },
+                          { className: Tl().PrizeAmount },
                           (0, E.Jr)("#filmcontest_prize2_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: El().PrizeLabel },
+                          { className: Tl().PrizeLabel },
                           (0, E.Jr)("#filmcontest_prize2_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, b.Z)(El().Prize, El().Prize3) },
+                        { className: (0, b.Z)(Tl().Prize, Tl().Prize3) },
                         o.createElement(
                           "div",
-                          { className: El().PrizeAmount },
+                          { className: Tl().PrizeAmount },
                           (0, E.Jr)("#filmcontest_prize3_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: El().PrizeLabel },
+                          { className: Tl().PrizeLabel },
                           (0, E.Jr)("#filmcontest_prize3_label")
                         )
                       ),
                       o.createElement(
                         "div",
-                        { className: (0, b.Z)(El().Prize, El().Prize4) },
+                        { className: (0, b.Z)(Tl().Prize, Tl().Prize4) },
                         o.createElement(
                           "div",
-                          { className: El().PrizeAmount },
+                          { className: Tl().PrizeAmount },
                           (0, E.Jr)("#filmcontest_prize4_amount")
                         ),
                         o.createElement(
                           "div",
-                          { className: El().PrizeLabel },
+                          { className: Tl().PrizeLabel },
                           (0, E.Jr)("#filmcontest_prize4_label")
                         )
                       )
                     ),
                     o.createElement(
                       "div",
-                      { className: El().PrizeDesc },
+                      { className: Tl().PrizeDesc },
                       (0, E.Jr)("#filmcontest22_prize_desc")
                     )
                   )
                 ),
                 o.createElement(
                   "div",
-                  { className: El().WallpaperSection },
+                  { className: Tl().WallpaperSection },
                   o.createElement(
                     "div",
-                    { className: El().WallpaperTitle },
+                    { className: Tl().WallpaperTitle },
                     (0, E.Jr)("#filmcontest_previous_winners")
                   ),
                   o.createElement(
                     "div",
-                    { className: El().Wallpapers },
+                    { className: Tl().Wallpapers },
                     o.createElement("iframe", {
-                      className: El().PreviousWinnerVideo,
+                      className: Tl().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/FUYAopUzThc",
@@ -45650,7 +46164,7 @@
                       allowFullScreen: !0,
                     }),
                     o.createElement("iframe", {
-                      className: El().PreviousWinnerVideo,
+                      className: Tl().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/X66DnoOo1S8",
@@ -45661,7 +46175,7 @@
                       allowFullScreen: !0,
                     }),
                     o.createElement("iframe", {
-                      className: El().PreviousWinnerVideo,
+                      className: Tl().PreviousWinnerVideo,
                       width: "30%",
                       height: "300px",
                       src: "https://www.youtube.com/embed/tIprXeR23U8",
@@ -45675,20 +46189,20 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: El().GuidelinesSection },
-                  o.createElement("div", { className: El().Divider }),
-                  o.createElement("div", { className: El().DividerBottom }),
+                  { className: Tl().GuidelinesSection },
+                  o.createElement("div", { className: Tl().Divider }),
+                  o.createElement("div", { className: Tl().DividerBottom }),
                   o.createElement(
                     "div",
-                    { className: El().Quote },
+                    { className: Tl().Quote },
                     o.createElement(
                       "div",
-                      { className: El().GuidelinesTitle },
+                      { className: Tl().GuidelinesTitle },
                       (0, E.Jr)("#filmcontest_guidelines")
                     ),
                     o.createElement(
                       "div",
-                      { className: El().GuidelinesList },
+                      { className: Tl().GuidelinesList },
                       o.createElement(
                         "ul",
                         null,
@@ -45758,10 +46272,10 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: El().EndRow },
+                  { className: Tl().EndRow },
                   o.createElement(
                     "div",
-                    { className: El().EndRowText },
+                    { className: Tl().EndRowText },
                     (0, E.Jr)("#filmcontest22_intro"),
                     0 == h.Y.ACCOUNT_ID &&
                       o.createElement(
@@ -45778,16 +46292,16 @@
                           "div",
                           {
                             className: (0, b.Z)(
-                              El().FilmButton,
-                              El().SteamButton
+                              Tl().FilmButton,
+                              Tl().SteamButton
                             ),
                           },
                           o.createElement(
                             "div",
-                            { className: El().ButtonText },
+                            { className: Tl().ButtonText },
                             (0, E.Jr)("#filmcontest_login_steam")
                           ),
-                          o.createElement("div", { className: El().SteamLogo })
+                          o.createElement("div", { className: Tl().SteamLogo })
                         )
                       ),
                     0 != h.Y.ACCOUNT_ID &&
@@ -45798,20 +46312,20 @@
                             return e.handleClick(!0);
                           },
                           className: (0, b.Z)(
-                            El().FilmButton,
-                            El().SteamButton
+                            Tl().FilmButton,
+                            Tl().SteamButton
                           ),
                         },
                         o.createElement(
                           "div",
-                          { className: El().ButtonText },
+                          { className: Tl().ButtonText },
                           (0, E.Jr)("#filmcontest_button_submit")
                         ),
-                        o.createElement(yl, null)
+                        o.createElement(Sl, null)
                       )
                   ),
                   o.createElement("img", {
-                    className: El().EndRowImage,
+                    className: Tl().EndRowImage,
                     src: "".concat(
                       h.Y.IMG_URL,
                       "shortfilmcontest2022/clapper_2022.png"
@@ -45820,9 +46334,9 @@
                 ),
                 o.createElement(B.U, null),
                 o.createElement(
-                  Tl,
+                  Cl,
                   {
-                    className: El().ShortFilmPopup,
+                    className: Tl().ShortFilmPopup,
                     hasCloseButton: !0,
                     shouldShow: this.state.bPopupVisible,
                     showFunc: function (t) {
@@ -45836,7 +46350,7 @@
                       onClick: function () {
                         return e.handleAccepted();
                       },
-                      className: (0, b.Z)(El().FilmButton, El().SteamButton),
+                      className: (0, b.Z)(Tl().FilmButton, Tl().SteamButton),
                     },
                     (0, E.Jr)("#filmcontest_i_agree")
                   ),
@@ -45848,28 +46362,28 @@
           t
         );
       })(o.Component);
-      var Cl = o.lazy(function () {
+      var Bl = o.lazy(function () {
           return n.e(3009).then(n.bind(n, 53009));
         }),
-        wl = o.lazy(function () {
+        Nl = o.lazy(function () {
           return Promise.all([n.e(347), n.e(6231)]).then(n.bind(n, 6231));
         }),
-        Bl = o.lazy(function () {
+        Il = o.lazy(function () {
           return n.e(534).then(n.bind(n, 50534));
         }),
-        Nl = o.lazy(function () {
+        Dl = o.lazy(function () {
           return Promise.all([n.e(347), n.e(4674)]).then(n.bind(n, 24674));
         }),
-        Il = o.lazy(function () {
+        Rl = o.lazy(function () {
           return n.e(6990).then(n.bind(n, 16990));
         }),
-        Dl = o.lazy(function () {
+        Ll = o.lazy(function () {
           return n.e(5232).then(n.bind(n, 25232));
         }),
-        Rl = o.lazy(function () {
+        Al = o.lazy(function () {
           return n.e(1510).then(n.bind(n, 84437));
         });
-      const Ll = (function (e) {
+      const Ml = (function (e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -45907,7 +46421,7 @@
                   o.createElement(
                     p.rs,
                     null,
-                    o.createElement(Nr, { path: u._.home(), component: Ps }),
+                    o.createElement(Nr, { path: u._.home(), component: Os }),
                     o.createElement(Nr, {
                       path: u._.newsentry(":id"),
                       component: Wa,
@@ -45930,84 +46444,84 @@
                     }),
                     o.createElement(Nr, {
                       path: u._.international_ticketfaq(),
-                      component: Ys,
+                      component: Xs,
                     }),
                     o.createElement(Nr, {
                       path: u._.international_badgebinding(),
-                      component: js,
+                      component: Js,
                     }),
                     o.createElement(Nr, {
                       path: u._.majorsregistration_requestforproposal(),
-                      component: qs,
+                      component: Qs,
                     }),
                     o.createElement(Nr, {
                       path: u._.majorsregistration_autographs(),
-                      component: $s,
+                      component: tl,
                     }),
                     o.createElement(Nr, {
                       path: u._.autographguidelines(),
-                      component: il,
+                      component: sl,
                     }),
                     o.createElement(Nr, {
                       path: u._.portraitguidelines(),
-                      component: dl,
+                      component: pl,
                     }),
                     o.createElement(Nr, {
                       path: u._.hero(":id"),
-                      component: Is,
+                      component: Rs,
                     }),
                     o.createElement(Nr, {
                       path: u._.herogrid(),
-                      component: cs,
+                      component: ds,
                     }),
                     o.createElement(Nr, {
                       path: u._.pastupdates(),
-                      component: fl,
+                      component: bl,
                     }),
                     o.createElement(Nr, {
                       path: u._.controllerfaq(),
-                      component: _l,
+                      component: hl,
                     }),
                     o.createElement(Nr, {
                       path: u._.dpc_event_root(":strEvent?"),
-                      component: ns,
+                      component: rs,
                     }),
                     o.createElement(Nr, {
                       path: u._.patchnotes(":version?"),
-                      component: vl.Fq,
+                      component: El.Fq,
                     }),
                     o.createElement(Nr, {
                       path: u._.dawnbreaker(),
-                      component: Cl,
+                      component: Bl,
                     }),
-                    o.createElement(Nr, { path: u._.marci(), component: Bl }),
+                    o.createElement(Nr, { path: u._.marci(), component: Il }),
                     o.createElement(Nr, {
                       path: u._.labyrinth(),
-                      component: Nl,
-                    }),
-                    o.createElement(Nr, {
-                      path: u._.shortfilm(),
-                      component: Sl,
-                    }),
-                    o.createElement(Nr, {
-                      path: u._.nemestice(),
-                      component: wl,
-                    }),
-                    o.createElement(Nr, {
-                      path: u._.springcleaning(),
-                      component: zs,
-                    }),
-                    o.createElement(Nr, {
-                      path: u._.primalbeast(),
-                      component: Il,
-                    }),
-                    o.createElement(Nr, {
-                      path: u._.battlereport(),
                       component: Dl,
                     }),
                     o.createElement(Nr, {
-                      path: u._.teamdetails(":id"),
+                      path: u._.shortfilm(),
+                      component: wl,
+                    }),
+                    o.createElement(Nr, {
+                      path: u._.nemestice(),
+                      component: Nl,
+                    }),
+                    o.createElement(Nr, {
+                      path: u._.springcleaning(),
+                      component: Ws,
+                    }),
+                    o.createElement(Nr, {
+                      path: u._.primalbeast(),
                       component: Rl,
+                    }),
+                    o.createElement(Nr, {
+                      path: u._.battlereport(),
+                      component: Ll,
+                    }),
+                    o.createElement(Nr, {
+                      path: u._.teamdetails(":id"),
+                      component: Al,
                     }),
                     o.createElement(Nr, {
                       path: u._.other(":page"),
@@ -46023,10 +46537,10 @@
           (t = (0, r.gn)([d.Pi], t))
         );
       })(o.Component);
-      var Al = n(34249),
-        Ml = n(76835),
-        Gl = n(93898);
-      function kl(e) {
+      var Gl = n(34249),
+        kl = n(76835),
+        Pl = n(93898);
+      function Fl(e) {
         var t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im"
@@ -46034,8 +46548,8 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      var Pl = /^(steam|ftp|https?):\/\//;
-      function Fl(e) {
+      var Ol = /^(steam|ftp|https?):\/\//;
+      function xl(e) {
         return e
           ? 1 != St.De.EUNIVERSE
             ? e
@@ -46086,15 +46600,15 @@
               )))
           : e;
       }
-      function Ol(e) {
+      function Ul(e) {
         if (!e) return !0;
-        var t = kl(e).toLocaleLowerCase();
+        var t = Fl(e).toLocaleLowerCase();
         return (
           [
-            kl(St.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            kl(St.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            kl(St.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            kl(St.De.STORE_CDN_URL).toLocaleLowerCase(),
+            Fl(St.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            Fl(St.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            Fl(St.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            Fl(St.De.STORE_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -46102,27 +46616,27 @@
           ].indexOf(t) >= 0
         );
       }
-      const xl = JSON.parse(
-        '{"store.steampowered.com":1,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201}'
+      const zl = JSON.parse(
+        '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201}'
       );
-      function Ul(e, t, n) {
+      function Hl(e, t, n) {
         void 0 === n && (n = null);
-        var a = kl(e).toLowerCase(),
-          r = kl(St.De.COMMUNITY_BASE_URL).toLowerCase(),
-          i = kl(St.De.STORE_BASE_URL).toLowerCase();
+        var a = Fl(e).toLowerCase(),
+          r = Fl(St.De.COMMUNITY_BASE_URL).toLowerCase(),
+          i = Fl(St.De.STORE_BASE_URL).toLowerCase();
         return a === r || a === i
           ? (function (e, t, n) {
               void 0 === n && (n = null);
               var a = (function (e, t) {
                 void 0 === t && (t = null);
                 if (!(null == e ? void 0 : e.domain)) return St.De.SNR;
-                return zl.GetLinkParam(e, t);
+                return Wl.GetLinkParam(e, t);
               })(t, n);
-              return zl.AddNavParamToURL(e, a);
+              return Wl.AddNavParamToURL(e, a);
             })(e, t, n)
           : e;
       }
-      var zl = (function () {
+      var Wl = (function () {
         function e() {}
         return (
           (e.SetNavEventParams = function (t, n, a, r) {
@@ -46186,7 +46700,7 @@
             try {
               var n = new URL(
                   (function (e) {
-                    return Pl.test(e) ? e : "https://" + e;
+                    return Ol.test(e) ? e : "https://" + e;
                   })(e)
                 ),
                 a = new URLSearchParams(n.search);
@@ -46227,15 +46741,15 @@
           }),
           (e.EncodeEventComponent = function (e) {
             if (!e) return "";
-            return e in xl
-              ? "" + xl[e]
+            return e in zl
+              ? "" + zl[e]
               : (e.match(/^[0-9]+$/) || (e = e.replace(/^[0-9]+/, "")),
                 e.replace(/[^a-zA-Z0-9\- ]+/g, ""));
           }),
           e
         );
       })();
-      var Hl = new ((function () {
+      var jl = new ((function () {
           function e() {
             (this.m_mapYouTubeVideo = new Map()),
               (this.m_mapSharedFile = new Map());
@@ -46341,10 +46855,10 @@
             e
           );
         })())(),
-        Wl = n(41411);
-      var jl = n(63826),
-        Vl = n.n(jl);
-      function Jl(e) {
+        Vl = n(41411);
+      var Jl = n(63826),
+        Yl = n.n(Jl);
+      function Zl(e) {
         var t = e.videoID,
           n = e.bShowVideoImmediately,
           a = e.bAutoPlay,
@@ -46369,7 +46883,8 @@
         (0, o.useEffect)(
           function () {
             c &&
-              Hl.LoadYouTubeDynamicData([t], _)
+              jl
+                .LoadYouTubeDynamicData([t], _)
                 .then(function (e) {
                   !_.token.reason && e.length > 0 && (f(e[0]), p(!0));
                 })
@@ -46386,7 +46901,7 @@
         if (
           (o.useEffect(
             function () {
-              n && (0, Xi.m)(function () {});
+              n && (0, Ki.m)(function () {});
             },
             [n, E]
           ),
@@ -46398,26 +46913,26 @@
           return o.createElement(
             "div",
             {
-              className: Vl().DynamicLinkBox,
+              className: Yl().DynamicLinkBox,
               onClick: function () {
                 return u(!1);
               },
             },
             o.createElement("img", {
-              className: Vl().DynamicLink_Preview,
+              className: Yl().DynamicLink_Preview,
               src: "https://img.youtube.com/vi/" + t + "/0.jpg",
             }),
             o.createElement(
               "div",
-              { className: Vl().DynamicLink_Content },
+              { className: Yl().DynamicLink_Content },
               o.createElement(
                 "div",
-                { className: Vl().DynamicLink_Name },
+                { className: Yl().DynamicLink_Name },
                 (0, ta.Xx)("#EventEditor_YouTubeVideoTitle", y)
               ),
               o.createElement(
                 "div",
-                { className: Vl().DynamicLink_YoutubeViews },
+                { className: Yl().DynamicLink_YoutubeViews },
                 (0, ta.Xx)(
                   "#EventEditor_YouTubeVideoViews",
                   (v = Number(T))
@@ -46427,22 +46942,22 @@
               ),
               o.createElement(
                 "div",
-                { className: Vl().Dynamiclink_Content },
+                { className: Yl().Dynamiclink_Content },
                 m && S,
-                !m && o.createElement(Wl.V, { size: "medium" })
+                !m && o.createElement(Vl.V, { size: "medium" })
               )
             )
           );
         }
         return o.createElement(
           "div",
-          { className: (0, b.Z)(Vl().PreviewYouTubeVideo, i, s), id: t },
+          { className: (0, b.Z)(Yl().PreviewYouTubeVideo, i, s), id: t },
           o.createElement("img", {
             src:
               St.De.COMMUNITY_CDN_URL +
               "public/shared/images/responsive/youtube_16x9_placeholder.gif",
           }),
-          o.createElement(Xi.e, {
+          o.createElement(Ki.e, {
             video: t,
             autoplay: null != a && a,
             startSeconds: r,
@@ -46453,8 +46968,8 @@
           })
         );
       }
-      var Yl,
-        Zl = n(83019);
+      var Xl,
+        ql = n(83019);
       !(function (e) {
         (e[(e.k_eLibrary = 1)] = "k_eLibrary"),
           (e[(e.k_eWishlist = 2)] = "k_eWishlist"),
@@ -46465,80 +46980,233 @@
           (e[(e.k_eFeatured = 64)] = "k_eFeatured"),
           (e[(e.k_eCurator = 128)] = "k_eCurator"),
           (e[(e.k_eReposted = 256)] = "k_eReposted");
-      })(Yl || (Yl = {}));
-      var Xl,
-        ql = (function () {
-          function e() {}
-          return (
-            (e.prototype.GetSource = function () {
-              return this.appInfo ? this.appInfo.source : this.clanInfo.source;
-            }),
-            (e.GetEntityNameForID = function (e, t) {
-              var n;
-              if (e)
-                return null === (n = ma.Get().GetApp(e)) || void 0 === n
-                  ? void 0
-                  : n.GetName();
-              if (t) {
-                var a = zt.GetClanInfoByClanAccountID(t);
-                if (a) return a.group_name;
-              }
-              return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
-            }),
-            (e.BHasEntityNameForID = function (e, t) {
-              var n, a;
-              return e
-                ? Boolean(
-                    null === (n = ma.Get().GetApp(e)) || void 0 === n
-                      ? void 0
-                      : n.GetName()
-                  )
-                : !!t &&
-                    !!(null === (a = zt.GetClanInfoByClanAccountID(t)) ||
-                    void 0 === a
-                      ? void 0
-                      : a.group_name);
-            }),
-            (e.prototype.GetEntityName = function () {
-              return e.GetEntityNameForID(this.appid, this.clanid);
-            }),
-            (e.prototype.GetGameCapsule = function () {
-              var e, t;
-              if (this.appInfo)
-                return null ===
-                  (t =
-                    null === (e = ma.Get().GetApp(this.appInfo.appid)) ||
-                    void 0 === e
-                      ? void 0
-                      : e.GetAssets()) || void 0 === t
-                  ? void 0
-                  : t.GetMainCapsuleURL();
-              if (this.clanInfo) {
-                var n = zt.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-                if (n) return n.avatar_full_url;
-              }
-              return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
-            }),
-            (e.prototype.GetGameIcon = function () {
-              var e, t;
-              if (this.appInfo)
-                return null ===
-                  (t =
-                    null === (e = ma.Get().GetApp(this.appInfo.appid)) ||
-                    void 0 === e
-                      ? void 0
-                      : e.GetAssets()) || void 0 === t
-                  ? void 0
-                  : t.GetCommunityIconURL();
-              if (this.clanInfo) {
-                var n = zt.GetClanInfoByClanAccountID(this.clanInfo.clanid);
-                if (n) return n.avatar_full_url;
-              }
-              return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
-            }),
-            e
-          );
-        })();
+      })(Xl || (Xl = {}));
+      var Kl = (function () {
+        function e() {}
+        return (
+          (e.prototype.GetSource = function () {
+            return this.appInfo ? this.appInfo.source : this.clanInfo.source;
+          }),
+          (e.GetEntityNameForID = function (e, t) {
+            var n;
+            if (e)
+              return null === (n = ma.Get().GetApp(e)) || void 0 === n
+                ? void 0
+                : n.GetName();
+            if (t) {
+              var a = zt.GetClanInfoByClanAccountID(t);
+              if (a) return a.group_name;
+            }
+            return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
+          }),
+          (e.BHasEntityNameForID = function (e, t) {
+            var n, a;
+            return e
+              ? Boolean(
+                  null === (n = ma.Get().GetApp(e)) || void 0 === n
+                    ? void 0
+                    : n.GetName()
+                )
+              : !!t &&
+                  !!(null === (a = zt.GetClanInfoByClanAccountID(t)) ||
+                  void 0 === a
+                    ? void 0
+                    : a.group_name);
+          }),
+          (e.prototype.GetEntityName = function () {
+            return e.GetEntityNameForID(this.appid, this.clanid);
+          }),
+          (e.prototype.GetGameCapsule = function () {
+            var e, t;
+            if (this.appInfo)
+              return null ===
+                (t =
+                  null === (e = ma.Get().GetApp(this.appInfo.appid)) ||
+                  void 0 === e
+                    ? void 0
+                    : e.GetAssets()) || void 0 === t
+                ? void 0
+                : t.GetMainCapsuleURL();
+            if (this.clanInfo) {
+              var n = zt.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+              if (n) return n.avatar_full_url;
+            }
+            return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
+          }),
+          (e.prototype.GetGameIcon = function () {
+            var e, t;
+            if (this.appInfo)
+              return null ===
+                (t =
+                  null === (e = ma.Get().GetApp(this.appInfo.appid)) ||
+                  void 0 === e
+                    ? void 0
+                    : e.GetAssets()) || void 0 === t
+                ? void 0
+                : t.GetCommunityIconURL();
+            if (this.clanInfo) {
+              var n = zt.GetClanInfoByClanAccountID(this.clanInfo.clanid);
+              if (n) return n.avatar_full_url;
+            }
+            return (0, ta.Xx)("#EventCalendar_MuteApp_Unknown");
+          }),
+          e
+        );
+      })();
+      var Ql,
+        $l = "061818254b2c99ac49e6626adb128ed1282a392f";
+      !(function () {
+        function e(e) {
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
+        }
+        Object.defineProperty(e.prototype, "appid", {
+          get: function () {
+            return this.m_unAppID;
+          },
+          enumerable: !1,
+          configurable: !0,
+        }),
+          Object.defineProperty(e.prototype, "is_initialized", {
+            get: function () {
+              return this.m_bInitialized;
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "is_valid", {
+            get: function () {
+              return this.m_bInitialized && !!this.m_strName;
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "name", {
+            get: function () {
+              return this.m_strName;
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "header_image_url", {
+            get: function () {
+              return (
+                St.De.MEDIA_CDN_URL +
+                "steam/apps/".concat(this.m_unAppID, "/header.jpg")
+              );
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "icon_url_no_default", {
+            get: function () {
+              return (
+                this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, $l)
+              );
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "icon_url", {
+            get: function () {
+              return this.BuildAppURL(this.m_strIconURL, $l);
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "logo_url", {
+            get: function () {
+              return (
+                St.De.MEDIA_CDN_URL +
+                "steam/apps/".concat(this.m_unAppID, "/capsule_231x87.jpg")
+              );
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "time_updated_from_server", {
+            get: function () {
+              return this.m_dtUpdatedFromServer;
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "apptype", {
+            get: function () {
+              return this.m_eAppType;
+            },
+            enumerable: !1,
+            configurable: !0,
+          }),
+          (e.prototype.BIsApplicationOrTool = function () {
+            return 4 == this.apptype || 2 == this.apptype;
+          }),
+          (e.prototype.BuildAppURL = function (e, t) {
+            return e
+              ? St.De.MEDIA_CDN_COMMUNITY_URL +
+                  "images/apps/" +
+                  this.appid +
+                  "/" +
+                  e +
+                  ".jpg"
+              : (function (e, t) {
+                  var n = ".jpg";
+                  (e && "0000000000000000000000000000000000000000" !== e) ||
+                    (e = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb"),
+                    44 == e.length &&
+                      ((n = e.substr(-4)), (e = e.substr(0, 40)));
+                  var a = St.De.AVATAR_BASE_URL;
+                  return (
+                    a ||
+                      ((a = St.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+                      (a += e.substr(0, 2) + "/")),
+                    (a += e),
+                    t && "small" != t && (a += "_" + t),
+                    a + n
+                  );
+                })(t);
+          }),
+          (e.prototype.DeserializeFromMessage = function (e) {
+            (this.m_bInitialized = !0),
+              (this.m_strName = e.name()),
+              (this.m_strIconURL = e.icon()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = e.app_type());
+          }),
+          (e.prototype.DeserializeFromAppOverview = function (e) {
+            e.icon_hash() && 1073741824 != e.app_type()
+              ? ((this.m_bInitialized = !0),
+                (this.m_strName = e.display_name()),
+                (this.m_strIconURL = e.icon_hash()),
+                (this.m_dtUpdatedFromServer = new Date()),
+                (this.m_eAppType = e.app_type()))
+              : (this.m_bInitialized = !1);
+          }),
+          (e.prototype.DeserializeFromCacheObject = function (e) {
+            try {
+              (this.m_strName = e.strName),
+                (this.m_strIconURL = e.strIconURL),
+                (this.m_dtUpdatedFromServer = new Date(e.strUpdatedFromServer)),
+                (this.m_eAppType = e.eAppType),
+                (this.m_bInitialized = !0);
+            } catch (e) {}
+          }),
+          (e.prototype.SerializeToCacheObject = function () {
+            return (
+              (0, Ct.X)(
+                this.m_bInitialized,
+                "Attempting to serialize an uninitialized AppInfo object for caching!"
+              ),
+              this.m_bInitialized
+                ? {
+                    strName: this.m_strName,
+                    strIconURL: this.m_strIconURL,
+                    strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                    eAppType: this.m_eAppType,
+                  }
+                : null
+            );
+          });
+      })();
       !(function (e) {
         (e.k_ERecent = "recent"),
           (e.k_ELibrary = "library"),
@@ -46548,18 +47216,18 @@
           (e.k_ESteam = "steam"),
           (e.k_EFeatured = "featured"),
           (e.k_ECurator = "curator");
-      })(Xl || (Xl = {}));
-      var Kl,
-        Ql = [
-          Xl.k_ELibrary,
-          Xl.k_EWishlist,
-          Xl.k_EFollowing,
-          Xl.k_ERecommended,
-          Xl.k_ESteam,
-          Xl.k_ECurator,
+      })(Ql || (Ql = {}));
+      var ec,
+        tc = [
+          Ql.k_ELibrary,
+          Ql.k_EWishlist,
+          Ql.k_EFollowing,
+          Ql.k_ERecommended,
+          Ql.k_ESteam,
+          Ql.k_ECurator,
         ],
-        $l = (0, r.ev)((0, r.ev)([], Ql, !0), [Xl.k_EFeatured], !1),
-        ec = [Xl.k_EFeatured];
+        nc = (0, r.ev)((0, r.ev)([], tc, !0), [Ql.k_EFeatured], !1),
+        ac = [Ql.k_EFeatured];
       !(function (e) {
         (e.k_ENews = "news"),
           (e.k_EEvents = "events"),
@@ -46567,31 +47235,31 @@
           (e.k_EUpdates = "updates"),
           (e.k_EReleases = "releases"),
           (e.k_ESales = "sales");
-      })(Kl || (Kl = {}));
-      var tc = [
-          Kl.k_ENews,
-          Kl.k_EEvents,
-          Kl.k_EStreaming,
-          Kl.k_EUpdates,
-          Kl.k_EReleases,
-          Kl.k_ESales,
+      })(ec || (ec = {}));
+      var rc = [
+          ec.k_ENews,
+          ec.k_EEvents,
+          ec.k_EStreaming,
+          ec.k_EUpdates,
+          ec.k_EReleases,
+          ec.k_ESales,
         ],
-        nc = new Map([
-          [Kl.k_ENews, [28]],
-          [Kl.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
-          [Kl.k_EStreaming, [11]],
-          [Kl.k_EUpdates, [12, 13, 14]],
-          [Kl.k_EReleases, [10, 29, 16, 15, 32]],
-          [Kl.k_ESales, [20, 21, 31, 34]],
+        ic = new Map([
+          [ec.k_ENews, [28]],
+          [ec.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [ec.k_EStreaming, [11]],
+          [ec.k_EUpdates, [12, 13, 14]],
+          [ec.k_EReleases, [10, 29, 16, 15, 32]],
+          [ec.k_ESales, [20, 21, 31, 34]],
         ]);
-      function ac(e) {
+      function oc(e) {
         return new Map(
           e.map(function (e) {
             return [e, !0];
           })
         );
       }
-      var rc;
+      var sc;
       !(function () {
         function e() {
           (this.m_mapEventTypeGroupsAllowed = new Map()),
@@ -46622,7 +47290,7 @@
                 t++
               ) {
                 var a = n[t];
-                nc.get(a).forEach(function (t) {
+                ic.get(a).forEach(function (t) {
                   return e.add(t);
                 });
               }
@@ -46634,18 +47302,18 @@
           (e.prototype.MapClanEventTypeToGroup = function (e) {
             var t = null;
             return (
-              nc.forEach(function (n, a) {
+              ic.forEach(function (n, a) {
                 -1 !== n.indexOf(e) && (t = a);
               }),
-              t || Kl.k_EEvents
+              t || ec.k_EEvents
             );
           }),
           (e.prototype.InitDefaultCheckboxes = function (e, t, n) {
             (this.m_bInitializedForUpdatesOnly = t),
-              (this.m_mapEventTypeGroupsAllowed = ac(t ? [Kl.k_EUpdates] : tc));
-            var a = St.De.EREALM === Mt.IN.k_ESteamRealmChina ? $l : Ql;
-            (this.m_mapGameSources = ac(e ? a : ec)),
-              n && this.m_mapGameSources.set(Xl.k_EFeatured, !0);
+              (this.m_mapEventTypeGroupsAllowed = oc(t ? [ec.k_EUpdates] : rc));
+            var a = St.De.EREALM === Mt.IN.k_ESteamRealmChina ? nc : tc;
+            (this.m_mapGameSources = oc(e ? a : ac)),
+              n && this.m_mapGameSources.set(Ql.k_EFeatured, !0);
           }),
           (e.prototype.Init = function (e, t, n, a, r) {
             (this.m_eStorageType = r), (this.m_strStorageKey = a);
@@ -46657,8 +47325,8 @@
                 var l = s.rgEventTypeGroupsAllowed,
                   c = s.rgGameSources;
                 return (
-                  (this.m_mapEventTypeGroupsAllowed = ac(l)),
-                  (this.m_mapGameSources = ac(c)),
+                  (this.m_mapEventTypeGroupsAllowed = oc(l)),
+                  (this.m_mapGameSources = oc(c)),
                   void (
                     void 0 !== s.bCuratorUnhideOnFollowDismissed &&
                     (this.m_bCuratorUnhideOnFollowDialogDismissed =
@@ -46695,8 +47363,8 @@
           }),
           (e.prototype.BIsGameSourceAllowed = function (e) {
             return (
-              !(e === Xl.k_EFollowing && !jt.bIsFollowingEnabled) &&
-              !(e === Xl.k_ECurator && !jt.bIsCuratorsEnabled) &&
+              !(e === Ql.k_EFollowing && !jt.bIsFollowingEnabled) &&
+              !(e === Ql.k_ECurator && !jt.bIsCuratorsEnabled) &&
               this.m_mapGameSources.has(e)
             );
           }),
@@ -46705,26 +47373,26 @@
               ? this.m_mapEventTypeGroupsAllowed.set(e, !0)
               : this.m_mapEventTypeGroupsAllowed.delete(e),
               this.SaveFilterPreferences(),
-              ic.RecordFilterChangeEvent(this);
+              lc.RecordFilterChangeEvent(this);
           }),
           (e.prototype.SetGameSourceAllowed = function (e, t) {
             t
               ? (this.m_mapGameSources.set(e, !0),
-                e == Xl.k_ERecent
-                  ? this.m_mapGameSources.delete(Xl.k_ELibrary)
-                  : e == Xl.k_ELibrary &&
+                e == Ql.k_ERecent
+                  ? this.m_mapGameSources.delete(Ql.k_ELibrary)
+                  : e == Ql.k_ELibrary &&
                     ((0, Ct.X)(
-                      !this.m_mapGameSources.has(Xl.k_ERecent),
+                      !this.m_mapGameSources.has(Ql.k_ERecent),
                       "Setting Library although Recent already set - illusion was broken"
                     ),
-                    this.m_mapGameSources.delete(Xl.k_ERecent)))
+                    this.m_mapGameSources.delete(Ql.k_ERecent)))
               : (this.m_mapGameSources.delete(e),
-                e == Xl.k_ERecent
-                  ? this.m_mapGameSources.set(Xl.k_ELibrary, !0)
-                  : e == Xl.k_ELibrary &&
-                    this.m_mapGameSources.delete(Xl.k_ERecent)),
+                e == Ql.k_ERecent
+                  ? this.m_mapGameSources.set(Ql.k_ELibrary, !0)
+                  : e == Ql.k_ELibrary &&
+                    this.m_mapGameSources.delete(Ql.k_ERecent)),
               this.SaveFilterPreferences(),
-              ic.RecordFilterChangeEvent(this);
+              lc.RecordFilterChangeEvent(this);
           }),
           (e.prototype.BShouldDisplayEvent = function (e) {
             var t = e.GetSource(),
@@ -46737,27 +47405,27 @@
               !!(
                 this.enabledEventTypeSet.has(e.event_type) ||
                 (this.m_bInitializedForUpdatesOnly &&
-                  this.BIsEventTypeGroupAllowed(Kl.k_EUpdates) &&
+                  this.BIsEventTypeGroupAllowed(ec.k_EUpdates) &&
                   28 == e.event_type &&
                   e.start_time < 1599202800)
               ) &&
-              (!!(t & Yl.k_eRequired || t & Yl.k_eReposted) ||
+              (!!(t & Xl.k_eRequired || t & Xl.k_eReposted) ||
                 Boolean(
-                  (this.BIsGameSourceAllowed(Xl.k_ERecent) && n) ||
-                    (this.BIsGameSourceAllowed(Xl.k_ELibrary) &&
-                      t & Yl.k_eLibrary) ||
-                    (this.BIsGameSourceAllowed(Xl.k_EWishlist) &&
-                      t & Yl.k_eWishlist) ||
-                    (this.BIsGameSourceAllowed(Xl.k_EFollowing) &&
-                      t & Yl.k_eFollowing) ||
-                    (this.BIsGameSourceAllowed(Xl.k_ERecommended) &&
-                      t & Yl.k_eRecommended) ||
-                    (this.BIsGameSourceAllowed(Xl.k_ESteam) &&
-                      t & Yl.k_eSteam) ||
-                    (this.BIsGameSourceAllowed(Xl.k_EFeatured) &&
-                      t & Yl.k_eFeatured) ||
-                    (this.BIsGameSourceAllowed(Xl.k_ECurator) &&
-                      t & Yl.k_eCurator)
+                  (this.BIsGameSourceAllowed(Ql.k_ERecent) && n) ||
+                    (this.BIsGameSourceAllowed(Ql.k_ELibrary) &&
+                      t & Xl.k_eLibrary) ||
+                    (this.BIsGameSourceAllowed(Ql.k_EWishlist) &&
+                      t & Xl.k_eWishlist) ||
+                    (this.BIsGameSourceAllowed(Ql.k_EFollowing) &&
+                      t & Xl.k_eFollowing) ||
+                    (this.BIsGameSourceAllowed(Ql.k_ERecommended) &&
+                      t & Xl.k_eRecommended) ||
+                    (this.BIsGameSourceAllowed(Ql.k_ESteam) &&
+                      t & Xl.k_eSteam) ||
+                    (this.BIsGameSourceAllowed(Ql.k_EFeatured) &&
+                      t & Xl.k_eFeatured) ||
+                    (this.BIsGameSourceAllowed(Ql.k_ECurator) &&
+                      t & Xl.k_eCurator)
                 ))
             );
           }),
@@ -46769,12 +47437,12 @@
           }),
           (e.prototype.BAreAnyEventsFiltered = function (e) {
             var t = this,
-              n = St.De.EREALM === Mt.IN.k_ESteamRealmChina ? $l : Ql;
+              n = St.De.EREALM === Mt.IN.k_ESteamRealmChina ? nc : tc;
             return (
-              (e ? n : ec).some(function (e) {
+              (e ? n : ac).some(function (e) {
                 return !t.BIsGameSourceAllowed(e);
               }) ||
-              tc.some(function (e) {
+              rc.some(function (e) {
                 return !t.BIsEventTypeGroupAllowed(e);
               })
             );
@@ -46819,8 +47487,8 @@
             "k_eReminder_EmailUnverified"),
           (e[(e.k_eReminder_MobilePushMissing = 12)] =
             "k_eReminder_MobilePushMissing");
-      })(rc || (rc = {}));
-      var ic = new ((function () {
+      })(sc || (sc = {}));
+      var lc = new ((function () {
         function e() {
           (this.m_nPastViewedIndex = 0),
             (this.m_nPastViewedDays = 0),
@@ -46863,7 +47531,7 @@
                       Math.min(n.m_nFutureViewedIndex, 4095) |
                       (Math.min(n.m_nFutureViewableEvents, 255) << 12) |
                       (Math.min(n.GetTimeSpentOnPageS(e), 2047) << 20);
-                    ic.SendExperimentEventToSteam(18, t);
+                    lc.SendExperimentEventToSteam(18, t);
                   });
                 }
               } else {
@@ -46878,7 +47546,7 @@
                       Math.min(n.m_nPastViewedIndex, 4095) |
                       (Math.min(n.m_nPastViewedDays, 255) << 12) |
                       (Math.min(n.GetTimeSpentOnPageS(e), 2047) << 20);
-                    ic.SendExperimentEventToSteam(17, t);
+                    lc.SendExperimentEventToSteam(17, t);
                   });
                 }
               }
@@ -46887,19 +47555,19 @@
             var t = this;
             this.m_scheduledFilterChange.Schedule(1e3, function () {
               var n = 0;
-              e.BIsGameSourceAllowed(Xl.k_ELibrary) && (n |= 1),
-                e.BIsGameSourceAllowed(Xl.k_EWishlist) && (n |= 2),
-                e.BIsGameSourceAllowed(Xl.k_EFollowing) && (n |= 4),
-                e.BIsGameSourceAllowed(Xl.k_ERecommended) && (n |= 8),
-                e.BIsGameSourceAllowed(Xl.k_ESteam) && (n |= 16),
-                e.BIsGameSourceAllowed(Xl.k_EFeatured) && (n |= 32),
-                e.BIsGameSourceAllowed(Xl.k_ERecent) && (n |= 64),
-                e.BIsEventTypeGroupAllowed(Kl.k_ENews) && (n |= 1024),
-                e.BIsEventTypeGroupAllowed(Kl.k_EEvents) && (n |= 2048),
-                e.BIsEventTypeGroupAllowed(Kl.k_EStreaming) && (n |= 4096),
-                e.BIsEventTypeGroupAllowed(Kl.k_EUpdates) && (n |= 8192),
-                e.BIsEventTypeGroupAllowed(Kl.k_EReleases) && (n |= 16384),
-                e.BIsEventTypeGroupAllowed(Kl.k_ESales) && (n |= 32768),
+              e.BIsGameSourceAllowed(Ql.k_ELibrary) && (n |= 1),
+                e.BIsGameSourceAllowed(Ql.k_EWishlist) && (n |= 2),
+                e.BIsGameSourceAllowed(Ql.k_EFollowing) && (n |= 4),
+                e.BIsGameSourceAllowed(Ql.k_ERecommended) && (n |= 8),
+                e.BIsGameSourceAllowed(Ql.k_ESteam) && (n |= 16),
+                e.BIsGameSourceAllowed(Ql.k_EFeatured) && (n |= 32),
+                e.BIsGameSourceAllowed(Ql.k_ERecent) && (n |= 64),
+                e.BIsEventTypeGroupAllowed(ec.k_ENews) && (n |= 1024),
+                e.BIsEventTypeGroupAllowed(ec.k_EEvents) && (n |= 2048),
+                e.BIsEventTypeGroupAllowed(ec.k_EStreaming) && (n |= 4096),
+                e.BIsEventTypeGroupAllowed(ec.k_EUpdates) && (n |= 8192),
+                e.BIsEventTypeGroupAllowed(ec.k_EReleases) && (n |= 16384),
+                e.BIsEventTypeGroupAllowed(ec.k_ESales) && (n |= 32768),
                 n != t.m_nLastRecordedFilter &&
                   ((t.m_nLastRecordedFilter = n),
                   t.SendExperimentEventToSteam(16, n));
@@ -46939,16 +47607,16 @@
           e
         );
       })())();
-      window.g_EventCalendarTrackingStore = ic;
-      var oc = n(8339),
-        sc = Zt.Message;
+      window.g_EventCalendarTrackingStore = lc;
+      var cc = n(8339),
+        uc = Zt.Message;
       !(function (e) {
         function t(n) {
           void 0 === n && (n = null);
           var a = e.call(this) || this;
           return (
             t.prototype.appids || Qt.aR(t.M()),
-            sc.initialize(a, n, 0, -1, [1], null),
+            uc.initialize(a, n, 0, -1, [1], null),
             a
           );
         }
@@ -47013,15 +47681,15 @@
           (t.prototype.getClassName = function () {
             return "CCommunity_GetApps_Request";
           });
-      })(sc);
-      var lc,
-        cc = (function (e) {
+      })(uc);
+      var dc,
+        mc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.apps || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [1], null),
+              uc.initialize(a, n, 0, -1, [1], null),
               a
             );
           }
@@ -47032,7 +47700,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { apps: { n: 1, c: oc.VJ, r: !0, q: !0 } },
+                    fields: { apps: { n: 1, c: cc.VJ, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -47075,15 +47743,15 @@
             }),
             t
           );
-        })(sc),
-        uc =
+        })(uc),
+        pc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.appid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -47145,14 +47813,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetAppRichPresenceLocalization_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.appid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [2], null),
+                uc.initialize(a, n, 0, -1, [2], null),
                 a
               );
             }
@@ -47169,7 +47837,7 @@
                           br: Qt.FE.readInt32,
                           bw: Qt.Xc.writeInt32,
                         },
-                        token_lists: { n: 2, c: mc, r: !0, q: !0 },
+                        token_lists: { n: 2, c: gc, r: !0, q: !0 },
                       },
                     }),
                   t.sm_m
@@ -47213,14 +47881,14 @@
               }),
               t
             );
-          })(sc)),
-        dc = (function (e) {
+          })(uc)),
+        _c = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.name || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -47285,14 +47953,14 @@
             }),
             t
           );
-        })(sc),
-        mc = (function (e) {
+        })(uc),
+        gc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.language || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [2], null),
+              uc.initialize(a, n, 0, -1, [2], null),
               a
             );
           }
@@ -47309,7 +47977,7 @@
                         br: Qt.FE.readString,
                         bw: Qt.Xc.writeString,
                       },
-                      tokens: { n: 2, c: dc, r: !0, q: !0 },
+                      tokens: { n: 2, c: _c, r: !0, q: !0 },
                     },
                   }),
                 t.sm_m
@@ -47353,15 +48021,15 @@
             }),
             t
           );
-        })(sc),
-        pc =
+        })(uc),
+        hc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -47473,14 +48141,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetCommentThread_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.gidcomment || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [12], null),
+                uc.initialize(a, n, 0, -1, [12], null),
                 a
               );
             }
@@ -47532,7 +48200,7 @@
                           br: Qt.FE.readBool,
                           bw: Qt.Xc.writeBool,
                         },
-                        ipaddress: { n: 9, c: oc.j7 },
+                        ipaddress: { n: 9, c: cc.j7 },
                         total_hidden: {
                           n: 10,
                           br: Qt.FE.readInt32,
@@ -47543,7 +48211,7 @@
                           br: Qt.FE.readBool,
                           bw: Qt.Xc.writeBool,
                         },
-                        reactions: { n: 12, c: _c, r: !0, q: !0 },
+                        reactions: { n: 12, c: fc, r: !0, q: !0 },
                         gidparentcomment: {
                           n: 13,
                           br: Qt.FE.readFixed64String,
@@ -47592,14 +48260,14 @@
               }),
               t
             );
-          })(sc)),
-        _c = (function (e) {
+          })(uc)),
+        fc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.reactionid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -47664,14 +48332,14 @@
             }),
             t
           );
-        })(sc),
-        gc = (function (e) {
+        })(uc),
+        vc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.comments || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [1, 2, 9], null),
+              uc.initialize(a, n, 0, -1, [1, 2, 9], null),
               a
             );
           }
@@ -47683,8 +48351,8 @@
                   (t.sm_m = {
                     proto: t,
                     fields: {
-                      comments: { n: 1, c: pc, r: !0, q: !0 },
-                      deleted_comments: { n: 2, c: pc, r: !0, q: !0 },
+                      comments: { n: 1, c: hc, r: !0, q: !0 },
+                      deleted_comments: { n: 2, c: hc, r: !0, q: !0 },
                       steamid: {
                         n: 3,
                         br: Qt.FE.readFixed64String,
@@ -47811,15 +48479,15 @@
             }),
             t
           );
-        })(sc),
-        hc =
+        })(uc),
+        bc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -47916,14 +48584,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PostCommentToThread_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.gidcomment || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -47998,15 +48666,15 @@
               }),
               t
             );
-          })(sc)),
-        fc =
+          })(uc)),
+        Ec =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -48088,12 +48756,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_DeleteCommentFromThread_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -48130,15 +48798,15 @@
               }),
               t
             );
-          })(sc)),
-        vc =
+          })(uc)),
+        yc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.commentthreadtype || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -48225,14 +48893,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_RateCommentThread_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.gidcomment || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -48312,15 +48980,15 @@
               }),
               t
             );
-          })(sc)),
-        bc =
+          })(uc)),
+        Tc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.commentthreadtype || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -48402,14 +49070,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetCommentThreadRatings_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.commentthreadid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [5], null),
+                uc.initialize(a, n, 0, -1, [5], null),
                 a
               );
             }
@@ -48492,14 +49160,14 @@
               }),
               t
             );
-          })(sc)),
-        Ec = (function (e) {
+          })(uc)),
+        Sc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.announcementid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -48569,12 +49237,12 @@
             }),
             t
           );
-        })(sc),
-        yc = (function (e) {
+        })(uc),
+        Cc = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return sc.initialize(n, t, 0, -1, void 0, null), n;
+            return uc.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, r.ZT)(t, e),
@@ -48611,14 +49279,14 @@
             }),
             t
           );
-        })(sc),
-        Tc = (function (e) {
+        })(uc),
+        wc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.announcementid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -48678,14 +49346,14 @@
             }),
             t
           );
-        })(sc),
-        Sc = (function (e) {
+        })(uc),
+        Bc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.voted_up || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -48750,15 +49418,15 @@
             }),
             t
           );
-        })(sc),
-        Cc =
+        })(uc),
+        Nc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -48820,14 +49488,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetAvatarHistory_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.avatars || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [1], null),
+                uc.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -48838,7 +49506,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { avatars: { n: 1, c: wc, r: !0, q: !0 } },
+                      fields: { avatars: { n: 1, c: Ic, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -48881,14 +49549,14 @@
               }),
               t
             );
-          })(sc)),
-        wc = (function (e) {
+          })(uc)),
+        Ic = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.avatar_sha1 || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -48958,14 +49626,14 @@
             }),
             t
           );
-        })(sc),
-        Bc = (function (e) {
+        })(uc),
+        Dc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.priority || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [2], null),
+              uc.initialize(a, n, 0, -1, [2], null),
               a
             );
           }
@@ -49033,15 +49701,15 @@
             }),
             t
           );
-        })(sc),
-        Nc =
+        })(uc),
+        Rc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.count || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [5, 6, 8], null),
+                uc.initialize(a, n, 0, -1, [5, 6, 8], null),
                 a
               );
             }
@@ -49093,7 +49761,7 @@
                           br: Qt.FE.readBool,
                           bw: Qt.Xc.writeBool,
                         },
-                        app_list: { n: 8, c: Bc, r: !0, q: !0 },
+                        app_list: { n: 8, c: Dc, r: !0, q: !0 },
                         count_after: {
                           n: 9,
                           d: 0,
@@ -49147,14 +49815,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventNews_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.results || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [1], null),
+                uc.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -49165,7 +49833,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { results: { n: 1, c: oc.uV, r: !0, q: !0 } },
+                      fields: { results: { n: 1, c: cc.uV, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -49208,15 +49876,15 @@
               }),
               t
             );
-          })(sc)),
-        Ic =
+          })(uc)),
+        Lc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.include_steam_blog || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -49283,14 +49951,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetBestEventsForUser_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.clanid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -49381,14 +50049,14 @@
               }),
               t
             );
-          })(sc)),
-        Dc = (function (e) {
+          })(uc)),
+        Ac = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.results || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [1], null),
+              uc.initialize(a, n, 0, -1, [1], null),
               a
             );
           }
@@ -49399,7 +50067,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { results: { n: 1, c: Ic, r: !0, q: !0 } },
+                    fields: { results: { n: 1, c: Lc, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -49442,13 +50110,13 @@
             }),
             t
           );
-        })(sc),
-        Rc =
+        })(uc),
+        Mc =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, r.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -49482,12 +50150,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_ClearUserPartnerEventsAppPriorities_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -49524,14 +50192,14 @@
               }),
               t
             );
-          })(sc)),
-        Lc = (function (e) {
+          })(uc)),
+        Gc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.appid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -49596,13 +50264,13 @@
             }),
             t
           );
-        })(sc),
-        Ac =
+        })(uc),
+        kc =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, r.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -49636,14 +50304,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventsAppPriorities_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.priorities || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [1], null),
+                uc.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -49654,7 +50322,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { priorities: { n: 1, c: Lc, r: !0, q: !0 } },
+                      fields: { priorities: { n: 1, c: Gc, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -49697,15 +50365,15 @@
               }),
               t
             );
-          })(sc)),
-        Mc =
+          })(uc)),
+        Pc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.appid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -49762,12 +50430,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_ClearSinglePartnerEventsAppPriority_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -49804,15 +50472,15 @@
               }),
               t
             );
-          })(sc)),
-        Gc =
+          })(uc)),
+        Fc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.appid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -49869,12 +50537,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PartnerEventsShowMoreForApp_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -49911,15 +50579,15 @@
               }),
               t
             );
-          })(sc)),
-        kc =
+          })(uc)),
+        Oc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.appid || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, void 0, null),
+                uc.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -49976,12 +50644,12 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_PartnerEventsShowLessForApp_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return sc.initialize(n, t, 0, -1, void 0, null), n;
+              return uc.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -50018,14 +50686,14 @@
               }),
               t
             );
-          })(sc)),
-        Pc = (function (e) {
+          })(uc)),
+        xc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.markings || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, [1], null),
+              uc.initialize(a, n, 0, -1, [1], null),
               a
             );
           }
@@ -50036,7 +50704,7 @@
                 t.sm_m ||
                   (t.sm_m = {
                     proto: t,
-                    fields: { markings: { n: 1, c: Fc, r: !0, q: !0 } },
+                    fields: { markings: { n: 1, c: Uc, r: !0, q: !0 } },
                   }),
                 t.sm_m
               );
@@ -50079,14 +50747,14 @@
             }),
             t
           );
-        })(sc),
-        Fc = (function (e) {
+        })(uc),
+        Uc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.clanid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -50166,12 +50834,12 @@
             }),
             t
           );
-        })(sc),
-        Oc = (function (e) {
+        })(uc),
+        zc = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return sc.initialize(n, t, 0, -1, void 0, null), n;
+            return uc.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, r.ZT)(t, e),
@@ -50208,15 +50876,15 @@
             }),
             t
           );
-        })(sc),
-        xc =
+        })(uc),
+        Hc =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.event_gids || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [1], null),
+                uc.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -50281,14 +50949,14 @@
               (t.prototype.getClassName = function () {
                 return "CCommunity_GetUserPartnerEventViewStatus_Request";
               });
-          })(sc),
+          })(uc),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.events || Qt.aR(t.M()),
-                sc.initialize(a, n, 0, -1, [1], null),
+                uc.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -50299,7 +50967,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { events: { n: 1, c: Uc, r: !0, q: !0 } },
+                      fields: { events: { n: 1, c: Wc, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -50342,14 +51010,14 @@
               }),
               t
             );
-          })(sc)),
-        Uc = (function (e) {
+          })(uc)),
+        Wc = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.event_gid || Qt.aR(t.M()),
-              sc.initialize(a, n, 0, -1, void 0, null),
+              uc.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -50424,10 +51092,10 @@
             }),
             t
           );
-        })(sc);
+        })(uc);
       !(function (e) {
         (e.GetApps = function (e, t) {
-          return e.SendMsg("Community.GetApps#1", t, cc, {
+          return e.SendMsg("Community.GetApps#1", t, mc, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -50437,37 +51105,37 @@
             return e.SendMsg(
               "Community.GetAppRichPresenceLocalization#1",
               t,
-              uc,
+              pc,
               { ePrivilege: 1 }
             );
           }),
           (e.GetCommentThread = function (e, t) {
-            return e.SendMsg("Community.GetCommentThread#1", t, gc, {
+            return e.SendMsg("Community.GetCommentThread#1", t, vc, {
               ePrivilege: 2,
             });
           }),
           (e.PostCommentToThread = function (e, t) {
-            return e.SendMsg("Community.PostCommentToThread#1", t, hc, {
+            return e.SendMsg("Community.PostCommentToThread#1", t, bc, {
               ePrivilege: 3,
             });
           }),
           (e.DeleteCommentFromThread = function (e, t) {
-            return e.SendMsg("Community.DeleteCommentFromThread#1", t, fc, {
+            return e.SendMsg("Community.DeleteCommentFromThread#1", t, Ec, {
               ePrivilege: 1,
             });
           }),
           (e.RateCommentThread = function (e, t) {
-            return e.SendMsg("Community.RateCommentThread#1", t, vc, {
+            return e.SendMsg("Community.RateCommentThread#1", t, yc, {
               ePrivilege: 3,
             });
           }),
           (e.GetCommentThreadRatings = function (e, t) {
-            return e.SendMsg("Community.GetCommentThreadRatings#1", t, bc, {
+            return e.SendMsg("Community.GetCommentThreadRatings#1", t, Tc, {
               ePrivilege: 2,
             });
           }),
           (e.RateClanAnnouncement = function (e, t) {
-            return e.SendMsg("Community.RateClanAnnouncement#1", t, yc, {
+            return e.SendMsg("Community.RateClanAnnouncement#1", t, Cc, {
               ePrivilege: 3,
             });
           }),
@@ -50475,31 +51143,31 @@
             return e.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
               t,
-              Sc,
+              Bc,
               { ePrivilege: 1 }
             );
           }),
           (e.GetAvatarHistory = function (e, t) {
-            return e.SendMsg("Community.GetAvatarHistory#1", t, Cc, {
+            return e.SendMsg("Community.GetAvatarHistory#1", t, Nc, {
               ePrivilege: 1,
             });
           }),
           (e.GetUserPartnerEventNews = function (e, t) {
-            return e.SendMsg("Community.GetUserPartnerEventNews#1", t, Nc, {
+            return e.SendMsg("Community.GetUserPartnerEventNews#1", t, Rc, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.GetBestEventsForUser = function (e, t) {
-            return e.SendMsg("Community.GetBestEventsForUser#1", t, Dc, {
+            return e.SendMsg("Community.GetBestEventsForUser#1", t, Ac, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
             });
           }),
           (e.MarkPartnerEventsForUser = function (e, t) {
-            return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, Oc, {
+            return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, zc, {
               ePrivilege: 1,
             });
           }),
@@ -50507,17 +51175,17 @@
             return e.SendMsg(
               "Community.GetUserPartnerEventViewStatus#1",
               t,
-              xc,
+              Hc,
               { bConstMethod: !0, ePrivilege: 1 }
             );
           }),
           (e.PartnerEventsShowMoreForApp = function (e, t) {
-            return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, Gc, {
+            return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, Fc, {
               ePrivilege: 1,
             });
           }),
           (e.PartnerEventsShowLessForApp = function (e, t) {
-            return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, kc, {
+            return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, Oc, {
               ePrivilege: 1,
             });
           }),
@@ -50525,7 +51193,7 @@
             return e.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
               t,
-              Rc,
+              Mc,
               { ePrivilege: 1 }
             );
           }),
@@ -50533,7 +51201,7 @@
             return e.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
               t,
-              Ac,
+              kc,
               { ePrivilege: 1 }
             );
           }),
@@ -50541,13 +51209,13 @@
             return e.SendMsg(
               "Community.ClearSinglePartnerEventsAppPriority#1",
               t,
-              Mc,
+              Pc,
               { ePrivilege: 1 }
             );
           });
-      })(lc || (lc = {}));
-      var zc,
-        Hc = (function () {
+      })(dc || (dc = {}));
+      var jc,
+        Vc = (function () {
           function e(e) {
             (this.m_setShownEvents = new Set()),
               (this.m_setReadEvents = new Set()),
@@ -50561,7 +51229,7 @@
               var a = this.MakeKey(e, n);
               if (this.m_setShownEvents.has(a)) return !1;
               this.m_setShownEvents.add(a);
-              var r = new Fc();
+              var r = new Uc();
               return (
                 r.set_event_gid(e),
                 r.set_clanid(t),
@@ -50575,7 +51243,7 @@
               var a = this.MakeKey(e, n);
               if (this.m_setReadEvents.has(a)) return !1;
               this.m_setReadEvents.add(a);
-              var r = new Fc();
+              var r = new Uc();
               return (
                 r.set_event_gid(e),
                 r.set_clanid(t),
@@ -50620,13 +51288,13 @@
                       )
                         return [2];
                       if (((t = !1), !this.m_CMInterface)) return [3, 2];
-                      for (n = Jt.gA.Init(Pc), a = 0, i = e; a < i.length; a++)
+                      for (n = Jt.gA.Init(xc), a = 0, i = e; a < i.length; a++)
                         (o = i[a]), n.Body().add_markings(o);
                       return (
                         (this.m_bUploading = !0),
                         [
                           4,
-                          lc.MarkPartnerEventsForUser(
+                          dc.MarkPartnerEventsForUser(
                             this.m_CMInterface.GetServiceTransport(),
                             n
                           ),
@@ -50692,7 +51360,7 @@
             e
           );
         })(),
-        Wc = (function () {
+        Jc = (function () {
           function e(e) {
             (this.appid = 0),
               (this.can_edit = !1),
@@ -50725,8 +51393,8 @@
         (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
           (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
           (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-      })(zc || (zc = {}));
-      var jc = (function () {
+      })(jc || (jc = {}));
+      var Yc = (function () {
         function e() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
@@ -50776,7 +51444,7 @@
               return (0, r.Jh)(this, function (r) {
                 return (
                   (this.m_cm = t),
-                  (this.m_tracker = new Hc(t)),
+                  (this.m_tracker = new Vc(t)),
                   (n = (0, St.ip)(
                     "partnereventpermissions",
                     "application_config"
@@ -50784,7 +51452,7 @@
                   this.ValidateStoreDefault(n) &&
                     ((0, yt.z)(function () {
                       n.forEach(function (t) {
-                        var n = new Wc(t.clanid),
+                        var n = new Jc(t.clanid),
                           a = { result: n, promise: e.RemapToPromise(n) };
                         i.CopyFromResponseToTrack(a, t),
                           i.m_mapClanToUserPermissions.set(t.clanid, a);
@@ -50865,7 +51533,7 @@
             return this.m_mapClanToUserPermissions.has(e);
           }),
           (e.prototype.GetPartnerEventPermissions = function (e) {
-            if (!e || !e.BIsValid()) return new Wc(0);
+            if (!e || !e.BIsValid()) return new Jc(0);
             var t = e.GetAccountID();
             return (
               this.m_mapClanToUserPermissions.has(t) ||
@@ -50897,7 +51565,7 @@
                   (n = this.m_mapClanToUserPermissions.get(t)) ||
                     ((n = {
                       promise: this.InternalLoadSingleAppEventPermissions(e),
-                      result: new Wc(t),
+                      result: new Jc(t),
                     }),
                     this.m_mapClanToUserPermissions.set(t, n)),
                   [2, n.promise]
@@ -50941,7 +51609,7 @@
                       (a = t.GetAccountID()),
                       (i = !Boolean(St.L7.logged_in)),
                       this.m_mapClanToUserPermissions.has(a) ||
-                        ((o = new Wc(t.GetAccountID())),
+                        ((o = new Jc(t.GetAccountID())),
                         this.m_mapClanToUserPermissions.set(a, {
                           result: o,
                           promise: e.RemapToPromise(o),
@@ -51122,7 +51790,7 @@
                               !1 === t && e.UpdateVoteCount("down", 1);
                           }),
                           this.m_cm
-                            ? ((i = Jt.gA.Init(Ec))
+                            ? ((i = Jt.gA.Init(Sc))
                                 .Body()
                                 .set_announcementid(e.AnnouncementGID),
                               i.Body().set_vote_up(!!t),
@@ -51133,7 +51801,7 @@
                                 ),
                               [
                                 4,
-                                lc.RateClanAnnouncement(
+                                dc.RateClanAnnouncement(
                                   this.m_cm.GetServiceTransport(),
                                   i
                                 ),
@@ -51185,12 +51853,12 @@
                           ]
                         : ((n = void 0),
                           this.m_cm
-                            ? ((a = Jt.gA.Init(Tc))
+                            ? ((a = Jt.gA.Init(wc))
                                 .Body()
                                 .set_announcementid(e.AnnouncementGID),
                               [
                                 4,
-                                lc.GetClanAnnouncementVoteForUser(
+                                dc.GetClanAnnouncementVoteForUser(
                                   this.m_cm.GetServiceTransport(),
                                   a
                                 ),
@@ -51277,7 +51945,7 @@
           e
         );
       })();
-      var Vc = new ((function () {
+      var Zc = new ((function () {
           function e() {
             (this.m_bValidatedEmail = !1),
               (this.m_nMobileDeviceCount = 0),
@@ -51364,14 +52032,14 @@
             e
           );
         })())(),
-        Jc = n(61825),
-        Yc = n(44294),
-        Zc = n(16451),
-        Xc = n.n(Zc),
-        qc = n(80008);
-      function Kc(e, t) {
-        var n = qc.tz.guess(),
-          a = qc.unix(e).tz(n),
+        Xc = n(61825),
+        qc = n(44294),
+        Kc = n(16451),
+        Qc = n.n(Kc),
+        $c = n(80008);
+      function eu(e, t) {
+        var n = $c.tz.guess(),
+          a = $c.unix(e).tz(n),
           r = (0, ta.CE)();
         return (
           r && a.locale(r),
@@ -51390,7 +52058,7 @@
           )
         );
       }
-      var Qc = (0, d.Pi)(function (e) {
+      var tu = (0, d.Pi)(function (e) {
           var t = e.dateAndTime,
             n = e.bSingleLine,
             a = e.bOnlyTime,
@@ -51399,15 +52067,15 @@
             l = !i && Boolean(t),
             c = s && (0, ta.$1)(t),
             u = e.stylesmodule
-              ? (0, r.pi)((0, r.pi)({}, Xc()), e.stylesmodule)
-              : Xc();
+              ? (0, r.pi)((0, r.pi)({}, Qc()), e.stylesmodule)
+              : Qc();
           return n
             ? o.createElement(
                 "span",
                 { className: a || i ? u.DateAndTimeInline : u.DateAndTime },
                 s && c,
                 o.createElement("span", null, " "),
-                Boolean(t && l) && Kc(t, !0)
+                Boolean(t && l) && eu(t, !0)
               )
             : o.createElement(
                 "div",
@@ -51423,13 +52091,13 @@
                 o.createElement(
                   "div",
                   { className: u.LocalizedTime },
-                  Boolean(t && l) && Kc(t, !0)
+                  Boolean(t && l) && eu(t, !0)
                 )
               );
         }),
-        $c = function (e) {
+        nu = function (e) {
           var t,
-            n = o.createElement(Qc, {
+            n = o.createElement(tu, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -51458,8 +52126,8 @@
               t = e.startDateAndTime,
               n = e.endDateAndTime,
               a = this.props.stylesmodule
-                ? (0, r.pi)((0, r.pi)({}, Xc()), this.props.stylesmodule)
-                : Xc(),
+                ? (0, r.pi)((0, r.pi)({}, Qc()), this.props.stylesmodule)
+                : Qc(),
               i =
                 this.props.bHideEndTime ||
                 null == this.props.endDateAndTime ||
@@ -51490,7 +52158,7 @@
                   ),
                   " "
                 ),
-                o.createElement(Qc, { stylesmodule: a, dateAndTime: t })
+                o.createElement(tu, { stylesmodule: a, dateAndTime: t })
               );
             var l = t <= s && s <= n,
               c = (0, ga.yK)(new Date(1e3 * t), new Date(1e3 * n));
@@ -51511,7 +52179,7 @@
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
                   )
                 ),
-                o.createElement(Qc, {
+                o.createElement(tu, {
                   stylesmodule: a,
                   bSingleLine: !0,
                   dateAndTime: t,
@@ -51529,7 +52197,7 @@
                       : "#EventDisplay_TimeEndsOn"
                   )
                 ),
-                o.createElement(Qc, {
+                o.createElement(tu, {
                   stylesmodule: a,
                   bSingleLine: !0,
                   bOnlyTime: c,
@@ -51566,8 +52234,8 @@
                 n = e.endDateAndTime,
                 a = e.bHideEndTime,
                 i = this.props.stylesmodule
-                  ? (0, r.pi)((0, r.pi)({}, Xc()), this.props.stylesmodule)
-                  : Xc();
+                  ? (0, r.pi)((0, r.pi)({}, Qc()), this.props.stylesmodule)
+                  : Qc();
               if (null == t || 0 == t)
                 return o.createElement(
                   "div",
@@ -51588,7 +52256,7 @@
                   (0, ta.$1)(t, c)
                 ),
                 d = o.createElement(
-                  $c,
+                  nu,
                   { rtFullDate: t, stylesmodule: i },
                   o.createElement(
                     "div",
@@ -51605,7 +52273,7 @@
                 (l < t &&
                   t < l + ga._H.PerWeek &&
                   (d = o.createElement(
-                    $c,
+                    nu,
                     { rtFullDate: t, stylesmodule: i },
                     o.createElement(
                       "div",
@@ -51616,7 +52284,7 @@
                         o.createElement(
                           "div",
                           { className: i.ShortDateAndTime },
-                          Kc(t),
+                          eu(t),
                           " "
                         )
                       )
@@ -51628,7 +52296,7 @@
               var m = t <= l && l <= n;
               m &&
                 (d = o.createElement(
-                  $c,
+                  nu,
                   { rtFullDate: t, className: i.ActiveEvent, stylesmodule: i },
                   o.createElement(
                     "span",
@@ -51684,7 +52352,7 @@
                 );
               }
               var f = o.createElement(
-                $c,
+                nu,
                 { rtFullDate: n, stylesmodule: i },
                 p
               );
@@ -51697,107 +52365,11 @@
             }),
             (t = (0, r.gn)([d.Pi], t));
         })(o.Component);
-      var eu = n(40993),
-        tu = n(3563),
-        nu = n(80369),
-        au = n(25320),
-        ru = n(48171),
-        iu = (function (e) {
-          function t(t) {
-            var n = e.call(this, t) || this;
-            return (n.state = { maximized: n.BIsMaximized() }), n;
-          }
-          return (
-            (0, r.ZT)(t, e),
-            (t.prototype.BIsMaximized = function () {
-              var e =
-                  this.props.popup.screen.availWidth -
-                  this.props.popup.innerWidth,
-                t =
-                  this.props.popup.screen.availHeight -
-                  this.props.popup.innerHeight;
-              return 0 === e && 0 === t;
-            }),
-            (t.prototype.componentDidMount = function () {
-              this.props.popup.addEventListener(
-                "resize",
-                this.UpdateMaximizeState
-              );
-            }),
-            (t.prototype.componentWillUnmount = function () {
-              this.props.popup.removeEventListener(
-                "resize",
-                this.UpdateMaximizeState
-              );
-            }),
-            (t.prototype.UpdateMaximizeState = function () {
-              var e = this.BIsMaximized();
-              e != this.state.maximized && this.setState({ maximized: e });
-            }),
-            (t.prototype.render = function () {
-              var e = this.props.popup,
-                t = "title-area-icon";
-              this.state.maximized
-                ? (t += " restoreButton")
-                : (t += " maximizeButton");
-              var n = "TitleBar title-area";
-              return (
-                this.props.className && (n = n + " " + this.props.className),
-                o.createElement(
-                  "div",
-                  { className: n, style: this.props.style },
-                  o.createElement("div", { className: "title-area-highlight" }),
-                  o.createElement(
-                    "div",
-                    { className: "title-area-children" },
-                    this.props.children
-                  ),
-                  !this.props.hideActions &&
-                    o.createElement(
-                      "div",
-                      { className: "title-bar-actions" },
-                      o.createElement(
-                        "div",
-                        {
-                          className: "title-area-icon closeButton",
-                          onClick: function () {
-                            e && e.close();
-                          },
-                        },
-                        o.createElement(au.pVO, null)
-                      ),
-                      !this.props.hideMinMax &&
-                        o.createElement(
-                          "div",
-                          {
-                            className: t,
-                            onClick: function () {
-                              e.SteamClient.Window.ToggleMaximize();
-                            },
-                          },
-                          this.state.maximized && o.createElement(au.r6F, null),
-                          !this.state.maximized && o.createElement(au.YqJ, null)
-                        ),
-                      !this.props.hideMinMax &&
-                        o.createElement(
-                          "div",
-                          {
-                            className: "title-area-icon minimizeButton",
-                            onClick: function () {
-                              e.SteamClient.Window.Minimize();
-                            },
-                          },
-                          o.createElement(au.gR, null)
-                        )
-                    )
-                )
-              );
-            }),
-            (0, r.gn)([ru.ak], t.prototype, "UpdateMaximizeState", null),
-            t
-          );
-        })(o.Component);
-      function ou(e, t, n) {
+      var au = n(22382),
+        ru = n(3563),
+        iu = n(53932),
+        ou = n(9274);
+      function su(e, t, n) {
         return (0, r.mG)(this, void 0, void 0, function () {
           var a, i, o, s, l, c, u, d;
           return (0, r.Jh)(this, function (r) {
@@ -51805,7 +52377,7 @@
               case 0:
                 return (
                   (a = !0 === (null == n ? void 0 : n.bNeverPopOut)),
-                  (i = !a && cu(null, t)),
+                  (i = !a && uu(null, t)),
                   (o =
                     (null == n ? void 0 : n.bForcePopOut) &&
                     (null == n ? void 0 : n.popupWidth) &&
@@ -51813,7 +52385,7 @@
                   (l = i && !o)
                     ? [
                         4,
-                        uu(e, t, null == n ? void 0 : n.promiseRenderComplete),
+                        du(e, t, null == n ? void 0 : n.promiseRenderComplete),
                       ]
                     : [3, 2]
                 );
@@ -51826,7 +52398,7 @@
                     s.height / t.innerHeight < 0.9 &&
                     s.width / t.innerWidth < 0.8),
                   a || (!(null == n ? void 0 : n.bForcePopOut) && c)
-                    ? [2, lu(e, t)]
+                    ? [2, cu(e, t)]
                     : ((u = {
                         strTitle:
                           (null == n ? void 0 : n.strTitle) ||
@@ -51846,7 +52418,7 @@
                       }),
                       [
                         2,
-                        lu(
+                        cu(
                           e,
                           t,
                           u.strTitle,
@@ -51860,17 +52432,17 @@
           });
         });
       }
-      function su(e, t, n) {
+      function lu(e, t, n) {
         return (0, r.mG)(this, void 0, void 0, function () {
           return (0, r.Jh)(this, function (a) {
             return [
               2,
-              ou(e, t, (0, r.pi)({ bHideMainWindowForPopouts: !0 }, n)),
+              su(e, t, (0, r.pi)({ bHideMainWindowForPopouts: !0 }, n)),
             ];
           });
         });
       }
-      function lu(e, t, n, a, i, s, l) {
+      function cu(e, t, n, a, i, s, l) {
         var c,
           u,
           d = e.props.closeModal,
@@ -51883,10 +52455,10 @@
             c && c.Close(), m();
           },
           _ = o.cloneElement(e, { closeModal: p });
-        if (cu((l = l || (0, eu.BL)(t)), t) && a && n) {
+        if (uu((l = l || (0, au.BL)(t)), t) && a && n) {
           if (a.bHideMainWindowForPopouts) {
             var g = o.createElement(
-              eu.e1,
+              au.e1,
               {
                 className: "Hidden",
                 onEscKeypress: !_.props.bDisableBackgroundDismiss && p,
@@ -51896,17 +52468,17 @@
             u = l.ShowModal(g);
           }
           var h = (0, r.pi)((0, r.pi)({}, a), { fnOnClose: m }),
-            f = new pu(t, n, h, _, i, s);
+            f = new _u(t, n, h, _, i, s);
           f.Show(), (c = f);
         } else c = l.ShowModal(_);
         return c;
       }
-      function cu(e, t) {
+      function uu(e, t) {
         return (
-          (e = e || (0, eu.BL)(t || window)), St.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, au.BL)(t || window)), St.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      function uu(e, t, n) {
+      function du(e, t, n) {
         return (0, r.mG)(this, void 0, void 0, function () {
           var a, o, s, l, c;
           return (0, r.Jh)(this, function (r) {
@@ -51941,9 +52513,9 @@
           });
         });
       }
-      var du,
-        mu,
-        pu = (function (e) {
+      var mu,
+        pu,
+        _u = (function (e) {
           function t(t, n, a, r, i, o) {
             var s =
               e.call(this, n, {
@@ -52026,14 +52598,14 @@
                 i.render(
                   o.createElement(
                     "div",
-                    { className: "PopupFullWindow", onContextMenu: nu.T },
-                    o.createElement(iu, {
+                    { className: "PopupFullWindow", onContextMenu: iu.T },
+                    o.createElement(ou.T, {
                       hideMinMax: !0,
                       popup: e,
                       hideActions: n,
                       style: a,
                     }),
-                    o.createElement(eu.t9, { ModalManager: (0, eu.BL)(e) }),
+                    o.createElement(au.t9, { ModalManager: (0, au.BL)(e) }),
                     this.m_modalElement
                   ),
                   t
@@ -52042,9 +52614,11 @@
             }),
             t
           );
-        })(tu.K3),
-        _u = n(96733),
-        gu = n.n(_u);
+        })(ru.K3),
+        gu = n(25320),
+        hu = n(48171),
+        fu = n(96733),
+        vu = n.n(fu);
       o.createContext({ bCanUseLink: !1 });
       !(function (e) {
         (e.k_eView = "view"),
@@ -52063,21 +52637,21 @@
           (e.k_eStoreOwnerPage = "store"),
           (e.k_eStoreSalePage = "sale"),
           (e.k_eStoreUsersNewsHub = "usernewshub");
-      })(du || (du = {})),
+      })(mu || (mu = {})),
         (function (e) {
           (e.k_eFacebook = "facebook"),
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
-        })(mu || (mu = {}));
-      var hu =
+        })(pu || (pu = {}));
+      var bu =
         /(?:steampowered\.com|valve\.org\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community)\/(\w+)(\/|$)/i;
-      function fu(e, t) {
+      function Eu(e, t) {
         var n,
           a,
           r = "store" === (0, St.Zv)(),
           i =
             ((n = window.location.href),
-            null == (a = n.match(hu)) ? void 0 : a[1]),
+            null == (a = n.match(bu)) ? void 0 : a[1]),
           o = r && "news" == i,
           s = "community" === (0, St.Zv)(),
           l = t.appid ? "games" : "groups",
@@ -52088,32 +52662,32 @@
               (!t.appid &&
                 t.clanSteamID.GetAccountID() === St.JA.CLANACCOUNTID));
         switch (e) {
-          case du.k_eView:
+          case mu.k_eView:
             return c || o;
-          case du.k_eCommunityView:
-          case du.k_eCommunityEdit:
-          case du.k_eCommunityEditBroadcast:
-          case du.k_eCommunityAdminPage:
-          case du.k_eCommunityPublish:
-          case du.k_eCommunityMigrate:
-          case du.k_eCommunityPreview:
-          case du.k_eCommunityPreviewSale:
-          case du.k_eCommunityAnnouncementHub:
+          case mu.k_eCommunityView:
+          case mu.k_eCommunityEdit:
+          case mu.k_eCommunityEditBroadcast:
+          case mu.k_eCommunityAdminPage:
+          case mu.k_eCommunityPublish:
+          case mu.k_eCommunityMigrate:
+          case mu.k_eCommunityPreview:
+          case mu.k_eCommunityPreviewSale:
+          case mu.k_eCommunityAnnouncementHub:
             return c;
-          case du.k_eViewWebSiteHub:
+          case mu.k_eViewWebSiteHub:
             return c || o;
-          case du.k_eStoreView:
-          case du.k_eStoreNewsHub:
-          case du.k_eStoreOwnerPage:
-          case du.k_eStoreUsersNewsHub:
+          case mu.k_eStoreView:
+          case mu.k_eStoreNewsHub:
+          case mu.k_eStoreOwnerPage:
+          case mu.k_eStoreUsersNewsHub:
             return o;
-          case du.k_eStoreSalePage:
+          case mu.k_eStoreSalePage:
             return !1;
           default:
             return (0, Ct.X)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function vu(e, t, n) {
+      function yu(e, t, n) {
         if (n)
           return (
             (e ? "/games/" + St.JA.VANITY_ID : "/groups/" + St.JA.VANITY_ID) +
@@ -52122,33 +52696,33 @@
         var a = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return St.De.COMMUNITY_BASE_URL + a + "/";
       }
-      function bu(e, t, n) {
+      function Tu(e, t, n) {
         var a = "relative" === n,
           r = "community" === (0, St.Zv)(),
           i = a ? "/" : St.De.STORE_BASE_URL,
-          o = vu(e.appid, e.clanSteamID, a);
-        t === du.k_eView
-          ? (t = r ? du.k_eCommunityView : du.k_eStoreView)
-          : t === du.k_eViewWebSiteHub &&
-            (t = r ? du.k_eCommunityAnnouncementHub : du.k_eStoreNewsHub);
+          o = yu(e.appid, e.clanSteamID, a);
+        t === mu.k_eView
+          ? (t = r ? mu.k_eCommunityView : mu.k_eStoreView)
+          : t === mu.k_eViewWebSiteHub &&
+            (t = r ? mu.k_eCommunityAnnouncementHub : mu.k_eStoreNewsHub);
         var s = e.GID ? e.GID : "",
           l = e.AnnouncementGID ? e.AnnouncementGID : "";
         switch (t) {
-          case du.k_eCommunityPublish:
+          case mu.k_eCommunityPublish:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/migrate_announcement/" + l
                 : "partnerevents/publish/" + s + "?tab=publishing")
             );
-          case du.k_eCommunityEdit:
+          case mu.k_eCommunityEdit:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/migrate_announcement/" + l
                 : "partnerevents/edit/" + s)
             );
-          case du.k_eCommunityEditBroadcast:
+          case mu.k_eCommunityEditBroadcast:
             return (
               o +
               (e.bOldAnnouncement
@@ -52156,34 +52730,34 @@
                 : "partnerevents/edit/" + s) +
               "?tab=broadcast"
             );
-          case du.k_eCommunityMigrate:
+          case mu.k_eCommunityMigrate:
             return o + "partnerevents/migrate_announcement/" + l;
-          case du.k_eCommunityPreview:
+          case mu.k_eCommunityPreview:
             return (
               o +
               (e.bOldAnnouncement
                 ? "partnerevents/preview_old_announcement/" + l
                 : "partnerevents/preview/" + s)
             );
-          case du.k_eCommunityPreviewSale:
+          case mu.k_eCommunityPreviewSale:
             return o + "partnerevents/previewsale/" + s;
-          case du.k_eCommunityAdminPage:
+          case mu.k_eCommunityAdminPage:
             return o + "partnerevents";
-          case du.k_eCommunityAnnouncementHub:
+          case mu.k_eCommunityAnnouncementHub:
             return o + "announcements";
-          case du.k_eStoreNewsHub:
+          case mu.k_eStoreNewsHub:
             var c = e.appid
               ? "app/".concat(e.appid)
               : "group/".concat(e.clanSteamID.GetAccountID());
             return i + "".concat("news", "/").concat(c);
-          case du.k_eStoreOwnerPage:
+          case mu.k_eStoreOwnerPage:
             return (
               i +
               (e.appid
                 ? "app/" + e.appid
                 : "curator/" + e.clanSteamID.GetAccountID())
             );
-          case du.k_eStoreSalePage:
+          case mu.k_eStoreSalePage:
             return e.jsondata.bSaleEnabled
               ? i +
                   (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
@@ -52191,9 +52765,9 @@
                     : "curator/" + e.clanSteamID.GetAccountID() + "/sale/") +
                   e.jsondata.sale_vanity_id
               : i;
-          case du.k_eCommunityView:
+          case mu.k_eCommunityView:
             return o + "announcements/detail/" + l;
-          case du.k_eStoreView:
+          case mu.k_eStoreView:
             c = e.appid
               ? "app/".concat(e.appid)
               : "group/".concat(e.clanSteamID.GetAccountID());
@@ -52201,27 +52775,27 @@
               ? "old_view/".concat(l)
               : "view/".concat(s);
             return "".concat(i).concat("news", "/").concat(c, "/").concat(u);
-          case du.k_eStoreUsersNewsHub:
+          case mu.k_eStoreUsersNewsHub:
             return "".concat(i).concat("news", "/");
           default:
             return (0, Ct.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      var Eu = n(27575),
-        yu = n(85745),
-        Tu = Zt.Message;
-      var Su,
-        Cu,
-        wu,
-        Bu,
+      var Su = n(27575),
+        Cu = n(85745),
+        wu = Zt.Message;
+      var Bu,
         Nu,
-        Iu = (function (e) {
+        Iu,
+        Du,
+        Ru,
+        Lu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.account_name || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52281,14 +52855,14 @@
             }),
             t
           );
-        })(Tu),
-        Du = (function (e) {
+        })(wu),
+        Au = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.publickey_mod || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52358,14 +52932,14 @@
             }),
             t
           );
-        })(Tu),
-        Ru = (function (e) {
+        })(wu),
+        Mu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.device_friendly_name || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52440,14 +53014,14 @@
             }),
             t
           );
-        })(Tu),
-        Lu = (function (e) {
+        })(wu),
+        Gu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.confirmation_type || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52512,14 +53086,14 @@
             }),
             t
           );
-        })(Tu),
-        Au = (function (e) {
+        })(wu),
+        ku = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.device_friendly_name || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52541,7 +53115,7 @@
                         br: Qt.FE.readEnum,
                         bw: Qt.Xc.writeEnum,
                       },
-                      device_details: { n: 3, c: Ru },
+                      device_details: { n: 3, c: Mu },
                       website_id: {
                         n: 4,
                         d: "Unknown",
@@ -52591,14 +53165,14 @@
             }),
             t
           );
-        })(Tu),
-        Mu = (function (e) {
+        })(wu),
+        Pu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.client_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, [5], null),
+              wu.initialize(a, n, 0, -1, [5], null),
               a
             );
           }
@@ -52630,7 +53204,7 @@
                         br: Qt.FE.readFloat,
                         bw: Qt.Xc.writeFloat,
                       },
-                      allowed_confirmations: { n: 5, c: Lu, r: !0, q: !0 },
+                      allowed_confirmations: { n: 5, c: Gu, r: !0, q: !0 },
                       version: {
                         n: 6,
                         br: Qt.FE.readInt32,
@@ -52679,14 +53253,14 @@
             }),
             t
           );
-        })(Tu),
-        Gu = (function (e) {
+        })(wu),
+        Fu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.device_friendly_name || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52740,7 +53314,7 @@
                         br: Qt.FE.readString,
                         bw: Qt.Xc.writeString,
                       },
-                      device_details: { n: 9, c: Ru },
+                      device_details: { n: 9, c: Mu },
                       guard_data: {
                         n: 10,
                         br: Qt.FE.readString,
@@ -52789,14 +53363,14 @@
             }),
             t
           );
-        })(Tu),
-        ku = (function (e) {
+        })(wu),
+        Ou = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.client_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, [4], null),
+              wu.initialize(a, n, 0, -1, [4], null),
               a
             );
           }
@@ -52823,7 +53397,7 @@
                         br: Qt.FE.readFloat,
                         bw: Qt.Xc.writeFloat,
                       },
-                      allowed_confirmations: { n: 4, c: Lu, r: !0, q: !0 },
+                      allowed_confirmations: { n: 4, c: Gu, r: !0, q: !0 },
                       steamid: {
                         n: 5,
                         br: Qt.FE.readUint64String,
@@ -52877,14 +53451,14 @@
             }),
             t
           );
-        })(Tu),
-        Pu = (function (e) {
+        })(wu),
+        xu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.client_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -52954,14 +53528,14 @@
             }),
             t
           );
-        })(Tu),
-        Fu = (function (e) {
+        })(wu),
+        Uu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.new_client_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -53051,15 +53625,15 @@
             }),
             t
           );
-        })(Tu),
-        Ou =
+        })(wu),
+        zu =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.client_id || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -53116,14 +53690,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_GetAuthSessionInfo_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.ip || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -53238,13 +53812,13 @@
               }),
               t
             );
-          })(Tu)),
-        xu =
+          })(wu)),
+        Hu =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Tu.initialize(n, t, 0, -1, void 0, null), n;
+              return wu.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, r.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -53278,14 +53852,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_GetAuthSessionsForAccount_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.client_ids || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [1], null),
+                wu.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -53348,15 +53922,15 @@
               }),
               t
             );
-          })(Tu)),
-        Uu =
+          })(wu)),
+        Wu =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.version || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -53440,12 +54014,12 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Tu.initialize(n, t, 0, -1, void 0, null), n;
+              return wu.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -53482,14 +54056,14 @@
               }),
               t
             );
-          })(Tu)),
-        zu = (function (e) {
+          })(wu)),
+        ju = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.client_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -53564,12 +54138,12 @@
             }),
             t
           );
-        })(Tu),
-        Hu = (function (e) {
+        })(wu),
+        Vu = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return Tu.initialize(n, t, 0, -1, void 0, null), n;
+            return wu.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, r.ZT)(t, e),
@@ -53606,15 +54180,15 @@
             }),
             t
           );
-        })(Tu),
-        Wu =
+        })(wu),
+        Ju =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.refresh_token || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -53676,14 +54250,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_AccessToken_GenerateForApp_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.access_token || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -53743,13 +54317,13 @@
               }),
               t
             );
-          })(Tu)),
-        ju =
+          })(wu)),
+        Yu =
           ((function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Tu.initialize(n, t, 0, -1, void 0, null), n;
+              return wu.initialize(n, t, 0, -1, void 0, null), n;
             }
             (0, r.ZT)(t, e),
               (t.prototype.toObject = function (e) {
@@ -53783,14 +54357,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_RefreshToken_Enumerate_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.refresh_tokens || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [1], null),
+                wu.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -53802,7 +54376,7 @@
                     (t.sm_m = {
                       proto: t,
                       fields: {
-                        refresh_tokens: { n: 1, c: Ju, r: !0, q: !0 },
+                        refresh_tokens: { n: 1, c: Xu, r: !0, q: !0 },
                         requesting_token: {
                           n: 2,
                           br: Qt.FE.readFixed64String,
@@ -53851,14 +54425,14 @@
               }),
               t
             );
-          })(Tu)),
-        Vu = (function (e) {
+          })(wu)),
+        Zu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.time || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -53875,7 +54449,7 @@
                         br: Qt.FE.readUint32,
                         bw: Qt.Xc.writeUint32,
                       },
-                      ip: { n: 2, c: oc.j7 },
+                      ip: { n: 2, c: cc.j7 },
                       locale: {
                         n: 3,
                         br: Qt.FE.readString,
@@ -53939,14 +54513,14 @@
             }),
             t
           );
-        })(Tu),
-        Ju = (function (e) {
+        })(wu),
+        Xu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.token_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -53998,8 +54572,8 @@
                         br: Qt.FE.readUint32,
                         bw: Qt.Xc.writeUint32,
                       },
-                      first_seen: { n: 9, c: Vu },
-                      last_seen: { n: 10, c: Vu },
+                      first_seen: { n: 9, c: Zu },
+                      last_seen: { n: 10, c: Zu },
                       os_type: {
                         n: 11,
                         br: Qt.FE.readInt32,
@@ -54048,15 +54622,15 @@
             }),
             t
           );
-        })(Tu),
-        Yu =
+        })(wu),
+        qu =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.token_id || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54129,12 +54703,12 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_RefreshToken_Revoke_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Tu.initialize(n, t, 0, -1, void 0, null), n;
+              return wu.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -54171,15 +54745,15 @@
               }),
               t
             );
-          })(Tu)),
-        Zu =
+          })(wu)),
+        Ku =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54246,14 +54820,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthentication_MigrateMobileSession_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.refresh_token || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54318,14 +54892,14 @@
               }),
               t
             );
-          })(Tu)),
-        Xu = (function (e) {
+          })(wu)),
+        Qu = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.token_id || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -54387,8 +54961,8 @@
                         br: Qt.FE.readUint32,
                         bw: Qt.Xc.writeUint32,
                       },
-                      first_seen: { n: 11, c: qu },
-                      last_seen: { n: 12, c: qu },
+                      first_seen: { n: 11, c: $u },
+                      last_seen: { n: 12, c: $u },
                     },
                   }),
                 t.sm_m
@@ -54432,14 +55006,14 @@
             }),
             t
           );
-        })(Tu),
-        qu = (function (e) {
+        })(wu),
+        $u = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.time || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -54456,7 +55030,7 @@
                         br: Qt.FE.readUint32,
                         bw: Qt.Xc.writeUint32,
                       },
-                      ip: { n: 2, c: oc.j7 },
+                      ip: { n: 2, c: cc.j7 },
                       country: {
                         n: 3,
                         br: Qt.FE.readString,
@@ -54515,14 +55089,14 @@
             }),
             t
           );
-        })(Tu),
-        Ku = (function (e) {
+        })(wu),
+        ed = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.action || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -54544,7 +55118,7 @@
                         br: Qt.FE.readUint32,
                         bw: Qt.Xc.writeUint32,
                       },
-                      ip: { n: 3, c: oc.j7 },
+                      ip: { n: 3, c: cc.j7 },
                       actor: {
                         n: 4,
                         br: Qt.FE.readFixed64String,
@@ -54593,15 +55167,15 @@
             }),
             t
           );
-        })(Tu),
-        Qu =
+        })(wu),
+        td =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54663,14 +55237,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthenticationSupport_QueryRefreshTokensByAccount_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.refresh_tokens || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [1], null),
+                wu.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -54681,7 +55255,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { refresh_tokens: { n: 1, c: Xu, r: !0, q: !0 } },
+                      fields: { refresh_tokens: { n: 1, c: Qu, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -54724,15 +55298,15 @@
               }),
               t
             );
-          })(Tu)),
-        $u =
+          })(wu)),
+        nd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.token_id || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54789,14 +55363,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthenticationSupport_QueryRefreshTokenByID_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.refresh_tokens || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [1], null),
+                wu.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -54807,7 +55381,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { refresh_tokens: { n: 1, c: Xu, r: !0, q: !0 } },
+                      fields: { refresh_tokens: { n: 1, c: Qu, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -54850,15 +55424,15 @@
               }),
               t
             );
-          })(Tu)),
-        ed =
+          })(wu)),
+        ad =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.token_id || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -54920,12 +55494,12 @@
               (t.prototype.getClassName = function () {
                 return "CAuthenticationSupport_RevokeToken_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return Tu.initialize(n, t, 0, -1, void 0, null), n;
+              return wu.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -54962,15 +55536,15 @@
               }),
               t
             );
-          })(Tu)),
-        td =
+          })(wu)),
+        rd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.token_id || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -55027,14 +55601,14 @@
               (t.prototype.getClassName = function () {
                 return "CAuthenticationSupport_GetTokenHistory_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.history || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [1], null),
+                wu.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -55045,7 +55619,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { history: { n: 1, c: Ku, r: !0, q: !0 } },
+                      fields: { history: { n: 1, c: ed, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -55088,15 +55662,15 @@
               }),
               t
             );
-          })(Tu)),
-        nd =
+          })(wu)),
+        id =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.platform || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -55158,14 +55732,14 @@
               (t.prototype.getClassName = function () {
                 return "CCloudGaming_CreateNonce_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.nonce || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, void 0, null),
+                wu.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -55230,14 +55804,14 @@
               }),
               t
             );
-          })(Tu)),
-        ad = (function (e) {
+          })(wu)),
+        od = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.appid || Qt.aR(t.M()),
-              Tu.initialize(a, n, 0, -1, void 0, null),
+              wu.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -55302,15 +55876,15 @@
             }),
             t
           );
-        })(Tu),
-        rd =
+        })(wu),
+        sd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.platform || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [2], null),
+                wu.initialize(a, n, 0, -1, [2], null),
                 a
               );
             }
@@ -55375,14 +55949,14 @@
               (t.prototype.getClassName = function () {
                 return "CCloudGaming_GetTimeRemaining_Request";
               });
-          })(Tu),
+          })(wu),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.entries || Qt.aR(t.M()),
-                Tu.initialize(a, n, 0, -1, [2], null),
+                wu.initialize(a, n, 0, -1, [2], null),
                 a
               );
             }
@@ -55393,7 +55967,7 @@
                   t.sm_m ||
                     (t.sm_m = {
                       proto: t,
-                      fields: { entries: { n: 2, c: ad, r: !0, q: !0 } },
+                      fields: { entries: { n: 2, c: od, r: !0, q: !0 } },
                     }),
                   t.sm_m
                 );
@@ -55436,17 +56010,17 @@
               }),
               t
             );
-          })(Tu));
+          })(wu));
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
-          return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, Du, {
+          return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, Au, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
           });
         }),
           (e.BeginAuthSessionViaQR = function (e, t) {
-            return e.SendMsg("Authentication.BeginAuthSessionViaQR#1", t, Mu, {
+            return e.SendMsg("Authentication.BeginAuthSessionViaQR#1", t, Pu, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
@@ -55455,18 +56029,18 @@
             return e.SendMsg(
               "Authentication.BeginAuthSessionViaCredentials#1",
               t,
-              ku,
+              Ou,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.PollAuthSessionStatus = function (e, t) {
-            return e.SendMsg("Authentication.PollAuthSessionStatus#1", t, Fu, {
+            return e.SendMsg("Authentication.PollAuthSessionStatus#1", t, Uu, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetAuthSessionInfo = function (e, t) {
-            return e.SendMsg("Authentication.GetAuthSessionInfo#1", t, Ou, {
+            return e.SendMsg("Authentication.GetAuthSessionInfo#1", t, zu, {
               ePrivilege: 1,
             });
           }),
@@ -55474,7 +56048,7 @@
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               t,
-              Uu,
+              Wu,
               { ePrivilege: 1 }
             );
           }),
@@ -55482,7 +56056,7 @@
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               t,
-              Hu,
+              Vu,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
@@ -55490,12 +56064,12 @@
             return e.SendMsg(
               "Authentication.GenerateAccessTokenForApp#1",
               t,
-              Wu,
+              Ju,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
             );
           }),
           (e.EnumerateTokens = function (e, t) {
-            return e.SendMsg("Authentication.EnumerateTokens#1", t, ju, {
+            return e.SendMsg("Authentication.EnumerateTokens#1", t, Yu, {
               ePrivilege: 1,
             });
           }),
@@ -55503,29 +56077,29 @@
             return e.SendMsg(
               "Authentication.GetAuthSessionsForAccount#1",
               t,
-              xu,
+              Hu,
               { bConstMethod: !0, ePrivilege: 1 }
             );
           }),
           (e.MigrateMobileSession = function (e, t) {
-            return e.SendMsg("Authentication.MigrateMobileSession#1", t, Zu, {
+            return e.SendMsg("Authentication.MigrateMobileSession#1", t, Ku, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.RevokeRefreshToken = function (e, t) {
-            return e.SendMsg("Authentication.RevokeRefreshToken#1", t, Yu, {
+            return e.SendMsg("Authentication.RevokeRefreshToken#1", t, qu, {
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(Su || (Su = {})),
+      })(Bu || (Bu = {})),
         (function (e) {
           (e.QueryRefreshTokensByAccount = function (e, t) {
             return e.SendMsg(
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
               t,
-              Qu,
+              td,
               { bConstMethod: !0, ePrivilege: 5 }
             );
           }),
@@ -55533,12 +56107,12 @@
               return e.SendMsg(
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
                 t,
-                $u,
+                nd,
                 { bConstMethod: !0, ePrivilege: 5 }
               );
             }),
             (e.RevokeToken = function (e, t) {
-              return e.SendMsg("AuthenticationSupport.RevokeToken#1", t, ed, {
+              return e.SendMsg("AuthenticationSupport.RevokeToken#1", t, ad, {
                 ePrivilege: 5,
               });
             }),
@@ -55546,25 +56120,25 @@
               return e.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
                 t,
-                td,
+                rd,
                 { bConstMethod: !0, ePrivilege: 5 }
               );
             });
-        })(Cu || (Cu = {})),
+        })(Nu || (Nu = {})),
         (function (e) {
           (e.CreateNonce = function (e, t) {
-            return e.SendMsg("CloudGaming.CreateNonce#1", t, nd, {
+            return e.SendMsg("CloudGaming.CreateNonce#1", t, id, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
           }),
             (e.GetTimeRemaining = function (e, t) {
-              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, rd, {
+              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, sd, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
             });
-        })(wu || (wu = {})),
+        })(Iu || (Iu = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Generic = 1)] = "Generic"),
@@ -55572,16 +56146,16 @@
             (e[(e.Network = 3)] = "Network"),
             (e[(e.MoveAuthenticator = 4)] = "MoveAuthenticator"),
             (e[(e.RateLimitExceeded = 5)] = "RateLimitExceeded");
-        })(Bu || (Bu = {})),
+        })(Du || (Du = {})),
         (function (e) {
           (e[(e.k_Success = 0)] = "k_Success"),
             (e[(e.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
             (e[(e.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail");
-        })(Nu || (Nu = {}));
-      var id = (function () {
+        })(Ru || (Ru = {}));
+      var ld = (function () {
         function e(e, t, n) {
           (this.m_bRemoteInteraction = !1),
-            (this.m_eFailureState = Bu.None),
+            (this.m_eFailureState = Du.None),
             (this.m_transport = e),
             (this.m_onCompleteCallback = t),
             (this.m_onDeviceDetailsCallback = n);
@@ -55608,12 +56182,12 @@
                   case 0:
                     return (
                       r.trys.push([0, 2, , 3]),
-                      (e = Jt.gA.Init(Pu)).SetEMsg(9804),
+                      (e = Jt.gA.Init(xu)).SetEMsg(9804),
                       e.Body().set_client_id(this.m_strClientID),
                       e.Body().set_request_id(this.m_rgRequestID),
                       this.m_strTokenToRevoke &&
                         e.Body().set_token_to_revoke(this.m_strTokenToRevoke),
-                      [4, Su.PollAuthSessionStatus(this.m_transport, e)]
+                      [4, Bu.PollAuthSessionStatus(this.m_transport, e)]
                     );
                   case 1:
                     return (
@@ -55634,15 +56208,15 @@
                             ),
                             [2, 1])
                           : (9 === n || 27 === n
-                              ? (this.m_eFailureState = Bu.Expired)
+                              ? (this.m_eFailureState = Du.Expired)
                               : 84 === n
-                              ? (this.m_eFailureState = Bu.RateLimitExceeded)
+                              ? (this.m_eFailureState = Du.RateLimitExceeded)
                               : (console.error(
                                   "Failed to poll auth session. Result: ".concat(
                                     n
                                   )
                                 ),
-                                (this.m_eFailureState = Bu.Generic)),
+                                (this.m_eFailureState = Du.Generic)),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
                             [2, n])
                         : ((i = t.Body().toObject()),
@@ -55675,7 +56249,7 @@
                     return (
                       (p = r.sent()),
                       console.error("Failed to poll auth session. ".concat(p)),
-                      (this.m_eFailureState = Bu.Generic),
+                      (this.m_eFailureState = Du.Generic),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       [2, 2]
                     );
@@ -55702,7 +56276,7 @@
                   case 0:
                     return [4, this.m_onDeviceDetailsCallback()];
                   case 1:
-                    return (e = t.sent()), [2, Ru.fromObject(e)];
+                    return (e = t.sent()), [2, Mu.fromObject(e)];
                 }
               });
             });
@@ -55715,7 +56289,7 @@
           e
         );
       })();
-      function od(e) {
+      function cd(e) {
         var t = new FormData();
         t.append("nonce", e),
           t.append("sessionid", St.De.SESSIONID),
@@ -55738,7 +56312,7 @@
                   console.error(
                     "Result of finalizelogin does not match expecations!"
                   ),
-                  Nu.k_PrimaryDomainFail
+                  Ru.k_PrimaryDomainFail
                 );
               var n = t.transfer_info,
                 a = t.steamID,
@@ -55813,48 +56387,48 @@
                   return (
                     (t = e),
                     (n = i),
-                    (a = Nu.k_Success),
+                    (a = Ru.k_Success),
                     t.forEach(function (e) {
                       e.bSuccess ||
                         (n && e.domain.toLowerCase() === n.toLowerCase()
-                          ? (a = Nu.k_PrimaryDomainFail)
-                          : a == Nu.k_Success &&
-                            (a = Nu.k_SecondaryDomainFail));
+                          ? (a = Ru.k_PrimaryDomainFail)
+                          : a == Ru.k_Success &&
+                            (a = Ru.k_SecondaryDomainFail));
                     }),
                     a
                   );
                   var t, n, a;
                 },
                 function () {
-                  return Nu.k_SecondaryDomainFail;
+                  return Ru.k_SecondaryDomainFail;
                 }
               );
             },
             function () {
               return (
                 console.error("Failed to finalize login. Initial call failed."),
-                Nu.k_PrimaryDomainFail
+                Ru.k_PrimaryDomainFail
               );
             }
           );
       }
-      var sd = n(13271),
-        ld = n(47747).Z;
-      function cd(e, t) {
-        var n = ld.getPublicKey(t.publickey_mod, t.publickey_exp),
-          a = ld.encrypt(e, n);
+      var ud = n(13271),
+        dd = n(47747).Z;
+      function md(e, t) {
+        var n = dd.getPublicKey(t.publickey_mod, t.publickey_exp),
+          a = dd.encrypt(e, n);
         return !1 === a ? null : a;
       }
-      var ud,
-        dd = Zt.Message,
-        md =
+      var pd,
+        _d = Zt.Message,
+        gd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -55911,14 +56485,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_Status_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.state || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56043,15 +56617,15 @@
               }),
               t
             );
-          })(dd)),
-        pd =
+          })(_d)),
+        hd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, [7], null),
+                _d.initialize(a, n, 0, -1, [7], null),
                 a
               );
             }
@@ -56146,14 +56720,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_AddAuthenticator_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.shared_secret || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56263,15 +56837,15 @@
               }),
               t
             );
-          })(dd)),
-        _d =
+          })(_d)),
+        fd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56338,12 +56912,12 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_SendEmail_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return dd.initialize(n, t, 0, -1, void 0, null), n;
+              return _d.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -56380,15 +56954,15 @@
               }),
               t
             );
-          })(dd)),
-        gd =
+          })(_d)),
+        vd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, [5], null),
+                _d.initialize(a, n, 0, -1, [5], null),
                 a
               );
             }
@@ -56472,14 +57046,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_FinalizeAddAuthenticator_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.success || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56554,15 +57128,15 @@
               }),
               t
             );
-          })(dd)),
-        hd =
+          })(_d)),
+        bd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.revocation_code || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56634,14 +57208,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_RemoveAuthenticator_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.success || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56711,15 +57285,15 @@
               }),
               t
             );
-          })(dd)),
-        fd =
+          })(_d)),
+        Ed =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.code || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56776,14 +57350,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_CreateEmergencyCodes_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.codes || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, [1], null),
+                _d.initialize(a, n, 0, -1, [1], null),
                 a
               );
             }
@@ -56845,15 +57419,15 @@
               }),
               t
             );
-          })(dd)),
-        vd =
+          })(_d)),
+        yd =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -56910,12 +57484,12 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_DestroyEmergencyCodes_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return dd.initialize(n, t, 0, -1, void 0, null), n;
+              return _d.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -56952,15 +57526,15 @@
               }),
               t
             );
-          })(dd)),
-        bd =
+          })(_d)),
+        Td =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.code || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -57017,14 +57591,14 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_ValidateToken_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.valid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -57084,12 +57658,12 @@
               }),
               t
             );
-          })(dd)),
-        Ed = (function (e) {
+          })(_d)),
+        Sd = (function (e) {
           function t(t) {
             void 0 === t && (t = null);
             var n = e.call(this) || this;
-            return dd.initialize(n, t, 0, -1, void 0, null), n;
+            return _d.initialize(n, t, 0, -1, void 0, null), n;
           }
           return (
             (0, r.ZT)(t, e),
@@ -57126,14 +57700,14 @@
             }),
             t
           );
-        })(dd),
-        yd = (function (e) {
+        })(_d),
+        Cd = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.success || Qt.aR(t.M()),
-              dd.initialize(a, n, 0, -1, void 0, null),
+              _d.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -57193,14 +57767,14 @@
             }),
             t
           );
-        })(dd),
-        Td = (function (e) {
+        })(_d),
+        wd = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.sms_code || Qt.aR(t.M()),
-              dd.initialize(a, n, 0, -1, void 0, null),
+              _d.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -57271,14 +57845,14 @@
             }),
             t
           );
-        })(dd),
-        Sd = (function (e) {
+        })(_d),
+        Bd = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.shared_secret || Qt.aR(t.M()),
-              dd.initialize(a, n, 0, -1, void 0, null),
+              _d.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -57393,14 +57967,14 @@
             }),
             t
           );
-        })(dd),
-        Cd = (function (e) {
+        })(_d),
+        Nd = (function (e) {
           function t(n) {
             void 0 === n && (n = null);
             var a = e.call(this) || this;
             return (
               t.prototype.success || Qt.aR(t.M()),
-              dd.initialize(a, n, 0, -1, void 0, null),
+              _d.initialize(a, n, 0, -1, void 0, null),
               a
             );
           }
@@ -57417,7 +57991,7 @@
                         br: Qt.FE.readBool,
                         bw: Qt.Xc.writeBool,
                       },
-                      replacement_token: { n: 2, c: Sd },
+                      replacement_token: { n: 2, c: Bd },
                     },
                   }),
                 t.sm_m
@@ -57461,15 +58035,15 @@
             }),
             t
           );
-        })(dd),
-        wd =
+        })(_d),
+        Id =
           ((function (e) {
             function t(n) {
               void 0 === n && (n = null);
               var a = e.call(this) || this;
               return (
                 t.prototype.steamid || Qt.aR(t.M()),
-                dd.initialize(a, n, 0, -1, void 0, null),
+                _d.initialize(a, n, 0, -1, void 0, null),
                 a
               );
             }
@@ -57536,12 +58110,12 @@
               (t.prototype.getClassName = function () {
                 return "CTwoFactor_UpdateTokenVersion_Request";
               });
-          })(dd),
+          })(_d),
           (function (e) {
             function t(t) {
               void 0 === t && (t = null);
               var n = e.call(this) || this;
-              return dd.initialize(n, t, 0, -1, void 0, null), n;
+              return _d.initialize(n, t, 0, -1, void 0, null), n;
             }
             return (
               (0, r.ZT)(t, e),
@@ -57578,47 +58152,47 @@
               }),
               t
             );
-          })(dd));
+          })(_d));
       !(function (e) {
         (e.QueryStatus = function (e, t) {
-          return e.SendMsg("TwoFactor.QueryStatus#1", t, md, { ePrivilege: 1 });
+          return e.SendMsg("TwoFactor.QueryStatus#1", t, gd, { ePrivilege: 1 });
         }),
           (e.AddAuthenticator = function (e, t) {
-            return e.SendMsg("TwoFactor.AddAuthenticator#1", t, pd, {
+            return e.SendMsg("TwoFactor.AddAuthenticator#1", t, hd, {
               ePrivilege: 1,
             });
           }),
           (e.SendEmail = function (e, t) {
-            return e.SendMsg("TwoFactor.SendEmail#1", t, _d, { ePrivilege: 1 });
+            return e.SendMsg("TwoFactor.SendEmail#1", t, fd, { ePrivilege: 1 });
           }),
           (e.FinalizeAddAuthenticator = function (e, t) {
-            return e.SendMsg("TwoFactor.FinalizeAddAuthenticator#1", t, gd, {
+            return e.SendMsg("TwoFactor.FinalizeAddAuthenticator#1", t, vd, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateTokenVersion = function (e, t) {
-            return e.SendMsg("TwoFactor.UpdateTokenVersion#1", t, wd, {
+            return e.SendMsg("TwoFactor.UpdateTokenVersion#1", t, Id, {
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.RemoveAuthenticator = function (e, t) {
-            return e.SendMsg("TwoFactor.RemoveAuthenticator#1", t, hd, {
+            return e.SendMsg("TwoFactor.RemoveAuthenticator#1", t, bd, {
               ePrivilege: 9,
             });
           }),
           (e.CreateEmergencyCodes = function (e, t) {
-            return e.SendMsg("TwoFactor.CreateEmergencyCodes#1", t, fd, {
+            return e.SendMsg("TwoFactor.CreateEmergencyCodes#1", t, Ed, {
               ePrivilege: 1,
             });
           }),
           (e.DestroyEmergencyCodes = function (e, t) {
-            return e.SendMsg("TwoFactor.DestroyEmergencyCodes#1", t, vd, {
+            return e.SendMsg("TwoFactor.DestroyEmergencyCodes#1", t, yd, {
               ePrivilege: 1,
             });
           }),
           (e.ValidateToken = function (e, t) {
-            return e.SendMsg("TwoFactor.ValidateToken#1", t, bd, {
+            return e.SendMsg("TwoFactor.ValidateToken#1", t, Td, {
               ePrivilege: 1,
             });
           }),
@@ -57626,7 +58200,7 @@
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
               t,
-              yd,
+              Cd,
               { ePrivilege: 9 }
             );
           }),
@@ -57634,12 +58208,12 @@
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
               t,
-              Cd,
+              Nd,
               { ePrivilege: 9 }
             );
           });
-      })(ud || (ud = {}));
-      var Bd = (function (e) {
+      })(pd || (pd = {}));
+      var Dd = (function (e) {
         function t(t) {
           var n =
             e.call(
@@ -57703,12 +58277,12 @@
                       (g.label = 1);
                   case 1:
                     return (
-                      g.trys.push([1, 8, , 9]), [4, Nd(this.m_transport, a)]
+                      g.trys.push([1, 8, , 9]), [4, Rd(this.m_transport, a)]
                     );
                   case 2:
                     return (o = g.sent())
-                      ? ((s = cd(i, o)),
-                        (l = Jt.gA.Init(Gu)).SetEMsg(9804),
+                      ? ((s = md(i, o)),
+                        (l = Jt.gA.Init(Fu)).SetEMsg(9804),
                         l.Body().set_account_name(a),
                         l.Body().set_encrypted_password(s),
                         l.Body().set_encryption_timestamp(o.timestamp),
@@ -57720,7 +58294,7 @@
                       : (console.error(
                           "Cannot start auth session without a valid RSA key"
                         ),
-                        this.SetFailureState(Bu.Network, Md.EResult(20)),
+                        this.SetFailureState(Du.Network, Pd.EResult(20)),
                         [2, 20]);
                   case 3:
                     return (
@@ -57740,7 +58314,7 @@
                       g.sent(),
                       [
                         4,
-                        Su.BeginAuthSessionViaCredentials(this.m_transport, l),
+                        Bu.BeginAuthSessionViaCredentials(this.m_transport, l),
                       ]
                     );
                   case 7:
@@ -57765,16 +58339,16 @@
                                       case 20:
                                         return (
                                           this.SetFailureState(
-                                            Bu.Network,
-                                            Md.EResult(20)
+                                            Du.Network,
+                                            Pd.EResult(20)
                                           ),
                                           [2, t]
                                         );
                                       case 84:
                                         return (
                                           this.SetFailureState(
-                                            Bu.RateLimitExceeded,
-                                            Md.EResult(t)
+                                            Du.RateLimitExceeded,
+                                            Pd.EResult(t)
                                           ),
                                           [2, t]
                                         );
@@ -57786,8 +58360,8 @@
                                               .concat(n)
                                           ),
                                           this.SetFailureState(
-                                            Bu.Generic,
-                                            Md.EResult(t)
+                                            Du.Generic,
+                                            Pd.EResult(t)
                                           ),
                                           this.m_onCompleteCallback({
                                             bSuccess: !1,
@@ -57853,7 +58427,7 @@
                                       var t = e[0] || 0;
                                       e.length > 1 &&
                                         (t = e.sort(function (e, t) {
-                                          return Id[e] - Id[t];
+                                          return Ld[e] - Ld[t];
                                         })[0]);
                                       return t;
                                     })(
@@ -57902,7 +58476,7 @@
                     return (
                       (p = g.sent()),
                       console.error("Failed to start auth session. ".concat(p)),
-                      this.SetFailureState(Bu.Generic, Md.FailedToStart()),
+                      this.SetFailureState(Du.Generic, Pd.FailedToStart()),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       [2, 2]
                     );
@@ -57944,14 +58518,14 @@
                       return (
                         r.trys.push([0, 2, , 3]),
                         (n = 3 === this.m_eStatus || 10 === this.m_eStatus),
-                        (a = Jt.gA.Init(zu)).SetEMsg(9804),
+                        (a = Jt.gA.Init(ju)).SetEMsg(9804),
                         a.Body().set_client_id(this.m_strClientID),
                         a.Body().set_steamid(this.m_steamid),
                         a.Body().set_code(e),
                         a.Body().set_code_type(n ? 2 : 3),
                         [
                           4,
-                          Su.UpdateAuthSessionWithSteamGuardCode(
+                          Bu.UpdateAuthSessionWithSteamGuardCode(
                             this.m_transport,
                             a
                           ),
@@ -57974,15 +58548,15 @@
                             return (this.m_eStatus = n ? 10 : 11), [2, o];
                           case 27:
                             return (
-                              this.SetFailureState(Bu.Expired, Md.EResult(o)),
+                              this.SetFailureState(Du.Expired, Pd.EResult(o)),
                               this.m_onCompleteCallback({ bSuccess: !1 }),
                               [2, o]
                             );
                           case 84:
                             return (
                               this.SetFailureState(
-                                Bu.RateLimitExceeded,
-                                Md.EResult(o)
+                                Du.RateLimitExceeded,
+                                Pd.EResult(o)
                               ),
                               this.m_onCompleteCallback({ bSuccess: !1 }),
                               [2, o]
@@ -57994,7 +58568,7 @@
                                   o
                                 )
                               ),
-                              this.SetFailureState(Bu.Generic, Md.EResult(o)),
+                              this.SetFailureState(Du.Generic, Pd.EResult(o)),
                               this.m_onCompleteCallback({ bSuccess: !1 }),
                               [2, o]
                             );
@@ -58009,7 +58583,7 @@
                             s
                           )
                         ),
-                        this.SetFailureState(Bu.Generic, Md.FailedToAddCode()),
+                        this.SetFailureState(Du.Generic, Pd.FailedToAddCode()),
                         this.m_onCompleteCallback({ bSuccess: !1 }),
                         [2, 2]
                       );
@@ -58055,10 +58629,10 @@
                   case 1:
                     return (
                       a.trys.push([1, 3, , 4]),
-                      (e = Jt.gA.Init(Ed)),
+                      (e = Jt.gA.Init(Sd)),
                       [
                         4,
-                        ud.RemoveAuthenticatorViaChallengeStart(
+                        pd.RemoveAuthenticatorViaChallengeStart(
                           this.m_weakAuthWebInterface.GetServiceTransport(),
                           e
                         ),
@@ -58073,8 +58647,8 @@
                             t.GetEResult()
                           ),
                           this.SetFailureState(
-                            Bu.MoveAuthenticator,
-                            Md.EResult(t.GetEResult())
+                            Du.MoveAuthenticator,
+                            Pd.EResult(t.GetEResult())
                           ))
                         : (this.m_eStatus = 8),
                       [3, 4]
@@ -58086,7 +58660,7 @@
                         "An unexpected error occured while moving an authenticator",
                         n
                       ),
-                      this.SetFailureState(Bu.MoveAuthenticator, Md.EResult(2)),
+                      this.SetFailureState(Du.MoveAuthenticator, Pd.EResult(2)),
                       [3, 4]
                     );
                   case 4:
@@ -58102,10 +58676,10 @@
                 switch (n.label) {
                   case 0:
                     return (
-                      (e = Jt.gA.Init(Ed)),
+                      (e = Jt.gA.Init(Sd)),
                       [
                         4,
-                        ud.RemoveAuthenticatorViaChallengeStart(
+                        pd.RemoveAuthenticatorViaChallengeStart(
                           this.m_weakAuthWebInterface.GetServiceTransport(),
                           e
                         ),
@@ -58120,8 +58694,8 @@
                             t.GetEResult()
                           ),
                           this.SetFailureState(
-                            Bu.MoveAuthenticator,
-                            Md.EResult(t.GetEResult())
+                            Du.MoveAuthenticator,
+                            Pd.EResult(t.GetEResult())
                           ))
                         : (this.m_eStatus = 8),
                       [2]
@@ -58137,12 +58711,12 @@
                 switch (a.label) {
                   case 0:
                     return (
-                      (t = Jt.gA.Init(Td)).Body().set_sms_code(e),
+                      (t = Jt.gA.Init(wd)).Body().set_sms_code(e),
                       t.Body().set_generate_new_token(!0),
                       t.Body().set_version(2),
                       [
                         4,
-                        ud.RemoveAuthenticatorViaChallengeContinue(
+                        pd.RemoveAuthenticatorViaChallengeContinue(
                           this.m_weakAuthWebInterface.GetServiceTransport(),
                           t
                         ),
@@ -58186,8 +58760,8 @@
                             n.GetEResult()
                           ),
                           this.SetFailureState(
-                            Bu.MoveAuthenticator,
-                            Md.EResult(n.GetEResult())
+                            Du.MoveAuthenticator,
+                            Pd.EResult(n.GetEResult())
                           )),
                       [2]
                     );
@@ -58248,26 +58822,26 @@
               (this.m_strErrorReference = t);
           }),
           (0, r.gn)([yt.LO], t.prototype, "m_eStatus", void 0),
-          (0, r.gn)([ru.ak], t.prototype, "Start", null),
-          (0, r.gn)([ru.ak], t.prototype, "SendSteamGuardCode", null),
-          (0, r.gn)([ru.ak], t.prototype, "UseCodeOverride", null),
-          (0, r.gn)([ru.ak], t.prototype, "CantAccessCode", null),
-          (0, r.gn)([ru.ak], t.prototype, "StartMoveAuthenticator", null),
-          (0, r.gn)([ru.ak], t.prototype, "ResendMoveCode", null),
-          (0, r.gn)([ru.ak], t.prototype, "FinishMoveAuthenticator", null),
-          (0, r.gn)([ru.ak], t.prototype, "FinishMoveRecovery", null),
-          (0, r.gn)([ru.ak], t.prototype, "GoBack", null),
+          (0, r.gn)([hu.ak], t.prototype, "Start", null),
+          (0, r.gn)([hu.ak], t.prototype, "SendSteamGuardCode", null),
+          (0, r.gn)([hu.ak], t.prototype, "UseCodeOverride", null),
+          (0, r.gn)([hu.ak], t.prototype, "CantAccessCode", null),
+          (0, r.gn)([hu.ak], t.prototype, "StartMoveAuthenticator", null),
+          (0, r.gn)([hu.ak], t.prototype, "ResendMoveCode", null),
+          (0, r.gn)([hu.ak], t.prototype, "FinishMoveAuthenticator", null),
+          (0, r.gn)([hu.ak], t.prototype, "FinishMoveRecovery", null),
+          (0, r.gn)([hu.ak], t.prototype, "GoBack", null),
           t
         );
-      })(id);
-      function Nd(e, t) {
+      })(ld);
+      function Rd(e, t) {
         return (0, r.mG)(this, void 0, void 0, function () {
           var n, a, i, o, s, l, c;
           return (0, r.Jh)(this, function (r) {
             switch (r.label) {
               case 0:
                 return (
-                  (n = Jt.gA.Init(Iu)).Body().set_account_name(t),
+                  (n = Jt.gA.Init(Lu)).Body().set_account_name(t),
                   n.SetEMsg(9804),
                   [4, e.MakeReady()]
                 );
@@ -58276,7 +58850,7 @@
               case 2:
                 return (
                   r.trys.push([2, 4, , 5]),
-                  [4, Su.GetPasswordRSAPublicKey(e, n)]
+                  [4, Bu.GetPasswordRSAPublicKey(e, n)]
                 );
               case 3:
                 return (
@@ -58324,20 +58898,20 @@
           });
         });
       }
-      var Id = [4, 3, 2, 1, 0, 5].reduce(function (e, t, n) {
+      var Ld = [4, 3, 2, 1, 0, 5].reduce(function (e, t, n) {
         return (e[t] = n), e;
       }, {});
-      function Dd(e) {
+      function Ad(e) {
         return e ? 7 : 5;
       }
-      function Rd(e, t) {
-        return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= Dd(t);
+      function Md(e, t) {
+        return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= Ad(t);
       }
-      function Ld(e, t) {
-        return Rd(e, t) && e.length === Dd(t);
+      function Gd(e, t) {
+        return Md(e, t) && e.length === Ad(t);
       }
-      var Ad,
-        Md = {
+      var kd,
+        Pd = {
           EResult: function (e) {
             return "e".concat(e);
           },
@@ -58348,15 +58922,15 @@
             return "c-ftac";
           },
         },
-        Gd = n(92968),
-        kd = n.n(Gd),
-        Pd = n(36876),
-        Fd = n.n(Pd),
-        Od = n(22914),
-        xd = n.n(Od);
-      function Ud(e) {
+        Fd = n(92968),
+        Od = n.n(Fd),
+        xd = n(36876),
+        Ud = n.n(xd),
+        zd = n(22914),
+        Hd = n.n(zd);
+      function Wd(e) {
         var t = e.quality,
-          n = void 0 === t ? Ad.M : t,
+          n = void 0 === t ? kd.M : t,
           a = e.children,
           r = e.className,
           i = e.activeBitColor,
@@ -58375,7 +58949,7 @@
             return (
               (0, o.useEffect)(
                 function () {
-                  s(Fd()(e, { typeNumber: n, errorCorrectLevel: a }).modules);
+                  s(Ud()(e, { typeNumber: n, errorCorrectLevel: a }).modules);
                 },
                 [e, n, a]
               ),
@@ -58389,8 +58963,8 @@
           p.push([].concat(Array(d).fill(!1), m[_], Array(d).fill(!1)));
         for (_ = 0; _ < d; _++) p.push(Array(m.length + 2 * d).fill(!1));
         var g = [],
-          h = (0, b.Z)(xd().Bit),
-          f = (0, b.Z)(xd().Bit, xd().Active),
+          h = (0, b.Z)(Hd().Bit),
+          f = (0, b.Z)(Hd().Bit, Hd().Active),
           v = null !== s ? { backgroundColor: s } : {},
           E = null !== c ? { backgroundColor: c } : {};
         for (_ = 0; _ < p.length; _++)
@@ -58408,7 +58982,7 @@
         return o.createElement(
           "div",
           {
-            className: (0, b.Z)(xd().QRBits, r),
+            className: (0, b.Z)(Hd().QRBits, r),
             style: { gridTemplateColumns: "repeat( ".concat(S, ", 1fr )") },
           },
           g
@@ -58419,8 +58993,8 @@
           (e[(e.M = 0)] = "M"),
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
-      })(Ad || (Ad = {}));
-      var zd = (function (e) {
+      })(kd || (kd = {}));
+      var jd = (function (e) {
         function t(t) {
           var n =
             e.call(
@@ -58457,7 +59031,7 @@
                   case 2:
                     return (
                       r.sent(),
-                      (e = Jt.gA.Init(Au)).SetEMsg(9804),
+                      (e = Jt.gA.Init(ku)).SetEMsg(9804),
                       (n = (t = e.Body()).set_device_details),
                       [4, this.GetDeviceDetails()]
                     );
@@ -58465,7 +59039,7 @@
                     return (
                       n.apply(t, [r.sent()]),
                       e.Body().set_website_id(St.De.WEBSITE_ID),
-                      [4, Su.BeginAuthSessionViaQR(this.m_transport, e)]
+                      [4, Bu.BeginAuthSessionViaQR(this.m_transport, e)]
                     );
                   case 4:
                     return (
@@ -58478,7 +59052,7 @@
                               .concat(i, " Transport: ")
                               .concat(o)
                           ),
-                          (this.m_eFailureState = Bu.Generic),
+                          (this.m_eFailureState = Du.Generic),
                           this.m_onCompleteCallback({ bSuccess: !1 }),
                           [2, i])
                         : ((s = a.Body().toObject()),
@@ -58498,7 +59072,7 @@
                     return (
                       (m = r.sent()),
                       console.error("Failed to start auth session. ".concat(m)),
-                      (this.m_eFailureState = Bu.Generic),
+                      (this.m_eFailureState = Du.Generic),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       [2, 2]
                     );
@@ -58520,16 +59094,16 @@
           (0, r.gn)([yt.LO], t.prototype, "m_eStatus", void 0),
           t
         );
-      })(id);
-      var Hd = n(29489),
-        Wd = n.n(Hd);
-      function jd(e) {
+      })(ld);
+      var Vd = n(29489),
+        Jd = n.n(Vd);
+      function Yd(e) {
         var t = e.transport,
           n = e.onComplete,
           a = e.onStatusChange,
           r = (e.platform, e.deckStyling),
           i = (function (e) {
-            var t = (0, o.useState)(new zd(e)),
+            var t = (0, o.useState)(new jd(e)),
               n = t[0],
               a = t[1];
             return (
@@ -58544,14 +59118,14 @@
                 },
                 [n]
               ),
-              (0, sd.SZ)(function () {
+              (0, ud.SZ)(function () {
                 return {
                   strChallengeURL: n.GetChallengeURL(),
                   eFailureState: n.GetFailureState(),
                   eStatus: n.GetStatus(),
                   bHadRemoteInteraction: n.BHadRemoteInteraction(),
                   reset: function () {
-                    return a(new zd(e));
+                    return a(new jd(e));
                   },
                   setTokenToRevoke: n.SetTokenToRevoke,
                 };
@@ -58560,7 +59134,7 @@
           })({
             transport: t,
             onComplete: n,
-            onDeviceDetails: St.De.IN_STEAMUI ? nm : am,
+            onDeviceDetails: St.De.IN_STEAMUI ? im : om,
           }),
           s = i.eStatus,
           l = i.strChallengeURL,
@@ -58580,11 +59154,11 @@
           h = 4 === s,
           f = 3 === s,
           v = f
-            ? o.createElement(Yd, null)
+            ? o.createElement(qd, null)
             : h
-            ? o.createElement(Jd, { reset: u })
+            ? o.createElement(Xd, { reset: u })
             : g
-            ? o.createElement(Vd, { size: "small" })
+            ? o.createElement(Zd, { size: "small" })
             : null,
           E = g || h || f;
         return (
@@ -58599,21 +59173,21 @@
           ),
           o.createElement(
             "div",
-            { className: Wd().Column },
+            { className: Jd().Column },
             o.createElement(
               "div",
               { style: { position: "relative" } },
               o.createElement(
-                Ud,
+                Wd,
                 {
                   borderWidth: 0,
                   activeBitColor: "#212328",
                   inactiveBitColor: "white",
-                  quality: ((m = _), (p = m.length <= 90 ? Ad.Q : void 0), p),
+                  quality: ((m = _), (p = m.length <= 90 ? kd.Q : void 0), p),
                   className: (0, b.Z)(
-                    Wd().LoginQR,
-                    r && Wd().QRLoginDeck,
-                    E && Wd().Blur
+                    Jd().LoginQR,
+                    r && Jd().QRLoginDeck,
+                    E && Jd().Blur
                   ),
                 },
                 _
@@ -58621,25 +59195,25 @@
               E &&
                 o.createElement(
                   "div",
-                  { className: Wd().Overlay },
-                  o.createElement("div", { className: Wd().Box }, v)
+                  { className: Jd().Overlay },
+                  o.createElement("div", { className: Jd().Box }, v)
                 )
             )
           )
         );
       }
-      function Vd(e) {
+      function Zd(e) {
         var t = e.size;
         return o.createElement("div", {
           className: (0, b.Z)(
-            Wd().Loading,
-            "small" == t && Wd().Small,
-            ("medium" == t || !t) && Wd().Medium,
-            "large" == t && Wd().Large
+            Jd().Loading,
+            "small" == t && Jd().Small,
+            ("medium" == t || !t) && Jd().Medium,
+            "large" == t && Jd().Large
           ),
         });
       }
-      function Jd(e) {
+      function Xd(e) {
         return o.createElement(
           "svg",
           {
@@ -58668,7 +59242,7 @@
           })
         );
       }
-      function Yd() {
+      function qd() {
         return o.createElement(
           "svg",
           {
@@ -58693,26 +59267,26 @@
           })
         );
       }
-      const Zd =
+      const Kd =
         n.p + "images/dota_react/login_mobile_auth.png?v=valveisgoodatcaching";
-      var Xd = n(17928),
-        qd = (0, o.createContext)(!1),
-        Kd = function () {
-          return (0, o.useContext)(qd);
+      var Qd = n(17928),
+        $d = (0, o.createContext)(!1),
+        em = function () {
+          return (0, o.useContext)($d);
         };
-      function Qd() {
+      function tm() {
         return o.createElement(
           "div",
-          { className: kd().Login },
-          o.createElement(Im, {
+          { className: Od().Login },
+          o.createElement(Lm, {
             reset: function () {
               return window.location.reload();
             },
-            failure: Bu.Generic,
+            failure: Du.Generic,
           })
         );
       }
-      function $d(e) {
+      function nm(e) {
         return (function (e) {
           var t = (0, o.useRef)(e);
           t.current = e;
@@ -58795,15 +59369,15 @@
         })(e.redirectUrl)
           ? null
           : o.createElement(
-              em,
+              am,
               (0, r.pi)({}, e, {
                 onSuccess: function (t) {
-                  od(t.strRefreshToken).then(
+                  cd(t.strRefreshToken).then(
                     function (t) {
                       return e.onComplete(t);
                     },
                     function () {
-                      return e.onComplete(Nu.k_PrimaryDomainFail);
+                      return e.onComplete(Ru.k_PrimaryDomainFail);
                     }
                   );
                 },
@@ -58811,24 +59385,24 @@
               })
             );
       }
-      function em(e) {
+      function am(e) {
         var t = e.embedded,
           n = (0, r._T)(e, ["embedded"]);
         return o.createElement(
-          Xd.S,
+          Qd.S,
           null,
           o.createElement(
-            qd.Provider,
+            $d.Provider,
             { value: t },
             o.createElement(
               "div",
-              { className: kd().Login },
-              o.createElement(rm, (0, r.pi)({}, n))
+              { className: Od().Login },
+              o.createElement(sm, (0, r.pi)({}, n))
             )
           )
         );
       }
-      function tm(e, t) {
+      function rm(e, t) {
         if ("none" == t) return null;
         var n;
         switch (null != t ? t : "normal") {
@@ -58841,16 +59415,16 @@
         }
         return o.createElement(
           "div",
-          { className: (0, b.Z)(kd().AccountCreation, e && kd().InClient) },
+          { className: (0, b.Z)(Od().AccountCreation, e && Od().InClient) },
           o.createElement(
             "span",
-            { className: kd().AccountCreationPrompt },
+            { className: Od().AccountCreationPrompt },
             (0, ta.Xx)(n)
           ),
           (function (e, t) {
             if (e)
               return o.createElement(
-                zm,
+                jm,
                 {
                   inline: !0,
                   onClick: function () {
@@ -58863,7 +59437,7 @@
               default:
               case "normal":
                 return o.createElement(
-                  zm,
+                  jm,
                   {
                     inline: !0,
                     href: "".concat(St.De.STORE_BASE_URL, "join/"),
@@ -58872,7 +59446,7 @@
                 );
               case "partner":
                 return o.createElement(
-                  zm,
+                  jm,
                   { inline: !0, href: "".concat(St.De.PARTNER_BASE_URL) },
                   (0, ta.Xx)("#Login_CreateSteamworksAccount")
                 );
@@ -58882,7 +59456,7 @@
           })(e, t)
         );
       }
-      function nm() {
+      function im() {
         var e, t, n;
         return (0, r.mG)(this, void 0, void 0, function () {
           var a, i, o;
@@ -58931,7 +59505,7 @@
           });
         });
       }
-      function am() {
+      function om() {
         return (0, r.mG)(this, void 0, void 0, function () {
           return (0, r.Jh)(this, function (e) {
             return [
@@ -58944,7 +59518,7 @@
           });
         });
       }
-      function rm(e) {
+      function sm(e) {
         var t,
           n = e.transport,
           a = e.onSuccess,
@@ -58956,7 +59530,7 @@
           u =
             void 0 === c
               ? function () {
-                  return o.createElement(Qm, null);
+                  return o.createElement(tp, null);
                 }
               : c,
           d = e.lastResult,
@@ -58979,10 +59553,10 @@
             [a]
           ),
           _ = (function (e) {
-            var t = (0, o.useState)(new Bd(e)),
+            var t = (0, o.useState)(new Dd(e)),
               n = t[0],
               a = t[1];
-            return (0, sd.SZ)(function () {
+            return (0, ud.SZ)(function () {
               return {
                 strAccountName: n.GetAccountName(),
                 steamid: n.GetSteamID(),
@@ -59002,7 +59576,7 @@
                 finishMoveRecovery: n.FinishMoveRecovery,
                 replacementAuthenticator: n.GetReplacementAuthenticator(),
                 reset: function () {
-                  return a(new Bd(e));
+                  return a(new Dd(e));
                 },
                 goBack: n.GoBack,
                 setTokenToRevoke: n.SetTokenToRevoke,
@@ -59011,7 +59585,7 @@
           })({
             transport: n,
             onComplete: p,
-            onDeviceDetails: St.De.IN_STEAMUI ? nm : am,
+            onDeviceDetails: St.De.IN_STEAMUI ? im : om,
             onGetMachineAuth: St.De.IN_STEAMUI
               ? function (e) {
                   return SteamClient.Auth.GetSteamGuardData(e);
@@ -59047,7 +59621,7 @@
           O = (0, o.useState)(!St.De.IN_STEAMUI),
           x = O[0],
           U = O[1],
-          z = Kd(),
+          z = em(),
           H = !(0 === g || 1 === g || 2 === g),
           W = function () {
             console.log("Logging in offline with username ".concat(R)),
@@ -59084,22 +59658,22 @@
         )
           return o.createElement(
             "div",
-            { className: kd().Login },
-            o.createElement(Im, {
+            { className: Od().Login },
+            o.createElement(Lm, {
               reset: function () {
                 return window.location.reload();
               },
-              failure: Bu.Generic,
+              failure: Du.Generic,
               errorReference: d.toString(),
             })
           );
-        if (!x) return o.createElement(Zm, null, o.createElement("div", null));
+        if (!x) return o.createElement(Km, null, o.createElement("div", null));
         var j = !i && St.De.EREALM !== Mt.IN.k_ESteamRealmChina;
         if (!H) {
           var V = o.createElement(
             "div",
-            { className: (0, b.Z)(kd().SideBySide, z && kd().Embedded) },
-            o.createElement(om, {
+            { className: (0, b.Z)(Od().SideBySide, z && Od().Embedded) },
+            o.createElement(cm, {
               strAccountName: R,
               onAccountNameChange: L,
               strPassword: M,
@@ -59114,7 +59688,7 @@
               refreshInfo: e.refreshInfo,
             }),
             j &&
-              o.createElement(sm, {
+              o.createElement(um, {
                 transport: n,
                 onQRStatusChange: I,
                 onComplete: p,
@@ -59125,27 +59699,27 @@
           if (z) {
             var J = St.De.IN_STEAMUI;
             return o.createElement(
-              Wm,
-              { className: (0, b.Z)(kd().EmbeddedRoot, J && kd().InClient) },
+              Jm,
+              { className: (0, b.Z)(Od().EmbeddedRoot, J && Od().InClient) },
               !J && !1,
-              o.createElement(Xm, {
+              o.createElement(Qm, {
                 realm: St.De.EREALM,
-                className: kd().HeaderLogo,
+                className: Od().HeaderLogo,
               }),
-              o.createElement(im, { refreshInfo: l }),
+              o.createElement(lm, { refreshInfo: l }),
               V,
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    kd().EmbeddedRootFooter,
-                    J && kd().InClient
+                    Od().EmbeddedRootFooter,
+                    J && Od().InClient
                   ),
                 },
                 (function (e) {
                   return e
                     ? o.createElement(
-                        zm,
+                        jm,
                         {
                           onClick: function () {
                             SteamClient.LoginUI.ShowAccountRecovery();
@@ -59154,7 +59728,7 @@
                         (0, ta.Xx)("#Login_Help_SignIn")
                       )
                     : o.createElement(
-                        zm,
+                        jm,
                         {
                           href: ""
                             .concat(
@@ -59166,7 +59740,7 @@
                         (0, ta.Xx)("#Login_Help_SignIn")
                       );
                 })(J),
-                tm(J, m)
+                rm(J, m)
               )
             );
           }
@@ -59183,24 +59757,24 @@
             !1,
             o.createElement(
               "div",
-              { className: kd().PrimaryHeader },
+              { className: Od().PrimaryHeader },
               e.refreshInfo
                 ? (0, ta.Xx)("#Login_RefreshSignIn")
                 : (0, ta.Xx)("#Login_SignIn")
             ),
-            o.createElement(im, { refreshInfo: e.refreshInfo })
+            o.createElement(lm, { refreshInfo: e.refreshInfo })
           );
-          return o.createElement(Zm, { title: Y }, V);
+          return o.createElement(Km, { title: Y }, V);
         }
         switch (g) {
           case 13:
-            return o.createElement(wm, null);
+            return o.createElement(Im, null);
           case 5:
           case 11:
           case 3:
           case 10:
             var Z = 5 === g || 11 === g;
-            return o.createElement(Rm, {
+            return o.createElement(Mm, {
               type: Z ? "mobile" : "email",
               onSubmitCode: S,
               status: g,
@@ -59211,35 +59785,35 @@
           case 6:
           case 4:
             var X = 6 === g;
-            return o.createElement(Um, {
+            return o.createElement(Wm, {
               type: X ? "mobile" : "email",
               accountName: E,
               onUseCodeOverride: w,
             });
           case 16:
-            return o.createElement(Dm, { reset: T });
+            return o.createElement(Am, { reset: T });
           case 15:
-            return o.createElement(Im, {
+            return o.createElement(Lm, {
               reset: T,
               failure: h,
               onRequestOffline: W,
               errorReference: f,
             });
           case 14:
-            return o.createElement(Zm, { compact: !0 }, u());
+            return o.createElement(Km, { compact: !0 }, u());
           default:
             return (
               console.error("Unknown Phase: ".concat(g)),
-              o.createElement(Im, {
+              o.createElement(Lm, {
                 reset: T,
-                failure: Bu.Generic,
+                failure: Du.Generic,
                 onRequestOffline: W,
                 errorReference: f,
               })
             );
         }
       }
-      function im(e) {
+      function lm(e) {
         var t, n, a;
         if (!St.De.IN_LOGIN_REFRESH) return null;
         switch (
@@ -59288,17 +59862,17 @@
           null,
           o.createElement(
             "div",
-            { className: kd().RefreshTitle },
+            { className: Od().RefreshTitle },
             (0, ta.Xx)("#Login_RefreshSignIn")
           ),
           o.createElement(
             "div",
-            { className: kd().RefreshReason },
+            { className: Od().RefreshReason },
             (0, ta.Xx)(a)
           )
         );
       }
-      function om(e) {
+      function cm(e) {
         var t,
           n = e.onSubmit,
           a = e.status,
@@ -59312,7 +59886,7 @@
           m = (0, o.useState)(!1),
           p = m[0],
           _ = m[1],
-          g = Kd(),
+          g = em(),
           h =
             ((t = (0, o.useRef)(!0)),
             (0, o.useEffect)(
@@ -59332,24 +59906,24 @@
           f = 1 === a || 13 === a,
           v = 2 === a && !p,
           b = v
-            ? o.createElement(Cm, null, (0, ta.Xx)("#Login_CheckCredentials"))
-            : o.createElement(Cm, null, " "),
+            ? o.createElement(Nm, null, (0, ta.Xx)("#Login_CheckCredentials"))
+            : o.createElement(Nm, null, " "),
           E = r && !i,
           y = r && !!i;
         return o.createElement(
-          Hm,
+          Vm,
           {
             onSubmit: function () {
               n().then(function () {
                 h() && _(!1);
               });
             },
-            className: kd().LoginForm,
+            className: Od().LoginForm,
           },
-          o.createElement(pm, {
+          o.createElement(hm, {
             tone: v ? "danger" : void 0,
             label: o.createElement(
-              _m,
+              fm,
               { highlight: !0 },
               (0, ta.Xx)("#Login_SignIn_WithAccountName")
             ),
@@ -59360,9 +59934,9 @@
             autoFocus: E,
             disabled: St.De.IN_LOGIN_REFRESH,
           }),
-          o.createElement(pm, {
+          o.createElement(hm, {
             tone: v ? "danger" : void 0,
-            label: o.createElement(_m, null, (0, ta.Xx)("#Login_Password")),
+            label: o.createElement(fm, null, (0, ta.Xx)("#Login_Password")),
             value: l,
             onChange: function (e) {
               _(!0), c(e);
@@ -59370,16 +59944,16 @@
             type: "password",
             autoFocus: y,
           }),
-          o.createElement(fm, {
+          o.createElement(Em, {
             label: (0, ta.Xx)("#Login_RememberMe_Short"),
             value: u,
             onChange: d,
           }),
-          o.createElement(bm, { loading: f }),
+          o.createElement(Tm, { loading: f }),
           b,
           !g &&
             o.createElement(
-              zm,
+              jm,
               {
                 href: ""
                   .concat(St.De.HELP_BASE_URL, "wizard/HelpWithLogin?redir=")
@@ -59390,7 +59964,7 @@
             )
         );
       }
-      function sm(e) {
+      function um(e) {
         var t = (0, o.useState)(window.screen.width < 700),
           n = t[0],
           a = t[1];
@@ -59407,19 +59981,19 @@
         }, []);
         return o.createElement(
           "div",
-          { className: kd().QRSection },
+          { className: Od().QRSection },
           n
             ? o.createElement(
-                cm,
+                mm,
                 (0, r.pi)({}, e, { bBetaMessagingRelevant: false })
               )
             : o.createElement(
-                lm,
+                dm,
                 (0, r.pi)({}, e, { bBetaMessagingRelevant: false })
               )
         );
       }
-      function lm(e) {
+      function dm(e) {
         var t = (function () {
             var e = "bShowLoginQR",
               t = (0, o.useState)("1" === localStorage.getItem(e)),
@@ -59435,48 +60009,48 @@
           a = t[1];
         return !e.bBetaMessagingRelevant || n
           ? o.createElement(
-              mm,
+              gm,
               (0, r.pi)({}, e, {
                 bShowHideButton: e.bBetaMessagingRelevant,
                 setShowQR: a,
               })
             )
-          : o.createElement(um, { setShowQR: a });
+          : o.createElement(pm, { setShowQR: a });
       }
-      function cm(e) {
+      function mm(e) {
         var t = (0, o.useState)(!1),
           n = t[0],
           a = t[1];
         return n
           ? o.createElement(
-              mm,
+              gm,
               (0, r.pi)({}, e, { bShowHideButton: !0, setShowQR: a })
             )
           : e.bBetaMessagingRelevant
-          ? o.createElement(um, { setShowQR: a })
-          : o.createElement(dm, { setShowQR: a });
+          ? o.createElement(pm, { setShowQR: a })
+          : o.createElement(_m, { setShowQR: a });
       }
-      function um(e) {
+      function pm(e) {
         return o.createElement(
           "div",
-          { className: kd().MessagingContainer },
+          { className: Od().MessagingContainer },
           o.createElement(
             "div",
-            { className: kd().MessagingTag },
+            { className: Od().MessagingTag },
             (0, ta.Xx)("#Login_NewBetaFeature_Title")
           ),
           o.createElement(
             "div",
-            { className: kd().MessagingSubtitleCtn },
-            o.createElement(xm, {
-              className: kd().MessagingIcon,
+            { className: Od().MessagingSubtitleCtn },
+            o.createElement(Hm, {
+              className: Od().MessagingIcon,
               phoneOutlineColor: "#42464E",
               backgroundColor: "#32353C",
               qrCodeColor: "#AFAFAF",
             }),
             o.createElement(
               "div",
-              { className: kd().MessagingSubtitle },
+              { className: Od().MessagingSubtitle },
               (0, ta.Xx)("#Login_BetaTesterScanQR_Subtitle")
             )
           ),
@@ -59487,14 +60061,14 @@
                 St.De.COMMUNITY_BASE_URL,
                 "groups/SteamMobileApp"
               ),
-              className: kd().MessagingButton,
+              className: Od().MessagingButton,
             },
             (0, ta.Xx)("#Login_JoinBeta_Button")
           ),
           o.createElement(
             "div",
             {
-              className: kd().MessagingLink,
+              className: Od().MessagingLink,
               onClick: function () {
                 return e.setShowQR(!0);
               },
@@ -59503,28 +60077,28 @@
           )
         );
       }
-      function dm(e) {
+      function _m(e) {
         return o.createElement(
           "div",
-          { className: kd().MessagingContainer },
+          { className: Od().MessagingContainer },
           o.createElement(
             "div",
-            { className: kd().MessagingTag },
+            { className: Od().MessagingTag },
             (0, ta.Xx)("#Login_MobileFlow_New")
           ),
           o.createElement(
             "div",
-            { className: kd().MessagingSubtitle },
+            { className: Od().MessagingSubtitle },
             o.createElement(
               "div",
-              { className: kd().MessagingSubtitle },
+              { className: Od().MessagingSubtitle },
               (0, ta.Xx)("#Login_MobileFlow_SignIn_ScanQR")
             )
           ),
           o.createElement(
             "div",
             {
-              className: kd().MessagingButton,
+              className: Od().MessagingButton,
               onClick: function () {
                 return e.setShowQR(!0);
               },
@@ -59535,13 +60109,13 @@
             "a",
             {
               href: "".concat(St.De.STORE_BASE_URL, "mobile"),
-              className: kd().MessagingLink,
+              className: Od().MessagingLink,
             },
             (0, ta.Xx)("#Login_JoinBeta_Button")
           )
         );
       }
-      function mm(e) {
+      function gm(e) {
         var t = e.onQRStatusChange,
           n = e.transport,
           a = e.onComplete,
@@ -59551,16 +60125,16 @@
           l = e.setShowQR;
         return o.createElement(
           "div",
-          { className: kd().QRCodeContainer },
+          { className: Od().QRCodeContainer },
           o.createElement(
-            _m,
+            fm,
             { highlight: !0 },
             (0, ta.Xx)("#Login_SignIn_OrWithQRCode")
           ),
           o.createElement(
             "div",
-            { className: kd().QR },
-            o.createElement(jd, {
+            { className: Od().QR },
+            o.createElement(Yd, {
               onStatusChange: t,
               transport: n,
               onComplete: a,
@@ -59573,7 +60147,7 @@
             o.createElement(
               "div",
               {
-                className: kd().QRHideLink,
+                className: Od().QRHideLink,
                 onClick: function () {
                   return l(!1);
                 },
@@ -59582,10 +60156,10 @@
             ),
           o.createElement(
             "div",
-            { className: kd().UseMobileAppForQR },
+            { className: Od().UseMobileAppForQR },
             (0, ta.yu)(
               "#Login_UseMobileAppForQR_Inline",
-              o.createElement(zm, {
+              o.createElement(jm, {
                 href: "".concat(St.De.STORE_BASE_URL, "mobile"),
                 align: "center",
               })
@@ -59593,7 +60167,7 @@
           )
         );
       }
-      function pm(e) {
+      function hm(e) {
         var t = e.label,
           n = e.error,
           a = e.tone,
@@ -59602,22 +60176,22 @@
           l = null != a ? a : n ? "danger" : void 0;
         return o.createElement(
           "div",
-          { className: kd().TextField },
-          "string" == typeof t ? o.createElement(_m, null, t) : t,
-          o.createElement(hm, { type: "error" }, n),
-          o.createElement(gm, (0, r.pi)({ autoFocus: i, tone: l }, s))
+          { className: Od().TextField },
+          "string" == typeof t ? o.createElement(fm, null, t) : t,
+          o.createElement(bm, { type: "error" }, n),
+          o.createElement(vm, (0, r.pi)({ autoFocus: i, tone: l }, s))
         );
       }
-      function _m(e) {
+      function fm(e) {
         var t = e.children,
           n = e.highlight;
         return o.createElement(
           "div",
-          { className: (0, b.Z)(kd().FieldLabel, n && kd().Highlight) },
+          { className: (0, b.Z)(Od().FieldLabel, n && Od().Highlight) },
           t
         );
       }
-      function gm(e) {
+      function vm(e) {
         var t = e.value,
           n = e.onChange,
           a = e.type,
@@ -59633,20 +60207,20 @@
           onChange: function (e) {
             return n(e.target.value);
           },
-          className: (0, b.Z)(kd().TextInput, "danger" === i && kd().Danger, s),
+          className: (0, b.Z)(Od().TextInput, "danger" === i && Od().Danger, s),
           disabled: c,
         });
       }
-      function hm(e) {
+      function bm(e) {
         var t = e.children,
           n = e.type;
         return o.createElement(
           "div",
-          { className: (0, b.Z)(kd().FieldHint, "error" === n && kd().Error) },
+          { className: (0, b.Z)(Od().FieldHint, "error" === n && Od().Error) },
           t
         );
       }
-      function fm(e) {
+      function Em(e) {
         var t = e.label,
           n = e.onChange,
           a = e.value,
@@ -59656,58 +60230,58 @@
         return o.createElement(
           "div",
           {
-            className: kd().CheckboxField,
+            className: Od().CheckboxField,
             onClick: r,
             onKeyPress: function (e) {
               " " == e.key && (r(), e.preventDefault());
             },
           },
-          o.createElement(vm, { value: a }),
-          o.createElement("div", { className: kd().CheckboxFieldLabel }, t)
+          o.createElement(ym, { value: a }),
+          o.createElement("div", { className: Od().CheckboxFieldLabel }, t)
         );
       }
-      function vm(e) {
+      function ym(e) {
         var t = e.value;
         return o.createElement(
           "div",
-          { tabIndex: 0, className: kd().Checkbox },
+          { tabIndex: 0, className: Od().Checkbox },
           t &&
             o.createElement(
               "div",
-              { className: kd().Check },
-              o.createElement(au.JrY, { strokeWidth: 35 })
+              { className: Od().Check },
+              o.createElement(gu.JrY, { strokeWidth: 35 })
             )
         );
       }
-      function bm(e) {
+      function Tm(e) {
         var t;
         return St.De.IN_LOGIN_REFRESH &&
           (null === (t = SteamClient.User) || void 0 === t
             ? void 0
             : t.StartShutdown)
-          ? o.createElement(ym, null)
-          : o.createElement(Em, (0, r.pi)({}, e));
+          ? o.createElement(Cm, null)
+          : o.createElement(Sm, (0, r.pi)({}, e));
       }
-      function Em(e) {
+      function Sm(e) {
         return o.createElement(
           "div",
-          { className: kd().SignInButtonContainer },
-          o.createElement(Tm, (0, r.pi)({}, e), (0, ta.Xx)("#Login_SignIn"))
+          { className: Od().SignInButtonContainer },
+          o.createElement(wm, (0, r.pi)({}, e), (0, ta.Xx)("#Login_SignIn"))
         );
       }
-      function ym() {
+      function Cm() {
         return o.createElement(
           "div",
-          { className: kd().RefreshButtonContainer },
+          { className: Od().RefreshButtonContainer },
           o.createElement(
             "button",
-            { className: kd().SubmitButton, type: "submit" },
+            { className: Od().SubmitButton, type: "submit" },
             (0, ta.Xx)("#Login_SignIn")
           ),
           o.createElement(
             "button",
             {
-              className: kd().RefreshQuitButton,
+              className: Od().RefreshQuitButton,
               onClick: function () {
                 return SteamClient.User.StartShutdown(!0);
               },
@@ -59716,10 +60290,10 @@
           )
         );
       }
-      function Tm(e) {
-        return o.createElement(Sm, (0, r.pi)({ type: "submit" }, e));
+      function wm(e) {
+        return o.createElement(Bm, (0, r.pi)({ type: "submit" }, e));
       }
-      function Sm(e) {
+      function Bm(e) {
         var t = e.className,
           n = e.loading,
           a = e.disabled,
@@ -59730,7 +60304,7 @@
           "button",
           (0, r.pi)(
             {
-              className: (0, b.Z)(kd().SubmitButton, n && kd().Loading, t),
+              className: (0, b.Z)(Od().SubmitButton, n && Od().Loading, t),
               disabled: l,
             },
             s
@@ -59739,32 +60313,32 @@
           n &&
             o.createElement(
               "div",
-              { className: kd().LoadingContainer },
-              o.createElement(Bm, { size: "small" })
+              { className: Od().LoadingContainer },
+              o.createElement(Dm, { size: "small" })
             )
         );
       }
-      function Cm(e) {
+      function Nm(e) {
         var t = e.children || " ";
-        return o.createElement("div", { className: kd().FormError }, t);
+        return o.createElement("div", { className: Od().FormError }, t);
       }
-      function wm() {
+      function Im() {
         return o.createElement(
-          Zm,
+          Km,
           { compact: !0 },
           o.createElement(
-            Wm,
+            Jm,
             {
               alignItems: "center",
               className: (0, b.Z)(
-                kd().WaitingForTokenContainer,
-                St.De.IN_STEAMUI && kd().Client
+                Od().WaitingForTokenContainer,
+                St.De.IN_STEAMUI && Od().Client
               ),
             },
-            o.createElement(Wl.V, { size: "xlarge" }),
+            o.createElement(Vl.V, { size: "xlarge" }),
             o.createElement(
               "div",
-              { className: (0, b.Z)(kd().Description) },
+              { className: (0, b.Z)(Od().Description) },
               (0, ta.Xx)(
                 St.De.IN_STEAMUI
                   ? "#Login_ConnectingToSteam"
@@ -59774,60 +60348,60 @@
           )
         );
       }
-      function Bm(e) {
+      function Dm(e) {
         var t = e.size;
         return o.createElement("div", {
           className: (0, b.Z)(
-            kd().LoadingSpinner,
-            "small" == t && kd().Small,
-            ("medium" == t || !t) && kd().Medium,
-            "large" == t && kd().Large
+            Od().LoadingSpinner,
+            "small" == t && Od().Small,
+            ("medium" == t || !t) && Od().Medium,
+            "large" == t && Od().Large
           ),
         });
       }
-      function Nm(e) {
+      function Rm(e) {
         return o.createElement(
           "div",
-          { className: kd().OfferOffline },
+          { className: Od().OfferOffline },
           o.createElement(
             "button",
-            { className: kd().OfferOfflineButton, onClick: e.onRequestOffline },
+            { className: Od().OfferOfflineButton, onClick: e.onRequestOffline },
             (0, ta.Xx)("#Login_GoOffline_Button")
           )
         );
       }
-      function Im(e) {
+      function Lm(e) {
         var t = e.reset,
           n = e.failure,
           a = e.onRequestOffline,
           r = e.errorReference,
           i = (function (e) {
             switch (e) {
-              case Bu.None:
+              case Du.None:
                 return { title: "", description: "" };
-              case Bu.Expired:
+              case Du.Expired:
                 return {
                   title: (0, ta.Xx)("#Login_Error_Expired_Title"),
                   description: (0, ta.Xx)("#Login_Error_Expired_Description"),
                 };
-              case Bu.Network:
+              case Du.Network:
                 return {
                   title: (0, ta.Xx)("#Login_Error_Network_Title"),
                   description: (0, ta.Xx)("#Login_Error_Network_Description"),
                 };
-              case Bu.MoveAuthenticator:
+              case Du.MoveAuthenticator:
                 return {
                   title: (0, ta.Xx)("#Error_Generic"),
                   description: (0, ta.Xx)(
                     "#Login_Error_MoveAuthenticator_Description"
                   ),
                 };
-              case Bu.RateLimitExceeded:
+              case Du.RateLimitExceeded:
                 return {
                   title: (0, ta.Xx)("#Login_Error_RateLimit_Title"),
                   description: (0, ta.Xx)("#Login_Error_RateLimit_Description"),
                 };
-              case Bu.Generic:
+              case Du.Generic:
               default:
                 return {
                   title: (0, ta.Xx)("#Error_Generic"),
@@ -59837,45 +60411,45 @@
           })(n),
           s = i.title,
           l = i.description,
-          c = St.De.IN_STEAMUI && n == Bu.Network;
+          c = St.De.IN_STEAMUI && n == Du.Network;
         return o.createElement(
-          Zm,
+          Km,
           { compact: !0 },
           o.createElement(
-            Wm,
+            Jm,
             { alignItems: "center", gap: 12 },
-            o.createElement("div", { className: kd().FailureTitle }, s),
-            o.createElement("div", { className: kd().FailureDescription }, l),
+            o.createElement("div", { className: Od().FailureTitle }, s),
+            o.createElement("div", { className: Od().FailureDescription }, l),
             c &&
               o.createElement(
                 "div",
-                { className: kd().FailureDescription },
+                { className: Od().FailureDescription },
                 (0, ta.Xx)("#Login_GoOffline_Description")
               ),
             o.createElement(
-              jm,
-              { className: kd().FailureButtons },
+              Ym,
+              { className: Od().FailureButtons },
               o.createElement(
-                Sm,
-                { className: kd().TryAgainButton, onClick: t },
+                Bm,
+                { className: Od().TryAgainButton, onClick: t },
                 (0, ta.Xx)("#Button_Retry")
               ),
-              c && o.createElement(Nm, { onRequestOffline: a })
+              c && o.createElement(Rm, { onRequestOffline: a })
             )
           ),
           r &&
             o.createElement(
               "div",
-              { className: kd().MutedErrorReference },
+              { className: Od().MutedErrorReference },
               (0, ta.Xx)("#Login_Error_Reference", r)
             )
         );
       }
-      function Dm(e) {
+      function Am(e) {
         var t = e.reset;
-        return o.createElement(Im, { reset: t, failure: Bu.Generic });
+        return o.createElement(Lm, { reset: t, failure: Du.Generic });
       }
-      function Rm(e) {
+      function Mm(e) {
         var t,
           n,
           a = e.type,
@@ -59897,7 +60471,7 @@
           E = v[1],
           y = "mobile" === a,
           T = u.join(""),
-          S = Ld(T, b),
+          S = Gd(T, b),
           C = function (e) {
             f(!0),
               r(e).then(function () {
@@ -59908,42 +60482,42 @@
         return (
           b
             ? "mobile" === a
-              ? ((n = o.createElement(Am, null)), (t = "#Login_UseMobileCode"))
-              : ((n = o.createElement(Am, null)), (t = "#Login_UseEmailCode"))
+              ? ((n = o.createElement(km, null)), (t = "#Login_UseMobileCode"))
+              : ((n = o.createElement(km, null)), (t = "#Login_UseEmailCode"))
             : ((n =
                 "mobile" === a
-                  ? o.createElement(Mm, null)
-                  : o.createElement(Gm, { emailAddress: l })),
+                  ? o.createElement(Pm, null)
+                  : o.createElement(Fm, { emailAddress: l })),
               (t = "#Login_UseBackupCode")),
           o.createElement(
-            Zm,
+            Km,
             { title: (0, ta.Xx)("#Login_Title_SteamGuard"), compact: !0 },
             o.createElement(
-              Hm,
+              Vm,
               {
                 onSubmit: function () {
                   S && C(T);
                 },
               },
               o.createElement(
-                Wm,
+                Jm,
                 { alignItems: "center", gap: 20 },
-                o.createElement(km, { type: a, accountName: s }),
+                o.createElement(Om, { type: a, accountName: s }),
                 o.createElement(
-                  Wm,
+                  Jm,
                   { alignItems: "center", gap: 2 },
                   w &&
                     o.createElement(
-                      Cm,
+                      Nm,
                       null,
                       (0, ta.Xx)("#Login_IncorrectSteamGuard")
                     ),
-                  o.createElement(Vm, {
+                  o.createElement(Zm, {
                     value: u,
                     onChange: function (e) {
                       p || _(!0), d(e);
                       var t = e.join("");
-                      Ld(t, b) && C(t);
+                      Gd(t, b) && C(t);
                     },
                     tone: w ? "danger" : void 0,
                     loading: h,
@@ -59953,7 +60527,7 @@
                 n,
                 y &&
                   o.createElement(
-                    zm,
+                    jm,
                     {
                       onClick: function () {
                         return E(!b);
@@ -59962,13 +60536,13 @@
                     },
                     (0, ta.Xx)(t)
                   ),
-                o.createElement(Lm, { type: a })
+                o.createElement(Gm, { type: a })
               )
             )
           )
         );
       }
-      function Lm(e) {
+      function Gm(e) {
         var t, n;
         return (
           "mobile" === e.type
@@ -59984,7 +60558,7 @@
               (n = (0, ta.Xx)("#Login_Help_AccessEmail"))),
           St.De.IN_STEAMUI
             ? o.createElement(
-                zm,
+                jm,
                 {
                   onClick: function () {
                     return SteamClient.LoginUI.ShowHelpPopup(t);
@@ -59993,115 +60567,115 @@
                 },
                 n
               )
-            : o.createElement(zm, { href: t, align: "center" }, n)
+            : o.createElement(jm, { href: t, align: "center" }, n)
         );
       }
-      function Am() {
+      function km() {
         return o.createElement(
-          jm,
+          Ym,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: kd().EnterBackupCodeContainer,
+            className: Od().EnterBackupCodeContainer,
           },
           o.createElement(
-            Wm,
+            Jm,
             null,
             o.createElement(
               "div",
-              { className: kd().EnterCodeFromMobile },
+              { className: Od().EnterCodeFromMobile },
               (0, ta.Xx)("#Login_EnterBackupCode")
             ),
             o.createElement(
               "div",
-              { className: kd().Label },
+              { className: Od().Label },
               (0, ta.Xx)("#Login_EnterBackupCodeDescription")
             )
           ),
-          o.createElement(Fm, { className: kd().AwaitingMobileConfIcon })
+          o.createElement(Um, { className: Od().AwaitingMobileConfIcon })
         );
       }
-      function Mm() {
+      function Pm() {
         return o.createElement(
-          jm,
+          Ym,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: kd().EnterCodeFromMobileContainer,
+            className: Od().EnterCodeFromMobileContainer,
           },
           o.createElement(
             "div",
-            { className: kd().EnterCodeFromMobile },
+            { className: Od().EnterCodeFromMobile },
             (0, ta.Xx)("#Login_EnterMobileCode")
           ),
-          o.createElement(Fm, { className: kd().AwaitingMobileConfIcon })
+          o.createElement(Um, { className: Od().AwaitingMobileConfIcon })
         );
       }
-      function Gm(e) {
+      function Fm(e) {
         return o.createElement(
-          jm,
+          Ym,
           {
             justifyContent: "space-evenly",
             alignItems: "center",
-            className: kd().EnterCodeFromEmailContainer,
+            className: Od().EnterCodeFromEmailContainer,
           },
           o.createElement(
-            Ym,
+            qm,
             { align: "center", spacing: 6 },
             o.createElement(
               "div",
-              { className: kd().EnterCodeFromEmail },
+              { className: Od().EnterCodeFromEmail },
               (0, ta.kQ)(
                 "#Login_EnterEmailCode",
                 o.createElement(
                   "span",
-                  { className: kd().EnterCodeEmailAddress },
+                  { className: Od().EnterCodeEmailAddress },
                   e.emailAddress
                 )
               )
             )
           ),
-          o.createElement(Om, { className: kd().AwaitingEmailConfIcon })
+          o.createElement(zm, { className: Od().AwaitingEmailConfIcon })
         );
       }
-      function km(e) {
+      function Om(e) {
         var t = e.accountName,
           n =
             "mobile" === e.type
               ? (0, ta.Xx)("#Login_MobileProtectingAccount")
               : (0, ta.Xx)("#Login_EmailProtectingAccount"),
-          a = Kd();
+          a = em();
         return o.createElement(
           "div",
-          { className: kd().ProtectingAccount },
+          { className: Od().ProtectingAccount },
           o.createElement(
             "div",
-            { className: kd().Label },
+            { className: Od().Label },
             (0, ta.kQ)(
               "#Login_ActiveAccountName",
-              o.createElement("span", { className: kd().AccountName }, t)
+              o.createElement("span", { className: Od().AccountName }, t)
             )
           ),
-          !a && o.createElement("div", { className: kd().Description }, n)
+          !a && o.createElement("div", { className: Od().Description }, n)
         );
       }
-      function Pm() {
+      function xm() {
         return o.createElement(
-          Wm,
+          Jm,
           { alignItems: "center" },
           o.createElement(
             "div",
-            { className: kd().ConfirmationContainer },
-            o.createElement("img", { src: Zd }),
+            { className: Od().ConfirmationContainer },
+            o.createElement("img", { src: Kd }),
             o.createElement(
               "div",
-              { className: kd().AwaitingMobileConfText },
+              { className: Od().AwaitingMobileConfText },
               (0, ta.yu)("#Login_AwaitingMobileConfirmation")
             )
           )
         );
       }
-      function Fm(e) {
+      function Um(e) {
         return o.createElement(
           "svg",
           {
@@ -60137,7 +60711,7 @@
           })
         );
       }
-      function Om(e) {
+      function zm(e) {
         return o.createElement(
           "svg",
           { viewBox: "0 0 58 56", fill: "none", className: e.className },
@@ -60147,7 +60721,7 @@
           })
         );
       }
-      function xm(e) {
+      function Hm(e) {
         var t, n, a;
         return o.createElement(
           "svg",
@@ -60204,48 +60778,48 @@
           )
         );
       }
-      function Um(e) {
+      function Wm(e) {
         var t = e.type,
           n = e.accountName,
           a = e.onUseCodeOverride,
-          r = Kd(),
-          i = o.createElement(Lm, { type: "mobile" }),
+          r = em(),
+          i = o.createElement(Gm, { type: "mobile" }),
           s = r
             ? o.createElement(
                 "div",
                 { style: { paddingBottom: "20px" } },
                 o.createElement(
-                  zm,
+                  jm,
                   { align: "center", onClick: a },
                   (0, ta.Xx)("#Login_EnterCodeInstead")
                 )
               )
             : o.createElement(
                 "div",
-                { className: kd().EnterCodeInsteadLink },
+                { className: Od().EnterCodeInsteadLink },
                 o.createElement(
-                  zm,
+                  jm,
                   { align: "center", onClick: a },
                   (0, ta.Xx)("#Login_EnterCodeInstead")
                 )
               );
         return o.createElement(
-          Zm,
+          Km,
           { title: (0, ta.Xx)("#Login_Title_SteamGuard"), compact: !0 },
           o.createElement(
-            Wm,
+            Jm,
             { gap: 40 },
-            o.createElement(km, { type: t, accountName: n }),
-            o.createElement(Pm, null),
-            o.createElement("div", { className: kd().LinkContainer }, s, i)
+            o.createElement(Om, { type: t, accountName: n }),
+            o.createElement(xm, null),
+            o.createElement("div", { className: Od().LinkContainer }, s, i)
           )
         );
       }
-      function zm(e) {
+      function jm(e) {
         var t = e.children,
           n = e.align,
           a = e.inline,
-          r = (0, b.Z)(kd().TextLink, "center" === n && kd().TextAlignCenter);
+          r = (0, b.Z)(Od().TextLink, "center" === n && Od().TextAlignCenter);
         if ("href" in e) {
           var i = St.De.IN_STEAMUI
             ? "steam://openurl_external/".concat(e.href)
@@ -60255,7 +60829,7 @@
         var s = a ? "span" : "div";
         return o.createElement(s, { className: r, onClick: e.onClick }, t);
       }
-      function Hm(e) {
+      function Vm(e) {
         var t = e.onSubmit,
           n = e.children,
           a = e.className;
@@ -60270,16 +60844,16 @@
           n
         );
       }
-      function Wm(e) {
+      function Jm(e) {
         var t = e.alignItems,
           n = e.justifyContent,
           a = e.gap,
           r = e.className,
           i = e.children,
           s = (0, b.Z)(
-            kd().FlexCol,
-            "center" === t && kd().AlignItemsCenter,
-            "center" === n && kd().JustifyContentCenter,
+            Od().FlexCol,
+            "center" === t && Od().AlignItemsCenter,
+            "center" === n && Od().JustifyContentCenter,
             r
           ),
           l = a
@@ -60287,7 +60861,7 @@
             : void 0;
         return o.createElement("div", { className: s, style: l }, i);
       }
-      function jm(e) {
+      function Ym(e) {
         var t = e.children,
           n = e.justifyContent,
           a = e.alignItems,
@@ -60300,18 +60874,18 @@
           };
         return o.createElement("div", { style: i, className: r }, t);
       }
-      function Vm(e) {
+      function Zm(e) {
         var t = e.onChange,
           n = e.backupCode,
           a = (0, r._T)(e, ["onChange", "backupCode"]);
         return o.createElement(
-          Jm,
+          Xm,
           (0, r.pi)(
             {
-              length: Dd(n),
+              length: Ad(n),
               backupCode: n,
               onChange: function (e) {
-                Rd(
+                Md(
                   (e = e.map(function (e) {
                     return e.toUpperCase();
                   }))
@@ -60331,7 +60905,7 @@
           )
         );
       }
-      function Jm(e) {
+      function Xm(e) {
         for (
           var t = e.length,
             n = e.value,
@@ -60429,10 +61003,10 @@
           "div",
           {
             className: (0, b.Z)(
-              kd().SegmentedCharacterInput,
-              "danger" === i && kd().Danger,
-              l && kd().Disabled,
-              u && kd().BackupCode
+              Od().SegmentedCharacterInput,
+              "danger" === i && Od().Danger,
+              l && Od().Disabled,
+              u && Od().BackupCode
             ),
             onClick: function () {
               var e = m.current.find(function (e) {
@@ -60444,19 +61018,19 @@
           c &&
             o.createElement(
               "div",
-              { className: kd().Loading },
-              o.createElement(Bm, { size: "small" })
+              { className: Od().Loading },
+              o.createElement(Dm, { size: "small" })
             ),
           v
         );
       }
-      function Ym(e) {
+      function qm(e) {
         var t = e.children,
           n = e.spacing,
           a = void 0 === n ? 0 : n,
           r = e.align;
         return o.createElement(
-          Wm,
+          Jm,
           { alignItems: r },
           o.Children.map(t, function (e, t) {
             return e
@@ -60471,34 +61045,34 @@
           }).filter(Boolean)
         );
       }
-      function Zm(e) {
+      function Km(e) {
         var t = e.title,
           n = e.children,
           a = e.compact,
-          r = Kd();
+          r = em();
         return o.createElement(
-          Wm,
+          Jm,
           {
             gap: 32,
             className: (0, b.Z)(
-              kd().StandardLayout,
-              r && kd().Embedded,
-              a && kd().Compact,
+              Od().StandardLayout,
+              r && Od().Embedded,
+              a && Od().Compact,
               St.De.IN_STEAMUI && "IN_CLIENT"
             ),
           },
           "string" == typeof t
-            ? o.createElement("div", { className: kd().PrimaryHeader }, t)
+            ? o.createElement("div", { className: Od().PrimaryHeader }, t)
             : t,
-          o.createElement("div", { className: kd().FormContainer }, n)
+          o.createElement("div", { className: Od().FormContainer }, n)
         );
       }
-      function Xm(e) {
+      function Qm(e) {
         return e.realm !== Mt.IN.k_ESteamRealmChina
-          ? o.createElement(qm, { className: e.className })
-          : o.createElement(Km, { className: e.className });
+          ? o.createElement($m, { className: e.className })
+          : o.createElement(ep, { className: e.className });
       }
-      function qm(e) {
+      function $m(e) {
         return o.createElement(
           "svg",
           {
@@ -60545,7 +61119,7 @@
           })
         );
       }
-      function Km(e) {
+      function ep(e) {
         return o.createElement(
           "svg",
           {
@@ -60612,21 +61186,21 @@
           )
         );
       }
-      function Qm() {
+      function tp() {
         return o.createElement(
-          Wm,
+          Jm,
           { alignItems: "center", justifyContent: "center" },
-          o.createElement(Wl.V, null)
+          o.createElement(Vl.V, null)
         );
       }
-      function $m(e) {
+      function np(e) {
         return o.createElement(
-          eu.e1,
+          au.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          o.createElement(ep, { redirectURL: e.redirectURL })
+          o.createElement(ap, { redirectURL: e.redirectURL })
         );
       }
-      function ep(e) {
+      function ap(e) {
         var t = e.redirectURL,
           n = (0, o.useState)(
             new Kt(St.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
@@ -60638,13 +61212,13 @@
           "div",
           null,
           r
-            ? o.createElement(Qd, null)
-            : o.createElement($d, {
+            ? o.createElement(tm, null)
+            : o.createElement(nm, {
                 autoFocus: !0,
                 transport: n,
                 platform: 2,
                 onComplete: function (e) {
-                  e == Nu.k_PrimaryDomainFail
+                  e == Ru.k_PrimaryDomainFail
                     ? i(!0)
                     : window.location.assign(t);
                 },
@@ -60654,7 +61228,7 @@
               })
         );
       }
-      var tp = (function (e) {
+      var rp = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -60662,7 +61236,7 @@
             (t.m_bLoadWasCancelled = !1),
             (t.state = {
               bIsOpen: !1,
-              bIsLoadingNotificationSettings: !Vc.BIsLoaded(),
+              bIsLoadingNotificationSettings: !Zc.BIsLoaded(),
             }),
             t
           );
@@ -60672,7 +61246,7 @@
           (t.prototype.componentDidMount = function () {
             var e = this;
             this.state.bIsLoadingNotificationSettings &&
-              Vc.HintLoad()
+              Zc.HintLoad()
                 .catch(function (e) {
                   return (
                     console.error(
@@ -60697,7 +61271,7 @@
             this.m_bLoadWasCancelled = !0;
           }),
           (t.prototype.ToggleMenu = function (e) {
-            var t = jc.Get().BIsUserLoggedIn();
+            var t = Yc.Get().BIsUserLoggedIn();
             t || St.De.IN_CLIENT
               ? (!t &&
                   St.De.IN_CLIENT &&
@@ -60707,16 +61281,16 @@
                 this.state.bIsOpen ? this.HideMenu() : this.ShowMenu(),
                 e.stopPropagation(),
                 e.preventDefault())
-              : su(
-                  o.createElement(eu.uH, {
+              : lu(
+                  o.createElement(au.uH, {
                     strTitle: (0, ta.Xx)("#EventDisplay_Share_NotLoggedIn"),
                     strDescription: (0, ta.Xx)(
                       "#EventDisplay_Share_NotLoggedIn_Description"
                     ),
                     strOKButtonText: (0, ta.Xx)("#MobileLogin_SignIn"),
                     onOK: function () {
-                      su(
-                        o.createElement($m, {
+                      lu(
+                        o.createElement(np, {
                           ownerWin: window,
                           redirectURL: window.location.href,
                         }),
@@ -60733,7 +61307,7 @@
             if (this.m_iMenuInstance) this.m_iMenuInstance.Show();
             else {
               var t = o.createElement(
-                  rp,
+                  sp,
                   (0, r.pi)({}, this.props, {
                     fnHasReminderSet: function () {
                       return e.BHasSomeNotificationSetting();
@@ -60747,12 +61321,12 @@
                   bDisablePopTop: !0,
                   bMatchWidth: !0,
                   strClassName: (0, b.Z)(
-                    Eu.ReminderDialog,
-                    Eu.ReminderOptions,
-                    Jc.contextMenu
+                    Su.ReminderDialog,
+                    Su.ReminderOptions,
+                    Xc.contextMenu
                   ),
                 };
-              (this.m_iMenuInstance = (0, Zl.yV)(
+              (this.m_iMenuInstance = (0, ql.yV)(
                 t,
                 this.m_elDropDownRef.current,
                 n
@@ -60760,9 +61334,9 @@
                 this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
             }
             this.setState({ bIsOpen: !0 }),
-              ic.RecordAppInteractionEvent(
+              lc.RecordAppInteractionEvent(
                 this.props.eventModel.appid,
-                rc.k_eReminder_Opened
+                sc.k_eReminder_Opened
               );
           }),
           (t.prototype.HideMenu = function () {
@@ -60773,22 +61347,18 @@
             var e = this.props.eventModel,
               t = e.GID;
             return (
-              (Vc.BHasValidatedEmail() &&
-                jc
-                  .Get()
-                  .BFollowsEventAndNotifiedBy(
-                    e.clanSteamID,
-                    t,
-                    zc.k_ENotifyFlagByEmail
-                  )) ||
-              (Vc.BHasPushNotification() &&
-                jc
-                  .Get()
-                  .BFollowsEventAndNotifiedBy(
-                    e.clanSteamID,
-                    t,
-                    zc.k_ENotifyFlagByPush
-                  ))
+              (Zc.BHasValidatedEmail() &&
+                Yc.Get().BFollowsEventAndNotifiedBy(
+                  e.clanSteamID,
+                  t,
+                  jc.k_ENotifyFlagByEmail
+                )) ||
+              (Zc.BHasPushNotification() &&
+                Yc.Get().BFollowsEventAndNotifiedBy(
+                  e.clanSteamID,
+                  t,
+                  jc.k_ENotifyFlagByPush
+                ))
             );
           }),
           (t.prototype.render = function () {
@@ -60800,10 +61370,10 @@
               {
                 className: (0, b.Z)(
                   ((e = {}),
-                  (e[Eu.ReminderCheckBox] = !0),
-                  (e[gu().ReminderCtn] = !0),
-                  (e[Eu.IconMode] = t),
-                  (e[Eu.TextMode] = !t),
+                  (e[Su.ReminderCheckBox] = !0),
+                  (e[vu().ReminderCtn] = !0),
+                  (e[Su.IconMode] = t),
+                  (e[Su.TextMode] = !t),
                   (e.ReminderSet = n),
                   (e.RemindMeWidget = !0),
                   e)
@@ -60814,30 +61384,30 @@
               n &&
                 o.createElement(
                   "div",
-                  { className: Eu.RemindCheck },
-                  o.createElement(au.JrY, null)
+                  { className: Su.RemindCheck },
+                  o.createElement(gu.JrY, null)
                 ),
               t &&
                 o.createElement(
                   "div",
-                  { className: Eu.RemindBell },
-                  o.createElement(au.Uos, null)
+                  { className: Su.RemindBell },
+                  o.createElement(gu.Uos, null)
                 ),
               o.createElement(
                 "div",
-                { className: Eu.ReminderDefault },
+                { className: Su.ReminderDefault },
                 (0, ta.Xx)("#EventDisplay_Reminder_SetReminder")
               ),
-              o.createElement("div", { className: Eu.ReminderOptions })
+              o.createElement("div", { className: Su.ReminderOptions })
             );
           }),
-          (0, r.gn)([ru.ak], t.prototype, "ToggleMenu", null),
-          (0, r.gn)([ru.ak], t.prototype, "ShowMenu", null),
-          (0, r.gn)([ru.ak], t.prototype, "HideMenu", null),
+          (0, r.gn)([hu.ak], t.prototype, "ToggleMenu", null),
+          (0, r.gn)([hu.ak], t.prototype, "ShowMenu", null),
+          (0, r.gn)([hu.ak], t.prototype, "HideMenu", null),
           (t = (0, r.gn)([d.Pi], t))
         );
       })(o.Component);
-      function np(e) {
+      function ip(e) {
         var t = e.eventGID,
           n = (0, r._T)(e, ["eventGID"]),
           a = (function (e) {
@@ -60869,14 +61439,14 @@
         if (!a) return null;
         var i = (0, ft.jM)(St.De.LANGUAGE);
         return o.createElement(
-          tp,
+          rp,
           (0, r.pi)({ lang: i }, n, { eventModel: a })
         );
       }
-      function ap(e) {
+      function op(e) {
         return Ht.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      var rp = (function (e) {
+      var sp = (function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bIsRequestInFlight: !1 }), t;
@@ -60900,27 +61470,31 @@
                       r.trys.push([1, 3, , 4]),
                       [
                         4,
-                        jc
-                          .Get()
-                          .SetFollowOrUnfollowEvent(!e, t, a.clanSteamID, i, n),
+                        Yc.Get().SetFollowOrUnfollowEvent(
+                          !e,
+                          t,
+                          a.clanSteamID,
+                          i,
+                          n
+                        ),
                       ]
                     );
                   case 2:
                     return (
                       r.sent(),
                       e &&
-                        (n === zc.k_ENotifyFlagByEmail
-                          ? this.TrackEventAction(rc.k_eReminder_Email)
-                          : n === zc.k_ENotifyFlagByPush &&
-                            this.TrackEventAction(rc.k_eReminder_MobilePush)),
+                        (n === jc.k_ENotifyFlagByEmail
+                          ? this.TrackEventAction(sc.k_eReminder_Email)
+                          : n === jc.k_ENotifyFlagByPush &&
+                            this.TrackEventAction(sc.k_eReminder_MobilePush)),
                       [3, 4]
                     );
                   case 3:
                     return (
                       (s = r.sent()),
-                      lu(
+                      cu(
                         o.createElement(
-                          eu.JX,
+                          au.JX,
                           {
                             strTitle: (0, ta.Xx)(
                               t
@@ -60948,18 +61522,18 @@
             });
           }),
           (t.prototype.OnChangeFollowByEmail = function (e) {
-            this.OnChangeFollowOrIgnore(e, !1, zc.k_ENotifyFlagByEmail);
+            this.OnChangeFollowOrIgnore(e, !1, jc.k_ENotifyFlagByEmail);
           }),
           (t.prototype.OnChangeFollowByPush = function (e) {
-            this.OnChangeFollowOrIgnore(e, !1, zc.k_ENotifyFlagByPush);
+            this.OnChangeFollowOrIgnore(e, !1, jc.k_ENotifyFlagByPush);
           }),
           (t.prototype.GetExternalCalendarEventTitle = function () {
             var e = this.props,
               t = e.eventModel,
               n = e.lang,
               a = t.GetNameWithFallback(n);
-            if (ql.BHasEntityNameForID(t.appid, t.clanSteamID.GetAccountID())) {
-              var r = ql.GetEntityNameForID(
+            if (Kl.BHasEntityNameForID(t.appid, t.clanSteamID.GetAccountID())) {
+              var r = Kl.GetEntityNameForID(
                 t.appid,
                 t.clanSteamID.GetAccountID()
               );
@@ -60969,7 +61543,7 @@
           }),
           (t.prototype.TrackEventAction = function (e) {
             var t = this.props.eventModel;
-            ic.RecordAppInteractionEvent(t.appid, e);
+            lc.RecordAppInteractionEvent(t.appid, e);
           }),
           (t.prototype.GetExternalCalendarEventBody = function () {
             var e = this.props,
@@ -60979,14 +61553,14 @@
             a = a ? "".concat(a, "\n\n\n") : "";
             var r = t.GetSummaryWithFallback(n),
               i = (function (e, t, n) {
-                return bu(
+                return Tu(
                   e,
                   t,
-                  "forceAbsolute" !== n && fu(t, e) ? "relative" : "absolute"
+                  "forceAbsolute" !== n && Eu(t, e) ? "relative" : "absolute"
                 );
               })(
                 t,
-                t.jsondata.bSaleEnabled ? du.k_eStoreSalePage : du.k_eStoreView,
+                t.jsondata.bSaleEnabled ? mu.k_eStoreSalePage : mu.k_eStoreView,
                 "forceAbsolute"
               );
             return "".concat(a).concat(r, "\n\n").concat(i);
@@ -60996,8 +61570,8 @@
               t = encodeURIComponent(this.GetExternalCalendarEventTitle()),
               n = encodeURIComponent(this.GetExternalCalendarEventBody()),
               a = e.GetStartTimeAndDateUnixSeconds(),
-              r = ap(a),
-              i = ap(e.GetEndTimeAndDateUnixSeconds() || a + ga._H.PerHour);
+              r = op(a),
+              i = op(e.GetEndTimeAndDateUnixSeconds() || a + ga._H.PerHour);
             return (function (e) {
               return St.De.SNR &&
                 St.De.SNR.length > 0 &&
@@ -61039,8 +61613,8 @@
               i = t.bOnlyShowIcon,
               s = t.fnHasReminderSet,
               l = t.fnHidePanel,
-              c = Vc.BHasValidatedEmail(),
-              u = Vc.BHasPushNotification(),
+              c = Zc.BHasValidatedEmail(),
+              u = Zc.BHasPushNotification(),
               d = a && n.GetStartTimeAndDateUnixSeconds();
             return o.createElement(
               "div",
@@ -61049,8 +61623,8 @@
                 "div",
                 {
                   className: (0, b.Z)(
-                    Eu.ReminderCheckBox,
-                    i ? Eu.IconMode : Eu.TextMode,
+                    Su.ReminderCheckBox,
+                    i ? Su.IconMode : Su.TextMode,
                     "RemindMeWidget"
                   ),
                   onClick: l,
@@ -61058,41 +61632,41 @@
                 s() &&
                   o.createElement(
                     "div",
-                    { className: Eu.RemindCheck },
-                    o.createElement(au.JrY, null)
+                    { className: Su.RemindCheck },
+                    o.createElement(gu.JrY, null)
                   ),
                 i &&
                   o.createElement(
                     "div",
-                    { className: Eu.RemindBell },
-                    o.createElement(au.Uos, null)
+                    { className: Su.RemindBell },
+                    o.createElement(gu.Uos, null)
                   ),
                 o.createElement(
                   "div",
-                  { className: Eu.ReminderDefault },
+                  { className: Su.ReminderDefault },
                   (0, ta.Xx)("#EventDisplay_Reminder_SetReminder")
                 ),
-                o.createElement("div", { className: Eu.ReminderOpennedOptions })
+                o.createElement("div", { className: Su.ReminderOpennedOptions })
               ),
               o.createElement(
                 "div",
                 {
                   className: (0, b.Z)(
-                    Eu.FlexColumnContainer,
-                    Eu.ReminderBackground,
-                    r && Eu.ReminderExpandsLeft
+                    Su.FlexColumnContainer,
+                    Su.ReminderBackground,
+                    r && Su.ReminderExpandsLeft
                   ),
                 },
                 this.state.bIsRequestInFlight &&
-                  o.createElement(Wl.V, {
-                    className: Eu.RpcThrobber,
+                  o.createElement(Vl.V, {
+                    className: Su.RpcThrobber,
                     size: "xlarge",
                     position: "center",
                   }),
                 d &&
                   o.createElement(
                     "div",
-                    { className: Eu.FullStartTime },
+                    { className: Su.FullStartTime },
                     (0, ta.kQ)(
                       "#EventDisplay_EventUpcoming_WithDateAndTime",
                       (0, ta.$1)(
@@ -61102,47 +61676,45 @@
                           jt.GetTimeNowWithOverrideAsDate()
                         )
                       ),
-                      Kc(d, !0)
+                      eu(d, !0)
                     )
                   ),
                 o.createElement(
                   "div",
-                  { className: Eu.ReminderOptionsHeader },
+                  { className: Su.ReminderOptionsHeader },
                   (0, ta.Xx)("#EventDisplay_Reminder_GetNotification_Via")
                 ),
                 o.createElement(
                   "div",
                   {
-                    className: (0, b.Z)(Eu.ReminderOption, !c && Eu.Unverified),
+                    className: (0, b.Z)(Su.ReminderOption, !c && Su.Unverified),
                   },
                   o.createElement(
                     nr.HP,
                     {
-                      className: Eu.CheckboxWrapper,
-                      strTooltipClassname: Eu.ReminderOptionTooltip,
+                      className: Su.CheckboxWrapper,
+                      strTooltipClassname: Su.ReminderOptionTooltip,
                       toolTipContent: (0, ta.Xx)(
                         c
                           ? "#EventReminder_NotifyByEmail_ttip"
                           : "#EventReminder_NotifyByEmail_Missing"
                       ),
                     },
-                    o.createElement(Yc.ji, {
+                    o.createElement(qc.ji, {
                       label: (0, ta.Xx)("#EventDisplay_Reminder_ViaEmail"),
                       disabled: !c,
-                      checked: jc
-                        .Get()
-                        .BFollowsEventAndNotifiedBy(
-                          n.clanSteamID,
-                          n.GID,
-                          zc.k_ENotifyFlagByEmail
-                        ),
+                      checked: Yc.Get().BFollowsEventAndNotifiedBy(
+                        n.clanSteamID,
+                        n.GID,
+                        jc.k_ENotifyFlagByEmail
+                      ),
                       onChange: this.OnChangeFollowByEmail,
                     })
                   ),
                   !c &&
                     o.createElement(
                       "div",
-                      { className: yu.FlexColumnContainer },
+                      { className: Cu.FlexColumnContainer },
                       o.createElement(
                         "a",
                         {
@@ -61150,7 +61722,7 @@
                           target: St.De.IN_CLIENT ? void 0 : "_blank",
                           onClick: function () {
                             return e.TrackEventAction(
-                              rc.k_eReminder_EmailUnverified
+                              sc.k_eReminder_EmailUnverified
                             );
                           },
                         },
@@ -61161,36 +61733,34 @@
                 o.createElement(
                   "div",
                   {
-                    className: (0, b.Z)(Eu.ReminderOption, !u && Eu.Unverified),
+                    className: (0, b.Z)(Su.ReminderOption, !u && Su.Unverified),
                   },
                   o.createElement(
                     nr.HP,
                     {
-                      className: Eu.CheckboxWrapper,
-                      strTooltipClassname: Eu.ReminderOptionTooltip,
+                      className: Su.CheckboxWrapper,
+                      strTooltipClassname: Su.ReminderOptionTooltip,
                       toolTipContent: (0, ta.Xx)(
                         u
                           ? "#EventReminder_NotifyByMobile_ttip"
                           : "#EventReminder_NotifyByMobile_Missing"
                       ),
                     },
-                    o.createElement(Yc.ji, {
+                    o.createElement(qc.ji, {
                       label: (0, ta.Xx)("#EventDisplay_Reminder_ViaMobileApp"),
                       disabled: !u,
-                      checked: jc
-                        .Get()
-                        .BFollowsEventAndNotifiedBy(
-                          n.clanSteamID,
-                          n.GID,
-                          zc.k_ENotifyFlagByPush
-                        ),
+                      checked: Yc.Get().BFollowsEventAndNotifiedBy(
+                        n.clanSteamID,
+                        n.GID,
+                        jc.k_ENotifyFlagByPush
+                      ),
                       onChange: this.OnChangeFollowByPush,
                     })
                   ),
                   !u &&
                     o.createElement(
                       "div",
-                      { className: yu.FlexColumnContainer },
+                      { className: Cu.FlexColumnContainer },
                       o.createElement(
                         "a",
                         {
@@ -61198,7 +61768,7 @@
                           target: St.De.IN_CLIENT ? void 0 : "_blank",
                           onClick: function () {
                             return e.TrackEventAction(
-                              rc.k_eReminder_MobilePushMissing
+                              sc.k_eReminder_MobilePushMissing
                             );
                           },
                         },
@@ -61211,20 +61781,20 @@
                   null,
                   o.createElement(
                     "div",
-                    { className: Eu.ReminderOptionsHeader },
+                    { className: Su.ReminderOptionsHeader },
                     (0, ta.Xx)("#EventDisplay_Reminder_AddToCalendar")
                   ),
                   o.createElement(
                     "div",
-                    { className: Eu.ReminderCalendarOptions },
+                    { className: Su.ReminderCalendarOptions },
                     o.createElement(
                       "a",
                       {
-                        className: Eu.ReminderOption,
+                        className: Su.ReminderOption,
                         href: this.GetICSDownloadLink("ics"),
                         onClick: function () {
                           return e.TrackEventAction(
-                            rc.k_eReminder_CalendarApple
+                            sc.k_eReminder_CalendarApple
                           );
                         },
                       },
@@ -61233,12 +61803,12 @@
                     o.createElement(
                       "a",
                       {
-                        className: Eu.ReminderOption,
+                        className: Su.ReminderOption,
                         target: St.De.IN_CLIENT ? void 0 : "_blank",
                         href: this.GetGoogleCalendarLink(),
                         onClick: function () {
                           return e.TrackEventAction(
-                            rc.k_eReminder_CalendarGoogle
+                            sc.k_eReminder_CalendarGoogle
                           );
                         },
                       },
@@ -61247,11 +61817,11 @@
                     o.createElement(
                       "a",
                       {
-                        className: Eu.ReminderOption,
+                        className: Su.ReminderOption,
                         href: this.GetICSDownloadLink("outlook"),
                         onClick: function () {
                           return e.TrackEventAction(
-                            rc.k_eReminder_CalendarOutlook
+                            sc.k_eReminder_CalendarOutlook
                           );
                         },
                       },
@@ -61263,13 +61833,13 @@
               )
             );
           }),
-          (0, r.gn)([ru.ak], t.prototype, "OnChangeFollowByEmail", null),
-          (0, r.gn)([ru.ak], t.prototype, "OnChangeFollowByPush", null),
-          (0, r.gn)([ru.ak], t.prototype, "TrackEventAction", null),
+          (0, r.gn)([hu.ak], t.prototype, "OnChangeFollowByEmail", null),
+          (0, r.gn)([hu.ak], t.prototype, "OnChangeFollowByPush", null),
+          (0, r.gn)([hu.ak], t.prototype, "TrackEventAction", null),
           (t = (0, r.gn)([d.Pi], t))
         );
       })(o.Component);
-      var ip = (function () {
+      var lp = (function () {
           function e() {
             (this.m_bUserHasVolumePreference = !1),
               (this.m_flVolumePreference = 0);
@@ -61291,12 +61861,12 @@
             (e.Get = function () {
               return e.s_Singleton || (e.s_Singleton = new e()), e.s_Singleton;
             }),
-            (0, r.gn)([ru.ak], e.prototype, "BUserHasVolumePreference", null),
-            (0, r.gn)([ru.ak], e.prototype, "SetVolumePreference", null),
+            (0, r.gn)([hu.ak], e.prototype, "BUserHasVolumePreference", null),
+            (0, r.gn)([hu.ak], e.prototype, "SetVolumePreference", null),
             e
           );
         })(),
-        op = function (e) {
+        cp = function (e) {
           var t = e.video,
             n = e.bAutoPlay,
             a = e.bControls,
@@ -61371,20 +61941,20 @@
               : null,
             _ = (function (e) {
               return !(
-                !Ol(e.sPoster) ||
+                !Ul(e.sPoster) ||
                 (e.rgVideoSources &&
                   e.rgVideoSources.some(function (e) {
-                    return !Ol(e.sURL);
+                    return !Ul(e.sURL);
                   })) ||
                 (e.rgVideoTracks &&
                   e.rgVideoTracks.some(function (e) {
-                    return !Ol(e.sURL);
+                    return !Ul(e.sURL);
                   }))
               );
             })(t),
             g = void 0;
           (!_ || (s && "public" == St.De.WEB_UNIVERSE)) && (g = "anonymous");
-          var h = i || (n && ip.Get().BVolumePreferenceMuted()),
+          var h = i || (n && lp.Get().BVolumePreferenceMuted()),
             f = t.sPoster ? d(t.sPoster) : "";
           return o.createElement(
             "video",
@@ -61401,20 +61971,20 @@
               onVolumeChange: function (e) {
                 var t = e.target,
                   n = t.muted ? 0 : t.volume;
-                c && ip.Get().SetVolumePreference(n);
+                c && lp.Get().SetVolumePreference(n);
               },
               onPlay: function (e) {
                 var t = e.target,
                   a = 0 == t.currentTime,
-                  r = ip.Get().BUserHasVolumePreference();
+                  r = lp.Get().BUserHasVolumePreference();
                 if ((u(!0), a))
                   if (r || n)
                     r &&
-                      ((t.volume = ip.Get().GetVolumePreference()),
-                      (t.muted = ip.Get().BVolumePreferenceMuted()));
+                      ((t.volume = lp.Get().GetVolumePreference()),
+                      (t.muted = lp.Get().BVolumePreferenceMuted()));
                   else {
                     var i = t.muted ? 0 : t.volume;
-                    ip.Get().SetVolumePreference(i);
+                    lp.Get().SetVolumePreference(i);
                   }
               },
             },
@@ -61422,20 +61992,20 @@
             p
           );
         },
-        sp = o.createContext({});
-      function lp() {
-        return o.useContext(sp);
+        up = o.createContext({});
+      function dp() {
+        return o.useContext(up);
       }
-      var cp = n(56524),
-        up = n.n(cp),
-        dp = new Map([
+      var mp = n(56524),
+        pp = n.n(mp),
+        _p = new Map([
           [
             "b",
             {
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().Bold },
+                  { className: pp().Bold },
                   e.children
                 );
               },
@@ -61448,7 +62018,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: (0, b.Z)(up().Italic, "BB_Italic") },
+                  { className: (0, b.Z)(pp().Italic, "BB_Italic") },
                   e.children
                 );
               },
@@ -61459,7 +62029,7 @@
             "h1",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().Header1, "BB_Header1"));
+                return hp(e, (0, b.Z)(pp().Header1, "BB_Header1"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -61469,7 +62039,7 @@
             "h2",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().Header2, "BB_Header2"));
+                return hp(e, (0, b.Z)(pp().Header2, "BB_Header2"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -61479,7 +62049,7 @@
             "h3",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().Header3, "BB_Header3"));
+                return hp(e, (0, b.Z)(pp().Header3, "BB_Header3"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -61489,7 +62059,7 @@
             "h4",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().Header4, "BB_Header4"));
+                return hp(e, (0, b.Z)(pp().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -61499,17 +62069,39 @@
             "h5",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().Header5, "BB_Header5"));
+                return hp(e, (0, b.Z)(pp().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
             },
           ],
           [
+            "center",
+            {
+              Constructor: function (e) {
+                var t = gp(e.args, "id");
+                t &&
+                  "string" == typeof t &&
+                  t.length > 0 &&
+                  "#" === t[0] &&
+                  (t = t.substring(1));
+                return o.createElement(
+                  "span",
+                  {
+                    id: t || void 0,
+                    className: (0, b.Z)(pp().CenterSpan, "BB_Center"),
+                  },
+                  e.children
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
             "smalltext",
             {
               Constructor: function (e) {
-                return pp(e, (0, b.Z)(up().SmallText, "BB_SmallText"));
+                return hp(e, (0, b.Z)(pp().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -61521,7 +62113,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().Underline },
+                  { className: pp().Underline },
                   e.children
                 );
               },
@@ -61534,7 +62126,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().Strike },
+                  { className: pp().Strike },
                   e.children
                 );
               },
@@ -61555,9 +62147,9 @@
                     [n]
                   );
                 return o.createElement(
-                  Gl.s,
+                  Pl.s,
                   {
-                    className: (0, b.Z)(up().Spoiler, n && up().Revealed),
+                    className: (0, b.Z)(pp().Spoiler, n && pp().Revealed),
                     focusable: !0,
                     onActivate: r,
                     onOKActionDescription: (0, ta.Xx)(
@@ -61566,7 +62158,7 @@
                   },
                   o.createElement(
                     "span",
-                    { className: up().SpoilerText },
+                    { className: pp().SpoilerText },
                     e.children
                   )
                 );
@@ -61578,7 +62170,7 @@
             "hr",
             {
               Constructor: function (e) {
-                return o.createElement("div", { className: up().HR });
+                return o.createElement("div", { className: pp().HR });
               },
               autocloses: !1,
             },
@@ -61596,9 +62188,9 @@
             "url",
             {
               Constructor: function (e) {
-                var t = mp(e.args),
-                  n = "button" == mp(e.args, "style") ? up().LinkButton : null,
-                  a = mp(e.args, "id");
+                var t = gp(e.args),
+                  n = "button" == gp(e.args, "style") ? pp().LinkButton : null,
+                  a = gp(e.args, "id");
                 a &&
                   "string" == typeof a &&
                   a.length > 0 &&
@@ -61615,7 +62207,7 @@
                     e.children
                   );
                 return o.createElement(
-                  _p,
+                  fp,
                   { className: n, href: t, id: a },
                   e.children
                 );
@@ -61627,14 +62219,14 @@
             "quote",
             {
               Constructor: function (e) {
-                var t = mp(e.args, "author");
+                var t = gp(e.args, "author");
                 return o.createElement(
                   "blockquote",
-                  { className: (0, b.Z)(up().BlockQuote, e.className) },
+                  { className: (0, b.Z)(pp().BlockQuote, e.className) },
                   !!t &&
                     o.createElement(
                       "div",
-                      { className: up().QuoteAuthor },
+                      { className: pp().QuoteAuthor },
                       (0, ta.Xx)("#Bbcode_Originally_Posted_By") + " ",
                       " ",
                       o.createElement("b", null, t + ":")
@@ -61651,7 +62243,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().PullQuote },
+                  { className: pp().PullQuote },
                   e.children
                 );
               },
@@ -61664,7 +62256,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().Code },
+                  { className: pp().Code },
                   e.children
                 );
               },
@@ -61677,7 +62269,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "ul",
-                  { className: up().List },
+                  { className: pp().List },
                   e.children
                 );
               },
@@ -61691,7 +62283,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "ol",
-                  { className: up().OrderedList },
+                  { className: pp().OrderedList },
                   e.children
                 );
               },
@@ -61703,7 +62295,7 @@
             "*",
             {
               Constructor: function (e) {
-                var t = mp(e.args, "id");
+                var t = gp(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -61711,7 +62303,7 @@
                   (t = t.substring(1));
                 return o.createElement(
                   "li",
-                  { className: up().ListItem, id: t || void 0 },
+                  { className: pp().ListItem, id: t || void 0 },
                   e.children
                 );
               },
@@ -61723,16 +62315,16 @@
             "table",
             {
               Constructor: function (e) {
-                var t = mp(e.args, "noborder"),
-                  n = mp(e.args, "equalcells");
+                var t = gp(e.args, "noborder"),
+                  n = gp(e.args, "equalcells");
                 return o.createElement(
                   "div",
                   {
                     className: (0, b.Z)(
-                      up().Table,
+                      pp().Table,
                       "BB_Table",
-                      t && up().NoBorder,
-                      n && up().EqualCells
+                      t && pp().NoBorder,
+                      n && pp().EqualCells
                     ),
                   },
                   e.children
@@ -61748,7 +62340,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: (0, b.Z)(up().TableRow, "BB_TableRow") },
+                  { className: (0, b.Z)(pp().TableRow, "BB_TableRow") },
                   e.children
                 );
               },
@@ -61763,7 +62355,7 @@
               Constructor: function (e) {
                 return o.createElement(
                   "div",
-                  { className: up().TableHeader },
+                  { className: pp().TableHeader },
                   e.children
                 );
               },
@@ -61776,11 +62368,11 @@
             "td",
             {
               Constructor: function (e) {
-                var t = mp(e.args, "width");
+                var t = gp(e.args, "width");
                 return o.createElement(
                   "div",
                   {
-                    className: (0, b.Z)(up().TableData, "BB_TableData"),
+                    className: (0, b.Z)(pp().TableData, "BB_TableData"),
                     style: t && { width: t },
                   },
                   e.children
@@ -61795,7 +62387,7 @@
             "expand",
             {
               Constructor: function (e) {
-                var t = Boolean(mp(e.args, "expanded")),
+                var t = Boolean(gp(e.args, "expanded")),
                   n = o.useState(t),
                   a = n[0],
                   r = n[1],
@@ -61805,43 +62397,43 @@
                         return {
                           collapsed: "#Bbcode_Expand_Details_Collapsed",
                           expanded: "#Bbcode_Expand_Details_Expanded",
-                          style: up().ExpandSection_Details,
+                          style: pp().ExpandSection_Details,
                         };
                       case "spoiler":
                         return {
                           collapsed: "#Bbcode_Expand_Spoiler_Collapsed",
                           expanded: "#Bbcode_Expand_Spoiler_Expanded",
-                          style: up().ExpandSection_Spoiler,
+                          style: pp().ExpandSection_Spoiler,
                         };
                       case "title":
                         return {
                           collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
-                          style: up().ExpandSection_WithTitle,
+                          style: pp().ExpandSection_WithTitle,
                         };
                       default:
                         return {
                           collapsed: "#Bbcode_Expand_ShowMore_Collapsed",
                           expanded: "#Bbcode_Expand_ShowMore_Expanded",
-                          style: up().ExpandSection_ShowMore,
+                          style: pp().ExpandSection_ShowMore,
                         };
                     }
-                  })(mp(e.args, "type"), mp(e.args, "title"));
+                  })(gp(e.args, "type"), gp(e.args, "title"));
                 return o.createElement(
                   "div",
                   {
                     className: (0, b.Z)(
-                      up().ExpandSectionBlock,
+                      pp().ExpandSectionBlock,
                       i.style,
                       a
-                        ? up().ExpandSectionExpanded
-                        : up().ExpandSectionCollapsed
+                        ? pp().ExpandSectionExpanded
+                        : pp().ExpandSectionCollapsed
                     ),
                   },
                   o.createElement(
                     "div",
                     {
-                      className: up().ExpandSectionHeader,
+                      className: pp().ExpandSectionHeader,
                       onClick: function () {
                         return r(!a);
                       },
@@ -61849,14 +62441,14 @@
                     (0, ta.Xx)(a ? i.expanded : i.collapsed),
                     o.createElement(
                       "div",
-                      { className: up().EmbedArrow },
-                      o.createElement(au.ret, { angle: a ? 180 : 0 })
+                      { className: pp().EmbedArrow },
+                      o.createElement(gu.ret, { angle: a ? 180 : 0 })
                     )
                   ),
                   a &&
                     o.createElement(
                       "div",
-                      { className: up().ExpandSectionBody },
+                      { className: pp().ExpandSectionBody },
                       e.children
                     )
                 );
@@ -61871,11 +62463,11 @@
             {
               Constructor: function (e) {
                 var t = e.context.event,
-                  n = mp(e.args);
-                if (n) return o.createElement(np, { eventGID: n });
+                  n = gp(e.args);
+                if (n) return o.createElement(ip, { eventGID: n });
                 if (t) {
                   var a = (0, ft.jM)(St.De.LANGUAGE);
-                  return o.createElement(tp, { eventModel: t, lang: a });
+                  return o.createElement(rp, { eventModel: t, lang: a });
                 }
                 return null;
               },
@@ -61886,10 +62478,10 @@
             "doclink",
             {
               Constructor: function (e) {
-                var t = mp(e.args),
-                  n = "button" == mp(e.args, "style") ? up().LinkButton : null;
+                var t = gp(e.args),
+                  n = "button" == gp(e.args, "style") ? pp().LinkButton : null;
                 return o.createElement(
-                  _p,
+                  fp,
                   {
                     className: n,
                     href: "".concat(St.De.PARTNER_BASE_URL, "doc/").concat(t),
@@ -61906,8 +62498,8 @@
           "looping_media",
           {
             Constructor: function (e) {
-              var t = gp(e);
-              return o.createElement(op, {
+              var t = vp(e);
+              return o.createElement(cp, {
                 video: t,
                 bAutoPlay: !0,
                 bControls: !1,
@@ -61917,7 +62509,7 @@
             autocloses: !1,
           },
         ],
-        ["video", { Constructor: hp, autocloses: !1 }],
+        ["video", { Constructor: bp, autocloses: !1 }],
         [
           "youtubeorvideo",
           {
@@ -61926,18 +62518,18 @@
                 St.De.EREALM === Mt.IN.k_ESteamRealmChina ||
                 "CN" == St.De.COUNTRY.toLocaleUpperCase()
               )
-                return hp(e);
-              var t = mp(e.args, "youtubeid"),
-                n = mp(e.args, "size"),
-                a = mp(e.args, "seconds"),
-                r = "full" == n ? jl.sizeFull : jl.sizeThumb,
+                return bp(e);
+              var t = gp(e.args, "youtubeid"),
+                n = gp(e.args, "size"),
+                a = gp(e.args, "seconds"),
+                r = "full" == n ? Jl.sizeFull : Jl.sizeThumb,
                 i =
                   "full" == n
                     ? ""
                     : "leftthumb" == n
-                    ? jl.floatLeft
-                    : jl.floatRight;
-              return o.createElement(Jl, {
+                    ? Jl.floatLeft
+                    : Jl.floatRight;
+              return o.createElement(Zl, {
                 videoID: t,
                 nStartSeconds: a ? Number.parseInt(a) : void 0,
                 classNameAlign: i,
@@ -61953,20 +62545,20 @@
           {
             Constructor: function (e) {
               if (St.De.EREALM === Mt.IN.k_ESteamRealmChina) return null;
-              var t = mp(e.args);
+              var t = gp(e.args);
               if (t) {
                 var n = t.split(";");
                 if (2 == n.length) {
                   var a = n[0],
                     r = n[1].toLocaleLowerCase(),
-                    i = "full" == r ? jl.sizeFull : jl.sizeThumb,
+                    i = "full" == r ? Jl.sizeFull : Jl.sizeThumb,
                     s =
                       "full" == r
                         ? ""
                         : "leftthumb" == r
-                        ? jl.floatLeft
-                        : jl.floatRight;
-                  return o.createElement(Jl, {
+                        ? Jl.floatLeft
+                        : Jl.floatRight;
+                  return o.createElement(Zl, {
                     videoID: a,
                     classNameAlign: s,
                     classNameSize: i,
@@ -61980,11 +62572,11 @@
           },
         ],
       ]);
-      function mp(e, t) {
+      function gp(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function pp(e, t) {
-        var n = mp(e.args, "id");
+      function hp(e, t) {
+        var n = gp(e.args, "id");
         return (
           n &&
             "string" == typeof n &&
@@ -61998,19 +62590,19 @@
           )
         );
       }
-      var _p = function (e) {
+      var fp = function (e) {
         var t,
           n = e.href,
           a = (0, r._T)(e, ["href"]),
-          i = Ul(n, lp());
+          i = Hl(n, dp());
         (function (e, t) {
           if (e.startsWith("steam://")) return !1;
           if (e.startsWith("/")) return !1;
-          var n = kl(e).toLowerCase(),
-            a = kl(St.De.COMMUNITY_BASE_URL).toLowerCase(),
-            r = kl(St.De.STORE_BASE_URL).toLowerCase(),
-            i = kl(St.De.HELP_BASE_URL).toLowerCase(),
-            o = kl(St.De.PARTNER_BASE_URL || "").toLowerCase();
+          var n = Fl(e).toLowerCase(),
+            a = Fl(St.De.COMMUNITY_BASE_URL).toLowerCase(),
+            r = Fl(St.De.STORE_BASE_URL).toLowerCase(),
+            i = Fl(St.De.HELP_BASE_URL).toLowerCase(),
+            o = Fl(St.De.PARTNER_BASE_URL || "").toLowerCase();
           return (
             n !== a &&
             n !== r &&
@@ -62036,24 +62628,24 @@
           n &&
           !n.startsWith("steam://")
             ? (function (e) {
-                var t = kl(e);
+                var t = Fl(e);
                 return t.startsWith("www.") && (t = t.slice(4)), t;
               })(n)
             : void 0;
         return o.createElement(
-          Ml.IS,
+          kl.IS,
           (0, r.pi)({}, a, { href: i, rel: t }),
           o.createElement("span", { "data-tooltip-text": s }, e.children)
         );
       };
-      function gp(e) {
-        var t = mp(e.args, "poster");
-        t && (t = Fl(t));
+      function vp(e) {
+        var t = gp(e.args, "poster");
+        t && (t = xl(t));
         var n = new Array(),
-          a = mp(e.args, "mp4");
-        a && n.push({ sURL: Fl(a), sFormat: "video/mp4" });
-        var r = mp(e.args, "webm");
-        r && n.push({ sURL: Fl(r), sFormat: "video/webm" });
+          a = gp(e.args, "mp4");
+        a && n.push({ sURL: xl(a), sFormat: "video/mp4" });
+        var r = gp(e.args, "webm");
+        r && n.push({ sURL: xl(r), sFormat: "video/webm" });
         for (
           var i = (0, ft.jM)(St.De.LANGUAGE),
             o = 0 != i,
@@ -62062,18 +62654,18 @@
           l < 30;
           l++
         ) {
-          var c = mp(e.args, "sub_" + (0, Mt.dt)(l));
+          var c = gp(e.args, "sub_" + (0, Mt.dt)(l));
           c &&
             s.push({
-              sURL: Fl(c),
+              sURL: xl(c),
               eLanguage: l,
               sKind: "subtitles",
               bDefault: o && l == i,
             });
-          var u = mp(e.args, "cap_" + (0, Mt.dt)(l));
+          var u = gp(e.args, "cap_" + (0, Mt.dt)(l));
           u &&
             s.push({
-              sURL: Fl(u),
+              sURL: xl(u),
               eLanguage: l,
               sKind: "captions",
               bDefault: o && l == i,
@@ -62081,35 +62673,35 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function hp(e) {
-        var t = gp(e),
+      function bp(e) {
+        var t = vp(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: Fl(n), sFormat: "video/webm" });
-        var a = mp(e.args, "autoplay"),
+          t.rgVideoSources.push({ sURL: xl(n), sFormat: "video/webm" });
+        var a = gp(e.args, "autoplay"),
           r = "0" !== a && "off" !== a && "false" !== a,
-          i = mp(e.args, "controls"),
+          i = gp(e.args, "controls"),
           s = "0" !== i && "off" !== i && "false" !== i;
-        return o.createElement(op, {
+        return o.createElement(cp, {
           video: t,
           bAutoPlay: r,
           bControls: s,
           bLoop: r,
         });
       }
-      var fp = new ((function () {
+      var Ep = new ((function () {
           function e() {
-            (this.m_asyncPrizePool = new Al.L()),
-              (this.m_asyncPatchNotesListData = new Al.L()),
-              (this.m_asyncPatchNotesData = new Al.r()),
-              (this.m_asyncBPPrice = new Al.r()),
-              (this.m_asyncBPDiscount = new Al.r()),
+            (this.m_asyncPrizePool = new Gl.L()),
+              (this.m_asyncPatchNotesListData = new Gl.L()),
+              (this.m_asyncPatchNotesData = new Gl.r()),
+              (this.m_asyncBPPrice = new Gl.r()),
+              (this.m_asyncBPDiscount = new Gl.r()),
               (this.m_nSelectedAbilityIndex = 0),
-              (this.m_asyncShortFilmOwnership = new Al.L()),
+              (this.m_asyncShortFilmOwnership = new Gl.L()),
               (this.m_BBCodeDictionary = new Map(
                 (0, r.ev)(
-                  (0, r.ev)([], Array.from(dp.entries()), !0),
+                  (0, r.ev)([], Array.from(_p.entries()), !0),
                   [
                     ["color", { Constructor: E.H, autocloses: !1 }],
                     ["block", { Constructor: E.qH, autocloses: !1 }],
@@ -62137,7 +62729,7 @@
           return (
             (e.prototype.Init = function () {
               i.render(
-                o.createElement(Ll, { app: this }),
+                o.createElement(Ml, { app: this }),
                 document.getElementById("dota_react_root")
               );
             }),
@@ -62437,8 +63029,8 @@
             e
           );
         })())(),
-        vp = ["main", "springcleaning22", "juneupdate22"];
-      function bp(e) {
+        yp = ["main", "springcleaning22", "juneupdate22"];
+      function Tp(e) {
         return (0, r.mG)(this, void 0, void 0, function () {
           var t, a, i, o, s, l, c, u, d, m, p;
           return (0, r.Jh)(this, function (_) {
@@ -62449,7 +63041,7 @@
                   Promise.all(
                     (0, r.ev)(
                       [n(56576)("./shared_".concat(e, ".json"))],
-                      vp.map(function (t) {
+                      yp.map(function (t) {
                         return n(91946)("./".concat(t, "_").concat(e, ".json"));
                       }),
                       !0
@@ -62468,7 +63060,7 @@
                         Promise.all(
                           (0, r.ev)(
                             [n(56576)("./shared_".concat(l, ".json"))],
-                            vp.map(function (e) {
+                            yp.map(function (e) {
                               return n(91946)(
                                 "./".concat(e, "_").concat(l, ".json")
                               );
@@ -62502,10 +63094,10 @@
                 return (
                   (0, St.Ek)("application_config"),
                   (0, h.R)(),
-                  [4, bp(h.Y.LANGUAGE)]
+                  [4, Tp(h.Y.LANGUAGE)]
                 );
               case 1:
-                return e.sent(), fp.Init(), [2];
+                return e.sent(), Ep.Init(), [2];
             }
           });
         });
@@ -65025,7 +65617,7 @@
             t
           );
         })(r.Component),
-        m = n(86576),
+        m = n(89683),
         p = "{STEAM_CLAN_LOC_IMAGE}",
         _ = "{STEAM_CLAN_IMAGE}";
       function g(e) {
@@ -66282,7 +66874,7 @@
         s = n(40635),
         l = n.n(s),
         c = n(67506),
-        u = n(86576),
+        u = n(89683),
         d = n(29323),
         m = n(5550),
         p = n(66564),
@@ -66912,6 +67504,7 @@
     12471: (e, t, n) => {
       "use strict";
       n.d(t, {
+        MR: () => y,
         QS: () => a,
         YO: () => r,
         Z3: () => i,
@@ -67127,6 +67720,31 @@
         }
       }
       var u, d, m, p, _, g, h, f, v, b, E;
+      function y(e) {
+        switch (e) {
+          case 0:
+          default:
+            return "default";
+          case 1:
+            return "pw_dota2";
+          case 2:
+            return "nexon_dota2";
+          case 3:
+            return "steamcmd";
+          case 4:
+            return "pw_csgo";
+          case 5:
+            return "clientui";
+          case 6:
+            return "steamhdl";
+          case 7:
+            return "steamchina";
+          case 8:
+            return "singleapp";
+          case 9:
+            return "gameserver";
+        }
+      }
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -67265,7 +67883,13 @@
     },
     956: (e, t, n) => {
       "use strict";
-      n.d(t, { i_: () => l, dt: () => i.dt, IN: () => o, Xg: () => c });
+      n.d(t, {
+        i_: () => l,
+        dt: () => i.dt,
+        IN: () => o,
+        Xg: () => c,
+        MR: () => i.MR,
+      });
       var a,
         r,
         i = n(12471);
@@ -69161,7 +69785,7 @@
         r = n(22188),
         i = n(67294),
         o = n(19386),
-        s = n(80369),
+        s = n(53932),
         l = n(61825),
         c = n.n(l),
         u = n(41256),
@@ -69458,8 +70082,13 @@
           }
           return (
             (e.prototype.CreateContextMenuInstance = function (e, t, n, a, r) {
-              var i = t.ownerDocument.defaultView;
-              return new (this.GetContextMenuConstructorWithDefault(i))(
+              var i,
+                o =
+                  (null === (i = null == t ? void 0 : t.ownerDocument) ||
+                  void 0 === i
+                    ? void 0
+                    : i.defaultView) || window;
+              return new (this.GetContextMenuConstructorWithDefault(o))(
                 e,
                 t,
                 n,
@@ -70142,48 +70771,59 @@
                 c.push("createflags=" + t.eCreationFlags),
                   t.minWidth && c.push("minwidth=" + t.minWidth),
                   t.minHeight && c.push("minheight=" + t.minHeight),
-                  t.target_browser &&
-                    (c.push("pid=" + t.target_browser.m_unPID),
-                    c.push("browser=" + t.target_browser.m_nBrowserID),
-                    t.target_browser.m_eBrowserType
-                      ? c.push("browserType=" + t.target_browser.m_eBrowserType)
-                      : t.browserType && c.push("browserType=" + t.browserType),
-                    t.availscreenwidth &&
-                      t.availscreenheight &&
-                      (c.push("screenavailwidth=" + t.availscreenwidth),
-                      c.push("screenavailheight=" + t.availscreenheight))),
+                  t.target_browser
+                    ? (c.push("pid=" + t.target_browser.m_unPID),
+                      c.push("browser=" + t.target_browser.m_nBrowserID),
+                      t.target_browser.m_eBrowserType
+                        ? c.push(
+                            "browserType=" + t.target_browser.m_eBrowserType
+                          )
+                        : t.browserType &&
+                          c.push("browserType=" + t.browserType),
+                      t.availscreenwidth &&
+                        t.availscreenheight &&
+                        (c.push("screenavailwidth=" + t.availscreenwidth),
+                        c.push("screenavailheight=" + t.availscreenheight)))
+                    : t.browserType && c.push("browserType=" + t.browserType),
                   t.strVROverlayKey &&
                     c.push("vrOverlayKey=" + t.strVROverlayKey),
                   t.strRestoreDetails &&
                     c.push("restoredetails=" + t.strRestoreDetails),
                   t.window_opener_id &&
                     c.push("openerid=" + t.window_opener_id),
+                  t.strUserAgent &&
+                    c.push(
+                      "useragent=" +
+                        t.strUserAgent +
+                        "/" +
+                        (0, u.MR)(m.De.LAUNCHER_TYPE)
+                    ),
                   c && (l += "?" + c.join("&"));
-                var u = (t.owner_window || window).open(l, e, o);
-                if (!u)
+                var d = (t.owner_window || window).open(l, e, o);
+                if (!d)
                   return (
                     console.log(
                       "Failed to create popup.. browser popup blocker enabled?"
                     ),
                     {}
                   );
-                var d = "";
-                t.html_class && (d = 'class="'.concat(t.html_class, '"'));
-                var m = "";
-                t.body_class && (m = 'class="'.concat(t.body_class, '"'));
                 var p = "";
-                t.popup_class && (p = 'class="'.concat(t.popup_class, '"'));
-                var _ = "<!DOCTYPE html><html "
-                  .concat(d, "><head><title></title></head><body ")
-                  .concat(m, '><div id="popup_target" ')
-                  .concat(p, "></div></body></html>");
+                t.html_class && (p = 'class="'.concat(t.html_class, '"'));
+                var _ = "";
+                t.body_class && (_ = 'class="'.concat(t.body_class, '"'));
+                var g = "";
+                t.popup_class && (g = 'class="'.concat(t.popup_class, '"'));
+                var h = "<!DOCTYPE html><html "
+                  .concat(p, "><head><title></title></head><body ")
+                  .concat(_, '><div id="popup_target" ')
+                  .concat(g, "></div></body></html>");
                 return (
-                  u.document.write(_),
-                  (u.document.title = i),
-                  s.V2(u, s.Mv()),
+                  d.document.write(h),
+                  (d.document.title = i),
+                  s.V2(d, s.Mv()),
                   {
-                    popup: u,
-                    element: u.document.getElementById("popup_target"),
+                    popup: d,
+                    element: d.document.getElementById("popup_target"),
                   }
                 );
               }),
@@ -70379,19 +71019,19 @@
     96245: (e, t, n) => {
       "use strict";
       n.d(t, {
-        CO: () => T,
-        QH: () => S,
-        zQ: () => w,
-        Iy: () => E,
-        lP: () => N,
-        hi: () => I,
-        ET: () => b,
-        Pd: () => y,
+        CO: () => S,
+        QH: () => C,
+        zQ: () => B,
+        Iy: () => y,
+        lP: () => I,
+        hi: () => D,
+        ET: () => E,
+        Pd: () => T,
       });
       var a = n(70655),
         r = n(67294),
         i = (n(44294), n(71226)),
-        o = (n(40993), n(67506)),
+        o = (n(22382), n(67506)),
         s = n(48171),
         l = n(32211),
         c = n(41567),
@@ -70404,29 +71044,38 @@
             (e.prototype.SetFactory = function (e) {
               this.m_factory = e;
             }),
+            (e.prototype.SetHookFactory = function (e) {
+              this.m_hookFactory = e;
+            }),
+            (e.prototype.useHookFactory = function () {
+              return this.m_hookFactory && this.m_hookFactory();
+            }),
             (e.prototype.CreateVirtualKeyboardRef = function (e) {
-              return this.m_factory
-                ? this.m_factory.CreateVirtualKeyboardRef(e)
-                : {
-                    ShowVirtualKeyboard: function () {},
-                    SetAsCurrentVirtualKeyboardTarget: function () {},
-                    HideVirtualKeyboard: function () {},
-                    DelayHideVirtualKeyboard: function () {},
-                    BIsActive: function () {
-                      return !1;
-                    },
-                    BIsElementValidForInput: function () {
-                      return !1;
-                    },
-                  };
+              return _(this.m_factory, e);
             }),
             e
           );
-        })(),
-        _ = (0, i.Y)("VirtualKeyboardRefFactory", function () {
-          return new p();
-        });
-      function g(e, t) {
+        })();
+      function _(e, t) {
+        return e
+          ? e.CreateVirtualKeyboardRef(t)
+          : {
+              ShowVirtualKeyboard: function () {},
+              SetAsCurrentVirtualKeyboardTarget: function () {},
+              HideVirtualKeyboard: function () {},
+              DelayHideVirtualKeyboard: function () {},
+              BIsActive: function () {
+                return !1;
+              },
+              BIsElementValidForInput: function () {
+                return !1;
+              },
+            };
+      }
+      var g = (0, i.Y)("VirtualKeyboardRefFactory", function () {
+        return new p();
+      });
+      function h(e, t) {
         var n,
           i = e.onTextEntered,
           o = (0, a._T)(e, ["onTextEntered"]),
@@ -70498,16 +71147,16 @@
                             a.setSelectionRange(i - 1, i - 1, "none"));
                       } else if ("ArrowLeft" === r)
                         if (n) {
-                          var p = h(-1, [i, o, s], [0, a.value.length]);
-                          a.setSelectionRange(p[0], p[1], f(p[2]));
+                          var p = f(-1, [i, o, s], [0, a.value.length]);
+                          a.setSelectionRange(p[0], p[1], v(p[2]));
                         } else
                           i === o && i > 0
                             ? a.setSelectionRange(i - 1, i - 1, "none")
                             : a.setSelectionRange(i, i, "none");
                       else if ("ArrowRight" === r)
                         if (n) {
-                          p = h(1, [i, o, s], [0, a.value.length]);
-                          a.setSelectionRange(p[0], p[1], f(p[2]));
+                          p = f(1, [i, o, s], [0, a.value.length]);
+                          a.setSelectionRange(p[0], p[1], v(p[2]));
                         } else
                           i === o && o < a.value.length
                             ? a.setSelectionRange(o + 1, o + 1, "none")
@@ -70535,8 +71184,10 @@
           })
         );
         var d = (function (e) {
-            var t = r.useRef();
-            t.current || (t.current = _.CreateVirtualKeyboardRef(e));
+            var t = r.useRef(),
+              n = g.useHookFactory && g.useHookFactory();
+            t.current ||
+              (t.current = n ? _(n, e) : g.CreateVirtualKeyboardRef(e));
             return t.current;
           })(u.current),
           p = r.useCallback(
@@ -70550,7 +71201,7 @@
             },
             [d]
           ),
-          g = (0, s.xK)(
+          h = (0, s.xK)(
             function (e) {
               c.current = e;
               var t = [];
@@ -70603,10 +71254,10 @@
             },
             [d, t]
           ),
-          g
+          h
         );
       }
-      function h(e, t, n) {
+      function f(e, t, n) {
         var a = t[2],
           r = a < 0 ? 0 : 1,
           i = e < 0 ? 0 : 1,
@@ -70621,25 +71272,25 @@
             : [o[1], o[0], -a]
         );
       }
-      function f(e) {
+      function v(e) {
         return e < 0 ? "backward" : e > 0 ? "forward" : "none";
       }
-      var v = n(9427),
-        b = (0, i.Y)("GamepadNavigationContext", function () {
+      var b = n(9427),
+        E = (0, i.Y)("GamepadNavigationContext", function () {
           return r.createContext(null);
         }),
-        E = (0, i.Y)("FocusRingNavigationContext", function () {
+        y = (0, i.Y)("FocusRingNavigationContext", function () {
           return r.createContext(c.U7);
         });
       r.forwardRef(function (e, t) {
         return r.createElement(u.bX, (0, a.pi)({}, e, { ref: t }));
       });
-      function y(e) {
+      function T(e) {
         var t = e.navRef,
           n = (0, a._T)(e, ["navRef"]),
           i = r.useRef(),
-          o = (0, r.useContext)(b),
-          l = (0, r.useContext)(E),
+          o = (0, r.useContext)(E),
+          l = (0, r.useContext)(y),
           c = (function (e, t) {
             var n = r.useRef(null);
             return (
@@ -70679,7 +71330,7 @@
           { ref: i, node: c }
         );
       }
-      function T(e) {
+      function S(e) {
         var t = e.onButtonDown,
           n = e.onButtonUp,
           r = e.onOKButton,
@@ -70740,7 +71391,7 @@
           }
         );
       }
-      function S(e) {
+      function C(e) {
         var t = e.autoFocus,
           n = e.preferredFocus,
           r = e.disableNavSounds,
@@ -70761,9 +71412,9 @@
           b = e.navEntryPreferPosition,
           E = e.scrollIntoViewWhenChildFocused,
           y = e.fnScrollIntoViewHandler,
-          S = e.scrollIntoViewType,
+          T = e.scrollIntoViewType,
           C = e.resetNavOnEntry,
-          w = T(
+          w = S(
             (0, a._T)(e, [
               "autoFocus",
               "preferredFocus",
@@ -70813,14 +71464,14 @@
             navEntryPreferPosition: b,
             scrollIntoViewWhenChildFocused: E,
             fnScrollIntoViewHandler: y,
-            scrollIntoViewType: S,
+            scrollIntoViewType: T,
             resetNavOnEntry: C,
             actionDescriptionMap: (0, a.pi)((0, a.pi)({}, _), N),
           },
           gamepadEvents: B,
         };
       }
-      function C(e) {
+      function w(e) {
         return function (t) {
           var n = t.focusClassName,
             i = t.focusWithinClassName,
@@ -70863,19 +71514,19 @@
           );
         };
       }
-      var w = C("div");
-      function B(e, t, n, i) {
-        var l = S(n),
+      var B = w("div");
+      function N(e, t, n, i) {
+        var l = C(n),
           c = l.elemProps,
           u = l.navOptions,
           m = l.gamepadEvents;
         void 0 !== u.focusable || c.disabled || (u.focusable = !0);
-        var p = y((0, a.pi)({}, u)),
+        var p = T((0, a.pi)({}, u)),
           _ = p.ref,
           g = p.node,
           h = (0, r.useCallback)(
             function () {
-              return v.LT.PlayNavSound(v.qr.DefaultOk), _.current.click(), !0;
+              return b.LT.PlayNavSound(b.qr.DefaultOk), _.current.click(), !0;
             },
             [_]
           );
@@ -70885,13 +71536,13 @@
           u.focusable && (c.tabIndex = c.tabIndex || 0),
           (0, d.pD)(m, _);
         var f = (0, s.BE)(i, _),
-          E = c.children;
+          v = c.children;
         delete c.children;
-        var T = c.focusClassName;
+        var y = c.focusClassName;
         return (
           delete c.focusClassName,
           r.createElement(
-            b.Provider,
+            E.Provider,
             { value: g },
             g
               ? r.createElement(
@@ -70899,11 +71550,11 @@
                   (0, a.pi)((0, a.pi)({}, c), {
                     divRef: f,
                     node: g,
-                    focusClassName: (0, o.Z)(T, "gpfocus"),
+                    focusClassName: (0, o.Z)(y, "gpfocus"),
                     focusWithinClassName: "gpfocuswithin",
                     className: (0, o.Z)(c.className, "Focusable"),
                   }),
-                  E
+                  v
                 )
               : r.createElement(
                   e,
@@ -70911,19 +71562,19 @@
                     ref: f,
                     className: (0, o.Z)(c.className, "Focusable"),
                   }),
-                  E
+                  v
                 )
           )
         );
       }
-      function N(e) {
-        var t = C(e);
+      function I(e) {
+        var t = w(e);
         return r.forwardRef(function (n, a) {
-          return B(e, t, n, a);
+          return N(e, t, n, a);
         });
       }
-      function I(e) {
-        var t = C(e);
+      function D(e) {
+        var t = w(e);
         return r.forwardRef(function (n, r) {
           var i = (function (e) {
               return {
@@ -70951,9 +71602,9 @@
             l = i.props,
             c = l.refKeyboardHandle,
             u = (0, a._T)(l, ["refKeyboardHandle"]),
-            d = g(o, c),
+            d = h(o, c),
             m = (0, s.BE)(r, d);
-          return B(e, t, u, m);
+          return N(e, t, u, m);
         });
       }
     },
@@ -72013,7 +72664,7 @@
                   for (var l = t; l && l != o; l = l.Parent)
                     l.SetFocusWithin(!0);
                 }
-                var c = this.m_Controller.OnFocusChangeStart(e, this, a, t);
+                var c = this.m_context.OnFocusChangeStart(e, this, a, t);
                 t && t.SetDOMFocusAndScroll(e, a),
                   a &&
                     ((0, i.Jb)(a.Element, "vgp_onblur", r),
@@ -72034,7 +72685,7 @@
                     ? this.m_lastFocusNodeYMovement.SetNode(t.Element)
                     : (this.m_lastFocusNodeXMovement.Reset(),
                       this.m_lastFocusNodeYMovement.Reset()),
-                  this.m_Controller.OnFocusChangeComplete(c);
+                  this.m_context.OnFocusChangeComplete(c);
               }
             }),
             e
@@ -72122,11 +72773,15 @@
         y = new g.s("FocusNavigation").Debug,
         T = (function () {
           function e(e, t) {
-            (this.m_rgGamepadNavigationTrees = []),
+            (this.m_bActive = !1),
+              (this.m_rgGamepadNavigationTrees = []),
               (this.m_LastActiveNavTree = null),
               (this.m_LastActiveFocusNavTree = null),
               (this.m_bMounted = !0),
               (this.m_schDeferredActivate = new p.Ar()),
+              (this.m_FocusChangedCallbacks = new p.pB()),
+              (this.m_ActiveCallbacks = new p.pB()),
+              (this.m_iFocusChangeStack = 0),
               (this.m_controller = e),
               (this.m_rootWindow = t),
               (this.m_activeWindow = t);
@@ -72156,7 +72811,8 @@
                   ),
                   (this.m_bMounted = !1),
                   this.m_schDeferredActivate.Cancel(),
-                  this.m_controller.OnContextDeactivated(this, !0))
+                  this.m_controller.OnContextDeactivated(this, !0),
+                  this.SetActive(!1))
                 : y("".concat(this.LogName(e), " Child window destroyed"));
             }),
             (e.prototype.OnActivate = function (e) {
@@ -72169,14 +72825,16 @@
                   )
               ),
                 (this.m_activeWindow = e),
-                this.m_controller.OnContextActivated(this);
+                this.m_controller.OnContextActivated(this),
+                this.SetActive(!0);
             }),
             (e.prototype.OnDeactivate = function (e) {
               this.m_activeWindow == e
                 ? (y(
                     "".concat(this.LogName(e), " Deactivate context for window")
                   ),
-                  this.m_controller.OnContextDeactivated(this, !1))
+                  this.m_controller.OnContextDeactivated(this, !1),
+                  this.SetActive(!1))
                 : y(
                     ""
                       .concat(
@@ -72185,6 +72843,20 @@
                       )
                       .concat(this.m_activeWindow.name, ") has focus.")
                   );
+            }),
+            (e.prototype.SetActive = function (e) {
+              this.m_bActive != e &&
+                ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
+            }),
+            (e.prototype.BIsActive = function () {
+              return this.m_bActive;
+            }),
+            Object.defineProperty(e.prototype, "ActiveCallbacks", {
+              get: function () {
+                return this.m_ActiveCallbacks;
+              },
+              enumerable: !1,
+              configurable: !0,
             }),
             (e.prototype.AddNavTree = function (e, t) {
               t
@@ -72247,7 +72919,9 @@
                     .concat(this.m_rootWindow.name, ") Unregister tree ")
                     .concat(null == e ? void 0 : e.id, " ")
                     .concat(
-                      this.m_LastActiveFocusNavTree == e ? "(was active)" : ""
+                      this.m_LastActiveFocusNavTree == e
+                        ? "(was active)"
+                        : "(inactive)"
                     )
                 ),
                 this.m_LastActiveNavTree == e &&
@@ -72256,6 +72930,39 @@
                     this.m_schDeferredActivate.Schedule(1, function () {
                       t.m_LastActiveNavTree || t.SetActiveNavTree(null, !0);
                     }));
+            }),
+            Object.defineProperty(e.prototype, "FocusChangedCallbacks", {
+              get: function () {
+                return this.m_FocusChangedCallbacks;
+              },
+              enumerable: !1,
+              configurable: !0,
+            }),
+            (e.prototype.OnFocusChangeStart = function (e, t, n, a) {
+              return (
+                0 == this.m_iFocusChangeStack
+                  ? (this.m_ActiveFocusChange = { source: e, from: n, to: a })
+                  : !this.m_ActiveFocusChange.from &&
+                    n &&
+                    (this.m_ActiveFocusChange.from = n),
+                this.m_iFocusChangeStack++
+              );
+            }),
+            (e.prototype.OnFocusChangeComplete = function (e) {
+              if (
+                (this.m_iFocusChangeStack--,
+                (0, r.X)(
+                  e == this.m_iFocusChangeStack,
+                  "out of order focus pop"
+                ),
+                0 == this.m_iFocusChangeStack)
+              ) {
+                var t = this.m_ActiveFocusChange,
+                  n = t.source,
+                  a = t.from,
+                  i = t.to;
+                this.m_FocusChangedCallbacks.Dispatch(n, a, i);
+              }
             }),
             e
           );
@@ -72268,7 +72975,6 @@
             (this.m_rgAllContexts = []),
             (this.m_bGlobalEventsInitialized = !1),
             (this.m_fnCatchAllGamepadInput = null),
-            (this.m_FocusChangedCallbacks = new p.pB()),
             (this.m_UnhandledButtonEventsCallbacks = new p.pB()),
             (this.m_navigationSource = (0, p.vq)({
               eActivationSourceType: a.Rr.UNKNOWN,
@@ -72280,7 +72986,6 @@
             (this.m_fnGamepadEventUpdateBatcher = function (e) {
               return e();
             }),
-            (this.m_iFocusChangeStack = 0),
             (window.FocusNavController = this),
             this.m_bShowDebugFocusRing.Set(
               "shown" == sessionStorage.getItem(C)
@@ -72348,13 +73053,6 @@
           }),
           (e.prototype.SetGamepadEventUpdateBatcher = function (e) {
             this.m_fnGamepadEventUpdateBatcher = e;
-          }),
-          Object.defineProperty(e.prototype, "FocusChangedCallbacks", {
-            get: function () {
-              return this.m_FocusChangedCallbacks;
-            },
-            enumerable: !1,
-            configurable: !0,
           }),
           Object.defineProperty(e.prototype, "NavigationSource", {
             get: function () {
@@ -72566,29 +73264,6 @@
           (e.prototype.BindGlobalEventHandlers = function () {
             this.m_bGlobalEventsInitialized ||
               (this.m_bGlobalEventsInitialized = !0);
-          }),
-          (e.prototype.OnFocusChangeStart = function (e, t, n, a) {
-            return (
-              0 == this.m_iFocusChangeStack
-                ? (this.m_ActiveFocusChange = { source: e, from: n, to: a })
-                : !this.m_ActiveFocusChange.from &&
-                  n &&
-                  (this.m_ActiveFocusChange.from = n),
-              this.m_iFocusChangeStack++
-            );
-          }),
-          (e.prototype.OnFocusChangeComplete = function (e) {
-            if (
-              (this.m_iFocusChangeStack--,
-              (0, r.X)(e == this.m_iFocusChangeStack, "out of order focus pop"),
-              0 == this.m_iFocusChangeStack)
-            ) {
-              var t = this.m_ActiveFocusChange,
-                n = t.source,
-                a = t.from,
-                i = t.to;
-              this.m_FocusChangedCallbacks.Dispatch(n, a, i);
-            }
           }),
           (e.prototype.RegisterForUnhandledButtonDownEvents = function (e) {
             return this.m_UnhandledButtonEventsCallbacks.Register(e);
@@ -77625,15 +78300,15 @@
         })(),
         B = new S();
     },
-    80369: (e, t, n) => {
+    53932: (e, t, n) => {
       "use strict";
       n.d(t, {
-        bY: () => M,
-        xV: () => I,
-        Zo: () => D,
-        Vc: () => G,
-        Wn: () => A,
-        T: () => k,
+        bY: () => F,
+        xV: () => A,
+        Zo: () => M,
+        Vc: () => O,
+        Wn: () => P,
+        T: () => x,
       });
       var a = n(70655),
         r = n(29323),
@@ -77655,22 +78330,126 @@
           ? t.BFocusFirstChild(m.uS.GAMEPAD)
           : n == d.zE.BACKWARD && t.BFocusLastChild(m.uS.GAMEPAD);
       }
-      var g = n(71226),
-        h = n(9427),
-        f = n(25320),
-        v = n(67506),
-        b = n(48733),
-        E = n(19386),
-        y = n(67538),
-        T = n(48171),
-        S = n(46811),
-        C = n(61825),
-        w = n.n(C),
-        B = n(15631),
-        N = (0, g.Y)("ContextMenuInstanceContext", function () {
-          return i.createContext(null);
-        }),
-        I = (function (e) {
+      var g,
+        h,
+        f = n(71226),
+        v = n(9427),
+        b = n(25320),
+        E = n(67506),
+        y = n(48733),
+        T = n(19386),
+        S = n(67538),
+        C = n(48171),
+        w = n(46811),
+        B = n(61825),
+        N = n.n(B),
+        I = n(32219);
+      !(function (e) {
+        (e.k_nVersion = 1),
+          (function (e) {
+            !(function (e) {
+              (e[(e.Notifications = 0)] = "Notifications"),
+                (e[(e.RemotePlayTogetherControls = 1)] =
+                  "RemotePlayTogetherControls"),
+                (e[(e.VoiceChat = 2)] = "VoiceChat"),
+                (e[(e.Friends = 3)] = "Friends"),
+                (e[(e.Settings = 4)] = "Settings"),
+                (e[(e.Perf = 5)] = "Perf"),
+                (e[(e.Help = 6)] = "Help");
+            })(e.EQuickAccessTab || (e.EQuickAccessTab = {}));
+          })(e.ExportedTypes || (e.ExportedTypes = {}));
+        var t = (function () {
+          function t(t) {
+            (this.k_nVersion = e.k_nVersion),
+              (0, I.X)(t, "IGamepadUI implementation is null"),
+              (0, I.X)(
+                t.k_nVersion == e.k_nVersion,
+                "IGamepadUI version is "
+                  .concat(t.k_nVersion, " but we can only adapt to version ")
+                  .concat(R.k_nVersion, ". Is GamepadUI newer than FriendsUI?")
+              ),
+              (this.m_impl = t);
+          }
+          return (
+            (t.prototype.OpenQuickAccessMenu = function (e) {
+              return this.m_impl.OpenQuickAccessMenu(e);
+            }),
+            t
+          );
+        })();
+        e.Adapter = t;
+      })(g || (g = {})),
+        (function (e) {
+          var t = g;
+          (e.k_nVersion = 2),
+            (function (e) {
+              e.EQuickAccessTab = t.ExportedTypes.EQuickAccessTab;
+            })(e.ExportedTypes || (e.ExportedTypes = {}));
+          var n = (function () {
+            function n(n) {
+              (this.k_nVersion = e.k_nVersion),
+                (this.m_prevImpl =
+                  n.k_nVersion == t.k_nVersion ? n : new t.Adapter(n));
+            }
+            return (
+              (n.prototype.OpenQuickAccessMenu = function (e, t) {
+                return this.m_prevImpl.OpenQuickAccessMenu(e);
+              }),
+              (n.prototype.ReopenPreModalSideMenu = function () {}),
+              n
+            );
+          })();
+          e.Adapter = n;
+        })(h || (h = {}));
+      var D = new ((function () {
+          function e() {
+            (this.m_bAdaptedInstance = void 0), (this.m_bAdapted = !1);
+          }
+          return (
+            (e.prototype.Get = function () {
+              return (
+                this.m_bAdapted ||
+                  null == e.g_GamepadUIStoreRef.current ||
+                  ((this.m_bAdaptedInstance = this.AdaptGamepadUIStore(
+                    e.g_GamepadUIStoreRef.current
+                  )),
+                  (this.m_bAdapted = !0)),
+                this.m_bAdaptedInstance
+              );
+            }),
+            (e.prototype.Set = function (t) {
+              (e.g_GamepadUIStoreRef.current = t),
+                (this.m_bAdaptedInstance = t),
+                (this.m_bAdapted = !0);
+            }),
+            (e.prototype.AdaptGamepadUIStore = function (e) {
+              if (null == e) return null;
+              if (e.k_nVersion == R.k_nVersion) return e;
+              try {
+                return new R.Adapter(e);
+              } catch (e) {
+                return (
+                  console.error(
+                    "Failed to adapt GamepadUIStore to latest version:",
+                    e
+                  ),
+                  null
+                );
+              }
+            }),
+            (e.g_GamepadUIStoreRef = (0, f.Y)("GamepadUIStore", function () {
+              return { current: null };
+            })),
+            e
+          );
+        })())(),
+        R = h,
+        L =
+          (R.ExportedTypes.EQuickAccessTab,
+          (0, f.Y)("ContextMenuInstanceContext", function () {
+            return i.createContext(null);
+          })),
+        A = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_navRef = (0, c.Hy)()), t;
@@ -77729,14 +78508,14 @@
                         ? void 0
                         : n.styles) && void 0 !== r
                     ? r
-                    : w(),
+                    : N(),
                 f = null != _ ? _ : "#Button_Cancel";
               if (this.context && 1 == this.context.presentation) {
-                var b = function () {
+                var v = function () {
                   var e;
                   m && m(),
                     o.context.Hide(),
-                    null === (e = B.on.Get()) ||
+                    null === (e = D.Get()) ||
                       void 0 === e ||
                       e.ReopenPreModalSideMenu();
                 };
@@ -77746,7 +78525,7 @@
                     {},
                     g,
                     {
-                      className: (0, v.Z)(
+                      className: (0, E.Z)(
                         h.contextMenuContents,
                         ((e = {}),
                         (e[h.hasSubMenu] = this.context.BIsSubMenuVisible()),
@@ -77755,7 +78534,7 @@
                       ),
                       "flow-children": "column",
                       onMoveLeft: this.HideIfSubmenu,
-                      onCancel: this.context.BIsSubMenu() ? this.HideMenu : b,
+                      onCancel: this.context.BIsSubMenu() ? this.HideMenu : v,
                       style: {
                         overflowY: this.context.BIsSubMenuVisible()
                           ? "hidden"
@@ -77771,11 +78550,11 @@
                     i.createElement(
                       i.Fragment,
                       null,
-                      i.createElement(L, null),
+                      i.createElement(k, null),
                       i.createElement(
-                        D,
-                        { className: h.Cancel, onSelected: b },
-                        (0, y.Xx)(f)
+                        M,
+                        { className: h.Cancel, onSelected: v },
+                        (0, S.Xx)(f)
                       )
                     ),
                   this.context.BIsSubMenuVisible() &&
@@ -77787,16 +78566,16 @@
                     })
                 );
               }
-              var E =
+              var b =
                 this.context &&
                 this.context.options &&
                 this.context.options.bUseWebStyles;
               return i.createElement(
                 "div",
                 (0, a.pi)({}, g, {
-                  className: (0, v.Z)(
-                    ((t = { popup_menu: E, popup_body: E }),
-                    (t[h.contextMenuContents] = !E),
+                  className: (0, E.Z)(
+                    ((t = { popup_menu: b, popup_body: b }),
+                    (t[h.contextMenuContents] = !b),
                     (t[h.hasSubMenu] =
                       this.context && this.context.BIsSubMenuVisible()),
                     t),
@@ -77806,20 +78585,20 @@
                 l
               );
             }),
-            (t.contextType = N),
-            (0, a.gn)([T.ak], t.prototype, "HideIfSubmenu", null),
-            (0, a.gn)([T.ak], t.prototype, "HideMenu", null),
+            (t.contextType = L),
+            (0, a.gn)([C.ak], t.prototype, "HideIfSubmenu", null),
+            (0, a.gn)([C.ak], t.prototype, "HideMenu", null),
             (t = (0, a.gn)([r.Pi], t))
           );
         })(i.Component),
-        D = i.forwardRef(function (e, t) {
-          var n = (0, S.id)();
+        M = i.forwardRef(function (e, t) {
+          var n = (0, w.id)();
           return i.createElement(
-            R,
+            G,
             (0, a.pi)({ ref: t }, e, { bPlayAudio: n })
           );
         }),
-        R = (function (e) {
+        G = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_ref = i.createRef()), (t.m_refDiv = i.createRef()), t;
@@ -77835,7 +78614,7 @@
             }),
             (t.prototype.OnClick = function (e) {
               this.props.disabled
-                ? this.props.bPlayAudio && h.LT.PlayNavSound(h.qr.FailedNav)
+                ? this.props.bPlayAudio && v.LT.PlayNavSound(v.qr.FailedNav)
                 : (this.props.onClick && this.props.onClick(e),
                   this.props.bInteractableItem ||
                     (this.props.onSelected && this.props.onSelected(e),
@@ -77875,7 +78654,7 @@
                         ? void 0
                         : t.styles) && void 0 !== n
                     ? n
-                    : w();
+                    : N();
               if (this.context && 1 == this.context.presentation)
                 return i.createElement(
                   u.s,
@@ -77889,7 +78668,7 @@
                     },
                     s,
                     {
-                      className: (0, v.Z)(
+                      className: (0, E.Z)(
                         this.props.className,
                         l.contextMenuItem,
                         "contextMenuItem",
@@ -77921,7 +78700,7 @@
                   {
                     onClick: this.OnClick,
                     unselectable: this.props.unselectable,
-                    className: (0, v.Z)(
+                    className: (0, E.Z)(
                       this.props.className,
                       ((e = { popup_menu_item: c }),
                       (e[l.contextMenuItem] = !c),
@@ -77934,11 +78713,11 @@
                 this.props.children
               );
             }),
-            (t.contextType = N),
-            (0, a.gn)([T.ak], t.prototype, "OnClick", null),
-            (0, a.gn)([T.ak], t.prototype, "OnOKButton", null),
-            (0, a.gn)([T.ak], t.prototype, "OnMouseEnter", null),
-            (0, a.gn)([T.ak], t.prototype, "Focus", null),
+            (t.contextType = L),
+            (0, a.gn)([C.ak], t.prototype, "OnClick", null),
+            (0, a.gn)([C.ak], t.prototype, "OnOKButton", null),
+            (0, a.gn)([C.ak], t.prototype, "OnMouseEnter", null),
+            (0, a.gn)([C.ak], t.prototype, "Focus", null),
             t
           );
         })(i.PureComponent);
@@ -77954,20 +78733,20 @@
               r = e.className,
               o = (0, a._T)(e, ["bChecked", "children", "className"]);
             return i.createElement(
-              D,
-              (0, a.pi)({}, o, { className: (0, v.Z)(r, t && "menuChecked") }),
+              M,
+              (0, a.pi)({}, o, { className: (0, E.Z)(r, t && "menuChecked") }),
               i.createElement("div", { className: "contextMenuCheckMark" }),
               n
             );
           });
       })(i.PureComponent);
-      function L(e) {
+      function k(e) {
         var t,
-          n = i.useContext(N),
+          n = i.useContext(L),
           a =
             null !== (t = null == n ? void 0 : n.styles) && void 0 !== t
               ? t
-              : w();
+              : N();
         return i.createElement("div", { className: a.ContextMenuSeparator });
       }
       !(function (e) {
@@ -78002,7 +78781,7 @@
           }),
           (t.prototype.RenderSubMenu = function () {
             return i.createElement(
-              I,
+              A,
               {
                 onMouseEnter: this.OnSubMenuMouseEnter,
                 label: this.props.label,
@@ -78047,14 +78826,14 @@
                       ? void 0
                       : e.styles) && void 0 !== t
                   ? t
-                  : w();
+                  : N();
             return i.createElement(
-              D,
+              M,
               (0, a.pi)({}, c, {
                 ref: this.m_refItem,
                 onClick: this.OnClick,
                 selected: s && !this.state.bActive,
-                className: (0, v.Z)(
+                className: (0, E.Z)(
                   l,
                   u.SubMenu,
                   this.state.bActive && u.active
@@ -78070,19 +78849,19 @@
               i.createElement(
                 "div",
                 { className: u.Arrow },
-                i.createElement(f.$gZ, null)
+                i.createElement(b.$gZ, null)
               )
             );
           }),
-          (t.contextType = N),
-          (0, a.gn)([T.ak], t.prototype, "OnSubMenuMouseEnter", null),
-          (0, a.gn)([T.ak], t.prototype, "OnSubMenuHidden", null),
-          (0, a.gn)([T.ak], t.prototype, "ShowSubMenu", null),
-          (0, a.gn)([T.ak], t.prototype, "RenderSubMenu", null),
-          (0, a.gn)([T.ak], t.prototype, "OnMouseEnter", null),
-          (0, a.gn)([T.ak], t.prototype, "OnClick", null);
+          (t.contextType = L),
+          (0, a.gn)([C.ak], t.prototype, "OnSubMenuMouseEnter", null),
+          (0, a.gn)([C.ak], t.prototype, "OnSubMenuHidden", null),
+          (0, a.gn)([C.ak], t.prototype, "ShowSubMenu", null),
+          (0, a.gn)([C.ak], t.prototype, "RenderSubMenu", null),
+          (0, a.gn)([C.ak], t.prototype, "OnMouseEnter", null),
+          (0, a.gn)([C.ak], t.prototype, "OnClick", null);
       })(i.PureComponent);
-      var A = (function (e) {
+      var P = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -78137,7 +78916,7 @@
               this.PositionMenu();
             }),
             (t.prototype.OnBlur = function (e) {
-              (e.relatedTarget && E.ni(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && T.ni(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -78165,7 +78944,7 @@
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !E.ni(
+                  !T.ni(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -78199,7 +78978,7 @@
                   if (i) {
                     this.props.options.bScreenCoordinates ||
                       ((l += n.screenLeft), (c += n.screenTop)),
-                      (a = E.sH(n, a));
+                      (a = T.sH(n, a));
                     var m = n.screen,
                       p = 0,
                       _ = 0;
@@ -78216,15 +78995,15 @@
                   o.bMatchWidth && ((f = h - g), (s.menuWidth = f));
                   var v = (o.bOverlapHorizontal ? h : g) - f,
                     b = v > 0,
-                    y = u - (o.bOverlapHorizontal ? g : h) - f,
-                    T = y > 0,
-                    S = (o.bPreferPopLeft || !T) && b;
+                    E = u - (o.bOverlapHorizontal ? g : h) - f,
+                    y = E > 0,
+                    S = (o.bPreferPopLeft || !y) && b;
                   b ||
-                    T ||
-                    ((S = b > T),
+                    y ||
+                    ((S = b > y),
                     o.bFitToWindow &&
-                      ((f += (S ? v : y) - 8), (s.menuWidth = f))),
-                    (!o.bPreferPopLeft && T) || !b
+                      ((f += (S ? v : E) - 8), (s.menuWidth = f))),
+                    (!o.bPreferPopLeft && y) || !b
                       ? (s.menuLeft = o.bOverlapHorizontal ? g : h)
                       : (s.menuRight = u - (o.bOverlapHorizontal ? h : g));
                   var C = c || a.top,
@@ -78327,14 +79106,14 @@
                 this.props.options.strClassName ||
                 (this.props.options.bUseWebStyles
                   ? "popup_block_new popup_block_hidden_until_visible"
-                  : w().contextMenu);
+                  : N().contextMenu);
               return (
                 this.props.instance.visible &&
                   this.state.ready &&
                   (a += " visible"),
-                (a += " " + w().ContextMenuFocusContainer),
+                (a += " " + N().ContextMenuFocusContainer),
                 i.createElement(
-                  N.Provider,
+                  L.Provider,
                   { value: this.props.instance },
                   i.createElement(
                     "div",
@@ -78351,25 +79130,25 @@
                 )
               );
             }),
-            (0, a.gn)([T.ak], t.prototype, "BindMenuElement", null),
+            (0, a.gn)([C.ak], t.prototype, "BindMenuElement", null),
             (0, a.gn)(
-              [T.ak, (0, b.D)(100)],
+              [C.ak, (0, y.D)(100)],
               t.prototype,
               "OnMenuMutation",
               null
             ),
-            (0, a.gn)([T.ak], t.prototype, "OnWindowResize", null),
-            (0, a.gn)([T.ak], t.prototype, "OnBlur", null),
-            (0, a.gn)([T.ak], t.prototype, "OnKeyDown", null),
+            (0, a.gn)([C.ak], t.prototype, "OnWindowResize", null),
+            (0, a.gn)([C.ak], t.prototype, "OnBlur", null),
+            (0, a.gn)([C.ak], t.prototype, "OnKeyDown", null),
             (t = (0, a.gn)([r.Pi], t))
           );
         })(i.Component),
-        M = (function (e) {
+        F = (function (e) {
           function t(n, a, r) {
             var i =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
                 title: "Menu",
-                html_class: w().ContextMenuPopup + " client_chat_frame",
+                html_class: N().ContextMenuPopup + " client_chat_frame",
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: r,
@@ -78388,7 +79167,7 @@
                   height: 1,
                 };
               else {
-                var t = E.sH(
+                var t = T.sH(
                   this.m_menuProps.element.ownerDocument.defaultView,
                   this.m_menuProps.element.getBoundingClientRect()
                 );
@@ -78410,7 +79189,7 @@
             (t.prototype.Render = function (e, t) {
               o.render(
                 i.createElement(
-                  A,
+                  P,
                   (0, a.pi)({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
@@ -78428,14 +79207,14 @@
             t
           );
         })(l.K3);
-      function G(e) {
+      function O(e) {
         return i.createElement("div", {
-          className: w().ContextMenuMouseOverlay,
+          className: N().ContextMenuMouseOverlay,
         });
       }
-      function k(e) {
+      function x(e) {
         var t = [],
-          n = E.RA(e),
+          n = T.RA(e),
           a = n.getSelection(),
           r = a && a.rangeCount > 0 && a.toString().length > 0,
           o = e.target,
@@ -78444,7 +79223,7 @@
           (o &&
             "tagName" in o &&
             (("INPUT" != o.tagName && "TEXTAREA" != o.tagName) || (l = !0)),
-          S.De.IN_CLIENT &&
+          w.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.GetSpellingSuggestions &&
@@ -78459,7 +79238,7 @@
               d.forEach(function (e, a) {
                 t.push(
                   i.createElement(
-                    D,
+                    M,
                     {
                       key: "spelling_".concat(a, "_").concat(e),
                       onSelected: function () {
@@ -78471,7 +79250,7 @@
                           m.setSelectionRange(m.selectionEnd, m.selectionEnd),
                           o.focus();
                       },
-                      className: w().NoSeparation,
+                      className: N().NoSeparation,
                     },
                     e
                   )
@@ -78482,14 +79261,14 @@
             (u = u.trim()),
               t.push(
                 i.createElement(
-                  D,
+                  M,
                   {
                     key: "addtodictionary_".concat(u),
                     onSelected: function () {
                       return n.SteamClient._internal.AddWordToDictionary(u);
                     },
                   },
-                  (0, y.Xx)(
+                  (0, S.Xx)(
                     "#ContextMenu_AddToDictionary",
                     u.length < 30 ? u : u.substring(0, 30) + "..."
                   )
@@ -78501,50 +79280,50 @@
           ((n.document.queryCommandEnabled("cut") || (r && l)) &&
             t.push(
               i.createElement(
-                D,
+                M,
                 {
                   key: "cut",
                   onSelected: function () {
                     n.document.execCommand("cut");
                   },
                 },
-                (0, y.Xx)("#ContextMenu_Cut")
+                (0, S.Xx)("#ContextMenu_Cut")
               )
             ),
           (n.document.queryCommandEnabled("copy") || r) &&
             t.push(
               i.createElement(
-                D,
+                M,
                 {
                   key: "copy",
                   onSelected: function () {
                     n.document.execCommand("copy");
                   },
-                  className: w().NoSeparation,
+                  className: N().NoSeparation,
                 },
-                (0, y.Xx)("#ContextMenu_Copy")
+                (0, S.Xx)("#ContextMenu_Copy")
               )
             ),
-          S.De.IN_CLIENT &&
+          w.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.Paste &&
             t.push(
               i.createElement(
-                D,
+                M,
                 {
                   key: "paste",
                   onSelected: function () {
                     o.focus(), n.SteamClient._internal.Paste();
                   },
-                  className: w().NoSeparation,
+                  className: N().NoSeparation,
                 },
-                (0, y.Xx)("#ContextMenu_Paste")
+                (0, S.Xx)("#ContextMenu_Paste")
               )
             ),
           t.length)
         )
-          (0, s.yV)(i.createElement(I, null, t), e);
+          (0, s.yV)(i.createElement(A, null, t), e);
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
@@ -78560,7 +79339,7 @@
         zx: () => A,
         ji: () => F,
         oX: () => D,
-        Vh: () => Ge,
+        Vh: () => Me,
         $_: () => y,
         h4: () => E,
         II: () => J,
@@ -79850,50 +80629,48 @@
         q = n.n(X),
         K = n(75435),
         Q = n(94753),
-        $ = n.n(Q),
-        ee = n(46811),
-        te = n(15631);
-      function ne(e) {
+        $ = n.n(Q);
+      function ee(e) {
         return "object" == typeof e && "data" in e;
       }
-      function ae(e) {
+      function te(e) {
         return "object" == typeof e && "options" in e;
       }
-      function re(e, t) {
+      function ne(e, t) {
         if (e === t) return !0;
         if (!Array.isArray(e) || !Array.isArray(t)) return !1;
         if (e.length != t.length) return !1;
-        for (var n = 0; n < e.length; n++) if (!ie(e[n], t[n])) return !1;
+        for (var n = 0; n < e.length; n++) if (!ae(e[n], t[n])) return !1;
         return !0;
       }
-      function ie(e, t) {
+      function ae(e, t) {
         return null == e || null == t
           ? e == t
           : e.label === t.label &&
               e.tooltip === t.tooltip &&
-              ae(e) == ae(t) &&
-              !(ae(e) && ae(t) && !re(e.options, t.options)) &&
-              (!ne(e) || !ne(t) || e.data === t.data);
+              te(e) == te(t) &&
+              !(te(e) && te(t) && !ne(e.options, t.options)) &&
+              (!ee(e) || !ee(t) || e.data === t.data);
       }
-      function oe(e, t) {
+      function re(e, t) {
         if (null != e)
           for (var n = 0; n < e.length; n++) {
             var a = e[n];
-            if (ne(a) && a.data === t) return a;
-            if (ae(a)) {
-              var r = oe(a.options, t);
+            if (ee(a) && a.data === t) return a;
+            if (te(a)) {
+              var r = re(a.options, t);
               if (null != r) return r;
             }
           }
       }
-      function se(e) {
+      function ie(e) {
         var t = m();
         return r.createElement(
           p.T,
-          (0, a.pi)({ component: t.DropDownField, fallback: le }, e)
+          (0, a.pi)({ component: t.DropDownField, fallback: oe }, e)
         );
       }
-      function le(e) {
+      function oe(e) {
         var t = e.label,
           n = e.tooltip,
           i = e.strClassName,
@@ -79914,24 +80691,24 @@
               t,
               n && r.createElement("span", { "data-tooltip-text": n }, " (?)")
             ),
-          r.createElement(de, (0, a.pi)({ menuLabel: t }, s, { ref: o }))
+          r.createElement(ce, (0, a.pi)({ menuLabel: t }, s, { ref: o }))
         );
       }
-      var ce = r.forwardRef(function (e, t) {
+      var se = r.forwardRef(function (e, t) {
           var n = m();
           return r.createElement(
             p.T,
             (0, a.pi)(
               {
                 component: n.DropDownControlButton,
-                fallback: ue,
+                fallback: le,
                 componentRef: t,
               },
               e
             )
           );
         }),
-        ue = r.forwardRef(function (e, t) {
+        le = r.forwardRef(function (e, t) {
           return r.createElement(
             o.s,
             {
@@ -79956,12 +80733,12 @@
               )
           );
         }),
-        de = (function (e) {
+        ce = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
               (n.state = {
-                value: oe(t.rgOptions, t.selectedOption),
+                value: re(t.rgOptions, t.selectedOption),
                 bOpened: !1,
               }),
               n
@@ -79970,8 +80747,8 @@
           return (
             (0, a.ZT)(t, e),
             (t.prototype.SetSelectedOption = function (e) {
-              var t = oe(this.props.rgOptions, e);
-              ie(t, this.state.value) || this.setState({ value: t });
+              var t = re(this.props.rgOptions, e);
+              ae(t, this.state.value) || this.setState({ value: t });
             }),
             Object.defineProperty(t.prototype, "value", {
               get: function () {
@@ -79984,8 +80761,8 @@
               if (e.selectedOption !== this.props.selectedOption) return !0;
               if (e.disabled != this.props.disabled) return !0;
               if (t.bOpened !== this.state.bOpened) return !0;
-              if (!re(this.props.rgOptions, e.rgOptions)) return !0;
-              if (!ie(t.value, this.state.value)) return !0;
+              if (!ne(this.props.rgOptions, e.rgOptions)) return !0;
+              if (!ae(t.value, this.state.value)) return !0;
               for (
                 var a = 0,
                   r = [
@@ -80003,7 +80780,7 @@
               return !1;
             }),
             (t.prototype.componentDidUpdate = function (e, t) {
-              var n = !re(e.rgOptions, this.props.rgOptions),
+              var n = !ne(e.rgOptions, this.props.rgOptions),
                 a = e.selectedOption !== this.props.selectedOption,
                 r = this.state.value !== t.value;
               (n || r || a) &&
@@ -80041,10 +80818,10 @@
                 this.ShowMenu();
               }
             }),
-            (t.prototype.OnValueSelected = function (e) {
+            (t.prototype.OnValueSelected = function (e, t) {
               this.HideMenu(),
-                this.setState({ value: e }),
-                this.props.onChange && this.props.onChange(e, this);
+                this.setState({ value: t }),
+                this.props.onChange && this.props.onChange(t, this);
             }),
             (t.prototype.BuildMenu = function () {
               var e,
@@ -80069,7 +80846,7 @@
                     ? void 0
                     : e.onCancel;
               (this.m_iMenuInstance = (0, Z.yV)(
-                r.createElement(pe, {
+                r.createElement(de, {
                   rgOptions: this.props.rgOptions,
                   onValueSelected: this.OnValueSelected,
                   onCancel: s,
@@ -80096,13 +80873,7 @@
                 this.setState({ bOpened: !0 });
             }),
             (t.prototype.HideMenu = function () {
-              var e;
-              this.m_iMenuInstance &&
-                (this.m_iMenuInstance.Hide(),
-                ee.De.IN_GAMEPADUI &&
-                  (null === (e = te.on.Get()) ||
-                    void 0 === e ||
-                    e.ReopenPreModalSideMenu())),
+              this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
                 this.setState({ bOpened: !1 });
             }),
             (t.prototype.render = function () {
@@ -80131,7 +80902,7 @@
                 p.T,
                 {
                   component: this.props.renderButton,
-                  fallback: ce,
+                  fallback: se,
                   focusable: l,
                   disabled:
                     null !== (a = this.props.disabled) && void 0 !== a && a,
@@ -80158,24 +80929,24 @@
             t
           );
         })(r.Component),
-        me = r.createContext(null);
-      function pe(e) {
+        ue = r.createContext(null);
+      function de(e) {
         var t = m();
         return r.createElement(
-          me.Provider,
+          ue.Provider,
           { value: {} },
           r.createElement(
             p.T,
-            (0, a.pi)({ component: t.DropDownMenu, fallback: _e }, e)
+            (0, a.pi)({ component: t.DropDownMenu, fallback: me }, e)
           )
         );
       }
-      function _e(e) {
+      function me(e) {
         for (var t, n = [e.rgOptions], a = []; n.length > 0; )
           null === (t = n.shift()) ||
             void 0 === t ||
             t.forEach(function (t, i) {
-              ne(t)
+              ee(t)
                 ? a.push(
                     r.createElement(
                       "div",
@@ -80187,8 +80958,8 @@
                           t.strOptionClass
                         ),
                         "data-dropdown-index": i,
-                        onClick: function () {
-                          return e.onValueSelected && e.onValueSelected(t);
+                        onClick: function (n) {
+                          return e.onValueSelected && e.onValueSelected(n, t);
                         },
                       },
                       Boolean(t.tooltip)
@@ -80203,7 +80974,7 @@
                         : r.createElement(r.Fragment, null, t.label)
                     )
                   )
-                : ae(t) && n.push(t.options);
+                : te(t) && n.push(t.options);
             });
         return r.createElement(
           "div",
@@ -80257,7 +81028,7 @@
                   ? ((o = [{ label: t, data: n }]), (i.selectedOption = n))
                   : (o = [])),
               r.createElement(
-                se,
+                ie,
                 (0, a.pi)({}, i, {
                   rgOptions: o,
                   onMenuOpened: this.OnMenuOpened,
@@ -80268,14 +81039,15 @@
           (0, a.gn)([x.ak], t.prototype, "OnMenuOpened", null);
       })(r.Component),
         n(68851);
-      var ge = n(22188),
-        he = n(41256),
-        fe = n(66698),
-        ve = n(87591);
+      var pe = n(22188),
+        _e = n(41256),
+        ge = n(66698),
+        he = n(87591),
+        fe = new (n(53577).s)("DragDrop").Debug;
       !(function (e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
-          return (t.m_coordinator = new Ee()), t;
+          return (t.m_coordinator = new be()), t;
         }
         (0, a.ZT)(t, e),
           (t.prototype.OnDrop = function (e, t) {
@@ -80286,7 +81058,7 @@
               t = [];
             return (
               t.push(
-                r.createElement(Ce, {
+                r.createElement(Se, {
                   coordinator: this.m_coordinator,
                   key: "dropregion_top",
                   fnBAcceptDraggable: function (e) {
@@ -80302,13 +81074,13 @@
                   o = a + 1;
                 t.push(
                   r.createElement(
-                    ye,
+                    Ee,
                     { coordinator: e.m_coordinator, data: a, key: i },
                     n
                   )
                 ),
                   t.push(
-                    r.createElement(Ce, {
+                    r.createElement(Se, {
                       coordinator: e.m_coordinator,
                       key: "dropregion_" + i,
                       fnBAcceptDraggable: function (e) {
@@ -80325,16 +81097,18 @@
           }),
           (0, a.gn)([x.ak], t.prototype, "OnDrop", null);
       })(r.Component);
-      function be(e, t, n, a) {
+      function ve(e, t, n, a) {
         return a
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var Ee = (function () {
+      var be = (function () {
           function e() {
-            (this.m_embeddedElement = new he.AN("DragGhosts")),
+            (this.m_embeddedElement = new _e.AN("DragGhosts")),
               (this.m_rgDropRegions = []),
-              (this.m_rgActiveDropRegions = []);
+              (this.m_rgActiveDropRegions = []),
+              (this.m_prevClientX = 0),
+              (this.m_prevClientY = 0);
           }
           return (
             (e.prototype.RegisterDropRegion = function (e) {
@@ -80345,8 +81119,8 @@
                   this.m_rgActiveDropRegions.push(e));
             }),
             (e.prototype.UnregisterDropRegion = function (e) {
-              fe.Zf(this.m_rgDropRegions, e),
-                fe.Zf(this.m_rgActiveDropRegions, e),
+              ge.Zf(this.m_rgDropRegions, e),
+                ge.Zf(this.m_rgActiveDropRegions, e),
                 this.m_activeDropRegion == e &&
                   ((this.m_activeDropRegion = void 0),
                   this.m_activeDraggable && this.ShowDragGhost());
@@ -80376,6 +81150,31 @@
                 this.m_activeDraggable
               );
             }),
+            (e.prototype.MakeDragClone = function (e) {
+              (0, j.X)(
+                !this.m_nodeCloneCopy && !this.m_elCloneOriginal,
+                "Drag already in progress"
+              ),
+                (this.m_elCloneOriginal = e.m_divRef.current),
+                (this.m_nodeCloneCopy = this.m_elCloneOriginal.cloneNode(!0)),
+                e.m_divRef.current.replaceWith(this.m_nodeCloneCopy),
+                this.m_elCloneContainer ||
+                  ((this.m_elCloneContainer = e
+                    .GetDragDocument()
+                    .body.ownerDocument.createElement("div")),
+                  e
+                    .GetDragDocument()
+                    .body.appendChild(this.m_elCloneContainer)),
+                this.m_elCloneContainer.appendChild(this.m_elCloneOriginal);
+            }),
+            (e.prototype.ReverseDragClone = function () {
+              this.m_nodeCloneCopy.parentNode.replaceChild(
+                this.m_elCloneOriginal,
+                this.m_nodeCloneCopy
+              ),
+                (this.m_nodeCloneCopy = void 0),
+                (this.m_elCloneOriginal = void 0);
+            }),
             (e.prototype.OnDragStart = function (e) {
               (this.m_activeDraggable = e), (this.m_rgActiveDropRegions = []);
               for (var t = 0, n = this.m_rgDropRegions; t < n.length; t++) {
@@ -80383,11 +81182,12 @@
                 a.BAcceptDraggable(e) &&
                   (a.OnDragStarted(e), this.m_rgActiveDropRegions.push(a));
               }
-              this.ShowDragGhost();
+              this.MakeDragClone(e), this.ShowDragGhost();
             }),
             (e.prototype.EndDrag = function () {
               if (this.m_activeDraggable) {
-                this.HideDragGhost(),
+                this.ReverseDragClone(),
+                  this.HideDragGhost(),
                   this.m_activeDropRegion &&
                     this.m_activeDropRegion.OnDrop(this.m_activeDraggable);
                 for (
@@ -80441,56 +81241,60 @@
             }),
             (e.prototype.OnDrag = function (e, t, n) {
               var a = this,
-                r = void 0 === t ? 0 : t - this.m_dragGhost.state.clientX,
-                i = void 0 === n ? 0 : n - this.m_dragGhost.state.clientY;
+                r = this.m_prevClientX || t,
+                i = this.m_prevClientY || n,
+                o = void 0 === r ? 0 : r - this.m_dragGhost.state.clientX,
+                s = void 0 === i ? 0 : i - this.m_dragGhost.state.clientY;
               if (
                 (e.props.bEnableHTMLDrag &&
                   this.m_dragOffWindowTimer &&
                   window.clearTimeout(this.m_dragOffWindowTimer),
                 this.m_dragGhost &&
                   (this.m_dragGhost.setState({
-                    clientX: t,
-                    clientY: n,
-                    clientXDelta: r,
-                    clientYDelta: i,
+                    clientX: r,
+                    clientY: i,
+                    clientXDelta: o,
+                    clientYDelta: s,
                     bVisible: !0,
                   }),
-                  e.props.bEnableHTMLDrag && (r || i)))
+                  e.props.bEnableHTMLDrag && (o || s)))
               ) {
-                var o = t + r,
-                  s = n + i,
-                  l = e.GetDragDocument().body.getBoundingClientRect();
-                if (be(t, n, l) && !be(o, s, l, !0)) {
-                  var c = ve.r4(
-                      o,
-                      l.left,
-                      l.right,
-                      l.left - 200,
-                      l.right + 200
+                var l = r + o,
+                  c = i + s,
+                  u = e.GetDragDocument().body.getBoundingClientRect();
+                if (ve(r, i, u) && !ve(l, c, u, !0)) {
+                  var d = he.r4(
+                      l,
+                      u.left,
+                      u.right,
+                      u.left - 200,
+                      u.right + 200
                     ),
-                    u = ve.r4(s, l.top, l.bottom, l.top - 100, l.bottom + 100);
+                    m = he.r4(c, u.top, u.bottom, u.top - 100, u.bottom + 100);
                   this.m_dragOffWindowTimer = window.setTimeout(function () {
-                    e == a.m_activeDraggable && a.OnDrag(e, c, u);
+                    e == a.m_activeDraggable && a.OnDrag(e, d, m);
                   }, 50);
                 }
               }
-              var d = this.FindBestActiveDropRegionForPoint(t, n);
-              !!this.m_activeDropRegion != !!d &&
-                (this.ShowDragGhost(),
-                this.m_dropGhost ||
-                  (this.m_dropGhost =
-                    this.m_activeDraggable.renderDropGhost())),
+              var p = this.FindBestActiveDropRegionForPoint(r, i);
+              (this.m_prevClientX = t),
+                (this.m_prevClientY = n),
+                !!this.m_activeDropRegion != !!p &&
+                  (this.ShowDragGhost(),
+                  this.m_dropGhost ||
+                    (this.m_dropGhost =
+                      this.m_activeDraggable.renderDropGhost())),
                 this.m_activeDropRegion &&
-                  this.m_activeDropRegion != d &&
+                  this.m_activeDropRegion != p &&
                   this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
-                d &&
-                  this.m_activeDropRegion != d &&
-                  d.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
-                (this.m_activeDropRegion = d),
+                p &&
+                  this.m_activeDropRegion != p &&
+                  p.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
+                (this.m_activeDropRegion = p),
                 this.m_activeDropRegion &&
                   this.m_activeDropRegion.OnDragMove(
-                    t,
-                    n,
+                    r,
+                    i,
                     this.m_activeDraggable
                   );
             }),
@@ -80498,7 +81302,7 @@
             e
           );
         })(),
-        ye = (function (e) {
+        Ee = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -80534,6 +81338,7 @@
                 (this.m_DragInfo.ownerWin = e.ownerDocument.defaultView);
             }),
             (t.prototype.ProcessDragMove = function (e) {
+              fe("ProcessDragMove", e, this.props.data);
               var t = (function (e) {
                   if ("touches" in e) {
                     var t = e;
@@ -80608,9 +81413,10 @@
                 this.ResetDragState();
             }),
             (t.prototype.ResetDragState = function () {
-              this.m_DragInfo.bStarted &&
-                (this.props.coordinator.EndDrag(),
-                this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
+              fe("ResetDragState", this.props.data),
+                this.m_DragInfo.bStarted &&
+                  (this.props.coordinator.EndDrag(),
+                  this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
                 (this.m_DragInfo.bStarted = !1),
                 (this.m_DragInfo.startClientX = void 0),
                 (this.m_DragInfo.startClientY = void 0),
@@ -80620,7 +81426,13 @@
                 this.forceUpdate();
             }),
             (t.prototype.OnHTMLDragStart = function (e) {
-              (e.dataTransfer.effectAllowed = "copyMove"),
+              fe(
+                "HTMLDragStart",
+                e,
+                this.props.data,
+                this.props.strHTMLDragData
+              ),
+                (e.dataTransfer.effectAllowed = "copyMove"),
                 this.props.strHTMLDragData &&
                   this.props.strHTMLDragData.forEach(function (t, n) {
                     return e.dataTransfer.setData(n, t);
@@ -80632,10 +81444,36 @@
                   );
               var t = new Image();
               e.dataTransfer.setDragImage(t, 0, 0),
-                this.RecordDragStart(e.currentTarget, e.clientX, e.clientY);
+                this.RecordDragStart(e.currentTarget, e.clientX, e.clientY),
+                this.m_DragInfo.ownerWin.addEventListener(
+                  "drag",
+                  this.OnHTMLDrag
+                ),
+                this.m_DragInfo.ownerWin.addEventListener(
+                  "dragend",
+                  this.OnHTMLDragEnd
+                );
             }),
-            (t.prototype.OnHTMLDragEnd = function () {
-              this.ResetDragState();
+            (t.prototype.OnHTMLDrag = function (e) {
+              fe("HTMLDrag", e, e.dataTransfer.types.length),
+                this.ProcessDragMove(e);
+            }),
+            (t.prototype.OnHTMLDragEnd = function (e) {
+              fe(
+                "HTMLDragEnd",
+                e,
+                e.dataTransfer.getData("text/plain") || "NOTHING",
+                this.props.data
+              ),
+                this.m_DragInfo.ownerWin.removeEventListener(
+                  "drag",
+                  this.OnHTMLDrag
+                ),
+                this.m_DragInfo.ownerWin.removeEventListener(
+                  "dragend",
+                  this.OnHTMLDragEnd
+                ),
+                this.ResetDragState();
             }),
             (t.prototype.render = function () {
               var e = this.props,
@@ -80667,17 +81505,9 @@
               return (
                 this.m_DragInfo.bStarted
                   ? ((u = (0, l.Z)(u, i || "DraggedOut")),
-                    t &&
-                      (c = {
-                        onDrag: this.ProcessDragMove,
-                        onDragEnd: this.OnHTMLDragEnd,
-                      }))
+                    t && (c = { onDragEnd: this.OnHTMLDragEnd }))
                   : (c = t
-                      ? {
-                          onDragStart: this.OnHTMLDragStart,
-                          onDrag: this.ProcessDragMove,
-                          onDragEnd: this.OnHTMLDragEnd,
-                        }
+                      ? { onDragStart: this.OnHTMLDragStart }
                       : {
                           onMouseDown: this.OnMouseDown,
                           onTouchStart: this.OnTouchStart,
@@ -80694,12 +81524,12 @@
             (t.prototype.renderDropGhost = function () {
               return this.props.fnRenderDropGhost
                 ? this.props.fnRenderDropGhost()
-                : r.createElement(Te, { elContent: this.GetClone() });
+                : r.createElement(ye, { elContent: this.GetClone() });
             }),
             (t.prototype.renderDragGhost = function () {
               return this.props.fnRenderDragGhost
                 ? this.props.fnRenderDragGhost()
-                : r.createElement(Se, {
+                : r.createElement(Te, {
                     elContent: this.GetClone(),
                     offsetX: this.m_DragInfo.startOffsetX,
                     offsetY: this.m_DragInfo.startOffsetY,
@@ -80725,13 +81555,14 @@
             (0, a.gn)([x.ak], t.prototype, "OnMouseUp", null),
             (0, a.gn)([x.ak], t.prototype, "OnTouchStart", null),
             (0, a.gn)([x.ak], t.prototype, "OnTouchEnd", null),
-            (0, a.gn)([ge.aD], t.prototype, "ResetDragState", null),
+            (0, a.gn)([pe.aD], t.prototype, "ResetDragState", null),
             (0, a.gn)([x.ak], t.prototype, "OnHTMLDragStart", null),
+            (0, a.gn)([x.ak], t.prototype, "OnHTMLDrag", null),
             (0, a.gn)([x.ak], t.prototype, "OnHTMLDragEnd", null),
             t
           );
         })(r.Component),
-        Te = (function (e) {
+        ye = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80750,7 +81581,7 @@
             t
           );
         })(r.Component),
-        Se = (function (e) {
+        Te = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -80788,7 +81619,7 @@
                   height: this.props.height || "auto",
                   perspective: "600px",
                 },
-                t = ve.r4(
+                t = he.r4(
                   this.CalculateRotationDegrees(this.state.clientYDelta),
                   -90,
                   90,
@@ -80821,7 +81652,7 @@
             t
           );
         })(r.Component),
-        Ce = (function (e) {
+        Se = (function (e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80878,7 +81709,7 @@
                 );
               }),
               (t.prototype.BDraggableInRegion = function (e, t, n) {
-                return be(e, t, this.GetClientRect());
+                return ve(e, t, this.GetClientRect());
               }),
               (t.prototype.GetElement = function () {
                 return this.m_divRef.current;
@@ -80929,24 +81760,24 @@
             );
           })(r.Component)
         ),
-        we = n(36207),
-        Be = n(9427),
-        Ne = n(17928),
-        Ie = n(50557),
-        De = n.n(Ie),
-        Re = n(47606);
-      function Le(e) {
+        Ce = n(36207),
+        we = n(9427),
+        Be = n(17928),
+        Ne = n(50557),
+        Ie = n.n(Ne),
+        De = n(47606);
+      function Re(e) {
         return r.createElement(
           o.s,
-          (0, a.pi)({ navEntryPreferPosition: Re.c4.PREFERRED_CHILD }, e)
+          (0, a.pi)({ navEntryPreferPosition: De.c4.PREFERRED_CHILD }, e)
         );
       }
-      function Ae(e) {
+      function Le(e) {
         var t = e.title,
           n = (e.icon, e.active, (0, a._T)(e, ["title", "icon", "active"]));
         return r.createElement("div", (0, a.pi)({}, n), t);
       }
-      function Me(e) {
+      function Ae(e) {
         var t,
           n,
           a =
@@ -80965,16 +81796,16 @@
           e.activePage.header,
           !e.hideTitle && r.createElement(E, null, e.activePage.title),
           r.createElement(
-            Ne.S,
+            Be.S,
             { errorKey: e.activePage.title },
             null != e.activePage.content && r.cloneElement(e.activePage.content)
           )
         );
       }
-      var Ge = r.forwardRef(function (e, t) {
+      var Me = r.forwardRef(function (e, t) {
         var n,
           a,
-          i = null !== (n = e.stylesheet) && void 0 !== n ? n : De(),
+          i = null !== (n = e.stylesheet) && void 0 !== n ? n : Ie(),
           s = e.pages,
           c =
             null != e.startingPage
@@ -81023,21 +81854,21 @@
             if ("spacer" === t)
               return r.createElement("div", {
                 key: n,
-                className: De().PageListSpacer,
+                className: Ie().PageListSpacer,
               });
             if (!1 === t.visible) return null;
             var o = t == h,
               s = t.title && t.title.length > 0 ? t.title : n.toString();
             return r.createElement(p.T, {
               component: e.renderPageListItem,
-              fallback: Ae,
+              fallback: Le,
               className: (0, l.Z)(
                 i.PagedSettingsDialog_PageListItem,
                 ((a = {}), (a[i.Active] = o), a)
               ),
               key: s,
               onClick: function () {
-                Be.LT.PlayNavSound(Be.qr.PagedNavigation),
+                we.LT.PlayNavSound(we.qr.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
                   t.click ? t.click() : u && n != m && _(n);
               },
@@ -81063,7 +81894,7 @@
               navRef: v,
               onButtonDown: function (e) {
                 var t;
-                e.detail.button == we.eV.OK &&
+                e.detail.button == Ce.eV.OK &&
                   (null === (t = y.current) ||
                     void 0 === t ||
                     t.TakeFocus(e.detail.button));
@@ -81080,7 +81911,7 @@
               p.T,
               {
                 component: e.renderPageList,
-                fallback: Le,
+                fallback: Re,
                 className: i.PagedSettingsDialog_PageList,
               },
               E
@@ -81094,12 +81925,12 @@
               p.T,
               {
                 component: e.renderPageAnimation,
-                fallback: ke,
+                fallback: Ge,
                 activePage: h,
                 direction: f,
               },
               h &&
-                r.createElement(Me, {
+                r.createElement(Ae, {
                   key: h.identifier,
                   stylesheet: i,
                   hideTitle: T,
@@ -81109,7 +81940,7 @@
           )
         );
       });
-      function ke(e) {
+      function Ge(e) {
         return r.createElement(r.Fragment, null, e.children);
       }
       !(function (e) {
@@ -81232,9 +82063,9 @@
           (0, a.gn)([x.ak], t.prototype, "OnPaste", null),
           (0, a.gn)([x.ak], t.prototype, "OnCut", null);
       })(r.Component);
-      var Pe = n(41962),
-        Fe = n.n(Pe),
-        Oe = r.forwardRef(function (e, t) {
+      var ke = n(41962),
+        Pe = n.n(ke),
+        Fe = r.forwardRef(function (e, t) {
           var n,
             i = e.label,
             s = e.description,
@@ -81309,24 +82140,24 @@
                 navRef: O,
                 className: (0, l.Z)(
                   v,
-                  Fe().Field,
-                  h && Fe().Disabled,
-                  D && Fe().WithFirstRow,
-                  w && Fe().WithChildrenInline,
-                  B && Fe().WithChildrenBelow,
-                  "center" == P && Fe().VerticalAlignCenter,
+                  Pe().Field,
+                  h && Pe().Disabled,
+                  D && Pe().WithFirstRow,
+                  w && Pe().WithChildrenInline,
+                  B && Pe().WithChildrenBelow,
+                  "center" == P && Pe().VerticalAlignCenter,
                   "shift-children-below" == N &&
-                    Fe().InlineWrapShiftsChildrenBelow,
-                  !!s && Fe().WithDescription,
-                  "standard" == M && Fe().WithBottomSeparatorStandard,
-                  "thick" == M && Fe().WithBottomSeparatorThick,
-                  "fixed" == R && Fe().ChildrenWidthFixed,
-                  "max" == R && Fe().ChildrenWidthGrow,
-                  "standard" == L && Fe().ExtraPaddingOnChildrenBelow,
-                  "standard" == A && Fe().StandardPadding,
-                  "compact" == A && Fe().CompactPadding,
-                  I && Fe().Clickable,
-                  G && Fe().HighlightOnFocus
+                    Pe().InlineWrapShiftsChildrenBelow,
+                  !!s && Pe().WithDescription,
+                  "standard" == M && Pe().WithBottomSeparatorStandard,
+                  "thick" == M && Pe().WithBottomSeparatorThick,
+                  "fixed" == R && Pe().ChildrenWidthFixed,
+                  "max" == R && Pe().ChildrenWidthGrow,
+                  "standard" == L && Pe().ExtraPaddingOnChildrenBelow,
+                  "standard" == A && Pe().StandardPadding,
+                  "compact" == A && Pe().CompactPadding,
+                  I && Pe().Clickable,
+                  G && Pe().HighlightOnFocus
                 ),
                 style: ((n = {}), (n["--indent-level"] = k), n),
               }
@@ -81334,14 +82165,14 @@
             D &&
               r.createElement(
                 "div",
-                { className: Fe().FieldLabelRow },
+                { className: Pe().FieldLabelRow },
                 r.createElement(
                   "div",
-                  { className: Fe().FieldLabel },
+                  { className: Pe().FieldLabel },
                   c &&
                     r.createElement(
                       "div",
-                      { className: Fe().FieldLeadIcon },
+                      { className: Pe().FieldLeadIcon },
                       c
                     ),
                   i,
@@ -81349,10 +82180,10 @@
                     r.createElement("span", { "data-tooltip-text": T }, " (?)")
                 ),
                 w &&
-                  r.createElement("div", { className: Fe().FieldChildren }, u)
+                  r.createElement("div", { className: Pe().FieldChildren }, u)
               ),
-            B && r.createElement("div", { className: Fe().FieldChildren }, u),
-            s && r.createElement("div", { className: Fe().FieldDescription }, s)
+            B && r.createElement("div", { className: Pe().FieldChildren }, u),
+            s && r.createElement("div", { className: Pe().FieldDescription }, s)
           );
         });
       r.forwardRef(function (e, t) {
@@ -81376,7 +82207,7 @@
           p = m.refWithValue,
           _ = m.refForElement;
         return r.createElement(
-          Oe,
+          Fe,
           {
             label: n,
             description: i,
@@ -81394,7 +82225,7 @@
           r.createElement(A, (0, a.pi)({}, d, { ref: _ }))
         );
       });
-      var xe = r.forwardRef(function (e, t) {
+      var Oe = r.forwardRef(function (e, t) {
         var n = e.label,
           i = e.description,
           o = e.icon,
@@ -81413,7 +82244,7 @@
           m = d.refWithValue,
           p = d.refForElement;
         return r.createElement(
-          Oe,
+          Fe,
           {
             label: n,
             description: i,
@@ -81442,13 +82273,13 @@
           i.bX,
           (0, a.pi)({ noFocusRing: !0 }, e, {
             ref: t,
-            className: (0, l.Z)(Fe().BasicTextInput, e.className),
+            className: (0, l.Z)(Pe().BasicTextInput, e.className),
             size: 1,
           })
         );
       });
       n(956), n(926);
-      function Ue(e) {
+      function xe(e) {
         var t = e.direction,
           n = (0, a._T)(e, ["direction"]);
         switch (t) {
@@ -81518,7 +82349,7 @@
             );
         }
       }
-      function ze(e) {
+      function Ue(e) {
         return r.createElement(
           "svg",
           (0, a.pi)(
@@ -81537,7 +82368,7 @@
           })
         );
       }
-      function He(e) {
+      function ze(e) {
         return r.createElement(
           "svg",
           (0, a.pi)(
@@ -81558,7 +82389,7 @@
           })
         );
       }
-      function We(e) {
+      function He(e) {
         return r.createElement(
           "svg",
           {
@@ -81574,7 +82405,7 @@
           })
         );
       }
-      function je(e) {
+      function We(e) {
         return r.createElement(
           "svg",
           {
@@ -81590,15 +82421,15 @@
           })
         );
       }
-      var Ve = n(62484),
-        Je = n.n(Ve),
-        Ye = n(80369),
-        Ze = n(96245);
+      var je = n(62484),
+        Ve = n.n(je),
+        Je = n(53932),
+        Ye = n(96245);
       r.forwardRef(function (e, t) {
         return r.createElement(
           A,
           {
-            className: (0, l.Z)(Je().DropDownControlButton, e.className),
+            className: (0, l.Z)(Ve().DropDownControlButton, e.className),
             focusable: e.focusable,
             disabled: e.disabled,
             onClick: e.onClick,
@@ -81607,14 +82438,14 @@
           },
           r.createElement(
             "div",
-            { className: Fe().DropDownControlButtonContents },
+            { className: Pe().DropDownControlButtonContents },
             e.children,
-            r.createElement("div", { className: Fe().Spacer }),
-            r.createElement(Ue, { direction: "down" })
+            r.createElement("div", { className: Pe().Spacer }),
+            r.createElement(xe, { direction: "down" })
           )
         );
       });
-      var Xe = n(35679);
+      var Ze = n(35679);
       r.forwardRef(function (e, t) {
         var n = e.className,
           i = (0, a._T)(e, ["className"]),
@@ -81650,11 +82481,11 @@
                 inlineControls: r.createElement(
                   A,
                   {
-                    className: Xe.TogglePasswordVisibilityBtn,
+                    className: Ze.TogglePasswordVisibilityBtn,
                     onPointerDown: p,
                     onOKButton: p,
                   },
-                  d ? r.createElement(ze, null) : r.createElement(He, null)
+                  d ? r.createElement(Ue, null) : r.createElement(ze, null)
                 ),
               },
               i
@@ -81668,7 +82499,7 @@
           i = (0, a._T)(e, ["className"]),
           o = null !== (n = e.value) && void 0 !== n ? n : "";
         return r.createElement(
-          xe,
+          Oe,
           (0, a.pi)(
             {
               autoComplete: "off",
@@ -81701,15 +82532,15 @@
           )
         );
       });
-      var qe = n(94063),
-        Ke = n.n(qe),
-        Qe = n(94342),
-        $e = n(5977);
-      function et(e, t, n) {
+      var Xe = n(94063),
+        qe = n.n(Xe),
+        Ke = n(94342),
+        Qe = n(5977);
+      function $e(e, t, n) {
         var i,
           o = "".concat(e, "_HistoryValue"),
-          s = (0, $e.k6)(),
-          l = (0, $e.TH)(),
+          s = (0, Qe.k6)(),
+          l = (0, Qe.TH)(),
           c = null !== (i = l.state && l.state[o]) && void 0 !== i ? i : n,
           u = r.useRef(!1),
           d = r.useRef(),
@@ -81742,7 +82573,7 @@
           [c, p]
         );
       }
-      function tt(e, t, n, a) {
+      function et(e, t, n, a) {
         void 0 === t && (t = "smooth");
         var i = (null != n ? n : 30) / 100,
           o = r.useRef(void 0),
@@ -81790,19 +82621,19 @@
               v = null !== (r = o.current) && void 0 !== r ? r : m,
               b = null !== (u = s.current) && void 0 !== u ? u : g;
             switch (n.detail.button) {
-              case we.eV.DIR_UP:
+              case Ce.eV.DIR_UP:
                 if (v <= 2) return !1;
                 o.current = Math.max(0, v - _ * i);
                 break;
-              case we.eV.DIR_DOWN:
+              case Ce.eV.DIR_DOWN:
                 if (v >= p - _ - 2) return !1;
                 o.current = Math.min(p - _, v + _ * i);
                 break;
-              case we.eV.DIR_LEFT:
+              case Ce.eV.DIR_LEFT:
                 if (b <= 2) return !1;
                 s.current = Math.max(0, b - f * i);
                 break;
-              case we.eV.DIR_RIGHT:
+              case Ce.eV.DIR_RIGHT:
                 if (b >= h - f - 2) return !1;
                 s.current = Math.min(h - f, b + f * i);
                 break;
@@ -81824,10 +82655,10 @@
           [a, e, t, i, c, l]
         );
       }
-      var nt = n(65820),
-        at = n(50735),
-        rt = n.n(at),
-        it = r.forwardRef(function (e, t) {
+      var tt = n(65820),
+        nt = n(50735),
+        at = n.n(nt),
+        rt = r.forwardRef(function (e, t) {
           var n,
             i = e.scrollDirection,
             s = e.scrollPaddingTop,
@@ -81849,13 +82680,13 @@
             ]);
           switch (i) {
             case "x":
-              n = rt().ScrollX;
+              n = at().ScrollX;
               break;
             case "both":
-              n = rt().ScrollBoth;
+              n = at().ScrollBoth;
               break;
             default:
-              n = rt().ScrollY;
+              n = at().ScrollY;
           }
           var h = (0, a.pi)({}, _);
           (s || 0 === s) && (h.scrollPaddingTop = s),
@@ -81896,19 +82727,19 @@
             o.s,
             (0, a.pi)({}, g, {
               style: h,
-              className: (0, l.Z)(m, rt().ScrollPanel, n),
+              className: (0, l.Z)(m, at().ScrollPanel, n),
               ref: S,
               navRef: T,
             }),
-            r.createElement(nt.O, null, p)
+            r.createElement(tt.O, null, p)
           );
         }),
-        ot = r.forwardRef(function (e, t) {
+        it = r.forwardRef(function (e, t) {
           var n = e.scrollStepPercent,
             i = e.scrollBehavior,
             o = (0, a._T)(e, ["scrollStepPercent", "scrollBehavior"]),
             s = r.useRef(),
-            l = tt(
+            l = et(
               s,
               i,
               n,
@@ -81918,11 +82749,11 @@
             ),
             c = (0, x.BE)(s, t);
           return r.createElement(
-            it,
+            rt,
             (0, a.pi)({}, o, {
               onGamepadDirection: l,
               ref: c,
-              scrollIntoViewType: Re.mz.NoTransformSparseContent,
+              scrollIntoViewType: De.mz.NoTransformSparseContent,
             })
           );
         });
@@ -81932,11 +82763,11 @@
           o = e.onScroll,
           s = (0, a._T)(e, ["name", "msScrollRestoreDelay", "onScroll"]);
         return r.createElement(
-          st,
+          ot,
           { name: n, msScrollRestoreDelay: i, parentOnScroll: o, refDiv: t },
           function (e, t) {
             return r.createElement(
-              it,
+              rt,
               (0, a.pi)({}, s, { onScroll: e, ref: t })
             );
           }
@@ -81948,26 +82779,26 @@
             o = e.onScroll,
             s = (0, a._T)(e, ["name", "msScrollRestoreDelay", "onScroll"]);
           return r.createElement(
-            st,
+            ot,
             { name: n, msScrollRestoreDelay: i, parentOnScroll: o, refDiv: t },
             function (e, t) {
               return r.createElement(
-                ot,
+                it,
                 (0, a.pi)({}, s, { onScroll: e, ref: t })
               );
             }
           );
         });
-      function st(e) {
+      function ot(e) {
         var t = e.name,
           n = e.msScrollRestoreDelay,
           a = e.parentOnScroll,
           i = e.refDiv,
           o = e.children,
-          s = et("".concat(t, "ScrollTop"), 250, 0),
+          s = $e("".concat(t, "ScrollTop"), 250, 0),
           l = s[0],
           c = s[1],
-          u = et("".concat(t, "ScrollLeft"), 250, 0),
+          u = $e("".concat(t, "ScrollLeft"), 250, 0),
           d = u[0],
           m = u[1],
           p = r.useRef(0),
@@ -82013,7 +82844,7 @@
           [h, f, o]
         );
       }
-      var lt = r.forwardRef(function (e, t) {
+      var st = r.forwardRef(function (e, t) {
         var n = e.onExplicitFocusLevelChanged,
           i = e.onOKButton,
           s = e.onCancelButton,
@@ -82027,7 +82858,7 @@
             "focusable",
           ]),
           d = r.useRef(),
-          m = ct({
+          m = lt({
             navRefPanel: d,
             onOKButton: i,
             onCancelButton: s,
@@ -82060,7 +82891,7 @@
           ]),
           c = r.useRef(),
           u = r.useRef(),
-          d = ct({
+          d = lt({
             navRefPanel: c,
             onOKButton: n,
             onCancelButton: i,
@@ -82073,7 +82904,7 @@
           _ = (0, x.BE)(u, t),
           g = (0, x.BE)(o, c);
         return r.createElement(
-          ot,
+          it,
           (0, a.pi)({}, l, {
             onOKButton: function (e) {
               return m(e);
@@ -82085,13 +82916,13 @@
           })
         );
       });
-      function ct(e) {
+      function lt(e) {
         var t = e.navRefPanel,
           n = e.onOKButton,
           a = e.onCancelButton,
           i = e.onExplicitFocusLevelChanged,
           o = e.fnFocusChildren;
-        o = null != o ? o : ut;
+        o = null != o ? o : ct;
         var s = r.useCallback(
             function (e) {
               var a = t.current;
@@ -82114,20 +82945,20 @@
           );
         return { fnOnOKButton: s, fnOnCancelButton: l };
       }
-      function ut(e, t) {
+      function ct(e, t) {
         return e.ChildTakeFocus(t);
       }
-      var dt,
-        mt = n(34215);
-      (0, mt.Qc)(Ke()["error-shake-duration"]);
-      function pt(e, t) {
+      var ut,
+        dt = n(34215);
+      (0, dt.Qc)(qe()["error-shake-duration"]);
+      function mt(e, t) {
         return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
       }
-      function _t(e, t, n) {
+      function pt(e, t, n) {
         var a = e + n * (t - e);
         return Number.parseFloat(a.toFixed(10));
       }
-      function gt(e, t, n) {
+      function _t(e, t, n) {
         return (n - e) / (t - e);
       }
       !(function (e) {
@@ -82135,8 +82966,8 @@
           (e[(e.MouseDragging = 1)] = "MouseDragging"),
           (e[(e.TouchStart = 2)] = "TouchStart"),
           (e[(e.TouchDragging = 3)] = "TouchDragging");
-      })(dt || (dt = {}));
-      var ht = (function (e) {
+      })(ut || (ut = {}));
+      var gt = (function (e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -82145,8 +82976,8 @@
             (n.m_navRefSlider = r.createRef()),
             (n.m_sliderBounds = null),
             (n.m_handleBounds = null),
-            (n.m_eDragMode = dt.None),
-            (n.m_vTouchStartPosition = (0, Qe.kN)()),
+            (n.m_eDragMode = ut.None),
+            (n.m_vTouchStartPosition = (0, Ke.kN)()),
             (n.m_fStartValue = null),
             (n.m_fLatestUserValue = null),
             (n.m_bInnerSliderHasFocus = !1),
@@ -82225,12 +83056,12 @@
               var e =
                 null == this.props.value || isNaN(this.props.value)
                   ? this.props.min
-                  : (0, ve.Lh)(
+                  : (0, he.Lh)(
                       this.props.value,
                       this.props.min,
                       this.props.max
                     );
-              return gt(this.props.min, this.props.max, e);
+              return _t(this.props.min, this.props.max, e);
             },
             enumerable: !1,
             configurable: !0,
@@ -82246,15 +83077,15 @@
                   e > this.props.max
                 )
               )
-                return gt(this.props.min, this.props.max, e);
+                return _t(this.props.min, this.props.max, e);
             },
             enumerable: !1,
             configurable: !0,
           }),
           Object.defineProperty(t.prototype, "normalizedSliderOrigin", {
             get: function () {
-              var e = (0, ve.Lh)(0, this.props.min, this.props.max);
-              return gt(this.props.min, this.props.max, e);
+              var e = (0, he.Lh)(0, this.props.min, this.props.max);
+              return _t(this.props.min, this.props.max, e);
             },
             enumerable: !1,
             configurable: !0,
@@ -82272,12 +83103,12 @@
           Object.defineProperty(t.prototype, "SliderChangeSource", {
             get: function () {
               switch (this.m_eDragMode) {
-                case dt.MouseDragging:
+                case ut.MouseDragging:
                   return 1;
-                case dt.TouchDragging:
-                case dt.TouchStart:
+                case ut.TouchDragging:
+                case ut.TouchStart:
                   return 0;
-                case dt.None:
+                case ut.None:
                   return;
               }
             },
@@ -82304,16 +83135,16 @@
                   this.props.onChangeStart(this.SliderChangeSource),
                 e)
               ) {
-                case dt.MouseDragging:
-                case dt.TouchDragging:
-                case dt.TouchStart:
+                case ut.MouseDragging:
+                case ut.TouchDragging:
+                case ut.TouchStart:
                   this.RecomputeSliderBounds(),
                     (this.m_fStartValue = this.props.value),
                     (this.m_fLatestUserValue = this.props.value);
-                case dt.None:
+                case ut.None:
               }
               switch (e) {
-                case dt.MouseDragging:
+                case ut.MouseDragging:
                   null ===
                     (n =
                       null === (t = this.m_refSlider.current) || void 0 === t
@@ -82333,8 +83164,8 @@
                         passive: !1,
                       });
                   break;
-                case dt.TouchStart:
-                case dt.TouchDragging:
+                case ut.TouchStart:
+                case ut.TouchDragging:
                   null ===
                     (o =
                       null === (i = this.m_refSlider.current) || void 0 === i
@@ -82354,7 +83185,7 @@
                         passive: !1,
                       });
                   break;
-                case dt.None:
+                case ut.None:
                   this.RemoveDocumentEventListeners();
               }
             }
@@ -82363,18 +83194,18 @@
             var t, n;
             if (this.props.disabled) return !1;
             var a = 0;
-            if (e.detail.button == we.eV.DIR_LEFT) a = -1;
+            if (e.detail.button == Ce.eV.DIR_LEFT) a = -1;
             else {
-              if (e.detail.button != we.eV.DIR_RIGHT) return !1;
+              if (e.detail.button != Ce.eV.DIR_RIGHT) return !1;
               a = 1;
             }
             e.detail.is_repeat
               ? this.m_nRepeatCount++
               : (this.m_nRepeatCount = 0);
             var r = 1 / this.normalizedDpadStep,
-              i = Math.floor((0, ve.bU)(r, 8, 25, 10, 30)),
+              i = Math.floor((0, he.bU)(r, 8, 25, 10, 30)),
               o = Math.max(1, i / 2),
-              s = (0, ve.Lh)((this.m_nRepeatCount - o) / (i - o), 0, 1),
+              s = (0, he.Lh)((this.m_nRepeatCount - o) / (i - o), 0, 1),
               l =
                 s * s * (0.05 - this.normalizedDpadStep) +
                 this.normalizedDpadStep,
@@ -82384,10 +83215,10 @@
                     this.normalizedDpadStep
                   : Math.round(l / this.normalizedStep) * this.normalizedStep,
               u = Math.max(c, this.normalizedDpadStep) * a,
-              d = pt(this.normalizedStep, this.normalizedClampedValue + u),
-              m = _t(this.props.min, this.props.max, d);
+              d = mt(this.normalizedStep, this.normalizedClampedValue + u),
+              m = pt(this.props.min, this.props.max, d);
             if (
-              (m = (0, ve.Lh)(
+              (m = (0, he.Lh)(
                 m,
                 null !== (t = this.props.clampMin) && void 0 !== t
                   ? t
@@ -82398,10 +83229,10 @@
               )) != this.props.value
             ) {
               var p = m > this.m_fLatestUserValue;
-              Be.LT.PlayNavSound(p ? Be.qr.SliderUp : Be.qr.SliderDown),
+              we.LT.PlayNavSound(p ? we.qr.SliderUp : we.qr.SliderDown),
                 (this.m_fLatestUserValue = m),
                 this.props.onChange && this.props.onChange(m, 2);
-            } else Be.LT.PlayNavSound(Be.qr.FailedNav);
+            } else we.LT.PlayNavSound(we.qr.FailedNav);
             return !0;
           }),
           (t.prototype.ComputeNormalizedValueForMousePosition = function (e) {
@@ -82417,10 +83248,10 @@
           (t.prototype.UpdateSliderValueForPosition = function (e) {
             if (!this.props.disabled && this.m_refSlider.current) {
               var t = this.ComputeNormalizedValueForMousePosition(e),
-                n = pt(this.normalizedStep, t),
-                a = _t(this.props.min, this.props.max, n);
+                n = mt(this.normalizedStep, t),
+                a = pt(this.props.min, this.props.max, n);
               if (
-                (a = (0, ve.Lh)(
+                (a = (0, he.Lh)(
                   a,
                   this.props.clampMin ? this.props.clampMin : this.props.min,
                   this.props.clampMax ? this.props.clampMax : this.props.max
@@ -82428,8 +83259,8 @@
               ) {
                 var r = a > this.props.value,
                   i = 0 == this.step;
-                (this.m_eDragMode == dt.None || !i) &&
-                  Be.LT.PlayNavSound(r ? Be.qr.SliderUp : Be.qr.SliderDown),
+                (this.m_eDragMode == ut.None || !i) &&
+                  we.LT.PlayNavSound(r ? we.qr.SliderUp : we.qr.SliderDown),
                   (this.m_fLatestUserValue = a),
                   this.props.onChange &&
                     this.props.onChange(a, this.SliderChangeSource);
@@ -82440,13 +83271,13 @@
             this.UpdateSliderValueForPosition(e.clientX);
           }),
           (t.prototype.OnWindowMouseUp = function (e) {
-            this.m_eDragMode != dt.None && this.Complete();
+            this.m_eDragMode != ut.None && this.Complete();
           }),
           (t.prototype.OnMouseDown = function (e) {
             0 == e.button &&
               (this.props.disabled ||
                 (e.preventDefault(),
-                this.SetDragMode(dt.MouseDragging),
+                this.SetDragMode(ut.MouseDragging),
                 this.UpdateSliderValueForPosition(e.clientX)));
           }),
           (t.prototype.OnTouchStart = function (e) {
@@ -82457,7 +83288,7 @@
               );
               t < 0 ||
                 t > 1 ||
-                (this.SetDragMode(dt.TouchStart),
+                (this.SetDragMode(ut.TouchStart),
                 (this.m_vTouchStartPosition = {
                   x: e.touches[0].clientX,
                   y: e.touches[0].clientY,
@@ -82468,29 +83299,29 @@
             var t;
             if (1 == e.touches.length) {
               switch (this.m_eDragMode) {
-                case dt.TouchStart:
+                case ut.TouchStart:
                   var n = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-                  if ((0, Qe.iD)(this.m_vTouchStartPosition, n) >= 10) {
-                    var a = (0, Qe.UA)(this.m_vTouchStartPosition, n);
+                  if ((0, Ke.iD)(this.m_vTouchStartPosition, n) >= 10) {
+                    var a = (0, Ke.UA)(this.m_vTouchStartPosition, n);
                     Math.abs(a.x) > Math.abs(a.y)
-                      ? (this.SetDragMode(dt.TouchDragging),
+                      ? (this.SetDragMode(ut.TouchDragging),
                         null === (t = this.m_refSlider.current) ||
                           void 0 === t ||
                           t.focus())
-                      : this.SetDragMode(dt.None);
+                      : this.SetDragMode(ut.None);
                   }
                   break;
-                case dt.TouchDragging:
+                case ut.TouchDragging:
                   this.UpdateSliderValueForPosition(e.touches[0].clientX);
               }
               e.preventDefault();
             }
           }),
           (t.prototype.OnWindowTouchEnd = function (e) {
-            this.m_eDragMode != dt.None && this.Complete();
+            this.m_eDragMode != ut.None && this.Complete();
           }),
           (t.prototype.Complete = function () {
-            var e = this.m_eDragMode != dt.None;
+            var e = this.m_eDragMode != ut.None;
             this.props.onChange &&
               this.props.onChange(
                 this.m_fLatestUserValue,
@@ -82501,11 +83332,11 @@
                   this.m_fLatestUserValue,
                   this.SliderChangeSource
                 ),
-              this.SetDragMode(dt.None);
+              this.SetDragMode(ut.None);
             var t = 0 == this.step;
             if (this.m_fLatestUserValue != this.m_fStartValue && t && e) {
               var n = this.m_fLatestUserValue > this.m_fStartValue;
-              Be.LT.PlayNavSound(n ? Be.qr.SliderUp : Be.qr.SliderDown);
+              we.LT.PlayNavSound(n ? we.qr.SliderUp : we.qr.SliderDown);
             }
           }),
           (t.prototype.RemoveDocumentEventListeners = function () {
@@ -82559,7 +83390,7 @@
           (t.prototype.ResetToDefault = function () {
             var e;
             this.CanResetToDefault &&
-              this.m_eDragMode == dt.None &&
+              this.m_eDragMode == ut.None &&
               ((this.m_fLatestUserValue = this.props.resetValue),
               this.props.onChange &&
                 this.props.onChange(this.props.resetValue, 4),
@@ -82568,15 +83399,15 @@
                 : ((e = this.props.resetValue > this.props.value),
                   this.props.onChangeComplete &&
                     this.props.onChangeComplete(this.props.resetValue, 4)),
-              Be.LT.PlayNavSound(e ? Be.qr.SliderUp : Be.qr.SliderDown));
+              we.LT.PlayNavSound(e ? we.qr.SliderUp : we.qr.SliderDown));
           }),
           (t.prototype.OnContextMenu = function (e) {
             if (null != this.props.resetValue) {
               var t = r.createElement(
-                Ye.xV,
+                Je.xV,
                 null,
                 r.createElement(
-                  Ye.Zo,
+                  Je.Zo,
                   {
                     disabled: !this.CanResetToDefault,
                     onSelected: this.ResetToDefault,
@@ -82603,32 +83434,32 @@
               p = null != d,
               _ = {};
             this.CanResetToDefault &&
-              (_[we.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
-            var g = Ke().SliderHandle,
-              h = Ke().SliderHandleContainer;
+              (_[Ce.eV.SECONDARY] = (0, c.Xx)("#ResetToDefault"));
+            var g = qe().SliderHandle,
+              h = qe().SliderHandleContainer;
             return (
               "verticalline" == this.props.handleType
-                ? ((g = Ke().VerticalLineSliderHandle),
-                  (h = Ke().VerticalLineSliderHandleContainer))
+                ? ((g = qe().VerticalLineSliderHandle),
+                  (h = qe().VerticalLineSliderHandleContainer))
                 : ("leftparen" != this.props.handleType &&
                     "rightparen" != this.props.handleType) ||
                   ((g = (0, l.Z)(
-                    Ke().ParenSliderHandle,
+                    qe().ParenSliderHandle,
                     "leftparen" == this.props.handleType
-                      ? Ke().Left
-                      : Ke().Right
+                      ? qe().Left
+                      : qe().Right
                   )),
                   (h = (0, l.Z)(
-                    Ke().ParenSliderHandleContainer,
+                    qe().ParenSliderHandleContainer,
                     "leftparen" == this.props.handleType
-                      ? Ke().Left
-                      : Ke().Right
+                      ? qe().Left
+                      : qe().Right
                   ))),
               r.createElement(
-                lt,
+                st,
                 {
                   noFocusRing: !0,
-                  className: Ke().SliderControlPanelGroup,
+                  className: qe().SliderControlPanelGroup,
                   navRef: this.props.navRef,
                   onMouseDown: function (e) {
                     return o.OnMouseDown(e.nativeEvent);
@@ -82644,7 +83475,7 @@
                   onContextMenu: this.OnContextMenu,
                   onOKButton: this.props.disabled
                     ? function () {
-                        return Be.LT.PlayNavSound(Be.qr.FailedNav);
+                        return we.LT.PlayNavSound(we.qr.FailedNav);
                       }
                     : null,
                   onSecondaryButton: this.CanResetToDefault
@@ -82659,9 +83490,9 @@
                   i.Ks,
                   {
                     className: (0, l.Z)(
-                      Ke().SliderControlAndNotches,
-                      this.props.disabled && Ke().Disabled,
-                      p && Ke().WithDefaultValue
+                      qe().SliderControlAndNotches,
+                      this.props.disabled && qe().Disabled,
+                      p && qe().WithDefaultValue
                     ),
                     focusable: this.isKeyNavTarget,
                     noFocusRing: !0,
@@ -82686,16 +83517,16 @@
                   },
                   r.createElement(
                     "div",
-                    { className: Ke().SliderControl },
+                    { className: qe().SliderControl },
                     r.createElement("div", {
                       style: this.props.trackStyleOverride,
                       className: (0, l.Z)(
-                        Ke().SliderTrack,
+                        qe().SliderTrack,
                         null != this.props.notchCount &&
                           s &&
-                          Ke().SliderHasNotches,
+                          qe().SliderHasNotches,
                         ((t = {}),
-                        (t[Ke().SliderTrackDark] =
+                        (t[qe().SliderTrackDark] =
                           "dark" === this.props.trackTone),
                         t)
                       ),
@@ -82703,11 +83534,11 @@
                     p &&
                       r.createElement(
                         "div",
-                        { className: Ke().DefaultValueTickContainer },
+                        { className: qe().DefaultValueTickContainer },
                         r.createElement(
                           "div",
-                          { className: Ke().DefaultValueTick },
-                          r.createElement(Ue, { direction: "down" })
+                          { className: qe().DefaultValueTick },
+                          r.createElement(xe, { direction: "down" })
                         )
                       ),
                     this.validRange &&
@@ -82721,13 +83552,13 @@
                           "div",
                           { className: g, ref: this.m_refHandle },
                           "leftparen" == this.props.handleType &&
-                            r.createElement(We, null),
+                            r.createElement(He, null),
                           "rightparen" == this.props.handleType &&
-                            r.createElement(je, null)
+                            r.createElement(We, null)
                         )
                       )
                   ),
-                  r.createElement(ft, {
+                  r.createElement(ht, {
                     notchCount: this.props.notchCount,
                     notchLabels: this.props.notchLabels,
                     sliderValue: this.normalizedClampedValue,
@@ -82756,7 +83587,7 @@
           t
         );
       })(r.Component);
-      function ft(e) {
+      function ht(e) {
         var t = e.sliderValue,
           n = e.notchCount,
           a = e.notchLabels,
@@ -82772,7 +83603,7 @@
               });
               a && (c = !0),
                 u.push(
-                  r.createElement(vt, {
+                  r.createElement(ft, {
                     key: e,
                     notchIndex: e,
                     sliderValue: t,
@@ -82791,14 +83622,14 @@
           o.s,
           {
             className: (0, l.Z)(
-              Ke().SliderNotchContainer,
-              c && Ke().HasNotchLabels
+              qe().SliderNotchContainer,
+              c && qe().HasNotchLabels
             ),
           },
           u
         );
       }
-      function vt(e) {
+      function ft(e) {
         var t,
           n = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           a = 2 == e.notchCount && !e.notchTicksVisible,
@@ -82806,19 +83637,19 @@
           o = a && 1 == e.notchIndex;
         return r.createElement(
           "div",
-          { className: (0, l.Z)(Ke().SliderNotch, a && Ke().AlignToEnds) },
+          { className: (0, l.Z)(qe().SliderNotch, a && qe().AlignToEnds) },
           e.notchTicksVisible &&
             r.createElement("div", {
-              className: (0, l.Z)(Ke().SliderNotchTick, n && Ke().TickActive),
+              className: (0, l.Z)(qe().SliderNotchTick, n && qe().TickActive),
             }),
           e.notchLabel &&
             r.createElement(
               "div",
               {
                 className: (0, l.Z)(
-                  Ke().SliderNotchLabel,
-                  i && Ke().AlignToLeft,
-                  o && Ke().AlignToRight
+                  qe().SliderNotchLabel,
+                  i && qe().AlignToLeft,
+                  o && qe().AlignToRight
                 ),
               },
               null === (t = e.notchLabel) || void 0 === t ? void 0 : t.label
@@ -82829,7 +83660,7 @@
         var n = (0, a._T)(e, []);
         return r.createElement(
           o.s,
-          { className: Ke().SliderControlWithIcon },
+          { className: qe().SliderControlWithIcon },
           e.icon &&
             r.createElement(
               o.s,
@@ -82837,11 +83668,11 @@
                 onTouchStart: function (t) {
                   return e.onIconTouch && e.onIconTouch(t);
                 },
-                className: Ke().Icon,
+                className: qe().Icon,
               },
               e.icon
             ),
-          r.createElement(ht, (0, a.pi)({}, n, { ref: t }))
+          r.createElement(gt, (0, a.pi)({}, n, { ref: t }))
         );
       });
       r.forwardRef(function (e, t) {
@@ -82868,7 +83699,7 @@
         return r.createElement(
           "div",
           {
-            className: Ke().CompoundSliderSubSliderLabel,
+            className: qe().CompoundSliderSubSliderLabel,
             ref: d,
             onMouseDown: s,
             onTouchStart: l,
@@ -82876,12 +83707,12 @@
           },
           r.createElement(
             "div",
-            { className: Ke().CompoundSliderSubSliderLabelInternal },
+            { className: qe().CompoundSliderSubSliderLabelInternal },
             n
           )
         );
       });
-      var bt = r.forwardRef(function (e, t) {
+      var vt = r.forwardRef(function (e, t) {
         var n,
           a = e.value,
           o = e.onChange,
@@ -82892,20 +83723,20 @@
           {
             noFocusRing: !0,
             className: (0, l.Z)(
-              Fe().Toggle,
-              ((n = {}), (n[Fe().Disabled] = !!s), (n[Fe().On] = !!a), n)
+              Pe().Toggle,
+              ((n = {}), (n[Pe().Disabled] = !!s), (n[Pe().On] = !!a), n)
             ),
             onClick: function () {
               if (!s && o) {
                 var e = !a;
-                o(e), Be.LT.PlayNavSound(e ? Be.qr.ToggleOn : Be.qr.ToggleOff);
+                o(e), we.LT.PlayNavSound(e ? we.qr.ToggleOn : we.qr.ToggleOff);
               }
             },
             ref: t,
             navRef: c,
           },
-          r.createElement("div", { className: Fe().ToggleRail }),
-          r.createElement("div", { className: Fe().ToggleSwitch })
+          r.createElement("div", { className: Pe().ToggleRail }),
+          r.createElement("div", { className: Pe().ToggleSwitch })
         );
       });
       !(function (e) {
@@ -82918,11 +83749,11 @@
           }),
           (t.prototype.render = function () {
             var e = !!this.props.disabled,
-              t = (0, Ze.CO)(this.props),
+              t = (0, Ye.CO)(this.props),
               n = t.actionDescriptions,
               i = t.gamepadEvents;
             return r.createElement(
-              Oe,
+              Fe,
               (0, a.pi)(
                 {
                   className: this.props.className,
@@ -82939,7 +83770,7 @@
                 },
                 i
               ),
-              r.createElement(bt, {
+              r.createElement(vt, {
                 onChange: this.OnToggleChange,
                 value: this.checked,
                 disabled: e,
@@ -82949,24 +83780,24 @@
           }),
           (0, a.gn)([x.ak], t.prototype, "OnToggleChange", null);
       })(k);
-      var Et,
-        yt = n(56130),
-        Tt = n.n(yt),
-        St = n(70666),
-        Ct = n(17159);
-      function wt(e) {
+      var bt,
+        Et = n(56130),
+        yt = n.n(Et),
+        Tt = n(70666),
+        St = n(17159);
+      function Ct(e) {
         var t = e.childrenKey,
           n = e.childrenClasses,
           a = e.children,
           i = e.direction,
-          o = (0, l.Z)(Tt().TransitionGroup, i);
+          o = (0, l.Z)(yt().TransitionGroup, i);
         return r.createElement(
-          St.Z,
+          Tt.Z,
           { className: o, appear: !1, enter: !0, exit: !0 },
-          r.createElement(Bt, { key: t, childrenClasses: n }, a)
+          r.createElement(wt, { key: t, childrenClasses: n }, a)
         );
       }
-      function Bt(e) {
+      function wt(e) {
         var t = e.sizeClass,
           n =
             (e.children,
@@ -83054,7 +83885,7 @@
         return s.current && !s.current.ownerDocument.defaultView
           ? null
           : r.createElement(
-              Ct.Z,
+              St.Z,
               (0, a.pi)(
                 {
                   nodeRef: s,
@@ -83069,7 +83900,7 @@
               ),
               r.createElement(
                 "div",
-                { ref: s, className: (0, l.Z)(Tt().ContentWrapper, t, h.base) },
+                { ref: s, className: (0, l.Z)(yt().ContentWrapper, t, h.base) },
                 r.createElement(
                   o.s,
                   { className: t, fnCanTakeFocus: p },
@@ -83078,7 +83909,7 @@
               )
             );
       }
-      function Nt(e, t) {
+      function Bt(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -83093,12 +83924,12 @@
           (e[(e.Right = 2)] = "Right"),
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
-      })(Et || (Et = {}));
-      var It = n(85820),
-        Dt = n.n(It),
-        Rt = r.createContext(null);
-      function Lt(e) {
-        var t = r.useContext(Rt),
+      })(bt || (bt = {}));
+      var Nt = n(85820),
+        It = n.n(Nt),
+        Dt = r.createContext(null);
+      function Rt(e) {
+        var t = r.useContext(Dt),
           n = e.title,
           i = e.icon,
           s = e.active,
@@ -83115,12 +83946,12 @@
             },
             l
           ),
-          i && r.createElement("div", { className: Dt().PageListItem_Icon }, i),
-          r.createElement("div", { className: Dt().PageListItem_Title }, n)
+          i && r.createElement("div", { className: It().PageListItem_Icon }, i),
+          r.createElement("div", { className: It().PageListItem_Title }, n)
         );
       }
-      function At(e) {
-        return r.createElement("div", { className: Dt().Separator });
+      function Lt(e) {
+        return r.createElement("div", { className: It().Separator });
       }
       r.forwardRef(function (e, t) {
         var n = r.useRef();
@@ -83133,43 +83964,43 @@
         );
         var i = Boolean(e.showTitle);
         return r.createElement(
-          Rt.Provider,
+          Dt.Provider,
           { value: n },
           r.createElement(
-            Ge,
+            Me,
             (0, a.pi)({}, e, {
-              stylesheet: Dt(),
+              stylesheet: It(),
               showTitle: i,
-              renderPageListItem: Lt,
-              renderPageListSeparator: At,
-              renderPageAnimation: Mt,
+              renderPageListItem: Rt,
+              renderPageListSeparator: Lt,
+              renderPageAnimation: At,
             })
           )
         );
       });
-      function Mt(e) {
-        var t = Et.None;
+      function At(e) {
+        var t = bt.None;
         "up" == e.direction
-          ? (t = Et.Up)
-          : "down" == e.direction && (t = Et.Down);
+          ? (t = bt.Up)
+          : "down" == e.direction && (t = bt.Down);
         var n,
           a,
           i =
-            ((n = Dt()),
-            (a = t) == Et.Left
+            ((n = It()),
+            (a = t) == bt.Left
               ? n.Left
-              : a == Et.Right
+              : a == bt.Right
               ? n.Right
-              : a == Et.Up
+              : a == bt.Up
               ? n.Up
-              : a == Et.Down
+              : a == bt.Down
               ? n.Down
               : "");
         return r.createElement(
-          wt,
+          Ct,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Nt(Dt(), Dt().ContentTransition),
+            childrenClasses: Bt(It(), It().ContentTransition),
             direction: i,
           },
           e.children
@@ -83198,8 +84029,8 @@
       n.d(t, { S: () => o });
       var a = n(70655),
         r = n(67294),
-        i = n(48171),
-        o = (function (e) {
+        i = n(48171);
+      var o = (function (e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = {}), (n.state.lastErrorKey = t.errorKey), n;
@@ -83350,7 +84181,7 @@
           );
         };
     },
-    40993: (e, t, n) => {
+    22382: (e, t, n) => {
       "use strict";
       n.d(t, {
         t9: () => C,
@@ -83819,6 +84650,44 @@
           i({ className: "ModalPosition_Content", children: s })
         );
       }
+      (function (e) {
+        function t(t, n, a) {
+          var r = e.call(this, t, n) || this;
+          return (r.m_fnReadyToRender = a), r;
+        }
+        (0, o.ZT)(t, e),
+          (t.prototype.DoCallback = function (e) {
+            this.m_callbacks &&
+              this.m_callbacks[e] &&
+              this.m_callbacks[e](this.m_popup, this.m_element);
+          }),
+          (t.prototype.OnCreate = function () {
+            var e;
+            (null === (e = this.m_callbacks) || void 0 === e
+              ? void 0
+              : e.onCreate) && this.m_callbacks.onCreate(this.m_popup);
+          }),
+          (t.prototype.OnBlur = function () {
+            this.DoCallback("onBlur");
+          }),
+          (t.prototype.OnFocus = function () {
+            this.DoCallback("onFocus");
+          }),
+          (t.prototype.OnLoad = function () {
+            this.DoCallback("onLoad");
+          }),
+          (t.prototype.OnResize = function () {
+            this.DoCallback("onResize");
+          }),
+          (t.prototype.OnClose = function () {
+            this.DoCallback("onClose");
+          }),
+          (t.prototype.Render = function (e, t) {
+            this.m_fnReadyToRender(t);
+          });
+      })(n(3563).K3),
+        n(53932),
+        n(9274);
       n(76835), n(65820);
       var k,
         P = n(93898),
@@ -84691,115 +85560,6 @@
         );
       }
     },
-    15631: (e, t, n) => {
-      "use strict";
-      n.d(t, { on: () => s });
-      var a,
-        r,
-        i = n(32219),
-        o = n(71226);
-      !(function (e) {
-        (e.k_nVersion = 1),
-          (function (e) {
-            !(function (e) {
-              (e[(e.Notifications = 0)] = "Notifications"),
-                (e[(e.RemotePlayTogetherControls = 1)] =
-                  "RemotePlayTogetherControls"),
-                (e[(e.VoiceChat = 2)] = "VoiceChat"),
-                (e[(e.Friends = 3)] = "Friends"),
-                (e[(e.Settings = 4)] = "Settings"),
-                (e[(e.Perf = 5)] = "Perf"),
-                (e[(e.Help = 6)] = "Help");
-            })(e.EQuickAccessTab || (e.EQuickAccessTab = {}));
-          })(e.ExportedTypes || (e.ExportedTypes = {}));
-        var t = (function () {
-          function t(t) {
-            (this.k_nVersion = e.k_nVersion),
-              (0, i.X)(t, "IGamepadUI implementation is null"),
-              (0, i.X)(
-                t.k_nVersion == e.k_nVersion,
-                "IGamepadUI version is "
-                  .concat(t.k_nVersion, " but we can only adapt to version ")
-                  .concat(l.k_nVersion, ". Is GamepadUI newer than FriendsUI?")
-              ),
-              (this.m_impl = t);
-          }
-          return (
-            (t.prototype.OpenQuickAccessMenu = function (e) {
-              return this.m_impl.OpenQuickAccessMenu(e);
-            }),
-            t
-          );
-        })();
-        e.Adapter = t;
-      })(a || (a = {})),
-        (function (e) {
-          var t = a;
-          (e.k_nVersion = 2),
-            (function (e) {
-              e.EQuickAccessTab = t.ExportedTypes.EQuickAccessTab;
-            })(e.ExportedTypes || (e.ExportedTypes = {}));
-          var n = (function () {
-            function n(n) {
-              (this.k_nVersion = e.k_nVersion),
-                (this.m_prevImpl =
-                  n.k_nVersion == t.k_nVersion ? n : new t.Adapter(n));
-            }
-            return (
-              (n.prototype.OpenQuickAccessMenu = function (e, t) {
-                return this.m_prevImpl.OpenQuickAccessMenu(e);
-              }),
-              (n.prototype.ReopenPreModalSideMenu = function () {}),
-              n
-            );
-          })();
-          e.Adapter = n;
-        })(r || (r = {}));
-      var s = new ((function () {
-          function e() {
-            (this.m_bAdaptedInstance = void 0), (this.m_bAdapted = !1);
-          }
-          return (
-            (e.prototype.Get = function () {
-              return (
-                this.m_bAdapted ||
-                  null == e.g_GamepadUIStoreRef.current ||
-                  ((this.m_bAdaptedInstance = this.AdaptGamepadUIStore(
-                    e.g_GamepadUIStoreRef.current
-                  )),
-                  (this.m_bAdapted = !0)),
-                this.m_bAdaptedInstance
-              );
-            }),
-            (e.prototype.Set = function (t) {
-              (e.g_GamepadUIStoreRef.current = t),
-                (this.m_bAdaptedInstance = t),
-                (this.m_bAdapted = !0);
-            }),
-            (e.prototype.AdaptGamepadUIStore = function (e) {
-              if (null == e) return null;
-              if (e.k_nVersion == l.k_nVersion) return e;
-              try {
-                return new l.Adapter(e);
-              } catch (e) {
-                return (
-                  console.error(
-                    "Failed to adapt GamepadUIStore to latest version:",
-                    e
-                  ),
-                  null
-                );
-              }
-            }),
-            (e.g_GamepadUIStoreRef = (0, o.Y)("GamepadUIStore", function () {
-              return { current: null };
-            })),
-            e
-          );
-        })())(),
-        l = r;
-      l.ExportedTypes.EQuickAccessTab;
-    },
     41411: (e, t, n) => {
       "use strict";
       n.d(t, { V: () => s });
@@ -85099,6 +85859,109 @@
           )
         );
       }
+    },
+    9274: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => s });
+      var a = n(70655),
+        r = n(67294),
+        i = n(25320),
+        o = n(48171),
+        s = (function (e) {
+          function t(t) {
+            var n = e.call(this, t) || this;
+            return (n.state = { maximized: n.BIsMaximized() }), n;
+          }
+          return (
+            (0, a.ZT)(t, e),
+            (t.prototype.BIsMaximized = function () {
+              var e =
+                  this.props.popup.screen.availWidth -
+                  this.props.popup.innerWidth,
+                t =
+                  this.props.popup.screen.availHeight -
+                  this.props.popup.innerHeight;
+              return 0 === e && 0 === t;
+            }),
+            (t.prototype.componentDidMount = function () {
+              this.props.popup.addEventListener(
+                "resize",
+                this.UpdateMaximizeState
+              );
+            }),
+            (t.prototype.componentWillUnmount = function () {
+              this.props.popup.removeEventListener(
+                "resize",
+                this.UpdateMaximizeState
+              );
+            }),
+            (t.prototype.UpdateMaximizeState = function () {
+              var e = this.BIsMaximized();
+              e != this.state.maximized && this.setState({ maximized: e });
+            }),
+            (t.prototype.render = function () {
+              var e = this.props.popup,
+                t = "title-area-icon";
+              this.state.maximized
+                ? (t += " restoreButton")
+                : (t += " maximizeButton");
+              var n = "TitleBar title-area";
+              return (
+                this.props.className && (n = n + " " + this.props.className),
+                r.createElement(
+                  "div",
+                  { className: n, style: this.props.style },
+                  r.createElement("div", { className: "title-area-highlight" }),
+                  r.createElement(
+                    "div",
+                    { className: "title-area-children" },
+                    this.props.children
+                  ),
+                  !this.props.hideActions &&
+                    r.createElement(
+                      "div",
+                      { className: "title-bar-actions" },
+                      r.createElement(
+                        "div",
+                        {
+                          className: "title-area-icon closeButton",
+                          onClick: function () {
+                            e && e.close();
+                          },
+                        },
+                        r.createElement(i.pVO, null)
+                      ),
+                      !this.props.hideMinMax &&
+                        r.createElement(
+                          "div",
+                          {
+                            className: t,
+                            onClick: function () {
+                              e.SteamClient.Window.ToggleMaximize();
+                            },
+                          },
+                          this.state.maximized && r.createElement(i.r6F, null),
+                          !this.state.maximized && r.createElement(i.YqJ, null)
+                        ),
+                      !this.props.hideMinMax &&
+                        r.createElement(
+                          "div",
+                          {
+                            className: "title-area-icon minimizeButton",
+                            onClick: function () {
+                              e.SteamClient.Window.Minimize();
+                            },
+                          },
+                          r.createElement(i.gR, null)
+                        )
+                    )
+                )
+              );
+            }),
+            (0, a.gn)([o.ak], t.prototype, "UpdateMaximizeState", null),
+            t
+          );
+        })(r.Component);
     },
     75435: (e, t, n) => {
       "use strict";
@@ -85615,7 +86478,7 @@
       var a = n(70655),
         r = n(22188),
         i = (n(67294), n(83019), n(19386), n(67538));
-      n(46811), n(80369);
+      n(46811), n(53932);
       !(function () {
         function e(e) {
           this.promise = e;
@@ -87691,6 +88554,7 @@
           COMMUNITY_BASE_URL: "",
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
           LOGIN_BASE_URL: "",
           SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
@@ -87732,6 +88596,7 @@
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
           IN_STEAMUI_SHARED_CONTEXT: !1,
+          ONE_STEAMUI_SHARED_CONTEXT: !1,
           GAMEPADUI_WINDOWED: !1,
           DECK_DISPLAY_MODE: !1,
           ON_DECK: !1,
@@ -87874,13 +88739,15 @@
           ? u.STATS_BASE_URL
           : T(e, u.INTERNAL_STATS_BASE_URL)
           ? u.INTERNAL_STATS_BASE_URL
+          : T(e, u.STORE_CHECKOUT_BASE_URL)
+          ? u.STORE_CHECKOUT_BASE_URL
           : T(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
       function C() {
         var e = window.location.href;
-        return T(e, u.STORE_BASE_URL)
+        return T(e, u.STORE_BASE_URL) || T(e, u.STORE_CHECKOUT_BASE_URL)
           ? "store"
           : T(e, u.COMMUNITY_BASE_URL)
           ? "community"
@@ -88056,7 +88923,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 86576), e((e.s = t));
+      return (t = 89683), e((e.s = t));
       var t;
     });
     e.O();
