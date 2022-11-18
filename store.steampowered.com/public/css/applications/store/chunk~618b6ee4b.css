@@ -1080,6 +1080,10 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   width: calc(100% - 20px);
   height: 200px;
 }
+.sharewithfriends_ShareLink_2DzSq {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -5384,6 +5388,38 @@ html.responsive.touch
   background: #fff;
   color: #000;
 }
+.salesocialsharedisplay_DoorOptionsContainer_cP3hd > :first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.salesocialsharedisplay_DoorOption_2syb_ {
+  display: none;
+}
+.salesocialsharedisplay_ShareHeader_3hhXv {
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 8px;
+}
+.salesocialsharedisplay_ShareButton_2kekt {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 8px;
+}
+.salesocialsharedisplay_ShareButton_2kekt
+  .salesocialsharedisplay_ShareText_qm15Z {
+  line-height: 22px;
+}
+.salesocialsharedisplay_ShareButton_2kekt
+  .salesocialsharedisplay_ShareIcon_TFbD2 {
+  width: 19px;
+  height: 19px;
+  margin-right: 12px;
+  margin-top: 1px;
+  margin-left: -10px;
+  fill: rgba(255, 255, 255, 0.66);
+}
 .reservations_description_VmWUF {
   padding-left: 5em;
   padding-right: 5em;
@@ -6303,15 +6339,6 @@ html.responsive.touch
 }
 .saleitembrowser_ResetItemsCtn_1XX4L:hover .saleitembrowser_ResetItems_1Yy62 {
   opacity: 100%;
-}
-.salesocialsharedisplay_DoorOptionsContainer_cP3hd > :first-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.salesocialsharedisplay_DoorOption_2syb_ {
-  display: none;
 }
 .salesectioneventschedule_SaleSchedCtn_3yzeu {
   height: 480px;

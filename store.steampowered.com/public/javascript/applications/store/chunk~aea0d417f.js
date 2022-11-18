@@ -2972,15 +2972,16 @@
     38600: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ij: () => w,
-        JW: () => C,
+        Ij: () => E,
+        JW: () => I,
         Ue: () => a,
-        iC: () => E,
+        iC: () => C,
         jV: () => p,
-        q: () => S,
+        pq: () => _,
+        q: () => w,
         u_: () => r,
-        wK: () => _,
-        x3: () => h,
+        wK: () => g,
+        x3: () => v,
       });
       var a,
         r,
@@ -3068,9 +3069,12 @@
         return t === r.k_eFacebook ? n + "&t=" + Math.random() : n;
       }
       function _(e) {
-        return v(e, a.k_eStoreView, "absolute");
+        return S(e, a.k_eStoreSalePage, "absolute");
       }
-      function g(e, t, n) {
+      function g(e) {
+        return S(e, a.k_eStoreView, "absolute");
+      }
+      function h(e, t, n) {
         if (n)
           return (
             (e ? "/games/" + d.JA.VANITY_ID : "/groups/" + d.JA.VANITY_ID) + "/"
@@ -3078,14 +3082,14 @@
         const a = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return d.De.COMMUNITY_BASE_URL + a + "/";
       }
-      function h() {
+      function v() {
         return "news";
       }
-      function v(e, t, n) {
+      function S(e, t, n) {
         const r = "relative" === n,
           s = "community" === (0, d.Zv)(),
           o = r ? "/" : d.De.STORE_BASE_URL,
-          i = g(e.appid, e.clanSteamID, r);
+          i = h(e.appid, e.clanSteamID, r);
         t === a.k_eView
           ? (t = s ? a.k_eCommunityView : a.k_eStoreView)
           : t === a.k_eViewWebSiteHub &&
@@ -3168,31 +3172,31 @@
             return (0, l.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      function S(e, t, n) {
-        return v(
+      function w(e, t, n) {
+        return S(
           e,
           t,
           "forceAbsolute" === n || !u(t, e) ? "absolute" : "relative"
         );
       }
-      function w(e, t) {
+      function E(e, t) {
         const n = u(t, e),
-          a = v(e, t, n ? "relative" : "absolute");
+          a = S(e, t, n ? "relative" : "absolute");
         return n
           ? s.createElement(o.l_, { push: !0, to: a })
           : (window.open(a), null);
       }
-      function E(e, t, n) {
-        const a = g(e, t, !1);
+      function C(e, t, n) {
+        const a = h(e, t, !1);
         return "admin" === n ? a + "partnerevents" : "";
       }
-      function C(e) {
+      function I(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: n } = s.useContext(c.u),
           a = (0, o.k6)();
         if (!e.eventModel) return null;
         const r = n && u(e.route, e.eventModel),
-          l = v(e.eventModel, e.route, r ? "relative" : "absolute");
+          l = S(e.eventModel, e.route, r ? "relative" : "absolute");
         return r
           ? s.createElement(
               i.IS,

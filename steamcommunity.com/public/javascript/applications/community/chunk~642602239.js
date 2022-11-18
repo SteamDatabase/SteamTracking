@@ -4513,7 +4513,10 @@
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
         })(X || (X = {})),
         (function (e) {
-          (e.Facebook = "Facebook"), (e.Twitter = "Twitter");
+          (e.Steam = "Steam"),
+            (e.Facebook = "Facebook"),
+            (e.Twitter = "Twitter"),
+            (e.Reddit = "Reddit");
         })(Z || (Z = {})),
         (function (e) {
           (e.Summary = "summary"),
@@ -35946,14 +35949,15 @@
       r.d(t, {
         Ue: () => c,
         u_: () => d,
-        JW: () => v,
+        JW: () => w,
         uX: () => l,
-        q: () => y,
-        iC: () => b,
-        x3: () => g,
+        q: () => B,
+        iC: () => v,
+        x3: () => f,
         jV: () => p,
-        wK: () => _,
-        Ij: () => B,
+        wK: () => h,
+        pq: () => _,
+        Ij: () => b,
       });
       var i = r(67294),
         n = r(78587),
@@ -36040,9 +36044,12 @@
         return t === d.k_eFacebook ? r + "&t=" + Math.random() : r;
       }
       function _(e) {
-        return f(e, c.k_eStoreView, "absolute");
+        return y(e, c.k_eStoreSalePage, "absolute");
       }
-      function h(e, t, r) {
+      function h(e) {
+        return y(e, c.k_eStoreView, "absolute");
+      }
+      function g(e, t, r) {
         if (r)
           return (
             (e ? "/games/" + o.JA.VANITY_ID : "/groups/" + o.JA.VANITY_ID) + "/"
@@ -36050,14 +36057,14 @@
         const i = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return o.De.COMMUNITY_BASE_URL + i + "/";
       }
-      function g() {
+      function f() {
         return "news";
       }
-      function f(e, t, r) {
+      function y(e, t, r) {
         const i = "relative" === r,
           n = "community" === (0, o.Zv)(),
           a = i ? "/" : o.De.STORE_BASE_URL,
-          l = h(e.appid, e.clanSteamID, i);
+          l = g(e.appid, e.clanSteamID, i);
         t === c.k_eView
           ? (t = n ? c.k_eCommunityView : c.k_eStoreView)
           : t === c.k_eViewWebSiteHub &&
@@ -36140,31 +36147,31 @@
             return (0, s.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      function y(e, t, r) {
-        return f(
+      function B(e, t, r) {
+        return y(
           e,
           t,
           "forceAbsolute" === r || !u(t, e) ? "absolute" : "relative"
         );
       }
-      function B(e, t) {
+      function b(e, t) {
         const r = u(t, e),
-          a = f(e, t, r ? "relative" : "absolute");
+          a = y(e, t, r ? "relative" : "absolute");
         return r
           ? i.createElement(n.l_, { push: !0, to: a })
           : (window.open(a), null);
       }
-      function b(e, t, r) {
-        const i = h(e, t, !1);
+      function v(e, t, r) {
+        const i = g(e, t, !1);
         return "admin" === r ? i + "partnerevents" : "";
       }
-      function v(e) {
+      function w(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: r } = i.useContext(l),
           s = (0, n.k6)();
         if (!e.eventModel) return null;
         const o = r && u(e.route, e.eventModel),
-          c = f(e.eventModel, e.route, o ? "relative" : "absolute");
+          c = y(e.eventModel, e.route, o ? "relative" : "absolute");
         return o
           ? i.createElement(
               a.IS,

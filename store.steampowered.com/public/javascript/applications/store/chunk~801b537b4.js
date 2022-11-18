@@ -1806,7 +1806,10 @@
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
         })(U || (U = {})),
         (function (e) {
-          (e.Facebook = "Facebook"), (e.Twitter = "Twitter");
+          (e.Steam = "Steam"),
+            (e.Facebook = "Facebook"),
+            (e.Twitter = "Twitter"),
+            (e.Reddit = "Reddit");
         })(W || (W = {})),
         (function (e) {
           (e.Summary = "summary"),

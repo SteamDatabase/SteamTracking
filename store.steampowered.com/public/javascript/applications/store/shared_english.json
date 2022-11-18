@@ -421,6 +421,8 @@
     "EventDisplay_EventUpcoming_WithDateAndTime": "Event starts %1$s at %2$s",
     "EventDisplay_TimeEventActive": "Event is running now",
     "EventDisplay_TimeEventOnNow": "On now!",
+    "EventDisplay_Share_WithFriendsHeader": "Share with Friends",
+    "EventDisplay_Share_LanguageLabel": "Share content in:",
     "EventDisplay_Share_Link": "Link: ",
     "EventDisplay_Share_OnMyStatus": "Share directly to my status",
     "EventDisplay_Share_OnMyStatus_Details": "Post this status to your Friends Activity feed. Steam will include the message and item preview shown below.",

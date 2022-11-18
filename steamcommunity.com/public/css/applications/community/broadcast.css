@@ -377,6 +377,9 @@
   padding-right: 10px;
   padding-left: 2px;
 }
+.discussionwidget_ShareButtonContainer_3tMDZ {
+  justify-content: center;
+}
 @media screen and (max-width: 700px) {
   .discussionwidget_LinkInputLabel_Gaizo {
     display: none;
@@ -475,6 +478,24 @@
     padding: 0px;
     background: none;
   }
+}
+.discussionwidget_ShareLanguagePicker_c-WS8 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 8px;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .discussionwidget_ShareLanguagePicker_c-WS8 {
+    flex-direction: column;
+  }
+}
+.discussionwidget_ShareLanguagePicker_c-WS8
+  .discussionwidget_LanguageLabel_GHNBo {
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
 }
 .discussionwidget_ShareBtn_1qDAn:not(:first-child) {
   margin-left: 8px;

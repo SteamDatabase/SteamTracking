@@ -13,8 +13,8 @@
         DiscussionButton: "discussionwidget_DiscussionButton_wnKan",
         DiscussIcon: "discussionwidget_DiscussIcon_3-isH",
         linkField: "discussionwidget_linkField_1mRpV",
-        LinkInputLabel: "discussionwidget_LinkInputLabel_Gaizo",
         ShareButtonContainer: "discussionwidget_ShareButtonContainer_3tMDZ",
+        LinkInputLabel: "discussionwidget_LinkInputLabel_Gaizo",
         LinkButton: "discussionwidget_LinkButton_q5-pg",
         ShareSteamBtn: "discussionwidget_ShareSteamBtn_3Gc7y",
         ClipboardText: "discussionwidget_ClipboardText_3iQp-",
@@ -23,6 +23,8 @@
         ClipboardIcon: "discussionwidget_ClipboardIcon_sEXEi",
         SteamIcon: "discussionwidget_SteamIcon_3ZAOL",
         share_controls_ctn: "discussionwidget_share_controls_ctn_1PRQm",
+        ShareLanguagePicker: "discussionwidget_ShareLanguagePicker_c-WS8",
+        LanguageLabel: "discussionwidget_LanguageLabel_GHNBo",
         ShareBtn: "discussionwidget_ShareBtn_1qDAn",
         VoteCount: "discussionwidget_VoteCount_2dVe4",
         DiscussionCount: "discussionwidget_DiscussionCount_1GFRK",
@@ -89,7 +91,7 @@
     },
     93612: (t, e, i) => {
       "use strict";
-      i.d(e, { i: () => h });
+      i.d(e, { i: () => u });
       var o = i(67294),
         n = i(26149),
         s = i(50153),
@@ -98,10 +100,10 @@
         l = i(35092),
         r = i(90666),
         g = i(77723);
-      function h(t) {
+      function u(t) {
         const { gidEvent: e } = t,
           i = (0, s.XC)(e),
-          [h, u] = (0, o.useMemo)(() => {
+          [u, h] = (0, o.useMemo)(() => {
             var t, e, o, s;
             if (
               (null ===
@@ -141,17 +143,17 @@
             }
             return [null, null];
           }, [i]);
-        return (null == h ? void 0 : h.length) > 0 &&
-          (null == u ? void 0 : u.length) > 0
+        return (null == u ? void 0 : u.length) > 0 &&
+          (null == h ? void 0 : h.length) > 0
           ? o.createElement(
               "a",
               { href: (0, l.OL)(i.GetSaleURL()), className: g.Link },
               o.createElement("img", {
-                src: h,
+                src: u,
                 className: (0, c.Z)(g.Banner, g.Big),
               }),
               o.createElement("img", {
-                src: u,
+                src: h,
                 className: (0, c.Z)(g.Banner, g.Mobile),
               })
             )
@@ -169,9 +171,9 @@
         l = i(99533),
         r = i(41311),
         g = i(48341),
-        h = i(95598),
-        u = i(35944),
-        d = i.n(u),
+        u = i(95598),
+        h = i(35944),
+        d = i.n(h),
         L = i(48899);
       !(function (t) {
         (t.topleft = "topleft"),
@@ -529,7 +531,7 @@
                         className: d().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      s.createElement(h.pVO, null)
+                      s.createElement(u.pVO, null)
                     ),
                   !this.props.bDisableLink &&
                     s.createElement(
@@ -538,7 +540,7 @@
                         className: d().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      s.createElement(h.pkz, null)
+                      s.createElement(u.pkz, null)
                     ),
                   s.createElement(
                     "div",

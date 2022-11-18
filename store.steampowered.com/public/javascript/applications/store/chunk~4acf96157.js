@@ -81,8 +81,8 @@
         DiscussionButton: "discussionwidget_DiscussionButton_wnKan",
         DiscussIcon: "discussionwidget_DiscussIcon_3-isH",
         linkField: "discussionwidget_linkField_1mRpV",
-        LinkInputLabel: "discussionwidget_LinkInputLabel_Gaizo",
         ShareButtonContainer: "discussionwidget_ShareButtonContainer_3tMDZ",
+        LinkInputLabel: "discussionwidget_LinkInputLabel_Gaizo",
         LinkButton: "discussionwidget_LinkButton_q5-pg",
         ShareSteamBtn: "discussionwidget_ShareSteamBtn_3Gc7y",
         ClipboardText: "discussionwidget_ClipboardText_3iQp-",
@@ -91,6 +91,8 @@
         ClipboardIcon: "discussionwidget_ClipboardIcon_sEXEi",
         SteamIcon: "discussionwidget_SteamIcon_3ZAOL",
         share_controls_ctn: "discussionwidget_share_controls_ctn_1PRQm",
+        ShareLanguagePicker: "discussionwidget_ShareLanguagePicker_c-WS8",
+        LanguageLabel: "discussionwidget_LanguageLabel_GHNBo",
         ShareBtn: "discussionwidget_ShareBtn_1qDAn",
         VoteCount: "discussionwidget_VoteCount_2dVe4",
         DiscussionCount: "discussionwidget_DiscussionCount_1GFRK",
@@ -564,7 +566,7 @@
               s.createElement(I, Object.assign({}, c))
             )
           ),
-          s.createElement(N, { value: i, onChange: n, onSubmit: r })
+          s.createElement(w, { value: i, onChange: n, onSubmit: r })
         );
       }
       function b(e) {
@@ -586,7 +588,7 @@
               );
             })
           ),
-          s.createElement(N, { value: n, onChange: t })
+          s.createElement(w, { value: n, onChange: t })
         );
       }
       function M(e) {
@@ -597,7 +599,7 @@
           s.createElement("div", { className: v.SectionContent }, e.children)
         );
       }
-      function N(e) {
+      function w(e) {
         const { value: t, onChange: n, onSubmit: o } = e;
         return s.createElement(
           "div",
@@ -612,7 +614,7 @@
           })
         );
       }
-      function w(e) {
+      function N(e) {
         const { className: t } = e,
           n = (0, o._T)(e, ["className"]);
         return s.createElement(
@@ -1038,7 +1040,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   s.createElement(
-                    w,
+                    N,
                     null,
                     i
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1057,7 +1059,7 @@
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   s.createElement(
-                    w,
+                    N,
                     null,
                     i
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1101,7 +1103,7 @@
             onSubmit: () => n(c[0]),
             renderEmpty: () =>
               i
-                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                ? s.createElement(N, null, (0, u.Xx)("#AddonPicker_NoResults"))
                 : s.createElement(W, null),
           });
         }
@@ -1111,7 +1113,7 @@
           s.Fragment,
           null,
           s.createElement(
-            w,
+            N,
             null,
             (0, u.Xx)(
               "#AddonPicker_NoneOwned",
@@ -1119,7 +1121,7 @@
             )
           ),
           s.createElement(
-            w,
+            N,
             null,
             (0, u.kQ)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
@@ -1156,12 +1158,12 @@
             onSubmit: () => t(o[0]),
             renderEmpty: () =>
               n
-                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                ? s.createElement(N, null, (0, u.Xx)("#AddonPicker_NoResults"))
                 : s.createElement(
                     s.Fragment,
                     null,
                     s.createElement(
-                      w,
+                      N,
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -1169,7 +1171,7 @@
                       )
                     ),
                     s.createElement(
-                      w,
+                      N,
                       null,
                       (0, u.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
@@ -1206,12 +1208,12 @@
             onSubmit: () => n(i[0]),
             renderEmpty: () =>
               o
-                ? s.createElement(w, null, (0, u.Xx)("#AddonPicker_NoResults"))
+                ? s.createElement(N, null, (0, u.Xx)("#AddonPicker_NoResults"))
                 : s.createElement(
                     s.Fragment,
                     null,
                     s.createElement(
-                      w,
+                      N,
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
@@ -1219,7 +1221,7 @@
                       )
                     ),
                     s.createElement(
-                      w,
+                      N,
                       null,
                       (0, u.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
@@ -1260,7 +1262,7 @@
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   s.createElement(
-                    w,
+                    N,
                     null,
                     i
                       ? (0, u.Xx)("#AddonPicker_NoResults")
@@ -1285,7 +1287,7 @@
                   renderEmpty: () =>
                     i
                       ? s.createElement(
-                          w,
+                          N,
                           null,
                           (0, u.Xx)("#AddonPicker_NoResults")
                         )
@@ -1323,7 +1325,7 @@
                 renderEmpty: () =>
                   i
                     ? s.createElement(
-                        w,
+                        N,
                         null,
                         (0, u.Xx)("#AddonPicker_NoResults")
                       )
