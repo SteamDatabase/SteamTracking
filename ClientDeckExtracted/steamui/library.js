@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7668456";
+var CLSTAMP = "7674491";
 (() => {
   var e,
     t,
@@ -4960,11 +4960,20 @@ var CLSTAMP = "7668456";
       },
       27715: (e, t, r) => {
         "use strict";
-        r.d(t, { S: () => a });
+        r.d(t, { A: () => a, S: () => o });
         var n = r(70655),
           i = r(67294),
           s = r(31535);
-        class a extends i.Component {
+        function a(e) {
+          return function (t) {
+            return i.createElement(
+              o,
+              null,
+              i.createElement(e, Object.assign({}, t))
+            );
+          };
+        }
+        class o extends i.Component {
           constructor(e) {
             super(e), (this.state = {}), (this.state.lastErrorKey = e.errorKey);
           }
@@ -4972,7 +4981,7 @@ var CLSTAMP = "7668456";
             this.sm_ErrorReportingStore = e;
           }
           componentDidCatch(e, t) {
-            const r = a.sm_ErrorReportingStore;
+            const r = o.sm_ErrorReportingStore;
             r
               ? r
                   .ReportError(e)
@@ -4993,33 +5002,33 @@ var CLSTAMP = "7668456";
           }
           render() {
             const { children: e, fallback: t, errorKey: r } = this.props,
-              { error: n, identifierHash: s, lastErrorKey: l } = this.state;
-            return n && r == l
+              { error: n, identifierHash: s, lastErrorKey: a } = this.state;
+            return n && r == a
               ? void 0 !== t
                 ? "function" == typeof t
                   ? t(n.error)
                   : t
-                : a.sm_ErrorReportingStore &&
-                  a.sm_ErrorReportingStore.reporting_enabled
-                ? i.createElement(c, {
+                : o.sm_ErrorReportingStore &&
+                  o.sm_ErrorReportingStore.reporting_enabled
+                ? i.createElement(l, {
                     error: n,
                     identifierHash: s,
-                    store: a.sm_ErrorReportingStore,
+                    store: o.sm_ErrorReportingStore,
                     onRefresh: this.Reset,
                   })
-                : i.createElement(o, { error: n, onDismiss: this.Reset })
+                : i.createElement(c, { error: n, onDismiss: this.Reset })
               : e || null;
           }
         }
-        (0, n.gn)([s.ak], a.prototype, "Reset", null);
-        const o = ({ error: e, onDismiss: t }) => {
+        (0, n.gn)([s.ak], o.prototype, "Reset", null);
+        const c = ({ error: e, onDismiss: t }) => {
             let r = e.error ? e.error.stack : "Stack missing",
               n = e.info ? e.info.componentStack : "",
               s = (e.error && e.error.message) || "unknown error";
             return i.createElement(
-              l,
+              u,
               null,
-              i.createElement(u, null, 'Error: "', s, '"'),
+              i.createElement(d, null, 'Error: "', s, '"'),
               "   ",
               i.createElement(
                 "span",
@@ -5030,19 +5039,19 @@ var CLSTAMP = "7668456";
                 "(x) Dismiss"
               ),
               i.createElement("br", null),
-              i.createElement(d, null, r),
-              i.createElement(d, null, "The error occurred while rendering:", n)
+              i.createElement(m, null, r),
+              i.createElement(m, null, "The error occurred while rendering:", n)
             );
           },
-          c = (e) => {
+          l = (e) => {
             const { error: t, onRefresh: r, identifierHash: n, store: s } = e,
               a = (t.error && t.error.message) || "unknown error",
               o = `${s.product}_${s.version}_${n}`;
             return i.createElement(
-              l,
+              u,
               null,
               i.createElement(
-                u,
+                d,
                 null,
                 "Something went wrong while displaying this content. ",
                 i.createElement(
@@ -5054,11 +5063,11 @@ var CLSTAMP = "7668456";
                   "Refresh"
                 )
               ),
-              i.createElement(d, null, "Error Reference: ", o),
-              i.createElement(d, null, a)
+              i.createElement(m, null, "Error Reference: ", o),
+              i.createElement(m, null, a)
             );
           },
-          l = ({ children: e }) =>
+          u = ({ children: e }) =>
             i.createElement(
               "div",
               {
@@ -5073,7 +5082,7 @@ var CLSTAMP = "7668456";
               },
               e
             ),
-          u = ({ children: e }) =>
+          d = ({ children: e }) =>
             i.createElement(
               "h1",
               {
@@ -5086,7 +5095,7 @@ var CLSTAMP = "7668456";
               },
               e
             ),
-          d = ({ children: e }) =>
+          m = ({ children: e }) =>
             i.createElement(
               "pre",
               {
@@ -6964,9 +6973,9 @@ var CLSTAMP = "7668456";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 16 2022 : 15:39:35",
-                    BUILD_TIME_UTC: "Nov 16 2022 : 23:39:35",
-                    BUILD_RTIME_UTC: 1668641975,
+                    BUILD_TIME_LOCAL: "Nov 18 2022 : 18:32:55",
+                    BUILD_TIME_UTC: "Nov 19 2022 : 02:32:55",
+                    BUILD_RTIME_UTC: 1668825175,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)

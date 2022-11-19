@@ -149,9 +149,6 @@ button.DialogButton::-moz-focus-inner {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   border: 2px solid #23262e;
 }
-.DeckVerifiedModalDialogClient .DialogContent {
-  max-height: 70vh;
-}
 .DeckVerifiedModalDialog .DialogContent {
   max-height: 85vh;
 }

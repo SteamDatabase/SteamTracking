@@ -9684,19 +9684,19 @@
                 : (P || R) && nn(N, u, C, a, g, E, void 0, h, f);
             },
             x = (A, e) => {
-              var t, n, o, r;
+              var t, n, o, l;
               if (-1 == E) return;
               const {
-                bIsExtraBinding: l,
-                bAllowBindingRevert: c,
-                bIsExtraBindingOnCycle: d,
-                bIsBoundToEmptyAction: p,
-                bHasBinding: v,
-                bGameAction: b,
-                bModeShift: D,
+                bIsExtraBinding: c,
+                bAllowBindingRevert: d,
+                bIsExtraBindingOnCycle: p,
+                bIsBoundToEmptyAction: v,
+                bHasBinding: b,
+                bGameAction: D,
+                bModeShift: w,
               } = F(A);
-              const w = oA.Zu.filter((A) => A.value === B.activation),
-                y = i.createElement(
+              const y = oA.Zu.filter((A) => A.value === B.activation),
+                G = i.createElement(
                   "div",
                   { className: nA().FlexFlowRow },
                   i.createElement(iA.$r, {
@@ -9708,19 +9708,19 @@
                   i.createElement(
                     "div",
                     { className: nA().ActivatorText },
-                    null == B || 1 === B.activation ? "" : (0, oA.vJ)(w[0].id)
+                    null == B || 1 === B.activation ? "" : (0, oA.vJ)(y[0].id)
                   )
                 ),
-                S = R ? oA.Zu.filter((A) => !A.filter_alwayson) : oA.Zu,
-                G = i.createElement(
+                M = R ? oA.Zu.filter((A) => !A.filter_alwayson) : oA.Zu,
+                T = i.createElement(
                   uA.xV,
-                  { label: y },
-                  !l &&
-                    v &&
+                  { label: G },
+                  !c &&
+                    b &&
                     i.createElement(
                       uA.D1,
-                      { label: (0, oA.vJ)(w[0].id) },
-                      S.map((A) => {
+                      { label: (0, oA.vJ)(y[0].id) },
+                      M.map((A) => {
                         return i.createElement(
                           uA.Zo,
                           {
@@ -9735,8 +9735,8 @@
                       })
                     ),
                   Z &&
-                    !l &&
-                    v &&
+                    !c &&
+                    b &&
                     i.createElement(
                       uA.Zo,
                       { onSelected: W },
@@ -9744,10 +9744,10 @@
                         "#ControllerConfigurator_Activator_ContextMenuItem_ActivatorSettings_Title"
                       )
                     ),
-                  !l &&
-                    !b &&
-                    !P &&
+                  !c &&
                     !D &&
+                    !P &&
+                    !w &&
                     i.createElement(
                       WA.nQ,
                       {
@@ -9791,19 +9791,19 @@
                         initialText: (0, I.Xx)(
                           "#ControllerConfigurator_ActionSets_RenameBaseSetDialog_InitialText_1",
                           null ===
-                            (r =
+                            (l =
                               null ===
                                 (o = null == B ? void 0 : B.bindings[A]) ||
                               void 0 === o
                                 ? void 0
-                                : o.key_binding_data) || void 0 === r
+                                : o.key_binding_data) || void 0 === l
                             ? void 0
-                            : r.friendly_name_utf8
+                            : l.friendly_name_utf8
                         ),
                       })
                     ),
                   g &&
-                    !p &&
+                    !v &&
                     i.createElement(
                       uA.Zo,
                       {
@@ -9815,7 +9815,7 @@
                         "#ControllerConfigurator_Activator_ContextMenuItem_ResetToEmpty_Title"
                       )
                     ),
-                  c &&
+                  d &&
                     i.createElement(
                       uA.Zo,
                       {
@@ -9826,7 +9826,7 @@
                       (0, I.Xx)(O(A))
                     ),
                   !R &&
-                    !l &&
+                    !c &&
                     i.createElement(
                       i.Fragment,
                       null,
@@ -9837,12 +9837,48 @@
                         uA.Zo,
                         {
                           onSelected: () => {
-                            var A;
+                            var A, e, t;
                             C.inherited_from_parentset &&
                               (null === (A = null == B ? void 0 : B.bindings) ||
                                 void 0 === A ||
                                 A.forEach((A) => k(-1, A))),
                               nn(N, u, C, a, g, -1, void 0, h, f);
+                            const n = {
+                                type: s.tg
+                                  .k_EControllerBindingType_ControllerAction,
+                                controller_action: { action: 40 },
+                              },
+                              o = {
+                                action_set_key: a.key,
+                                action_set_layer_key:
+                                  null == g ? void 0 : g.key,
+                                source_binding_key: u,
+                                input_key: C.key,
+                                activator_index:
+                                  null !==
+                                    (t =
+                                      null === (e = C.activators) ||
+                                      void 0 === e
+                                        ? void 0
+                                        : e.length) && void 0 !== t
+                                    ? t
+                                    : 0,
+                                binding_index: 0,
+                                modeid: h,
+                                mode_shift: f,
+                                new_binding: n,
+                                source_mode: m,
+                              };
+                            aA._A.SetControllerInputBinding(N, o),
+                              aA._A.SaveEditingConfiguration(N),
+                              aA._A.EnsureEditingConfiguration(),
+                              aA._A.SetEditedInputBinding(n),
+                              aA._A.SetActiveInputBinding(o),
+                              S.push(
+                                r.Z5.GamepadUI.ControllerConfigurator.ChooseBinding(
+                                  N
+                                )
+                              );
                           },
                         },
                         (0, I.Xx)(
@@ -9853,7 +9889,7 @@
                         uA.Zo,
                         {
                           onSelected: () => {
-                            var A, e;
+                            var A, e, t, n;
                             (null === (A = null == B ? void 0 : B.bindings) ||
                             void 0 === A
                               ? void 0
@@ -9867,12 +9903,42 @@
                                   type: s.tg
                                     .k_EControllerBindingType_ControllerAction,
                                   controller_action: { action: 40 },
-                                }),
-                              k(-1, {
-                                type: s.tg
-                                  .k_EControllerBindingType_ControllerAction,
-                                controller_action: { action: 40 },
-                              });
+                                });
+                            const o = {
+                              type: s.tg
+                                .k_EControllerBindingType_ControllerAction,
+                              controller_action: { action: 40 },
+                            };
+                            k(-1, o);
+                            const i = {
+                              action_set_key: a.key,
+                              action_set_layer_key: null == g ? void 0 : g.key,
+                              source_binding_key: u,
+                              input_key: C.key,
+                              activator_index: E,
+                              binding_index:
+                                null !==
+                                  (n =
+                                    null === (t = B.bindings) || void 0 === t
+                                      ? void 0
+                                      : t.length) && void 0 !== n
+                                  ? n
+                                  : 0,
+                              modeid: h,
+                              mode_shift: f,
+                              new_binding: o,
+                              source_mode: m,
+                            };
+                            aA._A.SetControllerInputBinding(N, i),
+                              aA._A.SaveEditingConfiguration(N),
+                              aA._A.EnsureEditingConfiguration(),
+                              aA._A.SetEditedInputBinding(o),
+                              aA._A.SetActiveInputBinding(i),
+                              S.push(
+                                r.Z5.GamepadUI.ControllerConfigurator.ChooseBinding(
+                                  N
+                                )
+                              );
                           },
                         },
                         (0, I.Xx)(
@@ -9881,7 +9947,7 @@
                       )
                     )
                 );
-              (0, sA.yV)(G, e);
+              (0, sA.yV)(T, e);
             },
             H = oA.Zd[null == B ? void 0 : B.activation],
             X = null == B ? void 0 : (0, oA.AT)(B.settings, H, u, Q),
@@ -27411,7 +27477,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1668641975),
+          d = parseInt(1668825175),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36520,54 +36586,54 @@
           C = (0, eA.$B)(r.Z5.GamepadUI.AppRunning()),
           E = (0, Xa.C)(e);
         let I = (0, z.Nb)(),
-          B =
-            ((0, m.SZ)(() => T.hq.WindowStore.BHasOverlayWindowForApp(e)) &&
-              I.forcedAppID != e) ||
-            0 == Ne.iB.ActiveTouchMenus.length,
-          p = Ne.iB.ActiveTouchMenus.some((A) => A.MenuState.bActive),
-          v = null == a ? void 0 : a.appid;
-        const h = i.useRef(0),
-          f = i.useRef(!1);
-        let [b, D] = i.useState(e),
-          [w, Q] = i.useState(performance.now()),
-          [y, N] = i.useState(!1),
-          S = d || (e == g.rB && (y || n != lo.MA.None));
-        n == lo.MA.Main && (S = !0), (0, T.Vg)(!S);
-        const G = (0, Fa.ub)(),
-          k = (0, z.iR)();
+          B = (0, m.SZ)(() => T.hq.WindowStore.BHasOverlayWindowForApp(e)),
+          p = null == a ? void 0 : a.appid,
+          v =
+            (B && I.forcedAppID != e) ||
+            -1 == Ne.iB.AppsWithTouchMenusEnabled.indexOf(p),
+          h = Ne.iB.ActiveTouchMenus.some((A) => A.MenuState.bActive);
+        const f = i.useRef(0),
+          b = i.useRef(!1);
+        let [D, w] = i.useState(e),
+          [Q, y] = i.useState(performance.now()),
+          [N, S] = i.useState(!1),
+          G = d || (e == g.rB && (N || n != lo.MA.None));
+        n == lo.MA.Main && (G = !0), (0, T.Vg)(!G);
+        const k = (0, Fa.ub)(),
+          M = (0, z.iR)();
         if (
           (i.useEffect(() => {
-            l && !c && C && !f.current && ((f.current = !0), G(), k());
-          }, [l, c, C, k, G]),
+            l && !c && C && !b.current && ((b.current = !0), k(), M());
+          }, [l, c, C, M, k]),
           i.useEffect(() => {
-            e != b && (D(e), Q(performance.now()), N(!1));
+            e != D && (w(e), y(performance.now()), S(!1));
             const A = () => {
               let e = performance.now();
-              e - w >= 5e3
-                ? N(!0)
-                : (h.current = window.setTimeout(A, 5e3 - (e - w)));
+              e - Q >= 5e3
+                ? S(!0)
+                : (f.current = window.setTimeout(A, 5e3 - (e - Q)));
             };
             return (
-              (h.current = window.setTimeout(A, 5e3)),
+              (f.current = window.setTimeout(A, 5e3)),
               () => {
-                clearTimeout(h.current), (h.current = void 0);
+                clearTimeout(f.current), (f.current = void 0);
               }
             );
-          }, [e, b, w]),
+          }, [e, D, Q]),
           l && !u)
         )
-          return i.createElement(fI, { enableAbort: y });
-        if (u && !B) return i.createElement(Fe, { appID: v, bVisible: p });
-        let M = n == lo.MA.Main,
-          P = E.length > 0;
+          return i.createElement(fI, { enableAbort: N });
+        if (u && !v) return i.createElement(Fe, { appID: p, bVisible: h });
+        let P = n == lo.MA.Main,
+          R = E.length > 0;
         return !t ||
           o == s.s7.Hidden ||
           n == lo.MA.QuickAccess ||
-          M ||
           P ||
+          R ||
           (null == I ? void 0 : I.mode) == z.iZ.Overlay
           ? null
-          : i.createElement(fI, { enableAbort: y });
+          : i.createElement(fI, { enableAbort: N });
       });
       function fI(A) {
         const e = (0, T.K6)();
@@ -36818,9 +36884,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 16 2022 : 15:39:35",
-              BUILD_TIME_UTC: "Nov 16 2022 : 23:39:35",
-              BUILD_RTIME_UTC: 1668641975,
+              BUILD_TIME_LOCAL: "Nov 18 2022 : 18:32:55",
+              BUILD_TIME_UTC: "Nov 19 2022 : 02:32:55",
+              BUILD_RTIME_UTC: 1668825175,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
