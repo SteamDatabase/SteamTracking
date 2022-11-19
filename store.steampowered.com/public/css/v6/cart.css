@@ -1456,6 +1456,7 @@ div.game_hover {
 .cart_totals_area {
 	margin-left: auto;
 	margin-top: 3px;
+	padding: 16px;
 }
 
 .cart_total_row {
@@ -1687,7 +1688,7 @@ div.game_hover {
 
 .estimated_total_box {
 
-	padding: 16px;
+	/* padding: 16px; */
 }
 
 .cart_purchase_action_section * .estimated_total_box
