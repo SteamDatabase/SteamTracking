@@ -14109,28 +14109,33 @@
       var Zn = n(21735),
         Xn = n(74163);
       function qn(e) {
-        const { strDialogTitle: t, state: n, closeModal: r } = e,
+        const {
+            strDialogTitle: t,
+            state: n,
+            closeModal: r,
+            strThrobber: o,
+          } = e,
           {
-            bLoading: o,
-            bError: i,
-            bSuccess: s,
-            strError: l,
-            strSuccess: c,
+            bLoading: i,
+            bError: s,
+            bSuccess: l,
+            strError: c,
+            strSuccess: d,
           } = n;
-        return i || l
+        return s || c
           ? a.createElement(
               rn.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: r },
               a.createElement(
                 "div",
                 { className: Zn.ErrorStylesWithIcon },
-                l || (0, N.Xx)("#Error_ErrorCommunicatingWithNetwork")
+                c || (0, N.Xx)("#Error_ErrorCommunicatingWithNetwork")
               )
             )
-          : s || c
+          : l || d
           ? a.createElement(rn.uH, {
               strTitle: t,
-              strDescription: c || (0, N.Xx)("#EventDisplay_Share_Success"),
+              strDescription: d || (0, N.Xx)("#EventDisplay_Share_Success"),
               bAlertDialog: !0,
               closeModal: r,
             })
@@ -14138,7 +14143,7 @@
               rn.uH,
               { strTitle: t, closeModal: () => {} },
               a.createElement(D.V, {
-                string: (0, N.Xx)("#Loading"),
+                string: o || (0, N.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               })

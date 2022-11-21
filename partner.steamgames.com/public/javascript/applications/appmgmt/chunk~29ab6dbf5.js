@@ -11173,6 +11173,41 @@
             );
           });
         }
+        UpdateOptInRegistrationJson(e, t) {
+          var i;
+          return (0, r.mG)(this, void 0, void 0, function* () {
+            let r = null;
+            try {
+              const n = new FormData();
+              n.append("sessionid", g.De.SESSIONID),
+                n.append("appid", "" + e),
+                n.append("opt_in_name", t.opt_in_name),
+                n.append("jsondata", JSON.stringify(t));
+              const a =
+                  g.De.PARTNER_BASE_URL +
+                  "optin/ajaxupdateoptinregistrationpayload/" +
+                  e,
+                o = yield s().post(a, n, { withCredentials: !0 });
+              if (
+                200 == (null == o ? void 0 : o.status) &&
+                1 ==
+                  (null === (i = o.data) || void 0 === i ? void 0 : i.success)
+              )
+                return null;
+              r = (0, d.l)(o);
+            } catch (e) {
+              r = (0, d.l)(e);
+            }
+            return (
+              console.error(
+                "COptInRegistrations::UpdateOptInRegistrationJson error " +
+                  r.strErrorMsg,
+                r
+              ),
+              r.strErrorMsg
+            );
+          });
+        }
         static Get() {
           return (
             h.s_OptInRegs ||

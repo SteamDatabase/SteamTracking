@@ -33911,28 +33911,33 @@
         };
       }
       function c(e) {
-        const { strDialogTitle: t, state: n, closeModal: l } = e,
+        const {
+            strDialogTitle: t,
+            state: n,
+            closeModal: l,
+            strThrobber: c,
+          } = e,
           {
-            bLoading: c,
-            bError: d,
-            bSuccess: m,
-            strError: u,
-            strSuccess: p,
+            bLoading: d,
+            bError: m,
+            bSuccess: u,
+            strError: p,
+            strSuccess: _,
           } = n;
-        return d || u
+        return m || p
           ? a.createElement(
               i.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: l },
               a.createElement(
                 "div",
                 { className: r.ErrorStylesWithIcon },
-                u || (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork")
+                p || (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork")
               )
             )
-          : m || p
+          : u || _
           ? a.createElement(i.uH, {
               strTitle: t,
-              strDescription: p || (0, s.Xx)("#EventDisplay_Share_Success"),
+              strDescription: _ || (0, s.Xx)("#EventDisplay_Share_Success"),
               bAlertDialog: !0,
               closeModal: l,
             })
@@ -33940,7 +33945,7 @@
               i.uH,
               { strTitle: t, closeModal: () => {} },
               a.createElement(o.V, {
-                string: (0, s.Xx)("#Loading"),
+                string: c || (0, s.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               })
@@ -51656,7 +51661,7 @@
     },
     62491: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OptInRoutes: () => Gi, default: () => Pi });
+      n.r(t), n.d(t, { OptInRoutes: () => Li, default: () => Ni });
       var a = n(9355),
         i = n(92244),
         r = n(9669),
@@ -52708,7 +52713,7 @@
               d.createElement(
                 m.rU,
                 {
-                  to: Gi.OptinAdminEdit(r.pageid),
+                  to: Li.OptinAdminEdit(r.pageid),
                   className: (0, S.Z)(h().Button, h().Primary),
                 },
                 "Edit Opt-In Definition"
@@ -52720,7 +52725,7 @@
                     href:
                       D.De.PARTNER_BASE_URL +
                       "optin" +
-                      Gi.OptInAppReview(r.pageid),
+                      Li.OptInAppReview(r.pageid),
                     className: (0, S.Z)(h().Button),
                     target: "_blank",
                   },
@@ -61646,7 +61651,7 @@
               { className: fe().BasicButtonSize },
               d.createElement(
                 m.rU,
-                { to: Gi.OptinAdminDashboard() },
+                { to: Li.OptinAdminDashboard() },
                 "Dashboard"
               )
             ),
@@ -62369,16 +62374,83 @@
                   { className: Y.WarningStylesBackground },
                   "NOTE: This will only appear publicly for apps marked with featuring."
                 ),
-              Boolean(t.collect_trailer_permissions) &&
-                d.createElement(si, { optInDefinition: t }),
-              Boolean(t.collect_demo_permissions) &&
-                d.createElement(oi, { optInDefinition: t }),
-              Boolean(t.collect_game_profile_intent) &&
-                d.createElement(li, { optInDefinition: t, appid: n })
+              d.createElement(si, { optInDefinition: t, appid: n })
             )
           : null;
       }
       function si(e) {
+        const { optInDefinition: t, appid: n } = e,
+          [a] = (0, A.Ar)("focusmedia", !1);
+        return (
+          (0, d.useEffect)(() => {
+            a &&
+              (0, E.AM)(
+                d.createElement(oi, { optInDefinition: t, appid: n }),
+                window
+              );
+          }, [a, t, n]),
+          d.createElement(li, Object.assign({}, e))
+        );
+      }
+      function oi(e) {
+        const { optInDefinition: t, appid: n, closeModal: a } = e,
+          i = (0, Ne.tx)();
+        return i.bLoading
+          ? d.createElement(Ne.NT, {
+              state: i,
+              strDialogTitle: (0, b.Xx)("#OptIn_Collect_Dialog_Title"),
+              strThrobber: (0, b.Xx)("#Saving"),
+              closeModal: a,
+            })
+          : d.createElement(
+              v.uH,
+              {
+                strTitle: (0, b.Xx)("#OptIn_Collect_Dialog_Title"),
+                strDescription: (0, b.Xx)("#OptIn_Collect_Dialog_Desc"),
+                onOK: () => {
+                  i.fnSetLoading(!0),
+                    je.qh
+                      .Get()
+                      .UpdateOptInRegistrationJson(
+                        n,
+                        ja.Get().GetModel().jsondata
+                      )
+                      .then((e) => {
+                        e
+                          ? (i.fnSetError(!0), i.fnSetStrError(e))
+                          : i.fnSetSuccess(!0);
+                      })
+                      .catch((e) => i.fnSetError(!0));
+                },
+                onCancel: a,
+              },
+              d.createElement(li, { optInDefinition: t, appid: n })
+            );
+      }
+      function li(e) {
+        const { optInDefinition: t, appid: n } = e;
+        return d.createElement(
+          d.Fragment,
+          null,
+          d.createElement(
+            "div",
+            { className: "sub_category" },
+            d.createElement(
+              "h3",
+              null,
+              (0, b.Xx)("#OptIn_Collect_Dialog_Title")
+            )
+          ),
+          d.createElement("p", null, (0, b.Xx)("#OptIn_Collect_Dialog_Desc")),
+          Boolean(t.collect_trailer_permissions) &&
+            d.createElement(ci, { optInDefinition: t }),
+          Boolean(t.collect_demo_permissions) &&
+            d.createElement(di, { optInDefinition: t }),
+          Boolean(t.collect_game_profile_intent) &&
+            d.createElement(mi, { optInDefinition: t, appid: n })
+        );
+      }
+      function ci(e) {
         const { optInDefinition: t } = e,
           n = t.event_title[D.De.LANGUAGE] || t.event_title.english,
           a = t.do_anytime.enter_discounts,
@@ -62458,8 +62530,8 @@
           d.createElement("input", {
             type: "checkbox",
             id: "GatherTrailerPermission",
-            onClick: () => ja.Get().SetCheckedTrailerUsage(!r),
-            checked: r,
+            onChange: () => ja.Get().SetCheckedTrailerUsage(!r),
+            checked: r || !1,
             name: "trailer_permission",
           }),
           d.createElement(
@@ -62483,7 +62555,7 @@
           d.createElement("br", null)
         );
       }
-      function oi(e) {
+      function di(e) {
         const { optInDefinition: t } = e,
           n = t.event_title[D.De.LANGUAGE] || t.event_title.english,
           a = t.do_anytime.enter_discounts,
@@ -62558,8 +62630,8 @@
           d.createElement("input", {
             type: "checkbox",
             id: "GatherDemoPermission",
-            onClick: () => ja.Get().SetCheckedDemorUsage(!i),
-            checked: i,
+            onChange: () => ja.Get().SetCheckedDemorUsage(!i),
+            checked: i || !1,
             name: "demo_permission",
           }),
           d.createElement(
@@ -62583,7 +62655,7 @@
           d.createElement("br", null)
         );
       }
-      function li(e) {
+      function mi(e) {
         const { optInDefinition: t, appid: n } = e,
           a = t.event_title[D.De.LANGUAGE] || t.event_title.english,
           i = t.do_anytime.enter_discounts,
@@ -62727,8 +62799,8 @@
           d.createElement("input", {
             type: "checkbox",
             id: "GatherGameProfileIntent",
-            onClick: () => ja.Get().SetGameProfileIntent(!s),
-            checked: s,
+            onChange: () => ja.Get().SetGameProfileIntent(!s),
+            checked: s || !1,
             name: "game_profile_intent",
           }),
           d.createElement(
@@ -62740,7 +62812,7 @@
           d.createElement("br", null)
         );
       }
-      function ci(e) {
+      function ui(e) {
         const { optInDefinition: t } = e,
           n = ja.Get(),
           a = t.event_title[D.De.LANGUAGE] || t.event_title.english,
@@ -62825,7 +62897,7 @@
             )
           : d.createElement(V.V, { size: "small", position: "center" });
       }
-      const di = (e) => {
+      const pi = (e) => {
           let { pageid: t, appid: n } = e;
           t.startsWith("sale_sale_") && (t = t.substring("sale_".length));
           const a = c.v.Get().GetDefinition(t),
@@ -62888,7 +62960,7 @@
                 optInDefinition: a,
                 appid: Number.parseInt(n),
               }),
-              d.createElement(ci, { optInDefinition: a }),
+              d.createElement(ui, { optInDefinition: a }),
               Boolean(D.L7.is_support) &&
                 d.createElement(
                   "div",
@@ -62917,22 +62989,22 @@
             )
           );
         },
-        mi = (e) =>
+        _i = (e) =>
           d.createElement(Sn.NL, {
             message: (e) =>
               !l.On.Get().BIsDirty() ||
-              e.pathname != Gi.OptinAdminDashboard() ||
+              e.pathname != Li.OptinAdminDashboard() ||
               "Do you want to discard unsaved changes?",
           });
-      var ui = n(99533);
-      class pi {
+      var hi = n(99533);
+      class gi {
         constructor() {
           var e, t, n, a;
           (this.m_nInvitedAppIDs = []),
             (this.m_nPrunedAppIDs = []),
             (this.m_nAdditionalFeaturedppIDs = []),
             (this.m_nPendingReviewAppIDs = []),
-            (this.m_listCallback = new ui.pB()),
+            (this.m_listCallback = new hi.pB()),
             (this.m_mapReviewCallback = new Map());
           let i = JSON.parse(
             JSON.stringify(
@@ -62979,7 +63051,7 @@
         GetStateForAppCallback(e) {
           return (
             this.m_mapReviewCallback.has(e) ||
-              this.m_mapReviewCallback.set(e, new ui.pB()),
+              this.m_mapReviewCallback.set(e, new hi.pB()),
             this.m_mapReviewCallback.get(e)
           );
         }
@@ -63129,11 +63201,11 @@
         }
         static Get() {
           return (
-            pi.s_Singleton ||
-              ((pi.s_Singleton = new pi()),
+            gi.s_Singleton ||
+              ((gi.s_Singleton = new gi()),
               ("dev" != D.De.WEB_UNIVERSE && "beta" != D.De.WEB_UNIVERSE) ||
-                (window.g_OptInAppReviewStores = pi.s_Singleton)),
-            pi.s_Singleton
+                (window.g_OptInAppReviewStores = gi.s_Singleton)),
+            gi.s_Singleton
           );
         }
         ValidateStoreDefault(e) {
@@ -63145,22 +63217,22 @@
           );
         }
       }
-      function _i() {
-        return { fnChangeAppPruneState: pi.Get().ChangeAppPruneState };
+      function vi() {
+        return { fnChangeAppPruneState: gi.Get().ChangeAppPruneState };
       }
-      (0, R.gn)([Fe.a], pi.prototype, "ChangeAppPruneState", null),
+      (0, R.gn)([Fe.a], gi.prototype, "ChangeAppPruneState", null),
         (0, R.gn)(
           [Fe.a],
-          pi.prototype,
+          gi.prototype,
           "ChangeAppAdditionalFeaturingState",
           null
         );
-      var hi = n(27991),
-        gi = n(37694),
-        vi = n(67777),
-        Ei = n(15396),
-        fi = n(11775);
-      function Si(e) {
+      var Ei = n(27991),
+        fi = n(37694),
+        Si = n(67777),
+        yi = n(15396),
+        bi = n(11775);
+      function Di(e) {
         return d.createElement(
           "div",
           null,
@@ -63169,7 +63241,7 @@
             {
               onClick: (t) =>
                 (0, E.AM)(
-                  d.createElement(yi, Object.assign({}, e, { bInvite: !0 })),
+                  d.createElement(Bi, Object.assign({}, e, { bInvite: !0 })),
                   (0, y.RA)(t)
                 ),
             },
@@ -63180,7 +63252,7 @@
             {
               onClick: (t) =>
                 (0, E.AM)(
-                  d.createElement(yi, Object.assign({}, e, { bInvite: !1 })),
+                  d.createElement(Bi, Object.assign({}, e, { bInvite: !1 })),
                   (0, y.RA)(t)
                 ),
             },
@@ -63188,9 +63260,9 @@
           )
         );
       }
-      function yi(e) {
+      function Bi(e) {
         const { closeModal: t, rgAppIDs: n, strOptInName: a, bInvite: i } = e,
-          { fnChangeAppPruneState: r } = _i(),
+          { fnChangeAppPruneState: r } = vi(),
           [s, o] = (0, d.useState)(void 0),
           [l, c] = (0, d.useState)(void 0),
           [m, u] = (0, d.useState)(void 0),
@@ -63236,14 +63308,14 @@
             )
         );
       }
-      var bi = n(74163);
-      const Di = {
+      var wi = n(74163);
+      const Ci = {
         include_basic_info: !0,
         include_assets: !0,
         include_tag_count: 10,
         include_release: !0,
       };
-      function Bi(e) {
+      function Ii(e) {
         const {
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: n,
@@ -63251,22 +63323,22 @@
             pageid: i,
           } = e,
           [r, s] = d.useState(!0),
-          { fnQueueMultipleTagLoads: o } = (0, gi.KI)(),
-          l = (0, bi.T)("OptInAppReviewFilter");
+          { fnQueueMultipleTagLoads: o } = (0, fi.KI)(),
+          l = (0, wi.T)("OptInAppReviewFilter");
         d.useEffect(() => {
           He.Z.Get()
             .QueueMultipleAppRequests(
               (null == t ? void 0 : t.slice(0, 100)) || [],
-              Di
+              Ci
             )
             .then(() => {
               He.Z.Get()
                 .QueueMultipleAppRequests(
                   (null == t ? void 0 : t.slice(100)) || [],
-                  Di
+                  Ci
                 )
                 .then(() => {
-                  const e = Ci(t).map((e) => e.tagid);
+                  const e = Ai(t).map((e) => e.tagid);
                   o(e).then(() => {
                     l.token.reason || s(!1);
                   });
@@ -63381,7 +63453,7 @@
                       _(e.target.value), S(1);
                     },
                   }),
-                  d.createElement(wi, {
+                  d.createElement(Ti, {
                     setFilterTagIDs: c,
                     fnUpdateSetFilterTagIDs: (e) => {
                       m(e), S(1);
@@ -63413,16 +63485,16 @@
           )
         );
       }
-      function wi(e) {
+      function Ti(e) {
         const {
             setFilterTagIDs: t,
             fnUpdateSetFilterTagIDs: n,
             rgAppIDs: a,
             bLoading: i,
           } = e,
-          { fnGetTagID: r } = (0, gi.Hc)(),
+          { fnGetTagID: r } = (0, fi.Hc)(),
           s = d.useMemo(
-            () => (i ? [] : Ci(a).sort((e, t) => (e.count < t.count ? 1 : -1))),
+            () => (i ? [] : Ai(a).sort((e, t) => (e.count < t.count ? 1 : -1))),
             [a, i]
           ),
           o = d.useMemo(
@@ -63448,7 +63520,7 @@
           };
         return d.createElement(
           "div",
-          { className: fi.TagFilterBar },
+          { className: bi.TagFilterBar },
           d.createElement(u.__, null, "Filter by Tag:"),
           d.createElement(Ge.ZP, {
             isSearchable: !0,
@@ -63465,7 +63537,7 @@
           })
         );
       }
-      function Ci(e) {
+      function Ai(e) {
         const t = new Map();
         return (
           e.forEach((e) => {
@@ -63480,7 +63552,7 @@
           Array.from(t.values())
         );
       }
-      function Ii(e) {
+      function Ri(e) {
         const { pageid: t } = e,
           n = (0, D.kQ)("optin_title", "application_config"),
           {
@@ -63488,9 +63560,9 @@
             rgPrunedAppIDs: i,
             rgPendingReviewAppIDs: r,
           } = (function () {
-            const [e, t] = d.useState(pi.Get().GetAsConsolidatedList());
+            const [e, t] = d.useState(gi.Get().GetAsConsolidatedList());
             return (
-              (0, se.Qg)(pi.Get().GetConsolidatedListCallback(), t),
+              (0, se.Qg)(gi.Get().GetConsolidatedListCallback(), t),
               {
                 rgInvitedAppIDs: e.invited_appids,
                 rgPrunedAppIDs: e.pruned_appids,
@@ -63533,7 +63605,7 @@
           (d.useEffect(() => {
             const e = (0, D.kQ)("optin_webapi_token", "application_config");
             e
-              ? ((0, hi.nf)(e), (0, hi.aD)(!0))
+              ? ((0, Ei.nf)(e), (0, Ei.aD)(!0))
               : console.error("OptInAppReviewLanding missing API token");
           }, []),
           !o || (!r && !a && !i))
@@ -63555,7 +63627,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Ti, {
+                d.createElement(ki, {
                   key: "reviewapp",
                   rgOrderedAppIDs: r,
                   pageid: t,
@@ -63574,7 +63646,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Ti, {
+                d.createElement(ki, {
                   key: "invitedapps",
                   rgOrderedAppIDs: a,
                   pageid: t,
@@ -63594,7 +63666,7 @@
               contents: d.createElement(
                 p.S,
                 null,
-                d.createElement(Ti, {
+                d.createElement(ki, {
                   key: "prunedapps",
                   rgOrderedAppIDs: i,
                   pageid: t,
@@ -63621,7 +63693,7 @@
           d.createElement(T.n, { tabs: c })
         );
       }
-      function Ti(e) {
+      function ki(e) {
         const {
             rgOrderedAppIDs: t,
             pageid: n,
@@ -63634,8 +63706,8 @@
         return d.createElement(
           "div",
           null,
-          Boolean(r) && d.createElement(Si, { strOptInName: n, rgAppIDs: l }),
-          d.createElement(Bi, {
+          Boolean(r) && d.createElement(Di, { strOptInName: n, rgAppIDs: l }),
+          d.createElement(Ii, {
             pageid: n,
             rgOrderedAppIDs: t,
             fnSetFilteredAppID: o,
@@ -63646,7 +63718,7 @@
                 d.Fragment,
                 null,
                 l.map((e, t) =>
-                  d.createElement(Ai, {
+                  d.createElement(Mi, {
                     key: (a ? "prune" : "invited") + e,
                     pageid: n,
                     appid: e,
@@ -63663,14 +63735,14 @@
               )
         );
       }
-      function Ai(e) {
+      function Mi(e) {
         return d.createElement(
-          Ei.Y,
+          yi.Y,
           { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-          d.createElement(Ri, Object.assign({}, e))
+          d.createElement(Gi, Object.assign({}, e))
         );
       }
-      function Ri(e) {
+      function Gi(e) {
         const {
             appid: t,
             bInvited: n,
@@ -63678,8 +63750,8 @@
             index: i,
             bPendingReview: r,
           } = e,
-          [s, o] = (0, Xe.vs)(t, Di),
-          { fnChangeAppPruneState: l } = _i(),
+          [s, o] = (0, Xe.vs)(t, Ci),
+          { fnChangeAppPruneState: l } = vi(),
           c = d.useMemo(() => ({ type: "game", id: t }), [t]);
         switch (o) {
           case 1:
@@ -63701,22 +63773,22 @@
         }
         return d.createElement(
           "div",
-          { className: (0, S.Z)(fi.Row, n ? fi.Invited : fi.Pruned) },
+          { className: (0, S.Z)(bi.Row, n ? bi.Invited : bi.Pruned) },
           d.createElement(
-            vi.ll,
+            Si.ll,
             { item: c },
             d.createElement("img", {
-              className: fi.CapsuleImg,
+              className: bi.CapsuleImg,
               src: s.GetAssets().GetMainCapsuleURL(),
             })
           ),
           d.createElement(
             "div",
-            { className: fi.GameInfo },
+            { className: bi.GameInfo },
             d.createElement(
               "a",
               { href: s.GetStorePageURL() },
-              d.createElement("div", { className: fi.Title }, s.GetName())
+              d.createElement("div", { className: bi.Title }, s.GetName())
             ),
             d.createElement(
               "div",
@@ -63746,14 +63818,14 @@
             ),
             d.createElement(
               "div",
-              { className: fi.Desc },
+              { className: bi.Desc },
               s.GetShortDescription()
             ),
-            d.createElement(Mi, { storeItem: s })
+            d.createElement(Fi, { storeItem: s })
           ),
           d.createElement(
             "div",
-            { className: fi.ActionsCtn },
+            { className: bi.ActionsCtn },
             d.createElement(
               u.zx,
               { onClick: () => l(a, [t], n || r) },
@@ -63768,24 +63840,24 @@
                 (0, b.Xx)("#OptIn_AppReview_Invite")
               ),
             Boolean(D.L7.is_support && n) &&
-              d.createElement(ki, { appid: t, pageid: a })
+              d.createElement(Pi, { appid: t, pageid: a })
           ),
           d.createElement(
             "div",
-            { className: fi.RowNumber },
+            { className: bi.RowNumber },
             (i + 1).toLocaleString()
           )
         );
       }
-      function ki(e) {
+      function Pi(e) {
         const { appid: t, pageid: n } = e,
           a = (function (e) {
-            const [t, n] = (0, d.useState)(pi.Get().GetStateForApp(e));
-            return (0, se.Qg)(pi.Get().GetStateForAppCallback(e), n), t;
+            const [t, n] = (0, d.useState)(gi.Get().GetStateForApp(e));
+            return (0, se.Qg)(gi.Get().GetStateForAppCallback(e), n), t;
           })(t),
           { fnChangeAppAdditionalFeaturingState: i } = {
             fnChangeAppAdditionalFeaturingState:
-              pi.Get().ChangeAppAdditionalFeaturingState,
+              gi.Get().ChangeAppAdditionalFeaturingState,
           };
         return d.createElement(
           "div",
@@ -63823,16 +63895,16 @@
           )
         );
       }
-      function Mi(e) {
+      function Fi(e) {
         const { storeItem: t } = e,
           n = d.useMemo(
             () => (null == t ? void 0 : t.GetTags().map((e) => e.tagid)),
             [t]
           ),
-          a = (0, gi.Eq)(n);
+          a = (0, fi.Eq)(n);
         return d.createElement(
           "div",
-          { className: fi.StoreTags },
+          { className: bi.StoreTags },
           (0, b.kQ)(
             "#OptIn_AppReview_Tags",
             d.createElement(
@@ -63845,19 +63917,19 @@
           )
         );
       }
-      const Gi = {
+      const Li = {
         OptinAdminDashboard: () => "/admin/",
         OptinAdminEdit: (e) => `/admin/edit/${e}`,
         OptinAdminSupport: (e) => `/admin/support/${e}`,
         OptInApp: (e, t) => `/sale*/${e}/${t}`,
         OptInAppReview: (e) => `/appreview/${e}`,
       };
-      function Pi(e) {
-        return (0, hi.NX)()
+      function Ni(e) {
+        return (0, Ei.NX)()
           ? d.createElement(
               m.VK,
               { basename: (0, a.l)() + "optin/" },
-              d.createElement(mi, null),
+              d.createElement(_i, null),
               d.createElement(
                 Sn.rs,
                 null,
@@ -63874,35 +63946,35 @@
                 }),
                 d.createElement(Sn.AW, {
                   exact: !0,
-                  path: Gi.OptinAdminDashboard(),
+                  path: Li.OptinAdminDashboard(),
                   component: J,
                 }),
                 d.createElement(Sn.AW, {
                   exact: !0,
-                  path: Gi.OptinAdminEdit(":pageid"),
+                  path: Li.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     d.createElement(La, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(Sn.AW, {
                   exact: !0,
-                  path: Gi.OptinAdminSupport(":appid"),
+                  path: Li.OptinAdminSupport(":appid"),
                   render: (e) =>
                     d.createElement(Wa, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 d.createElement(Sn.AW, {
-                  path: Gi.OptInApp(":partialpageid", ":appid"),
+                  path: Li.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
-                    d.createElement(di, {
+                    d.createElement(pi, {
                       appid: e.match.params.appid,
                       pageid: "sale_" + e.match.params.partialpageid,
                     }),
                 }),
                 d.createElement(Sn.AW, {
-                  path: Gi.OptInAppReview(":pageid"),
+                  path: Li.OptInAppReview(":pageid"),
                   render: (e) =>
-                    d.createElement(Ii, { pageid: e.match.params.pageid }),
+                    d.createElement(Ri, { pageid: e.match.params.pageid }),
                 }),
                 d.createElement(Sn.AW, { component: i.R })
               )

@@ -614,6 +614,7 @@ ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
 ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
+${PARTNER_BASE_URL}optin/ajaxupdateoptinregistrationpayload/${}
 ${PARTNER_BASE_URL}optin/appreview/${}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
