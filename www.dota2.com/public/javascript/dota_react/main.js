@@ -2449,6 +2449,7 @@
         Subtitle: "aboutpage_Subtitle_28o48",
         Subtitle02: "aboutpage_Subtitle02_3FVI7",
         Body: "aboutpage_Body_2A-KY",
+        Width100: "aboutpage_Width100_OkYLx",
         TitleMain: "aboutpage_TitleMain_1HDU8",
         TitleDesc: "aboutpage_TitleDesc_1R1kM",
         ToursTitle: "aboutpage_ToursTitle_39Y_G",
@@ -30541,6 +30542,118 @@
                   "div",
                   { className: Dr().Body },
                   (0, E.Jr)("#dpc_about_format_body3")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_dates_winter_major")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_oq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_winter22_oq"))
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_cq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_winter22_cq"))
+                ),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_dates_spring_major")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_oq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_spring23_oq"))
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_cq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_spring23_cq"))
+                ),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_dates_summer_major")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_oq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_summer23_oq"))
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  ""
+                    .concat((0, E.Jr)("#dpc_about_format_dates_cq_prefix"))
+                    .concat((0, E.Jr)("#dpc_about_format_dates_summer23_cq"))
+                ),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_first")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_first_body1")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_first_body2")
+                ),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_other")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_other_body1")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_other_body2")
+                ),
+                o.createElement("br", null),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_group_stage")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_body1")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Subtitle02, Dr().Width100) },
+                  (0, E.Jr)("#dpc_playoff")
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, b.Z)(Dr().Body, Dr().Width100) },
+                  (0, E.Jr)("#dpc_about_format_major_format_body2")
                 )
               ),
               o.createElement(
