@@ -50,15 +50,70 @@
     },
     5194: (e, r, t) => {
       "use strict";
-      t.d(r, { AY: () => a, KQ: () => l, _v: () => s, q8: () => c });
+      t.d(r, { AY: () => a, KQ: () => s, _v: () => n, q8: () => l });
       var i = t(33019),
         o = t(40110);
-      const n = i.Message;
-      class s extends n {
+      const c = i.Message;
+      class n extends c {
         constructor(e = null) {
           super(),
-            s.prototype.sale_filter || o.aR(s.M()),
-            n.initialize(this, e, 0, -1, [3], null);
+            n.prototype.sale_filter || o.aR(n.M()),
+            c.initialize(this, e, 0, -1, [3], null);
+        }
+        static M() {
+          return (
+            n.sm_m ||
+              (n.sm_m = {
+                proto: n,
+                fields: {
+                  sale_filter: { n: 1, c: s },
+                  content_hub_filter: { n: 2, c: a },
+                  store_filters: { n: 3, c: b, r: !0, q: !0 },
+                },
+              }),
+            n.sm_m
+          );
+        }
+        static MBF() {
+          return n.sm_mbf || (n.sm_mbf = o.Bh(n.M())), n.sm_mbf;
+        }
+        toObject(e = !1) {
+          return n.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return o.TA(n.M(), e, r);
+        }
+        static fromObject(e) {
+          return o.aD(n.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new n();
+          return n.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return o.F(n.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return n.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          o.l2(n.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return n.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStorePageFilter";
+        }
+      }
+      class s extends c {
+        constructor(e = null) {
+          super(),
+            s.prototype.sale_tagid || o.aR(s.M()),
+            c.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -66,9 +121,11 @@
               (s.sm_m = {
                 proto: s,
                 fields: {
-                  sale_filter: { n: 1, c: l },
-                  content_hub_filter: { n: 2, c: a },
-                  store_filters: { n: 3, c: b, r: !0, q: !0 },
+                  sale_tagid: {
+                    n: 1,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
+                  },
                 },
               }),
             s.sm_m
@@ -106,71 +163,14 @@
           return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStorePageFilter";
-        }
-      }
-      class l extends n {
-        constructor(e = null) {
-          super(),
-            l.prototype.sale_tagid || o.aR(l.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
-                fields: {
-                  sale_tagid: {
-                    n: 1,
-                    br: o.FE.readUint32,
-                    bw: o.Xc.writeUint32,
-                  },
-                },
-              }),
-            l.sm_m
-          );
-        }
-        static MBF() {
-          return l.sm_mbf || (l.sm_mbf = o.Bh(l.M())), l.sm_mbf;
-        }
-        toObject(e = !1) {
-          return l.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return o.TA(l.M(), e, r);
-        }
-        static fromObject(e) {
-          return o.aD(l.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new l();
-          return l.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return o.F(l.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          o.l2(l.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CStorePageFilter_SalePageFilter";
         }
       }
-      class a extends n {
+      class a extends c {
         constructor(e = null) {
           super(),
             a.prototype.hub_type || o.aR(a.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            c.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -194,7 +194,7 @@
                     br: o.FE.readEnum,
                     bw: o.Xc.writeEnum,
                   },
-                  optin: { n: 5, c },
+                  optin: { n: 5, c: l },
                 },
               }),
             a.sm_m
@@ -235,17 +235,17 @@
           return "CStorePageFilter_ContentHubFilter";
         }
       }
-      class c extends n {
+      class l extends c {
         constructor(e = null) {
           super(),
-            c.prototype.name || o.aR(c.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            l.prototype.name || o.aR(l.M()),
+            c.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            c.sm_m ||
-              (c.sm_m = {
-                proto: c,
+            l.sm_m ||
+              (l.sm_m = {
+                proto: l,
                 fields: {
                   name: { n: 1, br: o.FE.readString, bw: o.Xc.writeString },
                   optin_tagid: {
@@ -260,49 +260,49 @@
                   },
                 },
               }),
-            c.sm_m
+            l.sm_m
           );
         }
         static MBF() {
-          return c.sm_mbf || (c.sm_mbf = o.Bh(c.M())), c.sm_mbf;
+          return l.sm_mbf || (l.sm_mbf = o.Bh(l.M())), l.sm_mbf;
         }
         toObject(e = !1) {
-          return c.toObject(e, this);
+          return l.toObject(e, this);
         }
         static toObject(e, r) {
-          return o.TA(c.M(), e, r);
+          return o.TA(l.M(), e, r);
         }
         static fromObject(e) {
-          return o.aD(c.M(), e);
+          return o.aD(l.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new c();
-          return c.deserializeBinaryFromReader(t, r);
+            t = new l();
+          return l.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return o.F(c.MBF(), e, r);
+          return o.F(l.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          o.l2(c.M(), e, r);
+          o.l2(l.M(), e, r);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter_ContentHubFilter_OptInInfo";
         }
       }
-      class b extends n {
+      class b extends c {
         constructor(e = null) {
           super(),
             b.prototype.filter_json || o.aR(b.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            c.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -361,279 +361,73 @@
         }
       }
     },
-    41414: (e, r, t) => {
-      "use strict";
-      t.d(r, { AM: () => m, BR: () => f, e1: () => a.e1, x1: () => h });
-      var i = t(70655),
-        o = t(67294),
-        n = t(73935),
-        s = t(53157),
-        l = t(10847),
-        a = t(22119),
-        c = t(28609),
-        b = t(77520),
-        d = t(41311),
-        u = t(90666);
-      function h(e, r, t) {
-        return (0, i.mG)(this, void 0, void 0, function* () {
-          const o = !0 === (null == t ? void 0 : t.bNeverPopOut),
-            s = !o && _(null, r),
-            l =
-              (null == t ? void 0 : t.bForcePopOut) &&
-              (null == t ? void 0 : t.popupWidth) &&
-              (null == t ? void 0 : t.popupHeight),
-            a =
-              s &&
-              !l &&
-              (yield (function (e, r, t) {
-                return (0, i.mG)(this, void 0, void 0, function* () {
-                  const i = r.document.createElement("div");
-                  (i.style.position = "absolute"),
-                    (i.style.visibility = "hidden"),
-                    r.document.body.appendChild(i),
-                    n.render(e, i),
-                    yield t;
-                  let o = document;
-                  u.De.IN_STEAMUI && o.fonts && (yield o.fonts.ready);
-                  const s = i.getBoundingClientRect(),
-                    l = Math.ceil(s.height),
-                    a = Math.ceil(s.width);
-                  return (
-                    n.unmountComponentAtNode(i),
-                    r.document.body.removeChild(i),
-                    { height: l, width: a }
-                  );
-                });
-              })(e, r, null == t ? void 0 : t.promiseRenderComplete)),
-            c =
-              a &&
-              a.height / r.innerHeight < 0.9 &&
-              a.width / r.innerWidth < 0.8;
-          if (o || (!(null == t ? void 0 : t.bForcePopOut) && c))
-            return f(e, r);
-          const b = {
-              strTitle:
-                (null == t ? void 0 : t.strTitle) ||
-                (0, d.Xx)("#Dialog_DefaultWindowTitle"),
-              fnOnClose: null == t ? void 0 : t.fnOnClose,
-              popupWidth:
-                (null == t ? void 0 : t.popupWidth) ||
-                (null == a ? void 0 : a.width),
-              popupHeight:
-                (null == t ? void 0 : t.popupHeight) ||
-                (null == a ? void 0 : a.height),
-              bHideMainWindowForPopouts:
-                null == t ? void 0 : t.bHideMainWindowForPopouts,
-            },
-            h = { bHideActions: null == t ? void 0 : t.bHideActionIcons };
-          return f(
-            e,
-            r,
-            b.strTitle,
-            b,
-            null == t ? void 0 : t.browserContext,
-            h
-          );
-        });
-      }
-      function m(e, r, t) {
-        return (0, i.mG)(this, void 0, void 0, function* () {
-          return h(e, r, Object.assign({ bHideMainWindowForPopouts: !0 }, t));
-        });
-      }
-      function f(e, r, t, i, n, s, l) {
-        let c, b;
-        const d = e.props.closeModal,
-          u = () => {
-            b && b.Close(),
-              d && d(),
-              (null == i ? void 0 : i.fnOnClose) && i.fnOnClose();
-          },
-          h = () => {
-            c && c.Close(), u();
-          },
-          m = o.cloneElement(e, { closeModal: h });
-        if (_((l = l || (0, a.BL)(r)), r) && i && t) {
-          if (i.bHideMainWindowForPopouts) {
-            const e = o.createElement(
-              a.e1,
-              {
-                className: "Hidden",
-                onEscKeypress: !m.props.bDisableBackgroundDismiss && h,
-              },
-              o.createElement("div", null)
-            );
-            b = l.ShowModal(e);
-          }
-          const e = Object.assign(Object.assign({}, i), { fnOnClose: u }),
-            d = new p(r, t, e, m, n, s);
-          d.Show(), (c = d);
-        } else c = l.ShowModal(m);
-        return c;
-      }
-      function _(e, r) {
-        return (
-          (e = e || (0, a.BL)(r || window)), u.De.USE_POPUPS && e.BUsePopups()
-        );
-      }
-      class p extends s.K3 {
-        constructor(e, r, t, i, o, n) {
-          super(r, {
-            title: t.strTitle,
-            html_class: "client_chat_frame fullheight ModalDialogPopup",
-            body_class: "fullheight ModalDialogBody",
-            owner_window: void 0,
-            replace_existing_popup: !0,
-            target_browser: o,
-            availscreenwidth: e.screen.availWidth,
-            availscreenheight: e.screen.availHeight,
-          }),
-            (this.m_windowOpener = e),
-            (this.m_modalProps = t),
-            (this.m_modalElement = i),
-            (this.m_options = n);
-        }
-        Update(e) {
-          (0, b.X)(!1, "NYI");
-        }
-        UpdateParamsBeforeShow(e) {
-          var r, t, i;
-          let o,
-            n,
-            s,
-            l = this.m_modalProps.popupWidth || 500,
-            a = this.m_modalProps.popupHeight || 400;
-          if (
-            u.De.IN_CLIENT &&
-            (null ===
-              (i =
-                null ===
-                  (t =
-                    null === (r = this.m_windowOpener) || void 0 === r
-                      ? void 0
-                      : r.SteamClient) || void 0 === t
-                  ? void 0
-                  : t.Window) || void 0 === i
-              ? void 0
-              : i.GetBrowserID)
-          )
-            s = this.m_windowOpener.SteamClient.Window.GetBrowserID();
-          else {
-            let e = this.m_windowOpener.screen;
-            (o = (e.availWidth - l) / 2), (n = (e.availHeight - a) / 2);
-            let r = e;
-            void 0 !== r.availLeft &&
-              void 0 !== r.availTop &&
-              ((o += r.availLeft), (n += r.availTop));
-          }
-          return Object.assign(Object.assign({}, e), {
-            dimensions: { width: l, height: a, left: o, top: n },
-            window_opener_id: s,
-          });
-        }
-        OnLoad() {}
-        OnResize() {}
-        OnClose() {
-          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
-            n.unmountComponentAtNode(this.m_element);
-        }
-        Render(e, r) {
-          if (
-            (r.setAttribute("class", "fullheight popup_chat_frame"),
-            this.m_modalElement)
-          ) {
-            const t = this.m_options ? this.m_options.bHideActions : void 0,
-              i =
-                this.m_options &&
-                "number" == typeof this.m_options.nDragAreaHeight
-                  ? { height: this.m_options.nDragAreaHeight }
-                  : void 0;
-            n.render(
-              o.createElement(
-                "div",
-                { className: "PopupFullWindow", onContextMenu: l.T },
-                o.createElement(c.T, {
-                  hideMinMax: !0,
-                  popup: e,
-                  hideActions: t,
-                  style: i,
-                }),
-                o.createElement(a.t9, { ModalManager: (0, a.BL)(e) }),
-                this.m_modalElement
-              ),
-              r
-            );
-          }
-        }
-      }
-    },
     13596: (e, r, t) => {
       "use strict";
-      t.d(r, { V: () => l });
+      t.d(r, { V: () => s });
       var i = t(67294),
         o = t(7573),
-        n = t(50732),
-        s = t.n(n);
-      const l = i.memo(function (e) {
+        c = t(50732),
+        n = t.n(c);
+      const s = i.memo(function (e) {
         const {
           className: r,
           size: t,
-          string: n,
-          position: l,
+          string: c,
+          position: s,
           static: b,
-          msDelayAppear: d,
+          msDelayAppear: u,
         } = e;
-        let u = [s().LoadingWrapper, "SteamLogoThrobber", a(t)];
-        const [h, m] = i.useState(!d);
+        let h = [n().LoadingWrapper, "SteamLogoThrobber", a(t)];
+        const [f, m] = i.useState(!u);
         return (
           (0, i.useEffect)(() => {
-            if (h) return;
-            const e = setTimeout(() => m(!0), d);
+            if (f) return;
+            const e = setTimeout(() => m(!0), u);
             return () => clearTimeout(e);
-          }, [d, h]),
-          void 0 === n && u.push(s().noString),
-          r && u.push(r),
-          b && u.push(s().Static),
+          }, [u, f]),
+          void 0 === c && h.push(n().noString),
+          r && h.push(r),
+          b && h.push(n().Static),
           i.createElement(
             "div",
             {
               className: (0, o.Z)(
-                "center" == l && s().throbber_center_wrapper,
-                d && s().ThrobberDelayAppear,
-                h && s().Visible
+                "center" == s && n().throbber_center_wrapper,
+                u && n().ThrobberDelayAppear,
+                f && n().Visible
               ),
             },
-            h &&
+            f &&
               i.createElement(
                 "div",
-                { className: u.join(" ") },
+                { className: h.join(" ") },
                 i.createElement(
                   "div",
-                  { className: s().Throbber },
-                  i.createElement(c, { className: s().base }),
-                  i.createElement(c, { className: s().blur })
+                  { className: n().Throbber },
+                  i.createElement(l, { className: n().base }),
+                  i.createElement(l, { className: n().blur })
                 )
               ),
-            Boolean(n) &&
-              i.createElement("div", { className: s().ThrobberText }, n)
+            Boolean(c) &&
+              i.createElement("div", { className: n().ThrobberText }, c)
           )
         );
       });
       function a(e) {
         switch (e) {
           case "small":
-            return s().throbber_small;
+            return n().throbber_small;
           case "medium":
-            return s().throbber_medium;
+            return n().throbber_medium;
           case "xlarge":
-            return s().throbber_xlarge;
+            return n().throbber_xlarge;
           case "xxlarge":
-            return s().throbber_xxlarge;
+            return n().throbber_xxlarge;
           default:
-            return s().throbber_large;
+            return n().throbber_large;
         }
       }
-      function c(e) {
+      function l(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -652,9 +446,9 @@
             },
             i.createElement(
               "g",
-              { className: s().partCircle },
+              { className: n().partCircle },
               i.createElement("path", {
-                className: s().roundOuter,
+                className: n().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -662,7 +456,7 @@
                 d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
               }),
               i.createElement("path", {
-                className: s().roundOuter,
+                className: n().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -670,7 +464,7 @@
                 d: "M201.432,101.166",
               }),
               i.createElement("path", {
-                className: s().roundOuter,
+                className: n().roundOuter,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -680,9 +474,9 @@
             ),
             i.createElement(
               "g",
-              { className: s().mainOutline },
+              { className: n().mainOutline },
               i.createElement("path", {
-                className: s().roundFill,
+                className: n().roundFill,
                 fill: "none",
                 stroke: "#ffffff",
                 strokeWidth: "6",
@@ -690,7 +484,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundOuterOutline,
+                className: n().roundOuterOutline,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -699,7 +493,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber01,
+                className: n().roundThrobber01,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -708,7 +502,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber02,
+                className: n().roundThrobber02,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -717,7 +511,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber03,
+                className: n().roundThrobber03,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -726,7 +520,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber04,
+                className: n().roundThrobber04,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -735,7 +529,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber05,
+                className: n().roundThrobber05,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -744,7 +538,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber06,
+                className: n().roundThrobber06,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -753,7 +547,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber07,
+                className: n().roundThrobber07,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -762,7 +556,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber08,
+                className: n().roundThrobber08,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -771,7 +565,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber09,
+                className: n().roundThrobber09,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -780,7 +574,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber10,
+                className: n().roundThrobber10,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -789,7 +583,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber11,
+                className: n().roundThrobber11,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -798,7 +592,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber12,
+                className: n().roundThrobber12,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -807,7 +601,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber13,
+                className: n().roundThrobber13,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -816,7 +610,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber14,
+                className: n().roundThrobber14,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -825,7 +619,7 @@
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
               }),
               i.createElement("path", {
-                className: s().roundThrobber15,
+                className: n().roundThrobber15,
                 strokeLinecap: "butt",
                 fill: "none",
                 stroke: "#ffffff",
@@ -836,7 +630,7 @@
             ),
             i.createElement(
               "g",
-              { className: s().bottomCircle },
+              { className: n().bottomCircle },
               i.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
@@ -844,7 +638,7 @@
             ),
             i.createElement(
               "g",
-              { className: s().topCircle },
+              { className: n().topCircle },
               i.createElement("circle", {
                 fill: "none",
                 stroke: "#ffffff",

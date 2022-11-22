@@ -1547,10 +1547,9 @@
               const t = yield (function (e, t) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   const r = a.gA.Init(b.kp);
-                  r.Body().set_account_name(t),
-                    r.SetEMsg(9804),
-                    yield e.MakeReady();
+                  r.Body().set_account_name(t), r.SetEMsg(9804);
                   try {
+                    yield e.MakeReady();
                     const t = yield b.$h.GetPasswordRSAPublicKey(e, r);
                     if ((t.DEBUG_LogToConsole(), 1 !== t.GetEResult()))
                       return (
@@ -1575,7 +1574,12 @@
                         ),
                         null);
                   } catch (e) {
-                    return console.error(`Failed to get RSA key: ${e}`), null;
+                    return (
+                      console.error(
+                        `Failed to get RSA key: ${JSON.stringify(e)}`
+                      ),
+                      null
+                    );
                   }
                 });
               })(this.m_transport, n);
@@ -1619,6 +1623,7 @@
                         case 5:
                           return (this.m_eStatus = 2), t;
                         case 20:
+                        case 3:
                           return (
                             this.SetFailureState(m.NZ.Network, v.EResult(20)), t
                           );
@@ -1707,7 +1712,9 @@
               );
             } catch (e) {
               return (
-                console.error(`Failed to start auth session. ${e}`),
+                console.error(
+                  `Failed to start auth session: ${JSON.stringify(e)}`
+                ),
                 this.SetFailureState(m.NZ.Generic, v.FailedToStart()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
@@ -2036,7 +2043,9 @@
               );
             } catch (e) {
               return (
-                console.error(`Failed to start auth session. ${e}`),
+                console.error(
+                  `Failed to start auth session: ${JSON.stringify(e)}`
+                ),
                 (this.m_eFailureState = m.NZ.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2

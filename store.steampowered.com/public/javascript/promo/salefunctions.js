@@ -531,7 +531,7 @@ function TagBoxTopDecoration()
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/' + suffix + '_page.jpg"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/' + suffix + '_page.jpg"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -1230,8 +1230,22 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 				writein: writein,
 				source: 1			} ).done( function( data ) {
 				// update the metadata
-				rgCategories = data.rgCategories;
-				$PageElement.html( data.page_html );
+				if ( data.success == 1 )
+				{
+					rgCategories = data.rgCategories;
+					$PageElement.html( data.page_html );
+				}
+				else
+				{
+					if ( data.message && data.message.length )
+					{
+						ShowAlertDialog( 'Error', data.message );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'There was a problem saving your changes.  Please try again later.' );
+					}
+				}
 			}).fail( function() {
 				ShowAlertDialog( 'Error', 'There was a problem saving your changes.  Please try again later.' );
 			});

@@ -660,6 +660,18 @@ html.responsive.touch .steamaward_nomination_row {
 	box-shadow: 4px 4px 4px #0f1522;
 }
 
+.steamaward_nominate_gamepage_ctn .nominate_check_ctn {
+	border: 3px solid #0f1522;
+}
+
+.steamaward_nominate_gamepage_ctn .nominate_check {
+	background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2019.414l-6.707-6.707l1.414-1.414L9%2016.586L20.293%205.293l1.414%201.414z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
+}
+
+.steamaward_nominate_gamepage_ctn .game_nominate.steamaward_nominate_right.show_nomination_dialog {
+	color: #0f1522;	
+}
+
 .steamaward_nominate_award {
 	position: relative;
 	width: 68px;
@@ -754,7 +766,7 @@ html.responsive.touch .steamaward_nomination_row {
 .steamaward_nominate_gamepage_ctn:not(.homepage):not(.gamewinner) .steamaward_nominate_right:not(.disabled):hover {
 	transform: scale(1.01);
 	box-shadow: 5px 6px 0 rgb(0 0 0 / 40%);
-	color: #c6d5e0;
+	/* color: #c6d5e0; */
 }
 
 .game_nominate.steamaward_nominate_full {
@@ -1244,6 +1256,12 @@ img.faq_section_title {
 	margin-top: 15px;
 }
 
+.nominate_skip_desc {
+	margin-top: 20px;
+	color: #b2cad4;
+	font-size: 12px;
+}
+
 .has_nomination .nomination_row_right {
 	text-align: end;
 }
@@ -1333,6 +1351,7 @@ a.younominated_developer {
 	}
 	html.responsive .nomination_row_right {
 		padding: 12px;
+		float: right;
 	}
 	html.responsive .has_nomination .nomination_row_right {
 		text-align: end;

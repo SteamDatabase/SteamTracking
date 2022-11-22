@@ -49,7 +49,7 @@
 					}
 				}
 			}
-			"button_x"
+			"button_y"
 			{
 				"activators"
 				{
@@ -62,7 +62,7 @@
 					}
 				}
 			}
-			"button_y"
+			"button_x"
 			{
 				"activators"
 				{

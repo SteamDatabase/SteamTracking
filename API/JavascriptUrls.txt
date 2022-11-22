@@ -772,6 +772,7 @@ ${STORE_BASE_URL}contenthub/ajaxgetcontenthubjson
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubsections
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubspecials
+${STORE_BASE_URL}contenthub/ajaxgetdlcforapps
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
@@ -1340,9 +1341,11 @@ https://<MP4 URL?
 https://<WebM URL>
 https://<poster url>
 https://<url online survey>
+https://<url to YouTube>
 https://<url to asset kit>
 https://<url to public store sale page>
 https://<url to steamworks event wiki documentation>
+https://<url to zoom>
 https://about.steamchina.com/content_report.html
 https://about.steamchina.com/infringement_report.html
 https://about.steamchina.com/parentguardianship_agreement.html
@@ -1678,6 +1681,7 @@ https://help.steampowered.com/en/wizard/HelpValveMerch
 https://help.steampowered.com/en/wizard/HelpWithEconMarket
 https://help.steampowered.com/en/wizard/HelpWithLogin
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
+https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPurchase
 https://help.steampowered.com/en/wizard/HelpWithUnknownCharges
 https://help.steampowered.com/login/getmenuactions/
@@ -1829,6 +1833,7 @@ https://partner.steamgames.com/doc/marketing/event_tools/import
 https://partner.steamgames.com/doc/marketing/event_tools/stats
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
+https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/tips
 https://partner.steamgames.com/doc/marketing/upcoming_events/steam_scream
 https://partner.steamgames.com/doc/resources/Sales_Feature_Beta
 https://partner.steamgames.com/doc/sitelicense/licensees/gettingstarted/licensemodelpc
@@ -2276,15 +2281,22 @@ https://store.steampowered.com/communityrecommendations/trendingreviews/?${}
 https://store.steampowered.com/curator/${my_clan_id}/admin/curator_edit
 https://store.steampowered.com/curators/ajaxfollow
 https://store.steampowered.com/curators/ajaxignore
+https://store.steampowered.com/default/home_additional/
 https://store.steampowered.com/default/home_sale_data
+https://store.steampowered.com/default/usabilitytracking/
 https://store.steampowered.com/dev/${vanity_url}
 https://store.steampowered.com/developer/${vanity_url}
 https://store.steampowered.com/dynamicstore/saledata/?cc=${strCC}
+https://store.steampowered.com/dynamicstore/updatehomeviewsettings
 https://store.steampowered.com/dynamicstore/userdata/?id=${accountid}&cc=${strCC}
 https://store.steampowered.com/explore/
 https://store.steampowered.com/explore/generatenewdiscoveryqueue
 https://store.steampowered.com/explore/howitworks/
+https://store.steampowered.com/explore/logfeedview/
+https://store.steampowered.com/explore/more
+https://store.steampowered.com/explore/recommended/
 https://store.steampowered.com/explore/recommendedreason/
+https://store.steampowered.com/explore/render/
 https://store.steampowered.com/franchise/${vanity_url}
 https://store.steampowered.com/friends/frienddata
 https://store.steampowered.com/friends/recommendgame
@@ -2317,6 +2329,7 @@ https://store.steampowered.com/recommended/ignorerecommendation/
 https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
 https://store.steampowered.com/search/?term=${$Term}${snr}
+https://store.steampowered.com/search/hometab/TopGrossing/
 https://store.steampowered.com/search/results
 https://store.steampowered.com/search/results/
 https://store.steampowered.com/search/smallcapscroll
@@ -2343,32 +2356,23 @@ https://store.steampowered.com/store/appreviews/${appid}
 https://store.steampowered.com/store/curator/${}/ajaxgetcuratorrecommendations/
 https://store.steampowered.com/store/curators/ajaxfollow
 https://store.steampowered.com/store/curators/ajaxgetcurators/
-https://store.steampowered.com/store/default/home_additional/
-https://store.steampowered.com/store/default/usabilitytracking/
-https://store.steampowered.com/store/dynamicstore/updatehomeviewsettings
 https://store.steampowered.com/store/explore/discoveryqueuesettings/
 https://store.steampowered.com/store/explore/followgame/
 https://store.steampowered.com/store/explore/generatenewdiscoveryqueue
-https://store.steampowered.com/store/explore/logfeedview/
-https://store.steampowered.com/store/explore/more
 https://store.steampowered.com/store/explore/next
 https://store.steampowered.com/store/explore/next/
-https://store.steampowered.com/store/explore/recommended/
-https://store.steampowered.com/store/explore/render/
 https://store.steampowered.com/store/explore/startnew
 https://store.steampowered.com/store/explore/startnew/${g_eDiscoveryQueueType}/
 https://store.steampowered.com/store/explore/updatediscoveryqueuesettings
 https://store.steampowered.com/store/jserrorreport/
 https://store.steampowered.com/store/recommended/ignorerecommendation
 https://store.steampowered.com/store/recommended/ignorerecommendation/
-https://store.steampowered.com/store/search/hometab/TopGrossing/
 https://store.steampowered.com/store/search/tab
 https://store.steampowered.com/store/tagdata/gettaggames/${strTagLanguage}/${unTagID}/
 https://store.steampowered.com/store/tagdata/myfrequenttags
 https://store.steampowered.com/store/tagdata/populartags/english
 https://store.steampowered.com/store/tagdata/tagapp
 https://store.steampowered.com/store/tags/
-https://store.steampowered.com/store/tags/en/TAGNAME/
 https://store.steampowered.com/store/widget/${nAppId}/
 https://store.steampowered.com/store/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/sub/${nPackageID}

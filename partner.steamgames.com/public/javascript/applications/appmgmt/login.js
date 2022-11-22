@@ -49,239 +49,33 @@
         Visible: "throbber_Visible_1ziaT",
       };
     },
-    41414: (e, r, t) => {
-      "use strict";
-      t.d(r, { AM: () => f, BR: () => m, e1: () => s.e1, x1: () => u });
-      var o = t(70655),
-        c = t(67294),
-        i = t(73935),
-        l = t(53157),
-        n = t(10847),
-        s = t(56306),
-        a = t(28609),
-        b = t(77520),
-        h = t(41311),
-        d = t(90666);
-      function u(e, r, t) {
-        return (0, o.mG)(this, void 0, void 0, function* () {
-          const c = !0 === (null == t ? void 0 : t.bNeverPopOut),
-            l = !c && p(null, r),
-            n =
-              (null == t ? void 0 : t.bForcePopOut) &&
-              (null == t ? void 0 : t.popupWidth) &&
-              (null == t ? void 0 : t.popupHeight),
-            s =
-              l &&
-              !n &&
-              (yield (function (e, r, t) {
-                return (0, o.mG)(this, void 0, void 0, function* () {
-                  const o = r.document.createElement("div");
-                  (o.style.position = "absolute"),
-                    (o.style.visibility = "hidden"),
-                    r.document.body.appendChild(o),
-                    i.render(e, o),
-                    yield t;
-                  let c = document;
-                  d.De.IN_STEAMUI && c.fonts && (yield c.fonts.ready);
-                  const l = o.getBoundingClientRect(),
-                    n = Math.ceil(l.height),
-                    s = Math.ceil(l.width);
-                  return (
-                    i.unmountComponentAtNode(o),
-                    r.document.body.removeChild(o),
-                    { height: n, width: s }
-                  );
-                });
-              })(e, r, null == t ? void 0 : t.promiseRenderComplete)),
-            a =
-              s &&
-              s.height / r.innerHeight < 0.9 &&
-              s.width / r.innerWidth < 0.8;
-          if (c || (!(null == t ? void 0 : t.bForcePopOut) && a))
-            return m(e, r);
-          const b = {
-              strTitle:
-                (null == t ? void 0 : t.strTitle) ||
-                (0, h.Xx)("#Dialog_DefaultWindowTitle"),
-              fnOnClose: null == t ? void 0 : t.fnOnClose,
-              popupWidth:
-                (null == t ? void 0 : t.popupWidth) ||
-                (null == s ? void 0 : s.width),
-              popupHeight:
-                (null == t ? void 0 : t.popupHeight) ||
-                (null == s ? void 0 : s.height),
-              bHideMainWindowForPopouts:
-                null == t ? void 0 : t.bHideMainWindowForPopouts,
-            },
-            u = { bHideActions: null == t ? void 0 : t.bHideActionIcons };
-          return m(
-            e,
-            r,
-            b.strTitle,
-            b,
-            null == t ? void 0 : t.browserContext,
-            u
-          );
-        });
-      }
-      function f(e, r, t) {
-        return (0, o.mG)(this, void 0, void 0, function* () {
-          return u(e, r, Object.assign({ bHideMainWindowForPopouts: !0 }, t));
-        });
-      }
-      function m(e, r, t, o, i, l, n) {
-        let a, b;
-        const h = e.props.closeModal,
-          d = () => {
-            b && b.Close(),
-              h && h(),
-              (null == o ? void 0 : o.fnOnClose) && o.fnOnClose();
-          },
-          u = () => {
-            a && a.Close(), d();
-          },
-          f = c.cloneElement(e, { closeModal: u });
-        if (p((n = n || (0, s.BL)(r)), r) && o && t) {
-          if (o.bHideMainWindowForPopouts) {
-            const e = c.createElement(
-              s.e1,
-              {
-                className: "Hidden",
-                onEscKeypress: !f.props.bDisableBackgroundDismiss && u,
-              },
-              c.createElement("div", null)
-            );
-            b = n.ShowModal(e);
-          }
-          const e = Object.assign(Object.assign({}, o), { fnOnClose: d }),
-            h = new _(r, t, e, f, i, l);
-          h.Show(), (a = h);
-        } else a = n.ShowModal(f);
-        return a;
-      }
-      function p(e, r) {
-        return (
-          (e = e || (0, s.BL)(r || window)), d.De.USE_POPUPS && e.BUsePopups()
-        );
-      }
-      class _ extends l.K3 {
-        constructor(e, r, t, o, c, i) {
-          super(r, {
-            title: t.strTitle,
-            html_class: "client_chat_frame fullheight ModalDialogPopup",
-            body_class: "fullheight ModalDialogBody",
-            owner_window: void 0,
-            replace_existing_popup: !0,
-            target_browser: c,
-            availscreenwidth: e.screen.availWidth,
-            availscreenheight: e.screen.availHeight,
-          }),
-            (this.m_windowOpener = e),
-            (this.m_modalProps = t),
-            (this.m_modalElement = o),
-            (this.m_options = i);
-        }
-        Update(e) {
-          (0, b.X)(!1, "NYI");
-        }
-        UpdateParamsBeforeShow(e) {
-          var r, t, o;
-          let c,
-            i,
-            l,
-            n = this.m_modalProps.popupWidth || 500,
-            s = this.m_modalProps.popupHeight || 400;
-          if (
-            d.De.IN_CLIENT &&
-            (null ===
-              (o =
-                null ===
-                  (t =
-                    null === (r = this.m_windowOpener) || void 0 === r
-                      ? void 0
-                      : r.SteamClient) || void 0 === t
-                  ? void 0
-                  : t.Window) || void 0 === o
-              ? void 0
-              : o.GetBrowserID)
-          )
-            l = this.m_windowOpener.SteamClient.Window.GetBrowserID();
-          else {
-            let e = this.m_windowOpener.screen;
-            (c = (e.availWidth - n) / 2), (i = (e.availHeight - s) / 2);
-            let r = e;
-            void 0 !== r.availLeft &&
-              void 0 !== r.availTop &&
-              ((c += r.availLeft), (i += r.availTop));
-          }
-          return Object.assign(Object.assign({}, e), {
-            dimensions: { width: n, height: s, left: c, top: i },
-            window_opener_id: l,
-          });
-        }
-        OnLoad() {}
-        OnResize() {}
-        OnClose() {
-          this.m_modalProps.fnOnClose && this.m_modalProps.fnOnClose(),
-            i.unmountComponentAtNode(this.m_element);
-        }
-        Render(e, r) {
-          if (
-            (r.setAttribute("class", "fullheight popup_chat_frame"),
-            this.m_modalElement)
-          ) {
-            const t = this.m_options ? this.m_options.bHideActions : void 0,
-              o =
-                this.m_options &&
-                "number" == typeof this.m_options.nDragAreaHeight
-                  ? { height: this.m_options.nDragAreaHeight }
-                  : void 0;
-            i.render(
-              c.createElement(
-                "div",
-                { className: "PopupFullWindow", onContextMenu: n.T },
-                c.createElement(a.T, {
-                  hideMinMax: !0,
-                  popup: e,
-                  hideActions: t,
-                  style: o,
-                }),
-                c.createElement(s.t9, { ModalManager: (0, s.BL)(e) }),
-                this.m_modalElement
-              ),
-              r
-            );
-          }
-        }
-      }
-    },
     13596: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => n });
       var o = t(67294),
         c = t(7573),
-        i = t(50732),
-        l = t.n(i);
+        b = t(50732),
+        l = t.n(b);
       const n = o.memo(function (e) {
         const {
           className: r,
           size: t,
-          string: i,
+          string: b,
           position: n,
-          static: b,
+          static: a,
           msDelayAppear: h,
         } = e;
-        let d = [l().LoadingWrapper, "SteamLogoThrobber", s(t)];
-        const [u, f] = o.useState(!h);
+        let f = [l().LoadingWrapper, "SteamLogoThrobber", s(t)];
+        const [u, d] = o.useState(!h);
         return (
           (0, o.useEffect)(() => {
             if (u) return;
-            const e = setTimeout(() => f(!0), h);
+            const e = setTimeout(() => d(!0), h);
             return () => clearTimeout(e);
           }, [h, u]),
-          void 0 === i && d.push(l().noString),
-          r && d.push(r),
-          b && d.push(l().Static),
+          void 0 === b && f.push(l().noString),
+          r && f.push(r),
+          a && f.push(l().Static),
           o.createElement(
             "div",
             {
@@ -294,16 +88,16 @@
             u &&
               o.createElement(
                 "div",
-                { className: d.join(" ") },
+                { className: f.join(" ") },
                 o.createElement(
                   "div",
                   { className: l().Throbber },
-                  o.createElement(a, { className: l().base }),
-                  o.createElement(a, { className: l().blur })
+                  o.createElement(i, { className: l().base }),
+                  o.createElement(i, { className: l().blur })
                 )
               ),
-            Boolean(i) &&
-              o.createElement("div", { className: l().ThrobberText }, i)
+            Boolean(b) &&
+              o.createElement("div", { className: l().ThrobberText }, b)
           )
         );
       });
@@ -321,7 +115,7 @@
             return l().throbber_large;
         }
       }
-      function a(e) {
+      function i(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -549,15 +343,15 @@
     },
     49686: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => b });
+      t.r(r), t.d(r, { default: () => a });
       var o = t(67294),
         c = t(41414),
-        i = t(56306),
+        b = t(56306),
         l = t(94486),
         n = (t(88514), t(65902)),
         s = t(90666),
-        a = t(92742);
-      function b() {
+        i = t(92742);
+      function a() {
         return (
           (0, o.useEffect)(
             () => (
@@ -581,21 +375,21 @@
             disableQR: t,
             closeModal: c,
           } = e,
-          b = (0, o.useRef)(
+          a = (0, o.useRef)(
             new n.J(s.De.WEBAPI_BASE_URL).GetServiceTransport()
           ).current,
-          [h, d] = (0, o.useState)(!1);
+          [h, f] = (0, o.useState)(!1);
         return o.createElement(
-          i.e1,
+          b.e1,
           { onEscKeypress: c, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
           h
             ? o.createElement(l.pT, null)
             : o.createElement(l.wK, {
                 platform: 2,
-                transport: b,
+                transport: a,
                 onComplete: (e) => {
-                  e == a.TG.k_PrimaryDomainFail
-                    ? d(!0)
+                  e == i.TG.k_PrimaryDomainFail
+                    ? f(!0)
                     : window.location.assign(r);
                 },
                 autoFocus: !0,

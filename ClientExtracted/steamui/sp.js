@@ -27446,7 +27446,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? kg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1668825283),
+          d = parseInt(1669067750),
           m = d && xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, ag.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36850,9 +36850,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 18 2022 : 18:34:43",
-              BUILD_TIME_UTC: "Nov 19 2022 : 02:34:43",
-              BUILD_RTIME_UTC: 1668825283,
+              BUILD_TIME_LOCAL: "Nov 21 2022 : 13:55:50",
+              BUILD_TIME_UTC: "Nov 21 2022 : 21:55:50",
+              BUILD_RTIME_UTC: 1669067750,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {

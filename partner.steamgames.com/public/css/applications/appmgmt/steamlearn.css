@@ -7,6 +7,15 @@ a {
 #application_root {
   min-height: inherit;
 }
+.steamlearn_routing_TextButton_asdUZ {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.steamlearn_routing_TextButton_asdUZ:hover {
+  color: #fff;
+}
 .steamlearn_routing_SteamLearnButton_L3Xej {
   width: fit-content;
   padding: 2px 6px;
@@ -106,10 +115,72 @@ a {
 a {
   text-decoration: none;
 }
+#application_root {
+  min-height: inherit;
+}
+.datasourcelist_TextButton_2WCob {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.datasourcelist_TextButton_2WCob:hover {
+  color: #fff;
+}
+.datasourcelist_SteamLearnButton_35AI5 {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.datasourcelist_SteamLearnButton_35AI5.datasourcelist_Hidden_jS1JF {
+  opacity: 0;
+}
+.datasourcelist_SteamLearnButton_35AI5.datasourcelist_Large_1KnyI {
+  font-size: 14px;
+}
+.datasourcelist_SteamLearnButton_35AI5.datasourcelist_Medium_3qCtH {
+  font-size: 13px;
+}
+.datasourcelist_SteamLearnButton_35AI5.datasourcelist_Blue_XZysr {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.datasourcelist_SteamLearnButton_35AI5.datasourcelist_Red_pPWf_ {
+  background-color: #c64444;
+  color: #000;
+}
+.datasourcelist_SteamLearnButton_35AI5:hover.datasourcelist_Blue_XZysr {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.datasourcelist_SteamLearnButton_35AI5:hover.datasourcelist_Red_pPWf_ {
+  background-color: #f93d3d;
+  color: #000;
+}
 .datasourcelist_DataSourceListPage_1OG__ {
   width: 100%;
   padding: 20px;
   padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.datasourcelist_DataSourceListPage_1OG__ .datasourcelist_RegistrationKey_1HoYQ {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.datasourcelist_DataSourceListPage_1OG__ .datasourcelist_DataSourceList_21I3O {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -127,10 +198,6 @@ a {
   transition-property: transform, filter;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
-}
-.datasourcelist_DataSourceListElement_BJp6b:hover {
-  transform: scale(1.03);
-  filter: brightness(1.1);
 }
 .datasourcelist_DataSourceListElement_BJp6b .datasourcelist_Name_tRqdS {
   color: #fff;
@@ -154,11 +221,69 @@ a {
   color: #fff;
   font-size: 13px;
 }
+.datasourcelist_DataSourceListElement_BJp6b
+  .datasourcelist_RegistrationKey_1HoYQ {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
 * {
   box-sizing: border-box;
 }
 a {
   text-decoration: none;
+}
+#application_root {
+  min-height: inherit;
+}
+.datasourceinspect_TextButton_1MgDQ {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.datasourceinspect_TextButton_1MgDQ:hover {
+  color: #fff;
+}
+.datasourceinspect_SteamLearnButton_wIB-g {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.datasourceinspect_SteamLearnButton_wIB-g.datasourceinspect_Hidden_aPk0K {
+  opacity: 0;
+}
+.datasourceinspect_SteamLearnButton_wIB-g.datasourceinspect_Large_2ookS {
+  font-size: 14px;
+}
+.datasourceinspect_SteamLearnButton_wIB-g.datasourceinspect_Medium_1FMLC {
+  font-size: 13px;
+}
+.datasourceinspect_SteamLearnButton_wIB-g.datasourceinspect_Blue_2v2xf {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.datasourceinspect_SteamLearnButton_wIB-g.datasourceinspect_Red_3IcTx {
+  background-color: #c64444;
+  color: #000;
+}
+.datasourceinspect_SteamLearnButton_wIB-g:hover.datasourceinspect_Blue_2v2xf {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.datasourceinspect_SteamLearnButton_wIB-g:hover.datasourceinspect_Red_3IcTx {
+  background-color: #f93d3d;
+  color: #000;
 }
 .datasourceinspect_DataSourceInspectPage_1U6jT {
   display: flex;
@@ -312,6 +437,15 @@ a {
 #application_root {
   min-height: inherit;
 }
+.projectlist_TextButton_1cqhS {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectlist_TextButton_1cqhS:hover {
+  color: #fff;
+}
 .projectlist_SteamLearnButton_3pEd7 {
   width: fit-content;
   padding: 2px 6px;
@@ -373,10 +507,6 @@ a {
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
-.projectlist_ProjectListElement_d64QC:hover {
-  transform: scale(1.03);
-  filter: brightness(1.1);
-}
 .projectlist_ProjectListElement_d64QC .projectlist_Name_7UoFG {
   color: #fff;
   font-size: 16px;
@@ -388,6 +518,7 @@ a {
 }
 .projectlist_ProjectListElement_d64QC .projectlist_CreatedDate_1Ujp5 {
   margin-top: 5px;
+  margin-bottom: 6px;
   color: #ac966a;
   font-size: 11px;
 }
@@ -406,6 +537,15 @@ a {
 }
 #application_root {
   min-height: inherit;
+}
+.projectcreate_TextButton_2wwVA {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectcreate_TextButton_2wwVA:hover {
+  color: #fff;
 }
 .projectcreate_SteamLearnButton_2JNpk {
   width: fit-content;
@@ -515,6 +655,15 @@ a {
 #application_root {
   min-height: inherit;
 }
+.steamlearn_TextButton_VES62 {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.steamlearn_TextButton_VES62:hover {
+  color: #fff;
+}
 .steamlearn_SteamLearnButton_OFzkO {
   width: fit-content;
   padding: 2px 6px;
@@ -562,6 +711,15 @@ a {
 }
 #application_root {
   min-height: inherit;
+}
+.projectheader_TextButton_j6Csd {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectheader_TextButton_j6Csd:hover {
+  color: #fff;
 }
 .projectheader_SteamLearnButton_aJgN_ {
   width: fit-content;
@@ -693,6 +851,15 @@ a {
 }
 #application_root {
   min-height: inherit;
+}
+.projectdatasources_TextButton_2yO-1 {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectdatasources_TextButton_2yO-1:hover {
+  color: #fff;
 }
 .projectdatasources_SteamLearnButton_bG5n6 {
   width: fit-content;
@@ -1047,6 +1214,15 @@ a {
 }
 #application_root {
   min-height: inherit;
+}
+.projectmodel_TextButton_x7w6X {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectmodel_TextButton_x7w6X:hover {
+  color: #fff;
 }
 .projectmodel_SteamLearnButton_2XyTR {
   width: fit-content;
@@ -1479,6 +1655,15 @@ a {
 }
 #application_root {
   min-height: inherit;
+}
+.projectsnapshotfilter_TextButton_3dxVs {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.projectsnapshotfilter_TextButton_3dxVs:hover {
+  color: #fff;
 }
 .projectsnapshotfilter_SteamLearnButton_3nDD4 {
   width: fit-content;

@@ -663,6 +663,12 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 {
     box-shadow: var(--gpShadow-Medium);
   }
 }
+@media screen and (max-width: 500px) {
+  .contenthubshared_ContentHubTakeoverCtn_2w_95 {
+    margin: 0px 0px 16px 0px;
+    box-shadow: var(--gpShadow-Medium);
+  }
+}
 .contenthubshared_ContentHubTakeoverCtn_2w_95 a {
   display: flex;
   justify-content: center;
@@ -681,6 +687,11 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a {
     position: unset;
     height: 32vw;
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contenthubshared_ContentHubTakeoverCtn_2w_95 a {
+    height: unset;
   }
 }
 .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {

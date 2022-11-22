@@ -4349,6 +4349,7 @@ html.touch
     height: 54px;
     min-width: unset;
     padding: unset;
+    max-width: 37%;
   }
 }
 .BasicUI

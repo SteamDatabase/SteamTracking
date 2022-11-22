@@ -95,10 +95,20 @@ function IsValidOptionalField( fieldName, regex )
 	return true;
 }
 
-function SaveTakeDownNotice()
+function SaveTrademarkComplaint()
+{
+	var frm = $J( "#CreateTrademarkComplaintForm" );
+	SaveTakeDownNotice( frm );
+}
+
+function SaveDMCATakeDownNotice()
 {
 	var frm = $J( "#CreateDMCATakeDownNoticeForm" );
+	SaveTakeDownNotice( frm );
+}
 
+function SaveTakeDownNotice( frm )
+{
 	if ( !$J( "#check_is_ownera").prop('checked') && !$J( "#check_is_ownerb").prop('checked') )
 	{
 		ShowAlertDialog( 'Error', 'You must certify that you are the owner or authorized to act on the copyright owner\'s behalf' );

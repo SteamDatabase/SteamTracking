@@ -21772,9 +21772,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Nov 18 2022
+Nov 19 2022
 build_time
-22:36:16
+15:57:09
 package_version
 local
 SteamClient020
@@ -22102,7 +22102,7 @@ file://{resources}/layout/settings/settings_gamecontroller_namedialog.xml
 SettingsController_ControllerName
 GameControllerAnimationDuration
 SettingsSteamController_ControllerType
-#controller_xboxone
+#controller_none
 SettingsPanelGameController_NameAndCommitBinding
 SettingsPanel_GameController_Binding
 EnterGameControllerBindingMode
@@ -22256,8 +22256,10 @@ Generic Controller Opt-in: %d
 #UI_Start
 controller_blacklist
 %x/%x,
-#controller_xbox360
 #controller_generic
+#controller_xboxone
+#controller_xbox360
+#controller_ps5
 #controller_ps4
 #controller_ps3
 #controller_ps2
@@ -22287,9 +22289,10 @@ dpright
 x
 leftx
 lefty
+gen
 xb1
 xb360
-gen
+ps5
 ps4
 ps3
 ps2
@@ -29417,7 +29420,7 @@ https://steamchina.com
 https://www.steampowered.com
 WebsiteURL
 steam/cached/aboutdialog.res
-22:36:52
+15:57:43
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -31356,7 +31359,7 @@ sOSVersionId
 sOSBuildId
 nSteamVersion
 sSteamBuildDate
-Nov 18 2022 22:36:56
+Nov 19 2022 15:57:47
 sSteamAPI
 sCPUVendor
 sCPUName
@@ -41116,7 +41119,6 @@ b
 @
 @
 @
-gx
 @
 @
 l
@@ -41170,6 +41172,7 @@ j
 @
 @
 @
+|
 @
 @
 @
@@ -41214,7 +41217,6 @@ k
 P
 0
 eO
-*{
 CO
 w
 w
@@ -41232,6 +41234,8 @@ l
 \q
 p
 0
+av
+Ev
 V
 @
 @
@@ -41271,6 +41275,7 @@ p
 @
 @
 @
+-u
 @
 @
 @
@@ -41280,6 +41285,8 @@ r
 @
 @
 j
+u
+u
 u
 u
 u
@@ -41352,6 +41359,7 @@ qp
 @
 j
 t
+t
 @
 @
 @
@@ -41363,11 +41371,10 @@ p
 p
 0
 4
-us
+ps
 p
 p
 p
-4s
 
 
 s
@@ -41387,11 +41394,9 @@ f
 
 
 0
-9r
 $o
 q
 8d
-r
 @
 @
 @
@@ -41520,7 +41525,6 @@ e
 @
 @
 
-q
 q
 q
 q
@@ -41836,8 +41840,9 @@ t(=
 
 gD
 2?
-tl
+ul
 1D
+el
 _
 _
 _
@@ -41846,6 +41851,7 @@ _
 _
 D
 D
+*l
 E8}
 ASj
 p
@@ -41876,7 +41882,6 @@ p
 ^
 ^
 ^
-ek
 @
 @
 @
@@ -41889,7 +41894,6 @@ g
 g
 g
 g
-k
 k
 k
 k
@@ -41905,7 +41909,6 @@ j
 j
 j
 8
-~p
 B
 f
 E]
@@ -41921,11 +41924,14 @@ j
 >
 I
 ?
-'m
+Oj
 p
 0
 p
 0
+j
+j
+j
 E8}
 e
 SA
@@ -41941,13 +41947,12 @@ d
 ~e=
 =
 =
-4i
+gi
 f
 f
 f
 i
-i
-i
+@n
 d
 [
 j
@@ -42019,7 +42024,6 @@ j
 j
 j
 j
-[h
 j
 j
 j
@@ -42035,17 +42039,16 @@ j
 j
 -0
 /0
-|h
 y
 y
 y
 Ac
 k
 7Z
-h
 Z
 Z
 @
+m
 m
 p
 0
@@ -42056,6 +42059,7 @@ j
 j
 j
 j
+;g
 j
 j
 j
@@ -42074,8 +42078,10 @@ j
 E8}
 Y
 Y
+pf
 e
 3
+Cf
 A#u
 ?
 Hc
@@ -42093,6 +42099,7 @@ v
 A#E
 A#E
 A#u
+te
 3
 1
 2
@@ -42114,12 +42121,12 @@ e
 e
 e
 e
+e
 W
 W
 j
 j
 ]
-d
 kV
 _V
 ;
@@ -42145,7 +42152,6 @@ j
 j
 j
 j
-^d
 j
 j
 j
@@ -42178,6 +42184,7 @@ j
 j
 6
 d
+d
 j
 j
 j
@@ -42199,8 +42206,10 @@ j
 j
 D^
 f
+lc
+Yc
 U
-Uc
+5c
 \
 j
 j
@@ -42220,7 +42229,6 @@ j
 j
 j
 j
-#c
 j
 j
 j
@@ -42230,6 +42238,7 @@ j
 j
 j
 p5
+0e
 c5
 c
 j
@@ -42288,8 +42297,7 @@ j
 j
 a
 a
-a
-a
+c
 a
 a
 a
@@ -42301,10 +42309,8 @@ i
 h
 p
 0
-b
 E8}
 L
-$`
 6
 y1
 @
@@ -42312,13 +42318,12 @@ y1
 p
 0
 Q
-Ua
 =
 =
 @
 0
 0
-4_
+a
 p
 0
 j
@@ -42328,6 +42333,8 @@ p
 0
 p
 0
+_
+_
 _
 _
 0
@@ -42344,6 +42351,7 @@ c
 5
 Z
 Z
+l^
 #Z
 4
 4
@@ -42367,6 +42375,7 @@ j
 j
 j
 j
+^
 j
 j
 j
@@ -42431,6 +42440,7 @@ O
 O
 j
 j
+\
 4
 4
 4
@@ -42443,7 +42453,6 @@ X
 /s
 RN
 W
-']
 %
 9
 9
@@ -42463,8 +42472,6 @@ p
 0
 CM
 I
-L\
-H\
 M
 M
 M
@@ -42512,10 +42519,12 @@ gJ
 Hc
 {S
 J
+5Y
 e
 I
 E8}
 E8u
+X
 X
 X
 X
@@ -42528,14 +42537,11 @@ H=
 p
 0
 Rf
-oX
 -
 -
 p
 0
-JW
 /
-"W
 ARj
 p
 0
@@ -42552,7 +42558,6 @@ G
 Pe
 @
 @
-qV
 .F
 %
 F
@@ -42565,13 +42570,8 @@ F
 T
 :w
 :w
-\U
-WU
 #*
-&U
 .
-U
-U
 U
 U
 U
@@ -42659,7 +42659,6 @@ p
 0
 I
 S
-MR
 }.
 )B
 @
@@ -42691,7 +42690,7 @@ B
 p
 0
 
-KQ
+[Q
 h&
 3A
 0
@@ -42704,7 +42703,7 @@ AT=
 D
 @
 @
-Q
+#Q
 Q
 Q
 @
@@ -42739,7 +42738,6 @@ IcE
 @
 @
 E@
-3P
 @
 @
 @
@@ -42753,12 +42751,12 @@ P
 P
 P
 P
+P
 V
 ?
 =
 O
 =
-RN
 >
 >
 >
@@ -42767,27 +42765,29 @@ RN
 >
 >
 N
-#N
+N
 6=
 !
+<y
 <
 @
 c$
 i&
 &
-bK
-,x
 ;
 ;
 ;
 ;
 >
 K
+iJ
 :
+TJ
+J
 J
 &9
 9
-+I
+6I
 I
 I
 @
@@ -42812,7 +42812,6 @@ u
 ?
 -
 H=
-ht
 
 
 
@@ -43281,30 +43280,33 @@ I
 I
 I
 @
-:f
+f
 v'
 d
 d
 d
-)d
+d
 d
 s
 s
 s
 s
 7
+7
 /
 &
 &
 &
 &
+o6
 
 
 
 d
 )
 A+M
-S6
+Z6
+Ao
 j
 j
 j
@@ -43312,7 +43314,6 @@ j
 j
 j
 ;%
-jp
 %
 %
 %
@@ -43359,6 +43360,7 @@ j
 5
 5
 5
+5
 $
 $
 e
@@ -43370,7 +43372,6 @@ d
 0
 e
 e
-<3
 g#
 A+4$A+u
 A#
@@ -43413,6 +43414,7 @@ j
 j
 j
 j
+M5
 j
 j
 j
@@ -43423,6 +43425,7 @@ j
 j
 j
 "
+3
 j
 j
 j
@@ -43459,9 +43462,9 @@ j
 j
 j
 !
+?l
 !
 !
-2
 2
 2
 E
@@ -43478,7 +43481,6 @@ j
 j
 j
 j
-0
 j
 j
 j
@@ -43509,7 +43511,6 @@ j
 j
 j
 j
-{j
 j
 j
 j
@@ -43541,7 +43542,6 @@ j
 j
 j
 j
-~1
 @
 @
 &
@@ -43587,7 +43587,7 @@ j
 @
 @
 @
-u.
+x.
 R#
 j
 j
@@ -43609,10 +43609,10 @@ j
 j
 j
 j
-Z.
 .
 d
 .
+0
 j
 j
 j
@@ -43633,6 +43633,7 @@ c
 z
 @
 @
+o,
 Rj
 @
 @
@@ -43661,6 +43662,7 @@ Hc
 Hc
 E
 0
+7+
 0
 a
 *
@@ -43670,7 +43672,7 @@ B
 "
 0
 `
-;*
+H*
 @
 `
 0
@@ -43707,7 +43709,7 @@ p
 0
 3
 0
-V_
+X_
 @
 @
 a
@@ -43716,14 +43718,13 @@ a
 a
 a
 a
-K_
 j
 7c
-#$
 @
 @
 j
 -
+w&
 
 @
 @
@@ -43738,7 +43739,7 @@ j
 @
 @
 @
-y^
+x^
 ib
 @
 @
@@ -43747,9 +43748,11 @@ ib
 @
 @
 Ab
+7^
 ;b
+!^
+{$
 b
-]\
 @
 @
 @
@@ -43763,11 +43766,14 @@ b
 @
 @
 =
+1$
+&$
 \
 @
 @
 @
 @
+$
 $
 %
 0
@@ -43776,13 +43782,15 @@ $
 ha
 @
 @
-f]
+h]
+V]
 @
 @
 5a
 Z
 a
 0
+n#
 @
 @
 @
@@ -43801,7 +43809,7 @@ j
 @
 @
 @
-<\
+>\
 @
 @
 @
@@ -43837,6 +43845,7 @@ Y
 62
 2
 _
+@"
 9
 @
 @
@@ -43889,7 +43898,6 @@ _
 @
 @
 @
-P
 Z
 Z
 Z
@@ -43973,7 +43981,6 @@ j
 @
 @
 @
-NV
 1Z
 )
 )
@@ -44014,7 +44021,6 @@ t$f; W
 GY
 @
 @
-AU
 j
 U
 U
@@ -44053,6 +44059,7 @@ U
 U
 U
 U
+\R
 @
 @
 @
@@ -44136,20 +44143,17 @@ K
 @
 @
 @V
+yT
 mX
-KT
 >X
 BX
 $
-@T
 H=
 V
 V
 V
 V
 V
-,T
-$T
 @
 =
 @
@@ -44159,7 +44163,7 @@ P
 @
 @
 ?
-0Q
+8N
 R
 R
 R
@@ -44206,7 +44210,7 @@ Q
 @
 @
 @
-vM
+xM
 @
 @
 @
@@ -44330,7 +44334,6 @@ Q
 @
 @
 @
-BK
 Z
 @
 @
@@ -44416,7 +44419,6 @@ Z
 @
 @
 @
-K
 @
 @
 @
@@ -44498,13 +44500,14 @@ K
 @
 @
 aP
-L
+UL
 P
 P
 @
 @
 @
 @
+dJ
 @
 @
 @

@@ -27755,6 +27755,12 @@
         GetRecommendingCuratorsForApp(e) {
           return this.m_mapRecommendingCuratorsForApp.get(e);
         }
+        GetOwnedApps() {
+          return this.m_setOwnedApps;
+        }
+        GetWishlistedApps() {
+          return this.m_setWishList;
+        }
         HintLoad() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             return (

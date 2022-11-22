@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_autumn2022 {
-                background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/bg_2.png?v=4') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/ss_2022_bg_tile.jpg?v=3') repeat center, #2d3194;
+				background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/pedals.png?v=2') repeat-x center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/bg_3b.jpg?v=5') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/pedals3.png?v=2') repeat center, url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/bg_tile_middle_2c.jpg?v=4') repeat-y center, #f9e8a5;
             }
 
 body.v6.sale_autumn2022 .responsive_page_template_content {
@@ -38,7 +38,7 @@ body.v6.sale_autumn2022 .fullscreen-bg {
             }
 
 body.v6.sale_autumn2022 .home_header_textimage_ctn {
-                width: 1200px;
+                width: 1000px;
                 max-width: 95vw;
                 z-index: 100;
                 position: absolute;
@@ -238,6 +238,7 @@ body.v6.sale_autumn2022 .home_sticker_ctn.mobile {
     background-position: center;
     flex-wrap: nowrap;
     margin: 20px 0;
+	flex-grow: 1;
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -274,13 +275,16 @@ body.v6.sale_autumn2022 .home_sticker_ctn.mobile {
 
 .home_sticker_ctn {
     background-size: contain;
-    min-height: 250px;
-    /* -webkit-filter: drop-shadow(12px px 7px rgba(0,0,0,0.5));
-    filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5)); */
+    min-height: 175px;
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
     transform: scale(1.0);
-    margin: 0 0 60px 0;
+    margin: 0 0 0 0;
+}
+
+.split_banner_ctn {
+	display: flex;
+	gap: 10px;
 }
 
 .home_giftcard_ctn img {
@@ -497,9 +501,17 @@ body.v6.sale_autumn2022 .ds_options {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2%;
+    padding: 1% 2%;
     width: auto;
+	webkit-filter: drop-shadow(12px 12px 7px rgba(50,3,15,0.5));
+    filter: drop-shadow(12px 12px 7px rgba(50,3,15,0.5));
+}
 
+@media screen and (max-width: 500px ) {
+    .home_pagecontent_ctn.no_margin {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 body.v6 .home_page_gutter {
@@ -555,10 +567,10 @@ body.v6 .discount_block {}
     margin-bottom: 10px;
     font-family: "Motiva Sans", Sans-serif;
     font-weight: 600;
-    background-color: #eb4036;
-    color: #e2cb30;
+    background-color: #0e0a0a;
+    color: #ffffff;
     padding: 10px;
-    box-shadow: 4px 4px #e2cb30;
+    /* box-shadow: 4px 4px #e2cb30; */
 }
 
 .home_featured_ctn {
@@ -566,12 +578,38 @@ body.v6 .discount_block {}
 }
 .home_featured_ctn.hero_parent_ctn {
     margin-bottom: 20px;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+	padding: 3% 2%;
+}
+
+.content_hub_carousel_ctn {
+	width: 100%;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+}
+
+.content_hub_carousel_ctn .carousel_items {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 500px )
+{
+    .content_hub_carousel_ctn .carousel_items {
+        justify-content: start;
+        padding-left: 12px;
+    }
+}
+
+.content_hub_carousel_ctn .home_section_title {
+	background-color: unset;
+    color: #ffffff;
+    padding: 10px;
+    justify-content: center;
 }
 
 .sale_capsule_image {
     display: block;
     max-width: 100%;
-    box-shadow: 4px 4px 0px #22256b;
+    box-shadow: 2px 2px 4px #0e0a0a;
 }
 
 .sale_capsule.with_microtrailer .sale_capsule_image
@@ -727,7 +765,16 @@ body.v6 .discount_block {}
 .home_morefeatured_ctn {
     margin-top: 80px;
     margin-bottom: 70px;
-	}
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+}
+
+#tier1_target {
+	padding: 2% 3% 0% 3%;
+}
+
+#tier2_target {
+	padding: 2% 3% 0% 3%;
+}
 
 .home_morefeatured_ctn .home_section_title {
     		font-family: "Motiva Sans", Sans-serif;
@@ -752,9 +799,11 @@ body.v6 .discount_block {}
     position: relative;
 }
 
-body.v6 .page_content_ctn.dark
-{
-    background: #2d3194;
+body.v6 .page_content_ctn.dark {
+	background-color: unset;
+}
+
+body.v6 .page_content_ctn {
 }
 
 .home_category_ctn .home_category_title_ctn {
@@ -767,7 +816,7 @@ body.v6 .page_content_ctn.dark
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
-		    box-shadow: 8px 8px #e2cb30;
+		    box-shadow: 10px 0px 0px #100b0b;
     position: relative;
     display: flex;
 }
@@ -787,10 +836,9 @@ body.v6 .page_content_ctn.dark
 } */
 
 .home_tabs_row {
-    background-color: #eb4036;
-    color: #e2cb30;
+	background-color: #100b0b;
+	color: #ffffff;
     padding: 10px;
-    box-shadow: 4px 4px #e2cb30;
 }
 
 .home_category_games_ctn {
@@ -811,8 +859,11 @@ body.v6 .page_content_ctn.dark
     color: rgb(255, 255, 255);
 }
 
-a:hover {
+.see_more_link:hover {
 	text-decoration: underline;
+}
+
+a:hover {
 	color: rgb(255, 255, 255);
 }
 
@@ -856,8 +907,8 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-size: 36px;
-    color: #eb4036;
-	background: #e2cb30;
+	color: #ffffff;
+	background: #100b0b;
     word-wrap: break-word;
     min-width: 70%;
     max-width: 100%;
@@ -884,13 +935,13 @@ a:hover {
     max-width: 100%;
     position: relative;
     text-transform: uppercase;
-    color: #eb4036;
+    color: #ffffff;
+	background: #100b0b;
     word-wrap: break-word;
     font-weight: 900;
     font-size: 36px;
     letter-spacing: 0.03em;
     line-height: 42px;
-	background: #e2cb30;
     padding-left: 5px;
 }
 
@@ -934,8 +985,8 @@ html:lang( ru ) .home_tag_category_title b{
     text-transform: uppercase;
     font-size: 17px;
     /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);*/
-	color: #eb4036;
-	background: #e2cb30;
+	color: #ffffff;
+	background: #100b0b;
     word-wrap: break-word;
     line-height: 25px;
     padding-left: 25px;
@@ -1012,11 +1063,11 @@ body.forgeyourfate {
 
 p.home_subtitle_ctn {
 	font-size: 20px;
-	background: #e2cb30;
-	color: #2d3194;
+	background: #100b0b;
+	color: #ffffff;
 	font-weight: 600;
 	padding: 5px 10px;
-	box-shadow: 4px 4px #eb4036;
+	/* box-shadow: 4px 4px #eb4036; */
 }
 
 p.home_subtitle_ctn a {
@@ -1184,6 +1235,10 @@ p.home_subtitle_ctn a {
         display: none;
     }
 
+	body.v6.sale_autumn2022 .split_banner_ctn .home_sticker_ctn.desktop {
+		display: flex;
+	}
+
     body.v6.sale_autumn2022 .home_sticker_ctn.mobile {
         display: block;
         margin-top: 0px;
@@ -1348,9 +1403,22 @@ p.home_subtitle_ctn a {
         flex-direction: row;
     }
 
-	htmnl.responsive .header_clorthax
+	html.responsive .header_clorthax
 	{
 		display: none;
+	}
+
+	#tier1_target {
+		padding: 10px;
+	}
+	
+	#tier2_target {
+		padding: 10px;
+	}
+
+	.split_banner_ctn {
+		flex-direction: column;
+		gap: 20px;
 	}
 
 }
@@ -1548,13 +1616,23 @@ p.home_subtitle_ctn a {
     }
     body.responsive_page .home_title {
         line-height: 26px;
-		padding: .25em;
+		padding: .5em;
     }
 
 	body.responsive_page .home_title_ctn,
     body.responsive_page .home_section_title {
-		font-size: 22px;
-        padding: 0;
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        padding: .5em;
+		justify-content: center;
+	}
+
+	html.responsive .home_tag_category_title, html.responsive .home_tag_category_title * {
+		font-size: 26px;
+		font-weight: 600;
+		letter-spacing: .5em;
+		text-align: center;
+		padding: 0.5em;
 	}
 
     body.responsive_page .home_title_ctn .home_line {
@@ -1592,12 +1670,16 @@ p.home_subtitle_ctn a {
     html.responsive .home_category_title {
         font-size: 26px;
         line-height: 15px;
-        padding: 0;
+        padding: .5em;
+		margin-top: 0px;
+		font-weight: 600; 
     }
     html.responsive .home_category_subtitle {
         font-size: 22px;
         line-height: 28px;
-        padding: 0;
+        padding: .5em;
+		font-weight: 600;
+		letter-spacing: .5em;
     }
     html.responsive .home_category_focus_ctn .sale_capsule {
         margin-top: 26px;
@@ -1636,6 +1718,15 @@ p.home_subtitle_ctn a {
         margin-right: 6px;
     }
 
+	html.responsive .content_hub_carousel_ctn .home_section_title {
+		padding: 10px;
+		margin-bottom: 0px;
+	}
+
+	html.responsive .home_category_ctn .home_category_title_ctn {
+		padding: 10px;
+		box-shadow: unset;
+	}
 }
 
 .home_franchises_ctn {
@@ -1644,6 +1735,7 @@ p.home_subtitle_ctn a {
 
 .home_franchises_ctn .home_section_title, .home_browsemore_ctn .home_section_title {
     margin: 16px 0 0px 0;
+	background: #0e0a0a;
 }
 
 
@@ -1679,23 +1771,22 @@ p.home_subtitle_ctn a {
     margin-bottom: 10px;
     font-family: "Motiva Sans", Sans-serif;
     font-weight: 600;
-	background-color: #eb4036;
-	color: #e2cb30;
+	background-color: #100b0b;
+	color: #ffffff;
 	/* width: -moz-fit-content;
 	width: fit-content;*/
     padding: 10px;
-	box-shadow: 4px 4px #e2cb30;
 }
 
 .home_title_ctn a:link, .home_title_ctn a:visited {
-	color: #e2cb30;
+	color: #ffffff;
 }
 
 .dlc_block .home_title_ctn {
-    color: #e2cb30;
+    color: #ffffff;
 }
 .dlc_block .home_title_ctn .home_line {
-    background: #AC5DB9;;
+    background: #100b0b;
 }
 
 .home_title_ctn .home_line {
@@ -2025,7 +2116,7 @@ p.home_subtitle_ctn a {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #e2cb30;
+    color: #ffffff;
     margin: 0 20px 0 0;
     opacity: .7;
     display: inline-block;
@@ -2187,6 +2278,10 @@ body.v6 .sale_capsule .discount_block_inline
     body.v6 .franchise_discount_tag {
         display: none;
     }
+
+	html.responsive .split_banner_ctn .summer_banner_ctn.home_sticker_ctn {
+		min-height: 115px;
+	}
 }
 
 .sale_capsule_image_ctn
@@ -2207,8 +2302,8 @@ body.v6 .sale_capsule .discount_block_inline
     right: 0;
     top: 0;
     bottom: 0;
-    border: 2px solid #e2cb30;
-    box-shadow: 4px 4px 0px #22256b;
+    /* border: 2px solid #e2cb30; */
+    box-shadow: 4px 4px 10px #110c0c;
     transition: opacity 0.4s;
     z-index: 3;
 }
@@ -2280,7 +2375,6 @@ body.v6 .sale_capsule .discount_block_inline
     position: relative;
     overflow: hidden;
     font-size: 12px;
-    box-shadow: 6px 6px 0px #22256b;
     margin-left: 2.5%;
     margin-bottom: 12px;
 }
@@ -2545,7 +2639,6 @@ body.v6 .sale_capsule .discount_block_inline
     margin: 0 16px;
     width: 373px;
     background: #000000;
-    box-shadow: 6px 6px 0px #22256b;
     overflow: hidden;
 }
 
@@ -2822,29 +2915,45 @@ img.franchise_placeholder {
 } */
 
 .carousel_container .arrow.right {
-	right: -54px;
-	background: #eb4036;
-	box-shadow: 4px 4px #e2cb30;
+	right: -6%;
+	background: rgba( 15, 10, 10, 0.25 );
 	transition: all .2s ease-in-out;
 }
 
 .carousel_container .arrow.right:hover {
 	transform: scale(1.05);
-	background: #eb4036;
-	box-shadow: 6px 6px #e2cb30;
+	background: rgba( 15, 10, 10, 0.35 );
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.right {
+	right: 2%;
+	background: rgba(255, 245, 195, .15);
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.right:hover {
+	right: 2%;
+	background: rgba(255, 245, 195, .25);
 }
 
 .carousel_container .arrow.left {
-	left: -54px;
-	background: #eb4036;
-	box-shadow: 4px 4px #e2cb30;
+	left: -6%;
+	background: rgba( 15, 10, 10, 0.25 );
 	transition: all .2s ease-in-out;
 }
 
 .carousel_container .arrow.left:hover {
 	transform: scale(1.05);
-	background: #eb4036;
-	box-shadow: 6px 6px #e2cb30;
+	background: rgba( 15, 10, 10, 0.35 );
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.left {
+	left: 2%;
+	background: rgba(255, 245, 195, .15);
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.left:hover {
+	left: 2%;
+	background: rgba(255, 245, 195, .25);
 }
 
 .header_clorthax {
@@ -2857,6 +2966,11 @@ img.franchise_placeholder {
     position: absolute;
 }
 
+/* Infinite Scroll */
+
+.home_ctn {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/bg_tile_middle_3.jpg') repeat-y center;
+}
 
 /* Tablet/SteamDeck Overrides */
 html.tablet body.v6.sale_autumn2022 .hero_add_to_cart  {
@@ -2887,4 +3001,18 @@ html.tablet body.v6.sale_autumn2022 .franchise_carousel {
 
 html.tablet body.v6.sale_autumn2022 .home_tabs_row_ctn, html.tablet body.v6.sale_autumn2022 .home_tabs_row {
     display: block;
+}
+
+html.tablet body.v6.sale_autumn2022 .pill_tab_menu_item {
+	background: #8d1811;
+	color: #fbffc6;
+}
+
+html.tablet body.v6.sale_autumn2022 .pill_tab_menu_item.gpfocus {
+	background: #fbffc6;
+	color: #8d1811;
+}
+
+html.tablet body.v6.sale_autumn2022 .carousel_container .carousel_items:not(.no_paging) > .hero_row {
+	max-width: 852px;
 }

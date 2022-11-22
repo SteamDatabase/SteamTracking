@@ -32,7 +32,7 @@
 	font-size: 1.25em;
 	padding-top: 5px;
 }
-	
+
 .dmca_notice_legal_name
 {
 	float: left;
@@ -55,6 +55,14 @@
 	float: left;
 	color: #ca6a0c;
 	font-size: 12px;
+}
+
+.dmca_notice_type
+{
+	float: left;
+	color: white;
+	font-size: 12px;
+	padding-left: 10px;
 }
 
 .dmca_notice_last_actor

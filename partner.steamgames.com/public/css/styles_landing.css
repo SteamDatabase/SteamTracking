@@ -752,6 +752,10 @@ p {
 		color: #A4D007;
 	}
 
+	.landingTable tr.prepurchase td, .landingTable .tr.prepurchase .td, .td.prepurchase, td.prepurchase {
+		color: #FFFFAA;
+	}
+
 	.landingTable tr.prerelease td, .landingTable .tr.prerelease .td, .landingTable .td.prerelease, .landingTable td.prerelease, .td.prerelease,a td.prerelease {
 		color: #A4D007;
 	}

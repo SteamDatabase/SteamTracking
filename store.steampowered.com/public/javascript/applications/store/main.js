@@ -2870,13 +2870,14 @@
       }
       n.d(t, {
         De: () => u,
+        MR: () => h,
         QS: () => s,
         YO: () => a,
         Z3: () => o,
         dt: () => l,
         eV: () => c,
         fk: () => i,
-        gg: () => w,
+        gg: () => v,
         jM: () => d,
         j_: () => m,
         my: () => r,
@@ -3088,7 +3089,32 @@
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 34, 35,
       ];
-      var h, p, _, g, f, y, S, w, v, E, C;
+      function h(e) {
+        switch (e) {
+          case 0:
+          default:
+            return "default";
+          case 1:
+            return "pw_dota2";
+          case 2:
+            return "nexon_dota2";
+          case 3:
+            return "steamcmd";
+          case 4:
+            return "pw_csgo";
+          case 5:
+            return "clientui";
+          case 6:
+            return "steamhdl";
+          case 7:
+            return "steamchina";
+          case 8:
+            return "singleapp";
+          case 9:
+            return "gameserver";
+        }
+      }
+      var p, _, g, f, y, S, w, v, E, C, k;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -3104,7 +3130,7 @@
             "k_EConnectivityTestResult_WifiDisabled"),
           (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
             "k_EConnectivityTestResult_NoLAN");
-      })(h || (h = {})),
+      })(p || (p = {})),
         (function (e) {
           (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
@@ -3118,7 +3144,7 @@
               "k_ENetFakeLocalSystemState_NoInternet"),
             (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
               "k_ENetFakeLocalSystemState_NoSteam");
-        })(p || (p = {})),
+        })(_ || (_ = {})),
         (function (e) {
           (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
             "k_ESuspendResumeProgressState_Invalid"),
@@ -3132,7 +3158,7 @@
               "k_ESuspendResumeProgressState_WaitingForApp"),
             (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
               "k_ESuspendResumeProgressState_Working");
-        })(_ || (_ = {})),
+        })(g || (g = {})),
         (function (e) {
           (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
             "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -3142,7 +3168,7 @@
               "k_EFloatingGamepadTextInputModeModeEmail"),
             (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
               "k_EFloatingGamepadTextInputModeModeNumeric");
-        })(g || (g = {})),
+        })(f || (f = {})),
         (function (e) {
           (e[(e.k_EAppUpdateContentType_Content = 0)] =
             "k_EAppUpdateContentType_Content"),
@@ -3152,7 +3178,7 @@
               "k_EAppUpdateContentType_Shader"),
             (e[(e.k_EAppUpdateContentType_Max = 3)] =
               "k_EAppUpdateContentType_Max");
-        })(f || (f = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_EOverlayToStoreFlag_None = 0)] =
             "k_EOverlayToStoreFlag_None"),
@@ -3160,13 +3186,13 @@
               "k_EOverlayToStoreFlag_AddToCart"),
             (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
               "k_EOverlayToStoreFlag_AddToCartAndShow");
-        })(y || (y = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(S || (S = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_EGamingDeviceType_Unknown = 0)] =
             "k_EGamingDeviceType_Unknown"),
@@ -3183,13 +3209,13 @@
               "k_EGamingDeviceType_Phone"),
             (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
               "k_EGamingDeviceType_SteamDeck");
-        })(w || (w = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(v || (v = {})),
+        })(E || (E = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -3215,7 +3241,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(E || (E = {})),
+        })(C || (C = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -3223,7 +3249,7 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(C || (C = {}));
+        })(k || (k = {}));
     },
     1351: (e, t, n) => {
       "use strict";
@@ -3251,6 +3277,7 @@
         Xg: () => c,
         eV: () => r.eV,
         jM: () => r.jM,
+        MR: () => r.MR,
         t$: () => u,
       });
       var r = n(26149);
@@ -3338,7 +3365,8 @@
             (e[(e.Keyboard = 2)] = "Keyboard"),
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
-            (e[(e.SteamLibrary = 5)] = "SteamLibrary");
+            (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
+            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI");
         })(d || (d = {}));
       class u {}
       var h;

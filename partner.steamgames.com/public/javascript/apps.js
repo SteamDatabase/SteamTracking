@@ -898,7 +898,6 @@ function addCell( tr, txt )
 function SetAchievement( appid, destRow, achievement )
 {
 	var row = $J( destRow );
-	addCell( row, achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ] );
 
 	var nameCell = $J( '<td>' );
 	nameCell.text( achievement[ "api_name" ] );
@@ -971,7 +970,7 @@ function SetAchievement( appid, destRow, achievement )
 		addCell( row, "Client" );
 	}
 
-	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "<b>Yes</b>" : "" );
+	addCell( row, ( achievement[ "hidden" ] != 0 ) ? "Yes" : "" );
 
 	// TODO jqueryize the rest here
 	var newImg = document.createElement( "img" );
