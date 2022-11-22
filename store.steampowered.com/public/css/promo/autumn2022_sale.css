@@ -596,6 +596,7 @@ body.v6 .discount_block {}
     .content_hub_carousel_ctn .carousel_items {
         justify-content: start;
         padding-left: 12px;
+        scroll-padding-left: 12px;
     }
 }
 
@@ -903,31 +904,31 @@ a:hover {
     margin-top: 50px;
 }
 
-.home_category_title {
+ .home_category_title {
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    font-size: 36px;
+    font-size: 28px;
 	color: #ffffff;
 	background: #100b0b;
     word-wrap: break-word;
     min-width: 70%;
     max-width: 100%;
-    line-height: 42px;
     position: relative;
     padding-top: 10px;
 	padding-bottom: 10px;
     padding-left: 25px;
-    font-family: 'Montserrat', sans-serif;
+	/* line-height: 42px;
+    font-family: 'Montserrat', sans-serif; */
     font-weight: 900;
 }
 
 .home_category_title b {
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 0.03em;
-    line-height: 42px;
-    font-family: 'Montserrat', sans-serif;
+    /* line-height: 42px;
+    font-family: 'Montserrat', sans-serif; */
     font-weight: 900;
-}
+} 
 
 .home_tag_category_title,
 .home_tag_category_title b {
@@ -939,9 +940,9 @@ a:hover {
 	background: #100b0b;
     word-wrap: break-word;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 0.03em;
-    line-height: 42px;
+    /* line-height: 42px; */
     padding-left: 5px;
 }
 
@@ -2914,6 +2915,10 @@ img.franchise_placeholder {
     margin-left: 0;
 } */
 
+.content_hub_carousel_ctn .content_hub_capsule_ctn {
+    scroll-snap-align: start;
+}
+
 .carousel_container .arrow.right {
 	right: -6%;
 	background: rgba( 15, 10, 10, 0.25 );
@@ -3013,6 +3018,22 @@ html.tablet body.v6.sale_autumn2022 .pill_tab_menu_item.gpfocus {
 	color: #8d1811;
 }
 
+html.tablet body.v6.sale_autumn2022 .pill_tab_menu_item.active {
+	background: #c2362e;
+	color: #fbf0c4;
+}
+
 html.tablet body.v6.sale_autumn2022 .carousel_container .carousel_items:not(.no_paging) > .hero_row {
 	max-width: 852px;
+}
+
+html.tablet body.v6.sale_autumn2022 .home_pagecontent_ctn.no_margin {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+html.tablet body.v6.sale_autumn2022 .content_hub_carousel_ctn .carousel_items {
+	justify-content: start;
+	padding-left: 36px;
+	scroll-padding: 36px;
 }
