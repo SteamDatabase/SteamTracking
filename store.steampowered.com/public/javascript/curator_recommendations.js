@@ -40,7 +40,7 @@ function FollowCurator( clanID, bFollow )
 	}
 
 	$J.post(
-		'https://store.steampowered.com/store/curators/ajaxfollow',
+		'https://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'follow' : bFollow ? 1 : 0 },
 		function( data )
 		{
@@ -77,7 +77,7 @@ function FollowDLCPage( appid, clanID, bFollow )
 	}
 
 	$J.post(
-		'https://store.steampowered.com/store/explore/followgame/', {
+		'https://store.steampowered.com/explore/followgame/', {
 			'appid' : appid,
 			'sessionid' : g_sessionID,
 			'unfollow' : bFollow ? 0 : 1
@@ -290,7 +290,7 @@ function InitSearchFilters()
 
 function InitPagingControls( oPagingData )
 {
-	g_oRecommendations = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/store/curator/' + oPagingData['clanid'] + '/ajaxgetcuratorrecommendations/' );
+	g_oRecommendations = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curator/' + oPagingData['clanid'] + '/ajaxgetcuratorrecommendations/' );
 	g_oRecommendations.SetResponseHandler( function( response ) {
 		OnRecommendationsRendered();
 		$J( "#" + this.m_strElementPrefix + "Rows").InstrumentLinks();

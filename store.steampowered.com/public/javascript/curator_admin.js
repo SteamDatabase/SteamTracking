@@ -696,7 +696,7 @@ function ExtendOffers( unClanId )
 
 function MarkNotInterested( elem, unAppId, snr ) {
 	$J.ajax ( {
-		url: 'https://store.steampowered.com/store/recommended/ignorerecommendation',
+		url: 'https://store.steampowered.com/recommended/ignorerecommendation',
 		data: {
 			sessionid: g_sessionID,
 			appid: unAppId,

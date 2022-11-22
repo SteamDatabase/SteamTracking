@@ -67,7 +67,7 @@ function RegisterProductKey()
 		$('register_btn').hide();
 		$('register_btn_in_progress').show();
 
-		new Ajax.Request('https://store.steampowered.com/store/account/ajaxregisterkey/',
+		new Ajax.Request('https://store.steampowered.com/account/ajaxregisterkey/',
 		{
 			method:'post',
 			parameters: {
