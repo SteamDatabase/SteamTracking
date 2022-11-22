@@ -190,6 +190,7 @@
   text-transform: uppercase;
   color: #fff;
   border-radius: 64px;
+  white-space: nowrap;
 }
 .communityhomeheader_TabContainer_HY3Yt .communityhomeheader_ActiveTab_3Jb_4 {
   background: rgba(103, 139, 166, 0.7);

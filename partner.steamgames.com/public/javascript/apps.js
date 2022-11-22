@@ -1183,14 +1183,7 @@ function EditAchievement( appid, achievement )
 		ClearRow( row );
 
 		row.className = "selected";
-
-		var firstCell = row.insertCell( -1 );
-		firstCell.innerHTML = achievement[ "stat_id" ] + "/" + achievement[ "bit_id" ];
-		item = document.createElement( "a" );
-		newHash = id + "_edit";
-		item.name = newHash;
-		firstCell.appendChild( item );
-
+		
 		item = document.createElement( "input" );
 		item.id = id + "_apiname";
 		item.style.width = "100%";

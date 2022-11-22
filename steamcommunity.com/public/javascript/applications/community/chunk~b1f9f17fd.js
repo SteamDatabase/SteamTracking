@@ -18405,8 +18405,9 @@
         }
       }
       function H(e) {
-        const { eventModel: t } = e,
-          a = (0, R.pq)(t),
+        const { eventModel: t } = e;
+        if (t.BHasTag("contenthub")) return null;
+        const a = (0, R.pq)(t),
           i = (e) => (0, R.jV)(t, e);
         return n.createElement(
           n.Fragment,
@@ -18420,7 +18421,12 @@
             k.s,
             {
               focusable: !0,
-              className: (0, h.Z)(_().Button, _().Icon, B().ShareButton),
+              className: (0, h.Z)(
+                _().Button,
+                _().Icon,
+                B().ShareButton,
+                "SocialShareButton"
+              ),
               onActivate: (e) => {
                 (0, x.AM)(
                   n.createElement(N.t, {
@@ -18435,10 +18441,12 @@
                 );
               },
             },
-            n.createElement(A.mBz, { className: B().ShareIcon }),
+            n.createElement(A.mBz, {
+              className: (0, h.Z)(B().ShareIcon, "SocialShareIcon"),
+            }),
             n.createElement(
               "span",
-              { className: B().ShareText },
+              { className: (0, h.Z)(B().ShareText, "SocialShareText") },
               (0, S.Xx)("#Button_Share")
             )
           )

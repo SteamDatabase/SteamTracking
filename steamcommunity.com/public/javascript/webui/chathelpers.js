@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7677200";
+var CLSTAMP = "7677497";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7677200";
     i,
     s,
     r = {
-      71414: (e, t, n) => {
+      21441: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7677200";
         }
         Object.create;
         Object.create;
-        n(96177);
+        n(33351);
         var r = n(87363),
           o = n.n(r),
           a = n(61533);
@@ -770,7 +770,7 @@ var CLSTAMP = "7677200";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(z || (z = {}));
         var q, $, K;
-        n(5912);
+        n(72275);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1337,7 +1337,7 @@ var CLSTAMP = "7677200";
           }
         }
         var Ee = n(42238);
-        n(3959);
+        n(67044);
         class ge extends he {
           BIsExpired() {
             return ke.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1705,7 +1705,7 @@ var CLSTAMP = "7677200";
             });
           });
       },
-      43646: (e, t, n) => {
+      77500: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1872,7 +1872,7 @@ var CLSTAMP = "7677200";
               };
         }
       },
-      96177: (e, t, n) => {
+      33351: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2392,6 +2392,6 @@ var CLSTAMP = "7677200";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(71414));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(21441));
   c = a.O(c);
 })();

@@ -468,7 +468,7 @@
     },
     2840: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => H });
+      t.r(r), t.d(r, { default: () => y });
       var o = t(70655),
         c = t(67294),
         n = t(41311),
@@ -478,30 +478,29 @@
         s = t(90666),
         m = t(95598),
         b = t(48341),
-        u = t(13596),
-        h = t(9669),
-        d = t.n(h),
-        _ = t(52114);
-      var f = t(7573),
-        p = t(159),
-        T = t(31933),
-        k = t(78587),
-        S = t(35921),
-        E = t(34425),
-        y = t(71174);
+        u = (t(13596), t(9669)),
+        h = t.n(u),
+        d = t(52114);
+      var _ = t(7573),
+        f = t(159),
+        p = t(31933),
+        T = t(78587),
+        k = t(35921),
+        S = t(34425),
+        E = t(71174);
       t(17010);
-      function H() {
-        const e = (0, y.L)(),
+      function y() {
+        const e = (0, E.L)(),
           r = (0, c.useRef)();
         return (
           (0, c.useEffect)(() => {
             r.current && r.current.TakeFocus();
           }, []),
           c.createElement(
-            E.p,
+            S.p,
             { navID: "CommunityHomeHeader", NavigationManager: e },
             c.createElement(
-              S.s,
+              k.s,
               { navRef: r, className: i().CommunityHomeHeader },
               c.createElement(
                 "div",
@@ -529,17 +528,17 @@
                   (0, n.Xx)("#Community_Home_Header_AddFriend_Button")
                 )
               ),
-              c.createElement(C, null),
-              c.createElement(M, null)
+              c.createElement(H, null),
+              c.createElement(N, null)
             )
           )
         );
       }
-      function C() {
+      function H() {
         const [e, r] = (0, c.useState)(""),
           [t, a] = (0, c.useState)([]),
-          [h, f] = (0, c.useState)(!1),
-          p = (function () {
+          [u, _] = (0, c.useState)(!1),
+          f = (function () {
             const e = (0, c.useMemo)(
                 () => (0, s.ip)("personalapps", "application_config") || [],
                 []
@@ -551,7 +550,7 @@
               t = [...e, ...r];
             if (t.length)
               return {
-                isLoading: 1 === (0, _.wZ)(t, { include_assets: !0 }),
+                isLoading: 1 === (0, d.wZ)(t, { include_assets: !0 }),
                 data: { personalAppIds: e, popularAppIds: r },
               };
             return {
@@ -559,36 +558,36 @@
               data: { personalAppIds: e, popularAppIds: r },
             };
           })();
-        if (p.isLoading) return c.createElement(u.V, { position: "center" });
+        if (f.isLoading) return null;
         return c.createElement(
           "div",
           { className: i().CommunityHomeHeaderContent },
           c.createElement(
-            S.s,
+            k.s,
             { className: i().AppHubsCtn },
-            c.createElement(L, {
-              appShortcuts: p.data.personalAppIds,
+            c.createElement(C, {
+              appShortcuts: f.data.personalAppIds,
               sectionTitle: (0, n.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: p.data.popularAppIds.length > 0,
+              withDivider: f.data.popularAppIds.length > 0,
             }),
-            c.createElement(L, {
-              appShortcuts: p.data.popularAppIds,
+            c.createElement(C, {
+              appShortcuts: f.data.popularAppIds,
               sectionTitle: (0, n.Xx)(
                 "#Community_Home_Header_GameHubs_Popular"
               ),
             })
           ),
           c.createElement(
-            S.s,
+            k.s,
             {
-              onFocus: () => f(!0),
+              onFocus: () => _(!0),
               onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || f(!1);
+                e.currentTarget.contains(e.relatedTarget) || _(!1);
               },
               className: i().Search,
             },
             c.createElement(
-              S.s,
+              k.s,
               { className: i().SearchBar },
               c.createElement(
                 "div",
@@ -600,7 +599,7 @@
                       const t = yield (function (e) {
                         return (0, o.mG)(this, void 0, void 0, function* () {
                           const r = `${s.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
-                          return (yield d().get(r)).data;
+                          return (yield h().get(r)).data;
                         });
                       })(e.target.value);
                       a(t);
@@ -618,9 +617,9 @@
                 c.createElement(m.YtI, null)
               )
             ),
-            h &&
+            u &&
               c.createElement(
-                S.s,
+                k.s,
                 { className: i().SearchResultsCtn },
                 t.map((e) =>
                   c.createElement(
@@ -637,7 +636,7 @@
           )
         );
       }
-      function L(e) {
+      function C(e) {
         const { appShortcuts: r, sectionTitle: t, withDivider: o } = e;
         return r && r.length
           ? c.createElement(
@@ -648,18 +647,18 @@
                 "div",
                 {
                   "flow-children": "row",
-                  className: (0, f.Z)(
+                  className: (0, _.Z)(
                     i().AppHubShortcutLinks,
                     o ? i().Divider : null
                   ),
                 },
-                r.map((e, r) => c.createElement(v, { key: r, appId: e }))
+                r.map((e, r) => c.createElement(L, { key: r, appId: e }))
               )
             )
           : null;
       }
-      function v(e) {
-        const r = p.Z.Get().GetApp(e.appId);
+      function L(e) {
+        const r = f.Z.Get().GetApp(e.appId);
         return r
           ? c.createElement(
               l.IS,
@@ -674,20 +673,20 @@
             )
           : null;
       }
-      const g = "subsection",
-        N = "browsefilter";
-      function M() {
-        const e = (0, k.k6)(),
-          r = (0, T.ks)(e, g),
-          t = (0, T.ks)(e, N);
+      const v = "subsection",
+        g = "browsefilter";
+      function N() {
+        const e = (0, T.k6)(),
+          r = (0, p.ks)(e, v),
+          t = (0, p.ks)(e, g);
         return c.createElement(
           "div",
           null,
-          c.createElement(A, { activeTab: r, activeSort: t }),
-          c.createElement(w, { activeTab: r, activeSort: t })
+          c.createElement(M, { activeTab: r, activeSort: t }),
+          c.createElement(A, { activeTab: r, activeSort: t })
         );
       }
-      function A(e) {
+      function M(e) {
         const { activeTab: r, activeSort: t } = e,
           o = c.useRef();
         c.useEffect(() => {
@@ -699,7 +698,7 @@
           }
         }, [null == o ? void 0 : o.current]);
         return c.createElement(
-          S.s,
+          k.s,
           { "flow-children": "row", className: i().TabContainer, ref: o },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
@@ -730,17 +729,17 @@
                 id: e.id,
                 href: u,
                 key: e.id,
-                className: (0, f.Z)(i().Tab, a ? i().ActiveTab : null),
+                className: (0, _.Z)(i().Tab, a ? i().ActiveTab : null),
               },
               (0, n.Xx)(e.label)
             );
           })
         );
       }
-      function w(e) {
+      function A(e) {
         const { activeTab: r, activeSort: t } = e;
         return c.createElement(
-          S.s,
+          k.s,
           { "flow-children": "row", className: i().SortContainer },
           c.createElement(
             "div",
@@ -765,7 +764,7 @@
               {
                 href: u,
                 key: e.id,
-                className: (0, f.Z)(i().Sort, a ? i().ActiveSort : null),
+                className: (0, _.Z)(i().Sort, a ? i().ActiveSort : null),
               },
               (0, n.Xx)(e.label)
             );

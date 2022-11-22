@@ -361,6 +361,10 @@ input.community_home_search_players_input
 	html.responsive .community_home_search_box .community_home_shortcut_content {
 		min-height: 0;
 	}
+
+	html.responsive .apphub_background {
+		background-image: none !important;
+	}
 }
 
 @media screen and (max-width: 450px)
