@@ -1489,6 +1489,7 @@ html.tablet .game_purchase_discount .discount_prices {
 
 html.tablet .discount_block .discount_prices {
 	display: flex;
+	flex-direction: row;
 	vertical-align: unset;
 	text-align: unset;
 	background: unset;
@@ -1499,7 +1500,7 @@ html.tablet .game_purchase_action_bg .discount_block {
 }
 
 html.tablet .game_purchase_discount .discount_original_price {
-	position: unset;
+	position: relative;
 	left: unset;
 	right: unset;
 	top: unset;
