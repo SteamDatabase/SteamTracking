@@ -62824,7 +62824,10 @@
                 window
               );
           }, [a, t, n]),
-          d.createElement(li, Object.assign({}, e))
+          d.createElement(
+            li,
+            Object.assign({}, e, { bShowVisibilityDetails: !0 })
+          )
         );
       }
       function oi(e) {
@@ -62859,24 +62862,37 @@
                 },
                 onCancel: a,
               },
-              d.createElement(li, { optInDefinition: t, appid: n })
+              d.createElement(li, {
+                optInDefinition: t,
+                appid: n,
+                bShowVisibilityDetails: !1,
+              })
             );
       }
       function li(e) {
-        const { optInDefinition: t, appid: n } = e;
+        const { optInDefinition: t, appid: n, bShowVisibilityDetails: a } = e;
         return d.createElement(
           d.Fragment,
           null,
-          d.createElement(
-            "div",
-            { className: "sub_category" },
+          Boolean(a) &&
             d.createElement(
-              "h3",
+              d.Fragment,
               null,
-              (0, b.Xx)("#OptIn_Collect_Dialog_Title")
-            )
-          ),
-          d.createElement("p", null, (0, b.Xx)("#OptIn_Collect_Dialog_Desc")),
+              d.createElement(
+                "div",
+                { className: "sub_category" },
+                d.createElement(
+                  "h3",
+                  null,
+                  (0, b.Xx)("#OptIn_Collect_Dialog_Title")
+                )
+              ),
+              d.createElement(
+                "p",
+                null,
+                (0, b.Xx)("#OptIn_Collect_Dialog_Desc")
+              )
+            ),
           Boolean(t.collect_trailer_permissions) &&
             d.createElement(ci, { optInDefinition: t }),
           Boolean(t.collect_demo_permissions) &&
