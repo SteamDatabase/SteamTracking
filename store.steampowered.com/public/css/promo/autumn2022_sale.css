@@ -860,10 +860,6 @@ body.v6 .page_content_ctn {
     color: rgb(255, 255, 255);
 }
 
-.see_more_link:hover {
-	text-decoration: underline;
-}
-
 a:hover {
 	color: rgb(255, 255, 255);
 }
@@ -1670,7 +1666,6 @@ p.home_subtitle_ctn a {
     }
     html.responsive .home_category_title {
         font-size: 26px;
-        line-height: 15px;
         padding: .5em;
 		margin-top: 0px;
 		font-weight: 600; 
