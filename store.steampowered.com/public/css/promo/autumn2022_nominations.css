@@ -26,7 +26,7 @@ body.v6.steamaward_nominations_modal .fade {
 	border-color: #000000;
 }
 
-body.v6.steamaward_nominations_faq .newmodal_buttons span {
+body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui > span {
 	background: #c6d5e0;
 }
 
@@ -705,7 +705,7 @@ html.responsive.touch .steamaward_nomination_row {
 	padding: 12px 8px;
 }
 
-.btn_nominate span, body.v6.steamaward_nominations_faq .newmodal_buttons .btn_grey_steamui > span {
+.btn_nominate span, body.v6.steamaward_nominations_faq .newmodal_buttons span {
 	color: #0f1522;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -1312,7 +1312,6 @@ img.faq_section_title {
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
-	color: #c6d5e0;
 }
 
 a.younominated_game, a.younominated_developer  {
