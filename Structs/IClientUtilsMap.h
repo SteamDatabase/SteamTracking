@@ -45,7 +45,7 @@ public:
     virtual unknown_ret ShowControllerLayoutPreview(void*,void*,void*) = 0;
     virtual unknown_ret SetSpew(void*,void*,void*) = 0;
     virtual unknown_ret BDownloadsDisabled() = 0;
-    virtual unknown_ret SetFocusedWindow(void*,void*,void*) = 0;
+    virtual unknown_ret SetFocusedWindow(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetSteamUILanguage() = 0;
     virtual unknown_ret CheckSteamReachable() = 0;
     virtual unknown_ret SetLastGameLaunchMethod(void*) = 0;
@@ -67,6 +67,9 @@ public:
     virtual unknown_ret SetOverlayChatBrowserInfo(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret ClearOverlayChatBrowserInfo(void*) = 0;
     virtual unknown_ret GetOverlayChatBrowserInfo(void*,void*,void*) = 0;
+    virtual unknown_ret SetOverlayBrowserInfo(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret ClearOverlayBrowserInfo(void*) = 0;
+    virtual unknown_ret GetOverlayBrowserInfo(void*,void*,void*) = 0;
     virtual unknown_ret DispatchClientUINotification(void*,void*,void*) = 0;
     virtual unknown_ret RespondToClientUINotification(void*,void*,void*) = 0;
     virtual unknown_ret DispatchClientUICommand(void*,void*) = 0;

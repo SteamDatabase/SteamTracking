@@ -10,7 +10,7 @@ public:
     virtual unknown_ret GetSTUNServer(void*,void*,void*) = 0;
     virtual unknown_ret AllowDirectConnectToPeerString(void*) = 0;
     virtual unknown_ret BeginAsyncRequestFakeIP(void*) = 0;
-    virtual unknown_ret (void*,void*,void*) = 0;
+    virtual unknown_ret AllowDirectConnectToPeerString(void*) = 0;
     virtual unknown_ret SetAllowShareIPUserSetting(void*) = 0;
     virtual unknown_ret GetAllowShareIPUserSetting() = 0;
     virtual unknown_ret TEST_ClearInMemoryCachedCredentials() = 0;

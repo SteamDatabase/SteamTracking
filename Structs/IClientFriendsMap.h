@@ -196,7 +196,7 @@ public:
     virtual unknown_ret ActivateGameOverlayRemotePlayTogetherInviteDialog(void*,void*) = 0;
     virtual unknown_ret ActivateGameOverlayInviteDialogConnectString(void*) = 0;
     virtual unknown_ret ProcessActivateGameOverlayInMainUI(void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret NotifyGameOverlayStateChanged(void*) = 0;
+    virtual unknown_ret NotifyGameOverlayStateChanged(void*,void*,void*) = 0;
     virtual unknown_ret NotifyGameServerChangeRequested(void*,void*) = 0;
     virtual unknown_ret NotifyLobbyJoinRequested(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret NotifyRichPresenceJoinRequested(void*,void*,void*,void*) = 0;
@@ -250,4 +250,5 @@ public:
     virtual unknown_ret BHasEquippedProfileItem(void*,void*,void*) = 0;
     virtual unknown_ret GetProfileItemPropertyString(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetProfileItemPropertyUint(void*,void*,void*,void*) = 0;
+    virtual unknown_ret DownloadCommunityItemAsset(void*,void*,void*,void*) = 0;
 };

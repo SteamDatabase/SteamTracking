@@ -1,7 +1,7 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5093280() = 0;
+    virtual unknown_ret Unknown_5314432() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;
@@ -9,6 +9,7 @@ public:
     virtual unknown_ret GetLogonState() = 0;
     virtual unknown_ret BConnected() = 0;
     virtual unknown_ret BInitiateReconnect() = 0;
+    virtual unknown_ret EConnect() = 0;
     virtual unknown_ret BTryingToLogin() = 0;
     virtual unknown_ret GetSteamID(void*) = 0;
     virtual unknown_ret GetConsoleSteamID(void*) = 0;
@@ -51,7 +52,7 @@ public:
     virtual unknown_ret BHasCachedCredentials(void*) = 0;
     virtual unknown_ret SetAccountNameForCachedCredentialLogin(void*,void*) = 0;
     virtual unknown_ret DestroyCachedCredentials(void*) = 0;
-    virtual unknown_ret GetCurrentWebAuthToken(void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetCurrentWebAuthToken(void*,void*) = 0;
     virtual unknown_ret RequestWebAuthToken() = 0;
     virtual unknown_ret SetLoginInformation(void*,void*,void*) = 0;
     virtual unknown_ret SetTwoFactorCode(void*) = 0;
@@ -113,12 +114,14 @@ public:
     virtual unknown_ret GetMarketingMessageCount() = 0;
     virtual unknown_ret GetMarketingMessage(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret MarkMarketingMessageSeen(void*,void*) = 0;
+    virtual unknown_ret CheckForPendingMarketingMessages() = 0;
     virtual unknown_ret GetAuthSessionTicket(void*,void*,void*) = 0;
+    virtual unknown_ret GetAuthSessionTicketV2(void*,void*,void*,void*) = 0;
     virtual unknown_ret BeginAuthSession(void*,void*,void*,void*) = 0;
     virtual unknown_ret EndAuthSession(void*,void*) = 0;
     virtual unknown_ret CancelAuthTicket(void*) = 0;
     virtual unknown_ret IsUserSubscribedAppInTicket(void*,void*,void*) = 0;
-    virtual unknown_ret GetAuthSessionTicketForGameID(void*,void*,void*,void*) = 0;
+    virtual unknown_ret GetAuthSessionTicketForGameID(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret AdvertiseGame(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret RequestEncryptedAppTicket(void*,void*) = 0;
     virtual unknown_ret GetEncryptedAppTicket(void*,void*,void*) = 0;
@@ -144,6 +147,8 @@ public:
     virtual unknown_ret ClearNeedsSSANextSteamLogon() = 0;
     virtual unknown_ret BIsAppOverlayEnabled(void*) = 0;
     virtual unknown_ret BOverlayIgnoreChildProcesses(void*) = 0;
+    virtual unknown_ret SetOverlayState(void*,void*) = 0;
+    virtual unknown_ret NotifyOverlaySettingsChanged() = 0;
     virtual unknown_ret BIsBehindNAT() = 0;
     virtual unknown_ret GetMicroTxnAppID(void*,void*) = 0;
     virtual unknown_ret GetMicroTxnOrderID(void*,void*) = 0;
@@ -248,8 +253,9 @@ public:
     virtual unknown_ret UpdateGameVrDllState(void*,void*,void*) = 0;
     virtual unknown_ret KillVRTheaterPancakeGame(void*) = 0;
     virtual unknown_ret BIsAnyGameOrServiceAppRunning() = 0;
-    virtual unknown_ret BGetAppArrayMinutesPlayed(void*,void*,void*,void*) = 0;
-    virtual unknown_ret BGetAppsLastPlayedTime(void*,void*,void*) = 0;
+    virtual unknown_ret BGetAppPlaytimeMap(void*) = 0;
+    virtual unknown_ret BGetAppsLastPlayedMap(void*) = 0;
+    virtual unknown_ret BGetAppTagsMap(void*) = 0;
     virtual unknown_ret SendSteamServiceStatusUpdate(void*,void*) = 0;
     virtual unknown_ret RequestSteamGroupChatMessageNotifications(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret RequestSteamGroupChatMessageHistory(void*,void*,void*,void*,void*) = 0;

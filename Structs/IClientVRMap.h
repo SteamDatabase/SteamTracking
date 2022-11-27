@@ -11,7 +11,7 @@ public:
     virtual unknown_ret IsHmdPresent() = 0;
     virtual unknown_ret UpdateHmdStatus() = 0;
     virtual unknown_ret IsVRModeActive() = 0;
-    virtual unknown_ret InitVR(void*,void*,void*) = 0;
+    virtual unknown_ret InitVR(void*,void*,void*,void*) = 0;
     virtual unknown_ret StartSteamVR(void*) = 0;
     virtual unknown_ret CleanupVR() = 0;
     virtual unknown_ret QuitAllVR() = 0;

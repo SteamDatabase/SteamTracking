@@ -39,7 +39,7 @@ public:
     virtual unknown_ret CheckBetaPassword(void*,void*) = 0;
     virtual unknown_ret BHasCachedBetaPassword(void*,void*) = 0;
     virtual unknown_ret GetActiveBeta(void*,void*,void*) = 0;
-    virtual unknown_ret BGetActiveBetaForApps(void*,void*,void*,void*) = 0;
+    virtual unknown_ret BGetActiveBetaForApps(void*,void*) = 0;
     virtual unknown_ret SetDownloadingEnabled(void*) = 0;
     virtual unknown_ret BIsDownloadingEnabled() = 0;
     virtual unknown_ret GetDownloadStats(void*) = 0;
@@ -71,6 +71,7 @@ public:
     virtual unknown_ret GetMoveAppProgress(void*,void*,void*,void*) = 0;
     virtual unknown_ret CancelMoveApp(void*) = 0;
     virtual unknown_ret GetAppStateInfo(void*,void*) = 0;
+    virtual unknown_ret BGetAppStateInfoForApps(void*,void*) = 0;
     virtual unknown_ret BIsAvailableOnPlatform(void*,void*) = 0;
     virtual unknown_ret BCanRemotePlayTogether(void*) = 0;
     virtual unknown_ret BIsLocalMultiplayerApp(void*) = 0;

@@ -1,8 +1,8 @@
 class IClientControllerSerializedMap
 {
 public:
-    virtual unknown_ret Unknown_5093232() = 0;
-    virtual unknown_ret Unknown_5093392() = 0;
+    virtual unknown_ret Unknown_5314400() = 0;
+    virtual unknown_ret Unknown_6116192() = 0;
     virtual unknown_ret ShowBindingPanel(void*,void*,void*) = 0;
     virtual unknown_ret GetControllerTypeForHandle(void*,void*) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(void*,void*) = 0;
@@ -60,6 +60,7 @@ public:
     virtual unknown_ret SetControllerInputActivatorEnabled(void*,void*,void*) = 0;
     virtual unknown_ret SetControllerMiscMappingSettings(void*,void*,void*) = 0;
     virtual unknown_ret SwapControllerModeInputBindings(void*,void*,void*) = 0;
+    virtual unknown_ret SetControllerModeShiftBinding(void*,void*,void*) = 0;
     virtual unknown_ret IsModified(void*) = 0;
     virtual unknown_ret ClearModified(void*) = 0;
     virtual unknown_ret GetLocalizationTokenCount(void*) = 0;
@@ -70,7 +71,7 @@ public:
     virtual unknown_ret GetBindingVDFString(void*) = 0;
     virtual unknown_ret GetSourceGroupBindingCount(void*,void*) = 0;
     virtual unknown_ret GetSourceGroupBindingInfo(void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret SetSourceGroupBindingActive(void*,void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret SetSourceGroupBindingActive(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret CreateSourceGroupBinding(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret BAreLayerAndParentModesEquivalent(void*,void*,void*) = 0;
     virtual unknown_ret GetGroupSetting(void*,void*,void*,void*) = 0;
@@ -123,6 +124,7 @@ public:
     virtual unknown_ret SwitchSettingsChanged(void*) = 0;
     virtual unknown_ret ControllerSettingsChanged(void*) = 0;
     virtual unknown_ret SetTrackpadPressureCurve(void*,void*,void*) = 0;
+    virtual unknown_ret SetDefaultNintendoButtonLayout(void*) = 0;
     virtual unknown_ret IsControllerConnected(void*,void*) = 0;
     virtual unknown_ret GetControllerState(void*,void*) = 0;
     virtual unknown_ret TriggerHapticPulse(void*,void*,void*,void*,void*,void*) = 0;
@@ -145,6 +147,7 @@ public:
     virtual unknown_ret GetActualControllerDetails(void*,void*) = 0;
     virtual unknown_ret GetControllerIdentity(void*,void*) = 0;
     virtual unknown_ret GetControllerPersonalization(void*,void*) = 0;
+    virtual unknown_ret GetControllerReverseDiamondLayout(void*) = 0;
     virtual unknown_ret BRumbleEnabledByUser(void*) = 0;
     virtual unknown_ret BHapticsEnabledByUser(void*) = 0;
     virtual unknown_ret GetControllerSerialNumber(void*,void*,void*) = 0;
@@ -168,6 +171,7 @@ public:
     virtual unknown_ret BControllerHasUniqueConfigForAppID(void*,void*) = 0;
     virtual unknown_ret DeRegisterController(void*,void*) = 0;
     virtual unknown_ret SendOSKeyboardEvent(void*) = 0;
+    virtual unknown_ret SetOSKeyboardKey(void*,void*) = 0;
     virtual unknown_ret SetMousePosition(void*,void*) = 0;
     virtual unknown_ret GetGamepadIndexChangeCounter() = 0;
     virtual unknown_ret BSwapGamepadIndex(void*,void*,void*) = 0;
@@ -201,6 +205,7 @@ public:
     virtual unknown_ret GetControllerProductName(void*,void*) = 0;
     virtual unknown_ret SetControllerHapticsSetting(void*,void*) = 0;
     virtual unknown_ret SetControllerRumbleSetting(void*,void*) = 0;
+    virtual unknown_ret SetControllerNintendoLayoutSetting(void*,void*) = 0;
     virtual unknown_ret BGetTouchConfigData(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(void*,void*,void*) = 0;
     virtual unknown_ret SetGyroOn(void*,void*,void*) = 0;

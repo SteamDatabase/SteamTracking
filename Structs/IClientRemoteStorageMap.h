@@ -97,4 +97,6 @@ public:
     virtual unknown_ret GetLocalFileChange(void*,void*,void*,void*) = 0;
     virtual unknown_ret BeginFileWriteBatch(void*) = 0;
     virtual unknown_ret EndFileWriteBatch(void*) = 0;
+    virtual unknown_ret GetCloudEnabledForAppMap(void*) = 0;
+    virtual unknown_ret GetLastKnownSyncStateMap(void*,void*) = 0;
 };

@@ -20,7 +20,7 @@ public:
     virtual unknown_ret ClearShortcutUserTags(void*) = 0;
     virtual unknown_ret AddShortcutUserTag(void*,void*) = 0;
     virtual unknown_ret RemoveShortcutUserTag(void*,void*) = 0;
-    virtual unknown_ret ClearAndSetShortcutUserTags(void*,void*,void*) = 0;
+    virtual unknown_ret ClearAndSetShortcutUserTags(void*,void*) = 0;
     virtual unknown_ret SetShortcutHidden(void*,void*) = 0;
     virtual unknown_ret SetAllowDesktopConfig(void*,void*) = 0;
     virtual unknown_ret SetAllowOverlay(void*,void*) = 0;

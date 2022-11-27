@@ -1,10 +1,10 @@
 class IClientGameServerInternalMap
 {
 public:
-    virtual unknown_ret Unknown_5093264() = 0;
-    virtual unknown_ret Unknown_5093168() = 0;
+    virtual unknown_ret Unknown_5314416() = 0;
+    virtual unknown_ret Unknown_5314336() = 0;
     virtual unknown_ret SetSDRLogin(void*) = 0;
-    virtual unknown_ret Unknown_4550720() = 0;
+    virtual unknown_ret Unknown_4878912() = 0;
     virtual unknown_ret InitGameServerSerialized(void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret SetProduct(void*) = 0;
     virtual unknown_ret SetGameDescription(void*) = 0;
@@ -34,6 +34,7 @@ public:
     virtual unknown_ret SendUserDisconnect(void*,void*) = 0;
     virtual unknown_ret BUpdateUserData(void*,void*,void*,void*) = 0;
     virtual unknown_ret GetAuthSessionTicket(void*,void*,void*) = 0;
+    virtual unknown_ret GetAuthSessionTicketV2(void*,void*,void*,void*) = 0;
     virtual unknown_ret BeginAuthSession(void*,void*,void*,void*) = 0;
     virtual unknown_ret EndAuthSession(void*,void*) = 0;
     virtual unknown_ret CancelAuthTicket(void*) = 0;
