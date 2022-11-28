@@ -2346,6 +2346,7 @@
         CommunityLink: "blogentrypage_CommunityLink_-1Ftw",
         TitleContainer: "blogentrypage_TitleContainer_24V3X",
         TitleBackground: "blogentrypage_TitleBackground_2Jkng",
+        TitleContainerInClient: "blogentrypage_TitleContainerInClient_37vS7",
         BackToOverview: "blogentrypage_BackToOverview_3yBA_",
         BackArrow: "blogentrypage_BackArrow_mC3pI",
         Title: "blogentrypage_Title_2HW6u",
@@ -27917,7 +27918,9 @@
           var t = (0, p.UO)(),
             n = (0, o.useState)(void 0),
             a = n[0],
-            r = n[1];
+            r = n[1],
+            i = (0, p.TH)(),
+            s = new URLSearchParams(i.search).has("is_embedded_in_client");
           if (!a)
             return (
               Ma.LoadPartnerEventsPageable(
@@ -27930,85 +27933,96 @@
               }),
               o.createElement("div", null)
             );
-          var i = a.find(function (e) {
+          var l = a.find(function (e) {
             return e.GID == t.id;
           });
-          if (!i) return o.createElement(p.l_, { to: u._.news() });
+          if (!l) return o.createElement(p.l_, { to: u._.news() });
           for (
-            var s = (0, ft.jM)(h.Y.LANGUAGE),
-              l = new Date(
-                1e3 * i.GetStartTimeAndDateUnixSeconds()
+            var c = (0, ft.jM)(h.Y.LANGUAGE),
+              d = new Date(
+                1e3 * l.GetStartTimeAndDateUnixSeconds()
               ).toLocaleDateString(void 0, {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
               }),
-              c = i.GetDescriptionWithFallback(s),
-              d = [],
-              _ = 0,
-              g = a;
-            _ < g.length;
-            _++
+              _ = l.GetDescriptionWithFallback(c),
+              g = [],
+              f = 0,
+              v = a;
+            f < v.length;
+            f++
           ) {
-            var f = g[_];
+            var b = v[f];
             if (
-              f != i &&
-              (xa(!1, f) &&
-                d.push(o.createElement(vt, { event: f, key: f.GID })),
-              3 == d.length)
+              b != l &&
+              (xa(!1, b) &&
+                g.push(o.createElement(vt, { event: b, key: b.GID })),
+              3 == g.length)
             )
               break;
           }
-          var v = i.GetNameWithFallback(s),
-            b = i.GetImageURL("background");
+          var y = l.GetNameWithFallback(c),
+            T = l.GetImageURL("background");
           return o.createElement(
             "div",
             { className: _t().BlogEntryPage },
-            o.createElement(L.q, null, o.createElement("title", null, v)),
+            o.createElement(L.q, null, o.createElement("title", null, y)),
             o.createElement(Ha.Z, null),
-            o.createElement(Ae.j, { bOverlapping: !0 }),
-            h.Y.VALVE_INTERNAL &&
+            !s && o.createElement(Ae.j, { bOverlapping: !0 }),
+            !s &&
+              h.Y.VALVE_INTERNAL &&
               o.createElement(
                 "a",
                 {
                   className: _t().CommunityLink,
                   href: "https://steamcommunity.com/games/dota2/announcements/detail/".concat(
-                    i.AnnouncementGID
+                    l.AnnouncementGID
                   ),
                 },
                 "Admin Community Link"
               ),
             o.createElement(
               "div",
-              { className: _t().TitleContainer },
+              {
+                className: s
+                  ? _t().TitleContainerInClient
+                  : _t().TitleContainer,
+              },
               o.createElement("div", {
                 className: _t().TitleBackground,
-                style: { backgroundImage: b ? "url( ".concat(b, " )") : null },
+                style: { backgroundImage: T ? "url( ".concat(T, " )") : null },
               })
             ),
-            o.createElement(
-              m.rU,
-              { to: u._.news(), className: _t().BackToOverview },
-              o.createElement("img", {
-                src: h.Y.IMG_URL + "arrow_left.png",
-                className: _t().BackArrow,
-              }),
-              (0, E.Jr)("#back_to_news")
-            ),
-            o.createElement("div", { className: _t().Title }, v),
-            o.createElement("div", { className: _t().Date }, l),
-            o.createElement("div", { className: _t().Body }, (0, E.Jr)(c)),
-            o.createElement(
-              "div",
-              { className: _t().LatestNews },
+            !s &&
+              o.createElement(
+                m.rU,
+                { to: u._.news(), className: _t().BackToOverview },
+                o.createElement("img", {
+                  src: h.Y.IMG_URL + "arrow_left.png",
+                  className: _t().BackArrow,
+                }),
+                (0, E.Jr)("#back_to_news")
+              ),
+            o.createElement("div", { className: _t().Title }, y),
+            o.createElement("div", { className: _t().Date }, d),
+            o.createElement("div", { className: _t().Body }, (0, E.Jr)(_)),
+            !s &&
               o.createElement(
                 "div",
-                { className: _t().LatestNewsHeader },
-                (0, E.Jr)("#latest_news")
+                { className: _t().LatestNews },
+                o.createElement(
+                  "div",
+                  { className: _t().LatestNewsHeader },
+                  (0, E.Jr)("#latest_news")
+                ),
+                o.createElement(
+                  "div",
+                  { className: _t().LatestNewsContainer },
+                  g
+                )
               ),
-              o.createElement("div", { className: _t().LatestNewsContainer }, d)
-            ),
-            o.createElement(B.U, null)
+            !s && o.createElement(B.U, null)
           );
         }),
         ja = n(8829),
