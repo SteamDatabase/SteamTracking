@@ -376,6 +376,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventbbcodeparser_LocalizeBlock_hXuYi {
   white-space: pre-wrap;
 }
+.eventbbcodeparser_CheckMark_1nwMV {
+  height: 32px;
+}
 .eventreminder_FlexColumnContainer_1WvmG {
   display: flex;
   flex-direction: column;
@@ -694,6 +697,11 @@ html:not(.touch)
   left: 0;
   width: 100%;
   height: 100%;
+}
+.saleeventbbcodeparser_ErrorDiv_1Vj6H {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
 }
 .bbcodes_Bold_1opdq {
   display: inline;

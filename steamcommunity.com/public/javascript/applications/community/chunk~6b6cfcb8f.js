@@ -55,6 +55,11 @@
           "doclink",
           "video",
           "vod",
+          "youtubeorvideo",
+          "giveawayeligible",
+          "claimitem",
+          "packagepurchaseable",
+          "actiondialog",
         ],
         l = [
           "h1",
@@ -76,6 +81,7 @@
           "video",
           "vod",
           "trailer",
+          "youtubeorvideo",
         ],
         c = o.filter((e) => -1 == u.indexOf(e)),
         d = "{STEAM_CLAN_IMAGE}",
@@ -913,7 +919,7 @@
                   accessories: { n: 42, c: y, r: !0, q: !0 },
                   screenshots: { n: 50, c: w },
                   trailers: { n: 51, c: M },
-                  supported_languages: { n: 52, c: v, r: !0, q: !0 },
+                  supported_languages: { n: 52, c: S, r: !0, q: !0 },
                   store_url_path_override: {
                     n: 53,
                     br: s.FE.readString,
@@ -2040,8 +2046,8 @@
               (M.sm_m = {
                 proto: M,
                 fields: {
-                  highlights: { n: 1, c: S, r: !0, q: !0 },
-                  other_trailers: { n: 2, c: S, r: !0, q: !0 },
+                  highlights: { n: 1, c: v, r: !0, q: !0 },
+                  other_trailers: { n: 2, c: v, r: !0, q: !0 },
                 },
               }),
             M.sm_m
@@ -2136,17 +2142,17 @@
           return "StoreItem_Trailers_VideoSource";
         }
       }
-      class S extends a {
+      class v extends a {
         constructor(e = null) {
           super(),
-            S.prototype.trailer_name || s.aR(S.M()),
+            v.prototype.trailer_name || s.aR(v.M()),
             a.initialize(this, e, 0, -1, [3, 4, 5], null);
         }
         static M() {
           return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
                 fields: {
                   trailer_name: {
                     n: 1,
@@ -2176,62 +2182,6 @@
                     br: s.FE.readInt32,
                     bw: s.Xc.writeInt32,
                   },
-                },
-              }),
-            S.sm_m
-          );
-        }
-        static MBF() {
-          return S.sm_mbf || (S.sm_mbf = s.Bh(S.M())), S.sm_mbf;
-        }
-        toObject(e = !1) {
-          return S.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.TA(S.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.aD(S.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.F(S.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.l2(S.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_Trailers_Trailer";
-        }
-      }
-      class v extends a {
-        constructor(e = null) {
-          super(),
-            v.prototype.elanguage || s.aR(v.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
-                fields: {
-                  elanguage: { n: 1, br: s.FE.readInt32, bw: s.Xc.writeInt32 },
-                  supported: { n: 2, br: s.FE.readBool, bw: s.Xc.writeBool },
-                  full_audio: { n: 3, br: s.FE.readBool, bw: s.Xc.writeBool },
-                  subtitles: { n: 4, br: s.FE.readBool, bw: s.Xc.writeBool },
                 },
               }),
             v.sm_m
@@ -2267,6 +2217,62 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_Trailer";
+        }
+      }
+      class S extends a {
+        constructor(e = null) {
+          super(),
+            S.prototype.elanguage || s.aR(S.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            S.sm_m ||
+              (S.sm_m = {
+                proto: S,
+                fields: {
+                  elanguage: { n: 1, br: s.FE.readInt32, bw: s.Xc.writeInt32 },
+                  supported: { n: 2, br: s.FE.readBool, bw: s.Xc.writeBool },
+                  full_audio: { n: 3, br: s.FE.readBool, bw: s.Xc.writeBool },
+                  subtitles: { n: 4, br: s.FE.readBool, bw: s.Xc.writeBool },
+                },
+              }),
+            S.sm_m
+          );
+        }
+        static MBF() {
+          return S.sm_mbf || (S.sm_mbf = s.Bh(S.M())), S.sm_mbf;
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.TA(S.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.aD(S.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new S();
+          return S.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.F(S.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.l2(S.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_SupportedLanguage";
@@ -5164,7 +5170,7 @@
     73285: (e, t, r) => {
       r.d(t, {
         Ds: () => F,
-        Hy: () => S,
+        Hy: () => v,
         qE: () => R,
         TM: () => M,
         GV: () => w,
@@ -5959,7 +5965,7 @@
             }
         }
       }
-      function S(e) {
+      function v(e) {
         switch (e) {
           case 2:
             return "bundle";

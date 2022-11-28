@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7677497";
+var CLSTAMP = "7684851";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7677497";
     i,
     s,
     r = {
-      21441: (e, t, n) => {
+      33989: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7677497";
         }
         Object.create;
         Object.create;
-        n(33351);
+        n(96008);
         var r = n(87363),
           o = n.n(r),
           a = n(61533);
@@ -770,7 +770,7 @@ var CLSTAMP = "7677497";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(z || (z = {}));
         var q, $, K;
-        n(72275);
+        n(15904);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1336,8 +1336,8 @@ var CLSTAMP = "7677497";
             this.m_ulSteamID = new (pe())(r, s, !0);
           }
         }
-        var Ee = n(42238);
-        n(67044);
+        var Ee = n(17857);
+        n(5217);
         class ge extends he {
           BIsExpired() {
             return ke.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1705,7 +1705,7 @@ var CLSTAMP = "7677497";
             });
           });
       },
-      77500: (e, t, n) => {
+      24851: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1872,7 +1872,7 @@ var CLSTAMP = "7677497";
               };
         }
       },
-      33351: (e, t, n) => {
+      96008: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2249,7 +2249,7 @@ var CLSTAMP = "7677497";
         7651: "e4963d1211a5e685a7bc",
         7706: "d365fab0ca9a88819335",
         7781: "99a542f22ce6dc115233",
-        7975: "d407c1c559eb7320f0cc",
+        7975: "8c8bfd3936e54729de38",
         8247: "26221f1b1d2b0e222912",
         8385: "64006fccb4ce9fbc1a87",
         8518: "941d24d799178eb55859",
@@ -2392,6 +2392,6 @@ var CLSTAMP = "7677497";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(21441));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(33989));
   c = a.O(c);
 })();

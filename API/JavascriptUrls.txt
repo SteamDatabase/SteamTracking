@@ -919,9 +919,11 @@ ${STORE_BASE_URL}saleaction/ajaxgetsaletagsrecommendation
 ${STORE_BASE_URL}saleaction/ajaxgetsoundtracksonsale
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatcounts
 ${STORE_BASE_URL}saleaction/ajaxgetuserdeckcompatlist
+${STORE_BASE_URL}saleaction/ajaxgetusergiveawayregistration
 ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
 ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
+${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}stats/content/

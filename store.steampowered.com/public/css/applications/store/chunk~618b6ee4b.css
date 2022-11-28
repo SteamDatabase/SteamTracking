@@ -1041,6 +1041,64 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 .loyaltyrewarditemembed_Ctn_2di0m {
   width: 100px;
 }
+.partnereventdialog_ErrorStyles_2TszC,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA {
+  color: #c44848;
+}
+.partnereventdialog_ErrorIconLayout_15HwA,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA,
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  background-color: #472025;
+}
+.partnereventdialog_ErrorStyles_2TszC > div,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
+  display: inline;
+  color: #d78484;
+}
+.partnereventdialog_WarningStyles_1C_Im,
+.partnereventdialog_WarningStylesWithIcon_3p5KO {
+  color: #b8860b;
+}
+.partnereventdialog_WarningIconLayout_3POKG,
+.partnereventdialog_WarningStylesWithIcon_3p5KO,
+.partnereventdialog_WarningStylesBackground_2MAql {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_WarningStylesBackground_2MAql {
+  background-color: #b8860b;
+  color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_Padding_2oWai {
+  padding-top: 10px;
+}
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
 .VODPlayer_BroadcastCtn_KL2t9 {
   position: relative;
   margin: 0 auto;
@@ -1244,203 +1302,6 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 .partnereventreferencedapps_ReferencedApps_2xZM7 a {
   color: #80bcd2;
   text-decoration: none;
-}
-:root {
-  --basicui-header-height: 0px;
-}
-.carousel_carouselNavButton_1KK5N {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  display: flex;
-  cursor: pointer;
-  padding: 0px;
-}
-.carousel_carouselNavButton_1KK5N:hover svg {
-  opacity: 1;
-}
-.carousel_carouselNavButton_1KK5N:disabled svg {
-  opacity: 0.1;
-  filter: none;
-}
-.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
-  transform: rotateZ(180deg);
-}
-.carousel_carouselNavButton_1KK5N svg {
-  opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
-  fill: #fff;
-}
-.carousel_carouselBtnCtn_aqswv {
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  position: absolute;
-  padding: 0px;
-  width: 50px;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
-  left: -68px;
-}
-.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
-  right: -68px;
-}
-.carousel_carouselBtnCtn_aqswv svg {
-  width: 50px;
-  height: 50px;
-}
-.BasicUI .carousel_carouselBtnCtn_aqswv {
-  display: none;
-}
-.carousel_carouselBody_2M7XO {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.carousel_sliderBody_gtnxY {
-  position: relative;
-}
-.SaleSectionCarousel .carousel__slider {
-  padding: 10px 0px;
-  margin: -10px -7px 0px -7px;
-}
-html.responsive.touch .SaleSectionCarousel .carousel__slider {
-  margin: 0;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
-    margin: 0;
-  }
-}
-.BasicUI .SaleSectionCarousel .carousel__slider {
-  padding: unset;
-}
-.BasicUI .carousel_slideTrayCustomize_2rRBe {
-  column-gap: 12px;
-}
-.carousel_breadcrumbContainer_1nhaj {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-}
-.carousel_pipList_3oTuB {
-  display: flex;
-  flex-flow: row;
-}
-.carousel_pipScrollerContainer_1C-B8 {
-  display: flex;
-  flex-direction: row;
-  height: 35px;
-  margin: 2px 10px 0px 10px;
-}
-.BasicUI .carousel_pipScrollerContainer_1C-B8 {
-  display: none;
-}
-.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
-  max-width: 940px;
-  width: 100%;
-  margin: 0px auto;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
-  width: 40px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
-  padding-left: 0px;
-  padding-right: 20px;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
-  height: 30px;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
-  display: block;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_scrollNavDiv_13TQ_
-  .carousel_scrollNavButton_1GLi1 {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
-  position: relative;
-  flex-grow: 1;
-  height: 100%;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScroller_GXWYa
-  .carousel_scrollBackground_3-RYo {
-  position: absolute;
-  left: 0px;
-  top: 17px;
-  bottom: 17px;
-  right: 0px;
-  background-color: rgba(255, 255, 255, 0.13);
-  margin: auto 0;
-}
-.carousel_pipScrollerContainer_1C-B8
-  .carousel_pipScroller_GXWYa
-  .carousel_scrollForeground_yJM1K {
-  position: absolute;
-  top: 16px;
-  bottom: 16px;
-  background-color: rgba(255, 255, 255, 0.35);
-  transition: left right;
-  transition-duration: 0.4s;
-}
-.carousel_pipContainer_373Zi {
-  padding-top: 10px;
-}
-.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
-  width: 28px;
-  height: 25px;
-  position: relative;
-}
-.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
-  position: absolute;
-  top: 3px;
-  left: 0px;
-  right: 0px;
-  text-align: center;
-}
-.carousel_pip_3Bznr {
-  border: none;
-  background-color: transparent;
-  outline: none !important;
-  cursor: pointer;
-  width: 18px;
-  height: 15px;
-  opacity: 0.3;
-  padding: 1px 2px;
-  margin: 0px;
-  transition: opacity 0.2s;
-}
-.carousel_pip_3Bznr img {
-  width: 100%;
-  height: 100%;
-}
-.carousel_pip_3Bznr.carousel__dot--selected {
-  opacity: 1;
-}
-.carousel_innerSlide_Kx5A5 div {
-  outline-width: 0px;
-}
-.carousel_DisableSliderMotion_3la_1 {
-  transition: none;
-}
-.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  display: flex;
-  flex-wrap: nowrap;
 }
 :root {
   --basicui-header-height: 0px;
@@ -1801,6 +1662,203 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .BasicUI .eventrow_AppCapsulePrice_Jq75m span:last-child {
   padding-bottom: unset;
 }
+:root {
+  --basicui-header-height: 0px;
+}
+.carousel_carouselNavButton_1KK5N {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  display: flex;
+  cursor: pointer;
+  padding: 0px;
+}
+.carousel_carouselNavButton_1KK5N:hover svg {
+  opacity: 1;
+}
+.carousel_carouselNavButton_1KK5N:disabled svg {
+  opacity: 0.1;
+  filter: none;
+}
+.carousel_carouselNavButton_1KK5N.carousel_left_gLIfz {
+  transform: rotateZ(180deg);
+}
+.carousel_carouselNavButton_1KK5N svg {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  fill: #fff;
+}
+.carousel_carouselBtnCtn_aqswv {
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  position: absolute;
+  padding: 0px;
+  width: 50px;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_left_gLIfz {
+  left: -68px;
+}
+.carousel_carouselBtnCtn_aqswv.carousel_right_1qWih {
+  right: -68px;
+}
+.carousel_carouselBtnCtn_aqswv svg {
+  width: 50px;
+  height: 50px;
+}
+.BasicUI .carousel_carouselBtnCtn_aqswv {
+  display: none;
+}
+.carousel_carouselBody_2M7XO {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.carousel_sliderBody_gtnxY {
+  position: relative;
+}
+.SaleSectionCarousel .carousel__slider {
+  padding: 10px 0px;
+  margin: -10px -7px 0px -7px;
+}
+html.responsive.touch .SaleSectionCarousel .carousel__slider {
+  margin: 0;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .SaleSectionCarousel .carousel__slider {
+    margin: 0;
+  }
+}
+.BasicUI .SaleSectionCarousel .carousel__slider {
+  padding: unset;
+}
+.BasicUI .carousel_slideTrayCustomize_2rRBe {
+  column-gap: 12px;
+}
+.carousel_breadcrumbContainer_1nhaj {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.carousel_pipList_3oTuB {
+  display: flex;
+  flex-flow: row;
+}
+.carousel_pipScrollerContainer_1C-B8 {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  margin: 2px 10px 0px 10px;
+}
+.BasicUI .carousel_pipScrollerContainer_1C-B8 {
+  display: none;
+}
+.contenthubmaincarousel .carousel_pipScrollerContainer_1C-B8 {
+  max-width: 940px;
+  width: 100%;
+  margin: 0px auto;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScrollButton_vy7Kr.carousel_left_gLIfz {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScrollButton_vy7Kr svg {
+  height: 30px;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_scrollNavDiv_13TQ_ {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_scrollNavDiv_13TQ_
+  .carousel_scrollNavButton_1GLi1 {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8 .carousel_pipScroller_GXWYa {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollBackground_3-RYo {
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  bottom: 17px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.13);
+  margin: auto 0;
+}
+.carousel_pipScrollerContainer_1C-B8
+  .carousel_pipScroller_GXWYa
+  .carousel_scrollForeground_yJM1K {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: left right;
+  transition-duration: 0.4s;
+}
+.carousel_pipContainer_373Zi {
+  padding-top: 10px;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr {
+  width: 28px;
+  height: 25px;
+  position: relative;
+}
+.carousel_pipContainer_373Zi .carousel_pip_3Bznr .carousel_pipNumber_2_JtJ {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.carousel_pip_3Bznr {
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  cursor: pointer;
+  width: 18px;
+  height: 15px;
+  opacity: 0.3;
+  padding: 1px 2px;
+  margin: 0px;
+  transition: opacity 0.2s;
+}
+.carousel_pip_3Bznr img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_pip_3Bznr.carousel__dot--selected {
+  opacity: 1;
+}
+.carousel_innerSlide_Kx5A5 div {
+  outline-width: 0px;
+}
+.carousel_DisableSliderMotion_3la_1 {
+  transition: none;
+}
+.scrollsnapcarousel_ScrollSnapCarousel_17m-P {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
 .packagepricewidget_StoreSalePriceWidget_2ykYV {
   margin-left: auto;
   display: flex;
@@ -1863,76 +1921,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .basicpartnereventrender_Main_2U6-V {
   height: 100vh;
   overflow-y: scroll;
-}
-.salelabels_SectionLabelCtn_17xMe {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
-  margin-left: auto;
-  display: flex;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
-  background: #4a2a3c;
-  padding: 4px 10px;
-  border-radius: 3px;
-  border: 1px solid #50484c;
-  height: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.salelabels_SectionLabelCtn_17xMe
-  .salelabels_SectionLabelLinkButton_1bw3D:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.salelabels_SectionTitleInnerCtn_2R3H5 {
-  margin-bottom: 10px;
-}
-.saleitemdefdisplay_QuanityAndPrice_2BmhS {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-.saleitemdefdisplay_QuanityAndPrice_2BmhS .saleitemdefdisplay_PriceCtn_2SLvc {
-  background: #000;
-  margin-left: auto;
-  display: flex;
-}
-.saleitemdefdisplay_dropdown_2RZg8 {
-  min-width: 80px;
-  margin-right: 10px;
-}
-.saleitemdefdisplay_dropdown_2RZg8 .DialogInputLabelGroup {
-  margin-bottom: 0px;
-}
-.saleitemdefdisplay_dropdown_2RZg8 .DialogDropDown._DialogInputContainer {
-  padding: 8px 12px;
-}
-.saleitemdefdisplay_dropdown_2RZg8 .DialogDropDown_Arrow {
-  top: 9px;
-}
-.saleitemdefdisplay_ItemDefCtn_1zjEb {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.saleitemdefdisplay_ItemDefCtn_1zjEb a:not(.LinkButton) {
-  color: #fff;
-}
-.saleitemdefdisplay_ItemDefCtn_1zjEb a.saleitemdefdisplay_ItemActionBtn_3GaOl {
-  margin-top: 8px;
-  background: #fff;
-  padding: 4px 12px;
-  border-radius: 10px;
-  color: #000;
-}
-.saleitemdefdisplay_ItemDefCtn_1zjEb
-  a.saleitemdefdisplay_ItemActionBtn_3GaOl:hover {
-  background: #000;
-  color: #fff;
 }
 @font-face {
   font-family: "Jolly Lodger";
@@ -3765,6 +3753,32 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .salehilightplayerembed_PresenterEventScreenshotThumbnail_2kvxa {
   height: auto;
 }
+.salelabels_SectionLabelCtn_17xMe {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
+  margin-left: auto;
+  display: flex;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
+  background: #4a2a3c;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #50484c;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.salelabels_SectionLabelCtn_17xMe
+  .salelabels_SectionLabelLinkButton_1bw3D:hover {
+  background: #7a5a6c;
+  border-color: #fff;
+}
+.salelabels_SectionTitleInnerCtn_2R3H5 {
+  margin-bottom: 10px;
+}
 .screenshotpopout_PopupScreenshotContainer_2mYDh {
   width: 80vw;
   height: auto;
@@ -3822,6 +3836,50 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .salepointshopsmartdisplay_RewardCtn_2iyxZ .AppCapsuleCtn {
     top: 0px;
   }
+}
+.saleitemdefdisplay_QuanityAndPrice_2BmhS {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.saleitemdefdisplay_QuanityAndPrice_2BmhS .saleitemdefdisplay_PriceCtn_2SLvc {
+  background: #000;
+  margin-left: auto;
+  display: flex;
+}
+.saleitemdefdisplay_dropdown_2RZg8 {
+  min-width: 80px;
+  margin-right: 10px;
+}
+.saleitemdefdisplay_dropdown_2RZg8 .DialogInputLabelGroup {
+  margin-bottom: 0px;
+}
+.saleitemdefdisplay_dropdown_2RZg8 .DialogDropDown._DialogInputContainer {
+  padding: 8px 12px;
+}
+.saleitemdefdisplay_dropdown_2RZg8 .DialogDropDown_Arrow {
+  top: 9px;
+}
+.saleitemdefdisplay_ItemDefCtn_1zjEb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saleitemdefdisplay_ItemDefCtn_1zjEb a:not(.LinkButton) {
+  color: #fff;
+}
+.saleitemdefdisplay_ItemDefCtn_1zjEb a.saleitemdefdisplay_ItemActionBtn_3GaOl {
+  margin-top: 8px;
+  background: #fff;
+  padding: 4px 12px;
+  border-radius: 10px;
+  color: #000;
+}
+.saleitemdefdisplay_ItemDefCtn_1zjEb
+  a.saleitemdefdisplay_ItemActionBtn_3GaOl:hover {
+  background: #000;
+  color: #fff;
 }
 :root {
   --basicui-header-height: 0px;
@@ -4806,64 +4864,6 @@ html.tablet .contenthubshared_ContentHubTakeoverCtn_2w_95 a img {
   width: 200px;
   height: 100%;
   pointer-events: none;
-}
-.partnereventdialog_ErrorStyles_2TszC,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA {
-  color: #c44848;
-}
-.partnereventdialog_ErrorIconLayout_15HwA,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA,
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  background-color: #472025;
-}
-.partnereventdialog_ErrorStyles_2TszC > div,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
-  display: inline;
-  color: #d78484;
-}
-.partnereventdialog_WarningStyles_1C_Im,
-.partnereventdialog_WarningStylesWithIcon_3p5KO {
-  color: #b8860b;
-}
-.partnereventdialog_WarningIconLayout_3POKG,
-.partnereventdialog_WarningStylesWithIcon_3p5KO,
-.partnereventdialog_WarningStylesBackground_2MAql {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_WarningStylesBackground_2MAql {
-  background-color: #b8860b;
-  color: #fff;
-}
-.partnereventdialog_WarningStylesBackground_2MAql
-  .partnereventdialog_Stuck_2JqXL {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-.partnereventdialog_Padding_2oWai {
-  padding-top: 10px;
-}
-.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
-  width: initial;
-}
-.ModalPosition_Content
-  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
-  .DialogContent_InnerWidth
-  > form {
-  padding-right: 8px;
 }
 .greatondeckgriddisplay_Container_1d905 {
   background-color: #1b1b1b;
@@ -7519,9 +7519,4 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .BasicUI .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
   display: none;
-}
-.saleeventbbcodeparser_ErrorDiv_1Vj6H {
-  background-color: hotpink;
-  border: 1px solid;
-  padding: 10px;
 }

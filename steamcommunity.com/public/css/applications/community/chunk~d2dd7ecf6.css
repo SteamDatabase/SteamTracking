@@ -2035,64 +2035,6 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .partnereventeditor_ShowInTabsList_1slxi:hover {
   color: #fff;
 }
-.partnereventdialog_ErrorStyles_2TszC,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA {
-  color: #c44848;
-}
-.partnereventdialog_ErrorIconLayout_15HwA,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA,
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  background-color: #472025;
-}
-.partnereventdialog_ErrorStyles_2TszC > div,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
-  display: inline;
-  color: #d78484;
-}
-.partnereventdialog_WarningStyles_1C_Im,
-.partnereventdialog_WarningStylesWithIcon_3p5KO {
-  color: #b8860b;
-}
-.partnereventdialog_WarningIconLayout_3POKG,
-.partnereventdialog_WarningStylesWithIcon_3p5KO,
-.partnereventdialog_WarningStylesBackground_2MAql {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_WarningStylesBackground_2MAql {
-  background-color: #b8860b;
-  color: #fff;
-}
-.partnereventdialog_WarningStylesBackground_2MAql
-  .partnereventdialog_Stuck_2JqXL {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-.partnereventdialog_Padding_2oWai {
-  padding-top: 10px;
-}
-.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
-  width: initial;
-}
-.ModalPosition_Content
-  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
-  .DialogContent_InnerWidth
-  > form {
-  padding-right: 8px;
-}
 .clanimagepicker_PickerContainer_1qhUO {
   display: flex;
   flex-direction: column;

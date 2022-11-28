@@ -17,9 +17,6 @@
         WinnerText: "giveawaynextdraw_WinnerText_2s2hb",
       };
     },
-    15986: (e) => {
-      e.exports = { ErrorDiv: "saleeventbbcodeparser_ErrorDiv_1Vj6H" };
-    },
     76786: (e) => {
       e.exports = { DialogCtn: "partnereventstatsexport_DialogCtn_2LwQU" };
     },
@@ -84,7 +81,7 @@
     },
     91799: (e, t, n) => {
       "use strict";
-      n.d(t, { M: () => w, q: () => D });
+      n.d(t, { M: () => b, q: () => D });
       var a = n(70655),
         i = n(67294),
         r = n(29323),
@@ -162,7 +159,7 @@
       };
       S = (0, a.gn)([r.Pi], S);
       const D = (0, u.M)(S),
-        w = (e) =>
+        b = (e) =>
           i.createElement(
             g.R0,
             Object.assign({}, e, {
@@ -194,8 +191,8 @@
         g = n.n(h),
         S = n(58687),
         D = n(59253),
-        w = n(41414),
-        b = n(13596),
+        b = n(41414),
+        w = n(13596),
         y = n(77520),
         C = n(7573),
         I = n(41311),
@@ -234,7 +231,7 @@
                                   (0, I.Xx)("#Language_" + (0, G.j_)(t))
                                 )
                               ),
-                              (0, w.AM)(
+                              (0, b.AM)(
                                 d.createElement(R, {
                                   langs: a,
                                   locData: t,
@@ -246,7 +243,7 @@
                         })
                         .catch((e) => {
                           let t = (0, T.l)(e);
-                          (0, w.AM)(
+                          (0, b.AM)(
                             d.createElement(D.JX, {
                               strTitle: (0, I.Xx)("#EventEditor_CloneError"),
                               bAlertDialog: !0,
@@ -322,8 +319,8 @@
         );
       }
       var U = n(72710),
-        V = n(78587),
-        W = n(5525),
+        W = n(78587),
+        V = n(5525),
         j = n(159),
         F = n(32548),
         H = n(6205),
@@ -366,7 +363,7 @@
           if (this.state.redirectTarget && !this.bRedirectUsed)
             switch (((this.bRedirectUsed = !0), this.state.redirectTarget)) {
               case "clone":
-                return d.createElement(V.l_, {
+                return d.createElement(W.l_, {
                   push: !0,
                   to: a.rQ.Edit(n, ""),
                 });
@@ -391,9 +388,9 @@
             g = t.BHasSubTitle(s),
             S = t.BHasSaleEnabled(),
             D = t.visibility_state != u.ac.k_EEventStateUnpublished,
-            w = t.visibility_state != u.ac.k_EEventStateVisible;
+            b = t.visibility_state != u.ac.k_EEventStateVisible;
           if (
-            (w &&
+            (b &&
               D &&
               (c =
                 t.visibilityStartTime == t.startTime
@@ -414,9 +411,9 @@
                         })
                       )
                     )),
-            !w && D)
+            !b && D)
           ) {
-            let e = W.JW.GetTimeNowWithOverride();
+            let e = V.JW.GetTimeNowWithOverride();
             t.GetStartTimeAndDateUnixSeconds() > e
               ? (m = d.createElement(
                   "span",
@@ -443,7 +440,7 @@
                 : e.GetName()) || "") +
               ": " +
               E);
-          let b =
+          let w =
               t.BIsPartnerEvent() &&
               t.BIsVisibleEvent() &&
               _.h.GetStatsFor(t.clanSteamID, l),
@@ -532,7 +529,7 @@
                         ),
                       d.createElement(Y.bv, { eventModel: t, bAllowUpdate: !1 })
                     ),
-                    Boolean(b) &&
+                    Boolean(w) &&
                       d.createElement(
                         "div",
                         { className: B.TileStats },
@@ -541,7 +538,7 @@
                           d.createElement(
                             "span",
                             null,
-                            b.m_stats.total_showm.toLocaleString()
+                            w.m_stats.total_showm.toLocaleString()
                           )
                         ),
                         d.createElement("br", null),
@@ -550,7 +547,7 @@
                           d.createElement(
                             "span",
                             null,
-                            b.m_stats.total_read.toLocaleString()
+                            w.m_stats.total_read.toLocaleString()
                           )
                         )
                       )
@@ -611,7 +608,7 @@
           i.wk
             .LoadEditorModel(t.clanSteamID, t.GID)
             .then(() => {
-              (0, w.AM)(
+              (0, b.AM)(
                 d.createElement(U.b, {
                   editModel: i.wk.GetEditModel(),
                   OnPublishSuccess: this.OnPublishSuccess,
@@ -621,7 +618,7 @@
             })
             .catch((e) => {
               let t = (0, T.l)(e);
-              (0, w.AM)(
+              (0, b.AM)(
                 d.createElement(D.JX, {
                   strTitle: (0, I.Xx)("#EventEditor_PublishingError"),
                   bAlertDialog: !0,
@@ -644,7 +641,7 @@
         }
         OnDeleteClickAndVerify(e) {
           e.stopPropagation(),
-            (0, w.AM)(
+            (0, b.AM)(
               d.createElement(H.n, {
                 eventModel: this.props.eventModel,
                 partnerEventStore: i.wk,
@@ -817,7 +814,7 @@
                 "Here are the publishing audit history. Recorded starting from mid-June 2021",
             },
             Boolean(null == n)
-              ? d.createElement(b.V, {
+              ? d.createElement(w.V, {
                   string: (0, I.Xx)("#Loading"),
                   position: "center",
                   size: "medium",
@@ -874,7 +871,7 @@
           [a, i] = d.useState(!0),
           [r, o] = d.useState(!0),
           c = 1063339200,
-          m = W.JW.GetTimeNowWithOverride(),
+          m = V.JW.GetTimeNowWithOverride(),
           [u, v] = d.useState(m - de._H.PerMonth),
           [p, E] = d.useState(m),
           [h, g] = d.useState(-1),
@@ -1011,7 +1008,7 @@
                 )
             ),
             S &&
-              d.createElement(b.V, {
+              d.createElement(w.V, {
                 position: "center",
                 size: "medium",
                 string: (0, I.Xx)("#EventDashboard_Stats_Progress", h),
@@ -1064,7 +1061,7 @@
         }
         HandleErrorWithDialog(e) {
           let t = (0, T.l)(e);
-          (0, w.AM)(
+          (0, b.AM)(
             d.createElement(
               D.JX,
               null,
@@ -1251,7 +1248,7 @@
                     P.zx,
                     {
                       onClick: (e) => {
-                        (0, w.AM)(d.createElement(re, null), (0, Z.RA)(e));
+                        (0, b.AM)(d.createElement(re, null), (0, Z.RA)(e));
                       },
                     },
                     "Show Publishing Audit History"
@@ -1361,7 +1358,7 @@
                       (0, I.Xx)("#EventDisplay_NoPublic")
                     ),
                   i &&
-                    d.createElement(b.V, {
+                    d.createElement(w.V, {
                       position: "center",
                       string: (0, I.Xx)("#Loading"),
                     }),
@@ -1426,7 +1423,7 @@
                   P.zx,
                   {
                     onClick: (e) =>
-                      (0, w.AM)(
+                      (0, b.AM)(
                         d.createElement(ve, { clanInfo: n }),
                         (0, Z.RA)(e)
                       ),
@@ -1451,8 +1448,8 @@
         ge = n(14767),
         Se = n(70882),
         De = n(65902),
-        we = n(86605),
-        be = n(9915),
+        be = n(86605),
+        we = n(9915),
         ye = n(27991),
         Ce = (n(49727), n(63473));
       n(21205), n(82946);
@@ -1713,7 +1710,7 @@
                   ? d.createElement(
                       "div",
                       { className: Pe.Throbber },
-                      d.createElement(b.V, { size: "small" }),
+                      d.createElement(w.V, { size: "small" }),
                       d.createElement(
                         "div",
                         null,
@@ -1773,8 +1770,8 @@
       var Xe = n(68941),
         Re = n(11108),
         Ue = n(95598),
-        Ve = n(23211),
-        We = n(71502),
+        We = n(23211),
+        Ve = n(71502),
         je = n(15986),
         Fe = n(46713),
         He = n(1329),
@@ -1857,7 +1854,7 @@
                       .catch(() => {
                         s(!0), l(!1);
                       }))
-                  : (0, Ve.X)());
+                  : (0, We.X)());
             },
           },
           Boolean(o)
@@ -1865,7 +1862,7 @@
             : d.createElement(
                 d.Fragment,
                 null,
-                Boolean(r) && d.createElement(b.V, { size: "small" }),
+                Boolean(r) && d.createElement(w.V, { size: "small" }),
                 Boolean(a) && d.createElement(Ue.JrY, null),
                 n
               )
@@ -1877,7 +1874,7 @@
           ? d.createElement(Ze, { nDoorIndex: t }, e.children)
           : null;
       }
-      const Ye = (0, V.EN)(We.C);
+      const Ye = (0, W.EN)(Ve.C);
       function $e(e) {
         var t, n;
         const a = Number.parseInt((0, Ce.im)(e.args)),
@@ -1929,7 +1926,7 @@
               itemDefSetting: { nAppID: n, nItemDefID: a, max_quantity: i },
               strCallToAction: r,
             })
-          : d.createElement(b.V, {
+          : d.createElement(w.V, {
               size: "small",
               position: "center",
               string: (0, I.Xx)("#Loading"),
@@ -1945,7 +1942,7 @@
             e
           );
         })();
-        if (!t) return d.createElement(b.V, { size: "small" });
+        if (!t) return d.createElement(w.V, { size: "small" });
         const n = Number.parseInt((0, Ce.im)(e.args));
         let a = t.verified;
         switch (n) {
@@ -1960,7 +1957,7 @@
       function it(e) {
         var t, n, a, i;
         const r = (0, Te.V)("library");
-        if (!r) return d.createElement(b.V, { size: "small" });
+        if (!r) return d.createElement(w.V, { size: "small" });
         const l = Number.parseInt((0, Ce.im)(e.args));
         let o =
           (null === (t = r.verifiedList) || void 0 === t ? void 0 : t.length) ||
@@ -2024,10 +2021,10 @@
           { className: Ae.LocalizeBlock },
           (0, I.yu)(
             e.children,
-            d.createElement("i", null),
-            d.createElement("i", null),
-            d.createElement("i", null),
-            d.createElement("i", null)
+            d.createElement("b", null),
+            d.createElement("b", null),
+            d.createElement("b", null),
+            d.createElement("b", null)
           )
         );
       }
@@ -2048,13 +2045,13 @@
         }
         return d.createElement(d.Fragment, null);
       }
-      var ut = n(81664),
+      var ut = n(22115),
         vt = (n(69491), n(55038), n(92244));
       function pt(e) {
         const [t, n] = d.useState(!0);
         return (
           d.useEffect(() => {
-            we.Q8.Init(new De.J(x.De.WEBAPI_BASE_URL)),
+            be.Q8.Init(new De.J(x.De.WEBAPI_BASE_URL)),
               oe.j1.Init(),
               i.wk.Init(),
               ut.d.AddDictionary(
@@ -2092,12 +2089,12 @@
                   ])),
                 tt)
               ),
-              Promise.all([be.cb.InitGlobal(), (0, ye.nf)(null)]).then(() =>
+              Promise.all([we.cb.InitGlobal(), (0, ye.nf)(null)]).then(() =>
                 n(!1)
               );
           }, []),
           t
-            ? d.createElement(b.V, {
+            ? d.createElement(w.V, {
                 position: "center",
                 size: "medium",
                 string: (0, I.Xx)("#Loading"),
@@ -2107,24 +2104,24 @@
                 { value: { bCanUseLink: !0 } },
                 d.createElement(M.bE, null),
                 d.createElement(
-                  V.rs,
+                  W.rs,
                   null,
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Home(":appid_or_vanity_str"),
                     component: Ee,
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.List(":appid_or_vanity_str"),
                     component: Ee,
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Create(":appid_or_vanity_str"),
                     component: r.k,
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Category(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2133,12 +2130,12 @@
                         Object.assign({}, e, { key: e.match.params.gid })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.EditRedirectToCategory(":appid_or_vanity_str"),
                     render: (e) => d.createElement(ge.Kz, Object.assign({}, e)),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Edit(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2147,7 +2144,7 @@
                         Object.assign({}, e, { key: e.match.params.gid })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Publish(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2159,7 +2156,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.PreviewSale(
                       ":appid_or_vanity_str",
@@ -2174,7 +2171,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Preview(":appid_or_vanity_str", ":gid(\\d+)?"),
                     render: (e) =>
@@ -2186,7 +2183,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.View(":appid_or_vanity_str", ":gid(\\d+)"),
                     render: (e) =>
@@ -2198,7 +2195,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Migrate(
                       ":appid_or_vanity_str",
@@ -2212,7 +2209,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.MigrateCategory(
                       ":appid_or_vanity_str",
@@ -2226,7 +2223,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.ViewOldAnnouncement(
                       ":appid_or_vanity_str",
@@ -2242,7 +2239,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, {
+                  d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.PreviewOldAnnouncement(
                       ":appid_or_vanity_str",
@@ -2258,7 +2255,7 @@
                         })
                       ),
                   }),
-                  d.createElement(V.AW, { component: vt.R })
+                  d.createElement(W.AW, { component: vt.R })
                 )
               )
         );

@@ -54,6 +54,11 @@
           "doclink",
           "video",
           "vod",
+          "youtubeorvideo",
+          "giveawayeligible",
+          "claimitem",
+          "packagepurchaseable",
+          "actiondialog",
         ],
         o = [
           "h1",
@@ -75,6 +80,7 @@
           "video",
           "vod",
           "trailer",
+          "youtubeorvideo",
         ],
         c = (l.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         d = "{STEAM_CLAN_LOC_IMAGE}";
