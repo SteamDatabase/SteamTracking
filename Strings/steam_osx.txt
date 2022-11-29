@@ -15,14 +15,20 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
+]3
+]3
 __objc_methname
 __TEXT
+057
+057
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 0
 __cstring
 __TEXT
+P>7
+P>7
 __unwind_info
 __TEXT
 __DATA
@@ -91,6 +97,7 @@ h
 80
 P
 /usr/lib/dyld
+n
 
 *
 (
@@ -143,17 +150,11 @@ C(
 0
 @
 @
-Z1
-{6
-11
-k6
+}6
 @
 @
 @
 @
-h6
-%9
-e6
 $
 Hi
 Hi
@@ -166,9 +167,6 @@ Hi
 }'
 n&
 6
-6
-6
-6
 '
 '
 
@@ -178,18 +176,18 @@ n&
 '
 '
 &
-D8
 &
+55
 
 ,&
 0
+5
 5
 &
 
 0
 Ic
 0
-/
 0
 AT=
 AT5
@@ -199,6 +197,11 @@ AT=
 D
 @
 @
+S4
+/4
+4
+4
+4
 @
 Hc
 Hc
@@ -232,7 +235,7 @@ IcE
 @
 8
 .
-?3
+S3
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -2292,7 +2295,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Nov 19 2022 15:55:30
+Startup - updater built Nov 28 2022 19:09:19
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2579,8 +2582,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Nov 19 2022
-15:55:31
+Nov 28 2022
+19:09:19
 crashhandler003
 steam
 Steam Executable Crash
@@ -2677,7 +2680,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:55:29
+19:09:17
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10442,7 +10445,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-15:53:40
+19:07:30
 Jan
 Feb
 Mar
@@ -12830,11 +12833,8 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-S?7
 
-gf7
-of7
-d`7
+1f7
 
 0
 ?
@@ -12851,17 +12851,11 @@ C(
 0
 @
 @
-Z1
-{6
-11
-k6
+}6
 @
 @
 @
 @
-h6
-%9
-e6
 $
 Hi
 Hi
@@ -12874,9 +12868,6 @@ Hi
 }'
 n&
 6
-6
-6
-6
 '
 '
 
@@ -12886,18 +12877,18 @@ n&
 '
 '
 &
-D8
 &
+55
 
 ,&
 0
+5
 5
 &
 
 0
 Ic
 0
-/
 0
 AT=
 AT5
@@ -12907,6 +12898,11 @@ AT=
 D
 @
 @
+S4
+/4
+4
+4
+4
 @
 Hc
 Hc
@@ -12940,12 +12936,11 @@ IcE
 @
 8
 .
-?3
+S3
 V
+0-
 =
-{,
-"2
-w,
+h,
 2
 2
 2
@@ -12953,37 +12948,33 @@ w,
 ,
 ,
 =
-M-
-V1
-i1
-?3
-,+
+I1
+X+
 &+
 +
-+
 !
-d*
-T*
 @
 *
 4
 @
 &
+%)
 )
+)
+=.
 .
 .
 .
 (
-(
-.'
+K'
 '
 '
 '
 '
+y,
+m,
 ,
 ,
-,
-\,
 @
 M9e
 @
@@ -13000,7 +12991,6 @@ M9e
 ?
 ?
 :
-l%
 ?
 ?
 ?
@@ -13036,6 +13026,7 @@ M)u
 =
 @
 =
+A(
 =
 %
 =
@@ -13350,11 +13341,14 @@ j
 &
 &
 &
+&
 j
 j
 
-S!
+Y!
+d$
 t$I;M
+$
 e
 W
 ,7~5d
@@ -13618,10 +13612,10 @@ H=
 
 =
 @
-J
+I
 =
 @
-$
+(
 =*.*
 @
 @
@@ -13648,7 +13642,6 @@ $
 0
 0
 0
-F
 0
 H=
 0
@@ -13701,12 +13694,14 @@ P
 @
 @
 0
+h
+>
 =a
-$
 
 
 0
 Hi
+V
 $
 $
 $

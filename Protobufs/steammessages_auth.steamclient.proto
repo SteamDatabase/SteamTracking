@@ -104,6 +104,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Response {
 	repeated .CAuthentication_AllowedConfirmation allowed_confirmations = 4 [(description) = "the confirmation types that will be able to confirm the request"];
 	optional uint64 steamid = 5 [(description) = "steamid of the account logging in - will only be included if the credentials were correct"];
 	optional string weak_token = 6 [(description) = "partial-authentication token - limited lifetime and scope, included only if credentials were valid"];
+	optional string agreement_session_url = 7 [(description) = "agreement the user needs to agree to"];
 }
 
 message CAuthentication_PollAuthSessionStatus_Request {
@@ -161,6 +162,7 @@ message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request {
 }
 
 message CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response {
+	optional string agreement_session_url = 7 [(description) = "agreement the user needs to agree to"];
 }
 
 message CAuthentication_AccessToken_GenerateForApp_Request {
