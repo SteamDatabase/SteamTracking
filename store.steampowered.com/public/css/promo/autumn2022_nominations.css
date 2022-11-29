@@ -658,6 +658,8 @@ html.responsive.touch .steamaward_nomination_row {
 	background-color: #000000;
 	/* border: 3px solid black; */
 	box-shadow: 4px 4px 4px #0f1522;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .steamaward_nominate_gamepage_ctn .nominate_check_ctn {
@@ -751,12 +753,11 @@ html.responsive.touch .steamaward_nomination_row {
 .game_nominate {
 	display: block;
 	background: url( 'https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/sa_2022_title_bg.jpg' ) no-repeat;
-	width: calc( 49% - 57px );
-	float: left;
 	min-height: 70px;
 	padding: 14px 23px;
 	font-size: 14px;
 	border-radius: 0px;
+	flex-grow: 1;
 }
 
 .steamaward_nominate_right:not(.disabled) {
