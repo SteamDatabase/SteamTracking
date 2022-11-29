@@ -95,12 +95,6 @@ function IsValidOptionalField( fieldName, regex )
 	return true;
 }
 
-function SaveTrademarkComplaint()
-{
-	var frm = $J( "#CreateTrademarkComplaintForm" );
-	SaveTakeDownNotice( frm );
-}
-
 function SaveDMCATakeDownNotice()
 {
 	var frm = $J( "#CreateDMCATakeDownNoticeForm" );

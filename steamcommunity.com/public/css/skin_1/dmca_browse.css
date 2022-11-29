@@ -17,6 +17,7 @@
 	padding: 10px;
 	margin-bottom: 2px;
 	cursor: pointer;
+	display: flex;
 }
 
 .dmca_notice:hover
@@ -26,7 +27,6 @@
 
 .dmca_notice_id
 {
-	float: left;
 	min-width: 70px;
 	color: white;
 	font-size: 1.25em;
@@ -35,7 +35,6 @@
 
 .dmca_notice_legal_name
 {
-	float: left;
 	width: 450px;
 	color: white;
 	font-size: 1.25em;
@@ -45,21 +44,18 @@
 .dmca_notice_date_created
 {
 	color: #aaaaaa;
-	float: left;
 	width: 200px;
 	font-size: 12px;
 }
 
 .dmca_notice_status
 {
-	float: left;
 	color: #ca6a0c;
 	font-size: 12px;
 }
 
 .dmca_notice_type
 {
-	float: left;
 	color: white;
 	font-size: 12px;
 	padding-left: 10px;
@@ -67,7 +63,6 @@
 
 .dmca_notice_last_actor
 {
-	float: left;
 }
 
 .dmca_browse_search_parameters
