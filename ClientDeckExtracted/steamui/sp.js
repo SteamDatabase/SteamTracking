@@ -27477,7 +27477,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1669067750),
+          d = parseInt(1669690496),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36884,9 +36884,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 21 2022 : 13:55:50",
-              BUILD_TIME_UTC: "Nov 21 2022 : 21:55:50",
-              BUILD_RTIME_UTC: 1669067750,
+              BUILD_TIME_LOCAL: "Nov 28 2022 : 18:54:56",
+              BUILD_TIME_UTC: "Nov 29 2022 : 02:54:56",
+              BUILD_RTIME_UTC: 1669690496,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
@@ -47653,7 +47653,8 @@
           i.createElement(cr, null),
           i.createElement(Wb, null),
           i.createElement(rr, { appid: A }),
-          i.createElement(ro.d0, null)
+          i.createElement(ro.d0, null),
+          i.createElement(Nn._9, null)
         );
       }
       function aD() {
@@ -53864,29 +53865,31 @@
         );
       }
       var my = t(72561);
-      const Cy = (0, K.Pi)(function () {
-          const [A, e] = i.useState(),
+      const Cy = (0, K.Pi)(function (A) {
+          const { bPlayingStartupMovie: e } = A,
             [t, n] = i.useState(),
-            o = (0, z.pv)();
+            [o, a] = i.useState(),
+            r = Oo.mg.IsLockScreenActive(),
+            l = (0, z.pv)();
           i.useLayoutEffect(() => {
-            if (t) return o.InitGamepadApplicationUI(t);
-          }, [o, t]);
-          const a = (0, eA.k6)(),
-            r = i.useCallback(() => {
-              A
-                ? A.Activate()
+            if (o) return l.InitGamepadApplicationUI(o);
+          }, [l, o]);
+          const c = (0, eA.k6)(),
+            s = i.useCallback(() => {
+              t
+                ? t.Activate()
                 : console.warn(
                     "FocusApplicationRoot called before root mounted"
                   );
-            }, [A]);
+            }, [t]);
           return (
-            i.useLayoutEffect(() => o.InitNavigation(a, r), [o, a, r]),
+            i.useLayoutEffect(() => l.InitNavigation(c, s), [l, c, s]),
             i.createElement(
               Xo.sE,
               null,
               i.createElement(
                 io.Fs,
-                { fnFocusNavigationRoot: r },
+                { fnFocusNavigationRoot: s },
                 i.createElement(
                   "div",
                   {
@@ -53894,14 +53897,19 @@
                     "flow-children": "row",
                     className: na().MainNavMenuMainSplit,
                   },
-                  o.BHasMenus() && i.createElement(Ey, { ModalManager: t }),
+                  l.BHasMenus() && i.createElement(Ey, { ModalManager: o }),
                   i.createElement(Iy, {
-                    refNavTreeRoot: e,
-                    refModalManager: n,
+                    refNavTreeRoot: n,
+                    refModalManager: a,
                   }),
-                  o.BIsGamepadApplicationUIInitialized() &&
+                  l.BIsGamepadApplicationUIInitialized() &&
                     i.createElement(cD, { bQuickAccessFooter: !1 }),
                   i.createElement(dy, null)
+                ),
+                i.createElement(
+                  Ho.S,
+                  null,
+                  !e && !r && i.createElement(Po, null)
                 )
               )
             )
@@ -54174,7 +54182,6 @@
             });
           }
           const e = aA._A.GetChordHintVisible();
-          let t = Oo.mg.IsLockScreenActive();
           if (this.props.mode == z.iZ.StandaloneKeyboard)
             return i.createElement(
               z.my,
@@ -54222,13 +54229,13 @@
                     "windows" == jn.De.PLATFORM && na().StandaloneConfigurator
                   ),
                 },
-                i.createElement(Cy, null),
+                i.createElement(Cy, { bPlayingStartupMovie: !1 }),
                 i.createElement(yn, { visible: e }),
                 i.createElement(vy, null)
               ),
               i.createElement(Dy, null)
             );
-          const n = {
+          const t = {
             breakNarrow: [parseInt(by().GamepadUIBreakNarrow), "NarrowWindow"],
             breakWide: [parseInt(by().GamepadUIBreakWide), "WideWindow"],
             breakShort: [parseInt(by().GamepadUIBreakShort), "ShortWindow"],
@@ -54244,15 +54251,10 @@
               Qy,
               {
                 className: (0, G.Z)("BasicUI", "GamepadMode", na().BasicUiRoot),
-                ResponsiveRecorderProps: n,
+                ResponsiveRecorderProps: t,
               },
-              i.createElement(Cy, null),
+              i.createElement(Cy, { bPlayingStartupMovie: A }),
               i.createElement(Ho.S, null, i.createElement(yn, { visible: e })),
-              i.createElement(
-                Ho.S,
-                null,
-                !A && !t && i.createElement(Po, null)
-              ),
               i.createElement(Ho.S, null, i.createElement(R, null)),
               i.createElement(Ho.S, null, i.createElement(Ny, null)),
               i.createElement(vy, null),

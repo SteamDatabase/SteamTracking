@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7676861";
+var CLSTAMP = "7687127";
 (() => {
   var e,
     t,
@@ -6888,6 +6888,7 @@ var CLSTAMP = "7676861";
             LAUNCHER_TYPE: 0,
             EREALM: 0,
             IN_CHROMEOS: !1,
+            TESLA: !1,
             LOCAL_HOSTNAME: "",
             WEBAPI_BASE_URL: "",
             TOKEN_URL: "",
@@ -6973,9 +6974,9 @@ var CLSTAMP = "7676861";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 21 2022 : 13:55:50",
-                    BUILD_TIME_UTC: "Nov 21 2022 : 21:55:50",
-                    BUILD_RTIME_UTC: 1669067750,
+                    BUILD_TIME_LOCAL: "Nov 28 2022 : 18:54:56",
+                    BUILD_TIME_UTC: "Nov 29 2022 : 02:54:56",
+                    BUILD_RTIME_UTC: 1669690496,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
