@@ -7,6 +7,10 @@
 	z-index: 9;
 }
 
+body.v6.chinaabout {
+	filter: grayscale( 1 );
+}
+
 body.v6 #footer_spacer {
 	height: 210px;
 }
