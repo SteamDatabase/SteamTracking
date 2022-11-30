@@ -6257,7 +6257,7 @@
         n = r(67294),
         a = (r(92398), r(159)),
         s = r(48341),
-        o = r(59253),
+        o = r(37699),
         l = r(41414),
         c = r(95598),
         d = r(7573),
@@ -12696,6 +12696,11 @@
                   },
                   has_market: { n: 15, br: n.FE.readBool, bw: n.Xc.writeBool },
                   has_dlc: { n: 16, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  has_leaderboards: {
+                    n: 17,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             m.sm_m
@@ -22827,7 +22832,7 @@
         s = r.n(a),
         o = r(22188),
         l = (r(26149), r(1351), r(49186), r(3389)),
-        c = (r(58185), r(49805)),
+        c = (r(58185), r(52795)),
         d = r(5525),
         m = r(89694),
         u = r(93976),
@@ -23362,7 +23367,7 @@
       "use strict";
       r(49186), r(28976), r(1351), r(26149), r(82946);
     },
-    49805: (e, t, r) => {
+    52795: (e, t, r) => {
       "use strict";
       r.d(t, { c9: () => H, _d: () => k, QO: () => L, id: () => G });
       var i = r(70655),
@@ -24928,18 +24933,8 @@
         (0, i.gn)([B.a], D.prototype, "OnVideoResize", null);
       r(92398), r(69765);
       var T = r(93976),
-        A = r(50498);
-      function z(e) {
-        const [t, r] = e.split(".", 2);
-        return (
-          t &&
-          r &&
-          (function (e) {
-            return "object" == typeof SteamClient && e in SteamClient;
-          })(t) &&
-          r in SteamClient[t]
-        );
-      }
+        A = r(50498),
+        z = r(67119);
       const G = 7;
       var k, L;
       !(function (e) {
@@ -24954,7 +24949,7 @@
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new f.Ar());
         }
         UnlockH264(e, t) {
-          z("RemotePlay.UnlockH264")
+          (0, z.U5)("RemotePlay.UnlockH264")
             ? (e.SetState(k.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
               SteamClient.RemotePlay.UnlockH264(),
@@ -32928,7 +32923,7 @@
         }
       }
       (0, s.gn)([m.ak], p.prototype, "LoadAppCompabitilityResult", null);
-      var _ = r(59253),
+      var _ = r(37699),
         h = r(41311),
         g = r(35921),
         f = (r(27745), r(12505), r(98610), r(23816), r(62639)),
@@ -33314,7 +33309,7 @@
       "use strict";
       r.d(t, { NT: () => d, T$: () => c, tx: () => l });
       var i = r(67294),
-        n = r(59253),
+        n = r(37699),
         a = r(21735),
         s = r(41311),
         o = r(13596);
@@ -36108,7 +36103,7 @@
         je = r(72258),
         Ve = r(53622),
         He = r(60419),
-        Xe = r(59253),
+        Xe = r(37699),
         Ze = r(41414),
         qe = r(23211);
       let Ke = null;
@@ -36905,7 +36900,7 @@
         g = r(16156),
         f = r(48341),
         y = r(96602),
-        b = r(59253),
+        b = r(37699),
         B = r(41414),
         v = r(95598),
         w = r(13596),
@@ -37089,7 +37084,7 @@
             ? s.createElement(
                 "div",
                 { className: O.ErrorDiv },
-                (0, I.Xx)("#EventDidplay_Reminder_EventNotVisible")
+                (0, I.Xx)("#EventDidplay_Reminder_EventNotVisible", r)
               )
             : null;
         const l = (0, o.jM)(D.De.LANGUAGE);
@@ -38984,7 +38979,7 @@
         _ = r(41311),
         h = r(93976),
         g = r(90666),
-        f = r(59253),
+        f = r(37699),
         y = r(41414),
         b = r(13596),
         B = r(47871),
@@ -39986,7 +39981,7 @@
       "use strict";
       r.d(t, { r: () => o });
       var i = r(67294),
-        n = r(59253),
+        n = r(37699),
         a = r(41311),
         s = r(90666);
       const o = (e) => {
@@ -41725,7 +41720,7 @@
         d = r(34133),
         m = r.n(d),
         u = r(23211),
-        p = r(59253),
+        p = r(37699),
         _ = r(41414),
         h = r(95598),
         g = r(65924),
@@ -43877,97 +43872,76 @@
     },
     96187: (e, t, r) => {
       "use strict";
-      r.d(t, { J: () => l, e: () => c });
-      var i = r(70655),
-        n = r(67294),
-        a = r(64839),
-        s = r(52519),
-        o = r(41311);
-      class l extends n.Component {
-        constructor(e) {
-          super(e), (this.state = { index: 0 });
-        }
-        componentDidUpdate(e) {
-          e.srcs.length != this.props.srcs.length &&
-            this.setState({ index: 0 });
-        }
-        OnError() {
-          this.props.onImageError &&
-            this.props.onImageError(this.props.srcs[this.state.index]),
-            this.state.index + 1 < this.props.srcs.length &&
-              this.setState({ index: this.state.index + 1 });
-        }
-        render() {
-          const {
-            className: e,
-            srcs: t,
-            lazyLoad: r,
-            width: i,
-            height: a,
-            alt: s,
-            crossOrigin: o,
-          } = this.props;
-          return n.createElement("img", {
-            className: e,
-            src: t[this.state.index],
-            crossOrigin: o,
-            onError: this.OnError,
-            loading: r ? "lazy" : void 0,
-            width: i,
-            height: a,
-            alt: s,
-          });
-        }
+      r.d(t, { J: () => s, e: () => o });
+      var i = r(67294),
+        n = r(41311),
+        a = r(52519);
+      function s(e) {
+        const {
+            className: t,
+            srcs: r,
+            lazyLoad: n,
+            width: a,
+            height: s,
+            alt: o,
+            crossOrigin: l,
+          } = e,
+          [c, d] = i.useState(r.length),
+          [m, u] = i.useState(0);
+        i.useEffect(() => {
+          c != r.length && (d(r.length), u(0));
+        }, [c, r.length]);
+        const p = i.useCallback(() => {
+          e.onImageError && e.onImageError(e.srcs[m]),
+            m + 1 < e.srcs.length && u(m + 1);
+        }, []);
+        return i.createElement("img", {
+          className: t,
+          src: r[m],
+          crossOrigin: l,
+          onError: p,
+          loading: n ? "lazy" : void 0,
+          width: a,
+          height: s,
+          alt: o,
+        });
       }
-      (0, i.gn)([a.ak], l.prototype, "OnError", null);
-      class c extends n.Component {
-        constructor() {
-          super(...arguments), (this.state = { error: !1 });
-        }
-        OnError() {
-          this.setState({ error: !0 });
-        }
-        render() {
-          const {
-            className: e,
-            src: t,
-            lazyLoad: r,
-            width: i,
-            height: a,
-            alt: l,
-            crossOrigin: c,
-          } = this.props;
-          return this.state.error
-            ? n.createElement(
-                "div",
-                { className: s.ErrorDiv },
-                n.createElement(
-                  "p",
-                  null,
-                  (0, o.Xx)("#Image_ErrorTitle", this.props.src)
-                ),
-                n.createElement(
-                  "ul",
-                  null,
-                  n.createElement("li", null, (0, o.Xx)("#Image_Error_msg1")),
-                  n.createElement("li", null, (0, o.Xx)("#Image_Error_msg2")),
-                  n.createElement("li", null, (0, o.Xx)("#Image_Error_msg3"))
-                ),
-                n.createElement("p", null, (0, o.Xx)("#Image_Error_suggestion"))
-              )
-            : n.createElement("img", {
-                className: e,
-                src: t,
-                onError: this.OnError,
-                crossOrigin: c,
-                loading: r ? "lazy" : void 0,
-                width: i,
-                height: a,
-                alt: l,
-              });
-        }
+      function o(e) {
+        const [t, r] = i.useState(!1),
+          {
+            className: s,
+            src: o,
+            lazyLoad: l,
+            width: c,
+            height: d,
+            alt: m,
+            crossOrigin: u,
+          } = e;
+        return t
+          ? i.createElement(
+              "div",
+              { className: a.ErrorDiv },
+              i.createElement("p", null, (0, n.Xx)("#Image_ErrorTitle", o)),
+              i.createElement(
+                "ul",
+                null,
+                i.createElement("li", null, (0, n.Xx)("#Image_Error_msg1")),
+                i.createElement("li", null, (0, n.Xx)("#Image_Error_msg2")),
+                i.createElement("li", null, (0, n.Xx)("#Image_Error_msg3"))
+              ),
+              i.createElement("p", null, (0, n.Xx)("#Image_Error_suggestion"))
+            )
+          : i.createElement("img", {
+              className: s,
+              src: o,
+              onError: () => r(!0),
+              crossOrigin: u,
+              loading: l ? "lazy" : void 0,
+              width: c,
+              height: d,
+              alt: m,
+            });
       }
-      (0, i.gn)([a.ak], c.prototype, "OnError", null);
     },
     60501: (e, t, r) => {
       "use strict";

@@ -489,9 +489,15 @@ function ReportItem()
 	var actualLink = dmcaLink.find( "a" )[0];
 	actualLink.href += publishedfileid;
 
+	var trademarkLink = $J('<div/>', { 'class': 'report_dialog_explanation' } );
+	trademarkLink.html( 'If you\'d like to file a Trademark complaint, please file one <a href="https://steamcommunity.com/trademark/createtrademarkcomplaint/" target="_blank">here</a>.' );
+	var actualLink2 = trademarkLink.find( "a" )[0];
+	actualLink2.href += publishedfileid;
+
 	var textArea = dialog.m_$Content.find( 'textarea' );
 	textArea.addClass( "report_dialog_text_area" );
 	textArea.parent().before( explanation );
+	textArea.parent().after( trademarkLink );
 	textArea.parent().after( dmcaLink );
 
 	dialog.done( function( data ) {

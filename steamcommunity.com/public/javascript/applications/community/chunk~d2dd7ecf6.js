@@ -4829,7 +4829,7 @@
         d = a(41414),
         m = a(64839),
         u = a(69412),
-        p = a(59253);
+        p = a(37699);
       function _(e) {
         const { event: t, closeModal: a } = e;
         return r.createElement(
@@ -6146,12 +6146,12 @@
     51408: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Pe: () => F,
-        Rs: () => P,
-        ev: () => L,
-        kl: () => k,
-        qu: () => M,
-        tT: () => G,
+        Pe: () => R,
+        Rs: () => F,
+        ev: () => G,
+        kl: () => A,
+        qu: () => k,
+        tT: () => M,
       });
       var n = a(67294),
         i = (a(26149), a(35921)),
@@ -6167,32 +6167,31 @@
         _ = a(87541),
         g = a(7573),
         h = a(53622),
-        v = a(90666),
-        S = a(65924),
-        E = a(51983),
-        y = a(49691),
-        b = a(70350),
-        C = a(60972),
-        f = a.n(C),
-        T = a(89673),
-        I = a(85732),
-        D = a(48899),
-        w = a(20563),
-        x = a(39714),
-        A = (a(14974), a(92798));
-      function k(e) {
+        v = a(65924),
+        S = a(51983),
+        E = a(49691),
+        y = a(70350),
+        b = a(60972),
+        C = a.n(b),
+        f = a(89673),
+        T = a(85732),
+        I = a(48899),
+        D = a(20563),
+        w = a(39714),
+        x = (a(14974), a(92798));
+      function A(e) {
         return (
           ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
             e.smart_section_type
           ) || e.show_parent_app
         );
       }
-      function M(e, t) {
+      function k(e, t) {
         if (e.show_as_carousel) return 0;
         const a = (0, l.eu)(e);
         return a <= 0 ? 0 : a + t;
       }
-      function G(e, t) {
+      function M(e, t) {
         return e.capsules_per_row_array
           ? t
             ? e.capsules_per_row_array.map((t, a) => {
@@ -6203,32 +6202,32 @@
                     : n.length) > a
                     ? e.capsule_style_per_row_array[a]
                     : "grid";
-                return D.Lh(t, 1, "tall" == i ? 4 : 3);
+                return I.Lh(t, 1, "tall" == i ? 4 : 3);
               })
             : e.capsules_per_row_array
           : e.adaptive_capsules_per_row
           ? t
             ? [2, 3]
             : [2, 3, 4, 3]
-          : [D.Lh(e.capsules_per_row, 1, t ? 3 : 5) || 1];
+          : [I.Lh(e.capsules_per_row, 1, t ? 3 : 5) || 1];
       }
-      function L(e, t, a) {
-        const n = G(e, a),
-          i = e.show_as_carousel ? (0, l.qH)(e) : M(e, t);
+      function G(e, t, a) {
+        const n = M(e, a),
+          i = e.show_as_carousel ? (0, l.qH)(e) : k(e, t);
         let r = 0;
         for (let e = 0; e < i; e++) r += n[e % n.length];
         return r;
       }
-      function B(e, t) {
+      function L(e, t) {
         return e.capsule_style_per_row_array
           ? e.capsule_style_per_row_array
           : (function (e, t) {
-              return G(e, t).every((e) => 1 === e);
+              return M(e, t).every((e) => 1 === e);
             })(e, t)
           ? ["fullrow"]
           : ["grid"];
       }
-      function O(e, t, a, s, c, m) {
+      function B(e, t, a, s, c, m) {
         return Boolean(
           "events" === e.section_type || "sale_events" === e.section_type
         )
@@ -6248,13 +6247,13 @@
                           "flow-children": "column",
                           navEntryPreferPosition: r.c4.PREFERRED_CHILD,
                         },
-                        n.createElement(y.I, { event: e }),
-                        n.createElement(b.T4, {
+                        n.createElement(E.I, { event: e }),
+                        n.createElement(y.T4, {
                           event: e,
                           bShowAssociatedApp: !a.hide_prices,
                           onClick: (t) => {
                             o.cb.Get().RecordEventRead(e, 8),
-                              (0, E.h)(e, h.RA(t)),
+                              (0, S.h)(e, h.RA(t)),
                               t.stopPropagation(),
                               t.preventDefault();
                           },
@@ -6275,12 +6274,12 @@
                       index: r,
                       section: l,
                     } = t;
-                    return n.createElement(I.S$, {
+                    return n.createElement(T.S$, {
                       key: l.unique_id + "_" + r,
                       link: e,
                       language: i,
                       clanAccountID: a.clanSteamID.GetAccountID(),
-                      strClassName: f().LinkCapsule,
+                      strClassName: C().LinkCapsule,
                     });
                   })(e, t),
               }))
@@ -6288,7 +6287,7 @@
           : Boolean("items" === e.section_type)
           ? t
             ? t
-                .filter((e) => !(0, T.K$)(e))
+                .filter((e) => !(0, f.K$)(e))
                 .map((e) => ({
                   Render: (t) =>
                     (function (e, t) {
@@ -6299,8 +6298,8 @@
                         saleEvent: o,
                         rowElements: s,
                       } = t;
-                      if ((0, T.K$)(e)) return null;
-                      const c = k(r),
+                      if ((0, f.K$)(e)) return null;
+                      const c = A(r),
                         d = o.BUseSubscriptionLayout(),
                         m = r.unique_id + "_" + i + "_" + e.type + "_" + e.id;
                       if ("fullrow" !== a) {
@@ -6336,11 +6335,11 @@
                             {
                               key: m,
                               className: (0, g.Z)({
-                                [f().AppSummaryWidgetCtn]: "bordered" == t,
+                                [C().AppSummaryWidgetCtn]: "bordered" == t,
                                 [_.O + i]: 0 === i,
                               }),
                             },
-                            n.createElement(x.T, {
+                            n.createElement(w.T, {
                               id: e.id,
                               type: e.type,
                               displayStyle: t,
@@ -6379,7 +6378,7 @@
               Render: (t) =>
                 (function (e, t) {
                   const { section: a, language: i, saleEvent: r } = t;
-                  return n.createElement(A.r, {
+                  return n.createElement(x.r, {
                     key: a.unique_id + "_" + e.defid,
                     section: a,
                     reward: e,
@@ -6390,21 +6389,20 @@
             }))
           : [];
       }
-      function N(e, t) {
+      function O(e, t) {
         return t[e % t.length];
       }
-      function R(e, t) {
+      function N(e, t) {
         return "tall" === e ? t + 1 : t;
       }
-      function F(e, t, a, r, l, o, c, d, m, u, p, _) {
+      function R(e, t, a, r, l, o, c, d, m, u, p, _, h) {
         const {
-            nMaxCapsulesPerRow: h,
-            bScreenIsWide: E,
-            nShowAdditionalRows: y,
-          } = t,
-          b = (0, v.id)();
+          nMaxCapsulesPerRow: S,
+          bScreenIsWide: E,
+          nShowAdditionalRows: y,
+        } = t;
         if (0 === a.length) return { content: null, bAdditionalContent: !1 };
-        const C = (e, t, a, n, i) => {
+        const b = (e, t, a, n, i) => {
           const r = new Array();
           for (let l = t; l < a; l++) {
             const t = Object.assign(
@@ -6416,57 +6414,57 @@
           }
           return r;
         };
-        let T = null,
-          I = !1;
-        const D = 1 === a.length,
-          x = D ? [1] : r;
-        let A = l;
-        D && (h > 1 || "tall" == A[0]) && (A = ["fullrow"]);
-        const k = c && o <= 1,
-          M = N(0, A),
-          G = Math.min(x[0], R(M, h));
-        if (k && a.length > G)
-          T = n.createElement(
+        let f = null,
+          T = !1;
+        const I = 1 === a.length,
+          w = I ? [1] : r;
+        let x = l;
+        I && (S > 1 || "tall" == x[0]) && (x = ["fullrow"]);
+        const A = c && o <= 1,
+          k = O(0, x),
+          M = Math.min(w[0], N(k, S));
+        if (A && a.length > M)
+          f = n.createElement(
             s.l,
             {
               hideArrows: !E,
-              visibleElements: G,
+              visibleElements: M,
               className: (0, g.Z)({
                 SaleSectionCarousel: !0,
-                SaleSectionCarouselPadding: !Boolean(_),
+                SaleSectionCarouselPadding: !Boolean(h),
               }),
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,
               bAutoAdvance: !!d,
-              hidePips: b,
+              hidePips: _,
               onSlide: (t) =>
-                w._.Get().AddInteraction(e, Math.floor(t / G) * G),
-              padded: !Boolean(_),
+                D._.Get().AddInteraction(e, Math.floor(t / M) * M),
+              padded: !Boolean(h),
               screenIsWide: E,
             },
-            C(a, 0, a.length, G, M)
+            b(a, 0, a.length, M, k)
           );
         else {
           let t = u(y),
             r = !0;
-          if (c) (t = o), (r = k);
+          if (c) (t = o), (r = A);
           else if (0 == y && t > 0) {
             let e = 0,
               n = 0;
             for (; e < t && n < a.length; e++) {
-              n += Math.min(x[e % x.length], h);
+              n += Math.min(w[e % w.length], S);
             }
             t = Math.max(2, e);
           }
           let l = new Array(),
             d = new Array(),
             p = 0,
-            _ = 0;
+            g = 0;
           for (let e = 0; p < a.length; e++) {
             for (let e = 0; (0 == t || e < t) && p < a.length; e++) {
-              const t = N(e, A),
-                i = R(t, h);
-              let r = Math.min(x[e % x.length], i);
+              const t = O(e, x),
+                i = N(t, S);
+              let r = Math.min(w[e % w.length], i);
               const l = Math.min(r, a.length - p);
               if (l < r && 0 === e) {
                 if (m) return { content: null, bAdditionalContent: !1 };
@@ -6475,33 +6473,33 @@
               }
               d.push(
                 n.createElement(
-                  X,
+                  P,
                   { key: "Row_" + e, nMaxItems: r, nItems: l },
-                  C(a, p, p + l, r, t)
+                  b(a, p, p + l, r, t)
                 )
               ),
                 (p += l);
             }
-            if ((0 == _ && (_ = p), r)) break;
+            if ((0 == g && (g = p), r)) break;
             if (p >= a.length && 0 === l.length) break;
             const i = l.length || void 0;
             l.push(
               n.createElement(
                 "div",
-                { className: f().CarouselPage, key: `Page_${e}` },
-                n.createElement(S.ZP, { depth: i }, d)
+                { className: C().CarouselPage, key: `Page_${e}` },
+                n.createElement(v.ZP, { depth: i }, d)
               )
             ),
               (d = []);
           }
           0 == l.length
-            ? ((I = a.length > p),
-              (T = n.createElement(
+            ? ((T = a.length > p),
+              (f = n.createElement(
                 i.s,
                 { "flow-children": "grid", focusable: !1 },
                 d
               )))
-            : (T = n.createElement(
+            : (f = n.createElement(
                 s.l,
                 {
                   hideArrows: !E,
@@ -6509,30 +6507,30 @@
                   className: "SaleSectionCarousel",
                   useTestScrollbar: !0,
                   bLazyRenderChildren: !0,
-                  hidePips: b,
-                  onSlide: (t) => w._.Get().AddInteraction(e, t * _),
+                  hidePips: _,
+                  onSlide: (t) => D._.Get().AddInteraction(e, t * g),
                   screenIsWide: E,
                 },
                 l
               ));
         }
-        return { content: T, bAdditionalContent: I };
+        return { content: f, bAdditionalContent: T };
       }
-      function P(e) {
+      function F(e) {
         const { saleEvent: t, section: a, language: n, bInGamepadUI: i } = e;
         i && (a.carousel_rows = 1);
-        const r = O(a, e.capsules, e.links, e.events, e.itemdefs, e.rewards);
+        const r = B(a, e.capsules, e.links, e.events, e.itemdefs, e.rewards);
         if (0 === r.length) return { content: null, bAdditionalContent: !1 };
-        const o = G(a, i),
-          s = B(a, i),
+        const o = M(a, i),
+          s = L(a, i),
           c = (0, l.qH)(a),
           d = a.show_as_carousel,
           m = a.carousel_auto_advance,
           u = a.hide_section_if_too_few_items,
           p = { section: a, saleEvent: t, language: n };
-        return F(a.unique_id, e, r, o, s, c, d, m, u, (e) => M(a, e), p);
+        return R(a.unique_id, e, r, o, s, c, d, m, u, (e) => k(a, e), p, i);
       }
-      const X = (e) => {
+      const P = (e) => {
         const { nMaxItems: t, nItems: a } = e,
           i = t - a,
           r =
@@ -6555,7 +6553,7 @@
           {
             className: (0, g.Z)(
               u().SaleSectionContainer,
-              f().SaleSectionContainer,
+              C().SaleSectionContainer,
               "center_row_trgt",
               "ItemCount_" + t
             ),
@@ -6578,7 +6576,7 @@
         s = a(6092),
         c = a(7573),
         d = a(53622),
-        m = a(59253),
+        m = a(37699),
         u = a(41414),
         p = a(13596),
         _ = a(53604),
@@ -8577,7 +8575,7 @@
         c = a(24399),
         d = a(48341),
         m = a(34133),
-        u = a(59253),
+        u = a(37699),
         p = a(41414),
         _ = a(13596),
         g = a(7573),
@@ -10534,7 +10532,7 @@
         (0, n.gn)([R.ak], W.prototype, "MoveRight", null),
         (0, n.gn)([R.ak], W.prototype, "OnGamepadButtonDown", null),
         (0, n.gn)([R.ak], W.prototype, "OnGamepadDirection", null);
-      var Q = a(59253),
+      var Q = a(37699),
         q = a(52117),
         Y = a(65924),
         J = a(74163),
@@ -15726,7 +15724,7 @@
         m = a(48341),
         u = a(34133),
         p = a.n(u),
-        _ = a(59253),
+        _ = a(37699),
         g = a(41414),
         h = a(69491),
         v = a.n(h),
@@ -16090,7 +16088,7 @@
         g = a(34133),
         h = a.n(g),
         v = a(15396),
-        S = a(59253),
+        S = a(37699),
         E = a(41414),
         y = a(13596),
         b = (a(82946), a(93976)),
@@ -17213,7 +17211,7 @@
         _ = a(48341),
         g = a(32548),
         h = a(96602),
-        v = a(59253),
+        v = a(37699),
         S = a(13596),
         E = a(98300),
         y = a(41311);
@@ -17892,7 +17890,7 @@
         s = a(21735),
         c = a(34133),
         d = a(89673),
-        m = a(59253),
+        m = a(37699),
         u = a(13596),
         p = a(7573),
         _ = a(41311),
@@ -18053,7 +18051,7 @@
         E = a(34133),
         y = a(89673),
         b = a(96602),
-        C = a(59253),
+        C = a(37699),
         f = a(41414),
         T = a(14809),
         I = a(13596),
@@ -18749,7 +18747,7 @@
         _ = a(34133),
         g = a(88624),
         h = a(99603),
-        v = a(59253),
+        v = a(37699),
         S = a(41414),
         E = a(14809),
         y = a(13596),
@@ -19244,7 +19242,7 @@
         S = a(63466),
         E = a(79281),
         y = a(89673),
-        b = a(59253),
+        b = a(37699),
         C = a(41414),
         f = a(14809),
         T = a(13596),
@@ -20880,7 +20878,7 @@
       };
       (0, n.gn)([x.ak], G.prototype, "OnActivate", null),
         (G = (0, n.gn)([l.Pi], G));
-      var L = a(59253),
+      var L = a(37699),
         B = a(41414),
         O = a(95598),
         N = a(53622),
@@ -22049,7 +22047,7 @@
         y = a(92398),
         b = (a(92685), a(24399)),
         C = a(21735),
-        f = a(59253),
+        f = a(37699),
         T = a(64839),
         I = a(93634),
         D = a(2474);
@@ -22187,7 +22185,7 @@
             });
       });
       var Q = a(23937),
-        q = (a(55277), a(76776)),
+        q = (a(87678), a(76776)),
         Y = a(461),
         J = a(97450),
         K = a(10847),
@@ -30986,7 +30984,7 @@
         w = a(34133),
         x = a(89673),
         A = a(15396),
-        k = a(59253),
+        k = a(37699),
         M = a(41414),
         G = a(69491),
         L = a.n(G),

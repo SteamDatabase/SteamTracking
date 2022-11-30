@@ -372,7 +372,7 @@
     "DailyDeals_PackageHeaderArtMissing": "Header missing",
     "DailyDeals_Info_How": "How does this work?",
     "DailyDeals_Info_How1": "Select an available date within the next three months that works for you.",
-    "DailyDeals_Info_How2": "The visibility on the Steam homepage runs for 24 hours, while the discount will be active for 48 hours. It will start at 10am Pacific time on your selected date.",
+    "DailyDeals_Info_How2": "The visibility on the Steam homepage runs for 24 hours and switch over at 10am Pacific time on your selected date. Daily Deal discounts default to one week, but can be adjusted upon request.",
     "DailyDeals_Info_How3": "When you select an available date, it will prompt you to enter a discount percentage and select which packages you wish to include in the promotion.",
     "DailyDeals_Info_How4": "We ask that you pick a discount % that is at least as good as the best discount you have run in the past, if not better.",
     "DailyDeals_Info_Question": "Questions? %1$s",

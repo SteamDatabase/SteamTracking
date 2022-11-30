@@ -3196,6 +3196,34 @@ div .cdkey_request_details_row
 	padding: 5px 0px 0px 12px;
 }
 
+.price_pending {
+    width: 30%;
+    float: left;
+    margin: 20px 10px 30px 0px;
+    padding: 12px 10px 10px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(269.68deg, #c54c12 0.2%, #e76e34 99.92%);
+
+    color: white;
+}
+
+.price_pending .icon_cost {
+    display: block;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
 .publish_warning
 {
 	color: #fbb963;

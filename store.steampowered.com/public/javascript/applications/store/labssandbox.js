@@ -2434,7 +2434,6 @@
                   onChange: this.OnChangeName,
                 }),
                 _.createElement(C.II, {
-                  bIsPassword: !0,
                   className: (0, A.Z)(he().PasswordDots, t),
                   label: (0, J.Xx)("#Login_Password"),
                   type: "password",

@@ -1091,7 +1091,7 @@
         O = n(92202),
         G = n(34133),
         R = n.n(G),
-        P = n(59253),
+        P = n(37699),
         U = n(41414),
         F = n(4821),
         H = n.n(F),
@@ -3112,9 +3112,7 @@
           this.SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, e.deltaY);
         }
         SuppressUnwantedScrollEventsBecauseSafariIsDumb(e, t) {
-          const n =
-              e.target instanceof Node &&
-              Y.ni(this.m_refScroll.current, e.target),
+          const n = Y.GB(e.target) && Y.ni(this.m_refScroll.current, e.target),
             a = t < 0 && this.m_refScroll.current.scrollTop < 1,
             r =
               this.m_refScroll.current.scrollHeight -
@@ -3779,7 +3777,7 @@
         s = (n(3389), n(24399)),
         l = n(48341),
         c = n(32548),
-        p = n(59253),
+        p = n(37699),
         d = n(41311),
         m = n(13596),
         u = n(7324);
@@ -3950,7 +3948,7 @@
         u = n(7573),
         h = n(55285),
         g = n.n(h),
-        v = n(59253),
+        v = n(37699),
         _ = (n(29139), n(48899)),
         E = n(9669),
         S = n.n(E),
@@ -4624,7 +4622,7 @@
         l = (n(92398), n(49186), n(3389), n(68002), n(9915)),
         c = (n(7200), n(89694)),
         p = n(86782),
-        d = n(59253),
+        d = n(37699),
         m = n(86178),
         u = n(69491),
         h = n.n(u),
@@ -4961,7 +4959,7 @@
         g = n(41311),
         v = n(64839),
         _ = n(90666),
-        E = n(59253),
+        E = n(37699),
         S = n(41414),
         C = n(13596),
         D = n(14745),
@@ -5935,7 +5933,7 @@
       var v = n(56175),
         _ = n(47077),
         E = n(78853),
-        S = n(59253),
+        S = n(37699),
         C = n(28268),
         D = n(72258),
         y = n(55285),
@@ -6396,7 +6394,7 @@
         o = n(92685),
         i = (n(68002), n(24399), n(48341)),
         s = n(57148),
-        l = n(59253),
+        l = n(37699),
         c = n(7573),
         p = n(41311),
         d = n(64839),

@@ -384,9 +384,6 @@
         ContentWrapper: "overlappingtransition_ContentWrapper_1knAs",
       };
     },
-    47214: (e) => {
-      e.exports = { Error: "app_Error_2yM3d" };
-    },
     26149: (e, t, n) => {
       "use strict";
       function i(e) {
@@ -1479,14 +1476,14 @@
     },
     57287: (e, t, n) => {
       "use strict";
-      n.d(t, { yV: () => a });
-      n(67294);
-      var i = n(55277),
+      n.d(t, { Oo: () => s, yV: () => a });
+      n(67294), n(87678);
+      var i = n(86199),
         r = n(90067);
       n(10847);
       class o {
         constructor() {
-          this.m_mapConstructors = new WeakMap();
+          this.m_mapManagers = new WeakMap();
         }
         CreateContextMenuInstance(e, t, n, i, r) {
           var o;
@@ -1494,7 +1491,7 @@
             (null === (o = null == t ? void 0 : t.ownerDocument) || void 0 === o
               ? void 0
               : o.defaultView) || window;
-          return new (this.GetContextMenuConstructorWithDefault(s))(
+          return this.GetContextMenuManager(s).CreateContextMenuInstance(
             e,
             t,
             n,
@@ -1502,20 +1499,20 @@
             r
           );
         }
-        GetContextMenuConstructorWithDefault(e) {
-          let t = this.m_mapConstructors.get(e);
+        GetContextMenuManager(e) {
+          let t = this.m_mapManagers.get(e);
           if (!t) {
             let n = e;
             for (; !t && n.opener; )
-              (n = n.opener), (t = this.m_mapConstructors.get(n));
+              (n = n.opener), (t = this.m_mapManagers.get(n));
           }
-          return t || ((t = i.$Y), this.m_mapConstructors.set(e, t)), t;
+          return t || ((t = new i.u()), this.m_mapManagers.set(e, t)), t;
         }
-        SetContextMenuConstructor(e, t) {
-          this.m_mapConstructors.set(e, t);
+        SetMenuManager(e, t) {
+          this.m_mapManagers.set(e, t);
         }
-        GetContextMenuConstructor(e) {
-          return this.m_mapConstructors.get(e);
+        RegisterChildWindow(e, t) {
+          this.m_mapManagers.set(t, this.GetContextMenuManager(e));
         }
       }
       const s = (0, r.Y)("ContextMenuFactory", () => new o());
@@ -1539,89 +1536,61 @@
         return l.Show(), l;
       }
     },
-    55277: (e, t, n) => {
+    87678: (e, t, n) => {
       "use strict";
-      n.d(t, { $Y: () => p });
-      var i,
-        r = n(70655),
-        o = n(22188),
-        s = n(67294);
-      !(function (e) {
-        (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
-          (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
-          (e[(e.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
-          (e[(e.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
-          (e[(e.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
-          (e[(e.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
-          (e[(e.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
-          (e[(e.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
-          (e[(e.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
-          (e[(e.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
-          (e[(e.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
-          (e[(e.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
-          (e[(e.k_EPlatformTypeEmbeddedClient = 12)] =
-            "k_EPlatformTypeEmbeddedClient"),
-          (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
-          (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-      })(i || (i = {}));
-      n(92398);
-      var a = n(53622),
-        l = n(10847),
-        c = n(16156),
-        u = n.n(c),
-        d = n(79822);
-      n(53157);
-      class h {
-        constructor() {
-          this.m_nKey = null;
+      n.d(t, { $Y: () => a });
+      var i = n(70655),
+        r = n(22188),
+        o = (n(67294), n(86199), n(53157), n(53622));
+      n(10847);
+      class s {
+        constructor(e, t) {
+          (this.m_nKey = null),
+            (this.m_bVisible = !1),
+            (this.m_elSubmenuItem = null),
+            (this.m_timerHideSubMenu = 0),
+            (this.m_ContextMenuManager = e),
+            (this.m_rctElement = t);
+        }
+        get Manager() {
+          return this.m_ContextMenuManager;
         }
         get key() {
           return (
             null == this.m_nKey &&
-              ((this.m_nKey = h.s_nNextKeyValue), h.s_nNextKeyValue++),
+              ((this.m_nKey = s.s_nNextKeyValue), s.s_nNextKeyValue++),
             this.m_nKey
           );
         }
-        static GetBrowserInfoForPopup(e) {
-          return null;
+        SetElement(e) {
+          this.m_element = e;
         }
-        SetTakeFocus(e) {
-          this.m_fnTakeFocus = e;
+        SetPopup(e) {
+          this.m_popupContextMenu = e;
         }
-      }
-      (h.s_nNextKeyValue = 1),
-        (0, r.gn)([o.LO], h.prototype, "m_refContextMenu", void 0);
-      class m extends h {
-        constructor(e) {
-          super(),
-            (this.m_bVisible = !1),
-            (this.m_elSubmenuItem = null),
-            (this.m_timerHideSubMenu = 0),
-            (this.m_ownerWindow = e);
+        get ReactElement() {
+          return this.m_rctElement;
         }
-        RenderElements(e, t) {
-          0 == this.presentation &&
-          (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
-          this.m_ownerWindow.SteamClient &&
-          this.m_ownerWindow.SteamClient.Window
-            ? (this.m_popupContextMenu = new l.bY(
-                e,
-                t,
-                h.GetBrowserInfoForPopup(this.m_ownerWindow)
-              ))
-            : ((this.m_embeddedElementInstance = (0, d.xb)(
-                this.m_ownerWindow.document
-              )),
-              (this.m_rctElement = s.createElement(l.Wn, e, t)));
+        get label() {
+          return this.m_rctLabel;
+        }
+        get submenu() {
+          return this.m_submenu;
+        }
+        get visible() {
+          return this.m_bVisible;
+        }
+        get options() {
+          return this.m_options;
+        }
+        get position() {
+          return this.m_position;
         }
         SetOnHideCallback(e) {
           this.m_fnOnHideCallback = e;
         }
         Show() {
-          this.m_rctElement
-            ? this.m_embeddedElementInstance.Show(this.m_rctElement)
-            : this.m_popupContextMenu.Show(),
-            (this.m_bVisible = !0);
+          this.m_ContextMenuManager.ShowMenu(this), (this.m_bVisible = !0);
         }
         Hide() {
           this.InternalHide();
@@ -1634,31 +1603,17 @@
             ((this.m_bVisible = !1),
             this.InternalHideSubMenu(),
             this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
-            this.m_embeddedElementInstance
-              ? this.m_embeddedElementInstance.Hide(300)
-              : this.m_popupContextMenu.Close());
+            this.m_ContextMenuManager.HideMenu(this));
         }
-        get visible() {
-          return this.m_bVisible;
-        }
-        get options() {
-          return this.m_options;
-        }
-        get presentation() {
-          return 0;
-        }
-        get styles() {
-          return u();
-        }
-        get owner_window() {
-          return this.m_ownerWindow;
+        SetTakeFocus(e) {
+          this.m_fnTakeFocus = e;
         }
         ShowSubMenu(e, t) {
           return this.m_elSubmenuItem == e
             ? (this.CancelHideSubMenuTimer(), this.m_submenu.TakeFocus(), null)
             : (this.InternalHideSubMenu(),
               (this.m_elSubmenuItem = e),
-              (this.m_submenu = new g(this, t(), e)),
+              (this.m_submenu = new l(this, t(), e)),
               this.m_submenu.Show(),
               this.m_submenu);
         }
@@ -1704,15 +1659,13 @@
           );
         }
         BIsChildElement(e) {
-          return this.m_embeddedElementInstance
-            ? this.m_embeddedElementInstance.BIsChildElement(e)
-            : a.ni(this.m_popupContextMenu.root_element, e);
+          return this.m_element
+            ? o.ni(this.m_element, e)
+            : o.ni(this.m_popupContextMenu.root_element, e);
         }
         BHasFocus() {
-          return this.m_embeddedElementInstance
-            ? this.m_embeddedElementInstance.BIsChildElement(
-                this.m_ownerWindow.document.activeElement
-              )
+          return this.m_element
+            ? o.ni(this.m_element, this.m_element.ownerDocument.activeElement)
             : this.m_popupContextMenu.focused;
         }
         BIsFocusInChildHierarchy() {
@@ -1731,68 +1684,59 @@
         BIsSubMenuVisible() {
           return !!this.m_submenu;
         }
-        SetLabel(e) {}
+        SetLabel(e) {
+          this.m_rctLabel = e;
+        }
       }
-      (0, r.gn)([o.LO], m.prototype, "m_bVisible", void 0);
-      class p extends m {
-        constructor(e, t, n, i, r) {
-          super(t.ownerDocument.defaultView),
-            h.sm_iActiveContextMenuInstance &&
-              h.sm_iActiveContextMenuInstance.Hide(),
-            (h.sm_iActiveContextMenuInstance = this),
-            (this.m_options = r || {});
-          let o = {
-            element: t,
-            clientX: n,
-            clientY: i,
-            instance: this,
-            options: this.m_options,
-            fnOnMenuItemSelected: () => {
-              this.Hide();
-            },
-          };
-          this.RenderElements(o, e);
+      (s.s_nNextKeyValue = 1),
+        (0, i.gn)([r.LO], s.prototype, "m_bVisible", void 0),
+        (0, i.gn)([r.LO.ref], s.prototype, "m_rctLabel", void 0);
+      class a extends s {
+        constructor(e, t, n, i, r, o) {
+          super(e, t),
+            (this.m_options = o || {}),
+            (this.m_position = {
+              element: n,
+              clientX: i,
+              clientY: r,
+              instance: this,
+              options: this.m_options,
+              fnOnMenuItemSelected: () => {
+                this.Hide();
+              },
+            });
         }
         Show() {
-          this.m_options.bDisableMouseOverlay ||
-            ((this.m_embeddedElementInstanceOverlay = (0, d.xb)(
-              this.m_ownerWindow.document
-            )),
-            this.m_embeddedElementInstanceOverlay.Show(s.createElement(l.Vc))),
-            super.Show();
+          super.Show();
         }
         Hide() {
-          this.m_embeddedElementInstanceOverlay &&
-            this.m_embeddedElementInstanceOverlay.Hide(0),
-            super.Hide();
+          super.Hide();
         }
         BIsSubMenu() {
           return !1;
         }
       }
-      class g extends m {
+      class l extends s {
         constructor(e, t, n) {
-          super(n.ownerDocument.defaultView),
+          super(e.Manager, t),
             (this.m_parentInstance = e),
             (this.m_options = {
               bOverlapVertical: !0,
-              bUseWebStyles: e.options.bUseWebStyles,
               strClassName: e.options.strClassName,
               bFitToWindow: e.options.bFitToWindow,
               bShiftToFitWindow: e.options.bShiftToFitWindow,
+            }),
+            (this.m_position = {
+              element: n,
+              clientX: null,
+              clientY: null,
+              instance: this,
+              options: this.m_options,
+              fnOnMenuItemSelected: () => {
+                this.Hide();
+              },
+              bSubmenu: !0,
             });
-          let i = {
-            element: n,
-            clientX: null,
-            clientY: null,
-            instance: this,
-            options: this.m_options,
-            fnOnMenuItemSelected: () => {
-              this.Hide();
-            },
-            bSubmenu: !0,
-          };
-          this.RenderElements(i, t);
         }
         Hide() {
           this.m_popupContextMenu
@@ -1806,20 +1750,70 @@
         }
       }
     },
+    86199: (e, t, n) => {
+      "use strict";
+      n.d(t, { u: () => a });
+      var i = n(87678),
+        r = (n(10847), n(77520)),
+        o = n(99533),
+        s = n(48780);
+      class a {
+        constructor() {
+          (this.m_callbacksMenusChanged = new o.pB()),
+            (this.m_rgActiveSubmenus = []);
+        }
+        CreateContextMenuInstance(e, t, n, r, o) {
+          return new i.$Y(this, e, t, n, r, o);
+        }
+        get OnMenusChanged() {
+          return this.m_callbacksMenusChanged;
+        }
+        HideActiveMenu() {
+          (this.m_ActiveMenu = void 0),
+            this.m_rgActiveSubmenus.length && (this.m_rgActiveSubmenus = []);
+        }
+        get ActiveMenu() {
+          return this.m_ActiveMenu;
+        }
+        GetVisibleMenus() {
+          return this.m_ActiveMenu
+            ? [this.m_ActiveMenu, ...this.m_rgActiveSubmenus]
+            : [];
+        }
+        BShouldRenderMouseOverlay() {
+          return (
+            this.m_ActiveMenu && !this.m_ActiveMenu.options.bDisableMouseOverlay
+          );
+        }
+        ShowMenu(e) {
+          e.BIsSubMenu()
+            ? this.m_rgActiveSubmenus.push(e)
+            : (this.m_ActiveMenu && this.m_ActiveMenu.Hide(),
+              (this.m_ActiveMenu = e)),
+            this.m_callbacksMenusChanged.Dispatch();
+        }
+        HideMenu(e) {
+          e.BIsSubMenu()
+            ? s.Zf(this.m_rgActiveSubmenus, e) &&
+              this.m_callbacksMenusChanged.Dispatch()
+            : ((0, r.X)(e == this.m_ActiveMenu, "Call to hide inactive menu"),
+              e == this.m_ActiveMenu &&
+                (this.HideActiveMenu(),
+                this.m_callbacksMenusChanged.Dispatch()));
+        }
+      }
+    },
     79822: (e, t, n) => {
       "use strict";
-      n.d(t, { AN: () => l, xb: () => s });
+      n.d(t, { AN: () => a });
       var i = n(73935),
         r = n(53622);
       class o {
         constructor(e) {
-          this.instance = new a(e, !1);
+          this.instance = new s(e, !1);
         }
       }
-      function s(e) {
-        return new a(e.body, !0);
-      }
-      class a {
+      class s {
         constructor(e, t = !0) {
           (this.m_parent = e),
             (this.m_window = e.ownerDocument.defaultView),
@@ -1871,7 +1865,7 @@
           return this.m_container && r.ni(this.m_container, e);
         }
       }
-      class l {
+      class a {
         constructor(e) {
           (this.m_mapEmbeddedHovers = new WeakMap()), (this.m_strUniqueID = e);
         }
@@ -1898,7 +1892,7 @@
     },
     53157: (e, t, n) => {
       "use strict";
-      n.d(t, { K3: () => v, eL: () => i, Wy: () => f });
+      n.d(t, { Rt: () => v, K3: () => C, eL: () => i, Wy: () => f });
       var i,
         r = n(70655),
         o = n(22188),
@@ -1968,7 +1962,12 @@
         })(i || (i = {}));
       const _ = s.createContext({}),
         f = () => s.useContext(_);
-      class v {
+      function v(e) {
+        const { ownerWindow: t, children: n } = e,
+          i = s.useMemo(() => ({ ownerWindow: t }), [t]);
+        return s.createElement(_.Provider, { value: i }, n);
+      }
+      class C {
         constructor(e, t) {
           (this.m_bFocused = !1),
             (0, m.X)(
@@ -2009,7 +2008,7 @@
           let n,
             r,
             o,
-            s = b.GetExistingPopup(this.m_strName);
+            s = E.GetExistingPopup(this.m_strName);
           (s && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             s
@@ -2017,7 +2016,7 @@
                 (n = s.m_popup),
                 s.ReleasePopup(),
                 (o = s.m_renderWhenReady),
-                b.RemoveTrackedPopup(s),
+                E.RemoveTrackedPopup(s),
                 n.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                 n.removeEventListener("unload", s.OnUnload),
                 n.removeEventListener("resize", s.OnResizeEvent),
@@ -2026,7 +2025,7 @@
                 n.removeEventListener("drop", s.OnDrop),
                 n.removeEventListener("dragover", s.OnDragOver),
                 n.removeEventListener("message", this.OnMessage))
-              : (({ popup: n, element: r } = C.CreatePopup(
+              : (({ popup: n, element: r } = b.CreatePopup(
                   this.m_strName,
                   this.m_rgParams
                 )),
@@ -2050,7 +2049,7 @@
               this.m_renderWhenReady.SetTarget(() =>
                 this.RenderInternal(this.m_popup, this.m_element, e)
               )),
-            b.AddTrackedPopup(this),
+            E.AddTrackedPopup(this),
             s ? e && this.Focus() : this.OnCreate());
         }
         RemoveEventListeners() {
@@ -2089,7 +2088,7 @@
         }
         OnUnload() {
           this.RemoveEventListeners(),
-            b.RemoveTrackedPopup(this),
+            E.RemoveTrackedPopup(this),
             this.OnClose(),
             (this.m_popup = void 0);
         }
@@ -2180,16 +2179,16 @@
         OnFocus() {}
         OnBlur() {}
       }
-      (0, r.gn)([o.LO], v.prototype, "m_bFocused", void 0),
-        (0, r.gn)([c.a], v.prototype, "OnMessage", null),
-        (0, r.gn)([c.a], v.prototype, "OnResizeEvent", null),
-        (0, r.gn)([c.a], v.prototype, "OnBeforeUnloadEvent", null),
-        (0, r.gn)([c.a], v.prototype, "OnUnload", null),
-        (0, r.gn)([c.a], v.prototype, "OnFocusInternal", null),
-        (0, r.gn)([c.a], v.prototype, "OnBlurInternal", null);
+      (0, r.gn)([o.LO], C.prototype, "m_bFocused", void 0),
+        (0, r.gn)([c.a], C.prototype, "OnMessage", null),
+        (0, r.gn)([c.a], C.prototype, "OnResizeEvent", null),
+        (0, r.gn)([c.a], C.prototype, "OnBeforeUnloadEvent", null),
+        (0, r.gn)([c.a], C.prototype, "OnUnload", null),
+        (0, r.gn)([c.a], C.prototype, "OnFocusInternal", null),
+        (0, r.gn)([c.a], C.prototype, "OnBlurInternal", null);
       (0, r.gn)(
         [c.a],
-        class extends v {
+        class extends C {
           constructor(e, t, n, i) {
             super(e, n), this.SetSavedDimensionsKey(t), (this.m_bExpires = i);
           }
@@ -2211,14 +2210,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  b.SetRestoreDetails(
+                  E.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = b.GetRestoreDetails(
+                  (e.strRestoreDetails = E.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -2245,7 +2244,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (b.SetRestoreDetails(e, t, this.m_bExpires),
+                    (E.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -2258,14 +2257,14 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            b.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            E.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
         "QueryAndStoreWindowPosition",
         null
       );
-      class C {
+      class b {
         constructor() {
           if (
             ((this.m_bShuttingDown = !1),
@@ -2471,12 +2470,80 @@
       }
       (0, r.gn)(
         [c.a, (0, l.D)(100)],
-        C.prototype,
+        b.prototype,
         "DebouncedSaveSavedDimensionStore",
         null
       );
-      let b = new C();
-      window.g_PopupManager = b;
+      let E = new b();
+      window.g_PopupManager = E;
+    },
+    66243: (e, t, n) => {
+      "use strict";
+      n.d(t, { B: () => o });
+      var i = n(67294),
+        r = n(53157);
+      function o(e, t, n) {
+        const r = i.useRef(),
+          [o, a] = i.useState(void 0);
+        return (
+          r.current || (r.current = new s(e, t, a)),
+          (r.current.m_callbacks = n),
+          i.useEffect(
+            () => (
+              r.current.Show(),
+              () => {
+                (r.current.m_callbacks = void 0), r.current.Close();
+              }
+            ),
+            []
+          ),
+          { popup: r.current.window, element: o, popupObj: r.current }
+        );
+      }
+      class s extends r.K3 {
+        constructor(e, t, n) {
+          super(e, t), (this.m_fnReadyToRender = n);
+        }
+        DoCallback(e) {
+          this.m_callbacks &&
+            this.m_callbacks[e] &&
+            this.m_callbacks[e](this.m_popup, this.m_element);
+        }
+        UpdateParamsBeforeShow(e) {
+          var t;
+          return (
+            null === (t = this.m_callbacks) || void 0 === t
+              ? void 0
+              : t.updateParamsBeforeShow
+          )
+            ? this.m_callbacks.updateParamsBeforeShow(e)
+            : e;
+        }
+        OnCreate() {
+          var e;
+          (null === (e = this.m_callbacks) || void 0 === e
+            ? void 0
+            : e.onCreate) && this.m_callbacks.onCreate(this.m_popup);
+        }
+        OnBlur() {
+          this.DoCallback("onBlur");
+        }
+        OnFocus() {
+          this.DoCallback("onFocus");
+        }
+        OnLoad() {
+          this.DoCallback("onLoad");
+        }
+        OnResize() {
+          this.DoCallback("onResize");
+        }
+        OnClose() {
+          this.DoCallback("onClose");
+        }
+        Render(e, t) {
+          this.m_fnReadyToRender(t);
+        }
+      }
     },
     7707: (e, t, n) => {
       "use strict";
@@ -2554,10 +2621,10 @@
               () => ((0, a.k$)(h, D), () => (0, a.k$)(h, null)),
               [h, D]
             );
-          const R = (0, a.BE)(T, t);
+          const M = (0, a.BE)(T, t);
           return r.createElement(
             "div",
-            Object.assign({}, b, { "data-react-nav-root": g, ref: R }),
+            Object.assign({}, b, { "data-react-nav-root": g, ref: M }),
             r.createElement(o.ET.Provider, { value: D.Root }, _)
           );
         }),
@@ -2574,41 +2641,36 @@
     485: (e, t, n) => {
       "use strict";
       n.d(t, {
-        CO: () => f,
-        QH: () => v,
-        zQ: () => b,
-        Iy: () => g,
-        lP: () => w,
-        hi: () => S,
-        ET: () => p,
-        Pd: () => _,
+        CO: () => _,
+        QH: () => f,
+        zQ: () => C,
+        Iy: () => p,
+        lP: () => E,
+        hi: () => w,
+        ET: () => m,
+        Pd: () => g,
       });
       var i = n(70655),
         r = n(67294),
-        o = (n(48341), n(90067)),
-        s = (n(59253), n(7573)),
-        a = n(64839),
-        l = n(23816),
-        c = n(17010),
-        u = (n(39746), n(7707)),
-        d = (n(27745), n(80378)),
-        h = n(9198);
-      n(90666);
-      var m = n(10089);
-      const p = (0, o.Y)("GamepadNavigationContext", () =>
+        o = (n(7707), n(80378)),
+        s = n(23816),
+        a = n(17010),
+        l = (n(39746), n(9198));
+      var c = n(90067),
+        u = n(10089),
+        d = n(7573),
+        h = n(64839);
+      const m = (0, c.Y)("GamepadNavigationContext", () =>
           r.createContext(null)
         ),
-        g = (0, o.Y)("FocusRingNavigationContext", () => r.createContext(c.U7));
-      r.forwardRef(function (e, t) {
-        return r.createElement(u.bX, Object.assign({}, e, { ref: t }));
-      });
-      function _(e) {
+        p = (0, c.Y)("FocusRingNavigationContext", () => r.createContext(a.U7));
+      function g(e) {
         const { navRef: t } = e,
           n = (0, i._T)(e, ["navRef"]),
           o = r.useRef(),
-          s = (0, r.useContext)(p),
-          l = (0, r.useContext)(g),
-          c = (function (e, t) {
+          s = (0, r.useContext)(m),
+          a = (0, r.useContext)(p),
+          l = (function (e, t) {
             let n = r.useRef(null);
             return (
               !e ||
@@ -2616,33 +2678,33 @@
                 (n.current = e.Tree.CreateNode(e, t)),
               n.current
             );
-          })(s, l);
+          })(s, a);
         return (
           r.useLayoutEffect(() => {
-            c && c.SetProperties(n);
+            l && l.SetProperties(n);
           }),
           r.useLayoutEffect(() => {
             if (!s) return;
-            const e = s.Tree.RegisterNavigationItem(c, o.current);
+            const e = s.Tree.RegisterNavigationItem(l, o.current);
             return () => {
               e();
             };
-          }, [s, c, o]),
+          }, [s, l, o]),
           r.useLayoutEffect(() => {
-            if (c && t)
-              return (0, a.k$)(t, c.CreateHandle()), () => (0, a.k$)(t, null);
-          }, [c, t]),
-          { ref: o, node: c }
+            if (l && t)
+              return (0, h.k$)(t, l.CreateHandle()), () => (0, h.k$)(t, null);
+          }, [l, t]),
+          { ref: o, node: l }
         );
       }
-      function f(e) {
+      function _(e) {
         const {
             onButtonDown: t,
             onButtonUp: n,
             onOKButton: r,
             onCancelButton: o,
-            onSecondaryButton: s,
-            onOptionsButton: a,
+            onSecondaryButton: a,
+            onOptionsButton: l,
             onGamepadDirection: c,
             onGamepadFocus: u,
             onGamepadBlur: d,
@@ -2677,15 +2739,15 @@
           void 0 !== n && (b.onButtonUp = n),
           void 0 !== r && (b.onOKButton = r),
           void 0 !== o && (b.onCancelButton = o),
-          void 0 !== s && (b.onSecondaryButton = s),
-          void 0 !== a && (b.onOptionsButton = a),
+          void 0 !== a && (b.onSecondaryButton = a),
+          void 0 !== l && (b.onOptionsButton = l),
           void 0 !== h && (b.onMenuButton = h),
           void 0 !== c && (b.onGamepadDirection = c),
           void 0 !== u && (b.onGamepadFocus = u),
           void 0 !== d && (b.onGamepadBlur = d);
         return {
           gamepadEvents: b,
-          actionDescriptions: (0, l.Cj)({
+          actionDescriptions: (0, s.Cj)({
             onOKActionDescription: m,
             onCancelActionDescription: p,
             onSecondaryActionDescription: g,
@@ -2696,7 +2758,7 @@
           props: C,
         };
       }
-      function v(e) {
+      function f(e) {
         const {
             autoFocus: t,
             preferredFocus: n,
@@ -2712,7 +2774,7 @@
             navRef: m,
             actionDescriptionMap: p,
             onMoveUp: g,
-            onMoveRight: _,
+            onMoveRight: f,
             onMoveDown: v,
             onMoveLeft: C,
             navEntryPreferPosition: b,
@@ -2745,9 +2807,9 @@
             "scrollIntoViewType",
             "resetNavOnEntry",
           ]),
-          { gamepadEvents: T, actionDescriptions: R, props: M } = f(D);
+          { gamepadEvents: T, actionDescriptions: M, props: R } = _(D);
         return {
-          elemProps: M,
+          elemProps: R,
           navOptions: {
             autoFocus: t,
             preferredFocus: n,
@@ -2762,7 +2824,7 @@
             focusableIfNoChildren: h,
             navRef: m,
             onMoveUp: g,
-            onMoveRight: _,
+            onMoveRight: f,
             onMoveDown: v,
             onMoveLeft: C,
             navEntryPreferPosition: b,
@@ -2770,21 +2832,21 @@
             fnScrollIntoViewHandler: w,
             scrollIntoViewType: S,
             resetNavOnEntry: y,
-            actionDescriptionMap: Object.assign(Object.assign({}, p), R),
+            actionDescriptionMap: Object.assign(Object.assign({}, p), M),
           },
           gamepadEvents: T,
         };
       }
-      function C(e) {
+      function v(e) {
         return function (t) {
           const {
               focusClassName: n,
               focusWithinClassName: o,
-              className: l,
-              divRef: c,
-              node: u,
-              tabIndex: d,
-              children: h,
+              className: s,
+              divRef: a,
+              node: l,
+              tabIndex: c,
+              children: u,
             } = t,
             m = (0, i._T)(t, [
               "focusClassName",
@@ -2795,79 +2857,79 @@
               "tabIndex",
               "children",
             ]),
-            [p, g] = r.useState(u.BHasFocus());
-          (0, a.Qg)(u.FocusCallbackList, g);
-          const [_, f] = r.useState(u.BFocusWithin());
-          (0, a.Qg)(u.FocusWithinCallbackList, f);
-          const [v, C] = r.useState(u.Tree.BIsActive());
+            [p, g] = r.useState(l.BHasFocus());
+          (0, h.Qg)(l.FocusCallbackList, g);
+          const [_, f] = r.useState(l.BFocusWithin());
+          (0, h.Qg)(l.FocusWithinCallbackList, f);
+          const [v, C] = r.useState(l.Tree.BIsActive());
           return (
-            (0, a.Qg)(u.Tree.OnActiveStateChangedCallbacks, C),
+            (0, h.Qg)(l.Tree.OnActiveStateChangedCallbacks, C),
             r.createElement(
               e,
               Object.assign(Object.assign({}, m), {
-                className: (0, s.Z)(l, p && v && n, _ && v && o),
-                tabIndex: v ? d : -1,
-                ref: c,
+                className: (0, d.Z)(s, p && v && n, _ && v && o),
+                tabIndex: v ? c : -1,
+                ref: a,
               }),
-              h
+              u
             )
           );
         };
       }
-      const b = C("div");
-      function E(e, t, n, i) {
-        const { elemProps: o, navOptions: l, gamepadEvents: c } = v(n);
-        void 0 !== l.focusable || o.disabled || (l.focusable = !0);
-        const { ref: u, node: h } = _(Object.assign({}, l)),
-          g = (0, r.useCallback)(
-            () => (m.LT.PlayNavSound(m.qr.DefaultOk), u.current.click(), !0),
-            [u]
+      const C = v("div");
+      function b(e, t, n, i) {
+        const { elemProps: s, navOptions: a, gamepadEvents: l } = f(n);
+        void 0 !== a.focusable || s.disabled || (a.focusable = !0);
+        const { ref: c, node: p } = g(Object.assign({}, a)),
+          _ = (0, r.useCallback)(
+            () => (u.LT.PlayNavSound(u.qr.DefaultOk), c.current.click(), !0),
+            [c]
           );
-        c.onOKButton ||
-          ((o.onClick || ("button" == e && "submit" == o.type) || "a" == e) &&
-            (c.onOKButton = g)),
-          l.focusable && (o.tabIndex = o.tabIndex || 0),
-          (0, d.pD)(c, u);
-        const f = (0, a.BE)(i, u),
-          C = o.children;
-        delete o.children;
-        const b = o.focusClassName;
+        l.onOKButton ||
+          ((s.onClick || ("button" == e && "submit" == s.type) || "a" == e) &&
+            (l.onOKButton = _)),
+          a.focusable && (s.tabIndex = s.tabIndex || 0),
+          (0, o.pD)(l, c);
+        const v = (0, h.BE)(i, c),
+          C = s.children;
+        delete s.children;
+        const b = s.focusClassName;
         return (
-          delete o.focusClassName,
+          delete s.focusClassName,
           r.createElement(
-            p.Provider,
-            { value: h },
-            h
+            m.Provider,
+            { value: p },
+            p
               ? r.createElement(
                   t,
-                  Object.assign(Object.assign({}, o), {
-                    divRef: f,
-                    node: h,
-                    focusClassName: (0, s.Z)(b, "gpfocus"),
+                  Object.assign(Object.assign({}, s), {
+                    divRef: v,
+                    node: p,
+                    focusClassName: (0, d.Z)(b, "gpfocus"),
                     focusWithinClassName: "gpfocuswithin",
-                    className: (0, s.Z)(o.className, "Focusable"),
+                    className: (0, d.Z)(s.className, "Focusable"),
                   }),
                   C
                 )
               : r.createElement(
                   e,
-                  Object.assign(Object.assign({}, o), {
-                    ref: f,
-                    className: (0, s.Z)(o.className, "Focusable"),
+                  Object.assign(Object.assign({}, s), {
+                    ref: v,
+                    className: (0, d.Z)(s.className, "Focusable"),
                   }),
                   C
                 )
           )
         );
       }
-      function w(e) {
-        const t = C(e);
+      function E(e) {
+        const t = v(e);
         return r.forwardRef(function (n, i) {
-          return E(e, t, n, i);
+          return b(e, t, n, i);
         });
       }
-      function S(e) {
-        const t = C(e);
+      function w(e) {
+        const t = v(e);
         return r.forwardRef(function (n, r) {
           const o = (function (e) {
               const {
@@ -2901,12 +2963,12 @@
               };
             })(n),
             { virtualKeyboardProps: s } = o,
-            l = o.props,
-            { refKeyboardHandle: c } = l,
-            u = (0, i._T)(l, ["refKeyboardHandle"]),
-            d = (0, h.k$)(s, c),
-            m = (0, a.BE)(r, d);
-          return E(e, t, u, m);
+            a = o.props,
+            { refKeyboardHandle: c } = a,
+            u = (0, i._T)(a, ["refKeyboardHandle"]),
+            d = (0, l.k$)(s, c),
+            m = (0, h.BE)(r, d);
+          return b(e, t, u, m);
         });
       }
     },
@@ -3850,7 +3912,7 @@
           }
           return (
             this.m_ActiveContext ||
-              (0, s.X)(
+              ((0, s.X)(
                 !1,
                 `Failed to find an active context, will fall back to ${
                   null === (e = this.m_LastActiveContext) || void 0 === e
@@ -3858,7 +3920,8 @@
                     : e.LogName()
                 }`
               ),
-            this.m_ActiveContext || this.m_LastActiveContext
+              (this.m_ActiveContext = this.m_LastActiveContext)),
+            this.m_ActiveContext
           );
         }
         SetShowDebugFocusRing(e) {
@@ -4549,7 +4612,7 @@
           bottom: D(t.scrollMarginBottom),
         };
       }
-      function R(e, t) {
+      function M(e, t) {
         let n = (function (e) {
           let t;
           return (
@@ -4574,7 +4637,7 @@
           bottom: Math.max(0, t.bottom - n.bottom),
         };
       }
-      function M(e) {
+      function R(e) {
         return e > -1 && e < 1;
       }
       function I(e, t, n, i, r) {
@@ -4590,7 +4653,7 @@
           let e = (0, h.Et)(s);
           e || (e = (0, h.kR)(s));
           let t = T(s),
-            n = R(e, w(e)),
+            n = M(e, w(e)),
             c = x(e),
             u = { element: e, left: 0, top: 0 };
           if (
@@ -4646,13 +4709,13 @@
         }
         let c = !1;
         for (let e of o) {
-          if (M(e.left) && M(e.top)) continue;
+          if (R(e.left) && R(e.top)) continue;
           let t = x(e.element),
             i = t.scrollTop + e.top,
             r = t.scrollLeft + e.left;
           (r = f.Lh(r, 0, t.MaxScrollLeft())),
             (i = f.Lh(i, 0, t.MaxScrollTop())),
-            (M(t.scrollLeft - r) && M(t.scrollTop - i)) ||
+            (R(t.scrollLeft - r) && R(t.scrollTop - i)) ||
               (t.scrollTo({ left: r, top: i, behavior: n }),
               c || (C("Scrolling:"), (c = !0)),
               C(
@@ -8480,12 +8543,12 @@
                           };
                         });
                       })(e, t)
-                    : (M ||
+                    : (R ||
                         (console.warn(
                           "Error reporter does not know how to parse generated stack:"
                         ),
                         console.warn(e.stack),
-                        (M = !0)),
+                        (R = !0)),
                       null);
                 } catch (e) {
                   return (
@@ -8563,8 +8626,8 @@
       const y = /^\s*at .*(\S+:\d+|\(native\))/m,
         D = /(^|@)\S+:\d+/,
         T = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let R,
-        M = !1;
+      let M,
+        R = !1;
       function I(e) {
         return (function (e) {
           const t = "https://",
@@ -8581,13 +8644,13 @@
           })(e)
         );
       }
-      const O = () => (R || k(new w()), R),
+      const O = () => (M || k(new w()), M),
         k = (e) => {
-          (R = e),
-            d.S.InstallErrorReportingStore(R),
-            r.lq.InstallErrorReportingStore(R),
-            h.LJ.InstallErrorReportingStore(R),
-            g.InstallErrorReportingStore(R);
+          (M = e),
+            d.S.InstallErrorReportingStore(M),
+            r.lq.InstallErrorReportingStore(M),
+            h.LJ.InstallErrorReportingStore(M),
+            g.InstallErrorReportingStore(M);
         };
       function x(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
@@ -8656,187 +8719,171 @@
     10847: (e, t, n) => {
       "use strict";
       n.d(t, {
-        bY: () => B,
-        Td: () => O,
-        xV: () => R,
+        Td: () => R,
+        xV: () => T,
+        Yr: () => D,
         Zo: () => M,
-        Vc: () => N,
-        Wn: () => L,
-        T: () => A,
+        Vc: () => x,
+        Wn: () => k,
+        T: () => L,
       });
       var i = n(70655),
         r = n(29323),
         o = n(67294),
-        s = n(73935),
-        a = n(57287),
-        l = n(53157),
-        c = n(7707),
-        u = n(35921),
-        d = n(23816),
-        h = (n(17010), n(39746));
+        s = n(57287),
+        a = (n(53157), n(7707)),
+        l = n(35921),
+        c = n(23816),
+        u = (n(17010), n(39746));
       n(23200);
-      const m = Object.seal({ onMoveUp: p, onMoveDown: p });
-      Object.seal({ onMoveRight: p, onMoveLeft: p });
-      function p(e, t) {
+      const d = Object.seal({ onMoveUp: h, onMoveDown: h });
+      Object.seal({ onMoveRight: h, onMoveLeft: h });
+      function h(e, t) {
         if (e.is_repeat) return !1;
         const n = t.GetRelativeDirection(e.button);
-        return n == h.zE.FORWARD
-          ? t.BFocusFirstChild(d.uS.GAMEPAD)
-          : n == h.zE.BACKWARD && t.BFocusLastChild(d.uS.GAMEPAD);
+        return n == u.zE.FORWARD
+          ? t.BFocusFirstChild(c.uS.GAMEPAD)
+          : n == u.zE.BACKWARD && t.BFocusLastChild(c.uS.GAMEPAD);
       }
-      var g = n(90067),
-        _ = n(10089),
-        f = n(95598),
-        v = n(7573),
-        C = n(99198),
-        b = n(53622),
-        E = n(41311),
-        w = n(64839),
-        S = n(90666),
-        y = n(16156),
-        D = n.n(y);
-      n(59253), n(41414);
-      const T = (0, g.Y)("ContextMenuInstanceContext", () =>
+      var m = n(90067),
+        p = n(989),
+        g = (n(37699), n(41414), n(95598)),
+        _ = n(7573),
+        f = n(99198),
+        v = n(53622),
+        C = n(41311),
+        b = n(64839),
+        E = n(90666),
+        w = n(16156),
+        S = n.n(w),
+        y = n(72258);
+      const D = (0, m.Y)("ContextMenuInstanceContext", () =>
         o.createContext(null)
       );
-      let R = class extends o.Component {
+      let T = class extends o.Component {
         constructor() {
-          super(...arguments), (this.m_navRef = (0, c.Hy)());
+          super(...arguments),
+            (this.m_navRef = (0, a.Hy)()),
+            (this.m_divRef = o.createRef());
+        }
+        get instance() {
+          return this.context.instance || this.context;
         }
         componentDidMount() {
           var e;
-          this.context &&
-            ((this.context.m_refContextMenu = this),
-            this.context.SetLabel(this.props.label)),
+          this.instance.SetLabel(this.props.label),
             null === (e = this.m_navRef.current) ||
               void 0 === e ||
-              e.TakeFocus();
+              e.TakeFocus(),
+            (0, b.k$)(this.props.refInstance, this.instance);
         }
         componentDidUpdate(e) {
           e.label !== this.props.label &&
             this.context &&
-            this.context.SetLabel(this.props.label);
+            this.instance.SetLabel(this.props.label);
         }
         HideIfSubmenu() {
-          return !!this.context.BIsSubMenu() && (this.context.HideSelf(), !0);
+          return !!this.instance.BIsSubMenu() && (this.instance.HideSelf(), !0);
         }
         HideMenu() {
           return (
-            this.context.BIsSubMenu()
-              ? this.context.HideSelf()
-              : this.context.Hide(),
+            this.instance.BIsSubMenu()
+              ? this.instance.HideSelf()
+              : this.instance.Hide(),
             !0
           );
         }
         render() {
-          var e, t;
-          let n = this.props,
+          var e;
+          let t = this.props,
             {
-              children: r,
-              className: s,
-              label: a,
-              onCancel: l,
+              children: n,
+              className: r,
+              label: s,
+              onCancel: a,
               cancelText: c,
-            } = n,
-            d = (0, i._T)(n, [
+              refInstance: h,
+            } = t,
+            m = (0, i._T)(t, [
               "children",
               "className",
               "label",
               "onCancel",
               "cancelText",
+              "refInstance",
             ]);
           const p =
-            null !==
-              (t =
-                null === (e = this.context) || void 0 === e
-                  ? void 0
-                  : e.styles) && void 0 !== t
-              ? t
-              : D();
+            null !== (e = this.context.styles) && void 0 !== e ? e : S();
           let g = null != c ? c : "#Button_Cancel";
-          if (this.context && 1 == this.context.presentation) {
+          if (1 == this.context.presentation) {
             const e = () => {
-              l && l(), this.context.Hide();
+              a && a(), this.instance.Hide();
             };
             return o.createElement(
-              u.s,
+              l.s,
               Object.assign(
                 {},
-                d,
+                m,
                 {
-                  className: (0, v.Z)(
+                  className: (0, _.Z)(
                     p.contextMenuContents,
-                    { [p.hasSubMenu]: this.context.BIsSubMenuVisible() },
-                    s
+                    { [p.hasSubMenu]: this.instance.BIsSubMenuVisible() },
+                    r
                   ),
                   "flow-children": "column",
                   onMoveLeft: this.HideIfSubmenu,
-                  onCancel: this.context.BIsSubMenu() ? this.HideMenu : e,
+                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : e,
                   style: {
-                    overflowY: this.context.BIsSubMenuVisible()
+                    overflowY: this.instance.BIsSubMenuVisible()
                       ? "hidden"
                       : void 0,
                   },
-                  navEntryPreferPosition: h.c4.PREFERRED_CHILD,
+                  navEntryPreferPosition: u.c4.PREFERRED_CHILD,
                   navRef: this.m_navRef,
+                  ref: this.m_divRef,
                 },
-                m
+                d
               ),
-              r,
-              !this.context.BIsSubMenu() &&
+              n,
+              !this.instance.BIsSubMenu() &&
                 o.createElement(
                   o.Fragment,
                   null,
-                  o.createElement(k, null),
+                  o.createElement(I, null),
                   o.createElement(
                     M,
                     { className: p.Cancel, onSelected: e },
-                    (0, E.Xx)(g)
+                    (0, C.Xx)(g)
                   )
                 ),
-              this.context.BIsSubMenuVisible() &&
+              this.instance.BIsSubMenuVisible() &&
                 o.createElement("div", {
                   className: p.contextMenuFade,
-                  onClick: () => this.context.HideSubMenu(),
+                  onClick: () => this.instance.HideSubMenu(),
                 })
             );
           }
-          {
-            const e =
-              this.context &&
-              this.context.options &&
-              this.context.options.bUseWebStyles;
-            return o.createElement(
-              "div",
-              Object.assign({}, d, {
-                className: (0, v.Z)(
-                  {
-                    popup_menu: e,
-                    popup_body: e,
-                    [p.contextMenuContents]: !e,
-                    [p.hasSubMenu]:
-                      this.context && this.context.BIsSubMenuVisible(),
-                  },
-                  s
-                ),
-              }),
-              r
-            );
-          }
+          return o.createElement(
+            "div",
+            Object.assign({}, m, {
+              ref: this.m_divRef,
+              className: (0, _.Z)(
+                {
+                  [p.contextMenuContents]: !0,
+                  [p.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                },
+                r
+              ),
+            }),
+            n
+          );
         }
       };
-      (R.contextType = T),
-        (0, i.gn)([w.ak], R.prototype, "HideIfSubmenu", null),
-        (0, i.gn)([w.ak], R.prototype, "HideMenu", null),
-        (R = (0, i.gn)([r.Pi], R));
-      const M = o.forwardRef((e, t) => {
-        const n = (0, S.id)();
-        return o.createElement(
-          I,
-          Object.assign({ ref: t }, e, { bPlayAudio: n })
-        );
-      });
-      class I extends o.PureComponent {
+      (T.contextType = D),
+        (0, i.gn)([b.ak], T.prototype, "HideIfSubmenu", null),
+        (0, i.gn)([b.ak], T.prototype, "HideMenu", null),
+        (T = (0, i.gn)([r.Pi], T));
+      class M extends o.PureComponent {
         constructor() {
           super(...arguments),
             (this.m_ref = o.createRef()),
@@ -8845,21 +8892,26 @@
         get element() {
           return this.m_refDiv.current;
         }
+        get instance() {
+          return this.context.instance || this.context;
+        }
         OnClick(e) {
+          var t;
           this.props.disabled
-            ? this.props.bPlayAudio && _.LT.PlayNavSound(_.qr.FailedNav)
+            ? (null === (t = this.context.callbacks) || void 0 === t
+                ? void 0
+                : t.onDisabledItemSelected) &&
+              this.context.callbacks.onDisabledItemSelected()
             : (this.props.onClick && this.props.onClick(e),
               this.props.bInteractableItem ||
                 (this.props.onSelected && this.props.onSelected(e),
-                this.context && this.context.Hide()));
+                this.context && this.instance.Hide()));
         }
         OnOKButton(e) {
           this.m_refDiv.current.click();
         }
         OnMouseEnter(e) {
-          this.context &&
-            0 == this.context.presentation &&
-            this.context.HideSubMenu();
+          0 == this.context.presentation && this.instance.HideSubMenu();
         }
         Focus() {
           this.m_ref.current
@@ -8869,91 +8921,74 @@
         render() {
           var e, t;
           const n = this.props,
-            {
-              onSelected: r,
-              bInteractableItem: s,
-              onMoveRight: a,
-              bPlayAudio: l,
-            } = n,
+            { onSelected: r, bInteractableItem: s, onMoveRight: a } = n,
             c = (0, i._T)(n, [
               "onSelected",
               "bInteractableItem",
               "onMoveRight",
-              "bPlayAudio",
             ]),
-            d =
+            u =
               null !==
                 (t =
                   null === (e = this.context) || void 0 === e
                     ? void 0
                     : e.styles) && void 0 !== t
                 ? t
-                : D();
-          if (this.context && 1 == this.context.presentation)
-            return o.createElement(
-              u.s,
-              Object.assign(
-                {
-                  noFocusRing: !0,
-                  preferredFocus: this.props.selected,
-                  ref: this.m_refDiv,
-                  navRef: this.m_ref,
-                  onMouseEnter: this.OnMouseEnter,
-                },
-                c,
-                {
-                  className: (0, v.Z)(
-                    this.props.className,
-                    d.contextMenuItem,
-                    "contextMenuItem",
-                    this.props.disabled && "disabled",
-                    this.props.selected && d.Selected,
-                    "positive" == this.props.tone && d.Positive,
-                    "emphasis" == this.props.tone && d.Emphasis,
-                    "destructive" == this.props.tone && d.Destructive
-                  ),
-                  focusClassName: d.Focused,
-                  onClick: this.props.disabled ? void 0 : this.OnClick,
-                  focusable: !this.props.disabled,
-                  onOKButton: this.OnOKButton,
-                  onMoveRight: a,
-                  unselectable: this.props.unselectable,
-                }
-              ),
-              this.props.children
-            );
-          {
-            const e =
-              this.context &&
-              this.context.options &&
-              this.context.options.bUseWebStyles;
-            return o.createElement(
-              "div",
-              Object.assign(
-                { ref: this.m_refDiv, onMouseEnter: this.OnMouseEnter },
-                c,
-                {
-                  onClick: this.OnClick,
-                  unselectable: this.props.unselectable,
-                  className: (0, v.Z)(this.props.className, {
-                    popup_menu_item: e,
-                    [d.contextMenuItem]: !e,
-                    contextMenuItem: !e,
-                    disabled: !!this.props.disabled,
-                  }),
-                }
-              ),
-              this.props.children
-            );
-          }
+                : S();
+          return 1 == this.context.presentation
+            ? o.createElement(
+                l.s,
+                Object.assign(
+                  {
+                    noFocusRing: !0,
+                    preferredFocus: this.props.selected,
+                    ref: this.m_refDiv,
+                    navRef: this.m_ref,
+                    onMouseEnter: this.OnMouseEnter,
+                  },
+                  c,
+                  {
+                    className: (0, _.Z)(
+                      this.props.className,
+                      u.contextMenuItem,
+                      "contextMenuItem",
+                      this.props.disabled && "disabled",
+                      this.props.selected && u.Selected,
+                      "positive" == this.props.tone && u.Positive,
+                      "emphasis" == this.props.tone && u.Emphasis,
+                      "destructive" == this.props.tone && u.Destructive
+                    ),
+                    focusClassName: u.Focused,
+                    onClick: this.props.disabled ? void 0 : this.OnClick,
+                    focusable: !this.props.disabled,
+                    onOKButton: this.OnOKButton,
+                    onMoveRight: a,
+                    unselectable: this.props.unselectable,
+                  }
+                ),
+                this.props.children
+              )
+            : o.createElement(
+                p.s,
+                Object.assign(
+                  { ref: this.m_refDiv, onMouseEnter: this.OnMouseEnter },
+                  c,
+                  {
+                    onClick: this.OnClick,
+                    unselectable: this.props.unselectable,
+                    className: this.props.className,
+                  }
+                ),
+                this.props.children
+              );
         }
       }
-      (I.contextType = T),
-        (0, i.gn)([w.ak], I.prototype, "OnClick", null),
-        (0, i.gn)([w.ak], I.prototype, "OnOKButton", null),
-        (0, i.gn)([w.ak], I.prototype, "OnMouseEnter", null),
-        (0, i.gn)([w.ak], I.prototype, "Focus", null);
-      class O extends o.PureComponent {
+      (M.contextType = D),
+        (0, i.gn)([b.ak], M.prototype, "OnClick", null),
+        (0, i.gn)([b.ak], M.prototype, "OnOKButton", null),
+        (0, i.gn)([b.ak], M.prototype, "OnMouseEnter", null),
+        (0, i.gn)([b.ak], M.prototype, "Focus", null);
+      class R extends o.PureComponent {
         render() {
           const e = this.props,
             { bChecked: t, children: n, className: r } = e,
@@ -8961,126 +8996,113 @@
           return o.createElement(
             M,
             Object.assign({}, s, {
-              className: (0, v.Z)(r, t && "menuChecked"),
+              className: (0, _.Z)(r, t && "menuChecked"),
             }),
             o.createElement("div", { className: "contextMenuCheckMark" }),
             n
           );
         }
       }
-      function k(e) {
+      function I(e) {
         var t;
-        const n = o.useContext(T),
-          i =
-            null !== (t = null == n ? void 0 : n.styles) && void 0 !== t
-              ? t
-              : D();
-        return o.createElement("div", { className: i.ContextMenuSeparator });
+        const n =
+          null !== (t = o.useContext(D).styles) && void 0 !== t ? t : S();
+        return o.createElement("div", { className: n.ContextMenuSeparator });
       }
-      class x extends o.PureComponent {
+      class O extends o.PureComponent {
         constructor(e) {
           super(e),
             (this.m_refItem = o.createRef()),
             (this.state = { bActive: !1 });
         }
+        get instance() {
+          return this.context.instance || this.context;
+        }
         OnSubMenuMouseEnter() {
-          this.context && this.context.CancelHideSubMenuTimer();
+          this.instance.CancelHideSubMenuTimer();
         }
         OnSubMenuHidden() {
           this.setState({ bActive: !1 }),
             this.props.bInGamepadUI &&
-              this.context &&
               1 == this.context.presentation &&
               this.m_refItem.current &&
               this.m_refItem.current.Focus();
         }
         ShowSubMenu(e) {
-          if (this.context) {
-            const t = e || this.m_refItem.current.element;
-            let n = this.context.ShowSubMenu(t, this.RenderSubMenu);
-            if (n)
-              return (
-                this.setState({ bActive: !0 }),
-                n.SetOnHideCallback(this.OnSubMenuHidden),
-                !0
-              );
-          }
-          return !1;
+          const t = e || this.m_refItem.current.element;
+          let n = this.instance.ShowSubMenu(t, this.RenderSubMenu);
+          return (
+            !!n &&
+            (this.setState({ bActive: !0 }),
+            n.SetOnHideCallback(this.OnSubMenuHidden),
+            !0)
+          );
         }
         RenderSubMenu() {
           return o.createElement(
-            R,
+            T,
             { onMouseEnter: this.OnSubMenuMouseEnter, label: this.props.label },
             this.props.children
           );
         }
         OnMouseEnter(e) {
-          this.context &&
-            0 == this.context.presentation &&
-            this.ShowSubMenu(e.currentTarget);
+          0 == this.context.presentation && this.ShowSubMenu(e.currentTarget);
         }
         OnClick(e) {
           this.OnMouseEnter(e),
             this.props.onClick && this.props.onClick(e),
             this.props.bInGamepadUI &&
-              this.context &&
               1 == this.context.presentation &&
               this.ShowSubMenu(e.currentTarget);
         }
         render() {
-          var e, t;
-          let n = this.props,
+          var e;
+          let t = this.props,
             {
-              label: r,
-              selectedWithin: s,
-              children: a,
-              className: l,
-              bInGamepadUI: c,
-            } = n,
-            u = (0, i._T)(n, [
+              label: n,
+              selectedWithin: r,
+              children: s,
+              className: a,
+              bInGamepadUI: l,
+            } = t,
+            c = (0, i._T)(t, [
               "label",
               "selectedWithin",
               "children",
               "className",
               "bInGamepadUI",
             ]);
-          const d =
-            null !==
-              (t =
-                null === (e = this.context) || void 0 === e
-                  ? void 0
-                  : e.styles) && void 0 !== t
-              ? t
-              : D();
+          const u =
+            null !== (e = this.context.styles) && void 0 !== e ? e : S();
           return o.createElement(
             M,
-            Object.assign({}, u, {
+            Object.assign({}, c, {
               ref: this.m_refItem,
               onClick: this.OnClick,
-              selected: s && !this.state.bActive,
-              className: (0, v.Z)(l, d.SubMenu, this.state.bActive && d.active),
+              selected: r && !this.state.bActive,
+              className: (0, _.Z)(a, u.SubMenu, this.state.bActive && u.active),
               onMouseEnter: this.OnMouseEnter,
               onSelected: null,
               bInteractableItem: !0,
               onMoveRight: () => this.ShowSubMenu(),
             }),
-            o.createElement("div", { className: d.Label }, r),
+            o.createElement("div", { className: u.Label }, n),
             o.createElement(
               "div",
-              { className: d.Arrow },
-              o.createElement(f.$gZ, null)
+              { className: u.Arrow },
+              o.createElement(g.$gZ, null)
             )
           );
         }
       }
-      (x.contextType = T),
-        (0, i.gn)([w.ak], x.prototype, "OnSubMenuMouseEnter", null),
-        (0, i.gn)([w.ak], x.prototype, "OnSubMenuHidden", null),
-        (0, i.gn)([w.ak], x.prototype, "ShowSubMenu", null),
-        (0, i.gn)([w.ak], x.prototype, "RenderSubMenu", null),
-        (0, i.gn)([w.ak], x.prototype, "OnMouseEnter", null),
-        (0, i.gn)([w.ak], x.prototype, "OnClick", null);
-      let L = class extends o.Component {
+      (O.contextType = D),
+        (0, i.gn)([b.ak], O.prototype, "OnSubMenuMouseEnter", null),
+        (0, i.gn)([b.ak], O.prototype, "OnSubMenuHidden", null),
+        (0, i.gn)([b.ak], O.prototype, "ShowSubMenu", null),
+        (0, i.gn)([b.ak], O.prototype, "RenderSubMenu", null),
+        (0, i.gn)([b.ak], O.prototype, "OnMouseEnter", null),
+        (0, i.gn)([b.ak], O.prototype, "OnClick", null);
+      let k = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -9093,19 +9115,21 @@
               menuBottom: void 0,
               menuWidth: void 0,
               menuHeight: void 0,
+              menuMinWidth: void 0,
             }),
             (this.m_mutationObserver = new MutationObserver(
               this.OnMenuMutation
             ));
         }
         BindMenuElement(e) {
-          this.m_elMenu &&
-            (this.m_mutationObserver.disconnect(),
-            this.props.popup ||
-              this.m_elMenu.ownerDocument.defaultView.removeEventListener(
-                "resize",
-                this.OnWindowResize
-              )),
+          this.props.instance.SetElement(e),
+            this.m_elMenu &&
+              (this.m_mutationObserver.disconnect(),
+              this.props.popup ||
+                this.m_elMenu.ownerDocument.defaultView.removeEventListener(
+                  "resize",
+                  this.OnWindowResize
+                )),
             e &&
               (this.m_mutationObserver.observe(e, {
                 childList: !0,
@@ -9117,7 +9141,11 @@
                   this.OnWindowResize
                 )),
             (this.m_elMenu = e || void 0),
-            this.PositionMenu(),
+            E.De.IN_CLIENT && this.props.popup && this.m_elMenu
+              ? this.m_elMenu.ownerDocument.fonts.ready.then(() => {
+                  this.PositionMenu();
+                })
+              : this.PositionMenu(),
             this.state.ready ||
               (this.props.instance.SetTakeFocus(this.TakeFocus.bind(this)),
               this.setState({ ready: !0 }, () => {
@@ -9131,7 +9159,7 @@
           this.PositionMenu();
         }
         OnBlur(e) {
-          (e.relatedTarget && b.ni(e.currentTarget, e.relatedTarget)) ||
+          (e.relatedTarget && v.ni(e.currentTarget, e.relatedTarget)) ||
             (e.relatedTarget &&
               this.props.instance.BIsElementInMenuHierarchy(e.relatedTarget)) ||
             this.props.instance.BIsSubMenuVisible() ||
@@ -9157,7 +9185,7 @@
             this.state.ready &&
             this.props.instance.visible &&
             (this.props.popup ||
-              !b.ni(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+              !v.ni(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
           ) {
             let e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
             e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -9180,6 +9208,7 @@
               menuBottom: void 0,
               menuWidth: void 0,
               menuHeight: void 0,
+              menuMinWidth: void 0,
             },
             l = this.props.clientX,
             c = this.props.clientY,
@@ -9188,7 +9217,7 @@
           if (o) {
             this.props.options.bScreenCoordinates ||
               ((l += n.screenLeft), (c += n.screenTop)),
-              (i = b.sH(n, i));
+              (i = v.sH(n, i));
             let e = n.screen,
               t = 0,
               r = 0;
@@ -9201,17 +9230,18 @@
           let h = l || i.left,
             m = l || i.right,
             p = r.width;
-          s.bMatchWidth && ((p = m - h), (a.menuWidth = p));
+          s.bMatchWidth && ((p = m - h), (a.menuWidth = p)),
+            s.bGrowToElementWidth && (a.menuMinWidth = Math.max(p, m - h));
           let g = (s.bOverlapHorizontal ? m : h) - p,
             _ = g > 0,
             f = u - (s.bOverlapHorizontal ? h : m) - p,
-            v = f > 0,
-            C = (s.bPreferPopLeft || !v) && _;
+            C = f > 0,
+            b = (s.bPreferPopLeft || !C) && _;
           _ ||
-            v ||
-            ((C = _ > v),
-            s.bFitToWindow && ((p += (C ? g : f) - 8), (a.menuWidth = p))),
-            (!s.bPreferPopLeft && v) || !_
+            C ||
+            ((b = _ > C),
+            s.bFitToWindow && ((p += (b ? g : f) - 8), (a.menuWidth = p))),
+            (!s.bPreferPopLeft && C) || !_
               ? (a.menuLeft = s.bOverlapHorizontal ? h : m)
               : (a.menuRight = u - (s.bOverlapHorizontal ? m : h));
           let E = c || i.top,
@@ -9221,22 +9251,22 @@
           let y = (s.bOverlapVertical ? w : E) - S,
             D = y > 0,
             T = d - (s.bOverlapVertical ? E : w) - S,
-            R = T > 0,
-            M = (s.bPreferPopTop || !R) && D && !s.bDisablePopTop;
-          if (!D && !R) {
+            M = T > 0,
+            R = (s.bPreferPopTop || !M) && D && !s.bDisablePopTop;
+          if (!D && !M) {
             const e =
               void 0 !== s.bShiftToFitWindow
                 ? s.bShiftToFitWindow
                 : s.bFitToWindow && !s.bOverlapHorizontal;
-            (M = y > T && !s.bDisablePopTop),
-              e && (M ? (a.menuTop = 4) : (a.menuBottom = 4)),
+            (R = y > T && !s.bDisablePopTop),
+              e && (R ? (a.menuTop = 4) : (a.menuBottom = 4)),
               s.bFitToWindow &&
-                (e ? (S = Math.min(S, d - 8)) : (S += M ? y : T),
+                (e ? (S = Math.min(S, d - 8)) : (S += R ? y : T),
                 (a.menuHeight = S - 8));
           }
           void 0 === a.menuBottom &&
             void 0 === a.menuTop &&
-            (M
+            (R
               ? (a.menuBottom = d - (s.bOverlapVertical ? w : E))
               : (a.menuTop = s.bOverlapVertical ? E : w)),
             o
@@ -9266,35 +9296,53 @@
               a.menuHeight === this.state.menuHeight) ||
               this.setState(a);
         }
-        render() {
-          let e = { visibility: this.state.ready ? "visible" : "hidden" };
-          if (this.props.popup) {
-            let e = this.props.element.ownerDocument.defaultView;
+        PositionPopupWindow() {
+          if (
             void 0 !== this.state.menuLeft &&
-              void 0 !== this.state.menuTop &&
-              void 0 !== this.state.menuWidth &&
-              void 0 !== this.state.menuHeight &&
-              e.SteamClient.Window.GetWindowRestoreDetails((t) => {
-                let n = this.props.popup.window,
-                  i = this.state.menuLeft - e.screenX,
-                  r = this.state.menuTop - e.screenY;
+            void 0 !== this.state.menuTop &&
+            void 0 !== this.state.menuWidth &&
+            void 0 !== this.state.menuHeight
+          ) {
+            let e = this.props.element.ownerDocument.defaultView,
+              t = 0;
+            v.GB(this.props.element) && (t = (0, y.oM)(this.props.element)),
+              e.SteamClient.Window.GetWindowRestoreDetails((n) => {
+                let i = this.props.popup.window,
+                  r = this.state.menuLeft - e.screenX,
+                  o = this.state.menuTop - e.screenY;
                 try {
-                  n.SteamClient.Window.PositionWindowRelative(
-                    t,
-                    i,
-                    r,
-                    this.state.menuWidth,
-                    this.state.menuHeight
-                  );
+                  i.SteamClient.Window.PositionWindowRelativeEx
+                    ? i.SteamClient.Window.PositionWindowRelativeEx(
+                        n,
+                        r,
+                        o,
+                        this.state.menuWidth,
+                        this.state.menuHeight,
+                        t
+                      )
+                    : i.SteamClient.Window.PositionWindowRelative(
+                        n,
+                        r,
+                        o,
+                        this.state.menuWidth,
+                        this.state.menuHeight
+                      );
                 } catch (e) {
                   console.error(e);
                 }
               });
-          } else
-            void 0 !== this.state.menuTop
-              ? (e.top = this.state.menuTop)
-              : void 0 !== this.state.menuBottom &&
-                (e.bottom = this.state.menuBottom),
+          }
+        }
+        render() {
+          let e = { visibility: this.state.ready ? "visible" : "hidden" };
+          this.props.popup
+            ? (this.PositionPopupWindow(),
+              void 0 !== this.state.menuMinWidth &&
+                (e.minWidth = this.state.menuMinWidth))
+            : (void 0 !== this.state.menuTop
+                ? (e.top = this.state.menuTop)
+                : void 0 !== this.state.menuBottom &&
+                  (e.bottom = this.state.menuBottom),
               void 0 !== this.state.menuLeft
                 ? (e.left = this.state.menuLeft)
                 : void 0 !== this.state.menuRight &&
@@ -9302,120 +9350,54 @@
               void 0 !== this.state.menuHeight &&
                 (e.height = this.state.menuHeight),
               void 0 !== this.state.menuWidth &&
-                (e.width = this.state.menuWidth);
-          let t =
-            this.props.options.strClassName ||
-            (this.props.options.bUseWebStyles
-              ? "popup_block_new popup_block_hidden_until_visible"
-              : D().contextMenu);
+                (e.width = this.state.menuWidth),
+              void 0 !== this.state.menuMinWidth &&
+                (e.minWidth = this.state.menuMinWidth));
+          let t = this.props.options.strClassName || S().contextMenu;
           return (
             this.props.instance.visible &&
               this.state.ready &&
               (t += " visible"),
-            (t += " " + D().ContextMenuFocusContainer),
+            (t += " " + S().ContextMenuFocusContainer),
             o.createElement(
-              T.Provider,
-              { value: this.props.instance },
-              o.createElement(
-                "div",
-                {
-                  className: t,
-                  ref: this.BindMenuElement,
-                  style: e,
-                  onBlur: this.OnBlur,
-                  onKeyDown: this.OnKeyDown,
-                  tabIndex: 0,
-                },
-                this.props.children
-              )
+              "div",
+              {
+                className: t,
+                ref: this.BindMenuElement,
+                style: e,
+                onBlur: this.OnBlur,
+                onKeyDown: this.OnKeyDown,
+                tabIndex: 0,
+              },
+              this.props.children
             )
           );
         }
       };
-      (0, i.gn)([w.ak], L.prototype, "BindMenuElement", null),
-        (0, i.gn)([w.ak, (0, C.D)(100)], L.prototype, "OnMenuMutation", null),
-        (0, i.gn)([w.ak], L.prototype, "OnWindowResize", null),
-        (0, i.gn)([w.ak], L.prototype, "OnBlur", null),
-        (0, i.gn)([w.ak], L.prototype, "OnKeyDown", null),
-        (L = (0, i.gn)([r.Pi], L));
-      class B extends l.K3 {
-        constructor(e, t, n) {
-          super("contextmenu_" + B.sm_iContextMenuInstance++, {
-            title: "Menu",
-            html_class: D().ContextMenuPopup + " client_chat_frame",
-            body_class: "ContextMenuPopupBody",
-            replace_existing_popup: !1,
-            target_browser: n,
-            eCreationFlags: l.eL.ContextMenu,
-          }),
-            (this.m_menuProps = e),
-            (this.m_children = t);
-        }
-        UpdateParamsBeforeShow(e) {
-          if (this.m_menuProps.options.bScreenCoordinates)
-            e.dimensions = {
-              left: this.m_menuProps.clientX,
-              top: this.m_menuProps.clientY,
-              width: 2,
-              height: 1,
-            };
-          else {
-            let t = b.sH(
-              this.m_menuProps.element.ownerDocument.defaultView,
-              this.m_menuProps.element.getBoundingClientRect()
-            );
-            e.dimensions = { left: t.right, top: t.top, width: 2, height: 1 };
-          }
-          return (
-            (e.availscreenwidth =
-              this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
-            (e.availscreenheight =
-              this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
-            e
-          );
-        }
-        Render(e, t) {
-          s.render(
-            o.createElement(
-              L,
-              Object.assign({}, this.m_menuProps, { popup: this }),
-              this.m_children
-            ),
-            t
-          );
-        }
-        OnBlur() {}
-        OnFocus() {}
-        OnLoad() {}
-        OnResize() {}
-        OnClose() {
-          s.unmountComponentAtNode(this.m_element);
-        }
-      }
-      function N(e) {
+      function x(e) {
         return o.createElement("div", {
-          className: D().ContextMenuMouseOverlay,
+          className: S().ContextMenuMouseOverlay,
         });
       }
-      function A(e) {
+      function L(e) {
         let t = [],
-          n = b.RA(e),
+          n = v.RA(e),
           i = n.getSelection(),
           r = i && i.rangeCount > 0 && i.toString().length > 0,
-          s = e.target,
+          a = e.target,
           l = !1;
         if (
-          (s &&
-            "tagName" in s &&
-            (("INPUT" != s.tagName && "TEXTAREA" != s.tagName) || (l = !0)),
-          S.De.IN_CLIENT &&
+          (a &&
+            "tagName" in a &&
+            (("INPUT" != a.tagName && "TEXTAREA" != a.tagName) || (l = !0)),
+          E.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.GetSpellingSuggestions &&
             n.SteamClient._internal.AddWordToDictionary)
         ) {
           let [e, ...i] = n.SteamClient._internal.GetSpellingSuggestions(),
-            r = s;
+            r = a;
           if (
             (r &&
               i.forEach((e, i) => {
@@ -9431,9 +9413,9 @@
                             n.initEvent("change", !0, !1), e.dispatchEvent(n);
                           })(r, n.document),
                           r.setSelectionRange(r.selectionEnd, r.selectionEnd),
-                          s.focus();
+                          a.focus();
                       },
-                      className: D().NoSeparation,
+                      className: S().NoSeparation,
                     },
                     e
                   )
@@ -9451,7 +9433,7 @@
                     onSelected: () =>
                       n.SteamClient._internal.AddWordToDictionary(e),
                   },
-                  (0, E.Xx)(
+                  (0, C.Xx)(
                     "#ContextMenu_AddToDictionary",
                     e.length < i ? e : e.substring(0, i) + "..."
                   )
@@ -9470,7 +9452,7 @@
                     n.document.execCommand("cut");
                   },
                 },
-                (0, E.Xx)("#ContextMenu_Cut")
+                (0, C.Xx)("#ContextMenu_Cut")
               )
             ),
           (n.document.queryCommandEnabled("copy") || r) &&
@@ -9482,12 +9464,12 @@
                   onSelected: () => {
                     n.document.execCommand("copy");
                   },
-                  className: D().NoSeparation,
+                  className: S().NoSeparation,
                 },
-                (0, E.Xx)("#ContextMenu_Copy")
+                (0, C.Xx)("#ContextMenu_Copy")
               )
             ),
-          S.De.IN_CLIENT &&
+          E.De.IN_CLIENT &&
             l &&
             n.SteamClient._internal &&
             n.SteamClient._internal.Paste &&
@@ -9497,22 +9479,62 @@
                 {
                   key: "paste",
                   onSelected: () => {
-                    s.focus(), n.SteamClient._internal.Paste();
+                    a.focus(), n.SteamClient._internal.Paste();
                   },
-                  className: D().NoSeparation,
+                  className: S().NoSeparation,
                 },
-                (0, E.Xx)("#ContextMenu_Paste")
+                (0, C.Xx)("#ContextMenu_Paste")
               )
             ),
           t.length)
         )
-          (0, a.yV)(o.createElement(R, null, t), e);
+          (0, s.yV)(o.createElement(T, null, t), e);
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
         }
       }
-      B.sm_iContextMenuInstance = 0;
+      (0, i.gn)([b.ak], k.prototype, "BindMenuElement", null),
+        (0, i.gn)([b.ak, (0, f.D)(100)], k.prototype, "OnMenuMutation", null),
+        (0, i.gn)([b.ak], k.prototype, "OnWindowResize", null),
+        (0, i.gn)([b.ak], k.prototype, "OnBlur", null),
+        (0, i.gn)([b.ak], k.prototype, "OnKeyDown", null),
+        (k = (0, i.gn)([r.Pi], k));
+    },
+    989: (e, t, n) => {
+      "use strict";
+      n.d(t, { P: () => c, s: () => l });
+      var i = n(70655),
+        r = n(67294),
+        o = n(7573),
+        s = n(16156),
+        a = n.n(s);
+      const l = r.forwardRef((e, t) => {
+        const { className: n, contextMenuStyles: s, disabled: l } = e,
+          c = (0, i._T)(e, ["className", "contextMenuStyles", "disabled"]);
+        return r.createElement(
+          "div",
+          Object.assign({}, c, {
+            ref: t,
+            className: (0, o.Z)(
+              n,
+              (s || a()).contextMenuItem,
+              "contextMenuItem",
+              l && "disabled"
+            ),
+          })
+        );
+      });
+      function c(e) {
+        const { bChecked: t, children: n, className: s } = e,
+          a = (0, i._T)(e, ["bChecked", "children", "className"]);
+        return r.createElement(
+          l,
+          Object.assign({}, a, { className: (0, o.Z)(s, t && "menuChecked") }),
+          r.createElement("div", { className: "contextMenuCheckMark" }),
+          n
+        );
+      }
     },
     48341: (e, t, n) => {
       "use strict";
@@ -9523,12 +9545,12 @@
         Ac: () => y,
         zx: () => B,
         ji: () => V,
-        VY: () => M,
+        VY: () => R,
         oX: () => k,
         Vh: () => Ye,
         TW: () => Se,
         ry: () => Ce,
-        lm: () => Re,
+        lm: () => Me,
         gN: () => tt,
         $_: () => w,
         h4: () => b,
@@ -9626,10 +9648,10 @@
           v("DialogControlsSection"),
           v("DialogControlsSectionHeader"),
           C("DialogTwoColLayout _DialogColLayout")),
-        R = C("DialogThreeColLayout _DialogColLayout");
+        M = C("DialogThreeColLayout _DialogColLayout");
       C("DialogTwoThirdColLayout _DialogColLayout"),
         v("DialogColumn _DialogLayout");
-      function M(e) {
+      function R(e) {
         const t = h();
         return r.createElement(
           m.T,
@@ -9686,7 +9708,7 @@
         const { classNameContent: t, bCenterVertically: n } = e,
           o = (0, i._T)(e, ["classNameContent", "bCenterVertically"]);
         return r.createElement(
-          M,
+          R,
           { className: t, bCenterVertically: n },
           r.createElement(O, Object.assign({}, o))
         );
@@ -9810,7 +9832,7 @@
       }
       function F(e) {
         return r.createElement(
-          R,
+          M,
           null,
           r.createElement(
             L,
@@ -10288,25 +10310,23 @@
               bShowCopyAction: l,
               bShowClearAction: u,
               bAlwaysShowClearAction: d,
-              bIsPassword: h,
-              rangeMin: m,
-              rangeMax: p,
-              mustBeNumeric: g,
-              mustBeURL: _,
-              mustBeEmail: f,
-              focusOnMount: v,
-              tooltip: C,
-              inlineControls: b,
-              maxChars: E,
+              rangeMin: h,
+              rangeMax: m,
+              mustBeNumeric: p,
+              mustBeURL: g,
+              mustBeEmail: _,
+              focusOnMount: f,
+              tooltip: v,
+              inlineControls: C,
+              maxChars: b,
             } = e,
-            w = (0, i._T)(e, [
+            E = (0, i._T)(e, [
               "label",
               "description",
               "requiredLabel",
               "bShowCopyAction",
               "bShowClearAction",
               "bAlwaysShowClearAction",
-              "bIsPassword",
               "rangeMin",
               "rangeMax",
               "mustBeNumeric",
@@ -10317,17 +10337,17 @@
               "inlineControls",
               "maxChars",
             ]);
-          let S =
+          let w =
               "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-              (w.className ? " " + w.className : ""),
-            y = "copiedAnimation",
-            D = this.state.m_bCompletedCopiedAnimation;
-          this.m_CopiedAnimation && (y = "copiedAnimation animationPlaying"),
-            D && (y = "copiedAnimation animationComplete");
-          let T = {};
+              (E.className ? " " + E.className : ""),
+            S = "copiedAnimation",
+            y = this.state.m_bCompletedCopiedAnimation;
+          this.m_CopiedAnimation && (S = "copiedAnimation animationPlaying"),
+            y && (S = "copiedAnimation animationComplete");
+          let D = {};
           void 0 !== this.state.m_CopiedYPos &&
-            (T.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let R = r.createElement(
+            (D.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+          let T = r.createElement(
             r.Fragment,
             null,
             r.createElement(
@@ -10338,8 +10358,8 @@
               },
               r.createElement(
                 Y,
-                Object.assign({ type: h ? "password" : "text" }, w, {
-                  className: S,
+                Object.assign({ type: "text" }, E, {
+                  className: w,
                   ref: this.OnInputRef,
                   onChange: this.OnChanged,
                 })
@@ -10358,11 +10378,11 @@
                   ),
                   r.createElement(
                     "div",
-                    { style: T, className: y },
+                    { style: D, className: S },
                     "Link Copied"
                   )
                 ),
-              (d || (u && w.value)) &&
+              (d || (u && E.value)) &&
                 r.createElement(
                   "div",
                   {
@@ -10371,7 +10391,7 @@
                   },
                   r.createElement(a.pVO, null)
                 ),
-              b
+              C
             ),
             n &&
               r.createElement("div", { className: "DialogLabelExplainer" }, n)
@@ -10401,7 +10421,7 @@
                     ),
                     " "
                   ),
-                  R,
+                  T,
                   this.state.m_bNumberBelowMinRange
                     ? r.createElement(
                         "div",
@@ -10452,13 +10472,13 @@
                         "div",
                         null,
                         " ",
-                        (0, c.kQ)("#Input_Error_TooManyCharacters", E),
+                        (0, c.kQ)("#Input_Error_TooManyCharacters", b),
                         " "
                       )
                     : null
                 )
               )
-            : R;
+            : T;
         }
       }
       (0, i.gn)([j.ak], q.prototype, "OnInputRef", null),
@@ -11082,7 +11102,7 @@
           i
         );
       }
-      class Re extends r.Component {
+      class Me extends r.Component {
         constructor() {
           super(...arguments), (this.state = { rgOptions: void 0 });
         }
@@ -11118,9 +11138,9 @@
           );
         }
       }
-      (0, i.gn)([j.ak], Re.prototype, "OnMenuOpened", null);
+      (0, i.gn)([j.ak], Me.prototype, "OnMenuOpened", null);
       n(67345);
-      var Me = n(22188),
+      var Re = n(22188),
         Ie = n(79822),
         Oe = n(48780),
         ke = n(48899);
@@ -11574,7 +11594,7 @@
         (0, i.gn)([j.ak], Ae.prototype, "OnMouseUp", null),
         (0, i.gn)([j.ak], Ae.prototype, "OnTouchStart", null),
         (0, i.gn)([j.ak], Ae.prototype, "OnTouchEnd", null),
-        (0, i.gn)([Me.aD], Ae.prototype, "ResetDragState", null),
+        (0, i.gn)([Re.aD], Ae.prototype, "ResetDragState", null),
         (0, i.gn)([j.ak], Ae.prototype, "OnHTMLDragStart", null),
         (0, i.gn)([j.ak], Ae.prototype, "OnHTMLDrag", null),
         (0, i.gn)([j.ak], Ae.prototype, "OnHTMLDragEnd", null);
@@ -11765,7 +11785,7 @@
         const n =
           null !== (t = e.activePage.padding) && void 0 !== t ? t : "standard";
         return r.createElement(
-          M,
+          R,
           {
             className: (0, l.Z)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -12056,8 +12076,8 @@
           y = "inline" == S && !!c,
           D = "below" == S && !!c,
           T = null != d ? d : "shift-children-below",
-          R = !!(w.onClick || w.onActivate || w.focusable),
-          M = null != a || null != n || (y && null != c),
+          M = !!(w.onClick || w.onActivate || w.focusable),
+          R = null != a || null != n || (y && null != c),
           I = null != h ? h : "min",
           O = null != m ? m : "standard",
           k = null != p ? p : "standard",
@@ -12079,12 +12099,12 @@
           s.s,
           Object.assign(
             {
-              focusable: R,
+              focusable: M,
               noFocusRing: !0,
               scrollIntoViewWhenChildFocused: !0,
               onActivate: w.onClick,
               ref: t,
-              onMouseDown: R ? void 0 : P,
+              onMouseDown: M ? void 0 : P,
             },
             w,
             {
@@ -12093,7 +12113,7 @@
                 f,
                 et().Field,
                 g && et().Disabled,
-                M && et().WithFirstRow,
+                R && et().WithFirstRow,
                 y && et().WithChildrenInline,
                 D && et().WithChildrenBelow,
                 "center" == N && et().VerticalAlignCenter,
@@ -12107,13 +12127,13 @@
                 "standard" == O && et().ExtraPaddingOnChildrenBelow,
                 "standard" == k && et().StandardPadding,
                 "compact" == k && et().CompactPadding,
-                R && et().Clickable,
+                M && et().Clickable,
                 L && et().HighlightOnFocus
               ),
               style: { "--indent-level": B },
             }
           ),
-          M &&
+          R &&
             r.createElement(
               "div",
               { className: et().FieldLabelRow },
@@ -12270,7 +12290,6 @@
             q,
             Object.assign(
               {
-                bIsPassword: !u,
                 autoComplete: "off",
                 ref: l,
                 inlineControls: r.createElement(
@@ -12285,7 +12304,8 @@
                     : r.createElement(it.dQJ, null)
                 ),
               },
-              o
+              o,
+              { type: u ? "text" : "password" }
             )
           )
         );
@@ -13083,10 +13103,10 @@
         return r.createElement(
           yt.Z,
           { className: s, appear: !1, enter: !0, exit: !0 },
-          r.createElement(Rt, { key: t, childrenClasses: n }, i)
+          r.createElement(Mt, { key: t, childrenClasses: n }, i)
         );
       }
-      function Rt(e) {
+      function Mt(e) {
         const { sizeClass: t, children: n, childrenClasses: o } = e,
           a = (0, i._T)(e, ["sizeClass", "children", "childrenClasses"]),
           [c, u, d, h] = (function () {
@@ -13173,7 +13193,7 @@
               )
             );
       }
-      function Mt(e, t) {
+      function Rt(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -13258,7 +13278,7 @@
           Tt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Mt(Ot(), Ot().ContentTransition),
+            childrenClasses: Rt(Ot(), Ot().ContentTransition),
             direction: n,
           },
           e.children
@@ -13591,52 +13611,472 @@
         );
       }
     },
-    59253: (e, t, n) => {
+    1959: (e, t, n) => {
+      "use strict";
+      n.d(t, { t: () => d });
+      var i = n(70655),
+        r = n(67294),
+        o = n(32548),
+        s = n(86178),
+        a = n(7573),
+        l = n(64839),
+        c = n(2957),
+        u = n(57423);
+      function d(e) {
+        let { ModalManager: t, DialogWrapper: n, style: o } = e,
+          d = (0, i._T)(e, ["ModalManager", "DialogWrapper", "style"]);
+        const g = t.modals,
+          _ = g && !!g.length,
+          f = t.active_modal;
+        !(function (e) {
+          r.useEffect(() => {
+            if (e)
+              return (
+                document.body.classList.add(s.BodyNoScrollDialog),
+                () => document.body.classList.remove(s.BodyNoScrollDialog)
+              );
+          }, [e]);
+        })(_),
+          (function (e) {
+            const t = (0, l.NW)();
+            r.useEffect(() => e.RegisterOverlay(t), [e, t]);
+          })(t);
+        const v = (function (e) {
+          return (0, l.xK)(
+            (t) => {
+              if (!t) return;
+              const n = t.ownerDocument.defaultView;
+              return (
+                c.Zp.RegisterModalManager(e, n),
+                () => c.Zp.UnregisterModalManager(n)
+              );
+            },
+            [e]
+          );
+        })(t);
+        let C = null;
+        return (
+          g && g.length
+            ? (C = g.map((e) =>
+                e instanceof u.kv
+                  ? r.createElement(m, {
+                      key: e.key,
+                      modal: e,
+                      active: e == f,
+                      Component: null != n ? n : p,
+                    })
+                  : e instanceof u.QA
+                  ? r.createElement(h, { key: e.key, modal: e, active: e == f })
+                  : void 0
+              ))
+            : (o = Object.assign(Object.assign({}, o), { display: "none" })),
+          r.createElement(
+            "div",
+            Object.assign({}, d, {
+              style: o,
+              ref: v,
+              className: (0, a.Z)(d.className, "FullModalOverlay"),
+            }),
+            r.createElement("div", {
+              className: "ModalOverlayContent ModalOverlayBackground",
+            }),
+            C
+          )
+        );
+      }
+      function h(e) {
+        const { modal: t, active: n } = e;
+        return (
+          r.useEffect(
+            () => (n ? (t.SetActive(n), () => t.SetActive(!1)) : void 0),
+            [t, n]
+          ),
+          r.createElement(
+            o.S,
+            null,
+            r.createElement("div", {
+              className: (0, a.Z)(
+                "ModalOverlayContent",
+                n ? "active" : "inactive"
+              ),
+              ref: t.RefModalElement,
+            })
+          )
+        );
+      }
+      function m(e) {
+        const { modal: t, active: n, Component: i } = e,
+          s = (0, l.NW)();
+        return (
+          (0, l.Qg)(t.ModalUpdatedCallback, s),
+          r.createElement(
+            o.S,
+            null,
+            r.createElement(
+              i,
+              {
+                className: (0, a.Z)(
+                  "ModalOverlayContent",
+                  n ? "active" : "inactive"
+                ),
+                active: n,
+                modalKey: t.key,
+              },
+              t.element
+            )
+          )
+        );
+      }
+      const p = r.forwardRef(function (e, t) {
+        const { className: n, active: i, children: o } = e,
+          s = r.useRef();
+        r.useEffect(() => {
+          const e = s.current;
+          if (e && i) {
+            const t = e.firstChild;
+            t && t.focus && t.focus();
+          }
+        }, [i]);
+        const a = (0, l.BE)(s, t);
+        return r.createElement(
+          "div",
+          { ref: a, className: n, tabIndex: -1 },
+          o
+        );
+      });
+    },
+    37699: (e, t, n) => {
       "use strict";
       n.d(t, {
-        On: () => A,
-        t9: () => y,
-        Pv: () => W,
-        uH: () => X,
-        RG: () => K,
-        JX: () => $,
-        BL: () => w,
-        e1: () => B,
-        D2: () => F,
-        Yy: () => I,
+        On: () => v,
+        Pv: () => T,
+        uH: () => x,
+        RG: () => k,
+        JX: () => L,
+        BL: () => l.BL,
+        e1: () => _,
+        D2: () => C,
+        Yy: () => c,
       });
       var i = n(67294),
         r = n(48341),
         o = n(73935),
         s = n(64839),
-        a = n(70655),
-        l = n(84595),
-        c = n(32548),
-        u = n(86178),
-        d = n(7573),
-        h = n(90067),
-        m = n(77520),
-        p = n(99533),
-        g = n(81130);
-      class _ {
+        a = n(39811),
+        l = n(2957);
+      function c(e) {
+        const { active: t, children: n } = e,
+          r = (0, a.$C)() || (0, l.BL)(window),
+          s = (0, a.eR)(),
+          [c, u] = i.useState(),
+          [d, h] = i.useState(!1),
+          m = i.useRef();
+        if (
+          (i.useLayoutEffect(() => {
+            if (t) {
+              const e = r.ShowPortalModal(),
+                t = e.OnElementReadyCallbacks.Register(u),
+                n = e.OnModalActiveCallbacks.Register(h);
+              return (
+                (m.current = e.key),
+                () => {
+                  u(null), h(!1), e.Close(), t.Unregister(), n.Unregister();
+                }
+              );
+            }
+          }, [r, t]),
+          !c || !t)
+        )
+          return null;
+        let p = n;
+        return (
+          s && (p = i.createElement(s, { active: d, modalKey: m.current }, n)),
+          o.createPortal(p, c)
+        );
+      }
+      var u = n(90067),
+        d = n(32548),
+        h = n(95598),
+        m = n(53622),
+        p = n(15702);
+      const g = (0, u.Y)("ModalPresentationContext", () => i.createContext({}));
+      function _(e) {
+        const t = i.useContext(g);
+        return i.createElement(
+          p.T,
+          Object.assign({ component: t.ModalPosition, fallback: f }, e)
+        );
+      }
+      function f(e) {
+        let t,
+          n = {};
+        e.onEscKeypress &&
+          ((n.tabIndex = 0),
+          (n.onKeyDown = (t) => {
+            27 == t.keyCode && e.onEscKeypress();
+          }),
+          (n.onMouseDown = (t) => {
+            t.currentTarget !== t.target ||
+              e.bDisableBackgroundDismiss ||
+              e.onEscKeypress();
+          }),
+          (t = (e) => {
+            e && (m.ni(e, e.ownerDocument.activeElement) || e.focus());
+          }));
+        let r = ["ModalPosition"];
+        e.className && r.push(e.className),
+          e.bDestructiveWarning && r.push("Destructive");
+        const o =
+            e.renderContent ||
+            ((e) => i.createElement("div", Object.assign({}, e))),
+          s = i.createElement(
+            i.Fragment,
+            null,
+            !e.hideTopBar &&
+              i.createElement("div", { className: "ModalPosition_TopBar" }),
+            e.onEscKeypress &&
+              !e.bHideCloseIcon &&
+              i.createElement(
+                "div",
+                { className: "ModalPosition_Dismiss" },
+                i.createElement(
+                  "div",
+                  { className: "closeButton", onClick: e.onEscKeypress },
+                  i.createElement(h.pVO, null)
+                )
+              ),
+            i.createElement(d.S, null, e.children)
+          );
+        return i.createElement(
+          "div",
+          Object.assign({ className: r.join(" ") }, n, { ref: t }),
+          o({ className: "ModalPosition_Content", children: s })
+        );
+      }
+      n(66243), n(10847), n(28609), n(92398);
+      const v = ({
+        active: e,
+        onDismiss: t,
+        className: n,
+        modalClassName: o,
+        children: s,
+      }) =>
+        i.createElement(
+          c,
+          { active: e },
+          i.createElement(
+            _,
+            { onEscKeypress: t, className: o },
+            i.createElement(r.VY, { className: n }, s)
+          )
+        );
+      function C(e) {
+        const { className: t, children: n } = e;
+        return i.createElement(
+          c,
+          { active: !0 },
+          i.createElement("div", { className: t }, n)
+        );
+      }
+      n(1959);
+      var b = n(7707),
+        E = n(27745),
+        w = n(35921),
+        S = (n(23816), n(17010), n(12505), n(71174)),
+        y = n(86178),
+        D = n(90666);
+      function T(e) {
+        const { children: t, navID: n, closeModal: r } = e,
+          o = i.createRef(),
+          s = (0, S.L)(),
+          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+        return (0, D.id)() && !D.De.IN_STEAMUI
+          ? i.createElement(
+              b.Fe,
+              {
+                navID: n,
+                NavigationManager: s,
+                navTreeRef: o,
+                onCancelButton: r,
+                className: y.GamepadOnlyModalWrapper,
+              },
+              i.createElement(
+                E.O,
+                null,
+                i.createElement(
+                  w.s,
+                  {
+                    className: y.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: a,
+                    focusableIfNoChildren: !0,
+                  },
+                  t
+                )
+              )
+            )
+          : i.createElement(i.Fragment, null, t);
+      }
+      var M = n(70655),
+        R = n(29323),
+        I = n(41311),
+        O = n(7573);
+      const k = (0, R.Pi)((e) => {
+        const { onCancel: t, closeModal: n, bOKDisabled: o, onOK: s } = e,
+          a = (0, D.id)(),
+          l = i.useCallback(() => {
+            (t && t()) || (n && n());
+          }, [t, n]),
+          c = i.useCallback(
+            () =>
+              (0, M.mG)(void 0, void 0, void 0, function* () {
+                o || (s && (yield s()), n && n());
+              }),
+            [o, s, n]
+          );
+        return i.createElement(
+          _,
+          {
+            onEscKeypress: l,
+            className: e.modalClassName,
+            bDestructiveWarning: e.bDestructiveWarning,
+            bDisableBackgroundDismiss: e.bDisableBackgroundDismiss,
+            bHideCloseIcon: e.bHideCloseIcon,
+          },
+          i.createElement(
+            r.oX,
+            {
+              classNameContent: (0, O.Z)(
+                "GenericConfirmDialog",
+                e.bAllowFullSize && "DialogContentFullSize",
+                e.className
+              ),
+              onSubmit: c,
+              bCenterVertically: !a,
+            },
+            e.children
+          )
+        );
+      });
+      let x = class extends i.Component {
+        Cancel() {
+          this.props.onCancel && this.props.onCancel(),
+            this.props.closeModal && this.props.closeModal();
+        }
+        render() {
+          const e = this.props,
+            {
+              strTitle: t,
+              strDescription: n,
+              strOKButtonText: o,
+              strCancelButtonText: s,
+              strMiddleButtonText: a,
+              onMiddleButton: l,
+              bAlertDialog: c,
+              children: u,
+            } = e,
+            d = (0, M._T)(e, [
+              "strTitle",
+              "strDescription",
+              "strOKButtonText",
+              "strCancelButtonText",
+              "strMiddleButtonText",
+              "onMiddleButton",
+              "bAlertDialog",
+              "children",
+            ]),
+            h = o || (0, I.Xx)("#Button_Close");
+          let m = i.createElement(r.o9, {
+            bOKDisabled: this.props.bOKDisabled,
+            bCancelDisabled: this.props.bCancelDisabled,
+            strOKText: o,
+            onCancel: this.Cancel,
+            strCancelText: s,
+          });
+          return (
+            c
+              ? (m = i.createElement(r.KM, null, h))
+              : l &&
+                (m = i.createElement(r.$0, {
+                  bOKDisabled: this.props.bOKDisabled,
+                  bCancelDisabled: this.props.bCancelDisabled,
+                  strOKText: o,
+                  onCancel: this.Cancel,
+                  strCancelText: s,
+                  onUpdate: () => {
+                    l(), this.props.closeModal && this.props.closeModal();
+                  },
+                  strUpdateText: a,
+                  bUpdateDisabled: this.props.bMiddleDisabled,
+                })),
+            i.createElement(
+              k,
+              Object.assign({}, d),
+              i.createElement(
+                w.s,
+                { onCancelButton: this.Cancel },
+                i.createElement(
+                  r.h4,
+                  null,
+                  " ",
+                  t || i.createElement(i.Fragment, null, " "),
+                  " "
+                ),
+                i.createElement(
+                  r.uT,
+                  null,
+                  i.createElement(r.Ac, null, n, u),
+                  i.createElement(r.$_, null, m)
+                )
+              )
+            )
+          );
+        }
+      };
+      (0, M.gn)([s.ak], x.prototype, "Cancel", null),
+        (x = (0, M.gn)([R.Pi], x));
+      let L = class extends i.Component {
+        render() {
+          const e = Object.assign(
+            {
+              strTitle: (0, I.Xx)("#Error_FailureNotice"),
+              strDescription: (0, I.Xx)("#Error_GenericFailureDescription"),
+              bAlertDialog: !0,
+              bDestructiveWarning: !0,
+              onOK: () => {},
+              onCancel: () => {},
+            },
+            this.props
+          );
+          return i.createElement(x, Object.assign({}, e));
+        }
+      };
+      L = (0, M.gn)([R.Pi], L);
+    },
+    57423: (e, t, n) => {
+      "use strict";
+      n.d(t, { QA: () => l, kv: () => a });
+      var i = n(70655),
+        r = n(81130),
+        o = n(99533);
+      class s {
         constructor() {
-          this.key = "Modal_" + _.sm_lastKey++;
+          this.key = "Modal_" + s.sm_lastKey++;
         }
       }
-      _.sm_lastKey = 0;
-      class f extends _ {
+      s.sm_lastKey = 0;
+      class a extends s {
         constructor(e) {
-          super(), (this.ModalUpdatedCallback = new p.pB()), (this.element = e);
+          super(), (this.ModalUpdatedCallback = new o.pB()), (this.element = e);
         }
         UpdateModal(e) {
           (this.element = e), this.ModalUpdatedCallback.Dispatch();
         }
       }
-      class v extends _ {
+      class l extends s {
         constructor() {
           super(),
-            (this.m_OnElementReadyCallbacks = new p.pB()),
-            (this.m_OnActiveModalCallbacks = new p.pB());
+            (this.m_OnElementReadyCallbacks = new o.pB()),
+            (this.m_OnActiveModalCallbacks = new o.pB());
         }
         get OnElementReadyCallbacks() {
           return this.m_OnElementReadyCallbacks;
@@ -13651,14 +14091,253 @@
           this.m_OnActiveModalCallbacks.Dispatch(e);
         }
       }
-      (0, a.gn)([g.a], v.prototype, "RefModalElement", null);
-      class C {
+      (0, i.gn)([r.a], l.prototype, "RefModalElement", null);
+    },
+    39811: (e, t, n) => {
+      "use strict";
+      n.d(t, { Y0: () => T, eR: () => R, $C: () => M });
+      var i = n(70655),
+        r = n(67294),
+        o = n(73935),
+        s = n(84595),
+        a = n(1959),
+        l = n(2957),
+        c = n(57287),
+        u = n(86199),
+        d = n(53157),
+        h = (n(87678), n(66243)),
+        m = n(10847),
+        p = n(16156),
+        g = n.n(p),
+        _ = n(32548),
+        f = n(53622),
+        v = n(64839);
+      function C(e) {
+        const { manager: t, ownerWindow: n, browserInfo: i } = e,
+          s = (0, v.NW)(),
+          a = n.document.body;
+        (0, v.Qg)(t.OnMenusChanged, s);
+        const l = t.BShouldRenderMouseOverlay(),
+          c = t.GetVisibleMenus();
+        return r.createElement(
+          r.Fragment,
+          null,
+          l && o.createPortal(r.createElement(m.Vc, null), a),
+          c.map((e) =>
+            r.createElement(
+              _.S,
+              { key: e.key },
+              r.createElement(b, { instance: e, elRoot: a, browserInfo: i })
+            )
+          )
+        );
+      }
+      function b(e) {
+        var t;
+        const { instance: n, elRoot: i, browserInfo: o } = e,
+          s = r.useRef(void 0);
+        if (void 0 === s.current) {
+          const e = i.ownerDocument.defaultView;
+          s.current =
+            (n.options.bForcePopup || e.innerWidth < 400) &&
+            !!(null === (t = e.SteamClient) || void 0 === t
+              ? void 0
+              : t.Window);
+        }
+        const a = r.useMemo(
+          () => ({ instance: n, styles: g(), presentation: 0 }),
+          [n]
+        );
+        return r.createElement(
+          m.Yr.Provider,
+          { value: a },
+          s.current
+            ? r.createElement(w, { instance: n, browserInfo: o })
+            : r.createElement(E, { instance: n, elRoot: i })
+        );
+      }
+      function E(e) {
+        const { instance: t, elRoot: n } = e;
+        return o.createPortal(
+          r.createElement(m.Wn, Object.assign({}, t.position), t.ReactElement),
+          n
+        );
+      }
+      function w(e) {
+        const { instance: t, browserInfo: n } = e,
+          i = r.useCallback(
+            (e) => {
+              const { options: n, position: i } = t,
+                r = i.element;
+              if (n.bScreenCoordinates)
+                e.dimensions = {
+                  left: i.clientX,
+                  top: i.clientY,
+                  width: 2,
+                  height: 1,
+                };
+              else {
+                let t = f.sH(
+                  r.ownerDocument.defaultView,
+                  r.getBoundingClientRect()
+                );
+                e.dimensions = {
+                  left: t.right,
+                  top: t.top,
+                  width: 2,
+                  height: 1,
+                };
+              }
+              return (
+                (e.availscreenwidth =
+                  r.ownerDocument.defaultView.screen.availWidth),
+                (e.availscreenheight =
+                  r.ownerDocument.defaultView.screen.availHeight),
+                e
+              );
+            },
+            [t]
+          ),
+          { popupObj: s, element: a } = (0, h.B)(
+            "contextmenu_" + t.key,
+            {
+              title: "Menu",
+              html_class: g().ContextMenuPopup + " client_chat_frame",
+              body_class: "ContextMenuPopupBody",
+              replace_existing_popup: !1,
+              target_browser: n,
+              eCreationFlags: d.eL.ContextMenu,
+            },
+            { updateParamsBeforeShow: i }
+          );
+        return (
+          r.useLayoutEffect(() => {
+            t.SetPopup(s);
+          }, [t, s]),
+          a
+            ? o.createPortal(
+                r.createElement(
+                  m.Wn,
+                  Object.assign({}, t.position, { popup: s }),
+                  t.ReactElement
+                ),
+                a
+              )
+            : null
+        );
+      }
+      const S = r.createContext(null);
+      function y(e) {
+        const {
+            ActiveMenuComponent: t,
+            refContextMenuManager: n,
+            browserInfo: i,
+            children: o,
+          } = e,
+          s = (0, d.Wy)(),
+          a = (null == s ? void 0 : s.ownerWindow) || window,
+          l = r.useRef();
+        l.current || (l.current = new u.u()),
+          r.useLayoutEffect(
+            () => (
+              c.Oo.SetMenuManager(a, l.current),
+              () => c.Oo.SetMenuManager(a, void 0)
+            ),
+            [a]
+          ),
+          r.useLayoutEffect(
+            () => ((0, v.k$)(n, l.current), () => (0, v.k$)(n, void 0)),
+            [n]
+          );
+        const h = t || C;
+        return r.createElement(
+          S.Provider,
+          { value: l.current },
+          r.createElement(
+            _.S,
+            null,
+            r.createElement(h, {
+              manager: l.current,
+              ownerWindow: a,
+              browserInfo: i,
+            })
+          ),
+          o
+        );
+      }
+      const D = r.createContext({}),
+        T = r.memo(function (e) {
+          const {
+              children: t,
+              bRenderOverlayAtRoot: n,
+              refModalManager: c,
+              DialogWrapper: u,
+              ContextMenuComponent: d,
+              refContextMenuManager: h,
+              browserInfo: m,
+            } = e,
+            p = (0, i._T)(e, [
+              "children",
+              "bRenderOverlayAtRoot",
+              "refModalManager",
+              "DialogWrapper",
+              "ContextMenuComponent",
+              "refContextMenuManager",
+              "browserInfo",
+            ]),
+            g = r.useRef();
+          g.current || (g.current = new l.pG());
+          let _ = r.createElement(
+            a.t,
+            Object.assign({}, p, { DialogWrapper: u, ModalManager: g.current })
+          );
+          e.bRenderOverlayAtRoot && (_ = o.createPortal(_, document.body)),
+            r.useEffect(
+              () => ((0, s.k$)(c, g.current), () => (0, s.k$)(c, null)),
+              [c]
+            );
+          const f = r.useMemo(
+            () => ({ ModalManager: g.current, DialogWrapper: u }),
+            [u]
+          );
+          return r.createElement(
+            D.Provider,
+            { value: f },
+            r.createElement(
+              y,
+              {
+                ActiveMenuComponent: d,
+                refContextMenuManager: h,
+                browserInfo: m,
+              },
+              _,
+              e.children
+            )
+          );
+        });
+      function M() {
+        return r.useContext(D).ModalManager;
+      }
+      function R() {
+        return r.useContext(D).DialogWrapper;
+      }
+    },
+    2957: (e, t, n) => {
+      "use strict";
+      n.d(t, { BL: () => u, Zp: () => c, pG: () => a });
+      n(67294);
+      var i = n(90067),
+        r = n(77520),
+        o = n(99533),
+        s = (n(64839), n(57423));
+      n(39811);
+      class a {
         constructor() {
           (this.m_bUsePopups = !0),
             (this.m_rgModals = []),
-            (this.m_OnModalCountChangedCallbacks = new p.pB()),
-            (this.m_OnModalShownCallbacks = new p.pB()),
-            (this.m_OnModalHiddenCallbacks = new p.pB()),
+            (this.m_OnModalCountChangedCallbacks = new o.pB()),
+            (this.m_OnModalShownCallbacks = new o.pB()),
+            (this.m_OnModalHiddenCallbacks = new o.pB()),
             (this.m_cMountedOverlays = 0);
         }
         get ModalCountChangedCallbacks() {
@@ -13671,7 +14350,7 @@
           return this.m_OnModalHiddenCallbacks.Register(e);
         }
         RegisterOverlay(e) {
-          (0, m.X)(
+          (0, r.X)(
             0 == this.m_cMountedOverlays,
             "Duplicate modal DialogOverlay; modals will appear in both"
           ),
@@ -13685,7 +14364,7 @@
           "show" == e &&
             0 == this.m_cMountedOverlays &&
             window.setTimeout(() => {
-              (0, m.X)(
+              (0, r.X)(
                 this.m_cMountedOverlays > 0,
                 "Modal was shown but ModalManager has no associated DialogOverlay"
               );
@@ -13715,7 +14394,7 @@
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(e) {
-          const t = new f(e);
+          const t = new s.kv(e);
           this.m_rgModals.push(t);
           const n = {
             Close: () => {
@@ -13728,7 +14407,7 @@
           return this.OnModalCountChanged("show"), n;
         }
         ShowPortalModal() {
-          const e = new v();
+          const e = new s.QA();
           return (
             this.m_rgModals.push(e),
             this.OnModalCountChanged("show"),
@@ -13749,13 +14428,13 @@
           return this.m_bUsePopups;
         }
       }
-      class b {
+      class l {
         constructor() {
           this.m_mapModalManager = new WeakMap();
         }
         GetModalManager(e) {
           let t = this.m_mapModalManager.get(e);
-          return t || ((t = new C()), this.m_mapModalManager.set(e, t)), t;
+          return t || ((t = new a()), this.m_mapModalManager.set(e, t)), t;
         }
         RegisterModalManager(e, t) {
           this.m_mapModalManager.set(t, e);
@@ -13764,445 +14443,10 @@
           this.m_mapModalManager.delete(e);
         }
       }
-      const E = (0, h.Y)("ModalManagerFactory", () => new b());
-      function w(e) {
-        return E.GetModalManager(e);
+      const c = (0, i.Y)("ModalManagerFactory", () => new l());
+      function u(e) {
+        return c.GetModalManager(e);
       }
-      function S(e) {
-        i.useEffect(() => {
-          if (e)
-            return (
-              document.body.classList.add(u.BodyNoScrollDialog),
-              () => document.body.classList.remove(u.BodyNoScrollDialog)
-            );
-        }, [e]);
-      }
-      function y(e) {
-        let { ModalManager: t, DialogWrapper: n, style: r } = e,
-          o = (0, a._T)(e, ["ModalManager", "DialogWrapper", "style"]);
-        const l = t.modals,
-          c = l && !!l.length,
-          u = t.active_modal;
-        S(c),
-          (function (e) {
-            const t = (0, s.NW)();
-            i.useEffect(() => e.RegisterOverlay(t), [e, t]);
-          })(t);
-        const h = (function (e) {
-          return (0, s.xK)(
-            (t) => {
-              if (!t) return;
-              const n = t.ownerDocument.defaultView;
-              return (
-                E.RegisterModalManager(e, n), () => E.UnregisterModalManager(n)
-              );
-            },
-            [e]
-          );
-        })(t);
-        let m = null;
-        return (
-          l && l.length
-            ? (m = l.map((e) =>
-                e instanceof f
-                  ? i.createElement(T, {
-                      key: e.key,
-                      modal: e,
-                      active: e == u,
-                      Component: null != n ? n : R,
-                    })
-                  : e instanceof v
-                  ? i.createElement(D, { key: e.key, modal: e, active: e == u })
-                  : void 0
-              ))
-            : (r = Object.assign(Object.assign({}, r), { display: "none" })),
-          i.createElement(
-            "div",
-            Object.assign({}, o, {
-              style: r,
-              ref: h,
-              className: (0, d.Z)(o.className, "FullModalOverlay"),
-            }),
-            i.createElement("div", {
-              className: "ModalOverlayContent ModalOverlayBackground",
-            }),
-            m
-          )
-        );
-      }
-      function D(e) {
-        const { modal: t, active: n } = e;
-        return (
-          i.useEffect(
-            () => (n ? (t.SetActive(n), () => t.SetActive(!1)) : void 0),
-            [t, n]
-          ),
-          i.createElement(
-            c.S,
-            null,
-            i.createElement("div", {
-              className: (0, d.Z)(
-                "ModalOverlayContent",
-                n ? "active" : "inactive"
-              ),
-              ref: t.RefModalElement,
-            })
-          )
-        );
-      }
-      function T(e) {
-        const { modal: t, active: n, Component: r } = e,
-          o = (0, s.NW)();
-        return (
-          (0, s.Qg)(t.ModalUpdatedCallback, o),
-          i.createElement(
-            c.S,
-            null,
-            i.createElement(
-              r,
-              {
-                className: (0, d.Z)(
-                  "ModalOverlayContent",
-                  n ? "active" : "inactive"
-                ),
-                active: n,
-                modalKey: t.key,
-              },
-              t.element
-            )
-          )
-        );
-      }
-      const R = i.forwardRef(function (e, t) {
-          const { className: n, active: r, children: o } = e,
-            a = i.useRef();
-          i.useEffect(() => {
-            const e = a.current;
-            if (e && r) {
-              const t = e.firstChild;
-              t && t.focus && t.focus();
-            }
-          }, [r]);
-          const l = (0, s.BE)(a, t);
-          return i.createElement(
-            "div",
-            { ref: l, className: n, tabIndex: -1 },
-            o
-          );
-        }),
-        M = i.createContext({});
-      i.memo(function (e) {
-        const {
-            children: t,
-            bRenderOverlayAtRoot: n,
-            refModalManager: r,
-            DialogWrapper: s,
-          } = e,
-          c = (0, a._T)(e, [
-            "children",
-            "bRenderOverlayAtRoot",
-            "refModalManager",
-            "DialogWrapper",
-          ]),
-          u = i.useRef();
-        u.current || (u.current = new C());
-        let d = i.createElement(
-          y,
-          Object.assign({}, c, { DialogWrapper: s, ModalManager: u.current })
-        );
-        e.bRenderOverlayAtRoot && (d = o.createPortal(d, document.body)),
-          i.useEffect(
-            () => ((0, l.k$)(r, u.current), () => (0, l.k$)(r, null)),
-            [r]
-          );
-        const h = i.useMemo(
-          () => ({ ModalManager: u.current, DialogWrapper: s }),
-          [s]
-        );
-        return i.createElement(M.Provider, { value: h }, d, e.children);
-      });
-      function I(e) {
-        const { active: t, children: n } = e,
-          r = i.useContext(M).ModalManager || w(window),
-          s = i.useContext(M).DialogWrapper,
-          [a, l] = i.useState(),
-          [c, u] = i.useState(!1),
-          d = i.useRef();
-        if (
-          (i.useLayoutEffect(() => {
-            if (t) {
-              const e = r.ShowPortalModal(),
-                t = e.OnElementReadyCallbacks.Register(l),
-                n = e.OnModalActiveCallbacks.Register(u);
-              return (
-                (d.current = e.key),
-                () => {
-                  l(null), u(!1), e.Close(), t.Unregister(), n.Unregister();
-                }
-              );
-            }
-          }, [r, t]),
-          !a || !t)
-        )
-          return null;
-        let h = n;
-        return (
-          s && (h = i.createElement(s, { active: c, modalKey: d.current }, n)),
-          o.createPortal(h, a)
-        );
-      }
-      var O = n(95598),
-        k = n(53622),
-        x = n(15702);
-      const L = (0, h.Y)("ModalPresentationContext", () => i.createContext({}));
-      function B(e) {
-        const t = i.useContext(L);
-        return i.createElement(
-          x.T,
-          Object.assign({ component: t.ModalPosition, fallback: N }, e)
-        );
-      }
-      function N(e) {
-        let t,
-          n = {};
-        e.onEscKeypress &&
-          ((n.tabIndex = 0),
-          (n.onKeyDown = (t) => {
-            27 == t.keyCode && e.onEscKeypress();
-          }),
-          (n.onMouseDown = (t) => {
-            t.currentTarget !== t.target ||
-              e.bDisableBackgroundDismiss ||
-              e.onEscKeypress();
-          }),
-          (t = (e) => {
-            e && (k.ni(e, e.ownerDocument.activeElement) || e.focus());
-          }));
-        let r = ["ModalPosition"];
-        e.className && r.push(e.className),
-          e.bDestructiveWarning && r.push("Destructive");
-        const o =
-            e.renderContent ||
-            ((e) => i.createElement("div", Object.assign({}, e))),
-          s = i.createElement(
-            i.Fragment,
-            null,
-            !e.hideTopBar &&
-              i.createElement("div", { className: "ModalPosition_TopBar" }),
-            e.onEscKeypress &&
-              !e.bHideCloseIcon &&
-              i.createElement(
-                "div",
-                { className: "ModalPosition_Dismiss" },
-                i.createElement(
-                  "div",
-                  { className: "closeButton", onClick: e.onEscKeypress },
-                  i.createElement(O.pVO, null)
-                )
-              ),
-            i.createElement(c.S, null, e.children)
-          );
-        return i.createElement(
-          "div",
-          Object.assign({ className: r.join(" ") }, n, { ref: t }),
-          o({ className: "ModalPosition_Content", children: s })
-        );
-      }
-      n(53157);
-      n(10847), n(28609), n(92398);
-      const A = ({
-        active: e,
-        onDismiss: t,
-        className: n,
-        modalClassName: o,
-        children: s,
-      }) =>
-        i.createElement(
-          I,
-          { active: e },
-          i.createElement(
-            B,
-            { onEscKeypress: t, className: o },
-            i.createElement(r.VY, { className: n }, s)
-          )
-        );
-      function F(e) {
-        const { className: t, children: n } = e;
-        return i.createElement(
-          I,
-          { active: !0 },
-          i.createElement("div", { className: t }, n)
-        );
-      }
-      var P = n(7707),
-        G = n(27745),
-        V = n(35921),
-        U = (n(23816), n(17010), n(12505), n(71174)),
-        H = n(90666);
-      function W(e) {
-        const { children: t, navID: n, closeModal: r } = e,
-          o = i.createRef(),
-          s = (0, U.L)(),
-          a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, H.id)() && !H.De.IN_STEAMUI
-          ? i.createElement(
-              P.Fe,
-              {
-                navID: n,
-                NavigationManager: s,
-                navTreeRef: o,
-                onCancelButton: r,
-                className: u.GamepadOnlyModalWrapper,
-              },
-              i.createElement(
-                G.O,
-                null,
-                i.createElement(
-                  V.s,
-                  {
-                    className: u.GamepadOnlyPanelWrapper,
-                    onGamepadDirection: a,
-                    focusableIfNoChildren: !0,
-                  },
-                  t
-                )
-              )
-            )
-          : i.createElement(i.Fragment, null, t);
-      }
-      var j = n(29323),
-        z = n(41311);
-      const K = (0, j.Pi)((e) => {
-        const { onCancel: t, closeModal: n, bOKDisabled: o, onOK: s } = e,
-          l = (0, H.id)(),
-          c = i.useCallback(() => {
-            (t && t()) || (n && n());
-          }, [t, n]),
-          u = i.useCallback(
-            () =>
-              (0, a.mG)(void 0, void 0, void 0, function* () {
-                o || (s && (yield s()), n && n());
-              }),
-            [o, s, n]
-          );
-        return i.createElement(
-          B,
-          {
-            onEscKeypress: c,
-            className: e.modalClassName,
-            bDestructiveWarning: e.bDestructiveWarning,
-            bDisableBackgroundDismiss: e.bDisableBackgroundDismiss,
-            bHideCloseIcon: e.bHideCloseIcon,
-          },
-          i.createElement(
-            r.oX,
-            {
-              classNameContent: (0, d.Z)(
-                "GenericConfirmDialog",
-                e.bAllowFullSize && "DialogContentFullSize",
-                e.className
-              ),
-              onSubmit: u,
-              bCenterVertically: !l,
-            },
-            e.children
-          )
-        );
-      });
-      let X = class extends i.Component {
-        Cancel() {
-          this.props.onCancel && this.props.onCancel(),
-            this.props.closeModal && this.props.closeModal();
-        }
-        render() {
-          const e = this.props,
-            {
-              strTitle: t,
-              strDescription: n,
-              strOKButtonText: o,
-              strCancelButtonText: s,
-              strMiddleButtonText: l,
-              onMiddleButton: c,
-              bAlertDialog: u,
-              children: d,
-            } = e,
-            h = (0, a._T)(e, [
-              "strTitle",
-              "strDescription",
-              "strOKButtonText",
-              "strCancelButtonText",
-              "strMiddleButtonText",
-              "onMiddleButton",
-              "bAlertDialog",
-              "children",
-            ]),
-            m = o || (0, z.Xx)("#Button_Close");
-          let p = i.createElement(r.o9, {
-            bOKDisabled: this.props.bOKDisabled,
-            bCancelDisabled: this.props.bCancelDisabled,
-            strOKText: o,
-            onCancel: this.Cancel,
-            strCancelText: s,
-          });
-          return (
-            u
-              ? (p = i.createElement(r.KM, null, m))
-              : c &&
-                (p = i.createElement(r.$0, {
-                  bOKDisabled: this.props.bOKDisabled,
-                  bCancelDisabled: this.props.bCancelDisabled,
-                  strOKText: o,
-                  onCancel: this.Cancel,
-                  strCancelText: s,
-                  onUpdate: () => {
-                    c(), this.props.closeModal && this.props.closeModal();
-                  },
-                  strUpdateText: l,
-                  bUpdateDisabled: this.props.bMiddleDisabled,
-                })),
-            i.createElement(
-              K,
-              Object.assign({}, h),
-              i.createElement(
-                V.s,
-                { onCancelButton: this.Cancel },
-                i.createElement(
-                  r.h4,
-                  null,
-                  " ",
-                  t || i.createElement(i.Fragment, null, " "),
-                  " "
-                ),
-                i.createElement(
-                  r.uT,
-                  null,
-                  i.createElement(r.Ac, null, n, d),
-                  i.createElement(r.$_, null, p)
-                )
-              )
-            )
-          );
-        }
-      };
-      (0, a.gn)([s.ak], X.prototype, "Cancel", null),
-        (X = (0, a.gn)([j.Pi], X));
-      let $ = class extends i.Component {
-        render() {
-          const e = Object.assign(
-            {
-              strTitle: (0, z.Xx)("#Error_FailureNotice"),
-              strDescription: (0, z.Xx)("#Error_GenericFailureDescription"),
-              bAlertDialog: !0,
-              bDestructiveWarning: !0,
-              onOK: () => {},
-              onCancel: () => {},
-            },
-            this.props
-          );
-          return i.createElement(X, Object.assign({}, e));
-        }
-      };
-      $ = (0, a.gn)([j.Pi], $);
     },
     74091: (e, t, n) => {
       "use strict";
@@ -14322,21 +14566,22 @@
     },
     41414: (e, t, n) => {
       "use strict";
-      n.d(t, { AM: () => p, BR: () => g, e1: () => l.e1, x1: () => m });
+      n.d(t, { AM: () => g, BR: () => _, e1: () => l.e1, x1: () => p });
       var i = n(70655),
         r = n(67294),
         o = n(73935),
         s = n(53157),
         a = n(10847),
-        l = n(59253),
-        c = n(28609),
-        u = n(77520),
-        d = n(41311),
-        h = n(90666);
-      function m(e, t, n) {
+        l = n(37699),
+        c = n(39811),
+        u = n(28609),
+        d = n(77520),
+        h = n(41311),
+        m = n(90666);
+      function p(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           const r = !0 === (null == n ? void 0 : n.bNeverPopOut),
-            s = !r && _(null, t),
+            s = !r && f(null, t),
             a =
               (null == n ? void 0 : n.bForcePopOut) &&
               (null == n ? void 0 : n.popupWidth) &&
@@ -14353,7 +14598,7 @@
                     o.render(e, i),
                     yield n;
                   let r = document;
-                  h.De.IN_STEAMUI && r.fonts && (yield r.fonts.ready);
+                  m.De.IN_STEAMUI && r.fonts && (yield r.fonts.ready);
                   const s = i.getBoundingClientRect(),
                     a = Math.ceil(s.height),
                     l = Math.ceil(s.width);
@@ -14369,11 +14614,11 @@
               l.height / t.innerHeight < 0.9 &&
               l.width / t.innerWidth < 0.8;
           if (r || (!(null == n ? void 0 : n.bForcePopOut) && c))
-            return g(e, t);
+            return _(e, t);
           const u = {
               strTitle:
                 (null == n ? void 0 : n.strTitle) ||
-                (0, d.Xx)("#Dialog_DefaultWindowTitle"),
+                (0, h.Xx)("#Dialog_DefaultWindowTitle"),
               fnOnClose: null == n ? void 0 : n.fnOnClose,
               popupWidth:
                 (null == n ? void 0 : n.popupWidth) ||
@@ -14384,23 +14629,23 @@
               bHideMainWindowForPopouts:
                 null == n ? void 0 : n.bHideMainWindowForPopouts,
             },
-            m = { bHideActions: null == n ? void 0 : n.bHideActionIcons };
-          return g(
+            d = { bHideActions: null == n ? void 0 : n.bHideActionIcons };
+          return _(
             e,
             t,
             u.strTitle,
             u,
             null == n ? void 0 : n.browserContext,
-            m
+            d
           );
         });
       }
-      function p(e, t, n) {
+      function g(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
-          return m(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, n));
+          return p(e, t, Object.assign({ bHideMainWindowForPopouts: !0 }, n));
         });
       }
-      function g(e, t, n, i, o, s, a) {
+      function _(e, t, n, i, o, s, a) {
         let c, u;
         const d = e.props.closeModal,
           h = () => {
@@ -14412,7 +14657,7 @@
             c && c.Close(), h();
           },
           p = r.cloneElement(e, { closeModal: m });
-        if (_((a = a || (0, l.BL)(t)), t) && i && n) {
+        if (f((a = a || (0, l.BL)(t)), t) && i && n) {
           if (i.bHideMainWindowForPopouts) {
             const e = r.createElement(
               l.e1,
@@ -14425,18 +14670,19 @@
             u = a.ShowModal(e);
           }
           const e = Object.assign(Object.assign({}, i), { fnOnClose: h }),
-            d = new f(t, n, e, p, o, s);
+            d = new v(t, n, e, p, o, s);
           d.Show(), (c = d);
         } else c = a.ShowModal(p);
         return c;
       }
-      function _(e, t) {
+      function f(e, t) {
         return (
-          (e = e || (0, l.BL)(t || window)), h.De.USE_POPUPS && e.BUsePopups()
+          (e = e || (0, l.BL)(t || window)), m.De.USE_POPUPS && e.BUsePopups()
         );
       }
-      class f extends s.K3 {
+      class v extends s.K3 {
         constructor(e, t, n, i, r, o) {
+          var s;
           super(t, {
             title: n.strTitle,
             html_class: "client_chat_frame fullheight ModalDialogPopup",
@@ -14447,23 +14693,24 @@
             availscreenwidth: e.screen.availWidth,
             availscreenheight: e.screen.availHeight,
           }),
-            (this.m_windowOpener = e),
+            (this.m_windowOpener =
+              null !== (s = n.openerWindow) && void 0 !== s ? s : e),
             (this.m_modalProps = n),
             (this.m_modalElement = i),
             (this.m_options = o);
         }
         Update(e) {
-          (0, u.X)(!1, "NYI");
+          (0, d.X)(!1, "NYI");
         }
         UpdateParamsBeforeShow(e) {
-          var t, n, i;
-          let r,
-            o,
-            s,
-            a = this.m_modalProps.popupWidth || 500,
-            l = this.m_modalProps.popupHeight || 400;
+          var t, n, i, r, o, s;
+          let a,
+            l,
+            c,
+            u = this.m_modalProps.popupWidth || 500,
+            d = this.m_modalProps.popupHeight || 400;
           if (
-            h.De.IN_CLIENT &&
+            m.De.IN_CLIENT &&
             (null ===
               (i =
                 null ===
@@ -14476,18 +14723,33 @@
               ? void 0
               : i.GetBrowserID)
           )
-            s = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+            c = this.m_windowOpener.SteamClient.Window.GetBrowserID();
+          else if (
+            m.De.IN_CLIENT &&
+            (null ===
+              (s =
+                null ===
+                  (o =
+                    null === (r = this.m_windowOpener) || void 0 === r
+                      ? void 0
+                      : r.SteamClient) || void 0 === o
+                  ? void 0
+                  : o.Browser) || void 0 === s
+              ? void 0
+              : s.GetBrowserID)
+          )
+            c = this.m_windowOpener.SteamClient.Browser.GetBrowserID();
           else {
             let e = this.m_windowOpener.screen;
-            (r = (e.availWidth - a) / 2), (o = (e.availHeight - l) / 2);
+            (a = (e.availWidth - u) / 2), (l = (e.availHeight - d) / 2);
             let t = e;
             void 0 !== t.availLeft &&
               void 0 !== t.availTop &&
-              ((r += t.availLeft), (o += t.availTop));
+              ((a += t.availLeft), (l += t.availTop));
           }
           return Object.assign(Object.assign({}, e), {
-            dimensions: { width: a, height: l, left: r, top: o },
-            window_opener_id: s,
+            dimensions: { width: u, height: d, left: a, top: l },
+            window_opener_id: c,
           });
         }
         OnLoad() {}
@@ -14509,16 +14771,23 @@
                   : void 0;
             o.render(
               r.createElement(
-                "div",
-                { className: "PopupFullWindow", onContextMenu: a.T },
-                r.createElement(c.T, {
-                  hideMinMax: !0,
-                  popup: e,
-                  hideActions: n,
-                  style: i,
-                }),
-                r.createElement(l.t9, { ModalManager: (0, l.BL)(e) }),
-                this.m_modalElement
+                s.Rt,
+                { ownerWindow: e },
+                r.createElement(
+                  "div",
+                  { className: "PopupFullWindow", onContextMenu: a.T },
+                  r.createElement(u.T, {
+                    hideMinMax: !0,
+                    popup: e,
+                    hideActions: n,
+                    style: i,
+                  }),
+                  r.createElement(
+                    c.Y0,
+                    { browserInfo: this.browser_info },
+                    this.m_modalElement
+                  )
+                )
               ),
               t
             );
@@ -14548,7 +14817,7 @@
         P9w: () => U,
         SUY: () => m,
         Ucz: () => Z,
-        Uos: () => M,
+        Uos: () => R,
         V7n: () => G,
         VR: () => q,
         Vgm: () => te,
@@ -14576,7 +14845,7 @@
         k4K: () => g,
         lsH: () => W,
         mBz: () => we,
-        mKE: () => R,
+        mKE: () => M,
         mKt: () => ae,
         miF: () => Ee,
         opd: () => fe,
@@ -14594,7 +14863,7 @@
         uZu: () => le,
         ui7: () => H,
         vJ$: () => ue,
-        vyu: () => Re,
+        vyu: () => Me,
         wn$: () => ie,
         wx$: () => O,
         x0L: () => be,
@@ -14602,7 +14871,7 @@
         yRy: () => _,
         yTr: () => Ce,
         yVt: () => ee,
-        z5E: () => Me,
+        z5E: () => Re,
       });
       var i = n(70655),
         r = n(67294),
@@ -15123,7 +15392,7 @@
           })
         );
       }
-      function R(e) {
+      function M(e) {
         let t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         const [i] = (0, r.useState)(Math.random().toString());
@@ -15196,7 +15465,7 @@
           })
         );
       }
-      function M(e) {
+      function R(e) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -16945,7 +17214,7 @@
           })
         );
       }
-      function Re(e) {
+      function Me(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -16973,7 +17242,7 @@
           })
         );
       }
-      function Me(e) {
+      function Re(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -17313,6 +17582,7 @@
         R6: () => d,
         b8: () => g,
         ns: () => h,
+        oM: () => v,
       });
       var i = n(70655),
         r = n(22188),
@@ -17444,6 +17714,15 @@
         const t = !e.includes("ms") && e.includes("s");
         let n = Number.parseFloat(e);
         return t && (n *= 1e3), n;
+      }
+      function v(e, t = 1) {
+        for (; e; ) {
+          let t = (e.ownerDocument.defaultView || window).getComputedStyle(e),
+            n = parseFloat(t.zoom);
+          if (n && 1 != n) return n;
+          e = e.parentElement;
+        }
+        return t;
       }
       (0, i.gn)(
         [r.LO],
@@ -17867,7 +18146,7 @@
         Dj: () => v,
         Ei: () => u,
         Et: () => b,
-        Eu: () => R,
+        Eu: () => M,
         GB: () => r,
         J$: () => d,
         Jk: () => E,
@@ -18120,7 +18399,7 @@
         }
         return r.prepend(...a), a;
       }
-      function R(e, t, n) {
+      function M(e, t, n) {
         if ("childList" === e.type) {
           for (let n = 0; n < e.addedNodes.length; n++) {
             const i = e.addedNodes[n];
@@ -19340,6 +19619,7 @@
           LAUNCHER_TYPE: 0,
           EREALM: 0,
           IN_CHROMEOS: !1,
+          TESLA: !1,
           LOCAL_HOSTNAME: "",
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
@@ -19523,21 +19803,20 @@
       "use strict";
       var i = n(70655),
         r = (n(56084), n(66337), n(67294)),
-        o = n(73935),
-        s = n(73727),
-        a = n(78587),
-        l = n(88254),
-        c = n(59253),
-        u = n(74091),
-        d = n(90666),
-        h = (n(47214), n(88767));
+        o = n(73727),
+        s = n(78587),
+        a = n(88254),
+        l = n(39811),
+        c = n(74091),
+        u = n(92244),
+        d = n(88767);
       n(20938);
-      function m(e) {
-        const t = r.useRef(p),
+      function h(e) {
+        const t = r.useRef(m),
           n = function (e, t, ...n) {
             console.log(`React-Query ${e} ${t}`, ...n);
           };
-        (0, h.setLogger)({
+        (0, d.setLogger)({
           log: (e, ...t) => n("LOG", e, ...t),
           warn: (e, ...t) => n("WARN", e, ...t),
           error: (e, ...t) => n("ERROR", e, ...t),
@@ -19545,14 +19824,14 @@
         let i = e.children;
         return (
           e.debug,
-          r.createElement(h.QueryClientProvider, { client: t.current }, i)
+          r.createElement(d.QueryClientProvider, { client: t.current }, i)
         );
       }
-      const p = new h.QueryClient({
+      const m = new d.QueryClient({
         defaultOptions: { queries: { staleTime: 1 / 0 } },
       });
-      var g = n(92244);
-      const _ = r.lazy(() =>
+      var p = n(90666);
+      const g = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19568,7 +19847,7 @@
             n.e(6845),
           ]).then(n.bind(n, 27979))
         ),
-        f = r.lazy(() =>
+        _ = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19588,7 +19867,7 @@
             n.e(2136),
           ]).then(n.bind(n, 2218))
         ),
-        v = r.lazy(() =>
+        f = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19608,7 +19887,7 @@
             n.e(9349),
           ]).then(n.bind(n, 88569))
         ),
-        C = r.lazy(() =>
+        v = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19628,12 +19907,12 @@
             n.e(3352),
           ]).then(n.bind(n, 93871))
         ),
-        b = r.lazy(() =>
+        C = r.lazy(() =>
           Promise.all([n.e(6148), n.e(3742), n.e(2805), n.e(238)]).then(
             n.bind(n, 21668)
           )
         ),
-        E = r.lazy(() =>
+        b = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19650,8 +19929,8 @@
             n.e(5436),
           ]).then(n.bind(n, 5265))
         ),
-        w = r.lazy(() => n.e(8647).then(n.bind(n, 28064))),
-        S = r.lazy(() =>
+        E = r.lazy(() => n.e(8647).then(n.bind(n, 28064))),
+        w = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19671,7 +19950,7 @@
             n.e(3499),
           ]).then(n.bind(n, 24723))
         ),
-        y = r.lazy(() =>
+        S = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19691,7 +19970,7 @@
             n.e(6272),
           ]).then(n.bind(n, 35020))
         ),
-        D = r.lazy(() =>
+        y = r.lazy(() =>
           Promise.all([
             n.e(6437),
             n.e(4264),
@@ -19701,57 +19980,57 @@
             n.e(908),
           ]).then(n.bind(n, 69761))
         ),
-        T = r.lazy(() =>
+        D = r.lazy(() =>
           Promise.all([n.e(6437), n.e(8919), n.e(4535)]).then(n.bind(n, 93071))
         ),
-        R = r.lazy(() =>
+        T = r.lazy(() =>
           Promise.all([n.e(9920), n.e(312)]).then(n.bind(n, 2840))
         ),
-        M = () => (d.JA.IS_OGG ? "games" : "groups"),
-        I = () => "/:anything*/diagdata",
-        O = () => "/login/home",
-        k = () => "/(migrateevents|migrate)",
-        x = (e) => `/${M()}/${e}/partnerevents`,
-        L = (e) => `/${M()}/${e}/(events|announcements)`,
-        B = (e) => `/app/${e}(/workshop/)?`,
-        N = (e) => `/groups/${e}/`,
-        A = (e) => `/id/${e}`,
-        F = (e) => `/profiles/${e}`,
-        P = () => "/:anything/filedetails",
-        G = () => "/id/:vanity_url/recommended/:appid/",
-        V = () => "/profiles/:steamid/recommended/:appid/",
-        U = () => "/profiles/:steamid/recommended",
-        H = () => "/id/:vanity_url/recommended",
-        W = () => "/id/:vanity_url/friends/add",
-        j = () => "/profiles/:id/friends/add",
-        z = () => "/broadcast",
-        K = () => "/workshop/discussions",
-        X = () => "/sharedfiles/filedetails/discussions",
-        $ = () => "/discussions/forum",
-        Z = () => "/faqs/",
-        Y = () => "/questions/",
-        q = () => "/(conference|steamworksvirtualconference)/",
-        Q = () => "/";
-      class J extends r.Component {
+        M = () => (p.JA.IS_OGG ? "games" : "groups"),
+        R = () => "/:anything*/diagdata",
+        I = () => "/login/home",
+        O = () => "/(migrateevents|migrate)",
+        k = (e) => `/${M()}/${e}/partnerevents`,
+        x = (e) => `/${M()}/${e}/(events|announcements)`,
+        L = (e) => `/app/${e}(/workshop/)?`,
+        B = (e) => `/groups/${e}/`,
+        N = (e) => `/id/${e}`,
+        A = (e) => `/profiles/${e}`,
+        F = () => "/:anything/filedetails",
+        P = () => "/id/:vanity_url/recommended/:appid/",
+        G = () => "/profiles/:steamid/recommended/:appid/",
+        V = () => "/profiles/:steamid/recommended",
+        U = () => "/id/:vanity_url/recommended",
+        H = () => "/id/:vanity_url/friends/add",
+        W = () => "/profiles/:id/friends/add",
+        j = () => "/broadcast",
+        z = () => "/workshop/discussions",
+        K = () => "/sharedfiles/filedetails/discussions",
+        X = () => "/discussions/forum",
+        $ = () => "/faqs/",
+        Z = () => "/questions/",
+        Y = () => "/(conference|steamworksvirtualconference)/",
+        q = () => "/";
+      class Q extends r.Component {
         render() {
           return r.createElement(
-            s.VK,
-            { basename: te() },
+            o.VK,
+            { basename: ee() },
             r.createElement(
-              m,
+              J,
               null,
               r.createElement(
                 r.Suspense,
                 { fallback: r.createElement("div", null) },
                 r.createElement(
-                  a.rs,
+                  s.rs,
                   null,
-                  r.createElement(a.AW, {
+                  r.createElement(s.AW, {
                     exact: !0,
-                    path: I(),
+                    path: R(),
                     render: (e) =>
                       r.createElement(
-                        l.m,
+                        a.m,
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           strConfigID: "application_config",
@@ -19759,143 +20038,145 @@
                       ),
                   }),
                   r.createElement(
-                    a.AW,
-                    { path: O() },
-                    r.createElement(u.d, {
+                    s.AW,
+                    { path: I() },
+                    r.createElement(c.d, {
                       config: {
-                        login: (e) => r.createElement(T, Object.assign({}, e)),
+                        login: (e) => r.createElement(D, Object.assign({}, e)),
                       },
                     })
                   ),
-                  r.createElement(a.AW, {
-                    path: x(":appid_or_vanity_str"),
-                    component: v,
-                  }),
-                  r.createElement(a.AW, { path: k(), component: C }),
-                  r.createElement(a.AW, {
-                    path: L(":appid_or_vanity_str"),
+                  r.createElement(s.AW, {
+                    path: k(":appid_or_vanity_str"),
                     component: f,
                   }),
-                  r.createElement(a.AW, { path: z(), component: E }),
-                  r.createElement(a.AW, {
-                    path: B(":appid"),
+                  r.createElement(s.AW, { path: O(), component: v }),
+                  r.createElement(s.AW, {
+                    path: x(":appid_or_vanity_str"),
+                    component: _,
+                  }),
+                  r.createElement(s.AW, { path: j(), component: b }),
+                  r.createElement(s.AW, {
+                    path: L(":appid"),
                     render: (e) =>
-                      r.createElement(u.d, {
+                      r.createElement(c.d, {
                         config: {
-                          "apphub-events": () => r.createElement(f, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "apphub-ugcrewards": () =>
-                            r.createElement(b, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                           "community-awards": () =>
-                            r.createElement(b, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
-                  r.createElement(a.AW, {
-                    path: N(":groupid_or_vanity_str"),
+                  r.createElement(s.AW, {
+                    path: B(":groupid_or_vanity_str"),
                     render: (e) =>
-                      r.createElement(u.d, {
+                      r.createElement(c.d, {
                         config: {
-                          "apphub-events": () => r.createElement(f, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "community-awards": () =>
-                            r.createElement(b, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
-                  r.createElement(a.AW, {
+                  r.createElement(s.AW, {
+                    path: P(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
+                  }),
+                  r.createElement(s.AW, {
                     path: G(),
-                    render: (e) => r.createElement(b, Object.assign({}, e)),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, {
-                    path: V(),
-                    render: (e) => r.createElement(b, Object.assign({}, e)),
-                  }),
-                  r.createElement(a.AW, {
-                    path: H(),
-                    render: (e) => r.createElement(b, Object.assign({}, e)),
-                  }),
-                  r.createElement(a.AW, {
+                  r.createElement(s.AW, {
                     path: U(),
-                    render: (e) => r.createElement(b, Object.assign({}, e)),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, {
-                    path: [$(), K(), X()],
+                  r.createElement(s.AW, {
+                    path: V(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
+                  }),
+                  r.createElement(s.AW, {
+                    path: [X(), z(), K()],
                     render: (e) =>
-                      r.createElement(u.d, {
+                      r.createElement(c.d, {
                         config: {
                           "community-awards": () =>
-                            r.createElement(b, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                         },
                       }),
                   }),
                   r.createElement(
-                    a.AW,
-                    { path: [W(), j()] },
-                    r.createElement(w, null)
+                    s.AW,
+                    { path: [H(), W()] },
+                    r.createElement(E, null)
                   ),
-                  r.createElement(a.AW, {
-                    path: A(":vanity_url"),
-                    render: (e) => r.createElement(_, Object.assign({}, e)),
+                  r.createElement(s.AW, {
+                    path: N(":vanity_url"),
+                    render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, {
-                    path: F(":steamid"),
-                    render: (e) => r.createElement(_, Object.assign({}, e)),
+                  r.createElement(s.AW, {
+                    path: A(":steamid"),
+                    render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, {
-                    path: P(),
-                    render: (e) => r.createElement(b, Object.assign({}, e)),
+                  r.createElement(s.AW, {
+                    path: F(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
-                  r.createElement(a.AW, { path: Z(), component: S }),
-                  r.createElement(a.AW, { path: Y(), component: D }),
-                  r.createElement(a.AW, { path: q(), component: y }),
-                  r.createElement(a.AW, {
-                    path: Q(),
+                  r.createElement(s.AW, { path: $(), component: w }),
+                  r.createElement(s.AW, { path: Z(), component: y }),
+                  r.createElement(s.AW, { path: Y(), component: S }),
+                  r.createElement(s.AW, {
+                    path: q(),
                     render: (e) =>
-                      r.createElement(u.d, {
+                      r.createElement(c.d, {
                         config: {
-                          "apphub-events": () => r.createElement(f, null),
+                          "apphub-events": () => r.createElement(_, null),
                           "apphub-ugcrewards": () =>
-                            r.createElement(b, Object.assign({}, e)),
+                            r.createElement(C, Object.assign({}, e)),
                           "community-home-header-v2": () =>
-                            r.createElement(R, null),
+                            r.createElement(T, null),
                         },
                       }),
                   }),
-                  r.createElement(a.AW, null, r.createElement(g.R, null))
+                  r.createElement(s.AW, null, r.createElement(u.R, null))
                 )
-              ),
-              r.createElement(ee, null)
+              )
             )
           );
         }
       }
-      const ee = (e) => {
-        const t = r.createElement(c.t9, { ModalManager: (0, c.BL)(window) });
-        return o.createPortal(t, document.body);
-      };
-      function te() {
+      function J(e) {
+        return r.createElement(
+          h,
+          null,
+          r.createElement(l.Y0, null, e.children)
+        );
+      }
+      function ee() {
         let e = document.createElement("a");
-        e.href = d.De.COMMUNITY_BASE_URL;
+        e.href = p.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      n(55038);
-      var ne = n(41311);
+      var te = n(73935),
+        ne = (n(55038), n(41311));
       n(26149);
       var ie = n(77520),
         re = n(65902),
         oe = n(75362),
         se = n(53622);
-      n(48341), n(95598), n(30543), n(41414), n(15935), n(53477);
+      n(48341), n(95598), n(30543), n(37699), n(41414), n(15935), n(53477);
       n(69491);
       (0, se.Dj)(() =>
         (0, i.mG)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
-            ? (0, d.Ek)("application_config")
-            : (0, d.Ek)(),
+            ? (0, p.Ek)("application_config")
+            : (0, p.Ek)(),
             (0, oe.Uh)().Init(
               "Community",
               CLSTAMP,
-              new re.J(d.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new re.J(p.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, i.mG)(this, void 0, void 0, function* () {
@@ -19924,10 +20205,10 @@
                 for (const e of ae) ne.Yt.AddTokens(e);
                 ae = void 0;
               });
-            })(d.De.LANGUAGE),
+            })(p.De.LANGUAGE),
             document.getElementById("application_root") &&
-              o.render(
-                r.createElement(J, {}),
+              te.render(
+                r.createElement(Q, {}),
                 document.getElementById("application_root")
               );
         })

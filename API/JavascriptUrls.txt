@@ -625,7 +625,7 @@ ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
-${PARTNER_BASE_URL}packages/discounts/${packageID}
+${PARTNER_BASE_URL}packages/discounts/${}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes

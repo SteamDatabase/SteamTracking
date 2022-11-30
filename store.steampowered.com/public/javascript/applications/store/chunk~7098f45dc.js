@@ -396,7 +396,7 @@
         }
       }
       (0, a.gn)([u.ak], d.prototype, "LoadAppCompabitilityResult", null);
-      var p = r(22119),
+      var p = r(37699),
         g = r(41311),
         f = r(35921),
         H = r(27745),

@@ -1772,6 +1772,7 @@ function ShowReportDialog( nAppId )
 	content.append( textArea );
 
 	content.append( $J('<div/>', {'class': 'app_report_dialog_dmca' } ).html('If you\'d like to report Copyright Infringement and are the copyright holder, please proceed to our DMCA compliant notice of copyright infringement form <a href="https://steamcommunity.com/dmca/create/">here</a>.') );
+	content.append( $J('<div/>', {'class': 'app_report_dialog_dmca' } ).html('If you\'d like to file a Trademark complaint, please fill out the form <a href="https://steamcommunity.com/trademark/createtrademarkcomplaint/">here</a>.') );
 
 	var dialog = ShowConfirmDialog( 'Report this Product', content, 'Report');
 

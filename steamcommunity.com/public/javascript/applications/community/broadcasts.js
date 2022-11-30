@@ -671,7 +671,7 @@
         i = a.n(s),
         c = a(22188),
         m = (a(92398), a(3389)),
-        d = a(49805),
+        d = a(52795),
         u = (a(82946), a(93976)),
         v = a(90666);
       class p {
@@ -890,7 +890,7 @@
         y = a(34133),
         A = a.n(y),
         N = a(85732),
-        T = a(59253),
+        T = a(37699),
         w = a(41414),
         O = a(7573),
         M = a(53622),
@@ -1073,12 +1073,6 @@
                 "div",
                 null,
                 "is replay local file? ",
-                t.is_replay_local_file
-              ),
-              n.createElement(
-                "div",
-                null,
-                "is replay clip? ",
                 t.is_replay_local_file
               ),
               n.createElement(

@@ -3368,7 +3368,7 @@
       a.d(t, { n: () => v });
       var n = a(70655),
         i = a(67294),
-        r = a(59253),
+        r = a(37699),
         o = a(41311),
         s = a(64839),
         l = a(21735),
@@ -3608,7 +3608,7 @@
         v = a(90666),
         h = a(96944),
         S = a(99646),
-        b = a(59253),
+        b = a(37699),
         y = a(11108),
         C = a(22925),
         f = a(31933),
@@ -5599,7 +5599,7 @@
       var n = a(67294),
         i = a(80533),
         r = a(15530),
-        o = (a(49186), a(49805)),
+        o = (a(49186), a(52795)),
         s = (a(28976), a(3356), a(32548)),
         l = a(65924),
         c = a(13596),
@@ -6940,7 +6940,8 @@
             !1,
             !1,
             (e) => 0,
-            {}
+            {},
+            k
           ).content;
         return n.createElement(
           C.ZP,
@@ -7455,12 +7456,13 @@
           } = e,
           s = ue(t, 40, a, r, o),
           l = V(),
-          c = {
+          c = (0, G.id)(),
+          d = {
             nMaxCapsulesPerRow: l.nCarouselCapsules,
             bScreenIsWide: l.bIsScreenWide,
             nShowAdditionalRows: 0,
           },
-          d =
+          m =
             null == s
               ? void 0
               : s.map((e) => ({
@@ -7472,19 +7474,20 @@
                       bAutoFocus: 0 == t.index,
                     }),
                 })),
-          m = [a];
+          u = [a];
         return (0, h.Pe)(
           r.unique_id,
-          c,
           d,
           m,
+          u,
           ["grid"],
           1,
           !0,
           !1,
           !1,
           (e) => 0,
-          {}
+          {},
+          c
         ).content;
       }
       function me(e) {
@@ -7498,7 +7501,8 @@
           [s, l] = (0, F.LA)(),
           c = ue(t, 40, a, r, o),
           d = V(),
-          m = (function (e, t) {
+          m = (0, G.id)(),
+          u = (function (e, t) {
             let a = new Map();
             for (const n of e) {
               const e = n.id,
@@ -7515,12 +7519,12 @@
             }
             return a;
           })(c, l),
-          u = {
+          _ = {
             nMaxCapsulesPerRow: d.nCarouselCapsules,
             bScreenIsWide: d.bIsScreenWide,
             nShowAdditionalRows: 0,
           },
-          _ =
+          p =
             null == c
               ? void 0
               : c.map((e) => ({
@@ -7529,11 +7533,11 @@
                       key: e.type + "_" + e.id,
                       capsule: e,
                       imageType: "header",
-                      creatorAccountID: null == m ? void 0 : m.get(e.id),
+                      creatorAccountID: null == u ? void 0 : u.get(e.id),
                       bAutoFocus: 0 == t.index,
                     }),
                 })),
-          p = [a];
+          g = [a];
         return s
           ? n.createElement(f.V, {
               string: (0, x.Xx)("#Loading"),
@@ -7542,16 +7546,17 @@
             })
           : (0, h.Pe)(
               r.unique_id,
-              u,
               _,
               p,
+              g,
               ["grid"],
               1,
               !0,
               !1,
               !1,
               (e) => 0,
-              {}
+              {},
+              m
             ).content;
       }
       function ue(e, t, a, i, r) {
@@ -7754,6 +7759,7 @@
             !0,
             (e) => 0,
             {},
+            I,
             !0
           ).content;
         return n.createElement(
@@ -8608,7 +8614,7 @@
         dt = a(96944),
         mt = a.n(dt),
         ut = a(23211),
-        _t = a(59253),
+        _t = a(37699),
         pt = a(41414),
         gt = a(29323),
         Et = a(5525),
@@ -13594,7 +13600,7 @@
       }
       var wn = a(69279),
         In = (a(80315), a(81503)),
-        Tn = a(49805),
+        Tn = a(52795),
         Bn = a(24399);
       class An {
         constructor() {
@@ -16276,7 +16282,8 @@
             r.carousel_auto_advance,
             r.hide_section_if_too_few_items,
             (e) => (0, h.qu)(r, e) || 10,
-            { section: r, saleEvent: i, language: s }
+            { section: r, saleEvent: i, language: s },
+            m
           ).content
         );
       }
@@ -17078,7 +17085,7 @@
         g = a(53622),
         E = a(41311),
         v = a(90666),
-        h = a(59253),
+        h = a(37699),
         S = a(41414),
         b = a(65924),
         y = a(23211),
@@ -17682,7 +17689,7 @@
         d = (a(82946), a(53622)),
         m = a(41311),
         u = a(90666),
-        _ = a(59253),
+        _ = a(37699),
         p = a(41414),
         g = a(31933),
         E = a(26712);
@@ -19570,7 +19577,7 @@
         m = a(9915),
         u = a(48341),
         _ = (a(34133), a(96602)),
-        p = a(59253),
+        p = a(37699),
         g = a(69491),
         E = a.n(g),
         v = a(13596),
@@ -20437,7 +20444,7 @@
         d = a(48341),
         m = a(34133),
         u = a(1281),
-        _ = a(59253),
+        _ = a(37699),
         p = a(41414),
         g = a(28268),
         E = a(7573),
@@ -23399,7 +23406,7 @@
         U = a(93634),
         z = a(36067),
         V = a(92685),
-        W = a(59253),
+        W = a(37699),
         Z = a(41414),
         q = a(72258),
         J = a(12648),

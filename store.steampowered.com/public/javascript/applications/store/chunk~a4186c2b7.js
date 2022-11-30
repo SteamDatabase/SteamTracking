@@ -500,6 +500,11 @@
                   },
                   has_market: { n: 15, br: a.FE.readBool, bw: a.Xc.writeBool },
                   has_dlc: { n: 16, br: a.FE.readBool, bw: a.Xc.writeBool },
+                  has_leaderboards: {
+                    n: 17,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
                 },
               }),
             d.sm_m

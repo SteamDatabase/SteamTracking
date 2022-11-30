@@ -1710,6 +1710,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1Ysh1 {
 .eventbbcodeparser_LocalizeBlock_hXuYi {
   white-space: pre-wrap;
 }
+.eventbbcodeparser_CheckMark_1nwMV {
+  height: 32px;
+}
 .eventreminder_FlexColumnContainer_1WvmG {
   display: flex;
   flex-direction: column;
@@ -2028,6 +2031,11 @@ html:not(.touch)
   left: 0;
   width: 100%;
   height: 100%;
+}
+.saleeventbbcodeparser_ErrorDiv_1Vj6H {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
 }
 .bbcodes_Bold_1opdq {
   display: inline;
@@ -8456,6 +8464,64 @@ html.responsive.touch
   border-right: none;
   background-color: unset;
 }
+.partnereventdialog_ErrorStyles_2TszC,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA {
+  color: #c44848;
+}
+.partnereventdialog_ErrorIconLayout_15HwA,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA,
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  background-color: #472025;
+}
+.partnereventdialog_ErrorStyles_2TszC > div,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
+  display: inline;
+  color: #d78484;
+}
+.partnereventdialog_WarningStyles_1C_Im,
+.partnereventdialog_WarningStylesWithIcon_3p5KO {
+  color: #b8860b;
+}
+.partnereventdialog_WarningIconLayout_3POKG,
+.partnereventdialog_WarningStylesWithIcon_3p5KO,
+.partnereventdialog_WarningStylesBackground_2MAql {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_WarningStylesBackground_2MAql {
+  background-color: #b8860b;
+  color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_Padding_2oWai {
+  padding-top: 10px;
+}
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
 .sharewithfriends_Container_8f6EQ {
   background-color: #1c1e26;
   padding: 10px;
@@ -10645,64 +10711,6 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   line-height: 24px;
   color: #fff;
   font-weight: 500;
-}
-.partnereventdialog_ErrorStyles_2TszC,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA {
-  color: #c44848;
-}
-.partnereventdialog_ErrorIconLayout_15HwA,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA,
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_ErrorStylesBackground_3Ht2e {
-  background-color: #472025;
-}
-.partnereventdialog_ErrorStyles_2TszC > div,
-.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
-  display: inline;
-  color: #d78484;
-}
-.partnereventdialog_WarningStyles_1C_Im,
-.partnereventdialog_WarningStylesWithIcon_3p5KO {
-  color: #b8860b;
-}
-.partnereventdialog_WarningIconLayout_3POKG,
-.partnereventdialog_WarningStylesWithIcon_3p5KO,
-.partnereventdialog_WarningStylesBackground_2MAql {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.partnereventdialog_WarningStylesBackground_2MAql {
-  background-color: #b8860b;
-  color: #fff;
-}
-.partnereventdialog_WarningStylesBackground_2MAql
-  .partnereventdialog_Stuck_2JqXL {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-.partnereventdialog_Padding_2oWai {
-  padding-top: 10px;
-}
-.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
-  width: initial;
-}
-.ModalPosition_Content
-  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
-  .DialogContent_InnerWidth
-  > form {
-  padding-right: 8px;
 }
 .savetoolbar_ToolbarCtn_Kfoep {
   position: fixed;
