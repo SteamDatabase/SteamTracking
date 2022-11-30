@@ -12252,30 +12252,31 @@
               t > 1
                 ? (0, I.Xx)("#Notification_ItemAnnouncement_Body_Plural", t)
                 : (0, I.Xx)("#Notification_ItemAnnouncement_Body"),
-            o = (0, I.Xx)("#Notification_ItemAnnouncement_Title"),
-            a = i.createElement(c.F8F, null),
-            l = i.createElement(wo, { location: A.location }),
-            s = new Fn.K(Yn.i8.currentUserSteamID),
-            g = `${
+            a = (0, I.Xx)("#Notification_ItemAnnouncement_Title"),
+            l = i.createElement(c.F8F, null),
+            s = i.createElement(wo, { location: A.location }),
+            g = (0, m.SZ)(() => (0, o.gV)().GetCurrentUser()),
+            u = new Fn.K(g.strSteamID),
+            d = `${
               jn.De.COMMUNITY_BASE_URL
-            }profiles/${s.ConvertTo64BitString()}/inventory`,
-            u = so((0, r.BN)(g), A.onDismiss);
+            }profiles/${u.ConvertTo64BitString()}/inventory`,
+            C = so((0, r.BN)(d), A.onDismiss);
           return A.location == no.Toast
             ? i.createElement(vo, {
-                logo: l,
-                icon: a,
-                title: o,
+                logo: s,
+                icon: l,
+                title: a,
                 body: n,
-                onActivate: u,
+                onActivate: C,
                 onDismiss: A.onDismiss,
               })
             : i.createElement(
                 uo,
                 {
-                  logo: l,
-                  icon: a,
-                  title: o,
-                  onActivate: u,
+                  logo: s,
+                  icon: l,
+                  title: a,
+                  onActivate: C,
                   timestamp: e.rtCreated,
                 },
                 i.createElement(Bo, null, n)
@@ -27477,7 +27478,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1669690496),
+          d = parseInt(1669771830),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36884,9 +36885,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Nov 28 2022 : 18:54:56",
-              BUILD_TIME_UTC: "Nov 29 2022 : 02:54:56",
-              BUILD_RTIME_UTC: 1669690496,
+              BUILD_TIME_LOCAL: "Nov 29 2022 : 17:30:30",
+              BUILD_TIME_UTC: "Nov 30 2022 : 01:30:30",
+              BUILD_RTIME_UTC: 1669771830,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {

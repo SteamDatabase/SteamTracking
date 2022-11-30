@@ -5366,8 +5366,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov 28 2022
-19:10:00
+Nov 30 2022
+09:01:59
 X-SteamClientVersion
 hostName
 pchRemoteHost
