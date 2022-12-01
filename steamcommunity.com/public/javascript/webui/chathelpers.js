@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7689286";
+var CLSTAMP = "7692120";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7689286";
     i,
     s,
     r = {
-      10221: (e, t, n) => {
+      87951: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7689286";
         }
         Object.create;
         Object.create;
-        n(45126);
+        n(42800);
         var r = n(87363),
           o = n.n(r),
           a = n(61533);
@@ -771,7 +771,7 @@ var CLSTAMP = "7689286";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(z || (z = {}));
         var q, $, K;
-        n(89444);
+        n(61616);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1338,7 +1338,7 @@ var CLSTAMP = "7689286";
           }
         }
         var Ee = n(42238);
-        n(42549);
+        n(52957);
         class ge extends he {
           BIsExpired() {
             return ke.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1682,9 +1682,9 @@ var CLSTAMP = "7689286";
                     const t = re.GetLanguageFallback(e),
                       i = e === t,
                       [s, r, o, a] = yield Promise.all([
-                        n(21624)(`./shared_${e}.json`),
+                        n(41171)(`./shared_${e}.json`),
                         n(3119)(`./friendsui_${e}.json`),
-                        i ? {} : n(24626)(`./shared_${t}.json`),
+                        i ? {} : n(91090)(`./shared_${t}.json`),
                         i ? {} : n(9014)(`./friendsui_${t}.json`),
                       ]);
                     le.AddTokens(
@@ -1706,7 +1706,7 @@ var CLSTAMP = "7689286";
             });
           });
       },
-      43918: (e, t, n) => {
+      79445: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1873,7 +1873,7 @@ var CLSTAMP = "7689286";
               };
         }
       },
-      45126: (e, t, n) => {
+      42800: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1887,36 +1887,36 @@ var CLSTAMP = "7689286";
       },
       3119: (e, t, n) => {
         var i = {
-          "./friendsui_arabic.json": [97981, 6992],
-          "./friendsui_brazilian.json": [20553, 2862],
-          "./friendsui_bulgarian.json": [75414, 8518],
-          "./friendsui_czech.json": [72638, 4448],
-          "./friendsui_danish.json": [18162, 9775],
-          "./friendsui_dutch.json": [51999, 7575],
-          "./friendsui_english.json": [63096, 8247],
-          "./friendsui_finnish.json": [91741, 4596],
-          "./friendsui_french.json": [96450, 3500],
-          "./friendsui_german.json": [19474, 4989],
-          "./friendsui_greek.json": [59413, 1471],
-          "./friendsui_hungarian.json": [49870, 5802],
-          "./friendsui_italian.json": [87280, 8815],
-          "./friendsui_japanese.json": [16172, 6727],
-          "./friendsui_koreana.json": [16273, 6986],
-          "./friendsui_latam.json": [18144, 7651],
-          "./friendsui_norwegian.json": [23193, 4716],
-          "./friendsui_polish.json": [92042, 699],
-          "./friendsui_portuguese.json": [82315, 4264],
-          "./friendsui_romanian.json": [32163, 3182],
-          "./friendsui_russian.json": [85755, 2913],
-          "./friendsui_sc_schinese.json": [40167, 3140],
-          "./friendsui_schinese.json": [95030, 7706],
-          "./friendsui_spanish.json": [69859, 3471],
-          "./friendsui_swedish.json": [50881, 9818],
-          "./friendsui_tchinese.json": [6806, 7340],
-          "./friendsui_thai.json": [23467, 9263],
-          "./friendsui_turkish.json": [91405, 5632],
-          "./friendsui_ukrainian.json": [48206, 2822],
-          "./friendsui_vietnamese.json": [79155, 1635],
+          "./friendsui_arabic.json": [56047, 6992],
+          "./friendsui_brazilian.json": [92205, 2862],
+          "./friendsui_bulgarian.json": [73392, 8518],
+          "./friendsui_czech.json": [57782, 4448],
+          "./friendsui_danish.json": [81743, 9775],
+          "./friendsui_dutch.json": [50658, 7575],
+          "./friendsui_english.json": [8544, 8247],
+          "./friendsui_finnish.json": [54470, 4596],
+          "./friendsui_french.json": [72300, 3500],
+          "./friendsui_german.json": [15318, 4989],
+          "./friendsui_greek.json": [80793, 1471],
+          "./friendsui_hungarian.json": [56284, 5802],
+          "./friendsui_italian.json": [97336, 8815],
+          "./friendsui_japanese.json": [4202, 6727],
+          "./friendsui_koreana.json": [45983, 6986],
+          "./friendsui_latam.json": [88984, 7651],
+          "./friendsui_norwegian.json": [52055, 4716],
+          "./friendsui_polish.json": [82258, 699],
+          "./friendsui_portuguese.json": [46869, 4264],
+          "./friendsui_romanian.json": [62368, 3182],
+          "./friendsui_russian.json": [44494, 2913],
+          "./friendsui_sc_schinese.json": [76373, 3140],
+          "./friendsui_schinese.json": [51475, 7706],
+          "./friendsui_spanish.json": [8108, 3471],
+          "./friendsui_swedish.json": [42074, 9818],
+          "./friendsui_tchinese.json": [735, 7340],
+          "./friendsui_thai.json": [75225, 9263],
+          "./friendsui_turkish.json": [77261, 5632],
+          "./friendsui_ukrainian.json": [54839, 2822],
+          "./friendsui_vietnamese.json": [42373, 1635],
         };
         function s(e) {
           if (!n.o(i, e))
@@ -1932,36 +1932,36 @@ var CLSTAMP = "7689286";
       },
       9014: (e, t, n) => {
         var i = {
-          "./friendsui_arabic.json": [97981, 6992],
-          "./friendsui_brazilian.json": [20553, 2862],
-          "./friendsui_bulgarian.json": [75414, 8518],
-          "./friendsui_czech.json": [72638, 4448],
-          "./friendsui_danish.json": [18162, 9775],
-          "./friendsui_dutch.json": [51999, 7575],
-          "./friendsui_english.json": [63096, 8247],
-          "./friendsui_finnish.json": [91741, 4596],
-          "./friendsui_french.json": [96450, 3500],
-          "./friendsui_german.json": [19474, 4989],
-          "./friendsui_greek.json": [59413, 1471],
-          "./friendsui_hungarian.json": [49870, 5802],
-          "./friendsui_italian.json": [87280, 8815],
-          "./friendsui_japanese.json": [16172, 6727],
-          "./friendsui_koreana.json": [16273, 6986],
-          "./friendsui_latam.json": [18144, 7651],
-          "./friendsui_norwegian.json": [23193, 4716],
-          "./friendsui_polish.json": [92042, 699],
-          "./friendsui_portuguese.json": [82315, 4264],
-          "./friendsui_romanian.json": [32163, 3182],
-          "./friendsui_russian.json": [85755, 2913],
-          "./friendsui_sc_schinese.json": [40167, 3140],
-          "./friendsui_schinese.json": [95030, 7706],
-          "./friendsui_spanish.json": [69859, 3471],
-          "./friendsui_swedish.json": [50881, 9818],
-          "./friendsui_tchinese.json": [6806, 7340],
-          "./friendsui_thai.json": [23467, 9263],
-          "./friendsui_turkish.json": [91405, 5632],
-          "./friendsui_ukrainian.json": [48206, 2822],
-          "./friendsui_vietnamese.json": [79155, 1635],
+          "./friendsui_arabic.json": [56047, 6992],
+          "./friendsui_brazilian.json": [92205, 2862],
+          "./friendsui_bulgarian.json": [73392, 8518],
+          "./friendsui_czech.json": [57782, 4448],
+          "./friendsui_danish.json": [81743, 9775],
+          "./friendsui_dutch.json": [50658, 7575],
+          "./friendsui_english.json": [8544, 8247],
+          "./friendsui_finnish.json": [54470, 4596],
+          "./friendsui_french.json": [72300, 3500],
+          "./friendsui_german.json": [15318, 4989],
+          "./friendsui_greek.json": [80793, 1471],
+          "./friendsui_hungarian.json": [56284, 5802],
+          "./friendsui_italian.json": [97336, 8815],
+          "./friendsui_japanese.json": [4202, 6727],
+          "./friendsui_koreana.json": [45983, 6986],
+          "./friendsui_latam.json": [88984, 7651],
+          "./friendsui_norwegian.json": [52055, 4716],
+          "./friendsui_polish.json": [82258, 699],
+          "./friendsui_portuguese.json": [46869, 4264],
+          "./friendsui_romanian.json": [62368, 3182],
+          "./friendsui_russian.json": [44494, 2913],
+          "./friendsui_sc_schinese.json": [76373, 3140],
+          "./friendsui_schinese.json": [51475, 7706],
+          "./friendsui_spanish.json": [8108, 3471],
+          "./friendsui_swedish.json": [42074, 9818],
+          "./friendsui_tchinese.json": [735, 7340],
+          "./friendsui_thai.json": [75225, 9263],
+          "./friendsui_turkish.json": [77261, 5632],
+          "./friendsui_ukrainian.json": [54839, 2822],
+          "./friendsui_vietnamese.json": [42373, 1635],
         };
         function s(e) {
           if (!n.o(i, e))
@@ -1975,38 +1975,38 @@ var CLSTAMP = "7689286";
         }
         (s.keys = () => Object.keys(i)), (s.id = 9014), (e.exports = s);
       },
-      21624: (e, t, n) => {
+      41171: (e, t, n) => {
         var i = {
-          "./shared_arabic.json": [68568, 2431],
-          "./shared_brazilian.json": [13262, 8385],
-          "./shared_bulgarian.json": [86048, 1313],
-          "./shared_czech.json": [41122, 4189],
-          "./shared_danish.json": [52563, 9753],
-          "./shared_dutch.json": [93504, 5925],
-          "./shared_english.json": [29020, 7975],
-          "./shared_finnish.json": [40494, 3557],
-          "./shared_french.json": [28292, 3112],
-          "./shared_german.json": [15502, 6007],
-          "./shared_greek.json": [78865, 4297],
-          "./shared_hungarian.json": [44285, 5948],
-          "./shared_italian.json": [48254, 5933],
-          "./shared_japanese.json": [15505, 2844],
-          "./shared_koreana.json": [84137, 6542],
-          "./shared_latam.json": [48284, 2443],
-          "./shared_norwegian.json": [65115, 4108],
-          "./shared_polish.json": [35330, 3252],
-          "./shared_portuguese.json": [37943, 5849],
-          "./shared_romanian.json": [16520, 4823],
-          "./shared_russian.json": [56532, 9062],
-          "./shared_sc_schinese.json": [86735, 2029],
-          "./shared_schinese.json": [88804, 2537],
-          "./shared_spanish.json": [22429, 6492],
-          "./shared_swedish.json": [3648, 5625],
-          "./shared_tchinese.json": [12268, 7602],
-          "./shared_thai.json": [77216, 1162],
-          "./shared_turkish.json": [99874, 5438],
-          "./shared_ukrainian.json": [59156, 7781],
-          "./shared_vietnamese.json": [98678, 4964],
+          "./shared_arabic.json": [91967, 2431],
+          "./shared_brazilian.json": [34050, 8385],
+          "./shared_bulgarian.json": [81457, 1313],
+          "./shared_czech.json": [96162, 4189],
+          "./shared_danish.json": [69668, 9753],
+          "./shared_dutch.json": [98554, 5925],
+          "./shared_english.json": [84075, 7975],
+          "./shared_finnish.json": [49134, 3557],
+          "./shared_french.json": [79224, 3112],
+          "./shared_german.json": [20057, 6007],
+          "./shared_greek.json": [86417, 4297],
+          "./shared_hungarian.json": [19248, 5948],
+          "./shared_italian.json": [77819, 5933],
+          "./shared_japanese.json": [48536, 2844],
+          "./shared_koreana.json": [72400, 6542],
+          "./shared_latam.json": [29185, 2443],
+          "./shared_norwegian.json": [36134, 4108],
+          "./shared_polish.json": [87151, 3252],
+          "./shared_portuguese.json": [3630, 5849],
+          "./shared_romanian.json": [51363, 4823],
+          "./shared_russian.json": [60859, 9062],
+          "./shared_sc_schinese.json": [6055, 2029],
+          "./shared_schinese.json": [88004, 2537],
+          "./shared_spanish.json": [35090, 6492],
+          "./shared_swedish.json": [84447, 5625],
+          "./shared_tchinese.json": [92869, 7602],
+          "./shared_thai.json": [34720, 1162],
+          "./shared_turkish.json": [3347, 5438],
+          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_vietnamese.json": [12315, 4964],
         };
         function s(e) {
           if (!n.o(i, e))
@@ -2018,40 +2018,40 @@ var CLSTAMP = "7689286";
             s = t[0];
           return n.e(t[1]).then(() => n.t(s, 19));
         }
-        (s.keys = () => Object.keys(i)), (s.id = 21624), (e.exports = s);
+        (s.keys = () => Object.keys(i)), (s.id = 41171), (e.exports = s);
       },
-      24626: (e, t, n) => {
+      91090: (e, t, n) => {
         var i = {
-          "./shared_arabic.json": [68568, 2431],
-          "./shared_brazilian.json": [13262, 8385],
-          "./shared_bulgarian.json": [86048, 1313],
-          "./shared_czech.json": [41122, 4189],
-          "./shared_danish.json": [52563, 9753],
-          "./shared_dutch.json": [93504, 5925],
-          "./shared_english.json": [29020, 7975],
-          "./shared_finnish.json": [40494, 3557],
-          "./shared_french.json": [28292, 3112],
-          "./shared_german.json": [15502, 6007],
-          "./shared_greek.json": [78865, 4297],
-          "./shared_hungarian.json": [44285, 5948],
-          "./shared_italian.json": [48254, 5933],
-          "./shared_japanese.json": [15505, 2844],
-          "./shared_koreana.json": [84137, 6542],
-          "./shared_latam.json": [48284, 2443],
-          "./shared_norwegian.json": [65115, 4108],
-          "./shared_polish.json": [35330, 3252],
-          "./shared_portuguese.json": [37943, 5849],
-          "./shared_romanian.json": [16520, 4823],
-          "./shared_russian.json": [56532, 9062],
-          "./shared_sc_schinese.json": [86735, 2029],
-          "./shared_schinese.json": [88804, 2537],
-          "./shared_spanish.json": [22429, 6492],
-          "./shared_swedish.json": [3648, 5625],
-          "./shared_tchinese.json": [12268, 7602],
-          "./shared_thai.json": [77216, 1162],
-          "./shared_turkish.json": [99874, 5438],
-          "./shared_ukrainian.json": [59156, 7781],
-          "./shared_vietnamese.json": [98678, 4964],
+          "./shared_arabic.json": [91967, 2431],
+          "./shared_brazilian.json": [34050, 8385],
+          "./shared_bulgarian.json": [81457, 1313],
+          "./shared_czech.json": [96162, 4189],
+          "./shared_danish.json": [69668, 9753],
+          "./shared_dutch.json": [98554, 5925],
+          "./shared_english.json": [84075, 7975],
+          "./shared_finnish.json": [49134, 3557],
+          "./shared_french.json": [79224, 3112],
+          "./shared_german.json": [20057, 6007],
+          "./shared_greek.json": [86417, 4297],
+          "./shared_hungarian.json": [19248, 5948],
+          "./shared_italian.json": [77819, 5933],
+          "./shared_japanese.json": [48536, 2844],
+          "./shared_koreana.json": [72400, 6542],
+          "./shared_latam.json": [29185, 2443],
+          "./shared_norwegian.json": [36134, 4108],
+          "./shared_polish.json": [87151, 3252],
+          "./shared_portuguese.json": [3630, 5849],
+          "./shared_romanian.json": [51363, 4823],
+          "./shared_russian.json": [60859, 9062],
+          "./shared_sc_schinese.json": [6055, 2029],
+          "./shared_schinese.json": [88004, 2537],
+          "./shared_spanish.json": [35090, 6492],
+          "./shared_swedish.json": [84447, 5625],
+          "./shared_tchinese.json": [92869, 7602],
+          "./shared_thai.json": [34720, 1162],
+          "./shared_turkish.json": [3347, 5438],
+          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_vietnamese.json": [12315, 4964],
         };
         function s(e) {
           if (!n.o(i, e))
@@ -2063,7 +2063,7 @@ var CLSTAMP = "7689286";
             s = t[0];
           return n.e(t[1]).then(() => n.t(s, 19));
         }
-        (s.keys = () => Object.keys(i)), (s.id = 24626), (e.exports = s);
+        (s.keys = () => Object.keys(i)), (s.id = 91090), (e.exports = s);
       },
       87363: (e) => {
         "use strict";
@@ -2200,66 +2200,66 @@ var CLSTAMP = "7689286";
       }[e] +
       ".js?contenthash=" +
       {
-        699: "9d8f9cccec56cb1ced25",
-        1162: "9cd617ac1b5c7eeda75e",
-        1313: "4d6c4519284a4b1e5e24",
-        1471: "53e7318c0451936fe013",
-        1635: "8ee1769f66f55b3cd295",
-        2029: "93e44adb2d592fe88443",
-        2431: "cbd2760e1ccf9ea63610",
-        2443: "cd9b433eff66e6821f02",
-        2537: "29e26687b29b6283fcfb",
-        2822: "68ba7ea44de5e54d160a",
-        2844: "65e7e9ea9d3234a59a81",
-        2862: "c6458e5055b66c12aee1",
-        2913: "c972a7c1b9bd360cd17c",
-        3112: "4a312763965f5fc5941d",
-        3140: "7fdb4ee87c611c9c8ba2",
-        3182: "2083840b84be407a2675",
-        3252: "938720c6ddb83c010b33",
-        3471: "ef1a891fa603de8db221",
-        3500: "f412d0bf3407ff7c1a15",
-        3557: "96cb22ed87c72b5b6cdd",
-        4108: "c7a616f351a5ac6f68c3",
-        4189: "17e4a6f365d3d8408fb7",
-        4264: "75cfa7b6abfbb48d413a",
-        4297: "c069d517960b17f2419c",
-        4448: "2a4a09de873dd118f73b",
-        4596: "761e9f7b3fca1af058d8",
-        4716: "e2c9d09a34da46a5b1f4",
-        4823: "b9f979d5f2165899a415",
-        4964: "54ce4180859ce823c32b",
-        4989: "5ba7127b4eed5ed984a7",
-        5438: "945ad39fd7c465b97a91",
-        5625: "f3dec8a63b5e2e1a9359",
-        5632: "f4bce4f3fd7f2ebe507a",
-        5802: "0945683045263555dd34",
-        5849: "2334bff3ce325d2843b8",
-        5925: "1172260e0115c373de46",
-        5933: "211824aa681f9b79101b",
-        5948: "f66f8d4ff8cf27b4be3c",
-        6007: "9611d16207e5c4ae13b2",
-        6492: "2d787bb68a4df8457c01",
-        6542: "97522b2ef14816fba0aa",
-        6727: "f325b7ea43c7f86df913",
-        6986: "68ae11cec8e57d9261ff",
-        6992: "6fe9e58c28cba14f3d5b",
-        7340: "bf81b697e6b24339b9bb",
-        7575: "612dae0fed50a4a395d8",
-        7602: "29193a5be7782ca6b019",
-        7651: "e4963d1211a5e685a7bc",
-        7706: "d365fab0ca9a88819335",
-        7781: "0dee033becf5eead8de8",
-        7975: "8c8bfd3936e54729de38",
-        8247: "26221f1b1d2b0e222912",
-        8385: "e85995803aba84f148c0",
-        8518: "941d24d799178eb55859",
-        8815: "59cf1041aa1db8225057",
-        9062: "6ab269dbcc494e6b9e63",
-        9263: "3c699a76b274f4306e28",
-        9753: "b73b946af25630ddf8a9",
-        9775: "50d61f789d819c26a815",
-        9818: "f1b5a37d6a32a151f8a8",
+        699: "872aff8809c936ed937a",
+        1162: "b4f5ea5eef5395997788",
+        1313: "cdd1d95fb48c0d7e5ffa",
+        1471: "2176cac8f416709f3266",
+        1635: "437d2b63eda9e1b47d58",
+        2029: "90a9d61a7ff50fb87151",
+        2431: "11c1289e1ff0e0bdec9e",
+        2443: "eb4a40caf37f1fd353ea",
+        2537: "e7d8ffd8370651ff3413",
+        2822: "037061f6d1c9dffaf079",
+        2844: "c5ba59712b9db03997fb",
+        2862: "0f371210890ff78f21c4",
+        2913: "d786d0e02910a5c6868b",
+        3112: "b4339b672db49fe1bdec",
+        3140: "dad99a71d12b68853270",
+        3182: "8a1d61f7eb1ba31aa77b",
+        3252: "a38da1e84eae83d9207b",
+        3471: "34cbe5956b3fa5183bbd",
+        3500: "d91f6aca47a3d83e22ea",
+        3557: "17b6e13b1dfd90e9627a",
+        4108: "7c5165ab2f8341ba25d2",
+        4189: "fccf2ec13a0fbab3f9fd",
+        4264: "ea1480e8fbd5fe5e79d7",
+        4297: "136a2684969f4f129683",
+        4448: "f8aef925a6b9ba2311b1",
+        4596: "e41f05574f31a6383708",
+        4716: "f806c862c343a334fbe7",
+        4823: "e8252e97c9536a5f5641",
+        4964: "c683ed8cb0cb8fd33b28",
+        4989: "323e9e40b7603218da5a",
+        5438: "30aa0801f15dbd55f860",
+        5625: "d851299fb640e53ed9f1",
+        5632: "bb969856fbed69c0adc0",
+        5802: "4cbc594c62499e0386a8",
+        5849: "5936d9dbea1057bdcdde",
+        5925: "ae538d4e7b32e95f5bce",
+        5933: "332ecdbefec27d03461c",
+        5948: "e55321031cc859809fe3",
+        6007: "5af478a864ddb7a77dee",
+        6492: "d2cf88f7beb2f3b5a26a",
+        6542: "f9da3e7ccbcc25e5571e",
+        6727: "e8244e40542a7d586455",
+        6986: "2061911d7d78fa49ee8d",
+        6992: "f45d52361e8e77d4706c",
+        7340: "dcbb63c693b64c7e41bb",
+        7575: "57a24aecb030c34aa5e7",
+        7602: "168980ae623d89746e3d",
+        7651: "195c08e4fe2a460a82d6",
+        7706: "258590154e6f57babae1",
+        7781: "e91e0a6f8911edf5f72c",
+        7975: "bff1c0fcd655cbc9a03e",
+        8247: "faf8044df2541a2c39b5",
+        8385: "8cd5e3d7edc229ba6527",
+        8518: "fb0f2ed8686fb81e9503",
+        8815: "67c8bc8b552a6b39a98f",
+        9062: "83cf16feded8688952c7",
+        9263: "63e34749508be70153c8",
+        9753: "3240c1a492b1d21d9ae1",
+        9775: "406e8abf48b406b28697",
+        9818: "f2788389656d987037d4",
       }[e]),
     (a.miniCssF = (e) => {}),
     (a.g = (function () {
@@ -2393,6 +2393,6 @@ var CLSTAMP = "7689286";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(10221));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(87951));
   c = a.O(c);
 })();
