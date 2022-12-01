@@ -14041,7 +14041,7 @@
       };
       function b(e) {
         const t = o.jg.Get(),
-          r = e.GetAllLanguagesWithSomeSupport() || [];
+          r = (null == e ? void 0 : e.GetAllLanguagesWithSomeSupport()) || [];
         return (
           !e ||
           (0 == e.GetStoreItemType() &&
