@@ -1,7 +1,7 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5313968() = 0;
+    virtual unknown_ret Unknown_5314048() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;
@@ -271,4 +271,5 @@ public:
     virtual unknown_ret Test_SetClientInstallationID(void*,void*) = 0;
     virtual unknown_ret GetAppIDForGameID(void*) = 0;
     virtual unknown_ret BDoNotDisturb() = 0;
+    virtual unknown_ret SetAdditionalClientArgData(void*,void*,void*) = 0;
 };
