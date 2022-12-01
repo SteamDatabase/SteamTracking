@@ -4724,7 +4724,7 @@
               ));
         }
       }
-      class O {
+      class k {
         constructor(e) {
           (this.m_scrollTopTarget = void 0),
             (this.m_scrollLeftTarget = void 0),
@@ -4839,14 +4839,14 @@
           return this.scrollWidth - this.clientWidth;
         }
       }
-      (0, i.gn)([a.a], O.prototype, "ResetScrollState", null);
-      const k = new WeakMap();
+      (0, i.gn)([a.a], k.prototype, "ResetScrollState", null);
+      const O = new WeakMap();
       function x(e) {
-        let t = k.get(e);
-        return t || ((t = new O(e)), k.set(e, t)), t;
+        let t = O.get(e);
+        return t || ((t = new k(e)), O.set(e, t)), t;
       }
       function L(e) {
-        const t = k.get(e);
+        const t = O.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -6634,8 +6634,16 @@
               e.bSendAuth &&
               !u &&
               (d.params.access_token = this.m_webApiAccessToken),
-            !i.bConstMethod)
-          ) {
+            i.bConstMethod)
+          )
+            return (
+              (d.params.origin = self.origin),
+              this.m_bJsonMode
+                ? (d.params.input_json = JSON.stringify(n.Body().toObject()))
+                : (d.params.input_protobuf_encoded = a),
+              c().get(o, d)
+            );
+          {
             const e = new FormData();
             return (
               this.m_bJsonMode
@@ -6644,16 +6652,6 @@
               c().post(o, e, d)
             );
           }
-          return (
-            this.m_bJsonMode
-              ? (d.params = Object.assign(Object.assign({}, d.params), {
-                  input_json: JSON.stringify(n.Body().toObject()),
-                }))
-              : (d.params = Object.assign(Object.assign({}, d.params), {
-                  input_protobuf_encoded: a,
-                })),
-            c().get(o, d)
-          );
         }
         CreateWebAPIURL(e) {
           let t = e.match(/([^\.]+)\.(.+)#(\d+)/);
@@ -8037,7 +8035,7 @@
     },
     75362: (e, t, n) => {
       "use strict";
-      n.d(t, { Uh: () => O });
+      n.d(t, { Uh: () => k });
       var i = n(70655),
         r = n(58114),
         o = n(33019),
@@ -8644,8 +8642,8 @@
           })(e)
         );
       }
-      const O = () => (M || k(new w()), M),
-        k = (e) => {
+      const k = () => (M || O(new w()), M),
+        O = (e) => {
           (M = e),
             d.S.InstallErrorReportingStore(M),
             r.lq.InstallErrorReportingStore(M),
@@ -8724,7 +8722,7 @@
         Yr: () => D,
         Zo: () => M,
         Vc: () => x,
-        Wn: () => k,
+        Wn: () => O,
         T: () => L,
       });
       var i = n(70655),
@@ -9009,7 +9007,7 @@
           null !== (t = o.useContext(D).styles) && void 0 !== t ? t : S();
         return o.createElement("div", { className: n.ContextMenuSeparator });
       }
-      class O extends o.PureComponent {
+      class k extends o.PureComponent {
         constructor(e) {
           super(e),
             (this.m_refItem = o.createRef()),
@@ -9095,14 +9093,14 @@
           );
         }
       }
-      (O.contextType = D),
-        (0, i.gn)([b.ak], O.prototype, "OnSubMenuMouseEnter", null),
-        (0, i.gn)([b.ak], O.prototype, "OnSubMenuHidden", null),
-        (0, i.gn)([b.ak], O.prototype, "ShowSubMenu", null),
-        (0, i.gn)([b.ak], O.prototype, "RenderSubMenu", null),
-        (0, i.gn)([b.ak], O.prototype, "OnMouseEnter", null),
-        (0, i.gn)([b.ak], O.prototype, "OnClick", null);
-      let k = class extends o.Component {
+      (k.contextType = D),
+        (0, i.gn)([b.ak], k.prototype, "OnSubMenuMouseEnter", null),
+        (0, i.gn)([b.ak], k.prototype, "OnSubMenuHidden", null),
+        (0, i.gn)([b.ak], k.prototype, "ShowSubMenu", null),
+        (0, i.gn)([b.ak], k.prototype, "RenderSubMenu", null),
+        (0, i.gn)([b.ak], k.prototype, "OnMouseEnter", null),
+        (0, i.gn)([b.ak], k.prototype, "OnClick", null);
+      let O = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -9494,12 +9492,12 @@
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, i.gn)([b.ak], k.prototype, "BindMenuElement", null),
-        (0, i.gn)([b.ak, (0, f.D)(100)], k.prototype, "OnMenuMutation", null),
-        (0, i.gn)([b.ak], k.prototype, "OnWindowResize", null),
-        (0, i.gn)([b.ak], k.prototype, "OnBlur", null),
-        (0, i.gn)([b.ak], k.prototype, "OnKeyDown", null),
-        (k = (0, i.gn)([r.Pi], k));
+      (0, i.gn)([b.ak], O.prototype, "BindMenuElement", null),
+        (0, i.gn)([b.ak, (0, f.D)(100)], O.prototype, "OnMenuMutation", null),
+        (0, i.gn)([b.ak], O.prototype, "OnWindowResize", null),
+        (0, i.gn)([b.ak], O.prototype, "OnBlur", null),
+        (0, i.gn)([b.ak], O.prototype, "OnKeyDown", null),
+        (O = (0, i.gn)([r.Pi], O));
     },
     989: (e, t, n) => {
       "use strict";
@@ -9546,7 +9544,7 @@
         zx: () => B,
         ji: () => V,
         VY: () => R,
-        oX: () => k,
+        oX: () => O,
         Vh: () => Ye,
         TW: () => Se,
         ry: () => Ce,
@@ -9693,7 +9691,7 @@
           )
         );
       }
-      class O extends r.Component {
+      class k extends r.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }
@@ -9704,16 +9702,16 @@
           );
         }
       }
-      function k(e) {
+      function O(e) {
         const { classNameContent: t, bCenterVertically: n } = e,
           o = (0, i._T)(e, ["classNameContent", "bCenterVertically"]);
         return r.createElement(
           R,
           { className: t, bCenterVertically: n },
-          r.createElement(O, Object.assign({}, o))
+          r.createElement(k, Object.assign({}, o))
         );
       }
-      (0, i.gn)([u.a], O.prototype, "OnSubmit", null);
+      (0, i.gn)([u.a], k.prototype, "OnSubmit", null);
       const x = r.forwardRef(function (e, t) {
           const n = h(),
             { svgicon: s } = e,
@@ -11142,8 +11140,8 @@
       n(67345);
       var Re = n(22188),
         Ie = n(79822),
-        Oe = n(48780),
-        ke = n(48899);
+        ke = n(48780),
+        Oe = n(48899);
       const xe = new (n(30543).s)("DragDrop").Debug;
       class Le extends r.Component {
         constructor() {
@@ -11208,8 +11206,8 @@
               this.m_rgActiveDropRegions.push(e));
         }
         UnregisterDropRegion(e) {
-          Oe.Zf(this.m_rgDropRegions, e),
-            Oe.Zf(this.m_rgActiveDropRegions, e),
+          ke.Zf(this.m_rgDropRegions, e),
+            ke.Zf(this.m_rgActiveDropRegions, e),
             this.m_activeDropRegion == e &&
               ((this.m_activeDropRegion = void 0),
               this.m_activeDraggable && this.ShowDragGhost());
@@ -11331,8 +11329,8 @@
               n = r + s,
               a = e.GetDragDocument().body.getBoundingClientRect();
             if (Be(i, r, a) && !Be(t, n, a, !0)) {
-              const i = ke.r4(t, a.left, a.right, a.left - 200, a.right + 200),
-                r = ke.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
+              const i = Oe.r4(t, a.left, a.right, a.left - 200, a.right + 200),
+                r = Oe.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
                 o = 50;
               this.m_dragOffWindowTimer = window.setTimeout(() => {
                 e == this.m_activeDraggable && this.OnDrag(e, i, r);
@@ -11642,7 +11640,7 @@
               height: this.props.height || "auto",
               perspective: "600px",
             },
-            t = ke.r4(
+            t = Oe.r4(
               this.CalculateRotationDegrees(this.state.clientYDelta),
               -90,
               90,
@@ -12079,8 +12077,8 @@
           M = !!(w.onClick || w.onActivate || w.focusable),
           R = null != a || null != n || (y && null != c),
           I = null != h ? h : "min",
-          O = null != m ? m : "standard",
-          k = null != p ? p : "standard",
+          k = null != m ? m : "standard",
+          O = null != p ? p : "standard",
           x = null != _ ? _ : "standard",
           L = null == v || v,
           B = null != C ? C : 0,
@@ -12124,9 +12122,9 @@
                 "thick" == x && et().WithBottomSeparatorThick,
                 "fixed" == I && et().ChildrenWidthFixed,
                 "max" == I && et().ChildrenWidthGrow,
-                "standard" == O && et().ExtraPaddingOnChildrenBelow,
-                "standard" == k && et().StandardPadding,
-                "compact" == k && et().CompactPadding,
+                "standard" == k && et().ExtraPaddingOnChildrenBelow,
+                "standard" == O && et().StandardPadding,
+                "compact" == O && et().CompactPadding,
                 M && et().Clickable,
                 L && et().HighlightOnFocus
               ),
@@ -12425,7 +12423,7 @@
           const e =
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
-              : (0, ke.Lh)(this.props.value, this.props.min, this.props.max);
+              : (0, Oe.Lh)(this.props.value, this.props.min, this.props.max);
           return gt(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
@@ -12436,7 +12434,7 @@
             return gt(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
-          const e = (0, ke.Lh)(0, this.props.min, this.props.max);
+          const e = (0, Oe.Lh)(0, this.props.min, this.props.max);
           return gt(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
@@ -12544,9 +12542,9 @@
             ? this.m_nRepeatCount++
             : (this.m_nRepeatCount = 0);
           const r = 1 / this.normalizedDpadStep,
-            o = Math.floor((0, ke.bU)(r, 8, 25, 10, 30)),
+            o = Math.floor((0, Oe.bU)(r, 8, 25, 10, 30)),
             s = Math.max(1, o / 2),
-            a = (0, ke.Lh)((this.m_nRepeatCount - s) / (o - s), 0, 1),
+            a = (0, Oe.Lh)((this.m_nRepeatCount - s) / (o - s), 0, 1),
             l =
               a * a * (0.05 - this.normalizedDpadStep) +
               this.normalizedDpadStep,
@@ -12559,7 +12557,7 @@
             d = mt(this.normalizedStep, this.normalizedClampedValue + u);
           let h = pt(this.props.min, this.props.max, d);
           if (
-            ((h = (0, ke.Lh)(
+            ((h = (0, Oe.Lh)(
               h,
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
@@ -12593,7 +12591,7 @@
             n = mt(this.normalizedStep, t);
           let i = pt(this.props.min, this.props.max, n);
           if (
-            ((i = (0, ke.Lh)(
+            ((i = (0, Oe.Lh)(
               i,
               this.props.clampMin ? this.props.clampMin : this.props.min,
               this.props.clampMax ? this.props.clampMax : this.props.max
@@ -13210,10 +13208,10 @@
           (e[(e.Down = 4)] = "Down");
       })(Et || (Et = {}));
       var It = n(77323),
-        Ot = n.n(It);
-      const kt = r.createContext(null);
+        kt = n.n(It);
+      const Ot = r.createContext(null);
       function xt(e) {
-        const t = r.useContext(kt),
+        const t = r.useContext(Ot),
           { title: n, icon: o, active: a } = e,
           l = (0, i._T)(e, ["title", "icon", "active"]);
         return r.createElement(
@@ -13228,12 +13226,12 @@
             },
             l
           ),
-          o && r.createElement("div", { className: Ot().PageListItem_Icon }, o),
-          r.createElement("div", { className: Ot().PageListItem_Title }, n)
+          o && r.createElement("div", { className: kt().PageListItem_Icon }, o),
+          r.createElement("div", { className: kt().PageListItem_Title }, n)
         );
       }
       function Lt(e) {
-        return r.createElement("div", { className: Ot().Separator });
+        return r.createElement("div", { className: kt().Separator });
       }
       r.forwardRef(function (e, t) {
         const n = r.useRef();
@@ -13243,12 +13241,12 @@
         }, [e.page]);
         const i = Boolean(e.showTitle);
         return r.createElement(
-          kt.Provider,
+          Ot.Provider,
           { value: n },
           r.createElement(
             Ye,
             Object.assign({}, e, {
-              stylesheet: Ot(),
+              stylesheet: kt(),
               showTitle: i,
               renderPageListItem: xt,
               renderPageListSeparator: Lt,
@@ -13263,7 +13261,7 @@
           ? (t = Et.Up)
           : "down" == e.direction && (t = Et.Down);
         let n =
-          ((i = Ot()),
+          ((i = kt()),
           (o = t) == Et.Left
             ? i.Left
             : o == Et.Right
@@ -13278,7 +13276,7 @@
           Tt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Rt(Ot(), Ot().ContentTransition),
+            childrenClasses: Rt(kt(), kt().ContentTransition),
             direction: n,
           },
           e.children
@@ -13751,7 +13749,7 @@
         On: () => v,
         Pv: () => T,
         uH: () => x,
-        RG: () => k,
+        RG: () => O,
         JX: () => L,
         BL: () => l.BL,
         e1: () => _,
@@ -13919,8 +13917,8 @@
       var M = n(70655),
         R = n(29323),
         I = n(41311),
-        O = n(7573);
-      const k = (0, R.Pi)((e) => {
+        k = n(7573);
+      const O = (0, R.Pi)((e) => {
         const { onCancel: t, closeModal: n, bOKDisabled: o, onOK: s } = e,
           a = (0, D.id)(),
           l = i.useCallback(() => {
@@ -13945,7 +13943,7 @@
           i.createElement(
             r.oX,
             {
-              classNameContent: (0, O.Z)(
+              classNameContent: (0, k.Z)(
                 "GenericConfirmDialog",
                 e.bAllowFullSize && "DialogContentFullSize",
                 e.className
@@ -14009,7 +14007,7 @@
                   bUpdateDisabled: this.props.bMiddleDisabled,
                 })),
             i.createElement(
-              k,
+              O,
               Object.assign({}, d),
               i.createElement(
                 w.s,
@@ -14858,14 +14856,14 @@
         sqQ: () => ve,
         tEX: () => K,
         tLe: () => Q,
-        thP: () => k,
+        thP: () => O,
         tkI: () => p,
         uZu: () => le,
         ui7: () => H,
         vJ$: () => ue,
         vyu: () => Me,
         wn$: () => ie,
-        wx$: () => O,
+        wx$: () => k,
         x0L: () => be,
         xg: () => me,
         yRy: () => _,
@@ -15538,7 +15536,7 @@
           })
         );
       }
-      function O(e) {
+      function k(e) {
         const { direction: t } = e,
           n = (0, i._T)(e, ["direction"]);
         switch (t) {
@@ -15616,7 +15614,7 @@
             );
         }
       }
-      function k() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -19989,8 +19987,8 @@
         M = () => (p.JA.IS_OGG ? "games" : "groups"),
         R = () => "/:anything*/diagdata",
         I = () => "/login/home",
-        O = () => "/(migrateevents|migrate)",
-        k = (e) => `/${M()}/${e}/partnerevents`,
+        k = () => "/(migrateevents|migrate)",
+        O = (e) => `/${M()}/${e}/partnerevents`,
         x = (e) => `/${M()}/${e}/(events|announcements)`,
         L = (e) => `/app/${e}(/workshop/)?`,
         B = (e) => `/groups/${e}/`,
@@ -20047,10 +20045,10 @@
                     })
                   ),
                   r.createElement(s.AW, {
-                    path: k(":appid_or_vanity_str"),
+                    path: O(":appid_or_vanity_str"),
                     component: f,
                   }),
-                  r.createElement(s.AW, { path: O(), component: v }),
+                  r.createElement(s.AW, { path: k(), component: v }),
                   r.createElement(s.AW, {
                     path: x(":appid_or_vanity_str"),
                     component: _,

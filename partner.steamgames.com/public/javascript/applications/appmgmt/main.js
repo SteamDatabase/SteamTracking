@@ -6540,8 +6540,16 @@
               e.bSendAuth &&
               !u &&
               (d.params.access_token = this.m_webApiAccessToken),
-            !i.bConstMethod)
-          ) {
+            i.bConstMethod)
+          )
+            return (
+              (d.params.origin = self.origin),
+              this.m_bJsonMode
+                ? (d.params.input_json = JSON.stringify(n.Body().toObject()))
+                : (d.params.input_protobuf_encoded = a),
+              c().get(o, d)
+            );
+          {
             const e = new FormData();
             return (
               this.m_bJsonMode
@@ -6550,16 +6558,6 @@
               c().post(o, e, d)
             );
           }
-          return (
-            this.m_bJsonMode
-              ? (d.params = Object.assign(Object.assign({}, d.params), {
-                  input_json: JSON.stringify(n.Body().toObject()),
-                }))
-              : (d.params = Object.assign(Object.assign({}, d.params), {
-                  input_protobuf_encoded: a,
-                })),
-            c().get(o, d)
-          );
         }
         CreateWebAPIURL(e) {
           let t = e.match(/([^\.]+)\.(.+)#(\d+)/);
