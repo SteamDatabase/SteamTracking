@@ -53,6 +53,7 @@ function PostUrlInNewBlankWindow( newUrl, postData )
 	form.setAttribute( "method", "post" );
 	form.setAttribute( "action", newUrl );
 	form.setAttribute( "target", "_blank" );
+	form.setAttribute( "style", "display:none" );
 
 	for( var i = 0; i < postData.length; i++ )
 	{
@@ -66,7 +67,6 @@ function PostUrlInNewBlankWindow( newUrl, postData )
 
 	document.body.appendChild( form );
 	form.submit();
-	document.body.removeChild( form );
 }
 
 function GetAdditionalParametersForExternalPaymentProcessor( extProcessor )
