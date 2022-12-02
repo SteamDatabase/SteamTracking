@@ -236,6 +236,7 @@
     rgba(90, 98, 108, 0.3)
   );
   position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
   overflow: visible;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -278,6 +279,7 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {
@@ -1285,6 +1287,7 @@ div#global_header .content {
     rgba(90, 98, 108, 0.3)
   );
   position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
   overflow: visible;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1327,6 +1330,7 @@ div#global_header .content {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
   z-index: 6;
 }
 @media screen and (max-width: 1750px) {
