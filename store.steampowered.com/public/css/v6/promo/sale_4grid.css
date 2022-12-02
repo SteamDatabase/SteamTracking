@@ -19,7 +19,7 @@ div#footer {
 }
 
 .btn_ico_thumbs_up {
-	background-image: url(/public/images/promo/greenlight/ico_btn_rateup_green.png);
+	background-image: url(/store/public/images/promo/greenlight/ico_btn_rateup_green.png);
 	margin:  2px 0 0 2px;
 	background-color: #3c3d3e;
 	float: left;

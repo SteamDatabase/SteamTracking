@@ -197,7 +197,7 @@ a {
 
 .steam_link_section {
 	color: #FFFFFF;
-	background-image: url('/public/images/mobile/steam_link_bg.png');
+	background-image: url('/store/public/images/mobile/steam_link_bg.png');
 	background-size: cover;
 }
 .steam_link_accent {

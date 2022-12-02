@@ -655,44 +655,44 @@ body.v6 .reviews_container h3 {
 }
 
 .icon_overview {
-	background-image: url( '/public/images/curators/icon_overview.png' );
+	background-image: url( '/store/public/images/curators/icon_overview.png' );
 }
 .icon_settings {
-	background-image: url( '/public/images/curators/icon_settings.png' );
+	background-image: url( '/store/public/images/curators/icon_settings.png' );
 }
 .icon_page_edit {
-	background-image: url( '/public/images/curators/icon_page_edit.png' );
+	background-image: url( '/store/public/images/curators/icon_page_edit.png' );
 }
 .icon_edit {
-	background-image: url( '/public/images/curators/icon_edit.png' );
+	background-image: url( '/store/public/images/curators/icon_edit.png' );
 }
 .icon_edit_list {
-	background-image: url( '/public/images/curators/icon_edit_list.png' );
+	background-image: url( '/store/public/images/curators/icon_edit_list.png' );
 }
 .icon_edit_review {
-	background-image: url( '/public/images/curators/icon_edit_review.png' );
+	background-image: url( '/store/public/images/curators/icon_edit_review.png' );
 }
 .icon_add {
-	background-image: url( '/public/images/curators/icon_add.png' );
+	background-image: url( '/store/public/images/curators/icon_add.png' );
 }
 .icon_add_review {
-	background-image: url( '/public/images/curators/icon_add_review.png' );
+	background-image: url( '/store/public/images/curators/icon_add_review.png' );
 }
 .icon_add_list {
-	background-image: url( '/public/images/curators/icon_add_list.png' );
+	background-image: url( '/store/public/images/curators/icon_add_list.png' );
 }
 .icon_stats {
-	background-image: url( '/public/images/curators/icon_stats.png' );
+	background-image: url( '/store/public/images/curators/icon_stats.png' );
 }
 .icon_pending {
-	background-image: url( '/public/images/curators/icon_pending.png' );
+	background-image: url( '/store/public/images/curators/icon_pending.png' );
 }
 .icon_faq {
-	background-image: url( '/public/images/curators/icon_faq.png' );
+	background-image: url( '/store/public/images/curators/icon_faq.png' );
 }
 
 .icon_announcement {
-	background-image: url( '/public/images/curators/icon_announcement.png' );
+	background-image: url( '/store/public/images/curators/icon_announcement.png' );
 }
 
 /** stats */
@@ -962,7 +962,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	margin: 3px 0 4px 5px;
 	vertical-align: top;
 	background-repeat: no-repeat;
-	background-image: url( '/public/images//x.gif' );
+	background-image: url( '/store/public/images//x.gif' );
 	margin-left: 5px;
 }
 

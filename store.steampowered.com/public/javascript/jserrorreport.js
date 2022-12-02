@@ -2,7 +2,7 @@
 // Custom error reporting to use whenever prototype is included
 function ReportError( uri, identifier, message )
 {
-	new Ajax.Request('https://store.steampowered.com/jserrorreport/',
+	new Ajax.Request('https://store.steampowered.com/store/jserrorreport/',
 	{
 	    method:'post',
 	    parameters: { 

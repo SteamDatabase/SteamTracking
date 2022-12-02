@@ -452,7 +452,7 @@ function ExecuteSearch( rgParameters )
 
 	g_rgCurrentParameters = rgParameters;
 	new Effect.Fade( $('search_result_container'), { from: 1.0, to: 0.5, duration: 0.1 } );
-	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );
+	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/store/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );
 }
 
 function HandleFilteredResultsWarning()
@@ -776,7 +776,7 @@ function InitInfiniteScroll( rgParameters )
 		"trigger_height": 1620,                       // How many px from the bottom before triggering next load
 	};
 
-	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/search/results' );
+	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/store/search/results' );
 
 	// We've committed to infinite scroll, so we'll flip our hidden field on. This later gets stashed in the URL,
 	// so if the user returns using the back button we keep their infinite scroll settings.
@@ -1076,7 +1076,7 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 		oPrefs[strFilter] = bChecked ? 1 : 0;
 		
 		$J.post(
-			'https://store.steampowered.com/account/savesearchpreferences',
+			'https://store.steampowered.com/store/account/savesearchpreferences',
 			oPrefs
 		);
 
@@ -1100,7 +1100,7 @@ function OnClickShowFilteredContentSettingsModal()
 		}
 		else if ( strButton == 'SECONDARY' )
 		{
-			top.location.href = "https://store.steampowered.com/account/preferences/";
+			top.location.href = "https://store.steampowered.com/store/account/preferences/";
 		}
 	}  );
 }

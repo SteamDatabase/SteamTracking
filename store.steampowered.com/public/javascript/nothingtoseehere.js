@@ -22,7 +22,7 @@ jQuery( document ).ready(function( $ )
 				}
 
 				$J.ajax({
-					url: "https:\/\/store.steampowered.com\/actions\/clues",
+					url: "https:\/\/store.steampowered.com\/store\/actions\/clues",
 					dataType: "json",
 					cache: false,
 					data: {key: strPassword}

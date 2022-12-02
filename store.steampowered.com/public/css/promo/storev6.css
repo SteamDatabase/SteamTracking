@@ -8,7 +8,7 @@ body.v6.promoannounce {
 }
 
 body.v6.promoannounce .page_content_container {
-	background: url(/public/images/promo/v6announce/bg.jpg?v=1) top center, #000;
+	background: url(/store/public/images/promo/v6announce/bg.jpg?v=1) top center, #000;
 
 	background-repeat: no-repeat;
 			font-family: "Motiva Sans", Sans-serif;

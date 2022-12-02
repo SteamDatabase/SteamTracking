@@ -186,7 +186,7 @@ GDynamicStore = {
 			if ( bForceRefresh )
 				GDynamicStore.InvalidateCache();
 
-			var url = 'https://store.steampowered.com/dynamicstore/userdata/?id=' + accountid + '&cc=' + strCC;
+			var url = 'https://store.steampowered.com/store/dynamicstore/userdata/?id=' + accountid + '&cc=' + strCC;
 
 			var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion' );
 			if ( unUserdataVersion )
@@ -254,7 +254,7 @@ GDynamicStore = {
 			if ( !opts.bNoDefaultDescriptors )
 				GDynamicStore.s_rgExcludedDescIDs[3] = 3;
 
-			var url = 'https://store.steampowered.com/dynamicstore/saledata/?cc=' + strCC;
+			var url = 'https://store.steampowered.com/store/dynamicstore/saledata/?cc=' + strCC;
 
 			$J.get( url ).done( function( data ) {
 				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
@@ -908,7 +908,7 @@ GDynamicStore = {
 			$El.append($elNotInterested);
 
 
-			var $elPreferences = $J ( '<a/>' ).attr('href', 'https://store.steampowered.com/account/preferences' ).text ( "Preferences" ).addClass( 'option' );
+			var $elPreferences = $J ( '<a/>' ).attr('href', 'https://store.steampowered.com/store/account/preferences' ).text ( "Preferences" ).addClass( 'option' );
 			$El.append($elPreferences);
 
 
@@ -917,11 +917,11 @@ GDynamicStore = {
 
 	ModifyWishlist: function( $elSource, appid, bRemove, fnOnSuccess, fnOnFail )
 	{
-		var url = 'https://store.steampowered.com/api/addtowishlist';
+		var url = 'https://store.steampowered.com/store/api/addtowishlist';
 		GDynamicStore.s_rgWishlist[appid] = !bRemove;
 
 		if( bRemove )
-			url = 'https://store.steampowered.com/api/removefromwishlist';
+			url = 'https://store.steampowered.com/store/api/removefromwishlist';
 
 
 		$J.post( url, {
@@ -969,7 +969,7 @@ GDynamicStore = {
 		}
 
 
-		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+		$J.post( 'https://store.steampowered.com/store/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: appid,
 			remove: bRemove ? 1 : 0,
@@ -996,7 +996,7 @@ GDynamicStore = {
 			GDynamicStore.s_rgIgnoredPackages[packageid] = 0;
 		}
 
-		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+		$J.post( 'https://store.steampowered.com/store/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			subid: packageid,
 			remove: bRemove
@@ -1226,7 +1226,7 @@ GDynamicStore = {
 		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 4; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
-			var url = 'https://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name );
+			var url = 'https://store.steampowered.com/store/tags/en/' + encodeURIComponent( tag.name );
 			var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': GStoreItemData.AddNavEventParamsToURL( url, 'storemenu_recommendedtags' ) });
 			$Link.text( tag.name );
 			$Element.append( $Link );
@@ -1671,20 +1671,20 @@ GStoreItemData = {
 	GetAppURL: function( unAppID, strFeatureContext, nDepth, nCuratorClanID)
 	{
 		if ( typeof GStoreItemData.rgAppData[ unAppID ] == 'object' && 'url_name' in GStoreItemData.rgAppData[ unAppID ] ) {
-			return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth, nCuratorClanID )
+			return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth, nCuratorClanID )
 		}
 
-		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth, nCuratorClanID )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/app/' + unAppID + '/', strFeatureContext, nDepth, nCuratorClanID )
 	},
 
 	GetPackageURL: function( unPackageID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/sub/' + unPackageID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/sub/' + unPackageID + '/', strFeatureContext, nDepth )
 	},
 
 	GetBundleURL: function( unBundleID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/store/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
 	},
 
 	GetHoverParams: function ( unAppID, unPackageID, unBundleID )
@@ -2603,7 +2603,7 @@ function DEBUG_LogItemList( strListName, rgItems )
 function ShowHowDoDiscoveryQueuesWorkDialog()
 {
 	$J.get(
-		'https://store.steampowered.com/explore/howitworks/',
+		'https://store.steampowered.com/store/explore/howitworks/',
 		{
 			l : 'english'
 		},

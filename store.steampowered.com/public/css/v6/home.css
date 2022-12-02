@@ -254,7 +254,7 @@ body:not(.no_home_gutter) .home_page_gutter {
 }
 
 .home_cluster_ctn {
-	background: url( '/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
+	background: url( '/store/public/images/v6/home/cluster_bg.png?v=1' ) bottom center no-repeat;
 
 	padding-bottom: 22px;
 	position: relative;
@@ -307,7 +307,7 @@ a.home_block_footer_btn:hover {
 }
 
 .home_tab_bg {
-	background: url( '/public/images/v6/home/tab_bg.png') no-repeat;
+	background: url( '/store/public/images/v6/home/tab_bg.png') no-repeat;
 	position: absolute;
 	width: 664px;
 	height: 127px;
@@ -714,7 +714,7 @@ a.home_headercap:hover {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-image: url( '/public/images/v6/customize_checkboxes.png' );
+    background-image: url( '/store/public/images/v6/customize_checkboxes.png' );
     background-position: 0px 0px;
 }
 
@@ -772,7 +772,7 @@ a.home_headercap:hover {
 	top: 0;
 	width: 810px;
 	max-width: 100%;
-	background: url( '/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
+	background: url( '/store/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
 
 	height: 92px;
 }
@@ -2725,7 +2725,7 @@ html.responsive.tablet .store_main_capsule,
 /* home_v2.css */
 
 body.v6 {
-	background: url( '/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
+	background: url( '/store/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
 	/* background: #1b2838; */
 }
 
@@ -3015,7 +3015,7 @@ background: -webkit-linear-gradient( -65deg, #304761 5%,#30739f 95%);
 
 .friends_recently_purchased .store_capsule {
 	width: 228px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 }
 
 .friends_recently_purchased .store_capsule .capsule_header {
@@ -3047,7 +3047,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 	height: 15px;
 	vertical-align: -3px;
 	margin-left: 4px;
-	background-image: url('/public/images/v6/ico_friends_blue.png');
+	background-image: url('/store/public/images/v6/ico_friends_blue.png');
 	display: inline-block;
 }
 .friends_recently_purchased .friends_total {
@@ -3077,7 +3077,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 /* Recently updated games */
 
 .recently_updated .store_capsule {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	background-position-y: 98px;
 
 }
@@ -4090,7 +4090,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .home_page_content.home_logged_in .home_logged_in_bg {
-	background: url('/public/images/v6/temp/cluster_bg_2.png?v=1' ) bottom center no-repeat;
+	background: url('/store/public/images/v6/temp/cluster_bg_2.png?v=1' ) bottom center no-repeat;
 	position: absolute;
 	width: 1057px;
 	height: 500px;
@@ -4148,7 +4148,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .gutter_item .icon {
-	background-image: url( '/public/images/v6/store_menu_icons.png?v=2' );
+	background-image: url( '/store/public/images/v6/store_menu_icons.png?v=2' );
 	width: 16px;
 	height: 16px;
 	display: inline-block;
@@ -4261,7 +4261,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .store_main_capsule, .store_main_capsule:hover  {
-	background-image: url( '/public/images/v6/home/background_maincap_2.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_maincap_2.jpg' );
 	background-repeat: no-repeat;
 	background-position: right;
 	color: #fff;
@@ -4510,47 +4510,47 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);
 }
 
 .tab_item.focus .tab_item_details span.platform_img.steamplay {
-	background-image: url( '/public/images/v6/icon_steamplay_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_steamplay_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.win {
-	background-image: url( '/public/images/v6/icon_platform_win_dark.png?v=3' );
+	background-image: url( '/store/public/images/v6/icon_platform_win_dark.png?v=3' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.mac {
-	background-image: url( '/public/images/v6/icon_platform_mac_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_mac_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.linux {
-	background-image: url( '/public/images/v6/icon_platform_linux_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_linux_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.streamingvideo {
-	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_streamingvideo_v6_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.streaming360video {
-	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_streamingvideo_v6_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.streamingvideoseries {
-	background-image: url( '/public/images/v6/icon_streamingvideoseries_v6_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_streamingvideoseries_v6_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.valveindex {
-	background-image: url( '/public/images/v6/icon_platform_valveindex_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_valveindex_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.htcvive {
-	background-image: url( '/public/images/v6/icon_platform_htcvive_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_htcvive_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.oculusrift {
-	background-image: url( '/public/images/v6/icon_platform_oculusrift_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_oculusrift_dark.png' );
 }
 
 .tab_item.focus .tab_item_details span.platform_img.windowsmr {
-	background-image: url( '/public/images/v6/icon_platform_windowsmr_dark.png' );
+	background-image: url( '/store/public/images/v6/icon_platform_windowsmr_dark.png' );
 }
 
 .tab_item.focus .discount_block .discount_final_price {
@@ -4669,7 +4669,7 @@ background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 }
 
 .carousel_container.spotlight .carousel_items > * .store_capsule {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	width: 306px;
 	margin-bottom: 15px;
 	box-shadow: 0 0 5px #000000;
@@ -4699,7 +4699,7 @@ background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);
 }
 
 .carousel_container .arrow > div {
-	background-image: url(/public/images/v6/arrows.png);
+	background-image: url(/store/public/images/v6/arrows.png);
 	width: 23px;
 	height: 36px;
 }
@@ -4816,7 +4816,7 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 }
 
 .main_cap_desc {
-	background-image: url( '/public/images/v6/home/background_maincap.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_maincap.jpg' );
 	background-color: rgba( 102, 192, 244, 0.2 );
 	background-size: cover;
 }
@@ -4831,7 +4831,7 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 	width: 306px;
 	box-shadow: 0 0 3px 0 #000000;
 	margin-top: 6px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	background-size: cover;
 }
 
@@ -4841,7 +4841,7 @@ body.v6 h2 .header_inline {
 }
 
 .spotlight_content {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	margin: 0px;
 	min-height: 23px;
 	background-size: cover;
@@ -4983,7 +4983,7 @@ body.v6 .discovery_queue_ctn h2 {
     background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
     background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
-	background-image: url( '/public/images/v6/home/logo_steam_piston.png' );
+	background-image: url( '/store/public/images/v6/home/logo_steam_piston.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-position-y: 10px;
@@ -5057,7 +5057,7 @@ body.v6 .discovery_queue_ctn h2 {
 
 /* spotlight */
 .home_area_spotlight {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	height: 390px;
 	box-shadow: 0 0 5px #000000;
 }

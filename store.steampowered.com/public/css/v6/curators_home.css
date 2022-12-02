@@ -472,7 +472,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 .most_recommended .steam_curator_recommendation {
 	height: 215px;
 	width: 220px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 	box-shadow: 0 0 5px #000;
 	background-position-y: 20px;
 
@@ -489,7 +489,7 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 }
 
 .most_recommended .steam_curator_recommendation .store_capsule {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background-image: url( '/store/public/images/v6/home/background_spotlight.jpg' );
 }
 .most_recommended .steam_curator_recommendation .steam_curators_for_app {
 	background: transparent;

@@ -600,11 +600,11 @@ html.tablet #narrow_deck_compatibility .tab_filter_control_label {
 }
 
 html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(2) .tab_filter_control_label {
-	background-image: url('/public/shared/images/ico/ico-deck-verified.svg');
+	background-image: url('/store/public/shared/images/ico/ico-deck-verified.svg');
 }
 
 html.tablet #narrow_deck_compatibility .tab_filter_control_row:nth-child(3) .tab_filter_control_label {
-	background-image: url('/public/shared/images/ico/ico-deck-playable.svg');
+	background-image: url('/store/public/shared/images/ico/ico-deck-playable.svg');
 }
 
 

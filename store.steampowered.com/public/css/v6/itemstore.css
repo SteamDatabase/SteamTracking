@@ -122,12 +122,12 @@ body.v6 h2.pageheader.itemtitle
 }
 
 a#store_search_link img {
-	background-image: url('/public/images/v6/search_icon_btn_gray.png');
+	background-image: url('/store/public/images/v6/search_icon_btn_gray.png');
 	background-repeat: no-repeat;
 	background-position: top center;
 }
 a#store_search_link img:hover {
-	background-image: url('/public/images/v6/search_icon_btn_gray.png');
+	background-image: url('/store/public/images/v6/search_icon_btn_gray.png');
 	background-position-y: -25px;
 }
 

@@ -1090,7 +1090,7 @@
 
 	html.tablet #content_callout {
 		padding: 64px 0px 48px 0px;
-		background-image: url( '/public/images/v6/home/logo_steam_logo.svg' );
+		background-image: url( '/store/public/images/v6/home/logo_steam_logo.svg' );
 		background-size: 48px;
 		background-position-y: 0px;
 		border-bottom: 1px solid var(--gpBackground-LightSoft);
