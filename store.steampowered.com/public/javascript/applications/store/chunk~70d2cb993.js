@@ -188,6 +188,7 @@
         constructor(e, t, r) {
           (this.m_bRemoteInteraction = !1),
             (this.m_eFailureState = i.None),
+            (this.m_strExtendedErrorMessage = ""),
             (this.m_transport = e),
             (this.m_onCompleteCallback = t),
             (this.m_onDeviceDetailsCallback = r);
@@ -291,6 +292,9 @@
         GetFailureState() {
           return this.m_eFailureState;
         }
+        GetExtendedErrorMessage() {
+          return this.m_strExtendedErrorMessage;
+        }
         BHadRemoteInteraction() {
           return this.m_bRemoteInteraction;
         }
@@ -387,6 +391,7 @@
       (0, a.gn)([s.LO], h.prototype, "m_strChallengeURL", void 0),
         (0, a.gn)([s.LO], h.prototype, "m_bRemoteInteraction", void 0),
         (0, a.gn)([s.LO], h.prototype, "m_eFailureState", void 0),
+        (0, a.gn)([s.LO], h.prototype, "m_strExtendedErrorMessage", void 0),
         (0, a.gn)([u.a], h.prototype, "PollForUpdate", null),
         (0, a.gn)([u.a], h.prototype, "SetTokenToRevoke", null);
     },
@@ -495,32 +500,33 @@
                   20
                 );
               const l = (0, h.IC)(s, t),
-                d = a.gA.Init(B._u);
+                g = a.gA.Init(B._u);
               if (
-                (d.SetEMsg(9804),
-                d.Body().set_account_name(n),
-                d.Body().set_encrypted_password(l),
-                d.Body().set_encryption_timestamp(t.timestamp),
-                d.Body().set_remember_login(!!r),
-                d.Body().set_persistence(r ? 1 : 0),
-                d.Body().set_website_id(u.De.WEBSITE_ID),
-                d.Body().set_device_details(yield this.GetDeviceDetails()),
+                (g.SetEMsg(9804),
+                g.Body().set_account_name(n),
+                g.Body().set_encrypted_password(l),
+                g.Body().set_encryption_timestamp(t.timestamp),
+                g.Body().set_remember_login(!!r),
+                g.Body().set_persistence(r ? 1 : 0),
+                g.Body().set_website_id(u.De.WEBSITE_ID),
+                g.Body().set_device_details(yield this.GetDeviceDetails()),
+                g.Body().set_language((0, d.jM)(u.De.LANGUAGE)),
                 null != this.m_onGetMachineAuth)
               ) {
                 const e = yield this.m_onGetMachineAuth(n);
-                1 == e.eresult && d.Body().set_guard_data(e.data);
+                1 == e.eresult && g.Body().set_guard_data(e.data);
               }
               yield this.m_transport.MakeReady();
-              const g = yield B.$h.BeginAuthSessionViaCredentials(
+              const _ = yield B.$h.BeginAuthSessionViaCredentials(
                 this.m_transport,
-                d
+                g
               );
               return (
-                g.DEBUG_LogToConsole(),
+                _.DEBUG_LogToConsole(),
                 (0, o.z)(() =>
                   (0, i.mG)(this, void 0, void 0, function* () {
-                    const t = g.GetEResult(),
-                      r = g.Hdr().transport_error();
+                    const t = _.GetEResult(),
+                      r = _.Hdr().transport_error();
                     if (1 !== t)
                       switch (t) {
                         case 5:
@@ -542,7 +548,7 @@
                           return (
                             (0, y.U)("LoginUI.ShowAgreementPopup") &&
                               SteamClient.LoginUI.ShowAgreementPopup(
-                                g.Body().agreement_session_url()
+                                _.Body().agreement_session_url()
                               ),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
                             t
@@ -552,7 +558,11 @@
                             console.error(
                               `Failed to start auth session. Result: ${t} Transport: ${r}`
                             ),
-                            this.SetFailureState(m.NZ.Generic, R.EResult(t)),
+                            this.SetFailureState(
+                              m.NZ.Generic,
+                              R.EResult(t),
+                              _.Body().extended_error_message()
+                            ),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
                             t
                           );
@@ -565,7 +575,7 @@
                       allowed_confirmations: s,
                       steamid: o,
                       weak_token: l,
-                    } = g.Body().toObject();
+                    } = _.Body().toObject();
                     if (
                       ((this.m_msPollInterval = 1e3 * a),
                       (this.m_strClientID = i),
@@ -596,12 +606,12 @@
                         e.length > 1 && (t = e.sort((e, t) => p[e] - p[t])[0]);
                         return t;
                       })(s.map(({ confirmation_type: e }) => e)),
-                      _ = s.find(({ confirmation_type: e }) => e === d);
+                      g = s.find(({ confirmation_type: e }) => e === d);
                     switch (
-                      (_ &&
-                        _.associated_message &&
+                      (g &&
+                        g.associated_message &&
                         (this.m_strConfirmationAssociatedMessage =
-                          _.associated_message),
+                          g.associated_message),
                       d)
                     ) {
                       case 1:
@@ -877,10 +887,11 @@
               );
           }
         }
-        SetFailureState(e, t) {
+        SetFailureState(e, t, r = "") {
           (this.m_eStatus = 15),
             (this.m_eFailureState = e),
-            (this.m_strErrorReference = t);
+            (this.m_strErrorReference = t),
+            (this.m_strExtendedErrorMessage = r);
         }
       }
       (0, i.gn)([o.LO], w.prototype, "m_eStatus", void 0),
@@ -1439,21 +1450,23 @@
         let {
           eStatus: y,
           eFailureState: p,
-          strErrorReference: C,
-          strConfirmationAssociatedMessage: S,
-          strAccountName: E,
-          start: R,
-          reset: F,
-          addCode: v,
-          goBack: M,
-          useCodeOverride: T,
-          setTokenToRevoke: k,
+          strExtendedErrorMessage: C,
+          strErrorReference: S,
+          strConfirmationAssociatedMessage: E,
+          strAccountName: R,
+          start: F,
+          reset: v,
+          addCode: M,
+          goBack: T,
+          useCodeOverride: k,
+          setTokenToRevoke: A,
         } = (function (e) {
           const [t, r] = (0, n.useState)(new w(e));
           return (0, g.SZ)(() => ({
             strAccountName: t.GetAccountName(),
             steamid: t.GetSteamID(),
             eFailureState: t.GetFailureState(),
+            strExtendedErrorMessage: t.GetExtendedErrorMessage(),
             strErrorReference: t.GetErrorReference(),
             strConfirmationAssociatedMessage:
               t.GetConfirmationAssociatedMessage(),
@@ -1478,21 +1491,21 @@
           onDeviceDetails: b,
           onGetMachineAuth: f,
         });
-        const [A, L] = (0, n.useState)(0),
-          [O, W] = (0, n.useState)(
+        const [L, O] = (0, n.useState)(0),
+          [W, N] = (0, n.useState)(
             null !== (t = null == c ? void 0 : c.account_name) && void 0 !== t
               ? t
               : ""
           ),
-          [N, j] = (0, n.useState)(""),
-          [I, X] = (0, n.useState)(!0),
-          [U, D] = (0, n.useState)(!u.De.IN_STEAMUI),
-          G = $(),
-          H = !(0 === y || 1 === y || 2 === y),
-          V = () => (O && N ? R(O, N, I) : Promise.resolve(0)),
-          Z = () => {
-            console.log(`Logging in offline with username ${O}`),
-              SteamClient.User.SetLoginCredentials(O, N, I);
+          [j, I] = (0, n.useState)(""),
+          [X, U] = (0, n.useState)(!0),
+          [D, G] = (0, n.useState)(!u.De.IN_STEAMUI),
+          H = $(),
+          V = !(0 === y || 1 === y || 2 === y),
+          Z = () => (W && j ? F(W, j, X) : Promise.resolve(0)),
+          Q = () => {
+            console.log(`Logging in offline with username ${W}`),
+              SteamClient.User.SetLoginCredentials(W, j, X);
             SteamClient.User.StartOffline(!0);
           };
         if (
@@ -1500,24 +1513,24 @@
             var t;
             (null === (t = e.refreshInfo) || void 0 === t
               ? void 0
-              : t.login_token_id) && k(e.refreshInfo.login_token_id);
+              : t.login_token_id) && A(e.refreshInfo.login_token_id);
           }, [e.refreshInfo]),
           u.De.IN_STEAMUI &&
             (0, n.useEffect)(() => {
               !e.refreshInfo && SteamClient.Auth.GetCommandLineCredentials
                 ? SteamClient.Auth.GetCommandLineCredentials().then(
                     (e) => {
-                      if ((e.username && W(e.username), e.password)) {
+                      if ((e.username && N(e.username), e.password)) {
                         const t = !1;
-                        R(e.username, e.password, t);
+                        F(e.username, e.password, t);
                       }
-                      D(!0);
+                      G(!0);
                     },
                     () => {
-                      D(!0);
+                      G(!0);
                     }
                   )
-                : D(!0);
+                : G(!0);
             }, []),
           null != _ && 1 != _)
         )
@@ -1528,36 +1541,37 @@
               reset: () => window.location.reload(),
               failure: m.NZ.Generic,
               errorReference: _.toString(),
+              extendedErrorMessage: C,
             })
           );
-        if (!U) return n.createElement(Ze, null, n.createElement("div", null));
-        const Q = !o && u.De.EREALM !== x.IN.k_ESteamRealmChina;
-        if (!H) {
+        if (!D) return n.createElement(Ze, null, n.createElement("div", null));
+        const q = !o && u.De.EREALM !== x.IN.k_ESteamRealmChina;
+        if (!V) {
           const t = n.createElement(
             "div",
-            { className: (0, s.Z)(z().SideBySide, G && z().Embedded) },
+            { className: (0, s.Z)(z().SideBySide, H && z().Embedded) },
             n.createElement(ae, {
-              strAccountName: O,
-              onAccountNameChange: W,
-              strPassword: N,
-              onPasswordChange: j,
-              bRememberMe: I,
-              onRememberMeChange: X,
-              onSubmit: V,
+              strAccountName: W,
+              onAccountNameChange: N,
+              strPassword: j,
+              onPasswordChange: I,
+              bRememberMe: X,
+              onRememberMeChange: U,
+              onSubmit: Z,
               status: y,
               autoFocus: l,
               refreshInfo: e.refreshInfo,
             }),
-            Q &&
+            q &&
               n.createElement(se, {
                 transport: r,
-                onQRStatusChange: L,
+                onQRStatusChange: O,
                 onComplete: B,
                 platform: a,
                 refreshInfo: c,
               })
           );
-          if (G) {
+          if (H) {
             let e = u.De.IN_STEAMUI;
             return n.createElement(
               De,
@@ -1636,28 +1650,29 @@
             const e = 5 === y || 11 === y;
             return n.createElement(ze, {
               type: e ? "mobile" : "email",
-              onSubmitCode: v,
+              onSubmitCode: M,
               status: y,
-              associatedLabel: S,
-              accountName: E,
-              onBack: M,
+              associatedLabel: E,
+              accountName: R,
+              onBack: T,
             });
           case 6:
           case 4:
             const t = 6 === y;
             return n.createElement(Ie, {
               type: t ? "mobile" : "email",
-              accountName: E,
-              onUseCodeOverride: T,
+              accountName: R,
+              onUseCodeOverride: k,
             });
           case 16:
-            return n.createElement(Me, { reset: F });
+            return n.createElement(Me, { reset: v });
           case 15:
             return n.createElement(ve, {
-              reset: F,
+              reset: v,
               failure: p,
-              onRequestOffline: Z,
-              errorReference: C,
+              onRequestOffline: Q,
+              errorReference: S,
+              extendedErrorMessage: C,
             });
           case 14:
             return n.createElement(Ze, { compact: !0 }, d());
@@ -1665,10 +1680,11 @@
             return (
               console.error(`Unknown Phase: ${y}`),
               n.createElement(ve, {
-                reset: F,
+                reset: v,
                 failure: m.NZ.Generic,
-                onRequestOffline: Z,
-                errorReference: C,
+                onRequestOffline: Q,
+                errorReference: S,
+                extendedErrorMessage: C,
               })
             );
         }
@@ -2192,51 +2208,59 @@
             failure: r,
             onRequestOffline: i,
             errorReference: a,
+            extendedErrorMessage: s,
           } = e,
-          { title: s, description: o } = (function (e) {
+          { title: o, description: l } = (function (e, t = "") {
+            let r = { title: "", description: "" };
             switch (e) {
               case m.NZ.None:
                 return { title: "", description: "" };
               case m.NZ.Expired:
-                return {
+                r = {
                   title: (0, P.Xx)("#Login_Error_Expired_Title"),
                   description: (0, P.Xx)("#Login_Error_Expired_Description"),
                 };
+                break;
               case m.NZ.Network:
-                return {
+                r = {
                   title: (0, P.Xx)("#Login_Error_Network_Title"),
                   description: (0, P.Xx)("#Login_Error_Network_Description"),
                 };
+                break;
               case m.NZ.MoveAuthenticator:
-                return {
+                r = {
                   title: (0, P.Xx)("#Error_Generic"),
                   description: (0, P.Xx)(
                     "#Login_Error_MoveAuthenticator_Description"
                   ),
                 };
+                break;
               case m.NZ.RateLimitExceeded:
-                return {
+                r = {
                   title: (0, P.Xx)("#Login_Error_RateLimit_Title"),
                   description: (0, P.Xx)("#Login_Error_RateLimit_Description"),
                 };
+                break;
               case m.NZ.Generic:
               default:
-                return {
+                r = {
                   title: (0, P.Xx)("#Error_Generic"),
                   description: (0, P.Xx)("#Login_Error_Default_Description"),
                 };
             }
-          })(r),
-          l = u.De.IN_STEAMUI && r == m.NZ.Network;
+            t && (r.description = t);
+            return r;
+          })(r, s),
+          c = u.De.IN_STEAMUI && r == m.NZ.Network;
         return n.createElement(
           Ze,
           { compact: !0 },
           n.createElement(
             De,
             { alignItems: "center", gap: 12 },
-            n.createElement("div", { className: z().FailureTitle }, s),
-            n.createElement("div", { className: z().FailureDescription }, o),
-            l &&
+            n.createElement("div", { className: z().FailureTitle }, o),
+            n.createElement("div", { className: z().FailureDescription }, l),
+            c &&
               n.createElement(
                 "div",
                 { className: z().FailureDescription },
@@ -2250,7 +2274,7 @@
                 { className: z().TryAgainButton, onClick: t },
                 (0, P.Xx)("#Button_Retry")
               ),
-              l && n.createElement(Fe, { onRequestOffline: i })
+              c && n.createElement(Fe, { onRequestOffline: i })
             )
           ),
           a &&
@@ -3449,6 +3473,11 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
+                  language: {
+                    n: 11,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
                 },
               }),
             g.sm_m
@@ -3521,6 +3550,11 @@
                   },
                   agreement_session_url: {
                     n: 7,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                  extended_error_message: {
+                    n: 8,
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
