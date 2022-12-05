@@ -5751,6 +5751,8 @@
     "ControllerBinding_SoftPress_RepeatRate_Description": "The speed of Turbo will be set by this slider.",
     "ControllerBinding_SoftPress_Invert": "Invert Activation",
     "ControllerBinding_SoftPress_Invert_Description": "Invert when the press fires and when it turns off.",
+    "ControllerSettingSlider_Fine": "Fine Adjustment",
+    "ControllerSettingSlider_Coarse": "Coarse Adjustment",
     "ControllerSettingValue_On": "On",
     "ControllerSettingValue_Off": "Off",
     "ControllerSettingValue_Toggle": "Toggle",

@@ -7257,7 +7257,7 @@
                         aA._A.SetControllerSourceMode(s, e);
                       })(n.key),
                     trackStyleOverride: t,
-                    minimumDpadPercent: 0.01,
+                    minimumDpadPercent: 0.01 * w,
                   });
                 }
               }),
@@ -7287,6 +7287,7 @@
                 "--left-track-color": "transparent",
               },
               noLabel: !0,
+              minimumDpadPercent: 0.01 * w,
             });
           }
           let Z = [];
@@ -9350,38 +9351,39 @@
             [y, N] = i.useState(m),
             S = s
               ? (0, oA.uf)(n.id + "_Description", (0, pe.r4)(y, b, D, w, Q))
-              : void 0;
+              : void 0,
+            [k, M] = i.useState(!1);
           i.useEffect(() => {
             N(m);
           }, [m]);
-          const k = Math.trunc(
+          const T = Math.trunc(
               n.parentset_setting
                 ? n.parentset_setting.int_value
                 : n.int_default
             ),
-            M = n.int_value != k,
-            T = i.useCallback(() => {
-              M && o(k);
-            }, [M, k, o]),
-            P = i.useCallback(
+            P = n.int_value != T,
+            R = i.useCallback(() => {
+              P && o(T);
+            }, [P, T, o]),
+            Y = i.useCallback(
               (A) => {
                 const e = i.createElement(
                   uA.xV,
                   null,
                   i.createElement(
                     uA.Zo,
-                    { disabled: !M, onSelected: T },
+                    { disabled: !P, onSelected: R },
                     (0, I.Xx)("#ResetToDefault")
                   )
                 );
                 (0, sA.yV)(e, A);
               },
-              [M, T]
+              [P, R]
             ),
-            R = u ? void 0 : nA().SettingMaxWidth;
+            F = u ? void 0 : nA().SettingMaxWidth;
           if (B)
             return i.createElement(l.fp, {
-              className: (0, G.Z)(nA().SettingField, f, R),
+              className: (0, G.Z)(nA().SettingField, f, F),
               label: v,
               description:
                 S &&
@@ -9393,11 +9395,11 @@
               checked: 1 == m,
               onChange: (A) => o(A ? 1 : 0),
               bottomSeparator: r,
-              onSecondaryButton: T,
-              onSecondaryActionDescription: M
+              onSecondaryButton: R,
+              onSecondaryActionDescription: P
                 ? (0, I.Xx)("#ResetToDefault")
                 : void 0,
-              onContextMenu: P,
+              onContextMenu: Y,
             });
           if (null != p) {
             const A = p.map((A) => ({
@@ -9409,7 +9411,7 @@
               data: A.value,
             }));
             return i.createElement(l.gB, {
-              strClassName: (0, G.Z)(nA().SettingField, f, R),
+              strClassName: (0, G.Z)(nA().SettingField, f, F),
               label: v,
               description: i.createElement(
                 "div",
@@ -9420,11 +9422,11 @@
               selectedOption: n.int_value,
               onChange: (A) => o(A.data),
               bottomSeparator: r,
-              onSecondaryButton: T,
-              onSecondaryActionDescription: M
+              onSecondaryButton: R,
+              onSecondaryActionDescription: P
                 ? (0, I.Xx)("#ResetToDefault")
                 : void 0,
-              onContextMenu: P,
+              onContextMenu: Y,
             });
           }
           {
@@ -9442,7 +9444,7 @@
                   : null) +
                 (n.valueSuffixToken ? h : "");
             return i.createElement(l.z2, {
-              className: (0, G.Z)(nA().SettingField, f, R),
+              className: (0, G.Z)(nA().SettingField, f, F),
               label: v,
               description: i.createElement(
                 "div",
@@ -9459,7 +9461,12 @@
               validValues: t,
               valueSuffix: h,
               bottomSeparator: r,
-              resetValue: k,
+              resetValue: T,
+              dpadStep: k ? 1 : 0.025 * Math.abs(D - b),
+              onOptionsButton: () => M(!k),
+              onOptionsActionDescription: k
+                ? (0, I.Xx)("#ControllerSettingSlider_Coarse")
+                : (0, I.Xx)("#ControllerSettingSlider_Fine"),
             });
           }
         }),
@@ -27478,7 +27485,7 @@
           c = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           s = c ? Mg(c) : "",
           g = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          d = parseInt(1670024822),
+          d = parseInt(1670131341),
           m = d && Xg(d, n, s),
           C = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           E = (0, rg.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -36885,9 +36892,9 @@
             {
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Dec 2 2022 : 15:47:02",
-              BUILD_TIME_UTC: "Dec 2 2022 : 23:47:02",
-              BUILD_RTIME_UTC: 1670024822,
+              BUILD_TIME_LOCAL: "Dec 3 2022 : 21:22:21",
+              BUILD_TIME_UTC: "Dec 4 2022 : 05:22:21",
+              BUILD_RTIME_UTC: 1670131341,
             }.MOBILE_BUILD || window.addEventListener("unload", this.OnUnload);
         }
         OnUnload() {
