@@ -47,12 +47,25 @@ function OpenUrlInNewBlankWindow( newURL )
 	return window.open( newURL, "_blank" );
 }
 
-function PostUrlInNewBlankWindow( newUrl, postData )
+function CompleteCreditCardAuthentication()
 {
+ if ( $('credit_card_authentication_form').firstChild )
+ $('credit_card_authentication_form').firstChild.submit();
+}
+
+function SetUpCreditCardAuthentication( newUrl, postData )
+{
+	$('cart_area').style.display = 'none';
+	$('receipt_area').style.display = 'none';
+  $('col_right_payment_info').style.display = 'none';
+	$('credit_card_authentication_area').style.display = 'block';
+	$('pending_receipt_area').style.display = 'none';
+  $('col_right_review').style.display = 'block';
+
 	var form = document.createElement( "form" );
 	form.setAttribute( "method", "post" );
 	form.setAttribute( "action", newUrl );
-	form.setAttribute( "target", "_blank" );
+	form.setAttribute( "target", "_authentication" );
 	form.setAttribute( "style", "display:none" );
 
 	for( var i = 0; i < postData.length; i++ )
@@ -65,8 +78,14 @@ function PostUrlInNewBlankWindow( newUrl, postData )
 		form.appendChild( input );
 	}
 
-	document.body.appendChild( form );
-	form.submit();
+	while ( $('credit_card_authentication_form').firstChild )
+	{
+        $('credit_card_authentication_form').removeChild( $('credit_card_authentication_form').firstChild );
+    }
+
+	$('credit_card_authentication_form').appendChild( form );
+  
+    CompleteCreditCardAuthentication();
 }
 
 function GetAdditionalParametersForExternalPaymentProcessor( extProcessor )
@@ -912,6 +931,8 @@ function OnInitializeTransactionSuccess( result )
 			}
 			else
 			{
+        $('col_right_payment_info').style.display = 'none';
+        $('col_right_review').style.display = 'block';
 				$J('#submit_payment_info_btn').hide();
 				$J('#submit_payment_info_btn_in_progress').hide();
 				$J('#paypal-button').html('');
@@ -1132,6 +1153,9 @@ function OnAuthenticationComplete( gidTransID )
 {
 		if ( gidTransID && g_LastFinalizedTransactionID != gidTransID )
 		return;
+    
+	$('receipt_area').style.display = 'block';
+	$('credit_card_authentication_area').style.display = 'none';    
 
 	if ( g_timeoutPoll )
 	{
@@ -5421,6 +5445,7 @@ function DisplayReceiptPage()
 {
 	$('cart_area').style.display = 'none';
 	$('receipt_area').style.display = 'block';
+	$('credit_card_authentication_area').style.display = 'none';
 	$('pending_receipt_area').style.display = 'none';
 
 	var method = $('payment_method');
@@ -5655,12 +5680,12 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
   		return;
 
 		case 2:
-									var params = [];
-			params.push( { name: "MD", value: authentication_data.md } );
-			params.push( { name: "PaReq", value: authentication_data.pa_request } );
-			params.push( { name: "TermUrl", value: authentication_data.term_url } );
+										var params = [];
+				params.push( { name: "MD", value: authentication_data.md } );
+				params.push( { name: "PaReq", value: authentication_data.pa_request } );
+				params.push( { name: "TermUrl", value: authentication_data.term_url } );
 
-			PostUrlInNewBlankWindow( authentication_data.issuer_url, params );
+				SetUpCreditCardAuthentication( authentication_data.issuer_url, params );
 						g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
 			return;
 
