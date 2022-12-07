@@ -581,11 +581,12 @@ GHomepage = {
 
 		if ( GHomepage.bUseNewMainCapZip )
 		{
-			var itemPrimary = null;
-
+			var itemPrimary = [];
 			var rgFeatured = fnPreFilterList( GHomepage.oDisplayLists.main_cluster, true );
 			if ( rgFeatured.length >= 4 )
-				itemPrimary = rgFeatured.shift(); // set one aside; there are a lot of force-featured items so we'll try to put two up front
+			{
+								itemPrimary.push( rgFeatured.shift() );
+			}
 
 			var rgOtherRecs = fnPreFilterList( GHomepage.ZipLists(
 				GHomepage.rgRecentAppsByCreator, true,
@@ -593,16 +594,14 @@ GHomepage = {
 				GHomepage.rgFriendRecommendations, true
 			) );
 
-			rgDisplayListCombined = GHomepage.ZipLists(
+						rgDisplayListCombined = GHomepage.ZipLists(
 				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
+				itemPrimary, false,
 				rgFeatured, false,
 				fnPreFilterList( GHomepage.oDisplayLists.top_sellers ), true,
 				GHomepage.rgRecommendedGames, true,
 				rgOtherRecs, false
 			);
-
-			if ( itemPrimary )
-				rgDisplayListCombined.unshift( itemPrimary );
 		}
 		else if ( g_AccountID == 0 )
 		{
