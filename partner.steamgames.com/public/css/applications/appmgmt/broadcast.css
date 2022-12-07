@@ -316,6 +316,17 @@
   padding: 0 16px;
   margin: auto;
 }
+.broadcastchatannouncement_GiveawayWinnerBox_1iRcs {
+  position: absolute;
+  width: 400px;
+  background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
+  top: 0;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px #000;
+}
 .crossfade {
   position: relative;
   overflow: hidden;
@@ -2813,7 +2824,7 @@ div.broadcast_embeddable_viewer_count_2D9lH.broadcast_embeddable_vod_title_2Rb6f
   grid-template-rows: auto 30px;
   grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
 }
-.WideBroadcastCtn
+.WideBroadcastNoChatCtn
   .broadcast_embeddable_viewer_bar_2t4Yv
   .broadcast_embeddable_viewer_links_15u7W
   .broadcast_embeddable_chat_link_2sm6H {

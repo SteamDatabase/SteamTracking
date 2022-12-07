@@ -4530,6 +4530,7 @@
               [p.ScrollSnapCarousel]: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
+              [e.className]: !0,
             }),
           },
           n
@@ -7664,10 +7665,12 @@
       function y(e, t, a) {
         return {
           fontFamily: b(t.jsondata.sale_font, a),
-          fontWeight: t.jsondata.sale_font_weight,
+          fontWeight: 300,
           fontSize:
             t.jsondata.sale_section_font_size &&
-            t.jsondata.sale_section_font_size - 1,
+            t.jsondata.sale_section_font_size - 3,
+          letterSpacing: 0,
+          lineHeight: t.jsondata.sale_section_font_size,
           textTransform: t.jsondata.sale_section_disable_capitalize
             ? "initial"
             : null,

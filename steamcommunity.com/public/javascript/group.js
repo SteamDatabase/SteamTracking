@@ -696,7 +696,10 @@ function UpdateAnnouncementTextContentCheckResult( steamID, gidAnnouncement, ban
 	dialog.done( function() {
 		$J.post( 'https://steamcommunity.com/moderation/ajaxupdateclanannouncementtextcontentcheckresult/', { sessionid: g_sessionID, steamid: steamID, gid: gidAnnouncement, ban: ban ? 1 : 0 } )
 			.done( function( data ) {
-				top.location.reload();
+				if ( data.eresult == '1' )
+					top.location.reload();
+				else
+					ShowAlertDialog( 'Error', data.error );
 			} );
 	});
 }

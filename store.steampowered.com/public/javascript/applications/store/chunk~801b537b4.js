@@ -8149,7 +8149,8 @@
                 `${p.De.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
                 { params: a }
               );
-              if (!t || !t.data) return void (e.m_bInitialized = !0);
+              if (!t || !t.data || !t.data.success || 1 != t.data.success)
+                return void (e.m_bInitialized = !0);
               const r = t.data;
               (0, s.z)(() => {
                 (e.m_bInitialized = !0),

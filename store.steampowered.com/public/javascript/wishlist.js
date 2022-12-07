@@ -25,6 +25,9 @@ var CWishlistController = function()
 	this.elDragTarget = null;
 	this.nLastPosition = -1;
 	this.nDragAppId = -1;
+	
+	// Requested appid to scroll into view 
+	this.scrollToAppID = -1;
 
 	//this.marker = $J('<div style="position: absolute; width: 100px; height: 1px; background-color: red"></div>');
 	//$J('body').append(this.marker);
@@ -111,7 +114,11 @@ var CWishlistController = function()
 	if( g_nWalletCents > 0 )
 		$elPriceCtn.append('<label><div class="checkbox_wrapper"><input class="filter_check" type="checkbox" name="price_wallet"><div>'+"Less than Steam Wallet balance"+'</div></div></label>');
 
-
+	// the appid param is used by wishlist notifications so when the user clicks the notification we scroll the page to the appid of the notification
+	const urlParams = new URLSearchParams( window.location.search );
+	if ( urlParams.has( 'appid' ) ) 
+		this.scrollToAppID = urlParams.get( 'appid' );
+	
 	// Hook up filter checkboxes
 	$J('.filter_check').change(function(){
 		if( this.checked )
@@ -304,7 +311,7 @@ CWishlistController.prototype.BuildElements = function()
 
 			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && ( rgAppInfo['subs'][0].price > 0 || rgAppInfo['free_promo'] ) )
 			{
-				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/store\/%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
+				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/%5$s\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btn_green_steamui btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel)
@@ -410,14 +417,12 @@ CWishlistController.prototype.BuildElements = function()
 			$J('#throbber').hide();
 			$J('#total_num_games').text( Object.keys(_this.rgElements).length );
 
-			// if we stored a last scroll position in history.state, scroll there now
-			_this.ScrollToLastKnownYPosition();
+			// if we stored a last scroll position in history.state, or if url included an appid to scroll to, scroll there now
+			_this.ScrollToRequestedPosition();
 		}
 	}
 
 	YieldingCreateElements();
-
-
 }
 
 CWishlistController.prototype.SetFilterString = function()
@@ -1142,10 +1147,13 @@ CWishlistController.prototype.OnUserScroll = function()
 {
 	window.history.replaceState( { wishlistScroll: parseInt( window.scrollY ) }, "" );
 }
-CWishlistController.prototype.ScrollToLastKnownYPosition = function()
+CWishlistController.prototype.ScrollToRequestedPosition = function()
 {
+	var _this = this;
+
 	if ( window.history.state && window.history.state.wishlistScroll != null )
 		window.scrollTo( 0, window.history.state.wishlistScroll );
+	else if ( _this.scrollToAppID !== -1 )
+		document.getElementById('wishlist_row_' + _this.scrollToAppID )?.scrollIntoView();
 }
-
 

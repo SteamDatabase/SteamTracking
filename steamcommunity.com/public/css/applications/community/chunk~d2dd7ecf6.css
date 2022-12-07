@@ -1644,6 +1644,8 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
 .partnereventeditor_EventEditorInputPaneContainer_2hDSK
   .partnereventeditor_CharactorRemaining_153Co {
   float: right;
+  flex-grow: 1;
+  text-align: right;
 }
 .partnereventeditor_EventEditorInputPaneContainer_2hDSK
   .partnereventeditor_CharactorExhausted_2zjgO {

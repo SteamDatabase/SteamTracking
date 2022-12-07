@@ -737,8 +737,8 @@
         VJ: () => A,
         VL: () => o,
         WJ: () => T,
-        cR: () => C,
-        eK: () => W,
+        cR: () => W,
+        eK: () => C,
         oY: () => E,
       });
       var i = r(33019),
@@ -2567,65 +2567,10 @@
           return "StoreItemID";
         }
       }
-      class W extends a {
-        constructor(e = null) {
-          super(),
-            W.prototype.ids || s.aR(W.M()),
-            a.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
-                fields: {
-                  ids: { n: 1, c: E, r: !0, q: !0 },
-                  context: { n: 2, c: T },
-                  data_request: { n: 3, c: I },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = s.Bh(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.TA(W.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.aD(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.F(W.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.l2(W.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetItems_Request";
-        }
-      }
       class C extends a {
         constructor(e = null) {
           super(),
-            C.prototype.store_items || s.aR(C.M()),
+            C.prototype.ids || s.aR(C.M()),
             a.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
@@ -2633,7 +2578,11 @@
             C.sm_m ||
               (C.sm_m = {
                 proto: C,
-                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
+                fields: {
+                  ids: { n: 1, c: E, r: !0, q: !0 },
+                  context: { n: 2, c: T },
+                  data_request: { n: 3, c: I },
+                },
               }),
             C.sm_m
           );
@@ -2668,6 +2617,57 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreBrowse_GetItems_Request";
+        }
+      }
+      class W extends a {
+        constructor(e = null) {
+          super(),
+            W.prototype.store_items || s.aR(W.M()),
+            a.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
+                fields: { store_items: { n: 1, c: o, r: !0, q: !0 } },
+              }),
+            W.sm_m
+          );
+        }
+        static MBF() {
+          return W.sm_mbf || (W.sm_mbf = s.Bh(W.M())), W.sm_mbf;
+        }
+        toObject(e = !1) {
+          return W.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.TA(W.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.aD(W.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.F(W.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.l2(W.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreBrowse_GetItems_Response";
@@ -2805,7 +2805,7 @@
       var A;
       !(function (e) {
         (e.GetItems = function (e, t) {
-          return e.SendMsg("StoreBrowse.GetItems#1", t, C, {
+          return e.SendMsg("StoreBrowse.GetItems#1", t, W, {
             bConstMethod: !0,
             ePrivilege: 2,
             eWebAPIKeyRequirement: 1,
@@ -4602,6 +4602,9 @@
             (this.m_setUnavailableApps = new Set()),
             (this.m_setUnavailablePackages = new Set()),
             (this.m_setUnavailableBundles = new Set()),
+            (this.m_setUnavailableDueToCountryRestrictionApps = new Set()),
+            (this.m_setUnavailableDueToCountryRestrictionPackages = new Set()),
+            (this.m_setUnavailableDueToCountryRestrictionBundles = new Set()),
             (this.m_mapAppsInFlight = new Map()),
             (this.m_mapPackageInFlight = new Map()),
             (this.m_mapBundleInFlight = new Map()),
@@ -4987,7 +4990,10 @@
                       .forEach((e) => {
                         const t = e.id(),
                           i = e.item_type();
-                        if (1 != e.success() || this.BIsStoreItemMissing(t, i))
+                        if (
+                          1 != e.success() ||
+                          this.BIsStoreItemMissing(t, i)
+                        ) {
                           switch (
                             ("dev" == h.De.WEB_UNIVERSE &&
                               console.warn(
@@ -5016,7 +5022,24 @@
                                   t
                               );
                           }
-                        else this.ReadItem(e, r);
+                          if (e.unvailable_for_country_restriction())
+                            switch (i) {
+                              case 0:
+                                this.m_setUnavailableDueToCountryRestrictionApps.add(
+                                  t
+                                );
+                                break;
+                              case 1:
+                                this.m_setUnavailableDueToCountryRestrictionPackages.add(
+                                  t
+                                );
+                                break;
+                              case 2:
+                                this.m_setUnavailableDueToCountryRestrictionBundles.add(
+                                  t
+                                );
+                            }
+                        } else this.ReadItem(e, r);
                       })
                   : (console.error(
                       "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
@@ -5122,6 +5145,27 @@
         }
         BIsBundleMissing(e) {
           return this.m_setUnavailableBundles.has(e);
+        }
+        BIsStoreItemUnavailableDueToCountryRestriction(e, t) {
+          switch (t) {
+            case 0:
+              return this.BIsAppUnavailableDueToCountryRestriction(e);
+            case 1:
+              return this.BIsPackageUnavailableDueToCountryRestriction(e);
+            case 2:
+              return this.BIsBundleUnavailableDueToCountryRestriction(e);
+            default:
+              return console.error("BStoreItemMissing invalid type", t), !0;
+          }
+        }
+        BIsAppUnavailableDueToCountryRestriction(e) {
+          return this.m_setUnavailableDueToCountryRestrictionApps.has(e);
+        }
+        BIsPackageUnavailableDueToCountryRestriction(e) {
+          return this.m_setUnavailableDueToCountryRestrictionPackages.has(e);
+        }
+        BIsBundleUnavailableDueToCountryRestriction(e) {
+          return this.m_setUnavailableDueToCountryRestrictionBundles.has(e);
         }
         ReadResults(e, t) {
           let r = [];

@@ -1003,7 +1003,7 @@
   display: flex;
   padding: 0px;
   margin-top: 6px;
-  min-height: 38px;
+  height: 38px;
 }
 .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0.salepreviewwidgets_SingleLineMode_31Sy5
   .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3GLeQ {
@@ -1056,6 +1056,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: row-reverse;
+  align-items: center;
   padding: 0;
 }
 .salepreviewwidgets_StoreSaleBroadcastWidgetRight_nkwT1
@@ -1131,7 +1132,7 @@
 .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   font-size: 26px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 30px;
   padding: 4px 8px;
   height: 100%;
   box-sizing: border-box;

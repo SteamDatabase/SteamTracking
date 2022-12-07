@@ -5595,20 +5595,21 @@
     },
     99715: (e, t, a) => {
       "use strict";
-      a.d(t, { h: () => E });
-      var n = a(67294),
-        i = a(80533),
-        r = a(15530),
-        o = (a(49186), a(52795)),
-        s = (a(28976), a(3356), a(32548)),
-        l = a(65924),
-        c = a(13596),
-        d = a(7573),
-        m = a(41311),
-        u = a(60972),
-        _ = a.n(u);
-      a(46713);
-      const p = n.lazy(() =>
+      a.d(t, { h: () => h });
+      var n = a(13271),
+        i = a(67294),
+        r = a(80533),
+        o = a(15530),
+        s = (a(49186), a(52795)),
+        l = a(28976),
+        c = (a(3356), a(32548)),
+        d = (a(46713), a(65924)),
+        m = a(13596),
+        u = a(7573),
+        _ = a(41311),
+        p = a(60972),
+        g = a.n(p);
+      const E = i.lazy(() =>
           Promise.all([
             a.e(3973),
             a.e(2677),
@@ -5617,79 +5618,83 @@
             a.e(4601),
           ]).then(a.bind(a, 934))
         ),
-        g = "viewed";
-      function E(e) {
+        v = "viewed";
+      function h(e) {
         var t, a;
         const {
-            event: u,
-            activeTab: E,
-            bWideBroadcastDisplay: v,
-            broadcastEmbedContext: h,
+            event: p,
+            activeTab: h,
+            bWideBroadcastDisplay: S,
+            broadcastEmbedContext: b,
+            bWideBroadcastPermitChat: y,
           } = e,
-          [S, b] = n.useState(!E),
-          [y, C] = (0, r._)(
+          [C, f] = i.useState(!h),
+          [D, G] = (0, o._)(
             "broadcast-preroll-" + e.broadcastEmbedContext.nAppIDVOD
           ),
-          f = Boolean(E),
-          D = y == g;
-        return n.createElement(
-          s.S,
+          w = Boolean(h),
+          I = D == v,
+          T = (0, n.SZ)(() => "show" === l.ai.Get().GetChatVisibility()),
+          B = S && (!y || !T);
+        return i.createElement(
+          c.S,
           null,
-          n.createElement(
-            l.ZP,
+          i.createElement(
+            d.ZP,
             { feature: "salebroadcast" },
-            n.createElement(
-              n.Suspense,
-              { fallback: n.createElement("div", null) },
-              n.createElement(
-                i.h,
-                { onEnter: () => b(!0) },
-                n.createElement(
+            i.createElement(
+              i.Suspense,
+              { fallback: i.createElement("div", null) },
+              i.createElement(
+                r.h,
+                { onEnter: () => f(!0) },
+                i.createElement(
                   "div",
                   {
-                    className: (0, d.Z)({
-                      [_().SaleBroadcastSection]: f,
-                      [_().SaleBroadcastCtn]: !f,
-                      WideBroadcastCtn: v,
+                    className: (0, u.Z)({
+                      [g().SaleBroadcastSection]: w,
+                      [g().SaleBroadcastCtn]: !w,
+                      WideBroadcastCtn: S && !T,
+                      WideBroadcastNoChatCtn: S && !y,
                       SaleBroadcastSection_trgt: !0,
                     }),
                   },
-                  Boolean(S) &&
-                    n.createElement(
-                      p,
-                      Object.assign({}, h, {
+                  Boolean(C) &&
+                    i.createElement(
+                      E,
+                      Object.assign({}, b, {
                         bShowCapsuleArt: !0,
                         fnFilterStreams: (e) => {
                           var t, a;
-                          const n = o.c9.GetOrCreateBroadcastInfo(
+                          const n = s.c9.GetOrCreateBroadcastInfo(
                             e.steamid
                           ).m_nAppID;
                           return (
-                            ((null === (t = null == u ? void 0 : u.jsondata) ||
+                            ((null === (t = null == p ? void 0 : p.jsondata) ||
                             void 0 === t
                               ? void 0
                               : t.broadcast_preroll_vod_appid) &&
                               e.nAppIDVOD ==
                                 Number(
                                   null ===
-                                    (a = null == u ? void 0 : u.jsondata) ||
+                                    (a = null == p ? void 0 : p.jsondata) ||
                                     void 0 === a
                                     ? void 0
                                     : a.broadcast_preroll_vod_appid
                                 )) ||
-                            (null == u
+                            (null == p
                               ? void 0
-                              : u.BIsBroadcastAccountIDWhiteListed(
+                              : p.BIsBroadcastAccountIDWhiteListed(
                                   e.accountid
                                 )) ||
-                            u.BUsesContentHubForItemSource() ||
-                            !E ||
-                            E.ShouldShowOnTab(n)
+                            p.BUsesContentHubForItemSource() ||
+                            !h ||
+                            h.ShouldShowOnTab(n)
                           );
                         },
-                        fnOnVideoEnd: () => C(g),
-                        bSkipPreRoll: D,
-                        bWidePlayer: v,
+                        fnOnVideoEnd: () => G(v),
+                        bSkipPreRoll: I,
+                        bWidePlayer: B,
                         tabuniqueid:
                           null === (t = e.activeTab) || void 0 === t
                             ? void 0
@@ -5700,11 +5705,11 @@
                             : a.GetStoreFilter(),
                       })
                     ),
-                  Boolean(!S) &&
-                    n.createElement(c.V, {
+                  Boolean(!C) &&
+                    i.createElement(m.V, {
                       size: "small",
                       position: "center",
-                      string: (0, m.Xx)("#Loading"),
+                      string: (0, _.Xx)("#Loading"),
                     })
                 )
               )
@@ -16433,10 +16438,10 @@
         );
       }
       function Yi(e) {
-        var t;
-        const { event: a, section: i, activeTab: r, language: o } = e,
-          s = (0, G.id)();
-        switch (i.section_type) {
+        var t, a;
+        const { event: i, section: r, activeTab: o, language: s } = e,
+          l = (0, G.id)();
+        switch (r.section_type) {
           case "items":
           case "events":
           case "sale_events":
@@ -16447,19 +16452,23 @@
           case "point_shop_smart":
             return n.createElement(Qi.j, Object.assign({}, e));
           case "broadcast":
-            if (a.BEventCanShowBroadcastWidget()) {
+            if (i.BEventCanShowBroadcastWidget()) {
               if (
-                a.jsondata.sale_sections.find(
+                i.jsondata.sale_sections.find(
                   (e) => "broadcast" == e.section_type
-                ) == i
+                ) == r
               )
                 return n.createElement(Ze.h, {
-                  event: a,
+                  event: i,
                   broadcastEmbedContext: e.broadcastEmbedContext,
                   bWideBroadcastDisplay:
-                    null === (t = a.jsondata) || void 0 === t
+                    null === (t = i.jsondata) || void 0 === t
                       ? void 0
                       : t.broadcast_display_wide_player,
+                  bWideBroadcastPermitChat:
+                    null === (a = i.jsondata) || void 0 === a
+                      ? void 0
+                      : a.broadcast_dispaly_wide_player_allow_chat,
                 });
             }
             return null;
@@ -16467,7 +16476,7 @@
             return n.createElement(Dn, Object.assign({}, e));
           case "doors":
             return n.createElement(Dt, {
-              strFontFamily: (0, Z.iM)(a.jsondata.sale_font, o),
+              strFontFamily: (0, Z.iM)(i.jsondata.sale_font, s),
             });
           case "text_section":
             return n.createElement(Gn, Object.assign({}, e));
@@ -16475,7 +16484,7 @@
           case "tab_buttons":
             return n.createElement(Cn, Object.assign({}, e));
           case "curator":
-            return i.curator_clan_id
+            return r.curator_clan_id
               ? n.createElement(
                   "div",
                   {
@@ -16488,7 +16497,7 @@
                   n.createElement(Ve.oZ, {
                     creatorID: {
                       name: null,
-                      clan_account_id: i.curator_clan_id,
+                      clan_account_id: r.curator_clan_id,
                       type: "developer",
                     },
                     bShowTagline: !0,
@@ -16498,12 +16507,12 @@
               : null;
           case "curator_recommendation":
             return n.createElement(lt.F, {
-              section: i,
-              event: a,
+              section: r,
+              event: i,
               bPreviewMode: e.bIsPreview,
             });
           case "event_schedule":
-            return s
+            return l
               ? null
               : n.createElement(
                   li,
@@ -16512,15 +16521,15 @@
                   })
                 );
           case "vo_internal":
-            if (i.internal_section_data)
-              switch (i.internal_section_data.internal_type) {
+            if (r.internal_section_data)
+              switch (r.internal_section_data.internal_type) {
                 case "subscription_pricing":
                   return n.createElement(xi, Object.assign({}, e));
                 case "tab_contents":
                   return n.createElement(
                     yn.em,
                     Object.assign({}, e, {
-                      tab: r.GetTab(),
+                      tab: o.GetTab(),
                       showReferences: !1,
                     })
                   );
@@ -16528,7 +16537,7 @@
                   return n.createElement(
                     yn.em,
                     Object.assign({}, e, {
-                      tab: r.GetTab(),
+                      tab: o.GetTab(),
                       showReferences: !0,
                     })
                   );
@@ -16547,13 +16556,13 @@
               ze,
               Object.assign(
                 {
-                  hubtype: a.GetContentHubType(),
-                  category: a.GetContentHubCategory(),
-                  tagid: a.GetContentHubTag(),
-                  prioritize_discounts: i.prioritize_discounts,
-                  prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                  optin_tagid: a.jsondata.optin_tagid,
-                  optin_prune_tagid: a.jsondata.optin_prune_tagid,
+                  hubtype: i.GetContentHubType(),
+                  category: i.GetContentHubCategory(),
+                  tagid: i.GetContentHubTag(),
+                  prioritize_discounts: r.prioritize_discounts,
+                  prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                  optin_tagid: i.jsondata.optin_tagid,
+                  optin_prune_tagid: i.jsondata.optin_prune_tagid,
                 },
                 e
               )
@@ -16563,14 +16572,14 @@
               je,
               Object.assign(
                 {
-                  hubtype: a.GetContentHubType(),
-                  category: a.GetContentHubCategory(),
-                  tagid: a.GetContentHubTag(),
-                  bAutoAdvance: i.carousel_auto_advance,
-                  prioritize_discounts: i.prioritize_discounts,
-                  prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                  optin_tagid: a.jsondata.optin_tagid,
-                  optin_prune_tagid: a.jsondata.optin_prune_tagid,
+                  hubtype: i.GetContentHubType(),
+                  category: i.GetContentHubCategory(),
+                  tagid: i.GetContentHubTag(),
+                  bAutoAdvance: r.carousel_auto_advance,
+                  prioritize_discounts: r.prioritize_discounts,
+                  prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                  optin_tagid: i.jsondata.optin_tagid,
+                  optin_prune_tagid: i.jsondata.optin_prune_tagid,
                 },
                 e
               )
@@ -16580,18 +16589,18 @@
               le,
               Object.assign(
                 {
-                  hubtype: a.GetContentHubType(),
-                  category: a.GetContentHubCategory(),
-                  tagid: a.GetContentHubTag(),
-                  prioritize_discounts: i.prioritize_discounts,
-                  prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                  optin_tagid: a.jsondata.optin_tagid,
-                  optin_prune_tagid: a.jsondata.optin_prune_tagid,
+                  hubtype: i.GetContentHubType(),
+                  category: i.GetContentHubCategory(),
+                  tagid: i.GetContentHubTag(),
+                  prioritize_discounts: r.prioritize_discounts,
+                  prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                  optin_tagid: i.jsondata.optin_tagid,
+                  optin_prune_tagid: i.jsondata.optin_prune_tagid,
                   strSectionID:
-                    i.contenthub_section_show_specific_carousel &&
-                    i.contenthub_section_id,
-                  nCapsulesPerPage: i.contenthub_section_capsules_per_page,
-                  tab: r,
+                    r.contenthub_section_show_specific_carousel &&
+                    r.contenthub_section_id,
+                  nCapsulesPerPage: r.contenthub_section_capsules_per_page,
+                  tab: o,
                   saleSection: e.section,
                 },
                 e
@@ -16602,13 +16611,13 @@
               ve,
               Object.assign(
                 {
-                  strHubType: a.GetContentHubType(),
-                  strCategory: a.GetContentHubCategory(),
-                  nTagID: a.GetContentHubTag(),
-                  prioritize_discounts: i.prioritize_discounts,
-                  prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                  optin_tagid: a.jsondata.optin_tagid,
-                  optin_prune_tagid: a.jsondata.optin_prune_tagid,
+                  strHubType: i.GetContentHubType(),
+                  strCategory: i.GetContentHubCategory(),
+                  nTagID: i.GetContentHubTag(),
+                  prioritize_discounts: r.prioritize_discounts,
+                  prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                  optin_tagid: i.jsondata.optin_tagid,
+                  optin_prune_tagid: i.jsondata.optin_prune_tagid,
                 },
                 e
               )
@@ -16618,13 +16627,13 @@
               ne,
               Object.assign(
                 {
-                  hubtype: a.GetContentHubType(),
-                  category: a.GetContentHubCategory(),
-                  tagid: a.GetContentHubTag(),
-                  prioritize_discounts: i.prioritize_discounts,
-                  prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                  optin_tagid: a.jsondata.optin_tagid,
-                  optin_prune_tagid: a.jsondata.optin_prune_tagid,
+                  hubtype: i.GetContentHubType(),
+                  category: i.GetContentHubCategory(),
+                  tagid: i.GetContentHubTag(),
+                  prioritize_discounts: r.prioritize_discounts,
+                  prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                  optin_tagid: i.jsondata.optin_tagid,
+                  optin_prune_tagid: i.jsondata.optin_prune_tagid,
                 },
                 e
               )
@@ -16633,15 +16642,15 @@
             return n.createElement(
               K,
               Object.assign({}, e, {
-                hubtype: a.GetContentHubType(),
-                category: a.GetContentHubCategory(),
-                tagid: a.GetContentHubTag(),
-                tab: r,
-                prioritize_discounts: i.prioritize_discounts,
-                prune_list_optin_name: a.jsondata.prune_list_optin_name,
-                optin_tagid: a.jsondata.optin_tagid,
-                optin_prune_tagid: a.jsondata.optin_prune_tagid,
-                rows_per_page: i.carousel_rows,
+                hubtype: i.GetContentHubType(),
+                category: i.GetContentHubCategory(),
+                tagid: i.GetContentHubTag(),
+                tab: o,
+                prioritize_discounts: r.prioritize_discounts,
+                prune_list_optin_name: i.jsondata.prune_list_optin_name,
+                optin_tagid: i.jsondata.optin_tagid,
+                optin_prune_tagid: i.jsondata.optin_prune_tagid,
+                rows_per_page: r.carousel_rows,
               })
             );
           case "quiz":
@@ -16664,7 +16673,7 @@
             ("dev" != G.De.WEB_UNIVERSE && "beta" != G.De.WEB_UNIVERSE) ||
               console.error(
                 "DisplaySingleSaleSection: this section type is not implemented: " +
-                  i.section_type
+                  r.section_type
               );
         }
         return null;
@@ -16855,7 +16864,7 @@
         i = a(84038),
         r = a(67294),
         o = (a(26149), a(49186)),
-        s = (a(3356), a(99646), a(32548)),
+        s = (a(3356), a(32548)),
         l = a(67754),
         c = a(34133),
         d = a.n(c),
@@ -16870,26 +16879,36 @@
         S = a(21946),
         b = a(69279);
       function y(e) {
-        var t;
-        const { event: a, broadcastEmbedContext: i } = e,
-          o = Boolean(
-            null === (t = null == a ? void 0 : a.jsondata) || void 0 === t
+        var t, a, i;
+        const { event: o, broadcastEmbedContext: l } = e,
+          c = Boolean(
+            null === (t = null == o ? void 0 : o.jsondata) || void 0 === t
               ? void 0
               : t.broadcast_display_wide_player
+          ),
+          d = Boolean(
+            null === (a = null == o ? void 0 : o.jsondata) || void 0 === a
+              ? void 0
+              : a.broadcast_dispaly_wide_player_allow_chat
           );
         return r.createElement(
           r.Fragment,
           null,
           Boolean(
-            a.BEventCanShowBroadcastWidget() &&
-              a.BSaleShowBroadcastAtTopOfPage()
+            o.BEventCanShowBroadcastWidget() &&
+              o.BSaleShowBroadcastAtTopOfPage()
           ) &&
             r.createElement(n.h, {
-              event: a,
-              broadcastEmbedContext: i,
-              bWideBroadcastDisplay: o,
+              event: o,
+              broadcastEmbedContext: l,
+              bWideBroadcastDisplay: c,
+              bWideBroadcastPermitChat: d,
             }),
-          a.jsondata.sale_show_creator &&
+          Boolean(
+            null === (i = null == o ? void 0 : o.jsondata) || void 0 === i
+              ? void 0
+              : i.sale_show_creator
+          ) &&
             r.createElement(
               s.S,
               null,
@@ -16902,7 +16921,7 @@
                 r.createElement(p.oZ, {
                   creatorID: {
                     name: null,
-                    clan_account_id: a.clanSteamID.GetAccountID(),
+                    clan_account_id: o.clanSteamID.GetAccountID(),
                     type: "developer",
                   },
                   bShowTagline: !0,
@@ -23846,6 +23865,16 @@
             ((this.GetJSONData().broadcast_display_wide_player = e),
             this.m_editModel.SetDirty(s.jB.jsondata_broadcast));
         }
+        SetWidePlayerSupportChat(e) {
+          this.GetJSONData().broadcast_dispaly_wide_player_allow_chat != e &&
+            ((this.GetJSONData().broadcast_dispaly_wide_player_allow_chat = e),
+            this.m_editModel.SetDirty(s.jB.jsondata_broadcast));
+        }
+        SetChatAnnouncementGiveawayGID(e) {
+          this.GetJSONData().broadcast_chat_announcement_giveaway != e &&
+            ((this.GetJSONData().broadcast_chat_announcement_giveaway = e),
+            this.m_editModel.SetDirty(s.jB.jsondata_broadcast));
+        }
       }
       (0, n.gn)([ee.aD], ne.prototype, "SetBroadcastEnabled", null),
         (0, n.gn)([ee.aD], ne.prototype, "SetBroadcastForceBanner", null),
@@ -23864,7 +23893,14 @@
         (0, n.gn)([ee.aD], ne.prototype, "SetItemDropManual", null),
         (0, n.gn)([ee.aD], ne.prototype, "SetItemDropMinutes", null),
         (0, n.gn)([ee.aD], ne.prototype, "SetItemDropDetailEvents", null),
-        (0, n.gn)([ee.aD], ne.prototype, "SetWidePlayerLayout", null);
+        (0, n.gn)([ee.aD], ne.prototype, "SetWidePlayerLayout", null),
+        (0, n.gn)([ee.aD], ne.prototype, "SetWidePlayerSupportChat", null),
+        (0, n.gn)(
+          [ee.aD],
+          ne.prototype,
+          "SetChatAnnouncementGiveawayGID",
+          null
+        );
       var ie = a(13271),
         re = a(33547),
         oe = a(57287),
@@ -24388,7 +24424,7 @@
       }
       function Ge(e) {
         const { editModel: t, broadcastEditModel: a } = e,
-          [n, i, r, o, s] = (0, ie.SZ)(() => [
+          [n, i, r, o, s, l] = (0, ie.SZ)(() => [
             t.GetEventModel().jsondata.broadcast_item_drops_enabled,
             t.GetEventModel().jsondata.broadcast_item_drops_manual,
             t.GetEventModel().jsondata
@@ -24396,6 +24432,8 @@
             t.GetEventModel().jsondata
               .broadcast_item_drops_details_clan_accountid,
             t.GetEventModel().jsondata.broadcast_item_drops_details_event_gid,
+            t.GetEventModel().jsondata.broadcast_chat_announcement_giveaway ||
+              0,
           ]);
         return d.createElement(
           ve.s,
@@ -24465,13 +24503,30 @@
                 value: s,
                 onChange: (e) => a.SetItemDropDetailEvents(o, e.target.value),
               })
-            )
+            ),
+          d.createElement(
+            "div",
+            { className: P().EventEditorTextTitle },
+            "(VO) " + (0, v.Xx)("#Broadcast_ChatAnnouncement_Giveaway_title")
+          ),
+          d.createElement(_.II, {
+            type: "number",
+            value: l,
+            tooltip: (0, v.Xx)("#Broadcast_ChatAnnouncement_Giveaway_gid_ttip"),
+            label: (0, v.Xx)("#Broadcast_ChatAnnouncement_Giveaway_gid"),
+            onChange: (e) => a.SetChatAnnouncementGiveawayGID(e.target.value),
+          })
         );
       }
       function we(e) {
         const { editModel: t, broadcastEditModel: a } = e,
           n = (0, ie.SZ)(
             () => t.GetEventModel().jsondata.broadcast_display_wide_player
+          ),
+          i = (0, ie.SZ)(
+            () =>
+              t.GetEventModel().jsondata
+                .broadcast_dispaly_wide_player_allow_chat
           );
         return d.createElement(
           ve.s,
@@ -24481,18 +24536,22 @@
             className: (0, X.Z)(P().ValveOnlyBackground),
           },
           d.createElement(
-            Ee.HP,
-            { toolTipContent: (0, v.Xx)("#Broadcast_WidePlayer_ttip") },
-            d.createElement(
-              "div",
-              { className: P().EventEditorTextTitle },
-              "(VO) " + (0, v.Xx)("#Broadcast_WidePlayer")
-            )
+            "div",
+            { className: P().EventEditorTextTitle },
+            "(VO) " + (0, v.Xx)("#Broadcast_WidePlayer")
           ),
           d.createElement(_.ji, {
             onChange: (e) => a.SetWidePlayerLayout(e),
             label: (0, v.Xx)("#Broadcast_WidePlayer_Use"),
+            tooltip: (0, v.Xx)("#Broadcast_WidePlayer_ttip"),
             checked: Boolean(n),
+          }),
+          d.createElement(_.ji, {
+            onChange: (e) => a.SetWidePlayerSupportChat(e),
+            label: (0, v.Xx)("#Broadcast_WidePlayer_Chat_Use"),
+            tooltip: (0, v.Xx)("#Broadcast_WidePlayer_Chat_ttip"),
+            checked: Boolean(i),
+            disabled: !n,
           }),
           d.createElement(
             Ee.HP,

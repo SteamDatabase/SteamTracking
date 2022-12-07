@@ -1874,6 +1874,8 @@ https://partner.steamgames.com/newpartner/ajaxsignlatestsda/
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=10
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=12
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=13
+https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=14
+https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=15
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=2
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=5
 https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=8

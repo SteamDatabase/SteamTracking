@@ -358,9 +358,9 @@
     "Summer21_Story_DownloadWallpaper": "Click here to download desktop and mobile wallpapers featuring art from the 14 genres in the sale.",
     "dummy_for_end_of_file_convenience": "dummy",
     "GA2022_Title": "The Game Awards Steam Deck Giveaway",
-    "GA2022_Desc": "In celebration of The Game Awards, Steam Deck now being in stock, and gaming in general, we will be giving away one <1>one 512GB Steam Deck every minute</1> during the live airing of The Game Awards. ",
+    "GA2022_Desc": "In celebration of The Game Awards, Steam Deck now being in stock, and gaming in general, we will be giving away <1>one 512GB Steam Deck every minute</1> during the live airing of The Game Awards. ",
     "GA2022_Desc_CountryAllowed": "Enter below for your chance to win!",
-    "GA2022_Desc_CountryNotAllowed": "Unfortunately your region is not eligible for registration in the giveaway, but you can still claim the Steam Page digital sticker.",
+    "GA2022_Desc_CountryNotAllowed": "Unfortunately your region is not eligible for registration in the giveaway, but you can still claim the Steam Pal digital sticker.",
     "GA2022_RegCongrat1": "Congratulations, you’ve successfully registered for The Game Awards 2022 Steam Deck Giveaway! Check your Steam Inventory for your new Steam Pal digital sticker.",
     "GA2022_RegCongrat2": "Don’t forget to watch The Game Awards at 5:00 PM PST on December 8th. You can only win if you are watching on Steam at the time of the drawing.",
     "GA2022_RegNotEligible1": "The Steam Deck Giveaway is only available for Steam customers who are in the US, Canada, UK, or EU, have a Steam Account in good standing, have made a Steam purchase between November 14, 2021 and November 14, 2022, and do not have a limited account.",
@@ -376,5 +376,9 @@
     "GA2022_Detail_Desc3": "Learn about limited accounts.",
     "GA2022_Detail_Desc4": "On December 8th when The Game Awards airs, every minute a random name will be drawn from the pool of registrants currently watching the show on Steam.",
     "GA2022_Detail_Desc5": "We will be streaming The Game Awards at https://steam.tv - winner will be announced in chat as each drawing takes place.",
-    "GA2022_Dteail_Desc6": "Full official rules can be found here."
+    "GA2022_Dteail_Desc6": "Full official rules can be found here.",
+    "GA2022_Congrats_Deck_Me": "Congratulations %1$s,%2$s you've won a Steam Deck!",
+    "GA2022_Congrats_Deck_OTher": "Congratulations %1$s,%2$s our latest Steam Deck winner!",
+    "GA2022_Congrats_Deck_Unknown": "Loading latest%1$s Steam Deck winner...",
+    "GA2022_Congrats_NextDraw": "%1$s until next drawing"
 }

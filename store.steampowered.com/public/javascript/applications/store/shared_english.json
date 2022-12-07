@@ -2161,6 +2161,7 @@
     "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "This game does not exit cleanly and may require you to manually quit via the Steam overlay",
     "SteamDeckVerified_TestResult_AuxFunctionalityNotAccessible_MapEditor": "Some auxilliary functionality is not accessible on Steam Deck: map editor",
     "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "This game uses multiple windows and may require you to focus the appropriate windows manually via the Steam overlay",
+    "SteamDeckVerified_TestResult_DisplayOutputNotCorrectlyScaled": "This game is incorrectly scaled on Steam Deck and may require you to configure the display resolution manually",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport": "Valve is still working on adding support for this game on Steam Deck",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR": "Steam Deck does not support VR games",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software": "This is a Software title and is not supported on Steam Deck",

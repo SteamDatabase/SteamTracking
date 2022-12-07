@@ -3693,7 +3693,8 @@
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
             (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
-            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI");
+            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
+            (e[(e.DesktopLogin = 7)] = "DesktopLogin");
         })(u || (u = {}));
       class m {}
       var h;
@@ -3959,6 +3960,14 @@
         }
         GetEResult() {
           return this.Hdr().eresult();
+        }
+        BSuccess() {
+          return 1 == this.Hdr().eresult();
+        }
+        GetErrorMessage() {
+          return this.Hdr().error_message()
+            ? this.Hdr().error_message()
+            : `eresult ${this.Hdr().eresult()}`;
         }
         Serialize() {
           let e = this.m_header.serializeBinary(),
@@ -4444,7 +4453,9 @@
         InternalHideSubMenu() {
           this.CancelHideSubMenuTimer(),
             this.m_submenu &&
-              (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
+              (this.m_submenu.m_element &&
+                this.BIsFocusInChildHierarchy() &&
+                this.TakeFocus(),
               (this.m_elSubmenuItem = null),
               this.m_submenu.InternalHide(),
               (this.m_submenu = null));
@@ -4769,7 +4780,7 @@
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
               "ApplyBrowserScaleToDimensions");
         })(i || (i = {}));
-      const _ = o.createContext({}),
+      const _ = o.createContext({ ownerWindow: window }),
         f = () => o.useContext(_);
       function v(e) {
         const { ownerWindow: t, children: n } = e,
@@ -5189,6 +5200,7 @@
                   "/" +
                   (0, d.MR)(m.De.LAUNCHER_TYPE)
               ),
+            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
             c && (l += "?" + c.join("&"));
           let u = (t.owner_window || window).open(l, e, o);
           if (!u)
@@ -22915,6 +22927,7 @@
         k$: () => r.k$,
         Qg: () => i.Qg,
         NW: () => i.NW,
+        JI: () => i.JI,
         BE: () => r.BE,
         ww: () => r.ww,
         xK: () => r.xK,
@@ -22966,7 +22979,13 @@
     },
     53477: (e, t, n) => {
       "use strict";
-      n.d(t, { B8: () => r, NW: () => s, Qg: () => o, e1: () => a });
+      n.d(t, {
+        B8: () => r,
+        JI: () => o,
+        NW: () => s,
+        Qg: () => a,
+        e1: () => l,
+      });
       var i = n(67294);
       n(99533);
       function r(e, t, n) {
@@ -22976,14 +22995,22 @@
         const [, e] = i.useState(0);
         return i.useCallback(() => e((e) => e + 1), []);
       }
-      function o(e, t) {
+      function o(e, t, n, r) {
+        i.useEffect(() => {
+          if (e && n)
+            return (
+              e.addEventListener(t, n, r), () => e.removeEventListener(t, n)
+            );
+        }, [e, t, n]);
+      }
+      function a(e, t) {
         i.useLayoutEffect(() => {
           if (!t || !e) return;
           let n = e.Register(t);
           return () => n.Unregister();
         }, [e, t]);
       }
-      function a(e) {
+      function l(e) {
         const [t, n] = i.useState(null == e ? void 0 : e.Value);
         return (
           i.useEffect(() => {
@@ -23219,31 +23246,32 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => c,
+        De: () => d,
         E_: () => a,
-        Ek: () => f,
-        JA: () => m,
-        Kc: () => y,
-        L7: () => d,
-        Wj: () => h,
-        Zv: () => E,
-        dk: () => u,
-        id: () => l,
-        ip: () => S,
-        kQ: () => b,
-        x: () => v,
-        y9: () => _,
+        Ek: () => v,
+        JA: () => h,
+        Kc: () => E,
+        L7: () => u,
+        Wj: () => p,
+        Zv: () => D,
+        dk: () => m,
+        id: () => c,
+        ip: () => w,
+        kQ: () => S,
+        x: () => C,
+        y9: () => f,
       });
       var i = n(70655),
         r = n(48899),
         s = n(61939),
         o = (n(26149), n(67294));
-      const a = o.createContext({});
-      function l() {
-        const e = o.useContext(a);
-        return (null == e ? void 0 : e.IN_GAMEPADUI) || c.IN_GAMEPADUI;
+      const a = o.createContext({}),
+        l = () => o.useContext(a);
+      function c() {
+        const e = l();
+        return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const c = {
+      const d = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -23290,9 +23318,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, s.t$)()) return p || (p = g()), p;
+              if (!(0, s.t$)()) return g || (g = _()), g;
               let e = (0, s.bG)("sessionid");
-              e || (e = g());
+              e || (e = _());
               return e;
             })();
           },
@@ -23310,7 +23338,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        d = {
+        u = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -23325,8 +23353,8 @@
           short_url: "",
           country_code: "",
         },
-        u = { steamid: "", clanid: 0, listid: 0 },
-        m = {
+        m = { steamid: "", clanid: 0, listid: 0 },
+        h = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -23343,9 +23371,9 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let p;
-      function g() {
+        p = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+      let g;
+      function _() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, r.LO)(0, 35).toString(36);
@@ -23353,44 +23381,44 @@
         })();
         return (0, s.I1)("sessionid", e, 0), e;
       }
-      function _() {
+      function f() {
         let e = null;
         return (
           (0, s.t$)() && (e = (0, s.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function f(e = "webui_config") {
+      function v(e = "webui_config") {
         const t = {},
-          n = b("config", e);
-        n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-        const i = b("userinfo", e);
+          n = S("config", e);
+        n && (delete n.SESSIONID, Object.assign(d, n), (t.config = !0));
+        const i = S("userinfo", e);
         i &&
-          (Object.assign(d, i),
+          (Object.assign(u, i),
           (t.userConfig = !0),
-          d.is_support && _() && (d.is_support = !1));
-        const r = b("broadcast", e);
-        r && (Object.assign(u, r), (t.broadcastConfig = !0));
-        const s = b("community", e);
-        s && (Object.assign(m, s), (t.communityConfig = !0));
-        const o = b("event", e);
-        return o && (Object.assign(h, o), (t.eventConfig = !0)), t;
+          u.is_support && f() && (u.is_support = !1));
+        const r = S("broadcast", e);
+        r && (Object.assign(m, r), (t.broadcastConfig = !0));
+        const s = S("community", e);
+        s && (Object.assign(h, s), (t.communityConfig = !0));
+        const o = S("event", e);
+        return o && (Object.assign(p, o), (t.eventConfig = !0)), t;
       }
-      function v(e, t, n) {
+      function C(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           if (n.config) {
             const n = (yield e.get(t + "ajaxgetconfig")).data;
-            n && (delete n.SESSIONID, Object.assign(c, n));
+            n && (delete n.SESSIONID, Object.assign(d, n));
           }
           if (n.userConfig) {
             const n = (yield e.get(t + "ajaxgetuserconfig", {
               withCredentials: !0,
             })).data;
-            n && Object.assign(d, n);
+            n && Object.assign(u, n);
           }
         });
       }
-      function C(e, t = "webui_config", n) {
+      function b(e, t = "webui_config", n) {
         let i;
         if (
           ((i =
@@ -23410,54 +23438,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function b(e, t = "webui_config") {
-        return C(e, t, !0);
-      }
       function S(e, t = "webui_config") {
-        return C(e, t, !1);
+        return b(e, t, !0);
       }
-      function w(e, t) {
+      function w(e, t = "webui_config") {
+        return b(e, t, !1);
+      }
+      function y(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function y() {
+      function E() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return w(e, c.STORE_BASE_URL)
-          ? c.STORE_BASE_URL
-          : w(e, c.COMMUNITY_BASE_URL)
-          ? c.COMMUNITY_BASE_URL
-          : w(e, c.CHAT_BASE_URL)
-          ? c.CHAT_BASE_URL
-          : w(e, c.PARTNER_BASE_URL)
-          ? c.PARTNER_BASE_URL
-          : w(e, c.HELP_BASE_URL)
-          ? c.HELP_BASE_URL
-          : w(e, c.STEAMTV_BASE_URL)
-          ? c.STEAMTV_BASE_URL
-          : w(e, c.STATS_BASE_URL)
-          ? c.STATS_BASE_URL
-          : w(e, c.INTERNAL_STATS_BASE_URL)
-          ? c.INTERNAL_STATS_BASE_URL
-          : w(e, c.STORE_CHECKOUT_BASE_URL)
-          ? c.STORE_CHECKOUT_BASE_URL
-          : w(e, "https://steamloopback.host")
+        return y(e, d.STORE_BASE_URL)
+          ? d.STORE_BASE_URL
+          : y(e, d.COMMUNITY_BASE_URL)
+          ? d.COMMUNITY_BASE_URL
+          : y(e, d.CHAT_BASE_URL)
+          ? d.CHAT_BASE_URL
+          : y(e, d.PARTNER_BASE_URL)
+          ? d.PARTNER_BASE_URL
+          : y(e, d.HELP_BASE_URL)
+          ? d.HELP_BASE_URL
+          : y(e, d.STEAMTV_BASE_URL)
+          ? d.STEAMTV_BASE_URL
+          : y(e, d.STATS_BASE_URL)
+          ? d.STATS_BASE_URL
+          : y(e, d.INTERNAL_STATS_BASE_URL)
+          ? d.INTERNAL_STATS_BASE_URL
+          : y(e, d.STORE_CHECKOUT_BASE_URL)
+          ? d.STORE_CHECKOUT_BASE_URL
+          : y(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function E() {
+      function D() {
         const e = window.location.href;
-        return w(e, c.STORE_BASE_URL) || w(e, c.STORE_CHECKOUT_BASE_URL)
+        return y(e, d.STORE_BASE_URL) || y(e, d.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : w(e, c.COMMUNITY_BASE_URL)
+          : y(e, d.COMMUNITY_BASE_URL)
           ? "community"
-          : w(e, c.PARTNER_BASE_URL)
+          : y(e, d.PARTNER_BASE_URL)
           ? "partnerweb"
-          : w(e, c.HELP_BASE_URL)
+          : y(e, d.HELP_BASE_URL)
           ? "help"
-          : w(e, c.STEAMTV_BASE_URL)
+          : y(e, d.STEAMTV_BASE_URL)
           ? "steamtv"
-          : w(e, c.STATS_BASE_URL) || w(e, c.INTERNAL_STATS_BASE_URL)
+          : y(e, d.STATS_BASE_URL) || y(e, d.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -24348,7 +24376,7 @@
             n.e(9332),
             n.e(1979),
             n.e(4601),
-          ]).then(n.bind(n, 83040))
+          ]).then(n.bind(n, 54189))
         ),
         de = s.lazy(() =>
           Promise.all([

@@ -912,7 +912,8 @@
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
             (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
-            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI");
+            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
+            (e[(e.DesktopLogin = 7)] = "DesktopLogin");
         })(d || (d = {}));
       class m {}
       var h;
@@ -1178,6 +1179,14 @@
         }
         GetEResult() {
           return this.Hdr().eresult();
+        }
+        BSuccess() {
+          return 1 == this.Hdr().eresult();
+        }
+        GetErrorMessage() {
+          return this.Hdr().error_message()
+            ? this.Hdr().error_message()
+            : `eresult ${this.Hdr().eresult()}`;
         }
         Serialize() {
           let e = this.m_header.serializeBinary(),
@@ -1663,7 +1672,9 @@
         InternalHideSubMenu() {
           this.CancelHideSubMenuTimer(),
             this.m_submenu &&
-              (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
+              (this.m_submenu.m_element &&
+                this.BIsFocusInChildHierarchy() &&
+                this.TakeFocus(),
               (this.m_elSubmenuItem = null),
               this.m_submenu.InternalHide(),
               (this.m_submenu = null));
@@ -1988,7 +1999,7 @@
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
               "ApplyBrowserScaleToDimensions");
         })(i || (i = {}));
-      const _ = s.createContext({}),
+      const _ = s.createContext({ ownerWindow: window }),
         v = () => s.useContext(_);
       function f(e) {
         const { ownerWindow: t, children: n } = e,
@@ -2408,6 +2419,7 @@
                   "/" +
                   (0, u.MR)(m.De.LAUNCHER_TYPE)
               ),
+            t.hwndParent && c.push("hwndParent=" + t.hwndParent),
             c && (l += "?" + c.join("&"));
           let d = (t.owner_window || window).open(l, e, s);
           if (!d)
@@ -18780,6 +18792,7 @@
         k$: () => r.k$,
         Qg: () => i.Qg,
         NW: () => i.NW,
+        JI: () => i.JI,
         BE: () => r.BE,
         ww: () => r.ww,
         xK: () => r.xK,
@@ -18853,7 +18866,13 @@
     },
     53477: (e, t, n) => {
       "use strict";
-      n.d(t, { B8: () => r, NW: () => o, Qg: () => s, e1: () => a });
+      n.d(t, {
+        B8: () => r,
+        JI: () => s,
+        NW: () => o,
+        Qg: () => a,
+        e1: () => l,
+      });
       var i = n(67294);
       n(99533);
       function r(e, t, n) {
@@ -18863,14 +18882,22 @@
         const [, e] = i.useState(0);
         return i.useCallback(() => e((e) => e + 1), []);
       }
-      function s(e, t) {
+      function s(e, t, n, r) {
+        i.useEffect(() => {
+          if (e && n)
+            return (
+              e.addEventListener(t, n, r), () => e.removeEventListener(t, n)
+            );
+        }, [e, t, n]);
+      }
+      function a(e, t) {
         i.useLayoutEffect(() => {
           if (!t || !e) return;
           let n = e.Register(t);
           return () => n.Unregister();
         }, [e, t]);
       }
-      function a(e) {
+      function l(e) {
         const [t, n] = i.useState(null == e ? void 0 : e.Value);
         return (
           i.useEffect(() => {
@@ -19020,27 +19047,28 @@
     90666: (e, t, n) => {
       "use strict";
       n.d(t, {
-        De: () => l,
-        Ek: () => _,
-        JA: () => d,
-        Kc: () => E,
-        L7: () => c,
-        Wj: () => m,
-        Zv: () => S,
-        id: () => a,
-        ip: () => b,
-        kQ: () => f,
-        y9: () => g,
+        De: () => c,
+        Ek: () => v,
+        JA: () => m,
+        Kc: () => S,
+        L7: () => u,
+        Wj: () => h,
+        Zv: () => w,
+        id: () => l,
+        ip: () => C,
+        kQ: () => b,
+        y9: () => _,
       });
       var i = n(48899),
         r = n(61939),
         o = (n(26149), n(67294));
-      const s = o.createContext({});
-      function a() {
-        const e = o.useContext(s);
-        return (null == e ? void 0 : e.IN_GAMEPADUI) || l.IN_GAMEPADUI;
+      const s = o.createContext({}),
+        a = () => o.useContext(s);
+      function l() {
+        const e = a();
+        return null == e ? void 0 : e.IN_GAMEPADUI;
       }
-      const l = {
+      const c = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -19087,9 +19115,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, r.t$)()) return h || (h = p()), h;
+              if (!(0, r.t$)()) return p || (p = g()), p;
               let e = (0, r.bG)("sessionid");
-              e || (e = p());
+              e || (e = g());
               return e;
             })();
           },
@@ -19107,7 +19135,7 @@
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,
         },
-        c = {
+        u = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
@@ -19122,8 +19150,8 @@
           short_url: "",
           country_code: "",
         },
-        u = { steamid: "", clanid: 0, listid: 0 },
-        d = {
+        d = { steamid: "", clanid: 0, listid: 0 },
+        m = {
           CLANSTEAMID: "",
           CLANACCOUNTID: 0,
           APPID: 0,
@@ -19140,9 +19168,9 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        m = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let h;
-      function p() {
+        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+      let p;
+      function g() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
@@ -19150,30 +19178,30 @@
         })();
         return (0, r.I1)("sessionid", e, 0), e;
       }
-      function g() {
+      function _() {
         let e = null;
         return (
           (0, r.t$)() && (e = (0, r.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function _(e = "webui_config") {
+      function v(e = "webui_config") {
         const t = {},
-          n = f("config", e);
-        n && (delete n.SESSIONID, Object.assign(l, n), (t.config = !0));
-        const i = f("userinfo", e);
+          n = b("config", e);
+        n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
+        const i = b("userinfo", e);
         i &&
-          (Object.assign(c, i),
+          (Object.assign(u, i),
           (t.userConfig = !0),
-          c.is_support && g() && (c.is_support = !1));
-        const r = f("broadcast", e);
-        r && (Object.assign(u, r), (t.broadcastConfig = !0));
-        const o = f("community", e);
-        o && (Object.assign(d, o), (t.communityConfig = !0));
-        const s = f("event", e);
-        return s && (Object.assign(m, s), (t.eventConfig = !0)), t;
+          u.is_support && _() && (u.is_support = !1));
+        const r = b("broadcast", e);
+        r && (Object.assign(d, r), (t.broadcastConfig = !0));
+        const o = b("community", e);
+        o && (Object.assign(m, o), (t.communityConfig = !0));
+        const s = b("event", e);
+        return s && (Object.assign(h, s), (t.eventConfig = !0)), t;
       }
-      function v(e, t = "webui_config", n) {
+      function f(e, t = "webui_config", n) {
         let i;
         if (
           ((i =
@@ -19193,54 +19221,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function f(e, t = "webui_config") {
-        return v(e, t, !0);
-      }
       function b(e, t = "webui_config") {
-        return v(e, t, !1);
+        return f(e, t, !0);
       }
-      function C(e, t) {
+      function C(e, t = "webui_config") {
+        return f(e, t, !1);
+      }
+      function E(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function E() {
+      function S() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return C(e, l.STORE_BASE_URL)
-          ? l.STORE_BASE_URL
-          : C(e, l.COMMUNITY_BASE_URL)
-          ? l.COMMUNITY_BASE_URL
-          : C(e, l.CHAT_BASE_URL)
-          ? l.CHAT_BASE_URL
-          : C(e, l.PARTNER_BASE_URL)
-          ? l.PARTNER_BASE_URL
-          : C(e, l.HELP_BASE_URL)
-          ? l.HELP_BASE_URL
-          : C(e, l.STEAMTV_BASE_URL)
-          ? l.STEAMTV_BASE_URL
-          : C(e, l.STATS_BASE_URL)
-          ? l.STATS_BASE_URL
-          : C(e, l.INTERNAL_STATS_BASE_URL)
-          ? l.INTERNAL_STATS_BASE_URL
-          : C(e, l.STORE_CHECKOUT_BASE_URL)
-          ? l.STORE_CHECKOUT_BASE_URL
-          : C(e, "https://steamloopback.host")
+        return E(e, c.STORE_BASE_URL)
+          ? c.STORE_BASE_URL
+          : E(e, c.COMMUNITY_BASE_URL)
+          ? c.COMMUNITY_BASE_URL
+          : E(e, c.CHAT_BASE_URL)
+          ? c.CHAT_BASE_URL
+          : E(e, c.PARTNER_BASE_URL)
+          ? c.PARTNER_BASE_URL
+          : E(e, c.HELP_BASE_URL)
+          ? c.HELP_BASE_URL
+          : E(e, c.STEAMTV_BASE_URL)
+          ? c.STEAMTV_BASE_URL
+          : E(e, c.STATS_BASE_URL)
+          ? c.STATS_BASE_URL
+          : E(e, c.INTERNAL_STATS_BASE_URL)
+          ? c.INTERNAL_STATS_BASE_URL
+          : E(e, c.STORE_CHECKOUT_BASE_URL)
+          ? c.STORE_CHECKOUT_BASE_URL
+          : E(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function S() {
+      function w() {
         const e = window.location.href;
-        return C(e, l.STORE_BASE_URL) || C(e, l.STORE_CHECKOUT_BASE_URL)
+        return E(e, c.STORE_BASE_URL) || E(e, c.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : C(e, l.COMMUNITY_BASE_URL)
+          : E(e, c.COMMUNITY_BASE_URL)
           ? "community"
-          : C(e, l.PARTNER_BASE_URL)
+          : E(e, c.PARTNER_BASE_URL)
           ? "partnerweb"
-          : C(e, l.HELP_BASE_URL)
+          : E(e, c.HELP_BASE_URL)
           ? "help"
-          : C(e, l.STEAMTV_BASE_URL)
+          : E(e, c.STEAMTV_BASE_URL)
           ? "steamtv"
-          : C(e, l.STATS_BASE_URL) || C(e, l.INTERNAL_STATS_BASE_URL)
+          : E(e, c.STATS_BASE_URL) || E(e, c.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -19314,6 +19342,7 @@
               [_.ScrollSnapCarousel]: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
+              [e.className]: !0,
             }),
           },
           i

@@ -1027,6 +1027,16 @@ a {
   color: #999;
   font-size: 13px;
 }
+.projectdatasources_AddDataSourceDialog_1mNGX
+  .projectdatasources_AddDataSourceDialogContents_3RAxT
+  .projectdatasources_DataSourceListContainer_3LgNX
+  .projectdatasources_DataSourceOption_25NX7
+  .projectdatasources_Version_3y0tt {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 12px;
+}
 .projectdatasources_ProjectConfigDataSourceElement_yhrLn {
   width: 600px;
   background-color: #313131;
@@ -1036,6 +1046,13 @@ a {
   flex-direction: column;
   border-radius: 2px;
   padding: 4px 10px;
+}
+.projectdatasources_ProjectConfigDataSourceElement_yhrLn.projectdatasources_IsOldDataSourceVersion_1rvbT {
+  background-color: #443131;
+}
+.projectdatasources_ProjectConfigDataSourceElement_yhrLn.projectdatasources_IsOldDataSourceVersion_1rvbT
+  .projectdatasources_Version_3y0tt {
+  color: #d44;
 }
 .projectdatasources_ProjectConfigDataSourceElement_yhrLn
   .projectdatasources_Name_3Hj5D {
@@ -1047,6 +1064,12 @@ a {
   .projectdatasources_Description_1Obgc {
   color: #999;
   font-size: 13px;
+}
+.projectdatasources_ProjectConfigDataSourceElement_yhrLn
+  .projectdatasources_Version_3y0tt {
+  position: absolute;
+  top: 6px;
+  right: 10px;
 }
 .projectdatasources_ProjectConfigDataSourceElement_yhrLn
   .projectdatasources_Remove_3sDBJ {
@@ -1384,6 +1407,12 @@ a {
   text-transform: uppercase;
   flex-grow: 1;
 }
+.nodes_FlowNode_3Eq1x .nodes_Title_meAbe .nodes_NodeID_2vVi7 {
+  font-size: 12px;
+  color: #ff0;
+  margin-right: 4px;
+  margin-top: 2px;
+}
 .nodes_FlowNode_3Eq1x .nodes_Title_meAbe .nodes_EditGear_3vw0w {
   width: 16px;
   height: 16px;
@@ -1622,6 +1651,10 @@ a {
 }
 .nodes_TrainNodeEditDialog_23Ih6 .DialogContent_InnerWidth {
   max-width: 800px;
+}
+.nodes_ConnectorID_1xOlw {
+  color: aqua;
+  text-shadow: 0px 0px 8px #000;
 }
 div.react-flow__handle {
   color: #000;

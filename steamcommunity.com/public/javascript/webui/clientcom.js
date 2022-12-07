@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7695462";
+var CLSTAMP = "7703985";
 (() => {
   "use strict";
   var e = {};
@@ -205,9 +205,9 @@ var CLSTAMP = "7695462";
       WEBSITE_ID: "Unknown",
       get SESSIONID() {
         return (function () {
-          if (!n()) return g || (g = y()), g;
+          if (!n()) return y || (y = A()), y;
           let e = t("sessionid");
-          e || (e = y());
+          e || (e = A());
           return e;
         })();
       },
@@ -258,9 +258,10 @@ var CLSTAMP = "7695462";
       IS_VALVE_GROUP: !1,
       IS_ALLOWED_SC: !1,
     },
-    I = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-  let g;
-  function y() {
+    I = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+    g = "webui_config";
+  let y;
+  function A() {
     let e = (function () {
       let e = "";
       for (let o = 0; o < 24; o++)
@@ -293,11 +294,11 @@ var CLSTAMP = "7695462";
       e
     );
   }
-  function A(e = "webui_config") {
+  function T(e = g) {
     const o = {},
-      i = h("config", e);
+      i = R("config", e);
     i && (delete i.SESSIONID, Object.assign(p, i), (o.config = !0));
-    const _ = h("userinfo", e);
+    const _ = R("userinfo", e);
     _ &&
       (Object.assign(S, _),
       (o.userConfig = !0),
@@ -310,14 +311,14 @@ var CLSTAMP = "7695462";
           );
         })() &&
         (S.is_support = !1));
-    const s = h("broadcast", e);
+    const s = R("broadcast", e);
     s && (Object.assign(C, s), (o.broadcastConfig = !0));
-    const a = h("community", e);
+    const a = R("community", e);
     a && (Object.assign(k, a), (o.communityConfig = !0));
-    const r = h("event", e);
+    const r = R("event", e);
     return r && (Object.assign(I, r), (o.eventConfig = !0)), o;
   }
-  function T(e, t = "webui_config", n) {
+  function h(e, t = g, n) {
     let o;
     if (
       ((o =
@@ -340,11 +341,11 @@ var CLSTAMP = "7695462";
       }
     else n && console.error("Missing config element #", t);
   }
-  function h(e, t = "webui_config") {
-    return T(e, t, !0);
+  function R(e, t = g) {
+    return h(e, t, !0);
   }
-  let R = { success: !0, result: 1 };
-  class P {
+  let P = { success: !0, result: 1 };
+  class N {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -455,9 +456,9 @@ var CLSTAMP = "7695462";
       );
     }
   }
-  let N = new (class {
+  let M = new (class {
     constructor() {
-      (this.m_connection = new P()),
+      (this.m_connection = new N()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -479,7 +480,7 @@ var CLSTAMP = "7695462";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => R,
+        () => P,
         () => this.FailureResult()
       );
     }
@@ -535,15 +536,15 @@ var CLSTAMP = "7695462";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? R : this.FailureResult(e.success)
+                  1 === e.success ? P : this.FailureResult(e.success)
                 )
             : { success: !1, result: 19, account_mismatch: !0 }
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = N),
+  (window.ClientConnectionAPI = M),
     document.addEventListener("DOMContentLoaded", function () {
-      A(), (window.ClientConnectionAPI = N);
+      T(), (window.ClientConnectionAPI = M);
     });
 })();

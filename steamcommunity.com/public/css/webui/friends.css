@@ -7561,6 +7561,9 @@ b {
 .partnereventshared_EventEditorTextTitleCtn_htm7d {
   padding-bottom: 3px;
   padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
 }
 .partnereventshared_EventEditorTextTitleCtn_htm7d
   .partnereventshared_doclink_1-bAK {
@@ -7588,6 +7591,12 @@ b {
   padding-left: 0px;
   text-transform: uppercase;
   font-size: 13px;
+  display: flex;
+  justify-content: start;
+}
+.partnereventshared_EventEditorUnpaddedTextTitle_9hsCL a,
+.partnereventshared_EventEditorTextTitle_18fHx a {
+  flex-grow: 1;
 }
 .partnereventshared_EventEditorUnpaddedTextTitle_9hsCL span,
 .partnereventshared_EventEditorTextTitle_18fHx span {
@@ -8030,7 +8039,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   color: #fff;
 }
 .partnereventshared_SaleSectionSubtitle_2rIaW {
-  font-size: 16px;
+  font-size: 15px;
 }
 .partnereventshared_SaleSectionContainer_3gb3J {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -10683,6 +10692,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
   height: auto;
   padding: 0 16px;
   margin: auto;
+}
+.broadcastchatannouncement_GiveawayWinnerBox_3cv4l {
+  position: absolute;
+  width: 400px;
+  background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
+  top: 0;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px #000;
 }
 .chatroomeffects_animation-container_3ZR8Q {
   animation-fill-mode: none;

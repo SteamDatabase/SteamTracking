@@ -375,3 +375,39 @@ textarea#leaderboard_blob {
 .profile_colors_ctn {
     min-height: 226px;
 }
+
+.communityitem_header_ctn {
+	background: rgba( 0, 0, 0, 0.4 );
+	padding: 20px;
+	margin-top: 30px;
+}
+
+.communityitem_header_count {
+	color: #acacac;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.communityitem_header_title {
+	color: #67c1f5;
+	font-size: 24px;
+}
+
+.communityitem_header_state_desc {
+	margin: 20px 0;
+}
+
+.communityitem_header_badge_title {
+	color: #67c1f5;
+}
+
+.communityitem_header_badge_ctn {
+	margin-bottom: 20px;
+	padding: 5px;
+
+}
+
+.communityitem_header_buttons_ctn {
+	display: flex;
+	gap: 20px;
+}

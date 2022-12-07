@@ -539,14 +539,13 @@
         g = n(12538),
         h = n(41311),
         f = n(13271),
-        S = n(85503),
+        S = n(125),
         b = n(63405),
         T = (n(69765), n(52795), n(28976)),
         I = n(7573),
         y = n(35208),
         N = n(17157),
         k = n(934);
-      n(4344);
       function A(e) {
         const { conferenceInfo: t } = e,
           n = t.broadcastSteamID.ConvertTo64BitString();

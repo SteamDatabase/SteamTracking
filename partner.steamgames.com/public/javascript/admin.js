@@ -1409,7 +1409,7 @@ function ShowRenameInternalNameGiveawayDialog( giveawayAdminID )
 			error: function( msg )
 			{
 				waitdialog.Dismiss();
-				ShowAlertDialog('Giveaway creation failed:', "Failed to save changes." );
+				ShowAlertDialog('Giveaway update failed:', "Failed to save changes." );
 			},
 			success: function( msg )
 			{

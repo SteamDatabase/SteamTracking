@@ -188,6 +188,9 @@ b {
 .partnereventshared_EventEditorTextTitleCtn_2Zzv2 {
   padding-bottom: 3px;
   padding-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
 }
 .partnereventshared_EventEditorTextTitleCtn_2Zzv2
   .partnereventshared_doclink_1ge0t {
@@ -215,6 +218,12 @@ b {
   padding-left: 0px;
   text-transform: uppercase;
   font-size: 13px;
+  display: flex;
+  justify-content: start;
+}
+.partnereventshared_EventEditorUnpaddedTextTitle_3Byox a,
+.partnereventshared_EventEditorTextTitle_1q_7g a {
+  flex-grow: 1;
 }
 .partnereventshared_EventEditorUnpaddedTextTitle_3Byox span,
 .partnereventshared_EventEditorTextTitle_1q_7g span {
@@ -657,7 +666,7 @@ span.partnereventshared_tooltip_Ctn_3tZQl {
   color: #fff;
 }
 .partnereventshared_SaleSectionSubtitle_1JRr3 {
-  font-size: 16px;
+  font-size: 15px;
 }
 .partnereventshared_SaleSectionContainer_1UD2h {
   grid-template-columns: repeat(1, minmax(0px, 1fr));

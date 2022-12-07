@@ -1026,6 +1026,110 @@ function SignLatestCloudGamingAddendum( returnURL )
 	);
 }
 
+function SignLatestSteamChinaAddendum( returnURL )
+{
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
+
+	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
+	if ( !agreedToSDA1.prop("checked") ) {
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam China Addendum before continuing.');
+		return;
+	}
+
+	var inviteID = $J("#inviteID");
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=' + 14,
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam China Addendum. Click OK to continue.' );
+					dialog.done( function() {
+						top.location.href = returnURL;
+					} );
+				}
+				else
+				{
+					if( response.success == 15)
+						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign this agreement.');
+					else
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
+function SignLatestPurchaseOncePolicy( returnURL )
+{
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
+
+	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
+	if ( !agreedToSDA1.prop("checked") ) {
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Purchase Once Policy before continuing.');
+		return;
+	}
+
+	var inviteID = $J("#inviteID");
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=' + 15,
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Purchase Once Policy. Click OK to continue.' );
+					dialog.done( function() {
+						top.location.href = returnURL;
+					} );
+				}
+				else
+				{
+					if( response.success == 15)
+						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign this agreement.');
+					else
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
 function EnterBankDetails()
 {
 	var dialog = ShowDialog( 'Enter Bank Details', $J( "#BankAccountRedirectModal" ) );

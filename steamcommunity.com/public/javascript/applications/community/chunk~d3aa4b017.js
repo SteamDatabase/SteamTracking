@@ -29,7 +29,7 @@
         o = a(29323),
         i = a(13271),
         l = a(67294),
-        c = a(85503),
+        c = a(125),
         d = a(63405),
         m = a(67833),
         p = (a(990), a(52114)),
@@ -127,11 +127,11 @@
       var N = a(26149),
         D = a(1351),
         I = a(1245),
-        y = (a(69765), a(58185), a(10767), a(81503)),
-        B = a(52795),
+        B = (a(69765), a(58185), a(10767), a(81503)),
+        y = a(52795),
         P = a(28976),
-        x = (a(3356), a(27991)),
-        G = a(159),
+        G = (a(3356), a(27991)),
+        x = a(159),
         A = a(71387),
         O = a(96187),
         k = a(15396),
@@ -399,7 +399,7 @@
         }
         componentDidMount() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, x.nf)(null),
+            (0, G.nf)(null),
               yield P.ai
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
@@ -446,7 +446,7 @@
         ToggleBroadcastExpandShrink() {
           let e = P.ai.Get().GetPlayReadyStream(this.props);
           const t = this.state.bExpanded,
-            a = B.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
+            a = y.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
           (0, P.wx)(a, t ? 2 : 3, e.snr),
             t && (0, I.X)() && (0, I.X)().AddEvent(1005),
             window.setTimeout(
@@ -504,7 +504,7 @@
           };
           if (this.props.bWidePlayer) return a;
           const r = P.ai.Get().GetConcurrentStreams(this.props) > 1;
-          let n = B.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
+          let n = y.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
             s = l.createElement(
               "div",
               { className: U().rightPanel },
@@ -512,7 +512,7 @@
             ),
             o = l.createElement(ue, { key: "left" + n, ImgUrl: e.left_panel });
           if (n < 11) {
-            const t = y.C.GetAppIDListForBroadcasterSteamID(e.steamid);
+            const t = B.C.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (n = t[0]);
           }
           return (
@@ -710,7 +710,7 @@
             });
         }
         CloseBroadcastPopup() {
-          const e = B.c9.GetOrCreateBroadcastInfo(
+          const e = y.c9.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
           (0, P.wx)(e, 7, this.props.stream.snr),
@@ -778,7 +778,7 @@
       function pe(e) {
         const { stream: t } = e,
           [a] = (0, i.SZ)(() => [t.steamid]),
-          r = B.c9.GetOrCreateBroadcastInfo(a).m_nAppID,
+          r = y.c9.GetOrCreateBroadcastInfo(a).m_nAppID,
           n = le.list.find(
             (e) =>
               e.appid == r &&
@@ -820,7 +820,7 @@
       let _e = class extends l.Component {
         OnToggleChat(e) {
           e.preventDefault();
-          const t = B.c9.GetOrCreateBroadcastInfo(
+          const t = y.c9.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
           (0, P.wx)(
@@ -831,7 +831,7 @@
             P.ai.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
-          const e = B.c9.GetOrCreateBroadcastInfo(
+          const e = y.c9.GetOrCreateBroadcastInfo(
             this.props.stream.steamid
           ).m_nAppID;
           (0, P.wx)(e, 9, this.props.stream.snr);
@@ -843,7 +843,7 @@
             r = a;
           let n = Number.parseInt(
             "" +
-              B.c9.GetOrCreateBroadcastInfo(this.props.stream.steamid)
+              y.c9.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                 .m_nViewerCount
           );
           return l.createElement(
@@ -956,7 +956,7 @@
       }
       const he = (0, o.Pi)((e) => {
         const { steamIDBroadcast: t } = e,
-          a = B.c9.GetOrCreateBroadcastInfo(t).m_nAppID,
+          a = y.c9.GetOrCreateBroadcastInfo(t).m_nAppID,
           [r] = (0, p.vs)(a, {});
         return l.createElement(
           "div",
@@ -987,8 +987,8 @@
       });
       function Ee(e, t) {
         var a;
-        const r = B.c9.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-          n = G.Z.Get().GetApp(r);
+        const r = y.c9.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
+          n = x.Z.Get().GetApp(r);
         return e &&
           (null === (a = null == n ? void 0 : n.GetAssets()) || void 0 === a
             ? void 0
@@ -1016,9 +1016,9 @@
           (0, l.useEffect)(() => {
             if (o && o.current) {
               const e = i
-                .map((e) => B.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID)
+                .map((e) => y.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID)
                 .filter(Boolean);
-              G.Z.Get()
+              x.Z.Get()
                 .QueueMultipleAppRequests(e, { include_assets: !0 })
                 .then(() => {
                   if (o.current) {
@@ -1065,7 +1065,7 @@
             bShowCapsuleArt: s,
           } = e,
           o = (0, i.SZ)(
-            () => B.c9.GetOrCreateBroadcastInfo(n.steamid).m_nAppID
+            () => y.c9.GetOrCreateBroadcastInfo(n.steamid).m_nAppID
           ),
           [c] = (0, p.vs)(null !== (t = n.nAppIDVOD) && void 0 !== t ? t : o, {
             include_assets: !0,
@@ -1141,7 +1141,16 @@
       function ve(e) {
         const { stream: t, orientation: a } = e,
           r = "below" == a,
-          n = (0, i.SZ)(() => B.c9.GetBroadcast(t.steamid));
+          [n, s] = (0, i.SZ)(() => {
+            var e;
+            return [
+              y.c9.GetBroadcast(t.steamid),
+              null === (e = y.c9.GetBroadcast(t.steamid)) || void 0 === e
+                ? void 0
+                : e.m_ulBroadcastID,
+            ];
+          }),
+          o = (0, i.SZ)(() => t.steamid);
         return n
           ? l.createElement(
               "div",
@@ -1158,8 +1167,8 @@
                 l.createElement(c.c, {
                   emoticonStore: P.D$,
                   watchLocation: 6,
-                  steamID: t.steamid,
-                  broadcastID: n.m_ulBroadcastID,
+                  steamID: o,
+                  broadcastID: s,
                 })
               )
             )
