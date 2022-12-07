@@ -54,6 +54,7 @@ GHomepage = {
 	bUseNewMainCapZip: false,
 
 	bShowAllRecentlyUpdated: false,
+	unBackgroundAppID: 0,
 
 	MainCapCluster: null,
 
@@ -239,6 +240,7 @@ GHomepage = {
 			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
 			GHomepage.bAutoPlayingFeaturedBroadcast = rgParams.bAutoPlayingFeaturedBroadcast || false;
 			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
+			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -343,6 +345,8 @@ GHomepage = {
 
 		// mark index as displayed so it doesn't appear in main cap; it is always below main cap
 		GDynamicStore.MarkAppIDsAsDisplayed( [ 1059530, 1059570, 1059550 ] );
+		if ( GHomepage.unBackgroundAppID )
+			GDynamicStore.MarkAppIDsAsDisplayed( [ GHomepage.unBackgroundAppID ] );
 
 		// MAIN CLUSTER
 		try {
