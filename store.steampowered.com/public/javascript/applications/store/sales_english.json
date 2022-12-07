@@ -378,7 +378,9 @@
     "GA2022_Detail_Desc5": "We will be streaming The Game Awards at https://steam.tv - winner will be announced in chat as each drawing takes place.",
     "GA2022_Dteail_Desc6": "Full official rules can be found here.",
     "GA2022_Congrats_Deck_Me": "Congratulations %1$s,%2$s you've won a Steam Deck!",
-    "GA2022_Congrats_Deck_OTher": "Congratulations %1$s,%2$s our latest Steam Deck winner!",
+    "GA2022_Congrats_Deck_OTher": "Congratulations %1$s,%2$s you've won a Steam Deck!",
     "GA2022_Congrats_Deck_Unknown": "Loading latest%1$s Steam Deck winner...",
+    "GA2022_RegisterToWin": "Register for a chance to win!",
+    "GA2022_RegisterLoginToWin": "Register and Login for a chance to win!",
     "GA2022_Congrats_NextDraw": "%1$s until next drawing"
 }

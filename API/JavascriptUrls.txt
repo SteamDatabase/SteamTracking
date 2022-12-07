@@ -1356,6 +1356,8 @@ https://avatars.cloudflare.steamstatic.com/${hash}
 https://avatars.cloudflare.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.cloudflare.steamstatic.com/${strHash}${strSize}.jpg
 https://calendar.google.com/calendar/r/eventedit?text=
+https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif
+https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png
 https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${filename}
@@ -2310,6 +2312,7 @@ https://store.steampowered.com/publisher/${vanity_url}
 https://store.steampowered.com/qiwi/launchauth
 https://store.steampowered.com/recommended/ignorerecommendation
 https://store.steampowered.com/recommended/ignorerecommendation/
+https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022
 https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
 https://store.steampowered.com/search/?term=${$Term}${snr}

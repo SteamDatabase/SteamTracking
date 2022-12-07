@@ -317,15 +317,54 @@
   margin: auto;
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  width: 400px;
+  margin: auto;
+  width: 100%;
   background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
   top: 0;
-  color: #fff;
-  padding: 10px;
   z-index: 1000;
-  font-weight: bold;
   box-shadow: 0px 3px 5px #000;
+  transition: filter 0.5s ease-out 100ms;
+}
+.broadcastchatannouncement_GiveawayWinnerBox_1iRcs:hover {
+  filter: hue-rotate(30deg);
+}
+.broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq {
+  padding: 10px;
+}
+.broadcastchatannouncement_GiveawayWinnerText_3BkKS {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3 {
+  font-size: 10px;
+  color: #dedede;
+  margin-top: 3px;
+}
+.broadcastchatannouncement_GiveawayWinnerBoxRight_164o1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.broadcastchatannouncement_GiveawayWinnerArt_3obND {
+  width: 90px;
+  margin-right: 10px;
+}
+.broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8 {
+  height: 16px;
+  width: 16px;
+  opacity: 0.75;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px 4px 4px 0px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk {
+  color: hotpink;
 }
 .crossfade {
   position: relative;
