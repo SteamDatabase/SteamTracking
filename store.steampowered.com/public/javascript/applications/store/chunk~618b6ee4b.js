@@ -23748,7 +23748,7 @@
         return {
           fontFamily: f(t.jsondata.sale_font, n),
           fontWeight: t.jsondata.sale_font_weight,
-          fontSize: t.jsondata.sale_section_font_size,
+          fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
             ? "initial"
             : null,
@@ -23759,11 +23759,12 @@
         return {
           fontFamily: f(t.jsondata.sale_font, n),
           fontWeight: 300,
-          fontSize:
+          fontSize: `${
             t.jsondata.sale_section_font_size &&
-            t.jsondata.sale_section_font_size - 3,
+            t.jsondata.sale_section_font_size - 3
+          }px`,
           letterSpacing: 0,
-          lineHeight: t.jsondata.sale_section_font_size,
+          lineHeight: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
             ? "initial"
             : null,
