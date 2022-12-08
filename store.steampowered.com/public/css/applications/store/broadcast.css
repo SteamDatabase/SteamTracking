@@ -327,6 +327,26 @@
   z-index: 1000;
   box-shadow: 0px 3px 5px #000000aa;
   transition: filter 0.25s ease-out 100ms;
+  filter: brightness(1);
+}
+.broadcastchatannouncement_GiveawayWinnerBox_1iRcs.broadcastchatannouncement_GiveawayWinnerAnnounced_1784w {
+  animation-name: broadcastchatannouncement_WinnerFlash_-YiiO;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes broadcastchatannouncement_WinnerFlash_-YiiO {
+  0% {
+    filter: brightness(4.5);
+  }
+  10% {
+    filter: brightness(8.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs:hover {
   filter: hue-rotate(30deg);

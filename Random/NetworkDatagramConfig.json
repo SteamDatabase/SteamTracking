@@ -1,5 +1,5 @@
 {
-  "revision": 1670461610,
+  "revision": 1670526840,
   "certs": [
     "Ii4IARIgSJbwDpn/07/GHiGMKio0Vh18VN3D/hKzQGh6n0Yx9qpFHfAYY00dMh91KT6tfJIvitz8MkB8abvDa50KdIaizx/eKZL26MQ5is+3Xbt8YN6k3FeSImzcPPWE84v77+8n0GbkZaBj+uPJHbXgxZQmjOy9HokH",
     "Ii4IARIgmuygThdRzmJo1WkALKHh+hstvCbTa06joAg603KCm4RFHfAYY00dMh91KT6tfJIvitz8MkBkR1T/xN6234O5xVdANVkvztOFOg4C2u5x4SirXUjSxOxBbso7JSh6f/HorajFsL2WT0r/7pVQ/I8InxhMvG0I",
@@ -33,6 +33,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -54,6 +55,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -83,6 +85,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -104,6 +107,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "tier": 1
     },
@@ -115,6 +119,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -152,6 +157,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -189,6 +195,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -226,6 +233,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -255,6 +263,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -280,6 +289,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 3,
       "tier": 1
     },
@@ -291,6 +301,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -320,6 +331,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -368,6 +380,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -378,6 +391,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -388,6 +402,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -398,6 +413,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -408,6 +424,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -418,6 +435,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -428,6 +446,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -438,6 +457,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -448,6 +468,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -458,6 +479,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -468,6 +490,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -478,6 +501,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -488,6 +512,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -498,6 +523,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -508,6 +534,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -518,6 +545,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -528,6 +556,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -538,6 +567,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -548,6 +578,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -558,6 +589,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -568,6 +600,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -579,6 +612,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -607,6 +641,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -617,6 +652,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -627,6 +663,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -637,6 +674,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -647,6 +685,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -657,6 +696,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -667,6 +707,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -677,6 +718,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -687,6 +729,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -697,6 +740,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -707,6 +751,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -717,6 +762,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -727,6 +773,7 @@
         "google"
       ],
       "num_gameservers": 4,
+      "partner": "google",
       "partners": 0,
       "tier": 2
     },
@@ -739,6 +786,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 3,
       "relays": [
         {
@@ -792,6 +840,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -833,6 +882,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -854,6 +904,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -879,6 +930,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -908,6 +960,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -933,6 +986,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -950,6 +1004,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -971,6 +1026,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -983,6 +1039,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -995,6 +1052,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1007,6 +1065,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1019,6 +1078,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1031,6 +1091,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1043,6 +1104,7 @@
         "steam-global"
       ],
       "num_gameservers": 8,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1065,6 +1127,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1077,6 +1140,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1089,6 +1153,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1101,6 +1166,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1113,6 +1179,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1135,6 +1202,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1157,6 +1225,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1169,6 +1238,7 @@
         "steam-global"
       ],
       "num_gameservers": 8,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1191,6 +1261,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1203,6 +1274,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1225,6 +1297,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1237,6 +1310,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1259,6 +1333,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1281,6 +1356,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1293,6 +1369,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "relays": [
@@ -1315,6 +1392,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1327,6 +1405,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1339,6 +1418,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1351,6 +1431,7 @@
         "steam-global"
       ],
       "num_gameservers": 4,
+      "partner": "multiplay",
       "partners": 1,
       "relay_public_key": "EE417A05B87158644D9C9CDFEAB8A17B1DC2C8973AD51D4EAC3F090E028B4040",
       "tier": 2
@@ -1362,6 +1443,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1372,6 +1454,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1382,6 +1465,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1392,6 +1476,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1403,6 +1488,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1447,6 +1533,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1457,6 +1544,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1467,6 +1555,7 @@
         "ovh"
       ],
       "num_gameservers": 1,
+      "partner": "ovh",
       "partners": 0,
       "tier": 2
     },
@@ -1478,6 +1567,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1507,6 +1597,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1535,6 +1626,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1564,6 +1656,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1596,6 +1689,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1625,6 +1719,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1654,6 +1749,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1675,6 +1771,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1704,6 +1801,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1734,6 +1832,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 3,
       "relays": [
         {
@@ -1771,6 +1870,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "tier": 1
     },
@@ -1782,6 +1882,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1819,6 +1920,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1856,6 +1958,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1896,6 +1999,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -1925,6 +2029,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -1962,6 +2067,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -2020,6 +2126,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 3,
       "relays": [
         {
@@ -2049,6 +2156,7 @@
         "steam-china"
       ],
       "has_gameservers": true,
+      "partner": "perfectworld",
       "partners": 2,
       "tier": 1
     },
@@ -2060,6 +2168,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -2097,6 +2206,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -2134,6 +2244,7 @@
         "steam-china"
       ],
       "has_gameservers": false,
+      "partner": "perfectworld",
       "partners": 2,
       "relays": [
         {
@@ -2175,6 +2286,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 3,
       "relays": [
         {
@@ -2209,6 +2321,7 @@
         "valve"
       ],
       "has_gameservers": false,
+      "partner": "valve",
       "partners": 3,
       "relays": [
         {
@@ -2230,6 +2343,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -2259,6 +2373,7 @@
         "valve"
       ],
       "has_gameservers": true,
+      "partner": "valve",
       "partners": 1,
       "relays": [
         {
@@ -2299,18 +2414,16 @@
     [ "ams", "mam1", 0 ],
     [ "ams", "mfr1", 7 ],
     [ "ams", "mln1", 7 ],
-    [ "ams", "mlx1", 11 ],
-    [ "ams", "mst1", 17 ],
+    [ "ams", "mlx1", 9 ],
+    [ "ams", "mst1", 18 ],
     [ "ams", "ogr1", 4 ],
     [ "ams", "oln1", 6 ],
-    [ "ams", "ord", 90 ],
+    [ "ams", "ord", 91 ],
     [ "ams", "par", 10 ],
     [ "ams", "sto", 20 ],
-    [ "ams", "sto2", 19 ],
+    [ "ams", "sto2", 20 ],
     [ "ams", "vie", 17 ],
-    [ "ams", "waw", 20 ],
     [ "atl", "dfw", 20 ],
-    [ "atl", "eat", 63 ],
     [ "atl", "fra", 98 ],
     [ "atl", "gash", 16 ],
     [ "atl", "gcmh", 14 ],
@@ -2326,16 +2439,16 @@
     [ "atl", "mch1", 18 ],
     [ "atl", "mdc1", 17 ],
     [ "atl", "mdf1", 25 ],
-    [ "atl", "mmi1", 12 ],
+    [ "atl", "mmi1", 13 ],
     [ "atl", "mmo1", 31 ],
     [ "atl", "mny1", 17 ],
-    [ "atl", "msa1", 45 ],
     [ "atl", "msl1", 21 ],
     [ "atl", "mto1", 23 ],
     [ "atl", "omo1", 31 ],
     [ "atl", "ord", 19 ],
+    [ "atl", "sea", 61 ],
     [ "bom", "dxb", 25 ],
-    [ "bom", "fra", 362 ],
+    [ "bom", "fra", 361 ],
     [ "bom", "gdel", 24 ],
     [ "bom", "gmum", 0 ],
     [ "bom", "hkg", 79 ],
@@ -2359,7 +2472,7 @@
     [ "canm", "canu", 0 ],
     [ "canm", "fra", 179 ],
     [ "canm", "ghkg", 3 ],
-    [ "canm", "hkg", 14 ],
+    [ "canm", "hkg", 13 ],
     [ "canm", "mhk1", 3 ],
     [ "canm", "pwg", 7 ],
     [ "cant", "canu", 0 ],
@@ -2367,10 +2480,10 @@
     [ "cant", "hkg", 7 ],
     [ "cant", "pwg", 1 ],
     [ "canu", "fra", 179 ],
-    [ "canu", "hkg", 9 ],
+    [ "canu", "hkg", 8 ],
     [ "canu", "pwg", 3 ],
     [ "dfw", "eat", 49 ],
-    [ "dfw", "fra", 118 ],
+    [ "dfw", "fra", 117 ],
     [ "dfw", "gash", 37 ],
     [ "dfw", "gcmh", 29 ],
     [ "dfw", "gdfw", 0 ],
@@ -2382,7 +2495,7 @@
     [ "dfw", "guw1", 50 ],
     [ "dfw", "gyul", 48 ],
     [ "dfw", "gyyz", 32 ],
-    [ "dfw", "iad", 43 ],
+    [ "dfw", "iad", 42 ],
     [ "dfw", "lax", 32 ],
     [ "dfw", "mas1", 37 ],
     [ "dfw", "mat1", 23 ],
@@ -2401,21 +2514,21 @@
     [ "dfw", "ohi1", 52 ],
     [ "dfw", "omo1", 48 ],
     [ "dfw", "ord", 21 ],
-    [ "dfw", "sea", 56 ],
+    [ "dfw", "sea", 47 ],
     [ "dxb", "gdel", 43 ],
     [ "dxb", "gmum", 38 ],
     [ "dxb", "hkg", 104 ],
     [ "dxb", "maa", 42 ],
     [ "dxb", "mdb1", 0 ],
-    [ "dxb", "ord", 291 ],
+    [ "dxb", "ord", 290 ],
     [ "dxb", "sgp", 75 ],
     [ "eat", "fra", 162 ],
     [ "eat", "glas", 25 ],
     [ "eat", "glax", 29 ],
     [ "eat", "gslc", 18 ],
     [ "eat", "guw1", 4 ],
-    [ "eat", "iad", 61 ],
-    [ "eat", "lax", 27 ],
+    [ "eat", "iad", 60 ],
+    [ "eat", "lax", 26 ],
     [ "eat", "mla1", 29 ],
     [ "eat", "mpx1", 32 ],
     [ "eat", "ohi1", 6 ],
@@ -2462,8 +2575,8 @@
     [ "fra", "jnb", 173 ],
     [ "fra", "lax", 144 ],
     [ "fra", "lhr", 13 ],
-    [ "fra", "maa", 345 ],
-    [ "fra", "mad", 30 ],
+    [ "fra", "maa", 346 ],
+    [ "fra", "mad", 31 ],
     [ "fra", "mam1", 7 ],
     [ "fra", "mas1", 131 ],
     [ "fra", "mat1", 148 ],
@@ -2474,9 +2587,9 @@
     [ "fra", "mhk1", 183 ],
     [ "fra", "mla1", 186 ],
     [ "fra", "mln1", 12 ],
-    [ "fra", "mlx1", 9 ],
+    [ "fra", "mlx1", 6 ],
     [ "fra", "mmo1", 116 ],
-    [ "fra", "mny1", 77 ],
+    [ "fra", "mny1", 79 ],
     [ "fra", "mpx1", 181 ],
     [ "fra", "msa1", 167 ],
     [ "fra", "msj1", 183 ],
@@ -2497,15 +2610,15 @@
     [ "fra", "pwu", 155 ],
     [ "fra", "pww", 169 ],
     [ "fra", "pwz", 178 ],
-    [ "fra", "sea", 141 ],
-    [ "fra", "sgp", 313 ],
+    [ "fra", "sea", 139 ],
+    [ "fra", "sgp", 312 ],
     [ "fra", "sha", 176 ],
     [ "fra", "sham", 176 ],
     [ "fra", "shat", 176 ],
     [ "fra", "shau", 176 ],
     [ "fra", "shb", 176 ],
     [ "fra", "sto", 22 ],
-    [ "fra", "sto2", 21 ],
+    [ "fra", "sto2", 22 ],
     [ "fra", "tsn", 156 ],
     [ "fra", "tsnm", 156 ],
     [ "fra", "tsnt", 156 ],
@@ -2550,7 +2663,7 @@
     [ "gew1", "mfr1", 6 ],
     [ "gew1", "mln1", 5 ],
     [ "gew1", "mlx1", 3 ],
-    [ "gew1", "mst1", 12 ],
+    [ "gew1", "mst1", 13 ],
     [ "gew1", "ogr1", 2 ],
     [ "gew1", "oln1", 5 ],
     [ "gew1", "ord", 133 ],
@@ -2626,7 +2739,6 @@
     [ "gmks", "iad", 13 ],
     [ "gmks", "mas1", 13 ],
     [ "gmks", "mat1", 8 ],
-    [ "gmks", "mmi1", 17 ],
     [ "gmks", "ord", 23 ],
     [ "gmum", "hkg", 86 ],
     [ "gmum", "maa", 20 ],
@@ -2653,10 +2765,10 @@
     [ "gpar", "ord", 133 ],
     [ "gpar", "par", 0 ],
     [ "gru", "gscl", 51 ],
-    [ "gru", "jnb", 394 ],
+    [ "gru", "jnb", 393 ],
     [ "gru", "lim", 82 ],
     [ "gru", "mdf1", 164 ],
-    [ "gru", "mmi1", 112 ],
+    [ "gru", "mmi1", 111 ],
     [ "gru", "msp1", 0 ],
     [ "gru", "ord", 168 ],
     [ "gru", "scl", 52 ],
@@ -2701,9 +2813,8 @@
     [ "gtpe", "shat", 13 ],
     [ "guc1", "iad", 31 ],
     [ "guc1", "mch1", 13 ],
-    [ "guc1", "mdf1", 17 ],
-    [ "guc1", "msa1", 21 ],
-    [ "guc1", "msl1", 17 ],
+    [ "guc1", "mdf1", 19 ],
+    [ "guc1", "msl1", 11 ],
     [ "guc1", "ord", 13 ],
     [ "guw1", "lax", 26 ],
     [ "guw1", "msa1", 18 ],
@@ -2752,7 +2863,7 @@
     [ "hkg", "sha", 24 ],
     [ "hkg", "sham", 35 ],
     [ "hkg", "shat", 28 ],
-    [ "hkg", "shau", 36 ],
+    [ "hkg", "shau", 35 ],
     [ "hkg", "shb", 27 ],
     [ "hkg", "syd", 118 ],
     [ "hkg", "tsn", 39 ],
@@ -2760,7 +2871,7 @@
     [ "hkg", "tsnt", 43 ],
     [ "hkg", "tsnu", 38 ],
     [ "hkg", "tyo", 52 ],
-    [ "hkg", "tyo1", 50 ],
+    [ "hkg", "tyo1", 51 ],
     [ "iad", "mas1", 0 ],
     [ "iad", "mat1", 17 ],
     [ "iad", "mch1", 18 ],
@@ -2769,7 +2880,7 @@
     [ "iad", "mmi1", 26 ],
     [ "iad", "mmo1", 15 ],
     [ "iad", "mny1", 6 ],
-    [ "iad", "msl1", 28 ],
+    [ "iad", "msl1", 27 ],
     [ "iad", "mto1", 11 ],
     [ "iad", "omo1", 15 ],
     [ "iad", "ord", 19 ],
@@ -2777,13 +2888,14 @@
     [ "jnb", "msg1", 173 ],
     [ "jnb", "msp1", 148 ],
     [ "jnb", "osg1", 173 ],
-    [ "jnb", "par", 173 ],
+    [ "jnb", "par", 174 ],
     [ "jnb", "sto2", 190 ],
-    [ "jnb", "syd", 444 ],
+    [ "jnb", "syd", 443 ],
     [ "lax", "lim", 101 ],
     [ "lax", "mla1", 0 ],
     [ "lax", "mpx1", 11 ],
-    [ "lax", "msj1", 8 ],
+    [ "lax", "msa1", 44 ],
+    [ "lax", "msj1", 7 ],
     [ "lax", "ohi1", 26 ],
     [ "lax", "ord", 46 ],
     [ "lax", "scl", 131 ],
@@ -2791,44 +2903,44 @@
     [ "lhr", "mad", 27 ],
     [ "lhr", "mam1", 7 ],
     [ "lhr", "mln1", 0 ],
-    [ "lhr", "mlx1", 17 ],
+    [ "lhr", "mlx1", 15 ],
     [ "lhr", "ogr1", 3 ],
     [ "lhr", "oln1", 0 ],
     [ "lhr", "ord", 100 ],
     [ "lhr", "par", 7 ],
-    [ "lhr", "sto", 24 ],
+    [ "lhr", "sto2", 24 ],
     [ "lim", "msp1", 68 ],
     [ "lim", "ord", 147 ],
     [ "lim", "scl", 30 ],
     [ "maa", "mdb1", 58 ],
     [ "maa", "sgp", 32 ],
     [ "maa", "syd", 121 ],
-    [ "mad", "ord", 116 ],
+    [ "mad", "ord", 115 ],
     [ "mad", "par", 19 ],
     [ "mam1", "mlx1", 8 ],
-    [ "mam1", "mst1", 14 ],
+    [ "mam1", "mst1", 13 ],
     [ "mam1", "ogr1", 4 ],
     [ "mam1", "ord", 132 ],
     [ "mam1", "par", 8 ],
     [ "mas1", "mdc1", 0 ],
+    [ "mas1", "mmi1", 27 ],
     [ "mas1", "mny1", 7 ],
     [ "mas1", "ord", 18 ],
-    [ "mat1", "mdf1", 21 ],
-    [ "mat1", "mmi1", 14 ],
+    [ "mat1", "mdf1", 22 ],
+    [ "mat1", "mmi1", 18 ],
     [ "mat1", "msl1", 15 ],
     [ "mat1", "ord", 18 ],
-    [ "mch1", "mdf1", 21 ],
-    [ "mch1", "msl1", 7 ],
+    [ "mch1", "mdf1", 20 ],
+    [ "mch1", "msl1", 6 ],
     [ "mch1", "mto1", 13 ],
     [ "mch1", "ord", 0 ],
     [ "mdb1", "waw", 83 ],
-    [ "mdc1", "mmi1", 26 ],
     [ "mdc1", "mny1", 6 ],
     [ "mdc1", "ord", 19 ],
     [ "mdf1", "msa1", 27 ],
     [ "mdf1", "msl1", 21 ],
     [ "mdf1", "ord", 20 ],
-    [ "mfr1", "mlx1", 6 ],
+    [ "mfr1", "mlx1", 5 ],
     [ "mfr1", "mst1", 3 ],
     [ "mfr1", "ord", 139 ],
     [ "mfr1", "par", 9 ],
@@ -2842,17 +2954,18 @@
     [ "mln1", "oln1", 0 ],
     [ "mln1", "ord", 127 ],
     [ "mln1", "par", 6 ],
-    [ "mlx1", "ord", 113 ],
-    [ "mlx1", "par", 20 ],
+    [ "mlx1", "ord", 110 ],
+    [ "mlx1", "vie", 21 ],
     [ "mmi1", "ord", 40 ],
     [ "mmo1", "mny1", 10 ],
     [ "mmo1", "mto1", 10 ],
     [ "mmo1", "omo1", 0 ],
     [ "mmo1", "ord", 24 ],
+    [ "mny1", "msl1", 24 ],
     [ "mny1", "omo1", 10 ],
-    [ "mny1", "ord", 17 ],
-    [ "mpx1", "msa1", 16 ],
-    [ "mpx1", "msj1", 16 ],
+    [ "mny1", "ord", 19 ],
+    [ "mpx1", "msa1", 25 ],
+    [ "mpx1", "msj1", 15 ],
     [ "mpx1", "ord", 46 ],
     [ "mpx1", "sea", 35 ],
     [ "msa1", "msj1", 17 ],
@@ -2868,8 +2981,8 @@
     [ "msl1", "ord", 6 ],
     [ "msp1", "scl", 51 ],
     [ "mst1", "ord", 105 ],
-    [ "mst1", "par", 9 ],
-    [ "mst1", "vie", 18 ],
+    [ "mst1", "par", 10 ],
+    [ "mst1", "vie", 17 ],
     [ "msy1", "osd1", 0 ],
     [ "msy1", "pwg", 149 ],
     [ "msy1", "sgp", 126 ],
@@ -2895,7 +3008,7 @@
     [ "ord", "owa1", 150 ],
     [ "ord", "par", 95 ],
     [ "ord", "scl", 177 ],
-    [ "ord", "sea", 44 ],
+    [ "ord", "sea", 43 ],
     [ "ord", "seo", 164 ],
     [ "ord", "sto", 110 ],
     [ "ord", "sto2", 110 ],
@@ -2915,7 +3028,7 @@
     [ "par", "vie", 20 ],
     [ "pwg", "pww", 17 ],
     [ "pwj", "pwu", 9 ],
-    [ "pwj", "tsn", 1 ],
+    [ "pwj", "tsn", 2 ],
     [ "pwj", "tsnt", 8 ],
     [ "pwj", "tsnu", 1 ],
     [ "pwu", "tsn", 5 ],
@@ -2933,7 +3046,7 @@
     [ "seo", "tyo", 30 ],
     [ "seo", "tyo1", 29 ],
     [ "sgp", "syd", 88 ],
-    [ "sgp", "tyo", 80 ],
+    [ "sgp", "tyo", 81 ],
     [ "sgp", "tyo1", 81 ],
     [ "sha", "sham", 0 ],
     [ "sha", "shat", 0 ],

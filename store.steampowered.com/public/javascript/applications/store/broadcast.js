@@ -110,6 +110,9 @@
     36625: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
+        GiveawayWinnerAnnounced:
+          "broadcastchatannouncement_GiveawayWinnerAnnounced_1784w",
+        WinnerFlash: "broadcastchatannouncement_WinnerFlash_-YiiO",
         GiveawayWinnerBoxRight:
           "broadcastchatannouncement_GiveawayWinnerBoxRight_164o1",
         GiveawayWinnerText:
@@ -4502,75 +4505,97 @@
             strActionButton: i,
             strActionClassname: s,
           } = e,
-          [n, o] = (0, tt.Jq)(
+          n =
             (null === (t = r.winner_accounts) || void 0 === t
               ? void 0
               : t.length) > 0
               ? r.winner_accounts[0]
-              : 0
-          ),
-          c = (0, it.et)(
+              : 0,
+          [o, c] = l.useState(n),
+          [d, m] = (0, tt.Jq)(n),
+          u = (0, it.et)(
             "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif"
           ),
-          d = (0, it.et)(
+          h = (0, it.et)(
             "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png"
           ),
-          m = (0, et.J)(r.giveaway_gid);
-        let u =
-          m.bLoadingGiveawayInfo || m.closed ? null : m.seconds_until_drawing;
-        return l.createElement(
-          at.ns,
-          {
-            href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
-            className: a,
-          },
+          _ = (0, et.J)(r.giveaway_gid);
+        let p =
+          _.bLoadingGiveawayInfo || _.closed ? null : _.seconds_until_drawing;
+        const g = n === Me.L7.accountid;
+        return (
+          l.useEffect(() => {
+            o != n && setTimeout(() => c(n), 1e3);
+          }, [n, o]),
           l.createElement(
-            "div",
-            { className: nt().GiveawayWinnerBox },
+            at.ns,
+            {
+              href: "https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022",
+              className: a,
+            },
             l.createElement(
               "div",
-              { className: nt().GiveawayWinnerBoxLeft },
+              {
+                className: (0, $e.Z)({
+                  [nt().GiveawayWinnerBox]: !0,
+                  [nt().GiveawayWinnerAnnounced]: Boolean(m) && o === n,
+                }),
+              },
+              l.createElement(
+                "div",
+                { className: nt().GiveawayWinnerBoxLeft },
+                l.createElement("img", {
+                  className: nt().GiveawayWinnerArt,
+                  src: u,
+                })
+              ),
+              l.createElement(
+                "div",
+                { className: nt().GiveawayWinnerBoxRight },
+                Boolean(d || !m || o !== n) &&
+                  l.createElement(
+                    "div",
+                    { className: (0, $e.Z)(nt().GiveawayWinnerText) },
+                    (0, we.kQ)(
+                      "#GA2022_Congrats_Deck_Unknown",
+                      l.createElement("br", null)
+                    )
+                  ),
+                Boolean(m && o === n) &&
+                  l.createElement(
+                    "div",
+                    {
+                      className: (0, $e.Z)(
+                        nt().GiveawayWinnerText,
+                        nt().GiveawayWinnerAnnounced
+                      ),
+                    },
+                    (0, we.kQ)(
+                      g
+                        ? "#GA2022_Congrats_Deck_Me"
+                        : "#GA2022_Congrats_Deck_OTher",
+                      m.persona_name,
+                      l.createElement("br", null)
+                    )
+                  ),
+                Boolean(p > 0) &&
+                  l.createElement(
+                    "div",
+                    { className: nt().GiveawayWinnerCountdown },
+                    (0, we.kQ)("#GA2022_Congrats_NextDraw", p)
+                  )
+              ),
               l.createElement("img", {
-                className: nt().GiveawayWinnerArt,
-                src: c,
-              })
-            ),
-            l.createElement(
-              "div",
-              { className: nt().GiveawayWinnerBoxRight },
-              Boolean(n || !o) &&
+                className: nt().GiveawayWinnerQuestion,
+                src: h,
+              }),
+              Boolean(i) &&
                 l.createElement(
                   "div",
-                  { className: nt().GiveawayWinnerText },
-                  (0, we.kQ)(
-                    "#GA2022_Congrats_Deck_Unknown",
-                    l.createElement("br", null)
-                  )
-                ),
-              Boolean(o) &&
-                l.createElement(
-                  "div",
-                  { className: nt().GiveawayWinnerText },
-                  (0, we.kQ)(
-                    r.winner_accounts[0] == Me.L7.accountid
-                      ? "#GA2022_Congrats_Deck_Me"
-                      : "#GA2022_Congrats_Deck_OTher",
-                    o.persona_name,
-                    l.createElement("br", null)
-                  )
-                ),
-              Boolean(u > 0) &&
-                l.createElement(
-                  "div",
-                  { className: nt().GiveawayWinnerCountdown },
-                  (0, we.kQ)("#GA2022_Congrats_NextDraw", u)
+                  { className: s },
+                  g ? (0, we.Xx)("#GA2022_YouWonNextSteps") : i
                 )
-            ),
-            l.createElement("img", {
-              className: nt().GiveawayWinnerQuestion,
-              src: d,
-            }),
-            Boolean(i) && l.createElement("div", { className: s }, i)
+            )
           )
         );
       }
