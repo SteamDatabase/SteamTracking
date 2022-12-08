@@ -441,6 +441,7 @@
 	"EventDisplay_Reminder_OutlookCalendar_Short": "Outlook",
 	"EventDisplay_Reminder_AddToYahoo": "Add to Yahoo Calendar",
 	"EventDisplay_Reminder_Preferences": "Edit Reminder Preferences...",
+	"EventDidplay_Reminder_EventNotVisible": "Event %1$s is not visible; Reminder will not appear",
 
 	"EventDisplay_TimeDisplay": "From %1$s to %2$s",
 	"EventDisplay_TimeDisplayNone": "No Date and Time Information",
@@ -459,6 +460,8 @@
 	"EventDisplay_TimeEventActive": "Event is running now",
 	"EventDisplay_TimeEventOnNow": "On now!",
 
+	"EventDisplay_Share_WithFriendsHeader": "Share with Friends",
+	"EventDisplay_Share_LanguageLabel": "Share content in:",
 	"EventDisplay_Share_Link": "Link: ",
 	"EventDisplay_Share_OnMyStatus": "Share directly to my status",
 	"EventDisplay_Share_OnMyStatus_Details": "Post this status to your Friends Activity feed. Steam will include the message and item preview shown below.",
@@ -1363,7 +1366,8 @@
 	"Broadcast_default_title_speed": "Now broadcasting: Watch this speedrun",
 
 	"Sale_RegisterNow": "Register Now",
-	"Sale_RegisterNow_done": "You're Registered",
+	"Sale_RegisterNow_done": "You're Registered!",
+	"Sale_RegisterNow_noteligible": "Sorry, not eligible",
 	"Sale_Registration": "Registation",
 	"Sale_BundleSave": "Includes %1$s items.",
 	"Sale_BundleSave_WithDiscount": "Buy this bundle to save %1$s% off all %2$s items!",
@@ -1482,7 +1486,12 @@
 	"Sale_default_label_BackCat": "Back Catalogue",
 	"Sale_default_label_PlayForFree": "Play for Free!",
 	"Sale_defautl_label_FreeToKeep": "For a limited time, install now and keep it forever",
-
+	"Sale_ClaimableReward_Busy": "It looks like our servers are busy at the moment. Please try to claim your free item again in a minute.",
+	"Sale_ClaimableReward_sticker": "Claim Sticker",
+	"Sale_ClaimableReward_completed_sticker": "Congrats! You have claimed a sticker.",
+	"Sale_ClaimableReward_Login": "Log In to Claim Reward",
+	"Sale_ClaimableReward_AlreadyClaimed": "Already Claimed",
+	
 	"Sale_default_label_1": "On Sale",
 	"Sale_default_label_2": "Top Sellers",
 	"Sale_default_label_3": "Free to Play",
@@ -2307,6 +2316,7 @@
 	"SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "This game does not exit cleanly and may require you to manually quit via the Steam overlay",
 	"SteamDeckVerified_TestResult_AuxFunctionalityNotAccessible_MapEditor": "Some auxilliary functionality is not accessible on Steam Deck: map editor",
 	"SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "This game uses multiple windows and may require you to focus the appropriate windows manually via the Steam overlay",
+	"SteamDeckVerified_TestResult_DisplayOutputNotCorrectlyScaled": "This game is incorrectly scaled on Steam Deck and may require you to configure the display resolution manually",
 
 	"SteamDeckVerified_TestResult_SteamOSDoesNotSupport": "Valve is still working on adding support for this game on Steam Deck",
 	"SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR": "Steam Deck does not support VR games",

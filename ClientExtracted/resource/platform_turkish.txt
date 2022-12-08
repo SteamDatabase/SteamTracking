@@ -21,6 +21,7 @@
 "app_task_servers"	"Sunucular"
 "app_task_news"		"Haberler"
 "app_task_bigpicture"	"Geniş Ekran"
+"app_task_exit_bigpicture"	"Geniş Ekran'dan Çık"
 "app_task_friend_status" "Steam Durumu"
 "app_task_exit_steam"	"Steam'den Çık"
 "app_task_screenshots"	"Ekran Görüntüleri"

@@ -97,6 +97,7 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
+ Plat_IsChromeOS
  Plat_IsInDebugSession
  Plat_IsSteamDeck
  Plat_IsSteamOS

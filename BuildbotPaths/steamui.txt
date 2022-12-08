@@ -206,6 +206,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionverifyapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamepadui/gamepaduicontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/audiorecorder.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp

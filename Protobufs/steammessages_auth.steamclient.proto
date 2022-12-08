@@ -95,6 +95,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Request {
 	optional string website_id = 8 [default = "Unknown", (description) = "(EMachineAuthWebDomain) identifier of client requesting auth"];
 	optional .CAuthentication_DeviceDetails device_details = 9 [(description) = "User-supplied details about the device attempting to sign in"];
 	optional string guard_data = 10 [(description) = "steam guard data for client login"];
+	optional uint32 language = 11;
 }
 
 message CAuthentication_BeginAuthSessionViaCredentials_Response {
@@ -105,6 +106,7 @@ message CAuthentication_BeginAuthSessionViaCredentials_Response {
 	optional uint64 steamid = 5 [(description) = "steamid of the account logging in - will only be included if the credentials were correct"];
 	optional string weak_token = 6 [(description) = "partial-authentication token - limited lifetime and scope, included only if credentials were valid"];
 	optional string agreement_session_url = 7 [(description) = "agreement the user needs to agree to"];
+	optional string extended_error_message = 8 [(description) = "error string to display if supported by the client"];
 }
 
 message CAuthentication_PollAuthSessionStatus_Request {

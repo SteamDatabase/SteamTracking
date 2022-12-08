@@ -4669,7 +4669,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "SteamUI_StreamLaunch_RemoteStart"				"Sẵn sàng phát sóng %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Cấp phép cho thiết bị"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Nhập mã xác nhận để cho phép %devicename% kết nối và chơi."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Nhập mã xác nhận hiện trên %devicename% để cho phép kết nối và chơi."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Để sau"
 "SteamUI_UpdateControllerFirmware_Continue"	"Tiếp"

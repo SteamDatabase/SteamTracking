@@ -21,6 +21,7 @@
 "app_task_servers"	"服务器"
 "app_task_news"		"新闻"
 "app_task_bigpicture"	"大屏幕"
+"app_task_exit_bigpicture"	"退出大屏幕"
 "app_task_friend_status" "Steam 状态"
 "app_task_exit_steam"	"退出 Steam"
 "app_task_screenshots"	"截图"

@@ -4669,7 +4669,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_StreamLaunch_RemoteStart"				"%game%のストリーミングを準備中..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"デバイスを承認"
-"SteamUI_RemoteDeviceAuthorization_Text"		"デバイスの接続を許可してゲームをプレイするには、%devicename%に表示の認証コードを入力してください。"
+"SteamUI_RemoteDeviceAuthorization_Text"		"接続を許可してゲームをプレイするには、%devicename%に表示された認証コードを入力してください。"
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"後で更新する"
 "SteamUI_UpdateControllerFirmware_Continue"	"次へ"

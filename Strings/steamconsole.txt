@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+pn
+pn
 __stubs
 __TEXT
 __stub_helper
@@ -40,6 +42,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
+y6
 __common
 __DATA
 PC
@@ -336,8 +339,6 @@ app_info_request
 <AppID> - Issue an appinfo request for the given appid. Does not wait for results from the server.
 force_install_dir
 force_install_dir <directory>
-app_set_config
-<AppID> <key> <value> - sets a config value for given app.
 app_license_request
 <AppID> - Requests a free licenses for this app if not already owned.
 app_install_script
@@ -910,6 +911,7 @@ LINUX
 LINUX32
 LINUX64
 LINUXARM64
+CHROMEOS
 ANDROID
 ANDROID32
 ANDROID64
@@ -1329,3 +1331,4 @@ Ic
 0
 0
 0
+(

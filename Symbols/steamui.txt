@@ -332,6 +332,7 @@
  Plat_IsSteamDeck
  Plat_IsSteamOS
  Plat_IsSteamOS3
+ Plat_IsTesla
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString

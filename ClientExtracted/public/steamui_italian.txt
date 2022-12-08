@@ -1496,7 +1496,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_DownloadRatesInBits"			"Mostra la percentuale di download in bit al secondo"
 
 "Steam_CloudLabel"					"Steam Cloud"
-"Steam_CloudInfo"					"Steam Cloud conserva le informazioni che consentono alla tua esperienza videoludica di proseguire su diversi computer."
+"Steam_CloudInfo"					"Steam Cloud conserva le informazioni che consentono alla tua esperienza videoludica di proseguire su diversi dispositivi."
 "Steam_EnableCloud"					"Abilita la sincronizzazione di Steam Cloud per le applicazioni che lo supportano"
 "Steam_EnableCloudForApp"			"Abilita la sincronizzazione di Steam Cloud per %game%"
 "Steam_EnableCloudScreenshots"		"Se ne sono stati scattati di nuovi, apri il gestore degli screenshot dopo aver chiuso un gioco"

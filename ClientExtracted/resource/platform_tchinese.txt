@@ -21,6 +21,7 @@
 "app_task_servers"	"伺服器"
 "app_task_news"		"新聞"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"退出 Big Picture"
 "app_task_friend_status" "Steam 狀態"
 "app_task_exit_steam"	"離開 Steam"
 "app_task_screenshots"	"螢幕擷圖"
@@ -31,7 +32,7 @@
 "app_task_stop_streaming"	"停止遠端暢玩"
 
 "Steam_AccountAlreadyLoggedInNeedShutdown"		"您的帳戶「%account%」目前正由另一台電腦使用。\n您必須關閉其他電腦上的 Steam 才能在此登入。"
-"Steam_AccountAlreadyLoggedInNeedPassword"		"此帳戶目前已在他處登入。\n請重新輸入您的密碼以在此電腦登入。"
+"Steam_AccountAlreadyLoggedInNeedPassword"		"此帳戶目前已在其它地方登入。\n請重新輸入您的密碼以在此電腦登入。"
 "Steam_AccountOfflineMissingConfig"				"無法下載平台配置數據。"
 "Steam_NeverConnectedNoConnection"				"無法連線至 steam 伺服器，因此帳戶「%account%」從未在此機器上使用。\n有些服務將無法使用。Steam 將會繼續嘗試連線，成功連線後即可使用更多服務。"
 "Steam_RefreshEnterTwoFactorCode"				"請輸入您的 Steam Guard 驗證器上目前的代碼。"

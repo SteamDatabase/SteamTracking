@@ -4,8 +4,8 @@
 "Tokens" 
 { 
 "TrackerUI_ConnectionSpeed"				"Vitesse de connexion Internet"
-"TrackerUI_FavoriteWindowLabel_Windows"	"Sélectionnez quelle fenêtre Steam apparaît lorsque le programme démarre et lorsque vous double cliquez sur l'icône de la barre d'affichage."
-"TrackerUI_FavoriteWindowLabel"			"Sélectionnez quelle fenêtre Steam apparaît lorsque le programme démarre."
+"TrackerUI_FavoriteWindowLabel_Windows"	"Sélectionnez quelle fenêtre Steam apparait lorsque le programme démarre et lorsque vous double cliquez sur l'icône de la barre d'affichage."
+"TrackerUI_FavoriteWindowLabel"			"Sélectionnez quelle fenêtre Steam apparait lorsque le programme démarre."
 "TrackerUI_FavoriteWindow"			"Fenêtre préférée"
 
 

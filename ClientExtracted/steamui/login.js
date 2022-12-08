@@ -11,19 +11,19 @@
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => g });
+      n.r(t), n.d(t, { default: () => E });
       var l = n(67294),
         o = n(8199),
-        u = n.n(o),
+        i = n.n(o),
         a = (n(7952), n(78869)),
-        i = n(15641),
+        u = n(15641),
         s = (n(36378), n(40792)),
         r = (n(38440), n(70655)),
         c = n(27194),
         m = n(86487);
       n(29669);
       let f = !1;
-      function S() {
+      function d() {
         return (0, r.mG)(this, void 0, void 0, function* () {
           if (f) return;
           f = !0;
@@ -35,14 +35,16 @@
         });
       }
       var h = n(96794),
-        d = (n(10708), n(63709));
-      function g(e) {
+        S = (n(10708), n(63709)),
+        g = n(45520),
+        C = n(30946);
+      function E(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
             const [e, t] = l.useState(!1);
             return (
               l.useEffect(() => {
-                Promise.all([S()]).then(() => {
+                Promise.all([d()]).then(() => {
                   t(!0);
                 });
               }, []),
@@ -51,7 +53,7 @@
           })();
         return t
           ? o
-            ? l.createElement(C, null)
+            ? l.createElement(p, Object.assign({}, e))
             : null
           : l.createElement(
               "div",
@@ -64,36 +66,29 @@
               "Initiate"
             );
       }
-      function C(e) {
+      function p(e) {
         let [t, n] = (0, l.useState)(null);
-        const [o, r] = (0, l.useState)(!1),
-          [c, m] = (0, l.useState)(!1);
-        let f = new s.zn(),
-          S = f.GetServiceTransport();
+        const [o, r] = (0, l.useState)(!1);
+        let c = new s.zn(),
+          m = c.GetServiceTransport();
         !(function (e) {
           (0, l.useEffect)(() => {
-            (0, d.Uh)().Init("Client Login", CLSTAMP, e);
+            (0, S.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
-        })(S),
+        })(m),
           (0, l.useEffect)(() => {
             a.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
                 1 != e.reason ? n(e) : n(null);
-              }),
-              SteamClient.Auth.GetLoginUIStyle().then((e) => {
-                r(
-                  e == h.cL.k_ELoginUIStyleNew &&
-                    a.De.EREALM != h.IN.k_ESteamRealmChina
-                );
               });
           }, []);
-        const [g, C] = (0, l.useState)(void 0),
-          [E, L] = (0, l.useState)(0);
+        const [f, d] = (0, l.useState)(void 0),
+          [E, p] = (0, l.useState)(0);
         if (
-          (f.Connect().then(() => {
-            m(!0);
+          (c.Connect().then(() => {
+            r(!0);
           }),
-          !c)
+          !o)
         )
           return null;
         const v = `${null == t ? void 0 : t.account_name}${
@@ -101,17 +96,21 @@
         }${E.toString()}`;
         return l.createElement(
           "div",
-          { className: u().Login },
-          l.createElement(i.i9, {
+          {
+            className: (0, g.Z)(i().Login, e.includeTitleBar && i().WithTitle),
+          },
+          e.includeTitleBar &&
+            l.createElement(C.T, { popup: e.popup, hideMinMax: !0 }),
+          l.createElement(u.i9, {
             key: v,
             autoFocus: !0,
-            transport: S,
+            transport: m,
             onSuccess: (e) => {
               var t;
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                C(null),
+                d(null),
                 SteamClient.Auth.SetLoginToken(
                   e.strRefreshToken,
                   e.strAccountName
@@ -119,8 +118,8 @@
                   const t = e.result,
                     n = e.message;
                   console.log(`client login returned ${t} (${n})`),
-                    C(t),
-                    1 != t && L(E + 1);
+                    d(t),
+                    1 != t && p(E + 1);
                 });
               const n =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
@@ -129,8 +128,8 @@
             platform: 1,
             embedded: !0,
             refreshInfo: t,
-            disableQR: !o,
-            lastResult: g,
+            disableQR: a.De.EREALM == h.IN.k_ESteamRealmChina,
+            lastResult: f,
           })
         );
       }

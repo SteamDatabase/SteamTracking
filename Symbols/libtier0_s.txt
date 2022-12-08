@@ -125,6 +125,7 @@
  T Plat_IsSteamDeck
  T Plat_IsSteamOS
  T Plat_IsSteamOS3
+ T Plat_IsTesla
  T Plat_MSTime
  T Plat_MSTime64
  T Plat_OutputDebugString
@@ -162,6 +163,7 @@
  T SetMiniDumpAppID
  T SetMiniDumpBuildID
  T SetMiniDumpCustomInfo
+ T SetMiniDumpProcessNameOverride
  T SetMiniDumpSteamID
  T SetStackTrackingFilter
  T ShouldUseNewAssertDialog

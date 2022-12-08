@@ -176,6 +176,7 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
+ Plat_IsChromeOS
  Plat_MSTime
  Plat_localtime
  R typeinfo name for std::__1::bad_function_call

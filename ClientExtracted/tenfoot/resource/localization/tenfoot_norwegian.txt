@@ -3069,7 +3069,7 @@
 	"Steam_AppUpdateError_4"		"oppdatering utsatt"
 	"Steam_AppUpdateError_5"		"ingen lisenser"
 	"Steam_AppUpdateError_6"		"ingen internettforbindelse"
-	"Steam_AppUpdateError_7"		"tilkobling tidsavbrudd"
+	"Steam_AppUpdateError_7"		"tilkoblingen fikk tidsavbrudd"
 	"Steam_AppUpdateError_8"		"innhold fortsatt kryptert"
 	"Steam_AppUpdateError_9"		"mangler programkonfigurasjon"
 	"Steam_AppUpdateError_10"		"lesefeil på disken"

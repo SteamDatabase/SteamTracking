@@ -95,7 +95,7 @@
 "ServerBrowser_RefreshAll"			"Act. completă"
 "ServerBrowser_RefreshQuick"			"Act. rapidă"
 "ServerBrowser_StopRefreshingList"		"Oprește act."
-"ServerBrowser_AddServer"			"Adaugă server"
+"ServerBrowser_AddServer"			"Adaugă un server"
 "ServerBrowser_AddCurrentServer"			"Adaugă serverul curent"
 "ServerBrowser_PasswordColumn_Tooltip"		"Ai nevoie de parolă pentru a accesa serverul"
 "ServerBrowser_BotColumn_Tooltip"		"Pe acest server sunt prezenți jucători controlați de AI"

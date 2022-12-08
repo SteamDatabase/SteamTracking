@@ -4676,7 +4676,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "SteamUI_StreamLaunch_RemoteStart"				"%game% се подготвя за излъчване…"
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Упълномощаване на устройство"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Въведете кода за упълномощаване, така че да позволите на %devicename% свързване и пускане на игри."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Въведете кода за упълномощаване, за да позволите на %devicename% да се свърже и пуска игри."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Не сега"
 "SteamUI_UpdateControllerFirmware_Continue"	"Следваща"

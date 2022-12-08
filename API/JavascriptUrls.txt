@@ -2514,7 +2514,6 @@ steam://openurl/${href}
 steam://openurl/${url}
 steam://openurl/${}
 steam://openurl_external/
-steam://openurl_external/${strManualURL}
 steam://openurl_external/${}
 steam://openurl_external/https://store.steampowered.com/checkout/externallinkex/?transid=${transID}
 steam://remoteplay/connect

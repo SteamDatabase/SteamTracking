@@ -4666,7 +4666,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "SteamUI_StreamLaunch_RemoteStart"				"正在准备流式传输 %game%…"
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"授权设备"
-"SteamUI_RemoteDeviceAuthorization_Text"		"请输入 %devicename% 上显示的授权代码以允许其连接并游玩游戏"
+"SteamUI_RemoteDeviceAuthorization_Text"		"请输入 %devicename% 上显示的授权代码以允许其连接并运行游戏"
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"以后再说"
 "SteamUI_UpdateControllerFirmware_Continue"	"下一步"

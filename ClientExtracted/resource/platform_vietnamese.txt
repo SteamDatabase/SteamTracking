@@ -21,6 +21,7 @@
 "app_task_servers"	"Máy chủ"
 "app_task_news"		"Tin tức"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"Thoát Big Picture"
 "app_task_friend_status" "Trạng thái Steam"
 "app_task_exit_steam"	"Thoát Steam"
 "app_task_screenshots"	"Ảnh chụp màn hình"

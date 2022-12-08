@@ -72,6 +72,7 @@ message CPlayer_GetOwnedGames_Response {
 		optional bool has_workshop = 14;
 		optional bool has_market = 15;
 		optional bool has_dlc = 16;
+		optional bool has_leaderboards = 17;
 	}
 
 	optional uint32 game_count = 1;
@@ -286,6 +287,34 @@ message CPlayer_GetEmoticonList_Response {
 	repeated .CPlayer_GetEmoticonList_Response.Emoticon emoticons = 1;
 }
 
+message CPlayer_GetTopAchievementsForGames_Request {
+	optional uint64 steamid = 1;
+	optional string language = 2;
+	optional uint32 max_achievements = 3 [(description) = "The max achievements to load. Max 8"];
+	repeated uint32 appids = 4;
+}
+
+message CPlayer_GetTopAchievementsForGames_Response {
+	message Achievement {
+		optional uint32 statid = 1;
+		optional uint32 bit = 2;
+		optional string name = 3;
+		optional string desc = 4;
+		optional string icon = 5;
+		optional string icon_gray = 6;
+		optional bool hidden = 7;
+		optional string player_percent_unlocked = 8 [(description) = "Formatted to one decimal place, min value is 0.1, max value 100"];
+	}
+
+	message Game {
+		optional uint32 appid = 1;
+		optional uint32 total_achievements = 2;
+		repeated .CPlayer_GetTopAchievementsForGames_Response.Achievement achievements = 3;
+	}
+
+	repeated .CPlayer_GetTopAchievementsForGames_Response.Game games = 1;
+}
+
 message CPlayer_GetAchievementsProgress_Request {
 	optional uint64 steamid = 1;
 	optional string language = 2;
@@ -303,6 +332,25 @@ message CPlayer_GetAchievementsProgress_Response {
 	}
 
 	repeated .CPlayer_GetAchievementsProgress_Response.AchievementProgress achievement_progress = 1;
+}
+
+message CPlayer_GetGameAchievements_Request {
+	optional uint32 appid = 1;
+	optional string language = 2 [(description) = "Lowercase, language shortnames"];
+}
+
+message CPlayer_GetGameAchievements_Response {
+	message Achievement {
+		optional string internal_name = 1 [(description) = "Will come uppercase, internal facing name set by the partner; needed to associate with user unlock"];
+		optional string localized_name = 2;
+		optional string localized_desc = 3;
+		optional string icon = 4;
+		optional string icon_gray = 5;
+		optional bool hidden = 6;
+		optional string player_percent_unlocked = 7 [(description) = "Formatted to one decimal place, min value is 0.1, max value 100"];
+	}
+
+	repeated .CPlayer_GetGameAchievements_Response.Achievement achievements = 1;
 }
 
 message CPlayer_GetFavoriteBadge_Request {
@@ -776,8 +824,16 @@ service Player {
 		option (method_description) = "Gets a list of the emoticons a user has with metadata";
 	}
 
+	rpc GetTopAchievementsForGames (.CPlayer_GetTopAchievementsForGames_Request) returns (.CPlayer_GetTopAchievementsForGames_Response) {
+		option (method_description) = "Gets the best achievements the user has gotten for the specified list of apps.";
+	}
+
 	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response) {
 		option (method_description) = "Gets the achievement completion stats for the specified list of apps.";
+	}
+
+	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response) {
+		option (method_description) = "Get a games available achievements for display purposes.";
 	}
 
 	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response) {

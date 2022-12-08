@@ -997,8 +997,9 @@ message CMsgSetProtocolBlockList {
 	optional string list = 2;
 }
 
-message CMsgSetForceDeviceScaleFactor {
-	optional double scale_factor = 1;
+message CMsgSetForceDeviceScaleFactors {
+	optional double dpi_scale = 1;
+	optional double browser_scale = 2;
 }
 
 message CMsgSetUIMode {

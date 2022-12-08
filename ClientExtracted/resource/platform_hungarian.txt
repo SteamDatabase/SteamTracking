@@ -21,6 +21,7 @@
 "app_task_servers"	"Szerverek"
 "app_task_news"		"Hírek"
 "app_task_bigpicture"	"Nagy Kép"
+"app_task_exit_bigpicture"	"Kilépés a Nagy Képből"
 "app_task_friend_status" "Steam állapot"
 "app_task_exit_steam"	"Kilépés a Steamből"
 "app_task_screenshots"	"Képernyőmentések"

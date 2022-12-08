@@ -63444,6 +63444,8 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ BIsChinaLauncher: () =>
             /* binding */ BIsChinaLauncher,
+          /* harmony export */ BIsControllerConfigGameID: () =>
+            /* binding */ BIsControllerConfigGameID,
           /* harmony export */ BIsEFriendRelationshipBlocked: () =>
             /* binding */ BIsEFriendRelationshipBlocked,
           /* harmony export */ BIsEFriendRelationshipFriend: () =>
@@ -63535,6 +63537,8 @@ object-assign
             /* binding */ MapKoreanaToKorean,
           /* harmony export */ PchLanguageToELanguage: () =>
             /* binding */ PchLanguageToELanguage,
+          /* harmony export */ PchNameFromELauncherType: () =>
+            /* binding */ PchNameFromELauncherType,
           /* harmony export */ k_GIDNil: () => /* binding */ k_GIDNil,
           /* harmony export */ k_RTime32Infinite: () =>
             /* binding */ k_RTime32Infinite,
@@ -64758,6 +64762,14 @@ object-assign
         const k_nGameIDControllerConfigs_Desktop = 413080;
         const k_nGameIDControllerConfigs_BigPicture = 413090;
         const k_nGameIDControllerConfigs_GuideChord = 443510;
+        function BIsControllerConfigGameID(appid) {
+          return (
+            appid == k_nGameIDControllerConfigs_Desktop ||
+            appid == k_nGameIDControllerConfigs_BigPicture ||
+            appid == k_nGameIDControllerConfigs_GuideChord ||
+            appid == k_nGameIDSteamWebHelper
+          );
+        }
         const k_GIDNil = "18446744073709551615";
         const k_RTime32Nil = 0;
         const k_RTime32Infinite = 0x7fffffff; //01-18-2038
@@ -65364,9 +65376,36 @@ object-assign
             "k_ELauncherTypeSteamChina";
           ELauncherType[(ELauncherType["k_ELauncherTypeSingleApp"] = 8)] =
             "k_ELauncherTypeSingleApp";
-          ELauncherType[(ELauncherType["k_ELauncherTypeMax"] = 9)] =
+          ELauncherType[(ELauncherType["k_ELauncherTypeGameServer"] = 9)] =
+            "k_ELauncherTypeGameServer";
+          ELauncherType[(ELauncherType["k_ELauncherTypeMax"] = 10)] =
             "k_ELauncherTypeMax";
         })(ELauncherType || (ELauncherType = {}));
+        function PchNameFromELauncherType(launcherType) {
+          switch (launcherType) {
+            case ELauncherType.k_ELauncherTypeDefault:
+            default:
+              return "default";
+            case ELauncherType.k_ELauncherTypePerfectWorld:
+              return "pw_dota2";
+            case ELauncherType.k_ELauncherTypeNexon:
+              return "nexon_dota2";
+            case ELauncherType.k_ELauncherTypeCmdLine:
+              return "steamcmd";
+            case ELauncherType.k_ELauncherTypeCSGO:
+              return "pw_csgo";
+            case ELauncherType.k_ELauncherTypeClientUI:
+              return "clientui";
+            case ELauncherType.k_ELauncherTypeHeadless:
+              return "steamhdl";
+            case ELauncherType.k_ELauncherTypeSteamChina:
+              return "steamchina";
+            case ELauncherType.k_ELauncherTypeSingleApp:
+              return "singleapp";
+            case ELauncherType.k_ELauncherTypeGameServer:
+              return "gameserver";
+          }
+        }
         //
         // Returns whether the specified launchr type is a "china launcher" for the purposes of
         // features like anti addiction. This includes steam china, the steam china government review
@@ -65463,7 +65502,8 @@ object-assign
             "k_EUIMode_MobileChat";
           EUIMode[(EUIMode["k_EUIMode_EmbeddedClient"] = 6)] =
             "k_EUIMode_EmbeddedClient";
-          EUIMode[(EUIMode["k_EUIMode_MAX"] = 7)] = "k_EUIMode_MAX";
+          EUIMode[(EUIMode["k_EUIMode_DesktopUI"] = 7)] = "k_EUIMode_DesktopUI";
+          EUIMode[(EUIMode["k_EUIMode_MAX"] = 8)] = "k_EUIMode_MAX";
         })(EUIMode || (EUIMode = {}));
         //-----------------------------------------------------------------------------
         // EStoreCategory
@@ -66730,6 +66770,8 @@ object-assign
           ESteamUIWindowType[(ESteamUIWindowType["VR"] = 4)] = "VR";
           ESteamUIWindowType[(ESteamUIWindowType["SteamLibrary"] = 5)] =
             "SteamLibrary";
+          ESteamUIWindowType[(ESteamUIWindowType["MainDesktopUI"] = 6)] =
+            "MainDesktopUI";
         })(ESteamUIWindowType || (ESteamUIWindowType = {}));
         class SteamUIBrowserWindow_t {}
 
@@ -67680,6 +67722,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsChinaLauncher,
           /* harmony export */ BIsChinaRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.BIsChinaRealm,
+          /* harmony export */ BIsControllerConfigGameID: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsControllerConfigGameID,
           /* harmony export */ BIsEFriendRelationshipBlocked: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsEFriendRelationshipBlocked,
           /* harmony export */ BIsEFriendRelationshipFriend: () =>
@@ -67884,6 +67928,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EShutdownStep,
           /* harmony export */ ESocialDropTypes: () =>
             /* reexport safe */ _communitytypes__WEBPACK_IMPORTED_MODULE_8__.ESocialDropTypes,
+          /* harmony export */ ESteamDeviceFormFactor: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.ESteamDeviceFormFactor,
           /* harmony export */ ESteamRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.ESteamRealm,
           /* harmony export */ ESteamUIWindowType: () =>
@@ -67976,6 +68022,8 @@ object-assign
             /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.OverlayBrowserInfo,
           /* harmony export */ PchLanguageToELanguage: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.PchLanguageToELanguage,
+          /* harmony export */ PchNameFromELauncherType: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.PchNameFromELauncherType,
           /* harmony export */ PushToTalkInfo: () =>
             /* reexport safe */ _chattypes__WEBPACK_IMPORTED_MODULE_6__.PushToTalkInfo,
           /* harmony export */ RemoteClientInputSettings: () =>
@@ -68565,6 +68613,8 @@ object-assign
             /* binding */ ELibraryDisplaySize,
           /* harmony export */ EPerfDisplayCorner: () =>
             /* binding */ EPerfDisplayCorner,
+          /* harmony export */ ESteamDeviceFormFactor: () =>
+            /* binding */ ESteamDeviceFormFactor,
           /* harmony export */ FamilySettings: () =>
             /* binding */ FamilySettings,
           /* harmony export */ FamilySharingUser: () =>
@@ -68657,6 +68707,18 @@ object-assign
           }
         }
         class FamilySettings {}
+        var ESteamDeviceFormFactor;
+        (function (ESteamDeviceFormFactor) {
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Unknown"] = 0)] =
+            "Unknown";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Phone"] = 1)] =
+            "Phone";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Tablet"] = 2)] =
+            "Tablet";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Computer"] = 3)] =
+            "Computer";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["TV"] = 4)] = "TV";
+        })(ESteamDeviceFormFactor || (ESteamDeviceFormFactor = {}));
         class RemotePlaySettings {}
         class FriendsSettings {}
         function DefaultFriendsSettings() {
@@ -68881,6 +68943,9 @@ object-assign
           ] = "k_ErrorCondition_AccountDisabled";
           ErrorCondition[(ErrorCondition["k_ErrorCondition_Offline"] = 5)] =
             "k_ErrorCondition_Offline";
+          ErrorCondition[
+            (ErrorCondition["k_ErrorCondition_UnhandledMailTo"] = 6)
+          ] = "k_ErrorCondition_UnhandledMailTo";
         })(ErrorCondition || (ErrorCondition = {}));
 
         /***/
@@ -69728,6 +69793,8 @@ object-assign
             /* binding */ BIsVRBrowserInfo,
           /* harmony export */ BrowserContext: () =>
             /* binding */ BrowserContext,
+          /* harmony export */ BrowserContextRoot: () =>
+            /* binding */ BrowserContextRoot,
           /* harmony export */ CPopup: () => /* binding */ CPopup,
           /* harmony export */ CSavedDimensionsPopup: () =>
             /* binding */ CSavedDimensionsPopup,
@@ -69819,6 +69886,18 @@ object-assign
         );
         const useBrowserContext = () =>
           react__WEBPACK_IMPORTED_MODULE_1__.useContext(BrowserContext);
+        function BrowserContextRoot(props) {
+          const { ownerWindow, children } = props;
+          const value = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(
+            () => ({ ownerWindow }),
+            [ownerWindow]
+          );
+          return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
+            BrowserContext.Provider,
+            { value },
+            children
+          );
+        }
         function BIsVRBrowserInfo(context) {
           return (
             context.m_eBrowserType ==
@@ -70396,6 +70475,8 @@ object-assign
                   "screenavailheight=" + rgParams.availscreenheight
                 );
               }
+            } else if (rgParams.browserType) {
+              rgQueryParams.push("browserType=" + rgParams.browserType);
             }
             if (rgParams.strVROverlayKey) {
               rgQueryParams.push("vrOverlayKey=" + rgParams.strVROverlayKey);
@@ -70408,6 +70489,21 @@ object-assign
             if (rgParams.window_opener_id) {
               rgQueryParams.push("openerid=" + rgParams.window_opener_id);
             }
+            if (rgParams.strUserAgent) {
+              rgQueryParams.push(
+                "useragent=" +
+                  rgParams.strUserAgent +
+                  "/" +
+                  (0,
+                  shared_clienttypes__WEBPACK_IMPORTED_MODULE_5__.PchNameFromELauncherType)(
+                    shared_webui_config__WEBPACK_IMPORTED_MODULE_7__.Config
+                      .LAUNCHER_TYPE
+                  )
+              );
+            }
+            if (rgParams.hwndParent) {
+              rgQueryParams.push("hwndParent=" + rgParams.hwndParent);
+            }
             if (rgQueryParams) {
               strPopupURL += "?" + rgQueryParams.join("&");
             }
@@ -70415,8 +70511,8 @@ object-assign
             let popup = windowOwner.open(strPopupURL, strName, strParams);
             // popup blockers can cause this to fail.
             if (!popup) {
-              console.log(
-                "Failed to create popup.. browser popup blocker enabled?"
+              console.error(
+                `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`
               );
               return {};
             }
@@ -85315,6 +85411,8 @@ object-assign
           /* harmony export */ LocalizationManager: () =>
             /* binding */ LocalizationManager,
           /* harmony export */ Localize: () => /* binding */ Localize,
+          /* harmony export */ LocalizeCalendarMonth: () =>
+            /* reexport safe */ _localization_datetime__WEBPACK_IMPORTED_MODULE_8__.LocalizeCalendarMonth,
           /* harmony export */ LocalizeCalendarTime: () =>
             /* reexport safe */ _localization_datetime__WEBPACK_IMPORTED_MODULE_8__.LocalizeCalendarTime,
           /* harmony export */ LocalizeCalendarTimeLessGranular: () =>
@@ -88197,6 +88295,7 @@ function TestLocalizeCalendarTime()
             /* binding */ useConfigContext,
           /* harmony export */ useInGamepadUI: () =>
             /* binding */ useInGamepadUI,
+          /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
           /* harmony export */
         });
         /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
@@ -88228,16 +88327,21 @@ function TestLocalizeCalendarTime()
           );
         /**
          * Helper function to determine whether we are in the gamepadui context
-         * @note Tom Bui: eventually remove Config.IN_GAMEPADUI check?  still need it around for how we wrap friendsui in GamepadUI...
          * @returns boolean
          */
         function useInGamepadUI() {
           const configContext = useConfigContext();
-          return (
-            (configContext === null || configContext === void 0
-              ? void 0
-              : configContext.IN_GAMEPADUI) || Config.IN_GAMEPADUI
-          );
+          return configContext === null || configContext === void 0
+            ? void 0
+            : configContext.IN_GAMEPADUI;
+        }
+        /**
+         * Helper function to determine whether we are running on Deck
+         * @returns boolean
+         */
+        function useOnDeck() {
+          const configContext = useConfigContext();
+          return Config.ON_DECK;
         }
         /**
          * Global configuration constants.
@@ -88263,6 +88367,7 @@ function TestLocalizeCalendarTime()
           /** usually same as community_base_url, but will be steam-chat.com in client or steam.tv in broadcast mode */
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
           LOGIN_BASE_URL: "",
           SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
@@ -88290,6 +88395,8 @@ function TestLocalizeCalendarTime()
           EREALM: 0,
           /** technically Linux underneath, so needs its own flag to distinguish */
           IN_CHROMEOS: false,
+          /** technically Linux underneath, so needs its own flag to distinguish */
+          TESLA: false,
           // client-only parameters:
           LOCAL_HOSTNAME: "",
           // web-only parameters:
@@ -88317,11 +88424,16 @@ function TestLocalizeCalendarTime()
           IN_GAMEPADUI: false,
           /** Whether we're using a shared js context or not.  Always true for gamepadui. */
           IN_STEAMUI_SHARED_CONTEXT: false,
+          /** Whether there is only one shared js context.  To be removed once we ship -steamuisharedjscontext. */
+          ONE_STEAMUI_SHARED_CONTEXT: false,
           /** Whether the main GamepadUI window should be windowed or fullscreen */
           GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
+          /** Whether we are running on the Steam Deck device (in gamepadui mode or not).  Can be emulated with -steamdeck. */
           ON_DECK: false,
+          /** Whether Gamescope is running (with gamepadui) or not */
+          IN_GAMESCOPE: false,
           IN_LOGIN: false,
           IN_LOGIN_REFRESH: false,
         };
@@ -88587,6 +88699,10 @@ function TestLocalizeCalendarTime()
           ) {
             return Config.INTERNAL_STATS_BASE_URL;
           } else if (
+            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
+          ) {
+            return Config.STORE_CHECKOUT_BASE_URL;
+          } else if (
             BBaseURLMatches(currentURL, "https://steamloopback.host")
           ) {
             return "https://steamloopback.host";
@@ -88595,7 +88711,10 @@ function TestLocalizeCalendarTime()
         }
         function GET_BASE_WEB_PROPERTY() {
           const currentURL = window.location.href;
-          if (BBaseURLMatches(currentURL, Config.STORE_BASE_URL)) {
+          if (
+            BBaseURLMatches(currentURL, Config.STORE_BASE_URL) ||
+            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
+          ) {
             return "store";
           } else if (BBaseURLMatches(currentURL, Config.COMMUNITY_BASE_URL)) {
             return "community";
@@ -89931,4 +90050,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=4f9a12beb573608bde22
+//# sourceMappingURL=friends.js.map?contenthash=114d8f99e65df0b796db

@@ -1270,7 +1270,7 @@
 	"Store_Category_Achievements"	"Постижения"
 	"Store_Category_Cloud"			"Steam облак"
 	"Store_Category_Singleplayer"	"Самостоятелна игра"
-	"Store_Category_Multiplayer"	"Мрежова игра"
+	"Store_Category_Multiplayer"	"Мрежови"
 	"Store_Category_Coop"			"Кооперативна игра"
 	"Store_Category_Leaderboards"	"Класации"
 
@@ -2770,7 +2770,7 @@
 	"Library_GamesICanPlay" "Годни за пускане"
 	"Library_VRFilter" "Поддържа виртуална реалност"
 	"Library_ReadyToPlay" "Готово за пускане"
-	"Library_LocalMultiplayer" "Локална мрежова игра"
+	"Library_LocalMultiplayer" "Локални мрежови"
 	"Library_RemotePlayOptimized" "Оптимизирано за Steam Remote Play"
 	"Library_SteamPlay1" "Steam Play (сертифицирано)"
 	"Library_SteamPlay2" "Steam Play (отпуснато)"

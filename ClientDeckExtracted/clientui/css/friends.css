@@ -732,10 +732,6 @@ button.DialogButton::-moz-focus-inner {
   border: 2px solid #23262e;
 }
 
-.DeckVerifiedModalDialogClient .DialogContent {
-  max-height: 70vh;
-}
-
 .DeckVerifiedModalDialog .DialogContent {
   max-height: 85vh;
 }
@@ -2657,4 +2653,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=659f963795f5b2683ca6*/
+/*# sourceMappingURL=friends.css.map?contenthash=94bbdd41ab9402088740*/

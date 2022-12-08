@@ -206,6 +206,23 @@ enum EScalingFilter {
 	k_EScalingFilter_NIS = 5;
 }
 
+enum ESplitScalingFilter {
+	k_ESplitScalingFilter_Invalid = 0;
+	k_ESplitScalingFilter_Linear = 1;
+	k_ESplitScalingFilter_Nearest = 2;
+	k_ESplitScalingFilter_FSR = 3;
+	k_ESplitScalingFilter_NIS = 4;
+}
+
+enum ESplitScalingScaler {
+	k_ESplitScalingScaler_Invalid = 0;
+	k_ESplitScalingScaler_Auto = 1;
+	k_ESplitScalingScaler_Integer = 2;
+	k_ESplitScalingScaler_Fit = 3;
+	k_ESplitScalingScaler_Fill = 4;
+	k_ESplitScalingScaler_Stretch = 5;
+}
+
 enum ECPUGovernor {
 	k_ECPUGovernor_Invalid = 0;
 	k_ECPUGovernor_Perf = 1;

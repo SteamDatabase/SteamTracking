@@ -2927,8 +2927,8 @@ Steam，請在其圖示上按右鍵。"
 "Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"請盡速連絡 Steam 客服"
 
-"Steam_LoggedInElsewhere_Title"		"Steam - 已在他處登入"
-"Steam_LoggedInElsewhere_Info"		"已在其他電腦上登入此 Steam 帳戶。"
+"Steam_LoggedInElsewhere_Title"		"Steam - 已在其它地方登入"
+"Steam_LoggedInElsewhere_Info"		"已在另一台電腦上登入此 Steam 帳戶。"
 "Steam_LoggedInElsewhere_Reconect"  "重新連線到 Steam"
 
 

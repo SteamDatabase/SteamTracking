@@ -1,10 +1,11 @@
 __TEXT
-@*
-@*
+*
+*
 __text
 __TEXT
-p
-p
+@
+6d"
+@
 __stubs
 __TEXT
 __stub_helper
@@ -18,21 +19,22 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
+pp
 __DATA
-@*
-@*
+*
+*
 __nl_symbol_ptr
 __DATA
-@*
-@*
+*
+*
 __got
 __DATA
+*
+*
 __la_symbol_ptr
 __DATA
 __mod_init_func
 __DATA
-`I*
-`I*
 __const
 __DATA
 __objc_imageinfo__DATA
@@ -54,19 +56,15 @@ __bss
 __DATA
 __common
 __DATA
+@61
 H
 __LINKEDIT
-@2
--
+2
 
 8
 @loader_path/steamservice.dylib
 "
--
-8%-
-p(-
-`B-
-pz-
+h:-
 P
 
 *
@@ -93,31 +91,36 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-hu-
-0,
+`5-
+,
 0
 0
 '
 Hi
 H=
+"
+"
+-&
+&
 Hc
 Hc
 Hc
+[!
+W!
 0
 0
 AT=
 AT5
 AT5
 AT=
-L!
+J!
 ?
 D
 @
 @
 "
 !
-6(
-"%
+9%
 @
 Hc
 Hc
@@ -150,12 +153,14 @@ IcE
 @
 @
 ]
-o
-*
-$
-Z$
+z$
+k$
+]$
+9$
 V
-+$
+=
+#
+&
 =
 10CIPCServer
 10IIPCServer
@@ -1266,7 +1271,6 @@ r
 N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
-10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 14CUtlLinkedListI10CCoroutineiE
 17CDebugStatsSystem
 17IDebugStatsSystem
@@ -1305,6 +1309,7 @@ Y@
 16CCumulativeTimerIdLy1EE
 NSt3__117bad_function_callE
 10CUtlString
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 14CHTTPClientMgr
 10CUtlVectorIP11CHTTPClient10CUtlMemoryIS1_EE
 N10OSXHelpers13CCompatThreadE
@@ -6337,7 +6342,6 @@ RSAPublicKey
 RSA_PSS_PARAMS
 RSA_OAEP_PARAMS
 d
-e
 q
 dmp1
 dmq1
@@ -8163,6 +8167,7 @@ LINUX
 LINUX32
 LINUX64
 LINUXARM64
+CHROMEOS
 ANDROID
 ANDROID32
 ANDROID64
@@ -8286,14 +8291,15 @@ Someone called ClearWritingMinidump without holding the minidump lock.
 Assert( %s ):%s:%d
 MacOS
 Frameworks
+crashhandler004
 crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
 %u
 1.0
-Dec  1 2022
-14:34:49
+Dec  7 2022
+19:50:06
 Jan
 Feb
 Mar
@@ -8311,6 +8317,7 @@ Dec
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+-chromeos
 /dev/urandom
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
@@ -8579,6 +8586,7 @@ user-agent
 Transfer-Encoding
 Range
 Set-Cookie
+e
 m_vecpHTTPClients
 m_strProxyOverride
 private
@@ -8689,18 +8697,14 @@ double
 ":
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
-@metricsEnabledCatalogs
-Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
-@metricsEnabledOperations
-CInfluxClient::SendCurrentBatchAsync
-Comma separated list of metrics operations - enable list
 @metricsDisabledOperations
-Comma separated list of metrics operations - disable list
-@influxBlacklistedTags
-steamid
-Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
+Comma separated list of metrics operations that are disabled.  This setting has highest priority
+@metricsEnabledOperations
+Comma separated list of metrics operations.  Overrides disabled catalogs
+@metricsDisabledCatalogs
+Comma separated list of metrics catalogs to disable.  This is the last check.
 @metricsLegacyJobMetrics
-CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
+UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
 @bMsgErrorDump
 @nCallerDeadlineHopLatencyMS
@@ -8872,30 +8876,35 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-0,
+,
 0
 0
 '
 Hi
 H=
+"
+"
+-&
+&
 Hc
 Hc
 Hc
+[!
+W!
 0
 0
 AT=
 AT5
 AT5
 AT=
-L!
+J!
 ?
 D
 @
 @
 "
 !
-6(
-"%
+9%
 @
 Hc
 Hc
@@ -8928,27 +8937,32 @@ IcE
 @
 @
 ]
-o
-*
-$
-Z$
+z$
+k$
+]$
+9$
 V
-+$
 =
 #
-#
+&
 =
-#
-#
-]%
+`"
+%
 D"
-%
-%
+"
+"
+"
+"
+"
+"
+!
+$
+@
+1!
 !
 @
-@
-@
 &
+#
 @
 M9e
 @
@@ -8981,7 +8995,6 @@ j
 0
 0
 =
-
 =
 @
 =
@@ -9286,6 +9299,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+!
 H=
 Ic]
 j
@@ -9335,7 +9349,6 @@ rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 j
 j
-|
 $
 $
 
@@ -9354,11 +9367,8 @@ H=
 =
 @
 =*.*
-w
-r
 @
 @
-0
 @
 @
 @
@@ -9378,8 +9388,7 @@ r
 0
 0
 0
-
-
+h
 0
 H=
 0
@@ -9391,8 +9400,9 @@ H=
 0
 Hi
 E
-
 0
+0
+
 
 Hc
 Hc
@@ -9411,5 +9421,4 @@ Ic
 @
 @
 0
-
 Hi

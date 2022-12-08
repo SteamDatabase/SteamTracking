@@ -180,6 +180,8 @@ message CMsgStorageDevicesData {
 	repeated .CMsgStorageDevicesData.Drive drives = 1;
 	repeated .CMsgStorageDevicesData.BlockDevice block_devices = 2;
 	optional bool is_unmount_supported = 3;
+	optional bool is_trim_supported = 4;
+	optional bool is_trim_running = 5;
 }
 
 message CCloud_PendingRemoteOperation {
@@ -267,6 +269,9 @@ message CMsgSystemPerfLimits {
 	optional bool is_tearing_supported = 22;
 	optional bool is_vrr_supported = 23;
 	optional bool is_dynamic_refresh_rate_in_steam_supported = 24;
+	optional bool is_split_scaling_and_filtering_supported = 25;
+	repeated .ESplitScalingFilter split_scaling_filters_available = 26;
+	repeated .ESplitScalingScaler split_scaling_scalers_available = 27;
 }
 
 message CMsgSystemPerfSettingsGlobal {
@@ -304,6 +309,8 @@ message CMsgSystemPerfSettingsPerApp {
 	optional bool is_composite_debug_enabled = 21;
 	optional bool force_composite = 22;
 	optional bool use_dynamic_refresh_rate_in_steam = 23;
+	optional .ESplitScalingFilter split_scaling_filter = 24 [default = k_ESplitScalingFilter_Invalid];
+	optional .ESplitScalingScaler split_scaling_scaler = 25 [default = k_ESplitScalingScaler_Invalid];
 }
 
 message CMsgSystemPerfSettings {

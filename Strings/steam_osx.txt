@@ -6,8 +6,8 @@ __TEXT
 
 __text
 __TEXT
-@
-@
+0
+0
 __stubs
 __TEXT
 __stub_helper
@@ -15,22 +15,18 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-]3
-]3
 __objc_methname
 __TEXT
-057
-057
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 0
 __cstring
 __TEXT
-P>7
-P>7
 __unwind_info
 __TEXT
+\T;
+\T;
 __DATA
 <
 <
@@ -50,8 +46,8 @@ __const
 __DATA
 __cfstring
 __DATA
-@<?
-@<?
+`<?
+`<?
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -60,18 +56,14 @@ __objc_selrefs
 __DATA
 __objc_classrefs__DATA
 __objc_superrefs__DATA
-`E?
-`E?
 __objc_ivar
 __DATA
-hE?
-hE?
 __objc_data
 __DATA
-pE?
-pE?
 __data
 __DATA
+0F?
+0F?
 __thread_vars
 __DATA
 0
@@ -84,7 +76,6 @@ __bss
 __DATA
 __common
 __DATA
-@}D
 H
 __LINKEDIT
 @E
@@ -133,58 +124,54 @@ h
 /usr/lib/libobjc.A.dylib
 &
 He@
-(:
+8:
 )
 ?
-?
-?
-?
-?
 0
-C(
-(
-(
 (
 9
+w1
 0
+m1
 @
 @
-}6
 @
 @
 @
 @
 $
+?
+?
 Hi
 Hi
 Hi
+*
+*
+*
 1
->
 &
-6
 &
-}'
+=.
 n&
+Y'
 6
-'
-'
+x0
 
 %
 '
 '
 '
-'
 &
-&
-55
-
-,&
-0
-5
-5
+D0
 &
 
 0
+5
+5
+
+$
+0
+%
 Ic
 0
 0
@@ -196,9 +183,13 @@ AT=
 D
 @
 @
-S4
-/4
-4
+/
+/
+/
+/
+/
+=4
+0
 4
 4
 @
@@ -232,9 +223,7 @@ IcE
 IcE
 @
 @
-8
 .
-S3
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -1621,14 +1610,15 @@ FR19CNullMetricsFactoryvE
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_S0_E
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tE10CUtlMemoryISC_EE
 N14CUtlHashMapLRUI10CIPAndPortN11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tE
-14CUtlLinkedListIiiE
 7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE
 10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 N11CHTTPClient18SSLContextLookup_tE
 10CUtlRBTreeIP21CHTTPClientConnectioni8CDefLess25CDefRBTreeBalanceListenerIiES1_E
-7CUtlMapIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIN11CHTTPClient12HostLookup_tENS1_20AddrConnectionInfo_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE
+11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS1_NS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tES4_S5_S1_E
+10CUtlVectorIN11CUtlHashMapIN11CHTTPClient12HostLookup_tEN14CUtlHashMapLRUIS2_NS1_20AddrConnectionInfo_tENS2_2EqENS2_4HashEE15ElementBucket_tES5_S6_S2_E12HashBucket_tE10CUtlMemoryISA_EE
 N11CHTTPClient12HostLookup_tE
+N14CUtlHashMapLRUIN11CHTTPClient12HostLookup_tENS0_20AddrConnectionInfo_tENS1_2EqENS1_4HashEE15ElementBucket_tE
 N11CHTTPClient20AddrConnectionInfo_tE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 7CUtlMapI10CUtlStringji8CDefLessE
@@ -1719,6 +1709,7 @@ EXTRACTOR-dtls_srtp
 14ISSLConnection
 26CWorkItemZeroAndFreeBuffer
 25CWorkItemRunSSLConnection
+14CUtlLinkedListIiiE
 14CUtlHashMapLRUI10CIPAndPort9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_S0_E
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
@@ -2246,12 +2237,14 @@ Documents/Steam%s Content
 -community
 -gamepadui
 -steamdeck
+-steamdeckdisplay
 -chromeos
 -chromeosdiskmanagement
--noreactlogin
 -gamepadnewauth
 -nogamepadnewauth
 -newbigpicture
+-oldbigpicture
+-nosteamuisharedjscontext
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2294,7 +2287,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Dec  1 2022 14:36:43
+Startup - updater built Dec  7 2022 19:51:56
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2581,9 +2574,9 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Dec  1 2022
-14:36:43
-crashhandler003
+Dec  7 2022
+19:51:57
+crashhandler004
 steam
 Steam Executable Crash
 $HOME could not be retrieved
@@ -2679,7 +2672,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:36:42
+19:51:55
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -7582,7 +7575,6 @@ RSAPublicKey
 RSA_PSS_PARAMS
 RSA_OAEP_PARAMS
 d
-e
 q
 dmp1
 dmq1
@@ -10297,6 +10289,7 @@ LINUX
 LINUX32
 LINUX64
 LINUXARM64
+CHROMEOS
 ANDROID
 ANDROID32
 ANDROID64
@@ -10332,7 +10325,6 @@ CMemoryPool
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
 Address too small!
 m_usType == k_EIPTypeV6
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -10439,12 +10431,13 @@ Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
 Assert( %s ):%s:%d
 MacOS
+crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
 %u
 1.0
-14:34:49
+19:50:06
 Jan
 Feb
 Mar
@@ -11200,6 +11193,7 @@ AddClientConnectionBackToPool called, with no current map entry!
 Adding connection back to pool, but not found in in use list or waiting list
 Sending first queued request for %s
 No waiting requests for %s
+m_MapHostsToPersistentConnections[iIndexAddr].m_cHTTPConnectionsEstablishing > 0
 Removing now closed connection (%p) for %s
 info.m_pTreeWaitingConnections->Element(iIndexConnection) == pConnection
 Removing idle connection for %s, %d left open, %d requests waiting, %d requests still in-flight
@@ -11218,6 +11212,7 @@ sending request
 Reusing HTTP connection (%p) for %s
 Queueing request for http%s://%s%s, %d already in queue
 m_MapHostsToPersistentConnections has NULL entry!
+Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support
 Need new HTTP connection (%p) for %s (%s)
 Manually configured HTTP Proxy: %s
 COpenSSLWrapper
@@ -11273,6 +11268,7 @@ m_pObj
 m_hashMap
 m_listLRU
 Key( i )
+e
 m_strPrivKeyPEMFile
 m_strCertPEMFile
 m_strRequestHostName
@@ -11324,6 +11320,7 @@ pRequest->GetReqBodyBytesSent() == pRequest->GetReqBodyBytesTotal()
 pBodyBuffer->TellPut() == (int)pRequest->GetReqBodyBytesTotal()
 bufDataChunk.TellPut() > 0
 !m_bConnectionReleased
+Shouldn't be re-submitting a request we have body data for
 pReq->AccessBodyDataBuffer().TellPut() == 0
 pReqHandle->AccessResponse()->GetBodyBuffer()->TellPut() == 0
 !m_pHTTP2Session
@@ -12131,18 +12128,14 @@ double
 ":
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
-@metricsEnabledCatalogs
-Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
-@metricsEnabledOperations
-CInfluxClient::SendCurrentBatchAsync
-Comma separated list of metrics operations - enable list
 @metricsDisabledOperations
-Comma separated list of metrics operations - disable list
-@influxBlacklistedTags
-steamid
-Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
+Comma separated list of metrics operations that are disabled.  This setting has highest priority
+@metricsEnabledOperations
+Comma separated list of metrics operations.  Overrides disabled catalogs
+@metricsDisabledCatalogs
+Comma separated list of metrics catalogs to disable.  This is the last check.
 @metricsLegacyJobMetrics
-CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
+UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
 FCVAR_NEVER_AS_STRING
 null catalog
@@ -12832,60 +12825,59 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
+#>7
 
-1f7
+de7
+le7
+4_7
 
 0
 ?
-?
-?
-?
-?
 0
-C(
-(
-(
 (
 9
+w1
 0
+m1
 @
 @
-}6
 @
 @
 @
 @
 $
+?
+?
 Hi
 Hi
 Hi
+*
+*
+*
 1
->
 &
-6
 &
-}'
+=.
 n&
+Y'
 6
-'
-'
+x0
 
 %
 '
 '
 '
-'
 &
-&
-55
-
-,&
-0
-5
-5
+D0
 &
 
 0
+5
+5
+
+$
+0
+%
 Ic
 0
 0
@@ -12897,9 +12889,13 @@ AT=
 D
 @
 @
-S4
-/4
-4
+/
+/
+/
+/
+/
+=4
+0
 4
 4
 @
@@ -12933,47 +12929,49 @@ IcE
 IcE
 @
 @
-8
 .
-S3
 V
-0-
+3
 =
-h,
-2
-2
-2
-6
+=
 ,
 ,
-=
-I1
-X+
-&+
+d+
+c+
+D+
+7+
 +
 !
 @
+0
+0
+0
+0
 *
-4
+"
 @
 &
-%)
+/
+/
+/
 )
 )
-=.
+)
+)
+r.
+1*
++*
+`.
+.
+.
 .
 .
 .
 (
-K'
+)
+1
 '
 '
-'
-'
-y,
-m,
-,
-,
 @
 M9e
 @
@@ -12990,10 +12988,12 @@ M9e
 ?
 ?
 :
+z+
 ?
 ?
 ?
 
+'
 '
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -13005,27 +13005,26 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-
-2
-*
-*
-*
+%*
 j
 j
 Pj
 ARj
 j
-e-
+s-
 0
 0
+J'
 IcU
 E;e
 M)u
+#
+#
+#
 =
 =
 @
 =
-A(
 =
 %
 =
@@ -13319,40 +13318,31 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+.
 =
 @
 
 @
 @
 @
+
 0
-*
 H=
 Ic]
 j
 j
 j
 j
-&
-&
-&
-&
-&
-&
-&
-&
 j
 j
 
-Y!
-d$
 t$I;M
 $
 e
 W
 ,7~5d
-#mH,
-#m$,
+#[,
+#>,
 H
 0
 
@@ -13366,7 +13356,8 @@ H
 
 
 Hc
-$
+%
+%
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13381,16 +13372,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
 N
 N
 N
@@ -13611,14 +13592,11 @@ H=
 
 =
 @
-I
 =
 @
-(
 =*.*
 @
 @
-0
 @
 @
 @
@@ -13639,8 +13617,9 @@ I
 0
 0
 0
+
 0
-0
+v
 0
 H=
 0
@@ -13649,7 +13628,8 @@ E
 0
 Hi
 E
-Q
+0
+0
 
 
 
@@ -13659,16 +13639,12 @@ Q
 
 
 0
-0
 @
 @
 @
 @
 0
 0
-
-
-
 
 
 Hc
@@ -13693,15 +13669,11 @@ P
 @
 @
 0
-h
->
 =a
-
 
 0
 Hi
-V
+Z
 $
 $
 $
-

@@ -72,7 +72,7 @@ de l'écran). Pour accéder à Steam, cliquez sur son icône avec le bouton droi
 "Steam_CreditCardType" "Type de carte"
 "Steam_CreditCardNumber" "Numéro de la carte bancaire %cardtype%"
 "Steam_CreditCardExpiration" "Date d'expiration"
-"Steam_SubscribeBillingInfo" "Saisissez votre adresse telle qu'elle apparaît sur les informations de facturation de votre carte bancaire."
+"Steam_SubscribeBillingInfo" "Saisissez votre adresse telle qu'elle apparait sur les informations de facturation de votre carte bancaire."
 "Steam_City" "Ville"
 "Steam_StateOrProvince" "Région"
 "Steam_Country" "Pays"
@@ -1912,7 +1912,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 
 
-"Steam_Game_FreeWeekend"			"Week-end gratuit"
+"Steam_Game_FreeWeekend"			"Weekend gratuit"
 "Steam_Game_Retail"						"Revendeur"
 "Steam_Game_AuthorizeDevice"		"Périphérique autorisé"
 "Steam_Game_Complimentary"		"Gratuit"
@@ -2205,12 +2205,12 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 
 "Steam_PreloadCountdown_UnlockTime"	"%game% sera déverrouillé dans :"
 
-"Steam_DoDFreeWeekend_BeginsIn"	"Le Week-end gratuit Day of Defeat commence dans :"
+"Steam_DoDFreeWeekend_BeginsIn"	"Le Weekend gratuit Day of Defeat commence dans :"
 "Steam_DoDFreeWeekend_Info"		"Lorsque l'horloge atteindra 0, 72 heures de jeu gratuit commenceront."
-"Steam_DoDFreeWeekend_URL"		"Informations supplémentaires sur le Week-end gratuit Day of Defeat"
-"Steam_FreeWeekend_BeginsIn"		"Le Week-end gratuit %game% commence dans :"
+"Steam_DoDFreeWeekend_URL"		"Informations supplémentaires sur le Weekend gratuit Day of Defeat"
+"Steam_FreeWeekend_BeginsIn"		"Le Weekend gratuit %game% commence dans :"
 "Steam_FreeWeekend_Info"			"Lorsque l'horloge atteindra 0, %time% de jeu gratuit commenceront."
-"Steam_FreeWeekend_URL"			"Informations supplémentaires sur le Week-end gratuit %game%"
+"Steam_FreeWeekend_URL"			"Informations supplémentaires sur le Weekend gratuit %game%"
 "Steam_FreeWeekend_48H"			"48 heures"
 "Steam_FreeWeekend_72H"			"72 heures"
 "Steam_FreeWeekend_1W"			"1 semaine"
@@ -3923,7 +3923,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "NoBigPictureVista_Explanation"	"Le mode Big Picture de Steam nécessite DirectWrite. Il semblerait que vous êtes sous Windows Vista qui prend en charge DirectWrite, mais vous devez installer le SP2 et la mise à jour de la plateforme Windows Vista (disponible via Windows Update)."
 
 "NoBigPictureWin8AMD_Title"		"Mode Big Picture"
-"NoBigPictureWin8AMD_Explanation"	"Désolé, mais il semble que vous utilisez une version de pilote graphique AMD incompatible sous Windows 8. Il existe un problème connu avec cette version qui causera un plantage de Big Picture après 30-60 secondes d'utilisation. Essayez de revenir vers la version 8.97.10 des pilotes Catalyst pour Windows 8 ou mettez à jour la nouvelle version si celle-ci est disponible."
+"NoBigPictureWin8AMD_Explanation"	"Désolé, mais il semble que vous utilisez une version de pilote graphique AMD incompatible sous Windows 8. Il existe un problème connu avec cette version qui causera un plantage de Big Picture après 30-60 secondes d'utilisation. Essayez de revenir vers la version 8.97.10 des pilotes Catalyst pour Windows 8 ou mettez à jour la nouvelle version si celle-ci est disponible."
 
 
 "steam_menu_setcategory"		"Choisir la catégorie"
@@ -4669,8 +4669,8 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_StreamLaunch_ServerProgress"			"Préparation du streaming de %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"Préparation du streaming de %game%..."
 
-"SteamUI_RemoteDeviceAuthorization_Title"		"Autoriser le périphérique"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Veuillez saisir le code d'autorisation qui apparaît sur %devicename% pour l'autoriser à se connecter et jouer."
+"SteamUI_RemoteDeviceAuthorization_Title"		"Autoriser l'appareil"
+"SteamUI_RemoteDeviceAuthorization_Text"		"Veuillez saisir le code d'autorisation qui apparait sur %devicename% pour l'autoriser à se connecter et jouer."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Pas maintenant"
 "SteamUI_UpdateControllerFirmware_Continue"	"Suivant"
@@ -4679,7 +4679,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_UpdateControllerFirmware_Intro"	"Un nouveau microprogramme est disponible pour votre Steam Controller. Nous allons à présent vous guider à travers les étapes de mise à jour."
 "SteamUI_UpdateControllerFirmware_Install"	"Le nouveau microprogramme est en cours d'installation sur le Steam Controller.\nVeuillez ne pas le déconnecter."
 "SteamUI_UpdateControllerFirmware_Finished"	"Le microprogramme de votre Steam Controller a été mis à jour."
-"SteamUI_UpdateControllerFirmware_Fallback"	"Steam doit utiliser le mode de récupération pour installer le microprogramme sur votre Steam Controller :\n\n 1) Débranchez le câble USB connectant le Steam Controller\n 2) Maintenez la GÂCHETTE DROITE et reconnectez le Steam Controller\n 3) Patientez un instant (jusqu'à 30-60 secondes) pour que le système d'exploitation détecte et monte le volume de mise à jour du microprogramme du Steam Controller.\n\nUne fois ces étapes terminées le Steam Controller se reconnectera en mode mise à jour de microprogramme et nous passerons à l'étape suivante."
+"SteamUI_UpdateControllerFirmware_Fallback"	"Steam doit utiliser le mode de récupération pour installer le microprogramme sur votre Steam Controller :\n\n 1) Débranchez le câble USB connectant le Steam Controller\n 2) Maintenez la GÂCHETTE DROITE et reconnectez le Steam Controller\n 3) Patientez un instant (jusqu'à 30-60 secondes) pour que le système d'exploitation détecte et monte le volume de mise à jour du microprogramme du Steam Controller.\n\nUne fois ces étapes terminées le Steam Controller se reconnectera en mode mise à jour de microprogramme et nous passerons à l'étape suivante."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "Le microprogramme a été mis à jour, veuillez effectuer les opérations suivantes :\n\n 1) Débranchez le câble USB connectant le Steam Controller\n 2) Rebranchez le câble USB en appuyant sur aucun bouton\n 3) Choisissez OK ci-dessous pour quitter ce processus"
 "SteamUI_UpdateControllerFirmware_Disconnect"	"Le Steam Controller a été déconnecté pendant la procédure de mise à jour du microprogramme. Vous aurez à nouveau la possibilité de mettre à jour le microprogramme quand celui-ci sera reconnecté."
 "SteamUI_UpdateControllerFirmware_WiredUpdate"	"Une mise à jour du microprogramme est disponible pour votre Steam Controller. Votre controller doit utiliser un câble USB pour effectuer cette mise à jour.\nLorsque vous êtes prêt, connectez-le par USB et le processus de mise à jour se lancera automatiquement."

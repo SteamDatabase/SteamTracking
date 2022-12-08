@@ -198,7 +198,7 @@
 	"MainMenu_Exit"	"ВЫХОД"
 	"MainMenu_Library"	"БИБЛИОТЕКА"
 	"MainMenu_Web"	"БРАУЗЕР"
-	"MainMenu_WebTitle" "Веб-браузер"
+	"MainMenu_WebTitle" "Браузер"
 	"MainMenu_Select"	"ВЫБРАТЬ"
 	"MainMenu_Back"		"НАЗАД"
 	"MainMenu_Friends"	"ДРУЗЬЯ"
@@ -318,7 +318,7 @@
 
 	"MainMenu_Welcome_Sub_Friends_Hint"	"ДРУЗЬЯ"
 	"MainMenu_Welcome_Sub_Overlay_H"	"Доступ ко всему прямо из игры"
-	"MainMenu_Welcome_Sub_Overlay_D"	"В любой момент игры вы можете нажать кнопку Steam, и откроется оверлей, в котором есть список друзей, веб-браузер, популярные руководства, ввод текста и многое другое."
+	"MainMenu_Welcome_Sub_Overlay_D"	"В любой момент игры вы можете нажать кнопку Steam, и откроется оверлей, в котором есть список друзей, браузер, популярные руководства, ввод текста и многое другое."
 	"MainMenu_Welcome_Sub_Overlay_Hint"	"ОВЕРЛЕЙ"
 
 	"MainMenu_Welcome_Home_Button_H"	"Быстрый доступ к главной странице"

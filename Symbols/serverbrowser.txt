@@ -47,6 +47,7 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
+ Plat_IsChromeOS
  Plat_IsInDebugSession
  Plat_MSTime64
  Plat_OutputDebugString

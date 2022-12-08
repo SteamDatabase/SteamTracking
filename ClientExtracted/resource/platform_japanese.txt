@@ -21,6 +21,7 @@
 "app_task_servers"	"サーバー"
 "app_task_news"		"ニュース"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"Big Pictureを終了"
 "app_task_friend_status" "Steamステータス"
 "app_task_exit_steam"	"Steamを終了"
 "app_task_screenshots"	"スクリーンショット"

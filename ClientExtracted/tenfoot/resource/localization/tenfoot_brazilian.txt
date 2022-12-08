@@ -1092,7 +1092,7 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"SettingsController_XboxDriverUninstall_Failure"	"Falha ao remover o driver. Código de erro = {s:error}"
 	"SettingsController_XboxDriverRestart_Now"			"REINICIAR"
 	"SettingsController_XboxDriverRestart_Later"		"DEPOIS"
-	"SettingsController_SwitchSupport"					"Ativar config. do controles do Switch"
+	"SettingsController_SwitchSupport"					"Ativar config. de controles de Switch"
 	"SettingsController_NintendoLayout"					" Usar disposição de botões da Nintendo"
 	"SettingsController_CombinedJoycon"					"  Combinar pares de controles Joy-Con"
 	"SettingsController_GenericGamepadSupport"			"Ativar config. de controles genéricos"

@@ -43,7 +43,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videolib.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp

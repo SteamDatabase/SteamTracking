@@ -1,7 +1,7 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5314112() = 0;
+    virtual unknown_ret Unknown_5324256() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;
@@ -171,10 +171,7 @@ public:
     virtual unknown_ret BAccountExtraSecurity() = 0;
     virtual unknown_ret BAccountShouldShowLockUI() = 0;
     virtual unknown_ret GetCountAuthedComputers() = 0;
-    virtual unknown_ret BSteamGuardNewMachineNotification() = 0;
     virtual unknown_ret GetSteamGuardEnabledTime() = 0;
-    virtual unknown_ret GetSteamGuardHistoryEntry(void*,void*,void*,void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret SetSteamGuardNewMachineDialogResponse(void*,void*) = 0;
     virtual unknown_ret SetPhoneIsVerified(void*) = 0;
     virtual unknown_ret BIsPhoneVerified() = 0;
     virtual unknown_ret SetPhoneIsIdentifying(void*) = 0;
@@ -271,5 +268,5 @@ public:
     virtual unknown_ret Test_SetClientInstallationID(void*,void*) = 0;
     virtual unknown_ret GetAppIDForGameID(void*) = 0;
     virtual unknown_ret BDoNotDisturb() = 0;
-    virtual unknown_ret SetAdditionalClientArgData(void*,void*,void*) = 0;
+    virtual unknown_ret SetAdditionalClientArgData(void*) = 0;
 };

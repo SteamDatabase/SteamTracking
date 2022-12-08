@@ -1092,7 +1092,7 @@
 	"SettingsController_XboxDriverRestart_Now"			"RESTARTOVAT"
 	"SettingsController_XboxDriverRestart_Later"		"POZDĚJI"
 	"SettingsController_SwitchSupport"					"Podpora nastavení ovladače Switch"
-	"SettingsController_NintendoLayout"					"Použít rozvržení tlačítek podle Nintenda"
+	"SettingsController_NintendoLayout"					"  Použít rozložení tlačítek podle Nintenda"
 	"SettingsController_CombinedJoycon"					"  Spojovat páry ovladačů Joy-Con"
 	"SettingsController_GenericGamepadSupport"			"Podpora nastavení obecného gamepadu"
 	"SettingsController_CheckGuideButton"				"Tlačítko Guide přepne na Steam"

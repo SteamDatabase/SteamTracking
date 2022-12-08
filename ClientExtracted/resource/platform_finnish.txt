@@ -21,6 +21,7 @@
 "app_task_servers"	"Palvelimet"
 "app_task_news"		"Uutiset"
 "app_task_bigpicture"	"Televisiotila"
+"app_task_exit_bigpicture"	"Poistu televisiotilasta"
 "app_task_friend_status" "Steam-tila"
 "app_task_exit_steam"	"Sulje Steam"
 "app_task_screenshots"	"Kuvakaappaukset"

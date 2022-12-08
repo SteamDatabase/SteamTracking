@@ -24,7 +24,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h

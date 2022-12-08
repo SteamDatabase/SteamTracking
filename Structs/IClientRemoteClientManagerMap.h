@@ -29,6 +29,7 @@ public:
     virtual unknown_ret GetRemoteClientStreamingEnabledCount() = 0;
     virtual unknown_ret GetRemoteClientName(void*,void*) = 0;
     virtual unknown_ret BRemoteClientStreaming(void*,void*) = 0;
+    virtual unknown_ret GetRemoteClientFormFactor(void*,void*) = 0;
     virtual unknown_ret GetRemoteClientConnectState(void*,void*) = 0;
     virtual unknown_ret BRemoteClientHasStreamingSupported(void*,void*) = 0;
     virtual unknown_ret BRemoteClientHasStreamingEnabled(void*,void*) = 0;
@@ -39,6 +40,7 @@ public:
     virtual unknown_ret GetRemoteDeviceNameByIndex(void*) = 0;
     virtual unknown_ret GetRemoteDeviceName(void*,void*) = 0;
     virtual unknown_ret BRemoteDeviceStreaming(void*,void*) = 0;
+    virtual unknown_ret GetRemoteDeviceFormFactor(void*,void*) = 0;
     virtual unknown_ret UnpairRemoteDevices() = 0;
     virtual unknown_ret BIsStreamingSupported() = 0;
     virtual unknown_ret BIsStreamingEnabled() = 0;

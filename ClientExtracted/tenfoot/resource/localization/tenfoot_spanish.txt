@@ -1307,7 +1307,7 @@ Por favor, inténtalo de nuevo más tarde."
 	"Steam_AddToAccount_Error"			"Lo sentimos, se ha producido un error al añadir el producto a tu cuenta."
 
 	"Steam_Success"					"Completado"
-	"Steam_AddToAccount_Success"				"El paquete ha sido añadido a tu cuenta."
+	"Steam_AddToAccount_Success"				"El paquete se ha añadido a tu cuenta."
 	"Steam_AddToAccount_ViewGame"				"VER EN LA BIBLIOTECA"
 	"Steam_AddToAccount_ViewAllGames"			"VER TODOS LOS JUEGOS"
 
@@ -1780,7 +1780,7 @@ Por favor, inténtalo de nuevo más tarde."
 	"Library_Details_VRIncorrectControllerWarning_Title"		"MANDO INCORRECTO"
 	"Library_Details_VRIncorrectControllerWarning_Desc"			"Esta aplicación de RV requiere controles distintos a los del mando activo en este momento. Se necesita uno de estos:"
 
-	"Library_Details_VRController_Tracked"						"Mandos de movimiento rastreados"
+	"Library_Details_VRController_Tracked"						"Mandos con detección de movimiento"
 	"Library_Details_VRController_Gamepad"						"Mando"
 	"Library_Details_VRController_KBMouse"						"Teclado/ratón"
 

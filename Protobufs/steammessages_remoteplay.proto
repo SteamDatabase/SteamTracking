@@ -106,6 +106,10 @@ enum EStreamControlMessage {
 	k_EStreamControlShowOnScreenKeyboard = 136;
 	k_EStreamControlControllerConfigMsg = 137;
 	k_EStreamControlControllerPersonalizationUpdate = 138;
+	k_EStreamControlEnableNeptuneData = 139;
+	k_EStreamControlDisableNeptuneData = 140;
+	k_EStreamControlStartNeptuneData = 141;
+	k_EStreamControlStopNeptuneData = 142;
 }
 
 enum EStreamVersion {
@@ -170,6 +174,7 @@ enum EStreamingDataType {
 	k_EStreamingAudioData = 0;
 	k_EStreamingVideoData = 1;
 	k_EStreamingMicrophoneData = 2;
+	k_EStreamingNeptuneData = 3;
 }
 
 enum EStreamMouseButton {
@@ -461,6 +466,13 @@ message CStartVideoDataMsg {
 message CStopVideoDataMsg {
 }
 
+message CStartNeptuneDataMsg {
+	required uint32 channel = 1;
+}
+
+message CStopNeptuneDataMsg {
+}
+
 message CRecordedInput {
 	optional .EStreamControlMessage type = 1 [default = k_EStreamControlAuthenticationRequest];
 	optional uint32 timestamp = 2;
@@ -613,6 +625,12 @@ message CEnableHighResCaptureMsg {
 }
 
 message CDisableHighResCaptureMsg {
+}
+
+message CEnableNeptuneDataMsg {
+}
+
+message CDisableNeptuneDataMsg {
 }
 
 message CToggleMagnificationMsg {

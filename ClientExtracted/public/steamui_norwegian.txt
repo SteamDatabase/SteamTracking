@@ -4128,7 +4128,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "Steam_AppUpdateError_4"		"oppdatering utsatt"
 "Steam_AppUpdateError_5"		"ingen lisenser"
 "Steam_AppUpdateError_6"		"ingen internettforbindelse"
-"Steam_AppUpdateError_7"		"tilkobling tidsavbrudd"
+"Steam_AppUpdateError_7"		"tilkoblingen fikk tidsavbrudd"
 "Steam_AppUpdateError_8"		"innhold fortsatt kryptert"
 "Steam_AppUpdateError_9"		"programkonfigurasjon ikke tilgjengelig"
 "Steam_AppUpdateError_10"		"lesefeil på disken"
@@ -4672,7 +4672,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "SteamUI_StreamLaunch_RemoteStart"				"Forbereder strømming av %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Autoriser enhet"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Skriv inn autorisasjonskoden, som vises på %devicename%, for å gi enheten tillatelse til å koble til og spille spill."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Skriv inn autorisasjonskoden som vises på %devicename%, for å gi enheten tillatelse til å koble til og spille spill."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Ikke nå"
 "SteamUI_UpdateControllerFirmware_Continue"	"Neste"

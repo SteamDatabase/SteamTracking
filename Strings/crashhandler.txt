@@ -46,6 +46,7 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
+w<nk
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -404,6 +405,7 @@ pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 crashhandler001
 crashhandler002
 crashhandler003
+crashhandler004
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
@@ -532,8 +534,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec  1 2022
-14:34:48
+Dec  7 2022
+19:50:04
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -593,8 +595,8 @@ N(knN
 G12CStdMemAlloc
 9IMemAlloc
 Mb@?
-A[Ap
-UA[Ap
+A\Ap
+UA\Ap
 RAVAp
 RARAp
 RARAp
@@ -758,8 +760,8 @@ RIQ"
 @_waitpid$UNIX2003
 CreateInterface
 -Breakpad_SetSteamID
-08:<&
-2$$$&$
+08:<
+2$$$&$$
 TJ",\
 c5u8
 z$WnJ
@@ -933,24 +935,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Q	 0M
-~,jNSN
-cgcs
-|YN22
-V=%WIC
-9oQX
-Zpr[Y
+2;BQ}
+XTqc
+h$nE
+ kTD"
+_~<$
+S<m.
+gASqF
+z)jK%.27
+DCT:
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Z#a^
-$r\]r&
-R*B9:
-ao3)v
-3s.%
-/tMY
-c<r%
+q2V>
+q~J-
+,vvE
+r|vK
+di;aB
+'Jxw
+w9{m
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1006,9 +1010,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221201223511Z0/
-s!}O
-Rf`t
+221208035025Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1016,30 +1018,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		BAxtwvGgYNzqrU8YvI3gmjZnxfg=
+		SEod3NQ4kb53K0ifvinAFxkFfZM=
 		</data>
 		<data>
-		5WFjecvpo4T/cyF9T9c3OD0YzdE=
+		67OvZcNm4GCaun/4y/W3C9wL5mY=
 		</data>
 	</array>
 </dict>
 </plist>
-0r-X
-!ob8
-20221201223524Z0
+Ms+.p
+e]((
+20221208035115Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122162003Z
-230103162002Z0B1
-Timestamp Signer NWK11
+221122161003Z
+230103161002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-2gc9
+v-3D^
+g:}q
+ZvD|
+Hd?J
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+^:>UZo
+\7B,
+[#('1Z
+fw9I
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1078,12 +1087,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221201223524Z0#
-gl+%:
-O>T+
-A0	h\)
-	UB&)
-^hU@
+/~0	
+221208035115Z0#
+VA12
+RVXs
 __TEXT
 __text
 __TEXT
@@ -1129,7 +1136,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-l];b
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1707,6 +1713,7 @@ pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 crashhandler001
 crashhandler002
 crashhandler003
+crashhandler004
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
@@ -1806,8 +1813,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec  1 2022
-14:34:49
+Dec  7 2022
+19:50:06
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -1898,8 +1905,8 @@ N(knN
 _12CStdMemAlloc
 9IMemAlloc
 Mb@?
-A[Ap
-UA[Ap
+A\Ap
+UA\Ap
 RAVAp
 RARAp
 RARAp
@@ -2076,7 +2083,6 @@ CreateInterface
 (4jx
 @jtt
 Fvvh
-N~{ 
 [g'b
 vzh43
 _Breakpad_SetSteamID
@@ -2242,23 +2248,22 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-0g|f<(
-6 fB2
-Idb0#l
-el={
-w-SeyR
+a-alo
+pKb"j
+Uh0L)
+)+IC
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-BuzK
-]AMW
-2oZL
-(t8S
-_fCp
-Ez'M
-Wn>L
-1qqD
+G1`Z
+wu##
+wi+m
+5}$DS
+PzyCK
+5	xd
+jX-,B
+Na~?
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2314,10 +2319,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221201223511Z0/
-H$Dxc
-G*8d
-v^=+G
+221208035025Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2325,39 +2327,30 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		uROhAR6T7zKflboH7dEyL+xu3xs=
+		xjXK+n42Bp4oFwnjiO3aKYqRgVA=
 		</data>
 		<data>
-		1czyfrNPcatI6cBVBnZePStHrB4=
+		keiC4toNrkmwsFnTvTX+AxsHdbA=
 		</data>
 	</array>
 </dict>
 </plist>
-sdQ>
-Woh>
-HZ!m@/W8
-L)}&
-20221201223524Z0
+~tEe
+whAAl
+20221208035115Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122161003Z
-230103161002Z0B1
-Timestamp Signer NWK21
+221122162003Z
+230103162002Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-v-3D^
-g:}q
-ZvD|
-Hd?J
+2gc9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^:>UZo
-\7B,
-[#('1Z
-fw9I
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2396,13 +2389,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-/~0	
-221201223524Z0#
-4mss
-9O~|K
-m8mP:s
-5eiy
-%.ka
+221208035115Z0#
+tD~+
+gl+%:
+](:&
+@xI|H
+F/8C
 __TEXT
 __text
 __TEXT
@@ -2449,7 +2441,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
-+0R#3o
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -2464,19 +2455,16 @@ Tv*@
  @9H5
 cS9 
 Q)Ij8?
-	Xq2
-	Xn2
  @9H
 5h"@9
 h&B)
 Lii8k	
 +ih8J	
 		n9
-R		.9(
+R		.9
 ii8J	
 T`SE
-WW	X
- H	X
+7Z	X
 jv8(
 h(8*
 ij`8
@@ -2516,8 +2504,8 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-<9 S
-"R9H
+<9@Q
+"T9H
 @9_q
 jt8 
  @9h
@@ -2602,6 +2590,7 @@ pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 crashhandler001
 crashhandler002
 crashhandler003
+crashhandler004
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Unsupported macOS version %d.%d.%d
 Invalid macOS version %d.%d.%d
@@ -2702,8 +2691,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec  1 2022
-14:34:51
+Dec  7 2022
+19:50:08
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2793,8 +2782,8 @@ EP\VV
 DPI12CStdMemAlloc
 9IMemAlloc
 Mb@?
-A[Ap
-UA[Ap
+A\Ap
+UA\Ap
 RAVAp
 RARAp
 RARAp
@@ -3131,25 +3120,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-6Hc /
-zh2oW +
-Md~DB
-OGw"
+:jWe
+?8p)
+7d,K
+1DB:
+?g4K
+3~4VvfE
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-{Y(';
-<!QS_
-bmbpF2
-x168#
-".b|
-}kpyM
-2@CI*n
-#t)[cs
-{Jhk4
- t8!
-MXB^@
+Q3 \D
+~`	]
+b_:S
+#xy/C
+$~CB[Eqq]P
+)\}#
+w'Wa
+$'&9C
+`HP| 
+B}1[[,I
 eF1]
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3206,8 +3196,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221201223511Z0/
-"faT9.0
+221208035025Z0/
+"~0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3215,18 +3205,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		o9byKC3YMb+i7V/+3njAENc6rcE=
+		kScPH3f+Asy0QryPixGf32EKHUo=
 		</data>
 		<data>
-		bIBOC80qIdhR5fg928v0fGqQf+s=
+		EyVT2MLMgGmsBBy1qgNjiigE8C4=
 		</data>
 	</array>
 </dict>
 </plist>
-[Lx"n"z
-FdaM`
-20221201223524Z0
-:2.8
+nni\
+xBF}
+3z;49"
+r-<0=
+20221208035115Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3278,8 +3269,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221201223524Z0#
+221208035115Z0#
+s6o'o
 gl+%:
-ibm:
-Cjd_
-bg(m
+Rsn=

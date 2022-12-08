@@ -63444,6 +63444,8 @@ object-assign
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ BIsChinaLauncher: () =>
             /* binding */ BIsChinaLauncher,
+          /* harmony export */ BIsControllerConfigGameID: () =>
+            /* binding */ BIsControllerConfigGameID,
           /* harmony export */ BIsEFriendRelationshipBlocked: () =>
             /* binding */ BIsEFriendRelationshipBlocked,
           /* harmony export */ BIsEFriendRelationshipFriend: () =>
@@ -64760,6 +64762,14 @@ object-assign
         const k_nGameIDControllerConfigs_Desktop = 413080;
         const k_nGameIDControllerConfigs_BigPicture = 413090;
         const k_nGameIDControllerConfigs_GuideChord = 443510;
+        function BIsControllerConfigGameID(appid) {
+          return (
+            appid == k_nGameIDControllerConfigs_Desktop ||
+            appid == k_nGameIDControllerConfigs_BigPicture ||
+            appid == k_nGameIDControllerConfigs_GuideChord ||
+            appid == k_nGameIDSteamWebHelper
+          );
+        }
         const k_GIDNil = "18446744073709551615";
         const k_RTime32Nil = 0;
         const k_RTime32Infinite = 0x7fffffff; //01-18-2038
@@ -65492,7 +65502,8 @@ object-assign
             "k_EUIMode_MobileChat";
           EUIMode[(EUIMode["k_EUIMode_EmbeddedClient"] = 6)] =
             "k_EUIMode_EmbeddedClient";
-          EUIMode[(EUIMode["k_EUIMode_MAX"] = 7)] = "k_EUIMode_MAX";
+          EUIMode[(EUIMode["k_EUIMode_DesktopUI"] = 7)] = "k_EUIMode_DesktopUI";
+          EUIMode[(EUIMode["k_EUIMode_MAX"] = 8)] = "k_EUIMode_MAX";
         })(EUIMode || (EUIMode = {}));
         //-----------------------------------------------------------------------------
         // EStoreCategory
@@ -66759,6 +66770,8 @@ object-assign
           ESteamUIWindowType[(ESteamUIWindowType["VR"] = 4)] = "VR";
           ESteamUIWindowType[(ESteamUIWindowType["SteamLibrary"] = 5)] =
             "SteamLibrary";
+          ESteamUIWindowType[(ESteamUIWindowType["MainDesktopUI"] = 6)] =
+            "MainDesktopUI";
         })(ESteamUIWindowType || (ESteamUIWindowType = {}));
         class SteamUIBrowserWindow_t {}
 
@@ -67709,6 +67722,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsChinaLauncher,
           /* harmony export */ BIsChinaRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.BIsChinaRealm,
+          /* harmony export */ BIsControllerConfigGameID: () =>
+            /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsControllerConfigGameID,
           /* harmony export */ BIsEFriendRelationshipBlocked: () =>
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.BIsEFriendRelationshipBlocked,
           /* harmony export */ BIsEFriendRelationshipFriend: () =>
@@ -67913,6 +67928,8 @@ object-assign
             /* reexport safe */ _clientenums__WEBPACK_IMPORTED_MODULE_0__.EShutdownStep,
           /* harmony export */ ESocialDropTypes: () =>
             /* reexport safe */ _communitytypes__WEBPACK_IMPORTED_MODULE_8__.ESocialDropTypes,
+          /* harmony export */ ESteamDeviceFormFactor: () =>
+            /* reexport safe */ _settingstypes__WEBPACK_IMPORTED_MODULE_19__.ESteamDeviceFormFactor,
           /* harmony export */ ESteamRealm: () =>
             /* reexport safe */ _basetypes__WEBPACK_IMPORTED_MODULE_4__.ESteamRealm,
           /* harmony export */ ESteamUIWindowType: () =>
@@ -68596,6 +68613,8 @@ object-assign
             /* binding */ ELibraryDisplaySize,
           /* harmony export */ EPerfDisplayCorner: () =>
             /* binding */ EPerfDisplayCorner,
+          /* harmony export */ ESteamDeviceFormFactor: () =>
+            /* binding */ ESteamDeviceFormFactor,
           /* harmony export */ FamilySettings: () =>
             /* binding */ FamilySettings,
           /* harmony export */ FamilySharingUser: () =>
@@ -68688,6 +68707,18 @@ object-assign
           }
         }
         class FamilySettings {}
+        var ESteamDeviceFormFactor;
+        (function (ESteamDeviceFormFactor) {
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Unknown"] = 0)] =
+            "Unknown";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Phone"] = 1)] =
+            "Phone";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Tablet"] = 2)] =
+            "Tablet";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["Computer"] = 3)] =
+            "Computer";
+          ESteamDeviceFormFactor[(ESteamDeviceFormFactor["TV"] = 4)] = "TV";
+        })(ESteamDeviceFormFactor || (ESteamDeviceFormFactor = {}));
         class RemotePlaySettings {}
         class FriendsSettings {}
         function DefaultFriendsSettings() {
@@ -69762,6 +69793,8 @@ object-assign
             /* binding */ BIsVRBrowserInfo,
           /* harmony export */ BrowserContext: () =>
             /* binding */ BrowserContext,
+          /* harmony export */ BrowserContextRoot: () =>
+            /* binding */ BrowserContextRoot,
           /* harmony export */ CPopup: () => /* binding */ CPopup,
           /* harmony export */ CSavedDimensionsPopup: () =>
             /* binding */ CSavedDimensionsPopup,
@@ -69853,6 +69886,18 @@ object-assign
         );
         const useBrowserContext = () =>
           react__WEBPACK_IMPORTED_MODULE_1__.useContext(BrowserContext);
+        function BrowserContextRoot(props) {
+          const { ownerWindow, children } = props;
+          const value = react__WEBPACK_IMPORTED_MODULE_1__.useMemo(
+            () => ({ ownerWindow }),
+            [ownerWindow]
+          );
+          return react__WEBPACK_IMPORTED_MODULE_1__.createElement(
+            BrowserContext.Provider,
+            { value },
+            children
+          );
+        }
         function BIsVRBrowserInfo(context) {
           return (
             context.m_eBrowserType ==
@@ -70456,6 +70501,9 @@ object-assign
                   )
               );
             }
+            if (rgParams.hwndParent) {
+              rgQueryParams.push("hwndParent=" + rgParams.hwndParent);
+            }
             if (rgQueryParams) {
               strPopupURL += "?" + rgQueryParams.join("&");
             }
@@ -70463,8 +70511,8 @@ object-assign
             let popup = windowOwner.open(strPopupURL, strName, strParams);
             // popup blockers can cause this to fail.
             if (!popup) {
-              console.log(
-                "Failed to create popup.. browser popup blocker enabled?"
+              console.error(
+                `Failed to create popup, browser/CEF may be blocking popups for "${window.location.origin}"`
               );
               return {};
             }
@@ -85363,6 +85411,8 @@ object-assign
           /* harmony export */ LocalizationManager: () =>
             /* binding */ LocalizationManager,
           /* harmony export */ Localize: () => /* binding */ Localize,
+          /* harmony export */ LocalizeCalendarMonth: () =>
+            /* reexport safe */ _localization_datetime__WEBPACK_IMPORTED_MODULE_8__.LocalizeCalendarMonth,
           /* harmony export */ LocalizeCalendarTime: () =>
             /* reexport safe */ _localization_datetime__WEBPACK_IMPORTED_MODULE_8__.LocalizeCalendarTime,
           /* harmony export */ LocalizeCalendarTimeLessGranular: () =>
@@ -88245,6 +88295,7 @@ function TestLocalizeCalendarTime()
             /* binding */ useConfigContext,
           /* harmony export */ useInGamepadUI: () =>
             /* binding */ useInGamepadUI,
+          /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
           /* harmony export */
         });
         /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
@@ -88276,16 +88327,21 @@ function TestLocalizeCalendarTime()
           );
         /**
          * Helper function to determine whether we are in the gamepadui context
-         * @note Tom Bui: eventually remove Config.IN_GAMEPADUI check?  still need it around for how we wrap friendsui in GamepadUI...
          * @returns boolean
          */
         function useInGamepadUI() {
           const configContext = useConfigContext();
-          return (
-            (configContext === null || configContext === void 0
-              ? void 0
-              : configContext.IN_GAMEPADUI) || Config.IN_GAMEPADUI
-          );
+          return configContext === null || configContext === void 0
+            ? void 0
+            : configContext.IN_GAMEPADUI;
+        }
+        /**
+         * Helper function to determine whether we are running on Deck
+         * @returns boolean
+         */
+        function useOnDeck() {
+          const configContext = useConfigContext();
+          return Config.ON_DECK;
         }
         /**
          * Global configuration constants.
@@ -88311,6 +88367,7 @@ function TestLocalizeCalendarTime()
           /** usually same as community_base_url, but will be steam-chat.com in client or steam.tv in broadcast mode */
           CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
           LOGIN_BASE_URL: "",
           SUPPORT_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
@@ -88338,6 +88395,8 @@ function TestLocalizeCalendarTime()
           EREALM: 0,
           /** technically Linux underneath, so needs its own flag to distinguish */
           IN_CHROMEOS: false,
+          /** technically Linux underneath, so needs its own flag to distinguish */
+          TESLA: false,
           // client-only parameters:
           LOCAL_HOSTNAME: "",
           // web-only parameters:
@@ -88640,6 +88699,10 @@ function TestLocalizeCalendarTime()
           ) {
             return Config.INTERNAL_STATS_BASE_URL;
           } else if (
+            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
+          ) {
+            return Config.STORE_CHECKOUT_BASE_URL;
+          } else if (
             BBaseURLMatches(currentURL, "https://steamloopback.host")
           ) {
             return "https://steamloopback.host";
@@ -88648,7 +88711,10 @@ function TestLocalizeCalendarTime()
         }
         function GET_BASE_WEB_PROPERTY() {
           const currentURL = window.location.href;
-          if (BBaseURLMatches(currentURL, Config.STORE_BASE_URL)) {
+          if (
+            BBaseURLMatches(currentURL, Config.STORE_BASE_URL) ||
+            BBaseURLMatches(currentURL, Config.STORE_CHECKOUT_BASE_URL)
+          ) {
             return "store";
           } else if (BBaseURLMatches(currentURL, Config.COMMUNITY_BASE_URL)) {
             return "community";
@@ -89984,4 +90050,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=bc405e809021d384b040
+//# sourceMappingURL=friends.js.map?contenthash=114d8f99e65df0b796db

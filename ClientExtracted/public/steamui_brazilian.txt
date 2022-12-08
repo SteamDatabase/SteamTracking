@@ -727,7 +727,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_OfflineMode_NoPersonalInfoError_Info"	"O modo off-line requer que as credenciais da sua conta Steam estejam salvas localmente.\n\nComo a opção \"Não salvar credenciais de conta neste computador\" está ativada,\ntais informações não estão salvas.\n\nDeseja desativar tal opção para poder usar o modo off-line?\n\n"
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Salvar credenciais"
 
-"SteamUI_OfflineMode_Title" "Steam — Downloads desativados"
+"SteamUI_OfflineMode_Title" "Steam — Modo off-line"
 "SteamUI_OfflineMode_GoOfflineDesc" "O modo off-line é usado quando você está prestes a desconectar o seu laptop da internet\nou espera não estar conectado à Internet.\n\nMuitos recursos, como a rede de amigos e o compartilhamento de biblioteca, não estarão\ndisponíveis enquanto off-line. Somente jogos totalmente atualizados\nestarão disponíveis."
 "SteamUI_OfflineMode_GoOnlineDesc" "Deseja voltar a ficar on-line?"
 "SteamUI_OfflineMode_MustCloseGames" "Todos os jogos em execução devem ser fechados antes de ativar o modo off-line"
@@ -3248,7 +3248,7 @@ Faça um novo amigo no Steam, enviando um presente para alguém que você conhec
 "Steam_Purchase_PlusTaxAndShipping"	"Seu preço total será calculado durante o processo de compra para incluir impostos, frete e manuseio."
 
 "Steam_Legal_PackageDetails_Unreleased_Shipping" "Alguns dos produtos deste pacote não foram lançados e estão indisponíveis no momento. Estes produtos ficarão automaticamente disponíveis a você pelo Steam assim que forem lançados. A data de lançamento para estes produtos é incerta e compradores não devem confiar em nenhuma data estimada. Aguarde 6-8 semanas para a entrega da mercadoria inclusa no pacote %subscription%."
-"Steam_Legal_PackageDetails_Unreleased" "Alguns dos produtos deste pacote ainda não foram lançados, portanto não estão disponíveis. Esses produtos serão automaticamente disponibilizados pelo Steam assim que forem lançados. A data de lançamento desses produtos é incerta e compradores não devem se basear em nenhuma data estimada."
+"Steam_Legal_PackageDetails_Unreleased" "Alguns dos produtos deste pacote ainda não foram lançados, portanto, não estão disponíveis. Esses produtos serão automaticamente disponibilizados pelo Steam assim que forem lançados. A data de lançamento desses produtos é incerta e compradores não devem se basear em nenhuma data estimada."
 "Steam_Legal_PackageDetails_Shipping" "Aguarde 6-8 semanas pela entrega da mercadoria inclusa no pacote %subscription%."
 
 "Steam_ForcedGiftPurchase_Next"	"Para comprar este item como um presente, clique em 'Avançar' para continuar."
@@ -4664,7 +4664,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_StreamLaunch_RemoteStart"				"Preparando para transmitir %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Informe o código de autorização para permitir que %devicename% conecte-se e jogue."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Informe o código de autorização para permitir que %devicename% se conecte e jogue."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Agora não"
 "SteamUI_UpdateControllerFirmware_Continue"	"Avançar"

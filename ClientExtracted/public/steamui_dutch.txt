@@ -4673,7 +4673,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "SteamUI_StreamLaunch_RemoteStart"				"Voorbereiden om %game% te streamen ..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Apparaat machtigen"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Voer de machtigingscode in die op %devicename% wordt getoond om het toe te staan verbinding te maken en spellen te spelen."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Voer de machtigingscode in die op %devicename% wordt getoond om de verbinding goed te keuren en spellen te spelen."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Niet nu"
 "SteamUI_UpdateControllerFirmware_Continue"	"Volgende"

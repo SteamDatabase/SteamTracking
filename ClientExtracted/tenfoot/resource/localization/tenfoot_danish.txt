@@ -4391,7 +4391,7 @@
 	"SteamUI_SystemResetConfirmation_Title"	"Genstart system"
 	"SteamUI_SystemResetConfirmation_Intro"	"Er du sikker på, at du vil gøre dette?"
 	"SteamUI_StreamingSystemResetConfirmation_Intro"	"Er du sikker på, at du vil gøre dette?\nHvis Steam ikke starter og logger ind automatisk ved start, er du nødt til at logge på Steam, efter din computer genstarter."
-	"SteamUI_SystemSuspendConfirmation_Title"	"Suspender system"
+	"SteamUI_SystemSuspendConfirmation_Title"	"Gå i slumretilstand"
 	"SteamUI_SystemSuspendConfirmation_Intro"	"Er du sikker på, at du vil gøre dette?"
 	"SteamUI_StreamingSystemSuspendConfirmation_Intro"	"Er du sikker på, at du vil gøre dette?\nHvis din computer ikke understøtter Wake On LAN eller er på en anden undernetmaske, er du nødt til at vække din computer manuelt."
 	"SteamUI_SystemShutdownConfirmation_Title"	"Slå system fra"

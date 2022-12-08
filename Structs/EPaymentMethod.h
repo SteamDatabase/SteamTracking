@@ -151,6 +151,7 @@ typedef enum EPaymentMethod
     k_EPaymentMethodTinkoff = 150,
     k_EPaymentMethodCashInCIS = 151,
     k_EPaymentMethodAuPAY = 152,
+    k_EPaymentMethodAliPayHK = 153,
     k_EPaymentMethodOEMTicket = 256,
     k_EPaymentMethodSplit = 512,
     k_EPaymentMethodComplimentary = 1024,

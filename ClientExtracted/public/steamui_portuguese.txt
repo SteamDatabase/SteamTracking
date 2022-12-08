@@ -514,7 +514,7 @@
 
 "Steam_AllAppsMustBeClosedToQuit_Title"		"Steam - Erro"
 "Steam_AllAppsMustBeClosedToQuit_Info"		"Uma ou mais aplicações Steam estão a ser executadas.\nPara sair do Steam, deves primeiro encerrar todas as aplicações do Steam."
-"Steam_AppMustBeClosedToQuit_Info"			"Fecha o %game% antes de sair do Steam."
+"Steam_AppMustBeClosedToQuit_Info"			"Fecha o %game% antes de saíres do Steam."
 "Steam_ExitSteam"				"Sair"
 "Steam_ExitLogoutSteam"				"Sair e terminar a sessão"
 
@@ -911,7 +911,7 @@
 "SteamUI_ValveSurvey_Summary_DesktopResolution"				"Resolução do ambiente de trabalho: %s1"
 "SteamUI_ValveSurvey_Summary_PrimaryMonitorPhysicalSize"	"Tamanho do monitor principal: %s1\n %s2"
 "SteamUI_ValveSurvey_Summary_DisplayType"					"Tipo do monitor principal: %s1"
-"SteamUI_ValveSurvey_Summary_Bus"							"Bus principal: %s1"
+"SteamUI_ValveSurvey_Summary_Bus"							"Barramento principal: %s1"
 "SteamUI_ValveSurvey_Summary_AGPGART"						"AGP GART principal: %s1 MB"
 "SteamUI_ValveSurvey_Summary_VRAMSize"						"VRAM principal: %s1 MB"
 "SteamUI_ValveSurvey_Summary_MonitorVendor"					"Fornecedor do monitor principal:  %s1"
@@ -936,7 +936,7 @@
 "SteamUI_ValveSurvey_Summary_DesktopResolution_Unknown"				"Resolução do ambiente de trabalho não detetada"
 "SteamUI_ValveSurvey_Summary_PrimaryMonitorPhysicalSize_Unknown"	"Tamanho do monitor principal não detetado"
 "SteamUI_ValveSurvey_Summary_DisplayType_Unknown"					"Tipo do monitor principal não detetado"
-"SteamUI_ValveSurvey_Summary_Bus_Unknown"							"Tipo do bus principal não detetado"
+"SteamUI_ValveSurvey_Summary_Bus_Unknown"							"Tipo do barramento principal não detetado"
 "SteamUI_ValveSurvey_Summary_AGPGART_Unknown"						"AGP GART principal não detetado"
 "SteamUI_ValveSurvey_Summary_VRAMSize_Unknown"						"VRAM principal não detetada"
 "SteamUI_ValveSurvey_Summary_MonitorVendor_Unknown"					"Fornecedor do monitor principal não detetado"
@@ -1068,8 +1068,8 @@
 
 "SteamUI_ValveSurvey_Summary_HyperThreading"	"HyperThreading:  %s1"
 
-"SteamUI_ValveSurvey_Summary_AGP"		"Definição de bus AGP:  %s1"
-"SteamUI_ValveSurvey_Summary_PCIBusSpeed"	"Velocidade de bus:  %s1"
+"SteamUI_ValveSurvey_Summary_AGP"		"Definição do barramento AGP:  %s1"
+"SteamUI_ValveSurvey_Summary_PCIBusSpeed"	"Velocidade do barramento:  %s1"
 "SteamUI_ValveSurvey_Summary_IPAddress"		"Endereço IP:  %s1"
 "SteamUI_ValveSurvey_Summary_NoIP"		"Sem endereço IP"
 "SteamUI_ValveSurvey_Summary_NetworkSpeed"	"Velocidade da rede:  %s1"
@@ -4659,8 +4659,8 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "SteamUI_StreamLaunch_ServerProgress"			"A preparar para transmitir %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"A preparar para transmitir %game%..."
 
-"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar Dispositivo"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Introduz o código de autorização para deixares que %devicename% se conecte e jogue jogos."
+"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
+"SteamUI_RemoteDeviceAuthorization_Text"		"Introduz o código de autorização visível em \"%devicename%\" para permitires que este se conecte e jogue jogos."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Agora não"
 "SteamUI_UpdateControllerFirmware_Continue"	"Seguinte"

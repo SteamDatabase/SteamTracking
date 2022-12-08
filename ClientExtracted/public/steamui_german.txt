@@ -738,7 +738,7 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_OfflineMode_LeaveOfflineMode" "Offlinemodus verlassen"
 
 "SteamUI_GameProperties_Status"	"Status"
-"SteamUI_GameProperties_UpdateNews"	"Update-News"
+"SteamUI_GameProperties_UpdateNews"	"Update-Neuigkeiten"
 "SteamUI_GamePropertiesContent_OfflineMode" "Offlinemodus:"
 "SteamUI_Steam_Menu"		"Steam-Menü"
 

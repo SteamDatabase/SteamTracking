@@ -21,6 +21,7 @@
 "app_task_servers"	"Serveurs"
 "app_task_news"		"Actualités"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"Quitter Big Picture"
 "app_task_friend_status" "État de Steam"
 "app_task_exit_steam"	"Quitter Steam"
 "app_task_screenshots"	"Captures d'écran"

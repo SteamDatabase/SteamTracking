@@ -496,7 +496,7 @@ Tämä kestää alle minuutin."
 "Steam_ConversionNotEnoughDiskSpace_Info"	"Tietokoneen levytila ei riitä valittujen pelien asentamiseen.\nVapauta levytilaa tai valitse Takaisin ja poista joitakin valintoja."
 "Steam_ConversionNotEnoughDiskSpaceForConversion_Info"	"Tietokoneen levytila ei riitä valittujen pelien muuntamiseen Steamiin sopiviksi.\nVapauta %s1 Mt levytilaa ja yritä uudelleen."
 "Steam_Interface"				"Käyttöliittymä"
-"Steam_EnableGPUWebViews_Option"		"Kiihdytetty renderöinti verkkonäkymissä (uudelleenkäynnistettävä)"
+"Steam_EnableGPUWebViews_Option"		"Nopeutettu renderöinti verkkonäkymissä (vaatii uudelleenkäynnistyksen)"
 "Steam_SmoothScrollWebViews_Option"		"Ota tasainen vieritys käyttöön verkkonäkymissä (uudelleenkäynnistettävä)"
 "Steam_SetJumplistOptions"		"Määritä tehtäväpalkin asetukset"
 "Steam_ShowOnlineStatusOptions"	"Valitse näytettävät verkkoasetukset"
@@ -4669,7 +4669,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "SteamUI_StreamLaunch_RemoteStart"				"Käynnistetään lähetystä %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Valtuuta laite"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Kirjoita valtuutuskoodi, jotta laite %devicename% voi yhdistää ja käyttää sovelluksia."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Kirjoita laitteella %devicename% näkyvä valtuutuskoodi luodaksesi etäyhteyden ja pelataksesi pelejä."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Ei nyt"
 "SteamUI_UpdateControllerFirmware_Continue"	"Seuraava"

@@ -21,6 +21,7 @@
 "app_task_servers"	"Сервери"
 "app_task_news"		"Новини"
 "app_task_bigpicture"	"Big Picture"
+"app_task_exit_bigpicture"	"Вийти з Big Picture"
 "app_task_friend_status" "Статус Steam"
 "app_task_exit_steam"	"Вийти зі Steam"
 "app_task_screenshots"	"Знімки екрана"

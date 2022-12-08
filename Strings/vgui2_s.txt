@@ -111,7 +111,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-
+(
 )
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
@@ -1903,6 +1903,7 @@ LINUX
 LINUX32
 LINUX64
 LINUXARM64
+CHROMEOS
 ANDROID
 ANDROID32
 ANDROID64
@@ -2276,9 +2277,9 @@ P
 =
 @
 '
+;
 @
 @
-T
 0
 @
 @

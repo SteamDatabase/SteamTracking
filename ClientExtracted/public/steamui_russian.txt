@@ -727,7 +727,7 @@
 "Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"Разрешить сохранение данных учетной записи"
 
 "SteamUI_OfflineMode_Title" "Steam — Автономный режим"
-"SteamUI_OfflineMode_GoOfflineDesc" "Автономный режим используется в том случае, если вы собираетесь\nотключить ваш переносной компьютер от сети, или ожидаете\nразъединения интернет-соединения.\n\nМногие функции, такие как «Друзья» и Family Library Sharing, будут недоступны\nв автономном режиме. Будут доступны только полностью обновлённые игры."
+"SteamUI_OfflineMode_GoOfflineDesc" "Автономный режим используется в том случае,\nесли вы ожидаете, что интернет-соединение прервётся.\n\nМногие функции, такие как «Друзья» и Family Library Sharing,\nнедоступны в автономном режиме. Будут доступны\nтолько полностью обновлённые игры."
 "SteamUI_OfflineMode_GoOnlineDesc" "Вы хотите вернуться в сеть?"
 "SteamUI_OfflineMode_MustCloseGames" "Все запущенные игры должны быть закрыты до перехода в автономный режим"
 "SteamUI_OfflineMode_EnterOfflineMode" "Перейти в автономный режим"
@@ -3569,7 +3569,7 @@
 "Steam_SpokenLanguageTestRadioButtonCurrent"	"Воспроизводить речь на русском языке"
 "Steam_SpokenLanguageTestRadioButtonEnglish"	"Воспроизводить речь по-английски с русскими субтитрами \n(Потребуется загрузить 1 Гб данных)"
 
-"Steam_CannotInstallInOfflineMode"		"Установка игр в автономном режиме невозможна.\n\nЧтобы выйти из автономного режима, выберите «Войти в сеть» в меню Steam.\n"
+"Steam_CannotInstallInOfflineMode"		"Установка игр в автономном режиме невозможна.\nЧтобы выйти из автономного режима, выберите «Войти в сеть» в меню Steam.\n"
 
 "Steam_DownloadsDisabled_Title" "Steam – Загрузки отключены"
 "Steam_CannotInstallDownloadsDisabled"	"Невозможно устанавливать игры, если загрузки отключены.\n"
@@ -4662,7 +4662,7 @@
 "SteamUI_StreamLaunch_RemoteStart"				"Подготовка к трансляции %game%…"
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Авторизовать устройство"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Введите код авторизации, чтобы позволить устройству «%devicename%» запускать игры из Steam."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Введите код авторизации с устройства %devicename%, чтобы позволить ему запускать игры из Steam."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Не сейчас"
 "SteamUI_UpdateControllerFirmware_Continue"	"Далее"

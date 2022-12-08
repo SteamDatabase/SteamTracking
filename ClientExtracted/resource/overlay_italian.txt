@@ -80,14 +80,14 @@
 
 "Overlay_Taskbar_EditControllerConfig"	"Configurazione del controller"
 
-"Overlay_Playtime_Stats"		"Statistiche del gioco"
+"Overlay_Playtime_Stats"		"Statistiche di gioco"
 "Overlay_Playtime_Intro"		"Hai speso"
 "Overlay_Playtime_IntroApp"		"Hai speso"
 "Overlay_Playtime_TwoWeeksHours"		"%hours_twoweeks% ore in questo prodotto nelle ultime due settimane"
 "Overlay_Playtime_TwoWeeksMinutes"		"%minutes_twoweeks% minuti in questo prodotto nelle ultime due settimane"
 "Overlay_Playtime_ForeverHours"		"%hours_forever% ore in questo prodotto complessivamente"
 "Overlay_Playtime_ForeverMinutes"		"%minutes_forever% minuti in questo prodotto complessivamente"
-"Overlay_Playtime_Session"			"%minutes_session% minuti in questo prodotto per la sessione corrente"
+"Overlay_Playtime_Session"			"%minutes_session% minuti in questo prodotto nella sessione corrente"
 "Overlay_Playtime_TimedTrial"		"%hours_trial% ore e %minutes_trial% minuti - prova rimanente"
 
 "Overlay_Friends_ThisManyOnline"	"Amici online: %numfriends%"
@@ -209,8 +209,8 @@
 "Overlay_Publish_Error_Quota_Plural" "Non hai abbastanza spazio rimanente in Steam Cloud per caricare questi screenshot"
 "Overlay_Delete_Screenshot_Error" "Si è verificato un errore durante l'eliminazione dello screenshot. Riprova più tardi."
 "Overlay_Tag_As_Potential_Spoiler" "Contrassegna come spoiler"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Contratto legale dello Steam Workshop"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Devi accettare l'ultimo contratto legale dello Steam Workshop prima che il tuo oggetto possa essere pubblicato."
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Contratto legale del Workshop di Steam"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Devi accettare l'ultimo contratto legale del Workshop di Steam prima che il tuo oggetto possa essere pubblicato."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Mostra l'oggetto"
 
 "Overlay_Share"						"Condividi su Facebook"

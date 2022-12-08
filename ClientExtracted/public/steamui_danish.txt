@@ -4664,7 +4664,7 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "SteamUI_StreamLaunch_RemoteStart"				"Forbereder på at streame %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Godkend enhed"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Indtast venligst godkendelseskoden, som vises på %devicename%, for at give enheden tilladelse til at tilslutte sig og spille spil."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Indtast godkendelseskoden, som vises på %devicename%, for at give enheden tilladelse til at oprette forbindelse og spille spil."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Ikke nu"
 "SteamUI_UpdateControllerFirmware_Continue"	"Næste"

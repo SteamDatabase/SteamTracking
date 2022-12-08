@@ -4672,8 +4672,8 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "SteamUI_StreamLaunch_ServerProgress"			"Příprava streamování hry %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"Připravuje se streamování hry %game%..."
 
-"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizovat zařízení"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Chcete-li umožnit zařízení %devicename% připojení a hraní her, zadejte autorizační kód."
+"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizace zařízení"
+"SteamUI_RemoteDeviceAuthorization_Text"		"Chcete-li umožnit zařízení %devicename% připojení a hraní her, zadejte jeho autorizační kód."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Nyní ne"
 "SteamUI_UpdateControllerFirmware_Continue"	"Další"

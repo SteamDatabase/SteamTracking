@@ -650,7 +650,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Shutdown_WaitingForLogoff"		"A terminar sessão"
 	"Shutdown_ForceQuit"			"FORÇAR ENCERRAMENTO"
 	"Shutdown_AllAppsMustBeClosedToQuit_Title"	"Steam - Erro"
-	"Shutdown_AppMustBeClosedToQuit_Info"		"Fecha o {s:game} antes de sair do Steam."
+	"Shutdown_AppMustBeClosedToQuit_Info"		"Fecha o {s:game} antes de saíres do Steam."
 	"Shutdown_AllAppsMustBeClosedToQuit_Info"	"Uma ou mais aplicações do Steam estão a ser executadas. Para sair do Steam, tens primeiro de encerrar todas as aplicações do Steam."
 
 	"Settings_Title"				"Definições"
@@ -4202,7 +4202,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Steam_InstallGamepadInputDriver_RestartText"	"Vais ter de reiniciar o Steam depois de instalar o driver de comando."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
-	"SteamUI_RemoteDeviceAuthorization_Text"		"Introduz o código de autorização para deixares que {s:devicename} se conecte e jogue jogos."
+	"SteamUI_RemoteDeviceAuthorization_Text"		"Introduz o código de autorização visível em \"{s:devicename}\" para permitires que este se conecte e jogue jogos."
 
 	"Steam_OtherSessionPlaying_Title" "Erro - Steam"
 	"Steam_OtherSessionPlaying_Text" "Já tens sessão iniciada num outro computador que tem \"{s:existing_app}\" em execução.\nIniciar \"{s:launching_app}\" aqui irá terminar a outra sessão do Steam."

@@ -77,7 +77,6 @@ enum EMsg {
 	k_EMsgLicenseProcessingComplete = 316;
 	k_EMsgSetTestFlag = 317;
 	k_EMsgQueuedEmailsComplete = 318;
-	k_EMsgGMReportPHPError = 319;
 	k_EMsgGMDRMSync = 320;
 	k_EMsgPhysicalBoxInventory = 321;
 	k_EMsgUpdateConfigFile = 322;

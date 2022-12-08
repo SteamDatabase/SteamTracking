@@ -4663,7 +4663,7 @@
 "SteamUI_StreamLaunch_RemoteStart"				"Προετοιμασία για μετάδοση %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Εξουσιοδότηση συσκευής"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Εισάγετε τον κωδικό εξουσιοδότησης που εμφανίζεται στο %devicename% για να το επιτρέψετε να συνδέεται και να παίζει παιχνίδια."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Εισαγάγετε τον κωδικό εξουσιοδότησης που εμφανίζεται στη συσκευή %devicename%, για να της επιτρέψετε να συνδέεται και να παίζει παιχνίδια."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Όχι τώρα"
 "SteamUI_UpdateControllerFirmware_Continue"	"Επόμενο"

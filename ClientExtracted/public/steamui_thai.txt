@@ -4667,7 +4667,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_StreamLaunch_RemoteStart"				"กำลังเตรียมการสตรีม %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"อนุญาตสิทธิ์ให้อุปกรณ์"
-"SteamUI_RemoteDeviceAuthorization_Text"		"กรอกรหัสอนุญาตสิทธิ์เพื่ออนุญาตให้ %devicename% เชื่อมต่อและเล่นเกมได้"
+"SteamUI_RemoteDeviceAuthorization_Text"		"กรอกรหัสอนุญาตสิทธิ์ที่แสดงอยู่บน %devicename% เพื่ออนุญาตให้เชื่อมต่อและเล่นเกมได้"
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"ไม่ใช่ตอนนี้"
 "SteamUI_UpdateControllerFirmware_Continue"	"ถัดไป"

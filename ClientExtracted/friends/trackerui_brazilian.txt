@@ -440,7 +440,7 @@
 "Friends_InviteInfo_HasAdded"					"lhe enviou um"
 "Friends_InviteInfo_FriendsList"				"pedido de amizade"
 "Friends_InviteInfo_BeenInvited"				"Você recebeu um convite"
-"Friends_InviteInfo_JoinGroup"				"para entrar no grupo Steam"
+"Friends_InviteInfo_JoinGroup"				"para entrar no Grupo Steam"
 "Friends_GroupEvent_NewEventScheduled"		"agendou um novo evento"
 "Friends_GroupEvent_NowStarting"				"Evento começando"
 "Friends_GroupEvent_NewAccouncement"			"publicou um novo anúncio"

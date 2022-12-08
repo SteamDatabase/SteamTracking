@@ -4,6 +4,7 @@ __TEXT
 @;
 __text
 __TEXT
+3(1
 __stubs
 __TEXT
 __stub_helper
@@ -78,9 +79,11 @@ __LINKEDIT
 "
 >
 @'>
-0\
-(Y
+H\
+(:?
+8Y
 P
+0"?
 
 *
 8
@@ -150,12 +153,11 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-`W
+PW
 )
 HB
-74
-1
-1
+!4
+:1
 1
 1
 1
@@ -165,11 +167,13 @@ HB
 
 
 
+1
 @
 
-@
-@
 :
+i0
+@
+@
 @
 8
 HC
@@ -463,6 +467,7 @@ P
 8
 (
 (
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -628,9 +633,9 @@ P
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
-29CMsgSetForceDeviceScaleFactor
+30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt3__121__basic_string_commonILb1EEE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -652,7 +657,6 @@ N8panorama16CLoadFileURLTaskE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 N8panorama22CLoadInMemoryImageTaskE
 N8panorama13CFileResourceE
-10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 10CUtlVectorIN8panorama9CPanelPtrIKNS0_8IUIPanelEEE10CUtlMemoryIS4_EE
 14CUtlLinkedListIPN8panorama20CImageDecodeWorkItemEiE
 PN8panorama17CImageProxySourceE
@@ -1983,6 +1987,7 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -2131,7 +2136,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -2542,6 +2546,7 @@ NSt3__119basic_ostringstreamIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 NSt3__117bad_function_callE
 10CUtlString
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 N10OSXHelpers13CCompatThreadE
 12CIPRangeList
 10CUtlVectorI9IPRange_t10CUtlMemoryIS0_EE
@@ -5366,8 +5371,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Dec  1 2022
-14:37:28
+Dec  7 2022
+19:53:01
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7508,6 +7513,7 @@ LINUX
 LINUX32
 LINUX64
 LINUXARM64
+CHROMEOS
 ANDROID
 ANDROID32
 ANDROID64
@@ -8048,18 +8054,14 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
-@metricsEnabledCatalogs
-Comma separated list of metrics catalogs - enable list.  Inclusion in this list bypasses operation whitelist.  Probably every catalog other than job_metrics should be in here.
-@metricsEnabledOperations
-CInfluxClient::SendCurrentBatchAsync
-Comma separated list of metrics operations - enable list
 @metricsDisabledOperations
-Comma separated list of metrics operations - disable list
-@influxBlacklistedTags
-steamid
-Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
+Comma separated list of metrics operations that are disabled.  This setting has highest priority
+@metricsEnabledOperations
+Comma separated list of metrics operations.  Overrides disabled catalogs
+@metricsDisabledCatalogs
+Comma separated list of metrics catalogs to disable.  This is the last check.
 @metricsLegacyJobMetrics
-CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
+UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
 @bMsgErrorDump
 @nCallerDeadlineHopLatencyMS
@@ -8261,9 +8263,8 @@ SSE is required.
 src.IsValid()
 
 HB
-74
-1
-1
+!4
+:1
 1
 1
 1
@@ -8273,64 +8274,72 @@ HB
 
 
 
+1
 @
 
-@
-@
 :
+i0
+@
+@
+h;
+?&
+:
+"'
 '
-'
-U.
 /
+;
+1'
+'
+9
+9
+&
+&
+&
+1#
+&
+#
+8
+U%
 .
-U.
-.
-%
-$
+0%
+8
 -
--
+q
 -
 7
 7
 7
 7
-w,
-,
-,
-,
-,
-,
-,
-,
-o5
-,
-,
-,
-,
-,
-,
+t,
+j,
+r,
+q,
+~,
 ,
 j
+6
 "
 "
+,
 ?
+5
 )
 >
 ;
 F
 ,
 -
-/
-/
-/
 +
 !
 &
-e+
+]+
+-
 +
+N.
 W
 j
 Ic
+3*
 @
 @
 @
@@ -8343,23 +8352,9 @@ Ic
 @
 @
 @
-U6
 @
 @
-@
-@
-@
-@
-,
-@
-@
-@
-@
-@
-@
-@
-@
-@
+3'
 @
 @
 @
@@ -8379,13 +8374,30 @@ U6
 @
 @
 @
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+*
 @
 @
 d
+!6
 Uk/
+x*
+6
 K
-(6
-'6
+t*
+s*
 @
 @
 @
@@ -8402,15 +8414,16 @@ K
 @
 @
 @
-K3
 @
 @
 @
 @
 @
 @
+;3
 @
 @
+g-
 @
 @
 @
@@ -8418,17 +8431,14 @@ K3
 0
 @
 @
-e+
-+)
 .&
 )
-&
-&
-&
-&
+)
+)
 )
 @
 @
+A)
 @
 @
 @
@@ -8436,62 +8446,68 @@ e+
 @
 @
 0
-2
 @
 @
 0
+0
+i(
 )
-0
+)
+)
+b(
+)
 =
+*
 @
 @
 *
 *
 (
 H=
-)
-g#
+1
+1
+(
+(
+-
+-
 '
-&
-2
+E'
 @
+1
 =
-=%
 @
 @
-%
-0
-%
+z1
+1
 @
 @
 ?
--
-^
 .
-.
-.
-R1
-?#
 @
-#
-#
-#
+&
+&
+&
+&
+'
 P
 T
 (
 (
 P
 j
-u#
 A
 A
 A
 A
 (
+\"
 #
+#
+0%
 @
 E9u
 E9u
+"
 "
 "
 "
@@ -8508,47 +8524,43 @@ A
 A
 A
 A
-0,
-!
-/"
-/"
-{+
-y!
-Q!
-N!
-.
+x"
+,.
+$
+$
+$
+w!
+{$
+L
+<
+)
 @
--
-(
-"
+I,
 v
-q
+*
+,
+'
+!
 }
 "
 @
-(
-(
-(
-(
-(
-u#
++%
 Hi
 (
-#
-$
-$
 "
 @
 @
 0
 0
 
+O&
 
 
 0
-I!
 
 
+!
+!
 0
 IcE
 @
@@ -8735,7 +8747,6 @@ IcE
 @
 @
 @
-#
 @
 @
 @
@@ -8842,6 +8853,8 @@ IcE
 @
 @
 @
+w"
+p"
 @
 j
 @
@@ -8939,14 +8952,19 @@ IcE
 V
 =
 =
-;
+c
+[
 !
+!
+
+
+
+
+
 @
 &
 
 
-
-=
 
 @
 M9e
@@ -9007,7 +9025,7 @@ I;E
 B
 ?
 `
-f
+_
 `
 !
 A
@@ -9041,6 +9059,7 @@ H=
 =*.*
 =
 @
+1
 @
 @
 @
@@ -9072,6 +9091,6 @@ E
 @
 @
 0
-[
-L
-Lc5cS
+o
+U
+Lc5CR

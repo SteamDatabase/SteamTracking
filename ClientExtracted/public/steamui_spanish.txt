@@ -4664,7 +4664,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_StreamLaunch_RemoteStart"				"Preparándose para retransmitir %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
-"SteamUI_RemoteDeviceAuthorization_Text"		"Introduce el código de autorización para permitir a %devicename% conectarse y jugar."
+"SteamUI_RemoteDeviceAuthorization_Text"		"Introduce el código de autorización que aparece en %devicename% para permitir que se conecte y poder utilizarlo para jugar."
 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Ahora no"
 "SteamUI_UpdateControllerFirmware_Continue"	"Siguiente"

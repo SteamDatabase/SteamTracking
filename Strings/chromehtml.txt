@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-`_
-`_
+`\
+`\
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,6 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-xe
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -49,7 +48,7 @@ __DATA
 P
 __data
 __DATA
-P'
+`'
 __thread_vars
 __DATA
 __thread_data
@@ -390,6 +389,7 @@ P
 8
 (
 (
+(
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -555,9 +555,11 @@ P
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 24CMsgSetProtocolBlockList
-29CMsgSetForceDeviceScaleFactor
+30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 
 15CHTMLController
 21IHTMLChromeController
@@ -635,14 +637,15 @@ NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 16CHTMLProtoBufMsgI14CMsgUnlockH264E
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
 16CHTMLProtoBufMsgI22CMsgAuthedSteamDomainsE
-16CHTMLProtoBufMsgI29CMsgSetForceDeviceScaleFactorE
+16CHTMLProtoBufMsgI30CMsgSetForceDeviceScaleFactorsE
 16CHTMLProtoBufMsgI13CMsgSetUIModeE
 16CHTMLProtoBufMsgI23CMsgSteamAuthCookiesSetE
 7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 N@
 $@
->@../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
+>@
+../Frameworks/Steam Helper.app/Contents/MacOS/Steam Helper
 19HTMLCommandBuffer_t
 23COSXChromeIPCWakeThread
 N6google8protobuf14FatalExceptionE
@@ -652,6 +655,7 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -799,9 +803,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1083,8 +1084,6 @@ Disable auto-restart of renderer process for existing browsers
 -community
 -clientui
 -gamepadui
--no-browser
-unconditionally disables CEF
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 GetCPUInformation().m_bSSE2 || IsARM()
 !"Failed to kill existing helper process"
@@ -2015,8 +2014,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2123,6 +2120,7 @@ a
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
+m_unSizeOfElements == mem.m_unSizeOfElements
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
@@ -2353,13 +2351,18 @@ sc_schinese
 
 @
 @
-=
-:
-@
-m
-R
 
-W
+@
+i
+
+
+
+
+
+
+
+
+
 
 0
 0
@@ -2406,7 +2409,6 @@ IcE
 IcE
 @
 @
-c
 V
 =
 =
@@ -2442,5 +2444,6 @@ Ic
 @
 0
 0
+<
 0
 0

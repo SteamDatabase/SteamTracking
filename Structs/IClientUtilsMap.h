@@ -35,6 +35,7 @@ public:
     virtual unknown_ret GetBuildID() = 0;
     virtual unknown_ret SetCurrentUIMode(void*) = 0;
     virtual unknown_ret GetCurrentUIMode() = 0;
+    virtual unknown_ret BIsWebBasedUIMode() = 0;
     virtual unknown_ret ShutdownLauncher(void*,void*) = 0;
     virtual unknown_ret SetLauncherType(void*) = 0;
     virtual unknown_ret GetLauncherType() = 0;
@@ -67,7 +68,7 @@ public:
     virtual unknown_ret SetOverlayChatBrowserInfo(void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret ClearOverlayChatBrowserInfo(void*) = 0;
     virtual unknown_ret GetOverlayChatBrowserInfo(void*,void*,void*) = 0;
-    virtual unknown_ret SetOverlayBrowserInfo(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret SetOverlayBrowserInfo(void*,void*,void*,void*,void*,void*,void*) = 0;
     virtual unknown_ret ClearOverlayBrowserInfo(void*) = 0;
     virtual unknown_ret GetOverlayBrowserInfo(void*,void*,void*) = 0;
     virtual unknown_ret DispatchClientUINotification(void*,void*,void*) = 0;
@@ -101,5 +102,4 @@ public:
     virtual unknown_ret FloatingGamepadTextInputDismissed() = 0;
     virtual unknown_ret SetGameLauncherMode(void*,void*) = 0;
     virtual unknown_ret ClearAllHTTPCaches() = 0;
-    virtual unknown_ret GetLoginUIStyle() = 0;
 };

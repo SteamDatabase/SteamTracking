@@ -21,6 +21,7 @@
 "app_task_servers"	"Сървъри"
 "app_task_news"		"Новини"
 "app_task_bigpicture"	"Голям екран"
+"app_task_exit_bigpicture"	"Изход от режим „Голям екран“"
 "app_task_friend_status" "Steam статус"
 "app_task_exit_steam"	"Изход от Steam"
 "app_task_screenshots"	"Снимки"

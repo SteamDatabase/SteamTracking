@@ -2771,7 +2771,7 @@
 	"Library_VRFilter" "รองรับ VR"
 	"Library_ReadyToPlay" "พร้อมเล่น"
 	"Library_LocalMultiplayer" "ผู้เล่นหลายคนในเครือข่าย"
-	"Library_RemotePlayOptimized" "Remote Play ถูกเพิ่มประสิทธิภาพ"
+	"Library_RemotePlayOptimized" "เหมาะกับ Remote Play"
 	"Library_SteamPlay1" "Steam Play ถูกรับรองแล้ว"
 	"Library_SteamPlay2" "Steam Play (ถูกผ่อนผันแล้ว)"
 	"Library_Unplayed" "ไม่เคยเล่น"
