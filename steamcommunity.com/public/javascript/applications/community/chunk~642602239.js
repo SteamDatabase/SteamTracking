@@ -2896,10 +2896,10 @@
             this.UpdateBuffer();
         }
         OnSourceBufferError(e) {
-          console.log("OnSourceBufferError");
+          console.log("OnSourceBufferError", this.GetDebugName(), e);
         }
         OnSourceBufferAbort(e) {
-          console.log("OnSourceBufferAbort");
+          console.log("OnSourceBufferAbort", this.GetDebugName(), e);
         }
         ScheduleNextDownload() {
           if (this.m_bNeedInitSegment) return void this.DownloadNextSegment();
@@ -23554,7 +23554,7 @@
     },
     52795: (e, t, r) => {
       "use strict";
-      r.d(t, { c9: () => H, _d: () => k, QO: () => L, id: () => G });
+      r.d(t, { c9: () => X, _d: () => L, QO: () => O, id: () => k });
       var i = r(70655),
         n = r(9669),
         a = r.n(n),
@@ -23731,15 +23731,19 @@
         E = r(49875);
       r(54891);
       const I = "auto";
-      var R;
+      var R, F;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
           (e[(e.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
           (e[(e.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
           (e[(e.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      })(R || (R = {}));
-      class F {
+      })(R || (R = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.StreamGone = 1)] = "StreamGone");
+        })(F || (F = {}));
+      class M {
         constructor(e, t = !1) {
           (this.m_elVideo = null),
             (this.m_strMPD = ""),
@@ -24108,11 +24112,16 @@
           for (let e of this.m_rgLoaders) e.SetMediaSource(this.m_mediaSource);
           this.BeginPlayback();
         }
+        HandleMediaSourceError(e) {
+          this.m_bClosing ||
+            e.target != this.m_mediaSource ||
+            this.StopDownloads();
+        }
         OnMediaSourceEnded(e) {
-          (0, u.yv)("OnMediaSourceEnded");
+          (0, u.yv)("OnMediaSourceEnded", e), this.HandleMediaSourceError(e);
         }
         OnMediaSourceClose(e) {
-          (0, u.yv)("OnMediaSourceClose");
+          (0, u.yv)("OnMediaSourceClose", e), this.HandleMediaSourceError(e);
         }
         OnVideoWaiting(e) {
           if (
@@ -24391,8 +24400,8 @@
                 this.PlayOnElement(),
             this.DispatchEvent("valve-bufferupdate"));
         }
-        OnSegmentDownloadFailed(e) {
-          this.StopDownloads(), this.DispatchEvent("valve-downloadfailed");
+        OnSegmentDownloadFailed(e, t) {
+          this.StopDownloads(), this.DispatchEvent("valve-downloadfailed", t);
         }
         OnSegmentDownloadGone(e) {
           this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= 3
@@ -24404,7 +24413,7 @@
                 "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
                   e.GetNumConsecutiveDownloadGones()
               ),
-              this.OnSegmentDownloadFailed(e));
+              this.OnSegmentDownloadFailed(e, F.StreamGone));
         }
         GetCurrentAudioAdaptationfunction() {
           return this.m_mpd
@@ -24557,7 +24566,7 @@
               c = n.nHeight || 0,
               d = this.GetVideoPlayerHeight();
             if (d > 0 && l > 0) {
-              if (c > M(d)) break;
+              if (c > D(d)) break;
             }
             a = n;
           }
@@ -24754,50 +24763,51 @@
           }
         }
       }
-      function M(e) {
+      function D(e) {
         return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
-      (0, i.gn)([B.a], F.prototype, "OnVisibilityChange", null),
-        (0, i.gn)([B.a], F.prototype, "UpdateMPD", null),
-        (0, i.gn)([B.a], F.prototype, "OnMediaSourceOpen", null),
-        (0, i.gn)([B.a], F.prototype, "OnMediaSourceEnded", null),
-        (0, i.gn)([B.a], F.prototype, "OnMediaSourceClose", null),
-        (0, i.gn)([B.a], F.prototype, "OnVideoWaiting", null),
-        (0, i.gn)([B.a], F.prototype, "OnVideoPause", null),
-        (0, i.gn)([B.a], F.prototype, "OnVideoResize", null),
+      (0, i.gn)([B.a], M.prototype, "OnVisibilityChange", null),
+        (0, i.gn)([B.a], M.prototype, "UpdateMPD", null),
+        (0, i.gn)([B.a], M.prototype, "OnMediaSourceOpen", null),
+        (0, i.gn)([B.a], M.prototype, "HandleMediaSourceError", null),
+        (0, i.gn)([B.a], M.prototype, "OnMediaSourceEnded", null),
+        (0, i.gn)([B.a], M.prototype, "OnMediaSourceClose", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoWaiting", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoPause", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoResize", null),
         (0, i.gn)(
           [B.a],
-          F.prototype,
+          M.prototype,
           "OnDebugPrintEventInfoAndAvailableBuffer",
           null
         ),
-        (0, i.gn)([B.a], F.prototype, "OnVideoError", null),
-        (0, i.gn)([B.a], F.prototype, "OnVideoCanPlay", null),
-        (0, i.gn)([B.a], F.prototype, "GetCurrentPlayTime", null),
-        (0, i.gn)([B.a], F.prototype, "OnVideoTimeUpdate", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoError", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoCanPlay", null),
+        (0, i.gn)([B.a], M.prototype, "GetCurrentPlayTime", null),
+        (0, i.gn)([B.a], M.prototype, "OnVideoTimeUpdate", null),
         (0, i.gn)(
           [B.a],
-          F.prototype,
+          M.prototype,
           "SendUpdateToBookmarkServiceIfNeeded",
           null
         ),
-        (0, i.gn)([B.a], F.prototype, "OnPlayAction", null),
-        (0, i.gn)([B.a], F.prototype, "GetPlaybackRate", null),
-        (0, i.gn)([B.a], F.prototype, "GetCDNAuthURLParameter", null),
-        (0, i.gn)([B.a], F.prototype, "OnSegmentDownloaded", null),
-        (0, i.gn)([B.a], F.prototype, "PlayOnElement", null),
-        (0, i.gn)([B.a], F.prototype, "OnSegmentDownloadFailed", null),
-        (0, i.gn)([B.a], F.prototype, "OnSegmentDownloadGone", null),
+        (0, i.gn)([B.a], M.prototype, "OnPlayAction", null),
+        (0, i.gn)([B.a], M.prototype, "GetPlaybackRate", null),
+        (0, i.gn)([B.a], M.prototype, "GetCDNAuthURLParameter", null),
+        (0, i.gn)([B.a], M.prototype, "OnSegmentDownloaded", null),
+        (0, i.gn)([B.a], M.prototype, "PlayOnElement", null),
+        (0, i.gn)([B.a], M.prototype, "OnSegmentDownloadFailed", null),
+        (0, i.gn)([B.a], M.prototype, "OnSegmentDownloadGone", null),
         (0, i.gn)(
           [B.a],
-          F.prototype,
+          M.prototype,
           "VerifyFirstSegementDownloadProgress",
           null
         ),
-        (0, i.gn)([B.a], F.prototype, "GameDataEventTrigger", null),
-        (0, i.gn)([B.a], F.prototype, "ReportPlayerStats", null),
-        (0, i.gn)([s.aD.bound], F.prototype, "CaptureStatsForDisplay", null);
-      class D {
+        (0, i.gn)([B.a], M.prototype, "GameDataEventTrigger", null),
+        (0, i.gn)([B.a], M.prototype, "ReportPlayerStats", null),
+        (0, i.gn)([s.aD.bound], M.prototype, "CaptureStatsForDisplay", null);
+      class T {
         constructor(e) {
           (this.m_elVideo = null),
             (this.m_peerConnection = null),
@@ -25112,30 +25122,30 @@
           return "";
         }
       }
-      (0, i.gn)([B.a], D.prototype, "PlayWebRTC", null),
-        (0, i.gn)([s.aD.bound], D.prototype, "CaptureStatsForDisplay", null),
-        (0, i.gn)([B.a], D.prototype, "OnVideoPause", null),
-        (0, i.gn)([B.a], D.prototype, "OnVideoResize", null);
+      (0, i.gn)([B.a], T.prototype, "PlayWebRTC", null),
+        (0, i.gn)([s.aD.bound], T.prototype, "CaptureStatsForDisplay", null),
+        (0, i.gn)([B.a], T.prototype, "OnVideoPause", null),
+        (0, i.gn)([B.a], T.prototype, "OnVideoResize", null);
       r(92398), r(69765);
-      var T = r(93976),
-        A = r(50498),
-        z = r(67119);
-      const G = 7;
-      var k, L;
+      var A = r(93976),
+        z = r(50498),
+        G = r(67119);
+      const k = 7;
+      var L, O;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Unlocking = 1)] = "Unlocking"),
           (e[(e.Loading = 2)] = "Loading"),
           (e[(e.Ready = 3)] = "Ready"),
           (e[(e.Error = 4)] = "Error");
-      })(k || (k = {}));
-      class O {
+      })(L || (L = {}));
+      class P {
         constructor() {
           (this.m_rtUnlockTime = 0), (this.m_schUnlockTimeout = new f.Ar());
         }
         UnlockH264(e, t) {
-          (0, z.U5)("RemotePlay.UnlockH264")
-            ? (e.SetState(k.Unlocking, ""),
+          (0, G.U5)("RemotePlay.UnlockH264")
+            ? (e.SetState(L.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
               SteamClient.RemotePlay.UnlockH264(),
               (this.m_broadcast = e),
@@ -25144,14 +25154,14 @@
               this.m_schUnlockTimeout.Schedule(100, () =>
                 this.CheckUnlockState()
               ))
-            : e.SetState(k.Error, (0, y.Xx)("#BroadcastWatch_MinBrowser"));
+            : e.SetState(L.Error, (0, y.Xx)("#BroadcastWatch_MinBrowser"));
         }
         CheckUnlockState() {
-          if (this.m_broadcast.m_eWatchState != k.Unlocking) return;
+          if (this.m_broadcast.m_eWatchState != L.Unlocking) return;
           if ((0, u.c8)() || (0, u.Pw)())
             return (
               console.log("Unlocking H.264 successful"),
-              this.m_broadcast.SetState(k.None, ""),
+              this.m_broadcast.SetState(L.None, ""),
               void this.m_video.Restart()
             );
           Date.now() - this.m_rtUnlockTime > 6e3
@@ -25159,7 +25169,7 @@
                 "Unlocking H.264 timed out (Steam client or servers offline?)"
               ),
               this.m_broadcast.SetState(
-                k.Error,
+                L.Error,
                 (0, y.Xx)("#BroadcastWatch_MinBrowser")
               ))
             : this.m_schUnlockTimeout.Schedule(100, () =>
@@ -25167,14 +25177,14 @@
               );
         }
       }
-      class P {
+      class N {
         constructor() {
           (this.m_steamIDBroadcast = ""),
             (this.m_ulBroadcastID = ""),
             (this.m_ulViewerToken = ""),
             (this.m_strCDNAuthUrlParameters = void 0),
             (this.m_bWebRTC = !1),
-            (this.m_eWatchState = k.None),
+            (this.m_eWatchState = L.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
             (this.m_schManifestTimeout = new f.Ar()),
@@ -25183,20 +25193,20 @@
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == k.Error && console.log(this.m_strStateDescription);
+            e == L.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, i.gn)([s.LO], P.prototype, "m_ulBroadcastID", void 0),
-        (0, i.gn)([s.LO], P.prototype, "m_eWatchState", void 0),
-        (0, i.gn)([s.LO], P.prototype, "m_strStateDescription", void 0),
-        (0, i.gn)([s.aD], P.prototype, "SetState", null);
-      class N {
+      (0, i.gn)([s.LO], N.prototype, "m_ulBroadcastID", void 0),
+        (0, i.gn)([s.LO], N.prototype, "m_eWatchState", void 0),
+        (0, i.gn)([s.LO], N.prototype, "m_strStateDescription", void 0),
+        (0, i.gn)([s.aD], N.prototype, "SetState", null);
+      class W {
         constructor(e) {
           (this.m_steamIDBroadcast = ""),
             (this.m_bInitialized = !1),
             (this.m_strTitle = ""),
-            (this.m_strAppId = "" + G),
-            (this.m_nAppID = G),
+            (this.m_strAppId = "" + k),
+            (this.m_nAppID = k),
             (this.m_strAppTitle = ""),
             (this.m_strThumbnailUrl = ""),
             (this.m_nViewerCount = 0),
@@ -25206,32 +25216,32 @@
             (this.m_steamIDBroadcast = e);
         }
       }
-      (0, i.gn)([s.LO], N.prototype, "m_bInitialized", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_strTitle", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_strAppId", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_nAppID", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_strAppTitle", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_strThumbnailUrl", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_nViewerCount", void 0),
-        (0, i.gn)([s.LO], N.prototype, "m_bIsOnline", void 0);
-      class W {
+      (0, i.gn)([s.LO], W.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_strTitle", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_strAppId", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_nAppID", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_strAppTitle", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_strThumbnailUrl", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_nViewerCount", void 0),
+        (0, i.gn)([s.LO], W.prototype, "m_bIsOnline", void 0);
+      class x {
         constructor() {
-          (this.m_eWatchState = k.None),
+          (this.m_eWatchState = L.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []);
         }
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == k.Error && console.log(this.m_strStateDescription);
+            e == L.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, i.gn)([s.LO], W.prototype, "m_eWatchState", void 0),
-        (0, i.gn)([s.LO], W.prototype, "m_strStateDescription", void 0),
-        (0, i.gn)([s.aD], W.prototype, "SetState", null);
-      class x extends W {}
-      class U extends W {}
-      class j {
+      (0, i.gn)([s.LO], x.prototype, "m_eWatchState", void 0),
+        (0, i.gn)([s.LO], x.prototype, "m_strStateDescription", void 0),
+        (0, i.gn)([s.aD], x.prototype, "SetState", null);
+      class U extends x {}
+      class j extends x {}
+      class V {
         constructor() {
           (this.m_mapBroadcasts = new Map()),
             (this.m_mapClips = new Map()),
@@ -25249,15 +25259,15 @@
         GetBroadcastState(e) {
           if (e.IsBroadcastClip()) {
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
-            return t ? t.m_eWatchState : k.None;
+            return t ? t.m_eWatchState : L.None;
           }
           if (e.IsBroadcastVOD()) {
             const t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-            return t ? t.m_eWatchState : k.None;
+            return t ? t.m_eWatchState : L.None;
           }
           {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            return t ? t.m_eWatchState : k.None;
+            return t ? t.m_eWatchState : L.None;
           }
         }
         GetBroadcastStateDescription(e) {
@@ -25277,40 +25287,40 @@
         CreateBroadcastVideo(e, t, r, i) {
           let n = this.GetOrCreateBroadcast(t),
             { nVolume: a, bMuted: s } = this.m_broadcastSettings,
-            o = new V(e, a, s, r);
+            o = new H(e, a, s, r);
           if (
             (o.SetBroadcastSteamID(t),
             n.m_rgVideos.push(o),
             (n.m_bWebRTC = i),
             !(0, u.c8)() && !(0, u.Pw)())
           ) {
-            return new O().UnlockH264(n, o), o;
+            return new P().UnlockH264(n, o), o;
           }
           return o;
         }
         CreateClipVideo(e, t, r) {
           let i = this.GetOrCreateClip(t),
             { nVolume: n, bMuted: a } = this.m_broadcastSettings,
-            s = new V(e, n, a, r);
+            s = new H(e, n, a, r);
           if (
             (s.SetBroadcastClipID(t),
             i.m_rgVideos.push(s),
             !(0, u.c8)() && !(0, u.Pw)())
           ) {
-            return new O().UnlockH264(i, s), s;
+            return new P().UnlockH264(i, s), s;
           }
           return s;
         }
         CreateVODVideo(e, t, r) {
           let i = this.GetOrCreateVOD(t),
             { nVolume: n, bMuted: a } = this.m_broadcastSettings,
-            s = new V(e, n, a, r);
+            s = new H(e, n, a, r);
           if (
             (s.SetBroadcastAppIDVOD(t),
             i.m_rgVideos.push(s),
             !(0, u.c8)() && !(0, u.Pw)())
           ) {
-            return new O().UnlockH264(i, s), s;
+            return new P().UnlockH264(i, s), s;
           }
           return s;
         }
@@ -25320,24 +25330,24 @@
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == k.None
+              t.m_eWatchState == L.None
                 ? this.GetClipManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == k.Ready && e.StartClip(t);
+                : t.m_eWatchState == L.Ready && e.StartClip(t);
           } else if (e.IsBroadcastVOD()) {
             console.log(`Starting VOD for ${e.GetBroadcastAppIDVOD()}`);
             let t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == k.None
+              t.m_eWatchState == L.None
                 ? this.GetVODManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == k.Ready && e.StartVOD(t);
+                : t.m_eWatchState == L.Ready && e.StartVOD(t);
           } else {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == k.None
+              t.m_eWatchState == L.None
                 ? this.GetBroadcastManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == k.Ready && e.StartBroadcast(t);
+                : t.m_eWatchState == L.Ready && e.StartBroadcast(t);
           }
         }
         SetActiveVideo(e) {
@@ -25399,10 +25409,10 @@
         }
         GetOrCreateBroadcastInfo(e) {
           if (!e) {
-            return new N("");
+            return new W("");
           }
           if (!this.m_broadcastInfos[e]) {
-            const t = (0, s.LO)(new N(e));
+            const t = (0, s.LO)(new W(e));
             this.m_broadcastInfos[e] = t;
           }
           return this.m_broadcastInfos[e];
@@ -25411,9 +25421,9 @@
           let t = this.m_mapBroadcasts.get(e);
           return (
             t ||
-            ((t = new P()),
+            ((t = new N()),
             (t.m_steamIDBroadcast = e),
-            (t.m_eWatchState = k.None),
+            (t.m_eWatchState = L.None),
             this.m_mapBroadcasts.set(e, t),
             t)
           );
@@ -25437,9 +25447,9 @@
           let t = this.m_mapClips.get(e);
           return (
             t ||
-            ((t = new x()),
+            ((t = new U()),
             (t.m_clipID = e),
-            (t.m_eWatchState = k.None),
+            (t.m_eWatchState = L.None),
             this.m_mapClips.set(e, t),
             t)
           );
@@ -25448,9 +25458,9 @@
           let t = this.m_mapVODs.get(e);
           return (
             t ||
-            ((t = new U()),
+            ((t = new j()),
             (t.m_nAppIDVOD = e),
-            (t.m_eWatchState = k.None),
+            (t.m_eWatchState = L.None),
             this.m_mapVODs.set(e, t),
             t)
           );
@@ -25502,9 +25512,14 @@
             }
           });
         }
+        DelayedGetBroadcastManifest(e, t, r = Date.now()) {
+          e.m_schManifestTimeout.Schedule(5e3, () =>
+            this.GetBroadcastManifest(e, t, r)
+          );
+        }
         GetBroadcastManifest(e, t, r = Date.now()) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            e.SetState(k.Loading, "");
+            e.SetState(L.Loading, "");
             let i = {
                 steamid: e.m_steamIDBroadcast,
                 broadcastid: 0,
@@ -25520,7 +25535,7 @@
                 { params: i, withCredentials: !0 }
               );
             } catch (e) {
-              let t = (0, T.l)(e);
+              let t = (0, A.l)(e);
               console.error(
                 "Failed to get broadcast manifest!" + t.strErrorMsg,
                 t
@@ -25528,14 +25543,14 @@
             }
             if (!n || 200 != n.status)
               return void e.SetState(
-                k.Error,
+                L.Error,
                 (0, y.Xx)("#BroadcastWatch_RequestFailed")
               );
             let s = n.data;
             s.viewertoken && this.SetViewerToken(s.viewertoken);
             let o = s.success;
             if ("ready" == o)
-              e.SetState(k.Ready),
+              e.SetState(L.Ready),
                 (e.m_ulBroadcastID = s.broadcastid),
                 (e.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                 (e.m_strCDNAuthUrlParameters = s.cdn_auth_url_parameters),
@@ -25550,13 +25565,13 @@
                 }, 3e4 * Math.random());
             else if ("waiting" == o) {
               e.SetState(
-                k.Loading,
+                L.Loading,
                 (0, y.Xx)("#BroadcastWatch_WaitingForResponse")
               );
               let i = Date.now() - r;
               if (i > 6e4)
                 return void e.SetState(
-                  k.Error,
+                  L.Error,
                   (0, y.Xx)("#BroadcastWatch_NotAvailable")
                 );
               let n = i > 3e4 ? s.retry : 5e3;
@@ -25566,7 +25581,7 @@
             } else
               "waiting_for_start" == o
                 ? (e.SetState(
-                    k.Loading,
+                    L.Loading,
                     (0, y.Xx)("#BroadcastWatch_WaitingForStart")
                   ),
                   e.m_schManifestTimeout.Schedule(s.retry, () =>
@@ -25574,45 +25589,45 @@
                   ))
                 : "waiting_for_reconnect" == o
                 ? (e.SetState(
-                    k.Loading,
+                    L.Loading,
                     (0, y.Xx)("#BroadcastWatch_WaitingForReconnect")
                   ),
                   e.m_schManifestTimeout.Schedule(s.retry, () =>
                     this.GetBroadcastManifest(e, t, r)
                   ))
                 : "end" == o
-                ? e.SetState(k.Error, (0, y.Xx)("#BroadcastWatch_NotAvailable"))
+                ? e.SetState(L.Error, (0, y.Xx)("#BroadcastWatch_NotAvailable"))
                 : "noservers" == o
-                ? e.SetState(k.Error, (0, y.Xx)("#BroadcastWatch_ServerLoad"))
+                ? e.SetState(L.Error, (0, y.Xx)("#BroadcastWatch_ServerLoad"))
                 : "system_not_supported" == o
                 ? e.SetState(
-                    k.Error,
+                    L.Error,
                     (0, y.Xx)("#BroadcastWatch_SystemNotSupported")
                   )
                 : "user_restricted" == o
                 ? e.SetState(
-                    k.Error,
+                    L.Error,
                     (0, y.Xx)("#BroadcastWatch_UserRestricted")
                   )
                 : "poor_upload_quality" == o
                 ? e.SetState(
-                    k.Error,
+                    L.Error,
                     (0, y.Xx)("#BroadcastWatch_PoorUploadQuality")
                   )
                 : "request_failed" == o
                 ? e.SetState(
-                    k.Error,
+                    L.Error,
                     (0, y.Xx)("#BroadcastWatch_RequestFailed")
                   )
                 : e.SetState(
-                    k.Error,
+                    L.Error,
                     (0, y.Xx)("#BroadcastWatch_NotAvailable")
                   );
           });
         }
         GetClipManifest(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            e.SetState(k.Loading, "");
+            e.SetState(L.Loading, "");
             let r = {
                 clipid: e.m_clipID,
                 watchlocation: t,
@@ -25629,24 +25644,24 @@
             }
             if (!i || 200 != i.status)
               return void e.SetState(
-                k.Error,
+                L.Error,
                 (0, y.Xx)("#BroadcastWatch_RequestFailed")
               );
             let n = i.data;
             1 == n.success
-              ? (e.SetState(k.Ready), (e.m_data = n), this.LoadClip(e))
-              : e.SetState(k.Error, (0, y.Xx)("#BroadcastWatch_RequestFailed"));
+              ? (e.SetState(L.Ready), (e.m_data = n), this.LoadClip(e))
+              : e.SetState(L.Error, (0, y.Xx)("#BroadcastWatch_RequestFailed"));
           });
         }
         GetVODManifest(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            e.SetState(k.Loading, "");
-            let t = yield A.D.Get().LoadVODForAppID(e.m_nAppIDVOD);
+            e.SetState(L.Loading, "");
+            let t = yield z.D.Get().LoadVODForAppID(e.m_nAppIDVOD);
             t
-              ? (e.SetState(k.Ready),
+              ? (e.SetState(L.Ready),
                 (e.m_manifestURL = t.video_url),
                 this.LoadVOD(e))
-              : e.SetState(k.Error, (0, y.Xx)("#BroadcastWatch_RequestFailed"));
+              : e.SetState(L.Error, (0, y.Xx)("#BroadcastWatch_RequestFailed"));
           });
         }
         HeartbeatBroadcast(e) {
@@ -25674,13 +25689,15 @@
           e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(e);
         }
-        BroadcastDownloadFailed(e, t = !0) {
+        BroadcastDownloadFailed(e, t = !0, r = F.Invalid) {
           e.Stop();
-          let r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-          r &&
-            r.m_eWatchState != k.Loading &&
-            (r.m_bWebRTC && t && (r.m_bWebRTC = !1),
-            this.GetBroadcastManifest(r, e.GetWatchLocation()));
+          let i = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
+          i &&
+            i.m_eWatchState != L.Loading &&
+            (i.m_bWebRTC && t && (i.m_bWebRTC = !1),
+            r == F.StreamGone
+              ? this.DelayedGetBroadcastManifest(i, e.GetWatchLocation())
+              : this.GetBroadcastManifest(i, e.GetWatchLocation()));
         }
         UserInputClickVideo(e) {
           if (
@@ -25733,11 +25750,11 @@
             this.SaveBroadcastSettings());
         }
       }
-      (0, i.gn)([s.LO], j.prototype, "m_mapBroadcasts", void 0),
+      (0, i.gn)([s.LO], V.prototype, "m_mapBroadcasts", void 0),
         (function (e) {
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
-        })(L || (L = {}));
-      class V {
+        })(O || (O = {}));
+      class H {
         constructor(e, t, r, i) {
           (this.m_elVideo = null),
             (this.m_player = null),
@@ -25860,10 +25877,10 @@
           this.m_player.SetSubtitles(t);
         }
         GetBroadcastState() {
-          return H.GetBroadcastState(this);
+          return X.GetBroadcastState(this);
         }
         GetBroadcastStateDescription() {
-          return H.GetBroadcastStateDescription(this);
+          return X.GetBroadcastStateDescription(this);
         }
         SetOnVideoCallback(e) {
           this.m_fnOnVideoEnd = e;
@@ -25935,7 +25952,7 @@
         StartBroadcast(e) {
           this.InitPlayer(),
             e.m_data.url
-              ? ((this.m_player = new F(
+              ? ((this.m_player = new M(
                   this.m_elVideo,
                   !(0, u.c8)() && (0, u.Pw)()
                 )),
@@ -25944,7 +25961,7 @@
                   e.m_strCDNAuthUrlParameters,
                   e.m_data.hls_url
                 ))
-              : ((this.m_player = new D(this.m_elVideo)),
+              : ((this.m_player = new T(this.m_elVideo)),
                 this.m_player.PlayWebRTC(
                   this.m_steamIDBroadcast,
                   e.m_ulViewerToken,
@@ -25963,18 +25980,18 @@
               e.m_ulViewerToken,
               e.m_strCDNAuthUrlParameters
             ),
-            (this.m_BroadcastInfo = H.StartInfo(this.m_steamIDBroadcast));
+            (this.m_BroadcastInfo = X.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(e) {
           this.InitPlayer(),
-            (this.m_player = new F(this.m_elVideo)),
+            (this.m_player = new M(this.m_elVideo)),
             this.m_player.PlayMPD(e.m_data.clip_url, null),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
         StartVOD(e) {
           this.InitPlayer();
-          let t = new F(this.m_elVideo);
+          let t = new M(this.m_elVideo);
           (this.m_player = t),
             w.L7.logged_in &&
               e.m_nAppIDVOD &&
@@ -25986,7 +26003,7 @@
         Stop() {
           this.m_listeners.Unregister(),
             this.m_BroadcastInfo &&
-              (H.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
+              (X.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
             (this.m_gameDataParser = null),
             this.m_player && (this.m_player.Close(), (this.m_player = null));
         }
@@ -25997,15 +26014,15 @@
         }
         Play() {
           const e = this.GetBroadcastState();
-          e == k.None || this.IsBroadcastClip()
-            ? H.StartVideo(this)
-            : e == k.Ready &&
-              (H.SetActiveVideo(this),
+          e == L.None || this.IsBroadcastClip()
+            ? X.StartVideo(this)
+            : e == L.Ready &&
+              (X.SetActiveVideo(this),
               this.m_player
                 ? this.m_player.Play()
                 : this.IsBroadcastVOD()
-                ? this.StartVOD(H.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
-                : this.StartBroadcast(H.GetBroadcast(this.m_steamIDBroadcast)));
+                ? this.StartVOD(X.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                : this.StartBroadcast(X.GetBroadcast(this.m_steamIDBroadcast)));
         }
         Pause() {
           console.log(
@@ -26033,12 +26050,12 @@
         SetVolume(e) {
           this.m_player && this.m_player.SetVolume(e),
             (this.m_nVolume = this.m_player.GetVolume()),
-            H.SaveVolumeChange(e, this.m_bMuted);
+            X.SaveVolumeChange(e, this.m_bMuted);
         }
         SetMute(e) {
           this.m_player && this.m_player.SetMuted(e),
             (this.m_bMuted = e),
-            H.SaveVolumeChange(this.m_nVolume, e);
+            X.SaveVolumeChange(this.m_nVolume, e);
         }
         IsMuted() {
           return this.m_bMuted;
@@ -26117,14 +26134,15 @@
                 t.gamedata.soundtrack
               );
         }
-        OnDownloadFailed() {
-          H.BroadcastDownloadFailed(this);
+        OnDownloadFailed(e) {
+          let t = e.detail || F.Invalid;
+          X.BroadcastDownloadFailed(this, !0, t);
         }
         OnWebRTCRetry() {
-          H.BroadcastDownloadFailed(this, !1);
+          X.BroadcastDownloadFailed(this, !1);
         }
         OnWebRTCFailed() {
-          H.BroadcastDownloadFailed(this, !0);
+          X.BroadcastDownloadFailed(this, !0);
         }
         OnUserInputNeeded() {
           this.m_bUserInputNeeded = !0;
@@ -26150,7 +26168,7 @@
           let r = 0,
             i = 0;
           return (
-            t == L.Timeline
+            t == O.Timeline
               ? ((i = this.m_nVideoEndPos), (r = i - this.m_nTimelineDuration))
               : ((r = 0), (i = 0)),
             b.r4(e, r, i, 0, 100)
@@ -26178,32 +26196,32 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, i.gn)([s.LO], V.prototype, "m_bPaused", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_nPlaybackTime", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_bBuffering", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_bOnLiveEdge", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_nVolume", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_bMuted", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_bUserInputNeeded", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_bIsReplay", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_nTimelineDuration", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_nVideoStartPos", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_nVideoEndPos", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_editorStartTime", void 0),
-        (0, i.gn)([s.LO], V.prototype, "m_editorEndTime", void 0),
-        (0, i.gn)([s.aD.bound], V.prototype, "StartBroadcast", null),
-        (0, i.gn)([s.aD.bound], V.prototype, "StartClip", null),
-        (0, i.gn)([s.aD.bound], V.prototype, "StartVOD", null),
-        (0, i.gn)([B.a], V.prototype, "OnVideoPlaying", null),
-        (0, i.gn)([B.a], V.prototype, "OnVideoPause", null),
-        (0, i.gn)([s.aD.bound], V.prototype, "OnVideoTimeUpdate", null),
-        (0, i.gn)([s.aD.bound], V.prototype, "OnGameDataUpdate", null),
-        (0, i.gn)([B.a], V.prototype, "OnDownloadFailed", null),
-        (0, i.gn)([B.a], V.prototype, "OnWebRTCRetry", null),
-        (0, i.gn)([B.a], V.prototype, "OnWebRTCFailed", null),
-        (0, i.gn)([B.a], V.prototype, "OnUserInputNeeded", null);
-      const H = new j();
-      window.uiBroadcastWatchStore = H;
+      (0, i.gn)([s.LO], H.prototype, "m_bPaused", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_nPlaybackTime", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_bBuffering", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_bOnLiveEdge", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_nVolume", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_bMuted", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_bUserInputNeeded", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_bIsReplay", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_nTimelineDuration", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_nVideoStartPos", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_nVideoEndPos", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_editorStartTime", void 0),
+        (0, i.gn)([s.LO], H.prototype, "m_editorEndTime", void 0),
+        (0, i.gn)([s.aD.bound], H.prototype, "StartBroadcast", null),
+        (0, i.gn)([s.aD.bound], H.prototype, "StartClip", null),
+        (0, i.gn)([s.aD.bound], H.prototype, "StartVOD", null),
+        (0, i.gn)([B.a], H.prototype, "OnVideoPlaying", null),
+        (0, i.gn)([B.a], H.prototype, "OnVideoPause", null),
+        (0, i.gn)([s.aD.bound], H.prototype, "OnVideoTimeUpdate", null),
+        (0, i.gn)([s.aD.bound], H.prototype, "OnGameDataUpdate", null),
+        (0, i.gn)([B.a], H.prototype, "OnDownloadFailed", null),
+        (0, i.gn)([B.a], H.prototype, "OnWebRTCRetry", null),
+        (0, i.gn)([B.a], H.prototype, "OnWebRTCFailed", null),
+        (0, i.gn)([B.a], H.prototype, "OnUserInputNeeded", null);
+      const X = new V();
+      window.uiBroadcastWatchStore = X;
     },
     24399: (e, t, r) => {
       "use strict";

@@ -8177,6 +8177,11 @@
             }
           });
         }
+        DelayedGetBroadcastManifest(e, t, r = Date.now()) {
+          e.m_schManifestTimeout.Schedule(5e3, () =>
+            this.GetBroadcastManifest(e, t, r)
+          );
+        }
         GetBroadcastManifest(e, t, r = Date.now()) {
           return (0, a.mG)(this, void 0, void 0, function* () {
             e.SetState(T.Loading, "");
@@ -8349,13 +8354,15 @@
           e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(e);
         }
-        BroadcastDownloadFailed(e, t = !0) {
+        BroadcastDownloadFailed(e, t = !0, r = _.N1.Invalid) {
           e.Stop();
-          let r = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-          r &&
-            r.m_eWatchState != T.Loading &&
-            (r.m_bWebRTC && t && (r.m_bWebRTC = !1),
-            this.GetBroadcastManifest(r, e.GetWatchLocation()));
+          let a = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
+          a &&
+            a.m_eWatchState != T.Loading &&
+            (a.m_bWebRTC && t && (a.m_bWebRTC = !1),
+            r == _.N1.StreamGone
+              ? this.DelayedGetBroadcastManifest(a, e.GetWatchLocation())
+              : this.GetBroadcastManifest(a, e.GetWatchLocation()));
         }
         UserInputClickVideo(e) {
           if (
@@ -8610,7 +8617,7 @@
         StartBroadcast(e) {
           this.InitPlayer(),
             e.m_data.url
-              ? ((this.m_player = new _.C(
+              ? ((this.m_player = new _.C2(
                   this.m_elVideo,
                   !(0, m.c8)() && (0, m.Pw)()
                 )),
@@ -8642,14 +8649,14 @@
         }
         StartClip(e) {
           this.InitPlayer(),
-            (this.m_player = new _.C(this.m_elVideo)),
+            (this.m_player = new _.C2(this.m_elVideo)),
             this.m_player.PlayMPD(e.m_data.clip_url, null),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
         StartVOD(e) {
           this.InitPlayer();
-          let t = new _.C(this.m_elVideo);
+          let t = new _.C2(this.m_elVideo);
           (this.m_player = t),
             p.L7.logged_in &&
               e.m_nAppIDVOD &&
@@ -8755,7 +8762,7 @@
               this.IsBroadcastVOD() &&
                 ((this.m_nTimelineDuration = this.m_nVideoEndPos),
                 this.m_fnOnVideoEnd &&
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < _.Y))
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < _.YW))
             ) {
               const e = 400;
               this.m_videoEndingTimer = window.setTimeout(() => {
@@ -8764,7 +8771,7 @@
             }
             (this.m_bBuffering = this.m_player.IsBuffering()),
               (this.m_bOnLiveEdge =
-                this.m_nVideoEndPos - this.m_nPlaybackTime < _.Y),
+                this.m_nVideoEndPos - this.m_nPlaybackTime < _.YW),
               this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
           }
         }
@@ -8792,8 +8799,9 @@
                 t.gamedata.soundtrack
               );
         }
-        OnDownloadFailed() {
-          j.BroadcastDownloadFailed(this);
+        OnDownloadFailed(e) {
+          let t = e.detail || _.N1.Invalid;
+          j.BroadcastDownloadFailed(this, !0, t);
         }
         OnWebRTCRetry() {
           j.BroadcastDownloadFailed(this, !1);

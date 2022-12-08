@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7703985";
+var CLSTAMP = "7709005";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7703985";
     i,
     s,
     r = {
-      27897: (e, t, n) => {
+      72809: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7703985";
         }
         Object.create;
         Object.create;
-        n(14464);
+        n(80415);
         var r = n(87363),
           o = n.n(r),
           a = n(61533);
@@ -773,7 +773,7 @@ var CLSTAMP = "7703985";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(q || (q = {}));
         var $, K, Y;
-        n(89398);
+        n(92244);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1340,7 +1340,7 @@ var CLSTAMP = "7703985";
           }
         }
         var ke = n(42238);
-        n(76561);
+        n(49753);
         class ge extends me {
           BIsExpired() {
             return Ce.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1708,7 +1708,7 @@ var CLSTAMP = "7703985";
             });
           });
       },
-      8709: (e, t, n) => {
+      43762: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1875,7 +1875,7 @@ var CLSTAMP = "7703985";
               };
         }
       },
-      14464: (e, t, n) => {
+      80415: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2395,6 +2395,6 @@ var CLSTAMP = "7703985";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(27897));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(72809));
   c = a.O(c);
 })();

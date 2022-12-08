@@ -429,7 +429,7 @@
     },
     35402: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => w, Y: () => C });
+      n.d(t, { C2: () => y, N1: () => w, YW: () => C });
       var i = n(70655),
         r = n(9669),
         s = n.n(r),
@@ -449,15 +449,19 @@
       n(54891);
       const C = 5,
         b = "auto";
-      var S;
+      var S, w;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
           (e[(e.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
           (e[(e.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
           (e[(e.HAVE_ENOUGH_DATA = 4)] = "HAVE_ENOUGH_DATA");
-      })(S || (S = {}));
-      class w {
+      })(S || (S = {})),
+        (function (e) {
+          (e[(e.Invalid = 0)] = "Invalid"),
+            (e[(e.StreamGone = 1)] = "StreamGone");
+        })(w || (w = {}));
+      class y {
         constructor(e, t = !1) {
           (this.m_elVideo = null),
             (this.m_strMPD = ""),
@@ -826,11 +830,16 @@
           for (let e of this.m_rgLoaders) e.SetMediaSource(this.m_mediaSource);
           this.BeginPlayback();
         }
+        HandleMediaSourceError(e) {
+          this.m_bClosing ||
+            e.target != this.m_mediaSource ||
+            this.StopDownloads();
+        }
         OnMediaSourceEnded(e) {
-          (0, g.yv)("OnMediaSourceEnded");
+          (0, g.yv)("OnMediaSourceEnded", e), this.HandleMediaSourceError(e);
         }
         OnMediaSourceClose(e) {
-          (0, g.yv)("OnMediaSourceClose");
+          (0, g.yv)("OnMediaSourceClose", e), this.HandleMediaSourceError(e);
         }
         OnVideoWaiting(e) {
           if (
@@ -1109,8 +1118,8 @@
                 this.PlayOnElement(),
             this.DispatchEvent("valve-bufferupdate"));
         }
-        OnSegmentDownloadFailed(e) {
-          this.StopDownloads(), this.DispatchEvent("valve-downloadfailed");
+        OnSegmentDownloadFailed(e, t) {
+          this.StopDownloads(), this.DispatchEvent("valve-downloadfailed", t);
         }
         OnSegmentDownloadGone(e) {
           this.m_bIsBuffering && e.GetNumConsecutiveDownloadGones() <= 3
@@ -1122,7 +1131,7 @@
                 "OnSegmentDownloadGone: too many consecutive 'gone', erroring the download: " +
                   e.GetNumConsecutiveDownloadGones()
               ),
-              this.OnSegmentDownloadFailed(e));
+              this.OnSegmentDownloadFailed(e, w.StreamGone));
         }
         GetCurrentAudioAdaptationfunction() {
           return this.m_mpd
@@ -1275,7 +1284,7 @@
               c = r.nHeight || 0,
               d = this.GetVideoPlayerHeight();
             if (d > 0 && l > 0) {
-              if (c > y(d)) break;
+              if (c > E(d)) break;
             }
             s = r;
           }
@@ -1472,49 +1481,50 @@
           }
         }
       }
-      function y(e) {
+      function E(e) {
         return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
-      (0, i.gn)([m.a], w.prototype, "OnVisibilityChange", null),
-        (0, i.gn)([m.a], w.prototype, "UpdateMPD", null),
-        (0, i.gn)([m.a], w.prototype, "OnMediaSourceOpen", null),
-        (0, i.gn)([m.a], w.prototype, "OnMediaSourceEnded", null),
-        (0, i.gn)([m.a], w.prototype, "OnMediaSourceClose", null),
-        (0, i.gn)([m.a], w.prototype, "OnVideoWaiting", null),
-        (0, i.gn)([m.a], w.prototype, "OnVideoPause", null),
-        (0, i.gn)([m.a], w.prototype, "OnVideoResize", null),
+      (0, i.gn)([m.a], y.prototype, "OnVisibilityChange", null),
+        (0, i.gn)([m.a], y.prototype, "UpdateMPD", null),
+        (0, i.gn)([m.a], y.prototype, "OnMediaSourceOpen", null),
+        (0, i.gn)([m.a], y.prototype, "HandleMediaSourceError", null),
+        (0, i.gn)([m.a], y.prototype, "OnMediaSourceEnded", null),
+        (0, i.gn)([m.a], y.prototype, "OnMediaSourceClose", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoWaiting", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoPause", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoResize", null),
         (0, i.gn)(
           [m.a],
-          w.prototype,
+          y.prototype,
           "OnDebugPrintEventInfoAndAvailableBuffer",
           null
         ),
-        (0, i.gn)([m.a], w.prototype, "OnVideoError", null),
-        (0, i.gn)([m.a], w.prototype, "OnVideoCanPlay", null),
-        (0, i.gn)([m.a], w.prototype, "GetCurrentPlayTime", null),
-        (0, i.gn)([m.a], w.prototype, "OnVideoTimeUpdate", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoError", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoCanPlay", null),
+        (0, i.gn)([m.a], y.prototype, "GetCurrentPlayTime", null),
+        (0, i.gn)([m.a], y.prototype, "OnVideoTimeUpdate", null),
         (0, i.gn)(
           [m.a],
-          w.prototype,
+          y.prototype,
           "SendUpdateToBookmarkServiceIfNeeded",
           null
         ),
-        (0, i.gn)([m.a], w.prototype, "OnPlayAction", null),
-        (0, i.gn)([m.a], w.prototype, "GetPlaybackRate", null),
-        (0, i.gn)([m.a], w.prototype, "GetCDNAuthURLParameter", null),
-        (0, i.gn)([m.a], w.prototype, "OnSegmentDownloaded", null),
-        (0, i.gn)([m.a], w.prototype, "PlayOnElement", null),
-        (0, i.gn)([m.a], w.prototype, "OnSegmentDownloadFailed", null),
-        (0, i.gn)([m.a], w.prototype, "OnSegmentDownloadGone", null),
+        (0, i.gn)([m.a], y.prototype, "OnPlayAction", null),
+        (0, i.gn)([m.a], y.prototype, "GetPlaybackRate", null),
+        (0, i.gn)([m.a], y.prototype, "GetCDNAuthURLParameter", null),
+        (0, i.gn)([m.a], y.prototype, "OnSegmentDownloaded", null),
+        (0, i.gn)([m.a], y.prototype, "PlayOnElement", null),
+        (0, i.gn)([m.a], y.prototype, "OnSegmentDownloadFailed", null),
+        (0, i.gn)([m.a], y.prototype, "OnSegmentDownloadGone", null),
         (0, i.gn)(
           [m.a],
-          w.prototype,
+          y.prototype,
           "VerifyFirstSegementDownloadProgress",
           null
         ),
-        (0, i.gn)([m.a], w.prototype, "GameDataEventTrigger", null),
-        (0, i.gn)([m.a], w.prototype, "ReportPlayerStats", null),
-        (0, i.gn)([o.aD.bound], w.prototype, "CaptureStatsForDisplay", null);
+        (0, i.gn)([m.a], y.prototype, "GameDataEventTrigger", null),
+        (0, i.gn)([m.a], y.prototype, "ReportPlayerStats", null),
+        (0, i.gn)([o.aD.bound], y.prototype, "CaptureStatsForDisplay", null);
     },
     14712: (e, t, n) => {
       "use strict";
@@ -2835,10 +2845,10 @@
             this.UpdateBuffer();
         }
         OnSourceBufferError(e) {
-          console.log("OnSourceBufferError");
+          console.log("OnSourceBufferError", this.GetDebugName(), e);
         }
         OnSourceBufferAbort(e) {
-          console.log("OnSourceBufferAbort");
+          console.log("OnSourceBufferAbort", this.GetDebugName(), e);
         }
         ScheduleNextDownload() {
           if (this.m_bNeedInitSegment) return void this.DownloadNextSegment();
@@ -23939,7 +23949,7 @@
               "valve-userinputneeded",
               this.OnUserInputNeeded
             ),
-            (this.m_player = new O.C(this.m_elVideo, !1)),
+            (this.m_player = new O.C2(this.m_elVideo, !1)),
             this.SetMute(!0),
             this.m_player.PlayMPD(t, null, null);
         }
