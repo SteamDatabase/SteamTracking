@@ -1333,9 +1333,6 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   min-width: unset;
   scroll-snap-align: unset;
 }
-.BasicUI .eventrow_OtherEvents_2ioeM {
-  display: unset;
-}
 .center_row_trgt.ItemCount_1 .eventrow_OtherEvents_2ioeM {
   width: 50%;
 }
@@ -1378,9 +1375,6 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
     margin: 0px 16px 0px 0px;
   }
-}
-.BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
-  margin: unset;
 }
 .eventrow_OtherEvents_BGImage_3rp-l {
   width: 100%;

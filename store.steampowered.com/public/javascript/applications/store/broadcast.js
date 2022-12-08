@@ -110,18 +110,22 @@
     36625: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
-        GiveawayWinnerBoxLeft:
-          "broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq",
+        GiveawayWinnerBoxRight:
+          "broadcastchatannouncement_GiveawayWinnerBoxRight_164o1",
         GiveawayWinnerText:
           "broadcastchatannouncement_GiveawayWinnerText_3BkKS",
         GiveawayWinnerCountdown:
           "broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3",
-        GiveawayWinnerBoxRight:
-          "broadcastchatannouncement_GiveawayWinnerBoxRight_164o1",
+        GiveawayWinnerBoxLeft:
+          "broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq",
         GiveawayWinnerArt: "broadcastchatannouncement_GiveawayWinnerArt_3obND",
         GiveawayWinnerQuestion:
           "broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8",
         InViewerBar: "broadcastchatannouncement_InViewerBar_1UUjk",
+        GiveawayRegisterButton:
+          "broadcastchatannouncement_GiveawayRegisterButton_3rlW-",
+        GiveawayAlreadyRegistered:
+          "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
     35663: (e) => {
@@ -738,17 +742,17 @@
           return "CSteamTV_SetBroadcastChannelLinkRegions_Response";
         }
       }
-      class z extends v {
+      class x extends v {
         constructor(e = null) {
           super(),
-            z.prototype.is_live || y.aR(z.M()),
+            x.prototype.is_live || y.aR(x.M()),
             v.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   is_live: { n: 1, br: y.FE.readBool, bw: y.Xc.writeBool },
                   is_disabled: { n: 2, br: y.FE.readBool, bw: y.Xc.writeBool },
@@ -795,55 +799,55 @@
                   },
                 },
               }),
-            z.sm_m
+            x.sm_m
           );
         }
         static MBF() {
-          return z.sm_mbf || (z.sm_mbf = y.Bh(z.M())), z.sm_mbf;
+          return x.sm_mbf || (x.sm_mbf = y.Bh(x.M())), x.sm_mbf;
         }
         toObject(e = !1) {
-          return z.toObject(e, this);
+          return x.toObject(e, this);
         }
         static toObject(e, t) {
-          return y.TA(z.M(), e, t);
+          return y.TA(x.M(), e, t);
         }
         static fromObject(e) {
-          return y.aD(z.M(), e);
+          return y.aD(x.M(), e);
         }
         static deserializeBinary(e) {
           let t = new S.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
+            r = new x();
+          return x.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return y.F(z.MBF(), e, t);
+          return y.F(x.MBF(), e, t);
         }
         serializeBinary() {
           var e = new S.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          y.l2(z.M(), e, t);
+          y.l2(x.M(), e, t);
         }
         serializeBase64String() {
           var e = new S.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetBroadcastChannelStatus_Response";
         }
       }
-      class x extends v {
+      class z extends v {
         constructor(e = null) {
           super(),
-            x.prototype.broadcast_channel_id || y.aR(x.M()),
+            z.prototype.broadcast_channel_id || y.aR(z.M()),
             v.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
                 fields: {
                   broadcast_channel_id: {
                     n: 1,
@@ -914,39 +918,39 @@
                   },
                 },
               }),
-            x.sm_m
+            z.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = y.Bh(x.M())), x.sm_mbf;
+          return z.sm_mbf || (z.sm_mbf = y.Bh(z.M())), z.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return z.toObject(e, this);
         }
         static toObject(e, t) {
-          return y.TA(x.M(), e, t);
+          return y.TA(z.M(), e, t);
         }
         static fromObject(e) {
-          return y.aD(x.M(), e);
+          return y.aD(z.M(), e);
         }
         static deserializeBinary(e) {
           let t = new S.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
+            r = new z();
+          return z.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return y.F(x.MBF(), e, t);
+          return y.F(z.MBF(), e, t);
         }
         serializeBinary() {
           var e = new S.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          y.l2(x.M(), e, t);
+          y.l2(z.M(), e, t);
         }
         serializeBase64String() {
           var e = new S.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "GetBroadcastChannelEntry";
@@ -963,7 +967,7 @@
             I.sm_m ||
               (I.sm_m = {
                 proto: I,
-                fields: { results: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: z, r: !0, q: !0 } },
               }),
             I.sm_m
           );
@@ -1014,7 +1018,7 @@
             P.sm_m ||
               (P.sm_m = {
                 proto: P,
-                fields: { results: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: z, r: !0, q: !0 } },
               }),
             P.sm_m
           );
@@ -1276,7 +1280,7 @@
                     br: y.FE.readUint64String,
                     bw: y.Xc.writeUint64String,
                   },
-                  channels: { n: 5, c: x, r: !0, q: !0 },
+                  channels: { n: 5, c: z, r: !0, q: !0 },
                   release_date: {
                     n: 6,
                     br: y.FE.readString,
@@ -1394,7 +1398,7 @@
             L.sm_m ||
               (L.sm_m = {
                 proto: L,
-                fields: { results: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: z, r: !0, q: !0 } },
               }),
             L.sm_m
           );
@@ -2198,7 +2202,7 @@
             ae.sm_m ||
               (ae.sm_m = {
                 proto: ae,
-                fields: { results: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: z, r: !0, q: !0 } },
               }),
             ae.sm_m
           );
@@ -2345,7 +2349,7 @@
             ne.sm_m ||
               (ne.sm_m = {
                 proto: ne,
-                fields: { results: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: z, r: !0, q: !0 } },
               }),
             ne.sm_m
           );
@@ -2396,7 +2400,7 @@
             oe.sm_m ||
               (oe.sm_m = {
                 proto: oe,
-                fields: { broadcasts: { n: 1, c: x, r: !0, q: !0 } },
+                fields: { broadcasts: { n: 1, c: z, r: !0, q: !0 } },
               }),
             oe.sm_m
           );
@@ -2448,7 +2452,7 @@
               (le.sm_m = {
                 proto: le,
                 fields: {
-                  broadcasts: { n: 1, c: x, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: z, r: !0, q: !0 },
                   appid: { n: 2, br: y.FE.readUint32, bw: y.Xc.writeUint32 },
                   title: { n: 3, br: y.FE.readString, bw: y.Xc.writeString },
                 },
@@ -2509,7 +2513,7 @@
                     br: y.FE.readString,
                     bw: y.Xc.writeString,
                   },
-                  broadcast: { n: 3, c: x },
+                  broadcast: { n: 3, c: z },
                 },
               }),
             ce.sm_m
@@ -2616,7 +2620,7 @@
               (me.sm_m = {
                 proto: me,
                 fields: {
-                  broadcasts: { n: 1, c: x, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: z, r: !0, q: !0 },
                   title: { n: 2, br: y.FE.readString, bw: y.Xc.writeString },
                 },
               }),
@@ -2670,7 +2674,7 @@
               (ue.sm_m = {
                 proto: ue,
                 fields: {
-                  broadcasts: { n: 1, c: x, r: !0, q: !0 },
+                  broadcasts: { n: 1, c: z, r: !0, q: !0 },
                   title: { n: 2, br: y.FE.readString, bw: y.Xc.writeString },
                 },
               }),
@@ -2724,7 +2728,7 @@
               (he.sm_m = {
                 proto: he,
                 fields: {
-                  broadcast: { n: 1, c: x },
+                  broadcast: { n: 1, c: z },
                   title: { n: 2, br: y.FE.readString, bw: y.Xc.writeString },
                   chat_group_id: {
                     n: 3,
@@ -2783,7 +2787,7 @@
               (_e.sm_m = {
                 proto: _e,
                 fields: {
-                  broadcast: { n: 1, c: x },
+                  broadcast: { n: 1, c: z },
                   title: { n: 2, br: y.FE.readString, bw: y.Xc.writeString },
                 },
               }),
@@ -3275,7 +3279,7 @@
             });
           }),
           (e.GetBroadcastChannelStatus = function (e, t) {
-            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, z, {
+            return e.SendMsg("SteamTV.GetBroadcastChannelStatus#1", t, x, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
@@ -3749,7 +3753,7 @@
         }
         GetOrCreateChat(e, t) {
           let r = this.GetChat(e, t);
-          return r || ((r = new ze()), this.m_mapChats.set(e || t, r)), r;
+          return r || ((r = new xe()), this.m_mapChats.set(e || t, r)), r;
         }
         static Get() {
           return (
@@ -3762,7 +3766,7 @@
         }
       }
       (0, a.gn)([c.LO], De.prototype, "m_mapChats", void 0);
-      class ze {
+      class xe {
         constructor() {
           (this.m_ulBroadcastChannelID = ""),
             (this.m_ulChatID = ""),
@@ -4435,16 +4439,16 @@
             (this.m_rgChatMessages = []);
         }
       }
-      (0, a.gn)([c.LO], ze.prototype, "m_mapChannelModeratorUsers", void 0),
-        (0, a.gn)([c.LO], ze.prototype, "m_mapBroadcastModeratorUsers", void 0),
-        (0, a.gn)([c.LO], ze.prototype, "m_nRateLimitSeconds", void 0),
-        (0, a.gn)([c.LO], ze.prototype, "m_bRateLimited", void 0),
-        (0, a.gn)([c.LO], ze.prototype, "m_rgChatMessages", void 0),
-        (0, a.gn)([c.LO], ze.prototype, "m_latestAnnouncement", void 0),
-        (0, a.gn)([fe.a], ze.prototype, "FetchChatModerators", null),
-        (0, a.gn)([fe.a], ze.prototype, "RequestLoop", null),
-        (0, a.gn)([fe.a], ze.prototype, "MuteUserForSession", null);
-      var xe = r(81503),
+      (0, a.gn)([c.LO], xe.prototype, "m_mapChannelModeratorUsers", void 0),
+        (0, a.gn)([c.LO], xe.prototype, "m_mapBroadcastModeratorUsers", void 0),
+        (0, a.gn)([c.LO], xe.prototype, "m_nRateLimitSeconds", void 0),
+        (0, a.gn)([c.LO], xe.prototype, "m_bRateLimited", void 0),
+        (0, a.gn)([c.LO], xe.prototype, "m_rgChatMessages", void 0),
+        (0, a.gn)([c.LO], xe.prototype, "m_latestAnnouncement", void 0),
+        (0, a.gn)([fe.a], xe.prototype, "FetchChatModerators", null),
+        (0, a.gn)([fe.a], xe.prototype, "RequestLoop", null),
+        (0, a.gn)([fe.a], xe.prototype, "MuteUserForSession", null);
+      var ze = r(81503),
         Ie = (r(29139), r(21927)),
         Pe = r(89608),
         ke = r.n(Pe),
@@ -4492,23 +4496,28 @@
       }
       function lt(e) {
         var t;
-        const { latestWinner: r, className: a, strActionButton: i } = e,
-          [s, n] = (0, tt.Jq)(
+        const {
+            latestWinner: r,
+            className: a,
+            strActionButton: i,
+            strActionClassname: s,
+          } = e,
+          [n, o] = (0, tt.Jq)(
             (null === (t = r.winner_accounts) || void 0 === t
               ? void 0
               : t.length) > 0
               ? r.winner_accounts[0]
               : 0
           ),
-          o = (0, it.et)(
+          c = (0, it.et)(
             "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif"
           ),
-          c = (0, it.et)(
+          d = (0, it.et)(
             "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/clans//4/56521811317a8298a7aff4a914be964b67dd0325.png"
           ),
-          d = (0, et.J)(r.giveaway_gid);
-        let m =
-          d.bLoadingGiveawayInfo || d.closed ? null : d.seconds_until_drawing;
+          m = (0, et.J)(r.giveaway_gid);
+        let u =
+          m.bLoadingGiveawayInfo || m.closed ? null : m.seconds_until_drawing;
         return l.createElement(
           at.ns,
           {
@@ -4521,7 +4530,15 @@
             l.createElement(
               "div",
               { className: nt().GiveawayWinnerBoxLeft },
-              Boolean(s || !n) &&
+              l.createElement("img", {
+                className: nt().GiveawayWinnerArt,
+                src: c,
+              })
+            ),
+            l.createElement(
+              "div",
+              { className: nt().GiveawayWinnerBoxRight },
+              Boolean(n || !o) &&
                 l.createElement(
                   "div",
                   { className: nt().GiveawayWinnerText },
@@ -4530,7 +4547,7 @@
                     l.createElement("br", null)
                   )
                 ),
-              Boolean(n) &&
+              Boolean(o) &&
                 l.createElement(
                   "div",
                   { className: nt().GiveawayWinnerText },
@@ -4538,31 +4555,23 @@
                     r.winner_accounts[0] == Me.L7.accountid
                       ? "#GA2022_Congrats_Deck_Me"
                       : "#GA2022_Congrats_Deck_OTher",
-                    n.persona_name,
+                    o.persona_name,
                     l.createElement("br", null)
                   )
                 ),
-              Boolean(m) &&
+              Boolean(u > 0) &&
                 l.createElement(
                   "div",
                   { className: nt().GiveawayWinnerCountdown },
-                  (0, we.kQ)("#GA2022_Congrats_NextDraw", m)
+                  (0, we.kQ)("#GA2022_Congrats_NextDraw", u)
                 )
             ),
-            l.createElement(
-              "div",
-              { className: nt().GiveawayWinnerBoxRight },
-              l.createElement("img", {
-                className: nt().GiveawayWinnerArt,
-                src: o,
-              }),
-              l.createElement("img", {
-                className: nt().GiveawayWinnerQuestion,
-                src: c,
-              })
-            )
-          ),
-          Boolean(i) && l.createElement("div", null, i)
+            l.createElement("img", {
+              className: nt().GiveawayWinnerQuestion,
+              src: d,
+            }),
+            Boolean(i) && l.createElement("div", { className: s }, i)
+          )
         );
       }
       function ct(e) {
@@ -4602,17 +4611,21 @@
             return null;
           })(t, r),
           i = (0, rt.x)("GameAwardDrop2022");
-        let s = null;
+        let s = null,
+          n = nt().GiveawayRegisterButton;
         return (
           Me.L7.logged_in
-            ? (null == i ? void 0 : i.registered) ||
-              (s = (0, we.Xx)("#GA2022_RegisterToWin"))
+            ? (null == i ? void 0 : i.registered)
+              ? ((s = (0, we.Xx)("#GA2022_AlreadyRegistered")),
+                (n = nt().GiveawayAlreadyRegistered))
+              : (s = (0, we.Xx)("#GA2022_RegisterToWin"))
             : (s = (0, we.Xx)("#GA2022_RegisterLoginToWin")),
           a
             ? l.createElement(lt, {
                 latestWinner: a,
                 className: nt().InViewerBar,
                 strActionButton: s,
+                strActionClassname: n,
               })
             : null
         );
@@ -5068,7 +5081,7 @@
             a = this.m_chat ? this.m_chat.m_rgChatMessages : [],
             i = r ? a.reverse() : a,
             s = this.m_chat
-              ? xe.C.GetPresenterMapForBroadcasterSteamID(
+              ? ze.C.GetPresenterMapForBroadcasterSteamID(
                   this.m_chat.GetBroadcastSteamID()
                 )
               : void 0,
@@ -5366,8 +5379,8 @@
         );
       });
       var Dt = r(1351),
-        zt = r(1245),
-        xt = (r(58185), r(10767), r(3356), r(27991)),
+        xt = r(1245),
+        zt = (r(58185), r(10767), r(3356), r(27991)),
         It = r(159),
         Pt = r(9487),
         kt = r(96187),
@@ -5655,7 +5668,7 @@
         }
         componentDidMount() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            (0, xt.nf)(null),
+            (0, zt.nf)(null),
               yield Qe.ai
                 .Get()
                 .LoadBIsEmbeddedBroadcastHidden(this.m_cancelSignal),
@@ -5704,7 +5717,7 @@
           const t = this.state.bExpanded,
             r = Ye.c9.GetOrCreateBroadcastInfo(e.steamid).m_nAppID;
           (0, Qe.wx)(r, t ? 2 : 3, e.snr),
-            t && (0, zt.X)() && (0, zt.X)().AddEvent(1005),
+            t && (0, xt.X)() && (0, xt.X)().AddEvent(1005),
             window.setTimeout(
               () =>
                 this.setState({
@@ -5768,7 +5781,7 @@
             ),
             n = l.createElement(_r, { key: "left" + i, ImgUrl: e.left_panel });
           if (i < 11) {
-            const t = xe.C.GetAppIDListForBroadcasterSteamID(e.steamid);
+            const t = ze.C.GetAppIDListForBroadcasterSteamID(e.steamid);
             t && 1 === t.length && (i = t[0]);
           }
           return (
@@ -5810,7 +5823,7 @@
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
             ((this.m_bMarkedUsabilitySeen = !0),
-            (0, zt.X)() && (0, zt.X)().AddEvent(1004));
+            (0, xt.X)() && (0, xt.X)().AddEvent(1004));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
@@ -5976,7 +5989,7 @@
             this.props.stream.steamid
           ).m_nAppID;
           (0, Qe.wx)(e, 7, this.props.stream.snr),
-            (0, zt.X)() && (0, zt.X)().AddEvent(1006),
+            (0, xt.X)() && (0, xt.X)().AddEvent(1006),
             this.setState({ bPopout: !1, bPreventPopup: !0 });
         }
         OnEnter() {
@@ -6193,13 +6206,13 @@
                   l.createElement(qe.Zrf, null)
                 )
               ),
-              r && l.createElement(ur, Object.assign({}, this.props)),
-              Boolean(this.props.chatAnnouncementGivewayGID) &&
-                l.createElement(ct, {
-                  gidGiveaway: this.props.chatAnnouncementGivewayGID,
-                  stream: this.props.stream,
-                })
-            )
+              r && l.createElement(ur, Object.assign({}, this.props))
+            ),
+            Boolean(this.props.chatAnnouncementGivewayGID) &&
+              l.createElement(ct, {
+                gidGiveaway: this.props.chatAnnouncementGivewayGID,
+                stream: this.props.stream,
+              })
           );
         }
       };
@@ -6582,8 +6595,8 @@
         R = r(53622),
         O = r(41311),
         D = r(47808),
-        z = r(48899),
-        x = r(90666),
+        x = r(48899),
+        z = r(90666),
         I = r(50141),
         P = r(59950),
         k = r(35663),
@@ -7138,7 +7151,7 @@
           if (!t || !this.props.onOpenLinkInNewWindow) return;
           let r = t.GetBroadcastInfo();
           if (!r) return;
-          let a = (0, m.OL)(`${x.De.STORE_BASE_URL}app/${r.m_strAppId}`);
+          let a = (0, m.OL)(`${z.De.STORE_BASE_URL}app/${r.m_strAppId}`);
           this.props.onOpenLinkInNewWindow(e, a), e.stopPropagation();
         }
         GetContextMenuItems() {
@@ -7900,8 +7913,8 @@
         }
         SetVolumeWithCoord(e, t) {
           let r = e.getBoundingClientRect(),
-            a = z.r4(t, r.left, r.right, 0, 1),
-            i = z.Lh(a, 0, 1),
+            a = x.r4(t, r.left, r.right, 0, 1),
+            i = x.Lh(a, 0, 1),
             s = this.props.video;
           s.SetMute(a < 0.01), s.SetVolume(i);
         }
@@ -8058,10 +8071,10 @@
             a = t.GetTimelineStartPos() + t.GetTimelineDuration(),
             i = t.GetTimeAtMousePosition(e, this.m_rectSlider, r, a);
           if (this.state.bStartMouseDown) {
-            const e = z.Lh(i, r, t.m_editorEndTime - 5);
+            const e = x.Lh(i, r, t.m_editorEndTime - 5);
             t.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = z.Lh(i, t.m_editorStartTime + 5, a);
+            const e = x.Lh(i, t.m_editorStartTime + 5, a);
             t.m_editorEndTime = e;
           } else
             i != this.state.nGrabberMouseDownTime &&
@@ -8104,9 +8117,9 @@
               u.QO.Timeline
             );
           i < 0.05 && (i = 0);
-          let s = z.Lh(r, 0, 100).toFixed(1) + "%",
-            n = z.Lh(a, 0, 100).toFixed(1) + "%",
-            o = z.Lh(i, 0, 100).toFixed(1) + "%",
+          let s = x.Lh(r, 0, 100).toFixed(1) + "%",
+            n = x.Lh(a, 0, 100).toFixed(1) + "%",
+            o = x.Lh(i, 0, 100).toFixed(1) + "%",
             c = {},
             d = {},
             m = {},

@@ -343,8 +343,8 @@ GHomepage = {
 			GSteamCurators.Init( GHomepage.rgCuratedAppsData );
 		} catch( e ) { OnHomepageException(e); }
 
-		// mark index as displayed so it doesn't appear in main cap; it is always below main cap
-		GDynamicStore.MarkAppIDsAsDisplayed( [ 1059530, 1059570, 1059550 ] );
+		// mark index and steam deck as displayed so it doesn't appear in main cap; it is always below main cap
+		GDynamicStore.MarkAppIDsAsDisplayed( [ 1059530, 1059570, 1059550, 1675200 ] );
 		if ( GHomepage.unBackgroundAppID )
 			GDynamicStore.MarkAppIDsAsDisplayed( [ GHomepage.unBackgroundAppID ] );
 

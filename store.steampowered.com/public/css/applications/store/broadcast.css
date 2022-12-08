@@ -325,13 +325,14 @@
   background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 3px 5px #000;
-  transition: filter 0.5s ease-out 100ms;
+  box-shadow: 0px 3px 5px #000000aa;
+  transition: filter 0.25s ease-out 100ms;
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs:hover {
   filter: hue-rotate(30deg);
+  color: #fff;
 }
-.broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq {
+.broadcastchatannouncement_GiveawayWinnerBoxRight_164o1 {
   padding: 10px;
 }
 .broadcastchatannouncement_GiveawayWinnerText_3BkKS {
@@ -342,29 +343,71 @@
 }
 .broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3 {
   font-size: 10px;
-  color: #dedede;
   margin-top: 3px;
 }
-.broadcastchatannouncement_GiveawayWinnerBoxRight_164o1 {
+.broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 .broadcastchatannouncement_GiveawayWinnerArt_3obND {
   width: 90px;
-  margin-right: 10px;
+  margin-left: 5px;
 }
 .broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8 {
-  height: 16px;
-  width: 16px;
-  opacity: 0.75;
+  height: 14px;
+  width: 14px;
+  opacity: 0.7;
   position: absolute;
   right: 0;
   bottom: 0;
   margin: 0px 4px 4px 0px;
 }
 .broadcastchatannouncement_InViewerBar_1UUjk {
-  color: hotpink;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  right: 0;
+  width: 100%;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerBox_1iRcs {
+  border-radius: 3px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3 {
+  margin-top: 0px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerArt_3obND {
+  width: 60px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8 {
+  visibility: collapse;
+}
+.broadcastchatannouncement_GiveawayRegisterButton_3rlW-,
+.broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy {
+  display: flex;
+  margin: 10px;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #1a9fff 0%, #0056d6 100%);
+  transition: filter 0.25s ease-out 100ms;
+  padding: 5px 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy {
+  background: linear-gradient(120deg, #62aadf88 0%, #e34bba88 100%);
+}
+.broadcastchatannouncement_GiveawayRegisterButton_3rlW-:hover {
+  filter: brightness(1.3);
+  color: #fff;
 }
 .crossfade {
   position: relative;

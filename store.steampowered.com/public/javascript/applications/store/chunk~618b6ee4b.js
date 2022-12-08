@@ -8005,6 +8005,12 @@
                   bInitialState: !1,
                   bSuccessState: t.eligible,
                   bFailedState: !t.eligible,
+                  fnAction: t.eligible
+                    ? void 0
+                    : () =>
+                        (0, a.mG)(this, void 0, void 0, function* () {
+                          yield n.fnCreateRegistration(e);
+                        }),
                 }
               : {
                   bInitialState: !0,

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7709021";
+var CLSTAMP = "7709832";
 (() => {
   "use strict";
   var e,
@@ -288,7 +288,7 @@ var CLSTAMP = "7709021";
         647: "9bbf6d8bc640a9f7fa92",
         680: "d243ed311d835978345d",
         686: "5817665e53404b140bd3",
-        691: "d90019ad2d47cb0098ae",
+        691: "c59d827192dd2f6b3eca",
         698: "12003f213b08543cfa0a",
         727: "265f148e1ff8cf6c2e12",
         799: "3cb9b753898d06bee419",
@@ -370,7 +370,7 @@ var CLSTAMP = "7709021";
         4466: "d9d5ddd5a84f2610498c",
         4535: "e51ac5764bd0a008035a",
         4566: "d45fd1034c59a6ba4adc",
-        4601: "a7b316babf1d86b24747",
+        4601: "efce0057d94cbb843509",
         4680: "ff5be7fe137ca727db6f",
         4682: "b5647a6345b1f1064d8d",
         4722: "d0402ebcb5249fab094a",
@@ -433,7 +433,7 @@ var CLSTAMP = "7709021";
         7934: "7fd05da510829c09397d",
         7942: "049b8934ce8d5f9ffa89",
         7951: "d1d2d8c3779676e3de8e",
-        7952: "de3e0735ac3749193482",
+        7952: "ef9575216cce163af754",
         7975: "5c5abb6e8fac1cd1de1a",
         8001: "75a462359c7c660c1f91",
         8049: "5abc2ae9f0dc7d0d1675",
@@ -503,7 +503,7 @@ var CLSTAMP = "7709021";
       {
         556: "d460f524938db76ee9e1",
         680: "ea7f9c8cc2f801481e20",
-        691: "abfcbc639043f8848d4f",
+        691: "53232be23d05edaa07c7",
         988: "82877e2cea30622a4345",
         1825: "43d080104b63cb1bcddd",
         1918: "b4550d0f773164413658",
@@ -513,15 +513,15 @@ var CLSTAMP = "7709021";
         2420: "32d367b304d9dc15de53",
         2814: "3a5bfe81969294cbd0b5",
         3038: "2b6c76c9fab619fccf6d",
-        3207: "65ce56bc622fa2c0aa13",
+        3207: "ad3732b767e917cac988",
         3413: "9f89a6afad216493d476",
         4158: "1da9c0d77dc0baaeb1f1",
         4535: "38bbe7298529efbe4cc8",
-        4601: "6c31969727178bc534ce",
+        4601: "6748a6981d691d6ec0bb",
         5331: "c8fe5b39ff790016fd92",
         5821: "c215379a43f6d372ce87",
         6601: "cf81e85a43eb3cd28cd4",
-        6661: "b21480244f4429e3c8c0",
+        6661: "c7aae03e77bd7edaf1b1",
         6720: "e7cb8a73956db61581af",
         8986: "52d5e385f7b403470131",
         9332: "4958426d6ea550d87684",
