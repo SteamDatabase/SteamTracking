@@ -352,7 +352,19 @@
               return e ? "YES" : "NO";
             },
           },
-          { key: "url", displayName: "URL" },
+          {
+            key: "url",
+            displayName: "URL",
+            formatFunction: function (e) {
+              return e
+                ? m.createElement(
+                    m.Fragment,
+                    null,
+                    m.createElement("a", { href: e }, e)
+                  )
+                : "";
+            },
+          },
           {
             key: "country_code",
             displayName: "Country Code",
@@ -2068,7 +2080,12 @@
                   }),
                   ie),
                   !Object.keys(W).length &&
-                    m.createElement("div", null, "No league matches.")
+                    m.createElement(
+                      "div",
+                      null,
+                      m.createElement("br", null),
+                      "No league matches."
+                    )
                 )
               ),
               m.createElement("br", null)
