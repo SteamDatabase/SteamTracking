@@ -20015,35 +20015,36 @@
         M = () => (p.JA.IS_OGG ? "games" : "groups"),
         R = () => "/:anything*/diagdata",
         I = () => "/login/home",
-        k = () => "/(migrateevents|migrate)",
-        O = (e) => `/${M()}/${e}/partnerevents`,
-        x = (e) => `/${M()}/${e}/(events|announcements)`,
-        L = (e) => `/app/${e}(/workshop/)?`,
-        B = (e) => `/groups/${e}/`,
-        N = (e) => `/id/${e}`,
-        A = (e) => `/profiles/${e}`,
-        F = () => "/:anything/filedetails",
-        P = () => "/id/:vanity_url/recommended/:appid/",
-        G = () => "/profiles/:steamid/recommended/:appid/",
-        V = () => "/profiles/:steamid/recommended",
-        H = () => "/id/:vanity_url/recommended",
-        U = () => "/id/:vanity_url/friends/add",
-        W = () => "/profiles/:id/friends/add",
-        j = () => "/broadcast",
-        z = () => "/workshop/discussions",
-        K = () => "/sharedfiles/filedetails/discussions",
-        X = () => "/discussions/forum",
-        $ = () => "/faqs/",
-        Z = () => "/questions/",
-        Y = () => "/(conference|steamworksvirtualconference)/",
-        q = () => "/";
-      class Q extends r.Component {
+        k = () => "/oauth/loginform",
+        O = () => "/(migrateevents|migrate)",
+        x = (e) => `/${M()}/${e}/partnerevents`,
+        L = (e) => `/${M()}/${e}/(events|announcements)`,
+        B = (e) => `/app/${e}(/workshop/)?`,
+        N = (e) => `/groups/${e}/`,
+        A = (e) => `/id/${e}`,
+        F = (e) => `/profiles/${e}`,
+        P = () => "/:anything/filedetails",
+        G = () => "/id/:vanity_url/recommended/:appid/",
+        V = () => "/profiles/:steamid/recommended/:appid/",
+        H = () => "/profiles/:steamid/recommended",
+        U = () => "/id/:vanity_url/recommended",
+        W = () => "/id/:vanity_url/friends/add",
+        j = () => "/profiles/:id/friends/add",
+        z = () => "/broadcast",
+        K = () => "/workshop/discussions",
+        X = () => "/sharedfiles/filedetails/discussions",
+        $ = () => "/discussions/forum",
+        Z = () => "/faqs/",
+        Y = () => "/questions/",
+        q = () => "/(conference|steamworksvirtualconference)/",
+        Q = () => "/";
+      class J extends r.Component {
         render() {
           return r.createElement(
             o.VK,
-            { basename: ee() },
+            { basename: te() },
             r.createElement(
-              J,
+              ee,
               null,
               r.createElement(
                 r.Suspense,
@@ -20065,7 +20066,7 @@
                   }),
                   r.createElement(
                     s.AW,
-                    { path: I() },
+                    { path: [I(), k()] },
                     r.createElement(c.d, {
                       config: {
                         login: (e) => r.createElement(D, Object.assign({}, e)),
@@ -20073,17 +20074,17 @@
                     })
                   ),
                   r.createElement(s.AW, {
-                    path: O(":appid_or_vanity_str"),
+                    path: x(":appid_or_vanity_str"),
                     component: f,
                   }),
-                  r.createElement(s.AW, { path: k(), component: v }),
+                  r.createElement(s.AW, { path: O(), component: v }),
                   r.createElement(s.AW, {
-                    path: x(":appid_or_vanity_str"),
+                    path: L(":appid_or_vanity_str"),
                     component: _,
                   }),
-                  r.createElement(s.AW, { path: j(), component: b }),
+                  r.createElement(s.AW, { path: z(), component: b }),
                   r.createElement(s.AW, {
-                    path: L(":appid"),
+                    path: B(":appid"),
                     render: (e) =>
                       r.createElement(c.d, {
                         config: {
@@ -20096,7 +20097,7 @@
                       }),
                   }),
                   r.createElement(s.AW, {
-                    path: B(":groupid_or_vanity_str"),
+                    path: N(":groupid_or_vanity_str"),
                     render: (e) =>
                       r.createElement(c.d, {
                         config: {
@@ -20107,15 +20108,7 @@
                       }),
                   }),
                   r.createElement(s.AW, {
-                    path: P(),
-                    render: (e) => r.createElement(C, Object.assign({}, e)),
-                  }),
-                  r.createElement(s.AW, {
                     path: G(),
-                    render: (e) => r.createElement(C, Object.assign({}, e)),
-                  }),
-                  r.createElement(s.AW, {
-                    path: H(),
                     render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(s.AW, {
@@ -20123,7 +20116,15 @@
                     render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
                   r.createElement(s.AW, {
-                    path: [X(), z(), K()],
+                    path: U(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
+                  }),
+                  r.createElement(s.AW, {
+                    path: H(),
+                    render: (e) => r.createElement(C, Object.assign({}, e)),
+                  }),
+                  r.createElement(s.AW, {
+                    path: [$(), K(), X()],
                     render: (e) =>
                       r.createElement(c.d, {
                         config: {
@@ -20134,26 +20135,26 @@
                   }),
                   r.createElement(
                     s.AW,
-                    { path: [U(), W()] },
+                    { path: [W(), j()] },
                     r.createElement(E, null)
                   ),
                   r.createElement(s.AW, {
-                    path: N(":vanity_url"),
+                    path: A(":vanity_url"),
                     render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
                   r.createElement(s.AW, {
-                    path: A(":steamid"),
+                    path: F(":steamid"),
                     render: (e) => r.createElement(g, Object.assign({}, e)),
                   }),
                   r.createElement(s.AW, {
-                    path: F(),
+                    path: P(),
                     render: (e) => r.createElement(C, Object.assign({}, e)),
                   }),
-                  r.createElement(s.AW, { path: $(), component: w }),
-                  r.createElement(s.AW, { path: Z(), component: y }),
-                  r.createElement(s.AW, { path: Y(), component: S }),
+                  r.createElement(s.AW, { path: Z(), component: w }),
+                  r.createElement(s.AW, { path: Y(), component: y }),
+                  r.createElement(s.AW, { path: q(), component: S }),
                   r.createElement(s.AW, {
-                    path: q(),
+                    path: Q(),
                     render: (e) =>
                       r.createElement(c.d, {
                         config: {
@@ -20172,42 +20173,42 @@
           );
         }
       }
-      function J(e) {
+      function ee(e) {
         return r.createElement(
           h,
           null,
           r.createElement(l.Y0, null, e.children)
         );
       }
-      function ee() {
+      function te() {
         let e = document.createElement("a");
         e.href = p.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      var te = n(73935),
-        ne = (n(55038), n(41311));
+      var ne = n(73935),
+        ie = (n(55038), n(41311));
       n(26149);
-      var ie = n(77520),
-        re = n(65902),
-        oe = n(75362),
-        se = n(53622);
+      var re = n(77520),
+        oe = n(65902),
+        se = n(75362),
+        ae = n(53622);
       n(48341), n(95598), n(30543), n(37699), n(41414), n(15935), n(53477);
       n(69491);
-      (0, se.Dj)(() =>
+      (0, ae.Dj)(() =>
         (0, i.mG)(void 0, void 0, void 0, function* () {
           document.getElementById("application_config")
             ? (0, p.Ek)("application_config")
             : (0, p.Ek)(),
-            (0, oe.Uh)().Init(
+            (0, se.Uh)().Init(
               "Community",
               CLSTAMP,
-              new re.J(p.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new oe.J(p.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, i.mG)(this, void 0, void 0, function* () {
                 {
-                  const t = ne.LJ.GetLanguageFallback(e),
+                  const t = ie.LJ.GetLanguageFallback(e),
                     i = e === t,
                     [r, o, s, a, l, c] = yield Promise.all([
                       n(71574)(`./shared_${e}.json`).then((e) => e.default),
@@ -20223,26 +20224,26 @@
                         ? {}
                         : n(29790)(`./main_${t}.json`).then((e) => e.default),
                     ]);
-                  ne.Yt.AddTokens(
+                  ie.Yt.AddTokens(
                     Object.assign(Object.assign(Object.assign({}, o), r), s),
                     Object.assign(Object.assign(Object.assign({}, l), a), c)
                   );
                 }
-                for (const e of ae) ne.Yt.AddTokens(e);
-                ae = void 0;
+                for (const e of le) ie.Yt.AddTokens(e);
+                le = void 0;
               });
             })(p.De.LANGUAGE),
             document.getElementById("application_root") &&
-              te.render(
-                r.createElement(Q, {}),
+              ne.render(
+                r.createElement(J, {}),
                 document.getElementById("application_root")
               );
         })
       );
-      let ae = [];
+      let le = [];
       window.LocalizationManifestReady = function (e, t, n) {
-        (0, ie.X)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== ae ? ae.push(n) : ne.Yt.AddTokens(n);
+        (0, re.X)("manifest" === t, `Expected manifest not "${t}"`),
+          void 0 !== le ? le.push(n) : ie.Yt.AddTokens(n);
       };
     },
     76430: (e, t, n) => {
