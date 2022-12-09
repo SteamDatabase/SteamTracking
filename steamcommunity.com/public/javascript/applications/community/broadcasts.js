@@ -270,8 +270,8 @@
         y = a(65924),
         G = a(48780),
         A = a(7573),
-        N = a(41311),
-        T = a(90666),
+        T = a(41311),
+        N = a(90666),
         w = a(32548),
         O = a(13596),
         x = a(36567),
@@ -377,7 +377,7 @@
                     "EventSectionTitle"
                   ),
                 },
-                (0, N.kQ)("#EventBrowse_MoreEventsTitle", D.group_name),
+                (0, T.kQ)("#EventBrowse_MoreEventsTitle", D.group_name),
                 " "
               ),
               i.createElement(
@@ -392,7 +392,7 @@
                       className: g().EventSectionMoreBtn,
                       onClick: () => b(!0),
                     },
-                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
+                    (0, T.Xx)("#EventBrowse_MoreEventsBtn")
                   )
                 : i.createElement(
                     B.JW,
@@ -401,7 +401,7 @@
                       route: B.Ue.k_eViewWebSiteHub,
                       className: g().EventSectionMoreBtn,
                     },
-                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
+                    (0, T.Xx)("#EventBrowse_MoreEventsBtn")
                   )
             ),
             i.createElement(
@@ -437,7 +437,7 @@
           [l, m, d, u, _, E, h, f] =
             ((0, y.bJ)(),
             (0, s.SZ)(() => {
-              const e = r || (0, c.jM)(T.De.LANGUAGE),
+              const e = r || (0, c.jM)(N.De.LANGUAGE),
                 n = Boolean(void 0 !== a)
                   ? a
                   : t.GetImageURLWithFallback("capsule", e, p.FN.capsule_main);
@@ -464,7 +464,7 @@
           return i.createElement(O.V, {
             size: "small",
             position: "center",
-            string: (0, N.Xx)("#Loading"),
+            string: (0, T.Xx)("#Loading"),
           });
         const b = (0, S.vY)().GetStoreInitializationTimestamp().getTime() / 1e3,
           G = t ? t.GetStartTimeAndDateUnixSeconds() : "";
@@ -549,7 +549,7 @@
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, C.vs)(t, m.bk),
           r = (0, y.bJ)(),
-          o = (0, T.id)();
+          o = (0, N.id)();
         if (!n) return null;
         const l = n.GetBestPurchaseOption();
         return i.createElement(
@@ -600,7 +600,7 @@
       }
       function H(e) {
         const { event: t, imageURLOverride: a, onClick: n } = e,
-          r = (0, c.jM)(T.De.LANGUAGE),
+          r = (0, c.jM)(N.De.LANGUAGE),
           [o, l, m] = (0, s.SZ)(() =>
             t
               ? [
@@ -889,8 +889,8 @@
         y = a(31933),
         G = a(34133),
         A = a.n(G),
-        N = a(85732),
-        T = a(37699),
+        T = a(85732),
+        N = a(37699),
         w = a(41414),
         O = a(7573),
         x = a(53622),
@@ -1226,7 +1226,7 @@
                 n.createElement(
                   "div",
                   { className: U.AppSummaryWidgetCtn },
-                  n.createElement(N.ju, { id: a.app_id, type: "game" })
+                  n.createElement(T.ju, { id: a.app_id, type: "game" })
                 )
             ),
             n.createElement(
@@ -1267,14 +1267,14 @@
           );
         };
       var H = a(63103),
-        V = a(93981),
-        z = a(44298),
+        z = a(93981),
+        V = a(44298),
         X = a(2388),
         W = a(83147);
       function K(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
-          let a = new V.Pv(e);
+          let a = new z.Pv(e);
           return (
             (a.m_strPlayerName = t.persona_name),
             (a.m_strAvatarHash = t.avatar_hash),
@@ -1310,7 +1310,7 @@
                 href: r,
                 "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
               },
-              n.createElement(z.vV, {
+              n.createElement(V.vV, {
                 persona: t,
                 size: e.size,
                 statusPosition: "bottom",
@@ -1348,25 +1348,26 @@
             return [e.m_nViewerCount, Number.parseInt(e.m_strAppId)];
           }),
           [l] = (0, j.vs)(o, { include_assets: !0 });
+        let s = null == l ? void 0 : l.GetAssets().GetMainCapsuleURL(),
+          i = s && s.length > 0;
         return n.createElement(
           b.S,
           null,
           n.createElement(
             "div",
             { className: ee.ProfileCtn },
-            n.createElement(
-              "a",
-              {
-                href: (0, J.OL)(
-                  (null == l ? void 0 : l.GetStorePageURL()) ||
-                    v.De.STORE_BASE_URL + "app/" + o
-                ),
-                className: ee.GameCapsule,
-              },
-              n.createElement("img", {
-                src: null == l ? void 0 : l.GetAssets().GetMainCapsuleURL(),
-              })
-            ),
+            i &&
+              n.createElement(
+                "a",
+                {
+                  className: ee.GameCapsule,
+                  href: (0, J.OL)(
+                    (null == l ? void 0 : l.GetStorePageURL()) ||
+                      v.De.STORE_BASE_URL + "app/" + o
+                  ),
+                },
+                n.createElement("img", { src: s })
+              ),
             n.createElement(
               "div",
               { className: ee.StreamDetailsCtn },
@@ -1376,12 +1377,7 @@
                 n.createElement(
                   "div",
                   { className: ee.GameAndViewersCtn },
-                  n.createElement(ae, { broadcasterSteamID: t }),
-                  n.createElement(
-                    "div",
-                    { className: ee.ViewerCount },
-                    (0, M.kb)("#Broadcast_ViewerCount", r.toLocaleString())
-                  )
+                  n.createElement(ae, { broadcasterSteamID: t })
                 ),
                 n.createElement(ne, { broadcasterSteamID: t })
               ),
@@ -1437,7 +1433,7 @@
                           (0, x.RA)(e)
                         )
                       : (0, w.AM)(
-                          n.createElement(T.uH, {
+                          n.createElement(N.uH, {
                             strTitle: (0, M.Xx)(
                               "#EventDisplay_Share_NotLoggedIn"
                             ),
@@ -1470,7 +1466,7 @@
         re = (e) => {
           const [t, a] = (0, n.useState)("");
           return n.createElement(
-            T.uH,
+            N.uH,
             {
               strTitle: (0, M.Xx)("#Broadcast_ReportItem_Title"),
               strDescription: (0, M.Xx)("#Broadcast_ReportItem_Description"),
@@ -1557,7 +1553,7 @@
             b.S,
             null,
             n.createElement(
-              T.e1,
+              N.e1,
               { onEscKeypress: E },
               n.createElement(
                 g.VY,
@@ -1665,7 +1661,7 @@
             b.S,
             null,
             n.createElement(
-              T.e1,
+              N.e1,
               { onEscKeypress: d },
               n.createElement(
                 g.VY,
@@ -1864,7 +1860,7 @@
                   n.createElement(
                     "div",
                     { className: H.GameInfo },
-                    n.createElement(N.ju, {
+                    n.createElement(T.ju, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     })
@@ -1965,7 +1961,7 @@
                   {
                     onClick: (e) => {
                       (0, w.AM)(
-                        n.createElement(T.uH, {
+                        n.createElement(N.uH, {
                           strTitle: (0, M.Xx)(
                             "#Broadcast_Control_StopBroadcast"
                           ),
