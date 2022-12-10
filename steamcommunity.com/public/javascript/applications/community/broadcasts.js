@@ -270,8 +270,8 @@
         y = a(65924),
         G = a(48780),
         A = a(7573),
-        T = a(41311),
-        N = a(90666),
+        N = a(41311),
+        T = a(90666),
         w = a(32548),
         O = a(13596),
         x = a(36567),
@@ -377,7 +377,7 @@
                     "EventSectionTitle"
                   ),
                 },
-                (0, T.kQ)("#EventBrowse_MoreEventsTitle", D.group_name),
+                (0, N.kQ)("#EventBrowse_MoreEventsTitle", D.group_name),
                 " "
               ),
               i.createElement(
@@ -392,7 +392,7 @@
                       className: g().EventSectionMoreBtn,
                       onClick: () => b(!0),
                     },
-                    (0, T.Xx)("#EventBrowse_MoreEventsBtn")
+                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
                   )
                 : i.createElement(
                     B.JW,
@@ -401,7 +401,7 @@
                       route: B.Ue.k_eViewWebSiteHub,
                       className: g().EventSectionMoreBtn,
                     },
-                    (0, T.Xx)("#EventBrowse_MoreEventsBtn")
+                    (0, N.Xx)("#EventBrowse_MoreEventsBtn")
                   )
             ),
             i.createElement(
@@ -437,7 +437,7 @@
           [l, m, d, u, _, E, h, f] =
             ((0, y.bJ)(),
             (0, s.SZ)(() => {
-              const e = r || (0, c.jM)(N.De.LANGUAGE),
+              const e = r || (0, c.jM)(T.De.LANGUAGE),
                 n = Boolean(void 0 !== a)
                   ? a
                   : t.GetImageURLWithFallback("capsule", e, p.FN.capsule_main);
@@ -464,7 +464,7 @@
           return i.createElement(O.V, {
             size: "small",
             position: "center",
-            string: (0, T.Xx)("#Loading"),
+            string: (0, N.Xx)("#Loading"),
           });
         const b = (0, S.vY)().GetStoreInitializationTimestamp().getTime() / 1e3,
           G = t ? t.GetStartTimeAndDateUnixSeconds() : "";
@@ -549,7 +549,7 @@
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, C.vs)(t, m.bk),
           r = (0, y.bJ)(),
-          o = (0, N.id)();
+          o = (0, T.id)();
         if (!n) return null;
         const l = n.GetBestPurchaseOption();
         return i.createElement(
@@ -600,7 +600,7 @@
       }
       function H(e) {
         const { event: t, imageURLOverride: a, onClick: n } = e,
-          r = (0, c.jM)(N.De.LANGUAGE),
+          r = (0, c.jM)(T.De.LANGUAGE),
           [o, l, m] = (0, s.SZ)(() =>
             t
               ? [
@@ -889,8 +889,8 @@
         y = a(31933),
         G = a(34133),
         A = a.n(G),
-        T = a(85732),
-        N = a(37699),
+        N = a(85732),
+        T = a(37699),
         w = a(41414),
         O = a(7573),
         x = a(53622),
@@ -1226,7 +1226,7 @@
                 n.createElement(
                   "div",
                   { className: U.AppSummaryWidgetCtn },
-                  n.createElement(T.ju, { id: a.app_id, type: "game" })
+                  n.createElement(N.ju, { id: a.app_id, type: "game" })
                 )
             ),
             n.createElement(
@@ -1267,14 +1267,14 @@
           );
         };
       var H = a(63103),
-        z = a(93981),
-        V = a(44298),
+        V = a(93981),
+        z = a(44298),
         X = a(2388),
         W = a(83147);
       function K(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
-          let a = new z.Pv(e);
+          let a = new V.Pv(e);
           return (
             (a.m_strPlayerName = t.persona_name),
             (a.m_strAvatarHash = t.avatar_hash),
@@ -1310,7 +1310,7 @@
                 href: r,
                 "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
               },
-              n.createElement(V.vV, {
+              n.createElement(z.vV, {
                 persona: t,
                 size: e.size,
                 statusPosition: "bottom",
@@ -1377,7 +1377,12 @@
                 n.createElement(
                   "div",
                   { className: ee.GameAndViewersCtn },
-                  n.createElement(ae, { broadcasterSteamID: t })
+                  n.createElement(ae, { broadcasterSteamID: t }),
+                  n.createElement(
+                    "div",
+                    { className: ee.ViewerCount },
+                    (0, M.kb)("#Broadcast_ViewerCount", r.toLocaleString())
+                  )
                 ),
                 n.createElement(ne, { broadcasterSteamID: t })
               ),
@@ -1433,7 +1438,7 @@
                           (0, x.RA)(e)
                         )
                       : (0, w.AM)(
-                          n.createElement(N.uH, {
+                          n.createElement(T.uH, {
                             strTitle: (0, M.Xx)(
                               "#EventDisplay_Share_NotLoggedIn"
                             ),
@@ -1466,7 +1471,7 @@
         re = (e) => {
           const [t, a] = (0, n.useState)("");
           return n.createElement(
-            N.uH,
+            T.uH,
             {
               strTitle: (0, M.Xx)("#Broadcast_ReportItem_Title"),
               strDescription: (0, M.Xx)("#Broadcast_ReportItem_Description"),
@@ -1553,7 +1558,7 @@
             b.S,
             null,
             n.createElement(
-              N.e1,
+              T.e1,
               { onEscKeypress: E },
               n.createElement(
                 g.VY,
@@ -1661,7 +1666,7 @@
             b.S,
             null,
             n.createElement(
-              N.e1,
+              T.e1,
               { onEscKeypress: d },
               n.createElement(
                 g.VY,
@@ -1860,7 +1865,7 @@
                   n.createElement(
                     "div",
                     { className: H.GameInfo },
-                    n.createElement(T.ju, {
+                    n.createElement(N.ju, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
                     })
@@ -1961,7 +1966,7 @@
                   {
                     onClick: (e) => {
                       (0, w.AM)(
-                        n.createElement(N.uH, {
+                        n.createElement(T.uH, {
                           strTitle: (0, M.Xx)(
                             "#Broadcast_Control_StopBroadcast"
                           ),
