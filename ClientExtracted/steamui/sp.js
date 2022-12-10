@@ -25502,7 +25502,7 @@
           s = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           g = s ? is(s) : "",
           d = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          C = parseInt(1670638041),
+          C = parseInt(1670660655),
           E = C && Bs(C, n, g),
           I = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           B = (0, Pc.l)(1024 * e.nSystemRAMSizeMB * 1024),
