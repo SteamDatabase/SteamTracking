@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7711393";
+var CLSTAMP = "7712105";
 (() => {
   "use strict";
   var e,
@@ -8,11 +8,11 @@ var CLSTAMP = "7711393";
     n,
     a,
     i = {
-      598: (e, t, n) => {
+      354: (e, t, n) => {
         n.d(t, { B: () => s });
         var a = n(655),
-          i = n(819),
-          r = n(102);
+          i = n(612),
+          r = n(614);
         let o = [
           { index: 0, type: i.eV.OK, category: "action" },
           { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -77,11 +77,11 @@ var CLSTAMP = "7711393";
         (0, a.gn)([r.a], s.prototype, "PollGamepads", null),
           (0, a.gn)([r.a], s.prototype, "OnWindowRegainedFocus", null);
       },
-      819: (e, t, n) => {
+      612: (e, t, n) => {
         n.d(t, { eV: () => a, Rr: () => i, oH: () => c });
         var a,
           i,
-          r = n(20);
+          r = n(897);
         class o {
           constructor(e) {
             this.m_config = e;
@@ -263,7 +263,7 @@ var CLSTAMP = "7711393";
           }
         }
       },
-      48: (e, t, n) => {
+      322: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             let n = e.findIndex(t);
@@ -272,7 +272,7 @@ var CLSTAMP = "7711393";
         }
         n.d(t, { Zf: () => a });
       },
-      102: (e, t, n) => {
+      614: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -287,11 +287,11 @@ var CLSTAMP = "7711393";
         }
         n.d(t, { a: () => a });
       },
-      20: (e, t, n) => {
+      897: (e, t, n) => {
         n.d(t, { Ar: () => l, pB: () => o, vq: () => c });
         var a = n(655),
-          i = n(48),
-          r = n(102);
+          i = n(322),
+          r = n(614);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -352,7 +352,7 @@ var CLSTAMP = "7711393";
         }
         (0, a.gn)([r.a], l.prototype, "ScheduledInternal", null);
       },
-      979: (e, t, n) => {
+      100: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -459,7 +459,7 @@ var CLSTAMP = "7711393";
     (o.e = (e) =>
       Promise.all(Object.keys(o.f).reduce((t, n) => (o.f[n](e, t), t), []))),
     (o.u = (e) =>
-      "javascript/legacy_web/gamepad.js?contenthash=a322a5ffe0bbff5d917f"),
+      "javascript/legacy_web/gamepad.js?contenthash=76a950dab0013c9ea249"),
     (o.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (o.g = (function () {
@@ -483,12 +483,12 @@ var CLSTAMP = "7711393";
             u < l.length;
             u++
           ) {
-            var d = l[u];
+            var p = l[u];
             if (
-              d.getAttribute("src") == n ||
-              d.getAttribute("data-webpack") == t + i
+              p.getAttribute("src") == n ||
+              p.getAttribute("data-webpack") == t + i
             ) {
-              s = d;
+              s = p;
               break;
             }
           }
@@ -500,7 +500,7 @@ var CLSTAMP = "7711393";
           s.setAttribute("data-webpack", t + i),
           (s.src = n)),
           (e[n] = [a]);
-        var p = (t, a) => {
+        var d = (t, a) => {
             (s.onerror = s.onload = null), clearTimeout(h);
             var i = e[n];
             if (
@@ -512,11 +512,11 @@ var CLSTAMP = "7711393";
               return t(a);
           },
           h = setTimeout(
-            p.bind(null, void 0, { type: "timeout", target: s }),
+            d.bind(null, void 0, { type: "timeout", target: s }),
             12e4
           );
-        (s.onerror = p.bind(null, s.onerror)),
-          (s.onload = p.bind(null, s.onload)),
+        (s.onerror = d.bind(null, s.onerror)),
+          (s.onload = d.bind(null, s.onload)),
           c && document.head.appendChild(s);
       }
     }),
@@ -656,14 +656,14 @@ var CLSTAMP = "7711393";
     })(),
     (() => {
       var e = o(655),
-        t = (o(979), o(311)),
+        t = (o(100), o(311)),
         n = o.n(t),
-        a = o(598);
+        a = o(354);
       function i(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield o
             .e(511)
-            .then(o.bind(o, 63));
+            .then(o.bind(o, 12));
           e(t);
         });
       }

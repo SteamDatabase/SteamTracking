@@ -1152,8 +1152,13 @@ CWishlistController.prototype.ScrollToRequestedPosition = function()
 	var _this = this;
 
 	if ( window.history.state && window.history.state.wishlistScroll != null )
+	{
 		window.scrollTo( 0, window.history.state.wishlistScroll );
+	}
 	else if ( _this.scrollToAppID !== -1 )
-		document.getElementById('wishlist_row_' + _this.scrollToAppID )?.scrollIntoView();
+	{
+		// A delay is needed so on mobile devices the in-app webview scrolls to the correct position.  It also looks nice to show the top of the page briefly before we auto-scroll within.
+		window.setTimeout( function(){ document.getElementById( 'wishlist_row_' + _this.scrollToAppID )?.scrollIntoView( { behavior: "smooth", block: 'start' } ); }, 500 );
+	}
 }
 

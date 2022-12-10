@@ -6141,7 +6141,7 @@
             t = "hide" === Qe.ai.Get().GetChatVisibility(),
             r = !this.props.stream.nAppIDVOD,
             a = r;
-          let i = Number.parseInt(
+          Number.parseInt(
             "" +
               Ye.c9.GetOrCreateBroadcastInfo(this.props.stream.steamid)
                 .m_nViewerCount
@@ -6152,8 +6152,7 @@
             l.createElement(
               "div",
               { className: (0, $e.Z)(jt().viewer_count, "viewer_count") },
-              l.createElement(qe.lsH, null),
-              (0, Vt.AV)(i)
+              " "
             ),
             l.createElement(
               "div",

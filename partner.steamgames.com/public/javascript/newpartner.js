@@ -1094,7 +1094,7 @@ function SignLatestPurchaseOncePolicy( returnURL )
 
 	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
 	if ( !agreedToSDA1.prop("checked") ) {
-		ShowAlertDialog('Warning', 'You must agree to the terms in the Purchase Once Policy before continuing.');
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Purchase Once Policy Addendum before continuing.');
 		return;
 	}
 
@@ -1110,7 +1110,7 @@ function SignLatestPurchaseOncePolicy( returnURL )
 				waitingDialog.Dismiss();
 				if ( response.success == 1 )
 				{
-					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Purchase Once Policy. Click OK to continue.' );
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Purchase Once Policy Addendum. Click OK to continue.' );
 					dialog.done( function() {
 						top.location.href = returnURL;
 					} );
