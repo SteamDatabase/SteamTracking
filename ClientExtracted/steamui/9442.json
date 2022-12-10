@@ -2643,7 +2643,7 @@
     "Settings_Controller_Calibration_RHapticStrength": "Right Haptics Intensity",
     "Settings_Controller_Calibration_HapticTest": "Test Haptics",
     "Settings_ControllerCalibration_Trackpads": "Trackpads",
-    "Settings_Controller_Calibration_HapticsWarning": "On Steam Deck we recommend leaving your Haptics Intensity at 5 or lower for an optimal experience.",
+    "Settings_Controller_Calibration_HapticsWarning": "On Steam Deck we recommend leaving your Haptics Intensity at 7 or lower for an optimal experience.",
     "Settings_ControllerCalibration_StartTestPrompt": "Press %1$s to test the Joystick Deadzones",
     "Settings_Controller_Calibration_LPadPressure": "Left Pad Pressure Curve",
     "Settings_Controller_Calibration_RPadPressure": "Right Pad Pressure Curve",

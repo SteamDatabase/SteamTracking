@@ -246,44 +246,6 @@ body.gamepadui_GamepaduiPopupWindowBody_PQL-c
 :root {
   --basicui-header-height: 0px;
 }
-.gamepadpage_GamepadPage_2FqpD {
-  position: relative;
-}
-.gamepadpage_GamepadPage_2FqpD.gamepadpage_OverflowHidden_2aDc- {
-  overflow: hidden;
-}
-.gamepadpage_GamepadPage_2FqpD.gamepadpage_DialogBackground_2msTK {
-  background: #0e141b;
-}
-.gamepadpage_GamepadPage_2FqpD.gamepadpage_PadForHeader_3HmKo {
-  margin-top: 40px;
-}
-.gamepadpage_GamepadPage_2FqpD.gamepadpage_Flexed_15Ymb {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-}
-.gamepadpage_GamepadPage_2FqpD:not(.gamepadpage_Flexed_15Ymb) {
-  width: 100%;
-  height: 100%;
-}
-.gamepadpage_GamepadPage_2FqpD .gamepadpage_GamepadPageDialogContent_5ZP0m {
-  margin: auto;
-  flex: 1;
-}
-.gamepadpage_GamepadPage_2FqpD
-  .gamepadpage_GamepadPageDialogContent_5ZP0m.gamepadpage_RemovePadding_2U8nk {
-  padding: 0;
-}
-.gamepadpage_GamepadPagedSettingsPage_3eUwJ {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-}
-:root {
-  --basicui-header-height: 0px;
-}
 :root {
   --basicui-header-height: 0px;
 }
@@ -3270,6 +3232,44 @@ button.controllerconfiguratorvirtualmenus_MainOptionsButton_1OVab svg {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+:root {
+  --basicui-header-height: 0px;
+}
+.gamepadpage_GamepadPage_2FqpD {
+  position: relative;
+}
+.gamepadpage_GamepadPage_2FqpD.gamepadpage_OverflowHidden_2aDc- {
+  overflow: hidden;
+}
+.gamepadpage_GamepadPage_2FqpD.gamepadpage_DialogBackground_2msTK {
+  background: #0e141b;
+}
+.gamepadpage_GamepadPage_2FqpD.gamepadpage_PadForHeader_3HmKo {
+  margin-top: 40px;
+}
+.gamepadpage_GamepadPage_2FqpD.gamepadpage_Flexed_15Ymb {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.gamepadpage_GamepadPage_2FqpD:not(.gamepadpage_Flexed_15Ymb) {
+  width: 100%;
+  height: 100%;
+}
+.gamepadpage_GamepadPage_2FqpD .gamepadpage_GamepadPageDialogContent_5ZP0m {
+  margin: auto;
+  flex: 1;
+}
+.gamepadpage_GamepadPage_2FqpD
+  .gamepadpage_GamepadPageDialogContent_5ZP0m.gamepadpage_RemovePadding_2U8nk {
+  padding: 0;
+}
+.gamepadpage_GamepadPagedSettingsPage_3eUwJ {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 :root {
   --basicui-header-height: 0px;

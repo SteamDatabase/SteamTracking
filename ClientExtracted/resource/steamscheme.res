@@ -104,8 +104,10 @@ Scheme
 			frame_captiongrip
 			{
 				xpos	4
+				xpos	24 [$OSX]
 				ypos	4
 				wide	r20
+				wide	max [$OSX]
 				tall	60
 				AutoResize	1
 			}

@@ -4860,7 +4860,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_XboxDriverInstall_Failure"	"Driver update failed, error = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"New Controller Firmware Available"
-"Steam_DualSense_FirmwareUpdate_Text"	"There is new firmware available for your DualSense™ Wireless Controller. Click the link below to go to the Sony firmware update page:"
+"Steam_DualSense_FirmwareUpdate_Text"	"There is new firmware available for your %product%. Click the link below to go to the Sony firmware update page:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Don't show this again"
 
 "DownloadRegion_default"				 "Unknown"

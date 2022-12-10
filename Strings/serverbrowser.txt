@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-s
-s
 __stubs
 __TEXT
 __stub_helper
@@ -921,8 +919,9 @@ NSt3__121__basic_string_commonILb1EEE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
-16CHTMLProtoBufMsgI15CMsgFullRepaintE
+16CHTMLProtoBufMsgI13CMsgScreenDPIE
 20CHTMLBaseProtoBufMsg
+16CHTMLProtoBufMsgI15CMsgFullRepaintE
 16CHTMLProtoBufMsgI19CMsgBrowserPositionE
 16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
 16CHTMLProtoBufMsgI11CMsgPostURLE
@@ -943,7 +942,6 @@ NSt3__121__basic_string_commonILb1EEE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
-16CHTMLProtoBufMsgI13CMsgScreenDPIE
 16CHTMLProtoBufMsgI15CMsgBrowserSizeE
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI13CMsgMouseMoveE
@@ -3848,13 +3846,6 @@ j
 &
 &
 &
-&
-&
-&
-&
-&
-&
-&
 p
 0
 p
@@ -3880,6 +3871,7 @@ j
 j
 j
 0
+V%
 p
 0
 j
@@ -3961,6 +3953,7 @@ q
 
 d
 A+M
+(
 j
 j
 j
