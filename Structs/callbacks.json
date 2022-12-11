@@ -291,7 +291,7 @@
         "id": 1030,
         "name": "18TimedTrialStatus_t",
         "size": 16,
-        "posted_at": ["0x2cc158","0x2cc836","0x2ccb27","0x2cce78"]
+        "posted_at": ["0x2cc836","0x2ccb27","0x2cce78"]
     },
     {
         "id": 1101,
@@ -404,7 +404,7 @@
     {
         "id": 1702,
         "name": "Unknown",
-        "size": 1,
+        "size": 39,
         "posted_at": ["0x232ef7"]
     },
     {
@@ -1848,6 +1848,12 @@
         "posted_at": ["0x7f05e5"]
     },
     {
+        "id": 1110015,
+        "name": "Unknown",
+        "size": 12,
+        "posted_at": ["0x805299"]
+    },
+    {
         "id": 1110017,
         "name": "Unknown",
         "size": 164,
@@ -2256,6 +2262,12 @@
         "posted_at": ["0x89cf57"]
     },
     {
+        "id": 1280012,
+        "name": "Unknown",
+        "size": 40,
+        "posted_at": ["0x280d69"]
+    },
+    {
         "id": 1280016,
         "name": "AppAutoUpdateBehaviorChanged_t",
         "size": 8,
@@ -2278,6 +2290,12 @@
         "name": "CheckAppBetaPasswordResponse_t",
         "size": 200,
         "posted_at": ["0x26a207"]
+    },
+    {
+        "id": 1280024,
+        "name": "Unknown",
+        "size": 20,
+        "posted_at": ["0x29981e"]
     },
     {
         "id": 1280025,
