@@ -17906,6 +17906,7 @@
                     },
                     p,
                     e.enable_search &&
+                      !this.props.bInGamepadUI &&
                       a.createElement(
                         "div",
                         { className: $a().SuggestContainer },
@@ -17921,13 +17922,12 @@
                       w.L7.is_support &&
                       (null == t ? void 0 : t.enable_faceted_browsing) &&
                       a.createElement(
-                        "div",
-                        { className: $a().Debug },
-                        a.createElement(
-                          "a",
-                          { href: "", onClick: (e) => this.DebugMatches(e) },
-                          a.createElement(C.mKt, null)
-                        )
+                        ne.s,
+                        {
+                          className: $a().Debug,
+                          onActivate: (e) => this.DebugMatches(e),
+                        },
+                        a.createElement(C.mKt, null)
                       )
                   )
                 ),
@@ -18088,7 +18088,12 @@
           a.createElement(
             ii,
             Object.assign(
-              { key: o, browseInfo: t.item_browse_section_data, section: t },
+              {
+                key: o,
+                browseInfo: t.item_browse_section_data,
+                section: t,
+                bInGamepadUI: r,
+              },
               e
             )
           )

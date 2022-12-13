@@ -23257,7 +23257,7 @@
       "use strict";
       n.d(t, {
         De: () => d,
-        E_: () => a,
+        E_: () => l,
         Ek: () => v,
         JA: () => h,
         Kc: () => E,
@@ -23274,11 +23274,20 @@
       var i = n(70655),
         r = n(48899),
         s = n(61939),
-        o = (n(26149), n(67294));
-      const a = o.createContext({}),
-        l = () => o.useContext(a);
+        o = (n(26149), n(67294)),
+        a = n(77520);
+      const l = o.createContext({});
       function c() {
-        const e = l();
+        const e = (() => {
+          let e = o.useContext(l);
+          return (
+            (0, a.X)(
+              void 0 !== e.IN_GAMEPADUI,
+              "Trying to use ConfigContext without a provider!"
+            ),
+            e
+          );
+        })();
         return null == e ? void 0 : e.IN_GAMEPADUI;
       }
       const d = {
@@ -25068,9 +25077,13 @@
           v.u.Provider,
           { value: { bCanUseLink: !0 } },
           s.createElement(
-            J,
-            null,
-            s.createElement(C.Y0, { bRenderOverlayAtRoot: !0 }, t)
+            l.E_.Provider,
+            { value: { IN_GAMEPADUI: l.De.IN_GAMEPADUI, IN_VR: !1 } },
+            s.createElement(
+              J,
+              null,
+              s.createElement(C.Y0, { bRenderOverlayAtRoot: !0 }, t)
+            )
           )
         );
       }

@@ -3488,8 +3488,8 @@
         R = n(7573),
         P = n(53622),
         L = n(41311),
-        U = n(64839),
-        M = n(90666),
+        M = n(64839),
+        U = n(90666),
         F = n(65924),
         O = n(84282),
         x = n(22335),
@@ -3526,7 +3526,7 @@
           r = (0, l.useRef)(a),
           [o, i] = (0, l.useState)([]),
           d = (0, l.useRef)(0),
-          c = (0, U.NW)(),
+          c = (0, M.NW)(),
           [m] = l.useState(new N.Ar()),
           u = (0, l.useCallback)(() => {
             if ((null == o ? void 0 : o.length) > 0) {
@@ -3589,7 +3589,7 @@
                 }
               a.length > 0
                 ? (i(a), (d.current = 0), u())
-                : ("dev" != M.De.WEB_UNIVERSE && "beta" != M.De.WEB_UNIVERSE) ||
+                : ("dev" != U.De.WEB_UNIVERSE && "beta" != U.De.WEB_UNIVERSE) ||
                   console.error(
                     "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
                     (0, s.ZN)(e),
@@ -3679,7 +3679,7 @@
               : 5 == o.review_score
               ? H().ReviewScoreMixed
               : H().ReviewScoreHigh,
-          i = `${M.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          i = `${U.De.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
           d = l.createElement(
             "div",
             { className: (0, R.Z)(H().ReviewScoreValue, s) },
@@ -3772,7 +3772,7 @@
                 (0, a.mG)(void 0, void 0, void 0, function* () {
                   e.preventDefault(),
                     e.stopPropagation(),
-                    M.L7.logged_in
+                    U.L7.logged_in
                       ? (c(!0),
                         yield h.jg.Get().UpdateGameWishlist(t, !s, n),
                         m.current.token.reason || c(!1))
@@ -3846,7 +3846,7 @@
               "a",
               {
                 href: m ? null : n,
-                target: M.De.IN_CLIENT ? void 0 : "_blank",
+                target: U.De.IN_CLIENT ? void 0 : "_blank",
                 className: H().Midline,
               },
               l.createElement(
@@ -3892,7 +3892,7 @@
                   "a",
                   {
                     href: m ? null : n,
-                    target: M.De.IN_CLIENT ? void 0 : "_blank",
+                    target: U.De.IN_CLIENT ? void 0 : "_blank",
                   },
                   l.createElement(
                     "div",
@@ -3957,7 +3957,7 @@
                 "a",
                 {
                   href: o ? null : n,
-                  target: M.De.IN_CLIENT ? void 0 : "_blank",
+                  target: U.De.IN_CLIENT ? void 0 : "_blank",
                   className: H().TrailerAnchorStoreLink,
                 },
                 Boolean(!r && !o) &&
@@ -4007,7 +4007,7 @@
           [_] = (0, w.jk)(t.id, (0, S.TM)(t.type), {}),
           g = (0, F.bJ)(),
           h = (0, p.mY)(g),
-          v = (0, M.id)();
+          v = (0, U.id)();
         if (!_) return null;
         if (v) return l.createElement(l.Fragment, null, e.children);
         if (!J())
@@ -4064,7 +4064,7 @@
               l.createElement(
                 "div",
                 {
-                  ref: (0, U.BE)(t, (e) => (null == e ? void 0 : e.focus())),
+                  ref: (0, M.BE)(t, (e) => (null == e ? void 0 : e.focus())),
                   className: H().HoverContentTransition,
                   tabIndex: -1,
                   onMouseLeave: (e) => {
@@ -4092,19 +4092,20 @@
           );
         }),
         ie = (e) => {
-          const t = (0, M.id)();
+          const t = (0, U.id)();
           return l.createElement(
             le,
             Object.assign({}, e, { bIgnoreMouseEvents: t })
           );
         };
       class le extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.m_refHoverSourceDiv = l.createRef()),
             (this.m_refHoverContentDiv = l.createRef()),
             (this.m_bPopupShowPending = !1),
-            (this.m_bHoversEnabled = !0);
+            (this.m_bHoversEnabled = !0),
+            (this.m_bHoversEnabled = !e.bIgnoreMouseEvents);
         }
         ClosePopup() {
           this.m_fnHidePopup &&
@@ -4237,14 +4238,14 @@
         }
       }
       (le.sm_embeddedElements = new c.AN("item-hover-source-elements")),
-        (0, a.gn)([U.ak], le.prototype, "ClosePopup", null),
-        (0, a.gn)([U.ak], le.prototype, "OnUnhover", null),
-        (0, a.gn)([U.ak], le.prototype, "OnScroll", null),
-        (0, a.gn)([U.ak], le.prototype, "OnHover", null);
+        (0, a.gn)([M.ak], le.prototype, "ClosePopup", null),
+        (0, a.gn)([M.ak], le.prototype, "OnUnhover", null),
+        (0, a.gn)([M.ak], le.prototype, "OnScroll", null),
+        (0, a.gn)([M.ak], le.prototype, "OnHover", null);
     },
     85732: (e, t, n) => {
       "use strict";
-      n.d(t, { Hl: () => x, S$: () => j, a4: () => W, ju: () => M });
+      n.d(t, { Hl: () => x, S$: () => j, a4: () => W, ju: () => U });
       var a = n(29323),
         r = n(67294),
         o = (n(26149), n(92398), n(7707)),
@@ -4278,8 +4279,8 @@
         R = n(67777),
         P = n(88335),
         L = n.n(P),
-        U = n(5146);
-      const M = (0, a.Pi)((e) => {
+        M = n(5146);
+      const U = (0, a.Pi)((e) => {
         var t;
         const {
             myInstance: n,
@@ -4296,8 +4297,8 @@
           } = (0, S.Q)(e),
           {
             bShowDemoButton: P,
-            bHidePrice: U,
-            bUseSubscriptionLayout: M,
+            bHidePrice: M,
+            bUseSubscriptionLayout: U,
             bHidePlatforms: O,
             bHideContainedApps: x,
             bAllowTwoLinesForHeader: H,
@@ -4474,12 +4475,12 @@
                   ? r.createElement(
                       r.Fragment,
                       null,
-                      Boolean(M && ae)
+                      Boolean(U && ae)
                         ? r.createElement(y.r, { appid: u.id, bIsMuted: a })
                         : r.createElement(w.x1, {
                             info: p,
                             bShowDemoButton: P,
-                            bHidePrice: U,
+                            bHidePrice: M,
                             bHideWishlistButton: oe,
                             bShowDeckCompatibilityDialog: Z,
                           })
@@ -4562,7 +4563,7 @@
           [n] = (0, u.Vm)(t.id, (0, m.TM)(t.type), { include_assets: !0 }),
           a = null == n ? void 0 : n.GetAssets().GetSmallCapsuleURL();
         return r.createElement(
-          U._,
+          M._,
           {
             type: (0, I.Dt)(t.type),
             id: t.id,
