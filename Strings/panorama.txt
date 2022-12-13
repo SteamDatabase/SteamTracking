@@ -4,7 +4,7 @@ __TEXT
 @;
 __text
 __TEXT
-3(1
+C,1
 __stubs
 __TEXT
 __stub_helper
@@ -80,10 +80,10 @@ __LINKEDIT
 >
 @'>
 H\
-(:?
+@:?
 8Y
 P
-0"?
+H"?
 
 *
 8
@@ -153,25 +153,23 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-PW
+hW
 )
 HB
-!4
-:1
-1
+/4
+>1
+.
 1
 1
 0
+d:
 
 
 
 
 
-1
 @
 
-:
-i0
 @
 @
 @
@@ -589,6 +587,7 @@ P
 28CMsgScreenInformationChanged
 19CMsgClearAllCookies
 13CMsgScreenDPI
+16CMsgAckScreenDPI
 22CMsgAuthedSteamDomains
 19CMsgSteamAuthNeeded
 23CMsgSteamAuthCookiesSet
@@ -635,7 +634,7 @@ P
 24CMsgSetProtocolBlockList
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__121__basic_string_commonILb1EEE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -1987,7 +1986,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -2136,6 +2134,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -5371,8 +5370,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Dec  9 2022
-18:10:30
+Dec 12 2022
+18:28:47
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8263,64 +8262,48 @@ SSE is required.
 src.IsValid()
 
 HB
-!4
-:1
-1
+/4
+>1
+.
 1
 1
 0
+d:
 
 
 
 
 
-1
 @
 
-:
-i0
 @
 @
-h;
-?&
-:
-"'
-'
 /
-;
-1'
 '
-9
-9
-&
-&
-&
-1#
-&
-#
-8
-U%
+8&
 .
-0%
 8
+8
+X.
+&
+.
+5$
 -
-q
+s$
+~8
 -
 7
 7
 7
-7
-t,
-j,
 r,
-q,
-~,
+p,
+_,
+,
+,
 ,
 j
-6
 "
 "
-,
 ?
 5
 )
@@ -8332,14 +8315,12 @@ F
 +
 !
 &
-]+
--
+c+
 +
-N.
+15
 W
 j
 Ic
-3*
 @
 @
 @
@@ -8387,15 +8368,15 @@ Ic
 @
 @
 @
-*
 @
 @
 d
-!6
+#6
 Uk/
-x*
-6
 K
+"6
+!6
+6
 t*
 s*
 @
@@ -8420,10 +8401,9 @@ s*
 @
 @
 @
-;3
+<3
 @
 @
-g-
 @
 @
 @
@@ -8432,59 +8412,56 @@ g-
 @
 @
 .&
+7
 )
 )
 )
 )
-@
-@
-A)
-@
-@
+)
+L)
 @
 @
 @
 @
+@
+@
+@
+@
+3
+3
 0
 @
 @
 0
 0
-i(
 )
 )
 )
-b(
 )
 =
-*
 @
 @
-*
 *
 (
 H=
-1
-1
-(
-(
--
--
+4
+5
+5
 '
-E'
-@
+&
 1
+@
 =
+&
 @
 @
-z1
-1
+$
 @
 @
 ?
-.
 @
-&
+#
+#
 &
 &
 &
@@ -8496,17 +8473,22 @@ T
 P
 j
 A
+,
+,
 A
 A
 A
 (
-\"
+`#
+o"
+{&
+G"
 #
-#
-0%
 @
 E9u
+$
 E9u
+"
 "
 "
 "
@@ -8524,42 +8506,52 @@ A
 A
 A
 A
-x"
-,.
+~"
 $
 $
 $
-w!
-{$
-L
-<
-)
-@
-I,
-v
+_-
+[-
+Y-
+X-
 *
+N#
+<
+-
+-
+@
+v
 ,
-'
+,
+,
 !
+!
+!
+x
 }
 "
-@
-+%
-Hi
-(
 "
 @
+(
+(
+(
+(
+'
+,%
+&
+Hi
+(
+@
 @
 0
 0
 
-O&
 
 
+&
 0
 
 
-!
 !
 0
 IcE
@@ -8735,6 +8727,7 @@ IcE
 @
 @
 @
+#
 @
 @
 @
@@ -8853,8 +8846,7 @@ IcE
 @
 @
 @
-w"
-p"
+x"
 @
 j
 @
@@ -8952,9 +8944,7 @@ IcE
 V
 =
 =
-c
-[
-!
+M
 !
 
 
@@ -8963,6 +8953,9 @@ c
 
 @
 &
+g
+
+
 
 
 
@@ -9024,8 +9017,9 @@ I;E
 I;E
 B
 ?
+g
+f
 `
-_
 `
 !
 A
@@ -9093,4 +9087,5 @@ E
 0
 o
 U
-Lc5CR
+^
+Q

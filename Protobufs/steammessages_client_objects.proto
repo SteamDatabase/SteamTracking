@@ -589,3 +589,13 @@ message CMsgShortcutInfo {
 message CMsgShortcutAppIds {
 	repeated uint32 appids = 1;
 }
+
+message CMsgMonitorInfo {
+	message MonitorInfo {
+		required string monitor_device_name = 1;
+		required string monitor_display_name = 2;
+	}
+
+	required string selected_display_name = 1;
+	repeated .CMsgMonitorInfo.MonitorInfo monitors = 2;
+}

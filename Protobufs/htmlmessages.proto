@@ -747,6 +747,10 @@ message CMsgScreenDPI {
 	optional float dpi_scaling = 2;
 }
 
+message CMsgAckScreenDPI {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgAuthedSteamDomains {
 	repeated string domains = 1;
 }

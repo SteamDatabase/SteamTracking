@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-`\
-`\
 __stubs
 __TEXT
 __stub_helper
@@ -48,7 +46,6 @@ __DATA
 P
 __data
 __DATA
-`'
 __thread_vars
 __DATA
 __thread_data
@@ -511,6 +508,7 @@ P
 28CMsgScreenInformationChanged
 19CMsgClearAllCookies
 13CMsgScreenDPI
+16CMsgAckScreenDPI
 22CMsgAuthedSteamDomains
 19CMsgSteamAuthNeeded
 23CMsgSteamAuthCookiesSet
@@ -557,9 +555,7 @@ P
 24CMsgSetProtocolBlockList
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 
 15CHTMLController
 21IHTMLChromeController
@@ -629,6 +625,7 @@ N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 16CHTMLProtoBufMsgI18CMsgMinimizeWindowE
 16CHTMLProtoBufMsgI16CMsgTouchGestureE
 16CHTMLProtoBufMsgI30CMsgImeCompositionRangeChangedE
+16CHTMLProtoBufMsgI16CMsgAckScreenDPIE
 16CHTMLProtoBufMsgI13CMsgSetCookieE
 16CHTMLProtoBufMsgI11CMsgBuildIDE
 16CHTMLProtoBufMsgI22CMsgSetPIDShuttingDownE
@@ -655,7 +652,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -803,6 +799,9 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -993,6 +992,7 @@ HTML_MSG_FUNC eHTMLCommands_MaximizeRestoreWindow
 HTML_MSG_FUNC eHTMLCommands_MinimizeWindow
 HTML_MSG_FUNC eHTMLCommands_TouchGesture
 HTML_MSG_FUNC eHTMLCommands_IME_CompositionRangeChanged
+HTML_MSG_FUNC eHTMLCommands_AckScreenDPI
 CHTMLController::RunFrame - Deferred paint
 STEAMVIDEOTOKEN
 m_ChromeIPCClient
@@ -2352,10 +2352,11 @@ sc_schinese
 @
 @
 
+
+
 @
-i
-
-
+B
+f
 
 
 
@@ -2378,6 +2379,7 @@ AT=
 D
 @
 @
+
 @
 Hc
 Hc
@@ -2444,6 +2446,5 @@ Ic
 @
 0
 0
-<
 0
 0

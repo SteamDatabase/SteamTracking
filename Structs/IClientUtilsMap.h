@@ -97,8 +97,8 @@ public:
     virtual unknown_ret GetSteamEnvironmentForApp(void*,void*,void*) = 0;
     virtual unknown_ret TestHTTP(void*) = 0;
     virtual unknown_ret DumpJobs(void*) = 0;
-    virtual unknown_ret ShowFloatingGamepadTextInput(void*,void*,void*,void*,void*) = 0;
-    virtual unknown_ret DismissFloatingGamepadTextInput() = 0;
+    virtual unknown_ret ShowFloatingGamepadTextInput(void*,void*,void*,void*,void*,void*) = 0;
+    virtual unknown_ret DismissFloatingGamepadTextInput(void*) = 0;
     virtual unknown_ret FloatingGamepadTextInputDismissed() = 0;
     virtual unknown_ret SetGameLauncherMode(void*,void*) = 0;
     virtual unknown_ret ClearAllHTTPCaches() = 0;
