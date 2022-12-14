@@ -143,17 +143,12 @@ function RedeemWalletCode()
 			    method:'post',
 			    parameters: { 
 					'wallet_code' : $('wallet_code').value,
-                    'captchagid' : $('input_captcha_gid').value,
-                    'captcha_text' : $J('#input_captcha').value || grecaptcha.enterprise.getResponse(g_recaptchaInstance),
-				    'sessionid' : g_sessionID
+									    'sessionid' : g_sessionID
 				},
 			    onSuccess: function(transport){
 					g_bRedeemWalletCodeCallRunning = false;
-					if ( $('input_captcha_gid').value )
-                    {
-                        RefreshCaptcha();
-                    }
 
+					
 					if ( transport.responseText ){
 						try {
 							var result = transport.responseText.evalJSON(true);
