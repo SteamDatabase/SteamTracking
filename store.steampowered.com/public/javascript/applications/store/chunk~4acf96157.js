@@ -593,127 +593,6 @@
         (0, o.gn)([l.a], g.prototype, "SetupRefreshDataInterval", null),
         (0, o.gn)([l.a], g.prototype, "SetupCountDown", null);
     },
-    2388: (e, t, n) => {
-      "use strict";
-      n.d(t, { Gr: () => g, Jq: () => _, y$: () => p });
-      var o = n(70655),
-        i = n(9669),
-        r = n.n(i),
-        s = n(22188),
-        a = n(67294),
-        c = (n(26149), n(92398), n(43359)),
-        l = n(3389),
-        m = (n(82946), n(77520)),
-        d = n(93976),
-        u = n(90666);
-      class h {
-        constructor() {
-          (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
-        }
-        LoadProfiles(e, t) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            (0,
-            m.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let n = e.filter(
-              (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
-            );
-            if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let o = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              i = r().get(o, {
-                params: { steamids: n.join(",") },
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-            n.forEach((e) => this.m_mapProfilesLoading.set(e, i));
-            let s = yield i;
-            s.data &&
-              200 == s.status &&
-              s.data.forEach((e) => {
-                (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = (0, c.U)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = (0, c.U)(e.avatar_url, "full")),
-                  (e.avatar_url = (0, c.U)(e.avatar_url)),
-                  this.m_mapProfiles.set(e.steamid, e),
-                  this.m_mapProfilesLoading.delete(e.steamid);
-              });
-          });
-        }
-        GetProfile(e) {
-          return this.m_mapProfiles.get(e);
-        }
-        GetProfileByAccountID(e) {
-          return this.m_mapProfiles.get(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
-          );
-        }
-        GetProfileBySteamID(e) {
-          return this.m_mapProfiles.get(e.ConvertTo64BitString());
-        }
-        BHasProfile(e) {
-          return this.m_mapProfiles.has(e);
-        }
-        BHasProfileByAccountID(e) {
-          return this.m_mapProfiles.has(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
-          );
-        }
-        BHasProfileBySteamID(e) {
-          return this.m_mapProfiles.has(e.ConvertTo64BitString());
-        }
-        BHasAllProfilesBySteamID(e) {
-          return !e.some((e) => !this.BHasProfileBySteamID(e));
-        }
-        GetProfileURLBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.profile_url
-            ? u.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : u.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
-        }
-        GetPersonaNameBySteamID(e) {
-          const t = this.GetProfileBySteamID(e);
-          return t && t.persona_name ? t.persona_name : "";
-        }
-      }
-      (0, o.gn)([s.LO], h.prototype, "m_mapProfiles", void 0);
-      const p = new h();
-      function g(e) {
-        const t = a.useMemo(
-            () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
-            [e]
-          ),
-          [n, o] = (0, a.useState)(!!t && !p.BHasProfileBySteamID(t));
-        (0, a.useEffect)(() => {
-          const e = r().CancelToken.source();
-          return (
-            t &&
-              !p.BHasProfileBySteamID(t) &&
-              p
-                .LoadProfiles([t.ConvertTo64BitString()])
-                .catch((e) => {
-                  const n = (0, d.l)(e);
-                  console.error(
-                    "useUserProfile failed to load profile for " +
-                      t.ConvertTo64BitString() +
-                      ": " +
-                      n.strErrorMsg,
-                    n
-                  );
-                })
-                .finally(() => {
-                  e.token.reason || o(!1);
-                }),
-            () => e.cancel("unmounting useUserProfile")
-          );
-        }, [e]);
-        return [n, !!t && p.GetProfileBySteamID(t)];
-      }
-      function _(e) {
-        return g(a.useMemo(() => l.K.InitFromAccountID(e), [e]));
-      }
-      window.g_ProfileStore = p;
-    },
     75320: (e, t, n) => {
       "use strict";
       n.d(t, { v: () => h, x: () => u });
@@ -1146,9 +1025,9 @@
           Object.assign({ className: (0, h.Z)(t, C.AddonPickerMessage) }, n)
         );
       }
-      var y = n(81864),
-        x = n.n(y),
-        B = n(72258);
+      var x = n(81864),
+        y = n.n(x),
+        R = n(72258);
       class T extends s.PureComponent {
         constructor() {
           super(...arguments),
@@ -1173,7 +1052,7 @@
               { text: o, style: "merge-adjacent" },
               s.createElement("img", {
                 src: i,
-                className: (0, h.Z)(x().emoticon, t ? x().large : void 0),
+                className: (0, h.Z)(y().emoticon, t ? y().large : void 0),
                 "data-emoticon": e,
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
@@ -1181,7 +1060,7 @@
               })
             ),
             this.state.showHover &&
-              s.createElement(R, {
+              s.createElement(B, {
                 target: this.m_ref.current,
                 store: n,
                 emoticon: e,
@@ -1191,11 +1070,11 @@
       }
       (0, o.gn)([g.ak], T.prototype, "OnMouseEnter", null),
         (0, o.gn)([g.ak], T.prototype, "OnMouseLeave", null);
-      const R = (0, r.Pi)((e) => {
+      const B = (0, r.Pi)((e) => {
           const { target: t, store: n, emoticon: o } = e,
             i = n.Get(o);
           return s.createElement(
-            G,
+            O,
             {
               target: t,
               title: `:${o}:`,
@@ -1208,38 +1087,38 @@
             })
           );
         }),
-        G = ({ target: e, title: t, subtitle: n, children: o }) =>
+        O = ({ target: e, title: t, subtitle: n, children: o }) =>
           s.createElement(
             c.T,
             {
               target: e,
               style: { zIndex: 1700 },
-              className: x().EmoticonHover,
+              className: y().EmoticonHover,
             },
             o,
             s.createElement(
               "div",
-              { className: x().Info },
+              { className: y().Info },
               s.createElement(
                 "div",
-                { className: x().Name },
+                { className: y().Name },
                 t || s.createElement("span", null, " ")
               ),
               s.createElement(
                 "div",
-                { className: x().AppName },
+                { className: y().AppName },
                 n || s.createElement("span", null, " ")
               )
             )
           );
-      function O(e) {
+      function G(e) {
         return e.recent_emoticons;
       }
       function U(e) {
         return e.recent_stickers;
       }
       function H(e) {
-        return O(e).length + U(e).length > 0;
+        return G(e).length + U(e).length > 0;
       }
       const z = (0, r.Pi)((e) => {
         const {
@@ -1275,9 +1154,9 @@
                   {
                     title: (0, p.Xx)("#AddonPicker_RecentlyUsed"),
                     className: (0, h.Z)(
-                      x().PickerTab,
-                      x().Clock,
-                      e && x().ActiveTab
+                      y().PickerTab,
+                      y().Clock,
+                      e && y().ActiveTab
                     ),
                   },
                   s.createElement(ce, null)
@@ -1303,7 +1182,7 @@
                       "span",
                       {
                         title: (0, p.Xx)("#AddonPicker_Emoticons"),
-                        className: (0, h.Z)(x().PickerTab, e && x().ActiveTab),
+                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
                       },
                       s.createElement(se, null)
                     ),
@@ -1321,7 +1200,7 @@
                       "span",
                       {
                         title: (0, p.Xx)("#AddonPicker_Stickers"),
-                        className: (0, h.Z)(x().PickerTab, e && x().ActiveTab),
+                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
                       },
                       s.createElement(re, null)
                     ),
@@ -1337,7 +1216,7 @@
                       "span",
                       {
                         title: (0, p.Xx)("#AddonPicker_RoomEffects"),
-                        className: (0, h.Z)(x().PickerTab, e && x().ActiveTab),
+                        className: (0, h.Z)(y().PickerTab, e && y().ActiveTab),
                       },
                       s.createElement(ae, null)
                     ),
@@ -1385,9 +1264,9 @@
                     {
                       title: (0, p.Xx)("#AddonPicker_RecentlyUsed"),
                       className: (0, h.Z)(
-                        x().PickerTab,
-                        x().Clock,
-                        e && x().ActiveTab
+                        y().PickerTab,
+                        y().Clock,
+                        e && y().ActiveTab
                       ),
                     },
                     s.createElement(ce, null)
@@ -1414,8 +1293,8 @@
                         {
                           title: (0, p.Xx)("#AddonPicker_Emoticons"),
                           className: (0, h.Z)(
-                            x().PickerTab,
-                            e && x().ActiveTab
+                            y().PickerTab,
+                            e && y().ActiveTab
                           ),
                         },
                         s.createElement(se, null)
@@ -1435,8 +1314,8 @@
                         {
                           title: (0, p.Xx)("#AddonPicker_Stickers"),
                           className: (0, h.Z)(
-                            x().PickerTab,
-                            e && x().ActiveTab
+                            y().PickerTab,
+                            e && y().ActiveTab
                           ),
                         },
                         s.createElement(re, null)
@@ -1480,7 +1359,7 @@
                       "span",
                       {
                         title: (0, p.Xx)("#AddonPicker_Emoticons"),
-                        className: x().PickerTab,
+                        className: y().PickerTab,
                       },
                       s.createElement(se, null)
                     ),
@@ -1523,7 +1402,7 @@
                       "span",
                       {
                         title: (0, p.Xx)("#AddonPicker_Emoticons"),
-                        className: x().PickerTab,
+                        className: y().PickerTab,
                       },
                       s.createElement(se, null)
                     ),
@@ -1554,10 +1433,10 @@
             { filter: i } = this.state,
             r = [];
           return (
-            O(e) &&
+            G(e) &&
               r.push({
                 title: (0, p.Xx)("#AddonPicker_RecentEmoticons"),
-                items: l.u.FilterEmoticons(O(e), i),
+                items: l.u.FilterEmoticons(G(e), i),
                 onItemSelect: n,
                 renderItem: (e) =>
                   s.createElement(q, { emoticon: e, emoticonHoverStore: t }),
@@ -1650,12 +1529,12 @@
             (0, p.kQ)(
               "#AddonPicker_AcquireAtPointsShopOrMarket",
               s.createElement(
-                B.ns,
+                R.ns,
                 { href: `${E.De.STORE_BASE_URL}points/shop/c/emoticons` },
                 (0, p.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
               ),
               s.createElement(
-                B.ns,
+                R.ns,
                 { href: `${E.De.COMMUNITY_BASE_URL}market` },
                 (0, p.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
               )
@@ -1700,7 +1579,7 @@
                       (0, p.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
                         s.createElement(
-                          B.ns,
+                          R.ns,
                           {
                             href: `${E.De.STORE_BASE_URL}points/shop/c/stickers`,
                           },
@@ -1750,7 +1629,7 @@
                       (0, p.kQ)(
                         "#AddonPicker_AcquireAtPointsShop",
                         s.createElement(
-                          B.ns,
+                          R.ns,
                           {
                             href: `${E.De.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
@@ -1776,10 +1655,10 @@
             { filter: i } = this.state,
             r = [];
           return (
-            O(e).length &&
+            G(e).length &&
               r.push({
                 title: (0, p.Xx)("#AddonPicker_RecentEmoticons"),
-                items: l.u.FilterEmoticons(O(e), i),
+                items: l.u.FilterEmoticons(G(e), i),
                 onItemSelect: n,
                 renderItem: (e) =>
                   s.createElement(q, { emoticon: e, emoticonHoverStore: t }),
@@ -1865,7 +1744,7 @@
           i = !t.last_used && t.time_received;
         return s.createElement(
           "div",
-          { className: x().EmoticonItem },
+          { className: y().EmoticonItem },
           s.createElement(T, {
             emoticon: t.name,
             emoticonHoverStore: n,
@@ -1890,7 +1769,7 @@
             Object.assign(
               {
                 ref: this.m_ref,
-                className: (0, h.Z)(n, x().StickerButton),
+                className: (0, h.Z)(n, y().StickerButton),
                 onMouseOver: () => this.setState({ showHover: !0 }),
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -1911,11 +1790,11 @@
           } = e,
           [i] = (0, m.vs)(o, {});
         return s.createElement(
-          G,
+          O,
           { target: t, title: n, subtitle: null == i ? void 0 : i.GetName() },
           s.createElement("img", {
             src: _(E.De.COMMUNITY_CDN_URL, n),
-            className: x().StickerHoverSticker,
+            className: y().StickerHoverSticker,
           })
         );
       });
@@ -1939,7 +1818,7 @@
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
                 onBlur: () => this.setState({ showHover: !1 }),
-                className: (0, h.Z)(i, x().EffectButton),
+                className: (0, h.Z)(i, y().EffectButton),
               },
               r
             ),
@@ -1962,11 +1841,11 @@
           r = i[n],
           [a] = (0, m.vs)(o, {});
         return s.createElement(
-          G,
+          O,
           { target: t, title: n, subtitle: null == a ? void 0 : a.GetName() },
           s.createElement(
             "div",
-            { className: x().EffectHoverEffect },
+            { className: y().EffectHoverEffect },
             r.renderEffectIcon()
           )
         );
@@ -1974,8 +1853,8 @@
       function oe() {
         return s.createElement(
           "div",
-          { className: x().NewEmoticonIndicator },
-          s.createElement("div", { className: x().NewEmoticonCircle })
+          { className: y().NewEmoticonIndicator },
+          s.createElement("div", { className: y().NewEmoticonCircle })
         );
       }
       class ie extends s.Component {
@@ -1996,12 +1875,12 @@
         }
         render() {
           let e = this.props.emoticon,
-            t = [x().EmoticonSelector_Item],
+            t = [y().EmoticonSelector_Item],
             n = !1;
           return (
             !e.last_used &&
               e.time_received &&
-              (t.push(x().EmoticonSelector_Item_New), (n = !0)),
+              (t.push(y().EmoticonSelector_Item_New), (n = !0)),
             s.createElement(
               "div",
               {

@@ -767,6 +767,8 @@ ${STORE_BASE_URL}category/${category}
 ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/topnewreleases/${}
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
+${STORE_BASE_URL}contenthub/ajaxgetcontenthubcategories
+${STORE_BASE_URL}contenthub/ajaxgetcontenthubcategorieskv
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubjson
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
@@ -774,6 +776,9 @@ ${STORE_BASE_URL}contenthub/ajaxgetcontenthubsections
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubspecials
 ${STORE_BASE_URL}contenthub/ajaxgetdlcforapps
 ${STORE_BASE_URL}contenthub/ajaxgetsalepagediscountsummary
+${STORE_BASE_URL}contenthub/ajaxgetstoretagsandcategories
+${STORE_BASE_URL}contenthub/ajaxpublishcontenthubcategorieskv
+${STORE_BASE_URL}contenthub/ajaxsavecontenthubcategorieskv
 ${STORE_BASE_URL}curator/${clanAccountID}/admin/manage_rss
 ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
@@ -2229,6 +2234,7 @@ https://store.steampowered.com/about/
 https://store.steampowered.com/account/
 https://store.steampowered.com/account/ajaxcreatewalletandcheckfunds/
 https://store.steampowered.com/account/ajaxredeemwalletcode/
+https://store.steampowered.com/account/ajaxrefreshwalletcaptcha/
 https://store.steampowered.com/account/ajaxregisterkey/
 https://store.steampowered.com/account/ajaxsetcookiepreferences
 https://store.steampowered.com/account/languagepreferences/
@@ -2307,6 +2313,7 @@ https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=$
 https://store.steampowered.com/pitstop
 https://store.steampowered.com/promotion/opencottagedoorajax
 https://store.steampowered.com/pub/${vanity_url}
+https://store.steampowered.com/public/captcha.php?gid=${gid}
 https://store.steampowered.com/public/data/widevine/cert_license_widevine_com.bin
 https://store.steampowered.com/publisher/${vanity_url}
 https://store.steampowered.com/qiwi/launchauth

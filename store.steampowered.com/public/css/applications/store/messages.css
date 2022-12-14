@@ -3,20 +3,42 @@
   margin: 0px auto;
   width: 570px;
   padding: 0px 13px;
+  user-select: none;
+}
+.image_MessageContent_1N2Wd:hover .image_IsBlur_9juCj img {
+  filter: brightness(1.6) saturate(1.2);
+  box-shadow: inset 0 6px 10px #000a;
 }
 .image_GameImage_2imw0 {
+  box-sizing: content-box;
   cursor: pointer;
   width: auto;
   position: relative;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 6px 10px #000a;
   font-size: 0px;
-  transition: box-shadow 0.25s ease-out;
+  transition: box-shadow 0.15s ease-out;
 }
-.image_GameImage_2imw0:hover {
-  box-shadow: 0 0 15px #68c0f2;
+.image_GameImage_2imw0.image_IsBlur_9juCj {
+  pointer-events: none;
+  filter: blur(20px);
+  transform: scaleX(1.22) scaleY(1.22);
+  position: absolute;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
 }
 .image_GameImage_2imw0 img {
   max-width: 570px;
+  transition: all 0.25s ease-out;
 }
 A:visited {
   color: #fff;
@@ -250,9 +272,15 @@ html.responsive
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%,
-      rgba(0, 0, 0, 0.36) 100%
+      rgba(0, 0, 0, 0) 100%
     ),
-    #25282e;
+    linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.18) 0%,
+        rgba(175, 81, 92, 0) 60%,
+        rgba(0, 0, 0, 0) 100%
+      )
+      #25282e;
   display: flex;
   flex-direction: column;
 }
@@ -260,6 +288,7 @@ html.responsive
   flex: auto;
   min-height: 0;
   overflow-y: auto;
+  overflow: hidden;
 }
 .messagelist_CarouselBar_O7VJK {
   margin-bottom: 10px;

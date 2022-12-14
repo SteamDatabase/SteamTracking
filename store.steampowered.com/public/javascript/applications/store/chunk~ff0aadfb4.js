@@ -40,7 +40,7 @@
     13354: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => L,
+        Bo: () => b,
         FG: () => D,
         N: () => I,
         P4: () => y,
@@ -74,7 +74,7 @@
             (t.list_jsondata = {}));
       }
       const C = "0";
-      function b(t, e) {
+      function L(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 30, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
           (e.localized_flat_link = (0, m.LG)([], 30, null)),
@@ -103,7 +103,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class L {
+      class b {
         constructor() {
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
@@ -121,7 +121,7 @@
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
                     h(e),
-                      b(t.curation_language, e),
+                      L(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
@@ -164,7 +164,7 @@
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid)
                   ),
                   h(n),
-                  b(l.data.curation_language, n),
+                  L(l.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
@@ -254,7 +254,7 @@
                             e.clan_account_id
                           ),
                             h(n),
-                            b(e.curation_language, n),
+                            L(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
                         });
@@ -272,7 +272,7 @@
           });
         }
         static Get() {
-          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
+          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
         }
         ValidateStoreDefault(t) {
           const e = t;
@@ -293,13 +293,13 @@
         const n = (0, E.NW)();
         return (
           (0, l.useEffect)(() => {
-            if (L.Get().GetListDetails(e) || !t) return;
+            if (b.Get().GetListDetails(e) || !t) return;
             const o = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var a, i;
-                  const r = yield L.Get().LoadListDetails(t, e);
+                  const r = yield b.Get().LoadListDetails(t, e);
                   if (!o.token.reason)
                     if (
                       null === (a = null == r ? void 0 : r.apps) || void 0 === a
@@ -331,7 +331,7 @@
               () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          L.Get().GetListDetails(e)
+          b.Get().GetListDetails(e)
         );
       }
       function y(t) {
@@ -381,7 +381,7 @@
           o
         );
       }
-      (0, a.gn)([r.LO], L.prototype, "m_mapList", void 0);
+      (0, a.gn)([r.LO], b.prototype, "m_mapList", void 0);
     },
     87541: (t, e, n) => {
       "use strict";
@@ -404,8 +404,8 @@
         f = n(9487),
         h = (n(45031), n(75896)),
         C = n(72062),
-        b = n(72842),
-        L = n(5146),
+        L = n(72842),
+        b = n(5146),
         I = n(65160),
         y = n(65924),
         D = n(7573),
@@ -419,15 +419,14 @@
             strExtraParams: s,
             elElementToAppendToHover: c,
             index: m,
-            bAutoFocus: v,
           } = t,
-          [E, f] = a.useState(!1),
-          [b] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [I] = (0, d.vs)(n && (null == b ? void 0 : b.GetParentAppID()), o.bk),
-          w = (0, y.bJ)(),
-          O = (0, A.id)();
-        if (!b) return null;
-        const P = Boolean(I);
+          [v, E] = a.useState(!1),
+          [f] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [L] = (0, d.vs)(n && (null == f ? void 0 : f.GetParentAppID()), o.bk),
+          I = (0, y.bJ)(),
+          w = (0, A.id)();
+        if (!f) return null;
+        const O = Boolean(L);
         return a.createElement(
           r.s,
           {
@@ -436,11 +435,10 @@
               [G + m]: 0 == m,
             }),
             navEntryPreferPosition: l.c4.PREFERRED_CHILD,
-            autoFocus: v,
           },
           a.createElement(
             C.zw,
-            { appid: b.GetAppID() },
+            { appid: f.GetAppID() },
             a.createElement(
               p.ll,
               {
@@ -452,44 +450,44 @@
                 bHidePrice: t.bHidePrice,
                 bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                 strExtraParams: t.strExtraParams,
-                fnOnHoverStateChange: !O && f,
+                fnOnHoverStateChange: !w && E,
                 nCreatorAccountID: t.creatorAccountID,
               },
               a.createElement(
                 T,
                 Object.assign({}, t, {
                   info: e,
-                  bIsHovered: E,
-                  bHasParentAppToDisplay: P,
+                  bIsHovered: v,
+                  bHasParentAppToDisplay: O,
                 })
               )
             ),
             Boolean(c) && a.createElement("div", null, c)
           ),
-          P &&
+          O &&
             a.createElement(
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(I, w, O, t.strExtraParams)
+                (0, h.h)(L, I, w, t.strExtraParams)
               ),
               a.createElement(
                 C.zw,
-                { appid: I.GetAppID() },
+                { appid: L.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
                   (0, S.Xx)(
-                    11 == b.GetAppType()
+                    11 == f.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC"
                   )
                 ),
                 a.createElement(
-                  L._,
+                  b._,
                   {
                     type: "app",
-                    id: I.GetAppID(),
+                    id: L.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -498,8 +496,8 @@
                       {
                         loading: "lazy",
                         className: _.AppCapsuleImage,
-                        alt: I.GetName(),
-                        src: I.GetAssets().GetSmallCapsuleURL(),
+                        alt: L.GetName(),
+                        src: L.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)()
                     )
@@ -520,7 +518,7 @@
             bHasParentAppToDisplay: v,
             bUseSubscriptionLayout: g,
             elElementToAppendToHover: h,
-            bHidePrice: L,
+            bHidePrice: b,
             bHidePlatforms: D,
             creatorAccountID: S,
             bIsHovered: A,
@@ -546,7 +544,7 @@
         let H,
           j = null;
         if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
-          j = a.createElement(b.r, { appid: G.GetAppID(), bIsMuted: A });
+          j = a.createElement(L.r, { appid: G.GetAppID(), bIsMuted: A });
         else if (h);
         else {
           const t = O && o,
@@ -554,7 +552,7 @@
           j = a.createElement(m.Hl, {
             info: n,
             bShowAsMuted: e,
-            bHidePrice: L,
+            bHidePrice: b,
             bShowInLibraryInsteadOfPrice: t,
             bHidePlatforms: D,
             creatorAccountID: S,

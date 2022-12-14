@@ -887,10 +887,11 @@
           l = null == e ? void 0 : e.strOptInName,
           c = null == e ? void 0 : e.nOptInTagID,
           u = null == e ? void 0 : e.nPruneTagID,
-          d = new a._v();
+          d = null == e ? void 0 : e.bOptInOnly,
+          m = new a._v();
         if (t) {
           const e = new a.KQ();
-          e.set_sale_tagid(t), d.set_sale_filter(e);
+          e.set_sale_tagid(t), m.set_sale_filter(e);
         } else if (r) {
           const e = new a.AY();
           if (
@@ -905,11 +906,12 @@
             t.set_name(l),
               t.set_optin_tagid(c),
               t.set_prune_tagid(u),
+              t.set_optin_only(d),
               e.set_optin(t);
           }
-          d.set_content_hub_filter(e);
+          m.set_content_hub_filter(e);
         }
-        return d;
+        return m;
       }
       function _(e) {
         return (0, d.GM)(JSON.stringify(e));
@@ -1947,12 +1949,11 @@
         const { curator: t } = e,
           r = (0, m.iG)(null == t ? void 0 : t.clanAccountID);
         return t && r
-          ? (console.log(t, r),
-            i.createElement(
+          ? i.createElement(
               s.IS,
               { href: r.GetCreatorHomeURL(null) },
               i.createElement("img", { src: t.avatar_medium_url })
-            ))
+            )
           : null;
       }
       function G(e) {

@@ -438,7 +438,7 @@
     },
     5525: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => u, JW: () => v, zD: () => E });
+      n.d(t, { F_: () => u, JW: () => v, kl: () => E, zD: () => j });
       var r = n(70655),
         a = n(22188),
         s = n(30381),
@@ -525,10 +525,11 @@
         return v.nOverrideDateNow ? v.nOverrideDateNow + (e - _) : e;
       }
       function E() {
-        return l.useMemo(() => {
-          return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : _;
-          var e;
-        }, []);
+        var e;
+        return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : _;
+      }
+      function j() {
+        return l.useMemo(() => E(), []);
       }
     },
     23211: (e, t, n) => {

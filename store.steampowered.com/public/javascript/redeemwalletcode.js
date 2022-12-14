@@ -1,4 +1,5 @@
 
+var g_recaptchaInstance = null;
 
 function DisplayPage( page )
 {
@@ -61,6 +62,63 @@ function ReportRedeemJSError( message, e )
 			}
 }
 
+function RenderRecaptcha( parent_sel, gid, sitekey, s )
+{
+    var render_div_id = 'recaptcha_render_' + gid;
+    $J( parent_sel ).empty();
+    $J( parent_sel ).append('<div id="' + render_div_id + '"></div>');
+    g_recaptchaInstance = grecaptcha.enterprise.render( render_div_id, {
+        'sitekey': sitekey,
+        'theme': 'dark',
+        'callback': function(n){},
+        's': s
+    });
+}
+
+function RefreshCaptcha()
+{
+    new Ajax.Request( 'https://store.steampowered.com/account/ajaxrefreshwalletcaptcha/',
+        {
+            type: 'POST',
+            onSuccess: function(transport){
+                if ( transport.responseText ){
+
+                    try {
+                        var result = transport.responseText.evalJSON(true);
+                    } catch ( e ) {
+                        //alert(e);
+                        return;
+                    }
+
+                    UpdateCaptcha(result);
+                }
+            }
+        });
+}
+
+function UpdateCaptcha(data)
+{
+    if ( data.gid != -1 ) {
+        $J( '#captcha_entry' ).show();
+        $J( '#input_captcha' ).val('');
+        if ( data.type == 1 ) {
+            $J( '#captcha_entry_recaptcha' ).hide();
+            $J( '#captcha_entry_text' ).show();
+            $J( '#captchaImg' ).attr( 'src', 'https://store.steampowered.com/public/captcha.php?gid=' + data.gid );
+        } else if ( data.type == 2 ) {
+            $J( '#captcha_entry_recaptcha' ).show();
+            $J( '#captcha_entry_text' ).hide();
+            RenderRecaptcha( "#captcha_entry_recaptcha", data.gid, data.sitekey, data.s );
+        }
+        $J( '#input_captcha_gid' ).val(data.gid);
+    } else {
+        $J( '#captcha_entry' ).hide();
+        $J( '#captcha_entry_recaptcha' ).empty();
+        $J( '#input_captcha' ).val( '' );
+        $J( '#input_captcha_gid' ).val( '' );
+    }
+}
+
 var g_bRedeemWalletCodeCallRunning = false;
 function RedeemWalletCode()
 {
@@ -85,10 +143,17 @@ function RedeemWalletCode()
 			    method:'post',
 			    parameters: { 
 					'wallet_code' : $('wallet_code').value,
+                    'captchagid' : $('input_captcha_gid').value,
+                    'captcha_text' : $J('#input_captcha').value || grecaptcha.enterprise.getResponse(g_recaptchaInstance),
 				    'sessionid' : g_sessionID
 				},
 			    onSuccess: function(transport){
 					g_bRedeemWalletCodeCallRunning = false;
+					if ( $('input_captcha_gid').value )
+                    {
+                        RefreshCaptcha();
+                    }
+
 					if ( transport.responseText ){
 						try {
 							var result = transport.responseText.evalJSON(true);
@@ -363,6 +428,10 @@ function OnRedeemWalletCodeFailure( success, detail )
 			case 16:
 				sErrorMessage = '#youraccount_wallet_code_generic_not_redeemed';
 				break;
+
+            case 101:
+                sErrorMessage = 'You must complete the captcha to attempt to redeem your gift card.';
+                break;
 
 			default:
 				switch ( detail )

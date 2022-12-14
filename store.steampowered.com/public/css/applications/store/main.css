@@ -135,17 +135,17 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   padding: 4px 6px;
   line-height: 17px;
   color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  border-top: 1px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 1px solid rgba(80, 87, 94, 0);
   cursor: default;
   position: relative;
   min-width: 120px;
-  display: flex;
+  display: block;
   align-items: center;
   flex-direction: row;
 }
 .contextmenu_contextMenuItem_pFo3k:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0);
+  border-top: 1px solid rgba(80, 87, 94, 0);
 }
 .contextmenu_contextMenuItem_pFo3k:hover,
 .contextmenu_contextMenuItem_pFo3k.contextmenu_active_1KPWU {
@@ -2141,13 +2141,17 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   position: relative;
 }
 .scrollpanel_ScrollY_313lB,
-.scrollpanel_ScrollBoth_3S2Ko {
+.BasicUI .DialogContent_InnerWidth > .scrollpanel_ScrollY_313lB,
+.scrollpanel_ScrollBoth_3S2Ko,
+.BasicUI .DialogContent_InnerWidth > .scrollpanel_ScrollBoth_3S2Ko {
   overflow-y: auto;
   scroll-padding-top: 20px;
   scroll-padding-bottom: 20px;
 }
 .scrollpanel_ScrollX_1oRGo,
-.scrollpanel_ScrollBoth_3S2Ko {
+.BasicUI .DialogContent_InnerWidth > .scrollpanel_ScrollX_1oRGo,
+.scrollpanel_ScrollBoth_3S2Ko,
+.BasicUI .DialogContent_InnerWidth > .scrollpanel_ScrollBoth_3S2Ko {
   overflow-x: auto;
   scroll-padding-left: 20px;
   scroll-padding-right: 20px;
@@ -2304,6 +2308,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   display: flex;
   flex-direction: row;
   height: 100%;
+  flex-grow: 1;
 }
 .DialogContent.gamepadpagedsettings_PagedSettingsDialog_PageContent_wIOLO {
   position: absolute;

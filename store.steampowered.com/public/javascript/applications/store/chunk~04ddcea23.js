@@ -621,6 +621,7 @@
                     br: s.FE.readUint32,
                     bw: s.Xc.writeUint32,
                   },
+                  optin_only: { n: 4, br: s.FE.readBool, bw: s.Xc.writeBool },
                 },
               }),
             u.sm_m

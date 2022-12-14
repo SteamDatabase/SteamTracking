@@ -4706,7 +4706,7 @@
               (Ee.sm_m = {
                 proto: Ee,
                 fields: {
-                  state: { n: 1, br: a.FE.readInt32, bw: a.Xc.writeInt32 },
+                  state: { n: 1, br: a.FE.readEnum, bw: a.Xc.writeEnum },
                   announcement_headline: {
                     n: 2,
                     br: a.FE.readString,
@@ -5197,7 +5197,7 @@
               (De.sm_m = {
                 proto: De,
                 fields: {
-                  state: { n: 1, br: a.FE.readInt32, bw: a.Xc.writeInt32 },
+                  state: { n: 1, br: a.FE.readEnum, bw: a.Xc.writeEnum },
                   announcement_headline: {
                     n: 2,
                     br: a.FE.readString,

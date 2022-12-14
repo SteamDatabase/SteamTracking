@@ -3348,7 +3348,15 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 		}
 		else
 		{
-									elDescription.update( strParsedDescription.escapeHTML().replace( /\n/g, '<br>' ) );
+			var strEscapedDescription = strParsedDescription.escapeHTML().replace( /\n/g, '<br>' );
+			if ( description.type == 'usertext' )
+			{
+				if ( typeof(g_bViewingOwnProfile) == 'undefined' || !g_bViewingOwnProfile )
+				{
+					strEscapedDescription = '<strong>Custom description: </strong>' + strEscapedDescription;
+				}
+			}
+									elDescription.update( strEscapedDescription );
 		}
 
 		if ( description.label )

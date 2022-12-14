@@ -1895,6 +1895,7 @@
           "enable_steam_china",
           "disable_steam_global",
           "skip_megaphone",
+          "seasonal_sale_featuring",
         ],
         Y = [
           "patchnotes",
@@ -5214,6 +5215,11 @@
                     n: 12,
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
+                  },
+                  wordban_list: {
+                    n: 13,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -10769,7 +10775,7 @@
     },
     5525: (e, t, r) => {
       "use strict";
-      r.d(t, { JW: () => u, rw: () => _ });
+      r.d(t, { JW: () => u, kl: () => h, rw: () => p });
       var a = r(70655),
         i = r(22188),
         n = r(30381),
@@ -10830,9 +10836,13 @@
       (0, a.gn)([i.LO], c.prototype, "nOverrideDateNow", void 0);
       const u = new c();
       window.g_EventCalendarDevFeatures = u;
-      const m = new Date();
-      Math.floor(m.getTime() / 1e3);
-      function _() {
+      const m = new Date(),
+        _ = Math.floor(m.getTime() / 1e3);
+      function h() {
+        var e;
+        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : _;
+      }
+      function p() {
         return o.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
       }
     },
@@ -12952,7 +12962,7 @@
                     e.bDeactivated = !(
                       e.bEnabled ||
                       t ||
-                      r ||
+                      0 !== r ||
                       e.facetValue.type === m.HL.k_EUserPreference
                     );
                   });
@@ -13165,6 +13175,7 @@
           });
         }
         UpdateMatchCount(e, t) {
+          var r, a, i;
           this.m_bServerSideFiltering ||
             ((this.m_filteredCapsules = null),
             null != this.m_potentiallyVisibleCapsules &&
@@ -13188,10 +13199,20 @@
               ? this.m_bServerSideFiltering
                 ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
                   (this.m_nFilteredCapsuleCount -=
-                    this.m_setCapsulesRemovedByOptInFilters.size),
+                    (null === (a = this.m_setCapsulesRemovedByOptInFilters) ||
+                    void 0 === a
+                      ? void 0
+                      : a.size) || 0),
                   (this.m_nFilteredCapsuleCount -=
-                    this.m_setCapsulesRemovedByUserPreferenceFilters.size))
-                : (this.m_nFilteredCapsuleCount = this.m_filteredCapsules.size)
+                    (null ===
+                      (i = this.m_setCapsulesRemovedByUserPreferenceFilters) ||
+                    void 0 === i
+                      ? void 0
+                      : i.size) || 0))
+                : (this.m_nFilteredCapsuleCount =
+                    (null === (r = this.m_filteredCapsules) || void 0 === r
+                      ? void 0
+                      : r.size) || 0)
               : (this.m_nFilteredCapsuleCount = t),
             this.SortFacets();
         }
@@ -13208,170 +13229,208 @@
         (0, a.gn)([s.aD], F.prototype, "SetFacetValueSearchString", null),
         (0, a.gn)([s.aD], F.prototype, "UpdateMatchCount", null);
       const G = (0, o.Pi)((e) => {
-          var t;
+          var t, r;
           const {
-              language: r,
-              linkColor: a,
-              headingColor: i,
-              background: n,
-              styleOverrides: o,
-              facetFilterState: l,
-              fnOnUpdateFilter: c,
+              language: a,
+              linkColor: i,
+              headingColor: n,
+              background: o,
+              styleOverrides: l,
+              facetFilterState: c,
+              fnOnUpdateFilter: u,
+              onInitFilter: m,
             } = e,
-            [u, m] = (0, d.useState)(""),
-            _ = (function (e) {
+            [_, h] = (0, d.useState)(""),
+            p = (function (e) {
               const [t, r] = (0, d.useState)();
               return (
                 (0, d.useEffect)(() => {
                   var t, a;
                   const i = [];
-                  for (const r of e)
-                    for (const e of r.facet.facetValues)
-                      if (
-                        (null === (t = e.name) || void 0 === t
-                          ? void 0
-                          : t.length) > 0 &&
-                        (null === (a = e.name[0]) || void 0 === a
-                          ? void 0
-                          : a.startsWith("#tagid_"))
-                      ) {
-                        const t = parseInt(e.name[0].substring(7));
-                        t > 0 && i.push(t);
-                      }
+                  if (e)
+                    for (const r of e)
+                      for (const e of r.facet.facetValues)
+                        if (
+                          (null === (t = e.name) || void 0 === t
+                            ? void 0
+                            : t.length) > 0 &&
+                          (null === (a = e.name[0]) || void 0 === a
+                            ? void 0
+                            : a.startsWith("#tagid_"))
+                        ) {
+                          const t = parseInt(e.name[0].substring(7));
+                          t > 0 && i.push(t);
+                        }
                   g.OT.Get().QueueMultipleTagLoads(i).then(r);
                 }, [e]),
                 t
               );
-            })(l.GetFacets());
-          let h, p;
-          (null == o ? void 0 : o.menu) ||
-            (h = { background: n, color: a || "white" }),
-            (null == o ? void 0 : o.menuTitle) ||
-              (p = {
-                borderBottom: "0px solid " + (a || "white"),
-                color: i || "white",
+            })(null == c ? void 0 : c.GetFacets());
+          let b, v;
+          (null == l ? void 0 : l.menu) ||
+            (b = { background: o, color: i || "white" }),
+            (null == l ? void 0 : l.menuTitle) ||
+              (v = {
+                borderBottom: "0px solid " + (i || "white"),
+                color: n || "white",
               });
-          const b = (0, d.useRef)(null),
-            v = () => {
-              l.UpdateFilter(), c();
+          const B = (0, d.useRef)(null),
+            I = () => {
+              c.UpdateFilter(), u();
             };
-          return 1 !== _
-            ? null
-            : d.createElement(
-                "div",
-                {
-                  ref: b,
-                  className:
-                    (null == o ? void 0 : o.menu) || S.FacetedBrowseControls,
-                  style: h,
-                },
-                d.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.menuTitle) || S.FacetMenuTitle,
-                    style: p,
-                  },
-                  (0, y.Xx)("#FacetedBrowse_Heading")
-                ),
-                Boolean(l) &&
-                  d.createElement(
+          return (
+            d.useEffect(() => {
+              !c && m && m();
+            }, [c, m]),
+            d.useEffect(() => {
+              var t;
+              c &&
+                e.rgItems &&
+                (c.SetFacetCounts(e.faceting),
+                c.SetMultiFacetCounts(e.multifaceting),
+                c.SetSolrMatchCount(e.nMatchCount),
+                c.UpdateMatchCount(
+                  e.bMoreAvailable,
+                  null === (t = e.rgItems) || void 0 === t ? void 0 : t.length
+                ));
+            }, [
+              c,
+              e.bMoreAvailable,
+              e.faceting,
+              e.multifaceting,
+              e.nMatchCount,
+              e.rgItems,
+              null === (t = e.rgItems) || void 0 === t ? void 0 : t.length,
+            ]),
+            c
+              ? 1 !== p
+                ? null
+                : d.createElement(
                     "div",
                     {
+                      ref: B,
                       className:
-                        (null == o ? void 0 : o.matchCount) ||
-                        S.FacetedBrowseMatchCount,
+                        (null == l ? void 0 : l.menu) ||
+                        S.FacetedBrowseControls,
+                      style: b,
                     },
-                    null != l.GetMatchCount() &&
-                      (0, y.kb)("#FacetedBrowse_MatchCount", l.GetMatchCount())
-                  ),
-                d.createElement(
-                  "div",
-                  { className: S.FacetValueSearch },
-                  d.createElement(f.II, {
-                    type: "text",
-                    value: u,
-                    placeholder: (0, y.Xx)("#FacetedBrowse_SearchFacetValues"),
-                    onChange: (e) => {
-                      m(e.target.value),
-                        l.SetFacetValueSearchString(e.target.value, r);
-                    },
-                    bShowClearAction: !0,
-                  })
-                ),
-                d.createElement(
-                  R,
-                  Object.assign(
-                    {
-                      facets: null == l ? void 0 : l.GetSortedFacets(),
-                      onUpdateFilter: v,
-                    },
-                    e
-                  )
-                ),
-                d.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.reset) || S.FacetedBrowseReset,
-                  },
-                  d.createElement(
-                    "a",
-                    {
-                      onClick: (e) => {
-                        e.preventDefault(),
-                          (0, s.z)(() => {
-                            l.Reset(), c();
-                          });
+                    d.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.menuTitle) ||
+                          S.FacetMenuTitle,
+                        style: v,
                       },
-                    },
-                    (0, y.Xx)("#FacetedBrowse_Reset")
-                  )
-                ),
-                null === (t = null == l ? void 0 : l.GetSortedFacets()) ||
-                  void 0 === t
-                  ? void 0
-                  : t.map((t, a) =>
-                      d.createElement(L, {
-                        key:
-                          "facet_" +
-                          y.LZ.GetWithFallback(t.facet.facet.name, r) +
-                          "_" +
-                          a,
-                        facet: t,
-                        facetFilterState: l,
-                        nFacetIndex: a,
-                        language: r,
-                        nMaxFacetValues: e.nMaxFacetValues,
-                        highlightedFacetColor: e.highlightedFacetColor,
-                        linkColor: e.linkColor,
-                        headingColor: e.headingColor,
-                        fnOnUpdateFilter: v,
-                        styleOverrides: o,
-                        bSearching: (null == u ? void 0 : u.length) > 0,
+                      (0, y.Xx)("#FacetedBrowse_Heading")
+                    ),
+                    Boolean(c) &&
+                      d.createElement(
+                        "div",
+                        {
+                          className:
+                            (null == l ? void 0 : l.matchCount) ||
+                            S.FacetedBrowseMatchCount,
+                        },
+                        null != c.GetMatchCount() &&
+                          (0, y.kb)(
+                            "#FacetedBrowse_MatchCount",
+                            c.GetMatchCount()
+                          )
+                      ),
+                    d.createElement(
+                      "div",
+                      { className: S.FacetValueSearch },
+                      d.createElement(f.II, {
+                        type: "text",
+                        value: _,
+                        placeholder: (0, y.Xx)(
+                          "#FacetedBrowse_SearchFacetValues"
+                        ),
+                        onChange: (e) => {
+                          h(e.target.value),
+                            c.SetFacetValueSearchString(e.target.value, a);
+                        },
+                        bShowClearAction: !0,
                       })
                     ),
-                d.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.reset) || S.FacetedBrowseReset,
-                  },
-                  d.createElement(
-                    "a",
-                    {
-                      onClick: (e) => {
-                        e.preventDefault();
-                        const t =
-                          b.current.getBoundingClientRect().top +
-                          window.scrollY;
-                        window.scrollTo(0, t);
+                    d.createElement(
+                      R,
+                      Object.assign(
+                        {
+                          facets: null == c ? void 0 : c.GetSortedFacets(),
+                          onUpdateFilter: I,
+                        },
+                        e
+                      )
+                    ),
+                    d.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.reset) ||
+                          S.FacetedBrowseReset,
                       },
-                    },
-                    (0, y.Xx)("#FacetedBrowse_ReturnToTop")
+                      d.createElement(
+                        "a",
+                        {
+                          onClick: (e) => {
+                            e.preventDefault(),
+                              (0, s.z)(() => {
+                                c.Reset(), u();
+                              });
+                          },
+                        },
+                        (0, y.Xx)("#FacetedBrowse_Reset")
+                      )
+                    ),
+                    null === (r = null == c ? void 0 : c.GetSortedFacets()) ||
+                      void 0 === r
+                      ? void 0
+                      : r.map((t, r) =>
+                          d.createElement(L, {
+                            key:
+                              "facet_" +
+                              y.LZ.GetWithFallback(t.facet.facet.name, a) +
+                              "_" +
+                              r,
+                            facet: t,
+                            facetFilterState: c,
+                            nFacetIndex: r,
+                            language: a,
+                            nMaxFacetValues: e.nMaxFacetValues,
+                            highlightedFacetColor: e.highlightedFacetColor,
+                            linkColor: e.linkColor,
+                            headingColor: e.headingColor,
+                            fnOnUpdateFilter: I,
+                            styleOverrides: l,
+                            bSearching: (null == _ ? void 0 : _.length) > 0,
+                          })
+                        ),
+                    d.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.reset) ||
+                          S.FacetedBrowseReset,
+                      },
+                      d.createElement(
+                        "a",
+                        {
+                          onClick: (e) => {
+                            e.preventDefault();
+                            const t =
+                              B.current.getBoundingClientRect().top +
+                              window.scrollY;
+                            window.scrollTo(0, t);
+                          },
+                        },
+                        (0, y.Xx)("#FacetedBrowse_ReturnToTop")
+                      )
+                    )
                   )
-                )
-              );
+              : null
+          );
         }),
         R = (0, o.Pi)((e) => {
           const { facets: t } = e,

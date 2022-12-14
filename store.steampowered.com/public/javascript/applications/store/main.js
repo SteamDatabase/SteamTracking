@@ -4777,8 +4777,8 @@
         (function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.Tooltip = 4)] = "Tooltip"),
-            (e[(e.ContextMenu = 8)] = "ContextMenu"),
+            (e[(e.NoTaskbarIcon = 4)] = "NoTaskbarIcon"),
+            (e[(e.NoWindowShadow = 8)] = "NoWindowShadow"),
             (e[(e.Resizable = 16)] = "Resizable"),
             (e[(e.ScalePosition = 32)] = "ScalePosition"),
             (e[(e.ScaleSize = 64)] = "ScaleSize"),
@@ -4788,7 +4788,10 @@
             (e[(e.FullScreen = 1024)] = "FullScreen"),
             (e[(e.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
-              "ApplyBrowserScaleToDimensions");
+              "ApplyBrowserScaleToDimensions"),
+            (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (e[(e.Overlay = 8708)] = "Overlay"),
+            (e[(e.Notification = 8716)] = "Notification");
         })(i || (i = {}));
       const _ = o.createContext({ ownerWindow: window }),
         f = () => o.useContext(_);
@@ -4830,7 +4833,7 @@
         }
         Show(e = !0, t = !1) {
           window.SteamClient && (this.m_rgParams.eCreationFlags |= i.Hidden),
-            this.m_rgParams.eCreationFlags & i.Tooltip && (e = !1),
+            this.m_rgParams.eCreationFlags & i.NotFocusable && (e = !1),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -5323,11 +5326,25 @@
             () => (
               r.current.Show(),
               () => {
-                (r.current.m_callbacks = void 0), r.current.Close();
+                var e, t;
+                (r.current.m_callbacks = void 0),
+                  (null === (e = r.current.window) || void 0 === e
+                    ? void 0
+                    : e.SteamClient.Window.SetHideOnClose) &&
+                    (null === (t = r.current.window) ||
+                      void 0 === t ||
+                      t.SteamClient.Window.SetHideOnClose(!1)),
+                  r.current.Close();
               }
             ),
             []
           ),
+          i.useEffect(() => {
+            r.current.window.SteamClient.Window.SetHideOnClose &&
+              r.current.window.SteamClient.Window.SetHideOnClose(
+                t.bHideOnClose
+              );
+          }, [t.bHideOnClose]),
           { popup: r.current.window, element: s, popupObj: r.current }
         );
       }
@@ -8903,6 +8920,12 @@
             this.m_controller.OnContextActivated(this),
             this.SetActive(!0);
         }
+        OnActivateBrowserView(e) {
+          this.BIsActive() ||
+            (a(`${this.LogName(e)} Browser view activated in context`),
+            this.m_controller.OnContextActivated(this),
+            this.SetActive(!0));
+        }
         OnDeactivate(e) {
           this.m_activeWindow == e
             ? (a(`${this.LogName(e)} Deactivate context for window`),
@@ -10295,6 +10318,16 @@
                     br: r.FE.readUint32,
                     bw: r.Xc.writeUint32,
                   },
+                  has_adult_content_sex: {
+                    n: 15,
+                    br: r.FE.readBool,
+                    bw: r.Xc.writeBool,
+                  },
+                  has_adult_content_violence: {
+                    n: 16,
+                    br: r.FE.readBool,
+                    bw: r.Xc.writeBool,
+                  },
                 },
               }),
             c.sm_m
@@ -11059,8 +11092,22 @@
                 )),
               SteamClient.System.UI.RegisterForSystemKeyEvents(
                 this.HandleSystemKeyEvents
+              ),
+              SteamClient.Input.RegisterForControllerListChanges(
+                this.OnControllerListChanged
               )),
             this.SetSourceType(r.Rr.GAMEPAD);
+        }
+        OnControllerListChanged(e) {
+          this.m_rgControllers.forEach((t, n) => {
+            if (-1 == e.findIndex((e) => e.nControllerIndex == n)) {
+              for (let e = 0; e in r.eV; e++)
+                t.activeButtons[e] && this.OnButtonUp(e, n);
+              this.OnAnalogPad(r.eV.LPAD_TOUCH, 0, 0, n),
+                this.OnAnalogPad(r.eV.RPAD_TOUCH, 0, 0, n),
+                this.m_rgControllers.delete(n);
+            }
+          });
         }
         HandleSystemKeyEvents(e) {
           const t = d[e.eKey];
@@ -11108,7 +11155,8 @@
           }
         }
       }
-      (0, i.gn)([s.a], u.prototype, "HandleSystemKeyEvents", null),
+      (0, i.gn)([s.a], u.prototype, "OnControllerListChanged", null),
+        (0, i.gn)([s.a], u.prototype, "HandleSystemKeyEvents", null),
         (0, i.gn)([s.a], u.prototype, "EnableAnalogInputMessages", null),
         (0, i.gn)([s.a], u.prototype, "HandleControllerInputMessages", null);
       var m = n(53622);
@@ -11471,6 +11519,11 @@
               t,
               { ePrivilege: 1 }
             );
+          }),
+          (e.ReportClientArgs = function (e, t) {
+            return e.SendNotification("ClientMetrics.ReportClientArgs#1", t, {
+              ePrivilege: 1,
+            });
           });
       })(d || (d = {}));
       var u = n(32548),
@@ -15122,26 +15175,26 @@
         );
       }
       const ze = r.forwardRef(function (e, t) {
-        var n, i;
-        const s = null !== (n = e.stylesheet) && void 0 !== n ? n : Ve(),
-          a = e.pages,
-          c =
+        var n, i, s;
+        const a = null !== (n = e.stylesheet) && void 0 !== n ? n : Ve(),
+          c = e.pages,
+          d =
             null != e.startingPage
-              ? a.findIndex(
+              ? c.findIndex(
                   (t) => "object" == typeof t && t.identifier === e.startingPage
                 )
               : -1,
-          d = null == e.page,
-          [u, m] = r.useState(c);
-        let p = u;
-        d ||
-          (p = a.findIndex(
+          u = null == e.page,
+          [m, p] = r.useState(d);
+        let g = m;
+        u ||
+          (g = c.findIndex(
             (t) => "object" == typeof t && t.identifier === e.page
           )),
-          (p < 0 || p >= a.length) && (p = 0);
-        let g = null;
-        "object" == typeof a[p] && (g = a[p]);
-        let _ = (function (e) {
+          (g < 0 || g >= c.length) && (g = 0);
+        let _ = null;
+        "object" == typeof c[g] && (_ = c[g]);
+        let f = (function (e) {
           let t = r.useRef(e),
             n = r.useRef("none"),
             i = t.current;
@@ -15149,10 +15202,10 @@
           let s = "none";
           i < e ? (s = "down") : i > e && (s = "up");
           return (t.current = e), (n.current = s), s;
-        })(p);
-        const f = r.useRef(),
-          v = r.useCallback(() => f.current.TakeFocus(), [f]),
-          C = a.map((t, n) => {
+        })(g);
+        const v = r.useRef(),
+          C = r.useCallback(() => v.current.TakeFocus(), [v]),
+          b = c.map((t, n) => {
             if ("separator" === t)
               return r.createElement(
                 r.Fragment,
@@ -15165,84 +15218,88 @@
                 className: Ve().PageListSpacer,
               });
             if (!1 === t.visible) return null;
-            const i = t == g,
-              o = t.title && t.title.length > 0 ? t.title : n.toString();
+            const i = t == _,
+              s = t.title && t.title.length > 0 ? t.title : n.toString();
             return r.createElement(h.T, {
               component: e.renderPageListItem,
               fallback: We,
-              className: (0, l.Z)(s.PagedSettingsDialog_PageListItem, {
-                [s.Active]: i,
+              className: (0, l.Z)(a.PagedSettingsDialog_PageListItem, {
+                [a.Active]: i,
               }),
-              key: o,
+              key: s,
               onClick: () => {
                 Fe.LT.PlayNavSound(Fe.qr.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
-                  t.click ? t.click() : d && n != u && m(n);
+                  t.click ? t.click() : u && n != m && p(n);
               },
               title: t.title,
               icon: t.icon,
               active: i,
             });
           }),
-          b = r.useRef(),
-          S = g.hideTitle,
-          w = null === (i = e.showTitle) || void 0 === i || i,
-          y = (0, l.Z)(
+          S = r.useRef(),
+          w = _.hideTitle,
+          y = null === (i = e.showTitle) || void 0 === i || i,
+          E = (0, l.Z)(
             "DialogContentTransition",
-            s.PagedSettingDialog_ContentColumn
+            a.PagedSettingDialog_ContentColumn
           );
-        return r.createElement(
-          o.s,
-          { className: (0, l.Z)(s.PagedSettingsDialog, e.className), ref: t },
+        return (
+          e.focusChild &&
+            (null === (s = S.current) || void 0 === s || s.TakeFocus()),
           r.createElement(
             o.s,
-            {
-              className: s.PagedSettingsDialog_PageListColumn,
-              navRef: f,
-              onButtonDown: (e) => {
-                var t;
-                e.detail.button == Ne.eV.OK &&
-                  (null === (t = b.current) ||
-                    void 0 === t ||
-                    t.TakeFocus(e.detail.button));
+            { className: (0, l.Z)(a.PagedSettingsDialog, e.className), ref: t },
+            r.createElement(
+              o.s,
+              {
+                className: a.PagedSettingsDialog_PageListColumn,
+                navRef: v,
+                onButtonDown: (e) => {
+                  var t;
+                  e.detail.button == Ne.eV.OK &&
+                    (null === (t = S.current) ||
+                      void 0 === t ||
+                      t.TakeFocus(e.detail.button));
+                },
               },
-            },
-            w &&
+              y &&
+                r.createElement(
+                  "div",
+                  { className: a.PagedSettingsDialog_Title },
+                  e.title
+                ),
+              e.topControls && r.createElement("div", null, e.topControls),
               r.createElement(
-                "div",
-                { className: s.PagedSettingsDialog_Title },
-                e.title
+                h.T,
+                {
+                  component: e.renderPageList,
+                  fallback: He,
+                  className: a.PagedSettingsDialog_PageList,
+                },
+                b
               ),
-            e.topControls && r.createElement("div", null, e.topControls),
-            r.createElement(
-              h.T,
-              {
-                component: e.renderPageList,
-                fallback: He,
-                className: s.PagedSettingsDialog_PageList,
-              },
-              C
+              e.bottomControls && r.createElement("div", null, e.bottomControls)
             ),
-            e.bottomControls && r.createElement("div", null, e.bottomControls)
-          ),
-          r.createElement(
-            o.s,
-            { className: y, onCancelButton: v, navRef: b },
             r.createElement(
-              h.T,
-              {
-                component: e.renderPageAnimation,
-                fallback: Ke,
-                activePage: g,
-                direction: _,
-              },
-              g &&
-                r.createElement(je, {
-                  key: g.identifier,
-                  stylesheet: s,
-                  hideTitle: S,
-                  activePage: g,
-                })
+              o.s,
+              { className: E, onCancelButton: C, navRef: S },
+              r.createElement(
+                h.T,
+                {
+                  component: e.renderPageAnimation,
+                  fallback: Ke,
+                  activePage: _,
+                  direction: f,
+                },
+                _ &&
+                  r.createElement(je, {
+                    key: _.identifier,
+                    stylesheet: a,
+                    hideTitle: w,
+                    activePage: _,
+                  })
+              )
             )
           )
         );
@@ -15699,6 +15756,7 @@
             (this.m_navRefSlider = r.createRef()),
             (this.m_sliderBounds = null),
             (this.m_handleBounds = null),
+            (this.m_fZoom = 1),
             (this.m_eDragMode = ut.None),
             (this.m_vTouchStartPosition = (0, st.kN)()),
             (this.m_fStartValue = null),
@@ -15898,13 +15956,14 @@
         }
         ComputeNormalizedValueForMousePosition(e) {
           if (null == this.m_sliderBounds) return 0;
-          const t = this.m_sliderBounds.right - this.m_sliderBounds.left,
-            n =
+          const t = e / this.m_fZoom,
+            n = this.m_sliderBounds.right - this.m_sliderBounds.left,
+            i =
               null == this.m_handleBounds
                 ? 0
                 : this.m_handleBounds.right - this.m_handleBounds.left,
-            i = t - n;
-          return (e - this.m_sliderBounds.left - n / 2) / i;
+            r = n - i;
+          return (t - this.m_sliderBounds.left - i / 2) / r;
         }
         UpdateSliderValueForPosition(e) {
           if (this.props.disabled || !this.m_refSlider.current) return;
@@ -16029,6 +16088,9 @@
                   : o.ownerDocument) ||
               void 0 === a ||
               a.removeEventListener("touchend", this.OnWindowTouchEnd);
+        }
+        componentDidMount() {
+          this.m_fZoom = (0, j.KM)(this.m_refSlider.current);
         }
         componentWillUnmount() {
           this.RemoveDocumentEventListeners();
@@ -17550,7 +17612,7 @@
               body_class: "ContextMenuPopupBody",
               replace_existing_popup: !1,
               target_browser: n,
-              eCreationFlags: u.eL.ContextMenu,
+              eCreationFlags: u.eL.NoTaskbarIcon,
             },
             { updateParamsBeforeShow: i }
           );
@@ -22929,6 +22991,7 @@
     64839: (e, t, n) => {
       "use strict";
       n.d(t, {
+        KM: () => i.KM,
         Gt: () => d,
         it: () => c,
         dn: () => r.dn,
@@ -22991,10 +23054,11 @@
       "use strict";
       n.d(t, {
         B8: () => r,
-        JI: () => o,
+        JI: () => a,
+        KM: () => o,
         NW: () => s,
-        Qg: () => a,
-        e1: () => l,
+        Qg: () => l,
+        e1: () => c,
       });
       var i = n(67294);
       n(99533);
@@ -23005,7 +23069,19 @@
         const [, e] = i.useState(0);
         return i.useCallback(() => e((e) => e + 1), []);
       }
-      function o(e, t, n, r) {
+      function o(e) {
+        let t = 1;
+        for (; null != e && "HTML" != e.tagName; ) {
+          const n = getComputedStyle(e);
+          if (n.zoom) {
+            const e = Number.parseFloat(n.zoom);
+            isNaN(e) || (t *= e);
+          }
+          e = e.parentElement;
+        }
+        return t;
+      }
+      function a(e, t, n, r) {
         i.useEffect(() => {
           if (e && n)
             return (
@@ -23013,14 +23089,14 @@
             );
         }, [e, t, n]);
       }
-      function a(e, t) {
+      function l(e, t) {
         i.useLayoutEffect(() => {
           if (!t || !e) return;
           let n = e.Register(t);
           return () => n.Unregister();
         }, [e, t]);
       }
-      function l(e) {
+      function c(e) {
         const [t, n] = i.useState(null == e ? void 0 : e.Value);
         return (
           i.useEffect(() => {
@@ -23258,18 +23334,18 @@
       n.d(t, {
         De: () => d,
         E_: () => l,
-        Ek: () => v,
+        Ek: () => C,
         JA: () => h,
-        Kc: () => E,
+        Kc: () => D,
         L7: () => u,
         Wj: () => p,
-        Zv: () => D,
+        Zv: () => T,
         dk: () => m,
         id: () => c,
-        ip: () => w,
-        kQ: () => S,
-        x: () => C,
-        y9: () => f,
+        ip: () => y,
+        kQ: () => w,
+        x: () => b,
+        y9: () => v,
       });
       var i = n(70655),
         r = n(48899),
@@ -23337,9 +23413,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, s.t$)()) return g || (g = _()), g;
+              if (!(0, s.t$)()) return _ || (_ = f()), _;
               let e = (0, s.bG)("sessionid");
-              e || (e = _());
+              e || (e = f());
               return e;
             })();
           },
@@ -23390,9 +23466,10 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        p = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let g;
-      function _() {
+        p = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+        g = "webui_config";
+      let _;
+      function f() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, r.LO)(0, 35).toString(36);
@@ -23400,30 +23477,30 @@
         })();
         return (0, s.I1)("sessionid", e, 0), e;
       }
-      function f() {
+      function v() {
         let e = null;
         return (
           (0, s.t$)() && (e = (0, s.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function v(e = "webui_config") {
+      function C(e = g) {
         const t = {},
-          n = S("config", e);
+          n = w("config", e);
         n && (delete n.SESSIONID, Object.assign(d, n), (t.config = !0));
-        const i = S("userinfo", e);
+        const i = w("userinfo", e);
         i &&
           (Object.assign(u, i),
           (t.userConfig = !0),
-          u.is_support && f() && (u.is_support = !1));
-        const r = S("broadcast", e);
+          u.is_support && v() && (u.is_support = !1));
+        const r = w("broadcast", e);
         r && (Object.assign(m, r), (t.broadcastConfig = !0));
-        const s = S("community", e);
+        const s = w("community", e);
         s && (Object.assign(h, s), (t.communityConfig = !0));
-        const o = S("event", e);
+        const o = w("event", e);
         return o && (Object.assign(p, o), (t.eventConfig = !0)), t;
       }
-      function C(e, t, n) {
+      function b(e, t, n) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           if (n.config) {
             const n = (yield e.get(t + "ajaxgetconfig")).data;
@@ -23437,7 +23514,7 @@
           }
         });
       }
-      function b(e, t = "webui_config", n) {
+      function S(e, t = g, n) {
         let i;
         if (
           ((i =
@@ -23457,54 +23534,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function S(e, t = "webui_config") {
-        return b(e, t, !0);
+      function w(e, t = g) {
+        return S(e, t, !0);
       }
-      function w(e, t = "webui_config") {
-        return b(e, t, !1);
+      function y(e, t = g) {
+        return S(e, t, !1);
       }
-      function y(e, t) {
+      function E(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function E() {
+      function D() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return y(e, d.STORE_BASE_URL)
+        return E(e, d.STORE_BASE_URL)
           ? d.STORE_BASE_URL
-          : y(e, d.COMMUNITY_BASE_URL)
+          : E(e, d.COMMUNITY_BASE_URL)
           ? d.COMMUNITY_BASE_URL
-          : y(e, d.CHAT_BASE_URL)
+          : E(e, d.CHAT_BASE_URL)
           ? d.CHAT_BASE_URL
-          : y(e, d.PARTNER_BASE_URL)
+          : E(e, d.PARTNER_BASE_URL)
           ? d.PARTNER_BASE_URL
-          : y(e, d.HELP_BASE_URL)
+          : E(e, d.HELP_BASE_URL)
           ? d.HELP_BASE_URL
-          : y(e, d.STEAMTV_BASE_URL)
+          : E(e, d.STEAMTV_BASE_URL)
           ? d.STEAMTV_BASE_URL
-          : y(e, d.STATS_BASE_URL)
+          : E(e, d.STATS_BASE_URL)
           ? d.STATS_BASE_URL
-          : y(e, d.INTERNAL_STATS_BASE_URL)
+          : E(e, d.INTERNAL_STATS_BASE_URL)
           ? d.INTERNAL_STATS_BASE_URL
-          : y(e, d.STORE_CHECKOUT_BASE_URL)
+          : E(e, d.STORE_CHECKOUT_BASE_URL)
           ? d.STORE_CHECKOUT_BASE_URL
-          : y(e, "https://steamloopback.host")
+          : E(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function D() {
+      function T() {
         const e = window.location.href;
-        return y(e, d.STORE_BASE_URL) || y(e, d.STORE_CHECKOUT_BASE_URL)
+        return E(e, d.STORE_BASE_URL) || E(e, d.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : y(e, d.COMMUNITY_BASE_URL)
+          : E(e, d.COMMUNITY_BASE_URL)
           ? "community"
-          : y(e, d.PARTNER_BASE_URL)
+          : E(e, d.PARTNER_BASE_URL)
           ? "partnerweb"
-          : y(e, d.HELP_BASE_URL)
+          : E(e, d.HELP_BASE_URL)
           ? "help"
-          : y(e, d.STEAMTV_BASE_URL)
+          : E(e, d.STEAMTV_BASE_URL)
           ? "steamtv"
-          : y(e, d.STATS_BASE_URL) || y(e, d.INTERNAL_STATS_BASE_URL)
+          : E(e, d.STATS_BASE_URL) || E(e, d.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }

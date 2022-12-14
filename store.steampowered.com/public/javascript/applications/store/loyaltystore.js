@@ -1805,7 +1805,7 @@
     25251: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Wy: () => F,
+        Wy: () => G,
         Vb: () => B,
         QU: () => W,
         gl: () => x,
@@ -3235,7 +3235,7 @@
                   : void 0
               );
             case "event":
-              return new G(e.eventname);
+              return new F(e.eventname);
             case "custom":
               return console.error("Cannot dynamically build page type"), null;
             default:
@@ -3258,7 +3258,7 @@
               );
             },
             t = (e, t, r) => {
-              const n = new F(e, t, Z({ grouping: 2 }, r));
+              const n = new G(e, t, Z({ grouping: 2 }, r));
               return (
                 this.m_mapClusters.has(n.id) || this.m_mapClusters.set(n.id, n),
                 n
@@ -3587,7 +3587,7 @@
                 const n = B.Get().GetSortedGamesWithRewards(),
                   i = (e) => {
                     const t = this.m_mapClusters.get(e);
-                    return t && t instanceof F ? t.appid : null;
+                    return t && t instanceof G ? t.appid : null;
                   };
                 let a = 0;
                 for (const e of n) {
@@ -3730,7 +3730,7 @@
         }
       }
       (0, n.gn)([p.ak], j.prototype, "GetRewards", null);
-      class F {
+      class G {
         constructor(e, t, r) {
           (this.m_appid = e),
             (this.m_strSubtitle = t || ""),
@@ -3755,8 +3755,8 @@
           return B.Get().QueryRewardDefinitions(n, e, t);
         }
       }
-      (0, n.gn)([p.ak], F.prototype, "GetRewards", null);
-      class G {
+      (0, n.gn)([p.ak], G.prototype, "GetRewards", null);
+      class F {
         constructor(e) {
           this.m_strEventName = e;
         }
@@ -4634,7 +4634,7 @@
             a = (0, i.useMemo)(
               () =>
                 (function (e) {
-                  return [
+                  const t = [
                     "padding",
                     "padding-top",
                     "padding-bottom",
@@ -4652,6 +4652,7 @@
                         .join("\n")
                     )
                     .join("\n");
+                  return t;
                 })(n),
               [n]
             ),
@@ -6196,7 +6197,7 @@
         R = (r(26149), r(95598)),
         k = r(7573);
       let j = { success: !0, result: 1 };
-      class F {
+      class G {
         constructor() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
@@ -6309,9 +6310,9 @@
           );
         }
       }
-      let G = new (class {
+      let F = new (class {
         constructor() {
-          (this.m_connection = new F()),
+          (this.m_connection = new G()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
@@ -6399,7 +6400,7 @@
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = G;
+      window.ClientConnectionAPI = F;
       const O =
         r.p +
         "images/applications/store/lunar2022_confirm.png?v=valveisgoodatcaching";
@@ -7052,7 +7053,7 @@
         De = r(47808);
       function Be(e, t) {
         (0, f.x1)(
-          o.createElement(Fe, { definitionid: t }),
+          o.createElement(Ge, { definitionid: t }),
           e ? (0, C.RA)(e) : window
         );
       }
@@ -7064,7 +7065,7 @@
           desiredItemLevel: r,
         };
         (0, f.x1)(
-          o.createElement(Ge, { definition: i, saleitem: n }),
+          o.createElement(Fe, { definition: i, saleitem: n }),
           e ? (0, C.RA)(e) : window
         );
       }
@@ -7077,7 +7078,7 @@
           desiredItemLevel: n,
         };
         (0, f.x1)(
-          o.createElement(Ge, { definition: i }),
+          o.createElement(Fe, { definition: i }),
           e ? (0, C.RA)(e) : window
         );
       }
@@ -7089,7 +7090,7 @@
           desiredItemLevel: n,
         };
         (0, f.x1)(
-          o.createElement(Ge, { definition: i }),
+          o.createElement(Fe, { definition: i }),
           e ? (0, C.RA)(e) : window
         );
       }
@@ -7134,15 +7135,15 @@
         }
         return 0;
       }
-      function Fe(e) {
+      function Ge(e) {
         const { definitionid: t } = e,
           r = (0, a._T)(e, ["definitionid"]),
           n = (0, m.SZ)(() => g.Vb.Get().GetRewardItem(t));
         if (!n) return null;
         const i = { type: 1, rewardDefinition: n };
-        return o.createElement(Ge, Object.assign({ definition: i }, r));
+        return o.createElement(Fe, Object.assign({ definition: i }, r));
       }
-      let Ge = class extends o.Component {
+      let Fe = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_bShowTransitions = !1),
@@ -7544,12 +7545,12 @@
           );
         }
       };
-      (0, a.gn)([d.ak], Ge.prototype, "ShowGenericError", null),
-        (0, a.gn)([d.ak], Ge.prototype, "ShowError", null),
-        (0, a.gn)([d.ak], Ge.prototype, "RedeemPoints", null),
-        (0, a.gn)([d.ak], Ge.prototype, "EquipItem", null),
-        (0, a.gn)([d.ak], Ge.prototype, "CloseModal", null),
-        (Ge = (0, a.gn)([c.Pi], Ge));
+      (0, a.gn)([d.ak], Fe.prototype, "ShowGenericError", null),
+        (0, a.gn)([d.ak], Fe.prototype, "ShowError", null),
+        (0, a.gn)([d.ak], Fe.prototype, "RedeemPoints", null),
+        (0, a.gn)([d.ak], Fe.prototype, "EquipItem", null),
+        (0, a.gn)([d.ak], Fe.prototype, "CloseModal", null),
+        (Fe = (0, a.gn)([c.Pi], Fe));
       const Oe = (e) => {
           const { definition: t, closeModal: r } = e,
             n = () => {},
@@ -9268,8 +9269,8 @@
                 t();
             },
             i = () => {
-              G.BClientSupportsMessage("OpenFriendsDialog")
-                ? G.OpenFriendsDialog()
+              F.BClientSupportsMessage("OpenFriendsDialog")
+                ? F.OpenFriendsDialog()
                     .then((e) => {
                       e.success || r();
                     })
@@ -9700,7 +9701,7 @@
       const M = (0, a.Pi)((e) => i.createElement(O, Object.assign({}, v(e)))),
         b = (0, a.Pi)((e) =>
           i.createElement(
-            G,
+            F,
             Object.assign({}, v(e), { iconComponent: s.kqV }),
             (t) => {
               const {
@@ -9744,7 +9745,7 @@
         ),
         D = (0, a.Pi)((e) =>
           i.createElement(
-            F,
+            G,
             Object.assign({ className: l.HasAnimation }, v(e), {
               iconComponent: s.SjW,
               styleOverride: l.BackgroundOverride,
@@ -9804,7 +9805,7 @@
         ),
         P = (0, a.Pi)((e) =>
           i.createElement(
-            F,
+            G,
             Object.assign({}, v(e), {
               iconComponent: _.GR,
               videoProps: {
@@ -9841,7 +9842,7 @@
         ),
         L = (0, a.Pi)((e) =>
           i.createElement(
-            G,
+            F,
             Object.assign({}, v(e), { iconComponent: _.F1 }),
             (t) => {
               const {
@@ -9864,7 +9865,7 @@
         ),
         T = (0, a.Pi)((e) =>
           i.createElement(
-            G,
+            F,
             Object.assign({}, v(e), { iconComponent: _.Xo }),
             (t) => {
               const {
@@ -9906,7 +9907,7 @@
         ),
         j = (0, a.Pi)((e) =>
           i.createElement(
-            F,
+            G,
             Object.assign({}, v(e), {
               iconComponent: _.Yr,
               videoProps: {
@@ -9941,7 +9942,7 @@
             )
           )
         );
-      class F extends i.Component {
+      class G extends i.Component {
         constructor() {
           super(...arguments),
             (this.m_ref = i.createRef()),
@@ -9996,7 +9997,7 @@
             this.setState({ bVisible: e });
         }
       }
-      class G extends i.Component {
+      class F extends i.Component {
         constructor() {
           super(...arguments), (this.state = { bHover: !1 });
         }
@@ -10573,7 +10574,7 @@
             [s, l] = N(),
             [c, m] = N(),
             d = (0, h.NM)("padding-right", S),
-            p = (0, h.xX)().spacing.none;
+            p = (0, h.xX)().spacing[S];
           let u = 1;
           l.width &&
             void 0 !== m.width &&
@@ -10767,7 +10768,7 @@
         R = r(75057),
         k = r(99698),
         j = r(30114);
-      const F = (e) => {
+      const G = (e) => {
           const {
               title: t,
               description: r,
@@ -10851,7 +10852,7 @@
             )
           );
         },
-        G = (e) => {
+        F = (e) => {
           const { theme: t, style: r } = e,
             a = (0, n._T)(e, ["theme", "style"]);
           return i.createElement(
@@ -11113,7 +11114,7 @@
             L.iS,
             null,
             i.createElement(
-              F,
+              G,
               {
                 title: l || m,
                 description: c || p,
@@ -11124,7 +11125,7 @@
                 actions: i.createElement(
                   d.rU,
                   { to: h },
-                  i.createElement(G, { theme: s }, (0, g.Xx)("#SeeAllButton"))
+                  i.createElement(F, { theme: s }, (0, g.Xx)("#SeeAllButton"))
                 ),
               },
               C
@@ -11154,7 +11155,7 @@
             L.iS,
             null,
             i.createElement(
-              F,
+              G,
               {
                 title: m || u,
                 description: "",
@@ -11166,7 +11167,7 @@
                   d.rU,
                   { to: C },
                   i.createElement(
-                    G,
+                    F,
                     {
                       onClick: () => o.push(C),
                       theme: c,
@@ -11273,7 +11274,7 @@
             const e = (0, a.k6)(),
               t = i.useRef(),
               r = (0, a.TH)(),
-              n = r.state && r.state.FocusNavHistoryID,
+              n = r.state && r.state[me],
               o = i.useRef();
             return (
               i.useLayoutEffect(() => {
@@ -11284,7 +11285,7 @@
                   .Tree.WindowContext.FocusChangedCallbacks.Register(
                     (t, n, i) => {
                       const a = e.location;
-                      let s = a.state && a.state.FocusNavHistoryID;
+                      let s = a.state && a.state[me];
                       s ||
                         ((s = `State_${a.key}`),
                         (o.current = s),
@@ -11659,7 +11660,7 @@
           if (!t) return !1;
           return (r.hash === ke) === e;
         },
-        Fe = () => {
+        Ge = () => {
           const e = [
               {
                 items: [
@@ -11756,10 +11757,7 @@
                 props: {
                   iconComponent: fe.uR,
                   children: (0, g.Xx)("#ShopNav_AwardsLink"),
-                  to: {
-                    pathname: o.Z.LoyaltyHowItWorks(),
-                    hash: "#CommunityAwards",
-                  },
+                  to: { pathname: o.Z.LoyaltyHowItWorks(), hash: `${ke}` },
                   isActive: je(!0),
                 },
               }),
@@ -11819,8 +11817,8 @@
             e
           );
         },
-        Ge = () => {
-          const e = Fe();
+        Fe = () => {
+          const e = Ge();
           return i.createElement(
             h.xu,
             {
@@ -11923,7 +11921,7 @@
         );
       }
       const Ue = () => {
-        const e = Fe(),
+        const e = Ge(),
           t = [];
         return (
           e.forEach((e) => {
@@ -12002,7 +12000,7 @@
                     flexDirection: "row",
                     className: he.ShellScrollParent,
                   },
-                  !a && i.createElement(Ge, null),
+                  !a && i.createElement(Fe, null),
                   i.createElement(
                     h.xu,
                     {
@@ -13020,7 +13018,7 @@
       };
       kt = (0, n.gn)([c.Pi], kt);
       var jt = r(15385);
-      const Ft = (0, c.Pi)(() =>
+      const Gt = (0, c.Pi)(() =>
           i.createElement(
             qe.Dj,
             null,
@@ -13057,13 +13055,13 @@
                 h.Kq,
                 { spacing: "small" },
                 _.Vb.Get().active_bonuses.map((e) =>
-                  i.createElement(Gt, { key: e.bonusid, bonus: e })
+                  i.createElement(Ft, { key: e.bonusid, bonus: e })
                 )
               )
             )
           )
         ),
-        Gt = (0, c.Pi)((e) => {
+        Ft = (0, c.Pi)((e) => {
           const {
               bonus: {
                 appid: t,
@@ -15098,66 +15096,30 @@
           return "CAuction_GetUserBidForItem_Response";
         }
       }
-      class Fr extends br {
+      class Gr extends br {
         constructor(e = null) {
           super(),
-            Fr.prototype.item || Mr.aR(Fr.M()),
+            Gr.prototype.item || Mr.aR(Gr.M()),
             br.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Fr.sm_m ||
-              (Fr.sm_m = { proto: Fr, fields: { item: { n: 1, c: xr } } }),
-            Fr.sm_m
+            Gr.sm_m ||
+              (Gr.sm_m = { proto: Gr, fields: { item: { n: 1, c: xr } } }),
+            Gr.sm_m
           );
         }
         static MBF() {
-          return Fr.sm_mbf || (Fr.sm_mbf = Mr.Bh(Fr.M())), Fr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Fr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return Mr.TA(Fr.M(), e, t);
-        }
-        static fromObject(e) {
-          return Mr.aD(Fr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new vr.BinaryReader(e),
-            r = new Fr();
-          return Fr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return Mr.F(Fr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new vr.BinaryWriter();
-          return Fr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          Mr.l2(Fr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new vr.BinaryWriter();
-          return Fr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuction_GetItemDetails_Response";
-        }
-      }
-      class Gr extends br {
-        constructor(e = null) {
-          super(), br.initialize(this, e, 0, -1, void 0, null);
+          return Gr.sm_mbf || (Gr.sm_mbf = Mr.Bh(Gr.M())), Gr.sm_mbf;
         }
         toObject(e = !1) {
           return Gr.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return Mr.TA(Gr.M(), e, t);
         }
         static fromObject(e) {
-          return new Gr();
+          return Mr.aD(Gr.M(), e);
         }
         static deserializeBinary(e) {
           let t = new vr.BinaryReader(e),
@@ -15165,16 +15127,52 @@
           return Gr.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return Mr.F(Gr.MBF(), e, t);
         }
         serializeBinary() {
           var e = new vr.BinaryWriter();
           return Gr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          Mr.l2(Gr.M(), e, t);
+        }
         serializeBase64String() {
           var e = new vr.BinaryWriter();
           return Gr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuction_GetItemDetails_Response";
+        }
+      }
+      class Fr extends br {
+        constructor(e = null) {
+          super(), br.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Fr.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Fr();
+        }
+        static deserializeBinary(e) {
+          let t = new vr.BinaryReader(e),
+            r = new Fr();
+          return Fr.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new vr.BinaryWriter();
+          return Fr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new vr.BinaryWriter();
+          return Fr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuction_GetAllItems_Request";
@@ -15259,7 +15257,7 @@
             });
           }),
           (e.GetItemDetails = function (e, t) {
-            return e.SendMsg("Auction.GetItemDetails#1", t, Fr, {
+            return e.SendMsg("Auction.GetItemDetails#1", t, Gr, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -15316,7 +15314,7 @@
         }
         LoadAllItems() {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const e = Sr.gA.Init(Gr);
+            const e = Sr.gA.Init(Fr);
             let t = yield zr.GetAllItems(this.m_anonymousTransport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().items
@@ -15418,7 +15416,7 @@
                   i.createElement(
                     a.AW,
                     { path: o.Z.LoyaltyGetPoints() },
-                    i.createElement(Ft, null)
+                    i.createElement(Gt, null)
                   ),
                   i.createElement(
                     a.AW,

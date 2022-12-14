@@ -326,8 +326,8 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0px 3px 5px #000000aa;
-  transition: filter 0.25s ease-out 100ms;
-  filter: brightness(1);
+  transition: filter 0.25s ease-in-out 100ms;
+  filter: hue-rotate(0deg);
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs.broadcastchatannouncement_GiveawayWinnerAnnounced_1784w {
   animation-name: broadcastchatannouncement_WinnerFlash_-YiiO;
@@ -349,7 +349,7 @@
   }
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs:hover {
-  filter: hue-rotate(30deg);
+  filter: hue-rotate(15deg) !important;
   color: #fff;
 }
 .broadcastchatannouncement_GiveawayWinnerBoxRight_164o1 {

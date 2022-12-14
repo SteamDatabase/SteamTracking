@@ -281,6 +281,7 @@
                       prune_list_optin_name: e.jsondata.prune_list_optin_name,
                       optin_tagid: e.jsondata.optin_tagid,
                       optin_prune_tagid: e.jsondata.optin_prune_tagid,
+                      optin_only: e.jsondata.optin_only,
                       applist: t.sort().join(","),
                     };
                   let l = null;
@@ -771,7 +772,6 @@
                 })
               : n.createElement(U.B, {
                   imageType: "header",
-                  bAutoFocus: o,
                   capsule: d,
                   bShowDemoButton: R,
                   strExtraParams: B,

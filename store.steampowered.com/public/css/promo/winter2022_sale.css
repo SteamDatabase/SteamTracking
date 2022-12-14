@@ -1,0 +1,3031 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
+
+body.v6.sale_winter2022 {
+				background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale2022_bg_flat3.webp?v=2') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale_bottomtile.jpg?v=2') repeat-y center top, #010404;
+            }
+
+body.v6.sale_winter2022 .responsive_page_template_content {
+                margin: 0 auto;
+			/*	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/bg_tile_middle.png?v=2') repeat-y center; */
+            }
+body.v6.sale_winter2022 .page_background_holder {
+                background-size: contain !important;
+                max-height: 450px;
+                margin-top: 30px;
+            }
+
+body.v6.sale_winter2022 .home_page_takeover_sizer {
+                max-height: 400px;
+                min-height: 360px;
+                display: inline-block;
+            }
+
+body.v6.sale_winter2022 .home_page_takeover_link {
+                z-index: 200;
+            }
+
+body.v6.sale_winter2022 .fullscreen-bg {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                overflow: hidden;
+                height: 100%;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+body.v6.sale_winter2022 .home_header_textimage_ctn {
+                width: 940px;
+                max-width: 95vw;
+                z-index: 100;
+                position: absolute;
+                margin: 0;
+                height: 100%;
+                max-height: 460px;
+                display: flex;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+body.v6.sale_winter2022 .home_ctn.discovery_queue_ctn, body.v6.sale_winter2022 .home_ctn.top_new_releases {
+                                                                         background: transparent;
+                                                                     }
+
+
+
+.fullscreen-bg__video {
+    max-width: 1800px;
+}
+
+body.v6.sale_winter2022.infinite_scrolling #footer.small_footer {
+    background: black;
+            }
+body.v6.sale_winter2022 .home_sticker_ctn.mobile {
+    display: none;
+}
+.page_background_holder_mobile {
+    display: none;
+}
+.event_nav_element {
+    position: absolute;
+    width: 100%;
+}
+
+.hero_parent_ctn .home_section_title {
+    display: none;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    background: linear-gradient(90deg, #0b2136, #706aa0);
+    border-radius: 20px;
+}
+
+
+.bookmark_triangle {
+    width: 18px;
+    margin-left: -1px;
+    color: #E5502F;
+    transform: rotate(180deg);
+}
+
+.bookmark_triangle.top {
+    color: #B2292D;
+}
+
+.bookmark_img {
+    width: 44px;
+    padding-top: 12px;
+    padding-right: 10px;
+    background-color: #BE4328;
+}
+
+.bookmark_text {
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fefeef;
+    text-overflow: ellipsis;
+    background-color: #E5502F;
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    border-right: 3px solid #E5502F;
+    border-left: 1px solid #E5502F;
+}
+
+.bookmark_text.top {
+    border-right: 3px solid #B2292D;
+    border-left: 1px solid #B2292D;
+    background-color: #B2292D;
+    font-size: 14px;
+    padding: 7px 5px;
+}
+
+.bookmark_ctn.top {
+    height: 32px;
+}
+
+.bookmark_text > div {
+    font-size: 13px;
+    font-weight: 900;
+    color: #fefeef;
+    text-overflow: ellipsis;
+}
+
+.bookmarks_ctn:hover {
+    transform: rotate( 3deg ) scale(1.07);
+    -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bookmarks_ctn {
+    display: flex;
+    margin-bottom: 3%;
+    margin-right: 1vw;
+    position: relative;
+    flex-direction: column;
+    transform: rotate(
+            0deg
+    ) scale(1);
+    -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.bookmark_ctn {
+    width: fit-content;
+    user-select: none;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.summer_top_text {
+    font-size: 16px;
+    color: #ff8067;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.summer_bottom_text {
+    font-size: 24px;
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-self: center;
+    filter: drop-shadow(2px 4px 12px #3D3E3899);
+    font-family: "Motiva Sans", Sans-serif;
+}
+
+.summer_bottom_text span {
+    color: #EBB616;
+    text-decoration: underline;
+}
+
+.summer_bottom_ctn {
+    display: flex;
+    justify-content: flex-end;
+    color: #FFF;
+    font-size: 14px;
+    margin: auto 3% 2% auto;
+}
+
+.summer_points_ctn {
+    display: flex;
+    align-self: flex-end;
+    margin-left: 30px;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.summer_points_column {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.075em;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.summer_points_ctn img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.summer_points_amt {
+    font-size: 18px;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.summer_banner_ctn {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+	flex-grow: 1;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+
+.summer_encore_ctn {
+    margin-top: 1vw;
+    margin-right: -2vw;
+    text-align: center;
+    max-width: 25%;
+    padding: 5px;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+    align-self: flex-end;
+    transform: rotate(16deg);
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    font-style: italic;
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2020/encore_bg.png?v=1') no-repeat center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.summer_encore_text {
+    padding: 8px 15px;
+    border-radius: 14px;
+    color: #403C3C;
+    border: 3px solid #403C3C;
+    display: inline-block;
+}
+
+
+.home_sticker_ctn {
+    background-size: contain;
+    min-height: 175px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transform: scale(1.0);
+    margin: 0 0 0 0;
+}
+
+.split_banner_ctn {
+	display: flex;
+	gap: 10px;
+}
+
+.home_giftcard_ctn img {
+    max-width: 400px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.home_giftcard_ctn {
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/coupon_bg_games.jpg?v=2') no-repeat center top;
+    overflow: hidden;
+    min-height: 200px;
+    position: relative;
+    box-shadow: 2.86px 6.67px 14.29px rgba( 0, 0, 0, 0.67 );
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transform: scale(1.0);
+}
+
+.home_giftcard_ctn .gift_cards_img {
+    transform: rotate(15.75deg);
+    transition-property: rotate;
+    margin-left: auto;
+}
+
+.home_steamawards_ctn {
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/steamawards_vote_banner.png?v=2') no-repeat center top;
+    height: 282px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transform: scale(1.0);
+	-webkit-filter: drop-shadow(12px px 7px rgba(0,0,0,0.5));
+    filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+}
+
+.summer_banner_ctn.home_topgames_ctn {
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2021/best.jpg?v=3') no-repeat center top;
+    background-size: cover;
+    height: 200px;
+    box-shadow: 2.86px 6.67px 14.29px rgba( 0, 0, 0, 0.67 );
+    align-items: center;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transform: scale(1.0);
+    margin-top: 80px;
+}
+
+.home_steamawards_ctn:hover, .home_giftcard_ctn:hover, .home_sticker_ctn:hover, .home_topgames_ctn:hover {
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transform: scale(1.01);
+	text-decoration: none;
+}
+
+.home_steamawards_title {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		    font-size: 40px;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+
+.home_steamawards_desc {
+    font-size: 20px;
+    color: #b298fb;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.home_steamawards_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 20px 50px 20px 50px;
+}
+
+.home_steamawards_nominateBox {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    letter-spacing: 1px;
+    background: #b298fb;
+	border: 3px solid black;
+    width: 275px;
+    color: #000;
+    padding: 8px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 226px;
+}
+
+.home_steamawards_ctn:hover .home_steamawards_nominateBox {
+    background: #c8b8f6;
+}
+
+
+.home_sticker_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 60px;
+}
+
+.home_giftcard_ctn .home_sticker_col {
+    max-width: 60%;
+}
+
+.home_giftcard_ctn .home_sticker_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home_giftcard_ctn .home_sticker_desc {
+    color: #ffffff99;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.home_topgames_title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+.home_topgames_desc {
+    color: #cad3df;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 450px )
+{
+    body.v6 .home_topgames_desc {
+        display: none;
+    }
+}
+
+
+
+.home_sticker_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    color: #f5f5f5;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home_sticker_desc {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #f5db7e;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.summer_banner_ctn.home_sticker_ctn  img,
+.summer_banner_ctn.home_topgames_ctn img {
+    padding-right: 33px;
+
+}
+
+.summer_banner_ctn.home_sticker_ctn .sm_sticker {
+    width: 150px;
+    height: 150px;
+    padding-top: 30px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+
+/* end homepage nav elements */
+
+
+.main_content_ctn {
+    position: relative;
+}
+
+
+body.v6.sale_winter2022 .ds_options {
+                z-index: 100;
+            }
+
+
+.home_pagecontent_ctn {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 2%;
+    width: auto;
+	webkit-filter: drop-shadow(12px 12px 7px rgba(50,3,15,0.5));
+    filter: drop-shadow(12px 12px 7px rgba(50,3,15,0.5));
+}
+
+@media screen and (max-width: 500px ) {
+    .home_pagecontent_ctn.no_margin {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+body.v6 .home_page_gutter {
+    display: none;
+}
+
+body.v6 .discount_pct  {
+    font-weight: bold;
+    color: #000000;
+    background: #A1CD44;
+    padding: 6px;
+    font-size: 16px;
+}
+
+body.v6 .discount_prices .discount_original_price {
+    color: #848e94;
+}
+
+body.v6 .discount_prices > div {
+    font-size: 14px;
+    color: #ffffff;
+}
+@media screen and (max-width: 500px )
+{
+    body.v6 .discount_prices > div {
+        font-size: 11px;
+    }
+    body.v6 .discount_pct {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+body.v6 .discount_block.no_discount .discount_final_price {
+    padding: 0px 4px;
+}
+
+body.v6 .discount_block {
+    background: none;
+}
+
+body.v6 .sale_capsule {
+    position: relative;
+}
+
+body.v6 .discount_block {}
+
+.home_section_title {
+    display: flex;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-bottom: 10px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 600;
+    background-color: #0e0a0a;
+    color: #ffffff;
+    padding: 10px;
+    /* box-shadow: 4px 4px #e2cb30; */
+}
+
+.home_featured_ctn {
+    margin-top: 40px;
+}
+.home_featured_ctn.hero_parent_ctn {
+    margin-bottom: 20px;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+	padding: 3% 2%;
+}
+
+.content_hub_carousel_ctn {
+	width: 100%;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+}
+
+.content_hub_carousel_ctn .carousel_items {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 500px )
+{
+    .content_hub_carousel_ctn .carousel_items {
+        justify-content: start;
+        padding-left: 12px;
+        scroll-padding-left: 12px;
+    }
+}
+
+.content_hub_carousel_ctn .home_section_title {
+	background-color: unset;
+    color: #ffffff;
+    padding: 10px;
+    justify-content: center;
+}
+
+.sale_capsule_image {
+    display: block;
+    max-width: 100%;
+    box-shadow: 2px 2px 4px #0e0a0a;
+}
+
+.sale_capsule.with_microtrailer .sale_capsule_image
+{
+
+    transition: opacity 0.6s;
+
+    position: relative;
+    z-index: 2;
+}
+
+.sale_capsule.with_microtrailer .ds_flag
+{
+    transition: opacity 0.6s;
+}
+
+.sale_capsule.with_microtrailer:hover .ds_flag
+{
+    opacity: 0;
+}
+
+.sale_capsule_video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+
+    transition: opacity 0.6s;
+}
+
+.sale_capsule.with_microtrailer:hover .sale_capsule_image {
+    opacity: 0;
+}
+
+.sale_capsule.with_microtrailer:hover .sale_capsule_video {
+    opacity: 1;
+}
+
+.home_featured_ctn .three_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_featured_ctn .three_row .sale_capsule {
+    position: relative;
+}
+
+.home_featured_ctn .three_row .sale_capsule .discount_block {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.home_featured_ctn .three_row .sale_capsule .discount_block > div {
+    font-size: 14px;
+}
+
+.sale_capsule_image.autosize {
+    width: 100%;
+}
+
+/* Steam Awards Banner */
+.awards_banner {
+    overflow: visible;
+    padding: 20px 0px;
+}
+.awards_banner .home_page_content {
+    width: 1200px;
+}
+.awards_banner .banner_ctn {
+}
+.awards_banner.custom .banner_ctn {
+
+}
+.awards_banner a {
+    display: block;
+    box-shadow: 2px 2px 10px black;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.awards_banner img {
+    display: block;
+    width: 100%;
+}
+.awards_banner a:hover {
+    transform: scale(1.02);
+}
+.awards_banner .home_page_content {
+    overflow: visible;
+    padding: 0px;
+}
+@media screen and (max-width: 500px )
+{
+    .awards_banner .home_page_content.banner_desktop {
+        display: none;
+    }
+    .awards_banner .home_page_content.banner_mobile {
+        display: block !important;
+    }
+}
+/* End Steam Awards Banner */
+
+
+/* Top Games of 2020 Banner */
+.bestof_banner {
+    background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2020/bestof_banner_background.jpg?v=2') no-repeat top center #1f2126;
+    padding-top: 72px;
+    margin-top: 20px;
+    border-top: 1px solid #353841;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+.bestof_banner .home_page_content {
+    width: 1200px;
+}
+.bestof_banner a {
+    display: block;
+    box-shadow: 2px 2px 10px black;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.bestof_banner a:hover {
+    transform: scale(1.02);
+}
+
+
+/* Top New Releases Banner */
+.home_ctn.top_new_releases {
+    background: #1b2838;
+    height: 42vw;
+    max-height: 354px;
+    margin-bottom: 100px;
+}
+.top_new_releases_background {
+    top: 0;
+}
+.top_new_releases_banner_click {
+    top: 46px;
+}
+.top_new_releases_carousel {
+    top: 46px;
+    position: relative;
+}
+/* End Top New Releases Banner */
+
+.home_morefeatured_ctn {
+    margin-top: 80px;
+    margin-bottom: 70px;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/content_bg_tile2.png?v=4') repeat-y center top;
+}
+
+#tier1_target {
+	padding: 2% 3% 0% 3%;
+}
+
+#tier2_target {
+	padding: 2% 3% 0% 3%;
+}
+
+.home_morefeatured_ctn .home_section_title {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 0.05em;
+}
+
+.home_morefeatured_ctn .three_row, .home_morefeatured_ctn .four_row {
+    display: flex;
+    justify-content: space-between;
+}
+.home_categories_ctn {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.home_category_ctn {
+    display: flex;
+    margin: 60px 0;
+    position: relative;
+}
+
+body.v6 .page_content_ctn.dark {
+	background-color: unset;
+}
+
+body.v6 .page_content_ctn {
+}
+
+.home_category_ctn .home_category_title_ctn {
+    width: 330px;
+    max-width: 28%;
+    flex-shrink: 0;
+    padding: 20px 0px 20px 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    box-shadow: 10px 0px 0px #100b0b;
+    position: relative;
+    display: flex;
+}
+
+/* .home_category_ctn .home_category_title_ctn::after {
+    content: "";
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/pink_page.jpg?v=1') no-repeat center top;
+    background-size: cover;
+    opacity: 1.0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-blend-mode: overlay;
+} */
+
+.home_tabs_row {
+	background-color: #100b0b;
+	color: #ffffff;
+    padding: 10px;
+}
+
+.home_category_games_ctn {
+    margin: 20px 0;
+    padding: 18px;
+    min-width: 0;
+    background: #52343200;
+}
+
+.home_category_games_ctn .salerow3 .sale_capsule {
+    max-width: 374px;
+    min-width: 220px;
+    width: auto;
+    flex: 1;
+}
+
+.see_more_link {
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+	color: rgb(255, 255, 255);
+}
+
+/*.btnv6_white_transparent {
+    color: rgb(255, 255, 255) !important;
+    background: transparent;
+}
+
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover {
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+    background: transparent;
+}
+
+.btnv6_white_transparent > span {
+    display: block;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(255, 255, 255);
+}*/
+
+.home_category_ctn .see_more_link {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.home_category_focus_ctn .sale_capsule {
+    margin: 0px 0px 0px 0px;
+    margin-top: 50px;
+}
+
+ .home_category_title {
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 28px;
+	color: #ffffff;
+	background: #100b0b;
+    word-wrap: break-word;
+    min-width: 70%;
+    max-width: 100%;
+    position: relative;
+    padding-top: 10px;
+	padding-bottom: 10px;
+    padding-left: 25px;
+	/* line-height: 42px;
+    font-family: 'Montserrat', sans-serif; */
+    font-weight: 900;
+}
+
+.home_category_title b {
+    font-size: 28px;
+    letter-spacing: 0.03em;
+    /* line-height: 42px;
+    font-family: 'Montserrat', sans-serif; */
+    font-weight: 900;
+} 
+
+.home_tag_category_title,
+.home_tag_category_title b {
+    min-width: 70%;
+    max-width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    color: #ffffff;
+	background: #100b0b;
+    word-wrap: break-word;
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: 0.03em;
+    /* line-height: 42px; */
+    padding-left: 5px;
+}
+
+html:lang( ru ) .home_tag_category_title,
+html:lang( ru ) .home_tag_category_title b{
+    font-size: 32px;
+}
+
+.home_category_subtitle_tags {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 14px;
+    color: #fefeef;
+    word-wrap: break-word;
+    line-height: 48px;
+    min-width: 70%;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.home_category_top_decoration {
+    overflow: hidden;
+    max-width: 380px;
+    width: 500px;
+    position: absolute;
+    left: -5pt;
+    top: -5pt;
+}
+
+.home_category_top_decoration img {
+    height: 45px;
+    position: relative;
+    -webkit-filter: drop-shadow(0px 0px 4px #222);
+    filter: drop-shadow(0px 0px 4px #222);
+}
+
+.home_category_subtitle {
+    text-transform: uppercase;
+    font-size: 17px;
+    /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);*/
+	color: #ffffff;
+	background: #100b0b;
+    word-wrap: break-word;
+    line-height: 25px;
+    padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    min-width: 70%;
+    max-width: 100%;
+    font-weight: 600;
+}
+
+.home_category_subtitle b {
+
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+}
+
+.home_header_textimage {
+    background-position: left top;
+    height: 12vw;
+    max-height: 200px;
+    background-size: contain;
+}
+
+.steamawards_winners_header {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.steamaward_winners_ctn {
+    background: #2c2260;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding: 25px 50px;
+}
+
+.steamaward_winners_title {
+    text-align: left;
+    color: #ffffff;
+    font-size: 28px;
+    text-transform: uppercase;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.steamaward_winners_title div {
+    font-size: 60px;
+}
+
+.steamaward_winners_trophy_img {
+    width: 86px;
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+.steamaward_winners_link_ctn {
+    margin-left: auto;
+}
+
+.steamaward_winners_link {
+    color: #8b77c9;
+    font-size: 14px;
+    text-transform: uppercase;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+body.forgeyourfate {
+    background: #000000;
+}
+
+p.home_subtitle_ctn {
+	font-size: 20px;
+	background: #100b0b;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 5px 10px;
+	/* box-shadow: 4px 4px #eb4036; */
+}
+
+p.home_subtitle_ctn a {
+	font-size: 20px;
+	color: #2d3194;
+	font-weight: 600;
+}
+
+@media screen and (min-width: 2300px )
+{
+    body.v6.sale_winter2022 {
+                    background-size: unset;
+                }
+}
+
+@media screen and (max-width: 1800px )
+{
+    body .responsive_page_frame .fullscreen-bg__video {
+        width: 78vw;
+    }
+}
+
+@media screen and (max-width: 1400px )
+{
+    body .responsive_page_frame .summer_encore_ctn {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 1224px )
+{
+    .home_category_top_decoration{
+        max-width: 33.2%;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .fullscreen-bg__video {
+        width: 100vw;
+    }
+    .body.responsive_page .home_header_textimage {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover !important;
+    }
+    .body.responsive_page .hero_ctn {
+        margin: 20px 0px;
+    }
+}
+
+
+@media screen and (max-width: 1200px )
+{
+
+    html.responsive .summer_bottom_text {
+        font-size: 20px;
+    }
+
+    html.responsive .summer_bottom_ctn {
+        margin: auto 0 2% 3%;
+        justify-content: flex-start;
+    }
+
+    html.responsive .summer_bottom_subtext {
+        font-size: 12px;
+    }
+
+    .home_category_games_ctn .salerow3 .sale_capsule
+    {
+        min-width: 200px;
+    }
+    html.responsive #live_streams_carousel .focus .broadcast_capsule:nth-child(odd) {
+        display: none;
+    }
+    html.responsive #live_stream_featured {
+        width: 70%;
+    }
+    html.responsive #live_stream_featured .capsule {
+        background: #00000000;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    html.responsive #live_stream_featured .capsule img:nth-child(2) {
+        width: 100%;
+        height: auto;
+        max-height: 345px;
+        position: absolute;
+        top: 0;
+        left: unset;
+    }
+    html.responsive .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
+        width: 263px;
+    }
+    html.responsive .home_broadcast_ctn .carousel_container .carousel_items:not(.no_paging) > * {
+        width: unset;
+    }
+    html.responsive .home_broadcast_ctn .carousel_container .carousel_items:not(.no_paging) {
+        overflow-x: unset;
+        overflow-y: unset;
+        box-sizing: unset;
+        padding-bottom: unset;
+        display: unset;
+        flex-wrap: unset;
+    }
+
+    html.responsive .home_broadcast_ctn.live_streams_ctn {
+        width: calc(100vw - 5%);
+    }
+
+}
+
+@media screen and (max-width: 1100px ) {
+    html.responsive .home_browsemore_carousel {
+        margin: 0;
+    }
+    html.responsive .home_featured_ctn.hero_parent_ctn .carousel_items  {
+        overflow: visible;
+    }
+
+    html.responsive .home_tag_category_title, html.responsive .home_tag_category_title * {
+        font-size: 30px;
+    }
+
+    html.responsive .home_category_ctn .home_category_title_ctn
+    {
+        width: auto;
+        max-width: none;
+        flex-direction: column;
+       /*text-align: center;*/
+    }
+
+    html.responsive .home_category_ctn .home_category_title_ctn br
+    {
+        display: none;
+    }
+
+    html.responsive .home_category_ctn {
+        flex-direction: column;
+        margin: 100px 0;
+    }
+
+    html.responsive .home_category_ctn .salerow {
+        justify-content: center;
+    }
+
+    html.responsive .home_category_games_ctn .salerow3 .sale_capsule {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 910px )
+{
+
+    html.responsive body.responsive_page .carousel_container.tag_carousel .carousel_items:not(.no_paging) > * {
+        margin-bottom: 0;
+    }
+
+    body.v6.sale_winter2022 .home_sticker_ctn.desktop {
+        display: none;
+    }
+
+	body.v6.sale_winter2022 .split_banner_ctn .home_sticker_ctn.desktop {
+		display: flex;
+	}
+
+    body.v6.sale_winter2022 .home_sticker_ctn.mobile {
+        display: block;
+        margin-top: 0px;
+		margin-bottom: 0px;
+    }
+
+    body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+        margin-top: 42px;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
+        height: 136px;
+        background-size: contain;
+        background-position: left;
+        margin-right: 292px;
+    }
+    .home_category_top_decoration {
+        visibility: hidden;
+    }
+    .home_category_title, .home_category_title b, .home_category_subtitle {
+        font-size: 28px;
+    }
+    body.responsive_page .page_background_holder,
+    body.responsive_page .page_background_holder, body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
+        height: 65vw !important;
+    }
+
+    .body.responsive_page .hero_ctn .hero_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .body.responsive_page .carousel_container.paging_capsules .carousel_items > * > * {
+        margin: 0px;
+        width: 32%;
+    }
+
+    .home_category_title {
+        padding: 8px 5%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    html.responsive .tag_genre_title {
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+    }
+
+    .home_category_subtitle {
+        padding: 8px 5%;
+        text-align: center;
+    }
+
+    .home_category_games_ctn {
+        margin: 0 3% 20px;
+        background: #293855;
+    }
+
+    .home_category_ctn .see_more_link {
+        position: absolute;
+        right: 3%;
+    }
+    .home_category_games_ctn .salerow3 .sale_capsule {
+        min-width: 30%;
+    }
+    html.responsive .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule:nth-child(even) {
+        transform: none;
+    }
+
+    body.responsive_page .franchise_capsule {
+        margin: 0 1%;
+    }
+    html.responsive .home_ctn {
+        padding-left: 0px;
+    }
+
+    html.responsive .steamaward_winners_trophy_img {
+        display: none;
+    }
+
+    html.responsive .home_steamawards_ctn {
+        background-position-x: 90%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    html.responsive .home_steamawards_col {
+		color: #FFFFFF;
+        padding: 0px 40px 10px 20px;
+    }
+
+    html.responsive .home_steamawards_title {
+        font-size: 36px;
+        line-height: 42px;
+        margin-right: 100px;
+    }
+    html.responsive .home_steamawards_desc {
+        display: none;
+    }
+
+    html.responsive .home_steamawards_nominateBox {
+        margin-right: unset;
+        margin-left: 20px;
+
+    }
+
+    html.responsive .summer_banner_ctn.home_sticker_ctn
+    {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    html.responsive .summer_banner_ctn.home_sticker_ctn .home_sticker_col {
+        max-width: 50%;
+        justify-content: center;
+    }
+
+    html.responsive .summer_banner_ctn {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    html.responsive .summer_banner_ctn.home_topgames_ctn
+    {
+        align-items: flex-start;
+        background-position-x: 25%;
+        height: 27vw;
+    }
+
+    html.responsive .summer_banner_ctn.home_sticker_ctn:hover  img {
+        padding-right: 0px;
+    }
+
+    html.responsive .home_sticker_col {
+        padding-left: 20px;
+        text-align: left;
+        padding: 0px;
+        text-shadow: 3px 3px 3px #0009;
+        z-index: 2;
+    }
+
+    html.responsive .home_sticker_desc {
+        margin-top: 10px;
+    }
+
+    html.responsive .home_steamawards_ctn img {
+        width: 100%;
+    }
+
+    html.responsive .home_giftcard_ctn img {
+        max-width: 200px;
+        position: initial;
+    }
+
+    html.responsive .home_giftcard_ctn
+    {
+        justify-content: start;
+        flex-direction: row;
+    }
+
+	html.responsive .header_clorthax
+	{
+		display: none;
+	}
+
+	#tier1_target {
+		padding: 10px;
+	}
+	
+	#tier2_target {
+		padding: 10px;
+	}
+
+	.split_banner_ctn {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+}
+
+@media screen and (max-width: 800px )
+{
+    html.responsive .fullscreen-bg__video {
+        width: 95vw;
+    }
+
+    html.responsive  body.v6.sale_winter2022 .page_background_holder {
+        margin: 0;
+    }
+
+    html.responsive body.v6.sale_winter2022 .bookmark_stickers {
+        background-image: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2021/dog_sticker.png?v=1');
+        max-width: 160px;
+        max-height: 160px;
+        top: -110px;
+        left: -21%;
+    }
+
+    html.responsive body.v6.sale_winter2022 .bookmarks_ctn {
+        margin-bottom: 5%;
+    }
+
+    html.responsive body.v6.sale_summer2021 .home_header_textimage_ctn {
+        justify-content: flex-start;
+    }
+
+    body.v6.sale_winter2022 .home_page_takeover_sizer {
+        min-height: unset;
+        height: 42vw !important;
+    }
+
+    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn {
+		max-height: 45vw;
+    }
+
+    .home_category_title {
+        font-size: 35px;
+    }
+    .home_category_subtitle {
+        font-size: 24px;
+    }
+
+    html.responsive #live_streams_carousel {
+        display: none;
+    }
+    html.responsive .home_broadcast_ctn.live_streams_ctn {
+        margin-left: 2%;
+        margin-right: 2%;
+        width: auto;
+    }
+    html.responsive .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
+        background: unset;
+        height: unset;
+        width: 100%;
+    }
+    html.responsive #live_stream_featured {
+        padding: 0px;
+    }
+    html.responsive #live_stream_featured .broadcast_screenshot_and_autoplay,
+    html.responsive #live_stream_featured .broadcast_iframe_ctn{
+        height: 54vw;
+    }
+    html.responsive .home_broadcast_ctn .home_broadcast_sections {
+        flex-direction: column;
+    }
+    html.responsive #live_stream_featured {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    html.responsive .tag_genre_title {
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 620px )
+{
+    .home_category_games_ctn .salerow3 .sale_capsule {
+        min-width: 120px;
+    }
+    html.responsive .home_broadcast_ctn .live_streams_ctn {
+        display: none;
+    }
+    html.responsive .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
+        background: unset;
+    }
+
+    html.responsive .tag_square_ribbon {
+        max-width: 25%;
+    }
+
+    html.responsive .tag_square {
+        max-width: 42vw;
+        margin: 0;
+    }
+    html.responsive .tag_genre_title {
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 18px;
+    }
+
+    html.responsive .home_ctn.top_new_releases {
+        display: none;
+    }
+    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn .summer_points_ctn {
+        display: none;
+    }
+
+}
+/* switch to specific mobile header image */
+@media screen and (max-width: 540px )
+{
+
+    body.responsive_page.v6.sale_winter2022 {
+        /*background-size: auto, contain;*/
+    }
+
+    html.responsive body.v6.sale_winter2022 .home_header_textimage_ctn {
+        display: none;
+    }
+
+    html.responsive body.v6.sale_winter2022 .fullscreen-bg {
+        display: none;
+    }
+
+    html.responsive body.v6.sale_winter2022 .tag_carousel .carousel_items:not(.no_paging) > * {
+        width: auto;
+    }
+
+    body.v6.sale_winter2022 .home_page_takeover_sizer {
+        min-height: unset;
+        height: 55vw !important;
+    }
+
+    .page_background_holder_mobile {
+        display: block;
+        width: 100%;
+        height: 86vw;
+        max-height: 400px;
+        margin-top: 20px;
+    }
+
+    .home_header_textimage_mobile {
+        background-size: contain;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        align-items: flex-end;
+    }
+
+    body.responsive_page .home_newupcoming_ctn .home_tab_button {
+        font-size: 13px;
+    }
+    body.responsive_page .home_newupcoming_ctn {
+        margin-top: 5vw;
+    }
+
+    .event_nav_element {
+        display: none;
+    }
+
+    body.responsive_page .home_featured_ctn.hero_parent_ctn {
+        margin-bottom: 0px;
+    }
+    body.responsive_page .home_morefeatured_ctn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    body.responsive_page broadcast_live_stream_icon {
+        display: none;
+    }
+    body.responsive_page .discovery_queue_static .discovery_queue {
+        height: 118px;
+    }
+    body.responsive_page .discovery_queue_static .begin_exploring {
+        display: none;
+    }
+    body.responsive_page .discovery_queue_static .begin_exploring.begin_exploring_mobile {
+        display: block;
+        margin-top: 15%;
+    }
+    body.responsive_page .home_discovery_queue_ctn .cards, body.responsive_page .home_browsemore_ctn .cards {
+        display: none;
+    }
+    body.responsive_page .home_discovery_queue_ctn .home_title_ctn,
+    body.responsive_page .home_discovery_queue_ctn .home_subtitle_ctn {
+        margin-left: 0px;
+    }
+    body.responsive_page .home_title {
+        line-height: 26px;
+		padding: .5em;
+    }
+
+	body.responsive_page .home_title_ctn,
+    body.responsive_page .home_section_title {
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        padding: .5em;
+		justify-content: center;
+	}
+
+	html.responsive .home_tag_category_title, html.responsive .home_tag_category_title * {
+		font-size: 26px;
+		font-weight: 600;
+		letter-spacing: .5em;
+		text-align: center;
+		padding: 0.5em;
+	}
+
+    body.responsive_page .home_title_ctn .home_line {
+        display: none;
+    }
+    body.responsive_page .home_discounts_ctn {
+        padding: 0px;
+        margin: 0px;
+    }
+    body.responsive_page .home_discounts_ctn .home_discounts_block {
+        margin: 20px 0px;
+        min-width: 100%;
+    }
+    body.responsive_page .home_discount_games_ctn .sale_capsule:nth-child(odd) {
+        margin-right: 0px;
+    }
+    body.responsive_page .see_more_text {
+        display: block;
+    }
+    body.responsive_page .home_broadcast_ctn.live_streams_ctn {
+        display: none !important;
+    }
+    html.responsive .home_browsemore_ctn {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    html.responsive .token_count.mobile {
+        position: absolute;
+        top: 2px;
+        right: 15%;
+    }
+    html.responsive .home_category_ctn {
+        margin: 30px 0;
+    }
+    html.responsive .home_category_title {
+        font-size: 26px;
+        padding: .5em;
+		margin-top: 0px;
+		font-weight: 600; 
+    }
+    html.responsive .home_category_subtitle {
+        font-size: 22px;
+        line-height: 28px;
+        padding: .5em;
+		font-weight: 600;
+		letter-spacing: .5em;
+    }
+    html.responsive .home_category_focus_ctn .sale_capsule {
+        margin-top: 26px;
+    }
+    html.responsive .home_category_subtitle_tags {
+        font-size: 11px;
+    }
+
+    html.responsive .steamaward_winners_ctn {
+        margin-top: 40px;
+        padding: 20px 2%;
+    }
+
+    html.responsive .steamaward_winners_link_ctn {
+        display: none;
+    }
+
+    html.responsive .home_sticker_ctn {
+        max-width: 900px;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    html.responsive .tag_genre_ctn .floating_image {
+        display: none;
+    }
+
+	html.responsive .home_discount_games_ctn.single_row .sale_capsule
+	{
+    max-width: 50%;
+    min-width: 40%;
+	}
+
+    body.responsive_page .franchise_overflow {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+	html.responsive .content_hub_carousel_ctn .home_section_title {
+		padding: 10px;
+		margin-bottom: 0px;
+	}
+
+	html.responsive .home_category_ctn .home_category_title_ctn {
+		padding: 10px;
+		box-shadow: unset;
+	}
+}
+
+.home_franchises_ctn {
+    padding: 10px 0;
+}
+
+.home_franchises_ctn .home_section_title, .home_browsemore_ctn .home_section_title {
+    margin: 16px 0 0px 0;
+	background: #0e0a0a;
+}
+
+
+
+.home_discounts_ctn {
+    display: flex;
+    margin: 0 -20px 0px -20px;
+    flex-wrap: wrap;
+}
+
+.home_discounts_ctn .home_discounts_block {
+    margin: 20px;
+    flex: 1;
+
+    min-width: 340px;
+}
+
+.home_title_ctn {
+    /*display: flex;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 12px;
+	font-family: "Motiva Sans", Sans-serif;
+    font-weight: 500;
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2021/tile_red.png?v=2');
+    border: 3px solid black;
+    padding: 10px;*/
+	display: flex;
+	font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-bottom: 10px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 600;
+	background-color: #100b0b;
+	color: #ffffff;
+	/* width: -moz-fit-content;
+	width: fit-content;*/
+    padding: 10px;
+}
+
+.home_title_ctn a:link, .home_title_ctn a:visited {
+	color: #ffffff;
+}
+
+.dlc_block .home_title_ctn {
+    color: #ffffff;
+}
+.dlc_block .home_title_ctn .home_line {
+    background: #100b0b;
+}
+
+.home_title_ctn .home_line {
+    display: none;
+}
+
+.home_browsemore_ctn {
+    margin-top: 00px;
+}
+
+.home_account_ctn {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.home_account_ctn .home_wishlist_ctn {
+    width: 70%;
+    padding-right: 20px;
+    border-right: 2px solid #555555;
+}
+
+.home_account_ctn .home_wishlist_games_ctn {
+    display: flex;
+    height: 400px;
+}
+
+.home_account_ctn .home_friends_ctn {
+    margin-left: 150px;
+    width: 30%;
+}
+
+.home_friends_ctn .home_friends_games_ctn {
+    display: flex;
+    flex-direction: column;
+}
+
+.home_account_ctn .see_more_link, .home_account_ctn .view_wishlist_link  {
+    color: #65B1E9;
+    display: block;
+    text-align: right;
+}
+
+.tag_genre_ctn .floating_image {
+    margin-bottom: -35px;
+    margin-left: -75px;
+}
+
+.home_discovery_queue_ctn {
+    max-width: 1200px;
+    margin-top: 0px;
+}
+
+.home_discovery_queue_ctn .cards {
+    margin-bottom: -95px;
+    margin-left: -40px;
+    transform: rotate( -10deg );
+}
+
+.home_ctn.sale_discovery_queue_ctn {
+    margin-top: 30px;
+    overflow: visible;
+}
+.home_ctn.discovery_queue_ctn {
+    overflow: visible;
+}
+.home_discovery_queue_ctn .home_title_ctn,
+.home_discovery_queue_ctn .home_subtitle_ctn {
+    margin-left: 86px;
+    /* margin-bottom: 0px; */
+}
+.sale_discovery_queue_ctn .dq_static_pos_2 {
+    width: 460px;
+    height: 215px;
+}
+.sale_discovery_queue_ctn .dq_static_pos_3 {
+    left: 347px;
+    width: 410px;
+    height: 192px;
+}
+.sale_discovery_queue_ctn .dq_static_pos_4 {
+    left: 605px;
+    width: 369px;
+    height: 173px;
+}
+.sale_discovery_queue_ctn .dq_static_pos_5 {
+    left: 859px;
+    width: 328px;
+    height: 153px;
+}
+.sale_discovery_queue .discovery_queue_ctn .begin_exploring {
+    margin-top: 6.5%;
+}
+.discovery_queue_ctn .begin_exploring {
+    box-shadow: 0 0 10px black;
+}
+.discovery_queue_static .discovery_queue {
+    height: 215px;
+}
+.begin_exploring.begin_exploring_mobile {
+    display: none;
+}
+
+.home_topsellers_ctn
+{
+    max-width: 1200px;
+}
+
+.home_topsellers_ctn .home_topsellers_games_ctn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    /* margin: -10px; */
+}
+
+.home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule,
+.home_newupcoming_ctn .home_tab_content .sale_capsule {
+    margin: 10px;
+    max-width: 46%;
+    flex: 1;
+    min-width: 23%;
+}
+@media screen and (max-width: 766px )
+{
+    .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule,
+    .home_newupcoming_ctn .home_tab_content .sale_capsule {
+        min-width: 44%;
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 1073px )
+{
+    .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule:nth-child(even) {
+        transform: translateY( 0 );
+    }
+    .home_topsellers_ctn .home_topsellers_games_ctn {
+        justify-content: center;
+    }
+    .home_section_title {
+        text-align: center;
+        font-weight: 500;
+    }
+    .see_more_link {
+        text-align: center;
+    }
+}
+
+.TopSellerCapsule .ds_flag {
+    top: 15%;
+}
+
+.home_broadcast_ctn {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.home_broadcast_section_ctn {
+    display: flex;
+    padding: 0 2%;
+}
+
+.home_broadcast_ctn .home_broadcast_sections {
+    display: flex;
+    max-width: 1200px;
+    min-width: 0;
+    flex-basis: 1200px;
+}
+
+.home_broadcast_ctn .home_broadcast_sections .home_broadcast_featured_ctn {
+    background: #000000;
+    width: 500px;
+}
+
+.home_broadcast_featured_ctn_stretch {
+    background: ##00000000;
+    flex:1;
+}
+
+.home_broadcast_more_ctn_stretch.home_broadcast_more_ctn {
+    flex:1;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 54px;
+    padding-bottom: 33px;
+}
+
+.home_broadcast_more_ctn_stretch_bg
+{
+    background: #00000000;
+    flex:1;
+}
+
+.home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
+    background: #00000000;
+    margin: 20px 0;
+    height: 400px;
+    width: 50%
+}
+
+.home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn .home_section_title {
+    background: #00000000;
+    padding-left: 30px;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+#live_stream_featured {
+    width: 60%;
+    background-color: #00000000;
+    position: relative;
+}
+#live_stream_featured .broadcast_screenshot_and_autoplay .store_capsule {
+    width: 100%;
+    height: 100%;
+    margin: unset;
+    background: black;
+}
+
+#live_stream_featured .broadcast_screenshot_and_autoplay .live_stream_play_icon {
+    top: 43% !important;
+    left: 43% !important;
+}
+#live_stream_featured .title {
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 38px;
+}
+#live_stream_featured .broadcast_screenshot_and_autoplay .carousel_broadcast_featured {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#live_stream_featured .broadcast_screenshot_and_autoplay {
+    position: relative;
+    height: 368px;
+}
+#live_stream_featured .capsule img:first-child {
+    display: none;
+}
+#live_streams_carousel .title {
+    margin-top: 23px;
+    padding-bottom: 6px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.home_broadcast_ctn #live_streams_carousel {
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.home_broadcast_ctn #live_streams_carousel .carousel_items .store_capsule {
+    width: 220px;
+    background: rgba(255,255,255,0.1);
+}
+.home_broadcast_ctn .carousel_container .carousel_items:not(.no_paging) > * {
+    width: 510px;
+    margin-top: 20px;
+}
+.home_broadcast_ctn .live_stream_play_icon {
+    top: 28% !important;
+    left: 35% !important;
+}
+.home_broadcast_ctn .focus .broadcast_capsule {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.broadcast_iframe_ctn {
+    /*	position: absolute;
+        top: 0px;
+        left: 0px;*/
+    border: none;
+    overflow: hidden;
+    height: 368px;
+    padding-bottom: 2px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 100 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: black;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 3;
+}
+.broadcast_iframe {
+    width: 100%;
+}
+.broadcast_footer {
+    background: rgba(255,255,255,0.1);
+    display: block;
+    bottom: 33px;
+    position: absolute;
+    width: 100%;
+}
+.broadcast_footer .ds_flag {
+    display: none;
+}
+
+
+.home_newupcoming_ctn {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.home_newupcoming_games_ctn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width:1020px)
+{
+    .home_tabs_row {
+        text-align: center;
+    }
+}
+
+
+.home_newupcoming_ctn .home_tab_button {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin: 0 20px 0 0;
+    opacity: .7;
+    display: inline-block;
+    cursor: pointer;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.home_newupcoming_ctn .home_tab_button:hover:not( .active ) {
+    color: #ffffff;
+}
+
+.home_newupcoming_ctn .home_tab_button.active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.salerow
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    margin: 0 -6px 12px -6px;
+}
+
+.salerow3 .sale_capsule
+{
+    width: 374px;
+}
+
+.salerow4 .sale_capsule
+{
+    width: 275px;
+}
+
+.salerow.multiline
+{
+    flex-wrap: wrap;
+    margin: -6px;
+}
+
+.sale_capsule
+{
+    margin: 0 6px;
+    flex-grow: 0;
+    display: block;
+}
+
+.salerow.multiline .sale_capsule
+{
+    margin: 6px;
+}
+
+body.v6 .sale_capsule .discount_block_inline
+{
+    background: transparent;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: right;
+}
+
+.sale_capsule .discount_block_inline .discount_prices
+{
+    background: rgba(0,0,0,0.6);
+    padding: 5px 8px;
+}
+
+.discovery_queue_ctn .begin_exploring {
+    background: -webkit-linear-gradient( top, #8b7a0c 5%, #dec313 95%);
+    background: linear-gradient( to bottom, #8b7a0c 5%, #dec313 95%);
+    width: fit-content;
+    min-width: 40%;
+    padding-right: 30px;
+}
+
+.discovery_queue_ctn .begin_exploring::after {
+    background: -webkit-linear-gradient( 134deg, #8b7a0c 5%,#dec313 95%);
+    background: linear-gradient( 134deg, #8b7a0c 5%,#dec313 95%);
+}
+
+/* at 910 wide, fix price layout for long currencies within the 6-pack layouts */
+@media screen and (max-width: 910px )
+{
+    body.currency_wide .home_category_games_ctn .discount_pct,
+    body.currency_wide .four_pack_block .discount_pct {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    body.currency_wide .home_category_games_ctn .sale_capsule .discount_block_inline,
+    body.currency_wide .four_pack_block .sale_capsule .discount_block_inline {
+        flex-direction: row;
+        display: flex;
+    }
+    body.currency_wide .home_category_games_ctn .sale_capsule .discount_block_inline .discount_prices,
+    body.currency_wide .four_pack_block .sale_capsule .discount_block_inline .discount_prices {
+        display: flex;
+        flex-direction: column;
+    }
+
+    html.responsive .carousel_container .carousel_items .hero_row
+    {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+	html.responsive .header_yeti {
+		display: none;
+	}
+
+	html.responsive body.v6.sale_winter2021 .home_header_textimage_ctn {
+		background: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+/* at 500 wide, fix price layout for long currencies within most capsules */
+@media screen and (max-width: 500px )
+{
+    html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
+        height: 350px;
+    }
+
+    body .responsive_page_frame .summer_encore_ctn {
+        display: none;
+    }
+
+    html.responsive body.v6.sale_winter2022 .fullscreen-bg {
+                                    align-items: flex-start;
+                                }
+
+    html.responsive .summer_bottom_text {
+        font-size: 14px;
+    }
+
+    body.currency_wide .discount_pct {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    body.currency_wide .sale_capsule .discount_block_inline,
+    body.currency_wide .hero_capsule .discount_block_inline {
+        flex-direction: row;
+        display: flex;
+    }
+    body.currency_wide .sale_capsule .discount_block_inline .discount_prices,
+    body.currency_wide .hero_capsule .discount_block_inline .discount_prices
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    body.v6 .franchise_discount_tag {
+        display: none;
+    }
+
+	html.responsive .split_banner_ctn .summer_banner_ctn.home_sticker_ctn {
+		min-height: 115px;
+	}
+}
+
+.sale_capsule_image_ctn
+{
+    position: relative;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.sale_capsule_image_hover
+{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* border: 2px solid #e2cb30; */
+    box-shadow: 4px 4px 10px #110c0c;
+    transition: opacity 0.4s;
+    z-index: 3;
+}
+
+.sale_capsule:hover .sale_capsule_image_hover
+{
+    opacity: 1;
+}
+
+
+@media screen and (max-width:580px)
+{
+    html.responsive .salerow4,
+    html.responsive .salerow3
+    {
+        flex-wrap: wrap;
+        margin: 0 -6px 12px 0px;
+    }
+
+    html.responsive .salerow4 .sale_capsule
+    {
+        width: 48%;
+        margin-left: 0;
+        margin-bottom: 12px;
+    }
+    html.responsive .salerow3 .sale_capsule {
+        margin-left: 0px;
+    }
+    html.responsive .salerow3 .sale_capsule:nth-child(-n+2) {
+        width: 48%;
+    }
+    html.responsive .salerow3 .sale_capsule:nth-child(3) {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.carousel_container .carousel_items:not(.no_paging) > .hero_row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero_row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero_capsule .discount_block_inline .discount_prices {
+    padding: 5px 5px;
+}
+
+.hero_click_overlay
+{
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero_capsule
+{
+    width: 31%;
+    max-width: 340px;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+    margin-left: 2.5%;
+    margin-bottom: 12px;
+}
+
+.hero_capsule.hidden
+{
+    display: none;
+}
+
+.hero_capsule .ds_flag
+{
+    top: 3%;
+}
+
+@media screen and (max-width: 900px )
+{
+    .hero_capsule
+    {
+        font-size: 10px;
+    }
+
+    html.responsive body.v6.sale_winter2022 .tag_carousel .carousel_items:not(.no_paging) > * {
+                                    width: auto;
+                                }
+
+}
+
+@media screen and (max-width: 830px )
+{
+
+    html.responsive .carousel_container .carousel_items .hero_capsule
+    {
+        margin-left: 0;
+        width: 45%;
+    }
+    html.responsive .hero_capsule:last-child {
+        display: none;
+    }
+}
+
+
+.hero_capsule:first-child
+{
+    margin-left: 0;
+}
+
+
+.hero_capsule img.hero_capsule_img
+{
+    display: block;
+    max-width: 100%;
+
+    transition: opacity 0.5s;
+}
+
+.hero_discount
+{
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    transition: bottom 0.6s;
+}
+
+.hero_discount.discount_block_inline.no_discount .discount_prices
+{
+    line-height: 25px;
+    padding: 0 6px;
+}
+
+.hero_add_to_cart
+{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 7%;
+    transition: top 0.5s;
+    padding: 8px 0 0 9%;
+}
+
+.hero_capsule:hover .hero_discount
+{
+    bottom: 6%;
+}
+
+.hero_data
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: -webkit-linear-gradient( 315deg, #213c55 5%, #016968 95%);
+    background: linear-gradient( 315deg, #213c55 5%, #016968 95%);
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    color: #ffffff;
+    height: 53.5%;
+    opacity: 0.5;
+
+    transition: top 0.6s, opacity 0.5s;
+}
+
+.hero_capsule .hover_screenshots
+{
+    position: absolute;
+    margin: 0;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 46.5%;
+    opacity: 0;
+    pointer-events: none;
+    background: #000000;
+
+    transition: top 0.6s, opacity 0.5s;
+}
+
+.hero_capsule .hero_video
+{
+    width: 100%;
+}
+
+.hero_capsule.valveindex .franchise_game.single
+{
+    padding: 0 20%;
+}
+
+.hero_capsule.valveindex .hero_data
+{
+    height: 58.5%
+}
+
+.hero_capsule.valveindex:hover .hero_data
+{
+    top: 41.5%
+}
+
+
+.hero_capsule:hover .hero_data, .hero_capsule.gpfocus .hero_data
+{
+    top: 46.5%;
+    opacity: 1.0;
+}
+
+.hero_capsule:hover .hover_screenshots, .hero_capsule.gpfocus .hover_screenshots
+{
+    top: 0;
+    opacity: 1.0;
+}
+
+
+.hero_capsule:hover img.hero_capsule_img, .hero_capsule.gpfocus img.hero_capsule_img
+{
+    opacity: 0.4;
+}
+
+
+.hero_data_content
+{
+    padding: 6% 9%;
+}
+
+.hero_stat
+{
+    white-space: nowrap;
+    overflow: hidden;;
+    text-overflow: ellipsis;
+    line-height: 1.7em;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero_name
+{
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    font-size: 2em;
+}
+
+.hero_stat .label
+{
+    color: #959595;
+    text-transform: uppercase;
+}
+
+.franchise_overflow
+{
+    overflow: hidden;
+    margin-top: 16px;
+}
+
+.franchise_carousel
+{
+    position: relative;
+    padding: 0;
+}
+@media screen and (max-width: 1250px ) and (min-width: 910px)
+{
+
+    html.responsive .franchise_carousel {
+        width: calc(100vw - 100px);
+    }
+    #sale_tag_genre.home_pagecontent_ctn {
+        width: calc(100vw - 100px);
+    }
+
+
+}
+
+.franchise_paging
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.franchise_paging .franchise_capsule
+{
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.franchise_previous
+{
+    right: 99%;
+    visibility: hidden;
+}
+
+.franchise_next
+{
+    left: 99%;
+    visibility: hidden;
+}
+
+.franchise_flex_overflow
+{
+}
+
+.franchise_carousel.carousel_container .carousel_thumbs
+{
+    padding-top: 24px;
+}
+
+.franchise_flex
+{
+    display: flex;
+    position: relative;
+	justify-content: space-around;
+}
+
+.franchise_flex.transition
+{
+    width: 200%;
+    pointer-events: none;
+}
+
+.franchise_capsule
+{
+    position: relative;
+    margin: 0 16px;
+    width: 373px;
+    background: #000000;
+    overflow: hidden;
+}
+
+.franchise_flex .franchise_capsule:first-child
+{
+    margin-left: 0;
+}
+
+.franchise_flex .franchise_capsule:last-child
+{
+    margin-right: 0;
+}
+
+img.franchise_background
+{
+    display: block;
+    width: 100%;
+    position: absolute;
+
+    transition: opacity 0.6s;
+}
+img.franchise_placeholder {
+    display: block;
+    width: 100%;
+}
+
+.franchise_logo_ctn
+{
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 40%;
+    transition: top 0.6s;
+}
+
+.franchise_logo_ctn img.franchise_logo
+{
+    display: block;
+    width: 100%;
+}
+
+.franchise_discount_tag
+{
+    position: absolute;
+    background: #A1CD44;
+    font-size: 14px;
+    color: #000000;
+    line-height: 26px;
+    padding: 0 16px;
+
+    bottom: 5%;
+    right: 0;
+
+    transition: opacity 0.5s, bottom 0.6s;
+}
+
+.franchise_games
+{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 100%;
+    transition: top 0.6s;
+}
+
+.franchise_game
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.franchise_game .sale_capsule
+{
+    position: relative;
+    z-index: 2;
+}
+
+.franchise_game.single
+{
+    justify-content: space-around;
+    margin-bottom: 18px;
+}
+.franchise_game.single .sale_capsule_image_ctn {
+
+}
+
+.franchise_game.double
+{
+    margin: -10px -10px 12px -10px;
+}
+
+.franchise_game.double .sale_capsule
+{
+    margin: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.franchise_game .sale_capsule_image
+{
+    width: 100%;
+}
+
+.franchise_capsule:hover .franchise_logo_ctn
+{
+    top: 5%;
+}
+
+.franchise_capsule:hover img.franchise_background
+{
+    opacity: 0.5;
+}
+
+.franchise_capsule:hover .franchise_discount_tag
+{
+    bottom: 40%;	/* logo also travels 35% of the way */
+    opacity: 0;
+}
+
+
+.franchise_capsule:hover .franchise_games
+{
+    top: 40%;
+}
+
+.franchise_see_all
+{
+    padding: 4px 0 0 0;
+    text-align: right;
+    position: relative;
+    z-index: 2;
+    display: block;
+    color: #A1D5F2;
+    float: right;
+}
+
+.franchise_see_all:hover
+{
+    color: #ffffff;
+}
+
+/* Tag Squares */
+.tag_square {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.0);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    transition-property: transform;
+    max-height: 221px;
+    max-width: 221px;
+}
+
+.tag_genre_title {
+    font-size: 14px;
+    line-height: 20px;
+    text-shadow: 0 1px 3px rgb(0 0 0);
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 100%;
+    word-break: break-word;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+
+.tag_square_ribbon {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    left: 10%;
+}
+
+.tag_square_img {
+    width: 100%;
+    transition-property: transform, filter;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    display: block;
+}
+
+.tag_square_title_img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+	filter: drop-shadow(2px 2px 0px #000000);
+}
+
+.tag_square_overlay {
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+    box-shadow: inset 0px 0px 0px 30px rgba(115, 58, 248, 0.0);
+}
+
+.tag_square:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.home_discount_games_ctn
+{
+    display: flex;
+    /* margin: -10px; */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.home_discount_games_ctn .sale_capsule
+{
+    margin: 10px;
+    max-width: 50%;
+    min-width: 40%;
+    flex: 1;
+}
+
+.home_discount_games_ctn.single_row .sale_capsule
+{
+    max-width: 25%;
+    min-width: 20%;
+}
+
+.home_browsemore_carousel
+{
+
+}
+
+.tag_squares_ctn
+{
+    display: flex;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+}
+
+.tag_square {
+    margin: 1% 1%;
+    flex: 1;
+	box-shadow: 6px 6px 0px #22256b;
+}
+
+.carousel_container .carousel_items:not(.no_paging) > .tag_squares_ctn
+{
+    width: 100%;
+}
+
+.carousel_container .arrow {
+    top: 26%;
+}
+
+/* .tag_square:first-child
+{
+    margin-left: 0;
+} */
+
+.content_hub_carousel_ctn .content_hub_capsule_ctn {
+    scroll-snap-align: start;
+}
+
+.carousel_container .arrow.right {
+	right: -6%;
+	background: rgba( 15, 10, 10, 0.25 );
+	transition: all .2s ease-in-out;
+}
+
+.carousel_container .arrow.right:hover {
+	transform: scale(1.05);
+	background: rgba( 15, 10, 10, 0.35 );
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.right {
+	right: 2%;
+	background: rgba(255, 245, 195, .15);
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.right:hover {
+	right: 2%;
+	background: rgba(255, 245, 195, .25);
+}
+
+.carousel_container .arrow.left {
+	left: -6%;
+	background: rgba( 15, 10, 10, 0.25 );
+	transition: all .2s ease-in-out;
+}
+
+.carousel_container .arrow.left:hover {
+	transform: scale(1.05);
+	background: rgba( 15, 10, 10, 0.35 );
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.left {
+	left: 2%;
+	background: rgba(255, 245, 195, .15);
+}
+
+.content_hub_carousel_ctn .carousel_container .arrow.left:hover {
+	left: 2%;
+	background: rgba(255, 245, 195, .25);
+}
+
+.header_clorthax {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/summer2022/clorthax_stencil.png') no-repeat;
+	width: 195px;
+    height: 100%;
+    background-size: contain;
+    right: 138px;
+    top: 52px;
+    position: absolute;
+}
+
+/* Infinite Scroll */
+
+.home_ctn {
+	background: url('https://cdn.cloudflare.steamstatic.com/store/promo/autumn2022/bg_tile_middle_3.jpg') repeat-y center;
+}
+
+/* Tablet/SteamDeck Overrides */
+html.tablet body.v6.sale_winter2022 .hero_add_to_cart  {
+    display: none;
+}
+
+html.tablet body.v6.sale_winter2022 .home_sticker_ctn.mobile {
+    display: none;
+}
+
+html.tablet body.v6.sale_winter2022 .home_sticker_ctn.desktop {
+    display: block;
+    min-height: 150px;
+}
+
+html.tablet body.v6.sale_winter2022 .home_featured_ctn {
+    margin-top: 0;
+}
+
+html.tablet body.v6.sale_winter2022 .home_page_body_ctn .home_page_takeover_size {
+    height: 0;
+}
+
+html.tablet body.v6.sale_winter2022 .franchise_carousel {
+    padding: 0 2%;
+
+}
+
+html.tablet body.v6.sale_winter2022 .home_tabs_row_ctn, html.tablet body.v6.sale_winter2022 .home_tabs_row {
+    display: block;
+}
+
+html.tablet body.v6.sale_winter2022 .pill_tab_menu_item {
+	background: #8d1811;
+	color: #fbffc6;
+}
+
+html.tablet body.v6.sale_winter2022 .pill_tab_menu_item.gpfocus {
+	background: #fbffc6;
+	color: #8d1811;
+}
+
+html.tablet body.v6.sale_winter2022 .pill_tab_menu_item.active {
+	background: #c2362e;
+	color: #fbf0c4;
+}
+
+html.tablet body.v6.sale_winter2022 .carousel_container .carousel_items:not(.no_paging) > .hero_row {
+	max-width: 852px;
+}
+
+html.tablet body.v6.sale_winter2022 .home_pagecontent_ctn.no_margin {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+html.tablet body.v6.sale_winter2022 .content_hub_carousel_ctn .carousel_items {
+	justify-content: start;
+	padding-left: 36px;
+	scroll-padding: 36px;
+}

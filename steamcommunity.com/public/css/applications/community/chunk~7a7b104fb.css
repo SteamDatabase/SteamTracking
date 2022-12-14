@@ -2086,15 +2086,117 @@ iframe.steamTVLogin {
   }
 }
 .broadcastchatannouncement_GiveawayWinnerBox_1iRcs {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  width: 400px;
+  margin: auto;
+  width: 100%;
   background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
   top: 0;
-  color: #fff;
-  padding: 10px;
   z-index: 1000;
+  box-shadow: 0px 3px 5px #000000aa;
+  transition: filter 0.25s ease-in-out 100ms;
+  filter: hue-rotate(0deg);
+}
+.broadcastchatannouncement_GiveawayWinnerBox_1iRcs.broadcastchatannouncement_GiveawayWinnerAnnounced_1784w {
+  animation-name: broadcastchatannouncement_WinnerFlash_-YiiO;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes broadcastchatannouncement_WinnerFlash_-YiiO {
+  0% {
+    filter: brightness(4.5);
+  }
+  10% {
+    filter: brightness(8.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.broadcastchatannouncement_GiveawayWinnerBox_1iRcs:hover {
+  filter: hue-rotate(15deg) !important;
+  color: #fff;
+}
+.broadcastchatannouncement_GiveawayWinnerBoxRight_164o1 {
+  padding: 10px;
+}
+.broadcastchatannouncement_GiveawayWinnerText_3BkKS {
+  color: #fff;
+  font-size: 12px;
   font-weight: bold;
-  box-shadow: 0px 3px 5px #000;
+  line-height: 1.2;
+}
+.broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3 {
+  font-size: 10px;
+  margin-top: 3px;
+}
+.broadcastchatannouncement_GiveawayWinnerBoxLeft_dUmvq {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.broadcastchatannouncement_GiveawayWinnerArt_3obND {
+  width: 90px;
+  margin-left: 5px;
+}
+.broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8 {
+  height: 14px;
+  width: 14px;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px 4px 4px 0px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  right: 0;
+  width: 100%;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerBox_1iRcs {
+  border-radius: 3px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerCountdown_1HTQ3 {
+  margin-top: 0px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerArt_3obND {
+  width: 60px;
+}
+.broadcastchatannouncement_InViewerBar_1UUjk
+  .broadcastchatannouncement_GiveawayWinnerQuestion_1BYt8 {
+  visibility: collapse;
+}
+.broadcastchatannouncement_GiveawayRegisterButton_3rlW-,
+.broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy {
+  display: flex;
+  margin: 10px;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #1a9fff 0%, #0056d6 100%);
+  transition: filter 0.25s ease-out 100ms;
+  padding: 5px 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy {
+  background: linear-gradient(120deg, #62aadf88 0%, #e34bba88 100%);
+}
+.broadcastchatannouncement_GiveawayRegisterButton_3rlW-:hover {
+  filter: brightness(1.3);
+  color: #fff;
 }
 .broadcastplayer_BroadcastPlayerLite_3YmNP {
   max-width: 100%;

@@ -4575,7 +4575,8 @@
           (e.optin_prune_tagid = void 0),
           (e.optin_tagid = void 0),
           (e.sale_opt_in_page_name = void 0),
-          (e.prune_list_optin_name = void 0);
+          (e.prune_list_optin_name = void 0),
+          (e.optin_only = void 0);
       }
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
@@ -8736,6 +8737,11 @@
                     n: 12,
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
+                  },
+                  wordban_list: {
+                    n: 13,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
                   },
                 },
               }),
@@ -17018,7 +17024,7 @@
               (ke.sm_m = {
                 proto: ke,
                 fields: {
-                  state: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  state: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
                   announcement_headline: {
                     n: 2,
                     br: n.FE.readString,
@@ -17509,7 +17515,7 @@
               (je.sm_m = {
                 proto: je,
                 fields: {
-                  state: { n: 1, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                  state: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
                   announcement_headline: {
                     n: 2,
                     br: n.FE.readString,
@@ -32149,6 +32155,184 @@
       }
       const c = new l();
     },
+    75320: (e, t, r) => {
+      "use strict";
+      r.d(t, { v: () => p, x: () => u });
+      var i = r(70655),
+        n = r(9669),
+        a = r.n(n),
+        s = r(67294),
+        o = (r(92398), r(82946), r(93976)),
+        l = r(99533),
+        c = r(64839),
+        d = r(90666);
+      class m {
+        constructor() {
+          (this.m_mapRegistrations = new Map()),
+            (this.m_mapLoadPromises = new Map()),
+            (this.m_mapCreatePromises = new Map()),
+            (this.m_listChangeCallback = new Map());
+        }
+        GetRegistration(e) {
+          return this.m_mapRegistrations.get(e);
+        }
+        GetRegistrationChangeCallback(e) {
+          return (
+            this.m_listChangeCallback.has(e) ||
+              this.m_listChangeCallback.set(e, new l.pB()),
+            this.m_listChangeCallback.get(e)
+          );
+        }
+        LoadRegistration(e) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            return (
+              this.m_mapLoadPromises.has(e) ||
+                this.m_mapLoadPromises.set(e, this.InternalLoadRegistration(e)),
+              this.m_mapLoadPromises.get(e)
+            );
+          });
+        }
+        InternalLoadRegistration(e) {
+          var t, r, n, s, l;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            try {
+              const c =
+                  d.De.STORE_BASE_URL +
+                  "saleaction/ajaxgetusergiveawayregistration",
+                m = { giveaway_name: e, sessionid: d.De.SESSIONID },
+                u = yield a().get(c, { params: m, withCredentials: !0 });
+              if (
+                200 == (null == u ? void 0 : u.status) &&
+                1 ==
+                  (null === (t = null == u ? void 0 : u.data) || void 0 === t
+                    ? void 0
+                    : t.success) &&
+                (null === (r = null == u ? void 0 : u.data) || void 0 === r
+                  ? void 0
+                  : r.registration)
+              )
+                return (
+                  this.m_mapRegistrations.set(
+                    e,
+                    null === (n = null == u ? void 0 : u.data) || void 0 === n
+                      ? void 0
+                      : n.registration
+                  ),
+                  this.GetRegistrationChangeCallback(e).Dispatch(
+                    null === (s = null == u ? void 0 : u.data) || void 0 === s
+                      ? void 0
+                      : s.registration
+                  ),
+                  null === (l = null == u ? void 0 : u.data) || void 0 === l
+                    ? void 0
+                    : l.registration
+                );
+              i = (0, o.l)(u);
+            } catch (e) {
+              i = (0, o.l)(e);
+            }
+            return (
+              console.error(
+                "CGiveawayRegistrationStore.InternalLoadRegistration failed: on giveawayName " +
+                  e +
+                  " error: " +
+                  (null == i ? void 0 : i.strErrorMsg),
+                i
+              ),
+              { registered: !1 }
+            );
+          });
+        }
+        CreateRegistration(e) {
+          return (
+            this.m_mapCreatePromises.has(e) ||
+              this.m_mapCreatePromises.set(
+                e,
+                this.InternalCreateRegistration(e)
+              ),
+            this.m_mapCreatePromises.get(e)
+          );
+        }
+        InternalCreateRegistration(e) {
+          var t, r, n, s, l;
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            let i = null;
+            try {
+              const c =
+                  d.De.STORE_BASE_URL +
+                  "saleaction/ajaxupdateusergiveawayregistration",
+                m = { giveaway_name: e, sessionid: d.De.SESSIONID },
+                u = yield a().get(c, { params: m, withCredentials: !0 });
+              if (
+                200 == (null == u ? void 0 : u.status) &&
+                1 ==
+                  (null === (t = null == u ? void 0 : u.data) || void 0 === t
+                    ? void 0
+                    : t.success) &&
+                (null === (r = null == u ? void 0 : u.data) || void 0 === r
+                  ? void 0
+                  : r.registration)
+              )
+                return (
+                  this.m_mapRegistrations.set(
+                    e,
+                    null === (n = null == u ? void 0 : u.data) || void 0 === n
+                      ? void 0
+                      : n.registration
+                  ),
+                  this.GetRegistrationChangeCallback(e).Dispatch(
+                    null === (s = null == u ? void 0 : u.data) || void 0 === s
+                      ? void 0
+                      : s.registration
+                  ),
+                  null === (l = null == u ? void 0 : u.data) || void 0 === l
+                    ? void 0
+                    : l.registration
+                );
+              i = (0, o.l)(u);
+            } catch (e) {
+              i = (0, o.l)(e);
+            }
+            return (
+              console.error(
+                "CGiveawayRegistrationStore.InternalCreateRegistration failed: on giveawayName " +
+                  e +
+                  " error: " +
+                  (null == i ? void 0 : i.strErrorMsg),
+                i
+              ),
+              { registered: !1 }
+            );
+          });
+        }
+        static Get() {
+          return (
+            m.s_Singleton ||
+              ((m.s_Singleton = new m()),
+              m.s_Singleton.Init(),
+              "dev" == d.De.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = m.s_Singleton)),
+            m.s_Singleton
+          );
+        }
+        Init() {}
+      }
+      function u(e) {
+        const [t, r] = (0, s.useState)(m.Get().GetRegistration(e));
+        return (
+          (0, s.useEffect)(() => {
+            void 0 === t && m.Get().LoadRegistration(e).then(r);
+          }, [e, t]),
+          (0, c.Qg)(m.Get().GetRegistrationChangeCallback(e), r),
+          t
+        );
+      }
+      function p() {
+        return { fnCreateRegistration: m.Get().CreateRegistration };
+      }
+      (0, i.gn)([c.ak], m.prototype, "CreateRegistration", null);
+    },
     37694: (e, t, r) => {
       "use strict";
       r.d(t, { Eq: () => _, OT: () => u, wj: () => p });
@@ -35143,9 +35327,9 @@
             );
       }
     },
-    22115: (e, t, r) => {
+    17865: (e, t, r) => {
       "use strict";
-      r.d(t, { d: () => mt });
+      r.d(t, { d: () => dt });
       var i = r(70655),
         n = r(67294),
         a = r(49727),
@@ -35786,177 +35970,14 @@
         }
         return (0, k.h)(t, null == r ? void 0 : r.event);
       }
-      r(990), r(82946);
-      var we = r(99533);
-      class Se {
-        constructor() {
-          (this.m_mapRegistrations = new Map()),
-            (this.m_mapLoadPromises = new Map()),
-            (this.m_mapCreatePromises = new Map()),
-            (this.m_listChangeCallback = new Map());
-        }
-        GetRegistration(e) {
-          return this.m_mapRegistrations.get(e);
-        }
-        GetRegistrationChangeCallback(e) {
-          return (
-            this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new we.pB()),
-            this.m_listChangeCallback.get(e)
-          );
-        }
-        LoadRegistration(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            return (
-              this.m_mapLoadPromises.has(e) ||
-                this.m_mapLoadPromises.set(e, this.InternalLoadRegistration(e)),
-              this.m_mapLoadPromises.get(e)
-            );
-          });
-        }
-        InternalLoadRegistration(e) {
-          var t, r, n, a, s;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = null;
-            try {
-              const o =
-                  w.De.STORE_BASE_URL +
-                  "saleaction/ajaxgetusergiveawayregistration",
-                l = { giveaway_name: e, sessionid: w.De.SESSIONID },
-                c = yield v().get(o, { params: l, withCredentials: !0 });
-              if (
-                200 == (null == c ? void 0 : c.status) &&
-                1 ==
-                  (null === (t = null == c ? void 0 : c.data) || void 0 === t
-                    ? void 0
-                    : t.success) &&
-                (null === (r = null == c ? void 0 : c.data) || void 0 === r
-                  ? void 0
-                  : r.registration)
-              )
-                return (
-                  this.m_mapRegistrations.set(
-                    e,
-                    null === (n = null == c ? void 0 : c.data) || void 0 === n
-                      ? void 0
-                      : n.registration
-                  ),
-                  this.GetRegistrationChangeCallback(e).Dispatch(
-                    null === (a = null == c ? void 0 : c.data) || void 0 === a
-                      ? void 0
-                      : a.registration
-                  ),
-                  null === (s = null == c ? void 0 : c.data) || void 0 === s
-                    ? void 0
-                    : s.registration
-                );
-              i = (0, I.l)(c);
-            } catch (e) {
-              i = (0, I.l)(e);
-            }
-            return (
-              console.error(
-                "CGiveawayRegistrationStore.InternalLoadRegistration failed: on giveawayName " +
-                  e +
-                  " error: " +
-                  (null == i ? void 0 : i.strErrorMsg),
-                i
-              ),
-              { registered: !1 }
-            );
-          });
-        }
-        CreateRegistration(e) {
-          return (
-            this.m_mapCreatePromises.has(e) ||
-              this.m_mapCreatePromises.set(
-                e,
-                this.InternalCreateRegistration(e)
-              ),
-            this.m_mapCreatePromises.get(e)
-          );
-        }
-        InternalCreateRegistration(e) {
-          var t, r, n, a, s;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = null;
-            try {
-              const o =
-                  w.De.STORE_BASE_URL +
-                  "saleaction/ajaxupdateusergiveawayregistration",
-                l = { giveaway_name: e, sessionid: w.De.SESSIONID },
-                c = yield v().get(o, { params: l, withCredentials: !0 });
-              if (
-                200 == (null == c ? void 0 : c.status) &&
-                1 ==
-                  (null === (t = null == c ? void 0 : c.data) || void 0 === t
-                    ? void 0
-                    : t.success) &&
-                (null === (r = null == c ? void 0 : c.data) || void 0 === r
-                  ? void 0
-                  : r.registration)
-              )
-                return (
-                  this.m_mapRegistrations.set(
-                    e,
-                    null === (n = null == c ? void 0 : c.data) || void 0 === n
-                      ? void 0
-                      : n.registration
-                  ),
-                  this.GetRegistrationChangeCallback(e).Dispatch(
-                    null === (a = null == c ? void 0 : c.data) || void 0 === a
-                      ? void 0
-                      : a.registration
-                  ),
-                  null === (s = null == c ? void 0 : c.data) || void 0 === s
-                    ? void 0
-                    : s.registration
-                );
-              i = (0, I.l)(c);
-            } catch (e) {
-              i = (0, I.l)(e);
-            }
-            return (
-              console.error(
-                "CGiveawayRegistrationStore.InternalCreateRegistration failed: on giveawayName " +
-                  e +
-                  " error: " +
-                  (null == i ? void 0 : i.strErrorMsg),
-                i
-              ),
-              { registered: !1 }
-            );
-          });
-        }
-        static Get() {
-          return (
-            Se.s_Singleton ||
-              ((Se.s_Singleton = new Se()),
-              Se.s_Singleton.Init(),
-              "dev" == w.De.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = Se.s_Singleton)),
-            Se.s_Singleton
-          );
-        }
-        Init() {}
-      }
-      function Ce(e) {
-        const [t, r] = (0, n.useState)(Se.Get().GetRegistration(e));
-        return (
-          (0, n.useEffect)(() => {
-            void 0 === t && Se.Get().LoadRegistration(e).then(r);
-          }, [e, t]),
-          (0, m.Qg)(Se.Get().GetRegistrationChangeCallback(e), r),
-          t
-        );
-      }
-      (0, i.gn)([m.ak], Se.prototype, "CreateRegistration", null);
-      var Ee = r(58114),
-        Ie = r(65902),
-        Re = r(14974),
-        Fe = r(77520);
-      r(46321);
-      class Me {
+      r(990);
+      var we = r(75320),
+        Se = r(58114),
+        Ce = r(65902),
+        Ee = r(14974),
+        Ie = r(77520),
+        Re = (r(46321), r(99533));
+      class Fe {
         constructor() {
           (this.m_claimState = {
             bCanClaimNewItem: !1,
@@ -35965,7 +35986,7 @@
             (this.m_SteamInterface = null),
             (this.m_canClaimPromise = null),
             (this.m_claimPromise = null),
-            (this.m_claimStateChangeCallback = new we.pB());
+            (this.m_claimStateChangeCallback = new Re.pB());
         }
         GetClaimItemState() {
           return this.m_claimState;
@@ -35993,12 +36014,12 @@
           var e, t, r;
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0,
-            Fe.X)(w.L7.logged_in, "User must be logged to use CSaleItemClaimableRewardsStore");
-            const i = Ee.gA.Init(Re.FE);
+            Ie.X)(w.L7.logged_in, "User must be logged to use CSaleItemClaimableRewardsStore");
+            const i = Se.gA.Init(Ee.FE);
             i.Body().set_language(w.De.LANGUAGE);
             let n = null;
             try {
-              const a = yield Re.tE.CanClaimItem(
+              const a = yield Ee.tE.CanClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
                 i
               );
@@ -36057,19 +36078,19 @@
         }
         InternalUserClaimItem() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            (0, Fe.X)(
+            (0, Ie.X)(
               w.L7.logged_in,
               "User must be logged to use CSaleItemClaimableRewardsStore"
             ),
-              (0, Fe.X)(
+              (0, Ie.X)(
                 this.m_claimState.bCanClaimNewItem,
                 "Only should be called when we previously verified you can claim something. "
               );
-            const e = Ee.gA.Init(Re.xs);
+            const e = Se.gA.Init(Ee.xs);
             e.Body().set_language(w.De.LANGUAGE);
             let t = null;
             try {
-              const r = yield Re.tE.ClaimItem(
+              const r = yield Ee.tE.ClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
                 e
               );
@@ -36140,31 +36161,31 @@
         }
         static Get() {
           return (
-            Me.s_Singleton ||
-              ((Me.s_Singleton = new Me()),
-              Me.s_Singleton.Init(),
+            Fe.s_Singleton ||
+              ((Fe.s_Singleton = new Fe()),
+              Fe.s_Singleton.Init(),
               "dev" == w.De.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = Me.s_Singleton)),
-            Me.s_Singleton
+                (window.g_QuestCommunityInventoryStore = Fe.s_Singleton)),
+            Fe.s_Singleton
           );
         }
         Init() {
           const e = (0, w.kQ)("loyalty_webapi_token", "application_config");
-          (0, Fe.X)(
+          (0, Ie.X)(
             e,
             "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission"
           ),
-            (this.m_SteamInterface = new Ie.J(w.De.WEBAPI_BASE_URL, e));
+            (this.m_SteamInterface = new Ce.J(w.De.WEBAPI_BASE_URL, e));
         }
       }
-      (0, i.gn)([m.ak], Me.prototype, "UserClaimItem", null);
-      var De = r(52114),
-        Te = r(48341),
-        Ae = r(88883),
-        ze = r(35841),
-        Ge = r(52519),
-        ke = r.n(Ge);
-      const Le = (e) => {
+      (0, i.gn)([m.ak], Fe.prototype, "UserClaimItem", null);
+      var Me = r(52114),
+        De = r(48341),
+        Te = r(88883),
+        Ae = r(35841),
+        ze = r(52519),
+        Ge = r.n(ze);
+      const ke = (e) => {
         const [t, r] = (0, n.useState)(!0),
           [a, s] = (0, n.useState)(null);
         if (
@@ -36206,7 +36227,7 @@
           a)
         )
           return e.bIsPreviewMode
-            ? n.createElement("div", { className: ke().ErrorDiv }, a)
+            ? n.createElement("div", { className: Ge().ErrorDiv }, a)
             : null;
         if (t)
           return n.createElement(C.V, {
@@ -36225,17 +36246,17 @@
               { sURL: l.strMP4URL, sFormat: "video/mp4" },
             ],
           };
-        return n.createElement(ze.Y, {
+        return n.createElement(Ae.Y, {
           bControls: !0,
           bAutoPlay: !1,
           bLoop: !1,
           video: c,
         });
       };
-      var Oe = r(13096),
-        Pe = r(50498),
-        Ne = (r(69765), r(32548));
-      const We = n.lazy(() =>
+      var Le = r(13096),
+        Oe = r(50498),
+        Pe = (r(69765), r(32548));
+      const Ne = n.lazy(() =>
           Promise.all([
             r.e(3973),
             r.e(2677),
@@ -36244,11 +36265,11 @@
             r.e(4601),
           ]).then(r.bind(r, 63405))
         ),
-        xe = (e) => {
+        We = (e) => {
           const t = (0, n.useRef)(null),
-            [r, a] = (0, n.useState)(Pe.D.Get().GetVODForAppID(e.appid)),
+            [r, a] = (0, n.useState)(Oe.D.Get().GetVODForAppID(e.appid)),
             [s, o] = (0, n.useState)(
-              !Boolean(Pe.D.Get().GetVODForAppID(e.appid))
+              !Boolean(Oe.D.Get().GetVODForAppID(e.appid))
             );
           return (
             (0, n.useEffect)(
@@ -36259,7 +36280,7 @@
               if (
                 (r &&
                   r.appid != e.appid &&
-                  (n = Pe.D.Get().GetVODForAppID(e.appid)),
+                  (n = Oe.D.Get().GetVODForAppID(e.appid)),
                 !n)
               ) {
                 const r = () =>
@@ -36267,7 +36288,7 @@
                     t.current && t.current();
                     const r = v().CancelToken.source();
                     (t.current = r.cancel),
-                      (n = yield Pe.D.Get().LoadVODForAppID(e.appid)),
+                      (n = yield Oe.D.Get().LoadVODForAppID(e.appid)),
                       r.token.reason || a(n),
                       o(!1);
                   });
@@ -36286,14 +36307,14 @@
                 )
               : n.createElement(
                   "div",
-                  { className: Oe.BroadcastCtn },
+                  { className: Le.BroadcastCtn },
                   n.createElement(
-                    Ne.S,
+                    Pe.S,
                     null,
                     n.createElement(
                       n.Suspense,
                       { fallback: n.createElement("div", null) },
-                      n.createElement(We, {
+                      n.createElement(Ne, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
                         bStartPaused: !0,
@@ -36303,15 +36324,15 @@
                 )
           );
         };
-      var Ue = r(96187),
-        je = r(72258),
-        Ve = r(53622),
-        He = r(60419),
-        Xe = r(37699),
-        Ze = r(41414),
-        qe = r(23211);
-      let Ke = null;
-      function Ye(e) {
+      var xe = r(96187),
+        Ue = r(72258),
+        je = r(53622),
+        Ve = r(60419),
+        He = r(37699),
+        Xe = r(41414),
+        Ze = r(23211);
+      let qe = null;
+      function Ke(e) {
         var t, r;
         let i = (0, o.im)(e.args);
         const a = (0, o.im)(e.args, "style"),
@@ -36352,7 +36373,7 @@
             ? n.createElement("a", { className: l, href: i }, e.children)
             : "steam://settings/account" == i
             ? n.createElement(
-                je.ns,
+                Ue.ns,
                 { className: l, href: "steam://settings/account" },
                 e.children
               )
@@ -36363,7 +36384,7 @@
               )
         );
       }
-      function $e(e) {
+      function Ye(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = e && e.children && e.children.toString();
         if (
@@ -36384,7 +36405,7 @@
             (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, D.dK)(i)),
             t || (i = (0, D.et)(i)),
             t
-              ? n.createElement(Ue.e, {
+              ? n.createElement(xe.e, {
                   src: i,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
@@ -36396,40 +36417,40 @@
         }
         return n.createElement(G.j, { rgSources: a });
       }
-      function Qe(e) {
-        const t = tt(
+      function $e(e) {
+        const t = et(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0
           ),
-          r = tt(e.args, "trailerid", 0);
-        return n.createElement(Le, {
+          r = et(e.args, "trailerid", 0);
+        return n.createElement(ke, {
           appid: t,
           trailerBaseID: r,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Je(e) {
-        const t = tt(e.args, "appid", 0);
-        return n.createElement(xe, {
+      function Qe(e) {
+        const t = et(e.args, "appid", 0);
+        return n.createElement(We, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function et(e) {
+      function Je(e) {
         const t = (0, o.im)(e.args, "name"),
           r = (0, o.im)(e.args, "title"),
           i = (0, o.im)(e.args, "company"),
           a = (0, o.im)(e.args, "photo");
         return e.context.bShowShortSpeakerInfo
-          ? n.createElement(Ae.G$, {
+          ? n.createElement(Te.G$, {
               name: t,
               title: r,
               company: i,
               photo: a,
               bio: e.children,
             })
-          : n.createElement(Ae.qs, {
+          : n.createElement(Te.qs, {
               name: t,
               title: r,
               company: i,
@@ -36437,15 +36458,15 @@
               bio: e.children,
             });
       }
-      function tt(e, t, r) {
+      function et(e, t, r) {
         const i = (0, o.im)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function rt(e) {
+      function tt(e) {
         const t = (0, o.im)(e.args, "name"),
           r =
             "true" === ((0, o.im)(e.args, "visible") || "false").toLowerCase(),
-          i = Ce(t);
+          i = (0, we.x)(t);
         if (!t) {
           return e.context.showErrorInfo
             ? n.createElement("div", null, "Failed to provide giveaway name")
@@ -36455,39 +36476,39 @@
           ? e.children
           : null;
       }
-      function it(e) {
+      function rt(e) {
         const t = e.context.showErrorInfo;
         return w.L7.logged_in
-          ? n.createElement(nt, { bPreviewMode: t })
+          ? n.createElement(it, { bPreviewMode: t })
           : n.createElement(
-              Te.zx,
-              { onClick: qe.X, className: "CSSClaimItemLoginButton" },
+              De.zx,
+              { onClick: Ze.X, className: "CSSClaimItemLoginButton" },
               (0, b.Xx)("#Sale_ClaimableReward_Login")
             );
       }
-      function nt(e) {
+      function it(e) {
         const t = (function () {
-            const [e, t] = (0, n.useState)(Me.Get().GetClaimItemState()),
+            const [e, t] = (0, n.useState)(Fe.Get().GetClaimItemState()),
               [r, i] = (0, n.useState)(!0);
             return (
               (0, n.useEffect)(() => {
-                Me.Get()
+                Fe.Get()
                   .LoadCanUserClaimItem()
                   .then(t)
                   .finally(() => i(!1));
               }, []),
-              (0, m.Qg)(Me.Get().GetClaimStateChangeCallback(), t),
+              (0, m.Qg)(Fe.Get().GetClaimStateChangeCallback(), t),
               Object.assign(Object.assign({}, e), { bLoading: r })
             );
           })(),
           { bLoading: r } = t;
         return n.createElement(
-          Te.zx,
+          De.zx,
           {
             className: "CSSClaimItemButton",
             onClick: (e) => {
               t.bCanClaimNewItem &&
-                (0, Ze.AM)(n.createElement(st, null), (0, Ve.RA)(e));
+                (0, Xe.AM)(n.createElement(at, null), (0, je.RA)(e));
             },
             disabled: r,
           },
@@ -36496,10 +36517,10 @@
                 string: (0, b.Xx)("#Loading"),
                 size: "small",
               })
-            : n.createElement(at, { claimState: t })
+            : n.createElement(nt, { claimState: t })
         );
       }
-      function at(e) {
+      function nt(e) {
         const { claimState: t } = e;
         return t.bAlreadyClaimedCurrentItem
           ? n.createElement(
@@ -36519,10 +36540,10 @@
               (0, b.Xx)("#Sale_ClaimableReward_sticker")
             );
       }
-      function st(e) {
+      function at(e) {
         const { closeModal: t } = e,
-          { fnClaimItem: r } = { fnClaimItem: Me.Get().UserClaimItem },
-          i = (0, He.tx)();
+          { fnClaimItem: r } = { fnClaimItem: Fe.Get().UserClaimItem },
+          i = (0, Ve.tx)();
         return (
           n.useEffect(() => {
             i.bLoading ||
@@ -36542,19 +36563,19 @@
                   i.fnSetStrError((0, b.Xx)("#Sale_ClaimableReward_Busy"))
                 ));
           }, [i, r]),
-          n.createElement(He.NT, {
+          n.createElement(Ve.NT, {
             state: i,
             strDialogTitle: (0, b.Xx)("#Sale_ClaimableReward_sticker"),
             closeModal: t,
           })
         );
       }
-      function ot(e) {
+      function st(e) {
         const t = Number.parseInt((0, o.im)(e.args, "id")) || 0,
           r =
             "true" === ((0, o.im)(e.args, "visible") || "false").toLowerCase(),
           i = e.context.showErrorInfo,
-          [a, s] = (0, De.ie)(t, {});
+          [a, s] = (0, Me.ie)(t, {});
         if (!t || 1 == s)
           return !t && i
             ? n.createElement("div", null, "Error: PackageID Not Set")
@@ -36567,16 +36588,22 @@
           (!l && !r) || (l && r) ? e.children : null
         );
       }
-      function lt(e) {
+      function ot(e) {
         if ("GameAwardDrop2022" === e) {
-          const t = Ce(e),
-            r = { fnCreateRegistration: Se.Get().CreateRegistration };
+          const t = (0, we.x)(e),
+            r = (0, we.v)();
           return t
             ? t.registered
               ? {
                   bInitialState: !1,
                   bSuccessState: t.eligible,
                   bFailedState: !t.eligible,
+                  fnAction: t.eligible
+                    ? void 0
+                    : () =>
+                        (0, i.mG)(this, void 0, void 0, function* () {
+                          yield r.fnCreateRegistration(e);
+                        }),
                 }
               : {
                   bInitialState: !0,
@@ -36589,12 +36616,12 @@
         }
         return { bInitialState: !0 };
       }
-      function ct(e) {
+      function lt(e) {
         const t = (0, o.im)(e.args, "action"),
           r = (0, o.im)(e.args, "initialToken"),
           i = (0, o.im)(e.args, "successToken"),
           a = (0, o.im)(e.args, "failToken"),
-          s = lt(t);
+          s = ot(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? n.createElement(
@@ -36606,13 +36633,13 @@
         }
         return w.L7.logged_in
           ? n.createElement(
-              Te.zx,
+              De.zx,
               {
                 className: "CSSActionDialogButton",
                 onClick: (s) => {
-                  (0, Ze.AM)(
+                  (0, Xe.AM)(
                     n.createElement(
-                      dt,
+                      ct,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -36621,7 +36648,7 @@
                       },
                       e.children
                     ),
-                    (0, Ve.RA)(s)
+                    (0, je.RA)(s)
                   );
                 },
               },
@@ -36630,12 +36657,12 @@
               Boolean(s.bFailedState) && (0, b.Xx)(a)
             )
           : n.createElement(
-              Te.zx,
-              { className: "CSSActionDialogButton", onClick: qe.X },
+              De.zx,
+              { className: "CSSActionDialogButton", onClick: Ze.X },
               (0, b.Xx)("#Login_SignIn")
             );
       }
-      function dt(e) {
+      function ct(e) {
         const {
             strAction: t,
             children: r,
@@ -36644,14 +36671,14 @@
             strSuccessToken: s,
             strFailToken: o,
           } = e,
-          l = lt(t),
+          l = ot(t),
           [c, d] = n.useState(Boolean(l.fnAction));
         return (
           n.useEffect(() => {
             l.fnAction && (d(!0), l.fnAction().finally(() => d(!1)));
           }, [l]),
           n.createElement(
-            Xe.RG,
+            He.RG,
             {
               bDisableBackgroundDismiss: !0,
               closeModal: i,
@@ -36659,17 +36686,17 @@
               className: "CSSActionDialogDialog",
             },
             n.createElement(
-              Te.h4,
+              De.h4,
               null,
               Boolean(l.bInitialState) && (0, b.Xx)(a),
               Boolean(l.bSuccessState) && (0, b.Xx)(s),
               Boolean(l.bFailedState) && (0, b.Xx)(o)
             ),
             n.createElement(
-              Te.uT,
+              De.uT,
               null,
               n.createElement(
-                Te.Ac,
+                De.Ac,
                 null,
                 c
                   ? n.createElement(C.V, {
@@ -36683,11 +36710,11 @@
           )
         );
       }
-      class mt extends n.Component {
+      class dt extends n.Component {
         constructor(e) {
           super(e),
             (this.m_parser = new a.Z6(
-              mt.sm_BBCodeDictionary,
+              dt.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride
             ));
@@ -36742,8 +36769,8 @@
           );
         }
         static AddDictionary(e) {
-          mt.sm_BBCodeDictionary = new Map([
-            ...Array.from(mt.sm_BBCodeDictionary.entries()),
+          dt.sm_BBCodeDictionary = new Map([
+            ...Array.from(dt.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -36758,12 +36785,12 @@
           );
         }
       }
-      (mt.sm_BBCodeDictionary = new Map([
+      (dt.sm_BBCodeDictionary = new Map([
         ...Array.from(o.Be.entries()),
         ...Array.from(
-          (null == Ke &&
-            (Ke = new Map([
-              ["url", { Constructor: Ye, autocloses: !1 }],
+          (null == qe &&
+            (qe = new Map([
+              ["url", { Constructor: Ke, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -36812,31 +36839,31 @@
                 "*",
                 { Constructor: o.HC, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: $e, autocloses: !1 }],
+              ["img", { Constructor: Ye, autocloses: !1 }],
               ["previewyoutube", { Constructor: o.MJ, autocloses: !1 }],
               ["looping_media", { Constructor: o.jj, autocloses: !1 }],
               ["video", { Constructor: o.qy, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: o.YC, autocloses: !1 }],
-              ["trailer", { Constructor: Qe, autocloses: !0 }],
-              ["vod", { Constructor: Je, autocloses: !1 }],
+              ["trailer", { Constructor: $e, autocloses: !0 }],
+              ["vod", { Constructor: Qe, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: et,
+                  Constructor: Je,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: rt, autocloses: !1 }],
-              ["claimitem", { Constructor: it, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: ot, autocloses: !1 }],
-              ["actiondialog", { Constructor: ct, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: tt, autocloses: !1 }],
+              ["claimitem", { Constructor: rt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: st, autocloses: !1 }],
+              ["actiondialog", { Constructor: lt, autocloses: !1 }],
             ])),
-          Ke).entries()
+          qe).entries()
         ),
       ])),
-        (0, i.gn)([m.ak], mt.prototype, "ElementAccumulator", null);
+        (0, i.gn)([m.ak], dt.prototype, "ElementAccumulator", null);
     },
     23937: (e, t, r) => {
       "use strict";
@@ -38258,7 +38285,7 @@
                     e.bDeactivated = !(
                       e.bEnabled ||
                       t ||
-                      r ||
+                      0 !== r ||
                       e.facetValue.type === u.HL.k_EUserPreference
                     );
                   });
@@ -38471,6 +38498,7 @@
           });
         }
         UpdateMatchCount(e, t) {
+          var r, i, n;
           this.m_bServerSideFiltering ||
             ((this.m_filteredCapsules = null),
             null != this.m_potentiallyVisibleCapsules &&
@@ -38494,10 +38522,20 @@
               ? this.m_bServerSideFiltering
                 ? ((this.m_nFilteredCapsuleCount = this.m_nSolrMatchCount),
                   (this.m_nFilteredCapsuleCount -=
-                    this.m_setCapsulesRemovedByOptInFilters.size),
+                    (null === (i = this.m_setCapsulesRemovedByOptInFilters) ||
+                    void 0 === i
+                      ? void 0
+                      : i.size) || 0),
                   (this.m_nFilteredCapsuleCount -=
-                    this.m_setCapsulesRemovedByUserPreferenceFilters.size))
-                : (this.m_nFilteredCapsuleCount = this.m_filteredCapsules.size)
+                    (null ===
+                      (n = this.m_setCapsulesRemovedByUserPreferenceFilters) ||
+                    void 0 === n
+                      ? void 0
+                      : n.size) || 0))
+                : (this.m_nFilteredCapsuleCount =
+                    (null === (r = this.m_filteredCapsules) || void 0 === r
+                      ? void 0
+                      : r.size) || 0)
               : (this.m_nFilteredCapsuleCount = t),
             this.SortFacets();
         }
@@ -38514,170 +38552,208 @@
         (0, i.gn)([s.aD], M.prototype, "SetFacetValueSearchString", null),
         (0, i.gn)([s.aD], M.prototype, "UpdateMatchCount", null);
       const D = (0, o.Pi)((e) => {
-          var t;
+          var t, r;
           const {
-              language: r,
-              linkColor: i,
-              headingColor: n,
-              background: a,
-              styleOverrides: o,
-              facetFilterState: l,
-              fnOnUpdateFilter: d,
+              language: i,
+              linkColor: n,
+              headingColor: a,
+              background: o,
+              styleOverrides: l,
+              facetFilterState: d,
+              fnOnUpdateFilter: m,
+              onInitFilter: u,
             } = e,
-            [m, u] = (0, c.useState)(""),
-            p = (function (e) {
+            [p, _] = (0, c.useState)(""),
+            h = (function (e) {
               const [t, r] = (0, c.useState)();
               return (
                 (0, c.useEffect)(() => {
                   var t, i;
                   const n = [];
-                  for (const r of e)
-                    for (const e of r.facet.facetValues)
-                      if (
-                        (null === (t = e.name) || void 0 === t
-                          ? void 0
-                          : t.length) > 0 &&
-                        (null === (i = e.name[0]) || void 0 === i
-                          ? void 0
-                          : i.startsWith("#tagid_"))
-                      ) {
-                        const t = parseInt(e.name[0].substring(7));
-                        t > 0 && n.push(t);
-                      }
+                  if (e)
+                    for (const r of e)
+                      for (const e of r.facet.facetValues)
+                        if (
+                          (null === (t = e.name) || void 0 === t
+                            ? void 0
+                            : t.length) > 0 &&
+                          (null === (i = e.name[0]) || void 0 === i
+                            ? void 0
+                            : i.startsWith("#tagid_"))
+                        ) {
+                          const t = parseInt(e.name[0].substring(7));
+                          t > 0 && n.push(t);
+                        }
                   g.OT.Get().QueueMultipleTagLoads(n).then(r);
                 }, [e]),
                 t
               );
-            })(l.GetFacets());
-          let _, h;
-          (null == o ? void 0 : o.menu) ||
-            (_ = { background: a, color: i || "white" }),
-            (null == o ? void 0 : o.menuTitle) ||
-              (h = {
-                borderBottom: "0px solid " + (i || "white"),
-                color: n || "white",
+            })(null == d ? void 0 : d.GetFacets());
+          let y, b;
+          (null == l ? void 0 : l.menu) ||
+            (y = { background: o, color: n || "white" }),
+            (null == l ? void 0 : l.menuTitle) ||
+              (b = {
+                borderBottom: "0px solid " + (n || "white"),
+                color: a || "white",
               });
-          const y = (0, c.useRef)(null),
-            b = () => {
-              l.UpdateFilter(), d();
+          const v = (0, c.useRef)(null),
+            S = () => {
+              d.UpdateFilter(), m();
             };
-          return 1 !== p
-            ? null
-            : c.createElement(
-                "div",
-                {
-                  ref: y,
-                  className:
-                    (null == o ? void 0 : o.menu) || w.FacetedBrowseControls,
-                  style: _,
-                },
-                c.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.menuTitle) || w.FacetMenuTitle,
-                    style: h,
-                  },
-                  (0, B.Xx)("#FacetedBrowse_Heading")
-                ),
-                Boolean(l) &&
-                  c.createElement(
+          return (
+            c.useEffect(() => {
+              !d && u && u();
+            }, [d, u]),
+            c.useEffect(() => {
+              var t;
+              d &&
+                e.rgItems &&
+                (d.SetFacetCounts(e.faceting),
+                d.SetMultiFacetCounts(e.multifaceting),
+                d.SetSolrMatchCount(e.nMatchCount),
+                d.UpdateMatchCount(
+                  e.bMoreAvailable,
+                  null === (t = e.rgItems) || void 0 === t ? void 0 : t.length
+                ));
+            }, [
+              d,
+              e.bMoreAvailable,
+              e.faceting,
+              e.multifaceting,
+              e.nMatchCount,
+              e.rgItems,
+              null === (t = e.rgItems) || void 0 === t ? void 0 : t.length,
+            ]),
+            d
+              ? 1 !== h
+                ? null
+                : c.createElement(
                     "div",
                     {
+                      ref: v,
                       className:
-                        (null == o ? void 0 : o.matchCount) ||
-                        w.FacetedBrowseMatchCount,
+                        (null == l ? void 0 : l.menu) ||
+                        w.FacetedBrowseControls,
+                      style: y,
                     },
-                    null != l.GetMatchCount() &&
-                      (0, B.kb)("#FacetedBrowse_MatchCount", l.GetMatchCount())
-                  ),
-                c.createElement(
-                  "div",
-                  { className: w.FacetValueSearch },
-                  c.createElement(f.II, {
-                    type: "text",
-                    value: m,
-                    placeholder: (0, B.Xx)("#FacetedBrowse_SearchFacetValues"),
-                    onChange: (e) => {
-                      u(e.target.value),
-                        l.SetFacetValueSearchString(e.target.value, r);
-                    },
-                    bShowClearAction: !0,
-                  })
-                ),
-                c.createElement(
-                  T,
-                  Object.assign(
-                    {
-                      facets: null == l ? void 0 : l.GetSortedFacets(),
-                      onUpdateFilter: b,
-                    },
-                    e
-                  )
-                ),
-                c.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.reset) || w.FacetedBrowseReset,
-                  },
-                  c.createElement(
-                    "a",
-                    {
-                      onClick: (e) => {
-                        e.preventDefault(),
-                          (0, s.z)(() => {
-                            l.Reset(), d();
-                          });
+                    c.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.menuTitle) ||
+                          w.FacetMenuTitle,
+                        style: b,
                       },
-                    },
-                    (0, B.Xx)("#FacetedBrowse_Reset")
-                  )
-                ),
-                null === (t = null == l ? void 0 : l.GetSortedFacets()) ||
-                  void 0 === t
-                  ? void 0
-                  : t.map((t, i) =>
-                      c.createElement(z, {
-                        key:
-                          "facet_" +
-                          B.LZ.GetWithFallback(t.facet.facet.name, r) +
-                          "_" +
-                          i,
-                        facet: t,
-                        facetFilterState: l,
-                        nFacetIndex: i,
-                        language: r,
-                        nMaxFacetValues: e.nMaxFacetValues,
-                        highlightedFacetColor: e.highlightedFacetColor,
-                        linkColor: e.linkColor,
-                        headingColor: e.headingColor,
-                        fnOnUpdateFilter: b,
-                        styleOverrides: o,
-                        bSearching: (null == m ? void 0 : m.length) > 0,
+                      (0, B.Xx)("#FacetedBrowse_Heading")
+                    ),
+                    Boolean(d) &&
+                      c.createElement(
+                        "div",
+                        {
+                          className:
+                            (null == l ? void 0 : l.matchCount) ||
+                            w.FacetedBrowseMatchCount,
+                        },
+                        null != d.GetMatchCount() &&
+                          (0, B.kb)(
+                            "#FacetedBrowse_MatchCount",
+                            d.GetMatchCount()
+                          )
+                      ),
+                    c.createElement(
+                      "div",
+                      { className: w.FacetValueSearch },
+                      c.createElement(f.II, {
+                        type: "text",
+                        value: p,
+                        placeholder: (0, B.Xx)(
+                          "#FacetedBrowse_SearchFacetValues"
+                        ),
+                        onChange: (e) => {
+                          _(e.target.value),
+                            d.SetFacetValueSearchString(e.target.value, i);
+                        },
+                        bShowClearAction: !0,
                       })
                     ),
-                c.createElement(
-                  "div",
-                  {
-                    className:
-                      (null == o ? void 0 : o.reset) || w.FacetedBrowseReset,
-                  },
-                  c.createElement(
-                    "a",
-                    {
-                      onClick: (e) => {
-                        e.preventDefault();
-                        const t =
-                          y.current.getBoundingClientRect().top +
-                          window.scrollY;
-                        window.scrollTo(0, t);
+                    c.createElement(
+                      T,
+                      Object.assign(
+                        {
+                          facets: null == d ? void 0 : d.GetSortedFacets(),
+                          onUpdateFilter: S,
+                        },
+                        e
+                      )
+                    ),
+                    c.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.reset) ||
+                          w.FacetedBrowseReset,
                       },
-                    },
-                    (0, B.Xx)("#FacetedBrowse_ReturnToTop")
+                      c.createElement(
+                        "a",
+                        {
+                          onClick: (e) => {
+                            e.preventDefault(),
+                              (0, s.z)(() => {
+                                d.Reset(), m();
+                              });
+                          },
+                        },
+                        (0, B.Xx)("#FacetedBrowse_Reset")
+                      )
+                    ),
+                    null === (r = null == d ? void 0 : d.GetSortedFacets()) ||
+                      void 0 === r
+                      ? void 0
+                      : r.map((t, r) =>
+                          c.createElement(z, {
+                            key:
+                              "facet_" +
+                              B.LZ.GetWithFallback(t.facet.facet.name, i) +
+                              "_" +
+                              r,
+                            facet: t,
+                            facetFilterState: d,
+                            nFacetIndex: r,
+                            language: i,
+                            nMaxFacetValues: e.nMaxFacetValues,
+                            highlightedFacetColor: e.highlightedFacetColor,
+                            linkColor: e.linkColor,
+                            headingColor: e.headingColor,
+                            fnOnUpdateFilter: S,
+                            styleOverrides: l,
+                            bSearching: (null == p ? void 0 : p.length) > 0,
+                          })
+                        ),
+                    c.createElement(
+                      "div",
+                      {
+                        className:
+                          (null == l ? void 0 : l.reset) ||
+                          w.FacetedBrowseReset,
+                      },
+                      c.createElement(
+                        "a",
+                        {
+                          onClick: (e) => {
+                            e.preventDefault();
+                            const t =
+                              v.current.getBoundingClientRect().top +
+                              window.scrollY;
+                            window.scrollTo(0, t);
+                          },
+                        },
+                        (0, B.Xx)("#FacetedBrowse_ReturnToTop")
+                      )
+                    )
                   )
-                )
-              );
+              : null
+          );
         }),
         T = (0, o.Pi)((e) => {
           const { facets: t } = e,
@@ -40049,12 +40125,13 @@
           );
         };
       class le extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.m_refHoverSourceDiv = l.createRef()),
             (this.m_refHoverContentDiv = l.createRef()),
             (this.m_bPopupShowPending = !1),
-            (this.m_bHoversEnabled = !0);
+            (this.m_bHoversEnabled = !0),
+            (this.m_bHoversEnabled = !e.bIgnoreMouseEvents);
         }
         ClosePopup() {
           this.m_fnHidePopup &&
