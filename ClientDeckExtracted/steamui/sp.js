@@ -1669,9 +1669,10 @@
       A.exports = {
         "duration-app-launch": "800ms",
         HeaderHeightVisible: "40px",
-        GamepadPopupHTML: "gamepadui_GamepadPopupHTML_2qoER",
-        GamepaduiPopupWindowBody: "gamepadui_GamepaduiPopupWindowBody_PQL-c",
-        GamepaduiPopupWindow: "gamepadui_GamepaduiPopupWindow_3_IJG",
+        SteamUIPopupHTML: "gamepadui_SteamUIPopupHTML_Rp8QO",
+        SteamUIPopupWindowBody: "gamepadui_SteamUIPopupWindowBody_QsvsR",
+        GamepadUIPopupWindowBody: "gamepadui_GamepadUIPopupWindowBody_l25Af",
+        SteamUIPopupWindow: "gamepadui_SteamUIPopupWindow_1mfQu",
         BasicUiRoot: "gamepadui_BasicUiRoot_gbo6E",
         StandaloneConfigurator: "gamepadui_StandaloneConfigurator_1oZO8",
         StandaloneKeyboard: "gamepadui_StandaloneKeyboard_1uyWM",
@@ -25671,7 +25672,7 @@
           s = null == a ? void 0 : a.find((A) => A.timezoneID == o),
           g = s ? (0, ns.Ni)(s) : "",
           d = e.nSteamVersion > 0 ? e.nSteamVersion.toString() : "local",
-          C = parseInt(1670988383),
+          C = parseInt(1670998880),
           E = C && (0, kc._o)(C, n, g),
           I = e.nCPUHz / 1e3 / 1e3 / 1e3 + " GHz",
           B = (0, Gc.l)(1024 * e.nSystemRAMSizeMB * 1024),
@@ -52392,30 +52393,33 @@
         );
       }
       const cw = w.eL.Resizable | w.eL.BackgroundTransparent;
-      function sw(A, e, t, n) {
+      function sw(A, e, t, n, o) {
         return (0, y.B)(
           A,
           Object.assign(
             {
-              html_class: T().GamepadPopupHTML,
-              body_class: T().GamepaduiPopupWindowBody,
-              popup_class: T().GamepaduiPopupWindow,
+              html_class: T().SteamUIPopupHTML,
+              body_class: (0, _.Z)(
+                T().SteamUIPopupWindowBody,
+                t && T().GamepadUIPopupWindowBody
+              ),
+              popup_class: T().SteamUIPopupWindow,
               eCreationFlags: cw,
             },
-            t
+            n
           ),
-          Object.assign(Object.assign({}, n), {
+          Object.assign(Object.assign({}, o), {
             onCreate: (A) => {
               D.hq.NavigationManager &&
                 (D.hq.NavigationManager.RegisterInputSource(new S.f(A)),
                 D.hq.NavigationManager.RegisterInputSource(new G.Q(A)),
                 D.hq.NavigationManager.RegisterInputSource(new N.V(A))),
                 e.SetBrowserWindow(A),
-                (null == n ? void 0 : n.onCreate) && n.onCreate(A);
+                (null == o ? void 0 : o.onCreate) && o.onCreate(A);
             },
             onClose: (A, t) => {
               e.BrowserWindow == A && e.SetBrowserWindow(void 0),
-                (null == n ? void 0 : n.onClose) && n.onClose(A, t);
+                (null == o ? void 0 : o.onClose) && o.onClose(A, t);
             },
           })
         );
@@ -52491,6 +52495,7 @@
         const { popup: f, element: y } = sw(
           "SP",
           t,
+          !0,
           {
             title: "SP",
             dimensions: p,
@@ -52566,6 +52571,7 @@
         const { popup: l, element: c } = sw(
             "SteamLibraryWindow",
             t,
+            !1,
             {
               title: "SteamLibraryWindow",
               dimensions: { width: 1280, height: 800, left: 0, top: 0 },
@@ -52649,6 +52655,7 @@
         const { popup: o, element: a } = sw(
             "DesktopLoginWindow",
             t,
+            !1,
             {
               title: "DesktopLoginWindow",
               dimensions: { width: 705, height: 440, left: 0, top: 0 },
@@ -52728,7 +52735,7 @@
       function Iw(A) {
         const { cm: e, instance: t } = A,
           { initialX: n, initialY: o } = t.params,
-          { popup: a, element: i } = sw("SP Keyboard", t, {
+          { popup: a, element: i } = sw("SP Keyboard", t, !0, {
             title: "SP Keyboard",
             dimensions: { width: 1280, height: 200, left: n, top: o },
             replace_existing_popup: !1,
@@ -52766,6 +52773,7 @@
         const { popup: c, element: s } = sw(
             "SP Controller Configurator",
             t,
+            !0,
             {
               title: "SP Controller Configurator: " + n,
               dimensions: a,
@@ -52838,6 +52846,7 @@
           { popup: c, element: s } = sw(
             "overlay",
             t,
+            !0,
             {
               title:
                 "SP Overlay: " +

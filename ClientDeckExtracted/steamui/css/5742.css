@@ -81,24 +81,25 @@
 .BasicUI ::-webkit-scrollbar {
   display: none;
 }
-html.gamepadui_GamepadPopupHTML_2qoER {
+html.gamepadui_SteamUIPopupHTML_Rp8QO {
   width: 100%;
   height: 100%;
 }
 body {
   font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
 }
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c {
+body.gamepadui_SteamUIPopupWindowBody_QsvsR {
   width: 100%;
   height: 100%;
   margin: 0;
   overflow: hidden;
 }
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c ::-webkit-scrollbar {
+body.gamepadui_SteamUIPopupWindowBody_QsvsR.gamepadui_GamepadUIPopupWindowBody_l25Af
+  ::-webkit-scrollbar {
   display: none;
 }
-body.gamepadui_GamepaduiPopupWindowBody_PQL-c
-  .gamepadui_GamepaduiPopupWindow_3_IJG {
+body.gamepadui_SteamUIPopupWindowBody_QsvsR
+  .gamepadui_SteamUIPopupWindow_1mfQu {
   width: 100%;
   height: 100%;
 }

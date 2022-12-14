@@ -1548,9 +1548,9 @@
             !{
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
-              BUILD_TIME_LOCAL: "Dec 13 2022 : 19:26:23",
-              BUILD_TIME_UTC: "Dec 14 2022 : 03:26:23",
-              BUILD_RTIME_UTC: 1670988383,
+              BUILD_TIME_LOCAL: "Dec 13 2022 : 22:21:20",
+              BUILD_TIME_UTC: "Dec 14 2022 : 06:21:20",
+              BUILD_RTIME_UTC: 1670998880,
             }.MOBILE_BUILD)
           ) {
             window.addEventListener("beforeunload", (e) => {
