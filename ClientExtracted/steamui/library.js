@@ -1,5 +1,5 @@
 /* Third-party software licenses can be found at licenses.txt */
-var CLSTAMP = "7718222";
+var CLSTAMP = "7722307";
 (() => {
   var e,
     t,
@@ -705,7 +705,8 @@ var CLSTAMP = "7718222";
               (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
               (e[(e.VR = 4)] = "VR"),
               (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
-              (e[(e.MainDesktopUI = 6)] = "MainDesktopUI");
+              (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
+              (e[(e.DesktopLogin = 7)] = "DesktopLogin");
           })(_ || (_ = {}));
         class h {}
         class b {}
@@ -738,7 +739,8 @@ var CLSTAMP = "7718222";
               (this.update_network_bytes_per_second = 0),
               (this.update_peak_network_bytes_per_second = 0),
               (this.update_disc_bytes_per_second = 0),
-              (this.throttling_suspended = !1);
+              (this.throttling_suspended = !1),
+              (this.lan_peer_hostname = "");
           }
         }
         !(function (e) {
@@ -1025,6 +1027,14 @@ var CLSTAMP = "7718222";
           }
           GetEResult() {
             return this.Hdr().eresult();
+          }
+          BSuccess() {
+            return 1 == this.Hdr().eresult();
+          }
+          GetErrorMessage() {
+            return this.Hdr().error_message()
+              ? this.Hdr().error_message()
+              : `eresult ${this.Hdr().eresult()}`;
           }
           Serialize() {
             let e = this.m_header.serializeBinary(),
@@ -1486,617 +1496,144 @@ var CLSTAMP = "7718222";
           }
         }
       },
-      40792: (e, t, r) => {
+      22969: (e, t, r) => {
         "use strict";
-        r.d(t, { zn: () => L });
+        r.d(t, { Q: () => y });
         var n = r(70655),
           i = r(43161),
-          s = r(79742),
-          a = r(33019),
-          o = r(78869),
-          c = r(10708),
-          l = r(79571),
-          u = r(84242),
-          d = r(71993),
-          m = r(91655),
-          _ = r(22188),
-          h = r(65030),
-          b = (r(96794), r(27255)),
-          g = r(20444);
-        const f = a.Message;
-        class p extends f {
+          s = r(33019),
+          a = (r(78869), r(10708)),
+          o = r(79571),
+          c = r(71993),
+          l = r(48329),
+          u = (r(96794), r(22188)),
+          d = (r(65030), r(27255));
+        r(20444);
+        s.Message;
+        const m = s.Message;
+        class _ extends m {
           constructor(e = null) {
             super(),
-              p.prototype.send_reply || b.aR(p.M()),
-              f.initialize(this, e, 0, -1, void 0, null);
+              _.prototype.server_types_available || d.aR(_.M()),
+              m.initialize(this, e, 0, -1, [1], null);
           }
           static M() {
             return (
-              p.sm_m ||
-                (p.sm_m = {
-                  proto: p,
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
                   fields: {
-                    send_reply: { n: 1, br: b.FE.readBool, bw: b.Xc.writeBool },
-                  },
-                }),
-              p.sm_m
-            );
-          }
-          static MBF() {
-            return p.sm_mbf || (p.sm_mbf = b.Bh(p.M())), p.sm_mbf;
-          }
-          toObject(e = !1) {
-            return p.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(p.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(p.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new p();
-            return p.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(p.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(p.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              p.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientHeartBeat";
-          }
-        }
-        class y extends f {
-          constructor(e = null) {
-            super(),
-              y.prototype.client_request_timestamp || b.aR(y.M()),
-              f.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              y.sm_m ||
-                (y.sm_m = {
-                  proto: y,
-                  fields: {
-                    client_request_timestamp: {
-                      n: 1,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                  },
-                }),
-              y.sm_m
-            );
-          }
-          static MBF() {
-            return y.sm_mbf || (y.sm_mbf = b.Bh(y.M())), y.sm_mbf;
-          }
-          toObject(e = !1) {
-            return y.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(y.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(y.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new y();
-            return y.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(y.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(y.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              y.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientServerTimestampRequest";
-          }
-        }
-        class E extends f {
-          constructor(e = null) {
-            super(),
-              E.prototype.client_request_timestamp || b.aR(E.M()),
-              f.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              E.sm_m ||
-                (E.sm_m = {
-                  proto: E,
-                  fields: {
-                    client_request_timestamp: {
-                      n: 1,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                    server_timestamp_ms: {
-                      n: 2,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                  },
-                }),
-              E.sm_m
-            );
-          }
-          static MBF() {
-            return E.sm_mbf || (E.sm_mbf = b.Bh(E.M())), E.sm_mbf;
-          }
-          toObject(e = !1) {
-            return E.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(E.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(E.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new E();
-            return E.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(E.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(E.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              E.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientServerTimestampResponse";
-          }
-        }
-        class w extends f {
-          constructor(e = null) {
-            super(),
-              w.prototype.eresult || b.aR(w.M()),
-              f.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              w.sm_m ||
-                (w.sm_m = {
-                  proto: w,
-                  fields: {
-                    eresult: {
-                      n: 1,
-                      d: 2,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    legacy_out_of_game_heartbeat_seconds: {
-                      n: 2,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    heartbeat_seconds: {
-                      n: 3,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    deprecated_public_ip: {
-                      n: 4,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    rtime32_server_time: {
-                      n: 5,
-                      br: b.FE.readFixed32,
-                      bw: b.Xc.writeFixed32,
-                    },
-                    account_flags: {
-                      n: 6,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    cell_id: {
-                      n: 7,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    email_domain: {
-                      n: 8,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    steam2_ticket: {
-                      n: 9,
-                      br: b.FE.readBytes,
-                      bw: b.Xc.writeBytes,
-                    },
-                    eresult_extended: {
-                      n: 10,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    webapi_authenticate_user_nonce: {
-                      n: 11,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    cell_id_ping_threshold: {
-                      n: 12,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    deprecated_use_pics: {
-                      n: 13,
-                      br: b.FE.readBool,
-                      bw: b.Xc.writeBool,
-                    },
-                    vanity_url: {
-                      n: 14,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    public_ip: { n: 15, c: g.j7 },
-                    client_supplied_steamid: {
-                      n: 20,
-                      br: b.FE.readFixed64String,
-                      bw: b.Xc.writeFixed64String,
-                    },
-                    ip_country_code: {
-                      n: 21,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    parental_settings: {
-                      n: 22,
-                      br: b.FE.readBytes,
-                      bw: b.Xc.writeBytes,
-                    },
-                    parental_setting_signature: {
-                      n: 23,
-                      br: b.FE.readBytes,
-                      bw: b.Xc.writeBytes,
-                    },
-                    count_loginfailures_to_migrate: {
-                      n: 24,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    count_disconnects_to_migrate: {
-                      n: 25,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    ogs_data_report_time_window: {
-                      n: 26,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    client_instance_id: {
-                      n: 27,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                    force_client_update_check: {
-                      n: 28,
-                      br: b.FE.readBool,
-                      bw: b.Xc.writeBool,
-                    },
-                    agreement_session_url: {
-                      n: 29,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    token_id: {
-                      n: 30,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                  },
-                }),
-              w.sm_m
-            );
-          }
-          static MBF() {
-            return w.sm_mbf || (w.sm_mbf = b.Bh(w.M())), w.sm_mbf;
-          }
-          toObject(e = !1) {
-            return w.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(w.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(w.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new w();
-            return w.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(w.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(w.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              w.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientLogonResponse";
-          }
-        }
-        class S extends f {
-          constructor(e = null) {
-            super(),
-              S.prototype.persona_name || b.aR(S.M()),
-              f.initialize(this, e, 0, -1, void 0, null);
-          }
-          static M() {
-            return (
-              S.sm_m ||
-                (S.sm_m = {
-                  proto: S,
-                  fields: {
-                    persona_name: {
-                      n: 1,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    ip_country: {
-                      n: 2,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    count_authed_computers: {
-                      n: 5,
-                      br: b.FE.readInt32,
-                      bw: b.Xc.writeInt32,
-                    },
-                    account_flags: {
-                      n: 7,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    facebook_id: {
-                      n: 8,
-                      br: b.FE.readUint64String,
-                      bw: b.Xc.writeUint64String,
-                    },
-                    facebook_name: {
-                      n: 9,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    steamguard_machine_name_user_chosen: {
-                      n: 15,
-                      br: b.FE.readString,
-                      bw: b.Xc.writeString,
-                    },
-                    is_phone_verified: {
-                      n: 16,
-                      br: b.FE.readBool,
-                      bw: b.Xc.writeBool,
-                    },
-                    two_factor_state: {
-                      n: 17,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
-                    },
-                    is_phone_identifying: {
-                      n: 18,
-                      br: b.FE.readBool,
-                      bw: b.Xc.writeBool,
-                    },
-                    is_phone_needing_reverify: {
-                      n: 19,
-                      br: b.FE.readBool,
-                      bw: b.Xc.writeBool,
-                    },
-                  },
-                }),
-              S.sm_m
-            );
-          }
-          static MBF() {
-            return S.sm_mbf || (S.sm_mbf = b.Bh(S.M())), S.sm_mbf;
-          }
-          toObject(e = !1) {
-            return S.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return b.TA(S.M(), e, t);
-          }
-          static fromObject(e) {
-            return b.aD(S.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new S();
-            return S.deserializeBinaryFromReader(r, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return b.F(S.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new a.BinaryWriter();
-            return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            b.l2(S.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new a.BinaryWriter();
-            return (
-              S.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientAccountInfo";
-          }
-        }
-        a.Message;
-        const k = a.Message;
-        class C extends k {
-          constructor(e = null) {
-            super(),
-              C.prototype.server_types_available || b.aR(C.M()),
-              k.initialize(this, e, 0, -1, [1], null);
-          }
-          static M() {
-            return (
-              C.sm_m ||
-                (C.sm_m = {
-                  proto: C,
-                  fields: {
-                    server_types_available: { n: 1, c: B, r: !0, q: !0 },
+                    server_types_available: { n: 1, c: h, r: !0, q: !0 },
                     server_type_for_auth_services: {
                       n: 2,
-                      br: b.FE.readUint32,
-                      bw: b.Xc.writeUint32,
+                      br: d.FE.readUint32,
+                      bw: d.Xc.writeUint32,
                     },
                   },
                 }),
-              C.sm_m
+              _.sm_m
             );
           }
           static MBF() {
-            return C.sm_mbf || (C.sm_mbf = b.Bh(C.M())), C.sm_mbf;
+            return _.sm_mbf || (_.sm_mbf = d.Bh(_.M())), _.sm_mbf;
           }
           toObject(e = !1) {
-            return C.toObject(e, this);
+            return _.toObject(e, this);
           }
           static toObject(e, t) {
-            return b.TA(C.M(), e, t);
+            return d.TA(_.M(), e, t);
           }
           static fromObject(e) {
-            return b.aD(C.M(), e);
+            return d.aD(_.M(), e);
           }
           static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new C();
-            return C.deserializeBinaryFromReader(r, t);
+            let t = new s.BinaryReader(e),
+              r = new _();
+            return _.deserializeBinaryFromReader(r, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return b.F(C.MBF(), e, t);
+            return d.F(_.MBF(), e, t);
           }
           serializeBinary() {
-            var e = new a.BinaryWriter();
-            return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            var e = new s.BinaryWriter();
+            return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            b.l2(C.M(), e, t);
+            d.l2(_.M(), e, t);
           }
           serializeBase64String() {
-            var e = new a.BinaryWriter();
+            var e = new s.BinaryWriter();
             return (
-              C.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              _.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
             return "CMsgClientServersAvailable";
           }
         }
-        class B extends k {
+        class h extends m {
           constructor(e = null) {
             super(),
-              B.prototype.server || b.aR(B.M()),
-              k.initialize(this, e, 0, -1, void 0, null);
+              h.prototype.server || d.aR(h.M()),
+              m.initialize(this, e, 0, -1, void 0, null);
           }
           static M() {
             return (
-              B.sm_m ||
-                (B.sm_m = {
-                  proto: B,
+              h.sm_m ||
+                (h.sm_m = {
+                  proto: h,
                   fields: {
-                    server: { n: 1, br: b.FE.readUint32, bw: b.Xc.writeUint32 },
-                    changed: { n: 2, br: b.FE.readBool, bw: b.Xc.writeBool },
+                    server: { n: 1, br: d.FE.readUint32, bw: d.Xc.writeUint32 },
+                    changed: { n: 2, br: d.FE.readBool, bw: d.Xc.writeBool },
                   },
                 }),
-              B.sm_m
+              h.sm_m
             );
           }
           static MBF() {
-            return B.sm_mbf || (B.sm_mbf = b.Bh(B.M())), B.sm_mbf;
+            return h.sm_mbf || (h.sm_mbf = d.Bh(h.M())), h.sm_mbf;
           }
           toObject(e = !1) {
-            return B.toObject(e, this);
+            return h.toObject(e, this);
           }
           static toObject(e, t) {
-            return b.TA(B.M(), e, t);
+            return d.TA(h.M(), e, t);
           }
           static fromObject(e) {
-            return b.aD(B.M(), e);
+            return d.aD(h.M(), e);
           }
           static deserializeBinary(e) {
-            let t = new a.BinaryReader(e),
-              r = new B();
-            return B.deserializeBinaryFromReader(r, t);
+            let t = new s.BinaryReader(e),
+              r = new h();
+            return h.deserializeBinaryFromReader(r, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return b.F(B.MBF(), e, t);
+            return d.F(h.MBF(), e, t);
           }
           serializeBinary() {
-            var e = new a.BinaryWriter();
-            return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            var e = new s.BinaryWriter();
+            return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            b.l2(B.M(), e, t);
+            d.l2(h.M(), e, t);
           }
           serializeBase64String() {
-            var e = new a.BinaryWriter();
+            var e = new s.BinaryWriter();
             return (
-              B.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              h.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
             return "CMsgClientServersAvailable_Server_Types_Available";
           }
         }
-        var M = r(93725),
-          T = r(18572);
+        var b = r(93725),
+          g = r(18572);
         r(46231);
-        class v {
+        class f {
           constructor(e = !1) {
             (this.m_bRunOnce = !1),
-              (this.m_ClientConnectionCallbacks = new M.pB()),
+              (this.m_ClientConnectionCallbacks = new b.pB()),
               (this.m_mapServerTypeCallbacks = new Map()),
               (this.m_bRunOnce = e);
           }
@@ -2118,13 +1655,13 @@ var CLSTAMP = "7718222";
             return (
               void 0 !== t &&
                 (this.m_mapServerTypeCallbacks.has(t) ||
-                  this.m_mapServerTypeCallbacks.set(t, new M.pB()),
+                  this.m_mapServerTypeCallbacks.set(t, new b.pB()),
                 (r = this.m_mapServerTypeCallbacks.get(t))),
               r.Register(e)
             );
           }
         }
-        function R(e, t) {
+        function p(e, t) {
           return () => {
             try {
               e();
@@ -2133,9 +1670,9 @@ var CLSTAMP = "7718222";
             }
           };
         }
-        class F {
+        class y {
           constructor() {
-            (this.m_steamid = new l.K()),
+            (this.m_steamid = new o.K()),
               (this.m_bLoggedOn = !1),
               (this.m_bCompletedInitialConnect = !1),
               (this.m_unAccountFlags = 0),
@@ -2144,15 +1681,15 @@ var CLSTAMP = "7718222";
               (this.m_bConnected = !1),
               (this.m_bConnectionFailed = !1),
               (this.m_setConnectedServers = new Set()),
-              (this.m_callbacksOnConnectOneTime = new v(!0)),
-              (this.m_callbacksOnConnect = new v()),
-              (this.m_callbacksOnDisconnect = new v()),
+              (this.m_callbacksOnConnectOneTime = new f(!0)),
+              (this.m_callbacksOnConnect = new f()),
+              (this.m_callbacksOnDisconnect = new f()),
               (this.m_bForceDisconnect = !1),
               (this.m_bPerformedInitialClockAdjustment = !1),
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              (this.ClientServersAvailableHandler = (0, i.OW)(5501, C, (e) => {
+              (this.ClientServersAvailableHandler = (0, i.OW)(5501, _, (e) => {
                 let t = new Set(this.m_setConnectedServers);
                 for (let r of e.Body().server_types_available()) {
                   let e = r.server();
@@ -2227,7 +1764,7 @@ var CLSTAMP = "7718222";
             return SteamClient.User.Connect();
           }
           RunWhenLoggedOn(e, t) {
-            let r = R(e, "RunWhenLoggedOn");
+            let r = p(e, "RunWhenLoggedOn");
             this.BConnectedToServer(t)
               ? r()
               : this.m_callbacksOnConnectOneTime.AddCallback(r, t);
@@ -2236,7 +1773,7 @@ var CLSTAMP = "7718222";
             return new Promise((e) => this.RunWhenLoggedOn(e));
           }
           AddOnLogonCallback(e, t) {
-            let r = R(e, "AddOnLogonCallback");
+            let r = p(e, "AddOnLogonCallback");
             return (
               this.BConnectedToServer(t) && r(),
               this.m_callbacksOnConnect.AddCallback(r, t)
@@ -2252,7 +1789,7 @@ var CLSTAMP = "7718222";
                 }
               };
             })(e, "AddOnDisconnectCallback");
-            this.m_callbacksOnDisconnect.AddCallback(r, t);
+            return this.m_callbacksOnDisconnect.AddCallback(r, t);
           }
           ForceDisconnect() {
             (this.m_bForceDisconnect = !0), this.Disconnect();
@@ -2268,7 +1805,7 @@ var CLSTAMP = "7718222";
             return !0;
           }
           ResolveAwaitWithTransportError(e, t, r, n) {
-            let i = c.gA.Init(t);
+            let i = a.gA.Init(t);
             i.Hdr().set_eresult(2),
               i.Hdr().set_transport_error(r),
               n && i.Hdr().set_error_message(n),
@@ -2287,14 +1824,14 @@ var CLSTAMP = "7718222";
               } else
                 console.error(
                   "CMInterface RECV could not parse message of type " +
-                    (0, d.SR)(e.GetEMsg()) +
+                    (0, c.SR)(e.GetEMsg()) +
                     " " +
                     e.GetEMsg()
                 );
             } catch (t) {
               console.error(
                 `CMInterface RECV exception thrown while processing message of type ${(0,
-                d.SR)(e.GetEMsg())}`,
+                c.SR)(e.GetEMsg())}`,
                 t
               ),
                 e.DEBUG_LogToConsole();
@@ -2339,14 +1876,14 @@ var CLSTAMP = "7718222";
           }
           InternalAdjustClock() {
             return (0, n.mG)(this, void 0, void 0, function* () {
-              let e = c.gA.Init(y, 9802);
+              let e = a.gA.Init(l.mr, 9802);
               return (
                 e
                   .Body()
                   .set_client_request_timestamp(
                     Math.floor(performance.now()).toString()
                   ),
-                this.SendMsgAndAwaitResponse(e, E).then((e) => {
+                this.SendMsgAndAwaitResponse(e, l.a1).then((e) => {
                   let t = performance.now(),
                     r = new Date(),
                     n = parseInt(e.Body().client_request_timestamp()),
@@ -2357,7 +1894,7 @@ var CLSTAMP = "7718222";
                       ? ((this.m_bPerformedInitialClockAdjustment = !0),
                         (this.m_nPerfClockServerMSOffset = i - t),
                         (this.m_nWallClockDriftMS = r.getTime() - i))
-                      : (0, T.X)(
+                      : (0, g.X)(
                           !1,
                           `Error computing server time, server echo: ${n} server time ${i}`
                         ),
@@ -2382,22 +1919,37 @@ var CLSTAMP = "7718222";
             return new Date(1e3 * e + this.m_nWallClockDriftMS);
           }
         }
-        (0, n.gn)([_.LO], F.prototype, "m_steamid", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_bLoggedOn", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_bCompletedInitialConnect", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_unAccountFlags", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_strIPCountry", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_strPersonaName", void 0),
-          (0, n.gn)([_.LO], F.prototype, "m_bConnected", void 0),
+        (0, n.gn)([u.LO], y.prototype, "m_steamid", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_bLoggedOn", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_bCompletedInitialConnect", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_unAccountFlags", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_strIPCountry", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_strPersonaName", void 0),
+          (0, n.gn)([u.LO], y.prototype, "m_bConnected", void 0),
           (0, n.gn)(
-            [_.LO],
-            F.prototype,
+            [u.LO],
+            y.prototype,
             "m_bPerformedInitialClockAdjustment",
             void 0
           ),
-          (0, n.gn)([_.aD], F.prototype, "DispatchMessage", null),
-          (0, n.gn)([_.aD], F.prototype, "OnDisconnect", null);
-        class L extends F {
+          (0, n.gn)([u.aD], y.prototype, "DispatchMessage", null),
+          (0, n.gn)([u.aD], y.prototype, "OnDisconnect", null);
+      },
+      67862: (e, t, r) => {
+        "use strict";
+        r.d(t, { zn: () => h });
+        var n = r(70655),
+          i = r(43161),
+          s = r(79742),
+          a = (r(33019), r(78869)),
+          o = r(10708),
+          c = r(79571),
+          l = r(84242),
+          u = (r(71993), r(91655)),
+          d = r(22188),
+          m = r(65030),
+          _ = (r(96794), r(22969));
+        class h extends _.Q {
           constructor() {
             super(...arguments),
               (this.m_setEMsgHandlers = new Set()),
@@ -2416,8 +1968,8 @@ var CLSTAMP = "7718222";
                       n
                     )
                       .then((e) => {
-                        let n = new u.At(e),
-                          i = c.gA.InitFromPacket(t, n);
+                        let n = new l.At(e),
+                          i = o.gA.InitFromPacket(t, n);
                         this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
                           i.BIsValid()
                             ? r(i)
@@ -2436,8 +1988,8 @@ var CLSTAMP = "7718222";
                       n
                     )
                       .then((e) => {
-                        let n = new u.At(s.b$(e)),
-                          i = c.gA.InitFromPacket(t, n);
+                        let n = new l.At(s.b$(e)),
+                          i = o.gA.InitFromPacket(t, n);
                         this.DEBUG_LogCMInterfaceActivity(i, "receive", !0),
                           i.BIsValid()
                             ? r(i)
@@ -2465,24 +2017,24 @@ var CLSTAMP = "7718222";
             );
           }
           OnMsgRecvd(e) {
-            let t = new u.At(e),
-              r = c.lq.InitHeaderFromPacket(t);
+            let t = new l.At(e),
+              r = o.lq.InitHeaderFromPacket(t);
             this.DispatchMessage(r);
           }
           OnLogonInfoChanged(e) {
             this.DEBUG_LogMessage("Login info from client: ", e),
               (this.m_bLoggedOn = e.bLoggedOn),
-              (o.De.EUNIVERSE = e.eUniverse),
-              (o.De.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
+              (a.De.EUNIVERSE = e.eUniverse),
+              (a.De.MEDIA_CDN_COMMUNITY_URL = e.strCommunityImagesURL),
               e.strSteamid
-                ? ((this.m_steamid = new l.K(e.strSteamid)),
+                ? ((this.m_steamid = new c.K(e.strSteamid)),
                   (this.m_strPersonaName = e.strPersonaName),
-                  (o.L7.logged_in = e.bLoggedOn),
-                  (o.L7.steamid = e.strSteamid),
-                  (o.L7.accountid = this.m_steamid.GetAccountID()),
-                  (o.L7.account_name = e.strAccountName))
+                  (a.L7.logged_in = e.bLoggedOn),
+                  (a.L7.steamid = e.strSteamid),
+                  (a.L7.accountid = this.m_steamid.GetAccountID()),
+                  (a.L7.account_name = e.strAccountName))
                 : 0 != this.m_steamid.GetAccountID() &&
-                  (this.m_steamid = new l.K()),
+                  (this.m_steamid = new c.K()),
               this.m_bLoggedOn
                 ? (this.m_bConnected || this.OnConnect(), this.OnLoggedOn())
                 : this.OnDisconnect();
@@ -2512,7 +2064,7 @@ var CLSTAMP = "7718222";
               this.m_setServiceMethodHandlers.clear(),
               this.m_hEMsgRegistrationObserver &&
                 this.m_hEMsgRegistrationObserver(),
-              (this.m_hEMsgRegistrationObserver = (0, _.EH)(() => {
+              (this.m_hEMsgRegistrationObserver = (0, d.EH)(() => {
                 if (this.m_hSharedConnection) {
                   for (let e of i.pu.emsg_list)
                     this.m_setEMsgHandlers.has(e) ||
@@ -2556,7 +2108,7 @@ var CLSTAMP = "7718222";
           Disconnect() {
             if (this.m_hSharedConnection) {
               if (this.m_bShouldChangePersonaStatusOnDisconnect) {
-                let e = c.gA.Init(m.bx, 716);
+                let e = o.gA.Init(u.bx, 716);
                 e.Body().set_persona_state(0),
                   e.Body().set_persona_set_by_user(!1),
                   this.Send(e);
@@ -2580,11 +2132,14 @@ var CLSTAMP = "7718222";
             this.m_bShouldChangePersonaStatusOnDisconnect = e;
           }
         }
-        (0, n.gn)([_.aD], L.prototype, "OnLogonInfoChanged", null);
-        var O = r(99591),
-          D = r(9669),
-          I = r.n(D);
-        class U {
+        (0, n.gn)([d.aD], h.prototype, "OnLogonInfoChanged", null);
+        var b = r(99591),
+          g = r(20444),
+          f = r(48329),
+          p = r(9669),
+          y = r.n(p),
+          E = r(18572);
+        class w {
           constructor() {
             this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
           }
@@ -2635,17 +2190,17 @@ var CLSTAMP = "7718222";
           }
           FixDevHost(e) {
             if (
-              4 == o.De.EUNIVERSE &&
-              "dev" == o.De.WEB_UNIVERSE &&
+              4 == a.De.EUNIVERSE &&
+              "dev" == a.De.WEB_UNIVERSE &&
               e.match(/^127\.0\.0\.1/)
             ) {
-              let t = o.De.WEBAPI_BASE_URL.match(/https?:\/\/([^\/:]*)/);
+              let t = a.De.WEBAPI_BASE_URL.match(/https?:\/\/([^\/:]*)/);
               if (t && t[1]) return e.replace(/^127\.0\.0\.1/, t[1]);
             }
             return e;
           }
           GetLocalStorageKey() {
-            return "CCMList_" + o.De.EUNIVERSE;
+            return "CCMList_" + a.De.EUNIVERSE;
           }
           WriteCMListToLocalStorage() {
             this.m_Storage.StoreObject(
@@ -2656,7 +2211,7 @@ var CLSTAMP = "7718222";
           GetCMListFromWebAPI() {
             return (0, n.mG)(this, void 0, void 0, function* () {
               try {
-                const r = yield ((e = A),
+                const r = yield ((e = S),
                   (t = 1e4),
                   () =>
                     new Promise((r, n) => {
@@ -2695,43 +2250,43 @@ var CLSTAMP = "7718222";
               t = [];
             const r = {};
             for (const n of this.m_CMList.rgCMList) {
-              const i = P(n),
+              const i = k(n),
                 s = !i || n.rtLastCheck < e;
               s && t.length < 20 && t.push(n),
-                (s && !o.De.IN_MOBILE) || (i && i < 1e4 && (r[n.strHost] = n));
+                (s && !a.De.IN_MOBILE) || (i && i < 1e4 && (r[n.strHost] = n));
             }
             t.length;
             let n = !1;
             return new Promise((e, i) => {
               let s,
-                a,
+                o,
                 c = "immediate",
                 l = (t) => {
                   if (
-                    ((0, T.X)(!n, "fnPingingComplete called a second time"), !n)
+                    ((0, E.X)(!n, "fnPingingComplete called a second time"), !n)
                   ) {
                     const r = Object.keys(t)
                       .map((e) => t[e])
-                      .sort((e, t) => P(e) - P(t));
+                      .sort((e, t) => k(e) - k(t));
                     if (
                       (r.length,
                       r.length && r[0].strHost,
                       (n = !0),
                       this.WriteCMListToLocalStorage(),
                       s && window.clearTimeout(s),
-                      a && window.clearTimeout(a),
+                      o && window.clearTimeout(o),
                       r.length)
                     )
                       return e(r);
-                    const o = this.GetCMWithFewestDisconnects();
-                    if (o) return e([o]);
+                    const a = this.GetCMWithFewestDisconnects();
+                    if (a) return e([a]);
                     i("No CMs available");
                   }
                 };
               (0 === t.length ||
                 Object.keys(r).some((e) => this.BCMOkToUse(r[e], c)) ||
-                (o.De.IN_MOBILE && Object.keys(r).length)) &&
-                (Object.keys(r).length && o.De.IN_MOBILE, l(r)),
+                (a.De.IN_MOBILE && Object.keys(r).length)) &&
+                (Object.keys(r).length && a.De.IN_MOBILE, l(r)),
                 n ||
                   ((s = window.setTimeout(() => {
                     (c = "timeout"),
@@ -2739,7 +2294,7 @@ var CLSTAMP = "7718222";
                         Object.keys(r).some((e) => this.BCMOkToUse(r[e], c)) &&
                         l(r);
                   }, 400)),
-                  (a = window.setTimeout(() => {
+                  (o = window.setTimeout(() => {
                     (c = "seriouslytimeout"), l(r);
                   }, 12e3)));
               let u,
@@ -2802,12 +2357,12 @@ var CLSTAMP = "7718222";
             return (0, n.mG)(this, void 0, void 0, function* () {
               let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
                 r = performance.now();
-              const n = I().CancelToken.source();
+              const n = y().CancelToken.source();
               let i = window.setTimeout(() => {
                 e.strHost, n.cancel();
               }, 1e3);
               try {
-                let s = yield I().head(t, { cancelToken: n.token });
+                let s = yield y().head(t, { cancelToken: n.token });
                 e.strHost, window.clearTimeout(i);
                 let a = performance.now() - r,
                   o = s.headers["x-steam-cmload"]
@@ -2815,7 +2370,7 @@ var CLSTAMP = "7718222";
                     : void 0;
                 e.strHost, (e.msPing = a), (e.nCMLoad = o);
               } catch (t) {
-                I().isCancel(t) ? e.strHost : window.clearTimeout(i),
+                y().isCancel(t) ? e.strHost : window.clearTimeout(i),
                   (e.msPing = 1e4),
                   (e.nCMLoad = 0);
               }
@@ -2823,293 +2378,283 @@ var CLSTAMP = "7718222";
             });
           }
         }
-        function A() {
+        function S() {
           return (0, n.mG)(this, void 0, void 0, function* () {
             const e =
-                o.De.WEBAPI_BASE_URL +
+                a.De.WEBAPI_BASE_URL +
                 "ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets",
-              t = (yield I().get(e)).data,
+              t = (yield y().get(e)).data,
               r = (t && t.response && t.response.serverlist) || [];
             return (
               r.length, r.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
             );
           });
         }
-        function P(e) {
+        function k(e) {
           return (e.msPing || 0) + (e.nCMLoad || 0);
         }
-        (0, n.gn)(
-          [_.aD],
-          class extends F {
-            constructor(e) {
-              super(),
-                (this.m_Session = {
-                  m_bWaitingForLogonResponse: !1,
-                  m_nSessionID: 0,
-                  m_eResultLogonSuccess: 2,
-                  m_nSessionIDLast: 0,
-                  m_nClientInstanceID: "0",
-                }),
-                (this.m_bLoadingCMList = !1),
-                (this.m_iCallSeq = 1),
-                (this.m_mapWaitingCallbacks = new Map()),
-                (this.m_CMList = new U()),
-                (this.LogOnResponseHandler = (0, i.OW)(751, w, (e) => {
-                  let t = e.Body().eresult();
-                  (this.m_Session.m_bWaitingForLogonResponse = !1),
-                    (this.m_Session.m_eResultLogonSuccess = t),
-                    1 == t
-                      ? ((this.m_steamid = new l.K(
-                          e.Body().client_supplied_steamid()
-                        )),
-                        (this.m_bLoggedOn = !0),
-                        (this.m_Session.m_nSessionID = e
-                          .Hdr()
-                          .client_sessionid()),
-                        (this.m_Session.m_nSessionIDLast =
-                          this.m_Session.m_nSessionID),
-                        (this.m_Session.m_nClientInstanceID = e
-                          .Body()
-                          .client_instance_id()),
-                        this.OnLoggedOn())
-                      : (console.warn(
-                          "Received error code from LogOnResponse, disconnecting. EResult=",
-                          e.Body().eresult()
-                        ),
-                        48 == t &&
-                          this.m_CMList.RecordCMDisconnected(
-                            this.m_SocketCMHost
-                          ),
-                        this.Disconnect());
-                })),
-                (this.ClientAccountInfoHandler = (0, i.OW)(768, S, (e) => {
-                  (this.m_unAccountFlags = e.Body().account_flags() || 0),
-                    (this.m_strIPCountry = e.Body().ip_country() || ""),
-                    (this.m_strPersonaName = e.Body().persona_name() || "");
-                })),
-                this.m_CMList.Init(e);
-            }
-            BIsConnected() {
-              return (
-                this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN
-              );
-            }
-            Connect() {
-              return (
-                this.m_onConnect ||
-                  (console.log("Loading CM List"),
-                  (this.m_bConnected = !1),
-                  (this.m_bLoggedOn = !1),
-                  (this.m_bForceDisconnect = !1),
-                  (this.m_Session.m_bWaitingForLogonResponse = !0),
-                  (this.m_bLoadingCMList = !0),
-                  (this.m_onConnect = this.m_CMList
-                    .GetBestCMsToConnectTo()
-                    .then(
-                      (e) => (
-                        (this.m_bLoadingCMList = !1),
-                        new Promise((t, r) => {
-                          let n = 0,
-                            i = !1;
-                          e.slice(0, 3).forEach((e, s, a) =>
-                            this.AttemptHostConnect(e).then(
-                              (r) => {
-                                i
-                                  ? r.close(4e3)
-                                  : ((i = !0),
-                                    (this.m_Socket = r),
-                                    (this.m_SocketCMHost = e),
-                                    (this.m_bConnected = !0),
-                                    this.OnConnect(),
-                                    t());
-                              },
-                              () => {
-                                console.log(
-                                  `Failed to connect to CM ${s + 1} of ${
-                                    a.length
-                                  }: ${e.strHost}`
-                                ),
-                                  n++,
-                                  n === a.length &&
-                                    (console.log(
-                                      `Failed to connect to all ${a.length} best CMs`
-                                    ),
-                                    r());
-                              }
-                            )
-                          );
-                        })
-                      )
-                    )
-                    .catch((e) => {
-                      throw (
-                        ((this.m_bLoadingCMList = !1), this.OnDisconnect(), e)
-                      );
-                    }))),
-                this.m_onConnect
-              );
-            }
-            AttemptHostConnect(e) {
-              console.log(`Attempting to connect to host ${e.strHost}`);
-              let t = new WebSocket(
-                this.m_CMList.BuildCMWebSocketURL(e.strHost)
-              );
-              return (
-                (t.binaryType = "arraybuffer"),
-                (t.onmessage = (e) => {
-                  let t = new u.At(e.data),
-                    r = c.lq.InitHeaderFromPacket(t);
-                  1 == r.GetEMsg()
-                    ? this.DecodeAndDispatchMultiMsg(c.gA.InitFromMsg(g.ne, r))
-                    : this.DispatchMessage(r);
-                }),
-                new Promise((r, n) => {
-                  let i = !1;
-                  const s = window.setTimeout(() => {
-                    console.warn(
-                      `Socket connection timed out after 3000ms: ${e.strHost}`
-                    ),
-                      (i = !0),
-                      t.close(4e3),
-                      this.m_CMList.RecordCMDisconnected(e),
-                      n();
-                  }, 3e3);
-                  (t.onopen = () => {
-                    console.log(`Connected socket to host ${e.strHost}`),
-                      (0, T.X)(
-                        !i,
-                        "Socket connection was opened after timing out."
+        class C extends _.Q {
+          constructor(e) {
+            super(),
+              (this.m_Session = {
+                m_bWaitingForLogonResponse: !1,
+                m_nSessionID: 0,
+                m_eResultLogonSuccess: 2,
+                m_nSessionIDLast: 0,
+                m_nClientInstanceID: "0",
+              }),
+              (this.m_bLoadingCMList = !1),
+              (this.m_iCallSeq = 1),
+              (this.m_mapWaitingCallbacks = new Map()),
+              (this.m_CMList = new w()),
+              (this.LogOnResponseHandler = (0, i.OW)(751, f.Cm, (e) => {
+                let t = e.Body().eresult();
+                (this.m_Session.m_bWaitingForLogonResponse = !1),
+                  (this.m_Session.m_eResultLogonSuccess = t),
+                  1 == t
+                    ? ((this.m_steamid = new c.K(
+                        e.Body().client_supplied_steamid()
+                      )),
+                      (this.m_bLoggedOn = !0),
+                      (this.m_Session.m_nSessionID = e
+                        .Hdr()
+                        .client_sessionid()),
+                      (this.m_Session.m_nSessionIDLast =
+                        this.m_Session.m_nSessionID),
+                      (this.m_Session.m_nClientInstanceID = e
+                        .Body()
+                        .client_instance_id()),
+                      this.OnLoggedOn())
+                    : (console.warn(
+                        "Received error code from LogOnResponse, disconnecting. EResult=",
+                        e.Body().eresult()
                       ),
-                      i || window.clearTimeout(s),
-                      r(t);
-                  }),
-                    (t.onerror = (t) => {
-                      i ||
-                        (window.clearTimeout(s),
-                        (0, T.X)(!1, "Socket connect failed", t),
-                        console.log(t),
-                        t.message
-                          ? console.log(t.message)
-                          : console.log("No message"),
-                        this.m_CMList.RecordCMDisconnected(e),
-                        n());
-                    });
-                })
-              );
-            }
-            get session() {
-              return this.m_Session;
-            }
-            ClearHeartbeatInterval() {
-              this.m_iIntervalHeartbeat &&
-                (window.clearInterval(this.m_iIntervalHeartbeat),
-                (this.m_iIntervalHeartbeat = void 0));
-            }
-            ResetHeartbeatInterval() {
-              this.ClearHeartbeatInterval(),
-                (this.m_iIntervalHeartbeat = window.setInterval(
-                  () => this.SendHeartbeat(),
-                  27e3
-                ));
-            }
-            SendHeartbeat() {
-              let e = c.gA.Init(p, 703);
-              this.Send(e);
-            }
-            OnConnect() {
-              super.OnConnect(),
-                this.m_Socket &&
-                  ((this.m_Socket.onerror = (e) => {}),
-                  this.ResetHeartbeatInterval(),
-                  (this.m_Socket.onclose = (e) => {
-                    this.OnDisconnect();
-                  }));
-            }
-            Disconnect() {
-              this.m_Socket && this.m_Socket.close();
-            }
-            OnDisconnect() {
-              (this.m_Socket = void 0),
-                (this.m_SocketCMHost = void 0),
-                (this.m_onConnect = void 0),
-                this.ClearHeartbeatInterval(),
-                super.OnDisconnect();
-            }
-            SendMsgAndAwaitResponse(e, t) {
-              return new Promise((r, n) => {
-                let i = this.m_iCallSeq++;
-                e.Hdr().set_jobid_source("" + i),
-                  this.Send(e)
-                    ? this.m_mapWaitingCallbacks.set(i, {
-                        iSeq: i,
-                        msgClass: t,
-                        fnCallback: r,
+                      48 == t &&
+                        this.m_CMList.RecordCMDisconnected(this.m_SocketCMHost),
+                      this.Disconnect());
+              })),
+              (this.ClientAccountInfoHandler = (0, i.OW)(768, f.Rt, (e) => {
+                (this.m_unAccountFlags = e.Body().account_flags() || 0),
+                  (this.m_strIPCountry = e.Body().ip_country() || ""),
+                  (this.m_strPersonaName = e.Body().persona_name() || "");
+              })),
+              this.m_CMList.Init(e);
+          }
+          BIsConnected() {
+            return this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN;
+          }
+          Connect() {
+            return (
+              this.m_onConnect ||
+                (console.log("Loading CM List"),
+                (this.m_bConnected = !1),
+                (this.m_bLoggedOn = !1),
+                (this.m_bForceDisconnect = !1),
+                (this.m_Session.m_bWaitingForLogonResponse = !0),
+                (this.m_bLoadingCMList = !0),
+                (this.m_onConnect = this.m_CMList
+                  .GetBestCMsToConnectTo()
+                  .then(
+                    (e) => (
+                      (this.m_bLoadingCMList = !1),
+                      new Promise((t, r) => {
+                        let n = 0,
+                          i = !1;
+                        e.slice(0, 3).forEach((e, s, a) =>
+                          this.AttemptHostConnect(e).then(
+                            (r) => {
+                              i
+                                ? r.close(4e3)
+                                : ((i = !0),
+                                  (this.m_Socket = r),
+                                  (this.m_SocketCMHost = e),
+                                  (this.m_bConnected = !0),
+                                  this.OnConnect(),
+                                  t());
+                            },
+                            () => {
+                              console.log(
+                                `Failed to connect to CM ${s + 1} of ${
+                                  a.length
+                                }: ${e.strHost}`
+                              ),
+                                n++,
+                                n === a.length &&
+                                  (console.log(
+                                    `Failed to connect to all ${a.length} best CMs`
+                                  ),
+                                  r());
+                            }
+                          )
+                        );
                       })
-                    : this.ResolveAwaitWithTransportError(
-                        r,
-                        t,
-                        2,
-                        "Web socket not connected"
-                      );
-              });
-            }
-            SendInternal(e) {
-              return (
-                !!this.m_Socket &&
-                (this.m_steamid.BIsValid() &&
-                  e.Hdr().set_steamid(this.m_steamid.ConvertTo64BitString()),
-                this.m_Session.m_nSessionID &&
-                  e.Hdr().set_client_sessionid(this.m_Session.m_nSessionID),
-                this.m_Socket.send(e.Serialize()),
-                703 != e.GetEMsg() && this.ResetHeartbeatInterval(),
-                !0)
-              );
-            }
-            BInternalShouldDispatchMessage(e) {
-              if (
-                e.BIsValid() &&
-                e.Hdr().jobid_target() &&
-                e.Hdr().jobid_target() !== h.Z3
-              ) {
-                let t = parseInt(e.Hdr().jobid_target());
-                if (this.m_mapWaitingCallbacks.has(t)) {
-                  let r = this.m_mapWaitingCallbacks.get(t);
-                  if (r) {
-                    let n = c.gA.InitFromMsg(r.msgClass, e);
-                    this.DEBUG_LogCMInterfaceActivity(n, "receive", !0),
-                      n.BIsValid()
-                        ? r.fnCallback(n)
-                        : this.ResolveAwaitWithTransportError(
-                            r.fnCallback,
-                            r.msgClass,
-                            102,
-                            "Failed to parse response from server"
-                          ),
-                      this.m_mapWaitingCallbacks.delete(t);
-                  }
-                  return !1;
+                    )
+                  )
+                  .catch((e) => {
+                    throw (
+                      ((this.m_bLoadingCMList = !1), this.OnDisconnect(), e)
+                    );
+                  }))),
+              this.m_onConnect
+            );
+          }
+          AttemptHostConnect(e) {
+            console.log(`Attempting to connect to host ${e.strHost}`);
+            let t = new WebSocket(this.m_CMList.BuildCMWebSocketURL(e.strHost));
+            return (
+              (t.binaryType = "arraybuffer"),
+              (t.onmessage = (e) => {
+                let t = new l.At(e.data),
+                  r = o.lq.InitHeaderFromPacket(t);
+                1 == r.GetEMsg()
+                  ? this.DecodeAndDispatchMultiMsg(o.gA.InitFromMsg(g.ne, r))
+                  : this.DispatchMessage(r);
+              }),
+              new Promise((r, n) => {
+                let i = !1;
+                const s = window.setTimeout(() => {
+                  console.warn(
+                    `Socket connection timed out after 3000ms: ${e.strHost}`
+                  ),
+                    (i = !0),
+                    t.close(4e3),
+                    this.m_CMList.RecordCMDisconnected(e),
+                    n();
+                }, 3e3);
+                (t.onopen = () => {
+                  console.log(`Connected socket to host ${e.strHost}`),
+                    (0, E.X)(
+                      !i,
+                      "Socket connection was opened after timing out."
+                    ),
+                    i || window.clearTimeout(s),
+                    r(t);
+                }),
+                  (t.onerror = (t) => {
+                    i ||
+                      (window.clearTimeout(s),
+                      (0, E.X)(!1, "Socket connect failed", t),
+                      console.log(t),
+                      t.message
+                        ? console.log(t.message)
+                        : console.log("No message"),
+                      this.m_CMList.RecordCMDisconnected(e),
+                      n());
+                  });
+              })
+            );
+          }
+          get session() {
+            return this.m_Session;
+          }
+          ClearHeartbeatInterval() {
+            this.m_iIntervalHeartbeat &&
+              (window.clearInterval(this.m_iIntervalHeartbeat),
+              (this.m_iIntervalHeartbeat = void 0));
+          }
+          ResetHeartbeatInterval() {
+            this.ClearHeartbeatInterval(),
+              (this.m_iIntervalHeartbeat = window.setInterval(
+                () => this.SendHeartbeat(),
+                27e3
+              ));
+          }
+          SendHeartbeat() {
+            let e = o.gA.Init(f.cp, 703);
+            this.Send(e);
+          }
+          OnConnect() {
+            super.OnConnect(),
+              this.m_Socket &&
+                ((this.m_Socket.onerror = (e) => {}),
+                this.ResetHeartbeatInterval(),
+                (this.m_Socket.onclose = (e) => {
+                  this.OnDisconnect();
+                }));
+          }
+          Disconnect() {
+            this.m_Socket && this.m_Socket.close();
+          }
+          OnDisconnect() {
+            (this.m_Socket = void 0),
+              (this.m_SocketCMHost = void 0),
+              (this.m_onConnect = void 0),
+              this.ClearHeartbeatInterval(),
+              super.OnDisconnect();
+          }
+          SendMsgAndAwaitResponse(e, t) {
+            return new Promise((r, n) => {
+              let i = this.m_iCallSeq++;
+              e.Hdr().set_jobid_source("" + i),
+                this.Send(e)
+                  ? this.m_mapWaitingCallbacks.set(i, {
+                      iSeq: i,
+                      msgClass: t,
+                      fnCallback: r,
+                    })
+                  : this.ResolveAwaitWithTransportError(
+                      r,
+                      t,
+                      2,
+                      "Web socket not connected"
+                    );
+            });
+          }
+          SendInternal(e) {
+            return (
+              !!this.m_Socket &&
+              (this.m_steamid.BIsValid() &&
+                e.Hdr().set_steamid(this.m_steamid.ConvertTo64BitString()),
+              this.m_Session.m_nSessionID &&
+                e.Hdr().set_client_sessionid(this.m_Session.m_nSessionID),
+              this.m_Socket.send(e.Serialize()),
+              703 != e.GetEMsg() && this.ResetHeartbeatInterval(),
+              !0)
+            );
+          }
+          BInternalShouldDispatchMessage(e) {
+            if (
+              e.BIsValid() &&
+              e.Hdr().jobid_target() &&
+              e.Hdr().jobid_target() !== m.Z3
+            ) {
+              let t = parseInt(e.Hdr().jobid_target());
+              if (this.m_mapWaitingCallbacks.has(t)) {
+                let r = this.m_mapWaitingCallbacks.get(t);
+                if (r) {
+                  let n = o.gA.InitFromMsg(r.msgClass, e);
+                  this.DEBUG_LogCMInterfaceActivity(n, "receive", !0),
+                    n.BIsValid()
+                      ? r.fnCallback(n)
+                      : this.ResolveAwaitWithTransportError(
+                          r.fnCallback,
+                          r.msgClass,
+                          102,
+                          "Failed to parse response from server"
+                        ),
+                    this.m_mapWaitingCallbacks.delete(t);
                 }
-                this.DEBUG_LogCMInterfaceActivity(e, "receive", !1);
+                return !1;
               }
-              return !0;
+              this.DEBUG_LogCMInterfaceActivity(e, "receive", !1);
             }
-            DecodeAndDispatchMultiMsg(e) {
-              let t = e.Body().message_body();
-              if (!t) return;
-              e.Body().size_unzipped() && (t = O.inflate(t));
-              let r = new u.At(t);
-              for (; r.GetCountBytesRemaining() > 0; ) {
-                let e = r.GetUint32(),
-                  t = c.lq.InitHeaderFromPacket(
-                    new u.At(r.GetPacket(), r.TellGet(), e)
-                  );
-                this.DispatchMessage(t), r.SeekGetCurrent(e);
-              }
+            return !0;
+          }
+          DecodeAndDispatchMultiMsg(e) {
+            let t = e.Body().message_body();
+            if (!t) return;
+            e.Body().size_unzipped() && (t = b.inflate(t));
+            let r = new l.At(t);
+            for (; r.GetCountBytesRemaining() > 0; ) {
+              let e = r.GetUint32(),
+                t = o.lq.InitHeaderFromPacket(
+                  new l.At(r.GetPacket(), r.TellGet(), e)
+                );
+              this.DispatchMessage(t), r.SeekGetCurrent(e);
             }
-          }.prototype,
-          "DecodeAndDispatchMultiMsg",
-          null
-        );
+          }
+        }
+        (0, n.gn)([d.aD], C.prototype, "DecodeAndDispatchMultiMsg", null);
       },
       43161: (e, t, r) => {
         "use strict";
@@ -3736,6 +3281,16 @@ var CLSTAMP = "7718222";
                       n: 14,
                       br: i.FE.readUint32,
                       bw: i.Xc.writeUint32,
+                    },
+                    has_adult_content_sex: {
+                      n: 15,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                    has_adult_content_violence: {
+                      n: 16,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
                     },
                   },
                 }),
@@ -4943,6 +4498,488 @@ var CLSTAMP = "7718222";
           }
         }
       },
+      48329: (e, t, r) => {
+        "use strict";
+        r.d(t, {
+          Cm: () => u,
+          Rt: () => d,
+          a1: () => l,
+          cp: () => o,
+          mr: () => c,
+        });
+        var n = r(33019),
+          i = r(27255),
+          s = r(20444);
+        const a = n.Message;
+        class o extends a {
+          constructor(e = null) {
+            super(),
+              o.prototype.send_reply || i.aR(o.M()),
+              a.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              o.sm_m ||
+                (o.sm_m = {
+                  proto: o,
+                  fields: {
+                    send_reply: { n: 1, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  },
+                }),
+              o.sm_m
+            );
+          }
+          static MBF() {
+            return o.sm_mbf || (o.sm_mbf = i.Bh(o.M())), o.sm_mbf;
+          }
+          toObject(e = !1) {
+            return o.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(o.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(o.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new o();
+            return o.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(o.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(o.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              o.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientHeartBeat";
+          }
+        }
+        class c extends a {
+          constructor(e = null) {
+            super(),
+              c.prototype.client_request_timestamp || i.aR(c.M()),
+              a.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              c.sm_m ||
+                (c.sm_m = {
+                  proto: c,
+                  fields: {
+                    client_request_timestamp: {
+                      n: 1,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                  },
+                }),
+              c.sm_m
+            );
+          }
+          static MBF() {
+            return c.sm_mbf || (c.sm_mbf = i.Bh(c.M())), c.sm_mbf;
+          }
+          toObject(e = !1) {
+            return c.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(c.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(c.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new c();
+            return c.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(c.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(c.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              c.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientServerTimestampRequest";
+          }
+        }
+        class l extends a {
+          constructor(e = null) {
+            super(),
+              l.prototype.client_request_timestamp || i.aR(l.M()),
+              a.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              l.sm_m ||
+                (l.sm_m = {
+                  proto: l,
+                  fields: {
+                    client_request_timestamp: {
+                      n: 1,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                    server_timestamp_ms: {
+                      n: 2,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                  },
+                }),
+              l.sm_m
+            );
+          }
+          static MBF() {
+            return l.sm_mbf || (l.sm_mbf = i.Bh(l.M())), l.sm_mbf;
+          }
+          toObject(e = !1) {
+            return l.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(l.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(l.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new l();
+            return l.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(l.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(l.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              l.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientServerTimestampResponse";
+          }
+        }
+        class u extends a {
+          constructor(e = null) {
+            super(),
+              u.prototype.eresult || i.aR(u.M()),
+              a.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              u.sm_m ||
+                (u.sm_m = {
+                  proto: u,
+                  fields: {
+                    eresult: {
+                      n: 1,
+                      d: 2,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    legacy_out_of_game_heartbeat_seconds: {
+                      n: 2,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    heartbeat_seconds: {
+                      n: 3,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    deprecated_public_ip: {
+                      n: 4,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    rtime32_server_time: {
+                      n: 5,
+                      br: i.FE.readFixed32,
+                      bw: i.Xc.writeFixed32,
+                    },
+                    account_flags: {
+                      n: 6,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    cell_id: {
+                      n: 7,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    email_domain: {
+                      n: 8,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    steam2_ticket: {
+                      n: 9,
+                      br: i.FE.readBytes,
+                      bw: i.Xc.writeBytes,
+                    },
+                    eresult_extended: {
+                      n: 10,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    webapi_authenticate_user_nonce: {
+                      n: 11,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    cell_id_ping_threshold: {
+                      n: 12,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    deprecated_use_pics: {
+                      n: 13,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                    vanity_url: {
+                      n: 14,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    public_ip: { n: 15, c: s.j7 },
+                    client_supplied_steamid: {
+                      n: 20,
+                      br: i.FE.readFixed64String,
+                      bw: i.Xc.writeFixed64String,
+                    },
+                    ip_country_code: {
+                      n: 21,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    parental_settings: {
+                      n: 22,
+                      br: i.FE.readBytes,
+                      bw: i.Xc.writeBytes,
+                    },
+                    parental_setting_signature: {
+                      n: 23,
+                      br: i.FE.readBytes,
+                      bw: i.Xc.writeBytes,
+                    },
+                    count_loginfailures_to_migrate: {
+                      n: 24,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    count_disconnects_to_migrate: {
+                      n: 25,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    ogs_data_report_time_window: {
+                      n: 26,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    client_instance_id: {
+                      n: 27,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                    force_client_update_check: {
+                      n: 28,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                    agreement_session_url: {
+                      n: 29,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    token_id: {
+                      n: 30,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                  },
+                }),
+              u.sm_m
+            );
+          }
+          static MBF() {
+            return u.sm_mbf || (u.sm_mbf = i.Bh(u.M())), u.sm_mbf;
+          }
+          toObject(e = !1) {
+            return u.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(u.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(u.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new u();
+            return u.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(u.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(u.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              u.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientLogonResponse";
+          }
+        }
+        class d extends a {
+          constructor(e = null) {
+            super(),
+              d.prototype.persona_name || i.aR(d.M()),
+              a.initialize(this, e, 0, -1, void 0, null);
+          }
+          static M() {
+            return (
+              d.sm_m ||
+                (d.sm_m = {
+                  proto: d,
+                  fields: {
+                    persona_name: {
+                      n: 1,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    ip_country: {
+                      n: 2,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    count_authed_computers: {
+                      n: 5,
+                      br: i.FE.readInt32,
+                      bw: i.Xc.writeInt32,
+                    },
+                    account_flags: {
+                      n: 7,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    facebook_id: {
+                      n: 8,
+                      br: i.FE.readUint64String,
+                      bw: i.Xc.writeUint64String,
+                    },
+                    facebook_name: {
+                      n: 9,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    steamguard_machine_name_user_chosen: {
+                      n: 15,
+                      br: i.FE.readString,
+                      bw: i.Xc.writeString,
+                    },
+                    is_phone_verified: {
+                      n: 16,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                    two_factor_state: {
+                      n: 17,
+                      br: i.FE.readUint32,
+                      bw: i.Xc.writeUint32,
+                    },
+                    is_phone_identifying: {
+                      n: 18,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                    is_phone_needing_reverify: {
+                      n: 19,
+                      br: i.FE.readBool,
+                      bw: i.Xc.writeBool,
+                    },
+                  },
+                }),
+              d.sm_m
+            );
+          }
+          static MBF() {
+            return d.sm_mbf || (d.sm_mbf = i.Bh(d.M())), d.sm_mbf;
+          }
+          toObject(e = !1) {
+            return d.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return i.TA(d.M(), e, t);
+          }
+          static fromObject(e) {
+            return i.aD(d.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new n.BinaryReader(e),
+              r = new d();
+            return d.deserializeBinaryFromReader(r, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return i.F(d.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new n.BinaryWriter();
+            return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            i.l2(d.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new n.BinaryWriter();
+            return (
+              d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientAccountInfo";
+          }
+        }
+      },
       73402: (e, t, r) => {
         "use strict";
         r.d(t, { jt: () => i, wM: () => s });
@@ -5955,16 +5992,17 @@ var CLSTAMP = "7718222";
         "use strict";
         r.d(t, {
           $1: () => c,
-          Kb: () => T,
-          LO: () => M,
-          Mh: () => k,
-          Np: () => B,
+          Kb: () => v,
+          LO: () => T,
+          Mh: () => C,
+          Np: () => M,
           Sc: () => d,
           U$: () => n,
-          XG: () => S,
-          ek: () => g,
-          jA: () => v,
-          jr: () => b,
+          XG: () => k,
+          _o: () => b,
+          ek: () => f,
+          jA: () => R,
+          jr: () => g,
           m9: () => h,
           vX: () => l,
           yW: () => o,
@@ -6138,7 +6176,16 @@ var CLSTAMP = "7718222";
             m)
           );
         }
-        function b(e, t) {
+        function b(e, t, r) {
+          return (
+            k(new Date(1e3 * e), !1, !1) +
+            " " +
+            d(e, { bForce24HourClock: t }) +
+            " " +
+            r
+          );
+        }
+        function g(e, t) {
           const r = new Date(1e3 * e),
             n = new Date(),
             o = Object.assign(
@@ -6158,7 +6205,7 @@ var CLSTAMP = "7718222";
             if (!o.bGranularFutureTime)
               return (
                 i.zO(r.getTime() - n.getTime()),
-                r.getFullYear() == n.getFullYear() ? C(r) : M(r)
+                r.getFullYear() == n.getFullYear() ? B(r) : T(r)
               );
             i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
             let e = new Date();
@@ -6171,7 +6218,7 @@ var CLSTAMP = "7718222";
                   r < e
                     ? (0, s.Xx)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
-                      r < e ? k(r) : S(r, !0, o.bAbbreviateDayOfWeek)))
+                      r < e ? C(r) : k(r, !0, o.bAbbreviateDayOfWeek)))
             );
           }
           i.zO(new Date().setHours(24, 0, 0, 0) - n.getTime());
@@ -6195,7 +6242,7 @@ var CLSTAMP = "7718222";
           l.setDate(n.getDate() - 6);
           const u = new Date(l);
           if (o.bGranularWeek && r >= u)
-            return S(r, !1, !o.bAbbreviateDayOfWeek);
+            return k(r, !1, !o.bAbbreviateDayOfWeek);
           if (o.bGranularPast)
             return (0, s.Xx)(
               "#Time_Past_At",
@@ -6214,9 +6261,9 @@ var CLSTAMP = "7718222";
               ? (0, s.Xx)("#TimeSince_1Week")
               : (0, s.Xx)("#TimeSince_XWeeks", e);
           }
-          return r.getFullYear() == n.getFullYear() ? C(r) : M(r);
+          return r.getFullYear() == n.getFullYear() ? B(r) : T(r);
         }
-        function g(e) {
+        function f(e) {
           const t = new Date(1e3 * e),
             r = new Date();
           i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -6227,80 +6274,80 @@ var CLSTAMP = "7718222";
             t >= n
               ? (0, s.Xx)("#Time_Recent")
               : t.getFullYear() == r.getFullYear()
-              ? C(t)
+              ? B(t)
               : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-              ? M(t)
-              : B(t)
+              ? T(t)
+              : M(t)
           );
         }
-        const f = new Map(),
-          p = new Map(),
+        const p = new Map(),
           y = new Map(),
           E = new Map(),
-          w = new Map();
+          w = new Map(),
+          S = new Map();
         new Map();
-        function S(e, t = !1, r = !0) {
+        function k(e, t = !1, r = !0) {
           const n = {
               weekday: r ? "long" : "short",
               day: "numeric",
               month: t ? "long" : "short",
             },
             i = e.setHours(0, 0, 0, 0) + n.weekday + n.month;
-          let a = w.get(i);
+          let a = S.get(i);
           return (
             a ||
             ((a = e.toLocaleDateString(s.Yt.GetPreferredLocales(), n)),
-            w.set(i, a),
+            S.set(i, a),
             a)
           );
         }
-        function k(e) {
-          let t = f.get(e.getDay());
+        function C(e) {
+          let t = p.get(e.getDay());
           return (
             t ||
             ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               weekday: "long",
             })),
-            f.set(e.getDay(), t),
+            p.set(e.getDay(), t),
             t)
           );
         }
-        function C(e) {
-          let t = p.get(e.getMonth());
+        function B(e) {
+          let t = y.get(e.getMonth());
           return (
             t ||
             ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               month: "long",
             })),
-            p.set(e.getMonth(), t),
+            y.set(e.getMonth(), t),
             t)
           );
         }
-        function B(e) {
-          let t = y.get(e.getFullYear());
+        function M(e) {
+          let t = E.get(e.getFullYear());
           return (
             t ||
             ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               year: "numeric",
             })),
-            y.set(e.getFullYear(), t),
+            E.set(e.getFullYear(), t),
             t)
           );
         }
-        function M(e) {
+        function T(e) {
           const t = e.getMonth() + 12 * e.getFullYear();
-          let r = E.get(t);
+          let r = w.get(t);
           return (
             r ||
             ((r = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
               month: "long",
               year: "numeric",
             })),
-            E.set(t, r),
+            w.set(t, r),
             r)
           );
         }
-        function T(e) {
+        function v(e) {
           switch (e.getUTCMonth()) {
             case 0:
             case 1:
@@ -6318,7 +6365,7 @@ var CLSTAMP = "7718222";
               return (0, s.Xx)("#Time_QuarterOfYear_Q4", e.getUTCFullYear());
           }
         }
-        function v(e) {
+        function R(e) {
           const t = Math.floor(e / a._H.PerYear),
             r = Math.floor(e / a._H.PerMonth),
             n = Math.floor((e % a._H.PerMonth) / a._H.PerDay),
@@ -6375,6 +6422,7 @@ var CLSTAMP = "7718222";
       31535: (e, t, r) => {
         "use strict";
         r.d(t, {
+          KM: () => n.KM,
           Gt: () => d,
           it: () => u,
           dn: () => i.dn,
@@ -6391,6 +6439,7 @@ var CLSTAMP = "7718222";
           JI: () => n.JI,
           Yz: () => n.Yz,
           Sd: () => n.Sd,
+          X9: () => n.X9,
           BE: () => i.BE,
           $T: () => _,
           zP: () => n.zP,
@@ -6513,24 +6562,26 @@ var CLSTAMP = "7718222";
       92245: (e, t, r) => {
         "use strict";
         r.d(t, {
-          B: () => w,
+          B: () => S,
           B8: () => s,
           J7: () => c,
-          JI: () => b,
+          JI: () => g,
+          KM: () => m,
           KS: () => a,
           L8: () => i,
           NW: () => u,
-          OR: () => h,
-          Qg: () => g,
+          OR: () => b,
+          Qg: () => f,
           Sd: () => d,
-          U4: () => p,
+          U4: () => y,
+          X9: () => k,
           Yz: () => o,
-          e1: () => f,
-          fB: () => _,
+          e1: () => p,
+          fB: () => h,
           fJ: () => l,
-          ok: () => m,
-          rA: () => y,
-          zP: () => E,
+          ok: () => _,
+          rA: () => E,
+          zP: () => w,
         });
         var n = r(67294);
         r(93725);
@@ -6616,25 +6667,22 @@ var CLSTAMP = "7718222";
           return n.useCallback(() => e.current, []);
         }
         function m(e) {
-          const [t, r] = n.useState(1);
-          return (
-            n.useEffect(() => {
-              let t = e.current,
-                n = 1;
-              for (; null != t && "HTML" != t.tagName; ) {
-                const e = getComputedStyle(t);
-                if (e.zoom) {
-                  const t = Number.parseFloat(e.zoom);
-                  isNaN(t) || (n *= t);
-                }
-                t = t.parentElement;
-              }
-              r(n);
-            }, [e]),
-            t
-          );
+          let t = 1;
+          for (; null != e && "HTML" != e.tagName; ) {
+            const r = getComputedStyle(e);
+            if (r.zoom) {
+              const e = Number.parseFloat(r.zoom);
+              isNaN(e) || (t *= e);
+            }
+            e = e.parentElement;
+          }
+          return t;
         }
         function _(e) {
+          const [t, r] = n.useState(1);
+          return n.useEffect(() => r(m(e.current)), [e]), t;
+        }
+        function h(e) {
           const [t] = n.useState({
               flLastExecutionTimeMs: 0,
               fnLatestCallback: null,
@@ -6659,7 +6707,7 @@ var CLSTAMP = "7718222";
             }
           );
         }
-        function h(e, t, r, i) {
+        function b(e, t, r, i) {
           n.useEffect(() => {
             const n = null == e ? void 0 : e.current;
             if (n && r)
@@ -6668,7 +6716,7 @@ var CLSTAMP = "7718222";
               );
           }, [e, t, r]);
         }
-        function b(e, t, r, i) {
+        function g(e, t, r, i) {
           n.useEffect(() => {
             if (e && r)
               return (
@@ -6676,14 +6724,14 @@ var CLSTAMP = "7718222";
               );
           }, [e, t, r]);
         }
-        function g(e, t) {
+        function f(e, t) {
           n.useLayoutEffect(() => {
             if (!t || !e) return;
             let r = e.Register(t);
             return () => r.Unregister();
           }, [e, t]);
         }
-        function f(e) {
+        function p(e) {
           const [t, r] = n.useState(null == e ? void 0 : e.Value);
           return (
             n.useEffect(() => {
@@ -6696,14 +6744,14 @@ var CLSTAMP = "7718222";
             t
           );
         }
-        function p(e, t) {
+        function y(e, t) {
           n.useEffect(() => {
             if (null == e) return () => {};
             const r = e.Subscribe(t);
             return null == r ? void 0 : r.Unsubscribe;
           }, [e, t]);
         }
-        function y(e, t, r = 1e3) {
+        function E(e, t, r = 1e3) {
           const i = n.useRef(t);
           i.current = t;
           const [s, a] = n.useState(e),
@@ -6720,7 +6768,7 @@ var CLSTAMP = "7718222";
             );
           return [o ? s : e, _];
         }
-        function E(e) {
+        function w(e) {
           const t = n.useRef(null);
           return (
             n.useEffect(() => {
@@ -6729,7 +6777,7 @@ var CLSTAMP = "7718222";
             t.current
           );
         }
-        function w(e, t) {
+        function S(e, t) {
           const [r, i] = n.useState(e),
             s = n.useRef(0);
           return (
@@ -6745,6 +6793,14 @@ var CLSTAMP = "7718222";
             ),
             r || e
           );
+        }
+        function k(e = !1) {
+          const [t, r] = n.useState(e);
+          return [
+            t,
+            n.useCallback(() => r(!0), []),
+            n.useCallback(() => r(!1), []),
+          ];
         }
       },
       77993: (e, t, r) => {
@@ -6832,7 +6888,7 @@ var CLSTAMP = "7718222";
         "use strict";
         r.d(t, {
           De: () => u,
-          E_: () => a,
+          E_: () => o,
           JA: () => m,
           Kc: () => E,
           L7: () => d,
@@ -6845,15 +6901,23 @@ var CLSTAMP = "7718222";
         });
         var n = r(38645),
           i = r(75215),
-          s = (r(65030), r(67294));
-        const a = s.createContext({}),
-          o = () => s.useContext(a);
+          s = (r(65030), r(67294)),
+          a = r(18572);
+        const o = s.createContext({});
         function c() {
-          const e = o();
+          const e = (() => {
+            let e = s.useContext(o);
+            return (
+              (0, a.X)(
+                void 0 !== e.IN_GAMEPADUI,
+                "Trying to use ConfigContext without a provider!"
+              ),
+              e
+            );
+          })();
           return null == e ? void 0 : e.IN_GAMEPADUI;
         }
         function l() {
-          o();
           return u.ON_DECK;
         }
         const u = {
@@ -6916,7 +6980,6 @@ var CLSTAMP = "7718222";
             IN_GAMEPADUI: !1,
             IN_STEAMUI_SHARED_CONTEXT: !1,
             ONE_STEAMUI_SHARED_CONTEXT: !1,
-            GAMEPADUI_WINDOWED: !1,
             DECK_DISPLAY_MODE: !1,
             ON_DECK: !1,
             IN_GAMESCOPE: !1,
@@ -6979,9 +7042,9 @@ var CLSTAMP = "7718222";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Dec 12 2022 : 17:57:12",
-                    BUILD_TIME_UTC: "Dec 13 2022 : 01:57:12",
-                    BUILD_RTIME_UTC: 1670896632,
+                    BUILD_TIME_LOCAL: "Dec 13 2022 : 19:26:23",
+                    BUILD_TIME_UTC: "Dec 14 2022 : 03:26:23",
+                    BUILD_RTIME_UTC: 1670988383,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -7071,11 +7134,11 @@ var CLSTAMP = "7718222";
         function g(e) {
           return "true" === e || ("false" !== e && (Number(e) || e));
         }
-        var f = r(40792),
+        var f = r(67862),
           p = r(14966),
           y = r(27715);
         const E = n.lazy(() =>
-            Promise.all([r.e(1517), r.e(2190), r.e(241)]).then(r.bind(r, 74414))
+            Promise.all([r.e(1517), r.e(2190), r.e(241)]).then(r.bind(r, 25522))
           ),
           w = n.lazy(() =>
             Promise.all([r.e(1517), r.e(2190), r.e(4535)]).then(
@@ -7084,7 +7147,7 @@ var CLSTAMP = "7718222";
           ),
           S = n.lazy(() =>
             Promise.all([r.e(1517), r.e(2190), r.e(241), r.e(5742)]).then(
-              r.bind(r, 96444)
+              r.bind(r, 88613)
             )
           ),
           k = document.getElementById("root");

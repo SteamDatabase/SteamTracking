@@ -6,8 +6,6 @@ __TEXT
 
 __text
 __TEXT
-0
-0
 __stubs
 __TEXT
 __stub_helper
@@ -15,18 +13,24 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
+Q3
+Q3
 __objc_methname
 __TEXT
 __objc_classname__TEXT
+R37
+R37
 __objc_methtype
 __TEXT
+q37
 0
+q37
 __cstring
 __TEXT
 __unwind_info
 __TEXT
-\T;
-\T;
+PK;
+PK;
 __DATA
 <
 <
@@ -46,8 +50,8 @@ __const
 __DATA
 __cfstring
 __DATA
-`<?
-`<?
+@<?
+@<?
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
@@ -56,14 +60,18 @@ __objc_selrefs
 __DATA
 __objc_classrefs__DATA
 __objc_superrefs__DATA
+`E?
+`E?
 __objc_ivar
 __DATA
+hE?
+hE?
 __objc_data
 __DATA
+pE?
+pE?
 __data
 __DATA
-0F?
-0F?
 __thread_vars
 __DATA
 0
@@ -82,7 +90,8 @@ __LINKEDIT
 @
 "
 @
-x2@
+p0@
+h2@
 h%
 h
 80
@@ -123,56 +132,66 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-He@
+8e@
 8:
 )
-?
+7
+7
+7
+7
+7
+7
 0
 (
 9
-w1
 0
-m1
 @
 @
+Z1
 @
 @
 @
 @
 $
+Hi
+Hi
+Hi
 ?
 ?
-Hi
-Hi
-Hi
+?
 *
 *
-*
-1
 &
 &
-=.
+46
 n&
 Y'
+2
+2
 6
-x0
+6
+~0
 
 %
 '
 '
 '
 &
-D0
 &
+:
+8
 
 0
 5
 5
+5
+]/
 
 $
 0
 %
 Ic
+%7
 0
 0
 AT=
@@ -186,10 +205,13 @@ D
 /
 /
 /
+9
 /
 /
-=4
-0
+-4
+(4
+r.
+4
 4
 4
 @
@@ -224,6 +246,9 @@ IcE
 @
 @
 .
+8
+S3
+V
 15CBaseFileSystem
 11IFileSystem
 15IBaseFileSystem
@@ -1755,9 +1780,12 @@ D
 ?
 (
 0
-@
-A
 D
+E
+@
+F
+G
+
 
 !
 "
@@ -1800,10 +1828,11 @@ X
 8
 `
 d
-p
+|
 h
+p
 x
-t
+}
 
 
 h
@@ -1894,7 +1923,6 @@ N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
 N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 25INetSSLConnectionCallback
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
-6CTHashIP20CWebSocketConnectionjE
 18CScheduledFunctionI20CWebSocketConnectionE
 9CWorkItem
 11CWorkThread
@@ -2245,6 +2273,7 @@ Documents/Steam%s Content
 -newbigpicture
 -oldbigpicture
 -nosteamuisharedjscontext
+-desktopui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
@@ -2287,7 +2316,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Dec 12 2022 18:28:06
+Startup - updater built Dec 13 2022 18:33:35
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2574,8 +2603,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Dec 12 2022
-18:28:06
+Dec 13 2022
+18:33:35
 crashhandler004
 steam
 Steam Executable Crash
@@ -2672,7 +2701,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-18:28:04
+18:33:33
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10437,7 +10466,7 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-18:26:16
+18:31:47
 Jan
 Feb
 Mar
@@ -12773,11 +12802,11 @@ Out-of-sequence continuation frame
 CWebSocketConnection not initialized, was Init called?
 0 != pWebSocketConnection->GetHConnection()
 CWebSocketConnection::InternalGetWebSocketConnection called without calling CWebSocketConnection::GlobalInit first
-*ppWebSocketConnetion
 Web socket client mode not supported
 CWebSocketConnection::BBuildAndAsyncSendFrame
 CWebSocketConnection::BInternalAsyncSendEncodedFrame
 !m_bRcvdCloseFrame
+sm_mapWebSocketConnection[iIndex] == this
 m_bufMultiFragment
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
@@ -12825,60 +12854,68 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-#>7
 
-de7
-le7
-4_7
+?\7
+G\7
 
 0
-?
+7
+7
+7
+7
+7
+7
 0
 (
 9
-w1
 0
-m1
 @
 @
+Z1
 @
 @
 @
 @
 $
+Hi
+Hi
+Hi
 ?
 ?
-Hi
-Hi
-Hi
+?
 *
 *
-*
-1
 &
 &
-=.
+46
 n&
 Y'
+2
+2
 6
-x0
+6
+~0
 
 %
 '
 '
 '
 &
-D0
 &
+:
+8
 
 0
 5
 5
+5
+]/
 
 $
 0
 %
 Ic
+%7
 0
 0
 AT=
@@ -12892,10 +12929,13 @@ D
 /
 /
 /
+9
 /
 /
-=4
-0
+-4
+(4
+r.
+4
 4
 4
 @
@@ -12930,48 +12970,39 @@ IcE
 @
 @
 .
+8
+S3
 V
-3
+-
+-
 =
+62
+.,
+#,
 =
 ,
 ,
-d+
-c+
-D+
-7+
-+
+,
+,
+,
+j1
+}1
+S3
+K+
+3+
 !
 @
-0
-0
-0
-0
-*
-"
+4
 @
 &
-/
-/
-/
-)
-)
-)
-)
-r.
-1*
-+*
-`.
 .
 .
 .
 .
-.
-(
-)
-1
-'
-'
+2
+|'
+-
+p,
 @
 M9e
 @
@@ -12988,13 +13019,10 @@ M9e
 ?
 ?
 :
-z+
 ?
 ?
 ?
 
-'
-'
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
@@ -13005,26 +13033,27 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-%*
+&
+9*
+$
 j
 j
 Pj
+*
+*
 ARj
 j
-s-
 0
 0
-J'
 IcU
 E;e
 M)u
-#
-#
-#
 =
 =
 @
 =
+~(
+Z(
 =
 %
 =
@@ -13318,7 +13347,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-.
 =
 @
 
@@ -13327,6 +13355,8 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 
 0
+(
+(
 H=
 Ic]
 j
@@ -13336,13 +13366,16 @@ j
 j
 j
 
+k!
 t$I;M
+$
+$
+$
+$
 $
 e
 W
 ,7~5d
-#[,
-#>,
 H
 0
 
@@ -13356,8 +13389,6 @@ H
 
 
 Hc
-%
-%
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13370,11 +13401,13 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+!
 0
 0
 N
 N
 N
+(
 rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
@@ -13597,6 +13630,7 @@ H=
 =*.*
 @
 @
+
 @
 @
 @
@@ -13647,33 +13681,43 @@ E
 0
 
 
+
 Hc
 0
 0
+
+
 @
 @
 @
 &
 %
 @
-P
-P
-@
-@
-@
-@
-@
-
-
-
-@
-@
-0
-=a
-
-0
-Hi
 Z
+P
+P
+@
+/
+@
+@
+@
+?
+?
+?
+@
+@
+@
+@
+0
+i
+=a
+0
+
+
+
+
+
+Hi
 $
 $
 $

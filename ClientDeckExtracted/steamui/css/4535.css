@@ -8,6 +8,9 @@ body {
   height: 100%;
   background: linear-gradient(0deg, #191a1e, #191a1e 58%, #212328 84%);
 }
+.login_WithTitle_2WCTN {
+  padding-top: 40px;
+}
 .login_TitleBar_1C4of {
   position: fixed;
   top: 0;

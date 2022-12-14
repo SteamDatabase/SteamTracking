@@ -375,3 +375,10 @@ enum ESessionPersistence {
 	k_ESessionPersistence_Ephemeral = 0;
 	k_ESessionPersistence_Persistent = 1;
 }
+
+enum ENewSteamAnnouncementState {
+	k_ENewSteamAnnouncementState_Invalid = 0;
+	k_ENewSteamAnnouncementState_AllRead = 1;
+	k_ENewSteamAnnouncementState_NewAnnouncement = 2;
+	k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3;
+}

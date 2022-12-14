@@ -933,7 +933,7 @@
     "DASHPlayerStats_AudioBufferRange": "音訊緩衝 %1$s：",
     "DASHPlayerStats_VideoNoRangeInformation": "無緩衝的視訊片段",
     "DASHPlayerStats_AudioNoRangeInformation": "無緩衝的音訊片段",
-    "DASHPlayerControls_GoLive": "開始直播",
+    "DASHPlayerControls_GoLive": "前往直播時刻",
     "DASHPlayerControls_IsLive": "直播",
     "DASHPlayerControls_ClickToPlay": "點擊開始播放",
     "DASHPlayerControls_IsReplay": "實況重播",

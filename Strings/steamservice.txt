@@ -4,7 +4,6 @@ __TEXT
 __text
 __TEXT
 @
-6d"
 @
 __stubs
 __TEXT
@@ -19,7 +18,7 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-pp
+dp
 __DATA
 *
 *
@@ -56,7 +55,7 @@ __bss
 __DATA
 __common
 __DATA
-@61
+61
 H
 __LINKEDIT
 2
@@ -64,7 +63,7 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-h:-
+`:-
 P
 
 *
@@ -91,8 +90,9 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-`5-
-,
+X5-
++g},
+Hc5Mv,
 0
 0
 '
@@ -100,27 +100,25 @@ Hi
 H=
 "
 "
--&
+Y&
 &
 Hc
 Hc
 Hc
-[!
-W!
 0
 0
 AT=
 AT5
 AT5
 AT=
-J!
 ?
 D
 @
 @
-"
+8!
 !
-9%
+A%
+&(
 @
 Hc
 Hc
@@ -152,12 +150,10 @@ IcE
 IcE
 @
 @
-]
-z$
-k$
-]$
-9$
+f
+'
 V
++$
 =
 #
 &
@@ -1358,9 +1354,12 @@ D
 ?
 (
 0
-@
-A
 D
+E
+@
+F
+G
+
 
 !
 "
@@ -1403,10 +1402,11 @@ X
 8
 `
 d
-p
+|
 h
+p
 x
-t
+}
 
 
 h
@@ -1482,7 +1482,6 @@ N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 6CTHashIP14CTCPConnectionjE
 26CSharedUDPSocketPollHelper
 6CTHashIP14CUDPConnectionjE
-6CTHashIP20CWebSocketConnectionjE
 9CWorkItem
 11CWorkThread
 15CWorkThreadPool
@@ -8298,8 +8297,8 @@ crashhandler.dylib
 CreateInterface
 %u
 1.0
-Dec 12 2022
-18:26:16
+Dec 13 2022
+18:31:47
 Jan
 Feb
 Mar
@@ -8876,7 +8875,8 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-,
++g},
+Hc5Mv,
 0
 0
 '
@@ -8884,27 +8884,25 @@ Hi
 H=
 "
 "
--&
+Y&
 &
 Hc
 Hc
 Hc
-[!
-W!
 0
 0
 AT=
 AT5
 AT5
 AT=
-J!
 ?
 D
 @
 @
-"
+8!
 !
-9%
+A%
+&(
 @
 Hc
 Hc
@@ -8936,30 +8934,25 @@ IcE
 IcE
 @
 @
-]
-z$
-k$
-]$
-9$
+f
+'
 V
++$
 =
 #
 &
 =
-`"
-%
-D"
-"
-"
+"
+k"
+%$
 "
 "
 "
 "
 !
 $
+C!
 @
-1!
-!
 @
 &
 #
@@ -9367,6 +9360,7 @@ H=
 =
 @
 =*.*
+l
 @
 @
 @
@@ -9375,8 +9369,10 @@ H=
 @
 @
 @
+9
 0
 *
+#
 0
 0
 0
@@ -9414,10 +9410,11 @@ Ic
 @
 @
 @
+?
+?
+?
 @
-
-
-
+@
 @
 @
 0

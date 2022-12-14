@@ -122,7 +122,7 @@
 
 "ServerBrowser_ConnectToServer"		"서버에 연결"
 "ServerBrowser_ViewServerInfo"		"서버 정보 보기"
-"ServerBrowser_RefreshServer"		"서버 새로 고침"
+"ServerBrowser_RefreshServer"		"서버 새로고침"
 "ServerBrowser_AddServerToFavorites"		"서버를 즐겨찾기에 추가"
 "ServerBrowser_NotResponding"		"< 응답 없음 >"
 "ServerBrowser_FiltersActive"		"필터 활성화"

@@ -193,15 +193,19 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"ゲームに利用契約していません。\n利用契約ページに進みますか?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - エラー"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"起動"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"ゲームをプレイ"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "起動用ショートカット"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"ゲームをプレイ"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"後でアップデートする"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"デモをプレイ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"ツールを起動"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"プレイ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"再生"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "続行"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "起動"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"後でアップデートする"
 "SteamUI_JoinDialog_Cancel_Btn"		"取り消し"
 "SteamUI_JoinDialog_OverrideThrottle"	"現在の帯域幅制限を変更する"
 "SteamUI_JoinDialog_SkipUpdateInfo" "アップデートをスキップして今すぐプレイする"
@@ -216,11 +220,13 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"アプリケーションの準備完了次第起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"準備ができ次第ゲームを開始"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"準備ができ次第ショートカットを起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"準備ができ次第ゲームを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"準備ができ次第デモを開始"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"準備ができ次第ツールを起動"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"準備ができたらすぐにサウンドトラックを再生"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"準備ができ次第メディアを再生"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "準備ができ次第起動"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "共有ゲームライブラリ"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "あなたの共有ライブラリは現在%borrower%が使用中です。今プレイすると、%borrower%にプレイ終了のお知らせが送信されます。"
@@ -243,6 +249,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Steamクラウドを同期中..."
 "SteamUI_JoinDialog_Connecting_Text" "Steamに接続中..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes%分"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - カスタムイメージを設定"
 "SteamUI_SetCustomImage_ChooseImage" "Steamのグリッドビューで%gamename%に表示するイメージを選択してください。"
@@ -1891,6 +1899,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Game_AllowOtherDownloads$appType=demo"	"このデモを起動中に Steam が他のアップデートをダウンロードするのを許可する"
 "Steam_Game_AllowOtherDownloads$appType=media"	"このメディアを起動中に Steam が他のアップデートをダウンロードするのを許可する"
 "Steam_Game_AllowOtherDownloads$appType=music"	"このメディアの実行中に、Steamが他のアップデートをダウンロードするのを許可する"
+"Steam_Game_AllowOtherDownloads$appType"        "このコンテンツを実行中にSteamが他のアップデートをダウンロードするのを許可する"
 "Steam_Game_AvailableSeats"					"このタイトルでは現在 %seats% 本を貸し出し可能です"
 "Steam_Game_AvailableSeatsUnlimited"		"このタイトルには貸し出し数の制限はありません"
 
@@ -2029,6 +2038,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"常にこのメディアを最新にする"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"このサウンドトラックを常に最新に保つ"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"常にこのツールを最新にする"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "常に最新の状態にする"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"このアプリケーションを起動した時しか更新しない"
 "Steam_DoNotUpdateThisGame$appType=game"			"このゲームを起動した時しか更新しない"
@@ -2036,6 +2046,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DoNotUpdateThisGame$appType=media"			"このメディアを起動した時しか更新しない"
 "Steam_DoNotUpdateThisGame$appType=music"			"このサウンドトラックを自動アップデートしない"
 "Steam_DoNotUpdateThisGame$appType=tool"			"このツールを起動した時しか更新しない"
+"Steam_DoNotUpdateThisGame$appType"                 "起動した時にのみ更新"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"最優先 - 常にこのアプリを他より先に自動でアップデートする"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"最優先 - 常にこのゲームを他より先に自動でアップデートする"
@@ -2043,6 +2054,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"最優先 - 常にこのメディアを他より先に自動でアップデートする"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"最優先 - 常にこのサウンドトラックを他より先に自動でアップデートする"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"最優先 - 常にこのツールを他より先に自動でアップデートする"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "最優先－常にこのゲームを優先的に自動アップデート"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"本アプリケーションとそのアップデートは新バージョンが、配信されしだい自動的に取得されます。"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"このゲームおよび、そのアップデートがダウンロード可能になると自動的にインストールされます"
@@ -2050,6 +2062,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "このメディアおよび、そのアップデートがダウンロード可能になると自動的にインストールされます"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "このサウンドトラックとそのアップデートは、新バージョンが配信され次第自動的に取得されます。"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"このツールおよび、そのアップデートがダウンロード可能になると自動的にインストールされます"
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "このコンテンツは利用可能になると自動的に取得されます。"
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"更新内容はこのアプリケーションの起動時しか取得されません。"
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"更新内容はゲームの起動時しか取得されません。"
@@ -2057,15 +2070,17 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"更新内容はこのメディアの起動時しか取得されません。"
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"このサウンドトラックを自動的にアップデートしない。"
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"更新内容はこのツールの起動時しか取得されません。"
+"Steam_GameProperties_NeverUpdateInfo$appType"          "更新内容はこのコンテンツの起動時しか取得されません。"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"バックグラウンドダウンロード"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"%game%をプレイ中に、 Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "%game%をプレイ中に、 Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"%game%を使用中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"%game%をプレイ中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"%game%を再生中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"%game%のプレイ中に、Steamが他のゲームやアプリケーションをダウンロードするのを許可しますか？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"%game%を使用中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "%game%をプレイ中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "%game%を再生中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "%game%のプレイ中に、Steamが他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "%game%を使用中に、Steam が他のゲームやアプリケーションをダウンロードするのを許可しますか？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "%game%を使用中に、Steamが他のゲームやアプリケーションをダウンロードするのを許可しますか？"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"グローバル設定を反映 (バックグラウンドでのダウンロードを許可)"
 "Steam_BackgroundDownloadsDefault_Deny"	"グローバル設定を反映 (バックグラウンドでのダウンロードを停止)"
@@ -2092,6 +2107,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Controller_Support_None" "なし"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"このゲームをプレイ中にバックグラウンドでダウンロード"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "このコンテンツを実行中にバックグラウンドでダウンロード"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"このゲームとそのアップデートは、配信されるとすぐに自動で入手されます。Steam はこのゲームを最優先にダウンロードします。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"このゲームとそのアップデートは、配信されるとすぐに自動で入手されます。Steam はこのゲームを最優先にダウンロードします。"
@@ -2099,6 +2115,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"このメディアとそのアップデートは、配信されるとすぐに自動で入手されます。Steam はこのメディアを最優先にダウンロードします。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"このサウンドトラックとそのアップデートは、新バージョンが配信され次第自動的に取得されます。Steamは最優先でこのメディアをダウンロードします。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"このツールとそのアップデートは、配信されるとすぐに自動で入手されます。Steam はこのツールを最優先にダウンロードします。"
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "このコンテンツとそのアップデートは、配信されるとすぐに自動で取得されます。Steamはこのツールを最優先でダウンロードします。"
 
 "Steam_Game_VerifyGameFiles$appType=application"				"アプリケーションファイルの整合性を確認する..."
 "Steam_Game_VerifyGameFiles$appType=game"				"ゲームファイルの整合性を確認..."
@@ -2106,6 +2123,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Game_VerifyGameFiles$appType=media"				"メディアファイルの整合性を確認..."
 "Steam_Game_VerifyGameFiles$appType=music"				"ファイルの整合性を確認..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"ツールファイルの整合性を確認..."
+"Steam_Game_VerifyGameFiles$appType"				    "コンテンツの整合性を確認..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"アプリケーションをアンインストール..."
 "Steam_DeleteLocalGameContent$appType=game"		"ゲームをアンインストール..."
@@ -2113,6 +2131,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_DeleteLocalGameContent$appType=media"	"メディアをアンインストール..."
 "Steam_DeleteLocalGameContent$appType=music"	"サウンドトラックをアンインストール..."
 "Steam_DeleteLocalGameContent$appType=tool"		"ツールをアンインストール..."
+"Steam_DeleteLocalGameContent$appType"          "コンテンツをアンインストール..."
 
 "Steam_BackupGameFiles$appType=application"		"アプリケーションファイルをバックアップ..."
 "Steam_BackupGameFiles$appType=game"			"ゲームファイルのバックアップ..."
@@ -2120,6 +2139,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_BackupGameFiles$appType=media"			"メディアファイルのバックアップ..."
 "Steam_BackupGameFiles$appType=music"			"サウンドトラックファイルのバックアップ..."
 "Steam_BackupGameFiles$appType=tool"			"ツールファイルのバックアップ..."
+"Steam_BackupGameFiles$appType"                 "コンテンツをバックアップ..."
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"このアプリケーション向けのすべてのファイルは今後Steamを通してダウンロードされます。"
 "Steam_Install_WillDownloadAllFiles$appType=game"	"このゲームのすべてのファイルをSteamでダウンロードします。"
@@ -2127,6 +2147,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Install_WillDownloadAllFiles$appType=media"	"このメディアのすべてのファイルをSteamでダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=music"	"このサウンドトラックのすべてのファイルをSteamでダウンロードします。"
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"このツールのすべてのファイルをSteamでダウンロードします。"
+"Steam_Install_WillDownloadAllFiles$appType"        "このコンテンツのすべてのファイルをSteamでダウンロードします。"
 
 "Steam_Install_StartCacheLoading$appType=application"		"ローカルアプリケーションファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=game"		"ローカルゲームファイルを作成中..."
@@ -2134,6 +2155,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_Install_StartCacheLoading$appType=media"		"ローカルメディアファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=music"		"ローカルファイルを作成中..."
 "Steam_Install_StartCacheLoading$appType=tool"		"ローカルツールファイルを作成中..."
+"Steam_Install_StartCacheLoading$appType"		     "ローカルコンテンツファイルを作成中..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Steam アプリケーションのリストを準備中%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Steamゲームのリストを準備中%progress%"
@@ -2141,7 +2163,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_PreparingGamesList$appType=media" 			"Steamメディアのリストを準備中%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Steamサウンドトラックのリストを準備中%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Steamツールのリストを準備中%progress%"
-"Steam_PreparingGamesList$appType=license"		"Steamライセンスのリストを準備中%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Steamライセンスのリストを準備中%progress%"
+"Steam_PreparingGamesList$appType"                  "Steamコンテンツのリストを準備中%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Steam アプリケーションのアップデートをスキャン中%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Steamゲームのアップデートをスキャン中%progress%"
@@ -2149,7 +2172,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ScanningForUpdates$appType=media"			"Steamメディアのアップデートをスキャン中%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Steamサウンドトラックアップデートをスキャン中%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Steamツールのアップデートをスキャン中%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Steamライセンスのアップデートをスキャン中%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Steamライセンスのアップデートをスキャン中%progress%"
+"Steam_ScanningForUpdates$appType"                  "Steamコンテンツのアップデートをスキャン中%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"表示する Steam アプリケーションがありません。"
 "SteamUI_NoGamesOfThisType$appType=game"	"表示する Steam ゲームがありません。"
@@ -2157,6 +2181,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_NoGamesOfThisType$appType=media"	"表示する Steam メディアがありません。"
 "SteamUI_NoGamesOfThisType$appType=music"	"表示するSteamサウンドトラックはありません。"
 "SteamUI_NoGamesOfThisType$appType=tool"	"表示する Steam ツールがありません。"
+"SteamUI_NoGamesOfThisType$appType"         "表示するSteamコンテンツがありません。"
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Steam がアプリケーションファイルを確認している間お待ちください。"
 "Steam_ValidatingSteamCaches_Label$appType=game"	"ゲームファイルを確認しています。しばらくお待ちください。"
@@ -2164,6 +2189,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_ValidatingSteamCaches_Label$appType=media"	"メディアファイルを確認しています。しばらくお待ちください。"
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Steamがサウンドトラックファイルを確認する間、しばらくお待ちください。"
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"ツールファイルを確認しています。しばらくお待ちください。"
+"Steam_ValidatingSteamCaches_Label$appType"         "コンテンツファイルを確認しています。しばらくお待ちください。"
 
 "Steam_ValidationResults_NoFailures"	"すべてのファイルの確認が完了しました。"
 "Steam_ValidationResults_OneFailure"	"1つのファイルが認証できなかったため、再取得されます。"
@@ -2335,6 +2361,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_FindContent$appType=media"			"メディアを閲覧..."
 "Steam_FindContent$appType=music"			"サウンドトラックを閲覧..."
 "Steam_FindContent$appType=tool"			"ツールを閲覧..."
+"Steam_FindContent$appType"                 "コンテンツを閲覧..."
 
 "Steam_NoGamesOfThisType$appType=application"	"該当なし！検索フィールドをクリアするか、上のドロップダウンから別のカテゴリーを選んでください。"
 "Steam_NoGamesOfThisType$appType=game"	"ヒット件数はゼロです！検索フィールドをクリアにするか、上のドロップダウンより別のカテゴリーを選択してください。"
@@ -2343,6 +2370,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_NoGamesOfThisType$appType=media"	"ヒット件数はゼロです！検索フィールドを変更するか、Steam ストア内で<a href=steam://browsemedia>閲覧可能なムービー</a>をご覧ください。"
 "Steam_NoGamesOfThisType$appType=music"	"ヒット件数はゼロです！検索条件を消去するか、上のドロップダウンから別のカテゴリーを選択してください。"
 "Steam_NoGamesOfThisType$appType=tool"	"ヒット数はゼロです！上の検索フィールドを変更してみてください。"
+"Steam_NoGamesOfThisType$appType"	    "ヒット数はゼロです！上の表示フィルターを変更してみてください。"
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2401,12 +2429,13 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_SystemRebootRequired_Info"		"最近のアップデートで変更が行われたため、このゲームを起動するには、システムを再起動する必要があります。"
 "Steam_SystemRebootRequired_Button"	"今すぐ再起動"
 
-"Steam_Game_Developer$appType=application"	"開発会社"
-"Steam_Game_Developer$appType=game"	"開発元"
-"Steam_Game_Developer$appType=demo"	"開発元"
-"Steam_Game_Developer$appType=media"	"製作"
-"Steam_Game_Developer$appType=music"	"プロデューサー"
-"Steam_Game_Developer$appType=tool"	"開発元"
+"Steam_Game_Developer$appType=application"  "開発会社"
+"Steam_Game_Developer$appType=game"         "開発元"
+"Steam_Game_Developer$appType=demo"         "開発元"
+"Steam_Game_Developer$appType=media"        "製作"
+"Steam_Game_Developer$appType=music"        "プロデューサー"
+"Steam_Game_Developer$appType=tool"         "開発元"
+"Steam_Game_Developer$appType"              "コンテンツ作成者"
 
 "Steam_Forums"				"フォーラム"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3718,6 +3747,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_details_lastpurchased$apptype=music"	"サウンドトラック購入日"
 "steam_details_lastpurchased$apptype=video"	"ムービー購入日"
 "steam_details_lastpurchased$apptype=tool"	"ツール購入日"
+"steam_details_lastpurchased$apptype"   "購入したコンテンツ"
 "steam_details_addedtoaccount"	"アカウントに追加されました"
 "steam_details_totalplaytime_minutes" "%minutes% 分"
 "steam_details_totalplaytime_hours" "%hours% 時間"
@@ -3775,6 +3805,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_welcome$apptype=shortcut"			"ショートカット情報"
 "steam_welcome$apptype=tool"			"ツール情報"
 "steam_welcome$apptype=demo"			"体験版情報"
+"steam_welcome$apptype"                 "コンテンツ情報"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"DLC の管理"
 "steam_finddlcinstore"		"ストアで DLC を検索"
@@ -3802,8 +3833,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_welcomeaction_launch$apptype=application" "%gamename% を開始するには、[プレイ]ボタンをクリックしてください。"
 "steam_welcomeaction_launch$apptype=video" "%gamename% を視聴するには、[視聴]ボタンをクリックしてください。"
 "steam_welcomeaction_launch$apptype=shortcut" "%gamename%を起動するには上のプレイボタンをクリックしてください。"
-"steam_welcomeaction_launch$apptype=tool" "%gamename% を起動するには上のプレイボタンをクリックしてください。"
-"steam_welcomeaction_launch$apptype=demo" "%gamename% を起動するには上のプレイボタンをクリックしてください。"
+"steam_welcomeaction_launch$apptype=tool"   "%gamename% を起動するには上のプレイボタンをクリックしてください。"
+"steam_welcomeaction_launch$apptype=demo"   "%gamename% を起動するには上のプレイボタンをクリックしてください。"
+"steam_welcomeaction_launch$apptype"        "%gamename%を起動するには上のプレイボタンをクリックしてください。"
 "steam_welcomeaction_install" "%gamename%をインストールするには、[インストール]ボタンをクリックしてください。"
 "steam_welcomeaction_preload" "リリースされたらすぐにプレイできるように%gamename%をプリロードしておくには、［プリロード］ボタンをクリックします。"
 "steam_welcomeaction_comingsoon" "%gamename%、近日登場!"
@@ -3811,15 +3843,17 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "steam_welcomemessage_nofriends$apptype=game" "%gamename% をプレイしているほかの人を探すには、 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。友達がどんなゲームをプレイ中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
 "steam_welcomemessage_nofriends$apptype=application" "%gamename% を使用しているほかの人を探すには、 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。友達がどんなアプリを使用中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
-"steam_welcomemessage_nofriends$apptype=tool" "%gamename% を使用しているユーザーを探すには、<a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。フレンドがどんなツールを使用中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
-"steam_welcomemessage_nofriends$apptype=video" "%gamename% を視聴しているほかの人を探すには、 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。友達がどんなムービーを視聴中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
-"steam_welcomemessage_nofriends$apptype=demo" "%gamename% をプレイする他のユーザーを探すには、<a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。フレンドがプレイしている体験版を見るには、Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
+"steam_welcomemessage_nofriends$apptype=tool"   "%gamename% を使用しているユーザーを探すには、<a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。フレンドがどんなツールを使用中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
+"steam_welcomemessage_nofriends$apptype=video"  "%gamename% を視聴しているほかの人を探すには、 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。友達がどんなムービーを視聴中か確認するには、 Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
+"steam_welcomemessage_nofriends$apptype=demo"   "%gamename% をプレイする他のユーザーを探すには、<a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連する Steam コミュニティグループ</a>に参加してください。フレンドがプレイしている体験版を見るには、Steam フレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
+"steam_welcomemessage_nofriends$apptype"        "%gamename%を所有している他のユーザーを探すには、<a href=steam://url/CommunityGroupSearch/%encodedsearch%>関連するSteamコミュニティグループ</a>に参加してください。フレンドがプレイしている体験版を見るには、Steamフレンドリストに<a href=steam://friends/add/>フレンドを追加</a>してください。"
 
 "steam_welcomemessage_help$apptype=game"	"このゲームに関してテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam掲示板</a>をチェックするか、<a href=http://support.steampowered.com/>Steam サポート</a>をご覧ください。"
 "steam_welcomemessage_help$apptype=application"	"このアプリケーションに関してテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam掲示板</a>をチェックするか、<a href=http://support.steampowered.com/>Steam サポート</a>をご覧ください。"
 "steam_welcomemessage_help$apptype=video"	"このムービーに関してテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 掲示板</a> をチェックするか<a href=http://support.steampowered.com/>Steam サポート</a>をご覧ください。"
 "steam_welcomemessage_help$apptype=tool"	"このツールに関してテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 掲示板</a>をチェックするか、<a href=http://support.steampowered.com/>Steam サポート</a>をご覧ください。"
 "steam_welcomemessage_help$apptype=demo"	"この体験版に関するテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 掲示板</a>をチェックするか、<a href=http://support.steampowered.com/>Steam サポート</a>をご覧ください。"
+"steam_welcomemessage_help$apptype"         "このコンテンツに関してテクニカルサポートが必要な場合は、<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam掲示板</a>をチェックするか、<a href=http://support.steampowered.com/>Steamサポート</a>をご覧ください。"
 
 "steam_welcomemessage_help_nostore"	"このゲームで技術的サポートが必要であれば、 <a href=http://support.steampowered.com/>Steam サポート</a>までどうぞ。"
 
@@ -4810,7 +4844,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_XboxDriverInstall_Failure"	"ドライバーの更新に失敗しました。エラー = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"コントローラの新しいファームウェアが利用可能"
-"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ワイヤレスコントローラーの新しいファームウェアが利用できます。以下のリンクをクリックして、Sonyファームウェアアップデートページへ移動してください："
+"Steam_DualSense_FirmwareUpdate_Text"	"%product%の新しいファームウェアが利用できます。以下のリンクをクリックして、Sonyファームウェアアップデートページへ移動してください："
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"次から表示しない"
 
 "DownloadRegion_default"				 "不明"

@@ -2842,10 +2842,10 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"Library_EditSteamPlayOptions_Title"	"Steam Play"
 	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Forçar uso de ferramenta de compatibilidade do Steam Play específica"
 
-	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Configuração global (permitir downloads em 2º plano)"
-	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Configuração global (impedir downloads em 2º plano)"
-	"Library_AppAllowDownloadsDuringGameplay_Always" "Sempre permitir downloads em 2º plano"
-	"Library_AppAllowDownloadsDuringGameplay_Never" "Nunca permitir downloads em 2º plano"
+	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Configuração global (permitir downloads em segundo plano)"
+	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Configuração global (impedir downloads em segundo plano)"
+	"Library_AppAllowDownloadsDuringGameplay_Always" "Sempre permitir downloads em segundo plano"
+	"Library_AppAllowDownloadsDuringGameplay_Never" "Nunca permitir downloads em segundo plano"
 
 	"Steam_LaunchOption_Game"							"Jogar {s:gamename}"
 	"Steam_LaunchOption_Application"			"Iniciar {s:gamename}"

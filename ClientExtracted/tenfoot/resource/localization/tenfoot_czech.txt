@@ -126,7 +126,7 @@
 	"Panorama_Lang_Turkish"			"Turečtina"
 	"Panorama_Lang_Arabic"			"Arabština"
 	"Panorama_Lang_Ukrainian"			"Ukrajinština"
-	"Panorama_Lang_Latam_Spanish"			"Latinskoamerická španělština"
+	"Panorama_Lang_Latam_Spanish"			"Latin. španělština"
 	"Panorama_Lang_Vietnamese"		"Vietnamština"
 
 
@@ -156,7 +156,7 @@
 	"Panorama_Lang_Footer_Bulgarian"			"BULHARŠTINA"
 	"Panorama_Lang_Footer_Turkish"			"TUREČTINA"
 	"Panorama_Lang_Footer_Ukrainian"			"UKRAJINŠTINA"
-	"Panorama_Lang_Footer_Latam_Spanish"			"LATINSKOAMERICKÁ ŠPANĚLŠTINA"
+	"Panorama_Lang_Footer_Latam_Spanish"			"LATIN. ŠPANĚLŠTINA"
 	"Panorama_Lang_Footer_Vietnamese"			"VIETNAMŠTINA"
 
 
@@ -189,7 +189,7 @@
 	"Panorama_Selection_Turkish"			"Türkçe (Turecky)"
 	"Panorama_Selection_Arabic"			"العربية (Arabština)"
 	"Panorama_Selection_Ukrainian"			"Українська (Ukrajinština)"
-	"Panorama_Selection_Latam_Spanish"		"Español-Latinoamérica (Latinskoamerická španělština)"
+	"Panorama_Selection_Latam_Spanish"		"Español-Latinoamérica (Latin. španělština)"
 	"Panorama_Selection_Vietnamese"			"Tiếng Việt (Vietnamština)"
 
 	"Panorama_MoviePlaybackError"		"Během přehrávání došlo k chybě"

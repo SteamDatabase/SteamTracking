@@ -46,6 +46,7 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/crashhandler.dylib
+rv5@F:$
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -533,8 +534,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec 12 2022
-18:26:15
+Dec 13 2022
+18:31:45
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -934,6 +935,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+D}||
 2;BQ}
 XTqc
 h$nE
@@ -952,7 +954,6 @@ q~J-
 ,vvE
 r|vK
 di;aB
-@[Uh
 w9{m
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1009,8 +1010,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221213022638Z0/
-OOY;D
+221214023207Z0/
+ l#3
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1018,29 +1019,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		j3TOdiEZJ1N0y4i6hZvuw3mE5No=
+		tqKw9FXSpXQQ8pU4PI3tivctyKg=
 		</data>
 		<data>
-		E5t5HAyQn+VAskG3HMNkFyUcdzU=
+		bCMznaoq+taHZ2f85zyK4hsxZ9M=
 		</data>
 	</array>
 </dict>
 </plist>
-l.\(e
-20221213022757Z0
+.#BA
+Ty_Z8R
+eEKgY
+O}.) 
+20221214023210Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122162003Z
-230103162002Z0B1
-Timestamp Signer NWK11
+221122161003Z
+230103161002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-2gc9
+v-3D^
+g:}q
+ZvD|
+Hd?J
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+^:>UZo
+\7B,
+[#('1Z
+fw9I
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1079,12 +1090,13 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221213022757Z0#
-gl+%:
-Mj~M?
-	ZuY
-`4Ax
->pdu
+/~0	
+221214023210Z0#
+.En}tJv
+/~ /U
+{?f:t
+)o: 
+p|50<.F
 __TEXT
 __text
 __TEXT
@@ -1807,8 +1819,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec 12 2022
-18:26:16
+Dec 13 2022
+18:31:47
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2246,7 +2258,6 @@ a-alo
 pKb"j
 Uh0L)
 )+IC
-	;B5D
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
@@ -2258,6 +2269,7 @@ PzyCK
 5	xd
 jX-,B
 Na~?
+k6Zx
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -2313,9 +2325,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221213022638Z0/
-}ioW
-C)k0
+221214023207Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2323,35 +2333,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		eeI8Cel6ZYxLFe+jIEjEIjjeW40=
+		EkmHuB6G9Z6SOmPDhz0OxU3V2UE=
 		</data>
 		<data>
-		9OWdx9x47wwBAPUJiP36v8bkm+A=
+		H0uX0RPGFT1uo7hzIPM5nzPrPn4=
 		</data>
 	</array>
 </dict>
 </plist>
-+?s2
--o@?
-0=)9
-Tbb&
-qvry
-lRM\
-I<cN
-20221213022757Z0
+lJNv
+rXHW<
+20221214023210Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122162003Z
-230103162002Z0B1
-Timestamp Signer NWK11
+221122161003Z
+230103161002Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-2gc9
+v-3D^
+g:}q
+ZvD|
+Hd?J
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+^:>UZo
+\7B,
+[#('1Z
+fw9I
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2390,9 +2402,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221213022757Z0#
-gl+%:
-DL;I
+/~0	
+221214023210Z0#
+/\(P
+eeNW
+Hx=_R
+,b,l
 __TEXT
 __text
 __TEXT
@@ -2689,8 +2704,8 @@ MacOS
 Frameworks
 crashhandler.dylib
 CreateInterface
-Dec 12 2022
-18:26:16
+Dec 13 2022
+18:31:49
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3118,7 +3133,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-f"i^
+%`Zq0
 ?8p)
 7d,K
 1DB:
@@ -3128,8 +3143,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-r4;)
-lO%%
 Q3 \D
 ~`	]
 b_:S
@@ -3139,7 +3152,6 @@ $~CB[Eqq]P
 w'Wa
 $'&9C
 `HP| 
-,/i>
 B}1[[,I
 eF1]
 Apple Inc.1&0$
@@ -3197,9 +3209,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221213022638Z0/
-b~0[
-eSB8~
+221214023207Z0/
+Rx`t?"0-
+fxZG
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3207,38 +3219,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		hfZyDC+RGRHYRUDcZZAuqAmin8k=
+		csQE9IqCg1Xmpm/3KgNSeGB0PyI=
 		</data>
 		<data>
-		k5qMqCUotzryra2t4sutsRk5tDw=
+		tjUvcIdefqwqbZ7uisJmeFpH0MU=
 		</data>
 	</array>
 </dict>
 </plist>
-wFH9
-9c3wG
-wzZk
-20221213022757Z0
+BJZP
+<1}8i8
+rZ!Xw
+S(3F0C
+zZyN
+20221214023210Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-221122161003Z
-230103161002Z0B1
-Timestamp Signer NWK21
+221122162003Z
+230103162002Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-v-3D^
-g:}q
-ZvD|
-Hd?J
+2gc9
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-^:>UZo
-\7B,
-[#('1Z
-fw9I
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -3277,8 +3284,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-/~0	
-221213022757Z0#
-Ks0+
-VxB%
-W%vv
+221214023210Z0#
+gl+%:
+Gy'q|
+A$y{?N
+J> I~^
+;v*7

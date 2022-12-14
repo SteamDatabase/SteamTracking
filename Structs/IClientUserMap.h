@@ -1,7 +1,7 @@
 class IClientUserMap
 {
 public:
-    virtual unknown_ret Unknown_5323712() = 0;
+    virtual unknown_ret Unknown_5333888() = 0;
     virtual unknown_ret LogOn(void*,void*) = 0;
     virtual unknown_ret InvalidateCredentials() = 0;
     virtual unknown_ret LogOff() = 0;

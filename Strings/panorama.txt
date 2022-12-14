@@ -4,7 +4,7 @@ __TEXT
 @;
 __text
 __TEXT
-C,1
+#-1
 __stubs
 __TEXT
 __stub_helper
@@ -156,13 +156,12 @@ h
 hW
 )
 HB
-/4
->1
+.4
 .
 1
 1
 0
-d:
+f:
 
 
 
@@ -2595,9 +2594,12 @@ D
 ?
 (
 0
-@
-A
 D
+E
+@
+F
+G
+
 
 !
 "
@@ -2640,10 +2642,11 @@ X
 8
 `
 d
-p
+|
 h
+p
 x
-t
+}
 
 
 h
@@ -2725,7 +2728,8 @@ N10OSXHelpers16CIOPollingHelper15IHelperCallbackE
 13CUIFontFilePB
 43CUIFontFilePackagePB_CUIEncryptedFontFilePB
 20CUIFontFilePackagePB
-6CTHashIP20CWebSocketConnectionjE
+11CUtlHashMapIjP20CWebSocketConnection10CDefEqualsIjE11HashFunctorIjEjE
+10CUtlVectorIN11CUtlHashMapIjP20CWebSocketConnection10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIP11CWorkThread10CUtlMemoryIS1_EE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
 
@@ -5370,8 +5374,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Dec 12 2022
-18:28:47
+Dec 13 2022
+18:34:16
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8202,8 +8206,7 @@ sm_ThreadSafeQueueIncoming
 uifontfile_format.proto
 CWebSocketConnection
 CWebSocketConnection Globals
-sm_THashPWebSocketConnection
-*ppWebSocketConnection
+sm_mapWebSocketConnection
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 Thread "%s" (ID %d) failed to shut down
 pWorkThread->m_bFinished is false but thread is not running
@@ -8262,13 +8265,12 @@ SSE is required.
 src.IsValid()
 
 HB
-/4
->1
+.4
 .
 1
 1
 0
-d:
+f:
 
 
 
@@ -8278,34 +8280,43 @@ d:
 
 @
 @
-/
+0
+9
 '
+0/
 8&
-.
-8
-8
-X.
+/
+9
 &
+<.
 .
 5$
--
+7
+7
+9
 s$
-~8
+:,
 -
 7
 7
 7
-r,
-p,
-_,
+7
+,
+,
+,
+,
+,
+,
+,
+,
 ,
 ,
 ,
 j
 "
 "
+,
 ?
-5
 )
 >
 ;
@@ -8315,9 +8326,8 @@ F
 +
 !
 &
-c+
-+
-15
+:+
+35
 W
 j
 Ic
@@ -8370,15 +8380,13 @@ Ic
 @
 @
 @
+*
+*
 d
-#6
 Uk/
 K
+#6
 "6
-!6
-6
-t*
-s*
 @
 @
 @
@@ -8401,7 +8409,7 @@ s*
 @
 @
 @
-<3
+>3
 @
 @
 @
@@ -8411,14 +8419,15 @@ s*
 0
 @
 @
+m+
+O)
+|5
++
 .&
-7
++
++
 )
 )
-)
-)
-)
-L)
 @
 @
 @
@@ -8434,38 +8443,45 @@ L)
 @
 0
 0
-)
-)
-)
 )
 =
 @
 @
-*
+!(
+(
 (
 H=
-4
-5
-5
+}(
+1
+m)
+C(
+{'
++'
 '
-&
+'
+'
+|'
 1
 @
+1
 =
-&
+Q%
 @
 @
-$
+%
+F1
+b$
+/$
 @
 @
 ?
+#
+O/
+d#
 @
 #
-#
 &
 &
-&
-'
 P
 T
 (
@@ -8473,23 +8489,16 @@ T
 P
 j
 A
-,
-,
 A
 A
 A
 (
-`#
-o"
-{&
-G"
-#
+k%
 @
 E9u
 $
+$
 E9u
-"
-"
 "
 "
 "
@@ -8506,39 +8515,33 @@ A
 A
 A
 A
-~"
-$
-$
-$
-_-
-[-
-Y-
-X-
-*
-N#
-<
+K!
+%.
+,
+I!
+o"
+[%
+#
+5%
 -
 -
+B!
 @
++
++
+w"
+"
 v
+$*
 ,
 ,
 ,
-!
-!
-!
-x
+,
+i
 }
 "
-"
 @
-(
-(
-(
-(
-'
-,%
-&
+.%
 Hi
 (
 @
@@ -8548,11 +8551,9 @@ Hi
 
 
 
-&
 0
 
 
-!
 0
 IcE
 @
@@ -8727,6 +8728,8 @@ IcE
 @
 @
 @
+@
+@
 #
 @
 @
@@ -8845,14 +8848,12 @@ IcE
 @
 @
 @
-@
-x"
-@
 j
 @
 @
 j
 @
+9
 @
 @
 j
@@ -8944,21 +8945,11 @@ IcE
 V
 =
 =
-M
 !
-
-
-
-
-
 @
 &
-g
 
-
-
-
-
+f
 @
 M9e
 @
@@ -9017,13 +9008,12 @@ I;E
 I;E
 B
 ?
-g
-f
 `
 `
 !
 A
 @
+
 @
 @
 P
@@ -9078,14 +9068,15 @@ E
 @
 @
 @
+
+?
+?
+?
 @
-
-
-
+@
 @
 @
 0
 o
 U
-^
-Q
+m

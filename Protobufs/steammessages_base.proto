@@ -160,6 +160,8 @@ message CCDDBAppDetailCommon {
 	optional bool has_adult_content = 12;
 	optional bool is_visible_in_steam_china = 13;
 	optional uint32 app_type = 14;
+	optional bool has_adult_content_sex = 15;
+	optional bool has_adult_content_violence = 16;
 }
 
 message CMsgAppRights {
@@ -241,6 +243,7 @@ message CCommunity_ClanAnnouncementInfo {
 	optional int32 voteupcount = 14;
 	optional int32 votedowncount = 15;
 	optional .EBanContentCheckResult ban_check_result = 16 [default = k_EBanContentCheckResult_NotScanned];
+	optional bool banned = 17;
 }
 
 message CClanEventData {

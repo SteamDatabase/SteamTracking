@@ -5,46 +5,51 @@
     8199: (e) => {
       e.exports = {
         Login: "login_Login_VZ6x_",
+        WithTitle: "login_WithTitle_2WCTN",
         TitleBar: "login_TitleBar_1C4of",
         CloseButton: "login_CloseButton_1mcCj",
       };
     },
     87964: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => E });
+      n.r(t), n.d(t, { FullLogin: () => p, default: () => E });
       var l = n(67294),
         o = n(8199),
         i = n.n(o),
-        a = (n(7952), n(78869)),
-        u = n(15641),
-        s = (n(36378), n(40792)),
+        u = (n(7952), n(78869)),
+        a = n(15641),
+        s = (n(36378), n(67862)),
         r = (n(38440), n(70655)),
         c = n(27194),
-        m = n(86487);
+        d = n(86487);
       n(29669);
-      let f = !1;
-      function d() {
+      let m = !1;
+      function f() {
         return (0, r.mG)(this, void 0, void 0, function* () {
-          if (f) return;
-          f = !0;
-          const e = a.De.LANGUAGE,
+          if (m) return;
+          m = !0;
+          const e = u.De.LANGUAGE,
             t = c.LJ.GetLanguageFallback(e),
             n = e === t,
-            [l, o] = yield Promise.all([(0, m.I2)(e), n ? null : (0, m.I2)(t)]);
+            [l, o] = yield Promise.all([(0, d.I2)(e), n ? null : (0, d.I2)(t)]);
           c.Yt.InitFromObjects(l, o, null, null);
         });
       }
       var h = n(96794),
         S = (n(10708), n(63709)),
-        g = n(45520),
-        C = n(30946);
+        g = n(30946),
+        v = n(45520),
+        C = n(83893);
       function E(e) {
+        return p(e);
+      }
+      function p(e) {
         const [t, n] = (0, l.useState)(!0),
           o = (function () {
             const [e, t] = l.useState(!1);
             return (
               l.useEffect(() => {
-                Promise.all([d()]).then(() => {
+                Promise.all([f()]).then(() => {
                   t(!0);
                 });
               }, []),
@@ -53,7 +58,7 @@
           })();
         return t
           ? o
-            ? l.createElement(p, Object.assign({}, e))
+            ? l.createElement(T, Object.assign({}, e))
             : null
           : l.createElement(
               "div",
@@ -66,51 +71,52 @@
               "Initiate"
             );
       }
-      function p(e) {
+      function T(e) {
         let [t, n] = (0, l.useState)(null);
-        const [o, r] = (0, l.useState)(!1);
-        let c = new s.zn(),
-          m = c.GetServiceTransport();
+        const [o, r] = (0, l.useState)(!1),
+          c = (0, C.Wy)();
+        let d = new s.zn(),
+          m = d.GetServiceTransport();
         !(function (e) {
           (0, l.useEffect)(() => {
             (0, S.Uh)().Init("Client Login", CLSTAMP, e);
           }, [e]);
         })(m),
           (0, l.useEffect)(() => {
-            a.De.IN_LOGIN_REFRESH &&
+            u.De.IN_LOGIN_REFRESH &&
               SteamClient.Auth.GetRefreshInfo().then((e) => {
                 1 != e.reason ? n(e) : n(null);
               });
           }, []);
-        const [f, d] = (0, l.useState)(void 0),
-          [E, p] = (0, l.useState)(0);
+        const [f, E] = (0, l.useState)(void 0),
+          [p, T] = (0, l.useState)(0);
         if (
-          (c.Connect().then(() => {
+          (d.Connect().then(() => {
             r(!0);
           }),
           !o)
         )
           return null;
-        const v = `${null == t ? void 0 : t.account_name}${
+        const _ = `${null == t ? void 0 : t.account_name}${
           null == t ? void 0 : t.reason
-        }${E.toString()}`;
+        }${p.toString()}`;
         return l.createElement(
           "div",
           {
-            className: (0, g.Z)(i().Login, e.includeTitleBar && i().WithTitle),
+            className: (0, v.Z)(i().Login, e.includeTitleBar && i().WithTitle),
           },
           e.includeTitleBar &&
-            l.createElement(C.T, { popup: e.popup, hideMinMax: !0 }),
-          l.createElement(u.i9, {
-            key: v,
+            l.createElement(g.T, { popup: e.popup, hideMinMax: !0 }),
+          l.createElement(a.i9, {
+            key: _,
             autoFocus: !0,
             transport: m,
             onSuccess: (e) => {
-              var t;
+              var t, n, l, o;
               console.log(
                 "received authentication token, using it to sign in to Steam"
               ),
-                d(null),
+                E(null),
                 SteamClient.Auth.SetLoginToken(
                   e.strRefreshToken,
                   e.strAccountName
@@ -118,17 +124,26 @@
                   const t = e.result,
                     n = e.message;
                   console.log(`client login returned ${t} (${n})`),
-                    d(t),
-                    1 != t && p(E + 1);
+                    E(t),
+                    1 != t && T(p + 1);
                 });
-              const n =
+              const i =
                 null !== (t = e.strNewGuardData) && void 0 !== t ? t : "";
-              n && SteamClient.Auth.SetSteamGuardData(e.strAccountName, n);
+              i && SteamClient.Auth.SetSteamGuardData(e.strAccountName, i),
+                null ===
+                  (o =
+                    null === (n = null == c ? void 0 : c.ownerWindow) ||
+                    void 0 === n
+                      ? void 0
+                      : (l = n.SteamClient.Browser)
+                          .SetShouldExitSteamOnBrowserClosed) ||
+                  void 0 === o ||
+                  o.call(l, !1);
             },
             platform: 1,
             embedded: !0,
             refreshInfo: t,
-            disableQR: a.De.EREALM == h.IN.k_ESteamRealmChina,
+            disableQR: u.De.EREALM == h.IN.k_ESteamRealmChina,
             lastResult: f,
           })
         );

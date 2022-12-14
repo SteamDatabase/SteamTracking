@@ -206,7 +206,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionverifyapp.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamepadui/gamepaduicontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/audiorecorder.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp
@@ -253,6 +252,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuidownloadscontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiinputcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisharedjscontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiurlcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuivrcontroller.cpp

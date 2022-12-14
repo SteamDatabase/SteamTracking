@@ -191,15 +191,19 @@
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"您没有订购这个游戏。\n您想前往订购页面吗？"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - 错误"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"启动"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"开始游戏"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "启动快捷方式"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"开始游戏"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"稍后更新"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"运行试玩游戏"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"启动工具"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"开始"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"播放"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "继续"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "启动"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"稍后更新"
 "SteamUI_JoinDialog_Cancel_Btn"		"取消"
 "SteamUI_JoinDialog_OverrideThrottle"	"撤销当前带宽限制"
 "SteamUI_JoinDialog_SkipUpdateInfo" "跳过更新并立即开玩"
@@ -214,11 +218,13 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"当应用程序就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"当游戏就绪时启动"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"当就绪时启动快捷方式"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"当游戏就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"当试用版就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"当工具就绪时启动"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"当原声音轨就绪时播放"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"当媒体就绪时播放"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "当就绪时启动"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "已共享游戏库"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "您共享的库现在正由 %borrower% 使用。若现在开始游戏，则借用人 %borrower% 将会收到准备退出游戏的通知。"
@@ -241,6 +247,8 @@
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "正在同步 Steam 云…"
 "SteamUI_JoinDialog_Connecting_Text" "正在连接到 Steam…"
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% 分钟"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - 设置自定义图像"
 "SteamUI_SetCustomImage_ChooseImage" "选择一张图像以在 Steam 的网格视图中代表 %gamename%。"
@@ -1893,6 +1901,7 @@
 "Steam_Game_AllowOtherDownloads$appType=demo"	"允许 Steam 在此试用版运行期间下载其他更新"
 "Steam_Game_AllowOtherDownloads$appType=media"	"允许 Steam 在此媒体运行期间下载其他更新"
 "Steam_Game_AllowOtherDownloads$appType=music"	"允许 Steam 在此媒体运行期间下载其他更新"
+"Steam_Game_AllowOtherDownloads$appType"        "允许 Steam 在此内容运行期间下载其他更新"
 "Steam_Game_AvailableSeats"					"此产品目前有 %seats% 份副本可供借用"
 "Steam_Game_AvailableSeatsUnlimited"		"此产品有无限副本可供借用"
 
@@ -2031,6 +2040,7 @@
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"始终保持此媒体为最新"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"始终保持此原声音轨为最新"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"始终保持此工具为最新"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "始终保持为最新"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"只在我启动时更新此应用程序"
 "Steam_DoNotUpdateThisGame$appType=game"			"只在我启动时更新此游戏"
@@ -2038,6 +2048,7 @@
 "Steam_DoNotUpdateThisGame$appType=media"			"只在我启动时更新此媒体"
 "Steam_DoNotUpdateThisGame$appType=music"			"不自动更新此原声音轨"
 "Steam_DoNotUpdateThisGame$appType=tool"			"只在我启动时更新此工具"
+"Steam_DoNotUpdateThisGame$appType"                 "只在我启动时更新"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"高优先级 - 总是优先自动更新此应用程序"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"高优先级 - 总是优先自动更新此游戏"
@@ -2045,6 +2056,7 @@
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"高优先级 - 总是优先自动更新此媒体"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"高优先级 - 总是优先更新此原声音轨"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"高优先级 - 总是优先自动更新此工具"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "高优先级 - 总是优先自动更新此内容"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"此应用程序会在更新推出时自动更新。"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"此游戏会在更新推出时自动更新。"
@@ -2052,6 +2064,7 @@
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "此媒体会在更新推出时自动更新。"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "此原声音轨会在更新推出时自动更新。"
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"此工具会在更新推出时自动更新。"
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "此内容会在其推出时自动更新。"
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"升级的内容只有在启动此应用程序时才可获得。"
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"升级的内容只有在启动此游戏时才可获得。"
@@ -2059,15 +2072,17 @@
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"升级的内容只有在启动此媒体时才可获得。"
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"不自动更新此原声音轨。"
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"升级的内容只有在启动此工具时才可获得。"
+"Steam_GameProperties_NeverUpdateInfo$appType"          "升级的内容只有在启动此应用时才可获得。"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"后台下载"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"当播放 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"当播放 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "当播放 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "当播放 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "当运行 %game% 时，是否允许 Steam 下载其他游戏或应用程序？"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"遵循我的全局设置（允许后台下载）"
 "Steam_BackgroundDownloadsDefault_Deny"	"遵循我的全局设置（停止后台下载）"
@@ -2094,6 +2109,7 @@
 "Steam_Controller_Support_None" "无"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"在运行此游戏时后台下载"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "在此内容运行时后台下载"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"此应用程序会在更新推出时自动更新。Steam 将优先下载此应用程序。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"此游戏会在更新推出时自动更新。Steam 将优先下载此游戏。"
@@ -2101,6 +2117,7 @@
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"此媒体会在更新推出时自动更新。Steam 将优先下载此媒体。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"此原声音轨会在更新推出时自动更新。Steam 将优先下载此媒体。"
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"此工具会在更新推出时自动更新。Steam 将优先下载此工具。"
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "此内容会在更新推出时自动更新。Steam 将优先下载此内容。"
 
 "Steam_Game_VerifyGameFiles$appType=application"				"验证应用程序文件的完整性…"
 "Steam_Game_VerifyGameFiles$appType=game"				"验证游戏文件的完整性…"
@@ -2108,6 +2125,7 @@
 "Steam_Game_VerifyGameFiles$appType=media"				"验证媒体文件的完整性…"
 "Steam_Game_VerifyGameFiles$appType=music"				"验证文件的完整性…"
 "Steam_Game_VerifyGameFiles$appType=tool"				"验证工具文件的完整性…"
+"Steam_Game_VerifyGameFiles$appType"				    "验证内容的完整性…"
 
 "Steam_DeleteLocalGameContent$appType=application"		"卸载应用程序…"
 "Steam_DeleteLocalGameContent$appType=game"		"卸载游戏…"
@@ -2115,6 +2133,7 @@
 "Steam_DeleteLocalGameContent$appType=media"	"卸载媒体…"
 "Steam_DeleteLocalGameContent$appType=music"	"卸载原声音轨…"
 "Steam_DeleteLocalGameContent$appType=tool"		"卸载工具…"
+"Steam_DeleteLocalGameContent$appType"          "卸载内容…"
 
 "Steam_BackupGameFiles$appType=application"		"备份应用程序文件..."
 "Steam_BackupGameFiles$appType=game"			"备份游戏文件…"
@@ -2122,6 +2141,7 @@
 "Steam_BackupGameFiles$appType=media"			"备份媒体文件..."
 "Steam_BackupGameFiles$appType=music"			"备份原声音轨文件…"
 "Steam_BackupGameFiles$appType=tool"			"备份工具文件..."
+"Steam_BackupGameFiles$appType"                 "备份内容…"
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"此应用程序的所有文件将立即通过 Steam 下载。"
 "Steam_Install_WillDownloadAllFiles$appType=game"	"此游戏的所有文件将立即通过 Steam 下载。"
@@ -2129,6 +2149,7 @@
 "Steam_Install_WillDownloadAllFiles$appType=media"	"此媒体的所有文件将立即通过 Steam 下载。"
 "Steam_Install_WillDownloadAllFiles$appType=music"	"此原声音轨的所有文件将立即通过 Steam 下载。"
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"此工具的所有文件现在将通过 Steam 下载。"
+"Steam_Install_WillDownloadAllFiles$appType"        "此内容的所有文件将立即通过 Steam 下载。"
 
 "Steam_Install_StartCacheLoading$appType=application"		"正在创建本地应用程序文件…"
 "Steam_Install_StartCacheLoading$appType=game"		"正在创建本地游戏文件…"
@@ -2136,6 +2157,7 @@
 "Steam_Install_StartCacheLoading$appType=media"		"正在创建本地媒体文件…"
 "Steam_Install_StartCacheLoading$appType=music"		"正在创建本地文件…"
 "Steam_Install_StartCacheLoading$appType=tool"		"正在创建本地工具文件…"
+"Steam_Install_StartCacheLoading$appType"		     "正在创建本地内容文件…"
 
 "Steam_PreparingGamesList$appType=application"	 	"正在准备 Steam 应用程序列表%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"正在准备 Steam 游戏列表%progress%"
@@ -2143,7 +2165,8 @@
 "Steam_PreparingGamesList$appType=media" 			"正在准备 Steam 媒体列表%progress%"
 "Steam_PreparingGamesList$appType=music" 			"正在准备 Steam 原声音轨列表%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"正在准备 Steam 工具列表%progress%"
-"Steam_PreparingGamesList$appType=license"		"正在准备 Steam 许可列表%progress%"
+"Steam_PreparingGamesList$appType=license"		    "正在准备 Steam 许可列表%progress%"
+"Steam_PreparingGamesList$appType"                  "正在准备 Steam 内容列表 %progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"正在扫描 Steam 应用程序更新%progress%"
 "Steam_ScanningForUpdates$appType=game"				"正在扫描 Steam 游戏更新%progress%"
@@ -2151,7 +2174,8 @@
 "Steam_ScanningForUpdates$appType=media"			"正在扫描 Steam 媒体更新%progress%"
 "Steam_ScanningForUpdates$appType=music"			"正在扫描 Steam 原声音轨更新%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"正在扫描 Steam 工具更新%progress%"
-"Steam_ScanningForUpdates$appType=license"		"正在扫描 Steam 许可更新%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "正在扫描 Steam 许可更新%progress%"
+"Steam_ScanningForUpdates$appType"                  "正在扫描 Steam 内容更新 %progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"没有可显示的 Steam 应用程序。"
 "SteamUI_NoGamesOfThisType$appType=game"	"没有可显示的 Steam 游戏。"
@@ -2159,6 +2183,7 @@
 "SteamUI_NoGamesOfThisType$appType=media"	"没有可显示的 Steam 媒体。"
 "SteamUI_NoGamesOfThisType$appType=music"	"没有可显示的 Steam 原声音轨。"
 "SteamUI_NoGamesOfThisType$appType=tool"	"没有可显示的 Steam 工具。"
+"SteamUI_NoGamesOfThisType$appType"         "没有可显示的 Steam 内容。"
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"请等待 Steam 验证应用程序文件。"
 "Steam_ValidatingSteamCaches_Label$appType=game"	"请等待 Steam 验证游戏文件。"
@@ -2166,6 +2191,7 @@
 "Steam_ValidatingSteamCaches_Label$appType=media"	"请等待 Steam 验证媒体文件。"
 "Steam_ValidatingSteamCaches_Label$appType=music"	"请等待 Steam 验证原声音轨文件。"
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"请等待 Steam 验证工具文件。"
+"Steam_ValidatingSteamCaches_Label$appType"         "请等待 Steam 验证内容文件。"
 
 "Steam_ValidationResults_NoFailures"	"所有文件均已验证成功。"
 "Steam_ValidationResults_OneFailure"	"1 个文件验证失败，将重新获取。"
@@ -2337,6 +2363,7 @@
 "Steam_FindContent$appType=media"			"浏览媒体..."
 "Steam_FindContent$appType=music"			"浏览原声音轨..."
 "Steam_FindContent$appType=tool"			"浏览工具..."
+"Steam_FindContent$appType"                 "浏览内容…"
 
 "Steam_NoGamesOfThisType$appType=application"	"找不到任何结果！尝试清空您的搜索字段或者从下拉菜单中选择另一类型。"
 "Steam_NoGamesOfThisType$appType=game"	"找不到任何结果！尝试清空您的搜索字段或者从下拉菜单中选择另一类型。"
@@ -2345,6 +2372,7 @@
 "Steam_NoGamesOfThisType$appType=media"	"找不到任何结果！尝试更改上面的筛选条件，或者在 Steam 商店中<a href=steam://browsemedia>浏览可用的视频</a>。"
 "Steam_NoGamesOfThisType$appType=music"	"找不到任何结果！尝试清空您的搜索字段或者从下拉菜单中选择另一类型。"
 "Steam_NoGamesOfThisType$appType=tool"	"找不到任何结果！尝试更改上面的筛选条件。"
+"Steam_NoGamesOfThisType$appType"	    "找不到任何结果！尝试更改上面的筛选条件。"
 
 "Steam_MetascoreColumn"					"Metascore 评分"
 
@@ -2403,12 +2431,13 @@
 "Steam_SystemRebootRequired_Info"		"由于最新更新中的更改，您需要重新启动您的系统才能启动此游戏。"
 "Steam_SystemRebootRequired_Button"	"立即重新启动"
 
-"Steam_Game_Developer$appType=application"	"开发商"
-"Steam_Game_Developer$appType=game"	"开发商"
-"Steam_Game_Developer$appType=demo"	"开发商"
-"Steam_Game_Developer$appType=media"	"制作者"
-"Steam_Game_Developer$appType=music"	"制作者"
-"Steam_Game_Developer$appType=tool"	"开发商"
+"Steam_Game_Developer$appType=application"  "开发商"
+"Steam_Game_Developer$appType=game"         "开发商"
+"Steam_Game_Developer$appType=demo"         "开发商"
+"Steam_Game_Developer$appType=media"        "制作者"
+"Steam_Game_Developer$appType=music"        "制作者"
+"Steam_Game_Developer$appType=tool"         "开发商"
+"Steam_Game_Developer$appType"              "内容创建者"
 
 "Steam_Forums"				"讨论"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3716,6 +3745,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_details_lastpurchased$apptype=music"	"原声音轨购买于"
 "steam_details_lastpurchased$apptype=video"	"视频购买于"
 "steam_details_lastpurchased$apptype=tool"	"工具购买于"
+"steam_details_lastpurchased$apptype"   "已购买的内容"
 "steam_details_addedtoaccount"	"已添加到帐户"
 "steam_details_totalplaytime_minutes" "%minutes% 分钟"
 "steam_details_totalplaytime_hours" "%hours% 小时"
@@ -3773,6 +3803,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_welcome$apptype=shortcut"			"快捷方式信息"
 "steam_welcome$apptype=tool"			"工具信息"
 "steam_welcome$apptype=demo"			"试用版信息"
+"steam_welcome$apptype"                 "内容信息"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"管理 DLC"
 "steam_finddlcinstore"		"在商店中查找更多 DLC"
@@ -3800,8 +3831,9 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_welcomeaction_launch$apptype=application" "要启动《%gamename%》，请点击上面的“开始”按钮。"
 "steam_welcomeaction_launch$apptype=video" "要观看《%gamename%》，请点击上面的“观看”按钮。"
 "steam_welcomeaction_launch$apptype=shortcut" "要启动《%gamename%》，请点击上方“开始”按钮。"
-"steam_welcomeaction_launch$apptype=tool" "要启动 %gamename%，请点击上面的“开始”按钮。"
-"steam_welcomeaction_launch$apptype=demo" "要启动 %gamename%，请点击上面的“开始”按钮。"
+"steam_welcomeaction_launch$apptype=tool"   "要启动 %gamename%，请点击上面的“开始”按钮。"
+"steam_welcomeaction_launch$apptype=demo"   "要启动 %gamename%，请点击上面的“开始”按钮。"
+"steam_welcomeaction_launch$apptype"        "要启动 %gamename%，请点击上面的“开始”按钮。"
 "steam_welcomeaction_install" "要安装《%gamename%》，请单击上面的“安装”按钮。"
 "steam_welcomeaction_preload" "要预先载入《%gamename%》，以便在发布后您可以立即开始体验，请单击上面的“预先载入”按钮。"
 "steam_welcomeaction_comingsoon" "%gamename% 即将发布。"
@@ -3809,15 +3841,17 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "steam_welcomemessage_nofriends$apptype=game" "要查找玩《%gamename%》的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在玩什么游戏，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
 "steam_welcomemessage_nofriends$apptype=application" "要查找使用《%gamename%》的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在使用什么应用程序，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
-"steam_welcomemessage_nofriends$apptype=tool" "要查找使用 %gamename% 的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看您的好友在使用什么工具，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
-"steam_welcomemessage_nofriends$apptype=video" "要查找观看《%gamename%》的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在观看什么视频，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
-"steam_welcomemessage_nofriends$apptype=demo" "要查找玩 %gamename% 的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在玩什么试用版，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
+"steam_welcomemessage_nofriends$apptype=tool"   "要查找使用 %gamename% 的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看您的好友在使用什么工具，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
+"steam_welcomemessage_nofriends$apptype=video"  "要查找观看《%gamename%》的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在观看什么视频，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
+"steam_welcomemessage_nofriends$apptype=demo"   "要查找玩 %gamename% 的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在玩什么试用版，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
+"steam_welcomemessage_nofriends$apptype"        "要查找拥有 %gamename% 的其他用户，请加入<a href=steam://url/CommunityGroupSearch/%encodedsearch%>相关的 Steam 社区组</a>。要查看好友正在玩什么试用版，<a href=steam://friends/add/>添加好友</a>至您的 Steam 好友列表即可。"
 
 "steam_welcomemessage_help$apptype=game"	"如果您需要有关此游戏的技术支持，请查看<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>《%gamename%》的 Steam 论坛</a>，或是访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 "steam_welcomemessage_help$apptype=application"	"如果您需要有关此应用程序的技术支持，请查看<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>《%gamename%》的 Steam 论坛</a>，或是访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 "steam_welcomemessage_help$apptype=video"	"如果您需要有关此视频的技术支持，请查看<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>《%gamename%》的 Steam 论坛</a>，或是访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 "steam_welcomemessage_help$apptype=tool"	"如果您需要此工具的技术支持，查看 <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 论坛</a>或联系 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 "steam_welcomemessage_help$apptype=demo"	"如果您需要有关此试用版的技术支持，请查看 <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% 的 Steam 论坛</a>，或者访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
+"steam_welcomemessage_help$apptype"         "如果您需要有关此内容的技术支持，请查看<a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>《%gamename%》的 Steam 论坛</a>，或是访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 
 "steam_welcomemessage_help_nostore"	"如果您需要此游戏的技术支持，请访问 <a href=http://support.steampowered.com/>Steam 客服</a>。"
 
@@ -4806,7 +4840,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_XboxDriverInstall_Failure"	"驱动更新失败，错误 = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"新控制器固件可用"
-"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ 无线控制器有新固件可用。点击下方链接前往索尼固件更新页面："
+"Steam_DualSense_FirmwareUpdate_Text"	"%product%有新固件可用。点击下方链接前往索尼固件更新页面："
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"不再显示此信息"
 
 "DownloadRegion_default"				 "未知"

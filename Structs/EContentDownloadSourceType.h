@@ -10,4 +10,5 @@ typedef enum EContentDownloadSourceType
     k_EContentDownloadSourceTypeSteamCache = 7,
     k_EContentDownloadSourceTypeOpenCache = 8,
     k_EContentDownloadSourceTypeLANCache = 9,
+    k_EContentDownloadSourceTypePeerServer = 10,
 } EContentDownloadSourceType;

@@ -186,15 +186,19 @@
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"Nem fizettél elő erre a játékra.\nSzeretnél most az előfizetési oldalra lépni?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Hiba"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Indítás"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Játék indítása"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Parancsikon indítása"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Játék indítása"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"Frissítés később"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Demó indítása"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Kellék indítása"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Lejátszás"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Lejátszás"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "Tovább"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "Indítás"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"Frissítés később"
 "SteamUI_JoinDialog_Cancel_Btn"		"Mégse"
 "SteamUI_JoinDialog_OverrideThrottle"	"Jelenlegi sávszélességkorlát felülbírálása"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Frissítés átugrása és játék"
@@ -209,11 +213,13 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Alkalmazás indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Játék indítása, amint készen van"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"Parancsikon indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Játék indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Demó indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Kellék indítása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Zenei anyag lejátszása, amint készen van"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Média lejátszása, amint készen van"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "Indítás, amint készen van"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "Megosztott játékkönyvtár"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Megosztott könyvtáradat jelenleg %borrower% használja. Most játszva velük %borrower% felszólítást fog kapni, hogy ideje kilépni."
@@ -236,6 +242,8 @@
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Steam Felhő szinkronizálása..."
 "SteamUI_JoinDialog_Connecting_Text" "Csatlakozás a Steamhez..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% perc"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Egyedi kép beállítása"
 "SteamUI_SetCustomImage_ChooseImage" "Válassz képet a(z) %gamename% megjelenítéséhez rácsnézetben."
@@ -1883,6 +1891,7 @@
 "Steam_Game_AllowOtherDownloads$appType=demo"	"A Steam tölthessen le más frissítéseket e demó futása alatt"
 "Steam_Game_AllowOtherDownloads$appType=media"	"A Steam tölthessen le más frissítéseket e média lejátszása alatt"
 "Steam_Game_AllowOtherDownloads$appType=music"	"A Steam tölthessen le más frissítéseket e média lejátszása alatt"
+"Steam_Game_AllowOtherDownloads$appType"        "A Steam tölthessen le más frissítéseket, amíg ez fut"
 "Steam_Game_AvailableSeats"					"E játéknak jelenleg %seats% kölcsönözhető példánya van."
 "Steam_Game_AvailableSeatsUnlimited"		"E játéknak korlátlan számú kölcsönözhető példánya van."
 
@@ -2021,6 +2030,7 @@
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Mindig tartsa naprakészen ezt a médiát"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Mindig tartsa naprakészen ezt a zenei anyagot"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Mindig tartsa naprakészen ezt a kelléket"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Mindig tartsa naprakészen"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Csak akkor frissítse az alkalmazást, amikor elindítom"
 "Steam_DoNotUpdateThisGame$appType=game"			"Csak akkor frissítse a játékot, amikor elindítom"
@@ -2028,6 +2038,7 @@
 "Steam_DoNotUpdateThisGame$appType=media"			"Csak akkor frissítse a médiát, amikor elindítom"
 "Steam_DoNotUpdateThisGame$appType=music"			"Ne frissítse automatikusan ezt a zenei anyagot"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Csak akkor frissítse a kelléket, amikor elindítom"
+"Steam_DoNotUpdateThisGame$appType"                 "Csak akkor frissítse, amikor elindítom"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Magas prioritás - Először ezt frissítse automatikusan"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Magas prioritás - Először ezt frissítse automatikusan"
@@ -2035,6 +2046,7 @@
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Magas prioritás - Először ezt frissítse automatikusan"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Magas prioritás - Először ezt frissítse automatikusan"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Magas prioritás - Először ezt frissítse automatikusan"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "Magas prioritás - Először ezt frissítse automatikusan"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Ezt az alkalmazást és frissítéseit automatikusan megkapod, amint rendelkezésre állnak."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Ezt a játékot és frissítéseit automatikusan megkapod, amint rendelkezésre állnak."
@@ -2042,6 +2054,7 @@
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "Ezt a médiát és frissítéseit automatikusan megkapod, amint rendelkezésre állnak."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "Ezt a zenei anyagot és frissítéseit automatikusan megkapod, amint rendelkezésre állnak."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"Ezt a kelléket és frissítéseit automatikusan megkapod, amint rendelkezésre állnak."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "Ezt a tartalmat automatikusan megkapod, amint rendelkezésre áll."
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"A frissített tartalomhoz csak az alkalmazás elindításakor jutsz hozzá."
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"A frissített tartalomhoz csak a játék elindításakor jutsz hozzá."
@@ -2049,15 +2062,17 @@
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"A frissített tartalomhoz csak a média elindításakor jutsz hozzá."
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"Ne frissítse automatikusan ezt a zenei anyagot."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"A frissített tartalomhoz csak a kellék elindításakor jutsz hozzá."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "A frissített tartalomhoz csak az elindításakor jutsz hozzá."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Háttér-letöltések"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"Míg a(z) %game% játékkal játszol, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "Míg a(z) %game% játékkal játszol, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"Míg a(z) %game% alkalmazást használod, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"Míg a(z) %game% demót használod, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"A(z) %game% média lejátszása közben tölthessen le a Steam más játékokat vagy alkalmazásokat?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"A(z) %game% lejátszása közben tölthessen le a Steam más játékokat vagy alkalmazásokat?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"Míg a(z) %game% kelléket használod, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "Míg a(z) %game% demót használod, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "A(z) %game% média lejátszása közben tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "A(z) %game% lejátszása közben tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Míg a(z) %game% kelléket használod, tölthessen le a Steam más játékokat vagy alkalmazásokat?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "A(z) %game% használata közben tölthessen le a Steam más játékokat vagy alkalmazásokat?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Globális beállítások szerint (háttér-letöltés engedélyezve)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Globális beállítások szerint (háttér-letöltés leállítva)"
@@ -2084,6 +2099,7 @@
 "Steam_Controller_Support_None" "Nincs"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Háttér-letöltés, míg ezzel a játékkal játszom"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "Letöltés a háttérben, míg ez fut"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"Ezt az alkalmazást és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt az alkalmazást más letöltésekkel szemben."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Ezt a játékot és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt a játékot más letöltésekkel szemben."
@@ -2091,6 +2107,7 @@
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Ezt a médiát és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt a médiát más letöltésekkel szemben."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Ezt a zenei anyagot és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt a zenei anyagot más letöltésekkel szemben."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Ezt a kelléket és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt a kelléket más letöltésekkel szemben."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Ezt a tartalmat és frissítéseit automatikusan megkapod, amint rendelkezésre állnak. A Steam előnyben fogja részesíteni ezt a tartalmat más letöltésekkel szemben."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Alkalmazásfájlok épségének ellenőrzése..."
 "Steam_Game_VerifyGameFiles$appType=game"				"Játékfájlok épségének ellenőrzése..."
@@ -2098,6 +2115,7 @@
 "Steam_Game_VerifyGameFiles$appType=media"				"Médiafájlok épségének ellenőrzése..."
 "Steam_Game_VerifyGameFiles$appType=music"				"Fájlok épségének ellenőrzése..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"Kellékfájlok épségének ellenőrzése..."
+"Steam_Game_VerifyGameFiles$appType"				    "A tartalom épségének ellenőrzése..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"Alkalmazás eltávolítása..."
 "Steam_DeleteLocalGameContent$appType=game"		"Játék eltávolítása..."
@@ -2105,6 +2123,7 @@
 "Steam_DeleteLocalGameContent$appType=media"	"Média eltávolítása..."
 "Steam_DeleteLocalGameContent$appType=music"	"Zenei anyag eltávolítása..."
 "Steam_DeleteLocalGameContent$appType=tool"		"Kellék eltávolítása..."
+"Steam_DeleteLocalGameContent$appType"          "Tartalom eltávolítása..."
 
 "Steam_BackupGameFiles$appType=application"		"Alkalmazásfájlok biztonsági mentése..."
 "Steam_BackupGameFiles$appType=game"			"Játékfájlok biztonsági mentése..."
@@ -2112,6 +2131,7 @@
 "Steam_BackupGameFiles$appType=media"			"Médiafájlok biztonsági mentése..."
 "Steam_BackupGameFiles$appType=music"			"Zenei anyag biztonsági mentése..."
 "Steam_BackupGameFiles$appType=tool"			"Kellékfájlok biztonsági mentése..."
+"Steam_BackupGameFiles$appType"                 "Tartalom biztonsági mentése..."
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Most az alkalmazás összes fájlja letöltésre kerül a Steamen keresztül."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Most a játék összes fájlja letöltésre kerül a Steamen keresztül."
@@ -2119,6 +2139,7 @@
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Most a média összes fájlja letöltésre kerül a Steamen keresztül."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Most a zenei anyag összes fájlja letöltésre kerül a Steamen keresztül."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"Most a kellék összes fájlja letöltésre kerül a Steamen keresztül."
+"Steam_Install_WillDownloadAllFiles$appType"        "Most a tartalom összes fájlja letöltésre kerül a Steamen keresztül."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Helyi alkalmazásfájlok létrehozása..."
 "Steam_Install_StartCacheLoading$appType=game"		"Helyi játékfájlok létrehozása..."
@@ -2126,6 +2147,7 @@
 "Steam_Install_StartCacheLoading$appType=media"		"Helyi médiafájlok létrehozása..."
 "Steam_Install_StartCacheLoading$appType=music"		"Helyi fájlok létrehozása..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Helyi kellékfájlok létrehozása..."
+"Steam_Install_StartCacheLoading$appType"		     "Helyi tartalomfájlok létrehozása..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Steam alkalmazáslista előkészítése%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Steam játéklista előkészítése%progress%"
@@ -2133,7 +2155,8 @@
 "Steam_PreparingGamesList$appType=media" 			"Steam médialista előkészítése%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Steam zenei anyag lista előkészítése%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Steam kelléklista előkészítése%progress%"
-"Steam_PreparingGamesList$appType=license"		"Steam licenclista előkészítése%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Steam licenclista előkészítése%progress%"
+"Steam_PreparingGamesList$appType"                  "Steam tartalomlista előkészítése%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Frissítések keresése a Steames alkalmazáshoz%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Frissítések keresése a Steames játékokhoz%progress%"
@@ -2141,7 +2164,8 @@
 "Steam_ScanningForUpdates$appType=media"			"Frissítések keresése a Steames médiához%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Frissítések keresése a Steames zenei anyagokhoz%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Frissítések keresése a Steames kellékekhez%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Frissítések keresése a Steames licencekhez%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Frissítések keresése a Steames licencekhez%progress%"
+"Steam_ScanningForUpdates$appType"                  "Frissítések keresése a Steames tartalomhoz%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"Nincsenek megjeleníthető Steames alkalmazások."
 "SteamUI_NoGamesOfThisType$appType=game"	"Nincsenek megjeleníthető Steames játékok."
@@ -2149,6 +2173,7 @@
 "SteamUI_NoGamesOfThisType$appType=media"	"Nincsenek megjeleníthető Steames médiák."
 "SteamUI_NoGamesOfThisType$appType=music"	"Nincsenek megjeleníthető Steames zenei anyagok."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Nincsenek megjeleníthető Steames kellékek."
+"SteamUI_NoGamesOfThisType$appType"         "Nincsenek megjeleníthető Steames tartalmak."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Várj, amíg a Steam ellenőrzi az alkalmazás fájljait."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Várj, amíg a Steam ellenőrzi a játék fájljait."
@@ -2156,6 +2181,7 @@
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Várj, amíg a Steam ellenőrzi a médiafájlokat."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Várj, amíg a Steam ellenőrzi a zenei anyag fájljait."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Várj, amíg a Steam ellenőrzi a kellék fájljait."
+"Steam_ValidatingSteamCaches_Label$appType"         "Várj, amíg a Steam ellenőrzi a tartalomfájlokat."
 
 "Steam_ValidationResults_NoFailures"	"Az összes fájl ellenőrzése sikeres."
 "Steam_ValidationResults_OneFailure"	"1 fájl ellenőrzése sikertelen, ezért újra le lesz töltve."
@@ -2327,6 +2353,7 @@
 "Steam_FindContent$appType=media"			"Médiafájlok böngészése..."
 "Steam_FindContent$appType=music"			"Zenei anyagok böngészése..."
 "Steam_FindContent$appType=tool"			"Kellékek böngészése..."
+"Steam_FindContent$appType"                 "Tartalom böngészése..."
 
 "Steam_NoGamesOfThisType$appType=application"	"Nem találtunk semmit! Próbálkozz a keresőmező kiürítésével, vagy másik kategória választásával a fenti legördülő menüből."
 "Steam_NoGamesOfThisType$appType=game"	"Nem találtunk semmit! Próbálkozz a keresőmező kiürítésével, vagy másik kategória választásával a fenti legördülő menüből."
@@ -2335,6 +2362,7 @@
 "Steam_NoGamesOfThisType$appType=media"	"Nem találtunk semmit! Próbálj változtatni a fenti megjelenítési beállításokon, vagy <a href=steam://browsemedia>böngéssz</a> a Steam Áruház videói között."
 "Steam_NoGamesOfThisType$appType=music"	"Nem találtunk semmit! Próbálkozz a keresőmező kiürítésével, vagy másik kategória választásával a fenti legördülő menüből."
 "Steam_NoGamesOfThisType$appType=tool"	"Nem találtunk semmit! Próbálj változtatni a fenti megjelenítési beállításokon."
+"Steam_NoGamesOfThisType$appType"	    "Nem találtunk semmit! Próbálj változtatni a fenti megjelenítési beállításokon."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2393,12 +2421,13 @@
 "Steam_SystemRebootRequired_Info"		"A legutóbbi frissítésben lévő változások miatt ennek a játéknak a futtatásához újra kell indítani a gépet."
 "Steam_SystemRebootRequired_Button"	"Újraindítás most"
 
-"Steam_Game_Developer$appType=application"	"Fejlesztő"
-"Steam_Game_Developer$appType=game"	"Fejlesztő"
-"Steam_Game_Developer$appType=demo"	"Fejlesztő"
-"Steam_Game_Developer$appType=media"	"Gyártó"
-"Steam_Game_Developer$appType=music"	"Készítő"
-"Steam_Game_Developer$appType=tool"	"Fejlesztő"
+"Steam_Game_Developer$appType=application"  "Fejlesztő"
+"Steam_Game_Developer$appType=game"         "Fejlesztő"
+"Steam_Game_Developer$appType=demo"         "Fejlesztő"
+"Steam_Game_Developer$appType=media"        "Gyártó"
+"Steam_Game_Developer$appType=music"        "Készítő"
+"Steam_Game_Developer$appType=tool"         "Fejlesztő"
+"Steam_Game_Developer$appType"              "Tartalomkészítő"
 
 "Steam_Forums"				"Témák"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3695,6 +3724,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_details_lastpurchased$apptype=music"	"Zenei anyag megvásárolva:"
 "steam_details_lastpurchased$apptype=video"	"Videó megvásárolva:"
 "steam_details_lastpurchased$apptype=tool"	"Kellék megvásárolva:"
+"steam_details_lastpurchased$apptype"   "Megvásárolt tartalom:"
 "steam_details_addedtoaccount"	"Fiókhoz adva"
 "steam_details_totalplaytime_minutes" "%minutes% perc"
 "steam_details_totalplaytime_hours" "%hours% óra"
@@ -3752,6 +3782,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_welcome$apptype=shortcut"			"Parancsikon infó"
 "steam_welcome$apptype=tool"			"Kellékinformáció"
 "steam_welcome$apptype=demo"			"Demóinformáció"
+"steam_welcome$apptype"                 "Információ a tartalomról"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"DLC kezelése"
 "steam_finddlcinstore"		"További DLC-k keresése az Áruházban"
@@ -3779,8 +3810,9 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "steam_welcomeaction_launch$apptype=application" "A(z) %gamename% indításához kattints a fenti „Indítás” gombra."
 "steam_welcomeaction_launch$apptype=video" "A(z) %gamename% megnézéséhez kattints a fenti „Megnézés” gombra."
 "steam_welcomeaction_launch$apptype=shortcut" "A(z) %gamename% indításához kattints a fenti „Indítás” gombra."
-"steam_welcomeaction_launch$apptype=tool" "A(z) %gamename% indításához kattints a fenti „Játék” gombra."
-"steam_welcomeaction_launch$apptype=demo" "A(z) %gamename% indításához kattints a fenti „Játék” gombra."
+"steam_welcomeaction_launch$apptype=tool"   "A(z) %gamename% indításához kattints a fenti „Játék” gombra."
+"steam_welcomeaction_launch$apptype=demo"   "A(z) %gamename% indításához kattints a fenti „Játék” gombra."
+"steam_welcomeaction_launch$apptype"        "A(z) %gamename% indításához kattints a fenti „Játék” gombra."
 "steam_welcomeaction_install" "A(z) %gamename% telepítéséhez kattints a fenti Telepítés gombra."
 "steam_welcomeaction_preload" "A(z) %gamename% előtöltéséhez kattints a fenti Előtöltés gombra, így készen állsz majd a játékra, amint megjelenik."
 "steam_welcomeaction_comingsoon" "%gamename% hamarosan megjelenik."
@@ -3788,15 +3820,17 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "steam_welcomemessage_nofriends$apptype=game" "Hogy a(z) %gamename% játékkal játszókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, mivel játszanak barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
 "steam_welcomemessage_nofriends$apptype=application" "Hogy a(z) %gamename% alkalmazást használókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, milyen alkalmazásokat használnak barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
-"steam_welcomemessage_nofriends$apptype=tool" "Hogy a(z) %gamename% kelléket használókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, milyen kelléket használnak a barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
-"steam_welcomemessage_nofriends$apptype=video" "Hogy a(z) %gamename% videót nézőket találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, milyen videókat néznek barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
-"steam_welcomemessage_nofriends$apptype=demo" "Hogy a(z) %gamename% demóval játszókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, mely demókkal játszanak barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
+"steam_welcomemessage_nofriends$apptype=tool"   "Hogy a(z) %gamename% kelléket használókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, milyen kelléket használnak a barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
+"steam_welcomemessage_nofriends$apptype=video"  "Hogy a(z) %gamename% videót nézőket találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, milyen videókat néznek barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
+"steam_welcomemessage_nofriends$apptype=demo"   "Hogy a(z) %gamename% demóval játszókat találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, mely demókkal játszanak barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
+"steam_welcomemessage_nofriends$apptype"        "Hogy a(z) %gamename% tartalommal rendelkezőket találj, csatlakozz egy <a href=steam://url/CommunityGroupSearch/%encodedsearch%>kapcsolódó Steam közösségi csoporthoz</a>. Hogy lásd, mivel játszanak a barátaid, <a href=steam://friends/add/>adj barátot</a> Steames barátlistádhoz."
 
 "steam_welcomemessage_help$apptype=game"	"Ha technikai támogatásra van szükséged ehhez a játékhoz, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 "steam_welcomemessage_help$apptype=application"	"Ha technikai támogatásra van szükséged ehhez az alkalmazáshoz, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 "steam_welcomemessage_help$apptype=video"	"Ha technikai támogatásra van szükséged ehhez a videóhoz, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 "steam_welcomemessage_help$apptype=tool"	"Ha technikai támogatásra van szükséged ehhez a kellékhez, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 "steam_welcomemessage_help$apptype=demo"	"Ha technikai támogatásra van szükséged ehhez a demóhoz, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
+"steam_welcomemessage_help$apptype"         "Ha technikai támogatásra van szükséged ehhez a tartalomhoz, nézd meg a(z) <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam fórumokat</a>, vagy keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 
 "steam_welcomemessage_help_nostore"	"Ha technikai támogatásra van szükséged ehhez a játékhoz, keresd fel a <a href=http://support.steampowered.com/>Steam Támogatást</a>."
 
@@ -4785,7 +4819,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_XboxDriverInstall_Failure"	"Sikertelen illesztőprogram-frissítés, hiba = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Új játékvezérlő firmware érhető el"
-"Steam_DualSense_FirmwareUpdate_Text"	"Új firmware érhető el a DualSense™ vezeték nélküli játékvezérlődhöz. Kattints az alábbi hivatkozásra a Sony firmware-frissítési oldalának felkereséséhez:"
+"Steam_DualSense_FirmwareUpdate_Text"	"Új firmware érhető el a(z) %product% termékedhez. Kattints az alábbi hivatkozásra a Sony firmware-frissítési oldalának felkereséséhez:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Ezt ne mutassa többször"
 
 "DownloadRegion_default"				 "Ismeretlen"

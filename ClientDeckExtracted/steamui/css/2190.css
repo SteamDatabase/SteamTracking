@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: row;
   flex: 1;
+  padding-top: 10px;
 }
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_ZOBYq .newlogindialog_SideBySide_1Wl13 {
@@ -61,7 +62,7 @@
   flex: 0;
   display: grid;
   gap: 4px;
-  margin-left: 24px;
+  margin-left: 40px;
 }
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_ZOBYq .newlogindialog_QRSection_2ZDyS {
@@ -786,7 +787,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf.newlogindialog_InClient_2GR-7 {
-  padding-top: 8px;
+  padding-top: 0px;
 }
 @media screen and (max-width: 796px) {
   .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf {

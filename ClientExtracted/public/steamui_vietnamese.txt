@@ -189,15 +189,19 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"Bạn chưa đăng kí trò chơi này.\nBạn có muốn chuyển tới trang đăng kí?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Lỗi"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Khởi động"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Chơi trò chơi"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Khởi động lối tắt"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Chơi trò chơi"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"Cập nhật sau"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Chơi demo"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Khởi chạy công cụ"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Chơi"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Phát"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "Tiếp tục"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "Khởi động"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"Cập nhật sau"
 "SteamUI_JoinDialog_Cancel_Btn"		"Hủy"
 "SteamUI_JoinDialog_OverrideThrottle"	"Bỏ qua giới hạn băng thông hiện tại"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Bỏ qua cập nhật và chơi ngay"
@@ -212,11 +216,13 @@ Công đoạn này nên hoàn thành dưới một phút."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Chạy ứng dụng ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Chạy trò chơi ngay khi sẵn sàng"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"Chạy lối tắt ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Chạy trò chơi ngay khi sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Chạy demo ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Chạy công cụ ngay khi nó sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Phát nhạc ngay khi sẵn sàng"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Chạy media ngay khi nó sẵn sàng"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "Chạy ngay khi sẵn sàng"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "Thư viện trò chơi được chia sẻ"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Thư viện chia sẻ của bạn hiện đang được %borrower% dùng. Nếu bạn chơi ngay bây giờ thì %borrower% sẽ nhận được một thông báo yêu cầu thoát ra."
@@ -239,6 +245,8 @@ Công đoạn này nên hoàn thành dưới một phút."
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Đang đồng bộ Steam Cloud..."
 "SteamUI_JoinDialog_Connecting_Text" "Đang kết nối đến Steam..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% phút"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Đặt ảnh tự chọn"
 "SteamUI_SetCustomImage_ChooseImage" "Chọn ảnh đại diện cho %gamename% trong chế độ xem dạng lưới của Steam."
@@ -1892,6 +1900,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Game_AllowOtherDownloads$appType=demo"	"Cho phép Steam tải về những bản cập nhật khác trong khi demo này đang chạy."
 "Steam_Game_AllowOtherDownloads$appType=media"	"Cho phép Steam tải về những bản cập nhật khác trong khi media này đang chạy."
 "Steam_Game_AllowOtherDownloads$appType=music"	"Cho phép Steam tải về những bản cập nhật khác trong khi media này đang phát."
+"Steam_Game_AllowOtherDownloads$appType"        "Cho phép Steam tải về những bản cập nhật khác trong khi đang chạy"
 "Steam_Game_AvailableSeats"					"Sản phẩm này hiện còn %seats% bản sao sẵn sàng cho mượn"
 "Steam_Game_AvailableSeatsUnlimited"		"Sản phẩm này không có giới hạn về số bản sao cho mượn"
 
@@ -2030,6 +2039,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Luôn đảm bảo tệp media này được cập nhật"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Luôn đảm bảo bản nhạc này được cập nhật"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Luôn đảm bảo công cụ này được cập nhật"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Luôn đảm bảo các file được cập nhật"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Chỉ cập nhật ứng dụng này khi tôi khởi động nó"
 "Steam_DoNotUpdateThisGame$appType=game"			"Chỉ cập nhật trò chơi này khi tôi khởi động nó"
@@ -2037,6 +2047,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DoNotUpdateThisGame$appType=media"			"Chỉ cập nhật media này khi tôi khởi động nó"
 "Steam_DoNotUpdateThisGame$appType=music"			"Đừng tự động cập nhật bản nhạc này"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Chỉ cập nhật công cụ này khi tôi khởi động nó"
+"Steam_DoNotUpdateThisGame$appType"                 "Chỉ cập nhật khi tôi khởi động nó"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Ưu tiên cao - Luôn luôn tự động cập nhật ứng dụng này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Ưu tiên cao - Luôn luôn tự động cập nhật trò chơi này trước"
@@ -2044,6 +2055,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Ưu tiên cao - Luôn luôn tự động cập nhật media này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Ưu tiên cao - Luôn luôn tự động cập nhật bản nhạc này trước"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Ưu tiên cao - Luôn luôn tự động cập nhật công cụ này trước"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "Ưu tiên cao - Luôn luôn tự động cập nhật các file này trước"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Ứng dụng này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Trò chơi này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
@@ -2051,6 +2063,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "Media này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "Nhạc phẩm này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"Công cụ này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "Nội dung này sẽ được tự động tải xuống ngay khi ra mắt."
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"Chỉ cập nhật nội dung cho ứng dụng này khi chạy nó."
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"Chỉ cập nhật nội dung cho trò chơi này khi chạy nó."
@@ -2058,15 +2071,17 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Chỉ cập nhật nội dung cho media này khi chạy nó."
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"Đừng tự động cập nhật bản nhạc này."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Chỉ cập nhật nội dung cho công cụ này khi chạy nó."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "Chỉ cập nhật nội dung khi khởi động file này."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Tải xuống ngầm"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"Trong khi chơi %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "Trong khi chơi %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"Trong khi sử dụng %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"Trong khi chơi %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"Trong khi phát %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"Trong khi phát %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"Trong khi sử dụng %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "Trong khi chơi %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "Trong khi phát %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "Trong khi phát %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Trong khi sử dụng %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Trong khi sử dụng %game%, Steam có được phép tải xuống trò chơi hoặc ứng dụng khác không?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Theo cài đặt chung của tôi (cho phép tải xuống ngầm)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Theo cài đặt chung của tôi (dừng tải xuống ngầm)"
@@ -2093,6 +2108,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Controller_Support_None" "Không"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Tải xuống ngầm trong khi chơi trò chơi này"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "Tải xuống ngầm trong khi chạy"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"Ứng dụng này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên ứng dụng này hơn các yêu cầu tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Trò chơi này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên trò chơi này hơn các bản tải về khác."
@@ -2100,6 +2116,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Media này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên media này trước các yêu cầu tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Bản nhạc này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên nó hơn các yêu cầu tải về khác."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Công cụ này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên công cụ này hơn các bản tải về khác."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Nội dung này và các bản cập nhật của nó sẽ được tự động tải xuống ngay khi ra mắt. Steam sẽ ưu tiên công cụ này hơn các bản tải về khác."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Kiểm tra lại dữ liệu ứng dụng..."
 "Steam_Game_VerifyGameFiles$appType=game"				"Kiểm tra lại dữ liệu trò chơi..."
@@ -2107,6 +2124,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Game_VerifyGameFiles$appType=media"				"Kiểm tra lại dữ liệu của media..."
 "Steam_Game_VerifyGameFiles$appType=music"				"Kiểm tra lại dữ liệu của tệp..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"Kiểm tra lại dữ liệu công cụ..."
+"Steam_Game_VerifyGameFiles$appType"				    "Kiểm tra lại dữ liệu nội dung..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"Gỡ cài đặt ứng dụng..."
 "Steam_DeleteLocalGameContent$appType=game"		"Gỡ cài đặt trò chơi..."
@@ -2114,6 +2132,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_DeleteLocalGameContent$appType=media"	"Gỡ cài đặt media..."
 "Steam_DeleteLocalGameContent$appType=music"	"Gỡ cài đặt bản nhạc..."
 "Steam_DeleteLocalGameContent$appType=tool"		"Gỡ cài đặt công cụ..."
+"Steam_DeleteLocalGameContent$appType"          "Bỏ cài đặt nội dung..."
 
 "Steam_BackupGameFiles$appType=application"		"Sao lưu các tệp ứng dụng..."
 "Steam_BackupGameFiles$appType=game"			"Sao lưu tệp trò chơi..."
@@ -2121,13 +2140,15 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_BackupGameFiles$appType=media"			"Sao lưu các tệp media..."
 "Steam_BackupGameFiles$appType=music"			"Sao lưu tệp bản nhạc..."
 "Steam_BackupGameFiles$appType=tool"			"Sao lưu các tệp công cụ..."
+"Steam_BackupGameFiles$appType"                 "Sao lưu nội dung..."
 
-"Steam_Install_WillDownloadAllFiles$appType=application"	"Mọi tệp cho ứng dụng này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=game"	"Mọi tệp cho trò chơi này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=demo"	"Mọi tệp cho demo này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=media"	"Mọi tệp cho media này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=music"	"Mọi tệp cho bản nhạc này giờ đây sẽ được tải qua Steam."
-"Steam_Install_WillDownloadAllFiles$appType=tool"	"Mọi tệp cho công cụ này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=application"	"Tất cả file cho ứng dụng này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=game"	"Tất cả file cho trò chơi này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=demo"	"Tất cả file cho demo này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=media"	"Tất cả file cho media này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=music"	"Tất cả file cho bản nhạc này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType=tool"	"Tất cả file cho công cụ này giờ đây sẽ được tải qua Steam."
+"Steam_Install_WillDownloadAllFiles$appType"        "Tất cả file cho nội dung này giờ đây sẽ được tải qua Steam."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Đang tạo các tệp của ứng dụng tại máy..."
 "Steam_Install_StartCacheLoading$appType=game"		"Đang tạo các tệp của trò chơi tại máy..."
@@ -2135,6 +2156,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Install_StartCacheLoading$appType=media"		"Đang tạo các tệp của media tại máy..."
 "Steam_Install_StartCacheLoading$appType=music"		"Đang tạo các tệp trên máy..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Đang tạo các tệp của công cụ tại máy..."
+"Steam_Install_StartCacheLoading$appType"		     "Đang tạo file nội dung tại máy..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Đang chuẩn bị danh sách ứng dụng Steam%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Đang chuẩn bị danh sách trò chơi Steam%progress%"
@@ -2142,7 +2164,8 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_PreparingGamesList$appType=media" 			"Đang chuẩn bị danh sách media Steam%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Đang chuẩn bị danh sách bản nhạc Steam%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Đang chuẩn bị danh sách công cụ Steam%progress%"
-"Steam_PreparingGamesList$appType=license"		"Đang chuẩn bị danh sách giấy phép Steam%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Đang chuẩn bị danh sách giấy phép Steam%progress%"
+"Steam_PreparingGamesList$appType"                  "Đang chuẩn bị danh sách nội dung Steam%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Đang quét cập nhật cho ứng dụng Steam%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Đang quét cập nhật cho trò chơi Steam%progress%"
@@ -2150,7 +2173,8 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ScanningForUpdates$appType=media"			"Đang quét cập nhật cho media Steam%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Đang quét cập nhật cho bản nhạc Steam%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Đang quét cập nhật cho công cụ Steam%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Đang quét cập nhật cho giấy phép Steam%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Đang quét cập nhật cho giấy phép Steam%progress%"
+"Steam_ScanningForUpdates$appType"                  "Đang quét cập nhật cho nội dung Steam%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"Không có ứng dụng Steam để hiện thị."
 "SteamUI_NoGamesOfThisType$appType=game"	"Không có trò chơi Steam để hiển thị."
@@ -2158,6 +2182,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_NoGamesOfThisType$appType=media"	"Không có media Steam để hiển thị."
 "SteamUI_NoGamesOfThisType$appType=music"	"Không có bản nhạc Steam để hiển thị."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Không có công cụ Steam để hiển thị."
+"SteamUI_NoGamesOfThisType$appType"         "Không có nội dung Steam để hiển thị."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Xin vui lòng đợi trong khi Steam xác thực các tệp ứng dụng."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Xin vui lòng đợi trong khi Steam xác thực các tệp trò chơi."
@@ -2165,6 +2190,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Xin vui lòng đợi trong khi Steam xác thực các tệp media."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Xin vui lòng đợi trong khi Steam xác thực các tệp nhạc."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Xin vui lòng đợi trong khi Steam xác thực các tệp công cụ."
+"Steam_ValidatingSteamCaches_Label$appType"         "Xin vui lòng đợi trong khi Steam xác thực các file nội dung."
 
 "Steam_ValidationResults_NoFailures"	"Tất cả các file được xác thực thành công."
 "Steam_ValidationResults_OneFailure"	"1 file xác thực thất bại và sẽ được tải lại."
@@ -2336,6 +2362,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_FindContent$appType=media"			"Duyệt media..."
 "Steam_FindContent$appType=music"			"Mở thư mục nhạc..."
 "Steam_FindContent$appType=tool"			"Duyệt công cụ..."
+"Steam_FindContent$appType"                 "Duyệt tìm nội dung..."
 
 "Steam_NoGamesOfThisType$appType=application"	"Chúng tôi không tìm thấy kết quả nào! Hãy thử xóa ô tìm kiếm của bạn hoặc chọn một hạng mục khác từ danh sách thả xuống ở bên trên."
 "Steam_NoGamesOfThisType$appType=game"	"Chúng tôi không tìm thấy kết quả nào! Hãy thử xóa ô tìm kiếm của bạn hoặc chọn một hạng mục khác từ danh sách thả xuống ở bên trên."
@@ -2344,6 +2371,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_NoGamesOfThisType$appType=media"	"Chúng tôi không tìm thấy kết quả nào! Hãy thử thay đổi bộ lọc hiển thị phía trên, hoặc <a href=steam://browsemedia>duyệt các video có sẵn</a> trong cửa hàng Steam."
 "Steam_NoGamesOfThisType$appType=music"	"Chúng tôi không tìm thấy kết quả nào! Hãy thử xóa ô tìm kiếm của bạn hoặc chọn một hạng mục khác từ danh sách thả xuống ở bên trên."
 "Steam_NoGamesOfThisType$appType=tool"	"Chúng tôi không tìm thấy kết quả nào! Hãy thử thay đổi bộ lọc hiển thị ở phía trên."
+"Steam_NoGamesOfThisType$appType"	    "Chúng tôi không tìm thấy kết quả nào! Hãy thử thay đổi bộ lọc hiển thị ở phía trên."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2402,12 +2430,13 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_SystemRebootRequired_Info"		"Vì một số thay đổi trong lần cập nhật gần đây, hệ thống của bạn cần phải khởi động lại để chạy trò chơi này."
 "Steam_SystemRebootRequired_Button"	"Khởi động lại ngay"
 
-"Steam_Game_Developer$appType=application"	"Nhà phát triển"
-"Steam_Game_Developer$appType=game"	"Nhà phát triển"
-"Steam_Game_Developer$appType=demo"	"Nhà phát triển"
-"Steam_Game_Developer$appType=media"	"Nhà sản xuất"
-"Steam_Game_Developer$appType=music"	"Nhà sản xuất"
-"Steam_Game_Developer$appType=tool"	"Nhà phát triển"
+"Steam_Game_Developer$appType=application"  "Nhà phát triển"
+"Steam_Game_Developer$appType=game"         "Nhà phát triển"
+"Steam_Game_Developer$appType=demo"         "Nhà phát triển"
+"Steam_Game_Developer$appType=media"        "Nhà sản xuất"
+"Steam_Game_Developer$appType=music"        "Nhà sản xuất"
+"Steam_Game_Developer$appType=tool"         "Nhà phát triển"
+"Steam_Game_Developer$appType"              "Người sáng tạo nội dung"
 
 "Steam_Forums"				"Thảo luận"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3718,6 +3747,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_details_lastpurchased$apptype=music"	"Đã mua vào"
 "steam_details_lastpurchased$apptype=video"	"Đã mua vào"
 "steam_details_lastpurchased$apptype=tool"	"Đã mua vào"
+"steam_details_lastpurchased$apptype"   "Nội dung đã mua"
 "steam_details_addedtoaccount"	"Đã thêm vào tài khoản"
 "steam_details_totalplaytime_minutes" "%minutes% phút"
 "steam_details_totalplaytime_hours" "%hours% giờ"
@@ -3775,6 +3805,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_welcome$apptype=shortcut"			"Thông tin lối tắt"
 "steam_welcome$apptype=tool"			"Thông tin công cụ"
 "steam_welcome$apptype=demo"			"Thông tin demo"
+"steam_welcome$apptype"                 "Thông tin nội dung"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"Quản lý DLC"
 "steam_finddlcinstore"		"Tìm thêm DLC trong cửa hàng"
@@ -3802,8 +3833,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_welcomeaction_launch$apptype=application" "Để chạy %gamename%, nhấp chuột vào nút Chơi ở trên."
 "steam_welcomeaction_launch$apptype=video" "Để xem %gamename%, nhấp chuột vào nút xem ở trên."
 "steam_welcomeaction_launch$apptype=shortcut" "Để khởi động %gamename%, hãy bấm nút \"Chơi\" ở phía trên."
-"steam_welcomeaction_launch$apptype=tool" "Để chạy %gamename%, nhấp vào nút chơi phía trên."
-"steam_welcomeaction_launch$apptype=demo" "Để chạy %gamename%, nhấp chuột vào nút Chơi ở trên."
+"steam_welcomeaction_launch$apptype=tool"   "Để chạy %gamename%, nhấp vào nút chơi phía trên."
+"steam_welcomeaction_launch$apptype=demo"   "Để chạy %gamename%, nhấp chuột vào nút Chơi ở trên."
+"steam_welcomeaction_launch$apptype"        "Để khởi động %gamename%, hãy bấm nút \"Chơi\" ở phía trên."
 "steam_welcomeaction_install" "Để cài đặt %gamename%, bấm vào nút cài đặt ở trên."
 "steam_welcomeaction_preload" "Nếu bạn muốn tải trước %gamename% để có thể sẵn sàng chơi ngay khi nó được phát hành, hãy bấm nút tải trước ở trên."
 "steam_welcomeaction_comingsoon" "%gamename% sẽ sớm ra mắt."
@@ -3811,15 +3843,17 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "steam_welcomemessage_nofriends$apptype=game" "Để tìm những người cũng chơi %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của mình đang chơi gì, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
 "steam_welcomemessage_nofriends$apptype=application" "Để tìm những người cũng dùng %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của mình đang dùng ứng dụng nào, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
-"steam_welcomemessage_nofriends$apptype=tool" "Để tìm những người cũng dùng %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của mình đang dùng công cụ nào, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
-"steam_welcomemessage_nofriends$apptype=video" "Để tìm những người cũng xem %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của bạn đang xem video nào, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
-"steam_welcomemessage_nofriends$apptype=demo" "Để tìm những người cũng dùng %gamename%, hãy tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam liên quan</a>. Để xem bạn bè của mình đang dùng demo nào, hãy <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
+"steam_welcomemessage_nofriends$apptype=tool"   "Để tìm những người cũng dùng %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của mình đang dùng công cụ nào, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
+"steam_welcomemessage_nofriends$apptype=video"  "Để tìm những người cũng xem %gamename%, tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam có liên quan</a>. Để xem bạn bè của bạn đang xem video nào, <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
+"steam_welcomemessage_nofriends$apptype=demo"   "Để tìm những người cũng dùng %gamename%, hãy tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>một nhóm cộng đồng Steam liên quan</a>. Để xem bạn bè của mình đang dùng demo nào, hãy <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
+"steam_welcomemessage_nofriends$apptype"        "Để tìm những người cũng có %gamename%, hãy tham gia <a href=steam://url/CommunityGroupSearch/%encodedsearch%>nhóm cộng đồng Steam liên quan</a>. Để xem bạn bè của mình đang chơi demo nào, hãy <a href=steam://friends/add/>thêm một người bạn</a> vào danh sách bạn bè Steam."
 
 "steam_welcomemessage_help$apptype=game"	"Nếu bạn cần hỗ trợ kỹ thuật với trò chơi này, tham khảo <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam %gamename%</a> hoặc thăm <a href=http://support.steampowered.com/>trang hỗ trợ Steam</a>."
 "steam_welcomemessage_help$apptype=application"	"Nếu bạn cần hỗ trợ kỹ thuật với ứng dụng này, kiểm tra <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam %gamename%</a> hoặc thăm <a href=http://support.steampowered.com/>hỗ trợ Steam</a>."
 "steam_welcomemessage_help$apptype=video"	"Nếu bạn cần hỗ trợ kỹ thuật với video này, kiểm tra <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam %gamename%</a> hoặc thăm <a href=http://support.steampowered.com/>trang hỗ trợ Steam</a>."
 "steam_welcomemessage_help$apptype=tool"	"Nếu bạn cần hỗ trợ kỹ thuật với công cụ này, hãy tham khảo <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam %gamename%</a> hoặc <a href=http://support.steampowered.com/>trang hỗ trợ Steam</a>."
 "steam_welcomemessage_help$apptype=demo"	"Nếu bạn cần hỗ trợ kỹ thuật với demo này, hãy xem trên <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam %gamename%</a> hoặc truy cập <a href=http://support.steampowered.com/>trang hỗ trợ Steam</a>."
+"steam_welcomemessage_help$apptype"         "Nếu bạn cần hỗ trợ kỹ thuật với nội dung này, tham khảo <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>diễn đàn Steam cho %gamename%</a> hoặc vào <a href=http://support.steampowered.com/>trang hỗ trợ Steam</a>."
 
 "steam_welcomemessage_help_nostore"	"Nếu bạn cần hỗ trợ kĩ thuật trò chơi này, hãy truy cập vào <a href=http://support.steampowered.com/>Steam Support</a>."
 
@@ -4809,7 +4843,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_XboxDriverInstall_Failure"	"Không thể cập nhật driver, lỗi = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Bản cập nhật firmware mới cho tay cầm đã sẵn sàng"
-"Steam_DualSense_FirmwareUpdate_Text"	"Đã có firmware mới cho tay cầm không dây DualSense™. Nhấp vào liên kết bên dưới để đến trang cập nhật firmware của Sony:"
+"Steam_DualSense_FirmwareUpdate_Text"	"Đã có firmware mới cho %product%. Nhấp vào liên kết bên dưới để đến trang cập nhật firmware của Sony:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Không hiện lần sau"
 
 "DownloadRegion_default"				 "Không rõ"

@@ -660,7 +660,7 @@ message CPlayer_GetNewSteamAnnouncementState_Request {
 }
 
 message CPlayer_GetNewSteamAnnouncementState_Response {
-	optional int32 state = 1;
+	optional .ENewSteamAnnouncementState state = 1 [default = k_ENewSteamAnnouncementState_Invalid];
 	optional string announcement_headline = 2;
 	optional string announcement_url = 3;
 	optional uint32 time_posted = 4;
@@ -721,7 +721,7 @@ message CPlayer_FriendEquippedProfileItemsChanged_Notification {
 }
 
 message CPlayer_NewSteamAnnouncementState_Notification {
-	optional int32 state = 1;
+	optional .ENewSteamAnnouncementState state = 1 [default = k_ENewSteamAnnouncementState_Invalid];
 	optional string announcement_headline = 2;
 	optional string announcement_url = 3;
 	optional uint32 time_posted = 4;

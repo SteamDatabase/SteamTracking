@@ -192,15 +192,19 @@ Bu işlem bir dakikadan az sürer."
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"Bu oyuna abone olmamışsınız.\nAbonelikler sayfasına gitmek ister misiniz?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - Hata"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Başlat"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Oyunu oyna"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Kısayolu Başlat"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Oyunu başlat"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"Sonra güncelle"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Demoyu oyna"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Aracı başlat"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Yürüt"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Oynat"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "Devam et"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "Başlat"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"Sonra güncelle"
 "SteamUI_JoinDialog_Cancel_Btn"		"İptal"
 "SteamUI_JoinDialog_OverrideThrottle"	"Mevcut ağ limitini yok say"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Güncellemeyi atla ve şimdi oyna"
@@ -215,11 +219,13 @@ Bu işlem bir dakikadan az sürer."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Hazır olduğunda uygulamayı başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Hazır olduğunda oyunu başlat"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"Hazır olduğunda kısayolu başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Hazır olduğunda oyunu başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Hazır olduğunda demoyu başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Hazır olduğunda aracı başlat"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Hazır olduğunda albümü yürüt"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Hazır olduğunda medyayı yürüt"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "Hazır olduğunda başlat"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "Paylaşılan oyun kütüphanesi"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Paylaşılan kütüphaneniz şu anda %borrower% tarafından kullanımda.
@@ -243,6 +249,8 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Steam Cloud'la senkronize ediliyor..."
 "SteamUI_JoinDialog_Connecting_Text" "Steam'e bağlanılıyor..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% dakika"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Özel Resim Ekle"
 "SteamUI_SetCustomImage_ChooseImage" "Steam'in tablo görünümünde %gamename% oyununu gösterecek bir resim seçin."
@@ -1895,6 +1903,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Game_AllowOtherDownloads$appType=demo"	"Bu demo çalışırken Steam'in diğer güncellemeleri indirmesine izin ver"
 "Steam_Game_AllowOtherDownloads$appType=media"	"Bu yayın çalışırken Steam'in diğer güncellemeleri indirmesine izin ver"
 "Steam_Game_AllowOtherDownloads$appType=music"	"Bu medya çalışırken Steam'in diğer güncellemeleri indirmesine izin ver"
+"Steam_Game_AllowOtherDownloads$appType"        "Bu çalışırken Steam'in diğer güncellemeleri indirmesine izin ver"
 "Steam_Game_AvailableSeats"					"Bu ürünün şu anda ödünç alınabilecek %seats% kopyası bulunmaktadır"
 "Steam_Game_AvailableSeatsUnlimited"		"Bu ürünün sınırsız sayıda ödünç alınabilecek kopyası bulunmaktadır"
 
@@ -2033,6 +2042,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Bu medyayı hep güncel tut"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Bu albümü hep güncel tut"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Bu aracı hep güncel tut"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Bunu hep güncel tut"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Bu uygulamayı sadece çalıştırdığımda güncelle"
 "Steam_DoNotUpdateThisGame$appType=game"			"Bu oyunu sadece çalıştırdığımda güncelleştir"
@@ -2040,6 +2050,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_DoNotUpdateThisGame$appType=media"			"Bu medyayı sadece çalıştırdığımda güncelleştir"
 "Steam_DoNotUpdateThisGame$appType=music"			"Bu albümü otomatik olarak güncelleme"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Bu aracı sadece çalıştırdığımda güncelleştir"
+"Steam_DoNotUpdateThisGame$appType"                 "Bunu sadece çalıştırdığımda güncelle"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Öncelikli - Bu uygulamayı her zaman diğerlerinden önce güncelle"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Öncelikli - Bu oyunu her zaman diğerlerinden önce güncelle"
@@ -2047,6 +2058,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Öncelikli - Bu yayını her zaman diğerlerinden önce güncelle"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Öncelikli - Bu albümü her zaman diğerlerinden önce güncelle"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Öncelikli - Bu aracı her zaman diğerlerinden önce güncelle"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "Öncelikli - Bunu her zaman diğerlerinden önce güncelle"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Bu uygulama ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Bu oyun ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir."
@@ -2054,6 +2066,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "Bu medya ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "Bu albümü ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"Bu araç ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "Bu içerik her mümkün olduğunda otomatik olarak indirilecektir."
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"Bu uygulama için güncellemeler sadece uygulama başladığında indirilecektir."
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"Bu oyun için güncellemeler sadece oyun başladığında indirilecektir."
@@ -2061,15 +2074,17 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Bu medya için güncellemeler sadece medya başladığında indirilecektir"
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"Bu albümü otomatik olarak güncelleme."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Bu araç için güncellemeler sadece araç başladığında indirilecektir."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "Bunun için güncellemeler sadece başlatıldığında indirilecektir."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Arka plan indirmeleri"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"%game% oynarken, Steam, diğer oyun veya uygulamaları indirsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "%game% oynarken, Steam, diğer oyun veya uygulamaları indirsin mi?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"%game% kullanırken, Steam, diğer oyun veya uygulamaları indirsin mi?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"%game% oynarken, Steam, diğer oyun veya uygulamaları indirsin mi?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"%game% oynatırken, Steam, diğer oyun veya uygulamaları indirsin mi?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"%game% oynatılırken Steam diğer oyun veya uygulamaları indirebilsin mi?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"%game% kullanırken, Steam, diğer oyun veya uygulamaları indirsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "%game% oynarken, Steam, diğer oyun veya uygulamaları indirsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "%game% oynatırken, Steam, diğer oyun veya uygulamaları indirsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "%game% oynatılırken Steam diğer oyun veya uygulamaları indirebilsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "%game% kullanırken, Steam, diğer oyun veya uygulamaları indirsin mi?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "%game% kullanırken, Steam diğer oyun veya uygulamaları indirsin mi?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Genel ayarlarımı uygula (arka plan indirmelerine izin ver)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Genel ayarlarımı uygula (arka plan indirmelerini durdur)"
@@ -2096,6 +2111,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Controller_Support_None" "Hiçbiri"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Bu oyunu oynarken arka plan indirmeleri"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "Bunu oynarken arka plan indirmeleri"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"Bu uygulama ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu uygulamaya öncelik verecektir."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Bu oyun ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu oyuna öncelik verecektir."
@@ -2103,6 +2119,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Bu medya ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu medyaya öncelik verecektir."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Bu albüm ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu medyaya öncelik verecektir."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Bu araç ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu araca öncelik verecektir."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Bu içerik ve güncellemeleri mümkün olduğunda otomatik olarak indirilecektir. Steam diğer bütün indirmelerin üzerinde bu araca öncelik verecektir."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Uygulama dosyalarının bütünlüğünü doğrula..."
 "Steam_Game_VerifyGameFiles$appType=game"				"Oyun dosyalarının bütünlüğünü doğrula..."
@@ -2110,6 +2127,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Game_VerifyGameFiles$appType=media"				"Medya dosyalarının bütünlüğünü doğrula..."
 "Steam_Game_VerifyGameFiles$appType=music"				"Dosyaların bütünlüğünü doğrula..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"Araç dosyalarının bütünlüğünü doğrula..."
+"Steam_Game_VerifyGameFiles$appType"				    "İçeriğin bütünlüğünü doğrula..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"Uygulamayı kaldır..."
 "Steam_DeleteLocalGameContent$appType=game"		"Oyunu kaldır..."
@@ -2117,6 +2135,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_DeleteLocalGameContent$appType=media"	"Medyayı kaldır..."
 "Steam_DeleteLocalGameContent$appType=music"	"Albümü kaldır..."
 "Steam_DeleteLocalGameContent$appType=tool"		"Aracı kaldır..."
+"Steam_DeleteLocalGameContent$appType"          "İçeriği kaldır..."
 
 "Steam_BackupGameFiles$appType=application"		"UYGULAMA DOSYALARINI YEDEKLE..."
 "Steam_BackupGameFiles$appType=game"			"OYUN DOSYALARINI YEDEKLE..."
@@ -2124,6 +2143,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_BackupGameFiles$appType=media"			"Medya dosyalarını yedekle..."
 "Steam_BackupGameFiles$appType=music"			"Albüm dosyalarını yedekle..."
 "Steam_BackupGameFiles$appType=tool"			"ARAÇ DOSYALARINI YEDEKLE..."
+"Steam_BackupGameFiles$appType"                 "İçeriği yedekle..."
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Bu uygulama için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Bu oyun için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
@@ -2131,6 +2151,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Bu medya için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Bu albüm için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"Bu araç için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
+"Steam_Install_WillDownloadAllFiles$appType"        "Bu içerik için gerekli olan tüm dosyalar Steam üzerinden indirilecektir."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Yerel uygulama dosyaları oluşturuluyor..."
 "Steam_Install_StartCacheLoading$appType=game"		"Yerel oyun dosyaları oluşturuluyor..."
@@ -2138,6 +2159,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_Install_StartCacheLoading$appType=media"		"Yerel medya dosyaları oluşturuluyor..."
 "Steam_Install_StartCacheLoading$appType=music"		"Yerel dosyalar oluşturuluyor..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Yerel araç dosyaları oluşturuluyor..."
+"Steam_Install_StartCacheLoading$appType"		     "Yerel içerik dosyaları oluşturuluyor..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Steam uygulama listesi hazırlanıyor%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Steam oyun listesi hazırlanıyor%progress%"
@@ -2145,7 +2167,8 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_PreparingGamesList$appType=media" 			"Steam medya listesi hazırlanıyor%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Steam albüm listesi hazırlanıyor%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Steam araç listesi hazırlanıyor%progress%"
-"Steam_PreparingGamesList$appType=license"		"Steam lisans listesi hazırlanıyor%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Steam lisans listesi hazırlanıyor%progress%"
+"Steam_PreparingGamesList$appType"                  "Steam içeriği listesi hazırlanıyor%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Steam uygulama güncellemeleri denetleniyor%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Steam oyun güncellemeleri denetleniyor%progress%"
@@ -2153,7 +2176,8 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_ScanningForUpdates$appType=media"			"Steam medya güncellemelerini tarıyor%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Steam albüm güncellemeleri denetleniyor%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Steam araç güncellemeleri denetleniyor%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Steam lisans güncellemeleri denetleniyor%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Steam lisans güncellemeleri denetleniyor%progress%"
+"Steam_ScanningForUpdates$appType"                  "Steam içerik güncellemeleri denetleniyor%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"Gösterilecek Steam uygulaması yok."
 "SteamUI_NoGamesOfThisType$appType=game"	"Gösterilecek Steam oyunu yok."
@@ -2161,6 +2185,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "SteamUI_NoGamesOfThisType$appType=media"	"Gösterilecek Steam medyası yok."
 "SteamUI_NoGamesOfThisType$appType=music"	"Gösterilecek Steam albümü yok."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Gösterilecek Steam aracı yok."
+"SteamUI_NoGamesOfThisType$appType"         "Gösterilecek Steam içeriği yok."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Steam uygulama dosyalarını doğrularken lütfen bekleyin."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Steam oyun dosyalarını doğrularken lütfen bekleyin."
@@ -2168,6 +2193,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Steam, medya dosyalarını doğrularken lütfen bekleyin."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Steam albüm dosyalarını doğrularken lütfen bekleyin."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Steam araç dosyalarını doğrularken lütfen bekleyin."
+"Steam_ValidatingSteamCaches_Label$appType"         "Steam içerik dosyalarını doğrularken lütfen bekleyin."
 
 "Steam_ValidationResults_NoFailures"	"Tüm dosyalar başarıyla doğrulandı."
 "Steam_ValidationResults_OneFailure"	"1 dosya doğrulanmadı ve yeniden indirilecek."
@@ -2339,6 +2365,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_FindContent$appType=media"			"Medyalara göz at..."
 "Steam_FindContent$appType=music"			"Albümlere göz at..."
 "Steam_FindContent$appType=tool"			"Araçlara göz at..."
+"Steam_FindContent$appType"                 "İçeriğe göz at..."
 
 "Steam_NoGamesOfThisType$appType=application"	"Aradığınızı bulamadık! Arama alanınızı temizlemeyi veya yukarıdaki açılır listeden başka bir kategori seçmeyi deneyin."
 "Steam_NoGamesOfThisType$appType=game"	"Aradığınızı bulamadık! Arama alanınızı temizlemeyi veya yukarıdaki açılır listeden başka bir kategori seçmeyi deneyin."
@@ -2347,6 +2374,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_NoGamesOfThisType$appType=media"	"Aradığınızı bulamadık! Yukarıdan görünüm filtrenizi değiştirmeyi deneyin veya Steam mağazasındaki <a href=steam://browsemedia>videolara göz atın</a>."
 "Steam_NoGamesOfThisType$appType=music"	"Aradığınızı bulamadık! Arama alanınızı temizlemeyi veya yukarıdaki açılır listeden başka bir kategori seçmeyi deneyin."
 "Steam_NoGamesOfThisType$appType=tool"	"Aradığınızı bulamadık! Yukarıdan görünüm filtrenizi değiştirmeyi deneyin."
+"Steam_NoGamesOfThisType$appType"	    "Aradığınızı bulamadık! Yukarıdan görünüm filtrenizi değiştirmeyi deneyin."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2405,12 +2433,13 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_SystemRebootRequired_Info"		"Güncelleme değişikliklerinin etkili olabilmesi için, sisteminizi yeniden başlattıktan sonra bu oyunu başlatın."
 "Steam_SystemRebootRequired_Button"	"Yeniden Başlat"
 
-"Steam_Game_Developer$appType=application"	"Geliştirici"
-"Steam_Game_Developer$appType=game"	"Yapımcı"
-"Steam_Game_Developer$appType=demo"	"Geliştirici"
-"Steam_Game_Developer$appType=media"	"Yayıncı"
-"Steam_Game_Developer$appType=music"	"Yapımcı"
-"Steam_Game_Developer$appType=tool"	"Yapımcı"
+"Steam_Game_Developer$appType=application"  "Geliştirici"
+"Steam_Game_Developer$appType=game"         "Yapımcı"
+"Steam_Game_Developer$appType=demo"         "Geliştirici"
+"Steam_Game_Developer$appType=media"        "Yayıncı"
+"Steam_Game_Developer$appType=music"        "Yapımcı"
+"Steam_Game_Developer$appType=tool"         "Yapımcı"
+"Steam_Game_Developer$appType"              "İçerik Yaratıcısı"
 
 "Steam_Forums"				"Tartışmalar"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3720,6 +3749,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_details_lastpurchased$apptype=music"	"Albüm satın alındı"
 "steam_details_lastpurchased$apptype=video"	"Video alındı"
 "steam_details_lastpurchased$apptype=tool"	"Araç satın alındı"
+"steam_details_lastpurchased$apptype"   "İçerik alındı"
 "steam_details_addedtoaccount"	"Hesaba eklendi"
 "steam_details_totalplaytime_minutes" "%minutes% dakika"
 "steam_details_totalplaytime_hours" "%hours% saat"
@@ -3777,6 +3807,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_welcome$apptype=shortcut"			"Kısayol Bilgisi"
 "steam_welcome$apptype=tool"			"Araç Bilgisi"
 "steam_welcome$apptype=demo"			"Demo Bilgisi"
+"steam_welcome$apptype"                 "İçerik Bilgileri"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"DLC'leri düzenle"
 "steam_finddlcinstore"		"Mağazada Daha Fazla DLC Bulun"
@@ -3804,8 +3835,9 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_welcomeaction_launch$apptype=application" "%gamename% uygulamasını başlatmak için yukarıdaki Oyna düğmesine tıklayın."
 "steam_welcomeaction_launch$apptype=video" "%gamename% videosunu izlemek için yukarıdaki izle düğmesine tıklayın."
 "steam_welcomeaction_launch$apptype=shortcut" "%gamename% oyununu başlatmak için, yukarıdaki Oyna düğmesine tıklayın."
-"steam_welcomeaction_launch$apptype=tool" "%gamename% oyununu başlatmak için yukarıdaki Oyna butonuna tıklayın."
-"steam_welcomeaction_launch$apptype=demo" "%gamename% oyununu başlatmak için yukarıdaki Oyna butonuna tıklayın."
+"steam_welcomeaction_launch$apptype=tool"   "%gamename% oyununu başlatmak için yukarıdaki Oyna butonuna tıklayın."
+"steam_welcomeaction_launch$apptype=demo"   "%gamename% oyununu başlatmak için yukarıdaki Oyna butonuna tıklayın."
+"steam_welcomeaction_launch$apptype"        "%gamename% uygulamasını başlatmak için yukarıdaki Oyna düğmesine tıklayın."
 "steam_welcomeaction_install" "%gamename% oyununu yüklemek için yukarıdaki Yükle tuşuna tıklayın."
 "steam_welcomeaction_preload" "%gamename% oyununu önyükleyeme yaparak yayınlandığı anda oynamaya hazır olabilirsiniz, yukarıdaki Önyükleme tuşuna tıklayın."
 "steam_welcomeaction_comingsoon" "%gamename% pek yakında."
@@ -3813,15 +3845,17 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 
 "steam_welcomemessage_nofriends$apptype=game" "%gamename% oynayan başkalarını bulmak için, <a href=steam://url/CommunityGroupSearch/%encodedsearch%>ilgili Steam Topluluk grubuna </a> katılın. Arkadaşlarınızın hangi uygulamaları kullandığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
 "steam_welcomemessage_nofriends$apptype=application" "%gamename% kullanan başkalarını bulmak için, <a href=steam://url/CommunityGroupSearch/%encodedsearch%>ilgili Steam Topluluk grubuna </a> katılın. Arkadaşlarınızın hangi uygulamaları kullandığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
-"steam_welcomemessage_nofriends$apptype=tool" "%gamename% oyununu oynayan diğer kişileri bulmak için <a href=steam://url/CommunityGroupSearch/%encodedsearch%>oyunla ilişkili bir Steam Topluluk grubuna</a> katılın. Arkadaşlarınızın hangi araçları kullandığını görmek için Steam Arkadaş listenize bir <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
-"steam_welcomemessage_nofriends$apptype=video" "%gamename% izleyen başkalarını bulmak için, <a href=steam://url/CommunityGroupSearch/%encodedsearch%>ilgili Steam Topluluk grubuna </a> katılın. Arkadaşlarınızın hangi uygulamaları kullandığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
-"steam_welcomemessage_nofriends$apptype=demo" "%gamename% oynayan başka kişileri bulmak için <a href=steam://url/CommunityGroupSearch/%encodedsearch%> ilgili bir Steam Topluluk grubu bulun</a>. Arkadaşlarınızın hangi demoları oynadığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
+"steam_welcomemessage_nofriends$apptype=tool"   "%gamename% oyununu oynayan diğer kişileri bulmak için <a href=steam://url/CommunityGroupSearch/%encodedsearch%>oyunla ilişkili bir Steam Topluluk grubuna</a> katılın. Arkadaşlarınızın hangi araçları kullandığını görmek için Steam Arkadaş listenize bir <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
+"steam_welcomemessage_nofriends$apptype=video"  "%gamename% izleyen başkalarını bulmak için, <a href=steam://url/CommunityGroupSearch/%encodedsearch%>ilgili Steam Topluluk grubuna </a> katılın. Arkadaşlarınızın hangi uygulamaları kullandığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
+"steam_welcomemessage_nofriends$apptype=demo"   "%gamename% oynayan başka kişileri bulmak için <a href=steam://url/CommunityGroupSearch/%encodedsearch%> ilgili bir Steam Topluluk grubu bulun</a>. Arkadaşlarınızın hangi demoları oynadığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
+"steam_welcomemessage_nofriends$apptype"        "%gamename% sahibi olan başka kişileri bulmak için <a href=steam://url/CommunityGroupSearch/%encodedsearch%> ilgili bir Steam Topluluk grubu bulun</a>. Arkadaşlarınızın hangi demoları oynadığını görmek için, Steam Arkadaş listenize <a href=steam://friends/add/>Arkadaş Ekleyin</a>."
 
 "steam_welcomemessage_help$apptype=game"	"Bu oyun ile ilgili teknik desteğe ihtiyaç duyuyorsanız <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarını</a> veya <a href=http://support.steampowered.com/>Steam Destek</a>'i ziyaret edebilirsiniz."
 "steam_welcomemessage_help$apptype=application"	"Bu uygulama ile ilgili teknik desteğe ihtiyaç duyuyorsanız <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarını</a> veya <a href=http://support.steampowered.com/>Steam Desteği</a> ziyaret edebilirsiniz."
 "steam_welcomemessage_help$apptype=video"	"Bu video ile ilgili teknik desteğe ihtiyaç duyuyorsanız <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarını</a> veya <a href=http://support.steampowered.com/>Steam Desteği</a> ziyaret edebilirsiniz."
 "steam_welcomemessage_help$apptype=tool"	"Eğer bu araçla ilgili teknik desteğe ihtiyacınız varsa <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarına</a> göz atın veya <a href=http://support.steampowered.com/>Steam Destek'i</a> ziyaret edin."
 "steam_welcomemessage_help$apptype=demo"	"Eğer bu demoyla ilgili teknik desteğe ihtiyacınız varsa <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarına</a> göz atın veya <a href=http://support.steampowered.com/>Steam Destek</a>'i ziyaret edin."
+"steam_welcomemessage_help$apptype"         "Bu içerik ile ilgili teknik desteğe ihtiyaç duyuyorsanız <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam Forumlarını</a> veya <a href=http://support.steampowered.com/>Steam Destek</a>'i ziyaret edebilirsiniz."
 
 "steam_welcomemessage_help_nostore"	"Eğer bu oyunla ilgili teknik desteğe ihtiyaç duyarsanız, <a href=http://support.steampowered.com/>Steam Destek</a>'i ziyaret edin."
 
@@ -4812,7 +4846,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_XboxDriverInstall_Failure"	"Sürücü güncelleme başarısız, hata = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Yeni Kontrolcü Yazılımı Mevcut"
-"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ kablosuz kontrolcünüz için kullanılabilir yeni bir yazılım var. Sony aygıt yazılımı güncelleme sayfasına gitmek için aşağıdaki bağlantıya tıklayın:"
+"Steam_DualSense_FirmwareUpdate_Text"	"%product% için kullanılabilir yeni bir yazılım var. Sony aygıt yazılımı güncelleme sayfasına gitmek için aşağıdaki bağlantıya tıklayın:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Bunu tekrar gösterme"
 
 "DownloadRegion_default"				 "Bilinmiyor"

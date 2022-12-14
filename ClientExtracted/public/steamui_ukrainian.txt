@@ -191,15 +191,19 @@
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"Ви ще не придбали підписку на цю гру.\nЧи не бажаєте перейти на сторінку підписки?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam — Помилка"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Запустити"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Розпочати гру"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Запустити ярлик"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Грати"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"Оновити пізніше"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Запустити демоверсію"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Запустити інструмент"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Відтворити"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Відтворити"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "Продовжити"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "Запустити"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"Оновити пізніше"
 "SteamUI_JoinDialog_Cancel_Btn"		"Скасувати"
 "SteamUI_JoinDialog_OverrideThrottle"	"Ігнорувати поточне обмеження швидкості"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Пропустити оновлення і запустити гру"
@@ -214,11 +218,13 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Запустити програму, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Запустити гру, щойно вона буде готова"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"Запустити ярлик, щойно він буде готовий"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Запустити гру, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Запустити демоверсію, щойно вона буде готова"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Запустити інструмент, щойно він буде готовий"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Відтворити саундтрек за готовності"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Відтворити медіа за готовності"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "Запустити, щойно гра буде готова"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "Бібліотека спільних ігор"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "Вашою спільною бібліотекою зараз користується %borrower%. Якщо ви почнете грати, %borrower% отримає повідомлення, що треба виходити."
@@ -241,6 +247,8 @@
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Синхронізація зі Steam Cloud…"
 "SteamUI_JoinDialog_Connecting_Text" "Підключення до Steam…"
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% хв"
 
 "SteamUI_SetCustomImage_Title" "%gamename% — Обрання власного зображення"
 "SteamUI_SetCustomImage_ChooseImage" "Оберіть зображення для показу %gamename% при поданні бібліотеки Steam у вигляді сітки."
@@ -1892,6 +1900,7 @@
 "Steam_Game_AllowOtherDownloads$appType=demo"	"Дозволити Steam завантажувати інші оновлення, поки запущена ця демоверсія"
 "Steam_Game_AllowOtherDownloads$appType=media"	"Дозволити Steam завантажувати інші оновлення, поки відтворюється це медіа"
 "Steam_Game_AllowOtherDownloads$appType=music"	"Дозволити Steam завантажувати інші оновлення, поки відтворюється цей медіа-вміст"
+"Steam_Game_AllowOtherDownloads$appType"        "Дозволити Steam завантажувати інші оновлення, коли запущений цей застосунок"
 "Steam_Game_AvailableSeats"					"Наразі доступно копій для бронювання цього найменування: %seats%"
 "Steam_Game_AvailableSeatsUnlimited"		"Це найменування має безмежну кількість копій для бронювання"
 
@@ -2030,6 +2039,7 @@
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Завжди оновлювати це медіа"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Завжди оновлювати цей саундтрек"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Завжди оновлювати цей інструмент"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Завжди оновлювати цей застосунок"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Оновлювати цю програму лише перед запуском"
 "Steam_DoNotUpdateThisGame$appType=game"			"Оновлювати цю гру лише перед запуском"
@@ -2037,6 +2047,7 @@
 "Steam_DoNotUpdateThisGame$appType=media"			"Оновлювати цей матеріал лише перед запуском"
 "Steam_DoNotUpdateThisGame$appType=music"			"Не оновлювати автоматично цей саундтрек"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Оновлювати цей інструмент лише перед запуском"
+"Steam_DoNotUpdateThisGame$appType"                 "Оновлювати лише після запуску"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Високий пріоритет — завжди оновлювати цей застосунок перед іншими"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Високий пріоритет — завжди оновлювати цю гру перед іншими"
@@ -2044,6 +2055,7 @@
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Високий пріоритет — завжди оновлювати це медіа перед іншими"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Високий пріоритет — завжди оновлювати цей саундтрек перед іншими"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Високий пріоритет — завжди оновлювати цей інструмент перед іншими"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "Високий пріоритет — завжди автоматично оновлювати цей застосунок першим"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Цей застосунок і всі її оновлення будуть отримані автоматично, щойно стануть доступними."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Ця гра і всі її оновлення завантажуватимуться автоматично, щойно стануть доступними."
@@ -2051,6 +2063,7 @@
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "Це медіа і всі його оновлення будуть отримані автоматично, щойно стануть доступними."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "Цей саундтрек і його оновлення будуть отримані автоматично, щойно стануть доступні."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"Цей інструмент і всі його оновлення будуть отримані автоматично, щойно стануть доступними."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "Щойно цей вміст стане доступним, його буде автоматично завантажено."
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"Оновлений вміст завантажуватиметься лише перед запуском цієї програми."
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"Оновлений вміст завантажуватиметься лише перед запуском цієї гри."
@@ -2058,15 +2071,17 @@
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"Оновлений вміст завантажуватиметься лише перед запуском цього матеріалу."
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"Не оновлювати автоматично цей саундтрек."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Оновлений вміст завантажуватиметься лише перед запуском цього інструменту."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "Оновлений вміст завантажуватиметься лише в разі запуску цього застосунку."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Фонові завантаження"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"Дозволити Steam завантажувати інші ігри або програми під час гри у %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "Дозволити Steam завантажувати інші ігри або програми під час гри у %game%?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"Дозволити Steam завантажувати інші ігри або програми під час виконання %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"Дозволити Steam завантажувати інші ігри або програми під час гри у %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"Дозволити Steam завантажувати інші ігри або програми під час відтворення %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"Дозволити Steam завантажувати інші ігри або програми під час відтворення %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"Дозволити Steam завантажувати інші ігри або програми під час виконання %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "Дозволити Steam завантажувати інші ігри або програми під час гри у %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "Дозволити Steam завантажувати інші ігри або програми під час відтворення %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "Дозволити Steam завантажувати інші ігри або програми під час відтворення %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Дозволити Steam завантажувати інші ігри або програми під час виконання %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Дозволити Steam завантажувати інші ігри чи застосунки, коли запущено %game%?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Відповідно до глобального налаштування (дозволити фонові завантаження)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Відповідно до глобального налаштування (заборонити фонові завантаження)"
@@ -2093,6 +2108,7 @@
 "Steam_Controller_Support_None" "Немає"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Фонові завантаження під час гри у цю гру"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "Фонові завантаження під час роботи цього застосунку"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"Ця гра і всі її оновлення завантажуватимуться автоматично, щойно стануть доступними. Steam надасть цій програмі перевагу серед інших завантажень."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Ця гра і всі її оновлення завантажуватимуться автоматично, щойно стануть доступними. Steam надасть цій грі перевагу серед інших завантажень."
@@ -2100,6 +2116,7 @@
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Цей матеріал і всі його оновлення будуть отримані автоматично, щойно стануть доступними. Steam надасть цьому матеріалу перевагу серед інших завантажень."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Цей саундтрек і всі його оновлення будуть отримані автоматично, щойно стануть доступними. Steam надасть цьому медіа-вмісту перевагу серед інших завантажень."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Цей інструмент і всі його оновлення будуть отримані автоматично, щойно стануть доступними. Steam надасть цьому інструменту перевагу серед інших завантажень."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Щойно цей вміст і всі його оновлення стануть доступними, вони будуть завантажені автоматично. Steam надаватиме йому перевагу над іншими завантаженнями."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Перевірка цілісності файлів застосунку…"
 "Steam_Game_VerifyGameFiles$appType=game"				"Перевірка цілісності файлів гри…"
@@ -2107,6 +2124,7 @@
 "Steam_Game_VerifyGameFiles$appType=media"				"Перевірка цілісності медіафайлів…"
 "Steam_Game_VerifyGameFiles$appType=music"				"Перевірити цілісність файлів…"
 "Steam_Game_VerifyGameFiles$appType=tool"				"Перевірка цілісності файлів інструмента…"
+"Steam_Game_VerifyGameFiles$appType"				    "Перевірити цілісність вмісту…"
 
 "Steam_DeleteLocalGameContent$appType=application"		"Деінсталювання застосунку…"
 "Steam_DeleteLocalGameContent$appType=game"		"Деінсталювання гри…"
@@ -2114,6 +2132,7 @@
 "Steam_DeleteLocalGameContent$appType=media"	"Деінсталювання медіа…"
 "Steam_DeleteLocalGameContent$appType=music"	"Деінсталювання саундтрека…"
 "Steam_DeleteLocalGameContent$appType=tool"		"Деінсталювання інструмента…"
+"Steam_DeleteLocalGameContent$appType"          "Деінсталювати вміст…"
 
 "Steam_BackupGameFiles$appType=application"		"Резервне копіювання файлів застосунку…"
 "Steam_BackupGameFiles$appType=game"			"Резервне копіювання файлів гри…"
@@ -2121,6 +2140,7 @@
 "Steam_BackupGameFiles$appType=media"			"Резервне копіювання файлів медіа…"
 "Steam_BackupGameFiles$appType=music"			"Резервне копіювання файлів саундтрека…"
 "Steam_BackupGameFiles$appType=tool"			"Резервне копіювання файлів інструмента…"
+"Steam_BackupGameFiles$appType"                 "Резервне копіювання вмісту…"
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"Усі файли цієї програми зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"Усі файли цієї гри зараз будуть завантажені через Steam."
@@ -2128,6 +2148,7 @@
 "Steam_Install_WillDownloadAllFiles$appType=media"	"Усі файли цього медіа зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"Усі файли цього саундтрека зараз будуть завантажені через Steam."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"Усі файли цього інструменту зараз будуть завантажені через Steam."
+"Steam_Install_WillDownloadAllFiles$appType"        "Усі файли цього вмісту зараз будуть завантажені через Steam."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Створення локальних файлів застосунку…"
 "Steam_Install_StartCacheLoading$appType=game"		"Створення локальних файлів гри…"
@@ -2135,6 +2156,7 @@
 "Steam_Install_StartCacheLoading$appType=media"		"Створення локальних медіафайлів…"
 "Steam_Install_StartCacheLoading$appType=music"		"Створення локальних файлів…"
 "Steam_Install_StartCacheLoading$appType=tool"		"Створення локальних файлів інструмента…"
+"Steam_Install_StartCacheLoading$appType"		     "Створення локальних файлів вмісту…"
 
 "Steam_PreparingGamesList$appType=application"	 	"Готується список програм Steam%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Готується список ігор Steam%progress%"
@@ -2142,7 +2164,8 @@
 "Steam_PreparingGamesList$appType=media" 			"Готується список медіа Steam%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Готується список саундтреків Steam%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Готується список інструментів Steam%progress%"
-"Steam_PreparingGamesList$appType=license"		"Готується список ліцензій Steam%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Готується список ліцензій Steam%progress%"
+"Steam_PreparingGamesList$appType"                  "Готується список вмісту Steam%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Пошук оновлень для програм Steam%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Пошук оновлень для ігор Steam%progress%"
@@ -2150,7 +2173,8 @@
 "Steam_ScanningForUpdates$appType=media"			"Пошук оновлень для медіа Steam%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Пошук оновлень для саундтреків Steam%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Пошук оновлень для інструментів Steam%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Пошук оновлень для ліцензій Steam%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Пошук оновлень для ліцензій Steam%progress%"
+"Steam_ScanningForUpdates$appType"                  "Пошук оновлень для вмісту Steam%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"Немає програм Steam для відображення."
 "SteamUI_NoGamesOfThisType$appType=game"	"Немає ігор Steam для відображення."
@@ -2158,6 +2182,7 @@
 "SteamUI_NoGamesOfThisType$appType=media"	"Немає файлів медіа Steam для відображення."
 "SteamUI_NoGamesOfThisType$appType=music"	"Немає саундтреків Steam для відображення."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Немає інструментів Steam для відображення."
+"SteamUI_NoGamesOfThisType$appType"         "Немає вмісту Steam для показу."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Будь ласка, зачекайте, доки Steam перевірить файли програми."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Будь ласка, зачекайте, доки Steam перевірить файли гри."
@@ -2165,6 +2190,7 @@
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Будь ласка, зачекайте, доки Steam перевірить файли матеріалу."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Будь ласка, зачекайте, доки Steam перевірить файли саундтрека."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Будь ласка, зачекайте, доки Steam перевірить файли інструменту."
+"Steam_ValidatingSteamCaches_Label$appType"         "Дочекайтеся завершення перевірки файлів вмісту."
 
 "Steam_ValidationResults_NoFailures"	"Усі файли успішно пройшли перевірку."
 "Steam_ValidationResults_OneFailure"	"1 файл не вдалось перевірити  і його буде завантажено знову."
@@ -2336,6 +2362,7 @@
 "Steam_FindContent$appType=media"			"Оглянути матеріали…"
 "Steam_FindContent$appType=music"			"Оглянути саундтреки…"
 "Steam_FindContent$appType=tool"			"Оглянути інструменти…"
+"Steam_FindContent$appType"                 "Шукати вміст…"
 
 "Steam_NoGamesOfThisType$appType=application"	"Ми нічого не знайшли! Спробуйте очистити поле пошуку або обрати іншу категорію з випадного списку вище."
 "Steam_NoGamesOfThisType$appType=game"	"Ми нічого не знайшли! Спробуйте очистити поле пошуку або обрати іншу категорію з випадного списку вище."
@@ -2344,6 +2371,7 @@
 "Steam_NoGamesOfThisType$appType=media"	"Ми нічого не знайшли! Спробуйте змінити ваші фільтри перегляду вище, або <a href=steam://browsemedia>перегляньте доступні відеоматеріали</a> у крамниці Steam."
 "Steam_NoGamesOfThisType$appType=music"	"Ми нічого не знайшли! Спробуйте очистити поле пошуку або обрати іншу категорію з розкривного списку вище."
 "Steam_NoGamesOfThisType$appType=tool"	"Ми нічого не знайшли! Спробуйте змінити ваші фільтри перегляду вище."
+"Steam_NoGamesOfThisType$appType"	    "Ми нічого не знайшли! Спробуйте змінити фільтри перегляду вище."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2402,12 +2430,13 @@
 "Steam_SystemRebootRequired_Info"		"Зроблені останнім оновленням зміни потребують перезавантаження системи для запуску цієї гри."
 "Steam_SystemRebootRequired_Button"	"Перезавантажити зараз"
 
-"Steam_Game_Developer$appType=application"	"Розробник"
-"Steam_Game_Developer$appType=game"	"Розробник"
-"Steam_Game_Developer$appType=demo"	"Розробник"
-"Steam_Game_Developer$appType=media"	"Виробник"
-"Steam_Game_Developer$appType=music"	"Продюсер"
-"Steam_Game_Developer$appType=tool"	"Розробник"
+"Steam_Game_Developer$appType=application"  "Розробник"
+"Steam_Game_Developer$appType=game"         "Розробник"
+"Steam_Game_Developer$appType=demo"         "Розробник"
+"Steam_Game_Developer$appType=media"        "Виробник"
+"Steam_Game_Developer$appType=music"        "Продюсер"
+"Steam_Game_Developer$appType=tool"         "Розробник"
+"Steam_Game_Developer$appType"              "Автор вмісту"
 
 "Steam_Forums"				"Обговорення"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3715,6 +3744,7 @@
 "steam_details_lastpurchased$apptype=music"	"Саундтрек придбано"
 "steam_details_lastpurchased$apptype=video"	"Відео придбане"
 "steam_details_lastpurchased$apptype=tool"	"Інструмент придбано"
+"steam_details_lastpurchased$apptype"   "Вміст придбано"
 "steam_details_addedtoaccount"	"Додано до акаунта"
 "steam_details_totalplaytime_minutes" "%minutes% хв."
 "steam_details_totalplaytime_hours" "%hours% год."
@@ -3772,6 +3802,7 @@
 "steam_welcome$apptype=shortcut"			"Інформація про ярлик"
 "steam_welcome$apptype=tool"			"Інформація про інструмент"
 "steam_welcome$apptype=demo"			"Інформація про демоверсію"
+"steam_welcome$apptype"                 "Інформація про вміст"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"Керувати DLC"
 "steam_finddlcinstore"		"Знайти більше додаткового вмісту у крамниці"
@@ -3799,8 +3830,9 @@
 "steam_welcomeaction_launch$apptype=application" "Для запуску %gamename% клацніть кнопку «Грати» вище."
 "steam_welcomeaction_launch$apptype=video" "Для перегляду %gamename% клацніть кнопку «Переглянути» вище."
 "steam_welcomeaction_launch$apptype=shortcut" "Щоби запустити %gamename%, клацніть кнопку «Грати» вище."
-"steam_welcomeaction_launch$apptype=tool" "Для запуску %gamename% клацніть кнопку «Грати» вище."
-"steam_welcomeaction_launch$apptype=demo" "Щоби запустити %gamename%, клацніть кнопку «Грати» вище."
+"steam_welcomeaction_launch$apptype=tool"   "Для запуску %gamename% клацніть кнопку «Грати» вище."
+"steam_welcomeaction_launch$apptype=demo"   "Щоби запустити %gamename%, клацніть кнопку «Грати» вище."
+"steam_welcomeaction_launch$apptype"        "Щоб запустити %gamename%, натисніть на кнопку «Грати» вище."
 "steam_welcomeaction_install" "Для інсталювання %gamename% клацніть кнопку «Інсталювати», яка знаходиться вище."
 "steam_welcomeaction_preload" "Для завчасного завантаження %gamename%, щоби ви розпочали гру відразу після її виходу, клацніть кнопку «Завчасно завантажити», яка знаходиться вище."
 "steam_welcomeaction_comingsoon" "%gamename% невдовзі буде доступна."
@@ -3808,15 +3840,17 @@
 
 "steam_welcomemessage_nofriends$apptype=game" "Аби знайти інших гравців %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, в які ігри грають ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
 "steam_welcomemessage_nofriends$apptype=application" "Аби знайти інших користувачів %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, якими застосунками користуються ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
-"steam_welcomemessage_nofriends$apptype=tool" "Аби знайти інших користувачів %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, якими застосунками користуються ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
-"steam_welcomemessage_nofriends$apptype=video" "Аби знайти інших глядачів %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, що дивляться ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
-"steam_welcomemessage_nofriends$apptype=demo" "Аби знайти інших гравців %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, в які демоверсії грають ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
+"steam_welcomemessage_nofriends$apptype=tool"   "Аби знайти інших користувачів %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, якими застосунками користуються ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
+"steam_welcomemessage_nofriends$apptype=video"  "Аби знайти інших глядачів %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, що дивляться ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
+"steam_welcomemessage_nofriends$apptype=demo"   "Аби знайти інших гравців %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоби дізнатися, в які демоверсії грають ваші друзі, <a href=steam://friends/add/>додайте їх</a> до вашого списку друзів Steam."
+"steam_welcomemessage_nofriends$apptype"        "Щоб знайти інших користувачів, у яких є %gamename%, приєднайтеся до <a href=steam://url/CommunityGroupSearch/%encodedsearch%>відповідної групи в спільноті Steam</a>. Щоб дізнатися, в які демоверсії грають ваші друзі, <a href=steam://friends/add/>додайте їх</a> до свого списку друзів у Steam."
 
 "steam_welcomemessage_help$apptype=game"	"Якщо вам потрібна технічна підтримка щодо цієї гри, відвідайте <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форум Steam</a> для %gamename% або <a href=http://support.steampowered.com/>підтримку Steam</a>."
 "steam_welcomemessage_help$apptype=application"	"Якщо вам потрібна технічна підтримка щодо цієї програми, відвідайте <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форум Steam</a> для %gamename% або <a href=http://support.steampowered.com/>підтримку Steam</a>."
 "steam_welcomemessage_help$apptype=video"	"Якщо вам потрібна технічна підтримка щодо цього відео, відвідайте <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форуми Steam для %gamename%</a> або <a href=http://support.steampowered.com/>підтримку Steam</a>."
 "steam_welcomemessage_help$apptype=tool"	"Для отримання технічної підтримки з користування інструментом, завітайте на <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форум %gamename% у Steam</a> або зверніться до <a href=http://support.steampowered.com/>служби підтримки Steam</a>."
 "steam_welcomemessage_help$apptype=demo"	"Якщо вам потрібна технічна підтримка щодо цієї демоверсії, відвідайте <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форум Steam</a> для %gamename% або <a href=http://support.steampowered.com/>службу підтримки Steam</a>."
+"steam_welcomemessage_help$apptype"         "Якщо вам потрібна технічна підтримка для цього вмісту, перегляньте <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>форуми Steam для %gamename%</a> або відвідайте сайт <a href=http://support.steampowered.com/>служби підтримки Steam</a>."
 
 "steam_welcomemessage_help_nostore"	"Якщо вам потрібна технічна допомога для цієї гри, відвідайте <a href=http://support.steampowered.com/>сайт служби підтримки Steam</a>."
 
@@ -4805,7 +4839,7 @@
 "Steam_XboxDriverInstall_Failure"	"Не вдалося оновити драйвер, помилка: %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Доступна нова мікропрограма для контролера"
-"Steam_DualSense_FirmwareUpdate_Text"	"Доступна нова мікропрограма для вашого бездротового контролера DualSense™. Натисніть на посилання нижче, щоб перейти на сайт Sony для оновлення мікропрограми:"
+"Steam_DualSense_FirmwareUpdate_Text"	"Доступна нова мікропрограма для вашого %product%. Клацніть на посилання нижче, щоби перейти на сайт Sony для оновлення мікропрограми:"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Більше не показувати"
 
 "DownloadRegion_default"				 "Невідомо"

@@ -129,7 +129,7 @@
 "Steam_ForgottenPassword_EmailCode_Incorrect" "입력하신 이메일 코드가 맞지 않습니다."
 
 "Steam_Login_Title"		"Steam 로그인"
-"Steam_RefreshLogin_Title"		"Steam 로그인 새로 고침"
+"Steam_RefreshLogin_Title"		"Steam 로그인 새로고침"
 "Steam_Login_CreateNewAccount"	"새 계정 만들기..."
 "Steam_Login_RetrievePassword"	"로그인할 수 없습니다..."
 "Steam_Login_NoAccount"		"Steam 계정이 없으신가요?"
@@ -192,15 +192,19 @@
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"선택하신 게임에 가입되어 있지 않습니다.\n가입 페이지로 이동하시겠습니까?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam - 오류"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"시작"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"게임 플레이"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "바로 가기 실행"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"게임 플레이"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"나중에 업데이트"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"체험판 플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"도구 시작"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"플레이"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"재생"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "계속"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "실행"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"나중에 업데이트"
 "SteamUI_JoinDialog_Cancel_Btn"		"취소"
 "SteamUI_JoinDialog_OverrideThrottle"	"대역폭 제한 설정 무시"
 "SteamUI_JoinDialog_SkipUpdateInfo" "업데이트를 미루고 바로 플레이하기"
@@ -215,11 +219,13 @@
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"준비되는 대로 애플리케이션 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"게임이 준비되면 바로 시작"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"바로가기가 준비되면 바로 실행"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"게임이 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"체험판이 준비되는 대로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"도구가 준비되면 바로 시작"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"준비되면 사운드트랙 재생하기"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"미디어가 준비되면 바로 플레이"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "준비되면 바로 실행"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "공유된 게임 라이브러리"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "현재 %borrower%님이 공유 라이브러리를 사용 중입니다. 지금 플레이하면 %borrower%님께 이제 그만할 때가 되었다는 알림이 전송됩니다."
@@ -242,6 +248,8 @@
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Steam Cloud 동기화 중..."
 "SteamUI_JoinDialog_Connecting_Text" "Steam에 연결 중..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes%분"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - 사용자 임의 사진 설정"
 "SteamUI_SetCustomImage_ChooseImage" "Steam의 게임 목록에서 표시될 %gamename%의 사진을 선택해 주세요."
@@ -1895,6 +1903,7 @@
 "Steam_Game_AllowOtherDownloads$appType=demo"	"이 체험판을 실행하는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
 "Steam_Game_AllowOtherDownloads$appType=media"	"이 미디어를 실행하는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
 "Steam_Game_AllowOtherDownloads$appType=music"	"이 미디어를 실행하는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
+"Steam_Game_AllowOtherDownloads$appType"        "실행되는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
 "Steam_Game_AvailableSeats"					"이 타이틀은 현재 %seats% 카피를 대여할 수 있습니다"
 "Steam_Game_AvailableSeatsUnlimited"		"이 타이틀은 무제한으로 대여할 수 있습니다"
 
@@ -2033,6 +2042,7 @@
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"이 미디어를 항상 최신 버전으로 업데이트"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"이 사운드트랙을 항상 최신 버전으로 업데이트"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"이 도구를 항상 최신 버전으로 업데이트"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "항상 최신 버전으로 업데이트"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"이 애플리케이션을 실행했을 때만 업데이트함"
 "Steam_DoNotUpdateThisGame$appType=game"			"게임을 실행했을 때만 업데이트"
@@ -2040,6 +2050,7 @@
 "Steam_DoNotUpdateThisGame$appType=media"			"이 미디어를 실행했을 때만 업데이트함"
 "Steam_DoNotUpdateThisGame$appType=music"			"이 사운드트랙을 자동으로 업데이트하지 않음"
 "Steam_DoNotUpdateThisGame$appType=tool"			"이 도구를 실행했을 때만 업데이트함"
+"Steam_DoNotUpdateThisGame$appType"                 "실행할 때만 업데이트"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"높은 우선순위 - 이 애플리케이션을 언제나 우선적으로 자동 업데이트"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"높은 우선순위 - 이 게임을 언제나 우선적으로 자동 업데이트"
@@ -2047,6 +2058,7 @@
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"높은 우선순위 - 이 미디어를 언제나 우선적으로 자동 업데이트"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"높은 우선순위 - 이 사운드트랙을 언제나 우선적으로 자동 업데이트"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"높은 우선순위 - 이 도구을 언제나 우선적으로 자동 업데이트"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "높은 우선순위 - 언제나 우선적으로 자동 업데이트"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"이 애플리케이션과 업데이트는 사용 가능한 즉시 자동으로 받아집니다."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"이 게임과 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드됩니다."
@@ -2054,6 +2066,7 @@
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "이 미디어와 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드됩니다."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "이 사운드트랙과 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"이 도구와 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드됩니다."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "이 콘텐츠는 사용 가능해지는 즉시 자동으로 다운로드됩니다."
 
 "Steam_GameProperties_NeverUpdateInfo$appType=application"		"이 애플리케이션의 업데이트는 애플리케이션을 실행하는 경우에만 가져옵니다."
 "Steam_GameProperties_NeverUpdateInfo$appType=game"		"이 게임의 콘텐츠는 자동으로 다운로드되지 않습니다."
@@ -2061,15 +2074,17 @@
 "Steam_GameProperties_NeverUpdateInfo$appType=media"	"이 미디어의 콘텐츠는 자동으로 다운로드되지 않습니다."
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"이 사운드트랙을 자동으로 업데이트 하지 않음."
 "Steam_GameProperties_NeverUpdateInfo$appType=tool"		"이 도구의 콘텐츠는 자동으로 다운로드되지 않습니다."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "업데이트된 콘텐츠는 실행 시에만 다운로드됩니다."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"백그라운드 다운로드"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"%game% 게임을 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "%game% 게임을 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"%game% 애플리케이션을 사용하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"%game% 데모를 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"%game% 미디어를 재생하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"%game% 게임을 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"%game% 툴을 사용하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "%game% 데모를 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "%game% 미디어를 재생하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "%game% 게임을 플레이하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "%game% 툴을 사용하는 도중에, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "%game% 실행 도중, Steam이 다른 게임이나 애플리케이션을 다운로드할 수 있도록 허용할까요?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"내 전체 설정을 따름 (백그라운드 다운로드 허용)"
 "Steam_BackgroundDownloadsDefault_Deny"	"내 전체 설정을 따름 (백그라운드 다운로드 중지)"
@@ -2096,6 +2111,7 @@
 "Steam_Controller_Support_None" "없음"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"게임 플레이 중 백그라운드 다운로드"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "실행 중 백그라운드 다운로드"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"이 애플리케이션과 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다. Steam이 다른 다운로드보다 이 애플리케이션과 관련된 다운로드를 먼저 진행합니다."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"이 게임과 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다. Steam이 다른 다운로드보다 이 게임과 관련된 다운로드를 먼저 진행합니다."
@@ -2103,6 +2119,7 @@
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"이 미디어와 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다. Steam이 다른 다운로드보다 이 미디어와 관련된 다운로드를 먼저 진행합니다."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"이 사운드트랙과 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다. Steam이 다른 다운로드보다 이 미디어와 관련된 다운로드를 먼저 진행합니다."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"이 도구와 해당 업데이트는 사용 가능해지는 즉시 자동으로 다운로드합니다. Steam이 다른 다운로드보다 이 도구와 관련된 다운로드를 먼저 진행합니다."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "이 콘텐츠와 관련 업데이트는 사용 가능해지는 즉시 자동으로 다운로드됩니다. Steam이 다른 다운로드보다 이 도구와 관련된 다운로드를 먼저 진행합니다."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"애플리케이션 파일 무결성 검사..."
 "Steam_Game_VerifyGameFiles$appType=game"				"게임 파일 무결성 확인..."
@@ -2110,6 +2127,7 @@
 "Steam_Game_VerifyGameFiles$appType=media"				"미디어 파일 무결성 검사..."
 "Steam_Game_VerifyGameFiles$appType=music"				"게임 파일 무결성 검사..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"도구 파일 무결성 검사..."
+"Steam_Game_VerifyGameFiles$appType"				    "콘텐츠 무결성 검사..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"애플리케이션 제거..."
 "Steam_DeleteLocalGameContent$appType=game"		"게임 제거..."
@@ -2117,6 +2135,7 @@
 "Steam_DeleteLocalGameContent$appType=media"	"미디어 제거..."
 "Steam_DeleteLocalGameContent$appType=music"	"사운드트랙 제거..."
 "Steam_DeleteLocalGameContent$appType=tool"		"도구 제거..."
+"Steam_DeleteLocalGameContent$appType"          "콘텐츠 설치 제거..."
 
 "Steam_BackupGameFiles$appType=application"		"애플리케이션 파일 백업..."
 "Steam_BackupGameFiles$appType=game"			"게임 파일 백업..."
@@ -2124,6 +2143,7 @@
 "Steam_BackupGameFiles$appType=media"			"미디어 파일 백업..."
 "Steam_BackupGameFiles$appType=music"			"사운드트랙 파일 백업..."
 "Steam_BackupGameFiles$appType=tool"			"도구 파일 백업..."
+"Steam_BackupGameFiles$appType"                 "콘텐츠 백업..."
 
 "Steam_Install_WillDownloadAllFiles$appType=application"	"이 애플리케이션의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=game"	"이 게임의 모든 파일은 이제 Steam을 통해 다운로드합니다."
@@ -2131,6 +2151,7 @@
 "Steam_Install_WillDownloadAllFiles$appType=media"	"이 매체의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=music"	"이 사운드트랙의 모든 파일은 이제 Steam을 통해 다운로드합니다."
 "Steam_Install_WillDownloadAllFiles$appType=tool"	"이 도구의 모든 파일은 이제 Steam을 통해 다운로드합니다."
+"Steam_Install_WillDownloadAllFiles$appType"        "이 콘텐츠의 모든 파일은 이제 Steam을 통해 다운로드됩니다."
 
 "Steam_Install_StartCacheLoading$appType=application"		"로컬 애플리케이션 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=game"		"로컬 게임 파일 생성하는 중..."
@@ -2138,6 +2159,7 @@
 "Steam_Install_StartCacheLoading$appType=media"		"로컬 미디어 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=music"		"로컬 파일 생성하는 중..."
 "Steam_Install_StartCacheLoading$appType=tool"		"로컬 도구 파일 생성하는 중..."
+"Steam_Install_StartCacheLoading$appType"		     "로컬 콘텐츠 파일 생성하는 중..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Steam 응용프로그램 목록 준비 중%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Steam 게임 목록을 준비하는 중%progress%"
@@ -2145,7 +2167,8 @@
 "Steam_PreparingGamesList$appType=media" 			"Steam 미디어 목록을 준비하는 중%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Steam 사운드트랙 목록 준비 중%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Steam 도구 목록을 준비하는 중%progress%"
-"Steam_PreparingGamesList$appType=license"		"Steam 라이선스 목록을 준비하는 중%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Steam 라이선스 목록을 준비하는 중%progress%"
+"Steam_PreparingGamesList$appType"                  "Steam 콘텐츠 목록을 준비하는 중%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Steam 응용프로그램 업데이트를 검색하는 중%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Steam 게임 업데이트를 검색하는 중%progress%"
@@ -2153,7 +2176,8 @@
 "Steam_ScanningForUpdates$appType=media"			"Steam 미디어 업데이트를 검색하는 중%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Steam 사운드트랙 업데이트를 검색하는 중%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Steam 도구 업데이트를 검색하는 중%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Steam 라이선스 업데이트를 검색하는 중%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Steam 라이선스 업데이트를 검색하는 중%progress%"
+"Steam_ScanningForUpdates$appType"                  "Steam 콘텐츠 업데이트를 검색하는 중%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"표시할 Steam 응용프로그램이 없습니다."
 "SteamUI_NoGamesOfThisType$appType=game"	"표시할 Steam 게임이 없습니다."
@@ -2161,6 +2185,7 @@
 "SteamUI_NoGamesOfThisType$appType=media"	"표시할 Steam 미디어가 없습니다."
 "SteamUI_NoGamesOfThisType$appType=music"	"표시할 Steam 사운드트랙이 없습니다."
 "SteamUI_NoGamesOfThisType$appType=tool"	"표시할 Steam 도구가 없습니다."
+"SteamUI_NoGamesOfThisType$appType"         "표시할 Steam 콘텐츠가 없습니다."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Steam이 애플리케이션 파일을 확인하는 동안 잠시 기다려 주세요."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Steam에서 게임 파일을 확인하는 동안 잠시 기다려 주세요."
@@ -2168,6 +2193,7 @@
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Steam에서 미디어 파일을 확인하는 동안 잠시 기다려 주세요."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Steam에서 사운드트랙 파일을 확인하는 동안 잠시 기다려 주세요."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Steam에서 도구 파일을 확인하는 동안 잠시 기다려 주세요."
+"Steam_ValidatingSteamCaches_Label$appType"         "Steam에서 콘텐츠 파일을 확인하는 동안 잠시 기다려 주세요."
 
 "Steam_ValidationResults_NoFailures"	"모든 파일이 올바른 것을 확인했습니다."
 "Steam_ValidationResults_OneFailure"	"1개의 파일이 검증 실패했으며 재시도 될 것입니다."
@@ -2339,6 +2365,7 @@
 "Steam_FindContent$appType=media"			"미디어 검색..."
 "Steam_FindContent$appType=music"			"사운드트랙 검색..."
 "Steam_FindContent$appType=tool"			"도구 검색..."
+"Steam_FindContent$appType"                 "콘텐츠 검색..."
 
 "Steam_NoGamesOfThisType$appType=application"	"검색 결과가 없습니다! 검색란을 비우거나 위의 드롭다운 메뉴에서 다른 카테고리를 선택해 보세요."
 "Steam_NoGamesOfThisType$appType=game"	"라이브러리에 추가한 게임이 없거나 현재 필터에 맞는 게임이 없습니다. <a href=steam://open/storefront>Steam 상점에서 구매</a>하거나 다른 카테고리를 선택해보세요."
@@ -2347,6 +2374,7 @@
 "Steam_NoGamesOfThisType$appType=media"	"검색 결과가 없습니다! 위의 보기 필터를 변경하거나, Steam 상점 내 <a href=steam://browsemedia>다른 동영상들을</a> 둘러보세요."
 "Steam_NoGamesOfThisType$appType=music"	"검색 결과가 없습니다! 검색란을 비우거나 위의 드롭다운 메뉴에서 다른 카테고리를 선택해 보세요."
 "Steam_NoGamesOfThisType$appType=tool"	"검색 결과가 없습니다! 위의 보기 필터를 변경해보세요."
+"Steam_NoGamesOfThisType$appType"	    "검색 결과가 없습니다! 위의 보기 필터를 변경해보세요."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2405,12 +2433,13 @@
 "Steam_SystemRebootRequired_Info"		"최신 업데이트의 변경 사항으로 인해 이 게임을 시작하려면 시스템을 다시 시작해야 합니다."
 "Steam_SystemRebootRequired_Button"	"지금 다시 시작"
 
-"Steam_Game_Developer$appType=application"	"개발자"
-"Steam_Game_Developer$appType=game"	"개발자"
-"Steam_Game_Developer$appType=demo"	"개발자"
-"Steam_Game_Developer$appType=media"	"제작사"
-"Steam_Game_Developer$appType=music"	"제작사"
-"Steam_Game_Developer$appType=tool"	"개발자"
+"Steam_Game_Developer$appType=application"  "개발자"
+"Steam_Game_Developer$appType=game"         "개발자"
+"Steam_Game_Developer$appType=demo"         "개발자"
+"Steam_Game_Developer$appType=media"        "제작사"
+"Steam_Game_Developer$appType=music"        "제작사"
+"Steam_Game_Developer$appType=tool"         "개발자"
+"Steam_Game_Developer$appType"              "콘텐츠 개발자"
 
 "Steam_Forums"				"토론"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3720,6 +3749,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_details_lastpurchased$apptype=music"	"구매한 사운드트랙"
 "steam_details_lastpurchased$apptype=video"	"구매한 동영상"
 "steam_details_lastpurchased$apptype=tool"	"구매한 도구"
+"steam_details_lastpurchased$apptype"   "구매한 콘텐츠"
 "steam_details_addedtoaccount"	"계정에 추가됨"
 "steam_details_totalplaytime_minutes" "%minutes%분"
 "steam_details_totalplaytime_hours" "%hours%시간"
@@ -3777,6 +3807,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_welcome$apptype=shortcut"			"바로 가기 정보"
 "steam_welcome$apptype=tool"			"도구 정보"
 "steam_welcome$apptype=demo"			"체험판 정보"
+"steam_welcome$apptype"                 "콘텐츠 정보"
 "steam_dlc_details"		"DLC"
 "steam_managedlc"		"DLC 관리"
 "steam_finddlcinstore"		"상점에서 DLC 더 찾아보기"
@@ -3804,8 +3835,9 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_welcomeaction_launch$apptype=application" "%gamename% 애플리케이션을 실행하려면, 위의 실행 버튼을 누르세요."
 "steam_welcomeaction_launch$apptype=video" "%gamename%을 감상하려면, 위의 관전 버튼을 누르세요."
 "steam_welcomeaction_launch$apptype=shortcut" "%gamename% 게임을 실행하시려면, 위의 플레이 버튼을 클릭하세요."
-"steam_welcomeaction_launch$apptype=tool" "%gamename% 게임을 실행하려면, 위의 플레이 버튼을 누르세요."
-"steam_welcomeaction_launch$apptype=demo" "%gamename% 게임을 실행하려면 상단의 플레이 버튼을 클릭하세요."
+"steam_welcomeaction_launch$apptype=tool"   "%gamename% 게임을 실행하려면, 위의 플레이 버튼을 누르세요."
+"steam_welcomeaction_launch$apptype=demo"   "%gamename% 게임을 실행하려면 상단의 플레이 버튼을 클릭하세요."
+"steam_welcomeaction_launch$apptype"        "%gamename% 게임을 실행하려면, 위의 플레이 버튼을 누르세요."
 "steam_welcomeaction_install" "%gamename% 게임을 설치하려면 위쪽의 설치 버튼을 클릭하세요."
 "steam_welcomeaction_preload" "출시일에 바로 플레이할 수 있도록 %gamename% 게임을 미리 받으려면 위쪽의 미리받기 버튼을 클릭하세요."
 "steam_welcomeaction_comingsoon" "%gamename% 게임이 출시 예정입니다."
@@ -3813,15 +3845,17 @@ Windows에 관리자로 로그인해야 합니다.
 
 "steam_welcomemessage_nofriends$apptype=game" "%gamename% 게임을 플레이하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 게임을 플레이하는지 보려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
 "steam_welcomemessage_nofriends$apptype=application" "%gamename% 앱을 사용하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 애플리케이션을 사용하는지 보려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
-"steam_welcomemessage_nofriends$apptype=tool" "%gamename% 도구를 사용하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 도구를 사용하는지 확인하려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
-"steam_welcomemessage_nofriends$apptype=video" "%gamename% 동영상을 보는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 동영상을 보고 있는지 확인하려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
-"steam_welcomemessage_nofriends$apptype=demo" "%gamename% 체험판을 플레이하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 체험판을 플레이하는지 보려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
+"steam_welcomemessage_nofriends$apptype=tool"   "%gamename% 도구를 사용하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 도구를 사용하는지 확인하려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
+"steam_welcomemessage_nofriends$apptype=video"  "%gamename% 동영상을 보는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 동영상을 보고 있는지 확인하려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
+"steam_welcomemessage_nofriends$apptype=demo"   "%gamename% 체험판을 플레이하는 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 체험판을 플레이하는지 보려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
+"steam_welcomemessage_nofriends$apptype"        "%gamename% 체험판을 소유한 사용자를 찾으려면 <a href=steam://url/CommunityGroupSearch/%encodedsearch%>관련 Steam 커뮤니티 그룹</a>에 가입하세요. 친구들이 어떤 체험판을 플레이하는지 보려면 Steam 친구 목록에 <a href=steam://friends/add/>친구를 추가</a>하세요."
 
 "steam_welcomemessage_help$apptype=game"	"이 게임과 관련된 기술적 지원이 필요하다면, <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>이나 <a href=http://support.steampowered.com/>Steam 고객지원</a> 페이지에 방문해 주세요."
 "steam_welcomemessage_help$apptype=application"	"이 어플리케이션과 관련된 기술적 지원이 필요하다면, <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>이나 <a href=http://support.steampowered.com/>Steam 고객지원</a> 페이지에 방문해 주세요."
 "steam_welcomemessage_help$apptype=video"	"이 동영상과 관련된 기술적 지원이 필요하다면, <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>이나 <a href=http://support.steampowered.com/>Steam 고객지원</a> 페이지에 방문해 주세요."
 "steam_welcomemessage_help$apptype=tool"	"이 도구와 관련된 기술적 지원이 필요하면 <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>이나 <a href=http://support.steampowered.com/>Steam 고객지원</a> 페이지를 방문해 주세요."
 "steam_welcomemessage_help$apptype=demo"	"이 체험판에 대해 기술 지원이 필요하시다면, <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>을 확인하시거나 <a href=http://support.steampowered.com/>Steam 고객지원</a>에 방문해주세요."
+"steam_welcomemessage_help$apptype"         "이 콘텐츠와 관련된 기술적 지원이 필요하다면, <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>%gamename% Steam 포럼</a>이나 <a href=http://support.steampowered.com/>Steam 고객지원</a> 페이지에 방문해 주세요."
 
 "steam_welcomemessage_help_nostore"	"이 게임에 대해 기술 지원이 필요하시다면, <a href=http://support.steampowered.com/>Steam 고객지원</a>에 방문해주세요."
 
@@ -4052,7 +4086,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ContentMgr_DriveAlreadyHasLibrary" "선택한 드라이브에 Steam 라이브러리 폴더가 이미 있습니다. Steam에서 하나의 폴더에 여러 게임을 설치합니다."
 "SteamUI_ContentMgr_FailedToAdd" "새 Steam 라이브러리 폴더를 추가하지 못했습니다"
 "SteamUI_ContentMgr_UninstallApp" "애플리케이션 제거"
-"SteamUI_ContentMgr_Refresh" "새로 고침"
+"SteamUI_ContentMgr_Refresh" "새로고침"
 "SteamUI_ContentMgr_Text" "Steam 라이브러리 폴더로 Steam 콘텐츠를 여러 드라이브에 설치할 수 있습니다."
 "SteamUI_ContentMgr_SelectInstallFolder" "새 Steam 라이브러리 폴더를 만들거나 선택하세요."
 "SteamUI_ContentMgr_RemoveFailed" "선택한 Steam 라이브러리 폴더를 삭제하지 못했습니다."
@@ -4810,7 +4844,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_XboxDriverInstall_Failure"	"드라이버 업데이트에 실패하였습니다. 오류 = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"새로운 컨트롤러 펌웨어 사용 가능"
-"Steam_DualSense_FirmwareUpdate_Text"	"DualSense™ 무선 컨트롤러에 대한 새로운 펌웨어를 사용할 수 있습니다. 아래 링크를 클릭하여 Sony 펌웨어 업데이트 페이지로 이동하세요."
+"Steam_DualSense_FirmwareUpdate_Text"	"%product%에 대한 새로운 펌웨어를 사용할 수 있습니다. 아래 링크를 클릭하여 Sony 펌웨어 업데이트 페이지로 이동하세요."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"다시 보지 않기"
 
 "DownloadRegion_default"				 "알 수 없음"

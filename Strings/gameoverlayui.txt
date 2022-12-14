@@ -4,12 +4,12 @@ __text
 __TEXT
 __stubs
 __TEXT
-:A'
-:A'
+*A'
+*A'
 __stub_helper
 __TEXT
-0K'
-0K'
+K'
+K'
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
@@ -18,21 +18,19 @@ __TEXT
 __objc_methname
 __TEXT
 __objc_classname__TEXT
-)x-
-)x-
 __objc_methtype
 __TEXT
-4x-
+$x-
 (
-4x-
+$x-
 __unwind_info
 __TEXT
-\x-
-\x-
+Lx-
+Lx-
 __eh_frame
 __TEXT
-@p.
-@p.
+0p.
+0p.
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -9889,8 +9887,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Dec 12 2022
-18:28:19
+Dec 13 2022
+18:33:48
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -13771,50 +13769,45 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-*
 )
-B
+2
 )
 0
+s&
 Ic
-z-
-k&
 p
 0
 0
-^%
 p
 0
+c-
+-B
+"&
+R&
 '
-'
 &
 &
 &
 &
+-
 &
+&
+A
+j
+j
+j
+j
+j
+j
+j
+j
+j
+K.
+0
 v%
-j
-j
-j
-j
-j
-j
-j
-j
-j
-fA
-eA
-cA
-0
-x%
 p
 0
 %
-%
-%
-A
-A
-A
 A
 A
 A
@@ -13830,9 +13823,8 @@ j
 j
 j
 ,
-h$
+3#
 #
-W$
 j
 j
 j
@@ -13881,6 +13873,7 @@ j
 j
 j
 j
+($
 j
 j
 j
@@ -13888,7 +13881,7 @@ j
 $
 $
 $
-$
+`$
 $
 j
 j
@@ -13910,21 +13903,15 @@ j
 j
 j
 +
-b.
 0
-|#
 $
 $
 $
 $
-("
+$
 A9]
-?#
-x*
 d
-r*
-j
-1?
+*#
 j
 j
 j
@@ -13936,6 +13923,12 @@ j
 j
 j
 j
+j
+?
+?
+?
+?
+?
 ?
 
 
@@ -13969,9 +13962,6 @@ p
 p
 1
 @
-#
-#
-9"
 
 "
 "
@@ -13985,7 +13975,8 @@ d
 0
 \
 "
-Q
+d"
+c"
 j
 j
 j
@@ -14015,17 +14006,16 @@ j
 j
 j
 j
-A"
+h!
+b=
 "
+"
+5!
 Hi
-+!
 "
-n=
 !
 !
 !
-!
-$1
 j
 j
 j
@@ -14042,16 +14032,16 @@ j
 0
 p
 0
-N
-,!
-"!
+`!
+^
+R
+K
+{'
 #
 #
 #
 !
 !
-6<
-!
 j
 j
 j
@@ -14076,7 +14066,8 @@ j
 j
 j
 j
-<
+'
+'
 '
 '
 0
@@ -14089,6 +14080,8 @@ AT=
 D
 @
 @
+\
+3
 @
 Hc
 Hc
@@ -14120,17 +14113,19 @@ IcE
 IcE
 @
 @
-b"
-H
 V
+%$
 =
 =
+q
 !
 -
 @
 &
+}6
 5
-{4
+5
+5
 @
 M9e
 @
@@ -14327,19 +14322,16 @@ P
 "
 @
 @
-p!
 "
-%!
 !
 )
 d
-fD9%z8(
-fD9-S3(
-fD9-?2(
+X(
+C(
+fD9-2(
 
 
 
-f'
 A+M
 
 
@@ -14347,12 +14339,13 @@ j
 j
 j
 j
+6'
 j
 j
 =
 0
-r
-V
+9
+l&
 j
 j
 j
@@ -14367,7 +14360,6 @@ j
 
 
 
-
 j
 j
 j
@@ -14386,7 +14378,6 @@ j
 j
 j
 
-{
 d
 &
 &
@@ -14409,6 +14400,7 @@ j
 j
 j
 j
+0
 j
 j
 j
@@ -14474,6 +14466,7 @@ j
 j
 j
 j
+1!
 j
 j
 j
@@ -14487,7 +14480,6 @@ j
 j
 j
 j
--!
 j
 j
 j
@@ -14557,6 +14549,7 @@ j
 j
 j
 j
+)
 
 
 @

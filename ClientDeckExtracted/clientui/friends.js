@@ -66772,6 +66772,8 @@ object-assign
             "SteamLibrary";
           ESteamUIWindowType[(ESteamUIWindowType["MainDesktopUI"] = 6)] =
             "MainDesktopUI";
+          ESteamUIWindowType[(ESteamUIWindowType["DesktopLogin"] = 7)] =
+            "DesktopLogin";
         })(ESteamUIWindowType || (ESteamUIWindowType = {}));
         class SteamUIBrowserWindow_t {}
 
@@ -67461,6 +67463,8 @@ object-assign
             this.update_disc_bytes_per_second = 0;
             /** True if download throttling has been temporarily suspended for the current download */
             this.throttling_suspended = false;
+            /** Set if we are downloading from LAN peer content server */
+            this.lan_peer_hostname = "";
           }
         }
         var EValidationPhase;
@@ -69856,9 +69860,10 @@ object-assign
           EPopupCreationFlags[(EPopupCreationFlags["Minimized"] = 1)] =
             "Minimized";
           EPopupCreationFlags[(EPopupCreationFlags["Hidden"] = 2)] = "Hidden";
-          EPopupCreationFlags[(EPopupCreationFlags["Tooltip"] = 4)] = "Tooltip";
-          EPopupCreationFlags[(EPopupCreationFlags["ContextMenu"] = 8)] =
-            "ContextMenu";
+          EPopupCreationFlags[(EPopupCreationFlags["NoTaskbarIcon"] = 4)] =
+            "NoTaskbarIcon";
+          EPopupCreationFlags[(EPopupCreationFlags["NoWindowShadow"] = 8)] =
+            "NoWindowShadow";
           EPopupCreationFlags[(EPopupCreationFlags["Resizable"] = 16)] =
             "Resizable";
           EPopupCreationFlags[(EPopupCreationFlags["ScalePosition"] = 32)] =
@@ -69880,9 +69885,15 @@ object-assign
           EPopupCreationFlags[
             (EPopupCreationFlags["ApplyBrowserScaleToDimensions"] = 4096)
           ] = "ApplyBrowserScaleToDimensions";
+          EPopupCreationFlags[(EPopupCreationFlags["AlwaysOnTop"] = 8192)] =
+            "AlwaysOnTop";
+          EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8708)] =
+            "Overlay";
+          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 8716)] =
+            "Notification";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
         const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
-          {}
+          { ownerWindow: window }
         );
         const useBrowserContext = () =>
           react__WEBPACK_IMPORTED_MODULE_1__.useContext(BrowserContext);
@@ -69954,7 +69965,9 @@ object-assign
             // all popup windows are initially created hidden then set visible when rendering is complete to prevent initial black screen flash
             if (window.SteamClient)
               this.m_rgParams.eCreationFlags |= EPopupCreationFlags.Hidden;
-            if (this.m_rgParams.eCreationFlags & EPopupCreationFlags.Tooltip)
+            if (
+              this.m_rgParams.eCreationFlags & EPopupCreationFlags.NotFocusable
+            )
               bFocus = false;
             if (this.BIsValid()) {
               if (!this.BIsClosed()) {
@@ -86134,6 +86147,8 @@ object-assign
             /* binding */ LocalizeCalendarYear,
           /* harmony export */ LocalizeDateHumanReadable: () =>
             /* binding */ LocalizeDateHumanReadable,
+          /* harmony export */ LocalizeRTimeToDateAndTimeAndTZ: () =>
+            /* binding */ LocalizeRTimeToDateAndTimeAndTZ,
           /* harmony export */ LocalizeRTimeToHourAndMinutes: () =>
             /* binding */ LocalizeRTimeToHourAndMinutes,
           /* harmony export */ LocalizeRtime32ToMonthYear: () =>
@@ -86580,6 +86595,23 @@ object-assign
           );
           g_mapCachedLocalizedShorterDate.set(key, strDate);
           return strDate;
+        }
+        /**
+         * Converts the time to a string containing the date and time for the current time zone
+         * @param rt the absolute time
+         * @param bForce24HourClock if it should display 24-hr times instead of 12-hr am/pm times
+         * @param strTZ a string naming the time zone
+         * @returns formatted date-time string
+         */
+        function LocalizeRTimeToDateAndTimeAndTZ(rt, bForce24HourClock, strTZ) {
+          const date = new Date(rt * 1000);
+          return (
+            LocalizeCalendarWeekdayAndDayMonth(date, false, false) +
+            " " +
+            LocalizeRTimeToHourAndMinutes(rt, { bForce24HourClock }) +
+            " " +
+            strTZ
+          );
         }
         /**
          * With no options:
@@ -87076,6 +87108,8 @@ function TestLocalizeCalendarTime()
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ ComputeZoomForElement: () =>
+            /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.ComputeZoomForElement,
           /* harmony export */ CreateIntersectionObserver: () =>
             /* reexport safe */ _useresizeobserver__WEBPACK_IMPORTED_MODULE_2__.CreateIntersectionObserver,
           /* harmony export */ CreateResizeObserver: () =>
@@ -87116,6 +87150,8 @@ function TestLocalizeCalendarTime()
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useIsUnmounted,
           /* harmony export */ useMemoWithDependencyDebugging: () =>
             /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useMemoWithDependencyDebugging,
+          /* harmony export */ useModalState: () =>
+            /* reexport safe */ _reactutils__WEBPACK_IMPORTED_MODULE_0__.useModalState,
           /* harmony export */ useMultipleRefs: () =>
             /* reexport safe */ _refutils__WEBPACK_IMPORTED_MODULE_1__.useMultipleRefs,
           /* harmony export */ usePreventVerticalShrinking: () =>
@@ -87188,6 +87224,8 @@ function TestLocalizeCalendarTime()
         "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+          /* harmony export */ ComputeZoomForElement: () =>
+            /* binding */ ComputeZoomForElement,
           /* harmony export */ measure: () => /* binding */ measure,
           /* harmony export */ rgb: () => /* binding */ rgb,
           /* harmony export */ rgba: () => /* binding */ rgba,
@@ -87210,6 +87248,7 @@ function TestLocalizeCalendarTime()
             /* binding */ useIsUnmounted,
           /* harmony export */ useMemoWithDependencyDebugging: () =>
             /* binding */ useMemoWithDependencyDebugging,
+          /* harmony export */ useModalState: () => /* binding */ useModalState,
           /* harmony export */ usePreviousValue: () =>
             /* binding */ usePreviousValue,
           /* harmony export */ usePromise: () => /* binding */ usePromise,
@@ -87472,6 +87511,34 @@ function TestLocalizeCalendarTime()
           return fnIsInmounted;
         }
         /**
+         * Function that computes the cumulative zoom (based on the "zoom" chromium css style) at the
+         * level in the document containing the provided element. Since this triggers a DOM
+         * layout recalculation, compute it rarely, such as on component mount.
+         * @param element
+         */
+        function ComputeZoomForElement(element) {
+          let fCumulativeZoom = 1;
+          // Walk upwards, stopping before we hit the html root element.
+          // That elem's zoom style must be ignored because it's automatically
+          // set to reflect the current DPI scale.
+          // https://bugs.chromium.org/p/chromium/issues/detail?id=899707
+          while (element != null && element.tagName != "HTML") {
+            // "zoom" used to exist on the standard CSS property interface,
+            // but since it was removed from the spec by the web standards
+            // committee it has also been removed from the TS interface by
+            // the Typescript team, so we have to cast here now.
+            const style = getComputedStyle(element);
+            if (style.zoom) {
+              const fElemZoom = Number.parseFloat(style.zoom);
+              if (!isNaN(fElemZoom)) {
+                fCumulativeZoom *= fElemZoom;
+              }
+            }
+            element = element.parentElement;
+          }
+          return fCumulativeZoom;
+        }
+        /**
          * Hook that computes the cumulative zoom (based on the "zoom" chromium css style) at the
          * level in the document containing the provided element (by ref). Since this triggers a DOM
          * layout recalculation, it's computed once on mount.
@@ -87480,29 +87547,10 @@ function TestLocalizeCalendarTime()
         function useComputedZoom(ref) {
           const [computedZoom, setComputedZoom] =
             react__WEBPACK_IMPORTED_MODULE_0__.useState(1);
-          react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-            let elem = ref.current;
-            let fCumulativeZoom = 1;
-            // Walk upwards, stopping before we hit the html root element.
-            // That elem's zoom style must be ignored because it's automatically
-            // set to reflect the current DPI scale.
-            // https://bugs.chromium.org/p/chromium/issues/detail?id=899707
-            while (elem != null && elem.tagName != "HTML") {
-              // "zoom" used to exist on the standard CSS property interface,
-              // but since it was removed from the spec by the web standards
-              // committee it has also been removed from the TS interface by
-              // the Typescript team, so we have to cast here now.
-              const style = getComputedStyle(elem);
-              if (style.zoom) {
-                const fElemZoom = Number.parseFloat(style.zoom);
-                if (!isNaN(fElemZoom)) {
-                  fCumulativeZoom *= fElemZoom;
-                }
-              }
-              elem = elem.parentElement;
-            }
-            setComputedZoom(fCumulativeZoom);
-          }, [ref]);
+          react__WEBPACK_IMPORTED_MODULE_0__.useEffect(
+            () => setComputedZoom(ComputeZoomForElement(ref.current)),
+            [ref]
+          );
           return computedZoom;
         }
         /**
@@ -87772,6 +87820,22 @@ function TestLocalizeCalendarTime()
             return () => window.clearTimeout(refTimeoutHandle.current);
           }, [bValue, nWithinPastMS]);
           return bWasTrueRecently || bValue;
+        }
+        /**
+         * Helper for tracking modal state, gives memoized show/hide functions.  Could be used for any boolean really.
+         */
+        function useModalState(bDefaultVisible = false) {
+          const [bModalVisible, setModalVisible] =
+            react__WEBPACK_IMPORTED_MODULE_0__.useState(bDefaultVisible);
+          const showModal = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(
+            () => setModalVisible(true),
+            []
+          );
+          const closeModal = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(
+            () => setModalVisible(false),
+            []
+          );
+          return [bModalVisible, showModal, closeModal];
         }
 
         /***/
@@ -88298,7 +88362,7 @@ function TestLocalizeCalendarTime()
           /* harmony export */ useOnDeck: () => /* binding */ useOnDeck,
           /* harmony export */
         });
-        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_4__ =
+        /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
         /* harmony import */ var shared_utils_mathutils__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
@@ -88318,13 +88382,24 @@ function TestLocalizeCalendarTime()
           /*#__PURE__*/ __webpack_require__.n(
             react__WEBPACK_IMPORTED_MODULE_3__
           );
+        /* harmony import */ var shared_utils_assert__WEBPACK_IMPORTED_MODULE_4__ =
+          __webpack_require__(
+            /*! shared/utils/assert */ "../../../web_src/shared/js/utils/assert.ts"
+          );
 
         const ConfigContext =
           react__WEBPACK_IMPORTED_MODULE_3___default().createContext({});
-        const useConfigContext = () =>
-          react__WEBPACK_IMPORTED_MODULE_3___default().useContext(
-            ConfigContext
+        const useConfigContext = () => {
+          let context =
+            react__WEBPACK_IMPORTED_MODULE_3___default().useContext(
+              ConfigContext
+            );
+          (0, shared_utils_assert__WEBPACK_IMPORTED_MODULE_4__.AssertMsg)(
+            context.IN_GAMEPADUI !== undefined,
+            "Trying to use ConfigContext without a provider!"
           );
+          return context;
+        };
         /**
          * Helper function to determine whether we are in the gamepadui context
          * @returns boolean
@@ -88340,7 +88415,6 @@ function TestLocalizeCalendarTime()
          * @returns boolean
          */
         function useOnDeck() {
-          const configContext = useConfigContext();
           return Config.ON_DECK;
         }
         /**
@@ -88426,8 +88500,6 @@ function TestLocalizeCalendarTime()
           IN_STEAMUI_SHARED_CONTEXT: false,
           /** Whether there is only one shared js context.  To be removed once we ship -steamuisharedjscontext. */
           ONE_STEAMUI_SHARED_CONTEXT: false,
-          /** Whether the main GamepadUI window should be windowed or fullscreen */
-          GAMEPADUI_WINDOWED: false,
           /** Whether GamepadUI is in Steam Deck override mode and should display similarly to device on desktop */
           DECK_DISPLAY_MODE: false,
           /** Whether we are running on the Steam Deck device (in gamepadui mode or not).  Can be emulated with -steamdeck. */
@@ -88602,7 +88674,7 @@ function TestLocalizeCalendarTime()
           return rgConfigsLoaded;
         }
         function InitConfigAsync(axios, baseUrl, options) {
-          return (0, tslib__WEBPACK_IMPORTED_MODULE_4__.__awaiter)(
+          return (0, tslib__WEBPACK_IMPORTED_MODULE_5__.__awaiter)(
             this,
             void 0,
             void 0,
@@ -90050,4 +90122,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=e107f8394755e0df3b92
+//# sourceMappingURL=friends.js.map?contenthash=92570e4a3f1ffe84f647

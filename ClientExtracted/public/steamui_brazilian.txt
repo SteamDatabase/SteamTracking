@@ -188,15 +188,19 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_GamesDialog_NoSubscription_Title" "Steam"
 "SteamUI_GamesDialog_NoSubscription" 	"Você não tem uma assinatura deste jogo.\nQuer ir para a página de assinaturas agora?"
 "SteamUI_JoinDialog_ErrorTitle" 	"Steam — Erro"
+
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=application"    	"Executar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=game"    	"Jogar"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype=shortcut"  "Iniciar atalho"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=dlc"    	"Jogar"
-"SteamUI_JoinDialog_UpdateLater_Btn"								"Atualizar depois"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=demo"    	"Jogar demonstração"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=tool"    	"Iniciar"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=media"    	"Reproduzir"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=music"    	"Reproduzir"
 "SteamUI_JoinDialog_PlayGame_Btn$apptype=config"    "Continuar"
+"SteamUI_JoinDialog_PlayGame_Btn$apptype"           "Iniciar"
+
+"SteamUI_JoinDialog_UpdateLater_Btn"								"Atualizar depois"
 "SteamUI_JoinDialog_Cancel_Btn"		"Cancelar"
 "SteamUI_JoinDialog_OverrideThrottle"	"Ignorar limite de velocidade atual"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Ignorar atualização e jogar agora"
@@ -211,11 +215,13 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 
 "SteamUI_JoinDialog_LaunchGameReady$appType=application"	"Iniciar aplicativo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=game"	"Iniciar jogo assim que estiver pronto"
+"SteamUI_JoinDialog_LaunchGameReady$appType=shortcut"	"Iniciar atalho assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=dlc"	"Iniciar jogo assim que estiver pronto"
 "SteamUI_JoinDialog_LaunchGameReady$appType=demo"	"Iniciar demonstração assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=tool"	"Iniciar ferramenta assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=music"	"Reproduzir trilha sonora assim que estiver pronta"
 "SteamUI_JoinDialog_LaunchGameReady$appType=media"	"Iniciar mídia assim que estiver pronta"
+"SteamUI_JoinDialog_LaunchGameReady$appType"        "Iniciar assim que estiver pronto"
 
 "SteamUI_JoinDialog_SharedLicense_Title" "Biblioteca compartilhada de jogos"
 "SteamUI_JoinDialog_SharedLicenseLocked_OwnerText" "A sua biblioteca compartilhada está sendo usada por %borrower%. Ao jogar agora, %borrower% será avisado que está na hora de parar."
@@ -238,6 +244,8 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Sincronizando com a Nuvem Steam..."
 "SteamUI_JoinDialog_Connecting_Text" "Conectando-se ao Steam..."
+
+"SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes% minutos"
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Definir imagem personalizada"
 "SteamUI_SetCustomImage_ChooseImage" "Escolha uma imagem para representar %gamename% no modo de exibição em grade do Steam."
@@ -1108,9 +1116,9 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_SpecialSurvey_Error_Denied"	"Você não foi convidado para responder esta pesquisa."
 "SteamUI_SpecialSurvey_Error_AlreadyComplete"	"Você já respondeu esta pesquisa. Agradecemos sua participação."
 
-"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\nObrigado por concordar em responder esta pesquisa. Ela é dividida em duas partes.\n\nPrimeiro coletaremos informações sobre a sua máquina. Esses dados não são anônimos e serão compartilhados com o autor desta pesquisa.\n\nDepois nós mandaremos você para um website para coletar dados demográficos adicionais.\n\\\\Para começar clique em \"Avançar\""
-"SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nAgradecemos ter aceito responder a esta pesquisa. \n\nEsta pesquisa coleta informações sobre a sua máquina. Tais dados não são anônimos e serão compartilhados com o autor desta pesquisa.\n\nPara começar, clique em \"Avançar\""
-"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nObrigado por concordar em responder esta pesquisa.\n\nParece que você começou a respondê-la mais cedo e, por isso, não precisamos coletar informações sobre sua máquina novamente. Pressione \"Concluir\" para abrir uma página onde você poderá completar o resto da pesquisa."
+"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\nAgradecemos a sua participação nesta pesquisa. Ela é dividida em duas partes.\n\nPrimeiro coletaremos dados sobre a sua máquina. Esses dados não são anônimos e serão compartilhados com o autor desta pesquisa.\n\nDepois nós mandaremos você para um website para coletar dados demográficos adicionais.\n\nPara começar clique em \"Avançar\""
+"SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nAgradecemos a sua participação nesta pesquisa. \n\nEsta pesquisa coleta dados sobre a sua máquina. Tais dados não são anônimos e serão compartilhados com o autor desta pesquisa.\n\nPara começar, clique em \"Avançar\""
+"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nAgradecemos a sua participação nesta pesquisa.\n\nParece que você começou a respondê-la mais cedo e, por isso, não precisamos coletar os dados da sua máquina novamente. Pressione \"Concluir\" para abrir uma página onde você poderá concluí-la."
 "SteamUI_SpecialSurvey_ForwardToWeb"	"Parte 1 - coleta de informações do hardware - está completa.\n\nClique em \"Concluir\" para abrir uma página e completar a Parte 2. A pesquisa não estará completa até que complete a Parte 2."
 "SteamUI_SpecialSurvey_Complete"		"Agradecemos por ter completado esta pesquisa. As suas respostas foram salvas."
 "SteamUI_SpecialSurvey_Sending_Data"	"Enviando dados coletados..."
@@ -1891,6 +1899,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Game_AllowOtherDownloads$appType=demo"	"Permitir que o Steam baixe outras atualizações enquanto esta demonstração estiver rodando"
 "Steam_Game_AllowOtherDownloads$appType=media"	"Permitir que o Steam baixe outras atualizações enquanto esta mídia estiver rodando"
 "Steam_Game_AllowOtherDownloads$appType=music"	"Permitir o download de outras atualizações enquanto esta trilha sonora estiver tocando"
+"Steam_Game_AllowOtherDownloads$appType"        "Permitir que o Steam baixe outras atualizações enquanto estiver rodando"
 "Steam_Game_AvailableSeats"					"%seats% cópia(s) deste título disponível(is) para empréstimo"
 "Steam_Game_AvailableSeatsUnlimited"		"Cópias ilimitadas deste título disponíveis para empréstimo"
 
@@ -2029,6 +2038,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_AlwaysKeepThisGameUpToDate$appType=media"	"Sempre manter esta mídia atualizada"
 "Steam_AlwaysKeepThisGameUpToDate$appType=music"	"Sempre manter esta trilha sonora atualizada"
 "Steam_AlwaysKeepThisGameUpToDate$appType=tool"		"Sempre manter esta ferramenta atualizada"
+"Steam_AlwaysKeepThisGameUpToDate$appType"          "Sempre manter atualizado"
 
 "Steam_DoNotUpdateThisGame$appType=application"			"Atualizar apenas ao iniciar"
 "Steam_DoNotUpdateThisGame$appType=game"			"Atualizar apenas ao iniciar"
@@ -2036,6 +2046,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_DoNotUpdateThisGame$appType=media"			"Atualizar apenas ao iniciar"
 "Steam_DoNotUpdateThisGame$appType=music"			"Não atualizar esta trilha sonora automaticamente"
 "Steam_DoNotUpdateThisGame$appType=tool"			"Atualizar apenas ao iniciar"
+"Steam_DoNotUpdateThisGame$appType"                 "Atualizar apenas ao iniciar"
 
 "Steam_AutoUpdateBehaviorHighPriority$appType=application"			"Alta prioridade — Atualizar antes de outros produtos"
 "Steam_AutoUpdateBehaviorHighPriority$appType=game"			"Alta prioridade — Atualizar antes de outros produtos"
@@ -2043,6 +2054,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_AutoUpdateBehaviorHighPriority$appType=media"			"Alta prioridade — Atualizar antes de outros produtos"
 "Steam_AutoUpdateBehaviorHighPriority$appType=music"			"Alta prioridade — sempre atualizar automaticamente"
 "Steam_AutoUpdateBehaviorHighPriority$appType=tool"			"Alta prioridade — Atualizar antes de outros produtos"
+"Steam_AutoUpdateBehaviorHighPriority$appType"              "Alta prioridade — Atualizar antes de outros produtos"
 
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=application" 	"Este aplicativo e as suas atualizações serão adquiridos automaticamente assim que estiverem disponíveis."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=game" 	"Este jogo e as suas atualizações serão adquiridos automaticamente assim que estiverem disponíveis."
@@ -2050,27 +2062,30 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=media" "Esta mídia e as suas atualizações serão adquiridas automaticamente assim que estiverem disponíveis."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=music" "Esta trilha sonora e as suas atualizações serão adquiridas automaticamente assim que estiverem disponíveis."
 "Steam_GameProperties_AlwaysUpToDateInfo$appType=tool" 	"Esta ferramenta e as suas atualizações serão adquiridas automaticamente assim que estiverem disponíveis."
+"Steam_GameProperties_AlwaysUpToDateInfo$appType"       "Este conteúdo e as suas atualizações serão adquiridos automaticamente assim que estiverem disponíveis."
 
-"Steam_GameProperties_NeverUpdateInfo$appType=application"		"Conteúdo atualizado será adquirido apenas ao iniciar este aplicativo."
-"Steam_GameProperties_NeverUpdateInfo$appType=game"		"Conteúdo atualizado será adquirido apenas ao iniciar este jogo."
-"Steam_GameProperties_NeverUpdateInfo$appType=demo"		"Conteúdo atualizado será adquirido apenas ao iniciar esta demonstração."
-"Steam_GameProperties_NeverUpdateInfo$appType=media"	"Conteúdo atualizado será adquirido apenas ao iniciar esta mídia."
+"Steam_GameProperties_NeverUpdateInfo$appType=application"		"Quaisquer atualizações serão baixadas apenas ao iniciar este aplicativo."
+"Steam_GameProperties_NeverUpdateInfo$appType=game"		"Quaisquer atualizações serão baixadas apenas ao iniciar este jogo."
+"Steam_GameProperties_NeverUpdateInfo$appType=demo"		"Quaisquer atualizações serão baixadas apenas ao iniciar esta demonstração."
+"Steam_GameProperties_NeverUpdateInfo$appType=media"	"Quaisquer atualizações serão baixadas apenas ao iniciar esta mídia."
 "Steam_GameProperties_NeverUpdateInfo$appType=music"	"Não atualizar esta trilha automaticamente."
-"Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Conteúdo atualizado será adquirido apenas ao iniciar esta ferramenta."
+"Steam_GameProperties_NeverUpdateInfo$appType=tool"		"Quaisquer atualizações serão baixadas apenas ao iniciar esta ferramenta."
+"Steam_GameProperties_NeverUpdateInfo$appType"          "Quaisquer atualizações serão baixadas apenas ao iniciar este conteúdo."
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Downloads em segundo plano"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
 "Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberta?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	"O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberta?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "O Steam pode baixar outros jogos ou aplicativos enquanto %game% estiver aberto?"
 
-"Steam_BackgroundDownloadsDefault_Allow"	"Configuração global (permitir downloads em 2º plano)"
-"Steam_BackgroundDownloadsDefault_Deny"	"Configuração global (impedir downloads em 2º plano)"
-"Steam_BackgroundDownloadsAllow"	"Sempre permitir downloads em 2º plano"
-"Steam_BackgroundDownloadsDeny"	"Nunca permitir downloads em 2º plano"
+"Steam_BackgroundDownloadsDefault_Allow"	"Configuração global (permitir downloads em segundo plano)"
+"Steam_BackgroundDownloadsDefault_Deny"	"Configuração global (impedir downloads em segundo plano)"
+"Steam_BackgroundDownloadsAllow"	"Sempre permitir downloads em segundo plano"
+"Steam_BackgroundDownloadsDeny"	"Nunca permitir downloads em segundo plano"
 
 "Steam_GameProperties_SteamInputSettings"	"Configurações de entrada"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Usar configuração de entrada do Steam (requer reinicialização do jogo)"
@@ -2092,6 +2107,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Controller_Support_None" "Nenhum"
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Downloads em segundo plano"
+"Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType" "Downloads em segundo plano"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"Este aplicativo e as suas atualizações serão adquiridos automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=game"		"Este jogo e as suas atualizações serão adquiridos automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
@@ -2099,6 +2115,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=media"		"Esta mídia e as suas atualizações serão adquiridas automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=music"		"Esta trilha sonora e as suas atualizações serão adquiridas automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=tool"		"Esta ferramenta e as suas atualizações serão adquiridas automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
+"Steam_GameProperties_HighPriorityAutoUpdateInfo$appType"           "Este conteúdo e as suas atualizações serão adquiridos automaticamente com prioridade sobre outros downloads assim que estiverem disponíveis."
 
 "Steam_Game_VerifyGameFiles$appType=application"				"Verificar integridade dos arquivos..."
 "Steam_Game_VerifyGameFiles$appType=game"				"Verificar integridade dos arquivos..."
@@ -2106,6 +2123,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Game_VerifyGameFiles$appType=media"				"Verificar integridade dos arquivos..."
 "Steam_Game_VerifyGameFiles$appType=music"				"Verificar integridade dos arquivos..."
 "Steam_Game_VerifyGameFiles$appType=tool"				"Verificar integridade dos arquivos..."
+"Steam_Game_VerifyGameFiles$appType"				    "Verificar integridade do conteúdo..."
 
 "Steam_DeleteLocalGameContent$appType=application"		"Desinstalar aplicativo..."
 "Steam_DeleteLocalGameContent$appType=game"		"Desinstalar jogo..."
@@ -2113,6 +2131,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_DeleteLocalGameContent$appType=media"	"Desinstalar mídia..."
 "Steam_DeleteLocalGameContent$appType=music"	"Desinstalar trilha sonora..."
 "Steam_DeleteLocalGameContent$appType=tool"		"Desinstalar ferramenta..."
+"Steam_DeleteLocalGameContent$appType"          "Desinstalar conteúdo..."
 
 "Steam_BackupGameFiles$appType=application"		"Criar cópia de segurança dos arquivos..."
 "Steam_BackupGameFiles$appType=game"			"Criar cópia de segurança dos arquivos..."
@@ -2120,13 +2139,15 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_BackupGameFiles$appType=media"			"Criar cópia de segurança dos arquivos..."
 "Steam_BackupGameFiles$appType=music"			"Criar cópia de segurança dos arquivos..."
 "Steam_BackupGameFiles$appType=tool"			"Criar cópia de segurança dos arquivos..."
+"Steam_BackupGameFiles$appType"                 "Criar cópia de segurança dos arquivos..."
 
-"Steam_Install_WillDownloadAllFiles$appType=application"	"Agora todos os arquivos deste aplicativo serão baixados pelo Steam."
-"Steam_Install_WillDownloadAllFiles$appType=game"	"Agora todos os arquivos deste jogo serão baixados pelo Steam."
-"Steam_Install_WillDownloadAllFiles$appType=demo"	"Agora todos os arquivos desta demonstração serão baixados pelo Steam."
-"Steam_Install_WillDownloadAllFiles$appType=media"	"Agora todos os arquivos desta mídia serão baixados pelo Steam."
-"Steam_Install_WillDownloadAllFiles$appType=music"	"Agora todos os arquivos desta trilha sonora serão baixados pelo Steam."
-"Steam_Install_WillDownloadAllFiles$appType=tool"	"Agora todos os arquivos desta ferramenta serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=application"	"Todos os arquivos deste aplicativo serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=game"	"Todos os arquivos deste jogo serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=demo"	"Todos os arquivos desta demonstração serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=media"	"Todos os arquivos desta mídia serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=music"	"Todos os arquivos desta trilha sonora serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType=tool"	"Todos os arquivos desta ferramenta serão baixados pelo Steam."
+"Steam_Install_WillDownloadAllFiles$appType"        "Todos os arquivos deste conteúdo serão baixados pelo Steam."
 
 "Steam_Install_StartCacheLoading$appType=application"		"Criando arquivos locais do(s) aplicativo(s)..."
 "Steam_Install_StartCacheLoading$appType=game"		"Criando arquivos locais do(s) jogo(s)..."
@@ -2134,6 +2155,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_Install_StartCacheLoading$appType=media"		"Criando arquivos locais da(s) mídia(s)..."
 "Steam_Install_StartCacheLoading$appType=music"		"Criando arquivos locais..."
 "Steam_Install_StartCacheLoading$appType=tool"		"Criando arquivos locais da ferramenta..."
+"Steam_Install_StartCacheLoading$appType"		     "Criando arquivos locais do conteúdo..."
 
 "Steam_PreparingGamesList$appType=application"	 	"Preparando lista de aplicativos do Steam%progress%"
 "Steam_PreparingGamesList$appType=game"	 			"Preparando lista de jogos do Steam%progress%"
@@ -2141,7 +2163,8 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_PreparingGamesList$appType=media" 			"Preparando lista de mídia do Steam%progress%"
 "Steam_PreparingGamesList$appType=music" 			"Preparando lista de trilhas sonoras do Steam%progress%"
 "Steam_PreparingGamesList$appType=tool"	 			"Preparando lista de ferramentas do Steam%progress%"
-"Steam_PreparingGamesList$appType=license"		"Preparando lista de licenças do Steam%progress%"
+"Steam_PreparingGamesList$appType=license"		    "Preparando lista de licenças do Steam%progress%"
+"Steam_PreparingGamesList$appType"                  "Preparando lista de conteúdos do Steam%progress%"
 
 "Steam_ScanningForUpdates$appType=application"		"Verificando se há atualizações para aplicativos do Steam%progress%"
 "Steam_ScanningForUpdates$appType=game"				"Verificando se há atualizações para jogos do Steam%progress%"
@@ -2149,7 +2172,8 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_ScanningForUpdates$appType=media"			"Verificando se há atualizações para mídias do Steam%progress%"
 "Steam_ScanningForUpdates$appType=music"			"Verificando se há atualizações para trilhas sonoras do Steam%progress%"
 "Steam_ScanningForUpdates$appType=tool"				"Verificando se há atualizações para ferramentas do Steam%progress%"
-"Steam_ScanningForUpdates$appType=license"		"Verificando se há atualizações para licenças do Steam%progress%"
+"Steam_ScanningForUpdates$appType=license"		    "Verificando se há atualizações para licenças do Steam%progress%"
+"Steam_ScanningForUpdates$appType"                  "Verificando se há atualizações para conteúdos do Steam%progress%"
 
 "SteamUI_NoGamesOfThisType$appType=application"	"Não há aplicativos Steam para exibir."
 "SteamUI_NoGamesOfThisType$appType=game"	"Não há jogos Steam para exibir."
@@ -2157,6 +2181,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "SteamUI_NoGamesOfThisType$appType=media"	"Não há mídias do Steam para exibir."
 "SteamUI_NoGamesOfThisType$appType=music"	"Não há trilhas sonoras do Steam para exibir."
 "SteamUI_NoGamesOfThisType$appType=tool"	"Não há ferramentas do Steam para exibir."
+"SteamUI_NoGamesOfThisType$appType"         "Não há conteúdos do Steam para exibir."
 
 "Steam_ValidatingSteamCaches_Label$appType=application"	"Aguarde enquanto o Steam verifica os arquivos do aplicativo."
 "Steam_ValidatingSteamCaches_Label$appType=game"	"Aguarde enquanto o Steam verifica os arquivos do jogo."
@@ -2164,6 +2189,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_ValidatingSteamCaches_Label$appType=media"	"Aguarde enquanto o Steam verifica os arquivos da mídia."
 "Steam_ValidatingSteamCaches_Label$appType=music"	"Aguarde enquanto o Steam verifica os arquivos da trilha sonora."
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Aguarde enquanto o Steam verifica os arquivos da ferramenta."
+"Steam_ValidatingSteamCaches_Label$appType"         "Aguarde enquanto o Steam verifica os arquivos do conteúdo."
 
 "Steam_ValidationResults_NoFailures"	"Todos os arquivos foram validados com sucesso."
 "Steam_ValidationResults_OneFailure"	"1 arquivo falhou na validação e será readquirido."
@@ -2335,6 +2361,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_FindContent$appType=media"			"Buscar mídias..."
 "Steam_FindContent$appType=music"			"Buscar trilhas sonoras..."
 "Steam_FindContent$appType=tool"			"Buscar ferramentas..."
+"Steam_FindContent$appType"                 "Explorar conteúdo..."
 
 "Steam_NoGamesOfThisType$appType=application"	"Não encontramos nada! Tente limpar o campo de busca ou selecionar outra categoria no menu acima."
 "Steam_NoGamesOfThisType$appType=game"	"Não encontramos nada! Tente limpar o campo de busca ou selecionar outra categoria no menu acima."
@@ -2343,6 +2370,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_NoGamesOfThisType$appType=media"	"Não encontramos nada! Tente alterar os seus filtros de exibição acima ou <a href=steam://browsemedia>navegue pelos vídeos disponíveis</a> na Loja Steam."
 "Steam_NoGamesOfThisType$appType=music"	"Não encontramos nada! Tente limpar o campo de busca ou selecionar outra categoria no menu acima."
 "Steam_NoGamesOfThisType$appType=tool"	"Não encontramos nada! Tente alterar os seus filtros de exibição acima."
+"Steam_NoGamesOfThisType$appType"	    "Não encontramos nada! Tente alterar os seus filtros de exibição acima."
 
 "Steam_MetascoreColumn"					"Metascore"
 
@@ -2401,12 +2429,13 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_SystemRebootRequired_Info"		"Devido a alterações na atualização mais recente, o sistema precisa ser reiniciado para poder iniciar o jogo."
 "Steam_SystemRebootRequired_Button"	"Reiniciar agora"
 
-"Steam_Game_Developer$appType=application"	"Desenvolvedor"
-"Steam_Game_Developer$appType=game"	"Desenvolvedor"
-"Steam_Game_Developer$appType=demo"	"Desenvolvedor"
-"Steam_Game_Developer$appType=media"	"Produtor"
-"Steam_Game_Developer$appType=music"	"Produtor"
-"Steam_Game_Developer$appType=tool"	"Desenvolvedor"
+"Steam_Game_Developer$appType=application"  "Desenvolvedor"
+"Steam_Game_Developer$appType=game"         "Desenvolvedor"
+"Steam_Game_Developer$appType=demo"         "Desenvolvedor"
+"Steam_Game_Developer$appType=media"        "Produtor"
+"Steam_Game_Developer$appType=music"        "Produtor"
+"Steam_Game_Developer$appType=tool"         "Desenvolvedor"
+"Steam_Game_Developer$appType"              "Criador de conteúdo"
 
 "Steam_Forums"				"Discussões"
 "Steam_ForumsURL"				"http://steampowered.com/index.php?area=forums"
@@ -3714,6 +3743,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_details_lastpurchased$apptype=music"	"Data da compra"
 "steam_details_lastpurchased$apptype=video"	"Data da compra"
 "steam_details_lastpurchased$apptype=tool"	"Data da compra"
+"steam_details_lastpurchased$apptype"   "Data da compra"
 "steam_details_addedtoaccount"	"Adicionado à conta em"
 "steam_details_totalplaytime_minutes" "%minutes% minutos"
 "steam_details_totalplaytime_hours" "%hours% horas"
@@ -3771,6 +3801,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_welcome$apptype=shortcut"			"Informações do atalho"
 "steam_welcome$apptype=tool"			"Informações da ferramenta"
 "steam_welcome$apptype=demo"			"Informações da demonstração"
+"steam_welcome$apptype"                 "Informações do conteúdo"
 "steam_dlc_details"		"Conteúdo adicional"
 "steam_managedlc"		"Gerenciar conteúdo adicional"
 "steam_finddlcinstore"		"Ver mais conteúdos adicionais na loja"
@@ -3798,8 +3829,9 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_welcomeaction_launch$apptype=application" "Para iniciar %gamename%, clique no botão Iniciar acima."
 "steam_welcomeaction_launch$apptype=video" "Para assistir a %gamename%, clique no botão Assistir acima."
 "steam_welcomeaction_launch$apptype=shortcut" "Para iniciar %gamename%, clique no botão Jogar acima."
-"steam_welcomeaction_launch$apptype=tool" "Para iniciar %gamename%, clique no botão Jogar acima."
-"steam_welcomeaction_launch$apptype=demo" "Para iniciar %gamename%, clique no botão Jogar acima."
+"steam_welcomeaction_launch$apptype=tool"   "Para iniciar %gamename%, clique no botão Jogar acima."
+"steam_welcomeaction_launch$apptype=demo"   "Para iniciar %gamename%, clique no botão Jogar acima."
+"steam_welcomeaction_launch$apptype"        "Para iniciar %gamename%, clique no botão Jogar acima."
 "steam_welcomeaction_install" "Para instalar %gamename%, clique no botão \"Instalar\" acima."
 "steam_welcomeaction_preload" "Para pré-carregar %gamename% para que possa começar a jogá-lo assim que for lançado, clique no botão Pré-carregar acima."
 "steam_welcomeaction_comingsoon" "%gamename% será lançado em breve."
@@ -3807,15 +3839,17 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "steam_welcomemessage_nofriends$apptype=game" "Para encontrar outros que jogam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que jogos os seus amigos estão jogando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
 "steam_welcomemessage_nofriends$apptype=application" "Para encontrar outros que usam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que aplicativos os seus amigos estão usando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
-"steam_welcomemessage_nofriends$apptype=tool" "Para encontrar outros que usam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que ferramentas os seus amigos estão usando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
-"steam_welcomemessage_nofriends$apptype=video" "Para encontrar outros que assistem a %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver a que vídeos os seus amigos estão assistindo, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
-"steam_welcomemessage_nofriends$apptype=demo" "Para encontrar outros que jogam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que demonstrações os seus amigos estão jogando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
+"steam_welcomemessage_nofriends$apptype=tool"   "Para encontrar outros que usam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que ferramentas os seus amigos estão usando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
+"steam_welcomemessage_nofriends$apptype=video"  "Para encontrar outros que assistem a %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver a que vídeos os seus amigos estão assistindo, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
+"steam_welcomemessage_nofriends$apptype=demo"   "Para encontrar outros que jogam %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que demonstrações os seus amigos estão jogando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
+"steam_welcomemessage_nofriends$apptype"        "Para encontrar outros que possuem %gamename%, entre <a href=steam://url/CommunityGroupSearch/%encodedsearch%>em um grupo relacionado na Comunidade Steam</a>. Para ver que conteúdos os seus amigos estão usando, <a href=steam://friends/add/>adicione um amigo</a> à sua lista de amigos do Steam."
 
 "steam_welcomemessage_help$apptype=game"	"Caso precise de suporte técnico para este jogo, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 "steam_welcomemessage_help$apptype=application"	"Caso precise de suporte técnico para este aplicativo, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 "steam_welcomemessage_help$apptype=video"	"Caso precise de suporte técnico para este vídeo, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 "steam_welcomemessage_help$apptype=tool"	"Caso precise de suporte técnico para esta ferramenta, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 "steam_welcomemessage_help$apptype=demo"	"Caso precise de suporte técnico para esta demonstração, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
+"steam_welcomemessage_help$apptype"         "Caso precise de suporte técnico para este conteúdo, acesse o <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>Fórum Steam de %gamename%</a> ou consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 
 "steam_welcomemessage_help_nostore"	"Caso precise de suporte técnico para este jogo, consulte o <a href=http://support.steampowered.com/>Suporte Steam</a>."
 
@@ -3955,7 +3989,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 
 "SteamUI_ValveSurvey_Summary_Software"	"Software instalado:"
 "steam_systeminfo_info"			"O Steam detectou os seguintes hardwares e softwares no seu sistema:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Reserve um momento para responder a esta breve pesquisa. Todo mês o Steam realiza uma pesquisa mensal para descobrir os componentes (hardware) e programas (softwares) mais usados pelos nossos usuários. A participação na pesquisa é voluntária e anônima. Os dados coletados nos ajudam a tomar decisões sobre quais tecnologias devemos investir e produtos oferecer.\nOs dados coletados são confidenciais e não serão associados à sua conta."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Reserve um momento para participar desta breve pesquisa. Todo mês o Steam realiza uma pesquisa mensal para descobrir os componentes (hardware) e programas (softwares) mais usados pelos nossos usuários. A participação na pesquisa é voluntária e anônima. Os dados coletados nos ajudam a tomar decisões sobre quais tecnologias devemos investir e quais produtos oferecer.\nOs dados coletados são confidenciais e não serão associados à sua conta."
 
 "steam_statuslabel"	"Estado"
 
@@ -4804,7 +4838,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_XboxDriverInstall_Failure"	"Falha ao atualizar o driver. Erro = %error%"
 
 "Steam_DualSense_FirmwareUpdate_Title"	"Novo firmware disponível para o controle"
-"Steam_DualSense_FirmwareUpdate_Text"	"Novo firmware disponível para o seu controle sem fio DualSense™. Clique no link abaixo para acessar a página de atualização de firmware da Sony:"
+"Steam_DualSense_FirmwareUpdate_Text"	"Novo firmware disponível para: \"%product%\". Clique no link abaixo para acessar a página de atualização de firmware da Sony."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Não exibir isso novamente"
 
 "DownloadRegion_default"				 "Desconhecida"

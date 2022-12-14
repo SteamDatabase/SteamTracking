@@ -2663,7 +2663,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_AddContent"			"+"
 	"Library_AddContent_Activate"	"Ativar um produto"
 	"Library_AddShortcut"           "Adicionar um atalho"
-	"Library_AddContent_Store"		"Ver jogos na loja do Steam..."
+	"Library_AddContent_Store"		"Ver jogos na Loja Steam..."
 	"Library_ActivateProduct_Title"	"Ativar um produto"
 	"Library_ActivateProduct_Intro"	"Para registares o teu produto no Steam, introduz aqui o código do produto distribuído com a cópia física do jogo ou outro tipo de chave."
 	"Library_ActivateProduct_CodeLabel" "Código do produto"
@@ -3441,7 +3441,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Downloads_ItemError"				"{s:downloaderror}"
 	"Downloads_ItemsPaused"			"{i:downloadspaused} ITENS NA FILA"
 	"Downloads_ItemPaused"			"1 ITEM NA FILA"
-	"Downloads_ItemsComplete"		"{i:downloadscomplete} DE {i:downloadstotal} ITENS CONCLUÍDOS"
+	"Downloads_ItemsComplete"		"DOWNLOADS CONCLUÍDOS: {i:downloadscomplete} DE {i:downloadstotal}"
 	"Downloads_ItemComplete"		"1 ITEM CONCLUÍDO"
 
 	"Downloads_Summary_TotalAmount"	"Total: {s:downloadamount}"

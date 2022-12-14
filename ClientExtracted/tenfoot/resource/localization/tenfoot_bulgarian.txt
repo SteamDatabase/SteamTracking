@@ -1269,7 +1269,6 @@
 	"Store_Category_LegacyController"	"Класическа поддръжка"
 	"Store_Category_Achievements"	"Постижения"
 	"Store_Category_Cloud"			"Steam облак"
-	"Store_Category_Singleplayer"	"Самостоятелна игра"
 	"Store_Category_Multiplayer"	"Мрежови"
 	"Store_Category_Coop"			"Кооперативна игра"
 	"Store_Category_Leaderboards"	"Класации"

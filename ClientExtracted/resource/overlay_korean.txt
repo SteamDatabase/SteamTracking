@@ -105,7 +105,7 @@
 
 "Overlay_WebBrowser_Back"		"뒤로"
 "Overlay_WebBrowser_Forward"	"앞으로"
-"Overlay_WebBrowser_Reload"	"새로 고침"
+"Overlay_WebBrowser_Reload"	"새로고침"
 "Overlay_WebBrowser_Stop"		"중지"
 "Overlay_WebBrowser_Home"		"홈"
 

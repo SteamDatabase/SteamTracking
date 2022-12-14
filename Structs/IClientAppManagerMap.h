@@ -101,4 +101,9 @@ public:
     virtual unknown_ret GetSystemIconFile(void*,void*,void*,void*) = 0;
     virtual unknown_ret SetUseHTTPSForDownloads(void*) = 0;
     virtual unknown_ret GetUseHTTPSForDownloads() = 0;
+    virtual unknown_ret SetPeerContentServerMode(void*) = 0;
+    virtual unknown_ret SetPeerContentClientMode(void*) = 0;
+    virtual unknown_ret GetPeerContentServerMode() = 0;
+    virtual unknown_ret GetPeerContentClientMode() = 0;
+    virtual unknown_ret GetPeerContentServerStats(void*) = 0;
 };

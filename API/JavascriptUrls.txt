@@ -191,7 +191,6 @@ ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
-${COMMUNITY_BASE_URL}groups/SteamMobileApp
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
@@ -2505,11 +2504,13 @@ steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${m_gameid}/${m_game_lobby_id}/${steamid64}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
+steam://open/about
 steam://open/downloads
 steam://open/friends
 steam://open/games/details/
 steam://open/games/details/${id}
 steam://open/goonline
+steam://open/library/
 steam://open/library/shared-apps/${}
 steam://open/screenshots
 steam://open/screenshots/${}
@@ -2546,6 +2547,10 @@ steam://url/${}/${}
 steam://url/EventAnnouncementPage/593110/2173495126269399731
 steam://url/GameHubBroadcast/${appid}
 steam://url/GameHubBroadcasts/
+steam://url/SteamIDMyProfile
+steam://url/SteamPreferences
+steam://url/StoreAccount
+steam://url/StoreAddFundsPage
 steam://url/StoreCart
 url( '${thumb_url}' )
 url(${avatar_full_url})
