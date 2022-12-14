@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "7721160";
+var CLSTAMP = "7722774";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "7721160";
     i,
     s,
     r = {
-      21406: (e, t, n) => {
+      60942: (e, t, n) => {
         "use strict";
         function i(e, t, n, i) {
           var s,
@@ -62,7 +62,7 @@ var CLSTAMP = "7721160";
         }
         Object.create;
         Object.create;
-        n(10959);
+        n(81685);
         var r = n(87363),
           o = n.n(r),
           a = n(61533);
@@ -773,7 +773,7 @@ var CLSTAMP = "7721160";
             (e[(e.k_ERejected = 2)] = "k_ERejected");
         })(q || (q = {}));
         var $, K, Y;
-        n(88847);
+        n(92462);
         !(function (e) {
           (e[(e.k_EControllerBindingType_None = 0)] =
             "k_EControllerBindingType_None"),
@@ -1340,7 +1340,7 @@ var CLSTAMP = "7721160";
           }
         }
         var ke = n(42238);
-        n(69230);
+        n(35627);
         class ge extends me {
           BIsExpired() {
             return Ce.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1708,7 +1708,7 @@ var CLSTAMP = "7721160";
             });
           });
       },
-      74144: (e, t, n) => {
+      15469: (e, t, n) => {
         "use strict";
         n.d(t, {
           Bh: () => o,
@@ -1875,7 +1875,7 @@ var CLSTAMP = "7721160";
               };
         }
       },
-      10959: (e, t, n) => {
+      81685: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2007,7 +2007,7 @@ var CLSTAMP = "7721160";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_ukrainian.json": [81930, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function s(e) {
@@ -2052,7 +2052,7 @@ var CLSTAMP = "7721160";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_ukrainian.json": [81930, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function s(e) {
@@ -2251,7 +2251,7 @@ var CLSTAMP = "7721160";
         7602: "06b0961f5422deca0c9c",
         7651: "195c08e4fe2a460a82d6",
         7706: "258590154e6f57babae1",
-        7781: "e22fb841c1d1062b4bb3",
+        7781: "e99048c58024ff646f02",
         7975: "fd4747b10e2cb4456ea4",
         8247: "faf8044df2541a2c39b5",
         8385: "14ce22e8e94c6b8f8c5a",
@@ -2395,6 +2395,6 @@ var CLSTAMP = "7721160";
         n = (self.webpackChunkfriendsui = self.webpackChunkfriendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = a.O(void 0, [3817, 5140, 5968], () => a(21406));
+  var c = a.O(void 0, [3817, 5140, 5968], () => a(60942));
   c = a.O(c);
 })();
