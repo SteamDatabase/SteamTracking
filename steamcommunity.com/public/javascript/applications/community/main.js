@@ -1958,8 +1958,8 @@
         (function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.NoTaskbarIcon = 4)] = "NoTaskbarIcon"),
-            (e[(e.NoWindowShadow = 8)] = "NoWindowShadow"),
+            (e[(e.Tooltip = 4)] = "Tooltip"),
+            (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
             (e[(e.Resizable = 16)] = "Resizable"),
             (e[(e.ScalePosition = 32)] = "ScalePosition"),
             (e[(e.ScaleSize = 64)] = "ScaleSize"),
@@ -1971,8 +1971,9 @@
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (e[(e.Overlay = 8708)] = "Overlay"),
-            (e[(e.Notification = 8716)] = "Notification");
+            (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.Overlay = 8712)] = "Overlay"),
+            (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
       const _ = s.createContext({ ownerWindow: window }),
         f = () => s.useContext(_);
@@ -2014,7 +2015,8 @@
         }
         Show(e = !0, t = !1) {
           window.SteamClient && (this.m_rgParams.eCreationFlags |= i.Hidden),
-            this.m_rgParams.eCreationFlags & i.NotFocusable && (e = !1),
+            this.m_rgParams.eCreationFlags & (i.NotFocusable | i.Tooltip) &&
+              (e = !1),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
