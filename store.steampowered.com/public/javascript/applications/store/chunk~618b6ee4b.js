@@ -17717,7 +17717,18 @@
               }
               this.m_mapPromises.delete(h), (f = (0, W.l)(e));
             } catch (e) {
-              this.m_mapPromises.delete(h), (f = (0, W.l)(e));
+              if (
+                (this.m_mapPromises.delete(h),
+                (f = (0, W.l)(e)),
+                G().isCancel(e))
+              )
+                return (
+                  console.log(
+                    "CSaleItemBrowserStore.InternalGetItems: " +
+                      (null == f ? void 0 : f.strErrorMsg)
+                  ),
+                  null
+                );
             }
             return (
               console.error(
