@@ -27963,7 +27963,8 @@
               break;
           }
           var y = l.GetNameWithFallback(c),
-            T = l.GetImageURL("background");
+            T = l.GetImageURL("background"),
+            S = s ? (0, E.Jr)((0, E.Ds)(_)) : (0, E.Jr)(_);
           return o.createElement(
             "div",
             { className: _t().BlogEntryPage },
@@ -28006,7 +28007,7 @@
               ),
             o.createElement("div", { className: _t().Title }, y),
             o.createElement("div", { className: _t().Date }, d),
-            o.createElement("div", { className: _t().Body }, (0, E.Jr)(_)),
+            o.createElement("div", { className: _t().Body }, S),
             !s &&
               o.createElement(
                 "div",
@@ -65656,8 +65657,9 @@
         lt: () => y,
         Et: () => T,
         Jr: () => w,
-        Wd: () => N,
+        Wd: () => I,
         Eu: () => B,
+        Ds: () => N,
       });
       var a = n(70655),
         r = n(67294),
@@ -65825,7 +65827,7 @@
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
         return m.P.GetBBCodeParser().ParseBBCode(
-          N.apply(void 0, (0, a.ev)([e], t, !1)),
+          I.apply(void 0, (0, a.ev)([e], t, !1)),
           {}
         );
       }
@@ -65835,6 +65837,9 @@
           : e.replace(/\<span class="(\w*)"\>/g, "").replace(/\<\/span\>/g, "");
       }
       function N(e) {
+        return null == e ? void 0 : e.replace(/\[url=steam:.*?\[\/url]/g, "");
+      }
+      function I(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
         if (!e) return "";
