@@ -69860,10 +69860,9 @@ object-assign
           EPopupCreationFlags[(EPopupCreationFlags["Minimized"] = 1)] =
             "Minimized";
           EPopupCreationFlags[(EPopupCreationFlags["Hidden"] = 2)] = "Hidden";
-          EPopupCreationFlags[(EPopupCreationFlags["NoTaskbarIcon"] = 4)] =
+          EPopupCreationFlags[(EPopupCreationFlags["Tooltip"] = 4)] = "Tooltip";
+          EPopupCreationFlags[(EPopupCreationFlags["NoTaskbarIcon"] = 8)] =
             "NoTaskbarIcon";
-          EPopupCreationFlags[(EPopupCreationFlags["NoWindowShadow"] = 8)] =
-            "NoWindowShadow";
           EPopupCreationFlags[(EPopupCreationFlags["Resizable"] = 16)] =
             "Resizable";
           EPopupCreationFlags[(EPopupCreationFlags["ScalePosition"] = 32)] =
@@ -69887,9 +69886,11 @@ object-assign
           ] = "ApplyBrowserScaleToDimensions";
           EPopupCreationFlags[(EPopupCreationFlags["AlwaysOnTop"] = 8192)] =
             "AlwaysOnTop";
-          EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8708)] =
+          EPopupCreationFlags[(EPopupCreationFlags["NoWindowShadow"] = 16384)] =
+            "NoWindowShadow";
+          EPopupCreationFlags[(EPopupCreationFlags["Overlay"] = 8712)] =
             "Overlay";
-          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 8716)] =
+          EPopupCreationFlags[(EPopupCreationFlags["Notification"] = 25096)] =
             "Notification";
         })(EPopupCreationFlags || (EPopupCreationFlags = {}));
         const BrowserContext = react__WEBPACK_IMPORTED_MODULE_1__.createContext(
@@ -69965,8 +69966,11 @@ object-assign
             // all popup windows are initially created hidden then set visible when rendering is complete to prevent initial black screen flash
             if (window.SteamClient)
               this.m_rgParams.eCreationFlags |= EPopupCreationFlags.Hidden;
+            // TODO (mikela): EPopupCreationFlags.Tooltip can be removed once EPopupCreationFlags.AlwaysOnTop
+            // is available in the public client.
             if (
-              this.m_rgParams.eCreationFlags & EPopupCreationFlags.NotFocusable
+              this.m_rgParams.eCreationFlags &
+              (EPopupCreationFlags.NotFocusable | EPopupCreationFlags.Tooltip)
             )
               bFocus = false;
             if (this.BIsValid()) {
@@ -90122,4 +90126,4 @@ PERFORMANCE OF THIS SOFTWARE.
 
   /******/
 })();
-//# sourceMappingURL=friends.js.map?contenthash=92570e4a3f1ffe84f647
+//# sourceMappingURL=friends.js.map?contenthash=dd8812933f56dcaa5c00

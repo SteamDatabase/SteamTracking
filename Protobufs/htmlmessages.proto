@@ -996,6 +996,11 @@ message CMsgBlockedRequest {
 	optional string url = 2;
 }
 
+message CMsgBrowserFocusChanged {
+	optional uint32 browser_handle = 1;
+	optional bool focused = 2;
+}
+
 message CMsgSetProtocolBlockList {
 	optional uint32 browser_handle = 1;
 	optional string list = 2;

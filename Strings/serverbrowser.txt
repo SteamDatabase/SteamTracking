@@ -2,8 +2,8 @@
 __TEXT
 __text
 __TEXT
-@n
-@n
+h
+h
 __stubs
 __TEXT
 __stub_helper
@@ -41,18 +41,17 @@ __DATA
 0
 __thread_data
 __DATA
-L'
 @
-L'
 __thread_bss
 __DATA
-@L'
+M'
 __bss
 __DATA
-@P'
-Z.
+Q'
+j.
 __common
 __DATA
+p'
 H
 __LINKEDIT
 
@@ -90,6 +89,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+?(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -781,6 +781,7 @@ P
 16CMsgSetTopWindow
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
+23CMsgBrowserFocusChanged
 24CMsgSetProtocolBlockList
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
@@ -2387,6 +2388,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -3831,10 +3834,7 @@ CUtlStringBuilder::Data::MoveToHeap
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
-L&
-B&
 0
-0&
 j
 j
 j
@@ -3843,6 +3843,7 @@ j
 j
 j
 j
+H&
 p
 0
 p
@@ -3869,6 +3870,7 @@ j
 j
 &
 &
+&
 0
 p
 0
@@ -3876,7 +3878,6 @@ j
 j
 j
 j
-B%
 0
 0
 AT=
@@ -3922,6 +3923,7 @@ V
 =
 =
 !
+!
 @
 &
 @
@@ -3947,9 +3949,8 @@ M9e
 @
 
 
-
 d
--
+W
 A+M
 j
 j
