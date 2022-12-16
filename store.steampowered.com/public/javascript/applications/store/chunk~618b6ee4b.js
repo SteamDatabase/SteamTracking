@@ -5817,7 +5817,7 @@
         OnShareDialog(e) {
           const t = (0, F.wK)(this.props.eventModel);
           (0, u.AM)(
-            i.createElement(O.t, {
+            i.createElement(O.t6, {
               eventLink: t,
               fnGetSharePageUrl: (e) => (0, F.jV)(this.props.eventModel, e),
               appid: this.props.eventModel.appid,
@@ -13027,7 +13027,7 @@
               ),
               onActivate: (e) => {
                 (0, At.AM)(
-                  a.createElement(Tt.t, {
+                  a.createElement(Tt.t6, {
                     eventLink: n,
                     fnGetSharePageUrl: i,
                     appid: t.appid,
@@ -24472,7 +24472,7 @@
     },
     56799: (e, t, n) => {
       "use strict";
-      n.d(t, { t: () => We });
+      n.d(t, { t6: () => We });
       var a = n(70655),
         i = n(67294),
         r = n(92398),
