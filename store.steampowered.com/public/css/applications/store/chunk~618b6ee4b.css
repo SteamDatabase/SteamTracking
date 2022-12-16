@@ -1366,7 +1366,7 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   margin: unset;
   border-radius: unset;
   box-shadow: var(--gpShadow-Medium);
-  min-width: 180px;
+  min-width: var(--gpWidth-3colcap);
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: 0px 8px 0px 8px;
@@ -1375,6 +1375,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
     margin: 0px 16px 0px 0px;
   }
+}
+.BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
+  margin: unset;
 }
 .eventrow_OtherEvents_BGImage_3rp-l {
   width: 100%;
@@ -1600,12 +1603,11 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   width: calc(100% - 20px);
 }
 .BasicUI .eventrow_AppCapsuleCtn_1kYha {
-  top: -20px;
-  left: 12px;
+  top: 10px;
+  left: 0px;
   width: unset;
   justify-content: unset;
   column-gap: 12px;
-  align-items: baseline;
 }
 .eventrow_AppCapsuleImageHover_rcwMf {
   flex-shrink: 0;
@@ -4077,6 +4079,7 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
   overflow-y: hidden;
   margin: unset;
   scroll-padding: 0px var(--gpSpace-Gutter);
+  padding: 0px var(--gpSpace-Gutter);
 }
 @media screen and (max-width: 910px) {
   .ContentHubSalePage .carousel__slider-tray-wrapper {
@@ -4085,6 +4088,7 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
     overflow-y: hidden;
     margin: unset;
     scroll-padding: 0px var(--gpSpace-Gutter);
+    padding: 0px var(--gpSpace-Gutter);
   }
 }
 html.tablet .ContentHubSalePage .carousel__slider-tray:after {
@@ -6072,6 +6076,12 @@ html.responsive.touch
       transparent 51%
     );
 }
+.BasicUI
+  .saleitembrowser_SaleItemBrowserContainer_2wLns
+  .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9 {
+  margin-left: -16px;
+  margin-right: -16px;
+}
 .saleitembrowser_SaleItemBrowserContainer_2wLns
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9
   .saleitembrowser_SaleItemBrowserHeader_26iQ9 {
@@ -6101,6 +6111,7 @@ html.responsive.touch
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9
   .saleitembrowser_SaleItemBrowserHeader_26iQ9 {
   column-gap: 6px;
+  padding: 4px 16px;
 }
 .saleitembrowser_SaleItemBrowserContainer_2wLns
   .saleitembrowser_SaleItemBrowserHeaderContainer__MBp9
@@ -7384,6 +7395,17 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     transform: rotateY(0);
     opacity: 1;
   }
+}
+.dlcforyou_SectionTitle_22Ren {
+  padding-right: 16px;
+}
+.dlcforyou_SectionTitle_22Ren a button {
+  padding: 4px;
+}
+.dlcforyou_ShowMore_1cqMF {
+  max-width: 200px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 .giveawaynextdraw_countdownCtn_awreX {
   background: radial-gradient(

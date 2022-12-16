@@ -84,6 +84,7 @@
         Compact: "newlogindialog_Compact_9CHmB",
         HeaderLogo: "newlogindialog_HeaderLogo_1rtyT",
         EmbeddedRoot: "newlogindialog_EmbeddedRoot_2Vbrf",
+        RefreshReasonContainer: "newlogindialog_RefreshReasonContainer_2l0Xf",
         Universe: "newlogindialog_Universe_1RSkd",
         EmbeddedRootFooter: "newlogindialog_EmbeddedRootFooter_1HRJ1",
         AccountCreation: "newlogindialog_AccountCreation_19yGb",
@@ -1581,11 +1582,12 @@
               Ue,
               { className: (0, s.Z)(z().EmbeddedRoot, e && z().InClient) },
               !e && !1,
-              n.createElement(Ve, {
-                realm: u.De.EREALM,
-                launcherType: r,
-                className: z().HeaderLogo,
-              }),
+              !u.De.IN_LOGIN_REFRESH &&
+                n.createElement(Ve, {
+                  realm: u.De.EREALM,
+                  launcherType: r,
+                  className: z().HeaderLogo,
+                }),
               n.createElement(ae, { refreshInfo: c }),
               t,
               n.createElement(
@@ -1742,8 +1744,8 @@
             i = "#Login_RefreshReason_RateLimitExceeded";
         }
         return n.createElement(
-          n.Fragment,
-          null,
+          "div",
+          { className: z().RefreshReasonContainer },
           n.createElement(
             "div",
             { className: z().RefreshTitle },
@@ -2882,18 +2884,17 @@
     },
     67119: (e, t, r) => {
       "use strict";
-      function i(e) {
-        const [t, r] = e.split(".", 2);
-        return (
-          t &&
-          r &&
-          (function (e) {
-            return "object" == typeof SteamClient && e in SteamClient;
-          })(t) &&
-          r in SteamClient[t]
-        );
+      function i(e, t) {
+        return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
       }
-      r.d(t, { U5: () => i });
+      function n(e) {
+        return (function (e, t) {
+          if (!e) return !1;
+          const [r, n] = t.split(".", 2);
+          return r && n && i(e, r) && n in e.SteamClient[r];
+        })(window, e);
+      }
+      r.d(t, { U5: () => n });
     },
     88514: (e, t, r) => {
       "use strict";

@@ -57,6 +57,7 @@
     "Dialog_AreYouSure": "Are you sure?",
     "ToolTip_CopyLinkToClipboard": "Copy link to clipboard",
     "EventDisplay_Share_CopiedToClipboard": "Link copied",
+    "EventDisplay_Share_FailedToCopyToClipboard": "Failed to copy to clipboard",
     "Input_Error_NumberTooSmall": "Number too small.",
     "Input_Error_NumberTooLarge": "Number too large.",
     "Input_Error_MustBeURL": "Field is not a valid URL.",
@@ -2300,5 +2301,6 @@
     "TimeRemaining_DaysHoursMinutes": "%1$sd %2$s:%3$s",
     "TimeRemaining_HoursMinutesSeconds": "%1$s:%2$s:%3$s",
     "TimeRemaining_MinutesSeconds": "%1$s:%2$s",
+    "DLCForYou_ViewAll": "View All DLC",
     "shared_dummy": "dont translate"
 }

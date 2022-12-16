@@ -4304,12 +4304,13 @@
     },
     57287: (e, t, n) => {
       "use strict";
-      n.d(t, { Oo: () => o, yV: () => a });
+      n.d(t, { Oo: () => a, yV: () => l });
       n(67294), n(87678);
       var i = n(86199),
-        r = n(90067);
+        r = n(90067),
+        s = n(77520);
       n(10847);
-      class s {
+      class o {
         constructor() {
           this.m_mapManagers = new WeakMap();
         }
@@ -4337,30 +4338,34 @@
           return t || ((t = new i.u()), this.m_mapManagers.set(e, t)), t;
         }
         SetMenuManager(e, t) {
-          this.m_mapManagers.set(e, t);
+          (0, s.X)(
+            !this.m_mapManagers.has(e) || !t,
+            `Stomping CContextMenuManager for ${e.document.title}!`
+          ),
+            this.m_mapManagers.set(e, t);
         }
         RegisterChildWindow(e, t) {
           this.m_mapManagers.set(t, this.GetContextMenuManager(e));
         }
       }
-      const o = (0, r.Y)("ContextMenuFactory", () => new s());
-      function a(e, t, n) {
+      const a = (0, r.Y)("ContextMenuFactory", () => new o());
+      function l(e, t, n) {
         let i,
           r,
           s,
-          a = t;
+          o = t;
         if (
-          (null == a ? void 0 : a.preventDefault) &&
-          (null == a ? void 0 : a.stopPropagation)
+          (null == o ? void 0 : o.preventDefault) &&
+          (null == o ? void 0 : o.stopPropagation)
         ) {
-          if (a.shiftKey) return null;
-          a.preventDefault(),
-            a.stopPropagation(),
-            (s = a.currentTarget),
-            (i = a.clientX),
-            (r = a.clientY);
+          if (o.shiftKey) return null;
+          o.preventDefault(),
+            o.stopPropagation(),
+            (s = o.currentTarget),
+            (i = o.clientX),
+            (r = o.clientY);
         } else s = t;
-        let l = o.CreateContextMenuInstance(e, s, i, r, n);
+        let l = a.CreateContextMenuInstance(e, s, i, r, n);
         return l.Show(), l;
       }
     },
@@ -4777,8 +4782,8 @@
         (function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.NoTaskbarIcon = 4)] = "NoTaskbarIcon"),
-            (e[(e.NoWindowShadow = 8)] = "NoWindowShadow"),
+            (e[(e.Tooltip = 4)] = "Tooltip"),
+            (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
             (e[(e.Resizable = 16)] = "Resizable"),
             (e[(e.ScalePosition = 32)] = "ScalePosition"),
             (e[(e.ScaleSize = 64)] = "ScaleSize"),
@@ -4790,8 +4795,9 @@
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (e[(e.Overlay = 8708)] = "Overlay"),
-            (e[(e.Notification = 8716)] = "Notification");
+            (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.Overlay = 8712)] = "Overlay"),
+            (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
       const _ = o.createContext({ ownerWindow: window }),
         f = () => o.useContext(_);
@@ -4833,7 +4839,8 @@
         }
         Show(e = !0, t = !1) {
           window.SteamClient && (this.m_rgParams.eCreationFlags |= i.Hidden),
-            this.m_rgParams.eCreationFlags & i.NotFocusable && (e = !1),
+            this.m_rgParams.eCreationFlags & (i.NotFocusable | i.Tooltip) &&
+              (e = !1),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -8205,22 +8212,34 @@
           return null;
         }
         BVisibleChildTakeFocus(e) {
-          var t;
-          const n = h(
-            this,
-            this.Element
-              ? this.Element.getBoundingClientRect()
-              : document.body.getBoundingClientRect()
-          );
+          var t, n, i, r;
+          const s =
+              null !==
+                (i =
+                  null ===
+                    (n =
+                      null === (t = this.Element) || void 0 === t
+                        ? void 0
+                        : t.ownerDocument) || void 0 === n
+                    ? void 0
+                    : n.defaultView) && void 0 !== i
+                ? i
+                : window,
+            o = h(this, {
+              top: 0,
+              left: 0,
+              right: s.innerWidth,
+              bottom: s.innerHeight,
+            });
           return (
             x(
               `Focusing visible child, best child match is ${
-                null === (t = null == n ? void 0 : n.child) || void 0 === t
+                null === (r = null == o ? void 0 : o.child) || void 0 === r
                   ? void 0
-                  : t.Element.className
-              } - ${JSON.stringify(null == n ? void 0 : n.visibility)}`
+                  : r.Element.className
+              } - ${JSON.stringify(null == o ? void 0 : o.visibility)}`
             ),
-            !!n && n.child.BTakeFocus(e)
+            !!o && o.child.BTakeFocus(e)
           );
         }
         GetLayout() {
@@ -8906,9 +8925,18 @@
             ? (a(`${this.LogName(e)} Destroying context for window`),
               (this.m_bMounted = !1),
               this.m_schDeferredActivate.Cancel(),
-              this.m_controller.OnContextDeactivated(this, !0),
-              this.SetActive(!1))
+              this.SetActive(!1, e))
             : a(`${this.LogName(e)} Child window destroyed`);
+        }
+        SetActive(e, t, n) {
+          e
+            ? ((this.m_activeWindow = t),
+              (this.m_activeBrowserView = n),
+              this.m_controller.OnContextActivated(this))
+            : ((this.m_activeBrowserView = void 0),
+              this.m_controller.OnContextDeactivated(this, !1)),
+            this.m_bActive != e &&
+              ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
         }
         OnActivate(e) {
           a(
@@ -8916,30 +8944,25 @@
               this.m_rgGamepadNavigationTrees.length
             } trees in this context`
           ),
-            (this.m_activeWindow = e),
-            this.m_controller.OnContextActivated(this),
-            this.SetActive(!0);
+            this.SetActive(!0, e);
         }
-        OnActivateBrowserView(e) {
-          this.BIsActive() ||
-            (a(`${this.LogName(e)} Browser view activated in context`),
-            this.m_controller.OnContextActivated(this),
-            this.SetActive(!0));
+        OnActivateBrowserView(e, t) {
+          a(`${this.LogName(e)} Browser View "${t}" activated in context`),
+            this.SetActive(!0, e, t);
         }
         OnDeactivate(e) {
           this.m_activeWindow == e
             ? (a(`${this.LogName(e)} Deactivate context for window`),
-              this.m_controller.OnContextDeactivated(this, !1),
-              this.SetActive(!1))
+              this.SetActive(!1, e))
             : a(
                 `${this.LogName(e)} Blurred, but not deactivating because (${
                   this.m_activeWindow.name
                 }) has focus.`
               );
         }
-        SetActive(e) {
-          this.m_bActive != e &&
-            ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
+        OnDeactivateBrowserView(e, t) {
+          a(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
+            this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
         BIsActive() {
           return this.m_bActive;
@@ -17259,7 +17282,7 @@
           s({ className: "ModalPosition_Content", children: o })
         );
       }
-      n(66243), n(10847), n(28609), n(92398);
+      n(66243), n(10847), n(28609), n(92398), n(53157);
       const v = ({
         active: e,
         onDismiss: t,
@@ -17659,15 +17682,11 @@
         return r.createElement(
           y.Provider,
           { value: l.current },
-          r.createElement(
-            _.S,
-            null,
-            r.createElement(m, {
-              manager: l.current,
-              ownerWindow: a,
-              browserInfo: i,
-            })
-          ),
+          r.createElement(m, {
+            manager: l.current,
+            ownerWindow: a,
+            browserInfo: i,
+          }),
           s
         );
       }
@@ -17843,7 +17862,11 @@
           return t || ((t = new a()), this.m_mapModalManager.set(e, t)), t;
         }
         RegisterModalManager(e, t) {
-          this.m_mapModalManager.set(t, e);
+          (0, r.X)(
+            !this.m_mapModalManager.has(t),
+            `Stomping CModalManager for ${t.document.title}!`
+          ),
+            this.m_mapModalManager.set(t, e);
         }
         UnregisterModalManager(e) {
           this.m_mapModalManager.delete(e);
@@ -18049,12 +18072,14 @@
             s.unmountComponentAtNode(this.m_element);
         }
         Render(e, t) {
+          var n, i;
           if (
             (t.setAttribute("class", "fullheight popup_chat_frame"),
             this.m_modalElement)
           ) {
-            const n = this.m_options ? this.m_options.bHideActions : void 0,
-              i =
+            const l = this.m_options ? this.m_options.bHideActions : void 0,
+              u = this.m_windowOpener.ConfigContext,
+              m =
                 this.m_options &&
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
@@ -18064,18 +18089,33 @@
                 o.Rt,
                 { ownerWindow: e },
                 r.createElement(
-                  "div",
-                  { className: "PopupFullWindow", onContextMenu: a.T },
-                  r.createElement(d.T, {
-                    hideMinMax: !0,
-                    popup: e,
-                    hideActions: n,
-                    style: i,
-                  }),
+                  h.E_.Provider,
+                  {
+                    value: {
+                      IN_GAMEPADUI:
+                        null !== (n = null == u ? void 0 : u.IN_GAMEPADUI) &&
+                        void 0 !== n &&
+                        n,
+                      IN_VR:
+                        null !== (i = null == u ? void 0 : u.IN_VR) &&
+                        void 0 !== i &&
+                        i,
+                    },
+                  },
                   r.createElement(
-                    c.Y0,
-                    { browserInfo: this.browser_info },
-                    this.m_modalElement
+                    "div",
+                    { className: "PopupFullWindow", onContextMenu: a.T },
+                    r.createElement(d.T, {
+                      hideMinMax: !0,
+                      popup: e,
+                      hideActions: l,
+                      style: m,
+                    }),
+                    r.createElement(
+                      c.Y0,
+                      { browserInfo: this.browser_info },
+                      this.m_modalElement
+                    )
                   )
                 )
               ),
@@ -22730,7 +22770,7 @@
         "FocusNavigationMovement",
         "GamepadEvents",
         "VirtualKeyboard",
-        "UIStore/BasicUIStore",
+        "LibraryUIStore/BasicUIStore",
         "SystemNetworkStore",
         "SteamClient",
         "AudioPlaybackManager",
@@ -23426,7 +23466,6 @@
           IN_GAMEPADUI: !1,
           IN_STEAMUI_SHARED_CONTEXT: !1,
           ONE_STEAMUI_SHARED_CONTEXT: !1,
-          GAMEPADUI_WINDOWED: !1,
           DECK_DISPLAY_MODE: !1,
           ON_DECK: !1,
           IN_GAMESCOPE: !1,
@@ -24327,7 +24366,7 @@
       function J(e) {
         const t = s.useRef(ee),
           n = function (e, t, ...n) {
-            console.log(`React-Query ${e} ${t}`, ...n);
+            console.log(`React-Query ${e}`, t, ...n);
           };
         (0, Q.setLogger)({
           log: (e, ...t) => n("LOG", e, ...t),

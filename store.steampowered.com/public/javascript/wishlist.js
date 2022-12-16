@@ -735,13 +735,23 @@ CWishlistController.prototype.LoadElement = function( nIndex )
 
 	if ( !this.rgLoadedApps.includes ( unAppId ) )
 	{
-		this.rgLoadedApps.push( unAppId );
-		this.elContainer.append( $elTarget );
+		// important to insert in-order so gamepad navigation stays in sync
+		var pos = this.GetPositionForAppId( unAppId );
+		var posStart = this.GetPositionForAppId( this.rgLoadedApps[0] );
+		if ( pos < posStart )
+		{
+			this.rgLoadedApps.splice( 0, 0, unAppId );
+			this.elContainer.prepend( $elTarget );
+		}
+		else
+		{
+			this.rgLoadedApps.push( unAppId );
+			this.elContainer.append( $elTarget );
+		}
 	}
 
 	if( !$elTarget.hasClass('dragging') )
 		$elTarget.css('top', nIndex * this.nRowHeight );
-
 }
 
 CWishlistController.prototype.UnloadElement = function( unAppId )
@@ -1145,7 +1155,7 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 // Save current scroll position, which we'll restore if the user navigates back to the wishlist page
 CWishlistController.prototype.OnUserScroll = function()
 {
-	window.history.replaceState( { wishlistScroll: parseInt( window.scrollY ) }, "" );
+	window.history.replaceState( $J.extend( {}, window.history.state, { wishlistScroll: parseInt( window.scrollY ) } ), "" );
 }
 CWishlistController.prototype.ScrollToRequestedPosition = function()
 {
