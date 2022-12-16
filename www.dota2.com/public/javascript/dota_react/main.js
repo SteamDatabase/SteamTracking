@@ -27688,7 +27688,8 @@
               14 == t.type ||
               28 == t.type ||
               35 == t.type ||
-              26 == t.type))
+              26 == t.type ||
+              21 == t.type))
         );
       }
       var Ua,
@@ -27964,7 +27965,7 @@
           }
           var y = l.GetNameWithFallback(c),
             T = l.GetImageURL("background"),
-            S = s ? (0, E.Jr)((0, E.Ds)(_)) : (0, E.Jr)(_);
+            S = (0, E.Jr)((0, E.Ds)(_));
           return o.createElement(
             "div",
             { className: _t().BlogEntryPage },
