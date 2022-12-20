@@ -2237,7 +2237,9 @@ https://store.steampowered.com/account/ajaxrefreshwalletcaptcha/
 https://store.steampowered.com/account/ajaxregisterkey/
 https://store.steampowered.com/account/ajaxsetcookiepreferences
 https://store.steampowered.com/account/languagepreferences/
+https://store.steampowered.com/account/preferences/
 https://store.steampowered.com/account/renewsubscription/
+https://store.steampowered.com/account/savesearchpreferences
 https://store.steampowered.com/account/setlanguage/
 https://store.steampowered.com/account/updatesubscription/
 https://store.steampowered.com/api/addtowishlist
@@ -2323,6 +2325,7 @@ https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
 https://store.steampowered.com/search/?term=${$Term}${snr}
 https://store.steampowered.com/search/hometab/TopGrossing/
+https://store.steampowered.com/search/results
 https://store.steampowered.com/search/results/
 https://store.steampowered.com/search/smallcapscroll
 https://store.steampowered.com/search/suggest
@@ -2341,8 +2344,6 @@ https://store.steampowered.com/store//ajaxreportproductaction/${appId}/
 https://store.steampowered.com/store//userreviews/ajaxgetvotes/
 https://store.steampowered.com/store/account/edituserreviewscorepreference/
 https://store.steampowered.com/store/account/preferences
-https://store.steampowered.com/store/account/preferences/
-https://store.steampowered.com/store/account/savesearchpreferences
 https://store.steampowered.com/store/account/saveuserreviewscorepreference
 https://store.steampowered.com/store/account/updateshippingaddress/
 https://store.steampowered.com/store/actions/ReportAbuse/
@@ -2383,7 +2384,6 @@ https://store.steampowered.com/store/itemstore/${appid}/ajaxcheckout/
 https://store.steampowered.com/store/jserrorreport/
 https://store.steampowered.com/store/purchaseoptions/${nAppID}/?ver=nx
 https://store.steampowered.com/store/recommended/ignorerecommendation/
-https://store.steampowered.com/store/search/results
 https://store.steampowered.com/store/search/suggest
 https://store.steampowered.com/store/seasonsandepisodes/${nAppID}/?ver=nx
 https://store.steampowered.com/store/sub/${nPackageID}

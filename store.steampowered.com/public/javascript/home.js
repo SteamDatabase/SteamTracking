@@ -9,6 +9,7 @@ function OnHomepageException(e)
 	}
 }
 
+InitializeGPFocusRestoreTimeout();
 
 GHomepage = {
 	oSettings: {},
@@ -302,6 +303,8 @@ GHomepage = {
 				GSteamCurators.RenderRecommendedCurators( GHomepage.oAdditionalData.strCuratorHTML );
 			}
 		} catch( e ) { OnHomepageException(e); }
+
+		SetGPFocusRestoreTimeout();
 	},
 
 	OnHomeDataReady: function()
@@ -479,6 +482,8 @@ GHomepage = {
 			$J('#content_callout').hide();
 			$J('#content_login').show();
 		}
+
+		SetGPFocusRestoreTimeout();
 	},
 
     ShuffleModuleOrder: function()
@@ -2328,6 +2333,8 @@ GHomepage = {
 			var showMarketing = $J('.home_tabs_row_ctn').offset().top;
 			if( ! $J('.marketingmessage_area').is(':visible') && nCurrentScroll > showMarketing )
 			{
+				SetGPFocusRestoreTimeout();
+
 				$J('.marketingmessage_area').show();
 			}
 		});
@@ -3205,6 +3212,8 @@ var g_bDisableAutoloader = false;
 				{
 					loadFunc.apply(this);
 				}
+
+				SetGPFocusRestoreTimeout();
 			};
 
 			$(document).scroll( function() { return scrollFunc.apply(ele) } );

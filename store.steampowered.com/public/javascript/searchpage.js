@@ -1,6 +1,8 @@
 
 const k_rgClientSideFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
 
+InitializeGPFocusRestoreTimeout();
+
 function DisplayAdvancedSearch()
 {
 	new Effect.BlindUp( 'advanced_search_toggle', {duration: 0.25}  );
@@ -452,7 +454,7 @@ function ExecuteSearch( rgParameters )
 
 	g_rgCurrentParameters = rgParameters;
 	new Effect.Fade( $('search_result_container'), { from: 1.0, to: 0.5, duration: 0.1 } );
-	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/store/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );
+	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );
 }
 
 function HandleFilteredResultsWarning()
@@ -641,6 +643,7 @@ function InitSearchPage()
 	HandleFilteredResultsWarning();
 	InitInfiniteScroll(g_rgCurrentParameters);
 	DecorateFilterControls();
+	SetGPFocusRestoreTimeout();
 }
 
 // Adds an element to an array that we've encoded in a string.
@@ -776,7 +779,7 @@ function InitInfiniteScroll( rgParameters )
 		"trigger_height": 1620,                       // How many px from the bottom before triggering next load
 	};
 
-	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/store/search/results' );
+	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/search/results' );
 
 	// We've committed to infinite scroll, so we'll flip our hidden field on. This later gets stashed in the URL,
 	// so if the user returns using the back button we keep their infinite scroll settings.
@@ -797,10 +800,17 @@ function InitInfiniteScroll( rgParameters )
 	// Disable regular pagination, enable results-loading section.
 	$J('.search_pagination').hide();
 
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) 
+	{
+		self.oController.SetPageChangingHandler( function( nPage ) { SetGPFocusRestoreTimeout(); });
+	}
+
 	// Set handler to trim duplicates. Right now this re-checks every time, so there's potential for saving
 	// cycles by calculating what's newly loaded and just checking those.
 	self.oController.SetPageChangedHandler(function( iPageNo, oUpdatedDom )
 	{
+		SetGPFocusRestoreTimeout();
+
 		if ( GDynamicStore != null )
 		{
 			GDynamicStore.DecorateDynamicItems($J(oUpdatedDom));
@@ -1076,7 +1086,7 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 		oPrefs[strFilter] = bChecked ? 1 : 0;
 		
 		$J.post(
-			'https://store.steampowered.com/store/account/savesearchpreferences',
+			'https://store.steampowered.com/account/savesearchpreferences',
 			oPrefs
 		);
 
@@ -1100,7 +1110,7 @@ function OnClickShowFilteredContentSettingsModal()
 		}
 		else if ( strButton == 'SECONDARY' )
 		{
-			top.location.href = "https://store.steampowered.com/store/account/preferences/";
+			top.location.href = "https://store.steampowered.com/account/preferences/";
 		}
 	}  );
 }

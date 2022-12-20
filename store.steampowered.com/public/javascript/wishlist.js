@@ -1,5 +1,7 @@
 "use strict";
 
+InitializeGPFocusRestoreTimeout();
+
 var CWishlistController = function()
 {
 	this.rgElements = {};
@@ -592,6 +594,8 @@ CWishlistController.prototype.OnScroll = function()
 	if( nEnd > this.rgVisibleApps.length )
 		nEnd = this.rgVisibleApps.length;
 
+		SetGPFocusRestoreTimeout();
+	
 	for( var i=nStart; i < nEnd; i++)
 		this.LoadElement(i);
 
