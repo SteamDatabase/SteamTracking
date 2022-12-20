@@ -5938,12 +5938,22 @@
       function dr(e) {
         const { steamid: t } = e,
           r = l.createRef(),
-          [a, i] = l.useState(!1),
+          [a, i] = l.useState(""),
           s = l.createRef(),
           n = l.useCallback(
             (e) => {
               r.current &&
-                (r.current.select(), document.execCommand("copy"), i(!0));
+                r.current.ownerDocument.defaultView.navigator.clipboard
+                  .writeText(r.current.value)
+                  .then((e) => {
+                    i((0, Ce.Xx)("#EventDisplay_Share_CopiedToClipboard"));
+                  })
+                  .catch((e) => {
+                    i(
+                      (0, Ce.Xx)("#EventDisplay_Share_FailedToCopyToClipboard")
+                    ),
+                      console.error("Failed to copy link to clipboard:", e);
+                  });
             },
             [r]
           ),
@@ -5988,11 +5998,7 @@
                 )
               )
           ),
-          l.createElement(
-            "div",
-            { ref: s, className: or().ClipboardText },
-            a ? (0, Ce.Xx)("#EventDisplay_Share_CopiedToClipboard") : ""
-          )
+          l.createElement("div", { ref: s, className: or().ClipboardText }, a)
         );
       }
       function mr(e, t) {

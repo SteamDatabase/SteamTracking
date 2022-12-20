@@ -6561,18 +6561,20 @@
               e.msgNode.train().no_loss_improvement_limit().toFixed(4)
             ),
             [g, S] = n.useState(e.msgNode.train().batch_size().toString()),
-            [f, E] = n.useState(!0),
+            [f, E] = n.useState(e.msgNode.train().compact_table()),
             [v, N] = n.useState(!0),
             [b, B] = n.useState(!0),
             [h, y] = n.useState(!0),
-            C = Math.floor(
+            [C, D] = n.useState(!0),
+            [j, L] = n.useState(!0),
+            M = Math.floor(
               e.msgNode.connectors().filter((e) => e.is_input_connector())
                 .length / 2
             ),
-            D = (e, t, a, r, n) => {
+            w = (e, t, a, r, n) => {
               t(Je(a, r, n)), e(a);
             };
-          let j = [
+          let x = [
               {
                 label: (0, tt.Xx)(
                   "#SteamLearn_Config_Node_Train_Activation_Sigmoid"
@@ -6586,7 +6588,7 @@
                 value: 1,
               },
             ],
-            L = [
+            T = [
               {
                 label: (0, tt.Xx)(
                   "#SteamLearn_Config_Node_Train_Optimizer_Adam"
@@ -6612,7 +6614,7 @@
                 value: 1,
               },
             ],
-            M = [
+            O = [
               {
                 label: (0, tt.Xx)(
                   "#SteamLearn_Config_Node_Train_Loss_BinaryCrossEntropy"
@@ -6663,9 +6665,9 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, l.Z)(Wt.OptionInput, !f && Wt.Invalid),
+                  className: (0, l.Z)(Wt.OptionInput, !v && Wt.Invalid),
                   value: t,
-                  onChange: (e) => D(a, E, e.target.value, 1, 9),
+                  onChange: (e) => w(a, N, e.target.value, 1, 9),
                 })
               ),
               n.createElement(
@@ -6688,7 +6690,7 @@
                     value: r,
                     onChange: (e) => i(parseInt(e.target.value)),
                   },
-                  j.map((e) =>
+                  x.map((e) =>
                     n.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -6733,7 +6735,7 @@
                     value: s,
                     onChange: (e) => o(parseInt(e.target.value)),
                   },
-                  L.map((e) =>
+                  T.map((e) =>
                     n.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -6794,7 +6796,7 @@
                     value: c,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
-                  M.map((e) =>
+                  O.map((e) =>
                     n.createElement(
                       "option",
                       { key: e.value, value: e.value },
@@ -6821,6 +6823,34 @@
                     (0, tt.Xx)("#SteamLearn_Config_Node_Train_LossDescSub3")
                   )
               ),
+              3 == c &&
+                n.createElement(
+                  "div",
+                  { className: Wt.Option },
+                  n.createElement(
+                    "div",
+                    { className: Wt.OptionTitle },
+                    (0, tt.Xx)("#SteamLearn_Config_Node_Train_CompactTable")
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: Wt.OptionDesc },
+                    (0, tt.Xx)("#SteamLearn_Config_Node_Train_CompactTableDesc")
+                  ),
+                  n.createElement("input", {
+                    type: "text",
+                    className: (0, l.Z)(Wt.OptionInput, !j && Wt.Invalid),
+                    value: f,
+                    onChange: (t) => {
+                      return (
+                        (a = t.target.value),
+                        L(et(e.msgWorkingProjectConfig, a)),
+                        void E(a)
+                      );
+                      var a;
+                    },
+                  })
+                ),
               n.createElement(
                 "div",
                 { className: Wt.Option },
@@ -6836,9 +6866,9 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, l.Z)(Wt.OptionInput, !v && Wt.Invalid),
+                  className: (0, l.Z)(Wt.OptionInput, !b && Wt.Invalid),
                   value: d,
-                  onChange: (e) => D(_, N, e.target.value, 1),
+                  onChange: (e) => w(_, B, e.target.value, 1),
                 })
               ),
               n.createElement(
@@ -6858,12 +6888,12 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, l.Z)(Wt.OptionInput, !h && Wt.Invalid),
+                  className: (0, l.Z)(Wt.OptionInput, !C && Wt.Invalid),
                   value: u,
                   onChange: (e) => {
                     return (
                       (t = p),
-                      (a = y),
+                      (a = D),
                       (r = e.target.value),
                       a(Ye(r, 0, n)),
                       void t(r)
@@ -6887,9 +6917,9 @@
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: (0, l.Z)(Wt.OptionInput, !b && Wt.Invalid),
+                  className: (0, l.Z)(Wt.OptionInput, !h && Wt.Invalid),
                   value: g,
-                  onChange: (e) => D(S, B, e.target.value, 100),
+                  onChange: (e) => w(S, y, e.target.value, 100),
                 })
               )
             ),
@@ -6897,12 +6927,12 @@
               "div",
               { className: Wt.ButtonsContainer },
               n.createElement(gt.o9, {
-                bOKDisabled: !(f && h && v && b),
+                bOKDisabled: !(v && C && b && h && j),
                 onOK: () =>
                   (() => {
                     const a = parseInt(t);
-                    if (a > C) {
-                      const t = 2 * (a - C),
+                    if (a > M) {
+                      const t = 2 * (a - M),
                         r = Ae(e.msgWorkingProjectConfig, t);
                       for (let a = 0; a < t; a++) {
                         let t = new z();
@@ -6910,7 +6940,7 @@
                           t.set_is_input_connector(!0),
                           e.msgNode.add_connectors(t);
                       }
-                    } else if (a < C) {
+                    } else if (a < M) {
                       const t = e.msgNode
                         .connectors()
                         .filter((e) => e.is_input_connector())
@@ -6942,6 +6972,7 @@
                         .train()
                         .set_no_loss_improvement_limit(parseFloat(u)),
                       e.msgNode.train().set_batch_size(parseInt(g)),
+                      e.msgNode.train().set_compact_table(f),
                       Ke(e.msgWorkingProject),
                       e.closeModal();
                   })(),
@@ -9905,8 +9936,8 @@
                             .histogram()
                             .set_max_value(parseFloat(a)),
                           Ke(e)),
-                          u(r),
-                          d(a);
+                          f(r),
+                          g(a);
                       })(a.target.value),
                   })
                 ),

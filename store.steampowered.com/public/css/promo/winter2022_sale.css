@@ -385,10 +385,13 @@ body.v6.sale_winter2022 .home_sticker_ctn.mobile {
     margin-right: 226px;
 }
 
+body.v6.sale_winter2022 .carousel_container.paging_capsules .carousel_items > * {
+	transition: none;
+}
+
 .home_steamawards_ctn:hover .home_steamawards_nominateBox {
     background: #c8b8f6;
 }
-
 
 .home_sticker_col {
     display: flex;
@@ -641,11 +644,11 @@ body.v6 .discount_block {}
     transition: opacity 0.6s;
 }
 
-.sale_capsule.with_microtrailer:hover .sale_capsule_image {
+.sale_capsule.with_microtrailer.microtrailer_active .sale_capsule_image {
     opacity: 0;
 }
 
-.sale_capsule.with_microtrailer:hover .sale_capsule_video {
+.sale_capsule.with_microtrailer.microtrailer_active .sale_capsule_video {
     opacity: 1;
 }
 
@@ -1053,17 +1056,15 @@ body.forgeyourfate {
 
 p.home_subtitle_ctn {
 	font-size: 20px;
-	background: #100b0b;
 	color: #ffffff;
 	font-weight: 600;
 	padding: 5px 10px;
-	/* box-shadow: 4px 4px #eb4036; */
 }
 
 p.home_subtitle_ctn a {
 	font-size: 20px;
-	color: #4ac494;
 	font-weight: 600;
+	text-shadow: 2px 2px 4px #225a45;
 }
 
 @media screen and (min-width: 2300px )
@@ -1736,9 +1737,8 @@ p.home_subtitle_ctn a {
 }
 
 .home_discounts_ctn .home_discounts_block {
-    margin: 20px;
+    margin: 0 20px;
     flex: 1;
-
     min-width: 340px;
 }
 
@@ -2070,7 +2070,6 @@ p.home_subtitle_ctn a {
 
 
 .home_newupcoming_ctn {
-    margin-top: 50px;
     margin-bottom: 100px;
 }
 
@@ -2591,6 +2590,7 @@ body.v6 .sale_capsule .discount_block_inline
 
 .franchise_flex_overflow
 {
+    overflow: hidden;
 }
 
 .franchise_carousel.carousel_container .carousel_thumbs
@@ -2720,24 +2720,24 @@ img.franchise_placeholder {
     width: 100%;
 }
 
-.franchise_capsule:hover .franchise_logo_ctn
+.franchise_capsule.active .franchise_logo_ctn
 {
     top: 5%;
 }
 
-.franchise_capsule:hover img.franchise_background
+.franchise_capsule.active img.franchise_background
 {
     opacity: 0.5;
 }
 
-.franchise_capsule:hover .franchise_discount_tag
+.franchise_capsule.active .franchise_discount_tag
 {
     bottom: 40%;	/* logo also travels 35% of the way */
     opacity: 0;
 }
 
 
-.franchise_capsule:hover .franchise_games
+.franchise_capsule.active .franchise_games
 {
     top: 40%;
 }

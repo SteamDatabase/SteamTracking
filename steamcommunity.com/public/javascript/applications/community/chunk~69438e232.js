@@ -2956,7 +2956,7 @@
         );
       });
       var w = n(65499),
-        b = n(17865),
+        b = n(81664),
         O = n(63543),
         G = n(96944),
         R = n.n(G),
@@ -4404,7 +4404,7 @@
         OnShareDialog(e) {
           const t = (0, U.wK)(this.props.eventModel);
           (0, d.AM)(
-            r.createElement(P.t, {
+            r.createElement(P.t6, {
               eventLink: t,
               fnGetSharePageUrl: (e) => (0, U.jV)(this.props.eventModel, e),
               appid: this.props.eventModel.appid,
@@ -5877,7 +5877,7 @@
       var a = n(159),
         r = n(13271),
         o = n(67294),
-        i = (n(49186), n(17865)),
+        i = (n(49186), n(81664)),
         s = n(41311),
         l = n(65281),
         c = n.n(l);
@@ -5916,7 +5916,7 @@
     },
     97118: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => X, t: () => H });
+      n.d(t, { AH: () => X, t6: () => H });
       var a = n(70655),
         r = n(67294),
         o = n(92398),
@@ -5950,7 +5950,7 @@
         w = n(1338),
         b = n(93976),
         O = n(13596),
-        G = n(17865),
+        G = n(81664),
         R = n(21461),
         P = n.n(R);
       const U = (0, L.Pi)((e) => {
@@ -6333,7 +6333,7 @@
         },
         X = (e) => {
           const t = r.createRef(),
-            [n, a] = r.useState(!1),
+            [n, a] = r.useState(""),
             o = r.createRef();
           return r.createElement(
             "div",
@@ -6344,7 +6344,19 @@
                 className: (0, p.Z)(l().FlexRowContainer, y().linkField),
                 onClick: (e) => {
                   t.current &&
-                    (t.current.select(), document.execCommand("copy"), a(!0));
+                    t.current.ownerDocument.defaultView.navigator.clipboard
+                      .writeText(t.current.value)
+                      .then((e) => {
+                        a((0, d.Xx)("#EventDisplay_Share_CopiedToClipboard"));
+                      })
+                      .catch((e) => {
+                        a(
+                          (0, d.Xx)(
+                            "#EventDisplay_Share_FailedToCopyToClipboard"
+                          )
+                        ),
+                          console.error("Failed to copy link to clipboard:", e);
+                      });
                 },
               },
               r.createElement(
@@ -6376,11 +6388,7 @@
                   })
                 )
             ),
-            r.createElement(
-              "div",
-              { ref: o, className: y().ClipboardText },
-              n ? (0, d.Xx)("#EventDisplay_Share_CopiedToClipboard") : ""
-            )
+            r.createElement("div", { ref: o, className: y().ClipboardText }, n)
           );
         };
     },

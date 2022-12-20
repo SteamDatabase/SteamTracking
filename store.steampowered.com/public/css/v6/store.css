@@ -90,6 +90,10 @@ body.v6 #footer {
     background: #171a21;
 }
 
+body.v6.movescrolltocontent #footer {
+	position: relative;
+}
+
 	body.v6.infinite_scrolling #footer.small_footer {
 		position: relative;
 		top: auto;

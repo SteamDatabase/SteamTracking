@@ -110,6 +110,8 @@ ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
 ${COMMUNITY_BASE_URL}actions/SearchApps/${}
 ${COMMUNITY_BASE_URL}actions/ajaxcreateupdatediscountevent
+${COMMUNITY_BASE_URL}actions/ajaxgetavatarpersona
+${COMMUNITY_BASE_URL}actions/ajaxgetmultiavatarpersona
 ${COMMUNITY_BASE_URL}actions/ajaxgetwatchvodtoken
 ${COMMUNITY_BASE_URL}actions/ajaxlistfriends
 ${COMMUNITY_BASE_URL}actions/ajaxresolveusers
@@ -266,11 +268,14 @@ ${COMMUNITY_BASE_URL}sale/ajaxgetcommunityitemsfordrops
 ${COMMUNITY_BASE_URL}sale/ajaxoptinsummary
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetactiveoptins
 ${COMMUNITY_BASE_URL}saleoptin/ajaxgetoptintagids
+${COMMUNITY_BASE_URL}search/groups/?text=${}
 ${COMMUNITY_BASE_URL}search/users
 ${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${sharedFileID}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
+${COMMUNITY_BASE_URL}stats/${appid}/achievements/
+${COMMUNITY_BASE_URL}stats/${appid}/leaderboards/
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetfriendslist
 ${COMMUNITY_BASE_URL}textfilter/ajaxgettextfiltercustomwords
@@ -493,6 +498,8 @@ ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
+${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}appofficialsite/${appid}
+${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}forum/${appid}
 ${LOGIN_BASE_URL}jwt/ajaxrefresh
 ${LOGIN_BASE_URL}jwt/checkdevice/${m_steamid}
 ${LOGIN_BASE_URL}jwt/finalizelogin
@@ -500,6 +507,7 @@ ${MEDIA_CDN_COMMUNITY_URL}/images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/${image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${appid}/${}.jpg
+${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${icon}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
@@ -677,10 +685,17 @@ ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
 ${ProfileURL}ajaxsetprivacy/
 ${ProfileURL}edit/
 ${ProfileURL}edit/info
+${ProfileURL}edit/settings
+${ProfileURL}games/?tab=${tab}
+${ProfileURL}gcpd/${appid}/
 ${ProfileURL}inventory/
 ${ProfileURL}inventory/#753_6
 ${ProfileURL}myworkshopfiles/
+${ProfileURL}reviews/
 ${ProfileURL}screenshots/
+${ProfileURL}stats/${appid}/?tab=achievements
+${ProfileURL}stats/${appid}/?tab=leaderboards
+${ProfileURL}wishlist/
 ${ROOT_URL}/gamestatsdata
 ${ROOT_URL}/leaderboarddata
 ${ROOT_URL}/profileaccountid
@@ -867,6 +882,7 @@ ${STORE_BASE_URL}news
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
+${STORE_BASE_URL}news/?appids=${appid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
@@ -960,6 +976,8 @@ ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
+${STORE_ICON_BASE_URL}${appid}/${}
+${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}/${appid}/${}
 ${URL}${URL}
@@ -1692,6 +1710,7 @@ https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPurchase
 https://help.steampowered.com/en/wizard/HelpWithUnknownCharges
+https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
 https://help.steampowered.com/login/getmenuactions/
 https://help.steampowered.com/login/getrsakey/
 https://help.steampowered.com/login/logout/

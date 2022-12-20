@@ -643,14 +643,14 @@
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshTitle_2IXDr {
   color: #fff;
-  font-size: 32px;
+  font-size: 26px;
   text-transform: uppercase;
   font-weight: 200;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_RefreshReason_3jz0o {
   color: #dfe3e6;
   font-size: 15px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .newlogindialog_Login_ZOBYq .newlogindialog_StandardLayout_286eh.IN_CLIENT {
   width: 630px;
@@ -751,6 +751,13 @@
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf.IN_CLIENT {
   width: 630px;
 }
+.newlogindialog_Login_ZOBYq
+  .newlogindialog_EmbeddedRoot_2Vbrf
+  .newlogindialog_RefreshReasonContainer_2l0Xf {
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+}
 .newlogindialog_Login_ZOBYq .newlogindialog_EmbeddedRoot_2Vbrf:not(.IN_CLIENT) {
   width: 100%;
   min-width: 700px;
@@ -788,8 +795,7 @@
 }
 .newlogindialog_Login_ZOBYq
   .newlogindialog_EmbeddedRoot_2Vbrf
-  .newlogindialog_EmbeddedRootFooter_1HRJ1
-  .newlogindialog_InClient_2GR-7 {
+  .newlogindialog_EmbeddedRootFooter_1HRJ1.newlogindialog_InClient_2GR-7 {
   padding-top: 15px;
 }
 @media screen and (max-width: 796px) {

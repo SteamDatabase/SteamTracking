@@ -793,6 +793,10 @@ a {
   .projectheader_ProjectName_jEE9n
   .projectheader_EditIcon_1AvVo {
   opacity: 0;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  margin-top: 4px;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;
@@ -818,6 +822,8 @@ a {
   .projectheader_Description_1OEpk
   .projectheader_EditIcon_1AvVo {
   opacity: 0;
+  width: 12px;
+  height: 12px;
   transition-property: opacity;
   transition-timing-function: ease-in-out;
   transition-duration: 0.1s;

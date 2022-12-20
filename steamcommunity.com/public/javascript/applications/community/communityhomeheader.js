@@ -718,8 +718,8 @@
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, o) => {
             const a = r ? r === e.id : 0 === o,
-              m = e.id ? `subsection=${e.id}` : "",
-              b = t ? `browsefilter=${t}` : "",
+              m = e.id ? `${v}=${e.id}` : "",
+              b = t ? `${g}=${t}` : "",
               u = `${s.De.COMMUNITY_BASE_URL}${b || m ? "?" : ""}${b}${
                 m ? "&" : ""
               }${m}`;
@@ -754,8 +754,8 @@
             },
           ].map((e, o) => {
             const a = t ? t === e.id : 0 === o,
-              m = r ? `subsection=${r}` : "",
-              b = e.id ? `browsefilter=${e.id}` : "",
+              m = r ? `${v}=${r}` : "",
+              b = e.id ? `${g}=${e.id}` : "",
               u = `${s.De.COMMUNITY_BASE_URL}${b || m ? "?" : ""}${b}${
                 m ? "&" : ""
               }${m}`;

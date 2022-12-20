@@ -586,7 +586,6 @@ span.partnereventshared_tooltip_Ctn_3tZQl {
   text-transform: unset;
   letter-spacing: unset;
   text-shadow: unset;
-  margin-bottom: 8px;
 }
 .ContentHubSalePage .partnereventshared_SaleSectionHeader_3FRxV {
   padding-left: 8px;
@@ -602,6 +601,13 @@ span.partnereventshared_tooltip_Ctn_3tZQl {
 }
 .partnereventshared_SaleSectionSubtitle_1JRr3 {
   font-size: 15px;
+}
+.BasicUI .partnereventshared_SaleSectionSubtitle_1JRr3 {
+  font: var(--gpText-BodyLarge);
+  font-weight: 500;
+  text-transform: unset;
+  letter-spacing: unset;
+  text-shadow: unset;
 }
 .partnereventshared_SaleSectionContainer_1UD2h {
   grid-template-columns: repeat(1, minmax(0px, 1fr));

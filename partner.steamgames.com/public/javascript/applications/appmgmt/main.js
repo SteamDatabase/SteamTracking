@@ -661,7 +661,7 @@
             return "gameserver";
         }
       }
-      var h, p, g, _, v, f, C, b, E, S, w;
+      var h, p, g, _, v, f, C, b, E, S, w, y;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -796,7 +796,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(w || (w = {}));
+        })(w || (w = {})),
+        (function (e) {
+          (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
+            (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
+            (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
+            (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
+            (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
+        })(y || (y = {}));
     },
     1351: (e, t, n) => {
       "use strict";
@@ -1513,12 +1520,13 @@
     },
     57287: (e, t, n) => {
       "use strict";
-      n.d(t, { Oo: () => s, yV: () => a });
+      n.d(t, { Oo: () => a, yV: () => l });
       n(67294), n(87678);
       var i = n(86199),
-        r = n(90067);
+        r = n(90067),
+        o = n(77520);
       n(10847);
-      class o {
+      class s {
         constructor() {
           this.m_mapManagers = new WeakMap();
         }
@@ -1546,30 +1554,34 @@
           return t || ((t = new i.u()), this.m_mapManagers.set(e, t)), t;
         }
         SetMenuManager(e, t) {
-          this.m_mapManagers.set(e, t);
+          (0, o.X)(
+            !this.m_mapManagers.has(e) || !t,
+            `Stomping CContextMenuManager for ${e.document.title}!`
+          ),
+            this.m_mapManagers.set(e, t);
         }
         RegisterChildWindow(e, t) {
           this.m_mapManagers.set(t, this.GetContextMenuManager(e));
         }
       }
-      const s = (0, r.Y)("ContextMenuFactory", () => new o());
-      function a(e, t, n) {
+      const a = (0, r.Y)("ContextMenuFactory", () => new s());
+      function l(e, t, n) {
         let i,
           r,
           o,
-          a = t;
+          s = t;
         if (
-          (null == a ? void 0 : a.preventDefault) &&
-          (null == a ? void 0 : a.stopPropagation)
+          (null == s ? void 0 : s.preventDefault) &&
+          (null == s ? void 0 : s.stopPropagation)
         ) {
-          if (a.shiftKey) return null;
-          a.preventDefault(),
-            a.stopPropagation(),
-            (o = a.currentTarget),
-            (i = a.clientX),
-            (r = a.clientY);
+          if (s.shiftKey) return null;
+          s.preventDefault(),
+            s.stopPropagation(),
+            (o = s.currentTarget),
+            (i = s.clientX),
+            (r = s.clientY);
         } else o = t;
-        let l = s.CreateContextMenuInstance(e, o, i, r, n);
+        let l = a.CreateContextMenuInstance(e, o, i, r, n);
         return l.Show(), l;
       }
     },
@@ -1986,8 +1998,8 @@
         (function (e) {
           (e[(e.Minimized = 1)] = "Minimized"),
             (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.NoTaskbarIcon = 4)] = "NoTaskbarIcon"),
-            (e[(e.NoWindowShadow = 8)] = "NoWindowShadow"),
+            (e[(e.Tooltip = 4)] = "Tooltip"),
+            (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
             (e[(e.Resizable = 16)] = "Resizable"),
             (e[(e.ScalePosition = 32)] = "ScalePosition"),
             (e[(e.ScaleSize = 64)] = "ScaleSize"),
@@ -1999,8 +2011,9 @@
             (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
               "ApplyBrowserScaleToDimensions"),
             (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (e[(e.Overlay = 8708)] = "Overlay"),
-            (e[(e.Notification = 8716)] = "Notification");
+            (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (e[(e.Overlay = 8712)] = "Overlay"),
+            (e[(e.Notification = 25096)] = "Notification");
         })(i || (i = {}));
       const _ = s.createContext({ ownerWindow: window }),
         v = () => s.useContext(_);
@@ -2042,7 +2055,8 @@
         }
         Show(e = !0, t = !1) {
           window.SteamClient && (this.m_rgParams.eCreationFlags |= i.Hidden),
-            this.m_rgParams.eCreationFlags & i.NotFocusable && (e = !1),
+            this.m_rgParams.eCreationFlags & (i.NotFocusable | i.Tooltip) &&
+              (e = !1),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
@@ -3919,8 +3933,8 @@
                 i.DIR_LEFT,
                 i.DIR_RIGHT,
               ]),
-              firstRepeatInterval_ms: 500,
-              repeatInterval_ms: 125,
+              firstRepeatInterval_ms: 400,
+              repeatInterval_ms: 50,
             })),
             (this.m_bGamepadDetected = !1);
         }
@@ -5502,22 +5516,34 @@
           return null;
         }
         BVisibleChildTakeFocus(e) {
-          var t;
-          const n = h(
-            this,
-            this.Element
-              ? this.Element.getBoundingClientRect()
-              : document.body.getBoundingClientRect()
-          );
+          var t, n, i, r;
+          const o =
+              null !==
+                (i =
+                  null ===
+                    (n =
+                      null === (t = this.Element) || void 0 === t
+                        ? void 0
+                        : t.ownerDocument) || void 0 === n
+                    ? void 0
+                    : n.defaultView) && void 0 !== i
+                ? i
+                : window,
+            s = h(this, {
+              top: 0,
+              left: 0,
+              right: o.innerWidth,
+              bottom: o.innerHeight,
+            });
           return (
             B(
               `Focusing visible child, best child match is ${
-                null === (t = null == n ? void 0 : n.child) || void 0 === t
+                null === (r = null == s ? void 0 : s.child) || void 0 === r
                   ? void 0
-                  : t.Element.className
-              } - ${JSON.stringify(null == n ? void 0 : n.visibility)}`
+                  : r.Element.className
+              } - ${JSON.stringify(null == s ? void 0 : s.visibility)}`
             ),
-            !!n && n.child.BTakeFocus(e)
+            !!s && s.child.BTakeFocus(e)
           );
         }
         GetLayout() {
@@ -6203,9 +6229,18 @@
             ? (a(`${this.LogName(e)} Destroying context for window`),
               (this.m_bMounted = !1),
               this.m_schDeferredActivate.Cancel(),
-              this.m_controller.OnContextDeactivated(this, !0),
-              this.SetActive(!1))
+              this.SetActive(!1, e))
             : a(`${this.LogName(e)} Child window destroyed`);
+        }
+        SetActive(e, t, n) {
+          e
+            ? ((this.m_activeWindow = t),
+              (this.m_activeBrowserView = n),
+              this.m_controller.OnContextActivated(this))
+            : ((this.m_activeBrowserView = void 0),
+              this.m_controller.OnContextDeactivated(this, !1)),
+            this.m_bActive != e &&
+              ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
         }
         OnActivate(e) {
           a(
@@ -6213,30 +6248,25 @@
               this.m_rgGamepadNavigationTrees.length
             } trees in this context`
           ),
-            (this.m_activeWindow = e),
-            this.m_controller.OnContextActivated(this),
-            this.SetActive(!0);
+            this.SetActive(!0, e);
         }
-        OnActivateBrowserView(e) {
-          this.BIsActive() ||
-            (a(`${this.LogName(e)} Browser view activated in context`),
-            this.m_controller.OnContextActivated(this),
-            this.SetActive(!0));
+        OnActivateBrowserView(e, t) {
+          a(`${this.LogName(e)} Browser View "${t}" activated in context`),
+            this.SetActive(!0, e, t);
         }
         OnDeactivate(e) {
           this.m_activeWindow == e
             ? (a(`${this.LogName(e)} Deactivate context for window`),
-              this.m_controller.OnContextDeactivated(this, !1),
-              this.SetActive(!1))
+              this.SetActive(!1, e))
             : a(
                 `${this.LogName(e)} Blurred, but not deactivating because (${
                   this.m_activeWindow.name
                 }) has focus.`
               );
         }
-        SetActive(e) {
-          this.m_bActive != e &&
-            ((this.m_bActive = e), this.m_ActiveCallbacks.Dispatch(e));
+        OnDeactivateBrowserView(e, t) {
+          a(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
+            this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
         BIsActive() {
           return this.m_bActive;
@@ -7349,7 +7379,7 @@
         constructor(e = null) {
           super(),
             c.prototype.appid || r.aR(c.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, [17], null);
         }
         static M() {
           return (
@@ -7402,6 +7432,14 @@
                     n: 16,
                     br: r.FE.readBool,
                     bw: r.Xc.writeBool,
+                  },
+                  content_descriptorids: {
+                    n: 17,
+                    r: !0,
+                    q: !0,
+                    br: r.FE.readUint32,
+                    pbr: r.FE.readPackedUint32,
+                    bw: r.Xc.writeRepeatedUint32,
                   },
                 },
               }),
@@ -9156,7 +9194,7 @@
     22453: (e, t, n) => {
       "use strict";
       n.d(t, {
-        E0: () => qe,
+        E0: () => Qe,
         iN: () => P,
         uT: () => D,
         Ac: () => y,
@@ -9170,7 +9208,7 @@
         ry: () => Ce,
         $_: () => S,
         h4: () => b,
-        II: () => Q,
+        II: () => q,
         __: () => w,
         o9: () => N,
         $0: () => F,
@@ -9808,7 +9846,7 @@
           )
         );
       });
-      class Q extends r.PureComponent {
+      class q extends r.PureComponent {
         constructor(e) {
           super(e),
             this.CheckProps(e),
@@ -9865,10 +9903,10 @@
               1 == this.props.mustBeNumeric &&
               isNaN(Number(this.m_elInput.value)),
             m_bIsInvalidURL:
-              1 == this.props.mustBeURL && !Q.validateUrl(this.m_elInput.value),
+              1 == this.props.mustBeURL && !q.validateUrl(this.m_elInput.value),
             m_bIsInvalidEmail:
               1 == this.props.mustBeEmail &&
-              !Q.validateEmail(this.m_elInput.value),
+              !q.validateEmail(this.m_elInput.value),
             m_bAboveMaxChars:
               null !== this.props.maxChars &&
               this.m_elInput.value.length > this.props.maxChars,
@@ -10097,11 +10135,11 @@
             : T;
         }
       }
-      (0, i.gn)([j.ak], Q.prototype, "OnInputRef", null),
-        (0, i.gn)([j.ak], Q.prototype, "OnChanged", null),
-        (0, i.gn)([j.ak], Q.prototype, "OnCopyClick", null),
-        (0, i.gn)([j.ak], Q.prototype, "OnClearClick", null);
-      class q extends Q {
+      (0, i.gn)([j.ak], q.prototype, "OnInputRef", null),
+        (0, i.gn)([j.ak], q.prototype, "OnChanged", null),
+        (0, i.gn)([j.ak], q.prototype, "OnCopyClick", null),
+        (0, i.gn)([j.ak], q.prototype, "OnClearClick", null);
+      class Q extends q {
         OnBackgroundClick() {
           this.m_elInput && this.m_elInput.focus();
         }
@@ -10169,9 +10207,9 @@
           );
         }
       }
-      (0, i.gn)([j.ak], q.prototype, "OnBackgroundClick", null),
-        (0, i.gn)([j.ak], q.prototype, "OnInputFocus", null),
-        (0, i.gn)([j.ak], q.prototype, "OnInputBlur", null);
+      (0, i.gn)([j.ak], Q.prototype, "OnBackgroundClick", null),
+        (0, i.gn)([j.ak], Q.prototype, "OnInputFocus", null),
+        (0, i.gn)([j.ak], Q.prototype, "OnInputBlur", null);
       const J = (e, t) =>
           "" +
           (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
@@ -11532,7 +11570,7 @@
                 h.T,
                 {
                   component: e.renderPageAnimation,
-                  fallback: Qe,
+                  fallback: qe,
                   activePage: _,
                   direction: v,
                 },
@@ -11548,10 +11586,10 @@
           )
         );
       });
-      function Qe(e) {
+      function qe(e) {
         return r.createElement(r.Fragment, null, e.children);
       }
-      class qe extends r.Component {
+      class Qe extends r.Component {
         constructor() {
           super(...arguments),
             (this.m_refTextArea = r.createRef()),
@@ -11647,12 +11685,12 @@
           );
         }
       }
-      (0, i.gn)([j.ak], qe.prototype, "InternalOnInput", null),
-        (0, i.gn)([j.ak], qe.prototype, "OnKeyUp", null),
-        (0, i.gn)([j.ak], qe.prototype, "OnBlur", null),
-        (0, i.gn)([j.ak], qe.prototype, "OnClick", null),
-        (0, i.gn)([j.ak], qe.prototype, "OnPaste", null),
-        (0, i.gn)([j.ak], qe.prototype, "OnCut", null);
+      (0, i.gn)([j.ak], Qe.prototype, "InternalOnInput", null),
+        (0, i.gn)([j.ak], Qe.prototype, "OnKeyUp", null),
+        (0, i.gn)([j.ak], Qe.prototype, "OnBlur", null),
+        (0, i.gn)([j.ak], Qe.prototype, "OnClick", null),
+        (0, i.gn)([j.ak], Qe.prototype, "OnPaste", null),
+        (0, i.gn)([j.ak], Qe.prototype, "OnCut", null);
       var Je = n(93845),
         et = n.n(Je);
       const tt = r.forwardRef(function (e, t) {
@@ -11850,7 +11888,7 @@
                 e.preventDefault();
             },
           },
-          r.createElement(Q, Object.assign({}, u, { ref: m }))
+          r.createElement(q, Object.assign({}, u, { ref: m }))
         );
       });
       r.forwardRef(function (e, t) {
@@ -11907,7 +11945,7 @@
             ),
           },
           r.createElement(
-            Q,
+            q,
             Object.assign(
               {
                 autoComplete: "off",
@@ -13857,6 +13895,7 @@
       }
       var c = n(83647),
         u = (n(66243), n(10847), n(28609), n(92398));
+      n(53157);
       const d = ({
         active: e,
         onDismiss: t,
@@ -14392,15 +14431,11 @@
         return r.createElement(
           w.Provider,
           { value: l.current },
-          r.createElement(
-            _.S,
-            null,
-            r.createElement(m, {
-              manager: l.current,
-              ownerWindow: a,
-              browserInfo: i,
-            })
-          ),
+          r.createElement(m, {
+            manager: l.current,
+            ownerWindow: a,
+            browserInfo: i,
+          }),
           o
         );
       }
@@ -14576,7 +14611,11 @@
           return t || ((t = new a()), this.m_mapModalManager.set(e, t)), t;
         }
         RegisterModalManager(e, t) {
-          this.m_mapModalManager.set(t, e);
+          (0, r.X)(
+            !this.m_mapModalManager.has(t),
+            `Stomping CModalManager for ${t.document.title}!`
+          ),
+            this.m_mapModalManager.set(t, e);
         }
         UnregisterModalManager(e) {
           this.m_mapModalManager.delete(e);
@@ -14962,12 +15001,14 @@
             o.unmountComponentAtNode(this.m_element);
         }
         Render(e, t) {
+          var n, i;
           if (
             (t.setAttribute("class", "fullheight popup_chat_frame"),
             this.m_modalElement)
           ) {
-            const n = this.m_options ? this.m_options.bHideActions : void 0,
-              i =
+            const l = this.m_options ? this.m_options.bHideActions : void 0,
+              d = this.m_windowOpener.ConfigContext,
+              m =
                 this.m_options &&
                 "number" == typeof this.m_options.nDragAreaHeight
                   ? { height: this.m_options.nDragAreaHeight }
@@ -14977,18 +15018,33 @@
                 s.Rt,
                 { ownerWindow: e },
                 r.createElement(
-                  "div",
-                  { className: "PopupFullWindow", onContextMenu: a.T },
-                  r.createElement(u.T, {
-                    hideMinMax: !0,
-                    popup: e,
-                    hideActions: n,
-                    style: i,
-                  }),
+                  h.E_.Provider,
+                  {
+                    value: {
+                      IN_GAMEPADUI:
+                        null !== (n = null == d ? void 0 : d.IN_GAMEPADUI) &&
+                        void 0 !== n &&
+                        n,
+                      IN_VR:
+                        null !== (i = null == d ? void 0 : d.IN_VR) &&
+                        void 0 !== i &&
+                        i,
+                    },
+                  },
                   r.createElement(
-                    c.Y0,
-                    { browserInfo: this.browser_info },
-                    this.m_modalElement
+                    "div",
+                    { className: "PopupFullWindow", onContextMenu: a.T },
+                    r.createElement(u.T, {
+                      hideMinMax: !0,
+                      popup: e,
+                      hideActions: l,
+                      style: m,
+                    }),
+                    r.createElement(
+                      c.Y0,
+                      { browserInfo: this.browser_info },
+                      this.m_modalElement
+                    )
                   )
                 )
               ),
@@ -15003,7 +15059,7 @@
       n.d(t, {
         $06: () => U,
         $gZ: () => u,
-        Bh5: () => Q,
+        Bh5: () => q,
         Ehc: () => T,
         I8b: () => X,
         IWH: () => F,
@@ -15051,7 +15107,7 @@
         tkI: () => p,
         uZu: () => $,
         ui7: () => x,
-        vJ$: () => q,
+        vJ$: () => Q,
         vyu: () => ue,
         wn$: () => K,
         x0L: () => oe,
@@ -15936,21 +15992,22 @@
             version: "1.1",
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
+            fill: "#FFFFFF",
             className: t,
             x: "0px",
             y: "0px",
             viewBox: "0 0 256 256",
           },
           r.createElement("path", {
-            fill: "#ffffff",
+            fill: "#currentColor",
             d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
           }),
           r.createElement("path", {
-            fill: "#ffffff",
+            fill: "#currentColor",
             d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
           }),
           r.createElement("path", {
-            fill: "#ffffff",
+            fill: "#currentColor",
             d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
           })
         );
@@ -16339,7 +16396,7 @@
           })
         );
       }
-      function Q() {
+      function q() {
         return r.createElement(
           "svg",
           {
@@ -16379,7 +16436,7 @@
           })
         );
       }
-      function q() {
+      function Q() {
         return r.createElement(
           "svg",
           {
@@ -18573,7 +18630,7 @@
         "FocusNavigationMovement",
         "GamepadEvents",
         "VirtualKeyboard",
-        "UIStore/BasicUIStore",
+        "LibraryUIStore/BasicUIStore",
         "SystemNetworkStore",
         "SteamClient",
         "AudioPlaybackManager",
@@ -18910,7 +18967,7 @@
       function o(e) {
         const t = i.useRef(s),
           n = function (e, t, ...n) {
-            console.log(`React-Query ${e} ${t}`, ...n);
+            console.log(`React-Query ${e}`, t, ...n);
           };
         (0, r.setLogger)({
           log: (e, ...t) => n("LOG", e, ...t),
@@ -19124,16 +19181,17 @@
       "use strict";
       n.d(t, {
         De: () => c,
-        Ek: () => v,
+        E_: () => a,
+        Ek: () => f,
         JA: () => m,
-        Kc: () => S,
+        Kc: () => w,
         L7: () => u,
         Wj: () => h,
-        Zv: () => w,
+        Zv: () => y,
         id: () => l,
-        ip: () => b,
-        kQ: () => C,
-        y9: () => _,
+        ip: () => E,
+        kQ: () => b,
+        y9: () => v,
       });
       var i = n(48899),
         r = n(61939),
@@ -19164,6 +19222,7 @@
           MEDIA_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
           COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
           STORE_CDN_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
@@ -19200,9 +19259,9 @@
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!(0, r.t$)()) return p || (p = g()), p;
+              if (!(0, r.t$)()) return g || (g = _()), g;
               let e = (0, r.bG)("sessionid");
-              e || (e = g());
+              e || (e = _());
               return e;
             })();
           },
@@ -19213,7 +19272,6 @@
           IN_GAMEPADUI: !1,
           IN_STEAMUI_SHARED_CONTEXT: !1,
           ONE_STEAMUI_SHARED_CONTEXT: !1,
-          GAMEPADUI_WINDOWED: !1,
           DECK_DISPLAY_MODE: !1,
           ON_DECK: !1,
           IN_GAMESCOPE: !1,
@@ -19253,9 +19311,10 @@
           IS_VALVE_GROUP: !1,
           IS_ALLOWED_SC: !1,
         },
-        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-      let p;
-      function g() {
+        h = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" },
+        p = "webui_config";
+      let g;
+      function _() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
@@ -19263,30 +19322,30 @@
         })();
         return (0, r.I1)("sessionid", e, 0), e;
       }
-      function _() {
+      function v() {
         let e = null;
         return (
           (0, r.t$)() && (e = (0, r.bG)("presentation_mode")),
           Boolean(e && 1 === Number.parseInt(e))
         );
       }
-      function v(e = "webui_config") {
+      function f(e = p) {
         const t = {},
-          n = C("config", e);
+          n = b("config", e);
         n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-        const i = C("userinfo", e);
+        const i = b("userinfo", e);
         i &&
           (Object.assign(u, i),
           (t.userConfig = !0),
-          u.is_support && _() && (u.is_support = !1));
-        const r = C("broadcast", e);
+          u.is_support && v() && (u.is_support = !1));
+        const r = b("broadcast", e);
         r && (Object.assign(d, r), (t.broadcastConfig = !0));
-        const o = C("community", e);
+        const o = b("community", e);
         o && (Object.assign(m, o), (t.communityConfig = !0));
-        const s = C("event", e);
+        const s = b("event", e);
         return s && (Object.assign(h, s), (t.eventConfig = !0)), t;
       }
-      function f(e, t = "webui_config", n) {
+      function C(e, t = p, n) {
         let i;
         if (
           ((i =
@@ -19306,54 +19365,54 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      function C(e, t = "webui_config") {
-        return f(e, t, !0);
+      function b(e, t = p) {
+        return C(e, t, !0);
       }
-      function b(e, t = "webui_config") {
-        return f(e, t, !1);
+      function E(e, t = p) {
+        return C(e, t, !1);
       }
-      function E(e, t) {
+      function S(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function S() {
+      function w() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return E(e, c.STORE_BASE_URL)
+        return S(e, c.STORE_BASE_URL)
           ? c.STORE_BASE_URL
-          : E(e, c.COMMUNITY_BASE_URL)
+          : S(e, c.COMMUNITY_BASE_URL)
           ? c.COMMUNITY_BASE_URL
-          : E(e, c.CHAT_BASE_URL)
+          : S(e, c.CHAT_BASE_URL)
           ? c.CHAT_BASE_URL
-          : E(e, c.PARTNER_BASE_URL)
+          : S(e, c.PARTNER_BASE_URL)
           ? c.PARTNER_BASE_URL
-          : E(e, c.HELP_BASE_URL)
+          : S(e, c.HELP_BASE_URL)
           ? c.HELP_BASE_URL
-          : E(e, c.STEAMTV_BASE_URL)
+          : S(e, c.STEAMTV_BASE_URL)
           ? c.STEAMTV_BASE_URL
-          : E(e, c.STATS_BASE_URL)
+          : S(e, c.STATS_BASE_URL)
           ? c.STATS_BASE_URL
-          : E(e, c.INTERNAL_STATS_BASE_URL)
+          : S(e, c.INTERNAL_STATS_BASE_URL)
           ? c.INTERNAL_STATS_BASE_URL
-          : E(e, c.STORE_CHECKOUT_BASE_URL)
+          : S(e, c.STORE_CHECKOUT_BASE_URL)
           ? c.STORE_CHECKOUT_BASE_URL
-          : E(e, "https://steamloopback.host")
+          : S(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function w() {
+      function y() {
         const e = window.location.href;
-        return E(e, c.STORE_BASE_URL) || E(e, c.STORE_CHECKOUT_BASE_URL)
+        return S(e, c.STORE_BASE_URL) || S(e, c.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : E(e, c.COMMUNITY_BASE_URL)
+          : S(e, c.COMMUNITY_BASE_URL)
           ? "community"
-          : E(e, c.PARTNER_BASE_URL)
+          : S(e, c.PARTNER_BASE_URL)
           ? "partnerweb"
-          : E(e, c.HELP_BASE_URL)
+          : S(e, c.HELP_BASE_URL)
           ? "help"
-          : E(e, c.STEAMTV_BASE_URL)
+          : S(e, c.STEAMTV_BASE_URL)
           ? "steamtv"
-          : E(e, c.STATS_BASE_URL) || E(e, c.INTERNAL_STATS_BASE_URL)
+          : S(e, c.STATS_BASE_URL) || S(e, c.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -19962,7 +20021,7 @@
         $ = a.lazy(() =>
           Promise.all([n.e(5117), n.e(907), n.e(5676)]).then(n.bind(n, 82385))
         ),
-        Q = a.lazy(() =>
+        q = a.lazy(() =>
           Promise.all([
             n.e(7940),
             n.e(3069),
@@ -19971,7 +20030,7 @@
             n.e(8974),
           ]).then(n.bind(n, 48366))
         ),
-        q = a.lazy(() =>
+        Q = a.lazy(() =>
           Promise.all([n.e(614), n.e(9035)]).then(n.bind(n, 33883))
         );
       function J(e) {
@@ -20030,19 +20089,19 @@
                   a.createElement(L.AW, {
                     exact: !0,
                     path: r.Z.ContentHubCategories(),
-                    render: () => a.createElement(q, null),
+                    render: () => a.createElement(Q, null),
                   }),
                   a.createElement(L.AW, {
                     path: r.Z.StoreGameAdminRoot(),
-                    component: Q,
+                    component: q,
                   }),
                   a.createElement(L.AW, {
                     path: r.Z.AppLandingPage(),
-                    component: Q,
+                    component: q,
                   }),
                   a.createElement(L.AW, {
                     path: r.Z.AppCommunityItems(),
-                    component: Q,
+                    component: q,
                   }),
                   a.createElement(L.AW, {
                     path: r.Z.SteamML(),

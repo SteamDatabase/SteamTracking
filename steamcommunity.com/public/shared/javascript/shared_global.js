@@ -5051,4 +5051,23 @@ function GPNavUpdateActionDescriptions( element, actionDescriptions )
 	g_rgQueuedGamepadCommands.push( { name: 'GPNavUpdateActionDescriptions', args: arguments } );
 }
 
+var SetGPFocusRestoreTimeout = function(){}; // no op unless InitializeGPFocusRestoreTimeout is called
+var nGPFocusRestoreTimeoutID = -1;
+function InitializeGPFocusRestoreTimeout()
+{
+	window.history.replaceState( $J.extend( {}, window.history.state, { notify_focus_restore_ready: true } ), "" );
+	SetGPFocusRestoreTimeout = function( delay = 200 )
+	{
+		if ( nGPFocusRestoreTimeoutID == 0 || ( !window.UseTabletScreenMode || !window.UseTabletScreenMode() ) )
+			return;
+
+		if ( nGPFocusRestoreTimeoutID !== -1 )
+			window.clearTimeout( nGPFocusRestoreTimeoutID );
+
+		this.nGPFocusRestoreTimeoutID = window.setTimeout( function(){
+			nGPFocusRestoreTimeoutID = 0;
+			dispatchEvent( new Event( 'focus_restore_ready' ) );
+		}, delay );
+	}
+}
 

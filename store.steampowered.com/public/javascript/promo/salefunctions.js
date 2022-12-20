@@ -486,15 +486,24 @@ function AddMicrotrailer( $CapCtn, microtrailer )
 	$CapCtn.addClass( 'with_microtrailer' );
 	$CapCtn.data('hoverDisableScreenshots', true );
 	var $ImgCtn = $CapCtn.children('.sale_capsule_image_ctn');
-	$CapCtn.one( 'mouseenter', function()
+	$CapCtn.one( 'mouseenter vgp_onfocus', function()
 	{
-		var $Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
-			.append($J("<source>", {src: microtrailer, type: "video/webm"}));
-		$ImgCtn.append( $Video );
+		let $Video = null;
+		if ( !$ImgCtn.children( '.sale_capsule_video' ).length )
+		{
+			$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
+				.append($J("<source>", {src: microtrailer, type: "video/webm"}));
+			$ImgCtn.append( $Video );
+		}
+		else
+		{
+			$Video = $ImgCtn.children( '.sale_capsule_video' );
+		}
 
 		var playPromise;
 		var fnPlay = function() {
 			$CapCtn.addClass( 'with_microtrailer' );
+			$CapCtn.addClass( 'microtrailer_active' );
 			playPromise = $Video[0].play();
 			if ( playPromise )
 			{
@@ -508,9 +517,12 @@ function AddMicrotrailer( $CapCtn, microtrailer )
 				playPromise.then( function() {$Video[0].pause() } );
 			else
 				$Video[0].pause();
+
+			$CapCtn.removeClass( 'microtrailer_active' );
 		};
 
-		$CapCtn.hover( fnPlay, fnPause );
+		$CapCtn.on( 'mouseenter vgp_onfocus', fnPlay );
+		$CapCtn.on( 'mouseleave vgp_onblur', fnPause );
 
 		window.setTimeout( fnPlay, 1 );
 	});
@@ -769,7 +781,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 		if ( bInTransition )
 			return;
 
-		$NextTarget.fadeOut( 'fast' );
+		$NextTarget.fadeOut( '500' );
 
 		var nHeight = $ContentTarget.height();
 		$ContentTarget.addClass( 'transition' ).css('height', nHeight + 'px');
@@ -779,15 +791,15 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 			$ContentTarget.prepend( BuildFranchiseCap( fnGetFranchise( i ) ) );
 		}
 		$PrevTarget.empty().append( BuildFranchiseCap( fnGetFranchise( iPageStart - 4 ), true ) );
-		$PrevTarget.css('right', '199%' ).animate( {right: '99%' }, 600 );
+		$PrevTarget.css('right', '199%' ).animate( {right: '99%' }, 500 );
 
 		var rgChildren = $ContentTarget.children();
-		$J(rgChildren[5]).animate( {opacity: 0}, 600 );
-		$J(rgChildren[4]).animate( {opacity: 0}, 600 );
-		$J(rgChildren[3]).animate( {opacity: 0.5}, 600 );
+		$J(rgChildren[5]).animate( {opacity: 0}, 500 );
+		$J(rgChildren[4]).animate( {opacity: 0}, 500 );
+		$J(rgChildren[3]).animate( {opacity: 0}, 500 );
 
 
-		$ContentTarget.css('left','-100%').animate( {left: '0%'}, 600, function() {
+		$ContentTarget.css('left','-100%').animate( {left: '0%'}, 500, function() {
 			iPageStart -= 3;
 			$ContentTarget.children().detach();
 			$ContentTarget.removeClass('transition').css('left', '').css('height','');
@@ -801,7 +813,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 		if ( bInTransition )
 			return;
 
-		$PrevTarget.fadeOut( 'fast' );
+		$PrevTarget.fadeOut( '500' );
 
 		var nHeight = $ContentTarget.height();
 		$ContentTarget.addClass( 'transition' ).css('height', nHeight + 'px');
@@ -812,24 +824,24 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 			var $Cap = BuildFranchiseCap( fnGetFranchise( i ) );
 			if ( bClicked )
 			{
-				$Cap.css( 'opacity', 0.5 ).animate( { opacity: 1.0 }, 600 );
+				$Cap.css( 'opacity', 0.5 ).animate( { opacity: 1.0 }, 500 );
 				bClicked = false;
 			}
 			else
 			{
-				$Cap.css( 'opacity', 0 ).animate( { opacity: 1.0 }, 600 );
+				$Cap.css( 'opacity', 0 ).animate( { opacity: 1.0 }, 500 );
 			}
 			$ContentTarget.append( $Cap );
 		}
 		$NextTarget.empty().append( BuildFranchiseCap( fnGetFranchise( iPageStart + 6 ), true ) );
-		$NextTarget.css('left', '199%' ).animate( {left: '99%' }, 600 );
+		$NextTarget.css('left', '199%' ).animate( {left: '99%' }, 500 );
 
 		var rgChildren = $ContentTarget.children();
-		$J(rgChildren[0]).animate( {opacity: 0}, 600 );
-		$J(rgChildren[1]).animate( {opacity: 0}, 600 );
-		$J(rgChildren[2]).animate( {opacity: 0.5}, 600 );
+		$J(rgChildren[0]).animate( {opacity: 0}, 500 );
+		$J(rgChildren[1]).animate( {opacity: 0}, 500 );
+		$J(rgChildren[2]).animate( {opacity: 0}, 500 );
 
-		$ContentTarget.animate( {left: '-100%'}, 600, function() {
+		$ContentTarget.animate( {left: '-100%'}, 500, function() {
 			iPageStart += 3;
 			$ContentTarget.children().detach();
 			$ContentTarget.removeClass('transition').css('left', '').css('height','');
@@ -888,7 +900,11 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 		{
 			var $Games = $J( '<div/>', {'class': 'franchise_games'} );
 
-			$Cap.one( 'mouseenter', function( event ) {
+			$Cap.one( 'mouseenter vgp_onfocus', function( event ) {
+
+				if ( $Games.html().length > 0 )
+					return;
+
 				var rgItems = FranchiseData.rgItemsToFeature.slice();
 				if ( rgItems.length > 2 || rgItems.length == 1 )
 				{
@@ -908,8 +924,12 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 					'See %s more games...'.replace( /%s/, FranchiseData.nItemsTotal - FranchiseData.rgItemsToFeature.length )
 				) );
 
+				$Cap.addClass( 'active' );
 				BindSaleCapAutoSizeEvents( $Games );
 				GDynamicStore.DecorateDynamicItems( $Games );
+
+				$Cap.on( 'mouseenter vgp_onfocus', function() { $Cap.addClass( 'active' ); } );
+				$Cap.on( 'mouseleave vgp_onblur', function() { $Cap.removeClass( 'active' ); } );
 			} );
 
 			$Cap.append( $Games );

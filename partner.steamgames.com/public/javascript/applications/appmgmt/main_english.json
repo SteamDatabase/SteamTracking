@@ -868,6 +868,8 @@
     "SteamLearn_Config_Node_Train_LossDescSub3": "Similar to Categorical Crossentropy, good for models that have a number of potential results that you want to select between. Supplies a single numerical value rather than a n-hot array, and is better for models with numerically large label spaces that only have a single value being solved for.",
     "SteamLearn_Config_Node_Train_EpochCount": "Epoch Count",
     "SteamLearn_Config_Node_Train_EpochCountDesc": "The number of epochs to train for.",
+    "SteamLearn_Config_Node_Train_CompactTable": "Compact Table",
+    "SteamLearn_Config_Node_Train_CompactTableDesc": "The compact name that the sparse value is referencing.",
     "SteamLearn_Config_Node_Train_NoImprovementLimit": "No ImprovementLimit",
     "SteamLearn_Config_Node_Train_NoImprovementLimitDesc": "The loss threshold at which we'll prematurely stop training. Any epoch that doesn't lower loss by this value will stop training.",
     "SteamLearn_Config_Node_Train_BatchSize": "BatchSize",

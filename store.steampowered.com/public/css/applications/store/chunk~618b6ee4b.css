@@ -1122,6 +1122,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   border-right: none;
   background-color: unset;
 }
+.claimitemshared_CheckMark_3HeHP {
+  height: 32px;
+}
 .sharewithfriends_Container_8f6EQ {
   background-color: #1c1e26;
   padding: 10px;
@@ -7407,65 +7410,12 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   margin: 0 auto;
   margin-bottom: 16px;
 }
-.giveawaynextdraw_countdownCtn_awreX {
-  background: radial-gradient(
-    100% 80% at 64% 95%,
-    rgba(108, 119, 134, 0.4) 40%,
-    rgba(83, 104, 104, 0.4) 100%
-  );
-  padding: 16px;
-  border-radius: 4px;
+.dlcforyou_Ignore_3Vqvq {
+  margin-right: 12px;
+  cursor: pointer;
 }
-.giveawaynextdraw_Closed_26nqf {
-  position: relative;
-}
-.giveawaynextdraw_CountDownCtn_7do5R {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 11px;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownTime_3wwxF {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  width: 62px;
-  padding-left: 14px;
-  border-radius: 2px;
-}
-.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownText_6MmR7 {
-  font-size: 16px;
-  display: inline;
-  margin-left: 8px;
-}
-.giveawaynextdraw_LearnMore_kL9GF {
-  position: relative;
-}
-.giveawaynextdraw_Throbber_318nd {
-  display: flex;
-  color: #80caff;
-  line-height: 37px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 12px;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC {
-  display: inline;
-  margin-right: 8px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerCount_2cdse {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  width: 62px;
-  padding-left: 14px;
-  border-radius: 2px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerText_2s2hb {
-  display: inline;
-  margin-left: 8px;
+.dlcforyou_DLCSectionTitle_3xJah .SaleSectionHeader {
+  text-decoration: underline;
 }
 :root {
   --basicui-header-height: 0px;
@@ -7535,4 +7485,77 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .BasicUI .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
   display: none;
+}
+.giveawaynextdraw_countdownCtn_awreX {
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
+  padding: 16px;
+  border-radius: 4px;
+}
+.giveawaynextdraw_Closed_26nqf {
+  position: relative;
+}
+.giveawaynextdraw_CountDownCtn_7do5R {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 11px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownTime_3wwxF {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownText_6MmR7 {
+  font-size: 16px;
+  display: inline;
+  margin-left: 8px;
+}
+.giveawaynextdraw_LearnMore_kL9GF {
+  position: relative;
+}
+.giveawaynextdraw_Throbber_318nd {
+  display: flex;
+  color: #80caff;
+  line-height: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC {
+  display: inline;
+  margin-right: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerCount_2cdse {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerText_2s2hb {
+  display: inline;
+  margin-left: 8px;
+}
+.saleclaimitem_NextStop_35VNz {
+  font-size: 20px;
+  padding-top: 10px;
+  color: #fff;
+}
+.saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4 {
+  padding-right: 8px;
+}
+.saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4,
+.saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
+  color: #fff;
+  font-weight: 600;
 }

@@ -1574,7 +1574,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   }
 }
 .gamepadui_svg_library_GenericGamepadHighlight_3-ZZD {
-  fill: green;
+  fill: #4897d2;
 }
 :root {
   --basicui-header-height: 0px;
@@ -8029,7 +8029,6 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   text-transform: unset;
   letter-spacing: unset;
   text-shadow: unset;
-  margin-bottom: 8px;
 }
 .ContentHubSalePage .partnereventshared_SaleSectionHeader_2WMiQ {
   padding-left: 8px;
@@ -8045,6 +8044,13 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
 }
 .partnereventshared_SaleSectionSubtitle_2rIaW {
   font-size: 15px;
+}
+.BasicUI .partnereventshared_SaleSectionSubtitle_2rIaW {
+  font: var(--gpText-BodyLarge);
+  font-weight: 500;
+  text-transform: unset;
+  letter-spacing: unset;
+  text-shadow: unset;
 }
 .partnereventshared_SaleSectionContainer_3gb3J {
   grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -8997,14 +9003,14 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .newlogindialog_Login_lat0M .newlogindialog_RefreshTitle_3yMMw {
   color: #fff;
-  font-size: 32px;
+  font-size: 26px;
   text-transform: uppercase;
   font-weight: 200;
 }
 .newlogindialog_Login_lat0M .newlogindialog_RefreshReason_1b-mL {
   color: #dfe3e6;
   font-size: 15px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .newlogindialog_Login_lat0M .newlogindialog_StandardLayout_2EuR6.IN_CLIENT {
   width: 630px;
@@ -9105,6 +9111,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .newlogindialog_Login_lat0M .newlogindialog_EmbeddedRoot_2v9dC.IN_CLIENT {
   width: 630px;
 }
+.newlogindialog_Login_lat0M
+  .newlogindialog_EmbeddedRoot_2v9dC
+  .newlogindialog_RefreshReasonContainer_1kQPd {
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+}
 .newlogindialog_Login_lat0M .newlogindialog_EmbeddedRoot_2v9dC:not(.IN_CLIENT) {
   width: 100%;
   min-width: 700px;
@@ -9142,8 +9155,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .newlogindialog_Login_lat0M
   .newlogindialog_EmbeddedRoot_2v9dC
-  .newlogindialog_EmbeddedRootFooter_27aIt
-  .newlogindialog_InClient_1VAFg {
+  .newlogindialog_EmbeddedRootFooter_27aIt.newlogindialog_InClient_1VAFg {
   padding-top: 15px;
 }
 @media screen and (max-width: 796px) {

@@ -2329,7 +2329,7 @@ input.clanimagepicker_SearchInput_lwt4u {
   margin: unset;
   border-radius: unset;
   box-shadow: var(--gpShadow-Medium);
-  min-width: 180px;
+  min-width: var(--gpWidth-3colcap);
 }
 .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
   margin: 0px 8px 0px 8px;
@@ -2338,6 +2338,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
     margin: 0px 16px 0px 0px;
   }
+}
+.BasicUI .SaleSectionCarouselPadding .eventrow_OtherEvents_EventCtn_17gGs {
+  margin: unset;
 }
 .eventrow_OtherEvents_BGImage_3rp-l {
   width: 100%;
@@ -2563,12 +2566,11 @@ input.clanimagepicker_SearchInput_lwt4u {
   width: calc(100% - 20px);
 }
 .BasicUI .eventrow_AppCapsuleCtn_1kYha {
-  top: -20px;
-  left: 12px;
+  top: 10px;
+  left: 0px;
   width: unset;
   justify-content: unset;
   column-gap: 12px;
-  align-items: baseline;
 }
 .eventrow_AppCapsuleImageHover_rcwMf {
   flex-shrink: 0;
@@ -7423,6 +7425,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .salepointshopwidgeteditor_DropDown_u_cLt {
   width: 500px;
+}
+.saleclaimitemwidgeteditor_Dummy_1ddLz {
+  background-color: hotpink;
 }
 .partnereventsavebutton_SavedImage_1y3QV {
   height: 12px;

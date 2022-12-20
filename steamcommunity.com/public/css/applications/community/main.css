@@ -1,31 +1,151 @@
-body.modals_BodyNoScroll_3ItVl {
-  overflow-y: hidden;
-  height: 100vh;
+.SVGIcon_Button {
+  fill: #fff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
 }
-body.modals_BodyNoScrollDialog_3lrlA {
-  overflow-y: hidden;
-  height: 100vh;
-}
-.modals_OverlayModal_1RM4p {
-  position: fixed;
-  top: 0;
+.shared_svg_library_EmoticonBow_S9_rt {
+  position: absolute;
+  top: -15px;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1500;
 }
-.modals_GamepadOnlyModalWrapper_3tgce {
+.shared_svg_library_EmoticonBow_st0_1MS_8 {
+  opacity: 0.4;
+  fill: #231f20;
+}
+.shared_svg_library_EmoticonBow_st1_3nqUN {
+  fill: #e41e25;
+}
+.shared_svg_library_SteamDeckCompatInfo_2LcFI {
+  display: flex;
+  background-color: #0e141b;
+  padding: 2px;
+  border-radius: 20px;
+}
+.shared_svg_library_SteamDeckCompatLogo_Tplfb {
+  width: 20px;
+  height: 20px;
+}
+.shared_svg_library_SteamDeckCompatIcon_2hEWY {
+  width: 20px;
+  height: 20px;
+}
+.shared_svg_library_SteamDeckCompatVerified_3mvZq {
+  color: #59bf40;
+}
+.shared_svg_library_SteamDeckCompatPlayable_S7BDm {
+  color: #ffc82c;
+}
+.shared_svg_library_SteamDeckCompatUnsupported_1SeOP,
+.shared_svg_library_SteamDeckCompatUnknown_15dEs {
+  color: #dcdedf;
+}
+.toggle_Toggle_3jXWQ {
+  width: 40px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.toggle_Toggle_3jXWQ.toggle_Disabled_2V_kU {
+  cursor: default;
+  opacity: 0.6;
+}
+.toggle_Toggle_3jXWQ .toggle_ToggleRail_GKYwH {
+  height: 10.6666666667px;
+  width: 36px;
+  border-radius: 5.3333333333px;
+  box-shadow: inset 1px 1px 1px #0007;
+  position: absolute;
+  left: 2.6666666667px;
+  top: 2.6666666667px;
+  background-color: #26292e;
+}
+.toggle_Toggle_3jXWQ .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH {
+  background-color: #2d5a81;
+  transition: width 0.2s ease-in-out;
+}
+.toggle_Toggle_3jXWQ
+  .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH.toggle_On_1YqUA {
+  width: 36px;
+}
+.toggle_Toggle_3jXWQ
+  .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH.toggle_Off_3_gMX {
+  width: 0;
+}
+.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px #000a;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_On_1YqUA {
+  background-color: #16a1e1;
+  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
+  transform: translateX(25.3333333333px);
+}
+.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_Off_3_gMX {
+  background-color: #4b525d;
+}
+.toggle_ToggleRow_RFRVY {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgba(59, 63, 72, 0.5);
+}
+.toggle_ToggleRow_RFRVY .toggle_Label_2sb8q {
+  color: #dfe3e6;
+  font-size: 14px;
+  font-weight: 300;
+}
+.toggle_ToggleRow_RFRVY .toggle_Label_2sb8q.toggle_Disabled_2V_kU {
+  opacity: 0.3;
+}
+.radio_Group_2qYC3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #202226;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  border-radius: 2px;
+  color: #dfe3e6;
+  box-shadow: inset 0 1px 1px 0px #000a;
+}
+.radio_Button_3lwcR {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 0;
-  max-height: 100vh;
-  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+  margin-right: 6px;
+  transition: background-color 0.18s ease-in-out;
+  background-color: #202226;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
 }
-.modals_GamepadOnlyModalWrapper_3tgce .modals_GamepadOnlyPanelWrapper_1vgBE {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
+.radio_Button_3lwcR.radio_Active_3ZBFo,
+.radio_Button_3lwcR.radio_Active_3ZBFo:hover {
+  background-color: #1f8dff;
+  cursor: default;
+}
+.radio_Button_3lwcR:hover {
+  background-color: #33363e;
 }
 .contextmenu_ContextMenuMouseOverlay_pu9cO {
   position: fixed;
@@ -217,154 +337,34 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   opacity: 1;
   word-wrap: break-word;
 }
-.SVGIcon_Button {
-  fill: #fff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px;
+body.modals_BodyNoScroll_3ItVl {
+  overflow-y: hidden;
+  height: 100vh;
 }
-.shared_svg_library_EmoticonBow_S9_rt {
-  position: absolute;
-  top: -15px;
+body.modals_BodyNoScrollDialog_3lrlA {
+  overflow-y: hidden;
+  height: 100vh;
+}
+.modals_OverlayModal_1RM4p {
+  position: fixed;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500;
 }
-.shared_svg_library_EmoticonBow_st0_1MS_8 {
-  opacity: 0.4;
-  fill: #231f20;
-}
-.shared_svg_library_EmoticonBow_st1_3nqUN {
-  fill: #e41e25;
-}
-.shared_svg_library_SteamDeckCompatInfo_2LcFI {
-  display: flex;
-  background-color: #0e141b;
-  padding: 2px;
-  border-radius: 20px;
-}
-.shared_svg_library_SteamDeckCompatLogo_Tplfb {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatIcon_2hEWY {
-  width: 20px;
-  height: 20px;
-}
-.shared_svg_library_SteamDeckCompatVerified_3mvZq {
-  color: #59bf40;
-}
-.shared_svg_library_SteamDeckCompatPlayable_S7BDm {
-  color: #ffc82c;
-}
-.shared_svg_library_SteamDeckCompatUnsupported_1SeOP,
-.shared_svg_library_SteamDeckCompatUnknown_15dEs {
-  color: #dcdedf;
-}
-.toggle_Toggle_3jXWQ {
-  width: 40px;
-  height: 16px;
-  position: relative;
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-}
-.toggle_Toggle_3jXWQ.toggle_Disabled_2V_kU {
-  cursor: default;
-  opacity: 0.6;
-}
-.toggle_Toggle_3jXWQ .toggle_ToggleRail_GKYwH {
-  height: 10.6666666667px;
-  width: 36px;
-  border-radius: 5.3333333333px;
-  box-shadow: inset 1px 1px 1px #0007;
-  position: absolute;
-  left: 2.6666666667px;
-  top: 2.6666666667px;
-  background-color: #26292e;
-}
-.toggle_Toggle_3jXWQ .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH {
-  background-color: #2d5a81;
-  transition: width 0.2s ease-in-out;
-}
-.toggle_Toggle_3jXWQ
-  .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH.toggle_On_1YqUA {
-  width: 36px;
-}
-.toggle_Toggle_3jXWQ
-  .toggle_ToggleRail_GKYwH.toggle_Highlight_2l9tH.toggle_Off_3_gMX {
-  width: 0;
-}
-.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 3px #000a;
-  position: absolute;
-  left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_On_1YqUA {
-  background-color: #16a1e1;
-  background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
-  transform: translateX(25.3333333333px);
-}
-.toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_Off_3_gMX {
-  background-color: #4b525d;
-}
-.toggle_ToggleRow_RFRVY {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgba(59, 63, 72, 0.5);
-}
-.toggle_ToggleRow_RFRVY .toggle_Label_2sb8q {
-  color: #dfe3e6;
-  font-size: 14px;
-  font-weight: 300;
-}
-.toggle_ToggleRow_RFRVY .toggle_Label_2sb8q.toggle_Disabled_2V_kU {
-  opacity: 0.3;
-}
-.radio_Group_2qYC3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-color: #202226;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
-  border-radius: 2px;
-  color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px #000a;
-}
-.radio_Button_3lwcR {
-  flex: 1;
+.modals_GamepadOnlyModalWrapper_3tgce {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6px;
-  margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 14px;
+  min-height: 0;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
-.radio_Button_3lwcR.radio_Active_3ZBFo,
-.radio_Button_3lwcR.radio_Active_3ZBFo:hover {
-  background-color: #1f8dff;
-  cursor: default;
-}
-.radio_Button_3lwcR:hover {
-  background-color: #33363e;
+.modals_GamepadOnlyModalWrapper_3tgce .modals_GamepadOnlyPanelWrapper_1vgBE {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 .dropdown_DialogDropDownMenu_Item_1R-DV {
   padding: 10px 15px;
@@ -1574,7 +1574,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   }
 }
 .gamepadui_svg_library_GenericGamepadHighlight_1zfyD {
-  fill: green;
+  fill: #4897d2;
 }
 :root {
   --basicui-header-height: 0px;

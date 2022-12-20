@@ -1,50 +1,63 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-"use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [908],
   {
-    2388: (e, r, s) => {
-      s.d(r, { Gr: () => p, Jq: () => _, y$: () => g });
-      var t = s(70655),
-        o = s(9669),
-        a = s.n(o),
-        n = s(22188),
-        i = s(67294),
-        l = (s(26149), s(92398), s(43359)),
-        m = s(3389),
-        u = (s(82946), s(77520)),
-        c = s(93976),
-        d = s(90666);
-      class f {
+    95906: (e) => {
+      e.exports = {
+        DateAndTime: "localdateandtime_DateAndTime_1miMh",
+        DateAndTimeInline: "localdateandtime_DateAndTimeInline_1jG_-",
+        At: "localdateandtime_At_3D4jI",
+        ActiveEvent: "localdateandtime_ActiveEvent_2ZcVE",
+        ActiveEventCallOut: "localdateandtime_ActiveEventCallOut__y2DQ",
+        RightSideTitles: "localdateandtime_RightSideTitles_3sPON",
+        DateToolTip: "localdateandtime_DateToolTip_3zhja",
+        ShortDateAndTime: "localdateandtime_ShortDateAndTime_4K3Bl",
+        ShortDateRange: "localdateandtime_ShortDateRange_3sqcQ",
+      };
+    },
+    2388: (e, t, a) => {
+      "use strict";
+      a.d(t, { Gr: () => E, Jq: () => v, y$: () => p });
+      var s = a(70655),
+        r = a(9669),
+        n = a.n(r),
+        i = a(22188),
+        l = a(67294),
+        o = (a(26149), a(92398), a(43359)),
+        m = a(3389),
+        c = (a(82946), a(77520)),
+        d = a(93976),
+        u = a(90666);
+      class g {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map());
         }
-        LoadProfiles(e, r) {
-          return (0, t.mG)(this, void 0, void 0, function* () {
+        LoadProfiles(e, t) {
+          return (0, s.mG)(this, void 0, void 0, function* () {
             (0,
-            u.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
-            let s = e.filter(
+            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            let a = e.filter(
               (e) =>
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
             );
-            if (0 == s.length) return this.m_mapProfilesLoading.get(e[0]);
-            let t = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              o = a().get(t, {
-                params: { steamids: s.join(",") },
+            if (0 == a.length) return this.m_mapProfilesLoading.get(e[0]);
+            let s = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+              r = n().get(s, {
+                params: { steamids: a.join(",") },
                 withCredentials: !0,
-                cancelToken: null == r ? void 0 : r.token,
+                cancelToken: null == t ? void 0 : t.token,
               });
-            s.forEach((e) => this.m_mapProfilesLoading.set(e, o));
-            let n = yield o;
-            n.data &&
-              200 == n.status &&
-              n.data.forEach((e) => {
+            a.forEach((e) => this.m_mapProfilesLoading.set(e, r));
+            let i = yield r;
+            i.data &&
+              200 == i.status &&
+              i.data.forEach((e) => {
                 (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = (0, l.U)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = (0, l.U)(e.avatar_url, "full")),
-                  (e.avatar_url = (0, l.U)(e.avatar_url)),
+                  (e.avatar_url_medium = (0, o.U)(e.avatar_url, "medium")),
+                  (e.avatar_url_full = (0, o.U)(e.avatar_url, "full")),
+                  (e.avatar_url = (0, o.U)(e.avatar_url)),
                   this.m_mapProfiles.set(e.steamid, e),
                   this.m_mapProfilesLoading.delete(e.steamid);
               });
@@ -76,62 +89,444 @@
           return !e.some((e) => !this.BHasProfileBySteamID(e));
         }
         GetProfileURLBySteamID(e) {
-          const r = this.GetProfileBySteamID(e);
-          return r && r.profile_url
-            ? d.De.COMMUNITY_BASE_URL + "id/" + r.profile_url
-            : d.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+          const t = this.GetProfileBySteamID(e);
+          return t && t.profile_url
+            ? u.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : u.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
-          const r = this.GetProfileBySteamID(e);
-          return r && r.persona_name ? r.persona_name : "";
+          const t = this.GetProfileBySteamID(e);
+          return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, t.gn)([n.LO], f.prototype, "m_mapProfiles", void 0);
-      const g = new f();
-      function p(e) {
-        const r = i.useMemo(
+      (0, s.gn)([i.LO], g.prototype, "m_mapProfiles", void 0);
+      const p = new g();
+      function E(e) {
+        const t = l.useMemo(
             () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
             [e]
           ),
-          [s, t] = (0, i.useState)(!!r && !g.BHasProfileBySteamID(r));
-        (0, i.useEffect)(() => {
-          const e = a().CancelToken.source();
+          [a, s] = (0, l.useState)(!!t && !p.BHasProfileBySteamID(t));
+        (0, l.useEffect)(() => {
+          const e = n().CancelToken.source();
           return (
-            r &&
-              !g.BHasProfileBySteamID(r) &&
-              g
-                .LoadProfiles([r.ConvertTo64BitString()])
+            t &&
+              !p.BHasProfileBySteamID(t) &&
+              p
+                .LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const s = (0, c.l)(e);
+                  const a = (0, d.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
-                      r.ConvertTo64BitString() +
+                      t.ConvertTo64BitString() +
                       ": " +
-                      s.strErrorMsg,
-                    s
+                      a.strErrorMsg,
+                    a
                   );
                 })
                 .finally(() => {
-                  e.token.reason || t(!1);
+                  e.token.reason || s(!1);
                 }),
             () => e.cancel("unmounting useUserProfile")
           );
         }, [e]);
-        return [s, !!r && g.GetProfileBySteamID(r)];
+        return [a, !!t && p.GetProfileBySteamID(t)];
       }
-      function _(e) {
-        return p(i.useMemo(() => m.K.InitFromAccountID(e), [e]));
+      function v(e) {
+        return E(l.useMemo(() => m.K.InitFromAccountID(e), [e]));
       }
-      window.g_ProfileStore = g;
+      window.g_ProfileStore = p;
     },
-    93976: (e, r, s) => {
-      s.d(r, { l: () => n });
-      s(26149);
-      var t = s(9669),
-        o = s.n(t),
-        a = s(58114);
-      function n(e) {
-        if (o().isCancel(e))
+    96602: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        Ai: () => _,
+        H6: () => v,
+        Kj: () => p,
+        Sw: () => T,
+        Zg: () => D,
+        uv: () => f,
+        w$: () => E,
+      });
+      var s = a(70655),
+        r = a(67294),
+        n = a(28268),
+        i = a(41311),
+        l = a(29323),
+        o = a(7573),
+        m = a(30600),
+        c = a(95906),
+        d = a.n(c),
+        u = a(5525);
+      const g = a(80008);
+      function p(e) {
+        const t = g.tz.guess(),
+          a = g.unix(e).tz(t),
+          s = (0, i.CE)();
+        return s && a.locale(s), a.format("LT");
+      }
+      function E(e, t) {
+        const a = g.tz.guess(),
+          s = g.unix(e).tz(a),
+          n = (0, i.CE)();
+        return (
+          n && s.locale(n),
+          r.createElement(
+            r.Fragment,
+            null,
+            s.format("LT"),
+            t
+              ? r.createElement(
+                  "span",
+                  { "data-tooltip-text": s.format("Z") + ", " + a },
+                  " ",
+                  s.zoneAbbr()
+                )
+              : null
+          )
+        );
+      }
+      const v = (0, l.Pi)((e) => {
+          const {
+              dateAndTime: t,
+              bSingleLine: a,
+              bOnlyTime: s,
+              bOnlyDate: n,
+            } = e,
+            l = !s && Boolean(t),
+            o = !n && Boolean(t),
+            m = l && (0, i.$1)(t),
+            c = e.stylesmodule
+              ? Object.assign(Object.assign({}, d()), e.stylesmodule)
+              : d();
+          return a
+            ? r.createElement(
+                "span",
+                { className: s || n ? c.DateAndTimeInline : c.DateAndTime },
+                l && m,
+                r.createElement("span", null, " "),
+                Boolean(t && o) && E(t, !0)
+              )
+            : r.createElement(
+                "div",
+                { className: c.DateAndTime },
+                l &&
+                  r.createElement(
+                    r.Fragment,
+                    null,
+                    r.createElement("div", { className: c.LocalizedDate }, m),
+                    " ",
+                    r.createElement("span", { className: c.At }, "@")
+                  ),
+                r.createElement(
+                  "div",
+                  { className: c.LocalizedTime },
+                  Boolean(t && o) && E(t, !0)
+                )
+              );
+        }),
+        D = (e) => {
+          var t;
+          const a = r.createElement(v, {
+            dateAndTime: e.rtFullDate,
+            bSingleLine: !0,
+            stylesmodule: e.stylesmodule,
+          });
+          return r.createElement(
+            n.HP,
+            {
+              toolTipContent: a,
+              direction: "top",
+              className: e.className,
+              strTooltipClassname:
+                null === (t = e.stylesmodule) || void 0 === t
+                  ? void 0
+                  : t.DateToolTip,
+            },
+            e.children
+          );
+        };
+      let _ = class extends r.Component {
+        render() {
+          const { startDateAndTime: e, endDateAndTime: t } = this.props,
+            a = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              : d();
+          let s =
+            this.props.bHideEndTime ||
+            null == this.props.endDateAndTime ||
+            this.props.endDateAndTime < 1;
+          if (null == e || 0 == e)
+            return r.createElement(
+              "div",
+              { className: a.DateAndTime },
+              r.createElement(
+                "span",
+                { className: a.RightSideTitles },
+                (0, i.Xx)("#EventDisplay_TimeRange")
+              ),
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone")
+            );
+          let n = u.JW.GetTimeNowWithOverride();
+          if (s)
+            return r.createElement(
+              "div",
+              { className: a.StartDate },
+              r.createElement(
+                "div",
+                { className: a.RightSideTitles },
+                (0, i.Xx)(
+                  e < n
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming"
+                ),
+                " "
+              ),
+              r.createElement(v, { stylesmodule: a, dateAndTime: e })
+            );
+          let l = e <= n && n <= t;
+          const c = (0, m.yK)(new Date(1e3 * e), new Date(1e3 * t));
+          return r.createElement(
+            "div",
+            { className: a.MultiDateAndTime },
+            r.createElement(
+              "div",
+              { className: a.StartDate },
+              r.createElement(
+                "span",
+                { className: a.RightSideTitles },
+                (0, i.Xx)(
+                  e >= n
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : t >= n
+                    ? "#EventDisplay_TimeBeginsOn_Past"
+                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
+                )
+              ),
+              r.createElement(v, {
+                stylesmodule: a,
+                bSingleLine: !0,
+                dateAndTime: e,
+              })
+            ),
+            r.createElement(
+              "div",
+              { className: a.EndDate },
+              r.createElement(
+                "span",
+                { className: a.RightSideTitles },
+                (0, i.Xx)(
+                  t < n
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn"
+                )
+              ),
+              r.createElement(v, {
+                stylesmodule: a,
+                bSingleLine: !0,
+                bOnlyTime: c,
+                dateAndTime: t,
+              })
+            ),
+            l &&
+              r.createElement(
+                "span",
+                { className: a.ActiveEvent },
+                r.createElement(
+                  "span",
+                  {
+                    className: (0, o.Z)(
+                      a.RightSideTitles,
+                      a.ActiveEventCallOut
+                    ),
+                  },
+                  (0, i.Xx)("#Time_Now")
+                )
+              )
+          );
+        }
+      };
+      _ = (0, s.gn)([l.Pi], _);
+      let f = class extends r.Component {
+        render() {
+          const {
+              startDateAndTime: e,
+              endDateAndTime: t,
+              bHideEndTime: a,
+            } = this.props,
+            s = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              : d();
+          if (null == e || 0 == e)
+            return r.createElement(
+              "div",
+              { className: s.DateAndTime },
+              r.createElement(
+                "span",
+                { className: s.RightSideTitles },
+                (0, i.Xx)("#EventDisplay_TimeRange")
+              ),
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone")
+            );
+          const n = u.JW.GetTimeNowWithOverrideAsDate(),
+            l = u.JW.GetTimeNowWithOverride(),
+            o = (0, m.U8)(new Date(1e3 * e), n),
+            c = r.createElement(
+              "div",
+              { className: s.ShortDateAndTime },
+              (0, i.$1)(e, o)
+            );
+          let g = r.createElement(
+            D,
+            { rtFullDate: e, stylesmodule: s },
+            r.createElement(
+              "div",
+              { className: s.RightSideTitles },
+              (0, i.Xx)(
+                e < l
+                  ? "#EventDisplay_TimeInPast"
+                  : "#EventDisplay_TimeUpcoming"
+              )
+            ),
+            c
+          );
+          if (
+            (l < e &&
+              e < l + m._H.PerWeek &&
+              (g = r.createElement(
+                D,
+                { rtFullDate: e, stylesmodule: s },
+                r.createElement(
+                  "div",
+                  { className: s.RightSideTitles },
+                  (0, i.kQ)(
+                    "#EventDisplay_EventUpcoming_WithDateAndTime",
+                    c,
+                    r.createElement(
+                      "div",
+                      { className: s.ShortDateAndTime },
+                      E(e),
+                      " "
+                    )
+                  )
+                )
+              )),
+            a || null == t || t < 1)
+          )
+            return g;
+          const p = e <= l && l <= t;
+          p &&
+            (g = r.createElement(
+              D,
+              { rtFullDate: e, className: s.ActiveEvent, stylesmodule: s },
+              r.createElement(
+                "span",
+                { className: s.ActiveEventCallOut },
+                (0, i.Xx)("#Time_Now")
+              )
+            ));
+          let v = null;
+          const _ = p ? t - l : t - e;
+          if (_ <= m._H.PerDay) {
+            const e = r.createElement(
+              "div",
+              { className: s.ShortDateAndTime },
+              (0, i.yW)(_, !0)
+            );
+            v =
+              t < l
+                ? r.createElement(
+                    "div",
+                    { className: s.RightSideTitles },
+                    (0, i.Xx)("#EventDisplay_TimeEndsOn_Ran"),
+                    e
+                  )
+                : r.createElement(
+                    "div",
+                    { className: s.RightSideTitles },
+                    (0, i.kQ)(
+                      p
+                        ? "#EventDisplay_TimeLeft"
+                        : "#EventDisplay_RunsForDuration",
+                      e
+                    )
+                  );
+          } else {
+            const e = n.getFullYear() == new Date(1e3 * t).getFullYear();
+            v = r.createElement(
+              r.Fragment,
+              null,
+              r.createElement(
+                "div",
+                { className: s.RightSideTitles },
+                (0, i.Xx)(
+                  t < l
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn"
+                )
+              ),
+              r.createElement(
+                "div",
+                { className: s.ShortDateAndTime },
+                (0, i.$1)(t, e)
+              )
+            );
+          }
+          const f = r.createElement(D, { rtFullDate: t, stylesmodule: s }, v);
+          return r.createElement("div", { className: s.ShortDateRange }, g, f);
+        }
+      };
+      function T(e) {
+        const {
+          rtStartDate: t,
+          rtEndDate: a,
+          strMonthFormat: s,
+          className: n,
+        } = e;
+        return r.createElement(
+          "div",
+          { className: n },
+          (function (e, t, a) {
+            const s = u.JW.GetTimeNowWithOverrideAsDate(),
+              r = new Date(1e3 * e),
+              n = new Date(1e3 * t),
+              l = s.getFullYear() == r.getFullYear(),
+              o = s.getFullYear() == n.getFullYear(),
+              m = r.getFullYear() == n.getFullYear(),
+              c = m && r.getMonth() == n.getMonth(),
+              d = c && r.getDate() == n.getDate(),
+              g = {
+                day: "numeric",
+                month: null != a ? a : "long",
+                year: l ? void 0 : "numeric",
+              },
+              p = r.toLocaleDateString(i.Yt.GetPreferredLocales(), g);
+            if (d) return p;
+            {
+              const e = {
+                day: "numeric",
+                month: c && o ? void 0 : null != a ? a : "long",
+                year: m ? void 0 : "numeric",
+              };
+              return (
+                p + " - " + n.toLocaleDateString(i.Yt.GetPreferredLocales(), e)
+              );
+            }
+          })(t, a, s),
+          " "
+        );
+      }
+      f = (0, s.gn)([l.Pi], f);
+    },
+    93976: (e, t, a) => {
+      "use strict";
+      a.d(t, { l: () => i });
+      a(26149);
+      var s = a(9669),
+        r = a.n(s),
+        n = a(58114);
+      function i(e) {
+        if (r().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -174,7 +569,7 @@
               console.error(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof a.gA)
+            if ("object" == typeof e && e instanceof n.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -190,46 +585,47 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    69761: (e, r, s) => {
-      s.r(r), s.d(r, { QAndARoutes: () => l, default: () => m });
-      var t = s(69382),
-        o = s(67294),
-        a = s(78587),
-        n = s(74091),
-        i = s(92244);
-      const l = {
+    69761: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { QAndARoutes: () => o, default: () => m });
+      var s = a(69382),
+        r = a(67294),
+        n = a(78587),
+        i = a(74091),
+        l = a(92244);
+      const o = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
-        FullPageView: (e, r) => `/questions/${e}/view/${r}`,
+        FullPageView: (e, t) => `/questions/${e}/view/${t}`,
       };
       const m = function (e) {
-        return o.createElement(
-          a.rs,
+        return r.createElement(
+          n.rs,
           null,
-          o.createElement(a.AW, {
-            path: l.Dashboard(":vanity_str"),
+          r.createElement(n.AW, {
+            path: o.Dashboard(":vanity_str"),
             render: (e) =>
-              o.createElement(n.d, {
+              r.createElement(i.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: r } = e.match.params;
-                    return o.createElement(t.A, { vanity_str: r });
+                    const { vanity_str: t } = e.match.params;
+                    return r.createElement(s.A, { vanity_str: t });
                   },
                 },
               }),
           }),
-          o.createElement(a.AW, {
-            path: l.FullPageView(":vanity_str", ":session_gid"),
+          r.createElement(n.AW, {
+            path: o.FullPageView(":vanity_str", ":session_gid"),
             render: (e) =>
-              o.createElement(n.d, {
+              r.createElement(i.d, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: r, session_gid: s } = e.match.params;
-                    return o.createElement(t.EI, { gidSession: s });
+                    const { vanity_str: t, session_gid: a } = e.match.params;
+                    return r.createElement(s.EI, { gidSession: a });
                   },
                 },
               }),
           }),
-          o.createElement(a.AW, { component: i.R })
+          r.createElement(n.AW, { component: l.R })
         );
       };
     },

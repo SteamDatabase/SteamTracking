@@ -3,6 +3,15 @@
 	position: relative;
 }
 
+body.movescrolltocontent .responsive_page_frame {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+}
+
 body.overflow_hidden,
 body.overflow_hidden .responsive_page_frame {
 	overflow: hidden;
@@ -17,6 +26,14 @@ html.responsive body {
 	min-height: 100%;
 	height: auto;
 	position: relative;
+}
+
+html.responsive body.movescrolltocontent {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .responsive_page_content {

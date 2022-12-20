@@ -2038,17 +2038,21 @@
           );
         }
         GetLastReferencedSaleDay() {
-          let e;
-          for (const t of this.GetSaleSections())
-            if ("tabs" === t.section_type)
-              for (const r of t.tabs)
-                e = this.GetLastReferencedSaleDayFromCapsules(r.capsules, e);
-            else e = this.GetLastReferencedSaleDayFromCapsules(t.capsules, e);
+          var e;
+          let t;
+          for (const r of this.GetSaleSections())
+            if ("tabs" === r.section_type) {
+              if (
+                (null === (e = r.tabs) || void 0 === e ? void 0 : e.length) > 0
+              )
+                for (const e of r.tabs)
+                  t = this.GetLastReferencedSaleDayFromCapsules(e.capsules, t);
+            } else t = this.GetLastReferencedSaleDayFromCapsules(r.capsules, t);
           return (
             this.jsondata.sale_num_headers > 1 &&
-              (null == e || e < this.jsondata.sale_num_headers) &&
-              (e = this.jsondata.sale_num_headers),
-            e
+              (null == t || t < this.jsondata.sale_num_headers) &&
+              (t = this.jsondata.sale_num_headers),
+            t
           );
         }
         GetDayIndexFromEventStart() {

@@ -2544,6 +2544,7 @@
           () =>
             (function (e, t) {
               if (!e) return !1;
+              if (!t) return !1;
               if (e.BExcludesContentDescriptor(t.GetContentDescriptorIDs()))
                 return !0;
               switch (t.GetStoreItemType()) {
