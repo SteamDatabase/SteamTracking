@@ -14007,7 +14007,7 @@
             i.nSteamVersion > 0
               ? i.nSteamVersion.toString()
               : (0, G.Xx)("#Settings_System_SteamLocalBuild"),
-          l = parseInt(1671128991),
+          l = parseInt(1671500057),
           c = l && (0, Ma._o)(l, e, o),
           p = i.sSteamBuildDate,
           m = "linux" == P.De.PLATFORM ? " GMT+0000" : " GMT-0800",

@@ -5856,6 +5856,15 @@ button.controllerconfigurator_SmallTopButtons_1J8Xc.DialogButton {
   font-size: 8.72727px;
   line-height: 16px;
 }
+.controllerconfiguratorchooseconfiguration_SearchBox_1H4cu {
+  width: 70%;
+  line-height: 1px;
+  position: flex;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  margin-left: 15%;
+  font-size: 18px;
+}
 .quickaccesscontrollerorder_OptedOut_3NMs0 {
   color: #ffc82c;
   display: block;
