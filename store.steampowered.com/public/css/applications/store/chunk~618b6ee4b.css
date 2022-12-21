@@ -7546,6 +7546,16 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   display: inline;
   margin-left: 8px;
 }
+.saleclaimitem_ClaimCtn_d5PCH {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9 {
+  width: fit-content;
+  padding: 10px;
+}
 .saleclaimitem_NextStop_35VNz {
   font-size: 20px;
   padding-top: 10px;

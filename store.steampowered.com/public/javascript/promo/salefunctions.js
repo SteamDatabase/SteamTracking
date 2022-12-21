@@ -233,7 +233,7 @@ function HomeSaleFilterHeroes( $Parent )
 
 
 
-function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
+function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgFeaturedSeasonEvents )
 {
 	var k_nTier1ItemsMin = 14;
 	var k_nTier1ItemsMax = 14;
@@ -323,6 +323,9 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
+
+	// Render the featured events section
+	RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgDisplayLists.feature_event_apps );
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems, cMaxItems )
@@ -620,6 +623,18 @@ function RenderTagGenreBlock( rgTagGenres )
 
 		$elScrollRow.append( $Link );
 	});
+}
+
+function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems )
+{
+	var $eventCarousel = $J( '.featured_in_game_event_carousel' );
+
+	if ( !$eventCarousel )
+		return;
+
+
+	CreateFadingCarousel( $eventCarousel, 0 );
+
 }
 
 function SaleTagBackground( colors )

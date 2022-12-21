@@ -84,7 +84,6 @@ body.v6.sale_winter2022 .home_sticker_ctn.mobile {
     border-radius: 20px;
 }
 
-
 .bookmark_triangle {
     width: 18px;
     margin-left: -1px;
@@ -557,7 +556,7 @@ body.v6 .sale_capsule {
 
 body.v6 .discount_block {}
 
-.home_section_title {
+.home_section_title, .home_section_subtitle {
     display: flex;
     font-size: 24px;
     text-transform: uppercase;
@@ -569,6 +568,13 @@ body.v6 .discount_block {}
     color: #ffffff;
     padding: 10px;
     /* box-shadow: 4px 4px #e2cb30; */
+}
+
+.home_section_subtitle {
+	font-size: 16px;
+	justify-content: center;
+	background: unset;
+	text-transform: none;
 }
 
 .home_featured_ctn {
@@ -2897,6 +2903,10 @@ img.franchise_placeholder {
 .content_hub_carousel_ctn .content_hub_capsule_ctn {
     scroll-snap-align: start;
 }
+.content_hub_carousel_ctn .season_sale_feature_event_capsule {
+	scroll-snap-align: start;
+}
+
 
 .carousel_container .arrow.right {
 	right: -6%;
