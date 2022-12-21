@@ -1,6 +1,6 @@
 "use strict";
 
-InitializeGPFocusRestoreTimeout();
+InitializeGPFocusRestoreTimeout( false );
 
 var CWishlistController = function()
 {

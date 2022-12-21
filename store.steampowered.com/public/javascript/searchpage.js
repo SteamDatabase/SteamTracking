@@ -643,7 +643,6 @@ function InitSearchPage()
 	HandleFilteredResultsWarning();
 	InitInfiniteScroll(g_rgCurrentParameters);
 	DecorateFilterControls();
-	SetGPFocusRestoreTimeout();
 }
 
 // Adds an element to an array that we've encoded in a string.
@@ -800,17 +799,10 @@ function InitInfiniteScroll( rgParameters )
 	// Disable regular pagination, enable results-loading section.
 	$J('.search_pagination').hide();
 
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) 
-	{
-		self.oController.SetPageChangingHandler( function( nPage ) { SetGPFocusRestoreTimeout(); });
-	}
-
 	// Set handler to trim duplicates. Right now this re-checks every time, so there's potential for saving
 	// cycles by calculating what's newly loaded and just checking those.
 	self.oController.SetPageChangedHandler(function( iPageNo, oUpdatedDom )
 	{
-		SetGPFocusRestoreTimeout();
-
 		if ( GDynamicStore != null )
 		{
 			GDynamicStore.DecorateDynamicItems($J(oUpdatedDom));
