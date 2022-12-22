@@ -544,7 +544,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					}
 					else if( $Code !== 200 )
 					{
-						$this->Log( '{yellow}HTTP Error ' . $Code . '{normal} - ' . $URL );
+						$this->Log( '{yellow}Error ' . $Code . '{normal}    - ' . $URL );
 
 						if( $Code !== 404 )
 						{
