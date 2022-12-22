@@ -1,0 +1,83 @@
+.replay2022_Frame_1C1Yh {
+  font-family: "Motiva Sans", sans-serif;
+  position: relative;
+  width: 570px;
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0px auto;
+  padding: 0px 13px;
+  user-select: none;
+  background: radial-gradient(
+    136.99% 78.49% at 53.43% 10.55%,
+    #642452 0%,
+    #06123d 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+.replay2022_Frame_1C1Yh .replay2022_SteamLogo_1pv40 {
+  position: absolute;
+  left: -41.05%;
+  right: 16.58%;
+  top: -14.35%;
+  bottom: -4.17%;
+  pointer-events: none;
+}
+.replay2022_Frame_1C1Yh .replay2022_ReplayLogo_3dizB {
+  position: absolute;
+  left: 354.33px;
+  top: 25px;
+}
+.replay2022_Frame_1C1Yh .replay2022_Content_2snHz {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.replay2022_Avatar_1UrOy {
+  border: 4.95px solid #4ad4ff;
+  width: 99px;
+  height: 99px;
+  margin-bottom: 20px;
+}
+.replay2022_Avatar_1UrOy img {
+  width: 100%;
+  height: 100%;
+}
+.replay2022_DataBlock_1RIqD {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 42px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.replay2022_DataBlock_1RIqD .replay2022_PersonaName_npXR- {
+  color: #4ad4ff;
+}
+.replay2022_ViewPageButton_3epsf {
+  background: linear-gradient(270.05deg, #1babd8 0.05%, #4ad4ff 99.24%);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 30px;
+}
+.replay2022_Description_NyKPE {
+  color: rgba(229, 229, 229, 0.75);
+  font-size: 18px;
+  line-height: 26px;
+}
+.replay2022_DataBlock_1RIqD,
+.replay2022_Description_NyKPE {
+  max-width: 480px;
+}

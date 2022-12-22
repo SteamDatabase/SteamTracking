@@ -2023,7 +2023,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 2055870;
+          return 2243810;
         }
         GetLoyaltyRewardsSummary() {
           return (0, n.mG)(this, void 0, void 0, function* () {
@@ -11767,6 +11767,7 @@
                   iconComponent: ue.Cts,
                   children: (0, g.Xx)("#ShopNav_SeasonalBadgeLink"),
                   to: o.Z.LoyaltySteamBadge(),
+                  iconCallout: fe.KB,
                 },
               }),
               e[1].items.push({

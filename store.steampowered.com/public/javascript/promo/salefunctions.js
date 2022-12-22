@@ -435,7 +435,7 @@ function SaleRow( rgItems, $Parent, nItems, strFeatureContext, fnRenderFunc )
 	return rgItems.slice( rgItemsThisRow.length );
 }
 
-function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
+function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg )
 {
 	var params = { 'class': 'sale_capsule' };
 
@@ -452,15 +452,23 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
 	var $Img;
-
 	if ( bUseSmallCap )
 	{
 		$Img = $J( '<img/>', {'class': 'sale_capsule_image', 'src':  rgItemData['small_capsule'] } );
 	}
 	else
 	{
-		$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
-		$Img.data('src-maincap', rgItemData['main_capsule'] );
+		if ( bPreferHeaderImg && typeof rgItemData['header'] !== 'undefined' )
+		{
+			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif' } );
+			$Img.data('src-header', rgItemData['header'] );
+		}
+		else
+		{
+			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+			$Img.data('src-maincap', rgItemData['main_capsule'] );
+		}
+
 		$Img.data('src-smallcap', rgItemData['small_capsule'] );
 	}
 
@@ -637,11 +645,20 @@ function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems
 	var bHasFeaturedGames = false;
 	for( var i=0; i< rgFeaturedSeasonEvents.length; i++ )
 	{
-		if( GDynamicStore.BIsAppOwned( rgFeaturedSeasonEvents[i].appid ) )
+				var bPassFilter = GStoreItemData.BAppPassesFilters( rgFeaturedSeasonEvents[i].appid,
+			{ only_current_platform: true, } /* setting */,
+			{ only_current_platform: true, early_access: true, software: true, video: true, virtual_reality: true  } /* applicable setting */,
+			false /* bStrict */ );
+
+		if( !bPassFilter )
+		{
+			rgFeaturedSeasonEvents.splice( i, 1 );
+			i -= 1;
+		}
+
+				if( GDynamicStore.BIsAppOwned( rgFeaturedSeasonEvents[i].appid ) || GDynamicStore.BIsAppOnWishlist( rgFeaturedSeasonEvents[i].appid ) )
 		{
 			bHasFeaturedGames = true;
-
-			// Move apps you have in your library to the beginning of the array
 			rgFeaturedSeasonEvents.unshift( rgFeaturedSeasonEvents.splice( i, 1 )[0] );
 		}
 	}
@@ -657,9 +674,9 @@ function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems
 		{
 			var rgItemData = GStoreItemData.GetCapParamsForItem( 'sale_featured_seasonal_events', eventInfo, rgOptions );
 
-			// TODO: CHTMLHelpers::DynamicStoreAttr( GetAppLink( $eventInfo->m_appid ) )
 			var $eventCapsule = $J( '<a/>', {
 				"class": "season_sale_feature_event_capsule" + (GDynamicStore.BIsAppOwned( eventInfo.appid ) ? " season_sale_feature_has_app_in_library" : "" ),
+				"data-ds-appid": eventInfo.appid,
 				"href": eventInfo.link,
 			} );
 
@@ -702,9 +719,6 @@ function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems
 	)
 
 	$J('#' + elementName).show();
-
-	//
-
 }
 
 function SaleTagBackground( colors )
@@ -806,10 +820,10 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 	$Ctn.append( $Games );
 
-	if ( $FeatureName == "sale_tag_bucket" )
-	    $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See More' ) );
+	if ( $FeatureName === "sale_tag_bucket" )
+	    $Ctn.append( $J('<a/>', {'class': 'see_more_link btnv6_white_transparent btn_small_tall', 'href': rgTagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
 	else if ( $FeatureName == "sale_recommended_by_steam_labs" )
-        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'Discover more in the Interactive Recommender' ) );
+		$Ctn.append( $J('<a/>', {'class': 'see_more_link btnv6_white_transparent btn_small_tall', 'href': rgTagData.url } ).html( '<span>' + 'Discover more in the Interactive Recommender' + '</span>' ) );
 
 	$Parent.append( $Ctn ).css('height','');
 	GDynamicStore.DecorateDynamicItems( $Parent );
@@ -1052,13 +1066,13 @@ function SaleRenderDiscountsArea( rgUnder10, rgDeals )
 	SaleRenderTwoByTwo( $J('#10off_tier' ), rgUnder10Filtered, 'under10' );
 }
 
-function SaleRenderTwoByTwo( $Container, rgItems, strFeature )
+function SaleRenderTwoByTwo( $Container, rgItems, strFeature, bPreferHeaderImg )
 {
 	$Container.append(
-		rgItems[0] && SaleCap( rgItems[0], strFeature, 'discount_block_inline' ),
-		rgItems[1] && SaleCap( rgItems[1], strFeature, 'discount_block_inline' ),
-		rgItems[2] && SaleCap( rgItems[2], strFeature, 'discount_block_inline' ),
-		rgItems[3] && SaleCap( rgItems[3], strFeature, 'discount_block_inline' )
+		rgItems[0] && SaleCap( rgItems[0], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
+		rgItems[1] && SaleCap( rgItems[1], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
+		rgItems[2] && SaleCap( rgItems[2], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
+		rgItems[3] && SaleCap( rgItems[3], strFeature, 'discount_block_inline', false, bPreferHeaderImg )
 	);
 
 	GDynamicStore.DecorateDynamicItems( $Container );
@@ -1098,7 +1112,7 @@ function RenderWishlistAndDLCArea( $Parent, rgWishlistOnSale, rgDLCOnSale )
 	{
 		if ( bSingle )
 			$J('#wishlist_tier').addClass( 'single_row' );
-		SaleRenderTwoByTwo( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist' );
+		SaleRenderTwoByTwo( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist', true );
 		GDynamicStore.MarkAppDisplayed( rgWishlistOnSaleFiltered );
 	}
 
@@ -1110,7 +1124,7 @@ function RenderWishlistAndDLCArea( $Parent, rgWishlistOnSale, rgDLCOnSale )
 	{
 		if ( bSingle )
 			$J('#dlc_tier').addClass( 'single_row' );
-		SaleRenderTwoByTwo( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou' );
+		SaleRenderTwoByTwo( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou', true );
 		GDynamicStore.MarkAppDisplayed( rgDLCOnSaleFiltered );
 	}
 
@@ -1130,7 +1144,7 @@ function BindSaleCapAutoSizeEvents( $Container )
 	var id = 'AdjustSaleCaps_' + ( g_AutoSizeListenerCount++ );
 
 	$J(window ).on('resize.' + id, function() {
-		var rgSwitchToMain = [], rgSwitchToSmall = [];
+		var rgSwitchToMain = [], rgSwitchToSmall = [], rgSwitchToHeader = [];
 		$AutosizeImages.each( function() {
 			var $Img = $J(this);
 			if ( mqSwitchToSmall.matches && $Img.width() <= 176 )
@@ -1140,11 +1154,19 @@ function BindSaleCapAutoSizeEvents( $Container )
 			}
 			else
 			{
-				if ( $Img.data('src-maincap') != $Img.attr('src') )
+				if ( typeof $Img.data('src-header') !== 'undefined' && $Img.data('src-header') != $Img.attr('src') )
+				{
+					rgSwitchToHeader.push( $Img );
+				}
+				else if ( $Img.data('src-maincap') != $Img.attr('src') )
+				{
 					rgSwitchToMain.push( $Img );
+				}
 			}
 		});
 
+		for ( var i =0; i < rgSwitchToHeader.length; i++ )
+			rgSwitchToHeader[i].attr( 'src', rgSwitchToHeader[i].data('src-header') );
 		for ( var i =0; i < rgSwitchToMain.length; i++ )
 			rgSwitchToMain[i].attr( 'src', rgSwitchToMain[i].data('src-maincap') );
 		for ( var i =0; i < rgSwitchToSmall.length; i++ )

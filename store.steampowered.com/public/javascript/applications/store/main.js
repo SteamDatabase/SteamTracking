@@ -18750,6 +18750,7 @@
         return r.createElement(
           "svg",
           {
+            className: "SVGIcon_Button SVGIcon_Calendar",
             width: "25",
             height: "24",
             viewBox: "0 0 25 24",
@@ -24846,7 +24847,7 @@
             n.e(1134),
             n.e(6661),
             n.e(4158),
-          ]).then(n.bind(n, 47412))
+          ]).then(n.bind(n, 11154))
         );
       class De extends s.Component {
         componentDidMount() {

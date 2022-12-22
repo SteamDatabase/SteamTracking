@@ -1,261 +1,3 @@
-.image_MessageContent_1N2Wd {
-  text-align: center;
-  margin: 0px auto;
-  width: 570px;
-  padding: 0px 13px;
-  user-select: none;
-}
-.image_MessageContent_1N2Wd:hover .image_IsBlur_9juCj img {
-  filter: brightness(1.6) saturate(1.2);
-  box-shadow: inset 0 6px 10px #000a;
-}
-.image_GameImage_2imw0 {
-  box-sizing: content-box;
-  cursor: pointer;
-  width: auto;
-  position: relative;
-  box-shadow: 0 6px 10px #000a;
-  font-size: 0px;
-  transition: box-shadow 0.15s ease-out;
-}
-.image_GameImage_2imw0.image_IsBlur_9juCj {
-  pointer-events: none;
-  filter: blur(20px);
-  transform: scaleX(1.22) scaleY(1.22);
-  position: absolute;
-  -webkit-mask-image: linear-gradient(
-    to top,
-    transparent 0%,
-    rgba(0, 0, 0, 0.7) 35%,
-    transparent 75%
-  );
-  mask-image: linear-gradient(
-    to top,
-    transparent 0%,
-    rgba(0, 0, 0, 0.7) 35%,
-    transparent 75%
-  );
-}
-.image_GameImage_2imw0 img {
-  max-width: 570px;
-  transition: all 0.25s ease-out;
-}
-A:visited {
-  color: #fff;
-  text-decoration: none;
-}
-A:link {
-  color: #fff;
-  text-decoration: none;
-}
-A:hover {
-  color: #fff;
-  text-decoration: none;
-}
-A:active {
-  color: #000;
-  text-decoration: none;
-}
-.image_Legal_7NnVB {
-  font-family: "Motiva Sans", Sans-serif;
-  font-size: 11px;
-  width: 100%;
-  color: #58636a;
-  text-align: left;
-}
-.image_MessageFooter_2h7_p {
-  position: relative;
-  width: auto;
-  min-height: 45px;
-  margin-top: 11px;
-  display: flex;
-  flex-direction: column;
-}
-.image_MessageFooter_2h7_p .image_ButtonAndPriceCtn_39vPn {
-  font-family: "Motiva Sans", Sans-serif;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-.image_NoButton_2FsuD {
-  flex-direction: row-reverse;
-}
-.image_NoButton_2FsuD .image_Btn_2utr- {
-  display: none;
-}
-.image_NoButton_2FsuD .image_Legal_7NnVB {
-  height: 46px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.image_Btn_2utr- {
-  position: relative;
-  font-family: "Motiva Sans", Sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #56627b;
-  border-radius: 3px;
-  font-weight: 400;
-  padding: 16px 30px 0px;
-  height: 30px;
-  width: fit-content;
-  flex-grow: 1;
-  line-height: 15px;
-  transition: box-shadow 0.25s ease-out, background-color 0.25s ease-out;
-}
-.image_Btn_2utr-:hover {
-  background-color: #427d9f;
-  box-shadow: 2px 2px 10px #000;
-  cursor: pointer;
-}
-.image_MessagePriceCtn_uhCE2 {
-  margin-left: 12px;
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.image_MessagePriceCtn_uhCE2 .StoreSalePriceWidgetContainer {
-  height: 46px;
-  margin-top: 0px;
-  background: rgba(0, 0, 0, 0.3);
-}
-.image_Price_3TzbJ {
-  height: 59px;
-  width: 145px;
-  display: inline-table;
-  vertical-align: middle;
-  position: absolute;
-  text-align: center;
-  right: 0px;
-}
-.image_NoPrice_1oXJH {
-  width: 0px;
-  float: right;
-}
-.image_PriceReal_1IET- {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  color: #fff;
-  height: 33px;
-  margin-top: 10px;
-}
-.image_PriceRealShort_2fteu {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  color: #fff;
-  height: 33px;
-  margin-top: 10px;
-}
-.image_PriceRegular_2Mki7 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  color: #999;
-  text-decoration: line-through;
-  position: relative;
-  top: -10px;
-}
-.image_Strike_2hlJo {
-  font-size: 14px;
-  color: #666;
-  text-decoration: line-through;
-}
-.image_ShareLinks_2_buK {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  color: #aaa;
-  font-size: 11px;
-  text-transform: uppercase;
-  line-height: 16px;
-  text-align: left;
-  font-family: Helvetica, Arial, sans-serif;
-}
-.image_ShareLinks_2_buK img {
-  vertical-align: middle;
-  margin-right: 3px;
-  border: none;
-  opacity: 0.5;
-  transition: opacity 0.15s ease-out;
-}
-.image_ShareLinks_2_buK img:hover {
-  opacity: 1;
-  transition: opacity 0.25s ease-in;
-}
-@media screen and (max-height: 540px) {
-  .image_All_2A3DH {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-  }
-  .image_MessageContent_1N2Wd {
-    width: 330px;
-    padding: 8px;
-  }
-  .image_GameImage_2imw0 {
-    width: 100%;
-    position: relative;
-    box-shadow: 0 0 6px #000;
-  }
-  .image_GameImage_2imw0 img {
-    max-width: 330px;
-  }
-  .image_TextTop_76FjT,
-  .image_TextBottom_otBhX {
-    width: 100%;
-    font-size: 14px;
-    padding: 6px 6px 0px 6px;
-    box-sizing: border-box;
-  }
-  .image_ButtonContainer_2sWLp {
-    height: 32px;
-    padding-top: 5px;
-  }
-  .image_Btn_2utr- {
-    font-size: 12px;
-    margin: 2px auto;
-    padding: 9px 12px 0px;
-    height: 17px;
-    line-height: 9px;
-  }
-  .image_Btn_2utr-:hover {
-    box-shadow: 2px 2px 6px #000;
-  }
-  .image_Price_3TzbJ {
-    height: 34px;
-  }
-  .image_NoPrice_1oXJH,
-  .image_Price_3TzbJ {
-    width: 81px;
-  }
-  .image_PriceReal_1IET-,
-  .image_PriceRealShort_2fteu {
-    font-size: 12px;
-    height: 19px;
-    margin-top: 6px;
-  }
-  .image_PriceRealShort_2fteu {
-    font-size: 7px;
-  }
-  .image_PriceRegular_2Mki7 {
-    font-size: 7px;
-    top: -6px;
-  }
-  .image_Legal_7NnVB {
-    font-size: 7px;
-    padding-bottom: 5px;
-    width: 100%;
-    margin-top: 4px;
-    flex-grow: 1;
-  }
-}
 html.responsive
   body.messagelist_MarketingMessagePage_1HVoK
   .responsive_page_template_content {
@@ -407,4 +149,262 @@ html.responsive
 }
 .messagelist_MessageWrapper_152h7.messagelist_ExitDone_3cFXR {
   display: none;
+}
+.image_MessageContent_rohJ- {
+  text-align: center;
+  margin: 0px auto;
+  width: 570px;
+  padding: 0px 13px;
+  user-select: none;
+}
+.image_MessageContent_rohJ-:hover .image_IsBlur_2lGtR img {
+  filter: brightness(1.6) saturate(1.2);
+  box-shadow: inset 0 6px 10px #000a;
+}
+.image_GameImage_2It5b {
+  box-sizing: content-box;
+  cursor: pointer;
+  width: auto;
+  position: relative;
+  box-shadow: 0 6px 10px #000a;
+  font-size: 0px;
+  transition: box-shadow 0.15s ease-out;
+}
+.image_GameImage_2It5b.image_IsBlur_2lGtR {
+  pointer-events: none;
+  filter: blur(20px);
+  transform: scaleX(1.22) scaleY(1.22);
+  position: absolute;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
+}
+.image_GameImage_2It5b img {
+  max-width: 570px;
+  transition: all 0.25s ease-out;
+}
+A:visited {
+  color: #fff;
+  text-decoration: none;
+}
+A:link {
+  color: #fff;
+  text-decoration: none;
+}
+A:hover {
+  color: #fff;
+  text-decoration: none;
+}
+A:active {
+  color: #000;
+  text-decoration: none;
+}
+.image_Legal_zzC_W {
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 11px;
+  width: 100%;
+  color: #58636a;
+  text-align: left;
+}
+.image_MessageFooter_20RJ2 {
+  position: relative;
+  width: auto;
+  min-height: 45px;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+}
+.image_MessageFooter_20RJ2 .image_ButtonAndPriceCtn_2FwUG {
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.image_NoButton_1FbSd {
+  flex-direction: row-reverse;
+}
+.image_NoButton_1FbSd .image_Btn_3YohC {
+  display: none;
+}
+.image_NoButton_1FbSd .image_Legal_zzC_W {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.image_Btn_3YohC {
+  position: relative;
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #56627b;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 16px 30px 0px;
+  height: 30px;
+  width: fit-content;
+  flex-grow: 1;
+  line-height: 15px;
+  transition: box-shadow 0.25s ease-out, background-color 0.25s ease-out;
+}
+.image_Btn_3YohC:hover {
+  background-color: #427d9f;
+  box-shadow: 2px 2px 10px #000;
+  cursor: pointer;
+}
+.image_MessagePriceCtn_ddVk7 {
+  margin-left: 12px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.image_MessagePriceCtn_ddVk7 .StoreSalePriceWidgetContainer {
+  height: 46px;
+  margin-top: 0px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.image_Price_KtsI7 {
+  height: 59px;
+  width: 145px;
+  display: inline-table;
+  vertical-align: middle;
+  position: absolute;
+  text-align: center;
+  right: 0px;
+}
+.image_NoPrice_3gtjP {
+  width: 0px;
+  float: right;
+}
+.image_PriceReal_zlxx_ {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.image_PriceRealShort_1XB_w {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.image_PriceRegular_7m4i8 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+  text-decoration: line-through;
+  position: relative;
+  top: -10px;
+}
+.image_Strike_3fFJl {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+.image_ShareLinks_2FhhQ {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #aaa;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 16px;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.image_ShareLinks_2FhhQ img {
+  vertical-align: middle;
+  margin-right: 3px;
+  border: none;
+  opacity: 0.5;
+  transition: opacity 0.15s ease-out;
+}
+.image_ShareLinks_2FhhQ img:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+@media screen and (max-height: 540px) {
+  .image_All_1WpMe {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .image_MessageContent_rohJ- {
+    width: 330px;
+    padding: 8px;
+  }
+  .image_GameImage_2It5b {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 6px #000;
+  }
+  .image_GameImage_2It5b img {
+    max-width: 330px;
+  }
+  .image_TextTop_3cnZM,
+  .image_TextBottom_2pJeu {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 6px 0px 6px;
+    box-sizing: border-box;
+  }
+  .image_ButtonContainer_3CVNg {
+    height: 32px;
+    padding-top: 5px;
+  }
+  .image_Btn_3YohC {
+    font-size: 12px;
+    margin: 2px auto;
+    padding: 9px 12px 0px;
+    height: 17px;
+    line-height: 9px;
+  }
+  .image_Btn_3YohC:hover {
+    box-shadow: 2px 2px 6px #000;
+  }
+  .image_Price_KtsI7 {
+    height: 34px;
+  }
+  .image_NoPrice_3gtjP,
+  .image_Price_KtsI7 {
+    width: 81px;
+  }
+  .image_PriceReal_zlxx_,
+  .image_PriceRealShort_1XB_w {
+    font-size: 12px;
+    height: 19px;
+    margin-top: 6px;
+  }
+  .image_PriceRealShort_1XB_w {
+    font-size: 7px;
+  }
+  .image_PriceRegular_7m4i8 {
+    font-size: 7px;
+    top: -6px;
+  }
+  .image_Legal_zzC_W {
+    font-size: 7px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 4px;
+    flex-grow: 1;
+  }
 }

@@ -3789,6 +3789,28 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   width: 100%;
   height: 100%;
 }
+.screenshotpopout_ButtonCtn_1Wwsx {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.screenshotpopout_ButtonIcon_2gBfU {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.screenshotpopout_ButtonIcon_2gBfU:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.screenshotpopout_ButtonIcon_2gBfU.screenshotpopout_Disabled_1M3_p {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .salepointshopsmartdisplay_RewardCtn_2iyxZ {
   display: flex;
   flex-direction: column;
@@ -7548,24 +7570,57 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .saleclaimitem_ClaimCtn_d5PCH {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 150px;
+  gap: 5px;
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9 {
+  background: linear-gradient(180deg, #a12080, #6c0c53);
+  border-radius: 50px;
+  border: 2px solid #a12080;
   width: fit-content;
-  padding: 10px;
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:hover {
+  background: linear-gradient(180deg, #bf2698, #961072);
+  border: 2px solid #bf2698;
+}
+.saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:enabled:active {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimCtn_d5PCH
+  .saleclaimitem_ClaimButton_2jLt9:enabled:active:hover {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimCtn_d5PCH
+  .saleclaimitem_ClaimButton_2jLt9:enabled:active.saleclaimitem_gpfocus_dF9GZ {
+  background: linear-gradient(0deg, #a12080, #6c0c53);
+}
+.saleclaimitem_ClaimTitle_33gpG {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0px 2px 2px #350128;
+}
+.saleclaimitem_ClaimSaleSection_39VLx {
+  padding: 0px;
 }
 .saleclaimitem_NextStop_35VNz {
   font-size: 20px;
   padding-top: 10px;
   color: #fff;
+  text-shadow: 0px 2px 2px #350128;
 }
 .saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4 {
   padding-right: 8px;
-}
-.saleclaimitem_NextStop_35VNz .saleclaimitem_Title_2QEv4,
-.saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
   color: #fff;
+  font-weight: 600;
+}
+.saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
+  color: #94f6c3;
   font-weight: 600;
 }
