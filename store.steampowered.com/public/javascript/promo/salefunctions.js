@@ -625,15 +625,85 @@ function RenderTagGenreBlock( rgTagGenres )
 	});
 }
 
+const k_MinItemPerEventFeaturingPage = 3;
+
 function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems )
 {
-	var $eventCarousel = $J( '.featured_in_game_event_carousel' );
+	// If there aren't any item, exit early
+	if( !rgFeaturedSeasonEvents || rgFeaturedSeasonEvents.length < k_MinItemPerEventFeaturingPage )
+		return;
 
-	if ( !$eventCarousel )
+	v_shuffle( rgFeaturedSeasonEvents );
+	var bHasFeaturedGames = false;
+	for( var i=0; i< rgFeaturedSeasonEvents.length; i++ )
+	{
+		if( GDynamicStore.BIsAppOwned( rgFeaturedSeasonEvents[i].appid ) )
+		{
+			bHasFeaturedGames = true;
+
+			// Move apps you have in your library to the beginning of the array
+			rgFeaturedSeasonEvents.unshift( rgFeaturedSeasonEvents.splice( i, 1 )[0] );
+		}
+	}
+
+	var elementName = bHasFeaturedGames ? 'featured_in_game_event_carousel_top' : 'featured_in_game_event_carousel_bottom'
+	var $eventCarousel = $J( '.' + elementName );
+	if ( !$eventCarousel  )
 		return;
 
 
-	CreateFadingCarousel( $eventCarousel, 0 );
+	GHomepage.FillPagedCapsuleCarousel( rgFeaturedSeasonEvents, $eventCarousel,
+		function( eventInfo, strFeature, rgOptions, nDepth )
+		{
+			var rgItemData = GStoreItemData.GetCapParamsForItem( 'sale_featured_seasonal_events', eventInfo, rgOptions );
+
+			// TODO: CHTMLHelpers::DynamicStoreAttr( GetAppLink( $eventInfo->m_appid ) )
+			var $eventCapsule = $J( '<a/>', {
+				"class": "season_sale_feature_event_capsule" + (GDynamicStore.BIsAppOwned( eventInfo.appid ) ? " season_sale_feature_has_app_in_library" : "" ),
+				"href": eventInfo.link,
+			} );
+
+			var $image = $J( '<img/>', {
+				"src": eventInfo.img_url,
+				"loading": "lazy",
+			} );
+			$eventCapsule.append( $image );
+
+            if( rgItemData )
+            {
+                var $appName = $J( '<div/>', {
+                    "class": "feature_event_appname",
+                } );
+                $appName.append( rgItemData.name );
+                $eventCapsule.append( $appName);
+
+                GStoreItemData.BindHoverEventsForItem(  $eventCapsule, eventInfo );
+            }
+
+			var $title = $J( '<div/>', {
+				"class": "feature_event_title",
+			} );
+			$title.append( eventInfo.title );
+			$eventCapsule.append( $title);
+
+			if( eventInfo.subtitle )
+			{
+				var $subtitle = $J( '<div/>', {
+					"class": "feature_event_subtitle",
+				} );
+				$subtitle.append( eventInfo.subtitle );
+				$eventCapsule.append( $subtitle);
+			}
+
+			return $eventCapsule;
+		},
+		'sale_featured_seasonal_events',
+		k_MinItemPerEventFeaturingPage
+	)
+
+	$J('#' + elementName).show();
+
+	//
 
 }
 

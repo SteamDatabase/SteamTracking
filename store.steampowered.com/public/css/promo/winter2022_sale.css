@@ -1611,6 +1611,10 @@ p.home_subtitle_ctn a {
     body.responsive_page .home_discovery_queue_ctn .home_subtitle_ctn {
         margin-left: 0px;
     }
+    body.responsive_page p.home_subtitle_ctn a {
+        font-size: 14px;
+        font-weight: 300;
+    }
     body.responsive_page .home_title {
         line-height: 26px;
 		padding: .5em;
@@ -1862,6 +1866,12 @@ p.home_subtitle_ctn a {
 }
 .discovery_queue_ctn .begin_exploring {
     box-shadow: 0 0 10px black;
+}
+@media screen and (max-width: 766px )
+{
+    .discovery_queue_ctn {
+        margin-bottom: 20px;
+    }
 }
 .discovery_queue_static .discovery_queue {
     height: 215px;
@@ -2903,9 +2913,73 @@ img.franchise_placeholder {
 .content_hub_carousel_ctn .content_hub_capsule_ctn {
     scroll-snap-align: start;
 }
-.content_hub_carousel_ctn .season_sale_feature_event_capsule {
-	scroll-snap-align: start;
+
+
+.featured_in_game_event_carousel_top, .featured_in_game_event_carousel_bottom {
+    padding-top: 2px;
 }
+
+.content_hub_carousel_ctn .season_sale_feature_event_capsule {
+    position: relative;
+    scroll-snap-align: start;
+    width: calc( 100% / 3 );
+    height: auto;
+}
+
+    @media screen and (max-width: 550px )
+    {
+
+        html.responsive .content_hub_carousel_ctn .season_sale_feature_event_capsule {
+            width: 91vw;
+        }
+
+
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0)) blur(0) brightness(1);
+        transition: filter .2s ease-in-out;
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule:hover img {
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)) blur(3px) brightness(0.7);
+        cursor: pointer;
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule .feature_event_title {
+        font-weight: 600;
+        font-size: 14px;
+        height: 43px;
+        padding-right: 12px;
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule .feature_event_subtitle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        padding: 16px;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule:hover .feature_event_subtitle {
+        opacity: 1;
+    }
+
+    .content_hub_carousel_ctn .season_sale_feature_event_capsule .feature_event_appname {
+        color: rgba(255,255,255,0.6);
+    }
+
+    .featured_in_game_event_carousel_bottom .arrow.left,
+    .featured_in_game_event_carousel_bottom .arrow.right {
+        top: 13%;
+    }
 
 
 .carousel_container .arrow.right {

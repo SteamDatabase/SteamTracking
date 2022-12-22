@@ -1,7 +1,7 @@
 
 const k_rgClientSideFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
 
-InitializeGPFocusRestoreTimeout();
+InitializeGPFocusRestoreTimeout( false );
 
 function DisplayAdvancedSearch()
 {
@@ -391,6 +391,9 @@ function UpdateUrl( rgParameters, oHistoryStash = {}, bPushState = true )
 	if ( g_bUseHistoryAPI )
 	{
 		oHistoryStash.params = rgParameters;
+		if ( history.state.legacy_web_root )
+			oHistoryStash['legacy_web_root'] = history.state.legacy_web_root; // preserve gamepad navigation history
+
 		fnUpdateState.call( history, oHistoryStash, '', '?' + Object.toQueryString( rgParameters ) );
 	}
 	else
@@ -556,14 +559,20 @@ function HandleBackReposition()
 {
 	// Nothing to do unless we've an itemkey stashed and they hit the back button.
 	if ( !( IsNavFromBackButton() && history.state && history.state.itemkey ) )
+	{
+		SetGPFocusRestoreTimeout(); // If we're on Deck restore focus for gamepad navigation
 		return;
+	}
 
 	// Find the item we want to be scrolling to.
 	var sItemKey = history.state.itemkey;
 	var nodeItem = $J( "a[data-ds-itemkey='" + history.state.itemkey + "']" );
 
 	if ( nodeItem.length == 0 )
+	{
+		SetGPFocusRestoreTimeout(); // If we're on Deck restore focus for gamepad navigation
 		return;
+	}
 
 	// 'html, body' makes Firefox happy, as well as working in other browsers.
 	$J('html, body').animate({
@@ -582,6 +591,15 @@ function HandleBackReposition()
 	setTimeout( function() {
 		nodeItem.css({ 'background-color': origBackground });
 	}, 1000 );
+
+	// If we're on Deck restore focus for gamepad navigation once scrolling finishes
+	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	{
+		SetGPFocusRestoreTimeout();
+		document.addEventListener( 'scroll', function() {
+			SetGPFocusRestoreTimeout();
+		});
+	}
 
 	// Remove our itemkey from the state to avoid risk of double-scrolls.
 	delete history.state.itemkey;
