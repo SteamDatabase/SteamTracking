@@ -7568,6 +7568,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   display: inline;
   margin-left: 8px;
 }
+:root {
+  --basicui-header-height: 0px;
+}
 .saleclaimitem_ClaimCtn_d5PCH {
   display: flex;
   flex-direction: column;
@@ -7608,6 +7611,14 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .saleclaimitem_ClaimSaleSection_39VLx {
   padding: 0px;
+}
+.BasicUI .saleclaimitem_ClaimSaleSection_39VLx {
+  padding: 0px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 940px;
 }
 .saleclaimitem_NextStop_35VNz {
   font-size: 20px;

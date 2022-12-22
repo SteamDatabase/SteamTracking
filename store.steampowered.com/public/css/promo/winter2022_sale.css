@@ -490,7 +490,16 @@ body.v6.sale_winter2022 .carousel_container.paging_capsules .carousel_items > * 
     position: relative;
 }
 
-@media screen and (max-width: 550px ) {
+.main_content_ctn::after {
+    content: '';
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5) 500px, rgba(0, 0, 0, 0.8) 2500px);
+    -webkit-mask: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 50%, black 0%);
+    -webkit-mask-composite: source-in;
+}
+
+@media screen and (max-width: 852px ) {
     body.v6 .main_content_ctn {
         background: rgba(18, 14, 13, 0.8);
     }
@@ -2939,6 +2948,10 @@ img.franchise_placeholder {
     width: calc( 100% / 3 );
     height: auto;
 }
+
+    html.tablet .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
+        width: calc( 100vw / 3 );
+    }
 
     @media screen and (max-width: 550px )
     {

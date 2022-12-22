@@ -480,6 +480,7 @@
     },
     21534: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
         ClaimCtn: "saleclaimitem_ClaimCtn_d5PCH",
         ClaimButton: "saleclaimitem_ClaimButton_2jLt9",
         gpfocus: "saleclaimitem_gpfocus_dF9GZ",

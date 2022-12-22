@@ -725,6 +725,7 @@
         return (
           a.useLayoutEffect(() => {
             (0, A.kQ)("marketingmessage_config", "application_config");
+            s({});
           }, [i]),
           t ? a.createElement(B.Provider, { value: t }, e.children, " ") : null
         );
