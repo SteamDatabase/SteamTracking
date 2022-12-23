@@ -26,8 +26,21 @@
 }
 .replay2022_Frame_1C1Yh .replay2022_ReplayLogo_3dizB {
   position: absolute;
-  left: 354.33px;
+  right: 35px;
   top: 25px;
+  width: 180px;
+  height: 72.31px;
+  color: #fff;
+}
+.replay2022_Frame_1C1Yh .replay2022_Hashtag_2rfOn {
+  position: absolute;
+  right: 35px;
+  bottom: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: right;
+  color: #4ad4ff;
 }
 .replay2022_Frame_1C1Yh .replay2022_Content_2snHz {
   position: relative;
@@ -56,8 +69,13 @@
   color: #fff;
   margin-bottom: 30px;
 }
-.replay2022_DataBlock_1RIqD .replay2022_PersonaName_npXR- {
+.replay2022_DataBlock_1RIqD .replay2022_PersonaName_npXR-,
+.replay2022_DataBlock_1RIqD .replay2022_ReplayHighlight_3swaC {
   color: #4ad4ff;
+}
+.replay2022_DataBlock_1RIqD .replay2022_GenericTitleBlock_GlPgK {
+  padding-top: 20px;
+  max-width: 400px;
 }
 .replay2022_ViewPageButton_3epsf {
   background: linear-gradient(270.05deg, #1babd8 0.05%, #4ad4ff 99.24%);
@@ -71,6 +89,10 @@
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 30px;
+}
+.replay2022_ViewPageButton_3epsf:hover {
+  box-shadow: 2px 2px 10px #000;
+  background: linear-gradient(270.05deg, #56bfdf 0.05%, #74dcfc 99.24%);
 }
 .replay2022_Description_NyKPE {
   color: rgba(229, 229, 229, 0.75);

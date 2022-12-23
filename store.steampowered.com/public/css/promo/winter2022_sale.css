@@ -635,6 +635,7 @@ body.v6 .discount_block {}
     color: #ffffff;
     padding: 10px;
     justify-content: center;
+	flex-wrap: wrap;
 }
 
 .sale_capsule_image {
