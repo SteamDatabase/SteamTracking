@@ -328,11 +328,18 @@ function BuildGameRow( gameInfo, bViewingOwnProfile )
 	}
 
 	gameInfo['logo_class'] = '';
-	if ( ( gameInfo['has_adult_content_sex'] && g_CommunityPreferences['hide_adult_content_sex'] ) ||
-		 ( gameInfo['has_adult_content_violence'] && g_CommunityPreferences['hide_adult_content_violence'] ) )
+	if ( gameInfo['content_descriptorids'] )
 	{
-		gameInfo['logo_class'] = 'app_has_adult_content';
+		var overlappingContentDescriptorIDs = gameInfo['content_descriptorids'].filter( function ( n )
+		{
+			return g_ContentDescriptorPreferences.indexOf( n ) !== -1;
+		} );
+		if ( overlappingContentDescriptorIDs.length != 0 )
+		{
+			gameInfo['logo_class'] = 'app_has_adult_content';
+		}
 	}
+	
 	var html = gameTemplate.evaluate( gameInfo );
 
 	var div = new Element('div', {'class': 'gameListRow', id: 'game_' + gameInfo['appid'] } );

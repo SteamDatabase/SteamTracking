@@ -828,6 +828,7 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 }
 
 var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content_violence' : 1, 'text_filter_setting' : 0 };
+var g_ContentDescriptorPreferences = [ 3, 4 ];
 var g_UGCWithNoBlur = {};
 var g_bLoadedUGCWithNoBlur = false;
 var g_UGCSkipAdultContentCheckForAppID = false;
