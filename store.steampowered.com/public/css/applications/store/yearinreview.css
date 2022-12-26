@@ -3527,6 +3527,12 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   cursor: pointer;
 }
 @media screen and (max-width: 500px) {
+  .FullModalOverlay .yirshare_ShareModalDialogCtn_1C2t5 .ModalPosition_Content {
+    margin: auto 15px;
+    max-width: 96vw;
+  }
+}
+@media screen and (max-width: 500px) {
   .yirshare_ShareModalDialogCtn_1C2t5 .DialogHeader {
     font-size: 16px;
     line-height: 20px;
