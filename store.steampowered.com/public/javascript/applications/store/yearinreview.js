@@ -6852,45 +6852,54 @@
               ht.HP,
               {
                 toolTipContent: (0, Ne.Xx)("#YIR_ShareModal_ShareOnFacebook"),
-                className: (0, Ke.Z)(Ta.ShareLinkButton, Ta.FB),
+                className: Ta.FB,
               },
               r.createElement(
                 vt.ns,
                 { href: m(Aa.u_.k_eFacebook), className: Ta.ShareBtn },
-                r.createElement("img", {
-                  className: (0, Ke.Z)(Ta.Button),
-                  src: Pa.Z,
-                })
+                r.createElement(
+                  "div",
+                  { className: Ta.ShareLinkButton },
+                  r.createElement("img", { src: Pa.Z })
+                )
               )
             ),
             r.createElement(
               ht.HP,
               {
                 toolTipContent: (0, Ne.Xx)("#YIR_ShareModal_ShareOnTwitter"),
-                className: (0, Ke.Z)(Ta.ShareLinkButton, Ta.TW),
+                className: Ta.TW,
               },
               r.createElement(
                 vt.ns,
                 { href: m(Aa.u_.k_eTwitter), className: Ta.ShareBtn },
-                r.createElement("img", {
-                  className: (0, Ke.Z)(Ta.Button),
-                  src: La.Z,
-                })
+                r.createElement(
+                  "div",
+                  { className: Ta.ShareLinkButton },
+                  r.createElement("img", {
+                    className: (0, Ke.Z)(Ta.Button),
+                    src: La.Z,
+                  })
+                )
               )
             ),
             r.createElement(
               ht.HP,
               {
                 toolTipContent: (0, Ne.Xx)("#YIR_ShareModal_ShareOnReddit"),
-                className: (0, Ke.Z)(Ta.ShareLinkButton, Ta.RD),
+                className: Ta.RD,
               },
               r.createElement(
                 vt.ns,
                 { href: m(Aa.u_.k_eReddit), className: Ta.ShareBtn },
-                r.createElement("img", {
-                  className: (0, Ke.Z)(Ta.Button),
-                  src: Ya.Z,
-                })
+                r.createElement(
+                  "div",
+                  { className: Ta.ShareLinkButton },
+                  r.createElement("img", {
+                    className: (0, Ke.Z)(Ta.Button),
+                    src: Ya.Z,
+                  })
+                )
               )
             )
           )

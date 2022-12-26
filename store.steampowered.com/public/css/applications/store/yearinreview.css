@@ -4184,19 +4184,21 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN
   .yirshare_SocialButtons_3KNxc
-  .yirshare_ShareLinkButton_35yo9.yirshare_FB_VcTGq {
+  .yirshare_FB_VcTGq {
   grid-area: fb;
+  margin-right: 6px;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN
   .yirshare_SocialButtons_3KNxc
-  .yirshare_ShareLinkButton_35yo9.yirshare_TW_3hjfK {
+  .yirshare_TW_3hjfK {
   grid-area: tw;
+  margin-right: 6px;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN
   .yirshare_SocialButtons_3KNxc
-  .yirshare_ShareLinkButton_35yo9.yirshare_RD_3kk1O {
+  .yirshare_RD_3kk1O {
   grid-area: rd;
 }
 .yirshare_ShareModal_2Eeev
