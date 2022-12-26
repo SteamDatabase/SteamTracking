@@ -263,34 +263,36 @@
               var t, r, a, o;
               return (0, n.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
+                const n =
+                  "community" == (0, h.Zv)()
+                    ? h.De.COMMUNITY_BASE_URL
+                    : h.De.STORE_BASE_URL;
                 if (1 == e.length) {
-                  const n = { accountid: e[0], origin: self.origin },
-                    a = yield c().get(
-                      `${h.De.COMMUNITY_BASE_URL}actions/ajaxgetavatarpersona`,
-                      { params: n }
-                    );
+                  const a = { accountid: e[0], origin: self.origin },
+                    o = yield c().get(`${n}actions/ajaxgetavatarpersona`, {
+                      params: a,
+                    });
                   if (
-                    !a ||
-                    200 != a.status ||
+                    !o ||
+                    200 != o.status ||
                     1 !=
-                      (null === (t = a.data) || void 0 === t
+                      (null === (t = o.data) || void 0 === t
                         ? void 0
                         : t.success) ||
-                    !(null === (r = a.data) || void 0 === r
+                    !(null === (r = o.data) || void 0 === r
                       ? void 0
                       : r.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, C.l)(a).strErrorMsg
+                      (0, C.l)(o).strErrorMsg
                     }`;
-                  return [a.data.userinfo];
+                  return [o.data.userinfo];
                 }
                 {
                   const t = { accountids: e.join(","), origin: self.origin },
-                    r = yield c().get(
-                      `${h.De.COMMUNITY_BASE_URL}actions/ajaxgetmultiavatarpersona`,
-                      { params: t }
-                    );
+                    r = yield c().get(`${n}actions/ajaxgetmultiavatarpersona`, {
+                      params: t,
+                    });
                   if (
                     !r ||
                     200 != r.status ||
@@ -305,12 +307,12 @@
                     throw `Load single avatar/persona failed ${
                       (0, C.l)(r).strErrorMsg
                     }`;
-                  const n = new Map();
+                  const i = new Map();
                   return (
                     r.data.userinfos.forEach((e) =>
-                      n.set(new u.K(e.steamid).GetAccountID(), e)
+                      i.set(new u.K(e.steamid).GetAccountID(), e)
                     ),
-                    e.map((e) => n.get(e))
+                    e.map((e) => i.get(e))
                   );
                 }
               });
@@ -322,7 +324,7 @@
         const { data: t, isLoading: r } = (0, s.useQuery)([p, e], () =>
           f.load(e)
         );
-        return r ? null : t;
+        return [t, r];
       }
       function m(e) {
         const t = (0, s.useQueryClient)(),
@@ -384,37 +386,39 @@
         );
       }
       function f() {
-        const e = (0, c.F)(o.L7.accountid);
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            "div",
-            { className: a.Avatar },
-            e &&
-              e.avatar_url &&
-              n.createElement("img", {
-                src: e.avatar_url.replace(/\.jpg$/, "_full.jpg"),
-              })
-          ),
-          n.createElement(
-            "div",
-            { className: a.DataBlock },
-            n.createElement(
-              "div",
-              { className: a.PersonaName },
-              e ? e.persona_name : ""
-            ),
-            n.createElement(
-              "div",
-              { className: a.GenericTitleBlock },
-              (0, i.yu)(
-                "#YIR_MM_Generic_Title",
-                n.createElement("span", { className: a.ReplayHighlight })
+        const [e] = (0, c.F)(o.L7.accountid);
+        return e
+          ? n.createElement(
+              n.Fragment,
+              null,
+              n.createElement(
+                "div",
+                { className: a.Avatar },
+                e &&
+                  e.avatar_url &&
+                  n.createElement("img", {
+                    src: e.avatar_url.replace(/\.jpg$/, "_full.jpg"),
+                  })
+              ),
+              n.createElement(
+                "div",
+                { className: a.DataBlock },
+                n.createElement(
+                  "div",
+                  { className: a.PersonaName },
+                  e ? e.persona_name : ""
+                ),
+                n.createElement(
+                  "div",
+                  { className: a.GenericTitleBlock },
+                  (0, i.yu)(
+                    "#YIR_MM_Generic_Title",
+                    n.createElement("span", { className: a.ReplayHighlight })
+                  )
+                )
               )
             )
-          )
-        );
+          : null;
       }
       function p() {
         const e = v();

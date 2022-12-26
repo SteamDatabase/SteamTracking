@@ -502,7 +502,7 @@ body.v6 {
   letter-spacing: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: clamp(42px, 2.2em, 90px);
+  height: clamp(42px, 1.5em, 90px);
   width: 64%;
 }
 @media screen and (max-width: 500px) {
@@ -792,1007 +792,161 @@ body.v6 {
 .yirlanding_BottomCtn_2mhHS {
   position: relative;
 }
-.yirbackgroundtiles_ImagesCtn_1qcMw {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  top: 0;
-  min-height: 1500px;
-  height: 100%;
-  background: linear-gradient(180deg, #642452 30%, #06123d 90%, transparent);
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left 90%,
-    left bottom,
-    from(#0e1014),
-    to(rgba(0, 0, 0, 0))
-  );
-  z-index: -1;
-}
-.yirbackgroundtiles_AllImages_RxFaO {
+.steamavatar_avatarHolder_1YGAH {
+  height: 36px;
+  width: 36px;
   display: flex;
-  flex-wrap: wrap;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
-  width: 100%;
-  max-height: 2500px;
-  transform-origin: top left;
-  transform: rotate(-23deg) translate(-190px, 101px);
-  position: absolute;
-  z-index: -1;
-  filter: saturate(0.2) opacity(0.5);
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
-      rgba(66, 66, 66, 0) 100%
-    );
-  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
-      rgba(66, 66, 66, 0) 100%
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: source-in;
-}
-.yirbackgroundtiles_AllImages_RxFaO .yirbackgroundtiles_ImageTint_3vfLR {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: repeat(auto);
-  grid-gap: 0;
-  width: 100%;
-  height: 100%;
-}
-.yirbackgroundtiles_AllImages_RxFaO
-  .yirbackgroundtiles_ImageTint_3vfLR.yirbackgroundtiles_Wide3_2XeU6 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.yirbackgroundtiles_AllImages_RxFaO
-  .yirbackgroundtiles_ImageTint_3vfLR.yirbackgroundtiles_Wide2_3bktu {
-  grid-template-columns: repeat(2, 1fr);
-}
-.yirbackgroundtiles_AllImages_RxFaO img {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: saturate(0.2) opacity(0.5);
-}
-.yirbackgroundtiles_SingleGame_VGWhX {
-  position: absolute;
-  width: 150%;
-  overflow: hidden;
-  top: 0;
-  height: 1080px;
-  transform: rotate(-22.5deg) translate(-10%, -21%);
-  background: radial-gradient(
-    108.31% 162.89% at 18.99% -21.75%,
-    #03090e 0%,
-    #1b5276 52.6%
-  );
-  z-index: -1;
-  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
-      rgba(66, 66, 66, 0) 100%
-    );
-  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
-    radial-gradient(
-      48.77% 50.22% at 47% 42.95%,
-      #424242 0%,
-      rgba(66, 66, 66, 0) 100%
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: source-in;
-}
-.yirbackgroundtiles_SingleGame_VGWhX .yirbackgroundtiles_ImageTint_3vfLR {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background: linear-gradient(135deg, #642452 0%, #06123d 100%);
-}
-.yirbackgroundtiles_SingleGame_VGWhX .yirbackgroundtiles_ImageTint_3vfLR img {
-  filter: saturate(0.2) opacity(0.2);
-  height: 100%;
-}
-@keyframes yirbadges_ElementFadeIn_rfg_i {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateZ(0px);
-  }
-}
-@keyframes yirbadges_BadgeBoxIntro_27O0f {
-  0% {
-    transform: translateY(100px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes yirbadges_BadgeBarFiller_1VATK {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 90%;
-  }
-}
-.yirbadges_TopHonorsCtn_1xRuk {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 50px;
-  box-sizing: border-box;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2 {
-  width: 100%;
-  padding-bottom: 20px;
-  transform: translateY(100px);
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2.NowVisible {
-  animation-name: yirbadges_BadgeBoxIntro_27O0f;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2:not(:first-child) {
-  margin-top: 14px;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  box-sizing: border-box;
-  border-radius: 6px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  background-image: radial-gradient(
-    100% 100% at 25% 0%,
-    #ffffff63 0%,
-    #fdfdfd47 100%
-  );
-  transition: transform 250ms ease-out, box-shadow 250ms ease-out;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_common_3-bQ3
-  .yirbadges_RarityText_3G_wL {
-  background-color: #a9a9a9;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_uncommon_15jOd
-  .yirbadges_RarityText_3G_wL {
-  background-color: #5bb626;
-  color: #2f414e;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_rare_19UKx
-  .yirbadges_RarityText_3G_wL {
-  background-color: #1a62e7;
-  color: #dededf;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_epic_3NOIR
-  .yirbadges_RarityText_3G_wL {
-  background-color: #8f178f;
-  color: #dededf;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_legendary_DHBfI
-  .yirbadges_RarityText_3G_wL {
-  background-color: #cb8910;
-  color: #2f414e;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RightCol_tqzsM {
-  position: relative;
-  height: 100%;
-  flex-grow: 1;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e {
-  margin-top: 30px;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ {
-  position: relative;
-  height: 30px;
-  width: 100%;
-  margin-bottom: 8px;
-  display: flex;
-  flex-direction: row;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 6px 6px 15px 0px #00000080 inset;
-  border-radius: 4px;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_RarityBarSegment_1qPJv {
-  flex-grow: 1;
-  z-index: 2;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa {
-  width: 0%;
-  height: 100%;
-  border-radius: 4px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_common_3-bQ3 {
-  background-color: #a9a9a9;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_uncommon_15jOd {
-  background-color: #5bb626;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_rare_19UKx {
-  background-color: #1a62e7;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_epic_3NOIR {
-  background-color: #8f178f;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_legendary_DHBfI {
-  background: linear-gradient(to bottom, #cb8910 0%, #f5b848 100%);
-  border: 1px solid #b1945f;
-  border-top: 1px solid #64450b;
-  border-left: 1px solid #64450b;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ
-  .yirbadges_SegmentCap_1decu {
-  width: 20px;
-  height: calc(100% + 10px);
-  background: #fff;
-  margin-top: -5px;
-  margin-bottom: -5px;
-  z-index: 1;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityBar_FMjFQ.NowVisible
-  .yirbadges_FillerBar_1MuDa {
-  animation-name: yirbadges_BadgeBarFiller_1VATK;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityInfoCtn_2pG3e
-  .yirbadges_RarityDesc_24SL- {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-}
-.yirbadges_TopHonorsCtn_1xRuk
-  .yirbadges_BadgeBox_21Ah2
-  .yirbadges_BadgeContents_LJ7gD
-  .yirbadges_RarityText_3G_wL {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 4px 12px;
-  text-transform: uppercase;
-  font-size: 16px;
-  letter-spacing: 1px;
-  width: fit-content;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeName_23i7Z {
-  font-size: 2vw;
-  line-height: 2vw;
-  font-weight: 500;
-  color: #fff;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeImgCtn_39qIy {
-  width: 200px;
-  height: 200px;
-  background: rgba(0, 0, 0, 0.5);
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeImgCtn_39qIy img {
-  width: 100%;
-  height: auto;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeDesc_1SgZP {
-  margin-top: 8px;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 16px;
-  color: rgba(255, 255, 255, 0.6);
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeGetBtn_1ZwNn {
-  width: fit-content;
-  font-size: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 3px;
-  padding: 2px 6px;
-  margin-top: 8px;
-}
-.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeGetBtn_1ZwNn:hover {
-  cursor: pointer;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-.yirbadges_SpiderAndNumbersCnt_14YQc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 32px;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-.yirbadges_HalfwidthColumn_30u4_ {
-  background-color: rgba(23, 20, 25, 0.44);
-  flex: 1 512px;
-  min-height: 10vw;
-  box-sizing: border-box;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 12px;
-  align-content: stretch;
-}
-.yirbadges_HalfwidthColumn_30u4_.yirbadges_SpidergraphContainer_2zK9j {
-  padding: 0;
-}
-.yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
-  width: 38vw;
-  height: 28vw;
-  max-height: 512px;
-  min-height: 400px;
-  margin: auto;
-  min-width: 100%;
-}
-@media screen and (max-width: 620px) {
-  .yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
-    width: 82vw;
-    height: 64vw;
-  }
-}
-@media screen and (max-width: 500px) {
-  .yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
-    width: 81vw;
-    height: 81vw;
-  }
-}
-.yirbadges_SpidergraphContainer_2zK9j
-  .yirbadges_GraphBox_2n56d
-  .recharts-polar-angle-axis-ticks {
-  transform: translateY(-14px) scaleY(1.05);
-  transform-origin: center;
-}
-.yirbadges_SpidergraphContainer_2zK9j
-  .yirbadges_GraphBox_2n56d
-  .recharts-radar-polygon
-  path {
-  fill: #3a32af83;
-  stroke: rgba(72, 107, 224, 0.8);
-  stroke-width: 2px;
-}
-.yirbadges_SpidergraphContainer_2zK9j
-  .yirbadges_GraphBox_2n56d
-  .recharts-polar-grid-angle
-  line {
-  stroke: #000c;
-  stroke-width: 2px;
-  z-index: 2;
-}
-.yirbadges_SpidergraphContainer_2zK9j
-  .yirbadges_GraphBox_2n56d
-  .recharts-polar-grid-concentric
-  path {
-  stroke: #0002;
-  stroke-width: 2px;
-  fill: #0000;
-}
-.yirbadges_SpidergraphContainer_2zK9j
-  .yirbadges_GraphBox_2n56d
-  .recharts-polar-grid-concentric
-  path:last-child {
-  stroke: #0001;
-  stroke-width: 4px;
-  fill: #0003;
-}
-.yirbadges_SpidergraphContainer_2zK9j text {
-  font-size: clamp(12px, 2vw, 20px);
-  fill: #fff;
-}
-.yirbadges_NumbersRowsCnt_1s-wI {
-  margin-top: 32px;
-}
-.yirbadges_NumbersRowsCnt_1s-wI .yirbadges_NumbersRow_3RI2Y {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  max-width: 600px;
-  margin: auto;
-}
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y
-  .yirbadges_NumbersLabel_3-pyK {
-  font-size: 18px;
-  font-weight: 300;
-  color: #fff;
-}
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y
-  .yirbadges_NumbersValue_lc_D9 {
-  font-size: 36px;
-  line-height: 46px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: -8px;
-  min-width: 1ch;
-  text-align: center;
-  letter-spacing: 1px;
-}
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y
-  .yirbadges_FillerDots_3grXx {
-  flex: 1;
-  height: 0px;
-  border-top: 5px dotted rgba(255, 255, 255, 0.507);
-  align-self: flex-end;
-  margin-bottom: 6px;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
-  .yirbadges_NumbersLabel_3-pyK,
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
-  .yirbadges_NumbersValue_lc_D9,
-.yirbadges_NumbersRowsCnt_1s-wI
-  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
-  .yirbadges_FillerDots_3grXx {
-  color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-.yirbadges_SectionLabel_3xAHx {
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  align-self: center;
-  text-align: center;
-}
-.yirbadges_SpidergraphContainer_2zK9j .yirbadges_SectionLabel_3xAHx {
-  padding: 0 32px;
-  padding-top: 32px;
-}
-.yirbadges_SectionDesc_j92P6 {
-  font-size: 18px;
-  font-weight: 300;
-  color: #9cc4ff;
-  align-self: center;
-  max-width: 80%;
-}
-.yirbadges_SpidergraphContainer_2zK9j .yirbadges_SectionDesc_j92P6 {
-  padding: 0 32px;
-}
-.yirbadges_SectionDesc_j92P6 span {
-  color: #9cc4ff;
-  font-weight: bold;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7 {
-  background-color: rgba(23, 20, 25, 0.44);
-  width: 100%;
-  padding: clamp(16px, 3vw, 64px);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  border-radius: 12px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayBehaviorSectionSubTitle_3g3Vy {
-  font-size: clamp(17px, 2vw, 28px);
-  line-height: clamp(18px, 1em, 36px);
-  padding-top: clamp(12px, 1vw, 20px);
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  margin-bottom: 32px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX {
-  width: clamp(80px, 8vw, 156px);
-  height: clamp(80px, 8vw, 156px);
-  background-color: #0008;
   flex-shrink: 0;
-  border: 2px solid #000;
-  display: flex;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3 {
-  width: 80%;
-  height: 80%;
-  margin: auto;
+.steamavatar_avatarHolder_1YGAH.X-Small {
+  height: 28px;
+  width: 28px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconAchievement_2DkX2
-  path {
-  fill: #01a4f6;
+.steamavatar_avatarHolder_1YGAH.Medium {
+  height: 36px;
+  width: 36px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconGamesPlayed_bs1zw
-  path {
-  fill: #10ca70;
+.steamavatar_avatarHolder_1YGAH.MediumLarge {
+  height: 48px;
+  width: 48px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconStreak_36416
-  path {
-  fill: #bd97ff;
+.steamavatar_avatarHolder_1YGAH.Large {
+  height: 84px;
+  width: 84px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(37, 27, 54, 0.4);
-  flex: 1;
-  padding: 0 clamp(16px, 2vw, 32px);
-  justify-content: center;
+.steamavatar_avatarHolder_1YGAH.X-Large {
+  height: 92px;
+  width: 92px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressLabel_aL4v7 {
-  color: #fff;
-  font-size: clamp(16px, 1.8vw, 26px);
-  font-weight: 500;
-  margin-bottom: 0px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1 {
-  height: clamp(12px, 1.75vw, 26px);
-  border: 4px solid #0005;
-  background-color: #0003;
-  align-self: stretch;
-  border-radius: 6px;
-  position: relative;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarMid_1yo31 {
-  width: 4px;
-  background-color: #0005;
-  height: 150%;
-  position: absolute;
-  left: 50%;
-  top: -25%;
-  border-radius: 6px;
-  z-index: 2;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO {
-  background: linear-gradient(to right, #10cb6e 0%, #00a2ff 50%, #8a48f5 90%);
-  box-shadow: 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.3);
+.steamavatar_avatarHolder_1YGAH.FillArea {
   height: 100%;
-  border-radius: 4px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2 {
   width: 100%;
-  height: 100%;
-  background-image: url("/public/images/yearinreview/2022/glitter_albedo.png");
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 55%,
-    black 90%
+}
+.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_1YGAH {
+  transform: scale(1, 1) translateX(0px);
+}
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.right,
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.bottom {
+  display: block !important;
+}
+.ingame .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
   );
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, black 90%);
-  mix-blend-mode: screen;
-  position: relative;
-  background-repeat: repeat-y;
-  background-position: 100% 0;
-  background-size: 512px contain;
-  border-radius: 4px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_GlitterSecond_2Gj-8,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_Glitter_hxngh {
+.ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .ingame .steamavatar_avatarStatus_1yIzy {
+  background: #59bf40;
+}
+.offline .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .offline .steamavatar_avatarStatus_1yIzy {
+  background: #67707b;
+}
+.ingame .X-Large .steamavatar_avatarStatus_1yIzy {
+  background: #bff02b;
+}
+.watchingbroadcast .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
+  );
+}
+.online .steamavatar_avatarStatus_1yIzy {
+  background: linear-gradient(
+    to bottom,
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
+  );
+}
+.online .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .online .steamavatar_avatarStatus_1yIzy {
+  background: #4cb4ff;
+}
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-y;
+  mask-size: 5px 5px;
+  opacity: 0.75;
+}
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy.GamepadMode,
+.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_1yIzy {
+  opacity: 1;
+}
+.steamavatar_avatarStatus_1yIzy.right {
   position: absolute;
+  top: 0;
+  bottom: 0;
   right: 0;
-  width: 512px;
-  height: 100%;
-  background-image: url("/public/images/yearinreview/2022/glitter_color.png");
-  -webkit-mask-image: url("/public/images/yearinreview/2022/glitter.png");
-  mask-image: url("/public/images/yearinreview/2022/glitter.png");
-  mask-size: 32px;
-  -webkit-mask-size: 32px;
-  mix-blend-mode: screen;
-  animation-name: yirbadges_glitterMove_2UzEp;
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  width: 2px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_GlitterSecond_2Gj-8 {
-  animation-name: yirbadges_glitterMove2_309-e;
-  mask-size: 64px;
-  -webkit-mask-size: 64px;
-  box-sizing: border-box;
-  right: -32px;
-  animation-duration: 12s;
+.steamavatar_avatarStatus_1yIzy.right.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_1yIzy.right {
+  width: 3px;
+  right: -3px;
 }
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressLabelsCnt_1AxNL {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: center;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressLabelsCnt_1AxNL
-  .yirbadges_ProgressSteamAvgLabel_3_bVG {
-  margin-top: 0px;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: clamp(12px, 1.25vw, 24px);
-}
-.yirbadges_PlayBehaviorContainer_1NBM7 .yirbadges_PlayNewnessContainer_30ZGr {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1600px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1 {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 0;
-  margin-top: 16px;
-  justify-content: center;
-  align-items: stretch;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_GameNewnessDataCnt_2m0q8 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_WheelChart_3uLgh {
-  width: clamp(102px, 30vw, 280px);
-  height: clamp(102px, 30vw, 280px);
-  margin-right: 2vw;
-  align-self: flex-start;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_WheelChart_3uLgh
-  .recharts-pie-sector
-  path {
-  stroke: #0003;
-  stroke-width: 4px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_WheelChart_3uLgh
-  .yirbadges_WheelArc_tX9oQ.yirbadges_Active_1lBtg {
-  filter: drop-shadow(0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.61));
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_WheelChart_3uLgh
-  .yirbadges_WheelArc_tX9oQ:not(.yirbadges_Active_1lBtg) {
-  stroke-width: 0px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_RightSideContainer_2xzsH {
-  flex: 1 1 337px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_RightSideContainer_2xzsH
-  .yirbadges_DataBoxesContainer_dRN22 {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: clamp(16px, 2vw, 32px);
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_FlavorLabel_3LBCn {
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  margin-top: 16px;
-  text-align: center;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_DataBox_8TJrJ {
-  padding: 16px 24px;
-  width: 24vw;
-  align-self: stretch;
-  position: relative;
-  flex: 1 1 232px;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 620px) {
-  .yirbadges_PlayBehaviorContainer_1NBM7
-    .yirbadges_GameNewnessComparisonContainer_2ejw1
-    .yirbadges_DataBox_8TJrJ {
-    flex-direction: row;
-    gap: 16px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .yirbadges_PlayBehaviorContainer_1NBM7
-    .yirbadges_GameNewnessComparisonContainer_2ejw1
-    .yirbadges_DataBox_8TJrJ {
-    flex-direction: row;
-    gap: 16px;
-  }
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_PercentageLabel_1fy0h {
-  font-size: clamp(24px, 3vw, 64px);
-  font-weight: 600;
-  color: #fff;
-  z-index: 1;
-  text-shadow: 2px 2px 4px #0005;
-  position: relative;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #000;
-  font-size: 16px;
-  z-index: 1;
-  position: relative;
-  text-align: justify;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_PercentageDescriptionLabel_3dO1H
-  span {
-  color: #000;
-  font-weight: bold;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1
-  .yirbadges_DataBoxArrow_1YSSn {
+.steamavatar_avatarStatus_1yIzy.bottom {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  transform: rotateZ(45deg);
-  top: 40%;
-  left: -16px;
-  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
 }
-@media screen and (max-width: 620px) {
-  .yirbadges_PlayBehaviorContainer_1NBM7
-    .yirbadges_GameNewnessComparisonContainer_2ejw1
-    .yirbadges_DataBoxArrow_1YSSn {
-    left: 45.5%;
-    top: -10px;
-  }
+.steamavatar_avatarStatus_1yIzy.bottom.GamepadMode,
+.GamepadMode .steamavatar_avatarStatus_1yIzy.bottom {
+  height: 3px;
+  bottom: -3px;
 }
-@media screen and (max-width: 500px) {
-  .yirbadges_PlayBehaviorContainer_1NBM7
-    .yirbadges_GameNewnessComparisonContainer_2ejw1
-    .yirbadges_DataBoxArrow_1YSSn {
-    left: 45.5%;
-    top: -10px;
-  }
+.awayOrSnooze .steamavatar_avatarStatus_1yIzy.bottom {
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
+    repeat-x;
 }
-@keyframes yirbadges_glitterMove_2UzEp {
-  from {
-    background-position: 0;
-  }
-  to {
-    background-position: 512px;
-  }
+.awayOrSnooze .X-Large .steamavatar_avatarStatus_1yIzy.bottom {
+  mask-size: 6px 6px;
+  opacity: 1;
 }
-@keyframes yirbadges_glitterMove2_309-e {
-  from {
-    background-position: 0 0px;
-  }
-  to {
-    background-position: 512px -128px;
-  }
+.steamavatar_avatar_1p_Qr {
+  border: 1px solid #383c43;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter 0.24s ease-in-out;
+}
+.steamavatar_avatar_1p_Qr.GamepadMode,
+.GamepadMode .steamavatar_avatar_1p_Qr {
+  border: 0px solid transparent;
+  height: 100%;
+  width: 100%;
+}
+.steamavatar_avatarFrame_3atbN {
+  position: absolute;
+  top: 0;
+}
+.steamavatar_avatarFrame_3atbN .steamavatar_avatarFrameImg_338kJ {
+  width: 100%;
+  height: 100%;
+}
+.steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
+  transform: scale(1.2);
 }
 @keyframes yirstatsbesidegametiles_ElementFadeIn_1u6VR {
   0% {
@@ -3032,6 +2186,1057 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   );
   background-size: clamp(180px, 25vw, 400px);
 }
+.yirbackgroundtiles_ImagesCtn_1qcMw {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  min-height: 1500px;
+  height: 100%;
+  background: linear-gradient(180deg, #642452 30%, #06123d 90%, transparent);
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 90%,
+    left bottom,
+    from(#0e1014),
+    to(rgba(0, 0, 0, 0))
+  );
+  z-index: -1;
+}
+.yirbackgroundtiles_AllImages_RxFaO {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  max-height: 2500px;
+  transform-origin: top left;
+  transform: rotate(-23deg) translate(-190px, 101px);
+  position: absolute;
+  z-index: -1;
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0) 100%
+    );
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0) 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+}
+.yirbackgroundtiles_AllImages_RxFaO .yirbackgroundtiles_ImageTint_3vfLR {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: repeat(auto);
+  grid-gap: 0;
+  width: 100%;
+  height: 100%;
+}
+.yirbackgroundtiles_AllImages_RxFaO
+  .yirbackgroundtiles_ImageTint_3vfLR.yirbackgroundtiles_Wide3_2XeU6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.yirbackgroundtiles_AllImages_RxFaO
+  .yirbackgroundtiles_ImageTint_3vfLR.yirbackgroundtiles_Wide2_3bktu {
+  grid-template-columns: repeat(2, 1fr);
+}
+.yirbackgroundtiles_AllImages_RxFaO img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: saturate(0.2) opacity(0.5);
+}
+.yirbackgroundtiles_SingleGame_VGWhX {
+  position: absolute;
+  width: 150%;
+  overflow: hidden;
+  top: 0;
+  height: 1080px;
+  transform: rotate(-22.5deg) translate(-10%, -21%);
+  background: radial-gradient(
+    108.31% 162.89% at 18.99% -21.75%,
+    #03090e 0%,
+    #1b5276 52.6%
+  );
+  z-index: -1;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0) 100%
+    );
+  mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      48.77% 50.22% at 47% 42.95%,
+      #424242 0%,
+      rgba(66, 66, 66, 0) 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+}
+.yirbackgroundtiles_SingleGame_VGWhX .yirbackgroundtiles_ImageTint_3vfLR {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(135deg, #642452 0%, #06123d 100%);
+}
+.yirbackgroundtiles_SingleGame_VGWhX .yirbackgroundtiles_ImageTint_3vfLR img {
+  filter: saturate(0.2) opacity(0.2);
+  height: 100%;
+}
+@keyframes yirbadges_ElementFadeIn_rfg_i {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes yirbadges_BadgeBoxIntro_27O0f {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes yirbadges_BadgeBarFiller_1VATK {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.yirbadges_TopHonorsCtn_1xRuk {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2 {
+  width: 100%;
+  padding-bottom: 20px;
+  transform: translateY(100px);
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2.NowVisible {
+  animation-name: yirbadges_BadgeBoxIntro_27O0f;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2:not(:first-child) {
+  margin-top: 14px;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  background-image: radial-gradient(
+    100% 100% at 25% 0%,
+    #ffffff63 0%,
+    #fdfdfd47 100%
+  );
+  transition: transform 250ms ease-out, box-shadow 250ms ease-out;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_common_3-bQ3
+  .yirbadges_RarityText_3G_wL {
+  background-color: #a9a9a9;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_uncommon_15jOd
+  .yirbadges_RarityText_3G_wL {
+  background-color: #5bb626;
+  color: #2f414e;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_rare_19UKx
+  .yirbadges_RarityText_3G_wL {
+  background-color: #1a62e7;
+  color: #dededf;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_epic_3NOIR
+  .yirbadges_RarityText_3G_wL {
+  background-color: #8f178f;
+  color: #dededf;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD.yirbadges_BadgeRarity_legendary_DHBfI
+  .yirbadges_RarityText_3G_wL {
+  background-color: #cb8910;
+  color: #2f414e;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RightCol_tqzsM {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e {
+  margin-top: 30px;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 15px 0px #00000080 inset;
+  border-radius: 4px;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_RarityBarSegment_1qPJv {
+  flex-grow: 1;
+  z-index: 2;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa {
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_common_3-bQ3 {
+  background-color: #a9a9a9;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_uncommon_15jOd {
+  background-color: #5bb626;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_rare_19UKx {
+  background-color: #1a62e7;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_epic_3NOIR {
+  background-color: #8f178f;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_FillerBar_1MuDa.yirbadges_BadgeRarity_legendary_DHBfI {
+  background: linear-gradient(to bottom, #cb8910 0%, #f5b848 100%);
+  border: 1px solid #b1945f;
+  border-top: 1px solid #64450b;
+  border-left: 1px solid #64450b;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ
+  .yirbadges_SegmentCap_1decu {
+  width: 20px;
+  height: calc(100% + 10px);
+  background: #fff;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  z-index: 1;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityBar_FMjFQ.NowVisible
+  .yirbadges_FillerBar_1MuDa {
+  animation-name: yirbadges_BadgeBarFiller_1VATK;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityInfoCtn_2pG3e
+  .yirbadges_RarityDesc_24SL- {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.yirbadges_TopHonorsCtn_1xRuk
+  .yirbadges_BadgeBox_21Ah2
+  .yirbadges_BadgeContents_LJ7gD
+  .yirbadges_RarityText_3G_wL {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeName_23i7Z {
+  font-size: 2vw;
+  line-height: 2vw;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeImgCtn_39qIy {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeImgCtn_39qIy img {
+  width: 100%;
+  height: auto;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeDesc_1SgZP {
+  margin-top: 8px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeGetBtn_1ZwNn {
+  width: fit-content;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-top: 8px;
+}
+.yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeGetBtn_1ZwNn:hover {
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.yirbadges_SpiderAndNumbersCnt_14YQc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.yirbadges_HalfwidthColumn_30u4_ {
+  background-color: rgba(23, 20, 25, 0.44);
+  flex: 1 512px;
+  min-height: 10vw;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  align-content: stretch;
+}
+.yirbadges_HalfwidthColumn_30u4_.yirbadges_SpidergraphContainer_2zK9j {
+  padding: 0;
+}
+.yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
+  width: 38vw;
+  height: 28vw;
+  max-height: 512px;
+  min-height: 400px;
+  margin: auto;
+  min-width: 100%;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
+    width: 82vw;
+    height: 64vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
+    width: 81vw;
+    height: 81vw;
+  }
+}
+.yirbadges_SpidergraphContainer_2zK9j
+  .yirbadges_GraphBox_2n56d
+  .recharts-polar-angle-axis-ticks {
+  transform: translateY(-14px) scaleY(1.05);
+  transform-origin: center;
+}
+.yirbadges_SpidergraphContainer_2zK9j
+  .yirbadges_GraphBox_2n56d
+  .recharts-radar-polygon
+  path {
+  fill: #3a32af83;
+  stroke: rgba(72, 107, 224, 0.8);
+  stroke-width: 2px;
+}
+.yirbadges_SpidergraphContainer_2zK9j
+  .yirbadges_GraphBox_2n56d
+  .recharts-polar-grid-angle
+  line {
+  stroke: #000c;
+  stroke-width: 2px;
+  z-index: 2;
+}
+.yirbadges_SpidergraphContainer_2zK9j
+  .yirbadges_GraphBox_2n56d
+  .recharts-polar-grid-concentric
+  path {
+  stroke: #0002;
+  stroke-width: 2px;
+  fill: #0000;
+}
+.yirbadges_SpidergraphContainer_2zK9j
+  .yirbadges_GraphBox_2n56d
+  .recharts-polar-grid-concentric
+  path:last-child {
+  stroke: #0001;
+  stroke-width: 4px;
+  fill: #0003;
+}
+.yirbadges_SpidergraphContainer_2zK9j text {
+  font-size: clamp(12px, 2vw, 20px);
+  fill: #fff;
+}
+.yirbadges_NumbersRowsCnt_1s-wI {
+  margin-top: 32px;
+}
+.yirbadges_NumbersRowsCnt_1s-wI .yirbadges_NumbersRow_3RI2Y {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 600px;
+  margin: auto;
+}
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y
+  .yirbadges_NumbersLabel_3-pyK {
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y
+  .yirbadges_NumbersValue_lc_D9 {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: -8px;
+  min-width: 1ch;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y
+  .yirbadges_FillerDots_3grXx {
+  flex: 1;
+  height: 0px;
+  border-top: 5px dotted rgba(255, 255, 255, 0.507);
+  align-self: flex-end;
+  margin-bottom: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
+  .yirbadges_NumbersLabel_3-pyK,
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
+  .yirbadges_NumbersValue_lc_D9,
+.yirbadges_NumbersRowsCnt_1s-wI
+  .yirbadges_NumbersRow_3RI2Y.yirbadges_Disabled_3WDy2
+  .yirbadges_FillerDots_3grXx {
+  color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.yirbadges_SectionLabel_3xAHx {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  align-self: center;
+  text-align: center;
+}
+.yirbadges_SpidergraphContainer_2zK9j .yirbadges_SectionLabel_3xAHx {
+  padding: 0 32px;
+  padding-top: 32px;
+}
+.yirbadges_SectionDesc_j92P6 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #9cc4ff;
+  align-self: center;
+  max-width: 80%;
+}
+.yirbadges_SpidergraphContainer_2zK9j .yirbadges_SectionDesc_j92P6 {
+  padding: 0 32px;
+}
+.yirbadges_SectionDesc_j92P6 span {
+  color: #9cc4ff;
+  font-weight: bold;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7 {
+  background-color: rgba(23, 20, 25, 0.44);
+  width: 100%;
+  padding: clamp(16px, 3vw, 64px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayBehaviorSectionSubTitle_3g3Vy {
+  font-size: clamp(17px, 2vw, 28px);
+  line-height: clamp(18px, 1em, 36px);
+  padding-top: clamp(12px, 1vw, 20px);
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressIcon_3J3rX {
+  width: clamp(80px, 8vw, 156px);
+  height: clamp(80px, 8vw, 156px);
+  background-color: #0008;
+  flex-shrink: 0;
+  border: 2px solid #000;
+  display: flex;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressIcon_3J3rX
+  .yirbadges_ProgressIconSVG_3GZf3 {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressIcon_3J3rX
+  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconAchievement_2DkX2
+  path {
+  fill: #01a4f6;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressIcon_3J3rX
+  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconGamesPlayed_bs1zw
+  path {
+  fill: #10ca70;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressIcon_3J3rX
+  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconStreak_36416
+  path {
+  fill: #bd97ff;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(37, 27, 54, 0.4);
+  flex: 1;
+  padding: 0 clamp(16px, 2vw, 32px);
+  justify-content: center;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressLabel_aL4v7 {
+  color: #fff;
+  font-size: clamp(16px, 1.8vw, 26px);
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1 {
+  height: clamp(12px, 1.75vw, 26px);
+  border: 4px solid #0005;
+  background-color: #0003;
+  align-self: stretch;
+  border-radius: 6px;
+  position: relative;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarMid_1yo31 {
+  width: 4px;
+  background-color: #0005;
+  height: 150%;
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  border-radius: 6px;
+  z-index: 2;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarFilled_3d5FO {
+  background: linear-gradient(to right, #10cb6e 0%, #00a2ff 50%, #8a48f5 90%);
+  box-shadow: 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.3);
+  height: 100%;
+  border-radius: 4px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/images/yearinreview/2022/glitter_albedo.png");
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 55%,
+    black 90%
+  );
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, black 90%);
+  mix-blend-mode: screen;
+  position: relative;
+  background-repeat: repeat-y;
+  background-position: 100% 0;
+  background-size: 512px contain;
+  border-radius: 4px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_GlitterSecond_2Gj-8,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_Glitter_hxngh {
+  position: absolute;
+  right: 0;
+  width: 512px;
+  height: 100%;
+  background-image: url("/public/images/yearinreview/2022/glitter_color.png");
+  -webkit-mask-image: url("/public/images/yearinreview/2022/glitter.png");
+  mask-image: url("/public/images/yearinreview/2022/glitter.png");
+  mask-size: 32px;
+  -webkit-mask-size: 32px;
+  mix-blend-mode: screen;
+  animation-name: yirbadges_glitterMove_2UzEp;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_GlitterSecond_2Gj-8 {
+  animation-name: yirbadges_glitterMove2_309-e;
+  mask-size: 64px;
+  -webkit-mask-size: 64px;
+  box-sizing: border-box;
+  right: -32px;
+  animation-duration: 12s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressLabelsCnt_1AxNL {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressLabelsCnt_1AxNL
+  .yirbadges_ProgressSteamAvgLabel_3_bVG {
+  margin-top: 0px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: clamp(12px, 1.25vw, 24px);
+}
+.yirbadges_PlayBehaviorContainer_1NBM7 .yirbadges_PlayNewnessContainer_30ZGr {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: stretch;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_GameNewnessDataCnt_2m0q8 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_WheelChart_3uLgh {
+  width: clamp(102px, 30vw, 280px);
+  height: clamp(102px, 30vw, 280px);
+  margin-right: 2vw;
+  align-self: flex-start;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_WheelChart_3uLgh
+  .recharts-pie-sector
+  path {
+  stroke: #0003;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_WheelChart_3uLgh
+  .yirbadges_WheelArc_tX9oQ.yirbadges_Active_1lBtg {
+  filter: drop-shadow(0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.61));
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_WheelChart_3uLgh
+  .yirbadges_WheelArc_tX9oQ:not(.yirbadges_Active_1lBtg) {
+  stroke-width: 0px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_RightSideContainer_2xzsH {
+  flex: 1 1 337px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_RightSideContainer_2xzsH
+  .yirbadges_DataBoxesContainer_dRN22 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2vw, 32px);
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_FlavorLabel_3LBCn {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 16px;
+  text-align: center;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_DataBox_8TJrJ {
+  padding: 16px 24px;
+  width: 24vw;
+  align-self: stretch;
+  position: relative;
+  flex: 1 1 232px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_GameNewnessComparisonContainer_2ejw1
+    .yirbadges_DataBox_8TJrJ {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_GameNewnessComparisonContainer_2ejw1
+    .yirbadges_DataBox_8TJrJ {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_PercentageLabel_1fy0h {
+  font-size: clamp(24px, 3vw, 64px);
+  font-weight: 600;
+  color: #fff;
+  z-index: 1;
+  text-shadow: 2px 2px 4px #0005;
+  position: relative;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_PercentageDescriptionLabel_3dO1H {
+  color: #000;
+  font-size: 16px;
+  z-index: 1;
+  position: relative;
+  text-align: justify;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_PercentageDescriptionLabel_3dO1H
+  span {
+  color: #000;
+  font-weight: bold;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
+  .yirbadges_DataBoxArrow_1YSSn,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
+  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
+  background-color: #3cdf6a;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
+  border: 4px dotted #3cdf6a;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageLabel_1fy0h,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageDescriptionLabel_3dO1H {
+  color: #3cdf6a;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
+  .yirbadges_DataBoxArrow_1YSSn,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
+  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
+  background-color: #4df;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
+  border: 4px dotted #4df;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageLabel_1fy0h,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageDescriptionLabel_3dO1H {
+  color: #4df;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
+  .yirbadges_DataBoxArrow_1YSSn,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
+  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
+  background-color: #e496ff;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
+  border: 4px dotted #e496ff;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageLabel_1fy0h,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
+  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
+  .yirbadges_PercentageDescriptionLabel_3dO1H {
+  color: #e496ff;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_GameNewnessComparisonContainer_2ejw1
+  .yirbadges_DataBoxArrow_1YSSn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  transform: rotateZ(45deg);
+  top: 40%;
+  left: -16px;
+  z-index: 0;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_GameNewnessComparisonContainer_2ejw1
+    .yirbadges_DataBoxArrow_1YSSn {
+    left: 45.5%;
+    top: -10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_GameNewnessComparisonContainer_2ejw1
+    .yirbadges_DataBoxArrow_1YSSn {
+    left: 45.5%;
+    top: -10px;
+  }
+}
+@keyframes yirbadges_glitterMove_2UzEp {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 512px;
+  }
+}
+@keyframes yirbadges_glitterMove2_309-e {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 512px -128px;
+  }
+}
+.userprofile_SmallAvatar_2cCH3 {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+.yirfriends_FriendCtn_1dEBr {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(14deg, #162964e0, #105662b8);
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  filter: drop-shadow(2px 4px 6px #021b23e8);
+  transition: all 0.2s;
+}
+.yirfriends_FriendCtn_1dEBr:hover {
+  filter: brightness(1.5);
+  transform: translateY(-2px);
+}
+.yirfriends_FriendsSharedSection_3zKPE {
+  display: flex;
+  overflow: hidden;
+  max-width: 90vw;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
+.yirfriends_FriendsSharedSectionTitle_2Jnwq {
+  text-align: center;
+  font-size: clamp(20px, 2vw, 42px);
+  line-height: clamp(30px, 2vw, 46px);
+  color: #fff;
+  font-weight: 600;
+  padding-top: 5px;
+}
+.yirfriends_FriendsGrid_OQcaq {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 div.yirhowyouplayed_DeckContainer_3G2ne {
   background-position: center;
   background-repeat: no-repeat;
@@ -3091,6 +3296,130 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
     font-size: 12px;
   }
 }
+.yirlongeststreak_Section_32a0u {
+  position: relative;
+  background: radial-gradient(
+    94.31% 143.89% at 2.99% -1.75%,
+    #0578a2 0%,
+    #449963 52.6%,
+    #104a4a
+  );
+  width: 100%;
+  height: 100%;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 620px) {
+  .yirlongeststreak_Section_32a0u {
+    overflow: hidden;
+  }
+}
+.yirlongeststreak_StreakSubTitle_6lD5o {
+  font-size: 0.75em;
+}
+.yirlongeststreak_StreakSizeCtn_1uHL0 {
+  display: block;
+  height: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.yirlongeststreak_StreakSizeFullBar_3sks_ {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 28%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+  padding-right: 2px;
+}
+@media screen and (max-width: 500px) {
+  .yirlongeststreak_StreakSizeFullBar_3sks_ {
+    width: 1px;
+    top: 32%;
+  }
+}
+.yirlongeststreak_StreakDates_eeemD {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.5em;
+  font-weight: 600;
+  margin-bottom: 5vh;
+}
+.yirlongeststreak_CapRowTitle_13uJv {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 1.75em;
+  color: #fff;
+  text-align: center;
+}
+.yirlongeststreak_StreakCtn_LC_OK .yirlongeststreak_CapRowCtn_39X62 {
+  position: relative;
+  overflow-x: scroll;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  font-size: 2em;
+}
+.yirlongeststreak_StreakBarCtn_2z4wN {
+  position: relative;
+  margin-top: 5vh;
+}
+.yirlongeststreak_StreakTickCtn_3gcpm {
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.yirlongeststreak_Tick_3XaLQ {
+  width: 1px;
+  height: 16px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+  background-color: #fff;
+}
+.yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
+  width: 3px;
+  height: 16px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 500px) {
+  .yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
+    width: 1px;
+  }
+}
+.yirlongeststreak_Tick_3XaLQ:first-child,
+.yirlongeststreak_Tick_3XaLQ:last-child {
+  height: 26px;
+  width: 3px;
+}
+.yirlongeststreak_Tick_3XaLQ:last-child {
+  margin-right: -4px;
+}
+.yirlongeststreak_BgImage_2dY4F {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: radial-gradient(
+      94.31% 143.89% at 2.99% -1.75%,
+      #0578a2 0%,
+      #449963 52.6%,
+      #104a4a
+    ),
+    url("/public/images/yearinreview/2022/streak_bg_large.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: hard-light;
+}
 @media screen and (max-width: 500px) {
   .DialogContent.GenericConfirmDialog {
     padding-right: 6px;
@@ -3100,6 +3429,11 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 @media screen and (max-width: 500px) {
   .DialogBodyText {
     margin-bottom: -6px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .DialogFooter {
+    display: none;
   }
 }
 .yirshare_ShareCtn_3wBwg {
@@ -3196,6 +3530,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   .yirshare_ShareModalDialogCtn_1C2t5 .DialogHeader {
     font-size: 16px;
     line-height: 20px;
+    padding-left: 12px;
   }
 }
 .yirshare_ShareModal_2Eeev .yirshare_ShareLanguagePicker_klz2d {
@@ -3455,6 +3790,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   .yirshare_ImagesCtn_24vEW
   .yirshare_PreviewMask_Cdij7:hover {
   opacity: 1;
+  z-index: 0;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_CarouselCtn_3FWwn
@@ -3540,13 +3876,14 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   align-items: center;
   cursor: pointer;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_CarouselCtn_3FWwn
   .yirshare_InteractButton_229ks:hover {
   background-color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_CarouselCtn_3FWwn
@@ -3750,7 +4087,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 90%;
   color: #dfe3e6;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
@@ -3759,6 +4095,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   transition: all 0.2s ease-out;
   position: relative;
   text-decoration: none;
+  box-sizing: border-box;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN
@@ -3888,6 +4225,14 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   .yirshare_FooterCtn_fZplN
   .yirshare_VisBorder_2Bte1.yirshare_Disabled_1bpHH {
   cursor: not-allowed;
+}
+.yirshare_ShareModal_2Eeev
+  .yirshare_FooterCtn_fZplN
+  .yirshare_VisBorder_2Bte1
+  .yirshare_MobileCtn_2MA6b {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
 }
 .yirshare_ShareModal_2Eeev
   .yirshare_FooterCtn_fZplN
@@ -5170,333 +5515,4 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     opacity: 1;
     transform: translateX(0px);
   }
-}
-.userprofile_SmallAvatar_2cCH3 {
-  max-width: 32px;
-  max-height: 32px;
-  float: left;
-  margin-right: 10px;
-  margin-top: 2px;
-  border-radius: 3px;
-}
-.yirfriends_FriendCtn_1dEBr {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(14deg, #162964e0, #105662b8);
-  border-radius: 5px;
-  padding: 8px;
-  font-size: 14px;
-  filter: drop-shadow(2px 4px 6px #021b23e8);
-  transition: all 0.2s;
-}
-.yirfriends_FriendCtn_1dEBr:hover {
-  filter: brightness(1.5);
-  transform: translateY(-2px);
-}
-.yirfriends_FriendsSharedSection_3zKPE {
-  display: flex;
-  overflow: hidden;
-  max-width: 90vw;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10vh;
-}
-.yirfriends_FriendsSharedSectionTitle_2Jnwq {
-  text-align: center;
-  font-size: clamp(20px, 2vw, 42px);
-  line-height: clamp(30px, 2vw, 46px);
-  color: #fff;
-  font-weight: 600;
-  padding-top: 5px;
-}
-.yirfriends_FriendsGrid_OQcaq {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.steamavatar_avatarHolder_1YGAH {
-  height: 36px;
-  width: 36px;
-  display: flex;
-  margin: 0px 0px;
-  transform: scale(0.86, 0.86) translateX(0px);
-  transition-property: transform;
-  transition-duration: 0.34s;
-  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
-  flex-direction: row;
-  flex-shrink: 0;
-}
-.steamavatar_avatarHolder_1YGAH.X-Small {
-  height: 28px;
-  width: 28px;
-}
-.steamavatar_avatarHolder_1YGAH.Medium {
-  height: 36px;
-  width: 36px;
-}
-.steamavatar_avatarHolder_1YGAH.MediumLarge {
-  height: 48px;
-  width: 48px;
-}
-.steamavatar_avatarHolder_1YGAH.Large {
-  height: 84px;
-  width: 84px;
-}
-.steamavatar_avatarHolder_1YGAH.X-Large {
-  height: 92px;
-  width: 92px;
-}
-.steamavatar_avatarHolder_1YGAH.FillArea {
-  height: 100%;
-  width: 100%;
-}
-.ChatSpeaker.ChatRoomSpeaker .steamavatar_avatarHolder_1YGAH {
-  transform: scale(1, 1) translateX(0px);
-}
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.right,
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarStatus_1yIzy.bottom {
-  display: block !important;
-}
-.ingame .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    #8cd61d 0%,
-    #a1f410 30%,
-    #a1f410 70%,
-    #8cd61d 100%
-  );
-}
-.ingame .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .ingame .steamavatar_avatarStatus_1yIzy {
-  background: #59bf40;
-}
-.offline .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .offline .steamavatar_avatarStatus_1yIzy {
-  background: #67707b;
-}
-.ingame .X-Large .steamavatar_avatarStatus_1yIzy {
-  background: #bff02b;
-}
-.watchingbroadcast .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    #9c8fd4 0%,
-    #9c8fd4 30%,
-    #9c8fd4 70%,
-    #9c8fd4 100%
-  );
-}
-.online .steamavatar_avatarStatus_1yIzy {
-  background: linear-gradient(
-    to bottom,
-    #6dcff6 0%,
-    #6dcff6 30%,
-    #6dcff6 70%,
-    #6dcff6 100%
-  );
-}
-.online .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .online .steamavatar_avatarStatus_1yIzy {
-  background: #4cb4ff;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  -webkit-mask-size: 5px 5px;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-y;
-  mask-size: 5px 5px;
-  opacity: 0.75;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy.GamepadMode,
-.GamepadMode .awayOrSnooze .steamavatar_avatarStatus_1yIzy {
-  opacity: 1;
-}
-.steamavatar_avatarStatus_1yIzy.right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 2px;
-}
-.steamavatar_avatarStatus_1yIzy.right.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_1yIzy.right {
-  width: 3px;
-  right: -3px;
-}
-.steamavatar_avatarStatus_1yIzy.bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-}
-.steamavatar_avatarStatus_1yIzy.bottom.GamepadMode,
-.GamepadMode .steamavatar_avatarStatus_1yIzy.bottom {
-  height: 3px;
-  bottom: -3px;
-}
-.awayOrSnooze .steamavatar_avatarStatus_1yIzy.bottom {
-  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC")
-    repeat-x;
-}
-.awayOrSnooze .X-Large .steamavatar_avatarStatus_1yIzy.bottom {
-  mask-size: 6px 6px;
-  opacity: 1;
-}
-.steamavatar_avatar_1p_Qr {
-  border: 1px solid #383c43;
-  height: calc(100% - 2px);
-  width: calc(100% - 2px);
-  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter 0.24s ease-in-out;
-}
-.steamavatar_avatar_1p_Qr.GamepadMode,
-.GamepadMode .steamavatar_avatar_1p_Qr {
-  border: 0px solid transparent;
-  height: 100%;
-  width: 100%;
-}
-.steamavatar_avatarFrame_3atbN {
-  position: absolute;
-  top: 0;
-}
-.steamavatar_avatarFrame_3atbN .steamavatar_avatarFrameImg_338kJ {
-  width: 100%;
-  height: 100%;
-}
-.steamavatar_avatarHolder_1YGAH .steamavatar_avatarFrame_3atbN {
-  transform: scale(1.2);
-}
-.yirlongeststreak_Section_32a0u {
-  position: relative;
-  background: radial-gradient(
-    94.31% 143.89% at 2.99% -1.75%,
-    #0578a2 0%,
-    #449963 52.6%,
-    #104a4a
-  );
-  width: 100%;
-  height: 100%;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 620px) {
-  .yirlongeststreak_Section_32a0u {
-    overflow: hidden;
-  }
-}
-.yirlongeststreak_StreakSubTitle_6lD5o {
-  font-size: 0.75em;
-}
-.yirlongeststreak_StreakSizeCtn_1uHL0 {
-  display: block;
-  height: 26px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.yirlongeststreak_StreakSizeFullBar_3sks_ {
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  position: absolute;
-  top: 28%;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
-  padding-right: 2px;
-}
-@media screen and (max-width: 500px) {
-  .yirlongeststreak_StreakSizeFullBar_3sks_ {
-    width: 1px;
-    top: 32%;
-  }
-}
-.yirlongeststreak_StreakDates_eeemD {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 0.5em;
-  font-weight: 600;
-  margin-bottom: 5vh;
-}
-.yirlongeststreak_CapRowTitle_13uJv {
-  display: block;
-  width: 100%;
-  margin-bottom: 5px;
-  font-size: 1.75em;
-  color: #fff;
-  text-align: center;
-}
-.yirlongeststreak_StreakCtn_LC_OK .yirlongeststreak_CapRowCtn_39X62 {
-  position: relative;
-  overflow-x: scroll;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  padding-top: 5px;
-  padding-bottom: 20px;
-  font-size: 2em;
-}
-.yirlongeststreak_StreakBarCtn_2z4wN {
-  position: relative;
-  margin-top: 5vh;
-}
-.yirlongeststreak_StreakTickCtn_3gcpm {
-  position: absolute;
-  top: 4px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.yirlongeststreak_Tick_3XaLQ {
-  width: 1px;
-  height: 16px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
-  background-color: #fff;
-}
-.yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
-  width: 3px;
-  height: 16px;
-  border-radius: 3px;
-}
-@media screen and (max-width: 500px) {
-  .yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
-    width: 1px;
-  }
-}
-.yirlongeststreak_Tick_3XaLQ:first-child,
-.yirlongeststreak_Tick_3XaLQ:last-child {
-  height: 26px;
-  width: 3px;
-}
-.yirlongeststreak_Tick_3XaLQ:last-child {
-  margin-right: -4px;
-}
-.yirlongeststreak_BgImage_2dY4F {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-  background-image: radial-gradient(
-      94.31% 143.89% at 2.99% -1.75%,
-      #0578a2 0%,
-      #449963 52.6%,
-      #104a4a
-    ),
-    url("/public/images/yearinreview/2022/streak_bg_large.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: hard-light;
 }

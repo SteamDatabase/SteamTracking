@@ -498,8 +498,8 @@ ${IMG_URL}teaser/valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
-${IMG_URL}yearinreview/2022/achievement_grid_02.jpg
-${IMG_URL}yearinreview/2022/bg_1.png
+${IMG_URL}yearinreview/2022/achievement_grid_02.webp
+${IMG_URL}yearinreview/2022/bg_2.png
 ${IMG_URL}yearinreview/2022/controllers.png
 ${IMG_URL}yearinreview/2022/keyboard.png
 ${IMG_URL}yearinreview/2022/screenshot_placeholder.png
@@ -920,6 +920,7 @@ ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
 ${STORE_BASE_URL}replay/${steamid}/${}?src=9
+${STORE_BASE_URL}replay/${}/${}
 ${STORE_BASE_URL}reservation/ajaxcancelreservation
 ${STORE_BASE_URL}reservation/ajaxdirectreservation
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
@@ -956,7 +957,7 @@ ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
-${STORE_BASE_URL}share/${}/yearinreview/${}/${}
+${STORE_BASE_URL}share/${}/replay/${}/${}
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1
@@ -983,7 +984,6 @@ ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
-${STORE_BASE_URL}yearinreview/${}/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
