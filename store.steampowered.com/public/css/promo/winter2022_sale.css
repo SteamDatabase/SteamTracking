@@ -493,10 +493,22 @@ body.v6.sale_winter2022 .carousel_container.paging_capsules .carousel_items > * 
 .main_content_ctn::after {
     content: '';
     width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 200%;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5) 500px, rgba(0, 0, 0, 0.8) 2500px);
-    -webkit-mask: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 50%, black 0%);
+    -webkit-mask: linear-gradient(90deg, transparent 0%, black 30%, black 70%, transparent 100%);
     -webkit-mask-composite: source-in;
+    position: absolute;
+    z-index: -1;
+}
+
+@media screen and (max-width: 2000px ) {
+    body.v6 .main_content_ctn::after {
+        -webkit-mask: unset;
+    }
 }
 
 @media screen and (max-width: 852px ) {

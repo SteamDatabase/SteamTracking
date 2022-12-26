@@ -1292,8 +1292,22 @@
 }
 @media screen and (max-width: 910px) {
   .salepreviewwidgets_OuterCapsuleContainer_Btar9 {
-    min-width: 320px;
     scroll-snap-align: start;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_BottomBarPriceInfo_2F4qi {
+    max-width: 100%;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_BottomBarPriceInfo_2F4qi
+    .salepreviewwidgets_Discounted_35-Ub {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .salepreviewwidgets_OuterCapsuleContainer_Btar9
+    .salepreviewwidgets_CapsuleBottomBar_6IVLn
+    .salepreviewwidgets_CapsulePlatform_3vzWb {
+    display: none;
   }
 }
 .BasicUI .salepreviewwidgets_OuterCapsuleContainer_Btar9 {

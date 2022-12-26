@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2823],
+  [2529],
   {
     49727: (e, t, r) => {
       r.d(t, {
@@ -6592,6 +6592,7 @@
         Vm: () => d,
         ie: () => c,
         jk: () => l,
+        oA: () => B,
         vs: () => u,
         wZ: () => _,
       });
@@ -6724,7 +6725,7 @@
               i = e.filter(
                 (e) =>
                   !(
-                    o.Z.Get().BHasStoreItem(e, t) ||
+                    o.Z.Get().BHasStoreItem(e, t, r) ||
                     o.Z.Get().BIsStoreItemMissing(e, t)
                   )
               );
@@ -6757,6 +6758,15 @@
       }
       function _(e, t, r) {
         return m(e, 0, t, r);
+      }
+      function B() {
+        a.useEffect(
+          () => (
+            o.Z.Get().SetReturnUnavailableItems(!0),
+            () => o.Z.Get().SetReturnUnavailableItems(!1)
+          ),
+          []
+        );
       }
     },
   },

@@ -454,7 +454,7 @@
           )
         );
       }
-      const C = a.lazy(() => s.e(938).then(s.bind(s, 40307)));
+      const C = a.lazy(() => s.e(938).then(s.bind(s, 74368)));
       function L(e) {
         const { message: t, active: s } = e;
         if ("replay2022" === t.GetTemplateVars().custom_display)

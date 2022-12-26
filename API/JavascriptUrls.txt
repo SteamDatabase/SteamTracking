@@ -246,6 +246,7 @@ ${COMMUNITY_BASE_URL}profiles/${}/commentnotifications
 ${COMMUNITY_BASE_URL}profiles/${}/home
 ${COMMUNITY_BASE_URL}profiles/${}/inventory
 ${COMMUNITY_BASE_URL}profiles/${}/previewsingleshowcase/?customization_type=${}&level=${}
+${COMMUNITY_BASE_URL}profiles/${}/stats/${}
 ${COMMUNITY_BASE_URL}profiles/${}/stats/appid/${}/achievements
 ${COMMUNITY_BASE_URL}profiles/${}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${}?previewprofile=1&appid=${}&itemtype=${}
@@ -497,6 +498,14 @@ ${IMG_URL}teaser/valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
+${IMG_URL}yearinreview/2022/achievement_grid_02.jpg
+${IMG_URL}yearinreview/2022/bg_1.png
+${IMG_URL}yearinreview/2022/controllers.png
+${IMG_URL}yearinreview/2022/keyboard.png
+${IMG_URL}yearinreview/2022/screenshot_placeholder.png
+${IMG_URL}yearinreview/2022/steamControllerGrid_02.png
+${IMG_URL}yearinreview/2022/streak_bg.jpg
+${IMG_URL}yearinreview/2022/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}appofficialsite/${appid}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}forum/${appid}
@@ -725,6 +734,7 @@ ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
+${STORE_BASE_URL}/yearinreview/${}/${}/ajaxgetfriendssharedyearinreview
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account/
@@ -910,6 +920,7 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
+${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}reservation/ajaxcancelreservation
 ${STORE_BASE_URL}reservation/ajaxdirectreservation
 ${STORE_BASE_URL}reservation/ajaxpreviewoptions
@@ -946,6 +957,7 @@ ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
+${STORE_BASE_URL}share/${}/yearinreview/${}/${}
 ${STORE_BASE_URL}stats/content/
 ${STORE_BASE_URL}stats/support/
 ${STORE_BASE_URL}stats/support?json=1
@@ -972,6 +984,7 @@ ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
+${STORE_BASE_URL}yearinreview/${}/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
@@ -1176,6 +1189,7 @@ ${g_szStoreGfxUrl}apps/${appid}/${}
 ${g_szStoreGfxUrl}apps/${legacy_appid}/${filename}
 ${getEventURL}&action=eventFeed&month=${newMonth}&year=${newYear}
 ${icon_drag_url}
+${image_url}_${}
 ${imgURL}${value}
 ${imgUrl}
 ${internal_wiki_url}${}
@@ -2572,6 +2586,8 @@ steam://url/StoreAccount
 steam://url/StoreAddFundsPage
 steam://url/StoreCart
 url( '${thumb_url}' )
+url(${IMG_URL}yearinreview/2022/steamDeckBackground.jpg)
 url(${avatar_full_url})
 url(${dataUrl})
+url(${preview_url})
 url(${url})

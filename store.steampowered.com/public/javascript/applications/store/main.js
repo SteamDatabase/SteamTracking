@@ -3281,7 +3281,7 @@
           case 27:
             return "es-419";
           case 28:
-            return "vn";
+            return "vi";
           case 29:
             return "sc-sc";
           default:
@@ -5669,9 +5669,9 @@
             "scrollIntoViewType",
             "resetNavOnEntry",
           ]),
-          { gamepadEvents: T, actionDescriptions: M, props: R } = _(D);
+          { gamepadEvents: T, actionDescriptions: M, props: k } = _(D);
         return {
-          elemProps: R,
+          elemProps: k,
           navOptions: {
             autoFocus: t,
             preferredFocus: n,
@@ -7507,10 +7507,10 @@
           bottom: Math.max(0, t.bottom - n.bottom),
         };
       }
-      function R(e) {
+      function k(e) {
         return e > -1 && e < 1;
       }
-      function k(e, t, n, i, r) {
+      function R(e, t, n, i, r) {
         C(
           "----------------------------------------------------------------------------------"
         ),
@@ -7579,13 +7579,13 @@
         }
         let c = !1;
         for (let e of s) {
-          if (R(e.left) && R(e.top)) continue;
+          if (k(e.left) && k(e.top)) continue;
           let t = I(e.element),
             i = t.scrollTop + e.top,
             r = t.scrollLeft + e.left;
           (r = f.Lh(r, 0, t.MaxScrollLeft())),
             (i = f.Lh(i, 0, t.MaxScrollTop())),
-            (R(t.scrollLeft - r) && R(t.scrollTop - i)) ||
+            (k(t.scrollLeft - r) && k(t.scrollTop - i)) ||
               (t.scrollTo({ left: r, top: i, behavior: n }),
               c || (C("Scrolling:"), (c = !0)),
               C(
@@ -8327,7 +8327,7 @@
               )
                 return (
                   x(`Element too far away, scrolling ${r} on ${i} axis `),
-                  k(s.Element, s.Element, "smooth", i, r),
+                  R(s.Element, s.Element, "smooth", i, r),
                   !0
                 );
             }
@@ -8571,11 +8571,11 @@
                   n && (S = performance.now()),
                     e.Tree.Controller.BIsRestoringHistory() && (r = "auto"),
                     c
-                      ? k(0, l, r)
+                      ? R(0, l, r)
                       : l.scrollIntoView({ behavior: r, block: "nearest" });
                 } else
                   c
-                    ? k(0, l, "auto")
+                    ? R(0, l, "auto")
                     : l.scrollIntoView({
                         behavior: "auto",
                         block: "nearest",
@@ -11792,7 +11792,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack.split("\n");
-                          let s = k(r.filter((e) => !!e.match(y))[n]);
+                          let s = R(r.filter((e) => !!e.match(y))[n]);
                           i && (s = `${s} ${e.message}`);
                           const o = r
                             .map((e) => {
@@ -11822,7 +11822,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             r = e.stack.split("\n");
-                          let s = k(r.filter((e) => !!e.match(D))[n]);
+                          let s = R(r.filter((e) => !!e.match(D))[n]);
                           i && (s = `${s} ${e.message}`);
                           const o = r
                             .map((e) => {
@@ -11878,12 +11878,12 @@
                           };
                         });
                       })(e, t)
-                    : (R ||
+                    : (k ||
                         (console.warn(
                           "Error reporter does not know how to parse generated stack:"
                         ),
                         console.warn(e.stack),
-                        (R = !0)),
+                        (k = !0)),
                       null);
                 } catch (e) {
                   return (
@@ -11962,8 +11962,8 @@
         D = /(^|@)\S+:\d+/,
         T = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
       let M,
-        R = !1;
-      function k(e) {
+        k = !1;
+      function R(e) {
         return (function (e) {
           const t = "https://",
             n = e.indexOf(t);
@@ -12161,7 +12161,7 @@
     10847: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Td: () => R,
+        Td: () => k,
         xV: () => T,
         Yr: () => D,
         Zo: () => M,
@@ -12291,7 +12291,7 @@
                 s.createElement(
                   s.Fragment,
                   null,
-                  s.createElement(k, null),
+                  s.createElement(R, null),
                   s.createElement(
                     M,
                     { className: p.Cancel, onSelected: e },
@@ -12430,7 +12430,7 @@
         (0, i.gn)([b.ak], M.prototype, "OnOKButton", null),
         (0, i.gn)([b.ak], M.prototype, "OnMouseEnter", null),
         (0, i.gn)([b.ak], M.prototype, "Focus", null);
-      class R extends s.PureComponent {
+      class k extends s.PureComponent {
         render() {
           const e = this.props,
             { bChecked: t, children: n, className: r } = e,
@@ -12445,7 +12445,7 @@
           );
         }
       }
-      function k(e) {
+      function R(e) {
         var t;
         const n =
           null !== (t = s.useContext(D).styles) && void 0 !== t ? t : E();
@@ -12694,21 +12694,21 @@
             D = y > 0,
             T = u - (o.bOverlapVertical ? S : w) - E,
             M = T > 0,
-            R = (o.bPreferPopTop || !M) && D && !o.bDisablePopTop;
+            k = (o.bPreferPopTop || !M) && D && !o.bDisablePopTop;
           if (!D && !M) {
             const e =
               void 0 !== o.bShiftToFitWindow
                 ? o.bShiftToFitWindow
                 : o.bFitToWindow && !o.bOverlapHorizontal;
-            (R = y > T && !o.bDisablePopTop),
-              e && (R ? (a.menuTop = 4) : (a.menuBottom = 4)),
+            (k = y > T && !o.bDisablePopTop),
+              e && (k ? (a.menuTop = 4) : (a.menuBottom = 4)),
               o.bFitToWindow &&
-                (e ? (E = Math.min(E, u - 8)) : (E += R ? y : T),
+                (e ? (E = Math.min(E, u - 8)) : (E += k ? y : T),
                 (a.menuHeight = E - 8));
           }
           void 0 === a.menuBottom &&
             void 0 === a.menuTop &&
-            (R
+            (k
               ? (a.menuBottom = u - (o.bOverlapVertical ? w : S))
               : (a.menuTop = o.bOverlapVertical ? S : w)),
             s
@@ -12987,7 +12987,7 @@
         Ac: () => y,
         zx: () => x,
         ji: () => V,
-        VY: () => R,
+        VY: () => k,
         oX: () => B,
         Vh: () => Ye,
         TW: () => Ee,
@@ -13090,14 +13090,14 @@
         M = C("DialogThreeColLayout _DialogColLayout");
       C("DialogTwoThirdColLayout _DialogColLayout"),
         v("DialogColumn _DialogLayout");
-      function R(e) {
+      function k(e) {
         const t = m();
         return r.createElement(
           h.T,
-          Object.assign({ component: t.Content, fallback: k }, e)
+          Object.assign({ component: t.Content, fallback: R }, e)
         );
       }
-      function k(e) {
+      function R(e) {
         let {
             children: t,
             bCenterVertically: n,
@@ -13147,7 +13147,7 @@
         const { classNameContent: t, bCenterVertically: n } = e,
           s = (0, i._T)(e, ["classNameContent", "bCenterVertically"]);
         return r.createElement(
-          R,
+          k,
           { className: t, bCenterVertically: n },
           r.createElement(L, Object.assign({}, s))
         );
@@ -14579,8 +14579,8 @@
       }
       (0, i.gn)([j.ak], Me.prototype, "OnMenuOpened", null);
       n(67345);
-      var Re = n(22188),
-        ke = n(79822),
+      var ke = n(22188),
+        Re = n(79822),
         Le = n(48780),
         Be = n(48899);
       const Ie = new (n(30543).s)("DragDrop").Debug;
@@ -14633,7 +14633,7 @@
       (0, i.gn)([j.ak], Oe.prototype, "OnDrop", null);
       class Ae {
         constructor() {
-          (this.m_embeddedElement = new ke.AN("DragGhosts")),
+          (this.m_embeddedElement = new Re.AN("DragGhosts")),
             (this.m_rgDropRegions = []),
             (this.m_rgActiveDropRegions = []),
             (this.m_prevClientX = 0),
@@ -15033,7 +15033,7 @@
         (0, i.gn)([j.ak], Ne.prototype, "OnMouseUp", null),
         (0, i.gn)([j.ak], Ne.prototype, "OnTouchStart", null),
         (0, i.gn)([j.ak], Ne.prototype, "OnTouchEnd", null),
-        (0, i.gn)([Re.aD], Ne.prototype, "ResetDragState", null),
+        (0, i.gn)([ke.aD], Ne.prototype, "ResetDragState", null),
         (0, i.gn)([j.ak], Ne.prototype, "OnHTMLDragStart", null),
         (0, i.gn)([j.ak], Ne.prototype, "OnHTMLDrag", null),
         (0, i.gn)([j.ak], Ne.prototype, "OnHTMLDragEnd", null);
@@ -15224,7 +15224,7 @@
         const n =
           null !== (t = e.activePage.padding) && void 0 !== t ? t : "standard";
         return r.createElement(
-          R,
+          k,
           {
             className: (0, l.Z)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -15520,8 +15520,8 @@
           D = "below" == E && !!c,
           T = null != u ? u : "shift-children-below",
           M = !!(w.onClick || w.onActivate || w.focusable),
-          R = null != a || null != n || (y && null != c),
-          k = null != m ? m : "min",
+          k = null != a || null != n || (y && null != c),
+          R = null != m ? m : "min",
           L = null != h ? h : "standard",
           B = null != p ? p : "standard",
           I = null != _ ? _ : "standard",
@@ -15556,7 +15556,7 @@
                 f,
                 et().Field,
                 g && et().Disabled,
-                R && et().WithFirstRow,
+                k && et().WithFirstRow,
                 y && et().WithChildrenInline,
                 D && et().WithChildrenBelow,
                 "center" == A && et().VerticalAlignCenter,
@@ -15565,8 +15565,8 @@
                 !!s && et().WithDescription,
                 "standard" == I && et().WithBottomSeparatorStandard,
                 "thick" == I && et().WithBottomSeparatorThick,
-                "fixed" == k && et().ChildrenWidthFixed,
-                "max" == k && et().ChildrenWidthGrow,
+                "fixed" == R && et().ChildrenWidthFixed,
+                "max" == R && et().ChildrenWidthGrow,
                 "standard" == L && et().ExtraPaddingOnChildrenBelow,
                 "standard" == B && et().StandardPadding,
                 "compact" == B && et().CompactPadding,
@@ -15576,7 +15576,7 @@
               style: { "--indent-level": x },
             }
           ),
-          R &&
+          k &&
             r.createElement(
               "div",
               { className: et().FieldLabelRow },
@@ -16641,7 +16641,7 @@
               )
             );
       }
-      function Rt(e, t) {
+      function kt(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -16657,8 +16657,8 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(St || (St = {}));
-      var kt = n(77323),
-        Lt = n.n(kt);
+      var Rt = n(77323),
+        Lt = n.n(Rt);
       const Bt = r.createContext(null);
       function It(e) {
         const t = r.useContext(Bt),
@@ -16726,7 +16726,7 @@
           Tt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: Rt(Lt(), Lt().ContentTransition),
+            childrenClasses: kt(Lt(), Lt().ContentTransition),
             direction: n,
           },
           e.children
@@ -17390,10 +17390,10 @@
           : i.createElement(i.Fragment, null, t);
       }
       var M = n(70655),
-        R = n(29323),
-        k = n(41311),
+        k = n(29323),
+        R = n(41311),
         L = n(7573);
-      const B = (0, R.Pi)((e) => {
+      const B = (0, k.Pi)((e) => {
         const { onCancel: t, closeModal: n, bOKDisabled: s, onOK: o } = e,
           a = (0, D.id)(),
           l = i.useCallback(() => {
@@ -17457,7 +17457,7 @@
               "bAlertDialog",
               "children",
             ]),
-            m = s || (0, k.Xx)("#Button_Close");
+            m = s || (0, R.Xx)("#Button_Close");
           let h = i.createElement(r.o9, {
             bOKDisabled: this.props.bOKDisabled,
             bCancelDisabled: this.props.bCancelDisabled,
@@ -17506,13 +17506,13 @@
         }
       };
       (0, M.gn)([o.ak], I.prototype, "Cancel", null),
-        (I = (0, M.gn)([R.Pi], I));
+        (I = (0, M.gn)([k.Pi], I));
       let O = class extends i.Component {
         render() {
           const e = Object.assign(
             {
-              strTitle: (0, k.Xx)("#Error_FailureNotice"),
-              strDescription: (0, k.Xx)("#Error_GenericFailureDescription"),
+              strTitle: (0, R.Xx)("#Error_FailureNotice"),
+              strDescription: (0, R.Xx)("#Error_GenericFailureDescription"),
               bAlertDialog: !0,
               bDestructiveWarning: !0,
               onOK: () => {},
@@ -17523,7 +17523,7 @@
           return i.createElement(I, Object.assign({}, e));
         }
       };
-      O = (0, M.gn)([R.Pi], O);
+      O = (0, M.gn)([k.Pi], O);
     },
     57423: (e, t, n) => {
       "use strict";
@@ -17568,7 +17568,7 @@
     },
     39811: (e, t, n) => {
       "use strict";
-      n.d(t, { Y0: () => T, eR: () => R, $C: () => M });
+      n.d(t, { Y0: () => T, eR: () => k, $C: () => M });
       var i = n(70655),
         r = n(67294),
         s = n(73935),
@@ -17787,7 +17787,7 @@
       function M() {
         return r.useContext(D).ModalManager;
       }
-      function R() {
+      function k() {
         return r.useContext(D).DialogWrapper;
       }
     },
@@ -18175,84 +18175,86 @@
         $06: () => X,
         $gZ: () => d,
         BKy: () => x,
-        BNo: () => ge,
-        Bh5: () => le,
-        Cts: () => be,
+        BNo: () => fe,
+        Bh5: () => de,
+        Cts: () => we,
         Ehc: () => L,
         GhU: () => S,
+        IF0: () => se,
         IWH: () => j,
         JrY: () => D,
-        KJh: () => pe,
-        KKY: () => Oe,
+        KJh: () => _e,
+        KKY: () => Ae,
         Lao: () => P,
-        LjF: () => we,
+        LjF: () => ye,
         Lk$: () => ee,
         MrB: () => Z,
         NP6: () => O,
         P7E: () => _,
         P9w: () => U,
-        Q1v: () => fe,
-        SK8: () => se,
+        Q1v: () => Ce,
+        SK8: () => ae,
         SUY: () => h,
-        SjW: () => Ce,
+        SjW: () => Se,
         Ucz: () => $,
-        Uos: () => k,
+        Uos: () => R,
         V7n: () => G,
         VR: () => Y,
         Vgm: () => ne,
-        WWB: () => me,
+        WWB: () => pe,
         X: () => f,
         XBH: () => z,
-        YVI: () => Ie,
+        YVI: () => xe,
         YVR: () => V,
         YqJ: () => A,
         YtI: () => m,
-        ZJH: () => ce,
+        ZJH: () => ue,
         Zrf: () => c,
         _GE: () => ie,
-        c7E: () => Le,
-        dLw: () => ue,
-        doA: () => Ee,
+        c7E: () => Ie,
+        dLw: () => he,
+        doA: () => De,
         dzL: () => y,
         faS: () => T,
         ffh: () => b,
-        g0p: () => Se,
+        g0p: () => Ee,
         gR: () => N,
-        j7C: () => Be,
+        j7C: () => Oe,
         k4K: () => g,
         k6n: () => E,
         kL2: () => M,
-        kqV: () => _e,
-        ktE: () => ve,
+        kqV: () => ve,
+        ktE: () => be,
         lsH: () => W,
-        mBz: () => ke,
-        mKE: () => R,
-        mKt: () => oe,
-        miF: () => Re,
-        opd: () => ye,
+        mBz: () => Be,
+        mKE: () => k,
+        mKt: () => le,
+        miF: () => Le,
+        opd: () => Te,
         pVO: () => v,
         pkz: () => C,
         r6F: () => F,
         ret: () => u,
         shV: () => w,
-        sqQ: () => De,
+        sqQ: () => Me,
         tEX: () => K,
         tLe: () => J,
         thP: () => I,
         tkI: () => p,
-        uZu: () => ae,
+        u$$: () => re,
+        uZu: () => ce,
         ui7: () => H,
-        vJ$: () => de,
+        vJ$: () => me,
         vT2: () => q,
-        vyu: () => xe,
-        wn$: () => re,
+        vyu: () => Ne,
+        wn$: () => oe,
         wr9: () => Q,
         wx$: () => B,
-        x0L: () => Me,
-        xg: () => he,
-        yTr: () => Te,
+        x0L: () => Re,
+        xg: () => ge,
+        yTr: () => ke,
         yVt: () => te,
-        z5E: () => Ae,
+        z5E: () => Fe,
       });
       var i = n(70655),
         r = n(67294),
@@ -18789,7 +18791,7 @@
           })
         );
       }
-      function R(e) {
+      function k(e) {
         let t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         const [i] = (0, r.useState)(Math.random().toString());
@@ -18862,7 +18864,7 @@
           })
         );
       }
-      function k(e) {
+      function R(e) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -19767,7 +19769,90 @@
           })
         );
       }
-      function re() {
+      function re(e) {
+        return r.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "25",
+              height: "15",
+              viewBox: "0 0 25 15",
+              fill: "black",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            e
+          ),
+          r.createElement("path", {
+            d: "M20.4983 14.9998H5.50068C4.77794 15.0049 4.05853 14.901 3.36635 14.6914C2.73245 14.5017 2.13941 14.1939 1.6178 13.7838C1.09666 13.3667 0.67927 12.8325 0.398748 12.2237C0.118225 11.615 -0.0177451 10.9486 0.00185477 10.2775C-0.0054678 9.70509 0.0977818 9.13666 0.305747 8.60408C0.498657 8.12872 0.785143 7.69778 1.14794 7.33745C1.81398 6.67001 2.78944 6.15547 4.04731 5.80829C4.10841 4.25269 4.75842 2.77984 5.86348 1.69365C6.96903 0.60364 8.45437 -0.00449463 9.99987 2.50132e-05C11.0001 0.00807229 11.9825 0.267715 12.8582 0.7555C13.7339 1.24329 14.4753 1.9437 15.0152 2.79335C15.4947 2.6343 15.994 2.54414 16.4984 2.52541C17.9193 2.52443 19.2832 3.08972 20.2932 4.09833C21.3094 5.10022 21.9038 6.45906 21.9527 7.89189C22.9609 8.23234 23.6526 8.60787 24.1302 9.07289C24.7185 9.65279 25.0339 10.4583 24.9971 11.2875C25.0059 11.8527 24.8841 12.4122 24.6414 12.9216C24.4147 13.3796 24.0837 13.7769 23.6754 14.0808C22.8776 14.6823 21.7794 14.9998 20.4983 14.9998ZM10.6373 8.62986L9.91893 9.35485L12.1391 11.6L12.4984 11.9464L12.8573 11.6L15.0793 9.35506L14.361 8.63007L12.9987 10.005V5.55515H11.9997V10.005L10.6373 8.62986Z",
+            fill: "currentColor",
+          })
+        );
+      }
+      function se() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_PlayTime",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.createElement("polyline", {
+            fill: "none",
+            stroke: "#000000",
+            strokeWidth: "16",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            points: "85.5,149.167 128,128 128,55.167 ",
+          }),
+          r.createElement("path", {
+            fill: "none",
+            stroke: "#000000",
+            strokeWidth: "16",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            d: "M128,17.5c61.027,0,110.5,49.473,110.5,110.5S189.027,238.5,128,238.5S17.5,189.027,17.5,128",
+          }),
+          r.createElement("circle", {
+            stroke: "#000000",
+            strokeWidth: "7",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            cx: "26.448",
+            cy: "85.833",
+            r: "5.5",
+          }),
+          r.createElement("circle", {
+            stroke: "#000000",
+            strokeWidth: "7",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            cx: "50.167",
+            cy: "50.5",
+            r: "5.5",
+          }),
+          r.createElement("circle", {
+            stroke: "#000000",
+            strokeWidth: "7",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            cx: "86",
+            cy: "26.667",
+            r: "5.5",
+          })
+        );
+      }
+      function oe() {
         return r.createElement(
           "svg",
           {
@@ -19786,7 +19871,7 @@
           })
         );
       }
-      function se() {
+      function ae() {
         return r.createElement(
           "svg",
           {
@@ -19806,7 +19891,7 @@
           })
         );
       }
-      function oe() {
+      function le() {
         return r.createElement(
           "svg",
           {
@@ -19831,7 +19916,7 @@
           })
         );
       }
-      function ae() {
+      function ce() {
         return r.createElement(
           "svg",
           {
@@ -19853,7 +19938,7 @@
           })
         );
       }
-      function le() {
+      function de() {
         return r.createElement(
           "svg",
           {
@@ -19893,7 +19978,7 @@
           })
         );
       }
-      function ce() {
+      function ue() {
         return r.createElement(
           "svg",
           {
@@ -19921,7 +20006,7 @@
           )
         );
       }
-      function de() {
+      function me() {
         return r.createElement(
           "svg",
           {
@@ -19937,7 +20022,7 @@
           r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
         );
       }
-      function ue() {
+      function he() {
         return r.createElement(
           "svg",
           {
@@ -19956,7 +20041,7 @@
           })
         );
       }
-      function me() {
+      function pe() {
         return r.createElement(
           "svg",
           {
@@ -19976,7 +20061,7 @@
           })
         );
       }
-      function he(e, t) {
+      function ge(e, t) {
         return (0, l.id)()
           ? r.createElement(
               "svg",
@@ -20013,7 +20098,7 @@
               })
             );
       }
-      function pe(e) {
+      function _e(e) {
         return r.createElement(
           "svg",
           {
@@ -20032,7 +20117,7 @@
           })
         );
       }
-      function ge(e) {
+      function fe(e) {
         return r.createElement(
           "svg",
           {
@@ -20068,7 +20153,7 @@
           )
         );
       }
-      function _e(e) {
+      function ve(e) {
         const { className: t } = e;
         (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20089,7 +20174,7 @@
           })
         );
       }
-      function fe(e) {
+      function Ce(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20113,7 +20198,7 @@
           })
         );
       }
-      function ve(e) {
+      function be(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20137,7 +20222,7 @@
           })
         );
       }
-      function Ce(e) {
+      function Se(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20161,7 +20246,7 @@
           })
         );
       }
-      function be(e) {
+      function we(e) {
         const { className: t } = e;
         (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20181,7 +20266,7 @@
           })
         );
       }
-      function Se(e) {
+      function Ee(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -20204,7 +20289,7 @@
           })
         );
       }
-      function we(e) {
+      function ye(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20410,7 +20495,7 @@
           )
         );
       }
-      function Ee(e) {
+      function De(e) {
         const { className: t } = e;
         (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20588,7 +20673,7 @@
           )
         );
       }
-      function ye() {
+      function Te() {
         return r.createElement(
           "svg",
           {
@@ -20619,7 +20704,7 @@
           )
         );
       }
-      function De(e) {
+      function Me(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -20635,7 +20720,7 @@
           })
         );
       }
-      function Te() {
+      function ke() {
         return r.createElement(
           "svg",
           {
@@ -20653,7 +20738,7 @@
           })
         );
       }
-      function Me() {
+      function Re() {
         return r.createElement(
           "svg",
           {
@@ -20675,7 +20760,7 @@
           )
         );
       }
-      function Re() {
+      function Le() {
         return r.createElement(
           "svg",
           {
@@ -20713,7 +20798,7 @@
           )
         );
       }
-      function ke(e) {
+      function Be(e) {
         return r.createElement(
           "svg",
           Object.assign({}, e, {
@@ -20731,7 +20816,7 @@
           })
         );
       }
-      function Le() {
+      function Ie() {
         return r.createElement(
           "svg",
           {
@@ -20765,7 +20850,7 @@
           )
         );
       }
-      function Be(e) {
+      function Oe(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20788,7 +20873,7 @@
           })
         );
       }
-      function Ie(e) {
+      function xe(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20816,7 +20901,7 @@
           })
         );
       }
-      function Oe(e) {
+      function Ae(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20844,7 +20929,7 @@
           })
         );
       }
-      function xe(e) {
+      function Ne(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -20872,7 +20957,7 @@
           })
         );
       }
-      function Ae(e) {
+      function Fe(e) {
         const { className: t } = e,
           n = (0, i._T)(e, ["className"]);
         return r.createElement(
@@ -21189,7 +21274,13 @@
     },
     72258: (e, t, n) => {
       "use strict";
-      n.d(t, { Qc: () => _, R6: () => u, ns: () => m, oM: () => f });
+      n.d(t, {
+        M2: () => _,
+        Qc: () => f,
+        R6: () => u,
+        ns: () => m,
+        oM: () => v,
+      });
       var i = n(70655),
         r = n(22188),
         s = n(67294),
@@ -21309,13 +21400,19 @@
                   (s ? ",noreferrer" : "")
               );
       }
-      function _(e) {
+      const _ = (e) =>
+        s.createElement(
+          s.Fragment,
+          null,
+          Boolean(e.condition) ? e.wrap(e.children) : e.children
+        );
+      function f(e) {
         if ("string" != typeof e) return NaN;
         const t = !e.includes("ms") && e.includes("s");
         let n = Number.parseFloat(e);
         return t && (n *= 1e3), n;
       }
-      function f(e, t = 1) {
+      function v(e, t = 1) {
         for (; e; ) {
           let t = (e.ownerDocument.defaultView || window).getComputedStyle(e),
             n = parseFloat(t.zoom);
@@ -22309,7 +22406,7 @@
           bulgarian: "bg",
           greek: "el",
           ukrainian: "uk",
-          vietnamese: "vn",
+          vietnamese: "vi",
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
@@ -22375,15 +22472,17 @@
       "use strict";
       n.d(t, {
         $1: () => l,
-        Kb: () => R,
-        LO: () => M,
-        Mh: () => y,
-        Np: () => T,
+        Kb: () => L,
+        LO: () => R,
+        Mh: () => D,
+        Np: () => k,
         Sc: () => h,
         Ti: () => u,
         U$: () => i,
-        XG: () => E,
+        XG: () => y,
+        _X: () => T,
         jr: () => f,
+        kI: () => M,
         m9: () => _,
         vX: () => c,
         yW: () => a,
@@ -22585,7 +22684,7 @@
           if (!a.bGranularFutureTime)
             return (
               r.zO(n.getTime() - i.getTime()),
-              n.getFullYear() == i.getFullYear() ? D(n) : M(n)
+              n.getFullYear() == i.getFullYear() ? T(n) : R(n)
             );
           r.zO(new Date().setHours(24, 0, 0, 0) - i.getTime());
           let e = new Date();
@@ -22598,7 +22697,7 @@
                 n < e
                   ? (0, s.Xx)("#Time_Tomorrow")
                   : (e.setDate(e.getDate() + 5),
-                    n < e ? y(n) : E(n, !0, a.bAbbreviateDayOfWeek)))
+                    n < e ? D(n) : y(n, !0, a.bAbbreviateDayOfWeek)))
           );
         }
         r.zO(new Date().setHours(24, 0, 0, 0) - i.getTime());
@@ -22621,7 +22720,7 @@
             : (0, s.Xx)("#Time_Yesterday");
         c.setDate(i.getDate() - 6);
         const d = new Date(c);
-        if (a.bGranularWeek && n >= d) return E(n, !1, !a.bAbbreviateDayOfWeek);
+        if (a.bGranularWeek && n >= d) return y(n, !1, !a.bAbbreviateDayOfWeek);
         if (a.bGranularPast)
           return (0, s.Xx)(
             "#Time_Past_At",
@@ -22639,15 +22738,15 @@
             ? (0, s.Xx)("#TimeSince_1Week")
             : (0, s.Xx)("#TimeSince_XWeeks", e);
         }
-        return n.getFullYear() == i.getFullYear() ? D(n) : M(n);
+        return n.getFullYear() == i.getFullYear() ? T(n) : R(n);
       }
       const v = new Map(),
         C = new Map(),
         b = new Map(),
         S = new Map(),
-        w = new Map();
-      new Map();
-      function E(e, t = !1, n = !0) {
+        w = new Map(),
+        E = new Map();
+      function y(e, t = !1, n = !0) {
         const i = {
             weekday: n ? "long" : "short",
             day: "numeric",
@@ -22662,7 +22761,7 @@
           o)
         );
       }
-      function y(e) {
+      function D(e) {
         let t = v.get(e.getDay());
         return (
           t ||
@@ -22673,7 +22772,7 @@
           t)
         );
       }
-      function D(e) {
+      function T(e) {
         let t = C.get(e.getMonth());
         return (
           t ||
@@ -22684,7 +22783,18 @@
           t)
         );
       }
-      function T(e) {
+      function M(e) {
+        let t = E.get(e.getMonth());
+        return (
+          t ||
+          ((t = e.toLocaleDateString(s.Yt.GetPreferredLocales(), {
+            month: "short",
+          })),
+          E.set(e.getMonth(), t),
+          t)
+        );
+      }
+      function k(e) {
         let t = b.get(e.getFullYear());
         return (
           t ||
@@ -22695,7 +22805,7 @@
           t)
         );
       }
-      function M(e) {
+      function R(e) {
         const t = e.getMonth() + 12 * e.getFullYear();
         let n = S.get(t);
         return (
@@ -22708,7 +22818,7 @@
           n)
         );
       }
-      function R(e) {
+      function L(e) {
         switch (e.getUTCMonth()) {
           case 0:
           case 1:
@@ -23700,7 +23810,12 @@
           LoyaltyItemBundle: (e) => `/points/shop/bundle/${e}`,
         },
         c = { SteamCharts: () => "/charts/" },
-        d = {},
+        d = {
+          YearInReview: (e, t) =>
+            `/:prefix(yearinreview|replay)${e ? "/" + e : "/"}${
+              t ? "/" + t : ""
+            }`,
+        },
         u = Object.assign(
           Object.assign(
             Object.assign(
@@ -24052,8 +24167,8 @@
       function M(e, t) {
         return e.matches(t) ? [e] : e.querySelectorAll(t);
       }
-      var R = n(22188),
-        k = n(95598),
+      var k = n(22188),
+        R = n(95598),
         L = n(48899),
         B = n(76884),
         I = n.n(B),
@@ -24185,11 +24300,11 @@
           this.m_player.Seek(this.m_nVideoStartTime + e);
         }
       }
-      (0, i.gn)([R.LO], N.prototype, "m_bPaused", void 0),
-        (0, i.gn)([R.LO], N.prototype, "m_bUserInputNeeded", void 0),
-        (0, i.gn)([R.LO], N.prototype, "m_nPlaybackTime", void 0),
-        (0, i.gn)([R.LO], N.prototype, "m_nVideoStartTime", void 0),
-        (0, i.gn)([R.LO], N.prototype, "m_nVideoDuration", void 0),
+      (0, i.gn)([k.LO], N.prototype, "m_bPaused", void 0),
+        (0, i.gn)([k.LO], N.prototype, "m_bUserInputNeeded", void 0),
+        (0, i.gn)([k.LO], N.prototype, "m_nPlaybackTime", void 0),
+        (0, i.gn)([k.LO], N.prototype, "m_nVideoStartTime", void 0),
+        (0, i.gn)([k.LO], N.prototype, "m_nVideoDuration", void 0),
         (0, i.gn)([A.ak], N.prototype, "OnVideoPlaying", null),
         (0, i.gn)([A.ak], N.prototype, "OnVideoPause", null),
         (0, i.gn)([A.ak], N.prototype, "OnVideoTimeUpdate", null),
@@ -24370,7 +24485,7 @@
         return s.createElement(
           "div",
           { className: I().UserInputNeeded, onClick: n },
-          s.createElement(k.shV, null)
+          s.createElement(R.shV, null)
         );
       }
       function Z(e) {
@@ -24406,7 +24521,7 @@
           return void 0 !== t && t;
         }
       }
-      (0, i.gn)([R.LO], Y.prototype, "m_mapTrailerPlay", void 0);
+      (0, i.gn)([k.LO], Y.prototype, "m_mapTrailerPlay", void 0);
       let q = null;
       var Q = n(88767);
       n(20938);
@@ -24444,32 +24559,34 @@
           return (
             i ||
             (Promise.all([
-              n.e(8065),
-              n.e(8103),
-              n.e(5633),
-              n.e(8535),
+              n.e(6499),
+              n.e(3388),
+              n.e(731),
+              n.e(2880),
               n.e(9177),
               n.e(3661),
-              n.e(5903),
-              n.e(6601),
-              n.e(8049),
-              n.e(2509),
-              n.e(4233),
-              n.e(2823),
-              n.e(7898),
-              n.e(4680),
-              n.e(8626),
-              n.e(3038),
-              n.e(1134),
-              n.e(6661),
-              n.e(4466),
-              n.e(9332),
+              n.e(6364),
+              n.e(4134),
+              n.e(4605),
+              n.e(9886),
+              n.e(4881),
+              n.e(2529),
+              n.e(5300),
+              n.e(8878),
+              n.e(990),
+              n.e(5938),
+              n.e(1614),
+              n.e(4193),
+              n.e(6108),
+              n.e(1289),
+              n.e(6633),
+              n.e(72),
               n.e(6720),
+              n.e(8489),
               n.e(3238),
-              n.e(1979),
               n.e(2420),
+              n.e(1979),
               n.e(9211),
-              n.e(477),
               n.e(691),
               n.e(2136),
             ])
@@ -24485,322 +24602,335 @@
         re = ne("DemoAndQuickPitch"),
         se = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(2276),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(3807),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
             n.e(5331),
-          ]).then(n.bind(n, 95356))
+          ]).then(n.bind(n, 77073))
         ),
         oe = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
+            n.e(6499),
+            n.e(3388),
             n.e(7200),
-            n.e(5903),
-            n.e(6601),
-            n.e(4233),
+            n.e(6364),
+            n.e(4134),
+            n.e(4881),
             n.e(9682),
           ]).then(n.bind(n, 82910))
         ),
         ae = s.lazy(() =>
           Promise.all([
-            n.e(8065),
+            n.e(6499),
             n.e(7400),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(4680),
-            n.e(8626),
-            n.e(4466),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(8878),
+            n.e(990),
+            n.e(6108),
+            n.e(6633),
             n.e(6720),
             n.e(6571),
             n.e(8986),
           ]).then(n.bind(n, 17446))
         ),
         le = s.lazy(() =>
-          Promise.all([n.e(7400), n.e(4466), n.e(6571), n.e(988)]).then(
+          Promise.all([n.e(7400), n.e(6108), n.e(6571), n.e(988)]).then(
             n.bind(n, 16390)
           )
         ),
         ce = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(9332),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(1289),
+            n.e(72),
             n.e(1979),
             n.e(4601),
           ]).then(n.bind(n, 54189))
         ),
         de = s.lazy(() =>
           Promise.all([
-            n.e(8103),
-            n.e(5903),
-            n.e(2509),
-            n.e(2823),
-            n.e(8626),
+            n.e(3388),
+            n.e(6364),
+            n.e(9886),
+            n.e(2529),
+            n.e(990),
             n.e(2814),
           ]).then(n.bind(n, 26554))
         ),
         ue = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(5633),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(3038),
+            n.e(6499),
+            n.e(731),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(5938),
             n.e(2420),
           ]).then(n.bind(n, 63543))
         ),
         me = s.lazy(() => n.e(5821).then(n.bind(n, 86531))),
         he = s.lazy(() =>
-          Promise.all([n.e(8049), n.e(477), n.e(1918)]).then(n.bind(n, 23879))
+          Promise.all([n.e(4605), n.e(1918)]).then(n.bind(n, 23879))
         ),
         pe = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(9332),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(1289),
             n.e(9211),
             n.e(3207),
           ]).then(n.bind(n, 53881))
         ),
         ge = s.lazy(() =>
-          Promise.all([n.e(7898), n.e(1134), n.e(1825)]).then(n.bind(n, 66668))
+          Promise.all([n.e(5300), n.e(1614), n.e(1825)]).then(n.bind(n, 66668))
         ),
         _e = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
             n.e(9177),
             n.e(3661),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
             n.e(6720),
+            n.e(8489),
             n.e(3238),
-            n.e(1979),
             n.e(2420),
+            n.e(1979),
             n.e(9211),
-            n.e(477),
             n.e(691),
             n.e(2136),
           ]).then(n.bind(n, 60693))
         ),
         fe = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(3321),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
             n.e(6720),
+            n.e(8489),
             n.e(3238),
-            n.e(1979),
             n.e(2420),
+            n.e(1979),
             n.e(9211),
-            n.e(477),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 66480))
         ),
         ve = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
             n.e(9177),
             n.e(3661),
             n.e(3321),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
             n.e(6720),
+            n.e(8489),
             n.e(3238),
-            n.e(1979),
             n.e(2420),
+            n.e(1979),
             n.e(9211),
-            n.e(477),
             n.e(691),
             n.e(9788),
           ]).then(n.bind(n, 52008))
         ),
         Ce = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
             n.e(9177),
             n.e(3661),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
             n.e(6720),
+            n.e(8489),
             n.e(3238),
-            n.e(1979),
             n.e(2420),
+            n.e(1979),
             n.e(9211),
-            n.e(477),
             n.e(691),
             n.e(680),
           ]).then(n.bind(n, 41135))
         ),
         be = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(8535),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
             n.e(9177),
             n.e(3661),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
-            n.e(4466),
-            n.e(9332),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
             n.e(6720),
+            n.e(8489),
             n.e(3238),
-            n.e(1979),
             n.e(2420),
+            n.e(1979),
             n.e(9211),
-            n.e(477),
             n.e(691),
             n.e(680),
           ]).then(n.bind(n, 31970))
         ),
         Se = s.lazy(() =>
-          Promise.all([n.e(8065), n.e(5903), n.e(6601), n.e(4535)]).then(
+          Promise.all([n.e(6499), n.e(6364), n.e(4134), n.e(4535)]).then(
             n.bind(n, 22143)
           )
         ),
         we = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
             n.e(9177),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6633),
             n.e(6720),
             n.e(3238),
             n.e(556),
@@ -24808,22 +24938,23 @@
         ),
         Ee = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
             n.e(9177),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6633),
             n.e(6720),
             n.e(3238),
             n.e(556),
@@ -24831,25 +24962,53 @@
         ),
         ye = s.lazy(() =>
           Promise.all([
-            n.e(8065),
-            n.e(8103),
-            n.e(5633),
-            n.e(5903),
-            n.e(6601),
-            n.e(8049),
-            n.e(2509),
-            n.e(4233),
-            n.e(2823),
-            n.e(7898),
-            n.e(4680),
-            n.e(8626),
-            n.e(3038),
-            n.e(1134),
-            n.e(6661),
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
             n.e(4158),
           ]).then(n.bind(n, 11154))
+        ),
+        De = s.lazy(() =>
+          Promise.all([
+            n.e(6499),
+            n.e(3388),
+            n.e(731),
+            n.e(2880),
+            n.e(3807),
+            n.e(3143),
+            n.e(6364),
+            n.e(4134),
+            n.e(4605),
+            n.e(9886),
+            n.e(4881),
+            n.e(2529),
+            n.e(5300),
+            n.e(8878),
+            n.e(990),
+            n.e(5938),
+            n.e(1614),
+            n.e(4193),
+            n.e(6108),
+            n.e(1289),
+            n.e(6633),
+            n.e(72),
+            n.e(8489),
+            n.e(8087),
+          ]).then(n.bind(n, 30306))
         );
-      class De extends s.Component {
+      class Te extends s.Component {
         componentDidMount() {
           const e = (0, c.CE)();
           e &&
@@ -24864,7 +25023,7 @@
               "div",
               { className: m().App },
               s.createElement(
-                Te,
+                Me,
                 null,
                 s.createElement(
                   s.Suspense,
@@ -25225,7 +25384,10 @@
                       path: d.Z.MarketingMessages(),
                       render: (e) => s.createElement(ye, Object.assign({}, e)),
                     }),
-                    !1,
+                    s.createElement(p.AW, {
+                      path: d.Z.YearInReview(),
+                      render: (e) => s.createElement(De, Object.assign({}, e)),
+                    }),
                     s.createElement(p.AW, null, s.createElement(te, null))
                   )
                 )
@@ -25234,7 +25396,7 @@
           );
         }
       }
-      function Te(e) {
+      function Me(e) {
         const { children: t } = e;
         return s.createElement(
           v.u.Provider,
@@ -25250,7 +25412,7 @@
           )
         );
       }
-      var Me = n(65902),
+      var ke = n(65902),
         Re = n(75362);
       n(69491);
       b.Dj(function () {
@@ -25262,7 +25424,7 @@
             (0, Re.Uh)().Init(
               "Store",
               CLSTAMP,
-              new Me.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
+              new ke.J(l.De.WEBAPI_BASE_URL).GetServiceTransport()
             ),
             yield (function (e) {
               return (0, i.mG)(this, void 0, void 0, function* () {
@@ -25292,7 +25454,7 @@
             })(l.De.LANGUAGE),
             document.getElementById("application_root")
               ? r.render(
-                  s.createElement(De),
+                  s.createElement(Te),
                   document.getElementById("application_root")
                 )
               : console.error('No "application_root" was found to target');
