@@ -739,6 +739,11 @@ body.v6 {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  .yirlanding_ConclusionCtn_itHd- {
+    height: 40vh;
+  }
+}
 .yirlanding_Questions_2NoUb {
   display: flex;
   flex-direction: row;

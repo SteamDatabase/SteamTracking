@@ -734,7 +734,6 @@ ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
-${STORE_BASE_URL}/yearinreview/${}/${}/ajaxgetfriendssharedyearinreview
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
 ${STORE_BASE_URL}account/
