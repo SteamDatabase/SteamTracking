@@ -4427,9 +4427,8 @@
         if (0 == t.GetPlayTimeStats().games.length)
           return r.createElement(at, null, a);
         const n =
-          t.GetPlayTimeStats().games[0].relative_game_stats
-            .total_playtime_percentagex100;
-        return t.GetPlayTimeStats().game_summary.length < 10 || n >= 90
+          t.GetPlayTimeStats().games[0].stats.total_playtime_percentagex100;
+        return t.GetPlayTimeStats().game_summary.length < 10 || n >= 9e3
           ? r.createElement(
               tt,
               { appid: t.GetPlayTimeStats().games[0].appid },
