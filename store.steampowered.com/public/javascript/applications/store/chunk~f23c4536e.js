@@ -6253,10 +6253,12 @@
                       .forEach((e) => {
                         const t = e.id(),
                           i = e.item_type();
-                        if (
-                          1 != e.success() ||
-                          this.BIsStoreItemMissing(t, i)
-                        ) {
+                        let s =
+                            this.m_bReturnUnavailableItems && 15 == e.success(),
+                          a =
+                            1 == e.success() && !this.BIsStoreItemMissing(t, i);
+                        if (s || a) this.ReadItem(e, r);
+                        else {
                           switch (
                             ("dev" == g.De.WEB_UNIVERSE &&
                               console.warn(
@@ -6302,7 +6304,7 @@
                                   t
                                 );
                             }
-                        } else this.ReadItem(e, r);
+                        }
                       })
                   : (console.error(
                       "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
