@@ -6769,6 +6769,7 @@
                 const a = {
                   event_name: "shareimage",
                   link: t,
+                  url: t,
                   subject: (0, Ne.Xx)("#YIR_ShareModal_MobileSubject"),
                   message: (0, Ne.Xx)("#YIR_ShareModal_MobileMessage"),
                   title: (0, Ne.Xx)("#YIR_ShareModal_MobileMessage"),
@@ -6923,6 +6924,7 @@
                     const t = {
                       event_name: "share",
                       link: a,
+                      url: a,
                       subject: (0, Ne.Xx)("#YIR_ShareModal_MobileSubject"),
                       message: (0, Ne.Xx)("#YIR_ShareModal_MobileMessage"),
                       title: (0, Ne.Xx)("#YIR_ShareModal_MobileMessage"),
