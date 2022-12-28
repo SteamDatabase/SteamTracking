@@ -134,7 +134,6 @@
   font-size: 15px;
   text-align: center;
   margin: auto 0;
-  width: 100%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -178,6 +177,15 @@
   padding: 5px 10px;
   color: #fff;
 }
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButton_kTsuK
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
+}
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
@@ -211,6 +219,15 @@
   font-weight: 600;
   padding: 5px 10px;
   color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -307,7 +324,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_GCwk0 {
+    max-width: 100%;
+  }
 }
 .steam_awards_vote_section
   .nominationandvote_AwardCategoriesCtn_GCwk0
