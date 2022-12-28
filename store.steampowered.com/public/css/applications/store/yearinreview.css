@@ -98,6 +98,7 @@ body.v6 {
   font-size: 0.75em;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 50vw;
 }
 .yirlanding_ConclusionName_2aF5R {
   color: #1a9ffe;
@@ -304,6 +305,12 @@ body.v6 {
   .yirlanding_StatBox_3vEOC {
   text-align: center;
 }
+@media screen and (max-width: 620px) {
+  .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC
+    .yirlanding_StatBox_3vEOC {
+    top: 0px;
+  }
+}
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs {
   position: relative;
 }
@@ -396,7 +403,8 @@ body.v6 {
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
   .yirlanding_Subtitle_3Xegh {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 22px);
+  line-height: clamp(16px, 2vw, 24px);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC.yirlanding_HardwareSummary_RrFxs
@@ -410,15 +418,16 @@ body.v6 {
   justify-content: center;
   width: 88%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: clamp(1em, 3.5vw, 6em);
-  line-height: clamp(1em, 3.75vw, 1em);
+  font-size: clamp(16px, 3vw, 64px);
+  line-height: clamp(18px, 3.75vw, 68px);
   font-weight: 800;
   color: #fff;
   z-index: 1;
 }
 @media screen and (max-width: 500px) {
   .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockGameName_8viNZ {
-    font-size: 3em;
+    font-size: clamp(16px, 2.5em, 36px);
+    line-height: clamp(18px, 1em, 38px);
     width: 95%;
   }
 }
@@ -473,9 +482,15 @@ body.v6 {
   overflow: hidden;
   z-index: 1;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 620px) {
   .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockTitle_3heph {
     height: unset;
+    min-height: 15vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .yirlanding_SummaryCtn_9eVnU .yirlanding_SummaryBlockTitle_3heph {
+    min-height: 24vw;
   }
 }
 .yirlanding_SummaryCtn_9eVnU
@@ -494,16 +509,26 @@ body.v6 {
   text-align: left;
   overflow: visible;
 }
+@media screen and (max-width: 620px) {
+  .yirlanding_SummaryCtn_9eVnU
+    .yirlanding_SummaryBlockTitle_3heph
+    .yirlanding_RewindHeader_1wMXR {
+    margin-top: 0px;
+  }
+}
 .yirlanding_SummaryCtn_9eVnU
   .yirlanding_SummaryBlockTitle_3heph
   .yirlanding_UserName_3_FPl {
   font-size: clamp(18px, 1em, 40px);
-  line-height: clamp(20px, 1.1em, 42px);
+  line-height: clamp(22px, 1.2em, 48px);
   letter-spacing: 0;
-  overflow: hidden;
   text-overflow: ellipsis;
-  height: clamp(42px, 1.5em, 90px);
   width: 64%;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
 @media screen and (max-width: 500px) {
   .yirlanding_SummaryCtn_9eVnU
@@ -561,14 +586,14 @@ body.v6 {
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt {
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   flex-grow: 1;
   position: absolute;
   right: 0;
-  top: clamp(57px, 6vh, 83px);
+  top: clamp(56px, 6vh, 64px);
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_BigNum_36SHE {
-  font-size: clamp(30px, 7vw, 120px);
+  font-size: clamp(30px, 6.5vw, 120px);
   line-height: clamp(36px, 6vw, 126px);
 }
 .yirlanding_StatBox_3vEOC .yirlanding_BigText_3FbVj {
@@ -584,10 +609,14 @@ body.v6 {
   align-items: center;
   margin-top: 10%;
 }
+@media screen and (max-width: 620px) {
+  .yirlanding_SummaryBlockHugeNumCtn_2jeQG {
+    margin-top: 0px;
+  }
+}
 @media screen and (max-width: 500px) {
   .yirlanding_SummaryBlockHugeNumCtn_2jeQG {
     min-height: 40vw;
-    margin-top: 0px;
   }
 }
 .yirlanding_SummaryBlockHugeNumCtn_2jeQG .yirlanding_BigNum_36SHE {
@@ -2101,8 +2130,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   align-items: center;
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(odd) {
-  align-self: end;
-  align-items: start;
+  align-self: flex-end;
+  align-items: flex-start;
   border-left: 6px dotted #67c1f5;
   padding-left: 20px;
   box-sizing: border-box;
@@ -2110,15 +2139,15 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(odd)
   .yirallgames_FirstPlayCtn_rjWoT {
-  justify-content: start;
+  justify-content: flex-start;
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(odd) .yirallgames_MonthTitle_1MQ1F {
   margin-left: -22px;
   padding-left: 22px;
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(even) {
-  align-self: start;
-  align-items: end;
+  align-self: flex-start;
+  align-items: flex-end;
   border-right: 6px dotted #67c1f5;
   padding-right: 20px;
   box-sizing: border-box;
@@ -2126,7 +2155,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(even)
   .yirallgames_FirstPlayCtn_rjWoT {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .yirallgames_MonthGroupCtn_DMCZI:nth-child(even) .yirallgames_MonthTitle_1MQ1F {
   margin-right: -22px;
