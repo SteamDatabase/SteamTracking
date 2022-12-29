@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap');
 
 body.v6.sale_winter2022 {
-				background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale2022_bg_flat_4.webp?v=2') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale_bottomtile_4.webp?v=2') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/star_bg.webp?v=3') repeat center top, #010404;
+				background: url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale2022_bg_flat_4_snow.webp?v=2') no-repeat center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/wintersale_bottomtile_4.webp?v=2') repeat-y center top, url('https://cdn.cloudflare.steamstatic.com/store/promo/winter2022/star_bg.webp?v=3') repeat center top, #010404;
             }
 
 body.v6.sale_winter2022 .responsive_page_template_content {
