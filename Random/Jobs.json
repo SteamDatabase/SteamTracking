@@ -37,7 +37,7 @@
     "60": {
         "reqid": 60,
         "name": "Business Development - Other",
-        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> <div class=\"list_title\">Qualifications</div><ul><li>An entrepreneurial spirit</li><li>A high level of expertise in your discipline</li></ul></div>"
+        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume.</div>"
     },
     "20": {
         "reqid": 20,
@@ -72,12 +72,12 @@
     "62": {
         "reqid": 62,
         "name": "Finance - Other",
-        "description": "<div class='job_description_intro'><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> <div class='list_title' >Qualifications</div><ul><li>An entrepreneurial spirit</li><li>A high level of expertise in your discipline</li></ul></div>"
+        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume </div>"
     },
     "63": {
         "reqid": 63,
         "name": "Game Design - Other",
-        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> <div class=\"list_title\">Qualifications</div><ul><li>An entrepreneurial spirit</li><li>A high level of expertise in your discipline</li></ul></div>"
+        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume.</div>"
     },
     "51": {
         "reqid": 51,
@@ -114,20 +114,10 @@
         "name": "Psychologist, Research/Experimental",
         "description": "<div class=\"job_description_intro\"><p>Valve is an entertainment and technology company driven to design and deliver world-class entertainment experiences to customers. We hire people with broad skill sets who also exhibit deep expertise. Psychologists at Valve contribute to a wide variety of initiatives across the company and are trusted to prioritize their work in collaboration with their peers. </p><p>Here are a few ways you could utilize your knowledge of experimental design, research methods, statistics, and human behavior to help us:</p></div><ul><li>Craft compelling gameplay experiences for future Valve titles</li><li>Provide insights on human behavior to improve customer experiences on Steam, our game distribution platform</li><li>Conduct statistical analyses on Valve's gameplay, financial, and company data to identify patterns of behavior</li><li>Research compelling new hardware technologies</li><li>Design experiments to evaluate various gameplay hypotheses and design choices</li><li>Improve existing playtesting methodologies</li><li>Develop innovative ways of acquiring data to answer questions about Valve's products and business practices</li></ul><div class=\"list_title\">Qualifications</div><br>Minimum<ul><li>A Graduate Degree in Psychology or related field</li><li>Advanced knowledge of statistics</li><li>Proven experience applying research skills to the development of consumer products and services</li><li>Research experience in cognitive, social, human factors, and related fields in psychology</li></ul>Preferred<ul><li>Proficiency in programming languages such as C++, Python, SQL, and PHP</li></ul>"
     },
-    "52": {
-        "reqid": 52,
-        "name": "Software Engineer - Computer Vision",
-        "description": "<div class=\"job_description_intro\"><p>At Valve, we are pushing the boundaries of virtual reality (VR) experiences. We are looking for versatile, self-directed software engineers in computer vision who can help us achieve the next steps in VR with millions of customers world-wide.</p>The main scope of this position is to prototype, ship, and support consumer gaming products leveraging visual-inertial tracking (HMD and controllers), camera passthrough, environment understanding, eye tracking, and hand tracking.<p>Valve generally hires senior engineers with broad skill sets who also exhibit deep expertise. Do you prefer to collaborate with peers to define the work that you pursue, rather than simply follow a vision that's been set for you? If you're seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can't wait to see where you'll take us!</p></div><div class=\"list_title\">Qualifications</div><ul><li>Proven professional software development experience in C/C++</li><li>Deep understanding and hands-on experience in one or more of the following:</li><ul><li> SLAM/VIO/sensor fusion, visual positioning or other related directions</li> <li> 3D vision algorithms (traditional, deep learning based, or both - including SFM, MVS(Net), NeRF or other 3D reconstruction methods. </li><li> Object detection and tracking, 3D pose estimation or other related directions</li><li> Human subject awareness, including hand tracking, eye tracking, and body tracking</li></ul></ul>"
-    },
-    "41": {
-        "reqid": 41,
-        "name": "Software Engineer for VR & Hardware",
-        "description": "<div class=\"job_description_intro\"><p>At Valve, we are pushing the boundaries of virtual reality (VR) experiences. We are looking for versatile, self-directed software engineers who can help us achieve the next steps in VR with millions of customers world-wide.</p><p>Software engineers contribute to hardware at Valve in many ways. We invent new VR tracking systems, we carefully measure latencies across novel display pipelines, and we develop firmware to expose hardware functionality that was never anticipated. We create computer vision algorithms to align experiences across real and virtual worlds, we write 3D graphics shaders, USB drivers, and much more. We also recruit software engineers like you.</p><p>Valve generally hires engineers with broad skill sets who also exhibit deep expertise. Do you prefer to collaborate with peers to define the work that you pursue, rather than simply follow a vision that's been set for you? If you're seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can't wait to see where you'll take us!</p></div><div class=\"list_title\">Qualifications</div><ul><li>Proven professional software development experience</li><li>Experience in one or more of the following</li><ul><li>Software Development in C/C++</li><li>Firmware Development</li><li>Computer Graphics (GPU Acceleration, Shading, Rendering)</li><li>Computer Vision / Tracking (State Estimation, Inertial Navigation)</li><li>Engine Integration (Unity, Unreal)</li><li>Human Computer Interaction, Controllers, and User Interface Design</li><li>Video Compression / Wireless Technologies</li></ul></ul><p>Please note this is a senior role, requiring prior industry experience. <br>Unfortunately, we do not have openings for recent graduates.</p>"
-    },
     "57": {
         "reqid": 57,
         "name": "Software Engineering - Other",
-        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> <div class=\"list_title\">Qualifications</div><ul><li>An entrepreneurial spirit</li><li>A high level of expertise in your discipline</li></ul></div>"
+        "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need.</p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume.</div>"
     },
     "19": {
         "reqid": 19,
