@@ -39,6 +39,11 @@
         "name": "Design - Visual & User Experience",
         "description": "<div class=\"job_description_intro\"><p>Valve is an entertainment and technology company driven to design and deliver extraordinary experiences to customers. We hire people with broad skill sets who also exhibit deep expertise.</p><p>User Experience Designers at Valve contribute in a wide variety of ways. We may do some or all of these things: define and articulate goals; conceive and evolve ideas from wireframes, mockups and prototypes through to realized products; conduct playtests to test our assumptions; create UI for use across 4 platforms and hundreds of screen sizes; create visual assets for use in our designs; plan, design, and write communications and marketing about new features and products; collect and analyze user data to inform our priorities; author documentation to support our game partners; manage projects; and much more.</p><p>UX Designers at Valve work independently and without management, collaborating with world-class software engineers, business leaders, and designers who are continually creating and releasing social entertainment experiences to players around the globe. UX Designers help to define the features we design, rather than following a vision that’s been defined. We steer product definition with functional exploration and design decision-making, following a customer-centric approach as we navigate visual communication, usability, writing, and marketing.</p><p>At Valve, our design process hits full swing once our products are in customers' hands. Our best work is the result of an ongoing dialog with customers. This is fundamental to the way we create great products. Through years of shipping software as a service through Steam (our digital distribution platform) we've learned the value of including our customers throughout the entirety of this process.</p><p>With an engaged community of millions of users, and agile colleagues who exhibit and value a willingness to learn, you'll have an opportunity identify a wide variety of design problems and shape their solutions. Interested? Send us your resume.</p></div>"
     },
+    "27": {
+        "reqid": 27,
+        "name": "Did we miss something?",
+        "description": "<div class=\"job_description_intro\"><p>If you don't see your specialty listed, but you have years of professional experience, are really talented at what you do, and possess a set of skills which would help us create better products and experiences for our customers, we hope you'll apply below. </p> <p>We don't offer junior-level positions or internships, but are looking for highly skilled folks who've been in their industry for a few years and can introduce new types of knowledge and expertise to Valve.</p></div>"
+    },
     "4": {
         "reqid": 4,
         "name": "Economist",
@@ -73,11 +78,6 @@
         "reqid": 64,
         "name": "Hardware - Other",
         "description": "<div class=\"job_description_intro\"><p>We are looking for highly skilled people to contribute to our collaborative, multi-disciplinary teams. Your talent and experience may be just what we need. </p> <p> If you have an entrepreneurial spirit and a high level of expertise in your discipline, send us your resume</p><p></p></div>"
-    },
-    "27": {
-        "reqid": 27,
-        "name": "Have a better idea?",
-        "description": "<div class=\"job_description_intro\"><p>If you don't see your specialty listed, but you have years of professional experience, are really talented at what you do, and possess a set of skills which would help us create better products and experiences for our customers, we hope you'll apply below. </p> <p>We don't offer junior-level positions or internships, but are looking for highly skilled folks who've been in their industry for a few years and can introduce new types of knowledge and expertise to Valve.</p></div>"
     },
     "7": {
         "reqid": 7,
